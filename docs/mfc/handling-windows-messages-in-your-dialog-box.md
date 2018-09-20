@@ -1,5 +1,5 @@
 ---
-title: La gestione dei messaggi di Windows nella finestra di dialogo | Documenti Microsoft
+title: Gestione dei messaggi di Windows nella finestra di dialogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7adaa21be5aada2de4cb5a4dd883e591e066185
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8773f7b93c67441fdf1cf6b6b992b152da14619
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343808"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401017"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Gestione dei messaggi di Windows nella finestra di dialogo
-Finestre di dialogo sono windows, in grado di gestire i messaggi di Windows se si forniscono le funzioni del gestore appropriato. Quando si crea la classe di finestra di dialogo con l'aggiunta guidata classe, la procedura guidata consente di aggiungere una mappa messaggi vuota alla classe. Per eseguire il mapping di messaggi di Windows o si desidera che la classe per gestire i comandi, utilizzare la finestra Proprietà.  
-  
- Vedere [Mapping di messaggi Windows a classe di finestre](../mfc/mapping-windows-messages-to-your-class.md) per ulteriori informazioni.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Finestre di dialogo sono finestre, in grado di gestire i messaggi di Windows se si specificano le funzioni del gestore appropriato. Quando si crea la classe di finestra di dialogo con l'aggiunta guidata classe, la procedura guidata aggiunge una mappa di messaggio vuoto per la classe. Usare la finestra proprietà per eseguire il mapping di tutti i messaggi di Windows o si desidera che la classe per gestire i comandi.
+
+Visualizzare [Mapping di messaggi Windows a classe di finestre](../mfc/mapping-windows-messages-to-your-class.md) per altre informazioni.
+
+## <a name="see-also"></a>Vedere anche
+
+[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
 

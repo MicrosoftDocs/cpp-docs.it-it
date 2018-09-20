@@ -1,5 +1,5 @@
 ---
-title: Disegno di classi strumento | Documenti Microsoft
+title: Disegno di classi strumento | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45f1898addfff37744301c0d3cdac71b9909ec02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9d81f3051450f060a82bbd3a192ad387332922a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349213"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408882"
 ---
 # <a name="drawing-tool-classes"></a>Disegno di classi strumento
-Tali classi includono gli strumenti di disegno che consentono di disegnare su un contesto di dispositivo.  
-  
- [CGdiObject](../mfc/reference/cgdiobject-class.md)  
- La classe base per gli strumenti di disegno GDI.  
-  
- [CBrush](../mfc/reference/cbrush-class.md)  
- Incapsula un pennello GDI che può essere selezionato come pennello corrente in un contesto di dispositivo. Pennelli vengono utilizzati per la compilazione delle parti interne di oggetti da disegnare.  
-  
- [CPen](../mfc/reference/cpen-class.md)  
- Incapsula una penna GDI che può essere selezionata come la penna corrente in un contesto di dispositivo. Penne vengono utilizzate per disegnare le linee dei bordi di oggetti.  
-  
- [CFont](../mfc/reference/cfont-class.md)  
- Incapsula un tipo di carattere GDI che è possibile selezionare come tipo di carattere corrente in un contesto di dispositivo.  
-  
- [CBitmap](../mfc/reference/cbitmap-class.md)  
- Incapsula una bitmap GDI, fornendo un'interfaccia per la modifica di immagini bitmap.  
-  
- [CPalette](../mfc/reference/cpalette-class.md)  
- Incapsula una tavolozza GDI per l'uso come interfaccia tra l'applicazione e un dispositivo di output di colore, ad esempio una visualizzazione.  
-  
- [CRectTracker](../mfc/reference/crecttracker-class.md)  
- Visualizza e gestisce l'interfaccia utente per il ridimensionamento e spostamento di oggetti rettangolari.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../mfc/class-library-overview.md)
+
+Queste classi includono gli strumenti di disegno che consentono di disegnare su un contesto di dispositivo.
+
+[CGdiObject](../mfc/reference/cgdiobject-class.md)<br/>
+La classe base per gli strumenti di disegno GDI.
+
+[CBrush](../mfc/reference/cbrush-class.md)<br/>
+Incapsula un pennello GDI che può essere selezionato come pennello corrente in un contesto di dispositivo. I pennelli vengono utilizzati per riempire le parti interne di oggetti da disegnare.
+
+[CPen](../mfc/reference/cpen-class.md)<br/>
+Incapsula una penna GDI che può essere selezionata della penna corrente in un contesto di dispositivo. Penne vengono usate per disegnare le linee dei bordi degli oggetti.
+
+[CFont](../mfc/reference/cfont-class.md)<br/>
+Incapsula un tipo di carattere GDI può essere selezionato come tipo di carattere corrente in un contesto di dispositivo.
+
+[CBitmap](../mfc/reference/cbitmap-class.md)<br/>
+Incapsula una bitmap GDI, fornendo un'interfaccia per la modifica di immagini bitmap.
+
+[CPalette](../mfc/reference/cpalette-class.md)<br/>
+Incapsula una tavolozza dei colori GDI per l'uso come interfaccia tra l'applicazione e un dispositivo di output di colore, ad esempio una visualizzazione.
+
+[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
+Visualizza e gestisce l'interfaccia utente per il ridimensionamento e spostamento di oggetti rettangolari.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../mfc/class-library-overview.md)
 

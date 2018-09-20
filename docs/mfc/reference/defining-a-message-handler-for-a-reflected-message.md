@@ -1,5 +1,5 @@
 ---
-title: La definizione di un gestore di messaggi per un messaggio riprodotto | Documenti Microsoft
+title: La definizione di un gestore di messaggi per un messaggio riprodotto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,51 +17,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed941816824c77f14a3364b06af0b3da171ee8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373169"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413744"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definizione di un gestore messaggi per un messaggio riprodotto
-Dopo aver creato una nuova classe di controlli MFC, è possibile definire i gestori di messaggi per tale. Gestori di messaggi riprodotti consentono la classe di controllo gestire i propri messaggi prima che il messaggio venga ricevuto dall'elemento padre. È possibile utilizzare MFC [CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funzione per inviare messaggi dal controllo di una finestra padre.  
-  
- Con questa funzionalità, ad esempio, è possibile creare una casella di riepilogo che verrà ridisegnata, anziché utilizzare la finestra padre per eseguire in questo caso (proprietario). Per ulteriori informazioni sui messaggi riprodotti, vedere [gestione dei messaggi riprodotti](../../mfc/handling-reflected-messages.md).  
-  
- Per creare un [controllo ActiveX](../../mfc/activex-controls-on-the-internet.md) con la stessa funzionalità, è necessario creare un progetto per il controllo ActiveX.  
-  
+
+Dopo aver creato una nuova classe di controlli MFC, è possibile definire i gestori di messaggi per tale. Gestori di messaggi riprodotti consentono che la classe di controllo gestire i propri messaggi prima che il messaggio viene ricevuto dall'elemento padre. È possibile utilizzare MFC [CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funzione per inviare messaggi dal controllo per la finestra padre.
+
+Con questa funzionalità, ad esempio, è possibile creare una casella di riepilogo che verrà ridisegnata, anziché basarsi sulla finestra padre per eseguire operazioni in questo caso (proprietario). Per altre informazioni sui messaggi riprodotti, vedere [gestione dei messaggi riprodotti](../../mfc/handling-reflected-messages.md).
+
+Per creare un [controllo ActiveX](../../mfc/activex-controls-on-the-internet.md) con la stessa funzionalità, è necessario creare un progetto per il controllo ActiveX.
+
 > [!NOTE]
->  Non è possibile aggiungere un messaggio riprodotto (OCM _*messaggio*) per un ActiveX controllo utilizzando la finestra Proprietà, come descritto di seguito. È necessario aggiungere manualmente questi messaggi.  
-  
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Per definire un gestore messaggi per un messaggio dalla finestra delle proprietà  
-  
-1.  Aggiungere un controllo, ad esempio un elenco, un controllo rebar, una barra degli strumenti o un controllo struttura ad albero, a un progetto MFC.  
-  
-2.  In visualizzazione classi, fare clic sul nome della classe di controlli.  
-  
-3.  Nel [finestra proprietà](/visualstudio/ide/reference/properties-window), viene visualizzato il nome della classe controllo nel **nome classe** elenco.  
-  
-4.  Fare clic su di **messaggi** pulsante per visualizzare i messaggi di Windows disponibili per l'aggiunta al controllo.  
-  
-5.  Scorrere verso il basso l'elenco dei messaggi nella finestra Proprietà fino a quando non viene visualizzata l'intestazione **riprodotti**. In alternativa, fare clic su di **categorie** pulsante e comprimere la visualizzazione per visualizzare il **riprodotti** intestazione.  
-  
-6.  Selezionare il messaggio riflesso per il quale si desidera definire un gestore. Message riflessi sono contrassegnati con un segno di uguale (=).  
-  
-7.  Fare clic sulla cella nella colonna a destra nella finestra proprietà per visualizzare il nome suggerito per il gestore come \<aggiungere >*HandlerName*. (Ad esempio, il **= WM_CTLCOLOR** gestore messaggi \<aggiungere >**CtlColor**).  
-  
-8.  Fare clic sul nome suggerito per accettare. Il gestore viene aggiunto al progetto.  
-  
-     I nomi dei gestori di messaggi che sono stati aggiunti vengono visualizzati nella colonna destra della finestra riflessi.  
-  
-9. Per modificare o eliminare un gestore di messaggi, ripetere i passaggi da 4 a 7. Fare clic sulla cella contenente il nome del gestore per modificare o eliminare e fare clic sull'attività appropriata.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Mapping di messaggi a funzioni](../../mfc/reference/mapping-messages-to-functions.md)   
- [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)   
- [Aggiunta di una funzione membro](../../ide/adding-a-member-function-visual-cpp.md)   
- [Aggiunta di una variabile membro](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Una funzione Virtual in override](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Gestore messaggi MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Esplorazione della struttura di classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+>  Non è possibile aggiungere un messaggio riprodotto (OCM _*messaggio*) per un ActiveX controllare utilizzando la finestra Proprietà, come descritto di seguito. È necessario aggiungere manualmente questi messaggi.
+
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Per definire un gestore di messaggi per un messaggio riprodotto dalla finestra delle proprietà
+
+1. Aggiungere un controllo, ad esempio un elenco, un controllo rebar, una barra degli strumenti o un controllo struttura ad albero, a un progetto MFC.
+
+1. In visualizzazione classi, fare clic sul nome della classe del controllo.
+
+1. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), il nome di classe di controllo viene visualizzato nei **nome della classe** elenco.
+
+1. Scegliere il **messaggi** pulsante per visualizzare i messaggi di Windows disponibili per l'aggiunta al controllo.
+
+1. Scorrere verso il basso l'elenco dei messaggi nella finestra Proprietà fino a quando non viene visualizzata l'intestazione **riflesso**. In alternativa, fare clic il **categorie** pulsante e comprimere la visualizzazione per visualizzare i **riflesso** intestazione.
+
+1. Selezionare il messaggio riflesso per il quale si desidera definire un gestore. Messaggi riflessi sono contrassegnati con un segno di uguale (=).
+
+1. Fare clic sulla cella nella colonna a destra nella finestra proprietà per visualizzare il nome del gestore come suggerito \<Aggiungi >*NomeGestore*. (Ad esempio, il **= WM_CTLCOLOR** gestore messaggio suggerisce \<aggiungere >**CtlColor**).
+
+1. Fare clic sul nome suggerito per accettare. Il gestore di è aggiunto al progetto.
+
+     I nomi dei gestori di messaggi che sono stati aggiunti vengono visualizzati nella colonna destra della finestra riflessi.
+
+9. Per modificare o eliminare un gestore di messaggi, ripetere i passaggi da 4 a 7. Fare clic sulla cella contenente il nome del gestore da modificare o eliminare e fare clic sull'attività appropriata.
+
+## <a name="see-also"></a>Vedere anche
+
+[Mapping di messaggi a funzioni](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Aggiunta di una funzione membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Aggiunta di una variabile membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Una funzione Virtual in override](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Gestore messaggi MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Esplorazione della struttura delle classi](../../ide/navigating-the-class-structure-visual-cpp.md)

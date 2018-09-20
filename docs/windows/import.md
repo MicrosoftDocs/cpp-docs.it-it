@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78bfc20bd88aa9691c80483c8c315cd5305d7b96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a9e2ee577c3285a7e4c3db2fb19d934417bbe26d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216591"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411560"
 ---
 # <a name="import"></a>importazione
 
@@ -38,7 +38,7 @@ Specifica un altro file con estensione idl o ODL intestazione che contiene le de
 
 ### <a name="parameters"></a>Parametri
 
-*idl_file*  
+*idl_file*<br/>
 Il nome di un file con estensione idl che si desidera importare nella libreria dei tipi del progetto corrente.
 
 ## <a name="remarks"></a>Note
@@ -86,9 +86,9 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi autonomi](../windows/stand-alone-attributes.md)  
-[importidl](../windows/importidl.md)  
-[importlib](../windows/importlib.md)  
-[include](../windows/include-cpp.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi autonomi](../windows/stand-alone-attributes.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[importlib](../windows/importlib.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)  

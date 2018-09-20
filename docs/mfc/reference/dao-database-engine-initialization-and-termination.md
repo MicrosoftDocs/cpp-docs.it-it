@@ -1,5 +1,5 @@
 ---
-title: Inizializzazione del motore di Database DAO e terminazione | Documenti Microsoft
+title: Inizializzazione del motore di Database DAO e terminazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,58 +17,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f28c0c166bcbf13181161d6afce484fe4a45b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8cf54992896559f1b143247746ef9f9e0e8d8979
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369902"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404007"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inizializzazione e terminazione del motore di database DAO
-Quando si utilizzano gli oggetti DAO MFC, il motore di database DAO deve prima essere inizializzato e quindi terminata prima della chiusura dell'applicazione o DLL. Due funzioni, `AfxDaoInit` e `AfxDaoTerm`, eseguire queste attività.  
-  
-### <a name="dao-database-engine-initialization-and-termination"></a>Inizializzazione e terminazione del motore di database DAO  
-  
-|||  
-|-|-|  
-|[AfxDaoInit](#afxdaoinit)|Inizializza il motore di database DAO.|  
-|[AfxDaoTerm](#afxdaoterm)|Termina il motore di database DAO.|  
-  
-##  <a name="afxdaoinit"></a>  AfxDaoInit  
- Questa funzione inizializza il motore di database DAO.  
-  
-```  
- 
+
+Quando si utilizzano oggetti DAO MFC, il motore di database DAO deve essere inizializzato e quindi terminata prima che l'applicazione o DLL viene chiusa. Due funzioni, `AfxDaoInit` e `AfxDaoTerm`, eseguire queste attività.
+
+### <a name="dao-database-engine-initialization-and-termination"></a>Inizializzazione e terminazione del motore di database DAO
+
+|||
+|-|-|
+|[AfxDaoInit](#afxdaoinit)|Inizializza il motore di database DAO.|
+|[AfxDaoTerm](#afxdaoterm)|Termina il motore di database DAO.|
+
+##  <a name="afxdaoinit"></a>  AfxDaoInit
+
+Questa funzione inizializza il motore di database DAO.
+
+```
+
 void AfxDaoInit();
 
-throw(CDaoException*);  
-```  
-  
-### <a name="remarks"></a>Note  
- Nella maggior parte dei casi, non è necessario chiamare `AfxDaoInit` perché l'applicazione chiama automaticamente, quando necessario.  
-  
- Per informazioni correlate e per un esempio di chiamata `AfxDaoInit`, vedere [Nota tecnica 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
-  
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
-  
-##  <a name="afxdaoterm"></a>  AfxDaoTerm  
- Questa funzione consente di terminare il motore di database DAO.  
-  
-```  
- 
-void AfxDaoTerm();  
-```  
-  
-### <a name="remarks"></a>Note  
- In genere, è sufficiente chiamare questa funzione in una normale DLL MFC. un'applicazione chiama automaticamente `AfxDaoTerm` quando è necessario.  
-  
- DLL regolari MFC, chiamare `AfxDaoTerm` prima il `ExitInstance` funzione, ma dopo che sono stati eliminati tutti gli oggetti DAO MFC.  
-  
- Per informazioni correlate, vedere [Nota tecnica 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
+throw(CDaoException*);
+```
 
-### <a name="requirements"></a>Requisiti  
-  **Intestazione** afxdao. h  
+### <a name="remarks"></a>Note
 
-## <a name="see-also"></a>Vedere anche  
- [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+Nella maggior parte dei casi, non è necessario chiamare `AfxDaoInit` perché l'applicazione chiama automaticamente, quando necessario.
+
+Per informazioni correlate e per un esempio della chiamata al metodo `AfxDaoInit`, vedere [Nota tecnica 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
+
+### <a name="requirements"></a>Requisiti
+
+  **Intestazione** afxdao. h
+
+##  <a name="afxdaoterm"></a>  AfxDaoTerm
+
+Questa funzione consente di terminare il motore di database DAO.
+
+```
+
+void AfxDaoTerm();
+```
+
+### <a name="remarks"></a>Note
+
+In genere, è sufficiente chiamare questa funzione in una normale DLL MFC. un'applicazione chiama automaticamente `AfxDaoTerm` quando è necessario.
+
+DLL MFC regolari, chiamare `AfxDaoTerm` prima di `ExitInstance` (funzione), ma dopo che sono stati eliminati definitivamente tutti gli oggetti DAO MFC.
+
+Per informazioni correlate, vedere [Nota tecnica 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
+
+### <a name="requirements"></a>Requisiti
+
+  **Intestazione** afxdao. h
+
+## <a name="see-also"></a>Vedere anche
+
+[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

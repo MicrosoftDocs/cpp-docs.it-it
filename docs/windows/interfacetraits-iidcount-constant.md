@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eca04d185eaf31bb112741c1564e5fbe551c6b63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 26ccca0c3a9ab3d54c1ffda5e25ed5602cc19ae2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599912"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402382"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>Costante InterfaceTraits::IidCount
 
@@ -46,5 +46,5 @@ Contiene il numero ID associato all'oggetto corrente di interfaccia **InterfaceT
 
 ## <a name="see-also"></a>Vedere anche
 
-[Struttura InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Struttura InterfaceTraits](../windows/interfacetraits-structure.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

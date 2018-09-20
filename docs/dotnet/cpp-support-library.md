@@ -1,5 +1,5 @@
 ---
-title: Libreria di supporto per C++ | Documenti Microsoft
+title: Libreria di supporto per C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d76705bded43b3b8686a8fe32736fb17dc02cca2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1bae6cf2369d5d0f9b8eefde19d332083f52648
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104269"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405944"
 ---
 # <a name="c-support-library"></a>libreria di supporto per C++
-La libreria di supporto C++ fornisce le classi che supportano la programmazione gestita in C++.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)  
-  
- [Classi di gestione risorse](../dotnet/resource-management-classes.md)  
-  
- [Sincronizzazione (classe lock)](../dotnet/synchronization-lock-class.md)  
-  
- [Chiamata di funzioni in un dominio di applicazione specifico](../dotnet/calling-functions-in-a-specific-application-domain.md)  
-  
- [com::ptr](../dotnet/com-ptr.md)
+
+La libreria di supporto di C++ fornisce le classi che supportano la programmazione gestita in C++.
+
+## <a name="in-this-section"></a>In questa sezione
+
+[Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)
+
+[Classi di gestione risorse](../dotnet/resource-management-classes.md)
+
+[Sincronizzazione (classe lock)](../dotnet/synchronization-lock-class.md)
+
+[Chiamata di funzioni in un dominio di applicazione specifico](../dotnet/calling-functions-in-a-specific-application-domain.md)
+
+[com::ptr](../dotnet/com-ptr.md)

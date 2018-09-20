@@ -1,5 +1,5 @@
 ---
-title: Classi di supporto di debug | Documenti Microsoft
+title: Debug di classi di supporto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,22 +22,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942302a07a55adf7d7a1a89ac2b518e3dcaefe2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d513eb8d51f5161e70b168bb541fe899b74f41c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342605"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419074"
 ---
 # <a name="debugging-support-classes"></a>Debug di classi di supporto
-MFC fornisce le classi seguenti che consentono di eseguire il debug dei problemi di allocazione di memoria dinamica.  
-  
- [CDumpContext](../mfc/reference/cdumpcontext-class.md)  
- Fornisce una destinazione per i dump di diagnostica.  
-  
- [CMemoryState](../mfc/reference/cmemorystate-structure.md)  
- Struttura che fornisce gli snapshot dell'utilizzo della memoria. Inoltre utilizzato per confrontare gli snapshot di memoria precedenti e successivi.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../mfc/class-library-overview.md)
+
+MFC fornisce le classi seguenti che consentono di eseguire il debug dei problemi di allocazione della memoria dinamica.
+
+[CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
+Fornisce una destinazione per i dump di diagnostica.
+
+[CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
+Struttura che fornisce gli snapshot dell'uso della memoria. Anche utilizzato per confrontare gli snapshot di memoria precedenti e versioni successive.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../mfc/class-library-overview.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Ordinamento degli elementi nel controllo Header | Documenti Microsoft
+title: Ordinamento degli elementi nel controllo Header | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,26 +22,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aac3c9ba284abc634af2fbeb25633b812e07f926
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f446eb557fab4f4ff6396042e832e4584546bd96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928570"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416824"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Ordinamento degli elementi nel controllo Header
-Dopo aver [aggiungere elementi a un controllo intestazione](../mfc/adding-items-to-the-header-control.md), è possibile modificare o ottenere informazioni relative all'ordine con le funzioni seguenti:  
-  
--   [CHeaderCtrl:: GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) e [CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)  
-  
-     Recupera e imposta l'ordine da sinistra a destra degli elementi di intestazione.  
-  
--   [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).  
-  
-     Recupera il valore di indice per una voce di intestazione specifico.  
-  
- Oltre alle funzioni membro precedente, lo stile HDS_DRAGDROP consente all'utente di trascinare gli elementi di intestazione all'interno del controllo intestazione. Per altre informazioni, vedere [che fornisce il supporto di trascinamento e rilascio per gli elementi di intestazione](../mfc/providing-drag-and-drop-support-for-header-items.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso di CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+Dopo aver [gli elementi aggiunti a un controllo intestazione](../mfc/adding-items-to-the-header-control.md), è possibile modificare o ottenere informazioni relative all'ordine con le funzioni seguenti:
+
+- [CHeaderCtrl:: GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) e [CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)
+
+     Recupera e imposta l'ordine da sinistra a destra degli elementi di intestazione.
+
+- [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).
+
+     Recupera il valore di indice per un elemento di intestazione specifici.
+
+Oltre alle funzioni membro precedente, il HDS_DRAGDROP (stile) consente all'utente di trascinare e rilasciare gli elementi di intestazione all'interno del controllo intestazione. Per altre informazioni, vedere [che fornisce il supporto di trascinamento e rilascio per gli elementi di intestazione](../mfc/providing-drag-and-drop-support-for-header-items.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

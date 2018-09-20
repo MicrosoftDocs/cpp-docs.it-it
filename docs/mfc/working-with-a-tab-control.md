@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di un controllo Tab | Documenti Microsoft
+title: Utilizzo di un controllo struttura a schede | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7d4f434bf958c3bf47dc1f91101d35cf04add7
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 12de4065774c4813eeb10fab902551db14d10d3a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954959"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420842"
 ---
 # <a name="working-with-a-tab-control"></a>Utilizzo di un controllo Tab
-Il modo più semplice per utilizzare un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) consiste nell'aggiungerlo a una risorsa modello di finestra di dialogo con l'editor finestre. È inoltre possibile utilizzare un controllo struttura a schede autonomamente. MFC chiama `InitCommonControls` automaticamente. Le attività principali sono i seguenti:  
-  
--   [Creazione del controllo tab](../mfc/creating-the-tab-control.md)  
-  
--   [Aggiunta di schede a un controllo struttura a schede](../mfc/adding-tabs-to-a-tab-control.md)  
-  
--   [Elaborazione dei messaggi di notifica controllo tab](../mfc/processing-tab-control-notification-messages.md)  
-  
- Se l'oggetto controllo scheda è incorporato in una classe di finestra di dialogo o una vista padre, il controllo viene eliminato definitivamente quando viene eliminato definitivamente l'elemento padre.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CTabCtrl](../mfc/using-ctabctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+Il modo più semplice per usare un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) consiste nell'aggiungerlo a una risorsa modello di finestra di dialogo con l'editor finestre. È anche possibile usare un controllo struttura a schede da solo. MFC chiama `InitCommonControls` automaticamente. Come indicato di seguito sono riportate le attività principali:
+
+- [Creazione del controllo tab](../mfc/creating-the-tab-control.md)
+
+- [Aggiunta di schede a un controllo struttura a schede](../mfc/adding-tabs-to-a-tab-control.md)
+
+- [Elaborazione dei messaggi di notifica controllo tab](../mfc/processing-tab-control-notification-messages.md)
+
+Se l'oggetto controllo scheda è incorporato in una classe di finestra di dialogo o visualizzazione padre, il controllo viene eliminato definitivamente quando viene eliminato definitivamente l'elemento padre.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

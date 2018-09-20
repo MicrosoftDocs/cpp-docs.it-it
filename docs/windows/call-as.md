@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a5e5d5ddb831c5d4025e729cb27dd3a9e11b3688
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 072c5b34d539e695f534dbafdf4afcd69a2272ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194753"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415681"
 ---
 # <a name="callas"></a>call_as
 
@@ -38,7 +38,7 @@ Consente a un [locale](../windows/local-cpp.md) funzione viene mappata a una fun
 
 ### <a name="parameters"></a>Parametri
 
-*function*  
+*function*<br/>
 La funzione locale che si desidera siano chiamati quando viene richiamata una funzione remota.
 
 ## <a name="remarks"></a>Note
@@ -76,6 +76,6 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di metodo](../windows/method-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di metodo](../windows/method-attributes.md)<br/>
 [local](../windows/local-cpp.md)  

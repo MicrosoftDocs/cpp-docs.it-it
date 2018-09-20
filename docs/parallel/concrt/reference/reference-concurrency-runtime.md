@@ -463,14 +463,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723229"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412106"
 ---
 # <a name="reference-concurrency-runtime"></a>Riferimento (runtime di concorrenza)
+
 In questa sezione contiene informazioni di riferimento per il Runtime di concorrenza.
 
 > [!Note]
@@ -478,7 +479,8 @@ In questa sezione contiene informazioni di riferimento per il Runtime di concorr
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[concorrenza Namespace](concurrency-namespace.md) lo spazio dei nomi di concorrenza fornisce le classi e funzioni che consentono di accedono al Runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../concurrency-runtime.md) (Runtime di concorrenza).
+[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+Lo spazio dei nomi di concorrenza fornisce le classi e funzioni che consentono di accedono al Runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../concurrency-runtime.md) (Runtime di concorrenza).
 
 [spazio dei nomi std](std-namespace.md)
 

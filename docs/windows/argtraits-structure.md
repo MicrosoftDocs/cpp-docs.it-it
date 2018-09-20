@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3eade86404bcd4fef7ce3356d36a43ac6a59a8f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418398"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (struttura)
 
@@ -120,37 +120,37 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 ### <a name="parameters"></a>Parametri
 
-*TMemberFunction*  
+*TMemberFunction*<br/>
 Parametro TypeName per una struttura ArgTraits che non può corrispondere a qualsiasi `Invoke` firma del metodo.
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Un'interfaccia di delegato.
 
-*TArg1*  
+*TArg1*<br/>
 Il tipo del primo argomento del `Invoke` (metodo).
 
-*TArg2*  
+*TArg2*<br/>
 Il tipo del secondo argomento del `Invoke` (metodo).
 
-*TArg3*  
+*TArg3*<br/>
 Il tipo del terzo argomento del `Invoke` (metodo).
 
-*TArg4*  
+*TArg4*<br/>
 Il tipo del quarto argomento del `Invoke` (metodo).
 
-*TArg5*  
+*TArg5*<br/>
 Il tipo del quinto argomento del `Invoke` (metodo).
 
-*TArg6*  
+*TArg6*<br/>
 Il tipo del sesto argomento del `Invoke` (metodo).
 
-*TArg7*  
+*TArg7*<br/>
 Il tipo del settimo argomento del `Invoke` (metodo).
 
-*TArg8*  
+*TArg8*<br/>
 Il tipo dell'ottavo argomento del `Invoke` (metodo).
 
-*TArg9*  
+*TArg9*<br/>
 Il tipo del nono argomento del `Invoke` (metodo).
 
 ## <a name="remarks"></a>Note

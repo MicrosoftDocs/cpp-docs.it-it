@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a2e61616ae6a481925bdb8b9b135f0a6a9fdfff7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712837"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407946"
 ---
 # <a name="ctabbedpane-class"></a>Classe CTabbedPane
 
@@ -183,9 +183,9 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pBar*  
+[in] *pBar*
 
-[in] *bHide*  
+[in] *bHide*
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -225,9 +225,9 @@ virtual BOOL FloatTab(
 ### <a name="parameters"></a>Parametri
 
 *pBar*<br/>
-[in] [in] *nTabID*  
+[in] [in] *nTabID*
 *dockMethod*<br/>
-[in] [in] *bHide*  
+[in] [in] *bHide*
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -308,6 +308,7 @@ Impostare il membro statico a true per forzare tutte le schede nell'applicazione
 Il valore predefinito è FALSE.
 
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+
 Informazioni sulla classe di runtime per un oggetto personalizzato derivato da `CMFCTabCtrl`.
 
 ```
@@ -351,8 +352,8 @@ Uso [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) per abilitare o disab
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)  
-[Classi](../../mfc/reference/mfc-classes.md)  
-[Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)  
-[Classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)  
-[Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)  
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Classi](../../mfc/reference/mfc-classes.md)<br/>
+[Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
+[Classe CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)

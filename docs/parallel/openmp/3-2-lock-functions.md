@@ -1,5 +1,5 @@
 ---
-title: 3.2 bloccare funzioni | Documenti Microsoft
+title: 3.2 funzioni di blocco | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,38 +12,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd788b0ef1c72b1f38a44ee608ce0c7760e24adc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 97f125129d4b35586111f3d4092d457560aaebec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696253"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412275"
 ---
 # <a name="32-lock-functions"></a>3.2 Funzioni lock
-Le funzioni descritte in questa sezione manipolare i blocchi utilizzati per la sincronizzazione.  
-  
- Per le funzioni seguenti, la variabile di blocco deve avere tipo **omp_lock_t**. Questa variabile deve essere accessibile solo tramite queste funzioni. Tutte le funzioni di blocco richiedono un argomento che dispone di un puntatore a **omp_lock_t** tipo.  
-  
--   Il `omp_init_lock` funzione Inizializza un semplice blocco.  
-  
--   Il `omp_destroy_lock` funzione rimuove un semplice blocco.  
-  
--   Il `omp_set_lock` funzione attende fino a quando non è disponibile un semplice blocco.  
-  
--   Il `omp_unset_lock` funzione rilascia un semplice blocco.  
-  
--   Il `omp_test_lock` funzione verifica un semplice blocco.  
-  
- Per le funzioni seguenti, la variabile di blocco deve avere tipo **omp_nest_lock_t**.  Questa variabile deve essere accessibile solo tramite queste funzioni. Tutte le funzioni di omp_nest_lock_t richiedono un argomento che dispone di un puntatore a **omp_nest_lock_t** tipo.  
-  
--   Il `omp_init_nest_lock` funzione Inizializza un blocco annidabile.  
-  
--   Il `omp_destroy_nest_lock` funzione rimuove un blocco annidabile.  
-  
--   Il `omp_set_nest_lock` funzione attende fino a quando non è disponibile un blocco annidabile.  
-  
--   Il `omp_unset_nest_lock` funzione rilascia un blocco annidabile.  
-  
--   Il `omp_test_nest_lock` funzione verifica di un blocco annidabile.  
-  
- Le funzioni di blocco OpenMP accedono alla variabile di blocco in modo che possano sempre leggere e aggiornare il valore della variabile di blocco più recente. Pertanto, non è necessario per includere esplicita di un programma OpenMP **scaricamento** direttive per assicurarsi che il blocco valore della variabile sia coerenza fra thread diversi. (In potrebbe essere necessario per **scaricamento** direttive per rendere i valori di altre variabili coerente.)
+
+Le funzioni descritte in questa sezione modificano i blocchi utilizzati per la sincronizzazione.
+
+Per le funzioni seguenti, la variabile di blocco deve avere tipo **omp_lock_t**. Questa variabile deve essere accessibile solo queste funzioni. Tutte le funzioni di blocco richiedono un argomento che dispone di un puntatore a **omp_lock_t** tipo.
+
+- Il `omp_init_lock` funzione Inizializza un blocco semplice.
+
+- Il `omp_destroy_lock` funzione rimuove un blocco semplice.
+
+- Il `omp_set_lock` funzione attende fino a quando non è disponibile un blocco semplice.
+
+- Il `omp_unset_lock` funzione rilascia un blocco semplice.
+
+- Il `omp_test_lock` funzione verifica blocco semplice.
+
+Per le funzioni seguenti, la variabile di blocco deve avere tipo **omp_nest_lock_t**.  Questa variabile deve essere accessibile solo queste funzioni. Tutte le funzioni di blocco annidabile richiedono un argomento che dispone di un puntatore a **omp_nest_lock_t** tipo.
+
+- Il `omp_init_nest_lock` funzione Inizializza un blocco annidabile.
+
+- Il `omp_destroy_nest_lock` funzione rimuove un blocco annidabile.
+
+- Il `omp_set_nest_lock` funzione attende fino a quando un blocco annidabile è disponibile.
+
+- Il `omp_unset_nest_lock` funzione rilascia un blocco annidabile.
+
+- Il `omp_test_nest_lock` funzione verifica un blocco annidabile.
+
+Le funzioni di blocco OpenMP accedono alla variabile di blocco in modo che possano sempre leggere e aggiornare il valore massimo corrente della variabile di blocco. Pertanto, non è necessaria un programma di OpenMP per includere espliciti **flush** direttive per assicurarsi che il blocco valore della variabile sia coerenza tra diversi thread. (Potrebbe esserci una necessità **flush** direttive per rendere coerente con i valori di altre variabili.)

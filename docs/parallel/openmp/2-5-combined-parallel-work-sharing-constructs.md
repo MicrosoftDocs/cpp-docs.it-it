@@ -1,5 +1,5 @@
 ---
-title: 2.5 costrutti di condivisione del lavoro paralleli combinati | Documenti Microsoft
+title: 2.5 costrutti di condivisione del lavoro paralleli combinati | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7aea758cbf43cd49affc01afda0e9f34c24b3331
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c456eceb39d969e6841e3d3bf9028fae4bf5000
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689298"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404761"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 Costrutti per la condivisione del lavoro paralleli combinati
-Costrutti condivisione del lavoro paralleli combinati sono tasti di scelta rapida per la specifica di un'area parallela che contiene solo un costrutto di condivisione del lavoro. La semantica di queste direttive è identica a quella di specificare in modo esplicito un **parallela** direttiva seguita da un singolo costrutto di condivisione del lavoro.  
-  
- Nelle sezioni seguenti vengono descritti i costrutti di condivisione del lavoro paralleli combinati:  
-  
--   il **parallela per** direttiva.  
-  
--   il **parallela sezioni** direttiva.
+
+Costrutti di condivisione lavoro paralleli combinati sono tasti di scelta rapida per la specifica di un'area parallela che contiene solo un costrutto di condivisione del lavoro. La semantica di queste direttive è identica a quello di specificare in modo esplicito un **parallele** direttiva seguita da un singolo costrutto di condivisione del lavoro.
+
+Le sezioni seguenti descrivono i costrutti di condivisione del lavoro paralleli combinati:
+
+- il **parallele per** direttiva.
+
+- il **sezioni in parallelo** direttiva.

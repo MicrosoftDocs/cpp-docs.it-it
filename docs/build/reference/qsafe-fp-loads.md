@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0af28b391390f28be4e111b55c909dcae66ca2f8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf7f31d416525c98999f4d8da6036862ae1ca270
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713661"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408414"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -50,6 +50,6 @@ Questa opzione esegue l'override [/fp: tranne](../../build/reference/fp-specify-
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /Q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)
-[opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Opzioni /Q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

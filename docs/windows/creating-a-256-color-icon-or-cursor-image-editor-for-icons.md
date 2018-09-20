@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 930a73f478b02d5aa7a16f262f98131dccba9f76
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1d6e3af00bfe906a1954f7fc1d2b0af1ea52945e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315930"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415915"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Creazione di un cursore o di un'icona a 256 colori (Editor di immagini per le icone)
 
@@ -51,6 +51,6 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo della tavolozza da 256 colori](../windows/using-the-256-color-palette-image-editor-for-icons.md)  
-[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Utilizzo della tavolozza da 256 colori](../windows/using-the-256-color-palette-image-editor-for-icons.md)<br/>
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

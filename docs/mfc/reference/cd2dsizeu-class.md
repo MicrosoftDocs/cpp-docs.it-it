@@ -20,93 +20,103 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 06008a2826a2ba2d358fcf3469b8a6b5b107e6be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335841"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412356"
 ---
 # <a name="cd2dsizeu-class"></a>Classe CD2DSizeU
-Un wrapper per D2D1_SIZE_U.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-class CD2DSizeU : public D2D1_SIZE_U;  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Di overload. Costruisce un `CD2DSizeU` dall'oggetto `D2D1_SIZE_U` oggetto.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|Restituisce un **booleana** valore che indica se un'espressione non contiene dati validi (NULL).|  
-  
-### <a name="public-operators"></a>Operatori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CD2DSizeU::operator CSize](#operator_csize)|Consente di convertire `CD2DSizeU` a `CSize` oggetto.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `D2D1_SIZE_U`  
-  
- [CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxrendertarget. h  
-  
-##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
- Costruisce un oggetto CD2DSizeU dall'oggetto CSize.  
-  
-```  
-CD2DSizeU(const CSize& size);  
-CD2DSizeU(const D2D1_SIZE_U& size);  
+
+Un wrapper per D2D1_SIZE_U.
+
+## <a name="syntax"></a>Sintassi
+
+```
+class CD2DSizeU : public D2D1_SIZE_U;
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Di overload. Costruisce un `CD2DSizeU` dall'oggetto `D2D1_SIZE_U` oggetto.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CD2DSizeU::IsNull](#isnull)|Restituisce un **booleana** valore che indica se un'espressione non contiene dati validi (NULL).|
+
+### <a name="public-operators"></a>Operatori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CD2DSizeU::operator CSize](#operator_csize)|Consente di convertire `CD2DSizeU` a `CSize` oggetto.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`D2D1_SIZE_U`
+
+[CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** afxrendertarget. h
+
+##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU
+
+Costruisce un oggetto CD2DSizeU dall'oggetto CSize.
+
+```
+CD2DSizeU(const CSize& size);
+CD2DSizeU(const D2D1_SIZE_U& size);
   CD2DSizeU(const D2D1_SIZE_U* size);
 
- 
+
 CD2DSizeU(
-    UINT32 cx = 0,  
+    UINT32 cx = 0,
     UINT32 cy = 0);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *size*  
- dimensioni di origine  
-  
- *CX*  
- larghezza di origine  
-  
- *CY*  
- altezza di origine  
-  
-##  <a name="isnull"></a>  CD2DSizeU::IsNull  
- Restituisce un valore booleano che indica se un'espressione non contiene dati validi (Null).  
-  
-```  
-BOOL IsNull() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- TRUE se la larghezza e altezza sono vuote; in caso contrario, FALSE.  
-  
-##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
- Converte un oggetto CSize CD2DSizeU.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*size*<br/>
+dimensioni di origine
+
+*CX*<br/>
+larghezza di origine
+
+*CY*<br/>
+altezza di origine
+
+##  <a name="isnull"></a>  CD2DSizeU::IsNull
+
+Restituisce un valore booleano che indica se un'espressione non contiene dati validi (Null).
+
+```
+BOOL IsNull() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+TRUE se la larghezza e altezza sono vuote; in caso contrario, FALSE.
+
+##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize
+
+Converte un oggetto CSize CD2DSizeU.
+
+```
 operator CSize();
-```   
-  
-### <a name="return-value"></a>Valore restituito  
- Valore corrente della dimensione D2D.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Valore corrente della dimensione D2D.
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi](../../mfc/reference/mfc-classes.md)

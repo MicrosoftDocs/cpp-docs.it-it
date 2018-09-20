@@ -19,33 +19,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23727ed40b12506ddd47a03055eaf8514d5685c5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fcb8859f00724eb7865198c662850a60314ffdc3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541252"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419984"
 ---
 # <a name="int2c"></a>__int2c
-**Sezione specifica Microsoft**  
-  
- Genera il `int 2c` (istruzione), che attiva il `2c` interrupt.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __int2c(void);  
-```  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__int2c`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+
+**Sezione specifica Microsoft**
+
+Genera il `int 2c` (istruzione), che attiva il `2c` interrupt.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __int2c(void);
+```
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__int2c`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

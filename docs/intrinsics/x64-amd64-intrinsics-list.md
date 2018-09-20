@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680412"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406867"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Elenco oggetti intrinseci x64 (amd64)
 
@@ -1282,6 +1282,6 @@ La tabella seguente elenca le funzioni intrinseche disponibili per i processori 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)  
-[Intrinseci ARM](../intrinsics/arm-intrinsics.md)  
-[x86 le funzioni intrinseche](../intrinsics/x86-intrinsics-list.md)    
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinseci ARM](../intrinsics/arm-intrinsics.md)<br/>
+[x86 le funzioni intrinseche](../intrinsics/x86-intrinsics-list.md)

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27e3ad32500d1b0ff0efa2dab40888f163744bb1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 63bda924a91bb1f86494d844af037386d6e30292
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318707"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406347"
 ---
 # <a name="using-the-richedit-10-control-with-mfc"></a>Utilizzo del controllo RichEdit 1.0 con MFC
 
@@ -35,5 +35,5 @@ MFC
 
 ## <a name="see-also"></a>Vedere anche
 
-[Risoluzione dei problemi relativi all'editor finestre](../windows/troubleshooting-the-dialog-editor.md)  
+[Risoluzione dei problemi relativi all'editor finestre](../windows/troubleshooting-the-dialog-editor.md)<br/>
 [Editor finestre](../windows/dialog-editor.md)

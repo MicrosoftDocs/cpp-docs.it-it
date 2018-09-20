@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1852e765ed859f95f6de5319a1e9d8fa364f7681
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: aff0c2e2600f7f0c300d1043c9844104fd70c4e4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207063"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415336"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -38,7 +38,7 @@ Specifica il numero di elementi della matrice deve essere trasmesso.
 
 ### <a name="parameters"></a>Parametri
 
-*Espressione*  
+*Espressione*<br/>
 Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.
 
 ## <a name="remarks"></a>Note
@@ -64,10 +64,10 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Attributi di parametro](../windows/parameter-attributes.md)  
-[first_is](../windows/first-is.md)  
-[max_is](../windows/max-is.md)  
-[last_is](../windows/last-is.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributi di parametro](../windows/parameter-attributes.md)<br/>
+[first_is](../windows/first-is.md)<br/>
+[max_is](../windows/max-is.md)<br/>
+[last_is](../windows/last-is.md)<br/>
 [size_is](../windows/size-is.md)  

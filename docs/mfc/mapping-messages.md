@@ -1,5 +1,5 @@
 ---
-title: Mapping di messaggi | Documenti Microsoft
+title: Mapping dei messaggi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f521145599a3d734a22dd3b2707ad4dd16df8e80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7324da5eaff15d240cabbaede2c2982021361257
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345986"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410981"
 ---
 # <a name="mapping-messages"></a>Mapping dei messaggi
-Ogni classe di framework che può ricevere messaggi o comandi ha una proprio "mappa del messaggio". Il framework utilizza le mappe messaggi per connettere le relative funzioni gestore messaggi e comandi. Qualsiasi classe derivata dalla classe `CCmdTarget` può avere una mappa messaggi. Altri articoli illustrano mappe messaggi in modo dettagliato e viene descritto come utilizzarli.  
-  
- Nonostante il nome "mappa messaggi," messaggio mappe gestiscono entrambi i messaggi e comandi, ovvero tutte le tre categorie di messaggi nel [categorie di messaggi](../mfc/message-categories.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Messaggi e comandi nel framework](../mfc/messages-and-commands-in-the-framework.md)
+
+Ogni classe di framework che può ricevere messaggi o i comandi ha il proprio "mapping di messaggi". Il framework utilizza le mappe messaggi a cui connettersi alle funzioni del gestore di messaggi e comandi. Tutte le classi derivate dalla classe `CCmdTarget` può avere una mappa messaggi. Altri articoli illustrano le mappe messaggi in modo dettagliato e descrivono come usarli.
+
+Nonostante il nome "mappa messaggi," messaggio mappe gestiscono entrambi i messaggi e comandi, ovvero tutte le tre categorie di messaggi elencati nel [categorie di messaggi](../mfc/message-categories.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Messaggi e comandi nel framework](../mfc/messages-and-commands-in-the-framework.md)
 

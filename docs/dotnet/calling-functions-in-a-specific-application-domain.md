@@ -1,5 +1,5 @@
 ---
-title: Chiamata di funzioni in un dominio applicazione specifico | Documenti Microsoft
+title: Chiamata di funzioni in un dominio applicazione specifico | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fc6765e7a96b2d2775d1dd729a43e89cec876e19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 269225967ff63e98c1efe8a4ff38cd980d3485f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104906"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409766"
 ---
 # <a name="calling-functions-in-a-specific-application-domain"></a>Chiamata di funzioni in un dominio applicazione specifico
-Supporta la chiamata di funzioni in un dominio applicazione specifico.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Funzione call_in_appdomain](../dotnet/call-in-appdomain-function.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Libreria di supporto per C++](../dotnet/cpp-support-library.md)
+
+Supporta la chiamata di funzioni in un dominio applicazione specifico.
+
+## <a name="in-this-section"></a>In questa sezione
+
+[Funzione call_in_appdomain](../dotnet/call-in-appdomain-function.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Libreria di supporto per C++](../dotnet/cpp-support-library.md)

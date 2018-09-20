@@ -1,5 +1,5 @@
 ---
-title: Barre di finestra di dialogo | Documenti Microsoft
+title: Le barre di finestra di dialogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7c68ca2725d25b493003ad7d847176c7dd8d17d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed0e773dda8a1a31a028a0b6c5e349b2e3655982
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348807"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401498"
 ---
 # <a name="dialog-bars"></a>Barra di finestra di dialogo
-Una barra di finestra di dialogo è una barra degli strumenti, un tipo di [barra di controllo](../mfc/control-bars.md) che può contenere qualsiasi tipo di controllo. Poiché presenta le caratteristiche di una finestra di dialogo non modale, un [CDialogBar](../mfc/reference/cdialogbar-class.md) oggetto fornisce una barra degli strumenti più potente.  
-  
- Esistono alcune differenze principali tra una barra degli strumenti e un `CDialogBar` oggetto. Oggetto `CDialogBar` oggetto viene creato da una risorsa modello di finestra di dialogo, che è possibile creare tramite l'editor di finestre di Visual C++ e che può contenere qualsiasi tipo di controllo di Windows. L'utente può spostarsi dal controllo del codice al controllo. Ed è possibile specificare uno stile di allineamento per allineare la barra di finestra di dialogo con qualsiasi parte della finestra cornice padre o anche per mantenere se l'elemento padre viene ridimensionato. Nella figura seguente mostra una barra di finestra di dialogo con un'ampia gamma di controlli.  
-  
- ![Barra di finestra di dialogo VC](../mfc/media/vc378t1.gif "vc378t1")  
-Una barra di finestra di dialogo  
-  
- Per gli altri aspetti, utilizzano un `CDialogBar` oggetto è come l'utilizzo di una finestra di dialogo non modale. Utilizzare l'editor finestre per progettare e creare la risorsa finestra di dialogo.  
-  
- Uno dei virtù di barre di finestra di dialogo è che possono includere controlli che non siano pulsanti.  
-  
- Mentre è normale per derivare le classi di finestra di dialogo da `CDialog`, non è in genere derivare una classe personalizzata per una barra di finestra di dialogo. Barre di finestra di dialogo sono estensioni per una finestra principale ed eventuali messaggi di notifica del controllo barra di finestra di dialogo, ad esempio **BN_CLICKED** o **EN_CHANGE**, verrà inviato all'elemento padre della finestra di dialogo della barra della finestra principale.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)   
- [Esempio](../visual-cpp-samples.md)
+
+Una barra di finestra di dialogo è una barra degli strumenti, un tipo di [sulla barra di controllo](../mfc/control-bars.md) che può contenere qualsiasi tipo di controllo. Poiché presenta le caratteristiche di una finestra di dialogo non modale, una [CDialogBar](../mfc/reference/cdialogbar-class.md) oggetto fornisce una barra degli strumenti più potente.
+
+Esistono alcune differenze principali tra una barra degli strumenti e un `CDialogBar` oggetto. Oggetto `CDialogBar` oggetto viene creato da una risorsa modello di finestra, che è possibile creare tramite l'editor di finestre di Visual C++ e che può contenere qualsiasi tipo di controllo di Windows. L'utente può spostarsi dal controllo del codice al controllo. Ed è possibile specificare uno stile di allineamento per allineare la barra di finestra di dialogo con qualsiasi parte della finestra cornice padre o anche per lasciare posto se l'elemento padre viene ridimensionato. Nella figura seguente mostra una barra di finestra di dialogo con un'ampia gamma di controlli.
+
+![Barra di finestra di dialogo VC](../mfc/media/vc378t1.gif "vc378t1") una barra di finestra di dialogo
+
+Per gli altri aspetti, utilizzo di un `CDialogBar` oggetto è, ad esempio l'utilizzo di una finestra di dialogo non modale. Usare l'editor finestre per progettare e creare la risorsa finestra di dialogo.
+
+Uno delle lodi della barra della finestra è che possono includere controlli diversi da pulsanti.
+
+Anche se è normale per derivare le classi di finestra di dialogo da `CDialog`, non è in genere derivare una classe personalizzata per una barra di finestra di dialogo. Le barre di finestra di dialogo sono estensioni per una finestra principale ed eventuali messaggi di notifica del controllo barra di finestra di dialogo, ad esempio **BN_CLICKED** oppure **EN_CHANGE**, verrà inviato all'elemento padre della finestra di dialogo barra, la finestra principale.
+
+## <a name="see-also"></a>Vedere anche
+
+[Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)<br/>
+[Esempio](../visual-cpp-samples.md)
 

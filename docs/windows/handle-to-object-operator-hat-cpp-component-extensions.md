@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 569770b548d4bb076bdfac83942def5684ebdf5e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597297"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410858"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operatore handle a oggetto (^) (Estensioni del componente C++)
 
@@ -235,5 +235,5 @@ Opzione del compilatore: `/clr`
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)  
+[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Operatore di riferimento di rilevamento](../windows/tracking-reference-operator-cpp-component-extensions.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bb6c1bd23eaf705f6ceb57e5fc4ea3354c0ddfc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9406cc95804e4eb9fd76f53201118f13f0e422a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42571358"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410507"
 ---
 # <a name="importidl"></a>importidl
 
@@ -38,7 +38,7 @@ Inserisce il file con estensione idl specificato nel file con estensione IDL gen
 
 ### <a name="parameters"></a>Parametri
 
-*idl_file*  
+*idl_file*<br/>
 Identifica il nome del file con estensione idl che si desidera eseguire il merge con il file con estensione idl che verrà generato per l'applicazione.
 
 ## <a name="remarks"></a>Note
@@ -71,9 +71,9 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi del compilatore](../windows/compiler-attributes.md)  
-[Attributi autonomi](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importlib](../windows/importlib.md)  
-[include](../windows/include-cpp.md)  
+[Attributi del compilatore](../windows/compiler-attributes.md)<br/>
+[Attributi autonomi](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importlib](../windows/importlib.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)  

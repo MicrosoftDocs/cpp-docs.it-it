@@ -51,66 +51,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd8fc67f7cdc11328c4da9643f57b65a1cc6bfd0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b62acb002c9035dfa7fa63aaf5efb23f9939c25b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197185"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415194"
 ---
 # <a name="graphic-objects"></a>Oggetti grafici
-Windows offre un'ampia gamma di strumenti di disegno da usare in contesti di dispositivo, tra cui penne per tracciare linee, pennelli per riempire le aree interne e tipi di carattere per aggiungere testo. MFC offre classi di oggetti grafici equivalenti agli strumenti di disegno di Windows. La tabella seguente mostra le classi disponibili e i tipi di handle Graphics Device Interface (GDI) di Windows equivalenti.  
-  
+
+Windows offre un'ampia gamma di strumenti di disegno da usare in contesti di dispositivo, tra cui penne per tracciare linee, pennelli per riempire le aree interne e tipi di carattere per aggiungere testo. MFC offre classi di oggetti grafici equivalenti agli strumenti di disegno di Windows. La tabella seguente mostra le classi disponibili e i tipi di handle Graphics Device Interface (GDI) di Windows equivalenti.
+
 > [!NOTE]
->  Per altre informazioni, vedere la documentazione di GDI+ SDK all'indirizzo: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
-  
- Questo articolo descrive l'uso di queste classi di oggetti grafici:  
-  
-### <a name="classes-for-windows-gdi-objects"></a>Classi per oggetti GDI di Windows  
-  
-|Classe|Tipo di handle di Windows|  
-|-----------|-------------------------|  
-|[CPen](../mfc/reference/cpen-class.md)|`HPEN`|  
-|[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|  
-|[CFont](../mfc/reference/cfont-class.md)|**HFONT**|  
-|[CBitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|  
-|[CPalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|  
-|[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|  
-  
+>  Per altre informazioni, vedere la documentazione di GDI+ SDK all'indirizzo: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+
+Questo articolo descrive l'uso di queste classi di oggetti grafici:
+
+### <a name="classes-for-windows-gdi-objects"></a>Classi per oggetti GDI di Windows
+
+|Classe|Tipo di handle di Windows|
+|-----------|-------------------------|
+|[CPen](../mfc/reference/cpen-class.md)|`HPEN`|
+|[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|
+|[CFont](../mfc/reference/cfont-class.md)|**HFONT**|
+|[CBitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|
+|[CPalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|
+|[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|
+
 > [!NOTE]
->  La classe [CImage](../atl-mfc-shared/reference/cimage-class.md) offre supporto avanzato per le bitmap.  
-  
- Ogni classe di oggetti grafici nella libreria di classi ha un costruttore che permette di creare oggetti grafici di tale classe, che è quindi necessario inizializzare con la funzione di creazione appropriata, ad esempio `CreatePen`.  
-  
- Ogni classe di oggetti grafici nella libreria di classi include un operatore di cast che eseguirà il cast di un oggetto MFC all'handle di Windows associato. L'handle risultante è valido fino a quando l'oggetto associato non lo scollega. Usare l'oggetto `Detach` funzione membro per scollegare l'handle.  
-  
- Il codice seguente esegue il cast di un oggetto `CPen` a un handle di Windows:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/cpp/graphic-objects_1.cpp)]  
-  
-#### <a name="to-create-a-graphic-object-in-a-device-context"></a>Per creare un oggetto grafico in un contesto di dispositivo  
-  
-1.  Definire un oggetto grafico sullo stack frame. Inizializzare l'oggetto con la funzione di creazione specifica del tipo, ad esempio `CreatePen`. In alternativa, inizializzare l'oggetto nel costruttore. Vedere la discussione relativa [la creazione di una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md), che fornisce il codice di esempio.  
-  
-2.  [Selezionare l'oggetto nel contesto di dispositivo corrente](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvando il vecchio oggetto grafico che è stata selezionata prima.  
-  
-3.  Al termine delle operazioni sull'oggetto grafico corrente, selezionare di nuovo il vecchio oggetto grafico nel contesto di dispositivo per ripristinarne lo stato.  
-  
-4.  Consentire l'eliminazione automatica dell'oggetto grafico allocato al frame quando si esce dall'ambito.  
-  
+>  La classe [CImage](../atl-mfc-shared/reference/cimage-class.md) offre supporto avanzato per le bitmap.
+
+Ogni classe di oggetti grafici nella libreria di classi ha un costruttore che permette di creare oggetti grafici di tale classe, che è quindi necessario inizializzare con la funzione di creazione appropriata, ad esempio `CreatePen`.
+
+Ogni classe di oggetti grafici nella libreria di classi include un operatore di cast che eseguirà il cast di un oggetto MFC all'handle di Windows associato. L'handle risultante è valido fino a quando l'oggetto associato non lo scollega. Usare l'oggetto `Detach` funzione membro per scollegare l'handle.
+
+Il codice seguente esegue il cast di un oggetto `CPen` a un handle di Windows:
+
+[!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/cpp/graphic-objects_1.cpp)]
+
+#### <a name="to-create-a-graphic-object-in-a-device-context"></a>Per creare un oggetto grafico in un contesto di dispositivo
+
+1. Definire un oggetto grafico sullo stack frame. Inizializzare l'oggetto con la funzione di creazione specifica del tipo, ad esempio `CreatePen`. In alternativa, inizializzare l'oggetto nel costruttore. Vedere la discussione relativa [la creazione di una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md), che fornisce il codice di esempio.
+
+1. [Selezionare l'oggetto nel contesto di dispositivo corrente](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvando il vecchio oggetto grafico che è stata selezionata prima.
+
+1. Al termine delle operazioni sull'oggetto grafico corrente, selezionare di nuovo il vecchio oggetto grafico nel contesto di dispositivo per ripristinarne lo stato.
+
+1. Consentire l'eliminazione automatica dell'oggetto grafico allocato al frame quando si esce dall'ambito.
+
 > [!NOTE]
->  Se si prevede di usare ripetutamente un oggetto grafico, è possibile allocarlo una volta e selezionarlo in un contesto di dispositivo ogni volta che è necessario. Assicurarsi di eliminare l'oggetto quando non è più necessario.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Costruzione di oggetti grafici in una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
-  
--   [Esempio di costruire una penna in una e due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
-  
--   [Selezione di un oggetto grafico in un contesto di dispositivo](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
-  
--   [Contesti di dispositivo](../mfc/device-contexts.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Oggetti finestra](../mfc/window-objects.md)
+>  Se si prevede di usare ripetutamente un oggetto grafico, è possibile allocarlo una volta e selezionarlo in un contesto di dispositivo ogni volta che è necessario. Assicurarsi di eliminare l'oggetto quando non è più necessario.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Costruzione di oggetti grafici in una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+
+- [Esempio di costruire una penna in una e due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+
+- [Selezione di un oggetto grafico in un contesto di dispositivo](../mfc/selecting-a-graphic-object-into-a-device-context.md)
+
+- [Contesti di dispositivo](../mfc/device-contexts.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Oggetti finestra](../mfc/window-objects.md)
 

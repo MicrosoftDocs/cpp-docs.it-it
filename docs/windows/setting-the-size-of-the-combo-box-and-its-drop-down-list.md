@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ecc04f0e8bda3045dcad141fa3fe467039c3f23
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8bd2a81c10855dfe1d409b34612956616018dab7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605560"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413457"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Impostazione della dimensione di una casella combinata e dell'elenco a discesa
 
@@ -61,6 +61,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Aggiunta di valori a un controllo casella combinata](../windows/adding-values-to-a-combo-box-control.md)  
-[Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)  
+[Aggiunta di valori a un controllo casella combinata](../windows/adding-values-to-a-combo-box-control.md)<br/>
+[Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

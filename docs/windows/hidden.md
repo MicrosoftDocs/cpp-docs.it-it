@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 350f1c7c844bd386191b2a236f5bc4ada4e1672a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 726a44a33be5fe82986d4696c5420e07d5c103ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204528"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416461"
 ---
 # <a name="hidden"></a>hidden
 
@@ -57,7 +57,7 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di interfaccia](../windows/interface-attributes.md)  
-[Attributi di classe](../windows/class-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di interfaccia](../windows/interface-attributes.md)<br/>
+[Attributi di classe](../windows/class-attributes.md)<br/>
 [Attributi di metodo](../windows/method-attributes.md)  

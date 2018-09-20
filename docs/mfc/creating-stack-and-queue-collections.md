@@ -1,5 +1,5 @@
 ---
-title: Creazione di raccolte di Stack e coda | Documenti Microsoft
+title: Creazione di raccolte Stack e code | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,40 +21,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5545a1803675965cdea716e009ab70d2d72a31f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345713"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403786"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Creazione di raccolta Stack e Code
-In questo articolo viene illustrato come creare altre strutture di dati, ad esempio [stack](#_core_stacks) e [code](#_core_queues), elenco classi MFC. Negli esempi vengono utilizzate le classi derivate da `CList`, ma è possibile utilizzare `CList` direttamente a meno che non è necessario aggiungere la funzionalità.  
-  
-##  <a name="_core_stacks"></a> Stack  
- Poiché la raccolta dell'elenco standard ha un'intestazione e da una coda, è facile creare una raccolta derivata che simula il comportamento di un oggetto stack last-in-first-out. Uno stack è simile a una pila di cassetti in un self-service:. Se cassetti vengono aggiunti allo stack, escono all'inizio dello stack. L'ultimo vassoio aggiunto è il primo da rimuovere. Le funzioni membro di raccolta elenco `AddHead` e `RemoveHead` può essere utilizzato per aggiungere e rimuovere elementi dalla head dell'elenco; in questo modo, l'ultimo aggiunto elemento è il primo da rimuovere.  
-  
-#### <a name="to-create-a-stack-collection"></a>Per creare una raccolta di stack  
-  
-1.  Derivare una nuova classe di elenco da una delle classi MFC elenco esistenti e aggiungere altre funzioni membro per supportare la funzionalità operazioni dello stack.  
-  
-     Nell'esempio seguente viene illustrato come aggiungere le funzioni membro per inserire gli elementi nello stack, visualizzazione in corrispondenza dell'elemento superiore dello stack e visualizzare il primo elemento dallo stack:  
-  
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]  
-  
- Si noti che questo approccio espone sottostante `CObList` classe. L'utente può chiamare qualsiasi `CObList` funzione membro, se è utile per lo stack o non.  
-  
-##  <a name="_core_queues"></a> Code  
- Poiché la raccolta dell'elenco standard ha un'intestazione e da una coda, è facile creare una raccolta derivata che simula il comportamento di una coda first-in-first-out. Una coda è una linea di persone in un self-service:. Il primo utente nella riga è la prima di essere servite. I nuovi arrivati, passano alla fine della riga di attesa a loro volta. Le funzioni membro di raccolta elenco `AddTail` e `RemoveHead` può essere utilizzato per aggiungere e rimuovere elementi dalla testa o dalla coda dell'elenco; in questo modo, l'ultimo aggiunto elemento è sempre l'ultimo da rimuovere.  
-  
-#### <a name="to-create-a-queue-collection"></a>Per creare un insieme di code  
-  
-1.  Derivare una nuova classe di elenco da una delle classi di elenco predefinite fornite con la libreria Microsoft Foundation Class e aggiungere altre funzioni membro per supportare la semantica di operazioni di coda.  
-  
-     Nell'esempio seguente viene illustrato come è possibile aggiungere le funzioni membro per aggiungere un elemento alla fine della coda e ottenere l'elemento dalla parte anteriore della coda.  
-  
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]  
-  
-## <a name="see-also"></a>Vedere anche  
- [Raccolte](../mfc/collections.md)
+
+Questo articolo illustra come creare altre strutture di dati, ad esempio [stack](#_core_stacks) e [code](#_core_queues), elencare le classi da MFC. Gli esempi usano le classi derivate da `CList`, ma è possibile usare `CList` direttamente a meno che non è necessario aggiungere la funzionalità.
+
+##  <a name="_core_stacks"></a> Stack
+
+Poiché la raccolta list standard dispone di un elemento head e da una coda, è facile creare una raccolta derivata che simula il comportamento di uno stack last-in-first-out. Uno stack è simile a uno stack di alloggiamenti in un self-service:. Man mano che cassetti vengono aggiunti allo stack, escono all'inizio dello stack. La barra delle applicazioni ultimo aggiunto è il primo da rimuovere. Le funzioni membro di raccolta elenco `AddHead` e `RemoveHead` può essere utilizzato per aggiungere e rimuovere elementi in modo specifico dall'inizio dell'elenco; in questo modo, l'ultimo aggiunto elemento è il primo da rimuovere.
+
+#### <a name="to-create-a-stack-collection"></a>Per creare una raccolta di stack
+
+1. Derivare una nuova classe di elenco da una delle classi MFC elenco esistenti e aggiungere altre funzioni membro per supportare la funzionalità di operazioni di stack.
+
+     Nell'esempio seguente viene illustrato come aggiungere le funzioni membro per inserire elementi nello stack, consultare l'elemento superiore dello stack e visualizzare l'elemento superiore dello stack:
+
+     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+
+Si noti che questo approccio espone sottostante `CObList` classe. L'utente può chiamare qualsiasi `CObList` funzione membro, se è opportuno per uno stack o No.
+
+##  <a name="_core_queues"></a> Code
+
+Poiché la raccolta list standard dispone di un elemento head e da una coda, è anche facile creare una raccolta derivata che simula il comportamento di una coda first-in-first-out. Una coda è simile a una linea di persone in un self-service:. La prima persona in linea è la prima di essere servite. I nuovi arrivati, passano alla fine della riga a loro volta di attesa. Le funzioni membro di raccolta elenco `AddTail` e `RemoveHead` può essere utilizzato per aggiungere e rimuovere elementi in modo specifico dal head o della parte finale dell'elenco; in questo modo, l'ultimo aggiunto elemento sia sempre l'ultimo da rimuovere.
+
+#### <a name="to-create-a-queue-collection"></a>Per creare una raccolta di coda
+
+1. Derivare una nuova classe di elenco da una delle classi elenco predefinito fornite con la libreria Microsoft Foundation Class e aggiungere altre funzioni membro per supportare la semantica delle operazioni di Accodamento.
+
+     Nell'esempio seguente viene illustrato come è possibile aggiungere le funzioni membro per aggiungere un elemento alla fine della coda e ottenere l'elemento dalla parte anteriore della coda.
+
+     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+
+## <a name="see-also"></a>Vedere anche
+
+[Raccolte](../mfc/collections.md)
 

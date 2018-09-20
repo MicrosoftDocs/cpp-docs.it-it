@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e946406a708f26685d6f1b7307476b6253c5362e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e2c368ac8dfcb5a9d283f4b567e68d4a629c1ba4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713293"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417423"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modello di gestione delle eccezioni)
 
@@ -120,5 +120,5 @@ Tuttavia, l'attributo non generante non garantisce che non possono essere genera
 [Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
 [Gli errori e la gestione delle eccezioni](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Specifiche di eccezioni (generazione)](../../cpp/exception-specifications-throw-cpp.md)
-[Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)
+[Specifiche di eccezione (generazione)](../../cpp/exception-specifications-throw-cpp.md)<br/>
+[Gestione strutturata delle eccezioni (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

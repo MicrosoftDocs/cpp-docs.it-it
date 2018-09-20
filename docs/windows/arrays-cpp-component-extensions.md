@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714451"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402850"
 ---
 # <a name="arrays-c-component-extensions"></a>Matrici (Estensioni del componente C++)
 
@@ -65,16 +65,16 @@ Il primo esempio della sintassi Usa la **ref nuovo** parola chiave aggregata per
 *qualificatori*<br/>
 (Facoltativo) Uno o più di questi identificatori di classi di archiviazione: [modificabile](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statico](../cpp/static-members-cpp.md).
 
-*tipo di matrice*  
+*tipo di matrice*<br/>
 Il tipo della variabile di matrice. I tipi validi sono le classi di Windows Runtime e tipi fondamentali, classi di riferimento e gli struct, classi e struct e puntatori nativi (`type*`).
 
 *rank*<br/>
 (Facoltativo) Il numero di dimensioni della matrice. Deve essere 1.
 
-*identifier*  
+*identifier*<br/>
 Il nome della variabile di matrice.
 
-*tipo di inizializzazione*  
+*tipo di inizializzazione*<br/>
 Il tipo dei valori che consentono di inizializzare la matrice. In genere *di tipo matrice* e *tipo di inizializzazione* sono dello stesso tipo. Tuttavia, i tipi possono essere diversi se è presente una conversione da *-tipo di inizializzazione* per *di tipo matrice*, ad esempio, se *-tipo di inizializzazione* è derivato da *di tipo matrice*.
 
 *elenco di inizializzazione*<br/>
@@ -121,19 +121,19 @@ Il primo esempio della sintassi Usa la **gcnew** (parola chiave) da allocare una
 *qualificatori*<br/>
 (Facoltativo) Uno o più di questi identificatori di classi di archiviazione: [modificabile](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statico](../cpp/static-members-cpp.md).
 
-*tipo di matrice*  
+*tipo di matrice*<br/>
 Il tipo della variabile di matrice. I tipi validi sono le classi di Windows Runtime e tipi fondamentali, classi di riferimento e struct, classi e struct, puntatori nativi (`type*`) e tipi POD (dati non aggiornati) nativi.
 
 *rank*<br/>
 (Facoltativo) Il numero di dimensioni della matrice. Il valore predefinito è 1. il valore massimo è 32. Ogni dimensione della matrice è a sua volta una matrice.
 
-*identifier*  
+*identifier*<br/>
 Il nome della variabile di matrice.
 
-*tipo di inizializzazione*  
+*tipo di inizializzazione*<br/>
 Il tipo dei valori che consentono di inizializzare la matrice. In genere *di tipo matrice* e *tipo di inizializzazione* sono dello stesso tipo. Tuttavia, i tipi possono essere diversi se è presente una conversione da *-tipo di inizializzazione* per *di tipo matrice*, ad esempio, se *-tipo di inizializzazione* è derivato da *di tipo matrice*.
 
-*Rank-dimensioni-list*  
+*Rank-dimensioni-list*<br/>
 Elenco delimitato da virgole delle dimensioni di ogni dimensione della matrice. In alternativa, se il *elenco di inizializzazione* viene specificato, il compilatore può dedurre le dimensioni di ogni dimensione e *rank-dimensioni-list* può essere omesso.
 
 *elenco di inizializzazione*<br/>

@@ -1,5 +1,5 @@
 ---
-title: Allocazione e deallocazione di memoria delle finestre | Documenti Microsoft
+title: Allocazione e deallocazione di memoria delle finestre | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1364b4d29e2ccd2c9563359716eba6880df5436
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 149a8e860913515551fc85be9b49675856d7e129
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341459"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415193"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Allocazione e deallocazione di memoria delle finestre
-Non utilizzare C++ **eliminare** operatore da eliminare definitivamente una finestra cornice o una vista. Chiamare invece il `CWnd` funzione membro `DestroyWindow`. Finestre cornice, pertanto, devono essere allocate sull'heap con operatore **nuova**. Prestare attenzione durante l'allocazione di finestre cornice nello stack frame o a livello globale. Altre finestre devono essere allocati nel frame dello stack quando possibile.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Creazione di finestre](../mfc/creating-windows.md)  
-  
--   [Sequenza di distruzione di finestre](../mfc/window-destruction-sequence.md)  
-  
--   [Disconnessione di CWnd da HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Eliminazione definitiva di oggetti finestra](../mfc/destroying-window-objects.md)
+
+Non usare C++ **eliminare** operatore da eliminare definitivamente una finestra cornice o una vista. Chiamare invece il `CWnd` funzione membro `DestroyWindow`. Finestre cornice, pertanto, devono essere allocate nell'heap con l'operatore **nuovo**. Prestare attenzione durante l'allocazione di finestre cornice sullo stack frame o a livello globale. Altre finestre devono essere impostate sullo stack frame laddove possibile.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Creazione di finestre](../mfc/creating-windows.md)
+
+- [Sequenza di distruzione di finestre](../mfc/window-destruction-sequence.md)
+
+- [Disconnessione di CWnd da HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Eliminazione definitiva di oggetti finestra](../mfc/destroying-window-objects.md)
 

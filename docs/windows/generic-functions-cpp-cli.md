@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709149"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398859"
 ---
 # <a name="generic-functions-ccli"></a>Funzioni generiche (C++/CLI)
 
@@ -63,28 +63,28 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parametri
 
-*Attributi*  
+*Attributi*<br/>
 (Facoltativo) Informazioni dichiarative aggiuntive. Per altre informazioni sugli attributi e classi di attributi, vedere attributi.
 
-*Modificatori*  
+*Modificatori*<br/>
 (Facoltativo) Modificatore di funzione, ad esempio statico.  **virtuale** non è consentita perché i metodi virtuali non possono essere generici.
 
-*tipo restituito*  
+*tipo restituito*<br/>
 Tipo restituito dal metodo. Se il tipo restituito è void, nessun valore restituito è obbligatorio.
 
-*identifier*  
+*identifier*<br/>
 Nome della funzione.
 
-*parametro di tipo identificatore/i*  
+*parametro di tipo identificatore/i*<br/>
 Elenco di identificatori delimitati da virgole.
 
-*parametri formali di*  
+*parametri formali di*<br/>
 (Facoltativo) Elenco di parametri.
 
-*parametro di tipo-clausole di vincoli*  
+*parametro di tipo-clausole di vincoli*<br/>
 Questo specifica le restrizioni sui tipi che possono essere utilizzati come argomenti tipo e assume il formato specificato nella [vincoli su parametri di tipo generico (C + + / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).
 
-*corpo della funzione*  
+*corpo della funzione*<br/>
 Il corpo del metodo, che può fare riferimento agli identificatori dei parametri di tipo.
 
 ### <a name="remarks"></a>Note
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)  
+[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Generics](../windows/generics-cpp-component-extensions.md)

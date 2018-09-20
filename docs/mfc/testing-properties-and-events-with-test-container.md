@@ -1,5 +1,5 @@
 ---
-title: Test di proprietà ed eventi con Test Container | Documenti Microsoft
+title: Test di proprietà ed eventi con Test Container | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,50 +20,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbf2b7c26b7fc44a526381f4fb3e4dee5c94ba8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e06f10114b896e2728e5a017281e54f75ce534e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381036"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404631"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Test di proprietà ed eventi con Test Container
-L'applicazione contenitore di Test, fornito con Visual C++, è un contenitore di controlli ActiveX per i test e debug dei controlli ActiveX. Test Container consente allo sviluppatore di controllo di testare la funzionalità del controllo modificandone le proprietà, richiamare i metodi e generazione di eventi. Test Container consente di visualizzare i registri delle notifiche di associazione di dati e fornisce anche funzionalità per il test della funzionalità di persistenza di un controllo ActiveX: è possibile salvare le proprietà in un flusso o in un sottoarchivio, ricaricarle e analizzare i dati del flusso archiviato. In questa sezione viene descritto come utilizzare le funzionalità di base del contenitore di Test. Per ulteriori informazioni, selezionare il **Guida** menu durante l'esecuzione di Test Container.  
-  
-### <a name="to-access-the-activex-control-test-container"></a>Per accedere al contenitore di Test di controllo ActiveX  
-  
-1.  Compilare il [esempio TSTCON: ActiveX Control Test Container](../visual-cpp-samples.md).  
-  
-### <a name="to-test-your-activex-control"></a>Per testare il controllo ActiveX  
-  
-1.  Nel **modifica** menu del contenitore di Test, fare clic su **Inserisci nuovo controllo**.  
-  
-2.  Nel **Inserisci controllo** , selezionare il controllo desiderato e fare clic su **OK**. Il controllo verrà visualizzati nel contenitore del controllo.  
-  
+
+L'applicazione contenitore di Test, fornito in Visual C++, è un contenitore di controlli ActiveX per il test e debug di controlli ActiveX. Contenitore di test consente allo sviluppatore controllo testare la funzionalità del controllo modificandone le proprietà, richiamare i metodi e gli eventi di attivazione. Contenitore di test consente di visualizzare i registri delle notifiche di associazione dati e fornisce anche funzionalità per i test di funzionalità di persistenza di un controllo ActiveX: è possibile salvare le proprietà in un flusso o sottoarchivio, ricaricarli ed esaminare i dati di flusso archiviato. Questa sezione descrive come usare le funzionalità di base del contenitore di Test. Per altre informazioni, selezionare la **aiutare** menu durante l'esecuzione di Test Container.
+
+### <a name="to-access-the-activex-control-test-container"></a>Per accedere al contenitore di Test di controllo ActiveX
+
+1. Compilare il [esempio TSTCON: controllo ActiveX Test Container](../visual-cpp-samples.md).
+
+### <a name="to-test-your-activex-control"></a>Per testare il controllo ActiveX
+
+1. Nel **Edit** dal menu del contenitore di Test, fare clic su **Inserisci nuovo controllo**.
+
+1. Nel **Inserisci controllo** , selezionare il controllo desiderato e scegliere **OK**. Il controllo verrà visualizzato nel contenitore del controllo.
+
     > [!NOTE]
-    >  Se il controllo non è elencato nel **Inserisci controllo** finestra di dialogo, accertarsi di aver registrato con il **Registra controlli** comando il **File** dal menu del Test Contenitore.  
-  
- A questo punto è possibile testare il controllo proprietà o eventi.  
-  
-#### <a name="to-test-properties"></a>Per verificare le proprietà  
-  
-1.  Nel **controllo** menu, fare clic su **richiama metodi**.  
-  
-2.  Nel **nome del metodo** elenco a discesa selezionare il metodo PropPut per la proprietà a cui si desidera testare.  
-  
-3.  Modificare il **valore del parametro** o **tipo di parametro** e fare clic su di **Imposta valore** pulsante.  
-  
-4.  Fare clic su **Invoke** per applicare il nuovo valore all'oggetto.  
-  
-     La proprietà contiene ora il nuovo valore.  
-  
-#### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>Per verificare gli eventi e specificare la destinazione delle informazioni sull'evento.  
-  
-1.  Nel **opzioni** menu, fare clic su **registrazione**.  
-  
-2.  Specificare la destinazione delle informazioni sull'evento.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Procedura: Eseguire il debug di un controllo ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
+    >  Se il controllo non è elencato nel **Inserisci controllo** finestra di dialogo verificare che sia stato registrato con il **Registra controlli** dal **File** dal menu del Test Contenitore.
+
+A questo punto è possibile testare le proprietà del controllo o eventi.
+
+#### <a name="to-test-properties"></a>Per testare le proprietà
+
+1. Nel **controllo** menu, fare clic su **richiama metodi**.
+
+1. Nel **nome del metodo** elenco a discesa selezionare il metodo PropPut per la proprietà da testare.
+
+1. Modificare il **valore del parametro** oppure **tipo di parametro** e fare clic sui **Imposta valore** pulsante.
+
+1. Fare clic su **Invoke** per applicare il nuovo valore all'oggetto.
+
+     La proprietà contiene ora il nuovo valore.
+
+#### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>Per verificare gli eventi e specificare la destinazione di informazioni sull'evento.
+
+1. Nel **opzioni** menu, fare clic su **Logging**.
+
+1. Specificare la destinazione di informazioni sull'evento.
+
+## <a name="see-also"></a>Vedere anche
+
+[Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
+[Procedura: Eseguire il debug di un controllo ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
 

@@ -1,5 +1,5 @@
 ---
-title: Automazione | Documenti Microsoft
+title: Automazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,70 +30,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5e0abb9e95244b4501be96029709bc4dc412cc79
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930602"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405502"
 ---
 # <a name="automation"></a>automazione
-L'automazione (precedentemente nota come automazione OLE) fa sì che un'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati.  
-  
- Un [server di automazione](../mfc/automation-servers.md) è un'applicazione (un tipo di server COM) che espone le proprie funzionalità tramite interfacce COM ad altre applicazioni, chiamate [client di automazione](../mfc/automation-clients.md). L'esposizione consente ai client di automazione di automatizzare determinate funzioni accedendo direttamente agli oggetti e utilizzando i servizi che essi forniscono.  
-  
- I server e i client di automazione utilizzano le interfacce COM che derivano sempre da `IDispatch` e accettano e restituiscono uno specifico set di tipi di dati denominati tipi di automazione. È possibile automatizzare qualsiasi oggetto che espone un'interfaccia di automazione, fornendo i metodi e le proprietà a cui è possibile accedere da altre applicazioni. L'automazione è disponibile sia per gli oggetti OLE che per gli oggetti COM. L'oggetto automatizzato potrebbe essere locale o remoto (in un altro computer a cui si accede attraverso una rete), quindi esistono due categorie di automazione:  
-  
--   Automazione (locale).  
-  
--   Automazione remota (su una rete, utilizzando Distributed COM o DCOM).  
-  
- L'esposizione degli oggetti è utile quando le applicazioni forniscono funzionalità utili per altre applicazioni. Ad esempio, un controllo ActiveX è un tipo di server di automazione; l'applicazione che contiene il controllo ActiveX è il client di automazione del controllo.  
-  
- Ad esempio, un elaboratore di testo potrebbe esporre la propria funzionalità di controllo ortografico ad altri programmi. L'esposizione degli oggetti consente ai fornitori di migliorare le proprie applicazioni sfruttando funzionalità preconfezionate di altre applicazioni. In questo modo, l'automazione applica alcuni dei principi della programmazione orientata a oggetti, ad esempio la possibilità di riutilizzo e l'incapsulamento, a livello delle stesse applicazioni.  
-  
- Più importante è il supporto che l'automazione fornisce agli utenti e ai provider di soluzioni. Esponendo la funzionalità dell'applicazione tramite un'interfaccia comune e definita chiaramente, l'automazione consente di compilare soluzioni complete in un unico linguaggio di programmazione generale, come ad esempio Microsoft Visual Basic, anziché in diversi macro linguaggi specifici per applicazione.  
-  
- Molte applicazioni commerciali, quali Microsoft Excel e Microsoft Visual C++, permettono di automatizzare gran parte delle funzionalità che offrono. Ad esempio, in Visual C++, è possibile scrivere macro VBScript per automatizzare compilazioni, aspetti di codice la modifica o l'attività di debug.  
-  
-##  <a name="_core_passing_parameters_in_automation"></a> Passaggio di parametri nell'automazione  
- Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il tipo **VARIANT** supporta numerosi tipi di dati standard: interi a 2 e a 4 byte, numeri in virgola mobile a 4 e a 8 byte, stringhe e valori Boolean. Inoltre, supporta le **HRESULT** (codici di errore OLE), **valuta** (un tipo numerico a virgola fissa), e **data** tipi (data assoluta e ora), nonché puntatori alle `IUnknown` e `IDispatch` interfacce.  
-  
- Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/colevariant-class.md) . Le classi **CURRENCY** e **DATE** di supporto sono incapsulate nelle classi [COleCurrency](../mfc/reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .  
-  
-## <a name="automation-samples"></a>Esempi di automazione  
-  
--   [AUTOCLIK](../visual-cpp-samples.md) Utilizzare questo esempio per apprendere le tecniche di automazione e come base per l'apprendimento dell'automazione remota.  
-  
--   [ACDUAL](../visual-cpp-samples.md) Aggiunge interfacce duali a un'applicazione server di automazione.  
-  
--   [CALCDRIV](../visual-cpp-samples.md) Applicazione client di automazione che controlla MFCCALC.  
-  
--   [INPROC](../visual-cpp-samples.md) Mostra un'applicazione server di automazione in-process.  
-  
--   [IPDRIVE](../visual-cpp-samples.md) Applicazione client di automazione che controlla INPROC.  
-  
--   [MFCCALC](../visual-cpp-samples.md) Mostra un'applicazione client di automazione.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Automation Clients](../mfc/automation-clients.md)  
-  
--   [Server di automazione](../mfc/automation-servers.md)  
-  
--   [OLE](../mfc/ole-in-mfc.md)  
-  
--   [tecnologia Active](../mfc/mfc-com.md)  
-  
-## <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire  
-  
--   [Aggiungere una classe di automazione](../mfc/automation-servers.md)  
-  
--   [Utilizzare le librerie dei tipi](../mfc/automation-clients-using-type-libraries.md)  
-   
--   [Accedere a server di automazione](../mfc/automation-servers.md)  
-  
--   [Scrivere client di automazione in C++](../mfc/automation-clients.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [MFC COM](../mfc/mfc-com.md)
+
+L'automazione (precedentemente nota come automazione OLE) fa sì che un'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati.
+
+Un [server di automazione](../mfc/automation-servers.md) è un'applicazione (un tipo di server COM) che espone le proprie funzionalità tramite interfacce COM ad altre applicazioni, chiamate [client di automazione](../mfc/automation-clients.md). L'esposizione consente ai client di automazione di automatizzare determinate funzioni accedendo direttamente agli oggetti e utilizzando i servizi che essi forniscono.
+
+I server e i client di automazione utilizzano le interfacce COM che derivano sempre da `IDispatch` e accettano e restituiscono uno specifico set di tipi di dati denominati tipi di automazione. È possibile automatizzare qualsiasi oggetto che espone un'interfaccia di automazione, fornendo i metodi e le proprietà a cui è possibile accedere da altre applicazioni. L'automazione è disponibile sia per gli oggetti OLE che per gli oggetti COM. L'oggetto automatizzato potrebbe essere locale o remoto (in un altro computer a cui si accede attraverso una rete), quindi esistono due categorie di automazione:
+
+- Automazione (locale).
+
+- Automazione remota (su una rete, utilizzando Distributed COM o DCOM).
+
+L'esposizione degli oggetti è utile quando le applicazioni forniscono funzionalità utili per altre applicazioni. Ad esempio, un controllo ActiveX è un tipo di server di automazione; l'applicazione che contiene il controllo ActiveX è il client di automazione del controllo.
+
+Ad esempio, un elaboratore di testo potrebbe esporre la propria funzionalità di controllo ortografico ad altri programmi. L'esposizione degli oggetti consente ai fornitori di migliorare le proprie applicazioni sfruttando funzionalità preconfezionate di altre applicazioni. In questo modo, l'automazione applica alcuni dei principi della programmazione orientata a oggetti, ad esempio la possibilità di riutilizzo e l'incapsulamento, a livello delle stesse applicazioni.
+
+Più importante è il supporto che l'automazione fornisce agli utenti e ai provider di soluzioni. Esponendo la funzionalità dell'applicazione tramite un'interfaccia comune e definita chiaramente, l'automazione consente di compilare soluzioni complete in un unico linguaggio di programmazione generale, come ad esempio Microsoft Visual Basic, anziché in diversi macro linguaggi specifici per applicazione.
+
+Molte applicazioni commerciali, quali Microsoft Excel e Microsoft Visual C++, permettono di automatizzare gran parte delle funzionalità che offrono. Ad esempio, in Visual C++, è possibile scrivere macro di VBScript per automatizzare compilazioni, aspetti del codice, la modifica o l'attività di debug.
+
+##  <a name="_core_passing_parameters_in_automation"></a> Passaggio di parametri nell'automazione
+
+Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il tipo **VARIANT** supporta numerosi tipi di dati standard: interi a 2 e a 4 byte, numeri in virgola mobile a 4 e a 8 byte, stringhe e valori Boolean. Inoltre, supporta il **HRESULT** (codici di errore OLE), **valuta** (un tipo numerico a virgola fissa), e **data** tipi (assoluto data e ora), nonché puntatori alle `IUnknown` e `IDispatch` interfacce.
+
+Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/colevariant-class.md) . Le classi **CURRENCY** e **DATE** di supporto sono incapsulate nelle classi [COleCurrency](../mfc/reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .
+
+## <a name="automation-samples"></a>Esempi di automazione
+
+- [AUTOCLIK](../visual-cpp-samples.md) Utilizzare questo esempio per apprendere le tecniche di automazione e come base per l'apprendimento dell'automazione remota.
+
+- [ACDUAL](../visual-cpp-samples.md) Aggiunge interfacce duali a un'applicazione server di automazione.
+
+- [CALCDRIV](../visual-cpp-samples.md) Applicazione client di automazione che controlla MFCCALC.
+
+- [INPROC](../visual-cpp-samples.md) Mostra un'applicazione server di automazione in-process.
+
+- [IPDRIVE](../visual-cpp-samples.md) Applicazione client di automazione che controlla INPROC.
+
+- [MFCCALC](../visual-cpp-samples.md) Mostra un'applicazione client di automazione.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Automation Clients](../mfc/automation-clients.md)
+
+- [Server di automazione](../mfc/automation-servers.md)
+
+- [OLE](../mfc/ole-in-mfc.md)
+
+- [tecnologia Active](../mfc/mfc-com.md)
+
+## <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire
+
+- [Aggiungere una classe di automazione](../mfc/automation-servers.md)
+
+- [Utilizzare le librerie dei tipi](../mfc/automation-clients-using-type-libraries.md)
+
+- [Accedere a server di automazione](../mfc/automation-servers.md)
+
+- [Scrivere client di automazione in C++](../mfc/automation-clients.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[MFC COM](../mfc/mfc-com.md)

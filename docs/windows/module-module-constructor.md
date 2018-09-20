@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e0459c729368dc182de955f85afda514b2ff5071
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e96e6cf984196cbca3051eec397ae06e48e2f1c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591862"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406659"
 ---
 # <a name="modulemodule-constructor"></a>Costruttore Module::Module
 
@@ -45,4 +45,5 @@ Questo costruttore è protetto e non può essere chiamato con il **nuovo** (paro
 **Spazio dei nomi:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vedere anche
+
 [Classe Module](../windows/module-class.md)

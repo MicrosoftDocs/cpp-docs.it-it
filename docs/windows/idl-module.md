@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0539275a09a64e31a9ecad17cab899368701e353
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715533"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412213"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -46,31 +46,31 @@ function declaration
 
 ### <a name="parameters"></a>Parametri
 
-*name*  
+*name*<br/>
 Un nome definito dall'utente per il blocco di codice che verrà visualizzato nel file IDL.
 
-*dllname*  
+*dllname*<br/>
 (Facoltativo) Il file con estensione dll che contiene l'esportazione.
 
-*uuid*  
+*uuid*<br/>
 (Facoltativo) Un ID univoco.
 
-*helpstring*  
+*helpstring*<br/>
 (Facoltativo) Una stringa di caratteri utilizzata per descrivere la libreria dei tipi.
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (Facoltativo) L'ID di un argomento della Guida in un file con estensione chm o. hlp.
 
-*helpcontext*  
+*helpcontext*<br/>
 (Facoltativo) L'ID della Guida per questa libreria dei tipi.
 
-*hidden*  
+*hidden*<br/>
 (Facoltativo) Un parametro che impedisce la visualizzazione libreria. Vedere le [nascosto](/windows/desktop/Midl/hidden) attributo MIDL per altre informazioni.
 
-*restricted*  
+*restricted*<br/>
 (Facoltativo) I membri della raccolta non possono essere chiamati in modo arbitrario. Vedere le [limitato](/windows/desktop/Midl/restricted) attributo MIDL per altre informazioni.
 
-*dichiarazione di funzione*  
+*dichiarazione di funzione*<br/>
 La funzione che verrà definita.
 
 ## <a name="remarks"></a>Note
@@ -111,6 +111,6 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi autonomi](../windows/stand-alone-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi autonomi](../windows/stand-alone-attributes.md)<br/>
 [entry](../windows/entry.md)  

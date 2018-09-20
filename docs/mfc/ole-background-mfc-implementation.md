@@ -1,5 +1,5 @@
 ---
-title: 'Sfondo OLE: Implementazione MFC | Documenti Microsoft'
+title: 'Sfondo OLE: Implementazione MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,39 +24,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d77d603c198adad2ca2c827c355ff8f6808bff66
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4d6fdd0fa05ec21151a28c516adcb224f5e9b0ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930326"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409831"
 ---
 # <a name="ole-background-mfc-implementation"></a>Sfondo OLE: implementazione MFC
-A causa della dimensione e della complessità delle API OLE non elaborate, chiamarle direttamente per scrivere applicazioni OLE può essere molto dispendioso in termini di tempo. L'obiettivo dell'implementazione di OLE da parte della libreria Microsoft Foundation Class è di ridurre la quantità di lavoro necessaria a scrivere applicazioni complete compatibili con OLE.  
-  
- In questo articolo vengono illustrate le parti dell'API OLE che non sono state implementate all'interno di MFC. La discussione illustra inoltre come quello che viene implementato esegue il mapping alla sezione OLE di Windows SDK.  
-  
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Parti di OLE non implementate dalla libreria di classi  
- Alcune interfacce e alcune funzionalità OLE non sono fornite direttamente da MFC. Se si desidera utilizzare queste funzionalità, è possibile chiamare direttamente l'API OLE.  
-  
- Interfaccia IMoniker  
- L'interfaccia `IMoniker` viene implementata dalla libreria di classi (ad esempio la classe `COleServerItem`) ma non è stata precedentemente esposta al programmatore. Per ulteriori informazioni su questa interfaccia, vedere le implementazioni OLE del Moniker nella sezione OLE di Windows SDK. Tuttavia, vedere anche le classi [CMonikerFile](../mfc/reference/cmonikerfile-class.md) e [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
-  
- Interfacce IUnknown e IMarshal  
- Il `IUnknown` interfaccia viene implementata dalla libreria di classi ma non è esposta al programmatore. Il `IMarshal` interfaccia non è implementata dalla libreria di classi ma viene utilizzata internamente. I server di automazione costruiti utilizzando la libreria di classi includono già funzionalità di marshalling incorporate.  
-  
- Docfiles (file compositi)  
- I file compositi sono parzialmente supportati dalla libreria di classi. Non è supportata alcuna delle funzioni che modificano direttamente i file compositi al di là della creazione. MFC utilizza classe `COleFileStream` per supportare la modifica dei flussi con funzioni di file standard. Per altre informazioni, vedere l'articolo [contenitori: file compositi](../mfc/containers-compound-files.md).  
-  
- Server in-process e gestori di oggetti  
- I server in-process e i gestori di oggetti consentono l'implementazione di dati di modifica visiva o di oggetti COM (Component Object Model) completi in una libreria a collegamento dinamico (DLL). A tale scopo, è possibile implementare la propria DLL chiamando direttamente l'API OLE. Tuttavia, se si scrive un server di automazione che non dispone di interfaccia utente, è possibile utilizzare AppWizard per trasformarlo in un server in-process e inserirlo completamente in una DLL. Per ulteriori informazioni su questi argomenti, vedere [server di automazione](../mfc/automation-servers.md).  
-  
+
+A causa della dimensione e della complessità delle API OLE non elaborate, chiamarle direttamente per scrivere applicazioni OLE può essere molto dispendioso in termini di tempo. L'obiettivo dell'implementazione di OLE da parte della libreria Microsoft Foundation Class è di ridurre la quantità di lavoro necessaria a scrivere applicazioni complete compatibili con OLE.
+
+In questo articolo vengono illustrate le parti dell'API OLE che non sono state implementate all'interno di MFC. La discussione illustra inoltre come quello che viene implementato esegue il mapping alla sezione OLE di Windows SDK.
+
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Parti di OLE non implementate dalla libreria di classi
+
+Alcune interfacce e alcune funzionalità OLE non sono fornite direttamente da MFC. Se si desidera utilizzare queste funzionalità, è possibile chiamare direttamente l'API OLE.
+
+Interfaccia IMoniker il `IMoniker` interfaccia viene implementata dalla libreria di classi (ad esempio, il `COleServerItem` classe), ma non sia stata precedentemente esposta al programmatore. Per altre informazioni su questa interfaccia, vedere le implementazioni OLE del Moniker nella sezione OLE di Windows SDK. Tuttavia, vedere anche le classi [CMonikerFile](../mfc/reference/cmonikerfile-class.md) e [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).
+
+Interfacce IUnknown e IMarshal il `IUnknown` interfaccia viene implementata dalla libreria di classi ma non viene esposta al programmatore. Il `IMarshal` interfaccia non è implementato dalla libreria di classi ma viene utilizzata internamente. I server di automazione costruiti utilizzando la libreria di classi includono già funzionalità di marshalling incorporate.
+
+Docfiles (file compositi) file compositi sono parzialmente supportati dalla libreria di classi. Non è supportata alcuna delle funzioni che modificano direttamente i file compositi al di là della creazione. MFC utilizza la classe `COleFileStream` per supportare l'elaborazione di flussi con funzioni di file standard. Per altre informazioni, vedere l'articolo [contenitori: file compositi](../mfc/containers-compound-files.md).
+
+Server in-Process e gestori di oggetti server In-process e gestori di oggetti consentano l'implementazione di modifica visiva di dati o oggetti modello COM (Component Object) completi in una libreria di collegamento dinamico (DLL). A tale scopo, è possibile implementare la propria DLL chiamando direttamente l'API OLE. Tuttavia, se si scrive un server di automazione che non dispone di interfaccia utente, è possibile utilizzare AppWizard per trasformarlo in un server in-process e inserirlo completamente in una DLL. Per altre informazioni su questi argomenti, vedere [server di automazione](../mfc/automation-servers.md).
+
 > [!TIP]
->  Il modo più semplice per implementare un server di automazione è di inserirlo in una DLL. MFC supporta questo approccio.  
-  
- Per ulteriori informazioni sul modo in cui le classi OLE di Microsoft Foundation implementano le interfacce OLE, vedere le note tecniche MFC [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md), e [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Sfondo OLE](../mfc/ole-background.md)   
- [Sfondo OLE: strategie di implementazione](../mfc/ole-background-implementation-strategies.md)
+>  Il modo più semplice per implementare un server di automazione è di inserirlo in una DLL. MFC supporta questo approccio.
+
+Per altre informazioni sul modo in cui le classi OLE di Microsoft Foundation implementano le interfacce OLE, vedere le note tecniche MFC [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md), e [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Sfondo OLE](../mfc/ole-background.md)<br/>
+[Sfondo OLE: strategie di implementazione](../mfc/ole-background-implementation-strategies.md)
 

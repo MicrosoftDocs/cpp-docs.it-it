@@ -19,31 +19,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3768cda94eb0adda8562c46124be8e9b2d4a2501
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0dfffa5a7ec315c0bc8af93a7cf825c62494bd02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215092"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415395"
 ---
 # <a name="using-cspinbuttonctrl"></a>Utilizzo di CSpinButtonCtrl
-Il *casella di selezione* controllo (noto anche come un' *giù* controllo) offre una coppia di frecce su cui un utente può fare clic per modificare un valore. Questo valore è noto come il *posizione corrente*. La posizione rimane all'interno dell'intervallo del pulsante di selezione. Quando l'utente fa clic sulla freccia in su, la posizione viene spostato verso il valore massimo; e quando l'utente fa clic sulla freccia in giù, la posizione viene spostato verso il valore minimo.  
-  
- Il controllo pulsante di selezione è rappresentato in MFC per la [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) classe.  
-  
+
+Il *casella di selezione* controllo (noto anche come un' *giù* controllo) offre una coppia di frecce su cui un utente può fare clic per modificare un valore. Questo valore è noto come il *posizione corrente*. La posizione rimane all'interno dell'intervallo del pulsante di selezione. Quando l'utente fa clic sulla freccia in su, la posizione viene spostato verso il valore massimo; e quando l'utente fa clic sulla freccia in giù, la posizione viene spostato verso il valore minimo.
+
+Il controllo pulsante di selezione è rappresentato in MFC per la [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) classe.
+
 > [!NOTE]
->  Per impostazione predefinita, l'intervallo per il pulsante di selezione ha il valore massimo impostato su zero (0) e il valore minimo impostato su 100. Poiché il valore massimo è minore del valore minimo, facendo clic sulla freccia riduce la posizione e facendo clic sulla freccia in giù aumenta lo. Uso [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) per modificare questi valori.  
-  
- In genere, la posizione corrente viene visualizzata in un controllo correlato. Il controllo correlato è noto come il *finestra buddy*. Per un'illustrazione di un controllo pulsante di selezione, vedere [informazioni sui controlli giù](/windows/desktop/Controls/up-down-controls) nel SDK di Windows.  
-  
- Per creare un controllo di selezione e una finestra buddy controllo di modifica, in Visual Studio, trascinare un controllo di modifica nella finestra di dialogo o nella finestra e quindi trascinare un controllo di selezione. Selezionare la casella di selezione e impostare relativi **Auto Buddy** e **Set Buddy Integer** le proprietà da **True**. Impostare anche il **allineamento** proprietà. **Right Align** è più comune. Con queste impostazioni, il controllo di modifica viene impostato come finestra buddy poiché che precede immediatamente il controllo di modifica nell'ordine di tabulazione. Il controllo di modifica vengono visualizzati numeri interi e il controllo di selezione è incorporato nel lato destro del controllo di modifica. Facoltativamente, è possibile impostare l'intervallo valido della casella di selezione utilizzando la [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) (metodo). Nessun gestore di eventi sono necessari per la comunicazione tra il controllo di selezione e finestra buddy poiché scambiano direttamente i dati. Se si usa un controllo di selezione per altri scopi, ad esempio, per scorrere una sequenza di finestre o finestre di dialogo, quindi aggiungere un gestore per il messaggio UDN_DELTAPOS ed eseguire l'azione personalizzata non esiste.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Stili dei pulsanti di selezione](../mfc/spin-button-styles.md)  
-  
--   [Funzioni membro pulsante di selezione](../mfc/spin-button-member-functions.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controlli](../mfc/controls-mfc.md)
+>  Per impostazione predefinita, l'intervallo per il pulsante di selezione ha il valore massimo impostato su zero (0) e il valore minimo impostato su 100. Poiché il valore massimo è minore del valore minimo, facendo clic sulla freccia riduce la posizione e facendo clic sulla freccia in giù aumenta lo. Uso [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) per modificare questi valori.
+
+In genere, la posizione corrente viene visualizzata in un controllo correlato. Il controllo correlato è noto come il *finestra buddy*. Per un'illustrazione di un controllo pulsante di selezione, vedere [informazioni sui controlli giù](/windows/desktop/Controls/up-down-controls) nel SDK di Windows.
+
+Per creare un controllo di selezione e una finestra buddy controllo di modifica, in Visual Studio, trascinare un controllo di modifica nella finestra di dialogo o nella finestra e quindi trascinare un controllo di selezione. Selezionare la casella di selezione e impostare relativi **Auto Buddy** e **Set Buddy Integer** le proprietà da **True**. Impostare anche il **allineamento** proprietà. **Right Align** è più comune. Con queste impostazioni, il controllo di modifica viene impostato come finestra buddy poiché che precede immediatamente il controllo di modifica nell'ordine di tabulazione. Il controllo di modifica vengono visualizzati numeri interi e il controllo di selezione è incorporato nel lato destro del controllo di modifica. Facoltativamente, è possibile impostare l'intervallo valido della casella di selezione utilizzando la [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) (metodo). Nessun gestore di eventi sono necessari per la comunicazione tra il controllo di selezione e finestra buddy poiché scambiano direttamente i dati. Se si usa un controllo di selezione per altri scopi, ad esempio, per scorrere una sequenza di finestre o finestre di dialogo, quindi aggiungere un gestore per il messaggio UDN_DELTAPOS ed eseguire l'azione personalizzata non esiste.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Stili dei pulsanti di selezione](../mfc/spin-button-styles.md)
+
+- [Funzioni membro pulsante di selezione](../mfc/spin-button-member-functions.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Controlli](../mfc/controls-mfc.md)
 

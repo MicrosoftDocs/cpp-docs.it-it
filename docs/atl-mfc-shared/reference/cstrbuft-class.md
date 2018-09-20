@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf0675b81d684fdf8b78e865bf754d45ef4888c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752684"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411183"
 ---
 # <a name="cstrbuft-class"></a>Classe CStrBufT
 
@@ -236,6 +236,6 @@ typedef CSimpleStringT<TCharType> StringType;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

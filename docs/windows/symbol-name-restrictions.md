@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67527717319c4b571ff4b72b83d718c0ac149586
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a2370a2f47e358358ed2c870f8fffcbe135a116f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313325"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406685"
 ---
 # <a name="symbol-name-restrictions"></a>Restrizioni relative ai nomi dei simboli
 
@@ -60,6 +60,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica di un simbolo o del nome di un simbolo (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)  
-[Restrizioni relative ai valori dei simboli](../windows/symbol-value-restrictions.md)  
+[Modifica di un simbolo o del nome di un simbolo (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Restrizioni relative ai valori dei simboli](../windows/symbol-value-restrictions.md)<br/>
 [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)

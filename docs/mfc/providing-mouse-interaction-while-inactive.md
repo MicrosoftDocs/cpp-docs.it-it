@@ -1,5 +1,5 @@
 ---
-title: Inserimento di interazione del Mouse quando inattivo | Documenti Microsoft
+title: Inserimento di interazione del Mouse mentre inattive | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,32 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c322493a0ee1aebd068ffe1fedb695445b6274aa
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9394a3c161b82fa95de0e2ae0c590aec87493a85
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929494"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418736"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>Inserimento di interazione del mouse in stato di inattività
-Se il controllo non è attivato immediatamente, è comunque possibile per processo WM_SETCURSOR e WM_MOUSEMOVE messaggi, anche se il controllo non ha un proprio. Questo può essere eseguita abilitando `COleControl`dell'implementazione del `IPointerInactive` interfaccia, che è disabilitato per impostazione predefinita. (Vedere la *ActiveX SDK* per una descrizione di questa interfaccia.) Per abilitarlo, includere il flag pointerInactive nel set di flag restituito da [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  
-  
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#10](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_3.cpp)]  
-  
- Il codice per includere questo flag viene generato automaticamente se si seleziona il **Mouse puntatore notifiche quando inattivo** opzione il [le impostazioni di controllo](../mfc/reference/control-settings-mfc-activex-control-wizard.md) pagina quando si crea il controllo del codice con il **Creazione guidata controllo ActiveX MFC**.  
-  
- Quando il `IPointerInactive` interfaccia è abilitata, il contenitore delega WM_SETCURSOR e WM_MOUSEMOVE dei messaggi. `COleControl`dell'implementazione di `IPointerInactive` invia i messaggi attraverso mappa messaggi del controllo dopo la regolazione del mouse coordinate in modo appropriato. È possibile elaborare i messaggi come comuni messaggi di finestra aggiungendo le voci corrispondenti alla mappa messaggi. Nei gestori per questi messaggi, evitare di utilizzare il *m_hWnd* variabile membro (o qualsiasi funzione membro che la utilizzi) senza prima verificare che il relativo valore non è **NULL**.  
-  
- È possibile che si voglia un controllo inattivo deve essere la destinazione di un'operazione di trascinamento e rilascio OLE. Questa operazione richiede l'attivazione del controllo al momento che l'utente trascina un oggetto su di esso, in modo che la finestra del controllo può essere registrata come obiettivo di rilascio. Affinché avvenga durante il trascinamento l'attivazione, eseguire l'override [COleControl:: GetActivationPolicy](../mfc/reference/colecontrol-class.md#getactivationpolicy)e restituire il flag POINTERINACTIVE_ACTIVATEONDRAG:  
-  
- [!code-cpp[NVC_MFC_AxOpt#11](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_4.cpp)]  
-  
- L'abilitazione di `IPointerInactive` interfaccia in genere significa che si desidera il controllo sia in grado di elaborare i messaggi del mouse in qualsiasi momento. Per ottenere questo comportamento in un contenitore che non supporta il `IPointerInactive` interfaccia, è necessario disporre sempre attivo quando visibile, ovvero il controllo deve includere il flag OLEMISC_ACTIVATEWHENVISIBLE tra i vari flag. Tuttavia, per evitare questo flag da che diventino effettive in un contenitore che supporta `IPointerInactive`, è inoltre possibile specificare il flag OLEMISC_IGNOREACTIVATEWHENVISIBLE:  
-  
- [!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_5.cpp)]  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md)
+
+Se il controllo non viene attivato immediatamente, è comunque possibile per processo WM_SETCURSOR e WM_MOUSEMOVE messaggi, anche se il controllo non dispone di finestre proprie. Questa operazione può essere eseguita abilitando `COleControl`dell'implementazione del `IPointerInactive` interfaccia, che è disabilitata per impostazione predefinita. (Vedere la *ActiveX SDK* per una descrizione di questa interfaccia.) Per abilitarla, includere il flag pointerInactive nel set di flag restituiti da [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):
+
+[!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#10](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_3.cpp)]
+
+Il codice per includere questo flag viene generato automaticamente se si seleziona il **Mouse puntatore notifiche quando inattivi** opzione il [le impostazioni di controllo](../mfc/reference/control-settings-mfc-activex-control-wizard.md) pagina quando si crea il controllo con il **Creazione guidata controllo ActiveX MFC**.
+
+Quando il `IPointerInactive` interfaccia è abilitata, il contenitore di delega WM_SETCURSOR e WM_MOUSEMOVE dei messaggi. `COleControl`dell'implementazione di `IPointerInactive` invia i messaggi attraverso mappa messaggi del controllo dopo la regolazione del mouse coordina in modo appropriato. È possibile elaborare i messaggi come comuni messaggi di finestra aggiungendo le voci corrispondenti alla mappa messaggi. Nei gestori per questi messaggi, evitare di usare la *m_hWnd* variabile membro (o qualsiasi funzione membro che lo utilizza) senza prima verificare che il relativo valore non è **NULL**.
+
+È anche possibile un controllo inattivo a essere la destinazione di un'operazione di trascinamento e rilascio OLE. Questa operazione richiede l'attivazione del controllo nel momento in cui che l'utente trascina un oggetto su di esso, in modo che la finestra del controllo può essere registrata come destinazione di rilascio. Per causare l'attivazione si verificano durante il trascinamento, eseguire l'override [COleControl:: GetActivationPolicy](../mfc/reference/colecontrol-class.md#getactivationpolicy)e restituire il flag POINTERINACTIVE_ACTIVATEONDRAG:
+
+[!code-cpp[NVC_MFC_AxOpt#11](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_4.cpp)]
+
+L'abilitazione di `IPointerInactive` interfaccia indica in genere che si desidera il controllo sia in grado di elaborare i messaggi del mouse in qualsiasi momento. Per ottenere questo comportamento in un contenitore che non supporta il `IPointerInactive` interfaccia, è necessario disporre sempre attivo quando visibile, ovvero il controllo deve includere il flag OLEMISC_ACTIVATEWHENVISIBLE tra i vari flag. Tuttavia, per evitare questo flag di entrata in vigore in un contenitore che supporta `IPointerInactive`, è anche possibile specificare il flag OLEMISC_IGNOREACTIVATEWHENVISIBLE:
+
+[!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_5.cpp)]
+
+## <a name="see-also"></a>Vedere anche
+
+[Controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md)
 

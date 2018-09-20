@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a790887f54e01cea835c6110e3d81e1c2d3afeaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3df5a1893567b54337a5c3807fcace6a02154670
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206701"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416006"
 ---
 # <a name="importlib"></a>importlib
 
@@ -38,7 +38,7 @@ Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la lib
 
 ### <a name="parameters"></a>Parametri
 
-*tlb_file*  
+*tlb_file*<br/>
 Nome di un file tlb, racchiuso tra virgolette, che si desidera importare nella libreria dei tipi del progetto corrente.
 
 ## <a name="remarks"></a>Note
@@ -71,9 +71,9 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi del compilatore](../windows/compiler-attributes.md)  
-[Attributi autonomi](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[include](../windows/include-cpp.md)  
+[Attributi del compilatore](../windows/compiler-attributes.md)<br/>
+[Attributi autonomi](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib](../windows/includelib-cpp.md)

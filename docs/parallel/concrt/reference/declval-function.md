@@ -1,5 +1,5 @@
 ---
-title: Funzione declval | Documenti Microsoft
+title: Funzione declval | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,30 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfbddd7a9e8373147b5fee48ca44e4ddf6541357
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1098f02c165f05451507c3c7ec4cde87e1b70965
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688856"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414316"
 ---
 # <a name="declval-function"></a>Funzione declval
-## <a name="syntax"></a>Sintassi  
-  
+
+## <a name="syntax"></a>Sintassi
+
 ```
 template<class _T>
 _T&& declval();
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `_T`  
-  
-## <a name="return-value"></a>Valore restituito  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** ppltasks. h  
-  
- **Namespace:** stdx  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi stdx](stdx-namespace.md)
+```
+
+#### <a name="parameters"></a>Parametri
+
+`_T`
+
+## <a name="return-value"></a>Valore restituito
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** ppltasks. h
+
+**Namespace:** spazio stdx
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi stdx](stdx-namespace.md)

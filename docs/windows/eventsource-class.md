@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: cd9ab28ccce14c5ac0975b7050588ee6524cfcc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601496"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408349"
 ---
 # <a name="eventsource-class"></a>EventSource (classe)
 
@@ -53,7 +53,7 @@ class EventSource;
 
 ### <a name="parameters"></a>Parametri
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 L'interfaccia a un delegato che rappresenta un gestore eventi.
 
 ## <a name="members"></a>Membri
@@ -104,10 +104,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parametri
 
-*delegateInterface*  
+*delegateInterface*<br/>
 L'interfaccia per un oggetto delegato, che rappresenta un gestore eventi.
 
-*token*  
+*token*<br/>
 Quando questa operazione viene completata, un handle che rappresenta l'evento. Usare questo token come parametro per il [Remove ()](#remove) metodo rimuovere il gestore dell'evento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -302,64 +302,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>Parametri
 
-*T0*  
+*T0*<br/>
 Tipo di argomento del gestore dell'evento iniziale.
 
-*T1*  
+*T1*<br/>
 Il tipo del primo argomento del gestore eventi.
 
-*T2*  
+*T2*<br/>
 Il tipo del secondo argomento del gestore eventi.
 
-*T3*  
+*T3*<br/>
 Il tipo del terzo argomento gestore dell'evento.
 
-*T4*  
+*T4*<br/>
 Il tipo del quarto argomento gestore dell'evento.
 
-*T5*  
+*T5*<br/>
 Il tipo del quinto argomento del gestore eventi.
 
-*T6*  
+*T6*<br/>
 Il tipo del sesto argomento del gestore eventi.
 
-*T7*  
+*T7*<br/>
 Il tipo del settimo argomento del gestore eventi.
 
-*T8*  
+*T8*<br/>
 Il tipo dell'ottavo argomento gestore eventi.
 
-*T9*  
+*T9*<br/>
 Il tipo del nono argomento del gestore eventi.
 
-*arg0*  
+*arg0*<br/>
 L'argomento del gestore dell'evento iniziale.
 
-*arg1*  
+*arg1*<br/>
 Il primo argomento di gestore dell'evento.
 
-*Arg2*  
+*Arg2*<br/>
 Il secondo argomento di gestore dell'evento.
 
-*arg3*  
+*arg3*<br/>
 Il terzo argomento di gestore dell'evento.
 
-*Arg4*  
+*Arg4*<br/>
 Il quarto argomento gestore dell'evento.
 
-*Arg5*  
+*Arg5*<br/>
 Il quinto argomento del gestore dell'evento.
 
-*Arg6*  
+*Arg6*<br/>
 Il sesto argomento del gestore dell'evento.
 
-*Arg7*  
+*Arg7*<br/>
 Il settimo argomento del gestore dell'evento.
 
-*arg8*  
+*arg8*<br/>
 Argomento ottavo gestore dell'evento.
 
-*arg9*  
+*arg9*<br/>
 Il nono argomento del gestore dell'evento.
 
 ## <a name="remove"></a>EventSource:: Remove
@@ -374,7 +374,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>Parametri
 
-*token*  
+*token*<br/>
 Un handle che rappresenta un gestore eventi. Questo token è stato restituito quando il gestore dell'evento è stato registrato per il [Add ()](#add) (metodo).
 
 ### <a name="return-value"></a>Valore restituito

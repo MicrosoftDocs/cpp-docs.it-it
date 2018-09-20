@@ -1,5 +1,5 @@
 ---
-title: Classi di contenitori OLE | Documenti Microsoft
+title: Classi di contenitori OLE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,42 +21,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8214b2f40926cc4ab1471dce99ce5215362011
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e17161340881bb53601bc04dce6f5e375f746b02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930490"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404709"
 ---
 # <a name="ole-container-classes"></a>Classi di contenitori OLE
-Queste classi vengono usate dalle applicazioni contenitore. Entrambi `COleLinkingDoc` e `COleDocument` gestire le raccolte di `COleClientItem` oggetti. Anziché derivare la classe documento da `CDocument`, è necessario derivare dalla `COleLinkingDoc` o `COleDocument`, a seconda che si voglia supporto per i collegamenti agli oggetti incorporati nel documento.  
-  
- Utilizzare un `COleClientItem` oggetto per rappresentare ogni elemento OLE nel documento è incorporato da un altro documento o un collegamento a un altro documento.  
-  
- [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- Supporta contenimento dei documenti attivi.  
-  
- [COleDocument](../mfc/reference/coledocument-class.md)  
- Utilizzato per l'implementazione di documenti compositi, nonché il supporto di contenitore di base. Funge da contenitore per le classi derivate da `CDocItem`. Questa classe può essere utilizzata come classe base per contenitore documenti ed è la classe base per `COleServerDoc`.  
-  
- [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)  
- Una classe derivata da `COleDocument` che fornisce l'infrastruttura per il collegamento. È necessario derivare le classi di documento per le applicazioni contenitore da questa classe anziché da `COleDocument` se si desidera che supportano collegamenti a oggetti incorporati.  
-  
- [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Gestisce l'elenco di elementi OLE sul client presenti nel controllo rich edit. Utilizzato con [CRichEditView](../mfc/reference/cricheditview-class.md) e [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
-  
- [CDocItem](../mfc/reference/cdocitem-class.md)  
- Classe di base di astratta `COleClientItem` e `COleServerItem`. Oggetti di classi derivate da `CDocItem` rappresentano parti di documenti.  
-  
- [COleClientItem](../mfc/reference/coleclientitem-class.md)  
- Una classe di elemento di client che rappresenta il lato del client della connessione a un elemento OLE incorporato o collegato. Derivare gli elementi client da questa classe.  
-  
- [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- Fornisce l'accesso client-side a OLE elemento archiviato in un controllo rich edit quando abbinata `CRichEditView` e `CRichEditDoc`.  
-  
- [COleException](../mfc/reference/coleexception-class.md)  
- Eccezione generata da un errore nell'elaborazione OLE. Questa classe viene utilizzata sia dai contenitori sia dai server.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../mfc/class-library-overview.md)
+
+Queste classi vengono usate dalle applicazioni contenitore. Entrambe `COleLinkingDoc` e `COleDocument` gestire gli insiemi di `COleClientItem` oggetti. Anziché derivare la classe documento da `CDocument`, si sarà derivarlo da `COleLinkingDoc` o `COleDocument`, a seconda che si voglia supporto per i collegamenti agli oggetti incorporati nel documento.
+
+Usare un `COleClientItem` oggetti per rappresentare ogni elemento OLE nel documento per cui è incorporato da un altro documento o un collegamento a un altro documento.
+
+[COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
+Supporta contenimento dei documenti attivi.
+
+[COleDocument](../mfc/reference/coledocument-class.md)<br/>
+Utilizzato per l'implementazione di documento composito, nonché il supporto di contenitore di base. Funge da contenitore per le classi derivate da `CDocItem`. Questa classe può essere utilizzata come classe base per contenitore di documenti ed è la classe base per `COleServerDoc`.
+
+[COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
+Una classe derivata da `COleDocument` che fornisce l'infrastruttura per il collegamento. È consigliabile derivare le classi di documenti per le applicazioni contenitore da questa classe anziché da `COleDocument` se si desidera che il supporto di collegamenti a oggetti incorporati.
+
+[CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
+Gestisce l'elenco di elementi di client OLE in controllo rich edit. Utilizzato con [CRichEditView](../mfc/reference/cricheditview-class.md) e [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).
+
+[CDocItem](../mfc/reference/cdocitem-class.md)<br/>
+Classe di base di astratta `COleClientItem` e `COleServerItem`. Gli oggetti di classi derivate da `CDocItem` rappresentano le parti di documenti.
+
+[COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
+Una classe di elemento di client che rappresenta il lato del client della connessione a un elemento OLE incorporato o collegato. Da questa classe, derivare gli elementi client.
+
+[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
+Fornisce l'accesso lato client a un elemento archiviato in un controllo rich edit quando usato con oggetto OLE `CRichEditView` e `CRichEditDoc`.
+
+[COleException](../mfc/reference/coleexception-class.md)<br/>
+Eccezione generata da un errore nell'elaborazione OLE. Questa classe viene utilizzata sia dai contenitori sia dai server.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../mfc/class-library-overview.md)
 

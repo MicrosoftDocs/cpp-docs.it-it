@@ -16,34 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390090b0f4bf5f8795373db9f61f8365257ee95b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 59a7bcc24b67e916271748740dd88568979d5a70
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024911"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401602"
 ---
 # <a name="ompsetlock"></a>omp_set_lock
-Blocchi di esecuzione del thread fino a quando non è disponibile un blocco.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void omp_set_lock(  
-   omp_lock_t *lock  
-);  
-```  
-  
+
+Blocchi di esecuzione del thread fino a quando non è disponibile un blocco.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void omp_set_lock(
+   omp_lock_t *lock
+);
+```
+
 ### <a name="parameters"></a>Parametri
-  
+
 *lock*<br/>
-Una variabile di tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) che è stata inizializzata [funzioni omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
-  
-## <a name="remarks"></a>Note  
- Per altre informazioni, vedere [3.2.3 funzioni omp_set_lock e omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).  
-  
-## <a name="examples"></a>Esempi  
- Visualizzare [funzioni omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) per un esempio d'uso `omp_set_lock`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni](../../../parallel/openmp/reference/openmp-functions.md)
+Una variabile di tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) che è stata inizializzata [funzioni omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).
+
+## <a name="remarks"></a>Note
+
+Per altre informazioni, vedere [3.2.3 funzioni omp_set_lock e omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).
+
+## <a name="examples"></a>Esempi
+
+Visualizzare [funzioni omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) per un esempio d'uso `omp_set_lock`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni](../../../parallel/openmp/reference/openmp-functions.md)

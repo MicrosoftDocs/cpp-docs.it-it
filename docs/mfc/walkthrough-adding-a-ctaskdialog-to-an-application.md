@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Aggiunta di CTaskDialog a un'applicazione | Documenti Microsoft"
+title: "Procedura dettagliata: Aggiunta di CTaskDialog a un'applicazione | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0a3d93815a740be59960e6d3e0f9e9ed690923
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122954"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420484"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procedura dettagliata: aggiunta di CTaskDialog a un'applicazione
 
 Questa procedura dettagliata illustra [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) e descrive come aggiungerla a un'applicazione.
 
-Il `CTaskDialog` è una finestra di dialogo delle attività che sostituisce la finestra di messaggio di Windows in Windows Vista o versioni successive. `CTaskDialog` migliora la finestra di messaggio originale e consente di aggiungere funzionalità. La finestra di messaggio di Windows è ancora supportata in Visual Studio.
+Il `CTaskDialog` è una finestra di dialogo attività che sostituisce la finestra di messaggio di Windows in Windows Vista o versioni successive. `CTaskDialog` migliora la finestra di messaggio originale e consente di aggiungere funzionalità. La finestra di messaggio di Windows è ancora supportata in Visual Studio.
 
 > [!NOTE]
-> Versioni di Windows precedenti a Windows Vista non supportano il `CTaskDialog`. Se si desidera far visualizzare un messaggio a un utente che esegue l'applicazione su una versione precedente di Windows, è necessario programmare un'opzione alternativa per la finestra di dialogo. È possibile usare il metodo statico [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) per determinare in fase di esecuzione se un computer è in grado di visualizzare `CTaskDialog`. Inoltre, `CTaskDialog` è disponibile solo quando l'applicazione viene compilata con la libreria Unicode.
+> Le versioni di Windows precedenti a Windows Vista non supportano il `CTaskDialog`. Se si desidera far visualizzare un messaggio a un utente che esegue l'applicazione su una versione precedente di Windows, è necessario programmare un'opzione alternativa per la finestra di dialogo. È possibile usare il metodo statico [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) per determinare in fase di esecuzione se un computer è in grado di visualizzare `CTaskDialog`. Inoltre, `CTaskDialog` è disponibile solo quando l'applicazione viene compilata con la libreria Unicode.
 
 `CTaskDialog` supporta diversi elementi facoltativi per raccogliere e visualizzare informazioni. Ad esempio, `CTaskDialog` consente di visualizzare collegamenti ai comandi, pulsanti personalizzati, icone personalizzate e un piè di pagina. `CTaskDialog` include anche diversi metodi che consentono di eseguire query sullo stato della finestra di dialogo delle attività per determinare gli elementi facoltativi selezionati dall'utente.
 
@@ -47,13 +47,13 @@ La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel 
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Per sostituire una finestra di messaggio di Windows con CTaskDialog
 
-1. Generare una nuova applicazione MFC con le impostazioni predefinite e Chiamarlo *MyProject*.
+1. Generare una nuova applicazione MFC con le impostazioni predefinite e Chiamarla *MyProject*.
 
 2. Usare la finestra **Esplora soluzioni** per aprire il file MyProject.cpp.
 
 3. Aggiungere `#include "afxtaskdialog.h"` dopo l'elenco di inclusioni.
 
-4. Trovare il metodo `CMyProjectApp::InitInstance`. Inserire le seguenti righe di codice prima dell'istruzione `return TRUE;` . Questo codice crea le stringhe usate nella finestra di messaggio di Windows o in `CTaskDialog`.  
+4. Trovare il metodo `CMyProjectApp::InitInstance`. Inserire le seguenti righe di codice prima dell'istruzione `return TRUE;` . Questo codice crea le stringhe usate nella finestra di messaggio di Windows o in `CTaskDialog`.
 
     ```cpp
     CString message("My message to the user");
@@ -201,6 +201,6 @@ Questi esempi non presentano tutte le opzioni disponibili per `CTaskDialog`, ma 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Finestre di dialogo](../mfc/dialog-boxes.md)  
-[Classe CTaskDialog](../mfc/reference/ctaskdialog-class.md)  
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)  
+[Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
+[Classe CTaskDialog](../mfc/reference/ctaskdialog-class.md)<br/>
+[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

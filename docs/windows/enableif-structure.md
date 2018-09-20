@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e71c43ca9222b350c07dae5f299f4a6f469bf84
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2cc4e8f272838e5fa1de3eac8bd04a4ec3407dee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578557"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400672"
 ---
 # <a name="enableif-structure"></a>EnableIf (struttura)
 
@@ -45,10 +45,10 @@ struct EnableIf<true, T>;
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Tipo.
 
-*b*  
+*b*<br/>
 Espressione booleana.
 
 ## <a name="remarks"></a>Note

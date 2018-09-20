@@ -1,5 +1,5 @@
 ---
-title: Le classi correlate ai controlli Rich Edit | Documenti Microsoft
+title: Le classi correlate ai controlli Rich Edit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f428242ac84adaf36ea0263f8e193dfeca7d0609
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ee7b6400dcd5c91d054b31153c21008d5302bd0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341398"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401264"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>Classi correlate ai controlli Rich Edit
-Il [CRichEditView](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), e [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) classi forniscono le funzionalità di controllo rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) all'interno del contesto dell'architettura documento/visualizzazione MFC. `CRichEditView` mantiene il testo e la caratteristica di formattazione del testo. `CRichEditDoc` gestisce l'elenco di elementi OLE sul client che sono nella vista. `CRichEditCntrItem` fornisce accesso a elemento client OLE lato contenitore. Per modificare il contenuto di un `CRichEditView`, utilizzare [CRichEditView:: GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) per accedere all'oggetto controllo rich edit.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+Il [CRichEditView](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), e [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) classi forniscono la funzionalità del controllo rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) all'interno del contesto dell'architettura documento/visualizzazione di MFC. `CRichEditView` gestisce il testo e la caratteristica di formattazione del testo. `CRichEditDoc` gestisce l'elenco di elementi di client OLE che sono nella vista. `CRichEditCntrItem` fornisce l'accesso dal contenitore per l'elemento client OLE. Per modificare il contenuto di un `CRichEditView`, usare [CRichEditView:: GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) per accedere all'oggetto controllo rich edit.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

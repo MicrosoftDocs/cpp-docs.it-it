@@ -17,45 +17,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f962ec4a348cca7ffdf43852cb01d673f3fb18
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3fa5655911366b0adf21618ec7be7eeccdca9c5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706602"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401913"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
-**Sezione specifica Microsoft**  
-  
- Invalida la voce di mapping indirizzo nel translation lookaside buffer del computer. I parametri specificano l'indirizzo virtuale e un identificatore dello spazio di indirizzi della pagina da invalidare.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __svm_invlpga(  
-     void *Va,  
-     int ASID);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|*Valutazione della vulnerabilità*|[in] L'indirizzo virtuale della pagina da invalidare.|  
-|*ASID*|[in] L'indirizzo dello spazio identificatore (ASID) della pagina da invalidare.|  
-  
-## <a name="remarks"></a>Note  
- Il `__svm_invlpga` è equivalente alla funzione il `INVLPGA` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__svm_invlpga`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+
+**Sezione specifica Microsoft**
+
+Invalida la voce di mapping indirizzo nel translation lookaside buffer del computer. I parametri specificano l'indirizzo virtuale e un identificatore dello spazio di indirizzi della pagina da invalidare.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __svm_invlpga(void *Va, int ASID);
+```
+
+#### <a name="parameters"></a>Parametri
+
+|Parametro|Descrizione|
+|---------------|-----------------|
+|*Valutazione della vulnerabilità*|[in] L'indirizzo virtuale della pagina da invalidare.|
+|*ASID*|[in] L'indirizzo dello spazio identificatore (ASID) della pagina da invalidare.|
+
+## <a name="remarks"></a>Note
+
+Il `__svm_invlpga` è equivalente alla funzione il `INVLPGA` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__svm_invlpga`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

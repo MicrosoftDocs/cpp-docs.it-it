@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adfa2e2feaf44f5f29c1a16b8e68642e438095fe
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1f0fa55b7ddfc97d1073211ad23c04d724aabe50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703326"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404280"
 ---
 # <a name="od-disable-debug"></a>/Od (Disabilita (Debug))
 
@@ -59,7 +59,7 @@ Questa opzione è il valore predefinito. In quanto **/Od** Elimina lo spostament
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)
-[opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)<br/>
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
 [/Z7, /Zi, /ZI (Formato informazioni di debug)](../../build/reference/z7-zi-zi-debug-information-format.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753578de006ed46719d94d5861035ab77dbca6c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 90317405f09695c57c907e94306623d5b3e2386d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752252"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419964"
 ---
 # <a name="date-and-time"></a>Data e ora
 
@@ -44,6 +44,6 @@ MFC supporta diversi modi di utilizzo di date e ore. Sono inclusi:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Concetti](../mfc/mfc-concepts.md)   
+[Concetti](../mfc/mfc-concepts.md)<br/>
 [Argomenti MFC generali](../mfc/general-mfc-topics.md)
 

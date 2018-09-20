@@ -18,44 +18,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5184d925e5d6712dd547e34341d84919c50e0a43
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f1c2424b949b0276e500b46c34b943b0ef0eb597
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724711"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399119"
 ---
 # <a name="lidt"></a>__lidt
-**Sezione specifica Microsoft**  
-  
- Carica il Registro di tabella di descrittore di interrupt (IDTR) con il valore nella posizione di memoria specificata.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __lidt(  
-     void *Source);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|*Source*|[in] Puntatore al valore di IDTR da copiare.|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__lidt`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Il `__lidt` è equivalente alla funzione il `LIDT` istruzioni in linguaggio macchina ed è disponibile solo in modalità kernel. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [__sidt](../intrinsics/sidt.md)
+
+**Sezione specifica Microsoft**
+
+Carica il Registro di tabella di descrittore di interrupt (IDTR) con il valore nella posizione di memoria specificata.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __lidt(void * Source);
+```
+
+#### <a name="parameters"></a>Parametri
+
+|Parametro|Descrizione|
+|---------------|-----------------|
+|*Source*|[in] Puntatore al valore di IDTR da copiare.|
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__lidt`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Il `__lidt` è equivalente alla funzione il `LIDT` istruzioni in linguaggio macchina ed è disponibile solo in modalità kernel. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[__sidt](../intrinsics/sidt.md)

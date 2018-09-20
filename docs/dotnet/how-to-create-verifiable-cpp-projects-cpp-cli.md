@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creare progetti C++ verificabili (C + + CLI) | Documenti Microsoft'
+title: 'Procedura: creare progetti C++ verificabili (C + + / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,40 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 36e7ee85d97639df6298a346ae83bb090e81bf87
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a84fcd660f8cc7ef5686fe0e03f9b520d1251bc4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704763"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408934"
 ---
-# <a name="how-to-create-verifiable-c-projects-ccli"></a>Procedura: creare progetti C++ verificabili (C + c++ /CLI)
+# <a name="how-to-create-verifiable-c-projects-ccli"></a>Procedura: creare progetti C++ verificabili (C + + / CLI)
 
-Creazioni guidate applicazione di Visual C++ non creano progetti verificabile.
+Procedure guidate dell'applicazione di Visual C++ non creano progetti verificabili.
 
 > [!IMPORTANT]
-> Deprecato di Visual Studio 2015 e Visual Studio 2017 non supporta il **/clr: pure** e **/CLR: safe** la creazione di progetti verificabile. Se è necessario codice verificabile, è consigliabile che si traduce al codice di c#.
+> Deprecato di Visual Studio 2015 e Visual Studio 2017 non supporta il **/clr: pure** e **/CLR: safe** la creazione di progetti verificabile. Se è necessario codice verificabile, è consigliabile che si tradurre il codice in c#.
 
-Tuttavia, se si utilizza una versione precedente del set di strumenti del compilatore Visual C++ che supporta **/clr: pure** e **/CLR: safe**, progetti possono essere convertiti per essere verificabile. In questo argomento viene illustrato come impostare le proprietà del progetto e modificare i file di origine per trasformare i progetti di Visual C++ per creare applicazioni verificabili.
+Tuttavia, se si usa una versione precedente del set di strumenti del compilatore Visual C++ che supporta **/clr: pure** e **/CLR: safe**, progetti possono essere convertiti per essere verificabile. Questo argomento descrive come impostare le proprietà del progetto e modificare i file di origine per trasformare i progetti Visual C++ per creare applicazioni verificabili.
 
-## <a name="compiler-and-linker-settings"></a>Impostazioni del compilatore e del linker
+## <a name="compiler-and-linker-settings"></a>Impostazioni del compilatore e linker
 
- Per impostazione predefinita, i progetti .NET utilizzano il flag del compilatore /clr e configurare al linker di hardware di destinazione x86. Per il codice verificabile, è necessario utilizzare il flag /clr: safe ed è necessario indicare al linker di generare codice MSIL anziché istruzioni macchina native.
+Per impostazione predefinita, i progetti .NET usano il flag del compilatore /clr e configurare il linker di hardware di destinazione x86. Per il codice verificabile, è necessario usare il flag /clr: safe ed è necessario indicare al linker di generare codice MSIL anziché istruzioni macchina native.
 
-### <a name="to-change-the-compiler-and-linker-settings"></a>Per modificare le impostazioni del compilatore e del linker
+### <a name="to-change-the-compiler-and-linker-settings"></a>Per modificare le impostazioni del compilatore e linker
 
-1. Visualizzare la pagina delle proprietà del progetto. Per ulteriori informazioni, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).
+1. Visualizzare la pagina delle proprietà del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).
 
-1. Nel **generale** pagina il **le proprietà di configurazione** set di nodi, il **supporto Common Language Runtime** proprietà **-Safe MSIL Common Language Supporto di runtime (o /CLR: safe)**.
+1. Nel **generali** pagina il **le proprietà di configurazione** del set di nodi, il **supporto Common Language Runtime** proprietà **Safe MSIL Common Language Supporto di runtime (/ /CLR: safe)**.
 
-1. Nel **avanzate** pagina il **Linker** set di nodi, il **tipo di immagine CLR** proprietà **Imponi immagine IL safe (/ /CLRIMAGETYPE: safe)**.
+1. Nel **avanzate** pagina il **Linker** del set di nodi, il **tipo di immagine CLR** proprietà **Imponi immagine IL safe (/ /CLRIMAGETYPE: safe)**.
 
-## <a name="removing-native-data-types"></a>Rimozione dei tipi di dati nativi
+## <a name="removing-native-data-types"></a>Rimozione di tipi di dati nativi
 
-Poiché i tipi di dati nativi non sono verificabili, anche se non vengono effettivamente utilizzate, è necessario rimuovere tutti i file di intestazione contenenti tipi nativi.
+Poiché i tipi di dati nativi sono non verificabili, anche se non vengono effettivamente utilizzate, è necessario rimuovere tutti i file di intestazione che contiene i tipi nativi.
 
 > [!NOTE]
-> La procedura seguente si applica ai progetti Windows Forms Application (.NET) e di applicazione Console (.NET).
+> La procedura seguente si applica ai progetti Windows Forms Application (.NET) e applicazione Console (.NET).
 
 ### <a name="to-remove-references-to-native-data-types"></a>Per rimuovere i riferimenti ai tipi di dati nativi
 
@@ -58,18 +58,18 @@ Poiché i tipi di dati nativi non sono verificabili, anche se non vengono effett
 
 ## <a name="configuring-an-entry-point"></a>Configurazione di un punto di ingresso
 
-Poiché applicazioni verificabili non è possibile utilizzare le librerie di runtime C (CRT), non possono dipendere CRT per chiamare la funzione principale come punto di ingresso standard. Ciò significa che è necessario fornire in modo esplicito il nome della funzione da chiamare inizialmente al linker. (In questo caso, viene utilizzato Main () anziché di Main () o tmain () per indicare un punto di ingresso non CRT, ma poiché il punto di ingresso deve essere specificato in modo esplicito, questo nome è arbitrario.)
+Poiché applicazioni verificabile non è possibile usare le librerie di runtime C (CRT), non possono dipendere la libreria CRT per chiamare la funzione main come punto di ingresso standard. Ciò significa che è necessario fornire in modo esplicito il nome della funzione da chiamare inizialmente al linker. (In questo caso, Main () viene usato invece di Main () o tmain () per indicare un punto di ingresso non CRT, ma perché il punto di ingresso deve essere specificato in modo esplicito, questo nome è arbitrario.)
 
 > [!NOTE]
 > Le procedure seguenti si applicano ai progetti di applicazione Console (.NET).
 
 #### <a name="to-configure-an-entry-point"></a>Per configurare un punto di ingresso
 
-1. Modificare tmain in Main () nel file. cpp principale del progetto.
+1. Modificare tmain in Main () nel file main. cpp del progetto.
 
-1. Visualizzare la pagina delle proprietà del progetto. Per ulteriori informazioni, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).
+1. Visualizzare la pagina delle proprietà del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).
 
-1. Nel **avanzate** pagina il **Linker** nodo immettere `Main` come il **punto di ingresso** valore della proprietà.
+1. Nel **avanzate** pagina sotto il **Linker** nodo, immettere `Main` come il **punto di ingresso** valore della proprietà.
 
 ## <a name="see-also"></a>Vedere anche
 

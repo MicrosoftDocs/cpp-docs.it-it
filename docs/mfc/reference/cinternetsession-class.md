@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a519d9b978f5b48377b1a85d52274cba35c9d075
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197439"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401810"
 ---
 # <a name="cinternetsession-class"></a>Classe CInternetSession
 
@@ -115,7 +115,7 @@ Per altre informazioni sulle attività di programmazione Internet base, vedere l
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-[CObject](../../mfc/reference/cobject-class.md)  
+[CObject](../../mfc/reference/cobject-class.md)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`CInternetSession`
 
 ## <a name="requirements"></a>Requisiti
@@ -138,13 +138,13 @@ CInternetSession(
 
 ### <a name="parameters"></a>Parametri
 
-*pstrAgent*  
+*pstrAgent*<br/>
 Un puntatore a una stringa che identifica il nome dell'applicazione o entità chiamando le funzioni di Internet (ad esempio, "Microsoft Internet Browser"). Se *pstrAgent* è NULL (predefinito), il framework chiama la funzione globale [AfxGetAppName](application-information-and-management.md#afxgetappname), che restituisce una stringa con terminazione null che contiene il nome di un'applicazione. Alcuni protocolli questa stringa viene utilizzata per identificare l'applicazione al server.
 
-*dwContext*  
+*dwContext*<br/>
 L'identificatore di contesto per l'operazione. *dwContext* identifica le informazioni sullo stato dell'operazione restituite da [CInternetSession:: OnStatusCallback](#onstatuscallback). Il valore predefinito è impostato su 1. Tuttavia, è possibile assegnare in modo esplicito un ID di contesto specifico per l'operazione. L'oggetto e qualsiasi lavoro che svolto da associare con tale ID del contesto.
 
-*dwAccessType*  
+*dwAccessType*<br/>
 Il tipo di accesso necessaria. Di seguito sono i valori validi, uno dei quali può essere fornito:
 
 - Connetti INTERNET_OPEN_TYPE_PRECONFIG tramite impostazioni nel Registro di sistema preconfigurate. Questo tipo di accesso è impostato come predefinito. Per connettersi tramite un proxy TIS, impostata *dwAccessType* in questo valore; è quindi impostare il Registro di sistema in modo appropriato.
@@ -155,13 +155,13 @@ Il tipo di accesso necessaria. Di seguito sono i valori validi, uno dei quali pu
 
 Per informazioni sulla connessione con diversi tipi di proxy, vedere [i passaggi in un'applicazione Client FTP tipica](../../mfc/steps-in-a-typical-ftp-client-application.md).
 
-*pstrProxyName*  
+*pstrProxyName*<br/>
 Il nome del proxy CERN preferito se *dwAccessType* viene impostato come INTERNET_OPEN_TYPE_PROXY. Il valore predefinito è NULL.
 
-*pstrProxyBypass*  
+*pstrProxyBypass*<br/>
 Un puntatore a una stringa contenente un elenco facoltativo di indirizzi del server. Questi indirizzi possono essere ignorati quando si usa l'accesso al proxy. Se viene fornito un valore NULL, l'elenco di esclusione leggerà dal Registro di sistema. Questo parametro è significativo solo se *dwAccessType* è impostato su INTERNET_OPEN_TYPE_PROXY.
 
-*dwFlags*  
+*dwFlags*<br/>
 Indica diverse opzioni di memorizzazione nella cache. Il valore predefinito è impostato su 0. I valori possibili includono:
 
 - INTERNET_FLAG_DONT_CACHE nella cache i dati, sia localmente che in tutti i server gateway.
@@ -200,7 +200,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*  
+*bAttivare il*<br/>
 Specifica se i callback è abilitato o disabilitato. Il valore predefinito è TRUE.
 
 ### <a name="return-value"></a>Valore restituito
@@ -255,16 +255,16 @@ static BOOL GetCookie(
 
 ### <a name="parameters"></a>Parametri
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Un puntatore a una stringa contenente l'URL.
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Un puntatore a una stringa contenente il nome del cookie da ottenere per l'URL specificato.
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 Nel primo overload, un puntatore a una stringa contenente l'indirizzo del buffer che riceve i dati del cookie. Questo valore può essere NULL. Nel secondo overload, un riferimento a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto per ricevere i dati del cookie.
 
-*dwBufLen*  
+*dwBufLen*<br/>
 La variabile che specifica le dimensioni dei *pstrCookieData* buffer. Se la funzione ha esito positivo, il buffer riceve la quantità di dati copiati per la *pstrCookieData* buffer. Se *pstrCookieData* è NULL, questo parametro riceve un valore che specifica la dimensione del buffer necessarie per copiare tutti i dati del cookie.
 
 ### <a name="return-value"></a>Valore restituito
@@ -291,10 +291,10 @@ static DWORD GetCookieLength(
 
 ### <a name="parameters"></a>Parametri
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Un puntatore a una stringa contenente l'URL
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Un puntatore a una stringa contenente il nome del cookie.
 
 ### <a name="return-value"></a>Valore restituito
@@ -320,13 +320,13 @@ CFtpConnection* GetFtpConnection(
 
 ### <a name="parameters"></a>Parametri
 
-*pstrServer*  
+*pstrServer*<br/>
 Un puntatore a una stringa contenente il nome del server FTP.
 
-*pstrUserName*  
+*pstrUserName*<br/>
 Puntatore a una stringa con terminazione null che specifica il nome dell'utente per l'accesso. Se NULL, il valore predefinito è anonymous.
 
-*pstrPassword*  
+*pstrPassword*<br/>
 Un puntatore a una stringa con terminazione null che specifica la password da utilizzare per l'accesso. Se entrambe *pstrPassword* e *pstrUserName* sono NULL, la password anonima predefinita è il nome dell'utente tramite posta elettronica. Se *pstrPassword* è NULL (o una stringa vuota), ma *pstrUserName* non è NULL, viene usata una password vuota. La tabella seguente descrive il comportamento per le quattro possibili impostazioni di *pstrUserName* e *pstrPassword*:
 
 |*pstrUserName*|*pstrPassword*|Nome utente inviato al server FTP|Password inviati al server FTP|
@@ -336,10 +336,10 @@ Un puntatore a una stringa con terminazione null che specifica la password da ut
 |NULL|Stringa non NULL|ERRORE|ERRORE||
 |Stringa non NULL|Stringa non NULL|*pstrUserName*|*pstrPassword*|
 
-*nPort*  
+*nPort*<br/>
 Numero che identifica la porta TCP/IP da usare nel server.
 
-*bPassive*  
+*bPassive*<br/>
 Specifica la modalità passiva o attiva per questa sessione FTP. Se impostato su TRUE, imposta l'API Win32 `dwFlag` a INTERNET_FLAG_PASSIVE.
 
 ### <a name="return-value"></a>Valore restituito
@@ -368,16 +368,16 @@ CGopherConnection* GetGopherConnection(
 
 ### <a name="parameters"></a>Parametri
 
-*pstrServer*  
+*pstrServer*<br/>
 Un puntatore a una stringa contenente il nome del server gopher.
 
-*pstrUserName*  
+*pstrUserName*<br/>
 Un puntatore a una stringa contenente il nome utente.
 
-*pstrPassword*  
+*pstrPassword*<br/>
 Un puntatore a una stringa contenente la password di accesso.
 
-*nPort*  
+*nPort*<br/>
 Numero che identifica la porta TCP/IP da usare nel server.
 
 ### <a name="return-value"></a>Valore restituito
@@ -409,19 +409,19 @@ CHttpConnection* GetHttpConnection(
 
 ### <a name="parameters"></a>Parametri
 
-*pstrServer*  
+*pstrServer*<br/>
 Un puntatore a una stringa contenente il nome del server HTTP.
 
-*nPort*  
+*nPort*<br/>
 Numero che identifica la porta TCP/IP da usare nel server.
 
-*pstrUserName*  
+*pstrUserName*<br/>
 Un puntatore a una stringa contenente il nome utente.
 
-*pstrPassword*  
+*pstrPassword*<br/>
 Un puntatore a una stringa contenente la password di accesso.
 
-*dwFlags*  
+*dwFlags*<br/>
 Qualsiasi combinazione del `INTERNET_FLAG_*` flag. Vedere la tabella nel **osservazioni** sezione del [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) per una descrizione delle *dwFlags* valori.
 
 ### <a name="return-value"></a>Valore restituito
@@ -446,16 +446,16 @@ virtual void OnStatusCallback(
 
 ### <a name="parameters"></a>Parametri
 
-*dwContext*  
+*dwContext*<br/>
 Il valore di contesto fornito dall'applicazione.
 
-*dwInternetStatus*  
+*dwInternetStatus*<br/>
 Un codice di stato che indica il motivo per cui è stata effettuata la richiamata. Visualizzare **osservazioni** per una tabella di valori possibili.
 
-*lpvStatusInformation*  
+*lpvStatusInformation*<br/>
 Un puntatore a un buffer contenente informazioni relative a questo callback.
 
-*dwStatusInformationLength*  
+*dwStatusInformationLength*<br/>
 Il valore pari *lpvStatusInformation*.
 
 ### <a name="remarks"></a>Note
@@ -484,7 +484,7 @@ Eseguire l'override di questa funzione membro per richiedere un'azione prima del
 > [!NOTE]
 > Callback stato necessario garantire la protezione stato del thread. Se si Usa MFC in una libreria condivisa, aggiungere la riga seguente all'inizio della sostituzione:
 
- [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
+[!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
 Per altre informazioni sulle operazioni asincrone, vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md).
 
@@ -503,13 +503,13 @@ CStdioFile* OpenURL(
 
 ### <a name="parameters"></a>Parametri
 
-*pstrURL*  
+*pstrURL*<br/>
 Un puntatore al nome dell'URL per iniziare la lettura. Solo gli URL che iniziano con file:, ftp:, gopher:, o http: sono supportati. Indica se *pstrURL* è NULL.
 
-*dwContext*  
+*dwContext*<br/>
 Un valore definito dall'applicazione passato con l'handle restituito all'interno del callback.
 
-*dwFlags*  
+*dwFlags*<br/>
 Flag che descrivono come gestire questa connessione. Visualizzare **osservazioni** per altre informazioni sui flag validi. I flag validi sono:
 
 - INTERNET_FLAG_TRANSFER_ASCII il valore predefinito. Trasferire il file come testo ASCII.
@@ -526,10 +526,10 @@ Flag che descrivono come gestire questa connessione. Visualizzare **osservazioni
 
 - INTERNET_FLAG_PASSIVE usato per un sito FTP. Usa la semantica FTP passiva. Utilizzato con [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) di `OpenURL`.
 
-*pstrHeaders*  
+*pstrHeaders*<br/>
 Un puntatore a una stringa contenente le intestazioni da inviare al server HTTP.
 
-*dwHeadersLength*  
+*dwHeadersLength*<br/>
 La lunghezza in caratteri, le intestazioni aggiuntive. Se si tratta-1L e *pstrHeaders* è diverso da NULL, quindi *pstrHeaders* presuppone sia pari a zero terminato e la lunghezza viene calcolata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -574,13 +574,13 @@ static BOOL SetCookie(
 
 ### <a name="parameters"></a>Parametri
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Un puntatore a una stringa con terminazione null che specifica l'URL per il quale il cookie deve essere impostato.
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Un puntatore a una stringa contenente il nome del cookie.
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 Un puntatore a una stringa che contiene i dati di stringa effettivo da associare all'URL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -611,19 +611,19 @@ BOOL SetOption(
 
 ### <a name="parameters"></a>Parametri
 
-*dwOption*  
+*dwOption*<br/>
 Opzione Internet da impostare. Visualizzare [flag di opzione](/windows/desktop/WinInet/option-flags) nel SDKfor Windows un elenco delle possibili opzioni.
 
-*lpBuffer.*  
+*lpBuffer.*<br/>
 Un buffer che contiene l'impostazione dell'opzione.
 
-*dwBufferLength*  
+*dwBufferLength*<br/>
 La lunghezza di *lpBuffer* o le dimensioni dei *dwValue*.
 
-*dwValue*  
+*dwValue*<br/>
 Un valore DWORD che contiene l'impostazione dell'opzione.
 
-*dwFlags*  
+*dwFlags*<br/>
 Indica diverse opzioni di memorizzazione nella cache. Il valore predefinito è impostato su 0. I valori possibili includono:
 
 - INTERNET_FLAG_DONT_CACHE nella cache i dati, sia localmente che in tutti i server gateway.
@@ -636,9 +636,9 @@ Se l'operazione ha esito positivo, viene restituito un valore TRUE. Se si è ver
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CObject](../../mfc/reference/cobject-class.md)  
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)  
-[Classe CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
-[Classe CHttpConnection](../../mfc/reference/chttpconnection-class.md)  
-[Classe CFtpConnection](../../mfc/reference/cftpconnection-class.md)  
-[Classe CGopherConnection](../../mfc/reference/cgopherconnection-class.md)  
+[Classe CObject](../../mfc/reference/cobject-class.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Classe CInternetConnection](../../mfc/reference/cinternetconnection-class.md)<br/>
+[Classe CHttpConnection](../../mfc/reference/chttpconnection-class.md)<br/>
+[Classe CFtpConnection](../../mfc/reference/cftpconnection-class.md)<br/>
+[Classe CGopherConnection](../../mfc/reference/cgopherconnection-class.md)

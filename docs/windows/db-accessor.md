@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efca93e2e9b52ce646ef07465682815978550414
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61c20647d96a66cf4b50e6f0b031cc04353553e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607777"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410650"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -39,10 +39,10 @@ I gruppi `db_column` gli attributi che fanno parte di `IAccessor`-associazione b
 
 #### <a name="parameters"></a>Parametri
 
-*num*  
+*num*<br/>
 Specifica il numero di funzioni di accesso (un indice integer in base zero). È necessario specificare numeri di funzione di accesso in ordine crescente d'ordine, usando interi o valori definiti.
 
-*auto*  
+*auto*<br/>
 Valore booleano che specifica se la funzione di accesso viene recuperata automaticamente (TRUE) o non recuperato (FALSE).
 
 ## <a name="remarks"></a>Note

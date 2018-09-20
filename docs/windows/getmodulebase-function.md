@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 403330097f1428ee0d7650f5931aef1621f61b11
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d460b006d2d17df308a62c0433621aac7008f4d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612601"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411414"
 ---
 # <a name="getmodulebase-function"></a>Funzione GetModuleBase
 Recupera una [ModuleBase](../windows/modulebase-class.md) puntatore che consente di incrementare e decrementare il conteggio dei riferimenti di un [RuntimeClass](../windows/runtimeclass-class.md) oggetto.
@@ -32,17 +32,21 @@ inline Details::ModuleBase* GetModuleBase() throw()
 ```
   
 ## <a name="return-value"></a>Valore restituito
- Un puntatore a un `ModuleBase` oggetto.
+
+Un puntatore a un `ModuleBase` oggetto.
   
 ## <a name="remarks"></a>Note
- Questa funzione viene utilizzata internamente per incrementare e decrementare il numero di riferimento all'oggetto.
+
+Questa funzione viene utilizzata internamente per incrementare e decrementare il numero di riferimento all'oggetto.
   
- È possibile utilizzare questa funzione per controllare i conteggi dei riferimenti chiamando [modulebase:: Incrementobjectcount](../windows/modulebase-incrementobjectcount-method.md) e [modulebase:: Decrementobjectcount](../windows/modulebase-decrementobjectcount-method.md).
+È possibile utilizzare questa funzione per controllare i conteggi dei riferimenti chiamando [modulebase:: Incrementobjectcount](../windows/modulebase-incrementobjectcount-method.md) e [modulebase:: Decrementobjectcount](../windows/modulebase-decrementobjectcount-method.md).
   
 ## <a name="requirements"></a>Requisiti
- **Intestazione:** Implements. h
+
+**Intestazione:** Implements. h
   
- **Spazio dei nomi:** Microsoft::WRL
+**Spazio dei nomi:** Microsoft::WRL
   
 ## <a name="see-also"></a>Vedere anche
- [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+
+[Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317862"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402395"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>Definizione di variabili membro per i controlli di finestra (C++)
 
@@ -55,11 +55,11 @@ MFC
 
 ## <a name="see-also"></a>Vedere anche
 
-[Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md)  
-[Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Creazione guidata classe MFC](../mfc/reference/mfc-class-wizard.md)  
-[Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)  
-[Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)  
-[Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)  
-[Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Creazione guidata classe MFC](../mfc/reference/mfc-class-wizard.md)<br/>
+[Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)<br/>
+[Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)

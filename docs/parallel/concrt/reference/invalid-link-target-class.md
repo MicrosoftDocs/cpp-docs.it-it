@@ -18,57 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2120f274dd783da00a43106338476c43cc0a9dad
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 65937e1daee2bcd75300f5dc6b19c444ee542f64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021746"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412613"
 ---
 # <a name="invalidlinktarget-class"></a>Classe invalid_link_target
-Questa classe descrive un'eccezione generata quando il metodo `link_target` di un blocco della messaggistica viene chiamato e tale blocco non è in grado di collegarsi alla destinazione. Può essere il risultato del superamento del numero di collegamenti consentito dal blocco della messaggistica o del tentativo di collegare una destinazione specifica due volte alla stessa origine.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+Questa classe descrive un'eccezione generata quando il metodo `link_target` di un blocco della messaggistica viene chiamato e tale blocco non è in grado di collegarsi alla destinazione. Può essere il risultato del superamento del numero di collegamenti consentito dal blocco della messaggistica o del tentativo di collegare una destinazione specifica due volte alla stessa origine.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 class invalid_link_target : public std::exception;
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[invalid_link_target](#ctor)|Di overload. Costruisce un oggetto `invalid_link_target`.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `exception`  
-  
- `invalid_link_target`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt. h  
-  
- **Spazio dei nomi:** Concurrency  
-  
-##  <a name="ctor"></a> invalid_link_target 
+```
 
- Costruisce un oggetto `invalid_link_target`.  
-  
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[invalid_link_target](#ctor)|Di overload. Costruisce un oggetto `invalid_link_target`.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`exception`
+
+`invalid_link_target`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** concrt. h
+
+**Spazio dei nomi:** Concurrency
+
+##  <a name="ctor"></a> invalid_link_target
+
+Costruisce un oggetto `invalid_link_target`.
+
 ```
 explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
 
 invalid_link_target() throw();
-```  
-  
-### <a name="parameters"></a>Parametri  
+```
+
+### <a name="parameters"></a>Parametri
+
 *Messaggio*<br/>
-Messaggio descrittivo dell'errore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [concorrenza Namespace](concurrency-namespace.md)   
- [Blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md)
+Messaggio descrittivo dell'errore.
 
+## <a name="see-also"></a>Vedere anche
 
+[Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
+[Blocchi dei messaggi asincroni](../../../parallel/concrt/asynchronous-message-blocks.md)
 

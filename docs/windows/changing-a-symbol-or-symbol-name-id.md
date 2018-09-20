@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b80c854d144f0f2010d1482a03f692062ea81ef
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 873cf2adc273e5fd39a5680833277ce3790cdfae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412886"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Modifica di un simbolo o del nome di un simbolo (ID)
 
@@ -48,5 +48,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Restrizioni relative ai nomi dei simboli](../windows/symbol-name-restrictions.md)  
+[Restrizioni relative ai nomi dei simboli](../windows/symbol-name-restrictions.md)<br/>
 [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)

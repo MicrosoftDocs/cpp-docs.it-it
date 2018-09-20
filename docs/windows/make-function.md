@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dab76460dcbbb70f55dac864292ad9a6f1fca99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607820"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422402"
 ---
 # <a name="make-function"></a>Funzione Make
 
@@ -174,61 +174,61 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Classe definita dall'utente che eredita da `WRL::RuntimeClass`.
 
-*TArg1*  
+*TArg1*<br/>
 Tipo di argomento 1 che viene passato alla classe di runtime specificato.
 
-*TArg2*  
+*TArg2*<br/>
 Tipo di argomento 2 che viene passato alla classe di runtime specificato.
 
-*TArg3*  
+*TArg3*<br/>
 Tipo di argomento 3 che viene passato alla classe di runtime specificato.
 
-*TArg4*  
+*TArg4*<br/>
 Tipo di argomento 4 che viene passato alla classe di runtime specificato.
 
-*TArg5*  
+*TArg5*<br/>
 Tipo di argomento 5 che viene passato alla classe di runtime specificato.
 
-*TArg6*  
+*TArg6*<br/>
 Tipo di argomento 6 che viene passato alla classe di runtime specificato.
 
-*TArg7*  
+*TArg7*<br/>
 Tipo di argomento 7 che viene passato alla classe di runtime specificato.
 
-*TArg8*  
+*TArg8*<br/>
 Tipo di argomento 8 che viene passato alla classe di runtime specificato.
 
-*TArg9*  
+*TArg9*<br/>
 Tipo di argomento 9 che viene passato alla classe di runtime specificato.
 
-*arg1*  
+*arg1*<br/>
 Argomento 1 che viene passato alla classe di runtime specificato.
 
-*Arg2*  
+*Arg2*<br/>
 Argomento 2 che viene passato alla classe di runtime specificato.
 
-*arg3*  
+*arg3*<br/>
 Argomento 3 che viene passato alla classe di runtime specificato.
 
-*Arg4*  
+*Arg4*<br/>
 Argomento 4 che viene passato alla classe di runtime specificato.
 
-*Arg5*  
+*Arg5*<br/>
 Argomento 5 che viene passato alla classe di runtime specificato.
 
-*Arg6*  
+*Arg6*<br/>
 Argomento 6 che viene passato alla classe di runtime specificato.
 
-*Arg7*  
+*Arg7*<br/>
 Argomento 7 che viene passato alla classe di runtime specificato.
 
-*arg8*  
+*arg8*<br/>
 Argomento 8 che viene passato alla classe di runtime specificato.
 
-*arg9*  
+*arg9*<br/>
 Argomento 9 che viene passato alla classe di runtime specificato.
 
 ## <a name="return-value"></a>Valore restituito

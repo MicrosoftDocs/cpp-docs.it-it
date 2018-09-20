@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbce88be7f7b83c22964438bc4ea7a783754fb63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1b35268cd883245b125aa7c87919124b29451ff1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609008"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420322"
 ---
 # <a name="semaphoreoperator-operator"></a>Operatore Semaphore::operator=
 
@@ -38,7 +38,7 @@ Semaphore& operator=(
 
 ### <a name="parameters"></a>Parametri
 
-*h*  
+*h*<br/>
 Riferimento rvalue a un **semaforo** oggetto.
 
 ## <a name="return-value"></a>Valore restituito
@@ -52,4 +52,5 @@ Un riferimento all'oggetto corrente **semaforo** oggetto.
 **Namespace:** Microsoft::WRL::Wrappers
 
 ## <a name="see-also"></a>Vedere anche
+
 [Classe Semaphore](../windows/semaphore-class.md)
