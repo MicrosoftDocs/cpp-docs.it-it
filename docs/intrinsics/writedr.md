@@ -16,43 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b559edf26c847404d718440e86037cab4026297b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5fd9bd5145947711c245f552672843d604160d06
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704951"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402174"
 ---
 # <a name="writedr"></a>__writedr
-Scrive il valore specificato per la registrazione di debug specificato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __writedr(unsigned DebugRegister, unsigned DebugValue);  
-void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+Scrive il valore specificato per la registrazione di debug specificato.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __writedr(unsigned DebugRegister, unsigned DebugValue);
+void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *DebugRegister*<br/>
-[in] Registrare un numero compreso tra 0 e 7 che identifica il debug.  
-  
+[in] Registrare un numero compreso tra 0 e 7 che identifica il debug.
+
 *DebugValue*<br/>
-[in] Registrare un valore da scrivere per il debug.  
-  
-## <a name="remarks"></a>Note  
- Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__writedr`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [__readdr](../intrinsics/readdr.md)
+[in] Registrare un valore da scrivere per il debug.
+
+## <a name="remarks"></a>Note
+
+Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__writedr`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[__readdr](../intrinsics/readdr.md)

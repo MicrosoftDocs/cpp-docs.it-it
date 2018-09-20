@@ -28,26 +28,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56eff6cede20508ea59463039b4f0e41d416cac1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ca2d98898c232cdb65d3ac5d1288b06aca403772
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686352"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398118"
 ---
 # <a name="memory-management-frame-allocation"></a>Gestione della memoria: allocazione di frame
-Allocazione sul frame prende il nome da "frame dello stack" è impostato ogni volta che viene chiamata una funzione. Il frame dello stack è un'area di memoria che temporaneamente contiene gli argomenti alla funzione, nonché eventuali variabili definite locali rispetto alla funzione. Variabili di frame vengono spesso denominate "automatiche" variabili perché il compilatore alloca automaticamente lo spazio per loro.  
-  
- Esistono due caratteristiche principali delle allocazioni di frame. In primo luogo, quando si definisce una variabile locale, viene allocato spazio sufficiente sul frame dello stack per contenere la variabile di tipo intera, anche se è una matrice di grandi dimensioni o una struttura di dati. In secondo luogo, variabili di frame vengono eliminate automaticamente quando escono dall'ambito:  
-  
- [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
-  
- Per le variabili di funzione locale, questa transizione ambito si verifica quando uscita della funzione, ma l'ambito di una variabile di intervallo può essere inferiore a una funzione se vengono usate parentesi graffe annidate. L'eliminazione automatica delle variabili di frame è molto importante. Nel caso di semplici tipi primitivi (ad esempio **int** oppure **byte**), matrici o strutture di dati, l'eliminazione automatica recupera semplicemente la memoria usata dalla variabile. Poiché la variabile esce dall'ambito, non è accessibile comunque. Nel caso degli oggetti C++, tuttavia, il processo di eliminazione automatica è un po' più complicato.  
-  
- Quando un oggetto viene definito come una variabile di frame, il relativo costruttore viene richiamato automaticamente in corrispondenza del punto in cui viene rilevata la definizione. Quando l'oggetto esce dall'ambito, il relativo distruttore viene chiamato automaticamente prima che la memoria per l'oggetto venga recuperata. La costruzione e distruzione di $ può essere molto utile, ma occorre tenere presenti le chiamate automatiche, in particolare al distruttore.  
-  
- Il vantaggio principale di allocazione di oggetti nel frame è che questi vengono eliminati automaticamente. Quando si allocano oggetti sul frame, non devi preoccuparti oggetti dimenticati causando perdite di memoria. (Per informazioni dettagliate sulle perdite di memoria, vedere l'articolo [rilevamento di perdite di memoria in MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\)).) Uno svantaggio dell'allocazione di frame è che le variabili di frame possono essere usate all'esterno all'ambito. Un altro fattore nella scelta di allocazione di frame e allocazione dell'heap è che per gli oggetti e strutture di grandi dimensioni, è spesso preferibile usare heap anziché lo stack per l'archiviazione, poiché lo spazio dello stack è spesso limitato.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione della memoria](../mfc/memory-management.md)
+
+Allocazione sul frame prende il nome da "frame dello stack" è impostato ogni volta che viene chiamata una funzione. Il frame dello stack è un'area di memoria che temporaneamente contiene gli argomenti alla funzione, nonché eventuali variabili definite locali rispetto alla funzione. Variabili di frame vengono spesso denominate "automatiche" variabili perché il compilatore alloca automaticamente lo spazio per loro.
+
+Esistono due caratteristiche principali delle allocazioni di frame. In primo luogo, quando si definisce una variabile locale, viene allocato spazio sufficiente sul frame dello stack per contenere la variabile di tipo intera, anche se è una matrice di grandi dimensioni o una struttura di dati. In secondo luogo, variabili di frame vengono eliminate automaticamente quando escono dall'ambito:
+
+[!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
+
+Per le variabili di funzione locale, questa transizione ambito si verifica quando uscita della funzione, ma l'ambito di una variabile di intervallo può essere inferiore a una funzione se vengono usate parentesi graffe annidate. L'eliminazione automatica delle variabili di frame è molto importante. Nel caso di semplici tipi primitivi (ad esempio **int** oppure **byte**), matrici o strutture di dati, l'eliminazione automatica recupera semplicemente la memoria usata dalla variabile. Poiché la variabile esce dall'ambito, non è accessibile comunque. Nel caso degli oggetti C++, tuttavia, il processo di eliminazione automatica è un po' più complicato.
+
+Quando un oggetto viene definito come una variabile di frame, il relativo costruttore viene richiamato automaticamente in corrispondenza del punto in cui viene rilevata la definizione. Quando l'oggetto esce dall'ambito, il relativo distruttore viene chiamato automaticamente prima che la memoria per l'oggetto venga recuperata. La costruzione e distruzione di $ può essere molto utile, ma occorre tenere presenti le chiamate automatiche, in particolare al distruttore.
+
+Il vantaggio principale di allocazione di oggetti nel frame è che questi vengono eliminati automaticamente. Quando si allocano oggetti sul frame, non devi preoccuparti oggetti dimenticati causando perdite di memoria. (Per informazioni dettagliate sulle perdite di memoria, vedere l'articolo [rilevamento di perdite di memoria in MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\)).) Uno svantaggio dell'allocazione di frame è che le variabili di frame possono essere usate all'esterno all'ambito. Un altro fattore nella scelta di allocazione di frame e allocazione dell'heap è che per gli oggetti e strutture di grandi dimensioni, è spesso preferibile usare heap anziché lo stack per l'archiviazione, poiché lo spazio dello stack è spesso limitato.
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione della memoria](../mfc/memory-management.md)
 

@@ -16,39 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76462562dcf2567ec9532f3f32a721ba1e657e32
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7089a92e87449acbafe93bec8a2190a425a843a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538666"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411072"
 ---
 # <a name="readcr4"></a>__readcr4
-**Sezione specifica Microsoft**  
-  
- Legge il registro CR4 e restituisce il relativo valore.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned __int64 __readcr4(void);  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Il valore del registro CR4.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__readcr4`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questo intrinseco è disponibile solo in modalità kernel e la routine è disponibile solo come intrinseco.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+
+**Sezione specifica Microsoft**
+
+Legge il registro CR4 e restituisce il relativo valore.
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned __int64 __readcr4(void);
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Il valore del registro CR4.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__readcr4`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questo intrinseco è disponibile solo in modalità kernel e la routine è disponibile solo come intrinseco.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

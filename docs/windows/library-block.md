@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33febb69db2a8f3bd67205de2e6e5cf019016471
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 39067dd242fece7abb284448104115ac9a5ce4fd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598493"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404371"
 ---
 # <a name="libraryblock"></a>library_block
 
@@ -68,5 +68,5 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi del compilatore](../windows/compiler-attributes.md)  
+[Attributi del compilatore](../windows/compiler-attributes.md)<br/>
 [Attributi autonomi](../windows/stand-alone-attributes.md)  

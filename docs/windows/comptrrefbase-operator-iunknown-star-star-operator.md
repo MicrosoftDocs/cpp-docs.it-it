@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1a5b91ce4ffdfd376e6fbc7fa704fc1ecc0dc45
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 839b0220497db7ff0355ea7ed3ab923126e3175e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613016"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420933"
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>Operatore ComPtrRefBase::operator IUnknown**
 
@@ -48,5 +48,5 @@ Viene generato un errore se l'oggetto corrente **ComPtrRefBase** non deriva da `
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe ComPtrRefBase](../windows/comptrrefbase-class.md)  
+[Classe ComPtrRefBase](../windows/comptrrefbase-class.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

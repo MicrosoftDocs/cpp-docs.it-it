@@ -1,5 +1,5 @@
 ---
-title: 3.2.4 funzioni omp_unset_lock e omp_unset_nest_lock funzioni | Documenti Microsoft
+title: 3.2.4 funzioni omp_unset_lock e omp_unset_nest_lock funzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f480a75efff737356c1477593e182537ae73a8c8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 426ac0a5ff974e486f70eed2965fdc27d5acc941
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690221"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419113"
 ---
 # <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 Funzioni omp_unset_lock e omp_unset_nest_lock
-Queste funzioni consentono di rilascio delle proprietà di un blocco. Il formato è il seguente:  
-  
-```  
-#include <omp.h>  
-void omp_unset_lock(omp_lock_t *lock);  
-void omp_unset_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- L'argomento per ognuna di queste funzioni deve puntare a una variabile del blocco inizializzato dal thread di esecuzione della funzione di proprietà. Il comportamento è definito se il thread non proprietario del blocco.  
-  
- Per un semplice blocco, il `omp_unset_lock` funzione rilascia il thread di esecuzione della funzione dal proprietario del blocco.  
-  
- Per un blocco annidabile, il `omp_unset_nest_lock` funzione decrementa il conteggio di nidificazione e le versioni del thread in esecuzione la funzione di proprietà del blocco se il numero risultante è zero.
+
+Queste funzioni forniscono i mezzi di rilasciare la proprietà di un blocco. Il formato è il seguente:
+
+```
+#include <omp.h>
+void omp_unset_lock(omp_lock_t *lock);
+void omp_unset_nest_lock(omp_nest_lock_t *lock);
+```
+
+L'argomento per ognuna di queste funzioni deve puntare a una variabile di blocco inizializzato il thread che esegue la funzione di proprietà. Il comportamento è definito se il thread non proprietario del blocco.
+
+Per un semplice blocco, il `omp_unset_lock` funzione rilascia il thread che esegue la funzione di proprietà del blocco.
+
+Per un blocco annidabile, il `omp_unset_nest_lock` funzione decrementa la nidificazione count e rilascia il thread che esegue la funzione di proprietà del blocco se il numero risultante è zero.

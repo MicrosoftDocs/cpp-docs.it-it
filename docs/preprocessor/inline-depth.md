@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a6c8d05d326e11ecfef4df8d22cbf2b8d92bd77
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cbb90d36ea3da8e443eede8a3d74a35246077d52
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540209"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410266"
 ---
 # <a name="inlinedepth"></a>inline_depth
 Specifica l'euristica inline ricerca profondità, in modo che nessuna funzione verrà resa inline se è a una profondità (nel grafico delle chiamate) maggiore *n*.  
@@ -53,5 +53,5 @@ Il **inline_depth** pragma non ha alcun effetto sulle funzioni contrassegnate co
   
 ## <a name="see-also"></a>Vedere anche  
  
-[Direttive pragma e parola chiave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_recursion](../preprocessor/inline-recursion.md)

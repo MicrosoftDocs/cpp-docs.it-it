@@ -1,5 +1,5 @@
 ---
-title: 'TN055: Migrazione di applicazioni classi di Database ODBC MFC a classi DAO MFC | Documenti Microsoft'
+title: 'TN055: Migrazione di applicazioni classi di Database ODBC MFC a classi DAO MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/20/2018
 ms.technology:
@@ -24,23 +24,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 808f0f470e99b95502891552ade7b8c677dfdf17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957390"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396831"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: migrazione di applicazioni classi di database ODBC MFC a classi DAO MFC
 
 > [!NOTE]
-> L'ambiente di Visual C++ e le procedure guidate non supportano DAO (anche se sono incluse le classi DAO ed è comunque possibile usarle). Microsoft consiglia di utilizzare [modelli OLE DB](../data/oledb/ole-db-templates.md) oppure [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È necessario utilizzare solo DAO nella gestione delle applicazioni esistenti.
+> L'ambiente di Visual C++ e le procedure guidate non supportano DAO (anche se sono incluse le classi DAO ed è comunque possibile usarli). Microsoft consiglia di usare [modelli OLE DB](../data/oledb/ole-db-templates.md) oppure [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. È consigliabile utilizzare solo DAO nella gestione delle applicazioni esistenti.
 
 ## <a name="overview"></a>Panoramica
 
 In molte situazioni potrebbe risultare utile eseguire una migrazione delle applicazioni che utilizzano le classi di database ODBC MFC alle classi di database DAO MFC. In questa nota tecnica viene illustrata in dettaglio la maggior parte delle differenze tra le classi ODBC MFC e DAO MFC. Conoscendo queste differenze, la migrazione delle applicazioni dalle classi ODBC alle classi MFC non dovrebbe risultare eccessivamente difficile.
 
-## <a name="why-migrate-from-odbc-to-dao"></a>Motivo per cui eseguire la migrazione da ODBC a DAO
+## <a name="why-migrate-from-odbc-to-dao"></a>Il motivo per cui eseguire la migrazione da ODBC a DAO
 
 Esistono numerosi motivi per cui si potrebbe desiderare una migrazione delle applicazioni dalle classi di database ODBC alle classi di database DAO, ma la decisione non è necessariamente semplice o ovvia. È necessario tenere presente che il motore di database Microsoft Jet utilizzato da DAO è in grado di leggere qualsiasi origine dati ODBC per la quale sia disponibile un driver ODBC. Potrebbe essere più efficiente utilizzare le classi di database ODBC o chiamare direttamente ODBC, ma il motore di database Microsoft Jet è in grado di leggere i dati ODBC.
 
@@ -99,9 +99,9 @@ Le modifiche essenziali alle funzionalità che possono influenzare l'applicazion
 
    Con le classi ODBC, in MFC è necessario definire queste opzioni tramite macro o tipi enumerati.
 
-   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. Ad esempio si utilizzerebbe **snapshot** quando si specifica il tipo di `CRecordset` in ODBC ma **DB_OPEN_SNAPSHOT** quando si specifica il tipo di `CDaoRecordset`.
+   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. Ad esempio userà **snapshot** quando si specifica il tipo di `CRecordset` in ODBC ma **DB_OPEN_SNAPSHOT** quando si specifica il tipo di `CDaoRecordset`.
 
-- Il tipo di recordset predefinito per `CRecordset` viene **snapshot** mentre il tipo di recordset predefinito per `CDaoRecordset` è **dynaset** (vedere la nota riportata sotto per un problema aggiuntivo sugli snapshot della classe ODBC).
+- Il tipo di recordset predefinito per `CRecordset` viene **snapshot** mentre il tipo di recordset predefinito per `CDaoRecordset` viene **dynaset** (vedere la nota riportata sotto per un problema aggiuntivo sugli snapshot della classe ODBC).
 
 - La classe ODBC `CRecordset` include un'opzione per creare un recordset di tipo forward-only. Nella classe `CDaoRecordset`, forward-only non è un tipo di recordset, ma una proprietà (o un opzione) di determinati tipi di recordset.
 
@@ -111,12 +111,12 @@ Le modifiche essenziali alle funzionalità che possono influenzare l'applicazion
 
 - La classe Exception è stata modificata. `CDBExceptions` vengono generate nelle classi ODBC e `CDaoExceptions` nelle classi DAO.
 
-- `RFX_Date` viene utilizzato `CTime` e `TIMESTAMP_STRUCT` oggetti mentre `DFX_Date` utilizza `COleDateTime`. Il `COleDateTime` è quasi identica a quella `CTime`, ma si basa su un OLE a 8 byte **data** invece di 4 byte **time_t** in modo che può contenere un quantità maggiore di dati.
+- `RFX_Date` viene utilizzato `CTime` e `TIMESTAMP_STRUCT` oggetti mentre `DFX_Date` utilizza `COleDateTime`. Il `COleDateTime` è quasi identico al `CTime`, ma si basa su un OLE a 8 byte **data** invece di 4 byte **time_t** pertanto può contenere un intervallo molto più grande di dati.
 
    > [!NOTE]
-   > Gli snapshot di DAO (`CDaoRecordset`) sono di sola lettura mentre gli snapshot di ODBC (`CRecordset`) possono essere aggiornati in base al driver e all'utilizzo della libreria di cursori ODBC. Se si utilizza la libreria di cursori, gli snapshot `CRecordset` sono aggiornabili. Se si utilizza uno dei driver Microsoft da Desktop Driver Pack 3.0 senza la libreria di cursori ODBC, gli snapshot `CRecordset` sono di sola lettura. Se si utilizza un altro driver, controllare la documentazione del driver per verificare se gli snapshot (`STATIC_CURSORS`) sono di sola lettura.
+   > Gli snapshot di DAO (`CDaoRecordset`) sono di sola lettura mentre gli snapshot di ODBC (`CRecordset`) possono essere aggiornati in base al driver e all'utilizzo della libreria di cursori ODBC. Se si utilizza la libreria di cursori, gli snapshot `CRecordset` sono aggiornabili. Se si utilizza uno dei driver Microsoft da Desktop Driver Pack 3.0 senza la libreria di cursori ODBC, gli snapshot `CRecordset` sono di sola lettura. Se si usa un altro driver, controllare la relativa documentazione per verificare se gli snapshot (`STATIC_CURSORS`) sono di sola lettura.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Note tecniche per numero](../mfc/technical-notes-by-number.md)  
-[Note tecniche per categoria](../mfc/technical-notes-by-category.md)  
+[Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
+[Note tecniche per categoria](../mfc/technical-notes-by-category.md)

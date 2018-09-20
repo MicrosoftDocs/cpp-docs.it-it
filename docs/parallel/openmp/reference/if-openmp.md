@@ -16,73 +16,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83e1920ab2cb44815e9547e4f7f4a07999c1c588
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e4aaad878040534fd198bcdf4a93d7820fd89adc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020953"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404813"
 ---
 # <a name="if-openmp"></a>if (OpenMP)
-Specifica se un ciclo deve essere eseguito in parallelo o in serie.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-if(expression)  
-```  
-  
+
+Specifica se un ciclo deve essere eseguito in parallelo o in serie.
+
+## <a name="syntax"></a>Sintassi
+
+```
+if(expression)
+```
+
 ### <a name="parameters"></a>Parametri
-  
+
 *Espressione*<br/>
-Un'espressione integrale che, se restituisce true (diverso da zero), fa sì che il codice in tale area per l'esecuzione in parallelo. Se l'espressione restituisce false (zero), l'area parallela viene eseguito in serie (per un singolo thread).  
-  
-## <a name="remarks"></a>Note  
- `if` si applica alle direttive seguenti:  
-  
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Per altre informazioni, vedere [2.3 costrutto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// omp_if.cpp  
-// compile with: /openmp  
-#include <stdio.h>  
-#include <omp.h>  
-  
-void test(int val)  
-{  
-    #pragma omp parallel if (val)  
-    if (omp_in_parallel())  
-    {  
-        #pragma omp single  
-        printf_s("val = %d, parallelized with %d threads\n",  
-                 val, omp_get_num_threads());  
-    }  
-    else  
-    {  
-        printf_s("val = %d, serialized\n", val);  
-    }  
-}  
-  
-int main( )  
-{  
-    omp_set_num_threads(2);  
-    test(0);  
-    test(2);  
-}  
-```  
-  
-```Output  
-val = 0, serialized  
-val = 2, parallelized with 2 threads  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Clausole](../../../parallel/openmp/reference/openmp-clauses.md)
+Un'espressione integrale che, se restituisce true (diverso da zero), fa sì che il codice in tale area per l'esecuzione in parallelo. Se l'espressione restituisce false (zero), l'area parallela viene eseguito in serie (per un singolo thread).
+
+## <a name="remarks"></a>Note
+
+`if` si applica alle direttive seguenti:
+
+- [parallel](../../../parallel/openmp/reference/parallel.md)
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Sezioni](../../../parallel/openmp/reference/sections-openmp.md)
+
+Per altre informazioni, vedere [2.3 costrutto parallel](../../../parallel/openmp/2-3-parallel-construct.md).
+
+## <a name="example"></a>Esempio
+
+```
+// omp_if.cpp
+// compile with: /openmp
+#include <stdio.h>
+#include <omp.h>
+
+void test(int val)
+{
+    #pragma omp parallel if (val)
+    if (omp_in_parallel())
+    {
+        #pragma omp single
+        printf_s("val = %d, parallelized with %d threads\n",
+                 val, omp_get_num_threads());
+    }
+    else
+    {
+        printf_s("val = %d, serialized\n", val);
+    }
+}
+
+int main( )
+{
+    omp_set_num_threads(2);
+    test(0);
+    test(2);
+}
+```
+
+```Output
+val = 0, serialized
+val = 2, parallelized with 2 threads
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Clausole](../../../parallel/openmp/reference/openmp-clauses.md)

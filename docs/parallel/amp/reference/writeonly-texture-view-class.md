@@ -18,156 +18,164 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65e4895af0903008e17b75a38981c169f07fc1c7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dd92e403d9c83bf50bea2703cef6a4255c6245e3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047759"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414681"
 ---
 # <a name="writeonlytextureview-class"></a>Classe writeonly_texture_view
-Fornisce l'accesso writeonly ad una trama.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
+
+Fornisce l'accesso writeonly ad una trama.
+
+## <a name="syntax"></a>Sintassi
+
+```
 template <
-    typename value_type,  
-    int _Rank  
->  
-class writeonly_texture_view;  
- 
+    typename value_type,
+    int _Rank
+>
+class writeonly_texture_view;
+
 template <
-    typename value_type,  
-    int _Rank  
->  
-class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<value_type, _Rank>;  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+    typename value_type,
+    int _Rank
+>
+class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<value_type, _Rank>;
+```
+
+#### <a name="parameters"></a>Parametri
+
 *value_type*<br/>
-Il tipo degli elementi nella trama.  
-  
+Il tipo degli elementi nella trama.
+
 *_Rank*<br/>
-Numero di dimensioni della trama.  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-typedefs"></a>Typedef pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`scalar_type`||  
-|`value_type`|Il tipo degli elementi nella trama.|  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Costruttore writeonly_texture_view](#ctor)|Inizializza una nuova istanza della classe `writeonly_texture_view`.|  
-|[~ writeonly_texture_view distruttore](#ctor)|Elimina definitivamente il `writeonly_texture_view` oggetto.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[set](#set)|Imposta il valore dell'elemento in corrispondenza dell'indice specificato.|  
-  
-### <a name="public-operators"></a>Operatori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[operator=](#operator_eq)|Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.|  
-  
-### <a name="public-constants"></a>Costanti pubbliche  
-  
-|nome|Descrizione|  
-|----------|-----------------|  
-|[Rank (costante)](#rank)|Ottiene il rango del `writeonly_texture_view` oggetto.|  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `_Texture_base`  
-  
- `writeonly_texture_view`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** amp_graphics. h  
-  
- **Namespace:** Concurrency:: Graphics  
-  
-##  <a name="dtor"></a> ~writeonly_texture_view 
+Numero di dimensioni della trama.
 
- Elimina definitivamente il `writeonly_texture_view` oggetto.  
-  
-```  
+## <a name="members"></a>Membri
+
+### <a name="public-typedefs"></a>Typedef pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`scalar_type`||
+|`value_type`|Il tipo degli elementi nella trama.|
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Costruttore writeonly_texture_view](#ctor)|Inizializza una nuova istanza della classe `writeonly_texture_view`.|
+|[~ writeonly_texture_view distruttore](#ctor)|Elimina definitivamente il `writeonly_texture_view` oggetto.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[set](#set)|Imposta il valore dell'elemento in corrispondenza dell'indice specificato.|
+
+### <a name="public-operators"></a>Operatori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[operator=](#operator_eq)|Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.|
+
+### <a name="public-constants"></a>Costanti pubbliche
+
+|nome|Descrizione|
+|----------|-----------------|
+|[Rank (costante)](#rank)|Ottiene il rango del `writeonly_texture_view` oggetto.|
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`_Texture_base`
+
+`writeonly_texture_view`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** amp_graphics. h
+
+**Namespace:** Concurrency:: Graphics
+
+##  <a name="dtor"></a> ~writeonly_texture_view
+
+Elimina definitivamente il `writeonly_texture_view` oggetto.
+
+```
 ~writeonly_texture_view() restrict(amp,cpu);
-```  
-  
-##  <a name="operator_eq"></a> operator= 
+```
 
- Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.  
-  
-```  
+##  <a name="operator_eq"></a> operator=
+
+Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.
+
+```
 writeonly_texture_view<value_type, _Rank>& operator= (
     const writeonly_texture_view<value_type, _Rank>& _Other) restrict(amp,cpu);
-```  
-  
-### <a name="parameters"></a>Parametri  
+```
+
+### <a name="parameters"></a>Parametri
+
 *_Other*<br/>
-`writeonly_texture_view` oggetto da copiare da.  
-  
-### <a name="return-value"></a>Valore restituito  
- Un riferimento a questo `writeonly_texture_view` oggetto.  
-  
-##  <a name="rank"></a> numero di dimensioni 
+`writeonly_texture_view` oggetto da copiare da.
 
- Ottiene il rango del `writeonly_texture_view` oggetto.  
-  
-```  
-static const int rank = _Rank;  
-```  
-  
-##  <a name="set"></a> Set 
+### <a name="return-value"></a>Valore restituito
 
- Imposta il valore dell'elemento in corrispondenza dell'indice specificato.  
-  
-```  
+Un riferimento a questo `writeonly_texture_view` oggetto.
+
+##  <a name="rank"></a> numero di dimensioni
+
+Ottiene il rango del `writeonly_texture_view` oggetto.
+
+```
+static const int rank = _Rank;
+```
+
+##  <a name="set"></a> Set
+
+Imposta il valore dell'elemento in corrispondenza dell'indice specificato.
+
+```
 void set(
-    const index<_Rank>& _Index,  
+    const index<_Rank>& _Index,
     const value_type& value) const restrict(amp);
-```  
-  
-### <a name="parameters"></a>Parametri  
-*Index*<br/>
-L'indice dell'elemento.  
-  
-*valore*<br/>
-Nuovo valore dell'elemento.  
-  
-##  <a name="ctor"></a> writeonly_texture_view 
+```
 
- Inizializza una nuova istanza della classe `writeonly_texture_view`.  
-  
-```  
+### <a name="parameters"></a>Parametri
+
+*Index*<br/>
+L'indice dell'elemento.
+
+*valore*<br/>
+Nuovo valore dell'elemento.
+
+##  <a name="ctor"></a> writeonly_texture_view
+
+Inizializza una nuova istanza della classe `writeonly_texture_view`.
+
+```
 writeonly_texture_view(
-    texture<value_type, 
+    texture<value_type,
     _Rank>& _Src) restrict(amp);
 
- 
 writeonly_texture_view(
-    const writeonly_texture_view<value_type,  
+    const writeonly_texture_view<value_type,
     _Rank>& _Src) restrict(amp,cpu);
-```  
-  
-### <a name="parameters"></a>Parametri  
+```
+
+### <a name="parameters"></a>Parametri
+
 *_Rank*<br/>
-Numero di dimensioni della trama.  
-  
+Numero di dimensioni della trama.
+
 *value_type*<br/>
-Il tipo degli elementi nella trama.  
-  
+Il tipo degli elementi nella trama.
+
 *_Src*<br/>
-La trama che viene usata per creare il `writeonly_texture_view`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
+La trama che viene usata per creare il `writeonly_texture_view`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

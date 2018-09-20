@@ -1,5 +1,5 @@
 ---
-title: Illustrazione del Routing di comandi | Documenti Microsoft
+title: Illustrazione del Routing di comando | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a12a5cd19177761dfbf484c64f528d8def194ca5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46449a90223bdb5e7774d4be5710014ff2c6ccae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341136"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406074"
 ---
 # <a name="command-routing-illustration"></a>Illustrazione del routing dei comandi
-Per illustrare, prendere in considerazione un messaggio di comando da una voce di menu Cancella tutto nel menu di modifica di un'applicazione MDI. Si supponga che la funzione del gestore per questo comando è una funzione membro di classe di documento dell'applicazione. Ecco come comando raggiunge il relativo gestore dopo che l'utente sceglie la voce di menu:  
-  
-1.  La finestra cornice principale riceve il messaggio di comando.  
-  
-2.  La finestra cornice MDI principale offre finestra figlio MDI attiva la possibilità di gestire il comando.  
-  
-3.  Il routing standard di una finestra cornice del figlio MDI consente la visualizzazione al prompt dei comandi prima di verificare la propria mappa messaggi.  
-  
-4.  La vista controlla innanzitutto la propria mappa messaggi e non trovare alcun gestore, indirizza il comando al documento associato.  
-  
-5.  Il documento controlla la mappa messaggi e trova un gestore. La funzione membro in questo documento viene chiamata e il routing si interrompe.  
-  
- Se il documento non conteneva un gestore, avrebbe inoltrato il comando per il modello di documento. Restituisce quindi il comando per la visualizzazione e quindi la finestra cornice. Infine, la finestra cornice verrà archiviati propria mappa messaggi. Se tale controllo non è riuscito anche il comando verrà indirizzato alla finestra cornice MDI principale e quindi all'oggetto dell'applicazione, ovvero la destinazione finale dei comandi non gestiti.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
+
+Per illustrare questo concetto, si consideri un messaggio di comando da una voce di menu nel menu di modifica di un'applicazione MDI Cancella tutto. Si supponga che la funzione del gestore per questo comando risulta essere una funzione membro di classe documento dell'applicazione. Ecco come comando raggiunge il gestore dopo che l'utente sceglie la voce di menu:
+
+1. La finestra cornice principale riceve il messaggio di comando prima di tutto.
+
+1. La finestra cornice MDI principale offre la finestra figlio MDI attiva l'opportunità di gestire il comando.
+
+1. Il routing standard di una finestra cornice figlio MDI consente la visualizzazione al prompt dei comandi prima di verificare la propria mappa messaggi.
+
+1. La vista prima controlla la propria mappa messaggi e non trovare alcun gestore, indirizza il comando al documento associato.
+
+1. Il documento controlla propria mappa messaggi e trova un gestore. La funzione membro in questo documento viene chiamata e il routing viene interrotta.
+
+Se il documento non aveva un gestore, avrebbe inoltrato il comando al modello del documento. Restituisce quindi il comando per la visualizzazione e quindi la finestra cornice. Infine, la finestra cornice verrà archiviati propria mappa messaggi. Se tale controllo non è riuscito anche, il comando verrà indirizzato tornare alla finestra cornice MDI principale e quindi all'oggetto applicazione, ovvero la destinazione finale dei comandi non gestiti.
+
+## <a name="see-also"></a>Vedere anche
+
+[Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: usare la classe transformer in Pipeline di dati | Documenti Microsoft'
+title: 'Procedura: usare la classe transformer in una Pipeline di dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,53 +16,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a291b5c53338137ae59d9361ee36b6df29df277e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2c39491543c4d3a16202dac3caee50122ba0c7cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686581"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403123"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>Procedura: Usare la classe transformer in una pipeline di dati
-In questo argomento contiene un esempio di base in cui viene illustrato come utilizzare il [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) classe in una pipeline di dati. Per un esempio più completo che utilizza una pipeline di dati per eseguire l'elaborazione di immagini, vedere [procedura dettagliata: creazione di una rete di elaborazione delle immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
-  
- *Dati pipelining* è un modello comune nella programmazione simultanea. Una pipeline di dati è costituito da una serie di fasi, in cui ogni fase esegue il lavoro e quindi passa il risultato dell'operazione alla fase successiva. La `transformer` classe un componente chiave nei dati pipeline poiché riceve un valore di input, esegue operazioni su tale valore e quindi produce un risultato per un altro componente da utilizzare.  
-  
-## <a name="example"></a>Esempio  
- In questo esempio Usa la pipeline di dati seguenti per eseguire una serie di trasformazioni in base a un valore di input iniziale:  
-  
-1.  La prima fase calcola il valore assoluto dell'input.  
-  
-2.  La seconda fase calcola la radice quadrata dell'input.  
-  
-3.  La terza fase calcola il quadrato dell'input.  
-  
-4.  La quarta fase viene negato l'input.  
-  
-5.  Nella quinta fase scrive il risultato finale in un buffer dei messaggi.  
-  
- Infine, l'esempio visualizza il risultato della pipeline nella console.  
-  
- [!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]  
-  
- Questo esempio produce il seguente output:  
-  
-```Output  
-The result is -42.  
-```  
-  
- È comune per una fase in una pipeline di dati per restituire un valore di tipo diverso rispetto al valore di input. In questo esempio, la seconda fase accetta un valore di tipo `int` come input e produce la radice quadrata del valore (un `double`) come output.  
-  
+
+In questo argomento contiene un esempio di base che illustra come usare il [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) classe in una pipeline di dati. Per un esempio più completo che usa una pipeline di dati per eseguire l'elaborazione di immagini, vedere [procedura dettagliata: creazione di una rete di elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+
+*Il pipelining dati* è una prassi comune nella programmazione simultanea. Una pipeline di dati è costituito da una serie di fasi, in cui ogni fase esegue il lavoro e quindi passa il risultato dell'operazione alla fase successiva. Il `transformer` classe un componente chiave nei dati pipeline poiché riceve un valore di input, esegue un lavoro a tale valore e quindi produce un risultato per un altro componente da utilizzare.
+
+## <a name="example"></a>Esempio
+
+In questo esempio Usa la pipeline di dati seguenti per eseguire una serie di trasformazioni in base a un valore di input iniziale:
+
+1. La prima fase calcola il valore assoluto del relativo input.
+
+1. La seconda fase calcola la radice quadrata del relativo input.
+
+1. La terza fase consente di calcolare il quadrato del relativo input.
+
+1. La quarta fase viene negato il relativo input.
+
+1. Nella quinta fase scrive il risultato finale in un buffer dei messaggi.
+
+Infine, l'esempio visualizza il risultato della pipeline nella console.
+
+[!code-cpp[concrt-data-pipeline#1](../../parallel/concrt/codesnippet/cpp/how-to-use-transformer-in-a-data-pipeline_1.cpp)]
+
+Questo esempio produce il seguente output:
+
+```Output
+The result is -42.
+```
+
+È comune per una fase in una pipeline di dati per restituire un valore il cui tipo è diverso dal relativo valore di input. In questo esempio, la seconda fase accetta un valore di tipo `int` come input e produce la radice quadrata del valore di (una `double`) come output.
+
 > [!NOTE]
->  La pipeline di dati in questo esempio è a scopo illustrativo. Ogni operazione di trasformazione, poiché esegue un impegno minimo l'overhead necessario per eseguire il trasferimento di messaggi può annullare i vantaggi dell'utilizzo di una pipeline di dati.  
-  
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `data-pipeline.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
-  
- **CL.exe /EHsc data-pipeline. cpp**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)   
- [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Procedura dettagliata: creazione di una rete per l'elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
+>  La pipeline di dati in questo esempio è a scopo illustrativo. Poiché ogni operazione di trasformazione esegue sforzo, il sovraccarico necessario per eseguire il trasferimento di messaggi può annullare i vantaggi dell'uso di una pipeline di dati.
+
+## <a name="compiling-the-code"></a>Compilazione del codice
+
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `data-pipeline.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
+
+**CL.exe /EHsc data-pipeline. cpp**
+
+## <a name="see-also"></a>Vedere anche
+
+[Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Procedura dettagliata: creazione di una rete per l'elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
 

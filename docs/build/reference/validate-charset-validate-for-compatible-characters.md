@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63adaad4fe074225ef32d99edd2a1402acf5e045
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 528245bd2b0ef734ce192f266fe73e813078a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709124"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407296"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/Validate/CharSet (convalida per i caratteri compatibili)
 
@@ -57,6 +57,6 @@ Visual Studio Usa UTF-8 per la codifica di caratteri interno durante la conversi
 
 [Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[(set esecuzione Set di caratteri) /Execution-CharSet](../../build/reference/execution-charset-set-execution-character-set.md)
-[(Imposta origine Set di caratteri) /source-charset](../../build/reference/source-charset-set-source-character-set.md)
-[/utf-8 (Imposta origine ed eseguibili set di caratteri UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/Execution-CharSet (set esecuzione Set di caratteri)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source/charset (imposta il set di caratteri di origine)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf/8 (imposta i set di caratteri eseguibili e di origine su UTF/8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

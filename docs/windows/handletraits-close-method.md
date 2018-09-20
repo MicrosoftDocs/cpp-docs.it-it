@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1b36d4feea61e9a79978cc86dca29a7ad14846a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 442344b35d9d1b9f98d4fb65403e3033ff31b4e4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594036"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419607"
 ---
 # <a name="handletraitsclose-method"></a>Metodo HANDLETraits::Close
 
@@ -38,7 +38,7 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametri
 
-*h*  
+*h*<br/>
 Handle da chiudere.
 
 ## <a name="return-value"></a>Valore restituito

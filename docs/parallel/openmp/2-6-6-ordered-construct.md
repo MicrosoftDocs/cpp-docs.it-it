@@ -1,5 +1,5 @@
 ---
-title: 2.6.6 costrutto ordered | Documenti Microsoft
+title: 2.6.6 costrutto ordered | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa66d9fb8a0a9af2fc33497690bfe67a3ea5d717
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7b83c3dfc13b231a1314343a1dff496acf7a99b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690345"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412197"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 Costrutto ordered
-Il seguente blocco strutturato un **ordinati** direttiva viene eseguita nell'ordine in cui vengono eseguite iterazioni in un ciclo sequenza. La sintassi del **ordinati** direttiva è come segue:  
-  
-```  
-#pragma omp ordered new-linestructured-block  
-```  
-  
- Un **ordinati** direttiva deve essere compresa l'estensione dinamica di un **per** o **parallela per** costruire. Il **per** o **parallela per** direttiva a cui il **ordinati** costrutto binding deve avere un **ordinati** clausola specificata come descritto in [Sezione 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) nella pagina 11. L'esecuzione di un **per** o **parallela per** costruire con un **ordinati** clausola, **ordinati** costrutti vengono eseguiti esclusivamente nel ordine in cui essere eseguite durante l'esecuzione del ciclo sequenza.  
-  
- Restrizioni per il **ordinati** direttiva sono i seguenti:  
-  
--   Un'iterazione di un ciclo con un **per** costrutto non deve essere eseguito più volte la stessa direttiva ordinata e non è necessario eseguire più **ordinati** direttiva.
+
+Il seguente blocco strutturato un' **ordinati** direttiva viene eseguita nell'ordine in cui le iterazioni vengono eseguite in un ciclo sequenziale. La sintassi del **ordinati** direttiva è come segue:
+
+```
+#pragma omp ordered new-linestructured-block
+```
+
+Un **ordinati** direttiva deve essere entro l'ambito dinamico di un **per** oppure **parallele per** costruire. Il **per** o **parallele per** direttiva a cui il **ordinati** associa costrutto deve avere un **ordinati** clausola specificata come descritto in [Sezione 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) nella pagina 11. L'esecuzione di un **per** o **parallele per** costruire con un' **ordinati** clausola, **ordinati** costrutti vengono eseguiti esclusivamente nel ordine in cui verrebbero eseguite durante l'esecuzione sequenza del ciclo.
+
+Restrizioni per il **ordinati** direttiva sono i seguenti:
+
+- Un'iterazione di un ciclo con un **per** costrutto non deve eseguire più volte la stessa direttiva ordinata e non è necessario eseguire più **ordinati** direttiva.

@@ -1,5 +1,5 @@
 ---
-title: 'TN066: Comuni MFC 3. x a 4.0 problemi relativi al Porting | Documenti Microsoft'
+title: 'TN066: Comuni MFC 3.x a 4.0 problemi relativi al Porting | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d7e439224357f5c352fa96c06cfde639c413655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a25bb22dcd809c199bf00f57137208141627a434
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381790"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421869"
 ---
 # <a name="tn066-common-mfc-3x-to-40-porting-issues"></a>TN066: problemi comuni di porting da MFC 3.x a 4.0
-Questa nota tecnica descritti i problemi più comuni che possono verificarsi durante il tentativo di eseguire il porting di un'applicazione scritta con MFC 3. x (inclusa con Visual C++ MFC 2. x) alla versione 4.0 di MFC.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
+
+In questa nota tecnica descritti i problemi più comuni che possono verificarsi durante il tentativo di eseguire il porting di un'applicazione scritta con MFC 3.x (di MFC incluse con Visual C++ versione 2.x) alla versione 4.0 di MFC.
+
+## <a name="see-also"></a>Vedere anche
+
+[Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
+[Note tecniche per categoria](../mfc/technical-notes-by-category.md)
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212812"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420504"
 ---
 # <a name="property--c-component-extensions"></a>proprietà (Estensioni del componente C++)
 
@@ -33,15 +33,15 @@ Dichiara un *proprietà*, che è una funzione membro che si comporta e si accede
 
 È possibile dichiarare uno dei seguenti tipi di proprietà.
 
-*proprietà semplice*  
+*proprietà semplice*<br/>
 Per impostazione predefinita, crea una *funzione di accesso set* che assegna il valore della proprietà, un *funzione di accesso get* che recupera il valore della proprietà e un membro dati privato generato dal compilatore che contiene il valore della proprietà.
 
-*blocco di proprietà*  
+*blocco di proprietà*<br/>
 Consente di creare funzioni di accesso get e/o set definite dall'utente. La proprietà è di lettura/scrittura se entrambe le funzioni di accesso get e set sono definite. È di sola lettura se viene definita solo la funzione di accesso get ed è di sola scrittura se viene definita solo la funzione di accesso set.
 
 È necessario dichiarare in modo esplicito un membro dati per contenere il valore della proprietà.
 
-*proprietà indicizzata*  
+*proprietà indicizzata*<br/>
 Un blocco di proprietà che è possibile usare per ottenere e impostare un valore della proprietà specificato da uno o più indici.
 
 È possibile creare una proprietà indicizzata con un nome di proprietà definito dall'utente o un *predefinito* nome della proprietà. Il nome di una proprietà indicizzata predefinito è il nome della classe in cui la proprietà è definita. Per dichiarare una proprietà predefinita, specificare il **predefinito** parola chiave anziché un nome di proprietà.
@@ -71,27 +71,27 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parametri
 
-*type*  
+*type*<br/>
 Il tipo di dati del valore della proprietà e di conseguenza la proprietà stessa.
 
-*property_name*  
+*property_name*<br/>
 Nome della proprietà.
 
-*modificatore di accesso*  
+*modificatore di accesso*<br/>
 Un qualificatore di accesso. I qualificatori validi sono **statici** e **virtuale**.
 
 Get o set di funzioni di accesso non devono concordare il **virtuale** devono concordare il qualificatore, ma il **statico** qualificatore.
 
-*modificatore di ereditarietà*  
+*modificatore di ereditarietà*<br/>
 Un qualificatore di ereditarietà. I qualificatori validi sono **astratto** e **sealed**.
 
-*index_list*  
+*index_list*<br/>
 Un elenco delimitato da virgole di uno o più indici. Ogni indice è costituito da un tipo di indice e un identificatore facoltativo che può essere usato nel corpo del metodo di proprietà.
 
-*valore*  
+*valore*<br/>
 Il valore da assegnare alla proprietà in un'operazione set o da recuperare in un'operazione set.
 
-*property_body*  
+*property_body*<br/>
 Il corpo del metodo di proprietà della funzione di accesso set o get. Il *property_body* possono utilizzare il *index_list* per accedere al membro dati della proprietà sottostante, o come parametri nell'elaborazione definita dall'utente.
 
 ## <a name="windows-runtime"></a>Windows Runtime
@@ -123,16 +123,16 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parametri
 
-*Modificatore*  
+*Modificatore*<br/>
 Un modificatore che può essere usato in una dichiarazione di proprietà o in un metodo della funzione di accesso get e set. I valori possibili sono **statici** e **virtuale**.
 
-*type*  
+*type*<br/>
 Il tipo di valore rappresentato dalla proprietà.
 
-*property_name*  
+*property_name*<br/>
 Parametri per il metodo raise; devono corrispondere alla firma del delegato.
 
-*index_list*  
+*index_list*<br/>
 Un elenco delimitato da virgole di uno o più indici, specificati tra parentesi quadrate (l'operatore di indice, ([])). Per ogni indice, specificare un tipo e, facoltativamente, un identificatore che può essere usato nel corpo del metodo di proprietà.
 
 ### <a name="remarks"></a>Note

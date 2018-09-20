@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d86052d6ca6e40926ed8d99990520044cef351d3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 636326e5af577b4e26c61a2094fe73dd4a680f2d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719316"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402473"
 ---
 # <a name="specifying-the-pathname"></a>Specifica del nome del percorso
 
@@ -48,6 +48,6 @@ CL /FmPRN HELLO.CPP
 
 ## <a name="see-also"></a>Vedere anche
 
-[File di output (/ F) le opzioni](../../build/reference/output-file-f-options.md)
-[opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Opzioni del file di output (/F)](../../build/reference/output-file-f-options.md)<br/>
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

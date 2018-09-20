@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eab2a577d0c7b31f833a8dcc0208f9939b729ad9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f9e6ee8da9c30ca3d5da9f772e46beca76f424be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607469"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398443"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>Metodo AsyncBase::GetOnComplete
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametri
 
-*completeHandler*  
+*completeHandler*<br/>
 Il percorso in cui è archiviato l'indirizzo del gestore dell'evento di completamento corrente.
 
 ## <a name="return-value"></a>Valore restituito

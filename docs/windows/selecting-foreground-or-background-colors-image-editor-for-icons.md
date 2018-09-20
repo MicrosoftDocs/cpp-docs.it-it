@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adaf5f28bd115602c51d20e34d593ce42644c5d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4ede6b0fa9f53865defb5dbe5f7eb164589c5bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613629"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413783"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Selezione dei colori di primo piano e di sfondo (Editor di immagini per le icone)
 
@@ -45,5 +45,5 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)

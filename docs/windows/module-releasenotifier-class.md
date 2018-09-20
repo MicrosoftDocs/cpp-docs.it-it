@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6f720d0a918a22aee4a4cade6af1cb02a90e8d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b42d4c282ce710f2f08b41c4097d64aa4dc9a805
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588869"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407309"
 ---
 # <a name="modulereleasenotifier-class"></a>Classe Module::ReleaseNotifier
 
@@ -61,4 +61,5 @@ class ReleaseNotifier;
 **Spazio dei nomi:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vedere anche
+
 [Classe Module](../windows/module-class.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8d226f508f5f5e8c717bd671413f21377c0ae01
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7b8de310f8abb3b417abbe96576d910513e25717
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202290"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398677"
 ---
 # <a name="restricted"></a>restricted
 
@@ -38,7 +38,7 @@ Specifica che un membro di un modulo, interfaccia o interfaccia dispatch non pu�
 
 ### <a name="parameters"></a>Parametri
 
-*Interfacce*  
+*Interfacce*<br/>
 Una o più interfacce che non possono essere chiamate in modo arbitrario su un oggetto COM. Questo parametro è valido solo quando viene applicato a una classe.
 
 ## <a name="remarks"></a>Note
@@ -87,6 +87,6 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di interfaccia](../windows/interface-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di interfaccia](../windows/interface-attributes.md)<br/>
 [Attributi di metodo](../windows/method-attributes.md)  

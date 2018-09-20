@@ -17,45 +17,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e879726f9ef3ad65dabd00056ddb859c72dd039e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccd691edb9ee799c8585fb33cb6b837e2871fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679567"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413972"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
-**Sezione specifica Microsoft**  
-  
- Contiene il puntatore alla struttura di controllo di una macchina virtuale corrente (VMCS) all'indirizzo specificato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __vmx_vmptrst(   
-   unsigned __int64 *VmcsPhysicalAddress   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- [in] *`VmcsPhysicalAddress`  
- L'indirizzo in cui è archiviato il puntatore VMCS corrente.  
-  
-## <a name="remarks"></a>Note  
- Il puntatore VMCS è un indirizzo fisico a 64 bit.  
-  
- Il `__vmx_vmptrst` è equivalente alla funzione il `VMPTRST` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__vmx_vmptrst`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)
+
+**Sezione specifica Microsoft**
+
+Contiene il puntatore alla struttura di controllo di una macchina virtuale corrente (VMCS) all'indirizzo specificato.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __vmx_vmptrst( 
+   unsigned __int64 *VmcsPhysicalAddress 
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
+[in] *`VmcsPhysicalAddress` l'indirizzo in cui è archiviato il puntatore VMCS corrente.
+
+## <a name="remarks"></a>Note
+
+Il puntatore VMCS è un indirizzo fisico a 64 bit.
+
+Il `__vmx_vmptrst` è equivalente alla funzione il `VMPTRST` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__vmx_vmptrst`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

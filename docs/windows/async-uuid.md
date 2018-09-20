@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1117ba3933d714486f314510d0288f0c63bf4b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 029528baabcc32c14fb6b35e4a13f4118602d5d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202376"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417800"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -38,7 +38,7 @@ Specifica l'UUID che indica al compilatore MIDL per definire le versioni sincron
 
 ### <a name="parameters"></a>Parametri
 
-*uuid*  
+*uuid*<br/>
 Un valore UUID che identifica la versione dell'interfaccia.
 
 ## <a name="remarks"></a>Note
@@ -74,5 +74,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
 [Attributi di interfaccia](../windows/interface-attributes.md)  

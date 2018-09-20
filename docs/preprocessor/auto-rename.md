@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70049daf514659a9ae525e1fca40152df4ab382a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 28e55b9afd3a6254182f1bb0a94fb2136d036c32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539220"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413497"
 ---
 # <a name="autorename"></a>auto_rename
 **Sezione specifica C++**  
@@ -42,5 +42,5 @@ Questo attributo viene utilizzato quando si importa una libreria dei tipi che ut
   
 ## <a name="see-also"></a>Vedere anche 
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

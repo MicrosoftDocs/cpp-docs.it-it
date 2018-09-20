@@ -1,5 +1,5 @@
 ---
-title: Override esplicito di un membro di interfaccia | Documenti Microsoft
+title: Override esplicito di un membro di interfaccia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,45 +19,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 811112d2721edccede6c7b4a278189fdec874523
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57c26c1185eff0e88e18ef23cb8506fb1fed407a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110441"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409025"
 ---
 # <a name="explicit-override-of-an-interface-member"></a>Override esplicito di un membro di interfaccia
-La sintassi per dichiarare un override esplicito di un membro di interfaccia all'interno di una classe è stata modificata dalle estensioni gestite per C++ a Visual C++.  
-  
- È spesso necessario fornire due istanze di un membro di interfaccia all'interno di una classe che implementa l'interfaccia, che viene utilizzato quando vengono modificati gli oggetti della classe tramite un handle di interfaccia e uno che viene utilizzato quando vengono utilizzati gli oggetti della classe tramite l'interfaccia della classe. Ad esempio:  
-  
-```  
-public __gc class R : public ICloneable {  
-   // to be used through ICloneable  
-   Object* ICloneable::Clone();  
-  
-   // to be used through an R  
-   R* Clone();  
-};  
-```  
-  
- Nelle estensioni gestite prepariamo queste fornendo una dichiarazione esplicita del metodo di interfaccia con il nome del metodo qualificato con il nome dell'interfaccia. L'istanza di classe specifico è non qualificato. Non è necessario eseguire il downcast il valore restituito di `Clone`, in questo esempio, quando la chiamata esplicita tramite un'istanza di `R`.  
-  
- Nella nuova sintassi, è stato introdotto un meccanismo di override generale che sostituisce la sintassi di estensioni gestite. Questo esempio potrebbe essere riscritto come segue:  
-  
-```  
-public ref class R : public ICloneable {  
-public:  
-   // to be used through ICloneable  
-   virtual Object^ InterfaceClone() = ICloneable::Clone;  
-  
-   // to be used through an R  
-   virtual R^ Clone();  
-};  
-```  
-  
- Questa revisione richiede che il membro di interfaccia in modo esplicito da sottoporre a override sia assegnato un nome univoco all'interno della classe. In questo caso, ho fornito il nome `InterfaceClone`. Il comportamento corrisponde ancora - una chiamata tramite il `ICloneable` richiama l'interfaccia `InterfaceClone`, mentre una chiamata tramite un oggetto di tipo `R` richiama il secondo `Clone` istanza.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Dichiarazioni di membro all'interno di una classe o interfaccia (C + c++ /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Override espliciti](../windows/explicit-overrides-cpp-component-extensions.md)
+
+La sintassi per dichiarare un override esplicito di un membro di interfaccia all'interno di una classe è stato modificato dalle estensioni gestite per C++ in Visual C++.
+
+È spesso necessario fornire due istanze di un membro di interfaccia all'interno di una classe che implementa l'interfaccia: uno che viene usato quando gli oggetti della classe vengono modificati tramite un handle di interfaccia e quella usata quando vengono usati gli oggetti della classe tramite l'interfaccia della classe. Ad esempio:
+
+```
+public __gc class R : public ICloneable {
+   // to be used through ICloneable
+   Object* ICloneable::Clone();
+
+   // to be used through an R
+   R* Clone();
+};
+```
+
+Nelle estensioni gestite è eseguire questa operazione fornendo una dichiarazione esplicita del metodo di interfaccia con il nome del metodo qualificato con il nome dell'interfaccia. L'istanza di classe specifico è non qualificato. Ciò elimina la necessità di eseguire il downcast il valore restituito di `Clone`, in questo esempio, quando viene chiamato esplicito tramite un'istanza di `R`.
+
+Nella nuova sintassi, è stato introdotto un meccanismo di override generale che sostituisce la sintassi di estensioni gestite. Questo esempio potrebbe essere riscritto come segue:
+
+```
+public ref class R : public ICloneable {
+public:
+   // to be used through ICloneable
+   virtual Object^ InterfaceClone() = ICloneable::Clone;
+
+   // to be used through an R
+   virtual R^ Clone();
+};
+```
+
+Questa revisione richiede che il membro di interfaccia da sottoporre a override in modo esplicito sia assegnato un nome univoco all'interno della classe. In questo caso, ho fornito il nome di `InterfaceClone`. Il comportamento è ancora gli stessi, una chiamata tramite il `ICloneable` interfaccia richiama rinominato `InterfaceClone`, mentre una chiamata tramite un oggetto di tipo `R` richiama il secondo `Clone` istanza.
+
+## <a name="see-also"></a>Vedere anche
+
+[Dichiarazioni di membri in una classe o interfaccia (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)<br/>
+[Override espliciti](../windows/explicit-overrides-cpp-component-extensions.md)

@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.4 condiviso | Documenti Microsoft
+title: 2.7.2.4 condiviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de0e32e16d889acb8f1339d783bc194b3508dda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9d1a545f1c505f9f578cad682399c8d69a882824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695694"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400146"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
-Questa clausola condivide le variabili incluse nella *elenco variabili* tra tutti i thread in un team. La stessa area di archiviazione per accedano a tutti i thread all'interno di un team **condivisa** variabili.  
-  
- La sintassi del **condivisa** clausola è il seguente:  
-  
-```  
-shared(variable-list)  
+
+Questa clausola condivide le variabili incluse nella *elenco di variabili* tra tutti i thread in un team. La stessa area di archiviazione per accedano a tutti i thread all'interno di un team **condivisa** variabili.
+
+La sintassi del **condivisa** clausola è il seguente:
+
+```
+shared(variable-list)
 ```

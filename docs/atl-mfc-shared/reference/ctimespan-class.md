@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06da499ed463404cc917fef7c8aebd52695061e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1b70e4ca31f4346e8ad0b6dda4e66192e2e53111
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109732"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397520"
 ---
 # <a name="ctimespan-class"></a>Classe CTimeSpan
 
@@ -418,12 +418,12 @@ Aggiornato `CArchive` oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
-[_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
-[gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
-[localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
-[strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
-[time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
+[asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)<br/>
+[_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)<br/>
+[gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)<br/>
+[localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)<br/>
+[strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
+[time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

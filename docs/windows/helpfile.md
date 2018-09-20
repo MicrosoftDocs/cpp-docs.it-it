@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 424c6b642bba04a22ee4dedd59e38761260ac8eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 66cd89c28ea01c3a75d0cb25aa6f96a234e379b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221929"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418203"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -38,7 +38,7 @@ Imposta il nome del file della Guida per una libreria dei tipi.
 
 ### <a name="parameters"></a>Parametri
 
-*filename*  
+*filename*<br/>
 Il nome del file che contiene gli argomenti della Guida.
 
 ## <a name="remarks"></a>Note
@@ -64,10 +64,10 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di interfaccia](../windows/interface-attributes.md)  
-[Attributi di classe](../windows/class-attributes.md)  
-[Attributi di metodo](../windows/method-attributes.md)  
-[Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpcontext](../windows/helpcontext.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di interfaccia](../windows/interface-attributes.md)<br/>
+[Attributi di classe](../windows/class-attributes.md)<br/>
+[Attributi di metodo](../windows/method-attributes.md)<br/>
+[Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
 [helpstring](../windows/helpstring.md)  

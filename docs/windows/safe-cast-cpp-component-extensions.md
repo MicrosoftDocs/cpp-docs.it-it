@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222926"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404211"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (Estensioni del componente C++)
 
@@ -60,10 +60,10 @@ expression
 
 ### <a name="parameters"></a>Parametri
 
-*ID del tipo*  
+*ID del tipo*<br/>
 Tipo in cui convertire *espressione* per. Handle a un tipo riferimento o valore, un tipo valore oppure un riferimento di rilevamento a un tipo riferimento o valore.
 
-*Espressione*  
+*Espressione*<br/>
 Espressione che restituisce un handle a tipo riferimento o valore oppure un riferimento di rilevamento a un tipo riferimento o valore.
 
 ### <a name="remarks"></a>Note
@@ -124,10 +124,10 @@ expression
 
 ### <a name="parameters"></a>Parametri
 
-*ID del tipo*  
+*ID del tipo*<br/>
 Handle a un tipo riferimento o valore, un tipo valore oppure un riferimento di rilevamento a un tipo riferimento o valore.
 
-*Espressione*  
+*Espressione*<br/>
 Espressione che restituisce un handle a tipo riferimento o valore oppure un riferimento di rilevamento a un tipo riferimento o valore.
 
 ### <a name="remarks"></a>Note

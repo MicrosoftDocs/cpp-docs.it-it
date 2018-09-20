@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 423a66b698f4e421ff29e6ac3dfddd11fa11c58f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3ae69e26077692188b8e013e949592df26d7701a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538267"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420400"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
 **Sezione specifica C++**  
@@ -52,5 +52,5 @@ Per impostazione predefinita, a basso livello `propget`, `propput`, e `propputre
   
 ## <a name="see-also"></a>Vedere anche  
  
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

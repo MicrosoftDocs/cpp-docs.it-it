@@ -19,19 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57aa0dc35d2cc47eea4df072a9df7efde9812c23
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 6d85f98fd72567d2481e3a9f9e643b2d736eea92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034702"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397702"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Impostazione del colore di sfondo della finestra di dialogo
+
 È possibile impostare il colore di sfondo delle finestre di dialogo gestendo i messaggi WM_CTLCOLOR per la finestra di dialogo. Il colore che si imposta è utilizzato solo per la finestra di dialogo specificata.
 
-Visualizzare [codexpert blog](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/) per un esempio.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Gestione dei messaggi di Windows nella finestra di dialogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
+Visualizzare [codexpert blog](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/) per un esempio.
+
+## <a name="see-also"></a>Vedere anche
+
+[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Gestione dei messaggi di Windows nella finestra di dialogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
 

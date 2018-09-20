@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 708b69bc63e59d8ba6ba882d894d6f17b59d8237
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6071cef3d5669fda86975bb0f27a2b9b87eeb011
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592369"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407270"
 ---
 # <a name="override--c-component-extensions"></a>override (Estensioni del componente C++)
 
@@ -93,5 +93,5 @@ Opzione del compilatore: `/clr`
 
 ## <a name="see-also"></a>Vedere anche
 
-[Identificatore override](../cpp/override-specifier.md)  
+[Identificatore override](../cpp/override-specifier.md)<br/>
 [Identificatori di override](../windows/override-specifiers-cpp-component-extensions.md)

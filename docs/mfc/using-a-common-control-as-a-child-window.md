@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di un controllo comune come finestra figlio | Documenti Microsoft
+title: Utilizzo di un controllo comune come finestra figlio | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d21675d913211026a2077a0830b7d8ed1225c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73ddb010aeb8190c063d2691806e3ebd89d0f744
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382824"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417969"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Utilizzo di un controllo comune come finestra figlio
-Uno qualsiasi dei controlli comuni di Windows può essere utilizzato come finestra figlio di un'altra finestra. La procedura seguente viene descritto come creare un controllo comune in modo dinamico e quindi utilizzarlo.  
-  
-### <a name="to-use-a-common-control-as-a-child-window"></a>Per utilizzare un controllo comune come finestra figlio  
-  
-1.  Definire il controllo nella classe correlata o gestore.  
-  
-2.  Utilizzare l'override del metodo di [CWnd:: Create](../mfc/reference/cwnd-class.md#create) metodo per creare il controllo di Windows.  
-  
-3.  Dopo aver creato il controllo (fin il `OnCreate` gestore se si crea una sottoclasse del controllo), è possibile modificare il controllo utilizzando le funzioni membro. Vedere le descrizioni dei singoli controlli in [controlli](../mfc/controls-mfc.md) per informazioni dettagliate sui metodi.  
-  
-4.  Quando si è finito di lavorare con il controllo, utilizzare [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) per eliminare definitivamente il controllo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Creazione e utilizzo di controlli](../mfc/making-and-using-controls.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+Uno qualsiasi dei controlli comuni di Windows può essere utilizzato come finestra figlio di un'altra finestra. La procedura seguente descrive come creare un controllo comune in modo dinamico e quindi utilizzarli.
+
+### <a name="to-use-a-common-control-as-a-child-window"></a>Usare un controllo comune come finestra figlio
+
+1. Definire il controllo nella classe correlata o del gestore.
+
+1. Usare l'override del metodo di [CWnd:: Create](../mfc/reference/cwnd-class.md#create) metodo per creare il controllo di Windows.
+
+1. Dopo aver creato il controllo (fin il `OnCreate` gestore se si crea una sottoclasse del controllo), è possibile modificare il controllo tramite le funzioni membro. Vedere le descrizioni dei singoli controlli [controlli](../mfc/controls-mfc.md) per informazioni dettagliate sui metodi.
+
+1. Quando si è terminato con il controllo, usare [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) da eliminare definitivamente il controllo.
+
+## <a name="see-also"></a>Vedere anche
+
+[Creazione e uso di controlli](../mfc/making-and-using-controls.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

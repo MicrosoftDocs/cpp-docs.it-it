@@ -1,5 +1,5 @@
 ---
-title: Elementi dell'interfaccia utente (MFC) | Documenti Microsoft
+title: Elementi dell'interfaccia utente (MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,78 +16,81 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba237173c3bca8f2b8246044257d1eb2022541c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5713c15a07bb90a94f1d8301ad1eb575dd910fdb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383242"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403507"
 ---
 # <a name="user-interface-elements-mfc"></a>Elementi dell'interfaccia utente (MFC)
-Per informazioni su come creare l'interfaccia utente per l'applicazione utilizzando la libreria Microsoft Foundation classe (MFC), vedere gli argomenti seguenti.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Controlli ActiveX](../mfc/activex-controls.md)  
- Viene descritto come utilizzare il componente di software riutilizzabile basato sul modello COM (Component Object), che supporta un'ampia gamma di funzionalità OLE e possono essere personalizzati per soddisfare numerosi requisiti software  
-  
- [Appunti](../mfc/clipboard.md)  
- Viene descritto come implementare il supporto per gli Appunti di Windows in applicazioni MFC.  
-  
- [Controlli](../mfc/controls-mfc.md)  
- Descrive i controlli comuni di Windows, inclusi i controlli creati dal proprietario, i controlli ActiveX e altre classi di controlli fornite dalla libreria MFC.  
-  
- [Barre di controllo](../mfc/control-bars.md)  
- Descrive la funzionalità di barre degli strumenti, barre di stato e le barre di finestra di dialogo.  
-  
- [Barre di finestra di dialogo](../mfc/dialog-bars.md)  
- Descrive un tipo di barra di controllo che può contenere qualsiasi tipo di controllo.  
-  
- [Finestre di dialogo](../mfc/dialog-boxes.md)  
- Viene descritto come creare finestre di dialogo con l'editor e le creazioni guidate codice.  
-  
- [Architettura documento/visualizzazione](../mfc/document-view-architecture.md)  
- Viene descritta la gestione di dati in MFC.  
-  
- [Visualizzazioni di form](../mfc/form-views-mfc.md)  
- Viene descritto come aggiungere il supporto di moduli per l'applicazione.  
-  
- [Guida HTML: Guida sensibile al contesto per i programmi](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
- Viene descritto come aggiungere la Guida sensibile al contesto per le applicazioni mediante la Guida HTML.  
-  
- [Gruppi a schede MDI](../mfc/mdi-tabbed-groups.md)  
- Consente di applicazioni multiple document interface (MDI) visualizzare uno o più finestre a schede (o i gruppi di finestre a schede, noti come *gruppi a schede*) nell'area client MDI.  
-  
- [Menu](../mfc/menus-mfc.md)  
- Viene descritto come aggiungere menu all'interfaccia utente.  
-  
- [OLE](../mfc/ole-mfc.md)  
- Vengono forniti collegamenti ad argomenti che illustrano il collegamento e incorporamento.  
-  
- [Stampa e anteprima di stampa](../mfc/printing-and-print-preview.md)  
- Viene descritto il supporto MFC per la stampa e anteprima di stampa dalle applicazioni.  
-  
- [Finestre delle proprietà](../mfc/property-sheets-mfc.md)  
- Viene descritto come utilizzare le finestre delle proprietà per gestire un numero elevato di controllo in una finestra di dialogo.  
-  
- [Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)  
- Viene descritto il supporto MFC per la creazione e modifica di risorse dell'interfaccia utente della barra multifunzione.  
-  
- [Barre di stato](../mfc/status-bars.md)  
- Viene descritto come utilizzare le barre di stato nelle applicazioni.  
-  
- [Descrizioni comandi](../mfc/tool-tips.md)  
- Viene descritto come implementare le descrizioni comandi per assistere gli utenti con le applicazioni.  
-  
- [Barre degli strumenti](../mfc/toolbars.md)  
- Vengono descritte le nozioni di base su come usare le barre degli strumenti in MFC.  
-  
- [Gestione visualizzazione](../mfc/visualization-manager.md)  
- Funge da una classe in cui è possibile inserire tutto il codice di disegno per l'applicazione.  
-  
- [Windows](../mfc/windows.md)  
- Vengono descritte le nozioni di base sull'utilizzo di windows in MFC.  
-  
-## <a name="related-sections"></a>Sezioni correlate  
- [Applicazioni desktop MFC](../mfc/mfc-desktop-applications.md)  
- Fornisce materiale di riferimento per la libreria MFC. MFC è un set di classi che costituisce un framework di applicazione, il framework di un'applicazione scritta per l'API di Windows.
+
+Per informazioni su come creare l'interfaccia utente per l'applicazione usando la libreria di classi MFC (Microsoft Foundation), vedere gli argomenti seguenti.
+
+## <a name="in-this-section"></a>In questa sezione
+
+[Controlli ActiveX](../mfc/activex-controls.md)<br/>
+Viene descritto come utilizzare componente software riutilizzabile basato sul modello COM (Component Object), che supporta un'ampia gamma di funzionalità OLE e possono essere personalizzati per soddisfare numerosi requisiti software
+
+[Appunti](../mfc/clipboard.md)<br/>
+Viene descritto come implementare il supporto per gli Appunti di Windows nelle applicazioni MFC.
+
+[Controlli](../mfc/controls-mfc.md)<br/>
+Descrive i controlli comuni di Windows, inclusi i controlli creati dal proprietario, i controlli ActiveX e altre classi di controlli fornite dalla libreria MFC.
+
+[Barre di controllo](../mfc/control-bars.md)<br/>
+Descrive la funzionalità di barre degli strumenti, barre di stato e le barre di finestra di dialogo.
+
+[Barre di finestra di dialogo](../mfc/dialog-bars.md)<br/>
+Descrive un tipo di barra di controllo che può contenere qualsiasi tipo di controllo.
+
+[Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
+Viene descritto come creare finestre di dialogo con gli editor e le creazioni guidate codice.
+
+[Architettura documento/visualizzazione](../mfc/document-view-architecture.md)<br/>
+Viene descritta la gestione dei dati in MFC.
+
+[Visualizzazioni di form](../mfc/form-views-mfc.md)<br/>
+Viene descritto come aggiungere il supporto di form all'applicazione.
+
+[Guida HTML: Guida sensibile al contesto per i programmi](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
+Viene descritto come aggiungere Guida sensibile al contesto per le applicazioni con la Guida HTML.
+
+[Gruppi a schede MDI](../mfc/mdi-tabbed-groups.md)<br/>
+Abilita applicazioni multiple document interface (MDI) visualizzare uno o più finestre a schede (o i gruppi di finestre a schede, noti come *gruppi a schede*) nell'area client MDI.
+
+[Menu](../mfc/menus-mfc.md)<br/>
+Viene descritto come aggiungere menu all'interfaccia utente.
+
+[OLE](../mfc/ole-mfc.md)<br/>
+Fornisce collegamenti ad argomenti che illustrano l'oggetto collegamento e incorporamento.
+
+[Stampa e anteprima di stampa](../mfc/printing-and-print-preview.md)<br/>
+Viene descritto il supporto MFC per la stampa e anteprima di stampa dalle applicazioni.
+
+[Finestre delle proprietà](../mfc/property-sheets-mfc.md)<br/>
+Viene descritto come usare le finestre delle proprietà per gestire un numero elevato di controllo in una finestra di dialogo.
+
+[Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)<br/>
+Viene descritto il supporto MFC per la creazione e modifica delle risorse dell'interfaccia utente della barra multifunzione.
+
+[Barre di stato](../mfc/status-bars.md)<br/>
+Viene descritto come utilizzare le barre di stato nelle applicazioni.
+
+[Descrizioni comandi](../mfc/tool-tips.md)<br/>
+Viene descritto come implementare descrizioni comandi per assistere gli utenti con le applicazioni.
+
+[Barre degli strumenti](../mfc/toolbars.md)<br/>
+Descrive le nozioni di base su come usare le barre degli strumenti in MFC.
+
+[Gestione visualizzazione](../mfc/visualization-manager.md)<br/>
+Agisce come una classe in cui è possibile inserire tutto il codice di disegno per l'applicazione.
+
+[Windows](../mfc/windows.md)<br/>
+Descrive le nozioni di base su come usare le finestre di MFC.
+
+## <a name="related-sections"></a>Sezioni correlate
+
+[Applicazioni desktop MFC](../mfc/mfc-desktop-applications.md)<br/>
+Fornisce materiale di riferimento per la libreria MFC. MFC è un set di classi che costituiscono un framework applicazione, vale a dire il framework di un'applicazione scritta per l'API di Windows.
 

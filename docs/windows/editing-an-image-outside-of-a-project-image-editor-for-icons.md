@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a99b66588b3158252106ba95aaddfc73e260c9ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2cabf76b4d98fc1732fdc2761b89774164595116
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613722"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419405"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Modifica di un'immagine all'esterno di un progetto (Editor di immagini per le icone)
 
@@ -43,5 +43,5 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)

@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0a5a172a7b0f8a309f1d8fd0762e098dc5d416a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4574ac1c5ff1ab45dfdf935e5eba3a14a76b948a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720031"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419848"
 ---
 # <a name="readpmc"></a>__readpmc
-**Sezione specifica Microsoft**  
-  
- Genera il `rdpmc` istruzione, che legge il contatore specificato da di monitoraggio delle prestazioni `counter`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned __int64 __readpmc(   
-   unsigned long counter   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+**Sezione specifica Microsoft**
+
+Genera il `rdpmc` istruzione, che legge il contatore specificato da di monitoraggio delle prestazioni `counter`.
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned __int64 __readpmc( 
+   unsigned long counter 
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *counter*<br/>
-[in] Il contatore delle prestazioni da leggere.  
-  
-## <a name="return-value"></a>Valore restituito  
- Il valore del contatore delle prestazioni specificato.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__readpmc`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questa funzione intrinseca è disponibile in solo in modalità kernel e la routine è disponibile solo come funzione intrinseca.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+[in] Il contatore delle prestazioni da leggere.
+
+## <a name="return-value"></a>Valore restituito
+
+Il valore del contatore delle prestazioni specificato.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__readpmc`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questa funzione intrinseca è disponibile in solo in modalità kernel e la routine è disponibile solo come funzione intrinseca.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

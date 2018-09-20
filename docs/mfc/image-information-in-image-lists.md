@@ -1,5 +1,5 @@
 ---
-title: Immagine informazioni negli elenchi di immagini | Documenti Microsoft
+title: Le informazioni negli elenchi di immagini dell'immagine | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b45a685a9de44bdc40f83481cb83ef58a5c4234
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c98bc629cde74cf7a6fc8a416de862f50a1dd5ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343713"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422285"
 ---
 # <a name="image-information-in-image-lists"></a>Informazioni sulle immagini negli elenchi di immagini
-[CImageList](../mfc/reference/cimagelist-class.md) include una serie di funzioni che consentono di recuperare informazioni da un elenco di immagini. Il [funzione membro GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) funzione membro inserisce un `IMAGEINFO` struttura con informazioni su una singola immagine, inclusi gli handle di bitmap di immagine e mask, il numero di piani di colore e bit per pixel e il rettangolo di delimitazione dell'immagine all'interno della bitmap. È possibile utilizzare queste informazioni per modificare direttamente le bitmap per l'immagine.  
-  
- Il [GetImageCount](../mfc/reference/cimagelist-class.md#getimagecount) membro funzione recupera il numero di immagini in un elenco di immagini.  
-  
- È possibile creare un'icona basata su un'immagine e una maschera in un elenco di immagini tramite il [funzione membro ExtractIcon](../mfc/reference/cimagelist-class.md#extracticon) funzione membro. La funzione restituisce l'handle della nuova icona.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CImageList](../mfc/using-cimagelist.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+[CImageList](../mfc/reference/cimagelist-class.md) include numerose funzioni che recuperano informazioni da un elenco di immagini. Il [funzione membro GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) la funzione membro inserisce un `IMAGEINFO` struttura con informazioni su una singola immagine, inclusi gli handle di bitmap di immagine e la maschera, il numero di regolatori di colore e bit per pixel e il rettangolo di delimitazione dell'immagine all'interno della bitmap. È possibile utilizzare queste informazioni per modificare direttamente le bitmap per l'immagine.
+
+Il [GetImageCount](../mfc/reference/cimagelist-class.md#getimagecount) membro funzione recupera il numero di immagini in un elenco di immagini.
+
+È possibile creare un'icona basata su un'immagine e una maschera in un elenco di immagini tramite il [funzione membro ExtractIcon](../mfc/reference/cimagelist-class.md#extracticon) funzione membro. La funzione restituisce l'handle della nuova icona.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CImageList](../mfc/using-cimagelist.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 
