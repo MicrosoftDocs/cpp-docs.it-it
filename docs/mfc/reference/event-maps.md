@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106808"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446608"
 ---
 # <a name="event-maps"></a>Mappe eventi
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Parametri
 
-*theClass*  
+*theClass*<br/>
 Specifica il nome della classe del controllo cui evento eseguire il mapping.
 
-*baseClass*  
+*baseClass*<br/>
 Specifica il nome della classe di base *theClass*.
 
 ### <a name="remarks"></a>Note
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Parametri
 
-*pszName*  
+*pszName*<br/>
 Nome dell'evento.
 
-*pfnFire*  
+*pfnFire*<br/>
 Il nome della funzione la generazione di eventi.
 
-*vtsParams*  
+*vtsParams*<br/>
 Elenco delimitato da spazi di una o più costanti che specifica l'elenco di parametri funzione.
 
 ### <a name="remarks"></a>Note
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Parametri
 
-*pszName*  
+*pszName*<br/>
 Nome dell'evento.
 
-*DISPID*  
+*DISPID*<br/>
 ID dispatch utilizzato dal controllo quando viene attivato l'evento.
 
-*pfnFire*  
+*pfnFire*<br/>
 Il nome della funzione la generazione di eventi.
 
-*vtsParams*  
+*vtsParams*<br/>
 Un elenco di variabili dei parametri passati al contenitore del controllo quando viene generato l'evento.
 
 ### <a name="remarks"></a>Note
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>Parametri
 
-*iVerb*  
+*iVerb*<br/>
 L'indice di un verbo standard per il verbo da sottoporre a override.
 
-*memberFxn*  
+*memberFxn*<br/>
 La funzione chiamata dal framework quando il verbo viene richiamato.
 
 ### <a name="remarks"></a>Note

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 566b21c911ba99d19fb16b564d0748cfcfd1eb71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719720"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435974"
 ---
 # <a name="rdx"></a>rdx
 
@@ -40,13 +40,13 @@ Crea una chiave del Registro di sistema o modifica una chiave del Registro di si
 
 ### <a name="parameters"></a>Parametri
 
-*key*  
+*key*<br/>
 Il nome della chiave può essere creato o aperto.
 
-*valueName*  
+*valueName*<br/>
 (Facoltativo) Specifica il campo del valore da impostare. Se un campo del valore con lo stesso nome esiste già nella chiave, viene aggiunto.
 
-*regtype*  
+*regtype*<br/>
 Il tipo di chiave del Registro di sistema da aggiungere. Può essere uno dei seguenti: `text`, `dword`, `binary`, o `CString`.
 
 ## <a name="remarks"></a>Note
@@ -93,5 +93,5 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi COM](../windows/com-attributes.md)  
+[Attributi COM](../windows/com-attributes.md)<br/>
 [registration_script](../windows/registration-script.md)  

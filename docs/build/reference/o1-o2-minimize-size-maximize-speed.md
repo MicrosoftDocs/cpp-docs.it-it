@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ea689b2db9a34b55664b695747079ac277bae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 24e57be50c2138cb9e772f6e6a2527300c9296ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702559"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446478"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Riduci dimensione, Ottimizza velocità)
 
@@ -69,7 +69,7 @@ Il **/O1** e **/O2** opzioni del compilatore sono un modo rapido per impostare c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)
-[opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)<br/>
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
 [/EH (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md)

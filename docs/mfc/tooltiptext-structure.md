@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c06b98acec18e845fd1353875c1453c4bee8b1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eeee8c7b0b3cd4977688b627cb27f73e39c7ea89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097159"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437092"
 ---
 # <a name="tooltiptext-structure"></a>Struttura TOOLTIPTEXT
-Iscritto il [gestore descrizione comando notifica](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), è necessario utilizzare il **TOOLTIPTEXT** struttura. I membri del **TOOLTIPTEXT** struttura sono:  
-  
+
+Iscritto il [gestore descrizione comando notifica](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), è necessario utilizzare il **TOOLTIPTEXT** struttura. I membri del **TOOLTIPTEXT** struttura sono:
+
 ```cpp
 typedef struct {
     NMHDR     hdr;        // required for all WM_NOTIFY messages
@@ -38,27 +39,28 @@ typedef struct {
                           // that is included in the structure
 } TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
 ```
-  
- *HDR*  
- Identifica lo strumento che richiede il testo. L'unico membro della struttura che potrebbe essere necessario è l'ID del comando. del controllo ID comando del controllo sarà nel *idFrom* membro delle **NMHDR** struttura, l'accesso con la sintassi `hdr.idFrom`. Visualizzare [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) per una descrizione dei membri delle **NMHDR** struttura.  
-  
- *lpszText*  
- Indirizzo di una stringa che riceve il testo per uno strumento.  
-  
- *szText*  
- Buffer che riceve il testo della descrizione comando. Un'applicazione può copiare il testo per questo buffer come alternativa alla specifica di un indirizzo di stringa.  
-  
- *hinst*  
- Handle dell'istanza che contiene una stringa da utilizzare come il testo della descrizione comando. Se *lpszText* è l'indirizzo del testo della descrizione comandi, questo membro è NULL.  
-  
-Quando si gestisce il `TTN_NEEDTEXT` notifica di messaggio, specificare la stringa da visualizzare in uno dei modi seguenti:  
-  
--   Copiare il testo nel buffer specificato per il *szText* membro.  
-  
--   Copiare l'indirizzo del buffer che contiene il testo per il *lpszText* membro.  
-  
--   Copiare l'identificatore della risorsa stringa per il *lpszText* membro e copiare l'handle dell'istanza che contiene la risorsa per il *hinst* membro.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Descrizioni comandi in Windows non derivate da CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+*HDR*<br/>
+Identifica lo strumento che richiede il testo. L'unico membro della struttura che potrebbe essere necessario è l'ID del comando. del controllo ID comando del controllo sarà nel *idFrom* membro delle **NMHDR** struttura, l'accesso con la sintassi `hdr.idFrom`. Visualizzare [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) per una descrizione dei membri delle **NMHDR** struttura.
+
+*lpszText*<br/>
+Indirizzo di una stringa che riceve il testo per uno strumento.
+
+*szText*<br/>
+Buffer che riceve il testo della descrizione comando. Un'applicazione può copiare il testo per questo buffer come alternativa alla specifica di un indirizzo di stringa.
+
+*hinst*<br/>
+Handle dell'istanza che contiene una stringa da utilizzare come il testo della descrizione comando. Se *lpszText* è l'indirizzo del testo della descrizione comandi, questo membro è NULL.
+
+Quando si gestisce il `TTN_NEEDTEXT` notifica di messaggio, specificare la stringa da visualizzare in uno dei modi seguenti:
+
+- Copiare il testo nel buffer specificato per il *szText* membro.
+
+- Copiare l'indirizzo del buffer che contiene il testo per il *lpszText* membro.
+
+- Copiare l'identificatore della risorsa stringa per il *lpszText* membro e copiare l'handle dell'istanza che contiene la risorsa per il *hinst* membro.
+
+## <a name="see-also"></a>Vedere anche
+
+[Descrizioni comandi in Windows non derivate da CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

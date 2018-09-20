@@ -1,5 +1,5 @@
 ---
-title: Classi di automazione OLE | Documenti Microsoft
+title: Classi di automazione OLE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8316030ba65796d0e9811ca35384c8a4a2a3afa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea35e51296b2fc528657c4dd9f9b9b76b84aae83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342878"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391514"
 ---
 # <a name="ole-automation-classes"></a>Classi di automazione OLE
-Queste classi supportano i client di automazione (applicazioni che controllano le altre applicazioni). Il server di automazione (applicazioni che possono essere controllate da altre applicazioni) è supportato tramite [mappe di invio](../mfc/reference/dispatch-maps.md).  
-  
- [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
- Usato per chiamare i server di automazione dal client di automazione. Quando si aggiunge una classe, questa classe viene utilizzata per creare classi indipendente dai tipi per i server di automazione che forniscono una libreria dei tipi.  
-  
- [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- Eccezione generata da un errore durante l'automazione OLE. Le eccezioni di automazione sono generate dai server di automazione e vengono acquisite dai client di automazione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../mfc/class-library-overview.md)
+
+Queste classi supportano i client di automazione (applicazioni che consentono di controllare altre applicazioni). Il server di automazione (applicazioni che possono essere controllati da altre applicazioni) è supportato tramite [mappe di invio](../mfc/reference/dispatch-maps.md).
+
+[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)<br/>
+Usato per chiamare i server di automazione dal client di automazione. Quando si aggiunge una classe, questa classe viene utilizzata per creare le classi indipendenti dai tipi per i server di automazione che forniscono una libreria dei tipi.
+
+[COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
+Eccezione generata da un errore durante l'automazione OLE. Le eccezioni di automazione sono generate dai server di automazione e vengono acquisite dai client di automazione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../mfc/class-library-overview.md)
 

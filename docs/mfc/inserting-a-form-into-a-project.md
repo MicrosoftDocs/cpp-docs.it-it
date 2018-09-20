@@ -1,5 +1,5 @@
 ---
-title: Inserimento di un Form in un progetto | Documenti Microsoft
+title: Inserimento di un Form in un progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e62618301e09ad4c44fb91608976ecab972a59da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344133"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429266"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Inserimento di un form in un progetto
-Form fornisce un contenitore appropriato per i controlli. È possibile inserire facilmente un modulo basato su MFC nell'applicazione fino a quando l'applicazione supporta le librerie MFC.  
-  
-### <a name="to-insert-a-form-into-your-project"></a>Per inserire un form nel progetto  
-  
-1.  Visualizzazione classi, selezionare il progetto a cui si desidera aggiungere il form e fare clic sul pulsante destro del mouse.  
-  
-2.  Dal menu di scelta rapida, fare clic su **Aggiungi** e quindi fare clic su **Aggiungi classe**.  
-  
-     Se il **nuovo modulo** comando non è disponibile, il progetto potrebbe essere basato sulla libreria ATL (Active Template). Per aggiungere un form a un progetto ATL, è necessario [specificare determinate impostazioni](../atl/reference/application-settings-atl-project-wizard.md) al momento della creazione del progetto.  
-  
-3.  Dal **MFC** cartella, fare clic su **classe MFC**.  
-  
-4.  La creazione guidata classe MFC, definire la nuova classe derivano da [CFormView](../mfc/reference/cformview-class.md).  
-  
- Visual C++ aggiunge il form per l'applicazione, aprirlo all'interno dell'editor della finestra di dialogo in modo da poter iniziare l'aggiunta di controlli e lavorare sul progetto complessivo.  
-  
- È consigliabile eseguire i passaggi aggiuntivi seguenti (non applicabili per le applicazioni basate su finestra di dialogo):  
-  
-1.  Eseguire l'override di `OnUpdate` funzione membro.  
-  
-2.  Implementare una funzione membro per spostare i dati dalla visualizzazione al documento.  
-  
-3.  Creare un `OnPrint` funzione membro.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Visualizzazioni di form](../mfc/form-views-mfc.md)
+
+Form fornisce un contenitore adatto per i controlli. È possibile inserire facilmente un modulo basato su MFC nell'applicazione, purché l'applicazione supporta le librerie MFC.
+
+### <a name="to-insert-a-form-into-your-project"></a>Per inserire un modulo nel progetto
+
+1. Dalla visualizzazione classi, selezionare il progetto a cui si desidera aggiungere il modulo e scegliere il pulsante destro del mouse.
+
+1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi classe**.
+
+     Se il **nuovo Form** comando non è disponibile, il progetto può essere basato sulla libreria ATL (Active Template). Per aggiungere un form a un progetto ATL, è necessario [specificare alcune impostazioni](../atl/reference/application-settings-atl-project-wizard.md) al momento della creazione del progetto.
+
+1. Dal **MFC** cartella, fare clic su **classe MFC**.
+
+1. La creazione guidata classe MFC, definire la nuova classe derivano da [CFormView](../mfc/reference/cformview-class.md).
+
+Visual C++ aggiunge il modulo all'applicazione, aprirlo all'interno dell'editor finestre, in modo da poter iniziare aggiunta di controlli e lavorare sul progetto complessivo.
+
+È possibile eseguire i passaggi aggiuntivi seguenti (non applicabili per le applicazioni basate su finestra di dialogo):
+
+1. Eseguire l'override di `OnUpdate` funzione membro.
+
+1. Implementare una funzione membro per spostare i dati dalla visualizzazione al documento.
+
+1. Creare un `OnPrint` funzione membro.
+
+## <a name="see-also"></a>Vedere anche
+
+[Visualizzazioni di form](../mfc/form-views-mfc.md)
 

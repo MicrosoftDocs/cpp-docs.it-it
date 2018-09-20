@@ -1,5 +1,5 @@
 ---
-title: Gestori per comandi e notifiche dei controlli | Documenti Microsoft
+title: Gestori per comandi e notifiche dei controlli | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: bda42393cd55b60ab787665b51957bb2f94c5df3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929131"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430079"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Gestori per comandi e notifiche dei controlli
-Non esistono gestori predefiniti per i comandi o i messaggi di notifica del controllo. Pertanto, i gestori per queste categorie di messaggi vengono associati solo per convenzione di denominazione. Quando si esegue il mapping del comando o della notifica di controllo a un gestore, la finestra Proprietà propone un nome basato sull'ID di comando o sul codice di notifica del controllo. È possibile accettare il nome proposto, modificarlo oppure sostituirlo.  
-  
- La convenzione suggerisce di denominare i gestori in entrambe le categorie per l'oggetto dell'interfaccia utente che rappresentano. Pertanto un gestore per il comando Taglia del menu Modifica potrebbe essere denominato  
-  
- [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]  
-  
- Poiché il comando Taglia viene comunemente implementato nelle applicazioni, il framework sono disponibili l'ID di comando per il comando Taglia come **ID_EDIT_CUT**. Per un elenco degli ID di comando predefiniti, vedere il file AFXRES.H. Per altre informazioni, vedere [comandi Standard](../mfc/standard-commands.md).  
-  
- Inoltre, convenzione suggerisce che un gestore per il **BN_CLICKED** messaggio di notifica mediante un pulsante con etichettato "Mio pulsante" potrebbe essere denominato  
-  
- [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
-  
- È possibile assegnare un ID di questo comando **IDC_MY_BUTTON** perché è equivalente a un oggetto dell'interfaccia utente specifici dell'applicazione.  
-  
- Entrambe le categorie di messaggi non accettano argomenti e non restituiscono valori.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Dichiarazioni di funzioni gestore messaggi](../mfc/declaring-message-handler-functions.md)
+
+Non esistono gestori predefiniti per i comandi o i messaggi di notifica del controllo. Pertanto, i gestori per queste categorie di messaggi vengono associati solo per convenzione di denominazione. Quando si esegue il mapping del comando o della notifica di controllo a un gestore, la finestra Proprietà propone un nome basato sull'ID di comando o sul codice di notifica del controllo. È possibile accettare il nome proposto, modificarlo oppure sostituirlo.
+
+La convenzione suggerisce di denominare i gestori in entrambe le categorie per l'oggetto dell'interfaccia utente che rappresentano. Pertanto un gestore per il comando Taglia del menu Modifica potrebbe essere denominato
+
+[!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
+
+Poiché il comando Taglia viene comunemente implementato nelle applicazioni, framework sono disponibili l'ID di comando per il comando Taglia come **ID_EDIT_CUT**. Per un elenco degli ID di comando predefiniti, vedere il file AFXRES.H. Per altre informazioni, vedere [comandi Standard](../mfc/standard-commands.md).
+
+Inoltre, convenzione suggerisce che un gestore per il **BN_CLICKED** messaggio di notifica da un pulsante con etichettato "Mio pulsante" potrebbe essere denominato
+
+[!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]
+
+È possibile assegnare un ID di questo comando **IDC_MY_BUTTON** perché è equivalente a un oggetto di interfaccia utente specifico dell'applicazione.
+
+Entrambe le categorie di messaggi non accettano argomenti e non restituiscono valori.
+
+## <a name="see-also"></a>Vedere anche
+
+[Dichiarazioni di funzioni gestore messaggi](../mfc/declaring-message-handler-functions.md)

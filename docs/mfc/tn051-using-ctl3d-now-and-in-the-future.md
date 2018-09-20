@@ -1,5 +1,5 @@
 ---
-title: 'TN051: Utilizzo di CTL3D attuale e futuro | Documenti Microsoft'
+title: 'TN051: Utilizzo di CTL3D e in futuro | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a19077bcba252d252418b6c3554c6172ed1aaa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfffe63e80160cab1c85ef19de321b361e1c26cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382272"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388642"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051: utilizzo di CTL3D attuale e futuro
-Questa nota tecnica, in cui viene spiegato in precedenza CTL3D e MFC, è ora obsoleta. L'effetto 3D per i controlli viene implementata automaticamente da MFC.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
+
+In questa nota tecnica, che in precedenza trattati CTL3D e MFC, è ora obsoleta. L'effetto 3D per i controlli viene implementata automaticamente da MFC.
+
+## <a name="see-also"></a>Vedere anche
+
+[Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
+[Note tecniche per categoria](../mfc/technical-notes-by-category.md)
 

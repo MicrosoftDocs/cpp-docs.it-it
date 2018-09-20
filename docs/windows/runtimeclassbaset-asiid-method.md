@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b50466fc2c357c1d57fca272ff343cd56f3689c5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7092153e49fdb40fc32fb1cbee5bc2376080ff4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604266"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391878"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>Metodo RuntimeClassBaseT::AsIID
 
@@ -41,16 +41,16 @@ __forceinline static HRESULT AsIID(
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Un tipo che implementa l'ID di interfaccia specificato dal parametro *riid*.
 
-*Implementa*  
+*Implementa*<br/>
 Una variabile del tipo specificato dal parametro di modello *T*.
 
-*riid*  
+*riid*<br/>
 L'ID di interfaccia da recuperare.
 
-*ppvObject*  
+*ppvObject*<br/>
 Se questa operazione ha esito positivo, un puntatore-a-a-puntatore all'interfaccia specificata dal parametro *riid*.
 
 ## <a name="return-value"></a>Valore restituito
@@ -69,5 +69,5 @@ Recupera un puntatore all'ID di interfaccia specificato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Struttura RuntimeClassBaseT](../windows/runtimeclassbaset-structure.md)  
+[Struttura RuntimeClassBaseT](../windows/runtimeclassbaset-structure.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

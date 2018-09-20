@@ -1,5 +1,5 @@
 ---
-title: Si esegue l'override del Routing dei comandi Standard | Documenti Microsoft
+title: Si esegue l'override del Routing dei comandi Standard | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58156f6d1c361c24dc6cf04a9208157d614f91a8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 33ee603f680919d69684ab94acfa0515d3ec6292
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929010"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439497"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Override del routing dei comandi standard
-In rari casi quando è necessario implementare alcune variazioni del routing framework standard, è possibile eseguirne l'override. L'idea consiste nel modificare il routing in una o più classi eseguendo l'override `OnCmdMsg` in tali classi. Scopo:  
-  
--   Nella classe che interrompe l'ordine per passare a un oggetto non predefinite.  
-  
--   Nel nuovo oggetto diversi da quelli predefiniti o in destinazioni comandi a sua volta può passare i comandi per.  
-  
- Se si inserisce un nuovo oggetto nel routing, la relativa classe deve essere una classe di destinazione di comando. Nelle versioni di override di `OnCmdMsg`, verificare di chiamare la versione che sta eseguendo l'override. Vedere la [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) funzioni membro delle classi `CCmdTarget` nel *riferimenti alla libreria MFC* e le versioni in classi come `CView` e `CDocument` nel codice sorgente fornito per gli esempi.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
+
+In rari casi quando è necessario implementare una variazione di routing framework standard, è possibile eseguirne l'override. L'idea consiste nel modificare il routing in una o più classi eseguendo l'override `OnCmdMsg` in tali classi. Scopo:
+
+- Nella classe che interrompe l'ordine per passare a un oggetto non predefinite.
+
+- Il nuovo oggetto non predefinite o destinazioni comandi potrebbe a sua volta passare comandi per.
+
+Se si inserisce un nuovo oggetto nel routing, la classe deve essere una classe di destinazione di comando. Nelle versioni di override di `OnCmdMsg`, accertarsi di chiamare la versione che si sta eseguendo l'override. Vedere le [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) funzione membro di classe `CCmdTarget` nel *riferimenti alla libreria MFC* e le versioni di queste classi come `CView` e `CDocument` nel codice sorgente fornito per gli esempi.
+
+## <a name="see-also"></a>Vedere anche
+
+[Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
 

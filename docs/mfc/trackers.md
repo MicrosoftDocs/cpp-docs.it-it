@@ -1,5 +1,5 @@
 ---
-title: Tracker | Documenti Microsoft
+title: Rilevazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f0a0cc52e3a5150702af4acd293def38df758fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 414a7c19292e154af0b6365b766d865dca0a7dd3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381537"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439872"
 ---
 # <a name="trackers"></a>Tracker
-Il [CRectTracker](../mfc/reference/crecttracker-class.md) classe fornisce un'interfaccia utente tra gli elementi rettangolari nell'applicazione e l'utente, offrendo una varietà di stili di visualizzazione. Gli stili comprendono i bordi di continuo, tratteggiati o tratteggiati; un motivo tratteggiato che copre l'elemento. e quadratini di ridimensionamento che può trovarsi all'esterno o all'interno di un bordo. Tracker vengono spesso utilizzati in combinazione con gli elementi OLE, ovvero oggetti derivati da `COleClientItem`. I rettangoli tracker forniscono indicazioni visive sullo stato corrente dell'elemento.  
-  
- L'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) illustrata un'interfaccia comune utilizzo Tracker ed elementi client OLE dal punto di vista di un'applicazione contenitore. Per una dimostrazione di stili e le capacità di un oggetto di registrazione, vedere l'esempio generale MFC [TRACKER](../visual-cpp-samples.md).  
-  
- Per ulteriori informazioni sull'implementazione di tracker nell'applicazione OLE, vedere [Tracker: implementazione di tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [OLE](../mfc/ole-in-mfc.md)   
- [Classe COleClientItem](../mfc/reference/coleclientitem-class.md)
+
+Il [CRectTracker](../mfc/reference/crecttracker-class.md) classe fornisce un'interfaccia utente tra gli elementi rettangolare nell'applicazione e l'utente fornendo un'ampia gamma di stili di visualizzazione. Questi stili di includono i bordi a tinta unita, tratteggiati o tratteggiati; un motivo a tratteggio che copre l'elemento; e quadratini di ridimensionamento che può essere archiviata all'esterno o all'interno di un bordo. Rilevazioni vengono spesso usati in combinazione con gli elementi OLE, vale a dire, gli oggetti derivati da `COleClientItem`. I rettangoli di tracker forniscono indicazioni visive sullo stato corrente dell'elemento.
+
+L'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) illustra un'interfaccia comune usando strumenti per l'individuazione e gli elementi OLE client dal punto di vista di un'applicazione contenitore. Per una dimostrazione degli stili diversi e dalla capacità di un oggetto di individuazione, vedere l'esempio generale di MFC [TRACKER](../visual-cpp-samples.md).
+
+Per altre informazioni sull'implementazione di tracker nell'applicazione OLE, vedere [Tracker: implementazione di tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Classe COleClientItem](../mfc/reference/coleclientitem-class.md)

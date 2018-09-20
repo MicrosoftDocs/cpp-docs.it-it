@@ -1,5 +1,5 @@
 ---
-title: Descrizioni comandi | Documenti Microsoft
+title: Descrizioni comandi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9eab52d09e9910cb4cce92d487c26fdb90d5647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f9169f0548bb58ffa063f3b3e947f16e877758e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380578"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439991"
 ---
 # <a name="tool-tips"></a>Descrizioni comandi
-Le procedure sono diverse per l'aggiunta di descrizioni comandi per controlli contenuti in finestre derivate dalla classe MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) e di windows non derivate `CFrameWnd`.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
- Descrizioni comandi per i controlli in una finestra che:  
-  
--   [Descrizioni comandi barra degli strumenti (derivate da CFrameWnd)](../mfc/toolbar-tool-tips.md)  
-  
--   [Descrizioni comandi in Windows non derivate da CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)
+
+Le procedure sono distinte per l'aggiunta di descrizioni comandi per i controlli contenuti in windows derivata dalla classe MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) e windows non derivate da `CFrameWnd`.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+Descrizioni comandi per i controlli in una finestra che è:
+
+- [Descrizioni comandi barra degli strumenti (derivate da CFrameWnd)](../mfc/toolbar-tool-tips.md)
+
+- [Descrizioni comandi in Windows non derivate da CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)

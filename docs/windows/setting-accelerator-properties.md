@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb08a9dce4c90c9efddd10683bc4b7c2ac0b08b9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 85d32a3dc01f5c0a496e6471472dab1cfafa0ca0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314417"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437469"
 ---
 # <a name="setting-accelerator-properties"></a>Impostazione delle proprietà dei tasti di scelta rapida
 
@@ -47,6 +47,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tasti di scelta rapida predefiniti](../windows/predefined-accelerator-keys.md)  
-[Editor di risorse](../windows/resource-editors.md)  
+[Tasti di scelta rapida predefiniti](../windows/predefined-accelerator-keys.md)<br/>
+[Editor di risorse](../windows/resource-editors.md)<br/>
 [Editor tasti di scelta rapida](../windows/accelerator-editor.md)

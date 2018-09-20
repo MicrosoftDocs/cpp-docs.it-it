@@ -1,5 +1,5 @@
 ---
-title: Pulizia di documenti e visualizzazioni | Documenti Microsoft
+title: Pulizia di documenti e visualizzazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dfe54c13db6f44bc70289380ae5f50d99c3722b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4325b0de10861fc76ee9ab816376f40ba0ba587
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341326"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437417"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Pulizia di documenti e visualizzazioni
-Quando viene chiuso un documento, il framework chiama innanzitutto il [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) funzione membro. Se è stata allocata memoria nell'heap durante l'operazione del documento, la chiamata a `DeleteContents` è il momento migliore per rilasciarla.  
-  
+
+Quando viene chiuso un documento, il framework chiama innanzitutto relativi [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) funzione membro. Se è stata allocata memoria nell'heap durante l'operazione del documento, la chiamata a `DeleteContents` è il momento migliore per rilasciarla.
+
 > [!NOTE]
->  Non è necessario rilasciare i dati del documento nel distruttore del documento. Nel caso di un'applicazione SDI, l'oggetto documento può essere riutilizzato.  
-  
- È possibile eseguire l'override del distruttore di una visualizzazione per liberare la memoria allocata nell'heap.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Inizializzazione e pulizia di documenti e visualizzazioni](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+>  Non è necessario rilasciare i dati del documento nel distruttore del documento. Nel caso di un'applicazione SDI, l'oggetto documento può essere riutilizzato.
+
+È possibile eseguire l'override del distruttore di una visualizzazione per liberare la memoria allocata nell'heap.
+
+## <a name="see-also"></a>Vedere anche
+
+[Inizializzazione e pulizia di documenti e visualizzazioni](../mfc/initializing-and-cleaning-up-documents-and-views.md)
 

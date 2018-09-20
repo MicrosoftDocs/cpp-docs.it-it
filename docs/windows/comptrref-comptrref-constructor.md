@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 606f9560f6d490e1d50d94dd12103713781c4f1b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 98de9ff79016ebc4ce231b92f5e93ed48e551ada
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603760"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445048"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>Costruttore ComPtrRef::ComPtrRef
 
@@ -38,7 +38,7 @@ ComPtrRef(
 
 ### <a name="parameters"></a>Parametri
 
-*ptr*  
+*ptr*<br/>
 Il valore sottostante di un'altra **ComPtrRef** oggetto.
 
 ## <a name="remarks"></a>Note
@@ -53,5 +53,5 @@ Inizializza una nuova istanza di **ComPtrRef** classe dal puntatore specificato 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe ComPtrRef](../windows/comptrref-class.md)  
+[Classe ComPtrRef](../windows/comptrref-class.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

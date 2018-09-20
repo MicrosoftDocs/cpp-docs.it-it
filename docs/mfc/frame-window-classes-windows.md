@@ -1,5 +1,5 @@
 ---
-title: Frame di classi di finestra (Windows) | Documenti Microsoft
+title: Frame finestra classi (Windows) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43d6df0231f9d8d1d64d01bd12fa7209eb7b537d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be63dd57900bbbe1691e132cd880d3da60caf4e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345065"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431944"
 ---
 # <a name="frame-window-classes-windows"></a>Classi di finestre cornice (Windows)
-Finestre cornice sono finestre cornice intorno a un'applicazione o una parte di un'applicazione. Finestre cornice contengono in genere altre finestre, ad esempio viste, barre degli strumenti e le barre di stato. In caso di `CMDIFrameWnd`, potrebbero contenere `CMDIChildWnd` oggetti indirettamente.  
-  
- [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- Classe di base per la finestra cornice principale di un'applicazione SDI. Anche la classe base per tutte le altre classi finestra cornice.  
-  
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- Classe di base per la finestra cornice principale di un'applicazione MDI.  
-  
- [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- La classe base per finestre cornice del documento di un'applicazione MDI.  
-  
- [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)  
- Una finestra cornice di mezza altezza visualizzata in genere intorno alle barre degli strumenti mobili.  
-  
- [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- Fornisce la finestra cornice per una visualizzazione durante la modifica sul posto di un documento server.  
-  
-## <a name="related-class"></a>Classe correlata  
- Classe `CMenu` fornisce un'interfaccia tramite cui si desidera accedere ai menu dell'applicazione. È utile per la modifica di menu in modo dinamico in fase di esecuzione; ad esempio, durante l'aggiunta o eliminazione di voci di menu in base al contesto. Anche se i menu vengono spesso usati con finestre cornice, possono anche essere utilizzati con le finestre di dialogo e altre finestre non figlio.  
-  
- [CMenu](../mfc/reference/cmenu-class.md)  
- Incapsula un `HMENU` handle alla barra dei menu e menu di scelta rapida dell'applicazione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../mfc/class-library-overview.md)
+
+Finestre cornice sono finestre cornice intorno a un'applicazione o una parte di un'applicazione. Finestre cornice in genere contengono altre finestre, ad esempio viste, le barre degli strumenti e le barre di stato. Nel caso del `CMDIFrameWnd`, possono contenere `CMDIChildWnd` oggetti indirettamente.
+
+[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
+Classe di base per la finestra cornice principale di un'applicazione SDI. Anche la classe base per tutte le altre classi finestra cornice.
+
+[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
+Classe di base per la finestra cornice principale di un'applicazione MDI.
+
+[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
+La classe base per finestre cornice del documento di un'applicazione MDI.
+
+[CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)<br/>
+Una finestra cornice di mezza altezza generalmente visualizzata in barre degli strumenti mobili.
+
+[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
+Fornisce la finestra cornice per una visualizzazione quando viene modificato un documento del server sul posto.
+
+## <a name="related-class"></a>Classe correlata
+
+Classe `CMenu` fornisce un'interfaccia tramite cui si desidera accedere ai menu dell'applicazione. È utile per la gestione dei menu in modo dinamico in fase di esecuzione; ad esempio, durante l'aggiunta o eliminazione di voci di menu in base al contesto. Anche se i menu vengono spesso usati con finestre cornice, possono anche essere utilizzati con le finestre di dialogo e altre finestre non figlio.
+
+[CMenu](../mfc/reference/cmenu-class.md)<br/>
+Incapsula un `HMENU` handle alla barra dei menu e menu di scelta rapida dell'applicazione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../mfc/class-library-overview.md)
 

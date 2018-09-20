@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cb9a554d9141223be7a5f6bc741c86b8f03511e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216537"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428544"
 ---
 # <a name="241-for-construct"></a>2.4.1 Costrutto for
 
@@ -115,28 +115,28 @@ Il **ordinati** clausola deve essere presente quando **ordinati** direttive asso
 
 Restrizioni per il **per** direttiva sono i seguenti:
 
--   Il **per** ciclo deve essere un blocco strutturato e, inoltre, l'esecuzione deve non terminare con un **interruzione** istruzione.
+- Il **per** ciclo deve essere un blocco strutturato e, inoltre, l'esecuzione deve non terminare con un **interruzione** istruzione.
 
--   I valori del ciclo controllano le espressioni del **per** ciclo associata a un **per** direttiva deve essere uguale per tutti i thread del team.
+- I valori del ciclo controllano le espressioni del **per** ciclo associata a un **per** direttiva deve essere uguale per tutti i thread del team.
 
--   Il **per** variabile di iterazione del ciclo deve presentare un tipo intero con segno.
+- Il **per** variabile di iterazione del ciclo deve presentare un tipo intero con segno.
 
--   Una sola **pianificazione** clausola può apparire in un **per** direttiva.
+- Una sola **pianificazione** clausola può apparire in un **per** direttiva.
 
--   Una sola **ordinati** clausola può apparire in un **per** direttiva.
+- Una sola **ordinati** clausola può apparire in un **per** direttiva.
 
--   Una sola **nowait** clausola può apparire in un **per** direttiva.
+- Una sola **nowait** clausola può apparire in un **per** direttiva.
 
--   È se non specificato o frequenza eventuali effetti all'interno di *chunk_size*, *lb*, *b*, oppure *incr* espressioni si verificano.
+- È se non specificato o frequenza eventuali effetti all'interno di *chunk_size*, *lb*, *b*, oppure *incr* espressioni si verificano.
 
--   Il valore della *chunk_size* espressione deve essere uguale per tutti i thread del team.
+- Il valore della *chunk_size* espressione deve essere uguale per tutti i thread del team.
 
 ## <a name="cross-references"></a>Tra i riferimenti:
 
--   **privato**, **firstprivate**, **lastprivate**, e **riduzione** clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) a pagina 25.
+- **privato**, **firstprivate**, **lastprivate**, e **riduzione** clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) a pagina 25.
 
--   **OMP_SCHEDULE** vedere variabile di ambiente [sezione 4.1](../../parallel/openmp/4-1-omp-schedule.md) nella pagina 48.
+- **OMP_SCHEDULE** vedere variabile di ambiente [sezione 4.1](../../parallel/openmp/4-1-omp-schedule.md) nella pagina 48.
 
--   **ordinati** costruire, vedere [sezione 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) nella pagina 22.
+- **ordinati** costruire, vedere [sezione 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) nella pagina 22.
 
--   [Appendice D](../../parallel/openmp/d-using-the-schedule-clause.md), pagina 93, fornisce ulteriori informazioni sull'utilizzo della clausola di pianificazione.
+- [Appendice D](../../parallel/openmp/d-using-the-schedule-clause.md), pagina 93, fornisce ulteriori informazioni sull'utilizzo della clausola di pianificazione.

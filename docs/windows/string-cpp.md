@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 86a6437e7a30fb92d2af66c3d657150549273cd3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 405042e14835c3224389540696b9714873001912
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208449"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428083"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -70,6 +70,6 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di matrice](../windows/array-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di matrice](../windows/array-attributes.md)<br/>
 [export](../windows/export.md)  

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e8a1dcd96ab42f48c91bbed2057475fa412c8925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601457"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432804"
 ---
 # <a name="ftmbase-class"></a>FtmBase (classe)
 
@@ -106,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Parametri
 
-*GIT*  
+*GIT*<br/>
 Quando questa operazione viene completata, un puntatore a una tabella di interfaccia globale.
 
 ### <a name="return-value"></a>Valore restituito
@@ -129,7 +129,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>Parametri
 
-*dwReserved*  
+*dwReserved*<br/>
 Riservato per utilizzi futuri; deve essere zero.
 
 ### <a name="return-value"></a>Valore restituito
@@ -161,26 +161,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>Parametri
 
-*riid*  
+*riid*<br/>
 Riferimento all'identificatore dell'interfaccia da sottoporre a marshalling.
 
-*PV*  
+*PV*<br/>
 Puntatore a interfaccia da sottoporre a marshalling; può essere NULL.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contesto di destinazione in cui l'interfaccia specificata deve essere sottoposta a unmarshalling.
 
 Specificare uno o più valori di enumerazione MSHCTX.
 
 Attualmente, l'unmarshalling può verificarsi in un altro apartment del processo corrente (MSHCTX_INPROC) o in un altro processo nello stesso computer come processo corrente (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Riservato per utilizzi futuri; deve essere NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Flag che indica se i dati da sottoporre a marshalling deve essere trasmesso al processo client, ovvero il caso tipico, o scritti in una tabella globale, in cui può essere recuperato da più client. Specificare uno o più valori di enumerazione MSHLFLAGS.
 
-*pSize*  
+*pSize*<br/>
 Quando questa operazione viene completata, puntatore al limite massimo sulla quantità di dati da scrivere nel flusso di marshalling.
 
 ### <a name="return-value"></a>Valore restituito
@@ -204,23 +204,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>Parametri
 
-*riid*  
+*riid*<br/>
 Riferimento all'identificatore dell'interfaccia da sottoporre a marshalling.
 
-*PV*  
+*PV*<br/>
 Puntatore all'interfaccia da sottoporre a marshalling; può essere NULL se il chiamante non ha un puntatore all'interfaccia desiderata.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contesto di destinazione in cui l'interfaccia specificata deve essere sottoposta a unmarshalling.
 
 Specificare uno o più valori di enumerazione MSHCTX.
 
 L'unmarshaling può verificarsi in un altro apartment del processo corrente (MSHCTX_INPROC) o in un altro processo nello stesso computer come processo corrente (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Riservato per utilizzi futuri; deve essere NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Quando questa operazione viene completata, puntatore al CLSID da utilizzare per creare un proxy nel processo client.
 
 *pCid*
@@ -246,26 +246,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>Parametri
 
-*pStm*  
+*pStm*<br/>
 Puntatore al flusso da utilizzare durante il marshalling.
 
-*riid*  
+*riid*<br/>
 Riferimento all'identificatore dell'interfaccia da sottoporre a marshalling. Questa interfaccia deve derivare dal `IUnknown` interfaccia.
 
-*PV*  
+*PV*<br/>
 Puntatore al puntatore all'interfaccia da sottoporre a marshalling; può essere NULL se il chiamante non ha un puntatore all'interfaccia desiderata.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contesto di destinazione in cui l'interfaccia specificata deve essere sottoposta a unmarshalling.
 
 Specificare uno o più valori di enumerazione MSHCTX.
 
 L'unmarshaling può verificarsi in un altro apartment del processo corrente (MSHCTX_INPROC) o in un altro processo nello stesso computer come processo corrente (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Riservato per utilizzi futuri; deve essere zero.
 
-*mshlflags*  
+*mshlflags*<br/>
 Specifica se i dati da sottoporre a marshalling deve essere trasmesso al processo client, ovvero il caso tipico, o scritti in una tabella globale, in cui può essere recuperato da più client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -298,7 +298,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>Parametri
 
-*pStm*  
+*pStm*<br/>
 Puntatore a un flusso che contiene il pacchetto di dati da distruggere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -319,13 +319,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>Parametri
 
-*pStm*  
+*pStm*<br/>
 Puntatore al flusso da cui il puntatore di interfaccia deve essere sottoposta a unmarshalling.
 
-*riid*  
+*riid*<br/>
 Riferimento all'identificatore dell'interfaccia di essere sottoposta a unmarshalling.
 
-*ppv*  
+*ppv*<br/>
 Al termine di questa operazione, l'indirizzo di una variabile puntatore che riceve il puntatore a interfaccia richiesto *riid*. Se questa operazione ha esito positivo, **ppv* contiene il puntatore all'interfaccia richiesta dell'interfaccia di essere sottoposta a unmarshalling.
 
 ### <a name="return-value"></a>Valore restituito

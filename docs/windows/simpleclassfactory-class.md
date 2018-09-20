@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 4a3e262567927b818072c1e05acd18aa64cbaa6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691445"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446514"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (classe)
 
@@ -39,7 +39,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>Parametri
 
-*base*  
+*base*<br/>
 Classe di base.
 
 ## <a name="remarks"></a>Note
@@ -102,15 +102,15 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>Parametri
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Deve essere `nullptr`; in caso contrario, il valore restituito è CLASS_E_NOAGGREGATION.
 
 SimpleClassFactory non supporta l'aggregazione. Se erano supportate aggregazione e l'oggetto da creare faceva parte di un'aggregazione *pUnkOuter* sarebbe un puntatore all'interfaccia di controllo `IUnknown` interfaccia dell'aggregazione.
 
-*riid*  
+*riid*<br/>
 ID di interfaccia dell'oggetto da creare.
 
-*ppvObject*  
+*ppvObject*<br/>
 Quando questa operazione viene completata, puntatore a un'istanza dell'oggetto specificato per il *riid* parametro.
 
 ### <a name="return-value"></a>Valore restituito

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdea558f1c9a56e68a8e2e61703b92ea569a0629
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d34bdfd2d80690efae8efbc1f95ba0c50a530af3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709891"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425784"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (specificare il file winmd)
 
@@ -45,6 +45,6 @@ Utilizzare il valore specificato in `filename` per eseguire l'override del nome 
 
 ## <a name="see-also"></a>Vedere anche
 
-[/WINMD (genera metadati Windows)](../../build/reference/winmd-generate-windows-metadata.md)
-[impostando le opzioni del Linker](../../build/reference/setting-linker-options.md)<br/>
+[/WINMD (genera metadati di Windows)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
 [Opzioni del linker](../../build/reference/linker-options.md)

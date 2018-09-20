@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74fb35ec25bed808e2165498c00b65723aba5bac
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 474602ce51ff9eb84f54d7580104f641d9b5b2a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702442"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396194"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Ricompilazione minima IDE)
 
@@ -33,6 +33,6 @@ Se non si abilita **/Gm** nell'ambiente di sviluppo **/FD** verrà utilizzato. *
 
 ## <a name="see-also"></a>Vedere anche
 
-[File di output (/ F) le opzioni](../../build/reference/output-file-f-options.md)
-[opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Opzioni del file di output (/F)](../../build/reference/output-file-f-options.md)<br/>
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

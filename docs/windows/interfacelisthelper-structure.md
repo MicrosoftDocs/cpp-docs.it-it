@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87516cf45a39602bea462b8e94f17d3ef64ad0eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600528"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431619"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper (struttura)
 
@@ -53,34 +53,34 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ### <a name="parameters"></a>Parametri
 
-*T0*  
+*T0*<br/>
 Parametro di modello 0, che è obbligatorio.
 
-*T1*  
+*T1*<br/>
 Parametro di modello 1, che per impostazione predefinita non è specificato.
 
-*T2*  
+*T2*<br/>
 Parametro di modello 2, che per impostazione predefinita non è specificato. Il terzo parametro di modello.
 
-*T3*  
+*T3*<br/>
 Parametro di modello 3, che per impostazione predefinita non è specificato.
 
-*T4*  
+*T4*<br/>
 Parametro di modello 4, che per impostazione predefinita non è specificato.
 
-*T5*  
+*T5*<br/>
 Parametro di modello 5, che per impostazione predefinita non è specificato.
 
-*T6*  
+*T6*<br/>
 Parametro di modello 6, che per impostazione predefinita non è specificato.
 
-*T7*  
+*T7*<br/>
 Parametro di modello 7, che per impostazione predefinita non è specificato.
 
-*T8*  
+*T8*<br/>
 Parametro di modello 8, che per impostazione predefinita non è specificato.
 
-*T9*  
+*T9*<br/>
 Parametro di modello 9, che per impostazione predefinita non è specificato.
 
 ## <a name="remarks"></a>Note

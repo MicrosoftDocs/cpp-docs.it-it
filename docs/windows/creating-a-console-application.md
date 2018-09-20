@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6a05604cfa7ce3571d2bb7d5b421d0568ea84a0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4792464c07872d86c667fbc045610507a18c71c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690281"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441161"
 ---
 # <a name="creating-a-console-application"></a>Creazione di un'applicazione console
 
@@ -43,6 +43,6 @@ Il modo più semplice per creare un'applicazione console Win32 è usare il **Cre
 
 ## <a name="see-also"></a>Vedere anche
 
-[Progetti di console](/visualstudio/debugger/debugging-preparation-console-projects)  
-[Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md)  
+[Progetti di console](/visualstudio/debugger/debugging-preparation-console-projects)<br/>
+[Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)  

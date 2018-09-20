@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f6851813172c39cd3c8c5dfe19b4d12ba81d090
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a387b051bbecedd1c6c4dba8fc3881a3c1f3a4b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539797"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446816"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 Specifica il set di caratteri di esecuzione utilizzato per i valori letterali stringa e carattere. Questa direttiva non è necessaria per i valori letterali contrassegnati con il prefisso u8.  
@@ -50,6 +50,6 @@ Per impostazione predefinita, Visual Studio Usa la tabella codici corrente come 
   
 ## <a name="see-also"></a>Vedere anche  
  
-[Direttive pragma e parola chiave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
-[/Execution-CharSet (set esecuzione Set di caratteri)](../build/reference/execution-charset-set-execution-character-set.md)   
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[/Execution-CharSet (set esecuzione Set di caratteri)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
 [/utf/8 (imposta i set di caratteri eseguibili e di origine su UTF/8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

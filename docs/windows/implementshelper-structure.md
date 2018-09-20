@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcacfb8d5cd6d15cf9ca5f9f5bb8e937119dc863
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4ff40e03bf464d4c6f434b491c8b48d2b797d72b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691574"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440537"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper (struttura)
 
@@ -41,13 +41,13 @@ friend struct Details::ImplementsHelper;
 
 ### <a name="parameters"></a>Parametri
 
-*RuntimeClassFlagsT*  
+*RuntimeClassFlagsT*<br/>
 Un campo di flag che specifica uno o più [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeratori.
 
-*ILst*  
+*ILst*<br/>
 Un elenco ID di interfaccia.
 
-*IsDelegateToClass*  
+*IsDelegateToClass*<br/>
 Specificare **true** se l'istanza corrente di `Implements` è una classe di base del primo ID di interfaccia in *ILst*; in caso contrario, **false**.
 
 ## <a name="remarks"></a>Note

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725036"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438574"
 ---
 # <a name="errlook-reference"></a>Riferimento a ERRLOOK
 
@@ -30,14 +30,19 @@ I tasti di scelta per la copia (CTRL + C), le operazioni Taglia (CTRL + X) e Inc
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Valore di controllo Edit](../../build/reference/value-edit-control.md) descrive il controllo Value Edit nel ERRLOOK.
+[Controllo Value Edit](../../build/reference/value-edit-control.md)<br/>
+Descrive il controllo Value Edit nel ERRLOOK.
 
-[Controllo Modifica messaggio di errore](../../build/reference/error-message-edit-control.md) descrive il controllo Modifica messaggio di errore in ERRLOOK.
+[Controllo modifica messaggio di errore](../../build/reference/error-message-edit-control.md)<br/>
+Descrive il controllo Modifica messaggio di errore in ERRLOOK.
 
-[Moduli (pulsante)](../../build/reference/modules-button.md) descrive i moduli (pulsante) in ERRLOOK.
+[Pulsante Moduli](../../build/reference/modules-button.md)<br/>
+Descrive i moduli (pulsante) in ERRLOOK.
 
-[Pulsante Cerca](../../build/reference/look-up-button.md) descrive il pulsante Cerca in a ERRLOOK.
+[Pulsante Cerca](../../build/reference/look-up-button.md)<br/>
+Descrive il pulsante Cerca in a ERRLOOK.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[C/C++ Build Tools](../../build/reference/c-cpp-build-tools.md) vengono forniti collegamenti ad argomenti che illustrano C/C++ build tools in Visual C++ disponibili.
+[Strumenti per la compilazione in C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+Offre gli strumenti forniti in Visual C++ per creare i collegamenti ad argomenti che illustrano C/C++.

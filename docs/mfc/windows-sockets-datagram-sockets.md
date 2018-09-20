@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Socket di datagramma | Documenti Microsoft'
+title: 'Windows Sockets: Socket di datagramma | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30ad7cab43301ae2cb7ebcb1fb4dfa850090955d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a63caa786ce5198fb902b8d48101507fb2b4113
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383942"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444216"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: socket di datagramma
-Questo articolo vengono descritti i socket di datagramma, uno dei due tipi di Socket Windows disponibili. (L'altro tipo è il [socket di flusso](../mfc/windows-sockets-stream-sockets.md).)  
-  
- Socket di datagramma supportano un flusso di dati bidirezionale che potrebbe non essere in sequenza o la non duplicazione. I datagrammi inoltre non sono necessariamente essere affidabili. è possibile non giunge a. Dati datagramma possono arrivare senza ordine e duplicati, ma vengono mantenuti i limiti di record nei dati, fino a quando i record sono inferiori al limite di dimensioni interne del ricevitore. Si è responsabili della gestione di sequenziazione e affidabilità. (L'affidabilità tende a essere correttamente su reti LAN LAN ma meno così via WAN reti WAN, ad esempio Internet).  
-  
- I datagrammi sono "senza connessione", vale a dire, viene stabilita alcuna connessione esplicita; si invia un messaggio di datagramma a un socket specificato ed è possibile ricevere messaggi da un socket specificato.  
-  
- Un esempio di un socket di datagramma è un'applicazione che mantiene gli orologi di sistema nella rete sincronizzata. Mostra una funzionalità aggiuntiva dei socket di datagramma almeno alcune impostazioni: trasmissione di messaggi a un numero elevato di indirizzi di rete.  
-  
- Socket di datagramma sono migliori di socket di flusso per orientato ai record di dati. Per ulteriori informazioni sui socket di datagramma, vedere la specifica Windows Sockets disponibile in Windows SDK.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Windows Sockets di MFC](../mfc/windows-sockets-in-mfc.md)   
- [Windows Sockets: sfondo](../mfc/windows-sockets-background.md)
+
+Questo articolo descrive i socket di datagramma, uno dei due tipi di Socket Windows disponibili. (L'altro tipo è il [socket di flusso](../mfc/windows-sockets-stream-sockets.md).)
+
+I socket di datagramma supportano un flusso di dati bidirezionale che non è garantito a essere ordinati in sequenza o la non duplicazione. Datagrammi inoltre non sono necessariamente essere affidabili. è possibile non giunge a destinazione. I dati del datagramma potrebbero arrivare non in ordine e duplicati, ma vengono mantenuti i limiti di record nei dati, fino a quando i record sono inferiori a limite di dimensioni interne del ricevitore. Si è responsabili della gestione di sequenziazione e l'affidabilità. (Affidabilità tende a essere ottimale in reti LAN [LAN] ma meno così via WAN delle reti WAN, ad esempio Internet).
+
+I datagrammi sono "senza connessione", vale a dire, non viene stabilita alcuna connessione esplicita; si invia un messaggio del datagramma a un socket specificato e si può ricevere messaggi da un socket specificato.
+
+Un esempio di un socket di datagramma è un'applicazione che mantiene gli orologi di sistema sulla rete sincronizzata. L'esempio illustra una funzionalità aggiuntiva del socket di datagramma in almeno alcune impostazioni: trasmissione di messaggi a un numero elevato di indirizzi della rete.
+
+I socket di datagramma sono migliori di socket di flusso per orientato ai record dei dati. Per altre informazioni sui socket di datagramma, vedere la specifica di Windows Sockets, disponibile nel SDK Windows.
+
+## <a name="see-also"></a>Vedere anche
+
+[Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[Windows Sockets: sfondo](../mfc/windows-sockets-background.md)
 

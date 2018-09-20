@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535353"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434726"
 ---
 # <a name="implements-structure"></a>Implementa la struttura
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>Parametri
 
-*I0*  
+*I0*<br/>
 L'ID di interfaccia di zero. (Obbligatorio)
 
-*I1*  
+*I1*<br/>
 Il primo ID di interfaccia (facoltativo)
 
-*I2*  
+*I2*<br/>
 Il secondo ID di interfaccia (facoltativo)
 
-*I3*  
+*I3*<br/>
 Il terzo ID di interfaccia (facoltativo)
 
-*I4*  
+*I4*<br/>
 Il quarto ID di interfaccia (facoltativo)
 
-*I5*  
+*I5*<br/>
 Il quinto ID di interfaccia (facoltativo)
 
-*I6*  
+*I6*<br/>
 Il sesto ID di interfaccia (facoltativo)
 
-*I7*  
+*I7*<br/>
 Il settimo ID di interfaccia (facoltativo)
 
-*I8*  
+*I8*<br/>
 L'ottavo ID di interfaccia (facoltativo)
 
-*I9*  
+*I9*<br/>
 Il nono ID di interfaccia (facoltativo)
 
-*flags*  
+*flags*<br/>
 Flag di configurazione per la classe. Uno o più [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumerazioni che vengono specificate in un [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) struttura.
 
 ## <a name="remarks"></a>Note
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parametri
 
-*riid*  
+*riid*<br/>
 Un riferimento all'ID di interfaccia.
 
-*ppv*  
+*ppv*<br/>
 Se ha esito positivo, un puntatore all'interfaccia specificata da *riid*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametri
 
-*index*  
+*index*<br/>
 Indice in base zero che indica l'elemento di matrice iniziale per questa operazione. Al termine, questa operazione *indice* viene incrementato di 1.
 
-*IID*  
+*IID*<br/>
 Matrice di tipo IID.
 
 ### <a name="remarks"></a>Note

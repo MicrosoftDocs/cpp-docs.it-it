@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di elenchi immagini con controlli Header | Documenti Microsoft
+title: Utilizzo di elenchi immagini con controlli Header | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da3737b54c53903f8fc8ff30cccba6165cbde45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 477ed175e6f8e81acdae5c873d1436e6c3dbbd60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382779"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423559"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Utilizzo di elenchi di immagini con controlli Header
-Gli elementi di intestazione hanno la possibilità di visualizzare un'immagine all'interno di un elemento dell'intestazione. Questa immagine, archiviata in un elenco di immagini associato, è 16 x 16 pixel e ha le stesse caratteristiche di immagini icona utilizzate in un controllo visualizzazione elenco. Per implementare correttamente questo comportamento, è necessario prima creare e inizializzare l'elenco di immagini, associare l'elenco di controllo header e quindi modificare gli attributi dell'elemento dell'intestazione che consente di visualizzare l'immagine.  
-  
- La procedura seguente illustra i dettagli, mediante un puntatore a un controllo header (`m_pHdrCtrl`) e un puntatore a un elenco di immagini (`m_pHdrImages`).  
-  
-### <a name="to-display-an-image-in-a-header-item"></a>Per visualizzare un'immagine in un elemento di intestazione  
-  
-1.  Creare un nuovo elenco immagini (o utilizzare un oggetto elenco immagini esistente) utilizzando il [CImageList](../mfc/reference/cimagelist-class.md) costruttore, memorizzando il puntatore risultante.  
-  
-2.  Inizializzare il nuovo oggetto elenco immagini chiamando [CImageList:: Create](../mfc/reference/cimagelist-class.md#create). Il codice seguente è un esempio di questa chiamata.  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]  
-  
-3.  Aggiungere le immagini per ogni elemento di intestazione. Il codice seguente aggiunge due immagini predefinite.  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]  
-  
-4.  Associare l'elenco di immagini con il controllo di intestazione con una chiamata a [CHeaderCtrl:: SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).  
-  
-5.  Modificare l'elemento di intestazione per visualizzare un'immagine dall'elenco di immagini associato. Nell'esempio seguente assegna la prima immagine, di `m_phdrImages`, per il primo elemento di intestazione, `m_pHdrCtrl`.  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]  
-  
- Per informazioni dettagliate sui valori del parametro utilizzato, consultare il pertinenti [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).  
-  
+
+Gli elementi di intestazione hanno la possibilità di visualizzare un'immagine all'interno di un elemento di intestazione. Questa immagine, archiviata in un elenco di immagini associato, è 16 x 16 pixel e ha le stesse caratteristiche come le immagini icona utilizzate in un controllo visualizzazione elenco. Per implementare correttamente questo comportamento, è necessario innanzitutto creare e inizializzare l'elenco di immagini associare l'elenco di controllo header e quindi modificare gli attributi dell'elemento dell'intestazione che visualizzerà l'immagine.
+
+La procedura seguente illustra nel dettaglio, utilizzando un puntatore a un controllo header (`m_pHdrCtrl`) e un puntatore a un elenco di immagini (`m_pHdrImages`).
+
+### <a name="to-display-an-image-in-a-header-item"></a>Per visualizzare un'immagine in un elemento di intestazione
+
+1. Creare un nuovo elenco di immagini (o usare un oggetto elenco immagini) usando il [CImageList](../mfc/reference/cimagelist-class.md) costruttore, memorizzando il puntatore risultante.
+
+1. Inizializzare il nuovo oggetto elenco immagini tramite una chiamata [CImageList:: Create](../mfc/reference/cimagelist-class.md#create). Il codice seguente è un esempio di questa chiamata.
+
+     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
+
+1. Aggiungere le immagini per ogni elemento dell'intestazione. Il codice seguente aggiunge due immagini predefinite.
+
+     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
+
+1. Associare l'elenco di immagini con il controllo di intestazione con una chiamata a [CHeaderCtrl:: SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).
+
+1. Modificare l'elemento dell'intestazione per visualizzare un'immagine dall'elenco di immagini associato. L'esempio seguente assegna la prima immagine, dalla `m_phdrImages`, al primo elemento di intestazione, `m_pHdrCtrl`.
+
+     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
+
+Per informazioni dettagliate sui valori di parametro utilizzato, consultare il pertinenti [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).
+
 > [!NOTE]
->  È possibile disporre di più controlli utilizzando lo stesso elenco immagini. Ad esempio, in un controllo di visualizzazione elenco standard, potrebbe esserci un elenco di immagini (immagini 16x16 pixel) utilizzato da entrambi la visualizzazione dell'icona piccola di un controllo visualizzazione elenco e gli elementi dell'intestazione del controllo di visualizzazione elenco.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso di CHeaderCtrl](../mfc/using-cheaderctrl.md)
+>  È possibile avere più controlli usando lo stesso elenco di immagini. Ad esempio, in un controllo visualizzazione elenco standard, potrebbe esserci un elenco di immagini (delle immagini di 16 x 16 pixel) usato da entrambi la visualizzazione dell'icona piccola di un controllo visualizzazione elenco e gli elementi dell'intestazione del controllo visualizzazione elenco.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

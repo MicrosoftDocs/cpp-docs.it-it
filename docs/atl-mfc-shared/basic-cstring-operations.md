@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156191d09c88d8f19b3fe73108bcbca390b23f6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab2c857451e399e56e69d79240d4ace023a8b301
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760203"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424081"
 ---
 # <a name="basic-cstring-operations"></a>Operazioni di base con CString
 
@@ -112,8 +112,8 @@ Senza il cast `cs` viene considerato come un `void*` e `wcout` stampa l'indirizz
 
 ## <a name="see-also"></a>Vedere anche
 
-[Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md)   
-[Specializzazione modello](../cpp/template-specialization-cpp.md)   
+[Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Specializzazione modello](../cpp/template-specialization-cpp.md)<br/>
 [Procedura: Convertire vari tipi di stringhe](../text/how-to-convert-between-various-string-types.md)
 

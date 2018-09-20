@@ -1,5 +1,5 @@
 ---
-title: "Procedura: caricare una risorsa Ribbon da un'applicazione MFC | Documenti Microsoft"
+title: "Procedura: caricare una risorsa Ribbon da un'applicazione MFC | Microsoft Docs"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,38 +14,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b014e1725ae6c5043c051242a74e29338c3ef2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1643989a96a9003847fb53de624bff12cd51cd88
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344191"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434291"
 ---
 # <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Procedura: caricare una risorsa Ribbon da un'applicazione MFC
-Per utilizzare la risorsa Ribbon nell'applicazione, modificare l'applicazione per caricare la risorsa Ribbon.  
-  
-### <a name="to-load-a-ribbon-resource"></a>Per caricare una risorsa Ribbon  
-  
-1.  Dichiarare l'oggetto `Ribbon Control` nella classe `CMainFrame`.  
-  
- ```  
-    CMFCRibbonBar m_wndRibbonBar;   
- ```  
-  
-2.  In `CMainFrame::OnCreate` creare e inizializzare il controllo Barra multifunzione.  
-  
- ```  
-    if (!m_wndRibbonBar.Create (this))  
- {  
-    return -1;  
- }  
- 
-    if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))  
- {  
-    return -1;  
- }  
- ```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
+
+Per utilizzare la risorsa Ribbon nell'applicazione, modificare l'applicazione per caricare la risorsa Ribbon.
+
+### <a name="to-load-a-ribbon-resource"></a>Per caricare una risorsa Ribbon
+
+1. Dichiarare l'oggetto `Ribbon Control` nella classe `CMainFrame`.
+
+```
+    CMFCRibbonBar m_wndRibbonBar;
+```
+
+1. In `CMainFrame::OnCreate` creare e inizializzare il controllo Barra multifunzione.
+
+```
+    if (!m_wndRibbonBar.Create (this))
+{
+    return -1;
+}
+
+    if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))
+{
+    return -1;
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
 

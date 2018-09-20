@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f6b3135171e61e928984c0eeb91aff0717a4727
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 62667d20e40e04f9202fcb5dfa2f1688b98a3c2d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599249"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429039"
 ---
 # <a name="srwlocklockshared-method"></a>Metodo SRWLock::LockShared
 
@@ -40,7 +40,7 @@ static SyncLockShared LockShared(
 
 ### <a name="parameters"></a>Parametri
 
-*lock*  
+*lock*<br/>
 Puntatore a un **SRWLock** oggetto.
 
 ## <a name="return-value"></a>Valore restituito

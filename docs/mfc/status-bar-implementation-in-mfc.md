@@ -1,5 +1,5 @@
 ---
-title: Implementazione della barra di stato in MFC | Documenti Microsoft
+title: Implementazione della barra di stato in MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,39 +26,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e593227daabb2d2c25d593cfb58ef23ba7855be7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950448"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436715"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementazione della barra di stato in MFC
-Un [CStatusBar](../mfc/reference/cstatusbar-class.md) oggetto è una barra di controllo con una riga di riquadri di output di testo. I riquadri di output vengono comunemente utilizzati come righe di messaggio e come indicatori di stato. Ad esempio le righe di messaggio della Guida di menu che illustrano brevemente il comando di menu selezionata e gli indicatori che indicano lo stato del BLOCC SCORR, BLOC NUM e altri tasti.  
-  
- A partire dalla versione 4.0 di MFC, le barre di stato vengono implementate utilizzando classe [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), che incapsula un controllo comune barra di stato. Per garantire la compatibilità con le versioni precedenti, MFC mantiene il precedente implementazione di barra di stato nella classe `COldStatusBar`. Descrive la documentazione per le versioni precedenti di MFC `COldStatusBar` sotto `CStatusBar`.  
-  
- [CStatusBar:: GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), una funzione membro nuovo alla versione 4.0 di MFC, consente di sfruttare i vantaggi del supporto di controlli comuni di Windows per lo stato di personalizzazione e funzionalità aggiuntive delle barre. `CStatusBar` funzioni membro consentono la maggior parte delle funzionalità dei controlli comuni di Windows; Tuttavia, quando si chiama `GetStatusBarCtrl`, è possibile assegnare le barre di stato persino superiore delle caratteristiche di una barra di stato. Quando si chiama `GetStatusBarCtrl`, verrà restituito un riferimento a un `CStatusBarCtrl` oggetto. Per modificare il controllo barra di stato, è possibile utilizzare tale riferimento.  
-  
- Nella figura seguente mostra una barra di stato che consente di visualizzare gli indicatori di diversi.  
-  
- ![Barra di stato](../mfc/media/vc37dy1.gif "vc37dy1")  
-Barra di stato  
-  
- Ad esempio la barra degli strumenti, l'oggetto della barra di stato è incorporato nella relativa finestra cornice padre e viene creato automaticamente quando la finestra cornice viene costruita. La barra di stato, ad esempio tutte le barre di controllo, viene eliminata automaticamente anche quando il frame padre viene eliminato definitivamente.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Aggiornamento del testo di un riquadro barra di stato](../mfc/updating-the-text-of-a-status-bar-pane.md)  
-  
--   Classi MFC [CStatusBar](../mfc/reference/cstatusbar-class.md) e [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
-  
--   [Barre di controllo](../mfc/control-bars.md)  
-  
--   [Barra della finestra](../mfc/dialog-bars.md)  
-  
--   [Barre degli strumenti (implementazione della barra degli strumenti MFC)](../mfc/mfc-toolbar-implementation.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Barre di stato](../mfc/status-bars.md)
+
+Oggetto [CStatusBar](../mfc/reference/cstatusbar-class.md) oggetto è una barra di controllo con una riga di riquadri di output di testo. I riquadri di output vengono comunemente utilizzati come righe di messaggio e come indicatori di stato. Ad esempio le righe di messaggio della Guida dal menu che illustrano brevemente il comando di menu selezionata e gli indicatori che mostrano lo stato del tasto BLOC SCORR, BLOC NUM e altri codici.
+
+A partire dalla versione 4.0 di MFC, le barre di stato vengono implementate usando classi [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), che incapsula un controllo comune barra di stato. Per garantire la compatibilità con le versioni precedenti, MFC consente di mantenere l'implementazione della barra di stato meno recente nella classe `COldStatusBar`. Descrive la documentazione per le versioni precedenti di MFC `COldStatusBar` sotto `CStatusBar`.
+
+[CStatusBar:: GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), una funzione membro nuovo alla versione 4.0 di MFC, consente di sfruttare i vantaggi del supporto del controllo comune di Windows per lo stato di personalizzazione e funzionalità aggiuntive delle barre. `CStatusBar` funzioni membro offrono la maggior parte delle funzionalità dei controlli comuni di Windows; Tuttavia, quando si chiama `GetStatusBarCtrl`, è possibile assegnare le barre di stato ancora più delle caratteristiche di una barra di stato. Quando si chiama `GetStatusBarCtrl`, verrà restituito un riferimento a un `CStatusBarCtrl` oggetto. È possibile utilizzare tale riferimento per modificare il controllo barra di stato.
+
+La figura seguente mostra una barra di stato che consente di visualizzare gli indicatori di diversi.
+
+![Barra di stato](../mfc/media/vc37dy1.gif "vc37dy1") una barra di stato
+
+Ad esempio la barra degli strumenti, l'oggetto della barra di stato è incorporato nella relativa finestra cornice padre e viene creato automaticamente quando la finestra cornice viene costruita. La barra di stato, ad esempio tutte le barre di controllo, viene eliminata automaticamente anche quando il frame padre viene eliminato definitivamente.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Aggiornamento del testo di un riquadro barra di stato](../mfc/updating-the-text-of-a-status-bar-pane.md)
+
+- Classi MFC [CStatusBar](../mfc/reference/cstatusbar-class.md) e [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)
+
+- [Barre di controllo](../mfc/control-bars.md)
+
+- [Barre di finestra di dialogo](../mfc/dialog-bars.md)
+
+- [Barre degli strumenti (implementazione della barra degli strumenti MFC)](../mfc/mfc-toolbar-implementation.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Barre di stato](../mfc/status-bars.md)
 

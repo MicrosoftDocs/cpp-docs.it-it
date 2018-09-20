@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200146"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445178"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametri
 
-*Esercitazione*  
+*Esercitazione*<br/>
 Punta alla pagina da aggiungere alla finestra delle proprietà. Non può essere NULL.
 
 ### <a name="remarks"></a>Note
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>Parametri
 
-*nIDCaption*  
+*nIDCaption*<br/>
 ID della didascalia da utilizzare per la finestra delle proprietà.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Puntatore alla finestra padre della finestra delle proprietà. Se NULL, la finestra padre sarà la finestra principale dell'applicazione.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 L'indice della pagina che sarà inizialmente nella parte superiore. Valore predefinito è la prima pagina aggiunta al foglio.
 
-*pszCaption*  
+*pszCaption*<br/>
 Puntatore a una stringa contenente la didascalia da utilizzare per la finestra delle proprietà. Non può essere NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Handle per la bitmap della filigrana della pagina delle proprietà.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Handle per la tavolozza della bitmap della filigrana e/o bitmap di intestazione.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Handle per la bitmap di intestazione della pagina delle proprietà.
 
 ### <a name="remarks"></a>Note
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>Parametri
 
-*nIDCaption*  
+*nIDCaption*<br/>
 ID della didascalia da utilizzare per la finestra delle proprietà.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Punta alla finestra padre della finestra delle proprietà. Se NULL, la finestra padre sarà la finestra principale dell'applicazione.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 L'indice della pagina che sarà inizialmente nella parte superiore. Valore predefinito è la prima pagina aggiunta al foglio.
 
-*pszCaption*  
+*pszCaption*<br/>
 Punta a una stringa contenente la didascalia da utilizzare per la finestra delle proprietà. Non può essere NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Handle per la bitmap di sfondo della finestra delle proprietà.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Handle per la tavolozza della bitmap della filigrana e/o bitmap di intestazione.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Handle per la bitmap di intestazione della pagina delle proprietà.
 
 ### <a name="remarks"></a>Note
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>Parametri
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Punta alla finestra padre. Se NULL, l'elemento padre è il desktop.
 
-*dwStyle*  
+*dwStyle*<br/>
 Stili di finestra per la finestra delle proprietà. Per un elenco completo degli stili disponibili, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Stili finestra estesi per la finestra delle proprietà. Per un elenco completo degli stili disponibili, vedere [stili finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>Valore restituito
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>Parametri
 
-*bStacked*  
+*bStacked*<br/>
 Indica se le barre in pila schede sono abilitate nella finestra delle proprietà. Disabilitare le righe in pila dei tag impostando *bStacked* su FALSE.
 
 ### <a name="remarks"></a>Note
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>Parametri
 
-*nEndID*  
+*nEndID*<br/>
 Identificatore da utilizzare come valore restituito della finestra delle proprietà.
 
 ### <a name="remarks"></a>Note
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nPage*  
+*nPage*<br/>
 Indice della pagina desiderata, iniziando in corrispondenza di 0. Deve essere compreso tra 0 e uno minore del numero di pagine nella finestra delle proprietà, inclusiva.
 
 ### <a name="return-value"></a>Valore restituito
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametri
 
-*Esercitazione*  
+*Esercitazione*<br/>
 Punta alla pagina contenente l'indice da trovare. Non può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametri
 
-*lpRect*  
+*lpRect*<br/>
 Punta a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che contiene la finestra di dialogo coordina da convertire.
 
 ### <a name="remarks"></a>Note
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parametri
 
-*Npulsante*  
+*Npulsante*<br/>
 Npulsante: identifica il pulsante ai tasti da premere. Questo parametro può essere uno dei valori seguenti:
 
 - PSBTN_BACK sceglie il pulsante Indietro.
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parametri
 
-*Esercitazione*  
+*Esercitazione*<br/>
 Punta alla pagina da rimuovere dalla finestra delle proprietà. Non può essere NULL.
 
-*nPage*  
+*nPage*<br/>
 Indice della pagina da rimuovere. Deve essere compreso tra 0 e uno minore del numero di pagine nella finestra delle proprietà, inclusiva.
 
 ### <a name="remarks"></a>Note
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametri
 
-*nPage*  
+*nPage*<br/>
 Indice della pagina da impostare. Deve essere compreso tra 0 e uno minore del numero di pagine nella finestra delle proprietà, inclusiva.
 
-*Esercitazione*  
+*Esercitazione*<br/>
 Punta alla pagina per impostare nella finestra delle proprietà. Non può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametri
 
-*lpszText*  
+*lpszText*<br/>
 Punta al testo da visualizzare sul pulsante Fine comando.
 
 ### <a name="remarks"></a>Note
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>Parametri
 
-*nStyle*  
+*nStyle*<br/>
 Specifica lo stile del titolo della finestra delle proprietà. Da 0 o come PSH_PROPTITLE, è necessario specificare lo stile. Se style è impostato come PSH_PROPTITLE, dopo il testo specificato come la didascalia viene visualizzata la parola "Proprietà". Ad esempio, chiamando `SetTitle`("Simple", PSH_PROPTITLE) comporterà una didascalia della finestra delle proprietà della "Proprietà semplice".
 
-*lpszText*  
+*lpszText*<br/>
 Punta al testo da utilizzare come didascalia nella barra del titolo della finestra delle proprietà.
 
 ### <a name="remarks"></a>Note
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parametri
 
-*dwFlags*  
+*dwFlags*<br/>
 Un set di flag che consentono di personalizzare il funzionamento e l'aspetto di pulsanti della procedura guidata. Questo parametro può essere una combinazione dei valori seguenti:
 
 - Pulsante Indietro PSWIZB_BACK
@@ -847,9 +847,9 @@ Chiamare `SetWizardMode` prima di chiamare [DoModal](#domodal). Dopo aver chiama
 
 ## <a name="see-also"></a>Vedere anche
 
-[CMNCTRL1 esempio MFC](../../visual-cpp-samples.md)  
-[CMNCTRL2 esempio MFC](../../visual-cpp-samples.md)  
-[Esempio MFC PROPDLG](../../visual-cpp-samples.md)  
-[Esempio MFC SNAPVW](../../visual-cpp-samples.md)  
-[Classe CWnd](../../mfc/reference/cwnd-class.md)  
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)  
+[CMNCTRL1 esempio MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL2 esempio MFC](../../visual-cpp-samples.md)<br/>
+[Esempio MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[Esempio MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)

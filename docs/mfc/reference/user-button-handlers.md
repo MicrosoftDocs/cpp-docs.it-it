@@ -1,5 +1,5 @@
 ---
-title: Gestori dei pulsanti utente | Documenti Microsoft
+title: Gestori dei pulsanti dell'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,25 +27,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cf497e73987e2a7c8ef285a705bc6e7554f7ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5b7a93afaee003f093e479cbdf9c9e14731cef7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373859"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447316"
 ---
 # <a name="user-button-handlers"></a>Gestori dei pulsanti dell'utente
-Le voci della mappa seguenti corrispondono ai prototipi di funzione.  
-  
-|Voce della mappa|Prototipo di funzione|  
-|---------------|------------------------|  
-|ON_BN_CLICKED ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-|ON_BN_DISABLE ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-|ON_BN_DOUBLECLICKED ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-|ON_BN_HILITE ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-|ON_BN_PAINT ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-|ON_BN_UNHILITE ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)
+
+Le voci della mappa seguenti corrispondono ai prototipi di funzione.
+
+|Voce della mappa|Prototipo di funzione|
+|---------------|------------------------|
+|ON_BN_CLICKED ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_BN_DISABLE ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_BN_DOUBLECLICKED ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_BN_HILITE ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_BN_PAINT ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_BN_UNHILITE ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+
+## <a name="see-also"></a>Vedere anche
+
+[Mappe messaggi](../../mfc/reference/message-maps-mfc.md)
 

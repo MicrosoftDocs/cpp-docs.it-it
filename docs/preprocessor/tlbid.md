@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ec0150e63209728cf2f02c854fe03702b8a45b4
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: f5bd922089bcf189c403a97679a593a985603a12
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541583"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446257"
 ---
 # <a name="tlbid"></a>tlbid
 **Sezione specifica C++**  
@@ -58,5 +58,5 @@ LoadTypeLib("MyResource.dll\\2");
   
 ## <a name="see-also"></a>Vedere anche  
  
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

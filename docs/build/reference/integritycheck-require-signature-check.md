@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31df513a40b60fcb57c48f0d20e124fc77888d99
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2975f9648415b072c7e0cc893183b4a7880c3e43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703124"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444905"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (richiede controllo della firma)
 
@@ -49,6 +49,6 @@ Il **/INTEGRITYCHECK** set di opzioni, ovvero nell'intestazione PE del file DLL 
 
 [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
 [Opzioni del linker](../../build/reference/linker-options.md)<br/>
-[Forzato file l'integrità firma dell'eseguibile di tipo PE](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)
-[procedura dettagliata di firma del codice in modalità Kernel](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
+[File di forzato l'integrità di firma di Portable Executable (PE)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
+[Procedura dettagliata di firma codice in modalità kernel](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
 [DLL di AppInit in Windows 7 e Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

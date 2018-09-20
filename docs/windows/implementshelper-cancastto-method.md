@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab1f2c16f7329f455fbd1fea525b17c9cc433a36
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9487ba4e05a0094d852b0db0c9c39009c027dc9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593155"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423741"
 ---
 # <a name="implementshelpercancastto-method"></a>Metodo ImplementsHelper::CanCastTo
 
@@ -44,13 +44,13 @@ HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parametri
 
-*riid*  
+*riid*<br/>
 Riferimento all'ID di interfaccia.
 
-*ppv*  
+*ppv*<br/>
 Se questa operazione ha esito positivo, un puntatore all'interfaccia specificata da *riid* oppure *iid*.
 
-*IID*  
+*IID*<br/>
 Riferimento all'ID di interfaccia.
 
 ## <a name="return-value"></a>Valore restituito
@@ -69,5 +69,5 @@ Ottiene un puntatore all'ID di interfaccia specificato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Struttura ImplementsHelper](../windows/implementshelper-structure.md)  
+[Struttura ImplementsHelper](../windows/implementshelper-structure.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

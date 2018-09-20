@@ -22,38 +22,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd9d0deded3180529bfa714519a9b8d415c6b15
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 34028aa243f4c767751da758e43dab5ecf71c110
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586322"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431801"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Esecuzione come membro del gruppo Users
-In questo argomento viene illustrato come aumentare il livello di sicurezza e ridurre le possibilità di essere infettati da codice dannoso mediante la configurazione di account utente Windows come membri del gruppo Users, in contrapposizione al gruppo Administrators.  
-  
-## <a name="security-risks"></a>Rischi di sicurezza  
- Se si accede con diritti di amministratore, il sistema è vulnerabile a diversi tipi di attacchi alla sicurezza, quali Trojan horse e sovraccarico del buffer. La semplice visita di un sito Web con diritti di amministratore può danneggiare il sistema, in quanto del codice dannoso scaricato dal sito potrebbe infettare il computer. Se l'attacco riesce, il codice infatti eredita le autorizzazioni di amministratore ed è in grado di eseguire operazioni quali l'eliminazione di tutti i file, la formattazione del disco rigido e la creazione di nuovi account utente con accesso di amministratore.  
-  
-## <a name="non-administrator-user-groups"></a>Gruppi di utenti diversi dagli amministratori  
- Gli account utente di Windows utilizzati normalmente dagli sviluppatori devono essere aggiunti ai gruppi Users o Power Users. Gli sviluppatori devono essere aggiunti anche al gruppo di debug. L'appartenenza al gruppo Users consente di effettuare attività comuni come eseguire programmi e visitare siti Web senza esporre il computer a rischi inutili. In qualità di membro del gruppo Power Users, è possibile inoltre eseguire attività come installare applicazioni, stampanti e la maggior parte delle operazioni disponibili dal Pannello di controllo. In caso sia necessario eseguire attività amministrative come l'aggiornamento del sistema operativo o la configurazione di parametri di sistema, è possibile accedere con un account di amministratore per il tempo necessario all'attività. In alternativa, di Windows **runas** comando può essere utilizzato per avviare applicazioni specifiche con accesso amministrativo.  
-  
-## <a name="exposing-customers-to-security-risks"></a>Esposizione degli utenti a rischi di sicurezza  
- La non appartenenza al gruppo Administrators è di particolare importanza per gli sviluppatori perché, oltre a proteggere i computer di sviluppo, impedisce loro di scrivere inavvertitamente codice che richieda agli utenti di far parte del gruppo Administrators per l'esecuzione delle applicazioni sviluppate. Se nel corso dello sviluppo viene introdotto codice che richiede l'accesso come amministratore, non verrà eseguito in fase di esecuzione e lo sviluppatore verrà avvisato del fatto che l'applicazione richiederà agli utenti di accedere come amministratori.  
-  
-## <a name="code-that-requires-administrator-privileges"></a>Codice che richiede privilegi di amministratore  
- Per l'esecuzione di alcuni tipi di codice è necessario l'accesso come amministratore. Se possibile, è consigliabile servirsi di codice alternativo. Di seguito sono riportati esempi di operazioni di codice che richiedono l'accesso come amministratore:  
-  
--   Scrittura in aree protette del file system, quali le directory Windows o Programmi  
-  
--   Scrittura in aree protette del Registro di sistema, ad esempio HKEY_LOCAL_MACHINE  
-  
--   Installazione di assembly nella Global Assembly Cache (GAC)  
-  
- Generalmente, queste azioni devono essere limitate ai programmi di installazione delle applicazioni. In questo modo, gli utenti possono utilizzare i privilegi di amministratore solo temporaneamente.  
-  
-## <a name="debugging"></a>Debug  
- Entrando a far parte del gruppo di debug, è possibile eseguire il debug di qualsiasi applicazione avviata in Visual Studio (nativa e non gestita) come utente non amministratore. In questo modo è possibile eseguire la connessione a un'applicazione in esecuzione tramite il comando Connetti a processo. È necessaria tuttavia l'appartenenza al gruppo Administrators per eseguire il debug di applicazioni native o gestite avviate da un altro utente.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Procedure di sicurezza consigliate](security-best-practices-for-cpp.md)
+
+In questo argomento viene illustrato come aumentare il livello di sicurezza e ridurre le possibilità di essere infettati da codice dannoso mediante la configurazione di account utente Windows come membri del gruppo Users, in contrapposizione al gruppo Administrators.
+
+## <a name="security-risks"></a>Rischi di sicurezza
+
+Se si accede con diritti di amministratore, il sistema è vulnerabile a diversi tipi di attacchi alla sicurezza, quali Trojan horse e sovraccarico del buffer. La semplice visita di un sito Web con diritti di amministratore può danneggiare il sistema, in quanto del codice dannoso scaricato dal sito potrebbe infettare il computer. Se l'attacco riesce, il codice infatti eredita le autorizzazioni di amministratore ed è in grado di eseguire operazioni quali l'eliminazione di tutti i file, la formattazione del disco rigido e la creazione di nuovi account utente con accesso di amministratore.
+
+## <a name="non-administrator-user-groups"></a>Gruppi di utenti diversi dagli amministratori
+
+Gli account utente di Windows utilizzati normalmente dagli sviluppatori devono essere aggiunti ai gruppi Users o Power Users. Gli sviluppatori devono essere aggiunti anche al gruppo di debug. L'appartenenza al gruppo Users consente di effettuare attività comuni come eseguire programmi e visitare siti Web senza esporre il computer a rischi inutili. In qualità di membro del gruppo Power Users, è possibile inoltre eseguire attività come installare applicazioni, stampanti e la maggior parte delle operazioni disponibili dal Pannello di controllo. In caso sia necessario eseguire attività amministrative come l'aggiornamento del sistema operativo o la configurazione di parametri di sistema, è possibile accedere con un account di amministratore per il tempo necessario all'attività. In alternativa, di Windows **runas** comando può essere utilizzato per avviare applicazioni specifiche con accesso amministrativo.
+
+## <a name="exposing-customers-to-security-risks"></a>Esposizione degli utenti a rischi di sicurezza
+
+La non appartenenza al gruppo Administrators è di particolare importanza per gli sviluppatori perché, oltre a proteggere i computer di sviluppo, impedisce loro di scrivere inavvertitamente codice che richieda agli utenti di far parte del gruppo Administrators per l'esecuzione delle applicazioni sviluppate. Se nel corso dello sviluppo viene introdotto codice che richiede l'accesso come amministratore, non verrà eseguito in fase di esecuzione e lo sviluppatore verrà avvisato del fatto che l'applicazione richiederà agli utenti di accedere come amministratori.
+
+## <a name="code-that-requires-administrator-privileges"></a>Codice che richiede privilegi di amministratore
+
+Per l'esecuzione di alcuni tipi di codice è necessario l'accesso come amministratore. Se possibile, è consigliabile servirsi di codice alternativo. Di seguito sono riportati esempi di operazioni di codice che richiedono l'accesso come amministratore:
+
+- Scrittura in aree protette del file system, quali le directory Windows o Programmi
+
+- Scrittura in aree protette del Registro di sistema, ad esempio HKEY_LOCAL_MACHINE
+
+- Installazione di assembly nella Global Assembly Cache (GAC)
+
+Generalmente, queste azioni devono essere limitate ai programmi di installazione delle applicazioni. In questo modo, gli utenti possono utilizzare i privilegi di amministratore solo temporaneamente.
+
+## <a name="debugging"></a>Debug
+
+Entrando a far parte del gruppo di debug, è possibile eseguire il debug di qualsiasi applicazione avviata in Visual Studio (nativa e non gestita) come utente non amministratore. In questo modo è possibile eseguire la connessione a un'applicazione in esecuzione tramite il comando Connetti a processo. È necessaria tuttavia l'appartenenza al gruppo Administrators per eseguire il debug di applicazioni native o gestite avviate da un altro utente.
+
+## <a name="see-also"></a>Vedere anche
+
+[Procedure di sicurezza consigliate](security-best-practices-for-cpp.md)

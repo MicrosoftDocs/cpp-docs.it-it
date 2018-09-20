@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50696d8f6ee0aa1c61374c0758905a5bb7063ab5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 732fab9e0f9f0233de6de7db6328c2e6736db5d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606937"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437725"
 ---
 # <a name="mfc-database-programming-symbols"></a>Simboli per la programmazione di database MFC
+
 I simboli in questa tabella vengono visualizzate solo in un progetto MFC quando è stato aggiunto il supporto di database. Supportano la connessione di MFC per la programmazione dei database e istanze di SQL Server.
   
 |||
@@ -45,8 +46,10 @@ I simboli in questa tabella vengono visualizzate solo in un progetto MFC quando 
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
   
 ## <a name="requirements"></a>Requisiti
- MFC
+
+MFC
   
 ## <a name="see-also"></a>Vedere anche
- [Simboli predefiniti di MFC](../windows/mfc-predefined-symbols.md)  
- [Simboli: identificatori di risorsa](../windows/symbols-resource-identifiers.md)
+
+[Simboli predefiniti di MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Simboli: identificatori di risorsa](../windows/symbols-resource-identifiers.md)
