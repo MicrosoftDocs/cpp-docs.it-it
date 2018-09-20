@@ -1,5 +1,5 @@
 ---
-title: 'TN047: Rilascio dei requisiti di transazione di Database | Documenti Microsoft'
+title: ': Tn047 requisiti di transazione di Database | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5870efacb61d5c0bb74f85427c41f787d2edd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96f3116f503ffa0ffc461ea2c1a0bdaf8947a0be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427017"
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: rilascio dei requisiti di transazione database
-Questa nota tecnica, che esaminati i requisiti della transazione delle classi di database ODBC MFC, è ora obsoleta. Prima di MFC 4.2, le classi di database necessari che cursori mantenuti nei recordset dopo un **CommitTrans** o **Rollback** operazione. Se il driver ODBC e DBMS non supporta questo livello di conservazione di cursore, le classi di database non abilitare le transazioni.  
-  
- A partire da MFC 4.2, le classi di database sono flessibili la restrizione di richiedere la conservazione del cursore. Le transazioni verranno abilitate se il driver supportarle. Tuttavia, è ora necessario controllare l'effetto di un **CommitTrans** o **Rollback** operazione nei recordset aperto. Vedere le funzioni membro [CDatabase:: GetCursorCommitBehavior](../mfc/reference/cdatabase-class.md#getcursorcommitbehavior) e [CDatabase:: GetCursorRollbackBehavior](../mfc/reference/cdatabase-class.md#getcursorrollbackbehavior) per ulteriori informazioni.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
+
+Questa nota tecnica, che è descritti i requisiti di transazione delle classi di database ODBC MFC, è ora obsoleta. Prima di MFC 4.2, le classi di database necessari che i cursori mantenute in caso di recordset dopo una **CommitTrans** oppure **Rollback** operazione. Se il driver ODBC e DBMS non supporta questo livello di conservazione di cursore, quindi le classi di database non è stata abilitata transazioni.
+
+A partire da MFC 4.2, le classi di database hanno aumentato la restrizione di che richiedono la conservazione del cursore. Verranno abilitate se il driver supporta le transazioni. Tuttavia, è ora necessario controllare l'effetto di un **CommitTrans** oppure **Rollback** operazione per i recordset aperti. Vedere le funzioni membro [CDatabase:: GetCursorCommitBehavior](../mfc/reference/cdatabase-class.md#getcursorcommitbehavior) e [CDatabase:: GetCursorRollbackBehavior](../mfc/reference/cdatabase-class.md#getcursorrollbackbehavior) per altre informazioni.
+
+## <a name="see-also"></a>Vedere anche
+
+[Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
+[Note tecniche per categoria](../mfc/technical-notes-by-category.md)
 

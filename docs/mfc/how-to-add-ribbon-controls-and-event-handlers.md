@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: aggiungere controlli Ribbon e gestori eventi | Documenti Microsoft'
+title: 'Procedura: aggiungere controlli Ribbon e gestori di eventi | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 176323137b2ace0d27d9de162da7fa022441aa88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3c4af695553bc97815915454bda2aae481543e9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344419"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427953"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Procedura: aggiungere controlli Ribbon e gestori eventi
-Controlli della barra multifunzione sono elementi, ad esempio i pulsanti e caselle combinate, che aggiungono ai pannelli. I pannelli sono aree della barra multifunzione che mostrano un gruppo di controlli correlati.  
-  
- In questo argomento, verrà di aprire la finestra di progettazione della barra multifunzione, aggiungere un pulsante e quindi collegare un evento che visualizza "Hello World".  
-  
-### <a name="to-open-the-ribbon-designer"></a>Per aprire la finestra di progettazione della barra multifunzione  
-  
-1.  In Visual Studio, sul **vista** menu, fare clic su **visualizzazione risorse**.  
-  
-2.  In **visualizzazione risorse**, fare doppio clic sulla risorsa barra multifunzione per visualizzarla nell'area di progettazione.  
-  
-### <a name="to-add-a-button-and-an-event-handler"></a>Per aggiungere un pulsante e un gestore eventi  
-  
-1.  Dal **barra degli strumenti**, fare clic su **pulsante** e trascinarlo in un pannello dell'area di progettazione.  
-  
-2.  Il pulsante destro e scegliere **Aggiungi gestore**.  
-  
-3.  Nel **Creazione guidata gestore eventi**confermare le impostazioni predefinite e fare clic su **aggiungere e modificare**. Per ulteriori informazioni, vedere [Creazione guidata gestore eventi](../ide/event-handler-wizard.md).  
-  
-4.  Nell'editor di codice, aggiungere il codice seguente in funzione del gestore:  
-  
- ```  
+
+Controlli della barra multifunzione sono elementi, quali pulsanti e caselle combinate, che aggiungono ai pannelli. I pannelli sono aree della barra multifunzione che consentono di visualizzare un gruppo di controlli correlati.
+
+In questo argomento, si verrà aprire la finestra di progettazione della barra multifunzione, aggiungere un pulsante e quindi collegare un evento che viene visualizzato "Hello World".
+
+### <a name="to-open-the-ribbon-designer"></a>Per aprire la finestra di progettazione della barra multifunzione
+
+1. In Visual Studio sul **View** menu, fare clic su **visualizzazione risorse**.
+
+1. Nelle **visualizzazione risorse**, fare doppio clic sulla risorsa barra multifunzione per visualizzarla nell'area di progettazione.
+
+### <a name="to-add-a-button-and-an-event-handler"></a>Per aggiungere un pulsante e un gestore eventi
+
+1. Dal **sulla barra degli strumenti**, fare clic su **pulsante** e trascinarlo nell'area di progettazione un pannello.
+
+1. Fare doppio clic sul pulsante e fare clic su **Aggiungi gestore**.
+
+1. Nel **Creazione guidata gestore eventi**confermare le impostazioni predefinite e fare clic su **aggiungere e modificare**. Per altre informazioni, vedere [Creazione guidata gestore eventi](../ide/event-handler-wizard.md).
+
+1. Nell'editor del codice, aggiungere il codice seguente alla funzione di gestore:
+
+```
     MessageBox((LPCTSTR)L"Hello World");
 
- ```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Esempio RibbonGadgets: Applicazione gadget della barra multifunzione](../visual-cpp-samples.md)   
- [Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Esempio RibbonGadgets: Applicazione gadget della barra multifunzione](../visual-cpp-samples.md)<br/>
+[Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
 

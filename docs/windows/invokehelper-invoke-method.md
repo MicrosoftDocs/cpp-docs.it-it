@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1addd96456a33b30259182e4490df70335d0d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584321"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408362"
 ---
 # <a name="invokehelperinvoke-method"></a>Metodo InvokeHelper::Invoke
 
@@ -65,31 +65,31 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametri
 
-*arg1*  
+*arg1*<br/>
 Argomento 1.
 
-*Arg2*  
+*Arg2*<br/>
 Argomento 2.
 
-*arg3*  
+*arg3*<br/>
 Argomento 3.
 
-*Arg4*  
+*Arg4*<br/>
 Argomento 4.
 
-*Arg5*  
+*Arg5*<br/>
 Argomento 5.
 
-*Arg6*  
+*Arg6*<br/>
 Argomento 6.
 
-*Arg7*  
+*Arg7*<br/>
 Argomento 7.
 
-*arg8*  
+*arg8*<br/>
 Argomento 8.
 
-*arg9*  
+*arg9*<br/>
 Argomento 9.
 
 ## <a name="return-value"></a>Valore restituito
@@ -108,5 +108,5 @@ Chiama il gestore dell'evento la cui firma contiene il numero di argomenti speci
 
 ## <a name="see-also"></a>Vedere anche
 
-[Struttura InvokeHelper](../windows/invokehelper-structure.md)  
+[Struttura InvokeHelper](../windows/invokehelper-structure.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

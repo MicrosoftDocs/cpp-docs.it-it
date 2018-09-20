@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317264"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394647"
 ---
 # <a name="attributed-programming-concepts"></a>Concetti di programmazione con attributi
 
@@ -32,27 +32,27 @@ Mentre gli attributi eliminano alcuni dettagli di codice necessario per scrivere
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Scopo degli attributi](../windows/purpose-of-attributes.md)  
+[Scopo degli attributi](../windows/purpose-of-attributes.md)<br/>
 Viene presentata una panoramica della programmazione con attributa.
 
-[Meccanismi di base degli attributi](../windows/basic-mechanics-of-attributes.md)  
+[Meccanismi di base degli attributi](../windows/basic-mechanics-of-attributes.md)<br/>
 Viene descritto il funzionamento degli attributi nel progetto.
 
-[Compilazione di un programma con attributi](../windows/building-an-attributed-program.md)  
+[Compilazione di un programma con attributi](../windows/building-an-attributed-program.md)<br/>
 Vengono fornite informazioni sull'uso di opzioni del compilatore C++ nel progetto.
 
-[Categorie di attributi](../windows/attribute-categories.md)  
+[Categorie di attributi](../windows/attribute-categories.md)<br/>
 Vengono forniti collegamenti alle categorie di attributi usati in Visual C++.
 
-[Attributo domande, domande frequenti](../windows/attribute-programming-faq.md)  
+[Attributo domande, domande frequenti](../windows/attribute-programming-faq.md)<br/>
 Risposte alle domande frequenti sulla programmazione con attributa.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Riferimento agli attributi](../windows/cpp-attributes-reference.md)  
+[Riferimento agli attributi](../windows/cpp-attributes-reference.md)<br/>
 Fornisce collegamenti agli argomenti di riferimento che descrive i singoli attributi e il relativo utilizzo.
 
-[Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code)  
+[Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 Viene descritto il debug di programmi con attributi.
 
 [super](../cpp/super.md)e [Interface](../cpp/interface.md)  

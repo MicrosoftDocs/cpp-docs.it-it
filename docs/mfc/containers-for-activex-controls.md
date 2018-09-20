@@ -14,54 +14,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c40a158777622856942c4c436299470aba3e6f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 69bfb29bdcc03f0373b5c5ab4916108b0705fc83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534859"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434427"
 ---
 # <a name="containers-for-activex-controls"></a>Contenitori per i controlli ActiveX
+
 È possibile usare i controlli ActiveX sviluppati in Visual C++ in altre applicazioni, purché supportino contenimento dei controlli ActiveX. Un numero di applicazioni Microsoft, che iniziano con le versioni elencate, supporta il contenimento di controlli ActiveX.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).  
-  
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
+
 > [!NOTE]
->  Nell'elenco seguente non è un elenco completo delle applicazioni che supportano i controlli ActiveX, ma rappresenta il set utilizzato con maggiore frequenza nei test:  
-  
- Applicazioni che supportano il contenimento dei controlli ActiveX includono:  
-  
--   Internet Explorer 3.x e versioni successive  
-  
--   Visual Basic 4.x e versioni successive  
-  
--   Visual C++ 4.x e versioni successive  
-  
--   Accesso 95 e versioni successiva  
-  
--   Excel 97 e versioni successive  
-  
--   Word 97 e versioni successive  
-  
--   Access 97 e versioni successive  
-  
--   FrontPage 97 e versioni successive  
-  
--   PowerPoint 97 e versioni successive  
-  
--   Visual InterDev 97 e versioni successive  
-  
- Di seguito sono le applicazioni non Microsoft che supportano contenimento dei controlli ActiveX:  
-  
--   PowerBuilder  
-  
--   Delphi  
-  
--   Generatore di C++  
-  
--   Plug-in Netscape Navigator NCompass  
-  
-## <a name="see-also"></a>Vedere anche  
- [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
+>  Nell'elenco seguente non è un elenco completo delle applicazioni che supportano i controlli ActiveX, ma rappresenta il set utilizzato con maggiore frequenza nei test:
+
+Applicazioni che supportano il contenimento dei controlli ActiveX includono:
+
+- Internet Explorer 3.x e versioni successive
+
+- Visual Basic 4.x e versioni successive
+
+- Visual C++ 4.x e versioni successive
+
+- Accesso 95 e versioni successiva
+
+- Excel 97 e versioni successive
+
+- Word 97 e versioni successive
+
+- Access 97 e versioni successive
+
+- FrontPage 97 e versioni successive
+
+- PowerPoint 97 e versioni successive
+
+- Visual InterDev 97 e versioni successive
+
+Di seguito sono le applicazioni non Microsoft che supportano contenimento dei controlli ActiveX:
+
+- PowerBuilder
+
+- Delphi
+
+- Generatore di C++
+
+- Plug-in Netscape Navigator NCompass
+
+## <a name="see-also"></a>Vedere anche
+
+[Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
 

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce32186083e156525ccc1f75a6d93d58c7f9294e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e52f169653222808845b0d381718e064c09fda11
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316068"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440823"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Aggiunta, modifica o eliminazione di controlli
 
@@ -50,6 +50,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli delle finestre di dialogo](controls-in-dialog-boxes.md)  
-[Aggiunta di gestori eventi per i controlli della finestra di dialogo](adding-event-handlers-for-dialog-box-controls.md)  
+[Controlli delle finestre di dialogo](controls-in-dialog-boxes.md)<br/>
+[Aggiunta di gestori eventi per i controlli della finestra di dialogo](adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4df3f6f72ec7a83186cc3d96b2dda837bdd1cfff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a27120869c464a9009f8d19cf0f84bfde7a02e96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207996"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446058"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -36,7 +36,7 @@ Consente di specificare un valore predefinito per un parametro facoltativo tipiz
 
 ### <a name="parameters"></a>Parametri
 
-*valore*  
+*valore*<br/>
 Il valore predefinito per il parametro.
 
 ## <a name="remarks"></a>Note
@@ -84,10 +84,10 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di parametro](../windows/parameter-attributes.md)  
-[out](../windows/out-cpp.md)  
-[retval](../windows/retval.md)  
-[in](../windows/in-cpp.md)  
-[pointer_default](../windows/pointer-default.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di parametro](../windows/parameter-attributes.md)<br/>
+[out](../windows/out-cpp.md)<br/>
+[retval](../windows/retval.md)<br/>
+[in](../windows/in-cpp.md)<br/>
+[pointer_default](../windows/pointer-default.md)<br/>
 [unique](../windows/unique-cpp.md)  

@@ -1,5 +1,5 @@
 ---
-title: Funzione membro Run | Documenti Microsoft
+title: Funzione membro Run | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a658af47723a9c19218b205a17cb46919d7abd59
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 446b1b6fc2a5265e2c4eb8a608ff8b4f0028c57d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932286"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408232"
 ---
 # <a name="run-member-function"></a>Funzione membro Run
-Una framework applicazione per la maggior parte del tempo nel [eseguiti](../mfc/reference/cwinapp-class.md#run) funzioni membro delle classi [CWinApp](../mfc/reference/cwinapp-class.md). Dopo l'inizializzazione, `WinMain` chiamate `Run` per elaborare il ciclo di messaggi.  
-  
- `Run` scorre un ciclo di messaggi, controllando nella coda di messaggi quelli disponibili. Se è disponibile, un messaggio `Run` Invia a un'azione. Se è disponibile alcun messaggio, che spesso è true, `Run` chiamate `OnIdle` per eseguire qualsiasi elaborazione tempo di inattività potrebbe essere necessario utente o al framework eseguita. Se non sono presenti messaggi o elaborazioni nel tempo di inattività, l'applicazione resta in attesa fino al verificarsi di una qualsiasi azione. Quando termina, l'applicazione `Run` chiamate `ExitInstance`. Nella figura [funzione membro OnIdle](../mfc/onidle-member-function.md) Mostra la sequenza di azioni nel ciclo di messaggi.  
-  
- L'invio del messaggio dipende dal tipo di messaggio. Per altre informazioni, vedere [i messaggi e comandi nel Framework](../mfc/messages-and-commands-in-the-framework.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [CWinApp: classe Application](../mfc/cwinapp-the-application-class.md)
+
+Un'applicazione framework trascorre la maggior parte del tempo nella [eseguiti](../mfc/reference/cwinapp-class.md#run) la funzione membro della classe [CWinApp](../mfc/reference/cwinapp-class.md). Dopo l'inizializzazione `WinMain` chiamate `Run` per elaborare il ciclo di messaggi.
+
+`Run` scorre un ciclo di messaggi, controllando nella coda di messaggi quelli disponibili. Se è disponibile, un messaggio `Run` lo invia a un'azione. Se è disponibile alcun messaggio, che spesso è true, `Run` chiamate `OnIdle` eseguire qualsiasi elaborazione tempo di inattività potrebbe essere necessario o al framework eseguita. Se non sono presenti messaggi o elaborazioni nel tempo di inattività, l'applicazione resta in attesa fino al verificarsi di una qualsiasi azione. Quando termina, l'applicazione `Run` chiamate `ExitInstance`. La figura nel [funzione membro OnIdle](../mfc/onidle-member-function.md) Mostra la sequenza di azioni nel ciclo di messaggi.
+
+L'invio del messaggio dipende dal tipo di messaggio. Per altre informazioni, vedere [i messaggi e comandi nel Framework](../mfc/messages-and-commands-in-the-framework.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[CWinApp: classe Application](../mfc/cwinapp-the-application-class.md)

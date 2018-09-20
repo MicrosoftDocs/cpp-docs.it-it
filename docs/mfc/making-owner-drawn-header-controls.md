@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 899d51cf20d911d5ef0e46400330a59865cdd9af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214733"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435077"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Creazione di controlli Header creati dal proprietario
-È possibile definire i singoli elementi di un controllo header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) sia gli elementi creati dal proprietario. Per altre informazioni, vedere [controlli Header creati dal proprietario](/windows/desktop/Controls/header-controls) nel SDK di Windows.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+È possibile definire i singoli elementi di un controllo header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) sia gli elementi creati dal proprietario. Per altre informazioni, vedere [controlli Header creati dal proprietario](/windows/desktop/Controls/header-controls) nel SDK di Windows.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

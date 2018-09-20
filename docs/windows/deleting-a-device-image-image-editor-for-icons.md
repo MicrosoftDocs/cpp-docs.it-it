@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 376c68c4b00f6b57282d03f14b8702f5c7e8a8bc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9ff6cc2fd04dfd92ce1744cf68681f5b9dc4ed13
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315301"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394595"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>Eliminazione di un'immagine per dispositivo (Editor di immagini per le icone)
 
@@ -44,6 +44,6 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

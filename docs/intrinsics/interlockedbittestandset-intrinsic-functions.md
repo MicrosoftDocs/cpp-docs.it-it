@@ -28,90 +28,95 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5327470057928466c1aede37205ac4f35175b899
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 406e3f974ce20068b183c9eab1f1f53bf113df78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712218"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426835"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>Funzioni intrinseche _interlockedbittestandset
-**Sezione specifica Microsoft**  
-  
- Generare un'istruzione che esamina il bit `b` dell'indirizzo `a` e restituisce il valore corrente prima di impostarlo su 1.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned char _interlockedbittestandset(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandset_acq(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandset_HLEAcquire(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandset_HLERelease(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandset_nf(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandset_rel(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandset64(  
-   __int64 *a,  
-   __int64 b  
-);  
-unsigned char _interlockedbittestandset64_HLEAcquire(  
-   __int64 *a,  
-   __int64 b  
-);  
-unsigned char _interlockedbittestandset64_HLERelease(  
-   __int64 *a,  
-   __int64 b  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+**Sezione specifica Microsoft**
+
+Generare un'istruzione che esamina il bit `b` dell'indirizzo `a` e restituisce il valore corrente prima di impostarlo su 1.
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned char _interlockedbittestandset(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandset_acq(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandset_HLEAcquire(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandset_HLERelease(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandset_nf(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandset_rel(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandset64(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandset64_HLEAcquire(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandset64_HLERelease(
+   __int64 *a,
+   __int64 b
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *a*<br/>
-[in] Puntatore alla memoria da esaminare.  
-  
+[in] Puntatore alla memoria da esaminare.
+
 *b*<br/>
-[in] Posizione del bit da testare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Valore del bit nella posizione `b` prima dell'impostazione.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|Intestazione|  
-|---------------|------------------|------------|  
-|`_interlockedbittestandset`|x86, ARM, x64|\<intrin.h>|  
-|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h>|  
-|`_interlockedbittestandset64`|X64|\<intrin.h>|  
-|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|  
-  
-## <a name="remarks"></a>Note  
- Nei processori x86 e x64, queste funzioni intrinseche usano il `lock bts` (istruzione) per leggere e impostare il bit specificato su 1. L'operazione è atomica.  
-  
- Nei processori ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.  
-  
- Nei processori Intel che supportano le istruzioni HLE (Hardware Lock Elision), le funzioni intrinseche con suffissi `_HLEAcquire` e `_HLERelease` includono un hint per il processore che consente di accelerare le prestazioni eliminando un passaggio di blocco scrittura nell'hardware. Se queste funzioni intrinseche vengono chiamate in processori che non supportano HLE, l'hint viene ignorato.  
-  
- Queste routine sono disponibili solo come funzioni intrinseche.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)
+[in] Posizione del bit da testare.
+
+## <a name="return-value"></a>Valore restituito
+
+Valore del bit nella posizione `b` prima dell'impostazione.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|Intestazione|
+|---------------|------------------|------------|
+|`_interlockedbittestandset`|x86, ARM, x64|\<intrin.h>|
+|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h>|
+|`_interlockedbittestandset64`|X64|\<intrin.h>|
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
+
+## <a name="remarks"></a>Note
+
+Nei processori x86 e x64, queste funzioni intrinseche usano il `lock bts` (istruzione) per leggere e impostare il bit specificato su 1. L'operazione è atomica.
+
+Nei processori ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.
+
+Nei processori Intel che supportano le istruzioni HLE (Hardware Lock Elision), le funzioni intrinseche con suffissi `_HLEAcquire` e `_HLERelease` includono un hint per il processore che consente di accelerare le prestazioni eliminando un passaggio di blocco scrittura nell'hardware. Se queste funzioni intrinseche vengono chiamate in processori che non supportano HLE, l'hint viene ignorato.
+
+Queste routine sono disponibili solo come funzioni intrinseche.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)

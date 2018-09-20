@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: usare la classe combinable per migliorare le prestazioni | Documenti Microsoft'
+title: 'Procedura: usare la classe combinable per migliorare le prestazioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,62 +15,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3185ee9f7546e6927197d2e3452ea4cf86f9ab5c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 22425ac212ee2bfb52354044b1a6193b6a9cd11a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692090"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432088"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>Procedura: Usare la classe combinable per migliorare le prestazioni
-In questo esempio viene illustrato come utilizzare il [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) classe per calcolare la somma dei numeri in un [std:: Array](../../standard-library/array-class-stl.md) oggetto primi. La `combinable` classe migliora le prestazioni eliminando lo stato condiviso.  
-  
+
+Questo esempio illustra come usare il [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) classe per calcolare la somma dei numeri in un [std:: Array](../../standard-library/array-class-stl.md) oggetto primi. Il `combinable` classe migliora le prestazioni eliminando lo stato condiviso.
+
 > [!TIP]
->  In alcuni casi, i mapping parallelo ([Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_transform)) e ridurre ([concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)) può offrire miglioramenti delle prestazioni su `combinable`. Per un esempio che utilizza il mapping e riduzione delle operazioni per produrre gli stessi risultati questo esempio, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente usa il [std:: accumulate](../../standard-library/numeric-functions.md#accumulate) funzione per calcolare la somma degli elementi in una matrice di numeri primi. In questo esempio, `a` è un `array` oggetto e `is_prime` funzione determina se il valore di input è un numero primo.  
-  
- [!code-cpp[concrt-parallel-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_1.cpp)]  
-  
-## <a name="example"></a>Esempio  
+>  In alcuni casi, i mapping parallelo ([Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_transform)) e ridurre ([concorrenza:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)) possono offrire miglioramenti delle prestazioni sui `combinable`. Per un esempio che Usa mapping e riduzione delle operazioni per produrre gli stessi risultati di questo esempio, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
- Nell'esempio seguente viene illustrato un modo naïve per parallelizzare l'esempio precedente. Questo esempio viene utilizzato il [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo per elaborare la matrice in parallelo e un [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) oggetto per sincronizzare l'accesso per il `prime_sum` variabile . In questo esempio non è scalabile poiché ogni thread deve attendere che la risorsa condivisa diventi disponibile.  
-  
- [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_2.cpp)]  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzato un `combinable` oggetto per migliorare le prestazioni dell'esempio precedente. In questo esempio elimina la necessità per gli oggetti di sincronizzazione. scalabile, in quanto il `combinable` consente di ogni thread per l'esecuzione dell'attività in modo indipendente.  
-  
- Oggetto `combinable` oggetto viene utilizzato in genere in due passaggi. Innanzitutto, è possibile produrre una serie di calcoli accurati eseguendo il lavoro in parallelo. Successivamente, combinare o ridurre i calcoli in un risultato finale. Questo esempio viene utilizzato il [concurrency::combinable::local](reference/combinable-class.md#local) per ottenere un riferimento alla somma locale. Viene quindi utilizzato il [concurrency::combinable::combine](reference/combinable-class.md#combine) (metodo) e un [std:: Plus](../../standard-library/plus-struct.md) oggetto per combinare i calcoli locali nel risultato finale.  
+## <a name="example"></a>Esempio
 
-  
- [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_3.cpp)]  
-  
-## <a name="example"></a>Esempio  
- L'esempio completo seguente calcola la somma dei numeri primi sia in serie e in parallelo. Nell'esempio viene stampato nella console il tempo necessario per eseguire entrambi i calcoli.  
-  
- [!code-cpp[concrt-parallel-sum-of-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_4.cpp)]  
-  
- L'output di esempio seguente è relativo a un computer con quattro processori.  
-  
-```Output  
-1709600813  
-serial time: 6178 ms  
- 
-1709600813  
-parallel time: 1638 ms  
-```  
-  
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `parallel-sum-of-primes.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
-  
- **CL.exe /EHsc parallelo-sum-of-primes. cpp**  
-  
-## <a name="robust-programming"></a>Programmazione efficiente  
- Per un esempio che utilizza il mapping e riduzione delle operazioni per produrre gli stessi risultati, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)   
- [combinable (classe)](../../parallel/concrt/reference/combinable-class.md)   
- [Classe critical_section](../../parallel/concrt/reference/critical-section-class.md)
+L'esempio seguente usa il [std:: accumulate](../../standard-library/numeric-functions.md#accumulate) funzione per calcolare la somma degli elementi in una matrice di numeri primi. In questo esempio `a` è un `array` oggetto e il `is_prime` funzione determina se il valore di input è un numero primo.
+
+[!code-cpp[concrt-parallel-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_1.cpp)]
+
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente viene illustrato un modo semplice per parallelizzare l'esempio precedente. Questo esempio Usa il [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo per elaborare la matrice in parallelo e una [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) oggetto per sincronizzare l'accesso per il `prime_sum` variabile . In questo esempio non è scalabile poiché ogni thread deve attendere che la risorsa condivisa diventi disponibile.
+
+[!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_2.cpp)]
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente usa un `combinable` oggetto per migliorare le prestazioni dell'esempio precedente. In questo esempio elimina la necessità per gli oggetti di sincronizzazione. la scalabilità perché il `combinable` oggetto consente a ogni thread eseguire le attività in modo indipendente.
+
+Oggetto `combinable` oggetto viene in genere usato in due passaggi. In primo luogo, produrre una serie di calcoli accurati effettuando operazioni in parallelo. Successivamente, combinare o ridurre i calcoli in un risultato finale. Questo esempio Usa la [concurrency::combinable::local](reference/combinable-class.md#local) metodo per ottenere un riferimento alla somma locale. Quindi, utilizza il [concurrency::combinable::combine](reference/combinable-class.md#combine) (metodo) e una [std:: Plus](../../standard-library/plus-struct.md) oggetto per combinare i calcoli locali nel risultato finale.
+
+[!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_3.cpp)]
+
+## <a name="example"></a>Esempio
+
+L'esempio completo seguente calcola la somma dei numeri primi sia in modo seriale e in parallelo. Nell'esempio viene stampato nella console il tempo necessario per eseguire entrambi i calcoli.
+
+[!code-cpp[concrt-parallel-sum-of-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_4.cpp)]
+
+L'output di esempio seguente è relativo a un computer con quattro processori.
+
+```Output
+1709600813
+serial time: 6178 ms
+
+1709600813
+parallel time: 1638 ms
+```
+
+## <a name="compiling-the-code"></a>Compilazione del codice
+
+Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `parallel-sum-of-primes.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
+
+**CL.exe /EHsc parallelo-sum-of-primes. cpp**
+
+## <a name="robust-programming"></a>Programmazione efficiente
+
+Per un esempio che usa il mapping e riduzione delle operazioni per produrre gli stessi risultati, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
+[Classe combinable](../../parallel/concrt/reference/combinable-class.md)<br/>
+[Classe critical_section](../../parallel/concrt/reference/critical-section-class.md)

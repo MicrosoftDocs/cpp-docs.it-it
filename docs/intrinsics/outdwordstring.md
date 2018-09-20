@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff43920400028e0fb13fc17615fb58cc551726b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9f81b423838d2daa9915dc5330d23e4ef69273bc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704223"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395063"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
-**Sezione specifica Microsoft**  
-  
- Genera il `rep outsd` (istruzione), che consente di inviare `Count` Double Word a partire `Buffer` attraverso la porta dei / o specificata da `Port`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __outdwordstring(   
-   unsigned short Port,   
-   unsigned long* Buffer,   
-   unsigned long Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+**Sezione specifica Microsoft**
+
+Genera il `rep outsd` (istruzione), che consente di inviare `Count` Double Word a partire `Buffer` attraverso la porta dei / o specificata da `Port`.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __outdwordstring( 
+   unsigned short Port, 
+   unsigned long* Buffer, 
+   unsigned long Count 
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *Porta*<br/>
-[in] La porta per inviare i dati.  
-  
+[in] La porta per inviare i dati.
+
 *Buffer*<br/>
-[in] Puntatore ai dati da inviare attraverso la porta specificata.  
-  
+[in] Puntatore ai dati da inviare attraverso la porta specificata.
+
 *Conteggio*<br/>
-[in] Il numero di parole doppie per l'invio.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__outdwordstring`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questa routine è disponibile solo come funzione intrinseca.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+[in] Il numero di parole doppie per l'invio.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__outdwordstring`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questa routine è disponibile solo come funzione intrinseca.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

@@ -1,5 +1,5 @@
 ---
-title: ON_UPDATE_COMMAND_UI (macro) | Documenti Microsoft
+title: Macro ON_UPDATE_COMMAND_UI | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43caffe53be180221b4145a03df7cfc41c31828e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 17111e24a63d527996eadd82c804e5147ad78552
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928638"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433465"
 ---
 # <a name="onupdatecommandui-macro"></a>Macro ON_UPDATE_COMMAND_UI
-Usare la **proprietà** finestra per connettere un oggetto dell'interfaccia utente a un gestore di aggiornamento di comandi in un oggetto di destinazione di comando. Verrà automaticamente connettersi ID dell'oggetto dell'interfaccia utente per la macro ON_UPDATE_COMMAND_UI e creare un gestore dell'oggetto che gestirà l'aggiornamento. Vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md) per altre informazioni.  
-  
- Ad esempio, per aggiornare un comando Cancella tutto nel menu di modifica del programma, utilizzare il **delle proprietà** finestra per aggiungere una voce della mappa messaggi nella classe selezionata, una dichiarazione di funzione per un gestore di aggiornamento di comando denominata `OnUpdateEditClearAll` nella classe dichiarazione e un modello di funzione vuoti nel file di implementazione della classe. Il prototipo di funzione è simile al seguente:  
-  
- [!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]  
-  
- Come tutti i gestori, la funzione Mostra il **afx_msg** (parola chiave). Come tutti i gestori di aggiornamento, accetta un solo argomento, un puntatore a un `CCmdUI` oggetto.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Procedura: Aggiornare oggetti dell'interfaccia utente](../mfc/how-to-update-user-interface-objects.md)
+
+Usare la **proprietà** finestra per la connessione di un oggetto dell'interfaccia utente a un gestore aggiornamento comandi in un oggetto destinazione comando. Verrà automaticamente ID dell'oggetto dell'interfaccia utente di connessione per la macro ON_UPDATE_COMMAND_UI e creare un gestore dell'oggetto che gestirà l'aggiornamento. Visualizzare [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md) per altre informazioni.
+
+Ad esempio, per aggiornare un comando Cancella tutti i menu di modifica del programma, usare il **delle proprietà** finestra per aggiungere una voce della mappa messaggi nella classe selezionata, una dichiarazione di funzione per un gestore comando-aggiornamento denominata `OnUpdateEditClearAll` nella classe dichiarazione e un modello di funzione vuoti nel file di implementazione della classe. Il prototipo di funzione è simile alla seguente:
+
+[!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]
+
+Come tutti i gestori, la funzione Mostra le **afx_msg** (parola chiave). Come tutti i gestori di aggiornamento, accetta un solo argomento, un puntatore a un `CCmdUI` oggetto.
+
+## <a name="see-also"></a>Vedere anche
+
+[Procedura: Aggiornare oggetti dell'interfaccia utente](../mfc/how-to-update-user-interface-objects.md)
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c5cc7da4629ba00bbb1c48d764b836897c0b3748
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316978"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445028"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>Modifica di una stringa in una risorsa di informazioni di versione (C++)
 
@@ -48,5 +48,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor di informazioni sulla versione](../windows/version-information-editor.md)  
+[Editor di informazioni sulla versione](../windows/version-information-editor.md)<br/>
 [Informazioni sulla versione (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

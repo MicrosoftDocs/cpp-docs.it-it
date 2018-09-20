@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 476df4fa9d2e31b25eb8791e521081eedd2642c6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b87de96f260bdd5bf0faaad6c590b0bd3d6f0dfe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318577"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395011"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-c-image-editor-for-icons"></a>Aprire &lt;dispositivo&gt; immagine nella finestra di dialogo (C++) (Editor di immagini per le icone)
 
@@ -38,5 +38,5 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Menu immagine](../windows/image-menu-image-editor-for-icons.md)  
+[Menu immagine](../windows/image-menu-image-editor-for-icons.md)<br/>
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)

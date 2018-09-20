@@ -16,85 +16,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c34edd258c087f70bc9bb0b732cfd7ca192c791c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ddec38c54dc075e69cb71b9dfd7b991e51e3219c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106103"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407445"
 ---
 # <a name="omptestlock"></a>omp_test_lock
-Tenta di impostare un blocco ma non blocca l'esecuzione del thread.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int omp_test_lock(  
-   omp_lock_t *lock  
-);  
-```  
-  
+
+Tenta di impostare un blocco ma non blocca l'esecuzione del thread.
+
+## <a name="syntax"></a>Sintassi
+
+```
+int omp_test_lock(
+   omp_lock_t *lock
+);
+```
+
 ### <a name="parameters"></a>Parametri
-  
+
 *lock*<br/>
-Una variabile di tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) che è stata inizializzata [funzioni omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
-  
-## <a name="remarks"></a>Note  
- Per altre informazioni, vedere [3.2.5 funzioni omp_test_lock e omp_test_nest_lock funzioni](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// omp_test_lock.cpp  
-// compile with: /openmp  
-#include <stdio.h>  
-#include <omp.h>  
-  
-omp_lock_t simple_lock;                   
-  
-int main() {  
-    omp_init_lock(&simple_lock);  
-  
-    #pragma omp parallel num_threads(4)  
-    {  
-        int tid = omp_get_thread_num();  
-  
-        while (!omp_test_lock(&simple_lock))  
-            printf_s("Thread %d - failed to acquire simple_lock\n",  
-                     tid);  
-  
-        printf_s("Thread %d - acquired simple_lock\n", tid);  
-  
-        printf_s("Thread %d - released simple_lock\n", tid);  
-        omp_unset_lock(&simple_lock);  
-    }  
-  
-    omp_destroy_lock(&simple_lock);  
-}  
-```  
-  
-```Output  
-Thread 1 - acquired simple_lock  
-Thread 1 - released simple_lock  
-Thread 0 - failed to acquire simple_lock  
-Thread 3 - failed to acquire simple_lock  
-Thread 0 - failed to acquire simple_lock  
-Thread 3 - failed to acquire simple_lock  
-Thread 2 - acquired simple_lock  
-Thread 0 - failed to acquire simple_lock  
-Thread 3 - failed to acquire simple_lock  
-Thread 0 - failed to acquire simple_lock  
-Thread 3 - failed to acquire simple_lock  
-Thread 2 - released simple_lock  
-Thread 0 - failed to acquire simple_lock  
-Thread 3 - failed to acquire simple_lock  
-Thread 0 - acquired simple_lock  
-Thread 3 - failed to acquire simple_lock  
-Thread 0 - released simple_lock  
-Thread 3 - failed to acquire simple_lock  
-Thread 3 - acquired simple_lock  
-Thread 3 - released simple_lock  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni](../../../parallel/openmp/reference/openmp-functions.md)
+Una variabile di tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) che è stata inizializzata [funzioni omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).
+
+## <a name="remarks"></a>Note
+
+Per altre informazioni, vedere [3.2.5 funzioni omp_test_lock e omp_test_nest_lock funzioni](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).
+
+## <a name="example"></a>Esempio
+
+```
+// omp_test_lock.cpp
+// compile with: /openmp
+#include <stdio.h>
+#include <omp.h>
+
+omp_lock_t simple_lock;
+
+int main() {
+    omp_init_lock(&simple_lock);
+
+    #pragma omp parallel num_threads(4)
+    {
+        int tid = omp_get_thread_num();
+
+        while (!omp_test_lock(&simple_lock))
+            printf_s("Thread %d - failed to acquire simple_lock\n",
+                     tid);
+
+        printf_s("Thread %d - acquired simple_lock\n", tid);
+
+        printf_s("Thread %d - released simple_lock\n", tid);
+        omp_unset_lock(&simple_lock);
+    }
+
+    omp_destroy_lock(&simple_lock);
+}
+```
+
+```Output
+Thread 1 - acquired simple_lock
+Thread 1 - released simple_lock
+Thread 0 - failed to acquire simple_lock
+Thread 3 - failed to acquire simple_lock
+Thread 0 - failed to acquire simple_lock
+Thread 3 - failed to acquire simple_lock
+Thread 2 - acquired simple_lock
+Thread 0 - failed to acquire simple_lock
+Thread 3 - failed to acquire simple_lock
+Thread 0 - failed to acquire simple_lock
+Thread 3 - failed to acquire simple_lock
+Thread 2 - released simple_lock
+Thread 0 - failed to acquire simple_lock
+Thread 3 - failed to acquire simple_lock
+Thread 0 - acquired simple_lock
+Thread 3 - failed to acquire simple_lock
+Thread 0 - released simple_lock
+Thread 3 - failed to acquire simple_lock
+Thread 3 - acquired simple_lock
+Thread 3 - released simple_lock
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni](../../../parallel/openmp/reference/openmp-functions.md)

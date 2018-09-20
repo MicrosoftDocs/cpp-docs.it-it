@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98edb5945c2cf01d90cd5dae1a750c0fdd37757f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1255c92a7de4a0f1707cd20f91e8b9f1de640942
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723281"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440459"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (opzioni delle informazioni di debug)
 
@@ -54,7 +54,7 @@ Eseguire il debug di codice in modalità utente, come avviene in genere per le a
 
 ## <a name="see-also"></a>Vedere anche
 
-[/DEBUG (Generate Debug Info)](../../build/reference/debug-generate-debug-info.md)
-[/DRIVER (Driver in modalità Kernel Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)
-[/PROFILE (Profiler strumenti di prestazioni)](../../build/reference/profile-performance-tools-profiler.md) 
- [Strumenti di debug per Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
+[/DEBUG (genera informazioni di debug)](../../build/reference/debug-generate-debug-info.md)<br/>
+[/DRIVER (driver in modalità kernel di Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (profiler strumenti di prestazioni)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[Strumenti di debug per Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)

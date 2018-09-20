@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9b9be3cd2de53c957074d2acdee18183d688852
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ae4c8834609552c469eff8ca382a4e14ca077cfd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719121"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428187"
 ---
 # <a name="codeseg"></a>code_seg
 Specifica il segmento di testo in cui le funzioni vengono archiviate nel file OBJ.  
@@ -96,5 +96,5 @@ Per un elenco di nomi che non deve essere utilizzato per creare una sezione, ved
   
 ## <a name="see-also"></a>Vedere anche  
  
-[code_seg (__declspec)](../cpp/code-seg-declspec.md)   
+[code_seg (__declspec)](../cpp/code-seg-declspec.md)<br/>
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

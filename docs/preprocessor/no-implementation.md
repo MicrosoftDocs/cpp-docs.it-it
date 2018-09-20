@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbf715e2cbd19d139904438e722e4d0b72e29f29
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c882a8d4eb2510969401b4280eb66116ad220c77
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539799"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440836"
 ---
 # <a name="noimplementation"></a>no_implementation
 **Sezione specifica C++**  
@@ -44,5 +44,5 @@ Questo attributo viene usato in combinazione con [implementation_only](../prepro
   
 ## <a name="see-also"></a>Vedere anche  
  
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

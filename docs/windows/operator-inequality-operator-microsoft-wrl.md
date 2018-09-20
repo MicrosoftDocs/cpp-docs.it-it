@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1bab8c35a749240c839eaef5b652c1e3ec90b7b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 83ddb1b34b4d1b2db5ae569e751f45f8de85c7b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609411"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424061"
 ---
 # <a name="operator-operator-microsoftwrl"></a>Operatore operator!= (Microsoft::WRL)
 
@@ -65,10 +65,10 @@ WRL_NOTHROW bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*a*  
+*a*<br/>
 Oggetto a sinistra.
 
-*b*  
+*b*<br/>
 Oggetto a destra.
 
 ## <a name="return-value"></a>Valore restituito

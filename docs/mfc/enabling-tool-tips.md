@@ -1,5 +1,5 @@
 ---
-title: Abilitazione di descrizioni comandi | Documenti Microsoft
+title: Abilitazione di descrizioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598583360eca2a65a5352fc9d284d8d359ac021c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 968d31b49c6d2b2fe5a5f69e04f58f17de8df5a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346136"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440485"
 ---
 # <a name="enabling-tool-tips"></a>Abilitazione di descrizioni comandi
-È possibile abilitare il supporto della descrizione comandi per i controlli figlio di una finestra (quali i controlli in una visualizzazione form o in una finestra di dialogo).  
-  
-### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>Per abilitare le descrizioni comandi per i controlli figlio di una finestra  
-  
-1.  Chiamare `EnableToolTips` per la finestra per la quale si desidera fornire le descrizioni comandi.  
-  
-2.  Specificare una stringa per ogni controllo del [della notifica TTN_NEEDTEXT](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) gestore. Il gestore è nella mappa messaggi della finestra che contiene i controlli figlio (ad esempio, la classe di visualizzazione form). Questo gestore deve chiamare una funzione che identifica il controllo e imposta **pszText** per specificare il testo utilizzato per il controllo descrizione comandi.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Descrizioni comandi in Windows non derivate da CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+È possibile abilitare il supporto della descrizione comandi per i controlli figlio di una finestra (quali i controlli in una visualizzazione form o in una finestra di dialogo).
+
+### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>Per abilitare le descrizioni comandi per i controlli figlio di una finestra
+
+1. Chiamare `EnableToolTips` per la finestra per la quale si desidera fornire le descrizioni comandi.
+
+1. Specificare una stringa per ogni controllo nel [notifica TTN_NEEDTEXT](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) gestore. Il gestore è nella mappa messaggi della finestra che contiene i controlli figlio (ad esempio, la classe di visualizzazione form). Questo gestore deve chiamare una funzione che identifica il controllo e imposta **pszText** per specificare il testo utilizzato per il controllo descrizione comando.
+
+## <a name="see-also"></a>Vedere anche
+
+[Descrizioni comandi in Windows non derivate da CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

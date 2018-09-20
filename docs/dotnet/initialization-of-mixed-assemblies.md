@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204542"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439575"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inizializzazione di assembly misti
 
 Gli sviluppatori di Windows devono essere sempre diffidenti nei confronti del blocco del caricatore durante l'esecuzione di codice durante `DllMain`. Tuttavia, esistono alcune considerazioni aggiuntive che entrano in gioco quando si lavora con C + + / assembly clr in modalità mista.
 
 Il codice all'interno [DllMain](/windows/desktop/Dlls/dllmain) non deve accedere a CLR. Questo significa che `DllMain` non deve chiamare direttamente o indirettamente funzioni gestite, che nessun codice gestito deve essere dichiarato o implementato in `DllMain`e che all'interno di `DllMain`non deve avere luogo nessuna procedura di Garbage Collection o caricamento automatico di libreria.
-  
+
 ## <a name="causes-of-loader-lock"></a>Cause del blocco del caricatore
 
 Con l'introduzione della piattaforma .NET sono stati resi disponibili due distinti meccanismi per il caricamento di un modulo di esecuzione (EXE o DLL): uno per Windows, usaro per i moduli non gestiti, e uno per Common Language Runtime (CLR) di .NET che consente il caricamento di assembly .NET. Il problema del caricamento delle DLL miste verte intorno al caricatore del sistema operativo Microsoft Windows.
@@ -130,7 +130,7 @@ Poiché la stessa intestazione può essere inclusa da file di C++ con **/clr** a
 Per facilitare la gestione del blocco del caricatore da parte degli utenti, il linker sceglierà l'implementazione nativa invece dell'implementazione gestita, se presenti entrambe. In questo modo si evitano i problemi riportati sopra. In questa versione ci sono tuttavia due eccezioni a questa regola a causa di due problemi irrisolti con il compilatore:
 
 - La chiamata di una funzione inline avviene tramite un puntatore a funzione statico globale. Questo scenario è particolarmente rilevante perché le funzioni virtuali vengono chiamate tramite puntatori a funzione globali. Ad esempio,
-  
+
 ```cpp
 #include "definesmyObject.h"
 #include "definesclassC.h"
@@ -170,15 +170,15 @@ Per identificare la funzione MSIL specifica chiamata con il blocco del caricator
    A tale scopo, aprire il **proprietà** griglia per il progetto di avvio nella soluzione. Selezionare **le proprietà di configurazione** > **debug**. Impostare il **tipo di Debugger** al **solo nativo**.
 
 1. Avviare il debugger (F5).
-  
+
 1. Quando la **/clr** diagnostica viene generata, scegliere **ripetere** e quindi scegliere **Interrompi**.
-  
+
 1. Aprire la finestra dello stack di chiamate (Nella barra dei menu, scegliere **Debug** > **Windows** > **Stack di chiamate**.) La funzione `DllMain` o inizializzatore statico viene identificato con una freccia verde. Se la funzione che crea il problema non viene identificata, è necessario eseguire la procedura riportata di seguito per trovarla.
 
 1. Aprire il **controllo immediato** finestra (sulla barra dei menu, scegliere **Debug** > **Windows** > **immediato**.)
 
 1. Digitare. Load SOS. dll nel **Immediate** finestra per caricare il servizio del debugger SOS.
-  
+
 1. Digitare! dumpstack nella **controllo immediato** finestra per visualizzare un elenco completo dell'interno **/clr** dello stack.
 
 1. Cercare la prima istanza (il più vicino alla parte inferiore dello stack) di CorDllMain (se `DllMain` causa il problema) o creare o GetTargetForVTableEntry (se un inizializzatore static causa il problema). La voce riportata sotto questa chiamata corrisponde alla chiamata della funzione implementata MSIL che ha tentato l'esecuzione con il blocco del caricatore attivo.

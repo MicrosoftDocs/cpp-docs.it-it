@@ -1,5 +1,5 @@
 ---
-title: A.29 condivisione utilizzo di lavoro costruisce all'interno di un costrutto critical | Documenti Microsoft
+title: A.29 uso di condivisione lavoro costruisce in un costrutto critical | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,35 +12,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccbb39a9067adf545339d02fe0c05e24fbcdb0a4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8574687d8fa037e0adca908e3aa761a2619d26a8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691352"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424144"
 ---
 # <a name="a29---use-of-work-sharing-constructs-inside-a-critical-construct"></a>A.29   Utilizzo di costrutti per la condivisione del lavoro in un costrutto critical
-Nell'esempio seguente viene illustrato come utilizzare un costrutto di condivisione del lavoro all'interno di un `critical` costruire. In questo esempio è conforme perché la condivisione del lavoro costruire e `critical` costrutto non è possibile associare alla stessa area parallela.  
-  
-```  
-void f()  
-{  
-  int i = 1;  
-  #pragma omp parallel sections  
-  {  
-    #pragma omp section  
-    {  
-      #pragma omp critical (name)  
-      {  
-        #pragma omp parallel  
-        {  
-          #pragma omp single  
-          {  
-            i++;  
-          }  
-        }  
-      }  
-    }  
-  }  
-}  
+
+Nell'esempio seguente viene illustrato come utilizzare un costrutto di condivisione del lavoro all'interno di un `critical` costruire. In questo esempio è conforme perché la condivisione del lavoro costruire e `critical` costrutto non deve essere associato alla stessa area parallela.
+
+```
+void f()
+{
+  int i = 1;
+  #pragma omp parallel sections
+  {
+    #pragma omp section
+    {
+      #pragma omp critical (name)
+      {
+        #pragma omp parallel
+        {
+          #pragma omp single
+          {
+            i++;
+          }
+        }
+      }
+    }
+  }
+}
 ```

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fecfd06e26d9c49c3442e5b8011f6183a96cec0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e0594e5b9e2d092330664546cbd05ccfb0060c42
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314638"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428967"
 ---
 # <a name="accelerator-key-property-c"></a>Tasti di scelta rapida proprietà chiave (C++)
 
@@ -54,6 +54,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle proprietà dei tasti di scelta rapida](../windows/setting-accelerator-properties.md)  
-[Modifica in una tabella dei tasti di scelta rapida](../windows/editing-in-an-accelerator-table.md)  
+[Impostazione delle proprietà dei tasti di scelta rapida](../windows/setting-accelerator-properties.md)<br/>
+[Modifica in una tabella dei tasti di scelta rapida](../windows/editing-in-an-accelerator-table.md)<br/>
 [Editor tasti di scelta rapida](../windows/accelerator-editor.md)

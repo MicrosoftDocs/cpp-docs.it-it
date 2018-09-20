@@ -1,5 +1,5 @@
 ---
-title: 1. Introduzione | Documenti Microsoft
+title: 1. Introduzione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883af9cb48a0fb13dbb9a758d6f8174096d4c0c3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4ce963d312d145e26567a5902f32e45735eb1d89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685840"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438418"
 ---
 # <a name="1-introduction"></a>1. Introduzione
-Questo documento specifica una raccolta di direttive del compilatore, le funzioni della libreria e le variabili di ambiente che possono essere usate per specificare il parallelismo di memoria condivisa in programmi C e C++. La funzionalità descritta in questo documento è note come il *OpenMP C/C++ dell'interfaccia API (Application Program)*. L'obiettivo di questa specifica è di per fornire un modello di programmazione in parallelo che consente a un programma garantire la portabilità tra le architetture di memoria condivisa da diversi fornitori. L'API di C/C++ OpenMP saranno supportato dai compilatori da numerosi fornitori. Ulteriori informazioni su OpenMP, inclusi il *OpenMP Fortran Application Program Interface*, visitare il seguente sito web:  
-  
- [http://www.openmp.org](http://www.openmp.org)  
-  
- Le direttive, le funzioni della libreria e variabili di ambiente definite in questo documento consente agli utenti di creare e gestire applicazioni parallele, permettendo portabilità. C di estendere le direttive per il modello di programmazione sequenziale C++ con singolo programma di più costrutti di dati (SPMD), costrutti di condivisione del lavoro e i costrutti di sincronizzazione e forniscono supporto per la condivisione e privatizzazione dei dati. I compilatori che supportano le API C++ OpenMP C include un'opzione della riga di comando per il compilatore che attiva e consente l'interpretazione di tutte le direttive del compilatore OpenMP.
+
+Questo documento specifica una raccolta di direttive del compilatore, le funzioni della libreria e le variabili di ambiente che possono essere utilizzate per specificare il parallelismo di memoria condivisa nei programmi C e C++. Le funzionalità descritte in questo documento sono note come le *OpenMP C/C++ dell'interfaccia API (Application Program)*. L'obiettivo di questa specifica è fornire un modello di programmazione parallela che consente a un programma per garantire la portabilità tra le architetture di memoria condivisa di fornitori diversi. L'API C/C++ OpenMP saranno supportato dai compilatori di diversi fornitori. Ulteriori informazioni su OpenMP, tra cui il *OpenMP Fortran Application Program Interface*, sono disponibili nel sito web seguente:
+
+[http://www.openmp.org](http://www.openmp.org)
+
+Le direttive, le funzioni della libreria e variabili di ambiente definite in questo documento consentirà agli utenti di creare e gestire i programmi paralleli, permettendo di portabilità. Le direttive di estendono i C e programmazione sequenziale C++ modellare con singolo programma più costrutti di dati (SPMD), costrutti di condivisione del lavoro e costrutti di sincronizzazione e forniscono il supporto per la condivisione e privatizzazione dei dati. I compilatori che supportano il OpenMP C e C++ API includerà un'opzione della riga di comando del compilatore che viene attivato e consente l'interpretazione di tutte le direttive del compilatore OpenMP.

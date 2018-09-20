@@ -1,5 +1,5 @@
 ---
-title: Rettangoli di selezione e Tracker | Documenti Microsoft
+title: Rettangoli di selezione e Tracker | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ed6e649309acf86e24c52bf8b50a859d0ac066ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931736"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428200"
 ---
 # <a name="rubber-banding-and-trackers"></a>Selezione e tracker
-Un'altra funzionalità fornita dagli strumenti di rilevamento è il rettangolo di selezione, che consente a un utente di selezionare più elementi OLE trascinando un rettangolo di ridimensionamento attorno agli elementi da selezionare. Quando l'utente rilascia il pulsante sinistro del mouse, gli elementi inclusi nell'area selezionata vengono selezionati e possono essere modificati dall'utente. Ad esempio, l'utente può trascinare la selezione in un'altra applicazione contenitore.  
-  
- Implementazione di questa funzionalità richiede codice aggiuntivo nella funzione del gestore WM_LBUTTONDOWN dell'applicazione.  
-  
- Nell'esempio di codice seguente sono implementati il rettangolo di selezione e funzionalità aggiuntive.  
-  
- [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]  
-  
- Se si desidera consentire l'orientamento reversibile dello strumento di rilevamento durante rettangoli di selezione, è necessario chiamare [CRectTracker:: TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) con il terzo parametro impostato su **TRUE**. Tenere presente che consentire l'orientamento reversibile può talvolta indurre [CRectTracker:: M_rect](../mfc/reference/crecttracker-class.md#m_rect) per diventare invertito. Questo può essere corretto mediante una chiamata a [CRect:: NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect).  
-  
- Per altre informazioni, vedere [elementi Client dei contenitori](../mfc/containers-client-items.md) e [personalizzazione di trascinamento della selezione](../mfc/drag-and-drop-customizing.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Tracker: Implementazione di tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)   
- [Classe CRectTracker](../mfc/reference/crecttracker-class.md)
+
+Un'altra funzionalità fornita dagli strumenti di rilevamento è il rettangolo di selezione, che consente a un utente di selezionare più elementi OLE trascinando un rettangolo di ridimensionamento attorno agli elementi da selezionare. Quando l'utente rilascia il pulsante sinistro del mouse, gli elementi inclusi nell'area selezionata vengono selezionati e possono essere modificati dall'utente. Ad esempio, l'utente può trascinare la selezione in un'altra applicazione contenitore.
+
+Implementazione di questa funzionalità richiede codice aggiuntivo nella funzione del gestore WM_LBUTTONDOWN dell'applicazione.
+
+Nell'esempio di codice seguente sono implementati il rettangolo di selezione e funzionalità aggiuntive.
+
+[!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]
+
+Se si desidera consentire l'orientamento reversibile dello strumento di rilevamento durante la selezione, è necessario chiamare [CRectTracker](../mfc/reference/crecttracker-class.md#trackrubberband) con il terzo parametro impostato su **TRUE**. Tenere presente che consentire l'orientamento reversibile può talvolta indurre [CRectTracker::](../mfc/reference/crecttracker-class.md#m_rect) m_rect. Ciò può essere corretto da una chiamata a [CRect:: NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect).
+
+Per altre informazioni, vedere [elementi Client dei contenitori](../mfc/containers-client-items.md) e [personalizzazione di trascinamento della selezione](../mfc/drag-and-drop-customizing.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Tracker: implementazione di tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
+[Classe CRectTracker](../mfc/reference/crecttracker-class.md)

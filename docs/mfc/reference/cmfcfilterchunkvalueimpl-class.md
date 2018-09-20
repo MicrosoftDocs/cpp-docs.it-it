@@ -56,599 +56,654 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdce28feddfca0789306a16f8dc6d047dc375120
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 612a67b72e931d1c7cea49238201320cb7b60585
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538277"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427069"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
-Si tratta di una classe che semplifica la logica di blocchi e proprietà coppia di valori.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Distrugge l'oggetto.|  
-|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Costruisce l'oggetto.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CMFCFilterChunkValueImpl::Clear](#clear)|Cancella il ChunkValue.|  
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copia questo blocco a una struttura che descrive le caratteristiche di un blocco.|  
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Inizializza questo valore di blocco da di altro valore.|  
-|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Recupera il GUID di blocco.|  
-|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Recupera il blocco PID (ID di proprietà).|  
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Ottiene chunk tipo.|  
-|[CMFCFilterChunkValueImpl::GetString](#getstring)|Recupera il valore di stringa.|  
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Recupera il valore come un propvariant allocato.|  
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Valore restituisce non allocato (valore interno).|  
-|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Controlla se il valore della proprietà è valido o meno.|  
-|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Di overload. Imposta la proprietà da chiave in un valore booleano.|  
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Imposta la proprietà dalla chiave a un valore DWORD.|  
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Imposta la proprietà dalla chiave di un filetime.|  
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Imposta la proprietà da chiave in un int64.|  
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Imposta la proprietà da chiave in un int.|  
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Imposta la proprietà dalla chiave su un valore LONG.|  
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Imposta la proprietà da chiave per un SystemTime.|  
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Imposta la proprietà da chiave in una stringa Unicode.|  
-  
-### <a name="protected-methods"></a>Metodi protetti  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Una funzione helper che consente di impostare le proprietà comuni del blocco.|  
-  
-## <a name="remarks"></a>Note  
- Per usare, è sufficiente creare una classe CMFCFilterChunkValueImpl del tipo corretto  
-  
- Esempio:  
-  
- Blocco CMFCFilterChunkValueImpl;  
-  
- hr = blocco. SetBoolValue(PKEY_IsAttachment, true);  
-  
- oppure  
-  
- hr = blocco. SetFileTimeValue (PKEY_ItemDate, ftLastModified);  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `ATL::IFilterChunkValue`  
-  
- [CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxwin.h  
-  
-##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear  
- Cancella il ChunkValue.  
-  
-```  
+
+Si tratta di una classe che semplifica la logica di blocchi e proprietà coppia di valori.
+
+## <a name="syntax"></a>Sintassi
+
+```
+class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Distrugge l'oggetto.|
+|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Costruisce l'oggetto.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CMFCFilterChunkValueImpl::Clear](#clear)|Cancella il ChunkValue.|
+|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copia questo blocco a una struttura che descrive le caratteristiche di un blocco.|
+|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Inizializza questo valore di blocco da di altro valore.|
+|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Recupera il GUID di blocco.|
+|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Recupera il blocco PID (ID di proprietà).|
+|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Ottiene chunk tipo.|
+|[CMFCFilterChunkValueImpl::GetString](#getstring)|Recupera il valore di stringa.|
+|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Recupera il valore come un propvariant allocato.|
+|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Valore restituisce non allocato (valore interno).|
+|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Controlla se il valore della proprietà è valido o meno.|
+|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Di overload. Imposta la proprietà da chiave in un valore booleano.|
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Imposta la proprietà dalla chiave a un valore DWORD.|
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Imposta la proprietà dalla chiave di un filetime.|
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Imposta la proprietà da chiave in un int64.|
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Imposta la proprietà da chiave in un int.|
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Imposta la proprietà dalla chiave su un valore LONG.|
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Imposta la proprietà da chiave per un SystemTime.|
+|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Imposta la proprietà da chiave in una stringa Unicode.|
+
+### <a name="protected-methods"></a>Metodi protetti
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Una funzione helper che consente di impostare le proprietà comuni del blocco.|
+
+## <a name="remarks"></a>Note
+
+Per usare, è sufficiente creare una classe CMFCFilterChunkValueImpl del tipo corretto
+
+Esempio:
+
+Blocco CMFCFilterChunkValueImpl;
+
+hr = blocco. SetBoolValue(PKEY_IsAttachment, true);
+
+oppure
+
+hr = blocco. SetFileTimeValue (PKEY_ItemDate, ftLastModified);
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`ATL::IFilterChunkValue`
+
+[CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** afxwin.h
+
+##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear
+
+Cancella il ChunkValue.
+
+```
 void Clear();
-```  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
- Costruisce l'oggetto.  
-  
-```  
+```
+
+### <a name="remarks"></a>Note
+
+##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
+
+Costruisce l'oggetto.
+
+```
 CMFCFilterChunkValueImpl();
-```  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
- Distrugge l'oggetto.  
-  
-```  
+```
+
+### <a name="remarks"></a>Note
+
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl
+
+Distrugge l'oggetto.
+
+```
 virtual ~CMFCFilterChunkValueImpl();
-```  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
- Copia questo blocco a una struttura che descrive le caratteristiche di un blocco.  
-  
-```  
+```
+
+### <a name="remarks"></a>Note
+
+##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk
+
+Copia questo blocco a una struttura che descrive le caratteristiche di un blocco.
+
+```
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pStatChunk*  
- Puntatore al valore di destinazione che descrivono le caratteristiche del blocco.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
- Inizializza questo valore di blocco da di altro valore.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pStatChunk*<br/>
+Puntatore al valore di destinazione che descrivono le caratteristiche del blocco.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom
+
+Inizializza questo valore di blocco da di altro valore.
+
+```
 void CopyFrom (IFilterChunkValue* pValue);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pValue*  
- Specifica il valore di origine da copiare da.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID  
- Recupera il GUID di blocco.  
-  
-```  
-REFGUID GetChunkGUID() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Un riferimento a un GUID che identifica il blocco.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID  
- Recupera il blocco PID (ID di proprietà).  
-  
-```  
-DWORD GetChunkPID() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Un valore DWORD che contiene l'ID di proprietà.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType  
- Recupera il tipo di blocco.  
-  
-```  
-CHUNKSTATE GetChunkType() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Valore CHUNKSTATE enumerato che specifica se il blocco corrente è una proprietà di tipo testo o una proprietà del tipo di valore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString  
- Recupera il valore di stringa.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pValue*<br/>
+Specifica il valore di origine da copiare da.
+
+### <a name="remarks"></a>Note
+
+##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID
+
+Recupera il GUID di blocco.
+
+```
+REFGUID GetChunkGUID() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Un riferimento a un GUID che identifica il blocco.
+
+### <a name="remarks"></a>Note
+
+##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID
+
+Recupera il blocco PID (ID di proprietà).
+
+```
+DWORD GetChunkPID() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Un valore DWORD che contiene l'ID di proprietà.
+
+### <a name="remarks"></a>Note
+
+##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType
+
+Recupera il tipo di blocco.
+
+```
+CHUNKSTATE GetChunkType() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Valore CHUNKSTATE enumerato che specifica se il blocco corrente è una proprietà di tipo testo o una proprietà del tipo di valore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString
+
+Recupera il valore di stringa.
+
+```
 CString &GetString();
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Stringa contenente il valore di blocco.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
- Recupera il valore come un propvariant allocato.  
-  
-```  
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Stringa contenente il valore di blocco.
+
+### <a name="remarks"></a>Note
+
+##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue
+
+Recupera il valore come un propvariant allocato.
+
+```
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *ppPropVariant*  
- Quando la funzione termina, questo parametro contiene il valore di blocco.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se è stato allocato correttamente PROPVARIANT e il valore di blocco è stato correttamente copiato *ppPropVariant*; in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc  
- Restituisce il valore non allocato (valore interno).  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*ppPropVariant*<br/>
+Quando la funzione termina, questo parametro contiene il valore di blocco.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se è stato allocato correttamente PROPVARIANT e il valore di blocco è stato correttamente copiato *ppPropVariant*; in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc
+
+Restituisce il valore non allocato (valore interno).
+
+```
 PROPVARIANT GetValueNoAlloc ();
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di blocco corrente.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid  
- Controlla se il valore della proprietà è valido o meno.  
-  
-```  
-BOOL IsValid() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- TRUE se il valore di blocco corrente è valido. in caso contrario, FALSE.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue  
- Di overload. Imposta la proprietà da chiave in un valore booleano.  
-  
-```  
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce il valore di blocco corrente.
+
+### <a name="remarks"></a>Note
+
+##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid
+
+Controlla se il valore della proprietà è valido o meno.
+
+```
+BOOL IsValid() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+TRUE se il valore di blocco corrente è valido. in caso contrario, FALSE.
+
+### <a name="remarks"></a>Note
+
+##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue
+
+Di overload. Imposta la proprietà da chiave in un valore booleano.
+
+```
 HRESULT SetBoolValue(
-    REFPROPERTYKEY pkey,  
-    BOOL bVal,  
-    CHUNKSTATE chunkType = CHUNK_VALUE,  
-    LCID locale = 0,  
-    DWORD cwcLenSource = 0,  
-    DWORD cwcStartSource = 0,  
+    REFPROPERTYKEY pkey,
+    BOOL bVal,
+    CHUNKSTATE chunkType = CHUNK_VALUE,
+    LCID locale = 0,
+    DWORD cwcLenSource = 0,
+    DWORD cwcStartSource = 0,
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 
- 
+
 HRESULT SetBoolValue(
-    REFPROPERTYKEY pkey,  
-    VARIANT_BOOL bVal,  
-    CHUNKSTATE chunkType = CHUNK_VALUE,  
-    LCID locale = 0,  
-    DWORD cwcLenSource = 0,  
-    DWORD cwcStartSource = 0,  
+    REFPROPERTYKEY pkey,
+    VARIANT_BOOL bVal,
+    CHUNKSTATE chunkType = CHUNK_VALUE,
+    LCID locale = 0,
+    DWORD cwcLenSource = 0,
+    DWORD cwcStartSource = 0,
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pkey*  
- Specifica una chiave della proprietà.  
-  
- *bVal*  
- Specifica il valore di blocco da impostare.  
-  
- *chunkType*  
- Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.  
-  
- *locale*  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.  
-  
- *cwcLenSource*  
- La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.  
-  
- *cwcStartSource*  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
-  
- *chunkBreakType*  
- Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
- Una funzione helper che consente di impostare le proprietà comuni del blocco.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pkey*<br/>
+Specifica una chiave della proprietà.
+
+*bVal*<br/>
+Specifica il valore di blocco da impostare.
+
+*chunkType*<br/>
+Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.
+
+*locale*<br/>
+La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.
+
+*cwcLenSource*<br/>
+La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.
+
+*cwcStartSource*<br/>
+Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.
+
+*chunkBreakType*<br/>
+Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk
+
+Una funzione helper che consente di impostare le proprietà comuni del blocco.
+
+```
 HRESULT SetChunk(
-    REFPROPERTYKEY pkey,  
-    CHUNKSTATE chunkType=CHUNK_VALUE,  
-    LCID locale=0,  
-    DWORD cwcLenSource=0,  
-    DWORD cwcStartSource=0,  
+    REFPROPERTYKEY pkey,
+    CHUNKSTATE chunkType=CHUNK_VALUE,
+    LCID locale=0,
+    DWORD cwcLenSource=0,
+    DWORD cwcStartSource=0,
     CHUNK_BREAKTYPE chunkBreakType=CHUNK_NO_BREAK);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pkey*  
- Specifica una chiave della proprietà.  
-  
- *chunkType*  
- Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.  
-  
- *locale*  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.  
-  
- *cwcLenSource*  
- La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.  
-  
- *cwcStartSource*  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
-  
- *chunkBreakType*  
- Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. codice di errore in caso contrario.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
- Impostare la proprietà dalla chiave a un valore DWORD.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pkey*<br/>
+Specifica una chiave della proprietà.
+
+*chunkType*<br/>
+Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.
+
+*locale*<br/>
+La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.
+
+*cwcLenSource*<br/>
+La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.
+
+*cwcStartSource*<br/>
+Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.
+
+*chunkBreakType*<br/>
+Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. codice di errore in caso contrario.
+
+### <a name="remarks"></a>Note
+
+##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue
+
+Impostare la proprietà dalla chiave a un valore DWORD.
+
+```
 HRESULT SetDwordValue(
-    REFPROPERTYKEY pkey,  
-    DWORD dwVal,  
-    CHUNKSTATE chunkType = CHUNK_VALUE,  
-    LCID locale = 0,  
-    DWORD cwcLenSource = 0,  
-    DWORD cwcStartSource = 0,  
+    REFPROPERTYKEY pkey,
+    DWORD dwVal,
+    CHUNKSTATE chunkType = CHUNK_VALUE,
+    LCID locale = 0,
+    DWORD cwcLenSource = 0,
+    DWORD cwcStartSource = 0,
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pkey*  
- Specifica una chiave della proprietà.  
-  
- *dwVal*  
- Specifica il valore di blocco da impostare.  
-  
- *chunkType*  
- Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.  
-  
- *locale*  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.  
-  
- *cwcLenSource*  
- La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.  
-  
- *cwcStartSource*  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
-  
- *chunkBreakType*  
- Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
- Impostare la proprietà dalla chiave di un filetime.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pkey*<br/>
+Specifica una chiave della proprietà.
+
+*dwVal*<br/>
+Specifica il valore di blocco da impostare.
+
+*chunkType*<br/>
+Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.
+
+*locale*<br/>
+La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.
+
+*cwcLenSource*<br/>
+La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.
+
+*cwcStartSource*<br/>
+Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.
+
+*chunkBreakType*<br/>
+Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue
+
+Impostare la proprietà dalla chiave di un filetime.
+
+```
 HRESULT SetFileTimeValue(
-    REFPROPERTYKEY pkey,  
-    FILETIME dtVal,  
-    CHUNKSTATE chunkType = CHUNK_VALUE,  
-    LCID locale = 0,  
-    DWORD cwcLenSource = 0,  
-    DWORD cwcStartSource = 0,  
+    REFPROPERTYKEY pkey,
+    FILETIME dtVal,
+    CHUNKSTATE chunkType = CHUNK_VALUE,
+    LCID locale = 0,
+    DWORD cwcLenSource = 0,
+    DWORD cwcStartSource = 0,
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pkey*  
- Specifica una chiave della proprietà.  
-  
- *dtVal*  
- Specifica il valore di blocco da impostare.  
-  
- *chunkType*  
- Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.  
-  
- *locale*  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.  
-  
- *cwcLenSource*  
- La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.  
-  
- *cwcStartSource*  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
-  
- *chunkBreakType*  
- Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
- Impostare la proprietà da chiave in un int64.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pkey*<br/>
+Specifica una chiave della proprietà.
+
+*dtVal*<br/>
+Specifica il valore di blocco da impostare.
+
+*chunkType*<br/>
+Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.
+
+*locale*<br/>
+La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.
+
+*cwcLenSource*<br/>
+La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.
+
+*cwcStartSource*<br/>
+Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.
+
+*chunkBreakType*<br/>
+Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value
+
+Impostare la proprietà da chiave in un int64.
+
+```
 HRESULT SetInt64Value(
-    REFPROPERTYKEY pkey,  
-    __int64 nVal,  
-    CHUNKSTATE chunkType = CHUNK_VALUE,  
-    LCID locale = 0,  
-    DWORD cwcLenSource = 0,  
-    DWORD cwcStartSource = 0,  
+    REFPROPERTYKEY pkey,
+    __int64 nVal,
+    CHUNKSTATE chunkType = CHUNK_VALUE,
+    LCID locale = 0,
+    DWORD cwcLenSource = 0,
+    DWORD cwcStartSource = 0,
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pkey*  
- Specifica una chiave della proprietà.  
-  
- *nVal*  
- Specifica il valore di blocco da impostare.  
-  
- *chunkType*  
- Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.  
-  
- *locale*  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.  
-  
- *cwcLenSource*  
- La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.  
-  
- *cwcStartSource*  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
-  
- *chunkBreakType*  
- Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
- Impostare la proprietà da chiave in un int.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pkey*<br/>
+Specifica una chiave della proprietà.
+
+*nVal*<br/>
+Specifica il valore di blocco da impostare.
+
+*chunkType*<br/>
+Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.
+
+*locale*<br/>
+La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.
+
+*cwcLenSource*<br/>
+La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.
+
+*cwcStartSource*<br/>
+Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.
+
+*chunkBreakType*<br/>
+Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue
+
+Impostare la proprietà da chiave in un int.
+
+```
 HRESULT SetIntValue(
-    REFPROPERTYKEY pkey,  
-    int nVal,  
-    CHUNKSTATE chunkType = CHUNK_VALUE,  
-    LCID locale = 0,  
-    DWORD cwcLenSource = 0,  
-    DWORD cwcStartSource = 0,  
+    REFPROPERTYKEY pkey,
+    int nVal,
+    CHUNKSTATE chunkType = CHUNK_VALUE,
+    LCID locale = 0,
+    DWORD cwcLenSource = 0,
+    DWORD cwcStartSource = 0,
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pkey*  
- Specifica una chiave della proprietà.  
-  
- *nVal*  
- Specifica il valore di blocco da impostare.  
-  
- *chunkType*  
- Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.  
-  
- *locale*  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.  
-  
- *cwcLenSource*  
- La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.  
-  
- *cwcStartSource*  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
-  
- *chunkBreakType*  
- Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
- Impostare la proprietà dalla chiave su un valore LONG.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pkey*<br/>
+Specifica una chiave della proprietà.
+
+*nVal*<br/>
+Specifica il valore di blocco da impostare.
+
+*chunkType*<br/>
+Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.
+
+*locale*<br/>
+La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.
+
+*cwcLenSource*<br/>
+La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.
+
+*cwcStartSource*<br/>
+Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.
+
+*chunkBreakType*<br/>
+Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue
+
+Impostare la proprietà dalla chiave su un valore LONG.
+
+```
 HRESULT SetLongValue(
-    REFPROPERTYKEY pkey,  
-    long lVal,  
-    CHUNKSTATE chunkType = CHUNK_VALUE,  
-    LCID locale = 0,  
-    DWORD cwcLenSource = 0,  
-    DWORD cwcStartSource = 0,  
+    REFPROPERTYKEY pkey,
+    long lVal,
+    CHUNKSTATE chunkType = CHUNK_VALUE,
+    LCID locale = 0,
+    DWORD cwcLenSource = 0,
+    DWORD cwcStartSource = 0,
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pkey*  
- Specifica una chiave della proprietà.  
-  
- *lVal*  
- Specifica il valore di blocco da impostare.  
-  
- *chunkType*  
- Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.  
-  
- *locale*  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.  
-  
- *cwcLenSource*  
- La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.  
-  
- *cwcStartSource*  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
-  
- *chunkBreakType*  
- Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
- Imposta la proprietà da chiave per un SystemTime.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pkey*<br/>
+Specifica una chiave della proprietà.
+
+*lVal*<br/>
+Specifica il valore di blocco da impostare.
+
+*chunkType*<br/>
+Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.
+
+*locale*<br/>
+La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.
+
+*cwcLenSource*<br/>
+La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.
+
+*cwcStartSource*<br/>
+Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.
+
+*chunkBreakType*<br/>
+Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue
+
+Imposta la proprietà da chiave per un SystemTime.
+
+```
 HRESULT SetSystemTimeValue(
-    REFPROPERTYKEY pkey,  
-    const SYSTEMTIME& systemTime,  
-    CHUNKSTATE chunkType = CHUNK_VALUE,  
-    LCID locale=0,  
-    DWORD cwcLenSource=0,  
-    DWORD cwcStartSource=0,  
+    REFPROPERTYKEY pkey,
+    const SYSTEMTIME& systemTime,
+    CHUNKSTATE chunkType = CHUNK_VALUE,
+    LCID locale=0,
+    DWORD cwcLenSource=0,
+    DWORD cwcStartSource=0,
     CHUNK_BREAKTYPE chunkBreakType=CHUNK_NO_BREAK);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pkey*  
- Specifica una chiave della proprietà.  
-  
- *systemTime*  
- Specifica il valore di blocco da impostare.  
-  
- *chunkType*  
- Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.  
-  
- *locale*  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.  
-  
- *cwcLenSource*  
- La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.  
-  
- *cwcStartSource*  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
-  
- *chunkBreakType*  
- Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
- Imposta la proprietà da chiave in una stringa Unicode.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+*pkey*<br/>
+Specifica una chiave della proprietà.
+
+*systemTime*<br/>
+Specifica il valore di blocco da impostare.
+
+*chunkType*<br/>
+Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.
+
+*locale*<br/>
+La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.
+
+*cwcLenSource*<br/>
+La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.
+
+*cwcStartSource*<br/>
+Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.
+
+*chunkBreakType*<br/>
+Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue
+
+Imposta la proprietà da chiave in una stringa Unicode.
+
+```
 HRESULT SetTextValue(
-    REFPROPERTYKEY pkey,  
-    LPCTSTR pszValue,  
-    CHUNKSTATE chunkType = CHUNK_VALUE,  
-    LCID locale = 0,  
-    DWORD cwcLenSource = 0,  
-    DWORD cwcStartSource = 0,  
+    REFPROPERTYKEY pkey,
+    LPCTSTR pszValue,
+    CHUNKSTATE chunkType = CHUNK_VALUE,
+    LCID locale = 0,
+    DWORD cwcLenSource = 0,
+    DWORD cwcStartSource = 0,
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *pkey*  
- Specifica una chiave della proprietà.  
-  
- *pszValue*  
- Specifica il valore di blocco da impostare.  
-  
- *chunkType*  
- Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.  
-  
- *locale*  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.  
-  
- *cwcLenSource*  
- La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.  
-  
- *cwcStartSource*  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
-  
- *chunkBreakType*  
- Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.  
-  
-### <a name="return-value"></a>Valore restituito  
- S_OK se l'esito positivo. in caso contrario un codice di errore.  
-  
-### <a name="remarks"></a>Note  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+*pkey*<br/>
+Specifica una chiave della proprietà.
+
+*pszValue*<br/>
+Specifica il valore di blocco da impostare.
+
+*chunkType*<br/>
+Flag indicano se questo blocco contiene un tipo di testo o una proprietà del tipo di valore. I valori di flag vengono forniti dall'enumerazione CHUNKSTATE.
+
+*locale*<br/>
+La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata da indicizzatori di documenti per eseguire appropriate parole del testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo verrà ignorato.
+
+*cwcLenSource*<br/>
+La lunghezza in caratteri del testo di origine da cui è stato derivato il blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che è presente alcun tale corrispondenza diretta.
+
+*cwcStartSource*<br/>
+Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.
+
+*chunkBreakType*<br/>
+Tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori provengono dall'enumerazione CHUNK_BREAKTYPE.
+
+### <a name="return-value"></a>Valore restituito
+
+S_OK se l'esito positivo. in caso contrario un codice di errore.
+
+### <a name="remarks"></a>Note
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi](../../mfc/reference/mfc-classes.md)

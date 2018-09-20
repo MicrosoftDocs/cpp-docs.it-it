@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2710609cbf20861c77dae1cb0aea327983efef6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098173"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425627"
 ---
 # <a name="smart-pointers-modern-c"></a>Puntatori intelligenti (C++ moderno)
 
@@ -86,29 +86,39 @@ Utilizzare questi puntatori intelligenti come prima scelta per incapsulare i pun
 
 Quando si utilizzano gli oggetti COM, eseguire il wrapping dei puntatori a interfaccia in un tipo di puntatore intelligente appropriato. La libreria ATL (Active Template Library) definisce diversi puntatori intelligenti che assolvono a funzioni diverse. È anche possibile utilizzare il tipo di puntatore intelligente `_com_ptr_t`, utilizzato dal compilatore durante la creazione di classi wrapper da file TLB. Si tratta della scelta migliore quando non si desidera includere i file di intestazione ATL.
 
-[Classe CComPtr](../atl/reference/ccomptr-class.md) usare questo, a meno che non è possibile utilizzare ATL. Esegue il conteggio dei riferimenti mediante i metodi `AddRef` e `Release`. Per altre informazioni, vedere [procedura: creare e utilizzare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[Classe CComPtr](../atl/reference/ccomptr-class.md)<br/>
+Utilizzarlo solo se non si può utilizzare ATL. Esegue il conteggio dei riferimenti mediante i metodi `AddRef` e `Release`. Per altre informazioni, vedere [procedura: creare e utilizzare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[Classe CComQIPtr](../atl/reference/ccomqiptr-class.md) Resembles `CComPtr` ma fornisce anche una sintassi semplificata per chiamare il metodo `QueryInterface` su oggetti COM. Per altre informazioni, vedere [procedura: creare e utilizzare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[Classe CComQIPtr](../atl/reference/ccomqiptr-class.md)<br/>
+È simile a `CComPtr`, ma fornisce una sintassi semplificata per chiamare `QueryInterface` su oggetti COM. Per altre informazioni, vedere [procedura: creare e utilizzare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[Classe CComHeapPtr](../atl/reference/ccomheapptr-class.md) puntatore intelligente a oggetti che utilizzano `CoTaskMemFree` per liberare la memoria.
+[Classe CComHeapPtr](../atl/reference/ccomheapptr-class.md)<br/>
+Puntatore intelligente a oggetti che utilizzano `CoTaskMemFree` per liberare memoria.
 
-[Classe CComGITPtr](../atl/reference/ccomgitptr-class.md) puntatore intelligente per interfacce ottenute dalla tabella di interfaccia globale (GIT).
+[Classe CComGITPtr](../atl/reference/ccomgitptr-class.md)<br/>
+Puntatore intelligente per interfacce ottenute dalla tabella di interfaccia globale (GIT).
 
-[com_ptr_t class](../cpp/com-ptr-t-class.md) Resembles `CComQIPtr` funzionalità ma non dipende da intestazioni ATL.
+[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)<br/>
+È simile a `CComQIPtr` in termini di funzionalità, ma non dipende dalle intestazioni ATL.
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>Puntatori intelligenti ALT per oggetti POCO
 
 Oltre ai puntatori intelligenti per gli oggetti COM, ATL definisce i puntatori intelligenti e le raccolte di puntatori intelligenti per gli oggetti POCO. Nella programmazione Windows classica questi tipi sono alternative utili alle raccolte di libreria Standard C++, soprattutto quando la portabilità del codice non è necessaria o quando non si desidera combinare i modelli di programmazione della libreria Standard C++ e ATL.
 
-[Classe CAutoPtr](../atl/reference/cautoptr-class.md) puntatore intelligente che applica la proprietà univoca trasferendo la proprietà sulla copia. Paragonabile alla classe `std::auto_ptr` deprecata.
+[Classe CAutoPtr](../atl/reference/cautoptr-class.md)<br/>
+Puntatore intelligente che applica la proprietà univoca trasferendo la proprietà sulla copia. Paragonabile alla classe `std::auto_ptr` deprecata.
 
-[Classe CHeapPtr](../atl/reference/cheapptr-class.md) puntatore intelligente per gli oggetti vengono allocati utilizzando C [malloc](../c-runtime-library/reference/malloc.md) (funzione).
+[Classe CHeapPtr](../atl/reference/cheapptr-class.md)<br/>
+Puntatore intelligente per gli oggetti vengono allocati utilizzando C [malloc](../c-runtime-library/reference/malloc.md) (funzione).
 
-[Classe CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) puntatore intelligente per le matrici allocate tramite `new[]`.
+[Classe CAutoVectorPtr](../atl/reference/cautovectorptr-class.md)<br/>
+Puntatore intelligente per le matrici allocate tramite `new[]`.
 
-[Classe CAutoPtrArray](../atl/reference/cautoptrarray-class.md) classe che incapsula una matrice di `CAutoPtr` elementi.
+[Classe CAutoPtrArray](../atl/reference/cautoptrarray-class.md)<br/>
+Classe che incapsula una matrice di elementi `CAutoPtr`.
 
-[Classe CAutoPtrList](../atl/reference/cautoptrlist-class.md) classe che incapsula metodi per modificare un elenco di `CAutoPtr` nodi.
+[Classe CAutoPtrList](../atl/reference/cautoptrlist-class.md)<br/>
+Classe che incapsula metodi per modificare un elenco di nodi `CAutoPtr`.
 
 ## <a name="see-also"></a>Vedere anche
 

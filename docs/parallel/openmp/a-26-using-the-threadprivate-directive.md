@@ -1,5 +1,5 @@
 ---
-title: Utilizzando la direttiva threadprivate A.26 | Documenti Microsoft
+title: A.26 uso della direttiva threadprivate | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,37 +12,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b74325ec96702838aaaf9be62d398178c8c2902
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 93a596a4015f92e2a4d42151560171157232047b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690530"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447649"
 ---
 # <a name="a26---using-the-threadprivate-directive"></a>A.26   Utilizzo della direttiva threadprivate
-Nell'esempio seguente viene illustrato come utilizzare il `threadprivate` (direttiva) ([sezione 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) nella pagina 23) per concedere a un contatore separato ogni thread.  
-  
- **Esempio 1:**  
-  
-```  
-int counter = 0;  
-#pragma omp threadprivate(counter)  
-  
-int sub()  
-{  
-    counter++;  
-    return(counter);  
-}  
-```  
-  
- **Esempio 2:**  
-  
-```  
-int sub()  
-{  
-    static int counter = 0;  
-    #pragma omp threadprivate(counter)  
-    counter++;  
-    return(counter);  
-}  
+
+Gli esempi seguenti illustrano come usare il `threadprivate` (direttiva) ([sezione 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) nella pagina 23) per fornire un contatore separato a ogni thread.
+
+**Esempio 1:**
+
+```
+int counter = 0;
+#pragma omp threadprivate(counter)
+
+int sub()
+{
+    counter++;
+    return(counter);
+}
+```
+
+**Esempio 2:**
+
+```
+int sub()
+{
+    static int counter = 0;
+    #pragma omp threadprivate(counter)
+    counter++;
+    return(counter);
+}
 ```

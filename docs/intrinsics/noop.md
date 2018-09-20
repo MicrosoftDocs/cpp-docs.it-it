@@ -17,39 +17,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d7ab3f1a61dc0644bf5683376ac676fbfcd6b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97820367f0960925dfcac1db339260cd3f52b8bc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322614"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430215"
 ---
 # <a name="noop"></a>__noop
-**Sezione specifica Microsoft**  
-  
- Il `__noop` intrinseco specifica che una funzione deve essere ignorata e analizzare l'elenco di argomenti, ma nessun codice generato per gli argomenti. Serve per l'utilizzo nelle funzioni globali di debug che accettano un numero variabile di argomenti.  
-  
- Il compilatore converte il `__noop` intrinseci su 0 in fase di compilazione.  
-  
-## <a name="example"></a>Esempio  
- Il codice seguente viene illustrato come è possibile usare `__noop`.  
-  
-```  
-// compiler_intrinsics__noop.cpp  
-// compile with or without /DDEBUG  
-#include <stdio.h>  
-  
-#if DEBUG  
-   #define PRINT   printf_s  
-#else  
-   #define PRINT   __noop  
-#endif  
-  
-int main() {  
-   PRINT("\nhello\n");  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [Parole chiave](../cpp/keywords-cpp.md)
+
+**Sezione specifica Microsoft**
+
+Il `__noop` intrinseco specifica che una funzione deve essere ignorata e analizzare l'elenco di argomenti, ma nessun codice generato per gli argomenti. Si tratta per l'uso nelle funzioni globali di debug che accettano un numero variabile di argomenti.
+
+Il compilatore converte il `__noop` intrinseci su 0 in fase di compilazione.
+
+## <a name="example"></a>Esempio
+
+Il codice seguente illustra come è possibile usare `__noop`.
+
+```
+// compiler_intrinsics__noop.cpp
+// compile with or without /DDEBUG
+#include <stdio.h>
+
+#if DEBUG
+   #define PRINT   printf_s
+#else
+   #define PRINT   __noop
+#endif
+
+int main() {
+   PRINT("\nhello\n");
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Parole chiave](../cpp/keywords-cpp.md)

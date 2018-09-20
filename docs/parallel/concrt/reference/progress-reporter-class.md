@@ -19,69 +19,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8dfb224fb0c0f641e4b7ef8809268fa4fad58890
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016767"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438795"
 ---
 # <a name="progressreporter-class"></a>Classe progress_reporter
-La classe del reporter dello stato di avanzamento consente la segnalazione di notifiche di stato di un tipo specifico. Ogni oggetto progress_reporter è associato a una particolare operazione o azione asincrona.  
-  
-## <a name="syntax"></a>Sintassi  
-  
+
+La classe del reporter dello stato di avanzamento consente la segnalazione di notifiche di stato di un tipo specifico. Ogni oggetto progress_reporter è associato a una particolare operazione o azione asincrona.
+
+## <a name="syntax"></a>Sintassi
+
 ```
 template<typename _ProgressType>
 class progress_reporter;
-```  
-  
-#### <a name="parameters"></a>Parametri  
+```
+
+#### <a name="parameters"></a>Parametri
+
 *_ProgressType*<br/>
-Il tipo di payload di ogni notifica dello stato di avanzamento segnalato tramite il reporter dello stato di avanzamento.  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[progress_reporter](#ctor)||  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[report](#report)|Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.|  
-  
-## <a name="remarks"></a>Note  
- Questo tipo è disponibile solo per le app di Windows Runtime.  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `progress_reporter`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** ppltasks. h  
-  
- **Spazio dei nomi:** Concurrency  
-  
-##  <a name="ctor"></a> progress_reporter 
+Il tipo di payload di ogni notifica dello stato di avanzamento segnalato tramite il reporter dello stato di avanzamento.
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[progress_reporter](#ctor)||
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[report](#report)|Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.|
+
+## <a name="remarks"></a>Note
+
+Questo tipo è disponibile solo per le app di Windows Runtime.
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`progress_reporter`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** ppltasks. h
+
+**Spazio dei nomi:** Concurrency
+
+##  <a name="ctor"></a> progress_reporter
 
 ```
 progress_reporter();
-```  
-  
-##  <a name="report"></a> Report 
+```
 
- Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.  
-  
+##  <a name="report"></a> Report
+
+Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.
+
 ```
 void report(const _ProgressType& val) const;
-```  
-  
-### <a name="parameters"></a>Parametri  
+```
+
+### <a name="parameters"></a>Parametri
+
 *Val*<br/>
-Il payload da segnalare con una notifica di stato di avanzamento.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi concurrency](concurrency-namespace.md)
+Il payload da segnalare con una notifica di stato di avanzamento.
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi concurrency](concurrency-namespace.md)

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80af8f463d6cd1af631c6cb37c0239e7a9e85c3f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 59ec7c1635b825cc300e28e5c02e2a3864a6c123
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595885"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442253"
 ---
 # <a name="hstringhstring-constructor"></a>Costruttore HString::HString
 
@@ -35,10 +35,10 @@ HString(HString&& other) throw();
 
 #### <a name="parameters"></a>Parametri
 
-*HSTR*  
+*HSTR*<br/>
 Un handle HSTRING.
 
-*other*  
+*other*<br/>
 Un oggetto esistente **HString** oggetto.
 
 ## <a name="remarks"></a>Note

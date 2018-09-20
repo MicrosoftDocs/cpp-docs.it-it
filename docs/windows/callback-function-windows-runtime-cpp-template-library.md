@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57d1a3adc160323726bcdd31808cf82bc8da2e7f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19bb77128eee9cc8af514e60730c3a39115695cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609254"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426541"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Funzione di callback (Libreria modelli C++ per Windows Runtime)
 
@@ -201,49 +201,49 @@ ComPtr<TDelegateInterface> Callback(
 
 ### <a name="parameters"></a>Parametri
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Parametro di modello che specifica l'interfaccia del delegato da chiamare quando si verifica un evento.
 
-*TCallback*  
+*TCallback*<br/>
 Parametro di modello che specifica il tipo di oggetto che rappresenta un oggetto e la relativa funzione membro di callback.
 
-*TCallbackObject*  
+*TCallbackObject*<br/>
 Parametro di modello che specifica l'oggetto di cui la funzione membro è il metodo da chiamare quando si verifica un evento.
 
-*TArg1*  
+*TArg1*<br/>
 Parametro di modello che specifica il tipo del primo argomento del metodo di callback.
 
-*TArg2*  
+*TArg2*<br/>
 Parametro di modello che specifica il tipo del secondo argomento del metodo di callback.
 
-*TArg3*  
+*TArg3*<br/>
 Parametro di modello che specifica il tipo del terzo argomento del metodo di callback.
 
-*TArg4*  
+*TArg4*<br/>
 Parametro di modello che specifica il tipo del quarto argomento del metodo di callback.
 
-*TArg5*  
+*TArg5*<br/>
 Parametro di modello che specifica il tipo del quinto argomento del metodo di callback.
 
-*TArg6*  
+*TArg6*<br/>
 Parametro di modello che specifica il tipo del sesto argomento del metodo di callback.
 
-*TArg7*  
+*TArg7*<br/>
 Parametro di modello che specifica il tipo del settimo argomento del metodo di callback.
 
-*TArg8*  
+*TArg8*<br/>
 Parametro di modello che specifica il tipo dell'ottavo argomento del metodo di callback.
 
-*TArg9*  
+*TArg9*<br/>
 Parametro di modello che specifica il tipo del nono argomento del metodo di callback.
 
-*callback*  
+*callback*<br/>
 Oggetto che rappresenta l'oggetto di callback e la relativa funzione membro.
 
-*object*  
+*object*<br/>
 L'oggetto di cui la funzione membro viene chiamata quando si verifica un evento.
 
-*(Metodo)*  
+*(Metodo)*<br/>
 La funzione membro da chiamare quando si verifica un evento.
 
 ## <a name="return-value"></a>Valore restituito

@@ -1,5 +1,5 @@
 ---
-title: Disegno e stampa di classi | Documenti Microsoft
+title: Disegno e stampa di classi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930075a459424e5ffac00d4e620e18cd2c318273
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 331fabe63a3abad1ea19fe4440f8eec0c05481d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344780"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380336"
 ---
 # <a name="drawing-and-printing-classes"></a>Disegno e stampa di classi
-In Windows tutto l'output grafico viene disegnato su un'area di disegno virtuale denominata contesto di dispositivo (DC). In MFC sono presenti delle classi che è possibile utilizzare per incapsulare i vari tipi di DC nonché degli incapsulamenti per gli strumenti di disegno di Windows come le bitmap, i pennelli, le tavolozze e le penne.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../mfc/class-library-overview.md)
+
+In Windows tutto l'output grafico viene disegnato su un'area di disegno virtuale denominata contesto di dispositivo (DC). In MFC sono presenti delle classi che è possibile utilizzare per incapsulare i vari tipi di DC nonché degli incapsulamenti per gli strumenti di disegno di Windows come le bitmap, i pennelli, le tavolozze e le penne.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../mfc/class-library-overview.md)
 

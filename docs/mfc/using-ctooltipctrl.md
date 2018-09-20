@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di CToolTipCtrl | Documenti Microsoft
+title: Utilizzo di CToolTipCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b08f2dfcff0c4df17def326e3a047507bb2a3c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85a32ab9dd944a412dd5dc3a01295047d5ae6ceb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385629"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430410"
 ---
 # <a name="using-ctooltipctrl"></a>Utilizzo di CToolTipCtrl
-Il [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) classe incapsula la funzionalità di un controllo descrizione comando, una piccola finestra popup che consente di visualizzare una singola riga di testo che descrive lo scopo di uno strumento in un'applicazione. Una descrizione comando è nascosto la maggior parte dei casi, visualizzata solo quando l'utente posiziona il cursore in uno strumento e lascia in tale posizione per circa mezzo secondo. La descrizione comando viene visualizzata accanto al cursore e scomparirà quando l'utente fa clic su un pulsante del mouse o Sposta il cursore dallo strumento.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Metodi di creazione di descrizioni comandi](../mfc/methods-of-creating-tool-tips.md)  
-  
--   [Impostazioni per il controllo ToolTip](../mfc/settings-for-the-tool-tip-control.md)  
-  
--   [Uso di CToolTipCtrl per creare e modificare un oggetto CToolTipCtrl](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)  
-  
--   [Modifica del controllo ToolTip](../mfc/manipulating-the-tool-tip-control.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+Il [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) classe incapsula la funzionalità di un controllo descrizione comandi, una piccola finestra popup che consente di visualizzare una singola riga di testo che descrive lo scopo di uno strumento in un'applicazione. Una descrizione comando viene nascosta la maggior parte dei casi, visualizzata solo quando l'utente posiziona il cursore del mouse su uno strumento e lascia in tale posizione per circa metà secondo. La descrizione comando viene visualizzata accanto al cursore e scomparirà quando l'utente fa clic su un pulsante del mouse o Sposta il cursore dallo strumento.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Metodi di creazione di descrizioni comandi](../mfc/methods-of-creating-tool-tips.md)
+
+- [Impostazioni per il controllo ToolTip](../mfc/settings-for-the-tool-tip-control.md)
+
+- [Uso di CToolTipCtrl per creare e modificare un oggetto CToolTipCtrl](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)
+
+- [Modifica del controllo ToolTip](../mfc/manipulating-the-tool-tip-control.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

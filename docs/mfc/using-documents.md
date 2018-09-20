@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei documenti | Documenti Microsoft
+title: Utilizzo dei documenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,44 +24,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6f039b2e81b52c753a1fb065572d4eac53d55ec9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950214"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428707"
 ---
 # <a name="using-documents"></a>Utilizzo di documenti
-Modalità di collaborazione, documenti e visualizzazioni:  
-  
--   Contengono, gestire e visualizzare le specifiche dell'applicazione [dati](../mfc/managing-data-with-document-data-variables.md).  
-  
--   Fornire un'interfaccia costituita [variabili dati documento](../mfc/managing-data-with-document-data-variables.md) per la manipolazione dei dati.  
-  
--   Partecipare [scrivere e leggere file](../mfc/serializing-data-to-and-from-files.md).  
-  
--   Partecipare [stampa](../mfc/role-of-the-view-in-printing.md).  
-  
--   [Gestire](../mfc/handling-commands-in-the-document.md) la maggior parte dei comandi e messaggi dell'applicazione.  
-  
- Il documento è particolarmente coinvolte nella gestione dei dati. Archiviare i dati, in genere, nelle variabili di membro di classe documento. La vista utilizza queste variabili per accedere ai dati per la visualizzazione e aggiornare. Meccanismo di serializzazione predefinito del documento gestisce la lettura e scrittura dei dati da e verso i file. Documenti possono gestire anche i comandi (ma non i messaggi di Windows diverso da WM_COMMAND).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Derivazione di una classe documento da CDocument](../mfc/deriving-a-document-class-from-cdocument.md)  
-  
--   [La gestione dei dati con variabili dati documento](../mfc/managing-data-with-document-data-variables.md)  
-  
--   [La serializzazione dei dati da e verso i file](../mfc/serializing-data-to-and-from-files.md)  
-  
--   [Esclusione del meccanismo di serializzazione](../mfc/bypassing-the-serialization-mechanism.md)  
-  
--   [Gestione dei comandi nel documento](../mfc/handling-commands-in-the-document.md)  
-  
--   [La funzione membro OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)  
-  
--   [La funzione membro DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Architettura documento/visualizzazione](../mfc/document-view-architecture.md)
+
+Lavorare insieme, documenti e visualizzazioni:
+
+- Contengono, gestire e visualizzare le specifiche dell'applicazione [dati](../mfc/managing-data-with-document-data-variables.md).
+
+- Fornire un'interfaccia composta [variabili di dati del documento](../mfc/managing-data-with-document-data-variables.md) per la manipolazione dei dati.
+
+- Partecipare [scrivere e leggere file](../mfc/serializing-data-to-and-from-files.md).
+
+- Partecipare [stampa](../mfc/role-of-the-view-in-printing.md).
+
+- [Gestire](../mfc/handling-commands-in-the-document.md) la maggior parte dei comandi e messaggi dell'applicazione.
+
+Il documento è particolarmente coinvolte nella gestione dei dati. Store dei dati, in genere, in variabili membro di classe documento. La visualizzazione Usa queste variabili per accedere ai dati per la visualizzazione e aggiornare. Meccanismo di serializzazione predefinito del documento gestisce la lettura e scrittura dei dati da e verso i file. Documenti possono anche gestire i comandi (ma non i messaggi di Windows diverse da WM_COMMAND).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Derivazione di una classe documento da CDocument](../mfc/deriving-a-document-class-from-cdocument.md)
+
+- [La gestione dei dati con variabili dati documento](../mfc/managing-data-with-document-data-variables.md)
+
+- [La serializzazione dei dati da e verso i file](../mfc/serializing-data-to-and-from-files.md)
+
+- [Esclusione del meccanismo di serializzazione](../mfc/bypassing-the-serialization-mechanism.md)
+
+- [Gestione dei comandi nel documento](../mfc/handling-commands-in-the-document.md)
+
+- [La funzione membro OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)
+
+- [La funzione membro DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)
+
+## <a name="see-also"></a>Vedere anche
+
+[Architettura documento/visualizzazione](../mfc/document-view-architecture.md)
 

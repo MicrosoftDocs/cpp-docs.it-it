@@ -1,5 +1,5 @@
 ---
-title: OMP_DYNAMIC | Documenti Microsoft
+title: OMP_DYNAMIC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4a81d861bf72943a67356577da37c36df63f69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b02a2a4d660057ab83da39add7fd32bcff3e6d90
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695811"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392138"
 ---
 # <a name="ompdynamic"></a>OMP_DYNAMIC
-Specifica se il tempo di esecuzione di OpenMP è possibile modificare il numero di thread in un'area parallela.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-set OMP_DYNAMIC[=TRUE | =FALSE]  
-```  
-  
-## <a name="remarks"></a>Note  
- Il `OMP_DYNAMIC` variabile di ambiente può essere sostituita dal [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) (funzione).  
-  
- Il valore predefinito in Visual C++ nell'implementazione dello standard OpenMP è `OMP_DYNAMIC=FALSE`.  
-  
- Per ulteriori informazioni, vedere [OMP_DYNAMIC 4.3](../../../parallel/openmp/4-3-omp-dynamic.md).  
-  
-## <a name="example"></a>Esempio  
- Il comando seguente imposta il `OMP_DYNAMIC` variabile di ambiente su TRUE:  
-  
-```  
-set OMP_DYNAMIC=TRUE  
-```  
-  
- Il comando seguente consente di visualizzare l'impostazione corrente del `OMP_DYNAMIC` variabile di ambiente:  
-  
-```  
-set OMP_DYNAMIC  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Variabili di ambiente](../../../parallel/openmp/reference/openmp-environment-variables.md)
+
+Specifica se il tempo di esecuzione di OpenMP può regolare il numero di thread in un'area parallela.
+
+## <a name="syntax"></a>Sintassi
+
+```
+set OMP_DYNAMIC[=TRUE | =FALSE]
+```
+
+## <a name="remarks"></a>Note
+
+Il `OMP_DYNAMIC` variabile di ambiente può eseguire l'override di [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) (funzione).
+
+Il valore predefinito nell'implementazione di Visual C++ dello standard OpenMP è `OMP_DYNAMIC=FALSE`.
+
+Per altre informazioni, vedere [OMP_DYNAMIC 4.3](../../../parallel/openmp/4-3-omp-dynamic.md).
+
+## <a name="example"></a>Esempio
+
+Il comando seguente imposta la `OMP_DYNAMIC` variabile di ambiente su TRUE:
+
+```
+set OMP_DYNAMIC=TRUE
+```
+
+Il comando seguente consente di visualizzare l'impostazione corrente del `OMP_DYNAMIC` variabile di ambiente:
+
+```
+set OMP_DYNAMIC
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Variabili di ambiente](../../../parallel/openmp/reference/openmp-environment-variables.md)

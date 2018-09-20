@@ -1,5 +1,5 @@
 ---
-title: Sicurezza Internet (C++) | Documenti Microsoft
+title: Sicurezza Internet (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,22 +23,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4454eceae2cc5f2e6b46510fe95889c664a568a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348850"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445815"
 ---
 # <a name="internet-security-c"></a>Sicurezza Internet (C++)
-La sicurezza del codice è un fattore importante per gli sviluppatori e gli utenti delle applicazioni Internet. Esistono rischi: codice dannoso, il codice che è stato manomesso e codice da siti o autori sconosciuti.  
-  
- Esistono due approcci alla sicurezza quando si sviluppa per Internet. Il primo viene denominato "sandbox". In questo caso, un'applicazione è limitata a un particolare set di API ed escluso da quelli potenzialmente pericolosi, ad esempio i/o file in cui un programma può distruggere i dati nel computer dell'utente. Il secondo viene implementato con le firme digitali. Questo approccio viene definito come "confezione" per Internet. Codice viene verificato e firmato con la tecnologia di chiave pubblica/chiave privata. Prima dell'esecuzione del codice, per assicurarsi che il codice da un'origine conosciuta autenticata, e che il codice non è stato modificato dopo la firma viene verificata la firma digitale.  
-  
- Nel primo caso, si considera attendibile l'applicazione non eseguirà alcun problema che si ritiene attendibile l'origine dell'applicazione. Nella seconda, firme digitali vengono utilizzate per verificare l'autenticità. La firma digitale è uno standard di settore utilizzato per identificare e fornire informazioni dettagliate sui server di pubblicazione del codice. La tecnologia è basata su standard, tra cui RSA e x. 509. In genere, i browser consentono agli utenti di scegliere se scaricare ed eseguire codice di origine sconosciuta.  
-  
-  
-## <a name="see-also"></a>Vedere anche  
- [Attività di programmazione Internet MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Nozioni di base sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)
+
+La sicurezza del codice è un problema importante per gli sviluppatori e gli utenti di applicazioni Internet. Esistono rischi: codice dannoso, il codice che sia stato manomesso e codice da siti sconosciuti o degli autori.
+
+Esistono due approcci alla sicurezza di base durante lo sviluppo per Internet. Il primo è denominato "sandbox". Questo approccio, un'applicazione è limitata a un particolare set di API ed esclusi da quelli potenzialmente pericolosi, ad esempio i/o file in cui un programma è stato possibile eliminare i dati sul computer dell'utente. Il secondo viene implementato usando le firme digitali. Questo approccio viene definito come "shrinkwrap" per Internet. Codice di verifica e firmati mediante la tecnologia di chiavi pubblica/chiave privata. Prima di eseguire il codice, la relativa firma digitale viene verificata per assicurarsi che il codice sia da un'origine nota autenticata e che il codice non è stato modificato perché è stato firmato.
+
+Nel primo caso, si considera attendibile che l'applicazione non eseguirà alcun danno e si ritiene attendibile l'origine dell'applicazione. Nel secondo, le firme digitali vengono utilizzate per verificare l'autenticità. La firma digitale è uno standard del settore utilizzato per identificare e fornire i dettagli sul server di pubblicazione del codice. La tecnologia si basa sugli standard, tra cui RSA e X.509. In genere, i browser consentono agli utenti di scegliere se si desidera scaricare ed eseguire codice di origine sconosciuta.
+
+
+## <a name="see-also"></a>Vedere anche
+
+[Attività di programmazione Internet MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
+[Nozioni di base sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)
 

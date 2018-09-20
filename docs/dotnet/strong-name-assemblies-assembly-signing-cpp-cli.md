@@ -1,5 +1,5 @@
 ---
-title: Assembly con nome sicuro (firma degli Assembly) (C + + CLI) | Documenti Microsoft
+title: Assembly con nome sicuro (firma degli Assembly) (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,40 +20,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5d7ae911d2572a35ee8dbb21d5484b4679b64c4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75b7df96b9366680b69d40dea866fb3067a507b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169192"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430905"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Assembly con nome sicuro (firma degli assembly) (C++/CLI)
-In questo argomento viene illustrato come è possibile firmare l'assembly, noto anche come l'assegnazione di un nome sicuro dell'assembly.  
-  
-## <a name="remarks"></a>Note  
- Quando si utilizza Visual C++, utilizzare le opzioni del linker per firmare l'assembly per evitare problemi relativi agli attributi CLR per la firma dell'assembly:  
-  
--   <xref:System.Reflection.AssemblyDelaySignAttribute>  
-  
--   <xref:System.Reflection.AssemblyKeyFileAttribute>  
-  
--   <xref:System.Reflection.AssemblyKeyNameAttribute>  
-  
- Motivi per non utilizzare gli attributi includono il fatto che il nome della chiave è visibile nei metadati dell'assembly, che possono rappresentare un rischio per la sicurezza se il nome del file contiene informazioni riservate. Inoltre, il processo di compilazione utilizzato dall'ambiente di sviluppo di Visual C++ invaliderà la chiave con cui l'assembly viene firmato se si utilizzano attributi CLR per assegnare un nome sicuro di un assembly e quindi uno strumento di post-elaborazione come mt.exe nell'assembly.  
-  
- Se la compilazione dalla riga di comando, utilizzare le opzioni del linker per firmare l'assembly e quindi eseguire uno strumento di post-elaborazione (ad esempio mt.exe), è necessario firmare nuovamente l'assembly con sn.exe. In alternativa, è possibile compilare e ritardare la firma dell'assembly e dopo l'esecuzione di strumenti di post-elaborazione, completare la firma.  
-  
- Se si utilizzano gli attributi della firma durante la compilazione nell'ambiente di sviluppo, è possibile firmare l'assembly chiamando in modo esplicito sn.exe ([Sn.exe (strumento nome sicuro)](/dotnet/framework/tools/sn-exe-strong-name-tool)) in un evento di post-compilazione. Per ulteriori informazioni, vedere [specificare eventi di compilazione](../ide/specifying-build-events.md). Se si utilizza gli attributi e un evento di post-compilazione, rispetto alle opzioni del linker, tempi di compilazione possono essere inferiore.  
-  
- Le seguenti opzioni del linker supportano la firma degli assembly:  
-  
--   [/DELAYSIGN (firma parzialmente un assembly)](../build/reference/delaysign-partially-sign-an-assembly.md)  
-  
--   [/KEYFILE (specifica una chiave o una coppia di chiavi per firmare un assembly)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
-  
--   [/KEYCONTAINER (specifica un contenitore di chiavi per firmare un assembly)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
-  
- Per ulteriori informazioni sull'assembly con nome sicuro, vedere [creazione e uso degli assembly](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+Questo argomento viene illustrato come è possibile firmare l'assembly, noto anche come assegnazione un nome sicuro all'assembly.
+
+## <a name="remarks"></a>Note
+
+Quando si usa Visual C++, usare le opzioni del linker per firmare l'assembly per evitare problemi relativi agli attributi CLR per la firma dell'assembly:
+
+- <xref:System.Reflection.AssemblyDelaySignAttribute>
+
+- <xref:System.Reflection.AssemblyKeyFileAttribute>
+
+- <xref:System.Reflection.AssemblyKeyNameAttribute>
+
+I motivi per non utilizzare gli attributi includono il fatto che il nome della chiave è visibile nei metadati dell'assembly, che possono rappresentare un rischio di sicurezza se il nome del file contiene informazioni riservate. Inoltre, il processo di compilazione utilizzato dall'ambiente di sviluppo di Visual C++ invalida la chiave con cui l'assembly è firmato se si usano attributi CLR per assegnare un nome sicuro all'assembly e quindi eseguirà uno strumento di post-elaborazione, ad esempio mt.exe nell'assembly.
+
+Se si compilazione dalla riga di comando, usano le opzioni del linker per firmare l'assembly e quindi eseguirà uno strumento di post-elaborazione (ad esempio mt.exe), è necessario firmare nuovamente l'assembly con sn.exe. In alternativa, è possibile compilare e ritardare la firma dell'assembly e dopo l'esecuzione di strumenti di post-elaborazione, completare la firma.
+
+Se si usano gli attributi della firma durante la compilazione nell'ambiente di sviluppo, è possibile effettuare l'accesso all'assembly in modo esplicito chiamando sn.exe ([Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool)) in un evento di post-compilazione. Per altre informazioni, vedere [Specifica di eventi di compilazione](../ide/specifying-build-events.md). Tempi di compilazione possono essere inferiore se si usano gli attributi e un evento di post-compilazione, rispetto alle opzioni del linker.
+
+Le seguenti opzioni del linker supportano la firma degli assembly:
+
+- [/DELAYSIGN (firma parzialmente un assembly)](../build/reference/delaysign-partially-sign-an-assembly.md)
+
+- [/KEYFILE (specifica una chiave o una coppia di chiavi per firmare un assembly)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+
+- [/KEYCONTAINER (specifica un contenitore di chiavi per firmare un assembly)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+
+Per altre informazioni su assembly con nome sicuro, vedere [creazione e assembly con nome sicuro](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
+
+## <a name="see-also"></a>Vedere anche
+
+[Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

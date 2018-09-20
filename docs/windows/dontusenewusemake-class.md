@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ce3e391ac0da93ed7571a95ce328a5260a8dd44
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc2b2f03cfbd488de8358b2e4b123716efcbfe15
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593607"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431308"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake (classe)
 
@@ -58,5 +58,5 @@ Impedisce usando l'operatore **nuove** in `RuntimeClass`. Di conseguenza, è nec
 
 ## <a name="see-also"></a>Vedere anche
 
-[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)  
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)<br/>
 [Funzione Make](../windows/make-function.md)

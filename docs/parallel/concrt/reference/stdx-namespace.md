@@ -1,5 +1,5 @@
 ---
-title: Namespace stdx | Documenti Microsoft
+title: spazio stdx Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd7c97762bb223621732b306fa3bf760e39e88a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d70133a686609b2b372f89f0e717d5a2f9bd7574
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705419"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435766"
 ---
 # <a name="stdx-namespace"></a>Spazio dei nomi stdx
-## <a name="syntax"></a>Sintassi  
-  
+
+## <a name="syntax"></a>Sintassi
+
 ```
 namespace stdx;
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="functions"></a>Funzioni  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Funzione declval](declval-function.md)||  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** ppltasks. h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento](reference-concurrency-runtime.md)
+```
 
+## <a name="members"></a>Membri
 
+### <a name="functions"></a>Funzioni
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Funzione declval](declval-function.md)||
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** ppltasks. h
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento](reference-concurrency-runtime.md)
 

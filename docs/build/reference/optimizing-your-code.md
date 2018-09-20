@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b715f3cc6bc505d9698484ad7c47b8262f2bc728
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714376"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444411"
 ---
 # <a name="optimizing-your-code"></a>Ottimizzazione del codice
 
@@ -33,11 +33,14 @@ Ottimizzazione di un file eseguibile, è possibile ottenere un equilibrio tra ve
 
 Gli argomenti seguenti descrivono alcune delle funzionalità di ottimizzazione del linguaggio C/C++.
 
-[Ottimizzazione pragma e parole chiave](../../build/reference/optimization-pragmas-and-keywords.md) un elenco di parole chiave e pragma che è possibile usare nel codice per migliorare le prestazioni.
+[Pragma e parole chiave di ottimizzazione](../../build/reference/optimization-pragmas-and-keywords.md)<br/>
+Elenco di parole chiave e pragma che è possibile usare nel codice per migliorare le prestazioni.
 
-[Opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md) un elenco delle **/O** opzioni del compilatore che interessano in particolare le dimensioni di velocità o codice di esecuzione.
+[Opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md)<br/>
+Un elenco delle **/O** opzioni del compilatore che interessano in particolare le dimensioni di velocità o codice di esecuzione.
 
-[Dichiaratore di riferimento rvalue: & &](../../cpp/rvalue-reference-declarator-amp-amp.md) riferimenti Rvalue supportano l'implementazione della *semantica di spostamento*. Se la semantica viene utilizzata per implementare le librerie di modelli, le prestazioni delle applicazioni che usano i modelli di spostamento può migliorare significativamente.
+[Dichiaratore di riferimento rvalue: &&](../../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+I riferimenti rvalue supportano l'implementazione di *semantica di spostamento*. Se la semantica viene utilizzata per implementare le librerie di modelli, le prestazioni delle applicazioni che usano i modelli di spostamento può migliorare significativamente.
 
 ### <a name="the-optimize-pragma"></a>Il pragma optimize
 
@@ -59,9 +62,11 @@ Ottimizzazione di un programma per la velocità di Paradossalmente, potrebbe cau
 
 Gli argomenti seguenti descrivono le procedure di programmazione.
 
-[Suggerimenti per migliorare il codice critico](../../build/reference/tips-for-improving-time-critical-code.md) meglio le tecniche di codifica possono garantire prestazioni migliori. Questo argomento verranno suggerite le tecniche che consentono di assicurarsi che le parti del codice critico eseguano in modo soddisfacente di codifica.
+[Suggerimenti per il miglioramento del codice critico](../../build/reference/tips-for-improving-time-critical-code.md)<br/>
+Codifica migliorata tecniche consentono di ottenere prestazioni migliori. Questo argomento verranno suggerite le tecniche che consentono di assicurarsi che le parti del codice critico eseguano in modo soddisfacente di codifica.
 
-[Le procedure consigliate di ottimizzazione](../../build/reference/optimization-best-practices.md) fornite linee guida generali sul modo migliore per ottimizzare l'applicazione.
+[Procedure consigliate di ottimizzazione](../../build/reference/optimization-best-practices.md)<br/>
+Vengono fornite indicazioni generali sul modo migliore per ottimizzare l'applicazione.
 
 ## <a name="debugging-optimized-code"></a>Debug di codice ottimizzato
 

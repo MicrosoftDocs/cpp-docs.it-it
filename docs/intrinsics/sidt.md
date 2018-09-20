@@ -17,44 +17,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6731bb6a06f775c06ba16eb4885a3982d934f3cd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dbfb0b50e31cc51c7ea860fbd7b78c89a652ac64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699871"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429372"
 ---
 # <a name="sidt"></a>__sidt
-**Sezione specifica Microsoft**  
-  
- Archivia il valore del Registro di tabella del descrittore di interrupt (IDTR) nella posizione di memoria specificata.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __sidt(  
-     void *Destination);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|*Destinazione*|[in] Puntatore alla posizione di memoria in cui è archiviato il IDTR.|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__sidt`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Il `__sidt` è equivalente alla funzione il `SIDT` istruzioni in linguaggio macchina. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [__lidt](../intrinsics/lidt.md)
+
+**Sezione specifica Microsoft**
+
+Archivia il valore del Registro di tabella del descrittore di interrupt (IDTR) nella posizione di memoria specificata.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __sidt(void * Destination);
+```
+
+#### <a name="parameters"></a>Parametri
+
+|Parametro|Descrizione|
+|---------------|-----------------|
+|*Destinazione*|[in] Puntatore alla posizione di memoria in cui è archiviato il IDTR.|
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__sidt`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Il `__sidt` è equivalente alla funzione il `SIDT` istruzioni in linguaggio macchina. Per altre informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento di Set di istruzioni," al [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[__lidt](../intrinsics/lidt.md)

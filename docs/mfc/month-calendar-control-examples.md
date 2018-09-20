@@ -1,5 +1,5 @@
 ---
-title: Esempi di controlli calendario mensile | Documenti Microsoft
+title: Esempi di controlli calendario mensile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77dcf22e82fda1d0326c35f3e56ced19a1ca05fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 653c81da4cb9cd1a4beff453b4a36847e1837491
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342907"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437066"
 ---
 # <a name="month-calendar-control-examples"></a>Esempi di controlli calendario mensile
-Il [CMNCTRL1](../visual-cpp-samples.md) applicazione di esempio illustra i vari attributi della `CMonthCalCtrl` classe. Il controllo, disponibile in una scheda separata dell'esempio, illustra la funzionalità di base e consente all'utente di modificare determinati attributi in modo dinamico.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+Il [CMNCTRL1](../visual-cpp-samples.md) applicazione di esempio illustra i vari attributi del `CMonthCalCtrl` classe. Il controllo, disponibile in una scheda separata dell'esempio, illustra la funzionalità di base e consente all'utente di modificare determinati attributi in modo dinamico.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

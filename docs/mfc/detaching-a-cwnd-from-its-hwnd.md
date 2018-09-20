@@ -1,5 +1,5 @@
 ---
-title: Disconnessione di CWnd da HWND | Documenti Microsoft
+title: Disconnessione di CWnd da HWND | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a776b4ff4799750c89a322379a063030db748eec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c69703d8c528d82a696fc94be76ac4a569628b4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342680"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392647"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Disconnessione di CWnd da HWND
-Se è necessario aggirare object -`HWND` relazione, MFC fornisce un altro `CWnd` funzione membro, [scollegamento](../mfc/reference/cwnd-class.md#detach), che consente di disconnettere l'oggetto finestra C++ dalla finestra di Windows. Ciò impedisce al distruttore di eliminazione della finestra di Windows quando l'oggetto viene eliminato definitivamente.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Creazione di finestre](../mfc/creating-windows.md)  
-  
--   [Sequenza di distruzione di finestre](../mfc/window-destruction-sequence.md)  
-  
--   [Allocazione e deallocazione di memoria di finestra](../mfc/allocating-and-deallocating-window-memory.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Oggetti finestra](../mfc/window-objects.md)
+
+Se è necessario aggirare object -`HWND` relazione, MFC fornisce un'altra `CWnd` funzione membro [Detach](../mfc/reference/cwnd-class.md#detach), che disconnette l'oggetto finestra C++ dalla finestra di Windows. Ciò impedisce al distruttore di eliminazione della finestra di Windows quando l'oggetto viene eliminato.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Creazione di finestre](../mfc/creating-windows.md)
+
+- [Sequenza di distruzione di finestre](../mfc/window-destruction-sequence.md)
+
+- [Allocazione e deallocazione di memoria delle finestre](../mfc/allocating-and-deallocating-window-memory.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Oggetti finestra](../mfc/window-objects.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Specifica di compilazione condizionale. 2 | Documenti Microsoft
+title: A.2 specifica della compilazione condizionale | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d54245a2df2f38bed2674a3bb3923f8212d35459
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2d8b0f3df67313dbf03d40077a551fe64930199d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690595"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393698"
 ---
 # <a name="a2---specifying-conditional-compilation"></a>A.2   Specifica della compilazione condizionale
-Nell'esempio seguente viene illustrato l'utilizzo della compilazione condizionale utilizzando la macro OpenMP `_OPENMP` ([sezione 2.2](../../parallel/openmp/2-2-conditional-compilation.md) nella pagina 8). Con la compilazione OpenMP il `_OPENMP` macro viene definita.  
-  
-```  
-# ifdef _OPENMP   
-    printf_s("Compiled by an OpenMP-compliant implementation.\n");  
-# endif  
-```  
-  
- L'operatore del preprocessore definito consente più di una macro da sottoporre a test in una singola direttiva.  
-  
-```  
-# if defined(_OPENMP) && defined(VERBOSE)  
-    printf_s("Compiled by an OpenMP-compliant implementation.\n");  
-# endif  
+
+Gli esempi seguenti illustrano l'uso di compilazione condizionale utilizzando la macro OpenMP `_OPENMP` ([sezione 2.2](../../parallel/openmp/2-2-conditional-compilation.md) nella pagina 8). Compilazione di OpenMP, con la `_OPENMP` macro viene definita.
+
+```
+# ifdef _OPENMP
+    printf_s("Compiled by an OpenMP-compliant implementation.\n");
+# endif
+```
+
+L'operatore del preprocessore definita consente più di una macro da sottoporre a test in una singola direttiva.
+
+```
+# if defined(_OPENMP) && defined(VERBOSE)
+    printf_s("Compiled by an OpenMP-compliant implementation.\n");
+# endif
 ```
