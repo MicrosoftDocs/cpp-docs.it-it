@@ -1,5 +1,5 @@
 ---
-title: 2.9 annidamento di direttive | Documenti Microsoft
+title: 2.9 annidamento di direttive | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,28 +12,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e690ba531b4b37973bc2555d904317181ff918
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b9558180a2f063171be563219f89ec3858e37a5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396988"
 ---
 # <a name="29-directive-nesting"></a>2.9 Annidamento di direttive
-Dinamica annidamento delle direttive deve essere conformi alle regole seguenti:  
-  
--   A **parallela** direttiva in modo dinamico all'interno di un altro **parallela** logicamente stabilisce un nuovo team, è costituito dal solo il thread corrente, a meno che non annidati di parallelismo è abilitato.  
-  
--   **per**, **sezioni**, e **singolo** direttive associati allo stesso **parallela** non possono essere annidati l'altro.  
-  
--   **critico** direttive con lo stesso nome non possono essere annidati l'altro. Si noti di che questa restrizione non è sufficiente per impedire un deadlock.  
-  
--   **per**, **sezioni**, e **singolo** direttive non consentite in quanto dinamica di **critici**, **ordinati**, e **master** aree se le direttive associati allo stesso **parallela** come le regioni.  
-  
--   **barriera** direttive non consentite in quanto dinamica di **per**, **ordinati**, **sezioni**, **singolo**, **master**, e **critici** aree se le direttive associati allo stesso **parallela** come le regioni.  
-  
--   **master** direttive non consentite in quanto dinamica di **per**, **sezioni**, e **singolo** direttive se il **master** direttive associati allo stesso **parallel** come direttive di condivisione del lavoro.  
-  
--   **ordinati** direttive non sono consentite nella portata dinamica della **critici** aree se le direttive associati allo stesso **parallela** come le regioni.  
-  
--   Una direttiva è consentito quando eseguita in modo dinamico all'interno di un'area parallela è consentita anche quando eseguita all'esterno di un'area parallela. Quando viene eseguita in modo dinamico all'esterno di un'area parallela specificato dall'utente, la direttiva viene eseguita da un team composto solo il thread principale.
+
+Annidamento dinamico delle direttive deve essere conformi alle regole seguenti:
+
+- Oggetto **parallele** direttiva in modo dinamico in un'altra **parallele** logicamente stabilisce un nuovo team, che è costituito dal solo il thread corrente, a meno che non annidati di parallelismo è abilitato.
+
+- **per**, **sezioni**, e **singolo** direttive che associano agli stessi **parallele** non possono essere annidati all'interno di altre.
+
+- **critici** non possono essere annidati all'interno di altre direttive con lo stesso nome. Tenere presente che questa restrizione non è sufficiente per impedire un deadlock.
+
+- **per**, **sezioni**, e **singolo** direttive non sono consentite nella portata dinamica della **critici**, **ordinati**, e **master** aree, se le direttive associati allo stesso **parallele** come le aree.
+
+- **barriera** direttive non sono consentite nella portata dinamica della **per**, **ordinati**, **sezioni**, **singolo**, **master**, e **critici** aree se eseguire l'associazione di direttive allo stesso **parallel** come le aree.
+
+- **master** direttive non sono consentite nella portata dinamica della **per**, **sezioni**, e **singolo** direttive se il **master** direttive associati allo stesso **parallele** come direttive di condivisione del lavoro.
+
+- **ordinati** direttive non sono consentite nella portata dinamica della **critici** aree se eseguire l'associazione di direttive allo stesso **parallel** come le aree.
+
+- Le direttive che sono consentita quando eseguita in modo dinamico all'interno di un'area parallela sono consentita anche se eseguita all'esterno di un'area parallela. Quando viene eseguita in modo dinamico di fuori di un'area parallela specificata dall'utente, la direttiva viene eseguita da un team composto da solo il thread master.

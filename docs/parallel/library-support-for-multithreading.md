@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b433befdec72b000bc83d2087bc5eb15e2d00496
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: c0209688bcb8176963f28949b7faf90afb182ccd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131919"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398501"
 ---
 # <a name="library-support-for-multithreading"></a>Supporto della libreria per il multithreading
-Tutte le versioni della libreria CRT supportano ora il multithreading fatta eccezione per le versioni non blocca il thread di alcune funzioni. Visualizzare [prestazioni librerie multithread](../c-runtime-library/multithreaded-libraries-performance.md) per altre informazioni.  
-  
-Visualizzare [funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md) per altre informazioni sulle versioni di CRT.  
-  
-## <a name="see-also"></a>Vedere anche  
+
+Tutte le versioni della libreria CRT supportano ora il multithreading fatta eccezione per le versioni non blocca il thread di alcune funzioni. Visualizzare [prestazioni librerie multithread](../c-runtime-library/multithreaded-libraries-performance.md) per altre informazioni.
+
+Visualizzare [funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md) per altre informazioni sulle versioni di CRT.
+
+## <a name="see-also"></a>Vedere anche
 
 [Multithreading con C e Win32](multithreading-with-c-and-win32.md)

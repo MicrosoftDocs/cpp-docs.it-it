@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9d9ecfada513e16ce10bab37bb38b6ce6d67f907
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706940"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397624"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Specifica opzioni della riga di comando MIDL)
 
@@ -63,7 +63,7 @@ Il file deve contenere un'opzione della riga di comando MIDL per riga.
 
 [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
 [Opzioni del linker](../../build/reference/linker-options.md)<br/>
-[/IDLOUT (assegna un nome file di Output MIDL)](../../build/reference/idlout-name-midl-output-files.md)
-[/IGNOREIDL (non elabora gli attributi in MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/TLBOUT (nome. Al File TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
-[la creazione di un programma con attributi](../../windows/building-an-attributed-program.md)
+[/IDLOUT (assegna un nome ai file di output MIDL)](../../build/reference/idlout-name-midl-output-files.md)<br/>
+[/IGNOREIDL (non elabora gli attributi in MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/TLBOUT (denomina un file TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
+[Compilazione di un programma con attributi](../../windows/building-an-attributed-program.md)

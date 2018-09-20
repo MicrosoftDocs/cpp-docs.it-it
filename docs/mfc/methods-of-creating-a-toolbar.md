@@ -1,5 +1,5 @@
 ---
-title: Metodi di creazione di una barra degli strumenti | Documenti Microsoft
+title: Metodi di creazione di una barra degli strumenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 052f1578386746f9a4d9892576f09b3b61547289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb7e73df0944a7a6c0c7b28c04e43008fcd70b39
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348635"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401069"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Metodi di creazione di una barra degli strumenti
-MFC fornisce due classi per creare barre degli strumenti: [CToolBar](../mfc/reference/ctoolbar-class.md) e [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (che esegue il wrapping di controlli comuni di Windows API). `CToolBar` fornisce tutte le funzionalità del controllo comune barra degli strumenti, e consente di gestire molte impostazioni di controllo comuni necessarie e strutture. Tuttavia, il file eseguibile risultante in genere essere maggiore di quelle create tramite `CToolBarCtrl`.  
-  
- `CToolBarCtrl` in genere i risultati in un file eseguibile più piccolo ed è preferibile utilizzare `CToolBarCtrl` se non si intende integrare la barra degli strumenti nell'architettura MFC. Se si prevede di utilizzare `CToolBarCtrl` e integrare la barra degli strumenti nell'architettura MFC, è necessario che vengano comunicate di controllo della barra degli strumenti a MFC. Questa comunicazione non è difficile; Tuttavia, è un lavoro aggiuntivo che è quindi necessario quando si utilizza `CToolBar`.  
-  
- Visual C++ fornisce due modi per sfruttare il controllo comune barra degli strumenti.  
-  
--   Creare la barra degli strumenti utilizzando `CToolBar`e quindi chiamare [CToolBar:: GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl) per ottenere l'accesso per il `CToolBarCtrl` funzioni membro.  
-  
--   Creare la barra degli strumenti utilizzando [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)del costruttore.  
-  
- Dei metodi forniscono l'accesso alle funzioni membro del controllo barra degli strumenti. Quando si chiama `CToolBar::GetToolBarCtrl`, viene restituito un riferimento a un `CToolBarCtrl` pertanto è possibile utilizzare uno dei due set di funzioni membro dell'oggetto. Vedere [CToolBar](../mfc/reference/ctoolbar-class.md) per informazioni sulla costruzione e creazione di una barra degli strumenti tramite `CToolBar`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+MFC fornisce due classi per creare barre degli strumenti: [CToolBar](../mfc/reference/ctoolbar-class.md) e [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (che esegue il wrapping di controlli comuni di Windows API). `CToolBar` fornisce tutte le funzionalità del controllo della barra degli strumenti comuni e consente di gestire molte strutture e le impostazioni di controllo comuni necessarie per l'utente; Tuttavia, il file eseguibile risultante in genere è di dimensioni maggiore rispetto a quello creato con `CToolBarCtrl`.
+
+`CToolBarCtrl` in genere i risultati in un file eseguibile più piccolo ed è preferibile usare `CToolBarCtrl` se non si prevede di integrare la barra degli strumenti nell'architettura di MFC. Se si prevede di usare `CToolBarCtrl` e integrare la barra degli strumenti nell'architettura di MFC, è necessario prestare attenzione aggiuntiva per comunicare le modifiche di controllo della barra degli strumenti a MFC. Questa comunicazione non è difficile; è tuttavia operazioni aggiuntive che non sono quindi necessario quando si usa `CToolBar`.
+
+Visual C++ fornisce due modi per sfruttare il controllo comune barra degli strumenti.
+
+- Creare la barra degli strumenti usando `CToolBar`, quindi chiamare [CToolBar:: GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl) per ottenere l'accesso per il `CToolBarCtrl` funzioni membro.
+
+- Creare la barra degli strumenti usando [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)del costruttore.
+
+Entrambi i metodi offrono l'accesso alle funzioni membro del controllo della barra degli strumenti. Quando si chiama `CToolBar::GetToolBarCtrl`, viene restituito un riferimento a un `CToolBarCtrl` quindi è possibile usare dei set di funzioni membro dell'oggetto. Visualizzare [CToolBar](../mfc/reference/ctoolbar-class.md) per informazioni sulla costruzione e creazione di una barra degli strumenti tramite `CToolBar`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

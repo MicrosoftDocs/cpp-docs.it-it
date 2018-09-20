@@ -26,113 +26,126 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d82d61476e4af024eff53c0943a8a9e293c8d285
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2bd07d8f57396da78ce19cb5ac568d651f71459b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210744"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398072"
 ---
 # <a name="ccubictransition-class"></a>Classe CCubicTransition
-Incapsula una transizione cubica.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-class CCubicTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CCubicTransition::CCubicTransition](#ccubictransition)|Costruisce un oggetto di transizione e inizializza i relativi parametri.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CCubicTransition::Create](#create)|Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato. (Esegue l'override [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Membri dati pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione al termine della transizione.|  
-|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|La velocità della variabile al termine della transizione.|  
-|[CCubicTransition::m_duration](#m_duration)|La durata della transizione.|  
-  
-## <a name="remarks"></a>Note  
- Durante una transizione cubica continua, il valore della variabile di animazione varia dal valore iniziale a un valore finale specificato per la durata della transizione, termina con una velocità specificata. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile allocata li utilizzando l'operatore new. L'oggetto incapsulato IUIAnimationTransition COM viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- `CCubicTransition`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxanimationcontroller.h  
-  
-##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition  
- Costruisce un oggetto di transizione e inizializza i relativi parametri.  
-  
-```  
-CCubicTransition(
-    UI_ANIMATION_SECONDS duration,  
-    DOUBLE finalValue,  
-    DOUBLE finalVelocity);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *Durata*  
- La durata della transizione.  
-  
- *finalValue*  
- Il valore della variabile di animazione al termine della transizione.  
-  
- *finalVelocity*  
- La velocità della variabile al termine della transizione.  
-  
-##  <a name="create"></a>  CCubicTransition::Create  
- Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato.  
-  
-```  
-virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
-    IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Parametri  
-*pLibrary*  
- Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), che definisce una raccolta di transizioni standard.  
 
-### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
-  
-##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue  
- Il valore della variabile di animazione al termine della transizione.  
-  
-```  
-DOUBLE m_dblFinalValue;  
-```  
-  
-##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity  
- La velocità della variabile al termine della transizione.  
-  
-```  
-DOUBLE m_dblFinalVelocity;  
-```  
-  
-##  <a name="m_duration"></a>  CCubicTransition::m_duration  
- La durata della transizione.  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi](../../mfc/reference/mfc-classes.md)
+Incapsula una transizione cubica.
+
+## <a name="syntax"></a>Sintassi
+
+```
+class CCubicTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CCubicTransition::CCubicTransition](#ccubictransition)|Costruisce un oggetto di transizione e inizializza i relativi parametri.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CCubicTransition::Create](#create)|Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato. (Esegue l'override [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Membri dati pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|Il valore della variabile di animazione al termine della transizione.|
+|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|La velocità della variabile al termine della transizione.|
+|[CCubicTransition::m_duration](#m_duration)|La durata della transizione.|
+
+## <a name="remarks"></a>Note
+
+Durante una transizione cubica continua, il valore della variabile di animazione varia dal valore iniziale a un valore finale specificato per la durata della transizione, termina con una velocità specificata. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile allocata li utilizzando l'operatore new. L'oggetto incapsulato IUIAnimationTransition COM viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+`CCubicTransition`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** afxanimationcontroller.h
+
+##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition
+
+Costruisce un oggetto di transizione e inizializza i relativi parametri.
+
+```
+CCubicTransition(
+    UI_ANIMATION_SECONDS duration,
+    DOUBLE finalValue,
+    DOUBLE finalVelocity);
+```
+
+### <a name="parameters"></a>Parametri
+
+*Durata*<br/>
+La durata della transizione.
+
+*finalValue*<br/>
+Il valore della variabile di animazione al termine della transizione.
+
+*finalVelocity*<br/>
+La velocità della variabile al termine della transizione.
+
+##  <a name="create"></a>  CCubicTransition::Create
+
+Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato.
+
+```
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,
+    IUIAnimationTransitionFactory* \*not used*\);
+```
+
+### <a name="parameters"></a>Parametri
+
+*pLibrary*<br/>
+Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), che definisce una raccolta di transizioni standard.
+
+### <a name="return-value"></a>Valore restituito
+
+TRUE se transizione viene creata correttamente. in caso contrario, FALSE.
+
+##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue
+
+Il valore della variabile di animazione al termine della transizione.
+
+```
+DOUBLE m_dblFinalValue;
+```
+
+##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity
+
+La velocità della variabile al termine della transizione.
+
+```
+DOUBLE m_dblFinalVelocity;
+```
+
+##  <a name="m_duration"></a>  CCubicTransition::m_duration
+
+La durata della transizione.
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi](../../mfc/reference/mfc-classes.md)

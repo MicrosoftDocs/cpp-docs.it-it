@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8783d30aa018e0b29705c4c6bdda3b9e2a47af4a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b4fa728039010ec30748773a51579ad8aabfac0f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613232"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398781"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>Metodo ActivationFactory::QueryInterface
 
@@ -38,10 +38,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametri
 
-*riid*  
+*riid*<br/>
 ID di interfaccia.
 
-*ppvObject*  
+*ppvObject*<br/>
 Quando questa operazione viene completata, un puntatore all'interfaccia specificata dal parametro *riid*.
 
 ## <a name="return-value"></a>Valore restituito

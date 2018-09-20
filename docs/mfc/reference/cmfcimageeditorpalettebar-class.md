@@ -20,78 +20,87 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3b10e18e12b5a2f27c0b83562ef16321da67422
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f36a9205cbaa2410dbdc25971a36879412f45ef0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851457"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398352"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>Classe CMFCImageEditorPaletteBar
-Fornisce la funzionalità di indicatore tavolozza a una finestra di dialogo dell'editor di immagini.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-class CMFCImageEditorPaletteBar : public CMFCToolBar  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|||  
-|-|-|  
-|Nome|Descrizione|  
-|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Restituisce l'altezza dei pulsanti della barra degli strumenti. (Esegue l'override [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina se la barra degli strumenti può mostrare pulsanti che hanno esteso i bordi. (Esegue l'override [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
-  
-### <a name="remarks"></a>Note  
- Questa classe non deve essere usato direttamente dal codice.  
-  
- Il framework utilizza questa classe viene visualizzata una barra tavolozza in una finestra di dialogo dell'editor di immagini. Per altre informazioni nella finestra di dialogo dell'editor di immagini, vedere [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CBasePane](../../mfc/reference/cbasepane-class.md)  
-  
- [CPane](../../mfc/reference/cpane-class.md)  
-  
- [CMFCBaseToolBa](../../mfc/reference/cmfcbasetoolbar-class.md)  
-  
- [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)  
-  
- [CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afximageeditordialog.h  
-  
-##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight  
- Restituisce l'altezza dei pulsanti della barra degli strumenti.  
-  
-```  
-virtual int GetRowHeight() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- L'altezza di ogni pulsante sulla barra degli strumenti.  
-  
-##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
- Determina se la barra degli strumenti può mostrare pulsanti che hanno esteso i bordi.  
-  
-```  
-virtual BOOL IsButtonExtraSizeAvailable() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce FALSE.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
+
+Fornisce la funzionalità di indicatore tavolozza a una finestra di dialogo dell'editor di immagini.
+
+## <a name="syntax"></a>Sintassi
+
+```
+class CMFCImageEditorPaletteBar : public CMFCToolBar
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|||
+|-|-|
+|Nome|Descrizione|
+|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Restituisce l'altezza dei pulsanti della barra degli strumenti. (Esegue l'override [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina se la barra degli strumenti può mostrare pulsanti che hanno esteso i bordi. (Esegue l'override [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|
+
+### <a name="remarks"></a>Note
+
+Questa classe non deve essere usato direttamente dal codice.
+
+Il framework utilizza questa classe viene visualizzata una barra tavolozza in una finestra di dialogo dell'editor di immagini. Per altre informazioni nella finestra di dialogo dell'editor di immagini, vedere [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CBasePane](../../mfc/reference/cbasepane-class.md)
+
+[CPane](../../mfc/reference/cpane-class.md)
+
+[CMFCBaseToolBa](../../mfc/reference/cmfcbasetoolbar-class.md)
+
+[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
+
+[CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** afximageeditordialog.h
+
+##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight
+
+Restituisce l'altezza dei pulsanti della barra degli strumenti.
+
+```
+virtual int GetRowHeight() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+L'altezza di ogni pulsante sulla barra degli strumenti.
+
+##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
+
+Determina se la barra degli strumenti può mostrare pulsanti che hanno esteso i bordi.
+
+```
+virtual BOOL IsButtonExtraSizeAvailable() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Questo metodo restituisce FALSE.
+
+## <a name="see-also"></a>Vedere anche
+
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Classi](../../mfc/reference/mfc-classes.md)<br/>
+[Classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)

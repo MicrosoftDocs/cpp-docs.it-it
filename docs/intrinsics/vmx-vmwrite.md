@@ -17,57 +17,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f52c2c2ca60f66218b669201f293ca377d4ca5a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1a3a503528f5e12fbfafab8cb8e71711ba0650c6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707018"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396844"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
-**Sezione specifica Microsoft**  
-  
- Scrive il valore specificato per il campo specificato nella struttura di controllo macchina virtuale corrente (VMCS).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned char __vmx_vmwrite(   
-   size_t Field,  
-   size_t FieldValue  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|*Campo*|[in] Il campo VMCS da scrivere.|  
-|*Valore FieldValue*|[in] Valore da scrivere nel campo VMCS.|  
-  
-## <a name="return-value"></a>Valore restituito  
- 0  
- Operazione completata.  
-  
- 1  
- Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.  
-  
- 2  
- Operazione non riuscita senza stato disponibile.  
-  
-## <a name="remarks"></a>Note  
- Il `__vmx_vmwrite` è equivalente alla funzione il `VMWRITE` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) del sito e quindi vedere Appendice C di tale documento.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__vmx_vmwrite`|X64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmread](../intrinsics/vmx-vmread.md)
+
+**Sezione specifica Microsoft**
+
+Scrive il valore specificato per il campo specificato nella struttura di controllo macchina virtuale corrente (VMCS).
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned char __vmx_vmwrite( 
+   size_t Field,
+   size_t FieldValue
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
+|Parametro|Descrizione|
+|---------------|-----------------|
+|*Campo*|[in] Il campo VMCS da scrivere.|
+|*Valore FieldValue*|[in] Valore da scrivere nel campo VMCS.|
+
+## <a name="return-value"></a>Valore restituito
+
+0 ha avuto esito positivo dell'operazione.
+
+1. l'operazione non riuscita con stato esteso disponibile nel `VM-instruction error field` della VMCS corrente.
+
+2. l'operazione non riuscita senza stato disponibile.
+
+## <a name="remarks"></a>Note
+
+Il `__vmx_vmwrite` è equivalente alla funzione il `VMWRITE` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) del sito e quindi vedere Appendice C di tale documento.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__vmx_vmwrite`|X64|
+
+**File di intestazione** \<intrin. h >
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmread](../intrinsics/vmx-vmread.md)

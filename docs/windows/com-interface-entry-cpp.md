@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c0b2c53bf06a748be522606f5904f307cc00df8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 555dcfe83ab114db48942a5be604ff344dafa8ed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591356"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398719"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -38,7 +38,7 @@ Aggiunge una voce di interfaccia nella mappa COM della classe di destinazione.
 
 ### <a name="parameters"></a>Parametri
 
-*COM_INTERFACE_ENTRY*  
+*COM_INTERFACE_ENTRY*<br/>
 Stringa contenente il testo effettivo della voce. Per un elenco di valori possibili, vedere [COM_INTERFACE_ENTRY macro](../atl/reference/com-interface-entry-macros.md).
 
 ## <a name="remarks"></a>Note
@@ -130,6 +130,6 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi COM](../windows/com-attributes.md)  
-[Attributi di classe](../windows/class-attributes.md)  
+[Attributi COM](../windows/com-attributes.md)<br/>
+[Attributi di classe](../windows/class-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  

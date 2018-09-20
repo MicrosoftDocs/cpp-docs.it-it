@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684824"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401802"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Libreria di modelli di Windows Runtime C++ (WRL)
 
@@ -50,43 +50,43 @@ La libreria di modelli di Windows Runtime C++ e C + + c++ /CX offrono diversi va
 
 Ecco alcune risorse che possono aiutarti a iniziare subito a lavorare con la libreria di modelli di Windows Runtime C++.
 
-[La libreria di Windows Runtime (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[La libreria di Windows Runtime (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 In questo video di Channel 9, ulteriori informazioni sul modo in cui la libreria di modelli di Windows Runtime C++ consente che scrivere App Universal Windows Platform (UWP) e su come creare e utilizzare i componenti Windows Runtime.
 
-[Procedura: attivare e utilizzare un componente di Runtime di Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[Procedura: attivare e utilizzare un componente di Runtime di Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per inizializzare il Runtime di Windows e attivare e utilizzare un componente Windows Runtime.
 
-[Procedura: completare operazioni asincrone](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[Procedura: completare operazioni asincrone](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per avviare le operazioni asincrone ed eseguirle quando le operazioni completate.
 
-[Procedura: gestire eventi](../windows/how-to-handle-events-using-wrl.md)  
+[Procedura: gestire eventi](../windows/how-to-handle-events-using-wrl.md)<br/>
 Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per sottoscrivere e gestire gli eventi di un oggetto Windows Runtime.
 
-[Procedura dettagliata: creazione di un'app UWP tramite WRL e Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[Procedura dettagliata: creazione di un'app UWP tramite WRL e Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Informazioni su come creare un'app UWP che usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-[Procedura: creare un componente COM classico](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[Procedura: creare un componente COM classico](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per creare un componente COM di base e un metodo di base per registrare e utilizzare il componente COM da un'app desktop.
 
-[Procedura: Creare direttamente un'istanza dei componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md)  
+[Procedura: Creare direttamente un'istanza dei componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
 Informazioni su come usare il [makeandinitialize](../windows/make-function.md) e [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funzioni per creare un'istanza di un componente dal modulo che lo definisce.
 
-[Procedura: Usare winmdidl.exe e midlrt.exe per creare file con estensione h dai metadati di Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[Procedura: Usare winmdidl.exe e midlrt.exe per creare file con estensione h dai metadati di Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Viene illustrato come utilizzare i componenti personalizzati di Windows Runtime da WRL creando un file IDL dai metadati di .winmd.
 
-[Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Viene illustrato come utilizzare il [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfacce insieme alle attività per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.
 
-[Esempio di utilità di ottimizzazione dei viaggi di Bing mappe](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[Esempio di utilità di ottimizzazione dei viaggi di Bing mappe](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Usa il `HttpRequest` definito nella classe [questa procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) nel contesto di un'app UWP completa.
 
-[Creazione di un componente DLL di Windows Runtime con esempio di C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[Creazione di un componente DLL di Windows Runtime con esempio di C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per creare un componente DLL in-process e utilizzarlo da C + + c++ /CX, JavaScript e c#.
 
-[Esempio di gioco marble maze DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[Esempio di gioco marble maze DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Illustra come usare la libreria di modelli di Windows Runtime C++ per gestire la durata di componenti COM come DirectX e Media Foundation nel contesto di un gioco 3D completo.
 
-[Esempio di invio notifiche di tipo avviso popup da app desktop](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[Esempio di invio notifiche di tipo avviso popup da app desktop](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per lavorare con le notifiche di tipo avviso popup da un'app desktop.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Libreria modelli C++ per Windows Runtime confronto confrontata ATL
