@@ -1,5 +1,5 @@
 ---
-title: Struttura InvokeModeOptions | Documenti Microsoft
+title: Struttura InvokeModeOptions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b1eb0e7f6cf49a7c6ac12a4810ae1622e263e2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea549db29f7fcb67e4d59e341bf7d5ad085b6d7f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882837"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392710"
 ---
 # <a name="invokemodeoptions-structure"></a>Struttura InvokeModeOptions
 
-Specifica se per generare tutti gli eventi nella coda di delegato, o di interrompere la generazione dopo che viene generato un errore. I valori consentiti specificati nella `InvokeMode` enum.
+Specifica se vengono attivati tutti gli eventi nella coda del delegato o per arrestare l'attivazione dopo che viene generato un errore. I valori consentiti specificati nella `InvokeMode` enum.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -51,5 +51,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>Vedere anche
 
-[Microsoft:: wrl Namespace](../windows/microsoft-wrl-namespace.md)
-[Microsoft::WRL::AgileEventSource (classe)](../windows/agileeventsource-class.md)
+[Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)<br/>
+[Classe Microsoft::WRL::AgileEventSource](../windows/agileeventsource-class.md)

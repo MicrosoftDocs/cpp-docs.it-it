@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dfee1d923536f519917a50ed44fd5c115007c27
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f2d8244b94a308970e87646505cdcade533b717f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601967"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376007"
 ---
 # <a name="synclocktsynclockt-constructor"></a>Costruttore SyncLockT::SyncLockT
 
@@ -42,10 +42,10 @@ explicit SyncLockT(
 
 ### <a name="parameters"></a>Parametri
 
-*other*  
+*other*<br/>
 Un riferimento rvalue a un altro **SyncLockT** oggetto.
 
-*sync*  
+*sync*<br/>
 Un riferimento a un altro `SyncLockWithStatusT` oggetto.
 
 ## <a name="remarks"></a>Note

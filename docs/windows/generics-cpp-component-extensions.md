@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cc6b296684c13c2cf9c538a226fb440a2e50349
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599263"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448350"
 ---
 # <a name="generics--c-component-extensions"></a>Generics (Estensioni del componente C++)
 
@@ -33,35 +33,35 @@ I generics sono tipi e metodi con parametri. In questa sezione sono illustrate l
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Supporto da parte di Windows Runtime e Common Language Runtime
 
-[Panoramica di Generics in Visual C++](../windows/overview-of-generics-in-visual-cpp.md)  
+[Panoramica di Generics in Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Nelle informazioni sui generics sono incluse la motivazione per la funzionalità del linguaggio, le definizioni dei termini utilizzati per descrivere generics e le informazioni sull'utilizzo dei tipi di riferimento e dei tipi di valore come parametri di tipo per i generics.
 
-[Interfacce generiche (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
+[Interfacce generiche (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Informazioni sulla definizione e sull'utilizzo delle interfacce generiche.
 
-[Delegati generici (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
+[Delegati generici (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
 Informazioni sulla definizione e sull'utilizzo dei delegati generici.
 
-[Vincoli su parametri di tipo generico (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+[Vincoli su parametri di tipo generico (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Informazioni sull'utilizzo di vincoli nei tipi generici.
 
-[Uso dei generics (C++/CLI)](../windows/consuming-generics-cpp-cli.md)  
+[Uso dei generics (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Informazioni sull'utilizzo in Visual C++ dei generics definiti negli assembly .NET, probabilmente creati in altri linguaggi.
 
-[Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
+[Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Confronto tra generics e modelli, quando utilizzare ognuno di essi e come combinarli in modo efficace.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Supporto da parte di Common Language Runtime
 
-[Funzioni generiche (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
+[Funzioni generiche (C++/CLI)](../windows/generic-functions-cpp-cli.md)<br/>
 Informazioni sulla definizione e sull'utilizzo di funzioni e metodi generici.
 
-[Classi generiche (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
+[Classi generiche (C++/CLI)](../windows/generic-classes-cpp-cli.md)<br/>
 Informazioni sulla definizione e sull'utilizzo di classi generiche.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Procedura: Scorrere una raccolta generica con for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+[Procedura: Scorrere una raccolta generica con for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Usando il [per ognuna, in](../dotnet/for-each-in.md) parola chiave in una raccolta generica.
 
 ## <a name="see-also"></a>Vedere anche

@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5895f8e4efd56ddcc9ab16a91a6242db443f0821
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8cbb942a2a78a60e1cab4720c71628e043a255e1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722917"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430078"
 ---
 # <a name="inword"></a>__inword
-**Sezione specifica Microsoft**  
-  
- Legge i dati dalla porta specificata usando il `in` (istruzione).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned short __inword(  
-   unsigned short Port  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+**Sezione specifica Microsoft**
+
+Legge i dati dalla porta specificata usando il `in` (istruzione).
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned short __inword(
+   unsigned short Port
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *Porta*<br/>
-[in] La porta da cui leggere.  
-  
-## <a name="return-value"></a>Valore restituito  
- La parola di dati letti.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__inword`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questa routine è disponibile solo come funzione intrinseca.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+[in] La porta da cui leggere.
+
+## <a name="return-value"></a>Valore restituito
+
+La parola di dati letti.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__inword`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questa routine è disponibile solo come funzione intrinseca.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

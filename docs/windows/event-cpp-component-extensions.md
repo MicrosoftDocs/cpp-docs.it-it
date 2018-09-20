@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724766"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442591"
 ---
 # <a name="event--c-component-extensions"></a>evento (Estensioni del componente C++)
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametri
 
-*Modificatore*  
+*Modificatore*<br/>
 Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono **statici** e **virtuale**.
 
-*delegate*  
+*delegate*<br/>
 Il [delegare](../windows/delegate-cpp-component-extensions.md), la cui firma deve corrispondere il gestore dell'evento.
 
-*event_name*  
+*event_name*<br/>
 Nome dell'evento.
 
-*return_value*  
+*return_value*<br/>
 Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, deve essere il tipo restituito **void**.
 
-*Parametri*  
+*Parametri*<br/>
 (facoltativo) I parametri per il `raise` metodo, che corrispondono alla firma del *delegare* parametro.
 
 ### <a name="remarks"></a>Note
@@ -71,10 +71,10 @@ Un evento è un'associazione tra un delegato e una funzione membro (gestore even
 
 Esistono due tipi di dichiarazioni eventi:
 
-*membro dati evento*  
+*membro dati evento*<br/>
 Il compilatore crea automaticamente spazio di archiviazione per l'evento sotto forma di un membro del tipo delegato e crea le funzioni membro interne `add()`, `remove()` e `raise()`. Un membro dati evento deve essere dichiarato all'interno di una classe. Il tipo restituito del delegato deve corrispondere al tipo restituito del gestore eventi.
 
-*blocco eventi*  
+*blocco eventi*<br/>
 Un blocco eventi consente di dichiarare in modo esplicito e personalizzare il comportamento dei metodi `add()`, `remove()` e `raise()`.
 
 È possibile usare **gli operatori + =** e **operatore-=** per aggiungere e rimuovere un evento gestore oppure chiamare il `add()` e `remove()` metodi in modo esplicito.
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametri
 
-*Modificatore*  
+*Modificatore*<br/>
 Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono **statici** e **virtuale**.
 
-*delegate*  
+*delegate*<br/>
 Il [delegare](../windows/delegate-cpp-component-extensions.md), la cui firma deve corrispondere il gestore dell'evento.
 
-*event_name*  
+*event_name*<br/>
 Nome dell'evento.
 
-*return_value*  
+*return_value*<br/>
 Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, deve essere il tipo restituito **void**.
 
-*Parametri*  
+*Parametri*<br/>
 (facoltativo) I parametri per il `raise` metodo, che corrispondono alla firma del *delegare* parametro.
 
 ### <a name="remarks"></a>Note
@@ -137,10 +137,10 @@ Il delegato può avere uno o più metodi associati che verranno chiamati quando 
 
 Esistono due tipi di dichiarazioni eventi:
 
-*membri dati evento*  
+*membri dati evento*<br/>
 L'archiviazione per l'evento, sotto forma di un membro del tipo delegato, viene creata dal compilatore per gli eventi del membro dati.  Un membro dati evento deve essere dichiarato all'interno di una classe. È anche noto come un evento semplice (vedere l'esempio di codice riportato di seguito).
 
-*blocchi evento*  
+*blocchi evento*<br/>
 I blocchi evento consentono di personalizzare il comportamento dei metodi add, remove e raise mediante l'implementazione dei metodi add, remove e raise. La firma dei metodi add, remove e raise deve corrispondere alla firma del delegato.  Gli eventi di blocchi eventi non sono membri di dati e qualsiasi uso di un membro dati genererà un errore del compilatore.
 
 Il tipo restituito del gestore eventi deve corrispondere al tipo restituito del delegato.

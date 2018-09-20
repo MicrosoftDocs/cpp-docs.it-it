@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce5d24321f007139401c46e07d19e006d4e1dcd3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cb576ba6ce532bce15b9dda2aa598649044c2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215453"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378013"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: reflection messaggi per controlli Windows
 
@@ -174,5 +174,5 @@ Questo semplice esempio viene creato un controllo riutilizzabile chiamato `CYell
 
 ## <a name="see-also"></a>Vedere anche
 
-[Note tecniche per numero](../mfc/technical-notes-by-number.md)  
-[Note tecniche per categoria](../mfc/technical-notes-by-category.md)  
+[Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
+[Note tecniche per categoria](../mfc/technical-notes-by-category.md)

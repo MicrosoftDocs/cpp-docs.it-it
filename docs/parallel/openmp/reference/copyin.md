@@ -16,40 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 424bb8eaa41e3bbb0cf697df108adcef116e1b04
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379580"
 ---
 # <a name="copyin"></a>copyin
-Consente ai thread di accedere a valore del thread master, per un [threadprivate](../../../parallel/openmp/reference/threadprivate.md) variabile.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-copyin(var)  
-```  
-  
+
+Consente ai thread di accedere a valore del thread master, per un [threadprivate](../../../parallel/openmp/reference/threadprivate.md) variabile.
+
+## <a name="syntax"></a>Sintassi
+
+```
+copyin(var)
+```
+
 ## <a name="parameters"></a>Parametri
-  
+
 *var*<br/>
-Il `threadprivate` variabile che verrà inizializzata con il valore della variabile nel thread principale, come si presenta prima del costrutto parallelo.  
-  
-## <a name="remarks"></a>Note  
- `copyin` si applica alle direttive seguenti:  
-  
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Per altre informazioni, vedere [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).  
-  
-## <a name="example"></a>Esempio  
- Visualizzare [threadprivate](../../../parallel/openmp/reference/threadprivate.md) per un esempio d'uso `copyin`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Clausole](../../../parallel/openmp/reference/openmp-clauses.md)
+Il `threadprivate` variabile che verrà inizializzata con il valore della variabile nel thread principale, come si presenta prima del costrutto parallelo.
+
+## <a name="remarks"></a>Note
+
+`copyin` si applica alle direttive seguenti:
+
+- [parallel](../../../parallel/openmp/reference/parallel.md)
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Sezioni](../../../parallel/openmp/reference/sections-openmp.md)
+
+Per altre informazioni, vedere [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).
+
+## <a name="example"></a>Esempio
+
+Visualizzare [threadprivate](../../../parallel/openmp/reference/threadprivate.md) per un esempio d'uso `copyin`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Clausole](../../../parallel/openmp/reference/openmp-clauses.md)

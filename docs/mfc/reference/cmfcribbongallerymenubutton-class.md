@@ -28,182 +28,193 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d1ddec12ccdd6fb730ac9f1c5170f17e52eede2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751695"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448194"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Classe CMFCRibbonGalleryMenuButton
-Implementa un pulsante di menu della barra multifunzione contenente raccolte della barra multifunzione.  
- Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.  
-   
-## <a name="syntax"></a>Sintassi  
-  
-```  
-class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|Costruisce e inizializza un oggetto `CMFCRibbonGalleryMenuButton`.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|(Esegue l'override [cmfctoolbarmenubutton:: CopyFrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom).)|  
-|[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(Esegue l'override [cmfctoolbarmenubutton:: CreatePopupMenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu).)|  
-|[CMFCRibbonGalleryMenuButton::GetPalette](#getpalette)||  
-|[CMFCRibbonGalleryMenuButton::HasButton](#hasbutton)|Esegue l'override`CMFCToolBarMenuButton::HasButton`.|  
-|[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|(Esegue l'override [cmfctoolbarmenubutton:: Isemptymenuallowed](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed).)|  
-  
-### <a name="remarks"></a>Note  
- Il pulsante di menu della raccolta viene visualizzato come un menu a comparsa con una freccia. Quando l'utente fa clic su questo pulsante, viene visualizzata una raccolta di immagini. Quando si crea un pulsante di menu della raccolta, è necessario specificare un elenco di immagini che contiene le immagini.  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come visualizzare una raccolta di elenchi puntati in un pulsante di menu:  
-  
-```  
-BOOL CMainFrame::OnShowPopupMenu (CMFCPopupMenu* pMenuPopup)  
-{  
+
+Implementa un pulsante di menu della barra multifunzione contenente raccolte della barra multifunzione.
+Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+
+## <a name="syntax"></a>Sintassi
+
+```
+class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|Costruisce e inizializza un oggetto `CMFCRibbonGalleryMenuButton`.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|(Esegue l'override [cmfctoolbarmenubutton:: CopyFrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom).)|
+|[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(Esegue l'override [cmfctoolbarmenubutton:: CreatePopupMenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu).)|
+|[CMFCRibbonGalleryMenuButton::GetPalette](#getpalette)||
+|[CMFCRibbonGalleryMenuButton::HasButton](#hasbutton)|Esegue l'override`CMFCToolBarMenuButton::HasButton`.|
+|[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|(Esegue l'override [cmfctoolbarmenubutton:: Isemptymenuallowed](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed).)|
+
+### <a name="remarks"></a>Note
+
+Il pulsante di menu della raccolta viene visualizzato come un menu a comparsa con una freccia. Quando l'utente fa clic su questo pulsante, viene visualizzata una raccolta di immagini. Quando si crea un pulsante di menu della raccolta, è necessario specificare un elenco di immagini che contiene le immagini.
+
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente viene illustrato come visualizzare una raccolta di elenchi puntati in un pulsante di menu:
+
+```
+BOOL CMainFrame::OnShowPopupMenu (CMFCPopupMenu* pMenuPopup)
+{
     int nBulletIndex = pMenuBar->CommandToIndex (ID_PARA_BULLETS);
 
-    if (nBulletIndex>= 0)  
- {  
-    CMFCToolBarButton* pExButton = 
+    if (nBulletIndex>= 0)
+{
+    CMFCToolBarButton* pExButton =
     pMenuBar->GetButton(nBulletIndex);
 ASSERT_VALID (pExButton);
 
     CMFCRibbonGalleryMenuButton paletteBullet (
-    pExButton->m_nID, 
-    pExButton->GetImage (),  
+    pExButton->m_nID,
+    pExButton->GetImage (),
     pExButton->m_strText);
 
- InitBulletPalette (&paletteBullet.GetPalette ());
+InitBulletPalette (&paletteBullet.GetPalette ());
 
     pMenuBar->ReplaceButton (ID_PARA_BULLETS,
     paletteBullet);
 
- }  
-}  
-```  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- [CObject](../../mfc/reference/cobject-class.md) [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxribbonpalettegallery. H  
-  
-##  <a name="copyfrom"></a>  CMFCRibbonGalleryMenuButton::CopyFrom  
+}
+}
+```
 
-  
-```  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+[CObject](../../mfc/reference/cobject-class.md) [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** afxribbonpalettegallery. H
+
+##  <a name="copyfrom"></a>  CMFCRibbonGalleryMenuButton::CopyFrom
+
+
+```
 virtual void CopyFrom(const CMFCToolBarButton& src);
-```  
-  
-### <a name="parameters"></a>Parametri  
- [in] *src*  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
- Costruisce e Inizializza un [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) oggetto.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametri
+
+[in] *src*
+
+### <a name="remarks"></a>Note
+
+##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton
+
+Costruisce e Inizializza un [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) oggetto.
+
+```
 CMFCRibbonGalleryMenuButton(
-    UINT uiID,  
-    int iImage,  
-    LPCTSTR lpszText,  
+    UINT uiID,
+    int iImage,
+    LPCTSTR lpszText,
     CMFCToolBarImages& imagesPalette);
 
- 
+
 CMFCRibbonGalleryMenuButton(
-    UINT uiID,  
-    int iImage,  
-    LPCTSTR lpszText,  
-    UINT uiImagesPaletteResID = 0,  
+    UINT uiID,
+    int iImage,
+    LPCTSTR lpszText,
+    UINT uiImagesPaletteResID = 0,
     int cxPaletteImage = 0);
-```  
-  
-### <a name="parameters"></a>Parametri  
- *uiID*  
- ID comando del pulsante. Questo è il valore inviato nel messaggio WM_COMMAND quando l'utente fa clic su questo pulsante.  
-  
- *iImage*  
- L'indice dell'immagine da visualizzare con il pulsante di menu della raccolta. Le immagini vengono archiviate nel *imagesPalette* parametro.  
-  
- *lpszText*  
- Il testo da visualizzare sul pulsante di menu.  
-  
- *imagesPalette*  
- Contiene l'elenco di immagini da visualizzare nella raccolta.  
-  
- *uiImagesPaletteResID*  
- L'ID risorsa dell'elenco immagini per le immagini da visualizzare nella raccolta.  
-  
- *cxPaletteImage*  
- Specifica la larghezza in pixel dell'immagine da visualizzare nella raccolta.  
-  
-### <a name="remarks"></a>Note  
- Il pulsante di menu della raccolta viene visualizzato come menu a comparsa con una freccia. Quando l'utente fa clic su questo pulsante, viene visualizzata una raccolta di immagini.  
-  
-### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonGalleryMenuButton` classe. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
-  
-##  <a name="createpopupmenu"></a>  CMFCRibbonGalleryMenuButton::CreatePopupMenu  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametri
+
+*uiID*<br/>
+ID comando del pulsante. Questo è il valore inviato nel messaggio WM_COMMAND quando l'utente fa clic su questo pulsante.
+
+*iImage*<br/>
+L'indice dell'immagine da visualizzare con il pulsante di menu della raccolta. Le immagini vengono archiviate nel *imagesPalette* parametro.
+
+*lpszText*<br/>
+Il testo da visualizzare sul pulsante di menu.
+
+*imagesPalette*<br/>
+Contiene l'elenco di immagini da visualizzare nella raccolta.
+
+*uiImagesPaletteResID*<br/>
+L'ID risorsa dell'elenco immagini per le immagini da visualizzare nella raccolta.
+
+*cxPaletteImage*<br/>
+Specifica la larghezza in pixel dell'immagine da visualizzare nella raccolta.
+
+### <a name="remarks"></a>Note
+
+Il pulsante di menu della raccolta viene visualizzato come menu a comparsa con una freccia. Quando l'utente fa clic su questo pulsante, viene visualizzata una raccolta di immagini.
+
+### <a name="example"></a>Esempio
+
+Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonGalleryMenuButton` classe. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]
+
+##  <a name="createpopupmenu"></a>  CMFCRibbonGalleryMenuButton::CreatePopupMenu
+
+
+```
 virtual CMFCPopupMenu* CreatePopupMenu();
-```  
-  
-### <a name="return-value"></a>Valore restituito  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="getpalette"></a>  CMFCRibbonGalleryMenuButton::GetPalette  
+```
 
-  
-```  
+### <a name="return-value"></a>Valore restituito
+
+### <a name="remarks"></a>Note
+
+##  <a name="getpalette"></a>  CMFCRibbonGalleryMenuButton::GetPalette
+
+
+```
 CMFCRibbonGallery& GetPalette();
-```  
-  
-### <a name="return-value"></a>Valore restituito  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="hasbutton"></a>  CMFCRibbonGalleryMenuButton::HasButton  
+```
 
-  
-```  
-virtual BOOL HasButton() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
-  
-### <a name="remarks"></a>Note  
-  
-##  <a name="isemptymenuallowed"></a>  CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed  
+### <a name="return-value"></a>Valore restituito
 
-  
-```  
-virtual BOOL IsEmptyMenuAllowed() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
-  
-### <a name="remarks"></a>Note  
-  
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
- [Classe CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)
+### <a name="remarks"></a>Note
+
+##  <a name="hasbutton"></a>  CMFCRibbonGalleryMenuButton::HasButton
+
+
+```
+virtual BOOL HasButton() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+### <a name="remarks"></a>Note
+
+##  <a name="isemptymenuallowed"></a>  CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed
+
+
+```
+virtual BOOL IsEmptyMenuAllowed() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+### <a name="remarks"></a>Note
+
+## <a name="see-also"></a>Vedere anche
+
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Classi](../../mfc/reference/mfc-classes.md)<br/>
+[Classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
+[Classe CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)
