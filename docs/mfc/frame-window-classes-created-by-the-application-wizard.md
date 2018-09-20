@@ -1,5 +1,5 @@
 ---
-title: Classi frame-Window create dalla creazione guidata applicazione | Documenti Microsoft
+title: Classi frame-Window create dalla procedura guidata dell'applicazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,25 +24,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3446de072266fdf7661d2e8d8ca0fc968279646
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aff98636c723de17056f4bef337b46f4a686ddec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345052"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420608"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classi Frame-Window create dalla Creazione guidata applicazione
-Quando si utilizza il [Creazione guidata applicazione](../ide/creating-desktop-projects-by-using-application-wizards.md) per creare uno scheletro di applicazione, oltre alle applicazioni, documento e visualizzazione classi, la creazione guidata applicazione crea una classe derivata della finestra cornice per la finestra cornice principale dell'applicazione. La classe viene denominata `CMainFrame` per impostazione predefinita e i file in essa contenuti sono denominati MAINFRM. H e MAINFRM. CPP.  
-  
- Se l'applicazione SDI, il `CMainFrame` classe è derivata dalla classe [CFrameWnd](../mfc/reference/cframewnd-class.md).  
-  
- Se l'applicazione MDI, `CMainFrame` è derivata dalla classe [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). In questo caso `CMainFrame` implementa la cornice principale, che include le barre di stato, barra degli strumenti e menu. La creazione guidata applicazione non derivare una nuova classe finestra cornice di documento per l'utente. Utilizza invece l'implementazione predefinita in [CMDIChildWnd (classe)](../mfc/reference/cmdichildwnd-class.md). Il framework MFC crea una finestra figlio per contenere ogni visualizzazione (che può essere di tipo `CScrollView`, `CEditView`, `CTreeView`, `CListView`e così via) che richiede l'applicazione. Se si desidera personalizzare la finestra cornice di documento, è possibile creare una nuova classe finestra cornice di documento (vedere [aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)).  
-  
- Se si sceglie di supportare una barra degli strumenti, la classe presenta inoltre le variabili membro di tipo [CToolBar](../mfc/reference/ctoolbar-class.md) e [CStatusBar](../mfc/reference/cstatusbar-class.md) e `OnCreate` funzione gestore messaggi per inizializzare i due [ barre di controllo](../mfc/control-bars.md).  
-  
- Queste classi finestra cornice funzionano come creato, ma per potenziare le funzionalità, è necessario aggiungere le variabili membro e funzioni membro. È anche consigliabile gestire altri messaggi di Windows per le classi di finestra. Per ulteriori informazioni, vedere [modifica degli stili di una finestra creata da MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classi di finestre cornice](../mfc/frame-window-classes.md)   
- [File di intestazione e di origine di un controllo o programma MFC](../ide/mfc-program-or-control-source-and-header-files.md)
+
+Quando si usa la [Creazione guidata applicazione](../ide/creating-desktop-projects-by-using-application-wizards.md) per creare uno scheletro di applicazione, oltre all'applicazione, documenti e classi di visualizzazione, la creazione guidata applicazione crea una classe derivata frame-window per finestra cornice principale dell'applicazione. La classe è detta `CMainFrame` per impostazione predefinita e i file che lo contengono sono denominati MAINFRM. H e MAINFRM. CPP.
+
+Se l'applicazione SDI, il `CMainFrame` classe è derivata dalla classe [CFrameWnd](../mfc/reference/cframewnd-class.md).
+
+Se l'applicazione, MDI `CMainFrame` è derivata dalla classe [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). In questo caso `CMainFrame` implementa la cornice principale, che contiene le barre di menu della barra degli strumenti e lo stato. La procedura guidata dell'applicazione non deriva una nuova classe di finestre cornice di documento per l'utente. Usa invece l'implementazione predefinita in [classe CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md). Framework MFC crea una finestra figlio per contenere ciascuna visualizzazione (che può essere di tipo `CScrollView`, `CEditView`, `CTreeView`, `CListView`e così via) necessari all'applicazione. Se si desidera personalizzare la finestra cornice di documento, è possibile creare una nuova classe di finestre cornice di documento (vedere [aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)).
+
+Se si sceglie di supportare una barra degli strumenti, la classe include anche le variabili membro di tipo [CToolBar](../mfc/reference/ctoolbar-class.md) e [CStatusBar](../mfc/reference/cstatusbar-class.md) e un `OnCreate` funzioni gestore messaggi per inizializzare i due [ le barre di controllo](../mfc/control-bars.md).
+
+Queste classi frame-window funzionano come creato, ma per migliorare le proprie funzionalità, è necessario aggiungere le variabili membro e funzioni membro. È anche possibile che le classi di finestra gestisca gli altri messaggi di Windows. Per altre informazioni, vedere [modifica degli stili di una finestra creata da MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classi di finestre cornice](../mfc/frame-window-classes.md)<br/>
+[File di intestazione e di origine di un controllo o programma MFC](../ide/mfc-program-or-control-source-and-header-files.md)
 

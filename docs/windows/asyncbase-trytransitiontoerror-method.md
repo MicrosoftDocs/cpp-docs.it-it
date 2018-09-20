@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1244b87410a09996d946408ff77dbb552b339c85
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a6e21f89b5f1beb035b2dd87b2d0ad1d55bc3f8f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591154"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418058"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>Metodo AsyncBase::TryTransitionToError
 
@@ -38,7 +38,7 @@ bool TryTransitionToError(
 
 ### <a name="parameters"></a>Parametri
 
-*Errore*  
+*Errore*<br/>
 Un errore HRESULT.
 
 ## <a name="return-value"></a>Valore restituito

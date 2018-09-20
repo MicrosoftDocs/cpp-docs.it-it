@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a29a7ae4734e5d1f1930d5309163d1e1519aa4
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: f195a553c29c8a1cd0ef57f82c9f57a1f3672048
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541772"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405294"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Direttive pragma e parola chiave __Pragma
 Le direttive pragma specificano funzionalità del compilatore specifiche del computer o del sistema operativo. Il **pragma** parola chiave, che è specifico per il compilatore Microsoft, consente di codificare direttive pragma all'interno delle definizioni di macro.  
@@ -117,6 +117,6 @@ return _hr; \
   
 ## <a name="see-also"></a>Vedere anche  
  
-[Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
-[Pragma C](../c-language/c-pragmas.md)   
+[Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Pragma C](../c-language/c-pragmas.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)

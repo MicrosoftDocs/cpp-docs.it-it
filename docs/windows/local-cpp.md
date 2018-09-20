@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b910ce2416dc345e2a36c9858f260ef5b42c2cc8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d0b45106609c4bc93684e0d89737bb0753e36fb4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203322"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421089"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -57,7 +57,7 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di interfaccia](../windows/interface-attributes.md)  
-[Attributi di metodo](../windows/method-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di interfaccia](../windows/interface-attributes.md)<br/>
+[Attributi di metodo](../windows/method-attributes.md)<br/>
 [call_as](../windows/call-as.md)  

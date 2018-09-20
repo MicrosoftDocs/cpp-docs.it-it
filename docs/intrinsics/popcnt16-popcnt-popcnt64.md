@@ -21,95 +21,99 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34063223addb433a94c877ad56cf410f189e6681
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a756c573b6853b12e99d56d83d8a1dc9f1ab2c68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724737"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421596"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
-**Sezione specifica Microsoft**  
-  
- Conta il numero di un bit (Conteggio popolamento) in 16, 32 o intero senza segno a 64 byte.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned short __popcnt16(  
-   unsigned short value  
-);  
-unsigned int __popcnt(  
-   unsigned int value  
-);  
-unsigned __int64 __popcnt64(  
-   unsigned __int64 value  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
-*valore*<br/>
-[in] Il 16, 32 o intero senza segno a 64 bit per il quale si desidera il conteggio di popolamento.  
-  
-## <a name="return-value"></a>Valore restituito  
- Il numero di bit di uno il `value` parametro.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__popcnt16`|Manipolazione dei Bit avanzate|  
-|`__popcnt`|Manipolazione dei Bit avanzate|  
-|`__popcnt64`|Manipolazione avanzati dei Bit in modalità a 64 bit.|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Ognuna di queste funzioni intrinseche genera il `popcnt` (istruzione).  Le dimensioni del valore che la `popcnt` istruzione restituisce un valore è quello utilizzato per la dimensione del relativo argomento.  In modalità a 32 bit non è nessun a 64 bit per utilizzo generico registri, pertanto non 64-bit `popcnt`.  
-  
- Per determinare il supporto hardware per il `popcnt` (istruzione), chiamare il `__cpuid` intrinseco con `InfoType=0x00000001` e controllare bit 23 di `CPUInfo[2] (ECX)`. Questo bit è 1 se l'istruzione è supportata e 0 in caso contrario. Se si esegue codice che usa questa funzione intrinseca in hardware che non supporta il `popcnt` (istruzione), i risultati sono imprevedibili.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-#include <iostream>   
-#include <intrin.h>   
-using namespace std;   
-  
-int main()   
-{  
-  unsigned short us[3] = {0, 0xFF, 0xFFFF};  
-  unsigned short usr;  
-  unsigned int   ui[4] = {0, 0xFF, 0xFFFF, 0xFFFFFFFF};  
-  unsigned int   uir;  
-  
-  for (int i=0; i<3; i++) {  
-    usr = __popcnt16(us[i]);  
-    cout << "__popcnt16(0x" << hex << us[i] << ") = " << dec << usr << endl;  
-  }  
-  
-  for (int i=0; i<4; i++) {  
-    uir = __popcnt(ui[i]);  
-    cout << "__popcnt(0x" << hex << ui[i] << ") = " << dec << uir << endl;  
-  }  
-}  
-  
-```  
-  
-```Output  
-__popcnt16(0x0) = 0  
-__popcnt16(0xff) = 8  
-__popcnt16(0xffff) = 16  
-__popcnt(0x0) = 0  
-__popcnt(0xff) = 8  
-__popcnt(0xffff) = 16  
-__popcnt(0xffffffff) = 32  
-```  
-  
-**Fine sezione specifica Microsoft**  
+**Sezione specifica Microsoft**
 
-Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+Conta il numero di un bit (Conteggio popolamento) in 16, 32 o intero senza segno a 64 byte.
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned short __popcnt16(
+   unsigned short value
+);
+unsigned int __popcnt(
+   unsigned int value
+);
+unsigned __int64 __popcnt64(
+   unsigned __int64 value
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
+*valore*<br/>
+[in] Il 16, 32 o intero senza segno a 64 bit per il quale si desidera il conteggio di popolamento.
+
+## <a name="return-value"></a>Valore restituito
+
+Il numero di bit di uno il `value` parametro.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__popcnt16`|Manipolazione dei Bit avanzate|
+|`__popcnt`|Manipolazione dei Bit avanzate|
+|`__popcnt64`|Manipolazione avanzati dei Bit in modalità a 64 bit.|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Ognuna di queste funzioni intrinseche genera il `popcnt` (istruzione).  Le dimensioni del valore che la `popcnt` istruzione restituisce un valore è quello utilizzato per la dimensione del relativo argomento.  In modalità a 32 bit non è nessun a 64 bit per utilizzo generico registri, pertanto non 64-bit `popcnt`.
+
+Per determinare il supporto hardware per il `popcnt` (istruzione), chiamare il `__cpuid` intrinseco con `InfoType=0x00000001` e controllare bit 23 di `CPUInfo[2] (ECX)`. Questo bit è 1 se l'istruzione è supportata e 0 in caso contrario. Se si esegue codice che usa questa funzione intrinseca in hardware che non supporta il `popcnt` (istruzione), i risultati sono imprevedibili.
+
+## <a name="example"></a>Esempio
+
+```
+#include <iostream>
+#include <intrin.h>
+using namespace std;
+
+int main()
+{
+  unsigned short us[3] = {0, 0xFF, 0xFFFF};
+  unsigned short usr;
+  unsigned int   ui[4] = {0, 0xFF, 0xFFFF, 0xFFFFFFFF};
+  unsigned int   uir;
+
+  for (int i=0; i<3; i++) {
+    usr = __popcnt16(us[i]);
+    cout << "__popcnt16(0x" << hex << us[i] << ") = " << dec << usr << endl;
+  }
+
+  for (int i=0; i<4; i++) {
+    uir = __popcnt(ui[i]);
+    cout << "__popcnt(0x" << hex << ui[i] << ") = " << dec << uir << endl;
+  }
+}
+
+```
+
+```Output
+__popcnt16(0x0) = 0
+__popcnt16(0xff) = 8
+__popcnt16(0xffff) = 16
+__popcnt(0x0) = 0
+__popcnt(0xff) = 8
+__popcnt(0xffff) = 16
+__popcnt(0xffffffff) = 32
+```
+
+**Fine sezione specifica Microsoft**
+
+Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

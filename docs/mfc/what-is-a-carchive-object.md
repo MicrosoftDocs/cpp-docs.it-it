@@ -1,5 +1,5 @@
 ---
-title: Che cos'è un oggetto CArchive | Documenti Microsoft
+title: Che cos'è un oggetto CArchive | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55b97843a8aeb2599d2bdf34458b362fc5899368
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe45b3e5444549001990f62db7028f9de6d49986
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383831"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409663"
 ---
 # <a name="what-is-a-carchive-object"></a>Definizione di oggetto CArchive
-Oggetto `CArchive` oggetto fornisce un meccanismo di memorizzazione nel buffer indipendente dai tipi per la scrittura o lettura di oggetti serializzabili a o da un `CFile` oggetto. In genere il `CFile` oggetto rappresenta un file su disco, tuttavia, può essere anche un file di memoria (`CSharedFile` oggetto), che rappresenta ad esempio negli Appunti.  
-  
- Un determinato `CArchive` oggetto consente di memorizzare (scrive, serializza) oppure di caricare (legge, deserializza) dei dati, ma non entrambe. Il ciclo di vita di un `CArchive` l'oggetto è limitato a un'operazione di scrittura di oggetti in un file o la lettura di oggetti da un file. Di conseguenza, due creato successivamente `CArchive` gli oggetti necessari per serializzare i dati in un file e quindi deserializzarli il file.  
-  
- Quando un archivio vengono memorizzati gli oggetti in un file, l'archivio Allega il `CRuntimeClass` nome agli oggetti. Quindi, quando un altro archivio carica gli oggetti da un file in memoria, il `CObject`-oggetti derivati vengono ricostruiti in modo dinamico in base il `CRuntimeClass` degli oggetti. Un oggetto specificato è possibile fare riferimento più volte durante la scrittura del file dall'archivio di memorizzazione. L'archivio di caricamento, tuttavia, verrà ricostruire l'oggetto una sola volta. I dettagli sulla modalità in cui viene associato un archivio `CRuntimeClass` in cui sono riportate informazioni per gli oggetti e ricostruisce, prendendo in considerazione possibili più riferimenti, [Nota tecnica 2](../mfc/tn002-persistent-object-data-format.md).  
-  
- Come i dati vengono serializzati in un archivio, l'archivio accumula i dati fino a quando il buffer è pieno. Quindi, l'archivio scrive nel proprio buffer di `CFile` oggetto a cui fa riferimento il `CArchive` oggetto. Analogamente, durante la lettura dei dati da un archivio, legge i dati dal buffer di file e quindi dal buffer per l'oggetto deserializzato. Questo buffering riduce il numero di volte in che un disco rigido viene letto fisicamente, migliorando le prestazioni dell'applicazione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Serializzazione: serializzazione di un oggetto](../mfc/serialization-serializing-an-object.md)
+
+Oggetto `CArchive` oggetto fornisce un meccanismo di memorizzazione nel buffer indipendente dai tipi per la scrittura o lettura oggetti serializzabili da o verso un `CFile` oggetto. In genere il `CFile` oggetto rappresenta un file su disco, tuttavia, può anche essere un file di memoria (`CSharedFile` oggetto), che rappresenta ad esempio gli Appunti.
+
+Una determinata `CArchive` entrambi gli archivi dell'oggetto (scrive, serializza) dei dati o caricamenti (legge, deserializza) dei dati, ma non entrambe. Il ciclo di vita di un `CArchive` l'oggetto è limitato a un'operazione di scrittura di oggetti in un file o la lettura di oggetti da un file. Di conseguenza, due in successione creato `CArchive` gli oggetti necessari per serializzare i dati in un file e quindi deserializzarli il file.
+
+Quando un archivio archivia gli oggetti in un file, l'archivio Allega il `CRuntimeClass` nome agli oggetti. Quindi, quando un altro archivio carica gli oggetti da un file in memoria, il `CObject`-gli oggetti derivati da vengono ricostruiti in modo dinamico in base il `CRuntimeClass` degli oggetti. Un oggetto specificato può farvi riferimento più volte mentre viene scritto nel file dall'archivio di memorizzazione. L'archivio di caricamento, tuttavia, verrà ricostruire l'oggetto una sola volta. I dettagli sulla modalità collega un archivio `CRuntimeClass` le informazioni per gli oggetti e ricostruisce, prendendo in considerazione possibili più riferimenti, sono descritti nella [tecnica nota 2](../mfc/tn002-persistent-object-data-format.md).
+
+Come i dati vengono serializzati in un archivio, l'archivio accumula i dati fino a quando il buffer è pieno. Quindi l'archivio inserisce il buffer per il `CFile` oggetto a cui punta il `CArchive` oggetto. Analogamente, durante la lettura dei dati da un archivio, legge i dati dal file per il buffer e quindi dal buffer per l'oggetto deserializzato. Il buffering riduce il numero di volte in cui che un disco rigido viene letta fisicamente, migliorando così le prestazioni dell'applicazione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Serializzazione: serializzazione di un oggetto](../mfc/serialization-serializing-an-object.md)
 

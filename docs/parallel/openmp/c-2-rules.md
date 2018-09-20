@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755021"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404774"
 ---
 # <a name="c2-rules"></a>C.2 Regole
+
 La notazione è descritto nella sezione 6.1 dello standard C. In questa appendice grammatica illustra le estensioni per la grammatica del linguaggio di base per le direttive OpenMP C e C++.
 
 **/\* in C++ (ISO/IEC 14882:1998) \*/**
 
 *istruzione-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Istruzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direttive OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*istruzione seq-istruzione*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*istruzione-seq (direttiva openmp-)*
@@ -33,7 +34,7 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
 **/\* in C90 (ISO/IEC 9899:1990) \*/**
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Istruzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direttive OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*istruzione-list-istruzione*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elenco di istruzioni direttive openmp*
@@ -41,8 +42,8 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
 **/\* in C99 (ISO/IEC 9899:1999) \*/**
 
 *elemento di blocco*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Dichiarazione*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Istruzione*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direttive OpenMP*
 
 **/\* istruzioni standard \*/**
@@ -67,7 +68,7 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
 &nbsp;&nbsp;&nbsp;&nbsp;*lo scaricamento-direttiva*
 
 *blocco strutturato*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Istruzione*
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
 *parallelo-costrutto*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parallelo-direttiva blocco strutturato*
@@ -100,7 +101,7 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
 &nbsp;&nbsp;&nbsp;&nbsp;**pianificazione (** *tipo di pianificazione* **,** *espressione* **)**
 
 *tipo di pianificazione*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Statica**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Dinamica**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**PGO**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Fase di esecuzione**
@@ -194,7 +195,7 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
 
 **/\* dichiarazioni standard \*/**
 
-*dichiarazione*:<br/>
+*declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direttiva threadprivate*
 
 *direttiva threadprivate*:<br/>
@@ -217,7 +218,7 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
 **/\* in C \*/**
 
 *elenco variabile*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*variabile-list* **,** *identificatore*
 
 **/\* in C++ \*/**
