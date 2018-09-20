@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di CDateTimeCtrl | Documenti Microsoft
+title: Utilizzo di CDateTimeCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c087bb7782b7b140b07683b40cad358049f682c
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 15b469e5265cfdaaf4f7e29e94806ff9e85b625e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953025"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425879"
 ---
 # <a name="using-cdatetimectrl"></a>Utilizzo di CDateTimeCtrl
-Il controllo di selezione data e ora ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementa un metodo intuitivo e riconoscibile di immettere o selezionare una data specifica. L'interfaccia principale del controllo è simile a una casella combinata. Tuttavia, se l'utente espande il controllo, viene visualizzato un controllo calendario mensile (per impostazione predefinita), consentendo all'utente di specificare una data specifica. Quando viene scelta una data, viene rimosso automaticamente il controllo calendario mensile.  
-  
+
+Il controllo di selezione data e ora ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementa un metodo intuitivo e riconoscibile di immettere o selezionare una data specifica. L'interfaccia principale del controllo è simile a una casella combinata. Tuttavia, se l'utente espande il controllo, viene visualizzato un controllo calendario mensile (per impostazione predefinita), che consente all'utente di specificare una data specifica. Quando si sceglie una data, viene rimosso automaticamente il controllo calendario mensile.
+
 > [!NOTE]
->  Utilizzare entrambe le `CDateTimePicker` e `CMonthCalCtrl` classi nel progetto, è necessario includere AFXDTCTL. H, in genere in STDAFX del progetto. File H.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Creazione del controllo selezione data e ora](../mfc/creating-the-date-and-time-picker-control.md)  
-  
--   [Esempi di controllo selezione data e ora](../mfc/date-and-time-picker-control-examples.md)  
-  
--   [Accesso al controllo calendario mensile incorporato](../mfc/accessing-the-embedded-month-calendar-control.md)  
-  
--   [Uso di stringhe di formato personalizzate in un controllo selezione data e ora](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)  
-  
--   [Uso dei campi callback in un controllo selezione data e ora](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)  
-  
--   [Elaborazione dei messaggi di notifica nel controlli selezione data e ora](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controlli](../mfc/controls-mfc.md)
+>  Per utilizzare sia la `CDateTimePicker` e `CMonthCalCtrl` classi nel progetto, è necessario includere AFXDTCTL. H, in genere in STDAFX del progetto. File H.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Creazione del controllo selezione data e ora](../mfc/creating-the-date-and-time-picker-control.md)
+
+- [Esempi di controllo selezione data e ora](../mfc/date-and-time-picker-control-examples.md)
+
+- [Accesso al controllo calendario mensile incorporato](../mfc/accessing-the-embedded-month-calendar-control.md)
+
+- [Uso di stringhe di formato personalizzate in un controllo selezione data e ora](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)
+
+- [Uso dei campi callback in un controllo selezione data e ora](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)
+
+- [Elaborazione dei messaggi di notifica nel controlli selezione data e ora](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Controlli](../mfc/controls-mfc.md)
 

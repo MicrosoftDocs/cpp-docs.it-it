@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2bda23b6847c08096b27516fcc955e4bf68c38ba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313936"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385833"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Nuove &lt;dispositivo&gt; immagine finestra di dialogo tipo (C++) (Editor di immagini per le icone)
 
@@ -54,6 +54,6 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Menu immagine](../windows/image-menu-image-editor-for-icons.md)  
+[Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Menu immagine](../windows/image-menu-image-editor-for-icons.md)<br/>
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)

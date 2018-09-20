@@ -1,5 +1,5 @@
 ---
-title: 'Appunti: Quando utilizzare ogni meccanismo di Appunti | Documenti Microsoft'
+title: 'Appunti: Quando usare ogni meccanismo di Appunti | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d7ab966eb0fcb5592f55a1b24f1558946dbd16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b8a772dd58cf9623d4076665e7859d191bb27e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341926"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379814"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Appunti: quando utilizzare ogni meccanismo di appunti
-Seguire le indicazioni riportate negli Appunti utilizzando:  
-  
--   Per abilitare nuove funzionalità in futuro, utilizzare il meccanismo di Appunti OLE ora. Mentre le API degli Appunti standard verranno mantenute, il meccanismo OLE è il futuro di trasferimento dei dati.  
-  
--   Se si sta scrivendo un'applicazione OLE o desidera che la funzionalità OLE, ad esempio trascinamento della selezione, utilizzare il meccanismo di Appunti OLE.  
-  
--   Se si desidera fornire formati OLE, utilizzare il meccanismo di Appunti OLE.  
-  
-## <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire  
-  
--   [Utilizzo del meccanismo degli Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [Utilizzare il meccanismo di Appunti di Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Appunti](../mfc/clipboard.md)
+
+Seguire queste linee guida usando gli Appunti:
+
+- Usare ora il meccanismo degli Appunti OLE per abilitare nuove funzionalità in futuro. Mentre verranno mantenute le API degli Appunti standard, il meccanismo OLE è il futuro di trasferimento dei dati.
+
+- Se si sta scrivendo un'applicazione OLE o vuole che tutte le funzionalità OLE, ad esempio trascinamento della selezione, usare il meccanismo degli Appunti OLE.
+
+- Se si fornisce formati OLE, utilizzare il meccanismo degli Appunti OLE.
+
+## <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire
+
+- [Uso del meccanismo degli Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [Utilizzare il meccanismo di Appunti di Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Appunti](../mfc/clipboard.md)
 

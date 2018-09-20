@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a585f052c42453f0eb9fe8a39a21a5561d4b00c3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 004c7681207e93553df48d8a7ea266841e9cfed2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598960"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375507"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Costruttore Semaphore::Semaphore
 
@@ -42,7 +42,7 @@ WRL_NOTHROW Semaphore(
 
 ### <a name="parameters"></a>Parametri
 
-*h*  
+*h*<br/>
 Un handle o un riferimento rvalue a un **semaforo** oggetto.
 
 ## <a name="requirements"></a>Requisiti
@@ -52,4 +52,5 @@ Un handle o un riferimento rvalue a un **semaforo** oggetto.
 **Namespace:** Microsoft::WRL::Wrappers
 
 ## <a name="see-also"></a>Vedere anche
+
 [Classe Semaphore](../windows/semaphore-class.md)

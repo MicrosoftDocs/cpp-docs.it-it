@@ -1,5 +1,5 @@
 ---
-title: Le impostazioni per il controllo Progress | Documenti Microsoft
+title: Le impostazioni per il controllo Progress | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26afdcb58a64f2d2042596349acc4496aa530468
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6b11189e3e0a8381ade372841e6c7b25a5a9fa0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380009"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434635"
 ---
 # <a name="settings-for-the-progress-control"></a>Impostazioni per il controllo Progress
-Le impostazioni di base per il controllo progress ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) sono l'intervallo e la posizione corrente. L'intervallo rappresenta l'intera durata dell'operazione. La posizione corrente rappresenta la percentuale di completamento dell'operazione da parte dell'applicazione. Tutte le modifiche all'intervallo o alla posizione che il controllo di stato di avanzamento ridisegni.  
-  
- Per impostazione predefinita, l'intervallo viene impostato su 0 - 100 e la posizione iniziale è impostato su 0. Per recuperare le impostazioni correnti di intervallo per il controllo dello stato, utilizzare il [GetRange](../mfc/reference/cprogressctrl-class.md#getrange) funzione membro. Per modificare l'intervallo, utilizzare il [SetRange](../mfc/reference/cprogressctrl-class.md#setrange) funzione membro.  
-  
- Per impostare la posizione, utilizzare [funzione membro SetPos](../mfc/reference/cprogressctrl-class.md#setpos). Per recuperare la posizione corrente senza specificare un nuovo valore, utilizzare [GetPos](../mfc/reference/cprogressctrl-class.md#getpos). Potrebbe ad esempio, si desidera semplicemente una query sullo stato dell'operazione corrente.  
-  
- Per avanzare la posizione corrente del controllo di stato, utilizzare [StepIt](../mfc/reference/cprogressctrl-class.md#stepit). Per impostare la quantità di ogni passaggio, utilizzare [SetStep](../mfc/reference/cprogressctrl-class.md#setstep)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CProgressCtrl](../mfc/using-cprogressctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+Le impostazioni di base per il controllo progress ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) sono l'intervallo e la posizione corrente. L'intervallo rappresenta l'intera durata dell'operazione. La posizione corrente rappresenta lo stato di avanzamento dell'applicazione ha compiuto verso il completamento dell'operazione. Le modifiche apportate all'intervallo o alla posizione causano il controllo di stato ridisegnato.
+
+Per impostazione predefinita, l'intervallo è impostato su 0 - 100 e la posizione iniziale è impostato su 0. Per recuperare le impostazioni dell'intervallo corrente per il controllo di stato di avanzamento, usare il [GetRange](../mfc/reference/cprogressctrl-class.md#getrange) funzione membro. Per modificare l'intervallo, usare il [SetRange](../mfc/reference/cprogressctrl-class.md#setrange) funzione membro.
+
+Per impostare la posizione, usare [funzione membro SetPos](../mfc/reference/cprogressctrl-class.md#setpos). Per recuperare la posizione corrente senza specificare un nuovo valore, usare [GetPos](../mfc/reference/cprogressctrl-class.md#getpos). Ad esempio, è possibile semplicemente effettuare una query sullo stato dell'operazione corrente.
+
+Per istruzioni sulla posizione corrente del controllo di stato, usare [StepIt](../mfc/reference/cprogressctrl-class.md#stepit). Per impostare la quantità di ogni passaggio, utilizzare [SetStep](../mfc/reference/cprogressctrl-class.md#setstep)
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CProgressCtrl](../mfc/using-cprogressctrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

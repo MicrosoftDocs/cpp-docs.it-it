@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b8d9ef624f17645da058ab86cd9b6a53cf17069
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5bfff5e307b7240a4ce765c31131f8702071b7e9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606021"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424133"
 ---
 # <a name="shrinking-or-stretching-part-of-an-image-image-editor-for-icons"></a>Riduzione o ingrandimento di una parte dell'immagine (Editor di immagini per le icone)
 
@@ -41,5 +41,5 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Ridimensionamento di un'immagine](../windows/resizing-an-image-image-editor-for-icons.md)

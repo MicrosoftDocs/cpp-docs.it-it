@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0da05d9599767f52fa6e65cabb4614be191699e0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6e81ca5418782b993f406f33b0b207bc8acb5ba0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610789"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393659"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Ridimensionamento di un'immagine (Editor di immagini per le icone)
 
@@ -59,6 +59,6 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)

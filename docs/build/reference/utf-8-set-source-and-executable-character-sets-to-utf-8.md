@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1193af2891a2cd3150fdb1cee9dd6957a1fe271
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 409d56699334d6e62294768f3c6b5f4890ea503c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704067"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379489"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (eseguibili e imposta origine set di caratteri UTF-8)
 
@@ -54,6 +54,6 @@ Per impostazione predefinita, Visual Studio rileva un contrassegno di ordine dei
 
 [Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[(set esecuzione Set di caratteri) /Execution-CharSet](../../build/reference/execution-charset-set-execution-character-set.md)
-[(Imposta origine Set di caratteri) /source-charset](../../build/reference/source-charset-set-source-character-set.md)
-[/Validate/CharSet (convalida per i caratteri compatibili)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/Execution-CharSet (set esecuzione Set di caratteri)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source/charset (imposta il set di caratteri di origine)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/validate/charset (convalida per i caratteri compatibili)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

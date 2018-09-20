@@ -1,5 +1,5 @@
 ---
-title: "Procedura: specificare criteri dell'utilità di pianificazione specifici | Documenti Microsoft"
+title: "Procedura: specificare i criteri dell'utilità di pianificazione specifici | Microsoft Docs"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,49 +15,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988540c19ab94e841e274637b581f0ce8031df13
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 578743fc9ffc6931e596a1b924282544f5ee9601
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685785"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435415"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>Procedura: Definire criteri dell'utilità di pianificazione specifici
-Criteri dell'utilità di pianificazione consentono di controllare la strategia utilizzata l'utilità di pianificazione quando gestisce le attività. In questo argomento viene illustrato come utilizzare i criteri dell'utilità di pianificazione per aumentare la priorità di thread di un'attività che visualizza un indicatore di stato nella console.  
-  
- Per un esempio che utilizza criteri di utilità di pianificazione personalizzata con gli agenti asincroni, vedere [procedura: creare agenti che i criteri dell'utilità di pianificazione specifici utilizzare](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente esegue due attività in parallelo. La prima attività calcola il valore n<sup>th</sup> numero di Fibonacci. La seconda attività Visualizza un indicatore di stato nella console.  
-  
- La prima attività utilizza la scomposizione ricorsiva per calcolare il numero di Fibonacci. Ovvero, in modo ricorsivo ogni attività crea sottoattività per calcolare il risultato complessivo. Un'attività che utilizza la scomposizione ricorsiva potrebbe utilizzare tutte le risorse disponibili e pertanto esaurire altre attività. In questo esempio, l'attività che visualizza l'indicatore di stato che non vengano tempestiva accesso alle risorse di elaborazione.  
-  
- Per consentire all'attività che consente di stampare un corso messaggio equo l'accesso alle risorse di elaborazione, in questo esempio vengono utilizzati i passaggi descritti in [procedura: gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) per creare un'istanza di utilità di pianificazione che dispone di un criterio personalizzato. Il criterio personalizzato specifica la priorità di thread per la classe di priorità più alta.  
-  
- Questo esempio viene utilizzato il [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) e [Concurrency:: timer](../../parallel/concrt/reference/timer-class.md) classi per stampare l'indicatore di stato. Queste classi dispongono di versioni dei costruttori che accettano un riferimento a un [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) oggetto che pianifica le. L'esempio Usa l'utilità di pianificazione predefinita per pianificare l'attività che calcola il numero di Fibonacci e l'istanza dell'utilità di pianificazione per pianificare l'attività che visualizza l'indicatore di stato.  
-  
- Per illustrare i vantaggi dell'utilizzo dell'utilità di pianificazione che dispone di un criterio personalizzato, questo esempio viene eseguita due volte l'intera attività. Viene innanzitutto utilizzato l'utilità di pianificazione predefinita per entrambe le attività di pianificazione. Viene quindi utilizzata l'utilità di pianificazione predefinita per pianificare la prima attività e un'utilità di pianificazione che dispone di un criterio personalizzato per pianificare la seconda attività.  
-  
- [!code-cpp[concrt-scheduler-policy#1](../../parallel/concrt/codesnippet/cpp/how-to-specify-specific-scheduler-policies_1.cpp)]  
-  
- Questo esempio produce il seguente output:  
-  
-```Output  
-Default scheduler:  
-...........................................................................done  
-Scheduler that has a custom policy:  
-...........................................................................done  
-```  
-  
- Sebbene entrambi i set di attività producono lo stesso risultato, la versione che utilizza un criterio personalizzato consente all'attività che visualizza l'indicatore di stato per l'esecuzione di una priorità in modo che si comporta più rispondente.  
-  
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `scheduler-policy.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
-  
- **CL.exe /EHsc dell'utilità di pianificazione-Policy. cpp**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Criteri dell'utilità di pianificazione](../../parallel/concrt/scheduler-policies.md)   
- [Procedura: gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)   
- [Procedura: Creare agenti che usano criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+
+I criteri dell'utilità di pianificazione consentono di controllare la strategia utilizzata l'utilità di pianificazione quando gestisce le attività. In questo argomento viene illustrato come utilizzare i criteri dell'utilità di pianificazione per aumentare la priorità del thread di un'attività che consente di stampare un indicatore di stato nella console.
+
+Per un esempio che usa i criteri dell'utilità di pianificazione personalizzate con gli agenti asincroni, vedere [procedura: creare agenti che i criteri di utilizzo specifici dell'utilità di pianificazione](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente esegue due attività in parallelo. La prima attività calcola il valore n<sup>th</sup> numero di Fibonacci. La seconda attività consente di stampare un indicatore di stato nella console.
+
+La prima attività Usa la scomposizione ricorsiva per calcolare il numero di Fibonacci. Vale a dire, in modo ricorsivo ogni attività crea le sottoattività per calcolare il risultato complessivo. Un'attività che usa la scomposizione ricorsiva può usare tutte le risorse disponibili e in tal modo privare altre attività. In questo esempio, l'attività che visualizza l'indicatore di stato potrebbe non ricevere accesso rapido a risorse di calcolo.
+
+Per consentire all'attività che viene stampato un corso messaggio un accesso corretto alle risorse di calcolo, questo esempio Usa i passaggi descritti in [procedura: gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) per creare un'istanza dell'utilità di pianificazione che dispone di un criterio personalizzato. I criteri personalizzati specificano la priorità del thread per la classe di priorità più alta.
+
+Questo esempio Usa la [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) e [Concurrency:: timer](../../parallel/concrt/reference/timer-class.md) classi per stampare l'indicatore di stato. Queste classi sono le versioni dei relativi costruttori che accettano un riferimento a un [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) che ne pianifica l'oggetto. L'esempio Usa l'utilità di pianificazione predefinita per pianificare l'attività che calcola il numero di Fibonacci e l'istanza dell'utilità di pianificazione per pianificare l'attività che visualizza l'indicatore di stato di avanzamento.
+
+Per illustrare i vantaggi dell'uso di un'utilità di pianificazione che dispone di un criterio personalizzato, questo esempio viene eseguita l'attività complessiva due volte. L'esempio Usa prima di tutto l'utilità di pianificazione predefinita per entrambe le attività di pianificazione. L'esempio Usa quindi l'utilità di pianificazione predefinita per pianificare la prima attività e un'utilità di pianificazione che dispone di un criterio personalizzato per pianificare la seconda attività.
+
+[!code-cpp[concrt-scheduler-policy#1](../../parallel/concrt/codesnippet/cpp/how-to-specify-specific-scheduler-policies_1.cpp)]
+
+Questo esempio produce il seguente output:
+
+```Output
+Default scheduler:
+...........................................................................done
+Scheduler that has a custom policy:
+...........................................................................done
+```
+
+Sebbene entrambi i set di attività producono lo stesso risultato, la versione che usa un criterio personalizzato consente all'attività che visualizza l'indicatore di stato per l'esecuzione con una priorità con privilegi elevate in modo che si comporta più rispondente.
+
+## <a name="compiling-the-code"></a>Compilazione del codice
+
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `scheduler-policy.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
+
+**CL.exe /EHsc dell'utilità di pianificazione-Policy. cpp**
+
+## <a name="see-also"></a>Vedere anche
+
+[Criteri dell'utilità di pianificazione](../../parallel/concrt/scheduler-policies.md)<br/>
+[Procedura: Gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
+[Procedura: Creare agenti che usano criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
 

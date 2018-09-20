@@ -1,5 +1,5 @@
 ---
-title: Classi OLE DB | Documenti Microsoft
+title: Classi OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7831b06d116828cf5a4e6b714661082555899cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdc77adac947af81be9595ffabc313610e11ce9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345104"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425223"
 ---
 # <a name="ole-db-classes"></a>Classi OLE DB
-Il supporto OLE DB in MFC è costituito attualmente da classe [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Consente di visualizzare i record del database nei controlli tramite una visualizzazione form connessa direttamente a un [CRowset](../data/oledb/crowset-class.md) oggetto. Per ulteriori informazioni sui modelli consumer OLE DB, vedere [elenco dei modelli Consumer OLE DB](../data/oledb/ole-db-consumer-templates-reference.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../mfc/class-library-overview.md)
+
+Il supporto OLE DB in MFC è costituito attualmente dalla classe [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Consente di visualizzare i record del database nei controlli, tramite una visualizzazione di form direttamente connesso a un [CRowset](../data/oledb/crowset-class.md) oggetto. Per altre informazioni sui modelli consumer OLE DB, vedere [elenco dei modelli Consumer OLE DB](../data/oledb/ole-db-consumer-templates-reference.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica della classe](../mfc/class-library-overview.md)
 

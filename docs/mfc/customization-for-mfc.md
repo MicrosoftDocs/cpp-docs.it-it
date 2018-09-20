@@ -1,5 +1,5 @@
 ---
-title: Personalizzazione per MFC | Documenti Microsoft
+title: Personalizzazione per MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,36 +14,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3021ebd72487964dbc8d2ef3c7bf02d0a66fb785
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 640d6726623e8fb6d563153823f449f7caefcf30
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341874"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385001"
 ---
 # <a name="customization-for-mfc"></a>Personalizzazione per MFC
-In questo argomento vengono forniti suggerimenti per la personalizzazione di un'applicazione MFC.  
-  
-## <a name="general-customizations"></a>Personalizzazioni generali  
- È possibile salvare e caricare lo stato dell'applicazione nel Registro di sistema. Quando si abilita questa opzione, l'applicazione caricherà il relativo stato iniziale dal Registro di sistema. Se si modifica il layout di ancoraggio iniziale per l'applicazione, è necessario cancellare i dati del Registro di sistema per l'applicazione. In caso contrario, i dati nel Registro di sistema eseguirà l'override di eventuali modifiche apportate al layout iniziale.  
-  
-## <a name="class-specific-customizations"></a>Personalizzazioni specifiche della classe  
- Suggerimenti per la personalizzazione aggiuntive disponibili negli argomenti seguenti:  
-  
--   [Classe CBasePane](../mfc/reference/cbasepane-class.md)  
-  
--   [Classe CDockablePane](../mfc/reference/cdockablepane-class.md)  
-  
--   [Classe CDockingManager](../mfc/reference/cdockingmanager-class.md)  
-  
--   [Classe CMFCBaseTabCtrl](../mfc/reference/cmfcbasetabctrl-class.md)  
-  
-## <a name="additional-customization-tips"></a>Suggerimenti per la personalizzazione aggiuntive  
- [Personalizzazione di tastiera e mouse](../mfc/keyboard-and-mouse-customization.md)  
-  
- [Strumenti definiti dall'utente](../mfc/user-defined-tools.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Applicazioni Desktop MFC](../mfc/mfc-desktop-applications.md)   
- [Implicazioni relative alla sicurezza della personalizzazione](../mfc/security-implications-of-customization.md)
+
+In questo argomento vengono forniti suggerimenti per la personalizzazione di un'applicazione MFC.
+
+## <a name="general-customizations"></a>Personalizzazioni generali
+
+È possibile salvare e caricare lo stato dell'applicazione nel Registro di sistema. Quando si abilita questa opzione, l'applicazione caricherà il suo stato iniziale dal Registro di sistema. Se si modifica il layout di ancoraggio iniziale per l'applicazione, è necessario cancellare i dati del Registro di sistema per l'applicazione. In caso contrario, i dati nel Registro di sistema sostituiranno tutte le modifiche apportate al layout iniziale.
+
+## <a name="class-specific-customizations"></a>Personalizzazioni specifiche della classe
+
+Suggerimenti per un'ulteriore personalizzazione sono disponibili negli argomenti seguenti:
+
+- [Classe CBasePane](../mfc/reference/cbasepane-class.md)
+
+- [Classe CDockablePane](../mfc/reference/cdockablepane-class.md)
+
+- [Classe CDockingManager](../mfc/reference/cdockingmanager-class.md)
+
+- [Classe CMFCBaseTabCtrl](../mfc/reference/cmfcbasetabctrl-class.md)
+
+## <a name="additional-customization-tips"></a>Suggerimenti per un'ulteriore personalizzazione
+
+[Personalizzazione di tastiera e mouse](../mfc/keyboard-and-mouse-customization.md)
+
+[Strumenti definiti dall'utente](../mfc/user-defined-tools.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Applicazioni desktop MFC](../mfc/mfc-desktop-applications.md)<br/>
+[Implicazioni relative alla sicurezza della personalizzazione](../mfc/security-implications-of-customization.md)
 

@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5691a87f7350c7816e8ddb58d5591e16cc18189
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6afcd4aa8ba2e86d687739bc3891f45f2da5672c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709611"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379165"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Crea file sbr)
 
@@ -70,7 +70,7 @@ Se non si specifica `filename`, al file SBR viene assegnato lo stesso nome di ba
 
 ## <a name="see-also"></a>Vedere anche
 
-[File di output (/ F) le opzioni](../../build/reference/output-file-f-options.md)
-[opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
+[Opzioni del file di output (/F)](../../build/reference/output-file-f-options.md)<br/>
+[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
 [Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)

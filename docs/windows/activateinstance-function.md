@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2ac6d8722bcdfed06ae97508b0ca7e5bb8ea00a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ebebe0bbceafe82c41ec99b2532c965670776127
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601452"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426393"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance (funzione)
 
@@ -41,13 +41,13 @@ inline HRESULT ActivateInstance(
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Un tipo da attivare.
 
-*activatableClassId*  
+*activatableClassId*<br/>
 Il nome dell'ID di classe che definisce i parametri *T*.
 
-*Istanza*  
+*Istanza*<br/>
 Al termine di questa operazione, un riferimento a un'istanza di *T*.
 
 ## <a name="return-value"></a>Valore restituito

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aebe1a48e037d2780f9b0c6443cbcba3e158677f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 07b129e2810b7b1310eb8988ca60fbd6e5dcad5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318018"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391930"
 ---
 # <a name="ole-db-consumer-attributes"></a>Attributi del consumer OLE DB
 Gli attributi del consumer OLE DB inserire il codice, in base il [modelli Consumer OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), per creare un lavoro OLE DB consumer che esegue le attività, ad esempio tabelle di apertura, l'esecuzione di comandi e l'accesso ai dati.
@@ -40,4 +40,5 @@ Gli attributi del consumer OLE DB inserire il codice, in base il [modelli Consum
 |[db_table](../windows/db-table.md)|Apre una tabella di OLE DB.|
   
 ## <a name="see-also"></a>Vedere anche
- [Attributi per gruppo](../windows/attributes-by-group.md)
+
+[Attributi per gruppo](../windows/attributes-by-group.md)

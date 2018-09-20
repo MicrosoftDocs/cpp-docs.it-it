@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12ee07a0ea6dbe2c3bea21aaa6b394b4c3e6f156
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 07414c86663ea6143a471691b01e584cdc033258
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704093"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392827"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -49,5 +49,5 @@ Se per un eseguibile è disabilitato l'isolamento, il caricatore di Windows non 
 ## <a name="see-also"></a>Vedere anche
 
 [Opzioni di EDITBIN](../../build/reference/editbin-options.md)<br/>
-[/ALLOWISOLATION (ricerca di manifesti)](../../build/reference/allowisolation-manifest-lookup.md)
-[riferimento file Manifest](/windows/desktop/SbsCs/manifest-files-reference)
+[/ALLOWISOLATION (ricerca di manifesti)](../../build/reference/allowisolation-manifest-lookup.md)<br/>
+[Riferimento a file manifesto](/windows/desktop/SbsCs/manifest-files-reference)

@@ -15,34 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5beb69ef7d9d3356eddef40c6bce6483079d934a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 11f7f78e87ddd40fd3cf85fc294e8fadac5dbe45
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590800"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423793"
 ---
 # <a name="byte-indices"></a>Indici di byte
-Usare i suggerimenti seguenti:  
-  
--   Quando si utilizza con un indice vettori di byte in una stringa presenta problemi simili a quelli derivanti dalle modifiche ai puntatori. Si consideri questo esempio, che consente di analizzare una stringa di un carattere di barra rovesciata:  
-  
-    ```  
-    while ( rgch[ i ] != '\\' )  
-        i++;  
-    ```  
-  
-     Ciò può indicizzare un byte finale, non è un byte di apertura, e in questo modo potrebbe non indicare una `character`.  
-  
--   Usare la [mbclen](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) funzione per risolvere il problema precedente:  
-  
-    ```  
-    while ( rgch[ i ] != '\\' )  
-        i += _mbclen ( rgch + i );  
-    ```  
-  
-     Questa stringa indicizza correttamente a un byte di apertura, di conseguenza per un `character`. Il `_mbclen` funzione determina le dimensioni di un carattere (1 o 2 byte).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Suggerimenti sulla programmazione MBCS](../text/mbcs-programming-tips.md)   
- [Ultimo carattere di una stringa](../text/last-character-in-a-string.md)
+
+Usare i suggerimenti seguenti:
+
+- Quando si utilizza con un indice vettori di byte in una stringa presenta problemi simili a quelli derivanti dalle modifiche ai puntatori. Si consideri questo esempio, che consente di analizzare una stringa di un carattere di barra rovesciata:
+
+    ```cpp
+    while ( rgch[ i ] != '\\' )
+        i++;
+    ```
+
+   Ciò può indicizzare un byte finale, non è un byte di apertura, e in questo modo potrebbe non indicare una `character`.
+
+- Usare la [mbclen](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) funzione per risolvere il problema precedente:
+
+    ```cpp
+    while ( rgch[ i ] != '\\' )
+        i += _mbclen ( rgch + i );
+    ```
+
+   Questa stringa indicizza correttamente a un byte di apertura, di conseguenza per un `character`. Il `_mbclen` funzione determina le dimensioni di un carattere (1 o 2 byte).
+
+## <a name="see-also"></a>Vedere anche
+
+[Suggerimenti sulla programmazione MBCS](../text/mbcs-programming-tips.md)<br/>
+[Ultimo carattere di una stringa](../text/last-character-in-a-string.md)

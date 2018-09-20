@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05bd0ab8e402c1d3a926b46bf1df54a084fc9f93
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d0c0ea8537922c2458a48adf5a086dfec4b992f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595175"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381107"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Procedura: creare direttamente un'istanza dei componenti WRL
 
@@ -57,6 +57,6 @@ Questo documento illustra due esempi. Il primo esempio Usa il `Make` funzione pe
 
 ## <a name="see-also"></a>Vedere anche
 
-[Libreria di modelli di Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Makeandinitialize](../windows/make-function.md)  
+[Libreria di modelli di Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Makeandinitialize](../windows/make-function.md)<br/>
 [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)

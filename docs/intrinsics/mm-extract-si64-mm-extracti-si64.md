@@ -19,106 +19,110 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d4db2fa67924a6925a19d2714c604f2c9aaa4e7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fab2bb7f1e4992d2f1e9e979d4eb6ea8cf426dc3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705653"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376512"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
 
-**Sezione specifica Microsoft**  
-  
-Genera il `extrq` (istruzione) per estrarre i bit specificati da 64 bit meno significativi del primo argomento.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-__m128i _mm_extract_si64(  
-   __m128i Source,  
-   __m128i Descriptor  
-);  
-__m128i _mm_extracti_si64(  
-   __m128i Source,  
-   int Length,  
-   int Index  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+**Sezione specifica Microsoft**
+
+Genera il `extrq` (istruzione) per estrarre i bit specificati da 64 bit meno significativi del primo argomento.
+
+## <a name="syntax"></a>Sintassi
+
+```
+__m128i _mm_extract_si64(
+   __m128i Source,
+   __m128i Descriptor
+);
+__m128i _mm_extracti_si64(
+   __m128i Source,
+   int Length,
+   int Index
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *Source*<br/>
-[in] Un campo di 128 bit con i dati di input in 64 bit più bassi.  
-  
+[in] Un campo di 128 bit con i dati di input in 64 bit più bassi.
+
 *Descrittore*<br/>
-[in] Un campo di 128 bit che descrive il campo di bit per estrarre.  
-  
+[in] Un campo di 128 bit che descrive il campo di bit per estrarre.
+
 *Lunghezza*<br/>
-[in] Valore intero che specifica la lunghezza del campo da estrarre.  
-  
+[in] Valore intero che specifica la lunghezza del campo da estrarre.
+
 *Index*<br/>
-[in] Un numero intero che specifica l'indice del campo da estrarre  
-  
-## <a name="return-value"></a>Valore restituito  
- Un campo di 128 bit con il campo estratto in bit meno significativo.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`_mm_extract_si64`|SSE4a|  
-|`_mm_extracti_si64`|SSE4a|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questa funzione intrinseca genera il `extrq` istruzione per l'estrazione di bit dai `Source`. Sono disponibili due versioni di questa funzione intrinseche: `_mm_extracti_si64` è la versione immediata, e `_mm_extract_si64` è quello non immediato.  Ogni versione estrae da `Source` un campo di bit definito per la sua lunghezza e l'indice del relativo bit meno significativo. I valori di lunghezza e indice vengono eseguiti mod 64, pertanto sia -1 e 127 caratteri vengono interpretati come 63. Se la somma dell'indice (ridotta) e lunghezza del campo (ridotti) è maggiore di 64, i risultati sono indefiniti. Un valore pari a zero per la lunghezza del campo viene interpretato come 64. Se l'indice a e lunghezza del campo è entrambi pari a zero, 63:0 bit di `Source` vengono estratti. Se la lunghezza del campo è uguale a zero, ma l'indice di bit è diverso da zero, i risultati sono indefiniti.  
-  
- In una chiamata a _mm_extract_si64, il `Descriptor` contiene l'indice in 13:8 bit e la lunghezza del campo dei dati da estrarre in bit 5:0...  
-  
- Se si chiama `_mm_extracti_si64` con gli argomenti che il compilatore non può determinare le costanti integer sia il compilatore genera codice per creare il pacchetto di tali valori in un registro XMM (`Descriptor`) e chiamare `_mm_extract_si64`.  
-  
- Per determinare il supporto hardware per il `extrq` (istruzione), chiamare il `__cpuid` intrinseco con `InfoType=0x80000001` e controllare bit 6 di `CPUInfo[2] (ECX)`. Questo bit sarà 1 se l'istruzione è supportata e 0 in caso contrario. Se si esegue codice che usa questa funzione intrinseca hardware che non supporta il `extrq` (istruzione), i risultati sono imprevedibili.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// Compile this sample with: /EHsc  
-#include <iostream>  
-#include <intrin.h>  
-using namespace std;  
-  
-union {  
-    __m128i m;  
-    unsigned __int64 ui64[2];  
-} source, descriptor, result1, result2, result3;  
-  
-int  
-main()  
-{  
-    source.ui64[0] =     0xfedcba9876543210ll;  
-    descriptor.ui64[0] = 0x0000000000000b1bll;  
-  
-    result1.m = _mm_extract_si64 (source.m, descriptor.m);  
-    result2.m = _mm_extracti_si64(source.m, 27, 11);  
-    result3.ui64[0] = (source.ui64[0] >> 11) & 0x7ffffff;  
-  
-    cout << hex << "result1 = 0x" << result1.ui64[0] << endl;  
-    cout << "result2 = 0x" << result2.ui64[0] << endl;  
-    cout << "result3 = 0x" << result3.ui64[0] << endl;  
-}  
-```  
-  
-```Output  
-result1 = 0x30eca86  
-result2 = 0x30eca86  
-result3 = 0x30eca86  
-```  
-  
+[in] Un numero intero che specifica l'indice del campo da estrarre
+
+## <a name="return-value"></a>Valore restituito
+
+Un campo di 128 bit con il campo estratto in bit meno significativo.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`_mm_extract_si64`|SSE4a|
+|`_mm_extracti_si64`|SSE4a|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questa funzione intrinseca genera il `extrq` istruzione per l'estrazione di bit dai `Source`. Sono disponibili due versioni di questa funzione intrinseche: `_mm_extracti_si64` è la versione immediata, e `_mm_extract_si64` è quello non immediato.  Ogni versione estrae da `Source` un campo di bit definito per la sua lunghezza e l'indice del relativo bit meno significativo. I valori di lunghezza e indice vengono eseguiti mod 64, pertanto sia -1 e 127 caratteri vengono interpretati come 63. Se la somma dell'indice (ridotta) e lunghezza del campo (ridotti) è maggiore di 64, i risultati sono indefiniti. Un valore pari a zero per la lunghezza del campo viene interpretato come 64. Se l'indice a e lunghezza del campo è entrambi pari a zero, 63:0 bit di `Source` vengono estratti. Se la lunghezza del campo è uguale a zero, ma l'indice di bit è diverso da zero, i risultati sono indefiniti.
+
+In una chiamata a _mm_extract_si64, il `Descriptor` contiene l'indice in 13:8 bit e la lunghezza del campo dei dati da estrarre in bit 5:0...
+
+Se si chiama `_mm_extracti_si64` con gli argomenti che il compilatore non può determinare le costanti integer sia il compilatore genera codice per creare il pacchetto di tali valori in un registro XMM (`Descriptor`) e chiamare `_mm_extract_si64`.
+
+Per determinare il supporto hardware per il `extrq` (istruzione), chiamare il `__cpuid` intrinseco con `InfoType=0x80000001` e controllare bit 6 di `CPUInfo[2] (ECX)`. Questo bit sarà 1 se l'istruzione è supportata e 0 in caso contrario. Se si esegue codice che usa questa funzione intrinseca hardware che non supporta il `extrq` (istruzione), i risultati sono imprevedibili.
+
+## <a name="example"></a>Esempio
+
+```
+// Compile this sample with: /EHsc
+#include <iostream>
+#include <intrin.h>
+using namespace std;
+
+union {
+    __m128i m;
+    unsigned __int64 ui64[2];
+} source, descriptor, result1, result2, result3;
+
+int
+main()
+{
+    source.ui64[0] =     0xfedcba9876543210ll;
+    descriptor.ui64[0] = 0x0000000000000b1bll;
+
+    result1.m = _mm_extract_si64 (source.m, descriptor.m);
+    result2.m = _mm_extracti_si64(source.m, 27, 11);
+    result3.ui64[0] = (source.ui64[0] >> 11) & 0x7ffffff;
+
+    cout << hex << "result1 = 0x" << result1.ui64[0] << endl;
+    cout << "result2 = 0x" << result2.ui64[0] << endl;
+    cout << "result3 = 0x" << result3.ui64[0] << endl;
+}
+```
+
+```Output
+result1 = 0x30eca86
+result2 = 0x30eca86
+result3 = 0x30eca86
+```
+
 **Fine sezione specifica Microsoft**
 
-Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
-  
-## <a name="see-also"></a>Vedere anche  
- [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.
+
+## <a name="see-also"></a>Vedere anche
+
+[_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

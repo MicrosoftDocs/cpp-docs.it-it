@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93a7adbca8c659a757e0e8fbb05b8fb926b237d2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba2edf438e305be772894cdf3a03116f7218848c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210310"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394686"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -73,5 +73,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
 [Attributi di membro dati](../windows/data-member-attributes.md)  

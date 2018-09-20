@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd299c228b3b388658093f6b138225c10ff38db
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 565032ca7ddf64e93716b1c06524bd09a1a46079
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751062"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389395"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Allocazione e rilascio di memoria per un oggetto BSTR
 
@@ -52,8 +52,8 @@ In generale, le regole di allocazione e deallocazione di memoria allocata per `B
 
 ## <a name="see-also"></a>Vedere anche
 
-[Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
-[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)   
+[Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)<br/>
+[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)<br/>
 [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
 

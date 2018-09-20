@@ -18,78 +18,82 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8f8aa8c1fd1a5dad6fd70c566cb59bf8dddc4cc3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715507"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380139"
 ---
 # <a name="stosq"></a>__stosq
-**Sezione specifica Microsoft**  
-  
- Genera un'istruzione di archivio stringa (`rep stosq`).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+**Sezione specifica Microsoft**
+
+Genera un'istruzione di archivio stringa (`rep stosq`).
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __stosb( 
+   unsigned __int64* Dest, 
+   unsigned __int64 Data, 
+   size_t Count 
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *dest*<br/>
-[out] La destinazione dell'operazione.  
-  
+[out] La destinazione dell'operazione.
+
 *Dati*<br/>
-[in] I dati da archiviare.  
-  
+[in] I dati da archiviare.
+
 *Conteggio*<br/>
-[in] La lunghezza del blocco di parole quadruple da scrivere.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__stosq`|AMD64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Il risultato è che la parola quadrupla `Data` viene scritto in un blocco di `Count` parole quadruple nel `Dest` stringa.  
-  
- Questa routine è disponibile solo come funzione intrinseca.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// stosq.c  
-// processor: x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__stosq)  
-  
-int main()  
-{  
-   unsigned __int64 val = 0xFFFFFFFFFFFFI64;  
-   unsigned __int64 a[10];  
-   memset(a, 0, sizeof(a));  
-   __stosq(a+1, val, 2);  
-   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);   
-}  
-```  
-  
-## <a name="output"></a>Output  
-  
-```  
-0 ffffffffffff ffffffffffff 0  
-```  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+[in] La lunghezza del blocco di parole quadruple da scrivere.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__stosq`|AMD64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Il risultato è che la parola quadrupla `Data` viene scritto in un blocco di `Count` parole quadruple nel `Dest` stringa.
+
+Questa routine è disponibile solo come funzione intrinseca.
+
+## <a name="example"></a>Esempio
+
+```
+// stosq.c
+// processor: x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__stosq)
+
+int main()
+{
+   unsigned __int64 val = 0xFFFFFFFFFFFFI64;
+   unsigned __int64 a[10];
+   memset(a, 0, sizeof(a));
+   __stosq(a+1, val, 2);
+   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);
+}
+```
+
+## <a name="output"></a>Output
+
+```
+0 ffffffffffff ffffffffffff 0
+```
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

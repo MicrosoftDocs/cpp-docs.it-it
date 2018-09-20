@@ -1,5 +1,5 @@
 ---
-title: Utilizzo A.30 di Reprivatization | Documenti Microsoft
+title: A.30 uso della riprivatizzazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6026bba31fcc0db4e28ced14b3e847ac0cf8bf58
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27f9ee3f7605231323c5a176eebf1b07c0a05507
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689610"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378033"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30   Utilizzo della riprivatizzazione
-L'esempio seguente illustra il reprivatization delle variabili. È possibile contrassegnare le variabili private `private` nuovamente in una direttiva annidata. Non devono essere condivisi in tale area che lo contiene.  
-  
-```  
-int i, a;  
-...  
-#pragma omp parallel private(a)  
-{  
-  ...  
-  #pragma omp parallel for private(a)  
-  for (i=0; i<10; i++)  
-     {  
-       ...  
-     }  
-}  
+
+Nell'esempio seguente viene illustrato il riprivatizzazione delle variabili. Variabili private possono essere contrassegnate `private` nuovamente in un'istruzione nidificata. Non dovranno essere condivisi in quella parallela che lo contiene.
+
+```
+int i, a;
+...
+#pragma omp parallel private(a)
+{
+  ...
+  #pragma omp parallel for private(a)
+  for (i=0; i<10; i++)
+     {
+       ...
+     }
+}
 ```

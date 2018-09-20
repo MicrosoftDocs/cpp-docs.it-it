@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b26d58f13e819ce4bb605beba9beecbbc1fa94a6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4240ae1b9c4930ed0925db2607ff6e20f698b0a6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596307"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394322"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>Distruttore WeakReference::~WeakReference
 
@@ -48,5 +48,5 @@ Deinizializza l'istanza corrente del **WeakReference** classe.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
-[classe WeakReference](../windows/weakreference-class1.md)
+[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)<br/>
+[Classe WeakReference](../windows/weakreference-class1.md)

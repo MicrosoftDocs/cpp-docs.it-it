@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76aa828727ccfcf93c7b9b0242e60b747c1873f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339579"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390851"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Classi e funzioni generate dalla Creazione guidata DLL MFC
-Il codice che genera la creazione guidata DLL MFC dipende dal tipo di DLL che si sta creando e le opzioni selezionate. La creazione guidata DLL MFC genera lo stesso codice per entrambe le forme di DLL MFC regolari.  
-  
-|Tipo di DLL|Opzione|Classi|Funzioni|  
-|-----------------|------------|-------------|---------------|  
-|[Estensione](../../build/extension-dlls-overview.md)|nessuno|nessuno|`DllMain`|  
-|[Regolare](../../build/regular-dlls-dynamically-linked-to-mfc.md)|nessuno|Classe di applicazione derivata da `CWinApp`|nessuno|  
-|[Regolare](../../build/regular-dlls-dynamically-linked-to-mfc.md)|automazione|Classe di applicazione derivata da `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
-|[Estensione](../../build/extension-dlls-overview.md)|Windows Sockets|nessuno|`DllMain`|  
-|[Regolare](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Windows Sockets|Classe di applicazione derivata da `CWinApp`|`InitInstance` contiene la chiamata a `AfxSocketInit`|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Procedura guidata DLL MFC](../../mfc/reference/mfc-dll-wizard.md)
+
+Il codice che genera la creazione guidata DLL MFC dipende dal tipo di DLL che si sta creando e le opzioni selezionate. La creazione guidata DLL MFC genera lo stesso codice per entrambe le forme di DLL MFC regolari.
+
+|Tipo di DLL|Opzione|Classi|Funzioni|
+|-----------------|------------|-------------|---------------|
+|[Estensione](../../build/extension-dlls-overview.md)|nessuno|nessuno|`DllMain`|
+|[Regolare](../../build/regular-dlls-dynamically-linked-to-mfc.md)|nessuno|Classe di applicazione derivata da `CWinApp`|nessuno|
+|[Regolare](../../build/regular-dlls-dynamically-linked-to-mfc.md)|automazione|Classe di applicazione derivata da `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|
+|[Estensione](../../build/extension-dlls-overview.md)|Windows Sockets|nessuno|`DllMain`|
+|[Regolare](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Windows Sockets|Classe di applicazione derivata da `CWinApp`|`InitInstance` contiene la chiamata a `AfxSocketInit`|
+
+## <a name="see-also"></a>Vedere anche
+
+[Procedura guidata DLL MFC](../../mfc/reference/mfc-dll-wizard.md)
 

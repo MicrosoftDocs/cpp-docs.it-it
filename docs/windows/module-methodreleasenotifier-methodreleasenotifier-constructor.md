@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62f136fb9aac184d6ca81314aafea270e7b33a87
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 608a885eb446860cca43e5fabd19597d7611e633
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583871"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386822"
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Costruttore Module::MethodReleaseNotifier::MethodReleaseNotifier
 
@@ -41,13 +41,13 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>Parametri
 
-*object*  
+*object*<br/>
 Un oggetto la cui funzione membro è un gestore eventi.
 
-*(Metodo)*  
+*(Metodo)*<br/>
 La funzione membro del parametro *oggetto* vale a dire il gestore dell'evento.
 
-*release*  
+*release*<br/>
 Specificare **true** per abilitare la chiamata sottostante [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) metodo; in caso contrario, specificare **false**.
 
 ## <a name="requirements"></a>Requisiti

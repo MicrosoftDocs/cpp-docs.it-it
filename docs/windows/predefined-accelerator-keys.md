@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e6498e0b0722b5de28b5569c5f3565b0f033ea9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 70392d5654c5ed550e61bccf460d641bd4995349
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315678"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430605"
 ---
 # <a name="predefined-accelerator-keys-c"></a>Tasti di scelta rapida predefiniti (C++)
 
@@ -92,5 +92,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor tasti di scelta rapida](../windows/accelerator-editor.md)  
+[Editor tasti di scelta rapida](../windows/accelerator-editor.md)<br/>
 [Editor di risorse](../windows/resource-editors.md)

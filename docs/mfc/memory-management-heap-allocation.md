@@ -1,5 +1,5 @@
 ---
-title: 'Gestione della memoria: Allocazione di Heap | Documenti Microsoft'
+title: 'Gestione della memoria: Allocazione di Heap | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7ef166201103b1544d0a36d82452b485af75418
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cc158ceda21bfb04053bbc490a3333a76e2d7afe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928609"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383818"
 ---
 # <a name="memory-management-heap-allocation"></a>Gestione della memoria: allocazione di heap
-L'heap è riservato per le esigenze di allocazione di memoria del programma. È un'area oltre il codice programma e lo stack. Programmi C tipico utilizzano le funzioni **malloc** e **libero** per allocare e deallocare la memoria heap. La versione di Debug di MFC fornisce versioni modificate di operatori di C++ **nuove** e **eliminare** per allocare e deallocare gli oggetti nella memoria heap.  
-  
- Quando si usa **nuove** e **eliminare** anziché **malloc** e **libero**, si è in grado di sfruttare la libreria di classi gestione della memoria miglioramenti del debug, che possono essere utili per il rilevamento di perdite di memoria. Quando si compila un programma con la versione di MFC, le versioni standard del **nuove** e **eliminare** operatori forniscono un modo efficiente per allocare e deallocare la memoria (la versione di MFC non fornisce versioni modificate di questi operatori).  
-  
- Si noti che la dimensione totale degli oggetti allocati nell'heap è limitata solo dalla memoria virtuale del sistema.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione della memoria](../mfc/memory-management.md)
+
+L'heap è riservato per le esigenze di allocazione di memoria del programma. È un'area oltre il codice del programma e lo stack. I programmi C tipici utilizzano le funzioni **malloc** e **gratuita** per allocare e deallocare la memoria dell'heap. La versione di Debug di MFC fornisce le versioni modificate di operatori C++ predefiniti **nuove** e **eliminare** per allocare e deallocare oggetti in memoria dell'heap.
+
+Quando si usa **nuove** e **eliminare** anziché **malloc** e **gratuito**, si è in grado di sfruttare la libreria di classi gestione della memoria miglioramenti del debug, che possono essere utili per il rilevamento di perdite di memoria. Quando si compila il programma con la versione di MFC, le versioni standard del **nuove** e **eliminare** operatori consentono di allocare e deallocare la memoria (la versione di MFC in modo efficiente non fornisce versioni modificate di questi operatori).
+
+Si noti che la dimensione totale di oggetti allocati sull'heap è limitata solo dalla memoria virtuale disponibile del sistema.
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione della memoria](../mfc/memory-management.md)
 

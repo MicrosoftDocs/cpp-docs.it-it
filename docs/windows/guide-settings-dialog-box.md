@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7369fdb37dbef474dafea2ba2a9a7e28f5eface9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a9ebc7828916b0c5809563a8f1e153d5e59a1ad7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318889"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382026"
 ---
 # <a name="guide-settings-dialog-box-c"></a>Finestra di dialogo Impostazioni guide (C++)
 
@@ -68,5 +68,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica della griglia di layout](../windows/modifying-the-layout-grid.md)  
+[Modifica della griglia di layout](../windows/modifying-the-layout-grid.md)<br/>
 [Stati dell'editor finestre (guide e griglie)](../windows/dialog-editor-states-guides-and-grids.md)

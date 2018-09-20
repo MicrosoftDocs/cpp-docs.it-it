@@ -1,5 +1,5 @@
 ---
-title: Tipi (C++ CL) gestiti | Documenti Microsoft
+title: Tipi (C++-CL) gestiti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 42426c45f4b8caf3cd4cb61ee867470dc9ea639f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 382228b9e8364d90d7929b4633744071c5eb0c77
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135859"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408039"
 ---
 # <a name="managed-types-ccl"></a>Tipi gestiti (C++/CL)
-La sintassi per la dichiarazione di tipi gestiti e per la creazione e utilizzo di oggetti di questi tipi è stato notevolmente modificata dalle estensioni gestite per C++ a Visual C++. Questa operazione è stata eseguita per promuovere l'integrazione nel sistema di tipi standard ISO C++. Queste modifiche sono illustrate in dettaglio nelle sezioni seguenti.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Dichiarazione di un tipo classe gestito](../dotnet/declaration-of-a-managed-class-type.md)  
- Viene illustrato come dichiarare un oggetto gestito `class`, `struct`, o `interface`.  
-  
- [Dichiarazione di un oggetto classe di riferimento CLR](../dotnet/declaration-of-a-clr-reference-class-object.md)  
- Viene illustrato come dichiarare un oggetto di tipo classe di riferimento utilizzando un handle di rilevamento.  
-  
- [Dichiarazione di una matrice CLR](../dotnet/declaration-of-a-clr-array.md)  
- Viene illustrato come dichiarare e inizializzare una matrice.  
-  
- [Modifiche nell'ordine di inizializzazione del costruttore](../dotnet/changes-in-constructor-initialization-order.md)  
- Vengono illustrate le modifiche delle chiavi in ordine di inizializzazione di costruttore di classe.  
-  
- [Modifiche nella semantica del distruttore](../dotnet/changes-in-destructor-semantics.md)  
- Illustra la finalizzazione deterministica, `Finalize` e `Dispose`, conseguenze per gli oggetti di riferimento e l'utilizzo esplicito di `Finalize`.  
-  
- **Nota:** viene posticipata fino alla descrizione dei delegati [delegati ed eventi](../dotnet/delegates-and-events.md) per presentare loro con membri dell'evento all'interno di una classe, l'argomento generale di [dichiarazioni di membri in una classe o interfaccia (C + C++ /CLI) ](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [C + + CLI nozioni di base della migrazione](../dotnet/cpp-cli-migration-primer.md)   
- [Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)   
- [Array](../windows/arrays-cpp-component-extensions.md)
+
+La sintassi per la dichiarazione di tipi gestiti e per la creazione e uso di questi oggetti è stata modificata in modo significativo dalle estensioni gestite per C++ per Visual C++. Questa operazione è stata eseguita per promuovere l'integrazione nel sistema di tipi standard ISO C++. Queste modifiche vengono presentate in dettaglio nelle sottosezioni seguenti.
+
+## <a name="in-this-section"></a>In questa sezione
+
+[Dichiarazione di un tipo classe gestito](../dotnet/declaration-of-a-managed-class-type.md)<br/>
+Viene illustrato come dichiarare un oggetto gestito `class`, `struct`, o `interface`.
+
+[Dichiarazione di un oggetto classe di riferimento CLR](../dotnet/declaration-of-a-clr-reference-class-object.md)<br/>
+Viene illustrato come dichiarare un oggetto di tipo classe di riferimento utilizzando un handle di rilevamento.
+
+[Dichiarazione di una matrice CLR](../dotnet/declaration-of-a-clr-array.md)<br/>
+Viene illustrato come dichiarare e inizializzare una matrice.
+
+[Modifiche nell'ordine di inizializzazione del costruttore](../dotnet/changes-in-constructor-initialization-order.md)<br/>
+Illustra le principali modifiche nell'ordine di inizializzazione di costruttore di classe.
+
+[Modifiche nella semantica del distruttore](../dotnet/changes-in-destructor-semantics.md)<br/>
+Descrive la finalizzazione non deterministica `Finalize` rispetto a `Dispose`, possibili implicazioni per gli oggetti di riferimento e l'utilizzo esplicito di `Finalize`.
+
+**Nota:** la descrizione dei delegati viene posticipata fino alla [delegati ed eventi](../dotnet/delegates-and-events.md) allo scopo di presentarli con membri evento all'interno di una classe, l'argomento generale di [dichiarazioni di membri in una classe o interfaccia (C + + CLI) ](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Nozioni di base della migrazione in C++/CLI](../dotnet/cpp-cli-migration-primer.md)<br/>
+[Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
+[Array](../windows/arrays-cpp-component-extensions.md)

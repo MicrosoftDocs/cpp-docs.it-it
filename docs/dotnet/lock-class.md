@@ -1,5 +1,5 @@
 ---
-title: Classe lock | Documenti Microsoft
+title: Classe lock | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a860f79b740e0f34eef33b7a96e0236835f1f6b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef0887ca3eec7510717aab21ba4c6c7aba98d25
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129697"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380295"
 ---
 # <a name="lock-class"></a>Classe lock
-Questa classe consente di automatizzare l'acquisizione di un blocco per sincronizzare l'accesso a un oggetto da più thread.  Quando costruito viene acquisito il blocco e quando si rilascia il blocco.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-ref class lock;  
-```  
-  
-## <a name="remarks"></a>Note  
- `lock` è disponibile solo per gli oggetti CLR e possono essere usate solo nel codice CLR.  
-  
- Internamente, la classe utilizza blocco <xref:System.Threading.Monitor> per sincronizzare l'accesso. Vedere questo argomento per informazioni più dettagliate sulla sincronizzazione.  
-  
-## <a name="requirements"></a>Requisiti  
- **File di intestazione** \<msclr\lock.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>Vedere anche  
- [lock](../dotnet/lock.md)   
- [Membri lock](../dotnet/lock-members.md)
+
+Questa classe consente di automatizzare l'acquisizione di un blocco per la sincronizzazione dell'accesso a un oggetto da più thread.  Quando viene costruito viene acquisito il blocco e quando viene eliminato rilasci il blocco.
+
+## <a name="syntax"></a>Sintassi
+
+```
+ref class lock;
+```
+
+## <a name="remarks"></a>Note
+
+`lock` è disponibile solo per gli oggetti CLR e può essere usato solo nel codice CLR.
+
+Internamente, la classe Usa blocco <xref:System.Threading.Monitor> per sincronizzare l'accesso. Vedere questo argomento per informazioni più dettagliate sulla sincronizzazione.
+
+## <a name="requirements"></a>Requisiti
+
+**File di intestazione** \<msclr\lock.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>Vedere anche
+
+[lock](../dotnet/lock.md)<br/>
+[Membri lock](../dotnet/lock-members.md)

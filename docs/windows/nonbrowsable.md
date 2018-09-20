@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a888ac987e8928a0e9667f2011ef7afe3075ca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e8527f2d35de6591bf49f0fd32cc0df64a059e02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209053"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371940"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -69,5 +69,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
 [Attributi di metodo](../windows/method-attributes.md)  

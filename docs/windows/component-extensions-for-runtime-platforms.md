@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 160ae864218304fbc94324ecfd9d6229729ca379
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318343"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386753"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Estensioni componenti per le piattaforme runtime
 
@@ -141,5 +141,5 @@ In questa sezione vengono elencati i costrutti di programmazione aggiuntivi e gl
 
 ## <a name="see-also"></a>Vedere anche
 
-[Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Interoperabilità .NET e nativa](../dotnet/native-and-dotnet-interoperability.md)

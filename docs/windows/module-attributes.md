@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38e031ada2f7375607ddaf5bc298ee1b5d87680c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 85f12cea7004ef8e2bbf46fcb3b3e76f463be3b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316939"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378878"
 ---
 # <a name="module-attributes"></a>Attributi di modulo
 L'attributo seguente può essere applicato solo per i [modulo](../windows/module-cpp.md) attributo.
@@ -31,4 +31,5 @@ L'attributo seguente può essere applicato solo per i [modulo](../windows/module
 |[helpstringdll](../windows/helpstringdll.md)|Specifica il nome della DLL da usare per eseguire la ricerca della stringa di documento (localizzazione).|
   
 ## <a name="see-also"></a>Vedere anche
- [Attributi per utilizzo](../windows/attributes-by-usage.md)
+
+[Attributi per utilizzo](../windows/attributes-by-usage.md)

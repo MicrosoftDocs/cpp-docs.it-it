@@ -19,37 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b1f15715f83adb75f51151d86d781378e6fa86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 177d0dea7859dc2093fb7a10f6fdb6ee4df013f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691467"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386808"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Creazione di un progetto DLL MFC
-Una DLL MFC è un file binario che agisce come una libreria condivisa di funzioni che possono essere utilizzate contemporaneamente da più applicazioni. Il modo più semplice per creare un progetto DLL MFC è utilizzare la procedura guidata DLL MFC.  
-  
+
+Una DLL MFC è un file binario che agisce come una libreria condivisa di funzioni che possono essere utilizzate contemporaneamente da più applicazioni. Il modo più semplice per creare un progetto DLL MFC è utilizzare la procedura guidata DLL MFC.
+
 > [!NOTE]
->  L'aspetto delle funzionalità nell'IDE possa variano a seconda delle impostazioni attive o l'edizione e potrebbero essere diversi da quelli descritti nella Guida. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Per creare un progetto di DLL MFC mediante la creazione guidata DLL MFC  
-  
-1.  Attenersi alla procedura illustrata nell'argomento della Guida [Creazione di un progetto con una creazione guidata applicazione Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
-  
- **Nota** nella **nuovo progetto** della finestra di dialogo Seleziona il `MFC DLL` icona nel riquadro dei modelli per aprire la creazione guidata DLL MFC.  
-  
-1.  Definire le impostazioni dell'applicazione usando il [le impostazioni dell'applicazione](../../mfc/reference/application-settings-mfc-dll-wizard.md) pagina della [Creazione guidata DLL MFC](../../mfc/reference/mfc-dll-wizard.md).  
-  
+>  L'aspetto delle funzionalità nell'IDE possa variano a seconda delle impostazioni attive o l'edizione e potrebbero essere diversi da quelli descritti nella Guida. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Per creare un progetto di DLL MFC mediante la creazione guidata DLL MFC
+
+1. Attenersi alla procedura illustrata nell'argomento della Guida [Creazione di un progetto con una creazione guidata applicazione Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+
+**Nota** nella **nuovo progetto** della finestra di dialogo Seleziona il `MFC DLL` icona nel riquadro dei modelli per aprire la creazione guidata DLL MFC.
+
+1. Definire le impostazioni dell'applicazione usando il [le impostazioni dell'applicazione](../../mfc/reference/application-settings-mfc-dll-wizard.md) pagina della [Creazione guidata DLL MFC](../../mfc/reference/mfc-dll-wizard.md).
+
     > [!NOTE]
-    >  Saltare questo passaggio per mantenere le impostazioni predefinite della procedura guidata.  
-  
-2.  Fare clic su **Finish** per chiudere la procedura guidata e aprire il nuovo progetto nella **Esplora soluzioni**.  
-  
- Dopo aver creato il progetto, è possibile visualizzare i file creati in Esplora soluzioni. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Tipi di progetto Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
- [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)   
+    >  Saltare questo passaggio per mantenere le impostazioni predefinite della procedura guidata.
+
+1. Fare clic su **Finish** per chiudere la procedura guidata e aprire il nuovo progetto nella **Esplora soluzioni**.
+
+Dopo aver creato il progetto, è possibile visualizzare i file creati in Esplora soluzioni. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Tipi di progetto Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
+[Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)
 
 

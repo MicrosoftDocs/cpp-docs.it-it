@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di un modello di finestra di dialogo in memoria | Documenti Microsoft
+title: Usando un modello di finestra di dialogo in memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10364cffa393c8f0968a4d7dffe40224b76ecf3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 649f3aecc79a0b05355b67b1d42cfd3cc2726f18
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381238"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430839"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Utilizzo di un modello di finestra di dialogo in memoria
-Anziché utilizzare i metodi descritti nel [tabella finestra di dialogo creazione](../mfc/creating-a-dialog-class-with-code-wizards.md), è possibile creare il tipo di finestra di dialogo indirettamente da un modello di finestra di dialogo in memoria. Per ulteriori informazioni, vedere la classe [CDialog](../mfc/reference/cdialog-class.md) nel *riferimenti alla libreria MFC*.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Invece di usare i metodi descritti nel [tabella di creazione della finestra di dialogo](../mfc/creating-a-dialog-class-with-code-wizards.md), è possibile creare qualsiasi tipo di finestra di dialogo indirettamente da un modello di finestra di dialogo in memoria. Per altre informazioni, vedere la classe [CDialog](../mfc/reference/cdialog-class.md) nel *riferimento MFC*.
+
+## <a name="see-also"></a>Vedere anche
+
+[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
 

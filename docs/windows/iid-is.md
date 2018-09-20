@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 597d4c2e6fa9904906c2971c3c442a9f26779834
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3f1616168829d488a0b0a899f1dd09f9b02700ee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215078"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389343"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -38,7 +38,7 @@ Specifica l'IID dell'interfaccia COM a cui punta un puntatore a interfaccia.
 
 ### <a name="parameters"></a>Parametri
 
-*Espressione*  
+*Espressione*<br/>
 Un'espressione del linguaggio C che specifica un IID di un'interfaccia COM a cui punta un puntatore a interfaccia.
 
 ## <a name="remarks"></a>Note
@@ -79,5 +79,5 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
 [Attributi di parametro](../windows/parameter-attributes.md)  

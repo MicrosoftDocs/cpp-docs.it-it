@@ -17,42 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf73633c22191d54f2b03f11cb2b84cbbd24d807
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 92dcc2509732472774a119dafb43174895247948
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220848"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382518"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: nomi delle classi di finestre MFC
+
 > [!NOTE]
->  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.  
-  
- Windows MFC Usa un nome di classe creata dinamicamente che riflette le funzionalità della finestra. MFC genera i nomi delle classi in modo dinamico per le finestre cornice, viste e le finestre popup generate dall'applicazione. Finestre di dialogo e controlli prodotti da un'applicazione MFC hanno il nome fornito dal Windows per la classe della finestra in questione.  
-  
- È possibile sostituire il nome della classe specificato in modo dinamico per registrare la propria classe di finestra e l'uso in un override di [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). I nomi di classe fornito dal MFC rientrano in nessuno dei due formati seguenti:  
-  
-```  
-Afx:%x:%x  
-Afx:%x:%x:%x:%x:%x  
-```  
-  
- Le cifre esadecimali che sostituiscono il `%x` caratteri vengono compilati da dati di [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura. MFC utilizza questa tecnica, in modo che più classi C++ che richiedono identici **WNDCLASS** strutture possono condividere la stessa classe di finestra registrata. A differenza di molte applicazioni Win32 semplice, le applicazioni MFC hanno una sola **WNDPROC**, quindi è possibile condividere facilmente **WNDCLASS** strutture per risparmiare tempo e memoria. I valori sostituibili per le `%x` caratteri illustrati in precedenza sono i seguenti:  
-  
-- **WNDCLASS.hInstance**  
-  
-- **WNDCLASS.style**  
-  
-- **WNDCLASS.hCursor**  
-  
-- **WNDCLASS.hbrBackground**  
-  
-- **WNDCLASS.hIcon**  
-  
- Il primo form (`Afx:%x:%x`) viene usato quando **hCursor**, **hbrBackground**, e **hIcon** sono tutti **NULL**.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Note tecniche per numero](../mfc/technical-notes-by-number.md)   
- [Note tecniche per categoria](../mfc/technical-notes-by-category.md)   
- [TN020: convenzioni di numerazione e denominazione ID](../mfc/tn020-id-naming-and-numbering-conventions.md)
+>  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
+
+Windows MFC Usa un nome di classe creata dinamicamente che riflette le funzionalità della finestra. MFC genera i nomi delle classi in modo dinamico per le finestre cornice, viste e le finestre popup generate dall'applicazione. Finestre di dialogo e controlli prodotti da un'applicazione MFC hanno il nome fornito dal Windows per la classe della finestra in questione.
+
+È possibile sostituire il nome della classe specificato in modo dinamico per registrare la propria classe di finestra e l'uso in un override di [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). I nomi di classe fornito dal MFC rientrano in nessuno dei due formati seguenti:
+
+```
+Afx:%x:%x
+Afx:%x:%x:%x:%x:%x
+```
+
+Le cifre esadecimali che sostituiscono il `%x` caratteri vengono compilati da dati di [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura. MFC utilizza questa tecnica, in modo che più classi C++ che richiedono identici **WNDCLASS** strutture possono condividere la stessa classe di finestra registrata. A differenza di molte applicazioni Win32 semplice, le applicazioni MFC hanno una sola **WNDPROC**, quindi è possibile condividere facilmente **WNDCLASS** strutture per risparmiare tempo e memoria. I valori sostituibili per le `%x` caratteri illustrati in precedenza sono i seguenti:
+
+- **WNDCLASS.hInstance**
+
+- **WNDCLASS.style**
+
+- **WNDCLASS.hCursor**
+
+- **WNDCLASS.hbrBackground**
+
+- **WNDCLASS.hIcon**
+
+Il primo form (`Afx:%x:%x`) viene usato quando **hCursor**, **hbrBackground**, e **hIcon** sono tutti **NULL**.
+
+## <a name="see-also"></a>Vedere anche
+
+[Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
+[Note tecniche per categoria](../mfc/technical-notes-by-category.md)<br/>
+[TN020: convenzioni di numerazione e denominazione ID](../mfc/tn020-id-naming-and-numbering-conventions.md)
 

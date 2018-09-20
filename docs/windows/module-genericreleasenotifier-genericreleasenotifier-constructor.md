@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98bcc3d3fcaf7aea3b2632cacb1ff38eedb868b8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 23b13dc170748e1a605103624450c605b1975719
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612312"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391256"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Costruttore Module::GenericReleaseNotifier::GenericReleaseNotifier
 
@@ -39,10 +39,10 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>Parametri
 
-*callback*  
+*callback*<br/>
 Un'espressione lambda, funtore o gestore eventi puntatore a funzione che può essere richiamato con l'operatore della funzione delle parentesi (`()`).
 
-*release*  
+*release*<br/>
 Specificare **true** per abilitare la chiamata sottostante [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) metodo; in caso contrario, specificare **false**.
 
 ## <a name="requirements"></a>Requisiti

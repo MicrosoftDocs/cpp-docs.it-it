@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc10f86a8fa646a1072de8b7c5e30121d98750cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1eecedca8988c95466a3f257fbc77768b7c67b3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219952"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392866"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -38,7 +38,7 @@ Specifica il nome della DLL da usare per eseguire la ricerca della stringa di do
 
 ### <a name="parameters"></a>Parametri
 
-*string*  
+*string*<br/>
 La DLL da utilizzare per eseguire una ricerca di stringhe di documento.
 
 ## <a name="remarks"></a>Note
@@ -75,7 +75,7 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di interfaccia](../windows/interface-attributes.md)  
-[Attributi di classe](../windows/class-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di interfaccia](../windows/interface-attributes.md)<br/>
+[Attributi di classe](../windows/class-attributes.md)<br/>
 [Attributi di metodo](../windows/method-attributes.md)  

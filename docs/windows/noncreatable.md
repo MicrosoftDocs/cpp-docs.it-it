@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31ede898e2b1976bc16be7cf89c0223c3709193
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 559d461a996789986dcc445d6ef510c7b179542c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221543"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381296"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -75,5 +75,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
 [Attributi di classe](../windows/class-attributes.md)  

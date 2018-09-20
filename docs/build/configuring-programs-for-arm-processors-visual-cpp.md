@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce0e7e1f7c0936daed0fa6a51f6e254403205e0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fbdf882367deb34570dd5b5ebb1b4001be739297
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714961"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373857"
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>Configurare Visual C++ per processori ARM
 
@@ -25,16 +25,22 @@ Questa sezione della documentazione descrive come usare gli strumenti di compila
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md) descrive l'interfaccia applicativa binaria utilizzata da Windows su ARM per l'utilizzo di registro, convenzioni di chiamata e la gestione delle eccezioni.
+[Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+Illustra l'interfaccia binaria dell'applicazione usata da Windows on ARM per l'uso dei registri, le convenzioni di chiamata e la gestione delle eccezioni.
 
-[Panoramica delle convenzioni ABI ARM64](../build/arm64-windows-abi-conventions.md) descrive l'interfaccia applicativa binaria utilizzata da Windows in ARM64 per l'utilizzo di registro, convenzioni di chiamata e la gestione delle eccezioni.
+[Panoramica delle convenzioni ABI ARM64](../build/arm64-windows-abi-conventions.md)<br/>
+Descrive l'interfaccia applicativa binaria utilizzata da Windows in ARM64 per l'utilizzo di registro, convenzioni di chiamata e la gestione delle eccezioni.
 
-[Problemi comuni di migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md) elementi di codice descrive C++ generalmente ritenuti per garantire la portabilità tra le architetture, ma che restituiscono risultati diversi per ARM a x86 e x64.
+[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+Descrive gli elementi del codice C++ generalmente ritenuti portabili tra le architetture ma che in ARM determinano risultati diversi rispetto a quanto avviene per le piattaforme x86 e x64.
 
-[Gestione delle eccezioni ARM](../build/arm-exception-handling.md) descrive lo schema di codifica per la rimozione dello stack durante errori strutturata di Windows su ARM.
+[Gestione delle eccezioni ARM](../build/arm-exception-handling.md)<br/>
+Descrive lo schema di codifica per la rimozione dello stack durante la gestione strutturata delle eccezioni in Windows on ARM.
 
-[Gestione delle eccezioni ARM64](../build/arm64-exception-handling.md) descrive lo schema di codifica per la rimozione dello stack durante errori strutturata di Windows in ARM64.
+[Gestione delle eccezioni ARM64](../build/arm64-exception-handling.md)<br/>
+Descrive lo schema di codifica per la rimozione dello stack durante la gestione delle eccezioni strutturata in Windows in ARM64.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Funzioni intrinseche ARM](../intrinsics/arm-intrinsics.md) descrive le funzioni intrinseche del compilatore per i processori che usano l'architettura ARM.
+[Intrinseci ARM](../intrinsics/arm-intrinsics.md)<br/>
+Illustra il compilatore intrinseco per i processori che usano l'architettura ARM.

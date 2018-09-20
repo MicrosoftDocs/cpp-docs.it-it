@@ -1,5 +1,5 @@
 ---
-title: Funzioni membro comunemente aggiunte | Documenti Microsoft
+title: Funzioni membro comunemente aggiunte | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df1be2fa68f0a7a9ea9e54d500240cc6b5f06048
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a07c034a15cd0b575dab4cb3b647e64e6ad16c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341248"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428568"
 ---
 # <a name="commonly-added-member-functions"></a>Funzioni membro comunemente aggiunte
-Se la finestra di dialogo contiene i pulsanti di comando diverso da OK o Annulla, è necessario scrivere funzioni membro di gestore di messaggi nella classe finestra di dialogo per rispondere ai messaggi di notifica del controllo che vengono generati. Per un esempio, vedere il [Scribble](../visual-cpp-samples.md) programma di esempio. È anche possibile gestire i messaggi di notifica del controllo da altri controlli nella finestra di dialogo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Finestre di dialogo](../mfc/dialog-boxes.md)   
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Funzioni membro comunemente sottoposte a override](../mfc/commonly-overridden-member-functions.md)
+
+Se la finestra di dialogo contiene i pulsanti di comando diverso da OK o Annulla, è necessario scrivere le funzioni membro di gestore di messaggi nella classe della finestra di rispondere ai messaggi di notifica del controllo che vengono generati. Per un esempio, vedere la [Scribble](../visual-cpp-samples.md) programma di esempio. È anche possibile gestire i messaggi di notifica del controllo da altri controlli nella finestra di dialogo.
+
+## <a name="see-also"></a>Vedere anche
+
+[Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
+[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Funzioni membro comunemente sottoposte a override](../mfc/commonly-overridden-member-functions.md)

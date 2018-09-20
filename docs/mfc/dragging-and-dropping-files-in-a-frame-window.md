@@ -1,5 +1,5 @@
 ---
-title: Trascinamento della selezione di file in una finestra cornice | Documenti Microsoft
+title: Trascinare e rilasciare file in una finestra cornice | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa326dba7772ddcdccb304900df4460ce9754665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fc68923de531240a2d59336c79e54f6562b369c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345573"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380529"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Trascinamento di file in una finestra cornice
-La finestra cornice gestisce una relazione con Esplora File o File Manager.  
-  
- Da aggiunta durante l'inizializzazione di qualche chiama l'override del `CWinApp` funzione membro `InitInstance`, come descritto in [CWinApp: classe Application](../mfc/cwinapp-the-application-class.md), è possibile avere la finestra cornice indirettamente aprire i file trascinati dal File Esplora risorse o File Manager ed eliminati nella finestra cornice. Vedere [trascinamento della selezione di gestione File](../mfc/special-cwinapp-services.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso di finestre cornice](../mfc/using-frame-windows.md)
+
+La finestra cornice gestisce sia una relazione con Esplora File o File Manager.
+
+Da aggiunta di inizializzazione di alcuni chiama nell'override della `CWinApp` funzione membro `InitInstance`, come descritto in [CWinApp: la classe Application](../mfc/cwinapp-the-application-class.md), è possibile avere la finestra cornice indirettamente aprire i file trascinati da File Esplora risorse o File Manager ed eliminato nella finestra cornice. Visualizzare [gestione File trascinamento della selezione](../mfc/special-cwinapp-services.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di finestre cornice](../mfc/using-frame-windows.md)
 

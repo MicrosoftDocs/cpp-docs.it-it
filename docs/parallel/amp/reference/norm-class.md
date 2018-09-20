@@ -16,98 +16,97 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 362ad3a2676fa1a7c8f965a6750782617d6a3203
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087480"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425730"
 ---
 # <a name="norm-class"></a>Classe norm
-Rappresenta un numero di norma. Ogni elemento è mobile punto numero compreso nell'intervallo [-1.0f, 1.0f].  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-class norm;  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Costruttore Norm](#ctor)|Di overload. Costruttore predefinito. L'inizializzazione su 0.0f.|  
-  
-### <a name="public-operators"></a>Operatori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|norm::operator-||  
-|norm::operator--||  
-|NORM::operator float|Operatore di conversione. Convertire il numero di norma in Mobile valore del punto.|  
-|norm::operator*=||  
-|norm::operator/=||  
-|norm::operator++||  
-|norm::operator+=||  
-|norm::operator=||  
-|norm::operator-=||  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- `norm`  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency:: Graphics  
-  
-##  <a name="ctor"></a> Norm 
 
- Costruttore predefinito. L'inizializzazione su 0.0f.  
-  
-```  
+Rappresenta un numero di norma. Ogni elemento è mobile punto numero compreso nell'intervallo [-1.0f, 1.0f].
+
+## <a name="syntax"></a>Sintassi
+
+```
+class norm;
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[Costruttore Norm](#ctor)|Di overload. Costruttore predefinito. L'inizializzazione su 0.0f.|
+
+### <a name="public-operators"></a>Operatori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|norm::operator-||
+|norm::operator--||
+|NORM::operator float|Operatore di conversione. Convertire il numero di norma in Mobile valore del punto.|
+|norm::operator*=||
+|norm::operator/=||
+|norm::operator++||
+|norm::operator+=||
+|norm::operator=||
+|norm::operator-=||
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+`norm`
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** amp_short_vectors.h
+
+**Namespace:** Concurrency:: Graphics
+
+##  <a name="ctor"></a> Norm
+
+Costruttore predefinito. L'inizializzazione su 0.0f.
+
+```
 norm(
     void) restrict(amp,
     cpu);
 
- 
 explicit norm(
     float _V) restrict(amp,
     cpu);
 
- 
 explicit norm(
     unsigned int _V) restrict(amp,
     cpu);
 
- 
 explicit norm(
     int _V) restrict(amp,
     cpu);
 
- 
 explicit norm(
     double _V) restrict(amp,
     cpu);
 
- 
 norm(
     const norm& _Other) restrict(amp,
     cpu);
 
- 
 norm(
     const unorm& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Parametri  
+```
+
+### <a name="parameters"></a>Parametri
+
 *ISOLA*<br/>
-Il valore utilizzato per inizializzare.  
-  
+Il valore utilizzato per inizializzare.
+
 *_Other*<br/>
-Oggetto utilizzato per inizializzare.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
+Oggetto utilizzato per inizializzare.
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

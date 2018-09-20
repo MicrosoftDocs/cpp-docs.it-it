@@ -16,57 +16,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 10e848321f105f60643f579c12772f6a40edebeb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714207"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383519"
 ---
 # <a name="shiftright128"></a>__shiftright128
-**Sezione specifica Microsoft**  
-  
- Sposta una quantità di 128 bit, rappresentata come due quantità di 64 bit `LowPart` e `HighPart`, a destra di un numero di bit specificato da `Shift` e restituisce i 64 bit meno significativi del risultato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned __int64 __shiftright128(   
-   unsigned __int64 LowPart,   
-   unsigned __int64 HighPart,   
-   unsigned char Shift   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+**Sezione specifica Microsoft**
+
+Sposta una quantità di 128 bit, rappresentata come due quantità di 64 bit `LowPart` e `HighPart`, a destra di un numero di bit specificato da `Shift` e restituisce i 64 bit meno significativi del risultato.
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned __int64 __shiftright128( 
+   unsigned __int64 LowPart, 
+   unsigned __int64 HighPart, 
+   unsigned char Shift 
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *ParteBassa*<br/>
-[in] 64 bit meno significativi della quantità di 128 bit da spostare.  
-  
+[in] 64 bit meno significativi della quantità di 128 bit da spostare.
+
 *HighPart*<br/>
-[in] I 64 bit alti della quantità di 128 bit da spostare.  
-  
+[in] I 64 bit alti della quantità di 128 bit da spostare.
+
 *MAIUSC*<br/>
-[in] Il numero di bit da spostare.  
-  
-## <a name="return-value"></a>Valore restituito  
- I 64 bit meno significativi del risultato.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__shiftright128`|X64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Il valore `Shift` è sempre modulo 64 in modo che, ad esempio, se si chiama `__shiftright128(0, 1, 64)`, la funzione sposterà la parte più significativa di `0` bit a destra e restituirà la parte meno significativa di `0` e non di `1`, come ci si aspetterebbe altrimenti.  
-  
-## <a name="example"></a>Esempio  
- Per un esempio, vedere [__shiftleft128](../intrinsics/shiftleft128.md).  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [__shiftleft128](../intrinsics/shiftleft128.md)   
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+[in] Il numero di bit da spostare.
+
+## <a name="return-value"></a>Valore restituito
+
+I 64 bit meno significativi del risultato.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__shiftright128`|X64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Il valore `Shift` è sempre modulo 64 in modo che, ad esempio, se si chiama `__shiftright128(0, 1, 64)`, la funzione sposterà la parte più significativa di `0` bit a destra e restituirà la parte meno significativa di `0` e non di `1`, come ci si aspetterebbe altrimenti.
+
+## <a name="example"></a>Esempio
+
+Per un esempio, vedere [__shiftleft128](../intrinsics/shiftleft128.md).
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

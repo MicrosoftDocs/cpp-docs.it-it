@@ -1,5 +1,5 @@
 ---
-title: Creazione di una finestra delle proprietà non modale | Documenti Microsoft
+title: Creazione di una finestra delle proprietà non modale | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10dbef813d922bd01a5f9215b6d6e642349d2b75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16b0a558dcae7d2bf35cf530abfea15ef6f8138a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342722"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378098"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Creazione di una finestra delle proprietà non modale
-In genere, le finestre delle proprietà create saranno modale. Quando si utilizza una finestra delle proprietà modale, l'utente deve chiudere la finestra delle proprietà prima di utilizzare qualsiasi altra parte dell'applicazione. Questo articolo descrive i metodi che utilizzabili per creare una finestra delle proprietà non modale che consente all'utente di tenere aperta la finestra delle proprietà durante l'utilizzo di altre parti dell'applicazione.  
-  
- Per visualizzare una finestra delle proprietà come finestra di dialogo non modale anziché come una finestra di dialogo modale, chiamare [CPropertySheet:: Create](../mfc/reference/cpropertysheet-class.md#create) anziché [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). È inoltre necessario implementare alcune operazioni aggiuntive per supportare una finestra delle proprietà non modale.  
-  
- Una delle attività aggiuntive scambia dati tra la finestra delle proprietà e l'oggetto esterno che viene modificato quando è aperta la finestra delle proprietà. Si tratta in genere la stessa attività per le finestre di dialogo non modali standard. Ambito di questa attività viene implementata da un canale di comunicazione tra la finestra delle proprietà non modale e l'oggetto esterno a cui applicare le impostazioni delle proprietà. Questa implementazione è molto più semplice se si deriva una classe da [CPropertySheet](../mfc/reference/cpropertysheet-class.md) per la finestra delle proprietà non modale. In questo articolo si presuppone che si è fatto.  
-  
- Un metodo per la comunicazione tra la finestra delle proprietà non modale ed esterno oggetto (la selezione corrente in una visualizzazione, ad esempio) consiste nel definire un puntatore nella finestra delle proprietà all'oggetto esterno. Definire una funzione (chiamato simile `SetMyExternalObject`) nei `CPropertySheet`-derivata per modificare il puntatore ogni volta che cambia lo stato attivo da un oggetto esterno a un altro. Il `SetMyExternalObject` funzione è necessario reimpostare le impostazioni per ogni pagina delle proprietà in modo da riflettere il nuovo oggetto esterno selezionato. A tale scopo, il `SetMyExternalObject` funzione deve essere in grado di accedere il [CPropertyPage](../mfc/reference/cpropertypage-class.md) oggetti appartenenti alla `CPropertySheet` classe.  
-  
- È il modo più semplice per fornire l'accesso alle pagine delle proprietà all'interno di una finestra delle proprietà per incorporare il `CPropertyPage` gli oggetti di `CPropertySheet`-oggetto derivato. Incorporamento `CPropertyPage` gli oggetti di `CPropertySheet`-oggetto derivato rispetto alla normale progettazione di finestre di dialogo modale in cui il proprietario della finestra delle proprietà crea la `CPropertyPage` oggetti e li passa alla finestra delle proprietà tramite [ :: AddPage](../mfc/reference/cpropertysheet-class.md#addpage).  
-  
- Esistono diverse alternative di interfaccia utente per determinare quando le impostazioni della finestra delle proprietà non modale devono essere applicate a un oggetto esterno. Un'alternativa consiste nell'applicare le impostazioni della pagina delle proprietà correnti ogni volta che l'utente modifica qualsiasi valore. Un'altra alternativa consiste nel fornire un pulsante Applica, che consente all'utente a continue modifiche nelle pagine delle proprietà prima di eseguirne il commit all'oggetto esterno. Per informazioni sulle modalità di gestione del pulsante Applica, vedere l'articolo [gestione del pulsante Applica](../mfc/handling-the-apply-button.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Finestre delle proprietà](../mfc/property-sheets-mfc.md)   
- [Lo scambio di dati](../mfc/exchanging-data.md)   
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+In genere, le finestre delle proprietà che si crea è modale. Quando si usa una finestra delle proprietà modali, l'utente deve chiudere la finestra delle proprietà prima di usare qualsiasi altra parte dell'applicazione. Questo articolo descrive i metodi che è possibile usare per creare una finestra delle proprietà non modale che consente all'utente di tenere aperta la finestra delle proprietà durante l'utilizzo di altre parti dell'applicazione.
+
+Per visualizzare una finestra delle proprietà come finestra di dialogo non modale anziché come una finestra di dialogo modale, chiamare [CPropertySheet:: Create](../mfc/reference/cpropertysheet-class.md#create) invece di [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). È inoltre necessario implementare alcune attività aggiuntive per supportare una finestra delle proprietà non modale.
+
+Una delle attività aggiuntive è lo scambio di dati tra la finestra delle proprietà e l'oggetto esterno che sta modificando una volta aperta la finestra delle proprietà. Si tratta in genere la stessa attività per le finestre di dialogo non modale standard. Parte di questa attività viene implementata da un canale di comunicazione tra la finestra delle proprietà non modale e l'oggetto esterno a cui applicare le impostazioni delle proprietà. Questa implementazione è molto più semplice se si deriva una classe dalla classe [CPropertySheet](../mfc/reference/cpropertysheet-class.md) per la finestra delle proprietà non modale. Questo articolo presuppone che si è fatto.
+
+Un metodo per la comunicazione tra la finestra delle proprietà non modale ed esterno oggetto (la selezione corrente in una vista, ad esempio) consiste nel definire un puntatore dalla finestra delle proprietà per l'oggetto esterno. Definire una funzione (chiamato simile `SetMyExternalObject`) nel `CPropertySheet`-per modificare il puntatore quando cambia lo stato attivo da un oggetto esterno a un'altra classe derivata. Il `SetMyExternalObject` funzione deve reimpostare le impostazioni per ogni pagina delle proprietà in modo da riflettere l'oggetto esterno appena selezionato. A tale scopo, il `SetMyExternalObject` funzione deve essere in grado di accedere il [CPropertyPage](../mfc/reference/cpropertypage-class.md) oggetti appartenenti al `CPropertySheet` classe.
+
+Il modo più semplice per fornire l'accesso alle pagine delle proprietà all'interno di una finestra delle proprietà consiste nell'incorporare il `CPropertyPage` oggetti nel `CPropertySheet`-oggetto derivato. Incorporamento `CPropertyPage` oggetti nel `CPropertySheet`-oggetto derivato differisce dalla struttura del tipica delle finestre di dialogo modale, in cui il proprietario della finestra delle proprietà crea la `CPropertyPage` degli oggetti e li passa alla finestra delle proprietà tramite [ :: AddPage](../mfc/reference/cpropertysheet-class.md#addpage).
+
+Sono disponibili diverse alternative di interfaccia utente per determinare quando le impostazioni della finestra delle proprietà non modale devono essere applicate a un oggetto esterno. Un'alternativa consiste nell'applicare le impostazioni della pagina delle proprietà correnti ogni volta che l'utente modifica qualsiasi valore. Un'altra alternativa consiste nel fornire un pulsante Applica, che consente all'utente l'accumulo delle modifiche nelle pagine delle proprietà prima di eseguirne il commit per l'oggetto esterno. Per informazioni sulle modalità di gestione del pulsante Applica, vedere l'articolo [gestione del pulsante Applica](../mfc/handling-the-apply-button.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Finestre delle proprietà](../mfc/property-sheets-mfc.md)<br/>
+[Scambio di dati](../mfc/exchanging-data.md)<br/>
+[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
 

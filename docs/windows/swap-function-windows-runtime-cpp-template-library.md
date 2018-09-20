@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b5273127b4f4329427f50c82f1bb15a4ad2634e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 512619381ebf44ebcd451484403ec27e1ca869b8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590209"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437027"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Funzione swap (Libreria modelli C++ per Windows Runtime)
 
@@ -37,10 +37,10 @@ WRL_NOTHROW inline void Swap(
 
 ### <a name="parameters"></a>Parametri
 
-*left*  
+*left*<br/>
 Primo argomento.
 
-*right*  
+*right*<br/>
 Secondo argomento.
 
 ## <a name="return-value"></a>Valore restituito

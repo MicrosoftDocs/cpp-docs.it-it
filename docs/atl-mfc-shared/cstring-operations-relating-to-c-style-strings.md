@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda24d58e26157b8730ae5d010e0874195151b79
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756928"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387016"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Operazioni di CString relative alle stringhe in formato C
 
@@ -111,6 +111,6 @@ Per la maggior parte dei risultati di funzione, è sufficiente restituire un ogg
 
 ## <a name="see-also"></a>Vedere anche
 
-[Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+[Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Passaggio degli argomenti di CString](../atl-mfc-shared/cstring-argument-passing.md)
 

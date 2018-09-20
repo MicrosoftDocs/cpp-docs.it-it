@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d81fb8f8f41a57fc2bd1a87c6726b92756bf26b5
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 58f3be857e0a77a62a5f2d4d1d0b650f02fd391b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539992"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425522"
 ---
 # <a name="macros-and-c"></a>Macro e C++
 C++ offre nuove funzionalità, alcune delle quali soppiantano quelle offerte dal preprocessore ANSI C. Queste nuove funzionalità migliorano l'indipendenza dai tipi e la prevedibilità del linguaggio:  
@@ -39,5 +39,5 @@ Per la compatibilità con le versioni precedenti, tutte le funzionalità del pre
   
 ## <a name="see-also"></a>Vedere anche  
  
-[Macro predefinite](../preprocessor/predefined-macros.md)   
+[Macro predefinite](../preprocessor/predefined-macros.md)<br/>
 [Macro (C/C++)](../preprocessor/macros-c-cpp.md)

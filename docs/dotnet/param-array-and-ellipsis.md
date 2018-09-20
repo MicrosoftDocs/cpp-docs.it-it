@@ -1,5 +1,5 @@
 ---
-title: Matrice di parametri e puntini di sospensione | Documenti Microsoft
+title: Matrice di parametri e puntini di sospensione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 20d13f327abe3e864007c4941af2ce9fd03ea05d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2caf6415fdbceb506b736e209c6e7e384b567c5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33158521"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384377"
 ---
 # <a name="param-array-and-ellipsis"></a>Matrice di parametri e puntini di sospensione
-Precedenza della matrice di parametri per la risoluzione di chiamate di funzione in overload è cambiato da estensioni gestite per C++ a Visual C++.  
-  
- Nelle estensioni gestite che la nuova sintassi, non è presente alcun supporto esplicito per la matrice di parametri che c# e Visual Basic supportano. Al contrario, un contrassegno matrice ordinaria con un attributo, come indicato di seguito:  
-  
-```  
-void Trace1( String* format, [ParamArray]Object* args[] );  
-void Trace2( String* format, Object* args[] );  
-```  
-  
- Nonostante l'aspetto lo stesso, il `ParamArray` attributo questo tag per c# o in altri linguaggi CLR sotto forma di matrice richiede un numero variabile di elementi con ogni chiamata. La modifica del comportamento nei programmi tra le estensioni gestite e la nuova sintassi nella risoluzione di una funzione in overload set in cui un'istanza dichiara i puntini di sospensione e una seconda dichiara un `ParamArray` attributo, come nell'esempio seguente fornito da Artur Laksberg.  
-  
-```  
-int fx(...); // 1  
-int fx( [ParamArray] Int32[] ); // 2  
-```  
-  
- Nelle estensioni gestite, i puntini di sospensione è stata assegnata la precedenza sull'attributo che è ragionevole poiché l'attributo non è un aspetto formale del linguaggio. Tuttavia, nella nuova sintassi, la matrice di parametri è ora supportata direttamente nel linguaggio e ha pertanto la precedenza sui puntini di sospensione poiché è più fortemente tipizzato. Nelle estensioni gestite, la chiamata  
-  
-```  
-fx( 1, 2 );  
-```  
-  
- si risolve in `fx(...)` mentre nella nuova sintassi, viene risolta la `ParamArray` istanza. Nel caso che il comportamento del programma dipende la chiamata dell'istanza di puntini di sospensione rispetto a quelle del `ParamArray`, è necessario modificare la firma o la chiamata.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifiche generali del linguaggio (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)
+
+La priorità della matrice di parametri per la risoluzione di chiamate di funzione in overload è stato modificato dalle estensioni gestite per C++ in Visual C++.
+
+In estensioni gestite e la nuova sintassi, non vi è alcun supporto esplicito per la matrice di parametri che supportano linguaggi c# e Visual Basic. Al contrario, un contrassegno matrice ordinaria con un attributo, come indicato di seguito:
+
+```
+void Trace1( String* format, [ParamArray]Object* args[] );
+void Trace2( String* format, Object* args[] );
+```
+
+Nonostante lo stesso, l'aspetto di `ParamArray` attributo questo tag per c# o altri linguaggi CLR come una matrice richiede un numero variabile di elementi con ogni chiamata. La modifica del comportamento nei programmi tra le estensioni gestite e la nuova sintassi è la risoluzione di una funzione in overload set in cui un'istanza dichiara i puntini di sospensione e una seconda dichiara un `ParamArray` attributo, come illustrato di seguito fornita da Artur Laksberg.
+
+```
+int fx(...); // 1
+int fx( [ParamArray] Int32[] ); // 2
+```
+
+Nelle estensioni gestite, i puntini di sospensione è stata assegnata la precedenza sull'attributo che è ragionevole poiché l'attributo non è un aspetto del linguaggio formale. Tuttavia, nella nuova sintassi, la matrice di parametri è ora supportata direttamente all'interno del linguaggio e venga assegnata la precedenza sui puntini di sospensione poiché è più fortemente tipizzato. Pertanto, nelle estensioni gestite, la chiamata
+
+```
+fx( 1, 2 );
+```
+
+si risolve in `fx(...)` anche se nella nuova sintassi, viene risolto nel `ParamArray` istanza. Nel caso che il comportamento del programma dipende la chiamata dell'istanza di puntini di sospensione rispetto a quella del `ParamArray`, sarà necessario modificare la firma o la chiamata.
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifiche generali del linguaggio (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)

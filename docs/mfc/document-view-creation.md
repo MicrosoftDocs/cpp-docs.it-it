@@ -1,5 +1,5 @@
 ---
-title: Creazione documento / visualizzazione | Documenti Microsoft
+title: Creazione di documenti-visualizzazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,28 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0deb187a6540af71a1dc72b730347374bc25f963
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931853"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423070"
 ---
 # <a name="documentview-creation"></a>Creazione di documenti/visualizzazioni
-Il framework fornisce le implementazioni del **New** e **Open** comandi (ad) la **File** menu. La creazione di un nuovo documento e la relativa visualizzazione associata e finestra cornice è uno sforzo attivo cooperativo tra l'oggetto applicazione, un modello di documento, il documento appena creato e la finestra cornice appena creato. Nella tabella seguente sono riepilogati gli oggetti che creano cosa.  
-  
-### <a name="object-creators"></a>Creatori di oggetti  
-  
-|Creator|Crea|  
-|-------------|-------------|  
-|Oggetto Application|Modello di documento|  
-|Modello di documento|Document|  
-|Modello di documento|Finestra cornice|  
-|Finestra cornice|Visualizza|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modelli di documento e il processo di creazione documento/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Creazione del modello di documento](../mfc/document-template-creation.md)   
- [Relazioni tra oggetti MFC](../mfc/relationships-among-mfc-objects.md)   
- [Creazione di nuovi documenti, finestre e visualizzazioni](../mfc/creating-new-documents-windows-and-views.md)
+
+Il framework fornisce le implementazioni del **New** e **Open** comandi (tra gli altri) per il **File** menu. Creazione di un nuovo documento e relativa visualizzazione associata e finestra cornice è un'operazione cooperativa tra l'oggetto dell'applicazione, un modello di documento, il documento appena creato e la finestra cornice appena creato. La tabella seguente riepiloga gli oggetti creano in ciascun oggetto.
+
+### <a name="object-creators"></a>Creatori di oggetti
+
+|Creator|Crea|
+|-------------|-------------|
+|Oggetto Application|Modello di documento|
+|Modello di documento|Document|
+|Modello di documento|Finestra cornice|
+|Finestra cornice|Visualizza|
+
+## <a name="see-also"></a>Vedere anche
+
+[I modelli di documento e il processo di creazione documento/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
+[Creazione di modelli di documento](../mfc/document-template-creation.md)<br/>
+[Relazioni tra oggetti MFC](../mfc/relationships-among-mfc-objects.md)<br/>
+[Creazione di nuovi documenti, finestre e visualizzazioni](../mfc/creating-new-documents-windows-and-views.md)
 

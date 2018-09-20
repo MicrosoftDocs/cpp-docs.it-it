@@ -20,92 +20,102 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b9d54662663e2b3223f4122eae93327b9a05337b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703833"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382232"
 ---
 # <a name="cmfcribbonlabel-class"></a>Classe CMFCRibbonLabel
-Implementa un'etichetta di testo non selezionabile per una barra multifunzione.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-class CMFCRibbonLabel : public CMFCRibbonButton  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="public-constructors"></a>Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Costruisce e Inizializza un `CMFCRibbonLabel` oggetto con la stringa di testo specificato.|  
-|`CMFCRibbonLabel::~CMFCRibbonLabel`|Distruttore.|  
-  
-### <a name="public-methods"></a>Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`CMFCRibbonLabel::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
-|`CMFCRibbonLabel::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determina i dati di accessibilità per l'elemento etichetta della barra multifunzione corrente. (Esegue l'override [cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
-  
-### <a name="remarks"></a>Note  
- Dopo aver creato un'etichetta della barra multifunzione, aggiungerlo a un pannello chiamando [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
-  
- È possibile aggiungere un'etichetta della barra multifunzione alla barra di accesso rapido.  
-  
-## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
-  
- [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
-  
- [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxRibbonLabel.h  
-  
-##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
- Costruisce e Inizializza un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) oggetto che viene visualizzata la stringa di testo specificato.  
-  
-```  
+
+Implementa un'etichetta di testo non selezionabile per una barra multifunzione.
+
+## <a name="syntax"></a>Sintassi
+
+```
+class CMFCRibbonLabel : public CMFCRibbonButton
+```
+
+## <a name="members"></a>Membri
+
+### <a name="public-constructors"></a>Costruttori pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Costruisce e Inizializza un `CMFCRibbonLabel` oggetto con la stringa di testo specificato.|
+|`CMFCRibbonLabel::~CMFCRibbonLabel`|Distruttore.|
+
+### <a name="public-methods"></a>Metodi pubblici
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`CMFCRibbonLabel::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
+|`CMFCRibbonLabel::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determina i dati di accessibilità per l'elemento etichetta della barra multifunzione corrente. (Esegue l'override [cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+
+### <a name="remarks"></a>Note
+
+Dopo aver creato un'etichetta della barra multifunzione, aggiungerlo a un pannello chiamando [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
+
+È possibile aggiungere un'etichetta della barra multifunzione alla barra di accesso rapido.
+
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
+
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+
+[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** afxRibbonLabel.h
+
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel
+
+Costruisce e Inizializza un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) oggetto che viene visualizzata la stringa di testo specificato.
+
+```
 CMFCRibbonLabel(
-    LPCTSTR lpszText,  
+    LPCTSTR lpszText,
     BOOL bIsMultiLine = FALSE);
-```  
-  
-### <a name="parameters"></a>Parametri  
+```
+
+### <a name="parameters"></a>Parametri
+
 *lpszText*<br/>
-[in] Il testo da visualizzare nell'etichetta.  
-  
+[in] Il testo da visualizzare nell'etichetta.
+
 *bIsMultiLine*<br/>
-[in] TRUE per specificare che l'etichetta è un'etichetta su più righe; in caso contrario, FALSE.  
-  
-##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
- Determina i dati di accessibilità per l'elemento etichetta della barra multifunzione corrente.  
-  
-```  
+[in] TRUE per specificare che l'etichetta è un'etichetta su più righe; in caso contrario, FALSE.
+
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData
+
+Determina i dati di accessibilità per l'elemento etichetta della barra multifunzione corrente.
+
+```
 virtual BOOL SetACCData(
-    CWnd* pParent,  
+    CWnd* pParent,
     CAccessibilityData& data);
-```  
-  
-### <a name="parameters"></a>Parametri  
+```
+
+### <a name="parameters"></a>Parametri
+
 *pParent*<br/>
-[in] Rappresenta la finestra padre dell'etichetta della barra multifunzione corrente.  
-  
+[in] Rappresenta la finestra padre dell'etichetta della barra multifunzione corrente.
+
 *data*<br/>
-[out] Un oggetto di tipo `CAccessibilityData` che viene popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente.  
-  
-### <a name="return-value"></a>Valore restituito  
- TRUE se il *dati* parametro è stato popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente; in caso contrario, FALSE.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Classi](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+[out] Un oggetto di tipo `CAccessibilityData` che viene popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente.
+
+### <a name="return-value"></a>Valore restituito
+
+TRUE se il *dati* parametro è stato popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente; in caso contrario, FALSE.
+
+## <a name="see-also"></a>Vedere anche
+
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Classi](../../mfc/reference/mfc-classes.md)<br/>
+[Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)

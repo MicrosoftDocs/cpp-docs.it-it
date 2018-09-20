@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca78687f79cdbf1d8bdb60c1a877c489498624ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766191"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390734"
 ---
 # <a name="using-cstringt"></a>Uso di CStringT
 
@@ -27,10 +27,10 @@ Negli argomenti di questa sezione vengono descritti usando la classe modello di 
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Gestione della memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
+[Gestione della memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)<br/>
 Descrive la gestione della memoria con `CStringT`, una classe modello utilizzata per modificare le stringhe di caratteri di lunghezza variabile.
 
-[Esportazione di classi String tramite CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+[Esportazione di classi String tramite CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)<br/>
 Viene illustrato come esportare la propria classe di stringa da una DLL tramite la classe di modello <> CStringT.
 
 ## <a name="reference"></a>Riferimenti

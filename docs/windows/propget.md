@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3461f622e5146a9173e0a011fbec60a9674c545
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7d5a145c730104608bd8b1709191fef32d3bfc08
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223341"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380752"
 ---
 # <a name="propget"></a>propget
 
@@ -57,7 +57,7 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di metodo](../windows/method-attributes.md)  
-[propput](../windows/propput.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di metodo](../windows/method-attributes.md)<br/>
+[propput](../windows/propput.md)<br/>
 [propputref](../windows/propputref.md)  

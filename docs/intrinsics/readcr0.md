@@ -16,41 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adece31c6123a21931436809d4405f258f4341b1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f989c7bd6cc74a688e8694ed59899c59c50cb0d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539433"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430657"
 ---
 # <a name="readcr0"></a>__readcr0
-**Sezione specifica Microsoft**  
-  
- Legge il registro CR0 e ne restituisce il valore.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned long __readcr0(void);  /* X86 */  
-unsigned __int64 __readcr0(void);  /* X64 */  
-  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Valore nel registro CR0.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__readcr0`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questo intrinseco è disponibile solo in modalità kernel e la routine è disponibile solo come intrinseco.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+
+**Sezione specifica Microsoft**
+
+Legge il registro CR0 e ne restituisce il valore.
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned long __readcr0(void);  /* X86 */
+unsigned __int64 __readcr0(void);  /* X64 */
+
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Valore nel registro CR0.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__readcr0`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questo intrinseco è disponibile solo in modalità kernel e la routine è disponibile solo come intrinseco.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

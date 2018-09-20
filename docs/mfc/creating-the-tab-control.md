@@ -1,5 +1,5 @@
 ---
-title: Creazione del controllo Tab | Documenti Microsoft
+title: Creazione del controllo Tab | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,54 +20,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3945d441130d723bbda3d137f2adae637d56c2b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc1acd65aed84321e1f32c3114223899e17f2ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344091"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430878"
 ---
 # <a name="creating-the-tab-control"></a>Creazione del controllo Tab
-Modalità di creazione del controllo tab varia a seconda che si utilizza un controllo in una finestra di dialogo o crearlo in una finestra non di dialogo.  
-  
-### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>Per utilizzare CTabCtrl direttamente in una finestra di dialogo  
-  
-1.  Nell'editor finestre, aggiungere un controllo struttura a schede alla risorsa modello di finestra di dialogo. Specificare l'ID di controllo.  
-  
-2.  Utilizzare il [Aggiunta guidata variabile membro](../ide/adding-a-member-variable-visual-cpp.md) per aggiungere una variabile membro di tipo [CTabCtrl](../mfc/reference/ctabctrl-class.md) con la proprietà del controllo. È possibile utilizzare questo membro per chiamare le funzioni membro di `CTabCtrl`.  
-  
-3.  Eseguire il mapping di funzioni del gestore nella classe di finestra di dialogo per gli eventuali messaggi di notifica di controllo scheda che è necessario gestire. Per ulteriori informazioni, vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md).  
-  
-4.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), impostare gli stili per il `CTabCtrl`.  
-  
-### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>Per utilizzare CTabCtrl in una finestra non di dialogo  
-  
-1.  Definire il controllo nella classe di visualizzazione o della finestra.  
-  
-2.  Chiamare il controllo [crea](../mfc/reference/ctabctrl-class.md#create) funzione membro, possibilmente in [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)e possibilmente fin della finestra padre [OnCreate](../mfc/reference/cwnd-class.md#oncreate) (se la funzione del gestore creazione di una sottoclasse del controllo). Impostare gli stili per il controllo.  
-  
- Dopo il `CTabCtrl` oggetto è stato creato, è possibile impostare o cancellare i seguenti stili estesi:  
-  
--   **TCS_EX_FLATSEPARATORS** il controllo scheda verrà disegnato un separatore tra gli elementi della scheda. Questo periodo esteso stile solo interessa scheda i controlli che dispongono di **TCS_BUTTONS** e **TCS_FLATBUTTONS** stili. Per impostazione predefinita, la creazione del controllo scheda con il **TCS_FLATBUTTONS** stile imposta questo stile esteso.  
-  
--   **TCS_EX_REGISTERDROP** il controllo scheda Genera **TCN_GETOBJECT** i messaggi di notifica per richiedere un obiettivo di rilascio dell'oggetto quando un oggetto viene trascinato sugli elementi nel controllo della scheda.  
-  
+
+Modalità di creazione del controllo tab varia a seconda che si utilizzi il controllo in una finestra di dialogo o crearlo in una finestra non di dialogo.
+
+### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>Usare CTabCtrl direttamente in una finestra di dialogo
+
+1. Nell'editor finestre, aggiungere un controllo struttura a schede per la risorsa modello di finestra di dialogo. Specificare l'ID di controllo.
+
+1. Usare la [Aggiunta guidata variabile membro](../ide/adding-a-member-variable-visual-cpp.md) per aggiungere una variabile membro di tipo [CTabCtrl](../mfc/reference/ctabctrl-class.md) con la proprietà del controllo. È possibile utilizzare questo membro per chiamare le funzioni membro di `CTabCtrl`.
+
+1. Eseguire il mapping di funzioni del gestore della classe di finestra di dialogo per eventuali messaggi di notifica controllo scheda, che è necessario gestire. Per altre informazioni, vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md).
+
+1. Nelle [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), impostare gli stili per il `CTabCtrl`.
+
+### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>Per usare CTabCtrl in una finestra non di dialogo
+
+1. Definire il controllo nella classe di visualizzazione o della finestra.
+
+1. Il controllo delle chiamate [Create](../mfc/reference/ctabctrl-class.md#create) funzione di membro, possibilmente in [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), possibilmente fin della finestra padre [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funzione del gestore (se si è creazione di una sottoclasse del controllo). Impostare gli stili per il controllo.
+
+Dopo il `CTabCtrl` oggetto è stato creato, è possibile selezionare o deselezionare i seguenti stili estesi:
+
+- **TCS_EX_FLATSEPARATORS** il controllo scheda verrà disegnato un separatore tra gli elementi della scheda. Stile questo esteso solo influisce su scheda i controlli che hanno le **TCS_BUTTONS** e **TCS_FLATBUTTONS** stili. Per impostazione predefinita, la creazione del controllo scheda con la **TCS_FLATBUTTONS** stile imposta questo stile esteso.
+
+- **TCS_EX_REGISTERDROP** controllo struttura a schede genera **TCN_GETOBJECT** i messaggi di notifica per richiedere un obiettivo di rilascio dell'oggetto quando un oggetto viene trascinato su elementi della scheda del controllo.
+
     > [!NOTE]
-    >  Per ricevere il **TCN_GETOBJECT** notifica, è necessario inizializzare le librerie OLE con una chiamata a [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).  
-  
- Gli stili possono essere recuperati ed è impostati, dopo aver creato il controllo, con le rispettive chiamate al [GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle) e [SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle) funzioni membro.  
-  
- Ad esempio, impostare il **TCS_EX_FLATSEPARATORS** stile con le righe di codice seguente:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]  
-  
- Cancella il **TCS_EX_FLATSEPARATORS** lo stile da un `CTabCtrl` oggetto con le righe di codice seguente:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]  
-  
- Questa operazione rimuoverà i separatori che vengono visualizzate tra i pulsanti del `CTabCtrl` oggetto.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CTabCtrl](../mfc/using-ctabctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+    >  Per ricevere il **TCN_GETOBJECT** notifica, è necessario inizializzare le librerie OLE con una chiamata a [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
+
+Questi stili possono essere recuperati e impostati, dopo aver creato il controllo, con le rispettive chiamate per il [GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle) e [SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle) funzioni membro.
+
+Ad esempio, impostare il **TCS_EX_FLATSEPARATORS** stile con le righe di codice seguenti:
+
+[!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]
+
+Cancella il **TCS_EX_FLATSEPARATORS** lo stile da un `CTabCtrl` oggetto con le righe di codice seguenti:
+
+[!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]
+
+Questa operazione rimuoverà i separatori che vengono visualizzati tra i pulsanti del `CTabCtrl` oggetto.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

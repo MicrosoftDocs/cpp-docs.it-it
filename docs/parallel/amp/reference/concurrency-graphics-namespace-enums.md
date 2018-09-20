@@ -1,5 +1,5 @@
 ---
-title: 'Le enumerazioni dello spazio dei nomi Concurrency:: Graphics | Documenti Microsoft'
+title: 'Enumerazioni dello spazio dei nomi Concurrency:: Graphics | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,33 +13,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbb02becbcfebf935107acb85ae3991476b67796
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b5c66771c9b27d568e32f7d4a361586ff5a62da9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695447"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384975"
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Enumerazioni dello spazio dei nomi Concurrency:: Graphics
-|||  
-|-|-|  
-|[Enumerazione Opossibile](#address_mode)|[Enumerazione filter_mode](#filter_mode)|  
-  
-##  <a name="address_mode"></a>  Enumerazione address_mode  
- Tipo di enumerazione utilizzare per indicare la modalità di indirizzo supportate per il campionamento delle trame.  
-  
-```  
-enum address_mode;  
-```  
-  
-##  <a name="filter_mode"></a>  Enumerazione filter_mode  
- Tipo di enumerazione utilizzare per indicare la modalità di filtro supportate per il campionamento delle trame.  
-  
-```  
-enum filter_mode;  
-```  
-## <a name="requirements"></a>Requisiti
-**Intestazione:** amp_graphics.h **Namespace:** Concurrency:: Graphics
 
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
+|||
+|-|-|
+|[modalità enumerazione](#address_mode)|[Enumerazione filter_mode](#filter_mode)|
+
+##  <a name="address_mode"></a>  Enumerazione address_mode
+
+Tipo di enumerazione utilizzo per indicare le modalità di indirizzamento supportate per il campionamento di trama.
+
+```
+enum address_mode;
+```
+
+##  <a name="filter_mode"></a>  Enumerazione filter_mode
+
+Tipo di enumerazione consente di indicare le modalità di filtro supportate per il campionamento della trama.
+
+```
+enum filter_mode;
+```
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** amp_graphics. h **Namespace:** Concurrency:: Graphics
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

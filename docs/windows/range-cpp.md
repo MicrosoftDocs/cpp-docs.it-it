@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 80b8546e461930ac184e0f5b3ed2b34499cc8d3c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201351"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384222"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -39,10 +39,10 @@ Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui v
 
 ### <a name="parameters"></a>Parametri
 
-*low*  
+*low*<br/>
 Il valore minimo dell'intervallo.
 
-*high*  
+*high*<br/>
 Il valore massimo dell'intervallo.
 
 ## <a name="remarks"></a>Note
@@ -80,7 +80,7 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di metodo](../windows/method-attributes.md)  
-[Attributi di parametro](../windows/parameter-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di metodo](../windows/method-attributes.md)<br/>
+[Attributi di parametro](../windows/parameter-attributes.md)<br/>
 [Attributi di membro dati](../windows/data-member-attributes.md)  

@@ -1,5 +1,5 @@
 ---
-title: Intestazioni e piè di pagina | Documenti Microsoft
+title: Informazioni sulle intestazioni e piè di pagina | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,30 +21,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c82df1a77cdbf677a6b5e6f84c371da243b9b08d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 825a74ebe53b934df6a85b3c06fc7df4f0bc135c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348250"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383103"
 ---
 # <a name="headers-and-footers"></a>Intestazioni e piè di pagina
-In questo articolo viene illustrato come aggiungere intestazioni e piè di pagina a un documento stampato.  
-  
- Quando si esamina un documento sullo schermo, in una barra del titolo e una barra di stato sono visualizzati in genere il nome del documento e la posizione corrente nel documento. Quando si esamina una copia di un documento stampata, è utile avere il nome e numero di pagina visualizzato in un'intestazione o piè di pagina. Questo è un modo comune in cui WYSIWYG anche programmi differiscono in modo eseguono la stampa e visualizzazione su schermo.  
-  
- Il [OnPrint](../mfc/reference/cview-class.md#onprint) funzione membro è nella posizione appropriata per stampare le intestazioni e piè di pagina, perché viene chiamato per ogni pagina e perché viene chiamato solo per la stampa, non per la visualizzazione su schermo. È possibile definire una funzione separata per stampare un'intestazione o piè di pagina e passare il contesto di dispositivo stampante da `OnPrint`. Potrebbe essere necessario modificare l'origine di finestra o una misura prima di chiamare [OnDraw](../mfc/reference/cview-class.md#ondraw) per evitare che il corpo della sovrapposizione intestazione o nel piè di pagina. Potrebbe inoltre essere necessario modificare `OnDraw` perché la quantità del documento soddisfa la pagina potrebbe essere ridotto.  
-  
- Un modo per compensare la modifica per l'area occupata dall'intestazione o piè di pagina è possibile utilizzare il **m_rectDraw** membro di [CPrintInfo](../mfc/reference/cprintinfo-structure.md). Ogni volta che una pagina viene stampata, questo membro viene inizializzato con l'area utilizzabile della pagina. Se si stampa un'intestazione o piè di pagina prima di stampare il corpo della pagina, è possibile ridurre le dimensioni del rettangolo di cui è archiviato in **m_rectDraw** per tenere conto dell'area occupata dall'intestazione o piè di pagina. Quindi `OnPrint` può fare riferimento a **m_rectDraw** per scoprire come area disponibile per la stampa del corpo della pagina.  
-  
- Non è possibile stampare un'intestazione o qualsiasi altra origine, da [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc), perché viene chiamato prima di `StartPage` funzione membro di [CDC](../mfc/reference/cdc-class.md) è stato chiamato. A questo punto, il contesto di dispositivo stampante è considerato un limite di pagina. È possibile eseguire la stampa solo dal `OnPrint` funzione membro.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Stampa di documenti con più pagine](../mfc/multipage-documents.md)  
-  
--   [Allocazione di risorse GDI per la stampa](../mfc/allocating-gdi-resources.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Stampa](../mfc/printing.md)
+
+Questo articolo illustra come aggiungere intestazioni e piè di pagina a un documento stampato.
+
+Quando si esamina un documento sullo schermo, il nome del documento e la posizione corrente nel documento comunemente vengono visualizzati in una barra del titolo e una barra di stato. Quando si esaminano stampare una copia di un documento, è utile avere il numero di pagina e nome visualizzato in un'intestazione o piè di pagina. Questo è un modo comune in cui WYSIWYG anche i programmi differiscono nel modo in cui eseguono la stampa e visualizzazione su schermo.
+
+Il [OnPrint](../mfc/reference/cview-class.md#onprint) funzione membro è il posto appropriato per stampare le intestazioni o nei piè di pagina, perché viene chiamato per ogni pagina e perché viene chiamato solo per la stampa, non per la visualizzazione su schermo. È possibile definire una funzione separata per stampare un'intestazione o piè di pagina e passare il contesto di dispositivo stampante da `OnPrint`. Potrebbe essere necessario modificare l'origine di finestra o una misura prima di chiamare [OnDraw](../mfc/reference/cview-class.md#ondraw) per evitare che il corpo della sovrapposizione intestazione o nel piè di pagina. Potrebbe anche essere necessario modificare `OnDraw` perché è stato possibile ridurre la quantità del documento che si inserisce nella pagina.
+
+Un modo per compensare per l'area occupata dall'intestazione o piè di pagina è possibile utilizzare il **m_rectDraw** appartenente [CPrintInfo](../mfc/reference/cprintinfo-structure.md). Ogni volta che una pagina viene stampata, questo membro viene inizializzato con l'area utilizzabile della pagina. Se si stampa un'intestazione o piè di pagina prima di stampare il corpo della pagina, è possibile ridurre le dimensioni del rettangolo di cui è archiviato in **m_rectDraw** per tenere conto per l'area occupata dall'intestazione o piè di pagina. Quindi `OnPrint` può fare riferimento a **m_rectDraw** per scoprire come area disponibile per la stampa del corpo della pagina.
+
+Non è possibile stampare un'intestazione o qualsiasi altra App, dalla [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc), perché viene chiamato prima il `StartPage` funzione membro di [CDC](../mfc/reference/cdc-class.md) è stato chiamato. A questo punto, il contesto di dispositivo stampante viene considerato un limite di pagina. È possibile eseguire la stampa solo dal `OnPrint` funzione membro.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Stampa di documenti con più pagine](../mfc/multipage-documents.md)
+
+- [Allocazione di risorse GDI per la stampa](../mfc/allocating-gdi-resources.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Stampa](../mfc/printing.md)
 

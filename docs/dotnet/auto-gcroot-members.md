@@ -1,5 +1,5 @@
 ---
-title: Membri auto_gcroot | Documenti Microsoft
+title: Membri auto_gcroot | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,41 +13,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8cb5f37f2e2c1022641e7fbf4b7dcdc37d4ce9d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37f9188712c4ec50dbcbc834d05c6675d253d269
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110520"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434609"
 ---
 # <a name="autogcroot-members"></a>Membri auto_gcroot
-I membri di `auto_gcroot`.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [auto_gcroot::auto_gcroot](../dotnet/auto-gcroot-auto-gcroot.md)  
-  
- [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)  
-  
- [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)  
-  
- [auto_gcroot::get](../dotnet/auto-gcroot-get.md)  
-  
- [auto_gcroot::release](../dotnet/auto-gcroot-release.md)  
-  
- [auto_gcroot::reset](../dotnet/auto-gcroot-reset.md)  
-  
- [auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)  
-  
- [auto_gcroot::operator=](../dotnet/auto-gcroot-operator-assign.md)  
-  
- [auto_gcroot::operator->](../dotnet/auto-gcroot-operator-arrow.md)  
-  
- [auto_gcroot::operator!](../dotnet/auto-gcroot-operator-logical-not.md)  
-  
- [auto_gcroot::operator auto_gcroot](../dotnet/auto-gcroot-operator-auto-gcroot.md)  
-  
- [auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classe auto_gcroot](../dotnet/auto-gcroot-class.md)   
- [auto_gcroot](../dotnet/auto-gcroot.md)
+
+I membri di `auto_gcroot`.
+
+## <a name="in-this-section"></a>In questa sezione
+
+[auto_gcroot::auto_gcroot](../dotnet/auto-gcroot-auto-gcroot.md)
+
+[auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)
+
+[auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)
+
+[auto_gcroot::get](../dotnet/auto-gcroot-get.md)
+
+[auto_gcroot::release](../dotnet/auto-gcroot-release.md)
+
+[auto_gcroot::reset](../dotnet/auto-gcroot-reset.md)
+
+[auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)
+
+[auto_gcroot::operator=](../dotnet/auto-gcroot-operator-assign.md)
+
+[auto_gcroot::operator->](../dotnet/auto-gcroot-operator-arrow.md)
+
+[auto_gcroot::operator!](../dotnet/auto-gcroot-operator-logical-not.md)
+
+[auto_gcroot::operator auto_gcroot](../dotnet/auto-gcroot-operator-auto-gcroot.md)
+
+[auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Classe auto_gcroot](../dotnet/auto-gcroot-class.md)<br/>
+[auto_gcroot](../dotnet/auto-gcroot.md)

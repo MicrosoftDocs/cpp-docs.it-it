@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ec3ba8280ab481211d98c9dc5256c94e76e193e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220361"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396449"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -39,10 +39,10 @@ Definisce i metadati per un oggetto nella libreria dei tipi.
 
 ### <a name="parameters"></a>Parametri
 
-*uuid*  
+*uuid*<br/>
 ID univoco.
 
-*valore*  
+*valore*<br/>
 Un valore che può essere impostato in una variante.
 
 ## <a name="remarks"></a>Note
@@ -66,10 +66,10 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi autonomi](../windows/stand-alone-attributes.md)  
-[Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Attributi di parametro](../windows/parameter-attributes.md)  
-[Attributi di metodo](../windows/method-attributes.md)  
-[Attributi di classe](../windows/class-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi autonomi](../windows/stand-alone-attributes.md)<br/>
+[Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributi di parametro](../windows/parameter-attributes.md)<br/>
+[Attributi di metodo](../windows/method-attributes.md)<br/>
+[Attributi di classe](../windows/class-attributes.md)<br/>
 [Attributi di interfaccia](../windows/interface-attributes.md)  

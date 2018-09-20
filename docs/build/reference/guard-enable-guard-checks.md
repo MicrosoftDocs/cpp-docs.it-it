@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d775e9c42ceb8a564e2cc7992cb95ac9717a966d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 71dc4a3a1f2c08d3bac2fcf5c474768f438feccd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707681"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394985"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (abilita i controlli di protezione)
 
@@ -47,6 +47,6 @@ Per creare immagini di eseguibili abilitati per Guard flusso di controllo, l'opz
 
 ## <a name="see-also"></a>Vedere anche
 
-[/Guard (Abilita Guard flusso di controllo)](../../build/reference/guard-enable-control-flow-guard.md)
-[impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)<br/>
+[/guard (abilita guard flusso di controllo)](../../build/reference/guard-enable-control-flow-guard.md)<br/>
+[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
 [Opzioni del linker](../../build/reference/linker-options.md)

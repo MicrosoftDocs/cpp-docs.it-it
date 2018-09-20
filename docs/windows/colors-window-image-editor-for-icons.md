@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e4976065d32a2f88550e5f89fc464da2dbc00e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316705"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430592"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Finestra Colori (Editor di immagini per le icone)
 
@@ -50,8 +50,8 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attivazione o disattivazione della finestra colori](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
-[Creazione di aree trasparenti o di inversione nelle immagini per i dispositivi](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
-[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Finestra di dialogo del selettore di colore personalizzato](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[Attivazione o disattivazione della finestra colori](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)<br/>
+[Creazione di aree trasparenti o di inversione nelle immagini per i dispositivi](../windows/creating-transparent-or-inverse-regions-in-device-images.md)<br/>
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Finestra di dialogo del selettore di colore personalizzato](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)<br/>
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)

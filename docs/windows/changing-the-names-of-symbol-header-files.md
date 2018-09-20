@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 587cc5315395a58e6fdeb01929f920f506031e58
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 626fb3a7421414355d98a680d5647a494de26594
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317394"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374399"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>Modifica dei nomi nei file di intestazione simboli
 
@@ -49,5 +49,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Visualizzazione di simboli risorsa](../windows/viewing-resource-symbols.md)  
+[Visualizzazione di simboli risorsa](../windows/viewing-resource-symbols.md)<br/>
 [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)

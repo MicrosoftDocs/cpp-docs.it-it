@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b84bcaec7dbadfb7b735264df12f7e958dcd20
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609544"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444697"
 ---
 # <a name="modulecreate-method"></a>Metodo Module::Create
 
@@ -45,16 +45,16 @@ WRL_NOTHROW static Module& Create(
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Tipo di modulo.
 
-*callback*  
+*callback*<br/>
 Chiamato quando viene rilasciato l'ultimo oggetto istanza del modulo.
 
-*object*  
+*object*<br/>
 Il *oggetti* e *metodo* i parametri vengono utilizzati in combinazione. Punta all'ultimo oggetto dell'istanza quando viene rilasciato l'ultimo oggetto istanza del modulo.
 
-*(Metodo)*  
+*(Metodo)*<br/>
 Il *oggetti* e *metodo* i parametri vengono utilizzati in combinazione. Punta al metodo dell'oggetto dell'ultima istanza quando viene rilasciato l'ultimo oggetto istanza del modulo.
 
 ## <a name="return-value"></a>Valore restituito

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d395053231f54570e1bf86ba79f6237b89681fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c44223dad2ac4d6306bf3896cd8ec7be84a5a2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315548"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407764"
 ---
 # <a name="stand-alone-attributes"></a>Attributi autonomi
 Un attributo autonomo non agisce su una parola chiave C++, ma è più simile a una riga di codice. Le istruzioni di attributi autonomi richiedono un punto e virgola alla fine della riga.
@@ -45,4 +45,5 @@ Un attributo autonomo non agisce su una parola chiave C++, ma è più simile a u
 |[pragma](../windows/pragma.md)|Genera la stringa specificata, senza i caratteri virgoletta, nel file con estensione IDL generato.|
   
 ## <a name="see-also"></a>Vedere anche
- [Attributi per utilizzo](../windows/attributes-by-usage.md)
+
+[Attributi per utilizzo](../windows/attributes-by-usage.md)

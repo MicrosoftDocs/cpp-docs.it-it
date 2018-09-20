@@ -1,5 +1,5 @@
 ---
-title: Dichiarazioni di funzioni gestore messaggi | Documenti Microsoft
+title: Dichiarazioni di funzioni gestore messaggi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4556323236897c6b3a48aa60d96a01c909a0576d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82a95cea3a2674ca00c8a1dd20361e5b6a176d9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341710"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385157"
 ---
 # <a name="declaring-message-handler-functions"></a>Dichiarazioni di funzioni gestore messaggi
-Determinate regole e convenzioni che disciplinano i nomi delle funzioni del gestore di messaggi. Che dipendono dalla categoria del messaggio, come descritto negli argomenti seguenti:  
-  
--   [Gestori per messaggi Windows standard](../mfc/handlers-for-standard-windows-messages.md)  
-  
--   [Gestori per comandi e notifiche dei controlli](../mfc/handlers-for-commands-and-control-notifications.md)  
-  
--   [Gestori per intervalli di messaggi](../mfc/handlers-for-message-map-ranges.md)  
-  
--   [Gestione di messaggi riprodotti](../mfc/handling-reflected-messages.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
+
+Determinate regole e convenzioni controllano i nomi delle funzioni gestore messaggi. Queste variano a seconda la categoria del messaggio, come descritto negli argomenti seguenti:
+
+- [Gestori per messaggi Windows standard](../mfc/handlers-for-standard-windows-messages.md)
+
+- [Gestori per comandi e notifiche dei controlli](../mfc/handlers-for-commands-and-control-notifications.md)
+
+- [Gestori per intervalli di messaggi](../mfc/handlers-for-message-map-ranges.md)
+
+- [Gestione di messaggi riprodotti](../mfc/handling-reflected-messages.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
 

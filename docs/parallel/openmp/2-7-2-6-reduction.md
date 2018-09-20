@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.6 riduzione | Documenti Microsoft
+title: 2.7.2.6 riduzione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,70 +12,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759a2ee50f047fbd5777481d009332be998ad359
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 05ed97968921692f69f2ff0040ae14dc41ef52b5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688804"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375602"
 ---
 # <a name="2726-reduction"></a>2.7.2.6 reduction
 
-Le variabili scalari che vengono visualizzati in questa clausola esegue una riduzione *elenco variabili*, con l'operatore *op*. La sintassi del `reduction` clausola è il seguente:
+Questa clausola esegue una riduzione delle variabili scalari vengono visualizzati nella *variabile-list*, con l'operatore *op*. La sintassi del `reduction` clausola è il seguente:
 
-> riduzione (*op*: *elenco variabili*)
+> Reduction (*op*: *elenco variabili*)
 
-Una riduzione in genere viene specificata per un'istruzione con uno dei formati seguenti:
+Una riduzione viene in genere specificata per un'istruzione con uno dei formati seguenti:
 
-> *x* = *x* *op* *expr*  
-> *x* *binop* = *expr*  
-> *x* = *expr* *op* *x* (ad eccezione di sottrazione)  
-> *x*++  
-> ++*x*  
-> *x*--  
-> --*x*  
+> *x* = *x* *op* *expr*
+> *x* *binop* = *expr*
+> *x* = *expr* *op* *x* (tranne che per la sottrazione) *x*++
+> ++*x*
+> *x*--
+> --*x*
 
 dove:
 
-*x*  
+*x*<br/>
 Una delle variabili di riduzione specificate nella `list`.
 
-*variable-list*  
-Un elenco delimitato da virgole di variabili di riduzione scalare.
+*variable-list*<br/>
+Elenco delimitato da virgole di variabili di riduzione scalare.
 
-*expr*  
-Un'espressione con un tipo scalare che non fa riferimento a *x*.
+*expr*<br/>
+Un'espressione con tipo scalare che non fa riferimento *x*.
 
-*op*  
+*op*<br/>
 Non un operatore di overload, ma uno dei +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, o &#124; &#124;.
 
-*binop*  
+*binop*<br/>
 Non un operatore di overload, ma uno dei +, &#42;, -, &amp;, ^, o &#124;.
 
-Di seguito è riportato un esempio del `reduction` clausola:  
-  
-```cpp  
-#pragma omp parallel for reduction(+: a, y) reduction(||: am)  
-for (i=0; i<n; i++) {  
-   a += b[i];  
-   y = sum(y, c[i]);  
-   am = am || b[i] == c[i];  
-}  
-```  
-  
+Di seguito è riportato un esempio del `reduction` clausola:
+
+```cpp
+#pragma omp parallel for reduction(+: a, y) reduction(||: am)
+for (i=0; i<n; i++) {
+   a += b[i];
+   y = sum(y, c[i]);
+   am = am || b[i] == c[i];
+}
+```
+
 Come illustrato nell'esempio, un operatore può essere nascosta all'interno di una chiamata di funzione. L'utente deve prestare attenzione che l'operatore specificato nel `reduction` clausola corrisponde all'operazione di riduzione.
 
-Anche se l'operando destro del &#124; &#124; operatore non ha effetti collaterali in questo esempio, sono consentiti, ma deve essere utilizzate con cautela. In questo contesto, un effetto collaterale che verrà sicuramente non si verificano durante l'esecuzione sequenziale del ciclo può verificarsi durante l'esecuzione parallela. Questa differenza può verificarsi perché l'ordine di esecuzione delle iterazioni è indeterminato.
+Anche se l'operando destro del &#124; &#124; operatore non ha effetti collaterali in questo esempio, sono consentiti, ma deve essere utilizzate con cautela. In questo contesto, un effetto collaterale che è garantito che non si verificano durante l'esecuzione sequenziale del ciclo può verificarsi durante l'esecuzione parallela. Questa differenza può verificarsi perché l'ordine di esecuzione delle iterazioni è indeterminato.
 
-L'operatore viene utilizzato per determinare il valore iniziale di tutte le variabili private usato dal compilatore per la riduzione e per determinare l'operatore di finalizzazione. Specificare in modo esplicito l'operatore consente l'istruzione di riduzione di fuori di extent del costrutto lessicale. Un numero qualsiasi di `reduction` clausole possono essere specificate nella direttiva, ma una variabile può sembrare in uno `reduction` clausola per tale direttiva.
+L'operatore viene usato per determinare il valore iniziale di tutte le variabili private usato dal compilatore per la riduzione e per determinare l'operatore di finalizzazione. Specificare in modo esplicito l'operatore consente l'istruzione di riduzione di fuori l'ambito lessicale del costrutto. Un numero qualsiasi di `reduction` clausole possono essere specificate nella direttiva, ma potrebbe sembrare una variabile in uno `reduction` clausola per tale direttiva.
 
-Una copia privata di ogni variabile nel *elenco variabili* viene creato, uno per ogni thread, come se il `private` clausola fosse stata utilizzata. La copia privata viene inizializzata in base all'operatore (vedere la tabella seguente).
+Una copia privata di ogni variabile nel *variabile-list* viene creato, uno per ogni thread, come se il `private` clausola fosse stata usata. La copia privata viene inizializzata in base all'operatore (vedere la tabella seguente).
 
-Alla fine dell'area per il quale il `reduction` clausola è stata specificata, l'oggetto originale viene aggiornato per riflettere il risultato della combinazione il valore originale con il valore finale di ogni delle copie private usando l'operatore specificato. Gli operatori di riduzione sono tutti associativi (ad eccezione di sottrazione) e il compilatore può liberamente riassociare il calcolo del valore finale. (Per formare il valore finale vengono aggiunti i risultati parziali di una riduzione di sottrazione).
+Alla fine dell'area per il quale il `reduction` clausola è stata specificata, l'oggetto originale viene aggiornato per riflettere il risultato della combinazione il valore originale con il valore finale della ognuno delle copie private usando l'operatore specificato. Gli operatori di riduzione sono tutti associativi (ad eccezione di sottrazione), e il compilatore può liberamente riassociare il calcolo del valore finale. (Per formare il valore finale vengono aggiunti i risultati parziali di una riduzione di sottrazione).
 
-Il valore dell'oggetto originale diventa indeterminato quando il primo thread raggiunge la clausola che lo contiene e rimarrà tale finché non viene completato il calcolo di riduzione.  In genere, il calcolo venga completato al termine del costrutto; Tuttavia, se il `reduction` clausola viene utilizzata in un costrutto a cui `nowait` viene inoltre applicato, il valore dell'oggetto originale rimane indeterminato fino a quando non è stata eseguita una sincronizzazione di barriera per garantire che tutti i thread sono state completate le `reduction`clausola.
+Il valore dell'oggetto originale diventa indeterminato quando il primo thread che raggiunge la clausola che lo contiene e rimarrà tale finché non viene completato il calcolo di riduzione.  In genere, il calcolo sarà completato al termine del costrutto; Tuttavia, se il `reduction` clausola viene utilizzata in un costrutto a cui `nowait` viene anche applicato, il valore dell'oggetto originale rimane indeterminato fino a quando non è stata eseguita una sincronizzazione ostacolo per garantire che tutti i thread sono state completate le `reduction`clausola.
 
-Nella tabella seguente sono elencati gli operatori validi e i relativi valori di inizializzazione canonico. Il valore di inizializzazione effettiva sarà coerenza con il tipo di dati della variabile di riduzione.
+Nella tabella seguente sono elencati gli operatori validi e i relativi valori di inizializzazione canonico. Il valore di inizializzazione effettivo sarà coerenza con il tipo di dati della variabile di riduzione.
 
 |Operatore|Inizializzazione|
 |--------------|--------------------|
@@ -90,11 +89,11 @@ Nella tabella seguente sono elencati gli operatori validi e i relativi valori di
 
 Le restrizioni per il `reduction` clausola sono i seguenti:
 
-- Il tipo delle variabili nella `reduction` clausola deve essere valida per l'operatore di riduzione, ad eccezione del fatto che non sono consentiti i tipi di puntatore e tipi di riferimento.
+- Il tipo delle variabili nella `reduction` clausola deve essere valido per l'operatore di riduzione, ad eccezione del fatto che i tipi di puntatore e tipi di riferimento non sono consentiti.
 
 - Una variabile specificata nella `reduction` clausola non deve essere **const**-completo.
 
-- Le variabili che sono private all'interno di un'area parallela o che vengono visualizzati nel `reduction` clausola di un **parallela** direttiva può essere specificata in un `reduction` clausola in una direttiva di condivisione del lavoro che viene associato a un costrutto parallelo.
+- Le variabili che appartengono all'interno di un'area parallela o che vengono visualizzate nel `reduction` clausola di un **parallele** direttiva non è possibile specificare un `reduction` clausola in una direttiva condivisione del lavoro associata a un costrutto parallelo.
 
    ```cpp
    #pragma omp parallel private(y)
@@ -104,7 +103,7 @@ Le restrizioni per il `reduction` clausola sono i seguenti:
       for (i=0; i<n; i++)
          y += b[i];
    }
-   
+
    /* ERROR - variable x cannot be specified in both
               a shared and a reduction clause */
    #pragma omp parallel for shared(x) reduction(+: x)

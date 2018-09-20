@@ -14,33 +14,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295873282f8d4cf44c2d00ba0bdec3a2c88fdd13
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: db0c93070fe8373cdd4494419ce1b71bf4068b14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535015"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395123"
 ---
 # <a name="active-technology-on-the-internet"></a>Tecnologia Active in Internet
-Tecnologia Active è una piattaforma aperta che consente agli sviluppatori di creare interessante e dinamico il contenuto e le applicazioni per la rete Internet globale o per una rete aziendale interna, nota come una rete intranet. Le principali tecnologie fornite da Microsoft per la programmazione in Internet sono descritte sotto.  
+
+Tecnologia Active è una piattaforma aperta che consente agli sviluppatori di creare interessante e dinamico il contenuto e le applicazioni per la rete Internet globale o per una rete aziendale interna, nota come una rete intranet. Le principali tecnologie fornite da Microsoft per la programmazione in Internet sono descritte sotto.
 
 >[!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
-  
-## <a name="activex-controls"></a>Controlli ActiveX  
- Controlli ActiveX (precedentemente controlli OLE) sono oggetti che possono essere inseriti in pagine Web o qualsiasi altra applicazione che è un contenitore di controlli ActiveX. Ad esempio pulsanti, quotazioni di borsa e controlli chart. Per altre informazioni, vedere [controlli ActiveX in Internet](../mfc/activex-controls-on-the-internet.md).  
-  
-## <a name="internet-data-download-services"></a>Servizi di Download dei dati su Internet  
- I dati possono essere scaricati tramite Internet usando i protocolli comuni: HTTP, FTP e gopher. Le classi WinInet MFC rendono più semplice trasferire i dati usando i protocolli HTTP, FTP e gopher estraendo i protocolli TCP/IP e WinSock. Le classi di moniker asincrono MFC forniscono un modo per scaricare i file senza blocchi e per eseguire il rendering di oggetti di grandi dimensioni in modo asincrono. Per altre informazioni, vedere [estensioni Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md).  
-  
-## <a name="active-scripts"></a>Script attivi  
- VBScript e altri linguaggi di scripting la connessione tra controlli e aggiungere funzionalità interattive per le pagine Web. Scripting consente di spostare l'elaborazione dal server al client. Ad esempio, delle voci del modulo possono essere convalidate nel client e quindi inviate al server.  
-  
-## <a name="html-extensions"></a>Estensioni HTML  
- Le estensioni HTML, ad esempio il tag object, sono stati aggiunti per supportare i controlli e la creazione di script.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Nozioni fondamentali di programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)   
- [Controlli ActiveX in Internet](../mfc/activex-controls-on-the-internet.md)   
- [Estensioni Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
+
+## <a name="activex-controls"></a>Controlli ActiveX
+
+Controlli ActiveX (precedentemente controlli OLE) sono oggetti che possono essere inseriti in pagine Web o qualsiasi altra applicazione che è un contenitore di controlli ActiveX. Ad esempio pulsanti, quotazioni di borsa e controlli chart. Per altre informazioni, vedere [controlli ActiveX in Internet](../mfc/activex-controls-on-the-internet.md).
+
+## <a name="internet-data-download-services"></a>Servizi di Download dei dati su Internet
+
+I dati possono essere scaricati tramite Internet usando i protocolli comuni: HTTP, FTP e gopher. Le classi WinInet MFC rendono più semplice trasferire i dati usando i protocolli HTTP, FTP e gopher estraendo i protocolli TCP/IP e WinSock. Le classi di moniker asincrono MFC forniscono un modo per scaricare i file senza blocchi e per eseguire il rendering di oggetti di grandi dimensioni in modo asincrono. Per altre informazioni, vedere [estensioni Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md).
+
+## <a name="active-scripts"></a>Script attivi
+
+VBScript e altri linguaggi di scripting la connessione tra controlli e aggiungere funzionalità interattive per le pagine Web. Scripting consente di spostare l'elaborazione dal server al client. Ad esempio, delle voci del modulo possono essere convalidate nel client e quindi inviate al server.
+
+## <a name="html-extensions"></a>Estensioni HTML
+
+Le estensioni HTML, ad esempio il tag object, sono stati aggiunti per supportare i controlli e la creazione di script.
+
+## <a name="see-also"></a>Vedere anche
+
+[Nozioni di base sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)<br/>
+[Controlli ActiveX in Internet](../mfc/activex-controls-on-the-internet.md)<br/>
+[Estensioni Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
 

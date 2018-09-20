@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1bebca381bc9d6d644ac1aac95b902065268a9d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9ae41727caedfaf09ac5f312ea4d794398cb572c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317706"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383428"
 ---
 # <a name="custom-controls-in-the-dialog-editor-c"></a>Controlli personalizzati nell'Editor finestre (C++)
 
@@ -59,5 +59,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)  
+[Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controlli](../mfc/controls-mfc.md)

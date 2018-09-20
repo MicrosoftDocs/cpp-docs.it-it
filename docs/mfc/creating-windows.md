@@ -1,5 +1,5 @@
 ---
-title: Creazione di finestre | Documenti Microsoft
+title: Creazione di Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446ebb4904b8f34576b03f88988bfc58138736a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf0263bfd67a2bfbd9489c7cfea6946ee2eda9f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341898"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394026"
 ---
 # <a name="creating-windows"></a>Creazione di finestre
-Il framework crea automaticamente la maggior parte delle finestre che è necessario in un programma di framework. [Creazione documento/visualizzazione](../mfc/document-view-creation.md) viene illustrato il modo in cui il framework crea le finestre cornice associate a documenti e visualizzazioni. Ma per utilizzi specifici è possibile creare proprie finestre, incluse le proprie finestre figlio di finestre cornice o viste: oltre alle finestre fornite dal framework.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Registrazione di classi"finestra"](../mfc/registering-window-classes.md) (in contrapposizione a oggetti di finestra C++)  
-  
--   [Sequenza di creazione finestre generale](../mfc/general-window-creation-sequence.md)  
-  
--   [Distruzione di oggetti finestra](../mfc/destroying-window-objects.md)  
-  
--   [Utilizzo di oggetti finestra](../mfc/working-with-window-objects.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Oggetti finestra](../mfc/window-objects.md)
+
+Il framework crea automaticamente la maggior parte delle finestre che è necessario in un programma di framework. [Creazione di documenti/visualizzazioni](../mfc/document-view-creation.md) illustra come il framework crea le finestre cornice associate a documenti e visualizzazioni. Ma destinate a utilizzi specifici è possibile creare il proprio windows, tra cui il proprio finestre figlio di finestre cornice o viste, oltre a windows forniti dal framework.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Registrazione di "classi di finestra"](../mfc/registering-window-classes.md) (invece di oggetti finestra C++)
+
+- [Sequenza di creazione finestre generale](../mfc/general-window-creation-sequence.md)
+
+- [Eliminazione definitiva di oggetti finestra](../mfc/destroying-window-objects.md)
+
+- [Uso di oggetti finestra](../mfc/working-with-window-objects.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Oggetti finestra](../mfc/window-objects.md)
 

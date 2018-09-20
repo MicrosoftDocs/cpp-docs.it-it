@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b174e46df7822ddf5ffbc747d0a7eb3cd71245e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c0f6939cfb9cd1dc72026441d946431097a5c3d7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315405"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375281"
 ---
 # <a name="symbol-value-restrictions"></a>Restrizioni relative ai valori dei simboli
 
@@ -68,6 +68,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica del valore numerico di un simbolo](../windows/changing-a-symbol-s-numeric-value.md)  
-[Restrizioni relative ai nomi dei simboli](../windows/symbol-name-restrictions.md)  
+[Modifica del valore numerico di un simbolo](../windows/changing-a-symbol-s-numeric-value.md)<br/>
+[Restrizioni relative ai nomi dei simboli](../windows/symbol-name-restrictions.md)<br/>
 [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)

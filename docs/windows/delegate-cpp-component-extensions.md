@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432408"
 ---
 # <a name="delegate--c-component-extensions"></a>delegato (Estensioni del componente C++)
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parametri
 
-*access*  
+*access*<br/>
 (facoltativo) L'accessibilità del delegato, che può essere **pubbliche** (predefinito) o **privati**. Il prototipo di funzione può anche essere qualificato con il **const** oppure **volatile** parole chiave.
 
-*tipo restituito*  
+*tipo restituito*<br/>
 Il tipo restituito del prototipo di funzione.
 
-*Identificatore di tipo delegato*  
+*Identificatore di tipo delegato*<br/>
 Nome del tipo del delegato dichiarata.
 
-*Parametri*  
+*Parametri*<br/>
 (Facoltativo) I tipi e gli identificatori del prototipo di funzione.
 
 ### <a name="remarks"></a>Note
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>Parametri
 
-*access*  
+*access*<br/>
 (facoltativo) L'accessibilità del delegato all'esterno dell'assembly può essere pubblico o privato.  Il valore predefinito è privato.  All'interno di una classe, un delegato può avere qualsiasi accessibilità.
 
-*function_declaration*  
+*function_declaration*<br/>
 La firma della funzione che può essere associata al delegato. Il tipo restituito di un delegato può essere qualsiasi tipo gestito. Per motivi di interoperabilità, è consigliabile che il tipo restituito del delegato essere un tipo a CLS.
 
 Per definire un delegato non associato, il primo parametro nel *function_declaration* deve essere il tipo delle **ciò** puntatore per l'oggetto.

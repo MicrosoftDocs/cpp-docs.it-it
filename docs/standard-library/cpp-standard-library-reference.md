@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c38485e84f0b06e79e02ba780926b6e08378220
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722605"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392918"
 ---
 # <a name="c-standard-library-reference"></a>Riferimento per la libreria standard C++
 
@@ -32,10 +32,13 @@ Per altre informazioni sulle librerie di runtime di Visual C++, vedere [CRT Libr
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Cenni preliminari sulla libreria Standard C++](../standard-library/cpp-standard-library-overview.md) offre una panoramica dell'implementazione Microsoft della libreria Standard C++.
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
+Contiene una panoramica sull'implementazione Microsoft della libreria standard di C++.
 
-[iostream programmazione](../standard-library/iostream-programming.md) fornisce una panoramica della programmazione di iostream.
+[iostream Programming](../standard-library/iostream-programming.md) (Programmazione di iostream)<br/>
+Contiene una panoramica sulla programmazione di iostream.
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md) vengono forniti collegamenti ad argomenti di riferimento di file di intestazione libreria Standard C++, con esempi di codice.
+[Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)<br/>
+Contiene collegamenti ad argomenti di riferimento relativi alla libreria standard di C++ con esempi di codice.
 
 

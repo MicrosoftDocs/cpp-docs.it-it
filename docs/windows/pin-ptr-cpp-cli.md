@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591731"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392762"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +51,16 @@ Oggetto *puntatore di blocco* un puntatore interno che impedisce l'oggetto fa ri
 
 ### <a name="parameters"></a>Parametri
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **const** oppure **volatile** qualificatori. Per impostazione predefinita, è un puntatore di blocco **volatile**. È inutile ma non un errore per dichiarare un puntatore di blocco **volatile**.
 
-*type*  
+*type*<br/>
 Il tipo della *inizializzatore*.
 
-*var*  
+*var*<br/>
 Il nome del **pin_ptr** variabile.
 
-*initializer*  
+*initializer*<br/>
 Membro di un tipo di riferimento, elemento di una matrice gestita o qualsiasi altro oggetto che è possibile assegnare a un puntatore nativo.
 
 ### <a name="remarks"></a>Note

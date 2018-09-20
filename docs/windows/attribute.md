@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314773"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379788"
 ---
 # <a name="attribute"></a>Attributo
 
@@ -43,13 +43,13 @@ Consente di creare un attributo personalizzato.
 
 ### <a name="parameters"></a>Parametri
 
-*AllowOn*  
+*AllowOn*<br/>
 Specifica gli elementi del linguaggio a cui può essere applicato l'attributo personalizzato. Il valore predefinito è `System::AttributeTargets::All` (vedere [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 Specifica se l'attributo personalizzato può essere applicato più volte a un costrutto. Valore predefinito è FALSE.
 
-*Ereditata*  
+*Ereditata*<br/>
 Indica se l'attributo deve essere ereditate dalle sottoclassi. Il compilatore non offre alcun supporto speciale per questa funzionalità. è il processo i consumer di attributo (`Reflection`, ad esempio) in modo da rispettare queste informazioni. Se *ereditato* è TRUE, l'attributo viene ereditato. Se *AllowMultiple* è TRUE, l'attributo si accumulerà nel membro derivato; se *AllowMultiple* è FALSE, l'attributo eseguirà l'override (o sostituire) nell'ereditarietà. Se *ereditato* è FALSE, l'attributo non viene ereditato. Valore predefinito è TRUE.
 
 ## <a name="remarks"></a>Note

@@ -17,55 +17,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c8b5a22cfef8ebde74fbe6d1f6920a969e7bc6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b0029513b111143cc665a51cefd3c3e8e1a786aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706381"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380347"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
-**Sezione specifica Microsoft**  
-  
- Legge un campo specificato dalla struttura di controllo macchina virtuale corrente (VMCS) e lo inserisce nella posizione specificata.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned char __vmx_vmread(  
-   size_t Field,  
-   size_t *FieldValue  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|*Campo*|[in] Il campo VMCS da leggere.|  
-|*Valore FieldValue*|[in] Leggere un puntatore alla posizione per archiviare il valore del campo VMCS specificato da di `Field` parametro.|  
-  
-## <a name="return-value"></a>Valore restituito  
-  
-|Valore|Significato|  
-|-----------|-------------|  
-|0|Operazione completata.|  
-|1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|  
-|2|Operazione non riuscita senza stato disponibile.|  
-  
-## <a name="remarks"></a>Note  
- Il `__vmx_vmread` è equivalente alla funzione il `VMREAD` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) del sito, quindi vedere Appendice C di documento .  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__vmx_vmread`|X64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)
+
+**Sezione specifica Microsoft**
+
+Legge un campo specificato dalla struttura di controllo macchina virtuale corrente (VMCS) e lo inserisce nella posizione specificata.
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned char __vmx_vmread(
+   size_t Field,
+   size_t *FieldValue
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
+|Parametro|Descrizione|
+|---------------|-----------------|
+|*Campo*|[in] Il campo VMCS da leggere.|
+|*Valore FieldValue*|[in] Leggere un puntatore alla posizione per archiviare il valore del campo VMCS specificato da di `Field` parametro.|
+
+## <a name="return-value"></a>Valore restituito
+
+|Valore|Significato|
+|-----------|-------------|
+|0|Operazione completata.|
+|1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|
+|2|Operazione non riuscita senza stato disponibile.|
+
+## <a name="remarks"></a>Note
+
+Il `__vmx_vmread` è equivalente alla funzione il `VMREAD` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) del sito, quindi vedere Appendice C di documento .
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__vmx_vmread`|X64|
+
+**File di intestazione** \<intrin. h >
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

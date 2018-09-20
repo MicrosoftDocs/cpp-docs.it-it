@@ -1,5 +1,5 @@
 ---
-title: 'Messaggi WM _: P - R | Documenti Microsoft'
+title: 'Messaggi WM _: P - R | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -43,35 +43,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37189490a955b2837fa974dfaad3efba0c615bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd4ccbe0d27d0828f8aa54406918612778f942f4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379554"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380275"
 ---
 # <a name="wm-messages-p---r"></a>Messaggi WM_: P - R
-Le voci della mappa seguenti corrispondono ai prototipi di funzione:  
-  
-|Voce della mappa|Prototipo di funzione|  
-|---------------|------------------------|  
-|ON_WM_PAINT()|void afx_msg [OnPaint](../../mfc/reference/cwnd-class.md#onpaint)().|  
-|ON_WM_PAINTCLIPBOARD()|void afx_msg [OnPaintClipboard](../../mfc/reference/cwnd-class.md#onpaintclipboard)(CWnd *, HANDLE);|  
-|ON_WM_PALETTECHANGED()|void afx_msg [OnPaletteChanged](../../mfc/reference/cwnd-class.md#onpalettechanged)(CWnd *);|  
-|ON_WM_PALETTEISCHANGING()|void afx_msg [OnPaletteIsChanging](../../mfc/reference/cwnd-class.md#onpaletteischanging)(CWnd *);|  
-|ON_WM_PARENTNOTIFY()|void afx_msg [OnParentNotify](../../mfc/reference/cwnd-class.md#onparentnotify)(UINT, LONG);|  
-|ON_WM_POWERBROADCAST()|afx_msg UINT [OnPowerBroadcast](../../mfc/reference/cwnd-class.md#onpowerbroadcast)(UINT, UINT);|  
-|ON_WM_QUERYDRAGICON()|afx_msg HCURSOR [OnQueryDragIcon della pagina delle](../../mfc/reference/cwnd-class.md#onquerydragicon)() ().|  
-|ON_WM_QUERYENDSESSION()|afx_msg BOOL [OnQueryEndSession](../../mfc/reference/cwnd-class.md#onqueryendsession)() ().|  
-|ON_WM_QUERYNEWPALETTE()|afx_msg BOOL [OnQueryNewPalette](../../mfc/reference/cwnd-class.md#onquerynewpalette)() ().|  
-|ON_WM_QUERYOPEN()|afx_msg BOOL [OnQueryOpen](../../mfc/reference/cwnd-class.md#onqueryopen)() ().|  
-|ON_WM_RBUTTONDBLCLK()|void afx_msg [OnRButtonDblClk](../../mfc/reference/cwnd-class.md#onrbuttondblclk)(UINT, CPoint);|  
-|ON_WM_RBUTTONDOWN()|void afx_msg [OnRButtonDown](../../mfc/reference/cwnd-class.md#onrbuttondown)(UINT, CPoint);|  
-|ON_WM_RBUTTONUP()|void afx_msg [OnRButtonUp](../../mfc/reference/cwnd-class.md#onrbuttonup)(UINT, CPoint);|  
-|ON_WM_RENDERALLFORMATS()|void afx_msg [OnRenderAllFormats](../../mfc/reference/cwnd-class.md#onrenderallformats)().|  
-|ON_WM_RENDERFORMAT()|void afx_msg [OnRenderFormat](../../mfc/reference/cwnd-class.md#onrenderformat)(UINT);|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)   
- [Gestori per WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
+
+Le voci della mappa seguenti corrispondono ai prototipi di funzione:
+
+|Voce della mappa|Prototipo di funzione|
+|---------------|------------------------|
+|ON_WM_PAINT()|void afx_msg [OnPaint](../../mfc/reference/cwnd-class.md#onpaint)();|
+|ON_WM_PAINTCLIPBOARD()|void afx_msg [OnPaintClipboard](../../mfc/reference/cwnd-class.md#onpaintclipboard)(CWnd *, HANDLE);|
+|ON_WM_PALETTECHANGED()|void afx_msg [OnPaletteChanged](../../mfc/reference/cwnd-class.md#onpalettechanged)(CWnd *);|
+|ON_WM_PALETTEISCHANGING()|void afx_msg [OnPaletteIsChanging](../../mfc/reference/cwnd-class.md#onpaletteischanging)(CWnd *);|
+|ON_WM_PARENTNOTIFY()|void afx_msg [OnParentNotify](../../mfc/reference/cwnd-class.md#onparentnotify)(UINT, LONG);|
+|ON_WM_POWERBROADCAST()|afx_msg UINT [OnPowerBroadcast](../../mfc/reference/cwnd-class.md#onpowerbroadcast)(UINT, UINT);|
+|ON_WM_QUERYDRAGICON()|afx_msg HCURSOR [OnQueryDragIcon della pagina delle](../../mfc/reference/cwnd-class.md#onquerydragicon)() ();|
+|ON_WM_QUERYENDSESSION()|BOOL afx_msg [OnQueryEndSession](../../mfc/reference/cwnd-class.md#onqueryendsession)() ();|
+|ON_WM_QUERYNEWPALETTE()|BOOL afx_msg [OnQueryNewPalette](../../mfc/reference/cwnd-class.md#onquerynewpalette)() ();|
+|ON_WM_QUERYOPEN()|BOOL afx_msg [OnQueryOpen](../../mfc/reference/cwnd-class.md#onqueryopen)() ();|
+|ON_WM_RBUTTONDBLCLK()|void afx_msg [OnRButtonDblClk](../../mfc/reference/cwnd-class.md#onrbuttondblclk)(UINT, CPoint);|
+|ON_WM_RBUTTONDOWN()|void afx_msg [OnRButtonDown](../../mfc/reference/cwnd-class.md#onrbuttondown)(UINT, CPoint);|
+|ON_WM_RBUTTONUP()|void afx_msg [OnRButtonUp](../../mfc/reference/cwnd-class.md#onrbuttonup)(UINT, CPoint);|
+|ON_WM_RENDERALLFORMATS()|void afx_msg [OnRenderAllFormats](../../mfc/reference/cwnd-class.md#onrenderallformats)();|
+|ON_WM_RENDERFORMAT()|void afx_msg [OnRenderFormat](../../mfc/reference/cwnd-class.md#onrenderformat)(UINT);|
+
+## <a name="see-also"></a>Vedere anche
+
+[Mappe messaggi](../../mfc/reference/message-maps-mfc.md)<br/>
+[Gestori per WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
 

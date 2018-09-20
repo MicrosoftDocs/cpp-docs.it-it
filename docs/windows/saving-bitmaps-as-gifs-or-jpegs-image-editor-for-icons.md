@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab9f8e6056c0f97d36d0c0eb4853fbb7eed80dc0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 11eea641132a608bf780f9adcc7cfeafad0950d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313039"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383135"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Salvataggio di bitmap come file GIF o JPEG (Editor di immagini per le icone)
 
@@ -63,5 +63,5 @@ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nell
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)

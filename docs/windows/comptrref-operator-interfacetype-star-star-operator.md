@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88b83e475ad2452d55b4696bc9b5f1b8bc75a169
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 73e1f975aa0d9a03ffb0025573ec20615825b5b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606659"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390236"
 ---
 # <a name="comptrrefoperator-interfacetype-operator"></a>Operatore ComPtrRef::operator InterfaceType**
 
@@ -46,5 +46,5 @@ Elimina l'oggetto corrente **ComPtrRef** dell'oggetto e restituisce un puntatore
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe ComPtrRef](../windows/comptrref-class.md)  
+[Classe ComPtrRef](../windows/comptrref-class.md)<br/>
 [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

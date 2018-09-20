@@ -1,5 +1,5 @@
 ---
-title: 'Eccezioni: Eccezioni nei costruttori | Documenti Microsoft'
+title: 'Eccezioni: Eccezioni nei costruttori | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8336700cc0137efe3bc106871ebd76b8de7a99af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cab21255698c19046cfca185a0d8d7e7c530112
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342631"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421934"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>Eccezioni: eccezioni nei costruttori
-Quando si genera un'eccezione in un costruttore, pulire tutti gli oggetti e le allocazioni di memoria sono state apportate prima di generare l'eccezione, come illustrato in [eccezioni: generazione di eccezioni da funzioni personalizzate](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).  
-  
- Quando si genera un'eccezione in un costruttore, la memoria per l'oggetto stesso è già stata allocata nel momento in cui che viene chiamato il costruttore. In tal caso, il compilatore verrà automaticamente deallocare la memoria occupata dall'oggetto dopo la generazione dell'eccezione.  
-  
- Per ulteriori informazioni, vedere [eccezioni: rilascio di oggetti nelle eccezioni](../mfc/exceptions-freeing-objects-in-exceptions.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
+
+Quando si genera un'eccezione in un costruttore, pulire tutti gli oggetti e le allocazioni di memoria sono state apportate prima della generazione dell'eccezione, come illustrato in [eccezioni: generazione di eccezioni da funzioni personalizzate](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).
+
+Quando si genera un'eccezione in un costruttore, la memoria per l'oggetto stesso è già stata allocata entro l'ora che viene chiamato il costruttore. Pertanto, il compilatore deallocherà automaticamente la memoria occupata dall'oggetto dopo la generazione dell'eccezione.
+
+Per altre informazioni, vedere [eccezioni: rilascio di oggetti nelle eccezioni](../mfc/exceptions-freeing-objects-in-exceptions.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Creazione di finestre cornice documento | Documenti Microsoft
+title: Creazione di documenti Frame Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,30 +20,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b27154197e4e8347e73936f319aeb416a153d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 172076113a6bd7e223d99c238d0e05987cdcaae6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342943"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433696"
 ---
 # <a name="creating-document-frame-windows"></a>Creazione di finestre cornice del documento
-[Creazione documento/visualizzazione](../mfc/document-view-creation.md) viene illustrato il modo in cui [CDocTemplate](../mfc/reference/cdoctemplate-class.md) oggetto Orchestra creando la finestra cornice, documento e visualizzazione e connettendoli tutti insieme. Tre [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argomenti per il `CDocTemplate` costruttore specificare la finestra cornice, documento e le classi di visualizzazione che il modello di documento creata dinamicamente in risposta ai comandi dell'utente, ad esempio il comando Nuovo File menu o il comando nuova finestra in un menu finestra MDI. Il modello di documento memorizza queste informazioni per un uso successivo durante la creazione di una finestra cornice per una visualizzazione e il documento.  
-  
- Per il [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) meccanismo per il corretto funzionamento di classe derivata classi frame-window devono essere dichiarate con la [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) (macro). In questo modo il framework deve creare finestre cornice utilizzando il meccanismo di costruzione dinamica della classe di documento `CObject`.  
-  
- Quando l'utente sceglie un comando che crea un documento, il framework chiama il modello di documento per creare l'oggetto documento, la relativa visualizzazione e la finestra cornice che verrà visualizzata la visualizzazione. Quando crea la finestra cornice di documento, il modello di documento crea un oggetto della classe appropriata, ovvero una classe derivata da [CFrameWnd](../mfc/reference/cframewnd-class.md) per un'applicazione SDI o da [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) per un form MDI applicazione. Il framework chiama quindi l'oggetto finestra cornice [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) funzione membro per ottenere informazioni sulla creazione di risorse e per creare la finestra di Windows. Il framework collega l'handle di finestra per l'oggetto finestra cornice. Quindi, viene creata la visualizzazione come finestra figlio della finestra cornice del documento.  
-  
- Prestare attenzione nella scelta [quando inizializzare](../mfc/when-to-initialize-cwnd-objects.md) il `CWnd`-oggetto derivato.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Derivazione di una classe da CObject (un meccanismo di creazione dinamica)](../mfc/deriving-a-class-from-cobject.md)  
-  
--   [Creazione documento/visualizzazione (modelli e creazione di finestre cornice)](../mfc/document-view-creation.md)  
-  
--   [Distruzione di finestre cornice](../mfc/destroying-frame-windows.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso di finestre cornice](../mfc/using-frame-windows.md)
+
+[Creazione di documenti/visualizzazioni](../mfc/document-view-creation.md) Mostra come il [CDocTemplate](../mfc/reference/cdoctemplate-class.md) oggetto esegue l'orchestrazione creando la finestra cornice documento e visualizzazione e che li connettono tutti gli elementi. Tre [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) gli argomenti per il `CDocTemplate` costruttore specificare la finestra cornice, il documento e le classi di visualizzazione che il modello di documento creata dinamicamente in risposta ai comandi dell'utente, ad esempio il comando New sul File menu di scelta o il comando nuova finestra in un menu finestra MDI. Il modello di documento archivia queste informazioni per un utilizzo successivo durante la creazione di una finestra cornice per una visualizzazione e il documento.
+
+Per il [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) meccanismo per il corretto funzionamento di derivato classi frame-window devono essere dichiarate con la [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) macro. Infatti, il framework deve creare finestre cornice mediante il meccanismo di costruzione dinamica di classe documento `CObject`.
+
+Quando l'utente sceglie un comando che crea un documento, il framework chiama il modello di documento per creare l'oggetto documento, la relativa visualizzazione e la finestra cornice che verrà visualizzata la visualizzazione. Quando crea la finestra cornice di documento, il modello di documento crea un oggetto della classe appropriata, ovvero una classe derivata da [CFrameWnd](../mfc/reference/cframewnd-class.md) per un'applicazione SDI o dalla [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) per un form MDI applicazione. Il framework chiama quindi l'oggetto finestra cornice [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) funzione membro per ottenere informazioni sulla creazione delle risorse e creare la finestra di Windows. Il framework collega l'handle della finestra per l'oggetto finestra cornice. Quindi viene creata la visualizzazione come finestra figlio della finestra cornice del documento.
+
+Prestare attenzione al momento di decidere [quando inizializzare](../mfc/when-to-initialize-cwnd-objects.md) il `CWnd`-oggetto derivato.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Derivazione di una classe da CObject (un meccanismo di creazione dinamica)](../mfc/deriving-a-class-from-cobject.md)
+
+- [Creazione documento/visualizzazione (modelli e creazione di finestre cornice)](../mfc/document-view-creation.md)
+
+- [Eliminazione definitiva di finestre cornice](../mfc/destroying-frame-windows.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di finestre cornice](../mfc/using-frame-windows.md)
 

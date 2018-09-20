@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di CProgressCtrl | Documenti Microsoft
+title: Uso di CProgressCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a3d222ed4f3de143182cf0a413e4160b68356cc
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 04fdca189d31c5a13712a65780025fd9d8aa9123
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951153"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372444"
 ---
 # <a name="using-cprogressctrl"></a>Utilizzo di CProgressCtrl
-È possibile utilizzare il controllo dello stato per indicare lo stato di avanzamento di un'operazione di lunga durata. È un rettangolo che viene riempito gradualmente con il colore di evidenziazione di sistema con l'avanzamento dell'operazione.  
-  
- Il controllo dello stato in MFC è rappresentato dalla classe [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).  
-  
- Quando si crea inizialmente il controllo dello stato, specificare le dimensioni e la posizione, la finestra padre (in genere una finestra di dialogo) e all'ID. Tramite il *dwStyle* parametro, è inoltre possibile specificare diversi stili di finestra per il controllo e gli stili di come riempie.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Stili per il controllo Progress](../mfc/styles-for-the-progress-control.md)  
-  
--   [Impostazioni per il controllo Progress](../mfc/settings-for-the-progress-control.md)  
-  
--   [Modifica del controllo Progress](../mfc/manipulating-the-progress-control.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controlli](../mfc/controls-mfc.md)
+
+È possibile usare il controllo di stato per indicare lo stato di avanzamento di un'operazione di lunga durata. Si tratta di un rettangolo che viene riempito gradualmente con il colore di sistema nel corso dell'operazione.
+
+Il controllo di stato in MFC è rappresentato dalla classe [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).
+
+Quando si crea inizialmente il controllo di stato, si specifica le dimensioni e la posizione, la finestra padre (in genere una finestra di dialogo) e ID. Tramite il *dwStyle* parametro, è inoltre possibile specificare diversi stili di finestra per il controllo e gli stili per la sua posizione.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Stili per il controllo Progress](../mfc/styles-for-the-progress-control.md)
+
+- [Impostazioni per il controllo Progress](../mfc/settings-for-the-progress-control.md)
+
+- [Modifica del controllo Progress](../mfc/manipulating-the-progress-control.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Controlli](../mfc/controls-mfc.md)
 

@@ -32,24 +32,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abf907fe12f55b44e7f2e184b8752d2e09a326f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8e0d0fde53cc7ffb885e8435fc82cbb899a3bc89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071731"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389550"
 ---
 # <a name="array-class"></a>Classe array
+
 Rappresenta un contenitore di dati utilizzato per spostare i dati a un tasto di scelta rapida.
 
 ## <a name="syntax"></a>Sintassi
 
-```  
+```
 template <typename value_type, int _Rank>
 friend class array;
-```  
+```
 
 #### <a name="parameters"></a>Parametri
+
 *value_type*<br/>
 Il tipo di elemento di dati.
 
@@ -103,6 +105,7 @@ Il rango della matrice.
 |[extent](#extent)|Ottiene l'extent che definisce la forma della matrice.|
 
 ## <a name="remarks"></a>Note
+
 Il tipo `array<T,N>` rappresenta una matrice densa e regolare (non irregolari) *N*-matrice dimensionale che si trova in una posizione specifica, ad esempio un tasto di scelta rapida o della CPU. Il tipo di dati degli elementi nella matrice è `T`, che deve essere di un tipo compatibile con l'acceleratore di destinazione. Anche se il rango `N`, (della matrice è determinata staticamente e fa parte del tipo, l'extent della matrice è determinato dal runtime e viene espresso utilizzando la classe `extent<N>`.
 
 Una matrice può avere qualsiasi numero di dimensioni, anche se alcune funzionalità sono specializzate per `array` oggetti con rango uno, due o tre. Se si omette l'argomento di dimensione, il valore predefinito è 1.
@@ -113,16 +116,18 @@ Le matrici sono considerate logicamente come tipi di valore, perché quando una 
 
 Il `array<T,N>` tipo viene usato in diversi scenari:
 
--   Come contenitore di dati che può essere utilizzato nei calcoli in un acceleratore.
+- Come contenitore di dati che può essere utilizzato nei calcoli in un acceleratore.
 
--   Come contenitore di dati per mantenere la memoria nella CPU host (che possa essere usata per copiare da e verso altre matrici).
+- Come contenitore di dati per mantenere la memoria nella CPU host (che possa essere usata per copiare da e verso altre matrici).
 
--   Come un oggetto di staging per fungere da intermediario veloce nelle copie di host a dispositivo.
+- Come un oggetto di staging per fungere da intermediario veloce nelle copie di host a dispositivo.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
-`array`  
+
+`array`
 
 ## <a name="requirements"></a>Requisiti
+
 **Intestazione:** amp.h
 
 **Spazio dei nomi:** Concurrency
@@ -131,54 +136,53 @@ Il `array<T,N>` tipo viene usato in diversi scenari:
 
 Elimina definitivamente il `array` oggetto.
 
-```  
+```
 ~array() restrict(cpu);
-```  
+```
 
 ##  <a name="accelerator_view"></a> accelerator_view
 
 Ottiene il [accelerator_view](accelerator-view-class.md) oggetto che rappresenta la posizione in cui la matrice viene allocata. Questa proprietà è accessibile solo sulla CPU.
 
-```  
+```
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;
-```  
+```
 
 ##  <a name="ctor"></a> matrice
 
 Inizializza una nuova istanza di [classe array](array-class.md). Nessun costruttore predefinito per `array<T,N>`. Tutti i costruttori vengono eseguiti solo sulla CPU. Non possono essere eseguiti in una destinazione Direct3D.
 
-```  
-explicit array(  
+```
+explicit array(
     const Concurrency::extent<_Rank>& _Extent) restrict(cpu);
 
-explicit array(  
+explicit array(
     int _E0) restrict(cpu);
 
-explicit array(  
+explicit array(
     int _E0,
     int _E1) restrict(cpu);
 
-explicit array(  
+explicit array(
     int _E0,
     int _E1,
     int _E2) restrict(cpu);
 
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
-array(  
+array(
     int _E0,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
-array(  
+array(
     int _E0,
     int _E1,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
-
 
 array(
     int _E0,
@@ -187,23 +191,23 @@ array(
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
-array(  
+array(
     int _E0,
     accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
-array(  
+array(
     int _E0,
     int _E1,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
@@ -211,42 +215,42 @@ array(
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     _InputIterator _Src_last) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first,
     _InputIterator _Src_last) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     _InputIterator _Src_first,
     _InputIterator _Src_last) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     _InputIterator _Src_first) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
@@ -254,14 +258,14 @@ array(
     _InputIterator _Src_last) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
     _InputIterator _Src_first) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     _InputIterator _Src_last,
@@ -269,14 +273,14 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first,
     _InputIterator _Src_last,
@@ -284,14 +288,14 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     _InputIterator _Src_first,
@@ -308,7 +312,7 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
@@ -318,7 +322,7 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
@@ -327,7 +331,7 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     _InputIterator _Src_last,
@@ -335,14 +339,14 @@ array(
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first,
     _InputIterator _Src_last,
@@ -350,27 +354,27 @@ array(
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0, _InputIterator _Src_first,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1, _InputIterator _Src_first, _InputIterator _Src_last,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1, _InputIterator _Src_first,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2, _InputIterator _Src_first, _InputIterator _Src_last,
@@ -378,17 +382,17 @@ array(
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2, _InputIterator _Src_first,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
-explicit array(  
+explicit array(
     const array_view<const value_type, _Rank>& _Src) restrict(cpu);
 
-array(  
+array(
     const array_view<const value_type, _Rank>& _Src,
     accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
@@ -401,9 +405,10 @@ array(
 array(const array& _Other) restrict(cpu);
 
 array(array&& _Other) restrict(cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametri
+
 *_Associated_Av*<br/>
 Un accelerator_view che specifica il percorso di destinazione desiderato della matrice.
 
@@ -450,23 +455,24 @@ Il tipo di dati degli elementi copiati.
 
 Ottiene la seconda [accelerator_view](accelerator-view-class.md) l'oggetto passato come parametro quando viene chiamato un costruttore di gestione temporanea per creare un'istanza di `array` oggetto.
 
-```  
+```
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
-```  
+```
 
 ##  <a name="copy_to"></a> copy_to
 
 Copia il contenuto del `array` a un altro `array`.
 
-```  
+```
 void copy_to(
     array<value_type, _Rank>& _Dest) const ;
 
 void copy_to(
     array_view<value_type, _Rank>& _Dest) const ;
-```  
+```
 
 ### <a name="parameters"></a>Parametri
+
 *Dest*<br/>
 Il [array_view](array-view-class.md) oggetto in cui copiare.
 
@@ -474,60 +480,63 @@ Il [array_view](array-view-class.md) oggetto in cui copiare.
 
 Ottiene l'oggetto access_type di CPU consentita per questa matrice.
 
-```  
+```
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;
-```  
+```
 
 ##  <a name="data"></a> Dati
 
 Restituisce un puntatore ai dati non elaborati del `array`.
 
-```  
+```
 value_type* data() restrict(amp, cpu);
 
 const value_type* data() const restrict(amp, cpu);
-```  
+```
 
 ### <a name="return-value"></a>Valore restituito
+
 Puntatore ai dati non elaborati della matrice.
 
 ##  <a name="extent"></a> extent
 
 Ottiene il [extent](extent-class.md) che definisce la forma dell'oggetto di `array`.
 
-```  
+```
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;
-```  
+```
 
 ##  <a name="get_accelerator_view"></a> get_accelerator_view
 
 Restituisce il [accelerator_view](accelerator-view-class.md) che rappresenta la posizione in cui il `array` oggetto viene allocato. Questa proprietà è accessibile solo sulla CPU.
 
-```  
+```
 Concurrency::accelerator_view get_accelerator_view() const;
-```    
+```
 
 ### <a name="return-value"></a>Valore restituito
+
 Il `accelerator_view` oggetto che rappresenta la posizione in cui il `array` oggetto viene allocato.
 
 ##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view
 
 Ottiene la seconda [accelerator_view](accelerator-view-class.md) l'oggetto passato come parametro quando viene chiamato un costruttore di gestione temporanea per creare un'istanza di `array` oggetto.
 
-```  
+```
 Concurrency::accelerator_view get_associated_accelerator_view() const ;
-```  
+```
 
 ### <a name="return-value"></a>Valore restituito
+
 La seconda [accelerator_view](accelerator-view-class.md) oggetto passato al costruttore di gestione temporanea.
 
 ##  <a name="get_cpu_access_type"></a> get_cpu_access_type
 
 Restituisce l'oggetto access_type di CPU consentita per questa matrice.
 
-```  
+```
 access_type get_cpu_access_type() const restrict(cpu);
-```  
+```
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -535,33 +544,36 @@ access_type get_cpu_access_type() const restrict(cpu);
 
 Restituisce il [extent](extent-class.md) oggetto del `array`.
 
-```  
+```
 Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>Valore restituito
+
 Il `extent` oggetto del `array`.
 
 ##  <a name="operator_vec"></a> operator std:: Vector&lt;value_type&gt;
 
 Usa `copy(*this, vector)` da convertire in modo implicito la matrice a un oggetto std:: Vector.
 
-```  
+```
 operator std::vector<value_type>() const restrict(cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametri
+
 *value_type*<br/>
 Il tipo di dati degli elementi del vettore.
 
 ### <a name="return-value"></a>Valore restituito
+
 Un oggetto di tipo `vector<T>` che contiene una copia dei dati contenuti nella matrice.
 
-##  <a name="operator_call"></a> operator) 
+##  <a name="operator_call"></a> operator)
 
 Restituisce il valore dell'elemento specificato dai parametri.
 
-```  
+```
 value_type& operator() (const index<_Rank>& _Index) restrict(amp,cpu);
 
 const value_type& operator() (const index<_Rank>& _Index) cons  t restrict(amp,cpu);
@@ -577,9 +589,10 @@ const value_type& operator() (int _I0, int _I1, int _I2) const restrict(amp,cpu)
 typename details::_Projection_result_type<value_type,_Rank>::_Result_type operator()(int _I) restrict(amp,cpu);
 
 typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type operator()(int _I) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametri
+
 *Index*<br/>
 Il percorso dell'elemento.
 
@@ -596,13 +609,14 @@ Componente meno significativo dell'origine di questa sezione.
 Il percorso dell'elemento.
 
 ### <a name="return-value"></a>Valore restituito
+
 Il valore dell'elemento specificato dai parametri.
 
 ##  <a name="operator_at"></a> operator]
 
 Restituisce l'elemento in corrispondenza dell'indice specificato.
 
-```  
+```
 value_type& operator[](const index<_Rank>& _Index) restrict(amp,cpu);
 
 const value_type& operator[]
@@ -611,9 +625,10 @@ const value_type& operator[]
 typename details::_Projection_result_type<value_type,_Rank>::_Result_type operator[](int _i) restrict(amp,cpu);
 
 typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type operator[](int _i) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametri
+
 *Index*<br/>
 Indice.
 
@@ -621,22 +636,24 @@ Indice.
 Indice.
 
 ### <a name="return-value"></a>Valore restituito
+
 L'elemento in corrispondenza dell'indice specificato.
 
 ##  <a name="operator_eq"></a> operator=
 
 Copia il contenuto dell'oggetto specificato `array` oggetto.
 
-```  
+```
 array& operator= (const array& _Other) restrict(cpu);
 
 array& operator= (array&& _Other) restrict(cpu);
 
-array& operator= (  
+array& operator= (
     const array_view<const value_type, _Rank>& _Src) restrict(cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametri
+
 *_Other*<br/>
 Il `array` da copiare dall'oggetto.
 
@@ -644,27 +661,29 @@ Il `array` da copiare dall'oggetto.
 Il `array` da copiare dall'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
+
 Un riferimento a questo `array` oggetto.
 
 ##  <a name="rank"></a> numero di dimensioni
 
 Memorizza il rango del `array`.
 
-```  
+```
 static const int rank = _Rank;
-```  
+```
 ## <a name="reinterpret_as"></a> reinterpret_as
 
 Reinterpreta la matrice attraverso un oggetto array_view unidimensionale, che facoltativamente può avere un tipo di valore diverso dalla matrice di origine.
 
 ### <a name="syntax"></a>Sintassi
-``` 
+
+```
 template <typename _Value_type2>
 array_view<_Value_type2,1> reinterpret_as() restrict(amp,cpu);
 
 template <typename _Value_type2>
 array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
-``` 
+```
 
 ### <a name="parameters"></a>Parametri
 
@@ -672,9 +691,11 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 Il tipo di dati dei dati restituiti.
 
 ### <a name="return-value"></a>Valore restituito
+
 Un oggetto array_view o oggetto array_view const basato su una matrice, con il tipo di elemento reinterpretato da T per tipo di elemento e il numero di dimensioni ridotte da N a 1.
 
 ### <a name="remarks"></a>Note
+
 Talvolta è utile visualizzare una matrice multidimensionale come se fosse una matrice unidimensionale, lineare, possibilmente dotata di un tipo di valore diverso dalla matrice di origine. È possibile utilizzare questo metodo per ottenere questo risultato.
 **Attenzione** la reinterpretazione di un oggetto array utilizzando un tipo di valore differente è un'operazione potenzialmente non sicura. È consigliabile usare questa funzionalità con attenzione.
 
@@ -687,13 +708,13 @@ array<RGB,3>  a = ...;
 array_view<float,1> v = a.reinterpret_as<float>();
 
 assert(v.extent == 3*a.extent);
-```  
+```
 
 ##  <a name="section"></a> Sezione
 
 Restituisce una sottosezione del `array` oggetto all'origine specificata e, facoltativamente, con l'extent specificato.
 
-```  
+```
 array_view<value_type,_Rank> section(
     const Concurrency::index<_Rank>& _Section_origin,
     const Concurrency::extent<_Rank>& _Section_extent) restrict(amp,cpu);
@@ -749,9 +770,10 @@ array_view<const value_type,3> section(
     int _E0,
     int _E1,
     int _E2) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametri
+
 *_E0*<br/>
 Componente più significativo dell'extent di questa sezione.
 
@@ -789,24 +811,25 @@ Il [indice](index-class.md) oggetto che specifica la posizione dell'origine.
 Il tipo di dati degli elementi copiati.
 
 ### <a name="return-value"></a>Valore restituito
+
 Restituisce una sottosezione del `array` oggetto all'origine specificata e, facoltativamente, con l'extent specificato. Quando solo il `index` oggetto è specificato, la sottosezione contiene tutti gli elementi nella griglia associata che hanno indici maggiori degli indici degli elementi nel `index` oggetto.
 
 ##  <a name="view_as"></a> view_as
 
 Reinterpreta questa matrice come un [array_view](array-view-class.md) di una dimensione differente.
 
-```  
+```
 template <int _New_rank>
 array_view<value_type,_New_rank> view_as(
     const Concurrency::extent<_New_rank>& _View_extent) restrict(amp,cpu);
 
-
 template <int _New_rank>
 array_view<const value_type,_New_rank> view_as(
     const Concurrency::extent<_New_rank>& _View_extent) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametri
+
 *_New_rank*<br/>
 Il rango del `extent` oggetto passato come parametro.
 
@@ -817,7 +840,9 @@ L'extent che viene usato per costruire la nuova [array_view](array-view-class.md
 Il tipo di dati degli elementi in entrambi originale `array` oggetto e il valore restituito `array_view` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
+
 Il [array_view](array-view-class.md) oggetto costruito.
 
 ## <a name="see-also"></a>Vedere anche
+
 [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

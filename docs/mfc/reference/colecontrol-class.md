@@ -344,14 +344,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050099"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435532"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
+
 Classe di base avanzata per lo sviluppo di controlli OLE.
 
 ## <a name="syntax"></a>Sintassi
@@ -1440,15 +1441,13 @@ void FireReadyStateChange();
 
 Stato ready può essere uno dei valori seguenti:
 
-Stato di inizializzazione predefinito READYSTATE_UNINITIALIZED
-
-Controllo READYSTATE_LOADING sta attualmente caricando le relative proprietà
-
-Controllo READYSTATE_LOADED è stato inizializzato
-
-Controllo READYSTATE_INTERACTIVE ha dati sufficienti in modo interattivo, ma non tutte asincrone dei dati sono ancora caricati
-
-Controllo READYSTATE_COMPLETE dispone di tutti i relativi dati
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Stato di inizializzazione predefinito|
+|READYSTATE_LOADING|Controllo sta caricando le relative proprietà|
+|READYSTATE_LOADED|Controllo è stato inizializzato|
+|READYSTATE_INTERACTIVE|Controllo ha dati sufficienti in modo interattivo, ma non tutte asincrone dei dati sono ancora caricati|
+|READYSTATE_COMPLETE|Controllo dispone di tutti i relativi dati|
 
 Uso [GetReadyState](#getreadystate) per determinare la conformità corrente del controllo.
 
@@ -1466,11 +1465,11 @@ virtual DWORD GetActivationPolicy();
 
 Una combinazione di flag dall'enumerazione POINTERINACTIVE. Flag possibili sono:
 
-POINTERINACTIVE_ACTIVATEONENTRY l'oggetto deve essere attivato quando il mouse viene spostato durante un'operazione di spostamento del mouse sul posto.
-
-Operazione di spostamento POINTERINACTIVE_DEACTIVATEONLEAVE l'oggetto deve essere disattivato quando il mouse lascia l'oggetto durante il mouse.
-
-POINTERINACTIVE_ACTIVATEONDRAG l'oggetto deve essere posto attivato quando si trascina il mouse su di esso durante il trascinamento e l'operazione di eliminazione.
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|L'oggetto deve essere attivato quando il mouse viene spostato durante un'operazione di spostamento del mouse sul posto.|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|L'oggetto deve essere disattivato quando il mouse lascia l'oggetto durante un'operazione di spostamento del mouse.|
+|POINTERINACTIVE_ACTIVATEONDRAG|L'oggetto deve essere posto attivato quando si trascina il mouse su di esso durante il trascinamento e l'operazione di eliminazione.|
 
 ### <a name="remarks"></a>Note
 
@@ -1915,15 +1914,13 @@ long GetReadyState();
 
 Lo stato di conformità del controllo, uno dei valori seguenti:
 
-Stato di inizializzazione predefinito READYSTATE_UNINITIALIZED
-
-Controllo READYSTATE_LOADING sta attualmente caricando le relative proprietà
-
-Controllo READYSTATE_LOADED è stato inizializzato
-
-Controllo READYSTATE_INTERACTIVE ha dati sufficienti in modo interattivo, ma non tutte asincrone dei dati sono ancora caricati
-
-Controllo READYSTATE_COMPLETE dispone di tutti i relativi dati
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Stato di inizializzazione predefinito|
+|READYSTATE_LOADING|Controllo sta caricando le relative proprietà|
+|READYSTATE_LOADED|Controllo è stato inizializzato|
+|READYSTATE_INTERACTIVE|Controllo ha dati sufficienti in modo interattivo, ma non tutte asincrone dei dati sono ancora caricati|
+|READYSTATE_COMPLETE|Controllo dispone di tutti i relativi dati|
 
 ### <a name="remarks"></a>Note
 
@@ -2065,15 +2062,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 Lo stato di conformità da impostare per il controllo, in uno dei valori seguenti:
 
-Stato di inizializzazione predefinito READYSTATE_UNINITIALIZED
-
-Controllo READYSTATE_LOADING sta attualmente caricando le relative proprietà
-
-Controllo READYSTATE_LOADED è stato inizializzato
-
-Controllo READYSTATE_INTERACTIVE ha dati sufficienti in modo interattivo, ma non tutte asincrone dei dati sono ancora caricati
-
-Controllo READYSTATE_COMPLETE dispone di tutti i relativi dati
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Stato di inizializzazione predefinito|
+|READYSTATE_LOADING|Controllo sta caricando le relative proprietà|
+|READYSTATE_LOADED|Controllo è stato inizializzato|
+|READYSTATE_INTERACTIVE|Controllo ha dati sufficienti in modo interattivo, ma non tutte asincrone dei dati sono ancora caricati|
+|READYSTATE_COMPLETE|Controllo dispone di tutti i relativi dati|
 
 ### <a name="remarks"></a>Note
 
@@ -2848,13 +2843,12 @@ virtual DWORD OnGetViewStatus();
 
 Uno dei valori dell'enumerazione VIEWSTATUS se ha esito positivo. in caso contrario 0. I valori possibili sono qualsiasi combinazione delle operazioni seguenti:
 
-Oggetto VIEWSTATUS_OPAQUE è completamente opaco. Se questo bit non è impostato, l'oggetto contiene parti trasparenti. Questo bit viene applicato solo a aspetti relativi al contenuto e non a DVASPECT_ICON o DVASPECT_DOCPRINT.
-
-Oggetto VIEWSTATUS_SOLIDBKGND presenta uno sfondo a tinta unita (costituito da un colore a tinta unita, non un motivo di riempimento). Questo bit è significativo solo se VIEWSTATUS_OPAQUE è impostata e si applica solo agli aspetti relativi al contenuto e non a DVASPECT_ICON o DVASPECT_DOCPRINT.
-
-Oggetto VIEWSTATUS_DVASPECTOPAQUE supporta DVASPECT_OPAQUE. Tutti i metodi IViewObjectEx che accettano una caratteristica di disegno, come un parametro può essere chiamato con questo aspetto.
-
-Oggetto VIEWSTATUS_DVASPECTTRANSPARENT supporta DVASPECT_TRANSPARENT. Tutti i `IViewObjectEx` metodi che accettano una caratteristica di disegno, come un parametro può essere chiamato con questo aspetto.
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|Oggetto è completamente opaco. Se questo bit non è impostato, l'oggetto contiene parti trasparenti. Questo bit viene applicato solo a aspetti relativi al contenuto e non a DVASPECT_ICON o DVASPECT_DOCPRINT.|
+|VIEWSTATUS_SOLIDBKGND|Oggetto ha uno sfondo a tinta unita (costituito da un colore a tinta unita, non un motivo di riempimento). Questo bit è significativo solo se VIEWSTATUS_OPAQUE è impostata e si applica solo agli aspetti relativi al contenuto e non a DVASPECT_ICON o DVASPECT_DOCPRINT.|
+|VIEWSTATUS_DVASPECTOPAQUE|L'oggetto supporta DVASPECT_OPAQUE. Tutti i metodi IViewObjectEx che accettano una caratteristica di disegno, come un parametro può essere chiamato con questo aspetto.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|L'oggetto supporta DVASPECT_TRANSPARENT. Tutti i `IViewObjectEx` metodi che accettano una caratteristica di disegno, come un parametro può essere chiamato con questo aspetto.|
 
 ### <a name="remarks"></a>Note
 

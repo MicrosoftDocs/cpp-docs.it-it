@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28b162b63ad1fbd2363b4519817d466055e96bc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699921"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429279"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -41,7 +41,7 @@ Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rapp
 
 ### <a name="parameters"></a>Parametri
 
-*interfaccia1*  
+*interfaccia1*<br/>
 L'interfaccia predefinita che sarà resa disponibile per gli ambienti di script che creano un oggetto basato sulla classe definita con l'attributo **default** .
 
 Se non si specifica un'interfaccia predefinita, la prima occorrenza di un'interfaccia non di origine viene usata come predefinita.
@@ -125,6 +125,6 @@ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](../windows/idl-attributes.md)  
-[Attributi di classe](../windows/class-attributes.md)  
+[Attributi IDL](../windows/idl-attributes.md)<br/>
+[Attributi di classe](../windows/class-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

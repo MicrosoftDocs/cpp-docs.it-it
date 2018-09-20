@@ -16,39 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da8ca089a34f6e763ab6dfdb9bea8467d6316f1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0509f7e344e29397aa1dac592d1a898c9d9cdf60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545834"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395496"
 ---
 # <a name="readcr8"></a>__readcr8
-**Sezione specifica Microsoft**  
-  
- Legge il registro CR8 e restituisce il relativo valore.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned __int64 __readcr8(void);  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Il valore del registro CR8.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__readcr8`|X64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questo intrinseco è disponibile solo in modalità kernel e la routine è disponibile solo come intrinseco.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+
+**Sezione specifica Microsoft**
+
+Legge il registro CR8 e restituisce il relativo valore.
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned __int64 __readcr8(void);
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Il valore del registro CR8.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__readcr8`|X64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questo intrinseco è disponibile solo in modalità kernel e la routine è disponibile solo come intrinseco.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

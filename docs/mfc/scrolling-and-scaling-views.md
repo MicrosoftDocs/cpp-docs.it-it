@@ -18,42 +18,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89a899c7604f3342564a315ba704fc2fcd31ec36
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 85741e2d58f6189d00af63d2c4b1c95c5b87307c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206938"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422740"
 ---
 # <a name="scrolling-and-scaling-views"></a>Scorrimento e ridimensionamento di visualizzazioni
-MFC supporta le visualizzazioni di scorrimento e visualizzazioni che vengono ridimensionate automaticamente per le dimensioni della finestra cornice che li visualizza. Classe `CScrollView` supporta entrambi i tipi di viste.  
-  
- Per altre informazioni sullo scorrimento e ridimensionamento, vedere la classe [CScrollView](../mfc/reference/cscrollview-class.md) nel *riferimento MFC*. Per un esempio di scorrimento, vedere la [esempio Scribble](../visual-cpp-samples.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   Lo scorrimento di una vista  
-  
--   Ridimensionamento di una visualizzazione  
-  
--   [Coordinate di visualizzazione](/windows/desktop/gdi/window-coordinate-system)  
-  
-##  <a name="_core_scrolling_a_view"></a> Lo scorrimento di una vista  
- Spesso le dimensioni di un documento sono maggiore della dimensione che può visualizzare la relativa visualizzazione. Ciò può verificarsi perché i dati del documento aumentano o l'utente si riduce la finestra cornice della visualizzazione. In questi casi, la visualizzazione deve supportare lo scorrimento.  
-  
- Qualsiasi visualizzazione può gestire i messaggi della barra di scorrimento nel relativo `OnHScroll` e `OnVScroll` funzioni membro. È possibile una gestione dei messaggi della barra di scorrimento implementano in queste funzioni, autonomamente tutto il lavoro, oppure è possibile usare il `CScrollView` classe per gestire lo scorrimento per l'utente.  
-  
- `CScrollView` effettua le operazioni seguenti:  
-  
--   Gestisce le dimensioni di finestra e del riquadro di visualizzazione e la modalità di mapping  
-  
--   Scorre automaticamente in risposta ai messaggi della barra di scorrimento  
-  
- È possibile specificare la quantità di scorrimento di una "pagina" (quando l'utente fa clic in un albero della barra di scorrimento) e "riga" (quando l'utente fa clic in una freccia di scorrimento). Pianificare tali valori in modo la natura della vista. Ad esempio, è possibile scorrere in incrementi di 1 pixel per una visualizzazione grafica, ma in base a incrementi in base all'altezza di riga nei documenti di testo.  
-  
-##  <a name="_core_scaling_a_view"></a> Ridimensionamento di una visualizzazione  
- Quando si desidera che la vista si adatti automaticamente le dimensioni della finestra cornice, è possibile usare `CScrollView` per la scalabilità anziché lo scorrimento. La visualizzazione logica viene ingrandita o rimpicciolita affinché si adatti perfettamente area client della finestra. Una visualizzazione ridimensionata non dispone di alcuna barra di scorrimento.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso delle visualizzazioni](../mfc/using-views.md)
+
+MFC supporta le visualizzazioni di scorrimento e visualizzazioni che vengono ridimensionate automaticamente per le dimensioni della finestra cornice che li visualizza. Classe `CScrollView` supporta entrambi i tipi di viste.
+
+Per altre informazioni sullo scorrimento e ridimensionamento, vedere la classe [CScrollView](../mfc/reference/cscrollview-class.md) nel *riferimento MFC*. Per un esempio di scorrimento, vedere la [esempio Scribble](../visual-cpp-samples.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- Lo scorrimento di una vista
+
+- Ridimensionamento di una visualizzazione
+
+- [Coordinate di visualizzazione](/windows/desktop/gdi/window-coordinate-system)
+
+##  <a name="_core_scrolling_a_view"></a> Lo scorrimento di una vista
+
+Spesso le dimensioni di un documento sono maggiore della dimensione che può visualizzare la relativa visualizzazione. Ciò può verificarsi perché i dati del documento aumentano o l'utente si riduce la finestra cornice della visualizzazione. In questi casi, la visualizzazione deve supportare lo scorrimento.
+
+Qualsiasi visualizzazione può gestire i messaggi della barra di scorrimento nel relativo `OnHScroll` e `OnVScroll` funzioni membro. È possibile una gestione dei messaggi della barra di scorrimento implementano in queste funzioni, autonomamente tutto il lavoro, oppure è possibile usare il `CScrollView` classe per gestire lo scorrimento per l'utente.
+
+`CScrollView` effettua le operazioni seguenti:
+
+- Gestisce le dimensioni di finestra e del riquadro di visualizzazione e la modalità di mapping
+
+- Scorre automaticamente in risposta ai messaggi della barra di scorrimento
+
+È possibile specificare la quantità di scorrimento di una "pagina" (quando l'utente fa clic in un albero della barra di scorrimento) e "riga" (quando l'utente fa clic in una freccia di scorrimento). Pianificare tali valori in modo la natura della vista. Ad esempio, è possibile scorrere in incrementi di 1 pixel per una visualizzazione grafica, ma in base a incrementi in base all'altezza di riga nei documenti di testo.
+
+##  <a name="_core_scaling_a_view"></a> Ridimensionamento di una visualizzazione
+
+Quando si desidera che la vista si adatti automaticamente le dimensioni della finestra cornice, è possibile usare `CScrollView` per la scalabilità anziché lo scorrimento. La visualizzazione logica viene ingrandita o rimpicciolita affinché si adatti perfettamente area client della finestra. Una visualizzazione ridimensionata non dispone di alcuna barra di scorrimento.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso delle visualizzazioni](../mfc/using-views.md)
 

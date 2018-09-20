@@ -1,5 +1,5 @@
 ---
-title: Mapping di messaggi di Windows a classi | Documenti Microsoft
+title: Mapping di messaggi Windows a classi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 398888a858165197c6e35be791169a9311f3014b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e5c51cfccfa360b7f677ca3a30b7a05e0d4a799
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346269"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374464"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapping di messaggi Windows a classi
-La finestra di dialogo per gestire i messaggi di Windows, eseguire l'override di funzioni gestore appropriato. A tale scopo, utilizzare la finestra proprietà per [mapping dei messaggi di](../mfc/reference/mapping-messages-to-functions.md) alla classe di finestra di dialogo. Questo viene registrata una voce della mappa messaggi per ogni messaggio e le funzioni membro di gestore di messaggi viene aggiunto alla classe. Utilizzare l'editor del codice sorgente di Visual C++ per scrivere codice nei gestori di messaggi.  
-  
- È anche possibile eseguire l'override di funzioni membro di [CDialog](../mfc/reference/cdialog-class.md) e le relative classi base, soprattutto [CWnd](../mfc/reference/cwnd-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [Mapping e la gestione dei messaggi](../mfc/message-handling-and-mapping.md)  
-  
--   [Funzioni membro comunemente sottoposte a override](../mfc/commonly-overridden-member-functions.md)  
-  
--   [Funzioni membro comunemente aggiunte](../mfc/commonly-added-member-functions.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Finestre di dialogo](../mfc/dialog-boxes.md)   
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Se occorre una finestra di dialogo per gestire i messaggi di Windows, eseguire l'override di funzioni gestore appropriato. A tale scopo, utilizzare la finestra delle proprietà per [mapping dei messaggi di](../mfc/reference/mapping-messages-to-functions.md) alla classe di finestra di dialogo. Questo viene registrata una voce della mappa messaggi per ogni messaggio e le funzioni membro di gestore di messaggi viene aggiunto alla classe. Usare l'editor di codice sorgente di Visual C++ per scrivere codice nei gestori di messaggi.
+
+È anche possibile eseguire l'override di funzioni membro di [CDialog](../mfc/reference/cdialog-class.md) e le relative classi base, soprattutto [CWnd](../mfc/reference/cwnd-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Gestione di messaggi e mapping](../mfc/message-handling-and-mapping.md)
+
+- [Funzioni membro comunemente sottoposte a override](../mfc/commonly-overridden-member-functions.md)
+
+- [Funzioni membro comunemente aggiunte](../mfc/commonly-added-member-functions.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
+[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
 

@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2dda3aab3c4a967c82a699058868edc8fc183984
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339371"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386379"
 ---
 # <a name="linger-structure"></a>Struttura LINGER
-Il `LINGER` struttura viene utilizzata per modificare le opzioni relative SO_LINGER e SO_DONTLINGER `CAsyncSocket::GetSockOpt`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-struct linger {  
-    u_short l_onoff;            // option on/off  
-    u_short l_linger;           // linger time  
-};  
-```  
-  
-## <a name="remarks"></a>Note  
- Impostazione dell'opzione SO_DONTLINGER impedisce il blocco su una funzione membro `Close` durante l'attesa dell'invio di dati da inviare. Impostando questa opzione equivale all'impostazione SO_LINGER con `l_onoff` impostato su 0.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** winsock2.h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CAsyncSocket::GetSockOpt](../../mfc/reference/casyncsocket-class.md#getsockopt)   
- [CAsyncSocket::SetSockOpt](../../mfc/reference/casyncsocket-class.md#setsockopt)
+
+Il `LINGER` struttura viene utilizzata per modificare le opzioni relative SO_LINGER e SO_DONTLINGER `CAsyncSocket::GetSockOpt`.
+
+## <a name="syntax"></a>Sintassi
+
+```
+struct linger {
+    u_short l_onoff;            // option on/off
+    u_short l_linger;           // linger time
+};
+```
+
+## <a name="remarks"></a>Note
+
+Impostazione dell'opzione SO_DONTLINGER impedisce il blocco su una funzione membro `Close` durante l'attesa dell'invio di dati da inviare. Impostando questa opzione equivale all'impostazione SO_LINGER con `l_onoff` impostato su 0.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** winsock2.h
+
+## <a name="see-also"></a>Vedere anche
+
+[Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CAsyncSocket::GetSockOpt](../../mfc/reference/casyncsocket-class.md#getsockopt)<br/>
+[CAsyncSocket::SetSockOpt](../../mfc/reference/casyncsocket-class.md#setsockopt)
 

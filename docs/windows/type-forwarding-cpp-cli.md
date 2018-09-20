@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d10c025c22523e6329f051fcfbe76988337992a2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318148"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396551"
 ---
 # <a name="type-forwarding-ccli"></a>Inoltro del tipo (C++/CLI)
 
@@ -51,10 +51,10 @@ Esempio di codice seguente viene illustrato come usare l'inoltro dei tipi.
 
 ### <a name="parameters"></a>Parametri
 
-*new*  
+*new*<br/>
 L'assembly in cui si sta spostando la definizione del tipo.
 
-*type*  
+*type*<br/>
 Il tipo la cui definizione si spostano in un altro assembly.
 
 ### <a name="remarks"></a>Note

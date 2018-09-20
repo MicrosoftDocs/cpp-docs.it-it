@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711087"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377266"
 ---
 # <a name="enum-class--c-component-extensions"></a>classe di enumerazione (Estensioni del componente C++)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parametri
 
-*access*  
+*access*<br/>
 L'accessibilità dell'enumerazione, che può essere **pubbliche** oppure **privati**.
 
-*enumeration-identifier*  
+*enumeration-identifier*<br/>
 Nome dell'enumerazione.
 
-*underlying-type*  
+*underlying-type*<br/>
 (Facoltativo) Tipo sottostante dell'enumerazione.
 
 (Facoltativo. Solo per Windows Runtime) il tipo sottostante dell'enumerazione, che può essere **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, o `uint64`.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Elenco delimitato da virgole di nomi dell'enumeratore.
 
 Il valore di ogni enumeratore è un'espressione costante che viene definita in modo implicito dal compilatore o in modo esplicito dalla notazione *enumerator*`=`*constant-expression*. Per impostazione predefinita, il valore del primo enumeratore è zero se è definito in modo implicito. Il valore di ogni enumeratore successivo definito in modo implicito è il valore dell'enumeratore precedente + 1.
 
-*var*  
+*var*<br/>
 (Facoltativo) Nome di una variabile del tipo di enumerazione.
 
 ### <a name="remarks"></a>Note
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parametri
 
-*access*  
+*access*<br/>
 Accessibilità dell'enumerazione. Può essere rappresentata **pubbliche** oppure **privati**.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Elenco delimitato da virgole di identificatori (enumeratori) nell'enumerazione.
 
-*name*  
+*name*<br/>
 Nome dell'enumerazione. Le enumerazioni gestite anonime non sono consentite.
 
-*type*  
+*type*<br/>
 (Facoltativo) Il tipo sottostante del *identificatori*. Può trattarsi di qualsiasi tipo scalare, ad esempio versioni con o senza segno di **int**, **breve**, o **long**.  **bool** oppure **char** è consentito.
 
-*var*  
+*var*<br/>
 (Facoltativo) Nome di una variabile del tipo di enumerazione.
 
 ### <a name="remarks"></a>Note

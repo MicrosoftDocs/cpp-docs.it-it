@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fedde29441c9c14b68dec5cff998be57d216e29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f13af220107ba8d5bc5c26c65c2034f125a39454
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607660"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382453"
 ---
 # <a name="criticalsectionlock-method"></a>Metodo CriticalSection::Lock
 
@@ -40,7 +40,7 @@ SyncLock Lock();
 
 ### <a name="parameters"></a>Parametri
 
-*cs*  
+*cs*<br/>
 Un oggetto specificato dall'utente sezione critica.
 
 ## <a name="return-value"></a>Valore restituito

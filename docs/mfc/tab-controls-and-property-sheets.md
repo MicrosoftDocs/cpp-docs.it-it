@@ -1,5 +1,5 @@
 ---
-title: Controlli TAB e finestre delle proprietà | Documenti Microsoft
+title: Controlli TAB e finestre delle proprietà | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 096c61a62ea382639356eca81483c9aacfe04b2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc03427847a64330d1ff2814d268997f63fac6bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385872"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382544"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Controlli Tab e finestre delle proprietà
-Finestre delle proprietà sono "scheda finestre di dialogo" che è possibile visualizzare fino a 24 risorse modello di finestra di dialogo per l'utente o finestre di dialogo di più pagine. Per esempi di finestre delle proprietà, vedere la finestra di dialogo proprietà di visualizzazione di Windows o l'applicazione MFC di esempio seguente:  
-  
- [CMNCTRL1: Dimostrazione delle classi di controlli comuni, parte 1](../visual-cpp-samples.md)  
-  
- [CMNCTRL2: Dimostrazione delle classi di controlli comuni, parte 2](../visual-cpp-samples.md)  
-  
- Finestre delle proprietà possono essere facilmente implementate utilizzando la classe MFC [CPropertySheet](../mfc/reference/cpropertysheet-class.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CTabCtrl](../mfc/using-ctabctrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+Finestre delle proprietà sono le finestre di dialogo di più pagine o "scheda finestre di dialogo" che possono visualizzare fino a 24 alle risorse modello di finestra di dialogo per l'utente. Per esempi di finestre delle proprietà, vedere la finestra di dialogo delle proprietà di visualizzazione di Windows o l'applicazione MFC di esempio seguente:
+
+[CMNCTRL1: Di seguito viene illustrato come classi di controlli comuni, parte 1](../visual-cpp-samples.md)
+
+[CMNCTRL2: Di seguito viene illustrato come classi di controlli comuni, parte 2](../visual-cpp-samples.md)
+
+Finestre delle proprietà può essere implementate con facilità usando le classi MFC [CPropertySheet](../mfc/reference/cpropertysheet-class.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

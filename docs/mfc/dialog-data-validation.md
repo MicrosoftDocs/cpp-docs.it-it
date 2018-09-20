@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo convalida dei dati | Documenti Microsoft
+title: Finestra di dialogo convalida | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 229b4a5ffb32f4a167dcc8393a269bbb2e35b500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83c1208d3001739ca78186972c629ea8a094c8d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344880"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430891"
 ---
 # <a name="dialog-data-validation"></a>Convalida dei dati delle finestre di dialogo
-È possibile specificare la convalida dei dati mediante la chiamata di funzioni DDV, come illustrato nell'esempio di [Dialog Data Exchange](../mfc/dialog-data-exchange.md). Il `DDV_MaxChars` chiamata di convalida che la stringa immessa nel controllo casella di testo non è più di 20 caratteri. La funzione DDV avvisa l'utente con una finestra di messaggio se la convalida ha esito negativo e inserito lo stato attivo sul controllo all'origine del problema in modo che l'utente può immettere nuovamente i dati. Una funzione DDV per un determinato controllo deve essere chiamata immediatamente dopo la funzione DDX per il controllo stesso.  
-  
- È inoltre possibile definire le proprie routine DDX e DDV personalizzati. Per informazioni dettagliate su questo e altri aspetti di DDX e DDV, vedere [MFC Nota tecnica 26](../mfc/tn026-ddx-and-ddv-routines.md).  
-  
- Il [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md) verranno scritti tutti i DDX e DDV viene chiamato nel mapping dei dati.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Dialog Data Exchange e convalida](../mfc/dialog-data-exchange-and-validation.md)   
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [DDX (Dialog Data Exchange)](../mfc/dialog-data-exchange.md)
+
+È possibile specificare la convalida dei dati chiamando funzioni DDV, come illustrato nell'esempio nella [Dialog Data Exchange](../mfc/dialog-data-exchange.md). Il `DDV_MaxChars` chiamata nell'esempio verifica che la stringa immessa nel controllo della casella di testo non più di 20 caratteri. La funzione DDV avvisa l'utente con una finestra di messaggio se la convalida ha esito negativo e si assegna lo stato attivo sul controllo che causa l'errore in modo che l'utente può immettere nuovamente i dati. Una funzione DDV per un determinato controllo deve essere chiamata immediatamente dopo la funzione DDX per il controllo stesso.
+
+È anche possibile definire le proprie routine DDX e DDV personalizzati. Per informazioni dettagliate su questo e altri aspetti di DDX e DDV, vedere [MFC Nota tecnica 26](../mfc/tn026-ddx-and-ddv-routines.md).
+
+Il [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md) scriverà tutti di DDX e DDV chiamate nella mappa i dati per l'utente.
+
+## <a name="see-also"></a>Vedere anche
+
+[Convalida e DDX (Dialog Data Exchange)](../mfc/dialog-data-exchange-and-validation.md)<br/>
+[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[DDX (Dialog Data Exchange)](../mfc/dialog-data-exchange.md)
 

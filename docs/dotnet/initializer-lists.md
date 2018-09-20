@@ -1,5 +1,5 @@
 ---
-title: Gli elenchi di inizializzatori | Documenti Microsoft
+title: Gli elenchi di inizializzatori | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6634b749480e5108548de0c8b53f8b09cc5a42c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 981f2737d370dc25ca4e7dc6c20947b3867a0c65
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127952"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394608"
 ---
 # <a name="initializer-lists"></a>Elenchi di inizializzatori
-Gli elenchi di inizializzatori di costruttori sono ora chiamati prima del costruttore di classe di base.  
-  
-## <a name="remarks"></a>Note  
- Prima di Visual C++ 2005, il costruttore della classe base è stato chiamato prima dell'elenco di inizializzatori durante la compilazione con le estensioni gestite per C++. A questo punto, durante la compilazione con **/clr**, l'elenco di inizializzatori viene chiamato per primo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifiche generali del linguaggio (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)
+
+Gli elenchi di inizializzatori di costruttori vengono chiamati subito prima del costruttore di classe di base.
+
+## <a name="remarks"></a>Note
+
+Prima di Visual C++ 2005, il costruttore di classe di base è stato chiamato prima dell'elenco dell'inizializzatore durante la compilazione con le estensioni gestite per C++. A questo punto, durante la compilazione con **/clr**, viene chiamato prima di tutto l'elenco di inizializzatori.
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifiche generali del linguaggio (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)

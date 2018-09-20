@@ -45,53 +45,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61930bda4560baaf628ce018cc0161527d9d07e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 64b68fb930c6de732e009a251c5e8363bace80ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885949"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374737"
 ---
 # <a name="variant-parameter-type-constants"></a>Costanti di tipi di parametri varianti
-Questo argomento elenca le nuove costanti che indicano i tipi di parametri varianti progettati per l'uso con le classi di controlli OLE della libreria di classi Microsoft Foundation.  
-  
- Di seguito è riportato un elenco di costanti di classe:  
-  
-##  <a name="_mfc_variant_data_constants"></a> Costanti di dati Variant  
-  
--   Valore integer A 32 bit VTS_COLOR utilizzato per rappresentare un valore di colore RGB.  
-  
--   Puntatore a oggetto VTS_FONT al `IFontDisp` interfaccia dell'oggetto font OLE.  
-  
--   Valore dell'handle VTS_HANDLE A Windows.  
-  
--   Puntatore a oggetto VTS_PICTURE al `IPictureDisp` interfaccia dell'oggetto immagine OLE.  
-  
--   Valore A 16 bit VTS_OPTEXCLUSIVE utilizzato per un controllo che dovrà essere utilizzato in un gruppo di controlli, quali pulsanti di opzione. Questo tipo indica al contenitore che se un controllo in un gruppo dispone di un valore TRUE, tutti gli altri utenti deve essere FALSE.  
-  
--   VTS_TRISTATE A 16 bit signed integer a utilizzato per le proprietà che possono avere uno dei tre valori possibili (selezionati, deselezionati, non disponibili), ad esempio, una casella di controllo.  
-  
--   VTS_XPOS_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse x in unità HIMETRIC.  
-  
--   VTS_YPOS_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse y in unità HIMETRIC.  
-  
--   VTS_XPOS_PIXELS A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse x in pixel.  
-  
--   VTS_YPOS_PIXELS A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse y in pixel.  
-  
--   VTS_XSIZE_PIXELS A 32 bit unsigned integer utilizzato per rappresentare la larghezza di un oggetto sullo schermo in pixel.  
-  
--   VTS_YSIZE_PIXELS A 32 bit unsigned integer utilizzato per rappresentare l'altezza di un oggetto sullo schermo in pixel.  
-  
--   VTS_XSIZE_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare la larghezza di un oggetto sullo schermo in unità HIMETRIC.  
-  
--   VTS_YSIZE_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare l'altezza di un oggetto sullo schermo in unità HIMETRIC.  
-  
+
+Questo argomento elenca le nuove costanti che indicano i tipi di parametri varianti progettati per l'uso con le classi di controlli OLE della libreria di classi Microsoft Foundation.
+
+Di seguito è riportato un elenco di costanti di classe:
+
+##  <a name="_mfc_variant_data_constants"></a> Costanti di dati Variant
+
+- Valore integer A 32 bit VTS_COLOR utilizzato per rappresentare un valore di colore RGB.
+
+- Puntatore a oggetto VTS_FONT al `IFontDisp` interfaccia dell'oggetto font OLE.
+
+- Valore dell'handle VTS_HANDLE A Windows.
+
+- Puntatore a oggetto VTS_PICTURE al `IPictureDisp` interfaccia dell'oggetto immagine OLE.
+
+- Valore A 16 bit VTS_OPTEXCLUSIVE utilizzato per un controllo che dovrà essere utilizzato in un gruppo di controlli, quali pulsanti di opzione. Questo tipo indica al contenitore che se un controllo in un gruppo dispone di un valore TRUE, tutti gli altri utenti deve essere FALSE.
+
+- VTS_TRISTATE A 16 bit signed integer a utilizzato per le proprietà che possono avere uno dei tre valori possibili (selezionati, deselezionati, non disponibili), ad esempio, una casella di controllo.
+
+- VTS_XPOS_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse x in unità HIMETRIC.
+
+- VTS_YPOS_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse y in unità HIMETRIC.
+
+- VTS_XPOS_PIXELS A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse x in pixel.
+
+- VTS_YPOS_PIXELS A 32 bit unsigned integer utilizzato per rappresentare una posizione lungo l'asse y in pixel.
+
+- VTS_XSIZE_PIXELS A 32 bit unsigned integer utilizzato per rappresentare la larghezza di un oggetto sullo schermo in pixel.
+
+- VTS_YSIZE_PIXELS A 32 bit unsigned integer utilizzato per rappresentare l'altezza di un oggetto sullo schermo in pixel.
+
+- VTS_XSIZE_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare la larghezza di un oggetto sullo schermo in unità HIMETRIC.
+
+- VTS_YSIZE_HIMETRIC A 32 bit unsigned integer utilizzato per rappresentare l'altezza di un oggetto sullo schermo in unità HIMETRIC.
+
     > [!NOTE]
-    >  Costanti variante aggiuntive sono state definite per tutti i tipi varianti, fatta eccezione per VTS_FONT e VTS_PICTURE, che offrono un puntatore alla costante di dati variant. Queste costanti vengono denominate usando il VTS_P`constantname` convenzione. Ad esempio, VTS_PCOLOR è un puntatore a un VTS_COLOR (costante).  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** afxdisp.h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+    >  Costanti variante aggiuntive sono state definite per tutti i tipi varianti, fatta eccezione per VTS_FONT e VTS_PICTURE, che offrono un puntatore alla costante di dati variant. Queste costanti vengono denominate usando il VTS_P`constantname` convenzione. Ad esempio, VTS_PCOLOR è un puntatore a un VTS_COLOR (costante).
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** afxdisp.h
+
+## <a name="see-also"></a>Vedere anche
+
+[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)

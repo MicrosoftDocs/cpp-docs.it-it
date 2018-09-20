@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 156908a1611f8a1c8b22df61e6b789468753d25d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317056"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443085"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Aggiunta di gestori eventi per i controlli di finestra di dialogo (C++)
 
@@ -76,11 +76,11 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Eventi di controlli predefiniti](../windows/default-control-events.md)  
-[Definizione di variabili membro per i controlli della finestra di dialogo](../windows/defining-member-variables-for-dialog-controls.md)  
-[Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)  
-[Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)  
-[Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)  
-[Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)  
-[Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Eventi di controlli predefiniti](../windows/default-control-events.md)<br/>
+[Definizione di variabili membro per i controlli della finestra di dialogo](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)<br/>
+[Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

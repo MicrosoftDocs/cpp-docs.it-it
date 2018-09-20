@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 554cccba1d45cf172645c46e00fdb20c19ea42d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712530"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389603"
 ---
 # <a name="indword"></a>__indword
-**Sezione specifica Microsoft**  
-  
- Legge un valore double word di dati dalla porta specificata usando il `in` (istruzione).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned long __indword(  
-   unsigned short Port  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+**Sezione specifica Microsoft**
+
+Legge un valore double word di dati dalla porta specificata usando il `in` (istruzione).
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned long __indword(
+   unsigned short Port
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *Porta*<br/>
-[in] La porta da cui leggere.  
-  
-## <a name="return-value"></a>Valore restituito  
- La parola di lettura dalla porta.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__indword`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questa routine è disponibile solo come funzione intrinseca.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+[in] La porta da cui leggere.
+
+## <a name="return-value"></a>Valore restituito
+
+La parola di lettura dalla porta.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__indword`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questa routine è disponibile solo come funzione intrinseca.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

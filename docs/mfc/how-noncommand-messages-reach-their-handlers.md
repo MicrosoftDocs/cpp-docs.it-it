@@ -1,5 +1,5 @@
 ---
-title: Come i messaggi Noncommand raggiungono i relativi gestori | Documenti Microsoft
+title: Come i messaggi noncommand raggiungono i gestori | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3999c74bf7a612acb998e7a044c12948d7679d9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5c38a1d4294993170cfeff64be6a83700fa7497
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343882"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373438"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Come i messaggi Noncommand raggiungono i relativi gestori
-A differenza dei comandi, messaggi standard di Windows non vengono inviati attraverso una catena di comando destinazioni, ma sono in genere gestiti mediante la finestra in cui Windows invia il messaggio. La finestra può essere una finestra cornice principale, una finestra figlio MDI, un controllo standard, una finestra di dialogo, una vista o un altro tipo di finestra figlio.  
-  
- In fase di esecuzione, ogni finestra di Windows è associata a un oggetto window (derivata direttamente o indirettamente da `CWnd`) che ha le sue funzioni di mappa e il gestore di messaggi associati. Il framework utilizza la mappa dei messaggi, come per un comando, per eseguire il mapping ai gestori di messaggi in arrivo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
+
+A differenza dei comandi, i messaggi Windows standard non vengono instradati attraverso una catena di comando destinazioni, ma sono in genere gestiti mediante la finestra in cui Windows invia il messaggio. La finestra può essere una finestra cornice principale, una finestra figlia MDI, un controllo standard, una finestra di dialogo, una vista o un altro tipo di finestra figlio.
+
+In fase di esecuzione, ogni finestra di Windows è associata a un oggetto finestra (derivata direttamente o indirettamente da `CWnd`) che ha le sue funzioni di mappa e il gestore di messaggi associati. Il framework utilizza la mappa dei messaggi, come per un comando, per eseguire il mapping ai gestori di messaggi in arrivo.
+
+## <a name="see-also"></a>Vedere anche
+
+[Chiamata di un gestore dal framework](../mfc/how-the-framework-calls-a-handler.md)
 

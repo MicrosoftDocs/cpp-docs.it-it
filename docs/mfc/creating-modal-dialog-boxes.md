@@ -1,5 +1,5 @@
 ---
-title: Creazione di finestre di dialogo modale | Documenti Microsoft
+title: Creazione di finestre di dialogo modali | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a8bc947dbaf9cecc680f3cdbd8e6b429d2bcd5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fcc449a376091c07a7fb26b81fe19752bc3bcd6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342429"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376644"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Creazione di finestre di dialogo modali
-Per creare una finestra di dialogo modale, chiamare uno dei due costruttori pubblici dichiarati in [CDialog](../mfc/reference/cdialog-class.md). Successivamente, chiamare l'oggetto finestra di dialogo [DoModal](../mfc/reference/cdialog-class.md#domodal) funzione membro per visualizzare la finestra di dialogo e gestirne l'interazione finché l'utente sceglie OK o Annulla. È la gestione tramite `DoModal` a rendere modale la finestra di dialogo. Per le finestre di dialogo modali `DoModal` carica la risorsa finestra di dialogo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Per creare una finestra di dialogo modale, chiamare uno dei due costruttori pubblici dichiarati nel [CDialog](../mfc/reference/cdialog-class.md). Quindi, chiamare il metodo dell'oggetto finestra di dialogo [DoModal](../mfc/reference/cdialog-class.md#domodal) funzione membro per visualizzare la finestra di dialogo e gestirne l'interazione finché l'utente sceglie OK o Annulla. È la gestione tramite `DoModal` a rendere modale la finestra di dialogo. Per le finestre di dialogo modali `DoModal` carica la risorsa finestra di dialogo.
+
+## <a name="see-also"></a>Vedere anche
+
+[Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
 

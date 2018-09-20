@@ -18,76 +18,80 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34fedf8a30a5ed47837f593012e4cd836782bb66
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3488815f31f8148c21ebf2242ef85773505a316c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720135"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387679"
 ---
 # <a name="movsb"></a>__movsb
-**Sezione specifica Microsoft**  
-  
- Genera una stringa di spostare (`rep movsb`) (istruzione).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __movsb(   
-   unsigned char* Destination,   
-   unsigned const char* Source,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+**Sezione specifica Microsoft**
+
+Genera una stringa di spostare (`rep movsb`) (istruzione).
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __movsb( 
+   unsigned char* Destination, 
+   unsigned const char* Source, 
+   size_t Count 
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *Destinazione*<br/>
-[out] Puntatore alla destinazione della copia.  
-  
+[out] Puntatore alla destinazione della copia.
+
 *Source*<br/>
-[in] Un puntatore all'origine della copia.  
-  
+[in] Un puntatore all'origine della copia.
+
 *Conteggio*<br/>
-[in] Il numero di byte da copiare.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__movsb`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Il risultato è che il primo `Count` byte a cui punta `Source` vengono copiati il `Destination` stringa.  
-  
- Questa routine è disponibile solo come funzione intrinseca.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// movsb.cpp  
-// processor: x86, x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__movsb)  
-  
-int main()  
-{  
-    unsigned char s1[100];  
-    unsigned char s2[100] = "A big black dog.";  
-    __movsb(s1, s2, 100);  
-  
-    printf_s("%s %s", s1, s2);  
-}  
-```  
-  
-```Output  
-A big black dog. A big black dog.  
-```  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+[in] Il numero di byte da copiare.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__movsb`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Il risultato è che il primo `Count` byte a cui punta `Source` vengono copiati il `Destination` stringa.
+
+Questa routine è disponibile solo come funzione intrinseca.
+
+## <a name="example"></a>Esempio
+
+```
+// movsb.cpp
+// processor: x86, x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__movsb)
+
+int main()
+{
+    unsigned char s1[100];
+    unsigned char s2[100] = "A big black dog.";
+    __movsb(s1, s2, 100);
+
+    printf_s("%s %s", s1, s2);
+}
+```
+
+```Output
+A big black dog. A big black dog.
+```
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

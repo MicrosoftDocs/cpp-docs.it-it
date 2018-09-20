@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c2419925896112eb235bcdfe77d9916373f0091
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539423"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408427"
 ---
 # <a name="predefined-macros"></a>Macro predefinite
 
@@ -443,6 +443,6 @@ Microsoft Visual C++ supporta queste macro predefinite aggiuntive.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro (C/C++)](../preprocessor/macros-c-cpp.md)   
-[Operatori del preprocessore](../preprocessor/preprocessor-operators.md)   
+[Macro (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
+[Operatori del preprocessore](../preprocessor/preprocessor-operators.md)<br/>
 [Direttive per il preprocessore](../preprocessor/preprocessor-directives.md)

@@ -17,46 +17,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5abaccb4adc9e642458669535cff369d963cfd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eac50ba9c4c1b4bc14ebb847b283b5c2da11605e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712587"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388798"
 ---
 # <a name="outword"></a>__outword
-**Sezione specifica Microsoft**  
-  
- Genera il `out` istruzione, che invia la parola `Data` attraverso la porta dei / o specificata da `Port`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __outword(   
-   unsigned short Port,   
-   unsigned short Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+
+**Sezione specifica Microsoft**
+
+Genera il `out` istruzione, che invia la parola `Data` attraverso la porta dei / o specificata da `Port`.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __outword( 
+   unsigned short Port, 
+   unsigned short Data 
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
 *Porta*<br/>
-[in] La porta per inviare i dati.  
-  
+[in] La porta per inviare i dati.
+
 *Dati*<br/>
-[in] I dati da inviare.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__outword`|x86, x64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-## <a name="remarks"></a>Note  
- Questa routine è disponibile solo come funzione intrinseca.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)
+[in] I dati da inviare.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__outword`|x86, x64|
+
+**File di intestazione** \<intrin. h >
+
+## <a name="remarks"></a>Note
+
+Questa routine è disponibile solo come funzione intrinseca.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

@@ -17,49 +17,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0d7b5b26c5cf805e0fef8c5fb2785ebf3712b4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a511a70c1f6cecd9c2a6dd489f11d5c18b655f3d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678477"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373334"
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
-**Sezione specifica Microsoft**  
-  
- Inserisce l'applicazione chiamante in stato di operazione non radice VMX (invio di VM) tramite la struttura di controllo di una macchina virtuale corrente (VMCS).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned char __vmx_vmlaunch(  
-   void);  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
-  
-|Valore|Significato|  
-|-----------|-------------|  
-|0|Operazione completata.|  
-|1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|  
-|2|Operazione non riuscita senza stato disponibile.|  
-  
-## <a name="remarks"></a>Note  
- Un'applicazione può eseguire un'operazione della macchina virtuale usando il [vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) oppure [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (funzione). Il [vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio viene `Clear`e il [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio è `Launched`. Di conseguenza, usare il [vmx_vmclear](../intrinsics/vmx-vmclear.md) funzione per impostare lo stato di avvio di una VMCS per `Clear`e quindi usare i [vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione per la prima operazione della macchina virtuale e la [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione per le operazioni successive della macchina virtuale.  
-  
- Il `__vmx_vmlaunch` è equivalente alla funzione il `VMLAUNCH` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione intrinseca|Architettura|  
-|---------------|------------------|  
-|`__vmx_vmlaunch`|X64|  
-  
- **File di intestazione** \<intrin. h >  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmresume](../intrinsics/vmx-vmresume.md)   
- [__vmx_vmclear](../intrinsics/vmx-vmclear.md)
+
+**Sezione specifica Microsoft**
+
+Inserisce l'applicazione chiamante in stato di operazione non radice VMX (invio di VM) tramite la struttura di controllo di una macchina virtuale corrente (VMCS).
+
+## <a name="syntax"></a>Sintassi
+
+```
+unsigned char __vmx_vmlaunch(
+   void);
+```
+
+## <a name="return-value"></a>Valore restituito
+
+|Valore|Significato|
+|-----------|-------------|
+|0|Operazione completata.|
+|1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|
+|2|Operazione non riuscita senza stato disponibile.|
+
+## <a name="remarks"></a>Note
+
+Un'applicazione può eseguire un'operazione della macchina virtuale usando il [vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) oppure [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (funzione). Il [vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio viene `Clear`e il [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio è `Launched`. Di conseguenza, usare il [vmx_vmclear](../intrinsics/vmx-vmclear.md) funzione per impostare lo stato di avvio di una VMCS per `Clear`e quindi usare i [vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione per la prima operazione della macchina virtuale e la [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione per le operazioni successive della macchina virtuale.
+
+Il `__vmx_vmlaunch` è equivalente alla funzione il `VMLAUNCH` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) sito.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione intrinseca|Architettura|
+|---------------|------------------|
+|`__vmx_vmlaunch`|X64|
+
+**File di intestazione** \<intrin. h >
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmresume](../intrinsics/vmx-vmresume.md)<br/>
+[__vmx_vmclear](../intrinsics/vmx-vmclear.md)

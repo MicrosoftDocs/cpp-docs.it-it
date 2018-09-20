@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2395cb7b1f3d719fd64494ee9b9c7c64ba222bac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218785"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381829"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: messaggi ON_NOTIFY e WM_NOTIFY
 
@@ -104,14 +104,14 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 dove i parametri sono:
 
-*wNotifyCode*  
- Il codice per il messaggio di notifica da gestire, ad esempio LVN_KEYDOWN.
+*wNotifyCode*<br/>
+Il codice per il messaggio di notifica da gestire, ad esempio LVN_KEYDOWN.
 
-*ID*  
- L'identificatore dell'elemento figlio del controllo per il quale viene inviata la notifica.
+*ID*<br/>
+L'identificatore dell'elemento figlio del controllo per il quale viene inviata la notifica.
 
-*memberFxn*  
- La funzione membro da chiamare quando la notifica viene inviata.
+*memberFxn*<br/>
+La funzione membro da chiamare quando la notifica viene inviata.
 
 La funzione membro deve essere dichiarata con il seguente prototipo:
 
@@ -121,11 +121,11 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 dove i parametri sono:
 
-*pNotifyStruct*  
- Puntatore alla struttura di notifica, come descritto nella sezione precedente.
+*pNotifyStruct*<br/>
+Puntatore alla struttura di notifica, come descritto nella sezione precedente.
 
-*Risultato*  
- Un puntatore al codice di risultato imposterai prima della restituzione.
+*Risultato*<br/>
+Un puntatore al codice di risultato imposterai prima della restituzione.
 
 ## <a name="example"></a>Esempio
 
@@ -141,7 +141,7 @@ Nell'esempio precedente, la funzione fornita da ClassWizard è:
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 {
     LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;
-    
+
     // TODO: Add your control notification handler
     //       code here
 
@@ -167,17 +167,17 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 dove i parametri sono:
 
-*wNotifyCode*  
- Il codice per il messaggio di notifica da gestire, ad esempio LVN_KEYDOWN.
+*wNotifyCode*<br/>
+Il codice per il messaggio di notifica da gestire, ad esempio LVN_KEYDOWN.
 
-*ID*  
- Il primo identificatore nell'intervallo contiguo di identificatori.
+*ID*<br/>
+Il primo identificatore nell'intervallo contiguo di identificatori.
 
-*idLast*  
- L'ultimo identificatore nell'intervallo contiguo di identificatori.
+*idLast*<br/>
+L'ultimo identificatore nell'intervallo contiguo di identificatori.
 
-*memberFxn*  
- La funzione membro da chiamare quando la notifica viene inviata.
+*memberFxn*<br/>
+La funzione membro da chiamare quando la notifica viene inviata.
 
 La funzione membro deve essere dichiarata con il seguente prototipo:
 
@@ -187,14 +187,14 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 dove i parametri sono:
 
-*ID*  
- L'identificatore dell'elemento figlio del controllo che riceve la notifica.
+*ID*<br/>
+L'identificatore dell'elemento figlio del controllo che riceve la notifica.
 
-*pNotifyStruct*  
- Puntatore alla struttura di notifica, come descritto in precedenza.
+*pNotifyStruct*<br/>
+Puntatore alla struttura di notifica, come descritto in precedenza.
 
-*Risultato*  
- Un puntatore al codice di risultato imposterai prima della restituzione.
+*Risultato*<br/>
+Un puntatore al codice di risultato imposterai prima della restituzione.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE
 
@@ -221,5 +221,5 @@ La funzione deve restituire **TRUE** se il messaggio di notifica è stata comple
 
 ## <a name="see-also"></a>Vedere anche
 
-[Note tecniche per numero](../mfc/technical-notes-by-number.md)  
-[Note tecniche per categoria](../mfc/technical-notes-by-category.md)  
+[Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
+[Note tecniche per categoria](../mfc/technical-notes-by-category.md)

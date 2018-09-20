@@ -1,5 +1,5 @@
 ---
-title: Enumerazioni di spazio dei nomi Concurrency (AMP) | Documenti Microsoft
+title: Enumerazioni dello spazio dei nomi Concurrency (AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,47 +13,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a67b5e77b8ab8c52e55dea96e64a3f16a4d70e39
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d4f842b799a81179fa1a612e652aae391ca3375d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695668"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435662"
 ---
-# <a name="concurrency-namespace-enums-amp"></a>Enumerazioni di spazio dei nomi Concurrency (AMP)
-|||  
-|-|-|  
-|[Enumerazione access_type](#access_type)|[Enumerazione queuing_mode](#queuing_mode)|  
-  
-##  <a name="access_type"></a>  Enumerazione access_type  
- Tipo di enumerazione utilizzato per indicare i vari tipi di accesso ai dati.  
-  
-```  
-enum access_type;  
-```  
-### <a name="values"></a>Valori  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`access_type_auto`|Scegliere automaticamente il miglior `access_type` per i tasti di scelta rapida.|  
-|`access_type_none`|Dedicato. L'allocazione è accessibile solo nel tasto di scelta rapida e non nella CPU.|  
-|`access_type_read`|Condiviso. L'allocazione è accessibile nel tasto di scelta rapida e leggibile sulla CPU.|  
-|`access_type_read_write`|Condiviso. L'allocazione è accessibile nel tasto di scelta rapida e sia accessibile in scrittura sulla CPU.|  
-|`access_type_write`|Condiviso. L'allocazione è accessibile nel tasto di scelta rapida e sia leggibile e scrivibile sulla CPU.|  
+# <a name="concurrency-namespace-enums-amp"></a>Enumerazioni dello spazio dei nomi Concurrency (AMP)
 
-  
-##  <a name="queuing_mode"></a>  Enumerazione queuing_mode  
- Specifica le modalità di Accodamento messaggi che sono supportate per i tasti di scelta rapida.  
-  
-```  
-enum queuing_mode;  
-``` 
-### <a name="values"></a>Valori  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`queuing_mode_immediate`|Comandi di una modalità di accodamento che specifica che qualsiasi, ad esempio, [parallel_for_each (funzione) (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), vengono inviati al dispositivo di tasti di scelta rapida corrispondente come restituiscono al chiamante.|  
-|`queuing_mode_automatic`|Una modalità di accodamento che specifica che i comandi accodate in una coda di comandi che corrisponde alla [accelerator_view](accelerator-view-class.md) oggetto. I comandi vengono inviati al dispositivo quando [accelerator_view:: Flush](accelerator-view-class.md#flush) viene chiamato.|   
-  
-## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+|||
+|-|-|
+|[Enumerazione access_type](#access_type)|[Enumerazione queuing_mode](#queuing_mode)|
+
+##  <a name="access_type"></a>  Enumerazione access_type
+
+Tipo di enumerazione utilizzato per indicare i vari tipi di accesso ai dati.
+
+```
+enum access_type;
+```
+### <a name="values"></a>Valori
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`access_type_auto`|Scegliere automaticamente il migliore `access_type` all'acceleratore.|
+|`access_type_none`|Dedicato. L'allocazione è accessibile solo sul tasto di scelta rapida e non sulla CPU.|
+|`access_type_read`|Condiviso. L'allocazione è accessibile nell'acceleratore e viene letta sulla CPU.|
+|`access_type_read_write`|Condiviso. L'allocazione è accessibile nell'acceleratore e viene scritta sulla CPU.|
+|`access_type_write`|Condiviso. L'allocazione è accessibile nel tasto di scelta rapida ed è sia letta che scritta sulla CPU.|
+
+##  <a name="queuing_mode"></a>  Enumerazione queuing_mode
+
+Specifica la modalità di accodamento sono supportate dall'acceleratore.
+
+```
+enum queuing_mode;
+```
+### <a name="values"></a>Valori
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`queuing_mode_immediate`|Una modalità di accodamento che specifica che tutti i comandi, ad esempio, [parallel_for_each (funzione) (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), vengono inviati al dispositivo acceleratore corrispondente non appena ritornano al chiamante.|
+|`queuing_mode_automatic`|Una modalità di accodamento che specifica che i comandi sono messi in una coda di comandi corrispondente per il [accelerator_view](accelerator-view-class.md) oggetto. I comandi vengono inviati al dispositivo quando [accelerator_view:: Flush](accelerator-view-class.md#flush) viene chiamato.|
+
+## <a name="see-also"></a>Vedere anche
+
+[Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,5 +1,5 @@
 ---
-title: 2. Direttive | Documenti Microsoft
+title: 2. Direttive | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b1c56bb4daaa6b87cf8e59e072cb73a746712f9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab664bf15dd098b9d3e3bd7d6bd9c73db47fff2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695889"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436910"
 ---
 # <a name="2-directives"></a>2. Direttive
-Direttive sono basate su **#pragma** direttive definite negli standard C e C++.  I compilatori che supportano le API C++ OpenMP C include un'opzione della riga di comando che attiva e consente l'interpretazione di tutte le direttive del compilatore OpenMP.
+
+Le direttive sono basate sul **#pragma** direttive definite negli standard C e C++.  I compilatori che supportano il OpenMP C e C++ API includerà un'opzione della riga di comando che consente di attivare e consente l'interpretazione di tutte le direttive del compilatore OpenMP.

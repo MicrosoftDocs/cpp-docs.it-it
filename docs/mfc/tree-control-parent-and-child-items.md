@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56885300b05cfb038dd1a8484ae57648bf9357
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 94bae5d06dd5b0e072d17588af045ec87a33fcc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208432"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374710"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Elementi padre e figlio controllo Tree
-Qualsiasi elemento in un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) può avere un elenco di elementi secondari, denominati elementi figlio, è associati. Un elemento con uno o più elementi figlio viene chiamato un elemento padre. Un elemento figlio sotto l'elemento padre viene visualizzato e viene applicato un rientro per indicare che è subordinato all'elemento padre. Un elemento che non ha elementi padre nella parte superiore della gerarchia e viene chiamato un elemento radice.  
-  
- In qualsiasi momento, lo stato dell'elenco di un elemento padre degli elementi figlio può essere espansi o compressi. Quando lo stato viene espanso, vengono visualizzati gli elementi figlio sotto l'elemento padre. Quando è compresso, non vengono visualizzati gli elementi figlio. L'elenco Alterna automaticamente tra gli stati espansi a compressi e quando l'utente fa doppio clic sull'elemento padre o, se il padre ha il **TVS_HASBUTTONS** stile, quando l'utente fa clic sul pulsante associato all'elemento padre. Un'applicazione è possibile espandere o comprimere gli elementi figlio usando il [Espandi](../mfc/reference/ctreectrl-class.md#expand) funzione membro.  
-  
- Per aggiungere un elemento a un controllo struttura ad albero, chiamare il [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funzione membro. Questa funzione restituisce un handle del **HTREEITEM** tipo, che identifica in modo univoco l'elemento. Quando si aggiunge un elemento, è necessario specificare l'handle dell'elemento padre del nuovo elemento. Se si specifica **NULL** o nella **TVI_ROOT al** valore anziché un handle di elementi padre nel [struttura TVINSERTSTRUCT](/windows/desktop/api/commctrl/ns-commctrl-tagtvinsertstructa) struttura oppure *hParent* parametro, l'elemento viene aggiunto come elemento radice.  
-  
- Un controllo albero invia un [TVN_ITEMEXPANDING](/windows/desktop/Controls/tvn-itemexpanding) messaggio di notifica quando un elemento padre dell'elenco di elementi figlio sta per essere espansi o compressi. La notifica ti offre l'opportunità per evitare la modifica oppure per impostare tutti gli attributi dell'elemento padre che dipendono dallo stato dell'elenco di elementi figlio. Dopo aver modificato lo stato dell'elenco, il controllo albero invia un [TVN_ITEMEXPANDED](/windows/desktop/Controls/tvn-itemexpanded) messaggio di notifica.  
-  
- Quando si espande un elenco di elementi figlio, viene applicato un rientro rispetto all'elemento padre. È possibile impostare la quantità di rientro usando il [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) funzione membro o recuperare la quantità corrente utilizzando il [GetIndent](../mfc/reference/ctreectrl-class.md#getindent) funzione membro.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controlli](../mfc/controls-mfc.md)
+
+Qualsiasi elemento in un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) può avere un elenco di elementi secondari, denominati elementi figlio, è associati. Un elemento con uno o più elementi figlio viene chiamato un elemento padre. Un elemento figlio sotto l'elemento padre viene visualizzato e viene applicato un rientro per indicare che è subordinato all'elemento padre. Un elemento che non ha elementi padre nella parte superiore della gerarchia e viene chiamato un elemento radice.
+
+In qualsiasi momento, lo stato dell'elenco di un elemento padre degli elementi figlio può essere espansi o compressi. Quando lo stato viene espanso, vengono visualizzati gli elementi figlio sotto l'elemento padre. Quando è compresso, non vengono visualizzati gli elementi figlio. L'elenco Alterna automaticamente tra gli stati espansi a compressi e quando l'utente fa doppio clic sull'elemento padre o, se il padre ha il **TVS_HASBUTTONS** stile, quando l'utente fa clic sul pulsante associato all'elemento padre. Un'applicazione è possibile espandere o comprimere gli elementi figlio usando il [Espandi](../mfc/reference/ctreectrl-class.md#expand) funzione membro.
+
+Per aggiungere un elemento a un controllo struttura ad albero, chiamare il [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funzione membro. Questa funzione restituisce un handle del **HTREEITEM** tipo, che identifica in modo univoco l'elemento. Quando si aggiunge un elemento, è necessario specificare l'handle dell'elemento padre del nuovo elemento. Se si specifica **NULL** o nella **TVI_ROOT al** valore anziché un handle di elementi padre nel [struttura TVINSERTSTRUCT](/windows/desktop/api/commctrl/ns-commctrl-tagtvinsertstructa) struttura oppure *hParent* parametro, l'elemento viene aggiunto come elemento radice.
+
+Un controllo albero invia un [TVN_ITEMEXPANDING](/windows/desktop/Controls/tvn-itemexpanding) messaggio di notifica quando un elemento padre dell'elenco di elementi figlio sta per essere espansi o compressi. La notifica ti offre l'opportunità per evitare la modifica oppure per impostare tutti gli attributi dell'elemento padre che dipendono dallo stato dell'elenco di elementi figlio. Dopo aver modificato lo stato dell'elenco, il controllo albero invia un [TVN_ITEMEXPANDED](/windows/desktop/Controls/tvn-itemexpanded) messaggio di notifica.
+
+Quando si espande un elenco di elementi figlio, viene applicato un rientro rispetto all'elemento padre. È possibile impostare la quantità di rientro usando il [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) funzione membro o recuperare la quantità corrente utilizzando il [GetIndent](../mfc/reference/ctreectrl-class.md#getindent) funzione membro.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Controlli](../mfc/controls-mfc.md)
 

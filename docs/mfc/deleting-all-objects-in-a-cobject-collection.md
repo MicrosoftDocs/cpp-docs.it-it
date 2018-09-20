@@ -1,5 +1,5 @@
 ---
-title: L'eliminazione di tutti gli oggetti in una raccolta CObject | Documenti Microsoft
+title: L'eliminazione di tutti gli oggetti in una raccolta CObject | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,73 +20,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348823"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448247"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Eliminazione di tutti gli oggetti in una raccolta CObject
-In questo articolo viene illustrato come eliminare tutti gli oggetti in una raccolta (senza eliminare l'oggetto raccolta stesso).  
-  
- Per eliminare tutti gli oggetti in una raccolta di `CObject`s (o di oggetti derivati da `CObject`), utilizzare una delle tecniche di iterazione descritte nell'articolo [l'accesso a tutti i membri di una raccolta](../mfc/accessing-all-members-of-a-collection.md) per eliminare tutti gli oggetti in Consente di attivare.  
-  
+
+Questo articolo illustra come eliminare tutti gli oggetti in una raccolta (senza eliminare l'oggetto raccolta stesso).
+
+Per eliminare tutti gli oggetti in una raccolta di `CObject`s (o di oggetti derivati dal `CObject`), si usa una delle tecniche di iterazione descritte nell'articolo [l'accesso a tutti i membri di una raccolta](../mfc/accessing-all-members-of-a-collection.md) per eliminare tutti gli oggetti in attiva.
+
 > [!CAUTION]
->  Oggetti nelle raccolte possono essere condivisa. Ovvero, la raccolta include un puntatore all'oggetto, ma altre parti del programma potrebbero anche essere puntatori allo stesso oggetto. È necessario fare attenzione a non eliminare un oggetto condiviso fino a quando tutte le parti terminato di utilizzare l'oggetto.  
-  
- In questo articolo viene illustrato come eliminare gli oggetti in:  
-  
--   [Un elenco](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)  
-  
--   [Una matrice](#_core_to_delete_all_elements_in_an_array)  
-  
--   [Una mappa](#_core_to_delete_all_elements_in_a_map)  
-  
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Eliminare tutti gli oggetti in un elenco di puntatori a CObject  
-  
-1.  Utilizzare `GetHeadPosition` e `GetNext` per scorrere l'elenco.  
-  
-2.  Utilizzare il **eliminare** operatore eliminare ogni oggetto in quanto viene rilevata nell'iterazione.  
-  
-3.  Chiamare il `RemoveAll` funzione per rimuovere tutti gli elementi dall'elenco dopo l'eliminazione degli oggetti associati a tali elementi.  
-  
- Nell'esempio seguente viene illustrato come eliminare tutti gli oggetti da un elenco di `CPerson` oggetti. Ogni oggetto nell'elenco è un puntatore a un `CPerson` oggetto originariamente allocato nell'heap.  
-  
- [!code-cpp[NVC_MFCCollections#17](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_1.cpp)]  
-  
- L'ultima chiamata di funzione, `RemoveAll`, è una funzione membro di elenco che rimuove tutti gli elementi dall'elenco. La funzione membro `RemoveAt` rimuove un singolo elemento.  
-  
- Si noti la differenza tra l'oggetto di un elemento di eliminazione e la rimozione dell'elemento stesso. Rimozione di un elemento dall'elenco semplicemente rimuove riferimento all'oggetto dell'elenco. L'oggetto esiste ancora in memoria. Quando si elimina un oggetto, questo cessa di esistere e la memoria viene recuperata. Di conseguenza, è importante rimuovere un elemento subito dopo l'oggetto dell'elemento è stato eliminato in modo che l'elenco non verrà tentato di accedere agli oggetti che non esistono più.  
-  
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Per eliminare tutti gli elementi in una matrice  
-  
-1.  Utilizzare `GetSize` e valori di indice integer per scorrere la matrice.  
-  
-2.  Utilizzare il **eliminare** operatore eliminare ogni elemento in quanto viene rilevata nell'iterazione.  
-  
-3.  Chiamare il `RemoveAll` funzione per rimuovere tutti gli elementi dalla matrice dopo che sono state eliminate.  
-  
-     Il codice per l'eliminazione di tutti gli elementi della matrice è come segue:  
-  
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]  
-  
- Come nell'esempio di elenco precedente, è possibile chiamare `RemoveAll` per rimuovere tutti gli elementi in una matrice o `RemoveAt` per rimuovere un singolo elemento.  
-  
-#### <a name="_core_to_delete_all_elements_in_a_map"></a> Per eliminare tutti gli elementi in una mappa  
-  
-1.  Utilizzare `GetStartPosition` e `GetNextAssoc` per scorrere la matrice.  
-  
-2.  Utilizzare il **eliminare** operatore da eliminare la chiave e/o il valore per ogni elemento della mappa come viene rilevata nell'iterazione.  
-  
-3.  Chiamare il `RemoveAll` funzione per rimuovere tutti gli elementi dalla mappa dopo che sono state eliminate.  
-  
-     Il codice per l'eliminazione di tutti gli elementi di un `CMap` insieme è indicato di seguito. Ogni elemento della mappa è una stringa come chiave e un `CPerson` oggetto (derivato da `CObject`) come valore.  
-  
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]  
-  
- È possibile chiamare `RemoveAll` per rimuovere tutti gli elementi in una mappa o `RemoveKey` per rimuovere un singolo elemento con la chiave specificata.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Accesso a tutti i membri di una raccolta](../mfc/accessing-all-members-of-a-collection.md)
+>  Gli oggetti nelle raccolte possono essere condivisi. Vale a dire, la raccolta include un puntatore all'oggetto, ma altre parti del programma possono contenere anche i puntatori allo stesso oggetto. È necessario prestare attenzione a non eliminare un oggetto condiviso fino a quando tutte le parti hanno terminato di utilizzare l'oggetto.
+
+Questo articolo illustra come eliminare gli oggetti in:
+
+- [Un elenco](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)
+
+- [Una matrice](#_core_to_delete_all_elements_in_an_array)
+
+- [Una mappa](#_core_to_delete_all_elements_in_a_map)
+
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Per eliminare tutti gli oggetti in un elenco di puntatori da CObject
+
+1. Uso `GetHeadPosition` e `GetNext` per scorrere l'elenco.
+
+1. Usare la **eliminare** operatore da eliminare ogni oggetto in quanto si è verificato nell'iterazione.
+
+1. Chiamare il `RemoveAll` funzione per rimuovere tutti gli elementi dall'elenco dopo l'eliminazione di oggetti associati a tali elementi.
+
+Nell'esempio seguente viene illustrato come eliminare tutti gli oggetti da un elenco di `CPerson` oggetti. Ogni oggetto nell'elenco è un puntatore a un `CPerson` oggetto originariamente è stata allocata nell'heap.
+
+[!code-cpp[NVC_MFCCollections#17](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_1.cpp)]
+
+L'ultima chiamata di funzione, `RemoveAll`, è una funzione membro di elenco che rimuove tutti gli elementi dall'elenco. La funzione membro `RemoveAt` rimosso un singolo elemento.
+
+Si noti la differenza tra l'eliminazione di oggetti di un elemento e la rimozione dell'elemento stesso. L'eliminazione di un elemento dall'elenco semplicemente rimuove riferimento all'oggetto dell'elenco. L'oggetto esiste ancora in memoria. Quando si elimina un oggetto, questo cessa di esistere e la memoria viene recuperata. Di conseguenza, è importante rimuovere un elemento immediatamente dopo l'oggetto dell'elemento è stato eliminato in modo che l'elenco non tenti di accedere agli oggetti che non esistono più.
+
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Per eliminare tutti gli elementi in una matrice
+
+1. Usare `GetSize` e valori di indice integer per scorrere la matrice.
+
+1. Usare la **eliminare** operatore da eliminare tutti gli elementi come si è verificato nell'iterazione.
+
+1. Chiamare il `RemoveAll` funzione per rimuovere tutti gli elementi dalla matrice dopo che sono stati eliminati.
+
+     Il codice per l'eliminazione di tutti gli elementi della matrice è come segue:
+
+     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+
+Come con l'elenco riportato di seguito viene riportato sopra, è possibile chiamare `RemoveAll` per rimuovere tutti gli elementi in una matrice o `RemoveAt` per rimuovere un singolo elemento.
+
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> Per eliminare tutti gli elementi in una mappa
+
+1. Uso `GetStartPosition` e `GetNextAssoc` per scorrere la matrice.
+
+1. Usare la **eliminare** operatore da eliminare la chiave e/o il valore per ogni elemento della mappa perché si è verificato nell'iterazione.
+
+1. Chiamare il `RemoveAll` funzione per rimuovere tutti gli elementi dalla mappa dopo che sono stati eliminati.
+
+     Il codice per l'eliminazione di tutti gli elementi di un `CMap` raccolta è come indicato di seguito. Ogni elemento della mappa è una stringa come chiave e un `CPerson` oggetto (derivato da `CObject`) come valore.
+
+     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+
+È possibile chiamare `RemoveAll` per rimuovere tutti gli elementi in una mappa o `RemoveKey` per rimuovere un singolo elemento con la chiave specificata.
+
+## <a name="see-also"></a>Vedere anche
+
+[Accesso a tutti i membri di una raccolta](../mfc/accessing-all-members-of-a-collection.md)
 

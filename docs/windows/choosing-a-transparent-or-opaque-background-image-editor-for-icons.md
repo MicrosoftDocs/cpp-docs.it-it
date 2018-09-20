@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c0c4c306191af519103c65b39e3bb89afdb47f9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7f4c3da16181dca4a3a0722f96f61ce02863d369
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313481"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378724"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Selezione di uno sfondo opaco o trasparente (Editor di immagini per le icone)
 
@@ -57,5 +57,5 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2bbcd8fb0e1b04ec35520f154724b095762233b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bdb452bcc44e5c077eb0bd44c5e95127f111f35d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608001"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438041"
 ---
 # <a name="custom-attributes-c"></a>Attributi personalizzati (C++)
 
@@ -35,5 +35,5 @@ Per informazioni sulla definizione di nuovi attributi personalizzati, vedere,
 
 ## <a name="see-also"></a>Vedere anche
 
-[attribute](../windows/attribute.md)  
+[attribute](../windows/attribute.md)<br/>
 [Attributi personalizzati (C++)](../windows/custom-attributes-cpp.md)

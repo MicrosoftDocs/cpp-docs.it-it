@@ -1,5 +1,5 @@
 ---
-title: Gestori caselle di riepilogo | Documenti Microsoft
+title: Gestori caselle di riepilogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,24 +25,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1725521fd710f70f36feb321d9bd019eeebb8116
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87edc4691c01da199540cb2dcb96c8ce2d34cb9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369655"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383035"
 ---
 # <a name="list-box-handlers"></a>Gestori caselle di riepilogo
-Le seguenti voci della mappa hanno il prototipo di funzione corrispondente.  
-  
-|Voce della mappa|Prototipo di funzione|  
-|---------------|------------------------|  
-|ON_LBN_DBLCLK ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-|ON_LBN_ERRSPACE ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-|ON_LBN_KILLFOCUS ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-|ON_LBN_SELCHANGE ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-|ON_LBN_SETFOCUS ( \<id >, \<memberFxn >)|void memberFxn di afx_msg ();|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)
+
+Le voci della mappa seguenti hanno il prototipo di funzione corrispondente.
+
+|Voce della mappa|Prototipo di funzione|
+|---------------|------------------------|
+|ON_LBN_DBLCLK ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_LBN_ERRSPACE ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_LBN_KILLFOCUS ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_LBN_SELCHANGE ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_LBN_SETFOCUS ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+
+## <a name="see-also"></a>Vedere anche
+
+[Mappe messaggi](../../mfc/reference/message-maps-mfc.md)
 

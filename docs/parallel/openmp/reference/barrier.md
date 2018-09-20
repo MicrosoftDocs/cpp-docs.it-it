@@ -1,5 +1,5 @@
 ---
-title: barriera | Documenti Microsoft
+title: barriera | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5b2cd9edf54e58c06e7d2a48529393cd3ced64
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c220106d62bf65505c9c5b48085a9ee3e67fe0cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690894"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415031"
 ---
 # <a name="barrier"></a>barrier
-Sincronizza tutti i thread in un team. tutti i thread sospendere alla barriera, fino a quando tutti i thread di eseguano la barriera.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#pragma omp barrier  
-```  
-  
-## <a name="remarks"></a>Note  
- Il `barrier` direttiva non supporta clausole OpenMP.  
-  
- Per ulteriori informazioni, vedere [2.6.3 direttiva barrier](../../../parallel/openmp/2-6-3-barrier-directive.md).  
-  
-## <a name="example"></a>Esempio  
- Per un esempio di come utilizzare `barrier`, vedere [master](../../../parallel/openmp/reference/master.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Direttive](../../../parallel/openmp/reference/openmp-directives.md)
+
+Sincronizza tutti i thread in un team. tutti i thread Sospendi alla barriera, fino a quando tutti i thread di eseguano la barriera.
+
+## <a name="syntax"></a>Sintassi
+
+```
+#pragma omp barrier
+```
+
+## <a name="remarks"></a>Note
+
+Il `barrier` direttiva non supporta nessuna clausole OpenMP.
+
+Per altre informazioni, vedere [2.6.3 direttiva barrier](../../../parallel/openmp/2-6-3-barrier-directive.md).
+
+## <a name="example"></a>Esempio
+
+Per un esempio d'uso `barrier`, vedere [master](../../../parallel/openmp/reference/master.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Direttive](../../../parallel/openmp/reference/openmp-directives.md)

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1263b5037d9e5ed3cf81eaa55f6e4accb8737e6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 626327fec8efda873551e6d9ee502d7405eec5a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705848"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371979"
 ---
 # <a name="resource-includes-dialog-box-c"></a>Inclusioni risorsa finestra di dialogo (C++)
 
@@ -58,7 +58,7 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Procedura: Specificare directory di inclusione per le risorse](../windows/how-to-specify-include-directories-for-resources.md)  
-[Simboli: identificatori di risorsa](../windows/symbols-resource-identifiers.md)  
-[File di risorse](../windows/resource-files-visual-studio.md)  
+[Procedura: Specificare directory di inclusione per le risorse](../windows/how-to-specify-include-directories-for-resources.md)<br/>
+[Simboli: identificatori di risorsa](../windows/symbols-resource-identifiers.md)<br/>
+[File di risorse](../windows/resource-files-visual-studio.md)<br/>
 [Editor di risorse](../windows/resource-editors.md)

@@ -1,5 +1,5 @@
 ---
-title: Menu (MFC) | Documenti Microsoft
+title: Menu (MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839b38a135f9f7ada413de757035370e009cfa57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04b6aa92937ce2c7a0b94c5e5b796b0bf8581626
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346971"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385131"
 ---
 # <a name="menus-mfc"></a>Menu (MFC)
-MFC fornisce due elementi che consentono di lavorare con i menu:  
-  
--   Classe [CMenu](../mfc/reference/cmenu-class.md) per la modifica dei menu del programma in fase di esecuzione. Utilizzare la documentazione relativa a `CMenu` e il codice di esempio per imparare a usare `CMenu` in modo efficace.  
-  
--   Un meccanismo per aggiornare i menu e pulsanti della barra degli strumenti: abilitazione o disabilitazione in tempo reale in base alle condizioni del programma.  
-  
- Visual C++ fornisce anche un [editor menu](../windows/menu-editor.md) per la creazione e modifica di risorse di menu del programma.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
-  
--   [La modifica degli oggetti di menu durante l'esecuzione del programma](../mfc/manipulating-menus-during-program-execution.md)  
-  
--   [Come aggiornare oggetti dell'interfaccia utente](../mfc/how-to-update-user-interface-objects.md)  
-  
--   [Esempio](../mfc/menu-sample-list.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)
+
+MFC fornisce due elementi che consentono di lavorare con i menu:
+
+- Classe [CMenu](../mfc/reference/cmenu-class.md) per la manipolazione di menu del programma in fase di esecuzione. Usare la documentazione per `CMenu` e l'esempio per imparare a usare `CMenu` in modo efficace.
+
+- Un meccanismo per aggiornare i menu e pulsanti della barra degli strumenti: abilitazione o disabilitazione in tempo reale in base alle condizioni del programma.
+
+Visual C++ fornisce anche un [editor di menu](../windows/menu-editor.md) per la creazione e modifica di risorse di menu del programma.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+
+- [Gestione dei menu durante l'esecuzione del programma](../mfc/manipulating-menus-during-program-execution.md)
+
+- [Come aggiornare oggetti dell'interfaccia utente](../mfc/how-to-update-user-interface-objects.md)
+
+- [Esempio](../mfc/menu-sample-list.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)
