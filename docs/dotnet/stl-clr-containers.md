@@ -1,7 +1,7 @@
 ---
 title: Contenitori STL/CLR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 40fe43accafb6fa9e217f5d7835d7533e7674e72
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b11cb96e02adbf4b145794d570fde34dbed48ff7
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418554"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494335"
 ---
 # <a name="stlclr-containers"></a>Contenitori STL/CLR
 
-La libreria STL/CLR presenta gli stessi contenitori che si trovano nella libreria Standard C++, ma funziona nell'ambiente gestito di .NET Framework. Se si ha già familiarità con la libreria Standard C++, STL/CLR è il modo migliore per continuare a usare le competenze che già sviluppate e al contempo aggiornare il codice di destinazione common language runtime (CLR).
+La libreria STL/CLR è costituito da contenitori che sono simili a quelle disponibili nella libreria Standard C++, ma funziona nell'ambiente gestito di .NET Framework. Non viene mantenuto aggiornato con la libreria Standard C++ effettivo e conservato per il supporto legacy.
 
 In questo documento viene fornita una panoramica dei contenitori in STL/CLR, ad esempio i requisiti per gli elementi contenitore, i tipi di elementi che è possibile inserire nei contenitori e i problemi di proprietà con gli elementi nei contenitori. Dove appropriato, sono riportate le differenze tra la libreria Standard C++ e STL/CLR nativi.
 
 ## <a name="requirements-for-container-elements"></a>Requisiti per gli elementi contenitore
 
-Tutti gli elementi inseriti nei contenitori della libreria Standard C++ devono rispettare alcune linee guida. Per altre informazioni, vedere [i requisiti degli elementi del contenitore STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
+Tutti gli elementi inseriti nei contenitori STL/CLR è necessario rispettare alcune linee guida. Per altre informazioni, vedere [i requisiti degli elementi del contenitore STL/CLR](../dotnet/requirements-for-stl-clr-container-elements.md).
 
 ## <a name="valid-container-elements"></a>Elementi di contenitore validi
 
@@ -65,18 +65,18 @@ using namespace System;
 ref class Employee
 {
 public:
-    // C++ Standard Library containers might require a public constructor, so it
+    // STL/CLR containers might require a public constructor, so it
     // is a good idea to define one.
     Employee() :
         name(nullptr),
         employeeNumber(0) { }
 
-    // All C++ Standard Library containers require a public copy constructor.
+    // All STL/CLR containers require a public copy constructor.
     Employee(const Employee% orig) :
         name(orig.name),
         employeeNumber(orig.employeeNumber) { }
 
-    // All C++ Standard Library containers require a public assignment operator.
+    // All STL/CLR containers require a public assignment operator.
     Employee% operator=(const Employee% orig)
     {
         if (this != %orig)
@@ -88,7 +88,7 @@ public:
         return *this;
     }
 
-    // All C++ Standard Library containers require a public destructor.
+    // All STL/CLR containers require a public destructor.
     ~Employee() { }
 
     // Associative containers such as maps and sets
@@ -160,18 +160,18 @@ using namespace System;
 ref class Employee
 {
 public:
-    // C++ Standard Library containers might require a public constructor, so it
+    // STL/CLR containers might require a public constructor, so it
     // is a good idea to define one.
     Employee() :
         name(nullptr),
         employeeNumber(0) { }
 
-    // All C++ Standard Library containers require a public copy constructor.
+    // All STL/CLR containers require a public copy constructor.
     Employee(const Employee% orig) :
         name(orig.name),
         employeeNumber(orig.employeeNumber) { }
 
-    // All C++ Standard Library containers require a public assignment operator.
+    // All STL/CLR containers require a public assignment operator.
     Employee% operator=(const Employee% orig)
     {
         if (this != %orig)
@@ -183,7 +183,7 @@ public:
         return *this;
     }
 
-    // All C++ Standard Library containers require a public destructor.
+    // All STL/CLR containers require a public destructor.
     ~Employee() { }
 
     // Associative containers such as maps and sets

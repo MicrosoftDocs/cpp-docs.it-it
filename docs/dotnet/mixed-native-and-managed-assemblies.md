@@ -1,7 +1,7 @@
 ---
 title: Assembly misti (nativi e gestiti) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -23,18 +23,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2a48f34edec8a9f24f22d35be482d3b297215dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ee94905bc4c40f6d080e34098e24bd71d495141
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210625"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494491"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assembly misti (nativi e gestiti)
 
-Assembly misti sono in grado di contenere istruzioni del computer non gestiti sia istruzioni MSIL. Ciò consente loro di e chiamate dai componenti di .NET, mantenendo la compatibilità con i componenti che non sono completamente gestiti. Usando gli assembly misti, gli sviluppatori potranno creare applicazioni usando una combinazione di funzionalità gestite e non gestite. In questo modo la soluzione ideale per la migrazione delle applicazioni Visual C++ esistente alla piattaforma .NET assembly misti.
+Assembly misti sono in grado di contenere istruzioni del computer non gestiti sia istruzioni MSIL. Ciò consente loro di e chiamate dai componenti di .NET, mantenendo la compatibilità con le librerie C++ native. Uso di assembly misti, gli sviluppatori potranno creare applicazioni usando una combinazione di codice C++ nativo e .NET.
 
-Ad esempio, un'applicazione esistente costituite interamente da funzioni non gestite possa la migrazione alla piattaforma .NET ricompilando semplicemente un modulo con il **/clr** opzione del compilatore. Questo modulo è quindi possibile utilizzare le funzionalità di .NET, ma resta compatibile con il resto dell'applicazione. In questo modo, un'applicazione può essere convertita per la piattaforma .NET in modo graduale, passo per passo. È anche possibile scegliere tra la compilazione e non gestita in modo da funzione all'interno dello stesso file (vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md)).
+Ad esempio, una libreria esistente costituite interamente da codice C++ nativo possibile la migrazione alla piattaforma .NET ricompilando semplicemente un modulo con il **/clr** opzione del compilatore. Questo modulo è quindi possibile utilizzare le funzionalità di .NET, ma resta compatibile con il resto dell'applicazione. È anche possibile scegliere tra la compilazione nativa e gestita in modo da funzione all'interno dello stesso file (vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md)).
 
 Visual C++ supporta solo la generazione di assembly misti gestiti usando il **/clr** opzione del compilatore. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017. Se è necessario puro o verificabile assembly gestiti, è consigliabile che crearle usando c#.
 

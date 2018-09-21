@@ -1,7 +1,7 @@
 ---
 title: -clr (Common Language Runtime Compilation) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dcd5739f2fb0663609ce7bcabc920cc3aa20d8e1
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703820"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494413"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilazione Common Language Runtime)
 
@@ -45,15 +45,15 @@ Una o più delle seguenti opzioni, delimitate da virgole.
 
 - none
 
-   Senza opzioni **/clr** crea i metadati per l'applicazione. I metadati possono essere usati da altre applicazioni CLR e l'applicazione può usare tipi e dati nei metadati di altri componenti CLR. Per altre informazioni, vedere [assembly misti (nativi e gestiti)](../../dotnet/mixed-native-and-managed-assemblies.md) e [procedura: migrare a /clr](../../dotnet/how-to-migrate-to-clr.md).
+   Senza opzioni **/clr** crea i metadati per l'applicazione. I metadati possono essere usati da altre applicazioni CLR e l'applicazione può usare tipi e dati nei metadati di altri componenti CLR. Per altre informazioni, vedere [assembly misti (nativi e gestiti)](../../dotnet/mixed-native-and-managed-assemblies.md).
 
 - **pure**
 
-   **/CLR: pure è deprecato**. Una versione futura del compilatore potrebbe non supportare questa opzione. È consigliabile convertire in C# il codice che deve essere MSIL pure.
+   **/CLR: pure è deprecato**. L'opzione è stata rimossa in Visual Studio 2017. È consigliabile convertire in C# il codice che deve essere MSIL pure.
 
 - **safe**
 
-   **/CLR: safe è deprecata**. Una versione futura del compilatore potrebbe non supportare questa opzione. È consigliabile convertire il codice che deve essere MSIL sicuro a c#.
+   **/CLR: safe è deprecata**. L'opzione è stata rimossa in Visual Studio 2017. È consigliabile convertire il codice che deve essere MSIL sicuro a c#.
 
 - **noAssembly**
 
@@ -112,31 +112,6 @@ class {} x;
 ```
 
 Usare ildasm.exe per visualizzare i metadati.
-
-## <a name="managed-extensions-for-c"></a>Estensioni gestite per C++
-
-Visual C++ non supporta più l'opzione **/clr:oldsyntax** . Questa opzione è stata deprecata in Visual Studio 2005. La sintassi supportata per la scrittura di codice gestito in C++ è C++/CLI. Per altre informazioni, vedere [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md).
-
-Se si dispone di codice che usa le estensioni gestite per C++, è consigliabile convertirlo per poter usare la sintassi C++/CLI. Per informazioni su come convertire il codice, vedere [C++/CLI Migration Primer](../../dotnet/cpp-cli-migration-primer.md).
-
-#### <a name="to-set-this-compiler-option-in-visual-studio"></a>Per impostare questa opzione del compilatore in Visual Studio
-
-1. In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Pagine delle proprietà** per visualizzare la finestra di dialogo corrispondente **del progetto**.
-
-1. Selezionare il **le proprietà di configurazione** > **generale** pagina delle proprietà.
-
-1. Modificare il **supporto Common Language Runtime** proprietà.
-
-   > [!NOTE]
-   > Quando l'opzione **/clr** è abilitata nella finestra di dialogo **Pagine delle proprietà** , vengono modificate nel modo necessario anche le proprietà delle opzioni del compilatore che non sono compatibili con **/clr** . Ad esempio se l'opzione **/RTC** è impostata e quindi si abilita l'opzione **/clr** , l'opzione **/RTC** viene disattivata.
-   >
-   >  Inoltre, quando si esegue il debug di un'applicazione **/clr** , impostare la proprietà **Tipo di debugger** su **Misto** o **Solo gestito**. Per altre informazioni, vedere [impostazioni di progetto per una configurazione di Debug C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).
-
-   Per informazioni su come creare un modulo, vedere [/NOASSEMBLY (Crea un modulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md).
-
-#### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
-
-- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>.
 
 ## <a name="see-also"></a>Vedere anche
 
