@@ -15,81 +15,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b3e828af6232dec6ebfb4558fdb8501c7f90abb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c43823f996bfe931499aa7bd08ad5f9207f102bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090581"
 ---
 # <a name="c-bit-fields"></a>Campi di bit C
-In aggiunta alle dichiarazioni dei membri di una struttura o di un'unione, un dichiaratore di struttura può anche essere un numero specificato di bit, definito campo di bit. Per il nome del campo, la lunghezza viene impostata all'esterno del dichiaratore tramite due punti. Un campo di bit viene interpretato come un tipo integrale.  
-  
+
+In aggiunta alle dichiarazioni dei membri di una struttura o di un'unione, un dichiaratore di struttura può anche essere un numero specificato di bit, definito campo di bit. Per il nome del campo, la lunghezza viene impostata all'esterno del dichiaratore tramite due punti. Un campo di bit viene interpretato come un tipo integrale.
+
 ## <a name="syntax"></a>Sintassi
 
 *struct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
-  
-L'elemento *constant-expression* specifica la lunghezza del campo in bit. L'elemento *type-specifier* per `declarator` deve essere `unsigned int`, **signed int** o `int` e l'elemento *constant-expression* deve essere un valore intero non negativo. Se il valore è zero, la dichiarazione non ha un elemento `declarator`. Matrici di campi di bit, puntatori a campi di bit e funzioni che restituiscono campi di bit non sono consentiti. L'elemento `declarator` facoltativo assegna il nome al campo di bit. I campi di bit possono essere dichiarati come parte di una struttura. L'operatore address-of (**&**) non può essere applicato ai componenti di un campo di bit.  
-  
-A campi di bit senza nome non si può fare riferimento e il relativo contenuto non è prevedibile in fase di esecuzione. I campi di bit possono essere utilizzati come campi fittizi per scopi di allineamento. Un campo di bit senza nome la cui lunghezza specificata è 0 garantisce che l'archiviazione per il membro successivo in *struct-declaration-list* inizi su un limite `int`.  
-  
-La lunghezza dei campi di bit deve anche essere sufficiente per contenere lo schema di bit. Le due istruzioni seguenti, ad esempio, non sono corrette:  
-  
-```  
-short a:17;        /* Illegal! */  
-int long y:33;     /* Illegal! */  
-```  
-  
-Questo esempio definisce una matrice bidimensionale di strutture denominata `screen`.  
-  
-```  
-struct   
-{  
-    unsigned short icon : 8;  
-    unsigned short color : 4;  
-    unsigned short underline : 1;  
-    unsigned short blink : 1;  
-} screen[25][80];  
-```  
-  
-La matrice contiene 2.000 elementi. Ogni elemento è un struttura individuale contenente quattro membri di tipo campo di bit: `icon`, `color`, `underline` e `blink`. La dimensione di ogni struttura è di due byte.  
-  
-I campi di bit hanno la stessa semantica dei tipi interi. Questo significa che un campo di bit è utilizzato nelle espressioni in modo analogo a come verrebbe utilizzata una variabile dello stesso tipo di base, indipendentemente al numero di bit presenti nel campo.  
-  
-**Sezione specifica Microsoft**  
-  
-Campi di bit definiti come `int` vengono trattati come interi con segno. Un'estensione Microsoft allo standard ANSI C consente i tipi `char` e **long** (sia **signed** che `unsigned`) per i campi di bit. I campi di bit senza nome con tipo di base **long**, **short** o `char` (**signed** o `unsigned`) forzano l'allineamento su un limite appropriato al tipo di base.  
-  
-I campi di bit sono allocati in un Integer dal bit meno significativo a quello più significativo. Nel codice riportato di seguito  
-  
-```  
-struct mybitfields  
-{  
-    unsigned short a : 4;  
-    unsigned short b : 5;  
-    unsigned short c : 7;  
-} test;  
-  
-int main( void );  
-{  
-    test.a = 2;  
-    test.b = 31;  
-    test.c = 0;  
-}  
-```  
-  
-i bit sono disposti come segue:  
-  
-```  
-00000001 11110010  
-cccccccb bbbbaaaa  
-```  
-  
-Dato che la famiglia di processori 8086 memorizza il byte basso dei valori interi prima di quello alto, il valore intero `0x01F2` precedente verrebbe memorizzato nella memoria fisica come `0xF2` seguito da `0x01`.  
-  
-**Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
+
+L'elemento *constant-expression* specifica la lunghezza del campo in bit. L'elemento *type-specifier* per `declarator` deve essere `unsigned int`, **signed int** o `int` e l'elemento *constant-expression* deve essere un valore intero non negativo. Se il valore è zero, la dichiarazione non ha un elemento `declarator`. Matrici di campi di bit, puntatori a campi di bit e funzioni che restituiscono campi di bit non sono consentiti. L'elemento `declarator` facoltativo assegna il nome al campo di bit. I campi di bit possono essere dichiarati come parte di una struttura. L'operatore address-of (**&**) non può essere applicato ai componenti di un campo di bit.
+
+A campi di bit senza nome non si può fare riferimento e il relativo contenuto non è prevedibile in fase di esecuzione. I campi di bit possono essere utilizzati come campi fittizi per scopi di allineamento. Un campo di bit senza nome la cui lunghezza specificata è 0 garantisce che l'archiviazione per il membro successivo in *struct-declaration-list* inizi su un limite `int`.
+
+La lunghezza dei campi di bit deve anche essere sufficiente per contenere lo schema di bit. Le due istruzioni seguenti, ad esempio, non sono corrette:
+
+```
+short a:17;        /* Illegal! */
+int long y:33;     /* Illegal! */
+```
+
+Questo esempio definisce una matrice bidimensionale di strutture denominata `screen`.
+
+```
+struct
+{
+    unsigned short icon : 8;
+    unsigned short color : 4;
+    unsigned short underline : 1;
+    unsigned short blink : 1;
+} screen[25][80];
+```
+
+La matrice contiene 2.000 elementi. Ogni elemento è un struttura individuale contenente quattro membri di tipo campo di bit: `icon`, `color`, `underline` e `blink`. La dimensione di ogni struttura è di due byte.
+
+I campi di bit hanno la stessa semantica dei tipi interi. Questo significa che un campo di bit è utilizzato nelle espressioni in modo analogo a come verrebbe utilizzata una variabile dello stesso tipo di base, indipendentemente al numero di bit presenti nel campo.
+
+**Sezione specifica Microsoft**
+
+Campi di bit definiti come `int` vengono trattati come interi con segno. Un'estensione Microsoft allo standard ANSI C consente i tipi `char` e **long** (sia **signed** che `unsigned`) per i campi di bit. I campi di bit senza nome con tipo di base **long**, **short** o `char` (**signed** o `unsigned`) forzano l'allineamento su un limite appropriato al tipo di base.
+
+I campi di bit sono allocati in un Integer dal bit meno significativo a quello più significativo. Nel codice riportato di seguito
+
+```
+struct mybitfields
+{
+    unsigned short a : 4;
+    unsigned short b : 5;
+    unsigned short c : 7;
+} test;
+
+int main( void );
+{
+    test.a = 2;
+    test.b = 31;
+    test.c = 0;
+}
+```
+
+i bit sono disposti come segue:
+
+```
+00000001 11110010
+cccccccb bbbbaaaa
+```
+
+Dato che la famiglia di processori 8086 memorizza il byte basso dei valori interi prima di quello alto, il valore intero `0x01F2` precedente verrebbe memorizzato nella memoria fisica come `0xF2` seguito da `0x01`.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
 [Dichiarazioni di struttura](../c-language/structure-declarations.md)

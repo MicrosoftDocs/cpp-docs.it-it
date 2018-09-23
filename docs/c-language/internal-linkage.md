@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b5703ca23a30cdb1d080e1dc379dabfc6c0df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09b5a02b7892bff0233e37bbd63020a4d2904ec3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094208"
 ---
 # <a name="internal-linkage"></a>Collegamento interno
-Se la dichiarazione di un identificatore di ambito file per un oggetto o una funzione contiene *storage-class-specifier* **static**, l'identificatore dispone di collegamento interno. In caso contrario, l'identificatore disporrà di collegamento esterno. Per la descrizione di [storage-class-specifier](../c-language/c-storage-classes.md) non terminale, vedere *Classi di archiviazione*.  
-  
- Nell'unità di conversione, ogni istanza di un identificatore con collegamento interno indica lo stesso identificatore o la stessa funzione. Gli identificatori collegati internamente sono specifici di un'unità di conversione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Uso di extern per specificare un collegamento](../cpp/using-extern-to-specify-linkage.md)
+
+Se la dichiarazione di un identificatore di ambito file per un oggetto o una funzione contiene *storage-class-specifier* **static**, l'identificatore dispone di collegamento interno. In caso contrario, l'identificatore disporrà di collegamento esterno. Per la descrizione di [storage-class-specifier](../c-language/c-storage-classes.md) non terminale, vedere *Classi di archiviazione*.
+
+Nell'unità di conversione, ogni istanza di un identificatore con collegamento interno indica lo stesso identificatore o la stessa funzione. Gli identificatori collegati internamente sono specifici di un'unità di conversione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Uso di extern per specificare un collegamento](../cpp/using-extern-to-specify-linkage.md)

@@ -19,31 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dac300f08a9b02ce6e9f4aec66618350b46af952
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0ff2a9ccec1dac6be41727b4a829bf4e63669f40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699647"
 ---
 # <a name="web-references-property-page"></a>Pagina delle proprietà Riferimenti Web
 La pagina delle proprietà **Riferimenti Web** specifica come sarà generata la classe proxy del servizio Web XML. Verrà generata una classe proxy del servizio Web XML se si aggiunge un riferimento Web al progetto.  
   
  La pagina delle proprietà **Riferimenti Web** include le proprietà seguenti:  
   
- **File di output**  
- Nome del file che include la classe proxy del servizio Web XML.  
+- **File di output**
+
+   Nome del file che include la classe proxy del servizio Web XML.  
   
- **Non visualizzare messaggio di avvio**  
- Non visualizza il messaggio per lo strumento del linguaggio di descrizione dei servizi Web (Wsdl.exe).  
+- **Non visualizzare messaggio di avvio**
+
+   Non visualizza il messaggio per lo strumento del linguaggio di descrizione dei servizi Web (Wsdl.exe).  
   
- **Spazio dei nomi**  
- Specifica il nome del proxy Web generato.  
+- **Spazio dei nomi**
+
+   Specifica il nome del proxy Web generato.  
   
- **Riferimenti aggiuntivi**  
- Specifica le DLL aggiuntive a cui fa riferimento la DLL proxy.  
+- **Riferimenti aggiuntivi**
+
+   Specifica le DLL aggiuntive a cui fa riferimento la DLL proxy.  
   
- Per informazioni sull'accesso alla pagina delle proprietà **Riferimenti Web**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
+Per informazioni sull'accesso alla pagina delle proprietà **Riferimenti Web**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)

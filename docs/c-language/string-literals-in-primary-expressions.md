@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fd8c73bb9dac5a26c62b86bdc4038bd26a0829
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 818284a0eabce779d9f52e8fe7b3af4cc1d8df4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095528"
 ---
 # <a name="string-literals-in-primary-expressions"></a>Valori letterali stringa in espressioni primarie
-Un "valore letterale stringa" è un carattere, un carattere di tipo wide o una sequenza di caratteri adiacenti racchiusi tra virgolette doppie. Poiché non sono variabili, né i valori letterali stringa né i relativi elementi possono essere l'operando di sinistra in un'operazione di assegnazione. Il tipo di valore letterale stringa è una matrice di `char` (o una matrice di `wchar_t` per i valori letterali di tipo wide-string). Le matrici nelle espressioni vengono convertite in puntatori. Per altre informazioni sulle stringhe, vedere [Valori letterali stringa](../c-language/c-string-literals.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Espressioni primarie C](../c-language/c-primary-expressions.md)
+
+Un "valore letterale stringa" è un carattere, un carattere di tipo wide o una sequenza di caratteri adiacenti racchiusi tra virgolette doppie. Poiché non sono variabili, né i valori letterali stringa né i relativi elementi possono essere l'operando di sinistra in un'operazione di assegnazione. Il tipo di valore letterale stringa è una matrice di `char` (o una matrice di `wchar_t` per i valori letterali di tipo wide-string). Le matrici nelle espressioni vengono convertite in puntatori. Per altre informazioni sulle stringhe, vedere [Valori letterali stringa](../c-language/c-string-literals.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Espressioni primarie C](../c-language/c-primary-expressions.md)

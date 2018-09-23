@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e57a80a1550cc6147ce29894996183cce8f5ff99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b30700b52e7cbbbc295d6050b03283b4b45a0b08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103815"
 ---
 # <a name="truncation-of-floating-point-values"></a>Troncamento di valori a virgola mobile
-**ANSI 3.2.1.4** Direzione di troncamento o di arrotondamento quando un numero a virgola mobile viene convertito in un numero a virgola mobile più stretto  
-  
- Quando si verifica un underflow, il valore di una variabile a virgola mobile viene arrotondato per difetto a zero. Un overflow può provocare un errore di runtime o può restituire un valore imprevisto, a seconda delle ottimizzazioni specificate.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Matematica a virgola mobile](../c-language/floating-point-math.md)
+
+**ANSI 3.2.1.4** Direzione di troncamento o di arrotondamento quando un numero a virgola mobile viene convertito in un numero a virgola mobile più stretto
+
+Quando si verifica un underflow, il valore di una variabile a virgola mobile viene arrotondato per difetto a zero. Un overflow può provocare un errore di runtime o può restituire un valore imprevisto, a seconda delle ottimizzazioni specificate.
+
+## <a name="see-also"></a>Vedere anche
+
+[Matematica a virgola mobile](../c-language/floating-point-math.md)

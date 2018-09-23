@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324035"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715468"
 ---
 # <a name="general-property-page-file"></a>Pagina delle proprietà Generale (File)
 
 Quando si seleziona un file in **Esplora soluzioni**, la pagina delle proprietà **Generale** nel nodo **Proprietà di configurazione** contiene le proprietà seguenti:
 
-**Escluso dalla compilazione**  
-Specifica se il file deve essere incluso nella compilazione per la configurazione corrente.
+- **Escluso dalla compilazione**
 
-Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
+   Specifica se il file deve essere incluso nella compilazione per la configurazione corrente.
 
-**Strumento**  
-Lo strumento che verrà usato per generare questo file. Vedere [Specifica di strumenti di compilazione personalizzata](../ide/specifying-custom-build-tools.md) per altre informazioni.
+   Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+- **Strumento**
+
+   Lo strumento che verrà usato per generare questo file. Vedere [Specifica di strumenti di compilazione personalizzata](../ide/specifying-custom-build-tools.md) per altre informazioni.
+
+   Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
 Per informazioni sull'accesso alla pagina delle proprietà **Generale** nel nodo **Proprietà di configurazione**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).
 

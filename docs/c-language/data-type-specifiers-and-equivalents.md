@@ -22,40 +22,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7380fa654ba7e886800d784966b77cb8c9d1dab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68444d5ac8944e3c6679fce6397226d48206037f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092726"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Identificatori ed equivalenti di tipi di dati
-In questa documentazione vengono utilizzati in genere i formati degli identificatori di tipo elencati nella tabella seguente anziché i formati estesi e si presuppone che il tipo `char` sia signed per impostazione predefinita. Di conseguenza, in questa documentazione `char` equivale a **signed char**.  
-  
-### <a name="type-specifiers-and-equivalents"></a>Identificatori di tipo ed elementi equivalenti  
-  
-|Identificatore di tipo|Elemento o elementi equivalenti|  
-|--------------------|---------------------|  
-|**signed char**1|**char**|  
-|**signed int**|**signed**, **int**|  
-|**signed short int**|**short**, **signed short**|  
-|**signed long int**|**long**, **signed long**|  
-|**unsigned char**|—|  
-|**unsigned int**|**unsigned**|  
-|**unsigned short int**|**unsigned short**|  
-|**unsigned long int**|**unsigned long**|  
-|**float**|—|  
-|**long double**2|—|  
-  
- 1   Quando si crea il tipo **char** senza segno per impostazione predefinita (specificando l'opzione del compilatore /J), non è possibile abbreviare **signed char** come **char**.  
-  
- 2   In sistemi operativi a 32 bit e a 64 bit il compilatore C Microsoft esegue il mapping di **long double** al tipo **double**.  
-  
- **Sezione specifica Microsoft**  
-  
- È possibile specificare l'opzione del compilatore /J per modificare il tipo predefinito **char** con segno in senza segno. Quando viene applicata questa opzione, **char** equivale a **unsigned char** ed è necessario usare la parola chiave **signed** per dichiarare un valore di carattere con segno. Se un valore **char** viene dichiarato esplicitamente, l'opzione /J non ha effetto e il valore assume la forma con segno quando esteso a un tipo **int**. Il tipo **char** viene esteso in base a zero quando esteso al tipo **int**.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Identificatori di tipi C](../c-language/c-type-specifiers.md)
+
+In questa documentazione vengono utilizzati in genere i formati degli identificatori di tipo elencati nella tabella seguente anziché i formati estesi e si presuppone che il tipo `char` sia signed per impostazione predefinita. Di conseguenza, in questa documentazione `char` equivale a **signed char**.
+
+### <a name="type-specifiers-and-equivalents"></a>Identificatori di tipo ed elementi equivalenti
+
+|Identificatore di tipo|Elemento o elementi equivalenti|
+|--------------------|---------------------|
+|**signed char**1|**char**|
+|**signed int**|**signed**, **int**|
+|**signed short int**|**short**, **signed short**|
+|**signed long int**|**long**, **signed long**|
+|**unsigned char**|—|
+|**unsigned int**|**unsigned**|
+|**unsigned short int**|**unsigned short**|
+|**unsigned long int**|**unsigned long**|
+|**float**|—|
+|**long double**2|—|
+
+1   Quando si crea il tipo **char** senza segno per impostazione predefinita (specificando l'opzione del compilatore /J), non è possibile abbreviare **signed char** come **char**.
+
+2   In sistemi operativi a 32 bit e a 64 bit il compilatore C Microsoft esegue il mapping di **long double** al tipo **double**.
+
+**Sezione specifica Microsoft**
+
+È possibile specificare l'opzione del compilatore /J per modificare il tipo predefinito **char** con segno in senza segno. Quando viene applicata questa opzione, **char** equivale a **unsigned char** ed è necessario usare la parola chiave **signed** per dichiarare un valore di carattere con segno. Se un valore **char** viene dichiarato esplicitamente, l'opzione /J non ha effetto e il valore assume la forma con segno quando esteso a un tipo **int**. Il tipo **char** viene esteso in base a zero quando esteso al tipo **int**.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Identificatori di tipi C](../c-language/c-type-specifiers.md)

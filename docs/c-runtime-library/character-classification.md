@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101345"
 ---
 # <a name="character-classification"></a>Classificazione di caratteri
 
 Ognuna di queste routine verifica una specifico carattere a byte singolo, un carattere wide o un carattere multibyte per soddisfare una condizione. Per definizione, il set di caratteri ASCII tra 0 e 127 è un sottoinsieme di tutti i caratteri multibyte. Ad esempio, il giapponese katakana comprende caratteri ASCII e non ASCII.
 
- Le condizioni di verifica interessano l'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Per altre informazioni, vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali.
+Le condizioni di verifica interessano l'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Per altre informazioni, vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali.
 
- In genere queste routine hanno una maggiore velocità di esecuzione rispetto alle routine di test che si potrebbero scrivere e devono essere favorite rispetto a queste ultime. Ad esempio, il codice seguente viene eseguito più lentamente rispetto a una chiamata a `isalpha(c)`:
+In genere queste routine hanno una maggiore velocità di esecuzione rispetto alle routine di test che si potrebbero scrivere e devono essere favorite rispetto a queste ultime. Ad esempio, il codice seguente viene eseguito più lentamente rispetto a una chiamata a `isalpha(c)`:
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))

@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f258740c32cf232c93926efb3efa98e2596ff108
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eafccc1a2dda9143a39516878851f2c3a62a2d32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103334"
 ---
 # <a name="file-position-in-append-mode"></a>Percorso del file in modalità Append
-**ANSI 4.9.3** Se l'indicatore di posizione del file di un flusso della modalità di aggiunta è inizialmente posizionato all'inizio o fine del file  
-  
- Quando un file viene aperto in modalità di aggiunta, l'indicatore di posizione del file punta inizialmente alla fine del file.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni della libreria](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Se l'indicatore di posizione del file di un flusso della modalità di aggiunta è inizialmente posizionato all'inizio o fine del file
+
+Quando un file viene aperto in modalità di aggiunta, l'indicatore di posizione del file punta inizialmente alla fine del file.
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni della libreria](../c-language/library-functions.md)

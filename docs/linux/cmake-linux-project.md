@@ -15,16 +15,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900512"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708006"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurare un progetto CMake per Linux
 
-**Visual Studio 2017 versione 15.4 e successive**  
+**Visual Studio 2017 versione 15.4 e successive**<br/>
 Quando si installa il carico di lavoro Linux C++ per Visual Studio, il supporto CMake per Linux è selezionato per impostazione predefinita. È ora possibile lavorare sulla base di codice esistente che usa CMake senza la necessità di convertirlo in un progetto di Visual Studio. Se il codebase è multipiattaforma, è possibile scegliere sia Windows che Linux da Visual Studio.
 
 Questo argomento presuppone una familiarità di base con il supporto CMake in Visual Studio. Per altre informazioni, vedere [CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md) (Strumenti CMake per Visual C++). Per altre informazioni su CMake, vedere [Build, Test and Package Your Software With CMake](https://cmake.org/) (Compilare e testare il software e includerlo in un pacchetto con CMake).
@@ -65,7 +65,7 @@ Dopo avere specificato una destinazione Linux, l'origine viene copiata nel compu
 
 ![Generare la cache CMake in Linux](media/cmake-linux-1.png "Generare la cache CMake in Linux")
 
-**Visual Studio 2017 versione 15.7 e successive:**  
+**Visual Studio 2017 versione 15.7 e successive:**<br/>
 Per rendere disponibile il supporto IntelliSense per le intestazioni remote, Visual Studio le copia automaticamente in una directory nel computer Windows locale. Per altre informazioni, vedere [IntelliSense per le intestazioni remote](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Eseguire il debug del progetto

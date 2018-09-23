@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baddd548eddbcc46f5eb9005c54a4cc2530a6e79
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1d0c745af234b62d562e7e57e4c20a9e57a4a6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044873"
 ---
 # <a name="null-characters"></a>Caratteri Null
-**ANSI 4.9.2** Il numero di caratteri null che è possibile associare ai dati scritti in un flusso binario  
-  
- Qualsiasi numero di caratteri null che è possibile associare a un flusso binario.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni della libreria](../c-language/library-functions.md)
+
+**ANSI 4.9.2** Il numero di caratteri null che è possibile associare ai dati scritti in un flusso binario
+
+Qualsiasi numero di caratteri null che è possibile associare a un flusso binario.
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni della libreria](../c-language/library-functions.md)

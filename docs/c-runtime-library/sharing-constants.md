@@ -30,38 +30,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41060a9dbd3d2bc8176a2b13233db54933a6428b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05226ffcc5a10785391969f8162a76034efc4d92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409703"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097304"
 ---
 # <a name="sharing-constants"></a>Condivisione costanti
-Costanti per le modalità di condivisione file.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-#include <share.h>  
-  
-```  
-  
-## <a name="remarks"></a>Note  
- L'argomento *shflag* determina la modalità di condivisione, che consiste in una o più costanti manifesto. Queste possono essere combinate con gli argomenti *oflag*. Vedere [Costanti di file](../c-runtime-library/file-constants.md).  
-  
- Nella tabella seguente sono elencate le costanti e i relativi significati:  
-  
-|Costante|Significato|  
-|--------------|-------------|  
-|`_SH_DENYRW`|Nega l'accesso in lettura e scrittura al file.|  
-|`_SH_DENYWR`|Nega l'accesso in scrittura al file|  
-|`_SH_DENYRD`|Nega l'accesso in lettura al file|  
-|`_SH_DENYNO`|Consente l'accesso in lettura e scrittura|  
-|`_SH_SECURE`|Imposta la modalità protetta (accesso in lettura condivisa e scrittura esclusiva).|  
-  
-## <a name="see-also"></a>Vedere anche  
- [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
- [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
- [Costanti globali](../c-runtime-library/global-constants.md)
+
+Costanti per le modalità di condivisione file.
+
+## <a name="syntax"></a>Sintassi
+
+```
+
+#include <share.h>
+
+```
+
+## <a name="remarks"></a>Note
+
+L'argomento *shflag* determina la modalità di condivisione, che consiste in una o più costanti manifesto. Queste possono essere combinate con gli argomenti *oflag*. Vedere [Costanti di file](../c-runtime-library/file-constants.md).
+
+Nella tabella seguente sono elencate le costanti e i relativi significati:
+
+|Costante|Significato|
+|--------------|-------------|
+|`_SH_DENYRW`|Nega l'accesso in lettura e scrittura al file.|
+|`_SH_DENYWR`|Nega l'accesso in scrittura al file|
+|`_SH_DENYRD`|Nega l'accesso in lettura al file|
+|`_SH_DENYNO`|Consente l'accesso in lettura e scrittura|
+|`_SH_SECURE`|Imposta la modalità protetta (accesso in lettura condivisa e scrittura esclusiva).|
+
+## <a name="see-also"></a>Vedere anche
+
+[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
+[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>
+[Costanti globali](../c-runtime-library/global-constants.md)

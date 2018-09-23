@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31914118283c9d0c5c502e3426ba12e86d7c7680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff4e032e205680da84369075514e3177fa5fb33e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385169"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051022"
 ---
 # <a name="simple-assignment-c"></a>Assegnazione semplice (C)
-L'operatore di assegnazione semplice assegna l'operando destro all'operando sinistro. Il valore dell'operando destro è convertito nel tipo dell'espressione di assegnazione e sostituisce il valore archiviato nell'oggetto definito dall'operando sinistro. Si applicano le regole di conversione per l'assegnazione. Vedere [Conversioni di assegnazione](../c-language/assignment-conversions.md).  
-  
-```  
-double x;  
-int y;  
-  
-x = y;  
-```  
-  
- In questo esempio, il valore di `y` viene convertito nel tipo **double** e viene assegnato a `x`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Operatori di assegnazione C](../c-language/c-assignment-operators.md)
+
+L'operatore di assegnazione semplice assegna l'operando destro all'operando sinistro. Il valore dell'operando destro è convertito nel tipo dell'espressione di assegnazione e sostituisce il valore archiviato nell'oggetto definito dall'operando sinistro. Si applicano le regole di conversione per l'assegnazione. Vedere [Conversioni di assegnazione](../c-language/assignment-conversions.md).
+
+```
+double x;
+int y;
+
+x = y;
+```
+
+In questo esempio, il valore di `y` viene convertito nel tipo **double** e viene assegnato a `x`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Operatori di assegnazione C](../c-language/c-assignment-operators.md)

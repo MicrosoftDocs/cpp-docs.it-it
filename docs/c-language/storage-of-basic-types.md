@@ -31,29 +31,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafe81dc684300cb7fdf65137c2f7e45010285b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14c8483671e806adb9170429f2e17d4487de0cfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388115"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090490"
 ---
 # <a name="storage-of-basic-types"></a>Archiviazione di tipi di base
-Nella tabella seguente viene riepilogata l'archiviazione associata a ogni tipo di base.  
-  
-### <a name="sizes-of-fundamental-types"></a>Dimensioni dei tipi fondamentali  
-  
-|Tipo|Archiviazione|  
-|----------|-------------|  
-|`char`, `unsigned char`, **signed char**|1 byte|  
-|**short**, **unsigned short**|2 byte|  
-|`int`, `unsigned int`|4 byte|  
-|**long**, `unsigned long`|4 byte|  
-|**float**|4 byte|  
-|**double**|8 byte|  
-|`long double`|8 byte|  
-  
- I tipi di dati C possono essere suddivisi in categorie generali. I "tipi integrali" sono `char`, `int`, **short**, **long**, **signed**, `unsigned` e `enum`. I "tipi a virgola mobile" sono **float**, **double** e `long double`. I "tipi aritmetici" sono tutti i tipi a virgola mobile e integrali.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Dichiarazioni e tipi](../c-language/declarations-and-types.md)
+
+Nella tabella seguente viene riepilogata l'archiviazione associata a ogni tipo di base.
+
+### <a name="sizes-of-fundamental-types"></a>Dimensioni dei tipi fondamentali
+
+|Tipo|Archiviazione|
+|----------|-------------|
+|`char`, `unsigned char`, **signed char**|1 byte|
+|**short**, **unsigned short**|2 byte|
+|`int`, `unsigned int`|4 byte|
+|**long**, `unsigned long`|4 byte|
+|**float**|4 byte|
+|**double**|8 byte|
+|`long double`|8 byte|
+
+I tipi di dati C possono essere suddivisi in categorie generali. I "tipi integrali" sono `char`, `int`, **short**, **long**, **signed**, `unsigned` e `enum`. I "tipi a virgola mobile" sono **float**, **double** e `long double`. I "tipi aritmetici" sono tutti i tipi a virgola mobile e integrali.
+
+## <a name="see-also"></a>Vedere anche
+
+[Dichiarazioni e tipi](../c-language/declarations-and-types.md)

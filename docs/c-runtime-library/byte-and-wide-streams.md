@@ -17,20 +17,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de026c8887e19e76bbce533db8997193679d1371
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e031aa0ebbad279c630f2687457af11dc478b72d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095833"
 ---
 # <a name="byte-and-wide-streams"></a>Flussi di byte e "wide"
-Un flusso di byte considera un file come una sequenza di byte. All'interno del programma il flusso è una sequenza di byte identici.  
-  
- Per contro un flusso wide gestisce un file come sequenza di caratteri multibyte generici, che possono includere un'ampia gamma di regole di codifica. I file binari e di testo vengono comunque letti e scritti come illustrato in precedenza. All'interno del programma il flusso ha l'aspetto della sequenza di caratteri wide corrispondente. Le conversioni tra le due rappresentazioni si verificano all'interno della libreria C standard. In linea di principio le regole di conversione possono essere modificate da una chiamata a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) che modifica `LC_CTYPE` della categoria. Ogni flusso wide determina le proprie regole di conversione quando si orienta su wide e mantiene queste regole anche se il tipo `LC_CTYPE` della categoria cambia in un secondo tempo.  
-  
- Il posizionamento in un flusso wide ha le stesse limitazioni valide per un flusso di testo. È anche possibile che l'indicatore file-position si trovi a gestire una codifica dipendente dallo stato. In genere questa include sia un offset di byte nel flusso sia un oggetto di tipo `mbstate_t`. Di conseguenza l'unico modo affidabile per ottenere una posizione di file all'interno di un flusso di caratteri wide è la chiamata di [fgetpos](../c-runtime-library/reference/fgetpos.md) e l'unico modo affidabile per ripristinare una posizione ottenuta in questo modo è la chiamata di [fsetpos](../c-runtime-library/reference/fsetpos.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [File e flussi](../c-runtime-library/files-and-streams.md)   
- [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+Un flusso di byte considera un file come una sequenza di byte. All'interno del programma il flusso è una sequenza di byte identici.
+
+Per contro un flusso wide gestisce un file come sequenza di caratteri multibyte generici, che possono includere un'ampia gamma di regole di codifica. I file binari e di testo vengono comunque letti e scritti come illustrato in precedenza. All'interno del programma il flusso ha l'aspetto della sequenza di caratteri wide corrispondente. Le conversioni tra le due rappresentazioni si verificano all'interno della libreria C standard. In linea di principio le regole di conversione possono essere modificate da una chiamata a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) che modifica `LC_CTYPE` della categoria. Ogni flusso wide determina le proprie regole di conversione quando si orienta su wide e mantiene queste regole anche se il tipo `LC_CTYPE` della categoria cambia in un secondo tempo.
+
+Il posizionamento in un flusso wide ha le stesse limitazioni valide per un flusso di testo. È anche possibile che l'indicatore file-position si trovi a gestire una codifica dipendente dallo stato. In genere questa include sia un offset di byte nel flusso sia un oggetto di tipo `mbstate_t`. Di conseguenza l'unico modo affidabile per ottenere una posizione di file all'interno di un flusso di caratteri wide è la chiamata di [fgetpos](../c-runtime-library/reference/fgetpos.md) e l'unico modo affidabile per ripristinare una posizione ottenuta in questo modo è la chiamata di [fsetpos](../c-runtime-library/reference/fsetpos.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[File e flussi](../c-runtime-library/files-and-streams.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1438b364dac817fe2dbe47f117d672165a7693d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336108"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722449"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Aggiunta di riferimenti nei progetti Visual C++
 È molto comune per i programmi chiamare nelle API in altri file binari, ad esempio DLL, i componenti Windows Runtime, gli SDK di estensione, i componenti COM e gli assembly .NET. Il modo in cui il programma rileva questi altri file binari dipende dal tipo di progetto e dal tipo del file binario.  
@@ -43,83 +43,105 @@ ms.locfileid: "33336108"
 ### <a name="activex-reference-properties"></a>Proprietà dei riferimenti ActiveX  
  Le proprietà dei riferimenti ActiveX sono disponibili solo per i riferimenti ai componenti COM. Queste proprietà vengono visualizzate solo quando è selezionato un componente COM nel riquadro **Riferimenti** . Non è possibile modificare le proprietà.  
   
- **Percorso completo controllo**  
- Visualizza il percorso della directory del controllo a cui si fa riferimento.  
+- **Percorso completo controllo**
+
+   Visualizza il percorso della directory del controllo a cui si fa riferimento.  
   
- **GUID controllo**  
- Visualizza il GUID del controllo ActiveX.  
+- **GUID controllo**
+
+   Visualizza il GUID del controllo ActiveX.  
   
- **Versione controllo**  
- Visualizza la versione del controllo ActiveX a cui si fa riferimento.  
+- **Versione controllo**
+
+   Visualizza la versione del controllo ActiveX a cui si fa riferimento.  
   
- **Nome libreria dei tipi**  
- Visualizza il nome della libreria dei tipi di riferimento.  
+- **Nome libreria dei tipi**
+
+   Visualizza il nome della libreria dei tipi di riferimento.  
   
- **Strumento Wrapper**  
- Visualizza lo strumento usato per compilare l'assembly di interoperabilità dalla libreria COM a cui fa riferimento o dal controllo ActiveX.  
+- **Strumento Wrapper**
+
+   Visualizza lo strumento usato per compilare l'assembly di interoperabilità dalla libreria COM a cui fa riferimento o dal controllo ActiveX.  
   
 ### <a name="assembly-reference-properties"></a>Proprietà riferimento ad assembly  
  Le proprietà di riferimento ad assembly sono disponibili solo per i riferimenti agli assembly .NET Framework in progetti C++/CLI. Queste proprietà vengono visualizzate solo quando è selezionato un assembly .NET Framework nel riquadro **Riferimenti**. Non è possibile modificare le proprietà.  
   
- **Percorso relativo**  
- Visualizza il percorso relativo della directory del progetto per l'assembly di riferimento.  
+- **Percorso relativo**
+
+   Visualizza il percorso relativo della directory del progetto per l'assembly di riferimento.  
   
 ### <a name="build-properties"></a>Proprietà di compilazione  
  Sono disponibili le proprietà seguenti su vari tipi di riferimenti. Esse consentono di specificare la modalità di compilazione con riferimenti.  
   
- **Copia localmente**  
- Specifica se copiare automaticamente l'assembly di riferimento nel percorso di destinazione durante una compilazione.  
+- **Copia localmente**
+
+   Specifica se copiare automaticamente l'assembly di riferimento nel percorso di destinazione durante una compilazione.  
   
- **Copia assembly satellite locale**  
- Specifica se copiare automaticamente gli assembly satellite dell'assembly di riferimento nel percorso di destinazione durante una compilazione. Usato solo se **Copia localmente** è impostato su `true`.  
+- **Copia assembly satellite locale**
+
+   Specifica se copiare automaticamente gli assembly satellite dell'assembly di riferimento nel percorso di destinazione durante una compilazione. Usato solo se **Copia localmente** è impostato su `true`.  
   
- **Output assembly di riferimento**  
- Specifica se l'assembly viene usato nel processo di compilazione. Se impostato su `true`, l'assembly verrà usato nella riga di comando del compilatore durante la compilazione.  
+- **Output assembly di riferimento**
+
+   Specifica se l'assembly viene usato nel processo di compilazione. Se impostato su `true`, l'assembly verrà usato nella riga di comando del compilatore durante la compilazione.  
   
 ### <a name="project-to-project-reference-properties"></a>Proprietà riferimento da progetto a progetto  
  Le proprietà seguenti definiscono un *riferimento da progetto a progetto* dal progetto selezionato nel riquadro **Riferimenti** a un altro progetto nella stessa soluzione. Per altre informazioni, vedere [Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project).  
   
- **Collega dipendenze di libreria**  
- Quando questa proprietà è impostata su **True**, il sistema del progetto collega al progetto dipendente i file con estensione LIB generati dal progetto indipendente. In genere, si specificherà l'impostazione **True**.  
+- **Collega dipendenze di libreria**
+
+   Quando questa proprietà è impostata su **True**, il sistema del progetto collega al progetto dipendente i file con estensione LIB generati dal progetto indipendente. In genere, si specificherà l'impostazione **True**.  
   
- **Identificatore di progetto**  
- Identifica in modo univoco il progetto indipendente. Il valore della proprietà è un GUID di sistema interno che non può essere modificato.  
+- **Identificatore di progetto**
+
+   Identifica in modo univoco il progetto indipendente. Il valore della proprietà è un GUID di sistema interno che non può essere modificato.  
   
- **Usa input dipendenze di libreria**  
- Quando questa proprietà è impostata su **False**, il sistema del progetto non collegherà al progetto dipendente i file con estensione OBJ generati dal progetto indipendente. Di conseguenza, questo valore disattiva il collegamento incrementale. In genere, si specificherà l'impostazione **False** perché la compilazione dell'applicazione può richiedere lungo tempo se sono presenti numerosi progetti indipendenti.  
+- **Usa input dipendenze di libreria**
+
+   Quando questa proprietà è impostata su **False**, il sistema del progetto non collegherà al progetto dipendente i file con estensione OBJ generati dal progetto indipendente. Di conseguenza, questo valore disattiva il collegamento incrementale. In genere, si specificherà l'impostazione **False** perché la compilazione dell'applicazione può richiedere lungo tempo se sono presenti numerosi progetti indipendenti.  
   
 ### <a name="reference-properties"></a>Proprietà riferimento  
  Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non possono essere modificate.  
   
- **Nome assembly**  
- Visualizza il nome dell'assembly per l'assembly di riferimento.  
+- **Nome assembly**
+
+   Visualizza il nome dell'assembly per l'assembly di riferimento.  
   
- **Impostazioni cultura**  
- Ottiene le impostazioni cultura del riferimento selezionato.  
+- **Impostazioni cultura**
+
+   Ottiene le impostazioni cultura del riferimento selezionato.  
   
- **Descrizione**  
- Ottiene la descrizione del riferimento selezionato.  
+- **Descrizione**
+
+   Ottiene la descrizione del riferimento selezionato.  
   
- **Percorso completo**  
- Visualizza il percorso della directory dell'assembly di riferimento.  
+- **Percorso completo**
+
+   Visualizza il percorso della directory dell'assembly di riferimento.  
   
- **Identità**  
- Per gli assembly .NET Framework, viene visualizzato il percorso completo. Per i componenti COM, viene visualizzato il GUID.  
+- **Identità**
+
+   Per gli assembly .NET Framework, viene visualizzato il percorso completo. Per i componenti COM, viene visualizzato il GUID.  
   
- **Etichetta**  
- Visualizza l'etichetta del riferimento.  
+- **Etichetta**
+
+   Visualizza l'etichetta del riferimento.  
   
- **Name**  
- Visualizza il nome del riferimento.  
+- **Name**
+
+   Visualizza il nome del riferimento.  
   
- **Token di chiave pubblica**  
- Visualizza il token di chiave pubblica usato per identificare l'assembly di riferimento.  
+- **Token di chiave pubblica**
+
+   Visualizza il token di chiave pubblica usato per identificare l'assembly di riferimento.  
   
- **Nome sicuro**  
- Impostato su `true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.  
+- **Nome sicuro**
+
+   Impostato su `true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.  
   
- **Version**  
- Visualizza la versione dell'assembly di riferimento.  
+- **Version**
+
+   Visualizza la versione dell'assembly di riferimento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   

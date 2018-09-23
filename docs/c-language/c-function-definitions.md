@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cbfc7e7bd6a3f2ef727a0cc259f222afad0ab555
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055234"
 ---
 # <a name="c-function-definitions"></a>Definizioni di funzioni C
+
 Una definizione di funzione specifica il nome della funzione, i tipi e il numero di parametri che prevede di ricevere e il relativo tipo restituito. Una definizione di funzione include inoltre un corpo della funzione con le dichiarazioni delle variabili locali e le istruzioni che determinano ciò che svolge la funzione.
 
 ## <a name="syntax"></a>Sintassi
@@ -103,4 +104,5 @@ Un elemento *declaration* in *declaration-list* nelle definizioni di funzione no
 Le sezioni [Attributi di funzioni](../c-language/function-attributes.md), [Classi di archiviazione](../c-language/storage-class.md), [Tipo restituito](../c-language/return-type.md), [Parametri](../c-language/parameters.md) e [Corpo della funzione](../c-language/function-body.md) descrivono in dettaglio i componenti della definizione della funzione.
 
 ## <a name="see-also"></a>Vedere anche
+
 [Funzioni](../c-language/functions-c.md)

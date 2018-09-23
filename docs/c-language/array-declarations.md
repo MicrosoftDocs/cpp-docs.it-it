@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091913"
 ---
 # <a name="array-declarations"></a>Dichiarazioni di matrice
 
@@ -48,9 +48,9 @@ Una "dichiarazione di matrice" denomina la matrice e specifica il tipo dei relat
 
 Dato che *constant-expression* è un elemento facoltativo, la sintassi presenta due formati:
 
--   Il primo formato definisce una variabile di matrice. L'argomento *constant-expression* all'interno delle parentesi specifica il numero di elementi presenti nella matrice. *constant-expression*, se presente, deve avere il tipo integrale e un valore superiore a zero. Ogni elemento presenta il tipo specificato da *type-specifier*, che può essere qualsiasi tipo tranne `void`. Un elemento di matrice non può essere un tipo di funzione.
+- Il primo formato definisce una variabile di matrice. L'argomento *constant-expression* all'interno delle parentesi specifica il numero di elementi presenti nella matrice. *constant-expression*, se presente, deve avere il tipo integrale e un valore superiore a zero. Ogni elemento presenta il tipo specificato da *type-specifier*, che può essere qualsiasi tipo tranne `void`. Un elemento di matrice non può essere un tipo di funzione.
 
--   Il secondo formato dichiara una variabile definita altrove. Omette l'argomento *constant-expression* tra parentesi quadre, ma non le parentesi. È possibile utilizzare questo formato solo se in precedenza la matrice è stata inizializzata, quindi è stata dichiarata come parametro o come riferimento a una matrice definita in modo esplicito in altre parti del programma.
+- Il secondo formato dichiara una variabile definita altrove. Omette l'argomento *constant-expression* tra parentesi quadre, ma non le parentesi. È possibile utilizzare questo formato solo se in precedenza la matrice è stata inizializzata, quindi è stata dichiarata come parametro o come riferimento a una matrice definita in modo esplicito in altre parti del programma.
 
 In entrambi i formati *direct-declarator* denomina la variabile e può modificare il tipo di variabile. Le parentesi quadre (**[ ]**) che seguono *direct-declarator* modificano il dichiaratore in un tipo di matrice.
 
@@ -75,6 +75,7 @@ Le tre colonne della prima riga vengono archiviate per prime, seguite dalle tre 
 Per fare riferimento a un singolo elemento di matrice usare un'espressione di indice, come descritto nell'argomento [Operatori di suffisso](../c-language/postfix-operators.md).
 
 ## <a name="examples"></a>Esempi
+
 In questi esempi sono illustrate le dichiarazioni di matrici:
 
 ```C

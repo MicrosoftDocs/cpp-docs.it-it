@@ -18,30 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e13d56891c5df2c17234a434da9890842bfc54ce
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 74c95c8e8364630416025242633126f91cafbc30
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329943"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699934"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>Strumento generatore di dati XML (pagina delle proprietà)
 La pagina delle proprietà **Strumento generatore di dati XML** diventa disponibile quando si aggiunge un set di dati a un progetto.  
   
- La pagina delle proprietà **Strumento generatore di dati XML** include le proprietà seguenti:  
+La pagina delle proprietà **Strumento generatore di dati XML** include le proprietà seguenti:  
   
- **File di output**  
- Specifica il nome file di output da usare.  
+- **File di output**
+
+   Specifica il nome file di output da usare.  
   
- **Non visualizzare messaggio di avvio**  
- Consente di non visualizzare il messaggio di avvio e i messaggi informativi.  
+- **Non visualizzare messaggio di avvio**
+
+   Consente di non visualizzare il messaggio di avvio e i messaggi informativi.  
   
- **Linguaggio del proxy generato**  
- Determina se creare o meno il codice gestito.  
+- **Linguaggio del proxy generato**
+
+   Determina se creare o meno il codice gestito.  
   
- Per informazioni sull'accesso alla pagina delle proprietà **Strumento generatore di dati XML**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
+Per informazioni sull'accesso alla pagina delle proprietà **Strumento generatore di dati XML**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   
- Per informazioni su come accedere a livello di codice ai membri di questo oggetto, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
+Per informazioni su come accedere a livello di codice ai membri di questo oggetto, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)

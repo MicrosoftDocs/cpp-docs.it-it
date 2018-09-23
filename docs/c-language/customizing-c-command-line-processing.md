@@ -22,19 +22,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824de86ec0930fb93bf5fa0a2a8ac15a4237e4fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 541cfed194262aa5bff6810b19d5d2c89468ffa4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090815"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizzazione dell'elaborazione dalla riga di comando C
-Se il programma non accetta argomenti della riga di comando, è possibile salvare una piccola quantità di spazio eliminando l'utilizzo della routine di libreria che esegue l'elaborazione della riga di comando. Questa routine viene chiamata **_setargv** (o **_wsetargv** nell'ambiente a caratteri wide), come descritto in [Espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md). Per eliminarne l'uso, definire una routine che non esegue alcuna operazione nel file che contiene la funzione **main** e denominarla **_setargv** (o **_wsetargv** nell'ambiente a caratteri wide). La chiamata a **_setargv** o a **_wsetargv** viene soddisfatta dalla definizione di **_setargv** o **_wsetargv** creata e la versione di libreria non viene caricata.  
-  
- Analogamente, se non si accede mai alla tabella dell'ambiente tramite l'argomento `envp`, è possibile fornire una propria routine vuota da usare invece di **_setenvp** (o **_wsetenvp**), la routine di ambiente-elaborazione.  
-  
- Se il programma effettua chiamate alla famiglia di routine **_exec** o **_spawn** nella libreria run-time del linguaggio C, non si deve eliminare la routine di ambiente-elaborazione, poiché questa procedura viene usata per passare un ambiente dal processo di generazione al nuovo processo.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzione main ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)
+
+Se il programma non accetta argomenti della riga di comando, è possibile salvare una piccola quantità di spazio eliminando l'utilizzo della routine di libreria che esegue l'elaborazione della riga di comando. Questa routine viene chiamata **_setargv** (o **_wsetargv** nell'ambiente a caratteri wide), come descritto in [Espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md). Per eliminarne l'uso, definire una routine che non esegue alcuna operazione nel file che contiene la funzione **main** e denominarla **_setargv** (o **_wsetargv** nell'ambiente a caratteri wide). La chiamata a **_setargv** o a **_wsetargv** viene soddisfatta dalla definizione di **_setargv** o **_wsetargv** creata e la versione di libreria non viene caricata.
+
+Analogamente, se non si accede mai alla tabella dell'ambiente tramite l'argomento `envp`, è possibile fornire una propria routine vuota da usare invece di **_setenvp** (o **_wsetenvp**), la routine di ambiente-elaborazione.
+
+Se il programma effettua chiamate alla famiglia di routine **_exec** o **_spawn** nella libreria run-time del linguaggio C, non si deve eliminare la routine di ambiente-elaborazione, poiché questa procedura viene usata per passare un ambiente dal processo di generazione al nuovo processo.
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzione main ed esecuzione di programmi](../c-language/main-function-and-program-execution.md)

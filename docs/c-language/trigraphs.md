@@ -25,52 +25,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3c83fc3feecc1b79f28c1b00b94469d30b93d8b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb65bf8cf2f9585ff12ba0a098d9ca441310933f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101938"
 ---
 # <a name="trigraphs"></a>Trigrammi
-Il set di caratteri di origine dei programmi di origine C è contenuto nel set di caratteri ASCII a 7 bit, ma è un superset del set di codice invariante ISO 646-1983. Le sequenze di trigramma consentono la scrittura di programmi C utilizzando solo il set di codice invariante ISO (International Standards Organization). I trigrammi sono sequenze di tre caratteri (introdotti da due punti interrogativi consecutivi) che il compilatore sostituisce con i relativi caratteri di punteggiatura corrispondenti. È possibile utilizzare i trigrammi in file di origine C con un set di caratteri che non contiene rappresentazioni grafiche adeguate per alcuni caratteri di punteggiatura.  
-  
- C + + 17 rimuove i trigrammi dal linguaggio. Le implementazioni possono continuare a supportare trigrammi come parte del mapping definito dall'implementazione tra il file di origine fisico e il *set di caratteri di origine di base*, anche se lo standard invita e evitarlo. Tramite C++ 14, i trigrammi sono supportati come in C.  
-  
- Visual C++ continua a supportare la sostituzione dei trigrammi, ma è disabilitata per impostazione predefinita. Per informazioni su come abilitare la sostituzione dei trigrammi, vedere [/Zc: trigraphs (sostituzione trigrammi)](../build/reference/zc-trigraphs-trigraphs-substitution.md).  
-  
- Nella tabella seguente sono illustrate le nove sequenze di trigramma. Tutte le occorrenze in un file di origine dei caratteri di punteggiatura nella prima colonna vengono sostituite con il carattere corrispondente nella seconda colonna.  
-  
-### <a name="trigraph-sequences"></a>Sequenze di trigramma  
-  
-|Trigramma|Carattere di punteggiatura.|  
-|--------------|---------------------------|  
-|??=|#|  
-|??(|[|  
-|??/|\|  
-|??)|]|  
-|??'|^|  
-|??\<|{|  
-|??!|&#124;|  
-|??>|}|  
-|??-|~|  
-  
- Un trigramma è sempre considerato come un singolo carattere di origine. La conversione dei trigrammi avviene nella prima [fase di conversione](../preprocessor/phases-of-translation.md), prima del riconoscimento dei caratteri di escape nei valori letterali stringa e nelle costanti carattere. Sono riconosciuti solo i nove trigrammi riportati nella tabella precedente. Tutte le altre sequenze di caratteri non vengono convertite.  
-  
- La sequenza di caratteri di escape **\\?** impedisce l'errata interpretazione delle sequenze di caratteri simili a un trigramma. Per informazioni sulle sequenze di escape, vedere [Sequenze di escape](../c-language/escape-sequences.md). Ad esempio, se si tenta di stampare la stringa `What??!` con questa istruzione `printf`  
-  
-```  
-printf( "What??!\n" );  
-```  
-  
- la stringa stampata sarà `What|` poiché `??!` è una sequenza di trigramma che viene sostituita con il carattere `|`. Scrivere l'istruzione come riportata di seguito per stampare correttamente la stringa:  
-  
-```  
-printf( "What?\?!\n" );  
-```  
-  
- In questa istruzione `printf` un carattere di escape barra rovesciata prima del secondo punto interrogativo impedisce l'errata interpretazione di `??!` come trigramma.  
-  
-## <a name="see-also"></a>Vedere anche  
- [/Zc:trigraphs (sostituzione trigrammi)](../build/reference/zc-trigraphs-trigraphs-substitution.md)   
- [Identificatori C](../c-language/c-identifiers.md)
+
+Il set di caratteri di origine dei programmi di origine C è contenuto nel set di caratteri ASCII a 7 bit, ma è un superset del set di codice invariante ISO 646-1983. Le sequenze di trigramma consentono la scrittura di programmi C utilizzando solo il set di codice invariante ISO (International Standards Organization). I trigrammi sono sequenze di tre caratteri (introdotti da due punti interrogativi consecutivi) che il compilatore sostituisce con i relativi caratteri di punteggiatura corrispondenti. È possibile utilizzare i trigrammi in file di origine C con un set di caratteri che non contiene rappresentazioni grafiche adeguate per alcuni caratteri di punteggiatura.
+
+C + + 17 rimuove i trigrammi dal linguaggio. Le implementazioni possono continuare a supportare trigrammi come parte del mapping definito dall'implementazione tra il file di origine fisico e il *set di caratteri di origine di base*, anche se lo standard invita e evitarlo. Tramite C++ 14, i trigrammi sono supportati come in C.
+
+Visual C++ continua a supportare la sostituzione dei trigrammi, ma è disabilitata per impostazione predefinita. Per informazioni su come abilitare la sostituzione dei trigrammi, vedere [/Zc: trigraphs (sostituzione trigrammi)](../build/reference/zc-trigraphs-trigraphs-substitution.md).
+
+Nella tabella seguente sono illustrate le nove sequenze di trigramma. Tutte le occorrenze in un file di origine dei caratteri di punteggiatura nella prima colonna vengono sostituite con il carattere corrispondente nella seconda colonna.
+
+### <a name="trigraph-sequences"></a>Sequenze di trigramma
+
+|Trigramma|Carattere di punteggiatura.|
+|--------------|---------------------------|
+|??=|#|
+|??(|[|
+|??/|\|
+|??)|]|
+|??'|^|
+|??\<|{|
+|??!|&#124;|
+|??>|}|
+|??-|~|
+
+Un trigramma è sempre considerato come un singolo carattere di origine. La conversione dei trigrammi avviene nella prima [fase di conversione](../preprocessor/phases-of-translation.md), prima del riconoscimento dei caratteri di escape nei valori letterali stringa e nelle costanti carattere. Sono riconosciuti solo i nove trigrammi riportati nella tabella precedente. Tutte le altre sequenze di caratteri non vengono convertite.
+
+La sequenza di caratteri di escape **\\?** impedisce l'errata interpretazione delle sequenze di caratteri simili a un trigramma. Per informazioni sulle sequenze di escape, vedere [Sequenze di escape](../c-language/escape-sequences.md). Ad esempio, se si tenta di stampare la stringa `What??!` con questa istruzione `printf`
+
+```
+printf( "What??!\n" );
+```
+
+la stringa stampata sarà `What|` poiché `??!` è una sequenza di trigramma che viene sostituita con il carattere `|`. Scrivere l'istruzione come riportata di seguito per stampare correttamente la stringa:
+
+```
+printf( "What?\?!\n" );
+```
+
+In questa istruzione `printf` un carattere di escape barra rovesciata prima del secondo punto interrogativo impedisce l'errata interpretazione di `??!` come trigramma.
+
+## <a name="see-also"></a>Vedere anche
+
+[/Zc:trigraphs (sostituzione trigrammi)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
+[Identificatori C](../c-language/c-identifiers.md)

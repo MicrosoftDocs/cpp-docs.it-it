@@ -15,22 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725505"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Pagine delle proprietà HLSL: Avanzate
 Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), usare la relativa pagina delle proprietà **Avanzate**. Per informazioni sull'accesso alla pagina delle proprietà **Avanzate** nella cartella HLSL, vedere [Uso di proprietà del progetto](../ide/working-with-project-properties.md).  
   
-## <a name="uielement-list"></a>Elenco UIElement  
- **Non visualizzare messaggio di avvio**  
- **Sì (/nologo)** per evitare la visualizzazione del messaggio di avvio e dei messaggi informativi; in caso contrario, **No**. Per impostazione predefinita, il valore è **Sì (/nologo)**.  
+## <a name="uielement-list"></a>Elenco UIElement
+
+- **Non visualizzare messaggio di avvio**
+
+   **Sì (/nologo)** per evitare la visualizzazione del messaggio di avvio e dei messaggi informativi; in caso contrario, **No**. Per impostazione predefinita, il valore è **Sì (/nologo)**.  
   
- **Considera gli avvisi come errori**  
- **Sì (/WX)** per indicare se considerare tutti gli avvisi del compilatore come errori; in caso contrario, **No**.  
+- **Considera gli avvisi come errori**
+
+   **Sì (/WX)** per indicare se considerare tutti gli avvisi del compilatore come errori; in caso contrario, **No**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà HLSL](../ide/hlsl-property-pages.md)   

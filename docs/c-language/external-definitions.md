@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 193ba8b853fbdbe16f906e1cdf82dd22a40f36bb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba0487716a24e75ec2fccfa9dc7803bff9a5cfcf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759496"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098849"
 ---
 # <a name="external-definitions"></a>Definizioni esterne
 
 *translation-unit*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
+
 *external-declaration*: /\* Consentita solo in ambito esterno (file) \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration*

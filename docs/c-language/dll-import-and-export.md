@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048500cbf41eebdbb5a58d6622f7a351172e6f7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cd950504297909f9c3839df5781a6db4753f085
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383017"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095404"
 ---
 # <a name="dll-import-and-export"></a>Importazione ed esportazione di DLL
-**Sezione specifica Microsoft**  
-  
- I modificatori delle classi di archiviazione dllimport e dllexport sono estensioni specifiche di Microsoft per il linguaggio C. Questi modificatori definiscono l'interfaccia della DLL per il relativo client (file eseguibile o un'altra DLL). Per informazioni dettagliate sull'uso di questi modificatori, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Attributi di classi di archiviazione estesi C](../c-language/c-extended-storage-class-attributes.md)
+
+**Sezione specifica Microsoft**
+
+I modificatori delle classi di archiviazione dllimport e dllexport sono estensioni specifiche di Microsoft per il linguaggio C. Questi modificatori definiscono l'interfaccia della DLL per il relativo client (file eseguibile o un'altra DLL). Per informazioni dettagliate sull'uso di questi modificatori, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Attributi di classi di archiviazione estesi C](../c-language/c-extended-storage-class-attributes.md)

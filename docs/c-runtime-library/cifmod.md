@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bde7a170eb499a9b179a909bfb95e75f8fc89518
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46bcc0fa01a05b3942bb1588153ee35b5d6d25e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090464"
 ---
 # <a name="cifmod"></a>_CIfmod
-Calcola il resto a virgola mobile dei primi due valori dello stack.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __cdecl _CIfmod();  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa versione della funzione `fmod` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.  
-  
- Il valore risultante viene inserito all'inizio dello stack.  
-  
-## <a name="requirements"></a>Requisiti  
- **Piattaforma:** x86  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)
+
+Calcola il resto a virgola mobile dei primi due valori dello stack.
+
+## <a name="syntax"></a>Sintassi
+
+```
+void __cdecl _CIfmod();
+```
+
+## <a name="remarks"></a>Note
+
+Questa versione della funzione `fmod` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.
+
+Il valore risultante viene inserito all'inizio dello stack.
+
+## <a name="requirements"></a>Requisiti
+ **Piattaforma:** x86
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)

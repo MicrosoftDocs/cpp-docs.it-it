@@ -16,27 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8bfd7db4692b162ea603d91d7ca6174dddf4a3db
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677328"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722899"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto makefile
 Specificare le informazioni per il progetto. Le opzioni specificate si riflettono nella [pagina Proprietà](../ide/working-with-project-properties.md) del progetto. Dopo aver creato il progetto, è possibile visualizzare e modificare ognuna delle opzioni seguenti nella pagina **Nmake** della pagina delle proprietà del progetto.  
   
- **Riga di comando di compilazione**  
- Specifica la riga di comando da eseguire quando l'utente seleziona **Compila** dal menu **Compila**. Visualizzata nel campo **Riga di comando di compilazione** nella pagina **Nmake** della pagina delle proprietà del progetto.  
+- **Riga di comando di compilazione**
+
+   Specifica la riga di comando da eseguire quando l'utente seleziona **Compila** dal menu **Compila**. Visualizzata nel campo **Riga di comando di compilazione** nella pagina **Nmake** della pagina delle proprietà del progetto.  
   
- **Output**  
- Specifica il nome del file che conterrà l'output della riga di comando. Per impostazione predefinita, questa opzione è basata sul nome del progetto. Visualizzato nel campo **Output** nella pagina **Nmake** della pagina delle proprietà del progetto.  
+- **Output**
+
+   Specifica il nome del file che conterrà l'output della riga di comando. Per impostazione predefinita, questa opzione è basata sul nome del progetto. Visualizzato nel campo **Output** nella pagina **Nmake** della pagina delle proprietà del progetto.  
   
- **Comandi di pulitura**  
- Specifica la riga di comando da eseguire quando l'utente seleziona **Pulisci** dal menu **Compila**. Visualizzati nel campo **Riga di comando per Pulisci** nella pagina **Nmake** della pagina delle proprietà del progetto.  
+- **Comandi di pulitura**
+
+   Specifica la riga di comando da eseguire quando l'utente seleziona **Pulisci** dal menu **Compila**. Visualizzati nel campo **Riga di comando per Pulisci** nella pagina **Nmake** della pagina delle proprietà del progetto.  
   
- **Riga di comando di ricompilazione**  
- Specifica la riga di comando da eseguire quando l'utente seleziona **Ricompila** dal menu **Compila**. Visualizzata nel campo **Riga di comando per Ricompila tutto** nella pagina **Nmake** della pagina delle proprietà del progetto.  
+- **Riga di comando di ricompilazione**
+
+   Specifica la riga di comando da eseguire quando l'utente seleziona **Ricompila** dal menu **Compila**. Visualizzata nel campo **Riga di comando per Ricompila tutto** nella pagina **Nmake** della pagina delle proprietà del progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione guidata progetto makefile](../ide/makefile-project-wizard.md)   

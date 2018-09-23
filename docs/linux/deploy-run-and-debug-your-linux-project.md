@@ -2,7 +2,7 @@
 title: Distribuire, eseguire ed eseguire il debug del progetto Linux C++ in Visual Studio | Microsoft Docs
 description: Descrive come compilare, eseguire ed eseguire il debug del codice nella destinazione remota all'interno di un progetto Linux C++ in Visual Studio.
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 57f8aea7d3ff3ddfd28beff6647dc16885d972e3
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2e6c6c98b027c561f6972ab76a520e9793c30963
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207679"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601600"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Distribuire, eseguire e sottoporre a debug il progetto Linux
 
