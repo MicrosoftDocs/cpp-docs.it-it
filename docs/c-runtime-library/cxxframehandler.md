@@ -27,47 +27,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53659b462f811bca79209dd141d90527401cbc95
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a4141d932cfad78ca9c563334ebbe51f711153e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088722"
 ---
 # <a name="cxxframehandler"></a>__CxxFrameHandler
-Funzione CRT interna. Usata dalla libreria run-time del linguaggio C (CRT) per gestire i frame delle eccezioni strutturate.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-EXCEPTION_DISPOSITION __CxxFrameHandler(  
-      EHExceptionRecord  *pExcept,  
-      EHRegistrationNode *pRN,  
-      void               *pContext,   
-      DispatcherContext  *pDC  
-   )  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `pExcept`  
- Record di eccezione passato alle possibili istruzioni `catch`.  
-  
- `pRN`  
- Informazioni dinamiche sullo stack frame usato per gestire l'eccezione. Per altre informazioni, vedere ehdata.h.  
-  
- `pContext`  
- Contesto. (Non usato nei processori Intel.)  
-  
- `pDC`  
- Altre informazioni sull'ingresso e lo stack frame della funzione.  
-  
-## <a name="return-value"></a>Valore restituito  
- Uno dei valori dell'*espressione di filtro* usati dall'[istruzione try-except](../cpp/try-except-statement.md).  
-  
-## <a name="remarks"></a>Note  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
+
+Funzione CRT interna. Usata dalla libreria run-time del linguaggio C (CRT) per gestire i frame delle eccezioni strutturate.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+EXCEPTION_DISPOSITION __CxxFrameHandler(
+      EHExceptionRecord  *pExcept,
+      EHRegistrationNode *pRN,
+      void               *pContext,
+      DispatcherContext  *pDC
+   )
+```
+
+#### <a name="parameters"></a>Parametri
+
+*pExcept*<br/>
+Record di eccezione passato alle possibili istruzioni `catch`.
+
+*pRN*<br/>
+Informazioni dinamiche sullo stack frame usato per gestire l'eccezione. Per altre informazioni, vedere ehdata.h.
+
+*pContext*<br/>
+Contesto. (Non usato nei processori Intel.)
+
+*pDC*<br/>
+Altre informazioni sull'ingresso e lo stack frame della funzione.
+
+## <a name="return-value"></a>Valore restituito
+
+Uno dei valori dell'*espressione di filtro* usati dall'[istruzione try-except](../cpp/try-except-statement.md).
+
+## <a name="remarks"></a>Note
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
 |__CxxFrameHandler|excpt.h, ehdata.h|

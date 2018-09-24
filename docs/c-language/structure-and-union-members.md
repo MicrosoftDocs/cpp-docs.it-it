@@ -21,72 +21,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b497745177bce165277e3a6e4ece2a3c47f20a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c244a55b4e0ebdfadf13e5ee0a3120f024d318af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099668"
 ---
 # <a name="structure-and-union-members"></a>Membri di struttura e di unione
-Un'"espressione di selezione dei membri" si riferisce ai membri di strutture e unioni. Un'espressione di questo tipo ha il valore e il tipo del membro selezionato.  
-  
-> *postfix-expression* **.** *identifier*  
+
+Un'"espressione di selezione dei membri" si riferisce ai membri di strutture e unioni. Un'espressione di questo tipo ha il valore e il tipo del membro selezionato.
+
+> *postfix-expression* **.** *identifier*
 > *postfix-expression* **->** *identifier*
-  
-In questo elenco vengono descritti i due formati delle espressioni di selezione dei membri:  
-  
-1.  Nel primo form, *postfix-expression* rappresenta un valore di tipo **struct** o **union** e *identifier* assegna un nome a un membro della struttura o unione specificata. Il valore dell'operazione è quello di *identifier* ed è un'espressione l-value se *postfix-expression* è un'espressione l-value. Per altre informazioni, vedere [Espressioni L-value e R-value](../c-language/l-value-and-r-value-expressions.md).  
-  
-2.  Nel secondo form, *postfix-expression* rappresenta un puntatore a un'unione o a una struttura e *identifier* assegna un nome a un membro della struttura o unione specificata. Il valore è quello di *identifier* ed è un l-value.  
-  
- I due formati delle espressioni di selezione dei membri hanno effetti simili.  
-  
- Infatti, un'espressione che usa l'operatore di selezione dei membri (**->**) è una versione abbreviata di un'espressione che usa il punto (**.**) se l'espressione prima del punto è l'operatore di riferimento indiretto (<strong>\*</strong>) applicato a un valore puntatore. Quindi,  
+
+In questo elenco vengono descritti i due formati delle espressioni di selezione dei membri:
+
+1. Nel primo form, *postfix-expression* rappresenta un valore di tipo **struct** o **union** e *identifier* assegna un nome a un membro della struttura o unione specificata. Il valore dell'operazione è quello di *identifier* ed è un'espressione l-value se *postfix-expression* è un'espressione l-value. Per altre informazioni, vedere [Espressioni L-value e R-value](../c-language/l-value-and-r-value-expressions.md).
+
+1. Nel secondo form, *postfix-expression* rappresenta un puntatore a un'unione o a una struttura e *identifier* assegna un nome a un membro della struttura o unione specificata. Il valore è quello di *identifier* ed è un l-value.
+
+I due formati delle espressioni di selezione dei membri hanno effetti simili.
+
+Infatti, un'espressione che usa l'operatore di selezione dei membri (**->**) è una versione abbreviata di un'espressione che usa il punto (**.**) se l'espressione prima del punto è l'operatore di riferimento indiretto (<strong>\*</strong>) applicato a un valore puntatore. Quindi,
 
 ```cpp
-expression->identifier  
+expression->identifier
 ```
 
-equivale a  
+equivale a
 
 ```cpp
 (*expression).identifier
 ```
 
- quando *expression* è un valore puntatore.  
-  
-## <a name="examples"></a>Esempi  
- Negli esempi seguenti viene fatto riferimento a questa dichiarazione della struttura. Per informazioni sull'operatore di riferimento indiretto (<strong>\*</strong>) usato in questi esempi, vedere [Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md).  
-  
-```  
-struct pair   
-{  
-    int a;  
-    int b;  
-    struct pair *sp;  
-} item, list[10];  
-```  
-  
- Un'espressione di selezione dei membri per gli aspetti della struttura `item` sarà:  
-  
-```  
-item.sp = &item;  
-```  
-  
- Nell'esempio precedente, l'indirizzo della struttura `item` viene assegnato al membro `sp` della struttura. Ciò significa che `item` contiene un puntatore a se stesso.  
-  
-```  
-(item.sp)->a = 24;  
-```  
-  
- In questo esempio, l'espressione puntatore `item.sp` viene usata con l'operatore di selezione dei membri (**->**) per assegnare un valore al membro `a`.  
-  
-```  
-list[8].b = 12;  
-```  
-  
- In questa istruzione viene illustrato come selezionare un singolo membro della struttura da una matrice di strutture.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Operatori di accesso ai membri: . e ->](../cpp/member-access-operators-dot-and.md)
+quando *expression* è un valore puntatore.
+
+## <a name="examples"></a>Esempi
+
+Negli esempi seguenti viene fatto riferimento a questa dichiarazione della struttura. Per informazioni sull'operatore di riferimento indiretto (<strong>\*</strong>) usato in questi esempi, vedere [Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md).
+
+```
+struct pair
+{
+    int a;
+    int b;
+    struct pair *sp;
+} item, list[10];
+```
+
+Un'espressione di selezione dei membri per gli aspetti della struttura `item` sarà:
+
+```
+item.sp = &item;
+```
+
+Nell'esempio precedente, l'indirizzo della struttura `item` viene assegnato al membro `sp` della struttura. Ciò significa che `item` contiene un puntatore a se stesso.
+
+```
+(item.sp)->a = 24;
+```
+
+In questo esempio, l'espressione puntatore `item.sp` viene usata con l'operatore di selezione dei membri (**->**) per assegnare un valore al membro `a`.
+
+```
+list[8].b = 12;
+```
+
+In questa istruzione viene illustrato come selezionare un singolo membro della struttura da una matrice di strutture.
+
+## <a name="see-also"></a>Vedere anche
+
+[Operatori di accesso ai membri: . e ->](../cpp/member-access-operators-dot-and.md)

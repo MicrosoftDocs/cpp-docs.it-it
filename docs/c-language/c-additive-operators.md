@@ -18,30 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df491508f7898fe3c97bc02a83e5259baa9c89f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7be460ace4e407a328c0cf23c9e6c9af09d17ca0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382864"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101476"
 ---
 # <a name="c-additive-operators"></a>Operatori di addizione C
-Gli operatori additivi eseguono l'addizione (**+**) e la sottrazione (**-**).  
-  
-## <a name="syntax"></a>Sintassi  
- *additive-expression*:  
- *multiplicative-expression*  
-  
- *additive-expression*  **+**  *multiplicative-expression*  
-  
- *additive-expression*  **-**  *multiplicative-expression*  
-  
+
+Gli operatori additivi eseguono l'addizione (**+**) e la sottrazione (**-**).
+
+## <a name="syntax"></a>Sintassi
+
+*additive-expression*: *multiplicative-expression*
+
+*additive-expression*  **+**  *multiplicative-expression*
+
+*additive-expression*  **-**  *multiplicative-expression*
+
 > [!NOTE]
->  Sebbene la sintassi per *additive-expression* includa *multiplicative-expression*, ciò non implica che siano richieste le espressioni che usano la moltiplicazione. Vedere la sintassi in [Riepilogo della sintassi del linguaggio C](../c-language/c-language-syntax-summary.md) per *multiplicative-expression*, *cast-expression* e *unary-expression*.  
-  
- Gli operandi possono essere valori integrali o a virgola mobile. Alcune operazioni additive possono essere eseguite sui valori di puntatore, come descritto nella discussione di ciascun operatore.  
-  
- Gli operatori additivi eseguono conversioni aritmetiche consuete su operandi di tipo integrale e a virgola mobile. Il tipo del risultato è il tipo degli operandi in seguito alla conversione. Poiché le conversioni eseguite dagli operatori additivi non consentono condizioni di overflow o di underflow, è possibile che le informazioni vengano perse se il risultato di un'operazione additiva non può essere rappresentato nel tipo degli operandi dopo la conversione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Operatori di addizione: + e -](../cpp/additive-operators-plus-and.md)
+>  Sebbene la sintassi per *additive-expression* includa *multiplicative-expression*, ciò non implica che siano richieste le espressioni che usano la moltiplicazione. Vedere la sintassi in [Riepilogo della sintassi del linguaggio C](../c-language/c-language-syntax-summary.md) per *multiplicative-expression*, *cast-expression* e *unary-expression*.
+
+Gli operandi possono essere valori integrali o a virgola mobile. Alcune operazioni additive possono essere eseguite sui valori di puntatore, come descritto nella discussione di ciascun operatore.
+
+Gli operatori additivi eseguono conversioni aritmetiche consuete su operandi di tipo integrale e a virgola mobile. Il tipo del risultato è il tipo degli operandi in seguito alla conversione. Poiché le conversioni eseguite dagli operatori additivi non consentono condizioni di overflow o di underflow, è possibile che le informazioni vengano perse se il risultato di un'operazione additiva non può essere rappresentato nel tipo degli operandi dopo la conversione.
+
+## <a name="see-also"></a>Vedere anche
+
+[Operatori di addizione: + e -](../cpp/additive-operators-plus-and.md)

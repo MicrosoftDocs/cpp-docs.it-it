@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a194e45fd79ae59dc91abb21a9fb038d3ec4008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041688"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
 Il tag \<value> consente di descrivere una proprietà e i metodi della funzione di accesso alle proprietà. Si noti che quando si aggiunge una proprietà tramite la procedura guidata per il codice nell'ambiente di sviluppo integrato di Visual Studio verrà aggiunto un tag [ \<summary>](../ide/summary-visual-cpp.md) per la nuova proprietà. È quindi necessario aggiungere manualmente un tag \<value> per descrivere il valore rappresentato dalla proprietà.  
@@ -35,8 +35,8 @@ Il tag \<value> consente di descrivere una proprietà e i metodi della funzione 
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `property-description`  
- Descrizione della proprietà.  
+*property-description*<br/>
+Descrizione della proprietà.  
   
 ## <a name="remarks"></a>Note  
  Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  

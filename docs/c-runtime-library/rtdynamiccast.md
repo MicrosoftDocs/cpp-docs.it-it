@@ -27,55 +27,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5f94d60d4c6e804a9bd27293bb0eff67b29a1e8a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092063"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
-Implementazione in fase di esecuzione dell'operatore [dynamic_cast](../cpp/dynamic-cast-operator.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-PVOID __RTDynamicCast (  
-   PVOID inptr,   
-   LONG VfDelta,  
-   PVOID SrcType,  
-   PVOID TargetType,   
-   BOOL isReference  
-   ) throw(...)  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `inptr`  
- Puntatore a un oggetto polimorfico.  
-  
- `VfDelta`  
- Offset del puntatore a funzione virtuale nell'oggetto.  
-  
- `SrcType`  
- Tipo statico dell'oggetto puntato dal parametro `inptr`.  
-  
- `TargetType`  
- Risultato di cast desiderato.  
-  
- `isReference`  
- `true` se l'input è un riferimento; `false` se l'input è un puntatore.  
-  
-## <a name="return-value"></a>Valore restituito  
- Puntatore all'oggetto secondario appropriato, in caso di esito positivo, in caso contrario **NULL**.  
-  
-## <a name="exceptions"></a>Eccezioni  
- `bad_cast()` se l'input a `dynamic_cast<>` è un riferimento e il cast ha esito negativo.  
-  
-## <a name="remarks"></a>Note  
- Converte `inptr` in un oggetto del tipo `TargetType`. Il tipo di `inptr` deve essere un puntatore se `TargetType` è un puntatore o un l-value se `TargetType` è un riferimento. `TargetType` deve essere un puntatore o un riferimento a un tipo di classe definito in precedenza oppure un puntatore a void.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
+
+Implementazione in fase di esecuzione dell'operatore [dynamic_cast](../cpp/dynamic-cast-operator.md).
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+PVOID __RTDynamicCast (
+   PVOID inptr,
+   LONG VfDelta,
+   PVOID SrcType,
+   PVOID TargetType,
+   BOOL isReference
+   ) throw(...)
+```
+
+#### <a name="parameters"></a>Parametri
+
+*inptr*<br/>
+Puntatore a un oggetto polimorfico.
+
+*VfDelta*<br/>
+Offset del puntatore a funzione virtuale nell'oggetto.
+
+*SrcType*<br/>
+Tipo statico dell'oggetto puntato dal parametro `inptr`.
+
+*TargetType*<br/>
+Risultato di cast desiderato.
+
+*isReference*<br/>
+`true` se l'input è un riferimento; `false` se l'input è un puntatore.
+
+## <a name="return-value"></a>Valore restituito
+
+Puntatore all'oggetto secondario appropriato, in caso di esito positivo, in caso contrario **NULL**.
+
+## <a name="exceptions"></a>Eccezioni
+
+`bad_cast()` se l'input a `dynamic_cast<>` è un riferimento e il cast ha esito negativo.
+
+## <a name="remarks"></a>Note
+
+Converte `inptr` in un oggetto del tipo `TargetType`. Il tipo di `inptr` deve essere un puntatore se `TargetType` è un puntatore o un l-value se `TargetType` è un riferimento. `TargetType` deve essere un puntatore o un riferimento a un tipo di classe definito in precedenza oppure un puntatore a void.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
 |__RTDynamicCast|rtti.h|
