@@ -1,28 +1,30 @@
 ---
 title: IsSame (struttura) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::IsSame
+- internal/Microsoft::WRL::Details::IsSame::value
 dev_langs:
 - C++
 helpviewer_keywords:
-- IsSame structure
+- Microsoft::WRL::Details::IsSame structure
+- Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7d1879217ac43e2d7d3714f491f44b8245f4f27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6d1e22d52a2e618357357555a549437ae453abe
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390526"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169697"
 ---
 # <a name="issame-structure"></a>IsSame (struttura)
 
@@ -58,9 +60,9 @@ Consente di verificare se un tipo specificato è uguale a un altro tipo specific
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|nome|Descrizione|
-|----------|-----------------|
-|[Costante IsSame::value](../windows/issame-value-constant.md)|Indica se un tipo è uguale a un altro.|
+nome                    | Descrizione
+----------------------- | --------------------------------------------------
+[Issame:: value](#value) | Indica se un tipo è uguale a un altro.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -72,6 +74,26 @@ Consente di verificare se un tipo specificato è uguale a un altro tipo specific
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Vedere anche
+## <a name="value"></a>Issame:: value
 
-[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+```cpp
+template <typename T1, typename T2>
+struct IsSame
+{
+    static const bool value = false;
+};
+
+template <typename T1>
+struct IsSame<T1, T1>
+{
+    static const bool value = true;
+};
+```
+
+### <a name="remarks"></a>Note
+
+Indica se un tipo è uguale a un altro.
+
+`value` viene `true` se i parametri del modello sono gli stessi, e `false` se i parametri del modello sono diversi.

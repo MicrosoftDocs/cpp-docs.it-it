@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbb6517f9416e0455bfc123745cafd331d8d8a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381706"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169580"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procedura dettagliata: creazione di un'applicazione barra multifunzione utilizzando MFC
 
@@ -36,25 +36,25 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per u
 
 1. Nel **nuovo progetto** finestra di dialogo espandere il **Visual C++** nodo sotto **modelli installati**, selezionare **MFC**e quindi scegliere  **Applicazione MFC**. Digitare un nome per il progetto, ad esempio, *MFCRibbonApp*, quindi fare clic su **OK**.
 
-1. Nella prima pagina del **Creazione guidata applicazione MFC**, fare clic su **successivo**.
+1. Impostare le opzioni seguenti **Creazione guidata applicazione MFC**:
 
-1. Nel **tipo di applicazione** nella pagina **dello stile di visualizzazione e colori**, selezionare **Office 2007 (tema blu)**. Lascia invariate le altre impostazioni. Scegliere **Avanti**.
+    1. Nel **tipo di applicazione** nella sezione **dello stile di visualizzazione e colori**, selezionare **Office 2007 (tema blu)**. 
 
-1. Nel **supporto documenti compositi** pagina, assicurarsi che **None** sia selezionata e quindi fare clic su **Next**.
+    1. Nel **supporto documenti compositi** sezione, assicurarsi che **None** sia selezionata.
 
-1. Nel **le proprietà del modello di documento** nella pagina il **estensione File** , digitare un'estensione per i documenti che crea l'applicazione, ad esempio, *mfcrbnapp*. Scegliere **Avanti**.
+    1. Nel **le proprietà del modello di documento** nella sezione la **estensione File** , digitare un'estensione per i documenti che crea l'applicazione, ad esempio, *mfcrbnapp*.
 
-1. Nel **supporto per Database** pagina, assicurarsi che **None** sia selezionata e quindi fare clic su **Avanti**.
+    1. Nel **supporto per Database** sezione, assicurarsi che **None** sia selezionata.
 
-1. Nel **funzionalità dell'interfaccia utente** pagina, assicurarsi che **usare una barra multifunzione** sia selezionata. Scegliere **Avanti**.
+    1. Nel **funzionalità dell'interfaccia utente** sezione, assicurarsi che **usare una barra multifunzione** sia selezionata. 
 
-9. Per impostazione predefinita, il **Creazione guidata applicazione MFC** aggiunge il supporto per diversi riquadri ancorati. Dal momento che questa procedura dettagliata fornisce informazioni unicamente sulla barra multifunzione, puoi rimuovere tali opzioni dall'applicazione. Nel **Advanced Features** pagina, deselezionare tutte le opzioni. Scegliere **Avanti**.
+    1. Per impostazione predefinita, il **Creazione guidata applicazione MFC** aggiunge il supporto per diversi riquadri ancorati. Dal momento che questa procedura dettagliata fornisce informazioni unicamente sulla barra multifunzione, puoi rimuovere tali opzioni dall'applicazione. Nel **Advanced Features** sezione, deselezionare tutte le opzioni.
 
-10. Nel **classi generate** pagina, fare clic su **fine** per creare l'applicazione MFC.
+1. Fare clic su **fine** per creare l'applicazione MFC.
 
-11. Per verificare che l'applicazione sia stata creata correttamente, compilala ed eseguila. Per compilare l'applicazione, scegliere il **compilare** menu, fare clic su **Compila soluzione**. Se l'applicazione viene compilata correttamente, eseguila facendo **Avvia debug** nel **Debug** menu.
+1. Per verificare che l'applicazione sia stata creata correttamente, compilala ed eseguila. Per compilare l'applicazione, scegliere il **compilare** menu, fare clic su **Compila soluzione**. Se l'applicazione viene compilata correttamente, eseguila facendo **Avvia debug** nel **Debug** menu.
 
-     La procedura guidata crea automaticamente una barra multifunzione con una categoria della barra multifunzione denominato **Home**. Questa barra multifunzione contiene tre pannelli della barra multifunzione, denominati **negli Appunti**, **View**, e **finestra**.
+    La procedura guidata crea automaticamente una barra multifunzione con una categoria della barra multifunzione denominato **Home**. Questa barra multifunzione contiene tre pannelli della barra multifunzione, denominati **negli Appunti**, **View**, e **finestra**.
 
 ### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>Per aggiungere una categoria e un pannello alla barra multifunzione
 
@@ -62,18 +62,18 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per u
 
 1. In primo luogo, aggiungere una categoria personalizzata alla barra multifunzione facendo doppio clic su **categoria** nel **della casella degli strumenti**.
 
-     Una categoria contenente la didascalia **Category1** viene creato. Per impostazione predefinita, la categoria contiene un pannello.
+    Una categoria contenente la didascalia **Category1** viene creato. Per impostazione predefinita, la categoria contiene un pannello.
 
-     Fare doppio clic su **Category1** e quindi fare clic su **proprietà**. Nel **delle proprietà** finestra Modifica **didascalia** a *Custom*.
+    Fare doppio clic su **Category1** e quindi fare clic su **proprietà**. Nel **delle proprietà** finestra Modifica **didascalia** a *Custom*.
 
-     Il **Large Images** e **Small Images** proprietà specificano le bitmap a cui vengono utilizzate come icone per gli elementi della barra multifunzione in questa categoria. La creazione di bitmap personalizzate non rientra nell'ambito di questa procedura dettagliata, pertanto riutilizza le bitmap create dalla procedura guidata. Le bitmap piccole sono 16 x 16 pixel. Per le immagini piccole, utilizza le bitmap a cui si accede tramite l'ID di risorsa IDB_FILESMALL. Le bitmap grandi sono 32 x 32 pixel. Per le immagini grandi, utilizza le bitmap a cui si accede tramite l'ID di risorsa IDB_FILELARGE.
+    Il **Large Images** e **Small Images** proprietà specificano le bitmap a cui vengono utilizzate come icone per gli elementi della barra multifunzione in questa categoria. La creazione di bitmap personalizzate non rientra nell'ambito di questa procedura dettagliata, pertanto riutilizza le bitmap create dalla procedura guidata. Le bitmap piccole sono 16 x 16 pixel. Per le immagini piccole, utilizza le bitmap a cui accedono il `IDB_FILESMALL` ID della risorsa. Le bitmap grandi sono 32 x 32 pixel. Per le immagini di grandi dimensioni, utilizza le bitmap a cui accedono il `IDB_FILELARGE` ID della risorsa.
 
     > [!NOTE]
-    >  Sugli schermi HDPI, vengono usate automaticamente le versioni HDPI delle immagini.
+    > Sugli schermi HDPI, vengono usate automaticamente le versioni HDPI delle immagini.
 
 1. Successivamente, personalizza il pannello. I pannelli vengono utilizzati per raggruppare gli elementi logicamente correlati gli uni agli altri. Ad esempio, nel **Home** della scheda dell'applicazione, il **Taglia**, **copia**, e **Incolla** tutti i comandi sono inclusi nel  **Appunti** pannello. Per personalizzare il pannello, fare doppio clic su **Panel1** e quindi fare clic su **proprietà**. Nel **delle proprietà** finestra Modifica **didascalia** al *Preferiti*.
 
-     È possibile specificare il **indice immagine** per il pannello. Questo numero specifica l'icona che viene visualizzata se il pannello della barra multifunzione viene aggiunto per il **barra di accesso rapido**. L'icona non viene visualizzata nel pannello della barra multifunzione.
+    È possibile specificare il **indice immagine** per il pannello. Questo numero specifica l'icona che viene visualizzata se il pannello della barra multifunzione viene aggiunto per il **barra di accesso rapido**. L'icona non viene visualizzata nel pannello della barra multifunzione.
 
 1. Per verificare che la categoria della barra multifunzione e il pannello siano stati creati correttamente, visualizza in anteprima il controllo della barra multifunzione. Nel **sulla barra degli strumenti Editor Ribbon**, fare clic sui **Test Ribbon** pulsante. Oggetto **Custom** scheda e **Preferiti** pannello deve essere visualizzato nella barra multifunzione.
 
@@ -83,11 +83,11 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per u
 
 1. Aggiungere prima di tutto una **stampa** pulsante. Il **Print** pulsante avrà un sottomenu contenente una **Stampa immediata** comando stampare utilizzando la stampante predefinita. Entrambi i comandi sono già definiti per l'applicazione. Si trovano nel menu dell'applicazione.
 
-     Per creare il **stampa** pulsante, trascinare uno strumento Button al pannello.
+    Per creare il **stampa** pulsante, trascinare uno strumento Button al pannello.
 
-     Nel **delle proprietà** finestra Modifica il **ID** proprietà **ID_FILE_PRINT**, che dovrebbe essere già definito. Change **didascalia** al *stampa*. Change **indice di immagine** al *4*.
+    Nel **delle proprietà** finestra Modifica il **ID** proprietà **ID_FILE_PRINT**, che dovrebbe essere già definito. Change **didascalia** al *stampa*. Change **indice di immagine** al *4*.
 
-     Per creare il **Stampa immediata** pulsante, fare clic accanto alla colonna del valore della proprietà **voci di Menu**, quindi fare clic sui puntini di sospensione (**...** ). Nel **Editor elementi**, fare clic su senza l'etichetta **Add** pulsante per creare una voce di menu. Nel **delle proprietà** finestra Modifica **didascalia** a *Stampa immediata*, **ID** a *ID_FILE_PRINT_DIRECT*, e **immagine** al *5*. La proprietà dell'immagine specifica l'icona di Stampa immediata nella risorsa bitmap IDB_FILESMALL.
+    Per creare il **Stampa immediata** pulsante, fare clic accanto alla colonna del valore della proprietà **voci di Menu**, quindi fare clic sui puntini di sospensione (**...** ). Nel **Editor elementi**, fare clic su senza l'etichetta **Add** pulsante per creare una voce di menu. Nel **delle proprietà** finestra Modifica **didascalia** a *Stampa immediata*, **ID** a *ID_FILE_PRINT_DIRECT*, e **immagine** al *5*. Specifica la proprietà image il **Stampa immediata** icona nel `IDB_FILESMALL` risorsa bitmap.
 
 1. Per verificare che i pulsanti siano stati aggiunti al pannello della barra multifunzione, compila l'applicazione ed eseguila. Per compilare l'applicazione, scegliere il **compilare** menu, fare clic su **Compila soluzione**. Se l'applicazione viene compilata correttamente, eseguire l'applicazione facendo clic **Avvia debug** nel **Debug** menu. Il **Print** pulsante e la casella combinata nel **Preferiti** pannello nel **personalizzato** deve essere visualizzata la scheda della barra multifunzione.
 
@@ -103,4 +103,3 @@ Per esempi end-to-end, vedere [esempi (MFC Feature Pack)](../visual-cpp-samples.
 
 [Procedure dettagliate](../mfc/walkthroughs-mfc.md)<br/>
 [Esempi (MFC Feature Pack)](../visual-cpp-samples.md)
-

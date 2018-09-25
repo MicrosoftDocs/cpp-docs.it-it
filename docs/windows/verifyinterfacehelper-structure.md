@@ -1,28 +1,30 @@
 ---
 title: VerifyInterfaceHelper (struttura) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInterfaceHelper
+- implements/Microsoft::WRL::Details::VerifyInterfaceHelper::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- VerifyInterfaceHelper structure
+- Microsoft::WRL::Details::VerifyInterfaceHelper structure
+- Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62914b6e46b1fe98c95fba3ab96821c961888db8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e7aa7d796fb30a30a100f5f914feec57909407e5
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413653"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169762"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper (struttura)
 
@@ -58,9 +60,9 @@ Verifica che l'interfaccia specificata dal parametro di modello soddisfi determi
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
-|----------|-----------------|
-|[Metodo VerifyInterfaceHelper::Verify](../windows/verifyinterfacehelper-verify-method.md)||
+Nome                                            | Descrizione
+----------------------------------------------- | ---------------------------------------------------------------------------------------------------
+[Metodo VerifyInterfaceHelper::Verify](#verify) | Verifica che l'interfaccia specificata dal parametro di modello corrente soddisfi determinati requisiti.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -72,6 +74,14 @@ Verifica che l'interfaccia specificata dal parametro di modello soddisfi determi
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Vedere anche
+## <a name="verify"></a>Verifyinterfacehelper:: Verify
 
-[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>Note
+
+Verifica che l'interfaccia specificata dal parametro di modello corrente soddisfi determinati requisiti.

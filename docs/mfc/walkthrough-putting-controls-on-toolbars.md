@@ -1,7 +1,7 @@
 ---
 title: 'Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50be81cbddb30752f401ca7a1784cfe428c379b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384560"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169749"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Procedura dettagliata: inserimento di controlli nelle barre degli strumenti
 
@@ -30,11 +30,11 @@ In questo argomento viene descritto come aggiungere un pulsante contenente un co
 
 Per aggiungere un controllo a una barra degli strumenti, attenersi alla seguente procedura:
 
-1. Riservare un ID di risorsa fittizio per il pulsante nella risorsa della barra degli strumenti padre. Per altre informazioni su come creare pulsanti utilizzando l'Editor barra degli strumenti in Visual Studio, vedere la [sulla barra degli strumenti Editor](../windows/toolbar-editor.md) argomento.
+1. Riservare un ID di risorsa fittizio per il pulsante nella risorsa della barra degli strumenti padre. Per altre informazioni su come creare pulsanti utilizzando la **Editor barra degli strumenti** in Visual Studio, vedere la [sulla barra degli strumenti Editor](../windows/toolbar-editor.md) argomento.
 
 1. Riservare un'immagine della barra degli strumenti (icona del pulsante) per il pulsante in tutte le bitmap nella barra degli strumenti padre.
 
-1. Nel gestore di messaggi che elabora il messaggio AFX_WM_RESETTOOLBAR, effettuare le operazioni seguenti:
+1. Nel gestore di messaggi che elabora il messaggio `AFX_WM_RESETTOOLBAR`, effettuare le seguenti operazioni:
 
    1. Costruire il controllo pulsante utilizzando una classe derivata da `CMFCToolbarButton`.
 
@@ -55,22 +55,22 @@ In questa sezione viene descritto come creare un **trovare** controllo casella c
 
 ### <a name="creating-the-find-control"></a>Creazione del controllo Find
 
-Innanzitutto, creare il controllo casella combinata `Find`:
+Creare innanzitutto le **trovare** controllo casella combinata:
 
 1. Aggiungere il pulsante e i relativi comandi alle risorse dell'applicazione:
 
    1. Nelle risorse dell'applicazione, aggiungere un nuovo pulsante con un ID di comando `ID_EDIT_FIND` a una barra degli strumenti dell'applicazione e a tutte le bitmap associate alla barra degli strumenti.
 
-   1. Creare una nuova voce di menu con l'ID di comando ID_EDIT_FIND.
+   1. Creare una nuova voce di menu con la `ID_EDIT_FIND` comando ID.
 
-   1. Aggiungere una nuova stringa "Trova il testo\nTrova" alla tabella di stringhe e assegnarle un ID di comando `ID_EDIT_FIND_COMBO` . Questo ID verrà utilizzato come l'ID di comando del pulsante casella combinata `Find`.
+   1. Aggiungere una nuova stringa "Trova il testo\nTrova" alla tabella di stringhe e assegnarle un ID di comando `ID_EDIT_FIND_COMBO` . Questo ID verrà utilizzato come l'ID del comando il **trovare** pulsante casella combinata.
 
         > [!NOTE]
-        >  Poiché `ID_EDIT_FIND` è un comando standard che viene elaborato da `CEditView`, non è necessario implementare un gestore speciale per questo comando.  Tuttavia, è necessario implementare un gestore per il nuovo comando `ID_EDIT_FIND_COMBO`.
+        > Poiché `ID_EDIT_FIND` è un comando standard che viene elaborato da `CEditView`, non è necessario implementare un gestore speciale per questo comando.  Tuttavia, è necessario implementare un gestore per il nuovo comando `ID_EDIT_FIND_COMBO`.
 
 1. Creare una nuova classe `CFindComboBox`, derivata da [classe CComboBox](../mfc/reference/ccombobox-class.md).
 
-1. Nella classe `CFindComboBox` eseguire l'override del metodo virtuale `PreTranslateMessage`. Questo metodo consentirà alla casella combinata di elaborare il [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) messaggio. Se l'utente preme il tasto ESC (`VK_ESCAPE`), restituisce lo stato attivo alla finestra cornice principale. Se l'utente preme il tasto INVIO (`VK_ENTER`), invio alla finestra cornice principale un messaggio WM_COMMAND che contiene il `ID_EDIT_FIND_COMBO` comando ID.
+1. Nella classe `CFindComboBox` eseguire l'override del metodo virtuale `PreTranslateMessage`. Questo metodo consentirà alla casella combinata di elaborare il [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) messaggio. Se l'utente preme il tasto ESC (`VK_ESCAPE`), restituisce lo stato attivo alla finestra cornice principale. Se l'utente preme il tasto INVIO (`VK_ENTER`), viene inserito nella finestra cornice principale un messaggio `WM_COMMAND` contenente l'ID di comando `ID_EDIT_FIND_COMBO`.
 
 1. Creare una classe per il **trovare** pulsante casella combinata, derivato da [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). In questo esempio è denominata `CFindComboButton`.
 
@@ -88,7 +88,7 @@ Innanzitutto, creare il controllo casella combinata `Find`:
 
 1. Implementare il gestore `ID_EDIT_FIND_COMBO` nella visualizzazione del documento. Uso [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) con `ID_EDIT_FIND_COMBO` per recuperare tutti **trovare** i pulsanti della casella combinata. Possono essere presenti più copie di un pulsante con lo stesso ID di comando a causa della personalizzazione.
 
-9. Nel gestore di messaggi ID_EDIT_FIND `OnFind`, usare [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) per determinare se il comando di ricerca è stato inviato dal **trovare** pulsante casella combinata. In caso affermativo, cercare il testo e aggiungere la stringa di ricerca nella casella combinata.
+1. Nel `ID_EDIT_FIND` gestore di messaggi `OnFind`, usare [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) per determinare se il comando di ricerca è stato inviato dal **trovare** pulsante casella combinata. In caso affermativo, cercare il testo e aggiungere la stringa di ricerca nella casella combinata.
 
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>Aggiunta del controllo Find alla barra degli strumenti principale
 
@@ -97,16 +97,16 @@ Per aggiungere il pulsante della casella combinata alla barra degli strumenti, a
 1. Implementare il gestore di messaggi `AFX_WM_RESETTOOLBAR` `OnToolbarReset` nella finestra cornice principale.
 
     > [!NOTE]
-    >  Il framework invia il messaggio alla finestra cornice principale quando una barra degli strumenti viene inizializzata durante l'avvio dell'applicazione, oppure quando una barra degli strumenti viene reimpostata durante la personalizzazione. In entrambi i casi, è necessario sostituire il pulsante della barra degli strumenti standard con l'oggetto personalizzato **trovare** pulsante casella combinata.
+    > Il framework invia il messaggio alla finestra cornice principale quando una barra degli strumenti viene inizializzata durante l'avvio dell'applicazione, oppure quando una barra degli strumenti viene reimpostata durante la personalizzazione. In entrambi i casi, è necessario sostituire il pulsante della barra degli strumenti standard con l'oggetto personalizzato **trovare** pulsante casella combinata.
 
 1. Nel `AFX_WM_RESETTOOLBAR` gestore, esaminare l'ID della barra degli strumenti, vale a dire, il *WPARAM* del messaggio AFX_WM_RESETTOOLBAR. Se l'ID della barra degli strumenti è uguale a quello della barra degli strumenti che contiene il **trovare** pulsante casella combinata, chiamare [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) per sostituire il **trovare** pulsante (vale a dire il pulsante con l'ID di comando `ID_EDIT_FIND)` con un `CFindComboButton` oggetto.
 
     > [!NOTE]
-    >  È possibile creare un oggetto `CFindComboBox` nello stack, perché `ReplaceButton` copia l'oggetto pulsante e mantiene la copia.
+    > È possibile creare un oggetto `CFindComboBox` nello stack, perché `ReplaceButton` copia l'oggetto pulsante e mantiene la copia.
 
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>Aggiunta del controllo Find alla finestra di dialogo Personalizza
 
-Nel gestore della personalizzazione `OnViewCustomize`, chiamare [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) sostituire la **trovare** pulsante (vale a dire, il pulsante con l'ID di comando `ID_EDIT_FIND)` con un `CFindComboButton` oggetti.
+Nel gestore della personalizzazione `OnViewCustomize`, chiamare [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) sostituire la **trovare** pulsante (vale a dire, il pulsante con l'ID di comando `ID_EDIT_FIND`) con un `CFindComboButton` oggetti.
 
 ## <a name="see-also"></a>Vedere anche
 

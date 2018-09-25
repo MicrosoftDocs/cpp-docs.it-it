@@ -1,7 +1,7 @@
 ---
-title: 'Procedura dettagliata: Aggiunta di un oggetto D2D a un progetto MFC | Documenti Microsoft'
+title: 'Procedura dettagliata: Aggiunta di un oggetto D2D a un progetto MFC | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/19/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6117b17421e37238c9bc585677eb7b0c8ed557fb
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954871"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169658"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Procedura dettagliata: aggiunta di un oggetto D2D a un progetto MFC
 
-Questa procedura dettagliata viene illustrato come aggiungere una base Direct2D (D2D) dell'oggetto a un Visual C++, progetto Microsoft Foundation Class Library (MFC) e quindi compilare il progetto in un'applicazione che visualizza "Hello, world" su uno sfondo sfumato.
+Questa procedura dettagliata illustra come aggiungere un Direct2D basic (D2D) dell'oggetto a un progetto (MFC (Microsoft Foundation Class Library), Visual C++ e quindi compilare il progetto in un'applicazione che visualizza "Hello, world" su uno sfondo sfumato.
 
-La procedura dettagliata viene illustrato come completare queste attività:
+La procedura dettagliata illustra come eseguire queste operazioni:
 
 - Creare un'applicazione MFC.
 
@@ -42,19 +42,19 @@ La procedura dettagliata viene illustrato come completare queste attività:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per completare questa procedura dettagliata, è necessario disporre di Visual Studio installato con il **lo sviluppo Desktop con C++** carico di lavoro e il parametro facoltativo **Visual C++ MFC per x86 e x64** componente.
+Per completare questa procedura dettagliata, è necessario disporre di Visual Studio installati con il **sviluppo di applicazioni Desktop con C++** carichi di lavoro e l'opzione facoltativa **MFC Visual C++ per x86 e x64** componente.
 
 ## <a name="to-create-an-mfc-application"></a>Per creare un'applicazione MFC
 
 1. Nel **File** dal menu **New** e quindi scegliere **progetto**.
 
-2. Nel **nuovo progetto** finestra di dialogo, nel riquadro sinistro sotto **modelli installati**, espandere **Visual C++** e quindi selezionare **MFC**. Nel riquadro centrale, seleziona **applicazione MFC**. Nel **nome** , digitare *MFCD2DWalkthrough*. Scegliere **OK**.
+1. Nel **nuovo progetto** finestra di dialogo, nel riquadro sinistro sotto **modelli installati**, espandere **Visual C++** e quindi selezionare **MFC**. Nel riquadro centrale, selezionare **applicazione MFC**. Nel **Name** , digitare *MFCD2DWalkthrough*. Scegliere **OK**.
 
-3. Nel **Creazione guidata applicazione MFC**, scegliere **fine** senza modificare le impostazioni.
+1. Nel **Creazione guidata applicazione MFC**, scegliere **fine** senza modificare le impostazioni.
 
 ## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Per creare un pennello tinta unita e un pennello sfumatura lineare
 
-1. In **Esplora soluzioni**, nel **MFCD2DWalkthrough** nel progetto il **file di intestazione** cartella, aprire MFCD2DWalkthroughView. Aggiungere questo codice per il `CMFCD2DWalkthroughView` classe da creare tre variabili di dati:
+1. In **Esplora soluzioni**, nella **MFCD2DWalkthrough** progetto il **file di intestazione** MFCD2DWalkthroughView Apri cartella. Aggiungere questo codice per il `CMFCD2DWalkthroughView` classe per creare tre variabili di dati:
 
    ```cpp
    CD2DTextFormat* m_pTextFormat;
@@ -64,7 +64,7 @@ Per completare questa procedura dettagliata, è necessario disporre di Visual St
 
    Salvare il file e chiuderlo.
 
-2. Nel **file di origine** cartella, aprire MFCD2DWalkthroughView. Nel costruttore per il `CMFCD2DWalkthroughView` classe, aggiungere questo codice:
+1. Nel **file di origine** MFCD2DWalkthroughView Apri cartella. Nel costruttore per il `CMFCD2DWalkthroughView` classe, aggiungere questo codice:
 
    ```cpp
    // Enable D2D support for this window:
@@ -112,11 +112,11 @@ Per completare questa procedura dettagliata, è necessario disporre di Visual St
 
 1. Nel **Project** menu, scegliere **Creazione guidata classe**.
 
-2. Nel **Creazione guidata classe MFC**, in **nome della classe**selezionare `CMFCD2DWalkthroughView`.
+1. Nel **Creazione guidata classe MFC**, in **Class name**, selezionare `CMFCD2DWalkthroughView`.
 
-3. Nel **messaggi** nella scheda il **messaggi** , quindi selezionare `WM_SIZE` e quindi scegliere **Aggiungi gestore**. Questa azione aggiunge il `OnSize` dal gestore di messaggi per il `CMFCD2DWalkthroughView` classe.
+1. Nel **messaggi** nella scheda il **messaggi** , quindi selezionare `WM_SIZE` e quindi scegliere **Add Handler**. Questa azione aggiunge il `OnSize` gestore di messaggi per il `CMFCD2DWalkthroughView` classe.
 
-4. Nel **gestori esistenti** , quindi selezionare `OnSize`. Scegliere **Modifica codice** per visualizzare il `CMFCD2DWalkthroughView::OnSize` metodo. Alla fine del metodo, aggiungere il codice seguente.
+1. Nel **i gestori esistenti** , quindi selezionare `OnSize`. Scegli **modificare il codice** per visualizzare il `CMFCD2DWalkthroughView::OnSize` (metodo). Alla fine del metodo, aggiungere il codice seguente.
 
    ```cpp
    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
@@ -124,17 +124,17 @@ Per completare questa procedura dettagliata, è necessario disporre di Visual St
 
    Salvare il file e chiuderlo.
 
-## <a name="to-implement-a-d2d-drawing-handler"></a>Per implementare un gestore di disegno D2D
+## <a name="to-implement-a-d2d-drawing-handler"></a>Per implementare un gestore disegno D2D
 
 1. Nel **Project** menu, scegliere **Creazione guidata classe**.
 
-2. Nel **Creazione guidata classe MFC**, in **nome della classe**selezionare `CMFCD2DWalkthroughView`.
+1. Nel **Creazione guidata classe MFC**, in **Class name**, selezionare `CMFCD2DWalkthroughView`.
 
-3. Nel **messaggi** scheda, scegliere **Aggiungi messaggio personalizzato**.
+1. Nel **messaggi** scheda, scegliere **Aggiungi messaggio personalizzato**.
 
-4. Nel **Aggiungi messaggio personalizzato** della finestra di dialogo il **messaggio Windows personalizzato** , digitare *AFX_WM_DRAW2D*. Nel **nome del gestore messaggi** , digitare *OnDraw2D*. Selezionare il **messaggio registrato** l'opzione e quindi scegliere **OK**. Questa azione aggiunge un gestore di messaggi per il messaggio AFX_WM_DRAW2D il `CMFCD2DWalkthroughView` classe.
+1. Nel **Aggiungi messaggio personalizzato** nella finestra di dialogo il **messaggio Windows personalizzato** , digitare *AFX_WM_DRAW2D*. Nel **nome gestore di messaggi** , digitare *OnDraw2D*. Selezionare il **messaggio registrato** opzione e quindi scegliere **OK**. Questa azione aggiunge un gestore di messaggi per il messaggio AFX_WM_DRAW2D il `CMFCD2DWalkthroughView` classe.
 
-5. Nel **gestori esistenti** , quindi selezionare `OnDraw2D`. Scegliere **Modifica codice** per visualizzare il `CMFCD2DWalkthroughView::OnDraw2D` metodo. Utilizzare questo codice per il `CMFCD2DWalkthroughView::OnDrawD2D` metodo:
+1. Nel **i gestori esistenti** , quindi selezionare `OnDraw2D`. Scegli **modificare il codice** per visualizzare il `CMFCD2DWalkthroughView::OnDraw2D` (metodo). Usare questo codice per il `CMFCD2DWalkthroughView::OnDrawD2D` metodo:
 
    ```cpp
    afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(
@@ -163,8 +163,8 @@ Per completare questa procedura dettagliata, è necessario disporre di Visual St
 
 ## <a name="to-verify-the-results"></a>Per verificare i risultati
 
-- Compilare ed eseguire l'applicazione. Dovrebbe avere un rettangolo sfumato che cambia quando si ridimensiona la finestra. "Hello World!" dovrebbero essere visualizzati al centro del rettangolo.
+Compilare ed eseguire l'applicazione. Dovrebbe avere un rettangolo di sfumato che cambia quando si ridimensiona la finestra. "Hello World!" deve essere visualizzato al centro del rettangolo.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure dettagliate](../mfc/walkthroughs-mfc.md)
+[Procedure dettagliate](../mfc/walkthroughs-mfc.md)

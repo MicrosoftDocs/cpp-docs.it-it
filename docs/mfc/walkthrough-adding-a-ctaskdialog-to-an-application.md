@@ -1,7 +1,7 @@
 ---
 title: "Procedura dettagliata: Aggiunta di CTaskDialog a un'applicazione | Microsoft Docs"
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/19/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420484"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169723"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procedura dettagliata: aggiunta di CTaskDialog a un'applicazione
 
@@ -49,11 +49,11 @@ La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel 
 
 1. Generare una nuova applicazione MFC con le impostazioni predefinite e Chiamarla *MyProject*.
 
-2. Usare la finestra **Esplora soluzioni** per aprire il file MyProject.cpp.
+1. Usare la finestra **Esplora soluzioni** per aprire il file MyProject.cpp.
 
-3. Aggiungere `#include "afxtaskdialog.h"` dopo l'elenco di inclusioni.
+1. Aggiungere `#include "afxtaskdialog.h"` dopo l'elenco di inclusioni.
 
-4. Trovare il metodo `CMyProjectApp::InitInstance`. Inserire le seguenti righe di codice prima dell'istruzione `return TRUE;` . Questo codice crea le stringhe usate nella finestra di messaggio di Windows o in `CTaskDialog`.
+1. Trovare il metodo `CMyProjectApp::InitInstance`. Inserire le seguenti righe di codice prima dell'istruzione `return TRUE;` . Questo codice crea le stringhe usate nella finestra di messaggio di Windows o in `CTaskDialog`.
 
     ```cpp
     CString message("My message to the user");
@@ -61,7 +61,7 @@ La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel 
     CString emptyString;
     ```
 
-5. Aggiungere il codice seguente dopo il codice del passaggio 4. Questo codice garantisce che il computer dell'utente supporti `CTaskDialog`. Se la finestra di dialogo non è supportata, l'applicazione visualizza invece una finestra di messaggio di Windows.
+1. Aggiungere il codice seguente dopo il codice del passaggio 4. Questo codice garantisce che il computer dell'utente supporti `CTaskDialog`. Se la finestra di dialogo non è supportata, l'applicazione visualizza invece una finestra di messaggio di Windows.
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -74,19 +74,19 @@ La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel 
     }
     ```
 
-6. Inserire il codice seguente tra le parentesi dopo l'istruzione `if` del passaggio 5. Questo codice crea `CTaskDialog`.
+1. Inserire il codice seguente tra le parentesi dopo l'istruzione `if` del passaggio 5. Questo codice crea `CTaskDialog`.
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
     ```
 
-7. Nella riga successiva aggiungere il codice seguente. Questo codice imposta l'icona di avviso.
+1. Nella riga successiva aggiungere il codice seguente. Questo codice imposta l'icona di avviso.
 
     ```cpp
     taskDialog.SetMainIcon(TD_WARNING_ICON);
     ```
 
-8. Nella riga successiva aggiungere il codice seguente. Questo codice consente di visualizzare la finestra di dialogo delle attività.
+1. Nella riga successiva aggiungere il codice seguente. Questo codice consente di visualizzare la finestra di dialogo delle attività.
 
     ```cpp
     taskDialog.DoModal();
@@ -104,15 +104,15 @@ La procedura seguente descrive come aggiungere funzionalità alla classe `CTaskD
 
 1. Passare alla finestra **Visualizzazione risorse**. Se non è possibile visualizzare **Visualizzazione risorse**, aprire questa finestra dal menu **Visualizza** .
 
-2. Espandere la finestra **Visualizzazione risorse** fino a quando non è possibile selezionare la cartella **Tabelle delle stringhe** . Espandere la finestra e fare doppio clic sulla voce **Tabelle delle stringhe** .
+1. Espandere la finestra **Visualizzazione risorse** fino a quando non è possibile selezionare la cartella **Tabelle delle stringhe** . Espandere la finestra e fare doppio clic sulla voce **Tabelle delle stringhe** .
 
-3. Scorrere fino alla fine della tabella delle stringhe e aggiungere una nuova voce. Modificare l'ID in `TEMP_LINE1`. Impostare la didascalia su **Riga di comando 1**.
+1. Scorrere fino alla fine della tabella delle stringhe e aggiungere una nuova voce. Modificare l'ID in `TEMP_LINE1`. Impostare la didascalia su **Riga di comando 1**.
 
-4. Aggiungere un'altra nuova voce. Modificare l'ID in `TEMP_LINE2`. Impostare la didascalia su **Riga di comando 2**.
+1. Aggiungere un'altra nuova voce. Modificare l'ID in `TEMP_LINE2`. Impostare la didascalia su **Riga di comando 2**.
 
-5. Tornare a MyProject.cpp.
+1. Tornare a MyProject.cpp.
 
-6. Dopo `CString emptyString;`, aggiungere il codice seguente:
+1. Dopo `CString emptyString;`, aggiungere il codice seguente:
 
     ```cpp
     CString expandedLabel("Hide extra information");
@@ -120,7 +120,7 @@ La procedura seguente descrive come aggiungere funzionalità alla classe `CTaskD
     CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
     ```
 
-7. Trovare l'istruzione `taskDialog.DoModal()` e sostituirla con il codice seguente. Questo codice aggiorna la finestra di dialogo delle attività e aggiunge nuovi controlli:
+1. Trovare l'istruzione `taskDialog.DoModal()` e sostituirla con il codice seguente. Questo codice aggiorna la finestra di dialogo delle attività e aggiunge nuovi controlli:
 
     ```cpp
     taskDialog.SetMainInstruction(L"Warning");
@@ -133,13 +133,13 @@ La procedura seguente descrive come aggiungere funzionalità alla classe `CTaskD
     taskDialog.SetVerificationCheckboxText(L"Remember your selection");
     ```
 
-8. Aggiungere la seguente riga di codice che consente all'utente di visualizzare la finestra di dialogo delle attività e recupera la selezione dell'utente:
+1. Aggiungere la seguente riga di codice che consente all'utente di visualizzare la finestra di dialogo delle attività e recupera la selezione dell'utente:
 
     ```cpp
     INT_PTR result = taskDialog.DoModal();
     ```
 
-9. Inserire il codice seguente dopo la chiamata a `taskDialog.DoModal()`. Questa sezione di codice elabora l'input dell'utente:
+1. Inserire il codice seguente dopo la chiamata a `taskDialog.DoModal()`. Questa sezione di codice elabora l'input dell'utente:
 
     ```cpp
     if (taskDialog.GetVerificationCheckboxState())
@@ -171,7 +171,7 @@ La procedura seguente descrive come aggiungere funzionalità alla classe `CTaskD
     }
     ```
 
-Nel codice del passaggio 9 sostituire i commenti che iniziano con PROCESS IF con il codice che si desidera eseguire nelle condizioni specificate.
+Nel codice nel passaggio 9 sostituire i commenti che iniziano con `PROCESS IF` con il codice che si vuole eseguire nelle condizioni specificate.
 
 Compilare l'applicazione ed eseguirla. L'applicazione visualizza la finestra di dialogo delle attività che usa i nuovi controlli e le informazioni aggiuntive.
 
@@ -183,9 +183,9 @@ La procedura seguente illustra come visualizzare `CTaskDialog` senza prima crear
 
 1. Se non è già aperto, aprire il file MyProject.cpp.
 
-2. Passare alla parentesi di chiusura per l'istruzione `if (CTaskDialog::IsSupported())` .
+1. Passare alla parentesi di chiusura per l'istruzione `if (CTaskDialog::IsSupported())` .
 
-3. Inserire il codice seguente prima della parentesi di chiusura dell'istruzione `if` (prima del blocco `else` ):
+1. Inserire il codice seguente prima della parentesi di chiusura dell'istruzione `if` (prima del blocco `else` ):
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -195,7 +195,7 @@ La procedura seguente illustra come visualizzare `CTaskDialog` senza prima crear
         TEMP_LINE2);
     ```
 
-Compilare l'applicazione ed eseguirla. L'applicazione visualizza due finestre di dialogo delle attività. La prima finestra di dialogo deriva dalla procedura descritta in Per aggiungere funzionalità a CTaskDialog mentre la seconda finestra di dialogo dall'ultima procedura.
+Compilare l'applicazione ed eseguirla. L'applicazione visualizza due finestre di dialogo delle attività. La prima finestra di dialogo è dal **per aggiungere la funzionalità a CTaskDialog** procedure; il secondo è la finestra di dialogo dall'ultima procedura.
 
 Questi esempi non presentano tutte le opzioni disponibili per `CTaskDialog`, ma devono offrire un supporto per iniziare. Per una descrizione completa della classe, vedere [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
 
