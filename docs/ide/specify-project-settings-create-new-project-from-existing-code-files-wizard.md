@@ -16,76 +16,79 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a75bb6034c8f4c5a80bb64238c26ea599395ff96
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f86361bf947a5a6117c53ce2c92c40ef1abb7117
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705615"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387822"
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Specifica le impostazioni del progetto, Creazione guidata nuovo progetto da file di codice esistenti
-Usare questa pagina della Creazione guidata nuovo progetto da file di codice esistenti per specificare:  
-  
--   L'ambiente di compilazione per il nuovo progetto  
-  
--   Impostazioni di compilazione per un tipo specifico di nuovo progetto da generare  
-  
-## <a name="task-list"></a>Elenco attività  
 
-[Procedura: Creare un progetto C++ da codice esistente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
-  
-## <a name="uielement-list"></a>Elenco UIElement  
+Usare questa pagina della Creazione guidata nuovo progetto da file di codice esistenti per specificare:
+
+- L'ambiente di compilazione per il nuovo progetto
+
+- Impostazioni di compilazione per un tipo specifico di nuovo progetto da generare
+
+## <a name="task-list"></a>Elenco attività
+
+[Procedura: Creare un progetto C++ da codice esistente](../ide/how-to-create-a-cpp-project-from-existing-code.md)
+
+## <a name="uielement-list"></a>Elenco UIElement
+
 - **Utilizza Visual Studio**
 
-   Specifica l'uso degli strumenti di compilazione inclusi in Visual Studio per compilare il nuovo progetto. Questa opzione è selezionata per impostazione predefinita.  
-  
+   Specifica l'uso degli strumenti di compilazione inclusi in Visual Studio per compilare il nuovo progetto. Questa opzione è selezionata per impostazione predefinita.
+
 - **Tipo progetto**
 
-   Specifica il tipo di progetto che verrà generato dalla procedura guidata.  
-  
+   Specifica il tipo di progetto che verrà generato dalla procedura guidata.
+
 - **Progetto Applicazione Windows**
 
-   Indica che la procedura guidata genererà un progetto per un'applicazione Windows eseguibile. Questa opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.  
-  
+   Indica che la procedura guidata genererà un progetto per un'applicazione Windows eseguibile. Questa opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.
+
 - **Progetto di applicazione console**
 
-   Indica che la procedura guidata genererà un progetto per un'applicazione console. Questa opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.  
-  
+   Indica che la procedura guidata genererà un progetto per un'applicazione console. Questa opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.
+
 - **Progetto libreria di collegamento dinamico (DLL)**
 
-   Indica che la procedura guidata genererà un progetto per un'applicazione libreria di collegamento dinamico (DLL) vuota. Questa opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.  
-  
+   Indica che la procedura guidata genererà un progetto per un'applicazione libreria di collegamento dinamico (DLL) vuota. Questa opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.
+
 - **Progetto libreria statica (LIB)**
 
-   Indica che la procedura guidata genererà un progetto per un'applicazione libreria statica. Questa opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.  
-  
+   Indica che la procedura guidata genererà un progetto per un'applicazione libreria statica. Questa opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.
+
 - **Aggiungi supporto per ATL**
 
-   Aggiunge il supporto per Active Template Library (ATL) al nuovo progetto.  
-  
+   Aggiunge il supporto per Active Template Library (ATL) al nuovo progetto.
+
 - **Aggiungi supporto per MFC**
 
-   Aggiunge il supporto per MFC al nuovo progetto.  
-  
+   Aggiunge il supporto per MFC al nuovo progetto.
+
 - **Aggiungi supporto per Common Language Runtime**
 
-   Aggiunge il supporto per la programmazione CLR al nuovo progetto.  
-  
+   Aggiunge il supporto per la programmazione CLR al nuovo progetto.
+
 - **Common Language Runtime**
 
-   Specifica la conformità del nuovo progetto con le funzionalità Common Language Runtime.  
-  
+   Specifica la conformità del nuovo progetto con le funzionalità Common Language Runtime.
+
 - **Common Language Runtime (sintassi precedente)**
 
-   Specifica la conformità del nuovo progetto con la sintassi di Estensioni gestite per C++, che è la sintassi di programmazione CLR precedente a Visual C++ 2005.  
-  
+   Specifica la conformità del nuovo progetto con la sintassi di Estensioni gestite per C++, che è la sintassi di programmazione CLR precedente a Visual C++ 2005.
+
 - **Utilizza sistema di compilazione esterno**
 
-   Specifica l'uso di strumenti di compilazione non inclusi in Visual Studio per compilare il nuovo progetto. Quando questa opzione è selezionata, è possibile specificare righe di comando di compilazione nelle pagine **Specifica le impostazioni di configurazione per il debug** e **Specifica le impostazioni di configurazione per il rilascio**.  
-  
+   Specifica l'uso di strumenti di compilazione non inclusi in Visual Studio per compilare il nuovo progetto. Quando questa opzione è selezionata, è possibile specificare righe di comando di compilazione nelle pagine **Specifica le impostazioni di configurazione per il debug** e **Specifica le impostazioni di configurazione per il rilascio**.
+
    > [!NOTE]
-   > Quando l'opzione **Utilizza sistema di compilazione esterno** è selezionata l'IDE non compila il nuovo progetto, pertanto le opzioni /D, I, /FI, /AI o /FU non sono necessarie per la compilazione. Tuttavia queste opzioni devono essere impostate correttamente per consentire il funzionamento di IntelliSense.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Specifica le impostazioni di configurazione per il debug, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-debug-configuration-settings.md)   
- [Specifica le impostazioni di configurazione per il rilascio, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-release-configuration.md)
+   > Quando l'opzione **Utilizza sistema di compilazione esterno** è selezionata l'IDE non compila il nuovo progetto, pertanto le opzioni /D, I, /FI, /AI o /FU non sono necessarie per la compilazione. Tuttavia queste opzioni devono essere impostate correttamente per consentire il funzionamento di IntelliSense.
+
+## <a name="see-also"></a>Vedere anche
+
+[Specifica le impostazioni di configurazione per il debug, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-debug-configuration-settings.md)<br>
+[Specifica le impostazioni di configurazione per il rilascio, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-release-configuration.md)

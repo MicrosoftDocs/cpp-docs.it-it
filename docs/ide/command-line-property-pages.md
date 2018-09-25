@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 54a9f68c1cd750cd3d0e5c638d1ab101a8588a61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327811"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416890"
 ---
 # <a name="command-line-property-pages"></a>Riga di comando (pagine delle proprietà)
-La maggior parte delle cartelle delle pagine delle proprietà contengano una pagina delle proprietà **Riga di comando**. Questa pagina consente di visualizzare le proprietà impostate nella cartella. La pagina delle proprietà **Riga di comando** contiene anche una casella **Opzioni aggiuntive** in cui è possibile specificare le proprietà valide per lo strumento, ma per cui non esistono proprietà nella cartella.  
-  
- Qualsiasi comando immesso nella casella di modifica verrà passato tramite lo strumento alla cartella. Non saranno eseguiti controlli o verifiche dell'input né sarà eseguito uno controllo delle dipendenze.  
-  
- Per informazioni sull'accesso alle pagine delle proprietà **Riga di comando**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   
- [File LIB come input del linker](../build/reference/dot-lib-files-as-linker-input.md)
+
+La maggior parte delle cartelle delle pagine delle proprietà contengano una pagina delle proprietà **Riga di comando**. Questa pagina consente di visualizzare le proprietà impostate nella cartella. La pagina delle proprietà **Riga di comando** contiene anche una casella **Opzioni aggiuntive** in cui è possibile specificare le proprietà valide per lo strumento, ma per cui non esistono proprietà nella cartella.
+
+Qualsiasi comando immesso nella casella di modifica verrà passato tramite lo strumento alla cartella. Non saranno eseguiti controlli o verifiche dell'input né sarà eseguito uno controllo delle dipendenze.
+
+Per informazioni sull'accesso alle pagine delle proprietà **Riga di comando**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Pagine delle proprietà](../ide/property-pages-visual-cpp.md)<br>
+[File LIB come input del linker](../build/reference/dot-lib-files-as-linker-input.md)

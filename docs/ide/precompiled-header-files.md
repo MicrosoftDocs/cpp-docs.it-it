@@ -20,23 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4595ea9ce27c40fb798ac050ce456c4d43b2cacb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328087"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404020"
 ---
 # <a name="precompiled-header-files"></a>File di intestazione precompilata
-Questi file vengono usati per compilare un file di intestazione precompilata denominato *Projname*.pch e un file di tipi precompilati denominato Stdafx.obj.  
-  
- Questi file sono disponibili nella directory *Projname* . In Esplora soluzioni Stdafx.h si trova nella cartella File di intestazione e Stdafx.cpp si trova nella cartella File di origine.  
-  
-|Nome file|Descrizione|  
-|---------------|-----------------|  
-|stdafx.h|File di inclusione per i file di inclusione di sistema standard e per i file di inclusione specifici del progetto che vengono usati frequentemente ma modificati raramente.<br /><br /> È opportuno evitare di definire o annullare la definizione delle macro _AFX_NO_XXX di stdafx.h. Vedere l'articolo della Knowledge Base "PRB: Problemi durante la definizione di _AFX_NO_XXX". Gli articoli della Knowledge Base sono disponibili in MSDN Library o all'indirizzo [http://support.microsoft.com/](http://%20support.microsoft.com/).|  
-|stdafx.cpp|Contiene la direttiva `#include "stdafx.h"` per il preprocessore e aggiunge file di inclusione per i tipi precompilati. I file precompilati di qualsiasi tipo, inclusi quelli di intestazione, supportano tempi di compilazione dal momento che effettuano questa operazione solo per i file per i quali è richiesta. Dopo la compilazione iniziale del progetto, le compilazioni successive risulteranno più rapide grazie alla presenza dei file di intestazione precompilata.|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
- [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)
+
+Questi file vengono usati per compilare un file di intestazione precompilata denominato *Projname*.pch e un file di tipi precompilati denominato Stdafx.obj.
+
+Questi file sono disponibili nella directory *Projname* . In Esplora soluzioni Stdafx.h si trova nella cartella File di intestazione e Stdafx.cpp si trova nella cartella File di origine.
+
+|Nome file|Descrizione|
+|---------------|-----------------|
+|stdafx.h|File di inclusione per i file di inclusione di sistema standard e per i file di inclusione specifici del progetto che vengono usati frequentemente ma modificati raramente.<br /><br /> È opportuno evitare di definire o annullare la definizione delle macro _AFX_NO_XXX di stdafx.h. Vedere l'articolo della Knowledge Base "PRB: Problemi durante la definizione di _AFX_NO_XXX". Gli articoli della Knowledge Base sono disponibili in MSDN Library o all'indirizzo [http://support.microsoft.com/](http://%20support.microsoft.com/).|
+|stdafx.cpp|Contiene la direttiva `#include "stdafx.h"` per il preprocessore e aggiunge file di inclusione per i tipi precompilati. I file precompilati di qualsiasi tipo, inclusi quelli di intestazione, supportano tempi di compilazione dal momento che effettuano questa operazione solo per i file per i quali è richiesta. Dopo la compilazione iniziale del progetto, le compilazioni successive risulteranno più rapide grazie alla presenza dei file di intestazione precompilata.|
+
+## <a name="see-also"></a>Vedere anche
+
+[Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)

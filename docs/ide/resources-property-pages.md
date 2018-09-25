@@ -21,19 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b5160061233f9d0a474385bccd324333ed9549a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 132b2e069c42d1835d6736024fc4c609d313e544
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686287"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440706"
 ---
 # <a name="resources-property-pages"></a>risorse (pagine delle proprietà)
-Per altre informazioni sull'uso del compilatore di risorse, vedere [Using RC (The RC Command Line)](/windows/desktop/menurc/using-rc-the-rc-command-line-) (Uso di RC (riga di comando RC)).  
-  
- Per informazioni sull'accesso alle pagine delle proprietà **Risorse**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
-  
- Per accedere a livello di codice a queste proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)
+
+Per altre informazioni sull'uso del compilatore di risorse, vedere [Using RC (The RC Command Line)](/windows/desktop/menurc/using-rc-the-rc-command-line-) (Uso di RC (riga di comando RC)).
+
+Per informazioni sull'accesso alle pagine delle proprietà **Risorse**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).
+
+Per accedere a livello di codice a queste proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Pagine delle proprietà](../ide/property-pages-visual-cpp.md)

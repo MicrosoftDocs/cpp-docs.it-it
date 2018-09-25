@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8a8ab088f3fbb10b5f477d125dbf3f2a7ac932
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 8091bbba7dcee344677c54a7944708679f2ff867
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578492"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411846"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Aggiornamento di progetti da versioni precedenti di Visual C++
+
 Nella maggior parte dei casi, è possibile aprire un progetto creato in una versione precedente di Visual Studio. A questo scopo, tuttavia, Visual Studio aggiorna il progetto. Se il progetto aggiornato viene salvato, non potrà più essere aperto nella versione precedente.  
   
 > [!IMPORTANT]
@@ -44,7 +45,7 @@ Per informazioni su come aggiornare le versioni di Windows di destinazione, vede
   
 ## <a name="see-also"></a>Vedere anche  
 
-[Modifiche al sistema di compilazione](../build/build-system-changes.md)  
-[Novità di Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) 
-[Cronologia delle modifiche di Visual C++ dal 2003 al 2015](../porting/visual-cpp-change-history-2003-2015.md)   
+[Modifiche al sistema di compilazione](../build/build-system-changes.md)<br/>
+[Novità di Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Cronologia delle modifiche di Visual C++ dal 2003 al 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Comportamento non standard](../cpp/nonstandard-behavior.md)

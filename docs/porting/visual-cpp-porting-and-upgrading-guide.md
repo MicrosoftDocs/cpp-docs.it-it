@@ -1,7 +1,7 @@
 ---
 title: Guida al porting e aggiornamento in Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06350e851501cfa26d1ea4d326c26d7a37270889
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1b573a22b9502548cc84f2bd459cda72d071cf68
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578233"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494400"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guida al porting e aggiornamento in Visual C++
+
 Questo argomento presenta una guida per aggiornare il codice di Visual C++. Verrà illustrato come ottenere il codice da compilare ed eseguire correttamente in una versione più recente degli strumenti e usufruire delle nuove funzionalità del linguaggio e di Visual Studio. Questo argomento fornisce anche informazioni su come eseguire la migrazione da app legacy a piattaforme più moderne.  
   
 ## <a name="reasons-to-upgrade-visual-c-code"></a>Motivi per aggiornare il codice Visual C++  
@@ -92,7 +93,6 @@ Se si vuole assegnare al programma un'interfaccia utente XAML senza creare un'ap
 |[Trasferimento alla piattaforma UWP (Universal Windows Platform)](porting-to-the-universal-windows-platform-cpp.md)|Contiene informazioni sul porting di codice a Windows 10|  
 |[Introduzione a Visual C++ per utenti UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fornisce informazioni per gli utenti UNIX che non hanno familiarità con Visual C++ e vogliono aumentare la produttività con questo linguaggio.|  
 |[Porting da UNIX a Win32](porting-from-unix-to-win32.md)|Illustra le opzioni per la migrazione di applicazioni UNIX a Windows.|  
-|[Nozioni di base della migrazione in C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Fornisce informazioni dettagliate su come eseguire l'aggiornamento delle estensioni gestite per la sintassi C++ per usare la nuova sintassi. Per altre informazioni, vedere [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
 

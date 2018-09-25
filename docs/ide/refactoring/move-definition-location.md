@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327840"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430058"
 ---
 # <a name="move-definition-location"></a>Percorso definizione spostamento
 **Cosa:** consente di spostare immediatamente la definizione di una funzione nel file di intestazione corrispondente.
 
-**Quando:** si desidera spostare una funzione in un file di intestazione.  
+**Quando:** si desidera spostare una funzione in un file di intestazione.
 
 **Perché:** la funzione può essere spostata manualmente, ma questa funzionalità la sposterà automaticamente, creando il file di intestazione, se necessario.
 

@@ -19,36 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149facb5ed934b68d3407f9acc17238482021f06
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf3fe573ff2a71c2a53e946655300219f190b4c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716315"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447713"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Generale, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt;
-Usare questa finestra di dialogo per specificare opzioni generali per [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
-  
- Per accedere alla finestra di dialogo di questa pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il nodo **Strumento Manifesto** in **Proprietà di configurazione**, quindi selezionare **Generale**.  
-  
-## <a name="uielement-list"></a>Elenco UIElement  
+
+Usare questa finestra di dialogo per specificare opzioni generali per [Mt.exe](https://msdn.microsoft.com/library/aa375649).
+
+Per accedere alla finestra di dialogo di questa pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il nodo **Strumento Manifesto** in **Proprietà di configurazione**, quindi selezionare **Generale**.
+
+## <a name="uielement-list"></a>Elenco UIElement
+
 - **Non visualizzare messaggio di avvio**
 
-   **Sì (/nologo)** specifica che le informazioni standard sul copyright Microsoft non verranno visualizzate quando sarà avviato lo strumento Manifesto. Usare questa opzione per non visualizzare l'output indesiderato nei file di log, quando si esegue mt.exe come parte di un processo di compilazione o da un ambiente di compilazione.  
-  
+   **Sì (/nologo)** specifica che le informazioni standard sul copyright Microsoft non verranno visualizzate quando sarà avviato lo strumento Manifesto. Usare questa opzione per non visualizzare l'output indesiderato nei file di log, quando si esegue mt.exe come parte di un processo di compilazione o da un ambiente di compilazione.
+
 - **Output dettagliato**
 
-   **Sì (/verbose)** specifica che le informazioni di compilazione aggiuntive verranno visualizzate durante la generazione del manifesto.  
-  
+   **Sì (/verbose)** specifica che le informazioni di compilazione aggiuntive verranno visualizzate durante la generazione del manifesto.
+
 - **Identità assembly**
 
-   Usa l'opzione /identity per specificare una stringa di identità, che contiene gli attributi per [\<assemblyIdentity> Element](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Una stringa di identità inizia con il valore per l'attributo `name` ed è seguita da *attribute* = *value* pairs. Gli attributi in una stringa di identità sono delimitati dalla virgola.  
-  
-   Di seguito è riportato un esempio di stringa di identità:  
-  
-   `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
-  
-## <a name="see-also"></a>Vedere anche  
- [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Pagine delle proprietà dello strumento Manifesto](../ide/manifest-tool-property-pages.md)   
- [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)   
+   Usa l'opzione /identity per specificare una stringa di identità, che contiene gli attributi per [\<assemblyIdentity> Element](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Una stringa di identità inizia con il valore per l'attributo `name` ed è seguita da *attribute* = *value* pairs. Gli attributi in una stringa di identità sono delimitati dalla virgola.
+
+   Di seguito è riportato un esempio di stringa di identità:
+
+   `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+
+## <a name="see-also"></a>Vedere anche
+
+[ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
+[Pagine delle proprietà Strumento Manifesto](../ide/manifest-tool-property-pages.md)<br>
+[Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)

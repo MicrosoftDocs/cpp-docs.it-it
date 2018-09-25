@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 234ae9a67bcbc60ea156fbacb5169d0bd1573a91
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328026"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442760"
 ---
 # <a name="implement-pure-virtuals"></a>Implementa elementi virtuali puri
-**Cosa:** consente di generare immediatamente il codice necessario per implementare tutti i metodi virtuali puri in una classe. 
+**Cosa:** consente di generare immediatamente il codice necessario per implementare tutti i metodi virtuali puri in una classe.
 
-**Quando:** si vuole ereditare da una classe con funzioni virtuali pure.  
+**Quando:** si vuole ereditare da una classe con funzioni virtuali pure.
 
 **Perché:** è possibile implementare manualmente tutte le funzioni virtuali una alla volta, tuttavia questa funzionalità genera automaticamente tutte le firme dei metodi.
 

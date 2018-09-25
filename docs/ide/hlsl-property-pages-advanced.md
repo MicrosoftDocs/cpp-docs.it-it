@@ -15,27 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa1a15f6542da165b615970591f384b875dd588b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725505"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444554"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Pagine delle proprietà HLSL: Avanzate
-Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), usare la relativa pagina delle proprietà **Avanzate**. Per informazioni sull'accesso alla pagina delle proprietà **Avanzate** nella cartella HLSL, vedere [Uso di proprietà del progetto](../ide/working-with-project-properties.md).  
-  
+
+Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), usare la relativa pagina delle proprietà **Avanzate**. Per informazioni sull'accesso alla pagina delle proprietà **Avanzate** nella cartella HLSL, vedere [Uso di proprietà del progetto](../ide/working-with-project-properties.md).
+
 ## <a name="uielement-list"></a>Elenco UIElement
 
 - **Non visualizzare messaggio di avvio**
 
-   **Sì (/nologo)** per evitare la visualizzazione del messaggio di avvio e dei messaggi informativi; in caso contrario, **No**. Per impostazione predefinita, il valore è **Sì (/nologo)**.  
-  
+   **Sì (/nologo)** per evitare la visualizzazione del messaggio di avvio e dei messaggi informativi; in caso contrario, **No**. Per impostazione predefinita, il valore è **Sì (/nologo)**.
+
 - **Considera gli avvisi come errori**
 
-   **Sì (/WX)** per indicare se considerare tutti gli avvisi del compilatore come errori; in caso contrario, **No**.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Pagine delle proprietà HLSL](../ide/hlsl-property-pages.md)   
- [Pagine delle proprietà HLSL: Generale](../ide/hlsl-property-pages-general.md)   
- [Pagine delle proprietà HLSL: file di output](../ide/hlsl-property-pages-output-files.md)
+   **Sì (/WX)** per indicare se considerare tutti gli avvisi del compilatore come errori; in caso contrario, **No**.
+
+## <a name="see-also"></a>Vedere anche
+
+[Pagine delle proprietà HLSL](../ide/hlsl-property-pages.md)<br>
+[Pagine delle proprietà HLSL: Generale](../ide/hlsl-property-pages-general.md)<br>
+[Pagine delle proprietà HLSL: file di output](../ide/hlsl-property-pages-output-files.md)

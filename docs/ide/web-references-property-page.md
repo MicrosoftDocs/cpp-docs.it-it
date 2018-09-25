@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff2a9ccec1dac6be41727b4a829bf4e63669f40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 568dfc1b925254bec792138c59ff7f1b3e19cb28
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699647"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442071"
 ---
 # <a name="web-references-property-page"></a>Pagina delle proprietà Riferimenti Web
-La pagina delle proprietà **Riferimenti Web** specifica come sarà generata la classe proxy del servizio Web XML. Verrà generata una classe proxy del servizio Web XML se si aggiunge un riferimento Web al progetto.  
-  
- La pagina delle proprietà **Riferimenti Web** include le proprietà seguenti:  
-  
+
+La pagina delle proprietà **Riferimenti Web** specifica come sarà generata la classe proxy del servizio Web XML. Verrà generata una classe proxy del servizio Web XML se si aggiunge un riferimento Web al progetto.
+
+La pagina delle proprietà **Riferimenti Web** include le proprietà seguenti:
+
 - **File di output**
 
-   Nome del file che include la classe proxy del servizio Web XML.  
-  
+   Nome del file che include la classe proxy del servizio Web XML.
+
 - **Non visualizzare messaggio di avvio**
 
-   Non visualizza il messaggio per lo strumento del linguaggio di descrizione dei servizi Web (Wsdl.exe).  
-  
+   Non visualizza il messaggio per lo strumento del linguaggio di descrizione dei servizi Web (Wsdl.exe).
+
 - **Spazio dei nomi**
 
-   Specifica il nome del proxy Web generato.  
-  
+   Specifica il nome del proxy Web generato.
+
 - **Riferimenti aggiuntivi**
 
-   Specifica le DLL aggiuntive a cui fa riferimento la DLL proxy.  
-  
-Per informazioni sull'accesso alla pagina delle proprietà **Riferimenti Web**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)
+   Specifica le DLL aggiuntive a cui fa riferimento la DLL proxy.
+
+Per informazioni sull'accesso alla pagina delle proprietà **Riferimenti Web**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Pagine delle proprietà](../ide/property-pages-visual-cpp.md)

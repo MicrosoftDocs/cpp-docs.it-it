@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578280"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421986"
 ---
 # <a name="floating-point-migration-issues"></a>Problemi relativi alla migrazione dei valori a virgola mobile  
+
   
 A volte durante l'aggiornamento dei progetti a una versione più recente di Visual Studio è possibile notare che i risultati di determinate operazioni a virgola mobile sono cambiati. Ciò si verifica in genere per uno di questi due motivi: modifiche della generazione di codice che usano in modo più efficace il processore disponibile e correzioni di bug o modifiche degli algoritmi usati nelle funzioni matematiche della libreria di runtime C (CRT). In generale, i nuovi risultati sono corretti entro i limiti specificati dal linguaggio standard. Le sezioni che seguono spiegano che cosa è cambiato e, se è importante, come ottenere gli stessi risultati che si ottenevano in precedenza.  
 
@@ -41,6 +42,6 @@ Nella maggior parte dei casi, le modifiche dei calcoli a virgola mobile nei comp
   
 ## <a name="see-also"></a>Vedere anche  
   
-[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Panoramica dei potenziali problemi di aggiornamento (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Panoramica dei potenziali problemi di aggiornamento (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md)  

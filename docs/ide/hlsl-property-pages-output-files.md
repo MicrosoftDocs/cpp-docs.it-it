@@ -18,46 +18,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ccd140a1e132cc260c47b00365e03c32acf5cdf
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1f04b5f56511975851f4314f2977b84799c2f4e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721584"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410520"
 ---
 # <a name="hlsl-property-pages-output-files"></a>Pagine delle proprietà HLSL: file di output
-Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), usare la relativa pagina delle proprietà **File di output**. Per informazioni sull'accesso alla pagina delle proprietà **File di output** nella cartella HLSL, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
-  
-## <a name="uielement-list"></a>Elenco UIElement  
+
+Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), usare la relativa pagina delle proprietà **File di output**. Per informazioni sull'accesso alla pagina delle proprietà **File di output** nella cartella HLSL, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).
+
+## <a name="uielement-list"></a>Elenco UIElement
+
 - **Nome variabile intestazione**
 
-   Specifica il nome di una matrice usata per il codice oggetto HLSL codificato. La matrice è contenuta in un file di intestazione generato dal compilatore HLSL. Il nome del file di intestazione è specificato dalla proprietà **Nome file intestazione**.  
-  
- Questa proprietà corrisponde all'argomento della riga di comando **/Vn[name]**.  
-  
+   Specifica il nome di una matrice usata per il codice oggetto HLSL codificato. La matrice è contenuta in un file di intestazione generato dal compilatore HLSL. Il nome del file di intestazione è specificato dalla proprietà **Nome file intestazione**.
+
+Questa proprietà corrisponde all'argomento della riga di comando **/Vn[name]**.
+
 - **Nome file intestazione**
 
-   Specifica il nome del file di intestazione generato dal compilatore HLSL. L'intestazione contiene il codice oggetto HLSL codificato in una matrice. Il nome della matrice è specificato dalla proprietà **Nome variabile intestazione**.  
-  
- Questa proprietà corrisponde all'argomento della riga di comando **/Fh[name]**.  
-  
+   Specifica il nome del file di intestazione generato dal compilatore HLSL. L'intestazione contiene il codice oggetto HLSL codificato in una matrice. Il nome della matrice è specificato dalla proprietà **Nome variabile intestazione**.
+
+Questa proprietà corrisponde all'argomento della riga di comando **/Fh[name]**.
+
 - **Nome file oggetto**
 
-   Specifica il nome del file oggetto generato dal compilatore HLSL. Per impostazione predefinita, il valore è **$(OutDir)%(Filename).cso**.  
-  
- Questa proprietà corrisponde all'argomento della riga di comando **/Fo[name]**.  
-  
+   Specifica il nome del file oggetto generato dal compilatore HLSL. Per impostazione predefinita, il valore è **$(OutDir)%(Filename).cso**.
+
+Questa proprietà corrisponde all'argomento della riga di comando **/Fo[name]**.
+
 - **Output assembler**
 
-   **Elenco solo assembly (/Fc)** per restituire solo istruzioni in linguaggio assembly. **Codice ed esadecimale assembly (/ Fx)** per restituire sia istruzioni in linguaggio assembly sia il codice operativo corrispondente in formato esadecimale. Per impostazione predefinita, non vengono generati elenchi.  
-  
+   **Elenco solo assembly (/Fc)** per restituire solo istruzioni in linguaggio assembly. **Codice ed esadecimale assembly (/ Fx)** per restituire sia istruzioni in linguaggio assembly sia il codice operativo corrispondente in formato esadecimale. Per impostazione predefinita, non vengono generati elenchi.
+
 - **File di output assembler**
 
-   Specifica il nome del file di listato dell'assembly generato dal compilatore HLSL.  
-  
-   Questa proprietà corrisponde agli argomenti della riga di comando **/Fc[name]** e **/Fx [name]**.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Pagine delle proprietà HLSL](../ide/hlsl-property-pages.md)   
- [Pagine delle proprietà HLSL: Generale](../ide/hlsl-property-pages-general.md)   
- [Pagine delle proprietà HLSL: Avanzate](../ide/hlsl-property-pages-advanced.md)
+   Specifica il nome del file di listato dell'assembly generato dal compilatore HLSL.
+
+   Questa proprietà corrisponde agli argomenti della riga di comando **/Fc[name]** e **/Fx [name]**.
+
+## <a name="see-also"></a>Vedere anche
+
+[Pagine delle proprietà HLSL](../ide/hlsl-property-pages.md)<br>
+[Pagine delle proprietà HLSL: Generale](../ide/hlsl-property-pages-general.md)<br>
+[Pagine delle proprietà HLSL: Avanzate](../ide/hlsl-property-pages-advanced.md)

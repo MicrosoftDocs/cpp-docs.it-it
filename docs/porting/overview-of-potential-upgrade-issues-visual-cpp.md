@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411c5deb3a14ee3eaebb76fc69b6f36fa3bed42
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: bdfa82580ba61ab276d6d64a9424d7043c2822f1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42578255"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393776"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 
@@ -187,5 +187,5 @@ Per altre informazioni, vedere [Porting da MBCS a Unicode](porting-guide-spy-inc
 
 ## <a name="see-also"></a>Vedere anche
 
-[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Miglioramenti della conformità in Visual Studio 2017](../cpp-conformance-improvements-2017.md)  

@@ -22,33 +22,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927ab1004336787131c8f92c247512d1c66caf69
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 32125de84e7aa2601c65ad7eb441fff915dcd9d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212756"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414160"
 ---
 # <a name="midl-property-pages-output"></a>Pagine delle proprietà MIDL: Output
-La pagina delle proprietà **Output** nella cartella **MIDL** consente di specificare le opzioni seguenti del compilatore MIDL:  
-  
--   Directory di output ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))  
-  
--   File di intestazione ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))  
-  
--   File di dati DLL ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))  
-  
--   File IID ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))  
-  
--   File proxy ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))  
-  
--   Genera libreria dei tipi ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))  
-  
--   Libreria dei tipi ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))  
-  
- Per informazioni sull'accesso alla pagina delle proprietà **Output** nella cartella **MIDL**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
-  
- Per informazioni su come accedere a livello di codice alle opzioni MIDL per i progetti C++, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Pagine delle proprietà MIDL](../ide/midl-property-pages.md)
+
+La pagina delle proprietà **Output** nella cartella **MIDL** consente di specificare le opzioni seguenti del compilatore MIDL:
+
+- Directory di output ([/out](https://msdn.microsoft.com/library/windows/desktop/aa367358))
+
+- File di intestazione ([/h](https://msdn.microsoft.com/library/windows/desktop/aa367325))
+
+- File di dati DLL ([/dlldata](https://msdn.microsoft.com/library/windows/desktop/aa367322))
+
+- File IID ([/iid](https://msdn.microsoft.com/library/windows/desktop/aa367329))
+
+- File proxy ([/proxy](https://msdn.microsoft.com/library/windows/desktop/aa367362))
+
+- Genera libreria dei tipi ([/notlb](https://msdn.microsoft.com/library/windows/desktop/aa367343))
+
+- Libreria dei tipi ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))
+
+Per informazioni sull'accesso alla pagina delle proprietà **Output** nella cartella **MIDL**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).
+
+Per informazioni su come accedere a livello di codice alle opzioni MIDL per i progetti C++, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Pagine delle proprietà MIDL](../ide/midl-property-pages.md)

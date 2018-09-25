@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132020"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412522"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE e strumenti per lo sviluppo in Visual C++
 
@@ -29,7 +29,7 @@ Oltre agli strumenti condivisi nell'IDE di Visual Studio, MSVC include diversi s
 
 ## <a name="creating-a-solution-and-projects"></a>Creazione di una soluzione e di progetti
 
-Un *progetto* è fondamentalmente un set di file di codice sorgente e risorse, ad esempio immagini o file di dati, incorporati in un file eseguibile. 
+Un *progetto* è fondamentalmente un set di file di codice sorgente e risorse, ad esempio immagini o file di dati, incorporati in un file eseguibile.
 
 Visual Studio 2015 offre il supporto per i progetti MSBuild. È possibile scaricare le estensioni di Visual Studio per altri sistemi di compilazione, ad esempio Qt o CMake.
 
@@ -119,7 +119,7 @@ Quando la configurazione del progetto è impostata su Debug è possibile eseguir
 
 ## <a name="deploy-completed-applications"></a>Distribuire le applicazioni completate
 
-Per distribuire un'app UWP ai clienti tramite Microsoft Store usare l'opzione di menu **Progetto** > **Store**. La distribuzione di CRT viene gestita automaticamente in background. Per altre informazioni, vedere [Pubblicare app e giochi per Windows](/windows/uwp/publish/). 
+Per distribuire un'app UWP ai clienti tramite Microsoft Store usare l'opzione di menu **Progetto** > **Store**. La distribuzione di CRT viene gestita automaticamente in background. Per altre informazioni, vedere [Pubblicare app e giochi per Windows](/windows/uwp/publish/).
 
 Quando si distribuisce un'applicazione desktop C++ nativa in un altro computer, è necessario installare l'applicazione stessa e tutti i file di libreria da cui dipende. Esistono tre modi diversi per distribuire il runtime Universal C++ (UCRT) con un'applicazione: distribuzione centrale, distribuzione locale o collegamento statico. Per altre informazioni, vedere [Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

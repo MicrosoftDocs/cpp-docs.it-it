@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 45b62d5ce8f49b023721cf7323dc42e1c65c2109
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339982"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396688"
 ---
 # <a name="visual-c-project-types"></a>Tipi di progetto Visual C++
 
 È possibile usare un modello di progetto per creare la struttura di base dei programmi, i menu, le barre degli strumenti, le icone, i riferimenti e le istruzioni `#include` appropriati per il tipo di progetto da creare. Visual Studio include diversi tipi di modelli di progetto di Visual C++ e fornisce le procedure guidate per molti di essi in modo da poter personalizzare i progetti durante la creazione. Subito dopo aver creato un progetto, è possibile compilarlo ed eseguire l'applicazione. È consigliabile compilare l'applicazione gradualmente man mano che la si sviluppa.
 
-Non è necessario usare un modello per creare un progetto, ma in molti casi risulta più efficiente perché è più semplice modificare la struttura e i file di progetto anziché crearli da zero.  
-  
+Non è necessario usare un modello per creare un progetto, ma in molti casi risulta più efficiente perché è più semplice modificare la struttura e i file di progetto anziché crearli da zero.
+
 > [!NOTE]
 > È possibile creare un progetto in linguaggio C usando i modelli di progetto C++. Nel progetto generato trovare i file con estensione cpp e modificarla con c. Quindi, nella pagina **Proprietà progetto** per il progetto (non per la soluzione) espandere **Proprietà di configurazione**, **C/C++** e selezionare **Avanzate**. Impostare l'opzione **Compila come** su **Compila come codice C (/TC)**.
 
@@ -42,8 +42,8 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 ### <a name="windows-desktop"></a>Desktop di Windows
 
-|Modello di progetto|Descrizione|  
-|----------------------|-----------------------------| 
+|Modello di progetto|Descrizione|
+|----------------------|-----------------------------|
 |[Applicazione console di Windows](../windows/creating-a-console-application.md)|Progetto per la creazione di un'applicazione console di Windows.|
 |[Applicazione desktop di Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Progetto per la creazione di un'applicazione desktop di Windows (Win32).|
 |[Libreria di collegamento dinamico](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Progetto per la creazione di una libreria di collegamento dinamico (DLL).|
@@ -104,4 +104,4 @@ Molti dei file generati da un modello di progetto contengono commenti TODO per c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di progetti desktop tramite le creazioni guidate applicazioni](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[Creazione di progetti desktop tramite le creazioni guidate applicazioni](../ide/creating-desktop-projects-by-using-application-wizards.md)

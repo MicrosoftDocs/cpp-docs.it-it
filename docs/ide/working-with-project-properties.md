@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211663"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398664"
 ---
 # <a name="working-with-project-properties"></a>Utilizzo di proprietà di progetto
 
@@ -141,11 +141,11 @@ Una macro definita dall'utente viene archiviata in una finestra delle proprietà
 
 ##### <a name="to-create-a-user-defined-macro"></a>Per creare una macro definita dall'utente
 
-1.  Nella finestra **Gestione proprietà** (sulla barra dei menu scegliere **Visualizza**, **Gestione proprietà**) aprire il menu di scelta rapida per una finestra delle proprietà (il nome termina con l'estensione user) e quindi scegliere Proprietà. Viene aperta la finestra di dialogo **Pagine delle proprietà** per la finestra delle proprietà.
+1. Nella finestra **Gestione proprietà** (sulla barra dei menu scegliere **Visualizza**, **Gestione proprietà**) aprire il menu di scelta rapida per una finestra delle proprietà (il nome termina con l'estensione user) e quindi scegliere Proprietà. Viene aperta la finestra di dialogo **Pagine delle proprietà** per la finestra delle proprietà.
 
-2.  Nel riquadro sinistro della finestra selezionare **Macro utente**. Nel riquadro destro scegliere il pulsante **Aggiungi macro** per aprire la finestra di dialogo **Aggiungi macro utente**.
+1. Nel riquadro sinistro della finestra selezionare **Macro utente**. Nel riquadro destro scegliere il pulsante **Aggiungi macro** per aprire la finestra di dialogo **Aggiungi macro utente**.
 
-3.  Nella finestra di dialogo specificare un nome e un valore per la macro. Se possibile, selezionare la casella di controllo **Imposta questa macro come variabile di ambiente nell'ambiente di compilazione**.
+1. Nella finestra di dialogo specificare un nome e un valore per la macro. Se possibile, selezionare la casella di controllo **Imposta questa macro come variabile di ambiente nell'ambiente di compilazione**.
 
 ## <a name="property-editor"></a>Editor proprietà
 
