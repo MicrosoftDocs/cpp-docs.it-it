@@ -3,7 +3,7 @@ title: -Yc (Crea File di intestazione precompilata) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
-- devlang-cpp
+- cpp-tools
 ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UsePrecompiledHeader
@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5288e748956a405073697ddd7331a73b95d8650
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 37a81eb21065ef67ef6d0b6ee7cdc6724c0a517b
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714246"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029515"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Crea il file di intestazione precompilata)
 
@@ -38,8 +38,8 @@ Indica al compilatore di creare un file di intestazione precompilata (PCH) che r
 
 ## <a name="syntax"></a>Sintassi
 
-> __/Yc__
->  __/Yc__*nomefile*
+> __/Yc__<br/>
+> __/Yc__*nomefile*
 
 ## <a name="arguments"></a>Argomenti
 

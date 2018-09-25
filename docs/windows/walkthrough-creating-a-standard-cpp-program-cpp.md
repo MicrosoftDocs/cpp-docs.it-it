@@ -1,7 +1,7 @@
 ---
 title: 'Procedura dettagliata: Creazione di un programma C++ Standard (C++) | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff4a2078bef03127507d1da35599ea391904bee7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382635"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029619"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procedura dettagliata: Creazione di un programma C++ Standard (C++)
 
@@ -45,41 +45,48 @@ Per completare questa procedura dettagliata è necessario comprendere le nozioni
 
 1. Creare un progetto scegliendo **New** nel **File** menu e scegliendo **progetto**.
 
-2. Nel **Visual C++** riquadro tipi di progetto, fare clic su **Desktop di Windows**, quindi fare clic su **applicazione Console Windows**.
+1. Nel **Visual C++** riquadro tipi di progetto, fare clic su **Desktop di Windows**, quindi fare clic su **applicazione Console Windows**. 
 
-3. Digitare un nome per il progetto.
+   > [!NOTE]
+   > Per le versioni di Visual Studio precedenti 2017, nelle **nuovo progetto** finestra di dialogo espandere **installati** > **modelli**  >  **Visual C++**, quindi selezionare **Win32**. Nel riquadro centrale, selezionare **Progetto console Win32**. 
+
+   Digitare un nome per il progetto.
 
    Per impostazione predefinita, la soluzione che contiene il progetto ha lo stesso nome del progetto, ma è possibile digitare un nome diverso. È anche possibile digitare un percorso diverso per il progetto.
 
    Fare clic su **OK** per creare il progetto.
 
-4. Se **Esplora soluzioni** non è visualizzato, scegliere il **View** dal menu fare clic su **Esplora**.
+   > [!NOTE]
+   > Per le versioni di Visual Studio precedenti 2017, completare i **Creazione guidata applicazione Win32**. Fare clic su **successivo**, quindi assicurarsi che **applicazione Console** sia selezionata e deselezionare il **intestazioni precompilate** casella. Scegliere **Fine**.
 
-5. Aggiungere un nuovo file di origine al progetto, come indicato di seguito.
+1. Se **Esplora soluzioni** non è visualizzato, scegliere il **View** dal menu fare clic su **Esplora**.
+
+1. Aggiungere un nuovo file di origine al progetto, come indicato di seguito.
 
    1. In **Esplora soluzioni**, fare doppio clic sul **i file di origine** cartella, scegliere **Add**, quindi fare clic su **nuovo elemento**.
 
-   2. Nel **codice** nodo, fare clic su **File di C++ (. cpp)**, digitare un nome per il file e quindi fare clic su **Add**.
+   1. Nel **codice** nodo, fare clic su **File di C++ (. cpp)**, digitare un nome per il file e quindi fare clic su **Add**.
 
    Il file con estensione cpp verrà visualizzato nei **file di origine** cartella **Esplora soluzioni**, e il file viene aperto nell'editor di Visual Studio.
 
-6. Nel file nell'editor, digitare un programma C++ valido che utilizza la libreria Standard C++, oppure copiare uno dei programmi di esempio e incollarlo nel file.
+1. Nel file nell'editor, digitare un programma C++ valido che utilizza la libreria Standard C++, oppure copiare uno dei programmi di esempio e incollarlo nel file.
 
-7. Salvare il file.
+1. Salvare il file.
 
-8. Scegliere **Compila soluzione** dal menu **Compila**.
+1. Scegliere **Compila soluzione** dal menu **Compila**.
 
    Il **Output** finestra vengono visualizzate informazioni sullo stato di avanzamento compilazione, ad esempio, il percorso del log di compilazione e un messaggio che indica lo stato della compilazione.
 
-9. Nel menu **Debug** fare clic su **Avvia senza eseguire debug**.
+1. Nel menu **Debug** fare clic su **Avvia senza eseguire debug**.
 
    Se è stato usato il programma di esempio, una finestra di comando viene visualizzata e Mostra se sono presenti determinati Integer nel set.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-**Precedente:** [Console applicazioni in Visual C++](../windows/console-applications-in-visual-cpp.md). **Passaggio successivo:**[questa procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+**Precedente:** [Console applicazioni in Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
+**Passaggio successivo:** [procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
-[Libreria standard C++](../standard-library/cpp-standard-library-reference.md)
+[Libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

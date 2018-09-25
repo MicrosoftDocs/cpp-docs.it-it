@@ -1,7 +1,7 @@
 ---
 title: 'Procedura dettagliata: Creazione e uso di una libreria statica (C++) | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 07/12/2018
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d9b71435b4fd2952746b2b097d08008624f8942b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d495843d7979ace1d23710eb50c910e9089cf9c
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412535"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029697"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Procedura dettagliata: Creazione e uso di una libreria statica (C++)
 
@@ -49,35 +49,44 @@ Conoscenza delle nozioni di base del linguaggio C++.
 
 1. Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
 
-2. Nel riquadro sinistro della finestra di **nuovo progetto** finestra di dialogo, espandere **installato, Visual C++** e quindi selezionare **Windows Desktop**.
+1. Nel riquadro sinistro della finestra di **nuovo progetto** finestra di dialogo espandere **installato** > **Visual C++** e quindi selezionare **Windows Desktop**. Nel riquadro centrale, selezionare **Creazione guidata applicazione Desktop Windows**.
 
-3. Nel riquadro centrale, selezionare **Creazione guidata applicazione Desktop Windows**.
+   > [!NOTE]
+   > Per le versioni di Visual Studio precedenti 2017, nelle **nuovo progetto** finestra di dialogo espandere **installati** > **modelli**  >  **Visual C++**, quindi selezionare **Win32**. Nel riquadro centrale, selezionare **Progetto console Win32**.
 
-4. Specificare un nome per il progetto, ad esempio, *MathFuncsLib*, ovvero nel **nome** casella. Specificare un nome per la soluzione, ad esempio, *StaticLibrary*, ovvero nel **Nome soluzione** casella. Fare clic sul pulsante **OK** .
+1. Specificare un nome per il progetto, ad esempio, *MathFuncsLib*, ovvero nel **nome** casella. Specificare un nome per la soluzione, ad esempio, *StaticLibrary*, ovvero nel **Nome soluzione** casella. Fare clic sul pulsante **OK** .
 
-5. Sotto **tipo di applicazione**, selezionare la libreria statica (lib).
+    - Per Visual Studio 2017,
 
-6. Sotto **opzioni aggiuntive**, deselezionare le **intestazione precompilata** casella di controllo.
+        1. Sotto **tipo di applicazione**, selezionare **libreria statica (lib)**.
 
-7. Scegli **OK** per creare il progetto.
+        1. Sotto **opzioni di ulteriori**, deselezionare le **intestazione precompilata** casella di controllo.
+
+        1. Scegli **OK** per creare il progetto.
+
+    - Per le versioni di precedenti 2017, Visual Studio
+
+        1. Scegliere **Avanti**.
+
+        1. Sotto **tipo di applicazione**, selezionare **libreria statica**. Deselezionare i **intestazione precompilata** e selezionare **fine**.
 
 ##  <a name="AddClassToLib"></a> Aggiunta di una classe alla libreria statica
 
 ### <a name="to-add-a-class-to-the-static-library"></a>Per aggiungere una classe alla libreria statica
 
-1. Per creare un file di intestazione per una nuova classe, aprire il menu di scelta rapida per il progetto **MathFuncsLib** in **Esplora soluzioni**e quindi scegliere **Aggiungi**, **Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** nel riquadro sinistro in **Visual C++**, selezionare **Codice**. Nel riquadro centrale selezionare **File di intestazione (.h)**. Specificare un nome per il file di intestazione, ad esempio, *MathFuncsLib. H*e quindi scegliere il **Add** pulsante. Viene visualizzato un file di intestazione vuoto.
+1. Per creare un file di intestazione per una nuova classe, aprire il menu di scelta rapida per il **MathFuncsLib** del progetto **Esplora soluzioni**, quindi scegliere **Add**  >   **Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** nel riquadro sinistro in **Visual C++**, selezionare **Codice**. Nel riquadro centrale selezionare **File di intestazione (.h)**. Specificare un nome per il file di intestazione, ad esempio, *MathFuncsLib. H*e quindi scegliere il **Add** pulsante. Viene visualizzato un file di intestazione vuoto.
 
-2. Aggiungere una classe denominata `MyMathFuncs` per eseguire operazioni matematiche comuni quali addizione, sottrazione, moltiplicazione e divisione. Il codice dovrebbe essere analogo al seguente:
+1. Aggiungere una classe denominata `MyMathFuncs` per eseguire operazioni matematiche comuni quali addizione, sottrazione, moltiplicazione e divisione. Il codice dovrebbe essere analogo al seguente:
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]
 
-3. Per creare un file di origine per la nuova classe, scegliere **Esplora soluzioni** dal menu di scelta rapida del progetto **MathFuncsLib**e quindi scegliere **Aggiungi**, **Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** nel riquadro sinistro in **Visual C++**, selezionare **Codice**. Nel riquadro centrale selezionare **File di C++ (.cpp)**. Specificare un nome per il file di origine, ad esempio, *MathFuncsLib. cpp*e quindi scegliere il **Add** pulsante. Viene visualizzato un file di origine vuoto.
+1. Per creare un file di origine per la nuova classe, aprire il menu di scelta rapida per il **MathFuncsLib** del progetto **Esplora soluzioni**, quindi scegliere **Add**  >   **Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** nel riquadro sinistro in **Visual C++**, selezionare **Codice**. Nel riquadro centrale selezionare **File di C++ (.cpp)**. Specificare un nome per il file di origine, ad esempio, *MathFuncsLib. cpp*e quindi scegliere il **Add** pulsante. Viene visualizzato un file di origine vuoto.
 
-4. Usare questo file di origine per implementare la funzionalità per **MyMathFuncs**. Il codice dovrebbe essere analogo al seguente:
+1. Usare questo file di origine per implementare la funzionalità per **MyMathFuncs**. Il codice dovrebbe essere analogo al seguente:
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#110](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_2.cpp)]
 
-5. Compilare la libreria statica selezionando **compilare** > **Compila soluzione** nella barra dei menu. Verrà creata una libreria statica che può essere usata da altri programmi.
+1. Compilare la libreria statica selezionando **compilare** > **Compila soluzione** nella barra dei menu. Verrà creata una libreria statica che può essere usata da altri programmi.
 
    > [!NOTE]
    > Quando si usa la riga di comando in Visual Studio per la compilazione, è necessario compilare il programma in due passaggi. Eseguire innanzitutto `cl /c /EHsc MathFuncsLib.cpp` per compilare il codice e creare un file oggetto denominato `MathFuncsLib.obj`. Il comando `cl` richiama il compilatore, Cl.exe, e l'opzione `/c` specifica la compilazione senza collegamento. Per altre informazioni, vedere [/c (compila senza collegamenti)](../build/reference/c-compile-without-linking.md).) In secondo luogo, eseguire `lib MathFuncsLib.obj` per collegare il codice e creare la libreria statica `MathFuncsLib.lib`. Il comando `lib` richiama Gestione librerie, Lib.exe. Per altre informazioni, vedere [LIB Reference](../build/reference/lib-reference.md).
@@ -88,16 +97,26 @@ Conoscenza delle nozioni di base del linguaggio C++.
 
 1. Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
 
-2. Nel riquadro sinistro della finestra di **nuovo progetto** finestra di dialogo, espandere **installato, Visual C++** e quindi selezionare **Windows Desktop**.
+1. Nel riquadro sinistro della finestra di **nuovo progetto** finestra di dialogo espandere **installato** > **Visual C++** e quindi selezionare **Windows Desktop**. Nel riquadro centrale, selezionare **Creazione guidata applicazione Desktop Windows**. 
 
-3. Nel riquadro centrale, selezionare **Creazione guidata applicazione Desktop Windows**.
+   > [!NOTE]
+   > Per le versioni di Visual Studio precedenti 2017, nelle **nuovo progetto** finestra di dialogo espandere **installati** > **modelli**  >  **Visual C++**, quindi selezionare **Win32**. Nel riquadro centrale, selezionare **Progetto console Win32**.
 
-4. Specificare un nome per il progetto, ad esempio, *MyExecRefsLib*, ovvero nel **nome** casella. Nell'elenco a discesa accanto a **Soluzione**selezionare **Aggiungi a soluzione**. Verrà aggiunto un nuovo progetto alla soluzione che contiene le librerie statiche. Fare clic sul pulsante **OK** .
-5. Sotto **tipo di applicazione**, selezionare **applicazione Console (.exe)**.
+1. Specificare un nome per il progetto, ad esempio, *MyExecRefsLib*, ovvero nel **nome** casella. Nell'elenco a discesa accanto a **Soluzione**selezionare **Aggiungi a soluzione**. Verrà aggiunto un nuovo progetto alla soluzione che contiene le librerie statiche. Fare clic sul pulsante **OK** .
 
-6. Sotto **opzioni di ulteriori**, deselezionare le **intestazione precompilata** casella di controllo.
+    - Per Visual Studio 2017,
 
-7. Scegli **OK** per creare il progetto.
+        1. Sotto **tipo di applicazione**, selezionare **applicazione Console (.exe)**.
+
+        1. Sotto **opzioni di ulteriori**, deselezionare le **intestazione precompilata** casella di controllo.
+
+        1. Scegli **OK** per creare il progetto.
+
+    - Per le versioni di precedenti 2017, Visual Studio
+
+        1. Scegliere **Avanti**.
+
+        1. Assicurarsi che **applicazione Console** sia selezionata. Quindi controllare la **progetto vuoto** e selezionare **fine**.
 
 ##  <a name="UseLibInApp"></a> Utilizzo della funzionalità della libreria statica nell'app
 
@@ -105,19 +124,19 @@ Conoscenza delle nozioni di base del linguaggio C++.
 
 1. Dopo aver creato un'applicazione console, verrà creato un programma vuoto. Il nome del file di origine è uguale al nome scelto in precedenza. In questo esempio, il file è denominato `MyExecRefsLib.cpp`.
 
-2. Per poter usare le routine matematiche della libreria statica, è necessario fare riferimento a esse. A tale scopo, aprire il menu di scelta rapida per il **MyExecRefsLib** del progetto **Esplora soluzioni**, quindi scegliere **Add** > **riferimento**.
+1. Per poter usare le routine matematiche della libreria statica, è necessario fare riferimento a esse. A tale scopo, aprire il menu di scelta rapida per il **MyExecRefsLib** del progetto **Esplora soluzioni**, quindi scegliere **Add** > **riferimento**.
 
-3. La finestra di dialogo **Aggiungi riferimento** contiene l'elenco di tutte le librerie a cui è possibile fare riferimento. Nella scheda **Progetti** sono elencati tutti i progetti presenti nella soluzione corrente e le eventuali librerie che essi contengono. Nella scheda **Progetti** selezionare la casella di controllo **MathFuncsLib** e quindi scegliere il pulsante **OK** .
+1. La finestra di dialogo **Aggiungi riferimento** contiene l'elenco di tutte le librerie a cui è possibile fare riferimento. Nella scheda **Progetti** sono elencati tutti i progetti presenti nella soluzione corrente e le eventuali librerie che essi contengono. Nella scheda **Progetti** selezionare la casella di controllo **MathFuncsLib** e quindi scegliere il pulsante **OK** .
 
-4. Per fare riferimento al `MathFuncsLib.h` file di intestazione, è necessario modificare il percorso delle directory incluse. Nella finestra di dialogo **Pagine delle proprietà** per **MyExecRefsLib**espandere il nodo **Proprietà di configurazione** , il nodo **C/C++** e quindi selezionare **Generale**. Accanto a **Directory di inclusione aggiuntive**specificare o cercare il percorso della directory **MathFuncsLib** .
+1. Per fare riferimento al `MathFuncsLib.h` file di intestazione, è necessario modificare il percorso delle directory incluse. Nella finestra di dialogo **Pagine delle proprietà** per **MyExecRefsLib**espandere il nodo **Proprietà di configurazione** , il nodo **C/C++** e quindi selezionare **Generale**. Accanto a **Directory di inclusione aggiuntive**specificare o cercare il percorso della directory **MathFuncsLib** .
 
    Per accedere al percorso della directory, aprire il menu a discesa dei valori della proprietà, quindi selezionare **Modifica**. Nel **directory di inclusione aggiuntive** nella casella di testo, finestra di dialogo selezionare una riga vuota e quindi scegliere il pulsante con puntini di sospensione (**...** ) alla fine della riga. Nella finestra di dialogo **Seleziona directory** selezionare la directory contenente **MathFuncsLib** e quindi scegliere il pulsante **Selezione cartella** per salvare la selezione e chiudere la finestra di dialogo. Nella finestra di dialogo **Directory di inclusione aggiuntive** scegliere il pulsante **OK** , quindi nella finestra di dialogo **Pagine delle proprietà** , scegliere il pulsante **OK** per salvare le modifiche apportate al progetto.
 
-5. È ora possibile usare il `MyMathFuncs` classe in questa app. A tale scopo, sostituire il contenuto di `MyExecRefsLib.cpp` con questo codice:
+1. È ora possibile usare il `MyMathFuncs` classe in questa app. A tale scopo, sostituire il contenuto di `MyExecRefsLib.cpp` con questo codice:
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#120](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_3.cpp)]
 
-6. Compilare l'eseguibile scegliendo **compilare** > **Compila soluzione** nella barra dei menu.
+1. Compilare l'eseguibile scegliendo **compilare** > **Compila soluzione** nella barra dei menu.
 
 ##  <a name="RunApp"></a> L'esecuzione dell'app
 
@@ -125,7 +144,7 @@ Conoscenza delle nozioni di base del linguaggio C++.
 
 1. Assicurarsi che **MyExecRefsLib** sia selezionato come progetto predefinito aprendo il menu di scelta rapida di **MyExecRefsLib** in **Esplora soluzioni**e quindi selezionando **Imposta come progetto di avvio**.
 
-2. Per eseguire il progetto, nella barra dei menu, scegliere **Debug** > **Avvia senza eseguire debug**. Il codice sarà analogo al seguente:
+1. Per eseguire il progetto, nella barra dei menu, scegliere **Debug** > **Avvia senza eseguire debug**. Il codice sarà analogo al seguente:
 
     ```Output
     a + b = 106.4
@@ -137,4 +156,4 @@ Conoscenza delle nozioni di base del linguaggio C++.
 ## <a name="see-also"></a>Vedere anche
 
 [Procedura dettagliata: creazione e utilizzo di una libreria a collegamento dinamico (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
-[Applicazioni desktop (Visual C++)](../windows/desktop-applications-visual-cpp.md)
+[Applicazioni desktop (Visual C++)](../windows/desktop-applications-visual-cpp.md)<br/>

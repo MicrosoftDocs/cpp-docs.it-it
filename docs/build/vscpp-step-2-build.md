@@ -5,7 +5,7 @@ ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705783"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029593"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilare ed eseguire un progetto di app console C++
 
@@ -45,7 +45,7 @@ Se Visual Studio è simile a ciò, si è pronti per compilare ed eseguire l'app:
 
    ![Avviare il progetto](../build/media/vscpp-start-without-debugging.gif "avviare il progetto")
 
-    Una finestra della console si apre e viene quindi eseguita l'app. Quando si avvia un'app console in Visual Studio, viene eseguito il codice, quindi stampa "preme un tasto qualsiasi per continuare. . ." per fornire possibilità di visualizzare l'output.
+   Una finestra della console si apre e viene quindi eseguita l'app. Quando si avvia un'app console in Visual Studio, viene eseguito il codice, quindi stampa "preme un tasto qualsiasi per continuare. . ." per fornire possibilità di visualizzare l'output.
 
 La procedura è stata completata. È stata creata la prima "Hello, world!" app console in Visual Studio. Premere un tasto per chiudere la finestra della console e tornare a Visual Studio.
 
