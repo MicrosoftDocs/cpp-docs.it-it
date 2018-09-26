@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6657762a1bd896b78eea85f217ad68f887263e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3aa487ee277954470cdd8b16f9f64f465c195897
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055702"
 ---
 # <a name="white-space-characters"></a>Carattere di spazio vuoto
-Spazio, tabulazione, ritorno a capo, avanzamento carta, tabulazione verticale e nuova riga vengono denominati spazi vuoti perché hanno lo stesso scopo degli spazi tra parole e righe in una pagina stampata e semplificano la lettura. I token vengono separati (limitato) da spazi vuoti e da altri token, come gli operatori e la punteggiatura. Durante l'analisi del codice, il compilatore C ignora gli spazi vuoti a meno che non vengano utilizzati come separatori o come componenti di costanti carattere o di valori letterali stringa. Utilizzare gli spazi vuoti per rendere il programma più leggibile. Si noti che il compilatore considera come spazio vuoto anche i commenti.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Token C](../c-language/c-tokens.md)
+
+Spazio, tabulazione, ritorno a capo, avanzamento carta, tabulazione verticale e nuova riga vengono denominati spazi vuoti perché hanno lo stesso scopo degli spazi tra parole e righe in una pagina stampata e semplificano la lettura. I token vengono separati (limitato) da spazi vuoti e da altri token, come gli operatori e la punteggiatura. Durante l'analisi del codice, il compilatore C ignora gli spazi vuoti a meno che non vengano utilizzati come separatori o come componenti di costanti carattere o di valori letterali stringa. Utilizzare gli spazi vuoti per rendere il programma più leggibile. Si noti che il compilatore considera come spazio vuoto anche i commenti.
+
+## <a name="see-also"></a>Vedere anche
+
+[Token C](../c-language/c-tokens.md)

@@ -17,42 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d98329b46bd7db72caa88030f56abb92142904c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bde13a20dd1b54ed8a1b4271895715596549f1a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069300"
 ---
 # <a name="continue-statement-c"></a>Istruzione continue (C)
 
-L'istruzione `continue` passa il controllo all'iterazione successiva in cui è visualizzata e che si trova nell'istruzione di inclusione `do`, `for` o `while` più vicina, ignorando qualunque altra istruzione presente nel corpo dell'istruzione `do`, `for` o `while`.  
-  
+L'istruzione `continue` passa il controllo all'iterazione successiva in cui è visualizzata e che si trova nell'istruzione di inclusione `do`, `for` o `while` più vicina, ignorando qualunque altra istruzione presente nel corpo dell'istruzione `do`, `for` o `while`.
+
 ## <a name="syntax"></a>Sintassi
 
 *jump-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**continue ;**
-  
-La successiva iterazione di un'istruzione `do`, `for` o `while` viene determinata come segue:  
-  
--   All'interno di un'istruzione `do` o `while`, l'iterazione successiva inizia rivalutando l'espressione dell'istruzione `do` o `while`.  
-  
--   Un'istruzione `continue` in un'istruzione `for` provoca la valutazione dell'espressione loop dell'istruzione `for`. In seguito il compilatore rivaluta l'espressione condizionale e, a seconda del risultato, termina o ripete il corpo dell'istruzione. Vedere [Istruzione for](../c-language/for-statement-c.md) per altre informazioni sull'istruzione `for` e sui non terminali corrispondenti.  
-  
-Di seguito, un esempio dell'istruzione `continue`:  
-  
-```  
-while ( i-- > 0 )   
-{  
-    x = f( i );  
-    if ( x == 1 )  
-        continue;  
-    y += x * x;  
-}  
-```  
-  
-In questo esempio, il corpo dell'istruzione viene eseguito finché `i` è maggiore di 0. Il primo `f(i)` viene assegnato a `x`; quindi, se `x` è uguale a 1, l'istruzione `continue` viene eseguita. Le restanti istruzioni presenti nel corpo vengono ignorate e l'esecuzione riprende dall'inizio del ciclo con la valutazione del test del ciclo.  
-  
+
+La successiva iterazione di un'istruzione `do`, `for` o `while` viene determinata come segue:
+
+- All'interno di un'istruzione `do` o `while`, l'iterazione successiva inizia rivalutando l'espressione dell'istruzione `do` o `while`.
+
+- Un'istruzione `continue` in un'istruzione `for` provoca la valutazione dell'espressione loop dell'istruzione `for`. In seguito il compilatore rivaluta l'espressione condizionale e, a seconda del risultato, termina o ripete il corpo dell'istruzione. Vedere [Istruzione for](../c-language/for-statement-c.md) per altre informazioni sull'istruzione `for` e sui non terminali corrispondenti.
+
+Di seguito, un esempio dell'istruzione `continue`:
+
+```
+while ( i-- > 0 )
+{
+    x = f( i );
+    if ( x == 1 )
+        continue;
+    y += x * x;
+}
+```
+
+In questo esempio, il corpo dell'istruzione viene eseguito finché `i` è maggiore di 0. Il primo `f(i)` viene assegnato a `x`; quindi, se `x` è uguale a 1, l'istruzione `continue` viene eseguita. Le restanti istruzioni presenti nel corpo vengono ignorate e l'esecuzione riprende dall'inizio del ciclo con la valutazione del test del ciclo.
+
 ## <a name="see-also"></a>Vedere anche
 
 [Istruzione continue](../cpp/continue-statement-cpp.md)

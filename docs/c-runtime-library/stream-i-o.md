@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fba53f16fad9321701e641020ed01349b13a5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ab13141c573ad302528a09b74cb3a5e2aaa0382
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035226"
 ---
 # <a name="stream-io"></a>I/O di flusso
 
@@ -89,23 +89,23 @@ Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli carat
 |[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Scrivere dati formattati di lunghezza specificata nel buffer|
 |[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Scrivere dati formattati nel buffer|
 
- Quando un programma inizia l'esecuzione, il codice di avvio apre automaticamente più flussi: standard input (a cui punta **stdin**), standard output (a cui punta **stdout**) e standard error (a cui punta **stderr**). I flussi vengono indirizzati alla console (tastiera e schermo) per impostazione predefinita. Usare **freopen** per reindirizzare **stdin**, **stdout** o **stderr** a un file su disco o a un dispositivo.
+Quando un programma inizia l'esecuzione, il codice di avvio apre automaticamente più flussi: standard input (a cui punta **stdin**), standard output (a cui punta **stdout**) e standard error (a cui punta **stderr**). I flussi vengono indirizzati alla console (tastiera e schermo) per impostazione predefinita. Usare **freopen** per reindirizzare **stdin**, **stdout** o **stderr** a un file su disco o a un dispositivo.
 
- I file aperti mediante le routine del flusso vengono memorizzati nel buffer per impostazione predefinita. Le funzioni **stdout** e **stderr** vengono scaricate ogni volta che sono piene o, se si sta scrivendo su un dispositivo a caratteri, dopo ogni chiamata della libreria. Se un programma termina in modo anomalo, è possibile che i buffer di output non vengano scaricati, con conseguente perdita di dati. Usare **fflush** o **_flushall** per assicurarsi che il buffer associato a un file specificato o tutti i buffer aperti vengano scaricati nel sistema operativo, che può memorizzare i dati nella cache prima di scriverli su disco. La funzionalità di commit su disco garantisce che il contenuto del buffer scaricato non vada perduto nel caso di un errore di sistema.
+I file aperti mediante le routine del flusso vengono memorizzati nel buffer per impostazione predefinita. Le funzioni **stdout** e **stderr** vengono scaricate ogni volta che sono piene o, se si sta scrivendo su un dispositivo a caratteri, dopo ogni chiamata della libreria. Se un programma termina in modo anomalo, è possibile che i buffer di output non vengano scaricati, con conseguente perdita di dati. Usare **fflush** o **_flushall** per assicurarsi che il buffer associato a un file specificato o tutti i buffer aperti vengano scaricati nel sistema operativo, che può memorizzare i dati nella cache prima di scriverli su disco. La funzionalità di commit su disco garantisce che il contenuto del buffer scaricato non vada perduto nel caso di un errore di sistema.
 
- Esistono due modi per eseguire il commit del contenuto del buffer su disco:
+Esistono due modi per eseguire il commit del contenuto del buffer su disco:
 
--   Eseguire il collegamento con il file COMMODE.OBJ per impostare un flag globale di commit. L'impostazione predefinita del flag globale è **n**, per "no-commit".
+- Eseguire il collegamento con il file COMMODE.OBJ per impostare un flag globale di commit. L'impostazione predefinita del flag globale è **n**, per "no-commit".
 
--   Impostare il flag della modalità su **c** con **fopen** o **_fdopen**.
+- Impostare il flag della modalità su **c** con **fopen** o **_fdopen**.
 
- Qualsiasi file specificatamente aperto con il flag **c** o **n** si comporta in base al flag, indipendentemente dallo stato del flag globale di commit/no-commit.
+Qualsiasi file specificatamente aperto con il flag **c** o **n** si comporta in base al flag, indipendentemente dallo stato del flag globale di commit/no-commit.
 
- Se il programma non chiude in modo esplicito un flusso, il flusso viene automaticamente chiuso quando il programma termina. Tuttavia, è necessario chiudere un flusso al termine di un programma, perché il numero di flussi che possono essere aperti contemporaneamente è limitato. Per informazioni sul questo limite, vedere [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .
+Se il programma non chiude in modo esplicito un flusso, il flusso viene automaticamente chiuso quando il programma termina. Tuttavia, è necessario chiudere un flusso al termine di un programma, perché il numero di flussi che possono essere aperti contemporaneamente è limitato. Per informazioni sul questo limite, vedere [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .
 
- L'input può usare direttamente l'output solo con una chiamata corrispondente a **fflush** o a una funzione di posizionamento di file (**fseek**, **fsetpos** o **rewind**). L'output può seguire l'input senza una corrispondente chiamata a una funzione di posizionamento dei file se l'operazione di input rileva la fine del file.
+L'input può usare direttamente l'output solo con una chiamata corrispondente a **fflush** o a una funzione di posizionamento di file (**fseek**, **fsetpos** o **rewind**). L'output può seguire l'input senza una corrispondente chiamata a una funzione di posizionamento dei file se l'operazione di input rileva la fine del file.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Input e output](../c-runtime-library/input-and-output.md)<br/>
- [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

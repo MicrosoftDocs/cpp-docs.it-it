@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036358"
 ---
 # <a name="file-handling"></a>Gestione di file
 
@@ -86,7 +86,7 @@ Queste routine consentono di modificare la rappresentazione del file tra una str
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Restituisce un handle di file del sistema operativo associato al descrittore di file di runtime C esistente|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Associa un descrittore di file di runtime C con un handle di file del sistema operativo esistente.|
 
- Le funzioni Win32 seguenti aprono anche file e pipe:
+Le funzioni Win32 seguenti aprono anche file e pipe:
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 

@@ -30,34 +30,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532aac2e47a402ae04ba4d4bf4fcb133c997bd31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59ec444ae81d680bf57aa4542f231c021f1abddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102781"
 ---
 # <a name="setlcactivefunc-unguardedreadlcactiveaddfunc"></a>___setlc_active_func, ___unguarded_readlc_active_add_func
-OBSOLETE. CRT esporta queste funzioni interne esclusivamente per mantenere la compatibilità binaria.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-int ___setlc_active_func(void);  
-int * ___unguarded_readlc_active_add_func(void);  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Il valore restituito non è rilevante.  
-  
-## <a name="remarks"></a>Note  
- Sebbene le funzioni CRT interne `___setlc_active_func` e `___unguarded_readlc_active_add_func` siano obsolete e non vengano più usate, vengono esportate dalla libreria CRT per mantenere la compatibilità binaria. Lo scopo originale di `___setlc_active_func` è quello di restituire il numero di chiamate alla funzione `setlocale` attualmente attive. Lo scopo originale di `___unguarded_readlc_active_add_func` è quello di restituire il numero di funzioni che fanno riferimento alle impostazioni locali senza bloccarle.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`___setlc_active_func`, `___unguarded_readlc_active_add_func`|none|  
-  
-## <a name="see-also"></a>Vedere anche  
- [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+OBSOLETE. CRT esporta queste funzioni interne esclusivamente per mantenere la compatibilità binaria.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+int ___setlc_active_func(void);
+int * ___unguarded_readlc_active_add_func(void);
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Il valore restituito non è rilevante.
+
+## <a name="remarks"></a>Note
+
+Sebbene le funzioni CRT interne `___setlc_active_func` e `___unguarded_readlc_active_add_func` siano obsolete e non vengano più usate, vengono esportate dalla libreria CRT per mantenere la compatibilità binaria. Lo scopo originale di `___setlc_active_func` è quello di restituire il numero di chiamate alla funzione `setlocale` attualmente attive. Lo scopo originale di `___unguarded_readlc_active_add_func` è quello di restituire il numero di funzioni che fanno riferimento alle impostazioni locali senza bloccarle.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|`___setlc_active_func`, `___unguarded_readlc_active_add_func`|none|
+
+## <a name="see-also"></a>Vedere anche
+
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

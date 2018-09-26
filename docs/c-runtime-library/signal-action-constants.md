@@ -19,40 +19,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6f645d474e697bf662a5dd63973dd54c329eb9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f2cb8e8ca907081e85be03d7576d0252cdf20ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081318"
 ---
 # <a name="signal-action-constants"></a>Costanti azione signal
-L'azioni eseguita quando il segnale di interruzione viene ricevuto dipende dal valore di `func`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#include <signal.h>  
-```  
-  
-## <a name="remarks"></a>Note  
- L'argomento di `func` deve essere un indirizzo funzione o una delle costanti manifesto elencate di seguito e definite in SIGNAL.H.  
-  
- `SIG_DFL`  
- Usa la risposta del sistema predefinita. Se il programma chiamante usa i flussi di I/O, i buffer creati dalla libreria run-time non vengono scaricati.  
-  
- `SIG_IGN`  
- Ignora il segnale di interruzione. Questo valore non deve essere mai specificato per `SIGFPE`, visto che lo stato a virgola mobile del processo rimane indefinito.  
-  
- `SIG_SGE`  
- Indica che si è verificato un errore nel segnale.  
-  
- `SIG_ACK`  
- Indica che è stato ricevuto un acknowledgement.  
-  
- `SIG_ERR`  
- Un tipo restituito da un segnale indica che si è verificato un errore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [signal](../c-runtime-library/reference/signal.md)   
- [Costanti globali](../c-runtime-library/global-constants.md)
+
+L'azioni eseguita quando il segnale di interruzione viene ricevuto dipende dal valore di `func`.
+
+## <a name="syntax"></a>Sintassi
+
+```
+#include <signal.h>
+```
+
+## <a name="remarks"></a>Note
+
+L'argomento di `func` deve essere un indirizzo funzione o una delle costanti manifesto elencate di seguito e definite in SIGNAL.H.
+
+|||
+|-|-|
+| `SIG_DFL`  | Usa la risposta del sistema predefinita. Se il programma chiamante usa i flussi di I/O, i buffer creati dalla libreria run-time non vengono scaricati.  |
+| `SIG_IGN`  | Ignora il segnale di interruzione. Questo valore non deve essere mai specificato per `SIGFPE`, visto che lo stato a virgola mobile del processo rimane indefinito.  |
+| `SIG_SGE`  | Indica che si è verificato un errore nel segnale.  |
+| `SIG_ACK`  | Indica che è stato ricevuto un acknowledgement.  |
+| `SIG_ERR`  | Un tipo restituito da un segnale indica che si è verificato un errore.  |
+
+## <a name="see-also"></a>Vedere anche
+
+[signal](../c-runtime-library/reference/signal.md)<br/>
+[Costanti globali](../c-runtime-library/global-constants.md)

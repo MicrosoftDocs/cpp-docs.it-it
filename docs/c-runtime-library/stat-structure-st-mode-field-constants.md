@@ -45,39 +45,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f603757706bfdeeaaefe5b6d33cd94bb2624c389
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd7278d017002ff0d5aa716db61fdcdb54e24018
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410135"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051138"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>Costanti campo _stat Structure st_mode
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-#include <sys/stat.h>  
-  
-```  
-  
-## <a name="remarks"></a>Note  
- Queste costanti vengono usate per indicare il tipo di file nel campo **st_mode** di [_stat structure](../c-runtime-library/standard-types.md).  
-  
- Le costanti di maschera di bit sono descritte di seguito:  
-  
-|Costante|Significato|  
-|--------------|-------------|  
-|`_S_IFMT`|Maschera del tipo file|  
-|`_S_IFDIR`|Directory|  
-|`_S_IFCHR`|Speciale di carattere (indica un dispositivo se impostato)|  
-|`_S_IFREG`|Regular|  
-|`_S_IREAD`|Autorizzazione di lettura, proprietario|  
-|`_S_IWRITE`|Autorizzazione di scrittura, proprietario|  
-|`_S_IEXEC`|Autorizzazione di esecuzione/ricerca, proprietario|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzioni _stat, _wstat](../c-runtime-library/reference/stat-functions.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [Tipi standard](../c-runtime-library/standard-types.md)   
- [Costanti globali](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintassi
+
+```
+
+#include <sys/stat.h>
+
+```
+
+## <a name="remarks"></a>Note
+
+Queste costanti vengono usate per indicare il tipo di file nel campo **st_mode** di [_stat structure](../c-runtime-library/standard-types.md).
+
+Le costanti di maschera di bit sono descritte di seguito:
+
+|Costante|Significato|
+|--------------|-------------|
+|`_S_IFMT`|Maschera del tipo file|
+|`_S_IFDIR`|Directory|
+|`_S_IFCHR`|Speciale di carattere (indica un dispositivo se impostato)|
+|`_S_IFREG`|Regular|
+|`_S_IREAD`|Autorizzazione di lettura, proprietario|
+|`_S_IWRITE`|Autorizzazione di scrittura, proprietario|
+|`_S_IEXEC`|Autorizzazione di esecuzione/ricerca, proprietario|
+
+## <a name="see-also"></a>Vedere anche
+
+[Funzioni _stat, _wstat](../c-runtime-library/reference/stat-functions.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[Tipi standard](../c-runtime-library/standard-types.md)<br/>
+[Costanti globali](../c-runtime-library/global-constants.md)

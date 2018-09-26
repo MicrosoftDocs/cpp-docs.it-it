@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4db02292398da5c35f2894d4ce278cea88a584
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eec964d9b81ee93f888bbd4152f06f6bdf51b6d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053830"
 ---
 # <a name="type-char"></a>Tipo char
-Il tipo `char` viene utilizzato per archiviare l'Integer di un membro del set di caratteri rappresentabile. L'Integer è il valore in codice ASCII corrispondente al carattere specificato.  
-  
- **Sezione specifica Microsoft**  
-  
- I valori di carattere di tipo `unsigned char` dispongono di un intervallo che va da 0 a esadecimale 0xFF. L'intervallo di un **signed char** è incluso tra 0x80 e 0x7F. Questi intervalli corrispondono, rispettivamente, ai valori decimali da 0 a 255 e da -128 a +127. L'opzione del compilatore /J modifica l'impostazione predefinita da **signed** a `unsigned`.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Archiviazione di tipi di base](../c-language/storage-of-basic-types.md)
+
+Il tipo `char` viene utilizzato per archiviare l'Integer di un membro del set di caratteri rappresentabile. L'Integer è il valore in codice ASCII corrispondente al carattere specificato.
+
+**Sezione specifica Microsoft**
+
+I valori di carattere di tipo `unsigned char` dispongono di un intervallo che va da 0 a esadecimale 0xFF. L'intervallo di un **signed char** è incluso tra 0x80 e 0x7F. Questi intervalli corrispondono, rispettivamente, ai valori decimali da 0 a 255 e da -128 a +127. L'opzione del compilatore /J modifica l'impostazione predefinita da **signed** a `unsigned`.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="see-also"></a>Vedere anche
+
+[Archiviazione di tipi di base](../c-language/storage-of-basic-types.md)

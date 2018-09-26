@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfd0715acd7eb18c4ccc83d496a1e9a98084fdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a58338d980db5acd8f41c71e23c37c1700a0761
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055117"
 ---
 # <a name="initializing-aggregate-types"></a>Inizializzazione di tipi di aggregazione
 
@@ -109,13 +109,13 @@ triplet nlist[2][3] =
 
 In questo esempio, `nlist` viene dichiarato come una matrice di strutture due per tre, in cui ogni struttura dispone di tre membri. La riga 1 dell'inizializzazione assegna valori alla prima riga di `nlist`, come illustrato di seguito:
 
-1.  La prima parentesi graffa sinistra sulla riga 1 indica al compilatore che l'inizializzazione del primo membro di aggregazione di `nlist` (ovvero `nlist[0]`) sta iniziando.
+1. La prima parentesi graffa sinistra sulla riga 1 indica al compilatore che l'inizializzazione del primo membro di aggregazione di `nlist` (ovvero `nlist[0]`) sta iniziando.
 
-2.  La seconda parentesi graffa sinistra indica che l'inizializzazione del primo membro di aggregazione di `nlist[0]` (ovvero la struttura presente in `nlist[0][0]`) sta iniziando.
+1. La seconda parentesi graffa sinistra indica che l'inizializzazione del primo membro di aggregazione di `nlist[0]` (ovvero la struttura presente in `nlist[0][0]`) sta iniziando.
 
-3.  La prima parentesi graffa destra termina l'inizializzazione della struttura `nlist[0][0]`; la parentesi graffa sinistra successiva avvia l'inizializzazione di `nlist[0][1]`.
+1. La prima parentesi graffa destra termina l'inizializzazione della struttura `nlist[0][0]`; la parentesi graffa sinistra successiva avvia l'inizializzazione di `nlist[0][1]`.
 
-4.  Il processo continua fino alla fine della riga, dove la parentesi graffa destra di chiusura termina l'inizializzazione di `nlist[0]`.
+1. Il processo continua fino alla fine della riga, dove la parentesi graffa destra di chiusura termina l'inizializzazione di `nlist[0]`.
 
 Con modalità simili, la riga 2 assegna valori alla seconda riga di `nlist`. Si noti che i set di parentesi graffe esterni che racchiudono gli inizializzatori sulle righe 1 e 2 sono necessari. La costruzione seguente, nella quale le parentesi graffe esterne sono omesse, genererebbe un errore:
 

@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ce75fa9670f28079774f4ba564657d0b4614ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018314"
 ---
 # <a name="low-level-io"></a>I/O a basso livello
 
 Queste funzioni richiamano direttamente il sistema operativo per operazioni di livello inferiore rispetto a quelle fornite dal flusso di I/O. Le chiamate di input e output di basso livello non vengono memorizzate nel buffer o non formattano dati.
 
- Le routine di basso livello possono accedere ai flussi standard aperti all'avvio del programma utilizzando i seguenti descrittori di file predefiniti.
+Le routine di basso livello possono accedere ai flussi standard aperti all'avvio del programma utilizzando i seguenti descrittori di file predefiniti.
 
 |Flusso|Descrittore del file|
 |------------|---------------------|
@@ -39,7 +39,7 @@ Queste funzioni richiamano direttamente il sistema operativo per operazioni di l
 |**stdout**|1|
 |**stderr**|2|
 
- Le routine di I/O a basso livello impostano la variabile globale [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) quando si verifica un errore. È necessario includere STDIO.H quando si usano funzioni di basso livello solo se il programma richiede una costante che sia definita in STDIO.H, come l'indicatore di fine file (**EOF**).
+Le routine di I/O a basso livello impostano la variabile globale [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) quando si verifica un errore. È necessario includere STDIO.H quando si usano funzioni di basso livello solo se il programma richiede una costante che sia definita in STDIO.H, come l'indicatore di fine file (**EOF**).
 
 ## <a name="low-level-io-functions"></a>Funzioni di I/O di basso livello
 
@@ -64,5 +64,5 @@ Queste funzioni richiamano direttamente il sistema operativo per operazioni di l
 ## <a name="see-also"></a>Vedere anche
 
 [Input e output](../c-runtime-library/input-and-output.md)<br/>
- [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [Chiamate di sistema](../c-runtime-library/system-calls.md)<br/>
+[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Chiamate di sistema](../c-runtime-library/system-calls.md)<br/>
