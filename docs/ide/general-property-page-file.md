@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 46446b03b557aa3c685ff4ab4f1658cd6972124e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715468"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388602"
 ---
 # <a name="general-property-page-file"></a>Pagina delle proprietà Generale (File)
 
@@ -44,4 +44,4 @@ Per i progetti non Windows, vedere [Informazioni di riferimento sulla pagina del
 
 ## <a name="see-also"></a>Vedere anche
 
-[Pagine delle proprietà](../ide/property-pages-visual-cpp.md)  
+[Pagine delle proprietà](../ide/property-pages-visual-cpp.md)
