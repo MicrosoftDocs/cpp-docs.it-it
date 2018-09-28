@@ -1,5 +1,5 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (aggiunge SupressUnmanagedCodeSecurityAttribute) | Documenti Microsoft
+title: /CLRUNMANAGEDCODECHECK (aggiunge SuppressUnmanagedCodeSecurityAttribute) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0a70ea74851d3a10f9d46b8289098d6fb3fe22
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
+ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705374"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47429761"
 ---
-# <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Aggiunge SupressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (aggiunge SuppressUnmanagedCodeSecurityAttribute)
 
-**/CLRUNMANAGEDCODECHECK** specifica se il linker applicherà <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> a generate dal linker `PInvoke` chiamate dal codice gestito in DLL native.
+**/CLRUNMANAGEDCODECHECK** specifica se verrà applicato <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> a generate dal linker `PInvoke` chiamate dal codice gestito in DLL native.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,23 +34,23 @@ ms.locfileid: "34705374"
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita, il linker applica il **SuppressUnmanagedCodeSecurityAttribute** a generate dal linker `PInvoke` chiamate. Quando si **/CLRUNMANAGEDCODECHECK** è in effetti **SuppressUnmanagedCodeSecurityAttribute** non è stato applicato.
+Per impostazione predefinita, il linker applica il **SuppressUnmanagedCodeSecurityAttribute** a generate dal linker `PInvoke` chiamate. Quando **/CLRUNMANAGEDCODECHECK** è in effetti **SuppressUnmanagedCodeSecurityAttribute** non viene applicato.
 
-Il linker aggiunge solo l'attributo agli oggetti compilati con **/clr** o **/clr: pure**. Tuttavia, il **/clr: pure** opzione del compilatore è deprecato in Visual Studio 2015 e non supportata in Visual Studio 2017.
+Il linker aggiunge solo l'attributo agli oggetti che vengono compilati con **/clr** oppure **/clr: pure**. Tuttavia, il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
 
-Oggetto `PInvoke` chiamata viene generata dal linker quando il linker non è possibile trovare un simbolo gestito per soddisfare un riferimento da un chiamante gestito ma solo un simbolo nativo. Per ulteriori informazioni su `PInvoke`, vedere [chiamata a funzioni Native da codice gestito](../../dotnet/calling-native-functions-from-managed-code.md).
+Oggetto `PInvoke` chiamata viene generata dal linker quando il linker non è possibile trovare un simbolo gestito per soddisfare un riferimento da un chiamante gestito ma è possibile trovare un simbolo nativo per soddisfare tale riferimento. Per altre informazioni sulle `PInvoke`, vedere [chiamata a funzioni Native da codice gestito](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Si noti che se si utilizza <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nel codice, è necessario impostare in modo esplicito **/CLRUNMANAGEDCODECHECK**. Se un'immagine contiene entrambi gli attributi SuppressUnmanagedCodeSecurity e AllowPartiallyTrustedCallers è potenziale vulnerabilità di sicurezza.
+Si noti che se si usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nel codice, è necessario impostare esplicitamente **/CLRUNMANAGEDCODECHECK**. Se un'immagine contenente attributi AllowPartiallyTrustedCallers sia SuppressUnmanagedCodeSecurity è potenziali vulnerabilità di sicurezza.
 
-Vedere [Secure linee guida di codifica per il codice non gestito](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) per ulteriori informazioni sulle implicazioni dell'uso **SuppressUnmanagedCodeSecurityAttribute**.
+Visualizzare [Secure linee guida di codifica per il codice non gestito](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) per altre informazioni sulle implicazioni dell'uso **SuppressUnmanagedCodeSecurityAttribute**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Espandere il **le proprietà di configurazione** nodo.
+1. Espandere il nodo **Proprietà di configurazione**.
 
-1. Espandere il **Linker** nodo.
+1. Espandere la **Linker** nodo.
 
 1. Selezionare il **avanzate** pagina delle proprietà.
 

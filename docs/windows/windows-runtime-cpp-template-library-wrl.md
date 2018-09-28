@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
+ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401802"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47429748"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Libreria di modelli di Windows Runtime C++ (WRL)
 
@@ -50,7 +50,7 @@ La libreria di modelli di Windows Runtime C++ e C + + c++ /CX offrono diversi va
 
 Ecco alcune risorse che possono aiutarti a iniziare subito a lavorare con la libreria di modelli di Windows Runtime C++.
 
-[La libreria di Windows Runtime (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
+[La libreria di Windows Runtime (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 In questo video di Channel 9, ulteriori informazioni sul modo in cui la libreria di modelli di Windows Runtime C++ consente che scrivere App Universal Windows Platform (UWP) e su come creare e utilizzare i componenti Windows Runtime.
 
 [Procedura: attivare e utilizzare un componente di Runtime di Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
@@ -77,16 +77,16 @@ Viene illustrato come utilizzare i componenti personalizzati di Windows Runtime 
 [Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Viene illustrato come utilizzare il [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfacce insieme alle attività per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.
 
-[Esempio di utilità di ottimizzazione dei viaggi di Bing mappe](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
+[Esempio di utilità di ottimizzazione dei viaggi di Bing mappe](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Usa il `HttpRequest` definito nella classe [questa procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) nel contesto di un'app UWP completa.
 
-[Creazione di un componente DLL di Windows Runtime con esempio di C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
+[Creazione di un componente DLL di Windows Runtime con esempio di C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per creare un componente DLL in-process e utilizzarlo da C + + c++ /CX, JavaScript e c#.
 
-[Esempio di gioco marble maze DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[Esempio di gioco marble maze DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Illustra come usare la libreria di modelli di Windows Runtime C++ per gestire la durata di componenti COM come DirectX e Media Foundation nel contesto di un gioco 3D completo.
 
-[Esempio di invio notifiche di tipo avviso popup da app desktop](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
+[Esempio di invio notifiche di tipo avviso popup da app desktop](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per lavorare con le notifiche di tipo avviso popup da un'app desktop.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Libreria modelli C++ per Windows Runtime confronto confrontata ATL
