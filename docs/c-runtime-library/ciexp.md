@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 227aca74ef64884c64ba83c9f36eb16417041fd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ede1870c17a5c78a1580bee03cc84908abdf2f33
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081559"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234086"
 ---
 # <a name="ciexp"></a>_CIexp
 
@@ -53,7 +53,8 @@ Questa versione della funzione `exp` usa una convenzione di chiamata specializza
 Il valore risultante viene inserito all'inizio dello stack.
 
 ## <a name="requirements"></a>Requisiti
- **Piattaforma:** x86
+
+**Piattaforma:** x86
 
 ## <a name="see-also"></a>Vedere anche
 

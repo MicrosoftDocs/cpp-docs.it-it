@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb02f426e839eff20a1dcd37ab41d4a08640599
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3adde04ba8fe259c25f3439cef247192eea175f2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081533"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233677"
 ---
 # <a name="a-sample-generic-text-program"></a>Programma di testo generico di esempio
 
@@ -31,7 +31,7 @@ ms.locfileid: "46081533"
 
 Il seguente programma, GENTEXT.C, fornisce un'illustrazione più dettagliata dell'uso delle mappature di testo generico definite in TCHAR.H:
 
-```
+```C
 // GENTEXT.C
 // use of generic-text mappings defined in TCHAR.H
 
@@ -67,12 +67,11 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
    _tprintf(_T("'%s'\n"), _tcsrev(_tcsdup(str)));
    return 0;
 }
-
 ```
 
 Se `_MBCS` è stato definito, GENTEXT.C esegue il mapping al seguente programma MBCS:
 
-```
+```C
 // crt_mbcsgtxt.c
 
 /*
@@ -110,7 +109,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 
 Se `_UNICODE` è stato definito, GENTEXT.C esegue il mapping alla seguente versione Unicode del programma. Per altre informazioni sull'uso di `wmain` nei programmi Unicode in sostituzione di `main`, vedere [Utilizzo di wmain](../c-language/using-wmain.md) in *Riferimenti del linguaggio C*.
 
-```
+```C
 // crt_unicgtxt.c
 
 /*
@@ -148,7 +147,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 
 Se `_MBCS` né `_UNICODE` sono stati definiti, GENTEXT.C esegue il mapping al codice ASCII a byte singolo, come segue:
 
-```
+```C
 // crt_sbcsgtxt.c
 /*
  * Use of generic-text mappings defined in TCHAR.H
@@ -183,7 +182,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }
 ```
 
- **Fine sezione specifica Microsoft**
+**Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 

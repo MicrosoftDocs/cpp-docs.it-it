@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c24925108ff6a0d2c5af1140bfb000a21eef55e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3590ca4a9d7b5648c736c92d6a482377baa9ffa1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030339"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235828"
 ---
 # <a name="cilog"></a>_CIlog
 
@@ -53,7 +53,8 @@ Questa versione della funzione `log` usa una convenzione di chiamata specializza
 Il valore risultante viene inserito all'inizio dello stack.
 
 ## <a name="requirements"></a>Requisiti
- **Piattaforma:** x86
+
+**Piattaforma:** x86
 
 ## <a name="see-also"></a>Vedere anche
 

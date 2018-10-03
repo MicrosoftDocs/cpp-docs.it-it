@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b65ceb18eb6b8f24db0a85ba2ed13277b13f657
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45428f1642b428640509978f29c0a36b60696cb0
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117497"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235061"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funzioni da stringa a valore numerico
 
@@ -94,7 +94,7 @@ Se il valore restituito da queste funzioni causa un overflow o underflow, o se l
 |`_strtoui64`|Overflow|**_UI64_MAX**|
 |`_strtoui64`|Nessuna conversione|0|
 
- **_I64_MAX**, _**I64_MIN** e **_UI64_MAX** sono definiti in LIMITS.H.
+**_I64_MAX**, _**I64_MIN** e **_UI64_MAX** sono definiti in LIMITS.H.
 
 `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64` e `_wcstoui64` sono versioni a caratteri wide rispettivamente di `strtod`, `strtol`, `strtoul`, `_strtoi64` e `_strtoui64`. Il puntatore a un argomento di fine conversione per ognuna di queste funzioni di caratteri wide è una stringa di caratteri wide. In caso contrario, ognuna di queste funzioni di caratteri wide si comporta in modo identico alla controparte di caratteri a un byte.
 

@@ -63,12 +63,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65bfa860f6059c66a24432ba4d17105c1b9310b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d53245519262261c082797c2764c90c4dd208057
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092253"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233649"
 ---
 # <a name="exec-wexec-functions"></a>Funzioni _exec, _wexec
 
@@ -241,7 +241,7 @@ int main( int ac, char* av[] )
 
 ## <a name="requirements"></a>Requisiti
 
- **Intestazione:** process.h
+**Intestazione:** process.h
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8134ea416f94def7e985a4d63cc61d740924317a
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018314"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235295"
 ---
 # <a name="low-level-io"></a>I/O a basso livello
 
@@ -59,7 +59,7 @@ Le routine di I/O a basso livello impostano la variabile globale [errno](../c-ru
 |[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|Impostare la maschera di autorizzazione del file|
 |[_write](../c-runtime-library/reference/write.md)|Scrivere dati nel file|
 
- **_dup** e **_dup2** in genere vengono usati per associare i descrittori del file predefiniti con diversi file.
+**_dup** e **_dup2** in genere vengono usati per associare i descrittori del file predefiniti con diversi file.
 
 ## <a name="see-also"></a>Vedere anche
 
