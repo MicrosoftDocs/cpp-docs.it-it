@@ -1,7 +1,7 @@
 ---
 title: Creazione guidata 1.0 componente ATL COM+ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717911"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250406"
 ---
 # <a name="atl-com-10-component-wizard"></a>Creazione guidata componente ATL COM+ 1.0
 
 Utilizzare questa procedura guidata per aggiungere un oggetto per il progetto che supporta i servizi di COM+ 1.0, incluse le transazioni.
 
 È possibile specificare se l'oggetto supporta le interfacce duali e automazione. È inoltre possibile indicare il supporto per l'interfaccia informazioni degli errori, controllo di oggetti avanzati, transazioni e accodamento asincrono.
+
+> [!WARNING]
+> In Visual Studio 2017 versione 15.9 questa procedura guidata per codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto per ATL e MFC generale non è interessato dalla procedura di rimozione di questa procedura guidata. Se vuoi condividere commenti e suggerimenti su questa deprecazione, completare [questo sondaggio](https://www.surveymonkey.com/r/QDWKKCN). Commenti e suggerimenti è importante per noi.
 
 ## <a name="remarks"></a>Note
 

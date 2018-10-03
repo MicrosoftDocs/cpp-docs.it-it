@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 16613425633f55eeed152e86c1b4fea7f00a784c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169437"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234064"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Procedura dettagliata: aggiunta di animazione a un progetto MFC
 
@@ -104,7 +104,7 @@ Per completare la procedura dettagliata, è necessario disporre di Visual Studio
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>Per aggiungere un oggetto animato al progetto
 
-1. In Esplora soluzioni fare doppio clic MFCAnimationWalkthroughView. H per aprirla per la modifica. Appena prima della definizione del `CMFCAnimationWalkthroughView` classe, aggiungere il codice seguente per creare un controller di animazione personalizzata che consente di gestire i conflitti di pianificazione con l'oggetto di animazione.
+1. Nelle **Esplora soluzioni**, fare doppio clic su MFCAnimationWalkthroughView. H per aprirla per la modifica. Appena prima della definizione del `CMFCAnimationWalkthroughView` classe, aggiungere il codice seguente per creare un controller di animazione personalizzata che consente di gestire i conflitti di pianificazione con l'oggetto di animazione.
 
     ```cpp
     class CCustomAnimationController : public CAnimationController

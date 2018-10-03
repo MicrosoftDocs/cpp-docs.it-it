@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177d0dea7859dc2093fb7a10f6fdb6ee4df013f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9c83ab1a42c62a4cb1afd0c7f49f55c40633d05b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386808"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234567"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Creazione di un progetto DLL MFC
 
@@ -46,7 +46,7 @@ Una DLL MFC è un file binario che agisce come una libreria condivisa di funzion
 
 1. Fare clic su **Finish** per chiudere la procedura guidata e aprire il nuovo progetto nella **Esplora soluzioni**.
 
-Dopo aver creato il progetto, è possibile visualizzare i file creati in Esplora soluzioni. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Vedere anche
 

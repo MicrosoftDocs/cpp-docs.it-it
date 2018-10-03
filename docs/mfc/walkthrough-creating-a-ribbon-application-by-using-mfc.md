@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169580"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236023"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procedura dettagliata: creazione di un'applicazione barra multifunzione utilizzando MFC
 
@@ -28,7 +28,7 @@ Questa procedura dettagliata illustra come usare il **Creazione guidata applicaz
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa procedura dettagliata si presuppone di aver impostato Visual Studio per utilizzare **delle impostazioni di sviluppo generale**. Se utilizzi impostazioni diverse, è possibile che alcuni elementi dell'interfaccia utente a cui viene fatto riferimento nelle istruzioni seguenti non vengano visualizzati.
+Questa procedura dettagliata si presuppone di aver impostato Visual Studio per utilizzare **delle impostazioni di sviluppo generale**. Se si utilizzano impostazioni diverse, alcuni elementi dell'interfaccia utente che vengono fatto riferimento nelle istruzioni seguenti potrebbero non essere visualizzati.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Per creare un'applicazione MFC con una barra multifunzione
 
@@ -73,7 +73,7 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per u
 
 1. Successivamente, personalizza il pannello. I pannelli vengono utilizzati per raggruppare gli elementi logicamente correlati gli uni agli altri. Ad esempio, nel **Home** della scheda dell'applicazione, il **Taglia**, **copia**, e **Incolla** tutti i comandi sono inclusi nel  **Appunti** pannello. Per personalizzare il pannello, fare doppio clic su **Panel1** e quindi fare clic su **proprietà**. Nel **delle proprietà** finestra Modifica **didascalia** al *Preferiti*.
 
-    È possibile specificare il **indice immagine** per il pannello. Questo numero specifica l'icona che viene visualizzata se il pannello della barra multifunzione viene aggiunto per il **barra di accesso rapido**. L'icona non viene visualizzata nel pannello della barra multifunzione.
+    È possibile specificare il **indice immagine** per il pannello. Questo numero specifica l'icona che viene visualizzata se il pannello della barra multifunzione viene aggiunto per il **barra di accesso rapido**. L'icona non viene visualizzato nel pannello della barra multifunzione stesso.
 
 1. Per verificare che la categoria della barra multifunzione e il pannello siano stati creati correttamente, visualizza in anteprima il controllo della barra multifunzione. Nel **sulla barra degli strumenti Editor Ribbon**, fare clic sui **Test Ribbon** pulsante. Oggetto **Custom** scheda e **Preferiti** pannello deve essere visualizzato nella barra multifunzione.
 
@@ -81,7 +81,7 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per u
 
 1. Per aggiungere elementi al pannello creato nella procedura precedente, trascinare i controlli dal **Editor Ribbon** sezione il **della casella degli strumenti** al pannello nella visualizzazione progettazione.
 
-1. Aggiungere prima di tutto una **stampa** pulsante. Il **Print** pulsante avrà un sottomenu contenente una **Stampa immediata** comando stampare utilizzando la stampante predefinita. Entrambi i comandi sono già definiti per l'applicazione. Si trovano nel menu dell'applicazione.
+1. Aggiungere prima di tutto una **stampa** pulsante. Il **Print** pulsante avrà un sottomenu contenente una **Stampa immediata** comando stampare utilizzando la stampante predefinita. Entrambi i comandi sono già definiti per l'applicazione. Che si trovano nel menu dell'applicazione.
 
     Per creare il **stampa** pulsante, trascinare uno strumento Button al pannello.
 

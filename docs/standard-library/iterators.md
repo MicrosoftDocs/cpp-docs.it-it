@@ -15,30 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb8efba0146a0a230a85a7980f1e71381fcf4b2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 858612ebdda30e68972d11072b4c2ac7f4f88954
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208402"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235490"
 ---
 # <a name="iterators"></a>Iterators
 
 Un iteratore è un oggetto in grado di eseguire l'iterazione sugli elementi di un contenitore della libreria standard C++ e fornire accesso ai singoli elementi. Tutti i contenitori della libreria standard C++ forniscono iteratori che consentono agli algoritmi di accedere ai relativi elementi in maniera standard, senza doversi preoccupare del tipo di contenitore in cui sono archiviati gli elementi.
 
-È possibile utilizzare gli iteratori in modo esplicito utilizzando un membro e funzioni globali, ad esempio begin () ed end () e operatori come ++ e --per spostarsi avanti o indietro. È inoltre possibile utilizzare gli iteratori in modo implicito con un ciclo range-for o (per alcuni tipi di iteratore) l'operatore di indice [].
+È possibile utilizzare gli iteratori in modo esplicito usando come membro e funzioni globali `begin()` e `end()` e gli operatori come **++** e **--** per spostarsi in avanti o con le versioni precedenti. È anche possibile usare in modo implicito iteratori con un intervallo-ciclo for o (per alcuni tipi di iteratore) l'operatore di pedice  **\[]**.
 
-Nella libreria standard C++ l'inizio di una sequenza o di un intervallo corrisponde al primo elemento. La fine di una sequenza o di un intervallo è sempre definita come un elemento dopo l'ultimo elemento. Le funzioni globali begin ed end restituiscono iteratori a un contenitore specificato. Il ciclo iteratore esplicito standard su tutti gli elementi in un contenitore è simile al seguente:
+Nella libreria standard C++ l'inizio di una sequenza o di un intervallo corrisponde al primo elemento. La fine di una sequenza o di un intervallo è sempre definita come un elemento dopo l'ultimo elemento. Le funzioni globali `begin` e `end` restituiscono iteratori a un contenitore specificato. Il ciclo iteratore esplicito standard su tutti gli elementi in un contenitore è simile al seguente:
 
 ```cpp
 vector<int> vec{ 0,1,2,3,4 };
-for (auto it = begin(vec);
-
-it != end(vec);
-
-it++)
-{  // Access element using dereference operator
-    cout <<*it <<" ";
+for (auto it = begin(vec); it != end(vec); it++)
+{
+    // Access element using dereference operator
+    cout << *it << " ";
 }
 ```
 
@@ -46,22 +43,23 @@ La stessa operazione può essere eseguita in modo più semplice con un ciclo ran
 
 ```cpp
 for (auto num : vec)
- {  // no deference operator
-    cout <<num <<" ";
- }
+{
+    // no deference operator
+    cout << num << " ";
+}
 ```
 
 Le categorie di iteratori disponibili sono cinque. Per la potenza, le categorie sono riepilogate in ordine crescente come:
 
-- **Output**. Iteratore di output `X` può scorrere in avanti su una sequenza utilizzando il + + (operatore) e può scrivere una sola volta, un elemento usando la \* operatore.
+- **Output**. Un' *iteratore di output* `X` può scorrere in avanti su una sequenza utilizzando la **++** operatore e può scrivere una sola volta, un elemento usando la **&ast;** operatore.
 
-- **Input**. Iteratore di input `X` può scorrere in avanti su una sequenza utilizzando il + + (operatore) e può leggere un numero qualsiasi di volte in cui un elemento usando la \* operatore. È possibile confrontare gli iteratori di input utilizzando gli operatori ++ e ! =. Dopo aver incrementato qualsiasi copia di un iteratore di input, non sarà possibile confrontare, dereferenziare o incrementare nessuna delle altre copie in modo sicuro.
+- **Input**. Un' *iteratore di input* `X` può scorrere in avanti su una sequenza utilizzando il + + (operatore) e può leggere un elemento numero di volte qualsiasi utilizzando la **&ast;** operatore. È possibile confrontare gli iteratori di input usando la **++** e **! =** operatori. Dopo aver incrementato qualsiasi copia di un iteratore di input, non sarà possibile confrontare, dereferenziare o incrementare nessuna delle altre copie in modo sicuro.
 
-- **In avanti**. Iteratore in avanti `X` può scorrere in avanti su una sequenza utilizzando il + + operatore e può leggere qualsiasi elemento o scrivere elementi non const un numero qualsiasi di volte in cui tramite il \* operatore. È possibile accedere ai membri degli elementi utilizzando l'operatore -> e confrontare gli iteratori in avanti utilizzando gli operatori == e !=. È anche possibile eseguire più copie di un iteratore in avanti, ciascuna delle quali può essere dereferenziata e incrementata in modo indipendente. Un iteratore in avanti che viene inizializzato senza riferimento ad alcun contenitore viene denominato iteratore in avanti null. Gli iteratori in avanti null risultano sempre uguali.
+- **In avanti**. Un *iteratore in avanti* `X` può scorrere in avanti su una sequenza utilizzando il + + operatore e può leggere qualsiasi elemento o scrivere elementi non const un numero qualsiasi di volte utilizzando la **&ast;** operatore. Membri degli elementi è possibile accedere usando il **->** confronto e operatore di inoltrare gli iteratori usando la **==** e **! =** operatori. È anche possibile eseguire più copie di un iteratore in avanti, ciascuna delle quali può essere dereferenziata e incrementata in modo indipendente. Iteratore in avanti che viene inizializzato senza riferimento ad alcun contenitore viene chiamato un *iteratore in avanti null*. Gli iteratori in avanti null risultano sempre uguali.
 
-- Bidirezionale. Un iteratore bidirezionale `X` può sostituire un iteratore in avanti. È possibile, tuttavia, decrementare anche un iteratore bidirezionale, come in--`X`, `X`, o (`V` = \*`X`-). È possibile accedere ai membri degli elementi e confrontare gli iteratori bidirezionali nello stesso modo degli iteratori in avanti.
+- **Bidirezionale**. Oggetto *iteratore bidirezionale* `X` può richiedere la posizione dell'iteratore in avanti. È possibile, tuttavia, decrementare anche un iteratore bidirezionale, come in `--X`, `X--`, o `(V = *X--)`. È possibile accedere ai membri degli elementi e confrontare gli iteratori bidirezionali nello stesso modo degli iteratori in avanti.
 
-- **Accesso casuale**. Un iteratore ad accesso casuale `X` può sostituire un iteratore bidirezionale. Con un iteratore ad accesso casuale, è possibile utilizzare l'operatore di indice [] per accedere agli elementi. È possibile utilizzare gli operatori +, -, += e -= per spostarsi in avanti o indietro di un numero specificato di elementi e per calcolare la distanza tra gli iteratori. È possibile confrontare gli iteratori bidirezionali usando ==, !=, \<, >, \<=, and >=.
+- **Accesso casuale**. Oggetto *iteratore ad accesso casuale* `X` può sostituire un iteratore bidirezionale. Con un iteratore ad accesso casuale è possibile usare l'operatore di pedice  **\[]** per accedere agli elementi. È possibile usare la **+**, **-**, **+=** e **-=** agli operatori di spostamento Avanti o indietro un numero specificato di elementi e per calcolare la distanza tra gli iteratori. È possibile confrontare gli iteratori bidirezionali usando **==**, **! =**, **\<**, **>**, **\< =**, e **>=**.
 
 Tutti gli iteratori possono essere assegnati o copiati. Si presuppone che si tratti di oggetti semplici, spesso passati e restituiti per valore, non per riferimento. Si noti anche che nessuna delle operazioni descritte in precedenza può generare un'eccezione quando viene eseguita su un iteratore valido.
 

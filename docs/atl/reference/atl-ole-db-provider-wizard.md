@@ -1,7 +1,7 @@
 ---
 title: Creazione guidata Provider OLE DB ATL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717210"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250354"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Creazione guidata provider OLE DB ATL
 
 Questa procedura guidata vengono create le classi che compongono un provider OLE DB.
+
+> [!WARNING]
+> In Visual Studio 2017 versione 15.9 questa procedura guidata per codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto per ATL e MFC generale non è interessato dalla procedura di rimozione di questa procedura guidata. Se vuoi condividere commenti e suggerimenti su questa deprecazione, completare [questo sondaggio](https://www.surveymonkey.com/r/QDWKKCN). Commenti e suggerimenti è importante per noi.
+
 
 ## <a name="remarks"></a>Note
 

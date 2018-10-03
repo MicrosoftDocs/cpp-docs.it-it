@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713219"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250367"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Creazione guidata componente ASP ATL
 
 Questa procedura guidata consente di inserire nel progetto di componente pagine ASP (Active Server). Microsoft Internet Information Services (IIS) usa i componenti ASP come parte della relativa architettura di sviluppo avanzato pagina Web.
 
 Usando questa procedura guidata, è possibile specificare che il componente del modello di threading e il supporto di aggregazione. È inoltre possibile indicare il supporto per l'interfaccia di informazioni di errore, i punti di connessione e marshalling a thread libero.
+
+> [!WARNING]
+> In Visual Studio 2017 versione 15.9 questa procedura guidata per codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto per ATL e MFC generale non è interessato dalla procedura di rimozione di questa procedura guidata. Se vuoi condividere commenti e suggerimenti su questa deprecazione, completare [questo sondaggio](https://www.surveymonkey.com/r/QDWKKCN). Commenti e suggerimenti è importante per noi.
 
 ## <a name="remarks"></a>Note
 

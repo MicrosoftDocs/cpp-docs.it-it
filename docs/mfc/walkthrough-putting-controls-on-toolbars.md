@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169749"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235516"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Procedura dettagliata: inserimento di controlli nelle barre degli strumenti
 
-In questo argomento viene descritto come aggiungere un pulsante contenente un controllo Windows a una barra degli strumenti. In MFC un pulsante della barra degli strumenti deve essere un [classe CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-derivato (classe), ad esempio [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [classe CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Classe CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), o [classe CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
+Questo articolo descrive come aggiungere un pulsante della barra degli strumenti contenente un controllo di Windows da una barra degli strumenti. In MFC un pulsante della barra degli strumenti deve essere un [classe CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-derivato (classe), ad esempio [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [classe CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Classe CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), o [classe CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
 ## <a name="adding-controls-to-toolbars"></a>Aggiunta di controlli alle barre degli strumenti
 
 Per aggiungere un controllo a una barra degli strumenti, attenersi alla seguente procedura:
 
-1. Riservare un ID di risorsa fittizio per il pulsante nella risorsa della barra degli strumenti padre. Per altre informazioni su come creare pulsanti utilizzando la **Editor barra degli strumenti** in Visual Studio, vedere la [sulla barra degli strumenti Editor](../windows/toolbar-editor.md) argomento.
+1. Riservare un ID di risorsa fittizio per il pulsante nella risorsa della barra degli strumenti padre. Per altre informazioni su come creare pulsanti utilizzando la **Editor barra degli strumenti** in Visual Studio, vedere la [sulla barra degli strumenti Editor](../windows/toolbar-editor.md) articolo.
 
 1. Riservare un'immagine della barra degli strumenti (icona del pulsante) per il pulsante in tutte le bitmap nella barra degli strumenti padre.
 
-1. Nel gestore di messaggi che elabora il messaggio `AFX_WM_RESETTOOLBAR`, effettuare le seguenti operazioni:
+1. Nel gestore di messaggi che elabora il `AFX_WM_RESETTOOLBAR` dei messaggi, procedere come segue:
 
    1. Costruire il controllo pulsante utilizzando una classe derivata da `CMFCToolbarButton`.
 
@@ -51,7 +51,7 @@ Quando si abilita la personalizzazione, si crea il **Personalizza** finestra di 
 
 ## <a name="example-creating-a-find-combo-box"></a>Esempio: creazione di una casella combinata Find
 
-In questa sezione viene descritto come creare un **trovare** controllo casella combinata che viene visualizzata una barra degli strumenti e contiene le stringhe di ricerca usati di recente. L'utente può immettere una stringa nel controllo e premere il tasto INVIO per cercare un documento, oppure premere il tasto ESC per riportare lo stato attivo sulla cornice principale. Questo esempio si presuppone che il documento viene visualizzato una [classe CEditView](../mfc/reference/ceditview-class.md)-visualizzazione derivata.
+In questa sezione viene descritto come creare un **trovare** controllo casella combinata che viene visualizzata una barra degli strumenti e contiene le stringhe di ricerca recenti utilizzate. L'utente può immettere una stringa nel controllo e premere il tasto INVIO per cercare un documento, oppure premere il tasto ESC per riportare lo stato attivo sulla cornice principale. Questo esempio si presuppone che il documento viene visualizzato una [classe CEditView](../mfc/reference/ceditview-class.md)-visualizzazione derivata.
 
 ### <a name="creating-the-find-control"></a>Creazione del controllo Find
 
@@ -72,7 +72,7 @@ Creare innanzitutto le **trovare** controllo casella combinata:
 
 1. Nella classe `CFindComboBox` eseguire l'override del metodo virtuale `PreTranslateMessage`. Questo metodo consentirà alla casella combinata di elaborare il [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) messaggio. Se l'utente preme il tasto ESC (`VK_ESCAPE`), restituisce lo stato attivo alla finestra cornice principale. Se l'utente preme il tasto INVIO (`VK_ENTER`), viene inserito nella finestra cornice principale un messaggio `WM_COMMAND` contenente l'ID di comando `ID_EDIT_FIND_COMBO`.
 
-1. Creare una classe per il **trovare** pulsante casella combinata, derivato da [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). In questo esempio è denominata `CFindComboButton`.
+1. Creare una classe per il **trovare** pulsante casella combinata, derivato da [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). In questo esempio, il file è denominato `CFindComboButton`.
 
 1. Il costruttore di `CMFCToolbarComboBoxButton` accetta tre parametri: l'ID di comando del pulsante, l'indice dell'immagine del pulsante e lo stile della casella combinata. Impostare questi parametri come segue:
 

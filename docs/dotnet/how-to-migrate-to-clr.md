@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029658"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235451"
 ---
 # <a name="how-to-migrate-to-clr"></a>Procedura: eseguire la migrazione a /clr
 
@@ -118,7 +118,7 @@ In sono supportate le intestazioni precompilate **/clr**. Tuttavia, se si compil
 
 Il modo più semplice per compilare un progetto vengono compilati alcuni moduli **/clr** consiste nel disabilitare completamente le intestazioni precompilate. (Nella finestra di dialogo Pagine delle proprietà del progetto, aprire il nodo C/C++ e selezionare le intestazioni precompilate. Quindi modificare la proprietà Crea/Usa intestazione precompilata per "Senza intestazioni precompilate".)
 
-Tuttavia, in particolare per progetti di grandi dimensioni, le intestazioni precompilate forniscono più elevata velocità di compilazione, in modo da disabilitare questa funzionalità non è consigliabile. In questo caso è consigliabile configurare il **/clr** e non **/clr** i file di utilizzo delle intestazioni precompilate separate. Questa operazione può essere eseguita in un unico passaggio, selezionano più moduli da compilare **/clr** utilizzando Esplora soluzioni, pulsante destro del mouse sul gruppo e scegliendo proprietà. Quindi modificare le proprietà di File di intestazione precompilato sia Crea/Usa PCH tramite File per usare rispettivamente il nome di file di intestazione diverso e alcun file PCH.
+Tuttavia, in particolare per progetti di grandi dimensioni, le intestazioni precompilate forniscono più elevata velocità di compilazione, in modo da disabilitare questa funzionalità non è consigliabile. In questo caso è consigliabile configurare il **/clr** e non **/clr** i file di utilizzo delle intestazioni precompilate separate. Questa operazione può essere eseguita in un unico passaggio, selezionano più moduli da compilare **/clr** utilizzando **Esplora soluzioni**, pulsante destro del mouse sul gruppo e scegliendo proprietà. Quindi modificare le proprietà di File di intestazione precompilato sia Crea/Usa PCH tramite File per usare rispettivamente il nome di file di intestazione diverso e alcun file PCH.
 
 ## <a name="fixing-errors"></a>Correzione degli errori
 

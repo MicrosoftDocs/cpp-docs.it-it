@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599301"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250445"
 ---
 # <a name="microsoftwrl-namespace"></a>Spazio dei nomi Microsoft::WRL
 
@@ -89,7 +89,7 @@ namespace Microsoft::WRL;
 |Nome|Descrizione|
 |----------|-----------------|
 |[Funzione AsWeak](../windows/asweak-function.md)|Recupera un riferimento debole a un'istanza specificata.|
-|[Funzione di callback](../windows/callback-function-windows-runtime-cpp-template-library.md)|Crea un oggetto la cui funzione membro è un metodo di callback.|
+|[Funzione di callback (WRL)](../windows/callback-function-wrl.md)|Crea un oggetto la cui funzione membro è un metodo di callback.|
 |[Funzione CreateActivationFactory](../windows/createactivationfactory-function.md)|Crea una factory che produce istanze della classe specificata che può essere attivata da Windows Runtime.|
 |[Funzione CreateClassFactory](../windows/createclassfactory-function.md)|Crea una factory che produce istanze della classe specificata.|
 |[Funzione Make](../windows/make-function.md)|Inizializza la classe di Runtime di Windows specificata.|

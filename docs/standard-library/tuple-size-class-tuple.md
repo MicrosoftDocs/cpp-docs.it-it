@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883e7bdefe4bc1424dfea343d8d473015e6387d6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4169532a6aff64d24bdff59debcb675a35d72f06
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700219"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233606"
 ---
 # <a name="tuplesize-class"></a>Classe tuple_size
 
@@ -105,24 +105,29 @@ int main()
 {
     MyTuple c0(0, 1.5, 2, 3.7);
 
-    // display contents " 0 1 2 3"
-    cout << " " << get<0>(c0);
+    // display contents "0 1 2 3"
+    cout << get<0>(c0);
     cout << " " << get<1>(c0);
     cout << " " << get<2>(c0);
     cout << " " << get<3>(c0) << endl;
 
-    // display size " 4"
+    // display size "4"
     cout << " " << tuple_size<MyTuple>::value << endl;
 }
 ```
 
 ```Output
- 0 1.5 2 3.7
+0 1.5 2 3.7
+4
 ```
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<tuple > **intestazione:** \<array > (per la specializzazione di matrice) **intestazione:** \<utility > (per la specializzazione di coppia)
+**Intestazione:** \<tuple>
+
+**Intestazione:** \<array> (per la specializzazione di matrice)
+
+**Intestazione:** \<utility> (per la specializzazione di coppia)
 
 **Spazio dei nomi:** std
 

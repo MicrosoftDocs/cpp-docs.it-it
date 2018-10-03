@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 30e843c6df70548257de1bf1af8c5f0e83555652
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764293"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234063"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementazione di una finestra di dialogo
 
@@ -30,7 +30,7 @@ Esistono due modi per aggiungere una finestra di dialogo per il progetto ATL: us
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Aggiunta di una finestra di dialogo con la creazione guidata finestra di dialogo ATL
 
-Nel [finestra di dialogo Aggiungi classe](../ide/add-class-dialog-box.md), selezionare l'oggetto finestra di dialogo ATL per una finestra di dialogo Aggiungi al progetto ATL. Compilare la creazione guidata finestra di dialogo ATL come appropriato, quindi fare clic su **fine**. La procedura guidata aggiunge una classe derivata da [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) al progetto. Aprire la visualizzazione di risorse dal **vista** menu, individuare la finestra di dialogo e fare doppio clic su esso per aprirlo nell'editor di risorse.
+Nel [finestra di dialogo Aggiungi classe](../ide/add-class-dialog-box.md), selezionare l'oggetto finestra di dialogo ATL per una finestra di dialogo Aggiungi al progetto ATL. Compilare la creazione guidata finestra di dialogo ATL come appropriato, quindi fare clic su **fine**. La procedura guidata aggiunge una classe derivata da [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) al progetto. Aprire **visualizzazione di risorse** dalle **visualizzazione** menu, individuare la finestra di dialogo e fare doppio clic su esso per aprirlo nell'editor di risorse.
 
 > [!NOTE]
 >  Se la finestra di dialogo è derivata da `CAxDialogImpl`, possa ospitare entrambi ActiveX e controlli di Windows. Se non si desidera il sovraccarico di supporto per il controllo ActiveX nella classe finestra di dialogo, utilizzare [CSimpleDialog](../atl/reference/csimpledialog-class.md) oppure [CDialogImpl](../atl/reference/cdialogimpl-class.md) invece.

@@ -1,28 +1,34 @@
 ---
 title: ComPtrRefBase (classe) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRefBase
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable**
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown**
+- client/Microsoft::WRL::Details::ComPtrRefBase::ptr_
 dev_langs:
 - C++
 helpviewer_keywords:
-- ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable** operator
+- Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown** operator
+- Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ca2cb8cdc748abcac61bd548491187095b71a3f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 02e430184c5fa7418eb02ed6ef2f63951af89a5c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415317"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233957"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase (classe)
 
@@ -40,7 +46,7 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Oggetto [ComPtr\<T >](../windows/comptr-class.md) tipo o un tipo derivato da essa, non soltanto l'interfaccia rappresentata dal **ComPtr**.
+Oggetto [ComPtr\<T >](../windows/comptr-class.md) tipo o un tipo derivato da essa, non soltanto l'interfaccia rappresentata dal `ComPtr`.
 
 ## <a name="remarks"></a>Note
 
@@ -50,22 +56,22 @@ Rappresenta la classe base per il [ComPtrRef](../windows/comptrref-class.md) cla
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
-|----------|-----------------|
-|`InterfaceType`|Un sinonimo per il tipo di parametro di modello *T*.|
+Nome            | Descrizione
+--------------- | -------------------------------------------------
+`InterfaceType` | Un sinonimo per il tipo di parametro di modello *T*.
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
-|----------|-----------------|
-|[Operatore ComPtrRefBase::operator IInspectable**](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|L'oggetto corrente viene eseguito il cast [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro dati da un puntatore a un oggetto-puntatore-al `IInspectable` interfaccia.|
-|[Operatore ComPtrRefBase::operator IUnknown**](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|L'oggetto corrente viene eseguito il cast [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro dati da un puntatore a un oggetto-puntatore-al `IUnknown` interfaccia.|
+Nome                                                                       | Descrizione
+-------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
+[Operatore comptrrefbase:: IInspectable * *](#operator-iinspectable-star-star) | L'oggetto corrente viene eseguito il cast [PTR _](#ptr) membro dati da un puntatore a un oggetto-puntatore-al `IInspectable` interfaccia.
+[Operatore comptrrefbase:: IUnknown * *](#operator-iunknown-star-star)         | L'oggetto corrente viene eseguito il cast [PTR _](#ptr) membro dati da un puntatore a un oggetto-puntatore-al `IUnknown` interfaccia.
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
-|----------|-----------------|
-|[Membro dati ComPtrRefBase::ptr_](../windows/comptrrefbase-ptr-data-member.md)|Puntatore al tipo specificato dal parametro di modello corrente.|
+nome                        | Descrizione
+--------------------------- | ----------------------------------------------------------------
+[ComPtrRefBase::ptr_](#ptr) | Puntatore al tipo specificato dal parametro di modello corrente.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -77,6 +83,44 @@ Rappresenta la classe base per il [ComPtrRef](../windows/comptrref-class.md) cla
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Vedere anche
+## <a name="operator-iinspectable-star-star"></a>Operatore comptrrefbase:: IInspectable\* \* operatore
 
-[Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+```cpp
+operator IInspectable**() const;
+```
+
+### <a name="remarks"></a>Note
+
+L'oggetto corrente viene eseguito il cast [PTR _](#ptr) membro dati da un puntatore a un oggetto-puntatore-al `IInspectable` interfaccia.
+
+Viene generato un errore se l'oggetto corrente `ComPtrRefBase` non deriva da `IInspectable`.
+
+Questo cast è disponibile solo se `__WRL_CLASSIC_COM__` è definito.
+
+## <a name="operator-iunknown-star-star"></a>Operator IUnknown * * operatore comptrrefbase::
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+```cpp
+operator IUnknown**() const;
+```
+
+### <a name="remarks"></a>Note
+
+L'oggetto corrente viene eseguito il cast [PTR _](#ptr) membro dati da un puntatore a un oggetto-puntatore-al `IUnknown` interfaccia.
+
+Viene generato un errore se l'oggetto corrente `ComPtrRefBase` non deriva da `IUnknown`.
+
+## <a name="ptr"></a>ComPtrRefBase::ptr_
+
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
+
+```cpp
+T* ptr_;
+```
+
+### <a name="remarks"></a>Note
+
+Puntatore al tipo specificato dal parametro di modello corrente. `ptr_` è il membro dei dati protetti.

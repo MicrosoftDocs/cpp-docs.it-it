@@ -1,7 +1,7 @@
 ---
 title: Classe path | Microsoft Docs
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725309"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235464"
 ---
 # <a name="path-class"></a>Classe path
 
-Il **tracciato** classe archivia un oggetto di tipo `string_type`, denominato `myname` qui come a scopo illustrativo, idoneo per l'uso come percorso. `string_type` è un sinonimo `basic_string<value_type>`, dove `value_type` è un sinonimo **char** in Windows o **wchar_t** in Posix.
+Il **tracciato** classe archivia un oggetto di tipo `string_type`, denominato `myname` qui come a scopo illustrativo, idoneo per l'uso come percorso. `string_type` è un sinonimo `basic_string<value_type>`, dove `value_type` è un sinonimo **wchar_t** in Windows o **char** in POSIX.
 
 Per altre informazioni ed esempi di codice, vedere [Esplorazione del file system](../standard-library/file-system-navigation.md).
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169684"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235438"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 2)
 
@@ -116,17 +116,17 @@ L'applicazione originale Scribble consente all'utente di selezionare la larghezz
 
 1. Fare clic nella seconda casella combinata. Change **didascalia** a `Thick Pen`, **ID** a `ID_PEN_THICK_WIDTH`, **tipo** a `Drop List`, **dati** a `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`, e **testo** a `5`.
 
-1. Le caselle combinate nuove non corrispondono a eventuali voci di menu esistenti. Pertanto, è necessario creare una voce di menu per tutte le opzioni di penna.
+1. Le caselle combinate nuove non corrispondono a eventuali voci di menu esistenti, pertanto è necessario creare una voce di menu per tutte le opzioni di penna.
 
    1. Nel **visualizzazione di risorse** finestra, aprire il **IDR_SCRIBBTYPE** risorsa menu.
 
    1. Fare clic su **penna** per aprire il menu di penna. Quindi fare clic su **digitare qui** e il tipo `Thi&n Pen`.
 
-   1. Pulsante destro del mouse il testo appena digitato per aprire la **delle proprietà** finestra e quindi modificare l'ID proprietà da `ID_PEN_THIN_WIDTH`.
+   1. Pulsante destro del mouse il testo digitato per aprire la **delle proprietà** finestra e quindi modificare l'ID proprietà da `ID_PEN_THIN_WIDTH`.
 
-   1. È anche necessario creare un gestore eventi per ogni voce di menu della penna. Fare doppio clic il **corrente a & pri n** voce di menu che appena creato e quindi fare clic su **Aggiungi gestore**. Il **Creazione guidata gestore eventi** viene visualizzato.
+   1. Creare un gestore eventi per ogni voce di menu della penna. Fare doppio clic il **corrente a & pri n** voce di menu che creato e quindi fare clic su **Aggiungi gestore**. Il **Creazione guidata gestore eventi** viene visualizzato.
 
-   1. Nel **elenco di classi** finestra della procedura guidata, selezionare **CScribbleDoc** e quindi fare clic su **aggiungere e modificare**. Ciò consente di creare un gestore eventi denominato `CScribbleDoc::OnPenThinWidth`.
+   1. Nel **elenco di classi** finestra della procedura guidata, selezionare **CScribbleDoc** e quindi fare clic su **aggiungere e modificare**. Il comando crea un gestore eventi denominato `CScribbleDoc::OnPenThinWidth`.
 
    1. Aggiungere il seguente codice a `CScribbleDoc::OnPenThinWidth`.
 
@@ -156,11 +156,11 @@ L'applicazione originale Scribble consente all'utente di selezionare la larghezz
 
    1. Fare clic su **penna** per aprire il menu di penna. Quindi fare clic su **digitare qui** e il tipo `Thic&k Pen`.
 
-   1. Pulsante destro del mouse il testo appena digitato per visualizzare il **proprietà** finestra. Modificare la proprietà ID per `ID_PEN_THICK_WIDTH`.
+   1. Pulsante destro del mouse il testo digitato per visualizzare il **proprietà** finestra. Modificare la proprietà ID per `ID_PEN_THICK_WIDTH`.
 
-   1. Fare doppio clic il **spessa** voce di menu che appena creato e quindi fare clic su **Aggiungi gestore**. Il **Creazione guidata gestore eventi** viene visualizzato.
+   1. Fare doppio clic il **spessa** voce di menu che creato e quindi fare clic su **Aggiungi gestore**. Il **Creazione guidata gestore eventi** viene visualizzato.
 
-   1. Nel **elenco di classi** della procedura guidata, seleziona **CScribbleDoc** e quindi fare clic su **aggiungere e modificare**. Ciò consente di creare un gestore eventi denominato `CScribbleDoc::OnPenThickWidth`.
+   1. Nel **elenco di classi** della procedura guidata, seleziona **CScribbleDoc** e quindi fare clic su **aggiungere e modificare**. Il comando crea un gestore eventi denominato `CScribbleDoc::OnPenThickWidth`.
 
    1. Aggiungere il seguente codice a `CScribbleDoc::OnPenThickWidth`.
 
@@ -190,17 +190,17 @@ Successivamente, aggiungere un [CMFCRibbonColorButton](../mfc/reference/cmfcribb
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>Per aggiungere un pulsante colore al pannello di penna
 
-1. Prima di aggiungere il pulsante colore, crea una voce di menu. Nel **visualizzazione di risorse** finestra, aprire il **IDR_SCRIBBTYPE** risorsa menu. Scegliere il **penna** voce di menu per aprire il menu di penna. Quindi fare clic su **digitare qui** e il tipo `&Color`. Pulsante destro del mouse il testo appena digitato per visualizzare il **proprietà** finestra. Modificare l'ID in `ID_PEN_COLOR`.
+1. Prima di aggiungere il pulsante colore, crea una voce di menu. Nel **visualizzazione di risorse** finestra, aprire il **IDR_SCRIBBTYPE** risorsa menu. Scegliere il **penna** voce di menu per aprire il menu di penna. Quindi fare clic su **digitare qui** e il tipo `&Color`. Pulsante destro del mouse il testo digitato per visualizzare il **proprietà** finestra. Modificare l'ID in `ID_PEN_COLOR`.
 
 1. Ora aggiungere il pulsante colore. Dal **casella degli strumenti**, trascinare un **pulsante colore** per il **penna** pannello.
 
 1. Fare clic sul pulsante del colore. Change **didascalia** a `Color`, **ID** a `ID_PEN_COLOR`, **Simple Look** a `True`, **l'indice dell'immagine di grandi dimensioni** per `1`, e **modalità di divisione** a `False`.
 
-1. Salvare le modifiche, quindi compilare ed eseguire l'applicazione. Il nuovo pulsante colore deve essere visualizzato nella **penna** pannello. Tuttavia, non può essere utilizzato perché non dispone ancora di un gestore eventi. I passaggi successivi illustrano come aggiungere un gestore eventi per il pulsante colore.
+1. Salvare le modifiche, quindi compilare ed eseguire l'applicazione. Il nuovo pulsante colore deve essere visualizzato nella **penna** pannello. Tuttavia, non è utilizzabile in quanto non ha ancora un gestore eventi. I passaggi successivi illustrano come aggiungere un gestore eventi per il pulsante colore.
 
 ##  <a name="addcolormember"></a> Aggiunta di un membro di colore per la classe documento
 
-Perché l'applicazione originale Scribble non dispone di penne colore, è necessario scrivere un'implementazione per loro. Per archiviare il colore della penna del documento, aggiungere un nuovo membro alla classe documento, `CscribbleDoc`.
+Poiché l'applicazione originale Scribble non ha le penne colore, è necessario scrivere un'implementazione per loro. Per archiviare il colore della penna del documento, aggiungere un nuovo membro alla classe documento, `CscribbleDoc`.
 
 ### <a name="to-add-a-color-member-to-the-document-class"></a>Per aggiungere un membro di colore per la classe documento
 
@@ -211,7 +211,7 @@ Perché l'applicazione originale Scribble non dispone di penne colore, è necess
    COLORREF m_penColor;
    ```
 
-1. Ogni documento contiene un elenco di tratti che l'utente ha già creato. Ciascun oggetto stroke è definita da un `CStroke` oggetto. Il `CStroke` classe non include informazioni sul colore della penna. Pertanto, è necessario modificare la classe. In ScribDoc. h, nelle `CStroke` classe, aggiungere le seguenti righe di codice dopo la definizione del `m_nPenWidth` (membro dati).
+1. Ogni documento contiene un elenco di tratti che l'utente ha già creato. Ciascun oggetto stroke è definita da un `CStroke` oggetto. Il `CStroke` classe non include informazioni sul colore della penna, è necessario modificare la classe. In ScribDoc. h, nelle `CStroke` classe, aggiungere le seguenti righe di codice dopo la definizione del `m_nPenWidth` (membro dati).
 
    ```cpp
    // Pen color for the stroke
@@ -267,7 +267,7 @@ Perché l'applicazione originale Scribble non dispone di penne colore, è necess
 
    1. Fare doppio clic il **colore** voce di menu e fare clic su **Aggiungi gestore**. Il **Creazione guidata gestore eventi** viene visualizzata.
 
-   1. Nel **elenco di classi** finestra della procedura guidata, selezionare **CScribbleDoc** e quindi fare clic sui **aggiungere e modificare** pulsante. Verrà creato il `CScribbleDoc::OnPenColor` stub del gestore eventi.
+   1. Nel **elenco di classi** finestra della procedura guidata, selezionare **CScribbleDoc** e quindi fare clic sui **aggiungere e modificare** pulsante. Il comando crea il `CScribbleDoc::OnPenColor` stub del gestore eventi.
 
 1. Sostituire lo stub per il `CScribbleDoc::OnPenColor` gestore dell'evento con il codice seguente.
 
@@ -287,7 +287,7 @@ Perché l'applicazione originale Scribble non dispone di penne colore, è necess
    }
    ```
 
-1. Salvare i cambiamenti, quindi compilare ed eseguire l'applicazione. Dovrebbe essere possibile premere il pulsante colore e modificare il colore della penna.
+1. Salvare i cambiamenti, quindi compilare ed eseguire l'applicazione. È ora possibile premere il pulsante colore e modificare il colore della penna.
 
 ##  <a name="initpensave"></a> L'inizializzazione di penne e salvare le preferenze
 
@@ -343,7 +343,7 @@ Inizializzare quindi il colore e spessore di penne. Infine, salvare e caricare u
 
 ## <a name="conclusion"></a>Conclusione
 
-Aggiornamento dell'applicazione MFC Scribble. Utilizzare questa procedura dettagliata come guida quando si modificano applicazioni esistenti.
+È stato aggiornato l'applicazione MFC Scribble. Utilizzare questa procedura dettagliata come guida quando si modificano applicazioni esistenti.
 
 ## <a name="see-also"></a>Vedere anche
 

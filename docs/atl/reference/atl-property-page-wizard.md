@@ -1,7 +1,7 @@
 ---
 title: Creazione guidata pagina delle proprietà ATL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5a150a81ea26e34e05cbfb9199c734a1ccad9b7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 206fe83407421a7aabfd920214590a86e4727714
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094195"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250419"
 ---
 # <a name="atl-property-page-wizard"></a>Creazione guidata pagina delle proprietà ATL
 
 Questa procedura guidata [aggiunge una pagina delle proprietà in un progetto ATL](../../atl/reference/adding-an-atl-property-page.md) o a un progetto MFC con supporto ATL. Una pagina delle proprietà ATL fornisce un'interfaccia utente per impostare le proprietà (o la chiamata ai metodi) di uno o più oggetti COM.
+
+> [!WARNING]
+> In Visual Studio 2017 versione 15.9 questa procedura guidata per codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto per ATL e MFC generale non è interessato dalla procedura di rimozione di questa procedura guidata. Se vuoi condividere commenti e suggerimenti su questa deprecazione, completare [questo sondaggio](https://www.surveymonkey.com/r/QDWKKCN). Commenti e suggerimenti è importante per noi.
 
 ## <a name="remarks"></a>Note
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169775"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235506"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble (parte 1)
 
@@ -54,7 +54,7 @@ In questa parte della procedura dettagliata sono incluse le seguenti sezioni:
 
 ##  <a name="replaceclass"></a> Sostituzione delle classi Base
 
-Per convertire un'applicazione che supporta un menu in un'applicazione che supporta una barra multifunzione, è necessario derivare le classi dell'applicazione, della finestra cornice e della barra degli strumenti da classi base aggiornate. Si consiglia di non modificare l'esempio originale di Scribble, ma pulire invece il progetto di Scribble, copiarlo in un'altra directory e lavorare sulla copia.
+Per convertire un'applicazione che supporta un menu in un'applicazione che supporta una barra multifunzione, è necessario derivare le classi dell'applicazione, della finestra cornice e della barra degli strumenti da classi base aggiornate. (È consigliabile non modificare l'esempio originale di Scribble. Al contrario, pulire il progetto Scribble, copiarlo in un'altra directory e quindi modificare la copia.)
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Per sostituire le classi base nell'applicazione Scribble
 
@@ -115,9 +115,9 @@ Per convertire un'applicazione che supporta un menu in un'applicazione che suppo
 
 ##  <a name="addbitmap"></a> Aggiunta di bitmap al progetto
 
-I quattro passaggi successivi di questa procedura dettagliata richiedono risorse bitmap. È possibile ottenere le bitmap appropriate in diversi modi:
+I quattro passaggi successivi di questa procedura dettagliata richiedono risorse bitmap. È possibile ottenere le bitmap appropriate in vari modi:
 
-- Usare la [editor di risorse](../windows/resource-editors.md) per creare bitmap personalizzate. Oppure usare l'editor di risorse per assemblare bitmap partendo dalle immagini portable network graphics (PNG) che sono inclusi con Visual Studio e possono scaricato dal [libreria di immagini di Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Usare la [editor di risorse](../windows/resource-editors.md) per creare bitmap personalizzate. Oppure usare l'editor di risorse per assemblare bitmap partendo dalle immagini portable network graphics (PNG) che sono inclusi con Visual Studio e possono essere scaricate dal [libreria di immagini di Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
     Tuttavia, il **sulla barra multifunzione** interfaccia utente richiede che determinate bitmap supportino le immagini trasparenti. Le bitmap trasparenti utilizzano pixel a 32 bit, dove 24 bit specificano i componenti rossi, verdi e blu del colore e 8 bit definiscono un *canale alfa* che specifica la trasparenza del colore. Con gli editor risorse correnti è possibile visualizzare, ma non modificare, le bitmap con pixel a 32 bit. Pertanto, utilizzare un editor di immagini esterno anziché gli editor risorse per modificare le bitmap trasparenti.
 
@@ -165,7 +165,7 @@ Questa procedura dettagliata copia i file di risorse in base all'esempio creato 
 
 ##  <a name="addribbon"></a> Aggiunta di una risorsa barra multifunzione al progetto
 
-Quando si converte un'applicazione che utilizza menu in un'applicazione che utilizza una barra multifunzione, non è necessario rimuovere o disabilitare i menu esistenti. Piuttosto, è possibile creare una risorsa barra multifunzione, aggiungervi dei pulsanti e successivamente associarli alle voci di menu esistenti. Sebbene i menu non risultino più visibili, i messaggi della barra multifunzione sono indirizzati attraverso i menu. Inoltre, i collegamenti dei menu continuano a funzionare.
+Quando si converte un'applicazione che utilizza menu in un'applicazione che usa una barra multifunzione, non è necessario rimuovere o disabilitare i menu esistenti. Dopo aver creato una risorsa barra multifunzione, aggiungere i pulsanti della barra multifunzione e quindi associare i nuovi pulsanti con le voci di menu esistenti. Anche se i menu non sono più visibili, i messaggi dalla barra multifunzione sono indirizzati attraverso i menu e tasti di scelta menu continuano a funzionare.
 
 È costituito da una barra multifunzione di **applicazione** pulsante, ovvero il pulsante grande sul lato superiore sinistro della barra multifunzione e uno o più schede di categoria. Ogni scheda di categoria contiene uno o più pannelli che fungono da contenitori per i pulsanti e i controlli della barra multifunzione. La procedura seguente illustra come creare una risorsa barra multifunzione e quindi personalizzare il **applicazione** pulsante.
 
@@ -205,7 +205,7 @@ Quando si converte un'applicazione che utilizza menu in un'applicazione che util
 
    1. Fare clic sui **Print** pulsante e quindi fare clic su **Inserisci** per aggiungere un altro pulsante. Change **didascalia** al `Print Pre&view`, **ID** a `ID_FILE_PRINT_PREVIEW`, **immagine** a `6`, e **immagine di grandi dimensioni** per `6`.
 
-   1. A questo punto sono state modificate le **elementi principali**. Fare clic su **Close** per chiudere la **Editor elementi**.
+   1. A questo punto è stato modificato il **elementi principali**. Fare clic su **Close** per chiudere la **Editor elementi**.
 
 1. Le modifiche seguenti creano un pulsante di uscita che viene visualizzato in fondo il **applicazione** menu pulsante.
 
@@ -213,7 +213,7 @@ Quando si converte un'applicazione che utilizza menu in un'applicazione che util
 
    1. Con il **articoli** tipo **pulsante** selezionato, fare clic su **Aggiungi** per aggiungere un pulsante. Change **didascalia** a `E&xit`, **ID** alla `ID_APP_EXIT`, **immagine** a `8`.
 
-   1. Sono state modificate le **pulsanti**. Fare clic su **Close** per chiudere la **Editor elementi**.
+   1. È stato modificato il **pulsanti**. Fare clic su **Close** per chiudere la **Editor elementi**.
 
 ##  <a name="createinstance"></a> Creazione di un'istanza della barra multifunzione
 
@@ -221,14 +221,14 @@ Nei passaggi seguenti viene illustrato come creare un'istanza della barra multif
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Per creare un'istanza della barra multifunzione
 
-1. Nel file mainfrm.h aggiungere un membro dati alla sezione protetta di `CMainFrame`, la definizione della classe per la cornice principale. Questo membro rappresenta la barra multifunzione.
+1. Nel file mainfrm.h aggiungere un membro dati alla sezione protetta di `CMainFrame`, la definizione della classe per la cornice principale. Questo membro è per la barra multifunzione.
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. Nel file mainfrm.cpp aggiungere il seguente codice prima dell'istruzione finale `return` alla fine della funzione `CMainFrame::OnCreate`. In questo modo viene creata un'istanza della barra multifunzione.
+2. Nel file mainfrm.cpp aggiungere il seguente codice prima dell'istruzione finale `return` alla fine della funzione `CMainFrame::OnCreate`. Crea un'istanza della barra multifunzione.
 
     ```cpp
     // Create the ribbon bar
@@ -250,7 +250,7 @@ Ora che è stato creato il **applicazione** pulsante, è possibile aggiungere el
 
 1. Il programma Scribble richiede solo una categoria. Nella visualizzazione progettazione, nelle **casella degli strumenti**, fare doppio clic su **categoria** per aggiungerne uno e visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **didascalia** al `&Home`, **Large Images** al `IDB_RIBBON_HOMELARGE`, **Small Images** a `IDB_RIBBON_HOMESMALL`.
 
-1. Ogni categoria della barra multifunzione è organizzata in pannelli, ciascuno dei quali dispone di un nome. Ogni pannello contiene un set di controlli che eseguono operazioni correlate. Questa categoria dispone di un solo pannello. Fare clic su **pannello**, quindi modificare **didascalia** a `Edit`.
+1. Ogni categoria della barra multifunzione è organizzata in pannelli, ciascuno dei quali dispone di un nome. Ogni pannello contiene un set di controlli che completa le operazioni correlate. Questa categoria dispone di un solo pannello. Fare clic su **pannello**, quindi modificare **didascalia** a `Edit`.
 
 1. Per il **modifica** panel, aggiungere un pulsante che consenta di cancellare il contenuto del documento. L'ID del messaggio per questo pulsante è già stato definito nel `IDR_SCRIBBTYPE` risorsa menu. Specificare `Clear All` il testo del pulsante e l'indice della bitmap che decora il pulsante. Aprire il **della casella degli strumenti**, quindi trascinare un **pulsante** per il **modifica** pannello. Fare clic sul pulsante e quindi modificare **didascalia** al `Clear All`, **ID** al `ID_EDIT_CLEAR_ALL`, **Image Index** a `0`, **Large Image Index**  a `0`.
 

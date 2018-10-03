@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 899ddba8ee72039702f05b0d369b79e347f7db7e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169723"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235607"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procedura dettagliata: aggiunta di CTaskDialog a un'applicazione
 
@@ -43,7 +43,7 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Sostituzione di una finestra di messaggio di Windows con CTaskDialog
 
-La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel sostituire la finestra di messaggio di Windows. In questo esempio viene anche modificata l'icona associata alla finestra di dialogo delle attività. Tale modifica fa in modo che `CTaskDialog` sembri identica alla finestra di messaggio di Windows.
+La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel sostituire la finestra di messaggio di Windows. In questo esempio viene anche modificata l'icona associata alla finestra di dialogo delle attività. Modifica dell'icona rende il `CTaskDialog` visualizzati stesso per la finestra di messaggio di Windows.
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Per sostituire una finestra di messaggio di Windows con CTaskDialog
 
@@ -92,7 +92,7 @@ La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel 
     taskDialog.DoModal();
     ```
 
-Se non si desidera che `CTaskDialog` visualizzi la stessa icona della finestra di messaggio di Windows, omettere il passaggio 7. Se si omette questo passaggio, `CTaskDialog` non disporrà di alcuna icona quando verrà visualizzata dall'applicazione.
+Passaggio 7 può essere evitato se non si vuole la `CTaskDialog` per visualizzare la stessa icona come la finestra di messaggio di Windows. Se si evita questo passaggio, il `CTaskDialog` disporrà di alcuna icona quando l'applicazione li visualizza.
 
 Compilare l'applicazione ed eseguirla. L'applicazione consente di visualizzare la finestra di dialogo delle attività dopo l'avvio.
 
@@ -102,7 +102,7 @@ La procedura seguente descrive come aggiungere funzionalità alla classe `CTaskD
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>Per aggiungere funzionalità a CTaskDialog
 
-1. Passare alla finestra **Visualizzazione risorse**. Se non è possibile visualizzare **Visualizzazione risorse**, aprire questa finestra dal menu **Visualizza** .
+1. Passare alla finestra **Visualizzazione risorse**. Se non è possibile visualizzare il **visualizzazione di risorse**, è possibile aprirlo dal **visualizzazione** menu.
 
 1. Espandere la finestra **Visualizzazione risorse** fino a quando non è possibile selezionare la cartella **Tabelle delle stringhe** . Espandere la finestra e fare doppio clic sulla voce **Tabelle delle stringhe** .
 
@@ -181,7 +181,7 @@ La procedura seguente illustra come visualizzare `CTaskDialog` senza prima crear
 
 ### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Per visualizzare CTaskDialog senza creare un oggetto CTaskDialog
 
-1. Se non è già aperto, aprire il file MyProject.cpp.
+1. Se non è già aperto, aprire il file MyProject.
 
 1. Passare alla parentesi di chiusura per l'istruzione `if (CTaskDialog::IsSupported())` .
 
@@ -197,7 +197,7 @@ La procedura seguente illustra come visualizzare `CTaskDialog` senza prima crear
 
 Compilare l'applicazione ed eseguirla. L'applicazione visualizza due finestre di dialogo delle attività. La prima finestra di dialogo è dal **per aggiungere la funzionalità a CTaskDialog** procedure; il secondo è la finestra di dialogo dall'ultima procedura.
 
-Questi esempi non presentano tutte le opzioni disponibili per `CTaskDialog`, ma devono offrire un supporto per iniziare. Per una descrizione completa della classe, vedere [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
+Questi esempi non illustrano tutte le opzioni disponibili per un `CTaskDialog`, ma consentono di iniziare. Per una descrizione completa della classe, vedere [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

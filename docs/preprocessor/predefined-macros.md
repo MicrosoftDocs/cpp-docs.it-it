@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a95141aa97d7272970adaaa69f3f63de2a622780
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408427"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235646"
 ---
 # <a name="predefined-macros"></a>Macro predefinite
 
@@ -435,7 +435,7 @@ Microsoft Visual C++ supporta queste macro predefinite aggiuntive.
 
 - **&#95;WINRT&#95;DLL** definito come 1 quando compilato come C++ ed entrambe [/ZW (compilazione di Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md) e [/LD o /LDd](../build/reference/md-mt-ld-use-run-time-library.md) vengono impostate le opzioni del compilatore. In caso contrario, non definito.
 
- Le macro del preprocessore utilizzate per determinare la versione della libreria ATL o MFC non sono predefinite dal compilatore. Queste macro sono definite nelle intestazioni per la libreria, in modo che non sono definiti nelle direttive del preprocessore prima che l'intestazione necessaria è incluso.
+Le macro del preprocessore utilizzate per determinare la versione della libreria ATL o MFC non sono predefinite dal compilatore. Queste macro sono definite nelle intestazioni per la libreria, in modo che non sono definiti nelle direttive del preprocessore prima che l'intestazione necessaria è incluso.
 
 - **&#95;ATL&#95;VER** definito in \<atldef.h > come valore letterale integer che codifica il numero di versione ATL.
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1111ede44edc36e5399d82b3c4e088b20cc1c9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4e4e371bd242dff337450fd87527455b50556afc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957298"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235776"
 ---
 # <a name="timebase-class"></a>Classe time_base
 
@@ -32,15 +32,15 @@ La classe funge da classe base per i facet della classe di modello di time_get, 
 ```cpp
 class time_base : public locale::facet {
 public:
-    enum dateorder {no_order,
-    dmy,
- mdy,
-    ymd,
- ydm};
-    time_base(
- size_t _Refs = 0)
- ~time_base();
-
+    enum dateorder {
+        no_order,
+        dmy,
+        mdy,
+        ymd,
+        ydm
+    };
+    time_base(size_t _Refs = 0)
+    ~time_base();
 };
 ```
 

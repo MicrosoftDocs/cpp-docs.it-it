@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029619"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234321"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procedura dettagliata: Creazione di un programma C++ Standard (C++)
 
@@ -32,7 +32,7 @@ ms.locfileid: "47029619"
 
 È possibile digitare il proprio programma C++ o usare uno dei programmi di esempio. Il programma di esempio in questa procedura dettagliata è un'applicazione console. Questa applicazione usa il `set` contenitore nella libreria Standard C++.
 
-Visual C++ è conforme allo Standard C++ 2003, con le seguenti eccezioni principali: ricerca del nome in due fasi, specifiche di eccezioni ed esportazione. Inoltre, Visual C++ supporta diverse funzionalità c++0x, ad esempio, le espressioni lambda, auto, static_assert, riferimenti rvalue e modelli extern.
+Visual C++ segue lo Standard di C++ 2003, con le seguenti eccezioni principali: ricerca del nome in due fasi, specifiche di eccezioni ed esportazione. Inoltre, Visual C++ supporta diverse funzionalità c++0x, ad esempio, le espressioni lambda, auto, static_assert, riferimenti rvalue e modelli extern.
 
 > [!NOTE]
 > Se è necessaria la conformità allo standard, usare il `/Za` opzione del compilatore per disabilitare le estensioni Microsoft allo standard. Per altre informazioni, vedere [/Za, /Ze (Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md).

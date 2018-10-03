@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496971736e1f303d61b83e15b2ba1c03083f8d53
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4de24dfac4ccd24e5cb4bda8b60a43b3ec0d0560
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422792"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234580"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -86,7 +86,7 @@ Le funzioni a virgola mobile elencate di seguito non hanno formati intrinseci re
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- Le funzioni a virgola mobile elencate di seguito hanno formati intrinseci reali quando si specifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), e [/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) (o qualsiasi opzione che include /Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)e/O2):
+Le funzioni a virgola mobile elencate di seguito hanno formati intrinseci reali quando si specifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), e [/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) (o qualsiasi opzione che include /Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)e/O2):
 
 |||||
 |-|-|-|-|

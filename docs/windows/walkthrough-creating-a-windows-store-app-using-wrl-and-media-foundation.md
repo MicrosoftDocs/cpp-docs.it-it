@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9858ebe9affb47d61114bde072645f7002849ec7
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d745b912406407cd56252ba593601a7794fc841d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169463"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234715"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Foundation
 
@@ -78,7 +78,7 @@ Nella maggior parte dei casi, è possibile usare c++ /CX per creare un Runtime d
 
    [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]
 
-1. `GrayscaleTransform.h` non viene usato in questo esempio. Volendo, è possibile rimuoverlo dal progetto.
+1. `GrayscaleTransform.h` non viene usata in questo esempio. Volendo, è possibile rimuoverlo dal progetto.
 
 1. Usare il codice seguente sostituire il contenuto di `GrayscaleTransform.cpp`:
 

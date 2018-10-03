@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436884"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250393"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Spazio dei nomi Microsoft::WRL::Details
 
@@ -43,7 +43,7 @@ namespace Microsoft::WRL::Details;
 |[Classe MakeAllocator](../windows/makeallocator-class.md)|Alloca memoria per una classe attivabile, con o senza supporto dei riferimenti deboli.|
 |[Classe ModuleBase](../windows/modulebase-class.md)|Rappresenta la classe di base di [modulo](../windows/module-class.md) classi.|
 |[Classe RemoveIUnknown](../windows/removeiunknown-class.md)|Crea un tipo equivalente a un `IUnknown`-tipo di base, ma ha non virtuale `QueryInterface`, `AddRef`, e `Release` metodi.|
-|[Classe WeakReference](../windows/weakreference-class1.md)|Rappresenta un *riferimento debole* che può essere utilizzato con il Runtime di Windows o da COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.|
+|[Classe WeakReference](../windows/weakreference-class.md)|Rappresenta un *riferimento debole* che può essere utilizzato con il Runtime di Windows o da COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.|
 
 ### <a name="structures"></a>Strutture
 
@@ -84,7 +84,7 @@ namespace Microsoft::WRL::Details;
 |[Funzione ActivationFactoryCallback](../windows/activationfactorycallback-function.md)|Ottiene la factory di attivazione per l'ID di attivazione specificato.|
 |[Funzione Move](../windows/move-function.md)|Sposta l'argomento specificato da una posizione a altra.|
 |[Funzione RaiseException](../windows/raiseexception-function.md)|Genera un'eccezione nel thread chiamante.|
-|[Funzione swap (Libreria modelli C++ per Windows Runtime)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Scambia i valori dei due argomenti specificati.|
+|[Funzione swap (WRL)](../windows/swap-function-wrl.md)|Scambia i valori dei due argomenti specificati.|
 |[Funzione TerminateMap](../windows/terminatemap-function.md)|Arresta la class factory nel modulo specificato.|
 
 ## <a name="requirements"></a>Requisiti

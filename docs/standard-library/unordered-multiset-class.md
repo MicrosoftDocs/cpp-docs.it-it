@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddfbb4887a1b34770a1a350f4d2863635c837db0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 35c13890262bf7d1bbcf5d86d71e50ed55a073ff
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725909"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235750"
 ---
 # <a name="unorderedmultiset-class"></a>Classe unordered_multiset
 
@@ -267,7 +267,7 @@ Il tipo è un sinonimo del parametro di modello `Alloc`.
 typedef std::unordered_multiset<char> Myset;
 typedef std::allocator<std::pair<const char, int> > Myalloc;
 int main()
-    {
+{
     Myset c1;
 
     Myset::allocator_type al = c1.get_allocator();
@@ -275,8 +275,7 @@ int main()
         << std::boolalpha << (al == Myalloc()) << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -318,33 +317,32 @@ Le prime due funzioni membro restituiscono un iteratore in avanti che punta al p
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// inspect first two items " [c] [b]"
+    // inspect first two items "[c] [b]"
     Myset::iterator it2 = c1.begin();
-    std::cout << " [" << *it2 << "]";
+    std::cout << "[" << *it2 << "] ";
     ++it2;
-    std::cout << " [" << *it2 << "]";
+    std::cout << "[" << *it2 << "] ";
     std::cout << std::endl;
 
-// inspect bucket containing 'a'
+    // inspect bucket containing 'a'
     Myset::const_local_iterator lit = c1.begin(c1.bucket('a'));
-    std::cout << " [" << *lit << "]";
+    std::cout << "[" << *lit << "] ";
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -380,32 +378,31 @@ La funzione membro restituisce il numero di bucket che corrisponde attualmente a
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a] "
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// display buckets for keys
+    // display buckets for keys
     Myset::size_type bs = c1.bucket('a');
     std::cout << "bucket('a') == " << bs << std::endl;
     std::cout << "bucket_size(" << bs << ") == " << c1.bucket_size(bs)
         << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -432,20 +429,20 @@ La funzione membro restituisce il numero corrente di bucket.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a] "
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// inspect current parameters
+    // inspect current parameters
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
     std::cout << "max_bucket_count() == "
@@ -454,7 +451,7 @@ int main()
         << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// change max_load_factor and redisplay
+    // change max_load_factor and redisplay
     c1.max_load_factor(0.10f);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
@@ -464,7 +461,7 @@ int main()
         << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// rehash and redisplay
+    // rehash and redisplay
     c1.rehash(100);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
@@ -472,15 +469,13 @@ int main()
         << c1.max_bucket_count() << std::endl;
     std::cout << "max_load_factor() == "
         << c1.max_load_factor() << std::endl;
-    std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -495,7 +490,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="bucket_size"></a>  unordered_multiset::bucket_size
@@ -525,32 +519,31 @@ La funzione membro restituisce le dimensioni del numero di bucket *nbucket*.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a] "
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// display buckets for keys
+    // display buckets for keys
     Myset::size_type bs = c1.bucket('a');
     std::cout << "bucket('a') == " << bs << std::endl;
     std::cout << "bucket_size(" << bs << ") == " << c1.bucket_size(bs)
         << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -576,8 +569,8 @@ Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono e
 ```cpp
 auto i1 = Container.begin();
 // i1 is Container<T>::iterator
-auto i2 = Container.cbegin();
 
+auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
@@ -602,8 +595,8 @@ Oggetto **const** iteratore di accesso in avanti che punta appena oltre la fine 
 ```cpp
 auto i1 = Container.end();
 // i1 is Container<T>::iterator
-auto i2 = Container.cend();
 
+auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
@@ -631,20 +624,20 @@ La funzione membro chiama [unordered_multiset::erase](#erase)`(` [unordered_mult
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a] "
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// clear the container and reinspect
+    // clear the container and reinspect
     c1.clear();
     std::cout << "size == " << c1.size() << std::endl;
     std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
@@ -653,22 +646,21 @@ int main()
     c1.insert('d');
     c1.insert('e');
 
-// display contents " [e] [d]"
+    // display contents "[e] [d] "
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     std::cout << "size == " << c1.size() << std::endl;
     std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 size == 0
 empty() == true
 
@@ -699,22 +691,21 @@ Il tipo descrive un oggetto che può essere usato come iteratore costante in ava
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -743,26 +734,25 @@ Il tipo descrive un oggetto che può essere usato come iteratore in avanti costa
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// inspect bucket containing 'a'
+    // inspect bucket containing 'a'
     Myset::const_local_iterator lit = c1.begin(c1.bucket('a'));
-    std::cout << " [" << *lit << "]";
+    std::cout << "[" << *lit << "] ";
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -792,25 +782,24 @@ Il tipo descrive un oggetto che può essere usato come puntatore costante a un e
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::iterator it = c1.begin();
         it != c1.end(); ++it)
         {
         Myset::const_pointer p = &*it;
-        std::cout << " [" << *p << "]";
+        std::cout << "[" << *p << "] ";
         }
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -839,25 +828,24 @@ Il tipo descrive un oggetto che può essere usato come riferimento costante a un
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::iterator it = c1.begin();
         it != c1.end(); ++it)
         {
         Myset::const_reference ref = *it;
-        std::cout << " [" << ref << "]";
+        std::cout << "[" << ref << "] ";
         }
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -891,17 +879,17 @@ La funzione membro restituisce il numero di elementi nell'intervallo delimitato 
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     std::cout << "count('A') == " << c1.count('A') << std::endl;
@@ -909,12 +897,11 @@ int main()
     std::cout << "count('C') == " << c1.count('C') << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -942,27 +929,27 @@ Il tipo di valore integer con segno descrive un oggetto che può rappresentare l
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// compute positive difference
+    // compute positive difference
     Myset::difference_type diff = 0;
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
         ++diff;
     std::cout << "end()-begin() == " << diff << std::endl;
 
-// compute negative difference
+    // compute negative difference
     diff = 0;
     for (Myset::const_iterator it = c1.end();
         it != c1.begin(); --it)
@@ -970,12 +957,11 @@ int main()
     std::cout << "begin()-end() == " << diff << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1059,20 +1045,20 @@ La funzione membro restituisce true per una sequenza controllata vuota.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// clear the container and reinspect
+    // clear the container and reinspect
     c1.clear();
     std::cout << "size == " << c1.size() << std::endl;
     std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
@@ -1081,22 +1067,21 @@ int main()
     c1.insert('d');
     c1.insert('e');
 
-// display contents " [e] [d]"
+    // display contents "[e] [d]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     std::cout << "size == " << c1.size() << std::endl;
     std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 size == 0
 empty() == true
 
@@ -1112,9 +1097,7 @@ Designa la fine della sequenza controllata.
 ```cpp
 iterator end();
 const_iterator end() const;
-
-
-    local_iterator end(size_type nbucket);
+local_iterator end(size_type nbucket);
 const_local_iterator end(size_type nbucket) const;
 ```
 
@@ -1137,35 +1120,34 @@ Le prime due funzioni membro restituiscono un iteratore in avanti che punta poco
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// inspect last two items " [a] [b]"
+    // inspect last two items "[a] [b]"
     Myset::iterator it2 = c1.end();
     --it2;
-    std::cout << " [" << *it2 << "]";
+    std::cout << "[" << *it2 << "] ";
     --it2;
-    std::cout << " [" << *it2 << "]";
+    std::cout << "[" << *it2 << "] ";
     std::cout << std::endl;
 
-// inspect bucket containing 'a'
+    // inspect bucket containing 'a'
     Myset::const_local_iterator lit = c1.end(c1.bucket('a'));
     --lit;
-    std::cout << " [" << *lit << "]";
+    std::cout << "[" << *lit << "] ";
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -1205,41 +1187,40 @@ La funzione membro restituisce una coppia di iteratori `X` tale che `[X.first, X
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// display results of failed search
+    // display results of failed search
     std::pair<Myset::iterator, Myset::iterator> pair1 =
         c1.equal_range('x');
     std::cout << "equal_range('x'):";
     for (; pair1.first != pair1.second; ++pair1.first)
-        std::cout << " [" << *pair1.first << "]";
+        std::cout << "[" << *pair1.first << "] ";
     std::cout << std::endl;
 
-// display results of successful search
+    // display results of successful search
     pair1 = c1.equal_range('b');
     std::cout << "equal_range('b'):";
     for (; pair1.first != pair1.second; ++pair1.first)
-        std::cout << " [" << *pair1.first << "]";
+        std::cout << "[" << *pair1.first << "] ";
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 equal_range('x'):
 equal_range('b'): [b]
 ```
@@ -1311,36 +1292,35 @@ La funzione membro restituisce [unordered_multiset::equal_range](#equal_range)`(
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// try to find and fail
+    // try to find and fail
     std::cout << "find('A') == "
         << std::boolalpha << (c1.find('A') != c1.end()) << std::endl;
 
-// try to find and succeed
+    // try to find and succeed
     Myset::iterator it = c1.find('b');
     std::cout << "find('b') == "
         << std::boolalpha << (it != c1.end())
-        << ": [" << *it << "]" << std::endl;
+        << ": [" << *it << "] " << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 find('A') == false
 find('b') == true: [b]
 ```
@@ -1368,7 +1348,7 @@ La funzione membro restituisce l'oggetto allocatore archiviato.
 typedef std::unordered_multiset<char> Myset;
 typedef std::allocator<std::pair<const char, int> > Myalloc;
 int main()
-    {
+{
     Myset c1;
 
     Myset::allocator_type al = c1.get_allocator();
@@ -1376,8 +1356,7 @@ int main()
         << std::boolalpha << (al == Myalloc()) << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -1406,7 +1385,7 @@ La funzione membro restituisce l'oggetto archiviato della funzione hash.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     Myset::hasher hfn = c1.hash_function();
@@ -1414,8 +1393,7 @@ int main()
     std::cout << "hfn('b') == " << hfn('b') << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -1445,7 +1423,7 @@ Il tipo è un sinonimo del parametro di modello `Hash`.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     Myset::hasher hfn = c1.hash_function();
@@ -1453,8 +1431,7 @@ int main()
     std::cout << "hfn('b') == " << hfn('b') << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -1471,19 +1448,16 @@ Inserisce un elemento o un intervallo di elementi in un oggetto unordered_multis
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1491,13 +1465,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1573,7 +1545,7 @@ La funzione membro restituisce l'oggetto archiviato della funzione di confronto.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     Myset::key_equal cmpfn = c1.key_eq();
@@ -1583,8 +1555,7 @@ int main()
         << std::boolalpha << cmpfn('a', 'b') << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -1614,7 +1585,7 @@ Il tipo è un sinonimo del parametro di modello `Pred`.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     Myset::key_equal cmpfn = c1.key_eq();
@@ -1624,8 +1595,7 @@ int main()
         << std::boolalpha << cmpfn('a', 'b') << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -1655,32 +1625,31 @@ Il tipo è un sinonimo del parametro di modello `Key`.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// add a value and reinspect
+    // add a value and reinspect
     Myset::key_type key = 'd';
     Myset::value_type val = key;
     c1.insert(val);
 
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -1710,20 +1679,20 @@ La funzione membro restituisce `(float)`[unordered_multiset::size](#size)`() / (
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// inspect current parameters
+    // inspect current parameters
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
     std::cout << "max_bucket_count() == "
@@ -1732,7 +1701,7 @@ int main()
         << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// change max_load_factor and redisplay
+    // change max_load_factor and redisplay
     c1.max_load_factor(0.10f);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
@@ -1742,7 +1711,7 @@ int main()
         << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// rehash and redisplay
+    // rehash and redisplay
     c1.rehash(100);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
@@ -1753,8 +1722,7 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ## <a name="local_iterator"></a>  unordered_multiset::local_iterator
@@ -1779,26 +1747,25 @@ Il tipo descrive un oggetto che può essere usato come iteratore in avanti per u
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// inspect bucket containing 'a'
+    // inspect bucket containing 'a'
     Myset::local_iterator lit = c1.begin(c1.bucket('a'));
-    std::cout << " [" << *lit << "]";
+    std::cout << "[" << *lit << "] ";
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -1828,20 +1795,20 @@ La funzione membro restituisce il numero massimo di bucket attualmente consentit
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// inspect current parameters
+    // inspect current parameters
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
     std::cout << "max_bucket_count() == "
@@ -1850,7 +1817,7 @@ int main()
         << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// change max_load_factor and redisplay
+    // change max_load_factor and redisplay
     c1.max_load_factor(0.10f);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
@@ -1860,7 +1827,7 @@ int main()
         << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// rehash and redisplay
+    // rehash and redisplay
     c1.rehash(100);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
@@ -1871,12 +1838,11 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -1924,20 +1890,20 @@ La prima funzione membro restituisce il fattore di carico massimo archiviato. La
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// inspect current parameters
+    // inspect current parameters
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
     std::cout << "max_bucket_count() == "
@@ -1946,7 +1912,7 @@ int main()
         << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// change max_load_factor and redisplay
+    // change max_load_factor and redisplay
     c1.max_load_factor(0.10f);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
@@ -1956,7 +1922,7 @@ int main()
         << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// rehash and redisplay
+    // rehash and redisplay
     c1.rehash(100);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
@@ -1967,12 +1933,11 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2012,14 +1977,13 @@ La funzione membro restituisce la lunghezza della sequenza più lunga che l'ogge
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     std::cout << "max_size() == " << c1.max_size() << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -2055,32 +2019,32 @@ Dopo la cancellazione di tutti gli elementi esistenti in un `unordered_multiset`
 #include <iostream>
 
 int main( )
-   {
-   using namespace std;
-   unordered_multiset<int> v1, v2, v3;
-   unordered_multiset<int>::iterator iter;
+{
+    using namespace std;
+    unordered_multiset<int> v1, v2, v3;
+    unordered_multiset<int>::iterator iter;
 
-   v1.insert(10);
+    v1.insert(10);
 
-   cout << "v1 = " ;
-   for (iter = v1.begin(); iter != v1.end(); iter++)
-      cout << *iter << " ";
-   cout << endl;
+    cout << "v1 = " ;
+    for (iter = v1.begin(); iter != v1.end(); iter++)
+        cout << *iter << " ";
+    cout << endl;
 
-   v2 = v1;
-   cout << "v2 = ";
-   for (iter = v2.begin(); iter != v2.end(); iter++)
-      cout << *iter << " ";
-   cout << endl;
+    v2 = v1;
+    cout << "v2 = ";
+    for (iter = v2.begin(); iter != v2.end(); iter++)
+        cout << *iter << " ";
+    cout << endl;
 
-// move v1 into v2
-   v2.clear();
-   v2 = move(v1);
-   cout << "v2 = ";
-   for (iter = v2.begin(); iter != v2.end(); iter++)
-      cout << *iter << " ";
-   cout << endl;
-   }
+    // move v1 into v2
+    v2.clear();
+    v2 = move(v1);
+    cout << "v2 = ";
+    for (iter = v2.begin(); iter != v2.end(); iter++)
+        cout << *iter << " ";
+    cout << endl;
+}
 ```
 
 ## <a name="pointer"></a>  unordered_multiset::pointer
@@ -2105,26 +2069,25 @@ Il tipo descrive un oggetto che può essere usato come puntatore a un elemento d
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::iterator it = c1.begin();
         it != c1.end(); ++it)
         {
         Myset::key_type key = *it;
         Myset::pointer p = &key;
-        std::cout << " [" << *p << "]";
+        std::cout << "[" << *p << "] ";
         }
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -2153,26 +2116,25 @@ Il tipo descrive un oggetto che può essere usato come riferimento a un elemento
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::iterator it = c1.begin();
         it != c1.end(); ++it)
         {
         Myset::key_type key = *it;
         Myset::reference ref = key;
-        std::cout << " [" << ref << "]";
+        std::cout << "[" << ref << "] ";
         }
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -2206,45 +2168,44 @@ La funzione membro modifica il numero di bucket in modo da essere almeno *nbucke
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// inspect current parameters
+    // inspect current parameters
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
     std::cout << "max_load_factor() == " << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// change max_load_factor and redisplay
+    // change max_load_factor and redisplay
     c1.max_load_factor(0.10f);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
     std::cout << "max_load_factor() == " << c1.max_load_factor() << std::endl;
     std::cout << std::endl;
 
-// rehash and redisplay
+    // rehash and redisplay
     c1.rehash(100);
     std::cout << "bucket_count() == " << c1.bucket_count() << std::endl;
     std::cout << "load_factor() == " << c1.load_factor() << std::endl;
     std::cout << "max_load_factor() == " << c1.max_load_factor() << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2280,20 +2241,20 @@ La funzione membro restituisce la lunghezza della sequenza controllata.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// clear the container and reinspect
+    // clear the container and reinspect
     c1.clear();
     std::cout << "size == " << c1.size() << std::endl;
     std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
@@ -2302,22 +2263,21 @@ int main()
     c1.insert('d');
     c1.insert('e');
 
-// display contents " [e] [d]"
+    // display contents "[e] [d]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     std::cout << "size == " << c1.size() << std::endl;
     std::cout << "empty() == " << std::boolalpha << c1.empty() << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
- [c] [b] [a]
+[c] [b] [a]
 size == 0
 empty() == true
 
@@ -2348,15 +2308,14 @@ Il tipo Unsigned Integer descrive un oggetto che può rappresentare la lunghezza
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
     Myset::size_type sz = c1.size();
 
     std::cout << "size == " << sz << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -2390,17 +2349,17 @@ La funzione membro Scambia le sequenze controllate tra `*this` e *destro*. Se [u
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     Myset c2;
@@ -2411,23 +2370,22 @@ int main()
 
     c1.swap(c2);
 
-// display contents " [f] [e] [d]"
+    // display contents "[f] [e] [d]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     swap(c1, c2);
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -2480,7 +2438,7 @@ unordered_set(
 
 template <class InputIterator>
 unordered_multiset(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
@@ -2536,32 +2494,31 @@ Il tipo descrive un elemento nella sequenza controllata.
 
 typedef std::unordered_multiset<char> Myset;
 int main()
-    {
+{
     Myset c1;
 
     c1.insert('a');
     c1.insert('b');
     c1.insert('c');
 
-// display contents " [c] [b] [a]"
+    // display contents "[c] [b] [a]"
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
-// add a value and reinspect
+    // add a value and reinspect
     Myset::key_type key = 'd';
     Myset::value_type val = key;
     c1.insert(val);
 
     for (Myset::const_iterator it = c1.begin();
         it != c1.end(); ++it)
-        std::cout << " [" << *it << "]";
+        std::cout << "[" << *it << "] ";
     std::cout << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output

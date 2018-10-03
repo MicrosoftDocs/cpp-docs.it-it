@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05255f71f304b32de95faf96eaa23f5ce3da9f96
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 9d96ce9ade06c849716a680bd3c0c8bb6feeccc6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169411"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235659"
 ---
 # <a name="walkthroughs-mfc"></a>Procedure dettagliate (MFC)
 
@@ -28,7 +28,7 @@ In questa sezione sono contenuti articoli che analizzano le diverse attività as
 ## <a name="in-this-section"></a>In questa sezione
 
 [Procedura dettagliata: uso dei nuovi controlli Shell MFC](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
-In questa procedura dettagliata verrà creata un'applicazione simile a Esplora risorse. Si creerà una finestra in cui è inclusi due riquadri. Riquadro a sinistra conterrà un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) oggetto che verrà visualizzato il Desktop in una visualizzazione gerarchica. Il riquadro di destra contiene un' [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) che visualizzerà i file nella cartella selezionata nel riquadro sinistro.
+In questa procedura dettagliata, si creerà un'applicazione simile a Esplora File. Si creerà una finestra in cui è inclusi due riquadri. Il riquadro a sinistra ha un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) oggetto che verrà visualizzato il Desktop in una visualizzazione gerarchica. Riquadro di destra è un [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) che visualizzerà i file nella cartella selezionata nel riquadro sinistro.
 
 [Procedura dettagliata: inserimento di controlli nelle barre degli strumenti](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 Barre degli strumenti MFC moderni può ospitare controlli diversi da semplici pulsanti. Questo articolo illustra come eseguire questa operazione.

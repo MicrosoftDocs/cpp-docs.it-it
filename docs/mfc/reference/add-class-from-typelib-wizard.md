@@ -1,7 +1,7 @@
 ---
 title: Aggiunta classe da libreria dei tipi guidata | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d8558758ba67afaa03eef5fbfbd83d8ebea70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a54948fd98b5a5445aa1fdfafcf0fcd015bbf08
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415512"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250380"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Aggiunta guidata classe da libreria dei tipi
 
 Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreria dei tipi disponibili. La procedura guidata crea una classe per ogni interfaccia che aggiunta dalla libreria dei tipi selezionati.
+
+> [!WARNING]
+> In Visual Studio 2017 versione 15.9 questa procedura guidata per codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto per ATL e MFC generale non è interessato dalla procedura di rimozione di questa procedura guidata. Se vuoi condividere commenti e suggerimenti su questa deprecazione, completare [questo sondaggio](https://www.surveymonkey.com/r/QDWKKCN). Commenti e suggerimenti è importante per noi.
 
 - **Aggiungi classe da**
 
