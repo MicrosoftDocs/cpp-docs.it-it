@@ -1,7 +1,7 @@
 ---
 title: Definito dall'utente di attributi (estensioni del componente C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/02/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600381"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789228"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Attributi definiti dall'utente (Estensioni del componente C++)
 
@@ -47,7 +47,7 @@ Gli attributi personalizzati consentono di estendere i metadati di un elemento g
 
 ### <a name="remarks"></a>Note
 
-Le informazioni e la sintassi elencate in questo argomento è destinato a sostituire le informazioni visualizzate nelle [attributo](../windows/attribute.md).
+Le informazioni e la sintassi elencate in questo argomento è destinato a sostituire le informazioni visualizzate nelle [attributo](attributes/attribute.md).
 
 È possibile definire un attributo personalizzato che definisce un tipo e apportando <xref:System.Attribute> una classe di base per il tipo e, facoltativamente, applicare il <xref:System.AttributeUsageAttribute> attributo.
 
@@ -55,9 +55,9 @@ Ad esempio, in Microsoft Transaction Server (MTS) 1.0, il comportamento per quan
 
 Per ulteriori informazioni, vedere,
 
-- [Destinazioni degli attributi](../windows/attribute-targets-cpp-component-extensions.md)
+- [Destinazioni degli attributi](attribute-targets-cpp-component-extensions.md)
 
-- [Tipi di parametro di attributo](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [Tipi di parametro di attributo](attribute-parameter-types-cpp-component-extensions.md)
 
 Per informazioni sulla firma degli assembly in Visual C++, vedere [assembly con nome sicuro (firma degli Assembly) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -177,7 +177,7 @@ Il `Object^` tipo sostituisce il tipo di dati variant. L'esempio seguente defini
 
 Gli argomenti degli attributi devono essere costanti in fase di compilazione; Nella maggior parte dei casi, devono essere valori letterali costanti.
 
-Visualizzare [typeid](../windows/typeid-cpp-component-extensions.md) per informazioni su come restituire un valore di System:: Type di un blocco di attributi personalizzati.
+Visualizzare [typeid](typeid-cpp-component-extensions.md) per informazioni su come restituire un valore di System:: Type di un blocco di attributi personalizzati.
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +216,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per le piattaforme runtime](component-extensions-for-runtime-platforms.md)

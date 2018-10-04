@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee7be30e0ad97af8d3b7422840dc979a6af3ab09
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 34b861ade07070f296c3fb03a9eef441998b7af7
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055780"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789176"
 ---
 # <a name="interface"></a>__interface
 
@@ -157,4 +157,4 @@ bstr_data = Testing
 ## <a name="see-also"></a>Vedere anche
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Attributi di interfaccia](../windows/interface-attributes.md)
+[Attributi di interfaccia](../windows/attributes/interface-attributes.md)

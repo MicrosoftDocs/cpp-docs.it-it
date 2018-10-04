@@ -1,7 +1,7 @@
 ---
 title: Classe di semaforo | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 269b3229a0755e88d55fc4fa5d14b843345ccc44
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 78fa5b68bcb55f7d062c1732ab6c30fbe84c22d8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234453"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789215"
 ---
 # <a name="semaphore-class"></a>Semaphore (classe)
 
@@ -37,7 +37,7 @@ Rappresenta un oggetto di sincronizzazione che controlla una risorsa condivisa c
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
+class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 ```
 
 ## <a name="members"></a>Membri
