@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da47a6987a1b540dc42b154c1a181c67e1524043
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 716566066a58c20378128ee56d9da0aa070b6e9b
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090685"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788692"
 ---
 # <a name="compiler-error-c3115"></a>Errore del compilatore C3115
 
 'attribute': questo attributo non è consentito in 'construct'
 
-Un attributo è stato applicato a un costrutto a cui non era destinato.  Visualizzare [attributi per utilizzo](../../windows/attributes-by-usage.md) per altre informazioni.
+Un attributo è stato applicato a un costrutto a cui non era destinato.  Visualizzare [attributi per utilizzo](../../windows/attributes/attributes-by-usage.md) per altre informazioni.
 
 ## <a name="example"></a>Esempio
 

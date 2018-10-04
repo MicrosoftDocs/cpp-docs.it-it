@@ -1,7 +1,7 @@
 ---
 title: Classe EventTargetArray | Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a02c571f33378ed65fc4b0c4efc7d1a82144279f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 36fe16e59edbead54b01ed14dfc08699b526a03a
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234706"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788538"
 ---
 # <a name="eventtargetarray-class"></a>Classe EventTargetArray
 
@@ -43,7 +43,11 @@ Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::RuntimeClassFlags<ClassicCom>, IUnknown>;
+class EventTargetArray :
+    public Microsoft::WRL::RuntimeClass<
+        Microsoft::WRL::RuntimeClassFlags<ClassicCom>,
+        IUnknown
+    >;
 ```
 
 ## <a name="remarks"></a>Note

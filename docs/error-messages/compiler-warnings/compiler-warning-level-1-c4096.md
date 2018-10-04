@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2aaf3f37e9699547c3a85c55a2f72d4baab7a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 86387103d4d8257a109928a665579621468a3cf3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047694"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788695"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Compilatore Warning (level 1) C4096
 
@@ -29,7 +29,7 @@ ms.locfileid: "46047694"
 
 Una definizione di interfaccia che è possibile che sia previsto come un'interfaccia COM non è stata definita come un'interfaccia COM e pertanto non verrà creata per il file IDL.
 
-Visualizzare [attributi di interfaccia](../../windows/interface-attributes.md) per un elenco degli attributi che indicano che un'interfaccia è un'interfaccia COM.
+Visualizzare [attributi di interfaccia](../../windows/attributes/interface-attributes.md) per un elenco degli attributi che indicano che un'interfaccia è un'interfaccia COM.
 
 L'esempio seguente genera l'errore C4096:
 

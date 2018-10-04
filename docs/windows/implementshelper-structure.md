@@ -1,7 +1,7 @@
 ---
 title: ImplementsHelper (struttura) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9436185ca6abc19f89e007ed20091e9c7be168a3
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 574d0dbf6a252f65dd6c15681a243ce0e4086f0e
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235048"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788500"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper (struttura)
 
@@ -39,11 +39,7 @@ Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-template <
-   typename RuntimeClassFlagsT,
-   typename ILst,
-   bool IsDelegateToClass
->
+template <typename RuntimeClassFlagsT, typename ILst, bool IsDelegateToClass>
 friend struct Details::ImplementsHelper;
 ```
 

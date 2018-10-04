@@ -1,7 +1,7 @@
 ---
 title: IsSame (struttura) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6d1e22d52a2e618357357555a549437ae453abe
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 26ecab69c2c31db51e137ad012bf67541e03a095
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169697"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788461"
 ---
 # <a name="issame-structure"></a>IsSame (struttura)
 
@@ -33,14 +33,10 @@ Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-template <
-   typename T1,
-   typename T2
->
+template <typename T1, typename T2>
 struct IsSame;
-template <
-   typename T1
->
+
+template <typename T1>
 struct IsSame<T1, T1>;
 ```
 

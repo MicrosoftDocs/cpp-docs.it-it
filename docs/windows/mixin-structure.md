@@ -1,7 +1,7 @@
 ---
 title: MixIn (struttura) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b6aa9b8e27aa4eaf3e581db59f2c9d2c7201d39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e4a9e9eb2804e5abbb3f84ab157043402d48166f
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386794"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789098"
 ---
 # <a name="mixin-structure"></a>MixIn (struttura)
 
@@ -32,10 +32,9 @@ Verifica che una classe di runtime derivi da interfacce di Windows Runtime, se d
 
 ```cpp
 template<
-   typename Derived,
-   typename MixInType,
-   bool hasImplements = __is_base_of(Details::ImplementsBase,
-   MixInType)  
+    typename Derived,
+    typename MixInType,
+    bool hasImplements = __is_base_of(Details::ImplementsBase, MixInType)
 >
 struct MixIn;
 ```

@@ -1,7 +1,7 @@
 ---
 title: Classe AgileEventSource | Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5d94b7a3949f0f547c9809d75e22eefbe9f5708
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405252"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789072"
 ---
 # <a name="agileeventsource-class"></a>Classe AgileEventSource
 
@@ -31,9 +31,13 @@ Rappresenta un evento generato da un componente di agile, che è un componente c
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
-class AgileEventSource
-    : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
+template<
+    typename TDelegateInterface,
+    typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>
+>
+class AgileEventSource :
+    public Microsoft::WRL::EventSource<
+        TDelegateInterface, TEventSourceOptions>;
 ```
 
 ## <a name="parameters"></a>Parametri

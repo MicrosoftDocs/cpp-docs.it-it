@@ -1,7 +1,7 @@
 ---
 title: Classe SyncLockWithStatusT | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7473c5f0417ab214101459c9621644b97c33a047
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: b7e59631592cd0bf9d147110e1a72d27d4bc781e
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235529"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789085"
 ---
 # <a name="synclockwithstatust-class"></a>Classe SyncLockWithStatusT
 
@@ -39,9 +39,7 @@ Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-template <
-   typename SyncTraits
->
+template <typename SyncTraits>
 class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 ```
 
