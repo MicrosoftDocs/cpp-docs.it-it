@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b7184e2eebcea83770aff55a5e9f75242aa1c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04e331da219f0c7a3996dda69d53769ea443b55e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206171"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319097"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
 
@@ -65,7 +65,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
   
 - **Overload di C++ di funzioni della libreria matematica** Nelle versioni precedenti \<math.h> definiva alcuni, ma non tutti, overload di C++ per le funzioni della libreria matematica. \<cmath> definiva gli overload rimanenti, in modo da ottenere tutti gli overload, di cui uno necessario per includere l'intestazione \<cmath>. Ciò causava problemi con la risoluzione di overload della funzione nel codice che includeva solo \<math.h>. Ora, tutti gli overload di C++ sono stati rimossi da \<math.h> e ora sono presenti solo in \<cmath>.  
   
-     Per risolvere gli errori, includere <cmath> per ottenere le dichiarazioni delle funzioni che sono state rimosse da \<math.h>. La tabella seguente elenca le funzioni che sono state spostate.  
+     Per risolvere gli errori, è necessario includere \<cmath> per ottenere le dichiarazioni delle funzioni che sono state rimosse da \<math.h>. La tabella seguente elenca le funzioni che sono state spostate.  
   
      Funzioni che sono state spostate:  
   
@@ -605,7 +605,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
   
      Per risolvere questo problema, modificare i tipi di riferimento in un puntatore o un valore. La modifica del tipo in un puntatore richiede modifiche al codice che usa il campo di unione. La modifica del codice in un valore modificherebbe i dati archiviati nell'unione, che influiscono su altri campi, poiché i campi in tipi di unione condividono la stessa memoria. A seconda delle dimensioni del valore, è possibile anche modificare le dimensioni dell'unione.  
   
-- Unioni anonime sono ora più conformi allo standard. Le versioni precedenti del compilatore hanno generato un costruttore e distruttore esplicito per unioni anonime. Questi vengono eliminati in Visual Studio 2015.  
+- Unioni anonime sono ora più conformi allo standard. Le versioni precedenti del compilatore hanno generato un costruttore e distruttore esplicito per unioni anonime. In Visual Studio 2015 sono stati eliminati.  
   
     ```cpp  
     struct S   
