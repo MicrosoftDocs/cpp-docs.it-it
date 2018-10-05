@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095937"
 ---
 # <a name="pointer-declarations"></a>Dichiarazioni di puntatori
 
@@ -59,6 +59,7 @@ Rendendo *type-specifier* **void**, è possibile ritardare la specifica del tipo
 È possibile dichiarare un puntatore a un tipo di struttura, unione o enumerazione prima di definire il tipo di struttura, unione o enumerazione. Il puntatore viene dichiarato tramite il tag di unione o della struttura come illustrato negli esempi riportati di seguito. Tali dichiarazioni sono consentite perché non è necessario che il compilatore conosca le dimensioni della struttura o dell'unione per allocare lo spazio per la variabile puntatore.
 
 ## <a name="examples"></a>Esempi
+
 Negli esempi riportati di seguito vengono illustrate le dichiarazioni di puntatore:
 
 ```
