@@ -1,7 +1,7 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (aggiunge SuppressUnmanagedCodeSecurityAttribute) | Microsoft Docs
+title: /CLRUNMANAGEDCODECHECK (rimuovere SuppressUnmanagedCodeSecurityAttribute) | Documenti di Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 9868f0c35f4a988ac8e0aee8076f232f86c04afd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429761"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820924"
 ---
-# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (aggiunge SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (rimuovere SuppressUnmanagedCodeSecurityAttribute)
 
-**/CLRUNMANAGEDCODECHECK** specifica se verrà applicato <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> a generate dal linker `PInvoke` chiamate dal codice gestito in DLL native.
+**/CLRUNMANAGEDCODECHECK** specifica che il linker non è valida <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> a generate dal linker `PInvoke` chiamate dal codice gestito in DLL native.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,13 +34,13 @@ ms.locfileid: "47429761"
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita, il linker applica il **SuppressUnmanagedCodeSecurityAttribute** a generate dal linker `PInvoke` chiamate. Quando **/CLRUNMANAGEDCODECHECK** è in effetti **SuppressUnmanagedCodeSecurityAttribute** non viene applicato.
+Per impostazione predefinita, il linker applica il **SuppressUnmanagedCodeSecurityAttribute** a generate dal linker `PInvoke` chiamate. Quando **/CLRUNMANAGEDCODECHECK** è in effetti **SuppressUnmanagedCodeSecurityAttribute** viene rimosso. Per applicare in modo esplicito il **SuppressUnmanagedCodeSecurityAttribute** a generate dal linker `PInvoke` chiamate, è possibile usare **/CLRUNMANAGEDCODECHECK:NO**.
 
-Il linker aggiunge solo l'attributo agli oggetti che vengono compilati con **/clr** oppure **/clr: pure**. Tuttavia, il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
+Il linker aggiunge solo l'attributo agli oggetti che vengono compilati mediante **/clr** oppure **/clr: pure**. Tuttavia, il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
 
 Oggetto `PInvoke` chiamata viene generata dal linker quando il linker non è possibile trovare un simbolo gestito per soddisfare un riferimento da un chiamante gestito ma è possibile trovare un simbolo nativo per soddisfare tale riferimento. Per altre informazioni sulle `PInvoke`, vedere [chiamata a funzioni Native da codice gestito](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Si noti che se si usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nel codice, è necessario impostare esplicitamente **/CLRUNMANAGEDCODECHECK**. Se un'immagine contenente attributi AllowPartiallyTrustedCallers sia SuppressUnmanagedCodeSecurity è potenziali vulnerabilità di sicurezza.
+Si noti che se si usa <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nel codice, è necessario impostare esplicitamente **/CLRUNMANAGEDCODECHECK** per rimuovere il **SuppressUnmanagedCodeSecurity** attributo. È una potenziale vulnerabilità di sicurezza se un'immagine contiene entrambi le **SuppressUnmanagedCodeSecurity** e **AllowPartiallyTrustedCallers** attributi.
 
 Visualizzare [Secure linee guida di codifica per il codice non gestito](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) per altre informazioni sulle implicazioni dell'uso **SuppressUnmanagedCodeSecurityAttribute**.
 

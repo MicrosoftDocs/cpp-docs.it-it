@@ -48,18 +48,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae293007250fb051339b42b1a09d50806b36b8e9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78582039e172be92f397c898163ec62c6041f32f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407920"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821459"
 ---
 # <a name="cmfcautohidebar-class"></a>Classe CMFCAutoHideBar
 
 La classe `CMFCAutoHideBar` è una classe della barra degli strumenti speciale che implementa la funzionalità Nascondi automaticamente.
 
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+
 ## <a name="syntax"></a>Sintassi
 
 ```
@@ -131,7 +132,7 @@ L'esempio seguente illustra come costruire un oggetto `CMFCAutoHideBar` e usare 
 
 **Intestazione:** afxautohidebar.h
 
-##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow
+## <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow
 
 Aggiunge a una finestra `CDockablePane` la funzionalità per abilitare Nascondi automaticamente.
 
@@ -163,8 +164,7 @@ Il *dwAlignment* parametro indica in cui si trova il pulsante Nascondi automatic
 
 - CBRS_ALIGN_BOTTOM
 
-##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu
-
+## <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -174,8 +174,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout
-
+## <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -192,7 +191,7 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="remarks"></a>Note
 
-##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar
+## <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar
 
 Costruisce un oggetto CMFCAutoHideBar.
 
@@ -202,8 +201,7 @@ CMFCAutoHideBar();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="create"></a>  CMFCAutoHideBar::Create
-
+## <a name="create"></a>  CMFCAutoHideBar::Create
 
 ```
 virtual BOOL Create(
@@ -219,17 +217,24 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametri
 
 *lpszClassName*<br/>
-[in] [in] *dwStyle*
-*rect*<br/>
-[in] [in] *pParentWnd*
+
+*dwStyle*<br/>
+
+*Rect*<br/>
+
+*pParentWnd*<br/>
+
 *nID*<br/>
-[in] [in] *dwControlBarStyle* [in] *pContext*
+
+*dwControlBarStyle*<br/>
+
+*pContext*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow
+## <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow
 
 Restituisce un puntatore alla prima finestra Nascondi automaticamente nell'applicazione.
 
@@ -243,7 +248,7 @@ Prima finestra Nascondi automaticamente nell'applicazione oppure NULL se non ne 
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount
+## <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount
 
 Ottiene il numero di pulsanti Nascondi automaticamente visibili.
 
@@ -257,7 +262,7 @@ Restituisce il numero di pulsanti Nascondi automaticamente visibili.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay
+## <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay
 
 L'intervallo di tempo tra il momento in cui l'utente posiziona il cursore del mouse su un [classe CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) e il momento in cui il framework Mostra la finestra associata.
 
@@ -269,8 +274,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 
 Quando l'utente posiziona il cursore del mouse su un `CMFCAutoHideButton`, si verifica un lieve ritardo prima che il framework Visualizza la finestra associata. Questo parametro determina la lunghezza di tale ritardo in millisecondi.
 
-##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu
-
+## <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -284,7 +288,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow
+## <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow
 
 Rimuove ed elimina la finestra Nascondi automaticamente.
 
@@ -302,7 +306,7 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup
+## <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup
 
 Contrassegna una barra Nascondi automaticamente come attiva.
 
@@ -318,8 +322,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 Visualizzare [cpane:: Setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup).
 
-##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState
-
+## <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState
 
 ```
 void SetRecentVisibleState(BOOL bState);
@@ -327,26 +330,32 @@ void SetRecentVisibleState(BOOL bState);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bState*
+*bState*<br/>
+[in] Stato da impostare.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow
+## <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow
 
 Mostra la finestra Nascondi automaticamente.
 
 ```
 BOOL ShowAutoHideWindow(
-        CDockablePane* pAutoHideWnd,
-        BOOL bShow,
-        BOOL bDelay);
+    CDockablePane* pAutoHideWnd,
+    BOOL bShow,
+    BOOL bDelay);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] CDockablePane * *pAutoHideWnd* [in] BOOL *bMostra* true per visualizzare la finestra.
+*pAutoHideWnd*<br/>
+[in] Finestra da visualizzare.
 
-[in] BOOL *bDelay* questo parametro viene ignorato.
+*bMostra*<br/>
+[in] TRUE per visualizzare la finestra.
+
+*bDelay*<br/>
+[in] Questo parametro viene ignorato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -354,7 +363,7 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane
+## <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane
 
 Ridimensiona la barra Nascondi automaticamente nello stato compresso per adattare l'oggetto `CMFCAutoHideButton` .
 
@@ -380,7 +389,7 @@ La dimensione risultante del riquadro ridimensionato.
 
 Le classi derivate possono ignorare questo metodo per personalizzare il comportamento.
 
-##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode
+## <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode
 
 Disabilita la modalità Nascondi automaticamente per un gruppo di barre di tipo Nascondi automaticamente.
 
@@ -394,7 +403,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 
 ### <a name="remarks"></a>Note
 
-##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState
+## <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState
 
 Chiamata dal framework quando è necessario ridisegnare la barra Nascondi automaticamente.
 

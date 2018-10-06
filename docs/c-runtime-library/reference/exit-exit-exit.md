@@ -40,19 +40,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26cc39039b95b8c12e429d333918e83628b2619
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: eb5bd1ef619c899a6b0faab33104a579fdb9f1d0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110604"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821282"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
 Termina il processo di chiamata. Il **uscire** funzione termina dopo la pulizia. **Exit** e **Exit** terminano immediatamente.
 
 > [!NOTE]
-> Non utilizzare questo metodo per arrestare un'app Universal Windows Platform (UWP), ad eccezione di test o gli scenari di debug. Modalità dell'interfaccia utente o a livello di codice per chiudere un'app di Store non sono consentiti in base al [i criteri di Microsoft Store](/legal/windows/agreements/store-policies). Per altre informazioni, vedere [ciclo di vita App UWP](/windows/uwp/launch-resume/app-lifecycle). Per altre informazioni sulle app di Windows 10, vedere [Guide pratiche per le app di Windows 10](https://developer.microsoft.com/en-us/windows/apps).
+> Non utilizzare questo metodo per arrestare un'app Universal Windows Platform (UWP), ad eccezione di test o gli scenari di debug. Modalità dell'interfaccia utente o a livello di codice per chiudere un'app di Store non sono consentiti in base al [i criteri di Microsoft Store](/legal/windows/agreements/store-policies). Per altre informazioni, vedere [ciclo di vita App UWP](/windows/uwp/launch-resume/app-lifecycle). Per altre informazioni sulle app di Windows 10, vedere [Guide pratiche per le app di Windows 10](https://developer.microsoft.com/windows/apps).
 
 ## <a name="syntax"></a>Sintassi
 

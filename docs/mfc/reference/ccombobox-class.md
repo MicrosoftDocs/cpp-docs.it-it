@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447427"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821504"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -256,7 +256,7 @@ Se si crea una `CComboBox` oggetto all'interno di una finestra di dialogo (trami
 
 Se si incorpora un `CComboBox` oggetto all'interno di un'altra finestra dell'oggetto, non è necessario eliminarla definitivamente. Se si crea il `CComboBox` dell'oggetto nello stack, viene eliminato automaticamente. Se si crea il `CComboBox` oggetto sull'heap tramite il **nuovi** funzione, è necessario chiamare **eliminare** sull'oggetto per eliminarla definitivamente quando viene eliminata definitivamente la casella combinata di Windows.
 
-**Nota** se si desidera gestire i messaggi WM_CHAR e WM_KEYDOWN, è necessario sottoclasse della casella combinata modifica e i controlli casella di elenco, derivare classi dalla `CEdit` e `CListBox`, e aggiungere i gestori per i messaggi per le classi derivate. Per altre informazioni, vedere [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) e [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Nota** se si desidera gestire i messaggi WM_CHAR e WM_KEYDOWN, è necessario sottoclasse della casella combinata modifica e i controlli casella di elenco, derivare classi dalla `CEdit` e `CListBox`, e aggiungere i gestori per i messaggi per le classi derivate. Per altre informazioni, vedere [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) e [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

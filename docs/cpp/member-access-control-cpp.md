@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a58d35a78fce6a0a6bb499df1363a80200de5a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017560"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821660"
 ---
 # <a name="member-access-control-c"></a>Controllo di accesso dei membri [C++]
 
@@ -47,7 +47,7 @@ protected:      // Declare protected function for derived classes only.
 
 L'accesso predefinito è **privati** in una classe, e **pubblico** in una struct o unione. Gli specificatori di accesso in una classe possono essere usati per un numero qualsiasi di volte in qualunque ordine. L'allocazione di memoria per oggetti di tipo classe è indipendente dall'implementazione, ma ai membri vengono assegnati gli indirizzi di memoria successivamente superiori tra gli identificatori di accesso.
 
-### <a name="member-access-control"></a>Controllo dell'accesso ai membri
+## <a name="member-access-control"></a>Controllo dell'accesso ai membri
 
 |Tipo di accesso|Significato|
 |--------------------|-------------|

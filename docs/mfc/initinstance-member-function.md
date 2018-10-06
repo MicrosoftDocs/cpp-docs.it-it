@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1dce40fd91f1b4345739f3dc38e13d2ee8d0997
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cafc3868d41dcf90baabbf05e0d5a4671c5b11fc
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426380"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820295"
 ---
 # <a name="initinstance-member-function"></a>Funzione membro InitInstance
 
@@ -45,7 +45,7 @@ Lo standard `InitInstance` implementazione creato dalla creazione guidata applic
 È possibile aggiungere il proprio codice di inizializzazione o modificare il codice scritto per la procedura guidata.
 
 > [!NOTE]
->  Le applicazioni MFC devono essere inizializzate come apartment a thread singolo (STA). Se si chiama [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) nel `InitInstance` eseguire l'override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED). Per altre informazioni, vedere PRB: applicazioni MFC si blocca quando si inizializza l'applicazione come un multithreading Apartment (828643) nella [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+>  Le applicazioni MFC devono essere inizializzate come apartment a thread singolo (STA). Se si chiama [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) nel `InitInstance` eseguire l'override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED). Per altre informazioni, vedere PRB: applicazioni MFC si blocca quando si inizializza l'applicazione come un multithreading Apartment (828643) nella [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
 
 ## <a name="see-also"></a>Vedere anche
 

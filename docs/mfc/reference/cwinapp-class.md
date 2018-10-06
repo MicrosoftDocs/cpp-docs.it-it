@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86adc1e2337b32ced77cafda92229ed9724ba548
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412183"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821517"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -367,7 +367,7 @@ Vedere [CWinApp: classe Application](../../mfc/cwinapp-the-application-class.md)
 
 - `CWinApp`della chiave a sottoponibili a override.
 
-Il `m_hPrevInstance` membro dati non esiste più. Per informazioni sul rilevamento di un'istanza precedente della `CWinApp`, vedere l'articolo della Knowledge Base "Procedura di identificare una precedente istanza di un'applicazione" (KB106385) all'indirizzo [ http://support.microsoft.com/default.aspxscid=kb; en-us; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).
+Il `m_hPrevInstance` membro dati non esiste più. Per informazioni sul rilevamento di un'istanza precedente della `CWinApp`, vedere l'articolo della Knowledge Base "Procedura di identificare una precedente istanza di un'applicazione" (KB106385) all'indirizzo [ http://support.microsoft.com/default.aspxscid=kb; 106385](http://support.microsoft.com/default.aspxscid=kb;106385).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -1073,7 +1073,7 @@ Inizializzazione dell'applicazione a livello concettuale è suddiviso in due sez
 Eseguire l'override `InitInstance` inizializzare ogni nuova istanza dell'applicazione in esecuzione in Windows. In genere, si esegue l'override `InitInstance` per costruire l'oggetto finestra principale e impostare il `CWinThread::m_pMainWnd` membro dati in modo che punti a tale finestra. Per altre informazioni sull'override di questa funzione membro, vedere [CWinApp: classe Application](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> Le applicazioni MFC devono essere inizializzate come apartment a thread singolo (STA). Se si chiama [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) nel `InitInstance` eseguire l'override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED). Per altre informazioni, vedere PRB: applicazioni MFC si blocca quando si inizializza l'applicazione come un multithreading Apartment (828643) nella [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+> Le applicazioni MFC devono essere inizializzate come apartment a thread singolo (STA). Se si chiama [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) nel `InitInstance` eseguire l'override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED). Per altre informazioni, vedere PRB: applicazioni MFC si blocca quando si inizializza l'applicazione come un multithreading Apartment (828643) nella [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
 
 ### <a name="example"></a>Esempio
 

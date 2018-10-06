@@ -1,7 +1,7 @@
 ---
 title: Aggiunta di una proprietà al controllo (esercitazione, parte 3 di ATL) | Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,52 +12,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e90da3fe44613b0c530e801d963eaddd9d783e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2373d2d703f18824274df158b31023669d8df945
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756908"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820470"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Aggiunta di una proprietà al controllo (Esercitazione di ATL, parte 3)
 
 `IPolyCtl` l'interfaccia che contiene i metodi di controllo personalizzato e le proprietà e verrà aggiunta una proprietà.
 
-### <a name="to-add-a-property-using-the-add-property-wizard"></a>Per aggiungere una proprietà tramite l'aggiunta guidata proprietà
+### <a name="to-add-the-property-definitions-to-your-project"></a>Per aggiungere le definizioni di proprietà al progetto
 
-1. In visualizzazione classi, il ramo del poligono.
+1. Nelle **Visualizzazione classi**, espandere il `Polygon` ramo.
 
-2. Fare doppio clic su IPolyCtl.
+1. Fare doppio clic su `IPolyCtl`.
 
-3. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **Aggiungi proprietà**.
+1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **Aggiungi proprietà**. Il **Aggiungi proprietà** procedura guidata verrà visualizzata.
 
-     Verrà visualizzata l'aggiunta guidata proprietà.
+1. Tipo di `Sides` come il **nome proprietà**.
 
-4. Nell'elenco a discesa dei tipi di proprietà, selezionare `SHORT`.
+1. Nell'elenco di riepilogo a discesa **tipo di proprietà**, selezionare `short`.
 
-5. Tipo di *lati* come la **nome della proprietà.**
+1. Fare clic su **OK** per completare l'aggiunta della proprietà.
 
-6. Fare clic su **fine** per completare l'aggiunta della proprietà.
+1. Dal **Esplora soluzioni**aprire Polygon. idl e sostituire le righe seguenti alla fine del `IPolyCtl : IDispatch` interfaccia:
 
-Quando si aggiunge la proprietà all'interfaccia, MIDL (il programma che viene compilato il file con estensione idl) definisce un `Get` metodo per recuperare il relativo valore e un `Put` metodo per impostare un nuovo valore. I metodi sono denominati anteponendo `put_` e `get_` al nome della proprietà.
+    ```cpp
+    short get_Sides();
+    void set_Sides(short value);
+    ```
 
-L'aggiunta guidata proprietà aggiunge righe necessarie per il file con estensione idl. Aggiunge anche il `Get` e `Put` funzione prototipi alla definizione della classe in PolyCtl. H e aggiunge un'implementazione vuota PolyCtl. È possibile verificarlo, aprire PolyCtl e cercando le funzioni `get_Sides` e `put_Sides`.
+    con
 
-Anche se ora si dispone di funzioni di base per impostare e recuperare la proprietà, è necessario che una posizione da archiviare. Si creerà una variabile per archiviare la proprietà e aggiornare di conseguenza le funzioni.
+    ```cpp
+    [propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
+    [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
+    ```
 
-#### <a name="to-create-a-variable-to-store-the-property-and-update-the-put-and-get-methods"></a>Per creare una variabile per archiviare la proprietà e aggiornare il put e metodi get
+1. Dal **Esplora soluzioni**aprire PolyCtl. H e aggiungere le righe seguenti dopo la definizione di `m_clrFillColor`:
 
-1. Da Esplora soluzioni, aprire PolyCtl. H e aggiungere la riga seguente dopo la definizione di `m_clrFillColor`:
+    [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
+Anche se ora si dispone di funzioni di base per impostare e recuperare proprietà e una variabile per archiviare la proprietà, è necessario implementare le funzioni di conseguenza.
 
-2. Impostare il valore predefinito di `m_nSides`. Impostare come predefinito un triangolo come forma mediante l'aggiunta di una riga del costruttore in PolyCtl. H:
+### <a name="to-update-the-get-and-put-methods"></a>Per aggiornare get e put metodi
 
-     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
+1. Impostare il valore predefinito di `m_nSides`. Impostare come predefinito un triangolo come forma mediante l'aggiunta di una riga del costruttore in PolyCtl. H:
 
-3. Implementare il `Get` e `Put` metodi. Il `get_Sides` e `put_Sides` dichiarazioni di funzione sono stati aggiunti a PolyCtl. H. Sostituire il codice in PolyCtl. per `get_Sides` e `put_Sides` con il codice seguente:
+    [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]
 
-     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
+1. Implementare il `Get` e `Put` metodi. Il `get_Sides` e `put_Sides` dichiarazioni di funzione sono stati aggiunti a PolyCtl. H. A questo punto aggiungere il codice per `get_Sides` e `put_Sides` a PolyCtl. cpp con il codice seguente:
+
+    [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]
 
 Il `get_Sides` metodo viene restituito il valore corrente del `Sides` proprietà tramite la `pVal` puntatore. Nel `put_Sides` metodo, il codice verifica l'impostazione di `Sides` proprietà su un valore accettabile. Il valore minimo deve essere 3, e poiché verrà utilizzata una matrice di punti per ogni lato, 100 è un ragionevole limite per un valore massimo.
 
@@ -68,4 +76,3 @@ Ora è una proprietà denominata `Sides`. Nel passaggio successivo, si modifiche
 ## <a name="see-also"></a>Vedere anche
 
 [Esercitazione](../atl/active-template-library-atl-tutorial.md)
-

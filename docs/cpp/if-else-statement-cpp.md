@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aee04052a0088ff95a41ccb6083abc334287ea2b
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031459"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820646"
 ---
 # <a name="if-else-statement-c"></a>Istruzione if-else (C++)
 
 Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco if* vengono eseguiti solo se il *espressione if* restituisce un valore diverso da zero (o TRUE). Se il valore di *espressione* è diverso da zero, *statement1* e vengono eseguite le altre istruzioni nel blocco e l'altro blocco, se presente, viene ignorato. Se il valore di *espressione* è uguale a zero, quindi il blocco se viene ignorato e l'altro blocco, se presente, viene eseguito. Sono espressioni che restituiscono diverso da zero
+
 - true
 - un puntatore non null,
 - qualsiasi valore diverso da zero aritmetico, o
@@ -36,7 +37,7 @@ Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco if* ve
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 if ( expression )
 {
    statement1;
@@ -84,7 +85,7 @@ using namespace std;
 class C
 {
     public:
-    void do_somthing(){}
+    void do_something(){}
 };
 void init(C){}
 bool is_true() { return true; }
@@ -101,15 +102,14 @@ int main()
         cout << "b is false!\n";
     }
 
-  // no else statement
+    // no else statement
     if (x == 10)
     {
         x = 0;
     }
-    
 
     C* c;
-  init(c);
+    init(c);
     if (c)
     {
         c->do_something();
@@ -120,13 +120,14 @@ int main()
     }
 }
 ```
+
 ## <a name="if_with_init"></a> Se l'istruzione con un inizializzatore
 
 **Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): un' **se** istruzione può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questa forma di istruzione if quando la variabile è necessaria solo all'interno dell'ambito del blocco di if.
 
-```cpp
-## Example
+## <a name="example"></a>Esempio
 
+```cpp
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -180,18 +181,18 @@ Il **else** clausola di un `if...else` istruzione è associata a più vicina pre
 template <class T, class... Rest>
 void f(T&& t, Rest&&... r)
 {
-// handle t
-   do_something(t);
+    // handle t
+    do_something(t);
 
-   // handle r conditionally
-   if constexpr (sizeof...(r))
-   {
-      f(r...);
-   }
-   else
-   {
-       g(r...);
-   }
+    // handle r conditionally
+    if constexpr (sizeof...(r))
+    {
+        f(r...);
+    }
+    else
+    {
+        g(r...);
+    }
 }
 ```
 

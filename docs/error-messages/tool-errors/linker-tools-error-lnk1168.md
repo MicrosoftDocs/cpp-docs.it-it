@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a80aa365edf3e39c41ed73d815cc82de6ce9a52
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118167"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821075"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Errore degli strumenti del linker LNK1168
 
@@ -35,7 +35,7 @@ Per risolvere il problema, verificare che l'handle di file `filename` non sia bl
 
 Se il file è bloccato da un programma antivirus, è possibile risolvere il problema escludendo le directory di output della build dall'analisi automatica del programma antivirus. I processi di analisi antivirus, spesso attivati dalla creazione di nuovi file nel file system, impongono blocchi sui file durante l'analisi. Consultare la documentazione del programma antivirus per informazioni dettagliate sull'esclusione di directory specifiche dall'analisi.
 
-Se il file è bloccato da un servizio di indicizzazione di ricerca, è possibile risolvere il problema escludendo le directory di output della build dall'indicizzazione automatica. Per ulteriori informazioni, vedere la documentazione del servizio di indicizzazione. Per modificare il servizio di indicizzazione di ricerca di Windows, usare **opzioni di indicizzazione** nella finestra di Windows **Pannello di controllo**. Per altre informazioni, vedere [Windows di migliorare le ricerche tramite l'indice: domande frequenti](http://windows.microsoft.com/en-us/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
+Se il file è bloccato da un servizio di indicizzazione di ricerca, è possibile risolvere il problema escludendo le directory di output della build dall'indicizzazione automatica. Per ulteriori informazioni, vedere la documentazione del servizio di indicizzazione. Per modificare il servizio di indicizzazione di ricerca di Windows, usare **opzioni di indicizzazione** nella finestra di Windows **Pannello di controllo**. Per altre informazioni, vedere [Windows di migliorare le ricerche tramite l'indice: domande frequenti](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
 
 Se il file eseguibile non può essere sovrascritto dal processo di compilazione, è possibile che sia bloccato da Esplora file. Se il **esperienza applicativa** servizio è stato disabilitato, Esplora File potrebbe mantenere un blocco di handle di file eseguibile per un periodo di tempo prolungato. Per risolvere questo problema, eseguire **Services. msc** e quindi aprire il **proprietà** la finestra di dialogo per il **esperienza applicativa** servizio. Modifica il **tipo di avvio** dalla **disabilitato** al **manuale**.
 

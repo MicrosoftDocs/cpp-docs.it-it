@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbcc791d4e39f58146ed13bb41c8ec43941d3527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 32fcf4f8f99f80e44758c107a8941c51bd8a767f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087812"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821166"
 ---
 # <a name="switch-statement-c"></a>Istruzione switch (C++)
 
@@ -119,14 +119,14 @@ int main()
 **Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): un'istruzione switch può introdurre e inizializzare una variabile il cui ambito è limitato al blocco dell'istruzione switch:
 
 ```cpp
-switch (Gadget gadget(args); auto s = gadget.get_status())
-        {
-        case status::good:
-            gadget.zip();
-            break;
-        case status::bad:
-            throw BadGadget();
-        };
+    switch (Gadget gadget(args); auto s = gadget.get_status())
+    {
+    case status::good:
+        gadget.zip();
+        break;
+    case status::bad:
+        throw BadGadget();
+    };
 ```
 
 Un blocco interno di un **commutatore** istruzione può contenere definizioni con inizializzazioni finché sono raggiungibili, vale a dire, non vengono ignorate da tutti i possibili percorsi di esecuzione. I nomi introdotti utilizzando queste dichiarazioni hanno ambito locale. Ad esempio:
@@ -138,35 +138,35 @@ Un blocco interno di un **commutatore** istruzione può contenere definizioni co
 using namespace std;
 int main(int argc, char *argv[])
 {
-   switch( tolower( *argv[1] ) )
-   {
-       // Error. Unreachable declaration.
-       char szChEntered[] = "Character entered was: ";
+    switch( tolower( *argv[1] ) )
+    {
+        // Error. Unreachable declaration.
+        char szChEntered[] = "Character entered was: ";
 
-   case 'a' :
-       {
-       // Declaration of szChEntered OK. Local scope.
-       char szChEntered[] = "Character entered was: ";
-       cout << szChEntered << "a\n";
-       }
-       break;
+    case 'a' :
+        {
+        // Declaration of szChEntered OK. Local scope.
+        char szChEntered[] = "Character entered was: ";
+        cout << szChEntered << "a\n";
+        }
+        break;
 
-   case 'b' :
-       // Value of szChEntered undefined.
-       cout << szChEntered << "b\n";
-       break;
+    case 'b' :
+        // Value of szChEntered undefined.
+        cout << szChEntered << "b\n";
+        break;
 
-   default:
-       // Value of szChEntered undefined.
-       cout << szChEntered << "neither a nor b\n";
-       break;
-   }
+    default:
+        // Value of szChEntered undefined.
+        cout << szChEntered << "neither a nor b\n";
+        break;
+    }
 }
 ```
 
 Oggetto **commutatore** istruzione può essere nidificata. In questi casi **case** o **predefinito** associare etichette a quello più vicino **passare** istruzione che li racchiude.
 
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft
+**Sezione specifica Microsoft**
 
 Microsoft C non limita il numero di valori di case in una **commutatore** istruzione. Tale numero è limitato solo dalla memoria disponibile. ANSI C richiede almeno 257 etichette case essere consentito in una **commutatore** istruzione.
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e078b38dd90fcda7a6973ac1b0aee13c301823d4
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 9bfbcbe990effa20fc91494e5586d3c34d47a0d5
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691432"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821239"
 ---
 # <a name="spaceinfo-structure"></a>Struttura space_info
 
@@ -28,11 +28,12 @@ Contiene informazioni su un volume.
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-struct space_info   {
+struct space_info
+{
     uintmax_t capacity;
     uintmax_t free;
     uintmax_t available;
-    };
+};
 ```
 
 ## <a name="members"></a>Membri
@@ -41,9 +42,9 @@ struct space_info   {
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`unsigned long long available`|Rappresenta il numero di byte disponibili per rappresentare i dati nel volume.|
 |`unsigned long long capacity`|Rappresenta il numero totale di byte che il volume può rappresentare.|
 |`unsigned long long free`|Rappresenta il numero di byte che non vengono usati per rappresentare i dati nel volume.|
+|`unsigned long long available`|Rappresenta il numero di byte disponibili per rappresentare i dati nel volume.|
 
 ## <a name="requirements"></a>Requisiti
 

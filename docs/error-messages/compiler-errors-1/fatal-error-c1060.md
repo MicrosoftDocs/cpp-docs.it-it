@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5288400b5c7303840dfef98c7e1a48e7cf5d06f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1961784efc61c3c31f87c76cd2bdfe00fe954c5d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032575"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820704"
 ---
 # <a name="fatal-error-c1060"></a>Errore irreversibile C1060
 
@@ -37,7 +37,7 @@ Una richiesta di memoria non è stata soddisfatta dal sistema operativo o dalla 
 
 1. Se si compila su una piattaforma a 64 bit, usare il set di strumenti del compilatore a 64 bit. Per informazioni, vedere [procedura: abilitare una a 64 bit Visual C++ set di strumenti della riga di comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
-1. In Windows a 32 bit, provare a usare il [3 GB](https://support.microsoft.com/en-us/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) opzione Boot. ini.
+1. In Windows a 32 bit, provare a usare il [3 GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) opzione Boot. ini.
 
 1. Aumentare la dimensione del file di scambio di Windows.
 
