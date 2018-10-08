@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12982c212cf8ff4fe502638a5c466306bfe15eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374288"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861733"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -1103,7 +1103,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*nState*|[in] Specifica se visualizzare o nascondere il menu di scelta. Il *nState* parametro può avere i valori seguenti:<br /><br /> -AFX_MBS_VISIBLE (0x01) - consente di visualizzare il menu di scelta se è nascosto, ma non ha alcun effetto se è visibile.<br />-AFX_MBS_HIDDEN (0x02) - consente di nascondere il menu di scelta se è visibile, ma non ha alcun effetto se è nascosto.|
+|*nState*|[in] Specifica se visualizzare o nascondere il menu di scelta. Il *nState* parametro può avere i valori seguenti:<br /><br />-AFX_MBS_VISIBLE (0x01) - consente di visualizzare il menu di scelta se è nascosto, ma non ha alcun effetto se è visibile.<br />-AFX_MBS_HIDDEN (0x02) - consente di nascondere il menu di scelta se è visibile, ma non ha alcun effetto se è nascosto.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1125,7 +1125,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*nStyle*|[in] Specifica se il menu di scelta è per impostazione predefinita nascosto, oppure è visibile e ha lo stato attivo. Il *nStyle* parametro può avere i valori seguenti:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     Il menu viene visualizzato in qualsiasi momento e per impostazione predefinita non hanno lo stato attivo.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     Il menu di scelta è nascosta per impostazione predefinita. Se il menu di scelta è nascosto, premere il tasto ALT per visualizzare il menu di scelta e assegnargli lo stato attivo. Se viene visualizzato il menu di scelta, premere il tasto ALT o ESC per nascondere menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinazione bit per bit (OR)): il menu di scelta è nascosta per impostazione predefinita. Se il menu di scelta è nascosto, premere il tasto F10 per visualizzare il menu di scelta e assegnargli lo stato attivo. Se viene visualizzato il menu di scelta, premere il tasto F10 per attivare o disattivare lo stato attivo o disattivare il menu di scelta. Fino a quando non si preme il tasto ALT o ESC per nasconderla, viene visualizzato il menu.|
+|*nStyle*|[in] Specifica se il menu di scelta è per impostazione predefinita nascosto, oppure è visibile e ha lo stato attivo. Il *nStyle* parametro può avere i valori seguenti:<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     Il menu viene visualizzato in qualsiasi momento e per impostazione predefinita non hanno lo stato attivo.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     Il menu di scelta è nascosta per impostazione predefinita. Se il menu di scelta è nascosto, premere il tasto ALT per visualizzare il menu di scelta e assegnargli lo stato attivo. Se viene visualizzato il menu di scelta, premere il tasto ALT o ESC per nascondere menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinazione bit per bit (OR)): il menu di scelta è nascosta per impostazione predefinita. Se il menu di scelta è nascosto, premere il tasto F10 per visualizzare il menu di scelta e assegnargli lo stato attivo. Se viene visualizzato il menu di scelta, premere il tasto F10 per attivare o disattivare lo stato attivo o disattivare il menu di scelta. Fino a quando non si preme il tasto ALT o ESC per nasconderla, viene visualizzato il menu.|
 
 ### <a name="remarks"></a>Note
 

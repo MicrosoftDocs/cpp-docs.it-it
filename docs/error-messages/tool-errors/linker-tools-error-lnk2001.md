@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8e560e46da06c4312ab4261016ccd5a5ddda68
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3da81f46514fbdd7d01ce9c2a9d8be6007301b45
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017847"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861577"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Errore degli strumenti del linker LNK2001
 
@@ -73,9 +73,9 @@ Questo errore può verificarsi se si collegano alle librerie di modalità di ril
 
 Questo errore può verificarsi se il codice fa riferimento a un simbolo da una versione di una libreria, ma è fornire una versione diversa della libreria del linker. In generale, è possibile combinare file oggetto o le librerie che vengono compilate per versioni diverse del compilatore. Librerie fornite in una nuova versione possono contenere i simboli che non sono stati trovati nelle librerie incluse con le versioni precedenti e viceversa. Per risolvere questo problema, compilare tutti i file oggetto e librerie con la stessa versione del compilatore prima collegandole insieme.
 
--  Gli strumenti di &#124; opzioni &#124; progetti &#124; finestra di dialogo Directory di VC + + in file di libreria, consente di modificare l'ordine di ricerca della libreria. Cartella Linker nella finestra di dialogo Pagine delle proprietà del progetto può contenere anche i percorsi che possono essere aggiornati.
+- Gli strumenti di &#124; opzioni &#124; progetti &#124; finestra di dialogo Directory di VC + + in file di libreria, consente di modificare l'ordine di ricerca della libreria. Cartella Linker nella finestra di dialogo Pagine delle proprietà del progetto può contenere anche i percorsi che possono essere aggiornati.
 
--  Questo problema può verificarsi quando un nuovo SDK è installato (ad esempio per un percorso diverso) e l'ordine di ricerca non viene aggiornato per puntare alla nuova posizione. In genere, è necessario inserire il percorso al nuovo SDK include e lib directory davanti a quello predefintio Visual C++. Inoltre, un progetto che contiene i percorsi di embedded ancora può puntare a percorsi precedenti che sono valide, ma aggiornata alla nuova funzionalità aggiunta dalla nuova versione che viene installata in un percorso diverso.
+- Questo problema può verificarsi quando un nuovo SDK è installato (ad esempio per un percorso diverso) e l'ordine di ricerca non viene aggiornato per puntare alla nuova posizione. In genere, è necessario inserire il percorso al nuovo SDK include e lib directory davanti a quello predefintio Visual C++. Inoltre, un progetto che contiene i percorsi di embedded ancora può puntare a percorsi precedenti che sono valide, ma aggiornata alla nuova funzionalità aggiunta dalla nuova versione che viene installata in un percorso diverso.
 
 - Se si compila dalla riga di comando e aver creato le proprie variabili di ambiente, verificare che i percorsi dei file di intestazione, librerie e strumenti passare a una versione coerente. Per altre informazioni, vedere [impostare il percorso e le variabili di ambiente per compilazioni da riga di comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
 

@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1347fcebc6a3793cbe63ae356f7f9d2e03742cd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f757602459c55b7b66e01d9512d9d4cdeb2f3946
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109769"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861044"
 ---
 # <a name="adding-an-atl-simple-object"></a>Aggiunta di un oggetto semplice ATL
 
 Per aggiungere un oggetto ATL (Active Template Library) al progetto, è necessario avere questo sia stato creato come un'applicazione ATL o come un'applicazione MFC che contiene il supporto per ATL. È possibile usare la [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.
 
-È possibile definire le interfacce COM per il nuovo oggetto ATL durante la prima crearla oppure aggiungerli successivamente tramite il [implementa interfaccia](../../ide/implement-interface-wizard.md) dal menu di scelta rapida Visualizzazione classi.
+È possibile definire le interfacce COM per il nuovo oggetto ATL durante la prima crearla oppure aggiungerli successivamente tramite il [implementa l'interfaccia](../../ide/implement-interface-wizard.md) dalle **Visualizzazione classi** menu di scelta rapida.
 
-### <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>Per aggiungere un oggetto semplice ATL al progetto ATL COM
+## <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>Per aggiungere un oggetto semplice ATL al progetto ATL COM
 
 1. In uno **Esplora soluzioni** oppure [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare doppio clic il nome del progetto a cui si desidera aggiungere l'oggetto semplice ATL.
 
-2. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
+1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
 
-3. Nel [Aggiungi classe](../../ide/add-class-dialog-box.md) finestra di dialogo, nel riquadro dei modelli, fare clic su **oggetto semplice ATL**e quindi fare clic su **Open** per visualizzare il [guidata oggetto semplice ATL](../../atl/reference/atl-simple-object-wizard.md).
+1. Nel [Aggiungi classe](../../ide/add-class-dialog-box.md) nella finestra di dialogo il **modelli** riquadro, fare clic su **oggetto semplice ATL**e quindi fare clic su **Open** per visualizzare il [Creazione guidata oggetto semplice ATL](../../atl/reference/atl-simple-object-wizard.md).
 
-4. Impostare le opzioni aggiuntive per il progetto nella [opzioni](../../atl/reference/options-atl-simple-object-wizard.md) pagina della procedura guidata oggetto semplice ATL.
+1. Impostare le opzioni aggiuntive per il progetto nella [opzioni](../../atl/reference/options-atl-simple-object-wizard.md) pagina della **oggetto semplice ATL** procedura guidata.
 
-5. Fare clic su **fine** per aggiungere l'oggetto al progetto.
+1. Fare clic su **fine** per aggiungere l'oggetto al progetto.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -51,4 +51,3 @@ Per aggiungere un oggetto ATL (Active Template Library) al progetto, è necessar
 [Aggiunta di un metodo](../../ide/adding-a-method-visual-cpp.md)<br/>
 [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Aggiunta di una classe C++ generica](../../ide/adding-a-generic-cpp-class.md)
-

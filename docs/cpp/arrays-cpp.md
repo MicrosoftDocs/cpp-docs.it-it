@@ -16,44 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c88c1d0f4096017b8ffc48a92143a63d229c5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b2423355aa53abe52fffcd81ec847b41337efcbf
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017911"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861031"
 ---
 # <a name="arrays-c"></a>Matrici (C++)
 
 Una matrice è una raccolta di oggetti simili. Il caso più semplice di una matrice è un vettore che può essere dichiarato dalla seguente sequenza:
 
-```
-decl-specifier identifier [ constant-expression ]
-decl-specifier identifier []
-decl-specifier identifer [][ constant-expression] . . .
-decl-specifier identifier [ constant-expression ]
-[ constant-expression ] . . .
-```
+> *decl-specifier* *identificatore* **\[** *espressione costante* **]**<br/>
+> *decl-specifier* *identificatore*  **\[]**<br/>
+> *decl-specifier* *identificatore* **\[]\[** *espressione costante* **]** . . .<br/>
+> *decl-specifier* *identificatore* **\[** *espressione costante* **]** **\[** *espressione costante* **]** . . .
 
 1. Identificatore di dichiarazione:
 
-- Identificatore della classe di archiviazione facoltativo.
+   - Identificatore della classe di archiviazione facoltativo.
 
-- Facoltativo **const** e/o **volatile** identificatori.
+   - Facoltativo **const** e/o **volatile** identificatori.
 
-- Nome del tipo degli elementi della matrice.
+   - Nome del tipo degli elementi della matrice.
 
-2. Dichiaratore:
+1. Dichiaratore:
 
-- Identificatore.
+   - Identificatore.
 
-- Un'espressione costante di tipo integrale racchiusa tra parentesi quadre **[]**. Se vengono dichiarate più dimensioni utilizzando altre parentesi, l'espressione costante può essere omessa sul primo set di parentesi quadre.
+   - Un'espressione costante di tipo integrale racchiusa tra parentesi quadre  **\[]**. Se vengono dichiarate più dimensioni utilizzando altre parentesi, l'espressione costante può essere omessa sul primo set di parentesi quadre.
 
-- Parentesi aggiuntive facoltative che includono espressioni costanti.
+   - Parentesi aggiuntive facoltative che includono espressioni costanti.
 
-3. Inizializzatore facoltativo.  Visualizzare [inizializzatori](../cpp/initializers.md).
+1. Inizializzatore facoltativo. Per altre informazioni, vedere [inizializzatori](../cpp/initializers.md).
 
-Il numero di elementi nella matrice è dato dall'espressione costante. Il primo elemento nella matrice è l'elemento 0 e l'ultimo elemento è la (*n*-1) elemento, dove *n* è il numero di elementi della matrice può contenere. Il *espressione costante* deve essere di tipo integrale e deve essere maggiore di 0. Una matrice con dimensione zero è valida solo quando la matrice è l'ultimo campo in un **struct** oppure **union** e quando sono abilitate le estensioni Microsoft (/Ze).
+Il numero di elementi nella matrice è dato dal *espressione costante*. Il primo elemento nella matrice è l'elemento 0 e l'ultimo elemento è la (*n*-1) elemento, dove *n* è il numero di elementi della matrice può contenere. Il *espressione costante* deve essere di tipo integrale e deve essere maggiore di 0. Una matrice con dimensione zero è valida solo quando la matrice è l'ultimo campo in un **struct** oppure **union** e quando sono abilitate le estensioni Microsoft (/Ze).
 
 Nell'esempio seguente viene illustrato come definire una matrice in fase di esecuzione:
 

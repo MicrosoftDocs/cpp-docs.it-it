@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9c66324f886da27431a94a464554e2a8ddb00a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 483a36f62a147d9b71a489c2f611fc45c1b7fa54
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391580"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860732"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Sequenza delle operazioni per la creazione di applicazioni database
 
@@ -36,7 +36,7 @@ Nella tabella seguente viene illustrato il ruolo e il ruolo del framework nella 
 |Attività|Davvero|Il framework esegue|
 |----------|------------|------------------------|
 |Decidere se usare le classi ODBC MFC e DAO.|Usa ODBC per i nuovi progetti MFC. Usare DAO solo per le applicazioni esistenti. Per informazioni generali, vedere l'articolo [programmazione accesso dati](../data/data-access-programming-mfc-atl.md).|Il framework fornisce le classi che supportano l'accesso al database.|
-|Creare uno scheletro di applicazione con le opzioni di database.|Eseguire la creazione guidata applicazione MFC. Selezionare le opzioni nella pagina del supporto per Database. Se si sceglie un'opzione che consente di creare una visualizzazione di record, specificare inoltre:<br /><br /> -Nome di origine e la tabella di dati o nomi<br />-Eseguire una query o più nomi.|La creazione guidata applicazione MFC crea i file e specifica che includono i necessari. A seconda delle opzioni specificate, i file possono includere una classe recordset.|
+|Creare uno scheletro di applicazione con le opzioni di database.|Eseguire la creazione guidata applicazione MFC. Selezionare le opzioni nella pagina del supporto per Database. Se si sceglie un'opzione che consente di creare una visualizzazione di record, specificare inoltre:<br /><br />-Nome di origine e la tabella di dati o nomi<br />-Eseguire una query o più nomi.|La creazione guidata applicazione MFC crea i file e specifica che includono i necessari. A seconda delle opzioni specificate, i file possono includere una classe recordset.|
 |Progettare il form di database o il form.|Usare l'editor di finestre di Visual C++ per posizionare i controlli di risorse al modello di finestra di dialogo per le classi di visualizzazione di record.|La creazione guidata applicazione MFC crea una risorsa modello di finestra vuota per poter compilare.|
 |Creare classi di visualizzazione e recordset record aggiuntive in base alle esigenze.|Utilizzare Visualizzazione classi per creare le classi e la finestra di dialogo editor per le visualizzazioni di progettazione.|Visualizzazione classi creati file aggiuntivi per le nuove classi.|
 |Creare oggetti di recordset in base alle esigenze nel codice. Per modificare i record, usare ogni oggetto recordset...|I recordset sono basati sulle classi derivate da [CRecordset](../mfc/reference/crecordset-class.md) con le procedure guidate.|ODBC Usa il trasferimento di campi di record (RFX) per scambio di dati tra il database e i membri dati di campo del recordset. Se si usa una visualizzazione di record, DDX (DDX) consente di scambiare dati tra i controlli nella visualizzazione dei record e set di record.|

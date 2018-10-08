@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63606624e1cbcc5ef2c5ea453ee6d346e3e686a8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9d25969a9ecb833c53b93135e65fa27b4f005a0d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038126"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861200"
 ---
 # <a name="c-runtime-error-r6030"></a>C Runtime Errore R6030 del linguaggio
 
 CRT non inizializzato
 
 > [!NOTE]
->  Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema interno. Questo problema è causato in genere da alcuni programmi software di sicurezza o raramente, da un bug nel programma.
+> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema interno. Questo problema è causato in genere da alcuni programmi software di sicurezza o raramente, da un bug nel programma.
 >
->  Per risolvere questo errore, è possibile provare questi passaggi:
+> Per risolvere questo errore, è possibile provare questi passaggi:
 >
->  -   Il software di sicurezza potrebbe essere istruzioni specifiche per ridurre questo problema. Controllare i siti Web del fornitore di software di sicurezza per i dettagli. In alternativa, verificare la presenza di versioni aggiornate dei software di sicurezza o prova il software di sicurezza diversi.
-> -   Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
-> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
-> -   Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+> - Il software di sicurezza potrebbe essere istruzioni specifiche per ridurre questo problema. Controllare i siti Web del fornitore di software di sicurezza per i dettagli. In alternativa, verificare la presenza di versioni aggiornate dei software di sicurezza o prova il software di sicurezza diversi.
+> - Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
+> - Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
+> - Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
 
 **Informazioni per i programmatori**
 

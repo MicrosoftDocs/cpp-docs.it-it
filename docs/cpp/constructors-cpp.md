@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae2a08431a29e4140e3a9af86e68ccfc9bff388a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069118"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861395"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
@@ -388,11 +388,11 @@ Di seguito è indicato l'ordine in base al quale un costruttore esegue le attivi
 
 1. Chiama i costruttori delle classi base e dei membri nell'ordine di dichiarazione.
 
-2. Se la classe è derivata dalle classi base virtuali, inizializza i puntatori di base virtuali dell'oggetto.
+1. Se la classe è derivata dalle classi base virtuali, inizializza i puntatori di base virtuali dell'oggetto.
 
-3. Se la classe dispone di funzioni virtuali o le eredita, inizializza i puntatori a funzioni virtuali dell'oggetto. I puntatori a funzioni virtuali puntano alla tabella delle funzioni virtuali della classe per consentire la corretta associazione delle chiamate di funzioni virtuali al codice.
+1. Se la classe dispone di funzioni virtuali o le eredita, inizializza i puntatori a funzioni virtuali dell'oggetto. I puntatori a funzioni virtuali puntano alla tabella delle funzioni virtuali della classe per consentire la corretta associazione delle chiamate di funzioni virtuali al codice.
 
-4. Esegue il codice nel corpo della funzione.
+1. Esegue il codice nel corpo della funzione.
 
 L'esempio seguente illustra l'ordine in cui vengono chiamati i costruttori di classi base e di membri in un costruttore per una classe derivata. Prima di tutto, viene chiamato il costruttore base, quindi i membri della classe base vengono inizializzati nell'ordine in cui vengono visualizzati nella dichiarazione di classe e infine viene chiamato il costruttore derivato.
 
@@ -593,7 +593,6 @@ public:
     //... rest of class as before
 };
 ```
-
 
 L'oggetto creato dai costruttori viene completamente inizializzato non appena viene completato un costruttore. Per altre informazioni, vedere [inizializzazione uniforme e costruttori deleganti](../cpp/uniform-initialization-and-delegating-constructors.md).
 

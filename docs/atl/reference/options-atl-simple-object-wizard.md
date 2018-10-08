@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7a337ceffbbfb1577b58fea2f60213cd79052b00
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098784"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861369"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opzioni, Creazione guidata oggetto semplice ATL
 
@@ -60,7 +60,7 @@ Per altre informazioni sulle classi ATL COM e progetti ATL, vedere [ATL COM Desk
    |Opzione|Descrizione|
    |------------|-----------------|
    |**Dual**|Specifica che l'oggetto supporta le interfacce duali (relativo vtable ha funzionalità di interfaccia personalizzati oltre ad associazione tardiva `IDispatch` metodi). Consente a entrambi i client COM e [controller di automazione](../../mfc/automation-clients.md) per accedere all'oggetto. Valore predefinito.|
-   |**Personalizzato**|Specifica che l'oggetto supporta un'interfaccia personalizzata (relativo vtable ha funzioni dell'interfaccia personalizzata). Un'interfaccia personalizzata può essere più veloce rispetto a un'interfaccia duale, in particolare tra i limiti dei processi.<br /><br /> -   **Compatibile con l'automazione** i controller di automazione consente di accedere a un oggetto con il supporto di interfaccia personalizzata.|
+   |**Personalizzato**|Specifica che l'oggetto supporta un'interfaccia personalizzata (relativo vtable ha funzioni dell'interfaccia personalizzata). Un'interfaccia personalizzata può essere più veloce rispetto a un'interfaccia duale, in particolare tra i limiti dei processi.<br /><br /> - **Compatibile con l'automazione** i controller di automazione consente di accedere a un oggetto con il supporto di interfaccia personalizzata.|
 
 - **Supporto**
 

@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b06566f84003b08f5fe3869a021c4bf86dcf5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 604b54d1c1752c76e28680e3373913ca7e92a9bc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105137"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860433"
 ---
 # <a name="c-runtime-error-r6008"></a>R6008 di errore di Runtime C
 
 spazio insufficiente per gli argomenti
 
 > [!NOTE]
->  Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema di memoria interna. Esistono diversi motivi possibili per questo errore, ma spesso è causata da una condizione di memoria estremamente ridotto, eccessivo di memoria eseguita da variabili di ambiente o un bug nel programma.
+> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema di memoria interna. Esistono diversi motivi possibili per questo errore, ma spesso è causata da una condizione di memoria estremamente ridotto, eccessivo di memoria eseguita da variabili di ambiente o un bug nel programma.
 >
->  Per risolvere questo errore, è possibile provare questi passaggi:
+> Per risolvere questo errore, è possibile provare questi passaggi:
 >
->  -   Chiudere le altre applicazioni in esecuzione oppure riavviare il computer per liberare memoria.
-> -   Ridurre il numero e dimensioni degli argomenti della riga di comando per l'app.
-> -   Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
-> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
-> -   Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+> - Chiudere le altre applicazioni in esecuzione oppure riavviare il computer per liberare memoria.
+> - Ridurre il numero e dimensioni degli argomenti della riga di comando per l'app.
+> - Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
+> - Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
+> - Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
 
 **Informazioni per i programmatori**
 

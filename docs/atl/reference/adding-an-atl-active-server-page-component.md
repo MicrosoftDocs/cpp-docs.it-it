@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112993"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861512"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Aggiunta di un componente ASP ATL
 
@@ -36,13 +36,13 @@ Componenti ASP fanno parte dell'architettura di Internet Information Services, c
 
 - È possibile usare le funzionalità di gestione degli errori ASP per le applicazioni basate sul Web.
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Per aggiungere un componente pagine Server attive ATL al progetto
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Per aggiungere un componente pagine Server attive ATL al progetto
 
 1. Nelle **Esplora soluzioni** fare doppio clic il nome del progetto a cui si desidera aggiungere il componente pagine Server attive ATL.
 
-2. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
+1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
 
-3. Nel [Aggiungi classe](../../ide/add-class-dialog-box.md) finestra di dialogo, nel riquadro dei modelli, fare clic su **componente di pagine Server attive ATL**e quindi fare clic su **Open** per visualizzare il [ASP ATL Creazione guidata componente ASP](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. Nel [Aggiungi classe](../../ide/add-class-dialog-box.md) nella finestra di dialogo il **modelli** riquadro, fare clic su **componente di pagine Server attive ATL**e quindi fare clic su **Open** per visualizzare il [Creazione guidata componente ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -52,4 +52,3 @@ Componenti ASP fanno parte dell'architettura di Internet Information Services, c
 [Aggiunta di un metodo](../../ide/adding-a-method-visual-cpp.md)<br/>
 [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Aggiunta di una classe C++ generica](../../ide/adding-a-generic-cpp-class.md)
-

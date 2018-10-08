@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5758dff128cd213442ec3738967ccd78e20e75af
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093961"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861135"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Aggiunta di oggetti e i controlli a un progetto ATL
 
@@ -41,16 +41,16 @@ ms.locfileid: "46093961"
 > [!NOTE]
 > Prima di aggiungere un oggetto ATL al progetto, è necessario esaminare i dettagli e i requisiti per l'oggetto nei relativi argomenti correlati della Guida.
 
-### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Per aggiungere un oggetto o un controllo tramite la creazione guidata controllo ATL
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Per aggiungere un oggetto o un controllo tramite la creazione guidata controllo ATL
 
-1. In Esplora soluzioni fare doppio clic sul nodo del progetto e fare clic su **Add** dal menu di scelta rapida. Fare clic su **aggiungere classe**.
+1. Nelle **Esplora soluzioni**, fare doppio clic sul nodo del progetto e fare clic su **Add** dal menu di scelta rapida. Fare clic su **aggiungere classe**.
 
    Il [Aggiungi classe](../../ide/add-class-dialog-box.md) verrà visualizzata la finestra di dialogo.
 
-2. Con la cartella ATL selezionata nel riquadro delle categorie, selezionare un oggetto da inserire dal riquadro dei modelli. Fare clic su **aperto**. Viene visualizzata la procedura guidata per codice per l'oggetto selezionato.
+1. Con il **ATL** cartella selezionata nel **categorie** riquadro, selezionare un oggetto da inserire dal **modelli** riquadro. Fare clic su **aperto**. Viene visualizzata la procedura guidata per codice per l'oggetto selezionato.
 
    > [!NOTE]
-   >  Se si desidera aggiungere un oggetto ATL a un progetto MFC, è necessario aggiungere il supporto ATL al progetto esistente. È possibile farlo seguendo le istruzioni disponibili nel [aggiunta del supporto ATL a un progetto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Se si desidera aggiungere un oggetto ATL a un progetto MFC, è necessario aggiungere il supporto ATL al progetto esistente. È possibile farlo seguendo le istruzioni disponibili nel [aggiunta del supporto ATL a un progetto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
    In alternativa, se si tenta di aggiungere un oggetto ATL a un progetto MFC senza l'aggiunta del supporto ATL in precedenza, Visual Studio chiederà di specificare se si desidera supporto ATL aggiunto al progetto. Fare clic su **Sì** Aggiungi supporto ATL al progetto e aprire la procedura guidata selezionata ATL.
 
@@ -62,4 +62,3 @@ ms.locfileid: "46093961"
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
-

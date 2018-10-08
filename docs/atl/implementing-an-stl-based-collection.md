@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116711"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861096"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementazione di una raccolta basata sulla libreria Standard C++
 
@@ -57,15 +57,15 @@ Questo è il modulo standard per un'interfaccia di raccolta di sola lettura prog
 
 1. Interfacce di raccolta sono in genere due perché accede ai client di automazione di `_NewEnum` proprietà tramite `IDispatch::Invoke`. I client di automazione, tuttavia, è possono accedere a dei rimanenti metodi tramite vtable, in modo che le interfacce duali sono preferibili alle interfacce dispatch.
 
-2. Se un'interfaccia duale o interfaccia dispatch verrà esteso non in fase di esecuzione (vale a dire, se non sono forniti metodi aggiuntivi o le proprietà tramite `IDispatch::Invoke`), è consigliabile applicare la **nonextensible** la definizione dell'attributo. Questo attributo consente ai client di automazione eseguire la verifica del codice completo in fase di compilazione. In questo caso, l'interfaccia non deve essere esteso.
+1. Se un'interfaccia duale o interfaccia dispatch verrà esteso non in fase di esecuzione (vale a dire, se non sono forniti metodi aggiuntivi o le proprietà tramite `IDispatch::Invoke`), è consigliabile applicare la **nonextensible** la definizione dell'attributo. Questo attributo consente ai client di automazione eseguire la verifica del codice completo in fase di compilazione. In questo caso, l'interfaccia non deve essere esteso.
 
-3. I DISPID corretto è importante se si desidera che i client di automazione per poter utilizzare questa proprietà. Si noti che nel DISPID_NEWENUM sia presente un solo carattere di sottolineatura.
+1. I DISPID corretto è importante se si desidera che i client di automazione per poter utilizzare questa proprietà. Si noti che nel DISPID_NEWENUM sia presente un solo carattere di sottolineatura.
 
-4. È possibile specificare qualsiasi valore come il DISPID del `Item` proprietà. Tuttavia, `Item` utilizza in genere DISPID_VALUE per rendere la proprietà predefinita della raccolta. In questo modo i client di automazione fare riferimento alla proprietà senza denominarlo in modo esplicito.
+1. È possibile specificare qualsiasi valore come il DISPID del `Item` proprietà. Tuttavia, `Item` utilizza in genere DISPID_VALUE per rendere la proprietà predefinita della raccolta. In questo modo i client di automazione fare riferimento alla proprietà senza denominarlo in modo esplicito.
 
-5. Il tipo di dati utilizzato per il valore restituito del `Item` proprietà è il tipo di elemento archiviato nella raccolta per quanto riguarda i client COM sono interessati. L'interfaccia restituisce stringhe, è necessario utilizzare il tipo di stringa COM standard, BSTR. È possibile archiviare i dati in un formato diverso internamente come si vedrà a breve.
+1. Il tipo di dati utilizzato per il valore restituito del `Item` proprietà è il tipo di elemento archiviato nella raccolta per quanto riguarda i client COM sono interessati. L'interfaccia restituisce stringhe, è necessario utilizzare il tipo di stringa COM standard, BSTR. È possibile archiviare i dati in un formato diverso internamente come si vedrà a breve.
 
-6. Il valore usato per il DISPID del `Count` proprietà è del tutto arbitraria. Non è disponibile alcun DISPID standard per questa proprietà.
+1. Il valore usato per il DISPID del `Count` proprietà è del tutto arbitraria. Non è disponibile alcun DISPID standard per questa proprietà.
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> Creazione per l'archiviazione e l'esposizione di typedef
 
@@ -114,4 +114,3 @@ A questo punto, è possibile testare il codice con il client di propria scelta.
 [Raccolte ed enumeratori](../atl/atl-collections-and-enumerators.md)<br/>
 [Nell'esempio ATLCollections](../visual-cpp-samples.md)<br/>
 [Classi di criteri di copia ATL](../atl/atl-copy-policy-classes.md)
-

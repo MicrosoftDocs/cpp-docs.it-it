@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75f629c8a9c8a06f02024e9d52ab13b2d12b234c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723307"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860394"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilazione di una libreria di importazione e di un file di esportazione
 
@@ -52,9 +52,9 @@ Quando viene specificata l'opzione /DEF, i file di output LIB Crea da esportazio
 
 1. Oggetto **dllexport** definizione in una delle *objfiles* o *librerie*
 
-2. Una specifica dell'opzione /EXPORT:*nome* nella riga di comando di LIB
+1. Una specifica dell'opzione /EXPORT:*nome* nella riga di comando di LIB
 
-3. Una definizione in un **esportazioni** istruzione in un *deffile*
+1. Una definizione in un **esportazioni** istruzione in un *deffile*
 
 Questi sono gli stessi metodi che consente di specificare le esportazioni durante il collegamento di un programma di esportazione. Un programma può utilizzare più di un metodo. È possibile specificare le parti del comando LIB (ad esempio multiplo *objfiles* o /EXPORT specifiche) in un file di comando del comando LIB, esattamente come è possibile in un comando di collegamento.
 

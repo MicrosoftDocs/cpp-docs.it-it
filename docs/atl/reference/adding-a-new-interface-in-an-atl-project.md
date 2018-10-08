@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d468e6e2770eca3bc01fca95fb585d1753210a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fec98fd785f5e99875c5f73b13ce1082c16add2b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039023"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861759"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Aggiunta di una nuova interfaccia in un progetto ATL
 
@@ -32,23 +32,23 @@ Quando si aggiunge un'interfaccia per l'oggetto o il controllo, si crea funzioni
 
 È possibile aggiungere una nuova interfaccia al controllo in uno dei due modi: manualmente o tramite le creazioni guidate codice in visualizzazione classi.
 
-### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Usare le creazioni guidate codice in visualizzazione classi per aggiungere un'interfaccia a un controllo o un oggetto esistente
+## <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Usare le creazioni guidate codice in visualizzazione classi per aggiungere un'interfaccia a un controllo o un oggetto esistente
 
 1. Nelle [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare doppio clic il nome della classe di un controllo. Ad esempio, un controllo completo o controllo composito o qualsiasi altra classe di controllo che implementa una macro BEGIN_COM_MAP nel relativo file di intestazione.
 
-2. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **implementa interfaccia**.
+1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **implementa interfaccia**.
 
-3. Selezionare le interfacce da implementare nel [implementazione guidata interfaccia](../../ide/implement-interface-wizard.md). Se l'interfaccia non esiste in qualsiasi libreria dei tipi disponibile, quindi è necessario aggiungerlo manualmente al file con estensione idl.
+1. Selezionare le interfacce da implementare nel [implementazione guidata interfaccia](../../ide/implement-interface-wizard.md). Se l'interfaccia non esiste in qualsiasi libreria dei tipi disponibile, quindi è necessario aggiungerlo manualmente al file con estensione idl.
 
-### <a name="to-add-a-new-interface-manually"></a>Per aggiungere manualmente una nuova interfaccia
+## <a name="to-add-a-new-interface-manually"></a>Per aggiungere manualmente una nuova interfaccia
 
 1. Aggiungere la definizione dell'interfaccia di nuovo al file con estensione idl.
 
-2. Derivare l'oggetto o controllo dall'interfaccia.
+1. Derivare l'oggetto o controllo dall'interfaccia.
 
-3. Creare una nuova [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) per l'interfaccia oppure, se il progetto con attribuito, aggiungere il `coclass` attributo.
+1. Creare una nuova [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) per l'interfaccia oppure, se il progetto con attribuito, aggiungere il `coclass` attributo.
 
-4. Implementare i metodi sull'interfaccia.
+1. Implementare i metodi sull'interfaccia.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -58,4 +58,3 @@ Quando si aggiunge un'interfaccia per l'oggetto o il controllo, si crea funzioni
 [Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
-

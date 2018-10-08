@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9265c54175236d96391c64e343771c896de1c744
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a2a35d57bb0136be6f47319c7f268d4fface3641
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031717"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861596"
 ---
 # <a name="c-runtime-error-r6018"></a>R6018 di errore di Runtime C
 
 Errore imprevisto dell'heap
 
 > [!NOTE]
->  Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema interno. Esistono diversi motivi possibili per questo errore, ma spesso è causata da un difetto nel codice dell'app.
+> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema interno. Esistono diversi motivi possibili per questo errore, ma spesso è causata da un difetto nel codice dell'app.
 >
->  Per risolvere questo errore, è possibile provare questi passaggi:
+> Per risolvere questo errore, è possibile provare questi passaggi:
 >
->  -   Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
-> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
-> -   Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+> - Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
+> - Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
+> - Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
 
 **Informazioni per i programmatori**
 

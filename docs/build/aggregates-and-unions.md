@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aac6da94a0786e5cdc2eee4d16f5927f66e0a8d5
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710021"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861187"
 ---
 # <a name="aggregates-and-unions"></a>Aggregati e unioni
 
@@ -29,7 +29,7 @@ Altri tipi, ad esempio matrici, strutture e unioni, avere più rigorosi requisit
 
    Contiene un gruppo ordinato di oggetti di dati adiacenti. Ogni oggetto viene definito un elemento. Tutti gli elementi all'interno di una matrice hanno lo stesso tipo di dati e dimensioni.
 
--  Struttura
+- Struttura
 
    Contiene un gruppo ordinato di oggetti dati. A differenza degli elementi di una matrice, gli oggetti di dati all'interno di una struttura possono avere dimensioni e tipi di dati diversi. Ogni oggetto dati in una struttura viene chiamato un membro.
 

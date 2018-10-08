@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc23cf3c692eef37a86b5385d2e9e3a68340374e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cde499e919a7b222a41229576ef3b2d37d55d648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080922"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860643"
 ---
 # <a name="c-runtime-error-r6002"></a>Errore di Runtime di C da R6002
 
@@ -30,13 +30,13 @@ supporto a virgola mobile non caricato
 La libreria necessaria a virgola mobile non è stata collegata.
 
 > [!NOTE]
->  Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema interno. Esistono diversi motivi possibili per questo errore, ma spesso è causato da un difetto del codice dell'app o dal tentativo di eseguire un'app che non è stata compilata per il processore del computer specifico.
+> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema interno. Esistono diversi motivi possibili per questo errore, ma spesso è causato da un difetto del codice dell'app o dal tentativo di eseguire un'app che non è stata compilata per il processore del computer specifico.
 >
->  Per risolvere questo errore, è possibile provare questi passaggi:
+> Per risolvere questo errore, è possibile provare questi passaggi:
 >
->  -   Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
-> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
-> -   Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+> - Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
+> - Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
+> - Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
 
 **Informazioni per i programmatori**
 

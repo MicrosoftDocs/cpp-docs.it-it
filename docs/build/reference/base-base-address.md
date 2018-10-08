@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725972"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860537"
 ---
 # <a name="base-base-address"></a>/BASE (indirizzo di base)
 
@@ -78,9 +78,9 @@ Un altro modo per impostare l'indirizzo di base consiste nell'usare la *BASE* ar
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
 
-2. Selezionare il **le proprietà di configurazione** > **Linker** > **avanzate** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **Linker** > **avanzate** pagina delle proprietà.
 
-3. Modificare il **indirizzo di Base** proprietà.
+1. Modificare il **indirizzo di Base** proprietà.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

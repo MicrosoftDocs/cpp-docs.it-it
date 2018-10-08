@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d794b8bf762503900dad18c7457c31101ea6d62
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c79a9cace0cf2eacabdba63f327f86e95959f3fb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377721"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861473"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Sequenza di operazioni per la creazione di controlli ActiveX
 
@@ -36,7 +36,7 @@ Nella tabella seguente viene illustrato il ruolo e il ruolo del framework nella 
 |Creazione di un'infrastruttura di controllo di ActiveX.|Eseguire la creazione guidata controllo ActiveX MFC per creare un controllo. Specificare le opzioni desiderate nelle pagine delle opzioni. Le opzioni includono il tipo e il nome del controllo nel progetto, licenze, creazione di una sottoclasse e un metodo sulla finestra.|La creazione guidata controllo ActiveX MFC crea i file per un controllo ActiveX con funzionalità di base, inclusi i file di origine per l'applicazione, controllo e pagina delle proprietà o le pagine. un file di risorse. un file di progetto. e altri, tutti adattati in base alle specifiche.|
 |Vedere quali il controllo e la creazione guidata controllo ActiveX offrono senza l'aggiunta di una riga di codice personalizzato.|Compilare il controllo ActiveX e testarla con Internet Explorer o la [esempio TSTCON](../visual-cpp-samples.md).|Il controllo in esecuzione ha la possibilità di essere ridimensionato e spostato. Include anche un **sulla casella** metodo (se selezionato) che può essere richiamato.|
 |Implementare i metodi e le proprietà del controllo.|Implementare i metodi specifici del controllo e le proprietà mediante l'aggiunta di funzioni membro per fornire un'interfaccia esposta per i dati del controllo. Aggiungere variabili membro per contenere le strutture di dati e utilizzare i gestori eventi per generare gli eventi quando determinano.|Il framework è già definita una mappa per supportare gli eventi, proprietà e metodi, lasciando all'utente di concentrarsi su come vengono implementati i metodi e proprietà del controllo. È possibile visualizzare la pagina delle proprietà predefinito e viene fornito un metodo sulla finestra predefinita.|
-|Creare pagine o la pagina delle proprietà del controllo.|Usare l'editor di risorse di Visual C++ per modificare visivamente l'interfaccia pagina delle proprietà del controllo:<br /><br /> -Creare pagine delle proprietà aggiuntive.<br />-Creare e modificare le bitmap, icone e cursori.<br /><br /> È anche possibile testare le pagine delle proprietà nell'editor finestre.|Il file di risorse predefinito creato per la creazione guidata applicazione MFC fornisce molte delle risorse che necessarie. Visual C++ è possibile modificare le risorse esistenti e aggiungere nuove risorse in modo semplice e visivamente.|
+|Creare pagine o la pagina delle proprietà del controllo.|Usare l'editor di risorse di Visual C++ per modificare visivamente l'interfaccia pagina delle proprietà del controllo:<br /><br />-Creare pagine delle proprietà aggiuntive.<br />-Creare e modificare le bitmap, icone e cursori.<br /><br /> È anche possibile testare le pagine delle proprietà nell'editor finestre.|Il file di risorse predefinito creato per la creazione guidata applicazione MFC fornisce molte delle risorse che necessarie. Visual C++ è possibile modificare le risorse esistenti e aggiungere nuove risorse in modo semplice e visivamente.|
 |Testare le proprietà, metodi ed eventi del controllo.|Ricompilare il controllo e usare Test Container per testare il corretto funzionamento dei gestori.|È possibile richiamare i metodi di controllo e modificarne le proprietà tramite l'interfaccia della pagina proprietà o il contenitore di Test. Inoltre, è possibile usare Test Container per tenere traccia eventi generati dal controllo e le notifiche ricevute dal contenitore del controllo.|
 
 ## <a name="see-also"></a>Vedere anche

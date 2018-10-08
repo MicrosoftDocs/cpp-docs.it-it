@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546c0df1df958566f5cc5e479e368255f8a017ae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 305533a0bd6113e3df2c29f5f8b16ae54e0bb2be
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396675"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861330"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Sequenza delle operazioni per la compilazione di applicazioni MFC
 

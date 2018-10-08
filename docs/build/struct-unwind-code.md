@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726648"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861720"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 
@@ -112,17 +112,17 @@ Questo codice di rimozione verrà sempre visualizzate in un prologo fittizio, ch
 
 1. Apri nuova finestra dell'indirizzo restituito RIP dall'inizio dello stack in *Temp*
 
-2. SS push
+1. SS push
 
-3. Eseguire il push RSP precedente
+1. Eseguire il push RSP precedente
 
-4. Push contenuto
+1. Push contenuto
 
-5. Eseguire il push. CS
+1. Eseguire il push. CS
 
-6. Eseguire il push *Temp*
+1. Eseguire il push *Temp*
 
-7. Push del codice di errore (se le informazioni di binding è uguale a 1)
+1. Push del codice di errore (se le informazioni di binding è uguale a 1)
 
 Simulato `UWOP_PUSH_MACHFRAME` decrementa operazione RSP di 40 (informazioni di binding è uguale a 0) o 48 (informazioni di binding è uguale a 1).
 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423832"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861616"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definizione dei termini
 
@@ -43,7 +43,7 @@ In questo documento vengono usati i termini seguenti:
 
    Istruzioni lessicalmente contenute all'interno di un *blocco strutturato*.
 
--  thread master
+- thread master
 
    Il thread che crea un team quando una *area parallela* viene immesso.
 
@@ -75,7 +75,7 @@ In questo documento vengono usati i termini seguenti:
 
    Un blocco strutturato è un'istruzione (singola o composta) con una singola voce e una singola chiusura. Istruzione non è un blocco strutturato se è presente un salto da e verso tale istruzione (tra cui una chiamata a **longjmp**(3c) o l'utilizzo di **throw**, ma una chiamata a **uscire** è consentito). Un'istruzione composta è un blocco strutturato se l'esecuzione sempre inizia in corrispondenza dell'apertura **{** e termina sempre con la chiusura **}**. Un'istruzione di espressione, l'istruzione di selezione, l'istruzione di iterazione, oppure **provare** blocco viene un blocco strutturato se l'istruzione composta corrispondente ottenuto includendolo nel **{** e **}** sarebbe un blocco strutturato. Un'istruzione di salto, l'istruzione con etichetta o istruzione di dichiarazione non è un blocco strutturato.
 
--  Team
+- Team
 
    Uno o più thread cooperano l'esecuzione di un costrutto.
 

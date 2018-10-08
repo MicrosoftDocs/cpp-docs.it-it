@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317919"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860446"
 ---
 # <a name="menu-command-properties-c"></a>Proprietà dei comandi di menu (C++)
 
@@ -28,7 +28,7 @@ Le informazioni seguenti sono organizzate in base al **dal Menu** le proprietà 
 
 |Proprietà|Descrizione|
 |--------------|-----------------|
-|**Break**|Può essere uno dei seguenti valori:<br /><br /> -   **Nessuno** (predefinito): nessuna interruzione.<br />-   **Column**: per menu statici, questo valore posiziona il comando di menu su una nuova riga. Nei menu a comparsa questo valore consente di posizionare il comando di menu in una nuova colonna, senza linee di separazione tra le colonne. L'impostazione di questa proprietà influisce sull'aspetto del menu solo in fase di esecuzione e non nell'Editor dei menu.<br />-   **Barra**: uguale allo **colonna** except, nei menu a comparsa, questo valore la nuova colonna viene separata dalla precedente mediante una linea verticale. Impostazione di questa proprietà influisce sull'aspetto del menu solo in fase di esecuzione, non nel **Menu** editor.|
+|**Break**|Può essere uno dei seguenti valori:<br /><br />- **Nessuno** (predefinito): nessuna interruzione.<br />- **Colonna**: per menu statici, questo valore posiziona il comando di menu in una nuova riga. Nei menu a comparsa questo valore consente di posizionare il comando di menu in una nuova colonna, senza linee di separazione tra le colonne. L'impostazione di questa proprietà influisce sull'aspetto del menu solo in fase di esecuzione e non nell'Editor dei menu.<br />- **Barra**: uguale allo **colonna** except, nei menu a comparsa, questo valore la nuova colonna viene separata dalla precedente mediante una linea verticale. Impostazione di questa proprietà influisce sull'aspetto del menu solo in fase di esecuzione, non nel **Menu** editor.|
 |**Caption**|Il testo che costituisce l'etichetta del comando di menu ovvero il nome del menu. Per impostare come tasto di scelta una lettera della didascalia di un comando di menu, anteporre alla lettera desiderata una e commerciale (&).|
 |**Checked**|Se **True**, il comando di menu inizialmente selezionato. Tipo: **Bool**. Impostazione predefinita: **False**.|
 |**Enabled**|Se il valore impostato è **False**, la voce di menu è disabilitata.|

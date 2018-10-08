@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba4cb1411bca452de0f146626421315fa7dc177e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716592"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859861"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Specifica le directory di metadati)
 
@@ -49,9 +49,9 @@ Una sola directory può essere passata a un **/AI** chiamata. Specificare una **
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-2. Selezionare il **le proprietà di configurazione** > **C/C++** > **generale** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **generale** pagina delle proprietà.
 
-3. Modificare il **aggiuntive #using directory** proprietà.
+1. Modificare il **aggiuntive #using directory** proprietà.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 

@@ -105,12 +105,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f8e2c5e3feea1c7607b8303bc42cef5b2f21e0
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601613"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861421"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Del compilatore C4800 avvisi tramite C5999
 
@@ -153,6 +153,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 4) C4842|il risultato di 'offsetof' applicato a un tipo mediante ereditarietà multipla non è garantito a essere coerente tra versioni diverse del compilatore|
 |Genera un avviso C4843|«*type1*': un gestore di eccezioni del riferimento al tipo di matrice o una funzione non è raggiungibile, usare '*type2*' invece|
 |Genera un avviso C4844|' export module *module_name*;' è ora la sintassi preferita per dichiarare un'interfaccia del modulo|
+|[Avviso del compilatore (livello 4) C4866](c4866.md)| compilatore non può imporre l'ordine di valutazione da sinistra a destra per la chiamata a *nome_operatore*|
 |[Avviso (errore) del compilatore C4867](compiler-warning-c4867.md)|«*funzione*': chiamata di funzione senza elenco di argomenti; utilizzare '*chiamare*' per creare un puntatore a membro|
 |[Avviso (livello 4) del compilatore C4868](compiler-warning-c4868.md)|«_file_(*line_number*)' compilatore non può imporre l'ordine di valutazione da sinistra a destra nell'elenco di inizializzazione tra parentesi graffe|
 |Avviso del compilatore (livello 2) C4872|divisione a virgola mobile per zero rilevato durante la compilazione del grafico chiamate per il Concurrency:: parallel_for_each in: '*posizione*'|

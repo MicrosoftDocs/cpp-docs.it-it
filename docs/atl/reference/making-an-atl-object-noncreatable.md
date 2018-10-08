@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f0b20cbae3036ffecfa63f2e3ee6be8e2153fc8f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099538"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860914"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Rendere un oggetto ATL non creabile
 
 È possibile modificare gli attributi di un oggetto basato su ATL COM in modo che un client non è possibile creare direttamente l'oggetto. In questo caso, l'oggetto potrebbe essere restituito tramite una chiamata al metodo su un altro oggetto anziché creato direttamente.
 
-### <a name="to-make-an-object-noncreatable"></a>Per rendere non creabile un oggetto
+## <a name="to-make-an-object-noncreatable"></a>Per rendere non creabile un oggetto
 
 1. Rimuovere il [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) per l'oggetto. Se si desidera che l'oggetto per il controllo da registrare, sostituire con OBJECT_ENTRY_AUTO [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).
 
-2. Aggiungere il [noncreatable](../../windows/noncreatable.md) la coclasse nel file con estensione idl dell'attributo. Ad esempio:
+1. Aggiungere il [noncreatable](../../windows/noncreatable.md) la coclasse nel file con estensione idl dell'attributo. Ad esempio:
 
     ```  
     [uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851), 
@@ -52,4 +52,3 @@ ms.locfileid: "46099538"
 [Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
-

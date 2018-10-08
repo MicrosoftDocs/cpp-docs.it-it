@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109690"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861941"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -382,7 +382,7 @@ class CWindow
 
 [CDialogImpl](../../atl/reference/cdialogimpl-class.md) consente di creare una finestra di dialogo modale o non modale.
 
-Per altre informazioni sulle finestre, vedere [Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) e argomenti successivi nel SDK di Windows. Per altre informazioni sull'uso delle finestre in ATL, vedere l'articolo [classi di finestra ATL](../../atl/atl-window-classes.md).
+Per altre informazioni sulle finestre, vedere [Windows](/windows/desktop/winmsg/windows) e argomenti successivi nel SDK di Windows. Per altre informazioni sull'uso delle finestre in ATL, vedere l'articolo [classi di finestra ATL](../../atl/atl-window-classes.md).
 
 ## <a name="requirements"></a>Requisiti
 

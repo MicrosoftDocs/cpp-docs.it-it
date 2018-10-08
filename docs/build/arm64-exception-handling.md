@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd273afaf5934313067ada55574edbaeee43929b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716555"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861538"
 ---
 # <a name="arm64-exception-handling"></a>Gestione delle eccezioni ARM64
 
@@ -34,11 +34,11 @@ Le convenzioni di eccezione rimozione dei dati e la descrizione, sono destinati 
 
    - Se per la rimozione non possono essere descritta completamente tramite l'utilizzo di codici di rimozione, quindi in alcuni casi deve eseguire il fallback alla decodifica (istruzione). Ciò aumenta la complessità globale e in una situazione ideale sarebbe evitare.
 
-2. Supporto a metà di epilogo e di rimozione nel prologo intermedio.
+1. Supporto a metà di epilogo e di rimozione nel prologo intermedio.
 
    - Per la rimozione viene usata in Windows per più di gestione delle eccezioni, pertanto è fondamentale che è in grado di eseguire un'accurata di rimozione anche quando all'interno di una sequenza di codice di prologo o epilogo.
 
-3. Richiedere una quantità minima di spazio.
+1. Richiedere una quantità minima di spazio.
 
    - I codici di rimozione non è necessario aggregare per aumentare notevolmente le dimensioni binarie.
 
@@ -50,15 +50,15 @@ Queste sono le ipotesi nella descrizione di gestione delle eccezioni:
 
 1. Prologhi ed epiloghi tendono a eseguire il mirroring di entrambi altro. Per sfruttare questa caratteristica comune, le dimensioni dei metadati necessari per descrivere la rimozione possono essere notevolmente ridotto. All'interno del corpo della funzione, non è importante se le operazioni del prologo vengono annullate o se le operazioni dell'epilogo vengono eseguite in avanti. Entrambi devono produrre risultati identici.
 
-2. Le funzioni nel complesso tendono a essere relativamente piccole. Diverse ottimizzazioni per lo spazio si basano su questo per ottenere la compressione dei dati più efficiente.
+1. Le funzioni nel complesso tendono a essere relativamente piccole. Diverse ottimizzazioni per lo spazio si basano su questo per ottenere la compressione dei dati più efficiente.
 
-3. Non è presente codice condizionale nell'epilogo di una funzione.
+1. Non è presente codice condizionale nell'epilogo di una funzione.
 
-4. Registro dei puntatori frame dedicato: se la stored procedure sp viene salvata in un altro registro (r29) nel prologo, che si registrano rimane invariati in tutta la funzione, in modo che il sp di origine può essere recuperato in qualsiasi momento.
+1. Registro dei puntatori frame dedicato: se la stored procedure sp viene salvata in un altro registro (r29) nel prologo, che si registrano rimane invariati in tutta la funzione, in modo che il sp di origine può essere recuperato in qualsiasi momento.
 
-5. A meno che il Service Pack viene salvato in un altro registro, tutte le relative modifiche del puntatore dello stack avviene esclusivamente all'interno di prologo ed epilogo.
+1. A meno che il Service Pack viene salvato in un altro registro, tutte le relative modifiche del puntatore dello stack avviene esclusivamente all'interno di prologo ed epilogo.
 
-6. Il layout dello stack frame è organizzato come descritto nella sezione successiva.
+1. Il layout dello stack frame è organizzato come descritto nella sezione successiva.
 
 ## <a name="arm64-stack-frame-layout"></a>Layout dello stack frame ARM64
 
@@ -80,7 +80,7 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
         sub    sp, #outsz               // (optional for #outsz != 0)
     ```
 
-2. Concatenate, #localsz > 512
+1. Concatenate, #localsz > 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -94,7 +94,7 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
         add    r29,sp, #outsz           // setup r29 points to bottom of local area
     ```
 
-3. Ai, le funzioni foglia (lr non salvati)
+1. Ai, le funzioni foglia (lr non salvati)
 
     ```asm
         stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -107,7 +107,7 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
 
    Tutte le variabili locali sono accessibili basato su provider di servizi. \<R29, lr > punta al frame precedente. Per le dimensioni del fotogramma < = 512, il "sub sp,..." può essere ottimizzato se l'area regs salvato viene spostato nella parte inferiore dello stack. Lo svantaggio di che è che non è coerenza con altri layout precedente e salvato regs prendere parte dell'intervallo per la coppia regs e modalità di indirizzamento offset pre-elaborazione e post-indicizzate.
 
-4. Funzioni di ai e non foglia (lr viene salvato nell'area di Int salvato)
+1. Funzioni di ai e non foglia (lr viene salvato nell'area di Int salvato)
 
     ```asm
         stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
@@ -141,7 +141,7 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
 
    Tutte le variabili locali sono accessibili basato su provider di servizi. \<R29 > punta al frame precedente.
 
-5. Concatenate, #framesz < = 512, #outsz = 0
+1. Concatenate, #framesz < = 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -152,7 +152,7 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
 
    Rispetto a prologo di #1 precedente, il vantaggio è che register tutte le istruzioni di salvataggio sono pronti per essere eseguita subito dopo un solo stack allocando (istruzione). Pertanto, non è disponibile alcuna dipendenza anti-dalla su sp che impedisce il parallelismo a livello di istruzione.
 
-6. Concatenate, frame dimensioni > 512 (facoltativo per le funzioni senza allocazione)
+1. Concatenate, frame dimensioni > 512 (facoltativo per le funzioni senza allocazione)
 
     ```asm
         stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
@@ -166,7 +166,7 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
 
    A scopo di ottimizzazione, r29 possono essere inseriti in una posizione qualsiasi nell'area locale per fornire una migliore copertura per "reg-coppia" pre/post indexed offset e modalità di indirizzamento. Variabili locali sotto i puntatori ai frame sono accessibili basato su provider di servizi.
 
-7. Concatenate, frame di dimensioni > 4 KB, con o senza alloca(),
+1. Concatenate, frame di dimensioni > 4 KB, con o senza alloca(),
 
     ```asm
         stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
@@ -237,7 +237,7 @@ Questi dati viene suddiviso in quattro sezioni:
 
    g. **Il conteggio di epilogo estesa** e **estesi parole codice** campi corrispondono a 16 bit e a 8 bit, rispettivamente, che forniscono più spazio per la codifica di un numero di epiloghi insolitamente ampio o un numero insolitamente elevato di parole di codice di rimozione. La parola di estensione contenente questi campi è presente solo se entrambi i **conteggio di epilogo** e **parole di codice** campi nella prima parola di intestazione sono impostati su 0.
 
-2. Dopo i dati dell'eccezione, se **conteggio di epilogo** è diverso da zero, è un elenco di informazioni sugli ambiti di epilogo, compresse una per una parola e archiviate in ordine di inizio offset crescente. Ogni ambito contiene i bit seguenti:
+1. Dopo i dati dell'eccezione, se **conteggio di epilogo** è diverso da zero, è un elenco di informazioni sugli ambiti di epilogo, compresse una per una parola e archiviate in ordine di inizio offset crescente. Ogni ambito contiene i bit seguenti:
 
    a. **Offset di avviare epilogo** è un campo a 18 bit che descrive l'offset in byte, diviso 4, dell'epilogo rispetto all'inizio della funzione
 
@@ -245,9 +245,9 @@ Questi dati viene suddiviso in quattro sezioni:
 
    c. **Indice iniziale di epilogo** una sorta di 10 (2 più bit rispetto **estesi parole di codice**) campo che indica l'indice byte della prima riga di codice che descrive questo epilogo di rimozione.
 
-3. Dopo che l'elenco di ambiti di epilogo è disponibile una matrice di byte che contengono codici di rimozione, descritti in dettaglio in una sezione successiva. Questa matrice viene riempita alla fine fino al più vicino confine di parola completa. I byte sono archiviati in ordine little-endian, in modo da essere direttamente recuperabili in modalità little-endian.
+1. Dopo che l'elenco di ambiti di epilogo è disponibile una matrice di byte che contengono codici di rimozione, descritti in dettaglio in una sezione successiva. Questa matrice viene riempita alla fine fino al più vicino confine di parola completa. I byte sono archiviati in ordine little-endian, in modo da essere direttamente recuperabili in modalità little-endian.
 
-4. Infine, dopo i byte di codice di rimozione (e, se il **X** bit nell'intestazione è stato impostato su 1) include le informazioni del gestore di eccezioni. Si tratta di una singola **eccezione gestore RVA** fornendo l'indirizzo del gestore eccezioni stesso, seguito immediatamente da una quantità a lunghezza variabile di dati richiesti dal gestore di eccezioni.
+1. Infine, dopo i byte di codice di rimozione (e, se il **X** bit nell'intestazione è stato impostato su 1) include le informazioni del gestore di eccezioni. Si tratta di una singola **eccezione gestore RVA** fornendo l'indirizzo del gestore eccezioni stesso, seguito immediatamente da una quantità a lunghezza variabile di dati richiesti dal gestore di eccezioni.
 
 Il precedente del record. XData è progettato in modo che sia possibile recuperare i primi 8 byte e dal calcolo della dimensione totale del record (meno la lunghezza dei dati a dimensione variabile eccezione che segue). Il frammento di codice seguente calcola le dimensioni dei record:
 
@@ -287,9 +287,9 @@ Se fosse garantito che le eccezioni possono verificarsi solo all'interno di un c
 
 1. Contando il numero di codici di rimozione, è possibile calcolare la lunghezza del prologo ed epilogo.
 
-2. Contando il numero di istruzioni dopo l'inizio di un ambito di epilogo, è possibile saltare il numero equivalente di codici di rimozione ed eseguire il resto di una sequenza per completare il parzialmente eseguita in modo che l'epilogo stava eseguendo di rimozione.
+1. Contando il numero di istruzioni dopo l'inizio di un ambito di epilogo, è possibile saltare il numero equivalente di codici di rimozione ed eseguire il resto di una sequenza per completare il parzialmente eseguita in modo che l'epilogo stava eseguendo di rimozione.
 
-3. Contando il numero di istruzioni prima della fine del prologo, è possibile saltare il numero equivalente di codici di rimozione ed eseguire il resto della sequenza per annullare solo le parti di prologo già eseguite completamente.
+1. Contando il numero di istruzioni prima della fine del prologo, è possibile saltare il numero equivalente di codici di rimozione ed eseguire il resto della sequenza per annullare solo le parti di prologo già eseguite completamente.
 
 I codici di rimozione sono codificati in base alla tabella riportata di seguito. Tutti i codici di rimozione sono un byte singolo o doppie, ad eccezione di quello che alloca uno stack di grandi dimensioni. Esistono totalmente 21 codice di rimozione. Ogni rimozione codice mappe esattamente un'istruzione nel prologo/epilogo per consentire la rimozione di parzialmente eseguiti prologhi ed epiloghi.
 
@@ -433,9 +433,9 @@ A questo punto, non è sempre caso in cui i codici di epilogo e prologo della qu
 
 1. Se la rimozione dall'interno il corpo della funzione, iniziare a eseguire i codici di rimozione all'indice 0 e continua fino a raggiungere un codice operativo "end".
 
-2. Se la rimozione dall'interno di un epilogo, usare l'indice iniziale di epilogo specifiche fornita con l'ambito di epilogo come punto di partenza. Calcolare il numero di byte del computer in questione è dall'inizio dell'epilogo. Passare quindi inoltrare tramite i codici di rimozione, ignorando i codici di rimozione fino a quando tutte le istruzioni già eseguite vengono presi in considerazione. Eseguire quindi a questo punto avvio.
+1. Se la rimozione dall'interno di un epilogo, usare l'indice iniziale di epilogo specifiche fornita con l'ambito di epilogo come punto di partenza. Calcolare il numero di byte del computer in questione è dall'inizio dell'epilogo. Passare quindi inoltrare tramite i codici di rimozione, ignorando i codici di rimozione fino a quando tutte le istruzioni già eseguite vengono presi in considerazione. Eseguire quindi a questo punto avvio.
 
-3. Se la rimozione dall'interno il prologo della query, usare l'indice 0 come punto di partenza. Calcolare la lunghezza del codice di prologo dalla sequenza e quindi calcolare il numero di byte del computer in questione è dalla fine del prologo. Passare quindi inoltrare tramite i codici di rimozione, ignorando i codici di rimozione fino a quando tutte le istruzioni non ancora eseguite vengono presi in considerazione. Eseguire quindi a questo punto avvio.
+1. Se la rimozione dall'interno il prologo della query, usare l'indice 0 come punto di partenza. Calcolare la lunghezza del codice di prologo dalla sequenza e quindi calcolare il numero di byte del computer in questione è dalla fine del prologo. Passare quindi inoltrare tramite i codici di rimozione, ignorando i codici di rimozione fino a quando tutte le istruzioni non ancora eseguite vengono presi in considerazione. Eseguire quindi a questo punto avvio.
 
 Di conseguenza di queste regole, i codici di rimozione per il prologo della query devono essere sempre il primo elemento nella matrice e sono anche i codici usati per la rimozione in generale il caso di rimozione dall'interno del corpo. Tutte le sequenze di codice specifico dell'epilogo devono essere immediatamente successive.
 
@@ -484,13 +484,13 @@ Un caso tipico di frammenti di funzione è "code" separazione con il compilatore
 
    Codici di rimozione: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-2. Solo epiloghi (area 2: prologo della query si trova nell'area host)
+1. Solo epiloghi (area 2: prologo della query si trova nell'area host)
 
    Si presuppone che il controllo ora passare a quest'area, sono stati eseguiti tutti i codici di prologo. Rimozione parziale può verificarsi in epiloghi come avviene per una funzione normale. Questo tipo di area geografica non può essere rappresentato da. pdata compatto. Nel record xdata completo, può essere codificato con un prologo "fantasma", racchiuso tra un' `end_c` e `end` coppia di codice di rimozione.  L'interlinea `end_c` indica la dimensione del prologo è zero. Epilogo indice iniziale di punti di unico epilogo per `set_fp`.
 
    Codice di rimozione per area 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-3. Nessun prologhi o epiloghi (area 3: prologhi ed epiloghi tutti sono in altri frammenti):
+1. Nessun prologhi o epiloghi (area 3: prologhi ed epiloghi tutti sono in altri frammenti):
 
    Formato. pdata compatto può essere applicato tramite l'impostazione Flag = 10. Con un record. XData completo, il conteggio di epilogo = 1. Rimozione codice è lo stesso di quello per area 2 precedente, ma l'indice iniziale di epilogo punta anche verso `end_c`. Rimozione parziale si verificheranno mai in questa area di codice.
 

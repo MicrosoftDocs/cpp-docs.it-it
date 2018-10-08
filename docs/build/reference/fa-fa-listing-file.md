@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f1d205eff155b628081c5bc615570c44a88f08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eea3159bff6f2c69c94ef31d01b1d6a85104ef13
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412808"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861858"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (File di listato)
 
@@ -87,9 +87,9 @@ Un file di listato denominato *filename. Extension* viene inserito nell'oggetto 
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-2. Selezionare il **le proprietà di configurazione** > **C/C++** > **i file di Output** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **i file di Output** pagina delle proprietà.
 
-3. Modificare il **Output Assembler** per impostare il **/FAc** e **/FAs** opzioni per l'assembler, macchina e codice sorgente. Modificare il **Usa Unicode per Assembler listato** proprietà da impostare il **l'opzione /FAu** opzione per l'output UTF-8 o ANSI. Modificare il **percorso elenco ASM** per impostare le **/Fa** opzione per elencare il nome di file e percorso.
+1. Modificare il **Output Assembler** per impostare il **/FAc** e **/FAs** opzioni per l'assembler, macchina e codice sorgente. Modificare il **Usa Unicode per Assembler listato** proprietà da impostare il **l'opzione /FAu** opzione per l'output UTF-8 o ANSI. Modificare il **percorso elenco ASM** per impostare le **/Fa** opzione per elencare il nome di file e percorso.
 
 Si noti che l'impostazione entrambi **Output Assembler** e **utilizzare Unicode per Assembler listato** le proprietà possono causare [avviso della riga di comando D9025](../../error-messages/tool-errors/command-line-warning-d9025.md). Per combinare queste opzioni nell'IDE, usare il **opzioni aggiuntive** campo le **della riga di comando** invece pagina delle proprietà.
 

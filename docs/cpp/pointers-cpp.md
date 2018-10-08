@@ -17,62 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e896c1a00e45e5e7503837409903651ed2bdc3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024112"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861239"
 ---
 # <a name="pointers-c"></a>Puntatori (C++)
 
 I puntatori vengono dichiarati tramite la seguente sequenza
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*identificatori di classi di archiviazione*] \[ *elementi cv-Qualifier*] *gli identificatori di tipo* \[ *ms-modifier*]  *dichiaratore* **;**
 
-Qui qualsiasi dichiaratore valido del puntatore può essere utilizzato per `declarator`. La sintassi di un dichiaratore di puntatore semplice è la seguente:
+in cui qualsiasi dichiaratore valido del puntatore può essere usato per *dichiaratore*. La sintassi di un dichiaratore di puntatore semplice è la seguente:
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*elementi CV-Qualifier*] *identificatore* \[ **=** *espressione*]
 
 1. Gli identificatori di dichiarazione:
 
-    - Identificatore della classe di archiviazione facoltativo. Per altre informazioni, vedere [identificatori](../cpp/specifiers.md).
+   - Identificatore della classe di archiviazione facoltativo. Per altre informazioni, vedere [identificatori](../cpp/specifiers.md).
 
-    - Facoltativo **const** oppure **volatile** (parola chiave) applicata al tipo dell'oggetto a cui puntare.
+   - Facoltativo **const** oppure **volatile** (parola chiave) applicata al tipo dell'oggetto a cui puntare.
 
-    - L'identificatore di tipo: il nome di un tipo che rappresenta il tipo di oggetto a cui puntare.
+   - L'identificatore di tipo: il nome di un tipo che rappresenta il tipo di oggetto a cui puntare.
 
-2. Dichiaratore:
+1. Dichiaratore:
 
-    - Un modificatore facoltativo specifico di Microsoft. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Modificatore specifico di Microsoft facoltativo. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-    - Operatore `*`.
+   - Il __\*__ operatore.
 
-    - Facoltativo **const** oppure **volatile** parola chiave applicazione al puntatore stesso.
+   - Facoltativo **const** oppure **volatile** parola chiave applicazione al puntatore stesso.
 
-    - Identificatore.
+   - Identificatore.
 
-    - Inizializzatore facoltativo.
+   - Inizializzatore facoltativo.
 
-     Il dichiaratore per un puntatore a funzione ha il seguente aspetto:
+Il dichiaratore per un puntatore a funzione ha il seguente aspetto:
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *elementi cv-Qualifier*] *identificatore* **) (** *-elenco di argomenti* **)** \[ *-qualificatori cv*] \[ *specifica di eccezione*] \[ **=** *espressione*] **;**
 
-- La sintassi per una matrice di puntatori ha il seguente aspetto:
+La sintassi per una matrice di puntatori ha il seguente aspetto:
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *Identificatore* **\[** \[ *espressione costante*] **]**
 
-- Più dichiaratori e i relativi inizializzatori possono essere uniti in una sola dichiarazione in un elenco separato da virgola che segue l'identificatore della dichiarazione.
+Più dichiaratori e i relativi inizializzatori possono essere uniti in una sola dichiarazione in un elenco separato da virgola che segue l'identificatore della dichiarazione.
 
 Un esempio semplice di dichiarazione di puntatore è:
 

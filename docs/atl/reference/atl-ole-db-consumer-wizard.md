@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020433"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861642"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 
@@ -52,7 +52,7 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
       1. **Selezionare o immettere un nome server:** fare clic sul menu a discesa elenco per visualizzare tutti i server di dati registrati nella rete e selezionarne uno.
 
-      2. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.
+      1. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.
 
          > [!NOTE]
          > Si verifica un problema di sicurezza con la funzionalità "Per il salvataggio della password" della finestra di dialogo proprietà di Data Link. In "Immettere le informazioni per l'accesso al server", sono disponibili due pulsanti di opzione:
@@ -63,7 +63,7 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
          > Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la casella di controllo per "Consenti salvataggio password"); tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione è sicura perché permette di crittografare la password.
          > Potrebbero esserci situazioni in cui si desidera selezionare "Consenti salvataggio password". Ad esempio, se si sta rilasciando una libreria con una soluzione di database privato, è necessario non accedono direttamente al database ma usare invece un'applicazione di livello intermedio per verificare che l'utente (tramite qualsiasi schema di autenticazione scelto) e quindi limitarne l'ordinamento dei dati disponibile per l'utente.
 
-      3. **Selezionare il database nel server:** fare clic sul menu di riepilogo per visualizzare tutti i database registrati nel server di dati e selezionarne uno.
+      1. **Selezionare il database nel server:** fare clic sul menu di riepilogo per visualizzare tutti i database registrati nel server di dati e selezionarne uno.
 
          \- oppure -
 
@@ -80,13 +80,13 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
          **Usa stringa di connessione:** immettere una stringa di connessione possiede già, oppure fare clic sui **compilare** pulsante; il **Seleziona origine dati** verrà visualizzata la finestra di dialogo. Selezionare un'origine dati di produzione o di file e fare clic su **OK**.
 
          > [!NOTE]
-         > È possibile ottenere una stringa di connessione visualizzando le proprietà di una connessione esistente in Esplora Server, oppure è possibile creare una connessione facendo doppio clic su **Aggiungi connessione** in Esplora Server.
+         > È possibile ottenere una stringa di connessione visualizzando le proprietà di una connessione esistente nel **Esplora Server**, oppure è possibile creare una connessione facendo doppio clic su **Aggiungi connessione** in **Server Esplora**.
 
-      2. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.
+      1. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.
 
-      3. Immettere il catalogo iniziale da usare.
+      1. Immettere il catalogo iniziale da usare.
 
-      4. Fare clic su **Test connessione**; se il test ha esito positivo, fare clic su **OK**. In caso contrario, controllare le informazioni di accesso, provare un altro database o provare un altro server di dati.
+      1. Fare clic su **Test connessione**; se il test ha esito positivo, fare clic su **OK**. In caso contrario, controllare le informazioni di accesso, provare un altro database o provare un altro server di dati.
 
    - **Advanced** scheda
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bd01cf5c153fcd31bae1a73fead87fe480cdd2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a3a93d434907a2a3ff13053ee4b932201de22f3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030423"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861408"
 ---
 # <a name="references-c"></a>Riferimenti (C++)
 
@@ -32,41 +32,35 @@ Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto 
 
 È possibile dichiarare i riferimenti tramite la seguente sintassi:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator [= expression];
-```
+> \[*identificatori di classi di archiviazione*] \[ *elementi cv-Qualifier*] *gli identificatori di tipo* \[ *ms-modifier*]  *dichiaratore* \[ **=** *espressione*]**;**
 
 È possibile usare qualsiasi dichiaratore valido che specifica un riferimento. A meno che il riferimento non sia un riferimento al tipo di funzione o di matrice, si applica la sintassi seguente semplificata:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&] 
-[cv-qualifiers] identifier [= expression];
-```
+> \[*identificatori di classi di archiviazione*] \[ *elementi cv-Qualifier*] *gli identificatori di tipo* \[ **&** o **&&**] \[ *elementi cv-Qualifier*] *identificatore* \[ **=** *espressione*]**;**
 
 I riferimenti vengono dichiarati tramite la seguente sequenza:
 
 1. Gli identificatori di dichiarazione:
 
-- Identificatore della classe di archiviazione facoltativo.
+   - Identificatore della classe di archiviazione facoltativo.
 
-- Facoltativo **const** e/o **volatile** qualificatori.
+   - Facoltativo **const** e/o **volatile** qualificatori.
 
-- Il tipo di identificatore: il nome di un tipo.
+   - Il tipo di identificatore: il nome di un tipo.
 
-- 2. Dichiaratore:
+1. Dichiaratore:
 
-- Un modificatore facoltativo specifico di Microsoft. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Un modificatore facoltativo specifico di Microsoft. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-- L'operatore & oppure l'operatore &&.
+   - Il **&** operatore o **&&** operatore.
 
-- Facoltativo **const** e/o **volatile** qualificatori.
+   - Facoltativo **const** e/o **volatile** qualificatori.
 
-- Identificatore.
+   - Identificatore.
 
-3. Inizializzatore facoltativo.
+1. Inizializzatore facoltativo.
 
-I form di dichiaratori più complessi per i puntatori a matrici e le funzioni si applicano anche ai riferimenti alle matrici e funzioni, vedere [puntatori](../cpp/pointers-cpp.md).
+Le forme più complesse dichiaratore per puntatori a matrici e funzioni si applicano anche ai riferimenti a matrici e funzioni. Per altre informazioni, vedere [puntatori](../cpp/pointers-cpp.md).
 
 Più dichiaratori e inizializzatori possono essere visualizzati in un elenco separato da virgola che segue un singolo identificatore di dichiarazione. Ad esempio:
 
@@ -83,7 +77,7 @@ int &ref, *ptr, k;
 
 Un riferimento contiene l'indirizzo di un oggetto, ma dal punto di vista sintattico si comporta come un oggetto.
 
-Nel seguente programma osservare come il nome dell'oggetto, `Today` e il riferimento all'oggetto, `TodayRef`, possano essere usati in modo identico nei programmi:
+Nel seguente programma osservare come il nome dell'oggetto, `s` e il riferimento all'oggetto, `SRef`, possano essere usati in modo identico nei programmi:
 
 ## <a name="example"></a>Esempio
 
@@ -120,4 +114,3 @@ int main() {
 [Argomenti della funzione tipo-riferimento](../cpp/reference-type-function-arguments.md)<br/>
 [Elementi restituiti dalla funzione tipo-riferimento](../cpp/reference-type-function-returns.md)<br/>
 [Riferimenti a puntatori](../cpp/references-to-pointers.md)
-

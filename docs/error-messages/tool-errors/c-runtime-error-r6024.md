@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b258b12bb1ad7e47a7b126b8fd503814186645
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df874ae68f786585e85a8bc1b01ea8d0ac831d87
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041597"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861291"
 ---
 # <a name="c-runtime-error-r6024"></a>R6024 di errore di Runtime C
 
 spazio insufficiente per la tabella di OnExit
 
 > [!NOTE]
->  Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema di memoria interna. Questo errore è causato generalmente da una condizione di memoria estremamente basse, o raramente, da un bug nel programma o al danneggiamento delle librerie Visual C++ che usa.
+> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema di memoria interna. Questo errore è causato generalmente da una condizione di memoria estremamente basse, o raramente, da un bug nel programma o al danneggiamento delle librerie Visual C++ che usa.
 >
->  Per risolvere questo errore, è possibile provare questi passaggi:
+> Per risolvere questo errore, è possibile provare questi passaggi:
 >
->  -   Chiudere le altre applicazioni in esecuzione oppure riavviare il computer per liberare memoria.
-> -   Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
-> -   Usare il **App e funzionalità** oppure **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare tutte le copie di Microsoft Visual C++ Redistributable.
-> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
-> -   Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+> - Chiudere le altre applicazioni in esecuzione oppure riavviare il computer per liberare memoria.
+> - Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare il programma.
+> - Usare il **App e funzionalità** oppure **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare tutte le copie di Microsoft Visual C++ Redistributable.
+> - Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
+> - Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
 
 **Informazioni per i programmatori**
 

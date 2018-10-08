@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116100"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861785"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Creazione guidata componente ATL COM+ 1.0
 
@@ -34,7 +34,7 @@ Per altre informazioni sulle classi ATL COM e progetti ATL, vedere [ATL COM Desk
    |Opzione|Descrizione|
    |------------|-----------------|
    |**Dual**|Specifica che l'oggetto supporta le interfacce duali (relativo vtable ha funzioni dell'interfaccia personalizzata e associazione tardiva `IDispatch` metodi). Consente ai client COM e i controller di automazione accedere all'oggetto.|
-   |**Personalizzato**|Specifica che l'oggetto supporta un'interfaccia personalizzata (relativo vtable ha funzioni dell'interfaccia personalizzata). Un'interfaccia personalizzata può essere più veloce rispetto a un'interfaccia duale, in particolare tra i limiti dei processi.<br /><br /> -   **Compatibile con l'automazione** aggiunge il supporto di automazione per l'interfaccia personalizzata. Per i progetti con gli attributi, imposta la **oleautomation** attributo nella coclasse.|
+   |**Personalizzato**|Specifica che l'oggetto supporta un'interfaccia personalizzata (relativo vtable ha funzioni dell'interfaccia personalizzata). Un'interfaccia personalizzata può essere più veloce rispetto a un'interfaccia duale, in particolare tra i limiti dei processi.<br /><br /> - **Compatibile con l'automazione** aggiunge il supporto di automazione per l'interfaccia personalizzata. Per i progetti con gli attributi, imposta la **oleautomation** attributo nella coclasse.|
 
 - **Accodabili**
 

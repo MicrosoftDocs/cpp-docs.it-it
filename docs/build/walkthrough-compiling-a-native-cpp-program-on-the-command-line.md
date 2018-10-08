@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f8fad0c4676e8dfedcf8e80332c0a239f230cb
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821192"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860407"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando
 
@@ -140,7 +140,7 @@ Prima di poter compilare un programma C o C++ nella riga di comando, è necessar
    > [!NOTE]
    > Se viene visualizzato un avviso o errore del linker o diversa del compilatore, esaminare il codice sorgente per correggere eventuali errori, quindi salvare il file ed eseguire nuovamente il compilatore. Per informazioni sugli errori specifici, usare la casella di ricerca in questa pagina MSDN per cercare il numero di errore.
 
-7. Per eseguire il programma hello.exe, immettere `hello`al prompt dei comandi.
+1. Per eseguire il programma hello.exe, immettere `hello`al prompt dei comandi.
 
    Il programma viene avviato e chiuso dopo aver visualizzato il testo seguente:
 

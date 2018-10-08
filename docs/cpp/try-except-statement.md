@@ -1,7 +1,7 @@
 ---
 title: try-except Statement | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031443"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861928"
 ---
 # <a name="try-except-statement"></a>Istruzione try-except
 
@@ -50,7 +50,14 @@ Il **try-tranne** istruzione è un'estensione Microsoft C e linguaggi di C++ che
 
 ## <a name="syntax"></a>Sintassi
 
-> **try** {/ / sorvegliato codice} **except** ( *espressione* ) {/ / codice del gestore eccezioni}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;codice controllato<br/>
+> }<br/>
+> **except** ( *espressione* )<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;codice del gestore eccezioni<br/>
+> }<br/>
 
 ## <a name="remarks"></a>Note
 
@@ -67,15 +74,15 @@ L'istruzione composta dopo la **try** clausola è il corpo o la sezione protetta
 
 1. La sezione protetta viene eseguita.
 
-2. Se si verifica alcuna eccezione durante l'esecuzione della sezione protetta, l'esecuzione continua in corrispondenza dell'istruzione dopo il **except** clausola.
+1. Se si verifica alcuna eccezione durante l'esecuzione della sezione protetta, l'esecuzione continua in corrispondenza dell'istruzione dopo il **except** clausola.
 
-3. Se si verifica un'eccezione durante l'esecuzione della sezione protetta o nelle routine chiamate dalla sezione protetta, il **except** *expression* (chiamato il *filtro* espressione) viene valutata e il valore determina come viene gestita l'eccezione. Sono disponibili tre valori:
+1. Se si verifica un'eccezione durante l'esecuzione della sezione protetta o nelle routine chiamate dalla sezione protetta, il **except** *expression* (chiamato il *filtro* espressione) viene valutata e il valore determina come viene gestita l'eccezione. Esistono tre possibili valori:
 
-   EXCEPTION_CONTINUE_EXECUTION (-1) eccezione viene chiusa. Continuare l'esecuzione nel punto in cui si è verificata l'eccezione.
+   - EXCEPTION_CONTINUE_EXECUTION (-1) eccezione viene chiusa. Continuare l'esecuzione nel punto in cui si è verificata l'eccezione.
 
-   Exception_continue_search (0) eccezione non viene riconosciuta. Continuare la ricerca dello stack per un gestore, prima per contenere le istruzioni **try-except**, quindi per i gestori con la precedenza successiva più elevata.
+   - Exception_continue_search (0) eccezione non viene riconosciuta. Continuare la ricerca dello stack per un gestore, prima per contenere le istruzioni **try-except**, quindi per i gestori con la precedenza successiva più elevata.
 
-   Exception_execute_handler (1) l'eccezione viene riconosciuta. Trasferire il controllo al gestore eccezioni eseguendo il **except** istruzione composta, quindi continuare l'esecuzione dopo il **except** blocco.
+   - Exception_execute_handler (1) l'eccezione viene riconosciuta. Trasferire il controllo al gestore eccezioni eseguendo il **except** istruzione composta, quindi continuare l'esecuzione dopo il **except** blocco.
 
 Poiché il **except** espressione viene valutata come un'espressione C, è limitata a un singolo valore, l'operatore di espressione condizionale o l'operatore virgola. Se è necessaria un'elaborazione più estesa, l'espressione può chiamare una routine che restituisce uno dei tre valori sopra elencati.
 
@@ -83,9 +90,7 @@ Ogni applicazione può essere associata al proprio gestore di eccezioni.
 
 Non è valido passare a un **try** istruzione, ma è valido uscire da uno. Il gestore di eccezioni non viene chiamato se un processo viene terminato nel corso dell'esecuzione una **try-tranne** istruzione.
 
-Per ulteriori informazioni, vedere l'articolo della Knowledge Base Q315937: Procedura: Intercettare l'overflow dello stack nell'applicazione Visual C++.
-
-## <a name="the-leave-keyword"></a>La parola chiave __leave
+### <a name="the-leave-keyword"></a>La parola chiave __leave
 
 Il **Leave** parola chiave è valida solo all'interno della sezione protetta di un **provare-tranne** istruzione e relativo effetto è il passaggio alla fine della sezione protetta. L'esecuzione continua con la prima istruzione dopo il gestore dell'eccezione.
 
@@ -170,7 +175,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+### <a name="output"></a>Output
 
 ```Output
 hello

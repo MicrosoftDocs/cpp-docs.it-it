@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f4b4529e0faf433ff9dc5c4fc2c0594a4d9ff6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b14d6e20f58ef5a9fbda6d640f5c8a596635d70c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076645"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861707"
 ---
 # <a name="c-runtime-error-r6016"></a>R6016 di errore di Runtime C
 
 Spazio per i dati di thread insufficiente.
 
 > [!NOTE]
->  Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema di memoria interna. Esistono molti motivi possibili per questo errore, ma spesso è causato da una condizione di memoria estremamente basse, un bug nell'app o da un bug in un componente aggiuntivo o l'estensione usata dall'app.
+> Se si verifica questo messaggio di errore durante l'esecuzione di un'app, l'app è stata arrestata perché ha un problema di memoria interna. Esistono molti motivi possibili per questo errore, ma spesso è causato da una condizione di memoria estremamente basse, un bug nell'app o da un bug in un componente aggiuntivo o l'estensione usata dall'app.
 >
->  Per risolvere questo errore, è possibile provare questi passaggi:
+> Per risolvere questo errore, è possibile provare questi passaggi:
 >
->  -   Chiudere le altre applicazioni in esecuzione oppure riavviare il computer per liberare memoria.
-> -   Usare il **App e funzionalità** oppure **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare l'app.
-> -   Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per rimuovere, ripristinare o reinstallare i componenti aggiuntivi o estensioni usate dall'app.
-> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
-> -   Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
+> - Chiudere le altre applicazioni in esecuzione oppure riavviare il computer per liberare memoria.
+> - Usare il **App e funzionalità** oppure **programmi e funzionalità** nella pagina il **Pannello di controllo** per ripristinare o reinstallare l'app.
+> - Usare la **App e funzionalità** o **programmi e funzionalità** nella pagina il **Pannello di controllo** per rimuovere, ripristinare o reinstallare i componenti aggiuntivi o estensioni usate dall'app.
+> - Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.
+> - Cercare una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.
 
 **Informazioni per i programmatori**
 

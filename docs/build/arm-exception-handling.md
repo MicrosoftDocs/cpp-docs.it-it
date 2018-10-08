@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ae80e1f7f824f41f6bc0b3f979973f5867666354
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711230"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861655"
 ---
 # <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
@@ -82,15 +82,15 @@ Questa tabella mostra il formato di un record .pdata che contiene dati di rimozi
 |Offset parola|Bit|Scopo|
 |-----------------|----------|-------------|
 |0|0-31|*Funzione avviare RVA* è il RVA a 32 bit dell'inizio della funzione. Se la funzione contiene codice Thumb, è necessario impostare il bit inferiore di questo indirizzo.|
-|1|0-1|*Flag* è un campo a 2 bit che ha i seguenti significati:<br /><br /> -00 = compresso di rimozione dei dati non utilizzati; bit restanti punti al record. xdata.<br />-01 = compresso dei dati di rimozione.<br />-10 = compresso dei dati in cui la funzione si presuppone che non abbia un prologo di rimozione. Si rivela utile per la descrizione dei frammenti di funzione non contigui all'inizio della funzione.<br />-11 = riservato.|
+|1|0-1|*Flag* è un campo a 2 bit che ha i seguenti significati:<br /><br />-00 = compresso di rimozione dei dati non utilizzati; bit restanti punti al record. xdata.<br />-01 = compresso dei dati di rimozione.<br />-10 = compresso dei dati in cui la funzione si presuppone che non abbia un prologo di rimozione. Si rivela utile per la descrizione dei frammenti di funzione non contigui all'inizio della funzione.<br />-11 = riservato.|
 |1|2-12|*Funzione lunghezza* è un campo a 11 bit che indica la lunghezza dell'intera funzione in byte diviso 2. Se la funzione è superiore a 4000 byte, è invece necessario usare un record .xdata completo.|
-|1|13-14|*RET* è un campo a 2 bit che indica come la funzione restituisce:<br /><br /> -00 = restituzione tramite pop {pc} (il *L* bit del flag deve essere impostata su 1 in questo caso).<br />-01 = restituzione tramite un branch a 16 bit.<br />-10 = restituzione tramite un branch a 32 bit.<br />-11 = Nessun epilogo affatto. Si rivela utile per descrivere un frammento di funzione non contiguo che può solo contenere un prologo, ma il cui epilogo si trova altrove.|
+|1|13-14|*RET* è un campo a 2 bit che indica come la funzione restituisce:<br /><br />-00 = restituzione tramite pop {pc} (il *L* bit del flag deve essere impostata su 1 in questo caso).<br />-01 = restituzione tramite un branch a 16 bit.<br />-10 = restituzione tramite un branch a 32 bit.<br />-11 = Nessun epilogo affatto. Si rivela utile per descrivere un frammento di funzione non contiguo che può solo contenere un prologo, ma il cui epilogo si trova altrove.|
 |1|15|*H* è un flag a 1 bit che indica se la funzione "ospita" parametro di tipo integer Registra (r0-r3) eseguendone il push all'inizio della funzione e dealloca i 16 byte di stack prima della restituzione. (0 = non ospita i registri, 1 = ospita i registri.)|
 |1|16-18|*Reg* un campo di 3 bit che indica l'indice dell'ultimo salvataggio registro non volatile. Se il *R* bit è 0, quindi vengono salvati solo i registri integer che rientrano nell'intervallo r4-RN, dove N è pari a 4 + *Reg*. Se il *R* bit è 1, quindi vengono salvati, registri a virgola mobile solo che rientrano nell'intervallo d8-DN, dove N è pari a 8 + *Reg*. La combinazione speciale di *R* = 1 e *Reg* = 7 indica che non viene salvato alcun registro.|
 |1|19|*R* è un flag a 1 bit che indica se i registri non volatili salvati sono registri integer (0) o registri a virgola mobile (1). Se *R* è impostato su 1 e il *Reg* campo è impostato su 7, non è sono inseriti alcun registri non volatili.|
 |1|20|*L* è un flag a 1 bit che indica se la funzione Salva/Ripristina registri LR, oltre agli altri registri indicati dal *Reg* campo. (0 = non salva/ripristina, 1 = salva/ripristina).|
 |1|21|*C* è un flag a 1 bit che indica se la funzione include istruzioni aggiuntive per configurare una catena di frame per rapida dello stack (1) o No (0). Se questo bit è impostato, r11 viene aggiunto implicitamente all'elenco di registri Integer non volatili salvati. (Vedere le restrizioni seguenti se il *C* flag viene utilizzato.)|
-|1|22-31|*Stack Adjust* è un campo a 10 bit che indica il numero di byte di stack allocati per questa funzione, divisa 4. Tuttavia, solo i valori compresi tra 0x000 e 0x3F3 possono essere codificati direttamente. Le funzioni che allocano più di 4044 byte di stack devono usare un record .xdata completo. Se il *Stack regolare* campo è 0x3F4 o maggiore, 4 bit inferiori hanno un significato speciale:<br /><br /> -I bit 0-1 indicano il numero di parole di regolazione dello stack (1-4) meno 1.<br />-Bit 2 è impostato su 1 se il prologo ha combinato questa regolazione nella propria operazione push.<br />-Bit 3 è impostato su 1 se l'epilogo ha combinato questa regolazione nella propria operazione pop.|
+|1|22-31|*Stack Adjust* è un campo a 10 bit che indica il numero di byte di stack allocati per questa funzione, divisa 4. Tuttavia, solo i valori compresi tra 0x000 e 0x3F3 possono essere codificati direttamente. Le funzioni che allocano più di 4044 byte di stack devono usare un record .xdata completo. Se il *Stack regolare* campo è 0x3F4 o maggiore, 4 bit inferiori hanno un significato speciale:<br /><br />-I bit 0-1 indicano il numero di parole di regolazione dello stack (1-4) meno 1.<br />-Bit 2 è impostato su 1 se il prologo ha combinato questa regolazione nella propria operazione push.<br />-Bit 3 è impostato su 1 se l'epilogo ha combinato questa regolazione nella propria operazione pop.|
 
 Date le possibili ridondanze nelle codifiche descritte sopra, si applicano le seguenti limitazioni:
 
@@ -187,7 +187,7 @@ Quando il formato di rimozione compresso non è sufficiente per descrivere la ri
    |1|16-23|*Estesi parole codice* è un campo a 8 bit che fornisce spazio aggiuntivo per codificare un numero di parole di codice di rimozione insolitamente ampio. La parola di estensione che contiene questo campo è presente solo se il *conteggio di epilogo* e *parole codice* campi nella prima parola di intestazione sono impostati entrambi su 0.|
    |1|24-31|Riservata|
 
-2. I dati (se il *elettronica* bit nell'intestazione è stato impostato su 0) è un elenco di informazioni sugli ambiti di epilogo, compresse una per una parola e archiviate in ordine di inizio offset crescente. Ogni ambito contiene i campi seguenti:
+1. I dati (se il *elettronica* bit nell'intestazione è stato impostato su 0) è un elenco di informazioni sugli ambiti di epilogo, compresse una per una parola e archiviate in ordine di inizio offset crescente. Ogni ambito contiene i campi seguenti:
 
    |Bit|Scopo|
    |----------|-------------|
@@ -196,9 +196,9 @@ Quando il formato di rimozione compresso non è sufficiente per descrivere la ri
    |20-23|*Condizione* è un campo a 4 bit che indica la condizione in cui viene eseguito l'epilogo. Per gli epiloghi non condizionali, deve essere impostato su 0xE, che significa "sempre". Si noti che un epilogo deve essere interamente condizionale o interamente non condizionale e, in modalità Thumb-2, l'epilogo inizia con la prima istruzione dopo l'opcode IT.|
    |24-31|*Indice iniziale di epilogo* è un campo a 8 bit che indica l'indice di byte del primo codice di rimozione che descrive questo epilogo.|
 
-3. L'elenco di ambiti di epilogo è seguito da una matrice di byte che contiene codici di rimozione, descritti in dettaglio nella sezione Codici di rimozione di questo articolo. Questa matrice viene riempita alla fine fino al più vicino confine di parola completa. I byte sono archiviati in ordine little-endian, in modo da essere direttamente recuperabili in modalità little-endian.
+1. L'elenco di ambiti di epilogo è seguito da una matrice di byte che contiene codici di rimozione, descritti in dettaglio nella sezione Codici di rimozione di questo articolo. Questa matrice viene riempita alla fine fino al più vicino confine di parola completa. I byte sono archiviati in ordine little-endian, in modo da essere direttamente recuperabili in modalità little-endian.
 
-4. Se il *X* campo dell'intestazione è 1, i byte di codice di rimozione sono seguiti dalle informazioni sul gestore dell'eccezione. Si tratta di un *eccezione gestore RVA* che contiene l'indirizzo del gestore di eccezioni, seguito immediatamente dalla quantità di dati richiesti dal gestore di eccezioni (a lunghezza variabile).
+1. Se il *X* campo dell'intestazione è 1, i byte di codice di rimozione sono seguiti dalle informazioni sul gestore dell'eccezione. Si tratta di un *eccezione gestore RVA* che contiene l'indirizzo del gestore di eccezioni, seguito immediatamente dalla quantità di dati richiesti dal gestore di eccezioni (a lunghezza variabile).
 
 Il record .xdata è progettato in modo da consentire il recupero dei primi 8 byte e il calcolo della dimensione totale del record, esclusa la lunghezza dei dati di eccezione a lunghezza variabile che seguono. Questo frammento di codice calcola la dimensione del record:
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 512f791b3db513c2a143bda84a8dc2677b341544
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1b8074ad511544dcc6638ca804a26745e3da317b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106046"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860342"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Aggiunta di una finestra di dialogo ATL
 
@@ -30,15 +30,15 @@ Per aggiungere una finestra di dialogo ATL al progetto, il progetto deve essere 
 Per impostazione predefinita, la creazione guidata finestra di dialogo ATL implementa una finestra di dialogo derivata da [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Questa classe include il supporto per l'hosting di controlli ActiveX e Windows. Se non si desidera il sovraccarico di supporto per il controllo ActiveX, una volta generato il codice con la procedura guidata, sostituire tutte le istanze del `CAxDialogImpl` con uno [CSimpleDialog](../../atl/reference/csimpledialog-class.md) oppure [CDialogImpl](../../atl/reference/cdialogimpl-class.md) come classe base .
 
 > [!NOTE]
->  `CSimpleDialog` Crea solo le finestre di dialogo modale che supportano solo i controlli comuni di Windows. `CDialogImpl` Crea finestre di dialogo modale o non modale.
+> `CSimpleDialog` Crea solo le finestre di dialogo modale che supportano solo i controlli comuni di Windows. `CDialogImpl` Crea finestre di dialogo modale o non modale.
 
-### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Per aggiungere una risorsa finestra di dialogo ATL al progetto
+## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Per aggiungere una risorsa finestra di dialogo ATL al progetto
 
 1. Creare un progetto ATL usando il [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md).
 
-2. Dal [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare clic sul nome del progetto e fare clic su **Add** dal menu di scelta rapida. Fare clic su **aggiungere classe**.
+1. Dal [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare clic sul nome del progetto e fare clic su **Add** dal menu di scelta rapida. Fare clic su **aggiungere classe**.
 
-3. Nel riquadro dei modelli dei [Aggiungi classe](../../ide/add-class-dialog-box.md) finestra di dialogo, fare clic su **finestra di dialogo ATL**. Fare clic su **aperto** per visualizzare i [Creazione guidata finestra di dialogo ATL](../../atl/reference/atl-dialog-wizard.md).
+1. Nel **modelli** riquadro della finestra il [Aggiungi classe](../../ide/add-class-dialog-box.md) della finestra di dialogo fare clic su **finestra di dialogo ATL**. Fare clic su **aperto** per visualizzare i [Creazione guidata finestra di dialogo ATL](../../atl/reference/atl-dialog-wizard.md).
 
 Per altre informazioni, vedere [implementazione di una finestra di dialogo](../../atl/implementing-a-dialog-box.md).
 
@@ -47,4 +47,3 @@ Per altre informazioni, vedere [implementazione di una finestra di dialogo](../.
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Classi di finestre](../../atl/atl-window-classes.md)<br/>
 [Mappe messaggi](../../atl/message-maps-atl.md)
-

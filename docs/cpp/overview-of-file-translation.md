@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829afe53d5fde976b7877475cf577b6204be8aed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d0aa647f6f94d31f1a06bb09b143554dba51b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051087"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861746"
 ---
 # <a name="overview-of-file-translation"></a>Cenni preliminari sulla conversione di file
 
@@ -32,9 +32,9 @@ I programmi C++, come i programmi C, sono composti da uno o più file. Ognuno di
 
 1. Suddivisione in token lessicale. Il mapping dei caratteri, l'elaborazione dei trigrammi, lo splicing delle righe e la suddivisione in token vengono eseguiti in questa fase della conversione.
 
-2. Pre-elaborazione Questa fase della conversione vengono nei file di origine ausiliari fa `#include` direttive, gestisce "Creazione di stringhe" e "charizing" direttive ed esegue l'espansione di macro e Incolla per token (vedere [direttive per il preprocessore](../preprocessor/preprocessor-directives.md) nel *riferimenti al preprocessore* per altre informazioni). Il risultato della fase di pre-elaborazione è una sequenza di token che, insieme, definiscono un'"unità di conversione."
+1. Pre-elaborazione Questa fase della conversione vengono nei file di origine ausiliari fa `#include` direttive, gestisce "Creazione di stringhe" e "charizing" direttive ed esegue l'espansione di macro e Incolla per token (vedere [direttive per il preprocessore](../preprocessor/preprocessor-directives.md) nel *riferimenti al preprocessore* per altre informazioni). Il risultato della fase di pre-elaborazione è una sequenza di token che, insieme, definiscono un'"unità di conversione."
 
-     Le direttive del preprocessore iniziano sempre con il simbolo di numero (**#**) carattere (vale a dire il primo carattere diverso dallo spazio sulla riga deve essere un simbolo di cancelletto). In una determinata riga può essere visualizzata una sola direttiva per il preprocessore. Ad esempio:
+   Le direttive del preprocessore iniziano sempre con il simbolo di numero (**#**) carattere (vale a dire il primo carattere diverso dallo spazio sulla riga deve essere un simbolo di cancelletto). In una determinata riga può essere visualizzata una sola direttiva per il preprocessore. Ad esempio:
 
     ```cpp
     #include <iostream>  // Include text of iostream in
@@ -43,9 +43,9 @@ I programmi C++, come i programmi C, sono composti da uno o più file. Ognuno di
                          //  text string).
     ```
 
-3. Generazione di codice. In questa fase della conversione vengono utilizzati i token generati nella fase di pre-elaborazione per generare il codice dell'oggetto.
+1. Generazione di codice. In questa fase della conversione vengono utilizzati i token generati nella fase di pre-elaborazione per generare il codice dell'oggetto.
 
-     Durante questa fase, viene eseguito il controllo sintattico e semantico del codice sorgente.
+   Durante questa fase, viene eseguito il controllo sintattico e semantico del codice sorgente.
 
 Visualizzare [Phases of Translation](../preprocessor/phases-of-translation.md) nel *riferimenti al preprocessore* per altre informazioni.
 

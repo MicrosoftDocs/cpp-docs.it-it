@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387016"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860563"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Operazioni di CString relative alle stringhe in formato C
 
@@ -67,7 +67,7 @@ Talvolta potrebbe essere necessaria una copia dei dati di `CString` da modificar
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  Il terzo argomento `strcpy_s` (o il portabile Unicode/MBCS `_tcscpy_s`) è un `const wchar_t*` (Unicode) o un `const char*` (ANSI). L'esempio precedente passa un oggetto `CString` per questo argomento. Il compilatore C++ applica automaticamente la funzione di conversione definita per la classe `CString` che converte `CString` in `LPCTSTR`. La possibilità di definire le operazioni di cast da un tipo a un altro è una delle funzionalità più utili di C++.
+> Il terzo argomento `strcpy_s` (o il portabile Unicode/MBCS `_tcscpy_s`) è un `const wchar_t*` (Unicode) o un `const char*` (ANSI). L'esempio precedente passa un oggetto `CString` per questo argomento. Il compilatore C++ applica automaticamente la funzione di conversione definita per la classe `CString` che converte `CString` in `LPCTSTR`. La possibilità di definire le operazioni di cast da un tipo a un altro è una delle funzionalità più utili di C++.
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Utilizzo di funzioni della libreria runtime Standard
 
@@ -83,13 +83,13 @@ Ci sono casi in cui è opportuno modificare direttamente il contenuto di `CStrin
 
 I metodi `GetBuffer` e `ReleaseBuffer` consentono di accedere al buffer di caratteri interno di un oggetto `CString` e di modificarlo direttamente. I passaggi seguenti mostrano come usare queste funzioni a tale scopo.
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Per usare GetBuffer e ReleaseBuffer per accedere al buffer di caratteri interno di un oggetto CString
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Per usare GetBuffer e ReleaseBuffer per accedere al buffer di caratteri interno di un oggetto CString
 
 1. Chiamare `GetBuffer` per un oggetto `CString` e specificare la lunghezza del buffer necessaria.
 
-2. Usare il puntatore restituito da `GetBuffer` per scrivere i caratteri direttamente nell'oggetto `CString`.
+1. Usare il puntatore restituito da `GetBuffer` per scrivere i caratteri direttamente nell'oggetto `CString`.
 
-3. Chiamare `ReleaseBuffer` per l'oggetto `CString` per aggiornare tutte le informazioni interne sullo stato di `CString`, ad esempio la lunghezza della stringa. Dopo aver modificato direttamente il contenuto di un oggetto `CString`, è necessario chiamare `ReleaseBuffer` prima di poter chiamare altre funzioni membro di `CString`.
+1. Chiamare `ReleaseBuffer` per l'oggetto `CString` per aggiornare tutte le informazioni interne sullo stato di `CString`, ad esempio la lunghezza della stringa. Dopo aver modificato direttamente il contenuto di un oggetto `CString`, è necessario chiamare `ReleaseBuffer` prima di poter chiamare altre funzioni membro di `CString`.
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Uso di oggetti CString con funzioni con argomenti variabili
 
@@ -113,4 +113,3 @@ Per la maggior parte dei risultati di funzione, è sufficiente restituire un ogg
 
 [Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Passaggio degli argomenti di CString](../atl-mfc-shared/cstring-argument-passing.md)
-

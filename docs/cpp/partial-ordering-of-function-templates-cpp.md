@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b550cd0b76aa0a2e061536ae6bb0ea61063909
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 048589ecab367a3762764b627de11d72160c4602
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087747"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861304"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Ordinamento parziale di modelli di funzione (C++)
 
@@ -31,23 +31,23 @@ Utilizzare la procedura seguente per determinare se un candidato di modello di f
 
 1. Considerare due modelli di funzione, T1 e T2.
 
-2. Sostituire i parametri in T1 con un tipo univoco ipotetico X.
+1. Sostituire i parametri in T1 con un tipo univoco ipotetico X.
 
-3. Con l'elenco di parametri in T1, vedere se T2 è un modello valido per tale elenco di parametri. Ignorare tutte le conversioni implicite.
+1. Con l'elenco di parametri in T1, vedere se T2 è un modello valido per tale elenco di parametri. Ignorare tutte le conversioni implicite.
 
-4. Ripetere la stessa procedura con T1 e T2 all'inverso.
+1. Ripetere la stessa procedura con T1 e T2 all'inverso.
 
-5. Se un modello è un elenco di argomenti di modello valido per l'altro modello, ma non è vero il contrario, tale modello è considerato meno specializzato dell'altro. Se entrambi i modelli tramite il precedente passaggio form gli argomenti validi per l'altro, verranno considerati ugualmente specializzati e risultati di una chiamata ambigua quando si tenta di usarli.
+1. Se un modello è un elenco di argomenti di modello valido per l'altro modello, ma non è vero il contrario, tale modello è considerato meno specializzato dell'altro. Se entrambi i modelli tramite il precedente passaggio form gli argomenti validi per l'altro, verranno considerati ugualmente specializzati e risultati di una chiamata ambigua quando si tenta di usarli.
 
-6. Utilizzare le regole seguenti:
+1. Utilizzare le regole seguenti:
 
-     1. Una specializzazione di modello per un tipo specifico è più specializzata di una che accetta un argomento tipo generico.
+   1. Una specializzazione di modello per un tipo specifico è più specializzata di una che accetta un argomento tipo generico.
 
-     2. Un modello richiede solo __T\*__  è più specializzato richiede un solo __T__, perché il tipo di un ipotetico __X\*__  è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __T\*__  argomento di modello.
+   1. Un modello richiede solo __T\*__  è più specializzato richiede un solo __T__, perché il tipo di un ipotetico __X\*__  è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __T\*__  argomento di modello.
 
-     3. __const T__ è più specializzato __T__, in quanto __const X__ è un argomento valido per un __T__ argomento di modello, ma __X__ è argomento non valido per un __const T__ argomento di modello.
+   1. __const T__ è più specializzato __T__, in quanto __const X__ è un argomento valido per un __T__ argomento di modello, ma __X__ è argomento non valido per un __const T__ argomento di modello.
 
-     4. __const T\*__  è più specializzato __T\*__, in quanto __const X\*__  è un argomento valido per un __T\*__  argomento di modello, ma __X\*__  non è un argomento valido per un __const T\*__  argomento di modello.
+   1. __const T\*__  è più specializzato __T\*__, in quanto __const X\*__  è un argomento valido per un __T\*__  argomento di modello, ma __X\*__  non è un argomento valido per un __const T\*__  argomento di modello.
 
 ## <a name="example"></a>Esempio
 

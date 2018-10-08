@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f80abd3b6270f105fecd7ef8b9988a379901b541
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069430"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860212"
 ---
 # <a name="specifying-property-pages"></a>Specificare le pagine delle proprietà
 
@@ -32,12 +32,12 @@ Per implementare `ISpecifyPropertyPages` utilizzando ATL, procedere come segue:
 
 1. Derivare la classe da [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).
 
-2. Aggiungere una voce per `ISpecifyPropertyPages` alla mappa COM della classe.
+1. Aggiungere una voce per `ISpecifyPropertyPages` alla mappa COM della classe.
 
-3. Aggiungere un [PROP_PAGE](reference/property-map-macros.md#prop_page) voce alla mappa delle proprietà per ogni pagina associato al controllo.
+1. Aggiungere un [PROP_PAGE](reference/property-map-macros.md#prop_page) voce alla mappa delle proprietà per ogni pagina associato al controllo.
 
 > [!NOTE]
->  Durante la generazione di un controllo standard usando il [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md), sarà solo necessario aggiungere le voci PROP_PAGE al mapping della proprietà. La procedura guidata genera il codice necessario per gli altri passaggi.
+> Durante la generazione di un controllo standard usando il [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md), sarà solo necessario aggiungere le voci PROP_PAGE al mapping della proprietà. La procedura guidata genera il codice necessario per gli altri passaggi.
 
 I contenitori ben progettati visualizzerà le pagine delle proprietà specificato nello stesso ordine delle voci di PROP_PAGE nel mapping della proprietà. In generale, è opportuno inserire le voci della pagina proprietà standard dopo le voci per le pagine personalizzate nel mapping della proprietà, in modo che gli utenti visualizzano prima di tutto le pagine specifiche per il controllo.
 
@@ -51,4 +51,3 @@ La classe seguente per un calendario di controllo viene utilizzato il `ISpecifyP
 
 [Pagine delle proprietà](../atl/atl-com-property-pages.md)<br/>
 [Esempio ATLPages](../visual-cpp-samples.md)
-

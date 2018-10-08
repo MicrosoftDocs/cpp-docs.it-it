@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086de927a6927087b8cbf3d1501ba6420e1027ed
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61b9943488a9d6a720e8d86750b14ad044677112
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110805"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861837"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opzioni del compilatore e del linker (C++/CX)
 
@@ -28,7 +28,7 @@ La variabile di ambiente %LIBPATH% specifica il percorso predefinito in cui trov
 
 |Opzione|Descrizione|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Abilita le estensioni del linguaggio di Windows Runtime.<br /><br /> Il parametro `nostdlib` impedisce al compilatore di usare il percorso di ricerca predefinito standard per trovare i file WINMD e di assembly.<br /><br /> L'opzione del compilatore **/ZW** specifica in modo implicito le seguenti opzioni del compilatore:<br /><br /> -   **/Fi** vccorlib. h, che impone l'inclusione del file di intestazione vccorlib. h che definisce molti tipi richiesti dal compilatore.<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows. winmd, che impone l'inclusione del file di metadati Windows. winmd che è fornito dal sistema operativo e che definisce molti tipi di runtime di Windows.<br />-   **/FU** Platform.winmd, che impone l'inclusione del file di metadati Platform.winmd che è fornito dal compilatore e che definisce la maggior parte dei tipi nella famiglia di spazi dei nomi Platform.|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Abilita le estensioni del linguaggio di Windows Runtime.<br /><br /> Il parametro `nostdlib` impedisce al compilatore di usare il percorso di ricerca predefinito standard per trovare i file WINMD e di assembly.<br /><br /> L'opzione del compilatore **/ZW** specifica in modo implicito le seguenti opzioni del compilatore:<br /><br />- **/Fi** vccorlib. h, che impone l'inclusione del file di intestazione vccorlib. h che definisce molti tipi richiesti dal compilatore.<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows. winmd, che impone l'inclusione del file di metadati Windows. winmd che è fornito dal sistema operativo e che definisce molti tipi di runtime di Windows.<br />- **/FU** Platform. winmd, che impone l'inclusione del file di metadati Platform. winmd che è fornito dal compilatore e definisce la maggior parte dei tipi nella famiglia di spazi dei nomi Platform.|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Aggiunge una directory, specificata dal parametro *dir* , al percorso di ricerca usato dal compilatore per trovare i file WINMD e di assembly.|
 |**/FU**  *file*|Impone l'inclusione del file con estensione winmd o del modulo specificato. Questo significa che non è necessario specificare `#using`*file* nel codice sorgente. Il compilatore impone automaticamente l'inclusione del relativo file di metadati di Windows, Platform.winmd.|
 |/D "WINAPI_FAMILY=2"|Crea una definizione che consente l'utilizzo di un sottoinsieme di Win32 SDK compatibile con il Runtime di Windows.|

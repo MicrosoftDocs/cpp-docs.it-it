@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 585fd757c18c3a7c09645b64656e6ef77cde6dca
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716638"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861384"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -131,9 +131,9 @@ Questa fase viene eseguita una sola volta, prima di avviare l'elaborazione degli
 
 1. Il protocollo successivo per l'uso generico registrare numero (NGRN) è impostato su zero.
 
-2. Il successivo SIMD e numero di registro a virgola mobile (NSRN) è impostato su zero.
+1. Il successivo SIMD e numero di registro a virgola mobile (NSRN) è impostato su zero.
 
-3. L'indirizzo dell'argomento in pila avanti (l'indirizzo NSAA) è impostata sul valore di puntatore dello stack corrente (SP).
+1. L'indirizzo dell'argomento in pila avanti (l'indirizzo NSAA) è impostata sul valore di puntatore dello stack corrente (SP).
 
 ### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Fase B-pre-spaziatura interna e l'estensione di argomenti
 
@@ -141,11 +141,11 @@ Per ogni argomento nell'elenco viene applicata la prima regola corrispondente ne
 
 1. Se il tipo di argomento è un tipo composito la cui dimensione non è possibile determinare in modo statico per il chiamante e chiamato, l'argomento viene copiato in memoria e l'argomento viene sostituito da un puntatore alla copia. (Non sono disponibili tali tipi in C/C++, ma sono presenti in altri linguaggi o nelle estensioni di linguaggio).
 
-2. Se il tipo di argomento è un HFA o un tipo HVA, quindi viene utilizzato l'argomento non modificato.
+1. Se il tipo di argomento è un HFA o un tipo HVA, quindi viene utilizzato l'argomento non modificato.
 
-3. Se il tipo di argomento è un tipo composito che è maggiore di 16 byte, l'argomento viene copiato per la memoria allocata dal chiamante e l'argomento viene sostituito da un puntatore alla copia.
+1. Se il tipo di argomento è un tipo composito che è maggiore di 16 byte, l'argomento viene copiato per la memoria allocata dal chiamante e l'argomento viene sostituito da un puntatore alla copia.
 
-4. Se il tipo di argomento è un tipo composito la dimensione dell'argomento viene arrotondata al multiplo più vicino di 8 byte.
+1. Se il tipo di argomento è un tipo composito la dimensione dell'argomento viene arrotondata al multiplo più vicino di 8 byte.
 
 ### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Fase C-assegnazione di argomenti ai registri e allo stack
 
@@ -153,33 +153,33 @@ Per ogni argomento nell'elenco le seguenti regole vengono applicate a sua volta,
 
 1. Se l'argomento è una metà-, Single-, Double - o Quad-precisione a virgola mobile o tipo Short Vector e il NSRN è minore di 8, l'argomento viene allocato per i bit meno significativi del registratore di cassa v [NSRN]. Il NSRN viene incrementato di uno. L'argomento a questo punto è stato allocato.
 
-2. Se l'argomento è un HFA o un tipo HVA e sono presenti sufficienti SIMD non allocato e registri a virgola mobile (NSRN + numero di membri ≤ 8), l'argomento viene allocato per SIMD e registri a virgola mobile (con un registratore di cassa per ogni membro della HFA o HVA). Il NSRN viene incrementato del numero di registri usati. L'argomento a questo punto è stato allocato.
+1. Se l'argomento è un HFA o un tipo HVA e sono presenti sufficienti SIMD non allocato e registri a virgola mobile (NSRN + numero di membri ≤ 8), l'argomento viene allocato per SIMD e registri a virgola mobile (con un registratore di cassa per ogni membro della HFA o HVA). Il NSRN viene incrementato del numero di registri usati. L'argomento a questo punto è stato allocato.
 
-3. Se l'argomento è un HFA o un tipo HVA il NSRN è impostata su 8 e le dimensioni dell'argomento viene arrotondata per eccesso al più vicino di 8 byte.
+1. Se l'argomento è un HFA o un tipo HVA il NSRN è impostata su 8 e le dimensioni dell'argomento viene arrotondata per eccesso al più vicino di 8 byte.
 
-4. Se l'argomento è un HFA, un tipo HVA, un vettore di breve o a virgola mobile e precisione doppia Quad digitare l'indirizzo NSAA viene arrotondato un massimo di dimensioni maggiori di 8 o l'allineamento naturale del tipo dell'argomento.
+1. Se l'argomento è un HFA, un tipo HVA, un vettore di breve o a virgola mobile e precisione doppia Quad digitare l'indirizzo NSAA viene arrotondato un massimo di dimensioni maggiori di 8 o l'allineamento naturale del tipo dell'argomento.
 
-5. Se l'argomento è un tipo a virgola mobile e precisione singola o metà, la dimensione dell'argomento è impostata su 8 byte. L'effetto è come se l'argomento non fosse stato copiato bit meno significativi di un registro a 64 bit e i bit rimanenti compilati con i valori non specificati.
+1. Se l'argomento è un tipo a virgola mobile e precisione singola o metà, la dimensione dell'argomento è impostata su 8 byte. L'effetto è come se l'argomento non fosse stato copiato bit meno significativi di un registro a 64 bit e i bit rimanenti compilati con i valori non specificati.
 
-6. Se l'argomento è un HFA, alla memoria in corrispondenza dell'indirizzo NSAA viene copiato un tipo HVA, Half-, Single-, Double - o Quad-precisione a virgola mobile o breve del tipo vettore, quindi l'argomento. L'indirizzo NSAA viene incrementato della dimensione dell'argomento. L'argomento a questo punto è stato allocato.
+1. Se l'argomento è un HFA, alla memoria in corrispondenza dell'indirizzo NSAA viene copiato un tipo HVA, Half-, Single-, Double - o Quad-precisione a virgola mobile o breve del tipo vettore, quindi l'argomento. L'indirizzo NSAA viene incrementato della dimensione dell'argomento. L'argomento a questo punto è stato allocato.
 
-7. Se l'argomento è un tipo di puntatore o integrale, la dimensione dell'argomento è minore o uguale a 8 byte e il NGRN è minore di 8, l'argomento viene copiato il bit meno significativi in x [NGRN]. Il NGRN viene incrementato di uno. L'argomento a questo punto è stato allocato.
+1. Se l'argomento è un tipo di puntatore o integrale, la dimensione dell'argomento è minore o uguale a 8 byte e il NGRN è minore di 8, l'argomento viene copiato il bit meno significativi in x [NGRN]. Il NGRN viene incrementato di uno. L'argomento a questo punto è stato allocato.
 
-8. Se l'argomento ha un allineamento pari a 16 quindi il NGRN viene arrotondato per eccesso al successivo numero pari.
+1. Se l'argomento ha un allineamento pari a 16 quindi il NGRN viene arrotondato per eccesso al successivo numero pari.
 
-9. Se l'argomento è un tipo integrale, la dimensione dell'argomento è uguale a 16 e il NGRN è inferiore a 7, l'argomento viene copiato per x [NGRN] e x [NGRN + 1]. x [NGRN] deve contenere il più basso indirizzata-parola doppia della rappresentazione di memoria dell'argomento. Il NGRN viene incrementato a due. L'argomento a questo punto è stato allocato.
+1. Se l'argomento è un tipo integrale, la dimensione dell'argomento è uguale a 16 e il NGRN è inferiore a 7, l'argomento viene copiato per x [NGRN] e x [NGRN + 1]. x [NGRN] deve contenere il più basso indirizzata-parola doppia della rappresentazione di memoria dell'argomento. Il NGRN viene incrementato a due. L'argomento a questo punto è stato allocato.
 
-10. Se l'argomento è un tipo composito e le dimensioni in valore double-parole dell'argomento non sono maggiore di 8 meno NGRN, allora l'argomento viene copiato nei registri di utilizzo generale consecutivi, a partire da x [NGRN]. L'argomento viene passato come se fosse stato caricato nei registri da un indirizzo allineato a double word con una sequenza appropriata di istruzioni LDR caricamento registri consecutivi dalla memoria (il contenuto di eventuali parti non utilizzate di registri non è specificato da questo standard). Il NGRN viene incrementato del numero di registri usati. L'argomento a questo punto è stato allocato.
+1. Se l'argomento è un tipo composito e le dimensioni in valore double-parole dell'argomento non sono maggiore di 8 meno NGRN, allora l'argomento viene copiato nei registri di utilizzo generale consecutivi, a partire da x [NGRN]. L'argomento viene passato come se fosse stato caricato nei registri da un indirizzo allineato a double word con una sequenza appropriata di istruzioni LDR caricamento registri consecutivi dalla memoria (il contenuto di eventuali parti non utilizzate di registri non è specificato da questo standard). Il NGRN viene incrementato del numero di registri usati. L'argomento a questo punto è stato allocato.
 
-11. Il NGRN è impostata su 8.
+1. Il NGRN è impostata su 8.
 
-12. L'indirizzo NSAA viene arrotondato per eccesso il maggiore di 8 o l'allineamento naturale del tipo dell'argomento...
+1. L'indirizzo NSAA viene arrotondato per eccesso il maggiore di 8 o l'allineamento naturale del tipo dell'argomento...
 
-13. Se l'argomento è un tipo composito alla memoria in corrispondenza dell'indirizzo NSAA viene copiato l'argomento. L'indirizzo NSAA viene incrementato della dimensione dell'argomento. L'argomento a questo punto è stato allocato.
+1. Se l'argomento è un tipo composito alla memoria in corrispondenza dell'indirizzo NSAA viene copiato l'argomento. L'indirizzo NSAA viene incrementato della dimensione dell'argomento. L'argomento a questo punto è stato allocato.
 
-14. Se la dimensione dell'argomento è minore di 8 byte a 8 byte è impostare la dimensione dell'argomento. L'effetto è come se l'argomento è stato copiato il bit meno significativi di un registro a 64 bit e i bit rimanenti compilati con i valori non specificati.
+1. Se la dimensione dell'argomento è minore di 8 byte a 8 byte è impostare la dimensione dell'argomento. L'effetto è come se l'argomento è stato copiato il bit meno significativi di un registro a 64 bit e i bit rimanenti compilati con i valori non specificati.
 
-15. L'argomento viene copiato nella memoria in corrispondenza dell'indirizzo NSAA. L'indirizzo NSAA viene incrementato della dimensione dell'argomento. L'argomento a questo punto è stato allocato.
+1. L'argomento viene copiato nella memoria in corrispondenza dell'indirizzo NSAA. L'indirizzo NSAA viene incrementato della dimensione dell'argomento. L'argomento a questo punto è stato allocato.
 
 ### <a name="addendum-variadic-functions"></a>Supplemento: Le funzioni Variadic
 
@@ -187,7 +187,7 @@ Le funzioni che accettano un numero variabile di argomenti vengono gestite in mo
 
 1. Tutti i componenti vengono trattati allo stesso modo; Nessun trattamento speciale di HFAs ossia le.
 
-2. SIMD e registri a virgola mobile non vengono utilizzati.
+1. SIMD e registri a virgola mobile non vengono utilizzati.
 
 In modo efficace ciò equivale a C.12–C.15 allocare argomenti da uno stack immaginario, in cui i primi 64 byte dello stack vengono caricati in x0 x7, e qualsiasi rimanenti argomenti dello stack vengono inseriti in genere le regole seguenti.
 

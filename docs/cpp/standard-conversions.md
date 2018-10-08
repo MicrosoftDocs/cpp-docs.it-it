@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75ec7271950a2aee28e55d4b7b9fdcf7c8c894d0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039374"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861447"
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 
@@ -162,7 +162,7 @@ Molti operatori binari (illustrati in [espressioni con operatori binari](../cpp/
 |Degli operandi è di tipo **long double**.|Altro operando verrà convertito nel tipo **long double**.|
 |Precedente condizione non soddisfatta e degli operandi è di tipo **doppie**.|Altro operando verrà convertito nel tipo **doppie**.|
 |Precedente le condizioni non soddisfatte e degli operandi è di tipo **float**.|Altro operando verrà convertito nel tipo **float**.|
-|Le condizioni precedenti non sono soddisfatte (nessuno degli operandi sono di tipo a virgola mobile).|Le promozioni integrali vengono eseguite sugli operandi come indicato di seguito:<br /><br /> -Se degli operandi è di tipo **long senza segno**, l'altro operando verrà convertito nel tipo **long senza segno**.<br />-Se condizione precedente non soddisfatte e degli operandi è di tipo **lungo** e l'altro di tipo **unsigned int**, entrambi gli operandi verranno convertiti nel tipo **long senza segno**.<br />-Se le due condizioni precedenti non vengono soddisfatte e degli operandi è di tipo **lungo**, l'altro operando verrà convertito nel tipo **lungo**.<br />-Se le tre condizioni precedenti non vengono soddisfatte e degli operandi è di tipo **int senza segno**, l'altro operando verrà convertito nel tipo **unsigned int**.<br />-Se nessuna delle condizioni precedenti viene soddisfatta, entrambi gli operandi verranno convertiti nel tipo **int**.|
+|Le condizioni precedenti non sono soddisfatte (nessuno degli operandi sono di tipo a virgola mobile).|Le promozioni integrali vengono eseguite sugli operandi come indicato di seguito:<br /><br />-Se degli operandi è di tipo **long senza segno**, l'altro operando verrà convertito nel tipo **long senza segno**.<br />-Se condizione precedente non soddisfatte e degli operandi è di tipo **lungo** e l'altro di tipo **unsigned int**, entrambi gli operandi verranno convertiti nel tipo **long senza segno**.<br />-Se le due condizioni precedenti non vengono soddisfatte e degli operandi è di tipo **lungo**, l'altro operando verrà convertito nel tipo **lungo**.<br />-Se le tre condizioni precedenti non vengono soddisfatte e degli operandi è di tipo **int senza segno**, l'altro operando verrà convertito nel tipo **unsigned int**.<br />-Se nessuna delle condizioni precedenti viene soddisfatta, entrambi gli operandi verranno convertiti nel tipo **int**.|
 
 Il codice seguente illustra le regole di conversione descritte nella tabella:
 

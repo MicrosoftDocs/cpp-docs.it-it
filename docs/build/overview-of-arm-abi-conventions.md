@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4254506345ab72eccaa43968a0af9aab2dada3b9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721448"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861486"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Panoramica delle convenzioni ABI ARM32
 
@@ -153,11 +153,11 @@ L'inizializzazione viene eseguita una sola volta, prima dell'elaborazione degli 
 
 1. Il numero NCRN (Next Core Register Number) viene impostato su r0.
 
-2. I registri VFP vengono contrassegnati come non allocati.
+1. I registri VFP vengono contrassegnati come non allocati.
 
-3. L'indirizzo NSAA (Next Stacked Argument Address) viene impostato sull'SP corrente.
+1. L'indirizzo NSAA (Next Stacked Argument Address) viene impostato sull'SP corrente.
 
-4. Se viene chiamata una funzione che restituisce un risultato in memoria, l'indirizzo per il risultato viene inserito in r0 e il numero NCRN viene impostato su r1.
+1. Se viene chiamata una funzione che restituisce un risultato in memoria, l'indirizzo per il risultato viene inserito in r0 e il numero NCRN viene impostato su r1.
 
 ### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fase b: pre-spaziatura interna e l'estensione di argomenti
 
@@ -165,9 +165,9 @@ Per ogni argomento nell'elenco, viene applicata la prima regola corrispondente d
 
 1. Se l'argomento è un tipo composito la cui dimensione non può essere determinata in modo statico sia dal chiamante che dal computer chiamato, l'argomento viene copiato in memoria e sostituito da un puntatore alla copia.
 
-2. Se l'argomento è un byte o una half word a 16 bit, viene esteso in base a zero o con segno a una full word a 32 bit e trattato come argomento a 4 byte.
+1. Se l'argomento è un byte o una half word a 16 bit, viene esteso in base a zero o con segno a una full word a 32 bit e trattato come argomento a 4 byte.
 
-3. Se l'argomento è un tipo composito, la dimensione viene arrotondata per eccesso al più vicino multiplo di 4.
+1. Se l'argomento è un tipo composito, la dimensione viene arrotondata per eccesso al più vicino multiplo di 4.
 
 ### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fase c: assegnazione di argomenti ai registri e allo stack
 
@@ -175,17 +175,17 @@ Per ogni argomento nell'elenco, vengono applicate una alla volta le regole segue
 
 1. Se l'argomento è un tipo VFP e ci sono abbastanza registri VFP non allocati consecutivi del tipo appropriato, l'argomento viene allocato alla sequenza con la numerazione più bassa di questi registri.
 
-2. Se l'argomento è un tipo VFP, tutti i rimanenti registri non allocati vengono contrassegnati come non disponibili. L'indirizzo NSAA viene adeguato verso l'alto finché non viene correttamente allineato per il tipo di argomento e l'argomento viene copiato nello stack in corrispondenza dell'indirizzo NSAA adeguato. L'indirizzo NSAA viene quindi incrementato della dimensione dell'argomento.
+1. Se l'argomento è un tipo VFP, tutti i rimanenti registri non allocati vengono contrassegnati come non disponibili. L'indirizzo NSAA viene adeguato verso l'alto finché non viene correttamente allineato per il tipo di argomento e l'argomento viene copiato nello stack in corrispondenza dell'indirizzo NSAA adeguato. L'indirizzo NSAA viene quindi incrementato della dimensione dell'argomento.
 
-3. Se l'argomento richiede l'allineamento a 8 byte, il numero NCRN viene arrotondato per eccesso al successivo numero di registro pari.
+1. Se l'argomento richiede l'allineamento a 8 byte, il numero NCRN viene arrotondato per eccesso al successivo numero di registro pari.
 
-4. Se la dimensione dell'argomento in word a 32 bit non è superiore a r4 meno NCRN, l'argomento viene copiato nei registri principali, a partire dal numero NCRN, con i bit più significativi che occupano i registri con la numerazione più bassa. Il numero NCRN viene incrementato del numero di registri usati.
+1. Se la dimensione dell'argomento in word a 32 bit non è superiore a r4 meno NCRN, l'argomento viene copiato nei registri principali, a partire dal numero NCRN, con i bit più significativi che occupano i registri con la numerazione più bassa. Il numero NCRN viene incrementato del numero di registri usati.
 
-5. Se il numero NCRN è minore di r4 e l'indirizzo NSAA è uguale all'SP, l'argomento viene suddiviso tra i registri principali e lo stack. La prima parte dell'argomento viene copiata nei registri principali, a partire dal numero NCRN, fino a includere r3. La parte restante dell'argomento viene copiata nello stack, a partire dall'indirizzo NSAA. Il numero NCRN viene impostato su r4 e l'indirizzo NSAA viene incrementato della dimensione dell'argomento meno la quantità passata nei registri.
+1. Se il numero NCRN è minore di r4 e l'indirizzo NSAA è uguale all'SP, l'argomento viene suddiviso tra i registri principali e lo stack. La prima parte dell'argomento viene copiata nei registri principali, a partire dal numero NCRN, fino a includere r3. La parte restante dell'argomento viene copiata nello stack, a partire dall'indirizzo NSAA. Il numero NCRN viene impostato su r4 e l'indirizzo NSAA viene incrementato della dimensione dell'argomento meno la quantità passata nei registri.
 
-6. Se l'argomento richiede l'allineamento a 8 byte, l'indirizzo NSAA viene arrotondato per eccesso al successivo indirizzo allineato a 8 byte.
+1. Se l'argomento richiede l'allineamento a 8 byte, l'indirizzo NSAA viene arrotondato per eccesso al successivo indirizzo allineato a 8 byte.
 
-7. L'argomento viene copiato in memoria in corrispondenza dell'indirizzo NSAA. L'indirizzo NSAA viene incrementato della dimensione dell'argomento.
+1. L'argomento viene copiato in memoria in corrispondenza dell'indirizzo NSAA. L'indirizzo NSAA viene incrementato della dimensione dell'argomento.
 
 I registri VFP non vengono usati per le funzioni variadic e le regole 1 e 2 della Fase C vengono ignorate. Ciò significa che una funzione variadic può iniziare con un push opzionale {r0-r3} per anteporre gli argomenti dei registri a qualsiasi altro argomento passato dal chiamante e quindi accedere all'intero elenco di argomenti direttamente dallo stack.
 
