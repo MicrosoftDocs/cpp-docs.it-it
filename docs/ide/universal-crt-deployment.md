@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20006118d4bf27c379b78b84dc8807a4fd6c5e6c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b7fe21753dc4310752c1081d17ddff942bcbd89f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34256290"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820997"
 ---
 # <a name="universal-crt-deployment"></a>Distribuzione di Universal CRT
 
@@ -29,7 +29,7 @@ La libreria Universal CRT è un componente del sistema operativo Microsoft Windo
 
 ## <a name="central-deployment"></a>Distribuzione centrale
 
-Il metodo preferito per l'installazione centrale di Universal CRT consiste nell'uso di Microsoft Windows Update. Universal CRT è un aggiornamento consigliato per tutti i sistemi operativi Microsoft Windows supportati che viene quindi installato per impostazione predefinita dalla maggior parte dei computer nell'ambito del processo di aggiornamento normale. La versione iniziale di Universal CRT era la [KB2999226](https://support.microsoft.com/en-us/kb/2999226). Successivamente è stato creato un aggiornamento con varie correzioni di bug con numero di versione [KB3118401](https://support.microsoft.com/en-us/kb/3118401). Ci sono stati altri aggiornamenti con altre correzioni di bug e nuove funzionalità. For aggiornamenti più recenti, cercare Universal C Runtime o Universal CRT, in [support.microsoft.com](https://support.microsoft.com).
+Il metodo preferito per l'installazione centrale di Universal CRT consiste nell'uso di Microsoft Windows Update. Universal CRT è un aggiornamento consigliato per tutti i sistemi operativi Microsoft Windows supportati che viene quindi installato per impostazione predefinita dalla maggior parte dei computer nell'ambito del processo di aggiornamento normale. La versione iniziale di Universal CRT era la [KB2999226](https://support.microsoft.com/kb/2999226). Successivamente è stato creato un aggiornamento con varie correzioni di bug con numero di versione [KB3118401](https://support.microsoft.com/kb/3118401). Ci sono stati altri aggiornamenti con altre correzioni di bug e nuove funzionalità. For aggiornamenti più recenti, cercare Universal C Runtime o Universal CRT, in [support.microsoft.com](https://support.microsoft.com).
 
 Non tutti i computer Microsoft Windows installano regolarmente gli aggiornamenti tramite Windows Update e in alcuni potrebbero non essere installati tutti gli aggiornamenti consigliati. Per supportare l'uso di applicazioni compilate tramite i set di strumenti C++ di Visual Studio 2015 e versioni successive in tali computer, sono disponibili componenti ridistribuibili Universal CRT per la distribuzione offline. Tali componenti ridistribuibili possono essere scaricati da uno dei collegamenti KB sopra riportati. Si noti che i componenti ridistribuibili Universal CRT richiedono che il computer sia stato aggiornato al Service Pack corrente. Il componente ridistribuibile per Windows 7, ad esempio, può essere installato solo in Windows 7 SP1, non in Windows 7 RTM.
 
