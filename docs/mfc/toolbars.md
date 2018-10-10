@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd7e0a1b2786a92d7a0e64b85417ddb82c82871
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437794"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890544"
 ---
 # <a name="toolbars"></a>Barre degli strumenti
 
@@ -38,10 +38,7 @@ La famiglia della barra degli strumenti di articoli descrive barre degli strumen
 
 - [Esempio](../mfc/toolbar-sample-list.md)
 
-Per altre informazioni sulle barre degli strumenti MFC, vedere l'articolo Q232017, "Procedura: aggiungere testo a pulsanti delle barre degli" nella Microsoft Knowledge Base al http://support.microsoft.com.
-
 ## <a name="see-also"></a>Vedere anche
 
 [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)<br/>
 [Editor barra degli strumenti](../windows/toolbar-editor.md)
-

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432821"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890336"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controlli ActiveX in Internet
 
@@ -170,10 +170,6 @@ Moniker asincroni consentono di scaricare i dati in modo asincrono tramite una r
 Ad esempio, se sono disponibili 10 byte solo lettura viene chiamato in modo asincrono in un file da 1 KB, lettura non blocca, ma restituisce con 10 byte attualmente disponibili.
 
 Si implementa [moniker asincroni](../mfc/asynchronous-monikers-on-the-internet.md) usando il `CAsyncMonikerFile` classe. Tuttavia, è possono usare i controlli ActiveX il `CDataPathProperty` classe che deriva da `CAsyncMonikerFile`, per implementare le proprietà di controllo asincrono.
-
-L'esempio ASYNDOWN illustra come configurare un ciclo asincrono usando i timer per leggere i dati. ASYNDOWN è descritto in dettaglio nell'articolo della Knowledge Base "Procedura: AsyncDown illustra Asynchronous dati Download" (Q177244) e può essere scaricato dal Microsoft Download Center. (Per altre informazioni sul download di file da Microsoft Download Center, vedere l'articolo "Modalità per ottenere Microsoft supporto file dai servizi in linea" (Q119591) nella Microsoft Knowledge Base). È possibile trovare gli articoli della Knowledge Base nel [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
-
-La tecnica di base utilizzata nella ASYNDOWN consiste nell'impostare un timer nel **CDataPathProperty:: OnDataAvailable** per indicare quando sono disponibili dati. Quando viene ricevuto il messaggio del timer, l'applicazione legge i blocchi a 128 byte di dati e inserisce un controllo di modifica. Se i dati non sono disponibili quando il messaggio del timer viene gestito, il timer è disattivato. `OnDataAvailable` Attiva il timer in caso di più dati di arrivano in un secondo momento.
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Visualizzazione di un controllo in una pagina Web
 

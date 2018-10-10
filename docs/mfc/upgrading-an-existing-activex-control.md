@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409571"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890360"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Aggiornamento di un controllo ActiveX esistente
 
@@ -56,7 +56,7 @@ Questo articolo tratta gli argomenti seguenti:
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Creazione di pacchetti codice per il download
 
-Per altre informazioni su questo argomento, vedere l'articolo della Knowledge Base "Creazione di pacchetti MFC controlli per usare Over the Internet" (Q167158). È possibile trovare gli articoli della Knowledge Base nel [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
+Per altre informazioni su questo argomento, vedere [creazione di pacchetti dei controlli ActiveX](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
 
 ### <a name="the-codebase-tag"></a>Il Tag di base di codice
 
@@ -94,7 +94,7 @@ File CAB sono il modo consigliato per i controlli ActiveX di pacchetto che ne fa
 
 ### <a name="creating-cab-files"></a>Creazione di file CAB
 
-È possibile scaricare il Kit di sviluppo di Cabinet dall'articolo della Knowledge Base [310618: Microsoft Cabinet Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204). In questo kit sono disponibili gli strumenti necessari per creare i file CAB.
+Strumenti per creare i file CAB sono ora fa parte del [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk).
 
 Il file CAB a cui punta `CODEBASE` deve contenere il file ocx per il controllo ActiveX e un file con estensione inf per controllarne l'installazione. Si crea il file CAB, specificando il nome del file di controllo e un file. inf. Non includono file DLL dipendenti che potrebbero già esistere nel sistema in questo file CAB. Ad esempio, le DLL MFC sono compresse in un file CAB separato e a cui fa riferimento il controllo file. inf.
 

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c01336094077cc1f451f2e7b479ca4acf9fb77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441356"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890597"
 ---
 # <a name="cwinthread-class"></a>CWinThread (classe)
 
@@ -321,7 +321,7 @@ BOOL m_bAutoDelete;
 
 Il `m_bAutoDelete` membro dati è una variabile pubblica di tipo BOOL.
 
-Il valore `m_bAutoDelete` non influisce su come l'handle dei thread sottostanti viene chiuso. L'handle dei thread viene sempre chiuso quando l'oggetto `CWinThread` viene eliminato.
+Il valore `m_bAutoDelete` non influisce su come l'handle dei thread sottostanti viene chiuso. L'handle dei thread viene sempre chiuso quando l'oggetto `CWinThread` viene eliminato definitivamente.
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 
@@ -455,7 +455,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 Messaggio pubblicato viene eseguito il mapping al gestore messaggi appropriata dalla macro della mappa messaggi ON_THREAD_MESSAGE.
 
 > [!NOTE]
->  Quando si chiama il Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) funzione all'interno di un'applicazione MFC, il messaggio MFC non vengono chiamati i gestori. Per altre informazioni, vedere l'articolo della Knowledge Base, "PRB: MFC messaggio gestore non chiamato con PostThreadMessage()" (Q142415).
+> Quando si chiama [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), il messaggio viene inserito nella coda di messaggi del thread. Tuttavia, poiché i messaggi inseriti in questo modo non sono associati a una finestra, MFC non invierà loro ai gestori di messaggi o un comando. Per gestire questi messaggi, eseguire l'override la `PreTranslateMessage()` funzione i derivati CWinApp classe e gestire manualmente i messaggi.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 
@@ -490,7 +490,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parametri
 
-*Codice*<br/>
+*codice*<br/>
 Specifica un codice di hook. Questa funzione membro utilizza il codice per determinare la modalità di elaborazione *lpMsg.*
 
 *lpMsg*<br/>

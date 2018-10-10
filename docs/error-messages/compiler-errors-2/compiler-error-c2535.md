@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e1920b2163a318fbdba3b64d56bf74a8cd809f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5d9bb276ded32d8b263e64a8ea70f2c1953ee24b
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085901"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890296"
 ---
 # <a name="compiler-error-c2535"></a>Errore del compilatore C2535
 
@@ -30,8 +30,6 @@ ms.locfileid: "46085901"
 Questo errore potrebbe essere causato dall'utilizzo lo stesso elenco di parametri formali in più di una definizione o dichiarazione di una funzione in overload.
 
 Se restituito l'errore C2535 a causa della funzione Dispose, vedere [distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) per altre informazioni.
-
-Se si sta compilando un progetto ATL, vedere della Knowledge Base Q241852.
 
 L'esempio seguente genera l'errore C2535:
 

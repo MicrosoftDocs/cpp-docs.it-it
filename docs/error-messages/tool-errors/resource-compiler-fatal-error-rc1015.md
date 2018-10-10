@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a72cba53ebe9a286ac2e7cbbf2c41b78f4e4e08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0456845152fb2879d2f58c9c40af2562c7207535
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100766"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890244"
 ---
 # <a name="resource-compiler-fatal-error-rc1015"></a>Errore irreversibile del compilatore di risorse RC1015
 
@@ -32,5 +32,3 @@ Il file di inclusione specificato non esiste, non è stato possibile aprire o no
 Verificare che le impostazioni dell'ambiente siano valide e che il percorso del file specificato sia corretto. Assicurarsi che siano disponibili per il compilatore di risorse sufficienti gli handle di file. Se il file si trova in un'unità di rete, assicurarsi di disporre di autorizzazioni per aprire il file.
 
 L'errore RC1015 può verificarsi anche se il file di inclusione è presente in una directory specificata come directory di inclusione aggiuntiva nella pagina delle proprietà visualizzata selezionando Proprietà di configurazione -> Risorse -> Generale. Specificare il percorso completo del fila di inclusione.
-
-Per altre informazioni, vedere l'articolo della Knowledge Base Q326987: RC1015 errore quando tramite risorse Visualizza se il percorso di inclusione è troppo lungo.

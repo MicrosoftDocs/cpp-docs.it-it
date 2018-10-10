@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 912bbd37d4d9afcb60158d41b82b7fa829eeb4ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821504"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890647"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComboBox:: AddString](#addstring)|Aggiunge una stringa alla fine dell'elenco nella casella di riepilogo di una casella combinata o in corrispondenza della posizione per le caselle di riepilogo con lo stile CBS_SORT ordinata.|
+|[CComboBox::AddString](#addstring)|Aggiunge una stringa alla fine dell'elenco nella casella di riepilogo di una casella combinata o in corrispondenza della posizione per le caselle di riepilogo con lo stile CBS_SORT ordinata.|
 |[CComboBox::Clear](#clear)|Elimina (Elimina) la selezione corrente, se presente, nel controllo di modifica.|
 |[CComboBox::CompareItem](#compareitem)|Chiamato dal framework per determinare la posizione relativa di un nuovo elemento elenco in una casella combinata ordinato disegnato dal proprietario.|
 |[CComboBox::Copy](#copy)|Copia la selezione corrente, se presente, negli Appunti nel formato CF_TEXT.|
@@ -256,7 +256,7 @@ Se si crea una `CComboBox` oggetto all'interno di una finestra di dialogo (trami
 
 Se si incorpora un `CComboBox` oggetto all'interno di un'altra finestra dell'oggetto, non è necessario eliminarla definitivamente. Se si crea il `CComboBox` dell'oggetto nello stack, viene eliminato automaticamente. Se si crea il `CComboBox` oggetto sull'heap tramite il **nuovi** funzione, è necessario chiamare **eliminare** sull'oggetto per eliminarla definitivamente quando viene eliminata definitivamente la casella combinata di Windows.
 
-**Nota** se si desidera gestire i messaggi WM_CHAR e WM_KEYDOWN, è necessario sottoclasse della casella combinata modifica e i controlli casella di elenco, derivare classi dalla `CEdit` e `CListBox`, e aggiungere i gestori per i messaggi per le classi derivate. Per altre informazioni, vedere [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) e [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Nota** se si desidera gestire i messaggi WM_CHAR e WM_KEYDOWN, è necessario sottoclasse della casella combinata modifica e i controlli casella di elenco, derivare classi dalla `CEdit` e `CListBox`, e aggiungere i gestori per i messaggi per le classi derivate. Per altre informazioni, vedere [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -1070,7 +1070,7 @@ Indice in base zero della posizione in cui è stata inserita la stringa. Il valo
 
 ### <a name="remarks"></a>Note
 
-A differenza di [AddString](#addstring) funzione membro, il `InsertString` funzione membro non genera un elenco con il [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) stile di visualizzazione da ordinare.
+A differenza della funzione membro [AddString](#addstring) , la funzione membro `InsertString` non genera un elenco con lo stile [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) da ordinare.
 
 > [!NOTE]
 >  Questa funzione non è supportata per il Windows `ComboBoxEx` controllo. Per altre informazioni su questo controllo, vedere [i controlli ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) nel SDK di Windows.

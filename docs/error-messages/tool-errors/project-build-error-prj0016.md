@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ceb004cba243d6e2e9c44aadcaa40670ef7a0bbb
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820472"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890257"
 ---
 # <a name="project-build-error-prj0016"></a>Errore di compilazione progetto PRJ0016
 
@@ -37,8 +37,4 @@ Per risolvere questo errore, eliminare la chiave di RestrictRun. Se è necessari
 
 Un'altra causa questo errore è che l'impostazione di criteri non sono inclusi VCSpawn.exe sotto la chiave del Registro di sistema HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun come un programma finestra consentito per questo account utente.
 
-Per altre informazioni, vedere:
-
-- Della Knowledge Base 324153, disponibile nei [ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153).
-
-- [Rispetto alle impostazioni dei criteri di sistema](https://msdn.microsoft.com/library/aa372139), la sezione "Esecuzione consentite solo le applicazioni di Windows".
+Per altre informazioni, vedere [adesione alle impostazioni di criteri di sistema](https://msdn.microsoft.com/library/aa372139), nella sezione "Esecuzione consentite solo le applicazioni di Windows".

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821361"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890634"
 ---
 # <a name="message-map-macros-mfc"></a>Macro della mappa messaggi (MFC)
 
@@ -352,7 +352,7 @@ I messaggi definiti dall'utente sono i messaggi che non sono messaggi WM_MESSAGE
 Deve esserci esattamente una istruzione di macro ON_MESSAGE nella mappa messaggi per ogni messaggio definito dall'utente che deve essere mappato a una funzione di gestore di messaggi.
 
 > [!NOTE]
->  Oltre ai messaggi definiti dall'utente, ON_MESSAGE gestisce i messaggi di Windows meno comuni. Per altre informazioni, vedere l'articolo della Knowledge Base [99848: INFO: utilizzo di Macro ON_MESSAGE() ai messaggi meno comuni della mappa](http://go.microsoft.com/fwlink/p/?linkid=192022).
+>  Oltre ai messaggi definiti dall'utente, ON_MESSAGE gestisce i messaggi di Windows meno comuni. Per altre informazioni, vedere [mappe messaggi](../../mfc/tn006-message-maps.md).
 
 Per altre informazioni ed esempi, vedere [la gestione dei messaggi e Mapping argomenti](../../mfc/message-handling-and-mapping.md) e [gestori definiti dall'utente](user-defined-handlers.md)
 

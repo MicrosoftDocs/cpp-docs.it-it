@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393308"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890608"
 ---
 # <a name="crecentfilelist-class"></a>Classe CRecentFileList
 
@@ -78,10 +78,6 @@ class CRecentFileList
 ## <a name="remarks"></a>Note
 
 File possono essere aggiunto o eliminati dall'elenco dei file usati di recente, l'elenco dei file può essere letti da o scritto nel Registro di sistema o un oggetto. È possibile aggiornare il file INI e il menu di visualizzazione dell'elenco di file usati di recente.
-
-Per altre informazioni sulle voci di menu usati di recente, vedere
-
-- Articolo della Knowledge Base Q243751: procedura: aggiungere gestori di comandi usati di recente voci di Menu nell'applicazione MFC
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

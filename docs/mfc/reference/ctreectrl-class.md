@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f1294517a49687a2fc94b1bb696a111a9f55da7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 98dfdc792341d215830d46d078d9ece69419efed
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403968"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890842"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -292,8 +292,6 @@ Per altre informazioni sull'uso di `CTreeCtrl`, vedere:
 - [Uso di CTreeCtrl](../../mfc/using-ctreectrl.md)
 
 - [Riferimento al controllo di visualizzazione albero](/windows/desktop/Controls/tree-view-control-reference) in Windows SDK.
-
-- Articolo della Knowledge Base Q222905: procedura: visualizzare un menu di scelta rapida per CTreeCtrl
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

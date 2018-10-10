@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419553"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890621"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -133,11 +133,7 @@ Finestra di dialogo modale viene chiusa automaticamente quando l'utente preme i 
 
 Quando si implementa una finestra di dialogo non modale, sempre eseguire l'override di `OnCancel` funzione membro e chiamare `DestroyWindow` all'interno di esso. Non chiamare la classe di base `CDialog::OnCancel`, poiché chiama `EndDialog`, che renderà invisibili la finestra di dialogo, ma non eliminare definitivamente. È inoltre consigliabile eseguire l'override `PostNcDestroy` per le finestre di dialogo non modali per eliminare **ciò**, dal momento che le finestre di dialogo non modali vengono generalmente allocate con **nuovo**. Finestre di dialogo modali sono costruite in genere sul frame e non è necessario `PostNcDestroy` pulizia.
 
-Per altre informazioni su `CDialog`, vedere:
-
-- [Finestre di dialogo](../../mfc/dialog-boxes.md)
-
-- Articolo della Knowledge Base Q262954: procedura: creare una finestra di dialogo ridimensionabili con le barre di scorrimento
+Per ulteriori informazioni sul `CDialog`, vedere [finestre di dialogo](../../mfc/dialog-boxes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -281,7 +277,7 @@ Utilizzare lo stile WS_VISIBLE nel modello di finestra di dialogo se la finestra
 
 Usare la `CWnd::DestroyWindow` funzione eliminare definitivamente una finestra di dialogo creata dal `CreateIndirect` (funzione).
 
-Le finestre di dialogo che contengono i controlli ActiveX richiedono informazioni aggiuntive fornite in una risorsa DLGINIT. Per altre informazioni, vedere l'articolo della Knowledge Base Q231591, "procedura: usare un modello di finestra di dialogo per creare una finestra di dialogo MFC con un controllo ActiveX." Articoli della Knowledge Base sono disponibili in [ http://support.microsoft.com ](http://support.microsoft.com/).
+Le finestre di dialogo che contengono i controlli ActiveX richiedono informazioni aggiuntive fornite in una risorsa DLGINIT.
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -410,7 +406,7 @@ Diverso da zero se l'oggetto finestra di dialogo è stato creato e inizializzato
 
 Per creare una finestra di dialogo modale indirettamente, allocare un blocco di memoria globale e riempirlo con il modello di finestra di dialogo. Chiamare quindi vuoto `CDialog` costruttore per costruire l'oggetto finestra di dialogo. Quindi, chiamare il metodo `InitModalIndirect` per archiviare l'handle per il modello di finestra di dialogo in memoria. La finestra di dialogo di Windows verrà creata e visualizzata in seguito, quando la [DoModal](#domodal) viene chiamata la funzione membro.
 
-Le finestre di dialogo che contengono i controlli ActiveX richiedono informazioni aggiuntive fornite in una risorsa DLGINIT. Per altre informazioni, vedere l'articolo della Knowledge Base Q231591, "procedura: usare un modello di finestra di dialogo per creare una finestra di dialogo MFC con un controllo ActiveX." Articoli della Knowledge Base sono disponibili in [ http://support.microsoft.com ](http://support.microsoft.com/).
+Le finestre di dialogo che contengono i controlli ActiveX richiedono informazioni aggiuntive fornite in una risorsa DLGINIT.
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

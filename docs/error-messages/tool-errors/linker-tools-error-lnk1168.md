@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821075"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890166"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Errore degli strumenti del linker LNK1168
 
@@ -38,7 +38,3 @@ Se il file è bloccato da un programma antivirus, è possibile risolvere il prob
 Se il file è bloccato da un servizio di indicizzazione di ricerca, è possibile risolvere il problema escludendo le directory di output della build dall'indicizzazione automatica. Per ulteriori informazioni, vedere la documentazione del servizio di indicizzazione. Per modificare il servizio di indicizzazione di ricerca di Windows, usare **opzioni di indicizzazione** nella finestra di Windows **Pannello di controllo**. Per altre informazioni, vedere [Windows di migliorare le ricerche tramite l'indice: domande frequenti](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
 
 Se il file eseguibile non può essere sovrascritto dal processo di compilazione, è possibile che sia bloccato da Esplora file. Se il **esperienza applicativa** servizio è stato disabilitato, Esplora File potrebbe mantenere un blocco di handle di file eseguibile per un periodo di tempo prolungato. Per risolvere questo problema, eseguire **Services. msc** e quindi aprire il **proprietà** la finestra di dialogo per il **esperienza applicativa** servizio. Modifica il **tipo di avvio** dalla **disabilitato** al **manuale**.
-
-## <a name="see-also"></a>Vedere anche
-
-[È possibile che venga visualizzato un "Errore PRJ0008" o un messaggio di errore "Errore irreversibile LNK1168" quando si prova a compilare una soluzione o un progetto ActiveX in Visual C++](http://support.microsoft.com/kb/308358)

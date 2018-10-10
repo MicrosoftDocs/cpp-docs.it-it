@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f31d837b4b83a477d6b919f2d5bbd5efa00f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 552252c8826e167b4aaa21aa41e489bbc8179ec3
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381075"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890375"
 ---
 # <a name="cdocobjectserver-class"></a>Classe CDocObjectServer
 
@@ -74,10 +74,6 @@ Può contenere un documento server DocObject [CDocObjectServerItem](../../mfc/re
 Per personalizzare il server DocObject, derivare la propria classe dal `CDocObjectServer` ed eseguire l'override delle funzioni di installazione, view [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), e [OnSaveViewState ](#onsaveviewstate). È necessario fornire una nuova istanza della classe in risposta alle chiamate framework.
 
 Per altre informazioni su DocObjects, vedere [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) e [COleCmdUI](../../mfc/reference/colecmdui-class.md) nel *riferimenti alla libreria MFC*.
-
-Vedere anche l'articolo della Knowledge Base seguente:
-
-- Q247382: PRB: le descrizioni comandi per i controlli nel Server documenti ActiveX sono nascoste per il contenitore di documenti di ActiveX
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa8370bb02e71c457f7967d5cb6b508e743333e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373935"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889991"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Controlli ActiveX MFC: creazione di un server di automazione
 
@@ -33,7 +33,7 @@ ms.locfileid: "46373935"
 
 1. [Aggiungere metodi](../mfc/mfc-activex-controls-methods.md).
 
-1. Eseguire l'override [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). Per altre informazioni, vedere l'articolo della Knowledge Base Q146120.
+1. Eseguire l'override [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed).
 
 1. Compilare il controllo.
 

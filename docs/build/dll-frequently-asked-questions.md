@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc42cd1eab4f19c8184ad500b4a4a1871747d6aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9a68a0ae6392c2a9a64c9ff6c567451c2672c861
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713089"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890192"
 ---
 # <a name="dll-frequently-asked-questions"></a>Domande frequenti relative alle DLL
 
@@ -39,7 +39,7 @@ Seguenti sono alcune domande frequenti (FAQ) sulle DLL.
 
 ## <a name="mfc_multithreaded_1"></a> Una DLL MFC possono creare più thread?
 
-Tranne che durante l'inizializzazione, una DLL MFC può creare in modo sicuro più thread, purché utilizza il thread Win32, ad esempio le funzioni di archiviazione-local (TLS) **TlsAlloc** allocare l'archiviazione thread-local. Tuttavia, se viene utilizzata una DLL MFC **declspec** per allocare l'archiviazione thread-local, l'applicazione client deve essere collegato in modo implicito alla DLL. Se l'applicazione client si collega in modo esplicito alla DLL, la chiamata a **LoadLibrary** non vengono caricati correttamente la DLL. Per altre informazioni sulla creazione di più thread nelle DLL MFC, vedere l'articolo della Knowledge Base, "PRB: Calling LoadLibrary al carico di DLL che ha statico TLS" (Q118816). Per altre informazioni sulle variabili locali del thread nelle DLL, vedere [thread](../cpp/thread.md).
+Tranne che durante l'inizializzazione, una DLL MFC può creare in modo sicuro più thread, purché utilizza il thread Win32, ad esempio le funzioni di archiviazione-local (TLS) **TlsAlloc** allocare l'archiviazione thread-local. Tuttavia, se viene utilizzata una DLL MFC **declspec** per allocare l'archiviazione thread-local, l'applicazione client deve essere collegato in modo implicito alla DLL. Se l'applicazione client si collega in modo esplicito alla DLL, la chiamata a **LoadLibrary** non vengono caricati correttamente la DLL. Per altre informazioni sulle variabili locali del thread nelle DLL, vedere [thread](../cpp/thread.md).
 
 Una DLL MFC che crea un nuovo thread MFC durante l'avvio smetterà di rispondere quando viene caricato da un'applicazione. Ciò include ogni volta che viene creato un thread chiamando `AfxBeginThread` o `CWinThread::CreateThread` all'interno di:
 
@@ -49,13 +49,11 @@ Una DLL MFC che crea un nuovo thread MFC durante l'avvio smetterà di rispondere
 
 - Una classe fornita `DllMain` oppure **RawDllMain** funzione in una DLL di estensione MFC.
 
-Per altre informazioni sulla creazione di thread durante l'inizializzazione, vedere l'articolo della Knowledge Base, "PRB: non è possibile creare un MFC Thread durante la DLL Startup" (Q142243).
-
 ## <a name="mfc_multithreaded_2"></a> Un'applicazione multithreading può accedere a una DLL MFC in diversi thread?
 
 Applicazioni multithreading possono accedere a DLL di estensione MFC e DLL MFC regolari collegate a MFC in modo dinamico da thread diversi. E, a partire da Visual C++ versione 4.2, un'applicazione può accedere a DLL MFC regolari collegate a MFC in modo statico da più thread creati nell'applicazione.
 
-Prima della versione 4.2, solo un thread esterno è stato possibile collegare a una DLL MFC regolare collegata a MFC in modo statico. Per altre informazioni sulle restrizioni di accesso a DLL MFC regolari collegate a MFC in modo statico da più thread (precedente a Visual C++ versione 4.2), vedere l'articolo della Knowledge Base, "più thread e MFC USRDLL" (Q122676).
+Prima della versione 4.2, solo un thread esterno è stato possibile collegare a una DLL MFC regolare collegata a MFC in modo statico.
 
 Si noti che il termine USRDLL non sono non è più utilizzato nella documentazione di Visual C++. Una DLL MFC regolare collegata in modo statico a MFC ha le stesse caratteristiche di USRDLL.
 

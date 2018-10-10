@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407539"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890557"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controlli ActiveX MFC: creazione di una sottoclasse per un controllo Windows
 
@@ -48,10 +48,8 @@ Per creare una sottoclasse di un controllo Windows, completare le seguenti attiv
 
 - [Gestire eventuali messaggi di controllo ActiveX (OCM) applicati al controllo](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  Gran parte di questa attività viene eseguita automaticamente dalla creazione guidata controllo ActiveX se si seleziona controllo da sottoclassare la **Seleziona classe finestra padre** elenco a discesa nel **le impostazioni di controllo** pagina.
-
-Per ulteriori informazioni sulla creazione di una sottoclasse di un controllo, vedere l'articolo della Knowledge Base Q243454.
+   > [!NOTE]
+   > Gran parte di questa attività viene eseguita automaticamente dalla creazione guidata controllo ActiveX se si seleziona controllo da sottoclassare la **Seleziona classe finestra padre** elenco a discesa nel **le impostazioni di controllo** pagina.
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Override di IsSubclassedControl e PreCreateWindow
 

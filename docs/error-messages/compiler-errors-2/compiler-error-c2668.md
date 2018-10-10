@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b318c663bb036629086d0bca9a67641e3c4c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23bb1a6fcf64590670ede2eb6aca232a5a3b4f5c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093753"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889994"
 ---
 # <a name="compiler-error-c2668"></a>Errore del compilatore C2668
 
@@ -31,15 +31,11 @@ Non è stato possibile risolvere la chiamata di funzione in overload specificato
 
 È anche possibile ottenere questo errore tramite l'uso di modello. Se, nella stessa classe, si dispone di una funzione membro normale e una funzione membro basate su modelli con la stessa firma, deve precedere quella basata su modelli. Si tratta di una limitazione dell'implementazione corrente di Visual C++.
 
-Vedere l'articolo della Knowledge Base Q240869 per altre informazioni sull'ordinamento parziale dei modelli di funzione.
-
-Se si compila un progetto ATL che contiene un oggetto COM che supporta `ISupportErrorInfo`, vedere l'articolo della Knowledge Base Q243298.
-
 ## <a name="example"></a>Esempio
 
 L'esempio seguente genera l'errore C2668:
 
-```
+```cpp
 // C2668.cpp
 struct A {};
 struct B : A {};
@@ -59,7 +55,7 @@ int main() {
 
 Un altro modo per correggere l'errore riguarda una [dichiarazione using](../../cpp/using-declaration.md):
 
-```
+```cpp
 // C2668b.cpp
 // compile with: /EHsc /c
 // C2668 expected
@@ -104,7 +100,7 @@ Questo errore può anche essere generato in seguito a operazioni di conformità 
 
 Eseguire una conversione in un cast usando la costante 0 è ambigua poiché int richiede una conversione sia a lungo e a void *. Per risolvere questo errore, eseguire il cast tra 0 e il tipo esatto del parametro della funzione che perché è in uso per in modo che nessuna conversione necessaria per l'implementazione (questo codice è valido nelle versioni di Visual Studio .NET 2003 e Visual Studio .NET di Visual C++).
 
-```
+```cpp
 // C2668c.cpp
 #include "stdio.h"
 void f(long) {
@@ -126,7 +122,7 @@ int main() {
 
 Questo errore può verificarsi perché la libreria CRT ha ora float e double forme di tutte le funzioni matematiche.
 
-```
+```cpp
 // C2668d.cpp
 #include <math.h>
 int main() {
@@ -141,7 +137,7 @@ int main() {
 
 Questo errore può verificarsi perché il pow (int, int) è stato rimosso da Math. h in CRT.
 
-```
+```cpp
 // C2668e.cpp
 #include <math.h>
 int main() {
@@ -154,8 +150,7 @@ int main() {
 
 Questo codice ha esito positivo in Visual Studio 2015 ma non riesce in Visual Studio 2017 e versioni successive con C2668. In Visual Studio 2015 il compilatore tratta erroneamente copy-list-initialization come l'oggetto copy-initialization normale, considerando solo la conversione dei costruttori per la risoluzione dell'overload.
 
-```
-C++
+```cpp
 struct A {
     explicit A(int) {}
 };

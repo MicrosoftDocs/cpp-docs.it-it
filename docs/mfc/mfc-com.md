@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a9be38ebb870adf098b34fac79afff6345cd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394744"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890036"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -57,8 +57,6 @@ Tecnologie Active includono le tecnologie di client e server, incluse le seguent
 - Questa sezione vengono fornite informazioni su come scrivere i componenti COM utilizza MFC, ad esempio, nella [punti di connessione](../mfc/connection-points.md).
 
 Per una descrizione di ciò che viene chiamato comunque OLE rispetto a ciò che è ora denominata tecnologia active, vedere gli argomenti sul [OLE](../mfc/ole-in-mfc.md).
-
-Inoltre, vedere l'articolo della Knowledge Base Q248019: procedura: impedire Server occupato finestra di dialogo casella dalla visualizzazione durante un COM operazione di lunga durata.
 
 ## <a name="in-this-section"></a>In questa sezione
 

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 50b1816320521f8ad20ee64fc4a051f938e902ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445178"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890777"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -155,7 +155,7 @@ Lo scambio di dati tra un `CPropertySheet` oggetto e un oggetto esterno è simil
 
 Per creare una finestra di dialogo tipo di procedura guidata, seguire gli stessi passaggi da seguire per creare una finestra delle proprietà standard, ma esegue una chiamata [SetWizardMode](#setwizardmode) prima di chiamare [DoModal](#domodal). Per abilitare i pulsanti della procedura guidata, chiamare [SetWizardButtons](#setwizardbuttons), usando i flag per personalizzare il funzionamento e l'aspetto. Per abilitare la **Finish** pulsante, chiamare [SetFinishText](#setfinishtext) dopo che l'utente ha eseguito alcuna azione nell'ultima pagina della procedura guidata.
 
-Per altre informazioni su come usare `CPropertySheet` oggetti, vedere l'articolo [finestre delle proprietà e pagine delle proprietà](../../mfc/property-sheets-and-property-pages-in-mfc.md). Inoltre, vedere l'articolo della Knowledge Base Q146916: procedura: creare un CPropertySheet non modale con pulsanti Standard e l'articolo Q300606: HOWTO: progettare una finestra ridimensionabile delle proprietà di MFC.
+Per altre informazioni su come usare `CPropertySheet` oggetti, vedere l'articolo [finestre delle proprietà e pagine delle proprietà](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60397fea85e3fd121469ae4568dac18fa6b9ddb1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429747"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890322"
 ---
 # <a name="import-directive-c"></a>Direttiva #import (C++)
 **Sezione specifica C++**  
@@ -185,11 +185,9 @@ Se una libreria dei tipi include riferimenti ai tipi definiti in altre librerie 
 Il nome effettivo del file nei **#import** commento è il percorso completo della libreria dei tipi di riferimenti incrociati, archiviato nel Registro di sistema. Se si verificano errori a causa di definizioni di tipi mancanti, controllare i commenti all'inizio del file con estensione THL per vedere quali librerie dei tipi dipendenti è necessario importare per prime. Gli errori possibili sono quelli di sintassi (ad esempio C2143, C2146, C2321), C2501 (specificatori decimali mancanti), oppure C2433 ("inline" non consentito nella dichiarazione di dati) durante la compilazione del file con estensione TLI.  
   
 È necessario determinare quale della dipendenza commenti non altrimenti disponibili dalle intestazioni di sistema e quindi forniscono un' **#import** direttiva a un certo punto prima le **#import** direttiva del dipendente libreria dei tipi per risolvere gli errori.  
-  
-Per ulteriori informazioni, vedere l'articolo della Knowledge Base "I metodi wrapper #import potrebbero causare una violazione di accesso" (Q242527) o "Errori del compilatore quando si utilizza #import con XML" (Q269194). È possibile trovare articoli della Knowledge Base nel supporto di MSDN Library o all'indirizzo [supporto tecnico Microsoft](https://support.microsoft.com/).  
-  
-##  <a name="_predir_the_23import_directive_import_attributes"></a> attributi #import  
- 
+
+##  <a name="_predir_the_23import_directive_import_attributes"></a> attributi #import
+
 **#import** può includere facoltativamente uno o più attributi. Questi attributi indicano al compilatore di modificare il contenuto delle intestazioni della libreria dei tipi. Una barra rovesciata (**\\**) simbolo può essere utilizzato per includere altre righe in una singola **#import** istruzione. Ad esempio:  
   
 ```  

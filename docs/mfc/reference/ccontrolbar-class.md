@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd69813251a96051f844051f27155e1d4ed404d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393421"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890531"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -118,8 +118,6 @@ Per altre informazioni su `CControlBar`, vedere:
 - [Barre di controllo](../../mfc/control-bars.md)
 
 - [Nota tecnica 31: Le barre di controllo](../../mfc/tn031-control-bars.md).
-
-- Articolo della Knowledge Base Q242577: PRB: aggiornamento comandi dell'interfaccia utente dei gestori non funzionano per Menu collegato a una finestra di dialogo
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -549,7 +547,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ### <a name="parameters"></a>Parametri
 
 *pWnd*<br/>
-Un puntatore a un `CWnd` oggetto.
+Puntatore a un oggetto `CWnd` .
 
 ### <a name="remarks"></a>Note
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4a4327e1c3e4d65c5bdc3b822cf2cdfc1ec0353
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: cdc9b47bbd7b639850a13a77b81ef4802a301ba7
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820594"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890062"
 ---
 # <a name="automation-clients"></a>client di automazione
 
@@ -46,7 +46,7 @@ La classe `COleDispatchDriver` fornisce il supporto dell'entità per il lato cli
 
 ### <a name="handling-events-in-automation-clients"></a>Gestione degli eventi nel client di automazione
 
-Se si desidera gestire gli eventi nel client di automazione, è necessario aggiungere un'interfaccia sink. MFC fornisce il supporto della procedura guidata per aggiungere interfacce di sink per i controlli ActiveX, tuttavia non è supportata per gli altri server COM. Per informazioni su come aggiungere un'interfaccia sink in un client MFC per interfacce di origine descritti dal server COM, vedere Procedura: creare un'interfaccia Sink in Client COM MFC-Based (181845 KB) al [ http://support.microsoft.com/default.aspxscid=kb; 181845](http://support.microsoft.com/default.aspxscid=kb;181845).
+Se si desidera gestire gli eventi nel client di automazione, è necessario aggiungere un'interfaccia sink. MFC fornisce il supporto della procedura guidata per aggiungere interfacce di sink per i controlli ActiveX, tuttavia non è supportata per gli altri server COM.
 
 ## <a name="see-also"></a>Vedere anche
 

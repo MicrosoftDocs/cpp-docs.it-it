@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389551"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890673"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -181,11 +181,7 @@ Una finestra con separatore supporta le barre di scorrimento speciale (tranne pe
 
 Creare queste barre di scorrimento speciale quando si crea la finestra con separatore. Ad esempio, un `CSplitterWnd` che ha due colonne, una riga e lo stile WS_VSCROLL verrà visualizzata una barra di scorrimento verticale che viene condiviso da due riquadri. Quando l'utente sposta la barra di scorrimento, WM_VSCROLL messaggi vengono inviati a entrambi i riquadri. Quando i riquadri di impostare la posizione della barra di scorrimento, viene impostata la barra di scorrimento condiviso.
 
-Per ulteriori informazioni sulle finestre con separatore, vedere:
-
-- [Nota tecnica 29](../../mfc/tn029-splitter-windows.md)
-
-- Articolo della Knowledge Base Q262024: HOWTO: utilizzare CPropertySheet come un figlio dell'oggetto CSplitterWnd
+Per ulteriori informazioni sulle finestre con separatore, vedere [29 Nota tecnica](../../mfc/tn029-splitter-windows.md).
 
 Per altre informazioni su come creare finestre con separatore dinamico, vedere:
 
@@ -898,7 +894,7 @@ Se *pWnd* è NULL, specifica la riga nel riquadro che sarà attivo.
 Se *pWnd* è NULL, specifica la colonna nel riquadro che sarà attivo.
 
 *pWnd*<br/>
-Un puntatore a un `CWnd` oggetto. Se NULL, il riquadro specificato da *riga* e *col* viene impostata come attiva. Se non è NULL, specifica il riquadro che viene impostato come attivo.
+Puntatore a un oggetto `CWnd` . Se NULL, il riquadro specificato da *riga* e *col* viene impostata come attiva. Se non è NULL, specifica il riquadro che viene impostato come attivo.
 
 ### <a name="remarks"></a>Note
 

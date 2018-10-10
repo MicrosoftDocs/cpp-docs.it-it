@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 575ba3786e6639e5d6801ec9555c4a85f9732b20
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13b71838bb4db152fb76fa1115a426e2711422ea
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415733"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890583"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
 
@@ -223,7 +223,7 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>Note
 
-Chiamare questa funzione membro nel costruttore del `CCmdTarget`-oggetto che fornisca informazioni sul tipo derivato. Per altre informazioni, vedere l'articolo della Knowledge Base Q185720, "procedura: fornire informazioni sul tipo da un Server di automazione MFC." Articoli della Knowledge Base sono disponibili in [ http://support.microsoft.com ](http://support.microsoft.com/).
+Chiamare questa funzione membro nel costruttore del `CCmdTarget`-oggetto che fornisca informazioni sul tipo derivato.
 
 ##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor
 
@@ -303,8 +303,6 @@ TRUE se ha esito positivo, in caso contrario, FALSE. Caso di esito positivo \* *
 ### <a name="remarks"></a>Note
 
 Le classi derivate devono eseguire l'override di questa funzione membro (se non viene sottoposto a override, `GetDispatchIID` restituisce FALSE). Visualizzare [COleControl](../../mfc/reference/colecontrol-class.md).
-
-Per altre informazioni, vedere l'articolo della Knowledge Base Q185720, "procedura: fornire informazioni sul tipo da un Server di automazione MFC." Articoli della Knowledge Base sono disponibili in [ http://support.microsoft.com ](http://support.microsoft.com/).
 
 ##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch
 
@@ -407,7 +405,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CTypeLibCache` oggetto.
+Puntatore a un oggetto `CTypeLibCache` .
 
 ### <a name="remarks"></a>Note
 

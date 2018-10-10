@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45558f9546b996d824d8cf9e8782b7323dcb91fb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f19a06ac0583dd4cb911818787408aeca30b2ec
+ms.sourcegitcommit: 2f84d56b6ab19ba745b32ecd96b193c73cd62adf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114501"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866215"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Elementi lvalue e rvalue (C++)
 
@@ -52,24 +52,24 @@ Nell'esempio seguente vengono illustrati diversi utilizzi corretti e non corrett
 // lvalues_and_rvalues2.cpp
 int main()
 {
-int i, j, *p;
+    int i, j, *p;
 
-// Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
-i = 7;
+    // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
+    i = 7;
 
-// Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
-7 = i; // C2106
-j * 4 = 7; // C2106
+    // Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
+    7 = i; // C2106
+    j * 4 = 7; // C2106
 
-// Correct usage: the dereferenced pointer is an lvalue.
-*p = i;
+    // Correct usage: the dereferenced pointer is an lvalue.
+    *p = i;
 
-const int ci = 7;
-// Incorrect usage: the variable is a non-modifiable lvalue (C3892).
-ci = 9; // C3892
+    const int ci = 7;
+    // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
+    ci = 9; // C3892
 
-// Correct usage: the conditional operator returns an lvalue.
-((i < 3) ? i : j) = 7;
+    // Correct usage: the conditional operator returns an lvalue.
+    ((i < 3) ? i : j) = 7;
 }
 ```
 

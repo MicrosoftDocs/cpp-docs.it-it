@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a3dbb1d63e7d7c6f5e036fc0cde967277c91a40
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028311"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890127"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Errore degli strumenti del linker LNK2005
 
@@ -121,14 +121,3 @@ Di seguito sono riportate alcune cause comuni per correggere l'errore.
     ```
 
    Per risolvere questo problema, aggiungere [/Force: multiple](../../build/reference/force-force-file-output.md) alle opzioni della riga di comando del linker e assicurarsi che UUID. lib è la prima libreria a cui viene fatto riferimento.
-
-## <a name="additional-information"></a>Informazioni aggiuntive
-
-Se si usa una versione precedente del set di strumenti, vedere questi articoli della Knowledge Base per altre informazioni sulle cause specifiche per questo errore:
-
-- [Si verifica un errore LNK2005 quando la libreria CRT e le librerie MFC sono collegate in ordine errato in Visual C++](https://support.microsoft.com/kb/148652)
-
-- [Correzione: Delete in overload globale operatore cause LNK2005](https://support.microsoft.com/kb/140440)
-
-- [Si ricevono errori LNK2005 quando si compila un progetto eseguibile (.exe) ATL Visual c++](https://support.microsoft.com/kb/184235).
-
