@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb88721c64666cc5b74bb51c1f92bd612b66fc4c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038555"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083320"
 ---
 # <a name="string-and-character-literals--c"></a>Stringa e valori letterali carattere (C++)
 
@@ -80,7 +80,7 @@ int main()
 }
 ```
 
-I valori letterali stringa non hanno prefisso o prefissi `u8`, `L`, `u`e  `U` per indicare rispettivamente le codifiche di caratteri narrow (a byte singolo o multibyte), UTF-8, caratteri wide (UCS-2 o UTF-16), UTF-16 e UTF-32. Un valore letterale stringa non elaborata può avere i prefissi `R`, `u8R`, `LR`, `uR` e `UR` per gli equivalenti della versione non elaborata di queste codifiche.  Per creare valori std::string temporanei o statici, è possibile usare valori letterali stringa o valori letterali stringa non elaborata con un suffisso `s` . Per altre informazioni, vedere la sezione Valori letterali stringa riportata di seguito. Per altre informazioni sul carattere di origine di base impostato, nomi di caratteri universali e uso di caratteri dalle tabelle codici estese nel codice sorgente, vedere [set di caratteri](../cpp/character-sets.md).
+I valori letterali stringa non hanno prefisso o prefissi `u8`, `L`, `u`e  `U` per indicare rispettivamente le codifiche di caratteri narrow (a byte singolo o multibyte), UTF-8, caratteri wide (UCS-2 o UTF-16), UTF-16 e UTF-32. Un valore letterale stringa non elaborata può avere i prefissi `R`, `u8R`, `LR`, `uR` e `UR` per gli equivalenti della versione non elaborata di queste codifiche.  Per creare valori std::string temporanei o statici, è possibile usare valori letterali stringa o valori letterali stringa non elaborata con un suffisso `s` . Per altre informazioni, vedere la sezione Valori letterali stringa riportata di seguito. Per altre informazioni sul set di caratteri di origine di base, sui nomi di caratteri universali e sull'uso di caratteri dalle tabelle codici estese nel codice sorgente, vedere [Character Sets](../cpp/character-sets.md).
 
 ## <a name="character-literals"></a>Valori letterali carattere
 
@@ -211,7 +211,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 I nomi di caratteri universali non possono codificare i valori nell'intervallo di punti di codice surrogati D800-DFFF. Per le coppie di surrogati Unicode, specificare il nome di carattere universale usando `\UNNNNNNNN`, dove NNNNNNNN è il punto di codice a otto cifre per il carattere. Il compilatore genera una coppia di surrogati se richiesto.
 
-In C++03 il linguaggio consentiva solo la rappresentazione di un subset di caratteri con i rispettivi nomi di caratteri universali e consentiva alcuni nomi di caratteri universali che non rappresentano effettivamente caratteri Unicode validi. Questo problema è stato risolto nello standard C++11. In C++11, sia i valori letterali carattere sia i valori letterali stringa possono usare i nomi di caratteri universali.  Per altre informazioni sui nomi di caratteri universali, vedere [set di caratteri](../cpp/character-sets.md). Per altre informazioni su Unicode, vedere [Unicode](https://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Per altre informazioni sulle coppie di surrogati, vedere [coppie di surrogati e caratteri supplementari](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+In C++03 il linguaggio consentiva solo la rappresentazione di un subset di caratteri con i rispettivi nomi di caratteri universali e consentiva alcuni nomi di caratteri universali che non rappresentano effettivamente caratteri Unicode validi. Questo problema è stato risolto nello standard C++11. In C++11, sia i valori letterali carattere sia i valori letterali stringa possono usare i nomi di caratteri universali.  Per altre informazioni sui nomi di caratteri universali, vedere [Character Sets](../cpp/character-sets.md). Per altre informazioni su Unicode, vedere [Unicode](https://msdn.microsoft.com/library/dd374081). Per altre informazioni sulle coppie di surrogati, vedere la pagina relativa alle [coppie di surrogati e ai caratteri supplementari](/windows/desktop/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Valori letterali stringa
 
@@ -257,7 +257,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>Valori letterali stringa non elaborata (C++11)
 
-Un valore letterale stringa non elaborato è una matrice con terminazione null, di qualsiasi tipo di carattere, contenente qualsiasi carattere grafico, inclusi le virgolette doppie ("), barra rovesciata (\\), o un carattere di nuova riga. I valori letterali stringa non elaborata vengono spesso usati nelle espressioni regolari che usano le classi di caratteri e nelle stringhe HTML e XML. Per esempi, vedere l'articolo seguente: [domande frequenti di Bjarne su c++11](http://www.stroustrup.com/C++11FAQ.html).
+Un valore letterale stringa non elaborato è una matrice con terminazione null, di qualsiasi tipo di carattere, contenente qualsiasi carattere grafico, inclusi le virgolette doppie ("), barra rovesciata (\\), o un carattere di nuova riga. I valori letterali stringa non elaborata vengono spesso usati nelle espressioni regolari che usano le classi di caratteri e nelle stringhe HTML e XML. Per gli esempi vedere la pagina relativa alle [domande frequenti di Bjarne Stroustrup su C++11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character

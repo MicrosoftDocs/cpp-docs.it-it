@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18bbcf64bc76d26535f9a5c2c51229048422af56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021577"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082423"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelli consumer OLE DB (C++)
 
@@ -35,7 +35,7 @@ I modelli consumer OLE DB supportano la specifica di OLE DB versione 2.6. Si not
   
 - Tipi di dati C/C++ nativi per la programmazione con OLE DB.  
   
-Per usare i modelli OLE DB è necessario avere una certa familiarità con i modelli C++, COM e le interfacce OLE DB. Se non si conosce sufficientemente OLE DB, vedere [riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
+Per usare i modelli OLE DB è necessario avere una certa familiarità con i modelli C++, COM e le interfacce OLE DB. Se non si conosce sufficientemente OLE DB, vedere la [guida di riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms718124).  
   
 I modelli OLE DB supportano il modello a oggetti OLE DB esistente anziché aggiungere un nuovo modello a oggetti. Le classi di primo livello dei modelli consumer OLE DB corrispondono ai componenti definiti nella specifica OLE DB. La struttura dei modelli consumer OLE DB comprende funzionalità avanzate, quali l'uso di più funzioni di accesso su un rowset. L'uso dei modelli e dell'ereditarietà multipla rende la libreria di piccole dimensioni e flessibile.  
   
@@ -71,5 +71,5 @@ Per altre informazioni, vedere i seguenti argomenti:
 
 [Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Accesso ai dati](../data-access-in-cpp.md)<br/>
-[Documentazione di OLE DB SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[Riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[Documentazione di OLE DB SDK](/previous-versions/windows/desktop/ms722784)   
+[guida di riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643)

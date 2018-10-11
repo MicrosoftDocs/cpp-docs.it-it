@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2555bdd9c1de130cd692131c12b7b2afc37537be
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861642"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083047"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 
@@ -36,7 +36,7 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
 - **Origine dati**
 
-   Il **Zdroj dat** pulsante configurare l'origine dati specificata utilizzando il provider OLE DB specificato. Quando si fa clic sul pulsante, il **proprietà di Data Link** verrà visualizzata la finestra di dialogo. Per altre informazioni sulla creazione di stringhe di connessione e il **proprietà di Data Link** finestra di dialogo, vedere [Cenni preliminari sull'API di collegamento dati](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) nella documentazione di Windows SDK.
+   Il **Zdroj dat** pulsante configurare l'origine dati specificata utilizzando il provider OLE DB specificato. Quando si fa clic sul pulsante, il **proprietà di Data Link** verrà visualizzata la finestra di dialogo. Per altre informazioni sulla creazione di stringhe di connessione e il **proprietà di Data Link** finestra di dialogo, vedere [Cenni preliminari sull'API di collegamento dati](/previous-versions/windows/desktop/ms718102) nella documentazione di Windows SDK.
 
    Le informazioni aggiuntive seguenti vengono descritte le schede di **proprietà di Data Link** nella finestra di dialogo.
 
@@ -177,7 +177,7 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
 - **Supporto**
 
-   Selezionare le caselle di controllo per specificare i tipi di aggiornamento devono essere supportati nel consumer (il valore predefinito è none). Gli aspetti seguenti imposterà [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) e le voci appropriate per [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) nel set di proprietà della mappa.
+   Selezionare le caselle di controllo per specificare i tipi di aggiornamento devono essere supportati nel consumer (il valore predefinito è none). Gli aspetti seguenti imposterà [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) e le voci appropriate per [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) nel set di proprietà della mappa.
 
    - **Modifica**
 
@@ -195,4 +195,4 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
 [Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Stringhe di connessione e i collegamenti dati (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Stringhe di connessione e i collegamenti dati (OLE DB)](/previous-versions/windows/desktop/ms718376)

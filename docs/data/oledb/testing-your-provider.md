@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d175216fedb2e6a9139d970fc7696672576f7423
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04687ed080013d9ae96a11eda32e060c02c61dec
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042897"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081981"
 ---
 # <a name="testing-your-provider"></a>Test del provider
 
@@ -32,7 +32,7 @@ Prima di rilasciare un provider, è consigliabile eseguire i test seguenti, nell
   
 1. Testare il provider usando un'applicazione consumer scritta con ADO. La maggior parte degli sviluppatori (soprattutto agli sviluppatori di Microsoft Visual Basic e c# Microsoft) utilizzano ADO o ADO.NET per le applicazioni consumer. Il consumer di test dovrebbe coprire tutte le aree funzionali del provider. Per un esempio di un'applicazione consumer di ADO, vedere [esempi di codice ADO in Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx).  
   
-1. Eseguire i test di conformità OLE DB (inclusi i test della conformità ADO) per assicurarsi che il provider soddisfi il livello 0 standard per i provider OLE DB. (Per una spiegazione del livello 0, cercare "OLE DB a livello 0 della conformità test" nel [Guida per programmatori OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)). Questi test e la relativa documentazione sono inclusi in Visual C++ in Data Access SDK. Queste prove consentono inoltre di garantire che il provider venga eseguito anche quando sono aggregati da altre [provider di servizi](../../data/oledb/ole-db-resource-pooling-and-services.md) e sono particolarmente utili se si modificano o si aggiungono le proprietà. Per altre informazioni sui test di conformità, vedere il file Leggimi per il Data Access SDK, che si trova in uno dei CD di Visual Studio.  
+1. Eseguire i test di conformità OLE DB (inclusi i test della conformità ADO) per assicurarsi che il provider soddisfi il livello 0 standard per i provider OLE DB. (Per una spiegazione del livello 0, cercare "OLE DB a livello 0 della conformità test" nel [Guida per programmatori OLE DB](/previous-versions/windows/desktop/ms713643). Questi test e la relativa documentazione sono inclusi in Visual C++ in Data Access SDK. Queste prove consentono inoltre di garantire che il provider venga eseguito anche quando sono aggregati da altre [provider di servizi](../../data/oledb/ole-db-resource-pooling-and-services.md) e sono particolarmente utili se si modificano o si aggiungono le proprietà. Per altre informazioni sui test di conformità, vedere il file Leggimi per il Data Access SDK, che si trova in uno dei CD di Visual Studio.  
   
 ## <a name="see-also"></a>Vedere anche  
 

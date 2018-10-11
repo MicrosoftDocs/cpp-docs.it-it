@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa4953c5ba879f5fa0fe8c5b892f91dfa8d15dc9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb27c7fc401fb27b3677659f4f1b5539c19fda2c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095215"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082696"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 
@@ -112,11 +112,11 @@ HRESULT Compare(CSimpleRow* pRow);
 #### <a name="parameters"></a>Parametri  
 
 *pRow*<br/>
-Un puntatore a un `CSimpleRow` oggetto.  
+Puntatore a un oggetto `CSimpleRow` .  
   
 ### <a name="return-value"></a>Valore restituito  
 
-Valore HRESULT, in genere S_OK, che indica le due righe rappresentano la stessa istanza di riga o S_FALSE, che indica le due righe sono diverse. Visualizzare [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altri possibili valori restituiti. 
+Valore HRESULT, in genere S_OK, che indica le due righe rappresentano la stessa istanza di riga o S_FALSE, che indica le due righe sono diverse. Visualizzare [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) nel *riferimento per programmatori OLE DB* per altri possibili valori restituiti. 
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 

@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c662099f3e7c42b75dc0cf197117144790f9df1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108352"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083827"
 ---
 # <a name="updating-rowsets"></a>aggiornamento rowset
 
 Un'operazione molto semplice del database consiste nell'aggiornamento o nella scrittura dei dati nell'archivio dati. In OLE DB il meccanismo di aggiornamento è semplice: l'applicazione consumer imposta i valori dei membri dati associati, scrive tali valori nel set di righe e, infine, richiede al provider di aggiornare l'archivio dati.  
   
-I consumer possono eseguire i tipi di aggiornamento seguenti sui dati del set di righe: impostazione dei valori della colonna all'interno di una riga, inserimento di una riga ed eliminazione di una riga. Per eseguire queste operazioni, la classe di modelli OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa il [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfaccia ed esegue l'override di metodi di interfaccia seguenti:  
+I consumer possono eseguire i tipi di aggiornamento seguenti sui dati del set di righe: impostazione dei valori della colonna all'interno di una riga, inserimento di una riga ed eliminazione di una riga. Per eseguire queste operazioni, la classe di modelli OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa l'interfaccia [IRowsetChange](/previous-versions/windows/desktop/ms715790) ed esegue l'override dei metodi di interfaccia seguenti:  
   
 - [SetData](../../data/oledb/crowset-setdata.md) modifica i valori della colonna in una riga di un set di righe. È equivalente al comando SQL UPDATE.  
   
@@ -223,4 +223,4 @@ Infine, uno dei motivi principali per il rinvio delle modifiche consiste nella p
 
 [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [Classe CRowset](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))
+[IRowsetChange](/previous-versions/windows/desktop/ms715790)

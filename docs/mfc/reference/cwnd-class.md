@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd35c0879896ca7edfd6524c31a86765bbcce219
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448610"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084191"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1131,7 +1131,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnCtlColor](#onctlcolor)|Chiamata eseguita se `CWnd` è l'elemento padre di un controllo quando il controllo sta per essere disegnato.|
 |[CWnd::OnDeadChar](#ondeadchar)|Chiamata eseguita quando una sequenza di tasti viene convertita in un carattere non utilizzato non di sistema (come i caratteri accentati).|
 |[CWnd::OnDeleteItem](#ondeleteitem)|Chiamata eseguita quando viene eliminata definitivamente una casella di riepilogo o una casella combinata figlio disegnata dal proprietario o quando vengono rimossi elementi dal controllo.|
-|[CWnd::OnDestroy](#ondestroy)|Chiamata eseguita quando viene eliminato in modo permanente l'oggetto `CWnd`.|
+|[CWnd::OnDestroy](#ondestroy)|Chiamata eseguita quando viene eliminato definitivamente l'oggetto `CWnd`.|
 |[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Chiamato quando viene svuotato Appunti tramite una chiamata a di Windows [EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) (funzione).|
 |[CWnd::OnDeviceChange](#ondevicechange)|Invia notifica a un'applicazione o driver di dispositivo di una modifica alla configurazione hardware di un dispositivo o del computer.|
 |[CWnd::OnDevModeChange](#ondevmodechange)|Chiamata eseguita per tutte le finestre di primo livello quando l'utente modifica le impostazioni della modalità dispositivo.|
@@ -1283,7 +1283,7 @@ class CWnd : public CCmdTarget
 
 ## <a name="remarks"></a>Note
 
-Un oggetto `CWnd` è diverso da una finestra di Windows, ma i due oggetti sono strettamente collegati. Un oggetto `CWnd` viene creato o eliminato in modo permanente dal costruttore e distruttore `CWnd`. La finestra di Windows, d'altra parte, è una struttura di dati interna di Windows creato da un `Create` funzione di membro ed eliminati definitivamente dal `CWnd` distruttore virtuale. Il [DestroyWindow](#destroywindow) funzione Elimina definitivamente la finestra di Windows senza eliminare l'oggetto.
+Un oggetto `CWnd` è diverso da una finestra di Windows, ma i due oggetti sono strettamente collegati. Un oggetto `CWnd` viene creato o eliminato definitivamente dal costruttore e distruttore `CWnd`. La finestra di Windows, d'altra parte, è una struttura di dati interna di Windows creato da un `Create` funzione di membro ed eliminati definitivamente dal `CWnd` distruttore virtuale. Il [DestroyWindow](#destroywindow) funzione Elimina definitivamente la finestra di Windows senza eliminare l'oggetto.
 
 Il `CWnd` classe e il meccanismo della mappa messaggi nascondere il `WndProc` (funzione). I messaggi di notifica di Windows in ingresso vengono indirizzati automaticamente tramite la mappa messaggi alle appropriate **sul**<em>messaggio</em> `CWnd` funzioni membro. Si esegue l'override un' **sul**<em>messaggio</em> funzione membro per la gestione di messaggio specifico di un membro nelle classi derivate.
 
@@ -1291,7 +1291,7 @@ La classe `CWnd` consente inoltre di creare una finestra figlio di Windows per l
 
 È possibile creare una finestra figlio in due passaggi. In primo luogo, chiamare il costruttore `CWnd` per costruire il `CWnd` dell'oggetto, quindi chiamare il [Create](#create) funzione membro per creare la finestra figlio e collegarla al `CWnd` oggetto.
 
-Quando l'utente termina la finestra figlio, eliminare l'oggetto `CWnd` in modo permanente oppure chiamare la funzione membro `DestroyWindow` per rimuovere la finestra ed eliminare in modo permanente le relative strutture dei dati.
+Quando l'utente termina la finestra figlio, eliminare definitivamente l'oggetto `CWnd` oppure chiamare la funzione membro `DestroyWindow` per rimuovere la finestra ed eliminare definitivamente le relative strutture dei dati.
 
 All'interno della libreria Microsoft Foundation Class ulteriori classi sono derivate da `CWnd` per rendere disponibili tipi specifici di finestra. Molte di queste classi, tra cui [CFrameWnd](../../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md), [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md), [CView](../../mfc/reference/cview-class.md), e [CDialog](../../mfc/reference/cdialog-class.md), sono progettati per consentire ulteriori derivazioni. Le classi di controllo derivate da `CWnd`, ad esempio [CButton](../../mfc/reference/cbutton-class.md), può essere usato direttamente o può essere usato per un'ulteriore derivazione di classi.
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 Inoltre, `BringWindowToTop` attiva le finestre popup, di livello superiore e figlio MDI. È necessario utilizzare la funzione membro `BringWindowToTop` per rivelare eventuali finestre parzialmente o completamente nascoste da finestre sovrapposte.
 
-Questa funzione chiama semplicemente Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx) (funzione). Chiamare il [SetWindowPos](#setwindowpos) funzione per modificare la posizione di una finestra nell'ordine Z. La funzione `BringWindowToTop` non modifica lo stile della finestra per renderla una finestra di livello superiore. Per altre informazioni, vedere [qual è la differenza tra HWND_TOP e HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Questa funzione chiama semplicemente Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) (funzione). Chiamare il [SetWindowPos](#setwindowpos) funzione per modificare la posizione di una finestra nell'ordine Z. La funzione `BringWindowToTop` non modifica lo stile della finestra per renderla una finestra di livello superiore. Per altre informazioni, vedere [qual è la differenza tra HWND_TOP e HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>Esempio
 
@@ -3207,7 +3207,7 @@ Un oggetto HWND di una finestra di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CWnd` oggetto.
+Puntatore a un oggetto `CWnd` .
 
 ### <a name="remarks"></a>Note
 
@@ -4417,7 +4417,7 @@ CWnd* GetOwner() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CWnd` oggetto.
+Puntatore a un oggetto `CWnd` .
 
 ### <a name="remarks"></a>Note
 
@@ -4467,7 +4467,7 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CWnd` oggetto. Se all'handle non è collegato un oggetto `CWnd`, viene creato e collegato un oggetto `CWnd` temporaneo. Il puntatore può essere temporaneo e non deve essere memorizzato per usi successivi.
+Puntatore a un oggetto `CWnd` . Se all'handle non è collegato un oggetto `CWnd`, viene creato e collegato un oggetto `CWnd` temporaneo. Il puntatore può essere temporaneo e non deve essere memorizzato per usi successivi.
 
 ### <a name="remarks"></a>Note
 
@@ -4492,7 +4492,7 @@ void GetProperty(
 Identifica la proprietà da recuperare.
 
 *vtProp*<br/>
-Specifica il tipo della proprietà da recuperare. Per i valori possibili, vedere la sezione relativa alle osservazioni [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Specifica il tipo della proprietà da recuperare. Per i valori possibili, vedere la sezione Note per [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvProp*<br/>
 Indirizzo della variabile che verrà che riceverà il valore della proprietà. Deve corrispondere al tipo specificato da *vtProp*.
@@ -5363,7 +5363,7 @@ Identifica il metodo o la proprietà da richiamare.
 Flag che descrivono il contesto della chiamata a `IDispatch::Invoke`.
 
 *vtRet*<br/>
-Specifica il tipo del valore restituito. Per i valori possibili, vedere la sezione relativa alle osservazioni [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Specifica il tipo del valore restituito. Per i valori possibili, vedere la sezione Note per [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvRet*<br/>
 Indirizzo della variabile che verrà che riceverà il valore della proprietà o valore restituito. Deve corrispondere al tipo specificato da *vtRet*.
@@ -5376,7 +5376,7 @@ Elenco di parametri dei tipi specificati nella variabile *pbParamInfo*.
 
 ### <a name="remarks"></a>Note
 
-Il *pbParamInfo* parametro specifica i tipi dei parametri passati al metodo o proprietà. L'elenco di argomenti variabile è rappresentato da *...*  nella dichiarazione di sintassi.
+Il *pbParamInfo* parametro specifica i tipi dei parametri passati al metodo o proprietà. L'elenco di argomenti variabile è rappresentato da *...* nella dichiarazione di sintassi.
 
 Questa funzione converte i parametri in valori VARIANTARG, quindi richiama il `IDispatch::Invoke` metodo nel controllo ActiveX. Se la chiamata a `IDispatch::Invoke` ha esito negativo, questa funzione genera un'eccezione. Se il SCODE (codice di stato) restituito da `IDispatch::Invoke` è DISP_E_EXCEPTION, questa funzione genera un [COleException](../../mfc/reference/coleexception-class.md) oggetto, in caso contrario, genera una [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
@@ -8805,7 +8805,7 @@ afx_msg void OnPaintClipboard(
 Specifica un puntatore alla finestra dell'applicazione Appunti. Il puntatore può essere temporaneo e non deve essere memorizzato per usi successivi.
 
 *hPaintStruct*<br/>
-Identifica un [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) struttura dei dati che definisce la parte dell'area client da disegnare.
+Identifica una struttura di dati [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) che definisce la parte dell'area client da disegnare.
 
 ### <a name="remarks"></a>Note
 
@@ -10602,7 +10602,7 @@ Ignorando questa funzione membro è per la creazione di una sottoclasse dinamica
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows.
+Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11592,7 +11592,7 @@ void AFX_CDECL SetProperty(
 Identifica la proprietà da impostare.
 
 *vtProp*<br/>
-Specifica il tipo della proprietà da impostare. Per i valori possibili, vedere la sezione relativa alle osservazioni [COleDispatchDriver:: InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Specifica il tipo della proprietà da impostare. Per i valori possibili, vedere la sezione Note per [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Un singolo parametro del tipo specificato da *vtProp*.

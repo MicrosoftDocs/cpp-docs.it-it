@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef48157d1f4efb467fd33270ff05271bedd1a563
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713725"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081890"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-I processi in modo esplicito il collegamento a una chiamata DLL [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione esportata nella DLL. Utilizzare il puntatore di funzione restituita per chiamare la funzione DLL. **GetProcAddress** accetta come parametri l'handle del modulo DLL (restituito da **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) e il nome della funzione da a chiamata o un numero ordinale di esportazione della funzione.
+I processi in modo esplicito il collegamento a una chiamata DLL [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) per ottenere l'indirizzo di una funzione esportata nella DLL. Utilizzare il puntatore di funzione restituita per chiamare la funzione DLL. **GetProcAddress** accetta come parametri l'handle del modulo DLL (restituito da **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) e il nome della funzione da a chiamata o un numero ordinale di esportazione della funzione.
 
 Poiché si sta chiamando la funzione DLL tramite un puntatore ed è presente alcun controllo del tipo in fase di compilazione, assicurarsi che i parametri della funzione siano corretti in modo che non si oltrepassati la memoria allocata nello stack e provoca una violazione di accesso. Un modo per garantire l'indipendenza dai tipi è Esaminiamo i prototipi delle funzioni esportate e creare oggetti typedef corrispondenti per i puntatori a funzione. Ad esempio:
 
@@ -73,7 +73,7 @@ Come si specifica la funzione desiderata quando si chiama **GetProcAddress** dip
 
 - [LoadLibrary e AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [Esportazione da una DLL tramite i file DEF](../build/exporting-from-a-dll-using-def-files.md)
 

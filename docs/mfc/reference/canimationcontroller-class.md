@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f64fce16201a15936cb97b1961827865c7b917b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ce23acf1988e88954279f3b8cdbc8fc3c9001af
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446348"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083645"
 ---
 # <a name="canimationcontroller-class"></a>Classe CAnimationController
 
@@ -882,7 +882,7 @@ Deve restituire TRUE se lo storyboard di proprietà di pGroupNew è prioritario.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato se si abilitano eventi di confronto della priorità usando CAnimationController:: EnablePriorityComparisonHandler e si specifica UI_ANIMATION_PHT_CANCEL. Può essere sottoposto a override in una classe derivata per eseguire azioni specifiche dell'applicazione. Documentazione dell'API di animazione di Windows in lettura per altre informazioni sulla gestione dei conflitti (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Questo metodo viene chiamato se si abilitano eventi di confronto della priorità usando CAnimationController:: EnablePriorityComparisonHandler e si specifica UI_ANIMATION_PHT_CANCEL. Può essere sottoposto a override in una classe derivata per eseguire azioni specifiche dell'applicazione. Documentazione dell'API di animazione Windows di lettura per altre informazioni sulle [gestione dei conflitti](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -912,7 +912,7 @@ Deve restituire TRUE se lo storyboard di proprietà di pGroupNew è prioritario.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato se si abilitano eventi di confronto della priorità usando CAnimationController:: EnablePriorityComparisonHandler e si specifica UI_ANIMATION_PHT_COMPRESS. Può essere sottoposto a override in una classe derivata per eseguire azioni specifiche dell'applicazione. Documentazione dell'API di animazione di Windows in lettura per altre informazioni sulla gestione dei conflitti (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Questo metodo viene chiamato se si abilitano eventi di confronto della priorità usando CAnimationController:: EnablePriorityComparisonHandler e si specifica UI_ANIMATION_PHT_COMPRESS. Può essere sottoposto a override in una classe derivata per eseguire azioni specifiche dell'applicazione. Documentazione dell'API di animazione Windows di lettura per altre informazioni sulle [gestione dei conflitti](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -942,7 +942,7 @@ Deve restituire TRUE se lo storyboard di proprietà di pGroupNew è prioritario.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato se si abilitano eventi di confronto della priorità usando CAnimationController:: EnablePriorityComparisonHandler e si specifica UI_ANIMATION_PHT_CONCLUDE. Può essere sottoposto a override in una classe derivata per eseguire azioni specifiche dell'applicazione. Documentazione dell'API di animazione di Windows in lettura per altre informazioni sulla gestione dei conflitti (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Questo metodo viene chiamato se si abilitano eventi di confronto della priorità usando CAnimationController:: EnablePriorityComparisonHandler e si specifica UI_ANIMATION_PHT_CONCLUDE. Può essere sottoposto a override in una classe derivata per eseguire azioni specifiche dell'applicazione. Documentazione dell'API di animazione Windows di lettura per altre informazioni sulle [gestione dei conflitti](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -972,7 +972,7 @@ Deve restituire TRUE se lo storyboard di proprietà di pGroupNew è prioritario.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato se si abilitano eventi di confronto della priorità usando CAnimationController:: EnablePriorityComparisonHandler e si specifica UI_ANIMATION_PHT_TRIM. Può essere sottoposto a override in una classe derivata per eseguire azioni specifiche dell'applicazione. Documentazione dell'API di animazione di Windows in lettura per altre informazioni sulla gestione dei conflitti (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Questo metodo viene chiamato se si abilitano eventi di confronto della priorità usando CAnimationController:: EnablePriorityComparisonHandler e si specifica UI_ANIMATION_PHT_TRIM. Può essere sottoposto a override in una classe derivata per eseguire azioni specifiche dell'applicazione. Documentazione dell'API di animazione Windows di lettura per altre informazioni sulle [gestione dei conflitti](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

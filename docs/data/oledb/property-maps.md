@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b3fb9c5a5c18925bfcd448bb2349379262b27361
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8672cca382d89eda93e624f566f754bd2eb14d0a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080987"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083411"
 ---
 # <a name="property-maps"></a>Mappe delle proprietà
 
-Oltre la sessione, set di righe e l'oggetto comando facoltativo, ogni provider supporta una o più proprietà. Queste proprietà sono definite nelle proprietà mappe contenute nei file di intestazione creati dalla creazione guidata Provider OLE DB. Ogni file di intestazione contiene una mappa per le proprietà nel gruppo di proprietà OLE DB definite per gli oggetti definiti in tale file. Il file di intestazione che contiene l'oggetto origine dati contiene inoltre il mapping di proprietà per il [proprietà DataSource](https://msdn.microsoft.com/library/ms724188\(v=vs.140\).aspx). Session. h contiene il mapping di proprietà per il [le proprietà della sessione](/previous-versions/windows/desktop/ms714221\(v=vs.85\)). Gli oggetti rowset e comando si trovano in un unico file di intestazione denominato *projectname*RS. Queste proprietà appartengono le [proprietà set di righe](/previous-versions/windows/desktop/ms711252\(v=vs.85\)) gruppo.  
+Oltre la sessione, set di righe e l'oggetto comando facoltativo, ogni provider supporta una o più proprietà. Queste proprietà sono definite nelle proprietà mappe contenute nei file di intestazione creati dalla creazione guidata Provider OLE DB. Ogni file di intestazione contiene una mappa per le proprietà nel gruppo di proprietà OLE DB definite per gli oggetti definiti in tale file. Il file di intestazione che contiene l'oggetto origine dati contiene inoltre il mapping di proprietà per il [proprietà DataSource](https://msdn.microsoft.com/library/ms724188). Session. h contiene il mapping di proprietà per il [le proprietà della sessione](/previous-versions/windows/desktop/ms714221). Gli oggetti rowset e comando si trovano in un unico file di intestazione denominato *projectname*RS. Queste proprietà appartengono le [proprietà set di righe](/previous-versions/windows/desktop/ms711252) gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
 

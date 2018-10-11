@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116763"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082904"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
@@ -165,7 +165,7 @@ Nell'esempio seguente viene illustrato l'utilizzo del `CBulkRowset` classe.
 
 ## <a name="addrefrows"></a> CBulkRowset:: Addrefrows
 
-Le chiamate [IRowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) incrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.  
+Le chiamate [IRowset:: Addrefrows](/previous-versions/windows/desktop/ms719619) incrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -264,7 +264,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="return-value"></a>Valore restituito  
 
-Visualizzare [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
+Visualizzare [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) nel *riferimento per programmatori OLE DB*. 
 
 ## <a name="movetoratio"></a> CBulkRowset:: Movetoratio
 
@@ -295,11 +295,11 @@ Un valore HRESULT standard.
   
 `(nNumerator *  RowsetSize ) / nDenominator`  
   
-In cui `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.   
+In cui `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) nel *riferimento per programmatori OLE DB*.   
 
 ## <a name="releaserows"></a> CBulkRowset:: ReleaseRows
 
-Le chiamate [:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) per decrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.  
+Le chiamate [:: ReleaseRows](/previous-versions/windows/desktop/ms719771) per decrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.  
   
 ### <a name="syntax"></a>Sintassi  
   

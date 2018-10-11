@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9313934744f6eae66736f25b0d0b8592743cf12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b769b5aa5f46b9a4b815424a0c4178cf4504ab5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376980"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082436"
 ---
 # <a name="threadprivate"></a>threadprivate
 
@@ -46,7 +46,7 @@ Per altre informazioni, vedere [2.7.1 direttiva threadprivate](../../../parallel
 
 Il `threadprivate` direttiva si basa sul [thread](../../../cpp/thread.md) `__declspec` attributo; limiti sulle **declspec** si applicano a `threadprivate`.
 
-Non è possibile usare `threadprivate` in qualsiasi DLL che verrà caricata mediante [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175).  Ciò include le DLL che siano state caricate [/DELAYLOAD (importazione a caricamento ritardato)](../../../build/reference/delayload-delay-load-import.md), che utilizza anch **LoadLibrary**.
+Non è possibile usare `threadprivate` in qualsiasi DLL che verrà caricata mediante [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya).  Ciò include le DLL che siano state caricate [/DELAYLOAD (importazione a caricamento ritardato)](../../../build/reference/delayload-delay-load-import.md), che utilizza anch **LoadLibrary**.
 
 È possibile usare `threadprivate` in una DLL che viene caricata in modo statico all'avvio del processo.
 

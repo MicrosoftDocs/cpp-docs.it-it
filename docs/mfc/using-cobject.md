@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f421624f16a11f02dc260ce95a9d2cf11fcd9fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 734f9f66a37828b1fed04fc5366dd545e6c5e370
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399132"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082189"
 ---
 # <a name="using-cobject"></a>Utilizzo di CObject
 
@@ -41,7 +41,7 @@ ms.locfileid: "46399132"
 
 - [Creare gli oggetti in modo dinamico](../mfc/dynamic-object-creation.md)
 
-- [Eseguire il dump dei dati dell'oggetto per scopi diagnostici](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\))
+- [Eseguire il dump dei dati dell'oggetto per scopi diagnostici](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)
 
 - Convalidare lo stato interno dell'oggetto (vedere [ASSERT_VALID e MFC CObject:: AssertValid](reference/diagnostic-services.md#assert_valid))
 

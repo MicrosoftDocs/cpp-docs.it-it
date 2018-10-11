@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374370"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083801"
 ---
 # <a name="application-information-and-management"></a>Informazioni sull'applicazione e gestione
 
@@ -591,7 +591,7 @@ Se la funzione ha esito positivo, il valore restituito è un handle per il modul
 
 ### <a name="remarks"></a>Note
 
-Restituisce un handle che può essere usato nel [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione DLL. `AfxLoadLibrary` è anche utilizzabile per eseguire il mapping di altri moduli eseguibili.
+Restituisce un handle che può essere usato nel [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) per ottenere l'indirizzo di una funzione DLL. `AfxLoadLibrary` è anche utilizzabile per eseguire il mapping di altri moduli eseguibili.
 
 Ogni processo di migrazione mantiene un conteggio dei riferimenti per ogni modulo di libreria caricato. Questo conteggio dei riferimenti viene incrementato ogni volta che `AfxLoadLibrary` viene chiamato e viene decrementato ogni volta `AfxFreeLibrary` viene chiamato. Quando il conteggio dei riferimenti arriva a zero, il modulo viene disassociato dallo spazio degli indirizzi del processo chiamante e l'handle non è più valido.
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Prima di Windows Vista, applicazioni che accedono al Registro di sistema in genere usato il **HKEY_CLASSES_ROOT** nodo. Tuttavia, con Windows Vista o versioni successive, è necessario eseguire un'applicazione con privilegi elevati in cui scrivere HKCR.
 
-Questo metodo consente all'applicazione leggere e scrivere nel Registro di sistema senza eseguire con privilegi elevati, reindirizzando l'accesso del Registro di sistema da HKCR in HKCU. Per altre informazioni, vedere [pagine delle proprietà Linker](../../ide/linker-property-pages.md).
+Questo metodo consente all'applicazione leggere e scrivere nel Registro di sistema senza eseguire con privilegi elevati, reindirizzando l'accesso del Registro di sistema da HKCR in HKCU. Per altre informazioni, vedere [Linker Property Pages](../../ide/linker-property-pages.md).
 
 Se si abilita il reindirizzamento del Registro di sistema, il framework reindirizza l'accesso da HKCR **HKEY_CURRENT_USER\Software\Classes**. Solo i framework MFC e ATL sono interessati dal reindirizzamento.
 

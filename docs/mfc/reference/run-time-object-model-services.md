@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fb948efd63a8392661cc38a80393bc90d5e694
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396463"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083593"
 ---
 # <a name="run-time-object-model-services"></a>Servizi modelli a oggetti runtime
 
@@ -92,7 +92,7 @@ Puntatore a una stringa con terminazione null che contiene il nome della funzion
 
 ### <a name="remarks"></a>Note
 
-Usare questa macro per determinare se la libreria di controlli comuni di funzione specificato dalla *proc* (invece di chiamare [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).
+Usare questa macro per determinare se la libreria di controlli comuni di funzione specificato dalla *proc* (invece di chiamare [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -119,7 +119,7 @@ Puntatore a una stringa con terminazione null che contiene il nome della funzion
 
 ### <a name="remarks"></a>Note
 
-Usare questa macro per determinare se la libreria di controlli comuni di funzione specificato dalla *proc* (invece di chiamare [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). Questa macro è la versione Unicode di AFX_COMCTL32_IF_EXISTS.
+Usare questa macro per determinare se la libreria di controlli comuni di funzione specificato dalla *proc* (invece di chiamare [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress). Questa macro è la versione Unicode di AFX_COMCTL32_IF_EXISTS.
 
 ### <a name="requirements"></a>Requisiti
 

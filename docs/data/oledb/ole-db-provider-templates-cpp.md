@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f9e5ac3d0a7f640ba9d7361d755763bd68dd728
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9ab1f5e35deff1117c544dfa372abb9949502001
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042195"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082949"
 ---
 # <a name="ole-db-provider-templates-c"></a>Modelli provider OLE DB (C++)
 
@@ -81,5 +81,5 @@ Per altre informazioni, vedere:
 ## <a name="see-also"></a>Vedere anche  
 
 [Accesso ai dati](../data-access-in-cpp.md)<br/>
-[Documentazione di OLE DB SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[Riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[Documentazione di OLE DB SDK](/previous-versions/windows/desktop/ms722784)   
+[guida di riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643)

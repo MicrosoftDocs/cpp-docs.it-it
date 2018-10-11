@@ -1083,12 +1083,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1496fa844106b78e2a5dc735fad0cc33923aea53
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3f09dddf8df82f1826e747f274218608ea092265
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035760"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083726"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classi Rowset dello schema e classi Typedef
 
@@ -1096,42 +1096,42 @@ Uno schema è una raccolta di oggetti di database che sono di proprietà oppure 
   
 I set di righe dello schema sono i set di righe predefinito che rappresenta i metadati. I set di righe dello schema vengono in genere utilizzate nella programmazione dinamica, in cui la struttura del database non è noto in fase di compilazione. È possibile usare questi set di righe dello schema per ottenere informazioni su un database in fase di esecuzione.  
   
-Usare le classi typedef per creare un'istanza di righe dello schema. Il typedef corrispondenti e classi rowset dello schema sono elencate di seguito. È necessario chiamare [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) dopo aver creato un'istanza del set di righe dello schema. Questo metodo restituisce un set di risultati basato sulle restrizioni specificate. Visualizzare [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) per informazioni sulle colonne di restrizione associate a ogni set di righe dello schema.  
+Usare le classi typedef per creare un'istanza di righe dello schema. Il typedef corrispondenti e classi rowset dello schema sono elencate di seguito. È necessario chiamare [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) dopo aver creato un'istanza del set di righe dello schema. Questo metodo restituisce un set di risultati basato sulle restrizioni specificate. Visualizzare [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) per informazioni sulle colonne di restrizione associate a ogni set di righe dello schema.  
   
 Nella tabella seguente consente di visualizzare ciascun Rowset dello Schema OLE DB e relativo valore corrispondente (classe typedef) modelli OLE DB e informazioni sulla classe.  
   
 |Set di righe dello Schema OLE DB|(Classe typedef)|Classe Info|  
 |--------------------------|-------------------|----------------|  
-|[ASSERZIONI](/previous-versions/windows/desktop/ms719776\(v=vs.85\))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|  
-|[CATALOGHI](/previous-versions/windows/desktop/ms721241\(v=vs.85\))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|  
-|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638\(v=vs.85\))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|  
-|[REGOLE DI CONFRONTO](/previous-versions/windows/desktop/ms715783\(v=vs.85\))|[CCollations](#collation)|[CCollationInfo](#collation)|  
-|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800\(v=vs.85\))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|  
-|[COLONNE](/previous-versions/windows/desktop/ms723052\(v=vs.85\))|[CColumns](#columns)|[CColumnsInfo](#columns)|  
-|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522\(v=vs.85\))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|  
-|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710\(v=vs.85\))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|  
-|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845\(v=vs.85\))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|  
-|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240\(v=vs.85\))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|  
-|[STORED](/previous-versions/windows/desktop/ms711276\(v=vs.85\))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|  
-|[INDICI](/previous-versions/windows/desktop/ms709712\(v=vs.85\))|[CIndexes](#index)|[CIndexInfo](#index)|  
-|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990\(v=vs.85\))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|  
-|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362\(v=vs.85\))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|  
-|[PROCEDURE](/previous-versions/windows/desktop/ms724021\(v=vs.85\))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|  
-|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092\(v=vs.85\))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|  
-|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623\(v=vs.85\))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|  
-|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785\(v=vs.85\))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|  
-|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737\(v=vs.85\))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|  
-|[SCHEMATA](/previous-versions/windows/desktop/ms716887\(v=vs.85\))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|  
-|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374\(v=vs.85\))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|  
-|[STATISTICHE](/previous-versions/windows/desktop/ms715957\(v=vs.85\))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|  
-|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921\(v=vs.85\))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|  
-|[TABELLE](/previous-versions/windows/desktop/ms716980\(v=vs.85\))|[CTables](#table)|[CTableInfo](#table)|  
-|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428\(v=vs.85\))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|  
-|[TRADUZIONI](/previous-versions/windows/desktop/ms725365\(v=vs.85\))|[CTranslations](#translation)|[CTranslationInfo](#translation)|  
-|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743\(v=vs.85\))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|  
-|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896\(v=vs.85\))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|  
-|[VISUALIZZAZIONI](/previous-versions/windows/desktop/ms723122\(v=vs.85\))|[CViews](#view)|[CViewInfo](#view)|  
-|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727\(v=vs.85\))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
+|[ASSERZIONI](/previous-versions/windows/desktop/ms719776)|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|  
+|[CATALOGHI](/previous-versions/windows/desktop/ms721241)|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|  
+|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638)|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|  
+|[REGOLE DI CONFRONTO](/previous-versions/windows/desktop/ms715783)|[CCollations](#collation)|[CCollationInfo](#collation)|  
+|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800)|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|  
+|[COLONNE](/previous-versions/windows/desktop/ms723052)|[CColumns](#columns)|[CColumnsInfo](#columns)|  
+|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522)|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|  
+|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710)|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|  
+|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845)|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|  
+|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240)|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|  
+|[STORED](/previous-versions/windows/desktop/ms711276)|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|  
+|[INDICI](/previous-versions/windows/desktop/ms709712)|[CIndexes](#index)|[CIndexInfo](#index)|  
+|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990)|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|  
+|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362)|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|  
+|[PROCEDURE](/previous-versions/windows/desktop/ms724021)|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|  
+|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092)|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|  
+|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623)|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|  
+|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785)|[CProviderTypes](#provider)|[CProviderInfo](#provider)|  
+|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737)|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|  
+|[SCHEMATA](/previous-versions/windows/desktop/ms716887)|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|  
+|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374)|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|  
+|[STATISTICHE](/previous-versions/windows/desktop/ms715957)|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|  
+|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921)|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|  
+|[TABELLE](/previous-versions/windows/desktop/ms716980)|[CTables](#table)|[CTableInfo](#table)|  
+|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428)|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|  
+|[TRADUZIONI](/previous-versions/windows/desktop/ms725365)|[CTranslations](#translation)|[CTranslationInfo](#translation)|  
+|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743)|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|  
+|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896)|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|  
+|[VISUALIZZAZIONI](/previous-versions/windows/desktop/ms723122)|[CViews](#view)|[CViewInfo](#view)|  
+|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727)|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|  
   
 ## <a name="assertion"></a> CAssertions, CAssertionInfo
 
@@ -1143,7 +1143,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le asserzioni definite nel catalogo appartenenti a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe per `CAssertionInfo` e le corrispondenti colonne BD OLE. Vedere [set di righe ASSERZIONI](/previous-versions/windows/desktop/ms719776\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe per `CAssertionInfo` e le corrispondenti colonne BD OLE. Vedere [set di righe ASSERZIONI](/previous-versions/windows/desktop/ms719776) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1164,7 +1164,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica gli attributi fisici associati a cataloghi accessibili dal sistema DBMS.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [Rowset CATALOGS](/previous-versions/windows/desktop/ms721241\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [Rowset CATALOGS](/previous-versions/windows/desktop/ms721241) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1181,7 +1181,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica i set di caratteri definiti nel catalogo a cui un determinato utente può accedere.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [Rowset CHARACTER_SETS](/previous-versions/windows/desktop/ms722638\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [Rowset CHARACTER_SETS](/previous-versions/windows/desktop/ms722638) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1204,7 +1204,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica i vincoli check, definiti nel catalogo, di proprietà di un determinato utente. Un vincolo check specifica i valori di dati o i formati accettabili in una o più colonne in una tabella.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1224,7 +1224,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica il confronto per caratteri, definite nel catalogo, che sono accessibili a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe di regole di confronto](/previous-versions/windows/desktop/ms715783\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe di regole di confronto](/previous-versions/windows/desktop/ms715783) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1246,7 +1246,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le colonne, definite nel catalogo, che dipendono da un dominio definite nel catalogo e appartenenti a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [Rowset COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [Rowset COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1270,7 +1270,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica i privilegi sulle colonne di tabelle, definite nel catalogo, che sono disponibili o concessi da un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [COLUMN_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms715800\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [COLUMN_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms715800) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1295,7 +1295,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le colonne di tabelle definite nel catalogo accessibile a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe COLUMNS](/previous-versions/windows/desktop/ms723052\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe COLUMNS](/previous-versions/windows/desktop/ms723052) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1338,7 +1338,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le colonne utilizzate da vincoli referenziali, vincoli unique, vincoli check e asserzioni, definite nel catalogo e appartenenti a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [CONSTRAINT_COLUMN_USAGE Rowset](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [CONSTRAINT_COLUMN_USAGE Rowset](/previous-versions/windows/desktop/ms724522) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1362,7 +1362,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le tabelle utilizzate da vincoli referenziali, vincoli unique, vincoli check e asserzioni, definite nel catalogo e appartenenti a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [CONSTRAINT_TABLE_USAGE Rowset](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [CONSTRAINT_TABLE_USAGE Rowset](/previous-versions/windows/desktop/ms724522) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1383,7 +1383,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le colonne chiave esterne definite nel catalogo da un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [nel set di righe](/previous-versions/windows/desktop/ms711276\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [nel set di righe](/previous-versions/windows/desktop/ms711276) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1413,7 +1413,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica gli indici, definiti nel catalogo, che appartengono a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe INDEXES](/previous-versions/windows/desktop/ms709712\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe INDEXES](/previous-versions/windows/desktop/ms709712) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1452,7 +1452,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le colonne, definite nel catalogo, che sono vincolate come chiavi di un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [KEY_COLUMN_USAGE Rowset](/previous-versions/windows/desktop/ms712990\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [KEY_COLUMN_USAGE Rowset](/previous-versions/windows/desktop/ms712990) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1477,7 +1477,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le colonne chiave primarie definite nel catalogo da un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1499,7 +1499,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe restituisce informazioni sulle colonne di set di righe restituiti dalle stored procedure.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [PROCEDURE_COLUMNS Rowset](/previous-versions/windows/desktop/ms723092\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [PROCEDURE_COLUMNS Rowset](/previous-versions/windows/desktop/ms723092) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1530,7 +1530,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe restituisce informazioni sui parametri e codici restituiti delle routine.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1560,7 +1560,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe sono incluse le procedure, definite nel catalogo, di proprietà di un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [procedure Rowset](/previous-versions/windows/desktop/ms724021\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [procedure Rowset](/previous-versions/windows/desktop/ms724021) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1581,7 +1581,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica i tipi di dati (base) supportati dal provider di dati.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1616,7 +1616,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica i vincoli referenziali, definiti nel catalogo, di proprietà di un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [REFERENTIAL_CONSTRAINTS Rowset](/previous-versions/windows/desktop/ms719737\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [REFERENTIAL_CONSTRAINTS Rowset](/previous-versions/windows/desktop/ms719737) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1641,7 +1641,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica gli schemi di proprietà di un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe degli schemi](/previous-versions/windows/desktop/ms716887\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe degli schemi](/previous-versions/windows/desktop/ms716887) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1662,7 +1662,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica i livelli di conformità, le opzioni e i sottolinguaggi supportati dall'implementazione SQL con l'elaborazione dati definiti nel catalogo.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [SQL_LANGUAGES Rowset](/previous-versions/windows/desktop/ms714374\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [SQL_LANGUAGES Rowset](/previous-versions/windows/desktop/ms714374) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1684,7 +1684,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le statistiche definite nel catalogo, di proprietà di un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe di statistiche](/previous-versions/windows/desktop/ms715957\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe di statistiche](/previous-versions/windows/desktop/ms715957) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1703,7 +1703,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica i vincoli di tabella, definiti nel catalogo, di proprietà di un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [TABLE_CONSTRAINTS Rowset](/previous-versions/windows/desktop/ms715921\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [TABLE_CONSTRAINTS Rowset](/previous-versions/windows/desktop/ms715921) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1728,7 +1728,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le tabelle definite nel catalogo accessibili a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [TABLE_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms725428\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [TABLE_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms725428) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1750,7 +1750,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica i privilegi sulle tabelle, definiti nel catalogo, disponibili o concessi da un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe TABLES](/previous-versions/windows/desktop/ms716980\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [set di righe TABLES](/previous-versions/windows/desktop/ms716980) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1771,7 +1771,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le conversioni dei caratteri definite nel catalogo accessibili a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [traduzioni Rowset](/previous-versions/windows/desktop/ms725365\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [traduzioni Rowset](/previous-versions/windows/desktop/ms725365) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1795,7 +1795,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica i privilegi USAGE sugli oggetti definiti nel catalogo che disponibili o concessi da un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [USAGE_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms722743\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [USAGE_PRIVILEGES Rowset](/previous-versions/windows/desktop/ms722743) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1818,7 +1818,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le colonne su cui visualizzare le tabelle, definite nel catalogo e appartenenti a un determinato utente, sono dipendenti.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [VIEW_COLUMN_USAGE Rowset](/previous-versions/windows/desktop/ms714896\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [VIEW_COLUMN_USAGE Rowset](/previous-versions/windows/desktop/ms714896) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1842,7 +1842,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica le tabelle in cui visualizzare le tabelle, definite nel catalogo e appartenenti a un determinato utente, sono dipendenti.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [viste di set di righe](/previous-versions/windows/desktop/ms723122\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [viste di set di righe](/previous-versions/windows/desktop/ms723122) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
@@ -1864,7 +1864,7 @@ Visualizzare [classi Rowset dello Schema e classi Typedef](../../data/oledb/sche
   
 Questa classe identifica il tabelle visualizzate, definite nel catalogo, che sono accessibili a un determinato utente.  
   
-Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [VIEW_TABLE_USAGE Rowset](/previous-versions/windows/desktop/ms719727\(v=vs.85\)) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
+Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Visualizzare [VIEW_TABLE_USAGE Rowset](/previous-versions/windows/desktop/ms719727) nel *riferimento per programmatori OLE DB* per altre informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  

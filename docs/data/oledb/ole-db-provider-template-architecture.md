@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ebea06a70f82c8014b52bc8f8db081ca2f0264c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078894"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082995"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architettura dei modelli di provider OLE DB
 
@@ -50,7 +50,7 @@ I modelli di provider OLE DB offrono implementazioni predefinite per tutte le in
   
 Si noti che i modelli di provider OLE DB non implementano oggetti riga e di archiviazione.  
   
-La tabella seguente elenca le interfacce obbligatorie e facoltative per gli oggetti elencati in precedenza, in base al [OLE DB 2.6 documentazione SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+La tabella seguente elenca le interfacce obbligatorie e facoltative per gli oggetti elencati in precedenza, in base al [OLE DB 2.6 documentazione SDK](/previous-versions/windows/desktop/ms722784).  
   
 |Componente|Interfaccia|Commento|  
 |---------------|---------------|-------------|  
@@ -69,4 +69,4 @@ Per altre informazioni, vedere i seguenti argomenti:
 ## <a name="see-also"></a>Vedere anche  
 
 [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Interfacce OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+[Interfacce OLE DB](/previous-versions/windows/desktop/ms709709)

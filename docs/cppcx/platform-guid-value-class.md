@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e115cf74eaac194c9e5b7154898cc23e10b220eb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b09fe303cb69cb36d04d696af2b83b30b8378f70
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100431"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083450"
 ---
 # <a name="platformguid-value-class"></a>Classe di valori Platform::Guid
 
-Rappresenta un [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) tipo nel sistema di tipi Windows Runtime.
+Rappresenta un tipo [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) nel sistema di tipi di Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,7 +45,7 @@ Il GUID dispone dei metodi Equals(), GetHashCode() e ToString() derivati dalla [
 
 ### <a name="remarks"></a>Note
 
-Per un esempio di come generare un nuovo platform:: GUID tramite la funzione di Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), vedere [componente WinRT: come generare un GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
+Per un esempio di come generare un nuovo oggetto Platform::Guid tramite la funzione [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)di Windows, vedere il post di blog relativo a [come generare un GUID per il componente WinRT](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
 
 ### <a name="requirements"></a>Requisiti
 
@@ -157,7 +157,7 @@ True se i due GUID non sono uguali.
 
 ## <a name="operator-call"></a> Operatore GUID
 
-Converte in modo implicito una [struttura GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID da un platform:: GUID.
+Converte in modo implicito una [struttura GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)GUID da un platform:: GUID.
 
 ### <a name="syntax"></a>Sintassi
 

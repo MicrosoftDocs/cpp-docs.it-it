@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688259"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083346"
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 
 Oggetto *applicazione desktop* in C++ è un'applicazione nativa che può accedere al set completo di API Windows e viene eseguito in una finestra o nella console di sistema. Applicazioni desktop in C++ è possono eseguire in Windows XP a Windows 10 (anche se è non è più ufficialmente supportata di Windows XP e sono disponibili molte API di Windows che sono state introdotte da allora).
 
-Un'applicazione desktop è diverso da un'app Universal Windows Platform (UWP), che può essere eseguito nei PC che eseguono Windows 10, nonché su XBox, Windows Phone, Surface Hub e altri dispositivi. Per altre informazioni su Visual Studio desktop. Le applicazioni UWP, vedere [Scegli la tua tecnologia](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).
+Un'applicazione desktop è diverso da un'app Universal Windows Platform (UWP), che può essere eseguito nei PC che eseguono Windows 10, nonché su XBox, Windows Phone, Surface Hub e altri dispositivi. Per altre informazioni su Visual Studio desktop. Le applicazioni UWP, vedere [Scegli la tua tecnologia](https://msdn.microsoft.com/library/windows/desktop/dn614993).
 
 
 ### <a name="desktop-bridge"></a>Desktop Bridge
@@ -35,7 +35,7 @@ In Visual Studio 2017 versione 15.4 e versioni successive, è possibile creare u
 
 ### <a name="terminology"></a>Terminologia
 
-- Oggetto *Win32* dell'applicazione è un'applicazione desktop in C++ consentono di utilizzare nativo di Windows [le API C di Windows e/o COM APIs](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT e le API della libreria Standard e librerie di terze parti 3rd. Un'applicazione Win32 che viene eseguito in una finestra richiede allo sviluppatore di utilizzare in modo esplicito i messaggi di Windows all'interno di una funzione routine di Windows. Nonostante il nome, un'applicazione Win32 può essere compilata come una (x86) 32 bit o 64 bit (x64) binario. Nell'IDE di Visual Studio, i termini x86 e Win32 sono sinonimi.
+- Oggetto *Win32* dell'applicazione è un'applicazione desktop in C++ consentono di utilizzare nativo di Windows [le API C di Windows e/o COM APIs](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT e le API della libreria Standard e librerie di terze parti 3rd. Un'applicazione Win32 che viene eseguito in una finestra richiede allo sviluppatore di utilizzare in modo esplicito i messaggi di Windows all'interno di una funzione routine di Windows. Nonostante il nome, un'applicazione Win32 può essere compilata come una (x86) 32 bit o 64 bit (x64) binario. Nell'IDE di Visual Studio, i termini x86 e Win32 sono sinonimi.
 
 - Il [modello COM (Component Object)](/windows/desktop/com/the-component-object-model) è una specifica che consente ai programmi scritti in linguaggi diversi per comunicare tra loro. Windows molti componenti vengono implementati come oggetti COM e seguire le regole COM standard per la creazione di oggetti, la distruzione di individuazione e l'oggetto di interfaccia.  Uso di oggetti COM da applicazioni desktop C++ è relativamente semplice, ma si scrive il proprio oggetto COM è più avanzata. Il [libreria ATL (Active Template)](../atl/atl-com-desktop-components.md) fornisce le macro e funzioni di supporto che semplificano lo sviluppo COM.
 

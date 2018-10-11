@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c43e28e035691b04181bef2162de828f3271a600
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023306"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082754"
 ---
 # <a name="server-registration-global-functions"></a>Funzioni globali di registrazione server
 
@@ -125,7 +125,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 Puntatore al modulo COM.
 
 *dwClsContext*<br/>
-Specifica il contesto in cui l'oggetto della classe deve essere eseguito. I valori possibili sono CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER o CLSCTX_LOCAL_SERVER. Visualizzare [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) per altri dettagli.
+Specifica il contesto in cui l'oggetto della classe deve essere eseguito. I valori possibili sono CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER o CLSCTX_LOCAL_SERVER. Visualizzare [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) per altri dettagli.
 
 *dwFlags*<br/>
 Determina i tipi di connessione per l'oggetto della classe. I valori possibili sono REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE o REGCLS_MULTI_SEPARATE. Visualizzare [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) per altri dettagli.

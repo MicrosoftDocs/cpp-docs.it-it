@@ -35,16 +35,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 15e00f27c5ad5d5312928bda8f73304a8417a6bc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1c6bda8180d775b49c6bfe6bc98e3ddabe535ac0
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071822"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082841"
 ---
 # <a name="irowsetnotifycp-class"></a>Classe IRowsetNotifyCP
 
-Implementa il sito del provider per l'interfaccia del punto di connessione [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)).  
+Implementa il sito del provider per l'interfaccia del punto di connessione [IRowsetNotify](/previous-versions/windows/desktop/ms712959).  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -96,7 +96,7 @@ Per informazioni dettagliate sull'implementazione delle notifiche, vedere "Suppo
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP:: Fire_onfieldchange
 
-Trasmette un [OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) evento per notificare i consumer di una modifica al valore di una colonna.  
+Trasmette un [OnFieldChange](/previous-versions/windows/desktop/ms715961) evento per notificare i consumer di una modifica al valore di una colonna.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -112,11 +112,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
   
 #### <a name="parameters"></a>Parametri  
 
-Visualizzare [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
+Visualizzare [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961) nel *riferimento per programmatori OLE DB*. 
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP:: Fire_onrowchange
 
-Trasmette un [OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) evento in tutti i listener nel punto di connessione `IID_IRowsetNotify` per notificare i consumer di una modifica che interessano le righe.  
+Trasmette un [OnRowChange](/previous-versions/windows/desktop/ms722694) evento in tutti i listener nel punto di connessione `IID_IRowsetNotify` per notificare i consumer di una modifica che interessano le righe.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -131,11 +131,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
   
 #### <a name="parameters"></a>Parametri  
 
-Visualizzare [IRowsetNotify:: Onrowchange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+Visualizzare [IRowsetNotify:: Onrowchange](/previous-versions/windows/desktop/ms722694) nel *riferimento per programmatori OLE DB*.  
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP:: Fire_onrowsetchange
 
-Trasmette un [OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) evento in tutti i listener nel punto di connessione `IID_IRowsetNotify` per notificare i consumer di un cambiamento influisce sull'intero set di righe.  
+Trasmette un [OnRowsetChange](/previous-versions/windows/desktop/ms722669) evento in tutti i listener nel punto di connessione `IID_IRowsetNotify` per notificare i consumer di un cambiamento influisce sull'intero set di righe.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -148,7 +148,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
   
 #### <a name="parameters"></a>Parametri  
 
-Visualizzare [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669) nel *riferimento per programmatori OLE DB*.
   
 ## <a name="see-also"></a>Vedere anche  
 

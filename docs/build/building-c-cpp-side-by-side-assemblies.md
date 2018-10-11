@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3c80b383c592d3eebf892981c088e26529c515
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 93e02ee27fb8b5a1f4f4f7b2e435a737e1c637a2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860940"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083843"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilazione di assembly side-by-side C/C++
 
@@ -30,7 +30,7 @@ Un'applicazione Visual C++ può utilizzare una o più DLL in diverse parti dell'
 Per impostazione predefinita, quando una DLL è compilata con Visual Studio, ha un [manifesto dell'applicazione](/windows/desktop/SbsCs/application-manifests) incorporato come una risorsa di tipo RT_MANIFEST con ID uguale a 2. Come per un file eseguibile, questo manifesto descrive le dipendenze di questa DLL da altri assembly. Ciò presuppone che la DLL non fa parte di un assembly side-by-side e le applicazioni che dipendono da questa DLL non prevede di usare un manifesto dell'applicazione per caricarlo, ma si basano invece sullo caricatore del sistema operativo per trovare questa DLL nel percorso di sistema.
 
 > [!NOTE]
-> È importante per una DLL che utilizza un manifesto dell'applicazione per il manifesto incorporato come risorsa con ID uguale a 2. Se la DLL viene caricata in modo dinamico in fase di esecuzione (ad esempio, usando il [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175) (funzione)), il caricatore del sistema operativo carica gli assembly dipendenti specificati nel file manifesto della DLL. Un manifesto dell'applicazione esterna per le DLL non viene verificato durante un `LoadLibrary` chiamare. Se il manifesto non è incorporato, il caricatore potrebbe tentare di caricare versioni errate di assembly o non riescono a ricerca per trovare gli assembly dipendenti.
+> È importante per una DLL che utilizza un manifesto dell'applicazione per il manifesto incorporato come risorsa con ID uguale a 2. Se la DLL viene caricata in modo dinamico in fase di esecuzione (ad esempio, usando il [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) (funzione)), il caricatore del sistema operativo carica gli assembly dipendenti specificati nel file manifesto della DLL. Un manifesto dell'applicazione esterna per le DLL non viene verificato durante un `LoadLibrary` chiamare. Se il manifesto non è incorporato, il caricatore potrebbe tentare di caricare versioni errate di assembly o non riescono a ricerca per trovare gli assembly dipendenti.
 
 Una o più correlate le DLL possono essere convertite in un assembly side-by-side con una corrispondente [manifesto dell'assembly](/windows/desktop/SbsCs/assembly-manifests), che descrive i file che compongono l'assembly, nonché la dipendenza dell'assembly in altre side-by-side assembly.
 

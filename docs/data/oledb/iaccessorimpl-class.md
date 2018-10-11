@@ -48,16 +48,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0fd40d4cac87302a6a636693e0da4480720a2cf3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a5de49679652b04afa4df08ce9d4ea015ebd031d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098121"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082723"
 ---
 # <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
 
-Fornisce un'implementazione del [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) interfaccia.  
+Fornisce un'implementazione del [IAccessor](/previous-versions/windows/desktop/ms719672) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -102,7 +102,7 @@ Unità di archiviazione di informazioni sulle colonne. Il valore predefinito è 
   
 ## <a name="remarks"></a>Note  
 
-Questo campo è obbligatorio nel set di righe e i comandi. OLE DB richiede ai provider di implementare un HACCESSOR, ovvero un tag a una matrice di [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) strutture. HACCESSORs disql `IAccessorImpl` sono gli indirizzi del `BindType` strutture. Per impostazione predefinita, `BindType` viene definito come un' `ATLBINDINGS` in `IAccessorImpl`della definizione del modello. `BindType` fornisce un meccanismo utilizzato da `IAccessorImpl` per tenere traccia del numero di elementi nella relativa `DBBINDING` della matrice, nonché un flag di funzioni di accesso e conteggio di riferimento.  
+Questo campo è obbligatorio nel set di righe e i comandi. OLE DB richiede ai provider di implementare un HACCESSOR, ovvero un tag a una matrice di [DBBINDING](/previous-versions/windows/desktop/ms716845) strutture. HACCESSORs disql `IAccessorImpl` sono gli indirizzi del `BindType` strutture. Per impostazione predefinita, `BindType` viene definito come un' `ATLBINDINGS` in `IAccessorImpl`della definizione del modello. `BindType` fornisce un meccanismo utilizzato da `IAccessorImpl` per tenere traccia del numero di elementi nella relativa `DBBINDING` della matrice, nonché un flag di funzioni di accesso e conteggio di riferimento.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl:: IAccessorImpl
 
@@ -127,7 +127,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Parametri  
 
-Visualizzare [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978) nel *riferimento per programmatori OLE DB*.
 
 ## <a name="createaccessor"></a> IAccessorImpl:: CreateAccessor
 
@@ -146,7 +146,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
   
 #### <a name="parameters"></a>Parametri  
 
-Visualizzare [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.  
+Visualizzare [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969) nel *riferimento per programmatori OLE DB*.  
 
 ## <a name="getbindings"></a> IAccessorImpl:: Getbindings
 
@@ -163,7 +163,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Parametri  
 
-Visualizzare [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) nel *riferimento per programmatori OLE DB*. 
+Visualizzare [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) nel *riferimento per programmatori OLE DB*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl:: ReleaseAccessor
 
@@ -178,7 +178,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Parametri  
 
-Visualizzare [IAccessor:: ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IAccessor:: ReleaseAccessor](/previous-versions/windows/desktop/ms719717) nel *riferimento per programmatori OLE DB*.
   
 ## <a name="see-also"></a>Vedere anche  
 

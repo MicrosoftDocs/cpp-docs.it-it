@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677827"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083086"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
 
@@ -54,11 +54,11 @@ Se si dispone di un progetto Windows 8.1 esistente e si vuole convertirlo per Wi
 
 Per altre informazioni sulla piattaforma UWP in generale, vedere [che cos'è un'app Universal Windows Platform (UWP)?](/windows/uwp/get-started/whats-a-uwp).
 
-Per altre informazioni su tutti questi concetti, vedere [Guida alle App universali di Windows](http://go.microsoft.com/fwlink/p/?linkid=534605).
+Per altre informazioni su tutti questi concetti, vedere [Guida alle app UWP (Universal Windows Platform)](http://go.microsoft.com/fwlink/p/?linkid=534605).
 
 ##  <a name="BK_Native"></a> Applicazioni desktop e Server
 
-Per informazioni di base della scrittura di applicazioni client Windows per il desktop, vedere [Developing Windows Applications in C++](https://msdn.microsoft.com/vstudio//hh304489) e [Introduction to Windows Programming in C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
+Per apprendere le nozioni fondamentali di scrittura di applicazioni client Windows per il desktop, vedere [Developing Windows Applications in C++](https://msdn.microsoft.com/vstudio//hh304489) (Sviluppo di applicazioni Windows in C++) e [Introduction to Windows Programming in C++](https://msdn.microsoft.com/library/windows/desktop/ff381398)(Introduzione alla programmazione Windows in C++).
 
 In Windows 10, è possibile usare Visual C++ per creare molti tipi di applicazioni desktop:
 
@@ -76,7 +76,7 @@ In Windows 10, è possibile usare Visual C++ per creare molti tipi di applicazio
 
 - Servizi Windows. Per altre informazioni, vedere [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications).
 
-È possibile usare Visual C++ per comprimere qualsiasi tipo di funzionalità personalizzata a elevate prestazioni nelle DLL Win32 o COM utilizzabili da app C++ o scritte in altri linguaggi, ad esempio C# o Visual Basic. Per altre informazioni sulle DLL Win32, vedere [DLLs in Visual C++](../build/dlls-in-visual-cpp.md). Per altre informazioni sullo sviluppo COM, vedere [modello COM (Component Object)](/windows/desktop/com/component-object-model--com--portal).
+È possibile usare Visual C++ per comprimere qualsiasi tipo di funzionalità personalizzata a elevate prestazioni nelle DLL Win32 o COM utilizzabili da app C++ o scritte in altri linguaggi, ad esempio C# o Visual Basic. Per altre informazioni sulle DLL Win32, vedere [DLLs in Visual C++](../build/dlls-in-visual-cpp.md). Per altre informazioni sullo sviluppo COM, vedere [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="games"></a>Giochi
 

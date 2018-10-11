@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76eb58936082c7efde7e7bc87f17e7326ecc8920
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a541edb478c29fe04619dda319576717a7b9dc6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071549"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081845"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
 
@@ -72,7 +72,7 @@ Una classe di funzione di accesso.
 |||  
 |-|-|  
 |[CStreamRowset](#cstreamrowset)|Costruttore. Crea e inizializza il `CStreamRowset` oggetto.|  
-|[Chiudi](#close)|Rilascia il [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) puntatore a interfaccia nella classe.|  
+|[Chiudi](#close)|Rilascia il [ISequentialStream](/previous-versions/windows/desktop/ms718035) puntatore a interfaccia nella classe.|  
   
 ## <a name="remarks"></a>Note  
 
@@ -105,7 +105,7 @@ CStreamRowset();
 
 ## <a name="close"></a> CStreamRowset:: Close
 
-Rilascia il [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) puntatore a interfaccia nella classe.  
+Rilascia il [ISequentialStream](/previous-versions/windows/desktop/ms718035) puntatore a interfaccia nella classe.  
   
 ### <a name="syntax"></a>Sintassi  
   

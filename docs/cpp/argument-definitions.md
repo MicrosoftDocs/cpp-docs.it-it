@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf75e1c0fe2b3ff0d883a8785e69aef489c0545
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0c42478e5e6ce3c9efe66c45ed32292f2040a83
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056391"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084152"
 ---
 # <a name="argument-definitions"></a>Definizioni di argomenti
 
@@ -45,7 +45,7 @@ Una matrice di stringhe con terminazione null che rappresentano gli argomenti de
 Il primo argomento della riga di comando è sempre `argv` **[1]** ed è il penultimo `argv` **[** `argc` - 1 **]**.
 
 > [!NOTE]
->  Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia, è possibile generare un processo utilizzando [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) e se si usa sia il primo e secondo argomento (*lpApplicationName* e *lpCommandLine*), `argv` **[0]** potrebbe non essere il file eseguibile nome; usare [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome dell'eseguibile e il relativo percorso completo.
+>  Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia, è possibile generare un processo utilizzando [CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) e se si usa sia il primo e secondo argomento (*lpApplicationName* e *lpCommandLine*), `argv` **[0]** potrebbe non essere il file eseguibile nome; usare [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) per recuperare il nome dell'eseguibile e il relativo percorso completo.
 
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft
 

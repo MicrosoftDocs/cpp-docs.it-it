@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037359"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084100"
 ---
 # <a name="composite-control-global-functions"></a>Funzioni globali di controllo composito
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifica un'istanza del modulo il cui file eseguibile contiene il modello di finestra di dialogo.
 
 *lpTemplateName*<br/>
-[in] Identifica il modello di finestra di dialogo. Questo parametro è il puntatore a una stringa di caratteri con terminazione null che specifica il nome del modello della finestra di dialogo o un valore intero che specifica l'identificatore di risorsa del modello della finestra di dialogo. Se il parametro specifica un identificatore di risorsa, la parola più significativa deve essere zero e la parola meno significativa deve contenere l'identificatore. È possibile usare la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro per creare questo valore.
+[in] Identifica il modello di finestra di dialogo. Questo parametro è il puntatore a una stringa di caratteri con terminazione null che specifica il nome del modello della finestra di dialogo o un valore intero che specifica l'identificatore di risorsa del modello della finestra di dialogo. Se il parametro specifica un identificatore di risorsa, la parola più significativa deve essere zero e la parola meno significativa deve contenere l'identificatore. È possibile usare la [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macro per creare questo valore.
 
 *hWndParent*<br/>
 [in] Identifica la finestra proprietaria la finestra di dialogo.
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifica un'istanza del modulo il cui file eseguibile contiene il modello di finestra di dialogo.
 
 *lpTemplateName*<br/>
-[in] Identifica il modello di finestra di dialogo. Questo parametro è il puntatore a una stringa di caratteri con terminazione null che specifica il nome del modello della finestra di dialogo o un valore intero che specifica l'identificatore di risorsa del modello della finestra di dialogo. Se il parametro specifica un identificatore di risorsa, la parola più significativa deve essere zero e la parola meno significativa deve contenere l'identificatore. È possibile usare la [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro per creare questo valore.
+[in] Identifica il modello di finestra di dialogo. Questo parametro è il puntatore a una stringa di caratteri con terminazione null che specifica il nome del modello della finestra di dialogo o un valore intero che specifica l'identificatore di risorsa del modello della finestra di dialogo. Se il parametro specifica un identificatore di risorsa, la parola più significativa deve essere zero e la parola meno significativa deve contenere l'identificatore. È possibile usare la [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macro per creare questo valore.
 
 *hWndParent*<br/>
 [in] Identifica la finestra proprietaria la finestra di dialogo.
