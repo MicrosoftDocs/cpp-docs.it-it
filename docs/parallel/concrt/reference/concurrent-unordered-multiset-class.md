@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3e93f5e46dd0a6925dcc4c1bafea5ed0c0c7b9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3283707f53da37acc98a9d1645b8bb10f2114f77
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375437"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163361"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>Classe concurrent_unordered_multiset
 
@@ -269,7 +269,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se è vuoto, il contenitore simultaneo `false` in caso contrario.
+**true** se è vuoto, il contenitore simultaneo **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 47504b7a471dc38f30e4ceb59b5feeffcc53db6d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894564"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161834"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Chiamata di funzioni DLL da applicazioni Visual Basic
 
@@ -33,7 +33,7 @@ Per le applicazioni Visual Basic (applicazioni o in altri linguaggi quali Pascal
 
 `__stdcall` Crea la convenzione di chiamata corretta per la funzione (la funzione chiamata pulisce lo stack e i parametri vengono passati da destra a sinistra), ma decora il nome della funzione in modo diverso. Pertanto, quando **dllexport** viene usato in una funzione esportata in una DLL, viene esportato il nome decorato.
 
-Il `__stdcall` decorazione dei nomi viene anteposto al nome di simbolo con un carattere di sottolineatura (_) e aggiunge al simbolo con un simbolo di chiocciola (**\@**) seguito dal numero di byte nell'elenco di argomenti (lo spazio dello stack richiesto). Di conseguenza, la funzione dichiarata come:
+Il `__stdcall` decorazione dei nomi viene anteposto al nome di simbolo con un carattere di sottolineatura ( **\_** ) e aggiunge al simbolo con un simbolo di chiocciola (**\@**) carattere seguito dal numero di byte nell'elenco di argomenti (lo spazio dello stack richiesto). Di conseguenza, la funzione dichiarata come:
 
 ```C
 int __stdcall func (int a, double b)
@@ -45,7 +45,7 @@ La convenzione di chiamata C (`__cdecl`) decora il nome come `_func`.
 
 Per ottenere il nome decorato, utilizzare [/Map](../build/reference/map-generate-mapfile.md). Sfrutta **dllexport** esegue le operazioni seguenti:
 
-- Se la funzione viene esportata con la convenzione di chiamata C (**cdecl**), e rimuove il carattere di sottolineatura (_) quando viene esportato il nome.
+- Se la funzione viene esportata con la convenzione di chiamata C (`__cdecl`), e rimuove il carattere di sottolineatura ( **\_** ) quando viene esportato il nome.
 
 - Se la funzione esportata non utilizza la convenzione di chiamata C (ad esempio, `__stdcall`), verrà esportato il nome decorato.
 

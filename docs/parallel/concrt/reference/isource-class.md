@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f39b9fff9d5fad930123fc930afe1600cd259e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e53f8999b4559a221b335528ec20b6034de269d3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396480"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162204"
 ---
 # <a name="isource-class"></a>Classe ISource
 
@@ -158,7 +158,7 @@ Un puntatore al `message` che il chiamante ora possiede la proprietà dell'ogget
 
 ### <a name="remarks"></a>Note
 
-Il `consume` è simile al metodo `accept`, ma deve essere sempre preceduto da una chiamata a `reserve` che ha restituito `true`.
+Il `consume` è simile al metodo `accept`, ma deve essere sempre preceduto da una chiamata a `reserve` che ha restituito **true**.
 
 ##  <a name="dtor"></a> ~ ISource
 
@@ -236,7 +236,7 @@ Un puntatore al blocco di destinazione che chiama il `reserve` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il messaggio è stato riservato, `false` in caso contrario. Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.
+**true** se il messaggio è stato riservato, **false** in caso contrario. Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.
 
 ### <a name="remarks"></a>Note
 

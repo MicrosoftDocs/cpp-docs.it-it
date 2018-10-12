@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d9536b6260df68d07390707efcef90117e8538c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dcccfd23151d2e09f1fcafeb255dd7261ae2c12a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386938"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163790"
 ---
 # <a name="ptroperator-bool"></a>ptr::operator bool
 
@@ -40,7 +40,7 @@ operator bool();
 
 ## <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto COM di proprietà è valida. `false` in caso contrario.
+**true** se l'oggetto COM di proprietà è valida. **false** in caso contrario.
 
 ## <a name="remarks"></a>Note
 

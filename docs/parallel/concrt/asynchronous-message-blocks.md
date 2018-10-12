@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388485"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163426"
 ---
 # <a name="asynchronous-message-blocks"></a>Blocchi dei messaggi asincroni
 
@@ -307,7 +307,7 @@ La concorrenza::/[classe timer](../../parallel/concrt/reference/timer-class.md) 
 
 Il `timer` classe invia il messaggio a una sola destinazione. Se si imposta il `_PTarget` parametro nel costruttore `NULL`, è possibile specificare la destinazione in un secondo momento chiamando la [concurrency::ISource::link_target](reference/source-block-class.md#link_target) (metodo).
 
-Oggetto `timer` oggetto può essere ripetuto o non ripetuti. Per creare un oggetto timer ripetuto, passare `true` per il `_Repeating` parametro quando si chiama il costruttore. In caso contrario, passare `false` per il `_Repeating` parametro per creare un timer non ripetuti. Se il timer viene ripetuto, invia lo stesso messaggio alla sua destinazione dopo ogni intervallo.
+Oggetto `timer` oggetto può essere ripetuto o non ripetuti. Per creare un oggetto timer ripetuto, passare **true** per il `_Repeating` parametro quando si chiama il costruttore. In caso contrario, passare **false** per il `_Repeating` parametro per creare un timer non ripetuti. Se il timer viene ripetuto, invia lo stesso messaggio alla sua destinazione dopo ogni intervallo.
 
 Crea la libreria di agenti `timer` oggetti nello stato non-started. Per avviare un oggetto timer, chiamare il [concurrency::timer::start](reference/timer-class.md#start) (metodo). Per arrestare un `timer` dell'oggetto, eliminare definitivamente l'oggetto o una chiamata di [concurrency::timer::stop](reference/timer-class.md#stop) (metodo). Per sospendere un timer ripetuto, chiamare il [concurrency::timer::pause](reference/timer-class.md#pause) (metodo).
 

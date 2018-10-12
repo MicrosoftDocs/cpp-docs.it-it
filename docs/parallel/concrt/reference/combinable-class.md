@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381673"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162509"
 ---
 # <a name="combinable-class"></a>Classe combinable
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Parametri
 
 *Exists*<br/>
-Un riferimento a un valore booleano. Il valore booleano per fare riferimento in questo argomento verrà impostato su `true` se il calcolo secondario già esistente su questo thread e impostato su `false` se questo è il primo calcolo secondario su questo thread.
+Un riferimento a un valore booleano. Il valore booleano per fare riferimento in questo argomento verrà impostato su **true** se il calcolo secondario già esistente su questo thread e impostato su **false** se questo è il primo calcolo secondario su questo thread.
 
 ### <a name="return-value"></a>Valore restituito
 

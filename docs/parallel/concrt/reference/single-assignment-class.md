@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ddf5a303096d3244f6b8b59e58bcb41bafe91f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374262"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163089"
 ---
 # <a name="singleassignment-class"></a>Classe single_assignment
 
@@ -58,7 +58,7 @@ Il tipo di payload del messaggio archiviato e propagati dal buffer.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[single_assignment](#ctor)|Di overload. Costruisce un `single_assignment` blocco della messaggistica.|
+|[single_assignment](#ctor)|Di overload. Costruisce un blocco della messaggistica `single_assignment` .|
 |[~ single_assignment distruttore](#dtor)|Elimina definitivamente il `single_assignment` blocco della messaggistica.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -66,7 +66,7 @@ Il tipo di payload del messaggio archiviato e propagati dal buffer.
 |Nome|Descrizione|
 |----------|-----------------|
 |[has_value](#has_value)|Controlla se questo `single_assignment` blocco della messaggistica è ancora stato inizializzato con un valore.|
-|[value](#value)|Ottiene un riferimento al payload del messaggio viene archiviato corrente il `single_assignment` blocco della messaggistica.|
+|[valore](#value)|Ottiene un riferimento al payload del messaggio viene archiviato corrente il `single_assignment` blocco della messaggistica.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
@@ -158,7 +158,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il blocco ha ricevuto un valore, `false` in caso contrario.
+**true** se il blocco ha ricevuto un valore **false** in caso contrario.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -236,11 +236,11 @@ Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il messaggio è stato riservato, `false` in caso contrario.
+**true** se il messaggio è stato riservato, **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-Dopo aver `reserve` viene chiamato, se viene restituito `true`, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
+Dopo aver `reserve` viene chiamato, se viene restituito **true**, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -274,7 +274,7 @@ Oggetto [message_status](concurrency-namespace-enums.md) indicazione di cosa ha 
 
 ##  <a name="ctor"></a> single_assignment
 
-Costruisce un `single_assignment` blocco della messaggistica.
+Costruisce un blocco della messaggistica `single_assignment` .
 
 ```
 single_assignment();
@@ -303,10 +303,10 @@ single_assignment(
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
-Il `Scheduler` oggetto all'interno del quale la propagazione di attività per il `single_assignment` blocco della messaggistica è pianificata.
+Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `single_assignment` .
 
 *PScheduleGroup*<br/>
-Il `ScheduleGroup` oggetto all'interno del quale la propagazione di attività per il `single_assignment` blocco della messaggistica è pianificata. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
+Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `single_assignment` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
 

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bec396efa2d0a4191c67440e4ed3ed5d4bc083
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1d8a9340abf7ca16fe2f0e6d6660bf14f00bd594
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110792"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161229"
 ---
 # <a name="fundamental-types-ccx"></a>Tipi fondamentali (C++/CX)
 
@@ -26,7 +26,7 @@ La tabella seguente elenca i tipi char e booleani e i relativi equivalenti C++ s
 
 |Spazio dei nomi|C + + / nome CX|Definizione|Nome in C++ standard|Intervallo di valori|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Piattaforma|Booleano|Valore booleano a 8 bit.|bool|`true` (diverso da zero) e `false` (zero)|
+|Piattaforma|Booleano|Valore booleano a 8 bit.|bool|**true** (diverso da zero) e **false** (zero)|
 |default|char16|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|wchar_t<br /><br /> oppure<br /><br /> L'c'|(Specificato dallo standard Unicode)|
 
 ## <a name="numeric-types"></a>Tipi numerici

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45bd056bff41832a98c7936510d22a321891fd0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102039"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163699"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Classe Platform::Collections::VectorViewIterator
 
@@ -123,7 +123,7 @@ La prima sintassi decrementa e quindi restituisce l'oggetto VectorViewIterator c
 
 La prima sintassi di VectorViewIterator esegue un decremento preliminare dell'oggetto VectorViewIterator corrente.
 
-La seconda sintassi esegue un decremento posteriore dell'oggetto VectorViewIterator corrente. Il `int` tipo nella seconda sintassi indica un'operazione di post-decremento, non un effettivo operando integer.
+La seconda sintassi esegue un decremento posteriore dell'oggetto VectorViewIterator corrente. Il tipo `int` nella seconda sintassi indica un'operazione di decremento posteriore, non un effettivo operando Integer.
 
 ## <a name="operator-dereference"></a>  Vectorviewiterator:: operator\* operatore
 
@@ -156,7 +156,7 @@ Altro oggetto VectorViewIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto VectorViewIterator corrente è uguale a `other`; in caso contrario, `false`.
+**true** se l'oggetto corrente `VectorViewIterator` è uguale a *altri*; in caso contrario, **false**.
 
 ## <a name="operator-greater-than"></a>  Vectorviewiterator:: operator&gt; operatore
 
@@ -176,11 +176,11 @@ Altro oggetto VectorViewIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'oggetto VectorViewIterator corrente è maggiore di `other`; in caso contrario, `false`.
+**true** se l'oggetto VectorViewIterator corrente è maggiore *altri*; in caso contrario, **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator:: operator&gt;= (operatore)
 
-Indica se l'oggetto VectorViewIterator corrente è maggiore o uguale all'oggetto VectorViewIterator specificato.
+Indica se l'oggetto corrente `VectorViewIterator` è maggiore o uguale all'oggetto specificato `VectorViewIterator`.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -196,7 +196,7 @@ Altro oggetto VectorViewIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'oggetto VectorViewIterator corrente è maggiore o uguale a `other`; in caso contrario, `false`.
+**true** se l'oggetto corrente `VectorViewIterator` è maggiore o uguale a *altri*; in caso contrario, **false**.
 
 ## <a name="operator-increment"></a>  Operatore vectorviewiterator:: operator + +
 
@@ -237,7 +237,7 @@ Altro oggetto VectorViewIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto VectorViewIterator corrente non è uguale a `other`; in caso contrario, `false`.
+**true** se l'oggetto corrente `VectorViewIterator` non è uguale a *altri*; in caso contrario, **false**.
 
 ## <a name="operator-less-than"></a>  Vectorviewiterator:: operator&lt; operatore
 
@@ -252,15 +252,15 @@ bool operator<(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametri
 
 *other*<br/>
-Altro oggetto VectorIterator.
+Un altro `VectorIterator`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'oggetto VectorIterator corrente è minore di `other`; in caso contrario, `false`.
+**true** se l'oggetto corrente `VectorIterator` è minore di *altri*; in caso contrario, **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator:: operator&lt;= (operatore)
 
-Indica se l'oggetto VectorIterator corrente è minore o uguale all'oggetto VectorIterator specificato.
+Indica se l'oggetto corrente `VectorIterator` è minore o uguale a un oggetto specificato `VectorIterator`.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -272,11 +272,11 @@ bool operator<=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametri
 
 *other*<br/>
-Altro oggetto VectorIterator.
+Un altro `VectorIterator`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto VectorIterator corrente è minore o uguale a `other`; in caso contrario, `false`.
+**true** se l'oggetto corrente `VectorIterator` è minore o uguale a *altri*; in caso contrario, **false**.
 
 ## <a name="operator-minus"></a>  Operatore vectorviewiterator:: operator-
 
@@ -353,7 +353,7 @@ Nella seconda sintassi, oggetto VectorViewIterator.
 
 Nella prima sintassi, oggetto VectorViewIterator che fa riferimento all'elemento con lo spostamento specificato rispetto all'oggetto VectorViewIterator corrente.
 
-Nella seconda sintassi, oggetto VectorViewIterator che fa riferimento all'elemento con lo spostamento specificato dall'inizio del parametro `i`.
+Nella seconda sintassi, oggetto VectorViewIterator che fa riferimento all'elemento con lo spostamento specificato rispetto all'inizio del parametro `i`.
 
 ## <a name="operator-minus-assign"></a>  Vectorviewiterator:: operator-= operatore
 

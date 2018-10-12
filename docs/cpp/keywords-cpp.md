@@ -1,7 +1,7 @@
 ---
 title: Parole chiave (C++) | Microsoft Docs
 ms.custom: index-page
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38808ea3874964db7983c0f7193c919b9df05391
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169606"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162451"
 ---
 # <a name="keywords-c"></a>Parole chiave (C++)
 
@@ -31,19 +31,20 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
 
 |||||
 |-|-|-|-|
-|[abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[Operatore __alignof](alignof-operator.md)|[__asm](../assembler/inline/asm.md)|[__assume](../intrinsics/assume.md)|
-|[__based](based-pointers-cpp.md)|[box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md)|[__declspec](declspec.md)|
-|[Delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md)|[__fastcall](fastcall.md)|
-|[__finally](try-finally-statement.md)|[forceinline](inline-functions-cpp.md)|[GC](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[hook](hook.md) <sup>3</sup>|
-|[Identifier](../windows/identifier-cpp-cli.md)|[if_exists](if-exists-statement.md)|[if_not_exists](if-not-exists-statement.md)|[__inline](inline-functions-cpp.md)|
-|[__int16](int8-int16-int32-int64.md)|[__int32](int8-int16-int32-int64.md)|[__int64](int8-int16-int32-int64.md)|[__int8](int8-int16-int32-int64.md)|
-|[__interface](interface.md)|[__leave](try-finally-statement.md)|[__m128](m128.md)|[__m128d](m128d.md)|
-|[__m128i](m128i.md)|[__m64](m64.md)|[multiple_inheritance](inheritance-keywords.md)|[nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
-|[__noop](../intrinsics/noop.md)|**PIN** <sup>2</sup>|**Property** <sup>2</sup>|[__raise](raise.md)|
-|**sealed** <sup>2</sup>|[Single_Inheritance](inheritance-keywords.md)|[__stdcall](stdcall.md)|[__super](super.md)|
-|[__thiscall](thiscall.md)|[try /\_except](try-except-statement.md)|[try /\_finally](try-finally-statement.md)|[try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|
-|[__unaligned](unaligned.md)|[unhook](unhook.md) <sup>3</sup>|[uuidof](uuidof-operator.md)|[Value](../dotnet/value-type-semantics.md) <sup>2</sup>|
-|[virtual_inheritance](inheritance-keywords.md)|[__w64](w64.md)|[wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
+|[abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[operatore alignof](alignof-operator.md) <sup>4</sup>|[ASM](../assembler/inline/asm.md) <sup>4</sup>|[assume](../intrinsics/assume.md) <sup>4</sup>|
+|[based](based-pointers-cpp.md) <sup>4</sup>|[box](../dotnet/value-type-semantics.md) <sup>2</sup>|[cdecl](cdecl.md) <sup>4</sup>|[declspec](declspec.md) <sup>4</sup>|
+|[Delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[except](try-except-statement.md) <sup>4</sup>|[fastcall](fastcall.md) <sup>4</sup>|
+|[finally](try-finally-statement.md) <sup>4</sup>|[forceinline](inline-functions-cpp.md) <sup>4</sup>|[GC](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[hook](hook.md) <sup>3</sup>|
+|[Identifier](../windows/identifier-cpp-cli.md)|[if_exists](if-exists-statement.md)|[if_not_exists](if-not-exists-statement.md)|[inline](inline-functions-cpp.md) <sup>4</sup>|
+|[__int16](int8-int16-int32-int64.md) <sup>4</sup>|[__int32](int8-int16-int32-int64.md) <sup>4</sup>|[__int64](int8-int16-int32-int64.md) <sup>4</sup>|[__int8](int8-int16-int32-int64.md) <sup>4</sup>|
+|[__interface](interface.md)|[Leave](try-finally-statement.md) <sup>4</sup>|[__m128](m128.md)|[__m128d](m128d.md)|
+|[__m128i](m128i.md)|[__m64](m64.md)|[multiple_inheritance](inheritance-keywords.md) <sup>4</sup>|[nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
+|[__noop](../intrinsics/noop.md)|**PIN** <sup>2</sup>|**Property** <sup>2</sup>|[__ptr32](ptr32-ptr64.md) <sup>4</sup>|
+|[__ptr64](ptr32-ptr64.md)<sup>4</sup>|[__raise](raise.md)|[Restrict](extension-restrict.md) <sup>4</sup>|**sealed** <sup>2</sup>|
+|[Single_Inheritance](inheritance-keywords.md)<sup>4</sup>|[sptr](sptr-uptr.md)<sup>4</sup>|[stdcall](stdcall.md) <sup>4</sup>|[__super](super.md)|
+|[__thiscall](thiscall.md)|[try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|[unaligned](unaligned.md) <sup>4</sup>|[unhook](unhook.md) <sup>3</sup>|
+|[uptr](sptr-uptr.md) <sup>4</sup>|[uuidof](uuidof-operator.md) <sup>4</sup>|[Value](../dotnet/value-type-semantics.md) <sup>2</sup>|[vectorcall](vectorcall.md) <sup>4</sup>|
+|[virtual_inheritance](inheritance-keywords.md) <sup>4</sup>|[__w64](w64.md) <sup>4</sup>|[wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |[alignas](align-cpp.md)|[array](../windows/arrays-cpp-component-extensions.md)|[auto](auto-keyword.md)|[bool](bool-cpp.md)|
 |[break](break-statement-cpp.md)|[case](switch-statement-cpp.md)|[catch](try-throw-and-catch-statements-cpp.md)|[char](fundamental-types-cpp.md)|
 |[char16_t](char-wchar-t-char16-t-char32-t.md)|[char32_t](char-wchar-t-char16-t-char32-t.md)|[class](class-cpp.md)|[const](const-cpp.md)|
@@ -56,7 +57,7 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
 |[per ciascuno di essi in](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |[Generica](../windows/generics-cpp-component-extensions.md)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
 |[inline](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[classe di interfaccia](../windows/interface-class-cpp-component-extensions.md)|[struct di interfaccia](../windows/interface-class-cpp-component-extensions.md)|
-|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[valore letterale](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|[modificabile](mutable-data-members-cpp.md)|
+|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[literal](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|[modificabile](mutable-data-members-cpp.md)|
 |[naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|[new](new-operator-cpp.md)|
 |[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
 |[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|[private](private-cpp.md)|
@@ -72,22 +73,21 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
 |[struct di valore](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
 |[while](while-statement-cpp.md)|
 
+<sup>1</sup> esteso gli attributi per il **declspec** (parola chiave).
 
-1 attributi estesi per il **declspec** (parola chiave).
+<sup>2</sup> applicabili alle estensioni gestite per C++ solo. Questa sintassi è ora deprecata. Visualizzare [estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md) per altre informazioni.
 
-2 applicabile alle estensioni gestite per C++ solo. Questa sintassi è ora deprecata.
+<sup>3</sup> funzione intrinseca usata nella gestione degli eventi.
 
-3 funzione intrinseca usata nella gestione degli eventi.
+<sup>4</sup> per garantire la compatibilità con le versioni precedenti, queste parole chiave sono disponibili entrambe con due caratteri di sottolineatura iniziali e un singolo carattere di sottolineatura iniziale quando le estensioni Microsoft sono abilitate (predefinito).
 
-Visualizzare [estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md) per altre informazioni.
-
-## <a name="microsoft-specific"></a>Sezione specifica Microsoft
+**Sezione specifica Microsoft**
 
 In Microsoft C++ gli identificatori con due caratteri di sottolineatura iniziali sono riservati alle implementazioni del compilatore. Pertanto, per convenzione le parole chiave specifiche di Microsoft sono precedute da un doppio carattere di sottolineatura. Queste parole non possono essere usate come nomi di identificatori.
 
-Le estensioni Microsoft sono attivate per impostazione predefinita. Per garantire che i programmi siano completamente portabili, è possibile disabilitare le estensioni Microsoft specificando il compatibile con ANSI [/Za](../build/reference/za-ze-disable-language-extensions.md) opzione della riga di comando (compilare per la compatibilità ANSI) durante la compilazione. In questo caso, le parole chiave specifiche di Microsoft sono disabilitate.
+Le estensioni Microsoft sono attivate per impostazione predefinita. Per garantire che i programmi siano completamente portabili, è possibile disabilitare le estensioni Microsoft specificando il [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) opzione durante la compilazione. Quando si esegue questa operazione, alcune parole chiave specifiche di Microsoft sono disabilitate.
 
-Quando le estensioni Microsoft sono abilitate, è possibile usare le parole chiave specifiche di Microsoft nei programmi. Per la compatibilità con ANSI, tali parole chiave sono precedute da un doppio carattere di sottolineatura. Per garantire la compatibilità, versioni singolo carattere di sottolineatura di tutte le parole chiave sottolineate doppia tranne **except**, **finally**, **Leave**, e **_ try** sono supportati. È inoltre **cdecl** è disponibile senza alcuna sottolineatura iniziale.
+Quando le estensioni Microsoft sono abilitate, è possibile usare le parole chiave specifiche di Microsoft nei programmi. Per la compatibilità con ANSI, tali parole chiave sono precedute da un doppio carattere di sottolineatura. Per garantire la compatibilità, versioni singolo carattere di sottolineatura di molte delle parole chiave sottolineate doppia sono supportate. È inoltre **cdecl** è disponibile senza alcuna sottolineatura iniziale.
 
 Il **ASM** parola chiave sostituisce C++ `asm` sintassi. `asm` è riservata per compatibilità con altre implementazioni di C++, ma non è implementata. Uso **ASM**.
 

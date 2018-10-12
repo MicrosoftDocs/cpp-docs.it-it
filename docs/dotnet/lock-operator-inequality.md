@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d96ddbd35b37f084e277951812f7868452ed09d5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6ea18e7881b3569a3f4f9da237dc8a2b31a2ef29
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438197"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163504"
 ---
 # <a name="lockoperator"></a>lock::operator!=
 
@@ -46,11 +46,11 @@ Oggetto da confrontare per verificarne la disuguaglianza.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce `true` se `t` è diverso dall'oggetto del blocco, `false` in caso contrario.
+Restituisce **true** se `t` è diverso dall'oggetto del blocco **false** in caso contrario.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // msl_lock_op_ineq.cpp
 // compile with: /clr
 #include <msclr/lock.h>

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039f69f31c5a92cf07f96442c30bd59b0cc6f40e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d38b8415b5ca214800c968d186f37c020dce6dc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414576"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163959"
 ---
 # <a name="choice-class"></a>Classe choice
 
@@ -85,7 +85,7 @@ Oggetto `tuple`-sul tipo che rappresenta il payload delle origini di input di ba
 |[reserve](#reserve)|Consente di riservare un messaggio offerto in precedenza da questo `choice` blocco della messaggistica.|
 |[unlink_target](#unlink_target)|Scollega un blocco di destinazione dal `choice` blocco della messaggistica.|
 |[unlink_targets](#unlink_targets)|Consente di scollegare tutte le destinazioni da questo `choice` blocco della messaggistica. (Esegue l'override [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|
-|[value](#value)|Ottiene il messaggio il cui indice è stata selezionata per il `choice` blocco della messaggistica.|
+|[valore](#value)|Ottiene il messaggio il cui indice è stata selezionata per il `choice` blocco della messaggistica.|
 
 ## <a name="remarks"></a>Note
 
@@ -216,7 +216,7 @@ Un puntatore al `message` che il chiamante ora possiede la proprietà dell'ogget
 
 ### <a name="remarks"></a>Note
 
-Il `consume` è simile al metodo `accept`, ma deve essere sempre preceduto da una chiamata a `reserve` che ha restituito `true`.
+Il `consume` è simile al metodo `accept`, ma deve essere sempre preceduto da una chiamata a `reserve` che ha restituito **true**.
 
 ##  <a name="has_value"></a> has_value
 
@@ -229,7 +229,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il blocco ha ricevuto un valore, `false` in caso contrario.
+**true** se il blocco ha ricevuto un valore **false** in caso contrario.
 
 ##  <a name="index"></a> Indice
 
@@ -315,7 +315,7 @@ Un puntatore al blocco di destinazione che chiama il `reserve` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il messaggio è stato riservato, `false` in caso contrario. Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.
+**true** se il messaggio è stato riservato, **false** in caso contrario. Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.
 
 ### <a name="remarks"></a>Note
 

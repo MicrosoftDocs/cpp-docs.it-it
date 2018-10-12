@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154bfe9242c4a5737e7a539b33316d9fcd0d913f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d53366823c5e45c907fe90d0caf1773999f71827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706082"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161833"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Pragma e parole chiave di ottimizzazione
 

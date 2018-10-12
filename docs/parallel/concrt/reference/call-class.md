@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4f993c357ef3d4f66f9b2f22c9fb37a4e10c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a99de307ec64c3b6d4e49f4e0a6eef532314bf9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423897"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161866"
 ---
 # <a name="call-class"></a>Classe call
 
@@ -55,7 +55,7 @@ La firma delle funzioni che questo blocco può accettare.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[call](#ctor)|Di overload. Costruisce un `call` blocco della messaggistica.|
+|[call](#ctor)|Di overload. Costruisce un blocco della messaggistica `call` .|
 |[~ chiamare distruttore](#dtor)|Elimina definitivamente il `call` blocco della messaggistica.|
 
 ### <a name="protected-methods"></a>Metodi protetti
@@ -88,7 +88,7 @@ Per altre informazioni, vedere [blocchi di messaggi asincroni](../../../parallel
 
 ##  <a name="ctor"></a> Chiamata
 
-Costruisce un `call` blocco della messaggistica.
+Costruisce un blocco della messaggistica `call` .
 
 ```
 call(
@@ -126,10 +126,10 @@ Una funzione che verrà richiamata per ogni messaggio accettato.
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
-Il `Scheduler` oggetto all'interno del quale la propagazione di attività per il `call` blocco della messaggistica è pianificata.
+Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `call` .
 
 *PScheduleGroup*<br/>
-Il `ScheduleGroup` oggetto all'interno del quale la propagazione di attività per il `call` blocco della messaggistica è pianificata. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
+Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `call` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
 
@@ -227,7 +227,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` poiché tramite il blocco non vengono posticipati i messaggi offerti.
+**true** perché il blocco non vengono posticipati i messaggi offerti.
 
 ## <a name="see-also"></a>Vedere anche
 

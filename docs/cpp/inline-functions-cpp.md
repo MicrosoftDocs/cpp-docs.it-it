@@ -1,7 +1,7 @@
 ---
 title: Funzioni inline (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017821"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163595"
 ---
 # <a name="inline-functions-c"></a>Funzioni inline (C++)
 
@@ -84,7 +88,7 @@ L'utilizzo di funzioni inline può rendere il programma più veloce perché elim
 
 Il compilatore considera come suggerimenti le opzioni di espansione inline e le parole chiave. Non è garantito che le funzioni siano sottoposte all'espansione inline. Non è possibile forzare il compilatore di rendere inline una particolare funzione, anche con il **forceinline** (parola chiave). Durante la compilazione con **/clr**, il compilatore creerà non inline una funzione se sono presenti attributi di sicurezza applicati alla funzione.
 
-Il **inline** (parola chiave) è disponibile solo in C++. Il **inline** e **forceinline** parole chiave sono disponibili in C e C++. Per garantire la compatibilità con versioni precedenti **inline** è un sinonimo **inline**.
+Il **inline** (parola chiave) è disponibile solo in C++. Il **inline** e **forceinline** parole chiave sono disponibili in C e C++. Per garantire la compatibilità con versioni precedenti **inline** e **_forceinline** sono sinonimi per **inline**, e **forceinline** a meno che non l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
 
 Il **inline** parola chiave indica al compilatore che l'espansione inline è preferibile. Tuttavia, il compilatore può creare un'istanza separata della funzione (istanziare) e creare collegamenti standard di chiamate anziché inserire il codice inline. Questa situazione può verificarsi nei due casi seguenti:
 

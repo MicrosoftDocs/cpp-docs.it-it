@@ -1,12 +1,13 @@
 ---
 title: ASM | Microsoft Docs
 ms.custom: ''
-ms.date: 08/30/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
 f1_keywords:
 - __asm
+- _asm
 - __asm_cpp
 dev_langs:
 - C++
@@ -18,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfe0cac0a35c821f3275ec323181f04c1ab982c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dd279a6324aec6eba50c6c3b7ffe846200d45fe1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693003"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161723"
 ---
 # <a name="asm"></a>__asm
 
@@ -59,6 +60,8 @@ __asm int 3
 non ha provocato il codice nativo da generare quando viene compilato con **/clr**; il compilatore convertito l'istruzione in un'istruzione di interruzione CLR.
 
 `__asm int 3` determina ora la generazione del codice nativo della funzione. Se si desidera che una funzione a causa di un punto di interruzione nel codice e se si vuole che la funzione compilata in MSIL, utilizzare [DebugBreak](../../intrinsics/debugbreak.md).
+
+Per garantire la compatibilità con le versioni precedenti, **ASM** è un sinonimo **ASM** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../../build/reference/za-ze-disable-language-extensions.md) è specificato.
 
 ## <a name="example"></a>Esempio
 

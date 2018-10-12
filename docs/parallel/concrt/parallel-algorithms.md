@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23a4efb1412260ad71a610f53a7d1745157b3c53
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1eb46754f80bca89419e6c3c85db94ec802df2f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434999"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163400"
 ---
 # <a name="parallel-algorithms"></a>Algoritmi paralleli
 
@@ -284,7 +284,7 @@ In questo esempio viene utilizzata un'espressione lambda come funzione hash. È 
 
 [!code-cpp[concrt-parallel-sort-points#3](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_14.cpp)]
 
-La funzione hash deve restituire un tipo integrale ([std::is_integral::value](../../standard-library/is-integral-class.md) deve essere `true`). Questo tipo integrale deve poter essere convertito nel tipo `size_t`.
+La funzione hash deve restituire un tipo integrale ([std::is_integral::value](../../standard-library/is-integral-class.md) deve essere **true**). Questo tipo integrale deve poter essere convertito nel tipo `size_t`.
 
 ###  <a name="choose_sort"></a> Scelta di un algoritmo di ordinamento
 

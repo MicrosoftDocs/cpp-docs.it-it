@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 231eed17f155b9ec184e0cf4fe3bd91e7770a7f4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 608472f3133464137d2d0f96128453e4239b16a2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716858"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162087"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (Attiva funzione hook _penter)
 
@@ -43,7 +43,7 @@ Il `_penter` funzione non fa parte di una raccolta ed è responsabilità dell'ut
 A meno che non si intende chiamare in modo esplicito `_penter`, non è necessario fornire un prototipo. La funzione deve apparire come se avesse il prototipo seguente e deve eseguire il push il contenuto di tutti i registri in ingresso e prelevare il contenuto invariato all'uscita:
 
 ```
-void __declspec(naked) _cdecl _penter( void );
+void __declspec(naked) __cdecl _penter( void );
 ```
 
 Questa dichiarazione non è disponibile per i progetti a 64 bit.
@@ -66,7 +66,7 @@ Questa dichiarazione non è disponibile per i progetti a 64 bit.
 
 Nel codice seguente, quando viene compilato con **/Gh**, viene illustrato come `_penter` viene chiamato due volte; una volta durante l'inserimento della funzione `main` e una volta quando si immettono funzione `x`.
 
-```
+```cpp
 // Gh_compiler_option.cpp
 // compile with: /Gh
 // processor: x86
@@ -77,7 +77,7 @@ int main() {
    x();
 }
 
-extern "C" void __declspec(naked) _cdecl _penter( void ) {
+extern "C" void __declspec(naked) __cdecl _penter( void ) {
    _asm {
       push eax
       push ebx

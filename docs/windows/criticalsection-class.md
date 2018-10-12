@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67ca6e8eab90e1e97a3ab8aacd46616dbcbf2d0e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: c4b543d3436f04d1a8aaa92647449854831002a6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234723"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162373"
 ---
 # <a name="criticalsection-class"></a>CriticalSection (classe)
 
@@ -128,7 +128,7 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Per impostazione predefinita, restituisce sempre `true`.
+Per impostazione predefinita, restituisce sempre **true**.
 
 ## <a name="lock"></a>Criticalsection:: lock
 

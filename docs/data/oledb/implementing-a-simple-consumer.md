@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082417"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162295"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementazione di un consumer semplice
 
@@ -34,17 +34,17 @@ Gli argomenti seguenti illustrano come modificare i file creati dalla creazione 
 - "Aggiunta di supporto XML per il Consumer" viene illustrato come modificare il codice consumer per restituire i dati di set di righe recuperato come dati XML.  
   
 > [!NOTE]
->  È possibile usare l'applicazione consumer descritte in questa sezione per testare il provider di esempio MyProv e Provider.  
+> È possibile usare l'applicazione consumer descritte in questa sezione per testare il provider di esempio MyProv e Provider.  
   
 > [!NOTE]
->  Per compilare un'applicazione consumer per testare MyProv (lo stesso provider descritto nella [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)), è necessario includere il supporto di segnalibro come descritto in "Aggiunta del supporto per i segnalibri per il Consumer".  
+> Per compilare un'applicazione consumer per testare MyProv (lo stesso provider descritto nella [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)), è necessario includere il supporto di segnalibro come descritto in "Aggiunta del supporto per i segnalibri per il Consumer".  
   
 > [!NOTE]
->  Per compilare un'applicazione consumer per Provider di test, non inserire il supporto per segnalibro descritto in "Aggiunta del supporto per i segnalibri per Consumer" e passare a "Aggiunta del supporto XML per il Consumer".  
+> Per compilare un'applicazione consumer per Provider di test, non inserire il supporto per segnalibro descritto in "Aggiunta del supporto per i segnalibri per Consumer" e passare a "Aggiunta del supporto XML per il Consumer".  
   
 ## <a name="retrieving-data-with-the-consumer"></a>Recupero dei dati con il Consumer  
   
-#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Per modificare l'applicazione console per utilizzare l'applicazione consumer OLE DB  
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Per modificare l'applicazione console per utilizzare l'applicazione consumer OLE DB  
   
 1. In MyCons, modificare il codice principale inserendo il testo in grassetto, come indicato di seguito:  
   
@@ -94,9 +94,9 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
 - La riga con segnalibro, aggiungerlo alla fine del file di output.  
   
 > [!NOTE]
->  Se si usa un'applicazione consumer per testare l'applicazione di provider di esempio di Provider, omettere il supporto per segnalibro descritte in questa sezione.  
+> Se si usa un'applicazione consumer per testare l'applicazione di provider di esempio di Provider, omettere il supporto per segnalibro descritte in questa sezione.  
   
-#### <a name="to-instantiate-the-bookmark"></a>Per creare un'istanza del segnalibro  
+### <a name="to-instantiate-the-bookmark"></a>Per creare un'istanza del segnalibro  
   
 1. La funzione di accesso deve contenere un oggetto di tipo [CBookmark](../../data/oledb/cbookmark-class.md). Il *nSize* parametro specifica la dimensione del buffer del segnalibro in byte, in genere 4 per piattaforme a 32 bit e 8 per le piattaforme a 64 bit. Per i membri dati delle colonne nella classe di record utente, aggiungere la dichiarazione seguente:  
   
@@ -111,7 +111,7 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
        ...  
     ```  
   
-#### <a name="to-request-a-bookmark-column-from-the-provider"></a>Per richiedere una colonna del segnalibro del provider  
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>Per richiedere una colonna del segnalibro del provider  
   
 1. Aggiungere il codice seguente nel `GetRowsetProperties` metodo nella classe di record utente:  
   
@@ -125,7 +125,7 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
     }  
     ```  
   
-#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Per aggiungere una voce segnalibro alla mappa delle colonne  
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Per aggiungere una voce segnalibro alla mappa delle colonne  
   
 1. Aggiungere la voce seguente alla mappa delle colonne nella classe di record utente:  
   
@@ -139,7 +139,7 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
     END_COLUMN_MAP()  
     ```  
   
-#### <a name="to-use-a-bookmark-in-your-main-code"></a>Per utilizzare un segnalibro nel codice principale  
+### <a name="to-use-a-bookmark-in-your-main-code"></a>Per utilizzare un segnalibro nel codice principale  
   
 1. File MyCons. cpp dell'applicazione console creata in precedenza, modificare il codice principale come segue. Per usare i segnalibri, il codice principale deve creare un'istanza di un proprio oggetto segnalibro (`myBookmark`); si tratta di un segnalibro diverso da quello nella funzione di accesso (`m_bookmark`).  
   
@@ -184,7 +184,7 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
        {  
           nCounter++;  
           if(nCounter == 5 )  
-             myBookmark = rs.bookmark;  
+             myBookmark = rs.m_bookmark;  
           // Output the column information for each row:  
           outfile << rs.m_ProductID << rs.m_ProductName << lPrice << rs.m_QuantityPerUnit << rs.m_UnitsInStock << rs.m_ReorderLevel << endl;  
           hr = rs.MoveNext();  
@@ -216,7 +216,7 @@ Per altre informazioni sui segnalibri, vedere [mediante segnalibri](../../data/o
 
 Come descritto in [l'accesso ai dati XML](../../data/oledb/accessing-xml-data.md), esistono due modi per recuperare i dati XML da un'origine dati: uso [CStreamRowset](../../data/oledb/cstreamrowset-class.md) o usando [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Questo esempio Usa `CStreamRowset`, che risulta più efficiente, ma è necessario avere SQL Server 2000 in esecuzione nel computer in cui si esegue questa applicazione di esempio.  
   
-#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Modificare la classe di comando da cui ereditare CStreamRowset  
+### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Modificare la classe di comando da cui ereditare CStreamRowset  
   
 1. Nell'applicazione consumer creato in precedenza, modificare il `CCommand` dichiarazione specificare `CStreamRowset` come classe di rowset come indicato di seguito:  
   
@@ -224,7 +224,7 @@ Come descritto in [l'accesso ai dati XML](../../data/oledb/accessing-xml-data.md
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Per modificare il codice principale per recuperare e visualizzare i dati XML  
+### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Per modificare il codice principale per recuperare e visualizzare i dati XML  
   
 1. File MyCons. cpp dell'applicazione console creata in precedenza, modificare il codice principale come segue:  
   

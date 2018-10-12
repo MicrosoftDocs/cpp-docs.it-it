@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17babc058ef3e1851da686e9a8c5bf17cefbc2fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f84ca4c924c837ec008c16d6ff3b77af379df4cd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427004"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163803"
 ---
 # <a name="cancellation-in-the-ppl"></a>Annullamento nella libreria PPL
 
@@ -91,7 +91,7 @@ Per avviare l'annullamento, chiamare il [concurrency::cancellation_token_source:
 
 - Per la `task` oggetti, usare il [Concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) (funzione). `cancel_current_task` annulla l'attività corrente e tutte le relative continuazioni basate su valori. (Non annulla l'annullamento *token* associato con l'attività o alle relative continuazioni.)
 
-- Per i gruppi di attività e gli algoritmi paralleli, usare il [Concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funzione per rilevare l'annullamento e tornare appena possibile dal corpo dell'attività quando questa funzione restituisce `true`. Non chiamare `cancel_current_task` da un gruppo di attività.
+- Per i gruppi di attività e gli algoritmi paralleli, usare il [Concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funzione per rilevare l'annullamento e tornare appena possibile dal corpo dell'attività quando questa funzione restituisce **true** . Non chiamare `cancel_current_task` da un gruppo di attività.
 
 Nell'esempio seguente viene illustrato il primo modello di base per l'annullamento delle attività. Il corpo dell'attività controlla occasionalmente l'annullamento all'interno di un ciclo.
 
@@ -177,7 +177,7 @@ Nel primo di questi esempi viene creata una funzione lavoro per l'attività `t4`
 
 [!code-cpp[concrt-task-tree#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_7.cpp)]
 
-Il secondo esempio è simile al primo, ad eccezione del fatto che l'attività annulla il gruppo di attività `tg1`. Questa operazione ha effetto su tutte le attività della struttura ad albero (`t1`, `t2`, `t3`, `t4` e `t5`).
+Il secondo esempio è simile al primo, ad eccezione del fatto che l'attività annulla il gruppo di attività `tg1`. Questa operazione ha effetto su tutte le attività dell'albero (`t1`, `t2`, `t3`, `t4` e `t5`).
 
 [!code-cpp[concrt-task-tree#3](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_8.cpp)]
 
@@ -190,7 +190,7 @@ La classe `structured_task_group` non è thread-safe. Pertanto, un'attività fig
 
 ###  <a name="exceptions"></a> Uso delle eccezioni per annullare un lavoro parallelo
 
-L'utilizzo dei token di annullamento e del metodo `cancel` è più efficace della gestione delle eccezioni per annullare un albero di lavoro parallelo. I token di annullamento e il metodo `cancel` annullano un'attività e tutte le attività figlio dall'alto verso il basso. La gestione delle eccezioni funziona invece in ordine sequenziale dal basso verso l'alto e deve annullare ogni gruppo di attività figlio in modo indipendente in quanto l'eccezione si propaga verso l'alto. L'argomento [gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) illustra come il Runtime di concorrenza Usa le eccezioni per comunicare gli errori. Tuttavia, non tutte le eccezioni indicano un errore. Un algoritmo di ricerca potrebbe, ad esempio, annullare l'attività associata quando viene trovato il risultato. Tuttavia, come indicato in precedenza, la gestione delle eccezioni è meno efficiente dell'uso del metodo `cancel` per annullare un lavoro parallelo.
+L'utilizzo dei token di annullamento e del metodo `cancel` è più efficace della gestione delle eccezioni per annullare un albero del lavoro parallelo. I token di annullamento e il metodo `cancel` annullano un'attività e tutte le attività figlio dall'alto verso il basso. La gestione delle eccezioni funziona invece in ordine sequenziale dal basso verso l'alto e deve annullare ogni gruppo di attività figlio in modo indipendente in quanto l'eccezione si propaga verso l'alto. L'argomento [gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) illustra come il Runtime di concorrenza Usa le eccezioni per comunicare gli errori. Tuttavia, non tutte le eccezioni indicano un errore. Un algoritmo di ricerca potrebbe, ad esempio, annullare l'attività associata quando viene trovato il risultato. Tuttavia, come indicato in precedenza, la gestione delle eccezioni è meno efficiente dell'uso del metodo `cancel` per annullare un lavoro parallelo.
 
 > [!CAUTION]
 >  È consigliabile utilizzare le eccezioni per annullare un lavoro parallelo solo se necessario. I token di annullamento e i metodi `cancel` del gruppo di attività sono più efficienti e meno soggetti ad errori.
@@ -201,7 +201,7 @@ Il terzo esempio è simile al secondo, ad eccezione del fatto che l'attività `t
 
 [!code-cpp[concrt-task-tree#4](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_9.cpp)]
 
-Nel quarto esempio viene usata la gestione delle eccezioni per annullare l'intero albero del lavoro. In questo esempio l'eccezione viene rilevata quando il gruppo di attività `tg1` attende il completamento delle relative attività figlio anziché quando il gruppo di attività `tg2` attende le relative attività figlio. Analogamente al secondo esempio, questa condizione determina il passaggio allo stato annullato di entrambi i gruppi di attività della struttura ad albero, `tg1` e `tg2`.
+Nel quarto esempio viene usata la gestione delle eccezioni per annullare l'intero albero del lavoro. In questo esempio l'eccezione viene rilevata quando il gruppo di attività `tg1` attende il completamento delle relative attività figlio anziché quando il gruppo di attività `tg2` attende le relative attività figlio. Analogamente al secondo esempio, questa condizione determina il passaggio allo stato annullato di entrambi i gruppi di attività nell'albero, `tg1` e `tg2`.
 
 [!code-cpp[concrt-task-tree#5](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_10.cpp)]
 
@@ -258,7 +258,7 @@ L'uso dell'annullamento è appropriato quando ogni membro di un gruppo di attivi
 |Titolo|Descrizione|
 |-----------|-----------------|
 |[Procedura: Usare l'annullamento per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Illustra come usare l'annullamento per implementare un algoritmo di ricerca parallelo.|
-|[Procedura: Usare la gestione delle eccezion per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Viene illustrato come utilizzare la classe `task_group` per scrivere un algoritmo di ricerca per un albero di base.|
+|[Procedura: Usare la gestione delle eccezion per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Viene illustrato come usare la classe `task_group` per scrivere un algoritmo di ricerca per un albero di base.|
 |[Gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Descrive il modo in cui il runtime gestisce le eccezioni generate dai gruppi di attività, dalle attività leggere e dagli agenti asincroni e come rispondere alle eccezioni nelle applicazioni.|
 |[Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Descrive il modo in cui le attività vengono correlate ai gruppi di attività e come usare le attività strutturate e non strutturate nelle applicazioni.|
 |[Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)|Descrive gli algoritmi paralleli per svolgere simultaneamente il lavoro sulle raccolte di dati.|

@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb820b533b74d5634695ddabda26f081a35f95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8065be6cc53cad04d5d52bea91da05bb3125dd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436923"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162568"
 ---
 # <a name="concurrency-namespace-operators"></a>spazio dei nomi Concurrency operatori
 
@@ -151,7 +151,7 @@ Oggetto di tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il vettore simultaneo sul lato sinistro dell'operatore è uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.
+**true** se il vettore simultaneo sul lato sinistro dell'operatore è uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -189,7 +189,7 @@ Oggetto di tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se i vettori simultanei non sono uguali. `false` se i vettori simultanei sono uguali.
+**true** se i vettori simultanei non sono uguali. **false** se i vettori simultanei sono uguali.
 
 ### <a name="remarks"></a>Note
 
@@ -227,7 +227,7 @@ Oggetto di tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il vettore simultaneo sul lato sinistro dell'operatore è minore del vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.
+**true** se il vettore simultaneo sul lato sinistro dell'operatore è minore del vettore simultaneo sul lato destro dell'operatore; in caso contrario **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -265,7 +265,7 @@ Oggetto di tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il vettore simultaneo sul lato sinistro dell'operatore è minore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.
+**true** se il vettore simultaneo sul lato sinistro dell'operatore è minore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -303,7 +303,7 @@ Oggetto di tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il vettore simultaneo sul lato sinistro dell'operatore è maggiore rispetto a quello sul lato destro dell'operatore; in caso contrario `false`.
+**true** se il vettore simultaneo sul lato sinistro dell'operatore è maggiore del vettore simultaneo sul lato destro dell'operatore; in caso contrario **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -341,7 +341,7 @@ Oggetto di tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il vettore simultaneo sul lato sinistro dell'operatore è maggiore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.
+**true** se il vettore simultaneo sul lato sinistro dell'operatore è maggiore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario **false**.
 
 ### <a name="remarks"></a>Note
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e4c6f3a540f44f6cec0d94ffab74d65a1ffe52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f8f864dcbf412b9dea0d96f6a0ba046792d7827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386587"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162971"
 ---
 # <a name="concurrentqueue-class"></a>Classe concurrent_queue
 
@@ -177,7 +177,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se la coda simultanea è vuota nel momento in cui è stato illustrato, `false` in caso contrario.
+**true** se la coda simultanea è vuota nel momento in cui è stato illustrato, **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -229,11 +229,11 @@ Un riferimento a un percorso per archiviare l'elemento rimosso dalla coda.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se un elemento è stato rimosso correttamente dalla coda, `false` in caso contrario.
+**true** se è stato rimosso correttamente dalla coda, un elemento **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-Se un elemento è stato rimosso correttamente dalla coda, il parametro `_Dest` riceve il valore rimosso dalla coda, il valore originale nella coda viene distrutto e questa funzione restituisce `true`. Se si è verificato alcun elemento da rimuovere dalla coda, questa funzione restituisce `false` senza blocco e il contenuto del `_Dest` parametro sono definiti.
+Se un elemento è stato rimosso correttamente dalla coda, il parametro `_Dest` riceve il valore rimosso dalla coda, il valore originale nella coda viene distrutto e questa funzione restituisce **true**. Se si è verificato alcun elemento da rimuovere dalla coda, questa funzione restituisce `false` senza blocco e il contenuto del `_Dest` parametro sono definiti.
 
 `try_pop` è indipendente dalla concorrenza rispetto alle chiamate ai metodi `push`, `try_pop`, e `empty`.
 

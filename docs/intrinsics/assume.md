@@ -1,12 +1,13 @@
 ---
 title: assume | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - __assume
+- _assume
 - __assume_cpp
 dev_langs:
 - C++
@@ -17,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c8c37bc46580db42bfa2a91d215b09bc1dbaf4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41542065a4fc7d3b90fd3159dca4c7a7d169c115
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405697"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163673"
 ---
 # <a name="assume"></a>__assume
 
@@ -57,6 +58,8 @@ Se l'istruzione `__assume` viene scritta come contraddizione (un'espressione che
 Uso `__assume` in un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo quando l'asserzione non è recuperabile. Non usare `__assume` in un'asserzione per cui si dispone di un codice di recupero da errori successivi perché il compilatore potrebbe ottimizzare il codice di gestione degli errori.
 
 L'istruzione `__assume(0)` è un caso speciale. Usare `__assume(0)` per indicare un percorso del codice che non può essere raggiunto. L'esempio seguente illustra come usare `__assume(0)` per indicare che il caso predefinito di un'istruzione switch non può essere raggiunto. Viene illustrato l'uso più comune di `__assume(0)`.
+
+Per garantire la compatibilità con le versioni precedenti, **_assume** è un sinonimo **assume** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,12 +1,14 @@
 ---
 title: unaligned | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __unaligned_cpp
+- __unaligned
+- _unaligned
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9593a0b3c6e6980f5be2ce9dcf13e505e94dcace
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 444bc3372b22676cacb3ee89b9c0ad92000cedcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040199"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161218"
 ---
 # <a name="unaligned"></a>__unaligned
 
@@ -32,6 +34,8 @@ ms.locfileid: "46040199"
 Questo modificatore descrive l'allineamento dei dati di cui il puntatore; si presuppone che il puntatore stesso essere allineati.
 
 La necessità per il **unaligned** parola chiave varia a seconda della piattaforma e l'ambiente. Errore per contrassegnare i dati in modo appropriato può comportare problemi compreso tra le penalizzazioni delle prestazioni agli errori hardware. Il **unaligned** modificatore non valido per x86 piattaforma.
+
+Per garantire la compatibilità con le versioni precedenti, **_unaligned** è un sinonimo **unaligned** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) viene specificato.
 
 Per ulteriori informazioni sull'allineamento, vedere:
 

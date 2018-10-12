@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d8c8c3cc219f0cf658dc2669ccc10adf3aba55bd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715143"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163530"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (incorporazione delle informazioni sul controllo dell'account utente nel manifesto)
 
@@ -50,7 +50,7 @@ Stringa che contiene il `level` e `uiAccess` valori. Per altre informazioni, ved
 Uno dei *asInvoker*, *highestAvailable*, o *requireAdministrator*. Il valore predefinito è asInvoker. Per altre informazioni, vedere la sezione Osservazioni più avanti in questo argomento.
 
 *_uiAccess*<br/>
-`true` se si desidera che l'applicazione ignori i livelli di protezione dell'interfaccia utente e indirizzi l'input verso finestre con un livello di autorizzazione superiore sul desktop; in caso contrario `false`. Il valore predefinito è `false`. Impostare su `true` solo per le applicazioni di accessibilità dell'interfaccia utente.
+**true** se si desidera che l'applicazione ignori i livelli di protezione dell'interfaccia utente e indirizzi l'input a windows di livello di autorizzazione superiore sul desktop; in caso contrario, **false**. Per impostazione predefinita **false**. Impostare su **true** solo per le applicazioni di accessibilità dell'interfaccia utente.
 
 ## <a name="remarks"></a>Note
 

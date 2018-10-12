@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430054"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163140"
 ---
 # <a name="ischedulerproxy-structure"></a>Struttura ISchedulerProxy
 
@@ -124,7 +124,7 @@ Indica se effettuare la sottoscrizione al thread corrente e per tale account dur
 
 ### <a name="return-value"></a>Valore restituito
 
-Il `IExecutionResource` interfaccia per il thread corrente, se il parametro `doSubscribeCurrentThread` ha il valore `true`. Se il valore è `false`, il metodo restituisce `NULL`.
+Il `IExecutionResource` interfaccia per il thread corrente, se il parametro `doSubscribeCurrentThread` ha il valore **true**. Se il valore è **false**, il metodo restituisce NULL.
 
 ### <a name="remarks"></a>Note
 
@@ -132,7 +132,7 @@ Prima di un'utilità di pianificazione viene eseguita alcuna operazione, deve us
 
 Il gestore delle risorse concede le risorse a un'utilità di pianificazione chiamando il metodo [IScheduler:: AddVirtualProcessors](ischeduler-structure.md#addvirtualprocessors) con un elenco di radici del processore virtuale. Il metodo viene richiamato come callback nell'utilità di pianificazione prima di questo metodo viene restituito.
 
-Se l'utilità di pianificazione ha richiesto una sottoscrizione per il thread corrente, impostando il parametro `doSubscribeCurrentThread` al `true`, il metodo restituisce un `IExecutionResource` interfaccia. La sottoscrizione deve terminare in un secondo momento usando il [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) (metodo).
+Se l'utilità di pianificazione ha richiesto una sottoscrizione per il thread corrente, impostando il parametro `doSubscribeCurrentThread` al **true**, il metodo restituisce un `IExecutionResource` interfaccia. La sottoscrizione deve terminare in un secondo momento usando il [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) (metodo).
 
 Quando si stabilisce quali thread hardware sono selezionate, Resource Manager tenterà di ottimizzare per l'affinità del nodo del processore. Se l'abbonamento viene richiesto per il thread corrente, è un'indicazione che il thread corrente intende partecipare il lavoro assegnato a questa utilità di pianificazione. In tal caso, si trovano le radici di processori virtuali allocate sul nodo del processore che del thread corrente è in esecuzione, se possibile.
 

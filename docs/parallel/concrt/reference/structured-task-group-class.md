@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6df9afddc43980818439ee2c7bbd29ca2f848
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9e87ebd4523b5211c94955b5bec7905ed848946
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446075"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161684"
 ---
 # <a name="structuredtaskgroup-class"></a>Classe structured_task_group
 
@@ -54,7 +54,7 @@ class structured_task_group;
 |Nome|Descrizione|
 |----------|-----------------|
 |[cancel](#cancel)|Tenta di annullare la sottostruttura ad albero di lavoro che ha origine nel gruppo di attività. Ogni attività pianificata nel gruppo di attività sarà transitivamente annullata se possibile.|
-|[is_canceling](#is_canceling)|Indica al chiamante se il gruppo di attività è attualmente in corso di annullamento. Ciò non indica necessariamente che il `cancel` metodo è stato chiamato sul `structured_task_group` oggetto (anche se tale qualifica sicuramente questo metodo per restituire `true`). Potrebbe essere il caso che la `structured_task_group` oggetto è in esecuzione inline e un gruppo di attività più in alto nell'albero del lavoro viene annullato. In casi come questi in cui il runtime può determinare in anticipo che annullamento passerà attraverso questa `structured_task_group` oggetti, `true` verranno anche restituiti.|
+|[is_canceling](#is_canceling)|Indica al chiamante se il gruppo di attività è attualmente in corso di annullamento. Ciò non indica necessariamente che il `cancel` metodo è stato chiamato sul `structured_task_group` oggetto (anche se tale qualifica sicuramente questo metodo per restituire **true**). Potrebbe essere il caso che la `structured_task_group` oggetto è in esecuzione inline e un gruppo di attività più in alto nell'albero del lavoro viene annullato. In casi come questi in cui il runtime può determinare in anticipo che annullamento passerà attraverso questa `structured_task_group` oggetto **true** verranno anche restituiti.|
 |[run](#run)|Di overload. Pianifica un'attività nel `structured_task_group` oggetto. Il chiamante gestisce la durata del `task_handle` oggetto passato nel `_Task_handle` parametro. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata da quel parametro.|
 |[run_and_wait](#run_and_wait)|Di overload. Pianifica un'attività in esecuzione inline sul contesto di chiamata con l'assistenza del `structured_task_group` oggetto per il supporto per l'annullamento completo. Se un `task_handle` oggetto viene passato come parametro al `run_and_wait`, il chiamante è responsabile della gestione della durata del `task_handle` oggetto. La funzione quindi attende che tutti si cimentano il `structured_task_group` oggetto ha completato o annullato.|
 |[wait](#wait)|Attende che tutti si cimentano il `structured_task_group` è stata completata o annullata.|
@@ -97,7 +97,7 @@ Per altre informazioni, vedere [annullamento](../../../parallel/concrt/exception
 
 ##  <a name="is_canceling"></a> is_canceling
 
-Indica al chiamante se il gruppo di attività è attualmente in corso di annullamento. Ciò non indica necessariamente che il `cancel` metodo è stato chiamato sul `structured_task_group` oggetto (anche se tale qualifica sicuramente questo metodo per restituire `true`). Potrebbe essere il caso che la `structured_task_group` oggetto è in esecuzione inline e un gruppo di attività più in alto nell'albero del lavoro viene annullato. In casi come questi in cui il runtime può determinare in anticipo che annullamento passerà attraverso questa `structured_task_group` oggetti, `true` verranno anche restituiti.
+Indica al chiamante se il gruppo di attività è attualmente in corso di annullamento. Ciò non indica necessariamente che il `cancel` metodo è stato chiamato sul `structured_task_group` oggetto (anche se tale qualifica sicuramente questo metodo per restituire **true**). Potrebbe essere il caso che la `structured_task_group` oggetto è in esecuzione inline e un gruppo di attività più in alto nell'albero del lavoro viene annullato. In casi come questi in cui il runtime può determinare in anticipo che annullamento passerà attraverso questa `structured_task_group` oggetto **true** verranno anche restituiti.
 
 ```
 bool is_canceling();

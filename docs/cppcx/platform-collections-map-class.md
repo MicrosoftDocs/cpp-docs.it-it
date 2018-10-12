@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103879"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162555"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -173,7 +173,7 @@ Chiave usata per individuare l'elemento Map. Il tipo della *key* è typename *K*
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se la chiave viene trovata; in caso contrario, `false`.
+**true** se la chiave venga trovata; in caso contrario, **false**.
 
 ## <a name="insert"></a>  Metodo Map:: Insert
 
@@ -195,7 +195,7 @@ Valore della coppia chiave-valore. Il tipo della *valore* è typename *V*.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde a *key* e la parte valore di tale elemento è impostata su *valore*. `false` Se nessun elemento esistente nell'oggetto Map corrente corrisponde *key* e il *chiave* e *valore* parametri vengono trasformati in una coppia chiave-valore e successivamente aggiunti all'oggetto Map corrente.
+**true** se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde al *chiave* e la parte valore di tale elemento è impostata su *valore*. **false** se nessun elemento esistente nell'oggetto Map corrente corrisponde *chiave* e il *chiave* e *valore* parametri vengono trasformati in una coppia chiave-valore e successivamente aggiunti per il oggetto Map corrente.
 
 ## <a name="lookup"></a>  Metodo Map:: lookup
 

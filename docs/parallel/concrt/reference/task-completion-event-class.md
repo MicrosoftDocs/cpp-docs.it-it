@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413770"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163257"
 ---
 # <a name="taskcompletionevent-class"></a>Classe task_completion_event
 
@@ -96,11 +96,11 @@ Impostare questo evento con il risultato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il metodo restituisce `true` se è stata completata correttamente l'impostazione dell'evento. Restituisce `false` se l'evento è già impostato.
+Il metodo restituisce **true** se è stata completata correttamente l'impostazione dell'evento. Viene restituito **false** se l'evento è già impostato.
 
 ### <a name="remarks"></a>Note
 
-In presenza di più chiamate simultanee a o `set`, solo la prima chiamata avrà esito positivo e il risultato (se presente) verrà archiviato nell'evento di completamento dell'attività. I set rimanenti vengono ignorati e il metodo restituirà false. Quando si imposta un evento di completamento di attività, tutte le attività create dall'evento immediatamente verranno completate che relative continuazioni, se presente, verranno pianificate. Attività degli oggetti di completamento con un `_ResultType` diverso da `void` passeranno il valore alle continuazioni.
+In presenza di più chiamate simultanee a o `set`, solo la prima chiamata avrà esito positivo e il risultato (se presente) verrà archiviato nell'evento di completamento dell'attività. I set rimanenti vengono ignorati e il metodo restituirà false. Quando si imposta un evento di completamento di attività, tutte le attività create dall'evento immediatamente verranno completate che relative continuazioni, se presente, verranno pianificate. Attività degli oggetti di completamento con un `_ResultType` diverso da **void** passeranno il valore alle continuazioni.
 
 ##  <a name="set_exception"></a> set_exception
 

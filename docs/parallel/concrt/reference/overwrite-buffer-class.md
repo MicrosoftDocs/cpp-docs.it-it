@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f439355c9d8b059ac48f0bdc1f57c1b32e5eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82266e387bcba3e4e7f2e377c666ce890d258e0f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387666"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162113"
 ---
 # <a name="overwritebuffer-class"></a>Classe overwrite_buffer
 
@@ -67,7 +67,7 @@ Il tipo di payload dei messaggi archiviati e propagati dal buffer.
 |Nome|Descrizione|
 |----------|-----------------|
 |[has_value](#has_value)|Controlla se questo `overwrite_buffer` blocco della messaggistica dispone già di un valore.|
-|[value](#value)|Ottiene un riferimento al payload del messaggio viene archiviato corrente il `overwrite_buffer` blocco della messaggistica.|
+|[valore](#value)|Ottiene un riferimento al payload del messaggio viene archiviato corrente il `overwrite_buffer` blocco della messaggistica.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
@@ -160,7 +160,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il blocco ha ricevuto un valore, `false` in caso contrario.
+**true** se il blocco ha ricevuto un valore **false** in caso contrario.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -214,10 +214,10 @@ overwrite_buffer(
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
-Il `Scheduler` oggetto all'interno del quale la propagazione di attività per il `overwrite_buffer` blocco della messaggistica è pianificata.
+Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `overwrite_buffer` .
 
 *PScheduleGroup*<br/>
-Il `ScheduleGroup` oggetto all'interno del quale la propagazione di attività per il `overwrite_buffer` blocco della messaggistica è pianificata. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
+Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `overwrite_buffer` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
 
@@ -296,7 +296,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` poiché tramite il blocco non vengono posticipati i messaggi offerti.
+**true** perché il blocco non vengono posticipati i messaggi offerti.
 
 ##  <a name="release_message"></a> release_message
 
@@ -326,11 +326,11 @@ Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il messaggio è stato riservato, `false` in caso contrario.
+**true** se il messaggio è stato riservato, **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-Dopo aver `reserve` viene chiamato, se viene restituito `true`, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
+Dopo aver `reserve` viene chiamato, se viene restituito **true**, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

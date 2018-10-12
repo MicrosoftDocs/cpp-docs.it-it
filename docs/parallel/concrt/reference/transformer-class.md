@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803cb474edbce6eb3d397e025ecc31bd5332cc92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e5c6b9d15ef2ca456fd91dbd7829d94e33e2c0a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427888"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162230"
 ---
 # <a name="transformer-class"></a>Classe transformer
 
@@ -61,7 +61,7 @@ Il tipo di payload dei messaggi archiviati e propagata dal buffer.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[transformer](#ctor)|Di overload. Costruisce un `transformer` blocco della messaggistica.|
+|[transformer](#ctor)|Di overload. Costruisce un blocco della messaggistica `transformer` .|
 |[~ transformer distruttore](#dtor)|Elimina definitivamente il `transformer` blocco della messaggistica.|
 
 ### <a name="protected-methods"></a>Metodi protetti
@@ -205,11 +205,11 @@ Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il messaggio è stato riservato, `false` in caso contrario.
+**true** se il messaggio è stato riservato, **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-Dopo aver `reserve` viene chiamato, se viene restituito `true`, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
+Dopo aver `reserve` viene chiamato, se viene restituito **true**, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -251,11 +251,11 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` poiché tramite il blocco non vengono posticipati i messaggi offerti.
+**true** perché il blocco non vengono posticipati i messaggi offerti.
 
 ##  <a name="ctor"></a> classe Transformer
 
-Costruisce un `transformer` blocco della messaggistica.
+Costruisce un blocco della messaggistica `transformer` .
 
 ```
 transformer(
@@ -302,10 +302,10 @@ Puntatore a un blocco di destinazione a cui collegare il trasformatore.
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
-Il `Scheduler` oggetto all'interno del quale la propagazione di attività per il `transformer` blocco della messaggistica è pianificata.
+Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `transformer` .
 
 *PScheduleGroup*<br/>
-Il `ScheduleGroup` oggetto all'interno del quale la propagazione di attività per il `transformer` blocco della messaggistica è pianificata. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
+Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `transformer` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
 

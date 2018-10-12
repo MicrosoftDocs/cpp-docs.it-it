@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412015"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163712"
 ---
 # <a name="itarget-class"></a>Classe ITarget
 
@@ -67,7 +67,7 @@ Il tipo di dati del payload all'interno di messaggi accettati dal blocco di dest
 |----------|-----------------|
 |[propagate](#propagate)|Quando sottoposto a override in una classe derivata, passa in modo asincrono un messaggio da un blocco di origine per questo blocco di destinazione.|
 |[send](#send)|Quando sottoposto a override in una classe derivata, passa in modo sincrono un messaggio al blocco di destinazione.|
-|[supports_anonymous_source](#supports_anonymous_source)|Quando viene sottoposto a override in una classe derivata, restituisce true o false a seconda che il blocco dei messaggi accetti messaggi offerti da un'origine che non è collegata a esso. Se tramite il metodo sottoposto a override viene restituito `true`, un messaggio offerto non può essere posticipato dalla destinazione, poiché per l'utilizzo di un messaggio posticipato in un secondo momento viene richiesto che l'origine sia identificata nel Registro di sistema del collegamento di origine.|
+|[supports_anonymous_source](#supports_anonymous_source)|Quando viene sottoposto a override in una classe derivata, restituisce true o false a seconda che il blocco dei messaggi accetti messaggi offerti da un'origine che non è collegata a esso. Se il metodo sottoposto a override restituisce **true**, la destinazione non è possibile posticipare un messaggio offerto, in quanto l'origine sia identificata nel relativo Registro di sistema collegamento sourse richiede l'utilizzo di un messaggio posticipato in un secondo momento.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
@@ -174,7 +174,7 @@ Quando `send` termina, il messaggio sia già accettato e trasferito nel blocco d
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source
 
-Quando viene sottoposto a override in una classe derivata, restituisce true o false a seconda che il blocco dei messaggi accetti messaggi offerti da un'origine che non è collegata a esso. Se tramite il metodo sottoposto a override viene restituito `true`, un messaggio offerto non può essere posticipato dalla destinazione, poiché per l'utilizzo di un messaggio posticipato in un secondo momento viene richiesto che l'origine sia identificata nel Registro di sistema del collegamento di origine.
+Quando viene sottoposto a override in una classe derivata, restituisce true o false a seconda che il blocco dei messaggi accetti messaggi offerti da un'origine che non è collegata a esso. Se il metodo sottoposto a override restituisce **true**, la destinazione non è possibile posticipare un messaggio offerto, in quanto l'origine sia identificata nel relativo Registro di sistema collegamento sourse richiede l'utilizzo di un messaggio posticipato in un secondo momento.
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il blocco può accettare un messaggio da un'origine che non è collegata a esso; in caso contrario `false`.
+**true** se il blocco può accettare messaggi da un'origine che non è collegata a esso **false** in caso contrario.
 
 ##  <a name="unlink_source"></a> unlink_source
 

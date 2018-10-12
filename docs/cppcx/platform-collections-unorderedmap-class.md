@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b0b8a17cf83171a570f2ca3f6ff40c657d17164d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105835"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162347"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -58,7 +58,7 @@ I tipi consentiti sono:
 
 - classe enum pubblica
 
-**UnorderedMap** è fondamentalmente un wrapper per [std:: unordered_map](../standard-library/unordered-map-class.md) che supporta l'archiviazione dei tipi Windows Runtime. È di un'implementazione concreta del [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) tipi che vengono passati attraverso interfacce di Windows Runtime. Se tenti di usare un tipo `Platform::Collections::UnorderedMap` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. Puoi correggere l'errore modificando il tipo di valore restituito o parametro in [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** è fondamentalmente un wrapper per [std:: unordered_map](../standard-library/unordered-map-class.md) che supporta l'archiviazione dei tipi Windows Runtime. È di un'implementazione concreta del [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) tipi che vengono passati attraverso interfacce di Windows Runtime. Se tenti di usare un tipo `Platform::Collections::UnorderedMap` in un parametro o valore restituito pubblico, viene generato l'errore del compilatore C3986. Per correggere l'errore, modificare il tipo di parametro o di valore restituito in [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
 Per altre informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
@@ -163,7 +163,7 @@ Chiave usata per individuare l'elemento UnorderedMap. Il tipo della *key* è typ
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se la chiave viene trovata; in caso contrario, `false`.
+**true** se la chiave venga trovata; in caso contrario, **false**.
 
 ## <a name="insert"></a>  UnorderedMap::Insert Method
 
@@ -188,7 +188,7 @@ Valore della coppia chiave-valore. Il tipo della *valore* è typename *V*.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde a *key* e la parte valore di tale elemento è impostata su *valore*. `false` Se nessun elemento esistente nell'oggetto Map corrente corrisponde *key* e il *chiave* e *valore* parametri vengono trasformati in una coppia chiave-valore e successivamente aggiunti all'oggetto UnorderedMap corrente.
+**true** se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde al *chiave* e la parte valore di tale elemento è impostata su *valore*. **false** se nessun elemento esistente nell'oggetto Map corrente corrisponde *chiave* e il *chiave* e *valore* parametri vengono trasformati in una coppia chiave-valore e successivamente aggiunti per il oggetto UnorderedMap corrente.
 
 ## <a name="lookup"></a>  Metodo unorderedmap:: lookup
 

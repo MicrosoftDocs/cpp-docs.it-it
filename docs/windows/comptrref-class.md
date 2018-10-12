@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788942"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162217"
 ---
 # <a name="comptrref-class"></a>ComPtrRef (classe)
 
@@ -176,11 +176,11 @@ Un riferimento a un'altra `ComPtrRef` oggetto o un puntatore a un tipo anonimo (
 
 ### <a name="return-value"></a>Valore restituito
 
-Primo operatore rese `true` se oggetti *una* è uguale all'oggetto *b*; in caso contrario, `false`.
+Primo operatore rese **true** se oggetti *una* è uguale all'oggetto *b*; in caso contrario, **false**.
 
-Il secondo e terzo operatore yield `true` se oggetti *una* è uguale a `nullptr`; in caso contrario, `false`.
+Il secondo e terzo operatore yield **true** se oggetti *una* è uguale a **nullptr**; in caso contrario, **false**.
 
-Gli operatori quarto e quinto yield `true` se oggetti *una* è uguale all'oggetto *b*; in caso contrario, `false`.
+Gli operatori quarto e quinto yield **true** se oggetti *una* è uguale all'oggetto *b*; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -227,11 +227,11 @@ Un riferimento a un'altra `ComPtrRef` oggetto o un puntatore a un oggetto anonim
 
 ### <a name="return-value"></a>Valore restituito
 
-Primo operatore rese `true` se oggetti *una* non è uguale all'oggetto *b*; in caso contrario, `false`.
+Primo operatore rese **true** se oggetti *una* non è uguale all'oggetto *b*; in caso contrario, **false**.
 
-Il secondo e terzo operatore yield `true` se oggetti *una* non è uguale a `nullptr`; in caso contrario, `false`.
+Il secondo e terzo operatore yield **true** se oggetti *una* non è uguale a **nullptr**; in caso contrario, **false**.
 
-Gli operatori quarto e quinto yield `true` se oggetti *una* non è uguale all'oggetto *b*; in caso contrario, `false`.
+Gli operatori quarto e quinto yield **true** se oggetti *una* non è uguale all'oggetto *b*; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 

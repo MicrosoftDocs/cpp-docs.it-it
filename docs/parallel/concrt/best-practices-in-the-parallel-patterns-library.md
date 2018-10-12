@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396935"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163387"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Procedure consigliate nella libreria PPL (Parallel Patterns Library)
 
@@ -118,7 +118,7 @@ Anche se il meccanismo di annullamento della gestione delle eccezioni risulta me
 
 [!code-cpp[concrt-task-tree-search#6](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_8.cpp)]
 
-Il chiamante del metodo `tree::for_all` può generare un'eccezione se non richiede che la funzione lavoro venga chiamata per ciascun elemento della struttura ad albero. Nell'esempio seguente viene illustrata la funzione `search_for_value` che cerca un valore nell'oggetto `tree` fornito. La funzione `search_for_value` usa una funzione lavoro che genera un'eccezione quando l'elemento corrente della struttura ad albero corrisponde al valore fornito. La funzione `search_for_value` usa un blocco `try-catch` per acquisire l'eccezione e stampare il risultato nella console.
+Il chiamante del metodo `tree::for_all` può generare un'eccezione se non richiede che la funzione lavoro venga chiamata per ciascun elemento dell'albero. Nell'esempio seguente viene illustrata la funzione `search_for_value` che cerca un valore nell'oggetto `tree` fornito. La funzione `search_for_value` usa una funzione lavoro che genera un'eccezione quando l'elemento corrente della struttura ad albero corrisponde al valore fornito. La funzione `search_for_value` usa un blocco `try-catch` per acquisire l'eccezione e stampare il risultato nella console.
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
@@ -136,7 +136,7 @@ Nell'esempio seguente la classe `Resource` descrive una risorsa e la classe `Con
 
 [!code-cpp[concrt-parallel-resource-destruction#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_10.h)]
 
-Anche se questo modello non presenta problemi di per sé, si consideri il codice seguente, che esegue due attività in parallelo. La prima attività crea un oggetto `Container`, mentre la seconda annulla l'intera attività.  A scopo illustrativo, nell'esempio vengono utilizzati due [Concurrency:: event](../../parallel/concrt/reference/event-class.md) gli oggetti per assicurarsi che l'annullamento avrà luogo dopo la `Container` oggetto viene creato e che il `Container` oggetto viene eliminato dopo l'annullamento si verifica l'operazione.
+Anche se questo modello non presenta problemi di per sé, si consideri il codice seguente, che esegue due attività in parallelo. La prima attività crea un oggetto `Container`, mentre la seconda annulla l'intera attività. A scopo illustrativo, nell'esempio vengono utilizzati due [Concurrency:: event](../../parallel/concrt/reference/event-class.md) gli oggetti per assicurarsi che l'annullamento avrà luogo dopo la `Container` oggetto viene creato e che il `Container` oggetto viene eliminato dopo l'annullamento si verifica l'operazione.
 
 [!code-cpp[concrt-parallel-resource-destruction#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_11.cpp)]
 
@@ -180,7 +180,7 @@ Quando possibile, non eseguire operazioni di blocco prima di chiamare il [concur
 
 Quando tramite un'attività viene effettuata un'operazione di blocco, mediante il runtime può essere eseguito altro lavoro mentre la prima attività resta in attesa dei dati. Quando si sblocca, il runtime ripianifica l'attività di attesa.  Il runtime generalmente ripianifica prima le ultime attività sbloccate e poi quelle sbloccate meno di recente. Pertanto, il runtime potrebbe pianificare lavoro non necessario durante l'operazione di blocco, determinando una riduzione delle prestazioni. Di conseguenza, quando si esegue un'operazione di blocco prima di annullare lavoro parallelo, l'operazione di blocco può ritardare la chiamata a `cancel`. Ciò comporta l'intervento di altre attività per l'esecuzione del lavoro non necessario.
 
-Si consideri l'esempio seguente che definisce la funzione `parallel_find_answer`. Tale funzione esegue la ricerca di un elemento della matrice fornita che soddisfa la funzione predicato specificata. Quando la funzione predicato restituisce `true`, la funzione lavoro parallelo crea un oggetto `Answer` e annulla l'intera attività.
+Si consideri l'esempio seguente che definisce la funzione `parallel_find_answer`. Tale funzione esegue la ricerca di un elemento della matrice fornita che soddisfa la funzione predicato specificata. Quando restituisce la funzione di predicato **true**, la funzione lavoro parallelo crea un `Answer` dell'oggetto e Annulla l'intera attività.
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 

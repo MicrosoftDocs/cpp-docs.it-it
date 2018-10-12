@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80f831d527e918fce0551f6a1336fd2fe994917d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094897"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161281"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Avviso del compilatore (livello 4) C4127
 
@@ -29,9 +29,9 @@ ms.locfileid: "46094897"
 
 ## <a name="remarks"></a>Note
 
-L'espressione di controllo di un'istruzione `if` o di un ciclo `while` restituisce una costante. A causa di comune utilizzo idiomatico, a partire da Visual Studio 2015 update 3, costanti semplici, ad esempio 1 o `true` non attivano l'avviso, a meno che non sono il risultato di un'operazione in un'espressione.
+L'espressione di controllo di un' **se** istruzione oppure **mentre** ciclo restituisce una costante. A causa di comune utilizzo idiomatico, a partire da Visual Studio 2015 update 3, costanti semplici, ad esempio 1 o **true** non attivano l'avviso, a meno che non sono il risultato di un'operazione in un'espressione.
 
-Se l'espressione di controllo di un `while` ciclo è una costante perché il ciclo viene interrotto al centro, si consiglia di sostituire il `while` ciclo con un `for` ciclo. È possibile omettere l'inizializzazione, il test di terminazione e incremento del ciclo di un `for` ciclo, generando un ciclo infinito, analogamente `while(1)`, e si può uscire dal ciclo dal corpo del `for` istruzione.
+Se l'espressione di controllo di un **mentre** ciclo è una costante perché il ciclo viene interrotto al centro, si consiglia di sostituire le **mentre** ciclo con un **per** ciclo. È possibile omettere l'inizializzazione, il test di terminazione e incremento del ciclo di un **per** ciclo, generando un ciclo infinito, analogamente `while(1)`, e si può uscire dal ciclo dal corpo del **per** istruzione.
 
 ## <a name="example"></a>Esempio
 

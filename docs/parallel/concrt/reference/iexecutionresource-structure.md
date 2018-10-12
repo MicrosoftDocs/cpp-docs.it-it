@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390265"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162399"
 ---
 # <a name="iexecutionresource-structure"></a>Struttura IExecutionResource
 
@@ -79,7 +79,7 @@ Il livello di abbonamento corrente.
 
 Il livello di abbonamento indica il numero di thread in esecuzione è associato al thread hardware. Include solo i thread di Resource Manager è a conoscenza del sotto forma di thread sottoscritto e radici di processori virtuali sono attivamente in esecuzione il proxy thread.
 
-La chiamata al metodo [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), o il metodo [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) con il parametro `doSubscribeCurrentThread` impostata sul valore `true`incrementa il livello di abbonamento di un thread di hardware di uno. Restituiscono anche un `IExecutionResource` interfaccia che rappresenta la sottoscrizione. Una chiamata corrispondente per il [IExecutionResource:: Remove](#remove) decrementa a livello di sottoscrizione del thread hardware da uno.
+La chiamata al metodo [ISchedulerProxy:: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), o il metodo [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) con il parametro `doSubscribeCurrentThread` impostata sul valore **true** incrementa il livello di abbonamento di un thread di hardware di uno. Restituiscono anche un `IExecutionResource` interfaccia che rappresenta la sottoscrizione. Una chiamata corrispondente per il [IExecutionResource:: Remove](#remove) decrementa a livello di sottoscrizione del thread hardware da uno.
 
 L'atto di attivazione di una radice del processore virtuale usando il metodo [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate) incrementa il livello di abbonamento di un thread di hardware di uno. I metodi [IVirtualProcessorRoot:: Deactivate](ivirtualprocessorroot-structure.md#deactivate), o [IExecutionResource:: Remove](#remove) decrementa il livello di sottoscrizione di uno quando viene richiamato su una radice del processore virtuale attivata.
 

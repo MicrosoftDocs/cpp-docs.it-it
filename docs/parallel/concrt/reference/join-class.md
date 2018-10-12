@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c960e73604a915dbb15c0efac958dc229c16b3b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 045cdeab321e9e3f88ee9bd50d337101e8512718
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379535"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163816"
 ---
 # <a name="join-class"></a>Classe join
 
@@ -60,7 +60,7 @@ Il tipo della `join` blocco è `greedy` o `non_greedy`
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[join](#ctor)|Di overload. Costruisce un `join` blocco della messaggistica.|
+|[join](#ctor)|Di overload. Costruisce un blocco della messaggistica `join` .|
 |[~ join distruttore](#dtor)|Elimina definitivamente il `join` blocco.|
 
 ### <a name="protected-methods"></a>Metodi protetti
@@ -138,7 +138,7 @@ Simile a `accept`, ma viene sempre preceduta da una chiamata a `reserve`.
 
 ##  <a name="ctor"></a> join
 
-Costruisce un `join` blocco della messaggistica.
+Costruisce un blocco della messaggistica `join` .
 
 ```
 join(
@@ -176,10 +176,10 @@ Il numero di input si `join` blocco sarà consentito.
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
-Il `Scheduler` oggetto all'interno del quale la propagazione di attività per il `join` blocco della messaggistica è pianificata.
+Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `join` .
 
 *PScheduleGroup*<br/>
-Il `ScheduleGroup` oggetto all'interno del quale la propagazione di attività per il `join` blocco della messaggistica è pianificata. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
+Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `join` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
 
@@ -261,11 +261,11 @@ Il `runtime_object_identity` proposto `message` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il messaggio è stato riservato, `false` in caso contrario.
+**true** se il messaggio è stato riservato, **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-Dopo aver `reserve` viene chiamato, se viene restituito `true`, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
+Dopo aver `reserve` viene chiamato, se viene restituito **true**, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

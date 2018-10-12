@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40a98bd546f29cd42629ad991866a85a86852c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399301"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163205"
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (runtime di concorrenza)
 
@@ -134,7 +134,7 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'attività annulla il wrapping di un'interfaccia `IAsyncInfo` o discende da tale attività, in caso contrario `false`.
+**true** se l'attività Annulla il wrapping un' `IAsyncInfo` interfaccia o discende da tale attività, **false** in caso contrario.
 
 ##  <a name="is_done"></a>  Task:: is_done (Runtime di concorrenza) (metodo)
 
@@ -169,7 +169,7 @@ L'attività da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se i due oggetti si riferiscono ad attività sottostanti diverse e `false` in caso contrario.
+**true** se i due oggetti si riferiscono ad attività sottostanti diverse, e **false** in caso contrario.
 
 ##  <a name="operator_eq"></a> operator=
 
@@ -209,7 +209,7 @@ L'attività da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se i due oggetti si riferiscono alla stessa attività sottostante e `false` in caso contrario.
+**true** se i due oggetti si riferiscono alla stessa attività sottostante, e **false** in caso contrario.
 
 ##  <a name="scheduler"></a>  Task:: Scheduler (Runtime di concorrenza) (metodo)
 
@@ -354,7 +354,7 @@ Valore `task_status` che potrebbe essere `completed` o `canceled`. Se l'attivit�
 ### <a name="remarks"></a>Note
 
 > [!IMPORTANT]
->  In un'app Universal Windows Platform (UWP), non chiamare `wait` nel codice eseguito nel STA. In caso contrario, il runtime genera un'eccezione [Concurrency:: invalid_operation](invalid-operation-class.md) poiché questo metodo blocca il thread corrente e può provocare la mancata risposta da parte dell'app. Tuttavia, è possibile chiamare il [concurrency::task::get](#get) metodo per ricevere il risultato dell'attività antecedente in una continuazione basata su attività.
+>  In un'app Universal Windows Platform (UWP), non chiamare `wait` nel codice eseguito nel STA. In caso contrario, il runtime genera [concurrency::invalid_operation](invalid-operation-class.md) poiché questo metodo blocca il thread corrente e può provocare la mancata risposta da parte dell'app. È tuttavia possibile chiamare il metodo [concurrency::task::get](#get) per ricevere il risultato dell'attività antecedente in una continuazione basata su attività.
 
 ## <a name="see-also"></a>Vedere anche
 

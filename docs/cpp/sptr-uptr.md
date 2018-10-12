@@ -1,13 +1,17 @@
 ---
 title: sptr, uptr | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __uptr_cpp
 - __sptr_cpp
+- __uptr
+- __sptr
+- _uptr
+- _sptr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 269fe70a5a40a90a512c826e98ba2c8ea698a55b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fa67c815fdfeac0f5728ecd671aaa8f04a59ef89
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052517"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163478"
 ---
 # <a name="sptr-uptr"></a>__sptr, __uptr
 
@@ -44,6 +48,8 @@ void MyFunction(char * __uptr __ptr32 myValue);
 ```
 
 Usare la **sptr** e **uptr** modificatori con dichiarazioni del puntatore. Usare i modificatori nella posizione di un [qualificatore di tipo puntatore](../c-language/pointer-declarations.md), ossia il modificatore deve seguire l'asterisco. Non è possibile usare i modificatori con [puntatori a membri](../cpp/pointers-to-members.md). I modificatori non influiscono sulle dichiarazioni di tipo non puntatore.
+
+Per garantire la compatibilità con versioni precedenti **_sptr** e **_uptr** sono sinonimi per **sptr** e **uptr** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
 
 ## <a name="example"></a>Esempio
 

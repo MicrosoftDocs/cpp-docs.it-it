@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436988"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162282"
 ---
 # <a name="message-passing-functions"></a>Funzioni di passaggio dei messaggi
 
@@ -41,9 +41,9 @@ Questo argomento descrive le funzioni di passaggio dei messaggi seguenti:
 
 Il [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) funzione Invia un messaggio alla destinazione specificata in modo sincrono e il [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) funzione Invia un messaggio alla destinazione specificata in modo asincrono. Sia la `send` e `asend` funzioni attendere fino a quando la destinazione indica che verrà infine accettare o rifiutare il messaggio.
 
-Il `send` funzione attende fino a quando la destinazione accetta o rifiuta il messaggio prima della restituzione. Il `send` funzione restituisce `true` se il messaggio è stato recapitato e `false` in caso contrario. Poiché il `send` funzione funziona in modo sincrono, il `send` funzione attende che la destinazione ricevere il messaggio prima della restituzione.
+Il `send` funzione attende fino a quando la destinazione accetta o rifiuta il messaggio prima della restituzione. Il `send` funzione restituisce **true** se il messaggio è stato recapitato e **false** in caso contrario. Poiché il `send` funzione funziona in modo sincrono, il `send` funzione attende che la destinazione ricevere il messaggio prima della restituzione.
 
-Al contrario, il `asend` funzione non attende la destinazione di accettare o rifiutare il messaggio prima della restituzione. Al contrario, il `asend` funzione restituisce `true` se la destinazione accetta il messaggio e alla fine richiederà lo. In caso contrario, `asend` restituisce `false` per indicare che la destinazione ha rifiutato il messaggio o la decisione sulla possibilità di estrarre il messaggio posticipato.
+Al contrario, il `asend` funzione non attende la destinazione di accettare o rifiutare il messaggio prima della restituzione. Al contrario, il `asend` funzione restituisce **true** se la destinazione accetta il messaggio e alla fine richiederà lo. In caso contrario, `asend` restituisce **false** per indicare che la destinazione ha rifiutato il messaggio o la decisione sulla possibilità di estrarre il messaggio posticipato.
 
 [[Torna all'inizio](#top)]
 

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: acf3ae2fd16eb3aacbc0a2e681ae39aece1b4dd4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103932"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163218"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -71,7 +71,7 @@ I tipi consentiti sono:
 
 Il **vettore** classe è l'implementazione concreta di C++ del [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) interfaccia.
 
-Se si prova a usare una **vettore** immettere un valore restituito pubblico o un parametro, l'errore del compilatore C3986 viene generato. È possibile correggere l'errore modificando il parametro o tipo di valore da restituire [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).
+Se si prova a usare una **vettore** immettere un valore restituito pubblico o un parametro, l'errore del compilatore C3986 viene generato. È possibile correggere l'errore modificando il tipo di parametro o di valore restituito in [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Per ulteriori informazioni, vedi [Raccolte (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membri
 
@@ -240,11 +240,11 @@ Elemento da cercare.
 *index*<br/>
 Indice a base zero dell'elemento se parametro *valore* viene trovato; in caso contrario, 0.
 
-Il *indice* parametro è 0 se l'elemento è il primo elemento del vettore o se l'elemento non è stato trovato. Se il valore restituito è `true`, l'elemento è stato trovato ed è il primo elemento; in caso contrario, l'elemento non è stato trovato.
+Il *indice* parametro è 0 se l'elemento è il primo elemento del vettore o se l'elemento non è stato trovato. Se il valore restituito sarà **true**, l'elemento è stato trovato ed è il primo elemento; in caso contrario, l'elemento non è stato trovato.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'elemento specificato è stato trovato; in caso contrario, `false`.
+**true** se l'elemento specificato viene trovato; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 

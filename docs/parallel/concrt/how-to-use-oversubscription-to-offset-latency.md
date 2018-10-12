@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392964"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163569"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Procedura: Usare l'oversubscription per compensare la latenza
 
@@ -30,7 +30,7 @@ Oversubscription può migliorare l'efficienza complessiva di alcune applicazioni
 
 Questo esempio Usa la [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) per scaricare i file dai server HTTP. Il `http_reader` deriva dalla classe [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) e Usa il passaggio per leggere in modo asincrono i nomi di URL per il download dei messaggi.
 
-Il `http_reader` classe Usa il [Concurrency:: task_group](reference/task-group-class.md) per leggere simultaneamente ciascun file. Ogni attività chiama il [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodo con il `_BeginOversubscription` parametro impostato su `true` per abilitare l'oversubscription nel contesto corrente. Ogni attività Usa quindi le classi MFC (Microsoft Foundation) [CInternetSession](../../mfc/reference/cinternetsession-class.md) e [CHttpFile](../../mfc/reference/chttpfile-class.md) classi per scaricare il file. Infine, ogni attività viene chiamato `Context::Oversubscribe` con il `_BeginOversubscription` parametro impostato su `false` per disabilitare l'oversubscription.
+Il `http_reader` classe Usa il [Concurrency:: task_group](reference/task-group-class.md) per leggere simultaneamente ciascun file. Ogni attività chiama il [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodo con il `_BeginOversubscription` parametro impostato su **true** per abilitare l'oversubscription nel contesto corrente. Ogni attività Usa quindi le classi MFC (Microsoft Foundation) [CInternetSession](../../mfc/reference/cinternetsession-class.md) e [CHttpFile](../../mfc/reference/chttpfile-class.md) classi per scaricare il file. Infine, ogni attività viene chiamato `Context::Oversubscribe` con il `_BeginOversubscription` parametro impostato su **false** per disabilitare l'oversubscription.
 
 Quando è abilitata l'oversubscription, il runtime crea un thread aggiuntivo in cui eseguire le attività. Ognuno di questi thread può anche oversubscription nel contesto corrente, quindi creare thread aggiuntivi. Il `http_reader` classe Usa un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) oggetto per limitare il numero di thread utilizzati dall'applicazione. L'agente consente di inizializzare il buffer con un numero fisso di valori del token. Per ogni operazione di download, l'agente legge un valore del token dal buffer prima che l'operazione di avvio e quindi scrive il valore torna al buffer dopo il completamento dell'operazione. Quando il buffer è vuoto, l'agente attende che una delle operazioni di download da scrivere nuovamente un valore per il buffer.
 
@@ -68,7 +68,7 @@ L'esempio può essere eseguito più velocemente quando è abilitata l'oversubscr
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
-Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `download-oversubscription.cpp` e quindi eseguire uno dei seguenti comandi in una finestra del Prompt dei comandi di Visual Studio.
+Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `download-oversubscription.cpp` e quindi eseguire uno dei seguenti comandi in un **Prompt dei comandi di Visual Studio** finestra.
 
 **CL.exe /EHsc /MD /D AFXDLL"download-oversubscription. cpp**
 

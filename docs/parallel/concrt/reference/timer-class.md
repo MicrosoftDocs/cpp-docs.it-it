@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b821dcc3426c6e1d9f3cd2f2ff8eb057197ca8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37348fe92354d2ea7be3168dc5b3c9aee9fcd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416201"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163103"
 ---
 # <a name="timer-class"></a>Classe timer
 
@@ -193,11 +193,11 @@ Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il messaggio è stato riservato, `false` in caso contrario.
+**true** se il messaggio è stato riservato, **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-Dopo aver `reserve` viene chiamato, se viene restituito `true`, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
+Dopo aver `reserve` viene chiamato, se viene restituito **true**, ad esempio `consume` o `release` deve essere chiamato per richiedere o rilasciare la proprietà del messaggio.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -267,11 +267,11 @@ Se true, indica che il timer verrà generato periodicamente ogni `_Ms` milliseco
 Il `Scheduler` oggetto all'interno del quale la propagazione di attività per il `timer` blocco della messaggistica è pianificata è pianificata.
 
 *_ScheduleGroup*<br/>
-Il `ScheduleGroup` oggetto all'interno del quale la propagazione di attività per il `timer` blocco della messaggistica è pianificata. L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
+Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `timer` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
 
-Il runtime usa l'utilità di pianificazione predefinita se non si specifica la `_Scheduler` o `_ScheduleGroup` parametri.
+Se non si specificano i parametri `_Scheduler` o `_ScheduleGroup` , il runtime usa l'utilità di pianificazione predefinita.
 
 ##  <a name="dtor"></a> ~ timer
 

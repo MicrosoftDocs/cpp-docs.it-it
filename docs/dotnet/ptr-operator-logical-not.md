@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 186fe4bbeb86780cde586500380a7e2c500da38e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a5fef363b289ba2062db6f8d903ea832bffd6e5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443520"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161671"
 ---
 # <a name="ptroperator"></a>ptr::operator!
 
@@ -39,17 +39,17 @@ bool operator!();
 
 ## <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto COM di proprietà è valido. `false` in caso contrario.
+**true** se l'oggetto COM di proprietà è valido. **false** in caso contrario.
 
 ## <a name="remarks"></a>Note
 
-L'oggetto COM di proprietà è valido se non è `nullptr`.
+L'oggetto COM di proprietà è valida in caso contrario **nullptr**.
 
 ## <a name="example"></a>Esempio
 
 In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Il `CreateInstance` funzione membro Usa `operator!` per determinare se appartiene già a un oggetto documento e solo se l'oggetto non è valido, viene creata una nuova istanza.
 
-```
+```cpp
 // comptr_op_not.cpp
 // compile with: /clr /link msxml2.lib
 #include <msxml2.h>

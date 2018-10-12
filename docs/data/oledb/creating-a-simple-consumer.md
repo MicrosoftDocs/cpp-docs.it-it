@@ -1,7 +1,7 @@
 ---
 title: Creazione di un Consumer semplice | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,44 +15,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 120829b08ab65c10cca7ab922fc4f9be732ccc53
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860810"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163842"
 ---
 # <a name="creating-a-simple-consumer"></a>Creazione di un consumer semplice
 
 Usare la creazione guidata progetto ATL e creazione guidata Consumer OLE DB ATL per generare un consumer di modelli OLE DB.
 
-### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Per creare un'applicazione console per un consumer OLE DB
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Per creare un'applicazione console per un consumer OLE DB
 
 1. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
 
    Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-1. Nel riquadro di tipi di progetto, scegliere il **i progetti Visual C++** cartella e quindi fare clic sulla **progetto Win32** icona nel riquadro dei modelli. Nel **Name** immettere il nome del progetto, ad esempio **MyCons**.
+1. Nel **tipi di progetto** riquadro, fare clic sul **installato** > **modelli** > **Visual C++** cartella e quindi fare clic sui **applicazione Console Win32** icona nel **modelli** riquadro. Nel **Name** immettere il nome del progetto, ad esempio *MyCons*.
 
 1. Fare clic su **OK**.
 
-   Viene visualizzata la creazione guidata progetto Win32.
+   Viene visualizzata la creazione guidata applicazione Win32.
 
-1. Nel **le impostazioni dell'applicazione** pagina, selezionare **applicazione Console**e quindi selezionare **aggiungere il supporto per ATL**.
+1. Nel **Application Settings** pagina, selezionare **applicazione Console**e quindi selezionare **aggiungere file di intestazione comuni per ATL**.
 
 1. Fare clic su **fine** per chiudere la procedura guidata e generare il progetto.
 
 Successivamente, utilizzare la creazione guidata Consumer OLE DB ATL per aggiungere un oggetto del consumer OLE DB.
 
-#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Per creare un consumer con la creazione guidata Consumer OLE DB ATL
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Per creare un consumer con la creazione guidata Consumer OLE DB ATL
 
-1. In visualizzazione classi, fare doppio clic il `MyCons` progetto.
+1. Nelle **Esplora soluzioni**, fare doppio clic su di `MyCons` progetto.
 
-1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **Aggiungi classe**.
+1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **classe**.
 
    Il **Aggiungi classe** verrà visualizzata la finestra di dialogo.
 
-1. Nel riquadro delle categorie fare clic su **Visual C++**, fare clic sui **Consumer OLE DB ATL** icona nel riquadro Modelli e quindi fare clic su **Open**.
+1. Nel **categorie** riquadro, fare clic su **installati** > **Visual C++** > **ATL**, fare clic su di **Consumer OLEDB ATL** icona nel **modelli** riquadro e quindi fare clic su **Add**.
 
    Viene visualizzata la creazione guidata Consumer OLE DB ATL.
 
@@ -64,10 +64,10 @@ Successivamente, utilizzare la creazione guidata Consumer OLE DB ATL per aggiung
 
    - Nel **Provider** scheda, specificare un provider OLE DB.
 
-   - Nel **connessione** , specificare il nome del server, l'ID di accesso e password per l'origine dati e il database nel server.
+   - Nel **connessione** , specificare le informazioni necessarie, ad esempio nome del server, l'ID di accesso e password per l'origine dati e il database nel server.
 
    > [!NOTE]
-   > Si verifica un problema di sicurezza con il **per il salvataggio della password** funzionalità delle **proprietà di Data Link** nella finestra di dialogo. Nelle **immettere le informazioni per l'accesso al server**, sono presenti due pulsanti di opzione: **Usa Windows protezione integrata NT** e **usare un nome utente specifico e una password**.
+   > Si verifica un problema di sicurezza con il **Consenti salvataggio password** funzionalità delle **proprietà di Data Link** nella finestra di dialogo. Nelle **immettere le informazioni per l'accesso al server**, sono presenti due pulsanti di opzione: **Usa Windows protezione integrata NT** e **usare un nome utente specifico e una password**.
 
    > [!NOTE]
    > Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la **Consenti salvataggio password** casella di controllo), tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione utilizza Windows NT per verificare la tua identità.
@@ -79,7 +79,7 @@ Successivamente, utilizzare la creazione guidata Consumer OLE DB ATL per aggiung
 
    Il **Seleziona oggetto di Database** verrà visualizzata la finestra di dialogo.
 
-1. Usare il controllo albero per selezionare una tabella, vista o stored procedure. Ai fini di questa procedura, selezionare la tabella Products del database Northwind.
+1. Usare il controllo albero per selezionare una tabella, vista o stored procedure. Ai fini di questa procedura, selezionare la `Products` dalla tabella di `Northwind` database.
 
 1. Fare clic su **OK**. Verrà visualizzata nuovamente la creazione guidata Consumer OLE DB ATL.
 

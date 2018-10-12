@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2798c4abe33e49d2ac6199ad6f9a1013805fde7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bcdb05230cdacbf626235e315e605414c435493
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424417"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163064"
 ---
 # <a name="networklinkregistry-class"></a>Classe network_link_registry
 
@@ -124,7 +124,7 @@ Un puntatore a un blocco che viene cercato nel `network_link_registry` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il blocco è stato trovato, `false` in caso contrario.
+**true** se il blocco è stato trovato **false** in caso contrario.
 
 ##  <a name="count"></a> conteggio
 
@@ -153,7 +153,7 @@ Un puntatore a un blocco deve essere rimosso, se trovato.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il collegamento è stato trovato e rimosso, `false` in caso contrario.
+**true** se è stato trovato e rimosso, il collegamento **false** in caso contrario.
 
 ## <a name="see-also"></a>Vedere anche
 

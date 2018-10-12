@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84c8df1748e68f2364400fd4725ce6bffd232f1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 854f5935a66d845aa3c63b9f15857732fdfe6b8a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379710"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163868"
 ---
 # <a name="context-class"></a>Classe Context
 
@@ -241,7 +241,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ### <a name="parameters"></a>Parametri
 
 *BeginOversubscription*<br/>
-Se `true`, un valore che indica che un processore virtuale aggiuntivi deve essere aggiunte per la durata dell'oversubscription. Se `false`, indica che deve terminare l'oversubscription e il processore virtuale aggiunto in precedenza deve essere rimossa.
+Se **true**, un valore che indica che un processore virtuale aggiuntivi deve essere aggiunte per la durata dell'oversubscription. Se **false**, indica che deve terminare l'oversubscription e il processore virtuale aggiunto in precedenza deve essere rimossa.
 
 ##  <a name="schedulegroupid"></a> ScheduleGroupId
 

@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 553429e2a4cc7db319c2176d20cb31e9fa0acdf7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66aa9c3a8ab0f5ae9fb5219b090ec5c9e3755203
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788748"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162100"
 ---
 # <a name="synclockt-class"></a>SyncLockT (classe)
 
@@ -118,7 +118,7 @@ bool IsLocked() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il `SyncLockT` oggetto è bloccato; in caso contrario, `false`.
+**true** se il `SyncLockT` oggetto è bloccato; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378221"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163829"
 ---
 # <a name="contexts"></a>Contesti
 
@@ -67,7 +67,7 @@ Per le operazioni con calcoli complessi, l'oversubscription in genere non scalab
 > [!NOTE]
 >  Abilitare l'oversubscription solo da un thread creato dal runtime di concorrenza. L'oversubscription non ha alcun effetto quando viene chiamato da un thread che non è stato creato dal runtime (tra cui il thread principale).
 
-Per abilitare l'oversubscription nel contesto corrente, chiamare il [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodo con il `_BeginOversubscription` parametro impostato su `true`. Quando si abilita l'oversubscription su un thread creato dal Runtime di concorrenza, è possibile che il runtime creare un thread aggiuntivo. Dopo tutte le attività che richiedono l'oversubscription, chiamare `Context::Oversubscribe` con il `_BeginOversubscription` parametro impostato su `false`.
+Per abilitare l'oversubscription nel contesto corrente, chiamare il [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodo con il `_BeginOversubscription` parametro impostato su **true**. Quando si abilita l'oversubscription su un thread creato dal Runtime di concorrenza, è possibile che il runtime creare un thread aggiuntivo. Dopo tutte le attività che richiedono l'oversubscription, chiamare `Context::Oversubscribe` con il `_BeginOversubscription` parametro impostato su **false**.
 
 È possibile abilitare l'oversubscription più volte dal contesto corrente, ma è necessario disabilitare lo stesso numero di volte in cui viene abilitata. Oversubscription può anche essere annidata; vale a dire, un'attività che viene creata da un'altra attività che usa l'oversubscription può inoltre abilitare l'oversubscription relativo contesto. Tuttavia, se un'attività annidata sia padre appartengono allo stesso contesto, solo la chiamata più esterno per `Context::Oversubscribe` determina la creazione di un altro thread.
 

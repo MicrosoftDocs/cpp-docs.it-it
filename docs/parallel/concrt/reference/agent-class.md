@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04202b647910914de8ebe92397efe1373e9508be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6d91f312b028f44e0671c7960d4b06c2634928
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401368"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162516"
 ---
 # <a name="agent-class"></a>Classe agent
 
@@ -108,7 +108,7 @@ Il `ScheduleGroup` dell'oggetto in cui è pianificata l'attività di esecuzione 
 
 ### <a name="remarks"></a>Note
 
-Il runtime usa l'utilità di pianificazione predefinita se non si specifica la `_PScheduler` o `_PGroup` parametri.
+Se non si specificano i parametri `_PScheduler` o `_PGroup` , il runtime usa l'utilità di pianificazione predefinita.
 
 ##  <a name="dtor"></a> ~ agent
 
@@ -132,7 +132,7 @@ bool cancel();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'agente è stato annullato, `false` in caso contrario. Un agente non può essere annullato se è già in esecuzione o è già stata completata.
+**true** se l'agente è stato annullato **false** in caso contrario. Un agente non può essere annullato se è già in esecuzione o è già stata completata.
 
 ##  <a name="done"></a> Operazione eseguita
 
@@ -144,7 +144,7 @@ bool done();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'agente viene spostato il `agent_done` lo stato, `false` in caso contrario. Non è possibile spostare un agente che è stato annullato la `agent_done` dello stato.
+**true** se l'agente viene spostato nel `agent_done` stato **false** in caso contrario. Non è possibile spostare un agente che è stato annullato la `agent_done` dello stato.
 
 ### <a name="remarks"></a>Note
 
@@ -172,7 +172,7 @@ bool start();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'agente è stato avviato correttamente `false` in caso contrario. Impossibile avviare un agente che è stato annullato.
+**true** se l'agente è stato avviato correttamente **false** in caso contrario. Impossibile avviare un agente che è stato annullato.
 
 ##  <a name="status"></a> Stato
 

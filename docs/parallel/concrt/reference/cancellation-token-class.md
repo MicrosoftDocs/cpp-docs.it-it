@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414303"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162074"
 ---
 # <a name="cancellationtoken-class"></a>Classe cancellation_token
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Rimuove un callback registrato in precedenza tramite il metodo `register` in base all'oggetto `cancellation_token_registration` restituito al momento della registrazione.|
 |[is_cancelable](#is_cancelable)|Restituisce un'indicazione sull'eventuale possibilità di annullamento di questo token.|
-|[is_canceled](#is_canceled)|Restituisce `true` se il token è stato annullato.|
+|[is_canceled](#is_canceled)|Restituisce **true** se il token è stato annullato.|
 |[none](#none)|Restituisce un token di annullamento che non può mai essere soggetto all'annullamento.|
 |[register_callback](#register_callback)|Registra una funzione di callback con il token. Il callback verrà eseguito se e quando il token viene annullato. Si noti che se il token è già stato annullato nel punto in cui viene chiamato questo metodo, il callback verrà eseguito immediatamente e in modo sincrono.|
 
@@ -123,7 +123,7 @@ Indicazione che segnala se il token può essere annullato o meno.
 
 ##  <a name="is_canceled"></a> is_canceled
 
-Restituisce `true` se il token è stato annullato.
+Restituisce **true** se il token è stato annullato.
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore è `true` se il token è stato annullato; in caso contrario, il valore è `false`.
+Il valore **true** se il token è stata annullata; in caso contrario, il valore **false**.
 
 ##  <a name="none"></a> Nessuno
 

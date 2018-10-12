@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 668365cf69fc3457efc615a5fa0da2c24b3cb02e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102551"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162386"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Classe Platform::Collections::VectorIterator
 
@@ -124,7 +124,7 @@ La prima sintassi decrementa e quindi restituisce l'oggetto VectorIterator corre
 
 La prima sintassi di VectorIterator esegue un decremento preliminare dell'oggetto VectorIterator corrente.
 
-La seconda sintassi esegue un decremento posteriore dell'oggetto VectorIterator corrente. Il `int` tipo nella seconda sintassi indica un'operazione di post-decremento, non un effettivo operando integer.
+La seconda sintassi esegue un decremento posteriore dell'oggetto VectorIterator corrente. Il tipo `int` nella seconda sintassi indica un'operazione di decremento posteriore, non un effettivo operando Integer.
 
 ## <a name="operator-dereference"></a>  Vectoriterator:: operator\* operatore
 
@@ -157,7 +157,7 @@ Altro oggetto VectorIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'oggetto VectorIterator corrente è uguale a `other`; in caso contrario, `false`.
+**true** se l'oggetto VectorIterator corrente è uguale a *altri*; in caso contrario, **false**.
 
 ## <a name="operator-greater-than"></a>  Vectoriterator:: operator&gt; operatore
 
@@ -176,7 +176,7 @@ Altro oggetto VectorIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto VectorIterator corrente è maggiore `other`; in caso contrario, `false`.
+**true** se l'oggetto VectorIterator corrente è maggiore *altri*; in caso contrario, **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  Vectoriterator:: operator&gt;= (operatore)
 
@@ -195,7 +195,7 @@ Altro oggetto VectorIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'oggetto VectorIterator corrente è maggiore o uguale a `other`; in caso contrario, `false`.
+**true** se l'oggetto VectorIterator corrente è maggiore o uguale a *altri*; in caso contrario, **false**.
 
 ## <a name="operator-increment"></a>  Operatore vectoriterator:: operator + +
 
@@ -235,7 +235,7 @@ Altro oggetto VectorIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto VectorIterator corrente non è uguale a `other`; in caso contrario, `false`.
+**true** se l'oggetto VectorIterator corrente non è uguale a *altri*; in caso contrario, **false**.
 
 ## <a name="operator-less-than"></a>  Vectoriterator:: operator&lt; operatore
 
@@ -254,7 +254,7 @@ Altro oggetto VectorIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'oggetto VectorIterator corrente è minore di `other`; in caso contrario, `false`.
+**true** se l'oggetto VectorIterator corrente è minore di *altri*; in caso contrario, **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  Vectoriterator:: operator&lt;= (operatore)
 
@@ -273,7 +273,7 @@ Altro oggetto VectorIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se l'oggetto VectorIterator corrente è minore o uguale a `other`; in caso contrario, `false`.
+**true** se l'oggetto VectorIterator corrente è minore o uguale a *altri*; in caso contrario, **false**.
 
 ## <a name="operator-minus"></a>  Vectoriterator:: operator-(operatore)
 
@@ -298,7 +298,7 @@ Altro oggetto VectorIterator.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima sintassi dell'operatore restituisce un oggetto VectorIterator costituito `n` elementi in meno rispetto all'oggetto VectorIterator corrente. La seconda sintassi dell'operatore restituisce il numero di elementi tra l'oggetto corrente e il `other` VectorIterator.
+La prima sintassi dell'operatore restituisce un oggetto VectorIterator costituito da `n` elementi in meno rispetto all'oggetto VectorIterator corrente. La seconda sintassi dell'operatore restituisce il numero di elementi tra l'oggetto VectorIterator corrente e `other`.
 
 ## <a name="operator-plus-assign"></a>  Vectoriterator:: operator + = operatore
 

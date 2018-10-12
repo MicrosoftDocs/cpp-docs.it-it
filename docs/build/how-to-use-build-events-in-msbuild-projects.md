@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444333"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161268"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Procedura: utilizzo di eventi di compilazione in progetti MSBuild
 
@@ -29,7 +29,7 @@ Un evento di compilazione è un comando che MSBuild esegue in una determinata fa
 
 Ognuno dei tre eventi di compilazione è rappresentato in un gruppo di definizioni di elementi da un elemento di comando (`<Command>`) che viene eseguito e un elemento del messaggio (`<Message>`) che è visualizzato quando **MSBuild** esegue l'evento di compilazione. Ogni elemento è facoltativo e se si specifica lo stesso elemento più volte, l'ultima occorrenza ha la precedenza.
 
-Facoltativo *Usa in compilazione* elemento (`<`*evento di compilazione*`UseInBuild>`) può essere specificato in un gruppo di proprietà per indicare se l'evento di compilazione viene eseguita. Il valore del contenuto di un *Usa in compilazione* elemento può essere `true` o `false`. Per impostazione predefinita, un evento di compilazione viene eseguito solo se il corrispondente *Usa in compilazione* elemento è impostato su `false`.
+Facoltativo *Usa in compilazione* elemento (`<`*evento di compilazione*`UseInBuild>`) può essere specificato in un gruppo di proprietà per indicare se l'evento di compilazione viene eseguita. Il valore del contenuto di un *Usa in compilazione* elemento può essere **true** oppure **false**. Per impostazione predefinita, un evento di compilazione viene eseguito solo se il corrispondente *Usa in compilazione* elemento è impostato su `false`.
 
 La tabella seguente elenca ogni elemento XML eventi di compilazione:
 

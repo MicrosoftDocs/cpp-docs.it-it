@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102512"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163894"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Classe Platform::Collections::VectorView
 
@@ -140,7 +140,7 @@ virtual unsigned int GetMany(
 Indice a base zero dell'inizio degli elementi da recuperare.
 
 *dest*<br/>
-Quando questa operazione viene completata, una matrice di elementi che iniziano in corrispondenza dell'elemento specificato da `startIndex` e terminano all'ultimo elemento in VectorView.
+Al termine dell'operazione, una matrice di elementi che inizia con l'elemento specificato da `startIndex` e termina con l'ultimo elemento in VectorView.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -168,11 +168,11 @@ Elemento da cercare.
 *index*<br/>
 Indice in base zero dell'elemento se è stato trovato `value` del parametro; in caso contrario, 0.
 
-Il parametro `index` è 0 se l'elemento è il primo elemento dell'oggetto VectorView o se l'elemento non è stato trovato. Se il valore restituito è `true`, l'elemento è stato trovato ed è il primo elemento; in caso contrario, l'elemento non è stato trovato.
+Il *indice* parametro deve essere 0 se entrambi l'elemento è il primo elemento del `VectorView` o l'elemento non è stato trovato. Se il valore restituito sarà **true**, l'elemento è stato trovato ed è il primo elemento; in caso contrario, l'elemento non è stato trovato.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'elemento specificato è stato trovato; in caso contrario, `false`.
+**true** se l'elemento specificato viene trovato; in caso contrario, **false**.
 
 ## <a name="size"></a>  Metodo vectorview:: Size
 

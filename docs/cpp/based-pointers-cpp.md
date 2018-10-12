@@ -1,12 +1,13 @@
 ---
 title: Basati su puntatori (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __based
+- _based
 - __based_cpp
 dev_langs:
 - C++
@@ -19,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc4d19b94c8d0257eb1dbfc715b9eed7c5d85b4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4465cb2965983c37ac9d758e424b58b5ed3304fd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074437"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163608"
 ---
 # <a name="based-pointers-c"></a>Puntatori based (C++)
 
@@ -62,7 +63,7 @@ Il puntatore `vpBuffer` viene assegnato l'indirizzo di memoria allocata in un qu
 
 Quando si dereferenzia un puntatore based, la base deve essere specificata in modo esplicito o essere implicitamente nota tramite la dichiarazione.
 
-Per garantire la compatibilità con versioni precedenti **based** è un sinonimo **based**.
+Per garantire la compatibilità con le versioni precedenti, **based** è un sinonimo **based** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
 
 ## <a name="example"></a>Esempio
 

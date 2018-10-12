@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d621b1ceb0ac5b84647da5d9b5a0863dfa06141b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8b8d1e80103784260250c396fceeb7032f6414b9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439835"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163972"
 ---
 # <a name="concurrentunorderedset-class"></a>Classe concurrent_unordered_set
 
@@ -269,7 +269,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se è vuoto, il contenitore simultaneo `false` in caso contrario.
+**true** se è vuoto, il contenitore simultaneo **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 

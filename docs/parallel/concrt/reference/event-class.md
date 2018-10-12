@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e871255e3308450764e8f65cdb6acebe79df38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab586243df9b015c95f4a703744bfb02a54d064e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437742"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162191"
 ---
 # <a name="event-class"></a>Classe event
 
@@ -167,7 +167,7 @@ Matrice di eventi per restare in attesa. Viene indicato il numero di eventi all'
 Il numero di eventi all'interno della matrice fornita nel `_PPEvents` parametro.
 
 *FWaitAll*<br/>
-Se impostato sul valore `true`, il parametro specifica che tutti gli eventi all'interno della matrice fornita nel `_PPEvents` parametro deve diventare segnalato per soddisfare il tempo di attesa. Se impostato sul valore `false`, specifica che qualsiasi evento all'interno della matrice fornita nel `_PPEvents` parametro che diventa segnalato potrà soddisfare l'attesa.
+Se impostato sul valore **true**, il parametro specifica che tutti gli eventi all'interno della matrice fornita nel `_PPEvents` parametro deve diventare segnalato per soddisfare il tempo di attesa. Se impostato sul valore **false**, specifica che qualsiasi evento all'interno della matrice fornita nel `_PPEvents` parametro che diventa segnalato potrà soddisfare l'attesa.
 
 *Timeout*<br/>
 Indica il numero di millisecondi prima del timeout dell'attesa. Il valore `COOPERATIVE_TIMEOUT_INFINITE` indica che non vi è alcun timeout.
@@ -181,7 +181,7 @@ Se è stato soddisfatto l'attesa, l'indice all'interno della matrice fornita nel
 Se il parametro `_FWaitAll` è impostata sul valore `true` per indicare che tutti gli eventi devono diventano segnalati per soddisfare il tempo di attesa, l'indice restituito dalla funzione non esegue alcun significato speciale non per il fatto che non è il valore `COOPERATIVE_WAIT_TIMEOUT`.
 
 > [!IMPORTANT]
->  In un'app Universal Windows Platform (UWP), non chiamare `wait_for_multiple` sul thread ASTA poiché questa chiamata può bloccare il thread corrente e può provocare la mancata risposta da parte dell'app.
+> In un'app Universal Windows Platform (UWP), non chiamare `wait_for_multiple` sul thread ASTA poiché questa chiamata può bloccare il thread corrente e può provocare la mancata risposta da parte dell'app.
 
 ## <a name="see-also"></a>Vedere anche
 

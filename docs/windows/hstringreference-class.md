@@ -31,12 +31,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70663c43c6d3bc7b661f339ce679d3faf16c9aae
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: ae2199ec414556fe3401c94c273d5ef0c13c3c5d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235860"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162529"
 ---
 # <a name="hstringreference-class"></a>Classe HStringReference
 
@@ -199,7 +199,7 @@ Il secondo parametro da confrontare.  *rhs* può essere un `HStringReference` og
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il *lhs* e *rhs* parametri sono uguali; in caso contrario, `false`.
+**true** se il *lhs* e *rhs* parametri sono uguali; in caso contrario, **false**.
 
 ## <a name="operator-inequality"></a>Hstringreference:: operator! =
 
@@ -229,7 +229,7 @@ Il secondo parametro da confrontare.  *rhs* può essere un `HStringReference` og
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il *lhs* e *rhs* parametri non sono uguali; in caso contrario, `false`.
+**true** se il *lhs* e *rhs* parametri non sono uguali; in caso contrario, **false**.
 
 ## <a name="operator-less-than"></a>Operatore hstringreference::&lt;
 
@@ -251,4 +251,4 @@ Il secondo parametro da confrontare.  *rhs* può essere un riferimento a un `HSt
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il *lhs* parametro è minore di *rhs* parametro; in caso contrario, `false`.
+**true** se il *lhs* parametro è minore del *rhs* parametro; in caso contrario, **false**.

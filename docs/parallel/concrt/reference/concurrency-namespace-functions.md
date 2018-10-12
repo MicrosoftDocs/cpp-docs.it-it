@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e07c5b985552fcf30b2acb18030ab3288efb9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1a3057e9753b99aaac837c903b6fd5f6d3ea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428148"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163348"
 ---
 # <a name="concurrency-namespace-functions"></a>funzioni dello spazio dei nomi Concurrency
 
@@ -118,7 +118,7 @@ Riferimento ai dati da inviare.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se è stato accettato il messaggio prima della restituzione del metodo `false` in caso contrario.
+**true** se è stato accettato il messaggio prima della restituzione del metodo **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -424,7 +424,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il gruppo di attività che è attualmente in esecuzione viene annullato, `false` in caso contrario.
+**true** se il gruppo di attività che è attualmente in esecuzione viene annullato, **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -687,7 +687,7 @@ Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento fin
 Un'istanza di un allocatore di memoria compatibile della libreria Standard C++.
 
 *Func*<br/>
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e viene restituito `true` se la condizione è soddisfatta e `false` se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.
 
 *_Chunk_size*<br/>
 Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.
@@ -1217,7 +1217,7 @@ Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'in
 Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.
 
 *Func*<br/>
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e viene restituito `true` se la condizione è soddisfatta e `false` se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza.
 
 *_Chunk_size*<br/>
 Dimensione minima di un blocco che verrà suddiviso in due per l'esecuzione parallela.
@@ -1460,7 +1460,7 @@ Riferimento ai dati da inviare.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` Se il messaggio è stato accettato, `false` in caso contrario.
+**true** se il messaggio è stato accettato, **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -1613,7 +1613,7 @@ Nome dell'oggetto fornito.
 
 ##  <a name="try_receive"></a>  try_receive
 
-Un'implementazione di ricezione try generale, che consente a un contesto di cercare i dati esattamente da un'origine e di filtrare i valori accettati. Se i dati non sono pronti, il metodo restituirà false.
+Un'implementazione di ricezione try generale, che consente a un contesto di cercare i dati esattamente da un'origine e di filtrare i valori accettati. Se i dati non sono pronti, il metodo restituirà **false**.
 
 ```
 template <class T>

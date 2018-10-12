@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445984"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162919"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>Struttura IVirtualProcessorRoot
 
@@ -111,7 +111,7 @@ Il contesto che viene inviato attualmente da questa radice.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore booleano. Un valore pari `true` indica che il proxy del thread restituito dal `Deactivate` in risposta a una chiamata al metodo il `Activate` (metodo). Un valore di `false` indica che il proxy del thread restituito dal metodo in risposta a un evento di notifica di Resource Manager. In una modalità utente pianificabili (UMS) thread dell'utilità di pianificazione, questo indica che gli elementi visualizzate nell'elenco di completamento dell'utilità di pianificazione e l'utilità di pianificazione è necessario per gestirli.
+Valore booleano. Un valore pari **true** indica che il proxy del thread restituito dalle `Deactivate` in risposta a una chiamata al metodo il `Activate` (metodo). Un valore di `false` indica che il proxy del thread restituito dal metodo in risposta a un evento di notifica di Resource Manager. In una modalità utente pianificabili (UMS) thread dell'utilità di pianificazione, questo indica che gli elementi visualizzate nell'elenco di completamento dell'utilità di pianificazione e l'utilità di pianificazione è necessario per gestirli.
 
 ### <a name="remarks"></a>Note
 
@@ -119,9 +119,9 @@ Utilizzare questo metodo per interrompere temporaneamente l'esecuzione di una ra
 
 Una radice del processore virtuale disattivato può essere riattivata con una chiamata ai `Activate` con lo stesso argomento che è stato passato al metodo il `Deactivate` (metodo). L'utilità di pianificazione è responsabile di garantire che le chiamate al `Activate` e `Deactivate` sono associati metodi, ma non sono necessarie per essere ricevuti in un ordine specifico. Resource Manager può gestire la ricezione di una chiamata ai `Activate` metodo prima di ricevere una chiamata al `Deactivate` metodo è stata concepita per.
 
-Se si attiva una radice del processore virtuale e il valore restituito dal `Deactivate` metodo è il valore `false`, l'utilità di pianificazione deve eseguire una query tramite l'elenco di completamento UMS il `IUMSCompletionList::GetUnblockNotifications` metodo, agire su tali informazioni e quindi chiamare successivamente il `Deactivate`metodo nuovamente. Deve essere ripetuto fino a quando la `Deactivate` metodo viene restituito il valore `true`.
+Se si attiva una radice del processore virtuale e il valore restituito dal `Deactivate` metodo è il valore **false**, l'utilità di pianificazione deve eseguire una query tramite l'elenco di completamento UMS il `IUMSCompletionList::GetUnblockNotifications` metodo, agire su tali informazioni e quindi successivamente si chiama il `Deactivate` metodo nuovamente. Deve essere ripetuto fino a quando la `Deactivate` metodo viene restituito il valore `true`.
 
-`invalid_argument` viene generata se l'argomento `pContext` ha il valore `NULL`.
+`invalid_argument` viene generata se l'argomento `pContext` ha valore NULL.
 
 `invalid_operation` Se la radice del processore virtuale non è mai stata attivata, viene generata o l'argomento `pContext` non rappresenta il contesto di esecuzione più di recente inviato da questa radice del processore virtuale.
 

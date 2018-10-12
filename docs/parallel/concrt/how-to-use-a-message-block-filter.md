@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93578f9d798e0c0bab0fe58a3211c20507dd99d4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411074"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162061"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Procedura: Usare il filtro di blocco dei messaggi
 
@@ -48,7 +48,7 @@ Poiché il `transformer` oggetto riceve solo i numeri primi, il `transformer` pu
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-Il `transformer` oggetto elabora ora solo i valori dei numeri primi. Nell'esempio precedente, `transformer` oggetto elabora tutti i messaggi. Nell'esempio precedente, pertanto, deve ricevere lo stesso numero di messaggi inviati. Questo esempio viene usato il risultato del [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) funzione per determinare il numero di messaggi per la ricezione dal `transformer` oggetto. Il `send` funzione restituisce `true` quando il buffer dei messaggi accetta il messaggio e `false` quando il buffer dei messaggi rifiuta il messaggio. Pertanto, il numero di volte che il buffer dei messaggi accetta il messaggio corrisponde al conteggio dei numeri primi.
+Il `transformer` oggetto elabora ora solo i valori dei numeri primi. Nell'esempio precedente, `transformer` oggetto elabora tutti i messaggi. Nell'esempio precedente, pertanto, deve ricevere lo stesso numero di messaggi inviati. Questo esempio viene usato il risultato del [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) funzione per determinare il numero di messaggi per la ricezione dal `transformer` oggetto. Il `send` funzione restituisce **true** quando il buffer dei messaggi accetta il messaggio e **false** quando il buffer dei messaggi rifiuta il messaggio. Pertanto, il numero di volte che il buffer dei messaggi accetta il messaggio corrisponde al conteggio dei numeri primi.
 
 ## <a name="example"></a>Esempio
 

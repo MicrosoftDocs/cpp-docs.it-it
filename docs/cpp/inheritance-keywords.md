@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061175"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161801"
 ---
 # <a name="inheritance-keywords"></a>Parole chiave di ereditarietà
 
@@ -83,6 +83,8 @@ indipendentemente dalle opzioni della riga di comando o dai pragma, i puntatori 
 
 > [!NOTE]
 >  La stessa dichiarazione con prototipo della rappresentazione della classe puntatore a membro deve verificarsi in ogni unità di conversione che dichiara i puntatori ai membri di quella classe e la dichiarazione deve verificarsi prima che vengano dichiarati i puntatori ai membri.
+
+Per garantire la compatibilità con versioni precedenti **_single_inheritance**, **_multiple_inheritance**, e **_virtual_inheritance** sono sinonimi per **_ dell'ereditarietà singola**, **multiple_inheritance**, e **virtual_inheritance** , a meno che l'opzione del compilatore [/Za \(disabilitare la lingua le estensioni)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
 
 **Fine sezione specifica Microsoft**
 
