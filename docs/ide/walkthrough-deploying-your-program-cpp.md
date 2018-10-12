@@ -1,7 +1,7 @@
 ---
 title: 'Procedura dettagliata: Distribuzione di un programma (C++) | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -19,82 +19,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1753c63673b9dd083e2b690788801bd467938c3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d795ea8678c04d5525e726017a2fa3a0760f3a87
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335536"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235919"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Procedura dettagliata: Distribuzione di un programma (C++)
-Dopo aver creato l'applicazione completando le procedure dettagliate correlate precedenti, disponibili in [Uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), l'ultimo passaggio è la creazione di un programma di installazione, in modo che altri utenti possano installare il programma nei rispettivi computer. A tal fine, si aggiungerà un nuovo progetto alla soluzione esistente. L'output del nuovo progetto è un file setup.exe che installerà l'applicazione in un altro computer.  
-  
- In questa procedura dettagliata viene illustrato come utilizzare Windows Installer per distribuire l'applicazione. Ai fini della distribuzione, è possibile anche utilizzare ClickOnce. Per altre informazioni, vedere [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md). Per altre informazioni sulla distribuzione in generale, vedere [Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components).  
-  
-## <a name="prerequisites"></a>Prerequisiti  
-  
--   In questa procedura dettagliata si presuppone la conoscenza delle nozioni di base del linguaggio C++.  
-  
--   Si presuppone anche che l'utente abbia completato le procedure dettagliate correlate precedenti elencate in [Uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
-  
--   Questa procedura dettagliata non può essere completata nelle versioni Express Edition di Visual Studio.  
-  
--   Se questa operazione non è già stata eseguita, scaricare InstallShield Limited Edition (ISLE) come descritto nei passaggi più avanti in questo articolo. ISLE è una versione gratuita per gli sviluppatori di Visual Studio e sostituisce le funzionalità presenti nei modelli di progetto di installazione e distribuzione nelle edizioni precedenti di Visual Studio.  
-  
-### <a name="to-install-the-isle-setup-and-deployment-project-template"></a>Per installare il modello di progetto di installazione e distribuzione ISLE  
-  
-1.  Mentre è attiva una connessione a Internet, sulla barra dei menu scegliere **File**, **Nuovo**, **Progetto** per aprire la finestra di dialogo **Nuovo progetto**.  
-  
-2.  Nel riquadro a sinistra della finestra di dialogo espandere i nodi **Installato**, **Modelli** e **Altri tipi di progetto**, quindi selezionare **Installazione e distribuzione**. Nel riquadro centrale selezionare **Abilita InstallShield Limited Edition**, quindi fare clic su **OK**.  
-  
-3.  Seguire le istruzioni per l'installazione di InstallShield Limited Edition per Visual Studio (ISLE).  
-  
-4.  Dopo aver scaricato, installato e attivato ISLE, chiudere Visual Studio e riaprirlo.  
-  
-5.  Sulla barra dei menu scegliere **File**, **Progetti e soluzioni recenti**, quindi scegliere la soluzione **Game** per riaprirla.  
-  
-### <a name="to-create-a-setup-project-and-install-your-program"></a>Per creare un progetto di installazione e installare il programma  
-  
-1.  Modificare la configurazione attiva della soluzione in Rilascio. Nella barra dei menu scegliere **Compilazione**, **Gestione configurazione**. Nella finestra di dialogo **Gestione configurazione** nell'elenco a discesa **Configurazione soluzione attiva** selezionare **Rilascio**. Scegliere il pulsante **Chiudi** per salvare la configurazione.  
-  
-2.  Sulla barra dei menu scegliere **File**, **Nuovo**, **Progetto** per aprire la finestra di dialogo **Nuovo progetto**.  
-  
-3.  Nel riquadro a sinistra della finestra di dialogo espandere i nodi **Installato**, **Modelli** e **Altri tipi di progetto**, quindi selezionare **Installazione e distribuzione**. Nel riquadro centrale selezionare **Progetto InstallShield Limited Edition**.  
-  
-4.  Immettere un nome per il progetto di installazione nella casella **Nome**. Per questo esempio digitare **Game Installer**. Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione**. Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene visualizzata la scheda **Assistente progetto (Game Installer)**.  
-  
-5.  Nella parte inferiore della scheda **Assistente progetto (Game Installer)** scegliere il collegamento **Informazioni sull'applicazione**.  
-  
-6.  Nella pagina **Informazioni sull'applicazione** specificare il nome della società come si vuole visualizzarlo nel programma di installazione. È possibile usare il nome della propria società oppure, per questo esempio, il nome **Contoso**. Specificare il nome dell'applicazione, in questo esempio **Game**. Specificare l'indirizzo Web dell'azienda oppure, per questo esempio, usare **http://www.contoso.com**.  
-  
-7.  Nella parte inferiore della scheda **Assistente progetto (Game Installer)** scegliere il collegamento **Installation Interview** (Domanda per l'installazione).  
-  
-8.  Nella pagina **Installation Interview** (Domanda per l'installazione) in **Do you want to display a License Agreement Dialog** (Visualizzare una finestra di dialogo relativa al Contratto di licenza) selezionare il pulsante di opzione **No**. In **Do you want to prompt users to enter their Company Name and User Name** (Si vuole richiedere agli utenti di immettere il Nome Società e il Nome Utente) selezionare il pulsante di opzione **No**.  
-  
-9. In **Esplora soluzioni** espandere il progetto **Game Installer**, espandere il nodo **Organize Your Setup** (Organizzare l'installazione), quindi aprire la pagina **Informazioni generali**.  
-  
-10. Nella scheda **Informazioni generali (Game Installer)** della finestra dell'editor, specificare un valore per **Tag Creator ID** (ID autore tag), ad esempio, **regid.2012-12.com.Contoso**.  
-  
-11. In **Esplora soluzioni** nel progetto **Game Installer** espandere il nodo **Specify Application Data** (Specifica dati applicazione), quindi aprire la pagina **File**.  
-  
-12. Nella scheda **File (Game Installer)** della finestra dell'editor, in **Source computer's files** (File del computer di origine) aprire il menu di scelta rapida per **Primary Output From Game** (Output primario da Game) e scegliere **Copia**.  
-  
-13. Aprire un menu di scelta rapida nello spazio sotto la colonna **Nome** in **Destination computer's files** (File del computer di destinazione) e scegliere **Incolla**. Viene visualizzato un nuovo elemento denominato **Game.Primary Output**.  
-  
-14. In **Esplora soluzioni** nel nodo **Specify Application Data** (Specifica dati applicazione) aprire la pagina **Redistributables** (Ridistribuibili).  
-  
-15. Nella scheda **Ridistribuibili (Game Installer)**, nella finestra dell'editor selezionare la casella di controllo **CRT Visual C++ 11.0 (x86)**.  
-  
-16. Sulla barra dei menu scegliere **Compila**, **Compila soluzione** per compilare il progetto Game e il progetto Game Installer.  
-  
-17. Nella cartella della soluzione individuare il programma setup.exe compilato dal progetto Game Installer ed eseguirlo per installare l'applicazione del gioco nel computer. È possibile copiare questo file per installare l'applicazione e i file di libreria necessari in un altro computer.  
-  
-18. È possibile impostare molte opzioni nel progetto di installazione a seconda delle proprie esigenze. Per altre informazioni, in **Esplora soluzioni**, sotto il progetto **Game Installer** aprire la pagina **Per iniziare** e quindi premere F1 per aprire la libreria della Guida ISLE.  
-  
-## <a name="next-steps"></a>Passaggi successivi  
- **Precedente:** [Procedura dettagliata: Debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   
- [Compilazione di programmi C/C++](../build/building-c-cpp-programs.md)  
- [Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+Dopo aver creato l'applicazione completando le procedure dettagliate correlate precedenti, disponibili in [Uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), l'ultimo passaggio è la creazione di un programma di installazione, in modo che altri utenti possano installare il programma nei rispettivi computer. Per il programma di installazione, si aggiungerà un nuovo progetto alla soluzione esistente. L'output del nuovo progetto è un file setup.exe che installerà l'applicazione in un altro computer.
+
+La procedura dettagliata mostra come usare Windows Installer per distribuire l'applicazione. Ai fini della distribuzione, è possibile anche utilizzare ClickOnce. Per altre informazioni, vedere [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md). Per altre informazioni sulla distribuzione in generale, vedere [Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components).
+
+## <a name="prerequisites"></a>Prerequisiti
+
+- Nella procedura dettagliata si presuppone la conoscenza delle nozioni di base del linguaggio C++.
+
+- Si presuppone anche che l'utente abbia completato le procedure dettagliate correlate elencate in precedenza in [Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+
+- La procedura dettagliata non può essere completata nelle versioni Express Edition di Visual Studio.
+
+- Se non è ancora stato fatto, scaricare l'estensione Microsoft Visual Studio Installer Projects, come descritto nella procedura riportata più avanti. L'estensione è gratuita per gli sviluppatori di Visual Studio e aggiunge le funzionalità presenti nei modelli di progetto di installazione e distribuzione in Visual Studio.
+
+### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>Per installare il modello di progetto di installazione e distribuzione di Visual Studio
+
+1. Quando si è connessi a Internet, in Visual Studio scegliere **Strumenti** > **Estensioni e aggiornamenti**.
+
+1. In **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **INVIO**, selezionare **Microsoft Visual Studio \<versione> Installer Projects** e fare clic su **Scarica**.
+
+1. Scegliere di installare l'estensione e quindi riavviare Visual Studio.
+
+1. Sulla barra dei menu scegliere **File** > **Progetti e soluzioni recenti** e quindi scegliere la soluzione **Game** per riaprirla.
+
+### <a name="to-create-a-setup-project-and-install-your-program"></a>Per creare un progetto di installazione e installare il programma
+
+1. Modificare la configurazione attiva della soluzione in Rilascio. Nella barra dei menu scegliere **Compilazione** > **Gestione configurazione**. Nella finestra di dialogo **Gestione configurazione** nell'elenco a discesa **Configurazione soluzione attiva** selezionare **Rilascio**. Scegliere il pulsante **Chiudi** per salvare la configurazione.
+
+1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Nuovo progetto**.
+
+1. Nel riquadro a sinistra della finestra di dialogo espandere i nodi **Installato** > **Altri tipi di progetto** e quindi selezionare **Programma di installazione di Visual Studio**. Nel riquadro centrale selezionare **Progetto di installazione**.
+
+1. Immettere un nome per il progetto di installazione nella casella **Nome**. Per questo esempio digitare *Game Installer*. Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione**. Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene visualizzata la scheda **File Assistant (Game Installer)** (Assistente file - Game Installer).
+
+1. Fare clic con il pulsante destro del mouse sul nodo **Cartella applicazione** e selezionare **Aggiungi** > **Output progetto** per aprire la finestra di dialogo **Aggiungi gruppo output progetto**.
+
+1. Nella finestra di dialogo selezionare **Output primario** e fare clic su **OK**. Viene visualizzato un nuovo elemento denominato **Output primario da Game (attivo)**.
+
+1. Selezionare l'elemento **Output primario da Game (attivo)**, fare clic con il pulsante destro del mouse e scegliere **Crea collegamento a output primario da Game (attivo)**. Viene visualizzato un nuovo elemento denominato **Collegamento a output primario da Game (attivo)**.
+
+1. Rinominare l'elemento del collegamento in *Game* e quindi trascinarlo nel nodo **Menu Programmi dell'utente** sul lato sinistro della finestra.
+
+1. In **Esplora soluzioni** selezionare il progetto **Game Installer** e scegliere **Visualizza** > **Finestra Proprietà** o premere **F4** per aprire la finestra **Proprietà**.
+
+1. Specificare eventuali dettagli aggiuntivi da visualizzare nel programma di installazione.  Ad esempio, usare *Contoso* per **Produttore**, *Game Installer* per **Nome prodotto** e *http://www.contoso.com* per **URL supporto**.
+
+1. Nella barra dei menu scegliere **Compilazione** > **Gestione configurazione**. Nella tabella **Progetto**, nella colonna **Compilazione** selezionare la casella per **Game Installer**. Fare clic su **Chiudi**.
+
+1. Sulla barra dei menu scegliere **Compila** > **Compila soluzione** per compilare il progetto Game e il progetto Game Installer.
+
+1. Nella cartella della soluzione individuare il programma setup.exe compilato dal progetto Game Installer ed eseguirlo per installare l'applicazione del gioco nel computer. È possibile copiare questo file, insieme a GameInstaller.msi, per installare l'applicazione e i file di libreria necessari in un altro computer.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+**Precedente:** [Procedura dettagliata: Debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
+[Compilazione di programmi C/C++](../build/building-c-cpp-programs.md)<br/>
+[Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca97238310c42b9a537baa4056563b25c20c617
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895227"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393282"
 ---
 # <a name="hint-files"></a>File dei suggerimenti
 
@@ -52,9 +52,9 @@ Le seguenti definizioni di macro sono in un file di intestazione separato.
 
 ```cpp
 // Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)  
+#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
 #define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*  
+#define HRESULT void*
 ```
 
 Il sistema di analisi non è in grado di interpretare il codice sorgente perché risulta dichiarata una funzione denominata `STDMETHOD` e tale dichiarazione è sintatticamente errata perché contiene due elenchi di parametri. Il sistema di analisi non apre il file di intestazione per individuare le definizioni per le macro `STDMETHOD`, `STDMETHODCALLTYPE` e `HRESULT`. Poiché il sistema di analisi non è in grado di interpretare la macro `STDMETHOD`, ignora l'intera istruzione e quindi continua l'analisi.
@@ -127,21 +127,21 @@ Alcune macro inducono il sistema di analisi a interpretare erroneamente il codic
 
 Nel codice sorgente riportato di seguito il tipo di parametro per la funzione `FormatWindowClassName()` è `PXSTR` e il nome del parametro è `szBuffer`. Tuttavia, il sistema di analisi interpreta per errore le annotazioni SAL `_Pre_notnull_` e `_Post_z_` come tipo di parametro o nome del parametro.
 
-**Codice sorgente:**  
+**Codice sorgente:**
 
-```  
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
-```  
+```cpp
+static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
+```
 
 **Strategia:** definizione Null
 
-La strategia in questa situazione consiste nel trattare le annotazioni SAL come se non esistessero. A tale scopo, specificare un suggerimento la cui stringa di sostituzione è Null. Di conseguenza, il sistema di analisi ignora le annotazioni e il browser **Visualizzazione classi** non le visualizza (Visual C++ include un file dei suggerimenti predefinito che consente di nascondere l'annotazione SAL).  
+La strategia in questa situazione consiste nel trattare le annotazioni SAL come se non esistessero. A tale scopo, specificare un suggerimento la cui stringa di sostituzione è Null. Di conseguenza, il sistema di analisi ignora le annotazioni e il browser **Visualizzazione classi** non le visualizza (Visual C++ include un file dei suggerimenti predefinito che consente di nascondere l'annotazione SAL).
 
-**File dei suggerimenti:**  
+**File dei suggerimenti:**
 
-```  
+```cpp.hint
 #define _Pre_notnull_
-```  
+```
 
 ### <a name="concealed-cc-language-elements"></a>Elementi nascosti del linguaggio C/C++
 
@@ -149,11 +149,11 @@ Una causa tipica dell'interpretazione errata del codice sorgente da parte del si
 
 Nel seguente codice sorgente la macro `START_NAMESPACE` nasconde una parentesi graffa sinistra non abbinata (`{`).
 
-**Codice sorgente:**  
+**Codice sorgente:**
 
-```  
+```cpp
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 **Strategia:** copia diretta
 
@@ -161,11 +161,11 @@ Se la semantica di una macro è fondamentale per l'esperienza di esplorazione, c
 
 Si noti che, se la macro nel file di origine contiene altre macro, tali macro vengono interpretate solo se sono già nel set di suggerimenti effettivi.
 
-**File dei suggerimenti:**  
+**File dei suggerimenti:**
 
-```  
+```cpp.hint
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 ### <a name="maps"></a>Mappe
 
@@ -173,9 +173,9 @@ Una mappa è costituita da macro che definiscono un elemento iniziale, un elemen
 
 Il seguente codice sorgente definisce le macro `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY` e `END_CATEGORY_MAP`.
 
-**Codice sorgente:**  
+**Codice sorgente:**
 
-```  
+```cpp
 #define BEGIN_CATEGORY_MAP(x)\
 static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
 static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
@@ -183,15 +183,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define END_CATEGORY_MAP()\
    { _ATL_CATMAP_ENTRY_END, NULL } };\
    return( pMap ); }
-```  
+```
 
 **Strategia:** identificare gli elementi della mappa
 
 Specificare i suggerimenti per gli elementi iniziali, intermedi (se presenti) e finali di una mappa. Usare le stringhe di sostituzione speciali della mappa, `@<`, `@=` e `@>`. Per altre informazioni, vedere la sezione `Syntax` in questo argomento.
 
-**File dei suggerimenti:**  
+**File dei suggerimenti:**
 
-```  
+```cpp.hint
 // Start of the map.
 #define BEGIN_CATEGORY_MAP(x) @<
 // Intermediate map element.
@@ -200,7 +200,7 @@ Specificare i suggerimenti per gli elementi iniziali, intermedi (se presenti) e 
 #define REQUIRED_CATEGORY( catid ) @=
 // End of the map.
 #define END_CATEGORY_MAP() @>
-```  
+```
 
 ### <a name="composite-macros"></a>Macro composite
 
@@ -208,11 +208,11 @@ Le macro composite contengono uno o più dei tipi di macro che confondono il sis
 
 Il seguente codice sorgente contiene la macro `START_NAMESPACE`, che specifica l'inizio di un ambito di spazio dei nomi e la macro `BEGIN_CATEGORY_MAP`, che specifica l'inizio di una mappa.
 
-**Codice sorgente:**  
+**Codice sorgente:**
 
-```  
+```cpp
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 **Strategia:** copia diretta
 
@@ -220,31 +220,31 @@ Creare i suggerimenti per le macro `START_NAMESPACE` e `BEGIN_CATEGORY_MAP`, qui
 
 In questo esempio si supponga che per `START_NAMESPACE` esista già un suggerimento come descritto nella sezione `Concealed C/C++ Language Elements` di questo argomento. Presupporre inoltre che in `BEGIN_CATEGORY_MAP` esista un suggerimento come descritto precedentemente in `Maps`.
 
-**File dei suggerimenti:**  
+**File dei suggerimenti:**
 
-```  
+```cpp.hint
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 ### <a name="inconvenient-macros"></a>Macro poco pratiche
 
 Alcune macro possono essere interpretate dal sistema di analisi, ma il codice sorgente è difficile da leggere perché la macro è lunga o complessa. Per ragioni di leggibilità, è possibile specificare un suggerimento che semplifica la visualizzazione della macro.
 
-**Codice sorgente:**  
+**Codice sorgente:**
 
-```  
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
-```  
+```cpp
+#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
+```
 
 **Strategia:** semplificazione
 
 Creare un suggerimento che visualizza una definizione di macro più semplice.
 
-**File dei suggerimenti:**  
+**File dei suggerimenti:**
 
-```  
+```cpp.hint
 #define STDMETHOD(methodName) void* methodName
-```  
+```
 
 ## <a name="example"></a>Esempio
 
@@ -254,7 +254,7 @@ La figura seguente illustra alcune delle directory fisiche di un progetto di Vis
 
 ### <a name="hint-file-directories"></a>Directory dei file dei suggerimenti
 
-![Directory dei file dei suggerimenti comuni e specifiche del progetto.](../ide/media/hintfile.png "HintFile")  
+![Directory dei file dei suggerimenti comuni e specifiche del progetto.](../ide/media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Directory e contenuto dei file dei suggerimenti
 
@@ -262,41 +262,41 @@ Nell'elenco seguente sono indicate le directory di questo progetto che contengon
 
 - vcpackages
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
-    ```  
+    #define _In_count_(size)
+    ```
 
 - Debug
 
-    ```  
+    ```cpp.hint
     // Debug
     #undef _In_
     #define OBRACE {
     #define CBRACE }
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     #define START_NAMESPACE namespace MyProject {
     #define END_NAMESPACE }
-    ```  
+    ```
 
 - A1
 
-    ```  
+    ```cpp.hint
     // A1
     #define START_NAMESPACE namespace A1Namespace {
-    ```  
+    ```
 
 - A2
 
-    ```  
+    ```cpp.hint
     // A2
     #undef OBRACE
     #undef CBRACE
-    ```  
+    ```
 
 ### <a name="effective-hints"></a>Suggerimenti effettivi
 
@@ -306,19 +306,19 @@ Nella tabella seguente sono elencati i suggerimenti effettivi per i file di orig
 
 - Suggerimenti effettivi:
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
+    #define _In_count_(size)
     // Debug...
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     // A1
     #define START_NAMESPACE namespace A1Namespace {
     // ...Debug
     #define END_NAMESPACE }
-    ```  
+    ```
 
 Le note seguenti si applicano all'elenco precedente.
 
@@ -332,10 +332,10 @@ Le note seguenti si applicano all'elenco precedente.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)    
-[Direttiva #define (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
-[Direttiva #undef (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
-[Annotazioni SAL](../c-runtime-library/sal-annotations.md)   
-[Mappe messaggi](../mfc/reference/message-maps-mfc.md)   
-[Macro della mappa messaggi](../atl/reference/message-map-macros-atl.md)   
+[Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[Direttiva #define (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
+[Direttiva #undef (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[Annotazioni SAL](../c-runtime-library/sal-annotations.md)<br>
+[Mappe messaggi](../mfc/reference/message-maps-mfc.md)<br>
+[Macro della mappa messaggi](../atl/reference/message-map-macros-atl.md)<br>
 [Macro della mappa oggetti](../atl/reference/object-map-macros.md)

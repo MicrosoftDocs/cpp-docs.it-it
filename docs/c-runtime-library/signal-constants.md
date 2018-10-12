@@ -27,48 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279f4beb3b550f672ac3950c31f3653ca1f00ba2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: defd5f630f1d3832014e2cc7e9746c0e00e8d816
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070665"
 ---
 # <a name="signal-constants"></a>Costanti signal
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#include <signal.h>  
-```  
-  
-## <a name="remarks"></a>Note  
- L'argomento `sig` deve essere una delle costanti di manifesto elencate di seguito (definite in SIGNAL.H).  
-  
- `SIGABRT`  
- Terminazione anomala. L'azione predefinita termina il programma chiamante con codice di uscita 3.  
-  
- `SIGABRT_COMPAT`  
- Equivale a SIGABRT. Per la compatibilità con altre piattaforme.  
-  
- `SIGFPE`  
- Errore della virgola mobile, ad esempio overflow, divisione per zero oppure operazione non valida. L'azione predefinita termina il programma chiamante.  
-  
- `SIGILL`  
- Istruzione non valida. L'azione predefinita termina il programma chiamante.  
-  
- `SIGINT`  
- Interruzione con CTRL+C. L'azione predefinita termina il programma chiamante con codice di uscita 3.  
-  
- `SIGSEGV`  
- Accesso alla memoria non valido. L'azione predefinita termina il programma chiamante.  
-  
- `SIGTERM`  
- Richiesta di chiusura inviata al programma. L'azione predefinita termina il programma chiamante con codice di uscita 3.  
-  
- `SIG_ERR`  
- Un tipo restituito da un segnale indica che si è verificato un errore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [signal](../c-runtime-library/reference/signal.md)   
- [raise](../c-runtime-library/reference/raise.md)   
- [Costanti globali](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintassi
+
+```
+#include <signal.h>
+```
+
+## <a name="remarks"></a>Note
+
+L'argomento `sig` deve essere una delle costanti di manifesto elencate di seguito (definite in SIGNAL.H).
+
+|||
+|-|-|
+|SIGABRT|Terminazione anomala. L'azione predefinita termina il programma chiamante con codice di uscita 3.  |
+|SIGABRT_COMPAT|Equivale a SIGABRT. Per la compatibilità con altre piattaforme.  |
+|SIGFPE|Errore della virgola mobile, ad esempio overflow, divisione per zero oppure operazione non valida. L'azione predefinita termina il programma chiamante.  |
+|SIGILL|Istruzione non valida. L'azione predefinita termina il programma chiamante.  |
+|SIGINT|Interruzione con CTRL+C. L'azione predefinita termina il programma chiamante con codice di uscita 3.  |
+|SIGSEGV|Accesso alla memoria non valido. L'azione predefinita termina il programma chiamante.  |
+|SIGTERM|Richiesta di chiusura inviata al programma. L'azione predefinita termina il programma chiamante con codice di uscita 3.  |
+|SIG_ERR|Un tipo restituito da un segnale indica che si è verificato un errore.  |
+
+## <a name="see-also"></a>Vedere anche
+
+[signal](../c-runtime-library/reference/signal.md)<br/>
+[raise](../c-runtime-library/reference/raise.md)<br/>
+[Costanti globali](../c-runtime-library/global-constants.md)

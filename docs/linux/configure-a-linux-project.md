@@ -1,7 +1,7 @@
 ---
 title: Configurare un progetto C++ Linux in Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 17597ae7497288312b8ddcfcf53a77130fbbf2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895201"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383246"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
@@ -33,9 +33,11 @@ Con Visual Studio è possibile configurare un'ampia gamma di opzioni per un prog
 
 Per impostazione predefinita, lo strumento genera un file eseguibile con estensione out.  Per compilare una libreria statica o dinamica, o per usare un makefile esistente, usare **Tipo configurazione**.
 
+Per altre informazioni sulle opzioni nelle pagine delle proprietà, vedere [Informazioni di riferimento sulla pagina delle proprietà di un progetto Linux](prop-pages-linux.md).
+
 ## <a name="remote-settings"></a>Impostazioni remote
 
-Per modificare le impostazioni relative al computer Linux remoto, configurare le opzioni remote visualizzate nelle impostazioni **Generale**:
+Per modificare le impostazioni relative al computer Linux remoto, configurare le opzioni remote visualizzate nelle impostazioni [Generale](prop-pages/general-linux.md):
 
 - Per modificare il computer Linux di destinazione, usare la voce **Computer di compilazione remota**.  In questo modo sarà possibile selezionare una delle connessioni create in precedenza.  Per creare una nuova voce, vedere [Connessione al computer Linux remoto](connect-to-your-remote-linux-computer.md).
 
@@ -44,11 +46,12 @@ Per modificare le impostazioni relative al computer Linux remoto, configurare le
 - La **directory del progetto di compilazione remota** è quella in cui verrà compilato il progetto specifico nel computer Linux remoto.  Per impostazione predefinita, sarà **$(directoryradiceremota)/$(nomeprogetto)**, che si espanderà in una directory denominata come il progetto corrente, nella directory radice impostata in precedenza.
 
 > [!NOTE]
-> Per modificare compilatori C e C++ predefiniti o il linker e l'archiver usati per compilare il progetto, usare le voci corrispondenti nella sezione **C/C++ > Generale** e nella sezione **Linker > General**.  Ad esempio, è possibile scegliere di usare una versione specifica di GCC o persino il compiler Clang.
+> Per modificare compilatori C e C++ predefiniti o il linker e l'archiver usati per compilare il progetto, usare le voci corrispondenti nella sezione **C/C++ > Generale** e nella sezione **Linker > General**.  Ad esempio, è possibile scegliere di usare una versione specifica di GCC o persino il compiler Clang. Per altre informazioni, vedere [Proprietà C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) e [Proprietà del linker (Linux C++)](prop-pages/linker-linux.md).
 
 ## <a name="include-directories-and-intellisense-support"></a>Directory di inclusione e supporto IntelliSense
 
-**Visual Studio 2017 versione 15.6 e precedenti:** per impostazione predefinita, Visual Studio non comprende file di inclusione a livello di sistema da computer Linux.  Ad esempio, gli elementi della directory **/usr/include** non sono presenti in Visual Studio.
+**Visual Studio 2017 versione 15.6 e precedenti:**<br/>
+Per impostazione predefinita, Visual Studio non comprende alcun file di inclusione a livello di sistema da computer Linux.  Ad esempio, gli elementi della directory **/usr/include** non sono presenti in Visual Studio.
 Per il supporto completo di [IntelliSense](/visualstudio/ide/using-intellisense), sarà necessario copiare i file in un percorso nel computer di sviluppo e configurare Visual Studio in modo che scelga tale percorso.  È possibile, ad esempio, usare SCP (Secure Copy) per copiare i file.  In Windows 10 è possibile usare [Bash in Windows](https://msdn.microsoft.com/commandline/wsl/about) per eseguire SCP.  Per le versioni precedenti di Windows, è possibile usare ad esempio [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 È possibile copiare i file usando un comando simile al seguente:
@@ -61,7 +64,8 @@ Una volta copiati i file, usare **Directory di VC++** nelle proprietà del proge
 
 ![Directory di VC++](media/settings_directories.png)
 
-**Visual Studio 2017 versione 15.7 e successive:** vedere la sezione relativa alla [gestione delle intestazioni remote per IntelliSense](#remote_intellisense).
+**Visual Studio 2017 versione 15.7 e successive:**<br/>
+Vedere [Gestire le intestazioni remote per IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Copia origini
 
@@ -97,8 +101,8 @@ Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiat
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)  
-[Proprietà generali di C++ (Linux C++)](../linux/prop-pages/general-linux.md)  
-[Directory di VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[Proprietà di un progetto Copia origini (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)<br/>
+[Proprietà generali di C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[Directory di VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[Proprietà di un progetto Copia origini (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
 [Proprietà di un evento di compilazione (Linux C++)](../linux/prop-pages/build-events-linux.md)

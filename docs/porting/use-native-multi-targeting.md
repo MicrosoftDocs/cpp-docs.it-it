@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578336"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374145"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usare multitargeting nativo in Visual Studio per compilare progetti precedenti
 
@@ -70,19 +70,11 @@ Dopo questa modifica il compilatore e le librerie di Visual Studio 2008 vengono 
 
 È possibile che l'utente abbia un progetto di Visual C++ datato che non può o non vuole aggiornare, ma non sia disponibile la versione del set di strumenti della piattaforma corrispondente al progetto. In questo caso, per ottenere il set di strumenti, è possibile installare l'edizione Community o Express gratuita di Visual Studio per la versione necessaria. Ogni versione di Visual Studio a partire da Visual Studio 2008 è in grado di installare il compilatore, gli strumenti e le librerie necessari per usare quella versione come destinazione dalla versione corrente di Visual Studio. Accedere all'Area download Microsoft per trovare e scaricare una particolare versione di Visual Studio. Verificare che vengano scelte le opzioni di installazione di C++ durante l'installazione. Al termine dell'installazione, eseguire quella versione di Visual Studio per installare eventuali aggiornamenti. Verificare anche se in Windows Update sono presenti modifiche potenzialmente necessarie. Può essere necessario ripetere più volte questa procedura di verifica degli aggiornamenti per ottenere tutti gli aggiornamenti.
 
-Di seguito sono riportati alcuni dei download di Visual Studio che potrebbero essere necessari:
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 per Windows Desktop con Update 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 per Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Update 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 Express (Programma di installazione Web)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 Express con SP1 (Programma di installazione Web)](https://go.microsoft.com/?linkid=7729279)  
+Per i download attualmente disponibili, vedere [Download delle versioni precedenti dei software Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/).
 
 Quando questi prodotti sono installati, il menu a discesa della proprietà **Set strumenti della piattaforma** nella finestra di dialogo **Pagine delle proprietà** viene automaticamente aggiornato per visualizzare i set di strumenti disponibili. È ora possibile usare la versione più recente di Visual Studio per compilare progetti per tali versioni meno recenti del set di strumenti senza convertirle o aggiornarle.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Miglioramenti della conformità in Visual Studio 2017](../cpp-conformance-improvements-2017.md)  

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082495"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
@@ -58,8 +58,7 @@ Gli argomenti che seguono la stringa di formato vengono interpretati a seconda d
 I tipi Integer come `short`, `int`, `long`, `long long` e le loro varianti `unsigned` vengono specificati usando **d**, **i**, **o**, **u**, **x** e **X**. I tipi a virgola mobile come `float`, `double` e `long double` vengono specificati usando **a**, **A**, **e**, **E**, **f**, **F**, **g** e **G**. Per impostazione predefinita, a meno che non che vengano modificati da un prefisso *dimensione*, gli argomenti Integer vengono imposti al tipo `int` e gli argomenti a virgola mobile vengono imposti a `double`. Nei sistemi a 64 bit, un `int` è un valore a 32 bit; di conseguenza gli interi a 64 bit vengono troncati quando vengono formattati per l'output, a meno che non venga usato un prefisso *dimensione* **ll** o **I64**. I tipi di puntatore specificati da **p** usano le dimensioni puntatore predefinite per la piattaforma.
 
 > [!NOTE]
-> **Sezione specifica Microsoft**  
-> Il carattere tipo **Z** e il comportamento dei caratteri tipo **c**, **C**, **s** e **S** usati con le funzioni `printf` e `wprintf` sono estensioni Microsoft. Lo standard ISO C usa **c** e **s** in modo coerente per i caratteri e le stringhe narrow e **C** e **S** per i caratteri e le stringhe wide in tutte le funzioni di formattazione.
+> **Sezione specifica Microsoft** Il carattere tipo **Z** e il comportamento dei caratteri tipo **c**, **C**, **s** e **S** usati con le funzioni `printf` e `wprintf` sono estensioni Microsoft. Lo standard ISO C usa **c** e **s** in modo coerente per i caratteri e le stringhe narrow e **C** e **S** per i caratteri e le stringhe wide in tutte le funzioni di formattazione.
 
 ### <a name="type-field-characters"></a>Caratteri del campo tipo
 
@@ -212,11 +211,10 @@ In Visual C++, anche se `long double` è un tipo distinto, ha la stessa rapprese
 Un identificatore di tipo **hc** o **hC** è sinonimo di **c** nelle funzioni `printf` e di **C** nelle funzioni `wprintf`. Un identificatore di tipo **lc**, **lC**, **wc** o **wC** è sinonimo di **C** nelle funzioni `printf` e di **c** nelle funzioni `wprintf`. Un identificatore di tipo **hs** o **hS** è sinonimo di **s** nelle funzioni `printf` e di **S** nelle funzioni `wprintf`. Un identificatore di tipo **ls**, **lS**, **ws** o **wS** è sinonimo di **S** nelle funzioni `printf` e di **s** nelle funzioni `wprintf`.
 
 > [!NOTE]
-> **Sezione specifica Microsoft**  
-> I prefissi di modifica dimensione argomento **I** (i maiuscola), **I32**, **I64** e **w** sono estensioni Microsoft e non sono compatibili con ISO C. Il prefisso **h** usato con dati di tipo `char` e il prefisso **l** (L minuscola) usato con dati di tipo `double` sono estensioni Microsoft.
+> **Sezione specifica Microsoft** I prefissi di modifica dimensione argomento **I** (i maiuscola), **I32**, **I64** e **w** sono estensioni Microsoft e non sono compatibili con ISO C. Il prefisso **h** usato con dati di tipo `char` e il prefisso **l** (L minuscola) usato con dati di tipo `double` sono estensioni Microsoft.
 
 ## <a name="see-also"></a>Vedere anche
 
-[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[Parametri posizionali printf_p](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[Parametri posizionali printf_p](../c-runtime-library/printf-p-positional-parameters.md)

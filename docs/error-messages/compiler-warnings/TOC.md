@@ -507,6 +507,7 @@
 ## [Avviso del compilatore (livello 1) C4835](compiler-warning-level-1-c4835.md)
 ## [Avviso del compilatore (livello 1) C4838](compiler-warning-level-1-c4838.md)
 ## [Avviso del compilatore (livello 3) C4839](compiler-warning-level-3-c4839.md)
+## [Avviso del compilatore (livello 4) C4840](compiler-warning-level-4-c4840.md)
 ## [Avviso del compilatore C4867](compiler-warning-c4867.md)
 ## [Avviso del compilatore C4868](compiler-warning-c4868.md)
 ## [Avviso del compilatore (livello 1) C4900](compiler-warning-level-1-c4900.md)

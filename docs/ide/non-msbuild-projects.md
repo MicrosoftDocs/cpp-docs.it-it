@@ -14,29 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758884"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420556"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Progetti Apri cartella in Visual C++
 
-In Visual Studio 2017 e versioni successive la funzionalità "Apri cartella" consente di aprire una cartella di file di origine e avviare la codifica con il supporto di IntelliSense, esplorazione, refactoring, debug e così via. Non viene caricato nessun file con estensione sln o vcxproj. Se necessario, è possibile specificare attività personalizzate e creare e avviare parametri mediante semplici file con estensione json. Grazie alla funzionalità Apri cartella, Visual C++ ora può supportare non solo raccolte loose di file, ma anche la maggior parte dei sistemi di compilazione, tra cui CMake, Ninja, QMake (per progetti Qt), gyp, SCons, Gradle, Buck, make e molti altri ancora. 
+In Visual Studio 2017 e versioni successive la funzionalità "Apri cartella" consente di aprire una cartella di file di origine e avviare la codifica con il supporto di IntelliSense, esplorazione, refactoring, debug e così via. Non viene caricato nessun file con estensione sln o vcxproj. Se necessario, è possibile specificare attività personalizzate e creare e avviare parametri mediante semplici file con estensione json.
+Grazie alla funzionalità Apri cartella, Visual C++ ora può supportare non solo raccolte loose di file, ma anche la maggior parte dei sistemi di compilazione, tra cui CMake, Ninja, QMake (per progetti Qt), gyp, SCons, Gradle, Buck, make e molti altri ancora.
 
-Per usare Apri cartella, nel menu principale selezionare *File | Apri | Cartella* oppure premere *CTRL+MAIUSC+ALT+O*. Esplora soluzioni visualizza immediatamente tutti i file presenti nella cartella. È possibile fare clic su qualsiasi file per iniziare a modificarlo. Visual Studio avvia l'indicizzazione dei file in background per abilitare le funzionalità IntelliSense, di navigazione e di refactoring. Man mano che si modificano, creano, spostano o eliminano file, Visual Studio tiene traccia automaticamente delle modifiche e aggiorna continuamente il relativo indice IntelliSense. 
-  
+Per usare Apri cartella, nel menu principale selezionare *File | Apri | Cartella* oppure premere *CTRL+MAIUSC+ALT+O*. Esplora soluzioni visualizza immediatamente tutti i file presenti nella cartella. È possibile fare clic su qualsiasi file per iniziare a modificarlo. Visual Studio avvia l'indicizzazione dei file in background per abilitare le funzionalità IntelliSense, di navigazione e di refactoring. Man mano che si modificano, creano, spostano o eliminano file, Visual Studio tiene traccia automaticamente delle modifiche e aggiorna continuamente il relativo indice IntelliSense.
+
 ## <a name="cmake-projects"></a>Progetti CMake
+
 CMake è integrato nell'IDE di Visual Studio come Strumenti Visual C++ per CMake, un componente del carico di lavoro desktop di C++. Per altre informazioni, vedere [CMake Tools for Visual C++](cmake-tools-for-visual-cpp.md) (Strumenti CMake per Visual C++).
- 
+
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Progetti QMake destinati al framework Qt
+
 È possibile usare Strumenti Visual C++ per CMake per la compilazione di progetti Qt destinati a Qt oppure usare [Qt Visual Studio Extension](https://download.qt.io/development_releases/vsaddin/) per Visual Studio 2015 o Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck e così via
-È possibile usare qualsiasi sistema di compilazione in Visual C++ e sfruttare i vantaggi dell'IDE e del debugger di Visual C++. Quando si apre la cartella radice del progetto, Visual C++ usa regole euristiche per indicizzare i file di origine per IntelliSense e la ricerca. È possibile aggiungere suggerimenti sulla struttura del codice modificando il file CppProperties.json. In modo analogo è possibile configurare il programma di compilazione modificando il file launch.vs.json. 
+
+È possibile usare qualsiasi sistema di compilazione in Visual C++ e sfruttare i vantaggi dell'IDE e del debugger di Visual C++. Quando si apre la cartella radice del progetto, Visual C++ usa regole euristiche per indicizzare i file di origine per IntelliSense e la ricerca. È possibile aggiungere suggerimenti sulla struttura del codice modificando il file CppProperties.json. In modo analogo è possibile configurare il programma di compilazione modificando il file launch.vs.json.
 
 ## <a name="configuring-open-folder-projects"></a>Configurazione di progetti Apri cartella
+
 È possibile personalizzare un progetto Apri cartella mediante tre file con estensione json:
 |||
 |-|-|
@@ -45,6 +50,7 @@ CMake è integrato nell'IDE di Visual Studio come Strumenti Visual C++ per CMake
 |tasks.vs.json|Specifica opzioni del compilatore e comandi di compilazione personalizzati. Accessibile tramite il comando **Configura attività** nel menu di scelta rapida **Esplora soluzioni**.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>Configurare IntelliSense con CppProperties.json
+
 Il comportamento di IntelliSense e dell'esplorazione dipendono in parte dalla configurazione di compilazione attiva, che definisce percorsi #include, opzioni del compilatore e altri parametri. Per impostazione predefinita, Visual Studio offre configurazioni di tipo Debug e Rilascio. Per alcuni progetti può essere necessario creare una configurazione personalizzata per consentire a IntelliSense e alle funzionalità di esplorazione di interpretare correttamente il codice. Per definire una nuova configurazione, creare un file denominato CppProperties.json nella cartella radice. Ecco un esempio:
 
 ```json
@@ -64,30 +70,21 @@ Il comportamento di IntelliSense e dell'esplorazione dipendono in parte dalla co
 ```
 Una configurazione può avere una delle proprietà seguenti:
 
-|||  
-|-|-| 
+|||
+|-|-|
 |`name`|Il nome della configurazione che viene visualizzato nell'elenco a discesa della configurazione C++|
 |`includePath`|L'elenco di cartelle che deve essere specificato nel percorso di inclusione (con mapping a /I per la maggior parte dei compilatori)|
 |`defines`|L'elenco delle macro che devono essere definite (con mapping a /D per la maggior parte dei compilatori)|
 |`compilerSwitches`|Una o più opzioni aggiuntive che possono influenzare il comportamento di IntelliSense|
 |`forcedInclude`|L'intestazione da includere automaticamente in ogni unità di compilazione (con mapping a /FI per MSVC o su -include per clang)|
 |`undefines`|L'elenco delle macro di cui annullare la definizione (con mapping a /U per MSVC)|
-|`intelliSenseMode`|Il motore IntelliSense da usare. È possibile specificare varianti di architettura specifiche per MSVC, gcc o Clang:
-- msvc-x86 (predefinita)
-- msvc-x64
-- msvc-arm
-- windows-clang-x86
-- windows-clang-x64
-- windows-clang-arm
-- Linux-x64
-- Linux-x86
-- Linux-arm
-- gccarm
+|`intelliSenseMode`|Il motore IntelliSense da usare. È possibile specificare varianti di architettura specifiche per MSVC, gcc o Clang:<br/><br/>- msvc-x86 (predefinito)<br/>- msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
 #### <a name="environment-variables"></a>Variabili di ambiente
+
 CppProperties.json supporta l'espansione della variabile di ambiente di sistema per includere percorsi e altri valori di proprietà. La sintassi è `${env.FOODIR}` per espandere l'elemento `%FOODIR%` di una variabile di ambiente. Sono supportate anche le variabili definite dal sistema seguenti:
 
-|Nome variabile|Descrizione|  
+|Nome variabile|Descrizione|
 |-----------|-----------------|
 |vsdev|Ambiente Visual Studio predefinito|
 |msvc_x86|Compilazione per x86 usando strumenti x86|
@@ -100,7 +97,7 @@ CppProperties.json supporta l'espansione della variabile di ambiente di sistema 
 
 Quando viene installato il carico di lavoro di Linux sono disponibili gli ambienti seguenti per la definizione di Linux e WSL come destinazione remota:
 
-|Nome variabile|Descrizione|  
+|Nome variabile|Descrizione|
 |-----------|-----------------|
 |linux_x86|Imposta come destinazione x86 Linux in modalità remota|
 |linux_x64|Imposta come destinazione x64 Linux in modalità remota|
@@ -117,7 +114,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
       "INCLUDE": "${workspaceRoot}\\src\\includes"
     }
   ],
- 
+
   "configurations": [
     {
       "inheritEnvironments": [
@@ -157,7 +154,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
       "INCLUDE": "${workspaceRoot}\\src\\includes"
     }
   ],
- 
+
   "configurations": [
     {
       "inheritEnvironments": [
@@ -178,7 +175,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
           "INCLUDE": "${env.INCLUDE};${workspaceRoot}\\src\\includes64"
         }
       ],
- 
+
       "inheritEnvironments": [
         "msvc_x64"
       ],
@@ -197,6 +194,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
 Tutte le variabili di ambiente personalizzate e predefinite sono disponibili anche in tasks.vs.json e launch.vs.json.
 
 #### <a name="macros"></a>Macro
+
 In CppProperties.json è possibile accedere alle seguenti macro incorporate:
 |||
 |-|-|
@@ -226,9 +224,10 @@ Se ad esempio il progetto ha una cartella include e dispone anche di windows.h e
 }
 ```
 
-**Nota:** `%WindowsSdkDir%` e `%VCToolsInstallDir%` non sono impostate come variabili di ambiente globali. Di conseguenza, verificare di avviare devenv.exe da un "Prompt dei comandi per gli sviluppatori di Visual Studio 2017" che definisce tali variabili.
+> [!Note]
+> `%WindowsSdkDir%` e `%VCToolsInstallDir%` non sono impostate come variabili di ambiente globali. Di conseguenza, verificare di avviare devenv.exe da un "Prompt dei comandi per gli sviluppatori di Visual Studio 2017" che definisce tali variabili.
 
-Per risolvere i problemi di IntelliSense causati dalla mancanza di percorsi di inclusione, aprire l'**Elenco errori** e filtrare l'output specificando "Solo IntelliSense" e il codice di errore E1696 "Impossibile aprire il file di origine...". 
+Per risolvere i problemi di IntelliSense causati dalla mancanza di percorsi di inclusione, aprire l'**Elenco errori** e filtrare l'output specificando "Solo IntelliSense" e il codice di errore E1696 "Impossibile aprire il file di origine...".
 
 È possibile creare un numero qualsiasi di configurazioni in CppProperties.json. Tutte le configurazioni vengono visualizzate nell'elenco a discesa corrispondente:
 
@@ -247,7 +246,8 @@ Per risolvere i problemi di IntelliSense causati dalla mancanza di percorsi di i
 }
 ```
 ### <a name="define-tasks-with-tasksvsjson"></a>Definire le attività con tasks.vs.json
-È possibile automatizzare gli script di compilazione o qualsiasi altra operazione esterna per i file inclusi nell'area di lavoro corrente eseguendoli come attività direttamente nell'IDE. Per configurare una nuova attività, è possibile fare clic con il pulsante destro del mouse su un file o una cartella e scegliere **Configura attività**. 
+
+È possibile automatizzare gli script di compilazione o qualsiasi altra operazione esterna per i file inclusi nell'area di lavoro corrente eseguendoli come attività direttamente nell'IDE. Per configurare una nuova attività, è possibile fare clic con il pulsante destro del mouse su un file o una cartella e scegliere **Configura attività**.
 
 ![Configura attività di Apri cartella](media/open-folder-config-tasks.png)
 
@@ -269,9 +269,8 @@ Viene creato o aperto il file `tasks.vs.json` nella cartella .vs creata da Visua
 ```
 Dopo aver salvato tasks.vs.json, è possibile fare clic con il pulsante destro del mouse su qualsiasi file con estensione cpp nella cartella, scegliere **Echo filename** (Echo nome file) dal menu di scelta rapida e vedere il nome del file visualizzato nella finestra Output.
 
-
-
 #### <a name="appliesto"></a>appliesTo
+
 È possibile creare attività per qualsiasi file o cartella specificandone il nome nel campo `appliesTo`, ad esempio `"appliesTo" : "hello.cpp"`. È possibile usare le maschere di file seguenti come valori:
 |||
 |-|-|
@@ -284,10 +283,11 @@ Dopo aver salvato tasks.vs.json, è possibile fare clic con il pulsante destro d
 |`"/makefile"`| L'attività è disponibile solo per il makefile nella radice dell'area di lavoro|
 
 #### <a name="output"></a>output
+
 Usare la proprietà `output` per specificare il file eseguibile che viene avviato quando si preme **F5**. Ad esempio:
 
 ```json
-      "output": "${workspaceRoot}\\bin\\hellomake.exe" 
+      "output": "${workspaceRoot}\\bin\\hellomake.exe"
 ```
 
 #### <a name="macros-for-tasksvsjson"></a>Macro per tasks.vs.json
@@ -303,6 +303,7 @@ Usare la proprietà `output` per specificare il file eseguibile che viene avviat
 |`${fileExtname}`| è l'estensione del file selezionato (ad esempio ".cpp")|
 
 #### <a name="custom-macros"></a>Macro personalizzate
+
 Per definire una macro personalizzata in tasks.vs.json, aggiungere una coppia nome:valore prima dei blocchi di attività. L'esempio seguente definisce una macro con nome `outDir` che viene usata nella proprietà `args`:
 
 ```json
@@ -323,7 +324,8 @@ Per definire una macro personalizzata in tasks.vs.json, aggiungere una coppia no
 ```
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurare i parametri di debug con launch.vs.json
-Per personalizzare gli argomenti della riga di comando del programma, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e selezionare **Impostazioni per debug e avvio**. Viene aperto un file `launch.vs.json` esistente o se non esiste nessun file di questo tipo viene creato un nuovo file, popolato con le informazioni sul programma selezionato. 
+
+Per personalizzare gli argomenti della riga di comando del programma, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e selezionare **Impostazioni per debug e avvio**. Viene aperto un file `launch.vs.json` esistente o se non esiste nessun file di questo tipo viene creato un nuovo file, popolato con le informazioni sul programma selezionato.
 
 Per specificare argomenti aggiuntivi, aggiungerli alla matrice JSON `args`, come illustrato nell'esempio seguente:
 
@@ -345,5 +347,6 @@ Per specificare argomenti aggiuntivi, aggiungerli alla matrice JSON `args`, come
 Quando si salva questo file, la nuova configurazione viene visualizzata nell'elenco a discesa Destinazione di debug ed è possibile selezionarla per avviare il debugger. È possibile creare il numero desiderato di configurazioni di debug, per un numero qualsiasi di file eseguibili. Se a questo punto si preme **F5**, il debugger viene avviato e raggiunge qualsiasi punto di interruzione già impostato. Tutte le finestre del debugger già note e le relative funzionalità sono ora disponibili.
 
 ## <a name="see-also"></a>Vedere anche
+
 [IDE e strumenti per lo sviluppo in Visual C++](ide-and-tools-for-visual-cpp-development.md)
 

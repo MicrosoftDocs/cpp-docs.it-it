@@ -21,63 +21,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f307860ce71e8c9fc74b2ab97e88ced02e08332f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98b01db4d842775dcb239aef9d40c661328d1544
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107879"
 ---
 # <a name="if-statement-c"></a>Istruzione if (C)
-L'istruzione **if** controlla la creazione condizionale di rami. Il corpo di un'istruzione **if** viene eseguito se il valore dell'espressione è diverso da zero. La sintassi dell'istruzione **if** presenta due formati.  
-  
-## <a name="syntax"></a>Sintassi  
- *selection-statement*:  
- **if (**  *espressione*  **)**  *istruzione*  
-  
- **if (**  *expression*  **)**  *statement*  **else**  *statement*  
-  
- In entrambi i formati dell'istruzione **if** vengono valutate le espressioni (che possono avere qualsiasi valore salvo una struttura), inclusi tutti gli effetti collaterali.  
-  
- Nel primo formato della sintassi se *expression* è true (diversa da zero), l'istruzione *statement* viene eseguita. Se *expression* è false, *statement* viene ignorata. Nel secondo formato della sintassi, che usa **else**, la seconda istruzione *statement* viene eseguita se *expression* è false. Con entrambi i formati il controllo passa quindi dall'istruzione **if** all'istruzione successiva nel programma, a meno che una delle istruzioni contenga **break**, **continue** o `goto`.  
-  
- Di seguito sono illustrati esempi dell'istruzione **if**:  
-  
-```  
-if ( i > 0 )  
-    y = x / i;  
-else   
-{  
-    x = i;  
-    y = f( x );  
-}  
-```  
-  
- In questo esempio, l'istruzione `y = x/i;` viene eseguita se `i` è maggiore di 0. Se `i` è minore o uguale a 0, `i` viene assegnato a `x` e `f( x )` viene assegnato a `y`. Si noti che l'istruzione che costituisce la clausola **if** termina con un punto e virgola.  
-  
- Quando si annidano istruzioni **if** e clausole **else** usare le parentesi graffe per raggruppare istruzioni e clausole in istruzioni composte che chiariscono lo scopo dell'operazione. Se non sono presenti parentesi graffe, il compilatore risolve le ambiguità associando ogni clausola **else** all'istruzione **if** più vicina priva di **else**.  
-  
-```  
-if ( i > 0 )           /* Without braces */  
-    if ( j > i )  
-        x = j;  
-    else  
-        x = i;  
-```  
-  
- In questo esempio la clausola **else** viene associata all'istruzione **if** interna. Se `i` è minore o uguale a 0, nessun valore viene assegnato a `x`.  
-  
-```  
-if ( i > 0 )   
-{                      /* With braces */  
-    if ( j > i )  
-        x = j;  
-}  
-else  
-    x = i;  
-```  
-  
- In questo esempio le parentesi graffe relative all'istruzione interna **if** rendono la clausola **else** parte dell'istruzione **if** esterna. Se `i` è minore o uguale a 0, `i` viene assegnato a `x`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Istruzione if-else (C++)](../cpp/if-else-statement-cpp.md)
+
+L'istruzione **if** controlla la creazione condizionale di rami. Il corpo di un'istruzione **if** viene eseguito se il valore dell'espressione è diverso da zero. La sintassi dell'istruzione **if** presenta due formati.
+
+## <a name="syntax"></a>Sintassi
+
+*selection-statement*: **if (**  *expression*  **)**  *statement*
+
+**if (**  *expression*  **)**  *statement*  **else**  *statement*
+
+In entrambi i formati dell'istruzione **if** vengono valutate le espressioni (che possono avere qualsiasi valore salvo una struttura), inclusi tutti gli effetti collaterali.
+
+Nel primo formato della sintassi se *expression* è true (diversa da zero), l'istruzione *statement* viene eseguita. Se *expression* è false, *statement* viene ignorata. Nel secondo formato della sintassi, che usa **else**, la seconda istruzione *statement* viene eseguita se *expression* è false. Con entrambi i formati il controllo passa quindi dall'istruzione **if** all'istruzione successiva nel programma, a meno che una delle istruzioni contenga **break**, **continue** o `goto`.
+
+Di seguito sono illustrati esempi dell'istruzione **if**:
+
+```
+if ( i > 0 )
+    y = x / i;
+else
+{
+    x = i;
+    y = f( x );
+}
+```
+
+In questo esempio, l'istruzione `y = x/i;` viene eseguita se `i` è maggiore di 0. Se `i` è minore o uguale a 0, `i` viene assegnato a `x` e `f( x )` viene assegnato a `y`. Si noti che l'istruzione che costituisce la clausola **if** termina con un punto e virgola.
+
+Quando si annidano istruzioni **if** e clausole **else** usare le parentesi graffe per raggruppare istruzioni e clausole in istruzioni composte che chiariscono lo scopo dell'operazione. Se non sono presenti parentesi graffe, il compilatore risolve le ambiguità associando ogni clausola **else** all'istruzione **if** più vicina priva di **else**.
+
+```
+if ( i > 0 )           /* Without braces */
+    if ( j > i )
+        x = j;
+    else
+        x = i;
+```
+
+In questo esempio la clausola **else** viene associata all'istruzione **if** interna. Se `i` è minore o uguale a 0, nessun valore viene assegnato a `x`.
+
+```
+if ( i > 0 )
+{                      /* With braces */
+    if ( j > i )
+        x = j;
+}
+else
+    x = i;
+```
+
+In questo esempio le parentesi graffe relative all'istruzione interna **if** rendono la clausola **else** parte dell'istruzione **if** esterna. Se `i` è minore o uguale a 0, `i` viene assegnato a `x`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Istruzione if-else (C++)](../cpp/if-else-statement-cpp.md)

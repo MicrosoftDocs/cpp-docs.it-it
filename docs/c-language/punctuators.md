@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29fea11f4dd36353afd50d1ced8542cb92eed378
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0dbc2583cff995b32e6ed3a4da463f671923b1c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036657"
 ---
 # <a name="punctuators"></a>Segni di punteggiatura
-`punctuator`: uno tra  
- **[ ]   ( )   { }   \*   ,   :   =   ;   ...   #**  
-  
-## <a name="see-also"></a>Vedere anche  
- [Grammatica lessicale](../c-language/lexical-grammar.md)
+
+`punctuator`: uno tra **[ ]   ( )   { }   \*   ,   :   =   ;   ...   #**
+
+## <a name="see-also"></a>Vedere anche
+
+[Grammatica lessicale](../c-language/lexical-grammar.md)

@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bba17549abc9f747d93299cf22c39ae7c3e8f4d6
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207666"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601444"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Connettersi al computer Linux remoto
 
@@ -41,7 +41,7 @@ Durante la compilazione di un progetto Linux C++, il codice Linux viene copiato 
    | **Nome utente**           | Utente da autenticare
    | **Tipo di autenticazione** | Sono supportate sia le password che le chiavi private
    | **Password**            | Password per il nome utente immesso
-   | **File di chiave privata**    | Chiave privata creata per la connessione SSH
+   | **File di chiave privata**    | File di chiave privata creato per la connessione SSH
    | **Passphrase**          | Passphrase usata con la chiave privata selezionata in precedenza
 
 1. Fare clic sul pulsante **Connetti** per tentare una connessione al computer remoto.  Se la connessione non riesce, le caselle delle voci che devono essere modificate verranno evidenziate in rosso.

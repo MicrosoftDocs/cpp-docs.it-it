@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42578430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092243"
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT
 
@@ -65,7 +65,8 @@ Questa tabella elenca le librerie che implementano la libreria vcruntime.
 |vcruntime.lib|vcruntime\<version>.dll|Libreria di importazione DLL per la libreria vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|Libreria di importazione DLL per la libreria vcruntime di debug. Non ridistribuibile.|**/MDd**|_DEBUG, _MT, _DLL|
 
-Quando si è verificato il refactoring UCRT, le funzioni di runtime di concorrenza sono state spostate in concrt140.dll, che fa parte del pacchetto ridistribuibile di C++. Questa DLL è necessaria per i contenitori paralleli di C++ e gli algoritmi, ad esempio `concurrency::parallel_for`. In aggiunta la libreria standard di C++ richiede che questa DLL in Windows XP supporti le primitive di sincronizzazione, perché Windows XP non dispone di variabili di condizione.
+> [!NOTE]
+> Quando si è verificato il refactoring UCRT, le funzioni di runtime di concorrenza sono state spostate in concrt140.dll, aggiunta al pacchetto ridistribuibile di C++. Questa DLL è necessaria per i contenitori paralleli di C++ e gli algoritmi, ad esempio `concurrency::parallel_for`. In aggiunta la libreria standard di C++ richiede che questa DLL in Windows XP supporti le primitive di sincronizzazione, perché Windows XP non dispone di variabili di condizione.
 
 Il codice che inizializza la libreria CRT è in una di svariate librerie, a seconda che la libreria CRT sia collegata in modo statico o dinamico, o in codice nativo, gestito o misto. Questo codice gestisce l'avvio della libreria CRT, l'inizializzazione e la chiusura dei dati per thread. È specifica per la versione usata dal compilatore. Questa libreria è sempre collegata in modo statico, anche quando si usa una libreria UCRT collegata in modo dinamico.
 

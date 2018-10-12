@@ -29,45 +29,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e8253db3ce5a1ec60001bb32b241bfebe000502
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b1b93cf52ee7690aa86f4a80acae2731197ec9d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389407"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115372"
 ---
 # <a name="excepthandler3"></a>_except_handler3
-Funzione CRT interna. Usata da un framework per individuare il gestore di eccezioni appropriato per elaborare l'eccezione corrente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _except_handler3(  
-   PEXCEPTION_RECORD exception_record,  
-   PEXCEPTION_REGISTRATION registration,  
-   PCONTEXT context,  
-   PEXCEPTION_REGISTRATION dispatcher  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- [in] `exception_record`  
- Informazioni sulla specifica eccezione.  
-  
- [in] `registration`  
- Record che indica la tabella di ambito da usare per cercare il gestore di eccezioni.  
-  
- [in] `context`  
- Riservato.  
-  
- [in] `dispatcher`  
- Riservato.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se un'eccezione deve essere chiusa, restituisce `DISPOSITION_DISMISS`. Se l'eccezione deve essere passata a un livello superiore, ai gestori di eccezioni in cui è incapsulata, restituisce `DISPOSITION_CONTINUE_SEARCH`.  
-  
-## <a name="remarks"></a>Note  
- Se il metodo trova un gestore di eccezioni appropriato, passa l'eccezione al gestore. In questa situazione, il metodo non torna al codice che lo ha chiamato e il valore restituito è irrilevante.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Funzione CRT interna. Usata da un framework per individuare il gestore di eccezioni appropriato per elaborare l'eccezione corrente.
+
+## <a name="syntax"></a>Sintassi
+
+```
+int _except_handler3(
+   PEXCEPTION_RECORD exception_record,
+   PEXCEPTION_REGISTRATION registration,
+   PCONTEXT context,
+   PEXCEPTION_REGISTRATION dispatcher
+);
+```
+
+#### <a name="parameters"></a>Parametri
+
+*exception_record*<br/>
+[in] Informazioni sulla specifica eccezione.
+
+*registration*<br/>
+[in] Record che indica la tabella di ambito da usare per cercare il gestore di eccezioni.
+
+*context*<br/>
+[in] Riservato.
+
+*dispatcher*<br/>
+[in] Riservato.
+
+## <a name="return-value"></a>Valore restituito
+
+Se un'eccezione deve essere chiusa, restituisce `DISPOSITION_DISMISS`. Se l'eccezione deve essere passata a un livello superiore, ai gestori di eccezioni in cui è incapsulata, restituisce `DISPOSITION_CONTINUE_SEARCH`.
+
+## <a name="remarks"></a>Note
+
+Se il metodo trova un gestore di eccezioni appropriato, passa l'eccezione al gestore. In questa situazione, il metodo non torna al codice che lo ha chiamato e il valore restituito è irrilevante.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
