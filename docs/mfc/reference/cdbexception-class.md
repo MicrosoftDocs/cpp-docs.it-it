@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389575"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083112"
 ---
 # <a name="cdbexception-class"></a>Classe CDBException
 
@@ -142,7 +142,7 @@ Contiene una stringa che descrive l'errore che ha causato l'eccezione.
 
 Il formato della stringa è il modulo "stato: % s, nativo: % ld, origine: % s", in cui i codici di formato, in ordine, vengono sostituiti dai valori che descrivono:
 
-- Il valore SQLSTATE, una stringa con terminazione null che contiene un codice di errore di cinque caratteri restituiti nella *szSqlState* parametro della funzione ODBC `SQLError`. I valori SQLSTATE sono elencati nell'appendice a [codici di errore ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\)), nella *riferimento per programmatori ODBC*. Esempio: "S0022".
+- Il valore SQLSTATE, una stringa con terminazione null che contiene un codice di errore di cinque caratteri restituiti nella *szSqlState* parametro della funzione ODBC `SQLError`. I valori SQLSTATE sono elencati nell'appendice a [codici di errore ODBC](/previous-versions/windows/desktop/ms714687), nella *riferimento per programmatori ODBC*. Esempio: "S0022".
 
 - Il codice di errore nativo, specifico per l'origine dati, restituito nella *pfNativeError* parametro del `SQLError` (funzione). Esempio: 207.
 
@@ -150,7 +150,7 @@ Il formato della stringa è il modulo "stato: % s, nativo: % ld, origine: % s", 
 
 Il framework interpreta la stringa di errore e inserisce i relativi componenti in `m_strStateNativeOrigin`; se `m_strStateNativeOrigin` contiene informazioni per più di un errore, gli errori sono separati da caratteri di nuova riga. Il framework inserisce il testo dell'errore alfanumerici in `m_strError`.
 
-Per altre informazioni sui codici di usato per effettuare questa stringa, vedere la [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) funzionare nel *riferimento per programmatori ODBC*.
+Per altre informazioni sui codici di usato per effettuare questa stringa, vedere la [SQLError](/previous-versions/windows/desktop/ms716312) funzionare nel *riferimento per programmatori ODBC*.
 
 ### <a name="example"></a>Esempio
 
