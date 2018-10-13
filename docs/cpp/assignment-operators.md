@@ -17,14 +17,12 @@ f1_keywords:
 - '&='
 - ^=
 - '|='
-- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], C++
 - '&= operator'
-- '&&= operator'
 - ^= operator
 - += operator
 - '>>= operator'
@@ -43,32 +41,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c9efaf8dc5b9f0886a697ad2b872e24264820f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1429bcb9f4002cb65cc14000d3bcf62004000566
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017898"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307919"
 ---
 # <a name="assignment-operators"></a>Operatori di assegnazione
 
 ## <a name="syntax"></a>Sintassi
 
-```
-expression assignment-operator expression 
-assignment-operator : one of
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
-```
+*espressione* *assignment-operator* *espressione*
+
+*operatore di assegnazione* : uno dei<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>= * = o = % = +-= = \< \<= >> = e = ^ =   \|=</strong>
 
 ## <a name="remarks"></a>Note
 
-Gli operatori di assegnamento consentono di memorizzare un valore nell'oggetto definito dall'operando sinistro. Esistono tre tipi di operazioni di assegnazione:
+Gli operatori di assegnamento consentono di memorizzare un valore nell'oggetto definito dall'operando sinistro. Esistono due tipi di operazioni di assegnazione:
 
-1. assegnazione semplice, in cui il valore del secondo operando viene archiviato nell'oggetto specificato dal primo operando. 1. assegnazione composta, in cui un aritmetica, spostamento o operazione bit per bit viene eseguita prima di archiviare il risultato.
-1. spostare le risorse che vengono trasferite senza copiare assegnazione (per i tipi di classe).
+1. *assegnazione semplice*, in cui il valore del secondo operando viene archiviato nell'oggetto specificato dal primo operando.
 
+1. *assegnazione composta*, in cui un aritmetica, spostamento o operazione bit per bit viene eseguita prima di archiviare il risultato.
 
-Tutti gli operatori di assegnazione nella tabella riportata di seguito tranne il = e & & = gli operatori sono operatori di assegnamento composti.
+Tutti gli operatori di assegnamento nella tabella seguente, ad eccezione dell'operatore =, sono operatori di assegnamento composti.
 
 ### <a name="assignment-operators"></a>Operatori di assegnazione
 
@@ -85,7 +82,6 @@ Tutti gli operatori di assegnazione nella tabella riportata di seguito tranne il
 |**&=**|Ottiene l'AND bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|
 |**^=**|Ottiene l'OR esclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|
 |**\|=**|Ottiene l'OR inclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|
-|**&&=**| Operatore di assegnazione di spostamento (classe solo per i tipi). Se il secondo operando è un rvalue, spostare le risorse per il primo operando (senza copiarli). Visualizzare [i costruttori di spostamento e operatori di assegnazione di spostamento](move-constructors-and-move-assignment-operators-cpp.md) per altre informazioni.|
 
 **Parole chiave per gli operatori**
 
@@ -125,11 +121,11 @@ int main() {
 
 ## <a name="simple-assignment"></a>Assegnazione singola
 
-L'operatore di assegnazione semplice (=) determina il valore del secondo operando per essere archiviato nell'oggetto specificato dal primo operando. Se entrambi gli oggetti sono di tipi aritmetici, l'operando di destra viene convertito nel tipo di sinistra, prima di archiviare il valore.
+L'operatore di assegnazione semplice (**=**) fa sì che il valore del secondo operando deve essere archiviato nell'oggetto specificato dal primo operando. Se entrambi gli oggetti sono di tipi aritmetici, l'operando di destra viene convertito nel tipo di sinistra, prima di archiviare il valore.
 
-Gli oggetti dei tipi const e volatile possono essere assegnati ai valori l dei tipi unicamente volatili o che non sono né const né volatili.
+Gli oggetti di **const** e **volatile** può essere associato a valori l dei tipi che sono semplicemente tipi **volatile** o nessuna delle due **const** né **volatile**.
 
-L'assegnazione a oggetti di tipo di classe (tipi di struct, unione e classe) viene eseguita da una funzione denominata operator=. Il comportamento predefinito di questa funzione di operatore è di eseguire una copia bit per bit; tuttavia, questo comportamento può essere modificato mediante gli operatori di overload. (Vedere [operatori di overload](../cpp/operator-overloading.md) per altre informazioni.)
+L'assegnazione a oggetti del tipo di classe (struct, unione e i tipi di classe) viene eseguita da una funzione denominata `operator=`. Il comportamento predefinito di questa funzione di operatore è di eseguire una copia bit per bit; tuttavia, questo comportamento può essere modificato mediante gli operatori di overload. Visualizzare [overload di operatori](../cpp/operator-overloading.md) per altre informazioni. Inoltre, possono avere tipi di classe *assegnazione di copia* e *assegnazione di spostamento* operatori. Per altre informazioni, vedere [costruttori di copia e operatori di assegnazione di copia](copy-constructors-and-copy-assignment-operators-cpp.md) e [i costruttori di spostamento e operatori di assegnazione di spostamento](move-constructors-and-move-assignment-operators-cpp.md).
 
 Un oggetto senza alcuna ambiguità di classe derivata da una classe base specificata può essere assegnato a un oggetto della classe base. Il contrario non è consentito perché è presente una conversione implicita da classe derivata a classe base ma non da classe base a classe derivata. Ad esempio:
 
@@ -186,7 +182,7 @@ B = A;
 
 può avere uno dei seguenti effetti:
 
-- Chiamare la funzione di operatore= per `UserType2`, se l'operatore= viene fornito con un argomento `UserType1`.
+- Chiamare la funzione `operator=` per `UserType2`, specificato `operator=` viene fornito con un `UserType1` argomento.
 
 - Chiamare la funzione esplicita `UserType1::operator UserType2` di conversione, se tale funzione non esiste.
 
@@ -194,13 +190,13 @@ può avere uno dei seguenti effetti:
 
 ## <a name="compound-assignment"></a>Assegnazione composta
 
-Operatori di assegnamento composti, illustrati nella tabella [gli operatori di assegnazione](../cpp/assignment-operators.md), vengono specificati nel formato *e1* `op` =  *e2*, dove *e1* è un l-value modificabile non è di tipo const e *e2* è uno dei seguenti:
+Operatori di assegnamento composti, illustrati nella tabella [gli operatori di assegnazione](#assignment-operators), vengono specificati nel formato *e1* *op*= *e2*, dove *e1* è un l-value modificabile non del **const** tipo e *e2* è uno dei seguenti:
 
 - Un tipo aritmetico
 
-- Un puntatore, se `op` è + o -
+- Un puntatore, se *op* viene **+** o **-**
 
-Il *e1* `op` =  *e2* modulo si comporti come *e1* *= e1* `op` *e2*, ma *e1* viene valutata una sola volta.
+Il *e1* *op*= *e2* modulo si comporti come *e1* **=** *e1* *op* *e2*, ma *e1* viene valutata una sola volta.
 
 L'assegnazione composta a un tipo enumerato genera un messaggio di errore. Se l'operando sinistro è di tipo puntatore, l'operando destro deve essere di tipo puntatore o un'espressione costante che restituisce 0. Se l'operando sinistro è di tipo integrale, l'operando destro non deve essere di tipo puntatore.
 
