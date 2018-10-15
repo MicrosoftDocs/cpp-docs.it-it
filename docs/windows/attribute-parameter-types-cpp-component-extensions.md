@@ -1,7 +1,7 @@
 ---
-title: Attributo di tipi di parametro (estensioni del componente C++) | Microsoft Docs
+title: Tipi di parametro di attributo (C + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84c97dc0eb449ed0a2e835c46e77981dda0b67e2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8db82e2b31984429165ce39a328abc28ba6e2cfd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611906"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328168"
 ---
-# <a name="attribute-parameter-types--c-component-extensions"></a>Tipi di parametri degli attributi (Estensioni del componente C++)
+# <a name="attribute-parameter-types--ccli-and-ccx"></a>Tipi di parametro di attributo (C + c++ /CLI e c++ /CLI CX)
 
 I valori passati agli attributi devono essere noti al compilatore in fase di compilazione.  I tipi dei parametri dell'attributo possono essere i seguenti:
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29f487f77fac6c3f6def51b69715d1d47257dd7c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1ab725391b03eeba35e230c3e0a5ebe0913fec2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374223"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328350"
 ---
 # <a name="cpoint-class"></a>Classe CPoint
 
@@ -65,7 +65,7 @@ class CPoint : public tagPOINT
 
 ## <a name="remarks"></a>Note
 
-Include anche le funzioni membro per manipolare `CPoint` e [punto](../../mfc/reference/point-structure1.md) strutture.
+Include anche le funzioni membro per manipolare `CPoint` e [punto](../../mfc/reference/point-structure.md) strutture.
 
 Oggetto `CPoint` oggetto può essere utilizzato ovunque un `POINT` struttura viene utilizzata. Gli operatori che interagiscono con un "size" di questa classe accettano uno [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetti oppure [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) strutture, poiché i due sono intercambiabili.
 
@@ -106,7 +106,7 @@ Specificare il valore del membro `x` di `CPoint`.
 Specificare il valore del membro `y` di `CPoint`.
 
 *initPt*  
-[PUNTO](../../mfc/reference/point-structure1.md) struttura oppure `CPoint` che specifica i valori utilizzati per inizializzare `CPoint`.
+[PUNTO](../../mfc/reference/point-structure.md) struttura oppure `CPoint` che specifica i valori utilizzati per inizializzare `CPoint`.
 
 *initSize*  
 [Le dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](../../atl-mfc-shared/reference/csize-class.md) che specifica i valori utilizzati per inizializzare `CPoint`.
@@ -164,7 +164,7 @@ Specifica la quantità di offset il `x` membro del `CPoint`.
 Specifica la quantità di offset il `y` membro del `CPoint`.
 
 *punto*  
-Specifica la quantità ( [punto](../../mfc/reference/point-structure1.md) oppure `CPoint`) per compensare la `CPoint`.
+Specifica la quantità ( [punto](../../mfc/reference/point-structure.md) oppure `CPoint`) per compensare la `CPoint`.
 
 *size*  
 Specifica la quantità ( [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) oppure [CSize](../../atl-mfc-shared/reference/csize-class.md)) per compensare la `CPoint`.
@@ -184,7 +184,7 @@ BOOL operator==(POINT point) const throw();
 ### <a name="parameters"></a>Parametri
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) struttura o `CPoint` oggetto.
+Contiene un [punto](../../mfc/reference/point-structure.md) struttura o `CPoint` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -205,7 +205,7 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="parameters"></a>Parametri
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) struttura o `CPoint` oggetto.
+Contiene un [punto](../../mfc/reference/point-structure.md) struttura o `CPoint` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -230,7 +230,7 @@ void operator+=(POINT point) throw();
 Contiene un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto.
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) struttura oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto.
+Contiene un [punto](../../mfc/reference/point-structure.md) struttura oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto.
 
 ### <a name="remarks"></a>Note
 
@@ -259,7 +259,7 @@ void operator-=(POINT point) throw();
 Contiene un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto.
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) struttura oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto.
+Contiene un [punto](../../mfc/reference/point-structure.md) struttura oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto.
 
 ### <a name="remarks"></a>Note
 
@@ -289,10 +289,10 @@ CRect operator+(const RECT* lpRect) const throw();
 Contiene un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto.
 
 *punto*  
-Contiene un [punto](../../mfc/reference/point-structure1.md) struttura oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto.
+Contiene un [punto](../../mfc/reference/point-structure.md) struttura oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto.
 
 *lpRect*  
-Contiene un puntatore a un [RECT](../../mfc/reference/rect-structure1.md) struttura oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto.
+Contiene un puntatore a un [RECT](../../mfc/reference/rect-structure.md) struttura oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -322,13 +322,13 @@ CPoint operator-() const throw();
 ### <a name="parameters"></a>Parametri
 
 *punto*  
-Oggetto [punto](../../mfc/reference/point-structure1.md) struttura oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto.
+Oggetto [punto](../../mfc/reference/point-structure.md) struttura oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto.
 
 *size*  
 Oggetto [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura oppure [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto.
 
 *lpRect*  
-Un puntatore a un [RECT](../../mfc/reference/rect-structure1.md) struttura o un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto.
+Un puntatore a un [RECT](../../mfc/reference/rect-structure.md) struttura o un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -354,7 +354,7 @@ Usare l'operatore unario da negare un punto. Ad esempio, utilizzando l'operatore
 
 [Esempio MFC MDI](../../visual-cpp-samples.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[Struttura POINT](../../mfc/reference/point-structure1.md)<br/>
+[Struttura POINT](../../mfc/reference/point-structure.md)<br/>
 [Classe CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Classe CSize](../../atl-mfc-shared/reference/csize-class.md)
 

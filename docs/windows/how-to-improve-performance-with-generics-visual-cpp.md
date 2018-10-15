@@ -1,7 +1,7 @@
 ---
-title: 'Procedura: migliorare le prestazioni con i Generics (Visual C++) | Microsoft Docs'
+title: 'Procedura: migliorare le prestazioni con i Generics (C + + / CLI) | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318526"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327822"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>Procedura: migliorare le prestazioni con i generics (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Procedura: migliorare le prestazioni con i Generics (C + + / CLI)
 
 Con i generics, è possibile creare codice riutilizzabile basato su un parametro di tipo. Il tipo effettivo del parametro di tipo viene rinviato fino alla chiamata da parte del codice client. Per altre informazioni sui generics, vedere [Generics](../windows/generics-cpp-component-extensions.md).
 
@@ -33,7 +33,7 @@ In questo articolo viene illustrato il modo in cui i generics consentono di aume
 
 ## <a name="example"></a>Esempio
 
-.NET Framework viene fornito con molte classi di raccolta nello spazio dei nomi <xref:System.Collections?displayProperty=fullName>. La maggior parte di queste raccolte funziona con oggetti di tipo <xref:System.Object?displayProperty=fullName>. In questo modo, nelle raccolte può essere archiviato qualsiasi tipo, poiché tutti i tipi disponibili in .NET Framework, anche quelli di valore, derivano da <xref:System.Object?displayProperty=fullName>. Tuttavia, questo approccio presenta due svantaggi.
+.NET Framework viene fornito con molte classi Collection nello spazio dei nomi <xref:System.Collections?displayProperty=fullName>. La maggior parte di queste raccolte funziona con oggetti di tipo <xref:System.Object?displayProperty=fullName>. In questo modo, nelle raccolte può essere archiviato qualsiasi tipo, poiché tutti i tipi disponibili in .NET Framework, anche quelli di valore, derivano da <xref:System.Object?displayProperty=fullName>. Tuttavia, questo approccio presenta due svantaggi.
 
 Innanzitutto, se tramite la raccolta vengono archiviati tipi di valore come interi, il valore deve essere sottoposto a boxing prima di essere aggiunto alla raccolta e alla conversione unboxing quando il valore viene recuperato dalla raccolta. Si tratta di operazioni complesse.
 

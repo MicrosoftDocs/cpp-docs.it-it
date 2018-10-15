@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d745b912406407cd56252ba593601a7794fc841d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 77664c6e849707e6ec9efafbc816a586d5b4850e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234715"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328207"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Foundation
 
@@ -52,7 +52,7 @@ Nella maggior parte dei casi, è possibile usare c++ /CX per creare un Runtime d
 
 - Il [InspectableClass](../windows/inspectableclass-macro.md) macro implementa funzionalità COM di base, ad esempio il conteggio dei riferimenti e `QueryInterface` (metodo) e imposta il runtime di nome della classe e livello di attendibilità.
 
-- Utilizzare il Microsoft:: wrl::[classe modulo](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe) per implementare le funzioni di punto di ingresso DLL, ad esempio [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), e [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Utilizzare il Microsoft:: wrl::[classe modulo](module-class.md) per implementare le funzioni di punto di ingresso DLL, ad esempio [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), e [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
 - Collegare la DLL del componente a runtimeobject.lib. Specificare anche [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) nella riga del linker per generare i metadati di Windows.
 

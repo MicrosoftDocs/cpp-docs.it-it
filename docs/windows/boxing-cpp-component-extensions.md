@@ -1,7 +1,7 @@
 ---
-title: Boxing (estensioni del componente C++) | Microsoft Docs
+title: Boxing (C + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316718"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328012"
 ---
-# <a name="boxing--c-component-extensions"></a>Boxing (Estensioni del componente C++)
+# <a name="boxing--ccli-and-ccx"></a>Boxing (C + c++ /CLI e c++ /CLI CX)
 
-Il compilatore Visual C++ è possibile convertire i tipi di valore agli oggetti in un processo denominato *boxing*e convertire gli oggetti in tipi di valore in un processo denominato *unboxing*.
+La conversione dei tipi di valore agli oggetti viene chiamata *boxing*, e la conversione di oggetti per i tipi di valore viene chiamata *unboxing*.
 
 ## <a name="all-runtimes"></a>Tutti i runtime
 
@@ -86,7 +86,7 @@ Per altre informazioni, vedere [Boxing (C + c++ /CX)](https://msdn.microsoft.com
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Il compilatore Visual C++ ora esegue la conversione boxing dei tipi valore in <xref:System.Object>. Ciò è possibile a causa di una conversione definita dal compilatore per convertire i tipi valore in <xref:System.Object>.
+Tipi di valore le caselle del compilatore <xref:System.Object>. Ciò è possibile a causa di una conversione definita dal compilatore per convertire i tipi valore in <xref:System.Object>.
 
 La conversione boxing e unboxing consente di trattare i tipi valore come oggetti. I tipi valore, inclusi i tipi di struct e i tipi predefiniti quali int, possono essere convertiti da e verso il tipo <xref:System.Object>.
 
@@ -200,4 +200,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

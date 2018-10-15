@@ -1,7 +1,7 @@
 ---
-title: Supporto del compilatore per tratti di tipo (estensioni del componente C++) | Microsoft Docs
+title: Supporto del compilatore per tratti di tipo (C + c++ /CLI e c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -71,16 +71,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5df33233f78eed1f3dc6c9403eb4b1740ccf1a70
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588282"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328538"
 ---
-# <a name="compiler-support-for-type-traits-c-component-extensions"></a>Supporto del compilatore per tratti di tipo (Estensioni del componente C++)
+# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Supporto del compilatore per tratti di tipo (C + c++ /CLI e c++ /CX)
 
-Il compilatore supporta *tratti di tipo*, che indicano varie caratteristiche di un tipo in fase di compilazione.
+Il compilatore Microsoft C++ supporta *tratti di tipo* per C + + c++ /CLI e c++ /CLI estensioni CX che indicano varie caratteristiche di un tipo in fase di compilazione.
 
 ## <a name="all-runtimes"></a>Tutti i runtime
 
@@ -90,9 +90,9 @@ Tratti di tipo sono particolarmente utili per i programmatori che scrivono libre
 
 Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti i tratti di tipo restituiscono **false** se non viene soddisfatta la condizione specificata dal nome del tratto di tipo.
 
-(Nell'elenco seguente, gli esempi di codice sono scritti solo in C + + / CLI. Ma il tratto di tipo corrispondente è supportato anche nelle estensioni del componente Visual C++, se non specificato diversamente. Il termine "tipo di piattaforma" fa riferimento a tipi Windows Runtime o tipi common language runtime.)
+(Nell'elenco seguente, gli esempi di codice sono scritti solo in C + + / CLI. Ma il tratto di tipo corrispondente è supportato anche in C + + c++ /CX se non specificato diversamente. Il termine "tipo di piattaforma" fa riferimento a tipi Windows Runtime o tipi common language runtime.)
 
-- `__has_assign(` `type` `)`
+- `__has_assign(` *Tipo* `)`
 
    Restituisce **true** se la piattaforma o un tipo nativo ha un operatore di assegnazione di copia.
 
@@ -106,7 +106,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_copy(` `type` `)`
+- `__has_copy(` *Tipo* `)`
 
    Restituisce **true** se la piattaforma o un tipo nativo ha un costruttore di copia.
 
@@ -120,9 +120,9 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_finalizer(` `type` `)`
+- `__has_finalizer(` *Tipo* `)`
 
-   (Non supportato nelle estensioni componenti Visual C++). Restituisce **true** se il tipo CLR ha un finalizzatore. Vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) per altre informazioni.
+   (Non supportato in C + + c++ /CX.) Restituisce **true** se il tipo CLR ha un finalizzatore. Vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) per altre informazioni.
 
     ```cpp
     using namespace System;
@@ -137,7 +137,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_nothrow_assign(` `type` `)`
+- `__has_nothrow_assign(` *Tipo* `)`
 
    Restituisce **true** se un operatore di assegnazione di copia ha una specifica di eccezione vuota.
 
@@ -153,7 +153,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_nothrow_constructor(` `type` `)`
+- `__has_nothrow_constructor(` *Tipo* `)`
 
    Restituisce **true** se il costruttore predefinito ha una specifica di eccezione vuota.
 
@@ -169,7 +169,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_nothrow_copy(` `type` `)`
+- `__has_nothrow_copy(` *Tipo* `)`
 
    Restituisce **true** se il costruttore di copia ha una specifica di eccezione vuota.
 
@@ -185,7 +185,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_trivial_assign(` `type` `)`
+- `__has_trivial_assign(` *Tipo* `)`
 
    Restituisce **true** se il tipo ha un operatore di assegnazione semplice, generato dal compilatore.
 
@@ -199,7 +199,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_trivial_constructor(` `type` `)`
+- `__has_trivial_constructor(` *Tipo* `)`
 
    Restituisce **true** se il tipo ha un costruttore semplice, generato dal compilatore.
 
@@ -213,7 +213,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_trivial_copy(` `type` `)`
+- `__has_trivial_copy(` *Tipo* `)`
 
    Restituisce **true** se il tipo ha un costruttore di copia semplice, generato dal compilatore.
 
@@ -227,7 +227,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_trivial_destructor(` `type` `)`
+- `__has_trivial_destructor(` *Tipo* `)`
 
    Restituisce **true** se il tipo ha un distruttore semplice, generato dal compilatore.
 
@@ -242,7 +242,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_user_destructor(` `type` `)`
+- `__has_user_destructor(` *Tipo* `)`
 
    Restituisce **true** se la piattaforma o un tipo nativo ha un distruttore dichiarato dall'utente.
 
@@ -259,7 +259,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__has_virtual_destructor(` `type` `)`
+- `__has_virtual_destructor(` *Tipo* `)`
 
    Restituisce **true** se il tipo ha un distruttore virtuale.
 
@@ -278,11 +278,11 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_abstract(` `type` `)`
+- `__is_abstract(` *Tipo* `)`
 
-   Restituisce **true** se il tipo è un tipo astratto. Per altre informazioni sui tipi astratti nativi, vedere [astratta](../windows/abstract-cpp-component-extensions.md).
+   Restituisce **true** se il tipo è un tipo astratto. Per altre informazioni sui tipi astratti nativi, vedere [classi astratte](../cpp/abstract-classes-cpp.md).
 
-   `__is_abstract` funziona anche per i tipi di piattaforma. Un'interfaccia con almeno un membro è un tipo astratto perché è un tipo riferimento con almeno un membro astratto. Per altre informazioni sui tipi di piattaforma astratta, vedere [classi astratte](../cpp/abstract-classes-cpp.md)
+   `__is_abstract` funziona anche per i tipi di piattaforma. Un'interfaccia con almeno un membro è un tipo astratto perché è un tipo riferimento con almeno un membro astratto. Per altre informazioni sui tipi di piattaforma astratta, vedere [astratta](../windows/abstract-cpp-component-extensions.md).
 
     ```cpp
     // is_abstract.cpp
@@ -318,7 +318,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_class(` `type` `)`
+- `__is_class(` *Tipo* `)`
 
    Restituisce **true** se il tipo è una classe nativa o uno struct.
 
@@ -350,9 +350,9 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_delegate(` `type` `)`
+- `__is_delegate(` *Tipo* `)`
 
-   Restituisce **true** se `type` è un delegato. Per altre informazioni, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).
+   Restituisce **true** se `type` è un delegato. Per altre informazioni, vedere [delegare (C + c++ /CLI e c++ /CLI CX)](../windows/delegate-cpp-component-extensions.md).
 
     ```cpp
     delegate void MyDel();
@@ -361,7 +361,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_empty(` `type` `)`
+- `__is_empty(` *Tipo* `)`
 
    Restituisce **true** se il tipo non dispone di alcun membro dati di istanza.
 
@@ -377,7 +377,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_enum(` `type` `)`
+- `__is_enum(` *Tipo* `)`
 
    Restituisce **true** se il tipo è un'enumerazione nativa.
 
@@ -399,7 +399,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_interface_class(` `type` `)`
+- `__is_interface_class(` *Tipo* `)`
 
    Restituisce **true** se passata un'interfaccia di piattaforma. Per altre informazioni, vedere [classe di interfaccia](../windows/interface-class-cpp-component-extensions.md).
 
@@ -413,7 +413,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_pod(` `type` `)`
+- `__is_pod(` *Tipo* `)`
 
    Restituisce **true** se il tipo è una classe o un'unione con alcun costruttore o membri non statici privati o protetti, senza classi di base e funzioni non virtuali. Per altre informazioni sui POD, vedere lo standard C++, sezioni 8.5.1/1, 9/4 e 3.9/10.
 
@@ -429,7 +429,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_polymorphic(` `type` `)`
+- `__is_polymorphic(` *Tipo* `)`
 
    Restituisce **true** se un tipo nativo ha funzioni virtuali.
 
@@ -445,7 +445,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_ref_array(` `type` `)`
+- `__is_ref_array(` *Tipo* `)`
 
    Restituisce **true** se passata una matrice di piattaforma. Per altre informazioni, vedere [matrici](../windows/arrays-cpp-component-extensions.md).
 
@@ -457,7 +457,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_ref_class(` `type` `)`
+- `__is_ref_class(` *Tipo* `)`
 
    Restituisce **true** se passata una classe di riferimento. Per altre informazioni sui tipi riferimento definiti dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -470,7 +470,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_sealed(` `type` `)`
+- `__is_sealed(` *Tipo* `)`
 
    Restituisce **true** se passati una piattaforma o un tipo nativo contrassegnati come sealed. Per altre informazioni, vedere [sealed](../windows/sealed-cpp-component-extensions.md).
 
@@ -481,7 +481,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_simple_value_class(` `type` `)`
+- `__is_simple_value_class(` *Tipo* `)`
 
    Restituisce **true** se viene passato un tipo di valore che non contiene riferimenti all'heap sottoposto a garbage collection. Per altre informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -499,7 +499,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_union(` `type` `)`
+- `__is_union(` *Tipo* `)`
 
    Restituisce **true** se un tipo è un'unione.
 
@@ -516,7 +516,7 @@ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti
     }
     ```
 
-- `__is_value_class(` `type` `)`
+- `__is_value_class(` *Tipo* `)`
 
    Restituisce **true** se viene passato un tipo di valore. Per altre informazioni sui tipi di valore definito dall'utente, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -580,4 +580,4 @@ R is a ref class
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: Windows Runtime e modelli gestiti (estensioni del componente C++) | Microsoft Docs
+title: Windows Runtime e modelli gestiti (C + c++ /CLI e c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591449"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328298"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime e modelli gestiti (Estensioni del componente C++)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime e modelli gestiti (C + c++ /CLI e c++ /CX)
 
 I modelli consentono di definire un prototipo di un tipo Windows Runtime o Common Language Runtime e, successivamente, di creare istanze delle variazioni di quel tipo utilizzando parametri di tipo dei modelli diversi.
 
@@ -50,7 +50,7 @@ Opzione del compilatore: `/clr`
 
 ### <a name="examples"></a>Esempi
 
-È possibile creare un'istanza di un tipo generico con un parametro di modello di tipo gestito, ma non di un modello gestito con un parametro di modello di tipo generico. Questa condizione dipende dal fatto che i tipi generici vengono risolti in fase di esecuzione. Per altre informazioni, vedere [Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+È possibile creare un'istanza di un tipo generico con un parametro di modello di tipo gestito, ma non di un modello gestito con un parametro di modello di tipo generico. Questa condizione dipende dal fatto che i tipi generici vengono risolti in fase di esecuzione. Per altre informazioni, vedere [Generics e modelli (C + + CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

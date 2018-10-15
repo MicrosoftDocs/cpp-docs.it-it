@@ -1,7 +1,7 @@
 ---
-title: sealed (estensioni del componente C++) | Microsoft Docs
+title: sealed (C + c++ /CLI e c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439562"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327999"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed (Estensioni del componente C++)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C + c++ /CLI e c++ /CX)
 
 **sealed** è una parola chiave sensibile al contesto per le classi di riferimento che indica che un membro virtuale non può essere sottoposto a override o che un tipo non può essere utilizzato come tipo di base.
 
 > [!NOTE]
-> ISO C++ 11 linguaggio Standard ha il [finale](../cpp/final-specifier.md) parola chiave, che è supportato in Visual Studio. Uso **finale** sulle classi standard e **sealed** sulle classi di riferimento.
+> ISO C++ 11 linguaggio Standard introdotta la [finale](../cpp/final-specifier.md) (parola chiave). Uso **finale** sulle classi standard e **sealed** sulle classi di riferimento.
 
 ## <a name="all-runtimes"></a>Tutti i runtime
 
@@ -53,7 +53,7 @@ Tipo restituito da una funzione.
 
 Nel primo esempio di sintassi, la classe è sealed. Nel secondo esempio una funzione virtuale è sealed.
 
-Il **sealed** parola chiave è valida per le piattaforme native, nonché per il Runtime di Windows e common language runtime (CLR). Per altre informazioni, vedere [identificatori di Override e compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Usare la **sealed** parola chiave per le classi di riferimento e le relative funzioni membro virtuale. Per altre informazioni, vedere [identificatori di Override e compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 È possibile rilevare in fase di compilazione se un tipo è sealed usando il `__is_sealed(type)` tratto di tipo. Per altre informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -108,7 +108,7 @@ public:
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

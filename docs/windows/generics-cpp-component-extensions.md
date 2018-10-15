@@ -1,7 +1,7 @@
 ---
-title: Generics (estensioni del componente C++) | Microsoft Docs
+title: Generics (C + c++ /CLI e c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,37 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448350"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327675"
 ---
-# <a name="generics--c-component-extensions"></a>Generics (Estensioni del componente C++)
+# <a name="generics--ccli-and-ccx"></a>Generics (C + c++ /CLI e c++ /CX)
 
-I generics sono tipi e metodi con parametri. In questa sezione sono illustrate le funzionalità generiche supportate sia da Windows Runtime sia da Common Language Runtime e quelle supportate solo da Common Language Runtime. Inoltre, viene descritto come creare i propri metodi e tipi generici in Visual C++ e come utilizzare i tipi generici creati con un linguaggio .NET Framework in Visual C++. Infine, in questa sezione viene fornito un confronto tra generics e modelli di C++.
+I generics sono tipi e metodi con parametri. In questa sezione sono illustrate le funzionalità generiche supportate sia da Windows Runtime sia da Common Language Runtime e quelle supportate solo da Common Language Runtime. Scoprirai anche come creare i propri metodi e tipi generici in C + + / CLI e come usare i tipi generici creati in un linguaggio di .NET Framework in C + + c++ /CLI CLI. Infine, in questa sezione viene fornito un confronto tra generics e modelli di C++.
 
 ## <a name="in-this-section"></a>In questa sezione
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Supporto da parte di Windows Runtime e Common Language Runtime
 
-[Panoramica di Generics in Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
+[Panoramica dei Generics in C + + / CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Nelle informazioni sui generics sono incluse la motivazione per la funzionalità del linguaggio, le definizioni dei termini utilizzati per descrivere generics e le informazioni sull'utilizzo dei tipi di riferimento e dei tipi di valore come parametri di tipo per i generics.
 
-[Interfacce generiche (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[Interfacce generiche (C + + CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Informazioni sulla definizione e sull'utilizzo delle interfacce generiche.
 
-[Delegati generici (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
+[I delegati generici (C + + CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 Informazioni sulla definizione e sull'utilizzo dei delegati generici.
 
 [Vincoli su parametri di tipo generico (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Informazioni sull'utilizzo di vincoli nei tipi generici.
 
 [Uso dei generics (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
-Informazioni sull'utilizzo in Visual C++ dei generics definiti negli assembly .NET, probabilmente creati in altri linguaggi.
+Informazioni sull'utilizzo dei generics definiti negli assembly .NET, probabilmente creati in altri linguaggi, in C + + / CLI.
 
-[Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[Generics e modelli (C + + CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Confronto tra generics e modelli, quando utilizzare ognuno di essi e come combinarli in modo efficace.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Supporto da parte di Common Language Runtime
@@ -66,4 +66,4 @@ Usando il [per ognuna, in](../dotnet/for-each-in.md) parola chiave in una raccol
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

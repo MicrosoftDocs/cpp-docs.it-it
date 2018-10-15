@@ -1,7 +1,7 @@
 ---
-title: Stringa (estensioni del componente C++) | Microsoft Docs
+title: Stringa (C + c++ /CLI e c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,24 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b835f1d507c8e577f8b44ca314422dd5b6f2ca46
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408401"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327428"
 ---
-# <a name="string--c-component-extensions"></a>Stringa (Estensioni del componente C++)
-
-Il compilatore Visual C++ supporta *stringhe*, che sono oggetti che rappresentano il testo come una sequenza di caratteri. Visual C++ supporta variabili di stringa, il cui valore è implicito, e i valori letterali, il cui valore è una stringa tra virgolette esplicita.
-
-## <a name="all-runtimes"></a>Tutti i runtime
+# <a name="string--ccli-and-ccx"></a>Stringa (C + c++ /CLI e c++ /CX)
 
 Il Windows Runtime e common language runtime rappresentano stringhe come oggetti la cui allocata la memoria viene gestita automaticamente. Vale a dire, non è necessario rimuovere in modo esplicito la memoria per una stringa quando termina l'esce variabile stringa dall'ambito o l'applicazione. Per indicare che la durata di un oggetto stringa deve essere gestita automaticamente, dichiarare il tipo di stringa con il [handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modificatore.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-L'architettura di Windows Runtime richiede Visual C++ per implementare il `String` tipo di dati di `Platform` dello spazio dei nomi. Per comodità, Visual C++ fornisce anche il `string` tipo di dati che è un sinonimo `Platform::String`, nella `default` dello spazio dei nomi.
+L'architettura di Windows Runtime richiede che il `String` tipo di dati trovarsi nel `Platform` dello spazio dei nomi. Per comodità, Visual C++ fornisce anche il `string` tipo di dati che è un sinonimo `Platform::String`, nella `default` dello spazio dei nomi.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -51,8 +47,6 @@ using namespace default;
 Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
-
-Questo argomento viene illustrato come il compilatore Visual C++ elabora i valori letterali stringa durante l'esecuzione usando il `/clr` opzione del compilatore. Usare `/clr`, è necessario anche usare common language runtime (CLR), C + + c++ /CLI sintassi della riga di comando e oggetti gestiti. Per altre informazioni sulle `/clr`, vedere [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 Durante la compilazione con `/clr`, il compilatore convertirà i valori letterali stringa in stringhe di tipo <xref:System.String>. Per mantenere la compatibilità con il codice esistente sono due eccezioni a questa:
 
@@ -91,9 +85,9 @@ Esempio di codice seguente illustra la concatenazione e confronto di stringhe.
 using namespace System;
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -111,12 +105,12 @@ int main() {
    // concatenation of a System::String and string literal
    Console::WriteLine(a + "zzz");
 
-   // you can append to a System::String ^
+   // you can append to a System::String^
    Console::WriteLine(a + 1);
    Console::WriteLine(a + 'a');
    Console::WriteLine(a + 3.1);
 
-   // test System::String ^ for equality
+   // test System::String^ for equality
    a += b;
    Console::WriteLine(a);
    a = b;
@@ -127,12 +121,12 @@ int main() {
    if (a != b)  
       Console::WriteLine("a and b are not equal");
 
-   // System:String ^ and tracking reference
+   // System:String^ and tracking reference
    String^% rstr1 = a;
    Console::WriteLine(rstr1);
 
-   // testing an empty System::String ^
-   String ^ n;
+   // testing an empty System::String^
+   String^ n;
    if (n == nullptr)  
       Console::WriteLine("n is empty");
 }
@@ -179,29 +173,29 @@ using namespace System;
 void Test_Overload(const char * a) {
    Console::WriteLine("const char * a");
 }
-void Test_Overload(String ^ a) {
-   Console::WriteLine("String ^ a");
+void Test_Overload(String^ a) {
+   Console::WriteLine("String^ a");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, String ^ b) {
-   return ("overloaded +(String ^ a, String ^ b)");
+String^ operator +(String^ a, String^ b) {
+   return ("overloaded +(String^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(Object ^ a, String ^ b) {
-   return ("overloaded +(Object ^ a, String ^ b)");
+String^ operator +(Object^ a, String^ b) {
+   return ("overloaded +(Object^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, Object ^ b) {
-   return ("overloaded +(String ^ a, Object ^ b)");
+String^ operator +(String^ a, Object^ b) {
+   return ("overloaded +(String^ a, Object^ b)");
 }
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -215,13 +209,13 @@ int main() {
 ```
 
 ```Output
-overloaded +(String ^ a, String ^ b)
+overloaded +(String^ a, String^ b)
 
-overloaded +(String ^ a, Object ^ b)
+overloaded +(String^ a, Object^ b)
 
-overloaded +(Object ^ a, String ^ b)
+overloaded +(Object^ a, String^ b)
 
-String ^ a
+String^ a
 
 const char * a
 ```
@@ -277,6 +271,6 @@ System.String
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Valori letterali stringa e carattere](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

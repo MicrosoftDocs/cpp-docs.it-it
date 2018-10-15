@@ -1,7 +1,7 @@
 ---
 title: Identifier (c + + CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,25 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 572767c2f85b07f201bef93578b14b731aa467e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a8b69402dbe3812bdd49f8944c979300209bff
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415018"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328272"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
-Consente l'utilizzo delle parole chiave Visual C++ come identificatori.
+Consente l'utilizzo delle parole chiave C++ come identificatori.
 
 ## <a name="all-platforms"></a>Tutte le piattaforme
 
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-__identifier(
-Visual_C++_keyword
-)  
+__identifier(C++_keyword)  
 ```
 
 ### <a name="remarks"></a>Note
@@ -53,7 +51,7 @@ Opzione del compilatore: `/ZW`
 
 **Esempio**
 
-Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.
+Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. In C + c++ /CLI programma della riga di comando che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.
 
 ```cs
 // identifier_template.cs
@@ -85,7 +83,7 @@ Opzione del compilatore: `/clr`
 
 ### <a name="examples"></a>Esempi
 
-Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. Nel programma Visual C++ che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.
+Nell'esempio seguente, una classe denominata **modello** viene creato in c# e distribuite come una DLL. In C + c++ /CLI programma della riga di comando che usa il **modello** (classe), il **Identifier** parola chiave consente di nascondere il fatto che **modello** è una parola chiave C++ standard.
 
 ```cs
 // identifier_template.cs
@@ -108,5 +106,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

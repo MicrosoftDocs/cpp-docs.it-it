@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4983d2a56407449873c8b4db73d82fa2ef864058
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068442"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328259"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 
@@ -273,7 +273,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta a un `CRect` oggetto oppure [RECT](../../mfc/reference/rect-structure1.md) struttura che riceverà le coordinate del client dell'aggiornamento che racchiude l'area di aggiornamento.
+Punta a un `CRect` oggetto oppure [RECT](../../mfc/reference/rect-structure.md) struttura che riceverà le coordinate del client dell'aggiornamento che racchiude l'area di aggiornamento.
 
 ### <a name="return-value"></a>Valore restituito
 

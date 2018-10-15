@@ -1,5 +1,5 @@
 ---
-title: I delegati generici (Visual C++) | Microsoft Docs
+title: I delegati generici (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1177b3c09649affc781a8c247a109f8efd8088d2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440875"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328285"
 ---
-# <a name="generic-delegates-visual-c"></a>Delegati generici (Visual C++)
+# <a name="generic-delegates-ccli"></a>I delegati generici (C + + CLI)
 
-È possibile utilizzare parametri di tipo generico con i delegati. Per altre informazioni sui delegati, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).
+È possibile utilizzare parametri di tipo generico con i delegati. Per altre informazioni sui delegati, vedere [delegare (C + c++ /CLI e c++ /CLI CX)](../windows/delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Sintassi
 

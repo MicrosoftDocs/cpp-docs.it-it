@@ -1,7 +1,7 @@
 ---
 title: Elenchi di argomenti variabili (...) (C + + CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e58b7ea2d8db0c3d36ad36aaccbf23957c449a77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0e95f963636e50bdf453835ee920463e6e266a2a
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590463"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327804"
 ---
 # <a name="variable-argument-lists--ccli"></a>Elenchi di argomenti variabili (...) (C++/CLI)
 
-Questo esempio viene illustrato come utilizzare il `...` sintassi in Visual C++ per implementare le funzioni che hanno un numero variabile di argomenti.
+Questo esempio viene illustrato come utilizzare il `...` sintassi in C + + c++ /CLI per implementare le funzioni che hanno un numero variabile di argomenti della riga di comando.
 
 > [!NOTE]
 > Questo argomento si riferisce a C + + / CLI. Per informazioni sull'uso di `...` in C++ Standard ISO, vedere [ellissi e modelli Variadic](../cpp/ellipses-and-variadic-templates.md) e sui puntini di sospensione e argomenti predefiniti in [espressioni in forma suffissa](../cpp/postfix-expressions.md).
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Array](../windows/arrays-cpp-component-extensions.md)
+[Matrici](../windows/arrays-cpp-component-extensions.md)

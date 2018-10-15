@@ -1,7 +1,7 @@
 ---
-title: Interfacce generiche (Visual C++) | Microsoft Docs
+title: Interfacce generiche (C + + CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2065b96875f2c441b24eb69f8ca51b06fe5717f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e36a4c1d9604753fd4bff6a51df060e1d26822fb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444490"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328363"
 ---
-# <a name="generic-interfaces-visual-c"></a>Interfacce generiche (Visual C++)
+# <a name="generic-interfaces-ccli"></a>Interfacce generiche (C + + CLI)
 
 Le restrizioni applicate ai parametri di tipo nelle classi sono identici a quelli che si applicano ai parametri di tipo nelle interfacce (vedere [le classi generiche (C + + / CLI)](../windows/generic-classes-cpp-cli.md)).
 

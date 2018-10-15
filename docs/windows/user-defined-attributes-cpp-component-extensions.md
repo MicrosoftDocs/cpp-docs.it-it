@@ -1,7 +1,7 @@
 ---
-title: Definito dall'utente di attributi (estensioni del componente C++) | Microsoft Docs
+title: Gli attributi definiti dall'utente (C + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,26 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789228"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328441"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>Attributi definiti dall'utente (Estensioni del componente C++)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Gli attributi definiti dall'utente (C + c++ /CLI e c++ /CLI CX)
 
-Gli attributi personalizzati consentono di estendere i metadati di un'interfaccia, classe o struttura, metodo, parametro o enumerazione.
-
-## <a name="all-runtimes"></a>Tutti i runtime
-
-Tutti i Runtime supportano gli attributi personalizzati.
+C + c++ /CLI e c++ /CX consentono di creare attributi specifici della piattaforma che estendono i metadati di un'interfaccia, classe o struttura, metodo, parametro o enumerazione. Questi attributi sono distinti dal [attributi di C++ standard](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-C + + / attributi CX supportano solo le proprietà, ma non attributo costruttori o metodi.
-
-### <a name="remarks"></a>Note
+È possibile applicare C + + / attributi CX alle proprietà, ma non per i costruttori o metodi.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -43,17 +37,11 @@ Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Gli attributi personalizzati consentono di estendere i metadati di un elemento gestito. Per altre informazioni, vedere [Attributi](/dotnet/standard/attributes/index).
-
-### <a name="remarks"></a>Note
-
 Le informazioni e la sintassi elencate in questo argomento è destinato a sostituire le informazioni visualizzate nelle [attributo](attributes/attribute.md).
 
 È possibile definire un attributo personalizzato che definisce un tipo e apportando <xref:System.Attribute> una classe di base per il tipo e, facoltativamente, applicare il <xref:System.AttributeUsageAttribute> attributo.
 
-Ad esempio, in Microsoft Transaction Server (MTS) 1.0, il comportamento per quanto riguarda le transazioni, sincronizzazione, il bilanciamento del carico e così via specificata tramite GUID personalizzati inseriti nella libreria dei tipi mediante l'attributo personalizzato ODL. Di conseguenza, un client di un server MTS è stato possibile determinare le caratteristiche, leggere la libreria dei tipi. In .NET Framework, l'equivalente della libreria dei tipi è costituita da metadati e analogico dell'attributo personalizzato ODL è costituita dagli attributi personalizzati. Inoltre, la lettura della libreria dei tipi è analoga all'uso della reflection sui tipi.
-
-Per ulteriori informazioni, vedere,
+Per altre informazioni, vedere:
 
 - [Destinazioni degli attributi](attribute-targets-cpp-component-extensions.md)
 
@@ -216,4 +204,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](component-extensions-for-runtime-platforms.md)

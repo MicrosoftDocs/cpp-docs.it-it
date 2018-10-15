@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39dac1bda25a66ecd67feac167e0029931a204e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791829"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328181"
 ---
 # <a name="attributes-by-usage"></a>Attributi in base all'utilizzo
 
 Questo argomento elenca gli attributi in base alla quale vengono applicati gli elementi del linguaggio C++.
 
-Se un attributo precede un elemento di Visual C++ che non è nell'ambito dell'attributo, il blocco di attributi viene considerato come un commento.
+Se un attributo precede un elemento che non è nell'ambito dell'attributo, il blocco di attributi viene considerato come un commento.
 
 |Attributo|Descrizione|
 |---------------|-----------------|

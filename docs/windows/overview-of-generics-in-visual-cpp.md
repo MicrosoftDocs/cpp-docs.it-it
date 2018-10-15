@@ -1,7 +1,7 @@
 ---
-title: Panoramica dei Generics in Visual C++ | Microsoft Docs
+title: Panoramica dei Generics in C + + CLI | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,20 +22,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1a6e9b9734fbb836d9e061b15534e23b95b29c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e6240fd5e33f44c42d8a0d33302b9ef4cf9f8bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590938"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327856"
 ---
-# <a name="overview-of-generics-in-visual-c"></a>Cenni preliminari sui generics in Visual C++
+# <a name="overview-of-generics-in-ccli"></a>Panoramica dei Generics in C + + / CLI
 
 I generics sono tipi con parametri supportati dal Common Language Runtime. Un tipo con parametri viene definito con un parametro di tipo sconosciuto specificato quando viene utilizzato il generico.
 
 ## <a name="why-generics"></a>Perché Generics?
 
-C++ supporta i modelli e sia i modelli sia i generics supportano i tipi con parametri per creare classi di raccolta tipizzate. Tuttavia, tramite i modelli viene fornita la parametrizzazione in fase di compilazione. Non è possibile fare riferimento a un assembly contenente una definizione di modello e creare nuove specializzazioni del modello. Una volta compilato, un modello specializzato è simile a ogni altro modello o classe. Al contrario, i generics vengono creati in MSIL come tipo con parametri noto al runtime; tramite il codice sorgente mediante cui viene fatto riferimento a un assembly contenente un tipo generico possono essere create specializzazioni del tipo generico. Per altre informazioni sul confronto dei modelli di Visual C++ e generics, vedere [Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+C++ supporta i modelli e sia i modelli sia i generics supportano i tipi con parametri per creare classi di raccolta tipizzate. Tuttavia, tramite i modelli viene fornita la parametrizzazione in fase di compilazione. Non è possibile fare riferimento a un assembly contenente una definizione di modello e creare nuove specializzazioni del modello. Una volta compilato, un modello specializzato è simile a ogni altro modello o classe. Al contrario, i generics vengono creati in MSIL come tipo con parametri noto al runtime; tramite il codice sorgente mediante cui viene fatto riferimento a un assembly contenente un tipo generico possono essere create specializzazioni del tipo generico. Per altre informazioni sul confronto dei modelli standard C++ e generics, vedere [Generics e modelli (C + + CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ## <a name="generic-functions-and-types"></a>Funzioni e tipi generici
 

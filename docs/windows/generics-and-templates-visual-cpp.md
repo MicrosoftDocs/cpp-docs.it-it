@@ -1,7 +1,7 @@
 ---
-title: Generics e modelli (Visual C++) | Microsoft Docs
+title: Generics e modelli (C + + CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8a58e26b571c119d45cb981c582ebec335eface
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591002"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328220"
 ---
-# <a name="generics-and-templates-visual-c"></a>Generics e modelli (Visual C++)
+# <a name="generics-and-templates-ccli"></a>Generics e modelli (C + + CLI)
 
 Generics e modelli sono entrambi funzionalità del linguaggio che forniscono supporto per i tipi con parametri. Tuttavia, sono diversi e usi diversi. In questo argomento viene fornita una panoramica di molte differenze.
 
@@ -61,7 +61,7 @@ La differenza di base nei generics ha implicazioni per la compilazione di applic
 
 Nell'esempio seguente viene illustrato un semplice esempio di utilizzo combinato di generics e modelli. In questo esempio, la classe modello passa attraverso il parametro nel tipo generico. Non è possibile il contrario.
 
-Questo linguaggio potrebbe essere utilizzato quando si desidera compilare in un'API esistente generica con codice di modello locale rispetto a un assembly di Visual C++, o quando è necessario aggiungere un ulteriore livello di parametrizzazione automatica a un tipo generico, per sfruttare i vantaggi di alcune funzionalità dei modelli non supporte s delle generics.
+Questo linguaggio potrebbe essere usato quando si desidera compilare in un'API generica esistente con il codice di modello che è locale rispetto a C + + / assembly dell'interfaccia della riga, o quando è necessario aggiungere un ulteriore livello di parametrizzazione automatica a un tipo generico, per sfruttare i vantaggi di alcune funzionalità dei modelli non supportati b generics di y.
 
 ### <a name="code"></a>Codice
 

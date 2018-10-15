@@ -1,7 +1,7 @@
 ---
-title: Estensioni componenti per le piattaforme Runtime | Microsoft Docs
+title: Estensioni componenti per .NET e UWP | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386753"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328415"
 ---
-# <a name="component-extensions-for-runtime-platforms"></a>Estensioni componenti per le piattaforme runtime
+# <a name="component-extensions-for-net-and-uwp"></a>Estensioni componenti per .NET e UWP
 
-Visual C++ fornisce le estensioni del linguaggio per agevolare la programmazione per piattaforme di runtime. Usando C + + c++ /CX, è possibile programmare le app Universal Windows Platform e i componenti compilati in codice nativo. Sebbene sia possibile creare App Universal Windows Platform programmando direttamente con le interfacce di Windows Runtime COM, usando C + + c++ /CX, è possibile rivolgersi costruttori, eccezioni e altri linguaggi di programmazione C++ moderna. Per abilitare la programmazione di C++ in un ambiente di esecuzione gestito sulla piattaforma .NET, è possibile usare C + + / CLI.
+Lo standard C++ consente ai fornitori del compilatore fornire estensioni non standard del linguaggio. Microsoft fornisce le estensioni che consentono di connettere C++ nativo a codice che viene eseguito in .NET Framework o Universal Windows Platform (UWP). Le estensioni di .NET vengono chiamate C + + / CLI e viene restituito il codice che viene eseguita in .NET gestito ambiente di esecuzione che viene chiamato il Common Language Runtime (CLR). Le estensioni di piattaforma UWP vengono chiamate C + + c++ /CX e produrre codice macchina nativo.
+
+> [!NOTE]
+> Per le nuove applicazioni, è consigliabile usare C + + c++ /CLI WinRT anziché C + + / CX. C + + / WinRT è una nuova, standard C++ 17 proiezione del linguaggio for Windows Runtime APIs. Continueremo a supportare C + + c++ /CX e WRL, ma è consigliabile che le nuove applicazioni usare C + + c++ /CLI WinRT. Per altre informazioni, vedere [C + + / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>Due runtime, un set di estensioni
 
-C + + / CX è un subset di C + + / CLI. Per le estensioni che sono comuni a C + + c++ /CX e c++ /CLI CLI, la semantica varia se la destinazione è common language runtime (CLR) o il Runtime di Windows. Per compilare l'app venga eseguita sul Runtime di Windows, specificare il `/ZW` opzione del compilatore. Per compilare un'applicazione per eseguirla in CLR, specificare l'opzione del compilatore `/clr`. Queste opzioni vengono impostate automaticamente quando si usa Visual Studio per creare un progetto.
-
-Per altre informazioni su come creare Universal Windows Platform apps in C++, vedere [app di Guida di orientamento per Windows Runtime in C++](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
-
 C + + / CLI estende lo standard ISO/ANSI C++ e viene definita in Ecma C + c++ /CLI della riga di comando Standard. Per altre informazioni, vedere [programmazione .NET con c++ /CLI CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+
+C + + / le estensioni CX sono un subset di C + + c++ /CLI CLI. Sebbene la sintassi dell'estensione è identica nella maggior parte dei casi, il codice generato dipende dal fatto che vengano specificati i `/ZW` opzione del compilatore per piattaforma UWP, destinazione o `/clr` possibilità destinati a .NET. Queste opzioni vengono impostate automaticamente quando si usa Visual Studio per creare un progetto.
 
 ## <a name="data-type-keywords"></a>Parole chiave del tipo di dati
 
-Includono le estensioni del linguaggio *aggrega le parole chiave*, che sono parole chiave costituite da due token separati da spazi vuoti. I token hanno un significato quando vengono usati separatamente e un altro significato quando vengono usati insieme. Ad esempio, la parola "ref" è un identificatore standard e la parola "class" è una parola chiave che dichiara una classe nativa. Ma quando queste parole vengono combinate per formare **classe di riferimento**, la parola chiave aggregata risultante dichiara un'entità che è noto come una *classe runtime*.
+Includono le estensioni del linguaggio *aggrega le parole chiave*, costituite da due token separati da spazi vuoti. I token hanno un significato quando vengono usati separatamente e un altro significato quando vengono usati insieme. Ad esempio, la parola "ref" è un identificatore standard e la parola "class" è una parola chiave che dichiara una classe nativa. Ma quando queste parole vengono combinate per formare **classe di riferimento**, la parola chiave aggregata risultante dichiara un'entità che è noto come una *classe runtime*.
 
 Le estensioni includono inoltre *sensibile al contesto* parole chiave. Una parola chiave viene considerata come sensibile al contesto in base al tipo di istruzione che la contiene e alla relativa posizione nell'istruzione. Ad esempio, il token "property" può essere un identificatore o può dichiarare un tipo speciale di membro di classe pubblica.
 
@@ -53,7 +54,7 @@ Nella tabella seguente sono elencate le parole chiave nell'estensione del lingua
 |**classe di interfaccia**<br /><br /> **struct di interfaccia**|No|Dichiara un'interfaccia.|[classe di interfaccia](../windows/interface-class-cpp-component-extensions.md)|
 |**classe di enumerazione**<br /><br /> **enum struct**|No|Dichiara un'enumerazione.|[classe di enumerazione](../windows/enum-class-cpp-component-extensions.md)|
 |**proprietà**|Yes|Dichiara una proprietà.|[proprietà](../windows/property-cpp-component-extensions.md)|
-|**delegate**|Yes|Dichiara un delegato.|[delegate  (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|Yes|Dichiara un delegato.|[delegare (C + c++ /CLI e c++ /CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Yes|Dichiara un evento.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Identificatori di override
@@ -87,7 +88,7 @@ Le parole chiave seguenti sono state aggiunte alle estensioni di C++.
 |**gcnew**|No|Alloca tipi sull'heap sottoposto a Garbage Collection. Usare invece **nuove** e **eliminare**.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**nuovo riferimento**|Yes|Alloca un tipo Windows Runtime. Usare invece **nuove** e **eliminare**.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Yes|Indica che un membro può essere inizializzato solo in fase di dichiarazione o in un costruttore statico.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**valore letterale**|Yes|Crea una variabile letterale.|[valore letterale](../windows/literal-cpp-component-extensions.md)|
+|**literal**|Yes|Crea una variabile letterale.|[literal](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|No|Indica che un handle o un puntatore non punta a un oggetto.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Costrutti di modello
@@ -96,7 +97,7 @@ I seguenti costrutti di linguaggio vengono implementati come modelli, anziché c
 
 |Parola chiave|Scopo|Riferimenti|
 |-------------|-------------|---------------|
-|**array**|Dichiara una matrice.|[Array](../windows/arrays-cpp-component-extensions.md)|
+|**array**|Dichiara una matrice.|[Matrici](../windows/arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(Solo CLR) Punta ai dati in un tipo riferimento.|[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)|
 |**pin_ptr**|(Solo CLR) Punta a tipi riferimento CLR per evitare temporaneamente il sistema di Garbage Collection.|[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)|
 |**safe_cast**|Determina ed esegue il metodo di cast ottimale per un tipo di runtime.|[safe_cast](../windows/safe-cast-cpp-component-extensions.md)|

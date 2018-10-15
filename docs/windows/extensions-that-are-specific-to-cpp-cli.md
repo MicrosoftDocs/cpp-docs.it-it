@@ -1,7 +1,7 @@
 ---
 title: Estensioni specifiche per C + + CLI | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,15 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4a2b0c631c4356bed7ff190c2867a8540b57526
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bb6b1738b0eecbfd4e97171d2a9faea2d9b6005
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444658"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327765"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>Estensioni specifiche di C++/CLI
-Le seguenti funzionalità del linguaggio, che sono illustrate in questa sezione della documentazione, si applicano solo a C + + / CLI.
+
+Le funzionalità del linguaggio seguenti si applicano solo a C + + / CLI:
   
 [__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)  
   
@@ -37,4 +38,4 @@ Le seguenti funzionalità del linguaggio, che sono illustrate in questa sezione 
   
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: Rilevamento di operatore di riferimento (estensioni del componente C++) | Microsoft Docs
+title: Operatore di riferimento di rilevamento (C + c++ /CLI e c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da01a2dd7e871bb555b2b5711a59dbb5e65424a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ea8cec7a3cc2e24c55c9f8454b421f5488f1c89
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604076"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327921"
 ---
-# <a name="tracking-reference-operator-c-component-extensions"></a>Operatore di riferimento di rilevamento (Estensioni del componente C++)
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>Operatore di riferimento di rilevamento (C + c++ /CLI e c++ /CX)
 
 Oggetto *riferimento di rilevamento* (`%`) si comporta come un riferimento ordinario C++ (`&`) ad eccezione del fatto che quando un oggetto viene assegnato a un riferimento di traccia, conteggio dei riferimenti dell'oggetto viene incrementato.
 

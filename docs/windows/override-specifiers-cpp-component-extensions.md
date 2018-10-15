@@ -1,7 +1,7 @@
 ---
-title: Eseguire l'override di identificatori (estensioni del componente C++) | Microsoft Docs
+title: Identificatori di override (C + c++ /CLI e c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcbc46ea12dd053c0c0cf5066173ea2a28857452
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0620bc7045dcb312667cfdfe670e1f19b0545cf2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316120"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327464"
 ---
-# <a name="override-specifiers--c-component-extensions"></a>Identificatori di override (Estensioni del componente C++)
+# <a name="override-specifiers--ccli-and-ccx"></a>Identificatori di override (C + c++ /CLI e c++ /CX)
 
 *Identificatori di override* modificare tipi come ereditati e i membri di tipi ereditati si comportano nei tipi derivati.
 
@@ -65,4 +65,4 @@ Opzione del compilatore: `/clr`
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b305e928fec58833c4aac3f5625783aa2cb9ef
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 431ca9e88e644bd7a7c38f9ab4a1c3faeab6f9bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791989"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328402"
 ---
 # <a name="attributes-alphabetical-reference"></a>Riferimento alfabetico agli attributi
 
-Gli attributi seguenti sono disponibili in Visual C++.
+Gli attributi seguenti sono disponibili nel compilatore Microsoft C++:
 
 |Attributo|Descrizione|
 |---------------|-----------------|
@@ -39,7 +39,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[call_as](call-as.md)|Consente a una funzione non utilizzabili in remoto per eseguire il mapping a una funzione remota.|
 |[case](case-cpp.md)|Utilizzato con il [switch_type](switch-type.md) attributo in un'unione.|
 |[coclass](coclass.md)|Crea un oggetto COM, che è possibile implementare un'interfaccia COM.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Aggiunge una voce di interfaccia a una mappa COM.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Aggiunge una voce di interfaccia a una mappa COM.|
 |[control](control.md)|Specifica che il tipo definito dall'utente è un controllo.|
 |[cpp_quote](cpp-quote.md)|Genera la stringa specificata, senza i caratteri virgoletta, nel file di intestazione generato.|
 |[custom](custom-cpp.md)|Consente di definire attributi personalizzati.|
@@ -73,7 +73,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[idl_quote](idl-quote.md)|Consente di usare gli attributi o IDL costrutti che non sono supportati nella versione corrente di Visual C++.|
 |[iid_is](iid-is.md)|Specifica l'IID dell'interfaccia COM a cui punta un puntatore a interfaccia.|
 |[immediatebind](immediatebind.md)|Indica che il database verrà immediatamente notificato tutte le modifiche apportate a una proprietà di un oggetto con associazione a dati.|
-|[Implementa](implements-cpp.md)|Specifica le interfacce dispatch che vengono forzate per essere membri della coclasse IDL.|
+|[implements](implements-cpp.md)|Specifica le interfacce dispatch che vengono forzate per essere membri della coclasse IDL.|
 |[implements_category](implements-category.md)|Specifica le categorie di componenti implementate per la classe.|
 |[import](import.md)|Specifica un altro file con estensione idl o ODL intestazione che contiene le definizioni che si desidera fare riferimento dal file con estensione idl principale.|
 |[importidl](importidl.md)|Inserisce il file con estensione idl specificato nel file con estensione IDL generato.|
@@ -88,7 +88,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[licensed](licensed.md)|Indica che la coclasse al quale viene applicato è concesso in licenza e deve essere implementata con `IClassFactory2`.|
 |[local](local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione quando usato nell'intestazione dell'interfaccia. Se usato in una singola funzione, designa una procedura locale per cui non gli stub vengono generati.|
 |[max_is](max-is.md)|Definisce il valore massimo per un indice di matrice valida.|
-|[modulo](module-cpp.md)|Definisce il blocco di libreria nel file IDL.|
+|[module](module-cpp.md)|Definisce il blocco di libreria nel file IDL.|
 |[ms_union](ms-union.md)|Controlla l'allineamento di rappresentazione dei dati di rete di unioni nonencapsulated.|
 |[no_injected_text](no-injected-text.md)|Impedisce al compilatore di inserire codice in seguito a uso dell'attributo.|
 |[nonbrowsable](nonbrowsable.md)|Indica che un membro di interfaccia non deve essere visualizzato in un visualizzatore proprietà.|
@@ -97,7 +97,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[object](object-cpp.md)|Identifica un'interfaccia personalizzata. sinonimo di attributo personalizzato.|
 |[odl](odl.md)|Identifica un'interfaccia come interfaccia oggetto Description Language (ODL).|
 |[oleautomation](oleautomation.md)|Indica che un'interfaccia è compatibile con l'automazione.|
-|[Facoltativo](optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
+|[optional](optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
 |[out](out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|
 |[pointer_default](pointer-default.md)|Specifica l'attributo di puntatore predefinite per tutti i puntatori ad eccezione dei puntatori di primo livello che vengono visualizzati nell'elenco di parametri.|
 |[pragma](pragma.md)|Genera la stringa specificata, senza i caratteri virgoletta, nel file con estensione IDL generato.|
@@ -107,7 +107,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[propputref](propputref.md)|Specifica una funzione di impostazione di proprietà che utilizza un riferimento anziché un valore.|
 |[ptr](ptr.md)|Definisce un puntatore come puntatore completo.|
 |[public](public-cpp-attributes.md)|Assicura che un typedef entra in libreria dei tipi anche se non è presente all'interno del file con estensione idl.|
-|[Intervallo](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
+|[range](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
 |[rdx](rdx.md)|Crea o modifica una chiave del Registro di sistema.|
 |[readonly](readonly-cpp.md)|Non consente l'assegnazione a una variabile.|
 |[ref](ref-cpp.md)|Identifica un puntatore di riferimento.|
@@ -124,7 +124,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[switch_is](switch-is.md)|Specifica l'espressione o un identificatore che agisce come l'unione discriminante che consente di selezionare il membro dell'unione.|
 |[switch_type](switch-type.md)|Identifica il tipo della variabile utilizzata come l'unione discriminante.|
 |[synchronize](synchronize.md)|Sincronizza l'accesso a un metodo.|
-|[Threading](threading-cpp.md)|Specifica il modello di threading per un oggetto COM.|
+|[threading](threading-cpp.md)|Specifica il modello di threading per un oggetto COM.|
 |[transmit_as](transmit-as.md)|Indica al compilatore di associare un tipo presentato, modificano le applicazioni client e server, con un tipo trasmesso.|
 |[uidefault](uidefault.md)|Indica che il membro delle informazioni sul tipo è il membro predefinito per la visualizzazione nell'interfaccia utente.|
 |[unique](unique-cpp.md)|Specifica un puntatore univoco.|

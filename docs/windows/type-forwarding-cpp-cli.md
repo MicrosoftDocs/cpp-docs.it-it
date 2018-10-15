@@ -1,7 +1,7 @@
 ---
 title: Inoltro del tipo (C + + CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396551"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328337"
 ---
 # <a name="type-forwarding-ccli"></a>Inoltro del tipo (C++/CLI)
 
 *Inoltro del tipo* consente di spostare un tipo da un assembly (assembly A) in un altro assembly (assembly B), in modo che non è necessario ricompilare i client che usano assembly A.
 
-## <a name="all-platforms"></a>Tutte le piattaforme
-
-Questa funzionalità non è supportata in tutti i Runtime.
-
 ## <a name="windows-runtime"></a>Windows Runtime
 
 Questa funzionalità non è supportata in Windows Runtime.
-
-### <a name="requirements"></a>Requisiti
-
-Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -44,7 +36,7 @@ Esempio di codice seguente viene illustrato come usare l'inoltro dei tipi.
 
 ### <a name="syntax"></a>Sintassi
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
@@ -97,7 +89,7 @@ Pertanto, se un file di codice sorgente utilizzato per compilare assembly DLL co
 
 3. Eliminare il `MyClass` digitare definizione dal codice sorgente utilizzato per creare DLL e sostituirlo con quanto segue:
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

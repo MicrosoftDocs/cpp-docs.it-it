@@ -1,7 +1,7 @@
 ---
-title: nullptr (estensioni del componente C++) | Microsoft Docs
+title: nullptr (C + c++ /CLI e c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0596276589790ee6fae8e071e50b4d9b55dd8b85
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46a68e3ab7119dfb2c99578f299b9d38cbc5736d
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439614"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328493"
 ---
-# <a name="nullptr--c-component-extensions"></a>nullptr (Estensioni del componente C++)
+# <a name="nullptr--ccli-and-ccx"></a>nullptr (C + c++ /CLI e c++ /CX)
 
 Il **nullptr** parola chiave rappresenta un *valore puntatore null*. Usare un valore del puntatore null per indicare che un handle di oggetto, puntatore interno o al tipo di puntatore nativo non punta a un oggetto.
 
@@ -235,5 +235,5 @@ L'opzione del compilatore: (non obbligatorio, supportato da tutte le opzioni di 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

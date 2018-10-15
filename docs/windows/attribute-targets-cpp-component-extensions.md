@@ -1,7 +1,7 @@
 ---
-title: Attributo di destinazioni (estensioni del componente C++) | Microsoft Docs
+title: Attributo destinazioni (C + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589416"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327780"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>Destinazioni degli attributi (Estensioni del componente C++)
+# <a name="attribute-targets-ccli-and-ccx"></a>Attributo destinazioni (C + c++ /CLI e c++ /CLI CX)
 
 Gli specificatori di utilizzo degli attributi consentono di specificare le destinazioni degli attributi.  Ogni attributo viene definito per essere applicato a determinati elementi del linguaggio. Ad esempio, un attributo potrebbe essere definito per essere applicato solo alle classi e agli struct.  Nell'elenco seguente vengono mostrati i possibili elementi sintattici per cui può essere utilizzato un attributo personalizzato. È possibile utilizzare combinazioni di questi valori (tramite l'OR logico).
 

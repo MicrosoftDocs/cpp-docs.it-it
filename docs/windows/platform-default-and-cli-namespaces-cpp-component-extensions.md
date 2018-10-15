@@ -1,7 +1,7 @@
 ---
-title: Platform, default e cli (estensioni del componente C++) gli spazi dei nomi | Microsoft Docs
+title: Platform, default e cli gli spazi dei nomi (C + c++ /CLI e c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194649"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328025"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Spazi dei nomi Platform, default e cli (Estensioni del componente C++)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platform, default e cli gli spazi dei nomi (C + c++ /CLI e c++ /CX)
 
 Uno spazio dei nomi qualifica i nomi di un elemento del linguaggio in modo che i nomi non siano in conflitto con nomi identici nel codice sorgente. Ad esempio, un conflitto di nomi può impedire al compilatore riconoscere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md). Gli spazi dei nomi vengono utilizzati dal compilatore, ma non vengono mantenuti nell'assembly compilato.
 
 ## <a name="all-runtimes"></a>Tutti i runtime
 
-Quando si creare un progetto, in Visual C++ è disponibile uno spazio dei nomi predefinito per il progetto stesso. È possibile rinominare manualmente lo spazio dei nomi, anche se in Windows Runtime il nome del file con estensione winmd deve corrispondere al nome dello spazio dei nomi radice.
+Visual Studio offre uno spazio dei nomi predefinito per il progetto quando si crea il progetto. È possibile rinominare manualmente lo spazio dei nomi, anche se in C + + c++ /CX il nome del file con estensione winmd deve corrispondere al nome dello spazio dei nomi radice.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -56,7 +56,7 @@ C + + / CLI supporta il **cli** dello spazio dei nomi. Durante la compilazione c
 
 Le seguenti funzionalità del linguaggio sono nel **cli** dello spazio dei nomi:
 
-- [Array](../windows/arrays-cpp-component-extensions.md)
+- [Matrici](../windows/arrays-cpp-component-extensions.md)
 
 - [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)
