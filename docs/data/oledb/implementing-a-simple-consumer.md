@@ -1,7 +1,7 @@
 ---
 title: Implementazione di un Consumer semplice | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b407af3e6c105bdbb2f8d91aa9d854e6d877592c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162295"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410694"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementazione di un consumer semplice
 
@@ -211,75 +211,6 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
     ```  
   
 Per altre informazioni sui segnalibri, vedere [mediante segnalibri](../../data/oledb/using-bookmarks.md). Sono inoltre riportati alcuni esempi di segnalibri nel [aggiornamento dei rowset](../../data/oledb/updating-rowsets.md).  
-  
-## <a name="adding-xml-support-to-the-consumer"></a>Aggiunta del supporto XML per il Consumer  
-
-Come descritto in [l'accesso ai dati XML](../../data/oledb/accessing-xml-data.md), esistono due modi per recuperare i dati XML da un'origine dati: uso [CStreamRowset](../../data/oledb/cstreamrowset-class.md) o usando [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Questo esempio Usa `CStreamRowset`, che risulta più efficiente, ma è necessario avere SQL Server 2000 in esecuzione nel computer in cui si esegue questa applicazione di esempio.  
-  
-### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Modificare la classe di comando da cui ereditare CStreamRowset  
-  
-1. Nell'applicazione consumer creato in precedenza, modificare il `CCommand` dichiarazione specificare `CStreamRowset` come classe di rowset come indicato di seguito:  
-  
-    ```cpp  
-    class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
-    ```  
-  
-### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Per modificare il codice principale per recuperare e visualizzare i dati XML  
-  
-1. File MyCons. cpp dell'applicazione console creata in precedenza, modificare il codice principale come segue:  
-  
-    ```cpp  
-    ///////////////////////////////////////////////////////////////////////  
-    // MyCons.cpp : Defines the entry point for the console application.  
-    //  
-  
-    #include "stdafx.h"  
-    #include "Products.h"   
-    #include <iostream>  
-    #include <fstream>  
-    using namespace std;  
-  
-    int _tmain(int argc, _TCHAR* argv[])  
-    {  
-       HRESULT hr = CoInitialize(NULL);  
-  
-       // Instantiate rowset  
-       CProducts rs;  
-  
-       // Add variable declarations for the Read method to handle sequential stream data  
-       CHAR buffer[1001];  // Pointer to buffer into which data stream is read  
-       ULONG cbRead;       // Actual number of bytes read from the data stream  
-  
-       hr = rs.OpenAll();  
-  
-       // Open file output.txt for writing in overwrite mode  
-       ofstream outfile( "C:\\output.txt", ios::out );  
-  
-       if (!outfile)      // Test for invalid file  
-          return -1;  
-  
-       // The following loop reads 1000 bytes of the data stream at a time   
-       // until it reaches the end of the data stream  
-       for (;;)  
-       {  
-          // Read sequential stream data into buffer  
-          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
-          if (FAILED (hr))  
-             break;  
-          // Output buffer to file  
-          buffer[cbRead] = 0;  
-          outfile << buffer;  
-          // Test for end of data stream  
-          if (cbRead < 1000)  
-             break;  
-       }  
-  
-       rs.CloseAll();  
-       CoUninitialize();  
-  
-       return 0;  
-    }  
-    ```  
   
 ## <a name="see-also"></a>Vedere anche  
 

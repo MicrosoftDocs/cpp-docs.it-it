@@ -1,7 +1,7 @@
 ---
 title: Creazione di un Provider | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/15/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1063b3418df0c9dd45848ea71cdd7717c2dd1427
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 0dbdf7350eeba1a29392bafc2f099a857e212e37
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48859588"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410746"
 ---
 # <a name="creating-the-provider"></a>Creazione di un provider
 
-#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Per creare un provider OLE DB con la creazione guidata Provider OLE DB ATL
+## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Per creare un provider OLE DB con la creazione guidata Provider OLE DB ATL
 
 1. Fare clic sul progetto.
 
 1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **Aggiungi classe**.
 
-1. Nel **Aggiungi classe** finestra di dialogo, seleziona la **Provider OLE DB ATL** icona e quindi fare clic su **Open**.
+1. Nel **Aggiungi classe** nella finestra di dialogo **installati** > **Visual C++** > **ATL**, selezionare il **Provider OLE DB ATL** icona e quindi fare clic su **Open**.
 
-1. Nella creazione guidata Provider OLE DB ATL, immettere un nome breve per il provider nel **nome breve** casella. Gli argomenti seguenti usano il nome breve "MyProvider", ma è possibile usare un altro nome. Le altre caselle Nome popolano in base al nome specificato.
+1. Nel **Creazione guidata Provider OLE DB ATL**, immettere un nome breve per il provider nel **nome breve** casella. Gli argomenti seguenti usano il nome breve "MyProvider", ma è possibile usare un altro nome. Le altre caselle Nome popolano in base al nome specificato.
 
 1. Modificare le altre caselle di nome, se necessario. Oltre ai nomi oggetto e il file, è possibile modificare quanto segue:
 

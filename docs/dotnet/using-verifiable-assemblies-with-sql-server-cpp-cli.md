@@ -1,7 +1,7 @@
 ---
 title: Uso di assembly verificabili con SQL Server (C + + CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382219"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410707"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizzo di assembly verificabili con SQL Server (C++/CLI)
 
@@ -32,9 +32,10 @@ SQL Server fornisce le estensioni di Transact-SQL (T-SQL) per consentire l'insta
 
 - Modalità non limitata: eseguire il codice a proprio rischio; codice non deve essere indipendente dai tipi verificabile.
 
-- Modalità provvisoria: eseguire effettivamente il codice indipendente dai tipi. compilato con /CLR: safe.
+- Modalità provvisoria: eseguire effettivamente il codice indipendente dai tipi. compilato con /CLR: safe. 
 
-Modalità provvisoria richiede gli assembly eseguiti da effettivamente indipendente dai tipi.
+> [!IMPORTANT]
+> Deprecato di Visual Studio 2015 e Visual Studio 2017 non supporta il **/clr: pure** e **/CLR: safe** la creazione di progetti verificabile. Se è necessario codice verificabile, è consigliabile che si tradurre il codice in c#.
 
 Per creare e caricare un assembly verificabile in SQL Server, usare i comandi Transact-SQL CREATE ASSEMBLY e DROP ASSEMBLY come indicato di seguito:
 
@@ -88,5 +89,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 
 ## <a name="see-also"></a>Vedere anche
 
-[Procedura: migrare a /CLR: safe (C + + / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
+
 [Classi e struct](../cpp/classes-and-structs-cpp.md)

@@ -1,7 +1,7 @@
 ---
 title: Creazione di un Consumer senza utilizzare una procedura guidata | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a20abb132d0446874b099119dc6c54979aef4638
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023592"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410733"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Creazione di un consumer senza utilizzare una procedura guidata
 
@@ -28,7 +28,7 @@ Nell'esempio seguente si presuppone che si aggiunge il supporto di consumer OLE 
   
 Per aggiungere supporto OLE DB consumer senza utilizzare la creazione guidata Consumer OLE DB ATL:  
   
-- Nel file stdafx. h, aggiungere il codice seguente `#include` istruzioni:  
+- Nel file pch. h, aggiungere il codice seguente `#include` istruzioni:  
   
     ```cpp  
     #include <atlbase.h>  
@@ -38,10 +38,10 @@ Per aggiungere supporto OLE DB consumer senza utilizzare la creazione guidata Co
   
 Un consumer a livello di codice, in genere esegue la sequenza delle operazioni seguente:  
   
-- Creare una classe di record utente che associa le colonne a variabili locali. In questo esempio `CMyTableNameAccessor` è la classe di record utente (vedere [record utente](../../data/oledb/user-records.md)). Questa classe contiene la mappa delle colonne e una mappa dei parametri. Dichiara un membro dati della classe di record utente per ogni campo specificato nella mappa delle colonne. per ognuno di questi membri dati, anche dichiarare un membro dati di stato e un membro dati di lunghezza. Per altre informazioni, vedere [membri dati di stato dei campi in funzioni di accesso generate dalla creazione guidata](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+1. Creare una classe di record utente che associa le colonne a variabili locali. In questo esempio `CMyTableNameAccessor` è la classe di record utente (vedere [record utente](../../data/oledb/user-records.md)). Questa classe contiene la mappa delle colonne e una mappa dei parametri. Dichiara un membro dati della classe di record utente per ogni campo specificato nella mappa delle colonne. per ognuno di questi membri dati, anche dichiarare un membro dati di stato e un membro dati di lunghezza. Per altre informazioni, vedere [membri dati di stato dei campi in funzioni di accesso generate dalla creazione guidata](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
-    >  Se si crea un consumer personalizzato, le variabili di dati devono precedere le variabili di stato e lunghezza.  
+    > Se si crea un consumer personalizzato, le variabili di dati devono precedere le variabili di stato e lunghezza.  
   
 - Creare un'istanza di un'origine dati e una sessione. Decidere quale tipo di funzione di accesso e set di righe da usare e quindi creare un'istanza di un set di righe utilizzando [CCommand](../../data/oledb/ccommand-class.md) oppure [CTable](../../data/oledb/ctable-class.md):  
   
@@ -67,7 +67,7 @@ Un consumer a livello di codice, in genere esegue la sequenza delle operazioni s
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- Facoltativamente, set di proprietà set di righe utilizzando `CDBPropSet::AddProperty` e passarli come parametro al `rs.Open`. Per un esempio di questa procedura, vedere in GetRowsetProperties [riguardano metodi](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Facoltativamente, set di proprietà set di righe utilizzando `CDBPropSet::AddProperty` e passarli come parametro al `rs.Open`. Per un esempio di questa procedura, vedere **GetRowsetProperties** nelle [riguardano metodi](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - È ora possibile usare il set di righe per recuperare o modificare i dati.  
   
@@ -83,7 +83,7 @@ Un consumer a livello di codice, in genere esegue la sequenza delle operazioni s
   
 - Chiamare `CoUnInitialize` da non inizializzare COM. Si tratta in genere nel codice principale.  
   
-    ```  
+    ```cpp  
     CoUninitialize();  
     ```  
   

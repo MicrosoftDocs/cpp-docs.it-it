@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163120"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410811"
 ---
 # <a name="hstring-class"></a>Classe HString
 
-Classe helper per la gestione della durata di HSTRING adottando il modello RAII.
+Classe helper per la gestione della durata di un' [HSTRING](/windows/desktop/WinRT/hstring) adottando il modello RAII.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>Note
 
-Il Runtime di Windows fornisce accesso alle stringhe attraverso handle di HSTRING. Il `HString` classe fornisce funzioni comode e operatori per semplificare l'uso di handle di HSTRING. Questa classe può gestire la durata della sua proprietà tramite un modello RAII HSTRING.
+Il Runtime di Windows fornisce l'accesso alle stringhe attraverso [HSTRING](/windows/desktop/WinRT/hstring) gli handle. Il `HString` classe fornisce funzioni comode e operatori per semplificare l'uso di handle di HSTRING. Questa classe può gestire la durata della sua proprietà tramite un modello RAII HSTRING.
 
 ## <a name="members"></a>Membri
 
