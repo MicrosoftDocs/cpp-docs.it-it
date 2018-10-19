@@ -1,13 +1,14 @@
 ---
 title: -Ox (Abilita la maggior parte delle ottimizzazioni della velocità) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
-- /ox
+- /Ox
+- /Oxs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1da84c3a4ec481d3af2880a80f5923bf0c50cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3f5a39201283567285b37a0901929022b688104
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438080"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459166"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (Abilita la maggior parte delle ottimizzazioni della velocità)
 
@@ -33,7 +34,7 @@ Il **/Ox** opzione del compilatore consente una combinazione di ottimizzazioni c
 
 ## <a name="syntax"></a>Sintassi
 
-> /Ox
+> **/Ox**
 
 ## <a name="remarks"></a>Note
 
@@ -59,7 +60,7 @@ Il **/Ox** opzione del compilatore è equivale a usare le opzioni seguenti in co
 
 - [/Od (disabilita (debug))](../../build/reference/od-disable-debug.md)
 
-È possibile annullare la distorsione verso velocità dei **/Ox** se si specifica l'opzione del compilatore **/Oxs.**, che combina il **/Ox** con l'opzione del compilatore [/Os (Ottimizza per dimensione piccola Il codice)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Le opzioni combinate favorire la riduzione delle dimensioni del codice.
+È possibile annullare la distorsione verso velocità dei **/Ox** se si specifica l'opzione del compilatore **/Oxs.**, che combina il **/Ox** con l'opzione del compilatore [/Os (Ottimizza per dimensione piccola Il codice)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Le opzioni combinate favorire la riduzione delle dimensioni del codice.  Il **/Oxs.** opzione è esattamente lo stesso effetto **/Ox** **/Os** quando le opzioni vengono visualizzate nell'ordine indicato.
 
 Per applicare tutte le ottimizzazioni a livello di file disponibili nelle build di rilascio, è consigliabile specificare [/O2 (Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) anziché **/Ox**, e [/O1 (Riduci dimensione)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) invece di **/Oxs**. Per le compilazioni di ottimizzazione ancora più in versione, considerare anche il [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore e [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md) l'opzione del linker.
 
