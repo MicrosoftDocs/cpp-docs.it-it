@@ -1,7 +1,7 @@
 ---
 title: I file generati dalla procedura guidata del provider | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 26e20e0417e2253158930a8d3d055171fe767001
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f22c5e21d1f648a8235207713391306b24e0a6cf
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108404"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807290"
 ---
 # <a name="provider-wizard-generated-files"></a>File del provider generati tramite procedura guidata
 
-La creazione guidata Provider OLE DB ATL genera i file seguenti. Gli argomenti seguenti usano il nome breve "MyProvider", ma i nomi esatti del file dipendono dalle scelte effettuate durante la creazione del provider.  
+La creazione guidata Provider OLE DB ATL genera i file seguenti. Gli argomenti seguenti usano il nome abbreviato *Custom*, ma i nomi esatti del file dipendono dalle scelte effettuate durante la creazione del provider.  
   
 |Nome file|Descrizione|  
 |---------------|-----------------|  
-|MyProviderRS.cpp|Contiene l'helper comando `Execute` metodo e la mappa delle colonne del provider.|  
-|MyProviderDS.h|Implementa l'oggetto origine dati. Questo file di intestazione contiene il mapping di proprietà dell'origine dati.|  
-|MyProviderRS.h|Implementa gli oggetti comando e set di righe. Questo file di intestazione contiene il mapping di proprietà per proprietà rowset e comando.|  
-|MyProviderSess.h|Implementa l'oggetto sessione. Questo file di intestazione contiene il mapping di proprietà per proprietà della sessione.|  
-|MyProvider.rgs|Contiene gli oggetti registrati generati dalla creazione guidata Provider OLE DB.|  
+|*Custom*RS.cpp|Contiene l'helper comando `Execute` metodo e la mappa delle colonne del provider.|  
+|*Custom*DS.h|Implementa l'oggetto origine dati. Questo file di intestazione contiene il mapping di proprietà dell'origine dati.|  
+|*Custom*RS|Implementa gli oggetti comando e set di righe. Questo file di intestazione contiene il mapping di proprietà per proprietà rowset e comando.|  
+|*Custom*Sess.h|Implementa l'oggetto sessione. Questo file di intestazione contiene il mapping di proprietà per proprietà della sessione.|  
+|*Custom*RGS|Contiene gli oggetti registrati generati dalla creazione guidata Provider OLE DB.|  
   
 ## <a name="see-also"></a>Vedere anche  
 

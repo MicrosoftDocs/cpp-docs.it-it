@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448428"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809161"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Data*  
+*Data*<br/>
 L'oggetto `COleDateTime` da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -210,22 +210,22 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*dateSrc*  
+*dateSrc*<br/>
 Un oggetto esistente `COleDateTime` da copiare nel nuovo oggetto `COleDateTime` oggetto.
 
-*varSrc*  
+*varSrc*<br/>
 Un oggetto esistente `VARIANT` struttura di data (probabilmente un `COleVariant` oggetto) per essere convertito in un valore data/ora (VT_DATE) e copiare nel nuovo `COleDateTime` oggetto.
 
-*dtSrc*  
+*dtSrc*<br/>
 Una data/ora (`DATE`) valore da copiare nel nuovo `COleDateTime` oggetto.
 
-*timeSrc*  
+*timeSrc*<br/>
 Oggetto `time_t` oppure `__time64_t` valore convertito in un valore data/ora e copiarli nel nuovo `COleDateTime` oggetto.
 
-*systimeSrc*  
+*systimeSrc*<br/>
 Oggetto `SYSTEMTIME` struttura venga convertito in un valore data/ora e copiare nel nuovo `COleDateTime` oggetto.
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 Oggetto `FILETIME` struttura venga convertito in un valore data/ora e copiare nel nuovo `COleDateTime` oggetto. Si noti che `FILETIME` utilizza Coordinated Universal Time (UTC), pertanto se si passa la struttura di un'ora locale, i risultati saranno non corretti. Visualizzare [tempi File](/windows/desktop/SysInfo/file-times) nel SDK di Windows per altre informazioni.
 
 *nYear*, *nMonth*, *Ngiorno*, *nora*, *nMin*, *nSec*  
@@ -234,7 +234,7 @@ Indichi i valori di data e ora da copiare nel nuovo `COleDateTime` oggetto.
 *wDosDate*, *wDosTime*  
 Valori di data e ora di MS-DOS per essere convertito in un valore data/ora e copiare nel nuovo `COleDateTime` oggetto.
 
-*DBTS*  
+*DBTS*<br/>
 Un riferimento a un [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struttura che contiene l'ora locale corrente.
 
 ### <a name="remarks"></a>Note
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parametri
 
-*dwFlags*  
+*dwFlags*<br/>
 Indica uno dei flag delle impostazioni locali seguenti:
 
 - LOCALE_NOUSEROVERRIDE usare le impostazioni locali di sistema predefinito, anziché le impostazioni utente personalizzate.
@@ -306,10 +306,10 @@ Indica uno dei flag delle impostazioni locali seguenti:
 
 - VAR_DATEVALUEONLY ignorare la parte relativa all'ora durante l'analisi.
 
-*lcid*  
+*lcid*<br/>
 Indica l'ID delle impostazioni locali da usare per la conversione. Per altre informazioni sugli identificatori di lingua, vedere [identificatori di lingua](/windows/desktop/Intl/language-identifiers).
 
-*lpszFormat*  
+*lpszFormat*<br/>
 Formattazione di un stringa simile al `printf` stringa di formattazione. Ogni formattazione del codice, preceduto da una percentuale ( `%`) accesso, viene sostituito dal corrispondente `COleDateTime` componente. Altri caratteri nella stringa di formattazione vengono copiati senza modifiche alla stringa restituita. Vedere la funzione di runtime [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per altre informazioni. Il valore e il significato dei codici di formattazione per `Format` sono:
 
 - `%H` Ore del giorno corrente
@@ -320,7 +320,7 @@ Formattazione di un stringa simile al `printf` stringa di formattazione. Ogni fo
 
 - `%%` Segno di percentuale
 
-*nFormatID*  
+*nFormatID*<br/>
 L'ID di risorsa per la stringa di controllo del formato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*DBTS*  
+*DBTS*<br/>
 Un riferimento a un [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struttura.
 
 ### <a name="return-value"></a>Valore restituito
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*sysTime*  
+*sysTime*<br/>
 Un riferimento a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struttura per ricevere il valore di data/ora convertita dal `COleDateTime` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Update*  
+*Update*<br/>
 Un riferimento a un `UDATE` per ricevere il valore di data/ora convertita dalla struttura di `COleDateTime` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -938,10 +938,10 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*lpszDate*  
+*lpszDate*<br/>
 Puntatore alla stringa con terminazione null che deve essere analizzato. Per informazioni dettagliate, vedere la sezione Osservazioni.
 
-*dwFlags*  
+*dwFlags*<br/>
 Indica i flag per le impostazioni locali e l'analisi. Uno o più dei flag seguenti:
 
 - LOCALE_NOUSEROVERRIDE usare le impostazioni locali del sistema predefinito, anziché impostazioni utente personalizzate.
@@ -950,7 +950,7 @@ Indica i flag per le impostazioni locali e l'analisi. Uno o più dei flag seguen
 
 - VAR_DATEVALUEONLY ignorare la parte relativa all'ora durante l'analisi.
 
-*lcid*  
+*lcid*<br/>
 Indica l'ID delle impostazioni locali da usare per la conversione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*status*  
+*status*<br/>
 Il nuovo valore di stato per l'oggetto `COleDateTime` oggetto.
 
 ### <a name="remarks"></a>Note

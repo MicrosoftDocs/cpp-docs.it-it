@@ -1,7 +1,7 @@
 ---
 title: rename_namespace | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,37 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7608255b5369443ce1045f896b776cb283fdb1cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 966c6dda7e5e0bd28e78f37967397c3b64e4e55c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411859"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808472"
 ---
 # <a name="renamenamespace"></a>rename_namespace
-**Sezione specifica C++**  
-  
-Rinomina lo spazio dei nomi i cui è presente il contenuto della libreria dei tipi.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-rename_namespace("NewName")  
-```  
-  
-### <a name="parameters"></a>Parametri  
-*NewName*  
-Nuovo nome dello spazio dei nomi.  
-  
-## <a name="remarks"></a>Note  
- 
-È necessario un solo argomento, *NewName*, che consente di specificare il nuovo nome per lo spazio dei nomi.  
-  
-Per rimuovere lo spazio dei nomi, usare il [no_namespace](../preprocessor/no-namespace.md) invece dell'attributo.  
-  
-**Fine sezione specifica C++**  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+
+**Sezione specifica C++**
+
+Rinomina lo spazio dei nomi i cui è presente il contenuto della libreria dei tipi.
+
+## <a name="syntax"></a>Sintassi
+
+```
+rename_namespace("NewName")
+```
+
+### <a name="parameters"></a>Parametri
+
+*NewName*<br/>
+Nuovo nome dello spazio dei nomi.
+
+## <a name="remarks"></a>Note
+
+È necessario un solo argomento, *NewName*, che consente di specificare il nuovo nome per lo spazio dei nomi.
+
+Per rimuovere lo spazio dei nomi, usare il [no_namespace](../preprocessor/no-namespace.md) invece dell'attributo.
+
+**Fine sezione specifica C++**
+
+## <a name="see-also"></a>Vedere anche
+
 [attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

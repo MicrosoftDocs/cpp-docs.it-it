@@ -1,7 +1,7 @@
 ---
 title: 'TN041: Migrazione da MFC-OLE1 a MFC-OLE 2 | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75177743b893bdcf48b52b27c25ea4070e000f88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2f93ffa79c5f737be032ae9edffa6c3e49c7055
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377058"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809018"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: migrazione da MFC/OLE1 a MFC/OLE 2
 
@@ -301,7 +301,7 @@ A questo punto, OCLIENT è un'applicazione contenitore OLE funzionale. È possib
 
 Una delle funzionalità più interessanti di OLE è attivazione sul posto (o "Modifica visiva"). Questa funzionalità consente all'applicazione server di intervenire le parti dell'interfaccia utente del contenitore fornito un'interfaccia per la modifica più trasparente per l'utente. Per implementare l'attivazione sul posto a OCLIENT, alcune risorse speciali devono essere aggiunti, oltre a codice aggiuntivo. Queste risorse e il codice in genere vengono forniti dalla creazione guidata applicazioni, infatti, gran parte del codice in questo caso è stato preso in prestito direttamente da un'applicazione nuova creazione guidata applicazioni con supporto per i "Contenitori".
 
-Prima di tutto, è necessario aggiungere una risorsa di menu da utilizzare quando è presente un elemento che è attivo sul posto. Copia risorsa IDR_OCLITYPE e rimuovendo tutto tranne i File e finestra popup, è possibile creare questa risorsa di menu extra in Visual C++. Tra i File e finestra popup per indicare la separazione dei gruppi sono inserite due barre di separazione (sarà simile: File di &#124; &#124; finestra). Per altre informazioni sul significato di tali separatori e come vengono uniti i menu di server e il contenitore vedere "I menu e risorse: unione di Menu" nella *classi OLE 2*.
+Prima di tutto, è necessario aggiungere una risorsa di menu da utilizzare quando è presente un elemento che è attivo sul posto. Copia risorsa IDR_OCLITYPE e rimuovendo tutto tranne i File e finestra popup, è possibile creare questa risorsa di menu extra in Visual C++. Tra i File e finestra popup per indicare la separazione dei gruppi sono inserite due barre di separazione (sarà simile: File di &#124; &#124; finestra). Per altre informazioni sul significato di tali separatori e come vengono uniti i menu di server e un contenitore, vedere [menu e risorse: unione di Menu](../mfc/menus-and-resources-menu-merging.md).
 
 Dopo aver creato questi menu creati, è necessario che il framework di informazioni disponibili sugli utenti. Questa operazione viene eseguita chiamando `CDocTemplate::SetContainerInfo` per il modello di documento prima di aggiungerlo all'elenco di modelli di documento in InitInstance. Il nuovo codice per registrare il modello di documento è simile alla seguente:
 
@@ -618,7 +618,7 @@ Esistono più errori in svritem.cpp che non sono stati risolti. Non sono errori 
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` non supporta più il flag 'bIncludeNative'. I dati nativi (i dati scritti dalla funzione di serializzazione dell'elemento server) viene sempre copiati, quindi si rimuove il primo parametro. Inoltre, `CopyToClipboard` genererà un'eccezione quando si verifica un errore anziché restituire FALSE. Modificare il codice per CServerView::OnEditCopy come indicato di seguito:
+`COleServerItem::CopyToClipboard` non supporta più il `bIncludeNative` flag. I dati nativi (i dati scritti dalla funzione di serializzazione dell'elemento server) viene sempre copiati, quindi si rimuove il primo parametro. Inoltre, `CopyToClipboard` genererà un'eccezione quando si verifica un errore anziché restituire FALSE. Modificare il codice per CServerView::OnEditCopy come indicato di seguito:
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -654,7 +654,7 @@ Per aggiungere "Modifica visiva" (o attivazione sul posto) all'applicazione serv
 
 - È necessario indicare al framework su queste risorse speciali e classi.
 
-La risorsa di menu è possibile creare con facilità. Eseguire Visual C++, copiare la risorsa di menu IDR_HIERSVRTYPE a una risorsa di menu denominata IDR_HIERSVRTYPE_SRVR_IP. Modificare il menu di scelta in modo che solo il popup di menu Modifica e della Guida vengono lasciati. Aggiungere due separatori di menu tra i menu Modifica e la Guida (sarà simile: modificare &#124; &#124; Guida in linea). Per altre informazioni sul significato di tali separatori e come vengono uniti i menu di server e un contenitore, vedere "I menu e risorse: unione di Menu" nella *classi OLE 2*.
+La risorsa di menu è possibile creare con facilità. Eseguire Visual C++, copiare la risorsa di menu IDR_HIERSVRTYPE a una risorsa di menu denominata IDR_HIERSVRTYPE_SRVR_IP. Modificare il menu di scelta in modo che solo il popup di menu Modifica e della Guida vengono lasciati. Aggiungere due separatori di menu tra i menu Modifica e la Guida (sarà simile: modificare &#124; &#124; Guida in linea). Per altre informazioni sul significato di tali separatori e come vengono uniti i menu di server e un contenitore, vedere [menu e risorse: unione di Menu](../mfc/menus-and-resources-menu-merging.md).
 
 È possibile creare con facilità la bitmap della barra degli strumenti subset copiando quello di un'applicazione generata dalla creazione guidata applicazioni aggiornata con un'opzione "Server" selezionata. Questa bitmap può quindi essere importata in Visual C++. Assicurarsi di assegnare un ID di IDR_HIERSVRTYPE_SRVR_IP bitmap.
 
@@ -677,7 +677,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-Si noti che il riferimento a *`AfxGetApp()->m_pMainWnd*`. Quando il server è attivato sul posto, dispone di una finestra principale e m_pMainWnd è impostata, ma è in genere invisibile. Inoltre, fa riferimento questa finestra per la *principale* finestra dell'applicazione, aprire la finestra cornice MDI che viene visualizzato quando il server è completamente o eseguito in modalità autonoma. Non fa riferimento alla finestra frame attivo, ovvero quale quando posto attivato è una cornice di finestra derivato da `COleIPFrameWnd`. Per ottenere la finestra attiva corretta anche quando in modifica sul posto, questa versione di MFC aggiunge una nuova funzione, `AfxGetMainWnd`. In generale, è consigliabile usare questa funzione anziché *`AfxGetApp()->m_pMainWnd*`. Questo codice deve modificare come indicato di seguito:
+Si noti che il riferimento a `AfxGetApp()->m_pMainWnd`. Quando il server è attivato sul posto, dispone di una finestra principale e m_pMainWnd è impostata, ma è in genere invisibile. Inoltre, fa riferimento questa finestra per la *principale* finestra dell'applicazione, aprire la finestra cornice MDI che viene visualizzato quando il server è completamente o eseguito in modalità autonoma. Non fa riferimento alla finestra frame attivo, ovvero quale quando posto attivato è una cornice di finestra derivato da `COleIPFrameWnd`. Per ottenere la finestra attiva corretta anche quando in modifica sul posto, questa versione di MFC aggiunge una nuova funzione, `AfxGetMainWnd`. In generale, è consigliabile usare questa funzione anziché `AfxGetApp()->m_pMainWnd`. Questo codice deve modificare come indicato di seguito:
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,

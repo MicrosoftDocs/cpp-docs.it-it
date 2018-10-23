@@ -1,7 +1,7 @@
 ---
 title: high_method_prefix | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883f573100c31fab8cc0142d371f6a8a14f8783f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fb69b9fbb7ede0ca458007aec1bee2cf38e286f
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428720"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807718"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
-**Sezione specifica C++**  
-  
-Specifica un prefisso da utilizzare quando si assegna un nome alle proprietà e ai metodi di alto livello.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-high_method_prefix("Prefix")  
-```  
-  
-### <a name="parameters"></a>Parametri  
-*Prefix*  
-Prefisso da utilizzare.  
-  
-## <a name="remarks"></a>Note  
- 
-Per impostazione predefinita, le proprietà e i metodi di gestione degli errori di alto livello vengono esposti dalle funzioni membro denominate senza un prefisso. I nomi provengono dalla libreria dei tipi.  
-  
-**Fine sezione specifica C++**  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+
+**Sezione specifica C++**
+
+Specifica un prefisso da utilizzare quando si assegna un nome alle proprietà e ai metodi di alto livello.
+
+## <a name="syntax"></a>Sintassi
+
+```
+high_method_prefix("Prefix")
+```
+
+### <a name="parameters"></a>Parametri
+
+*Prefix*<br/>
+Prefisso da utilizzare.
+
+## <a name="remarks"></a>Note
+
+Per impostazione predefinita, le proprietà e i metodi di gestione degli errori di alto livello vengono esposti dalle funzioni membro denominate senza un prefisso. I nomi provengono dalla libreria dei tipi.
+
+**Fine sezione specifica C++**
+
+## <a name="see-also"></a>Vedere anche
+
 [attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

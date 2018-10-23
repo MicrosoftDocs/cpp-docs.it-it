@@ -1,7 +1,7 @@
 ---
 title: Classe Module | Microsoft Docs
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -53,12 +53,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa34cb8fce2854f4b3864629b86122bdfe6b35f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 5df7ae90a347d82b303d7db251e533733c8e4a86
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494530"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808630"
 ---
 # <a name="module-class"></a>Module (classe)
 
@@ -177,22 +177,22 @@ WRL_NOTHROW static Module& Create(
 template<typename T>
 WRL_NOTHROW static Module& Create(
    _In_ T* object,
-   _In_ void (T::* method)()  
+   _In_ void (T::* method)()
 );
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*T*  
+*T*<br/>
 Tipo di modulo.
 
-*callback*  
+*callback*<br/>
 Chiamato quando viene rilasciato l'ultimo oggetto istanza del modulo.
 
-*object*  
+*object*<br/>
 Il *oggetti* e *metodo* i parametri vengono utilizzati in combinazione. Punta all'ultimo oggetto dell'istanza quando viene rilasciato l'ultimo oggetto istanza del modulo.
 
-*(Metodo)*  
+*(Metodo)*<br/>
 Il *oggetti* e *metodo* i parametri vengono utilizzati in combinazione. Punta al metodo dell'oggetto dell'ultima istanza quando viene rilasciato l'ultimo oggetto istanza del modulo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -225,13 +225,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Parametri
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 IID di una classe di runtime.
 
-*ppIFactory*  
+*ppIFactory*<br/>
 IActivationFactory per la classe di runtime specificato.
 
-*ServerName*  
+*ServerName*<br/>
 Il nome di un subset di class factory nel modulo corrente. Specificare il nome del server usato nel [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) (macro), oppure specificare `nullptr` per ottenere il nome del server predefinito.
 
 ### <a name="return-value"></a>Valore restituito
@@ -253,16 +253,16 @@ Recupera una cache di class factory.
 
 ### <a name="parameters"></a>Parametri
 
-*clsid*  
+*clsid*<br/>
 ID della classe.
 
-*riid*  
+*riid*<br/>
 ID di interfaccia richiesto.
 
-*ppv*  
+*ppv*<br/>
 Puntatore all'oggetto restituito.
 
-*ServerName*  
+*ServerName*<br/>
 Il nome del server specificato in entrambi i `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, o `ActivatableClass` macro; o `nullptr` per ottenere il nome del server predefinito.
 
 ### <a name="return-value"></a>Valore restituito
@@ -344,19 +344,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Parametri
 
-*ServerName*  
+*ServerName*<br/>
 Nome completo di un server.
 
-*CLSID*  
+*CLSID*<br/>
 Matrice di CLSID da registrare.
 
-*factory*  
+*factory*<br/>
 Matrice di interfacce IUnknown degli oggetti classe cui disponibilità è in corso di pubblicazione.
 
-*Cookie*  
+*Cookie*<br/>
 Al termine dell'operazione, una matrice di puntatori ai valori che identificano la classe di oggetti che sono stati registrati. Questi valori vengono usati in un secondo momento revocare la registrazione.
 
-*count*  
+*count*<br/>
 Il numero di CLSID da registrare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -381,10 +381,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Parametri
 
-*modulo*  
+*module*<br/>
 Una matrice di oggetti COM o Windows Runtime.
 
-*ServerName*  
+*ServerName*<br/>
 Nome del server che ha creato gli oggetti.
 
 ### <a name="return-value"></a>Valore restituito
@@ -399,21 +399,21 @@ Registra uno o più oggetti di Windows Runtime in modo che altre applicazioni po
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
    wchar_t** activatableClassIds,
    WINRT_REGISTRATION_COOKIE* cookie,
-   unsigned int count)  
+   unsigned int count)
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*ServerName*  
+*ServerName*<br/>
 Un nome che specifichi un sottoinsieme degli oggetti interessati da questa operazione.
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 Matrice di attivabile CLSID da registrare.
 
-*Cookie*  
+*Cookie*<br/>
 Un valore che identifica gli oggetti della classe che sono stati registrati. Questo valore viene utilizzato in un secondo momento per revocare la registrazione.
 
-*count*  
+*count*<br/>
 Il numero di oggetti da registrare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -453,13 +453,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Parametri
 
-*ServerName*  
+*ServerName*<br/>
 (Non usato)
 
-*Cookie*  
+*Cookie*<br/>
 Matrice di puntatori a valori che identificano gli oggetti della classe per cui annullare la registrazione. La matrice è stata creata con il [RegisterCOMObject](#registercomobject) (metodo).
 
-*count*  
+*count*<br/>
 Il numero di classi per annullare la registrazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -478,10 +478,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Parametri
 
-*modulo*  
+*module*<br/>
 Puntatore a un modulo.
 
-*ServerName*  
+*ServerName*<br/>
 Nome originale che specifica un subset di oggetti interessati dall'operazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -501,5 +501,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Parametri
 
-*Cookie*  
+*Cookie*<br/>
 Puntatore a un valore che identifica l'oggetto di classe il cui registrazione viene revocato.

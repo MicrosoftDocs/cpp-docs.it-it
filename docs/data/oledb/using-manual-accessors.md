@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101644"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808927"
 ---
 # <a name="using-manual-accessors"></a>Utilizzo delle funzioni di accesso manuali
 
@@ -36,7 +36,7 @@ Esistono quattro cose da fare quando si gestisce un comando sconosciuto:
   
 - Verificare se esistono più set di righe restituito  
   
-Per eseguire questa operazione con i modelli Consumer OLE DB, usare il `CManualAccessor` classe e seguire questa procedura:  
+Per eseguire queste operazioni con i modelli Consumer OLE DB, usare il `CManualAccessor` classe e seguire questa procedura:  
   
 1. Aprire una `CCommand` dell'oggetto con `CManualAccessor` come parametro di modello.  
   

@@ -1,7 +1,7 @@
 ---
 title: raw_property_prefixes | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae69e26077692188b8e013e949592df26d7701a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1170440428a5c92e383152826827989d602e69fb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420400"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808745"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
-**Sezione specifica C++**  
-  
-Specifica i prefissi alternativi per tre metodi della proprietà.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
-```  
-  
-### <a name="parameters"></a>Parametri  
-*GetPrefix*  
-Prefisso da utilizzare per il `propget` metodi.  
-  
-*PutPrefix*  
-Prefisso da utilizzare per il `propput` metodi.  
-  
-*PutRefPrefix*  
-Prefisso da utilizzare per il `propputref` metodi.  
-  
-## <a name="remarks"></a>Note  
- 
-Per impostazione predefinita, a basso livello `propget`, `propput`, e `propputref` i metodi vengono esposti dalle funzioni membro denominate con il prefisso **get _**, **Put _**, e **PutRef_** rispettivamente. I prefissi sono compatibili con i nomi utilizzati nei file di intestazione generati da MIDL.  
-  
-**Fine sezione specifica C++**  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+
+**Sezione specifica C++**
+
+Specifica i prefissi alternativi per tre metodi della proprietà.
+
+## <a name="syntax"></a>Sintassi
+
+```
+raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
+```
+
+### <a name="parameters"></a>Parametri
+
+*GetPrefix*<br/>
+Prefisso da utilizzare per il `propget` metodi.
+
+*PutPrefix*<br/>
+Prefisso da utilizzare per il `propput` metodi.
+
+*PutRefPrefix*<br/>
+Prefisso da utilizzare per il `propputref` metodi.
+
+## <a name="remarks"></a>Note
+
+Per impostazione predefinita, a basso livello `propget`, `propput`, e `propputref` i metodi vengono esposti dalle funzioni membro denominate con il prefisso **get _**, **Put _**, e **PutRef_** rispettivamente. I prefissi sono compatibili con i nomi utilizzati nei file di intestazione generati da MIDL.
+
+**Fine sezione specifica C++**
+
+## <a name="see-also"></a>Vedere anche
+
 [attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

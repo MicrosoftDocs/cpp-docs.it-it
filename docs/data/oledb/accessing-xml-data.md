@@ -1,7 +1,7 @@
 ---
 title: Accesso ai dati XML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cfde3980e58ba86d6923eaac765332a23e40ad7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7db1d790ca9caeea6bd9c7853139f59ffa0ab6c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062501"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808719"
 ---
 # <a name="accessing-xml-data"></a>Accesso ai dati XML
 
@@ -53,7 +53,7 @@ oppure
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
-In genere quando si chiama `CCommand::Open` (specifica, ad esempio `CRowset` come la `TRowset` classe), ottiene un `IRowset` puntatore. `ICommand::Execute` Restituisce un `IRowset` puntatore che viene archiviato nel `m_spRowset` membro del `CRowset` oggetto. I metodi come `MoveFirst`, `MoveNext`, e `GetData` usare tale puntatore per il recupero dei dati.  
+In genere quando si chiama `CCommand::Open` (specifica, ad esempio, `CRowset` come la `TRowset` classe), ottiene un `IRowset` puntatore. `ICommand::Execute` Restituisce un `IRowset` puntatore che viene archiviato nel `m_spRowset` membro del `CRowset` oggetto. I metodi come `MoveFirst`, `MoveNext`, e `GetData` usare tale puntatore per il recupero dei dati.  
   
 Al contrario, quando si chiama `CCommand::Open` (ma specificano `CStreamRowset` come la `TRowset` classe), `ICommand::Execute` restituisce un `ISequentialStream` puntatore che viene archiviato nel `m_spStream` membro dati di [CStreamRowset](../../data/oledb/cstreamrowset-class.md). È quindi possibile usare il `Read` metodo per recuperare i dati (stringa Unicode) in formato XML. Ad esempio:  
   
@@ -66,7 +66,7 @@ SQL Server 2000 esegue la formattazione XML e restituisce tutte le colonne e tut
 Per indicazioni su come usare il `Read` metodo, vedere "Aggiunta del supporto XML al Consumer" nella [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md).  
   
 > [!NOTE]
->  Il supporto XML mediante `CStreamRowset` funziona solo con SQL Server 2000 ed è necessario disporre del Provider OLE DB per SQL Server 2000 (installato con MDAC).  
+> Il supporto XML mediante `CStreamRowset` funziona solo con SQL Server 2000 ed è necessario disporre del Provider OLE DB per SQL Server 2000 (installato con MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Recupero di dati XML tramite CXMLAccessor  
 

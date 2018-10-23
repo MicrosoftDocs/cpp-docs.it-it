@@ -1,7 +1,7 @@
 ---
 title: vtordisp | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,63 +18,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d0b28c855ab8a6f6da814ee17521a5ad7799993
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: eadd8cb3cd1d59c0ef74f4dc5aede47d18ac54a4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540601"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809044"
 ---
 # <a name="vtordisp"></a>vtordisp
-**Sezione specifica C++**  
-  
-Controlla l'aggiunta del membro di spostamento di costruzione o distruzione nascosto vtordisp.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
-#pragma vtordisp([push,] n)  
-#pragma vtordisp(pop)  
-#pragma vtordisp()  
-#pragma vtordisp([push,] {on | off})  
-```  
-  
-### <a name="parameters"></a>Parametri  
-*push*  
-Inserisce l'impostazione corrente di vtordisp nello stack interno del compilatore e imposta la nuova impostazione di vtordisp *n*.  Se *n* non viene specificato, l'impostazione corrente di vtordisp non viene modificato.  
-  
-*pop*  
-Rimuove il primo record dallo stack interno del compilatore e ripristina l'impostazione di vtordisp su valore rimosso.  
-  
-*n*  
-Specifica il nuovo valore per l'impostazione di vtordisp. I valori possibili sono 0, 1 o 2, corrispondenti per il `/vd0`, `/vd1`, e `/vd2` opzioni del compilatore. Per altre informazioni, vedere [/vd (Disabilita spostamenti costruttori)](../build/reference/vd-disable-construction-displacements.md).  
-  
-*on*  
-Equivalente a `#pragma vtordisp(1)`.  
-  
-*Off*  
-Equivalente a `#pragma vtordisp(0)`.  
-  
-## <a name="remarks"></a>Note  
- 
-Il **vtordisp** pragma è applicabile solo al codice che utilizza basi virtuali. Se una classe derivata esegue l'override di una funzione virtuale che eredita da una classe base virtuale e se un costruttore o distruttore della classe derivata chiama tale funzione utilizzando un puntatore a classe base virtuale, il compilatore potrebbe introdurre nascostiaggiuntive**vtordisp** campi nelle classi con basi virtuali.  
-  
-Il **vtordisp** pragma influisce sul layout delle classi che lo seguono. Il `/vd0`, `/vd1`, e `/vd2` opzioni specificano lo stesso comportamento per moduli completi. Se si specifica 0 oppure *disattivata* sopprime nascosto **vtordisp** membri. Disattivare **vtordisp** solo se è presente alcuna possibilità che i costruttori e distruttori della classe chiamano virtuali non funzioni sull'oggetto a cui punta il **ciò** puntatore.  
-  
-Specificare 1 o *sul*, l'impostazione predefinita, consente nascosto **vtordisp** membri in cui sono necessari.  
-  
-Specificando 2 consente a nascosto **vtordisp** membri per tutte le basi virtuali con le funzioni virtuali.  `vtordisp(2)` potrebbe essere necessario per assicurare prestazioni corrette dei **dynamic_cast** su un oggetto parzialmente costruito. Per altre informazioni, vedere [avviso del compilatore (livello 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).  
-  
-`#pragma vtordisp()`, senza argomenti, ripristina l'impostazione di vtordisp sul valore iniziale.  
-  
-```  
-#pragma vtordisp(push, 2)  
-class GetReal : virtual public VBase { ... };  
-#pragma vtordisp(pop)  
-```  
-  
-**Fine sezione specifica C++**  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+
+**Sezione specifica C++**
+
+Controlla l'aggiunta del membro di spostamento di costruzione o distruzione nascosto vtordisp.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+#pragma vtordisp([push,] n)
+#pragma vtordisp(pop)
+#pragma vtordisp()
+#pragma vtordisp([push,] {on | off})
+```
+
+### <a name="parameters"></a>Parametri
+
+*push*<br/>
+Inserisce l'impostazione corrente di vtordisp nello stack interno del compilatore e imposta la nuova impostazione di vtordisp *n*.  Se *n* non viene specificato, l'impostazione corrente di vtordisp non viene modificato.
+
+*pop*<br/>
+Rimuove il primo record dallo stack interno del compilatore e ripristina l'impostazione di vtordisp su valore rimosso.
+
+*n*<br/>
+Specifica il nuovo valore per l'impostazione di vtordisp. I valori possibili sono 0, 1 o 2, corrispondenti per il `/vd0`, `/vd1`, e `/vd2` opzioni del compilatore. Per altre informazioni, vedere [/vd (Disabilita spostamenti costruttori)](../build/reference/vd-disable-construction-displacements.md).
+
+*on*<br/>
+Equivalente a `#pragma vtordisp(1)`.
+
+*Off*<br/>
+Equivalente a `#pragma vtordisp(0)`.
+
+## <a name="remarks"></a>Note
+
+Il **vtordisp** pragma è applicabile solo al codice che utilizza basi virtuali. Se una classe derivata esegue l'override di una funzione virtuale che eredita da una classe base virtuale e se un costruttore o distruttore della classe derivata chiama tale funzione utilizzando un puntatore a classe base virtuale, il compilatore potrebbe introdurre nascostiaggiuntive**vtordisp** campi nelle classi con basi virtuali.
+
+Il **vtordisp** pragma influisce sul layout delle classi che lo seguono. Il `/vd0`, `/vd1`, e `/vd2` opzioni specificano lo stesso comportamento per moduli completi. Se si specifica 0 oppure *disattivata* sopprime nascosto **vtordisp** membri. Disattivare **vtordisp** solo se è presente alcuna possibilità che i costruttori e distruttori della classe chiamano virtuali non funzioni sull'oggetto a cui punta il **ciò** puntatore.
+
+Specificare 1 o *sul*, l'impostazione predefinita, consente nascosto **vtordisp** membri in cui sono necessari.
+
+Specificando 2 consente a nascosto **vtordisp** membri per tutte le basi virtuali con le funzioni virtuali.  `vtordisp(2)` potrebbe essere necessario per assicurare prestazioni corrette dei **dynamic_cast** su un oggetto parzialmente costruito. Per altre informazioni, vedere [avviso del compilatore (livello 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
+
+`#pragma vtordisp()`, senza argomenti, ripristina l'impostazione di vtordisp sul valore iniziale.
+
+```cpp
+#pragma vtordisp(push, 2)
+class GetReal : virtual public VBase { ... };
+#pragma vtordisp(pop)
+```
+
+**Fine sezione specifica C++**
+
+## <a name="see-also"></a>Vedere anche
+
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

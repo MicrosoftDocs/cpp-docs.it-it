@@ -16,20 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3e75a100bb5b56b613419160a3ea063bce42bbdb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 70fab2751e216ca90dbe09e31c88f9aa80aa7b90
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092323"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808264"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>Utilizzo di più set di risultati di un'unica stored procedure
 
-La maggior parte di stored procedure restituiscono più set di risultati. Una stored procedure include in genere uno o più istruzioni di selezione. Il consumer deve prendere in considerazione questa opzione per gestire tutti i set di risultati.  
+La maggior parte di stored procedure restituiscono più set di risultati. Una stored procedure include in genere uno o più istruzioni di selezione. Il consumer deve prendere in considerazione questa inclusione per gestire tutti i set di risultati.  
   
-### <a name="to-handle-multiple-result-sets"></a>Per gestire il risultato di più imposta  
+## <a name="to-handle-multiple-result-sets"></a>Per gestire il risultato di più imposta  
   
-1. Creare un `CCommand` classe `CMultipleResults` come argomento di modello e con la funzione di accesso di propria scelta. In genere, si tratta di una funzione di accesso dinamiche o manuali. Se si usa un altro tipo di funzione di accesso, potrebbe non essere in grado di determinare le colonne di output per ogni set di righe.  
+1. Creare un `CCommand` classe `CMultipleResults` come argomento di modello e con la funzione di accesso di propria scelta, in genere un accesso dinamica o manuale. Se si usa un altro tipo di funzione di accesso, potrebbe non essere in grado di determinare le colonne di output per ogni set di righe.  
   
 1. Eseguire la stored procedure come di consueto e associare le colonne (vedere [ricerca per categorie dei dati di recuperare?](../../data/oledb/fetching-data.md)).  
   

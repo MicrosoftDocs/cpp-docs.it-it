@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a3d2926b2f9c958d3770737729726bbad7b13e7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083658"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808914"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Recupero di metadati con i rowset dello schema
 
@@ -31,23 +31,23 @@ Talvolta è necessario ottenere informazioni sul provider, il set di righe, la t
 Modelli OLE DB offrono un set di classi per recuperare le informazioni dello schema. Queste classi creano set di righe dello schema predefinito e sono racchiusi [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 > [!NOTE]
->  Se si usa OLAP e alcuni dei set di righe non sono supportati dalle classi per i set di righe dello schema, ad esempio se è presente un numero variabile di colonne, è consigliabile provare a usare `CManualAccessor` o `CDynamicAccessor`. È possibile scorrere verso il basso le colonne e usare istruzioni case per gestire i possibili tipi di dati per ogni colonna.  
+> Se si usa OLAP e alcuni dei set di righe non sono supportati dalle classi per i set di righe dello schema, ad esempio se è presente un numero variabile di colonne, è consigliabile provare a usare `CManualAccessor` o `CDynamicAccessor`. È possibile scorrere verso il basso le colonne e usare istruzioni case per gestire i possibili tipi di dati per ogni colonna.  
   
 ## <a name="catalogschema-model"></a>Modello di catalogo/schema  
 
 ANSI SQL definisce un modello di catalogo/schema per gli archivi dati, usato da OLE DB. In questo modello i cataloghi (database) contengono schemi e questi contengono tabelle.  
   
-- **Catalogo** un catalogo è un altro nome per un database. Si tratta di una raccolta di schemi correlati. Per elencare i cataloghi (database) che appartengono a una determinata origine dati, usare [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Poiché molti database hanno un solo catalogo, i metadati vengono talvolta chiamati semplicemente informazioni dello schema.  
+- **Catalogo** un catalogo è un altro nome per un database. Si tratta di una raccolta di schemi correlati. Per elencare i cataloghi (database) che appartengono a una determinata origine dati, usare [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Poiché molti database hanno un solo catalogo, i metadati viene talvolta denominato informazioni sullo schema.  
   
 - **Schema** uno schema è una raccolta di oggetti di database che appartengono o sono stati creati da un utente specifico. Per elencare gli schemi di proprietà di un determinato utente, usare [CSchemata](../../data/oledb/cschemata-cschematainfo.md).  
   
-     In condizioni per Microsoft SQL Server e ODBC 2.x, uno schema è un proprietario (ad esempio, dbo è un tipico nome di schema). Inoltre, SQL Server archivia i metadati in un set di tabelle: una tabella contiene un elenco di tutte le tabelle e un'altra tabella contiene un elenco di tutte le colonne. Nei database di Microsoft Access non esiste l'equivalente di uno schema.  
+     In condizioni per Microsoft SQL Server e ODBC 2.x, uno schema è un proprietario (ad esempio, dbo è un tipico nome di schema). Inoltre, SQL Server archivia i metadati in un set di tabelle: una tabella contiene un elenco di tutte le tabelle e un'altra tabella contiene un elenco di tutte le colonne. È disponibile un equivalente a uno schema in un database Microsoft Access.  
   
 - **Tabella** le tabelle sono raccolte di colonne disposte in un ordine specifico. Per elencare le tabelle definite in un catalogo specifico (database) e informazioni su tali tabelle, usare [CTables](../../data/oledb/ctables-ctableinfo.md)).  
   
 ## <a name="restrictions"></a>Restrizioni  
 
-Quando si esegue una query per le informazioni dello schema, è possibile usare restrizioni per specificare il tipo di informazioni a cui si è interessati. È possibile immaginare le restrizioni come un filtro o un qualificatore in una query. Ad esempio, nella query:  
+Quando esegue una query per le informazioni sullo schema, è possibile usare le restrizioni per specificare il tipo di informazioni a cui è interessati. È possibile immaginare le restrizioni come un filtro o un qualificatore in una query. Ad esempio, nella query:  
   
 ```sql  
 SELECT * FROM authors where l_name = 'pivo'  
@@ -63,11 +63,11 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 Il [CRestrictions](../../data/oledb/crestrictions-class.md) classe fornisca il supporto per restrizione. Dopo aver creato un'istanza del set di righe dello schema, chiamare [CRestrictions:: Open](../../data/oledb/crestrictions-open.md). Questo metodo restituisce un set di risultati basato sulle restrizioni specificate.  
   
-Per specificare le restrizioni, vedere [appendice b: Schema Rowsets](/previous-versions/windows/desktop/ms712921) e cercare il set di righe che si sta utilizzando. Ad esempio, `CColumns` corrisponde alla [set di righe COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); questo argomento elenca le colonne di restrizione nel set di righe COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Nello specificare le restrizioni, è necessario seguire questo ordine.  
+Per specificare le restrizioni, vedere [appendice b: Schema Rowsets](/previous-versions/windows/desktop/ms712921) e cercare il set di righe che sta usando. Ad esempio, `CColumns` corrisponde alla [set di righe COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); questo argomento elenca le colonne di restrizione nel set di righe COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Nello specificare le restrizioni, è necessario seguire questo ordine.  
   
 Quindi, ad esempio, se si desidera limitare in base al nome di tabella, notare che TABLE_NAME è la terza colonna di restrizione e quindi chiamare `Open`, specificando il nome della tabella desiderato come terzo parametro di restrizione, come illustrato nell'esempio seguente.  
   
-#### <a name="to-use-schema-rowsets"></a>Per usare set di righe dello schema  
+### <a name="to-use-schema-rowsets"></a>Per usare set di righe dello schema  
   
 1. È necessario includere il file di intestazione Atldbsch.h (che, naturalmente, è anche necessario per il supporto dei consumer).  
   
@@ -89,7 +89,7 @@ Quindi, ad esempio, se si desidera limitare in base al nome di tabella, notare c
     }  
     ```  
   
-1. Per recuperare le informazioni, accedere al membro dati appropriato dell'oggetto set di righe dello schema, ad esempio `ColumnSchemaRowset.m_szColumnName`. Questo corrisponde a COLUMN_NAME. Per visualizzare la colonna OLE DB corrisponde a ciascun membro dati, vedere [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
+1. Per recuperare le informazioni, accedere al membro dati appropriato dell'oggetto set di righe dello schema, ad esempio `ColumnSchemaRowset.m_szColumnName`. Questo membro dei dati corrisponde a COLUMN_NAME. Per visualizzare la colonna OLE DB corrisponde a ciascun membro dati, vedere [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
   
 Per il riferimento del set di righe dello schema, le classi typedef fornite nei modelli OLE DB (vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   

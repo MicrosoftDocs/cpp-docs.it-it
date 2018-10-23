@@ -1,7 +1,7 @@
 ---
 title: Classe CFileTimeSpan | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c69a45ec56c5ee6f1c8d7a48be2cac2d158dc6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27be228c735b667d76f1dc70d9ae36f4229acd01
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381933"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808966"
 ---
 # <a name="cfiletimespan-class"></a>Classe CFileTimeSpan
 
@@ -93,10 +93,10 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan` esistente.
 
-*nSpan*  
+*nSpan*<br/>
 Un periodo di tempo in millisecondi.
 
 ### <a name="remarks"></a>Note
@@ -125,7 +125,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -142,7 +142,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 L'oggetto `CFileTimeSpan` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -159,7 +159,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -176,7 +176,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -193,7 +193,7 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 L'oggetto `CFileTimeSpan` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -210,7 +210,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 L'oggetto `CFileTimeSpan` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -227,7 +227,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -244,7 +244,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -261,7 +261,7 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 L'oggetto `CFileTimeSpan` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -278,7 +278,7 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 L'oggetto `CFileTimeSpan` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -295,7 +295,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 L'oggetto `CFileTimeSpan` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -312,7 +312,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*nSpan*  
+*nSpan*<br/>
 Il nuovo valore per l'intervallo di tempo in millisecondi.
 
 ## <a name="see-also"></a>Vedere anche
@@ -321,4 +321,3 @@ Il nuovo valore per l'intervallo di tempo in millisecondi.
 [Classe CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

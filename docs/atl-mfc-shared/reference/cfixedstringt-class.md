@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378228"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808251"
 ---
 # <a name="cfixedstringt-class"></a>Classe CFixedStringT
 
@@ -39,10 +39,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>Parametri
 
-*StringType*  
+*StringType*<br/>
 Usata come classe base per l'oggetto stringa fissa e può essere qualsiasi `CStringT`-sul tipo di base. Ecco alcuni esempi `CString`, `CStringA`, e `CStringW`.
 
-*t_nChars*  
+*t_nChars*<br/>
 Il numero di caratteri archiviati nel buffer.
 
 ## <a name="members"></a>Membri
@@ -101,13 +101,13 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="parameters"></a>Parametri
 
-*psz*  
+*psz*<br/>
 Una stringa con terminazione null deve essere copiato `CFixedStringT` oggetto.
 
-*str*  
+*str*<br/>
 Un oggetto esistente `CFixedStringT` oggetto deve essere copiato `CFixedStringT` oggetto.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Un puntatore al gestore della memoria del `CFixedStringT` oggetto. Per ulteriori informazioni sul `IAtlStringMgr` e la gestione della memoria per `CFixedStringT`, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Note
@@ -129,10 +129,10 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ### <a name="parameters"></a>Parametri
 
-*str*  
+*str*<br/>
 Una stringa con terminazione null deve essere copiato `CFixedStringT` oggetto.
 
-*psz*  
+*psz*<br/>
 Un oggetto esistente `CFixedStringT` deve essere copiato `CFixedStringT` oggetto.
 
 ### <a name="remarks"></a>Note

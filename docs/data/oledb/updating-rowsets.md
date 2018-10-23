@@ -1,7 +1,7 @@
 ---
 title: Aggiornamento dei rowset | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: afe17f30a079e8af24b37b983f8c91d46431966e
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083827"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808864"
 ---
 # <a name="updating-rowsets"></a>aggiornamento rowset
 
-Un'operazione molto semplice del database consiste nell'aggiornamento o nella scrittura dei dati nell'archivio dati. In OLE DB il meccanismo di aggiornamento è semplice: l'applicazione consumer imposta i valori dei membri dati associati, scrive tali valori nel set di righe e, infine, richiede al provider di aggiornare l'archivio dati.  
+Per aggiornare o scrivere dati, l'archivio dati è un'operazione di base dei database. In OLE DB il meccanismo di aggiornamento è semplice: l'applicazione consumer imposta i valori dei membri dati associati, scrive tali valori nel set di righe e, infine, richiede al provider di aggiornare l'archivio dati.  
   
-I consumer possono eseguire i tipi di aggiornamento seguenti sui dati del set di righe: impostazione dei valori della colonna all'interno di una riga, inserimento di una riga ed eliminazione di una riga. Per eseguire queste operazioni, la classe di modelli OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa l'interfaccia [IRowsetChange](/previous-versions/windows/desktop/ms715790) ed esegue l'override dei metodi di interfaccia seguenti:  
+I consumer possono completare i seguenti tipi di aggiornamenti sui dati di set di righe: impostazione dei valori di colonna all'interno di una riga, inserimento di una riga e l'eliminazione di una riga. Per completare queste operazioni, la classe di modelli OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa il [IRowsetChange](/previous-versions/windows/desktop/ms715790) interfaccia ed esegue l'override di metodi di interfaccia seguenti:  
   
-- [SetData](../../data/oledb/crowset-setdata.md) modifica i valori della colonna in una riga di un set di righe. È equivalente al comando SQL UPDATE.  
+- [SetData](../../data/oledb/crowset-setdata.md) i valori della colonna di modifiche in una riga di un set di righe; equivale al comando SQL UPDATE.  
   
-- [Insert](../../data/oledb/crowset-insert.md) inserisce una riga in un set di righe. È equivalente al comando SQL INSERT.  
+- [Inserisci](../../data/oledb/crowset-insert.md) inserisce una riga in un set di righe; equivale al comando SQL INSERT.  
   
-- [Delete](../../data/oledb/crowset-delete.md) elimina le righe da un set di righe. È equivalente al comando SQL DELETE.  
+- [Elimina](../../data/oledb/crowset-delete.md) vengono eliminate righe da un set di righe; equivale al comando SQL DELETE.  
   
 ## <a name="supporting-update-operations"></a>Supporto delle operazioni di aggiornamento  
 
-Quando si crea un consumer con la Creazione guidata consumer OLE DB ATL, è possibile supportare le operazioni di aggiornamento selezionando una o più delle tre caselle di controllo **Modifica**, **Inserisci**ed **Elimina**. Se si selezionano queste opzioni, la procedura guidata modifica il codice in modo che supporti il tipo di modifiche prescelte. Tuttavia, se non si usa la procedura guidata, per supportare gli aggiornamenti è necessario impostare le proprietà del set di righe seguenti su `VARIANT_TRUE` :  
+Quando si crea un consumer con la Creazione guidata consumer OLE DB ATL, è possibile supportare le operazioni di aggiornamento selezionando una o più delle tre caselle di controllo **Modifica**, **Inserisci**ed **Elimina**. Se si selezionano queste opzioni, la procedura guidata consente di modificare il codice in modo appropriato per supportare il tipo di modifiche prescelte. Tuttavia, se non si usa la procedura guidata, è necessario impostare le proprietà del set di righe seguenti `VARIANT_TRUE` per supportare gli aggiornamenti:  
   
 - `DBPROPVAL_UP_CHANGE` Consente di modificare i valori dei dati in una riga.  
   
@@ -56,11 +56,11 @@ ps.AddProperty(DBPROP_IRowsetChange, true)
 ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
 ```  
   
-Le operazioni di modifica, inserimento o eliminazione potrebbero non riuscire se una o più colonne non sono scrivibili. Modificare la mappa del cursore per risolvere il problema.  
+Modifica, inserimento o operazioni di eliminazione potrebbero non riuscire se una o più colonne non è accessibile in scrittura. Modificare la mappa del cursore per risolvere il problema.  
   
 ## <a name="setting-data-in-rows"></a>Impostazione dei dati nelle righe  
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) imposta i valori dei dati in una o più colonne della riga corrente. Il codice seguente imposta i valori dei membri dati associati alle colonne "Name" e "Units in Stock" della tabella Products e quindi chiama `SetData` per scrivere tali valori nella centesima riga del set di righe:  
+[CRowset::SetData](../../data/oledb/crowset-setdata.md) imposta i valori dei dati in una o più colonne della riga corrente. Il codice seguente imposta i valori dei membri dati associati alle colonne "Name" e "Units in Stock" della tabella `Products` e quindi chiama `SetData` scrivere tali valori alla riga 100 del set di righe:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -91,9 +91,9 @@ HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
   
 - **false** (valore predefinito) specifica che la riga corrente viene spostata alla riga successiva (nel qual caso punta alla riga inserita).  
   
-- **true** specifica che la riga corrente rimane invariata.  
+- **true** specifica che la riga corrente rimane dove è.  
   
-Il codice seguente imposta i valori dei membri dati associati alle colonne della tabella Products e quindi chiama `Insert` per inserire una nuova riga con tali valori dopo le 100 righe del set di righe. Si consiglia di impostare tutti i valori della colonna per evitare che ci siano dati non definiti nella nuova riga:  
+Il codice seguente imposta i valori dei membri dati associati alle colonne della tabella `Products` e quindi chiama `Insert` per inserire una nuova riga con tali valori dopo le 100 righe del set di righe. È consigliabile impostare tutti i valori di colonna per evitare dati non definiti nella nuova riga:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -171,17 +171,17 @@ Se non diversamente specificato, le chiamate al `SetData`, `Insert`, e `Delete` 
   
 - [UpdateAll](../../data/oledb/crowset-updateall.md) trasferisce le modifiche apportate a tutte le righe dall'ultimo recupero in sospeso o `Update` chiamare su di esso.  
   
-Tenere presente che l'aggiornamento tramite i metodi Update indica specificamente di apportare modifiche al comando e non deve essere confuso con il comando SQL UPDATE (`SetData` equivale al comando SQL UPDATE).  
+Aggiornamento, come utilizzata dai metodi di aggiornamento, indica specificamente di apportare modifiche al comando e non deve essere confuso con il comando SQL UPDATE (`SetData` equivale al comando SQL UPDATE).  
   
-Gli aggiornamenti posticipati sono utili in situazioni come ad esempio una serie di transazioni bancarie. Se una transazione viene annullata, è possibile annullare la modifica, poiché la serie di modifiche finché non viene inviata finché non viene eseguito il commit dell'ultima modifica. Inoltre, il provider può raggruppare le modifiche in una sola chiamata di rete, che risulta più efficace.  
+Gli aggiornamenti posticipati sono utili, ad esempio, in situazioni, ad esempio una serie di transazioni bancarie. Se una transazione viene annullata, è possibile annullare la modifica, poiché la serie di modifiche finché non inviare dopo l'ultimo è eseguito il commit. Inoltre, il provider può raggruppare le modifiche in una sola chiamata di rete, che risulta più efficace.  
   
-Per supportare gli aggiornamenti posticipati, è necessario impostare il `DBPROP_IRowsetChange` proprietà oltre alle proprietà descritte in "Supporto delle operazioni di aggiornamento":  
+Per supportare gli aggiornamenti posticipati, è necessario impostare il `DBPROP_IRowsetChange` proprietà insieme alle proprietà descritte in "Supporto delle operazioni di aggiornamento":  
   
 ```cpp  
 pPropSet->AddProperty(DBPROP_IRowsetUpdate, true);  
 ```  
   
-Quando si chiama `Update` o `UpdateAll`, i metodi trasferiscono le modifiche dalla cache locale all'archivio dati e quindi cancellano la cache locale. Poiché Update trasferisce le modifiche solo per la riga corrente, è importante che l'applicazione tenga traccia della riga da aggiornare e del momento in cui eseguire l'aggiornamento. L'esempio seguente illustra come aggiornare due righe consecutive:  
+Quando si chiama `Update` o `UpdateAll`, i metodi trasferiscono le modifiche dalla cache locale all'archivio dati e quindi cancellano la cache locale. Poiché update trasferisce le modifiche solo per la riga corrente, è importante che l'applicazione tiene traccia di quale riga da aggiornare e quando eseguirne l'aggiornamento. L'esempio seguente illustra come aggiornare due righe consecutive:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -215,9 +215,9 @@ product.Update();                 // Update row 101 now
   
 Per garantire che le modifiche in sospeso vengono trasferiti, è necessario chiamare `Update` prima di passare a un'altra riga. Tuttavia, quando questa operazione risulta noiosa o non efficace, ad esempio quando l'applicazione deve aggiornare centinaia di righe, è possibile usare `UpdateAll` per aggiornare tutte le righe in una sola volta.  
   
-Ad esempio, se il primo `Update` chiamata è stata inclusa nel codice precedente, la riga 100 resta invariata, mentre viene modificata la riga 101. Dopo questo punto, l'applicazione deve chiamare `UpdateAll` oppure tornare alla riga 100 e chiamare `Update` per la riga da aggiornare.  
+Ad esempio, se il primo `Update` chiamata è stata inclusa nel codice precedente, la riga 100 rimanessero invariato, mentre viene modificata la riga 101. Dopo questo punto, l'applicazione deve chiamare `UpdateAll` oppure tornare alla riga 100 e chiamare `Update` per la riga da aggiornare.  
   
-Infine, uno dei motivi principali per il rinvio delle modifiche consiste nella possibilità di annullarle. La chiamata a [CRowset::Undo](../../data/oledb/crowset-undo.md) ripristina lo stato della cache delle modifiche locale allo stato dell'archivio dati prima che venissero apportate le modifiche in sospeso. È importante notare che `Undo` non esegue il rollback dello stato della cache locale al passaggio precedente (lo stato prima dell'ultima modifica), bensì Cancella la cache locale per quella riga. Inoltre, `Undo` interessa solo la riga corrente.  
+Infine, uno dei motivi principali per il rinvio delle modifiche consiste nella possibilità di annullarle. La chiamata a [CRowset::Undo](../../data/oledb/crowset-undo.md) ripristina lo stato della cache delle modifiche locale allo stato dell'archivio dati prima che venissero apportate le modifiche in sospeso. È importante notare che `Undo` non eseguire il rollback dello stato della cache locale al passaggio precedente (lo stato prima dell'ultima modifica), bensì Cancella la cache locale per quella riga. Inoltre, `Undo` interessa solo la riga corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
 

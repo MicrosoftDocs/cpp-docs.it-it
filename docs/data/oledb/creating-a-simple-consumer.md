@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163842"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808940"
 ---
 # <a name="creating-a-simple-consumer"></a>Creazione di un consumer semplice
 
@@ -32,15 +32,15 @@ Usare la creazione guidata progetto ATL e creazione guidata Consumer OLE DB ATL 
 
    Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-1. Nel **tipi di progetto** riquadro, fare clic sul **installato** > **modelli** > **Visual C++** cartella e quindi fare clic sui **applicazione Console Win32** icona nel **modelli** riquadro. Nel **Name** immettere il nome del progetto, ad esempio *MyCons*.
+1. Nel **tipi di progetto** riquadro, fare clic sul **installato** > **Visual C++** > **Desktop Windows** cartella, e quindi fare clic sui **Creazione guidata applicazione Desktop Windows** icona nel **modelli** riquadro. Nel **Name** immettere il nome del progetto, ad esempio *MyCons*.
 
 1. Fare clic su **OK**.
 
-   Viene visualizzata la creazione guidata applicazione Win32.
+   Il **progetto Desktop di Windows** procedura guidata viene visualizzata.
 
 1. Nel **Application Settings** pagina, selezionare **applicazione Console**e quindi selezionare **aggiungere file di intestazione comuni per ATL**.
 
-1. Fare clic su **fine** per chiudere la procedura guidata e generare il progetto.
+1. Fare clic su **OK** per chiudere la procedura guidata e generare il progetto.
 
 Successivamente, utilizzare la creazione guidata Consumer OLE DB ATL per aggiungere un oggetto del consumer OLE DB.
 
@@ -48,9 +48,9 @@ Successivamente, utilizzare la creazione guidata Consumer OLE DB ATL per aggiung
 
 1. Nelle **Esplora soluzioni**, fare doppio clic su di `MyCons` progetto.
 
-1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **classe**.
+1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **nuovo elemento**.
 
-   Il **Aggiungi classe** verrà visualizzata la finestra di dialogo.
+   Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
 
 1. Nel **categorie** riquadro, fare clic su **installati** > **Visual C++** > **ATL**, fare clic su di **Consumer OLEDB ATL** icona nel **modelli** riquadro e quindi fare clic su **Add**.
 

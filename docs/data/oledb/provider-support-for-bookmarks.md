@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017173"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807523"
 ---
 # <a name="provider-support-for-bookmarks"></a>Supporto dei bookmark nel provider
 
@@ -36,7 +36,7 @@ L'esempio in questo argomento aggiunge il `IRowsetLocate` interfaccia per il `CM
   
 - Aggiungere il supporto di segnalibro.  
   
-L'interfaccia `IRowsetLocate` eredita dall'interfaccia `IRowset`. Per aggiungere il `IRowsetLocate` dell'interfaccia, ereditata `CMyProviderRowset` dalla [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
+L'interfaccia `IRowsetLocate` eredita dall'interfaccia `IRowset` . Per aggiungere il `IRowsetLocate` dell'interfaccia, ereditata `CMyProviderRowset` dalla [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
 Aggiunta di `IRowsetLocate` interfaccia è leggermente diversa dalla maggior parte delle interfacce. Per rendere la riga vtable verso l'alto, OLE DB provider modelli hanno un parametro di modello per gestire l'interfaccia derivata. Il codice seguente illustra il nuovo elenco di ereditarietà:  
   
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-Mentre il ciclo contiene codice per chiamare il `Compare` metodo nella `IRowsetLocate` interfaccia. Il codice che deve passare sempre in quanto si confrontano i segnalibri stesso esatti. Inoltre, archiviare un segnalibro in una variabile temporanea in modo che sia possibile usarlo dopo il periodo di tempo ciclo termina per chiamare il `MoveToBookmark` funzione nei modelli consumer. Il `MoveToBookmark` chiamate di funzione il `GetRowsAt` metodo `IRowsetLocate`.  
+Il **mentre** ciclo contiene codice per chiamare le `Compare` metodo nella `IRowsetLocate` interfaccia. Il codice che deve passare sempre in quanto si confrontano i segnalibri stesso esatti. Archiviare, inoltre, un segnalibro in una variabile temporanea in modo che è possibile utilizzarlo dopo il **mentre** ciclo termina per chiamare il `MoveToBookmark` funzione nei modelli consumer. Il `MoveToBookmark` chiamate di funzione il `GetRowsAt` metodo `IRowsetLocate`.  
   
 È anche necessario aggiornare il record dell'utente nel consumer. Aggiungere una voce nella classe per gestire un segnalibro e una voce nel `COLUMN_MAP`:  
   

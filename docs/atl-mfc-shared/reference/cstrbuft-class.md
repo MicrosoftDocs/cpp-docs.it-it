@@ -1,7 +1,7 @@
 ---
 title: Classe CStrBufT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411183"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808992"
 ---
 # <a name="cstrbuft-class"></a>Classe CStrBufT
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>Parametri
 
-*TCharType*  
+*TCharType*<br/>
 Il tipo di carattere del `CStrBufT` classe. Può essere uno dei seguenti:
 
 - **Char** (per le stringhe di caratteri ANSI)
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*str*  
+*str*<br/>
 Oggetto string associato al buffer. In genere, lo sviluppatore userà dei typedef predefiniti indicati `CStrBuf` (variant TCHAR), `CStrBufA` (**char** variant) e `CStrBufW` (**wchar_t** variante).
 
-*nMinLength*  
+*nMinLength*<br/>
 La lunghezza minima del buffer di caratteri.
 
-*dwFlags*  
+*dwFlags*<br/>
 Determina se la lunghezza della stringa viene determinata automaticamente. Può essere uno dei seguenti:
 
 - La lunghezza della stringa AUTO_LENGTH viene automaticamente determinata quando [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) viene chiamato. La stringa deve essere con terminazione null. Valore predefinito.
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Parametri
 
-*nLength*  
+*nLength*<br/>
 La nuova lunghezza del buffer di caratteri dell'oggetto stringa.
 
 > [!NOTE]

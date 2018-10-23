@@ -1,7 +1,7 @@
 ---
 title: Classe CFileTime | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81a8aeaf2b4475a95421853c4ab5822bc06abb3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 36e71cd975ff138343770b80e60b0287faa32558
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437770"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808823"
 ---
 # <a name="cfiletime-class"></a>Classe CFileTime
 
@@ -133,10 +133,10 @@ CFileTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*full-text*  
+*full-text*<br/>
 Oggetto [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struttura.
 
-*Nintervallo*  
+*Nintervallo*<br/>
 Data e ora espresse come valore a 64 bit.
 
 ### <a name="remarks"></a>Note
@@ -246,10 +246,10 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan`.
 
-*full-text*  
+*full-text*<br/>
 Oggetto `CFileTime`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -266,7 +266,7 @@ bool operator!=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*full-text*  
+*full-text*<br/>
 L'oggetto `CFileTime` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -283,7 +283,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -300,7 +300,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -317,7 +317,7 @@ bool operator<(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*full-text*  
+*full-text*<br/>
 L'oggetto `CFileTime` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -338,7 +338,7 @@ bool operator<=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*full-text*  
+*full-text*<br/>
 L'oggetto `CFileTime` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -355,7 +355,7 @@ CFileTime& operator=(const FILETIME& ft) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*full-text*  
+*full-text*<br/>
 Oggetto `CFileTime` oggetto contenente la data e ora nuove.
 
 ### <a name="return-value"></a>Valore restituito
@@ -372,7 +372,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*  
+*intervallo*<br/>
 Oggetto `CFileTimeSpan` oggetto contenente il relativo tempo da sottrarre.
 
 ### <a name="return-value"></a>Valore restituito
@@ -389,7 +389,7 @@ bool operator==(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*full-text*  
+*full-text*<br/>
 Il `CFileTime` oggetto da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -406,7 +406,7 @@ bool operator>(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*full-text*  
+*full-text*<br/>
 L'oggetto `CFileTime` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -423,7 +423,7 @@ bool operator>=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*full-text*  
+*full-text*<br/>
 L'oggetto `CFileTime` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -452,7 +452,7 @@ void SetTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Nintervallo*  
+*Nintervallo*<br/>
 Il valore a 64 bit che rappresenta la data e ora, nel formato Coordinated Universal Time (UTC) o locale.
 
 ##  <a name="utctolocal"></a>  CFileTime::UTCToLocal
@@ -489,4 +489,3 @@ Vedere l'esempio relativo [CFileTime::Millisecond](#millisecond).
 [Classe CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

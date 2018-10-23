@@ -1,7 +1,7 @@
 ---
 title: Scorrimento di un Rowset semplice | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,42 +19,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 62a1b6c0aa164e6b564c505873fbc85f38b9febf
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028636"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808316"
 ---
 # <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
 
-L'esempio seguente illustra un accesso rapido e semplice database che non riguarda i comandi. Il codice del consumer, in un progetto ATL, recupera i record da una tabella denominata *alle creazioni degli artisti* in Microsoft Access database utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un [CTable](../../data/oledb/ctable-class.md) oggetto di tabella con una funzione di accesso basato sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e la tabella viene aperta nella sessione.  
+L'esempio seguente illustra l'accesso al database di semplice e rapido che non prevede l'utilizzo di comandi. Il codice del consumer, in un progetto ATL, recupera i record da una tabella denominata *alle creazioni degli artisti* in Microsoft Access database utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un [CTable](../../data/oledb/ctable-class.md) oggetto di tabella con una funzione di accesso basato sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e la tabella viene aperta nella sessione.  
   
 ```cpp  
 #include <atldbcli.h>  
-  
-CDataSource connection;  
-CSession session;  
-CTable<CAccessor<CArtists>> artists;  
-  
-// Open the connection, session, and table, specifying authentication   
-// using Windows NT integrated security. Hard-coding a password is a major  
-// security weakness.  
-connection.Open(CLSID_MSDASQL, "NWind", NULL, NULL, DBPROP_AUTH_INTEGRATED);  
+#include <iostream>
+ 
+using namespace std;
 
-session.Open(connection);  
+int main()
+{
+    CDataSource connection;  
+    CSession session;  
+    CTable<CAccessor<CArtists>> artists;  
 
-artists.Open(session, "Artists");  
+    LPCSTR clsid; // Initialize CLSID_MSDASQL here
+    LPCTSTR pName = L"NWind";
+
+    // Open the connection, session, and table, specifying authentication   
+    // using Windows NT integrated security. Hard-coding a password is a major  
+    // security weakness.  
+    connection.Open(clsid, pName, NULL, NULL, DBPROP_AUTH_INTEGRATED);  
+
+    session.Open(connection);  
+
+    artists.Open(session, "Artists");  
   
-// Get data from the rowset  
-while (artists.MoveNext() == S_OK)  
-{  
-   cout << artists.m_szFirstName;  
-   cout << artists.m_szLastName;  
-}  
+    // Get data from the rowset  
+    while (artists.MoveNext() == S_OK)  
+    {  
+       cout << artists.m_szFirstName;  
+       cout << artists.m_szLastName;  
+    }  
+
+    return 0;
+}
 ```  
   
-Il record dell'utente, `CArtists`, ha un aspetto simile al seguente:  
+Il record dell'utente, `CArtists`, in questo esempio è simile:  
   
 ```cpp  
 class CArtists  
@@ -71,6 +82,7 @@ BEGIN_COLUMN_MAP(CArtists)
    COLUMN_ENTRY(2, m_szLastName)  
    COLUMN_ENTRY(3, m_nAge)  
 END_COLUMN_MAP()  
+};
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

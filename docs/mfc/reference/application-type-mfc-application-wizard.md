@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434377"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808771"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Tipo di applicazione, Creazione guidata applicazione MFC
 
@@ -58,7 +58,7 @@ Utilizzare questa pagina della finestra di [Creazione guidata applicazione MFC](
 
 - **Lingua della risorsa**
 
-   Imposta la lingua delle risorse. L'elenco Visualizza le lingue disponibili nel sistema, come installati da Visual Studio. Se si desidera selezionare una lingua diversa dalla lingua di sistema, la cartella di modello appropriato per tale lingua deve essere già installata. Per altre informazioni sull'installazione di risorse di lingua diverse da quella predefinita disponibile nel **lingua della risorsa** elenco, vedere [supportate procedure guidate per altri linguaggi](../../ide/wizard-support-for-other-languages.md).
+   Imposta la lingua delle risorse. L'elenco Visualizza le lingue disponibili nel sistema, come installati da Visual Studio. Se si desidera selezionare una lingua diversa dalla lingua di sistema, la cartella di modello appropriato per tale lingua deve essere già installata.
 
    Il linguaggio selezionato viene riflessa nel **stringhe localizzate** opzione delle [stringhe modello documento, creazione guidata applicazione MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md) pagina della procedura guidata.
 
