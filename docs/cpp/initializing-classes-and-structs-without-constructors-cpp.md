@@ -1,7 +1,7 @@
 ---
 title: Inizializzazione di classi e struct senza costruttori (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9cf80b9b1a6a7002e4176720cf12b305592c6fb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb72bf8c8550d87a4e6bf86e440c7a468f4f878d
+ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117517"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49640757"
 ---
 # <a name="initializing-classes-and-structs-without-constructors-c"></a>Inizializzazione di classi e struct senza costruttori (C++)
 
 Non è sempre necessario definire un costruttore per una classe, in particolare quelli relativamente semplici. Gli utenti possono inizializzare oggetti di una classe o uno struct usando l'inizializzazione uniforme, come illustrato nell'esempio seguente:
 
 ```cpp
-#include "stdafx.h"
-#include <Windows.h>
+// no_constructor.cpp
+// Compile with: cl /EHsc no_constructor.cpp
+#include <time.h>
 
 // No constructor
 struct TempData
 {
     int StationId;
-    time_t time;
+    time_t timeSet;
     double current;
     double maxTemp;
     double minTemp;
@@ -41,9 +42,9 @@ struct TempData
 struct TempData2
 {
     TempData2(double minimum, double maximum, double cur, int id, time_t t) :
-       minTemp(minimum), maxTemp(maximum), current(cur), stationId(id), time(t) {}
+       stationId{id}, timeSet{t}, current{cur}, maxTemp{maximum}, minTemp{minimum} {}
     int stationId;
-    time_t time;
+    time_t timeSet;
     double current;
     double maxTemp;
     double minTemp;
@@ -51,17 +52,19 @@ struct TempData2
 
 int main()
 {
+    time_t time_to_set;
+
     // Member initialization (in order of declaration):
-    TempData td{ 45978, GetCurrentTime(), 28.9, 37.0, 16.7 };
+    TempData td{ 45978, time(&time_to_set), 28.9, 37.0, 16.7 };
 
     // Default initialization = {0,0,0,0,0}
     TempData td_default{};
 
-    //Error C4700 uninitialized local variable
+    // Uninitialized = if used, emits warning C4700 uninitialized local variable
     TempData td_noInit;
 
     // Member declaration (in order of ctor parameters)
-    TempData2 td2{ 16.7, 37.0, 28.9, 45978, GetCurrentTime() };
+    TempData2 td2{ 16.7, 37.0, 28.9, 45978, time(&time_to_set) };
 
     return 0;
 }
