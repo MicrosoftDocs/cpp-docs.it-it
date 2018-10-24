@@ -7,12 +7,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c07a1e14d0aaf29d695fda9a70e7d813c4613db
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d08cdebfe5825c7032485c97822aa9a26cef13a5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198328"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807510"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -217,7 +217,7 @@ ms.locfileid: "43198328"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo</h3>
+                                                    <h3>Scrittura di codice</h3>
                                                     <p>Scrivere, effettuare il refactoring, esplorare e comprendere il codice usando l'editor del codice.</p>
                                                 </div>
                                             </div>

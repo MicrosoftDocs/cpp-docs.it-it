@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57bd79e1df35f650d78da3108137d58405b33f25
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6101c45f30284633c5f10c148be5a15e1e81dde7
+ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082014"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49640733"
 ---
 # <a name="c-string-literals"></a>Valori letterali stringa C
 
@@ -29,11 +29,19 @@ Un valore "letterale stringa" è una sequenza di caratteri dal set di caratteri 
 
 ## <a name="syntax"></a>Sintassi
 
-*string-literal*: &nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"** &nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
+*string-literal*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
 
-*s-char-sequence*: &nbsp;&nbsp;&nbsp;&nbsp;*s-char* &nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
+*s-char-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*
 
-*s-char*: &nbsp;&nbsp;&nbsp;&nbsp;qualsiasi membro del set di caratteri di origine eccetto le virgolette doppie ("), la barra rovesciata (\\) o la sequenza &nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence* del carattere di nuova riga
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
+
+*s-char*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;qualsiasi membro del set di caratteri di origine eccetto le virgolette doppie ("), la barra rovesciata (\\) o il carattere di nuova riga<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence*
 
 ## <a name="remarks"></a>Note
 

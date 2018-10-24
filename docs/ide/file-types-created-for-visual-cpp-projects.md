@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939937ec79ae3e6d172b48d22368176088064397
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dba47b8464c7fcdd170df1819b65aa448d8f8aeb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434349"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808421"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Tipi di file creati per i progetti di Visual C++
 
@@ -82,7 +82,7 @@ La tabella riportata di seguito illustra i file comuni dei progetti di Visual C+
 |pch|Debug|File di intestazione precompilato.|
 |rc, rc2|Risorsa|[File script di risorsa](../windows/working-with-resource-files.md) per generare risorse.|
 |sbr|Compilazione|File di origine intermedio del browser. File di input per [BSCMAKE](../build/reference/bscmake-options.md).|
-|sln|Soluzione|File di [soluzione](/visualstudio/ide/solutions-and-projects-in-visual-studio).|
+|sln|Soluzione|File di [soluzione](/visualstudio/ide/solutions-and-projects-in-visual-studio) .|
 |suo|Soluzione|File di opzioni di soluzione.|
 |txt|Risorsa|File di testo, in genere il file Readme.|
 |vap|Progetto|File di progetto di Visual Studio Analyzer.|
@@ -105,4 +105,3 @@ Quando si aggiunge un elemento a un progetto, l'elemento viene aggiunto a tutte 
 
 [Creazione e gestione di progetti Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Tipi di progetto Visual C++](../ide/visual-cpp-project-types.md)<br>
-[Supporto della procedura guidata per altre lingue](../ide/wizard-support-for-other-languages.md)

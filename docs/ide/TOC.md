@@ -26,7 +26,6 @@
 ### [File XML delle pagine delle proprietà](property-page-xml-files.md)
 ### [Struttura dei file con estensione vcxproj e props](vcxproj-file-structure.md)
 ## [Creazione di progetti desktop tramite le creazioni guidate applicazioni](creating-desktop-projects-by-using-application-wizards.md)
-### [Supporto della procedura guidata per altre lingue](wizard-support-for-other-languages.md)
 ### [Creazione di un progetto makefile](creating-a-makefile-project.md)
 #### [Creazione guidata progetto makeFile](makefile-project-wizard.md)
 ##### [Impostazioni applicazione, Creazione guidata progetto makefile](application-settings-makefile-project-wizard.md)
