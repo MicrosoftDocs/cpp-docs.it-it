@@ -1,7 +1,7 @@
 ---
 title: Crea dichiarazione/definizione | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383691a5c2da2af6e4a992ab8766cd99ffa3d781
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 21edf09eb78d339c06c709b06e8fe43ea72475c4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408388"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808406"
 ---
 # <a name="create-declaration--definition"></a>Crea dichiarazione/definizione
 **Che cosa:** consente di generare immediatamente la dichiarazione o definizione di una funzione.

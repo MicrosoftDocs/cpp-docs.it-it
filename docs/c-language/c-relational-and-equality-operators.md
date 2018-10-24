@@ -1,7 +1,7 @@
 ---
 title: Operatori relazionali e operatori di uguaglianza C | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf3c406059fe8744843e1353ad997acc19c499b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9251aeb93ec53c47ca9c7474785b5180c36a3887
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058237"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808953"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatori relazionali e operatori di uguaglianza C
 
@@ -31,32 +31,28 @@ Gli operatori relazionali e di uguaglianza binari confrontano il primo operando 
 
 **Sintassi**
 
-*relational-expression*: *shift-expression*
+*relational-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
 
-*relational-expression*  **\<**  *shift-expression*
-
-*relational-expression*  **>**  *shift-expression*
-
-*relational-expression*  **\<=**  *shift-expression*
-
-*relational-expression*  **>=**  *shift-expression*
-
-*equality-expression*: *relational-expression*
-
-*equality-expression*  **==**  *relational-expression*
-
-*equality-expression*  **!=**  *relational-expression*
+*equality-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **==** *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **!=** *relational-expression*
 
 Gli operatori relazionali e di uguaglianza testano le relazioni seguenti:
 
 |Operatore|Relazione testata|
 |--------------|-------------------------|
-|**\<**|Primo operando minore del secondo operando|
+|**&lt;**|Primo operando minore del secondo operando|
 |**>**|Primo operando maggiore del secondo operando|
-|**\<=**|Primo operando minore o uguale al secondo operando|
+|**&lt;=**|Primo operando minore o uguale al secondo operando|
 |**>=**|Primo operando maggiore o uguale al secondo operando|
-|`==`|Primo operando uguale al secondo operando|
-|`!=`|Primo operando non uguale al secondo operando|
+|**==**|Primo operando uguale al secondo operando|
+|**!=**|Primo operando non uguale al secondo operando|
 
 I primi quattro operatori nell'elenco sopra riportato hanno maggiore precedenza rispetto agli operatori di uguaglianza (`==` e `!=`). Per informazioni sulla precedenza, vedere la tabella [Precedenza e associatività degli operatori C](../c-language/precedence-and-order-of-evaluation.md).
 
@@ -64,7 +60,7 @@ Gli operandi possono disporre di un tipo integrale, a virgola mobile o puntatore
 
 - Entrambi gli operandi di qualsiasi operatore relazionale o di uguaglianza possono essere puntatori allo stesso tipo. Per gli operatori di uguaglianza (`==`) e di disuguaglianza (`!=`) il risultato del confronto indica se i due puntatori sono indirizzati alla stessa posizione di memoria. Per gli altri operatori relazionali (**\<**, **>**, **\<**= e **>**=) il risultato del confronto indica la posizione relativa dei due indirizzi di memoria degli oggetti a cui si fa riferimento. Gli operatori relazionali confrontano solo gli offset.
 
-     Il confronto tra puntatori viene definito solo per le parti dello stesso oggetto. Se i puntatori fanno riferimento ai membri di una matrice, il confronto è equivalente al confronto dei pedici corrispondenti. L'indirizzo del primo elemento della matrice è "minore di" quello dell'ultimo elemento. Nel caso di strutture, i puntatori ai membri della struttura dichiarati successivamente sono "maggiori dei" puntatori ai membri dichiarati nella struttura. I puntatori ai membri della stessa unione sono uguali.
+   Il confronto tra puntatori viene definito solo per le parti dello stesso oggetto. Se i puntatori fanno riferimento ai membri di una matrice, il confronto è equivalente al confronto dei pedici corrispondenti. L'indirizzo del primo elemento della matrice è "minore di" quello dell'ultimo elemento. Nel caso di strutture, i puntatori ai membri della struttura dichiarati successivamente sono "maggiori dei" puntatori ai membri dichiarati nella struttura. I puntatori ai membri della stessa unione sono uguali.
 
 - Un valore del puntatore può essere confrontato con il valore costante 0 per uguaglianza (`==`) o disuguaglianza (`!=`). Un puntatore con un valore pari a 0 viene chiamato un puntatore "null", ovvero non indica una posizione di memoria valida.
 
@@ -74,14 +70,14 @@ Gli operandi possono disporre di un tipo integrale, a virgola mobile o puntatore
 
 Negli esempi riportati di seguito vengono illustrati gli operatori relazionali e di uguaglianza.
 
-```
+```C
 int x = 0, y = 0;
 if ( x < y )
 ```
 
 Poiché `x` e `y` sono uguali, l'espressione in questo esempio produce il valore 0.
 
-```
+```C
 char array[10];
 char *p;
 
@@ -91,7 +87,7 @@ for ( p = array; p < &array[10]; p++ )
 
 Il frammento in questo esempio imposta ogni elemento `array` su una costante di carattere null.
 
-```
+```C
 enum color { red, white, green } col;
    .
    .
