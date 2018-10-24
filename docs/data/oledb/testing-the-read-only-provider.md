@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa56a62fa898f7ebe6c171af6f7246106b8e5ac7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4630391d9bce319c35af18767d7133bd34a92362
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038739"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990204"
 ---
 # <a name="testing-the-read-only-provider"></a>Test di un provider in sola lettura
 
@@ -31,13 +31,13 @@ Per testare un provider, è necessario un consumer. È utile se il consumer può
   
 L'esempio in questo argomento crea un'applicazione di creazione guidata applicazione MFC predefinita per un utente di test. L'applicazione di test è una finestra semplice con il codice del modello consumer OLE DB aggiunto.  
   
-### <a name="to-create-the-test-application"></a>Per creare l'applicazione di test  
+## <a name="to-create-the-test-application"></a>Per creare l'applicazione di test  
   
 1. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-1. Nel riquadro Tipi progetto selezionare la cartella **Progetti di Visual C++**. Nel riquadro dei modelli, selezionare **applicazione MFC**.  
+1. Nel **tipi di progetto** riquadro, selezionare la **progetti Visual C++** cartella. Nel **modelli** riquadro, selezionare **applicazione MFC**.  
   
-1. Nome del progetto, immettere **TestProv**, quindi fare clic su **OK**.  
+1. Nome del progetto, immettere *TestProv*, quindi fare clic su **OK**.  
   
      Viene visualizzata la creazione guidata applicazione MFC.  
   
@@ -46,9 +46,9 @@ L'esempio in questo argomento crea un'applicazione di creazione guidata applicaz
 1. Nel **funzionalità avanzate** pagina, selezionare **automazione**, quindi fare clic su **fine**.  
   
 > [!NOTE]
->  L'applicazione non richiede il supporto di automazione se si aggiungono **CoInitialize** nelle **CTestProvApp:: InitInstance**.  
+> L'applicazione non richiede il supporto di automazione se si aggiungono `CoInitialize` in `CTestProvApp::InitInstance`.  
   
-È possibile visualizzare e modificare la finestra di dialogo TestProv (IDD_TESTPROV_DIALOG), selezionarlo nella visualizzazione di risorse. Nella finestra di dialogo, inserire due caselle di riepilogo, una per ogni stringa del set di righe. Disattivare la proprietà di ordinamento per entrambe caselle di riepilogo, premere ALT + INVIO quando è selezionata una casella di riepilogo, fare clic sui **stili** scheda e la cancellazione il **ordinamento** casella di controllo. Inoltre, inserire un **eseguire** pulsante sulla finestra di dialogo per recuperare il file. La finestra di dialogo TestProv completata deve avere due caselle di riepilogo con etichettate "String 1" e "2 String", rispettivamente. include inoltre **OK**, **Cancel**, e **eseguire** pulsanti.  
+È possibile visualizzare e modificare il **TestProv** finestra di dialogo (IDD_TESTPROV_DIALOG) selezionandolo nel **visualizzazione risorse**. Nella finestra di dialogo, inserire due caselle di riepilogo, una per ogni stringa del set di righe. Disattivare la proprietà di ordinamento per entrambe caselle di riepilogo premendo **Alt**+**invio** quando viene selezionata una casella di riepilogo, fare clic sui **stili** scheda e la cancellazione di  **Ordinamento** casella di controllo. Inoltre, inserire un **eseguire** pulsante sulla finestra di dialogo per recuperare il file. Il termine **TestProv** finestra di dialogo deve avere due caselle di riepilogo, denominate rispettivamente "String 1" e "String 2,"; include inoltre **OK**, **Annulla**, e **eseguire**  pulsanti.  
   
 Aprire il file di intestazione per la classe di finestra di dialogo (in questo caso TestProvDlg). Aggiungere il codice seguente al file di intestazione (di fuori di qualsiasi dichiarazione di classe):  
   
@@ -73,7 +73,7 @@ END_COLUMN_MAP()
   
 Il codice rappresenta un record utente che definisce quali colonne saranno nel set di righe. Quando il client chiama `IAccessor::CreateAccessor`, Usa queste voci per specificare le colonne da associare. I modelli consumer OLE DB consentono anche di associare le colonne in modo dinamico. Le macro COLUMN_ENTRY rappresentano la versione lato client delle macro PROVIDER_COLUMN_ENTRY. Le due macro COLUMN_ENTRY specificano il numero ordinale, un membro di tipo, lunghezza e i dati per le due stringhe.  
   
-Aggiungere una funzione del gestore per il **eseguiti** premendo CTRL e fare doppio clic sul pulsante i **eseguire** pulsante. Inserire il codice seguente nella funzione:  
+Aggiungere una funzione del gestore per il **eseguiti** pulsante premendo **Ctrl** e fare doppio clic il **eseguire** pulsante. Inserire il codice seguente nella funzione:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -115,9 +115,9 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
-Le righe per ciascuna delle classi aprire creano ciascun oggetto COM nel provider. Per individuare il provider, usare il ProgID del provider. È possibile ottenere il valore ProgID dal Registro di sistema o la ricerca file MyProvider (aprire directory e cercare la chiave ProgID del provider).  
+Le righe per ciascuna delle classi aprire creano ciascun oggetto COM nel provider. Per individuare il provider, usare il `ProgID` del provider. È possibile ottenere il `ProgID` dal Registro di sistema o la ricerca file MyProvider (passare alla directory del provider e cercare il `ProgID` key).  
   
-Il file mydata. txt è incluso con l'esempio MyProv. Per creare un file personalizzato, usare un editor e digitare un numero pari di stringhe, premendo INVIO tra ogni stringa. Se si sposta il file, specificare il nome del percorso.  
+Il file mydata. txt viene incluso con il `MyProv` esempio. Per creare un file personalizzato, usare un editor e digitare un numero pari di stringhe, premendo INVIO tra ogni stringa. Se si sposta il file, specificare il nome del percorso.  
   
 Passare la stringa "c:\\\Samples.\\\myprov\\\MyData.txt" nel `table.Open` riga. Se si esegue la `Open` chiamata, noterete che questa stringa viene passata al `SetCommandText` (metodo) nel provider. Si noti che il `ICommandText::Execute` metodo usato tale stringa.  
   

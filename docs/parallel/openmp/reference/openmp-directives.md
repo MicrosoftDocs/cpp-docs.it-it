@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e761115642cb9ab95931a89ac3b511256d88708b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809005"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990334"
 ---
 # <a name="openmp-directives"></a>Direttive OpenMP
 
@@ -66,7 +66,7 @@ Direttiva                             | Descrizione
 [single](#single)                     | Consente di specificare che una sezione di codice deve essere eseguita su un thread singolo, non necessariamente del thread master.
 [threadprivate](#threadprivate)       | Specifica che una variabile privata di un thread.
 
-## <a name="atomic"></a>atomico
+## <a name="atomic"></a>Atomic
 
 Specifica che una posizione di memoria che verrà aggiornata in modo atomico.
 
@@ -111,7 +111,7 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>Barrier
 
 Sincronizza tutti i thread in un team. tutti i thread Sospendi alla barriera, fino a quando tutti i thread di eseguano la barriera.
 
@@ -129,7 +129,7 @@ Per altre informazioni, vedere [2.6.3 direttiva barrier](../../../parallel/openm
 
 Per un esempio d'uso `barrier`, vedere [master](#master).
 
-## <a name="critical"></a>critical
+## <a name="critical"></a>Critico
 
 Specifica che codice è possibile eseguire solo in un unico thread alla volta.
 
@@ -209,7 +209,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>flush (OpenMP)
+## <a name="flush-openmp"></a>Flush (OpenMP)
 
 Specifica che tutti i thread hanno la stessa visualizzazione di memoria per tutti gli oggetti condivisi.
 
@@ -285,7 +285,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for (OpenMP)
+## <a name="for-openmp"></a>per (OpenMP)
 
 Fa sì che il lavoro svolto un `for` ciclo all'interno di un'area parallela da dividere tra thread.
 
@@ -382,7 +382,7 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>master
+## <a name="master"></a>Master
 
 Specifica che solo il thread master deve essere eseguita una sezione del programma.
 
@@ -515,7 +515,7 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>Parallelo
 
 Definisce un'area parallela, ovvero codice che verrà eseguito da più thread in parallelo.
 
@@ -578,7 +578,7 @@ Hello from thread 3
 
 Si noti che l'ordine dell'output può variare in computer diversi.
 
-## <a name="sections-openmp"></a>sections (OpenMP)
+## <a name="sections-openmp"></a>sezioni (OpenMP)
 
 Identifica le sezioni di codice da dividere tra tutti i thread.
 
@@ -588,7 +588,7 @@ Identifica le sezioni di codice da dividere tra tutti i thread.
    #pragma omp section
    {
       code_block
-   } 
+   } 
 }
 ```
 
@@ -636,12 +636,12 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>singola
+## <a name="single"></a>singolo
 
 Consente di specificare che una sezione di codice deve essere eseguita su un thread singolo, non necessariamente del thread master.
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses] 
 {
    code_block
 }

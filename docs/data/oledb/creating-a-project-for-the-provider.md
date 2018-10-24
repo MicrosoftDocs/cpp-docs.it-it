@@ -1,7 +1,7 @@
 ---
 title: Creazione di un progetto per il Provider | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4d776dbbfbab5e038e14c15a9c281c8edb09153
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 86f85b95b4b45624a778bc183cabadda886d002d
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410876"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990087"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Creazione di un progetto per il provider
 
@@ -32,7 +32,10 @@ ms.locfileid: "49410876"
   
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-1. Nel **tipi di progetto** riquadro, fare clic sui **progetti Visual C++** cartella. Nel **modelli** riquadro, fare clic su **progetto ATL**.  
+1. Nel **tipi di progetto** riquadro, fare clic sui **installati** > **Visual C++** > **MFC/ATL** cartella. Nel **modelli** riquadro, fare clic su **progetto ATL**.  
+
+    > [!NOTE]
+    > Nelle versioni precedenti di Visual Studio, trovare il tipo di progetto sotto **Installed** > **modelli** > **Visual C++**  >  **ATL**.
   
 1. Nel **Name** casella, immettere un nome per il progetto e quindi fare clic su **OK**.  
   

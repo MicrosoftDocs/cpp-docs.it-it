@@ -1,6 +1,6 @@
 ---
 title: Del compilatore C4800 avvisi tramite C5999 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 10/24/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -99,18 +99,20 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
+- C5045
+- C5046
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 27f212865965883732e8bd956cafecf50e0a8de3
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861421"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990347"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Del compilatore C4800 avvisi tramite C5999
 
@@ -251,3 +253,4 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 2) C5043|«*specification*': specifica di eccezione non corrisponde alla dichiarazione precedente|
 |Avviso del compilatore (livello 4) C5044|Un argomento all'opzione della riga di comando *opzione* punta a un percorso '*percorso*' che non esiste|
 |[C5045 avviso del compilatore](c5045.md)|Compilatore inserirà la mitigazione Spectre per il carico di memoria se l'opzione /Qspectre specificato|
+|[Avviso del compilatore (livello 2) C5046](c5046.md)|«*funzione*': simbolo relative a tipi con collegamento interno non definito|

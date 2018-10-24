@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b250e29acc964e1fb1273d02a3b1ea93c087e5c4
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a338de50ee57df2f25a435f8d9c432956f363cb3
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082741"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989970"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Riferimento a una proprietà nel provider
 
@@ -64,7 +64,6 @@ HRESULT hr;
 if (spRowsetProps)  
    hr = spRowsetProps->GetProperties(1, &set, &ulPropSet, &pPropSet);  
   
-
 if (pPropSet)  
 {  
    CComVariant var = pPropSet->rgProperties[0].vValue;  

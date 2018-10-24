@@ -1,7 +1,7 @@
 ---
 title: Origini dati e sessioni | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07c7a395f111d4473eed5f85a1329e85358f5d0c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0a1904c0b0c416c216a28ddcaf7bb20ce408ba0a
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037671"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989944"
 ---
 # <a name="data-sources-and-sessions"></a>Origini dati e sessioni
 
@@ -35,7 +35,7 @@ Le classi sono:
   
 - [CDataSource](../../data/oledb/cdatasource-class.md) questa classe viene creata un'istanza dell'oggetto di origine dati, che crea e gestisce una connessione a un'origine dati tramite un provider OLE DB. L'origine dati richiede informazioni quali le informazioni origine dati indirizzo e l'autenticazione in forma di stringa di connessione.  
   
-     È anche importante notare che la classe helper [CEnumerator](../../data/oledb/cenumerator-class.md) viene spesso usata prima di stabilire la connessione per ottenere un elenco dei provider disponibili registrato in un sistema. In questo modo è possibile selezionare un provider come origine dati. Ad esempio, il **proprietà di Data Link** finestra di dialogo utilizza questa classe per popolare l'elenco dei provider nel **provider** scheda. È equivalente al `SQLBrowseConnect` o `SQLDriverConnect` (funzione).  
+     È anche importante notare che la classe helper [CEnumerator](../../data/oledb/cenumerator-class.md) viene spesso usata prima di stabilire la connessione per ottenere un elenco dei provider disponibili registrato in un sistema. In questo modo è possibile selezionare un provider come origine dati. Ad esempio, il **proprietà di Data Link** finestra di dialogo utilizza questa classe per popolare l'elenco dei provider nel **provider** scheda. Equivale al `SQLBrowseConnect` o `SQLDriverConnect` (funzione).  
   
 - [CSession](../../data/oledb/csession-class.md) questa classe viene creata un'istanza dell'oggetto di sessione, che rappresenta una sessione di accesso singolo all'origine dati. Tuttavia, è possibile creare più sessioni su un'origine dati. Per ogni sessione, è possibile creare set di righe, comandi e altri oggetti per accedere ai dati dall'origine dati. La sessione di gestione delle transazioni.  
   

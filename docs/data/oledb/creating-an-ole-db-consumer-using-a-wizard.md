@@ -1,7 +1,7 @@
 ---
 title: Creazione di un Consumer OLE DB utilizzando una procedura guidata | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 76f16c10ff4342e32a6081e89581945c53ee607c
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097893"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990113"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Creazione di un consumer OLE DB mediante procedura guidata
 
-Questa procedura viene illustrato come è possibile usare la creazione guidata progetto ATL e creazione guidata Consumer OLE DB ATL per generare un consumer di modelli OLE DB e quindi modificare il codice principale dell'applicazione console per recuperare e visualizzare i dati da una tabella di database.  
+Questa procedura illustra come è possibile usare la **Creazione guidata progetto ATL** e **Creazione guidata Consumer OLE DB ATL* per generare un consumer di modelli OLE DB e quindi modificare il codice principale dell'applicazione console recuperare e visualizzare i dati da una tabella di database.  
   
 Le ultime due sezioni illustrano il codice generato dalla procedura guidata del consumer OLE DB.  
   

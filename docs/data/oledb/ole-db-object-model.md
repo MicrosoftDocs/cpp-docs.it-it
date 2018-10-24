@@ -1,7 +1,7 @@
 ---
 title: Modello a oggetti OLE DB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0bd4c8f18addf50dfcee525dea255f75b2fdf75
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d82b6d51e423109c433438731f16878284c2c277
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101494"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990256"
 ---
 # <a name="ole-db-object-model"></a>Modello a oggetti OLE DB
 
-Il modello a oggetti OLE DB è costituito da oggetti o i componenti seguenti. I primi quattro oggetti o i componenti elencati (origini dati, le sessioni, i comandi e i set di righe) consentono di connettersi a un'origine dati e visualizzare i dati. Il resto, a partire da funzioni di accesso, riguardano l'utilizzo con i dati quando viene visualizzato.  
+Il modello a oggetti OLE DB è costituito dalle seguenti oggetti o componenti. I primi quattro oggetti o i componenti elencati (origini dati, le sessioni, i comandi e i set di righe) consentono di connettersi a un'origine dati e visualizzare i dati. Il resto, a partire da funzioni di accesso, riguardano l'utilizzo con i dati quando viene visualizzato.  
   
-## <a name="data-sources"></a>Origini dati  
+## <a name="data-sources"></a>Data Sources  
 
 Oggetti origine dei dati consentono di connettersi a un'origine dati, ad esempio un file o un sistema DBMS. Un oggetto origine dati crea e gestisce la connessione e contiene le informazioni di autenticazioni e autorizzazioni (ad esempio il nome di accesso e password). Un oggetto origine dati è possibile creare una o più sessioni.  
   
@@ -35,7 +35,7 @@ Oggetti origine dei dati consentono di connettersi a un'origine dati, ad esempio
 
 Una sessione di gestisce una particolare interazione con l'origine dati per eseguire query e recuperare i dati. Ogni sessione è una singola transazione. Una transazione è un'unità di lavoro indivisibile definita dalla proprietà ACID. Per una definizione di proprietà ACID, vedere [transazioni](#vcconoledbcomponents_transactions).  
   
-Le sessioni eseguono importanti attività, ad esempio aprendo i set di righe e restituire l'oggetto origine dati che l'ha creata. Le sessioni possono anche restituire metadati o informazioni relative all'origine dati (ad esempio, le informazioni della tabella).  
+Le sessioni eseguire importanti attività, ad esempio aprendo i set di righe e restituire l'oggetto origine dati che l'ha creata. Le sessioni possono anche restituire metadati o informazioni relative all'origine dati (ad esempio, le informazioni della tabella).  
   
 Una sessione è possibile creare uno o più comandi.  
   
@@ -47,11 +47,11 @@ Un comando è semplicemente un contenitore per un comando di testo, che è una s
   
 ## <a name="rowsets"></a>Set di righe  
 
-I set di righe esporre i dati in formato tabulare. Un indice è un caso speciale di un set di righe. È possibile creare set di righe dalla sessione o il comando.  
+I set di righe Mostra i dati in formato tabulare. Un indice è un caso speciale di un set di righe. È possibile creare set di righe dalla sessione o il comando.  
   
 ### <a name="schema-rowsets"></a>Rowset dello schema  
 
-Gli schemi contengono i metadati (informazioni strutturali) relativi a un database. Set di righe dello schema sono i set di righe che contengono informazioni sullo schema. Alcuni provider OLE DB per DBMS supportano gli oggetti set di righe dello schema. Per altre informazioni sui set di righe dello schema, vedere [recupero di metadati with Schema Rowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) e [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
+Gli schemi dispongono di metadati (informazioni strutturali) su un database. Set di righe dello schema sono i set di righe contenenti le informazioni sullo schema. Alcuni provider OLE DB per DBMS supportano gli oggetti set di righe dello schema. Per altre informazioni sui set di righe dello schema, vedere [recupero di metadati with Schema Rowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) e [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 ### <a name="view-objects"></a>Visualizzazione di oggetti  
 
@@ -65,13 +65,13 @@ Solo OLE DB Usa il concetto di funzioni di accesso. Una funzione di accesso vien
 
 Oggetti transazione vengono utilizzati durante il commit o annullare transazioni annidate in diverso da quello più basso. Una transazione è un'unità di lavoro indivisibile definita dalla proprietà ACID. ACID è l'acronimo di:  
   
-- Atomicità: non possono essere divisi in unità di lavoro più piccole.  
+- Atomicità, non può essere suddiviso in unità di lavoro più piccole  
   
-- Concorrenza: può verificarsi più di una transazione alla volta.  
+- La concorrenza, più di una transazione può verificarsi in un momento  
   
-- Isolamento: una transazione ha limitato della Knowledge base sulle modifiche apportate da un altro.  
+- Isolamento, una transazione ha una conoscenza limitata delle modifiche apportate da un altro  
   
-- Durabilità: la transazione vengono apportate modifiche permanenti.  
+- La transazione di durabilità, apporta modifiche persistenti 
   
 ## <a name="enumerators"></a>Enumeratori  
 
@@ -81,7 +81,7 @@ Un enumeratore radice, distribuito in Microsoft Data Access SDK, analizza il Reg
   
 ## <a name="errors"></a>Errori  
 
-Qualsiasi interfaccia a tutti gli oggetti OLE DB può generare errori. Errori contengono informazioni aggiuntive sull'errore, tra cui un oggetto error personalizzato facoltativo. Queste informazioni sono contenute in un valore HRESULT.  
+Qualsiasi interfaccia a tutti gli oggetti OLE DB può generare errori. Gli errori sono disponibili ulteriori informazioni sull'errore, tra cui un oggetto error personalizzato facoltativo. Queste informazioni vengono archiviate in un valore HRESULT.  
   
 ## <a name="notifications"></a>Notifiche  
 

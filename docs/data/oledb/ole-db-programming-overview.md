@@ -1,7 +1,7 @@
 ---
 title: Panoramica della programmazione con OLE DB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec41a0213c621e948a160553c03b17be39e9f2f3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5fea82dfd7d3f9cdd64d0eab66e44ac1a486abac
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090711"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989892"
 ---
 # <a name="ole-db-programming-overview"></a>Cenni preliminari sulla programmazione con OLE DB
 
-OLE DB è una tecnologia di database a prestazioni elevate, basato su COM. Fornisce un modo comune per accedere ai dati indipendentemente dal formato in cui viene archiviato. In una situazione aziendale tipico, una grande quantità di informazioni viene archiviata all'esterno dei database aziendali. Queste informazioni sono state trovate nel file System (ad esempio System FAT che NTFS), file sequenziali-indicizzate, il database persona (ad esempio l'accesso), fogli di calcolo (ad esempio Excel), applicazioni per la pianificazione di progetto (ad esempio progetto) e tramite posta elettronica (ad esempio Outlook). OLE DB consente di accedere a qualsiasi tipo di archivio dati nello stesso modo, purché l'archivio dati dispone di un provider OLE DB.
+OLE DB è una tecnologia di database a prestazioni elevate, basato su COM. Fornisce un modo comune per accedere ai dati indipendentemente dal formato in cui viene archiviato. In una situazione aziendale tipico, una grande quantità di informazioni non vengono archiviate nel database aziendali. Queste informazioni sono state trovate nel file System (ad esempio System FAT che NTFS), file sequenziali-indicizzate, il database persona (ad esempio l'accesso), fogli di calcolo (ad esempio Excel), applicazioni per la pianificazione di progetto (ad esempio progetto) e tramite posta elettronica (ad esempio Outlook). OLE DB consente di accedere a qualsiasi tipo di archivio dati nello stesso modo, purché l'archivio dati dispone di un provider OLE DB.
   
-OLE DB consente di sviluppare applicazioni che accedono a diverse origini dati, se DBMS che siano o meno. OLE DB rende possibile l'accesso universale tramite interfacce COM che supportano la funzionalità DBMS appropriata per una determinata origine dati. COM consente di ridurre la duplicazione non necessaria dei servizi e ottimizzando l'interoperabilità non solo tra le origini dati, ma anche tra le altre applicazioni.  
+OLE DB consente di sviluppare applicazioni che accedono a diverse origini dati, sia che si DBMS o No. OLE DB rende possibile l'accesso universale tramite interfacce COM che supportano la funzionalità DBMS appropriata per una determinata origine dati. COM consente di ridurre la duplicazione non necessaria dei servizi e ottimizzando l'interoperabilità non solo tra le origini dati, ma anche tra le altre applicazioni.  
   
 ## <a name="benefits-of-com"></a>Vantaggi di COM  
 

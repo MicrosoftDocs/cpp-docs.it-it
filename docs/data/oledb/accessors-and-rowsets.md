@@ -1,7 +1,7 @@
 ---
 title: Le funzioni di accesso e rowset | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113097"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990178"
 ---
 # <a name="accessors-and-rowsets"></a>Funzioni di accesso e rowset
 
@@ -77,7 +77,7 @@ La figura seguente illustra i tipi di set di righe.
 ![Immagine di RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 Classi rowset  
   
-[I set di righe dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) non accedere ai dati nei dati archiviare ma invece accedere alle informazioni sull'archivio dati, note come metadati. I set di righe dello schema sono in genere usato in situazioni in cui la struttura del database non è noto in fase di compilazione e deve essere ottenuta in fase di esecuzione.  
+[I set di righe dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) non accesso nei dati di archivio dati, ma invece accedere alle informazioni sull'archivio dati, note come metadati. I set di righe dello schema vengono in genere usati nelle situazioni in cui la struttura del database non è noto in fase di compilazione e deve essere ottenuta in fase di esecuzione.  
   
 ## <a name="see-also"></a>Vedere anche  
 
