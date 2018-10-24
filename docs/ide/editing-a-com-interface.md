@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451e7fc6e2a7b4a72188da6b69888bf04b605842
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f660f9d69fc787384fcfbec37caec0064a58ec29
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412366"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861343"
 ---
 # <a name="editing-a-com-interface"></a>Modifica di un'interfaccia COM
 
@@ -38,8 +38,8 @@ Le tre procedure guidate seguenti consentono di personalizzare le interfacce esi
 
 |Wizard|Tipo di progetto|
 |------------|------------------|
-|[Aggiunta guidata proprietà](../ide/names-add-property-wizard.md)|Progetti ATL o MFC che supportano ATL. Fare clic con il pulsante destro del mouse sull'interfaccia a cui si vuole aggiungere la proprietà.<br /><br /> Visual C++ rileva il tipo di progetto e modifica le opzioni dell'Aggiunta guidata proprietà in base al progetto:<br /><br /> - Per le interfacce dispatch nei progetti creati tramite la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la chiamata dell'Aggiunta guidata proprietà determina la visualizzazione di opzioni specifiche di MFC.<br />- Per le interfacce del controllo ActiveX MFC, l'Aggiunta guidata proprietà offre un elenco di proprietà e metodi predefiniti da usare così come sono o da personalizzare per il controllo.<br />- Per tutte le altre interfacce, l'Aggiunta guidata proprietà offre opzioni utili nella maggior parte delle situazioni.|
-|[Aggiunta guidata metodo](../ide/add-method-wizard.md)|Progetti ATL o MFC che supportano ATL. Fare clic con il pulsante destro del mouse sull'interfaccia a cui si vuole aggiungere il metodo.<br /><br /> Visual C++ rileva il tipo di progetto e modifica le opzioni dell'Aggiunta guidata metodo in base al progetto:<br /><br /> - Per le interfacce dispatch nei progetti creati tramite la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la chiamata dell'Aggiunta guidata metodo determina la visualizzazione di opzioni specifiche di MFC.<br />- Per le interfacce del controllo ActiveX MFC, l'Aggiunta guidata metodo offre un elenco di proprietà e metodi predefiniti da usare così come sono o da personalizzare per il controllo.<br />- Per tutte le altre interfacce, le procedure guidate **Aggiungi metodo** offrono opzioni utili nella maggior parte delle situazioni.|
+|[Aggiunta guidata proprietà](../ide/names-add-property-wizard.md)|Progetti ATL o MFC che supportano ATL. Fare clic con il pulsante destro del mouse sull'interfaccia a cui si vuole aggiungere la proprietà.<br /><br />Visual C++ rileva il tipo di progetto e modifica le opzioni dell'Aggiunta guidata proprietà in base al progetto:<br /><br />- Per le interfacce dispatch nei progetti creati tramite la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la chiamata dell'Aggiunta guidata proprietà determina la visualizzazione di opzioni specifiche di MFC.<br />- Per le interfacce del controllo ActiveX MFC, l'Aggiunta guidata proprietà offre un elenco di proprietà e metodi predefiniti da usare così come sono o da personalizzare per il controllo.<br />- Per tutte le altre interfacce, l'Aggiunta guidata proprietà offre opzioni utili nella maggior parte delle situazioni.|
+|[Aggiunta guidata metodo](../ide/add-method-wizard.md)|Progetti ATL o MFC che supportano ATL. Fare clic con il pulsante destro del mouse sull'interfaccia a cui si vuole aggiungere il metodo.<br /><br />Visual C++ rileva il tipo di progetto e modifica le opzioni dell'Aggiunta guidata metodo in base al progetto:<br /><br />- Per le interfacce dispatch nei progetti creati tramite la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la chiamata dell'Aggiunta guidata metodo determina la visualizzazione di opzioni specifiche di MFC.<br />- Per le interfacce del controllo ActiveX MFC, l'Aggiunta guidata metodo offre un elenco di proprietà e metodi predefiniti da usare così come sono o da personalizzare per il controllo.<br />- Per tutte le altre interfacce, le procedure guidate **Aggiungi metodo** offrono opzioni utili nella maggior parte delle situazioni.|
 
 È anche possibile implementare nuove interfacce nel controllo COM facendo clic con il pulsante destro del mouse sulla classe di controllo dell'oggetto in Visualizzazione classi e selezionando [Implementa interfaccia](../ide/implement-interface-wizard.md).
 

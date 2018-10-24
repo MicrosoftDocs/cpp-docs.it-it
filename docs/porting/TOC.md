@@ -15,6 +15,7 @@
 ### [Correggere le dipendenze da elementi interni delle librerie](fix-your-dependencies-on-library-internals.md)
 ### [Problemi relativi alla migrazione dei valori a virgola mobile](floating-point-migration-issues.md)
 ### [Usare multitargeting nativo in Visual Studio per compilare progetti precedenti](use-native-multi-targeting.md)
+### [Funzionalità di Visual C++ deprecate nella versione di anteprima di Visual Studio 2019](features-deprecated-in-visual-studio.md)
 ## [Introduzione a Visual C++ per utenti UNIX](introduction-to-visual-cpp-for-unix-users.md)
 ## [Porting da UNIX a Win32](porting-from-unix-to-win32.md)
 ## [Porting alla piattaforma UWP (C++)](porting-to-the-universal-windows-platform-cpp.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ba28a426c439454d8b0723f8d2997bbefa5759
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 101d58eeb61335939db507ff6addd0c4fa7917f0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417228"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861902"
 ---
 # <a name="resource-files-c"></a>File di risorse (C++)
 
@@ -31,7 +31,7 @@ Per altre informazioni, vedere l'[articolo relativo all'uso delle risorse](../wi
 
 |Nome file|Directory|Esplora soluzioni|Descrizione|
 |---------------|------------------------|--------------------------------|-----------------|
-|*Projname*.rc|*Projname*|File di origine|File script di risorsa per il progetto. Il file di script di risorsa contiene i seguenti elementi, a seconda del tipo di progetto, e il supporto selezionato per il progetto, ad esempio le barre degli strumenti, le finestre di dialogo o il linguaggio HTML:<br /><br /> - Definizione predefinita di menu.<br />- Tabelle di stringhe e tasti di scelta rapida.<br />- Finestra di dialogo**Informazioni** predefinita.<br />- Altre finestre di dialogo.<br />- File icona (res\\*Projname*.ico).<br />- Informazioni sulla versione.<br />- Bitmap.<br />- Barra degli strumenti.<br />- File HTML.<br /><br /> Il file di risorse include il file Afxres.rc per le risorse standard di Microsoft Foundation Class.|
+|*Projname*.rc|*Projname*|File di origine|File script di risorsa per il progetto. Il file di script di risorsa contiene i seguenti elementi, a seconda del tipo di progetto, e il supporto selezionato per il progetto, ad esempio le barre degli strumenti, le finestre di dialogo o il linguaggio HTML:<br /><br />- Definizione predefinita di menu.<br />- Tabelle di stringhe e tasti di scelta rapida.<br />- Finestra di dialogo **Informazioni** predefinita.<br />- Altre finestre di dialogo.<br />- File icona (res\\*Projname*.ico).<br />- Informazioni sulla versione.<br />- Bitmap.<br />- Barra degli strumenti.<br />- File HTML.<br /><br /> Il file di risorse include il file Afxres.rc per le risorse standard di Microsoft Foundation Class.|
 |Resource.h|*Projname*|File di intestazione|File di intestazione delle risorse che include le definizioni per le risorse usate dal progetto.|
 |*Projname*.rc2|*Projname*\res|File di origine|File di script contenente le risorse aggiuntive usate dal progetto. È possibile includere il file RC2 sotto il file RC del progetto.<br /><br /> Un file RC2 è utile per includere le risorse usate da progetti diversi. Anziché creare le stesse risorse più volte per progetti diversi, è possibile inserirle in un file RC2 e includere il file RC2 nel file RC principale.|
 |*Projname*.def|*Projname*|File di origine|File di definizione del modulo per un progetto DLL. Per un controllo, specifica il nome e la descrizione del controllo, nonché le dimensioni dell'heap di runtime.|

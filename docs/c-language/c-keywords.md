@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3091437333d01db3fa556cb3c164e916c3628333
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057796"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860888"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 
@@ -48,15 +48,15 @@ Le parole chiave e gli identificatori speciali seguenti sono riconosciuti dal co
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**2|**__int8**|**naked**2|
-|**__based**1|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**2|
+|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
+|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
+|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
 |**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**2|**__inline**|**__leave**||
+|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
 
-1. La parola chiave **__based** ha usi limitati nelle compilazioni di destinazione a 32 bit e a 64 bit.
+<sup>1</sup> La parola chiave **__based** ha usi limitati nelle compilazioni di destinazione a 32 bit e a 64 bit.
 
-2. Questi sono identificatori speciali se usati con **__declspec**. L'uso di questi identificatori in altri contesti non è limitato.
+<sup>2</sup> Questi sono identificatori speciali se usati con **__declspec**. L'uso di questi identificatori in altri contesti non è limitato.
 
 Le estensioni Microsoft sono attivate per impostazione predefinita. Per assicurarsi che i programmi siano completamente portabili, è possibile disabilitare le estensioni Microsoft specificando l'opzione della riga di comando /Za (compilare per la compatibilità ANSI) durante la compilazione. In questo caso, le parole chiave specifiche di Microsoft sono disabilitate.
 
