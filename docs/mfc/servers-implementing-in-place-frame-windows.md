@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425015"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055222"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Server: implementazione di finestre cornice sul posto
 
@@ -39,15 +39,15 @@ In questo articolo viene illustrata la procedura per implementare le finestre co
 
 1. Dichiarare un membro `COleResizeBar` nella classe della finestra cornice. Ciò è necessario se si vuole supportare il ridimensionamento sul posto nelle applicazioni server.
 
-     Dichiarare un `OnCreate` gestore di messaggi (tramite il **delle proprietà** finestra) e chiamare `Create` per il `COleResizeBar` membro, se è stato definito.
+   Dichiarare un `OnCreate` gestore di messaggi (tramite il **delle proprietà** finestra) e chiamare `Create` per il `COleResizeBar` membro, se è stato definito.
 
 1. Se si dispone di una barra degli strumenti, dichiarare un membro `CToolBar` nella classe della finestra cornice.
 
-     Eseguire l'override della funzione membro `OnCreateControlBars` per creare una barra degli strumenti quando il server è attivo sul posto. Ad esempio:
+   Eseguire l'override della funzione membro `OnCreateControlBars` per creare una barra degli strumenti quando il server è attivo sul posto. Ad esempio:
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     Vedere la discussione su questo codice riportata dopo il passaggio 5.
+   Vedere la discussione su questo codice riportata dopo il passaggio 5.
 
 1. Includere il file di intestazione per questa classe della finestra cornice sul posto nel file principale con estensione cpp.
 

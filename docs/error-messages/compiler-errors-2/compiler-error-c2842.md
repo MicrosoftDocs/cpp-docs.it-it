@@ -16,19 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20967ab4cd047f62a5cf692c91fec90148b4f470
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f6143249871384d89227d63fe1900814ae5077fd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118817"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055242"
 ---
 # <a name="compiler-error-c2842"></a>Errore del compilatore C2842
 
 'class': un tipo gestito o WinRT non può definire il proprio 'operator new' o 'operator delete'
 
 È possibile definire il proprio * * operatore new o **operatore delete** per gestire l'allocazione di memoria nell'heap nativo. Tuttavia, le classi di riferimento non possono definire questi operatori perché vengono allocati esclusivamente nell'heap gestito.
-
 
 Per altre informazioni, vedere [operatori definiti dall'utente (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 

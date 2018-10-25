@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0a1904c0b0c416c216a28ddcaf7bb20ce408ba0a
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0a6cb4e27f8a248b0b90454acb782b3b8994abc4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056035"
 ---
 # <a name="data-sources-and-sessions"></a>Origini dati e sessioni
 
-Nella figura seguente vengono illustrate le classi che supportano la connessione e l'accesso a un'origine dati. Ogni classe si basa su un'implementazione del componente OLE DB standard.  
-  
-![Classi di dati origine e di sessione](../../data/oledb/media/vcdatasourcesessionclasses.gif "vcdatasourcesessionclasses")  
-Classi delle origini dati e delle sessioni  
-  
-Le classi sono:  
-  
-- [CDataSource](../../data/oledb/cdatasource-class.md) questa classe viene creata un'istanza dell'oggetto di origine dati, che crea e gestisce una connessione a un'origine dati tramite un provider OLE DB. L'origine dati richiede informazioni quali le informazioni origine dati indirizzo e l'autenticazione in forma di stringa di connessione.  
-  
-     È anche importante notare che la classe helper [CEnumerator](../../data/oledb/cenumerator-class.md) viene spesso usata prima di stabilire la connessione per ottenere un elenco dei provider disponibili registrato in un sistema. In questo modo è possibile selezionare un provider come origine dati. Ad esempio, il **proprietà di Data Link** finestra di dialogo utilizza questa classe per popolare l'elenco dei provider nel **provider** scheda. Equivale al `SQLBrowseConnect` o `SQLDriverConnect` (funzione).  
-  
-- [CSession](../../data/oledb/csession-class.md) questa classe viene creata un'istanza dell'oggetto di sessione, che rappresenta una sessione di accesso singolo all'origine dati. Tuttavia, è possibile creare più sessioni su un'origine dati. Per ogni sessione, è possibile creare set di righe, comandi e altri oggetti per accedere ai dati dall'origine dati. La sessione di gestione delle transazioni.  
-  
-## <a name="see-also"></a>Vedere anche  
+Nella figura seguente vengono illustrate le classi che supportano la connessione e l'accesso a un'origine dati. Ogni classe si basa su un'implementazione del componente OLE DB standard.
+
+![Classi di dati origine e di sessione](../../data/oledb/media/vcdatasourcesessionclasses.gif "vcdatasourcesessionclasses") origine dati e le classi di sessione
+
+Le classi sono:
+
+- [CDataSource](../../data/oledb/cdatasource-class.md) questa classe viene creata un'istanza dell'oggetto di origine dati, che crea e gestisce una connessione a un'origine dati tramite un provider OLE DB. L'origine dati richiede informazioni quali le informazioni origine dati indirizzo e l'autenticazione in forma di stringa di connessione.
+
+   È anche importante notare che la classe helper [CEnumerator](../../data/oledb/cenumerator-class.md) viene spesso usata prima di stabilire la connessione per ottenere un elenco dei provider disponibili registrato in un sistema. In questo modo è possibile selezionare un provider come origine dati. Ad esempio, il **proprietà di Data Link** finestra di dialogo utilizza questa classe per popolare l'elenco dei provider nel **provider** scheda. Equivale al `SQLBrowseConnect` o `SQLDriverConnect` (funzione).
+
+- [CSession](../../data/oledb/csession-class.md) questa classe viene creata un'istanza dell'oggetto di sessione, che rappresenta una sessione di accesso singolo all'origine dati. Tuttavia, è possibile creare più sessioni su un'origine dati. Per ogni sessione, è possibile creare set di righe, comandi e altri oggetti per accedere ai dati dall'origine dati. La sessione di gestione delle transazioni.
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

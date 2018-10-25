@@ -27,87 +27,87 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 432fb57b1505733b4f9cbda4e558699a8108a3ad
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 40c1648131db04ed1629da453a16112debf6e6be
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083996"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053597"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
 
-Fornisce un'implementazione del [ICommandProperties](/previous-versions/windows/desktop/ms723044) interfaccia.  
-  
+Fornisce un'implementazione del [ICommandProperties](/previous-versions/windows/desktop/ms723044) interfaccia.
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-template <class T, class PropClass = T>  
-class ATL_NO_VTABLE ICommandPropertiesImpl   
-   : public ICommandProperties, public CUtlProps<PropClass>  
-```  
-  
-### <a name="parameters"></a>Parametri  
+template <class T, class PropClass = T>
+class ATL_NO_VTABLE ICommandPropertiesImpl
+   : public ICommandProperties, public CUtlProps<PropClass>
+```
+
+### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Classe, derivata da  
-  
+Classe, derivata da
+
 *PropClass*<br/>
-Classe di proprietà.  
+Classe di proprietà.
 
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atldb.h  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="interface-methods"></a>Metodi di interfaccia  
-  
-|||  
-|-|-|  
-|[GetProperties](#getproperties)|Restituisce l'elenco delle proprietà nel gruppo di proprietà set di righe che sono attualmente richiesti per il set di righe.|  
-|[SetProperties](#setproperties)|Imposta le proprietà nel gruppo di proprietà set di righe.|  
-  
-## <a name="remarks"></a>Note  
+**Intestazione:** atldb.h
 
-Questo campo è obbligatorio in comandi. L'implementazione è fornita da una funzione statica definita per il [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.  
+## <a name="members"></a>Membri
+
+### <a name="interface-methods"></a>Metodi di interfaccia
+
+|||
+|-|-|
+|[GetProperties](#getproperties)|Restituisce l'elenco delle proprietà nel gruppo di proprietà set di righe che sono attualmente richiesti per il set di righe.|
+|[SetProperties](#setproperties)|Imposta le proprietà nel gruppo di proprietà set di righe.|
+
+## <a name="remarks"></a>Note
+
+Questo campo è obbligatorio in comandi. L'implementazione è fornita da una funzione statica definita per il [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.
 
 ## <a name="getproperties"></a> Icommandpropertiesimpl:: GetProperties
 
-Restituisce tutti i set di proprietà richiesto tramite il mapping di proprietà del comando.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Restituisce tutti i set di proprietà richiesto tramite il mapping di proprietà del comando.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,   
-   const DBPROPIDSET rgPropertyIDSets[],   
-   ULONG * pcPropertySets,   
-   DBPROPSET ** prgPropertySets);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+STDMETHOD(GetProperties)(const ULONG cPropertyIDSets, 
+   const DBPROPIDSET rgPropertyIDSets[], 
+   ULONG * pcPropertySets, 
+   DBPROPSET ** prgPropertySets);
+```
 
-Visualizzare [ICommandProperties](/previous-versions/windows/desktop/ms723119) nel *riferimento per programmatori OLE DB*.  
-  
-### <a name="remarks"></a>Note  
+#### <a name="parameters"></a>Parametri
 
-Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
-  
+Visualizzare [ICommandProperties](/previous-versions/windows/desktop/ms723119) nel *riferimento per programmatori OLE DB*.
+
+### <a name="remarks"></a>Note
+
+Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+
 ## <a name="setproperties"></a> Icommandpropertiesimpl:: SetProperties
 
-Imposta le proprietà per l'oggetto comando.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets,   
-   DBPROPSET rgPropertySets[]);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+Imposta le proprietà per l'oggetto comando.
 
-Visualizzare [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497) nel *riferimento per programmatori OLE DB*.  
-  
-## <a name="see-also"></a>Vedere anche  
+### <a name="syntax"></a>Sintassi
+
+```cpp
+STDMETHOD(SetProperties)(ULONG cPropertySets, 
+   DBPROPSET rgPropertySets[]);
+```
+
+#### <a name="parameters"></a>Parametri
+
+Visualizzare [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497) nel *riferimento per programmatori OLE DB*.
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

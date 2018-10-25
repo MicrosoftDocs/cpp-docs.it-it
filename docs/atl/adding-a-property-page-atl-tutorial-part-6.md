@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0db4d53d64def1c1f55929aa9d7514142955cf
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821132"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055062"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Aggiunta di una pagina di proprietà (Esercitazione di ATL, parte 6)
 
@@ -45,7 +45,7 @@ Per aggiungere una pagina delle proprietà al controllo, usare il modello di pag
 
 1. Fare clic su **stringhe** per aprire il **stringhe** pagina e immettere **& poligono** come il **titolo**.
 
-     Il **titolo** della proprietà pagina è la stringa visualizzata nella scheda per la pagina. Il **stringa Doc** è una descrizione che usa una finestra delle proprietà da inserire in un suggerimento di riga o lo strumento di stato. Si noti che il frame di proprietà standard attualmente non usare questa stringa, in modo da lasciare l'impostazione con il contenuto predefinito. Non genererà una **file della Guida** al momento, quindi eliminare la voce nella casella di testo.
+   Il **titolo** della proprietà pagina è la stringa visualizzata nella scheda per la pagina. Il **stringa Doc** è una descrizione che usa una finestra delle proprietà da inserire in un suggerimento di riga o lo strumento di stato. Si noti che il frame di proprietà standard attualmente non usare questa stringa, in modo da lasciare l'impostazione con il contenuto predefinito. Non genererà una **file della Guida** al momento, quindi eliminare la voce nella casella di testo.
 
 1. Fare clic su **fine**, e verrà creato l'oggetto pagina delle proprietà.
 

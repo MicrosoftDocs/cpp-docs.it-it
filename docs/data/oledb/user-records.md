@@ -26,76 +26,76 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 10025d7bdb8035ee6ce9c070ab57bc52c507f585
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: da0745c730c03df04eb0ebcd6c3e3890b0cae6c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990165"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057895"
 ---
 # <a name="user-records"></a>Record utente
 
-Usare una funzione di accesso statico (vale a dire, una funzione di accesso derivata da `CAccessor`), il consumer deve disporre di un record utente. Il record dell'utente è una classe C++ che contiene gli elementi di dati per gestire l'input o output. Il **Creazione guidata Consumer OLE DB ATL** genera un record utente per i consumer. È possibile aggiungere i metodi per il record dell'utente per attività facoltative, ad esempio gestione dei comandi.  
-  
-Il codice seguente mostra un record di esempio che gestisce i comandi. Nel record utente, BEGIN_COLUMN_MAP rappresenta un set di righe di dati passati al consumer di un provider. BEGIN_PARAM_MAP rappresenta un set di parametri del comando. Questo esempio Usa un' [CCommand](../../data/oledb/ccommand-class.md) classe per gestire i parametri del comando. I membri di dati nelle voci della mappa rappresentano gli offset in un blocco contiguo di memoria per ogni istanza della classe. Le macro COLUMN_ENTRY corrispondono alle macro PROVIDER_COLUMN_ENTRY sul lato del provider.  
-  
-Per altre informazioni sulle macro dei COLUMN_MAP e PARAM_MAP, vedere [macro per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
-  
-```cpp  
-class CArtists  
-{  
-public:  
-// Data Elements  
-   CHAR m_szFirstName[20];  
-   CHAR m_szLastName[30];  
-   short m_nAge;  
-  
-// Column binding map  
-BEGIN_COLUMN_MAP(CArtists)  
-   COLUMN_ENTRY(1, m_szFirstName)  
-   COLUMN_ENTRY(2, m_szLastName)  
-   COLUMN_ENTRY(3, m_nAge)  
-END_COLUMN_MAP()  
-  
-// Parameter binding map  
-BEGIN_PARAM_MAP(CArtists)  
-   COLUMN_ENTRY(1, m_nAge)  
-END_PARAM_MAP()  
-};  
-```  
-  
-## <a name="wizard-generated-user-records"></a>Record utente generato dalla procedura guidata  
+Usare una funzione di accesso statico (vale a dire, una funzione di accesso derivata da `CAccessor`), il consumer deve disporre di un record utente. Il record dell'utente è una classe C++ che contiene gli elementi di dati per gestire l'input o output. Il **Creazione guidata Consumer OLE DB ATL** genera un record utente per i consumer. È possibile aggiungere i metodi per il record dell'utente per attività facoltative, ad esempio gestione dei comandi.
 
-Se si usa la **Creazione guidata Consumer OLE DB ATL** per generare un consumer, è possibile scegliere di usare i modelli OLE DB o gli attributi OLE DB. Il codice generato è diverso in ogni caso. Per altre informazioni su questo codice, vedere [classi riguardano](../../data/oledb/consumer-wizard-generated-classes.md).  
-  
-## <a name="user-record-support-for-multiple-accessors"></a>Supporto per più funzioni di accesso del Record utente  
+Il codice seguente mostra un record di esempio che gestisce i comandi. Nel record utente, BEGIN_COLUMN_MAP rappresenta un set di righe di dati passati al consumer di un provider. BEGIN_PARAM_MAP rappresenta un set di parametri del comando. Questo esempio Usa un' [CCommand](../../data/oledb/ccommand-class.md) classe per gestire i parametri del comando. I membri di dati nelle voci della mappa rappresentano gli offset in un blocco contiguo di memoria per ogni istanza della classe. Le macro COLUMN_ENTRY corrispondono alle macro PROVIDER_COLUMN_ENTRY sul lato del provider.
 
-Per una discussione dettagliata degli scenari in cui è necessario utilizzare più funzioni di accesso, vedere [uso di più funzioni di accesso su un set di righe](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
-  
-Nell'esempio seguente mostra il record utente modificato per supportare più funzioni di accesso sul set di righe. Anziché BEGIN_COLUMN_MAP ed END_COLUMN_MAP, vengono usati [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) per ogni funzione di accesso. La macro BEGIN_ACCESSOR specifica il numero di funzioni di accesso (offset da zero) e indica se la funzione di accesso è un sia automatica o meno. Chiamata Autoaccessors `GetData` per recuperare i dati automaticamente in una chiamata a [MoveNext](../../data/oledb/crowset-movenext.md). Le funzioni di accesso necessario recuperare in modo esplicito i dati. Se viene eseguita l'associazione a un campo di dati di grandi dimensioni (ad esempio, un'immagine bitmap) che è possibile evitare di recuperare per ogni record, usare una funzione di accesso si.  
-  
-```cpp  
-class CMultiArtists  
-{  
-public:  
-// Data Elements  
-   CHAR m_szFirstName[20];  
-   CHAR m_szLastName[30];  
-   short m_nAge;  
-  
-// Column binding map  
-BEGIN_ACCESSOR_MAP(CMultiArtists, 2)  
-   BEGIN_ACCESSOR(0, true)    // true specifies an auto accessor  
-    COLUMN_ENTRY(1, m_szFirstName)  
-    COLUMN_ENTRY(2, m_szLastName)  
-   END_ACCESSOR()  
-   BEGIN_ACCESSOR(1, false)   // false specifies a manual accessor  
-    COLUMN_ENTRY(3, m_nAge)  
-   END_ACCESSOR()  
-END_ACCESSOR_MAP()  
-};  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
+Per altre informazioni sulle macro dei COLUMN_MAP e PARAM_MAP, vedere [macro per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).
+
+```cpp
+class CArtists
+{
+public:
+// Data Elements
+   CHAR m_szFirstName[20];
+   CHAR m_szLastName[30];
+   short m_nAge;
+
+// Column binding map
+BEGIN_COLUMN_MAP(CArtists)
+   COLUMN_ENTRY(1, m_szFirstName)
+   COLUMN_ENTRY(2, m_szLastName)
+   COLUMN_ENTRY(3, m_nAge)
+END_COLUMN_MAP()
+
+// Parameter binding map
+BEGIN_PARAM_MAP(CArtists)
+   COLUMN_ENTRY(1, m_nAge)
+END_PARAM_MAP()
+};
+```
+
+## <a name="wizard-generated-user-records"></a>Record utente generato dalla procedura guidata
+
+Se si usa la **Creazione guidata Consumer OLE DB ATL** per generare un consumer, è possibile scegliere di usare i modelli OLE DB o gli attributi OLE DB. Il codice generato è diverso in ogni caso. Per altre informazioni su questo codice, vedere [classi riguardano](../../data/oledb/consumer-wizard-generated-classes.md).
+
+## <a name="user-record-support-for-multiple-accessors"></a>Supporto per più funzioni di accesso del Record utente
+
+Per una discussione dettagliata degli scenari in cui è necessario utilizzare più funzioni di accesso, vedere [uso di più funzioni di accesso su un set di righe](../../data/oledb/using-multiple-accessors-on-a-rowset.md).
+
+Nell'esempio seguente mostra il record utente modificato per supportare più funzioni di accesso sul set di righe. Anziché BEGIN_COLUMN_MAP ed END_COLUMN_MAP, vengono usati [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) per ogni funzione di accesso. La macro BEGIN_ACCESSOR specifica il numero di funzioni di accesso (offset da zero) e indica se la funzione di accesso è un sia automatica o meno. Chiamata Autoaccessors `GetData` per recuperare i dati automaticamente in una chiamata a [MoveNext](../../data/oledb/crowset-movenext.md). Le funzioni di accesso necessario recuperare in modo esplicito i dati. Se viene eseguita l'associazione a un campo di dati di grandi dimensioni (ad esempio, un'immagine bitmap) che è possibile evitare di recuperare per ogni record, usare una funzione di accesso si.
+
+```cpp
+class CMultiArtists
+{
+public:
+// Data Elements
+   CHAR m_szFirstName[20];
+   CHAR m_szLastName[30];
+   short m_nAge;
+
+// Column binding map
+BEGIN_ACCESSOR_MAP(CMultiArtists, 2)
+   BEGIN_ACCESSOR(0, true)    // true specifies an auto accessor
+    COLUMN_ENTRY(1, m_szFirstName)
+    COLUMN_ENTRY(2, m_szLastName)
+   END_ACCESSOR()
+   BEGIN_ACCESSOR(1, false)   // false specifies a manual accessor
+    COLUMN_ENTRY(3, m_nAge)
+   END_ACCESSOR()
+END_ACCESSOR_MAP()
+};
+```
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

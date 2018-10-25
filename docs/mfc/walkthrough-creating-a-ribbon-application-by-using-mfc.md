@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12070bd690cc2b6228ae5f86e69d9d698bd28348
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056919"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procedura dettagliata: creazione di un'applicazione barra multifunzione utilizzando MFC
 
@@ -38,7 +38,7 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per u
 
 1. Impostare le opzioni seguenti **Creazione guidata applicazione MFC**:
 
-    1. Nel **tipo di applicazione** nella sezione **dello stile di visualizzazione e colori**, selezionare **Office 2007 (tema blu)**. 
+    1. Nel **tipo di applicazione** nella sezione **dello stile di visualizzazione e colori**, selezionare **Office 2007 (tema blu)**.
 
     1. Nel **supporto documenti compositi** sezione, assicurarsi che **None** sia selezionata.
 
@@ -46,7 +46,7 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per u
 
     1. Nel **supporto per Database** sezione, assicurarsi che **None** sia selezionata.
 
-    1. Nel **funzionalità dell'interfaccia utente** sezione, assicurarsi che **usare una barra multifunzione** sia selezionata. 
+    1. Nel **funzionalità dell'interfaccia utente** sezione, assicurarsi che **usare una barra multifunzione** sia selezionata.
 
     1. Per impostazione predefinita, il **Creazione guidata applicazione MFC** aggiunge il supporto per diversi riquadri ancorati. Dal momento che questa procedura dettagliata fornisce informazioni unicamente sulla barra multifunzione, puoi rimuovere tali opzioni dall'applicazione. Nel **Advanced Features** sezione, deselezionare tutte le opzioni.
 

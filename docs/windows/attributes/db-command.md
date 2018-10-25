@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0111dfc424a99d413a217149b3c5e579a3999f13
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6cb9202d020aee86a4ebe3892fa8dd84ec4c4577
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791413"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061628"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -31,7 +31,7 @@ Crea un comando OLE DB.
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)  
+[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)
 ]
 ```
 
@@ -46,38 +46,38 @@ Una stringa di comando che contiene il testo di un comando OLE DB. Un semplice e
 
 La sintassi di *command* è la seguente:
 
-> blocco del parametro di associazione 1 &nbsp; &nbsp;blocco del parametro di associazione comando OLE DB 2 &nbsp; &nbsp;continuazione del blocco del parametro di associazione comando OLE DB 3...
+> blocco parametri di associazione 1 &nbsp;&nbsp;blocco parametri di associazione comandi OLE DB 2 &nbsp;&nbsp;continuazione del blocco parametri di associazione comandi OLE DB 3 ...
 
 Un *blocco del parametro di associazione* è definito nel modo seguente:
 
-> **(\[**  *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[,...]]] **)**
+> **(\[** *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[, ...]]] **)**
 
 dove:
 
 - **(** contrassegna l'inizio del blocco di associazione dati.
 
-- **\[** *BindType* **]** è una delle stringhe tra maiuscole e minuscole seguenti:
+- **\[** *bindtype* **]** è una delle stringhe seguenti, senza distinzione tra maiuscole e minuscole:
 
   - **\[db_column]** associa ogni variabile membro a una colonna in un set di righe.
 
-  - **\[BindTo]** (uguale a  **\[db_column]**).
+  - **\[bindto]** (uguale a **\[db_column]**).
 
   - **\[in]** associa le variabili membro come parametri di input.
 
   - **\[out]** associa le variabili membro come parametri di output.
 
-  - **\[in, out]** associa le variabili membro come parametri di input/output.
+  - **\[in,out]** associa le variabili membro come parametri di input/output.
 
 - *szVarX*, *nVarX* si risolve in una variabile membro all'interno dell'ambito corrente.
 
 - **)** contrassegna la fine del blocco di associazione dati.
 
-Se la stringa di comando contiene uno o più identificatori, ad esempio \[nel], \[out], o \[in/out], **db_command** compila una mappa dei parametri.
+Se la stringa di comando contiene uno o più identificatori, ad esempio \[in], \[out] o \[in/out], **db_command** compila una mappa dei parametri.
 
-Se la stringa di comando contiene uno o più parametri, ad esempio \[db_column] o \[bindto], **db_command** genera un set di righe e una mappa della funzione di accesso per gestire le variabili associate. Visualizzare [db_accessor](db-accessor.md) per altre informazioni.
+Se la stringa di comando contiene uno o più parametri, ad esempio \[db_column] o \[bindto], **db_command** genera un set di righe e una mappa della funzione di accesso per gestire le variabili associate. Per altre informazioni, vedere [db_accessor](db-accessor.md) .
 
 > [!NOTE]
-> \[*BindType*] la sintassi e il *associazioni* parametro non sono validi quando si usa **db_command** a livello di classe.
+> La sintassi \[*bindtype*] e il parametro *bindings* non sono validi quando si usa **db_command** a livello di classe.
 
 Di seguito sono riportati alcuni esempi di blocchi dei parametri di associazione. Nell'esempio seguente i membri dati `m_au_fname` e `m_au_lname` vengono associati rispettivamente alle colonne `au_fname` e `au_lname` della tabella authors nel database pubs:
 
@@ -88,52 +88,52 @@ TCHAR m_state[3] = 'CA';
 
 [db_command (command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \
    "FROM dbo.authors " \
-   "WHERE state = ?([in]m_state)")  
+   "WHERE state = ?([in]m_state)")
 ]
 ```
 
 *name*<br/>
-(Facoltativo) Il nome dell'handle usato per lavorare con il set di righe. Se si specifica il parametro *name*, **db_command** genera una classe con il parametro *name*specificato, che può essere usato per attraversare il set di righe o per eseguire più query di comando. Se non si specifica il parametro *name*, non sarà possibile restituire più righe di risultati all'utente.
+(Facoltativo) Nome dell'handle usato con il set di righe. Se si specifica il parametro *name*, **db_command** genera una classe con il parametro *name*specificato, che può essere usato per attraversare il set di righe o per eseguire più query di comando. Se non si specifica il parametro *name*, non sarà possibile restituire più righe di risultati all'utente.
 
 *source_name*<br/>
-(Facoltativo) Il `CSession` variabile o istanza di una classe che ha il `db_source` attributo applicato ad esso in cui viene eseguito il comando. Visualizzare [db_source](db-source.md).
+(Facoltativo) La variabile `CSession` o l'istanza di una classe a cui è applicato l'attributo `db_source` con cui viene eseguito il comando. Vedere [db_source](db-source.md).
 
 **db_command** verifica che la variabile usata per *source_name* sia valida, pertanto la variabile specificata deve essere in ambito funzione o in ambito globale.
 
-*HRESULT*<br/>
-(Facoltativo) Identifica la variabile che riceverà il valore HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
+*hresult*<br/>
+(Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
-*associazioni*<br/>
+*bindings*<br/>
 (Facoltativo) Consente di separare i parametri di associazione dal comando OLE DB.
 
-Se si specifica un valore per *associazioni*, **db_command** analizzerà il valore associato e non verrà analizzato il \[ *bindtype*] parametro. Questo utilizzo consente di usare la sintassi del provider OLE DB. Per disabilitare l'analisi senza l'associazione dei parametri, specificare `Bindings=""`.
+Se si specifica un valore per *bindings*, **db_command** analizzerà il valore associato e non il parametro \[*bindtype*]. Questo utilizzo consente di usare la sintassi del provider OLE DB. Per disabilitare l'analisi, senza parametri di associazione, specificare `Bindings=""`.
 
-Se non si specifica un valore per *associazioni*, **db_command** analizzerà il blocco del parametro di associazione, alla ricerca di '**(**', quindi su **\[** _bindtype_**]** tra parentesi quadre, seguite da uno o più variabili di membro C++ di dichiarato in precedenza, seguito da '**)**'. Tutto il testo tra parentesi verrà rimosso dal comando risultante e questi parametri verranno usati per creare associazioni di parametro e di colonna per questo comando.
+Se non si specifica un valore per *bindings*, **db_command** analizzerà il blocco parametri di associazione per individuare "**(**", seguito da **\[**_bindtype_**]** tra parentesi quadre, seguito da una o più variabili membro C++ dichiarate in precedenza, a loro volta seguite da "**)**". Tutto il testo tra parentesi verrà rimosso dal comando risultante e questi parametri verranno usati per creare associazioni di parametro e di colonna per questo comando.
 
 *bulk_fetch*<br/>
-(Facoltativo) Valore integer che specifica il numero di righe da recuperare.
+(Facoltativo) Valore intero che specifica il numero di righe da recuperare.
 
-Il valore predefinito è 1, che specifica il recupero di singola riga (il set di righe sarà di tipo [CRowset](../../data/oledb/crowset-class.md)).
+Il valore predefinito è 1, che specifica il recupero di una singola riga (il set di righe sarà di tipo [CRowset](../../data/oledb/crowset-class.md)).
 
-Un valore maggiore di 1 che specifica il recupero di righe in blocco. Recupero di righe BULK si riferisce alla capacità dei set di righe bulk per recuperare più handle di riga (il set di righe sarà di tipo [CBulkRowset](../../data/oledb/cbulkrowset-class.md) e chiamerà `SetRows` con il numero di righe specificato).
+Un valore maggiore di 1 che specifica il recupero di righe in blocco. Il recupero di righe in blocco si riferisce alla capacità dei set di righe in blocco di recuperare più handle di riga (il set di righe sarà di tipo [CBulkRowset](../../data/oledb/cbulkrowset-class.md) e chiamerà `SetRows` con il numero di righe specificato).
 
 Se *bulk_fetch* è minore di 1, `SetRows` restituirà zero.
 
 ## <a name="remarks"></a>Note
 
-**db_command** crea un' [CCommand](../../data/oledb/ccommand-class.md) oggetto, che viene usato da un consumer OLE DB per eseguire un comando.
+**db_command** crea un oggetto [CCommand](../../data/oledb/ccommand-class.md) , che viene usato da un consumer OLE DB per eseguire un comando.
 
-È possibile usare **db_command** con un ambito di classe o un ambito di funzione. La differenza principale è l'ambito dell'oggetto `CCommand` . Con l'ambito di funzione, i dati come le associazioni terminano alla fine della funzione. Gli utilizzi di ambito di funzione sia classe implicano la classe modello Consumer OLE DB `CCommand<>`, ma gli argomenti di modello diverso per i casi di funzione e di classe. In caso di funzione, verranno create associazioni a un' `Accessor` che include le variabili locali, mentre l'uso della classe dedurrà una `CAccessor`-come argomento di classe derivata. Quando viene usato come attributo della classe, **db_command** funziona insieme a **db_column**.
+È possibile usare **db_command** con un ambito di classe o un ambito di funzione. La differenza principale è l'ambito dell'oggetto `CCommand` . Con l'ambito di funzione, i dati come le associazioni terminano alla fine della funzione. L'uso dell'ambito di classe e dell'ambito di funzione include la classe modello del consumer OLE DB `CCommand<>`, ma gli argomenti del modello nei casi di ambito di funzione e di classe sono diversi. In caso di ambito di funzione, verranno create associazioni a una `Accessor` che include le variabili locali, mentre l'uso della classe dedurrà una classe derivata da `CAccessor` come argomento. Quando viene usato come attributo della classe, **db_command** funziona insieme a **db_column**.
 
 **db_command** può essere usato per eseguire comandi che non restituiscono un set di risultati.
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore Rinomina la classe \_ *NomeClasse*della funzione di accesso, dove *NomeClasse* è il nome è stato assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 ## <a name="example"></a>Esempio
 
-Questo esempio definisce un comando che consente di selezionare i nomi e i cognomi da una tabella in cui la colonna di stato corrisponde a "CA". **db_command** crea e legge un set di righe in cui è possibile chiamare funzioni generate dalla procedura guidata, ad esempio [OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), nonché `CRowset` funzioni membro, ad esempio [MoveNext](../../data/oledb/crowset-movenext.md).
+Questo esempio definisce un comando che consente di selezionare i nomi e i cognomi da una tabella in cui la colonna di stato corrisponde a "CA". **db_command** crea e legge un set di righe in cui è possibile chiamare funzioni generate dalla procedura guidata, ad esempio [OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), nonché funzioni membro `CRowset` come [MoveNext](../../data/oledb/crowset-movenext.md).
 
-Si noti che per questo codice è necessario specificare la propria stringa di connessione al database pubs. Per informazioni su come eseguire questa operazione nell'ambiente di sviluppo, vedere [procedura: connettersi a un Database e visualizzazione degli oggetti esistenti](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) e [aggiungere nuove connessioni](/visualstudio/data-tools/add-new-connections).
+Si noti che per questo codice è necessario specificare la propria stringa di connessione al database pubs. Per informazioni su come eseguire questa operazione nell'ambiente di sviluppo, vedere [Procedura: Connettersi a un database e visualizzare gli oggetti esistenti](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) e [Aggiungere nuove connessioni](/visualstudio/data-tools/add-new-connections).
 
 ```cpp
 // db_command.h
@@ -253,9 +253,9 @@ int main() {
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi del consumer OLE DB](ole-db-consumer-attributes.md)<br/>
-[Attributi autonomi](stand-alone-attributes.md)  
+[Attributi autonomi](stand-alone-attributes.md)

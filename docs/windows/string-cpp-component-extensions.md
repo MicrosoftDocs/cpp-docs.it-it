@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b835f1d507c8e577f8b44ca314422dd5b6f2ca46
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: fd4caaf49bd72a85a6d81003926c4e556d0731e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054241"
 ---
 # <a name="string--ccli-and-ccx"></a>Stringa (C + c++ /CLI e c++ /CX)
 
@@ -114,11 +114,11 @@ int main() {
    a += b;
    Console::WriteLine(a);
    a = b;
-   if (a == b)  
+   if (a == b)
       Console::WriteLine("a and b are equal");
 
    a = "abc";
-   if (a != b)  
+   if (a != b)
       Console::WriteLine("a and b are not equal");
 
    // System:String^ and tracking reference
@@ -127,7 +127,7 @@ int main() {
 
    // testing an empty System::String^
    String^ n;
-   if (n == nullptr)  
+   if (n == nullptr)
       Console::WriteLine("n is empty");
 }
 ```
@@ -227,7 +227,7 @@ L'esempio seguente mostra che il compilatore distingue tra stringhe native e <xr
 // compile with: /clr
 using namespace System;
 int func() {
-   throw "simple string";   // const char *  
+   throw "simple string";   // const char *
 };
 
 int func2() {
@@ -254,7 +254,7 @@ int main() {
       Console::WriteLine("String^ str");
    }
 
-   func3("string");   // const char *  
+   func3("string");   // const char *
    func3("string" + "string");   // returns System::String
 }
 ```

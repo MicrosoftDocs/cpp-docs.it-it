@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f07ab7b4420a5c33be56a9278b60afb6424e9e83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389739"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063549"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: routine DDX e DDV
 
@@ -224,21 +224,21 @@ Ogni campo è delimitata da un carattere ';'. I campi e il loro scopo sono descr
 
    - *promptN*
 
-     Stringa da inserire sopra l'elemento di modifica (& Accelerator).
+      Stringa da inserire sopra l'elemento di modifica (& Accelerator).
 
    - *fmtN*
 
-     Formato carattere per il tipo di arg, uno di:
+      Formato carattere per il tipo di arg, uno di:
 
-     |Carattere|Tipo|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | long int (vale a dire, long)
-     G | Long senza segno (vale a dire, DWORD)
-     f | float
-     F | double
-     s | stringa
+      |Carattere|Tipo|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | long int (vale a dire, long)|
+      |G | Long senza segno (vale a dire, DWORD)|
+      |f | float|
+      |F | double|
+      |s | stringa|
 
 ## <a name="see-also"></a>Vedere anche
 

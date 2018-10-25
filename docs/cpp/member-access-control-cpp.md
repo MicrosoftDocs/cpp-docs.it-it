@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821660"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063354"
 ---
 # <a name="member-access-control-c"></a>Controllo di accesso dei membri [C++]
 
@@ -247,7 +247,6 @@ In reticoli con ereditarietà multipla che includono classi base virtuali un nom
 ![Accesso ai percorsi di un grafico di ereditarietà](../cpp/media/vc38v91.gif "vc38V91") accesso lungo i percorsi di un grafico di ereditarietà
 
 Nella figura un nome dichiarato nella classe `VBase` viene sempre raggiunto tramite la classe `RightPath`. Il percorso corretto è più accessibile perché `RightPath` dichiara `VBase` come classe base pubblica, mentre `LeftPath` dichiara `VBase` come privata.
-
 
 ## <a name="see-also"></a>Vedere anche
 

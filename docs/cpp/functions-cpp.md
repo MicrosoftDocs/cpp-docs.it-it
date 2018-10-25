@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 24eded7bac023bd2291e0c574012f72ba86b6bcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053799"
 ---
 # <a name="functions-c"></a>Funzioni (C++)
 
@@ -101,7 +101,7 @@ Le parti facoltative della dichiarazione di una funzione sono le seguenti:
 
     ```
 
-     Per altre informazioni, vedere [programma e collegamento](../cpp/program-and-linkage-cpp.md).
+   Per altre informazioni, vedere [programma e collegamento](../cpp/program-and-linkage-cpp.md).
 
 1. **inline**, che indica al compilatore di sostituire ogni chiamata alla funzione con il codice della funzione. L'incorporamento può migliorare le prestazioni negli scenari in cui una funzione viene eseguita rapidamente e viene richiamata ripetutamente in una sezione di codice essenziale per le prestazioni.
 
@@ -112,7 +112,7 @@ Le parti facoltative della dichiarazione di una funzione sono le seguenti:
     }
     ```
 
-     Per altre informazioni, vedere [funzioni Inline](../cpp/inline-functions-cpp.md).
+   Per altre informazioni, vedere [funzioni Inline](../cpp/inline-functions-cpp.md).
 
 1. Oggetto `noexcept` espressione che specifica se la funzione può generare un'eccezione. Nell'esempio seguente, la funzione non genera un'eccezione se il `is_pod` espressione viene valutata **true**.
 
@@ -123,7 +123,7 @@ Le parti facoltative della dichiarazione di una funzione sono le seguenti:
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     Per altre informazioni, vedere [noexcept](../cpp/noexcept-cpp.md).
+   Per altre informazioni, vedere [noexcept](../cpp/noexcept-cpp.md).
 
 1. (Solo funzioni membro) Qualificatori cv, che specifica se la funzione **const** oppure **volatile**.
 
@@ -264,12 +264,11 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 Quando **automatica** viene usato in combinazione con un tipo restituito finale, funge semplicemente da segnaposto per qualsiasi espressione decltype e non esegue direttamente la deduzione del tipo.
 
-
 ## <a name="function-local-variables"></a>Variabili locali delle funzioni
 
 Una variabile dichiarata all'interno di un corpo della funzione è definita un' *variabile locale* o semplicemente *locale*. Le locali non statiche sono visibili solo all'interno del corpo della funzione e, se sono dichiarate nello stack, escono dall'ambito al termine della funzione. Quando si crea una variabile locale e la si restituisce per valore, il compilatore può in genere eseguire l'ottimizzazione del valore restituito per evitare operazioni di copia non necessarie. Se si restituisce una variabile locale per riferimento, il compilatore emetterà un avviso, poiché qualsiasi tentativo da parte del chiamante di usare tale riferimento si verificherà dopo l'eliminazione definitiva della locale.
 
-In C++ una variabile locale può essere dichiarata come statica. La variabile è visibile solo all'interno del corpo della funzione, ma esiste una singola copia della variabile per tutte le istanze della funzione. Gli oggetti statici locali vengono eliminati durante la chiusura specificata da `atexit`. Se un oggetto statico non è stato costruito perché il flusso di controllo del programma ne ha ignorato la dichiarazione, non viene eseguito alcun tentativo di eliminare definitivamente tale oggetto.
+In C++ una variabile locale può essere dichiarata come statica. La variabile è visibile solo all'interno del corpo della funzione, ma esiste una singola copia della variabile per tutte le istanze della funzione. Gli oggetti statici locali vengono eliminati definitivamente durante la chiusura specificata da `atexit`. Se un oggetto statico non è stato costruito perché il flusso di controllo del programma ne ha ignorato la dichiarazione, non viene eseguito alcun tentativo di eliminare definitivamente tale oggetto.
 
 ##  <a name="type_deduction"></a> Deduzione dei tipi nei tipi restituiti (c++14)
 

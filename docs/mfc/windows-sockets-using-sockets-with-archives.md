@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217dcd1d5e999ea640795c656bbf40f7adad3d7d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295077b474681cabeb1221052ae9e2c9ad5ed79a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053175"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: utilizzo di socket con archivi
 
@@ -49,7 +49,7 @@ L'utilizzo di un oggetto `CSocket` implica la creazione e l'associazione di dive
 
 1. Usare l'oggetto per creare l'oggetto sottostante **SOCKET** gestire.
 
-     Per un `CSocket` dell'oggetto client, è in genere devono usare i parametri predefiniti per [Create](../mfc/reference/casyncsocket-class.md#create), a meno che non è necessario un socket di datagramma. Per un `CSocket` oggetto server, è necessario specificare una porta nel `Create` chiamare.
+   Per un `CSocket` dell'oggetto client, è in genere devono usare i parametri predefiniti per [Create](../mfc/reference/casyncsocket-class.md#create), a meno che non è necessario un socket di datagramma. Per un `CSocket` oggetto server, è necessario specificare una porta nel `Create` chiamare.
 
     > [!NOTE]
     >  `CArchive` non funziona con i socket di datagramma. Se si desidera utilizzare `CSocket` per un socket di datagramma, è necessario utilizzare la classe come se si utilizzasse `CAsyncSocket`, ovvero, senza un archivio. Poiché i datagrammi sono inaffidabili (non è garantito l'arrivo e può essere ripetuto o fuori sequenza), non sono compatibili con la serializzazione tramite un archivio. Richiedere un'operazione di serializzazione per completare in modo affidabile e in sequenza. Se si tenta di utilizzare `CSocket` con un oggetto `CArchive` per un datagramma, un'asserzione MFC non funziona.
@@ -58,7 +58,7 @@ L'utilizzo di un oggetto `CSocket` implica la creazione e l'associazione di dive
 
      oppure
 
-     Se il socket è un server, chiamare [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen) iniziare l'ascolto di tentativi di connessione da un client. Dopo aver ricevuto una richiesta di connessione, accettarla chiamando [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Se il socket è un server, chiamare [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen) iniziare l'ascolto di tentativi di connessione da un client. Dopo aver ricevuto una richiesta di connessione, accettarla chiamando [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).
 
     > [!NOTE]
     >  Il `Accept` membro funzione accetta un riferimento a un nuovo oggetto vuoto `CSocket` oggetto come parametro. È necessario costruire l'oggetto prima di chiamare `Accept`. Se l'oggetto socket esce dall'ambito, la connessione verrà chiusa. Non chiamare `Create` per questo nuovo oggetto socket.
@@ -67,13 +67,13 @@ L'utilizzo di un oggetto `CSocket` implica la creazione e l'associazione di dive
 
 1. Creare un [CArchive](../mfc/reference/carchive-class.md) oggetto per il caricamento (ricezione) o l'archiviazione dei dati (invio). L'archivio è associato all'oggetto `CSocketFile`.
 
-     Tenere presente che `CArchive` non funziona con i socket di datagramma.
+   Tenere presente che `CArchive` non funziona con i socket di datagramma.
 
 1. Utilizzare l'oggetto `CArchive` per passare dati tra i socket client e server.
 
-     Tenere presente che un determinato oggetto `CArchive` converte i dati in una sola direzione: per il caricamento (ricezione) o l'archiviazione (invio). In alcuni casi, si utilizzeranno due oggetti `CArchive`: uno per inviare i dati, l'altro per ricevere messaggi di riconoscimento.
+   Tenere presente che un determinato oggetto `CArchive` converte i dati in una sola direzione: per il caricamento (ricezione) o l'archiviazione (invio). In alcuni casi, si utilizzeranno due oggetti `CArchive`: uno per inviare i dati, l'altro per ricevere messaggi di riconoscimento.
 
-     Dopo avere accettato la connessione e l'installazione dell'archivio, è possibile eseguire attività come la convalida delle password.
+   Dopo avere accettato la connessione e l'installazione dell'archivio, è possibile eseguire attività come la convalida delle password.
 
 1. Eliminare definitivamente l'archivio, il file di socket e gli oggetti socket.
 

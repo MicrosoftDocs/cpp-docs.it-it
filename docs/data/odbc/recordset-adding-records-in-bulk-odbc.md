@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c870861d11a27b5343888e62259a585720274190
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 53daf818b0ba17848723e3cad233452146d1c891
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068585"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062574"
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>Recordset: aggiunta di massa di record (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.  
-  
-MFC [CRecordset](../../mfc/reference/crecordset-class.md) classe dispone di una nuova soluzione di ottimizzazione che consente di migliorare l'efficienza quando si aggiungono nuovi record in blocco a una tabella.  
-  
+Questo argomento si applica alle classi ODBC MFC.
+
+MFC [CRecordset](../../mfc/reference/crecordset-class.md) classe dispone di una nuova soluzione di ottimizzazione che consente di migliorare l'efficienza quando si aggiungono nuovi record in blocco a una tabella.
+
 > [!NOTE]
->  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
-  
-Una nuova opzione per la *dwOptions* parametro per il [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) funzione membro, `optimizeBulkAdd`, migliora le prestazioni quando si aggiungono più record consecutivamente senza chiamare `Requery` o `Close`. Solo i campi che vengono modificati prima del primo `Update` chiamata sono contrassegnati come dirty per successive `AddNew` / `Update` chiamate.  
-  
-Se si usano le classi di database per poter sfruttare il `::SQLSetPos` funzione API ODBC per l'aggiunta, modifica, e l'eliminazione di record, questa ottimizzazione non è necessaria.  
-  
-Se viene caricata la libreria di cursori ODBC o il driver ODBC non supporta l'aggiunta, modifica ed eliminazione tramite `::SQLSetPos`, questa ottimizzazione migliorano le operazioni bulk aggiungere delle prestazioni. Per abilitare questa ottimizzazione, impostare il *dwOptions* parametro nel `Open` chiamare per il recordset al seguente:  
-  
-```  
-appendOnly | optimizeBulkAdd  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
+> In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+
+Una nuova opzione per la *dwOptions* parametro per il [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) funzione membro, `optimizeBulkAdd`, migliora le prestazioni quando si aggiungono più record consecutivamente senza chiamare `Requery` o `Close`. Solo i campi che vengono modificati prima del primo `Update` chiamata sono contrassegnati come dirty per successive `AddNew` / `Update` chiamate.
+
+Se si usano le classi di database per poter sfruttare il `::SQLSetPos` funzione API ODBC per l'aggiunta, modifica, e l'eliminazione di record, questa ottimizzazione non è necessaria.
+
+Se viene caricata la libreria di cursori ODBC o il driver ODBC non supporta l'aggiunta, modifica ed eliminazione tramite `::SQLSetPos`, questa ottimizzazione migliorano le operazioni bulk aggiungere delle prestazioni. Per abilitare questa ottimizzazione, impostare il *dwOptions* parametro nel `Open` chiamare per il recordset al seguente:
+
+```
+appendOnly | optimizeBulkAdd
+```
+
+## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: aggiunta, aggiornamento ed eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>

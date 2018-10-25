@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436793"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056009"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controlli ActiveX MFC: disegno di un controllo ActiveX
 
@@ -112,11 +112,11 @@ Dopo avere implementato il rendering del metafile per il controllo, utilizzare T
 
 1. Nel **Inserisci nuovo controllo** , selezionare il controllo e scegliere **OK**.
 
-     Il controllo verrà visualizzato in Test Container.
+   Il controllo verrà visualizzato in Test Container.
 
 1. Nel **controllo** menu, fare clic su **disegna Metafile**.
 
-     Verrà visualizzata una finestra separata, nella quale sarà visualizzato il metafile. È possibile modificare le dimensioni di questa finestra per vedere in che modo il ridimensionamento influisce sui metafile del controllo. È possibile chiudere questa finestra in qualsiasi momento.
+   Verrà visualizzata una finestra separata, nella quale sarà visualizzato il metafile. È possibile modificare le dimensioni di questa finestra per vedere in che modo il ridimensionamento influisce sui metafile del controllo. È possibile chiudere questa finestra in qualsiasi momento.
 
 ## <a name="see-also"></a>Vedere anche
 

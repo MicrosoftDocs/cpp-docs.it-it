@@ -1,7 +1,7 @@
 ---
 title: Classe CDockSite | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3af20ecc4639a4a48f8fd7f9040a1f18fd34fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6f2ae2cd18543e2ad27cd41a36406efc75facceb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386964"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062626"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
@@ -135,7 +135,7 @@ class CDockSite: public CBasePane
 |[CDockSite::FixupVirtualRects](#fixupvirtualrects)||
 |[CDockSite::GetDockSiteID](#getdocksiteid)||
 |[CDockSite::GetDockSiteRowsList](#getdocksiterowslist)||
-|[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|Esegue l'override`CBasePane::IsAccessibilityCompatible`.|
+|[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|Esegue l'override di `CBasePane::IsAccessibilityCompatible`.|
 |[CDockSite::IsDragMode](#isdragmode)||
 |[CDockSite::IsLastRow](#islastrow)||
 |[CDockSite::IsRectWithinDockSite](#isrectwithindocksite)||
@@ -186,7 +186,6 @@ Nell'esempio riportato di seguito viene illustrato come creare un oggetto della 
 
 ##  <a name="addrow"></a>  CDockSite::AddRow
 
-
 ```
 CDockingPanesRow* AddRow(
     POSITION pos,
@@ -195,15 +194,15 @@ CDockingPanesRow* AddRow(
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
-[in] [in] *nHeight*
+[in] *pos*<br/>
+
+[in] *nHeight*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="adjustdockinglayout"></a>  CDockSite::AdjustDockingLayout
-
 
 ```
 virtual void AdjustDockingLayout();
@@ -213,7 +212,6 @@ virtual void AdjustDockingLayout();
 
 ##  <a name="adjustlayout"></a>  CDockSite::AdjustLayout
 
-
 ```
 virtual void AdjustLayout();
 ```
@@ -221,7 +219,6 @@ virtual void AdjustLayout();
 ### <a name="remarks"></a>Note
 
 ##  <a name="aligndocksite"></a>  CDockSite::AlignDockSite
-
 
 ```
 void AlignDockSite(
@@ -232,13 +229,15 @@ void AlignDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*rectToAlignBy*<br/>
-[in] [in] *rectResult* [in] *bMoveImmediately*
+[in] *rectToAlignBy*<br/>
+
+[in] *rectResult*<br/>
+
+[in] *bMoveImmediately*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="calcfixedlayout"></a>  CDockSite::CalcFixedLayout
-
 
 ```
 virtual CSize CalcFixedLayout(
@@ -248,8 +247,9 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parametri
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -257,21 +257,19 @@ virtual CSize CalcFixedLayout(
 
 ##  <a name="canacceptpane"></a>  CDockSite::CanAcceptPane
 
-
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pBar*
+[in] *pBar*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="createex"></a>  CDockSite::CreateEx
-
 
 ```
 virtual BOOL CreateEx(
@@ -285,19 +283,23 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parametri
 
-*dwStyleEx*<br/>
-[in] [in] *dwStyle*
-*rect*<br/>
-[in] [in] *pParentWnd*
-*dwControlBarStyle*<br/>
-[in] [in] *pContext*
+[in] *dwStyleEx*<br/>
+
+[in] *dwStyle*<br/>
+
+[in] *rect*<br/>
+
+[in] *pParentWnd*<br/>
+
+[in] *dwControlBarStyle*<br/>
+
+[in] *pContext*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="createrow"></a>  CDockSite::CreateRow
-
 
 ```
 virtual CDockingPanesRow* CreateRow(
@@ -308,15 +310,17 @@ virtual CDockingPanesRow* CreateRow(
 
 ### <a name="parameters"></a>Parametri
 
-*pParentDockBar*<br/>
-[in] [in] *nOffset* [in] *nRowHeight*
+[in] *pParentDockBar*<br/>
+
+[in] *nOffset*<br/>
+
+[in] *nRowHeight*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="dockpane"></a>  CDockSite::DockPane
-
 
 ```
 virtual void DockPane(
@@ -327,8 +331,11 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd*<br/>
-[in] [in] *dockMethod* [in] *lpRect*
+[in] *pWnd*<br/>
+
+[in] *dockMethod*<br/>
+
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -344,9 +351,11 @@ virtual BOOL DockPaneLeftOf(
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pBarToDock* al riquadro ancorato a sinistra di un puntatore *pTargetBar*.
+*pBarToDock*<br/>
+[in, out] Un puntatore al riquadro ancorato a sinistra del *pTargetBar*.
 
-[in] [out] *pTargetBar* un puntatore al riquadro di destinazione.
+*pTargetBar*<br/>
+[in, out] Puntatore al riquadro di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -355,7 +364,6 @@ TRUE se il riquadro viene ancorato correttamente. in caso contrario, FALSE.
 ### <a name="remarks"></a>Note
 
 ##  <a name="doesallowdyninsertbefore"></a>  CDockSite::DoesAllowDynInsertBefore
-
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -386,21 +394,19 @@ Puntatore al riquadro con l'ID di comando specificato o NULL se il riquadro non 
 
 ##  <a name="findrowindex"></a>  CDockSite::FindRowIndex
 
-
 ```
 int FindRowIndex(CDockingPanesRow* pRow);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pRow*
+[in] *pRow*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="fixupvirtualrects"></a>  CDockSite::FixupVirtualRects
-
 
 ```
 virtual void FixupVirtualRects();
@@ -409,7 +415,6 @@ virtual void FixupVirtualRects();
 ### <a name="remarks"></a>Note
 
 ##  <a name="getdocksiteid"></a>  CDockSite::GetDockSiteID
-
 
 ```
 virtual UINT GetDockSiteID() const;
@@ -420,7 +425,6 @@ virtual UINT GetDockSiteID() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="getdocksiterowslist"></a>  CDockSite::GetDockSiteRowsList
-
 
 ```
 const CObList& GetDockSiteRowsList() const;
@@ -444,7 +448,6 @@ Un riferimento di sola lettura all'elenco di riquadri è attualmente ancorato ne
 
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible
 
-
 ```
 virtual BOOL IsAccessibilityCompatible();
 ```
@@ -454,7 +457,6 @@ virtual BOOL IsAccessibilityCompatible();
 ### <a name="remarks"></a>Note
 
 ##  <a name="isdragmode"></a>  CDockSite::IsDragMode
-
 
 ```
 virtual BOOL IsDragMode() const;
@@ -466,21 +468,19 @@ virtual BOOL IsDragMode() const;
 
 ##  <a name="islastrow"></a>  CDockSite::IsLastRow
 
-
 ```
 bool IsLastRow(CDockingPanesRow* pRow) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pRow*
+[in] *pRow*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="isrectwithindocksite"></a>  CDockSite::IsRectWithinDockSite
-
 
 ```
 BOOL IsRectWithinDockSite(
@@ -490,15 +490,15 @@ BOOL IsRectWithinDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
-[in] [in] *ptDelta*
+[in] *rect*<br/>
+
+[in] *ptDelta*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="isresizable"></a>  CDockSite::IsResizable
-
 
 ```
 virtual BOOL IsResizable() const;
@@ -510,7 +510,6 @@ virtual BOOL IsResizable() const;
 
 ##  <a name="movepane"></a>  CDockSite::MovePane
 
-
 ```
 virtual BOOL MovePane(
     CPane* pWnd,
@@ -520,8 +519,11 @@ virtual BOOL MovePane(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd*<br/>
-[in] [in] *nFlags* [in] *ptOffset*
+[in] *pWnd*<br/>
+
+[in] *nFlags*<br/>
+
+[in] *ptOffset*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -529,19 +531,17 @@ virtual BOOL MovePane(
 
 ##  <a name="oninsertrow"></a>  CDockSite::OnInsertRow
 
-
 ```
 virtual void OnInsertRow(POSITION pos);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pos*
+[in] *pos*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onremoverow"></a>  CDockSite::OnRemoveRow
-
 
 ```
 virtual void OnRemoveRow(
@@ -551,13 +551,13 @@ virtual void OnRemoveRow(
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
-[in] [in] *bByShow*
+[in] *pos*<br/>
+
+[in] *bByShow*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onresizerow"></a>  CDockSite::OnResizeRow
-
 
 ```
 virtual int OnResizeRow(
@@ -567,15 +567,15 @@ virtual int OnResizeRow(
 
 ### <a name="parameters"></a>Parametri
 
-*pRowToResize*<br/>
-[in] [in] *nOffset*
+[in] *pRowToResize*<br/>
+
+[in] *nOffset*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onsizeparent"></a>  CDockSite::OnSizeParent
-
 
 ```
 virtual void OnSizeParent(
@@ -587,15 +587,17 @@ virtual void OnSizeParent(
 
 ### <a name="parameters"></a>Parametri
 
-*rectAvailable*<br/>
-[in] [in] *nSide*
-*bExpand*<br/>
-[in] [in] *nOffset*
+[in] *rectAvailable*<br/>
+
+[in] *nSide*<br/>
+
+[in] *bExpand*<br/>
+
+[in] *nOffset*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onsetwindowpos"></a>  CDockSite::OnSetWindowPos
-
 
 ```
 virtual BOOL OnSetWindowPos(
@@ -606,15 +608,17 @@ virtual BOOL OnSetWindowPos(
 
 ### <a name="parameters"></a>Parametri
 
-*pWndInsertAfter*<br/>
-[in] [in] *rectWnd* [in] *nFlags*
+[in] *pWndInsertAfter*<br/>
+
+[in] *rectWnd*<br/>
+
+[in] *nFlags*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onshowrow"></a>  CDockSite::OnShowRow
-
 
 ```
 virtual void OnShowRow(
@@ -624,8 +628,9 @@ virtual void OnShowRow(
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
-[in] [in] *bMostra*
+[in] *pos*<br/>
+
+[in] *bMostra*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -650,7 +655,6 @@ Puntatore al riquadro che si trova al punto specificato o NULL se nessun riquadr
 
 ##  <a name="rectsidefrompoint"></a>  CDockSite::RectSideFromPoint
 
-
 ```
 static int __stdcall RectSideFromPoint(
     const CRect& rect,
@@ -659,15 +663,15 @@ static int __stdcall RectSideFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
-[in] [in] *punto*
+[in] *rect*<br/>
+
+[in] *punto*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="removepane"></a>  CDockSite::RemovePane
-
 
 ```
 virtual void RemovePane(
@@ -677,13 +681,13 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd*<br/>
-[in] [in] *dockMethod*
+[in] *pWnd*<br/>
+
+[in] *dockMethod*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="removerow"></a>  CDockSite::RemoveRow
-
 
 ```
 void RemoveRow(CDockingPanesRow* pRow);
@@ -691,12 +695,11 @@ void RemoveRow(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pRow*
+[in] *pRow*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="replacepane"></a>  CDockSite::ReplacePane
-
 
 ```
 BOOL ReplacePane(
@@ -706,8 +709,9 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>Parametri
 
-*pOldBar*<br/>
-[in] [in] *pNewBar*
+[in] *pOldBar*<br/>
+
+[in] *pNewBar*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -715,19 +719,17 @@ BOOL ReplacePane(
 
 ##  <a name="repositionpanes"></a>  CDockSite::RepositionPanes
 
-
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *rectNewClientArea*
+[in] *rectNewClientArea*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="resizedocksite"></a>  CDockSite::ResizeDockSite
-
 
 ```
 void ResizeDockSite(
@@ -737,13 +739,13 @@ void ResizeDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*nNewWidth*<br/>
-[in] [in] *nNewHeight*
+[in] *nNewWidth*<br/>
+
+[in] *nNewHeight*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="resizerow"></a>  CDockSite::ResizeRow
-
 
 ```
 int ResizeRow(
@@ -754,8 +756,11 @@ int ResizeRow(
 
 ### <a name="parameters"></a>Parametri
 
-*pRow*<br/>
-[in] [in] *nNewSize* [in] *bAdjustLayout*
+[in] *pRow*<br/>
+
+[in] *nNewSize*<br/>
+
+[in] *bAdjustLayout*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -775,7 +780,8 @@ virtual BOOL ShowPane(
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pBar* un puntatore al riquadro per essere visualizzato o nascosto.
+*pBar*<br/>
+[in, out] Puntatore al riquadro per essere visualizzato o nascosto.
 
 *bMostra*<br/>
 [in] TRUE per specificare che il riquadro viene visualizzato; FALSE per specificare che il riquadro deve essere nascosto.
@@ -796,7 +802,6 @@ Chiamare questo metodo per mostrare o nascondere i riquadri ancorati. In genere,
 
 ##  <a name="showrow"></a>  CDockSite::ShowRow
 
-
 ```
 void ShowRow(
     CDockingPanesRow* pRow,
@@ -806,13 +811,15 @@ void ShowRow(
 
 ### <a name="parameters"></a>Parametri
 
-*pRow*<br/>
-[in] [in] *bMostra* [in] *bAdjustLayout*
+[in] *pRow*<br/>
+
+[in] *bMostra*<br/>
+
+[in] *bAdjustLayout*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="swaprows"></a>  CDockSite::SwapRows
-
 
 ```
 void SwapRows(
@@ -822,8 +829,9 @@ void SwapRows(
 
 ### <a name="parameters"></a>Parametri
 
-*pFirstRow*<br/>
-[in] [in] *pSecondRow*
+[in] *pFirstRow*<br/>
+
+[in] *pSecondRow*<br/>
 
 ### <a name="remarks"></a>Note
 

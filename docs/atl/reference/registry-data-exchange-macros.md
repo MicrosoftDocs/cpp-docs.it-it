@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e9e62c1969d61f84319c0ffadf50f9f96534380
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055483"
 ---
 # <a name="registry-data-exchange-macros"></a>Macro di scambio di dati del Registro di sistema
 
@@ -39,7 +39,7 @@ Queste macro eseguono operazioni di scambio di dati del Registro di sistema.
 |[RDX_BINARY](#rdx_binary)|Associa la voce del Registro di sistema a una variabile membro specificato del tipo BYTE.|
 |[RDX_CSTRING_TEXT](#rdx_cstring_text)|Associa la voce del Registro di sistema a una variabile membro specificato del tipo CString.|
 |[RDX_DWORD](#rdx_dword)|Associa la voce del Registro di sistema a una variabile membro specificato del tipo DWORD.|
-|[RDX_TEXT](#rdx_text)|Associa la voce del Registro di sistema a una variabile membro specificato del tipo TCHAR.|  
+|[RDX_TEXT](#rdx_text)|Associa la voce del Registro di sistema a una variabile membro specificato del tipo TCHAR.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -80,10 +80,10 @@ Associa la voce del Registro di sistema a una variabile membro specificato del t
 
 ```
 RDX_BINARY(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -98,7 +98,7 @@ La sottochiave del Registro di sistema.
 *valueName*<br/>
 La chiave del Registro di sistema.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro per associare la voce del Registro di sistema.
 
 *member_size*<br/>
@@ -114,10 +114,10 @@ Associa la voce del Registro di sistema a una variabile membro specificato del t
 
 ```
 RDX_CSTRING_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -132,7 +132,7 @@ La sottochiave del Registro di sistema.
 *valueName*<br/>
 La chiave del Registro di sistema.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro per associare la voce del Registro di sistema.
 
 *member_size*<br/>
@@ -148,10 +148,10 @@ Associa la voce del Registro di sistema a una variabile membro specificato del t
 
 ```
 RDX_DWORD(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -166,7 +166,7 @@ La sottochiave del Registro di sistema.
 *valueName*<br/>
 La chiave del Registro di sistema.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro per associare la voce del Registro di sistema.
 
 *member_size*<br/>
@@ -182,10 +182,10 @@ Associa la voce del Registro di sistema a una variabile membro specificato del t
 
 ```
 RDX_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -200,7 +200,7 @@ La sottochiave del Registro di sistema.
 *valueName*<br/>
 La chiave del Registro di sistema.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro per associare la voce del Registro di sistema.
 
 *member_size*<br/>

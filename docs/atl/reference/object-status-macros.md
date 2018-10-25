@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b684d66a96a7a3a7d7d60a1b107792c2061ce57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c4b8be9cf1b421a66081fcf650462447d3c0ef7e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086603"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052538"
 ---
 # <a name="object-status-macros"></a>Macro di stato oggetto
 
@@ -27,11 +27,11 @@ Questa macro imposta flag appartenenti a controlli ActiveX.
 
 |||
 |-|-|
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Utilizzato nei controlli ActiveX di ATL per impostare i flag OLEMISC.|  
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Utilizzato nei controlli ActiveX di ATL per impostare i flag OLEMISC.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom. h  
+**Intestazione:** atlcom. h
 
 ##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS
 

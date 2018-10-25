@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7dc5519fbef10ca6c369bcffacacb8351dbc0390
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328181"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060429"
 ---
 # <a name="attributes-by-usage"></a>Attributi in base all'utilizzo
 
@@ -43,7 +43,7 @@ Se un attributo precede un elemento che non è nell'ambito dell'attributo, il bl
 
 ## <a name="module-attributes"></a>Attributi di modulo
 L'attributo seguente può essere applicato solo per i [modulo](module-cpp.md) attributo.
-  
+
 |Attributo|Descrizione|
 |---------------|-----------------|
 |[helpstringdll](helpstringdll.md)|Specifica il nome della DLL da usare per eseguire la ricerca della stringa di documento (localizzazione).|
@@ -85,7 +85,6 @@ Gli attributi seguenti si applicano per la [interfaccia (o Interface)](../../cpp
 - Metodi di overload non sono consentiti.
 
 Se non si specifica la [uuid](uuid-cpp-attributes.md) attributo e usando lo stesso nome di interfaccia nei progetti di attributo diverso, viene generato lo stesso GUID.
-
 
 ## <a name="see-also"></a>Vedere anche
 

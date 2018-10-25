@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebcb2e52f67cfe37c4954e530fd2b2393ae23b68
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054449"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Miglioramenti della conformità C++ in Visual Studio 2017 versioni 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) e [15.8](#update_158)
 
@@ -227,9 +227,9 @@ L'esempio seguente illustra il comportamento conforme di C++14:
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +247,9 @@ L'esempio seguente illustra il comportamento di C++17 in Visual Studio versione 
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -1375,7 +1375,7 @@ I membri dati static constexpr ora sono implicitamente inline, quindi la loro di
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1588,7 +1588,7 @@ Per correggere l'errore, modificare l'espressione B() in B\<T>().
 
 ### <a name="constexpr-aggregate-initialization"></a>Inizializzazione aggregata di constexpr
 
-Le versioni precedenti del compilatore C++ gestiscono in modo non corretto l'inizializzazione aggregata constexpr, accettando codice non valido in cui l'elenco di inizializzazione di aggregazione include troppi elementi e producendo codegen non corretto. Il codice seguente è un esempio: 
+Le versioni precedenti del compilatore C++ gestiscono in modo non corretto l'inizializzazione aggregata constexpr, accettando codice non valido in cui l'elenco di inizializzazione di aggregazione include troppi elementi e producendo codegen non corretto. Il codice seguente è un esempio:
 
 ```cpp
 #include <array>
@@ -1690,15 +1690,14 @@ Per correggere l'errore, modificare l'istruzione `return` in `return this->base_
 
 Lo standard C++ non consente di aggiungere dichiarazioni o definizioni con prototipo nello spazio dei nomi (namespace) `std`. L'aggiunta di dichiarazioni o definizioni allo spazio dei nomi `std` o a uno spazio dei nomi all'interno dello spazio dei nomi std ora risulta in un comportamento indefinito.
 
-In futuro, Microsoft modificherà la posizione di definizione di alcuni tipi STL. Quando questo avverrà, codice esistente che aggiunga dichiarazioni con prototipo allo spazio dei nomi `std` non funzionerà più. Un nuovo avviso, C4643, consente di identificare tali problemi nel codice sorgente. Questo avviso, abilitato in modalità **/default** e disattivato per impostazione predefinita, interessa i programmi compilati con **/Wall** o **/WX**. 
+In futuro, Microsoft modificherà la posizione di definizione di alcuni tipi STL. Quando questo avverrà, codice esistente che aggiunga dichiarazioni con prototipo allo spazio dei nomi `std` non funzionerà più. Un nuovo avviso, C4643, consente di identificare tali problemi nel codice sorgente. Questo avviso, abilitato in modalità **/default** e disattivato per impostazione predefinita, interessa i programmi compilati con **/Wall** o **/WX**.
 
-Il codice seguente ora genera un errore C4643: *Lo standard C++ non consente la dichiarazione con prototipo di 'vettore' nello spazio dei nomi std*. 
-
+Il codice seguente ora genera un errore C4643: *Lo standard C++ non consente la dichiarazione con prototipo di 'vettore' nello spazio dei nomi std*.
 
 ```cpp
-namespace std { 
-    template<typename T> class vector; 
-} 
+namespace std {
+    template<typename T> class vector;
+}
 ```
 
 Per correggere l'errore, usare una direttiva **include** anziché una dichiarazione con prototipo:
@@ -1714,106 +1713,106 @@ Secondo lo Standard C++, un compilatore deve generare un messaggio di diagnostic
 Senza questo errore, il programma seguente viene compilato ma genera un ciclo infinito:
 
 ```cpp
-class X { 
-public: 
-    X(int, int); 
+class X {
+public:
+    X(int, int);
     X(int v) : X(v){}
-}; 
+};
 ```
 
 Per evitare il ciclo infinito, delegare un altro costruttore:
 
 ```cpp
-class X { 
-public: 
+class X {
+public:
 
-    X(int, int); 
-    X(int v) : X(v, 0) {} 
-}; 
+    X(int, int);
+    X(int v) : X(v, 0) {}
+};
 ```
 
 ### <a name="offsetof-with-constant-expressions"></a>offsetof con espressioni costanti
 
-La macro [offsetof](c-runtime-library/reference/offsetof-macro.md) era tradizionalmente implementata tramite una macro che richiedeva un operatore [reinterpret_cast](cpp/reinterpret-cast-operator.md). Questa operazione non è valida in contesti che richiedono un'espressione costante, ma tradizionalmente il compilatore Microsoft C++ la consentiva. La macro offsetof in dotazione con STL usa correttamente una funzione intrinseca del compilatore (**__builtin_offsetof**), ma molti sviluppatori hanno usato il trucco della macro per definire una macro **offsetof** personalizzata.  
+La macro [offsetof](c-runtime-library/reference/offsetof-macro.md) era tradizionalmente implementata tramite una macro che richiedeva un operatore [reinterpret_cast](cpp/reinterpret-cast-operator.md). Questa operazione non è valida in contesti che richiedono un'espressione costante, ma tradizionalmente il compilatore Microsoft C++ la consentiva. La macro offsetof in dotazione con STL usa correttamente una funzione intrinseca del compilatore (**__builtin_offsetof**), ma molti sviluppatori hanno usato il trucco della macro per definire una macro **offsetof** personalizzata.
 
 In Visual Studio 2017 versione 15.8, il compilatore vincola le aree in cui gli operatori reinterpret_cast possono comparire nella modalità predefinita per consentire la conformità del codice al comportamento C++ standard. In modalità [/permissive-](build/reference/permissive-standards-conformance.md), i vincoli sono ancora più restrittivi. Se si usa il risultato di una macro offsetof in posizioni che richiedono espressioni costanti, il codice può generare l'avviso C4644 *l'utilizzo del criterio offsetof basato su macro nelle espressioni costanti non è standard. Usare offsetof definito nella libreria standard C++* o C2975 *argomento di modello non valido. Prevista espressione costante in fase di compilazione*.
 
-Il codice seguente genera l'errore C4644 in modalità **/default** e **/std:c++17** e l'errore C2975 in modalità **/permissive-**: 
+Il codice seguente genera l'errore C4644 in modalità **/default** e **/std:c++17** e l'errore C2975 in modalità **/permissive-**:
 
 ```cpp
-struct Data { 
-    int x; 
-}; 
+struct Data {
+    int x;
+};
 
-// Common pattern of user-defined offsetof 
-#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+// Common pattern of user-defined offsetof
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m))
 
-int main() 
+int main()
 
-{ 
-    switch (0) { 
-    case MY_OFFSET(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+{
+    switch (0) {
+    case MY_OFFSET(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
 
 Per correggere l'errore, usare **offsetof** definita tramite \<cstddef>:
 
 ```cpp
-#include <cstddef>  
+#include <cstddef>
 
-struct Data { 
-    int x; 
-};  
+struct Data {
+    int x;
+};
 
-int main() 
-{ 
-    switch (0) { 
-    case offsetof(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+int main()
+{
+    switch (0) {
+    case offsetof(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
-
 
 ### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>qualificatori cv per le classi di base soggette all'espansione di pacchetto
 
-Le versioni precedenti del compilatore Microsoft C++ non rilevavano che una classe di base aveva qualificatori cv se era anche soggetta all'espansione di pacchetto. 
+Le versioni precedenti del compilatore Microsoft C++ non rilevavano che una classe di base aveva qualificatori cv se era anche soggetta all'espansione di pacchetto.
 
-Nella modalità **/permissive-** di Visual Studio 2017 versione 15.8, il codice seguente genera l'errore C3770 *'const S': non è una classe base valida*: 
+Nella modalità **/permissive-** di Visual Studio 2017 versione 15.8, il codice seguente genera l'errore C3770 *'const S': non è una classe base valida*:
 
 ```cpp
-template<typename... T> 
-class X : public T... { };  
+template<typename... T>
+class X : public T... { };
 
-class S { };  
+class S { };
 
-int main() 
-{ 
-    X<const S> x; 
-} 
+int main()
+{
+    X<const S> x;
+}
 ```
+
 ### <a name="template-keyword-and-nested-name-specifiers"></a>parola chiave template e identificatori di nome annidati
 
-In modalità **/permissive-**, il compilatore richiede ora che la parola chiave `template` preceda il nome di un modello quando questo segue un identificatore di nome annidato da cui è dipendente. 
+In modalità **/permissive-**, il compilatore richiede ora che la parola chiave `template` preceda il nome di un modello quando questo segue un identificatore di nome annidato da cui è dipendente.
 
 Il codice seguente in modalità **/permissive-** ora genera l'errore C7510: *'foo': se si usa il nome di tipo dipendente, è necessario aggiungere il prefisso 'template'. note: vedere il riferimento all'istanza de modello di classe 'X<T>' in corso di compilazione*:
 
 ```cpp
 template<typename T> struct Base
 {
-    template<class U> void foo() {} 
-}; 
+    template<class U> void foo() {}
+};
 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
-        Base<T>::foo<int>(); 
-    } 
-}; 
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
+        Base<T>::foo<int>();
+    }
+};
 ```
 
 Per correggere l'errore, aggiungere la parola chiave `template` all'istruzione `Base<T>::foo<int>();` , come illustrato nell'esempio seguente:
@@ -1823,16 +1822,16 @@ template<typename T> struct Base
 {
     template<class U> void foo() {}
 };
- 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
+
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
         // Add template keyword here:
-        Base<T>::template foo<int>(); 
-    } 
-}; 
+        Base<T>::template foo<int>();
+    }
+};
 ```
 
 ## <a name="see-also"></a>Vedere anche

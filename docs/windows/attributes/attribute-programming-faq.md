@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a93dc67bd06f0dc88603643646fed3ad65052874
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: cf9d80d5256a72ae55fa5539664adf0545df0924
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791437"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057877"
 ---
 # <a name="attribute-programming-faq"></a>Domande frequenti sulla programmazione con attributi
 
@@ -118,7 +118,7 @@ Tuttavia, gli attributi seguenti presentano parametri senza nome, singoli:
 Di seguito non è consentito:
 
 ```cpp
-[ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)  
+[ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)
 ]
 ```
 
@@ -151,7 +151,7 @@ L'esempio seguente è il risultato della copia il codice inserito in un file di 
 
 // ITestTest
 [
-   object, uuid("DADECE00-0FD2-46F1-BFD3-6A0579CA1BC4"), dual, helpstring("ITestTest Interface"), pointer_default(unique)  
+   object, uuid("DADECE00-0FD2-46F1-BFD3-6A0579CA1BC4"), dual, helpstring("ITestTest Interface"), pointer_default(unique)
 ]
 
 __interface ITestTest : IDispatch {
@@ -161,7 +161,7 @@ __interface ITestTest : IDispatch {
 
 // _ITestTestEvents
 [
-   uuid("12753B9F-DEF4-49b0-9D52-A79C371F2909"), dispinterface, helpstring("_ITestTestEvents Interface")  
+   uuid("12753B9F-DEF4-49b0-9D52-A79C371F2909"), dispinterface, helpstring("_ITestTestEvents Interface")
 ]
 
 __interface _ITestTestEvents {
@@ -172,7 +172,7 @@ __interface _ITestTestEvents {
 [
    coclass, threading(apartment), vi_progid("TestATL1.TestTest"), progid("TestATL1.TestTest.1"), version(1.0), uuid("D9632007-14FA-4679-9E1C-28C9A949E784"), // this line would be commented out from original file
    // event_source("com"), // this line would be added to support injected code
-   source(_ITestTestEvents), helpstring("TestTest Class")  
+   source(_ITestTestEvents), helpstring("TestTest Class")
 ]
 
 class ATL_NO_VTABLE CTestTest : public ITestTest,
@@ -185,7 +185,7 @@ public:
    }
    // this line would be commented out from original file
    // __event __interface _ITestTestEvents;
-   DECLARE_PROTECT_FINAL_CONSTRUCT()  
+   DECLARE_PROTECT_FINAL_CONSTRUCT()
    HRESULT FinalConstruct() {
       return S_OK;
    }
@@ -224,7 +224,7 @@ HRESULT BeforeChange(::BSTR i1,::VARIANT_BOOL* i2) {
          DISPPARAMS disp = { rgvars, NULL, 2, 0 };
          VARIANT ret_val;
          hr = __ComInvokeEventHandler(pDispatch, 1, 1, &disp, &ret_val);
-         if (FAILED(hr))  
+         if (FAILED(hr))
             break;
       }
       pp++;
@@ -232,9 +232,9 @@ HRESULT BeforeChange(::BSTR i1,::VARIANT_BOOL* i2) {
    return hr;
 }
 
-BEGIN_CONNECTION_POINT_MAP(CTestTest)  
-CONNECTION_POINT_ENTRY(__uuidof(::_ITestTestEvents))  
-END_CONNECTION_POINT_MAP()  
+BEGIN_CONNECTION_POINT_MAP(CTestTest)
+CONNECTION_POINT_ENTRY(__uuidof(::_ITestTestEvents))
+END_CONNECTION_POINT_MAP()
 // end added code section
 
 // _ITestCtrlEvents Methods

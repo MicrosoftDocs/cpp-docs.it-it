@@ -18,76 +18,76 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10365b4cbe43863f72b721665ae8ea518e3fdc5f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0e571229602a311633fc7425384544c53813b935
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059714"
 ---
 # <a name="hdrstop"></a>hdrstop
-Offre controllo aggiuntivo sui nomi file di precompilazione e sulla posizione in cui lo stato di compilazione viene salvato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#pragma hdrstop [( "filename" )]    
-```  
-  
-## <a name="remarks"></a>Note  
- 
-Il *nomefile* è il nome del file di intestazione precompilata da usare o creare (a seconda che [/Yu](../build/reference/yu-use-precompiled-header-file.md) oppure [/Yc](../build/reference/yc-create-precompiled-header-file.md) è specificato). Se *filename* non contiene una specifica del percorso, si presuppone che il file di intestazione precompilata trovarsi nella stessa directory del file di origine.  
-  
-Se un file C o C++ contiene una **hdrstop** pragma quando viene compilato con `/Yc`, il compilatore Salva lo stato della compilazione fino alla posizione del pragma. Lo stato compilato di eventuale codice che segue il pragma non viene salvato.  
-  
-Uso *filename* per denominare il file di intestazione precompilata in cui viene salvato lo stato compilato. Uno spazio tra **hdrstop** e *filename* è facoltativo. Il nome del file specificato nella **hdrstop** pragma è una stringa ed è pertanto soggetto ai vincoli di qualsiasi stringa C o C++. In particolare, deve essere racchiuso tra virgolette e utilizzare il carattere di escape (barra rovesciata) per specificare i nomi di directory. Ad esempio:  
-  
-```  
-#pragma hdrstop( "c:\\projects\\include\\myinc.pch" )  
-```  
-  
-Il nome del file di intestazione precompilata viene determinato in base agli elementi seguenti (in ordine di priorità):  
-  
-1. L'argomento di `/Fp` opzione del compilatore  
-  
-2. Il *filename* argomento `#pragma hdrstop`  
-  
-3. Il nome di base del file di origine con una estensione PCH  
-  
-Per il `/Yc` e `/Yu` impostazione di opzioni, se nessuna delle due opzioni di compilazione né la **hdrstop** pragma specifica un nome file, il nome di base del file di origine viene utilizzato come nome di base del file di intestazione precompilata.  
-  
-È inoltre possibile utilizzare i comandi di pre-elaborazione per eseguire la sostituzione delle macro come indicato di seguito:  
-  
-```  
-#define INCLUDE_PATH "c:\\progra~`1\\devstsu~1\\vc\\include\\"  
-#define PCH_FNAME "PROG.PCH"  
-.  
-.  
-.  
-#pragma hdrstop( INCLUDE_PATH PCH_FNAME )  
-```  
-  
-Le regole seguenti determinano dove il **hdrstop** pragma può essere inserito:  
-  
-- Deve trovarsi all'esterno di eventuali dati o dichiarazione o definizione di funzione.  
-  
-- Deve essere specificato nel file di origine, non all'interno di un file di intestazione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-#include <windows.h>                 // Include several files  
-#include "myhdr.h"  
-  
-__inline Disp( char *szToDisplay )   // Define an inline function  
-{  
-    ...                              // Some code to display string  
-}  
-#pragma hdrstop  
-```  
-  
-In questo esempio, il **hdrstop** pragma viene visualizzata dopo che sono stati inclusi due file ed è stata definita una funzione inline. Questa potrebbe a prima vista sembrare una posizione inconsueta per il pragma. Considerare, tuttavia, che usando le opzioni di precompilazione manuali, `/Yc` e `/Yu`, con la **hdrstop** pragma rende possibile per consente di precompilare interi file di origine, anche il codice inline. Il compilatore Microsoft non limita l'utente alla precompilazione delle sole dichiarazioni di dati.  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+Offre controllo aggiuntivo sui nomi file di precompilazione e sulla posizione in cui lo stato di compilazione viene salvato.
+
+## <a name="syntax"></a>Sintassi
+
+```
+#pragma hdrstop [( "filename" )]
+```
+
+## <a name="remarks"></a>Note
+
+Il *nomefile* è il nome del file di intestazione precompilata da usare o creare (a seconda che [/Yu](../build/reference/yu-use-precompiled-header-file.md) oppure [/Yc](../build/reference/yc-create-precompiled-header-file.md) è specificato). Se *filename* non contiene una specifica del percorso, si presuppone che il file di intestazione precompilata trovarsi nella stessa directory del file di origine.
+
+Se un file C o C++ contiene una **hdrstop** pragma quando viene compilato con `/Yc`, il compilatore Salva lo stato della compilazione fino alla posizione del pragma. Lo stato compilato di eventuale codice che segue il pragma non viene salvato.
+
+Uso *filename* per denominare il file di intestazione precompilata in cui viene salvato lo stato compilato. Uno spazio tra **hdrstop** e *filename* è facoltativo. Il nome del file specificato nella **hdrstop** pragma è una stringa ed è pertanto soggetto ai vincoli di qualsiasi stringa C o C++. In particolare, deve essere racchiuso tra virgolette e utilizzare il carattere di escape (barra rovesciata) per specificare i nomi di directory. Ad esempio:
+
+```
+#pragma hdrstop( "c:\\projects\\include\\myinc.pch" )
+```
+
+Il nome del file di intestazione precompilata viene determinato in base agli elementi seguenti (in ordine di priorità):
+
+1. L'argomento di `/Fp` opzione del compilatore
+
+2. Il *filename* argomento `#pragma hdrstop`
+
+3. Il nome di base del file di origine con una estensione PCH
+
+Per il `/Yc` e `/Yu` impostazione di opzioni, se nessuna delle due opzioni di compilazione né la **hdrstop** pragma specifica un nome file, il nome di base del file di origine viene utilizzato come nome di base del file di intestazione precompilata.
+
+È inoltre possibile utilizzare i comandi di pre-elaborazione per eseguire la sostituzione delle macro come indicato di seguito:
+
+```
+#define INCLUDE_PATH "c:\\progra~`1\\devstsu~1\\vc\\include\\"
+#define PCH_FNAME "PROG.PCH"
+.
+.
+.
+#pragma hdrstop( INCLUDE_PATH PCH_FNAME )
+```
+
+Le regole seguenti determinano dove il **hdrstop** pragma può essere inserito:
+
+- Deve trovarsi all'esterno di eventuali dati o dichiarazione o definizione di funzione.
+
+- Deve essere specificato nel file di origine, non all'interno di un file di intestazione.
+
+## <a name="example"></a>Esempio
+
+```
+#include <windows.h>                 // Include several files
+#include "myhdr.h"
+
+__inline Disp( char *szToDisplay )   // Define an inline function
+{
+    ...                              // Some code to display string
+}
+#pragma hdrstop
+```
+
+In questo esempio, il **hdrstop** pragma viene visualizzata dopo che sono stati inclusi due file ed è stata definita una funzione inline. Questa potrebbe a prima vista sembrare una posizione inconsueta per il pragma. Considerare, tuttavia, che usando le opzioni di precompilazione manuali, `/Yc` e `/Yu`, con la **hdrstop** pragma rende possibile per consente di precompilare interi file di origine, anche il codice inline. Il compilatore Microsoft non limita l'utente alla precompilazione delle sole dichiarazioni di dati.
+
+## <a name="see-also"></a>Vedere anche
+
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

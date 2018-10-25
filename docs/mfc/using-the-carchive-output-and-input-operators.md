@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74660dc2baeff683d35fac8d4b9dda06bdbec22d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061313"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Usando l'oggetto CArchive &lt; &lt; e &gt; &gt; operatori
 
@@ -33,13 +33,13 @@ ms.locfileid: "46372457"
 
 1. Nell'esempio seguente viene illustrato come archiviare un oggetto in un file tramite un archivio:
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>Per caricare un oggetto da un valore archiviato in precedenza in un file
 
 1. Nell'esempio seguente viene illustrato come caricare un oggetto da un valore archiviato in precedenza in un file:
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 In genere, archiviare e caricare dati da e verso un file tramite un archivio nel `Serialize` funzioni di `CObject`-classi derivate, che deve aver dichiarato con la macro DECLARE_SERIAL. Un riferimento a un `CArchive` oggetto viene passato per il `Serialize` (funzione). Si chiama il `IsLoading` funzione del `CArchive` oggetto per determinare se il `Serialize` funzione è stata chiamata per caricare i dati dal file o archiviare dati nel file.
 

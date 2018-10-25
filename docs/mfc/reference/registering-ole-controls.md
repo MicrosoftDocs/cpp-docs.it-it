@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9008ba16d52987e4d7f14b5692cdf349951f83a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27e0589e7ba0b2428f4cfea1d2561ef5e666641e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054163"
 ---
 # <a name="registering-ole-controls"></a>Registrazione di controlli OLE
 
@@ -86,7 +86,7 @@ Contiene uno o più dei flag seguenti:
 
 - `afxRegFreeThreading` Imposta il modello di threading nel Registro di sistema ThreadingModel = gratuito.
 
-     È possibile combinare i due flag `afxRegApartmentThreading` e `afxRegFreeThreading` impostare ThreadingModel impostato su Both. Visualizzare [InprocServer32](/windows/desktop/com/inprocserver32) nel SDK di Windows per ulteriori informazioni sulla registrazione del modello di threading.
+   È possibile combinare i due flag `afxRegApartmentThreading` e `afxRegFreeThreading` impostare ThreadingModel impostato su Both. Visualizzare [InprocServer32](/windows/desktop/com/inprocserver32) nel SDK di Windows per ulteriori informazioni sulla registrazione del modello di threading.
 
 > [!NOTE]
 >  Nelle versioni MFC precedenti alla 4.2 MFC, la **int** *nRegFlags* parametro è un parametro, BOOL *bInsertable*, che consentito o meno il controllo deve essere inserito l'inserimento Finestra di dialogo di oggetto.

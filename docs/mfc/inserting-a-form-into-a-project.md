@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba22c87ee601d66ccfb1092047e69be42d8163c3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429266"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052753"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Inserimento di un form in un progetto
 
@@ -33,7 +33,7 @@ Form fornisce un contenitore adatto per i controlli. È possibile inserire facil
 
 1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi classe**.
 
-     Se il **nuovo Form** comando non è disponibile, il progetto può essere basato sulla libreria ATL (Active Template). Per aggiungere un form a un progetto ATL, è necessario [specificare alcune impostazioni](../atl/reference/application-settings-atl-project-wizard.md) al momento della creazione del progetto.
+   Se il **nuovo Form** comando non è disponibile, il progetto può essere basato sulla libreria ATL (Active Template). Per aggiungere un form a un progetto ATL, è necessario [specificare alcune impostazioni](../atl/reference/application-settings-atl-project-wizard.md) al momento della creazione del progetto.
 
 1. Dal **MFC** cartella, fare clic su **classe MFC**.
 

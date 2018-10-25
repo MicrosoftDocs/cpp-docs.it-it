@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2705061b1914ac8fad9f7ca8d769df16bab2f5c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053279"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Controlli ActiveX MFC: localizzazione di un controllo ActiveX
 
@@ -68,7 +68,7 @@ Per creare più librerie dei tipi localizzata è possibile aggiungere qualsiasi 
 
 1. Con il progetto di controllo aperto, scegliere il **Project** menu, fare clic su **Aggiungi elemento esistente**.
 
-     Il **Aggiungi elemento esistente** verrà visualizzata la finestra di dialogo.
+   Il **Aggiungi elemento esistente** verrà visualizzata la finestra di dialogo.
 
 1. Se necessario, selezionare l'unità e directory da visualizzare.
 

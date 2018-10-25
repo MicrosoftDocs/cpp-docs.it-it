@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb576ba6ce532bce15b9dda2aa598649044c2d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 994095042dc473fda315b6d842d9ec9355ff3671
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378013"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055398"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: reflection messaggi per controlli Windows
 
@@ -126,7 +126,7 @@ Questo semplice esempio viene creato un controllo riutilizzabile chiamato `CYell
 
 1. Creare una nuova finestra di dialogo in un'applicazione esistente. Per altre informazioni, vedere la [editor finestre](../windows/dialog-editor.md) argomento.
 
-     È necessario disporre di un'applicazione in cui si desidera sviluppare il controllo riutilizzabile. Se non si dispone di un'applicazione esistente da usare, creare un'applicazione basata su finestra di dialogo mediante la creazione guidata applicazione.
+   È necessario disporre di un'applicazione in cui si desidera sviluppare il controllo riutilizzabile. Se non si dispone di un'applicazione esistente da usare, creare un'applicazione basata su finestra di dialogo mediante la creazione guidata applicazione.
 
 2. Con il progetto caricato in Visual C++, usare ClassWizard per creare una nuova classe denominata `CYellowEdit` base `CEdit`.
 
@@ -145,7 +145,7 @@ Questo semplice esempio viene creato un controllo riutilizzabile chiamato `CYell
 
 5. Tramite la creazione guidata classe, aggiungere un gestore per il messaggio WM_CTLCOLOR riflesso per il `CYellowEdit` classe. Si noti che il segno di uguale davanti al nome del messaggio nell'elenco dei messaggi che è possibile gestire indica che il messaggio viene riprodotto. Come descritto nella [definizione di un gestore di messaggi per un messaggio riflesse](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-     ClassWizard aggiunge la seguente funzione di macro e struttura della mappa messaggi per l'utente:
+   ClassWizard aggiunge la seguente funzione di macro e struttura della mappa messaggi per l'utente:
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()

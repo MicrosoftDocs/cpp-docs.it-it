@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052564"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definizione di un gestore messaggi per un messaggio riprodotto
 
@@ -53,7 +53,7 @@ Per creare un [controllo ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 1. Fare clic sul nome suggerito per accettare. Il gestore di è aggiunto al progetto.
 
-     I nomi dei gestori di messaggi che sono stati aggiunti vengono visualizzati nella colonna destra della finestra riflessi.
+   I nomi dei gestori di messaggi che sono stati aggiunti vengono visualizzati nella colonna destra della finestra riflessi.
 
 9. Per modificare o eliminare un gestore di messaggi, ripetere i passaggi da 4 a 7. Fare clic sulla cella contenente il nome del gestore da modificare o eliminare e fare clic sull'attività appropriata.
 
@@ -64,6 +64,6 @@ Per creare un [controllo ActiveX](../../mfc/activex-controls-on-the-internet.md)
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Aggiunta di una funzione membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Aggiunta di una variabile membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Una funzione Virtual in override](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Override di una funzione virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestore messaggi MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
 [Esplorazione della struttura delle classi](../../ide/navigating-the-class-structure-visual-cpp.md)

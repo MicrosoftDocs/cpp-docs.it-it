@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3eb9ab5f08fe1984e52ed16eb26064093fb8e003
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044249"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052954"
 ---
 # <a name="umenuorid-class"></a>Classe u_menuorid
 
@@ -57,7 +57,7 @@ class _U_MENUorID
 
 Classe dell'adattatore in questo argomento consente di eseguire gli ID (UINTs) o gli handle di menu (HMENUs) deve essere passato a una funzione senza un cast esplicito da parte del chiamante.
 
-Questa classe è progettata per l'implementazione del wrapper per l'API di Windows, in particolare [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) e [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funzioni, entrambi accettare un argomento HMENU che può essere una finestra figlio identificatore (UINT) anziché un handle di menu. Ad esempio, è possibile visualizzare questa classe in uso come parametro per [CWindowImpl::Create](cwindowimpl-class.md#create).  
+Questa classe è progettata per l'implementazione del wrapper per l'API di Windows, in particolare [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) e [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funzioni, entrambi accettare un argomento HMENU che può essere una finestra figlio identificatore (UINT) anziché un handle di menu. Ad esempio, è possibile visualizzare questa classe in uso come parametro per [CWindowImpl::Create](cwindowimpl-class.md#create).
 
 La classe definisce due overload del costruttore: uno accetta un argomento UINT e l'altro accetta un argomento HMENU. L'argomento UINT è sufficiente eseguire il cast a un HMENU nel costruttore e il risultato archiviato nel membro dati della classe, [m_hMenu](#_u_menuorid__m_hmenu). L'argomento del costruttore HMENU verrà archiviato direttamente, senza conversione.
 

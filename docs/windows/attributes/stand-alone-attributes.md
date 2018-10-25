@@ -16,16 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b46b5c3b4750957c548becfcc5143f5eed858f71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0df8cb1def78e3a7b564f268eb1b3b0a2069fb11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791262"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062847"
 ---
 # <a name="stand-alone-attributes"></a>Attributi autonomi
+
 Un attributo autonomo non agisce su una parola chiave C++, ma è più simile a una riga di codice. Le istruzioni di attributi autonomi richiedono un punto e virgola alla fine della riga.
-  
+
+## <a name="stand-alone-attribute-list"></a>Elenco di attributi autonomi
+
 |Attributo|Descrizione|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Genera la stringa specificata, senza i caratteri virgoletta, nel file di intestazione generato.|
@@ -40,10 +43,10 @@ Un attributo autonomo non agisce su una parola chiave C++, ma è più simile a u
 |[include](include-cpp.md)|Specifica uno o più file di intestazione da includere nel file IDL generato.|
 |[includelib](includelib-cpp.md)|Fa sì che un file con estensione idl o con estensione h da includere nel file IDL generato.|
 |[library_block](library-block.md)|Inserisce un costrutto nel blocco di libreria del file con estensione idl.|
-|[modulo](module-cpp.md)|Definisce il blocco di libreria nel file IDL.|
+|[module](module-cpp.md)|Definisce il blocco di libreria nel file IDL.|
 |[no_injected_text](no-injected-text.md)|Impedisce al compilatore di inserire codice in seguito a uso dell'attributo.|
 |[pragma](pragma.md)|Genera la stringa specificata, senza i caratteri virgoletta, nel file con estensione IDL generato.|
-  
+
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi per utilizzo](attributes-by-usage.md)

@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 338404abe7499b6d9ff7679420f069a2857ce1e0
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: de3ca61005d0bafcc4387c793b09ec4925faf64b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494439"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064082"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programmazione .NET con C++/CLI (Visual C++)
 
-**Visual Studio 2015**: per impostazione predefinita, i progetti CLR creati con Visual Studio 2015 destinati A.NET Framework 4.5.2. Per impostare .NET Framework 4.6 come destinazione quando si crea un nuovo progetto, nella finestra di dialogo **Nuovo progetto** modificare il framework di destinazione nell'elenco a discesa in alto al centro della finestra. Per modificare il framework di destinazione per un progetto esistente, chiudere il progetto, modificare il file di progetto (con estensione vcxproj) e modificare il valore della versione del framework di destinazione in 4.6. Alla successiva apertura del progetto, le impostazioni avranno effetto. 
+**Visual Studio 2015**: per impostazione predefinita, i progetti CLR creati con Visual Studio 2015 destinati A.NET Framework 4.5.2. Per impostare .NET Framework 4.6 come destinazione quando si crea un nuovo progetto, nella finestra di dialogo **Nuovo progetto** modificare il framework di destinazione nell'elenco a discesa in alto al centro della finestra. Per modificare il framework di destinazione per un progetto esistente, chiudere il progetto, modificare il file di progetto (con estensione vcxproj) e modificare il valore della versione del framework di destinazione in 4.6. Alla successiva apertura del progetto, le impostazioni avranno effetto.
 
-**Visual Studio 2017**: In Visual Studio 2017, il framework predefinito corrisponda alla versione 4.6.1 e il selettore della versione Framework è in fondo il **finestra di dialogo Nuovo progetto**. C + + CLI non è installato per impostazione predefinita. Per installare il componente, aprire l'installazione di Visual Studio e scegliere di C + + / componente dell'interfaccia della riga in Visual C++. 
+**Visual Studio 2017**: In Visual Studio 2017, il framework predefinito corrisponda alla versione 4.6.1 e il selettore della versione Framework è in fondo il **finestra di dialogo Nuovo progetto**. C + + CLI non è installato per impostazione predefinita. Per installare il componente, aprire l'installazione di Visual Studio e scegliere di C + + / componente dell'interfaccia della riga in Visual C++.
 
 ## <a name="in-this-section"></a>In questa sezione
 

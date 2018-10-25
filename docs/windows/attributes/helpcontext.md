@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd3278ee31cf27dd6cd422e247c1d0911bc3bf5a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 831ca61f82eee913efd1ab2b1420fefb011d6c1a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791108"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062834"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -58,7 +58,7 @@ Vedere l'esempio relativo [defaultvalue](defaultvalue.md) per un esempio di come
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -68,4 +68,4 @@ Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md
 [Attributi di metodo](method-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
-[helpstring](helpstring.md)  
+[helpstring](helpstring.md)

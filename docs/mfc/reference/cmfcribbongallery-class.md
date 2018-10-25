@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e99227f32418b994ca0e678ae29dc12e716782
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0e0680bb1bed7973071eaabc3535574cb5f470b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388264"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057634"
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
 
@@ -138,9 +138,9 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|Specifica se il ridimensionamento di menu è abilitato o disabilitato.|
 |[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||
 |[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Specifica se la barra laterale è abilitata o disabilitata.|
-|[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|Esegue l'override`CMFCRibbonButton::OnAfterChangeRect`.|
+|[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|Esegue l'override di `CMFCRibbonButton::OnAfterChangeRect`.|
 |[CMFCRibbonGallery::OnDraw](#ondraw)|(Esegue l'override [cmfcribbonbutton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
-|[CMFCRibbonGallery::OnEnable](#onenable)|Esegue l'override`CMFCRibbonBaseElement::OnEnable`.|
+|[CMFCRibbonGallery::OnEnable](#onenable)|Esegue l'override di `CMFCRibbonBaseElement::OnEnable`.|
 |[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(Esegue l'override [CMFCRibbonBaseElement::OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|
 |[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Ridisegna la raccolta.|
 |[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Rimuove tutti gli elementi nella raccolta di descrizioni comandi.|
@@ -189,11 +189,9 @@ void AddGroup(
     UINT uiImagesPaletteResID,
     int cxPaletteImage);
 
-
 void AddGroup(
     LPCTSTR lpszGroupName,
     CMFCToolBarImages& imagesGroup);
-
 
 void AddGroup(
     LPCTSTR lpszGroupName,
@@ -276,7 +274,6 @@ CMFCRibbonGallery (
     int nLargeImageIndex,
     CMFCToolBarImages& imagesPalette);
 
-
 CMFCRibbonGallery (
     UINT nID,
     LPCTSTR lpszText,
@@ -284,7 +281,6 @@ CMFCRibbonGallery (
     int nLargeImageIndex,
     UINT uiImagesPaletteResID=0,
     int cxPaletteImage=0);
-
 
 CMFCRibbonGallery (
     UINT nID,
@@ -371,21 +367,19 @@ Chiamare questo metodo per abilitare o disabilitare la barra laterale di stile d
 
 ##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize
 
-
 ```
 virtual CSize GetCompactSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getdroppeddown"></a>  CMFCRibbonGallery::GetDroppedDown
-
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -415,7 +409,6 @@ Il nome del gruppo che si trova in corrispondenza dell'indice specificato. Il pa
 ### <a name="remarks"></a>Note
 
 ##  <a name="getgroupoffset"></a>  CMFCRibbonGallery::GetGroupOffset
-
 
 ```
 virtual int GetGroupOffset() const;
@@ -493,21 +486,19 @@ ID comando della tavolozza attualmente selezionata.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonGallery::GetRegularSize
 
-
 ```
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getselecteditem"></a>  CMFCRibbonGallery::GetSelectedItem
-
 
 ```
 int GetSelectedItem() const;
@@ -518,7 +509,6 @@ int GetSelectedItem() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="hasmenu"></a>  CMFCRibbonGallery::HasMenu
-
 
 ```
 virtual BOOL HasMenu() const;
@@ -558,7 +548,6 @@ TRUE se è stato abilitato il ridimensionamento di menu; in caso contrario, FALS
 
 ##  <a name="ismenuresizevertical"></a>  CMFCRibbonGallery::IsMenuResizeVertical
 
-
 ```
 BOOL IsMenuResizeVertical() const;
 ```
@@ -583,19 +572,17 @@ TRUE se la barra laterale di stile di Office XP viene disegnata sul lato sinistr
 
 ##  <a name="onafterchangerect"></a>  CMFCRibbonGallery::OnAfterChangeRect
 
-
 ```
 virtual void OnAfterChangeRect(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondraw"></a>  CMFCRibbonGallery::OnDraw
-
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -603,7 +590,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -643,19 +630,17 @@ virtual void OnDrawPaletteIcon(
 
 ##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable
 
-
 ```
 virtual void OnEnable(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAttivare il*
+[in] *bAttivare il*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onrtlchanged"></a>  CMFCRibbonGallery::OnRTLChanged
-
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -663,7 +648,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bIsRTL*
+[in] *bIsRTL*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -691,14 +676,13 @@ void RemoveItemToolTips();
 
 ##  <a name="selectitem"></a>  CMFCRibbonGallery::SelectItem
 
-
 ```
 void SelectItem(int nItemIndex);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *nItemIndex*
+[in] *nItemIndex*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -806,7 +790,6 @@ Collega una tavolozza a una raccolta della barra multifunzione.
 
 ```
 void SetPalette(CMFCToolBarImages& imagesPalette);
-
 
 void SetPalette(
     UINT uiImagesPaletteResID,

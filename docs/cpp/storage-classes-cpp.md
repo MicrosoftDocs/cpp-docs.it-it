@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058336"
 ---
 # <a name="storage-classes-c"></a>Classi di archiviazione (C++)
 
@@ -35,7 +35,6 @@ Oggetto *classe di archiviazione* nel contesto di C++ le dichiarazioni delle var
 1. Il [modificabile](../cpp/mutable-data-members-cpp.md) parola chiave può essere considerato un identificatore di classe di archiviazione. Tale parola chiave, tuttavia, è disponibile solo nell'elenco dei membri di una definizione di classe.
 
 1. **Visual C++ 2010 e versioni successive:** il **automaticamente** parola chiave non è più un identificatore di classe di archiviazione C++ e il **registrare** parola chiave è deprecata. **Visual Studio 2017 versione 15.7 e successive:** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): il **registrare** (parola chiave) viene rimossa dal linguaggio C++.
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -226,7 +225,7 @@ Aspetti da considerare per la `thread_local` identificatore:
 
 - È possibile specificare `thread_local` solo per elementi di dati con durata di archiviazione statica. Ciò include gli oggetti dati globali (entrambe **statici** e **extern**), gli oggetti statici locali e i membri dati statici di classi. Qualsiasi variabile locale dichiarata `thread_local` implicitamente statico se nessuna altra classe di archiviazione viene fornita; in altre parole, nell'ambito del blocco `thread_local` equivale a `thread_local static`.
 
-- È necessario specificare `thread_local` per la dichiarazione e la definizione di un oggetto locale di thread, indipendentemente dal fatto che la definizione e la dichiarazione si verificano nello stesso file o in file separati.
+- È necessario specificare `thread_local` per la dichiarazione e la definizione di un oggetto thread-local, indipendentemente dal fatto che la definizione e la dichiarazione si verificano nello stesso file o in file separati.
 
 In Windows, `thread_local` è funzionalmente equivalente a [declspec](../cpp/thread.md) ad eccezione del fatto che **declspec** può essere applicato a una definizione di tipo ed è valido nel codice C. Se possibile, usare `thread_local` poiché fa parte dello standard C++ ed è quindi più portabile.
 
@@ -315,11 +314,11 @@ Questo esempio viene illustrato come e quando gli oggetti `I1`, `I2`, e `I3` ven
 
 Esistono diversi punti da notare circa il programma:
 
-- Innanzitutto, `I1` e `I2` vengono eliminati automaticamente quando il flusso di controllo esce dal blocco nel quale i due oggetti sono definiti.
+- Innanzitutto, `I1` e `I2` vengono eliminati definitivamente in modo automatico quando il flusso di controllo esce dal blocco nel quale i due oggetti sono definiti.
 
 - In secondo luogo, in C++, non è necessario dichiarare gli oggetti o le variabili all'inizio di un blocco. Questi oggetti, inoltre, vengono inizializzati solo quando il flusso di controllo raggiunge le relative definizioni. Alcuni esempi di tali definizioni sono `I2` e `I3`. L'output riporta il momento esatto in cui vengono inizializzati.
 
-- Infine, le variabili locali statiche come `I3` mantengono i propri valori per tutta la durata del programma, ma vengono eliminate al termine del programma.
+- Infine, le variabili locali statiche come `I3` mantengono i propri valori per tutta la durata del programma, ma vengono eliminate definitivamente al termine del programma.
 
 ## <a name="see-also"></a>Vedere anche
 

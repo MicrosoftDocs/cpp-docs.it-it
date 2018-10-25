@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 189a6bd675ef3dec467fac98584abd7edfb49c19
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3de077e636f0dfdd1ab046a57a81808b3f80357e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433942"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052839"
 ---
 # <a name="cexception-class"></a>CException (classe)
 
@@ -242,5 +242,4 @@ else
 [Grafico della gerarchia](../hierarchy-chart.md)<br/>
 [Elaborazione delle eccezioni](exception-processing.md)<br/>
 [Procedura: creazione di una classi di eccezioni personalizzate](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
 

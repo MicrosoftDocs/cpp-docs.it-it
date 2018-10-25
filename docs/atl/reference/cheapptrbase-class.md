@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1e1fad70e709ecef33d6df2c8e8e0aa58589e356
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063112"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059779"
 ---
 # <a name="cheapptrbase-class"></a>Classe CHeapPtrBase
 
@@ -76,7 +76,7 @@ La classe di allocazione di memoria da utilizzare. Per impostazione predefinita 
 |----------|-----------------|
 |[CHeapPtrBase::operator T *](#operator_t_star)|L'operatore di cast.|
 |[CHeapPtrBase::operator &](#operator_amp)|I & operatore.|
-|[CHeapPtrBase::operator ->](#operator_ptr)|Operatore puntatore a membro.|  
+|[CHeapPtrBase::operator ->](#operator_ptr)|Operatore puntatore a membro.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 

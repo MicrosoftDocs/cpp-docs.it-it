@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 153e1bba37b10da64b394c48ee1cf8c059ae86e9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 03131071f38dbbe1f9e1dbc2dc6645dcfb5d7366
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083026"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057855"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -71,7 +71,7 @@ Numero di colonna (ordinale DBCOLUMNINFO) corrispondente a un campo nel set di r
 
 **db_param** viene usato in combinazione con il [db_table](db-table.md) oppure [db_command](db-command.md) attributi.
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore Rinomina la classe \_ *NomeClasse*della funzione di accesso, dove *NomeClasse* è il nome è stato assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 ## <a name="example"></a>Esempio
 
@@ -87,7 +87,7 @@ L'esempio seguente associa il `nOutput` variabile con un parametro di output.
 #include <atldbcli.h>
 
 [ db_source(L"my_connection_string"),
-  db_command(L"{ ? = CALL dbo.\"Sales by Year\"(?,?) }")  
+  db_command(L"{ ? = CALL dbo.\"Sales by Year\"(?,?) }")
 ]
 struct CSalesbyYear {
    DBSTATUS m_dwShippedDateStatus;
@@ -128,4 +128,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi del consumer OLE DB](ole-db-consumer-attributes.md)  
+[Attributi del consumer OLE DB](ole-db-consumer-attributes.md)

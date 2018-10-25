@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4899ed59e3d47fd8cc9ff05af411be476a57a3fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f769f782c96f6a0143d98b2e2039ce915b2640f8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589072"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060364"
 ---
 # <a name="console-applications-in-visual-c"></a>Applicazioni console in Visual C++
 Un'applicazione console accetta l'input e invia l'output alla console, nota anche con il nome di prompt dei comandi. È possibile creare applicazioni console per le operazioni di base o per eseguire attività più sofisticate. È anche possibile usare un'app console per dimostrare in modo tangibile le funzionalità che in seguito si vogliono incorporare in un'applicazione desktop di Windows o in un'app della piattaforma UWP. Le applicazioni console possono comunicare con altre applicazioni desktop per mezzo di pipe o altri meccanismi RPC.
-  
+
 ## <a name="related-articles"></a>Articoli correlati
-  
+
 |Titolo|Descrizione|
 |-----------|-----------------|
 |[Procedura dettagliata: creazione di un programma C++ standard (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)|Descrive come creare un'applicazione console che gli utenti possono eseguire dalla riga di comando.|

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393399"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061573"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Procedura: chiamare proprietà e metodi del controllo Windows Form
 
@@ -39,11 +39,11 @@ In questo argomento si presuppone che è stata completata [procedura: creare il 
 
 1. Aggiungere la riga seguente alla sezione delle sostituzioni pubblica il `CMFC02View` in MFC02View.h dichiarazione di classe.
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. Aggiungere una sostituzione per OnInitialupdate.
 
-     Visualizzare il **proprietà** finestra (F4). Nelle **Visualizzazione classi** (CTRL + MAIUSC + C), selezionare CMFC02View classe. Nel **proprietà** finestra, selezionare l'icona per le sostituzioni. Scoll verso il basso nell'elenco per OnInitialUpdate. Fare clic sull'elenco a discesa elenco e selezionare \<Aggiungi >. In MFC02View.cpp in modo da. Verificare che il corpo della funzione OnInitialUpdate è come segue:
+   Visualizzare il **proprietà** finestra (F4). Nelle **Visualizzazione classi** (CTRL + MAIUSC + C), selezionare CMFC02View classe. Nel **proprietà** finestra, selezionare l'icona per le sostituzioni. Scoll verso il basso nell'elenco per OnInitialUpdate. Fare clic sull'elenco a discesa elenco e selezionare \<Aggiungi >. In MFC02View.cpp in modo da. Verificare che il corpo della funzione OnInitialUpdate è come segue:
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ In questo argomento si presuppone che è stata completata [procedura: creare il 
 
 1. Compilare ed eseguire il progetto.
 
-     Scegliere **Compila soluzione** dal menu **Compila**.
+   Scegliere **Compila soluzione** dal menu **Compila**.
 
-     Nel **Debug** menu, fare clic su **Avvia senza eseguire debug**.
+   Nel **Debug** menu, fare clic su **Avvia senza eseguire debug**.
 
-     Si noti che la casella di testo viene inizializzata.
+   Si noti che la casella di testo viene inizializzata.
 
 ## <a name="see-also"></a>Vedere anche
 

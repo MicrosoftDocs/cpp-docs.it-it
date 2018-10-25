@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7871b3f547e51bac983e1fe65cf815c8bb70e369
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5eba42cd2884c233ac25a24176f7653fd1d6c257
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423104"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051966"
 ---
 # <a name="namedguids"></a>named_guids
-**Sezione specifica C++**  
-  
-Indica al compilatore di definire e inizializzare variabili GUID di vecchio stile, del form `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, e `DIID_MyDispInterface`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-named_guids  
-```  
-  
-## <a name="remarks"></a>Note  
+**Sezione specifica C++**
 
-**Fine sezione specifica C++**  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+Indica al compilatore di definire e inizializzare variabili GUID di vecchio stile, del form `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, e `DIID_MyDispInterface`.
+
+## <a name="syntax"></a>Sintassi
+
+```
+named_guids
+```
+
+## <a name="remarks"></a>Note
+
+**Fine sezione specifica C++**
+
+## <a name="see-also"></a>Vedere anche
+
 [attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

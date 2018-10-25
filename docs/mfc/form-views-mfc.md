@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9019b8f2314cfefa5b952994e7fa7c3e9d8d459e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8236ed06a5863e2208c77294e4ddb7352b0f83f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442775"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052993"
 ---
 # <a name="form-views-mfc"></a>Visualizzazioni Maschera (MFC)
 
@@ -40,7 +40,7 @@ Quando si inserisce un nuovo form nell'applicazione, Visual C++ esegue le operaz
 
 - Crea una risorsa finestra di dialogo con gli stili appropriati (oppure è possibile usare una risorsa finestra di dialogo esistente che non è ancora stata associata a una classe).
 
-     Se si sceglie una risorsa finestra di dialogo esistente, si potrebbe essere necessario impostare questi stili usando la pagina delle proprietà della finestra di dialogo. Stili per una finestra di dialogo devono includere:
+   Se si sceglie una risorsa finestra di dialogo esistente, si potrebbe essere necessario impostare questi stili usando la pagina delle proprietà della finestra di dialogo. Stili per una finestra di dialogo devono includere:
 
      **WS_CHILD**= On
 
@@ -54,17 +54,17 @@ Per le applicazioni basate sull'architettura documento/visualizzazione, il **nuo
 
 - Crea un `CDocument`-classe di base
 
-     Anziché disporre di una nuova classe creata, è possibile usare qualsiasi esistente `CDocument`-basato su classe nel progetto.
+   Anziché disporre di una nuova classe creata, è possibile usare qualsiasi esistente `CDocument`-basato su classe nel progetto.
 
 - Genera un modello di documento (derivata da `CDocument`) con le risorse stringa, menu e icone.
 
-     È anche possibile creare una nuova classe su cui basare il modello.
+   È anche possibile creare una nuova classe su cui basare il modello.
 
 - Aggiunge una chiamata a `AddDocumentTemplate` all'interno dell'applicazione `InitInstance` codice.
 
-     Visual C++ aggiunge questo codice per ogni nuovo form si crea, aggiunge il modulo all'elenco dei moduli disponibili quando l'utente sceglie il **New** comando. Questo codice include l'ID della risorsa associata del form e i nomi delle classi di frame che costituiscono il nuovo oggetto form, visualizzazione e documento associato.
+   Visual C++ aggiunge questo codice per ogni nuovo form si crea, aggiunge il modulo all'elenco dei moduli disponibili quando l'utente sceglie il **New** comando. Questo codice include l'ID della risorsa associata del form e i nomi delle classi di frame che costituiscono il nuovo oggetto form, visualizzazione e documento associato.
 
-     I modelli di documento funzionano da connessione tra documenti, finestre cornice e viste. Per un singolo documento, è possibile creare molti modelli.
+   I modelli di documento funzionano da connessione tra documenti, finestre cornice e viste. Per un singolo documento, è possibile creare molti modelli.
 
 Per altre informazioni, vedere:
 

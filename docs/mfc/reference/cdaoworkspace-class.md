@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 964fab6030e0a89ef69730fd4867973e402db614
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a4a5b6936397728472bf0041735248157091db56
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442019"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054358"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
@@ -163,7 +163,7 @@ MFC non implementa le raccolte di utenti e gruppi in DAO, utilizzati per il cont
 
 - Aprire in modo esplicito l'area di lavoro predefinita.
 
-     In genere l'uso dell'area di lavoro predefinita è implicito, quando si apre nuove [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) oppure [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetti. Ma potrebbe essere necessario accedervi in modo esplicito, ad esempio, per accedere alle proprietà del motore di database o la raccolta di aree di lavoro. Vedere "Uso implicito di area di lavoro predefinita" più avanti.
+   In genere l'uso dell'area di lavoro predefinita è implicito, quando si apre nuove [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) oppure [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetti. Ma potrebbe essere necessario accedervi in modo esplicito, ad esempio, per accedere alle proprietà del motore di database o la raccolta di aree di lavoro. Vedere "Uso implicito di area di lavoro predefinita" più avanti.
 
 - Creare nuove aree di lavoro. Chiamare [Append](#append) se si desidera aggiungerli nella raccolta di aree di lavoro.
 
@@ -309,7 +309,6 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszLocale = dbLangGeneral,
     int nOptions = 0);
 
-
 static void PASCAL CompactDatabase(
     LPCTSTR lpszSrcName,
     LPCTSTR lpszDestName,
@@ -453,7 +452,6 @@ void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetDatabaseInfo(
     LPCTSTR lpszName,
@@ -624,7 +622,6 @@ void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetWorkspaceInfo(
     LPCTSTR lpszName,

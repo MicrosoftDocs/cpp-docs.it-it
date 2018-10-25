@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61293576fa36d9e8a853cb7a8b71e4c2de98e932
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4c23e72940115e929658949dc0bb15bb41f82b34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055073"
 ---
 # <a name="resource-compiler-error-rc2165"></a>Errore del compilatore di risorse RC2165
 
@@ -31,4 +31,4 @@ L'istruzione non ha specificato un file di inclusione valido.
 
 Il **DLGINCLUDE** istruzione deve utilizzare la sintassi seguente:
 
-**DLGINCLUDE "*filename*. h"**
+**DLGINCLUDE "**<em>filename</em>**. h"**

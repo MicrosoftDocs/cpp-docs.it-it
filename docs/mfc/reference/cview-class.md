@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e76dc8ca4a61839b893b4328bdb9d606424def91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402265"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062236"
 ---
 # <a name="cview-class"></a>Classe CView
 
@@ -196,7 +196,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>Parametri
 
 *pInfo*<br/>
-Punta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) struttura che descrive il processo di stampa corrente.
+Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -319,13 +319,13 @@ virtual void OnBeginPrinting(
 Punta al contesto di dispositivo stampante.
 
 *pInfo*<br/>
-Punta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) struttura che descrive il processo di stampa corrente.
+Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
 ### <a name="remarks"></a>Note
 
-L'implementazione predefinita di questa funzione non esegue alcuna operazione. Eseguire l'override di questa funzione per allocare risorse GDI, ad esempio penne o tipi di carattere, necessarie specificamente per la stampa. Selezionare gli oggetti GDI nel contesto di dispositivo dall'interno di [OnPrint](#onprint) funzione membro per ogni pagina che li Usa. Se si usa lo stesso oggetto visualizzazione per eseguire stampa e visualizzazione su schermo, usare variabili separate per le risorse GDI richieste per ogni visualizzazione. Ciò consente di aggiornare lo schermo durante la stampa.
+L'implementazione predefinita di questa funzione non esegue alcuna operazione. Eseguire l'override di questa funzione per allocare risorse GDI, ad esempio penne o tipi di carattere, necessarie specificamente per la stampa. Selezionare gli oggetti GDI nel contesto di dispositivo dall'interno della funzione membro [OnPrint](#onprint) per ogni pagina che li usa. Se si usa lo stesso oggetto visualizzazione per eseguire stampa e visualizzazione su schermo, usare variabili separate per le risorse GDI richieste per ogni visualizzazione. Ciò consente di aggiornare lo schermo durante la stampa.
 
-È anche possibile usare questa funzione per eseguire inizializzazioni che dipendono dalle proprietà del contesto di dispositivo stampante. Ad esempio, il numero di pagine richiesto per stampare il documento può dipendere dalle impostazioni specificate dall'utente nella finestra di dialogo Stampa (come la lunghezza della pagina). In questo caso, non è possibile specificare la lunghezza del documento nel [OnPreparePrinting](#onprepareprinting) funzione membro, in cui si farebbe normalmente questa operazione; è necessario attendere fino a quando non è stato creato il contesto di dispositivo stampante in base alle impostazioni della finestra di dialogo. [OnBeginPrinting](#onbeginprinting) è la prima funzione sottoponibile a override che consente l'accesso per il [CDC](../../mfc/reference/cdc-class.md) che rappresenta il contesto di dispositivo stampante, pertanto è possibile impostare la lunghezza del documento da questa funzione. Si noti che se a questo punto la lunghezza del documento non è specificata, durante l'anteprima di stampa non viene visualizzata una barra di scorrimento.
+È anche possibile usare questa funzione per eseguire inizializzazioni che dipendono dalle proprietà del contesto di dispositivo stampante. Ad esempio, il numero di pagine richiesto per stampare il documento può dipendere dalle impostazioni specificate dall'utente nella finestra di dialogo Stampa (come la lunghezza della pagina). In questo caso non è possibile specificare, come di norma, la lunghezza del documento nella funzione membro [OnPreparePrinting](#onprepareprinting) . È necessario attendere fino a quando non è stato creato il contesto di dispositivo stampante in base alle impostazioni della finestra di dialogo. [OnBeginPrinting](#onbeginprinting) è la prima funzione sottoponibile a override che consente l'accesso all'oggetto [CDC](../../mfc/reference/cdc-class.md) che rappresenta il contesto di dispositivo stampante. Pertanto è possibile impostare la lunghezza del documento da questa funzione. Si noti che se a questo punto la lunghezza del documento non è specificata, durante l'anteprima di stampa non viene visualizzata una barra di scorrimento.
 
 ##  <a name="ondragenter"></a>  CView::OnDragEnter
 
@@ -602,7 +602,7 @@ virtual void OnEndPrinting(
 Punta al contesto di dispositivo stampante.
 
 *pInfo*<br/>
-Punta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) struttura che descrive il processo di stampa corrente.
+Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
 ### <a name="remarks"></a>Note
 
@@ -626,7 +626,7 @@ virtual void OnEndPrintPreview(
 Punta al contesto di dispositivo stampante.
 
 *pInfo*<br/>
-Punta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) struttura che descrive il processo di stampa corrente.
+Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
 *punto*<br/>
 Specifica il punto nella pagina in cui è stato ultima visualizzata in modalità di anteprima.
@@ -701,7 +701,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>Parametri
 
 *pInfo*<br/>
-Punta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) struttura che descrive il processo di stampa corrente.
+Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -757,7 +757,7 @@ Eseguire l'override di questa funzione per uno dei motivi seguenti:
 
 - Per aggiungere l'immagine stampata un aspetto diverso dall'immagine di schermata (vale a dire, se l'applicazione non è in modalità WYSIWYG). Anziché passare il contesto di dispositivo per la stampante `OnDraw`, utilizzare il contesto di dispositivo per il rendering di un'immagine utilizzando gli attributi non indicati sullo schermo.
 
-     Se sono necessarie risorse GDI per la stampa che non vengono usati per la visualizzazione su schermo, selezionarli nel contesto di dispositivo prima del disegno e deselezionarli in un secondo momento. Queste risorse GDI devono essere allocate nella [OnBeginPrinting](#onbeginprinting) e vengono rilasciati nel [OnEndPrinting](#onendprinting).
+   Se sono necessarie risorse GDI per la stampa che non vengono usati per la visualizzazione su schermo, selezionarli nel contesto di dispositivo prima del disegno e deselezionarli in un secondo momento. Queste risorse GDI devono essere allocate nella [OnBeginPrinting](#onbeginprinting) e vengono rilasciati nel [OnEndPrinting](#onendprinting).
 
 - Per implementare le intestazioni o nei piè di pagina. È comunque possibile usare `OnDraw` per eseguire il rendering, limitando l'area che può essere stampato su.
 

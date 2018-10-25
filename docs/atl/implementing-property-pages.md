@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69dab9dfc9216d1c56ed54730d5f94cbb58b1db
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f00e95aee0f3e16a979f4969a33b90746b4082ea
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088735"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062405"
 ---
 # <a name="implementing-property-pages"></a>Implementazione delle pagine delle proprietà
 
@@ -43,11 +43,11 @@ Per creare una pagina delle proprietà utilizzando ATL:
 
 - Se lo si desidera eseguire l'override di `IPropertyPageImpl` metodi usando le linee guida seguenti.
 
-   |Metodo IPropertyPageImpl|Eseguire l'override quando si vuole...|Note|  
-   |------------------------------|----------------------------------|-----------|  
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Eseguire i controlli di integrità di base sul numero di oggetti passati alla pagina e le interfacce che supportano.|Eseguire il codice personalizzato prima di chiamare l'implementazione della classe base. Se gli oggetti da impostare non è conforme alle aspettative, è prima possibile deve avere esito negativo della chiamata.|  
-   |[attivare](../atl/reference/ipropertypageimpl-class.md#activate)|Inizializzare l'interfaccia utente della pagina (ad esempio, impostare i controlli di finestra di dialogo con valori di proprietà correnti degli oggetti, creare i controlli in modo dinamico o eseguire altre inizializzazioni).|Chiamare l'implementazione della classe base prima del codice in modo che la classe di base ha la possibilità di creare la finestra di dialogo e tutti i controlli prima di tentare di aggiornarle.|  
-   |[Applicare](../atl/reference/ipropertypageimpl-class.md#apply)|Convalidare le impostazioni delle proprietà e aggiornare gli oggetti.|Non è necessario chiamare l'implementazione della classe base, dal momento che non esegue alcuna operazione oltre a traccia la chiamata.|  
+   |Metodo IPropertyPageImpl|Eseguire l'override quando si vuole...|Note|
+   |------------------------------|----------------------------------|-----------|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Eseguire i controlli di integrità di base sul numero di oggetti passati alla pagina e le interfacce che supportano.|Eseguire il codice personalizzato prima di chiamare l'implementazione della classe base. Se gli oggetti da impostare non è conforme alle aspettative, è prima possibile deve avere esito negativo della chiamata.|
+   |[attivare](../atl/reference/ipropertypageimpl-class.md#activate)|Inizializzare l'interfaccia utente della pagina (ad esempio, impostare i controlli di finestra di dialogo con valori di proprietà correnti degli oggetti, creare i controlli in modo dinamico o eseguire altre inizializzazioni).|Chiamare l'implementazione della classe base prima del codice in modo che la classe di base ha la possibilità di creare la finestra di dialogo e tutti i controlli prima di tentare di aggiornarle.|
+   |[Applicare](../atl/reference/ipropertypageimpl-class.md#apply)|Convalidare le impostazioni delle proprietà e aggiornare gli oggetti.|Non è necessario chiamare l'implementazione della classe base, dal momento che non esegue alcuna operazione oltre a traccia la chiamata.|
    |[Disattiva](../atl/reference/ipropertypageimpl-class.md#deactivate)|Pulire gli elementi relativi alle finestre.|Implementazione della classe base Elimina definitivamente la finestra di dialogo che rappresenta la pagina delle proprietà. Se è necessario eliminare prima la finestra di dialogo viene eliminato definitivamente, è necessario aggiungere il codice prima di chiamare la classe di base.|
 
 Per un'implementazione di pagina delle proprietà di esempio, vedere [esempio: implementazione di una pagina delle proprietà](../atl/example-implementing-a-property-page.md).

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f5d87663402081a06270f09547b2d61477d5ea3f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409363"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056906"
 ---
 # <a name="generic-classes-ccli"></a>Classi generiche (C++/CLI)
 
@@ -58,7 +58,7 @@ Entrambi **classe** o **typename**
 *clausole di vincolo*<br/>
 Un elenco (non virgole) di **in cui** clausole che specifica i vincoli per i parametri di tipo. Assume il formato:
 
-> **in cui** *il parametro-type-identifier* **:** *dall'elenco di vincoli***...** 
+> **in cui** *il parametro-type-identifier* **:** *dall'elenco di vincoli***...**
 
 *elenco di vincoli*<br/>
 *o-interfaccia della classe*[`,` *...* ]
@@ -346,7 +346,7 @@ int main() {
 
 ```Output
 Name: Jeff Smith
-Amount: $123.00**  
+Amount: $123.00**
 ```
 
 ## <a name="generic-methods-in-generic-classes"></a>Metodi generici in classi generiche

@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19a2b1859012a56bdaf3c454f8b92758179bed9
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: ea394ca09a086229a8718f4e7e1bfa55115652bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809070"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056223"
 ---
 # <a name="openmp-clauses"></a>Clausole OpenMP
 
@@ -56,21 +56,21 @@ Fornisce collegamenti alle clausole utilizzate nell'API OpenMP.
 
 Visual C++ supporta le clausole OpenMP seguente:
 
-Clausola                             | Descrizione
----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[copyin](#copyin)                  | Consente ai thread di accedere a valore del thread master, per un [threadprivate](openmp-directives.md#threadprivate) variabile.
-[copyprivate](#copyprivate)        | Specifica che una o più variabili devono essere condivise tra tutti i thread.
-[default](#default-openmp)         | Specifica il comportamento delle variabili senza ambite in un'area parallela.
-[firstprivate](#firstprivate)      | Specifica che ogni thread deve avere una propria istanza di una variabile, e che è necessario inizializzare la variabile con il valore della variabile, perché è presente prima del costrutto parallelo.
-[if](#if-openmp)                   | Specifica se un ciclo deve essere eseguito in parallelo o in serie.
-[lastprivate](#lastprivate)        | Specifica che la versione del contesto di inclusione della variabile è impostata uguale a quella privata di qualsiasi thread esegue l'iterazione finale (costrutto di ciclo for) o l'ultima sezione (#pragma sezioni).
-[nowait](#nowait)                  | Esegue l'override la barriera implicita una direttiva.
-[num_threads](#num-threads)        | Imposta il numero di thread in un gruppo di thread.
-[ordered](#ordered-openmp-clauses) | Obbligatorio in un'operazione parallela [per](openmp-directives.md#for-openmp) istruzione se un' [ordinati](openmp-directives.md#ordered-openmp-directives) direttiva deve essere utilizzato nel ciclo.
-[private](#private-openmp)         | Specifica che ogni thread deve avere una propria istanza di una variabile.
-[reduction](#reduction)            | Specifica che una o più variabili private per ogni thread sono l'oggetto di un'operazione di riduzione alla fine di tale area.
-[schedule](#schedule)              | Viene applicata il [per](openmp-directives.md#for-openmp) direttiva.
-[shared](#shared-openmp)           | Specifica che una o più variabili devono essere condivise tra tutti i thread.
+|Clausola|Descrizione|
+|------|-----------|
+|[copyin](#copyin)|Consente ai thread di accedere a valore del thread master, per un [threadprivate](openmp-directives.md#threadprivate) variabile.|
+|[copyprivate](#copyprivate)|Specifica che una o più variabili devono essere condivise tra tutti i thread.|
+|[default](#default-openmp)|Specifica il comportamento delle variabili senza ambite in un'area parallela.|
+|[firstprivate](#firstprivate)|Specifica che ogni thread deve avere una propria istanza di una variabile, e che è necessario inizializzare la variabile con il valore della variabile, perché è presente prima del costrutto parallelo.|
+|[if](#if-openmp)|Specifica se un ciclo deve essere eseguito in parallelo o in serie.|
+|[lastprivate](#lastprivate)|Specifica che la versione del contesto di inclusione della variabile è impostata uguale a quella privata di qualsiasi thread esegue l'iterazione finale (costrutto di ciclo for) o l'ultima sezione (#pragma sezioni).|
+|[nowait](#nowait)|Esegue l'override la barriera implicita una direttiva.|
+|[num_threads](#num-threads)|Imposta il numero di thread in un gruppo di thread.|
+|[ordered](#ordered-openmp-clauses)|Obbligatorio in un'operazione parallela [per](openmp-directives.md#for-openmp) istruzione se un' [ordinati](openmp-directives.md#ordered-openmp-directives) direttiva deve essere utilizzato nel ciclo.|
+|[private](#private-openmp)|Specifica che ogni thread deve avere una propria istanza di una variabile.|
+|[reduction](#reduction)|Specifica che una o più variabili private per ogni thread sono l'oggetto di un'operazione di riduzione alla fine di tale area.|
+|[schedule](#schedule)|Viene applicata il [per](openmp-directives.md#for-openmp) direttiva.|
+|[shared](#shared-openmp)|Specifica che una o più variabili devono essere condivise tra tutti i thread.|
 
 ## <a name="copyin"></a>copyin
 
@@ -401,7 +401,7 @@ Il numero di thread
 
 ### <a name="remarks"></a>Note
 
-Il `num_threads` clausola ha la stessa funzionalità come i [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) (funzione).
+Il `num_threads` clausola ha la stessa funzionalità come i [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) (funzione).
 
 `num_threads` si applica alle direttive seguenti:
 

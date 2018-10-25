@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c695dbee2b92a2a3fbc5de0830f298b81e63ad8d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fbb7bc07ab3b3942f1a3a6fa20c69327c0bd1a53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791148"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063757"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,11 +36,11 @@ Identifica i parametri dei puntatori restituiti dalla routine chiamata alla rout
 
 ## <a name="remarks"></a>Note
 
-Il **out** attributi di C++ ha la stessa funzionalità come la [out](/windows/desktop/Midl/out-idl) attributo MIDL.
+L'attributo **out** di C++ ha la stessa funzionalità dell'attributo [out](/windows/desktop/Midl/out-idl) di MIDL.
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [associabile](bindable.md) per un esempio dell'uso dei **out**.
+Per un'illustrazione dell'uso di [out](bindable.md) , vedere l'esempio per **bindable**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -53,11 +53,11 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio dell'uso dei
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di parametro](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[ID](id.md)  
+[ID](id.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e0a2d3f12452a92df3358760a5c5189de78dda
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2da82c7390a6e0677bd324b062de56ba39cbc13a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791780"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061053"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -66,9 +66,9 @@ __interface IFireTabCtrl : IDispatch
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)  
+[Attributi di parametro](parameter-attributes.md)

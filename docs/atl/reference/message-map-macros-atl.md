@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbfd58491981cdba1b3aa3002736f49a7c09038c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024913"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054476"
 ---
 # <a name="message-map-macros-atl"></a>Macro della mappa messaggi (ATL)
 
@@ -93,11 +93,11 @@ Queste macro definiscono le mappe messaggi e le voci.
 |[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base al codice di notifica e l'identificatore del controllo.|
 |[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base all'identificatore del controllo.|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base al codice di notifica e un intervallo contiguo di identificatori di controllo.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, basata su un intervallo contiguo di identificatori di controllo.|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, basata su un intervallo contiguo di identificatori di controllo.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h  
+**Intestazione:** atlwin. h
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -136,7 +136,7 @@ L'esempio seguente mostra due mappe di messaggi alternativo. La mappa dei messag
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h   
+**Intestazione:** atlwin. h
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -153,7 +153,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="remarks"></a>Note
 
-[CWindowImpl::](cwindowimpl-class.md#windowproc) Usa la mappa dei messaggi predefinita per elaborare i messaggi inviati alla finestra. La mappa messaggi indirizza i messaggi in funzione del gestore appropriato o in un'altra mappa messaggi.  
+[CWindowImpl::](cwindowimpl-class.md#windowproc) Usa la mappa dei messaggi predefinita per elaborare i messaggi inviati alla finestra. La mappa messaggi indirizza i messaggi in funzione del gestore appropriato o in un'altra mappa messaggi.
 
 Le macro seguenti mapping di un messaggio a una funzione del gestore. Questa funzione deve essere definita in *theClass*.
 
@@ -328,7 +328,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="remarks"></a>Note
 
-CHAIN_MSG_MAP_DYNAMIC indirizza i messaggi, in fase di esecuzione alla mappa dei messaggi predefinita in un altro oggetto. L'oggetto e propria mappa messaggi sono associati *dynaChainID*, che viene definita attraverso [CDynamicChain::](cdynamicchain-class.md#setchainentry). È necessario derivare la classe da `CDynamicChain` per poter utilizzare CHAIN_MSG_MAP_DYNAMIC. Per un esempio, vedere la [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Panoramica.  
+CHAIN_MSG_MAP_DYNAMIC indirizza i messaggi, in fase di esecuzione alla mappa dei messaggi predefinita in un altro oggetto. L'oggetto e propria mappa messaggi sono associati *dynaChainID*, che viene definita attraverso [CDynamicChain::](cdynamicchain-class.md#setchainentry). È necessario derivare la classe da `CDynamicChain` per poter utilizzare CHAIN_MSG_MAP_DYNAMIC. Per un esempio, vedere la [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Panoramica.
 
 > [!NOTE]
 >  Iniziano sempre una mappa dei messaggi con [BEGIN_MSG_MAP](#begin_msg_map). È quindi possibile dichiarare le mappe dei successivi messaggi alternativo con ALT_MSG_MAP. Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Ogni mappa del messaggio deve avere esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
@@ -387,7 +387,7 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>Parametri
 
-*Codice*<br/>
+*codice*<br/>
 [in] Il codice di notifica.
 
 *func*<br/>
@@ -410,7 +410,7 @@ COMMAND_HANDLER(id, code, func)
 *ID*<br/>
 [in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
 
-*Codice*<br/>
+*codice*<br/>
 [in] Il codice di notifica.
 
 *func*<br/>
@@ -475,7 +475,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 *idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*Codice*<br/>
+*codice*<br/>
 [in] Il codice di notifica.
 
 *func*<br/>
@@ -819,11 +819,11 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>Parametri
 
-*Codice*<br/>
+*codice*<br/>
 [in] Il codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.  
+[in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -842,15 +842,15 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 *ID*<br/>
 [in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
 
-*Codice*<br/>
+*codice*<br/>
 [in] Il codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.  
+[in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h  
+**Intestazione:** atlwin. h
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
@@ -866,11 +866,11 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 [in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.  
+[in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h  
+**Intestazione:** atlwin. h
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
@@ -888,15 +888,15 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 *idLast*<br/>
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
-*Codice*<br/>
+*codice*<br/>
 [in] Il codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.  
+[in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h  
+**Intestazione:** atlwin. h
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
@@ -915,11 +915,11 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 [in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.  
+[in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h  
+**Intestazione:** atlwin. h
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
@@ -935,11 +935,11 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 [in] Il codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.  
+[in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h  
+**Intestazione:** atlwin. h
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
@@ -958,11 +958,11 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 [in] Il codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.  
+[in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h  
+**Intestazione:** atlwin. h
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
@@ -978,11 +978,11 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 [in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.  
+[in] Il nome della funzione di gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlwin. h  
+**Intestazione:** atlwin. h
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 

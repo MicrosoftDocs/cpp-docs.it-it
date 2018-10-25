@@ -1,7 +1,7 @@
 ---
 title: Classe CMFCDropDownToolBar | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/188/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 675a155c8f19ca9c0ab30d15da9be7f5b3b40e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5d781cb78b1dce9f7ab3580e7acd32e3e6dbac55
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063341"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 
@@ -54,12 +54,12 @@ class CMFCDropDownToolBar : public CMFCToolBar
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCDropDownToolBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|Esegue l'override`CPane::AllowShowOnPaneMenu`.|
+|[CMFCDropDownToolBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|Esegue l'override di `CPane::AllowShowOnPaneMenu`.|
 |[CMFCDropDownToolBar::LoadBitmap](#loadbitmap)|(Esegue l'override [CMFCToolBar::LoadBitmap](../../mfc/reference/cmfctoolbar-class.md#loadbitmap).)|
 |[CMFCDropDownToolBar::LoadToolBar](#loadtoolbar)|(Esegue l'override [CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar).)|
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||
-|[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|Esegue l'override`CMFCToolBar::OnSendCommand`.|
+|[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|Esegue l'override di `CMFCToolBar::OnSendCommand`.|
 |[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Esegue l'override [CMFCToolBar::OnUpdateCmdUI](cmfctoolbar-class.md).|
 
 ### <a name="remarks"></a>Note
@@ -115,7 +115,6 @@ L'esempio seguente illustra come usare il `Create` metodo nel `CMFCDropDownToolB
 
 ##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu
 
-
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
 ```
@@ -164,12 +163,11 @@ Diverso da zero se il metodo ha esito positivo; in caso contrario, zero.
 
 ### <a name="remarks"></a>Note
 
-Il [cmfctoolbar:: Loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) chiama questo metodo per caricare le immagini che sono associate con la barra degli strumenti. Eseguire l'override di questo metodo per eseguire il caricamento personalizzato delle risorse immagine.
+Il metodo [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) chiama questo metodo per caricare le immagini associate alla barra degli strumenti. Eseguire l'override di questo metodo per eseguire il caricamento personalizzato delle risorse immagine.
 
 Chiamare il metodo `LoadBitmapEx` per caricare immagini aggiuntive dopo aver creato la barra degli strumenti.
 
 ##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar
-
 
 ```
 virtual BOOL LoadToolBar(
@@ -184,19 +182,25 @@ virtual BOOL LoadToolBar(
 
 ### <a name="parameters"></a>Parametri
 
-*uiResID*<br/>
-[in] [in] *uiColdResID*
-*uiMenuResID*<br/>
-[in] [in] *BOOL*
-*uiDisabledResID*<br/>
-[in] [in] *uiMenuDisabledResID* [in] *uiHotResID*
+[in] *uiResID*<br/>
+
+[in] *uiColdResID*<br/>
+
+[in] *uiMenuResID*<br/>
+
+[in] *BOOL*<br/>
+
+[in] *uiDisabledResID*<br/>
+
+[in] *uiMenuDisabledResID*<br/>
+
+[in] *uiHotResID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp
-
 
 ```
 afx_msg void OnLButtonUp(
@@ -206,13 +210,13 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>Parametri
 
-*nFlags*<br/>
-[in] [in] *punto*
+[in] *nFlags*<br/>
+
+[in] *punto*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove
-
 
 ```
 afx_msg void OnMouseMove(
@@ -222,13 +226,13 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>Parametri
 
-*nFlags*<br/>
-[in] [in] *punto*
+[in] *nFlags*<br/>
+
+[in] *punto*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand
-
 
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -236,14 +240,13 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pButton*
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -253,8 +256,9 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parametri
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -267,6 +271,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Classe CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
 [Procedura dettagliata: inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

@@ -18,52 +18,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ce387b4b9748c7fb46a419cbc8738e2598c5ab
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 14b66b2305e90c0e36ed17d3c325f145ff850704
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539221"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056022"
 ---
 # <a name="once"></a>once
-Specifica che il file verrà incluso (aperto) solo una volta dal compilatore durante la compilazione di un file di codice sorgente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#pragma once  
-```  
-  
-## <a name="remarks"></a>Note  
- 
-L'uso di `#pragma once` consente di ridurre i tempi di compilazione poiché il compilatore non aprirà e leggerà il file dopo il primo `#include` del file nell'unità di conversione. Ciò è detto *ottimizzazione dell'inclusione multipla*. Ha un effetto simile al `#include guard` idioma, che usa le definizioni di macro del preprocessore per evitare l'inclusione multipla del contenuto del file. Ciò contribuisce a evitare le violazioni del *regola di unica definizione*, ovvero il requisito che tutti i modelli, tipi, funzioni e oggetti dispongano non più di una definizione nel codice.  
-  
-Ad esempio:  
-  
-```  
-// header.h  
-#pragma once  
-// Code placed here is included only once per translation unit    
-```  
-  
-È consigliabile usare la direttiva `#pragma once` per il nuovo codice, in quanto non inquina lo spazio dei nomi globale con un simbolo del preprocessore. Richiede meno digitazione, è causa di minore distrazione e non può causare conflitti di simboli, ovvero errori generati quando file di intestazione diversi usano come valore di protezione lo stesso simbolo del preprocessore. Non fa parte dello Standard C++, ma viene implementato in modo portabile da svariati compilatori comuni.  
-  
-L'uso combinato di #include guard e `#pragma once` nello stesso file non offre alcun vantaggio. Il compilatore riconosce l'espressione idiomatica #include guard e, se prima o dopo la forma standard dell'espressione idiomatica non compaiono direttive per il preprocessore o codice non di commento, implementa l'ottimizzazione dell'inclusione multipla esattamente come la direttiva `#pragma once`:  
-  
-```  
-// header.h  
-// Demonstration of the #include guard idiom.  
-// Note that the defined symbol can be arbitrary.  
-#ifndef HEADER_H_     // equivalently, #if !defined HEADER_H_  
-#define HEADER_H_  
-// Code placed here is included only once per translation unit  
-#endif // HEADER_H_    
-```  
-  
-È consigliabile il `#include guard` idioma quando il codice deve essere portabile per i compilatori che non implementano il `#pragma once` direttiva, per mantenere la coerenza con il codice esistente, o quando l'inclusione multipla ottimizzazione è impossibile. Questa situazione può verificarsi nei progetti complessi, quando l'aliasing del file system o i percorsi di inclusione con alias impediscono al compilatore di identificare i file di inclusione dal percorso canonico.  
-  
-Prestare attenzione a non utilizzare `#pragma once` o il `#include guard` idioma nei file di intestazione progettati per essere incluso più volte, usando simboli del preprocessore per controllarne gli effetti. Per un esempio di questa struttura, vedere il \<Assert. h > file di intestazione. Prestare inoltre attenzione a gestire includono i percorsi per evitare di creare più percorsi per i file inclusi, che possono annullare il-ottimizzazione dell'inclusione multipla sia per `#include guard`s e `#pragma once`.  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+Specifica che il file verrà incluso (aperto) solo una volta dal compilatore durante la compilazione di un file di codice sorgente.
+
+## <a name="syntax"></a>Sintassi
+
+```
+#pragma once
+```
+
+## <a name="remarks"></a>Note
+
+L'uso di `#pragma once` consente di ridurre i tempi di compilazione poiché il compilatore non aprirà e leggerà il file dopo il primo `#include` del file nell'unità di conversione. Ciò è detto *ottimizzazione dell'inclusione multipla*. Ha un effetto simile al `#include guard` idioma, che usa le definizioni di macro del preprocessore per evitare l'inclusione multipla del contenuto del file. Ciò contribuisce a evitare le violazioni del *regola di unica definizione*, ovvero il requisito che tutti i modelli, tipi, funzioni e oggetti dispongano non più di una definizione nel codice.
+
+Ad esempio:
+
+```
+// header.h
+#pragma once
+// Code placed here is included only once per translation unit
+```
+
+È consigliabile usare la direttiva `#pragma once` per il nuovo codice, in quanto non inquina lo spazio dei nomi globale con un simbolo del preprocessore. Richiede meno digitazione, è causa di minore distrazione e non può causare conflitti di simboli, ovvero errori generati quando file di intestazione diversi usano come valore di protezione lo stesso simbolo del preprocessore. Non fa parte dello Standard C++, ma viene implementato in modo portabile da svariati compilatori comuni.
+
+L'uso combinato di #include guard e `#pragma once` nello stesso file non offre alcun vantaggio. Il compilatore riconosce l'espressione idiomatica #include guard e, se prima o dopo la forma standard dell'espressione idiomatica non compaiono direttive per il preprocessore o codice non di commento, implementa l'ottimizzazione dell'inclusione multipla esattamente come la direttiva `#pragma once`:
+
+```
+// header.h
+// Demonstration of the #include guard idiom.
+// Note that the defined symbol can be arbitrary.
+#ifndef HEADER_H_     // equivalently, #if !defined HEADER_H_
+#define HEADER_H_
+// Code placed here is included only once per translation unit
+#endif // HEADER_H_
+```
+
+È consigliabile il `#include guard` idioma quando il codice deve essere portabile per i compilatori che non implementano il `#pragma once` direttiva, per mantenere la coerenza con il codice esistente, o quando l'inclusione multipla ottimizzazione è impossibile. Questa situazione può verificarsi nei progetti complessi, quando l'aliasing del file system o i percorsi di inclusione con alias impediscono al compilatore di identificare i file di inclusione dal percorso canonico.
+
+Prestare attenzione a non utilizzare `#pragma once` o il `#include guard` idioma nei file di intestazione progettati per essere incluso più volte, usando simboli del preprocessore per controllarne gli effetti. Per un esempio di questa struttura, vedere il \<Assert. h > file di intestazione. Prestare inoltre attenzione a gestire includono i percorsi per evitare di creare più percorsi per i file inclusi, che possono annullare il-ottimizzazione dell'inclusione multipla sia per `#include guard`s e `#pragma once`.
+
+## <a name="see-also"></a>Vedere anche
+
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

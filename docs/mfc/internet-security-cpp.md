@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b61df9a17903f50ea922edf9c29eee926063254
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445815"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055411"
 ---
 # <a name="internet-security-c"></a>Sicurezza Internet (C++)
 
@@ -37,7 +37,6 @@ La sicurezza del codice è un problema importante per gli sviluppatori e gli ute
 Esistono due approcci alla sicurezza di base durante lo sviluppo per Internet. Il primo è denominato "sandbox". Questo approccio, un'applicazione è limitata a un particolare set di API ed esclusi da quelli potenzialmente pericolosi, ad esempio i/o file in cui un programma è stato possibile eliminare i dati sul computer dell'utente. Il secondo viene implementato usando le firme digitali. Questo approccio viene definito come "shrinkwrap" per Internet. Codice di verifica e firmati mediante la tecnologia di chiavi pubblica/chiave privata. Prima di eseguire il codice, la relativa firma digitale viene verificata per assicurarsi che il codice sia da un'origine nota autenticata e che il codice non è stato modificato perché è stato firmato.
 
 Nel primo caso, si considera attendibile che l'applicazione non eseguirà alcun danno e si ritiene attendibile l'origine dell'applicazione. Nel secondo, le firme digitali vengono utilizzate per verificare l'autenticità. La firma digitale è uno standard del settore utilizzato per identificare e fornire i dettagli sul server di pubblicazione del codice. La tecnologia si basa sugli standard, tra cui RSA e X.509. In genere, i browser consentono agli utenti di scegliere se si desidera scaricare ed eseguire codice di origine sconosciuta.
-
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421040024e5dd95fb39bdc78cd54f3f7dc49bf83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 001dfb29a5ac0f6d93b0715bd2b86ccd60e91259
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054605"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Client di automazione: utilizzo delle librerie dei tipi
 
@@ -54,9 +54,9 @@ Se si sceglie di includere l'automazione durante la creazione del progetto, Visu
     > [!NOTE]
     >  È possibile selezionare le interfacce da più di una libreria dei tipi.
 
-     Per selezionare le interfacce, fare doppio clic su essi oppure scegliere il **Add** pulsante. Quando si esegue questa operazione, i nomi per le classi di recapito verranno visualizzati nei **le classi generate** casella. È possibile modificare i nomi delle classi nel `Class` casella.
+   Per selezionare le interfacce, fare doppio clic su essi oppure scegliere il **Add** pulsante. Quando si esegue questa operazione, i nomi per le classi di recapito verranno visualizzati nei **le classi generate** casella. È possibile modificare i nomi delle classi nel `Class` casella.
 
-     Il **File** casella viene visualizzato il file in cui viene dichiarata la classe. (è possibile modificare anche il nome del file). È anche possibile usare il pulsante Sfoglia per selezionare altri file, se si preferisce che le informazioni di intestazione e di implementazione scritte nei file esistenti o in una directory diversa dalla directory del progetto.
+   Il **File** casella viene visualizzato il file in cui viene dichiarata la classe. (è possibile modificare anche il nome del file). È anche possibile usare il pulsante Sfoglia per selezionare altri file, se si preferisce che le informazioni di intestazione e di implementazione scritte nei file esistenti o in una directory diversa dalla directory del progetto.
 
     > [!NOTE]
     >  Tutte le classi di distribuzione per le interfacce selezionate verranno inserite nel file specificato qui. Se si desidera che le interfacce per essere dichiarata in intestazioni separate, è necessario eseguire questa procedura guidata per ogni file di intestazione da creare.
@@ -66,7 +66,7 @@ Se si sceglie di includere l'automazione durante la creazione del progetto, Visu
 
 1. Scegliere **Fine**.
 
-     La procedura guidata verrà quindi scrivere il codice delle classi di invio utilizzando i nomi di file e la classe specificata.
+   La procedura guidata verrà quindi scrivere il codice delle classi di invio utilizzando i nomi di file e la classe specificata.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c34b4a842655ebce6fccaa89a1dfc6d4ef49add
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063484"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controlli ActiveX MFC: utilizzo dei tipi di carattere
 
@@ -64,7 +64,7 @@ Come descritto nella [controlli ActiveX MFC: proprietà](../mfc/mfc-activex-cont
 
 1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi proprietà**.
 
-     Verrà visualizzata l'aggiunta guidata proprietà.
+   Verrà visualizzata l'aggiunta guidata proprietà.
 
 1. Nel **nome della proprietà** fare clic su **Font**.
 
@@ -90,7 +90,7 @@ La proprietà Caption azionario è un esempio di una proprietà di testo che pu�
 
 1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi proprietà**.
 
-     Verrà visualizzata l'aggiunta guidata proprietà.
+   Verrà visualizzata l'aggiunta guidata proprietà.
 
 1. Nel **nome della proprietà** fare clic su **didascalia**.
 
@@ -132,7 +132,7 @@ Per implementare una proprietà del tipo di carattere personalizzata, consente l
 
 1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi proprietà**.
 
-     Verrà visualizzata l'aggiunta guidata proprietà.
+   Verrà visualizzata l'aggiunta guidata proprietà.
 
 1. Nel **nome della proprietà** , digitare un nome per la proprietà. Per questo esempio, usare **HeadingFont**.
 
@@ -168,35 +168,35 @@ Nel file di implementazione del controllo (. CPP), eseguire le operazioni seguen
 
 - Inizializzare *m_fontHeading* nel costruttore del controllo.
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - Dichiarare una struttura FONTDESC statica che contiene gli attributi predefiniti del tipo di carattere.
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - Nel controllo `DoPropExchange` membro di funzione, aggiungere una chiamata al `PX_Font` (funzione). Ciò consente l'inizializzazione e la persistenza per le proprietà del tipo di carattere personalizzata.
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - Completare l'implementazione del controllo `GetHeadingFont` funzione membro.
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - Completare l'implementazione del controllo `SetHeadingFont` funzione membro.
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - Modificare la funzione membro di controllo `OnDraw` per definire una variabile per contenere il carattere selezionato in precedenza.
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - Modificare la funzione membro di controllo `OnDraw` per selezionare il carattere personalizzato nel contesto del dispositivo aggiungendo la riga seguente ovunque si utilizzi il carattere.
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - Modificare la funzione membro di controllo `OnDraw` per selezionare il carattere precedente nel contesto del dispositivo aggiungendo la seguente riga dopo che il carattere è stato utilizzato.
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 Dopo che la proprietà del tipo di carattere personalizzata è stata implementata, la pagina delle proprietà del tipo di carattere standard deve essere implementata, consentendo agli utenti di controllo di modifica del tipo di carattere corrente del controllo. Per aggiungere l'ID di pagina proprietà per la pagina delle proprietà del tipo di carattere standard, inserire la riga seguente dopo il BEGIN_PROPPAGEIDS (macro):
 

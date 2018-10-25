@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c71bfa1eb9acb270195549eec950fb4fdf6c31b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f41bdf8d2487d81e7c8dc9887807b05afb32acbd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438951"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060046"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Procedura dettagliata: Creazione di un agente del flusso di dati
 
@@ -78,7 +78,7 @@ L'agente del flusso di dati funziona mediante la creazione di una rete di buffer
 
 [!code-cpp[concrt-dataflow-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_3.cpp)]
 
-     The `countdown_event` class is shown later in this topic.
+   Il `countdown_event` classe è illustrata più avanti in questo argomento.
 
 1. Creare il messaggio di oggetti buffer che verranno incluse nella rete del flusso di dati.
 

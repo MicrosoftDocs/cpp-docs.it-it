@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5a989466cff50d7e336bc9af8fee68f7ab72929d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808940"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054918"
 ---
 # <a name="creating-a-simple-consumer"></a>Creazione di un consumer semplice
 
-Usare la creazione guidata progetto ATL e creazione guidata Consumer OLE DB ATL per generare un consumer di modelli OLE DB.
+Usare la **Creazione guidata progetto ATL** e **Creazione guidata Consumer OLE DB ATL** per generare un consumer di modelli OLE DB.
 
 ## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Per creare un'applicazione console per un consumer OLE DB
 
@@ -42,7 +42,7 @@ Usare la creazione guidata progetto ATL e creazione guidata Consumer OLE DB ATL 
 
 1. Fare clic su **OK** per chiudere la procedura guidata e generare il progetto.
 
-Successivamente, utilizzare la creazione guidata Consumer OLE DB ATL per aggiungere un oggetto del consumer OLE DB.
+Successivamente, usare il **Creazione guidata Consumer OLE DB ATL** per aggiungere un oggetto del consumer OLE DB.
 
 ## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Per creare un consumer con la creazione guidata Consumer OLE DB ATL
 
@@ -54,7 +54,7 @@ Successivamente, utilizzare la creazione guidata Consumer OLE DB ATL per aggiung
 
 1. Nel **categorie** riquadro, fare clic su **installati** > **Visual C++** > **ATL**, fare clic su di **Consumer OLEDB ATL** icona nel **modelli** riquadro e quindi fare clic su **Add**.
 
-   Viene visualizzata la creazione guidata Consumer OLE DB ATL.
+   Il **Creazione guidata Consumer OLE DB ATL** viene visualizzata.
 
 1. Scegliere il **Zdroj dat** pulsante.
 
@@ -62,26 +62,26 @@ Successivamente, utilizzare la creazione guidata Consumer OLE DB ATL per aggiung
 
 1. Nel **proprietà di Data Link** dialogo casella, eseguire le operazioni seguenti:
 
-   - Nel **Provider** scheda, specificare un provider OLE DB.
+    1. Nel **Provider** scheda, specificare un provider OLE DB.
 
-   - Nel **connessione** , specificare le informazioni necessarie, ad esempio nome del server, l'ID di accesso e password per l'origine dati e il database nel server.
+    1. Nel **connessione** , specificare le informazioni necessarie, ad esempio nome del server, l'ID di accesso e password per l'origine dati e il database nel server.
 
-   > [!NOTE]
-   > Si verifica un problema di sicurezza con il **Consenti salvataggio password** funzionalità delle **proprietà di Data Link** nella finestra di dialogo. Nelle **immettere le informazioni per l'accesso al server**, sono presenti due pulsanti di opzione: **Usa Windows protezione integrata NT** e **usare un nome utente specifico e una password**.
+       > [!NOTE]
+       > Si verifica un problema di sicurezza con il **Consenti salvataggio password** funzionalità delle **proprietà di Data Link** nella finestra di dialogo. Nelle **immettere le informazioni per l'accesso al server**, sono presenti due pulsanti di opzione: **Usa Windows protezione integrata NT** e **usare un nome utente specifico e una password**.
 
-   > [!NOTE]
-   > Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la **Consenti salvataggio password** casella di controllo), tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione utilizza Windows NT per verificare la tua identità.
+       > [!NOTE]
+       > Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la **Consenti salvataggio password** casella di controllo), tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione utilizza Windows NT per verificare la tua identità.
 
-   > [!NOTE]
-   > Se non è possibile utilizzare la sicurezza integrata di Windows NT, è consigliabile usare un'applicazione di livello intermedio per richiedere all'utente la password o per archiviare la password in un percorso con meccanismi di sicurezza per consentirne la protezione (invece che nel codice sorgente).
+       > [!NOTE]
+       > Se non è possibile utilizzare la sicurezza integrata di Windows NT, è consigliabile usare un'applicazione di livello intermedio per richiedere all'utente la password o per archiviare la password in un percorso con meccanismi di sicurezza per consentirne la protezione (invece che nel codice sorgente).
 
-   Dopo aver selezionato il provider e altre impostazioni, fare clic su **Test connessione** per verificare le selezioni effettuate nelle pagine precedenti della finestra di dialogo. Se il **risultati** casella reports `Test connection succeeded`, fare clic su **OK** per creare il collegamento di dati.
+   1. Dopo aver selezionato il provider e altre impostazioni, fare clic su **Test connessione** per verificare le selezioni effettuate nelle pagine precedenti della finestra di dialogo. Se il **risultati** casella reports `Test connection succeeded`, fare clic su **OK** per creare il collegamento di dati.
 
    Il **Seleziona oggetto di Database** verrà visualizzata la finestra di dialogo.
 
-1. Usare il controllo albero per selezionare una tabella, vista o stored procedure. Ai fini di questa procedura, selezionare la `Products` dalla tabella di `Northwind` database.
+1. Usare il controllo albero per selezionare una tabella, vista o stored procedure. Per questo esempio, selezionare la `Products` dalla tabella di `Northwind` database.
 
-1. Fare clic su **OK**. Verrà visualizzata nuovamente la creazione guidata Consumer OLE DB ATL.
+1. Fare clic su **OK**. In questo modo verrà nuovamente visualizzato il **Creazione guidata Consumer OLE DB ATL**.
 
 1. I nomi di termine della procedura guidata `Class` e **file con estensione h** in base al nome della tabella, vista o una stored procedure che è stato selezionato. Se si desidera, è possibile modificare questi nomi.
 
@@ -93,14 +93,14 @@ Successivamente, utilizzare la creazione guidata Consumer OLE DB ATL per aggiung
 
 1. Sotto **supporto**, lasciare il **modifica**, **Inserisci**, e **Elimina** deselezionate le caselle.
 
-   Selezionare il **Change**, **Inserisci**, e **Elimina** caselle di controllo per supportare la modifica, inserimento ed eliminazione di record nel set di righe, se necessario. Per altre informazioni sulla scrittura di dati per i dati dell'archivio, vedere [aggiornamento dei rowset](../../data/oledb/updating-rowsets.md).
+   Selezionare il **Change**, **Inserisci**, e **Elimina** caselle di controllo per supportare la modifica, inserimento ed eliminazione di record nel set di righe. Per altre informazioni sulla scrittura di dati per i dati dell'archivio, vedere [aggiornamento dei rowset](../../data/oledb/updating-rowsets.md).
 
 1. Fare clic su **fine** per creare i consumer.
 
 La procedura guidata genera una classe di comando e una classe di record utente, come illustrato nella [classi riguardano](../../data/oledb/consumer-wizard-generated-classes.md). La classe di comando assumerà il nome immesso nel `Class` finestra della procedura guidata (in questo caso, `CProducts`), e la classe di record utente avrà un nome nel formato "*NomeClasse*della funzione di accesso" (in questo caso, `CProductsAccessor`).
 
 > [!NOTE]
-> La procedura guidata inserisce la riga seguente in Products. h:
+> La procedura guidata inserisce la riga seguente nel `Products.h`:
 
 ```cpp
 #error Security Issue: The connection string may contain a password

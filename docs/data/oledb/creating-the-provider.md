@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dbdf7350eeba1a29392bafc2f099a857e212e37
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 230620a2375ac5aa822e55496d1f26751ee6f7b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410746"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055346"
 ---
 # <a name="creating-the-provider"></a>Creazione di un provider
 
@@ -32,7 +32,7 @@ ms.locfileid: "49410746"
 
 1. Nel **Aggiungi classe** nella finestra di dialogo **installati** > **Visual C++** > **ATL**, selezionare il **Provider OLE DB ATL** icona e quindi fare clic su **Open**.
 
-1. Nel **Creazione guidata Provider OLE DB ATL**, immettere un nome breve per il provider nel **nome breve** casella. Gli argomenti seguenti usano il nome breve "MyProvider", ma è possibile usare un altro nome. Le altre caselle Nome popolano in base al nome specificato.
+1. Nel **Creazione guidata Provider OLE DB ATL**, immettere un nome breve per il provider nel **nome breve** casella. Gli argomenti seguenti usano il nome abbreviato *Custom*, ma è possibile usare un altro nome. Le altre caselle Nome popolano in base al nome specificato.
 
 1. Modificare le altre caselle di nome, se necessario. Oltre ai nomi oggetto e il file, è possibile modificare quanto segue:
 

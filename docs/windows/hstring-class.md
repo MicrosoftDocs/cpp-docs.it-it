@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8165a404924b997d70d0097c28ac7d34ade92fc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063861"
 ---
 # <a name="hstring-class"></a>Classe HString
 
@@ -115,7 +115,7 @@ Nome                                         | Descrizione
 Elimina l'istanza corrente del `HString` classe.
 
 ```cpp
-~HString() throw()  
+~HString() throw()
 ```
 
 ## <a name="attach"></a>Hstring:: Attach
@@ -125,7 +125,7 @@ Associa l'oggetto specificato `HString` oggetto con l'attuale `HString` oggetto.
 ```cpp
 void Attach(
        HSTRING hstr
-       ) throw()  
+       ) throw()
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -157,7 +157,7 @@ Questo metodo chiama il [WindowsDuplicateString](https://msdn.microsoft.com/libr
 Disassocia i `HString` oggetto dal relativo valore sottostante.
 
 ```cpp
-HSTRING Detach() throw()  
+HSTRING Detach() throw()
 ```
 
 ### <a name="return-value"></a>Valore restituito
@@ -169,7 +169,7 @@ Sottostante `HString` valore prima dell'operazione di scollegamento avviato.
 Recupera il valore di handle sottostante di HSTRING.
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>Valore restituito
@@ -181,7 +181,7 @@ Il valore di handle sottostante di HSTRING
 Recupera un puntatore all'handle sottostante di HSTRING.
 
 ```cpp
-HSTRING* GetAddressOf() throw()  
+HSTRING* GetAddressOf() throw()
 ```
 
 ### <a name="return-value"></a>Valore restituito
@@ -220,7 +220,7 @@ Il secondo costruttore inizializza un nuovo `HString` oggetto sul valore dell'og
 Indica se l'oggetto corrente `HString` oggetto è vuoto o meno.
 
 ```cpp
-bool IsValid() const throw()  
+bool IsValid() const throw()
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -262,7 +262,7 @@ Un' `HStringReference` il cui valore è identico a quello di specificato *str* p
 Sposta il valore di un'altra `HString` oggetto all'oggetto corrente `HString` oggetto.
 
 ```cpp
-HString& operator=(HString&& other) throw()  
+HString& operator=(HString&& other) throw()
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -297,7 +297,7 @@ inline bool operator==(
 
 inline bool operator==(
                  const HString& lhs,
-                 const HSTRING& rhs) throw()  
+                 const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -330,7 +330,7 @@ inline bool operator!=( const HSTRING& lhs,
                         const HString& rhs) throw()
 
 inline bool operator!=( const HString& lhs,
-                        const HSTRING& rhs) throw()  
+                        const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -352,7 +352,7 @@ Indica se il primo parametro è minore di secondo parametro.
 ```cpp
 inline bool operator<(
     const HString& lhs,
-    const HString& rhs) throw()  
+    const HString& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -372,7 +372,7 @@ Il secondo parametro da confrontare. *rhs* può essere un riferimento a un `HStr
 Elimina il valore string sottostante e inizializza l'oggetto corrente `HString` oggetto su un valore vuoto.
 
 ```cpp
-void Release() throw()  
+void Release() throw()
 ```
 
 ## <a name="set"></a>Hstring:: set

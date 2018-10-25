@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bce3140818b46bd6cbb255794a08e9b0fa92fbd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9e179bf7570ba2ce53369d59c836e8accf91e8de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114969"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057942"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC e classi di database
 
-Le classi di database ODBC MFC incapsulano le chiamate di funzione API ODBC è in genere renderebbe manualmente nel membro di funzioni dei [CDatabase](../../mfc/reference/cdatabase-class.md) e [CRecordset](../../mfc/reference/crecordset-class.md) classi. Ad esempio, le sequenze di chiamata ODBC complesse, l'associazione di record restituiti in posizioni di archiviazione, la gestione delle condizioni di errore e altre operazioni vengono gestite automaticamente da classi di database. Di conseguenza, si utilizza un'interfaccia di classe notevolmente più semplice per modificare i record tramite un oggetto recordset.  
-  
+Le classi di database ODBC MFC incapsulano le chiamate di funzione API ODBC è in genere renderebbe manualmente nel membro di funzioni dei [CDatabase](../../mfc/reference/cdatabase-class.md) e [CRecordset](../../mfc/reference/crecordset-class.md) classi. Ad esempio, le sequenze di chiamata ODBC complesse, l'associazione di record restituiti in posizioni di archiviazione, la gestione delle condizioni di errore e altre operazioni vengono gestite automaticamente da classi di database. Di conseguenza, si utilizza un'interfaccia di classe notevolmente più semplice per modificare i record tramite un oggetto recordset.
+
 > [!NOTE]
->  Origini dati ODBC sono accessibili tramite le classi ODBC MFC, come descritto in questo argomento, o tramite le classi MFC oggetto DAO (Data Access).  
-  
-Anche se le classi di database includono le funzionalità ODBC, non forniscono un mapping uno a uno di funzioni API ODBC. Le classi di database offrono un livello superiore di astrazione, basato sugli oggetti di accesso ai dati disponibili in Microsoft Access e Microsoft Visual Basic. Per altre informazioni, vedere [ODBC e MFC](../../data/odbc/odbc-and-mfc.md).  
-  
-## <a name="see-also"></a>Vedere anche  
+>  Origini dati ODBC sono accessibili tramite le classi ODBC MFC, come descritto in questo argomento, o tramite le classi MFC oggetto DAO (Data Access).
+
+Anche se le classi di database includono le funzionalità ODBC, non forniscono un mapping uno a uno di funzioni API ODBC. Le classi di database offrono un livello superiore di astrazione, basato sugli oggetti di accesso ai dati disponibili in Microsoft Access e Microsoft Visual Basic. Per altre informazioni, vedere [ODBC e MFC](../../data/odbc/odbc-and-mfc.md).
+
+## <a name="see-also"></a>Vedere anche
 
 [Nozioni fondamentali su ODBC](../../data/odbc/odbc-basics.md)

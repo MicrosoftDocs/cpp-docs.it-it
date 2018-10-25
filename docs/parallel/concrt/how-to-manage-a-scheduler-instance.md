@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6b687b00310390e3748fb5a8f6db74a19dfd0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97735b5509fb841a8b9b3d8212f4a23514f9d28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057465"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Procedura: Gestire un'istanza dell'utilità di pianificazione
 
@@ -34,7 +34,7 @@ Gli esempi creano le utilità di pianificazione che usano i criteri dell'utilit�
 
 1. Chiamare il [CurrentScheduler](reference/currentscheduler-class.md#create) metodo o il [Concurrency](reference/scheduler-class.md#create) metodo per creare un'istanza dell'utilità di pianificazione.
 
-     Se si usa la `Scheduler::Create` metodo, chiamare il [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) metodo quando è necessario associare l'utilità di pianificazione con il contesto corrente.
+   Se si usa la `Scheduler::Create` metodo, chiamare il [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) metodo quando è necessario associare l'utilità di pianificazione con il contesto corrente.
 
 1. Chiamare il [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) funzione per creare un handle per un oggetto evento di reimpostazione automatica non segnalato.
 
@@ -44,7 +44,7 @@ Gli esempi creano le utilità di pianificazione che usano i criteri dell'utilit�
 
 1. Chiamare il [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) metodo scollegare l'utilità di pianificazione corrente e ripristinare l'utilità di pianificazione precedente quello corrente.
 
-     Se si usa la `Scheduler::Create` metodo, chiamare il [concurrency::Scheduler::Release](reference/scheduler-class.md#release) metodo per decrementare il conteggio dei riferimenti di `Scheduler` oggetto.
+   Se si usa la `Scheduler::Create` metodo, chiamare il [concurrency::Scheduler::Release](reference/scheduler-class.md#release) metodo per decrementare il conteggio dei riferimenti di `Scheduler` oggetto.
 
 1. Passare l'handle all'evento per il [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) (funzione) di attesa per l'utilità di pianificazione arrestato.
 

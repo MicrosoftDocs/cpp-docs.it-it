@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6b343ec9342199727122ac89f6df77e532429ad
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85ffa775fd18b6979fccf4354ce243f017634d02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792004"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059675"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -74,7 +74,7 @@ Vedere le [concesso in licenza](licensed.md) per un esempio dell'uso di esempio 
 |**Attributi obbligatori**|**coclass**|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -82,4 +82,4 @@ Per altre informazioni sui contesti di attributi, vedere [contesti di attributi]
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
 [Supporto del multithreading per il codice precedente (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[Apartment neutro](/windows/desktop/cossdk/neutral-apartments)  
+[Apartment neutro](/windows/desktop/cossdk/neutral-apartments)

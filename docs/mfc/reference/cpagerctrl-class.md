@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a582d5de7087e433aed839dc2f55db01dd926f22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8f7dc77eb9afdfcded959abad2199b1d255ffe3e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447570"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054267"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 
@@ -627,6 +627,4 @@ Questo metodo invia il [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) messag
 [Classe CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Controlli del pager](/windows/desktop/Controls/pager-controls)
-
-
 

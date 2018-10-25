@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a2a21de2cade8eb0d8776b340123df3535c36f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0222af4bd53b21750cb6debc477e10c96f9d5594
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034395"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061586"
 ---
 # <a name="general-rules-and-limitations"></a>Regole e limitazioni generali
 
@@ -25,7 +25,7 @@ ms.locfileid: "46034395"
 
 - Se si dichiara una funzione o un oggetto senza il **dllimport** oppure **dllexport** attributo, la funzione o l'oggetto non viene considerata parte dell'interfaccia DLL. Di conseguenza, la definizione della funzione o dell'oggetto deve essere presente in tale modulo o in un altro modulo dello stesso programma. Per rendere la funzione o oggetto parte dell'interfaccia DLL, è necessario dichiararne la definizione della funzione o dell'oggetto in altro modulo come **dllexport**. In caso contrario, viene generato un errore del linker.
 
-     Se si dichiara una funzione o un oggetto con il **dllexport** dell'attributo, la relativa definizione deve trovarsi in un modulo dello stesso programma. In caso contrario, viene generato un errore del linker.
+   Se si dichiara una funzione o un oggetto con il **dllexport** dell'attributo, la relativa definizione deve trovarsi in un modulo dello stesso programma. In caso contrario, viene generato un errore del linker.
 
 - Se un unico modulo nel programma contiene entrambe **dllimport** e **dllexport** dichiarazioni per la stessa funzione o oggetto, il **dllexport** attributo ha la precedenza tramite il **dllimport** attributo. Viene tuttavia generato un avviso del compilatore. Ad esempio:
 
@@ -53,7 +53,7 @@ ms.locfileid: "46034395"
     }
     ```
 
-     Tuttavia, poiché un programma che include il **dllexport** attributo nella dichiarazione di un oggetto deve fornire la definizione di tale oggetto in qualche punto del programma, è possibile inizializzare un puntatore a funzione statico globale o locale con l'indirizzo di un **dllexport** (funzione). Analogamente, è possibile inizializzare un puntatore a dati statico globale o locale con l'indirizzo di un **dllexport** oggetto dati. Ad esempio, il seguente codice non genera errori in C o in C++:
+   Tuttavia, poiché un programma che include il **dllexport** attributo nella dichiarazione di un oggetto deve fornire la definizione di tale oggetto in qualche punto del programma, è possibile inizializzare un puntatore a funzione statico globale o locale con l'indirizzo di un **dllexport** (funzione). Analogamente, è possibile inizializzare un puntatore a dati statico globale o locale con l'indirizzo di un **dllexport** oggetto dati. Ad esempio, il seguente codice non genera errori in C o in C++:
 
     ```cpp
     __declspec( dllexport ) void func1( void );
@@ -71,7 +71,7 @@ ms.locfileid: "46034395"
 
 - Se si applicano **dllexport** a una classe normale che dispone di una classe di base che non è contrassegnata come **dllexport**, il compilatore genererà l'avviso C4275.
 
-     Il compilatore genera lo stesso avviso se la classe base è una specializzazione di un modello di classe. Per risolvere questo problema, contrassegnare la classe di base con **dllexport**. Il problema con una specializzazione di un modello di classe è dove posizionare il **dllexport**; non è consentito per contrassegnare il modello di classe. In alternativa, in modo esplicito creare un'istanza del modello di classe e contrassegnare questa creazione esplicita con **dllexport**. Ad esempio:
+   Il compilatore genera lo stesso avviso se la classe base è una specializzazione di un modello di classe. Per risolvere questo problema, contrassegnare la classe di base con **dllexport**. Il problema con una specializzazione di un modello di classe è dove posizionare il **dllexport**; non è consentito per contrassegnare il modello di classe. In alternativa, in modo esplicito creare un'istanza del modello di classe e contrassegnare questa creazione esplicita con **dllexport**. Ad esempio:
 
     ```cpp
     template class __declspec(dllexport) B<int>;
@@ -79,14 +79,14 @@ ms.locfileid: "46034395"
     // ...
     ```
 
-     Questa soluzione alternativa non riesce se un argomento del modello è la classe di derivazione. Ad esempio:
+   Questa soluzione alternativa non riesce se un argomento del modello è la classe di derivazione. Ad esempio:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {
     // ...
     ```
 
-     Poiché si tratta di un modello comune con i modelli, il compilatore modifica la semantica **dllexport** quando viene applicato a una classe che dispone di uno o più classi base e quando uno o più delle classi di base è una specializzazione di un modello di classe . In questo caso, il compilatore applica in modo implicito **dllexport** alle specializzazioni dei modelli di classe. È possibile eseguire le operazioni seguenti e senza ricevere un avviso:
+   Poiché si tratta di un modello comune con i modelli, il compilatore modifica la semantica **dllexport** quando viene applicato a una classe che dispone di uno o più classi base e quando uno o più delle classi di base è una specializzazione di un modello di classe . In questo caso, il compilatore applica in modo implicito **dllexport** alle specializzazioni dei modelli di classe. È possibile eseguire le operazioni seguenti e senza ricevere un avviso:
 
     ```cpp
     class __declspec(dllexport) D : public B<D> {

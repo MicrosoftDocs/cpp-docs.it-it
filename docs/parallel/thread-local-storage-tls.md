@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081871"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059844"
 ---
 # <a name="thread-local-storage-tls"></a>Archiviazione thread-local (TLS)
 
@@ -100,7 +100,7 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     Questa restrizione non si applica a C++. Poiché C++ permette l'inizializzazione dinamica di tutti gli oggetti, è possibile inizializzare un oggetto usando un'espressione che usa l'indirizzo di una variabile thread-local. Questa operazione viene eseguita proprio come la costruzione di oggetti thread-local. Ad esempio, il codice mostrato sopra non genera un errore quando viene compilato come file di origine C++. Si noti che l'indirizzo di una variabile thread-local è valido solo se il thread in cui è stato recuperato l'indirizzo esiste ancora.
+   Questa restrizione non si applica a C++. Poiché C++ permette l'inizializzazione dinamica di tutti gli oggetti, è possibile inizializzare un oggetto usando un'espressione che usa l'indirizzo di una variabile thread-local. Questa operazione viene eseguita proprio come la costruzione di oggetti thread-local. Ad esempio, il codice mostrato sopra non genera un errore quando viene compilato come file di origine C++. Si noti che l'indirizzo di una variabile thread-local è valido solo se il thread in cui è stato recuperato l'indirizzo esiste ancora.
 
 - Il linguaggio C standard permette l'inizializzazione di un oggetto o una variabile con un'espressione che include un riferimento a se stessa, ma solo per oggetti con estensione non statica. Benché C++ permetta in genere l'inizializzazione dinamica degli oggetti con un'espressione che include un riferimento a se stessa, questo tipo di inizializzazione non è consentito con oggetti thread-local. Ad esempio:
 
@@ -110,9 +110,9 @@ Le linee guida seguenti devono essere osservate quando si dichiarano variabili e
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     Tenere presente che un'espressione `sizeof` che include l'oggetto in fase di inizializzazione non rappresenta un riferimento a se stessa ed è consentita sia in C sia in C++.
+   Tenere presente che un'espressione `sizeof` che include l'oggetto in fase di inizializzazione non rappresenta un riferimento a se stessa ed è consentita sia in C sia in C++.
 
-     C++ non consente l'inizializzazione dinamica dei dati di thread a causa di possibili miglioramenti futuri correlati alla funzionalità di archiviazione thread-local.
+   C++ non consente l'inizializzazione dinamica dei dati di thread a causa di possibili miglioramenti futuri correlati alla funzionalità di archiviazione thread-local.
 
 - Nei sistemi operativi Windows prima di Windows Vista, `__declspec`(thread) presenta alcune limitazioni. Se una DLL dichiara dati o oggetti come `__declspec`( thread ), può provocare un errore di protezione se viene caricata in modo dinamico. Dopo che la DLL viene caricata con [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), viene generato un errore di sistema ogni volta che il codice fa riferimento il `__declspec`dati (thread). Poiché lo spazio delle variabili globali per un thread viene allocato in fase di esecuzione, le dimensioni di questo spazio sono basate sul calcolo dei requisiti dell'applicazione sommati ai requisiti di tutte le DLL collegate staticamente. Quando si usa `LoadLibrary`, non è possibile estendere questo spazio per permettere le variabili thread-local dichiarate con `__declspec`( thread ). Usare le API TLS, ad esempio [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), nella DLL per allocare TLS se la DLL può essere caricata con `LoadLibrary`.
 

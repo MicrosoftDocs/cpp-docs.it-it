@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5fcbb20ac27eea7999c634f78b14e85a6221b11b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024398"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053454"
 ---
 # <a name="cmessagemap-class"></a>Classe CMessageMap
 
@@ -69,7 +69,7 @@ Per altre informazioni sulle mappe di messaggio, vedere [mappe messaggi](../../a
 Accede a mappa messaggi identificata da *dwMsgMapID* in un `CMessageMap`-classe derivata.
 
 ```
-virtual BOOL ProcessWindowMessage(  
+virtual BOOL ProcessWindowMessage(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

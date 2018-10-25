@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fbc661a870c7adc6e2e5dda5def744fa3e0396
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b538904c78fc0f0bc88b7c12de1bc4862a88ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417020"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053409"
 ---
 # <a name="mapi-support-in-mfc"></a>Supporto MAPI in MFC
 
@@ -44,11 +44,11 @@ MAPI deve leggere i file per l'invio dell'allegato. Se l'applicazione mantiene i
 
 1. Usare l'editor di menu di Visual C++ per aggiungere una voce di menu con ID di comando sia ID_FILE_SEND_MAIL.
 
-     Questo ID di comando viene fornito dal framework in AFXRES. H. Il comando può essere aggiunto a un menu di scelta, ma in genere viene aggiunto per il **File** menu.
+   Questo ID di comando viene fornito dal framework in AFXRES. H. Il comando può essere aggiunto a un menu di scelta, ma in genere viene aggiunto per il **File** menu.
 
 1. Aggiungere manualmente quanto segue alla mappa messaggi del documento:
 
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
     >  Questa mappa di messaggio funziona per un documento derivato da una `CDocument` o `COleDocument` , ovvero lo preleva la classe di base corretta in entrambi i casi, anche se la mappa messaggi nella classe derivata di documento.

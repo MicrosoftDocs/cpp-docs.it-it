@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 750e51264f12d1c8961ced4e8b606ea5d040d8c9
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 41a757ccd70fe95ce82f90b1128985986e3722b0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791300"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057816"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -57,14 +57,14 @@ Un'enumerazione di uno dei valori seguenti:
 *optimize*<br/>
 Quando *tipo* viene `native`, è possibile specificare `optimize=size`, per indicare che ci sono 4 byte di spazio di archiviazione (minimo) per tutti gli eventi in una classe o `optimize=speed` (predefinito) per indicare che ci sono 4 * (numero di eventi) byte di spazio di archiviazione.
 
-*decorare*<br/>
-Quando *tipo* viene `native`, è possibile specificare `decorate=false`, per indicare che il nome espanso nel file unito (. mrg) non deve includere il nome della classe contenitore. [/FX](../../build/reference/fx-merge-injected-code.md) consente di generare file mrg. `decorate=false`, che è l'impostazione predefinita, si risolve in nomi di tipo completi nel file unito.
+*decorate*<br/>
+Quando *tipo* viene `native`, è possibile specificare `decorate=false`, per indicare che il nome espanso nel file unito (. mrg) non deve includere il nome della classe contenitore. [/Fx](../../build/reference/fx-merge-injected-code.md) consente di generare file .mrg. `decorate=false`, che è l'impostazione predefinita, si risolve in nomi di tipo completi nel file unito.
 
 ## <a name="remarks"></a>Note
 
 L'attributo **event_source** di C++ specifica che la classe o struttura a cui viene applicato sarà un'origine evento.
 
-**event_source** viene usato in combinazione con il [event_receiver](event-receiver.md) attributo e il [event](../../cpp/event.md) (parola chiave). Usare `event_receiver` per creare i ricevitori di eventi. Uso **event** sui metodi all'interno dell'origine evento per specificare tali metodi come eventi.
+**event_source** si usa in combinazione con l'attributo [event_receiver](event-receiver.md) e la parola chiave [__event](../../cpp/event.md) . Usare `event_receiver` per creare i ricevitori di eventi. Uso **event** sui metodi all'interno dell'origine evento per specificare tali metodi come eventi.
 
 > [!NOTE]
 > Una classe o una struttura basata su template non può contenere eventi.
@@ -80,7 +80,7 @@ L'attributo **event_source** di C++ specifica che la classe o struttura a cui vi
 |**Attributi obbligatori**|**Coclasse** quando `type`=`com`|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -89,4 +89,4 @@ Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[Attributi di classe](class-attributes.md)  
+[Attributi di classe](class-attributes.md)

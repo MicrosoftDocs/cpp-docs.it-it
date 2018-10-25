@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6a8b2ef9ac807e48cff42186453666cebda5ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055984"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Errore degli strumenti del linker LNK1106
 
@@ -33,16 +33,16 @@ Lo strumento non è stato possibile leggere o scrivere in `location` in un file 
 
 1. Disco pieno.
 
-     Liberare spazio e collegare nuovamente.
+   Liberare spazio e collegare nuovamente.
 
 1. È stato effettuato un tentativo di collegamento in rete.
 
-     Alcune reti non supportano completamente i file mappati alla memoria utilizzati dal linker. Provare il collegamento sul disco locale.
+   Alcune reti non supportano completamente i file mappati alla memoria utilizzati dal linker. Provare il collegamento sul disco locale.
 
 1. Blocco danneggiato sul disco.
 
-     Anche se il sistema operativo e hardware del disco avrebbe dovuto rilevare questo errore, è possibile eseguire un programma di controllo del disco.
+   Anche se il sistema operativo e hardware del disco avrebbe dovuto rilevare questo errore, è possibile eseguire un programma di controllo del disco.
 
 1. Spazio dell'heap insufficiente.
 
-     Visualizzare [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) per altre informazioni.
+   Visualizzare [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) per altre informazioni.

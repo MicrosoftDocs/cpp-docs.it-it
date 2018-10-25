@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20b5ea002ac16feb99707610fbe4556bf3254f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b06302d330ec8677a3de9b3ccaebf0b7b237b0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375994"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053891"
 ---
 # <a name="application-control"></a>Controllo Application
 
@@ -41,7 +41,6 @@ OLE richiede un maggiore controllo delle applicazioni e i relativi oggetti. DLL 
 |[AfxOleUnlockControl](#afxoleunlockcontrol)| Sblocca la class factory del controllo specificato. |
 |[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Un server viene registrato nel Registro di sistema OLE.|
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|Implementa l'interfaccia utente per il *typename* oggetto comando.|
-
 
 ##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp
 
@@ -192,6 +191,7 @@ Blocca la class factory del controllo specificato in modo che i dati creati dina
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *clsid*<br/>
@@ -206,7 +206,7 @@ Diverso da zero se la class factory del controllo è stata bloccata con successo
 
 ### <a name="remarks"></a>Note
 
-Ciò può accelerare notevolmente la visualizzazione dei comandi. Ad esempio, una volta creato un controllo in una finestra di dialogo e bloccato il controllo con `AfxOleLockControl`, non è necessario crearlo e interromperne l'esecuzione ogni volta che la finestra di dialogo viene visualizzata o viene eliminata in modo permanente. Se l'utente apre e chiude una finestra di dialogo ripetutamente, il blocco dei controlli può migliorare significativamente le prestazioni. Quando si è pronti per eliminare il controllo in modo permanente, chiamare `AfxOleUnlockControl`.
+Ciò può accelerare notevolmente la visualizzazione dei comandi. Ad esempio, una volta creato un controllo in una finestra di dialogo e bloccato il controllo con `AfxOleLockControl`, non è necessario crearlo e interromperne l'esecuzione ogni volta che la finestra di dialogo viene visualizzata o viene eliminata in modo permanente. Se l'utente apre e chiude una finestra di dialogo ripetutamente, il blocco dei controlli può migliorare significativamente le prestazioni. Quando si è pronti per eliminare definitivamente il controllo, chiamare `AfxOleUnlockControl`.
 
 ### <a name="example"></a>Esempio
 
@@ -357,6 +357,7 @@ Sblocca la class factory del controllo specificato.
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *clsid*<br/>
@@ -371,7 +372,7 @@ Diverso da zero se la class factory del controllo è stata sbloccata; in caso co
 
 ### <a name="remarks"></a>Note
 
-Un controllo è bloccato con `AfxOleLockControl`, in modo che i dati creati dinamicamente associati al controllo rimangono in memoria. Ciò può accelerare notevolmente la visualizzazione del controllo, perché il controllo non debba essere creato ed eliminato ogni volta che viene visualizzato. Quando si è pronti per eliminare il controllo in modo permanente, chiamare `AfxOleUnlockControl`.
+Un controllo è bloccato con `AfxOleLockControl`, in modo che i dati creati dinamicamente associati al controllo rimangono in memoria. Ciò può accelerare notevolmente la visualizzazione del controllo, perché il controllo non debba essere creato ed eliminato ogni volta che viene visualizzato. Quando si è pronti per eliminare definitivamente il controllo, chiamare `AfxOleUnlockControl`.
 
 ### <a name="example"></a>Esempio
 

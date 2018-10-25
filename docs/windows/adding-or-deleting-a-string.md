@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e26af845071e5765b30320a86f8d048d2eb12e6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: b3800a99a6c3ae22b34f1c70a7a688ae523b7a67
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061641"
 ---
 # <a name="adding-or-deleting-a-string-resource-c"></a>Aggiunta o eliminazione di una risorsa di tipo stringa (C++)
 
@@ -73,4 +73,4 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor stringhe](../windows/string-editor.md)  
+[Editor stringhe](../windows/string-editor.md)

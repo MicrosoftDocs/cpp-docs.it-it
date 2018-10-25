@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a491c120dff7f8f505878d6887498eb5f05fb22
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7cdfa9011e0021d168c0ad10424a7d326b3c3725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791429"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062158"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -62,7 +62,7 @@ Il **personalizzati** attributo ha la stessa funzionalità di [personalizzato](/
 |**Attributi obbligatori**|**Coclasse** (se usato nella classe)|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -72,4 +72,4 @@ Per altre informazioni sui contesti di attributi, vedere [contesti di attributi]
 [Attributi di parametro](parameter-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[Attributi di interfaccia](interface-attributes.md)  
+[Attributi di interfaccia](interface-attributes.md)

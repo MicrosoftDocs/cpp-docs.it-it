@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 685f1b7d24e781dbee6d67b325b059f09ca9bf4c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762548"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054215"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Aggiunta di punti di connessione a un oggetto
 
@@ -38,15 +38,15 @@ In entrambi i casi, l'implementazione guidata punto di connessione Usa una libre
 
 1. Definire un'interfaccia dispatch nel blocco di libreria del file IDL. Se è abilitato il supporto per i punti di connessione durante la creazione del controllo con la creazione guidata controllo ATL, l'interfaccia dispatch sarà già stato creato. Se non è stato abilitato il supporto per i punti di connessione durante la creazione del controllo, è necessario aggiungere manualmente un'interfaccia dispatch del file con estensione idl. Di seguito è riportato un esempio di un'interfaccia dispatch. Le interfacce in uscita non sono necessarie per essere interfacce dispatch ma richiedono molti linguaggi di scripting come VBScript e JScript, in modo che questo esempio usa due interfacce dispatch:
 
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+   [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
 
-     Usare utilità uuidgen.exe o guidgen.exe per generare un GUID.
+   Usare utilità uuidgen.exe o guidgen.exe per generare un GUID.
 
 2. Aggiungere l'interfaccia dispatch come il `[default,source]` interfaccia nella coclasse per l'oggetto nel file con estensione idl del progetto. Anche in questo caso, se è abilitato il supporto per i punti di connessione durante la creazione del controllo, la creazione guidata controllo ATL creerà il `[default,source`] voce. Per aggiungere manualmente questa voce, aggiungere la riga in grassetto:
 
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+   [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-     Vedere il file con estensione idl nel [Circ](../visual-cpp-samples.md) esempio ATL per un esempio.
+   Vedere il file con estensione idl nel [Circ](../visual-cpp-samples.md) esempio ATL per un esempio.
 
 3. Utilizzare Visualizzazione classi per aggiungere metodi e proprietà per l'interfaccia eventi. Fare doppio clic la classe in visualizzazione classi, scegliere **Add** nel menu di scelta rapida e fare clic su **Aggiungi punto di connessione**.
 
@@ -56,7 +56,7 @@ In entrambi i casi, l'implementazione guidata punto di connessione Usa una libre
 
    - Aggiungere una voce alla mappa del punto di connessione.
 
-     È inoltre verrà visualizzato un elenco di tutte le librerie dei tipi nel computer. Si deve usare solo una di queste altre librerie dei tipi per definire il punto di connessione se si desidera implementare la stessa interfaccia in uscita esatta trovata in un'altra libreria dei tipi.
+   È inoltre verrà visualizzato un elenco di tutte le librerie dei tipi nel computer. Si deve usare solo una di queste altre librerie dei tipi per definire il punto di connessione se si desidera implementare la stessa interfaccia in uscita esatta trovata in un'altra libreria dei tipi.
 
 ### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>Per riusare un'interfaccia del punto di connessione definita in un'altra libreria dei tipi
 

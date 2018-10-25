@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4b5ed392850fac97e8671774dee0905bf3417eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 765a5293f233cb6df0654416ea2a5463df1095a8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375890"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054423"
 ---
 # <a name="specifying-levels-of-functionality"></a>Specifica dei livelli di funzionalità
 
@@ -46,11 +46,11 @@ Per una descrizione generale del `CObject` funzionalità, vedere l'articolo [der
 
 1. Usare il DECLARE_DYNAMIC (macro) nella dichiarazione di classe, come illustrato di seguito:
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
 
 1. Usare l'IMPLEMENT_DYNAMIC (macro) nel file di implementazione (. CPP) della classe. Questa macro accetta come argomenti il nome della classe e relativa classe base, come indicato di seguito:
 
-     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
 
 > [!NOTE]
 >  Inserire sempre IMPLEMENT_DYNAMIC nel file di implementazione (. CPP) per la classe. IMPLEMENT_DYNAMIC (macro) deve essere valutato una sola volta durante una compilazione e pertanto non devono essere utilizzate in un file di interfaccia (. H) che potrebbe potenzialmente essere inclusi in più di un file.

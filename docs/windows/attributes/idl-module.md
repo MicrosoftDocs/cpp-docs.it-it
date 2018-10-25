@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91bed0ebfdacae21f2d606c0b8fa1bb43326816d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 54fcef3c7b2ef86273a570e483f65b34b3b2efc2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063099"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -56,10 +56,10 @@ Un nome definito dall'utente per il blocco di codice che verrà visualizzato nel
 (Facoltativo) L'ID della Guida per questa libreria dei tipi.
 
 *hidden*<br/>
-(Facoltativo) Un parametro che impedisce la visualizzazione libreria. Vedere le [nascosto](/windows/desktop/Midl/hidden) attributo MIDL per altre informazioni.
+(Facoltativo) Un parametro che impedisce la visualizzazione libreria. Per altre informazioni, vedere l'attributo MIDL [hidden](/windows/desktop/Midl/hidden) .
 
 *restricted*<br/>
-(Facoltativo) I membri della raccolta non possono essere chiamati in modo arbitrario. Vedere le [limitato](/windows/desktop/Midl/restricted) attributo MIDL per altre informazioni.
+(Facoltativo) I membri della raccolta non possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](/windows/desktop/Midl/restricted) .
 
 *dichiarazione di funzione*<br/>
 La funzione che verrà definita.
@@ -98,10 +98,10 @@ void FuncName(int i);
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)<br/>
-[entry](entry.md)  
+[entry](entry.md)

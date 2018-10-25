@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf4e963d4afcdfdf3c4ba18347e06489392e5db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be8182bad16c832f5c65e1cb402ef2714a172a0a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844198"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061430"
 ---
 # <a name="container-classrend"></a>Container Class::rend
 
@@ -33,7 +33,6 @@ La funzione membro restituisce un iteratore inverso che punta al primo elemento 
 ```
 
     const_reverse_iterator rend() const;
-
 
 reverse_iterator rend();
 ```

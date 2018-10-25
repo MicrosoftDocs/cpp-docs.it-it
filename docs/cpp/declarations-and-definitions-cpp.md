@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f2155fef0f9287273b3c45e9318665acfdae527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2c0ebbc2686c229d7818042672cdb1d6d2143f81
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070639"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058076"
 ---
 # <a name="declarations-and-definitions-c"></a>Dichiarazioni e definizioni (C++)
 
@@ -35,7 +35,7 @@ Una dichiarazione introduce uno o più nomi in un programma. Le dichiarazioni po
 
 1. È un membro dati statici in una dichiarazione di classe.
 
-     Poiché i membri dati di classe statici sono specifiche variabili discrete condivise da tutti gli oggetti della classe, devono essere definiti e inizializzati all'esterno della dichiarazione di classe. (Per altre informazioni sulle classi e membri di classe, vedere [classi](../cpp/classes-and-structs-cpp.md).)
+   Poiché i membri dati di classe statici sono specifiche variabili discrete condivise da tutti gli oggetti della classe, devono essere definiti e inizializzati all'esterno della dichiarazione di classe. (Per altre informazioni sulle classi e membri di classe, vedere [classi](../cpp/classes-and-structs-cpp.md).)
 
 1. È la dichiarazione del nome di una classe senza una definizione che la segue, ad esempio `class T;`.
 

@@ -15,23 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f64145a8d6269a5c6fd09f7178343a59ebc1b3ad
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: aad20a43cc334e4b6642772b156afe52b7eb6008
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052525"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Creazione di un consumer OLE DB
 
-È possibile creare un consumer di modelli OLE DB con o senza il **Creazione guidata Consumer OLE DB ATL**, anche se tramite la procedura guidata è il metodo consigliato. Un consumer può funzionare in qualsiasi applicazione che supporta ATL.  
-  
-In questa sezione vengono trattati i seguenti argomenti:  
-  
-- [Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
-  
-- [Creazione di un Consumer OLE DB senza usare una procedura guidata](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
-  
-## <a name="see-also"></a>Vedere anche  
+È possibile creare un consumer di modelli OLE DB con o senza il **Creazione guidata Consumer OLE DB ATL**, anche se tramite la procedura guidata è il metodo consigliato. Un consumer può funzionare in qualsiasi applicazione che supporta ATL.
+
+In questa sezione vengono trattati i seguenti argomenti:
+
+- [Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+- [Creazione di un Consumer OLE DB senza usare una procedura guidata](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

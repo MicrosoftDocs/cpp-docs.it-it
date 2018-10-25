@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441928"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059870"
 ---
 # <a name="key-wrl-apis-by-category"></a>API WRL chiave per categoria
+
 Le tabelle seguenti elencano primario libreria modelli C++ per Windows Runtime classi, strutture, funzioni e macro. Costrutti di nelle classi e spazi dei nomi helper vengono omessi. Questi elenchi potenziare la documentazione dell'API, che è disposta dallo spazio dei nomi.
-  
-### <a name="classes"></a>Classi
-  
+
+## <a name="classes"></a>Classi
+
 |Titolo|Descrizione|
 |-----------|-----------------|
 |[Classe ActivationFactory](../windows/activationfactory-class.md)|Abilita l'attivazione di una o più classi da Windows Runtime.|
@@ -46,18 +47,18 @@ Le tabelle seguenti elencano primario libreria modelli C++ per Windows Runtime c
 |[Classe SimpleActivationFactory](../windows/simpleactivationfactory-class.md)|Fornisce un meccanismo semplice per creare una classe base di Windows Runtime o COM classica.|
 |[Classe SimpleClassFactory](../windows/simpleclassfactory-class.md)|Fornisce un meccanismo semplice per creare una classe base.|
 |[Classe WeakRef](../windows/weakref-class.md)|Rappresenta un *riferimento debole* che può essere usato solamente da Windows Runtime, non da COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.|
-  
-### <a name="structures"></a>Strutture
-  
+
+## <a name="structures"></a>Strutture
+
 |Titolo|Descrizione|
 |-----------|-----------------|
 |[Struttura ChainInterfaces](../windows/chaininterfaces-structure.md)|Specifica le funzioni di verifica e inizializzazione che possono essere applicate a un set di ID di interfaccia.|
 |[Struttura CloakedIid](../windows/cloakediid-structure.md)|Indica al `RuntimeClass`, `Implements` e `ChainInterfaces` modelli che l'interfaccia specificata non è accessibile nell'elenco di IID.|
 |[Struttura Implements](../windows/implements-structure.md)|Implements `QueryInterface` e `GetIid` per le interfacce specificate.|
 |[Struttura MixIn](../windows/mixin-structure.md)|Verifica che una classe di runtime derivi da interfacce di Windows Runtime, se disponibili, quindi da interfacce COM classiche.|
-  
-### <a name="functions"></a>Funzioni
-  
+
+## <a name="functions"></a>Funzioni
+
 |Titolo|Descrizione|
 |-----------|-----------------|
 |[Funzione ActivateInstance](../windows/activateinstance-function.md)|Registra e recupera un'istanza di un tipo specificato definito in un ID di classe specificata.|
@@ -67,14 +68,14 @@ Le tabelle seguenti elencano primario libreria modelli C++ per Windows Runtime c
 |[Funzione CreateClassFactory](../windows/createclassfactory-function.md)|Crea una factory che produce istanze della classe specificata.|
 |[Funzione GetActivationFactory](../windows/getactivationfactory-function.md)|Recupera una factory di attivazione per il tipo specificato dal parametro di modello.|
 |[Funzione Make](../windows/make-function.md)|Inizializza la classe di Runtime di Windows specificata.|
-  
-### <a name="macros"></a>Macro
-  
+
+## <a name="macros"></a>Macro
+
 |Titolo|Descrizione|
 |-----------|-----------------|
 |[Macro ActivatableClass](../windows/activatableclass-macros.md)|Popola una cache interna che contiene una factory che è possibile creare un'istanza della classe specificata.|
 |[Macro InspectableClass](../windows/inspectableclass-macro.md)|Imposta il nome e la relazione di trust a livello di classe runtime.|
-  
+
 ## <a name="see-also"></a>Vedere anche
 
 [Libreria di modelli di Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fb13c8c4ce2705d3e7af8ca5b4cd0e4b97b13ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136159"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059090"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversioni di tipi e indipendenza dai tipi (C++ moderno)
 
@@ -70,7 +70,7 @@ Un tipo integrale signed e la relativa controparte unsigned hanno sempre la stes
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +126,7 @@ L'operatore di cast di tipo C è identico all'operatore di chiamata () e quindi 
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     Per altre informazioni, vedere [static_cast](../cpp/static-cast-operator.md).
+   Per altre informazioni, vedere [static_cast](../cpp/static-cast-operator.md).
 
 - **dynamic_cast**, sicuri e di runtime-checked cast del puntatore a base a puntatore a derivato. Oggetto **dynamic_cast** piuttosto che da un **static_cast** per downcast, ma il runtime verifica comporta un sovraccarico.
 
@@ -151,7 +151,7 @@ L'operatore di cast di tipo C è identico all'operatore di chiamata () e quindi 
     //Output: d3 is null;
     ```
 
-     Per altre informazioni, vedere [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Per altre informazioni, vedere [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 - **const_cast**, ai cast di **const**- ness di una variabile o la conversione di un non -**const** variabile **const**. Il cast **const**-ness tramite questo operatore viene semplicemente come soggetta a errori perché usa un cast, ma con C di tipo **cast di const** riduce la probabilità eseguire il cast accidentalmente. A volte è necessario eseguire il cast di **const**-ness di una variabile, ad esempio, per passare un **const** variabile a una funzione che accetta un non -**const** parametro. Nell'esempio seguente viene illustrato come effettuare questa operazione.
 
@@ -164,14 +164,14 @@ L'operatore di cast di tipo C è identico all'operatore di chiamata () e quindi 
     }
     ```
 
-     Per altre informazioni, vedere [const_cast](../cpp/const-cast-operator.md).
+   Per altre informazioni, vedere [const_cast](../cpp/const-cast-operator.md).
 
 - **reinterpret_cast**, per i cast tra tipi indipendenti come **puntatore** al **int**.
 
     > [!NOTE]
     >  Questo operatore di cast non viene utilizzato spesso come gli altri e non è garantito che sia portabile in altri compilatori.
 
-     Nell'esempio seguente viene illustrata la modalità **reinterpret_cast** è diverso da **static_cast**.
+   Nell'esempio seguente viene illustrata la modalità **reinterpret_cast** è diverso da **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +183,7 @@ L'operatore di cast di tipo C è identico all'operatore di chiamata () e quindi 
                                        // However, it is not 64-bit safe.
     ```
 
-     Per altre informazioni, vedere [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).
+   Per altre informazioni, vedere [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>Vedere anche
 

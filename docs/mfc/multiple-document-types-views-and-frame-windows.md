@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a488a3d46d60762f73406ea6f604761804277aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ce4caa9b8a8575264563d69f47dbba1dcedb69e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429773"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054111"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Tipi di documenti multipli, visualizzazioni e finestre cornice
 
@@ -62,15 +62,15 @@ MFC supporta le tre interfacce utente più comuni che richiedono visualizzazioni
 
 - Visualizzazione di oggetti della stessa classe, ciascuno in una distinta finestra cornice di documento MDI.
 
-     È consigliabile supportare la creazione di una seconda finestra cornice in un documento. Scegliendo il comando Nuova finestra, l'utente può aprire una seconda cornice con una visualizzazione dello stesso documento e quindi usare le due cornici per visualizzare contemporaneamente diverse parti del documento. Il framework supporta il comando Nuova finestra del menu Finestra per le applicazioni MDI duplicando la finestra cornice iniziale e la visualizzazione associata al documento.
+   È consigliabile supportare la creazione di una seconda finestra cornice in un documento. Scegliendo il comando Nuova finestra, l'utente può aprire una seconda cornice con una visualizzazione dello stesso documento e quindi usare le due cornici per visualizzare contemporaneamente diverse parti del documento. Il framework supporta il comando Nuova finestra del menu Finestra per le applicazioni MDI duplicando la finestra cornice iniziale e la visualizzazione associata al documento.
 
 - Visualizzazione di oggetti della stessa classe nella stessa finestra cornice di documento.
 
-     Le finestre con separatore suddividono lo spazio di visualizzazione di una finestra del documento singolo in visualizzazioni multiple separate del documento. Il framework crea oggetti di visualizzazione multipla dalla stessa classe di visualizzazione. Per altre informazioni, vedere [Finestre con separatore.](#_core_splitter_windows)
+   Le finestre con separatore suddividono lo spazio di visualizzazione di una finestra del documento singolo in visualizzazioni multiple separate del documento. Il framework crea oggetti di visualizzazione multipla dalla stessa classe di visualizzazione. Per altre informazioni, vedere [Finestre con separatore.](#_core_splitter_windows)
 
 - Visualizzazione di oggetti di classi diverse in una finestra cornice singola.
 
-     In questo modello, variante della finestra con separatore, più visualizzazioni condividono una finestra cornice singola. Le visualizzazioni sono costituite da diverse classi e ciascuna offre una diversa modalità di visualizzare lo stesso documento. Ad esempio, in una visualizzazione il documento creato mediante un elaboratore di testo è visualizzato in modalità normale, mentre nell'altra è in modalità struttura. Un controllo Splitter consente di modificare le dimensioni relative delle visualizzazioni.
+   In questo modello, variante della finestra con separatore, più visualizzazioni condividono una finestra cornice singola. Le visualizzazioni sono costituite da diverse classi e ciascuna offre una diversa modalità di visualizzare lo stesso documento. Ad esempio, in una visualizzazione il documento creato mediante un elaboratore di testo è visualizzato in modalità normale, mentre nell'altra è in modalità struttura. Un controllo Splitter consente di modificare le dimensioni relative delle visualizzazioni.
 
 La figura seguente, suddivisa nelle parti a, b e c, illustra i tre modelli di interfaccia utente nell'ordine presentato in precedenza.
 

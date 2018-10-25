@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19f6a895eb48b3ae1816edc45747c865e7e03b96
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c1b8cca1453ef4a044a39853e615c5d0e6c3268f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420153"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051889"
 ---
 # <a name="dynamic-object-creation"></a>Creazione di oggetti dinamici
 
@@ -32,7 +32,7 @@ Questo articolo illustra come creare un oggetto in modo dinamico in fase di esec
 
 1. Usare il codice seguente per creare dinamicamente un oggetto utilizzando il `CreateObject` funzione del `CRuntimeClass`. Si noti che in caso di errore `CreateObject` restituisce **NULL** anziché generare un'eccezione:
 
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403475"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053045"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternative all'architettura documento/visualizzazione
 
@@ -56,7 +56,7 @@ Si consiglia di utilizzare la Creazione guidata applicazione MFC per creare appl
 
 - Considerare il documento come un'appendice non utilizzata e implementare il codice di gestione dei dati nella classe di visualizzazione, come suggerito in precedenza. L'overhead del documento è relativamente basso. Un unico [CDocument](../mfc/reference/cdocument-class.md) oggetto comporta una piccola quantità di overhead di per sé, più il leggero overhead delle `CDocument`di classi base [CCmdTarget](../mfc/reference/ccmdtarget-class.md) e [CObject](../mfc/reference/cobject-class.md). Entrambe le classi precedenti sono piccole.
 
-     Dichiarata in `CDocument`:
+   Dichiarata in `CDocument`:
 
    - Due oggetti `CString`.
 
@@ -66,7 +66,7 @@ Si consiglia di utilizzare la Creazione guidata applicazione MFC per creare appl
 
    - Un oggetto `CPtrList` contenente un elenco delle visualizzazioni del documento.
 
-     Inoltre, il documento richiede il tempo necessario per creare l'oggetto documento, i relativi oggetti visualizzazione, una finestra cornice e un oggetto modello di documento.
+   Inoltre, il documento richiede il tempo necessario per creare l'oggetto documento, i relativi oggetti visualizzazione, una finestra cornice e un oggetto modello di documento.
 
 - Trattare sia il documento che la visualizzazione come appendici inutilizzate. Inserire il codice di disegno e di gestione dei dati nella finestra cornice invece che nella visualizzazione. Questo approccio è più vicino al modello di programmazione del linguaggio C.
 

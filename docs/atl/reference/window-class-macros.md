@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e151ba4fc2adbe6dab2397d68658b0cb1eb5ef1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059077"
 ---
 # <a name="window-class-macros"></a>Macro di classi di finestra
 
@@ -32,7 +32,7 @@ Queste macro definiscono le utilità di classe di finestra.
 |[DECLARE_WND_CLASS](#declare_wnd_class)|Consente di specificare il nome di una nuova classe di finestra.|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Consente di specificare il nome di una nuova classe della finestra e la classe contenitore cui routine userà la nuova classe.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Consente di specificare il nome di una classe finestra esistente su cui basare una nuova classe della finestra.|
-|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Consente di specificare i parametri di una classe.|  
+|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Consente di specificare i parametri di una classe.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -69,9 +69,9 @@ DECLARE_WND_CLASS specifica gli stili seguenti per la nuova finestra:
 
 DECLARE_WND_CLASS specifica anche il colore di sfondo della finestra predefinita. Usare la [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) macro per fornire gli stili personalizzati e il colore di sfondo.
 
-[CWindowImpl](cwindowimpl-class.md) Usa la macro DECLARE_WND_CLASS per creare una finestra basata su una nuova classe della finestra. Per modificare questo comportamento, usare il [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) (macro), oppure fornire un'implementazione personalizzata del [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) (funzione).  
+[CWindowImpl](cwindowimpl-class.md) Usa la macro DECLARE_WND_CLASS per creare una finestra basata su una nuova classe della finestra. Per modificare questo comportamento, usare il [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) (macro), oppure fornire un'implementazione personalizzata del [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) (funzione).
 
-Per altre informazioni sull'uso delle finestre in ATL, vedere l'articolo [classi di finestra ATL](../../atl/atl-window-classes.md).  
+Per altre informazioni sull'uso delle finestre in ATL, vedere l'articolo [classi di finestra ATL](../../atl/atl-window-classes.md).
 
 ##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2
 
@@ -84,7 +84,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ### <a name="parameters"></a>Parametri
 
 *WndClassName*<br/>
-[in] Il nome della nuova classe di finestra. Se NULL, ATL genererà un nome di classe di finestra. 
+[in] Il nome della nuova classe di finestra. Se NULL, ATL genererà un nome di classe di finestra.
 
 *EnclosingClass*<br/>
 [in] Il nome della classe della finestra che racchiude la nuova classe della finestra. Non può essere NULL.
@@ -120,7 +120,7 @@ DECLARE_WND_SUPERCLASS implementa la funzione statica seguente:
 
 Per impostazione predefinita [CWindowImpl](cwindowimpl-class.md) Usa le [DECLARE_WND_CLASS](#declare_wnd_class) macro per creare una finestra basata su una nuova classe della finestra. Specificando la macro DECLARE_WND_SUPERCLASS in un `CWindowImpl`-classe, derivata la classe della finestra si baseranno su una classe esistente, ma userà la procedura della finestra. Questa tecnica è denominata creazione di superclassi.
 
-Oltre a utilizzare le macro DECLARE_WND_CLASS e DECLARE_WND_SUPERCLASS, è possibile eseguire l'override di [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funzione con la propria implementazione.  
+Oltre a utilizzare le macro DECLARE_WND_CLASS e DECLARE_WND_SUPERCLASS, è possibile eseguire l'override di [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funzione con la propria implementazione.
 
 Per altre informazioni sull'uso delle finestre in ATL, vedere l'articolo [classi di finestra ATL](../../atl/atl-window-classes.md).
 

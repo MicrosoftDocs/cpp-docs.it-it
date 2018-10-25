@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d9db21b7531f71ba40be64018b71c4e2e3e555e2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b5ba9789226e54c9607e85caaa5e8af3f157f02d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46064971"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052638"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Origine dati: determinazione dello schema dell'origine dati (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.  
-  
-Per impostare i membri di dati di `CRecordset` oggetti, è necessario conoscere lo schema dell'origine dati a cui ci si connette. Determinazione dello schema di un'origine dati consiste nell'ottenere un elenco delle tabelle nell'origine dati, un elenco di colonne in ogni tabella, il tipo di dati di ogni colonna e l'esistenza di tutti gli indici.  
-  
-## <a name="see-also"></a>Vedere anche  
+Questo argomento si applica alle classi ODBC MFC.
+
+Per impostare i membri di dati di `CRecordset` oggetti, è necessario conoscere lo schema dell'origine dati a cui ci si connette. Determinazione dello schema di un'origine dati consiste nell'ottenere un elenco delle tabelle nell'origine dati, un elenco di colonne in ogni tabella, il tipo di dati di ogni colonna e l'esistenza di tutti gli indici.
+
+## <a name="see-also"></a>Vedere anche
 
 [Origine dati (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
 [Origine dati: gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

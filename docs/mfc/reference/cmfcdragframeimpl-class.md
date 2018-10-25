@@ -1,7 +1,7 @@
 ---
 title: Classe CMFCDragFrameImpl | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cf56cec1a9b09a9176577fa7fce58a853a1d3aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fa4846ec2d6263e353dec05d145f6e2e33a59eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433998"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062379"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Classe CMFCDragFrameImpl
 
@@ -50,19 +50,17 @@ Un oggetto di questa classe viene incorporato in ogni [classe CPane](../../mfc/r
 
 ##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame
 
-
 ```
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bClearInternalRects*
+[in] *bClearInternalRects*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="init"></a>  CMFCDragFrameImpl::Init
-
 
 ```
 void Init(CWnd* pDraggedWnd);
@@ -70,12 +68,11 @@ void Init(CWnd* pDraggedWnd);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pDraggedWnd*
+[in] *pDraggedWnd*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame
-
 
 ```
 void MoveDragFrame(BOOL bForceMove = FALSE);
@@ -83,12 +80,11 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bForceMove*
+[in] *bForceMove*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking
-
 
 ```
 void PlaceTabPreDocking(
@@ -100,13 +96,15 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>Parametri
 
-*pTabbedBar*<br/>
-[in] [in] *bFirstTime* [in] *pCBarToPlaceOn*
+[in] *pTabbedBar*<br/>
+
+[in] *bFirstTime*<br/>
+
+[in] *pCBarToPlaceOn*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking
-
 
 ```
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
@@ -114,12 +112,11 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pOldTargetBar*
+[in] *pOldTargetBar*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState
-
 
 ```
 void ResetState();

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2419b4da0cad2662a246c167938d673429afbf26
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093843"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060898"
 ---
 # <a name="idispeventimpl-class"></a>Classe IDispEventImpl
 
@@ -44,7 +44,7 @@ template <UINT nID, class T,
     const IID* pdiid = &IID_NULL,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
@@ -102,7 +102,7 @@ La classe usata per gestire le informazioni sul tipo per *T*. Il valore predefin
 
 `IDispEventImpl` funziona in combinazione con la mappa di sink di evento nella classe per instradare gli eventi per la funzione del gestore appropriato. Utilizzare questa classe:
 
-Aggiungere un [macro SINK_ENTRY](composite-control-macros.md#sink_entry) oppure [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) macro per la mappa di sink di evento per ogni evento per ogni oggetto che si desidera gestire. Quando si usa `IDispEventImpl` come classe di base di un controllo composito, è possibile chiamare [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) per stabilire e interrompere la connessione con le origini eventi per tutte le voci di sink di eventi della mappa. In altri casi, o per un maggiore controllo, chiamare [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) per stabilire la connessione tra l'oggetto di origine e la classe di base. Chiamare [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) per interrompere la connessione.  
+Aggiungere un [macro SINK_ENTRY](composite-control-macros.md#sink_entry) oppure [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) macro per la mappa di sink di evento per ogni evento per ogni oggetto che si desidera gestire. Quando si usa `IDispEventImpl` come classe di base di un controllo composito, è possibile chiamare [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) per stabilire e interrompere la connessione con le origini eventi per tutte le voci di sink di eventi della mappa. In altri casi, o per un maggiore controllo, chiamare [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) per stabilire la connessione tra l'oggetto di origine e la classe di base. Chiamare [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) per interrompere la connessione.
 
 È necessario derivare da `IDispEventImpl` (uso di un valore univoco per *nID*) per ogni oggetto per cui è necessario gestire gli eventi. È possibile riutilizzare la classe di base per l'annullamento della notifica per oggetto una sola origine quindi che informa su un oggetto di origine diversa, ma il numero massimo di oggetti di origine che può essere gestita da un singolo oggetto in una sola volta è limitato dal numero di `IDispEventImpl` le classi di base.
 

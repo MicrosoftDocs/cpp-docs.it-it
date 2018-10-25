@@ -17,34 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 86f85b95b4b45624a778bc183cabadda886d002d
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0f4049190ac30cfff634d4cfef82410ccfdf1314
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990087"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063081"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Creazione di un progetto per il provider
 
-## <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Per creare un progetto in cui risiederà il provider OLE DB  
-  
-1. Nel menu **File** fare clic su **Nuovo** e quindi su **Progetto**.  
-  
-     Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
-  
-1. Nel **tipi di progetto** riquadro, fare clic sui **installati** > **Visual C++** > **MFC/ATL** cartella. Nel **modelli** riquadro, fare clic su **progetto ATL**.  
+## <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Per creare un progetto in cui risiederà il provider OLE DB
+
+1. Nel menu **File** fare clic su **Nuovo** e quindi su **Progetto**.
+
+   Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
+
+1. Nel **tipi di progetto** riquadro, fare clic sui **installati** > **Visual C++** > **MFC/ATL** cartella. Nel **modelli** riquadro, fare clic su **progetto ATL**.
 
     > [!NOTE]
     > Nelle versioni precedenti di Visual Studio, trovare il tipo di progetto sotto **Installed** > **modelli** > **Visual C++**  >  **ATL**.
-  
-1. Nel **Name** casella, immettere un nome per il progetto e quindi fare clic su **OK**.  
-  
-     Il **Creazione guidata progetto ATL** viene visualizzata.  
-  
-1. Nel **Creazione guidata progetto ATL**, scegliere **libreria di collegamento dinamico (DLL)** per **tipo di applicazione**.  
-  
-1. Scegliere **Fine**.  
-  
-## <a name="see-also"></a>Vedere anche  
+
+1. Nel **Name** casella, immettere un nome per il progetto e quindi fare clic su **OK**.
+
+   Il **Creazione guidata progetto ATL** viene visualizzata.
+
+1. Nel **Creazione guidata progetto ATL**, scegliere **libreria di collegamento dinamico (DLL)** per **tipo di applicazione**.
+
+1. Scegliere **Fine**.
+
+## <a name="see-also"></a>Vedere anche
 
 [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

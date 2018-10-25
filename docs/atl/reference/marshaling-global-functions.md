@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0b9a8e72cb3c1334484ed4a4e5c85c8b9a12347
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106233"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055138"
 ---
 # <a name="marshaling-global-functions"></a>Funzioni globali di marshalling
 
@@ -34,7 +34,7 @@ Queste funzioni forniscono il supporto per il marshalling e conversione dei dati
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Rilascia i dati del marshalling e `IStream` puntatore.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crea un nuovo oggetto di flusso ed effettua il marshalling il puntatore a interfaccia specificato.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Converte i dati di marshalling di un flusso in un puntatore a interfaccia.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Converte i dati di marshalling di un flusso in un puntatore a interfaccia.|
 
 ## <a name="requirements"></a>Requisiti:
 
@@ -42,7 +42,7 @@ Queste funzioni forniscono il supporto per il marshalling e conversione dei dati
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Rilascia i dati del marshalling nel flusso, quindi rilascia il puntatore di flusso.  
+Rilascia i dati del marshalling nel flusso, quindi rilascia il puntatore di flusso.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 44a5b06a4d94bc431d33fa29cdcef4738e43ca54
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0afbd6943808099be62545cd872002040f03064b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791781"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062977"
 ---
 # <a name="propget"></a>propget
 
@@ -53,11 +53,11 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio dell'uso dei
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|`propput`, `propputref`|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
 [propput](propput.md)<br/>
-[propputref](propputref.md)  
+[propputref](propputref.md)

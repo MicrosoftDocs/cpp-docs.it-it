@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15f021d78158caa6f607be3d68a9666b4ab6d6a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ca52f7a5940de3caa87f81ddf07625ab751927c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448519"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054533"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -184,7 +184,6 @@ Chiamare questa funzione per aggiungere uno o più immagini o un'icona per un el
 int Add(
     CBitmap* pbmImage,
     CBitmap* pbmMask);
-
 
 int Add(
     CBitmap* pbmImage,
@@ -288,7 +287,6 @@ BOOL Copy(
     int iSrc,
     UINT uFlags = ILCF_MOVE);
 
-
 BOOL Copy(
     int iDst,
     CImageList* pSrc,
@@ -335,20 +333,17 @@ BOOL Create(
     int nInitial,
     int nGrow);
 
-
 BOOL Create(
     UINT nBitmapID,
     int cx,
     int nGrow,
     COLORREF crMask);
 
-
 BOOL Create(
     LPCTSTR lpszBitmapID,
     int cx,
     int nGrow,
     COLORREF crMask);
-
 
 BOOL Create(
     CImageList& imagelist1,
@@ -417,7 +412,7 @@ Offset dell'asse x dell'immagine di secondo in relazione alla prima immagine, in
 Offset dell'asse y dell'immagine di secondo in relazione alla prima immagine, in pixel.
 
 *pImageList*<br/>
-Un puntatore a un `CImageList` oggetto.
+Puntatore a un oggetto `CImageList` .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -678,7 +673,6 @@ Chiamare questa funzione membro per disegnare un'immagine da un elenco di immagi
 
 ```
 BOOL DrawIndirect(IMAGELISTDRAWPARAMS* pimldp);
-
 
 BOOL DrawIndirect(
     CDC* pDC,
@@ -1046,7 +1040,6 @@ BOOL Replace(
     int nImage,
     CBitmap* pbmImage,
     CBitmap* pbmMask);
-
 
 int Replace(
     int nImage,

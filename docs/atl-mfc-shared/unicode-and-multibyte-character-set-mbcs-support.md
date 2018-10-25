@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708825ddda9becc51d9009d0d6a03a22c48f8007
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cad3d8456d219918179b31acfb3c32818e445534
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432477"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062775"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Supporto per set di caratteri Unicode e multibyte (MBCS)
 
@@ -106,4 +106,4 @@ Analogamente, `CString` vengono implementati i metodi con mapping dei tipi di da
 ## <a name="see-also"></a>Vedere anche
 
 [Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
-[Modifica di stringhe](../c-runtime-library/string-manipulation-crt.md)  
+[Modifica di stringhe](../c-runtime-library/string-manipulation-crt.md)

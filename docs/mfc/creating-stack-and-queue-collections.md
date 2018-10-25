@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403786"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056594"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Creazione di raccolta Stack e Code
 
@@ -40,9 +40,9 @@ Poiché la raccolta list standard dispone di un elemento head e da una coda, è 
 
 1. Derivare una nuova classe di elenco da una delle classi MFC elenco esistenti e aggiungere altre funzioni membro per supportare la funzionalità di operazioni di stack.
 
-     Nell'esempio seguente viene illustrato come aggiungere le funzioni membro per inserire elementi nello stack, consultare l'elemento superiore dello stack e visualizzare l'elemento superiore dello stack:
+   Nell'esempio seguente viene illustrato come aggiungere le funzioni membro per inserire elementi nello stack, consultare l'elemento superiore dello stack e visualizzare l'elemento superiore dello stack:
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 Si noti che questo approccio espone sottostante `CObList` classe. L'utente può chiamare qualsiasi `CObList` funzione membro, se è opportuno per uno stack o No.
 
@@ -54,9 +54,9 @@ Poiché la raccolta list standard dispone di un elemento head e da una coda, è 
 
 1. Derivare una nuova classe di elenco da una delle classi elenco predefinito fornite con la libreria Microsoft Foundation Class e aggiungere altre funzioni membro per supportare la semantica delle operazioni di Accodamento.
 
-     Nell'esempio seguente viene illustrato come è possibile aggiungere le funzioni membro per aggiungere un elemento alla fine della coda e ottenere l'elemento dalla parte anteriore della coda.
+   Nell'esempio seguente viene illustrato come è possibile aggiungere le funzioni membro per aggiungere un elemento alla fine della coda e ottenere l'elemento dalla parte anteriore della coda.
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>Vedere anche
 

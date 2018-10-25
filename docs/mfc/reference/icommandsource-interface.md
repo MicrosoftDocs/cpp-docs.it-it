@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4908566a80fcad2350023f2306a952b2d97b2e62
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377963"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060676"
 ---
 # <a name="icommandsource-interface"></a>Interfaccia ICommandSource
 
@@ -103,6 +103,7 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *cmdIDMin*<br/>
@@ -124,6 +125,7 @@ void AddCommandRangeUIHandler(
     unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *cmdIDMin*<br/>
@@ -145,6 +147,7 @@ void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *cmdID*<br/>
@@ -162,6 +165,7 @@ Invia un messaggio senza attendere che venga elaborato.
 ```
 void PostCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *command*<br/>
@@ -170,13 +174,13 @@ ID comando del messaggio da pubblicare.
 
 Questo metodo viene inviato in modo asincrono il messaggio mappato all'ID specificato dal comando. Chiama CWnd::PostMessage per inserire il messaggio nella coda di messaggi della finestra e quindi restituisce senza tempi di attesa per la finestra corrispondente elaborare il messaggio.
 
-
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 Rimuove un gestore di comandi da un oggetto di origine del comando.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *cmdID*<br/>
@@ -184,7 +188,6 @@ ID di comando.
 ### <a name="remarks"></a>Note
 
 Questo metodo rimuove il gestore del comando eseguito il mapping a cmdID dall'oggetto origine del comando.
-
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
 
@@ -194,6 +197,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *cmdIDMin*<br/>
@@ -212,6 +216,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *cmdIDMin*<br/>
@@ -228,6 +233,7 @@ Rimuove un gestore di messaggi comandi dell'interfaccia utente da un oggetto di 
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *cmdID*<br/>
@@ -242,6 +248,7 @@ Invia un messaggio e attende che venga elaborato prima della restituzione.
 ```
 void SendCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *command*<br/>

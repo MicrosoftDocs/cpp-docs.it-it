@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bfa8867f405b5a3fa67046a1341d5b4848b8a72
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b0bb3442de264e263ae0f0eabd93345eace1fde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423084"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059610"
 ---
 # <a name="scopedd3daccesslock-class"></a>Classe scoped_d3d_access_lock
 
@@ -100,6 +100,7 @@ Rilascia il blocco di accesso di D3D sull'oggetto associato `accelerator_view` o
 ```
 ~scoped_d3d_access_lock();
 ```
+
 ## <a name="operator_eq"></a> operator=
 
 Acquisisce la proprietà di un blocco di accesso di D3D da un altro `scoped_d3d_access_lock` oggetto, rilasciando il blocco precedente.

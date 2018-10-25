@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebebd8d0b6dc53ef5d83374c329ebe35d23f7fe8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be030539a7b2d0585ea895f1428de822d3300d53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443540"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052967"
 ---
 # <a name="how-to-specify-include-directories-for-resources-c"></a>Procedura: specificare directory di inclusione per le risorse (C++)
 
@@ -32,7 +32,7 @@ ms.locfileid: "46443540"
 
 2. Nel **pagine delle proprietà** della finestra di dialogo fare clic sui **risorse** nodo nel riquadro sinistro, quindi specificare aggiuntivi includono le directory nel **directory di inclusione aggiuntive** proprietà.
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework. 
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework.
 
 ## <a name="requirements"></a>Requisiti
 

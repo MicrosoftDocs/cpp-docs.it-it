@@ -36,129 +36,129 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6de23571f30373e5ddd3940bcae4be9fa176539a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e62c4242513c5147dcfd84ee5d69ec51a4816d1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086837"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053331"
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
 
-Tutte le funzioni di accesso nei modelli OLE DB derivano da questa classe. `CAccessorBase` consente a un set di righe per la gestione di più funzioni di accesso. Fornisce inoltre l'associazione per entrambi i parametri e colonne di output.  
-  
+Tutte le funzioni di accesso nei modelli OLE DB derivano da questa classe. `CAccessorBase` consente a un set di righe per la gestione di più funzioni di accesso. Fornisce inoltre l'associazione per entrambi i parametri e colonne di output.
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-// Replace with syntax  
-```  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="methods"></a>Metodi  
-  
-|||  
-|-|-|  
-|[Chiudi](#close)|Chiude le funzioni di accesso.|  
-|[GetHAccessor](#geth)|Recupera l'handle della funzione di accesso.|  
-|[GetNumAccessors](#getnum)|Recupera il numero di funzioni di accesso creato dalla classe.|  
-|[IsAutoAccessor](#isauto)|Verifica se la funzione di accesso specificato è un sia automatica o meno.|  
-|[ReleaseAccessors](#release)|Rilascia le funzioni di accesso.|  
+// Replace with syntax
+```
 
-## <a name="requirements"></a>Requisiti  
+## <a name="members"></a>Membri
 
-**Intestazione:** atldbcli.h  
+### <a name="methods"></a>Metodi
+
+|||
+|-|-|
+|[Chiudi](#close)|Chiude le funzioni di accesso.|
+|[GetHAccessor](#geth)|Recupera l'handle della funzione di accesso.|
+|[GetNumAccessors](#getnum)|Recupera il numero di funzioni di accesso creato dalla classe.|
+|[IsAutoAccessor](#isauto)|Verifica se la funzione di accesso specificato è un sia automatica o meno.|
+|[ReleaseAccessors](#release)|Rilascia le funzioni di accesso.|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atldbcli.h
 
 ## <a name="close"></a> CAccessorBase:: Close
 
-Chiude le funzioni di accesso.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp
-void Close();  
-```  
-  
-### <a name="remarks"></a>Note  
+Chiude le funzioni di accesso.
 
-È necessario chiamare [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) prima.  
+### <a name="syntax"></a>Sintassi
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>Note
+
+È necessario chiamare [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) prima.
 
 ## <a name="geth"></a> CAccessorBase:: Gethaccessor
 
-Recupera l'handle di funzione di accesso di una funzione di accesso specificata.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Recupera l'handle di funzione di accesso di una funzione di accesso specificata.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-HACCESSOR GetHAccessor(ULONG nAccessor) const;  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;
+```
+
+#### <a name="parameters"></a>Parametri
 
 *nAccessor*<br/>
-[in] Numero di offset uguale a zero per la funzione di accesso.  
-  
-### <a name="return-value"></a>Valore restituito  
+[in] Numero di offset uguale a zero per la funzione di accesso.
 
-Handle della funzione di accesso.  
+### <a name="return-value"></a>Valore restituito
+
+Handle della funzione di accesso.
 
 ## <a name="getnum"></a> CAccessorBase:: Getnumaccessors
 
-Recupera il numero di funzioni di accesso creato dalla classe.  
-  
-### <a name="syntax"></a>Sintassi  
-  
-```cpp
-ULONG GetNumAccessors() const;  
-```  
-  
-### <a name="return-value"></a>Valore restituito  
+Recupera il numero di funzioni di accesso creato dalla classe.
 
-Il numero di funzioni di accesso creato dalla classe.  
+### <a name="syntax"></a>Sintassi
+
+```cpp
+ULONG GetNumAccessors() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Il numero di funzioni di accesso creato dalla classe.
 
 ## <a name="isauto"></a> CAccessorBase:: Isautoaccessor
 
-Restituisce true se i dati vengono recuperati automaticamente per la funzione di accesso durante un'operazione di spostamento.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Restituisce true se i dati vengono recuperati automaticamente per la funzione di accesso durante un'operazione di spostamento.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-bool IsAutoAccessor(ULONG nAccessor) const;  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+bool IsAutoAccessor(ULONG nAccessor) const;
+```
+
+#### <a name="parameters"></a>Parametri
 
 *nAccessor*<br/>
-[in] Numero di offset uguale a zero per la funzione di accesso.  
-  
-### <a name="return-value"></a>Valore restituito  
+[in] Numero di offset uguale a zero per la funzione di accesso.
 
-Restituisce **true** se la funzione di accesso è un sia automatica o meno. Negli altri casi, viene restituito **false**.  
+### <a name="return-value"></a>Valore restituito
+
+Restituisce **true** se la funzione di accesso è un sia automatica o meno. Negli altri casi, viene restituito **false**.
 
 ## <a name="release"></a> CAccessorBase:: Releaseaccessors
 
-Rilascia le funzioni di accesso creati dalla classe.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Rilascia le funzioni di accesso creati dalla classe.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-HRESULT ReleaseAccessors(IUnknown* pUnk);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+HRESULT ReleaseAccessors(IUnknown* pUnk);
+```
+
+#### <a name="parameters"></a>Parametri
 
 *pUnk*<br/>
-[in] Un puntatore a un `IUnknown` interfaccia per l'oggetto COM per il quale sono stati creati le funzioni di accesso.  
-  
-### <a name="return-value"></a>Valore restituito  
+[in] Un puntatore a un `IUnknown` interfaccia per l'oggetto COM per il quale sono stati creati le funzioni di accesso.
 
-Un valore HRESULT standard.  
-  
-### <a name="remarks"></a>Note  
+### <a name="return-value"></a>Valore restituito
 
-Chiamato da [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md). 
-  
-## <a name="see-also"></a>Vedere anche  
+Un valore HRESULT standard.
+
+### <a name="remarks"></a>Note
+
+Chiamato da [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

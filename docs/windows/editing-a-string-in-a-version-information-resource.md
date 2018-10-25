@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5a456c745a11fa4250ad731f00556b211ad21b8f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445028"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061703"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>Modifica di una stringa in una risorsa di informazioni di versione (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "46445028"
 
 1. Fare clic sull'elemento per selezionarlo, quindi fare di nuovo clic per iniziare a modificarlo. Apportare le modifiche direttamente nel **le informazioni sulla versione** tabella o nella [finestra proprietà](/visualstudio/ide/reference/properties-window). Le modifiche verranno riflesse in entrambe le posizioni.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Quando si modifica il `FILEFLAGS` chiavi nel **informazioni sulla versione** editor, si noterà che non è possibile impostare il **Debug**, **Private Build**, o **speciali Compilare** delle proprietà (nelle **proprietà** finestra) per i file con estensione RC:
 
    - Il **le informazioni sulla versione** editor imposta il **eseguire il Debug** proprietà con un `#ifdef` nello script della risorsa, in base il `_DEBUG` flag di compilazione.

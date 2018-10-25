@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f067b1835c9ff70c7a7c91d401a83e7fa3e1cce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 734707256bb97e25452c45829fd99a1e0fb06fd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382297"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060312"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Controlli ActiveX MFC: distribuzione dei controlli ActiveX
 
@@ -51,7 +51,6 @@ Questo articolo vengono illustrati diversi problemi relativi alla ridistribuzion
 - [Installazione di controlli ActiveX e DLL ridistribuibili](#_core_installing_activex_controls_and_redistributable_dlls)
 
 - [Registrazione di controlli](#_core_registering_controls)
-
 
 >[!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).

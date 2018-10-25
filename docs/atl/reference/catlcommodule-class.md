@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0600476df22c3d87bc5694e9ffe2af09f4542439
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040804"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063263"
 ---
 # <a name="catlcommodule-class"></a>Classe CAtlComModule
 
@@ -149,7 +149,7 @@ Chiamare questo metodo per annullare la registrazione di ogni oggetto nella mapp
 
 ```
 HRESULT UnregisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL);
 ```
 

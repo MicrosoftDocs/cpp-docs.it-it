@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4fb9985314a71c2da6eed50fd1ba3a486b0cff73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059519"
 ---
 # <a name="csimplemap-class"></a>Classe CSimpleMap
 
@@ -371,7 +371,7 @@ Se è stata trovata la chiave e il valore è stato modificato correttamente, FAL
 Imposta la chiave e valore in corrispondenza dell'indice specificato.
 
 ```
-BOOL SetAtIndex(  
+BOOL SetAtIndex(
     int nIndex,
     const TKey& key,
     const TVal& val);

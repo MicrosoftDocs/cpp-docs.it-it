@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc19475cff0038d11131a26c36ab498a562b234c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 7e9ec6724addeb8002eeb681f289f232520f31dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236036"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060103"
 ---
 # <a name="hashmap-class"></a>Classe hash_map
 
@@ -277,7 +277,6 @@ Riferimento al valore dei dati dell'elemento trovato.
 ### <a name="remarks"></a>Note
 
 Se non viene trovato il valore della chiave dell'argomento, la funzione genera un oggetto della [classe out_of_range](../standard-library/out-of-range-class.md).
-
 
 ### <a name="example"></a>Esempio
 
@@ -2688,9 +2687,9 @@ Restituisce l'oggetto funzione di confronto che viene usato da un oggetto hash_m
 
 ### <a name="remarks"></a>Note
 
-Per un oggetto hash_map *m*, se due elementi *e*1 *(k*1 *, d*1 *)* e *e*2 *(k*2 *, d*2 *)* sono oggetti di tipo [value_type](#value_type), dove *k*1 e *k*2 sono le rispettive chiavi di tipo [key_type](#key_type) e `d`1 e `d`2 sono i rispettivi dati di tipo [mapped_type](#mapped_type), *m.*`value_comp`*( )(e*1 *, e*2 *)* è equivalente a *m.*`key_comp`*( ) (k*1 *, k*2 *)*. Un oggetto archiviato definisce la funzione membro
+Per un oggetto hash_map *m*, se due elementi *e1* (*k1*, *d1*) e *e2* (*k2*, *d2*) sono oggetti di tipo [value_type](#value_type), dove *k1* e *k2* sono le relative chiavi di tipo [key_type](#key_type) e *d1* e *d2* sono i dati di tipo [mapped_type](#mapped_type), quindi `m.value_comp()(e1, e2)` equivale a `m.key_comp()(k1, k2)` . Un oggetto archiviato definisce la funzione membro
 
-**bool operator**( **value_type&** `left`, **value_type&** `right`) **;**
+`bool operator(value_type& left, value_type& right);`
 
 che restituisce **true** se il valore della chiave `left` precede e non è uguale al valore della chiave `right` nell'ordinamento.
 

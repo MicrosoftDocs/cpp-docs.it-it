@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5942a41272671a391cb600ef959d2c69b0bab3e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 777180468ec377b50ee0affaa29bd04a302bda52
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419035"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057920"
 ---
 # <a name="dhtml-event-maps"></a>Mappe eventi DHTML
 
@@ -142,7 +142,6 @@ Inserire il begin_dhtml_event_map (macro) nel file definizione (con estensione h
 ### <a name="requirements"></a>Requisiti
 
   **Intestazione** afxdhtml. h
-
 
 ##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP
 
@@ -1160,7 +1159,6 @@ L'identificatore della tabella, *mapName*, è un simbolo arbitrario usato per co
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio nella [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
-
 
 ### <a name="requirements"></a>Requisiti
 
