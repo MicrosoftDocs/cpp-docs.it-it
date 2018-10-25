@@ -1,7 +1,7 @@
 ---
 title: Utilizzo delle Stored procedure | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,33 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f7b68e7494303e06245a713abc8f1d6e0424773e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 062384713e0668965f9d04dc8f6907b05ac2bc89
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114644"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076880"
 ---
 # <a name="using-stored-procedures"></a>Utilizzo delle stored procedure
 
-Una stored procedure è un oggetto eseguibile archiviato in un database. Chiama una stored procedure è simile a richiamare un comando SQL. L'uso di stored procedure nell'origine dei dati (anziché l'esecuzione o preparazione di un'istruzione nell'applicazione client) offre diversi vantaggi, tra cui prestazioni più elevate, l'overhead di rete ridotto e miglioramento della coerenza e sull'accuratezza.  
-  
-Una stored procedure può avere un numero qualsiasi di (incluso zero) input o i parametri di output e può passare un valore restituito. È possibile impostare i valori dei parametro livello di codice come dati specifici valori oppure usano un marcatore di parametro (un punto interrogativo '?').  
-  
+Una stored procedure è un oggetto eseguibile archiviato in un database. Chiama una stored procedure è simile a richiamare un comando SQL. L'uso di stored procedure nell'origine dei dati (anziché l'esecuzione o preparazione di un'istruzione nell'applicazione client) offre diversi vantaggi, tra cui prestazioni più elevate, l'overhead di rete ridotto e miglioramento della coerenza e sull'accuratezza.
+
+Una stored procedure può avere un numero qualsiasi di (incluso zero) input o i parametri di output e può passare un valore restituito. È possibile impostare i valori dei parametro livello di codice come dati specifici valori oppure usano un marcatore di parametro (un punto interrogativo '?').
+
 > [!NOTE]
->  Le stored procedure create con Visual C++ devono essere compilate con CLR SQL Server la `/clr:safe` opzione del compilatore.  
-  
-Il provider OLE DB per SQL Server (SQLOLEDB) supporta i seguenti meccanismi utilizzati dalle stored procedure per restituire i dati:  
-  
-- Ogni istruzione SELECT nella procedura genera un set di risultati.  
-  
-- La procedura può restituire dati tramite i parametri di output.  
-  
-- La procedura può avere un numero intero codice restituito.  
-  
+>  Le stored procedure create con Visual C++ devono essere compilate con CLR SQL Server la `/clr:safe` opzione del compilatore.
+
+Il provider OLE DB per SQL Server (SQLOLEDB) supporta i seguenti meccanismi utilizzati dalle stored procedure per restituire i dati:
+
+- Ogni **seleziona** istruzione nella procedura genera un set di risultati.
+
+- La procedura può restituire dati tramite i parametri di output.
+
+- La procedura può avere un numero intero codice restituito.
+
 > [!NOTE]
->  È possibile usare le stored procedure con provider OLE DB per Jet dal momento che il provider non supporta stored procedure. solo le costanti sono consentite nelle stringhe di query.  
-  
-## <a name="see-also"></a>Vedere anche  
+> È possibile usare le stored procedure con provider OLE DB per Jet dal momento che il provider non supporta stored procedure. solo le costanti sono consentite nelle stringhe di query.
+
+## <a name="see-also"></a>Vedere anche
 
 [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

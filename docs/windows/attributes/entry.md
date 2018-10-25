@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95eb37898d4934740e1520df758ed33d3dd4c79a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ae14a6346f547d8c362bad478144e915ee9ebb98
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791243"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077296"
 ---
 # <a name="entry"></a>entry
 
@@ -58,8 +58,8 @@ Vedere l'esempio relativo [idl_module](idl-module.md) per un esempio di uso dei 
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi IDL](idl-attributes.md)  
+[Attributi IDL](idl-attributes.md)

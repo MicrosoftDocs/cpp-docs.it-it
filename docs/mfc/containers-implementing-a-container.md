@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28c93e5d1331d7195b894fe88c3fe5fc11e7c31d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394361"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074072"
 ---
 # <a name="containers-implementing-a-container"></a>Contenitori: implementazione di un contenitore
 
@@ -62,15 +62,15 @@ La creazione guidata applicazione deriverà la classe per l'utente, ma sarà pro
 
 - Attivazione sul posto durante la modifica di un elemento incorporato.
 
-     Per altre informazioni, vedere [attivazione](../mfc/activation-cpp.md).
+   Per altre informazioni, vedere [attivazione](../mfc/activation-cpp.md).
 
 - Creazione di elementi OLE trascinando e rilasciando una selezione da un'applicazione server.
 
-     Per altre informazioni, vedere [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md).
+   Per altre informazioni, vedere [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md).
 
 - Include collegamenti a oggetti incorporati o le applicazioni contenitore/server di combinazione.
 
-     Per altre informazioni, vedere [contenitori: funzionalità avanzate](../mfc/containers-advanced-features.md).
+   Per altre informazioni, vedere [contenitori: funzionalità avanzate](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b257628747dca488292cfdfff0ef783303bd1b88
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2a20a5c8ad87428e66f90b8f04c3006e5f1c2e84
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068872"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Classe CComSingleThreadModel
 
@@ -58,9 +58,9 @@ class CComSingleThreadModel
 
 ## <a name="remarks"></a>Note
 
-`CComSingleThreadModel` fornisce metodi per incrementare e decrementare il valore di una variabile. A differenza [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) e [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), questi metodi non sono thread-safe.  
+`CComSingleThreadModel` fornisce metodi per incrementare e decrementare il valore di una variabile. A differenza [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) e [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), questi metodi non sono thread-safe.
 
-In genere, si usa `CComSingleThreadModel` tramite uno dei due **typedef** nomi, ovvero [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) oppure [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). La classe fa riferimento ognuno **typedef** dipende dal modello di threading utilizzato, come illustrato nella tabella seguente:  
+In genere, si usa `CComSingleThreadModel` tramite uno dei due **typedef** nomi, ovvero [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) oppure [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). La classe fa riferimento ognuno **typedef** dipende dal modello di threading utilizzato, come illustrato nella tabella seguente:
 
 |typedef|Singolo modello di threading|Modello di threading apartment|Modello di threading Free modello|
 |-------------|----------------------------|-------------------------------|--------------------------|

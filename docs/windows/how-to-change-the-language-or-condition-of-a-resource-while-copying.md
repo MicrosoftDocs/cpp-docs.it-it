@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6239acd275d94eb2a59fe59882095d5106d3fc1e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3594e3c6ec839e41963ba7458e246563241bb4aa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405736"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066565"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>Procedura: modificare la lingua o condizione di una risorsa durante la copia (C++)
 
@@ -35,7 +35,7 @@ Durante la copia in una risorsa, è possibile modificarne la proprietà relativa
 La lingua e la condizione di una risorsa vengono visualizzate tra parentesi dopo il nome della risorsa nella finestra Area di lavoro. Nell'esempio che segue, la risorsa denominata IDD_AboutBox usa come lingua il finlandese e la condizione è XX33.
 
 ```cpp
-IDD_AboutBox (Finnish - XX33)  
+IDD_AboutBox (Finnish - XX33)
 ```
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Per copiare una risorsa esistente e modificarne la lingua e la condizione

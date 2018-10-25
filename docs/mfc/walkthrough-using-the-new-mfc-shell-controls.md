@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b169371b8551622650687e5d7bd8c06f560725
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 168d7c1740f9b33af1eca539e30514ce76259ceb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236049"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076334"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procedura dettagliata: utilizzo dei nuovi controlli Shell MFC
 
@@ -35,17 +35,17 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio da us
 
 1. Nel **nuovo progetto** finestra di dialogo espandere il **Visual C++** nodo nel **tipi di progetto** riquadro e selezionare **MFC**. Quindi, nella **modelli** riquadro, selezionare **applicazione MFC**. Digitare un nome per il progetto, ad esempio `MFCShellControls` e fare clic su **OK**. Dopo aver **Creazione guidata applicazione MFC** consente di visualizzare, utilizzare le opzioni seguenti:
 
-    1. Nel **tipo di applicazione** riquadro, in **tipo di applicazione**deselezionare il **documenti a schede** opzione. Successivamente, selezionare **singolo documento** e selezionare **Supporto architettura documento/visualizzazione**. Sotto **Project style**, selezionare **Visual Studio**e dal **dello stile di visualizzazione e colori** selezione elenco a discesa **Office 2007 (tema blu)**. 
+    1. Nel **tipo di applicazione** riquadro, in **tipo di applicazione**deselezionare il **documenti a schede** opzione. Successivamente, selezionare **singolo documento** e selezionare **Supporto architettura documento/visualizzazione**. Sotto **Project style**, selezionare **Visual Studio**e dal **dello stile di visualizzazione e colori** selezione elenco a discesa **Office 2007 (tema blu)**.
 
     1. Nel **supporto documenti compositi** riquadro, selezionare **None**.
 
     1. Non apportare alcuna modifica per il **stringhe modello documento** riquadro.
 
-    1. Nel **supporto per Database** riquadro (Visual Studio 2015 e versioni precedente), selezionare **None** perché l'applicazione non usa un database. 
+    1. Nel **supporto per Database** riquadro (Visual Studio 2015 e versioni precedente), selezionare **None** perché l'applicazione non usa un database.
 
-    1. Nel **funzionalità dell'interfaccia utente** riquadro, assicurarsi che il **usare una barra dei menu e barra degli strumenti** opzione è selezionata. Lasciare tutte le altre opzioni, così come sono. 
+    1. Nel **funzionalità dell'interfaccia utente** riquadro, assicurarsi che il **usare una barra dei menu e barra degli strumenti** opzione è selezionata. Lasciare tutte le altre opzioni, così come sono.
 
-    1. Nel **Advanced Features** riquadro, in **funzionalità avanzate**, selezionare solo **controlli ActiveX** e **manifesto controllo comune**. Sotto **riquadri frame avanzati**, selezionare solo le **riquadro di spostamento** opzione. Causa la procedura guidata per creare il riquadro a sinistra della finestra con un `CMFCShellTreeCtrl` già incorporati. 
+    1. Nel **Advanced Features** riquadro, in **funzionalità avanzate**, selezionare solo **controlli ActiveX** e **manifesto controllo comune**. Sotto **riquadri frame avanzati**, selezionare solo le **riquadro di spostamento** opzione. Causa la procedura guidata per creare il riquadro a sinistra della finestra con un `CMFCShellTreeCtrl` già incorporati.
 
     1. Non ci occuperemo apportare modifiche per il **classi generate** riquadro, fare clic su **fine** per creare un nuovo progetto MFC.
 

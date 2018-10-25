@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad8be0655d43fac063a3551f43e667a04caa27b
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: f86574dc1d2b996b66b29d2db6d45afc6b81ff7f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821062"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065226"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Modifica del codice del disegno (Esercitazione di ATL, parte 4)
 
@@ -121,13 +121,13 @@ Ricompilare il controllo. Assicurarsi che il file PolyCtl viene chiuso se è anc
     > Per gli errori che interessano `ATL::CW2AEX`, in Script.Cpp, sostituire riga `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` con `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`e di riga `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` con `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
     > Per gli errori che interessano `HMONITOR`, aprire stdafx. H nel `TCProps` del progetto e sostituire:
     > ```
-    > #ifndef WINVER  
-    > #define WINVER 0x0400   
+    > #ifndef WINVER
+    > #define WINVER 0x0400
     > #endif
     > ```
     > con
     > ```
-    > #ifndef WINVER  
+    > #ifndef WINVER
     > #define WINVER 0x0500
     > #define _WIN32_WINNT 0x0500
     > #endif

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 612a67b72e931d1c7cea49238201320cb7b60585
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3de666443d3ce675d1a95553608d3a9fdc1b82e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427069"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068138"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
 
@@ -315,7 +315,6 @@ HRESULT SetBoolValue(
     DWORD cwcLenSource = 0,
     DWORD cwcStartSource = 0,
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
-
 
 HRESULT SetBoolValue(
     REFPROPERTYKEY pkey,

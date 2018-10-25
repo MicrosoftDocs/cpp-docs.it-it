@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 869cc0404b19dd9cd6cd49dda9702445f420965e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b168bf95e44a41973d92230f559246b03f275601
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016975"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073084"
 ---
 # <a name="exception-handling-in-visual-c"></a>Gestione di eccezioni in Visual C++
 
@@ -31,15 +31,15 @@ Visual C++ supporta tre tipi di gestione delle eccezioni:
 
 - [Gestione delle eccezioni C++](../cpp/cpp-exception-handling.md)
 
-     Per la maggior parte dei programmi C++, si dovrebbe utilizzare la gestione delle eccezioni C++, che è indipendente dai tipi e assicura che i distruttori di oggetti siano richiamati durante la rimozione dello stack.
+   Per la maggior parte dei programmi C++, si dovrebbe utilizzare la gestione delle eccezioni C++, che è indipendente dai tipi e assicura che i distruttori di oggetti siano richiamati durante la rimozione dello stack.
 
 - [Gestione strutturata delle eccezioni](../cpp/structured-exception-handling-c-cpp.md)
 
-     Windows fornisce il proprio meccanismo di eccezione, denominato SEH. Non è consigliato per la programmazione in MFC o in C++. Usare SEH solo nei programmi C non MFC.
+   Windows fornisce il proprio meccanismo di eccezione, denominato SEH. Non è consigliato per la programmazione in MFC o in C++. Usare SEH solo nei programmi C non MFC.
 
 - [Eccezioni MFC](../mfc/exception-handling-in-mfc.md)
 
-     A partire dalla versione 3.0, MCF utilizza le eccezioni C++, ma supporta ancora le precedenti macro di gestione delle eccezioni, che sono simili, nella forma, alle eccezioni C++. Sebbene per la creazione di nuovi programmi non sia consigliato utilizzare tali macro, le stesse sono ancora supportate per garantire la compatibilità con le versioni precedenti. Nei programmi che già utilizzano le macro, è possibile usare liberamente anche le eccezioni C++. A partire dalla versione 2.0 di Visual C++, durante la pre-elaborazione, le macro vengono valutate nelle parole chiave di gestione delle eccezioni definite nell'implementazione di Visual C++ del linguaggio C++. È possibile lasciare le macro di gestione delle eccezioni esistenti al loro posto, quando si inizia a utilizzare le eccezioni C++.
+   A partire dalla versione 3.0, MCF utilizza le eccezioni C++, ma supporta ancora le precedenti macro di gestione delle eccezioni, che sono simili, nella forma, alle eccezioni C++. Sebbene per la creazione di nuovi programmi non sia consigliato utilizzare tali macro, le stesse sono ancora supportate per garantire la compatibilità con le versioni precedenti. Nei programmi che già utilizzano le macro, è possibile usare liberamente anche le eccezioni C++. A partire dalla versione 2.0 di Visual C++, durante la pre-elaborazione, le macro vengono valutate nelle parole chiave di gestione delle eccezioni definite nell'implementazione di Visual C++ del linguaggio C++. È possibile lasciare le macro di gestione delle eccezioni esistenti al loro posto, quando si inizia a utilizzare le eccezioni C++.
 
 Usare la [/EH](../build/reference/eh-exception-handling-model.md) opzione del compilatore per specificare il tipo di gestione delle eccezioni da usare in un progetto. Gestione delle eccezioni C++ è il valore predefinito. Non combinare i meccanismi di gestione degli errori; ad esempio non usare le eccezioni C++ con la gestione strutturata delle eccezioni. L'uso della gestione delle eccezioni C++ rende il codice più portabile e consente di gestire eccezioni di ogni tipo. Per altre informazioni sugli svantaggi della gestione strutturata delle eccezioni, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per consigli su come combinare le macro MFC ed eccezioni C++, vedere [eccezioni: utilizzo delle macro MFC ed eccezioni C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 

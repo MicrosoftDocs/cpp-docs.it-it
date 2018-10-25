@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: bd8facb38bc4d71445674eb64ad09ab14d0b636a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065889"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -42,8 +42,8 @@ La stringa di connessione utilizzata per la connessione all'origine dati. Per il
 *name*<br/>
 (Facoltativo) Quando si usa **db_source** in una classe *nome* è un'istanza di un oggetto origine dati che contiene la **db_source** attributo applicato (vedere l'esempio 1). Quando si usa **db_source** inline in un'implementazione di metodo *nome* è una variabile (locale al metodo) che può essere utilizzata per accedere ai dati di origine (vedere l'esempio 2). È passare questo *name* per il *source_name* parametro di `db_command` per associare l'origine dati a un comando.
 
-*HRESULT*<br/>
-(Facoltativo) Identifica la variabile che riceverà il valore HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
+*hresult*<br/>
+(Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
 ## <a name="remarks"></a>Note
 
@@ -55,7 +55,7 @@ Quando si usa **db_source** in un metodo, verrà eseguito il codice inserito nel
 
 **db_source** aggiunge proprietà origine dati a una classe o all'interno di un metodo. Viene usato in combinazione con `db_command` (che accetta il *db_source* *name* parametro come relativo *source_name* parametro).
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore Rinomina la classe \_ *NomeClasse*della funzione di accesso, dove *NomeClasse* è il nome è stato assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 Per un esempio di questo attributo usato in un'applicazione, vedere gli esempi [AtlAgent](https://github.com/Microsoft/VCSamples) e [MultiRead](https://github.com/Microsoft/VCSamples).
 
@@ -72,7 +72,7 @@ Questo esempio viene chiamato **db_source** in una classe per creare una conness
 
 [
   db_source(L"my_connection_string", name="ds"),
-  db_command(L"select * from Products")  
+  db_command(L"select * from Products")
 ]
 class CMyCommand {};
 ```
@@ -92,4 +92,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi del consumer OLE DB](ole-db-consumer-attributes.md)  
+[Attributi del consumer OLE DB](ole-db-consumer-attributes.md)

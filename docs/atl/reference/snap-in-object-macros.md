@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f2c692f9055e0c2ca3657a6bba0d854209f786b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068749"
 ---
 # <a name="snap-in-object-macros"></a>Macro di oggetti snap-In
 
@@ -41,7 +41,7 @@ Queste macro forniscono il supporto per le estensioni lo snap-in.
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Crea un membro dati per la classe di dati dell'estensione lo snap-in.|
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Entra in una classe di dati di estensione dello snap-nella mappa di classe dell'estensione dello snap-in dati dell'oggetto Snap-In.|
 |[SNAPINMENUID](#snapinmenuid)|Dichiara l'ID del menu di scelta rapida utilizzate dall'oggetto Snap-In.|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Immette una barra degli strumenti mappa sulla barra degli strumenti dell'oggetto Snap-In.|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Immette una barra degli strumenti mappa sulla barra degli strumenti dell'oggetto Snap-In.|
 
 ## <a name="requirements"></a>Requisiti
 

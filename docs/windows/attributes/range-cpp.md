@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 593cfbd4b7430c3f6ac5b4f2ab1053665136ab25
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 17ceaa7c470e57cadd198c17c21bb2a8ae4755ce
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791157"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071658"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -73,11 +73,11 @@ __interface ICustom {
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
 [Attributi di parametro](parameter-attributes.md)<br/>
-[Attributi di membro dati](data-member-attributes.md)  
+[Attributi di membro dati](data-member-attributes.md)

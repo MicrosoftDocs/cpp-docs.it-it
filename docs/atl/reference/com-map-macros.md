@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 057652eaf1f188cfd61dcfa4a0d433a43ef8c56c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028051"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068892"
 ---
 # <a name="com-map-macros"></a>Macro di mappa COM
 
@@ -31,7 +31,7 @@ Queste macro definiscono mappe dell'interfaccia COM.
 |||
 |-|-|
 |[BEGIN_COM_MAP](#begin_com_map)|Contrassegna l'inizio delle voci della mappa dell'interfaccia COM.|
-|[END_COM_MAP](#end_com_map)|Contrassegna la fine delle voci della mappa dell'interfaccia COM.|  
+|[END_COM_MAP](#end_com_map)|Contrassegna la fine delle voci della mappa dell'interfaccia COM.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -52,7 +52,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="remarks"></a>Note
 
-[CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) restituisce solo i puntatori per le interfacce nella mappa COM. Avviare la mappa dell'interfaccia con la macro BEGIN_COM_MAP, aggiungere le voci per ognuna delle interfacce con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o una delle relative varianti e completare la mappa con il [END_COM_MAP](#end_com_map) macro.  
+[CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) restituisce solo i puntatori per le interfacce nella mappa COM. Avviare la mappa dell'interfaccia con la macro BEGIN_COM_MAP, aggiungere le voci per ognuna delle interfacce con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o una delle relative varianti e completare la mappa con il [END_COM_MAP](#end_com_map) macro.
 
 ### <a name="example"></a>Esempio
 

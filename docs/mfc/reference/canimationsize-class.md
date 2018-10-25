@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 974bf49b4315095a2103c50bfb81cc5e164273d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2c930c3e56d1b4c17ec2f9fdd1d81a98d6504b62
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433172"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065109"
 ---
 # <a name="canimationsize-class"></a>Classe CAnimationSize
 
@@ -136,7 +136,6 @@ Costruisce un oggetto di dimensioni di animazione.
 
 ```
 CAnimationSize();
-
 
 CAnimationSize(
     const CSize& szDefault,

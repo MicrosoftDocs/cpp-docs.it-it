@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440290"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077530"
 ---
 # <a name="cpen-class"></a>CPen (classe)
 
@@ -92,12 +92,10 @@ Costruisce un oggetto `CPen`.
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ La seconda versione del `CPen` costruttore specifica una combinazione di tipo, s
 
 - PS_COSMETIC crea un oggetto pen cosmetico.
 
-     La seconda versione del `CPen` costruttore aggiunge gli stili di penna seguenti per *nPenStyle*:
+   La seconda versione del `CPen` costruttore aggiunge gli stili di penna seguenti per *nPenStyle*:
 
 - PS_ALTERNATE crea una penna che consente di impostare gli altri pixel. (Questo stile è applicabile solo per penne cosmetiche).
 
 - PS_USERSTYLE crea una penna che usa una matrice di stile forniti dall'utente.
 
-     L'estremità di chiusura può essere uno dei valori seguenti:
+   L'estremità di chiusura può essere uno dei valori seguenti:
 
 - Delimitatori finali PS_ENDCAP_ROUND sono arrotondati.
 
@@ -146,7 +144,7 @@ La seconda versione del `CPen` costruttore specifica una combinazione di tipo, s
 
 - Delimitatori finali PS_ENDCAP_FLAT sono fissi.
 
-     Il join può essere uno dei valori seguenti:
+   Il join può essere uno dei valori seguenti:
 
 - Crea un join PS_JOIN_BEVEL sono un effetto tridimensionale.
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

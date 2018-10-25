@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7eedad2e1efb72d85da893764fbd1201b9ac4b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1e038cc779f2a007d680eb8b2577881a55b81d4c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417280"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076672"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Classe CDataRecoveryHandler
 
@@ -234,7 +234,6 @@ CDataRecoveryHandler(
 ### <a name="remarks"></a>Note
 
 Il framework MFC crea automaticamente un `CDataRecoveryHandler` oggetto per l'applicazione quando si usa la **nuovo progetto** procedura guidata. A meno che non si sta personalizzando il comportamento di recupero di dati o Gestione riavvio, non è necessario creare un `CDataRecoveryHandler` oggetto.
-
 
 ##  <a name="createdocumentinfo"></a>  CDataRecoveryHandler::CreateDocumentInfo
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1867f044c143fc0e5fbb06705bf45b8fa729a5cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068970"
 ---
 # <a name="application-information-and-management"></a>Informazioni sull'applicazione e gestione
 
@@ -61,8 +61,6 @@ La libreria Microsoft Foundation Class offre le seguenti funzioni globali che co
 |[AfxSocketInit](#afxsocketinit)|Chiamato in un `CWinApp::InitInstance` sottoposto a override per inizializzare i socket di Windows.|
 |[AfxUserToolsManager](#afxusertoolsmanager)|Puntatore a globale [gestore strumenti utente](cusertoolsmanager-class.md).|
 |[AfxWinInit](#afxwininit)|Chiamato da MFC-fornito `WinMain` funzione, come parte del [CWinApp](../../mfc/reference/cwinapp-class.md) l'inizializzazione di un'applicazione basata su GUI per l'inizializzazione di MFC. Deve essere chiamato direttamente per le applicazioni console che usano MFC.|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -145,6 +143,7 @@ Puntatore a globale [manager di menu di scelta rapida](ccontextmenumanager-class
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
+
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxcontextmenumanager. h
@@ -152,7 +151,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="see-also"></a>Vedere anche
 
 [Classe CContextMenuManager](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -190,6 +188,7 @@ Usare `AfxFindResourceHandle` per esaminare la catena di risorse e individuare u
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *lpszName*<br/>
@@ -471,6 +470,7 @@ Determina se la finestra specificata è un oggetto frame esteso.
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *pWnd*<br/>
@@ -514,6 +514,7 @@ Determina se la finestra specificata è un oggetto della barra degli strumenti.
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *pWnd*<br/>
@@ -536,7 +537,6 @@ Questo metodo restituisce `TRUE` se *pWnd* deriva da `CMFCToolBar`. Questo metod
 [Classe CWnd](cwnd-class.md)<br/>
 [Classe CMFCToolBar](cmfctoolbar-class.md)
 
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Puntatore a globale [gestore della tastiera](ckeyboardmanager-class.md).
@@ -546,6 +546,7 @@ Puntatore a globale [gestore della tastiera](ckeyboardmanager-class.md).
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
+
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxkeyboardmanager.h
@@ -554,7 +555,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [Macro, funzioni globali e variabili globali](mfc-macros-and-globals.md)<br/>
 [Classe CKeyboardManager](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -618,6 +618,7 @@ Puntatore a globale [manager di menu tear-off](cmenutearoffmanager-class.md).
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
+
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxmenutearoffmanager.h
@@ -635,6 +636,7 @@ Puntatore a globale [gestore mouse](cmousemanager-class.md).
 ```
 CMouseManager* afxMouseManager;
 ```
+
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxmousemanager.h
@@ -642,8 +644,6 @@ CMouseManager* afxMouseManager;
 ### <a name="see-also"></a>Vedere anche
 
 [Classe CMouseManager](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -843,7 +843,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="see-also"></a>Vedere anche
 
 [Classe CUserToolsManager](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 

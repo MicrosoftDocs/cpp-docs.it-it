@@ -1,7 +1,7 @@
 ---
 title: Uso di più funzioni di accesso in un set di righe | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808459"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071043"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilizzo di più funzioni di accesso per un rowset
 
@@ -37,7 +37,7 @@ Esistono tre scenari di base in cui è necessario utilizzare più funzioni di ac
 
 - **Prestazioni.** In questo scenario, uno o più colonne hanno una grande quantità di dati, ad esempio, grafica, file audio o video. Ogni volta che si sposta in una riga, probabilmente non si desidera recuperare la colonna con il file di dati di grandi dimensioni, in quanto tale operazione così potrebbe rallentare le prestazioni dell'applicazione.
 
-   È possibile configurare le funzioni di accesso separati in cui la prima funzione di accesso contiene tutte le colonne ad eccezione di quello con grandi quantità di dati e recupera i dati da queste colonne automaticamente. la prima funzione di accesso è la funzione di accesso automatico. La seconda funzione di accesso recupera solo la colonna che contiene dati di grandi dimensioni, ma non recupera automaticamente i dati da questa colonna. È possibile avere altri metodi di recupero di dati di grandi dimensioni su richiesta o aggiornare.
+   È possibile configurare le funzioni di accesso separati in cui la prima funzione di accesso contiene tutte le colonne ad eccezione di quello con grandi quantità di dati e recupera i dati da queste colonne automaticamente. la prima funzione di accesso è la funzione di accesso automatico. La seconda funzione di accesso recupera solo le colonne contenenti i dati di grandi dimensioni, ma non recupera automaticamente i dati da questa colonna. È possibile avere altri metodi di recupero di dati di grandi dimensioni su richiesta o aggiornare.
 
    - Funzione di accesso 0 è automatica; Recupera tutte le colonne ad eccezione di quello con dati di grandi dimensioni.
 
@@ -45,7 +45,7 @@ Esistono tre scenari di base in cui è necessario utilizzare più funzioni di ac
 
    Usare l'argomento automatica per specificare se la funzione di accesso è una funzione di accesso automatico.
 
-- **Più colonne di ISequentialStream.** In questo scenario, è necessario più di una colonna contenente `ISequentialStream` dei dati. Tuttavia, ogni funzione di accesso è limitato a una `ISequentialStream` flusso di dati. Per risolvere questo problema, configurare le funzioni di accesso diversi, ognuno dei quali dispone uno `ISequentialStream` puntatore.
+- **Più colonne di ISequentialStream.** In questo scenario, avere più di un'azienda di colonna `ISequentialStream` dei dati. Tuttavia, ogni funzione di accesso è limitato a una `ISequentialStream` flusso di dati. Per risolvere questo problema, configurare le funzioni di accesso diversi, ognuno dei quali dispone uno `ISequentialStream` puntatore.
 
 In genere creano funzioni di accesso usando il [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) e [END_ACCESSOR](../../data/oledb/end-accessor.md) macro. È anche possibile usare la [db_accessor](../../windows/db-accessor.md) attributo. (Le funzioni di accesso sono descritte dettagliatamente nella [record utente](../../data/oledb/user-records.md).) Le macro o l'attributo specifica se una funzione di accesso è una funzione di accesso non automatico o automatica:
 

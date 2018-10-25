@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b10004551a594d6f969ffaf7893cd2e7efe2d76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bc91a98d1909245e09268cc7129084392a4c096
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396556"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076256"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Classe CMFCRibbonCheckBox
 
@@ -66,10 +66,10 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 |[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(Esegue l'override [cmfcribbonbutton:: Getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
 |[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(Esegue l'override [cmfcribbonbutton:: Getintermediatesize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|
 |[CMFCRibbonCheckBox::GetRegularSize](#getregularsize)|(Esegue l'override [cmfcribbonbutton:: Getregularsize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
-|[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|Esegue l'override`CMFCRibbonButton::IsDrawTooltipImage`.|
+|[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|Esegue l'override di `CMFCRibbonButton::IsDrawTooltipImage`.|
 |[CMFCRibbonCheckBox::OnDraw](#ondraw)|(Esegue l'override [cmfcribbonbutton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
 |[CMFCRibbonCheckBox::OnDrawMenuImage](#ondrawmenuimage)|(Esegue l'override [cmfcribbonbaseelement:: Ondrawmenuimage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
-|[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|Esegue l'override`CMFCRibbonButton::OnDrawOnList`.|
+|[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|Esegue l'override di `CMFCRibbonButton::OnDrawOnList`.|
 |[CMFCRibbonCheckBox::SetACCData](#setaccdata)|(Esegue l'override [cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
 ## <a name="remarks"></a>Note
@@ -227,7 +227,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CDC** puntatore a CDC associati con la casella di controllo.
+[in] *CDC&#42;*<br/>
+Puntatore a CDC associati con la casella di controllo.
 
 *CRect*<br/>
 [in] Oggetto `CRect` oggetto che specifica il rettangolo in cui disegnare l'immagine del menu.

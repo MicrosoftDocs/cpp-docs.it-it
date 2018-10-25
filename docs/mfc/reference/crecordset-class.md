@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c86efacf7211415bfdc2936a736d78e29dc419bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423130"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076399"
 ---
 # <a name="crecordset-class"></a>Classe CRecordset
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ Ottiene informazioni sui campi del recordset.
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ Accettare il valore predefinito, AFX_DB_USE_DEFAULT_TYPE o usare uno dei seguent
 
 - `CRecordset::forwardOnly` Recordset di sola lettura con solo scorrimento in avanti.
 
-     Per la `CRecordset`, il valore predefinito è `CRecordset::snapshot`. Il meccanismo di valore predefinito consente l'interazione tra le procedure guidate di Visual C++ e `CRecordset` di ODBC e `CDaoRecordset` di DAO le cui impostazione predefinite sono diverse.
+   Per la `CRecordset`, il valore predefinito è `CRecordset::snapshot`. Il meccanismo di valore predefinito consente l'interazione tra le procedure guidate di Visual C++ e `CRecordset` di ODBC e `CDaoRecordset` di DAO le cui impostazione predefinite sono diverse.
 
 Per altre informazioni su questi tipi di recordset, vedere l'articolo [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). Per informazioni correlate, vedere l'articolo "Usando blocchi e i cursori scorrevoli" in Windows SDK.
 
@@ -1613,7 +1609,7 @@ Quando si chiama `Open`, una query, in genere un linguaggio SQL **selezionare** 
 
 La procedura normale consiste nel passare NULL per `Open`; in questo caso `Open` chiamate [GetDefaultSQL](#getdefaultsql). Se si usa un oggetto derivato `CRecordset` classe `GetDefaultSQL` fornisce i nomi di tabella specificati in ClassWizard. Nel parametro `lpszSQL` è invece possibile specificare altre informazioni.
 
-Qualsiasi elemento passato, `Open` costruisce una stringa SQL finale per la query (la stringa può contenere SQL **in cui** e **ORDER BY** clausole aggiunto al `lpszSQL` stringa è stato passato), quindi viene eseguita la query. È possibile esaminare la stringa costruita chiamando [GetSQL](#getsql) dopo aver chiamato *`Open`. Per altre informazioni sul modo in cui un'istruzione SQL del recordset e Seleziona record, vedere l'articolo [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Qualsiasi elemento passato, `Open` costruisce una stringa SQL finale per la query (la stringa può contenere SQL **in cui** e **ORDER BY** clausole aggiunto al `lpszSQL` stringa è stato passato), quindi viene eseguita la query. È possibile esaminare la stringa costruita chiamando [GetSQL](#getsql) dopo aver chiamato `Open`. Per altre informazioni sul modo in cui un'istruzione SQL del recordset e Seleziona record, vedere l'articolo [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 I membri dei dati di campo della classe recordset sono associati alle colonne dei dati selezionati. Se vengono restituiti record, il primo di essi diventa il record corrente.
 

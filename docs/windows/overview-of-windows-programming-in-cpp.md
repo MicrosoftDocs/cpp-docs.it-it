@@ -13,20 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
-ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
+ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347228"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073532"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
 
 È possibile usare Visual C++ per scrivere vari tipi di programmi in esecuzione su un PC Windows (x x86, x64 o ARM), in un server di Windows, nel cloud o in Xbox. I programmi in C++ ben scritti sono queste qualità:
+
 - efficiente nel caso di requisiti di memoria
-- conveniente in termini di consumo di energia 
+- conveniente in termini di consumo di energia
 - in grado di sfruttare al meglio dei dispositivi multicore o many-core
-- in grado di eseguire attività generali di elaborazione nell'unità di elaborazione grafica (GPGPU)  
+- in grado di eseguire attività generali di elaborazione nell'unità di elaborazione grafica (GPGPU)
 - è possibile sfruttare altri recenti progressi nell'hardware.
 
 Esistono molte ampie categorie di app di Windows che è possibile sviluppare con Visual C++. Queste categorie hanno modelli di programmazione diversi o modelli di app, che sono state introdotte nel corso degli anni. Ogni modello Usa diverse librerie e API per fornire l'accesso alla piattaforma e creare interfacce utente, ad esempio le finestre di dialogo. La libreria standard C++ nonché librerie di terze parti sono utilizzabile in una qualsiasi di queste categorie, con alcune restrizioni per la piattaforma UWP.
@@ -98,7 +99,7 @@ Le librerie Microsoft includono:
 
 - Runtime di concorrenza: una libreria che semplifica le attività di programmazione asincrona e in parallelo per dispositivi multicore e many-core. Per altre informazioni, vedere [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
-Anche molti scenari di programmazione Windows richiedono Windows SDK, che include i file di intestazione che garantiscono l'accesso ai componenti del sistema operativo Windows. Per impostazione predefinita, Visual Studio installa il SDK di Windows come componente del carico di lavoro Desktop C++, che permette lo sviluppo di App di Windows universale. Per sviluppare le app UWP, è necessaria la versione di Windows 10 di Windows SDK. Per informazioni, vedere [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Per altre informazioni su Windows SDK per versioni precedenti di Windows, vedere la [archivio SDK Windows](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
+Anche molti scenari di programmazione Windows richiedono Windows SDK, che include i file di intestazione che garantiscono l'accesso ai componenti del sistema operativo Windows. Per impostazione predefinita, Visual Studio installa il SDK di Windows come componente del carico di lavoro Desktop C++, che permette lo sviluppo di App di Windows universale. Per sviluppare le app UWP, è necessaria la versione di Windows 10 di Windows SDK. Per informazioni, vedere [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Per altre informazioni su Windows SDK per versioni precedenti di Windows, vedere la [archivio SDK Windows](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
 **Programmare file (x86) \Windows Kit** è il percorso predefinito per tutte le versioni del SDK di Windows installate.
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a37f79851df043a5473c82b514b7e85f418f1b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446549"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067917"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Routine di convalida dei dati della finestra di dialogo standard
 
@@ -47,8 +47,6 @@ Questo argomento elenca le routine di convalida (DDV) di dati di finestra di dia
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Verifica di un valore di controllo specificato non superi una determinata **UINT** intervallo.|
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Verifica di che un valore di controllo specificato è compreso tra due valori specificati.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Verifica di un valore di controllo specificato non superi una determinata **ULONGLONG** intervallo.|
-
-
 
 ##  <a name="ddv_maxchars"></a>  DDV_MaxChars
 
@@ -552,6 +550,7 @@ Chiamare `DDV_MinMaxUnsigned` per verificare che il valore nel controllo associa
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *pDX*<br/>
@@ -579,6 +578,4 @@ Per altre informazioni sulle DDV, vedere [convalida e DDX](../dialog-data-exchan
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
 [DDX_Slider](#ddx_slider)<br/>
 [DDX_FieldSlider](#ddx_fieldslider)
-
-
 

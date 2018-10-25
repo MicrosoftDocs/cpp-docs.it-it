@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be34fa84a05d329d26d1bc4aaacbed0c2b0a76e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3093ca60b222512e517400f478fc9d635a6f867
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409194"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073773"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funzioni di callback utilizzate da MFC
 
@@ -117,7 +117,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 Identifica il contesto di dispositivo.
 
-*Codice*<br/>
+*codice*<br/>
 Specifica se si è verificato un errore. È 0 se si è verificato alcun errore. È SP_OUTOFDISK Print Manager è attualmente spazio su disco insufficiente e più spazio su disco sarà disponibile se l'applicazione resta in attesa. Se *codice* è SP_OUTOFDISK, l'applicazione non è necessario interrompere il processo di stampa. Se non è presente, deve restituire alla gestione stampa chiamando il `PeekMessage` o `GetMessage` funzione Windows.
 
 ### <a name="return-value"></a>Valore restituito
@@ -127,7 +127,6 @@ Il valore restituito della funzione del gestore di interruzione è diverso da ze
 ### <a name="remarks"></a>Note
 
 Il nome effettivo deve essere esportato come descritto nella sezione Osservazioni di [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
-
 
 ## <a name="see-also"></a>Vedere anche
 

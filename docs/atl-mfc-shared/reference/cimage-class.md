@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a1c27d20970b8e8634e8438c25733fd90a3ad632
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890660"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064797"
 ---
 # <a name="cimage-class"></a>CImage (classe)
 
@@ -172,7 +172,7 @@ Per determinare se un oggetto bitmap associata è una sezione DIB, chiamare [IsD
 
 ## <a name="example"></a>Esempio
 
-```cpp  
+```cpp
 // Get a CDC for the image
 CDC* pDC = CDC::FromHandle(m_myImage.GetDC());
 
@@ -181,19 +181,19 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```
 
-Quando si usa `CImage` in un progetto MFC, si noti che le funzioni membro nel progetto prevedono un puntatore a un [CBitmap](../../mfc/reference/cbitmap-class.md) oggetto. Se si desidera utilizzare `CImage` con tali funzioni, ad esempio [CMenu:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), usare [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), passarlo il `CImage` HBITMAP e utilizzare l'oggetto restituito `CBitmap*`.  
+Quando si usa `CImage` in un progetto MFC, si noti che le funzioni membro nel progetto prevedono un puntatore a un [CBitmap](../../mfc/reference/cbitmap-class.md) oggetto. Se si desidera utilizzare `CImage` con tali funzioni, ad esempio [CMenu:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), usare [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), passarlo il `CImage` HBITMAP e utilizzare l'oggetto restituito `CBitmap*`.
 
 ## <a name="example"></a>Esempio
 
-```cpp  
+```cpp
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 {
     UNREFERENCED_PARAMETER(nFlags);
-    
+
     CBitmap* pBitmap = CBitmap::FromHandle(m_myImage);
     m_pmenuPop->AppendMenu(0, ID_BMPCOMMAND, pBitmap);
     ClientToScreen(&point);
-    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x, 
+    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x,
     point.y, this);
 }
 ```
@@ -203,8 +203,8 @@ Tramite `CImage`, si ha accesso ai bit effettivo di una sezione DIB. È possibil
 È possibile usare `CImage` da MFC o ATL.
 
 > [!NOTE]
-> Quando si crea un progetto mediante `CImage`, è necessario definire `CString` prima di includere `atlimage.h`. Se il progetto usa ATL senza MFC, includere `atlstr.h` prima di includere `atlimage.h`. Se il progetto Usa MFC (o se si tratta di un progetto ATL grazie al supporto MFC), includere `afxstr.h` prima di includere `atlimage.h`.  
->   
+> Quando si crea un progetto mediante `CImage`, è necessario definire `CString` prima di includere `atlimage.h`. Se il progetto usa ATL senza MFC, includere `atlstr.h` prima di includere `atlimage.h`. Se il progetto Usa MFC (o se si tratta di un progetto ATL grazie al supporto MFC), includere `afxstr.h` prima di includere `atlimage.h`.<br/>
+> <br/>
 > Analogamente, è necessario includere `atlimage.h` prima di includere `atlimpl.cpp`. Per eseguire questa operazione con facilità, includere `atlimage.h` nella `stdafx.h`.
 
 ## <a name="requirements"></a>Requisiti
@@ -302,7 +302,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 La fusione alfa bitmap supportino la sfumatura di colore in base al pixel.
 
-Quando *bBlendOp* è impostata sul valore predefinito di AC_SRC_OVER, la bitmap di origine viene posizionata sopra la bitmap di destinazione in base ai valori alfa dei pixel origine.  
+Quando *bBlendOp* è impostata sul valore predefinito di AC_SRC_OVER, la bitmap di origine viene posizionata sopra la bitmap di destinazione in base ai valori alfa dei pixel origine.
 
 ##  <a name="attach"></a>  CImage::Attach
 
@@ -506,9 +506,9 @@ TRUE se ha esito positivo. In caso contrario, FALSE.
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente crea una bitmap di 100 x 100 pixel, con 16 bit da codificare ogni pixel. In un pixel a 16 bit specificato, bits 0-3 codificare il componente rossa, bits 4-7 codificare verde e 8 a 11 bit codificano il blu. I restanti bit 4 sono inutilizzati.  
+L'esempio seguente crea una bitmap di 100 x 100 pixel, con 16 bit da codificare ogni pixel. In un pixel a 16 bit specificato, bits 0-3 codificare il componente rossa, bits 4-7 codificare verde e 8 a 11 bit codificano il blu. I restanti bit 4 sono inutilizzati.
 
-```cpp  
+```cpp
 DWORD adwBitmasks[3] = { 0x0000000f, 0x000000f0, 0x00000f00 };
 m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
@@ -725,16 +725,15 @@ Una matrice di GUID, con ogni elemento corrispondente a uno dei tipi di file nel
 *pszAllFilesDescription*<br/>
 Se questo parametro non è NULL, la stringa di filtro sarà necessario un ulteriore filtro all'inizio dell'elenco. Questo filtro avrà il valore corrente del *pszAllFilesDescription* per la relativa descrizione e accetta i file di qualsiasi estensione supportati da qualsiasi altra utilità di esportazione nell'elenco.
 
-Ad esempio:  
+Ad esempio:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any exporter.
 CImage::GetExporterFilterString(
-    strExporters, aguidFileTypes, 
+    strExporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 Set di flag di bit che specifica quali tipi di file da escludere dall'elenco. Flag consentiti sono:
@@ -821,16 +820,15 @@ Una matrice di GUID, con ogni elemento corrispondente a uno dei tipi di file nel
 *pszAllFilesDescription*<br/>
 Se questo parametro non è NULL, la stringa di filtro sarà necessario un ulteriore filtro all'inizio dell'elenco. Questo filtro avrà il valore corrente del *pszAllFilesDescription* per la relativa descrizione e accetta i file di qualsiasi estensione supportati da qualsiasi altra utilità di esportazione nell'elenco.
 
-Ad esempio:  
+Ad esempio:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any importer.
 CImage::GetImporterFilterString(
-    strImporters, aguidFileTypes, 
+    strImporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 Set di flag di bit che specifica quali tipi di file da escludere dall'elenco. Flag consentiti sono:
@@ -1360,7 +1358,7 @@ Imposta i valori di colore (RGB) di rosso, verdi, blu per un intervallo delle vo
 
 ```
 void SetColorTable(
-    UINT iFirstColor, 
+    UINT iFirstColor,
     UINT nColors,
     const RGBQUAD* prgbColors) throw();
 ```
@@ -1427,7 +1425,7 @@ L'indice di un colore nella tavolozza dei colori.
 Imposta i pixel nei percorsi specificati da *x* e *y* con i colori indicati dal *r*, *g*, e *b*, in una di colore rosso, verde, blu immagine (RGB).
 
 ```
-void SetPixelRGB(  
+void SetPixelRGB(
     int x,
     int y,
     BYTE r,
@@ -1639,12 +1637,12 @@ TRUE se ha esito positivo, in caso contrario, FALSE.
 
 `TransparentBlt` è supportato per le bitmap di origine di 4 bit per pixel e a 8 bit per pixel. Uso [CImage::AlphaBlend](#alphablend) per specificare le bitmap a 32 bit per pixel con la trasparenza.
 
-### <a name="example"></a>Esempio  
+### <a name="example"></a>Esempio
 
-```cpp  
-// Performs a transparent blit from the source image to the destination 
+```cpp
+// Performs a transparent blit from the source image to the destination
 // image using the images' current transparency settings
-BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage, 
+BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
        int xDest, int yDest, int nDestWidth, int nDestHeight)
 {
     HDC hDstDC = NULL;
@@ -1676,4 +1674,4 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)<br/>
 [Device-Independent Bitmap](/windows/desktop/gdi/device-independent-bitmaps)<br/>
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)

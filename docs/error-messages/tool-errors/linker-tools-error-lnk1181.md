@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa6ce8a1ca566fd3d585b5c457e1fb2829b0b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 787c6c35b698b5dce57c4aaf3acb4eca496ead95
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072161"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Errore degli strumenti del linker LNK1181
 
@@ -42,8 +42,6 @@ Per altre informazioni, vedere [file con estensione LIB come Input del Linker](.
 Un'altra possibile causa LNK1181 è un nome di file lungo con spazi vuoti non è stato racchiuso tra virgolette.  In tal caso, il linker riconosce solo un nome di file precede il primo spazio e si supponga quindi di un'estensione di file. obj.  La soluzione al problema consiste nel racchiudere il nome di file lunghi (nome del percorso, più file) racchiusi tra virgolette.
 
 La compilazione con il [/P (pre-elabora in un File)](../../build/reference/p-preprocess-to-a-file.md) opzione può comportare LNK1181 perché tale opzione non viene eseguita la creazione di file con estensione obj.
-
-
 
 ## <a name="see-also"></a>Vedere anche
 

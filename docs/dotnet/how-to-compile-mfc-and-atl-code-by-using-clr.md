@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09cfc38626cab785eb7fa1c34178aa28aa23dac6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382804"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069934"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Procedura: compilare codice MFC e ATL tramite /clr
 
@@ -40,7 +40,7 @@ In questo argomento viene illustrato come compilare programmi esistenti di MFC e
 
 1. Nel **proprietà progetto** finestra di dialogo espandere il nodo accanto a **le proprietà di configurazione** e selezionare **generale**. Nel riquadro di destra, sotto **impostazioni predefinite progetto**, impostare **supporto Common Language Runtime** al **supporto Common Language Runtime (/ Common Language Runtime)**.
 
-     Nel riquadro stesso, assicurarsi che **uso di MFC** è impostata su **Usa MFC in una DLL condivisa**.
+   Nel riquadro stesso, assicurarsi che **uso di MFC** è impostata su **Usa MFC in una DLL condivisa**.
 
 1. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Verificare che l'opzione **formato informazioni di Debug** è impostata su **/Zi Database di programma** (non **/ZI**).
 
@@ -60,7 +60,7 @@ In questo argomento viene illustrato come compilare programmi esistenti di MFC e
 
 1. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **intestazioni precompilate**. Impostare **Crea/Usa intestazione precompilata** al **non Usa intestazioni precompilate**.
 
-     In alternativa, nella **Esplora soluzioni**, fare doppio clic su stdafx. cpp e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
+   In alternativa, nella **Esplora soluzioni**, fare doppio clic su stdafx. cpp e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
 
 1. Per il file che contiene DllMain e qualsiasi chiama, in **Esplora soluzioni**, fare doppio clic su file e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Nel riquadro di destra, sotto **impostazioni predefinite progetto**, impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
 
@@ -84,7 +84,7 @@ In questo argomento viene illustrato come compilare programmi esistenti di MFC e
 
 1. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **intestazioni precompilate**. Impostare **Crea/Usa intestazione precompilata** al **non Usa intestazioni precompilate**.
 
-     In alternativa, nella **Esplora soluzioni**, fare doppio clic su stdafx. cpp e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
+   In alternativa, nella **Esplora soluzioni**, fare doppio clic su stdafx. cpp e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
 
 1. Per il file che contiene DllMain e qualsiasi chiama, in **Esplora soluzioni**, fare doppio clic su file e quindi fare clic su **proprietà**. Sotto **le proprietà di configurazione**, espandere il nodo accanto a **C/C++** e selezionare **generali**. Nel riquadro di destra, sotto **impostazioni predefinite progetto**, impostare **esegue la compilazione con supporto Common Language Runtime** al **supporto Common Language Runtime No**.
 

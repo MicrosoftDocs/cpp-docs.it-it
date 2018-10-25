@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070587"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077335"
 ---
 # <a name="this-pointer"></a>Puntatore this
 
@@ -32,7 +32,7 @@ Il **ciò** puntatore è un puntatore accessibile solo all'interno di funzioni m
 ## <a name="syntax"></a>Sintassi
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +181,7 @@ int main()
 
 Il tipo della **ciò** in un funzione membro è descritto dalla sintassi seguente, dove *cv-qualifier-list* è determinato dal dichiaratore di funzioni membro e può essere **const**oppure **volatile** (o entrambi), e *di tipo classe* è il nome della classe:
 
-*tipo di classe [cv-qualifier-list]* **\* const questo**
+*tipo di classe [cv-qualifier-list]* **&#42; const questo**
 
 In altre parole, **ciò** è sempre un puntatore const; non può essere riassegnato.  Il **const** oppure **volatile** qualificatori utilizzati nella dichiarazione di funzione membro si applicano all'istanza della classe a cui fa riferimento **questo** nell'ambito di tale funzione.
 

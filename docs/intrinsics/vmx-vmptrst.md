@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9cd2ebdbcf2ad2feb3b66412fbcd5687e85dce
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: b1014d41ea53405ea96ea5a3e19e627d72663f21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074943"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 
@@ -33,20 +33,21 @@ Contiene il puntatore alla struttura di controllo di una macchina virtuale corre
 ## <a name="syntax"></a>Sintassi
 
 ```
-void __vmx_vmptrst( 
-   unsigned __int64 *VmcsPhysicalAddress 
+void __vmx_vmptrst( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-[in] *`VmcsPhysicalAddress` l'indirizzo in cui è archiviato il puntatore VMCS corrente.
+*VmcsPhysicalAddress*<br/>
+[in] L'indirizzo in cui è archiviato il puntatore VMCS corrente.
 
 ## <a name="remarks"></a>Note
 
 Il puntatore VMCS è un indirizzo fisico a 64 bit.
 
-Il `__vmx_vmptrst` è equivalente alla funzione il `VMPTRST` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/articles/intel-sdm) sito.
+La funzione `__vmx_vmptrst` è equivalente alle `VMPTRST` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/articles/intel-sdm) sito.
 
 ## <a name="requirements"></a>Requisiti
 

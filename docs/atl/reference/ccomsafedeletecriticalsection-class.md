@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b9c82f1d9b4b1a46d134b94842fffe56f457afa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 939340a60d9448c6fac5f97c606a27182a2bb88b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068437"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>Classe CComSafeDeleteCriticalSection
 
@@ -118,7 +118,7 @@ Restituisce il risultato del [CComCriticalSection::Init](../../atl/reference/cco
 
 ##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock
 
-Chiama l'implementazione della classe base [blocco](ccomcriticalsection-class.md#lock).  
+Chiama l'implementazione della classe base [blocco](ccomcriticalsection-class.md#lock).
 
 ```
 HRESULT Lock();

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59689abec68fc6cff2a742bd4db97b58cd023af1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 91098a0a225519f9b657d9424872e99be0e86354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316263"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065538"
 ---
 # <a name="creating-a-menu-c"></a>Creazione di un Menu (C++)
 
@@ -37,8 +37,8 @@ ms.locfileid: "44316263"
 
 2. Selezionare la casella **Nuovo elemento** (il rettangolo che contiene "Digitare qui") nella barra dei menu.
 
-   ![Casella nuovo elemento nell'editor di menu](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-Casella Nuovo elemento
+   ![Casella nuovo elemento nell'editor di menu](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   Casella Nuovo elemento
 
 3. Digitare un nome per il nuovo menu, ad esempio "File".
 
@@ -46,8 +46,8 @@ Casella Nuovo elemento
 
    Dopo aver assegnato al nuovo menu un nome nella barra dei menu, la casella del nuovo elemento viene spostata verso destra (per consentire l'aggiunta di un altro menu) e un'altra casella del nuovo elemento viene visualizzata sotto il primo menu in modo da poter aggiungere i comandi di menu.
 
-   ![Casella nuovo elemento espansa](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-Casella del nuovo elemento con stato attivo spostato dopo aver digitato il nome del menu
+   ![Casella nuovo elemento espansa](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   Casella del nuovo elemento con stato attivo spostato dopo aver digitato il nome del menu
 
    > [!NOTE]
    > Per creare un singolo elemento menu sulla barra dei menu, impostare il **Popup** proprietà **False**.

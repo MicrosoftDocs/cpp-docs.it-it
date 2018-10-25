@@ -24,88 +24,88 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e850b5ebad231b07ce7d6c7dca79126a9b2ba15
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a4ea0536a8af87927521f88d888e19aa145f2c04
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072070"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 
-Una classe generica che consente di specificare le restrizioni per i set di righe dello schema.  
-  
+Una classe generica che consente di specificare le restrizioni per i set di righe dello schema.
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-template <class T, short nRestrictions, const GUID* pguid>  
-class CRestrictions : 
-   public CSchemaRowset <T, nRestrictions>  
-```  
-  
-### <a name="parameters"></a>Parametri  
+template <class T, short nRestrictions, const GUID* pguid>
+class CRestrictions :
+   public CSchemaRowset <T, nRestrictions>
+```
+
+### <a name="parameters"></a>Parametri
 
 *T*<br/>
-La classe utilizzata per la funzione di accesso.  
-  
+La classe utilizzata per la funzione di accesso.
+
 *nRestrictions*<br/>
-Il numero di colonne di restrizione per il set di righe dello schema.  
-  
+Il numero di colonne di restrizione per il set di righe dello schema.
+
 *pguid*<br/>
-Puntatore al GUID dello schema.  
+Puntatore al GUID dello schema.
 
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atldbsch. h 
-  
-## <a name="members"></a>Membri  
-  
-### <a name="methods"></a>Metodi  
-  
-|||  
-|-|-|  
-|[Apri](#open)|Restituisce un risultato impostate in base alle restrizioni fornito dall'utente.|   
+**Intestazione:** atldbsch. h
+
+## <a name="members"></a>Membri
+
+### <a name="methods"></a>Metodi
+
+|||
+|-|-|
+|[Apri](#open)|Restituisce un risultato impostate in base alle restrizioni fornito dall'utente.|
 
 ## <a name="open"></a> CRestrictions:: Open
 
-Restituisce un risultato impostate in base alle restrizioni fornito dall'utente.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Restituisce un risultato impostate in base alle restrizioni fornito dall'utente.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-HRESULT Open(const CSession& session,  
-   LPCTSTR lpszParam 1 = NULL,  
-   LPCTSTR lpszParam 2 = NULL,  
-   LPCTSTR lpszParam 3 = NULL,  
-   LPCTSTR lpszParam 4 = NULL,  
-   LPCTSTR lpszParam 5 = NULL,  
-   LPCTSTR lpszParam 6 = NULL,  
-   LPCTSTR lpszParam 7 = NULL,  
-   bool bBind = true);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+HRESULT Open(const CSession& session,
+   LPCTSTR lpszParam 1 = NULL,
+   LPCTSTR lpszParam 2 = NULL,
+   LPCTSTR lpszParam 3 = NULL,
+   LPCTSTR lpszParam 4 = NULL,
+   LPCTSTR lpszParam 5 = NULL,
+   LPCTSTR lpszParam 6 = NULL,
+   LPCTSTR lpszParam 7 = NULL,
+   bool bBind = true);
+```
+
+#### <a name="parameters"></a>Parametri
 
 *Sessione*<br/>
-[in] Specifica un oggetto sessione esistente utilizzato per la connessione all'origine dati.  
-  
+[in] Specifica un oggetto sessione esistente utilizzato per la connessione all'origine dati.
+
 *lpszParam*<br/>
-[in] Specifica le restrizioni nel set di righe dello schema.  
-  
+[in] Specifica le restrizioni nel set di righe dello schema.
+
 *bBind*<br/>
-[in] Specifica se associare automaticamente la mappa delle colonne. Il valore predefinito è **true**, in modo che la mappa delle colonne deve essere associato automaticamente. L'impostazione *bBind* al **false** impedisce l'associazione automatica del mapping di colonna in modo che è possibile associare manualmente. (Associazione manuale è di particolare interesse per gli utenti OLAP).  
-  
-### <a name="return-value"></a>Valore restituito  
+[in] Specifica se associare automaticamente la mappa delle colonne. Il valore predefinito è **true**, in modo che la mappa delle colonne deve essere associato automaticamente. L'impostazione *bBind* al **false** impedisce l'associazione automatica del mapping di colonna in modo che è possibile associare manualmente. (Associazione manuale è di particolare interesse per gli utenti OLAP).
 
-Uno dei valori di HRESULT standard.  
-  
-### <a name="remarks"></a>Note  
+### <a name="return-value"></a>Valore restituito
 
-È possibile specificare un massimo di sette restrizioni su un set di righe dello schema.  
-  
-Visualizzare [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) per informazioni sulle restrizioni definite in ogni set di righe dello schema.  
-  
-## <a name="see-also"></a>Vedere anche  
+Uno dei valori di HRESULT standard.
+
+### <a name="remarks"></a>Note
+
+È possibile specificare un massimo di sette restrizioni su un set di righe dello schema.
+
+Visualizzare [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) per informazioni sulle restrizioni definite in ogni set di righe dello schema.
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

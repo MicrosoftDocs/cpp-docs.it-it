@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430852"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076360"
 ---
 # <a name="cmultilock-class"></a>Classe CMultiLock
 
@@ -148,19 +148,19 @@ Se `Lock` ha esito negativo, restituisce - 1. Se ha esito positivo, verrà resti
 
 - Tra WAIT_OBJECT_0 e WAIT_OBJECT_0 + (numero di oggetti - 1)
 
-     Se *bWaitForAll* è TRUE, tutti gli oggetti vengono segnalati (disponibile). Se *bWaitForAll* è FALSE, il valore restituito - WAIT_OBJECT_0 è l'indice nella matrice di oggetti dell'oggetto che viene segnalato (disponibile).
+   Se *bWaitForAll* è TRUE, tutti gli oggetti vengono segnalati (disponibile). Se *bWaitForAll* è FALSE, il valore restituito - WAIT_OBJECT_0 è l'indice nella matrice di oggetti dell'oggetto che viene segnalato (disponibile).
 
 - WAIT_OBJECT_0 + (numero di oggetti)
 
-     Un evento specificato nella *dwWakeMask* è disponibile nella coda di input del thread.
+   Un evento specificato nella *dwWakeMask* è disponibile nella coda di input del thread.
 
 - Tra WAIT_ABANDONED_0 e WAIT_ABANDONED_0 + (numero di oggetti - 1)
 
-     Se *bWaitForAll* è TRUE, vengono segnalati tutti gli oggetti e almeno uno degli oggetti è un oggetto mutex abbandonato. Se *bWaitForAll* è FALSE, il valore restituito - WAIT_ABANDONED_0 è l'indice nella matrice di oggetti dell'oggetto mutex abbandonato che ha soddisfatto l'attesa.
+   Se *bWaitForAll* è TRUE, vengono segnalati tutti gli oggetti e almeno uno degli oggetti è un oggetto mutex abbandonato. Se *bWaitForAll* è FALSE, il valore restituito - WAIT_ABANDONED_0 è l'indice nella matrice di oggetti dell'oggetto mutex abbandonato che ha soddisfatto l'attesa.
 
 - WAIT_TIMEOUT
 
-     L'intervallo di timeout specificato nel *dwTimeOut* scaduto senza la successiva di attesa.
+   L'intervallo di timeout specificato nel *dwTimeOut* scaduto senza la successiva di attesa.
 
 ### <a name="remarks"></a>Note
 
@@ -174,7 +174,6 @@ Rilascia l'oggetto di sincronizzazione di proprietà `CMultiLock`.
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ La prima forma del `Unlock` tenta di sbloccare l'oggetto di sincronizzazione ges
 ## <a name="see-also"></a>Vedere anche
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

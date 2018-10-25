@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a346cf75a0afebcfdcb31259a0ba72d3a8f6c22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe5aa32a8d6cf0eecc1cc38e49643900bf34f9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397325"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066994"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Classe CMFCToolBarEditBoxButton
 
@@ -141,7 +141,7 @@ Per altre informazioni, vedere [procedura dettagliata: inserimento di controlli 
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari metodi nel `CMFCToolBarEditBoxButton` classe. Nell'esempio viene illustrato come specificare che un utente può estendere il pulsante durante la personalizzazione, specificare che venga visualizzato un bordo del pulsante quando un utente fa clic sul pulsante, impostare il testo nel controllo della casella di testo, specificare l'aspetto bidimensionale dei pulsanti della casella di modifica nella finestra di appli cazione e specificare lo stile di una barra degli strumenti di controllo casella di testo.
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCToolBarEditBoxButton` . Nell'esempio viene illustrato come specificare che un utente può estendere il pulsante durante la personalizzazione, specificare che venga visualizzato un bordo del pulsante quando un utente fa clic sul pulsante, impostare il testo nel controllo della casella di testo, specificare l'aspetto bidimensionale dei pulsanti della casella di modifica nella finestra di appli cazione e specificare lo stile di una barra degli strumenti di controllo casella di testo.
 
 [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]
 
@@ -703,6 +703,4 @@ Questo metodo imposta [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctool
 [Classe CEdit](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Procedura dettagliata: inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

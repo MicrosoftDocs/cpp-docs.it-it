@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cba3c15049c176b19f0da197d19017ae2aa699d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 297b457bdf2c70a75b9abdc433c87381fd115037
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067748"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -36,9 +36,9 @@ Non consente l'assegnazione a un membro dati.
 
 ## <a name="remarks"></a>Note
 
-Il **readonly** attributi di C++ ha la stessa funzionalità come la [readonly](/windows/desktop/Midl/readonly) attributo MIDL.
+L'attributo **readonly** di C++ ha la stessa funzionalità dell'attributo [readonly](/windows/desktop/Midl/readonly) di MIDL.
 
-Se si desidera impedire la modifica di un parametro del metodo, usare il [in](in-cpp.md) attributo.
+Se si vuole impedire la modifica di un parametro di metodo, usare l'attributo [in](in-cpp.md) .
 
 ## <a name="example"></a>Esempio
 
@@ -69,9 +69,9 @@ __interface IFireTabCtrl
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di membro dati](data-member-attributes.md)  
+[Attributi di membro dati](data-member-attributes.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31c47fa07375c587257bc979ac68b64381880398
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d31de803e1a867c7a9e509ced71eb3801d3946ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791164"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066838"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -53,7 +53,7 @@ Visualizzare [associabile](bindable.md) per un esempio di come usare **in**.
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|**retval**|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -62,4 +62,4 @@ Per altre informazioni sui contesti di attributi, vedere [contesti di attributi]
 [Attributi di metodo](method-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
 [ID](id.md)<br/>
-[out](out-cpp.md)  
+[out](out-cpp.md)

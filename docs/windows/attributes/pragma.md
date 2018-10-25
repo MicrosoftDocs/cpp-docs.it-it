@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d7f6b371db09fd5eac9d6ef7260df7d790c21df
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ac6b00387669f26bbd6cc02f8dd559199dd6bdd5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791183"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074176"
 ---
 # <a name="pragma"></a>pragma
 
@@ -70,10 +70,10 @@ __interface A
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)<br/>
-[pack](../../preprocessor/pack.md)  
+[pack](../../preprocessor/pack.md)

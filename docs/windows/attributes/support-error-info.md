@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c6bb07071efa162b5b33ae5f1dfe72ac7ea02e8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b0d86b31823ec31461f953c7cfc16a5774f215fd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791272"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067163"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 
@@ -41,9 +41,9 @@ L'identificatore dell'interfaccia che implementa `IErrorInfo`.
 
 ## <a name="remarks"></a>Note
 
-L'attributo **support_error_info** di C++ implementa il supporto per la restituzione di errori contestuali e dettagliati rilevati dall'oggetto di destinazione al client. Per l'oggetto supporti gli errori, i metodi del `IErrorInfo` interfaccia deve essere implementata dall'oggetto. Per altre informazioni, vedere [supporto di IDispatch e IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
+L'attributo **support_error_info** di C++ implementa il supporto per la restituzione di errori contestuali e dettagliati rilevati dall'oggetto di destinazione al client. Per l'oggetto supporti gli errori, i metodi del `IErrorInfo` interfaccia deve essere implementata dall'oggetto. Per altre informazioni, vedere [Supporto di IDispatch e IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
 
-Questo attributo aggiunge la [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) classe come classe di base per l'oggetto di destinazione. Ciò comporta un'implementazione predefinita di `ISupportErrorInfo` e può essere usato quando una singola interfaccia genera errori in un oggetto.
+Questo attributo aggiunge la classe [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) come classe base per l'oggetto di destinazione. Ciò comporta un'implementazione predefinita di `ISupportErrorInfo` e può essere usato quando una singola interfaccia genera errori in un oggetto.
 
 ## <a name="example"></a>Esempio
 
@@ -80,9 +80,9 @@ class CMyClass
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi COM](com-attributes.md)<br/>
-[Attributi di classe](class-attributes.md)  
+[Attributi di classe](class-attributes.md)

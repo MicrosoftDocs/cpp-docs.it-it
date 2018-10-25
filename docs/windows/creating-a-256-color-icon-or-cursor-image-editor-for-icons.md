@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d6e3af00bfe906a1954f7fc1d2b0af1ea52945e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dcd9edb155afa9138778f1d464a5e59a20dd7ffd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415915"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070031"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Creazione di un cursore o di un'icona a 256 colori (Editor di immagini per le icone)
 
@@ -34,7 +34,7 @@ Usando il **immagine** editor, icone e cursori possono essere con dimensioni lar
 
 1. Nelle [visualizzazione di risorse](../windows/resource-view-window.md), fare doppio clic sul file RC, quindi scegliere **Inserisci risorsa** dal menu di scelta rapida. (Se hai già una risorsa immagine esistente nel file RC, ad esempio un cursore, è possibile semplicemente fare doppio clic il **cursore** cartella e selezionare **Inserisci cursore** dal menu di scelta rapida.)
 
-   > [!NOTE] 
+   > [!NOTE]
    > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 2. Nel [finestra di dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md), selezionare **icona** oppure **cursore** e fare clic su **New**.

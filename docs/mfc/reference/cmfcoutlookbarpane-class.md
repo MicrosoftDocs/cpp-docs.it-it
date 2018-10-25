@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08055d748bb61101e80df31b272e847db045164c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2d468ded9db1d21fd19bc553ed2a0c3227725a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075554"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Classe CMFCOutlookBarPane
 
@@ -88,12 +88,12 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |[CMFCOutlookBarPane::ClearAll](#clearall)|Libera le risorse usate per le immagini nel riquadro della barra di Outlook.|
 |[CMFCOutlookBarPane::Create](#create)|Crea il riquadro della barra di Outlook.|
 |`CMFCOutlookBarPane::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
-|`CMFCOutlookBarPane::Dock`|Chiamato dal framework per ancorare il riquadro barra di Outlook. Esegue l'override`CPane::Dock`.|
+|`CMFCOutlookBarPane::Dock`|Chiamato dal framework per ancorare il riquadro barra di Outlook. Esegue l'override di `CPane::Dock`.|
 |[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|Specifica se le frecce di scorrimento nel riquadro della barra di Outlook passare l'elenco dei pulsanti dalla pagina o dal pulsante.|
 |[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Restituisce il colore di testo normale (non selezionato) del riquadro della barra di Outlook.|
 |`CMFCOutlookBarPane::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|
 |[CMFCOutlookBarPane::IsBackgroundTexture](#isbackgroundtexture)|Determina se è presente un'immagine di sfondo caricata per il riquadro della barra di Outlook.|
-|`CMFCOutlookBarPane::IsChangeState`|Determina se un riquadro mobile può essere ancorato. Esegue l'override`CPane::IsChangeState`.|
+|`CMFCOutlookBarPane::IsChangeState`|Determina se un riquadro mobile può essere ancorato. Esegue l'override di `CPane::IsChangeState`.|
 |[CMFCOutlookBarPane::IsDrawShadedHighlight](#isdrawshadedhighlight)|Determina se il bordo del pulsante è ombreggiata quando un pulsante è evidenziato e viene visualizzata un'immagine di sfondo.|
 |`CMFCOutlookBarPane::OnBeforeFloat`|Chiamato dal framework quando è su un riquadro in float. (Esegue l'override [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|
 |[CMFCOutlookBarPane::RemoveButton](#removebutton)|Rimuove il pulsante con un ID di comando.|
@@ -104,7 +104,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |[CMFCOutlookBarPane::SetExtraSpace](#setextraspace)|Imposta il numero di pixel di spaziatura interna usato intorno a pulsanti nel riquadro della barra di Outlook.|
 |[CMFCOutlookBarPane::SetTextColor](#settextcolor)|Imposta i colori del testo normale ed evidenziato nel riquadro della barra di Outlook.|
 |[CMFCOutlookBarPane::SetTransparentColor](#settransparentcolor)|Imposta il colore trasparente per il riquadro della barra di Outlook.|
-|`CMFCOutlookBarPane::SmartUpdate`|Utilizzato internamente per aggiornare la barra di Outlook. Esegue l'override`CMFCToolBar::SmartUpdate`.|
+|`CMFCOutlookBarPane::SmartUpdate`|Utilizzato internamente per aggiornare la barra di Outlook. Esegue l'override di `CMFCToolBar::SmartUpdate`.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
@@ -159,13 +159,11 @@ BOOL AddButton(
     UINT iIdCommand,
     int iInsertAt=-1);
 
-
 BOOL AddButton(
     UINT uiImage,
     UINT uiLabel,
     UINT iIdCommand,
     int iInsertAt=-1);
-
 
 BOOL AddButton(
     LPCTSTR szBmpFileName,
@@ -173,13 +171,11 @@ BOOL AddButton(
     UINT iIdCommand,
     int iInsertAt=-1);
 
-
 BOOL AddButton(
     HBITMAP hBmp,
     LPCTSTR lpszLabel,
     UINT iIdCommand,
     int iInsertAt=-1);
-
 
 BOOL AddButton(
     HICON hIcon,

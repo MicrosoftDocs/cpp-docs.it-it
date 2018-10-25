@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082547"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069815"
 ---
 # <a name="postfix-expressions"></a>Espressioni in forma suffissa
 
@@ -41,7 +41,7 @@ Le espressioni di suffisso sono costituite da espressioni primarie o da espressi
 Nella sintassi seguente vengono descritte le possibili espressioni di suffisso:
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ Quando viene chiamata una funzione, vengono eseguite le seguenti attività:
     Func( 7 );          // Execute function call
     ```
 
-     Le inizializzazioni concettuali precedenti alla chiamata sono:
+   Le inizializzazioni concettuali precedenti alla chiamata sono:
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     Si noti che l'inizializzazione viene eseguita come se si usasse la sintassi del segno di uguale, anziché la sintassi di parentesi. Prima di passare il valore alla funzione, viene effettuata una copia di `i`. (Per altre informazioni, vedere [inizializzatori](../cpp/initializers.md) e [conversioni](../cpp/user-defined-type-conversions-cpp.md)).
+   Si noti che l'inizializzazione viene eseguita come se si usasse la sintassi del segno di uguale, anziché la sintassi di parentesi. Prima di passare il valore alla funzione, viene effettuata una copia di `i`. (Per altre informazioni, vedere [inizializzatori](../cpp/initializers.md) e [conversioni](../cpp/user-defined-type-conversions-cpp.md)).
 
-     Pertanto, se il prototipo di funzione (dichiarazione) chiama un argomento di tipo **lungo**, e se il programma chiamante fornisce un argomento di tipo effettivo **int**, l'argomento effettivo viene alzato di livello con un conversione del tipo standard digitare **lungo** (vedere [conversioni Standard](../cpp/standard-conversions.md)).
+   Pertanto, se il prototipo di funzione (dichiarazione) chiama un argomento di tipo **lungo**, e se il programma chiamante fornisce un argomento di tipo effettivo **int**, l'argomento effettivo viene alzato di livello con un conversione del tipo standard digitare **lungo** (vedere [conversioni Standard](../cpp/standard-conversions.md)).
 
-     Fornire un argomento effettivo per il quale non esistono conversioni standard o definite dall'utente al tipo dell'argomento formale costituisce un errore.
+   Fornire un argomento effettivo per il quale non esistono conversioni standard o definite dall'utente al tipo dell'argomento formale costituisce un errore.
 
-     Nel caso degli argomenti effettivi di tipo classe, l'argomento formale viene inizializzato chiamando il costruttore della classe. (Vedere [costruttori](../cpp/constructors-cpp.md) per altre informazioni su queste funzioni membro speciali.)
+   Nel caso degli argomenti effettivi di tipo classe, l'argomento formale viene inizializzato chiamando il costruttore della classe. (Vedere [costruttori](../cpp/constructors-cpp.md) per altre informazioni su queste funzioni membro speciali.)
 
 - Viene eseguita la chiamata di funzione.
 

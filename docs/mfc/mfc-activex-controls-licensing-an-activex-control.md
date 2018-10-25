@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381166"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068775"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controlli ActiveX MFC: licenze di un controllo ActiveX
 
@@ -84,15 +84,15 @@ Queste funzioni membro sono:
 
 - [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     Verifica che il controllo consente l'utilizzo in fase di progettazione selezionando il sistema la presenza del file di licenza del controllo. Questa funzione viene chiamata dal framework come parte dell'elaborazione `IClassFactory2::GetLicInfo` e `IClassFactory::CreateInstanceLic`.
+   Verifica che il controllo consente l'utilizzo in fase di progettazione selezionando il sistema la presenza del file di licenza del controllo. Questa funzione viene chiamata dal framework come parte dell'elaborazione `IClassFactory2::GetLicInfo` e `IClassFactory::CreateInstanceLic`.
 
 - [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     Richiede una chiave univoca dalla DLL del controllo. Questa chiave viene incorporata in un'applicazione contenitore e usata in un secondo momento, in combinazione con `VerifyLicenseKey`, per creare un'istanza del controllo. Questa funzione viene chiamata dal framework come parte dell'elaborazione `IClassFactory2::RequestLicKey`.
+   Richiede una chiave univoca dalla DLL del controllo. Questa chiave viene incorporata in un'applicazione contenitore e usata in un secondo momento, in combinazione con `VerifyLicenseKey`, per creare un'istanza del controllo. Questa funzione viene chiamata dal framework come parte dell'elaborazione `IClassFactory2::RequestLicKey`.
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     Verifica che le chiavi incorporate e univoco del controllo siano uguali. In questo modo il contenitore creare un'istanza del controllo per l'uso. Questa funzione viene chiamata dal framework come parte dell'elaborazione `IClassFactory2::CreateInstanceLic` e può essere sostituito per fornire la verifica personalizzata della chiave di licenza. L'implementazione predefinita esegue un confronto tra stringhe. Per altre informazioni, vedere [personalizzazione della licenza di un controllo ActiveX](#_core_customizing_the_licensing_of_an_activex_control), più avanti in questo articolo.
+   Verifica che le chiavi incorporate e univoco del controllo siano uguali. In questo modo il contenitore creare un'istanza del controllo per l'uso. Questa funzione viene chiamata dal framework come parte dell'elaborazione `IClassFactory2::CreateInstanceLic` e può essere sostituito per fornire la verifica personalizzata della chiave di licenza. L'implementazione predefinita esegue un confronto tra stringhe. Per altre informazioni, vedere [personalizzazione della licenza di un controllo ActiveX](#_core_customizing_the_licensing_of_an_activex_control), più avanti in questo articolo.
 
 ###  <a name="_core_header_file_modifications"></a> Modifiche al File di intestazione
 

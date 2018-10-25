@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06377d9fc3f0eff1487c5d920d257d68bece46b2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6ccd3277b5ad627c6956e6f5620ee6aed1640cc5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791364"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074007"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -37,14 +37,14 @@ Aggiunge una voce di interfaccia nella mappa COM della classe di destinazione.
 
 ### <a name="parameters"></a>Parametri
 
-*COM_INTERFACE_ENTRY*<br/>
+*com_interface_entry*<br/>
 Stringa contenente il testo effettivo della voce. Per un elenco di valori possibili, vedere [COM_INTERFACE_ENTRY macro](../../atl/reference/com-interface-entry-macros.md).
 
 ## <a name="remarks"></a>Note
 
 Il **com_interface_entry** attributo C++ inserisce il contenuto ridotta della stringa di caratteri nella mappa dell'interfaccia COM dell'oggetto di destinazione. Se l'attributo viene applicato una sola volta per l'oggetto di destinazione, la voce viene inserita all'inizio della mappa dell'interfaccia esistente. Se l'attributo viene applicato più volte allo stesso oggetto di destinazione, le voci vengono inserite all'inizio della mappa dell'interfaccia nell'ordine in che cui vengono ricevute.
 
-Questo attributo richiede che il [coclasse](coclass.md), [progid](progid.md), o [vi_progid](vi-progid.md) attributo (o un altro attributo che implica uno di questi) anche sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.
+Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.
 
 Poiché il primo utilizzo di **com_interface_entry** fa sì che la nuova interfaccia deve essere inserito all'inizio della mappa dell'interfaccia, deve essere uno dei tipi COM_INTERFACE_ENTRY seguenti:
 
@@ -93,7 +93,7 @@ __interface IMyClass{};
 [ coclass,
   com_interface_entry ("COM_INTERFACE_ENTRY (IMyClass)"),
   com_interface_entry ("COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"),
-  uuid("b85f8626-e76e-4775-b6a0-4826a9e94af2")  
+  uuid("b85f8626-e76e-4775-b6a0-4826a9e94af2")
 ]
 
 class CMyClass: public IMyClass, public IDebugTest
@@ -104,14 +104,14 @@ class CMyClass: public IMyClass, public IDebugTest
 La mappa di oggetti COM risultante per `CMyBaseClass` è come segue:
 
 ```cpp
-BEGIN_COM_MAP(CMyClass)  
-    COM_INTERFACE_ENTRY (IMyClass)  
-    COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
-    COM_INTERFACE_ENTRY(IMyClass)  
-    COM_INTERFACE_ENTRY2(IDispatch, IMyClass)  
-    COM_INTERFACE_ENTRY(IDebugTest)  
-    COM_INTERFACE_ENTRY(IProvideClassInfo)  
-END_COM_MAP()  
+BEGIN_COM_MAP(CMyClass)
+    COM_INTERFACE_ENTRY (IMyClass)
+    COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)
+    COM_INTERFACE_ENTRY(IMyClass)
+    COM_INTERFACE_ENTRY2(IDispatch, IMyClass)
+    COM_INTERFACE_ENTRY(IDebugTest)
+    COM_INTERFACE_ENTRY(IProvideClassInfo)
+END_COM_MAP()
 ```
 
 ## <a name="requirements"></a>Requisiti
@@ -125,10 +125,10 @@ END_COM_MAP()
 |**Attributi obbligatori**|Uno o più delle operazioni seguenti: `coclass`, `progid`, o `vi_progid`.|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi COM](com-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)  
+[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)

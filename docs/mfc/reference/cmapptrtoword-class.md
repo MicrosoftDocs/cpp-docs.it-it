@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 027841e3dfd5cea101633c8e3a609ab7e55eac07
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6abca6c0cc467e2609de62b3b945a550ffe35b7b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389265"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074150"
 ---
 # <a name="cmapptrtoword-class"></a>Classe CMapPtrToWord
 
@@ -125,6 +125,4 @@ Per ulteriori informazioni sul `CMapPtrToWord`, vedere l'articolo [raccolte](../
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

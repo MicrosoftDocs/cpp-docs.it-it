@@ -18,16 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df892a3d3f038655f37b78fa88babb09d50df2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a74691b17e04c20fa45045fa4105fd73925f19f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373477"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065395"
 ---
 # <a name="csplitterwndex-class"></a>Classe CSplitterWndEx
-
-
 
 Rappresenta una finestra con separatore personalizzata.
 
@@ -90,7 +88,7 @@ virtual void OnDrawSplitter(
 [in] Puntatore al contesto di dispositivo. Se questo parametro è NULL, il framework ridisegna la finestra attiva.
 
 *NLE*<br/>
-[in] Uno del `CSplitterWnd::ESplitType` valori di enumerazione che specifica l'elemento di finestra con separatore da disegnare. I valori validi sono `splitBox`, `splitBar`, `splitIntersection`, e `splitBorder`.
+[in] Uno del `CSplitterWnd::ESplitType` valori di enumerazione che specifica l'elemento di finestra con separatore da disegnare. I valori validi sono `splitBox`, `splitBar`, `splitIntersection` e `splitBorder`.
 
 *Rect*<br/>
 [in] Un rettangolo di delimitazione che specifica le dimensioni e il percorso in cui disegnare l'elemento di finestra con separatore specificato.

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e8ddf566082bfded1f20a2bfe04e7cef0b5dc14
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 994a4a48c5199c3efb05a00331656b3b23a2a0c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791109"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067042"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -58,9 +58,9 @@ Vedere l'esempio relativo [defaultvalue](defaultvalue.md) per un esempio dell'us
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di interfaccia](interface-attributes.md)  
+[Attributi di interfaccia](interface-attributes.md)

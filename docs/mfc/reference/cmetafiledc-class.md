@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa9cc938d3738cd789dc648c87eb8bf9b84a6b14
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c4b19358b97ca0afbe7a70347e5b05bed9916846
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414472"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076347"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC (classe)
 
@@ -227,6 +227,4 @@ Il nome del file per i metafile avanzato deve usare il. Estensione di formato EM
 
 [Classe CDC](../../mfc/reference/cdc-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

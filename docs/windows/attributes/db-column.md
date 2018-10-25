@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a06353780b78339c39ebb20e9bc2f770694f47c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083612"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073254"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -65,7 +65,7 @@ Il numero ordinale di colonna (`DBCOLUMNINFO` ordinale) o nome di colonna (strin
 
 Uso **db_column** in combinazione con la [db_table](db-table.md) oppure [db_command](db-command.md) attributi.
 
-Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore Rinomina la classe \_ *NomeClasse*della funzione di accesso, dove *NomeClasse* è il nome è stato assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.
+Quando il provider di attributi del consumer applica questo attributo a una classe, il compilatore rinomina la classe in \_*NomeClasse*Accessor, dove *NomeClasse* è il nome assegnato alla classe. Il compilatore crea anche una classe denominata *NomeClasse*, che deriva da \_*NomeClasse*Accessor.  In Visualizzazione classi verranno visualizzate entrambe le classi.
 
 Per esempi di questo attributo usato in un'applicazione, vedere gli esempi [AtlAgent](https://github.com/Microsoft/VCSamples), e [MultiRead](https://github.com/Microsoft/VCSamples).
 
@@ -125,4 +125,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi del consumer OLE DB](ole-db-consumer-attributes.md)<br/>
-[Attributi di classe](class-attributes.md)  
+[Attributi di classe](class-attributes.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434765"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074124"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Eccezioni: rilevamento ed eliminazione di eccezioni
 
@@ -36,9 +36,9 @@ I **catch** blocco necessario eliminare un'eccezione quando:
 
 - Il **catch** blocco genera una nuova eccezione.
 
-     Naturalmente, non è necessario eliminare l'eccezione quando viene generata nuovamente la stessa eccezione:
+   Naturalmente, non è necessario eliminare l'eccezione quando viene generata nuovamente la stessa eccezione:
 
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
 - Restituisce l'esecuzione dall'interno di **catch** blocco.
 
@@ -49,15 +49,15 @@ I **catch** blocco necessario eliminare un'eccezione quando:
 
 1. Usare la **provare** parola chiave per configurare un **provare** blocco. Eseguire le istruzioni di programma che potrebbero generare un'eccezione all'interno di un **provare** blocco.
 
-     Usare la **intercettare** parola chiave per configurare un **catch** blocco. Inserire il codice di gestione delle eccezioni in un **catch** blocco. Il codice nel **catch** blocco viene eseguito solo se il codice all'interno di **provare** blocco genera un'eccezione del tipo specificato nel **catch** istruzione.
+   Usare la **intercettare** parola chiave per configurare un **catch** blocco. Inserire il codice di gestione delle eccezioni in un **catch** blocco. Il codice nel **catch** blocco viene eseguito solo se il codice all'interno di **provare** blocco genera un'eccezione del tipo specificato nel **catch** istruzione.
 
-     La struttura seguente viene illustrato come **provare** e **catch** blocchi vengono in genere disposti:
+   La struttura seguente viene illustrato come **provare** e **catch** blocchi vengono in genere disposti:
 
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-     Quando viene generata un'eccezione, il controllo passa al primo **catch** blocco la cui dichiarazione di eccezione corrisponde al tipo dell'eccezione. È possibile gestire in modo selettivo i diversi tipi di eccezioni con sequenziali **catch** blocca come indicato di seguito:
+   Quando viene generata un'eccezione, il controllo passa al primo **catch** blocco la cui dichiarazione di eccezione corrisponde al tipo dell'eccezione. È possibile gestire in modo selettivo i diversi tipi di eccezioni con sequenziali **catch** blocca come indicato di seguito:
 
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
 Per altre informazioni, vedere [eccezioni: conversione da macro eccezioni MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 

@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc4c205ff7c68fbf778b8d300fbe98e6a3deca1d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0cde2b5c62d4d4584330fe24000114b33ba957b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067488"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
 
@@ -146,7 +146,7 @@ Per altre informazioni, vedere [procedura dettagliata: inserimento di controlli 
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari metodi nel `CMFCToolBarComboBoxButton` classe. Nell'esempio viene illustrato come attivare le caselle di modifica e combinata, impostare la posizione verticale della casella combinata i pulsanti della casella nell'applicazione, impostare l'altezza della casella di riepilogo quando viene eliminato verso il basso, impostare l'aspetto bidimensionale dei pulsanti della casella combinata nell'applicazione e impostare il testo nella casella di modifica della casella combinata pulsante della finestra. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCToolBarComboBoxButton` . Nell'esempio viene illustrato come attivare le caselle di modifica e combinata, impostare la posizione verticale della casella combinata i pulsanti della casella nell'applicazione, impostare l'altezza della casella di riepilogo quando viene eliminato verso il basso, impostare l'aspetto bidimensionale dei pulsanti della casella combinata nell'applicazione e impostare il testo nella casella di modifica della casella combinata pulsante della finestra. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -1176,11 +1176,9 @@ static BOOL SelectItemAll(
     UINT uiCmd,
     int iIndex);
 
-
 static BOOL SelectItemAll(
     UINT uiCmd,
     DWORD_PTR dwData);
-
 
 static BOOL SelectItemAll(
     UINT uiCmd,
@@ -1348,6 +1346,4 @@ void SetText(LPCTSTR lpszText);
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Procedura dettagliata: inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

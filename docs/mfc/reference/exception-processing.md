@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1711e634fca1b4350e8aca5f75f0de8a4b3a0e5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 749dd92a7fb04696a4f9d173e6496e239dc3f6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073136"
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 
@@ -169,7 +169,7 @@ Specifica un nome per un puntatore dell'oggetto eccezione che verrà creato dall
 
 ### <a name="remarks"></a>Note
 
-Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Richiama la macro `THROW_LAST` per spostare l'elaborazione sul frame esterno dell'eccezione. Se si usa **CATCH_ALL**, fine il **PROVARE** blocco con un end_catch_all (macro).
+Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Richiama la macro `THROW_LAST` per spostare l'elaborazione sul frame dell'eccezione esterna. Se si usa **CATCH_ALL**, fine il **PROVARE** blocco con un end_catch_all (macro).
 
 > [!NOTE]
 >  Il **CATCH_ALL** blocco viene definito come ambito C++ da parentesi graffe. Se si dichiarano delle variabili in questo ambito, è possibile accedere a queste variabili solo all'interno di tale ambito.
@@ -388,7 +388,6 @@ Questa funzione viene chiamata quando vengono utilizzati argomenti non validi.
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
 [Classe CInvalidArgException](cinvalidargexception-class.md)<br/>
 [ISTRUZIONE THROW](#throw)
-
 
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 

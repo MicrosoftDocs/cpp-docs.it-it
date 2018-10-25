@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23717c35d0590c88a4904e5b6b6ddb0e4c7ccffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438639"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071972"
 ---
 # <a name="how-to-create-a-resource"></a>Procedura: creare una risorsa
 
@@ -33,7 +33,7 @@ ms.locfileid: "46438639"
 
 1. Con lo stato attivo sul file RC in [visualizzazione risorse](../windows/resource-view-window.md), fare clic sui **modificare** dal menu e scegliere **Aggiungi risorsa** (oppure fare clic sul file RC in **visualizzazione risorse** e scegliere **Aggiungi risorsa** dal menu di scelta rapida).
 
-   > [!NOTE] 
+   > [!NOTE]
    > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 2. Nella [finestra di dialogo Aggiungi risorsa](../windows/add-resource-dialog-box.md)scegliere il tipo di risorsa che si vuole aggiungere al progetto.
@@ -48,7 +48,7 @@ ms.locfileid: "46438639"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Per creare una nuova risorsa in Visualizzazione classi
 
-1. Nelle [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare doppio clic su classe e scegliere **Add**, quindi fare clic su **Aggiungi risorsa** dal menu di scelta rapida.
+1. In [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code)fare clic con il pulsante destro del mouse sulla classe e scegliere **Aggiungi**, quindi **Aggiungi risorsa** dal menu di scelta rapida.
 
 2. Nella [finestra di dialogo Aggiungi risorsa](../windows/add-resource-dialog-box.md)scegliere il tipo di risorsa che si vuole aggiungere al progetto.
 
@@ -70,4 +70,4 @@ Win32
 
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
 [Editor di risorse](../windows/resource-editors.md)<br/>
-[Finestra di dialogo Aggiungi risorsa](../windows/add-resource-dialog-box.md)
+[Add Resource Dialog Box](../windows/add-resource-dialog-box.md)

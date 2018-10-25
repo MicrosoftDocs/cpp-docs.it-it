@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60a12c18ec4e174087900f7386d948ea3ab16a89
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e7d874902b4bf3c92eaa3a5b3a5ac07ee19a0ef3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068876"
 ---
 # <a name="basicstringstream-class"></a>Classe basic_stringstream
 
@@ -134,7 +134,6 @@ Imposta o recupera il testo in un buffer di stringa senza modificare la posizion
 
 ```cpp
 basic_string<Elem, Tr, Alloc> str() const;
-
 
 void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);

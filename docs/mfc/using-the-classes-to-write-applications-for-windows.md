@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60cf5d6f61f16aac18524e8b6e75638ec13d27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9907424a583cc16f170890a739fa7ece8cc93ead
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075125"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Utilizzo delle classi per la creazione di applicazioni per Windows
 
@@ -66,17 +66,17 @@ Altre parti del framework includono:
 
 - [Gestione della memoria](../mfc/memory-management.md)
 
-     Oltre a offrirti un vantaggio nella scrittura di applicazioni per il sistema operativo Windows, MFC anche rende molto più semplice scrivere applicazioni che usano in modo specifico collegamento e incorporamento tecnologia OLE. È possibile apportare all'applicazione un oggetto OLE visual modifica contenitore, un server di modifica visual OLE o entrambi, e in modo che altre applicazioni possono usare gli oggetti dell'applicazione o persino unità in modalità remota, è possibile aggiungere automazione.
+   Oltre a offrirti un vantaggio nella scrittura di applicazioni per il sistema operativo Windows, MFC anche rende molto più semplice scrivere applicazioni che usano in modo specifico collegamento e incorporamento tecnologia OLE. È possibile apportare all'applicazione un oggetto OLE visual modifica contenitore, un server di modifica visual OLE o entrambi, e in modo che altre applicazioni possono usare gli oggetti dell'applicazione o persino unità in modalità remota, è possibile aggiungere automazione.
 
 - [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
 
-     Il kit di sviluppo di controllo OLE (CDK) è ora completamente integrato con il framework. Questa serie di articoli fornisce una panoramica di sviluppo di controlli ActiveX con MFC. (I controlli ActiveX sono state precedentemente noto come controlli OLE).
+   Il kit di sviluppo di controllo OLE (CDK) è ora completamente integrato con il framework. Questa serie di articoli fornisce una panoramica di sviluppo di controlli ActiveX con MFC. (I controlli ActiveX sono state precedentemente noto come controlli OLE).
 
 - [Programmazione di database](../data/data-access-programming-mfc-atl.md)
 
-     MFC fornisce anche due set di classi di database che semplificano l'accesso ai dati la scrittura delle applicazioni. Usa le classi di database ODBC, è possibile connettersi ai database tramite un driver Open Database Connectivity (ODBC), selezionare record da tabelle e visualizzare informazioni sui record in un modulo sullo schermo. Usa le classi di oggetto DAO (Data Access), per lavorare con i database tramite il motore di database Microsoft Jet o origini di dati esterno (non-Jet), tra cui origini dati ODBC.
+   MFC fornisce anche due set di classi di database che semplificano l'accesso ai dati la scrittura delle applicazioni. Usa le classi di database ODBC, è possibile connettersi ai database tramite un driver Open Database Connectivity (ODBC), selezionare record da tabelle e visualizzare informazioni sui record in un modulo sullo schermo. Usa le classi di oggetto DAO (Data Access), per lavorare con i database tramite il motore di database Microsoft Jet o origini di dati esterno (non-Jet), tra cui origini dati ODBC.
 
-     Inoltre, MFC sono completamente abilitati per la scrittura di applicazioni che utilizzano Unicode e imposta di caratteri multibyte (MBCS), in particolare double-byte character set (DBCS).
+   Inoltre, MFC sono completamente abilitati per la scrittura di applicazioni che utilizzano Unicode e imposta di caratteri multibyte (MBCS), in particolare double-byte character set (DBCS).
 
 Per una Guida generale alla documentazione MFC, vedere [argomenti MFC generali](../mfc/general-mfc-topics.md).
 

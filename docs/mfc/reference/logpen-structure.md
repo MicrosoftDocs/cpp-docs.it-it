@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a535858a0d5540db481fd42918b4079f30c90728
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e0fa2a4b422a7bd1f36fc46837adec4136b693fb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375673"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064954"
 ---
 # <a name="logpen-structure"></a>Struttura LOGPEN
 
@@ -56,9 +56,9 @@ Specifica il tipo di penna. Questo membro può essere uno dei valori seguenti:
 
 - PS_INSIDEFRAME crea una penna che disegna una linea all'interno del fotogramma di forme chiuse prodotta GDI output funzioni che specificano un rettangolo di delimitazione (ad esempio, il `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, e `Chord` membro funzioni). Quando questo stile viene usato con GDI output funzioni che non si specifica un rettangolo di delimitazione (ad esempio, il `LineTo` funzione membro), l'area di disegno della penna non è limitato da un frame.
 
-     Se un oggetto pen dispone di un colore che corrisponde a un colore nella tabella dei colori logico e lo stile PS_INSIDEFRAME, penna viene disegnata con un colore retinato. Lo stile di penna PS_SOLID non può essere utilizzato per creare un oggetto pen con un colore retinato. Lo stile PS_INSIDEFRAME è identico a PS_SOLID se la larghezza della penna è minore o uguale a 1.
+   Se un oggetto pen dispone di un colore che corrisponde a un colore nella tabella dei colori logico e lo stile PS_INSIDEFRAME, penna viene disegnata con un colore retinato. Lo stile di penna PS_SOLID non può essere utilizzato per creare un oggetto pen con un colore retinato. Lo stile PS_INSIDEFRAME è identico a PS_SOLID se la larghezza della penna è minore o uguale a 1.
 
-     Quando lo stile PS_INSIDEFRAME viene usato con oggetti GDI prodotti da funzioni di diverso da `Ellipse`, `Rectangle`, e `RoundRect`, la riga potrebbe non essere completamente all'interno del frame specificato.
+   Quando lo stile PS_INSIDEFRAME viene usato con oggetti GDI prodotti da funzioni di diverso da `Ellipse`, `Rectangle`, e `RoundRect`, la riga potrebbe non essere completamente all'interno del frame specificato.
 
 *lopnWidth*<br/>
 Specifica lo spessore della penna, in unità logiche. Se il `lopnWidth` membro è 0, la penna è larghezza su dispositivi raster indipendentemente dalla modalità di mapping corrente pari a 1 pixel.

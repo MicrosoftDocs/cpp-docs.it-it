@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24b663e1b07d1012c1611714390340df3ce3867f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448500"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074735"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 
@@ -296,7 +296,7 @@ I suggerimenti seguenti si applicano a `CDockingManager` oggetti:
 
     - `AFX_DOCK_TYPE::DT_SMART`
 
-     Queste modalità di ancoraggio sono definite da [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) e vengono impostati chiamando [CDockingManager::SetDockingMode](#setdockingmode).
+   Queste modalità di ancoraggio sono definite da [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) e vengono impostati chiamando [CDockingManager::SetDockingMode](#setdockingmode).
 
 - Se si desidera creare un riquadro fissa, non ridimensionabile, chiamare il [CDockingManager::AddPane](#addpane) (metodo). Questo metodo registra il riquadro con il gestore di ancoraggio, che è responsabile per il layout del riquadro.
 
@@ -396,7 +396,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>Parametri
 
 *hdwp*<br/>
-[in] Specifica la struttura della posizione finestra posticipata. Per altre informazioni, vedere [tipi di dati Windows](/windows/desktop/WinProg/windows-data-types).
+[in] Specifica la struttura della posizione finestra posticipata. Per altre informazioni, vedere [Tipi di dati Windows](/windows/desktop/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Note
 

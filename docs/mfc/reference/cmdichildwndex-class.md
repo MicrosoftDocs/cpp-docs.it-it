@@ -1,7 +1,7 @@
 ---
 title: Classe CMDIChildWndEx | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -122,19 +122,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52ce513f0a0d96fe2454397417f2f7885e2c2f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64e8b62f79a6294810fc30b1796958c6ca4a153a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441735"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073864"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (classe)
 
 Il `CMDIChildWndEx` classe fornisce la funzionalità di un Windows finestra figlio MDI (interfaccia) a documenti multipli. Estende la funzionalità del [classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Il framework richiede questa classe quando un'applicazione MDI utilizza determinate classi MFC.
 
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
-
 
 ## <a name="syntax"></a>Sintassi
 
@@ -191,9 +190,9 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|Chiamato dal framework quando l'anteprima della scheda della barra delle applicazioni deve elaborare WM_ACTIVATE messaggio.|
 |[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|Chiamato dal framework quando l'anteprima della scheda della barra delle applicazioni deve elaborare WM_MOUSEACTIVATE messaggio.|
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Chiamato dal framework quando è necessario estendere una mappa di bit per Windows 7 della barra delle applicazioni scheda Anteprima del figlio MDI.|
-|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Chiamato dal framework per aggiornare il titolo del frame. Esegue l'override`CMDIChildWnd::OnUpdateFrameTitle`.|
+|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Chiamato dal framework per aggiornare il titolo del frame. Esegue l'override di `CMDIChildWnd::OnUpdateFrameTitle`.|
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Restituisce il riquadro che contiene il punto specificato.|
-|`CMDIChildWndEx::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
+|`CMDIChildWndEx::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Ricalcola il layout della finestra.|
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Registra il figlio MDI con le schede della barra delle applicazioni di Windows 7.|
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Rimuove un riquadro dal gestore di ancoraggio.|
@@ -283,7 +282,6 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 [in] Handle per una struttura di posizione finestra posticipata.
 
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
-
 
 ```
 virtual BOOL CanShowOnMDITabs();
@@ -411,7 +409,6 @@ Chiamare questo metodo per consentire l'allineamento di ancoraggio per la cornic
 
 ##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager();
 ```
@@ -502,7 +499,6 @@ CBasePane* GetPane(UINT nID);
 Puntatore al riquadro, se trovato, in caso contrario, NULL.
 
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
-
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -770,19 +766,17 @@ void RemovePaneFromDockManager(
 
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
 
-
 ```
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *p*
+[in] *p*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
-
 
 ```
 void ShowPane(
@@ -794,10 +788,13 @@ void ShowPane(
 
 ### <a name="parameters"></a>Parametri
 
-*pBar*<br/>
-[in] [in] *bMostra*
-*bDelay*<br/>
-[in] [in] *bActivate*
+[in] *pBar*<br/>
+
+[in] *bMostra*<br/>
+
+[in] *bDelay*<br/>
+
+[in] *bActivate*<br/>
 
 ### <a name="remarks"></a>Note
 

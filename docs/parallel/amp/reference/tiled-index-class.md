@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5ad67a806bae53234661c19d3f405a526ce5f87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f266efa2fb6de580bc1af04bdee6f80e2244fa23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440771"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070049"
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 
@@ -249,6 +249,7 @@ Archivia la lunghezza della dimensione significativa next-a-la maggior parte.
 ```
 static const int tile_dim1 = _Dim1;
 ```
+
 ## <a name="tiled_index__tile_dim2"></a>  tile_dim2
 
 Archivia la lunghezza della dimensione meno significativa.
@@ -258,6 +259,7 @@ Archivia la lunghezza della dimensione meno significativa.
 ```
 static const int tile_dim2 = _Dim2;
 ```
+
 ## <a name="tiled_index__tile_origin"></a>  tile_origin
 
 Archivia un' [indice](index-class.md) oggetto di coordinate di rango 1, 2 o 3, che rappresenta il globale dell'origine della sezione corrente all'interno di un [tiled_extent](tiled-extent-class.md) oggetto.
@@ -267,6 +269,7 @@ Archivia un' [indice](index-class.md) oggetto di coordinate di rango 1, 2 o 3, c
 ```
 const index<rank> tile_origin
 ```
+
 ## <a name="tile_extent"></a>  tile_extent
   Ottiene un' [extent](extent-class.md) oggetto con valori delle `tiled_index` argomenti di modello `tiled_index` argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.
 

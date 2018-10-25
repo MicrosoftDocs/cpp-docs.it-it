@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7dfaa0511c7d776afd009ad8ea9c1db3008f09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c8d337fdf6b861b4a64cba2876de33cc65d89b6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434290"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070335"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
@@ -290,14 +290,14 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar:: LoadFromResource](#loadfromresource)|Di overload. Carica una barra multifunzione dalle risorse dell'applicazione.|
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
-|[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|Esegue l'override`CPane::OnRTLChanged`.|
+|[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|Esegue l'override di `CPane::OnRTLChanged`.|
 |[CMFCRibbonBar::OnSetAccData](#onsetaccdata)|(Esegue l'override [cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
 |[CMFCRibbonBar::OnShowRibbonContextMenu](#onshowribboncontextmenu)||
 |[CMFCRibbonBar::OnShowRibbonQATMenu](#onshowribbonqatmenu)||
 |[CMFCRibbonBar::OnSysKeyDown](#onsyskeydown)||
 |[CMFCRibbonBar::OnSysKeyUp](#onsyskeyup)||
 |[CMFCRibbonBar::PopTooltip](#poptooltip)||
-|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|Esegue l'override`CBasePane::PreTranslateMessage`.|
+|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|Esegue l'override di `CBasePane::PreTranslateMessage`.|
 |[CMFCRibbonBar::RecalcLayout](#recalclayout)|(Esegue l'override [cpane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
 |[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|Rimuove tutte le categorie della barra multifunzione dalla barra multifunzione.|
 |[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|Rimuove tutti gli elementi della barra multifunzione dall'area della scheda.|
@@ -1495,7 +1495,6 @@ virtual void OnClickButton(
 
 ##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu
 
-
 ```
 virtual void OnEditContextMenu(
     CMFCRibbonRichEditCtrl* pEdit,
@@ -1504,8 +1503,8 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*pEdit*<br/>
-[in] [in] *punto*
+[in] *pEdit*<br/>
+[in] *punto*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1546,7 +1545,6 @@ S_OK se l'operazione riesce; in caso contrario, FALSE o S_FALSE.
 
 ##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu
 
-
 ```
 virtual BOOL OnShowRibbonContextMenu(
     CWnd* pWnd,
@@ -1557,17 +1555,16 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd*<br/>
-[in] [in] *x*
-*y*<br/>
-[in] [in] *pHit*
+[in] *pWnd*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu
-
 
 ```
 virtual BOOL OnShowRibbonQATMenu(
@@ -1579,10 +1576,10 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd*<br/>
-[in] [in] *x*
-*y*<br/>
-[in] [in] *pHit*
+[in] *pWnd*<br/>
+[in] *x*<br/>
+[in] *y*<br/>
+[in] *pHit*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2076,7 +2073,6 @@ virtual BOOL LoadFromResource(
     LPCTSTR lpszResType = RT_RIBBON,
     HINSTANCE hInstance = NULL);
 
-
 virtual BOOL LoadFromResource(
     LPCTSTR lpszXMLResID,
     LPCTSTR lpszResType = RT_RIBBON,
@@ -2170,6 +2166,4 @@ TRUE Ricalcola il layout della barra multifunzione. FALSE in caso contrario.
 [Classe CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
-
 

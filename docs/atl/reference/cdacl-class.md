@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f3d0b817fc080ff81e11e1789387f50cb3e871e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036138"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076009"
 ---
 # <a name="cdacl-class"></a>Classe CDacl
 
@@ -93,12 +93,12 @@ Per un'introduzione al modello di controllo di accesso in Windows, vedere [contr
 Aggiunge una voce ACE consentita (voce di controllo di accesso) per il `CDacl` oggetto.
 
 ```
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);
 
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags,
@@ -138,7 +138,7 @@ Visualizzare [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) per u
 Aggiunge una voce ACE autorizzazioni negata (voce di controllo di accesso) per il `CDacl` oggetto.
 
 ```
-bool AddDeniedAce(  
+bool AddDeniedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);

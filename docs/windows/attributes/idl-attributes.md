@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebc257d78bf658b722a93e9d7c306c9bcf6e88bd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 87ab9e42af139f9b156fa2a688558077967dfa8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791725"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067800"
 ---
 # <a name="idl-attributes"></a>Attributi IDL
 
@@ -83,7 +83,7 @@ Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL che non s
 |[licensed](licensed.md)|Indica che la coclasse al quale viene applicato è concesso in licenza e deve essere implementata con `IClassFactory2`.|
 |[local](local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione quando usato nell'intestazione dell'interfaccia. Se usato in una singola funzione, designa una procedura locale per cui non gli stub vengono generati.|
 |[max_is](max-is.md)|Definisce il valore massimo per un indice di matrice valida.|
-|[modulo](module-cpp.md)|Definisce il blocco di libreria nel file IDL.|
+|[module](module-cpp.md)|Definisce il blocco di libreria nel file IDL.|
 |[ms_union](ms-union.md)|Controlla l'allineamento di rappresentazione dei dati di rete di unioni nonencapsulated.|
 |[no_injected_text](no-injected-text.md)|Impedisce al compilatore di inserire codice in seguito a uso dell'attributo.|
 |[nonbrowsable](nonbrowsable.md)|Indica che un membro di interfaccia non deve essere visualizzato in un visualizzatore proprietà.|
@@ -92,7 +92,7 @@ Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL che non s
 |[object](object-cpp.md)|Identifica un'interfaccia personalizzata. sinonimo di attributo personalizzato.|
 |[odl](odl.md)|Identifica un'interfaccia come interfaccia oggetto Description Language (ODL).|
 |[oleautomation](oleautomation.md)|Indica che un'interfaccia è compatibile con l'automazione.|
-|[Facoltativo](optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
+|[optional](optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
 |[out](out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|
 |[pointer_default](pointer-default.md)|Specifica l'attributo di puntatore predefinite per tutti i puntatori ad eccezione dei puntatori di primo livello che vengono visualizzati nell'elenco di parametri.|
 |[pragma](pragma.md)|Genera la stringa specificata, senza i caratteri virgoletta, nel file con estensione IDL generato.|
@@ -102,7 +102,7 @@ Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL che non s
 |[propput](propput.md)|Specifica un funzione di impostazione delle proprietà.|
 |[ptr](ptr.md)|Definisce un puntatore come puntatore completo.|
 |[public](public-cpp-attributes.md)|Assicura che un typedef entra in libreria dei tipi anche se non è presente all'interno del file con estensione idl.|
-|[Intervallo](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
+|[range](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
 |[readonly](readonly-cpp.md)|Non consente l'assegnazione a una variabile.|
 |[ref](ref-cpp.md)|Identifica un puntatore di riferimento.|
 |[requestedit](requestedit.md)|Indica che la proprietà supporta il `OnRequestEdit` notifica.|
@@ -125,4 +125,4 @@ Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL che non s
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi per gruppo](attributes-by-group.md)  
+[Attributi per gruppo](attributes-by-group.md)

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a650d62a53fa6cada535119cb8897f1f97870ea1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 446ed0c6fb84990db572e1e1ead5c2ab5094ec70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076061"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Procedura: Creare applicazioni console CLR (C++/CLI)
 
@@ -33,7 +33,7 @@ Quando si usa il modello di applicazione console per creare un progetto, vengono
 
 - Riferimenti a questi spazi dei nomi di .NET Framework:
 
-   - [Sistema](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx): contiene le classi fondamentali e classi di base che definiscono in genere utilizzati i valori e tipi di dati di riferimento, eventi e gestori eventi, interfacce, attributi e le eccezioni di elaborazione.
+   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)- Contiene le classi fondamentali e le classi base che definiscono i valori usati comunemente e i tipi di dati di riferimento, gli eventi e i gestori eventi, le interfacce, le eccezioni di elaborazione e gli attributi.
 
    - mscorlib - DLL di assembly che supporta lo sviluppo in .NET Framework.
 
@@ -67,7 +67,7 @@ Quando si usa il modello di applicazione console per creare un progetto, vengono
 
 1. Nella casella **Nome** immettere un nome univoco per l'applicazione.
 
-     È possibile specificare altre impostazioni di progetto e di soluzione, anche se non sono necessarie.
+   È possibile specificare altre impostazioni di progetto e di soluzione, anche se non sono necessarie.
 
 1. Fare clic sul pulsante **OK** .
 

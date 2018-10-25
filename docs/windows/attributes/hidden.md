@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bfe3858070f4dbbd226d46479609f5d0a630956
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 9934f1f66bf520e8da65953dc3355d447d1844e6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791773"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072960"
 ---
 # <a name="hidden"></a>hidden
 
@@ -53,11 +53,11 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usar
 |**Attributi obbligatori**|**Coclasse** (quando applicato a **classe** oppure **struct**)|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di interfaccia](interface-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[Attributi di metodo](method-attributes.md)  
+[Attributi di metodo](method-attributes.md)

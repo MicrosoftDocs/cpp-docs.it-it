@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a548c50345601dda85d79ec4c40f1632ab316f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dcf14a23331ef783a25d75ed167703dcd4ffd7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065669"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 
@@ -275,7 +275,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::GetTasksIconHorzOffset](#gettasksiconhorzoffset)||
 |[CMFCTasksPane::GetTasksIconVertOffset](#gettasksiconvertoffset)||
 |[CMFCTasksPane::GetVertMargin](#getvertmargin)|Restituisce la spaziatura verticale tra un riquadro attività e i bordi dell'area client.|
-|[CMFCTasksPane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Esegue l'override`CDockablePane::IsAccessibilityCompatible`.|
+|[CMFCTasksPane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Esegue l'override di `CDockablePane::IsAccessibilityCompatible`.|
 |[CMFCTasksPane::IsAnimationEnabled](#isanimationenabled)|Indica se l'animazione è abilitata.|
 |[CMFCTasksPane::IsBackButtonEnabled](#isbackbuttonenabled)|Indica se il pulsante Indietro è abilitato.|
 |[CMFCTasksPane::IsForwardButtonEnabled](#isforwardbuttonenabled)|Indica se il pulsante Avanti è abilitato.|
@@ -396,7 +396,6 @@ int AddGroup(
     BOOL bSpecial = FALSE,
     HICON hIcon = NULL);
 
-
 int AddGroup(
     LPCTSTR lpszGroupName,
     BOOL bBottomLocation = FALSE,
@@ -506,14 +505,13 @@ Indice a base zero della nuova pagina.
 
 ##  <a name="addseparator"></a>  CMFCTasksPane::AddSeparator
 
-
 ```
 int AddSeparator(int nGroup);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *separa*
+[in] *separa*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -601,10 +599,8 @@ CMFCTasksPane();
 
 ##  <a name="collapseallgroups"></a>  CMFCTasksPane::CollapseAllGroups
 
-
 ```
 void CollapseAllGroups(BOOL bCollapse = TRUE);
-
 
 void CollapseAllGroups(
     int nPageIdx,
@@ -613,8 +609,8 @@ void CollapseAllGroups(
 
 ### <a name="parameters"></a>Parametri
 
-*bCollapse*<br/>
-[in] [in] *nPageIdx*
+[in] *bCollapse*<br/>
+[in] *nPageIdx*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -626,7 +622,6 @@ Comprime o espande un gruppo.
 BOOL CollapseGroup(
     CMFCTasksPaneTaskGroup* pGroup,
     BOOL bCollapse = TRUE);
-
 
 BOOL CollapseGroup(
     int nGroup,
@@ -654,14 +649,13 @@ Un gruppo compresso illustra solo la didascalia del gruppo; l'elenco di attivit�
 
 ##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe
 
-
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *rectInitial*
+[in] *rectInitial*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -774,14 +768,13 @@ Per impostazione predefinita, il framework non viene visualizzata la barra di sp
 
 ##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls
 
-
 ```
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAttivare il*
+[in] *bAttivare il*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -952,14 +945,13 @@ La spaziatura predefinita tra un riquadro attività e il bordo dell'area client 
 
 ##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages
 
-
 ```
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *lstNextPages*
+[in] *lstNextPages*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -999,19 +991,17 @@ Il numero di pagine nel riquadro attività.
 
 ##  <a name="getpreviouspages"></a>  CMFCTasksPane::GetPreviousPages
 
-
 ```
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *lstPrevPages*
+[in] *lstPrevPages*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl
-
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -1019,7 +1009,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *nBar*
+[in] *nBar*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1145,7 +1135,6 @@ L'offset orizzontale predefinito di attività è 12 pixel.
 
 ##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset
 
-
 ```
 int GetTasksIconHorzOffset() const;
 ```
@@ -1155,7 +1144,6 @@ int GetTasksIconHorzOffset() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset
-
 
 ```
 int GetTasksIconVertOffset() const;
@@ -1182,7 +1170,6 @@ Il margine verticale tra un riquadro attività e i bordi dell'area client.
 Il margine verticale è lo spazio tra un riquadro attività e i bordi dell'area client. Il valore predefinito del margine verticale è 12 pixel.
 
 ##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible
-
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -1242,7 +1229,6 @@ Il pulsante Inoltra consente la navigazione in avanti nella cronologia delle pag
 
 ##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled
 
-
 ```
 BOOL IsGroupCollapseEnabled() const;
 ```
@@ -1276,7 +1262,6 @@ BOOL IsNavigationToolbarEnabled() const;
 TRUE se la barra di spostamento è abilitata. in caso contrario, FALSE.
 
 ##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox
-
 
 ```
 virtual BOOL IsToolBox() const;
@@ -1312,7 +1297,6 @@ TRUE se la stringa di attività viene eseguito il wrapping; in caso contrario, F
 
 ##  <a name="loadstate"></a>  CMFCTasksPane::LoadState
 
-
 ```
 virtual BOOL LoadState(
     LPCTSTR lpszProfileName = NULL,
@@ -1322,8 +1306,9 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszProfileName*<br/>
-[in] [in] *nIndex* [in] *uiID*
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1342,7 +1327,6 @@ virtual void OnActivateTasksPanePage();
 L'override del metodo in una classe derivata per personalizzare l'aspetto della pagina di riquadro attività.
 
 ##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel
-
 
 ```
 virtual void OnCancel();
@@ -1383,7 +1367,6 @@ Il framework chiama questo metodo quando un utente fa clic su un'attività. Per 
 Eseguire l'override di questo metodo in una classe derivata per eseguire il codice personalizzato quando si fa clic su un'attività.
 
 ##  <a name="onok"></a>  CMFCTasksPane::OnOK
-
 
 ```
 virtual void OnOK();
@@ -1435,7 +1418,6 @@ Eseguire l'override di questo metodo in una classe derivata per eseguire il codi
 
 ##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton
 
-
 ```
 virtual void OnPressOtherButton(
     CMFCCaptionMenuButton* pbtn,
@@ -1444,13 +1426,12 @@ virtual void OnPressOtherButton(
 
 ### <a name="parameters"></a>Parametri
 
-*pbtn*<br/>
-[in] [in] *pWndOwner*
+[in] *pbtn*<br/>
+[in] *pWndOwner*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData
-
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1458,14 +1439,13 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *lVal*
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -1475,13 +1455,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parametri
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage
-
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1489,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pMsg*
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1497,14 +1476,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout
 
-
 ```
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bRedraw*
+[in] *bRedraw*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1606,7 +1584,6 @@ TRUE se la funzione ha esito positivo; FALSE se *separa* oppure *nLo* non è val
 
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState
 
-
 ```
 virtual BOOL SaveState(
     LPCTSTR lpszProfileName = NULL,
@@ -1616,8 +1593,9 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Parametri
 
-*lpszProfileName*<br/>
-[in] [in] *nIndex* [in] *uiID*
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1625,14 +1603,13 @@ virtual BOOL SaveState(
 
 ##  <a name="serialize"></a>  CMFCTasksPane::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *ar*
+[in] *ar*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1905,19 +1882,17 @@ L'offset orizzontale predefinito è 12 pixel.
 
 ##  <a name="settasksiconhorzoffset"></a>  CMFCTasksPane::SetTasksIconHorzOffset
 
-
 ```
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *n*
+[in] *n*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset
-
 
 ```
 void SetTasksIconVertOffset(int n = -1);
@@ -1925,7 +1900,7 @@ void SetTasksIconVertOffset(int n = -1);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *n*
+[in] *n*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1988,7 +1963,6 @@ BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
 
-
 BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
@@ -2015,14 +1989,13 @@ Chiamare [CMFCTasksPane::AddWindow](#addwindow) per aggiungere le attività con 
 
 ##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString
 
-
 ```
 virtual void ShowCommandMessageString(UINT uiCmdId);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *uiCmdId*
+[in] *uiCmdId*<br/>
 
 ### <a name="remarks"></a>Note
 

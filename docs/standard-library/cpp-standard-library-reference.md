@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c38485e84f0b06e79e02ba780926b6e08378220
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27981084c79b5bf1347715df8945598c1e6683e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071657"
 ---
 # <a name="c-standard-library-reference"></a>Riferimento per la libreria standard C++
 
@@ -40,5 +40,4 @@ Contiene una panoramica sulla programmazione di iostream.
 
 [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)<br/>
 Contiene collegamenti ad argomenti di riferimento relativi alla libreria standard di C++ con esempi di codice.
-
 

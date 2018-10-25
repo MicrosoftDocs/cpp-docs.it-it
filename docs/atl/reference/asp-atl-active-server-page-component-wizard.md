@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31ac9d8ab0200d8dd56bbca3c82eb0ebec32388b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 210ef0d41cd0653718908b10ad64cd6004886c64
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015970"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077751"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Creazione guidata componente ASP ATL
 
 Utilizzare questa pagina della finestra attiva Server pagina Creazione guidata componente ATL per specificare le impostazioni facoltative per la gestione delle informazioni e lo stato correlato al componente ASP.
 
-- **Metodi facoltativi**  
+- **Metodi facoltativi**
 
    Aggiunge i metodi facoltativi ASP **OnStartPage** e **OnEndPage**, all'oggetto. Questa opzione deve essere selezionata per impostare gli oggetti intrinseci ASP. Per impostazione predefinita, viene selezionato.
 
@@ -35,7 +35,7 @@ Utilizzare questa pagina della finestra attiva Server pagina Creazione guidata c
 
    [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) viene chiamato la prima volta lo script cerca di accedere all'oggetto. **OnEndPage** viene chiamato quando l'oggetto è terminata l'elaborazione dello script.
 
-- **Oggetto intrinseco**  
+- **Oggetto intrinseco**
 
    È necessario selezionare la **OnStartPage/OnEndPage** opzione per impostare gli oggetti intrinseci ASP.
 

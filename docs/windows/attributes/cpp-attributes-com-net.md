@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe6941e8809c0d735013b56d340f27302890b149
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791252"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072525"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributi di C++ per COM e .NET
 
@@ -90,21 +90,21 @@ Inoltre, il linker di Visual C++ restituirà tutte le informazioni sugli attribu
 ## <a name="contexts"></a> Contesti di attributi
 
 Gli attributi di C++ possono essere descritte con quattro campi di base: la destinazione possono essere applicati a (**si applica a**), se sono ripetibili o meno (**ripetibile**), la necessaria la presenza di altri attributi ( **Gli attributi obbligatori**) e le incompatibilità con altri attributi (**attributi non validi**). Questi campi vengono elencati in una tabella associata nell'argomento di riferimento dell'ogni attributo. Ognuno di questi campi è descritto di seguito.
-  
+
 ### <a name="applies-to"></a>Si applica a
 
 Questo campo vengono descritti gli elementi del linguaggio C++ diversi che costituiscono le destinazioni legali per l'attributo specificato. Ad esempio, se un attributo specifica "class" nel **si applica a** campo, ciò indica che l'attributo può essere applicato solo a una classe C++ valida. Se l'attributo viene applicato a una funzione membro di una classe, genera un errore di sintassi.
-  
+
 Per altre informazioni, vedere [attributi per utilizzo](attributes-by-usage.md).
-  
+
 ### <a name="repeatable"></a>Ripetibile
 
 Questo campo indica se l'attributo può essere applicato più volte alla stessa destinazione. La maggior parte degli attributi non è ripetibile.
-  
+
 ### <a name="required-attributes"></a>Attributi obbligatori
 
 Questo campo Elenca altri attributi che devono essere presenti (che sono, applicata alla stessa destinazione) per l'attributo specificato funzionare correttamente. È raro che per un attributo a ha voci per questo campo.
-  
+
 ### <a name="invalid-attributes"></a>Attributi non validi
 
 Questo campo Elenca altri attributi che non sono compatibili con l'attributo specificato. È raro che per un attributo a ha voci per questo campo.

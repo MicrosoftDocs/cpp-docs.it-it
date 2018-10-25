@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 75e34fd4cfa53257f0e8a497cf8bc245c90f6732
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136296"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077354"
 ---
 # <a name="composite-control-macros"></a>Macro di controlli compositi
 
@@ -41,7 +41,7 @@ Queste macro definiscono mappe sink di evento e le voci.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom. h  
+**Intestazione:** atlcom. h
 
 ##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
 
@@ -122,7 +122,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 [in] Identifica il controllo.
 
 *IID*<br/>
-[in] Identifica l'interfaccia dispatch.  
+[in] Identifica l'interfaccia dispatch.
 
 *piid*<br/>
 [in] Puntatore all'interfaccia di dispatch.
@@ -156,7 +156,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 [in] Unsigned integer che identifica l'origine dell'evento. Questo valore deve corrispondere il *nID* parametro di modello utilizzato in correlato [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) classe di base.
 
 *IID*<br/>
-[in] IID che identifica l'interfaccia dispatch.  
+[in] IID che identifica l'interfaccia dispatch.
 
 *piid*<br/>
 [in] Puntatore a IID che identifica l'interfaccia dispatch.

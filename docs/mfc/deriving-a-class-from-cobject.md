@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a102eae0dd5f96d74f7258c10c5bcce55c3a6443
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081932"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065370"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivazione da una classe da CObject
 
@@ -65,9 +65,9 @@ Nella tabella seguente viene illustrata la relazione tra le macro utilizzate per
 
 1. Per derivare la classe da utilizzare la sintassi C++ normale `CObject` (o da una classe derivata da `CObject`).
 
-     Nell'esempio seguente viene illustrato il caso più semplice, la derivazione di una classe da `CObject`:
+   Nell'esempio seguente viene illustrato il caso più semplice, la derivazione di una classe da `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
 In genere, tuttavia, è possibile eseguire l'override di alcune delle `CObject`di funzioni membro per gestire le specifiche della nuova classe. Ad esempio, è in genere possibile eseguire l'override di `Dump` funzione di `CObject` per fornire l'output di debug per il contenuto della classe. Per informazioni dettagliate su come eseguire l'override `Dump`, vedere l'articolo [diagnostica: il dump di oggetti contenuto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). È anche possibile eseguire l'override di `AssertValid` funzione di `CObject` per una verifica personalizzata per convalidare la coerenza dei membri dati degli oggetti classe. Per una descrizione di come eseguire l'override `AssertValid`, vedere [ASSERT_VALID e MFC CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 

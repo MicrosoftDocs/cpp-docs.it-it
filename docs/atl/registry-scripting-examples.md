@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1e15d05be30b4343649e4866fbbea27e914dc320
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022111"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068385"
 ---
 # <a name="registry-scripting-examples"></a>Esempi di script del Registro di sistema
 
@@ -34,7 +34,7 @@ L'albero di analisi seguente illustra un semplice script che aggiunge una singol
 
 ```
 HKEY_CURRENT_USER
-{  
+{
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 ```
@@ -43,14 +43,14 @@ Questo script può essere facilmente esteso per definire più di sottochiavi com
 
 ```
 HKCU
-{  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-    {  
-        'HasASubkey'  
-        {  
-            'PrettyCool' = d '55'  
-            val 'ANameValue' = s 'WithANamedValue'  
-        }  
+{
+    'MyVeryOwnKey' = s 'HowGoesIt'
+    {
+        'HasASubkey'
+        {
+            'PrettyCool' = d '55'
+            val 'ANameValue' = s 'WithANamedValue'
+        }
     }
 }
 ```
@@ -63,21 +63,21 @@ Lo script seguente registra il server COM di registrazione.
 
 ```
 HKCR
-{  
-    ATL.Registrar = s 'ATL Registrar Class'  
-    {  
-        CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'  
-    }  
-    NoRemove CLSID  
-    {  
-        ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} = s 'ATL Registrar Class'  
-        {  
-            ProgID = s 'ATL.Registrar'  
-            InprocServer32 = s '%MODULE%'  
-            {  
-                val ThreadingModel = s 'Apartment'  
-            }  
-        }  
+{
+    ATL.Registrar = s 'ATL Registrar Class'
+    {
+        CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'
+    }
+    NoRemove CLSID
+    {
+        ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} = s 'ATL Registrar Class'
+        {
+            ProgID = s 'ATL.Registrar'
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+        }
     }
 }
 ```
@@ -108,11 +108,11 @@ Per specificare più di un albero di analisi in uno script, è sufficiente inser
 
 ```
 HKCR
-{  
+{
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 HKEY_CURRENT_USER
-{  
+{
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 ```

@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412028"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067320"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane (classe)
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pNewBar* un puntatore al riquadro da aggiungere. Puntatore ' this ' potrebbero diventare non valide dopo aver chiamato questo metodo. Per altre informazioni, vedere la sezione Osservazioni.
+*pNewBar*<br/>
+[in, out] Puntatore al riquadro da aggiungere. Puntatore ' this ' potrebbero diventare non valide dopo aver chiamato questo metodo. Per altre informazioni, vedere la sezione Osservazioni.
 
 *bVisible*<br/>
 [in] TRUE per visualizzare la scheda; in caso contrario, FALSE.
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pBar* un puntatore al riquadro e float.
+*pBar*<br/>
+[in, out] Puntatore al riquadro e float.
 
 *nTabID*<br/>
 [in] Specifica l'indice in base zero della scheda a float.
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pBar* un puntatore al riquadro per rimuovere dal riquadro a schede.
+*pBar*<br/>
+[in, out] Puntatore al riquadro per rimuovere dal riquadro a schede.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Specifica l'allineamento del riquadro Nascondi automaticamente che deve essere creato. Per un elenco di valori possibili, vedere [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
 
-[in] [out] *pCurrAutoHideBar* un puntatore a barra Nascondi automaticamente corrente. Può essere NULL.
+*pCurrAutoHideBar*<br/>
+[in, out] Puntatore a barra Nascondi automaticamente corrente. Può essere NULL.
 
 *bUseTimer*<br/>
 [in] Specifica se utilizzare l'effetto di Nascondi automaticamente quando l'utente attiva il riquadro di modalità Nascondi automaticamente o per nascondere il riquadro immediatamente.

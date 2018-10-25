@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c819d024b9b89d28c0e87b86382bf1c1f23258a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b097e1d3c7d26c51283d4f63bb2bae14059f21cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118492"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069778"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Costruttori di spostamento e operatori di assegnazione di spostamento (C++)
 
@@ -151,14 +151,14 @@ Nelle procedure seguenti viene descritto come scrivere un costruttore di spostam
 
 1. Nell'istruzione condizionale, liberare tutte le risorse (ad esempio la memoria) dall'oggetto a cui sono state assegnate.
 
-     Nell'esempio seguente viene liberato il membro `_data` dall'oggetto a cui è assegnato:
+   Nell'esempio seguente viene liberato il membro `_data` dall'oggetto a cui è assegnato:
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-     Seguire i passaggi 2 e 3 nella prima procedura per trasferire i membri dati dall'oggetto di origine all'oggetto che viene costruito:
+   Seguire i passaggi 2 e 3 nella prima procedura per trasferire i membri dati dall'oggetto di origine all'oggetto che viene costruito:
 
     ```cpp
     // Copy the data pointer and its length from the

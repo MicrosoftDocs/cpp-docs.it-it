@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d3be9a77435d8c607bacbc82b58cc95d04a805
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23270275103faac3af48a3627a5f5833140645e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420650"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066746"
 ---
 # <a name="cmutex-class"></a>Classe CMutex
 
@@ -100,6 +100,4 @@ Per accedere o rilasciare un `CMutex` dell'oggetto, creare un [CMultiLock](../..
 
 [Classe CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

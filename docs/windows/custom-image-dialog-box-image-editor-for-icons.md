@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8376db7eb824856d84e8c742d8a187604f939455
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13e3f621bafad08694e8e930835ecc62562db013
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384715"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071680"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Finestra di dialogo immagine personalizzata (Editor di immagini per le icone) (C++)
 
@@ -31,19 +31,19 @@ Consente di creare una nuova immagine con dimensioni personalizzate e numero di 
 - **Larghezza**
 
    Fornisce uno spazio per immettere la larghezza dell'immagine personalizzata in pixel (1-512, limite di 2048).
-  
+
 - **Altezza**
 
    Fornisce uno spazio per l'utente di immettere l'altezza per l'immagine personalizzata in pixel (1-512, limite di 2048).
-  
+
 - **Colori**
 
    Fornisce uno spazio che consente di scegliere il numero di colori per l'immagine personalizzata: 2, 16 o 256.
-  
+
 ## <a name="requirements"></a>Requisiti
 
 nessuno
-  
+
 ## <a name="see-also"></a>Vedere anche
 
 [Nuovo \<dispositivo > finestra di dialogo Tipo immagine](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)<br/>

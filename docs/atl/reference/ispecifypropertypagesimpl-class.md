@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4611c52f65595eb84248507dfb3a85d1ab26fa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 86ad1f489553d1637683ac1310bfe2b9be04ffb0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035963"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064758"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>Classe ISpecifyPropertyPagesImpl
 
@@ -38,7 +38,7 @@ Questa classe implementa `IUnknown` e fornisce un'implementazione predefinita de
 
 ```
 template<class T>
-class ATL_NO_VTABLE ISpecifyPropertyPagesImpl 
+class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
    : public ISpecifyPropertyPages
 ```
 

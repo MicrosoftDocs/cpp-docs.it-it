@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aa7775f0da26846851677aa267b91438ce84dbf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2eb61c47b4366dd1ece4060937fa15fcab43fc3d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117959"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070946"
 ---
 # <a name="compiler-error-c3206"></a>Errore del compilatore C3206
 
@@ -93,7 +93,6 @@ int main() {
    gf<GS<int> >();
 }
 ```
-
 
 Un modello di classe non è consentito come argomento di tipo modello. L'esempio seguente genera C3206:
 

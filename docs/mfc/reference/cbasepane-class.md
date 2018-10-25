@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378397"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076309"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 
@@ -292,7 +292,7 @@ class CBasePane : public CWnd
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` usare questo metodo.|
 |`CBasePane::OnUpdateCmdUI`|Utilizzato internamente.|
 |[CBasePane::PaneFromPoint](#panefrompoint)|Restituisce il riquadro che contiene il punto specificato.|
-|`CBasePane::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
+|`CBasePane::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` usare questo metodo.|
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Annulla la registrazione di un riquadro e lo rimuove dall'elenco nel gestore di ancoraggio.|
 |[CBasePane::SaveState](#savestate)|Salva lo stato del riquadro nel Registro di sistema.|
@@ -332,7 +332,7 @@ I suggerimenti di personalizzazione seguenti riguardano la `CBasePane Class` e t
 
     - AFX_CBRS_CLOSE consente il riquadro essere chiuso (nascosto).
 
-     Queste sono flag che è possibile combinare con un'operazione OR bit per bit.
+   Queste sono flag che è possibile combinare con un'operazione OR bit per bit.
 
 `CBasePane` implementa i metodi booleani virtuali seguenti per riflettere questi flag: [cbasepane:: Canbeclosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). È possibile eseguirne l'override nelle classi derivate per personalizzarne il comportamento.
 
@@ -352,7 +352,7 @@ I suggerimenti di personalizzazione seguenti riguardano la `CBasePane Class` e t
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari metodi nel `CBasePane` classe. Nell'esempio viene illustrato come recuperare un riquadro dal `CFrameWndEx` classe e su come impostare la modalità di ancoraggio, l'allineamento del riquadro e lo stile del riquadro. Il codice deriva dal [esempio di Word Pad](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CBasePane` . Nell'esempio viene illustrato come recuperare un riquadro dal `CFrameWndEx` classe e su come impostare la modalità di ancoraggio, l'allineamento del riquadro e lo stile del riquadro. Il codice deriva dal [esempio di Word Pad](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -1514,7 +1514,7 @@ TRUE se il riquadro è visualizzato; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Usare questo metodo per determinare la visibilità di un riquadro. Non usare `::IsWindowVisible`.
+Usare questo metodo per determinare la visibilità di un riquadro. Non usare la proprietà `::IsWindowVisible`.
 
 Se il riquadro non è a schede (vedere [CBasePane::IsTabbed](#istabbed)), questo metodo controlla per lo stile WS_VISIBLE. Se il riquadro a schede, questo metodo controlla la visibilità della finestra a schede padre. Se la finestra padre è visibile, la funzione controlla la visibilità del riquadro della scheda usando [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).
 
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CPaneDivider\**  non utilizzato.
+*CPaneDivider\**<br/>
+[in] Non utilizzato.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 

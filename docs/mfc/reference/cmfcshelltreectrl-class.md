@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 038cd1caa1dcac3c2af406f9ca770a2220c9e013
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 05936d35829c2982e008cf45d3a76f622357f7dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423308"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077888"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe CMFCShellTreeCtrl
 
@@ -176,7 +176,6 @@ Usando un `CMFCShellListCtrl` dell'oggetto insieme a un `CMFCShellTreeCtrl` dell
 
 ##  <a name="onchildnotify"></a>  CMFCShellTreeCtrl::OnChildNotify
 
-
 ```
 virtual BOOL OnChildNotify(
     UINT message,
@@ -187,17 +186,16 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>Parametri
 
-*message*<br/>
-[in] [in] *wParam*
-*lParam*<br/>
-[in] [in] *pLResult*
+[in] *messaggio*<br/>
+[in] *wParam*<br/>
+[in] *lParam*<br/>
+[in] *pLResult*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ongetitemicon"></a>  CMFCShellTreeCtrl::OnGetItemIcon
-
 
 ```
 virtual int OnGetItemIcon(
@@ -207,8 +205,8 @@ virtual int OnGetItemIcon(
 
 ### <a name="parameters"></a>Parametri
 
-*pItem*<br/>
-[in] [in] *bSelected*
+[in] *pItem*<br/>
+[in] *bSelected*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -216,14 +214,13 @@ virtual int OnGetItemIcon(
 
 ##  <a name="ongetitemtext"></a>  CMFCShellTreeCtrl::OnGetItemText
 
-
 ```
 virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pItem*
+[in] *pItem*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 

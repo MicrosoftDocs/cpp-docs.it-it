@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680ff7d339f592cf112a91fc303a6367fbc4805b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b972d4552a8e41ca0dcea4ef57d48ef161ea35b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408753"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069230"
 ---
 # <a name="template-based-classes"></a>Classi basate su modello
 
@@ -47,11 +47,11 @@ MFC sono disponibili due categorie di raccolte basate su modelli:
 
 - [Semplice array, list e classi map](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-     `CArray`, `CList`, `CMap`
+   `CArray`, `CList`, `CMap`
 
 - [Le matrici, elenchi e mappe di puntatori tipizzati](#_core_using_typed.2d.pointer_collection_templates)
 
-     `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
+   `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
 Le classi di raccolte semplici sono derivate dalla classe `CObject`, quindi ereditano la serializzazione, la creazione dinamica e altre proprietà di `CObject`. Le classi di raccolta puntatore tipizzato è necessario specificare la classe di derivazione, che deve essere una delle raccolte di puntatore non basate su modelli predefinite da MFC, ad esempio `CPtrList` o `CPtrArray`. La nuova classe di raccolta eredita dalla classe di base specificata e le funzioni membro della nuova classe usano incapsulate chiamate ai membri della classe base per garantire la sicurezza di tipo.
 

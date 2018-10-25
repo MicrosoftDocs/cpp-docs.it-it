@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718cc52175ff7d82527fd90486ee401c0e2ba80c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 89ff13a544e9b740dcb5420fb317103af8cf2ab3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375825"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072769"
 ---
 # <a name="cmapstringtostring-class"></a>Classe CMapStringToString
 
@@ -239,6 +239,4 @@ Chiamare questo metodo per cercare un elemento della mappa con una chiave che co
 [Esempio MFC COLLECT](../../visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

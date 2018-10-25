@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3211f87e2c692c587ee2df82497fc56662e4974d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093441"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077284"
 ---
 # <a name="catlmodule-class"></a>Classe CAtlModule
 
@@ -262,7 +262,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceD(  
+HRESULT WINAPI UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -299,7 +299,7 @@ Questo metodo chiama [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregi
 Questo metodo viene chiamato da `UpdateRegistryFromResourceD` per eseguire l'aggiornamento del Registro di sistema.
 
 ```
-inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(  
+inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
     LPCOLESTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -329,12 +329,12 @@ Questo metodo fornisce l'implementazione di [CAtlModule:: UpdateRegistryFromReso
 Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto. Questo metodo Collega in modo statico al componente del Registro di sistema ATL.
 
 ```
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -367,4 +367,4 @@ Simile a [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Classi di modulo](../../atl/atl-module-classes.md)<br/>
-[Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md)  
+[Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md)

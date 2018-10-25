@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4983d2a56407449873c8b4db73d82fa2ef864058
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 297a54b588cadc3a43e1b08ca89820807edb8ba2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328259"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069841"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 
@@ -115,12 +115,12 @@ Crea una finestra di dialogo non modale.
 
 ```
 HWND Create(
-    HWND hWndParent,  
-    LPARAM dwInitParam = NULL );  
+    HWND hWndParent,
+    LPARAM dwInitParam = NULL );
 
 HWND Create(
-    HWND hWndParent,  
-    RECT&, 
+    HWND hWndParent,
+    RECT&,
     LPARAM dwInitParam = NULL);
 ```
 
@@ -144,7 +144,7 @@ Questa finestra di dialogo viene associata automaticamente al `CDialogImpl` ogge
 
 ##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
 
-Elimina una finestra di dialogo non modale.  
+Elimina una finestra di dialogo non modale.
 
 ```
 BOOL DestroyWindow();
@@ -160,13 +160,13 @@ Restituisce TRUE se la finestra di dialogo è stata eliminata correttamente; in 
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
-Questa funzione statica implementa la routine di finestra di dialogo.  
+Questa funzione statica implementa la routine di finestra di dialogo.
 
 ```
 static LRESULT CALLBACK DialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 
@@ -199,8 +199,8 @@ TRUE se il messaggio viene elaborato; in caso contrario, FALSE.
 Crea una finestra di dialogo modale.
 
 ```
-INT_PTR DoModal(  
-    HWND hWndParent = ::GetActiveWindow(),   
+INT_PTR DoModal(
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
@@ -306,9 +306,9 @@ Chiamato una sola volta, quando viene ricevuto il primo messaggio, per elaborare
 
 ```
 static LRESULT CALLBACK StartDialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 

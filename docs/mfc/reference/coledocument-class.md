@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ec82a1f0aa025b8de938d30117032bd666d8bb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 95c528ca21d0f458fe67908322ac622ad26e55e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403175"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077504"
 ---
 # <a name="coledocument-class"></a>Classe COleDocument
 
@@ -558,6 +558,4 @@ In questo modo il framework richiedere all'utente di salvare il documento prima 
 [Esempio MFC MFCBIND](../../visual-cpp-samples.md)<br/>
 [Classe CDocument](../../mfc/reference/cdocument-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295e19d875585e0ea166dfce552866b8c1fc81b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c2c954851348fcb96b28a4c47aee4b4475aeaca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392270"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070283"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
 
@@ -98,7 +98,7 @@ Quando si spostano dati da set di record per il controllo, la funzione imposta l
 
 Se si lavora con le classi basate su ODBC, usare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Esempio
 
@@ -146,7 +146,7 @@ Quando si spostano dati da set di record per il controllo, la funzione imposta l
 
 Se si lavora con le classi basate su ODBC, usare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Esempio
 
@@ -194,7 +194,7 @@ Quando si spostano dati da set di record per il controllo, la funzione imposta l
 
 Se si lavora con le classi basate su ODBC, usare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Esempio
 
@@ -240,7 +240,7 @@ Un puntatore per il [CRecordset](../../mfc/reference/crecordset-class.md) oppure
 
 Quando `DDX_FieldCheck` viene chiamato *valore* è impostato sullo stato corrente del controllo casella di controllo, o lo stato del controllo è impostato su *valore*, a seconda della direzione del trasferimento.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -284,7 +284,7 @@ Quando si spostano dati da set di record per il controllo, la funzione imposta l
 
 Se si lavora con le classi basate su ODBC, usare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Esempio
 
@@ -332,7 +332,7 @@ Nella direzione inversa, questa funzione imposta la selezione corrente nella cas
 
 Se si lavora con le classi basate su ODBC, usare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Esempio
 
@@ -380,7 +380,7 @@ Nella direzione inversa, questa funzione imposta la selezione corrente nella cas
 
 Se si lavora con le classi basate su ODBC, usare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Esempio
 
@@ -428,7 +428,7 @@ Durante il trasferimento dal campo del recordset alla vista, questa funzione vie
 
 Se si lavora con le classi basate su ODBC, usare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Esempio
 
@@ -476,7 +476,7 @@ Quando si spostano dati da set di record per il controllo, la funzione imposta l
 
 Se si lavora con le classi basate su ODBC, usare la prima versione. Utilizzare la seconda versione, se si lavora con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Esempio
 
@@ -499,11 +499,12 @@ Il `DDX_FieldSlider` funzione Sincronizza la posizione di anteprima di un contro
        CRecordset* pRecordset );
 
 void AFXAPI DDX_FieldSlider(
-     CDataExchange* pDX,
-     int nIDC,
-     int& value,
-     CDaoRecordset* pRecordset );
+   CDataExchange* pDX,
+   int nIDC,
+   int& value,
+   CDaoRecordset* pRecordset );
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *pDX*<br/>
@@ -526,7 +527,7 @@ Quando si spostano dati da set di record per il dispositivo di scorrimento, la f
 
 Se si lavora con le classi basate su ODBC, usare il primo override della funzione. Usare il secondo override con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per `CRecordView` e `CDaoRecordView` campi, vedere [visualizzazioni di Record](../../data/record-views-mfc-data-access.md). Per informazioni sui controlli dispositivo di scorrimento, vedere [utilizzo di CSliderCtrl](../using-csliderctrl.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per `CRecordView` e `CDaoRecordView` campi, vedere [visualizzazioni di Record](../../data/record-views-mfc-data-access.md). Per informazioni sui controlli dispositivo di scorrimento, vedere [utilizzo di CSliderCtrl](../using-csliderctrl.md).
 
 ### <a name="example"></a>Esempio
 
@@ -674,14 +675,13 @@ Per la [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetti `DDX_
 
 Usare le versioni con [CRecordset](../../mfc/reference/crecordset-class.md) parametri se si lavora con le classi basate su ODBC. Usare le versioni con [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) parametri se si lavora con le classi basate su DAO.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per esempi e altre informazioni su DDX per [CRecordView](../../mfc/reference/crecordview-class.md) e [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) campi, vedere l'articolo [visualizzazioni di Record](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Esempio
 
 Quanto segue `DoDataExchange` funzionare per un [CRecordView](../../mfc/reference/crecordview-class.md) contiene `DDX_FieldText` funzione chiama per tre tipi di dati: `IDC_COURSELIST` è una casella combinata; gli altri due controlli sono caselle di modifica. Per la programmazione di DAO, il *m_pSet* parametro è un puntatore a un [CRecordset](../../mfc/reference/crecordset-class.md) oppure [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
-
 
 ### <a name="requirements"></a>Requisiti
 

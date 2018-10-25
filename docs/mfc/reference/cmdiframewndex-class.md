@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c797cdb2b0950d0158e8a63294f1e2ea913512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b238dedf9b4f638baf4ea2c9373e7658c90114cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436897"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069334"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (classe)
 
@@ -230,7 +230,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Determina se la finestra cornice dispone di una barra dei menu.|
 |[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Determina se un punto specificato si trova vicino al sito di ancoraggio.|
 |[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|Determina se la finestra cornice è in modalità di anteprima di stampa.|
-|[CMDIFrameWndEx::LoadFrame](#loadframe)|Crea una finestra cornice da informazioni sulle risorse. Esegue l'override`CMDIFrameWnd::LoadFrame`.|
+|[CMDIFrameWndEx::LoadFrame](#loadframe)|Crea una finestra cornice da informazioni sulle risorse. Esegue l'override di `CMDIFrameWnd::LoadFrame`.|
 |[CMDIFrameWndEx:: Loadmdistate](#loadmdistate)|Carica il layout specificato di gruppi a schede MDI e l'elenco di documenti precedentemente aperti.|
 |[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Sposta la scheda attiva dalla finestra a schede attiva al gruppo di schede successivo o precedente.|
 |[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|Crea un nuovo gruppo a schede che dispone di una singola finestra.|
@@ -251,9 +251,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Chiamato dal framework durante l'attivazione di un menu a comparsa.|
 |[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|Chiamato dal framework quando sta cambiando le dimensioni della finestra client MDI.|
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Chiamato dal framework durante l'attivazione di un menu con barra a comparsa.|
-|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Chiamato dal framework per aggiornare il menu di frame. Esegue l'override`CMDIFrameWnd::OnUpdateFrameMenu`.|
+|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Chiamato dal framework per aggiornare il menu di frame. Esegue l'override di `CMDIFrameWnd::OnUpdateFrameMenu`.|
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Restituisce il riquadro di ancoraggio che contiene il punto specificato.|
-|`CMDIFrameWndEx::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows.  Esegue l'override`CMDIFrameWnd::PreTranslateMessage`.|
+|`CMDIFrameWndEx::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .  Esegue l'override di `CMDIFrameWnd::PreTranslateMessage`.|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Chiamato dal framework per ricalcolare il layout della finestra cornice. (Esegue l'override [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Annulla la registrazione di un riquadro e lo rimuove dal gestore di ancoraggio.|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Salva il layout corrente dei gruppi a schede MDI e l'elenco di documenti precedentemente aperti.|
@@ -831,7 +831,6 @@ void EnableWindowsDialog(
     LPCTSTR lpszMenuText,
     BOOL bShowAllways=FALSE,
     BOOL bShowHelpButton=FALSE);
-
 
 void EnableWindowsDialog(
     UINT uiMenuId,
@@ -2033,7 +2032,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>Note
 
-Questo metodo esegue l'override [CWnd:: WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
+Questo metodo esegue l'override di [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
 ## <a name="see-also"></a>Vedere anche
 

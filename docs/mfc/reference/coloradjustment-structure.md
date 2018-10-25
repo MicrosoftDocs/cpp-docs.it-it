@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfa3d3393143b32e5e7a882918aedbc061b9b219
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 682bbe2e9a4987ca30614e9210198193de977e3e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431060"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066292"
 ---
 # <a name="coloradjustment-structure"></a>Struttura COLORADJUSTMENT
 
@@ -122,5 +122,4 @@ Specifica la quantità di regolazione del rosso o verde tonalità da applicare a
 
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDC::GetColorAdjustment](../../mfc/reference/cdc-class.md#getcoloradjustment)
-
 

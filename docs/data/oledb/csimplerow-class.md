@@ -46,128 +46,128 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb27c7fc401fb27b3677659f4f1b5539c19fda2c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: d5ceb07577386f4b3fc9389cf9103fba4036b591
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076790"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 
-Fornisce un'implementazione predefinita per l'handle di riga, che viene utilizzata per la [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) classe.  
-  
+Fornisce un'implementazione predefinita per l'handle di riga, che viene utilizzata per la [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) classe.
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-class CSimpleRow  
-```  
+class CSimpleRow
+```
 
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atldb.h  
+**Intestazione:** atldb.h
 
-## <a name="members"></a>Membri  
-  
-### <a name="methods"></a>Metodi  
-  
-|||  
-|-|-|  
-|[AddRefRow](#addrefrow)|Aggiunge un conteggio dei riferimenti a un handle di riga esistente.|  
-|[Compare](#compare)|Confronta due righe per determinare se fanno riferimento alla stessa istanza di riga.|  
-|[CSimpleRow](#csimplerow)|Costruttore.|  
-|[ReleaseRow](#releaserow)|Rilascia le righe.|  
-  
-### <a name="data-members"></a>Membri di dati  
-  
-|||  
-|-|-|  
-|[m_dwRef](#dwref)|Conteggio dei riferimenti a un handle di riga esistente.|  
-|[m_iRowset](#irowset)|Un indice al set di righe che rappresenta il cursore.|  
-  
-## <a name="remarks"></a>Note  
+## <a name="members"></a>Membri
 
-Un handle di riga è logicamente un tag univoco per una riga di risultati. `IRowsetImpl` Crea un nuovo `CSimpleRow` per tutte le righe richiesti nel [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` possono anche essere sostituite con la propria implementazione dell'handle di riga, perché è un argomento di modello predefinito per `IRowsetImpl`. L'unico requisito per la sostituzione di questa classe consiste nel disporre la classe sostitutiva di fornire un costruttore che accetta un solo parametro di tipo **lungo**.  
+### <a name="methods"></a>Metodi
+
+|||
+|-|-|
+|[AddRefRow](#addrefrow)|Aggiunge un conteggio dei riferimenti a un handle di riga esistente.|
+|[Compare](#compare)|Confronta due righe per determinare se fanno riferimento alla stessa istanza di riga.|
+|[CSimpleRow](#csimplerow)|Costruttore.|
+|[ReleaseRow](#releaserow)|Rilascia le righe.|
+
+### <a name="data-members"></a>Membri di dati
+
+|||
+|-|-|
+|[m_dwRef](#dwref)|Conteggio dei riferimenti a un handle di riga esistente.|
+|[m_iRowset](#irowset)|Un indice al set di righe che rappresenta il cursore.|
+
+## <a name="remarks"></a>Note
+
+Un handle di riga è logicamente un tag univoco per una riga di risultati. `IRowsetImpl` Crea un nuovo `CSimpleRow` per tutte le righe richiesti nel [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` possono anche essere sostituite con la propria implementazione dell'handle di riga, perché è un argomento di modello predefinito per `IRowsetImpl`. L'unico requisito per la sostituzione di questa classe consiste nel disporre la classe sostitutiva di fornire un costruttore che accetta un solo parametro di tipo **lungo**.
 
 ## <a name="addrefrow"></a> Csimplerow:: Addrefrow
 
-Aggiunge un conteggio dei riferimenti a un handle di riga esistente in modo thread-safe.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Aggiunge un conteggio dei riferimenti a un handle di riga esistente in modo thread-safe.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-DWORD AddRefRow();  
-```  
+DWORD AddRefRow();
+```
 
 ## <a name="compare"></a> Csimplerow:: compare
 
-Confronta due righe per determinare se fanno riferimento alla stessa istanza di riga.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Confronta due righe per determinare se fanno riferimento alla stessa istanza di riga.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-HRESULT Compare(CSimpleRow* pRow);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+HRESULT Compare(CSimpleRow* pRow);
+```
+
+#### <a name="parameters"></a>Parametri
 
 *pRow*<br/>
-Puntatore a un oggetto `CSimpleRow` .  
-  
-### <a name="return-value"></a>Valore restituito  
+Puntatore a un oggetto `CSimpleRow` .
 
-Valore HRESULT, in genere S_OK, che indica le due righe rappresentano la stessa istanza di riga o S_FALSE, che indica le due righe sono diverse. Visualizzare [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) nel *riferimento per programmatori OLE DB* per altri possibili valori restituiti. 
+### <a name="return-value"></a>Valore restituito
+
+Valore HRESULT, in genere S_OK, che indica le due righe rappresentano la stessa istanza di riga o S_FALSE, che indica le due righe sono diverse. Visualizzare [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) nel *riferimento per programmatori OLE DB* per altri possibili valori restituiti.
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 
-Costruttore.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Costruttore.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-CSimpleRow(DBCOUNTITEM iRowsetCur);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+CSimpleRow(DBCOUNTITEM iRowsetCur);
+```
+
+#### <a name="parameters"></a>Parametri
 
 *iRowsetCur*<br/>
-[in] Indice al set di righe corrente.  
-  
-### <a name="remarks"></a>Note  
+[in] Indice al set di righe corrente.
 
-Set [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) al *iRowsetCur*. 
+### <a name="remarks"></a>Note
+
+Set [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) al *iRowsetCur*.
 
 ## <a name="releaserow"></a> Csimplerow:: Releaserow
 
-Rilascia le righe in modo thread-safe.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Rilascia le righe in modo thread-safe.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-DWORD ReleaseRow();  
-```  
+DWORD ReleaseRow();
+```
 
 ## <a name="dwref"></a> Csimplerow:: M_dwref
 
-Conteggio dei riferimenti a un handle di riga esistente.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Conteggio dei riferimenti a un handle di riga esistente.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-DWORD m_dwRef;  
-```  
+DWORD m_dwRef;
+```
 
 ## <a name="irowset"></a> Csimplerow:: M_irowset
 
-Indice al set di righe che rappresenta il cursore.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Indice al set di righe che rappresenta il cursore.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-KeyType m_iRowset;  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
+KeyType m_iRowset;
+```
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

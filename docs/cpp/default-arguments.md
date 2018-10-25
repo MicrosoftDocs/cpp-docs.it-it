@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3448f915ae7b738c839ceaa4fb7adeb00492d9f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48261d545737215ff44b1b56bb3b2d48839b6eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112863"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067059"
 ---
 # <a name="default-arguments"></a>Argomenti predefiniti
 
@@ -112,7 +112,7 @@ Si notino questi punti quando si usano argomenti predefiniti:
     }
     ```
 
-     Il problema con questo codice è che la dichiarazione di funzione nella definizione ridefinisce l'argomento predefinito per `prec`.
+   Il problema con questo codice è che la dichiarazione di funzione nella definizione ridefinisce l'argomento predefinito per `prec`.
 
 - Gli argomenti predefiniti aggiuntivi possono essere aggiunti dalle dichiarazioni successive.
 

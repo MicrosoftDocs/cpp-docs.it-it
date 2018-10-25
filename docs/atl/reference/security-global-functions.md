@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbac8dc499c08d96abd33d49f5adec08095ca420
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075157"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067293"
 ---
 # <a name="security-global-functions"></a>Funzioni globali di sicurezza
 
@@ -50,11 +50,11 @@ Queste funzioni forniscono supporto per la modifica di SID e ACL a oggetti.
 |[AtlSetOwnerSid](#atlsetownersid)|Chiamare questa funzione per impostare l'ID di sicurezza (SID) del proprietario per un oggetto.|
 |[AtlGetSacl](#atlgetsacl)|Chiamare questa funzione per recuperare le informazioni dell'elenco di controllo di accesso di sistema (SACL) di un oggetto specificato.|
 |[AtlSetSacl](#atlsetsacl)|Chiamare questa funzione per impostare le informazioni dell'elenco di controllo di accesso di sistema (SACL) di un oggetto specificato.|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Chiamare questa funzione per recuperare il descrittore di sicurezza di un oggetto specifico.|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Chiamare questa funzione per recuperare il descrittore di sicurezza di un oggetto specifico.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** ATLSecurity. h 
+**Intestazione:** ATLSecurity. h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -127,7 +127,7 @@ Restituisce true se l'operazione ha esito positivo, false in caso di esito negat
 Nelle build di debug, si verifica un errore di asserzione se *hObject* non è valido, o se *dwInheritanceFlowControl* non è uno dei tre valori consentiti.
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** ATLSecurity. h 
+**Intestazione:** ATLSecurity. h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +156,11 @@ Puntatore a un `CSid` oggetto che contiene le nuove informazioni di sicurezza.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.  
+Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** ATLSecurity. h 
+**Intestazione:** ATLSecurity. h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +189,11 @@ Il `CSid` contenente le nuove informazioni di sicurezza.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.  
+Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** ATLSecurity. h 
+**Intestazione:** ATLSecurity. h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +222,11 @@ Puntatore a un `CSid` oggetto che contiene le nuove informazioni di sicurezza.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.  
+Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** ATLSecurity. h 
+**Intestazione:** ATLSecurity. h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +255,11 @@ Il `CSid` contenente le nuove informazioni di sicurezza.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.  
+Restituisce true se l'operazione ha esito positivo, false in caso di esito negativo.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** ATLSecurity. h 
+**Intestazione:** ATLSecurity. h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +296,11 @@ Restituisce true se l'operazione ha esito positivo, false in caso di esito negat
 
 ### <a name="remarks"></a>Note
 
-Se `AtlGetSacl` deve essere chiamato più volte su numerosi oggetti diversi, sarà più efficiente per abilitare il privilegio SE_SECURITY_NAME una sola volta prima di chiamare la funzione, con *bRequestNeededPrivileges* impostato su false.  
+Se `AtlGetSacl` deve essere chiamato più volte su numerosi oggetti diversi, sarà più efficiente per abilitare il privilegio SE_SECURITY_NAME una sola volta prima di chiamare la funzione, con *bRequestNeededPrivileges* impostato su false.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** ATLSecurity. h 
+**Intestazione:** ATLSecurity. h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +343,11 @@ Restituisce true se l'operazione ha esito positivo, false in caso di esito negat
 
 Nelle build di debug, si verifica un errore di asserzione se *hObject* non è valido, o se *dwInheritanceFlowControl* non è uno dei tre valori consentiti.
 
-Se `AtlSetSacl` deve essere chiamato più volte su numerosi oggetti diversi, sarà più efficiente per abilitare il privilegio SE_SECURITY_NAME una sola volta prima di chiamare la funzione, con *bRequestNeededPrivileges* impostato su false.  
+Se `AtlSetSacl` deve essere chiamato più volte su numerosi oggetti diversi, sarà più efficiente per abilitare il privilegio SE_SECURITY_NAME una sola volta prima di chiamare la funzione, con *bRequestNeededPrivileges* impostato su false.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** ATLSecurity. h 
+**Intestazione:** ATLSecurity. h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,7 +390,7 @@ Restituisce true se l'operazione ha esito positivo, false in caso di esito negat
 
 ### <a name="remarks"></a>Note
 
-Se `AtlGetSecurityDescriptor` deve essere chiamato più volte su numerosi oggetti diversi, sarà più efficiente per abilitare il privilegio SE_SECURITY_NAME una sola volta prima di chiamare la funzione, con *bRequestNeededPrivileges* impostato su false.  
+Se `AtlGetSecurityDescriptor` deve essere chiamato più volte su numerosi oggetti diversi, sarà più efficiente per abilitare il privilegio SE_SECURITY_NAME una sola volta prima di chiamare la funzione, con *bRequestNeededPrivileges* impostato su false.
 
 ### <a name="requirements"></a>Requisiti
 

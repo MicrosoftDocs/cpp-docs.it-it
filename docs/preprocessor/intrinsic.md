@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4de24dfac4ccd24e5cb4bda8b60a43b3ec0d0560
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: af7fe3a96a31f636a0a1c45b1ee74dd4006d15fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234580"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071599"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -101,4 +101,4 @@ Visualizzare [#pragma funzione](../preprocessor/function-c-cpp.md) per informazi
 ## <a name="see-also"></a>Vedere anche
 
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)  
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

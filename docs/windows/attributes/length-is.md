@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d412ac93ec9e89de8c85758d98d67fa2a7c50e92
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 37c220347070f9a2fecdda44ffe1a3971112f49f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066981"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -58,7 +58,7 @@ Visualizzare [first_is](first-is.md) per un esempio di come specificare una sezi
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -68,4 +68,4 @@ Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>
 [last_is](last-is.md)<br/>
-[size_is](size-is.md)  
+[size_is](size-is.md)

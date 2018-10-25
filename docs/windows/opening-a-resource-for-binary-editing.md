@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c489d1b17df579ecec6c118826a8f770f5664eb
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 256ceee14f38885259da11453efef8451d34248c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316354"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068008"
 ---
 # <a name="opening-a-resource-for-binary-editing-c"></a>Apertura di una risorsa per la modifica binaria (C++)
 
@@ -53,7 +53,7 @@ ms.locfileid: "44316354"
    > [!NOTE]
    > Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
-![Editor binario](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
+![Editor binario](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
 Dati binari per una finestra di dialogo visualizzata nell'editor binario
 
 Nell'editor binario vengono rappresentati solo alcuni valori ASCII (da 0x20 a 0x7E). I caratteri estesi vengono visualizzati come punti nella sezione Valore ASCII dell'editor binario (riquadro a destra). I caratteri "stampabili" sono valori ASCII da 32 a 126.

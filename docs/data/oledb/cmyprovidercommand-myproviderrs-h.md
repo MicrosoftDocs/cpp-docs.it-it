@@ -22,36 +22,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d3f6b8775ab876834555e7c47e469c72d3a150b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 8cf78ca4fc15179671ecc8df4843514ac4e65aa1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49807732"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067251"
 ---
 # <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
-Il `CCustomCommand` classe è l'implementazione per l'oggetto provider di comandi. Fornisce l'implementazione per il `IAccessor`, `ICommandText`, e `ICommandProperties` interfacce. Il `IAccessor` interfaccia è identica a quella del set di righe. L'oggetto comando Usa la funzione di accesso per specificare le associazioni per i parametri. L'oggetto set di righe li utilizza per specificare le associazioni per le colonne di output. Il `ICommandText` interfaccia è un modo utile per specificare un comando in formato testo. Questo esempio Usa la `ICommandText` quando si aggiunge codice personalizzato di interfaccia in un secondo momento; viene anche eseguito l'override di `ICommand::Execute` (metodo). Il `ICommandProperties` interfaccia gestisce tutte le proprietà per gli oggetti comando e set di righe.  
-  
-```cpp  
-// CCustomCommand  
-class ATL_NO_VTABLE CCustomCommand :   
-class ATL_NO_VTABLE CCustomCommand :   
-   public CComObjectRootEx<CComSingleThreadModel>,  
-   public IAccessorImpl<CCustomCommand>,  
-   public ICommandTextImpl<CCustomCommand>,  
-   public ICommandPropertiesImpl<CCustomCommand>,  
-   public IObjectWithSiteImpl<CCustomCommand>,  
-   public IConvertTypeImpl<CCustomCommand>,  
-   public IColumnsInfoImpl<CCustomCommand>  
-```  
-  
-Il `IAccessor` interfaccia gestisce tutti i binding utilizzati in comandi e i set di righe. Il consumer chiama `IAccessor::CreateAccessor` con una matrice di `DBBINDING` strutture. Ogni `DBBINDING` struttura contiene le informazioni sul modo in cui le associazioni di colonna devono essere gestite (ad esempio tipo e lunghezza). Il provider riceve le strutture e quindi determina come devono essere trasferiti i dati e se sono necessarie tutte le conversioni. Il `IAccessor` interfaccia viene utilizzata nell'oggetto comando per gestire eventuali parametri nel comando.  
-  
-L'oggetto comando fornisce anche un'implementazione di `IColumnsInfo`. OLE DB richiede il `IColumnsInfo` interfaccia. L'interfaccia consente al consumer di recuperare informazioni sui parametri del comando. L'oggetto set di righe utilizza la `IColumnsInfo` interfaccia per restituire informazioni sulle colonne di output per il provider.  
-  
-Il provider contiene anche un'interfaccia denominata `IObjectWithSite`. Il `IObjectWithSite` è stata implementata in 2.0 ATL e consente all'implementatore di passare le informazioni su se stesso al relativo elemento figlio. L'oggetto comando Usa il `IObjectWithSite` informazioni per indicare qualsiasi generati oggetti set di righe su chi li ha creati.  
-  
-## <a name="see-also"></a>Vedere anche  
+Il `CCustomCommand` classe è l'implementazione per l'oggetto provider di comandi. Fornisce l'implementazione per il `IAccessor`, `ICommandText`, e `ICommandProperties` interfacce. Il `IAccessor` interfaccia è identica a quella del set di righe. L'oggetto comando Usa la funzione di accesso per specificare le associazioni per i parametri. L'oggetto set di righe li utilizza per specificare le associazioni per le colonne di output. Il `ICommandText` interfaccia è un modo utile per specificare un comando in formato testo. Questo esempio Usa la `ICommandText` quando si aggiunge codice personalizzato di interfaccia in un secondo momento; viene anche eseguito l'override di `ICommand::Execute` (metodo). Il `ICommandProperties` interfaccia gestisce tutte le proprietà per gli oggetti comando e set di righe.
+
+```cpp
+// CCustomCommand
+class ATL_NO_VTABLE CCustomCommand :
+class ATL_NO_VTABLE CCustomCommand :
+   public CComObjectRootEx<CComSingleThreadModel>,
+   public IAccessorImpl<CCustomCommand>,
+   public ICommandTextImpl<CCustomCommand>,
+   public ICommandPropertiesImpl<CCustomCommand>,
+   public IObjectWithSiteImpl<CCustomCommand>,
+   public IConvertTypeImpl<CCustomCommand>,
+   public IColumnsInfoImpl<CCustomCommand>
+```
+
+Il `IAccessor` interfaccia gestisce tutti i binding utilizzati in comandi e i set di righe. Il consumer chiama `IAccessor::CreateAccessor` con una matrice di `DBBINDING` strutture. Ogni `DBBINDING` struttura contiene le informazioni sul modo in cui le associazioni di colonna devono essere gestite (ad esempio tipo e lunghezza). Il provider riceve le strutture e quindi determina come devono essere trasferiti i dati e se sono necessarie tutte le conversioni. Il `IAccessor` interfaccia viene utilizzata nell'oggetto comando per gestire eventuali parametri nel comando.
+
+L'oggetto comando fornisce anche un'implementazione di `IColumnsInfo`. OLE DB richiede il `IColumnsInfo` interfaccia. L'interfaccia consente al consumer di recuperare informazioni sui parametri del comando. L'oggetto set di righe utilizza la `IColumnsInfo` interfaccia per restituire informazioni sulle colonne di output per il provider.
+
+Il provider contiene anche un'interfaccia denominata `IObjectWithSite`. Il `IObjectWithSite` è stata implementata in 2.0 ATL e consente all'implementatore di passare le informazioni su se stesso al relativo elemento figlio. L'oggetto comando Usa il `IObjectWithSite` informazioni per indicare qualsiasi generati oggetti set di righe su chi li ha creati.
+
+## <a name="see-also"></a>Vedere anche
 
 [File del provider generati tramite procedura guidata](../../data/oledb/provider-wizard-generated-files.md)

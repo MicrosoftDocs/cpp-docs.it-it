@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95418345d72f0e5be30d2d8df989793dc49b20a4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: acfb5ea65e4efcba13d6b376dbb2d0f2fe3e6855
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791356"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067865"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -71,9 +71,9 @@ class CMyClass : public A
 |**Attributi obbligatori**|**coclass**|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di classe](class-attributes.md)  
+[Attributi di classe](class-attributes.md)

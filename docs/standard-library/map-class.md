@@ -1,7 +1,7 @@
 ---
 title: Classe map | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42cd23fcba03ed0161b7a19923851dd3d574e23b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 96d0b6abc7ca9f82c3b9c1ce3e84b7fad99ea486
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235685"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066396"
 ---
 # <a name="map-class"></a>Classe map
 
@@ -1012,7 +1012,6 @@ Restituisce l'iteratore successivo all'ultimo valore.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1115,11 +1114,9 @@ Rimuove un elemento o un intervallo di elementi di un oggetto map dalle posizion
 iterator erase(
     const_iterator Where);
 
-
 iterator erase(
     const_iterator First,
     const_iterator Last);
-
 
 size_type erase(
     const key_type& Key);
@@ -1232,7 +1229,6 @@ Restituisce un iteratore che fa riferimento alla posizione di un elemento in una
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1394,19 +1390,16 @@ Inserisce un elemento o un intervallo di elementi in una mappa.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1414,13 +1407,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2636,9 +2627,9 @@ Restituisce l'oggetto funzione di confronto che viene usato da un oggetto map pe
 
 ### <a name="remarks"></a>Note
 
-Per un oggetto map *m*, se due elementi *e*1( *k*1, *d*1) e *e*2( *k*2, `d`2) sono oggetti di tipo `value_type`, dove *k*1 e *k*2 sono le rispettive chiavi di tipo `key_type` e `d`1 e `d`2 sono i rispettivi dati di tipo `mapped_type`, *m.*`value_comp`( *e*1, *e*2) è equivalente a *m.*`key_comp`*(k*1, *k*2). Un oggetto archiviato definisce la funzione membro
+Per una mappa *m*, se due elementi *e1*(*k1*, *d1*) e *e2*(*k2*, *d2*) sono oggetti di tipo `value_type`, dove *k1* e *k1* sono le relative chiavi di tipo `key_type` e *d1* e *d2* sono i dati di tipo `mapped_type`, quindi `m.value_comp(e1, e2)` equivale a `m.key_comp(k1, k2)`. Un oggetto archiviato definisce la funzione membro
 
-**operator bool**( **value_type &**`left`, **value_type &**`right`);
+`bool operator( value_type& left, value_type& right);`
 
 che restituisce **true** se il valore della chiave `left` precede e non è uguale al valore della chiave `right` nell'ordinamento.
 

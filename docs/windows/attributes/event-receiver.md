@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8e049d8338ba63e4d127c8a83fd3d9add32c6a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95e5d65d437b60f6421978682997067d8f53a3d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791381"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073955"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -85,7 +85,7 @@ Il **event_receiver** attributo C++ specifica che la classe o struttura in cui v
 |**Attributi obbligatori**|`coclass` Quando *layout_dependent*=**true**|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -94,4 +94,4 @@ Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[Attributi di classe](class-attributes.md)  
+[Attributi di classe](class-attributes.md)

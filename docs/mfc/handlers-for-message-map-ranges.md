@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073097"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestori per intervalli della mappa messaggi
 
@@ -81,7 +81,7 @@ La voce della mappa messaggi include gli elementi seguenti:
 
 - Parametri della macro:
 
-     Le prime due macro accettano tre parametri:
+   Le prime due macro accettano tre parametri:
 
    - L'ID di comando che inizia l'intervallo
 
@@ -89,9 +89,9 @@ La voce della mappa messaggi include gli elementi seguenti:
 
    - Il nome della funzione del gestore messaggi
 
-     L'intervallo di ID di comando deve essere contigua.
+   L'intervallo di ID di comando deve essere contigua.
 
-     La macro, terza `ON_CONTROL_RANGE`, accetta un parametro aggiuntivo prima: messaggio di una notifica del controllo, ad esempio **EN_CHANGE**.
+   La macro, terza `ON_CONTROL_RANGE`, accetta un parametro aggiuntivo prima: messaggio di una notifica del controllo, ad esempio **EN_CHANGE**.
 
 ##  <a name="_core_declaring_the_handler_function"></a> La dichiarazione di funzione del gestore
 
@@ -113,11 +113,11 @@ Quando si scrive la voce della mappa messaggi, specificare:
 
 - Due ID di comando, inizia e termina un intervallo contiguo.
 
-     Sono riportate di seguito **ID_VIEW_ZOOM25** e **ID_VIEW_ZOOM300**.
+   Sono riportate di seguito **ID_VIEW_ZOOM25** e **ID_VIEW_ZOOM300**.
 
 - Il nome della funzione del gestore per i comandi.
 
-     In questo caso ha `OnZoom`.
+   In questo caso ha `OnZoom`.
 
 La dichiarazione di funzione sarebbe analogo al seguente:
 
@@ -137,15 +137,15 @@ Quando si scrive il `ON_CONTROL_RANGE` macro della mappa del messaggio, si speci
 
 - Un messaggio di notifica del controllo particolare.
 
-     In questo caso ha **BN_CLICKED**.
+   In questo caso ha **BN_CLICKED**.
 
 - I valori ID del controllo associati all'intervallo contiguo di controlli.
 
-     In questo caso si tratta **IDC_BUTTON1** e **IDC_BUTTON10**.
+   In questo caso si tratta **IDC_BUTTON1** e **IDC_BUTTON10**.
 
 - Il nome della funzione del gestore di messaggi.
 
-     In questo caso ha `OnButtonClicked`.
+   In questo caso ha `OnButtonClicked`.
 
 Quando si scrive la funzione del gestore, specificare l'eccesso **UINT** parametro, come illustrato di seguito:
 

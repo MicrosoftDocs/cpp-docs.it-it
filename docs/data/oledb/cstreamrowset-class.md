@@ -38,82 +38,82 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8a541edb478c29fe04619dda319576717a7b9dc6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8a19085ae5d46396415e5b54b9acada547bc8079
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081845"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077790"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
 
-Utilizzato in una `CCommand` o `CTable` dichiarazione.  
-  
+Utilizzato in una `CCommand` o `CTable` dichiarazione.
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CStreamRowset  
-```  
-  
-### <a name="parameters"></a>Parametri  
+template <class TAccessor = CAccessorBase>
+class CStreamRowset
+```
+
+### <a name="parameters"></a>Parametri
 
 *TAccessor*<br/>
-Una classe di funzione di accesso.  
+Una classe di funzione di accesso.
 
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atldbcli.h  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="methods"></a>Metodi  
-  
-|||  
-|-|-|  
-|[CStreamRowset](#cstreamrowset)|Costruttore. Crea e inizializza il `CStreamRowset` oggetto.|  
-|[Chiudi](#close)|Rilascia il [ISequentialStream](/previous-versions/windows/desktop/ms718035) puntatore a interfaccia nella classe.|  
-  
-## <a name="remarks"></a>Note  
+**Intestazione:** atldbcli.h
 
-Uso `CStreamRowset` nella `CCommand` o `CTable` dichiarazione, ad esempio:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
-  
-oppure  
-  
-[!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
-  
-`ICommand::Execute` Restituisce un `ISequentialStream` puntatore che viene archiviato in `m_spStream`. È quindi possibile usare il `Read` metodo per recuperare i dati (stringa Unicode) in formato XML. Ad esempio:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
-  
-SQL Server 2000 esegue il formattazione XML e restituirà tutte le colonne e tutte le righe del set di righe in un'unica stringa XML.  
-  
+## <a name="members"></a>Membri
+
+### <a name="methods"></a>Metodi
+
+|||
+|-|-|
+|[CStreamRowset](#cstreamrowset)|Costruttore. Crea e inizializza il `CStreamRowset` oggetto.|
+|[Chiudi](#close)|Rilascia il [ISequentialStream](/previous-versions/windows/desktop/ms718035) puntatore a interfaccia nella classe.|
+
+## <a name="remarks"></a>Note
+
+Uso `CStreamRowset` nella `CCommand` o `CTable` dichiarazione, ad esempio:
+
+[!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
+
+oppure
+
+[!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
+
+`ICommand::Execute` Restituisce un `ISequentialStream` puntatore che viene archiviato in `m_spStream`. È quindi possibile usare il `Read` metodo per recuperare i dati (stringa Unicode) in formato XML. Ad esempio:
+
+[!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
+
+SQL Server 2000 esegue il formattazione XML e restituirà tutte le colonne e tutte le righe del set di righe in un'unica stringa XML.
+
 > [!NOTE]
->  Questa funzionalità funziona solo con SQL Server 2000.  
-  
+>  Questa funzionalità funziona solo con SQL Server 2000.
+
 ## <a name="cstreamrowset"></a> CStreamRowset:: CStreamRowset
 
-Crea e inizializza il `CStreamRowset` oggetto.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Crea e inizializza il `CStreamRowset` oggetto.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-CStreamRowset();  
-```  
+CStreamRowset();
+```
 
 ## <a name="close"></a> CStreamRowset:: Close
 
-Rilascia il [ISequentialStream](/previous-versions/windows/desktop/ms718035) puntatore a interfaccia nella classe.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Rilascia il [ISequentialStream](/previous-versions/windows/desktop/ms718035) puntatore a interfaccia nella classe.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-void Close();   
-```  
-  
-## <a name="see-also"></a>Vedere anche  
+void Close();
+```
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

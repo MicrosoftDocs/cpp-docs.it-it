@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fb7f205ccdf78e1ef64e2ba2c132e3c2b6b6000
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2ca39b160aacdf72bb6d6131b757755f87ac22a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075081"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -44,13 +44,13 @@ L'interfaccia predefinita che sarà resa disponibile per gli ambienti di script 
 Se non si specifica un'interfaccia predefinita, la prima occorrenza di un'interfaccia non di origine viene usata come predefinita.
 
 *Interface2*<br/>
-(Facoltativo) L'interfaccia di origine predefinita. È anche necessario specificare questa interfaccia con il [origine](source-cpp.md) attributo.
+(Facoltativo) L'interfaccia di origine predefinita. È necessario anche specificare questa interfaccia con l'attributo [source](source-cpp.md) .
 
 Se non si specifica un'interfaccia di origine predefinita, viene usata come predefinita la prima interfaccia di origine.
 
 ## <a name="remarks"></a>Note
 
-Il **predefinito** attributi di C++ ha la stessa funzionalità come il [predefinita](/windows/desktop/Midl/default) attributo MIDL. Il **predefinite** attributo viene usato anche con il [case](case-cpp.md) attributo.
+L'attributo C++ **default** ha la stessa funzione dell'attributo MIDL [default](/windows/desktop/Midl/default) . L'attributo **default** viene usato anche con l'attributo [case](case-cpp.md) .
 
 ## <a name="example"></a>Esempio
 
@@ -77,7 +77,7 @@ __interface ICustomDispatch : public IDispatch {
    HRESULT Dispatch([in] long l, [out, retval] long *pLong);
 };
 
-[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")  
+[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")
 ]
 class CClass : public ICustom, public IDual, public ICustomDispatch {
    HRESULT Custom(long l, long *pLong) { return(S_OK); }
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-Il [origine](source-cpp.md) attributo ha anche un esempio di come usare **predefinita**.
+Anche l'attributo [source](source-cpp.md) presenta un esempio di come usare **default**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -115,10 +115,10 @@ Il [origine](source-cpp.md) attributo ha anche un esempio di come usare **predef
 |**Attributi obbligatori**|**Coclasse** (quando applicato a **classe** oppure **struct**)|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclass](coclass.md)

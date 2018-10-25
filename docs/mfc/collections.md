@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412860"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069906"
 ---
 # <a name="collections"></a>Raccolte
 
@@ -53,15 +53,15 @@ Più avanti in questo argomento viene descritta brevemente ciascuna delle forme 
 
 - List
 
-     La classe elenco fornisce un elenco di elementi ordinato e non indicizzato, implementato come elenco a doppio collegamento. Un elenco ha un inizio e una fine e aggiungere o rimuovere elementi dall'inizio o dalla fine o inserire o eliminare elementi al centro è molto veloce.
+   La classe elenco fornisce un elenco di elementi ordinato e non indicizzato, implementato come elenco a doppio collegamento. Un elenco ha un inizio e una fine e aggiungere o rimuovere elementi dall'inizio o dalla fine o inserire o eliminare elementi al centro è molto veloce.
 
 - Matrice
 
-     La classe array fornisce una matrice di oggetti dinamicamente ridimensionata, ordinata e indicizzata per interi.
+   La classe array fornisce una matrice di oggetti dinamicamente ridimensionata, ordinata e indicizzata per interi.
 
 - Mappa (denominata anche dizionario)
 
-     Una mappa è una raccolta che associa un oggetto chiave a un oggetto valore.
+   Una mappa è una raccolta che associa un oggetto chiave a un oggetto valore.
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Le classi Collection basate su modello
 

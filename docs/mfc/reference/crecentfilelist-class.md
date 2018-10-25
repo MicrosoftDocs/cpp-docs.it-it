@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 2f8f3d1b4be06caeacc86718eafed432979b0c59
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890608"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069425"
 ---
 # <a name="crecentfilelist-class"></a>Classe CRecentFileList
 
@@ -94,21 +94,17 @@ Aggiunge un file all'elenco dei file utilizzato di recente (MRU).
 ```
 virtual void Add(LPCTSTR lpszPathName);
 
-
 virtual void Add(
     LPCTSTR lpszPathName,
     LPCTSTR lpszAppID);
-
 
 void Add(
     IShellItem* pItem,
     LPCTSTR lpszAppID);
 
-
 void Add(
     IShellLink* pLink,
     LPCTSTR lpszAppID);
-
 
 void Add(
     PIDLIST_ABSOLUTE pidl,
@@ -278,6 +274,4 @@ virtual void WriteList();
 ## <a name="see-also"></a>Vedere anche
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

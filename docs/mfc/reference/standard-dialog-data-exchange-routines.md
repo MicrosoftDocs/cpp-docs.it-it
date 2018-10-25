@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e178dfd91382db6c72fbced24ac990c09861a766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e493f978606f4013da21c292ccf8f520e4e56ea5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433232"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070413"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Routine DDX (Dialog Data Exchange) standard
 
@@ -75,7 +75,7 @@ Un riferimento a una variabile membro della finestra di dialogo, visualizzazione
 
 Quando `DDX_CBIndex` viene chiamato *indice* è impostato per l'indice della selezione corrente casella combinata. Se è selezionato alcun elemento, *indice* è impostato su 0.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -110,7 +110,7 @@ Quando `DDX_CBString` viene chiamato *valore* è impostato per la selezione corr
 > [!NOTE]
 >  Se la casella combinata è una casella di riepilogo a discesa, il valore scambiato è limitato a 255 caratteri.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -145,7 +145,7 @@ Quando `DDX_CBStringExact` viene chiamato *valore* è impostato per la selezione
 > [!NOTE]
 >  Se la casella combinata è una casella di riepilogo a discesa, il valore scambiato è limitato a 255 caratteri.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -177,7 +177,7 @@ Un riferimento a una variabile membro della finestra di dialogo, visualizzazione
 
 Quando `DDX_Check` viene chiamato *valore* viene impostato sullo stato corrente del controllo casella di controllo. Per un elenco dei valori di stato possibili, vedere [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) nel SDK di Windows.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -209,7 +209,7 @@ Un riferimento a una variabile membro della finestra di dialogo, visualizzazione
 
 Il *pDX* oggetto viene fornito dal framework quando il `DoDataExchange` funzione viene chiamata. Pertanto `DDX_Control` deve essere chiamato solo all'interno dell'override di `DoDataExchange`.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -253,7 +253,7 @@ Quando `DDX_DateTimeCtrl` viene chiamato *valore* è impostata su corrente dello
 
 Nella terza versione precedente, `DDX_DateTimeCtrl` gestisce il trasferimento del `CString` controllo ora i dati tra una data e un [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro dei dati dell'oggetto visualizzazione controllo. La stringa viene formattata utilizzando le regole di impostazioni locali correnti per la formattazione di date e ore.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -268,10 +268,11 @@ Crea un controllo .NET corrispondenti ID di risorsa. del controllo
 ```
 template <typename T>
 void DDX_ManagedControl(
-     CDataExchange* pDX,
-     int nIDC,
-     CWinFormsControl<T>& control );
+   CDataExchange* pDX,
+   int nIDC,
+   CWinFormsControl<T>& control );
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *pDX*<br/>
@@ -297,8 +298,6 @@ Per altre informazioni, vedere [procedura: eseguire operazioni di associazione d
 
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog](cdialog-class.md#oninitdialog)
-
-
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -335,7 +334,7 @@ Utilizzare Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress) per 
 
 Quando `DDX_IPAddress` viene chiamato *valore* viene letto dal controllo di indirizzo IP, o *valore* viene scritto nel controllo, a seconda della direzione dello scambio.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -367,7 +366,7 @@ Un riferimento a una variabile membro della finestra di dialogo, visualizzazione
 
 Quando `DDX_LBIndex` viene chiamato *indice* è impostato per l'indice della selezione casella elenco corrente. Se è selezionato alcun elemento, *indice* è impostato su -1.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -404,7 +403,7 @@ Quando `DDX_LBString` viene chiamato per trasferire i dati da un controllo casel
 > [!NOTE]
 >  Se la casella di riepilogo è una casella di riepilogo a discesa, il valore scambiato è limitato a 255 caratteri.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -441,7 +440,7 @@ Quando `DDX_CBStringExact` viene chiamato per trasferire i dati da un controllo 
 > [!NOTE]
 >  Se la casella di riepilogo è una casella di riepilogo a discesa, il valore scambiato è limitato a 255 caratteri.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -481,7 +480,7 @@ Un riferimento a un `CTime` o `COleDateTime` variabile membro della finestra di 
 
 Quando `DDX_MonthCalCtrl` viene chiamato *valore* viene impostato sullo stato corrente del controllo calendario mensile.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -515,7 +514,7 @@ Quando `DDX_Radio` viene chiamato *valore* viene impostato sullo stato corrente 
 
 Ad esempio, nel caso in cui è il primo pulsante di opzione nel gruppo selezionato (il pulsante con lo stile WS_GROUP) il valore della **int** membro è 0 e così via.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -547,7 +546,7 @@ Riferimento a una variabile membro della finestra di dialogo, alla visualizzazio
 
 Quando `DDX_Scroll` viene chiamato *valore* è impostato per la posizione corrente del cursore del controllo. Per altre informazioni sui valori associato alla posizione corrente del cursore del controllo, vedere [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) nel SDK di Windows.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -579,7 +578,7 @@ Un riferimento al valore da scambiare. Questo parametro contiene o imposta la po
 
 Quando `DDX_Slider` viene chiamato *valore* è impostato per la posizione corrente del cursore, del controllo o il valore riceve la posizione, a seconda della direzione dello scambio.
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md). Per informazioni sui controlli dispositivo di scorrimento, vedere [utilizzo di CSliderCtrl](../../mfc/using-csliderctrl.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per informazioni sui controlli dispositivo di scorrimento, vedere [utilizzo di CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -659,7 +658,7 @@ Un riferimento a un membro dati nella finestra di dialogo, visualizzazione form 
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 

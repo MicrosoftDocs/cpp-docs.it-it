@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98dfdc792341d215830d46d078d9ece69419efed
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 79cc811464b4aa33ee11b480ec76c932b123f7da
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890842"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074371"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -1402,7 +1402,6 @@ Chiamare questa funzione per inserire un nuovo elemento in un controllo di visua
 ```
 HTREEITEM InsertItem(LPTVINSERTSTRUCT lpInsertStruct);
 
-
 HTREEITEM InsertItem(
     UINT nMask,
     LPCTSTR lpszItem,
@@ -1414,12 +1413,10 @@ HTREEITEM InsertItem(
     HTREEITEM hParent,
     HTREEITEM hInsertAfter);
 
-
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
     HTREEITEM hParent = TVI_ROOT,
     HTREEITEM hInsertAfter = TVI_LAST);
-
 
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
@@ -1912,7 +1909,6 @@ Chiamare questa funzione per impostare gli attributi dell'elemento di visualizza
 
 ```
 BOOL SetItem(TVITEM* pItem);
-
 
 BOOL SetItem(
     HTREEITEM hItem,

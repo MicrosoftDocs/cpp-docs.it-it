@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f93b367b207730f331e4a9ae16b191f7a5314e4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4425732f35b711b052675c3d1a00746c04a1d538
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399607"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075047"
 ---
 # <a name="colestreamfile-class"></a>Classe COleStreamFile
 
@@ -255,6 +255,4 @@ Per altre informazioni, vedere [IStorage::OpenStream](/windows/desktop/api/objid
 
 [Classe CFile](../../mfc/reference/cfile-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

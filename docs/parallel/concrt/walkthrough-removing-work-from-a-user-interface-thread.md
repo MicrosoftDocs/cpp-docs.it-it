@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d87fe1060756e46418411584fa6042533bbc1f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cc766b3f5410cc52543b5d2bafc06b87d9222e4a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385508"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077933"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente
 
@@ -72,7 +72,7 @@ Questa sezione descrive come creare l'applicazione MFC di base.
 
 1. Fare clic su **Finish** per creare il progetto e chiudere il **Creazione guidata applicazione MFC**.
 
-     Verificare che l'applicazione è stata creata correttamente per la creazione e la sua esecuzione. Per compilare l'applicazione, scegliere il **compilare** menu, fare clic su **Compila soluzione**. Se l'applicazione viene compilata correttamente, eseguire l'applicazione facendo clic **Avvia debug** nel **Debug** menu.
+   Verificare che l'applicazione è stata creata correttamente per la creazione e la sua esecuzione. Per compilare l'applicazione, scegliere il **compilare** menu, fare clic su **Compila soluzione**. Se l'applicazione viene compilata correttamente, eseguire l'applicazione facendo clic **Avvia debug** nel **Debug** menu.
 
 ##  <a name="serial"></a> Implementazione della versione seriale dell'applicazione di Mandelbrot
 
@@ -82,37 +82,37 @@ Questa sezione descrive come disegnare il frattale di Mandelbrot. Questa version
 
 1. In stdafx. h, aggiungere il codice seguente `#include` direttiva:
 
-     [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
+   [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
 1. In ChildView. H, dopo il `pragma` direttiva, definire il `BitmapPtr` tipo. Il `BitmapPtr` tipo consente a un puntatore a un `Bitmap` oggetto deve essere condiviso da più componenti. Il `Bitmap` oggetto viene eliminato quando non viene fatto riferimento da alcun componente.
 
-     [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
+   [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
 
 1. In ChildView. H, aggiungere il codice seguente per il `protected` sezione del `CChildView` classe:
 
-     [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
+   [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
 
 1. In ChildView. cpp, impostare come commento o rimuovere le righe seguenti.
 
-     [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
+   [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
 
-     Nelle build di Debug, questo passaggio impedisce all'applicazione tramite il `DEBUG_NEW` allocatore, che è incompatibile con GDI+.
+   Nelle build di Debug, questo passaggio impedisce all'applicazione tramite il `DEBUG_NEW` allocatore, che è incompatibile con GDI+.
 
 1. In ChildView. cpp, aggiungere un `using` direttiva per il `Gdiplus` dello spazio dei nomi.
 
-     [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
+   [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
 
 1. Aggiungere il codice seguente al costruttore e distruttore del `CChildView` classe per inizializzare e arrestare GDI+.
 
-     [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
+   [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
 
 1. Implementare il metodo `CChildView::DrawMandelbrot`. Questo metodo consente di disegnare il frattale di Mandelbrot specificato `Bitmap` oggetto.
 
-     [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
+   [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
 
 1. Implementare il metodo `CChildView::OnPaint`. Questo metodo chiama `CChildView::DrawMandelbrot` , che quindi copia il contenuto del `Bitmap` oggetto alla finestra.
 
-     [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
+   [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
 9. Verificare che l'applicazione è stata aggiornata correttamente per la creazione e la sua esecuzione.
 
@@ -136,25 +136,25 @@ Questo esempio Usa anche un [Concurrency:: unbounded_buffer](reference/unbounded
 
 1. In stdafx. h, aggiungere il codice seguente `#include` direttive:
 
-     [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
+   [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 
 1. In ChildView. H, aggiungere `task_group` e `unbounded_buffer` variabili membro per il `protected` sezione del `CChildView` classe. Il `task_group` oggetto contiene le attività che eseguono il disegno; il `unbounded_buffer` oggetto contiene l'immagine di Mandelbrot completata.
 
-     [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
+   [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
 
 1. In ChildView. cpp, aggiungere un `using` direttiva per il `concurrency` dello spazio dei nomi.
 
-     [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
+   [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
 
 1. Nel `CChildView::DrawMandelbrot` dopo la chiamata al metodo `Bitmap::UnlockBits`, chiamare il [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) funzione per passare il `Bitmap` oggetto al thread dell'interfaccia utente. Quindi pubblica un messaggio paint al thread UI e invalidare l'area client.
 
-     [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
+   [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
 
 1. Aggiornamento di `CChildView::OnPaint` metodo per la ricezione aggiornato `Bitmap` dell'oggetto e disegnare l'immagine per la finestra del client.
 
-     [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
+   [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
 
-     Il `CChildView::OnPaint` metodo crea un'attività per generare l'immagine di Mandelbrot se non ne esiste nel buffer dei messaggi. Il buffer dei messaggi non conterrà un `Bitmap` oggetto nei casi, ad esempio il messaggio di disegno iniziale e quando un'altra finestra viene spostata davanti la finestra del client.
+   Il `CChildView::OnPaint` metodo crea un'attività per generare l'immagine di Mandelbrot se non ne esiste nel buffer dei messaggi. Il buffer dei messaggi non conterrà un `Bitmap` oggetto nei casi, ad esempio il messaggio di disegno iniziale e quando un'altra finestra viene spostata davanti la finestra del client.
 
 1. Verificare che l'applicazione è stata aggiornata correttamente per la creazione e la sua esecuzione.
 
@@ -194,37 +194,37 @@ Il `CChildView::DrawMandelbrot` metodo, che esegue l'attività di disegno, deve 
 
 1. In ChildView. H, nel `protected` sezione del `CChildView` classe, aggiungere le dichiarazioni per le `OnSize`, `OnSizing`, e `OnDestroy` funzioni per la mappa del messaggio.
 
-     [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
+   [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
 
 1. In ChildView. cpp, modificare la mappa messaggi per contenere i gestori per il `WM_SIZE`, `WM_SIZING`, e `WM_DESTROY` messaggi.
 
-     [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
+   [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
 
 1. Implementare il metodo `CChildView::OnSizing`. Questo metodo annulla eventuali attività di disegno esistente.
 
-     [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]
+   [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]
 
 1. Implementare il metodo `CChildView::OnSize`. Questo metodo annulla eventuali attività di disegno esistente e crea una nuova attività di disegno per la dimensione della finestra client aggiornato.
 
-     [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]
+   [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]
 
 1. Implementare il metodo `CChildView::OnDestroy`. Questo metodo annulla eventuali attività di disegno esistente.
 
-     [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
+   [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
 
 1. In ChildView. cpp, definire il `scope_guard` classe che implementa il modello RAII.
 
-     [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
+   [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
 
 1. Aggiungere il codice seguente per il `CChildView::DrawMandelbrot` dopo la chiamata al metodo `Bitmap::LockBits`:
 
-     [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
+   [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
 
-     Questo codice gestisce l'annullamento tramite la creazione di un `scope_guard` oggetto. Quando l'oggetto esce dall'ambito, sblocca i bit della bitmap.
+   Questo codice gestisce l'annullamento tramite la creazione di un `scope_guard` oggetto. Quando l'oggetto esce dall'ambito, sblocca i bit della bitmap.
 
 1. Fine di modificare la `CChildView::DrawMandelbrot` metodo per chiudere il `scope_guard` dopo aver sbloccato il bit della bitmap, ma prima che tutti i messaggi vengono inviati al thread dell'interfaccia utente dell'oggetto. Ciò garantisce che il thread dell'interfaccia utente non viene aggiornato prima i bit della bitmap vengono sbloccati.
 
-     [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
+   [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
 
 9. Verificare che l'applicazione è stata aggiornata correttamente per la creazione e la sua esecuzione.
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 740d99bfbc0da4c290a09a95f5d4f8f227a11fc8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8296ba9a6f5c6072f025dbdd931b6f609d9df9e8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067826"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -40,7 +40,7 @@ Il **sincronizzare** attributo C++ implementa il supporto per la sincronizzazion
 
 Il codice inserito da questo attributo chiama appropriate `Lock` metodo (determinata dal modello di threading) all'inizio del metodo di destinazione. Quando il metodo viene terminato, `Unlock` viene chiamato automaticamente. Per altre informazioni su queste funzioni, vedere [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 
-Questo attributo richiede che il [coclasse](coclass.md), [progid](progid.md), o [vi_progid](vi-progid.md) attributo (o un altro attributo che implica uno di questi) anche sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.
+Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.
 
 ## <a name="example"></a>Esempio
 
@@ -59,7 +59,7 @@ Il codice seguente fornisce la sincronizzazione per il `UpdateBalance` metodo di
 threading(both),
 vi_progid("MyProject.MyClass"),
 progid("MyProject.MyClass.1"),
-uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")  
+uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")
 ]
 class CMyClass {
    float m_nBalance;
@@ -82,8 +82,8 @@ class CMyClass {
 |**Attributi obbligatori**|Uno o più delle operazioni seguenti: `coclass`, `progid`, o `vi_progid`.|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi COM](com-attributes.md)  
+[Attributi COM](com-attributes.md)

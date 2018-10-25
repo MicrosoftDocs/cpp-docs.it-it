@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be2676609cae4de6b2f3995be1bc9311f88e0a84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a10e1f6adb1fc9274a2a59215564fb60984ea661
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074488"
 ---
 # <a name="cdaoquerydef-class"></a>Classe CDaoQueryDef
 
@@ -235,7 +235,7 @@ Diverso da zero se si è autorizzati a modificare l'oggetto querydef; in caso co
 
 - Si dispone delle autorizzazioni di aggiornamento per il database.
 
-     Ciò dipende dal fatto che è stato implementato le funzionalità di sicurezza. MFC non fornisce supporto per la protezione. è necessario implementarla manualmente dalla chiamata a DAO direttamente o mediante accesso Microsoft. Vedere l'argomento "Proprietà Permissions" nella Guida di DAO.
+   Ciò dipende dal fatto che è stato implementato le funzionalità di sicurezza. MFC non fornisce supporto per la protezione. è necessario implementarla manualmente dalla chiamata a DAO direttamente o mediante accesso Microsoft. Vedere l'argomento "Proprietà Permissions" nella Guida di DAO.
 
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef
 
@@ -426,7 +426,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -519,7 +518,6 @@ void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetParameterInfo(
     LPCTSTR lpszName,
@@ -790,7 +788,6 @@ Chiamare questa funzione membro per impostare il valore di un parametro nell'ogg
 virtual void SetParamValue(
     LPCTSTR lpszName,
     const COleVariant& varValue);
-
 
 virtual void SetParamValue(
     int nIndex,

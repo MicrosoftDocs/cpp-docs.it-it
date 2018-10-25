@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cfda40e857cc05a907ce4dcdc2352d52cb9cf0b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040440"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075931"
 ---
 # <a name="object-map-macros"></a>Macro della mappa oggetti
 
@@ -31,7 +31,7 @@ Queste macro definiscono mappe di oggetti e le voci.
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Consente di specificare la descrizione di testo dell'oggetto di classe, che verrà immesso nella mappa oggetto.|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|Entra in un oggetto ATL nella mappa oggetto, aggiornare il Registro di sistema e crea un'istanza dell'oggetto.|
-|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Consente di specificare che l'oggetto deve essere registrato e inizializzato, ma non deve essere creabile esternamente tramite `CoCreateInstance`.|  
+|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Consente di specificare che l'oggetto deve essere registrato e inizializzato, ma non deve essere creabile esternamente tramite `CoCreateInstance`.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -54,7 +54,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ATL entra in questa descrizione nella mappa oggetto tramite il [OBJECT_ENTRY_AUTO](#object_entry_auto) macro.
 
-DECLARE_OBJECT_DESCRIPTION implementa una `GetObjectDescription` funzione, che è possibile usare per eseguire l'override di [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) (metodo).  
+DECLARE_OBJECT_DESCRIPTION implementa una `GetObjectDescription` funzione, che è possibile usare per eseguire l'override di [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) (metodo).
 
 Il `GetObjectDescription` funzione viene chiamata da `IComponentRegistrar::GetComponents`. `IComponentRegistrar` è un'interfaccia di automazione che consente di registrare e annullare la registrazione di singoli componenti in una DLL. Quando si crea un oggetto di registrazione componenti con la creazione guidata progetto ATL, la procedura guidata implementerà automaticamente il `IComponentRegistrar` interfaccia. `IComponentRegistrar` in genere viene utilizzata da Microsoft Transaction Server.
 
@@ -84,7 +84,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 Le macro di voci di oggetto vengono inserite in ambito globale nel progetto per fornire supporto per la registrazione, l'inizializzazione e la creazione di una classe.
 
-OBJECT_ENTRY_AUTO immette i puntatori a funzione della classe dell'autore e classe factory creatore della classe `CreateInstance` funzioni per questo oggetto nella mappa oggetto ATL generato automaticamente. Quando [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) viene chiamato, viene aggiornato il Registro di sistema per ogni oggetto nella mappa oggetto.  
+OBJECT_ENTRY_AUTO immette i puntatori a funzione della classe dell'autore e classe factory creatore della classe `CreateInstance` funzioni per questo oggetto nella mappa oggetto ATL generato automaticamente. Quando [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) viene chiamato, viene aggiornato il Registro di sistema per ogni oggetto nella mappa oggetto.
 
 La tabella seguente descrive come le informazioni aggiunte alla mappa dell'oggetto viene ottenute dalla classe indicata come secondo parametro di questa macro.
 
@@ -94,7 +94,7 @@ La tabella seguente descrive come le informazioni aggiunte alla mappa dell'ogget
 |Creazione della factory di classe|[Macro di Class Factory](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Creazione di istanze|[Macro di aggregazione](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Registrazione del componente categoria|[Macro di categoria](../../atl/reference/category-macros.md)|
-|Pulizia e l'inizializzazione a livello di classe|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
+|Pulizia e l'inizializzazione a livello di classe|[ObjectMain](ccomobjectrootex-class.md#objectmain)|
 
 ##  <a name="object_entry_non_createable_ex_auto"></a>  OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 

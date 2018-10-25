@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19d43d108888d1d89b4fa6173ab3ebd0e8e55bbc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8794c2625e3ecda442cc0e7a1079ede148ed8e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400250"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074813"
 ---
 # <a name="csemaphore-class"></a>Classe CSemaphore
 
@@ -106,6 +106,4 @@ Per accedere o rilasciare un `CSemaphore` dell'oggetto, creare un [CMultiLock](.
 
 [Classe CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 
