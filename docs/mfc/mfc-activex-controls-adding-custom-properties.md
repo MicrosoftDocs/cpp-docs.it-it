@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98cf8a0532c3b1f2044ba0338d3f2f2bf8e73813
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0070103724385dcb598c20cd15bc29f341628bce
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390989"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079441"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controlli ActiveX MFC: aggiunta di proprietà personalizzate
 
@@ -36,19 +36,19 @@ Proprietà personalizzate sono disponibili quattro tipi di implementazione: vari
 
 - Implementazione della variabile membro
 
-     Questa implementazione rappresenta lo stato della proprietà di una variabile membro nella classe del controllo. Usare l'implementazione della variabile membro quando non è importante sapere quando viene modificato il valore della proprietà. Dei tre tipi, questa implementazione viene creata la quantità minima di codice di supporto per la proprietà. È la macro di voce della mappa di invio per l'implementazione di variabile membro [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
+   Questa implementazione rappresenta lo stato della proprietà di una variabile membro nella classe del controllo. Usare l'implementazione della variabile membro quando non è importante sapere quando viene modificato il valore della proprietà. Dei tre tipi, questa implementazione viene creata la quantità minima di codice di supporto per la proprietà. È la macro di voce della mappa di invio per l'implementazione di variabile membro [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
 
 - Variabile membro con l'implementazione di notifica
 
-     Questa implementazione è costituito da una variabile membro e una funzione di notifica creata mediante l'aggiunta guidata proprietà. La funzione di notifica viene chiamata automaticamente dal framework dopo la modifica del valore proprietà. Usare la variabile membro con l'implementazione di notifica quando è necessario ricevere una notifica dopo che è stato modificato un valore della proprietà. Questa implementazione richiede più tempo perché è necessaria una chiamata di funzione. La macro di voce della mappa di invio per questa implementazione viene [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
+   Questa implementazione è costituito da una variabile membro e una funzione di notifica creata mediante l'aggiunta guidata proprietà. La funzione di notifica viene chiamata automaticamente dal framework dopo la modifica del valore proprietà. Usare la variabile membro con l'implementazione di notifica quando è necessario ricevere una notifica dopo che è stato modificato un valore della proprietà. Questa implementazione richiede più tempo perché è necessaria una chiamata di funzione. La macro di voce della mappa di invio per questa implementazione viene [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
 
 - Implementazione di metodi Get/Set
 
-     Questa implementazione è costituito da una coppia di funzioni membro nella classe del controllo. L'implementazione di metodi Get/Set chiama automaticamente il recupero del membro funzione quando l'utente del controllo richiede il valore corrente della proprietà e la funzione membro Set quando l'utente del controllo richiede che è possibile modificare la proprietà. Usare questa implementazione quando ti serve per calcolare il valore di una proprietà durante la fase di esecuzione, convalidare un valore passato dall'utente del controllo prima di modificare la proprietà effettiva o implementare un tipo di proprietà o scrittura a sola lettura. La macro di voce della mappa di invio per questa implementazione viene [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). La sezione seguente [usando l'aggiunta guidata proprietà aggiungere una proprietà personalizzata](#_core_using_classwizard_to_add_a_custom_property), Usa la proprietà personalizzata CircleOffset per illustrare questa implementazione.
+   Questa implementazione è costituito da una coppia di funzioni membro nella classe del controllo. L'implementazione di metodi Get/Set chiama automaticamente il recupero del membro funzione quando l'utente del controllo richiede il valore corrente della proprietà e la funzione membro Set quando l'utente del controllo richiede che è possibile modificare la proprietà. Usare questa implementazione quando ti serve per calcolare il valore di una proprietà durante la fase di esecuzione, convalidare un valore passato dall'utente del controllo prima di modificare la proprietà effettiva o implementare un tipo di proprietà o scrittura a sola lettura. La macro di voce della mappa di invio per questa implementazione viene [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). La sezione seguente [usando l'aggiunta guidata proprietà aggiungere una proprietà personalizzata](#_core_using_classwizard_to_add_a_custom_property), Usa la proprietà personalizzata CircleOffset per illustrare questa implementazione.
 
 - Implementazione con parametri
 
-     Implementazione con parametri è supportata per l'aggiunta guidata proprietà. Una proprietà con parametri (talvolta denominata matrice di proprietà) è utilizzabile per accedere a un set di valori tramite una singola proprietà del controllo. La macro di voce della mappa di invio per questa implementazione è DISP_PROPERTY_PARAM. Per altre informazioni sull'implementazione di questo tipo, vedere [implementazione di una proprietà con parametri](../mfc/mfc-activex-controls-advanced-topics.md) nell'articolo di controlli ActiveX: argomenti avanzati.
+   Implementazione con parametri è supportata per l'aggiunta guidata proprietà. Una proprietà con parametri (talvolta denominata matrice di proprietà) è utilizzabile per accedere a un set di valori tramite una singola proprietà del controllo. La macro di voce della mappa di invio per questa implementazione è DISP_PROPERTY_PARAM. Per altre informazioni sull'implementazione di questo tipo, vedere [implementazione di una proprietà con parametri](../mfc/mfc-activex-controls-advanced-topics.md) nell'articolo di controlli ActiveX: argomenti avanzati.
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Tramite l'aggiunta guidata proprietà per aggiungere una proprietà personalizzata
 
@@ -66,7 +66,7 @@ Questa stessa procedura è anche utilizzabile per aggiungere altre proprietà pe
 
 1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi proprietà**.
 
-     Verrà visualizzata la [Aggiunta guidata proprietà](../ide/names-add-property-wizard.md).
+   Verrà visualizzata la [Aggiunta guidata proprietà](../ide/names-add-property-wizard.md).
 
 1. Nel **nome della proprietà** , digitare *CircleOffset*.
 

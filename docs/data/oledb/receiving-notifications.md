@@ -1,7 +1,7 @@
 ---
 title: Ricevere notifiche | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -21,33 +21,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 554090aadd9090e813a17d6b967ad6acbf92d924
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 244ebbfdb1ca706550fa26acd29e0af067cb1a7a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083580"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079714"
 ---
 # <a name="receiving-notifications"></a>Ricezione di notifiche
 
-OLE DB fornisce interfacce per la ricezione di notifiche quando si verificano eventi. Questi elementi sono descritti [OLE DB oggetto Notifications](/previous-versions/windows/desktop/ms725406) nel *riferimento per programmatori OLE DB*. Il programma di installazione di questi eventi Usa il meccanismo di punto di connessione COM standard. Ad esempio, un oggetto ATL che desidera recuperare gli eventi tramite `IRowsetNotify` implementa la `IRowsetNotify` interfaccia aggiungendo `IRowsetNotify` per l'elenco derivato dalla classe ed esponendolo attraverso una macro COM_INTERFACE_ENTRY.  
-  
-`IRowsetNotify` dispone di tre metodi, che possono essere chiamati in momenti diversi. Se si desidera rispondere solo a uno di questi metodi, è possibile usare la [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) (classe), che restituisce E_NOTIMPL per i metodi non si è interessati.  
-  
-Quando si crea il set di righe, è necessario indicare al provider che si desidera che l'oggetto set di righe restituito per supportare `IConnectionPointContainer`, che è necessario configurare la notifica.  
-  
-Il codice seguente viene illustrato come aprire il set di righe da un oggetto ATL e usare il `AtlAdvise` funzione per impostare il sink di notifica. `AtlAdvise` Restituisce un cookie che viene usato quando chiama `AtlUnadvise`.  
-  
-```cpp  
-CDBPropSet propset(DBPROPSET_ROWSET);  
+OLE DB fornisce interfacce per la ricezione di notifiche quando si verificano eventi. Questi elementi sono descritti [OLE DB oggetto Notifications](/previous-versions/windows/desktop/ms725406) nel **riferimento per programmatori OLE DB**. Il programma di installazione di questi eventi Usa il meccanismo di punto di connessione COM standard. Ad esempio, un oggetto ATL che desidera recuperare gli eventi tramite `IRowsetNotify` implementa la `IRowsetNotify` interfaccia aggiungendo `IRowsetNotify` per l'elenco derivato dalla classe ed esponendolo attraverso una macro COM_INTERFACE_ENTRY.
 
-propset.AddProperty(DBPROP_IConnectionPointContainer, true);  
-  
-product.Open(session, _T("Products"), &propset);  
-  
-AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
+`IRowsetNotify` dispone di tre metodi, che possono essere chiamati in momenti diversi. Se si desidera rispondere solo a uno di questi metodi, è possibile usare la [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) (classe), che restituisce E_NOTIMPL per i metodi non si è interessati.
+
+Quando si crea il set di righe, è necessario indicare al provider che si desidera che l'oggetto set di righe restituito per supportare `IConnectionPointContainer`, che è necessario configurare la notifica.
+
+Il codice seguente viene illustrato come aprire il set di righe da un oggetto ATL e usare il `AtlAdvise` funzione per impostare il sink di notifica. `AtlAdvise` Restituisce un cookie che viene usato quando chiama `AtlUnadvise`.
+
+```cpp
+CDBPropSet propset(DBPROPSET_ROWSET);
+propset.AddProperty(DBPROP_IConnectionPointContainer, true);
+```
+
+Quindi, usato nel codice seguente:
+
+```cpp
+product.Open(session, _T("Products"), &propset);
+
+AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);
+```
+
+## <a name="see-also"></a>Vedere anche
 
 [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

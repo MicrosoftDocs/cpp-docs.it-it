@@ -1,7 +1,7 @@
 ---
 title: Classe CMFCDesktopAlertWndInfo | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5adc1e5a5df7a1c14a3af1e0f36718806497b682
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b0a1138d1ee786f340d7f6e3a3d33597c0156453
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443817"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065356"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Classe CMFCDesktopAlertWndInfo
 
@@ -100,7 +100,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *src*
+[in] *src*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 

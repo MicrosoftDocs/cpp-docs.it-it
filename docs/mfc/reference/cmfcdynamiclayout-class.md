@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 868bc5271fd52e32ecb01f0155fe1c11181ac2ea
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1313c50682a2d2baad124db512e7e0ad4b441284
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381695"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082319"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Classe CMFCDynamicLayout
 
@@ -101,7 +101,6 @@ Aggiunge una finestra figlio, in genere un controllo, all'elenco di finestre con
 BOOL AddItem(
     HWND hwnd,
     MoveSettings moveSettings SizeSettings sizeSettings);
-
 
 BOOL AddItem(
     int nID,
@@ -338,7 +337,6 @@ Si tratta di una classe annidata all'interno di `CMFCDynamicLayout`.
 ## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFCDynamicLayout::MoveSettings::IsHorizontal
 
 Controlla se i dati di spostamento specificano uno spostamento orizzontale diverso da zero.
-
 
 ```
 BOOL IsHorizontal() const

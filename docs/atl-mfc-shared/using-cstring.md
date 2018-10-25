@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e3de9b373a80ef939f5ac5ff3d746e0ebdc8b74
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45c1c105fafcadab74107b008f437d49f420e66e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405463"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061092"
 ---
 # <a name="using-cstring"></a>Uso di CString
 
@@ -43,13 +43,13 @@ Per aggiungere funzionalità rispetto a quelle offerte da `CString`, `CStringA` 
 
 Il codice seguente illustra come creare un oggetto `CString` e stamparlo in un output standard:
 
-```cpp  
+```cpp
 #include <atlstr.h>
 
-int main() {  
-    CString aCString = CString(_T("A string"));  
-    _tprintf(_T("%s"), (LPCTSTR) aCString);  
-}  
+int main() {
+    CString aCString = CString(_T("A string"));
+    _tprintf(_T("%s"), (LPCTSTR) aCString);
+}
 ```
 
 ## <a name="in-this-section"></a>In questa sezione

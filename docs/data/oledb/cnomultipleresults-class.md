@@ -19,32 +19,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d68daae7bce6ca4c9ffafe7a24c80cff3a5426a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017354"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059857"
 ---
 # <a name="cnomultipleresults-class"></a>Classe CNoMultipleResults
 
-Utilizzato come argomento di modello (*TMultiple*) per [CCommand](../../data/oledb/ccommand-class.md) per creare un comando ottimizzato che gestisce un singolo risultato set.  
-  
+Utilizzato come argomento di modello (*TMultiple*) per [CCommand](../../data/oledb/ccommand-class.md) per creare un comando ottimizzato che gestisce un singolo risultato set.
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-class CNoMultipleResults  
-```  
-  
-## <a name="remarks"></a>Note  
+class CNoMultipleResults
+```
 
-Se si vuole che un comando gestisca più set di risultati, usare [CMultipleResults](../../data/oledb/cmultipleresults-class.md) invece.  
-  
-## <a name="requirements"></a>Requisiti  
+## <a name="remarks"></a>Note
 
-**Intestazione:** atldbcli.h  
-  
-## <a name="see-also"></a>Vedere anche  
+Se si vuole che un comando gestisca più set di risultati, usare [CMultipleResults](../../data/oledb/cmultipleresults-class.md) invece.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** atldbcli.h
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

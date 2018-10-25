@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 986bc24c57f8692bfdd98194b9e58c9cee6817f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448247"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067189"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Eliminazione di tutti gli oggetti in una raccolta CObject
 
@@ -68,9 +68,9 @@ Si noti la differenza tra l'eliminazione di oggetti di un elemento e la rimozion
 
 1. Chiamare il `RemoveAll` funzione per rimuovere tutti gli elementi dalla matrice dopo che sono stati eliminati.
 
-     Il codice per l'eliminazione di tutti gli elementi della matrice è come segue:
+   Il codice per l'eliminazione di tutti gli elementi della matrice è come segue:
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 Come con l'elenco riportato di seguito viene riportato sopra, è possibile chiamare `RemoveAll` per rimuovere tutti gli elementi in una matrice o `RemoveAt` per rimuovere un singolo elemento.
 
@@ -82,9 +82,9 @@ Come con l'elenco riportato di seguito viene riportato sopra, è possibile chiam
 
 1. Chiamare il `RemoveAll` funzione per rimuovere tutti gli elementi dalla mappa dopo che sono stati eliminati.
 
-     Il codice per l'eliminazione di tutti gli elementi di un `CMap` raccolta è come indicato di seguito. Ogni elemento della mappa è una stringa come chiave e un `CPerson` oggetto (derivato da `CObject`) come valore.
+   Il codice per l'eliminazione di tutti gli elementi di un `CMap` raccolta è come indicato di seguito. Ogni elemento della mappa è una stringa come chiave e un `CPerson` oggetto (derivato da `CObject`) come valore.
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 È possibile chiamare `RemoveAll` per rimuovere tutti gli elementi in una mappa o `RemoveKey` per rimuovere un singolo elemento con la chiave specificata.
 

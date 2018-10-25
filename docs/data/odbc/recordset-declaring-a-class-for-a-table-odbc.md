@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ea4a816053a548ac8e3292d0416fe68da2dc4296
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 423ed9b97900777160818b7699f8dac7b81e38a8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057531"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset: dichiarazione di una classe per una tabella (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.  
-  
-La classe recordset più comune si apre una singola tabella. Per dichiarare una classe recordset per una singola tabella, usare il [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) dalla **Aggiungi classe** e scegliere le colonne desiderate assegnando un membro dati di campo del recordset corrispondente.  
-  
-Altri utilizzi per i recordset comprendono:  
-  
-- Unione di due o più tabelle.  
-  
-- Contenente i risultati di una query predefinita.  
-  
-## <a name="see-also"></a>Vedere anche  
+Questo argomento si applica alle classi ODBC MFC.
+
+La classe recordset più comune si apre una singola tabella. Per dichiarare una classe recordset per una singola tabella, usare il [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) dalla **Aggiungi classe** e scegliere le colonne desiderate assegnando un membro dati di campo del recordset corrispondente.
+
+Altri utilizzi per i recordset comprendono:
+
+- Unione di due o più tabelle.
+
+- Contenente i risultati di una query predefinita.
+
+## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>

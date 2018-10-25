@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6537cdb9e7ff9806bef3bfec85a94e0d50808477
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078466"
 ---
 # <a name="ccomsafearray-class"></a>Classe CComSafeArray
 
@@ -100,7 +100,7 @@ Tipo di dati da memorizzare nella matrice.
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Esegue il cast di un valore per un `SAFEARRAY` puntatore.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Recupera un elemento da una matrice.|
-|[CComSafeArray::operator =](#operator_eq)|Operatore di assegnazione.|  
+|[CComSafeArray::operator =](#operator_eq)|Operatore di assegnazione.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -110,7 +110,7 @@ Tipo di dati da memorizzare nella matrice.
 
 ## <a name="remarks"></a>Note
 
-`CComSafeArray` fornisce un wrapper per il [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) (classe), rendendo sufficiente per creare e gestire le matrici unidimensionali e multidimensionali di quasi qualsiasi tipo supportato da VARIANT.
+`CComSafeArray` fornisce un wrapper per la classe [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , semplificando la creazione e la gestione di matrici unidimensionali e multidimensionali di quasi ogni tipo supportato da VARIANT.
 
 `CComSafeArray` semplifica il passaggio delle matrici tra processi e fornisce anche protezione aggiuntiva poiché controlla i valori degli indici della matrice rispetto ai limiti superiore e inferiore.
 
@@ -159,7 +159,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *psaSrc*<br/>
-Un puntatore a un `SAFEARRAY` oggetto.
+Puntatore a un oggetto `SAFEARRAY` .
 
 *ulCount*<br/>
 Il numero di oggetti da aggiungere alla matrice.
@@ -311,7 +311,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="parameters"></a>Parametri
 
 *pBound*<br/>
-Un puntatore a un `SAFEARRAYBOUND` oggetto.
+Puntatore a un oggetto `SAFEARRAYBOUND` .
 
 *uDims*<br/>
 Il numero di dimensioni nella matrice.
@@ -597,7 +597,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 Riferimento a un oggetto `CComSafeArray`.
 
 *psaSrc*<br/>
-Un puntatore a un `SAFEARRAY` oggetto.
+Puntatore a un oggetto `SAFEARRAY` .
 
 ### <a name="return-value"></a>Valore restituito
 

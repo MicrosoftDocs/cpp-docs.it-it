@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f74c0fdcdb8d6dfe1aced33a1c7087ecde6c89ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408518"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080923"
 ---
 # <a name="opening-files"></a>Apertura di file
 
@@ -41,15 +41,15 @@ In MFC, il modo più comune per aprire un file è un processo in due fasi.
 
 1. Creare l'oggetto file senza specificare un percorso o flag di autorizzazione.
 
-     È in genere creare un oggetto file dichiarando una [CFile](../mfc/reference/cfile-class.md) variabile nello stack frame.
+   È in genere creare un oggetto file dichiarando una [CFile](../mfc/reference/cfile-class.md) variabile nello stack frame.
 
 1. Chiamare il [aperto](../mfc/reference/cfile-class.md#open) funzione membro per l'oggetto file, specificando un percorso e l'autorizzazione per i flag.
 
-     Il valore restituito per `Open` sarà diverso da zero se il file è stato aperto correttamente oppure 0 se non è stato possibile aprire il file specificato. Il `Open` funzione membro è il seguente prototipo:
+   Il valore restituito per `Open` sarà diverso da zero se il file è stato aperto correttamente oppure 0 se non è stato possibile aprire il file specificato. Il `Open` funzione membro è il seguente prototipo:
 
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+   `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-     I flag open specificano le autorizzazioni, ad esempio sola lettura, desidera che per il file. I valori possibili flag sono definiti come costanti enumerate all'interno di `CFile` classe, in modo che siano qualificati con "`CFile::`" come in `CFile::modeRead`. Usare il `CFile::modeCreate` flag se si desidera creare il file.
+   I flag open specificano le autorizzazioni, ad esempio sola lettura, desidera che per il file. I valori possibili flag sono definiti come costanti enumerate all'interno di `CFile` classe, in modo che siano qualificati con "`CFile::`" come in `CFile::modeRead`. Usare il `CFile::modeCreate` flag se si desidera creare il file.
 
 Nell'esempio seguente viene illustrato come creare un nuovo file con l'autorizzazione di lettura/scrittura (sostituendo eventuali file precedente con lo stesso percorso):
 

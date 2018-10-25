@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b11a78d1be76895b9687d1423df74c51fe3d39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49ae12184189996561717874833d6cdf3f30e159
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416695"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078845"
 ---
 # <a name="concurrency-namespace-enums"></a>enumerazioni dello spazio dei nomi Concurrency
 
@@ -44,6 +44,7 @@ Stati validi per un `agent`.
 ```
 enum agent_status;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -94,6 +95,7 @@ Tipi di eventi che possono essere tracciati mediante la funzionalità di traccia
 ```
 enum ConcRT_EventType;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -119,6 +121,7 @@ Flag di analisi per i tipi di evento
 ```
 enum Concrt_TraceFlags;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -142,6 +145,7 @@ Tipo di area critica in cui si trova un contesto.
 ```
 enum CriticalRegionType;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -161,6 +165,7 @@ Usato dai criteri `DynamicProgressFeedback` per descrivere se le risorse per l'u
 ```
 enum DynamicProgressFeedbackType;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -174,6 +179,7 @@ Tipo di un blocco della messaggistica `join`.
 ```
 enum join_type;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -192,6 +198,7 @@ Risposte valide per un'offerta di un oggetto `message` a un blocco.
 ```
 enum message_status;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -212,6 +219,7 @@ Chiavi dei criteri che descrivono aspetti del comportamento dell'utilità di pia
 ```
 enum PolicyElementKey;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -258,6 +266,7 @@ Usato dai criteri `SchedulingProtocol` per descrivere quale algoritmo di pianifi
 ```
 enum SchedulingProtocolType;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -276,6 +285,7 @@ Usato per indicare lo stato in cui si trova un proxy del thread, quando è in es
 ```
 enum SwitchingProxyState;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -297,6 +307,7 @@ Descrive lo stato di esecuzione di un oggetto `task_group` o `structured_task_gr
 ```
 enum task_group_status;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|
@@ -316,6 +327,7 @@ Utilizzata dai criteri `WinRTInitialization` per descrivere se e come Windows Ru
 ```
 enum WinRTInitializationType;
 ```
+
 ### <a name="values"></a>Valori
 
 |Nome|Descrizione|

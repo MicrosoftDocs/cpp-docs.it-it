@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e6bac12d841a065495f7775598c65f39a0aaba67
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0b62bbca87e5b4fcabcf5124271ee8be68b755f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394270"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068840"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Differenze tra la programmazione con Windows Form e quella con MFC
 
@@ -39,31 +39,31 @@ La visualizzazione MFC o documento e le funzionalità di routing dei comandi seg
 
 - Integrazione della shell
 
-     MFC gestisce i comandi dynamic data exchange (DDE) e gli argomenti della riga di comando utilizzati dalla shell quando fare doppio clic su un documento e selezionano questi verbi come aprire, modificare o di stampa. Windows Form non è prevista alcuna integrazione shell e non risponde ai verbi della shell.
+   MFC gestisce i comandi dynamic data exchange (DDE) e gli argomenti della riga di comando utilizzati dalla shell quando fare doppio clic su un documento e selezionano questi verbi come aprire, modificare o di stampa. Windows Form non è prevista alcuna integrazione shell e non risponde ai verbi della shell.
 
 - Modelli di documento
 
-     In MFC, modelli di documento associare una visualizzazione, che è contenuta in una finestra cornice (in modalità MTI, SDI o MDI), il documento che è stato aperto. Windows Form non ha equivalenti ai modelli di documento.
+   In MFC, modelli di documento associare una visualizzazione, che è contenuta in una finestra cornice (in modalità MTI, SDI o MDI), il documento che è stato aperto. Windows Form non ha equivalenti ai modelli di documento.
 
 - Documenti
 
-     MFC registra i tipi di file di documento ed elabora il tipo di documento quando si apre un documento dalla shell. Windows Form non dispone di alcun supporto per i documenti.
+   MFC registra i tipi di file di documento ed elabora il tipo di documento quando si apre un documento dalla shell. Windows Form non dispone di alcun supporto per i documenti.
 
 - Stati del documento
 
-     MFC gestisce gli stati modificati per il documento. Pertanto, quando chiude l'applicazione, chiuderla l'ultima visualizzazione contenente l'applicazione o uscire da Windows, MFC viene richiesto di salvare il documento. Windows Form non dispone di alcun supporto equivalente.
+   MFC gestisce gli stati modificati per il documento. Pertanto, quando chiude l'applicazione, chiuderla l'ultima visualizzazione contenente l'applicazione o uscire da Windows, MFC viene richiesto di salvare il documento. Windows Form non dispone di alcun supporto equivalente.
 
 - Comandi:
 
-     MFC è presente il concetto di comandi. La barra dei menu della barra degli strumenti e menu di scelta rapida può richiamare tutti lo stesso comando, ad esempio, le operazioni Taglia e copia. In Windows Form, i comandi sono strettamente associati eventi da un determinato elemento dell'interfaccia utente (ad esempio, una voce di menu); Pertanto, è necessario associare in modo esplicito tutti gli eventi di comando. È anche possibile gestire più eventi con un singolo gestore in Windows Form. Per altre informazioni, vedere [connessione di più eventi a un singolo gestore di eventi in Windows Form](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
+   MFC è presente il concetto di comandi. La barra dei menu della barra degli strumenti e menu di scelta rapida può richiamare tutti lo stesso comando, ad esempio, le operazioni Taglia e copia. In Windows Form, i comandi sono strettamente associati eventi da un determinato elemento dell'interfaccia utente (ad esempio, una voce di menu); Pertanto, è necessario associare in modo esplicito tutti gli eventi di comando. È anche possibile gestire più eventi con un singolo gestore in Windows Form. Per altre informazioni, vedere [connessione di più eventi a un singolo gestore di eventi in Windows Form](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
 
 - Routing dei comandi
 
-     Routing dei comandi MFC consente la visualizzazione attiva o il documento per elaborare i comandi. Poiché lo stesso comando spesso ha significati diversi per diverse visualizzazioni (ad esempio, copia si comporta in modo diverso nella visualizzazione di modifica testo rispetto a in un editor grafico), i comandi devono essere gestiti dalla visualizzazione attiva. Poiché Windows Forms menu e barre degli strumenti non dispone di alcuna conoscenza intrinseca della visualizzazione attiva, è possibile disporre di un gestore diverso per ogni tipo di visualizzazione per il **MenuItem** eventi senza scrivere codice aggiuntivo interno.
+   Routing dei comandi MFC consente la visualizzazione attiva o il documento per elaborare i comandi. Poiché lo stesso comando spesso ha significati diversi per diverse visualizzazioni (ad esempio, copia si comporta in modo diverso nella visualizzazione di modifica testo rispetto a in un editor grafico), i comandi devono essere gestiti dalla visualizzazione attiva. Poiché Windows Forms menu e barre degli strumenti non dispone di alcuna conoscenza intrinseca della visualizzazione attiva, è possibile disporre di un gestore diverso per ogni tipo di visualizzazione per il **MenuItem** eventi senza scrivere codice aggiuntivo interno.
 
 - Meccanismo di aggiornamento comandi
 
-     MFC dispone di un comando meccanismo di aggiornamento. Pertanto, la visualizzazione attiva o il documento è responsabile per lo stato degli elementi dell'interfaccia utente (ad esempio, l'abilitazione o disabilitazione di un pulsante di menu elemento o degli strumenti e degli stati di selezione). Windows Form non ha un equivalente di un meccanismo di aggiornamento di comando.
+   MFC dispone di un comando meccanismo di aggiornamento. Pertanto, la visualizzazione attiva o il documento è responsabile per lo stato degli elementi dell'interfaccia utente (ad esempio, l'abilitazione o disabilitazione di un pulsante di menu elemento o degli strumenti e degli stati di selezione). Windows Form non ha un equivalente di un meccanismo di aggiornamento di comando.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac8b8c9f4460995aaab6a9d415202c2a965a6e9a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e58b6b9d64111e021586fc23a985f31c0edf9de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389044"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063770"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Utilizzo di pulsanti a discesa in un controllo Toolbar
 
@@ -43,19 +43,19 @@ La procedura seguente viene illustrato come implementare un pulsante della barra
 
 1. Una volta il `CToolBarCtrl` oggetto è stato creato, impostare lo stile TBSTYLE_EX_DRAWDDARROWS usando il codice seguente:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]
 
 1. Impostare lo stile TBSTYLE_DROPDOWN per qualsiasi nuovo ([InsertButton](../mfc/reference/ctoolbarctrl-class.md#insertbutton) oppure [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons)) o esistente ([utilizzando SetButtonInfo](../mfc/reference/ctoolbarctrl-class.md#setbuttoninfo)) pulsanti che saranno i pulsanti a discesa. Nell'esempio seguente viene illustrata la modifica di un pulsante esistente in un `CToolBarCtrl` oggetto:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]
 
 1. Aggiungere un gestore TBN_DROPDOWN alla classe padre dell'oggetto della barra degli strumenti.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]
 
 1. Nel nuovo gestore, visualizzare il menu di scelta rapida appropriato. Il codice seguente viene illustrato un metodo:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]
 
 ## <a name="see-also"></a>Vedere anche
 

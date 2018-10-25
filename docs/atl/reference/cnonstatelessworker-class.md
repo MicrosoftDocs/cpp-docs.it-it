@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095599"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053617"
 ---
 # <a name="cnonstatelessworker-class"></a>Classe CNonStatelessWorker
 
@@ -75,7 +75,7 @@ Il vantaggio di questa classe è che offre un modo pratico per modificare il mod
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-Implementazione di [WorkerArchetype::Execute](worker-archetype.md#execute).  
+Implementazione di [WorkerArchetype::Execute](worker-archetype.md#execute).
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>Note
 
-Questo metodo crea un'istanza del *Worker* classe su stack e chiamate [inizializzare](worker-archetype.md#initialize) su tale oggetto. Se l'inizializzazione ha esito positivo, questo metodo chiama anche [Execute](worker-archetype.md#execute) e [Terminate](worker-archetype.md#terminate) sullo stesso oggetto.  
+Questo metodo crea un'istanza del *Worker* classe su stack e chiamate [inizializzare](worker-archetype.md#initialize) su tale oggetto. Se l'inizializzazione ha esito positivo, questo metodo chiama anche [Execute](worker-archetype.md#execute) e [Terminate](worker-archetype.md#terminate) sullo stesso oggetto.
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

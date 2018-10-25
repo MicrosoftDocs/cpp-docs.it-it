@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c19b000c1d7ee5cb1f8480f0e9f384b42937dc9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 167d3af6d353ec48edde4288db26b9e407c62bd5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414485"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078960"
 ---
 # <a name="exception-handling-in-mfc"></a>Gestione delle eccezioni in MFC
 
@@ -81,15 +81,15 @@ Tre categorie di risultati possono verificarsi quando una funzione viene chiamat
 
 - Esecuzione normale
 
-     La funzione può essere eseguita normalmente e restituire. Alcune funzioni restituiscono un codice di risultato al chiamante, che indica il risultato della funzione. I codici di risultato possibili sono rigorosamente definiti per la funzione e rappresentano l'intervallo di possibili risultati della funzione. Il codice del risultato può indicare l'esito positivo o negativo oppure può indicare un particolare tipo di errore che è compreso nell'intervallo normale delle aspettative. Ad esempio, una funzione sullo stato dei file può restituire un codice che indica che il file non esiste. Si noti che il termine "codice di errore" non viene utilizzato perché un codice risultato rappresenta uno dei molti risultati previsti.
+   La funzione può essere eseguita normalmente e restituire. Alcune funzioni restituiscono un codice di risultato al chiamante, che indica il risultato della funzione. I codici di risultato possibili sono rigorosamente definiti per la funzione e rappresentano l'intervallo di possibili risultati della funzione. Il codice del risultato può indicare l'esito positivo o negativo oppure può indicare un particolare tipo di errore che è compreso nell'intervallo normale delle aspettative. Ad esempio, una funzione sullo stato dei file può restituire un codice che indica che il file non esiste. Si noti che il termine "codice di errore" non viene utilizzato perché un codice risultato rappresenta uno dei molti risultati previsti.
 
 - Esecuzione errata
 
-     Il chiamante non commette errori per passare gli argomenti alla funzione o chiama la funzione in un contesto non appropriato. Questa situazione provoca un errore e deve essere rilevato tramite un'asserzione durante lo sviluppo di programmi. (Per altre informazioni sulle asserzioni, vedere [asserzioni C/C++](/visualstudio/debugger/c-cpp-assertions).)
+   Il chiamante non commette errori per passare gli argomenti alla funzione o chiama la funzione in un contesto non appropriato. Questa situazione provoca un errore e deve essere rilevato tramite un'asserzione durante lo sviluppo di programmi. (Per altre informazioni sulle asserzioni, vedere [asserzioni C/C++](/visualstudio/debugger/c-cpp-assertions).)
 
 - Esecuzione anomala
 
-     Esecuzione anomala include situazioni in cui le condizioni di fuori di controllo del programma, ad esempio memoria insufficiente o errori dei / o, stanno influenzando il risultato della funzione. Situazioni anomale devono essere gestite dall'intercettazione e la generazione di eccezioni.
+   Esecuzione anomala include situazioni in cui le condizioni di fuori di controllo del programma, ad esempio memoria insufficiente o errori dei / o, stanno influenzando il risultato della funzione. Situazioni anomale devono essere gestite dall'intercettazione e la generazione di eccezioni.
 
 Utilizzo di eccezioni è particolarmente appropriato per l'esecuzione anomala.
 

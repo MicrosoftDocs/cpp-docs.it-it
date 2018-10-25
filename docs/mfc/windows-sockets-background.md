@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6146106a7ae378821fc7133d2d65597d1225cc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389549"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079662"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: sfondo
 
@@ -69,11 +69,11 @@ Sono disponibili due tipi di socket:
 
 - Socket di Stream
 
-     Socket di Stream forniscono un flusso di dati senza limiti di record: un flusso di byte. Flussi vengono garantiti a essere recapitati e corretta sequenza e senza alcuna duplicazione.
+   Socket di Stream forniscono un flusso di dati senza limiti di record: un flusso di byte. Flussi vengono garantiti a essere recapitati e corretta sequenza e senza alcuna duplicazione.
 
 - Socket di datagramma
 
-     Datagramma sockets supporto orientato ai record di flusso di dati non è garantito a essere recapitati e non possa essere ordinati in sequenza come di.
+   Datagramma sockets supporto orientato ai record di flusso di dati non è garantito a essere recapitati e non possa essere ordinati in sequenza come di.
 
 "In sequenza" significa che i pacchetti vengano recapitati nell'ordine inviato. "Non duplicati" significa che un determinato pacchetto è stato ricevuto una sola volta.
 

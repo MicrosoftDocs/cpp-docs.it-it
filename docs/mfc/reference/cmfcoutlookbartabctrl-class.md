@@ -1,7 +1,7 @@
 ---
 title: Classe CMFCOutlookBarTabCtrl | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4836a82c829dafee64c74237fa33c6199ace4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19550315f17982e019d1ba6f495dedee6d2f346d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081012"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -85,7 +85,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |Nome|Descrizione|
 |----------|-----------------|
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Aggiunge un controllo di Windows come una nuova scheda nella barra di Outlook.|
-|`CMFCOutlookBarTabCtrl::CalcRectEdit`|Chiamato dal framework per determinare le dimensioni della casella di modifica che viene visualizzato quando un utente rinomina una scheda. Esegue l'override`CMFCBaseTabCtrl::CalcRectEdit`.|
+|`CMFCOutlookBarTabCtrl::CalcRectEdit`|Chiamato dal framework per determinare le dimensioni della casella di modifica che viene visualizzato quando un utente rinomina una scheda. Esegue l'override di `CMFCBaseTabCtrl::CalcRectEdit`.|
 |[CMFCOutlookBarTabCtrl::CanShowFewerPageButtons](#canshowfewerpagebuttons)|Chiamato dal framework durante le operazioni di ridimensionamento per determinare se è possono visualizzare pulsanti pagina di scheda della barra di Outlook un numero minore rispetto a attualmente visibili.|
 |[CMFCOutlookBarTabCtrl::CanShowMorePageButtons](#canshowmorepagebuttons)|Chiamato dal framework durante le operazioni di ridimensionamento per determinare se è possono visualizzare i pulsanti pagina scheda barra Outlook ulteriori rispetto a attualmente visibili.|
 |[CMFCOutlookBarTabCtrl::Create](#create)|Crea il controllo struttura a schede sulla barra di Outlook.|
@@ -102,7 +102,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |[CMFCOutlookBarTabCtrl::IsMode2003](#ismode2003)|Determina se il controllo struttura a schede sulla barra di Outlook è in una modalità che emula Microsoft Outlook 2003.|
 |`CMFCOutlookBarTabCtrl::IsPtInTabArea`|Determina se un punto si trova l'area della scheda. (Esegue l'override [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
 |`CMFCOutlookBarTabCtrl::IsTabDetachable`|Determina se una scheda è rimovibile. (Esegue l'override [CMFCBaseTabCtrl::IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable).)|
-|`CMFCOutlookBarTabCtrl::OnChangeTabs`|Chiamato dal framework quando una scheda viene inserita o rimosso. Esegue l'override`CMFCBaseTabCtrl::OnChangeTabs`.|
+|`CMFCOutlookBarTabCtrl::OnChangeTabs`|Chiamato dal framework quando una scheda viene inserita o rimosso. Esegue l'override di `CMFCBaseTabCtrl::OnChangeTabs`.|
 |[CMFCOutlookBarTabCtrl::OnShowFewerPageButtons](#onshowfewerpagebuttons)|Chiamato dal framework per ridurre il numero di pulsanti alla pagina della scheda che sono visibili.|
 |[CMFCOutlookBarTabCtrl::OnShowMorePageButtons](#onshowmorepagebuttons)|Chiamato dal framework per aumentare il numero di pulsanti alla pagina della scheda che sono visibili.|
 |[CMFCOutlookBarTabCtrl::OnShowOptions](#onshowoptions)|Consente di visualizzare il **Opzioni riquadro di spostamento** finestra di dialogo.|
@@ -322,7 +322,6 @@ Le dimensioni del bordo, in pixel.
 
 ##  <a name="getvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::GetVisiblePageButtons
 
-
 ```
 int GetVisiblePageButtons() const;
 ```
@@ -505,14 +504,13 @@ Questo metodo non deve essere chiamato se non è in modalità di Microsoft Offic
 
 ##  <a name="setvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::SetVisiblePageButtons
 
-
 ```
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *nVisiblePageButtons*
+[in] *nVisiblePageButtons*<br/>
 
 ### <a name="remarks"></a>Note
 

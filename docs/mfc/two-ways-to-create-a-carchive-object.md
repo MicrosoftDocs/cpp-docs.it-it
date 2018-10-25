@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630cdd1614aa19ec3a5a654d7dc4bfe7336ce027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080585"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Due modi per creare un oggetto CArchive
 
@@ -66,9 +66,9 @@ Oltre a potere serializzare un documento tramite il framework, esistono altre si
 
 1. Passare il `CFile` al costruttore per oggetti `CArchive`, come illustrato nell'esempio seguente:
 
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-     Il secondo argomento di `CArchive` costruttore è un valore enumerato che specifica se l'archivio verrà usata per l'archiviazione o il caricamento di dati verso e dal file. Il `Serialize` funzione di un oggetto questo stato viene controllato tramite la chiamata di `IsStoring` funzione per l'oggetto di archiviazione.
+   Il secondo argomento di `CArchive` costruttore è un valore enumerato che specifica se l'archivio verrà usata per l'archiviazione o il caricamento di dati verso e dal file. Il `Serialize` funzione di un oggetto questo stato viene controllato tramite la chiamata di `IsStoring` funzione per l'oggetto di archiviazione.
 
 Dopo aver terminato l'archiviazione o il caricamento dei dati da o verso il `CArchive` dell'oggetto, chiuderlo. Anche se il `CArchive` (e `CFile`) oggetti chiuderà automaticamente l'archivio (e file), è consigliabile farlo in modo esplicito poiché semplifica il recupero da errori. Per altre informazioni sulla gestione degli errori, vedere l'articolo [eccezioni: eccezioni di intercettazione ed eliminazione](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
@@ -76,7 +76,7 @@ Dopo aver terminato l'archiviazione o il caricamento dei dati da o verso il `CAr
 
 1. Nell'esempio seguente viene illustrato come chiudere il `CArchive` oggetto:
 
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
 ## <a name="see-also"></a>Vedere anche
 

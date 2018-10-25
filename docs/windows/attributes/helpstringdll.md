@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdac159baf51d7143083eb1369d1a83233f0f022
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1697c25f19fe024ea2f808f08baea3adb4bcc69a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791182"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083230"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -69,11 +69,11 @@ __interface IMyI
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di interfaccia](interface-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[Attributi di metodo](method-attributes.md)  
+[Attributi di metodo](method-attributes.md)

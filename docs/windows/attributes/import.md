@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0509f6c1292ee7bb2e1ba97d1f75c626f3b0761
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 046a6eb0d1033efb44dd9f34806e747e1fafd700
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071116"
 ---
 # <a name="import"></a>importazione
 
@@ -82,7 +82,7 @@ library MyLib {
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -91,4 +91,4 @@ Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md
 [importidl](importidl.md)<br/>
 [importlib](importlib.md)<br/>
 [include](include-cpp.md)<br/>
-[includelib](includelib-cpp.md)  
+[includelib](includelib-cpp.md)

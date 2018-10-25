@@ -17,34 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2628756992298fa61bad070b72f66232d65bec5f
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: aafeb4aa4e723c4c3bea1398731b03492b37b1da
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990036"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070998"
 ---
 # <a name="ole-db-programming"></a>Programmazione con OLE DB
 
 Microsoft OLE DB è una tecnologia legacy; per le nuove applicazioni è l'API di accesso ai dati necessari per i server SQL collegati. Tutte le altre nuove applicazioni devono utilizzare ODBC. Il provider OLE DB corrente per SQL Server è SQLNCLI11. DLL. Il provider è ancora shipping in SQL Server 2016. Questa documentazione è destinata agli sviluppatori che gestiscono le applicazioni esistenti che già utilizzano OLE DB.
-  
-I modelli OLE DB sono modelli C++ che semplificano l'uso della tecnologia per database OLE DB ad alte prestazioni tramite classi che implementano molte delle interfacce OLE DB maggiormente usate. Questa libreria contiene modelli consumer e modelli provider.  
-  
-In Visual C++ sono anche supportate procedure guidate per la creazione di applicazioni di base OLE DB.  
-  
-Inoltre, è possibile utilizzare gli attributi per implementare i modelli consumer OLE DB.  
-  
-|Per altre informazioni|Vedere|  
-|-------------------------|---------|  
-|Uso dei modelli consumer OLE DB (concetti)|[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|  
-|Uso dei modelli provider OLE DB (concetti)|[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
-|Classi e macro dei modelli OLE DB|[Riferimenti ai modelli OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
-|Attributi del consumer OLE DB|[Attributi del consumer OLE DB](../../windows/ole-db-consumer-attributes.md)|  
-|Interfacce OLE DB|[Riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643(v%3dvs.85)) (in Windows SDK)| 
-|Esempi di modelli OLE DB|[Esempi di modelli OLE DB](https://github.com/Microsoft/VCSamples)| 
-|Cenni preliminari sulla programmazione dell'accesso ai dati (Visual C++)|[Programmazione dell'accesso ai dati](../../data/data-access-programming-mfc-atl.md)|  
-|Argomenti concettuali su ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
-## <a name="see-also"></a>Vedere anche  
+I modelli OLE DB sono modelli C++ che semplificano l'uso della tecnologia per database OLE DB ad alte prestazioni tramite classi che implementano molte delle interfacce OLE DB maggiormente usate. Questa libreria contiene modelli consumer e modelli provider.
+
+In Visual C++ sono anche supportate procedure guidate per la creazione di applicazioni di base OLE DB.
+
+Inoltre, è possibile utilizzare gli attributi per implementare i modelli consumer OLE DB.
+
+|Per altre informazioni|Vedere|
+|-------------------------|---------|
+|Uso dei modelli consumer OLE DB (concetti)|[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|
+|Uso dei modelli provider OLE DB (concetti)|[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|
+|Classi e macro dei modelli OLE DB|[Riferimenti ai modelli OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|
+|Attributi del consumer OLE DB|[Attributi del consumer OLE DB](../../windows/ole-db-consumer-attributes.md)|
+|Interfacce OLE DB|[Riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643(v%3dvs.85)) (in Windows SDK)|
+|Esempi di modelli OLE DB|[Esempi di modelli OLE DB](https://github.com/Microsoft/VCSamples)|
+|Cenni preliminari sulla programmazione dell'accesso ai dati (Visual C++)|[Programmazione dell'accesso ai dati](../../data/data-access-programming-mfc-atl.md)|
+|Argomenti concettuali su ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|
+
+## <a name="see-also"></a>Vedere anche
 
 [Accesso ai dati](../data-access-in-cpp.md)

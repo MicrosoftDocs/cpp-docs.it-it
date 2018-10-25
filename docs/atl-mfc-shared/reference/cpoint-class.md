@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f6f49cbcb9fc95ecec73ee22f6830458c561db
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 2656871f62bf7881eee9c64041f3f1f492a3c948
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808537"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064888"
 ---
 # <a name="cpoint-class"></a>Classe CPoint
 
@@ -35,7 +35,7 @@ Simile alla struttura `POINT` di Windows.
 ## <a name="syntax"></a>Sintassi
 
 ```
-class CPoint : public tagPOINT 
+class CPoint : public tagPOINT
 ```
 
 ## <a name="members"></a>Membri
@@ -120,25 +120,25 @@ Se non viene fornito alcun argomento, i membri `x` e `y` vengono impostate su 0.
 
 ### <a name="example"></a>Esempio
 
-```cpp   
-CPoint   ptTopLeft(0, 0); 
+```cpp
+CPoint   ptTopLeft(0, 0);
 // works from a POINT, too
 
-POINT   ptHere;  
-ptHere.x = 35;  
+POINT   ptHere;
+ptHere.x = 35;
 ptHere.y = 95;
 
 CPoint   ptMFCHere(ptHere);
 
-// works from a SIZE 
-SIZE   sHowBig;  
-sHowBig.cx = 300;  
+// works from a SIZE
+SIZE   sHowBig;
+sHowBig.cx = 300;
 sHowBig.cy = 10;
 
-CPoint ptMFCBig(sHowBig); 
+CPoint ptMFCBig(sHowBig);
 // or from a DWORD
 
-DWORD   dwSize;  
+DWORD   dwSize;
 dwSize = MAKELONG(35, 95);
 
 CPoint ptFromDouble(dwSize);
@@ -220,7 +220,7 @@ Diverso da zero se i punti non sono uguali. in caso contrario 0.
 Il primo overload aggiunge una dimensione per la `CPoint`.
 
 ```
-void operator+=(SIZE size) throw(); 
+void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
 
@@ -249,7 +249,7 @@ Ad esempio, aggiungendo `CPoint(5, -7)` a una variabile che contiene `CPoint(30,
 Il primo overload Sottrae una dimensione dalla `CPoint`.
 
 ```
-void operator-=(SIZE size) throw(); 
+void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```
 

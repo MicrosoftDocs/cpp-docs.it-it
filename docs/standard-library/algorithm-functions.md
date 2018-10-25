@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c2e2e6e4ce39d74142891c5e539b8cc4d028753
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a21dc4e0687ece8583b2291b71ed55980127805c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726843"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082749"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
@@ -1020,25 +1020,25 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
+    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
 
-    // Using range-and-a-half equal:
-    bool b = equal(v1.begin(), v1.end(), v2.begin());
-    cout << "v1 and v2 are equal: "
-       << b << endl; // true, as expected
+    // Using range-and-a-half equal:
+    bool b = equal(v1.begin(), v1.end(), v2.begin());
+    cout << "v1 and v2 are equal: "
+       << b << endl; // true, as expected
 
-    b = equal(v1.begin(), v1.end(), v3.begin());
-    cout << "v1 and v3 are equal: "
-       << b << endl; // true, surprisingly
+    b = equal(v1.begin(), v1.end(), v3.begin());
+    cout << "v1 and v3 are equal: "
+       << b << endl; // true, surprisingly
 
-    // Using dual-range equal:
-    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
-    cout << "v1 and v3 are equal with dual-range overload: "
-       << b << endl; // false
+    // Using dual-range equal:
+    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
+    cout << "v1 and v3 are equal with dual-range overload: "
+       << b << endl; // false
 
-    return 0;
+    return 0;
 }
 
 ```
@@ -8763,6 +8763,7 @@ int main()
 }
 
 ```
+
 ## <a name="see-also"></a>Vedere anche
 
 [\<algorithm>](../standard-library/algorithm.md)<br/>

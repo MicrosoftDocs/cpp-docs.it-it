@@ -25,67 +25,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 09f70e45891e7dc0b07933fe95dce772e5c7159a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 351f22f49ec005b07fad6f4b215cdc75637213e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078479"
 ---
 # <a name="iconverttypeimpl-class"></a>Classe IConvertTypeImpl
 
-Fornisce un'implementazione del [IConvertType](/previous-versions/windows/desktop/ms715926) interfaccia.  
-  
+Fornisce un'implementazione del [IConvertType](/previous-versions/windows/desktop/ms715926) interfaccia.
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IConvertTypeImpl   
-   : public IConvertType, public CConvertHelper  
-```  
-  
-### <a name="parameters"></a>Parametri  
+template <class T>
+class ATL_NO_VTABLE IConvertTypeImpl
+   : public IConvertType, public CConvertHelper
+```
+
+### <a name="parameters"></a>Parametri
 
 *T*<br/>
-La classe, derivata da `IConvertTypeImpl`.  
+La classe, derivata da `IConvertTypeImpl`.
 
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atldb.h  
-  
-## <a name="members"></a>Membri  
-  
-### <a name="interface-methods"></a>Metodi di interfaccia  
-  
-|||  
-|-|-|  
-|[CanConvert](#canconvert)|Fornisce informazioni sulla disponibilità di conversioni di tipi in un comando o in un set di righe.|  
-  
-## <a name="remarks"></a>Note  
+**Intestazione:** atldb.h
 
-Questa interfaccia è obbligatoria in caso di comandi, i set di righe e i set di righe di indice. `IConvertTypeImpl` implementa l'interfaccia mediante la delega all'oggetto di conversione fornita da OLE DB.  
+## <a name="members"></a>Membri
+
+### <a name="interface-methods"></a>Metodi di interfaccia
+
+|||
+|-|-|
+|[CanConvert](#canconvert)|Fornisce informazioni sulla disponibilità di conversioni di tipi in un comando o in un set di righe.|
+
+## <a name="remarks"></a>Note
+
+Questa interfaccia è obbligatoria in caso di comandi, i set di righe e i set di righe di indice. `IConvertTypeImpl` implementa l'interfaccia mediante la delega all'oggetto di conversione fornita da OLE DB.
 
 ## <a name="canconvert"></a> Iconverttypeimpl:: CanConvert
 
-Fornisce informazioni sulla disponibilità di conversioni di tipi in un comando o in un set di righe.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Fornisce informazioni sulla disponibilità di conversioni di tipi in un comando o in un set di righe.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-STDMETHOD(CanConvert)(DBTYPE wFromType,   
-   DBTYPE wToType,   
-   DBCONVERTFLAGS dwConvertFlags);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+STDMETHOD(CanConvert)(DBTYPE wFromType, 
+   DBTYPE wToType, 
+   DBCONVERTFLAGS dwConvertFlags);
+```
 
-Visualizzare [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224) nel *riferimento per programmatori OLE DB*.  
-  
-### <a name="remarks"></a>Note  
+#### <a name="parameters"></a>Parametri
 
-Utilizza la conversione di dati OLE DB in `MSADC.DLL`.  
-  
-## <a name="see-also"></a>Vedere anche  
+Visualizzare [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224) nel *riferimento per programmatori OLE DB*.
+
+### <a name="remarks"></a>Note
+
+Utilizza la conversione di dati OLE DB in `MSADC.DLL`.
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

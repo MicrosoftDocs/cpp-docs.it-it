@@ -1,7 +1,7 @@
 ---
-title: Riferimento alla libreria OpenMP | Microsoft Docs
+title: Riferimenti alla libreria OpenMP | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-parallel
 ms.topic: reference
@@ -12,14 +12,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3812f698f034b5610f90c57b94b56f0b8648417
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ce6c10802f470e3416d0db9aca5b66db9064ade3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403800"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057010"
 ---
-# <a name="openmp-library-reference"></a>Riferimento alla libreria OpenMP
+# <a name="openmp-library-reference"></a>Riferimenti alla libreria OpenMP
 
 Fornisce collegamenti a costrutti usati nell'API OpenMP.
 
@@ -27,10 +27,10 @@ L'implementazione di Visual C++ dello standard OpenMP include i seguenti costrut
 
 |Costrutto|Descrizione|
 |---------------|-----------------|
-|[Librerie](../../../parallel/openmp/reference/openmp-libraries.md)|Descrive i file con estensione LIB che formano le librerie di runtime OpenMP in Visual C++.|
-|[Tipi di dati](../../../parallel/openmp/reference/openmp-data-types.md)|Vengono forniti collegamenti ai tipi di dati usati nell'API OpenMP.|
-|[Variabili di ambiente](../../../parallel/openmp/reference/openmp-environment-variables.md)|Fornisce collegamenti alle variabili di ambiente usate nell'API OpenMP.|
-|[Funzioni](../../../parallel/openmp/reference/openmp-functions.md)|Fornisce collegamenti a funzioni usate nell'API OpenMP.|
+|[Librerie](openmp-libraries.md)|Descrive i file con estensione LIB che formano le librerie di runtime OpenMP in Visual C++.|
+|[Tipi di dati](openmp-data-types.md)|Vengono forniti collegamenti ai tipi di dati usati nell'API OpenMP.|
+|[Variabili di ambiente](openmp-environment-variables.md)|Fornisce collegamenti alle variabili di ambiente usate nell'API OpenMP.|
+|[Funzioni](openmp-functions.md)|Fornisce collegamenti a funzioni usate nell'API OpenMP.|
 
 ## <a name="see-also"></a>Vedere anche
 

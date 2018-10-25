@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e067b1d72b80950b4ed33fbae8cac7333ac0438
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083076"
 ---
 # <a name="atl-module-classes"></a>Classi di modulo ATL
 
@@ -55,15 +55,15 @@ La funzionalità di `CComModule` sono state distribuite in diverse nuove classi 
 
 - Verificare la funzionalità di `CComModule` granulare.
 
-     Supporto per COM, windowing, il debug dell'interfaccia e le funzionalità (DLL o EXE) specifico dell'applicazione è ora in classi separate.
+   Supporto per COM, windowing, il debug dell'interfaccia e le funzionalità (DLL o EXE) specifico dell'applicazione è ora in classi separate.
 
 - Dichiarare automaticamente l'istanza globale della ognuno di questi moduli.
 
-     Un'istanza globale delle classi di modulo necessario è collegata al progetto.
+   Un'istanza globale delle classi di modulo necessario è collegata al progetto.
 
 - Rimuovere la necessità di chiamare i metodi Init e termini.
 
-     Metodi Init e termini sono spostati nei costruttori e distruttori per le classi di modulo; non è più necessario chiamare Init e termine.
+   Metodi Init e termini sono spostati nei costruttori e distruttori per le classi di modulo; non è più necessario chiamare Init e termine.
 
 ## <a name="see-also"></a>Vedere anche
 

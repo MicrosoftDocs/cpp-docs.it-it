@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bd15720c30c3a3f298e0094304205fd7fe5caeb
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 3eddf1981aba8babcb87562ed546ce4086499fd7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791324"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071339"
 ---
 # <a name="uuid-c-attributes"></a>uuid (attributi C++)
 
@@ -66,7 +66,7 @@ Vedere le [associabile](bindable.md) per un esempio dell'uso di esempio **uuid**
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -74,4 +74,4 @@ Per altre informazioni sui contesti di attributi, vedere [contesti di attributi]
 [Attributi di interfaccia](interface-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[uuid](/windows/desktop/Midl/uuid)  
+[uuid](/windows/desktop/Midl/uuid)

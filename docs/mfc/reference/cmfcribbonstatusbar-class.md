@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bc8c58c6f11903b483893e99f415ab836ae358
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4303dc9f5f72e4a9500a1d5a6a7c210e7f7bc62f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448051"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063796"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Classe CMFCRibbonStatusBar
 
@@ -121,7 +121,7 @@ In genere, l'area principale della barra di stato vengono visualizzate notifiche
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari metodi nel `CMFCRibbonStatusBar` classe. L'esempio illustra come aggiungere un nuovo elemento della barra multifunzione alla barra di stato della barra multifunzione, aggiungere un elemento della barra multifunzione all'area estesa della barra di stato della barra multifunzione, aggiungere un separatore e abilitare la modalità standard per la barra di stato della barra multifunzione.
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonStatusBar` . L'esempio illustra come aggiungere un nuovo elemento della barra multifunzione alla barra di stato della barra multifunzione, aggiungere un elemento della barra multifunzione all'area estesa della barra di stato della barra multifunzione, aggiungere un separatore e abilitare la modalità standard per la barra di stato della barra multifunzione.
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -289,8 +289,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*uiCmdID*<br/>
-[in] [in] *BOOL*
+[in] *uiCmdID*<br/>
+[in] *BOOL*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -385,7 +385,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *rect*
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -425,7 +425,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pElement*
+[in] *pElement*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 

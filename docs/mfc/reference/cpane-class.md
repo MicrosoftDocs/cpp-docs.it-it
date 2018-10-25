@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384507"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080221"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -190,7 +190,7 @@ class CPane : public CBasePane
 |[CPane::DockByMouse](#dockbymouse)|Ancora un riquadro usando il mouse ancoraggio (metodo).|
 |[CPane::DockPane](#dockpane)|Ancora il riquadro mobile a un riquadro di base.|
 |[CPane::DockPaneStandard](#dockpanestandard)|Ancora un riquadro con contorno di ancoraggio (standard).|
-|[CPane::DockToFrameWindow](#docktoframewindow)|Ancora un riquadro ancorato in un frame. Esegue l'override`CBasePane::DockToFrameWindow`.|
+|[CPane::DockToFrameWindow](#docktoframewindow)|Ancora un riquadro ancorato in un frame. Esegue l'override di `CBasePane::DockToFrameWindow`.|
 |[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Indica se è possibile ancorare un altro riquadro nella stessa riga in cui è ancorato il riquadro corrente.|
 |[CPane::FloatPane](#floatpane)|Si muove il riquadro.|
 |[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Restituisce la quantità, in pixel, che è possibile espandere il riquadro.|
@@ -207,7 +207,7 @@ class CPane : public CBasePane
 |[CPane::GetVirtualRect](#getvirtualrect)|Recupera le *rettangolo virtuale* del riquadro.|
 |[CPane::IsChangeState](#ischangestate)|Come il riquadro è da spostare, questo metodo consente di analizzare la posizione del riquadro relativo alla altri riquadri, ancorare le righe e finestre con mini-cornice e restituisce il valore AFX_CS_STATUS appropriato.|
 |[CPane::IsDragMode](#isdragmode)|Specifica se il riquadro viene trascinato.|
-|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Specifica se il riquadro è in una finestra cornice a più riquadri. Esegue l'override`CBasePane::IsInFloatingMultiPaneFrameWnd`.|
+|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Specifica se il riquadro è in una finestra cornice a più riquadri. Esegue l'override di `CBasePane::IsInFloatingMultiPaneFrameWnd`.|
 |[CPane::IsLeftOf](#isleftof)|Determina se il riquadro viene lasciato di (o versioni successive) del rettangolo specificato.|
 |[CPane::IsResizable](#isresizable)|Determina se è possibile ridimensionare il riquadro. (Esegue l'override [cbasepane:: isResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
 |[CPane::IsTabbed](#istabbed)|Determina se il riquadro è stato inserito nel controllo della scheda di una finestra a schede. (Esegue l'override [CBasePane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Specifica le dimensioni iniziali e la posizione del *pParentWnd* finestra, nelle coordinate del client.
 
-[in] [out] *pParentWnd* specifica la finestra padre di questo riquadro.
+*pParentWnd*<br/>
+[in, out] Specifica la finestra padre di questo riquadro.
 
 *nID*<br/>
 [in] Specifica l'ID del riquadro.
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Specifica lo stile del riquadro. Per altre informazioni, vedere [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* specifica il contesto di creazione del riquadro.
+*pContext*<br/>
+[in, out] Specifica il contesto di creazione del riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Specifica le dimensioni iniziali e la posizione del *pParentWnd* finestra, nelle coordinate del client.
 
-[in] [out] *pParentWnd* specifica la finestra padre di questo riquadro.
+*pParentWnd*<br/>
+[in, out] Specifica la finestra padre di questo riquadro.
 
 *nID*<br/>
 [in] Specifica l'ID del riquadro.
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Specifica lo stile del riquadro. Per altre informazioni, vedere [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* specifica il contesto di creazione per il riquadro.
+*pContext*<br/>
+[in, out] Specifica il contesto di creazione per il riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pDockBar* specifica il riquadro di base per ancorare il riquadro.
+*pDockBar*<br/>
+[in, out] Specifica il riquadro di base per ancorare il riquadro.
 
 *lpRect*<br/>
 [in] Specifica il rettangolo nel riquadro di base in cui deve essere ancorato in questo riquadro.
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pWndOldParent* finestra padre precedente del riquadro.
+*pWndOldParent*<br/>
+[in, out] Finestra padre precedente del riquadro.
 
 ### <a name="remarks"></a>Note
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pWndNewParent* specifica la nuova finestra padre.
+*pWndNewParent*<br/>
+[in, out] Specifica la nuova finestra padre.
 
 *bDelay*<br/>
 [in] TRUE per ritardare la regolazione del layout ancoraggio globale; in caso contrario, FALSE.
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *ppDockBar* specifica il riquadro che in questo riquadro è ancoraggio a.
+*ppDockBar*<br/>
+[in, out] Specifica il riquadro che in questo riquadro è ancoraggio a.
 
 *lpRect*<br/>
 [in] Specifica il rettangolo di ancoraggio.
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pClass* specifica le informazioni sulla classe di runtime per la finestra con mini-cornice.
+*pClass*<br/>
+[in, out] Specifica le informazioni sulla classe di runtime per la finestra con mini-cornice.
 
 ### <a name="remarks"></a>Note
 

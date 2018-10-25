@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5bcc7cbe6fcd8a61e15e80c43f27703957a1e88
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063697"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083087"
 ---
 # <a name="command-line-warning-d9025"></a>Avviso della riga di comando D9025
 
@@ -35,6 +35,6 @@ Se visualizzato questo messaggio di avviso durante la compilazione dall'ambiente
 
 - Nel codice o nelle impostazioni del progetto del progetto, è possibile specificare un'opzione. Se si esamina il compilatore [pagine delle proprietà della riga di comando](../../ide/command-line-property-pages.md) e se vengono visualizzate le opzioni in conflitto nel **tutte le opzioni** campo quindi le opzioni sono impostate nelle pagine delle proprietà del progetto, in caso contrario, le opzioni vengono impostati nel codice sorgente.
 
-     Se le opzioni sono impostate nelle pagine delle proprietà del progetto, cercare nella pagina delle proprietà per il preprocessore del compilatore (con il nodo del progetto selezionato in Esplora soluzioni).  Se non viene visualizzata l'opzione set non esiste, verificare le impostazioni di pagina delle proprietà per il preprocessore per ogni file di codice sorgente (in Esplora soluzioni) che non viene aggiunto non esiste.
+   Se le opzioni sono impostate nelle pagine delle proprietà del progetto, cercare nella pagina delle proprietà per il preprocessore del compilatore (con il nodo del progetto selezionato in Esplora soluzioni).  Se non viene visualizzata l'opzione set non esiste, verificare le impostazioni di pagina delle proprietà per il preprocessore per ogni file di codice sorgente (in Esplora soluzioni) che non viene aggiunto non esiste.
 
-     Se le opzioni sono impostate nel codice è possibile impostare nel codice o nelle intestazioni di windows.  È possibile provare a creare un file pre-elaborato ([/P](../../build/reference/p-preprocess-to-a-file.md)) e si cerca il simbolo.
+   Se le opzioni sono impostate nel codice è possibile impostare nel codice o nelle intestazioni di windows.  È possibile provare a creare un file pre-elaborato ([/P](../../build/reference/p-preprocess-to-a-file.md)) e si cerca il simbolo.

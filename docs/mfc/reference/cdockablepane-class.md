@@ -1,7 +1,7 @@
 ---
 title: Classe CDockablePane | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078310"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -223,7 +223,7 @@ class CDockablePane : public CPane
 |[CDockablePane::ReplacePane](#replacepane)|Sostituisce il riquadro con un riquadro specificato.|
 |[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|Il framework chiama questo metodo come un riquadro viene deserializzato per ripristinare il divisore di riquadro predefinito.|
 |`CDockablePane::SaveState`|Utilizzato internamente.|
-|`CDockablePane::Serialize`|Serializza il riquadro. Esegue l'override`CBasePane::Serialize`.|
+|`CDockablePane::Serialize`|Serializza il riquadro. Esegue l'override di `CBasePane::Serialize`.|
 |[CDockablePane::SetAutoHideMode](#setautohidemode)|Attiva/disattiva il riquadro ancorato tra visibile e modalità Nascondi automaticamente.|
 |[CDockablePane::SetAutoHideParents](#setautohideparents)|Imposta il pulsante Nascondi automaticamente e barra degli strumenti Nascondi automaticamente per il riquadro.|
 |`CDockablePane::SetDefaultPaneDivider`|Utilizzato internamente.|
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pTabControlBarAttachTo* specifica del riquadro di destinazione che connette il riquadro corrente. Il riquadro di destinazione deve essere un riquadro ancorato.
+*pTabControlBarAttachTo*<br/>
+[in, out] Specifica il riquadro di destinazione che connette il riquadro corrente. Il riquadro di destinazione deve essere un riquadro ancorato.
 
 *dockMethod*<br/>
 [in] Specifica il metodo di ancoraggio.
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in] Specifica il nome della finestra.
 
-[in] [out] *pParentWnd* specifica della finestra padre.
+*pParentWnd*<br/>
+[in, out] Specifica la finestra padre.
 
 *Rect*<br/>
 [in] Specifica le dimensioni e posizione della finestra, nelle coordinate del client *pParentWnd*.
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Specifica gli attributi di stile aggiuntive.
 
-[in] [out] *pContext* specifica il contesto di creazione della finestra.
+*pContext*<br/>
+[in, out] Specifica il contesto di creazione della finestra.
 
 *lpszWindowName*<br/>
 [in] Specifica il nome della finestra.
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in] Specifica il nome della finestra.
 
-[in] [out] *pParentWnd* specifica della finestra padre.
+*pParentWnd*<br/>
+[in, out] Specifica la finestra padre.
 
 *Rect*<br/>
 [in] Specifica le dimensioni e posizione della finestra, nelle coordinate del client *pParentWnd*.
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Specifica gli attributi di stile aggiuntive.
 
-[in] [out] *pContext* specifica il contesto di creazione della finestra.
+*pContext*<br/>
+[in, out] Specifica il contesto di creazione della finestra.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>Parametri
 
-[in] [out] *pTargetWindow* specifica il riquadro ancorato per ancorare il riquadro.
+*pTargetWindow*<br/>
+[in, out] Specifica il riquadro ancorato per ancorare il riquadro.
 
 *dwAlignment*<br/>
 [in] Specifica l'allineamento di ancoraggio del riquadro. Potrebbe essere uno dei CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM o CBRS_ALIGN_ANY. (Definito in AFXRES. h).
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pWndOldParent*
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Specifica l'allineamento del riquadro che si nascondono automaticamente da creare.
 
-[in] [out] *pCurrAutoHideBar* un puntatore a barra Nascondi automaticamente corrente. Può essere NULL.
+*pCurrAutoHideBar*<br/>
+[in, out] Puntatore a barra Nascondi automaticamente corrente. Può essere NULL.
 
 *bUseTimer*<br/>
 [in] Specifica se utilizzare l'effetto che si nascondono automaticamente quando l'utente attiva il riquadro di modalità Nascondi automaticamente o per nascondere il riquadro immediatamente.

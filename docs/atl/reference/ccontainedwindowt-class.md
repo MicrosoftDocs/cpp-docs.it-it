@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e65451fcb506da9072d0dc8031ffba1b30280e6
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: fde79b2f96c815144b9cbdef1dcc7623e5a0eb60
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861434"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065213"
 ---
 # <a name="ccontainedwindowt-class"></a>Classe CContainedWindowT
 
@@ -176,7 +176,7 @@ Se si crea una sottoclasse una finestra esistente tramite [SubclassWindow](#subc
 Le chiamate [RegisterWndSuperclass](#registerwndsuperclass) per registrare una classe della finestra che si basa su una classe esistente, ma usa [CContainedWindowT::WindowProc](#windowproc).
 
 ```
-HWND Create(  
+HWND Create(
     HWND hWndParent,
     _U_RECT rect,
     LPCTSTR szWindowName = NULL,
@@ -441,7 +441,7 @@ Usare questo metodo solo se si desidera ripristinare la procedura di finestra or
 Questo metodo statico implementa la procedura della finestra.
 
 ```
-static LRESULT CALLBACK WindowProc(  
+static LRESULT CALLBACK WindowProc(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

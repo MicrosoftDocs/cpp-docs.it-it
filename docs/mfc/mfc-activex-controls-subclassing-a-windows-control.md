@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890557"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081706"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controlli ActiveX MFC: creazione di una sottoclasse per un controllo Windows
 
@@ -94,12 +94,12 @@ Per aggiungere manualmente un gestore messaggi per un messaggio della finestra r
 
 - Nel file .H della classe del controllo, dichiarare una funzione del gestore. La funzione deve avere un tipo restituito **LRESULT** e due parametri, con tipi **WPARAM** e **LPARAM**, rispettivamente. Ad esempio:
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - Nella classe del controllo. CPP, aggiungere una voce ON_MESSAGE alla mappa messaggi. I parametri di questa voce devono essere l'identificatore del messaggio e il nome della funzione del gestore. Ad esempio:
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - Anche nel. File CPP, implementare il `OnOcmCommand` funzione membro per elaborare il messaggio riflesso. Il *wParam* e *lParam* i parametri sono identici a quelli del messaggio originale della finestra.
 

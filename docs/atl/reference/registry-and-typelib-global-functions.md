@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af2780c8b7fb332cd739416e5051a57a8bc7f765
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073537"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funzioni globali Registry e TypeLib
 
@@ -60,7 +60,7 @@ Queste funzioni controllano quale nodo nel Registro di sistema il programma util
 |||
 |-|-|
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Specifica se l'applicazione reindirizza l'accesso al Registro di sistema per il **HKEY_CURRENT_USER** ( **HKCU**) nodo.|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Imposta se l'applicazione reindirizza l'accesso al Registro di sistema per il **HKEY_CURRENT_USER** ( **HKCU**) nodo.|  
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Imposta se l'applicazione reindirizza l'accesso al Registro di sistema per il **HKEY_CURRENT_USER** ( **HKCU**) nodo.|
 
 ### <a name="requirements"></a>Requisiti
 
@@ -93,7 +93,7 @@ Il reindirizzamento non è globale. Solo i framework MFC e ATL sono interessati 
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlbase. h  
+**Intestazione:** atlbase. h
 
 ## <a name="afxregcreatekey"></a> AfxRegCreateKey
 
@@ -121,11 +121,11 @@ Puntatore a un oggetto `CAtlTransactionManager`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito nel file Winerror. h.  
+Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito nel file Winerror. h.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxpriv.h  
+**Intestazione:** afxpriv.h
 
 ## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 
@@ -154,7 +154,7 @@ Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. Se la f
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxpriv.h  
+**Intestazione:** afxpriv.h
 
 ## <a name="afxregisterpreviewhandler"></a>
 
@@ -179,7 +179,7 @@ Specifica l'estensione di file registrati con questo gestore.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdisp.h   
+**Intestazione:** afxdisp.h
 
 ##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib
 
@@ -239,11 +239,11 @@ Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. Se la f
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxpriv.h  
+**Intestazione:** afxpriv.h
 
 ## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 
-Apre la chiave del Registro di sistema. 
+Apre la chiave del Registro di sistema.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -277,7 +277,7 @@ Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. Se la f
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxpriv.h  
+**Intestazione:** afxpriv.h
 
 ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
 
@@ -296,7 +296,7 @@ Specifica il CLSID del gestore di cui annullare la registrazione.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdisp.h  
+**Intestazione:** afxdisp.h
 
 ## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 
@@ -321,11 +321,11 @@ S_OK se il metodo ha esito positivo, in caso contrario, l'errore HRESULT del cod
 
 Il reindirizzamento del Registro di sistema non è abilitato per impostazione predefinita. Se si abilita questa opzione, l'accesso del Registro di sistema viene reindirizzato alla **HKEY_CURRENT_USER\Software\Classes**.
 
-Il reindirizzamento non è globale. Solo i framework MFC e ATL sono interessati da questo reindirizzamento del Registro di sistema.  
+Il reindirizzamento non è globale. Solo i framework MFC e ATL sono interessati da questo reindirizzamento del Registro di sistema.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlbase. h  
+**Intestazione:** atlbase. h
 
 ##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
 
@@ -335,7 +335,7 @@ Questa funzione viene chiamata per annullare la registrazione di una libreria de
 
 ```
 ATLAPI AtlUnRegisterTypeLib(
-    HINSTANCE hInstTypeLib, 
+    HINSTANCE hInstTypeLib,
     LPCOLESTR lpszIndex);
 ```
 
@@ -353,7 +353,7 @@ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso d
 
 ### <a name="remarks"></a>Note
 
-Questa funzione helper usata da [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) e [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+Questa funzione helper usata da [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) e [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -405,7 +405,7 @@ Questa funzione è stata deprecata in Visual Studio 2013 ed è stata rimossa in 
 
 ##  <a name="registrydataexchange"></a>  RegistryDataExchange
 
-Questa funzione viene chiamata per leggere o scrivere nel Registro di sistema.  
+Questa funzione viene chiamata per leggere o scrivere nel Registro di sistema.
 
 ### <a name="syntax"></a>Sintassi
 

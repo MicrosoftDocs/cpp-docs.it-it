@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b873a615e04bd92e08abb51a048f227f19fd9eec
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 55217fa64c5fd28bf0839704307a0976bc647e5f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057496"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077725"
 ---
 # <a name="cheapptrelementtraits-class"></a>Classe CHeapPtrElementTraits
 
@@ -37,7 +37,7 @@ Questa classe fornisce metodi e funzioni statiche typedef utile durante la creaz
 
 ```
 template<typename T, class Allocator = ATL::CCRTAllocator>
-class CHeapPtrElementTraits : 
+class CHeapPtrElementTraits :
    public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```
 

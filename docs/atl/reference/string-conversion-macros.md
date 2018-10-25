@@ -21,16 +21,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4df562e693a412ca93720748f929d1bbcefc829
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aa44449c65dbdfdea93004fa2fe1adffdeba033d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061742"
 ---
 # <a name="string-conversion-macros"></a>Macro di conversione di stringhe
 
-Queste macro forniscono stringa le funzionalità di conversione.  
+Queste macro forniscono stringa le funzionalità di conversione.
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  Macro di conversione di stringhe MFC e ATL
 
@@ -78,7 +78,7 @@ La tabella seguente elenca i `DEVMODE` e `TEXTMETRIC` macro di conversione di st
 |DEVMODEA2W|TEXTMETRICA2W|
 |DEVMODEOLE2T|TEXTMETRICOLE2T|
 |DEVMODET2OLE|TEXTMETRICT2OLE|
-|DEVMODEW2A|TEXTMETRICW2A|  
+|DEVMODEW2A|TEXTMETRICW2A|
 
 ## <a name="see-also"></a>Vedere anche
 

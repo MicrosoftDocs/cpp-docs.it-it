@@ -15,40 +15,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cf1ee9b2bd45da321a9d333e48b6cf0a3d178b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4c7c1b84c23ae16828e2d73cb1f45084dfd5806e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405996"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055333"
 ---
 # <a name="cc-preprocessor-reference"></a>Riferimenti al preprocessore C/C++
-Il *riferimenti al preprocessore C/C++* viene illustrato il preprocessore come viene implementato in Microsoft C/C++. Il preprocessore esegue alcune operazioni preliminari sui file C e C++ prima che siano passati al compilatore. È possibile utilizzare il preprocessore per compilare in modo condizionale il codice, inserire file, specificare i messaggi di errore in fase di compilazione e applicare le regole specifiche del computer alle sezioni di codice.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- 
+Il *riferimenti al preprocessore C/C++* viene illustrato il preprocessore come viene implementato in Microsoft C/C++. Il preprocessore esegue alcune operazioni preliminari sui file C e C++ prima che siano passati al compilatore. È possibile utilizzare il preprocessore per compilare in modo condizionale il codice, inserire file, specificare i messaggi di errore in fase di compilazione e applicare le regole specifiche del computer alle sezioni di codice.
+
+## <a name="in-this-section"></a>In questa sezione
+
 [Direttive per il preprocessore](../preprocessor/preprocessor-directives.md)<br/>
-Vengono descritte le direttive, in genere utilizzate per rendere i programmi di origine semplici da modificare e da compilare in diversi ambienti di esecuzione.  
-  
+Vengono descritte le direttive, in genere utilizzate per rendere i programmi di origine semplici da modificare e da compilare in diversi ambienti di esecuzione.
+
 [Operatori del preprocessore](../preprocessor/preprocessor-operators.md)<br/>
-Vengono illustrati i quattro operatori specifici del preprocessore utilizzati nel contesto della direttiva `#define`.  
-  
+Vengono illustrati i quattro operatori specifici del preprocessore utilizzati nel contesto della direttiva `#define`.
+
 [Macro predefinite](../preprocessor/predefined-macros.md)<br/>
-Vengono illustrate le macro predefinite specificate da ANSI e da Microsoft C++.  
-  
+Vengono illustrate le macro predefinite specificate da ANSI e da Microsoft C++.
+
 [Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-Vengono illustrati i pragma che offrono un metodo per ogni compilatore per fornire le funzionalità specifiche del sistema operativo e del computer mantenendo la compatibilità generale con i linguaggi C e C++.  
-  
-## <a name="related-sections"></a>Sezioni correlate  
- 
+Vengono illustrati i pragma che offrono un metodo per ogni compilatore per fornire le funzionalità specifiche del sistema operativo e del computer mantenendo la compatibilità generale con i linguaggi C e C++.
+
+## <a name="related-sections"></a>Sezioni correlate
+
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
-Viene fornito materiale di riferimento per l'implementazione Microsoft del linguaggio C++.  
-  
+Viene fornito materiale di riferimento per l'implementazione Microsoft del linguaggio C++.
+
 [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)<br/>
-Viene fornito materiale di riferimento per l'implementazione Microsoft del linguaggio C.  
-  
+Viene fornito materiale di riferimento per l'implementazione Microsoft del linguaggio C.
+
 [Compilazione di programmi C/C++](../build/reference/c-cpp-building-reference.md)<br/>
-Vengono forniti collegamenti agli argomenti relativi alle opzioni del compilatore e del linker.  
-  
+Vengono forniti collegamenti agli argomenti relativi alle opzioni del compilatore e del linker.
+
 [Creazione e gestione di progetti Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)<br/>
 Viene descritta l'interfaccia utente di Visual Studio che consente di specificare le directory che il sistema del progetto cercherà per individuare i file per il progetto C++.

@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c882a8d4eb2510969401b4280eb66116ad220c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3f169b30394e3fdf893475a49946266143772eb7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078063"
 ---
 # <a name="noimplementation"></a>no_implementation
-**Sezione specifica C++**  
-  
-Elimina la generazione dell'intestazione con estensione tli, contenente implementazioni delle funzioni membro wrapper.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-no_implementation  
-```  
-  
-## <a name="remarks"></a>Note  
- 
-Se viene specificato questo attributo, l'intestazione con estensione tlh, con le dichiarazioni per esporre gli elementi libreria-tipo, verrà generata senza un'istruzione `#include` per includere il file di intestazione con estensione tli.  
-  
-Questo attributo viene usato in combinazione con [implementation_only](../preprocessor/implementation-only.md).  
-  
-**Fine sezione specifica C++**  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+**Sezione specifica C++**
+
+Elimina la generazione dell'intestazione con estensione tli, contenente implementazioni delle funzioni membro wrapper.
+
+## <a name="syntax"></a>Sintassi
+
+```
+no_implementation
+```
+
+## <a name="remarks"></a>Note
+
+Se viene specificato questo attributo, l'intestazione con estensione tlh, con le dichiarazioni per esporre gli elementi libreria-tipo, verrà generata senza un'istruzione `#include` per includere il file di intestazione con estensione tli.
+
+Questo attributo viene usato in combinazione con [implementation_only](../preprocessor/implementation-only.md).
+
+**Fine sezione specifica C++**
+
+## <a name="see-also"></a>Vedere anche
+
 [attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

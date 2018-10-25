@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 24028ac403092404ddf7fd279864273fcf6016ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328233"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075866"
 ---
 # <a name="property--ccli-and-ccx"></a>proprietà (C + c++ /CLI e c++ /CX)
 
@@ -53,17 +53,17 @@ Un blocco di proprietà che è possibile usare per ottenere e impostare un valor
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -172,7 +172,6 @@ Quando un membro dati di proprietà viene dichiarato, il compilatore inserisce n
 È consentita un'accessibilità diversa per i metodi della funzione di accesso in un blocco di proprietà.  Ovvero, il metodo set può essere pubblico e il metodo get può essere privato.  Tuttavia, a un metodo di una funzione di accesso non è consentito avere un'accessibilità meno restrittiva rispetto a quella nella dichiarazione della proprietà stessa.
 
 **proprietà** è una parola chiave sensibile al contesto.  Per altre informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).
-
 
 ### <a name="requirements"></a>Requisiti
 

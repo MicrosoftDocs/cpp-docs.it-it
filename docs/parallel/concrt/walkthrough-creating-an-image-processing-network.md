@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2e1ffc35315d898010e73113d6148fb27e1bad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 68b9aa25cef78780b0bb6f97d3cde1e27600481f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063419"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Procedura dettagliata: creazione di una rete per l'elaborazione di immagini
 
@@ -98,31 +98,31 @@ I passaggi seguenti illustrano come creare una funzione che implementa questa re
 
 1. Creare una funzione, `ProcessImages`, che accetta il nome di una directory sul disco.
 
-     [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_6.cpp)]
+   [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_6.cpp)]
 
 1. Nel `ProcessImages` funzionamento, creare un `countdown_event` variabile. Il `countdown_event` classe è illustrata più avanti in questa procedura dettagliata.
 
-     [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_7.cpp)]
+   [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_7.cpp)]
 
 1. Creare un [std:: map](../../standard-library/map-class.md) oggetto che associa un `Bitmap` oggetto con il nome file originale.
 
-     [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_8.cpp)]
+   [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_8.cpp)]
 
 1. Aggiungere il codice seguente per definire i membri della rete l'elaborazione di immagini.
 
-     [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_9.cpp)]
+   [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_9.cpp)]
 
 1. Aggiungere il codice seguente per connettere la rete.
 
-     [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_10.cpp)]
+   [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_10.cpp)]
 
 1. Aggiungere il codice seguente per inviare all'inizio della rete il percorso completo di ogni file JPEG nella directory.
 
-     [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_11.cpp)]
+   [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_11.cpp)]
 
 1. Attendere il `countdown_event` variabile per raggiungere lo zero.
 
-     [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_12.cpp)]
+   [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_12.cpp)]
 
 Nella tabella seguente vengono descritti i membri della rete.
 

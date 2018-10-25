@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391904"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063848"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Sulla barra degli strumenti (Editor di immagini di C++ per le icone)
 
@@ -36,8 +36,7 @@ Il **Editor di immagini** sulla barra degli strumenti contiene gli strumenti di 
 > [!NOTE]
 > Tutti gli strumenti disponibili nel **Editor di immagini** sono anche disponibili dalla barra degli strumenti il **immagine** menu (sotto la **strumenti** comando).
 
-![Barra degli strumenti Editor di immagini](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-Barra degli strumenti dell'editor di immagini
+![Barra degli strumenti Editor di immagini](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar") barra degli strumenti Editor di immagini
 
 Usare la **Editor di immagini** sulla barra degli strumenti e **opzione** selettori, fare clic sullo strumento o opzione che si desidera.
 
@@ -46,8 +45,7 @@ Usare la **Editor di immagini** sulla barra degli strumenti e **opzione** selett
 
 Con il **opzione** selettori è possibile specificare la larghezza di riga, tratto di pennello, e così via. L'icona al **opzione** pulsante del selettore varia a seconda di quale strumento è stato selezionato.
 
-![Disegno di&#45;selettore di forma nella barra degli strumenti Editor di immagini](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-Selettore di opzioni nella barra degli strumenti Editor di immagini
+![Disegno di&#45;selettore di forma nella barra degli strumenti Editor di immagini](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector") selettore di opzioni nella barra degli strumenti Editor di immagini
 
 Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 

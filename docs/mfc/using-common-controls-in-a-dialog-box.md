@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389868"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054935"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Utilizzo di controlli comuni in una finestra di dialogo
 
@@ -42,7 +42,7 @@ I controlli comuni di Windows possono essere utilizzati [finestre di dialogo](..
 
 1. Nelle [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) per la classe di finestra di dialogo, impostare i termini iniziali per il controllo comune. Utilizzando la variabile membro creata nel passaggio precedente, utilizzare le funzioni membro per impostare il valore iniziale e altre impostazioni. Per informazioni dettagliate sulle impostazioni, vedere le seguenti descrizioni dei comandi.
 
-     È anche possibile usare [DDX](../mfc/dialog-data-exchange-and-validation.md) (DDX) per inizializzare i controlli in una finestra di dialogo.
+   È anche possibile usare [DDX](../mfc/dialog-data-exchange-and-validation.md) (DDX) per inizializzare i controlli in una finestra di dialogo.
 
 1. Nei gestori per i controlli nella finestra di dialogo, utilizzare la variabile membro per modificare il controllo. Vedere le seguenti descrizioni dei comandi per informazioni dettagliate sui metodi.
 

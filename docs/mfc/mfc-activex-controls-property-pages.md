@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079857"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Controlli ActiveX MFC: pagine delle proprietà
 
@@ -86,7 +86,7 @@ Ad esempio scopi, le procedure seguenti usano un controllo semplice (denominato 
 
 1. Aprire il dialogo IDD_PROPPAGE_SAMPLE.
 
-     Alla fine della finestra di dialogo ID, in questo caso, esempio, la creazione guidata controllo ActiveX aggiunge il nome del progetto.
+   Alla fine della finestra di dialogo ID, in questo caso, esempio, la creazione guidata controllo ActiveX aggiunge il nome del progetto.
 
 1. Trascinare e rilasciare il controllo selezionato dalla casella degli strumenti nell'area della finestra di dialogo.
 

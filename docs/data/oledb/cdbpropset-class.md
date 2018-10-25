@@ -44,153 +44,153 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e998f0bed867356218e4a1b1c772d396c53afecb
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a047416c22eb57fc3ee3d3eb6a69275768182525
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082982"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081901"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
 
-Eredita dal `DBPROPSET` strutturare e aggiunge un costruttore che inizializza i campi chiave, nonché `AddProperty` accedere al metodo.  
-  
+Eredita dal `DBPROPSET` strutturare e aggiunge un costruttore che inizializza i campi chiave, nonché `AddProperty` accedere al metodo.
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-class CDBPropSet : public tagDBPROPSET  
-```  
+class CDBPropSet : public tagDBPROPSET
+```
 
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atldbcli.h  
+**Intestazione:** atldbcli.h
 
-## <a name="members"></a>Membri  
-  
-### <a name="methods"></a>Metodi  
-  
-|||  
-|-|-|  
-|[AddProperty](#addproperty)|Aggiunge una proprietà per il set di proprietà.|  
-|[CDBPropSet](#cdbpropset)|Costruttore.|  
-|[SetGUID](#setguid)|Imposta il `guidPropertySet` campo il `DBPROPSET` struttura.|  
-  
-### <a name="operators"></a>Operatori  
-  
-|||  
-|-|-|  
-|[operator =](#op_equal)|Assegna il contenuto di una proprietà impostata su un altro.|  
-  
-## <a name="remarks"></a>Note  
+## <a name="members"></a>Membri
 
-Uso di consumer e provider OLE DB `DBPROPSET` per passare le matrici di strutture `DBPROP` strutture. Ogni `DBPROP` struttura rappresenta una singola proprietà che è possibile impostare.  
+### <a name="methods"></a>Metodi
+
+|||
+|-|-|
+|[AddProperty](#addproperty)|Aggiunge una proprietà per il set di proprietà.|
+|[CDBPropSet](#cdbpropset)|Costruttore.|
+|[SetGUID](#setguid)|Imposta il `guidPropertySet` campo il `DBPROPSET` struttura.|
+
+### <a name="operators"></a>Operatori
+
+|||
+|-|-|
+|[operator =](#op_equal)|Assegna il contenuto di una proprietà impostata su un altro.|
+
+## <a name="remarks"></a>Note
+
+Uso di consumer e provider OLE DB `DBPROPSET` per passare le matrici di strutture `DBPROP` strutture. Ogni `DBPROP` struttura rappresenta una singola proprietà che è possibile impostare.
 
 ## <a name="addproperty"></a> CDBPropSet::
 
-Aggiunge una proprietà per il set di proprietà.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Aggiunge una proprietà per il set di proprietà.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-bool AddProperty(DWORD dwPropertyID,   
-   constVARIANT& var,   
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   LPCSTR szValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   LPCWSTR szValue,DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   bool bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   BYTE bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
-   short nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
-   long nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
-   float fltValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
-   double dblValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   CY cyValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+bool AddProperty(DWORD dwPropertyID, 
+   constVARIANT& var, 
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   LPCSTR szValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   LPCWSTR szValue,DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   bool bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   BYTE bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,
+   short nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,
+   long nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,
+   float fltValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,
+   double dblValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   CY cyValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();
+```
+
+#### <a name="parameters"></a>Parametri
 
 *dwPropertyID*<br/>
-[in] L'ID della proprietà da aggiungere. Consente di inizializzare il `dwPropertyID` del `DBPROP` struttura aggiunto al set di proprietà.  
-  
-*var*<br/>
-[in] Una variante usata per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.  
-  
-*szValue*<br/>
-[in] Stringa utilizzata per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.  
-  
-*bValue*<br/>
-[in] Oggetto `BYTE` o un valore booleano utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.  
-  
-*nValore*<br/>
-[in] Valore intero utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.  
-  
-*fltValue*<br/>
-[in] Valore a virgola mobile utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.  
-  
-*dblValue*<br/>
-[in] Valore a virgola mobile a precisione doppia che consente di inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.  
-  
-*cyValue*<br/>
-[in] Valore di valuta CY utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.  
-  
-### <a name="return-value"></a>Valore restituito  
+[in] L'ID della proprietà da aggiungere. Consente di inizializzare il `dwPropertyID` del `DBPROP` struttura aggiunto al set di proprietà.
 
-**true** se la proprietà è stata aggiunta correttamente. In caso contrario, **false**. 
+*var*<br/>
+[in] Una variante usata per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+
+*szValue*<br/>
+[in] Stringa utilizzata per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+
+*bValue*<br/>
+[in] Oggetto `BYTE` o un valore booleano utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+
+*nValore*<br/>
+[in] Valore intero utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+
+*fltValue*<br/>
+[in] Valore a virgola mobile utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+
+*dblValue*<br/>
+[in] Valore a virgola mobile a precisione doppia che consente di inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+
+*cyValue*<br/>
+[in] Valore di valuta CY utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
+
+### <a name="return-value"></a>Valore restituito
+
+**true** se la proprietà è stata aggiunta correttamente. In caso contrario, **false**.
 
 ## <a name="cdbpropset"></a> CDBPropSet:: CDBPropSet
 
-Costruttore. Inizializza la `rgProperties`, `cProperties`, e `guidPropertySet` campi del [DBPROPSET](/previous-versions/windows/desktop/ms714367) struttura.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Costruttore. Inizializza la `rgProperties`, `cProperties`, e `guidPropertySet` campi del [DBPROPSET](/previous-versions/windows/desktop/ms714367) struttura.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-CDBPropSet(const GUID& guid);  
+CDBPropSet(const GUID& guid);
 
-CDBPropSet(const CDBPropSet& propset);  
+CDBPropSet(const CDBPropSet& propset);
 
-CDBPropSet();  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+CDBPropSet();
+```
+
+#### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-[in] GUID utilizzato per inizializzare il `guidPropertySet` campo.  
-  
+[in] GUID utilizzato per inizializzare il `guidPropertySet` campo.
+
 *propset*<br/>
-[in] Altro oggetto `CDBPropSet` per la costruzione di copia.  
+[in] Altro oggetto `CDBPropSet` per la costruzione di copia.
 
 ## <a name="setguid"></a> CDBPropSet:: SetGuid
 
-Imposta il `guidPropertySet` campo il `DBPROPSET` struttura.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Imposta il `guidPropertySet` campo il `DBPROPSET` struttura.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-void SetGUID(const GUID& guid) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+void SetGUID(const GUID& guid) throw();
+```
+
+#### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-[in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPSET](/previous-versions/windows/desktop/ms714367) struttura.  
-  
-### <a name="remarks"></a>Note  
+[in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPSET](/previous-versions/windows/desktop/ms714367) struttura.
 
-Questo campo può essere impostato il [costruttore](../../data/oledb/cdbpropset-cdbpropset.md) anche.  
+### <a name="remarks"></a>Note
+
+Questo campo può essere impostato il [costruttore](../../data/oledb/cdbpropset-cdbpropset.md) anche.
 
 ## <a name="op_equal"></a> CDBPropSet:: operator =
 
-Assegna il contenuto di un set di proprietà a un altro set di proprietà.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Assegna il contenuto di un set di proprietà a un altro set di proprietà.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-CDBPropSet& operator =(CDBPropSet& propset) throw();  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
+CDBPropSet& operator =(CDBPropSet& propset) throw();
+```
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-[Struttura DBPROPSET](/previous-versions/windows/desktop/ms714367)   
-[Struttura DBPROP](/previous-versions/windows/desktop/ms717970)
+[Struttura DBPROPSET](/previous-versions/windows/desktop/ms714367)
+[struttura DBPROP](/previous-versions/windows/desktop/ms717970)

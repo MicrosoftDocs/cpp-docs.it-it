@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e5df8e88124d1d94869618a94525e224d32495
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0aaefc41ca365e2bf4d87583f2e25dfa2a870a90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424672"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079012"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: utilizzo della classe CAsyncSocket
 
@@ -48,19 +48,19 @@ Questo articolo illustra le attività seguenti:
 
 1. Creare un [CAsyncSocket](../mfc/reference/casyncsocket-class.md) dell'oggetto e l'oggetto utilizzato per creare l'oggetto sottostante **SOCKET** gestire.
 
-     La creazione di un socket segue il modello MFC di costruzione in due fasi.
+   La creazione di un socket segue il modello MFC di costruzione in due fasi.
 
-     Ad esempio:
+   Ad esempio:
 
-     [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
      oppure
 
-     [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-     Il primo costruttore crea un `CAsyncSocket` oggetto nello stack. Il secondo costruttore crea un `CAsyncSocket` nell'heap. Il primo [Create](../mfc/reference/casyncsocket-class.md#create) chiamata precedente Usa i parametri predefiniti per creare un socket di flusso. Il secondo `Create` chiamata crea un socket di datagramma con una porta specificata e l'indirizzo. (È possibile usare `Create` versione con uno dei due metodi di costruzione.)
+   Il primo costruttore crea un `CAsyncSocket` oggetto nello stack. Il secondo costruttore crea un `CAsyncSocket` nell'heap. Il primo [Create](../mfc/reference/casyncsocket-class.md#create) chiamata precedente Usa i parametri predefiniti per creare un socket di flusso. Il secondo `Create` chiamata crea un socket di datagramma con una porta specificata e l'indirizzo. (È possibile usare `Create` versione con uno dei due metodi di costruzione.)
 
-     I parametri da `Create` sono:
+   I parametri da `Create` sono:
 
    - "port": un valore short integer.
 
@@ -72,28 +72,28 @@ Questo articolo illustra le attività seguenti:
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-     I termini "della porta" e "indirizzo socket" sono illustrati in [Windows Sockets: porte e indirizzi Socket](../mfc/windows-sockets-ports-and-socket-addresses.md).
+   I termini "della porta" e "indirizzo socket" sono illustrati in [Windows Sockets: porte e indirizzi Socket](../mfc/windows-sockets-ports-and-socket-addresses.md).
 
 1. Se il socket è un client, connettere l'oggetto socket a un server socket, usando [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect).
 
      oppure
 
-     Se il socket è un server, impostare il socket per iniziare l'ascolto (con [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen)) per i tentativi di connessione da un client. Dopo aver ricevuto una richiesta di connessione, accettarla con [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Se il socket è un server, impostare il socket per iniziare l'ascolto (con [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen)) per i tentativi di connessione da un client. Dopo aver ricevuto una richiesta di connessione, accettarla con [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).
 
-     Dopo aver accettato una connessione, è possibile eseguire attività quali la convalida delle password.
+   Dopo aver accettato una connessione, è possibile eseguire attività quali la convalida delle password.
 
     > [!NOTE]
     >  Il `Accept` membro funzione accetta un riferimento a un nuovo oggetto vuoto `CSocket` oggetto come parametro. È necessario costruire l'oggetto prima di chiamare `Accept`. Se l'oggetto socket esce dall'ambito, la connessione verrà chiusa. Non chiamare `Create` per questo nuovo oggetto socket. Per un esempio, vedere l'articolo [Windows Sockets: sequenza di operazioni](../mfc/windows-sockets-sequence-of-operations.md).
 
 1. Eseguire le comunicazioni con altri socket chiamando il `CAsyncSocket` funzioni membro dell'oggetto che incapsulano le funzioni di Windows Sockets API.
 
-     Vedere la specifica di Windows Sockets e una classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md) nel *riferimento MFC*.
+   Vedere la specifica di Windows Sockets e una classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md) nel *riferimento MFC*.
 
 1. Eliminare definitivamente il `CAsyncSocket` oggetto.
 
-     Se è stato creato l'oggetto socket nello stack, il relativo distruttore viene chiamato quando la funzione contenitore esce dall'ambito. Se è stato creato l'oggetto socket nell'heap, usando il **nuove** operatore, si è responsabile dell'uso il **eliminare** operatore da eliminare definitivamente l'oggetto.
+   Se è stato creato l'oggetto socket nello stack, il relativo distruttore viene chiamato quando la funzione contenitore esce dall'ambito. Se è stato creato l'oggetto socket nell'heap, usando il **nuove** operatore, si è responsabile dell'uso il **eliminare** operatore da eliminare definitivamente l'oggetto.
 
-     Il distruttore chiama l'oggetto [Chiudi](../mfc/reference/casyncsocket-class.md#close) funzione membro prima dell'eliminazione dell'oggetto.
+   Il distruttore chiama l'oggetto [Chiudi](../mfc/reference/casyncsocket-class.md#close) funzione membro prima dell'eliminazione dell'oggetto.
 
 Per un esempio di questa sequenza nel codice (effettivamente per una `CSocket` oggetto), vedere [Windows Sockets: sequenza di operazioni](../mfc/windows-sockets-sequence-of-operations.md).
 

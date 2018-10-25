@@ -18,40 +18,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbb90d36ea3da8e443eede8a3d74a35246077d52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 672ea8c36b794683dca0ab50af0bda75d73f9a68
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410266"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081443"
 ---
 # <a name="inlinedepth"></a>inline_depth
-Specifica l'euristica inline ricerca profondità, in modo che nessuna funzione verrà resa inline se è a una profondità (nel grafico delle chiamate) maggiore *n*.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#pragma inline_depth( [n] )  
-```  
-  
-## <a name="remarks"></a>Note  
- 
-Questo pragma controlla l'incorporamento di funzioni contrassegnate [inline](../cpp/inline-functions-cpp.md) e [inline](../cpp/inline-functions-cpp.md) o rese inline automaticamente il `/Ob2` opzione.  
-  
-*n* può essere un valore compreso tra 0 e 255, dove 255 indica una profondità illimitata nel grafico delle chiamate e zero inibisce l'espansione inline.  Quando *n* viene omesso, viene usato il valore predefinito (254).  
-  
-Il **inline_depth** pragma controlla il numero di volte in cui una serie di chiamate di funzione può essere espanso. Se ad esempio il livello di profondità inline è quattro e se A chiama B e B quindi chiama C, tutte le tre chiamate verranno espanse in modalità inline. Tuttavia, se l'espansione inline più vicina è due, vengono espanse solo A e B, mentre C rimane una chiamata di funzione.  
-  
-Per utilizzare questo pragma, è necessario impostare il `/Ob` opzione del compilatore su 1 o 2. Il livello di profondità impostata utilizzando il pragma viene applicato alla prima chiamata di funzione dopo il pragma.  
-  
-Il livello di profondità inline può essere ridotto durante l'espansione, ma non aumentato. Se il livello di profondità inline è sei e durante l'espansione nel preprocessore viene rilevato un **inline_depth** pragma con un valore pari a otto, la profondità rimane sei.  
-  
-Il **inline_depth** pragma non ha alcun effetto sulle funzioni contrassegnate con `__forceinline`.  
-  
+Specifica l'euristica inline ricerca profondità, in modo che nessuna funzione verrà resa inline se è a una profondità (nel grafico delle chiamate) maggiore *n*.
+
+## <a name="syntax"></a>Sintassi
+
+```
+#pragma inline_depth( [n] )
+```
+
+## <a name="remarks"></a>Note
+
+Questo pragma controlla l'incorporamento di funzioni contrassegnate [inline](../cpp/inline-functions-cpp.md) e [inline](../cpp/inline-functions-cpp.md) o rese inline automaticamente il `/Ob2` opzione.
+
+*n* può essere un valore compreso tra 0 e 255, dove 255 indica una profondità illimitata nel grafico delle chiamate e zero inibisce l'espansione inline.  Quando *n* viene omesso, viene usato il valore predefinito (254).
+
+Il **inline_depth** pragma controlla il numero di volte in cui una serie di chiamate di funzione può essere espanso. Se ad esempio il livello di profondità inline è quattro e se A chiama B e B quindi chiama C, tutte le tre chiamate verranno espanse in modalità inline. Tuttavia, se l'espansione inline più vicina è due, vengono espanse solo A e B, mentre C rimane una chiamata di funzione.
+
+Per utilizzare questo pragma, è necessario impostare il `/Ob` opzione del compilatore su 1 o 2. Il livello di profondità impostata utilizzando il pragma viene applicato alla prima chiamata di funzione dopo il pragma.
+
+Il livello di profondità inline può essere ridotto durante l'espansione, ma non aumentato. Se il livello di profondità inline è sei e durante l'espansione nel preprocessore viene rilevato un **inline_depth** pragma con un valore pari a otto, la profondità rimane sei.
+
+Il **inline_depth** pragma non ha alcun effetto sulle funzioni contrassegnate con `__forceinline`.
+
 > [!NOTE]
-> Le funzioni ricorsive possono essere sostituite inline a un livello di profondità massima di 16 chiamate.  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+> Le funzioni ricorsive possono essere sostituite inline a un livello di profondità massima di 16 chiamate.
+
+## <a name="see-also"></a>Vedere anche
+
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_recursion](../preprocessor/inline-recursion.md)

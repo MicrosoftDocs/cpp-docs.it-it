@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 650935eec8d268aa5e1433ebd9a60b0bc63d0296
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f30cfd4a27eb07d2e420b83730f653fb957bb4bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083295"
 ---
 # <a name="cinternetconnection-class"></a>Classe CInternetConnection
 
@@ -173,6 +173,4 @@ operator HINTERNET() const;
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

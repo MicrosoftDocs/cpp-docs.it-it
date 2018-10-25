@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 608b4560f11e35d9aefb2c848a27c99c8dc6f4ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 3d942e2c5bca7d86e66cb579de1cbe946cb9f5f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821348"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081495"
 ---
 # <a name="function-overloading"></a>Overload di funzioni
 
@@ -126,7 +126,6 @@ Nel codice precedente viene illustrato l'overload della funzione `print` nell'am
 L'argomento predefinito non viene considerato parte del tipo di funzione. Non viene pertanto usato nella selezione delle funzioni in overload. Due funzioni che differiscono solo nei relativi argomenti predefiniti vengono considerate più definizioni anziché funzioni in overload.
 
 Per gli operatori di overload non possono essere forniti argomenti predefiniti.
-
 
 ## <a name="argument-matching"></a>Corrispondenza di argomenti
 
@@ -471,7 +470,7 @@ Un set di funzioni in overload accettabile è regolato da numerose restrizioni:
     void Print( PSTR szToPrint );
     ```
 
-     Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR` è un sinonimo del tipo `char *`. Nell'ambito del membro, questo codice genera un errore.
+   Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR` è un sinonimo del tipo `char *`. Nell'ambito del membro, questo codice genera un errore.
 
 - I tipi enumerati sono tipi distinti e possono essere usati per distinguere le funzioni in overload.
 
@@ -482,7 +481,7 @@ Un set di funzioni in overload accettabile è regolato da numerose restrizioni:
     void Print( char szToPrint[] );
     ```
 
-     Nella moltiplicazione delle matrici dimensionate, la seconda dimensione e tutte le successive sono considerate parte del tipo. Di conseguenza, vengono usate per distinguere le funzioni in overload:
+   Nella moltiplicazione delle matrici dimensionate, la seconda dimensione e tutte le successive sono considerate parte del tipo. Di conseguenza, vengono usate per distinguere le funzioni in overload:
 
     ```cpp
     void Print( char szToPrint[] );

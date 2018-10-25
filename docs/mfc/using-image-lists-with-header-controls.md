@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 477ed175e6f8e81acdae5c873d1436e6c3dbbd60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b12f3ff78f88029067d3b77296979a173dad494d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079649"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Utilizzo di elenchi di immagini con controlli Header
 
@@ -35,17 +35,17 @@ La procedura seguente illustra nel dettaglio, utilizzando un puntatore a un cont
 
 1. Inizializzare il nuovo oggetto elenco immagini tramite una chiamata [CImageList:: Create](../mfc/reference/cimagelist-class.md#create). Il codice seguente è un esempio di questa chiamata.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
 
 1. Aggiungere le immagini per ogni elemento dell'intestazione. Il codice seguente aggiunge due immagini predefinite.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
 
 1. Associare l'elenco di immagini con il controllo di intestazione con una chiamata a [CHeaderCtrl:: SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).
 
 1. Modificare l'elemento dell'intestazione per visualizzare un'immagine dall'elenco di immagini associato. L'esempio seguente assegna la prima immagine, dalla `m_phdrImages`, al primo elemento di intestazione, `m_pHdrCtrl`.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
 
 Per informazioni dettagliate sui valori di parametro utilizzato, consultare il pertinenti [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).
 

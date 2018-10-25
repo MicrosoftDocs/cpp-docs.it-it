@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee79fca8784ade6509cfc5854eaaa165b68edee0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95b30d65fe67f2647cb8ca50619f3ab13f167053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791965"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058999"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -59,9 +59,9 @@ Vedere le [associabile](bindable.md) per un esempio dell'uso di esempio **versio
 |**Attributi obbligatori**|**coclass**|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi del compilatore](compiler-attributes.md)<br/>
-[Attributi di classe](class-attributes.md)  
+[Attributi di classe](class-attributes.md)

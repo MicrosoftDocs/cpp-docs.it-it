@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ac2ddb08b485a56274f6067871c5bbd5893f94
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fb6e87d9deac7a6d0082480196b7dbeecf5a85b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434817"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081079"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 
@@ -211,7 +211,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Chiamata eseguita dal framework quando un riquadro nella finestra con mini-cornice è nascosto o visualizzato.|
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Restituisce un riquadro contenente un punto fornito dall'utente all'interno di una finestra con mini-cornice.|
 |[CPaneFrameWnd::Pin](#pin)||
-|`CPaneFrameWnd::PreTranslateMessage`|Utilizzato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati al [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows.|
+|`CPaneFrameWnd::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .|
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Ridisegna tutte le finestre con mini-cornice.|
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Chiamata eseguita dal framework per rimuovere i riquadri non validi.|
 |[CPaneFrameWnd::RemovePane](#removepane)|Rimuove un riquadro dalla finestra con mini-cornice.|
@@ -312,7 +312,6 @@ virtual void AdjustLayout();
 
 ##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames
 
-
 ```
 virtual void AdjustPaneFrames();
 ```
@@ -401,7 +400,6 @@ Diverso da zero se il mini-cornice può essere ancorata a *pDockingBar*; in caso
 
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility
 
-
 ```
 virtual void CheckGripperVisibility();
 ```
@@ -440,9 +438,11 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.
 
-[in] [out] *pParentWnd* specifica il frame padre della finestra con mini-cornice. Questo valore non deve essere NULL.
+*pParentWnd*<br/>
+[in, out] Specifica il frame padre della finestra con mini-cornice. Questo valore non deve essere NULL.
 
-[in] [out] *pContext* specifica il contesto definito dall'utente.
+*pContext*<br/>
+[in, out] Specifica il contesto definito dall'utente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -480,9 +480,11 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.
 
-[in] [out] *pParentWnd* specifica il frame padre della finestra con mini-cornice. Questo valore non deve essere NULL.
+*pParentWnd*<br/>
+[in, out] Specifica il frame padre della finestra con mini-cornice. Questo valore non deve essere NULL.
 
-[in] [out] *pContext* specifica il contesto definito dall'utente.
+*pContext*<br/>
+[in, out] Specifica il contesto definito dall'utente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -607,7 +609,6 @@ Questo metodo viene chiamato dal framework quando questo viene visualizzato il t
 
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager() const;
 ```
@@ -648,7 +649,6 @@ Il primo riquadro nella finestra con mini-cornice, o NULL se la finestra con min
 
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint
 
-
 ```
 CPoint GetHotPoint() const;
 ```
@@ -687,7 +687,6 @@ Il numero di riquadri della finestra con mini-cornice. Questo valore può essere
 
 ##  <a name="getparent"></a>  CPaneFrameWnd::GetParent
 
-
 ```
 CWnd* GetParent();
 ```
@@ -698,7 +697,6 @@ CWnd* GetParent();
 
 ##  <a name="getpinstate"></a>  CPaneFrameWnd::GetPinState
 
-
 ```
 BOOL GetPinState() const;
 ```
@@ -708,7 +706,6 @@ BOOL GetPinState() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect
-
 
 ```
 CRect GetRecentFloatingRect() const;
@@ -770,7 +767,6 @@ Uno dei valori seguenti:
 
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured
 
-
 ```
 BOOL IsCaptured() const;
 ```
@@ -780,7 +776,6 @@ BOOL IsCaptured() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="isdelayshow"></a>  CPaneFrameWnd::IsDelayShow
-
 
 ```
 BOOL IsDelayShow() const;
@@ -991,14 +986,13 @@ Chiamato dal framework quando viene visualizzato o nascosto un riquadro della fi
 
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin
 
-
 ```
 void Pin(BOOL bPin = TRUE);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bPin*
+[in] *bPin*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1141,19 +1135,17 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow
 
-
 ```
 void SetDelayShow(BOOL bDelayShow);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bDelayShow*
+[in] *bDelayShow*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager
-
 
 ```
 void SetDockingManager(CDockingManager* pManager);
@@ -1161,7 +1153,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pManager*
+[in] *pManager*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1193,14 +1185,13 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint
 
-
 ```
 void SetHotPoint(CPoint& ptNew);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *ptNew*
+[in] *ptNew*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1267,19 +1258,17 @@ TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.
 
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo
 
-
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pBar*
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo
-
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1289,8 +1278,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*pDockingBar*<br/>
-[in] [in] *pTabbedBar*
+[in] *pDockingBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Note
 

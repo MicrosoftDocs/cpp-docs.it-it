@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f89d70ed5b7a84cdbed61784b59b0748abc6432d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083321"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -444,19 +444,19 @@ Controlli di visualizzazione elenco è possono visualizzare i relativi contenuti
 
 - Visualizzazione per icone
 
-     Ogni elemento viene visualizzato come icona ingrandita (32 x 32 pixel) con un'etichetta sotto di essa. L'utente può trascinare gli elementi in un punto qualsiasi nella finestra di visualizzazione elenco.
+   Ogni elemento viene visualizzato come icona ingrandita (32 x 32 pixel) con un'etichetta sotto di essa. L'utente può trascinare gli elementi in un punto qualsiasi nella finestra di visualizzazione elenco.
 
 - Visualizzazione per icone piccole
 
-     Ogni elemento viene visualizzato come una piccola icona (16 x 16 pixel) con l'etichetta a destra. L'utente può trascinare gli elementi in un punto qualsiasi nella finestra di visualizzazione elenco.
+   Ogni elemento viene visualizzato come una piccola icona (16 x 16 pixel) con l'etichetta a destra. L'utente può trascinare gli elementi in un punto qualsiasi nella finestra di visualizzazione elenco.
 
 - visualizzazione elenco
 
-     Ogni elemento viene visualizzato come una piccola icona con un'etichetta a destra. Gli elementi vengono disposti in colonne e non possono essere trascinati in qualsiasi posizione nella finestra di visualizzazione elenco.
+   Ogni elemento viene visualizzato come una piccola icona con un'etichetta a destra. Gli elementi vengono disposti in colonne e non possono essere trascinati in qualsiasi posizione nella finestra di visualizzazione elenco.
 
 - Visualizzazione di report
 
-     Ogni elemento viene visualizzato nella riga a sé stante, con informazioni aggiuntive distribuite in colonne a destra. La colonna più a sinistra contiene l'icona di piccole dimensioni e l'etichetta e le colonne successive contengono gli elementi secondari come specificato dall'applicazione. Un controllo header incorporato (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa queste colonne. Per altre informazioni sul controllo di intestazione e le colonne in una visualizzazione di report, vedere [utilizzo di CListCtrl: aggiunta di colonne al controllo (visualizzazione dei rapporti)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Ogni elemento viene visualizzato nella riga a sé stante, con informazioni aggiuntive distribuite in colonne a destra. La colonna più a sinistra contiene l'icona di piccole dimensioni e l'etichetta e le colonne successive contengono gli elementi secondari come specificato dall'applicazione. Un controllo header incorporato (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa queste colonne. Per altre informazioni sul controllo di intestazione e le colonne in una visualizzazione di report, vedere [utilizzo di CListCtrl: aggiunta di colonne al controllo (visualizzazione dei rapporti)](../../mfc/adding-columns-to-the-control-report-view.md).
 
 Lo stile di visualizzazione elenco corrente del controllo determina la visualizzazione corrente. Per altre informazioni su questi stili e il relativo utilizzo, vedere [utilizzo di CListCtrl: modifica degli stili del controllo elenco](../../mfc/changing-list-control-styles.md).
 
@@ -466,19 +466,19 @@ Oltre agli stili di elenco standard, classe `CListCtrl` supporta un vasto set di
 
 - Selezione
 
-     Quando abilitata, consente la selezione automatica di un elemento quando il cursore rimane su esso per un determinato periodo di tempo.
+   Quando abilitata, consente la selezione automatica di un elemento quando il cursore rimane su esso per un determinato periodo di tempo.
 
 - Visualizzazioni elenco virtuali
 
-     Quando abilitata, consente il controllo supportare un massimo di elementi DWORD. Ciò è possibile, inserendo il sovraccarico di gestione dei dati dell'elemento dell'applicazione. Fatta eccezione per la selezione di elementi e informazioni di stato attivo, tutte le informazioni sull'elemento deve essere gestiti dall'applicazione. Per altre informazioni, vedere [utilizzo di CListCtrl: controlli List virtuali](../../mfc/virtual-list-controls.md).
+   Quando abilitata, consente il controllo supportare un massimo di elementi DWORD. Ciò è possibile, inserendo il sovraccarico di gestione dei dati dell'elemento dell'applicazione. Fatta eccezione per la selezione di elementi e informazioni di stato attivo, tutte le informazioni sull'elemento deve essere gestiti dall'applicazione. Per altre informazioni, vedere [utilizzo di CListCtrl: controlli List virtuali](../../mfc/virtual-list-controls.md).
 
 - Attivazione di uno e due clic
 
-     Quando abilitata, consente l'intercettazione (Evidenzia automatico del testo dell'elemento) e l'attivazione di uno o due clic dell'elemento evidenziato.
+   Quando abilitata, consente l'intercettazione (Evidenzia automatico del testo dell'elemento) e l'attivazione di uno o due clic dell'elemento evidenziato.
 
 - Trascinare e rilasciare l'ordinamento delle colonne
 
-     Quando abilitata, consente di trascinamento e rilascio riordinamento delle colonne in un controllo visualizzazione elenco. È disponibile solo nella visualizzazione di report.
+   Quando abilitata, consente di trascinamento e rilascio riordinamento delle colonne in un controllo visualizzazione elenco. È disponibile solo nella visualizzazione di report.
 
 Per informazioni sull'uso di questi nuovi stili estesi, vedere [utilizzo di CListCtrl: modifica degli stili del controllo elenco](../../mfc/changing-list-control-styles.md).
 
@@ -496,19 +496,19 @@ Le icone, le immagini degli elementi intestazione e dell'applicazione - definiti
 
 - Icona grande
 
-     Utilizzare la visualizzazione icone per le icone ingrandita.
+   Utilizzare la visualizzazione icone per le icone ingrandita.
 
 - Icona piccola
 
-     Utilizzata nella piccola icona, elenco e visualizzazioni dei rapporti per le versioni ridotte delle icone utilizzate nella visualizzazione a icone.
+   Utilizzata nella piccola icona, elenco e visualizzazioni dei rapporti per le versioni ridotte delle icone utilizzate nella visualizzazione a icone.
 
 - Stato definito dall'applicazione
 
-     Contiene le immagini di stato, che vengono visualizzate accanto all'icona di un elemento per indicare uno stato definito dall'applicazione.
+   Contiene le immagini di stato, che vengono visualizzate accanto all'icona di un elemento per indicare uno stato definito dall'applicazione.
 
 - Voce di intestazione
 
-     Usato nella visualizzazione del report per le immagini di piccole dimensioni che vengono visualizzati in ogni elemento di controllo di intestazione.
+   Usato nella visualizzazione del report per le immagini di piccole dimensioni che vengono visualizzati in ogni elemento di controllo di intestazione.
 
 Per impostazione predefinita, un controllo visualizzazione elenco Elimina definitivamente gli elenchi di immagini assegnati quando viene eliminato; Tuttavia, lo sviluppatore può personalizzare questo comportamento distruggendo ogni elenco immagini quando non viene più utilizzato, come determinato dall'applicazione. Per altre informazioni, vedere [utilizzo di CListCtrl: elementi elenco ed elenchi di immagini](../list-items-and-image-lists.md).
 

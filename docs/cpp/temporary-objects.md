@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aea9e17d17008642f9421beb47be38cac401132
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4e94fa412b76107dde90d3a6a664ec68c6b6bdaf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071315"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078793"
 ---
 # <a name="temporary-objects"></a>Oggetti temporanei
 
@@ -41,9 +41,9 @@ In alcuni casi, è necessario che il compilatore crei oggetti temporanei. Questi
                     //   value.
     ```
 
-     Poiché il valore restituito non viene copiato in un altro oggetto, viene creato un oggetto temporaneo. Un caso più comune in cui i temporanei vengono creati durante la valutazione di un'espressione in cui le funzioni degli operatori sottoposti a overload devono essere chiamate. Queste funzioni degli operatori sottoposti a overload restituiscono un tipo definito dall'utente che spesso non viene copiato in un altro oggetto.
+   Poiché il valore restituito non viene copiato in un altro oggetto, viene creato un oggetto temporaneo. Un caso più comune in cui i temporanei vengono creati durante la valutazione di un'espressione in cui le funzioni degli operatori sottoposti a overload devono essere chiamate. Queste funzioni degli operatori sottoposti a overload restituiscono un tipo definito dall'utente che spesso non viene copiato in un altro oggetto.
 
-     Valutare l'espressione `ComplexResult = Complex1 + Complex2 + Complex3`. L'espressione `Complex1 + Complex2` viene valutata e il risultato viene archiviato in un oggetto temporaneo. Successivamente, l'espressione *temporaneo* `+ Complex3` viene valutata e il risultato viene copiato `ComplexResult` (presupponendo che l'operatore di assegnazione non sia sovraccarica).
+   Valutare l'espressione `ComplexResult = Complex1 + Complex2 + Complex3`. L'espressione `Complex1 + Complex2` viene valutata e il risultato viene archiviato in un oggetto temporaneo. Successivamente, l'espressione *temporaneo* `+ Complex3` viene valutata e il risultato viene copiato `ComplexResult` (presupponendo che l'operatore di assegnazione non sia sovraccarica).
 
 - Per archiviare il risultato di un cast in un tipo definito dall'utente. Quando un oggetto di un tipo specificato viene convertito in modo esplicito nel tipo definito dall'utente, tale nuovo oggetto viene costruito come oggetto temporaneo.
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080256f9a5de719e265009080036a3c0c2617118
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 15b069c1075a1b2b7db484da588684fca280ef29
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412236"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083399"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Utilizzo degli elenchi di immagini in un controllo casella combinata estesa
 
@@ -35,11 +35,11 @@ La procedura seguente consente di associare un elenco di immagini con un control
 
 1. Inizializzare il nuovo oggetto elenco immagini tramite una chiamata [CImageList:: Create](../mfc/reference/cimagelist-class.md#create). Il codice seguente è un esempio di questa chiamata.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]
 
 1. Aggiungere immagini facoltative per ogni possibile stato: selezionato o non selezionato e un overlay. Il codice seguente aggiunge tre immagini predefinite.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]
 
 1. Associare l'elenco di immagini con il controllo con una chiamata a [CComboBoxEx:: SetImageList](../mfc/reference/ccomboboxex-class.md#setimagelist).
 

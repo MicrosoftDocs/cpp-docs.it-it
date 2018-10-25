@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e11e1ce061fcf2e9ce21155dcbeb93b45b66238
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 520b9bf8d6a71593acd95ebaac98a72036fcabf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070023"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -49,7 +49,8 @@ Uno di questi valori possibili: `true`, `false`, `forced`, `restricted`, `push`,
 
 - `push` Consente di salvare l'oggetto corrente **emitidl** le impostazioni per interna **emitidl** stack, e `pop` consente di impostare **emitidl** per qualsiasi valore si trovi all'inizio dell'oggetto interno **emitidl** dello stack.
 
-`defaultimports=`*booleano* \(facoltativo)  
+`defaultimports=`*booleano* \(facoltativo)
+
 - Se *booleana* viene **true**, docobj.idl viene importato in un file con estensione IDL generato. Inoltre, se un file con estensione idl con lo stesso nome di un'estensione h file che si `#include` in origine il codice si trova nella stessa directory del file con estensione h, quindi il file con estensione IDL generato contiene un'istruzione di importazione per il file con estensione idl.
 
 - Se *booleana* viene **false**, docobj.idl non viene importato in file IDL generato. È necessario importare in modo esplicito con i file con estensione idl [importare](import.md).
@@ -73,9 +74,9 @@ Ogni volta che il compilatore rileva un nuovo file **emitidl** in modo implicito
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi del compilatore](compiler-attributes.md)<br/>
-[Attributi autonomi](stand-alone-attributes.md)  
+[Attributi autonomi](stand-alone-attributes.md)

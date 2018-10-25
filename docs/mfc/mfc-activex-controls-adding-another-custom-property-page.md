@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1599500a775bcd1c76f2e63a1f7b20126a2fb329
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440056"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078206"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controlli ActiveX MFC: aggiunta di un'altra pagina delle proprietà personalizzata
 
@@ -65,7 +65,7 @@ Per altre informazioni sull'utilizzo delle pagine delle proprietà in un control
 
 1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi classe**.
 
-     Verrà visualizzata la [Aggiungi classe](../ide/add-class-dialog-box.md) nella finestra di dialogo.
+   Verrà visualizzata la [Aggiungi classe](../ide/add-class-dialog-box.md) nella finestra di dialogo.
 
 1. Fare doppio clic il **classe MFC** modello.
 
@@ -95,25 +95,25 @@ Il passaggio successivo prevede la creazione di due nuove risorse di stringa che
 
 1. Fare doppio clic il **tabella di stringhe** cartella e quindi fare doppio clic a cui si desidera aggiungere una stringa di risorsa della tabella stringa esistente.
 
-     Verrà visualizzata la tabella di stringhe in una finestra.
+   Verrà visualizzata la tabella di stringhe in una finestra.
 
 1. Selezionare la riga vuota alla fine della tabella di stringhe e digitare il testo o il titolo della stringa: ad esempio, "proprietà pagina aggiuntiva."
 
-     Verrà visualizzata una **le proprietà della stringa** che Mostra pagina **didascalia** e **ID** caselle. Il **didascalia** casella contiene la stringa digitata.
+   Verrà visualizzata una **le proprietà della stringa** che Mostra pagina **didascalia** e **ID** caselle. Il **didascalia** casella contiene la stringa digitata.
 
 1. Nel **ID** selezionare o digitare un ID per la stringa. Al termine, premere INVIO.
 
-     Questo esempio viene usato **utilizzato IDS_SAMPLE_ADDPAGE** per il nome del tipo della nuova pagina delle proprietà.
+   Questo esempio viene usato **utilizzato IDS_SAMPLE_ADDPAGE** per il nome del tipo della nuova pagina delle proprietà.
 
 1. Ripetere i passaggi 3 e 4 utilizzando **IDS_SAMPLE_ADDPPG_CAPTION** l'ID e una "Pagina proprietà aggiuntive" per la didascalia.
 
 1. Nel. File CPP della nuova classe pagina delle proprietà (in questo esempio `CAddtlPropPage`) modificare il `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` in modo che utilizzato IDS_SAMPLE_ADDPAGE viene passato dal [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), come illustrato nell'esempio seguente:
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. Modificare il costruttore della `CAddtlPropPage` in modo che IDS_SAMPLE_ADDPPG_CAPTION al `COlePropertyPage` costruttore, come indicato di seguito:
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 Dopo avere apportato le modifiche necessarie ricompilare il progetto e usare Test Container per testare la nuova pagina delle proprietà. Per informazioni su come accedere al Test Container, vedere [Test di proprietà ed eventi con Test Container](../mfc/testing-properties-and-events-with-test-container.md) .
 

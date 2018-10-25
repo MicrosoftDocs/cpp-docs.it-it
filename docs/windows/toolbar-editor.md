@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb329b60b72aae268252ae3ddbcc2c63d4a18f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 273893f5164c4e89b3516c43b5414e5487af376e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389690"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063211"
 ---
 # <a name="toolbar-editor-c"></a>Editor barra degli strumenti (C++)
 
@@ -43,8 +43,7 @@ Con il **sulla barra degli strumenti** editor, è possibile:
 
 Il **sulla barra degli strumenti** finestra dell'editor Mostra due visualizzazioni di un'immagine del pulsante, quello utilizzato per la finestra editor di immagini. Una barra di divisione separa i due riquadri. che è possibile trascinare da un lato all'altro per modificare le dimensioni relative dei riquadri. Nel riquadro attivo viene visualizzato un bordo di selezione. Sopra le due visualizzazioni dell'immagine si trova la barra degli strumenti dell'oggetto.
 
-![Editor barra degli strumenti](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-Editor barra degli strumenti
+![Editor barra degli strumenti](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") Editor barra degli strumenti
 
 Il **sulla barra degli strumenti** editor è simile al **immagine** editor delle funzionalità. Le voci di menu, gli strumenti grafici e griglia delle bitmap sono identici a quelli nel **immagine** editor. Un comando di menu non è il **immagine** menu consente di passare tra il **sulla barra degli strumenti** editor e la **immagine** editor. Per altre informazioni sull'uso di **grafica** sulla barra degli strumenti, **colori** tavolozza, o **immagine** menu, vedere [Editor di immagini](../windows/image-editor-for-icons.md).
 

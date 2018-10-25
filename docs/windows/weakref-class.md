@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adbd47e8aeeb777b9a5e077429d74ef542abb85d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f40e0509f5e532ea85930052a6bda35d89e47ae1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788812"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071024"
 ---
 # <a name="weakref-class"></a>Classe WeakRef
 
@@ -75,7 +75,7 @@ Oggetto `WeakRef` oggetto mantiene una *riferimento sicuro*, associata a un ogge
 
 Oggetto `WeakRef` oggetto viene in genere usato per rappresentare un oggetto la cui esistenza è controllata da un'applicazione o un thread esterno. Ad esempio, costruire un `WeakRef` oggetto da un riferimento a un oggetto file. Finché il file rimane aperto, il riferimento sicuro è valido. Ma se il file viene chiuso, il riferimento sicuro non è più valido.
 
-Si noti che si verifica un cambiamento di comportamento nel [come](#as), [AsIID](#asiid) e [CopyTo](#copyto) metodi in Windows 10 SDK. In precedenza, dopo aver chiamato uno di questi metodi, si potrebbe verificare se il `WeakRef` per `nullptr` per determinare se un riferimento sicuro era stato ottenuto correttamente, come nel codice seguente:
+Tenere presente che si verifica un cambiamento di comportamento nei metodi [As](#as), [AsIID](#asiid) e [CopyTo](#copyto) in Windows 10 SDK. In precedenza, dopo aver chiamato uno di questi metodi, si potrebbe verificare se il `WeakRef` per `nullptr` per determinare se un riferimento sicuro era stato ottenuto correttamente, come nel codice seguente:
 
 ```cpp
 WeakRef wr;
@@ -88,7 +88,7 @@ HRESULT hr = wr.As(&strongRef);
 
 // This check won't work with the Windows 10 SDK version of the library.
 // Check the input pointer instead.
-if(wr == nullptr)  
+if(wr == nullptr)
 {
     wprintf(L"Couldn’t get strong ref!");
 }
@@ -97,7 +97,7 @@ if(wr == nullptr)
 Il codice riportato sopra non funziona quando si usa Windows 10 SDK o versioni successive. Controllare invece il puntatore passato per `nullptr`.
 
 ```cpp
-if (strongRef == nullptr)  
+if (strongRef == nullptr)
 {
     wprintf(L"Couldn't get strong ref!");
 }
@@ -244,7 +244,7 @@ A partire da Windows 10 SDK, questo metodo non imposta il `WeakRef` istanza `nul
 Restituisce un `ComPtrRef` oggetto che rappresenta l'oggetto corrente `WeakRef` oggetto.
 
 ```cpp
-Details::ComPtrRef<WeakRef> operator&() throw()  
+Details::ComPtrRef<WeakRef> operator&() throw()
 ```
 
 ### <a name="return-value"></a>Valore restituito
@@ -262,7 +262,7 @@ Inizializza una nuova istanza della classe `WeakRef`.
 ```cpp
 WeakRef();
 WeakRef(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 WeakRef(

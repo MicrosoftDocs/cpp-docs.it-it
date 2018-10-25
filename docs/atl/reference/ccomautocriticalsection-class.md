@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff8687783907cb84af36122c5d7828f8845d595d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 40fa13ecf743bf8e6aa0cd75b16bec65131fe267
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073460"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061079"
 ---
 # <a name="ccomautocriticalsection-class"></a>Classe CComAutoCriticalSection
 
@@ -48,7 +48,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 `CComAutoCriticalSection` è simile alla classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), tranne `CComAutoCriticalSection` inizializza automaticamente l'oggetto sezione critica nel costruttore.
 
-In genere, si usa `CComAutoCriticalSection` tramite il `typedef` name [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Questo nome fa riferimento a `CComAutoCriticalSection` quando si [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) è in uso.  
+In genere, si usa `CComAutoCriticalSection` tramite il `typedef` name [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Questo nome fa riferimento a `CComAutoCriticalSection` quando si [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) è in uso.
 
 Il `Init` e `Term` metodi dal [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) non sono disponibili quando si utilizza questa classe.
 

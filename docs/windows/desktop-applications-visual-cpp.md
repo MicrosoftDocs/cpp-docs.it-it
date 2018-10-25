@@ -13,19 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 2d8c5188cccceb0c09de95c43a72a645ded0e6a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077519"
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 
 Oggetto *applicazione desktop* in C++ è un'applicazione nativa che può accedere al set completo di API Windows e viene eseguito in una finestra o nella console di sistema. Applicazioni desktop in C++ è possono eseguire in Windows XP a Windows 10 (anche se è non è più ufficialmente supportata di Windows XP e sono disponibili molte API di Windows che sono state introdotte da allora).
 
 Un'applicazione desktop è diverso da un'app Universal Windows Platform (UWP), che può essere eseguito nei PC che eseguono Windows 10, nonché su XBox, Windows Phone, Surface Hub e altri dispositivi. Per altre informazioni su Visual Studio desktop. Le applicazioni UWP, vedere [Scegli la tua tecnologia](https://msdn.microsoft.com/library/windows/desktop/dn614993).
-
 
 ### <a name="desktop-bridge"></a>Desktop Bridge
 

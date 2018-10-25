@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f4c3da16181dca4a3a0722f96f61ce02863d369
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 77d9647fd4432bf2ab0cf9e4add2a08ce964b85a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378724"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060078"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Selezione di uno sfondo opaco o trasparente (Editor di immagini per le icone)
 
@@ -32,7 +32,7 @@ Quando si sposta o si copia una selezione da un'immagine, sono tutti i pixel nel
 
 È possibile passare da uno sfondo trasparente (predefinito) a uno sfondo opaco e viceversa. Quando si usa uno strumento di selezione, il **sfondo trasparente** e **sfondo opaco** vengono visualizzate le opzioni nel **opzione** selettore sul **Editordiimmagini** sulla barra degli strumenti (come illustrato di seguito).
 
-![Opzioni sfondo &#45; opaco o trasparente](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+![Opzioni sfondo &#45; opaco o trasparente](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
 **Opzioni trasparenti e opache** nella **barra degli strumenti Editor di immagini**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Per passare da uno sfondo trasparente e opaco

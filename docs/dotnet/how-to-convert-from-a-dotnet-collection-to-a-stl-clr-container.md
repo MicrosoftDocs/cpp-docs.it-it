@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba6d6193c8422e25e174c7a4b73b2b74095cced9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dd67728773df86f9961fe54c7dd9e4a08ec743d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436507"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060949"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Procedura: conversione da raccolta .NET a contenitore STL/CLR
 
@@ -31,7 +31,7 @@ In questo argomento viene illustrato come convertire le raccolte di .NET per i r
 
 1. Per convertire un'intera raccolta, creare un contenitore STL/CLR e passare insieme al costruttore.
 
-     Nel primo esempio viene illustrata questa procedura.
+   Nel primo esempio viene illustrata questa procedura.
 
 OPPURE
 
@@ -39,7 +39,7 @@ OPPURE
 
 1. Copiare il contenuto della raccolta .NET a contenitore. Questa operazione può essere eseguita usando un STL/CLR [algoritmo](../dotnet/algorithm-stl-clr.md), o mediante lo scorrimento della raccolta .NET e l'inserimento di una copia di ogni elemento nel contenitore STL/CLR.
 
-     Nel secondo esempio viene illustrata questa procedura.
+   Nel secondo esempio viene illustrata questa procedura.
 
 ## <a name="example"></a>Esempio
 

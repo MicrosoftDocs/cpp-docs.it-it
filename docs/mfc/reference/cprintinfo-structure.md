@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12c93375618cacf25e88ecba6919808ac7bd705
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b8c1fb4d82bd1aaeb9f625fea66aa339a0ef4d97
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446857"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082892"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo (struttura)
 
@@ -94,7 +94,6 @@ Chiamare questa funzione per recuperare il numero della prima pagina da stampare
 ```
 UINT GetFromPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Valore restituito
@@ -111,7 +110,6 @@ Chiamare questa funzione per recuperare il numero dell'ultima pagina del documen
 
 ```
 UINT GetMaxPage() const;
-
 
 ```
 
@@ -130,7 +128,6 @@ Chiamare questa funzione per recuperare il numero della prima pagina del documen
 ```
 UINT GetMinPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Valore restituito
@@ -148,7 +145,6 @@ Chiamare questa funzione per recuperare l'offset per la stampa di più elementi 
 ```
 UINT GetOffsetPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Valore restituito
@@ -165,7 +161,6 @@ Chiamare questa funzione per recuperare il numero dell'ultima pagina da stampare
 
 ```
 UINT GetToPage() const;
-
 
 ```
 
@@ -345,6 +340,4 @@ I numeri di pagina in genere iniziano da 1. Questo valore viene archiviato nel `
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-
-
 

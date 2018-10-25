@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b5bb50c99efc2a7b18fbbbabba394ec5330661
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc151ae25df4cac2c6b5ed9ac5a523efda28dff2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378202"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082710"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Utilizzo delle finestre delle proprietà nell'applicazione
 
@@ -34,9 +34,9 @@ Per utilizzare una finestra delle proprietà nell'applicazione, completare i pas
 
 1. Creare una risorsa modello di finestra di dialogo per ogni pagina delle proprietà. Tenere presente che l'utente può passare da una pagina a un'altra, pertanto disporre ogni pagina nel modo più coerente possibile.
 
-     I modelli di finestra di dialogo per tutte le pagine non devono avere le stesse dimensioni. Il framework utilizza la dimensione della pagina più ampia per determinare la quantità di spazio da allocare nella finestra delle proprietà per le pagine delle proprietà.
+   I modelli di finestra di dialogo per tutte le pagine non devono avere le stesse dimensioni. Il framework utilizza la dimensione della pagina più ampia per determinare la quantità di spazio da allocare nella finestra delle proprietà per le pagine delle proprietà.
 
-     Quando si crea una risorsa modello di finestra di dialogo per una pagina delle proprietà, è necessario specificare i seguenti stili nella finestra delle proprietà relativa alle proprietà della finestra di dialogo:
+   Quando si crea una risorsa modello di finestra di dialogo per una pagina delle proprietà, è necessario specificare i seguenti stili nella finestra delle proprietà relativa alle proprietà della finestra di dialogo:
 
    - Impostare il **didascalia** casella di modifica il **generali** pagina per il testo che si desidera visualizzare nella scheda per questa pagina.
 
@@ -60,9 +60,9 @@ Per utilizzare una finestra delle proprietà nell'applicazione, completare i pas
 
    - Chiamare [CPropertySheet:: addPage](../mfc/reference/cpropertysheet-class.md#addpage) per ogni pagina.
 
-     In genere, l'oggetto che crea `CPropertySheet` crea anche gli oggetti `CPropertyPage` in questo passaggio. Tuttavia, se si implementa la classe derivata da `CPropertySheet`, è possibile incorporare gli oggetti `CPropertyPage` nell'oggetto `CPropertySheet` e chiamare `AddPage` per ogni pagina dal costruttore della classe derivata da `CPropertySheet`. `AddPage` aggiunge l'oggetto `CPropertyPage` all'elenco di pagine della finestra delle proprietà, ma non crea la finestra per la pagina. Di conseguenza, non è necessario attendere fino alla creazione della finestra delle proprietà per chiamare `AddPage`; è possibile chiamare `AddPage` dal costruttore della finestra delle proprietà.
+   In genere, l'oggetto che crea `CPropertySheet` crea anche gli oggetti `CPropertyPage` in questo passaggio. Tuttavia, se si implementa la classe derivata da `CPropertySheet`, è possibile incorporare gli oggetti `CPropertyPage` nell'oggetto `CPropertySheet` e chiamare `AddPage` per ogni pagina dal costruttore della classe derivata da `CPropertySheet`. `AddPage` aggiunge l'oggetto `CPropertyPage` all'elenco di pagine della finestra delle proprietà, ma non crea la finestra per la pagina. Di conseguenza, non è necessario attendere fino alla creazione della finestra delle proprietà per chiamare `AddPage`; è possibile chiamare `AddPage` dal costruttore della finestra delle proprietà.
 
-     Per impostazione predefinita, se una finestra delle proprietà dispone di più schede di quelle che può contenere in una singola riga della finestra delle proprietà, le schede vengono impilate su più righe. Per disabilitare la stacking, chiamare [CPropertySheet:: EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) con il parametro impostato su **FALSE**. È necessario chiamare `EnableStackedTabs` quando si crea la finestra delle proprietà.
+   Per impostazione predefinita, se una finestra delle proprietà dispone di più schede di quelle che può contenere in una singola riga della finestra delle proprietà, le schede vengono impilate su più righe. Per disabilitare la stacking, chiamare [CPropertySheet:: EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) con il parametro impostato su **FALSE**. È necessario chiamare `EnableStackedTabs` quando si crea la finestra delle proprietà.
 
 1. Chiamare [CPropertySheet:: DoModal](../mfc/reference/cpropertysheet-class.md#domodal) oppure [crea](../mfc/reference/cpropertysheet-class.md#create) per visualizzare la finestra delle proprietà. Chiamare `DoModal` per creare una finestra delle proprietà come finestra di dialogo modale. Chiamare **Create** per creare la finestra delle proprietà come finestra di dialogo non modale.
 

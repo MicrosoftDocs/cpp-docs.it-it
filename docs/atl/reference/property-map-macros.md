@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: caa298ebbb96b04145bf2beb52f93838708ae50b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088902"
 ---
 # <a name="property-map-macros"></a>Macro della mappa proprietà
 
@@ -39,7 +39,7 @@ Queste macro definiscono mappe delle proprietà e le voci.
 |[PROP_ENTRY_TYPE](#prop_entry_type)|Immette una proprietà, proprietà DISPID, pagina descrizione e proprietà CLSID il mapping di proprietà.|
 |[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Entra in una descrizione della proprietà, proprietà DISPID, CLSID, pagina delle proprietà e `IDispatch` IID nella mappa delle proprietà.|
 |[PROP_PAGE](#prop_page)|Immette una pagina delle proprietà CLSID il mapping di proprietà.|
-|[END_PROP_MAP](#end_prop_map)|Contrassegna la fine della mappa delle proprietà ATL.|  
+|[END_PROP_MAP](#end_prop_map)|Contrassegna la fine della mappa delle proprietà ATL.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -83,7 +83,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 *szDesc*<br/>
 [in] La descrizione della proprietà.
 
-*Membro*<br/>
+*membro*<br/>
 [in] Il membro dati che contiene l'ambito; ad esempio, `m_sizeExtent`.
 
 *vt*<br/>

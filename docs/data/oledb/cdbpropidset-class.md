@@ -44,114 +44,114 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 514a013cf3f327c0c73ca8469900693d6a4e5e21
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 6ab6e58ad6f25232be5c298673cefe6d0488f63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084035"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083100"
 ---
 # <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
 
-Eredita dal `DBPROPIDSET` strutturare e aggiunge un costruttore che inizializza i campi chiave, nonché [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) accedere al metodo.  
-  
+Eredita dal `DBPROPIDSET` strutturare e aggiunge un costruttore che inizializza i campi chiave, nonché [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) accedere al metodo.
+
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
-class CDBPropIDSet : public tagDBPROPIDSET  
-```  
+class CDBPropIDSet : public tagDBPROPIDSET
+```
 
-## <a name="requirements"></a>Requisiti  
+## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldbcli.h
-  
-## <a name="members"></a>Membri  
-  
-### <a name="methods"></a>Metodi  
-  
-|||  
-|-|-|  
-|[AddPropertyID](#addpropertyid)|Aggiunge una proprietà per il set di ID proprietà.|  
-|[CDBPropIDSet](#cdbpropidset)|Costruttore.|  
-|[SetGUID](#setguid)|Imposta il GUID dell'ID proprietà set.|  
-  
-### <a name="operators"></a>Operatori  
-  
-|||  
-|-|-|  
-|[operator =](#op_equal)|Assegna il contenuto di un ID della proprietà è impostata su un altro.|  
-  
-## <a name="remarks"></a>Note  
 
-Usare i consumer OLE DB `DBPROPIDSET` strutture per passare una matrice di ID proprietà per il quale l'utente vuole ottenere informazioni sulle proprietà. Le proprietà identificate in un'unica [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struttura appartengono al set di una proprietà.  
+## <a name="members"></a>Membri
+
+### <a name="methods"></a>Metodi
+
+|||
+|-|-|
+|[AddPropertyID](#addpropertyid)|Aggiunge una proprietà per il set di ID proprietà.|
+|[CDBPropIDSet](#cdbpropidset)|Costruttore.|
+|[SetGUID](#setguid)|Imposta il GUID dell'ID proprietà set.|
+
+### <a name="operators"></a>Operatori
+
+|||
+|-|-|
+|[operator =](#op_equal)|Assegna il contenuto di un ID della proprietà è impostata su un altro.|
+
+## <a name="remarks"></a>Note
+
+Usare i consumer OLE DB `DBPROPIDSET` strutture per passare una matrice di ID proprietà per il quale l'utente vuole ottenere informazioni sulle proprietà. Le proprietà identificate in un'unica [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struttura appartengono al set di una proprietà.
 
 ## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
 
-Aggiunge un ID proprietà al set di ID proprietà.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Aggiunge un ID proprietà al set di ID proprietà.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-bool AddPropertyID(DBPROPID propid) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+bool AddPropertyID(DBPROPID propid) throw();
+```
+
+#### <a name="parameters"></a>Parametri
 
 *PropID*<br/>
-[in] ID proprietà da aggiungere al set di ID proprietà.  
+[in] ID proprietà da aggiungere al set di ID proprietà.
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
 
-Costruttore. Inizializza la `rgProperties`, `cProperties`e (facoltativamente) `guidPropertySet` campi del [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struttura.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Costruttore. Inizializza la `rgProperties`, `cProperties`e (facoltativamente) `guidPropertySet` campi del [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struttura.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-CDBPropIDSet(const GUID& guid);  
+CDBPropIDSet(const GUID& guid);
 
-CDBPropIDSet(const CDBPropIDSet& propidset);  
+CDBPropIDSet(const CDBPropIDSet& propidset);
 
-CDBPropIDSet();  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+CDBPropIDSet();
+```
+
+#### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-[in] GUID utilizzato per inizializzare il `guidPropertySet` campo.  
-  
+[in] GUID utilizzato per inizializzare il `guidPropertySet` campo.
+
 *propidset*<br/>
-[in] Altro oggetto `CDBPropIDSet` per la costruzione di copia.  
+[in] Altro oggetto `CDBPropIDSet` per la costruzione di copia.
 
 ## <a name="setguid"></a> Cdbpropidset:: SetGuid
 
-Imposta il campo GUID nel `DBPROPIDSET` struttura.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Imposta il campo GUID nel `DBPROPIDSET` struttura.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-void SetGUID(const GUID& guid) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametri  
+void SetGUID(const GUID& guid) throw();
+```
+
+#### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-[in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struttura.  
-  
-### <a name="remarks"></a>Note  
+[in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struttura.
 
-Questo campo può essere impostato il [costruttore](../../data/oledb/cdbpropidset-cdbpropidset.md) anche. Chiamare questa funzione se si usa il costruttore predefinito per questa classe.  
+### <a name="remarks"></a>Note
+
+Questo campo può essere impostato il [costruttore](../../data/oledb/cdbpropidset-cdbpropidset.md) anche. Chiamare questa funzione se si usa il costruttore predefinito per questa classe.
 
 ## <a name="op_equal"></a> Cdbpropidset:: operator =
 
-Assegna il contenuto di un ID della proprietà impostata su un altro set di proprietà ID.  
-  
-### <a name="syntax"></a>Sintassi  
-  
+Assegna il contenuto di un ID della proprietà impostata su un altro set di proprietà ID.
+
+### <a name="syntax"></a>Sintassi
+
 ```cpp
-CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
+CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
+```
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

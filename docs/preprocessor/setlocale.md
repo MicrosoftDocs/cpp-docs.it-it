@@ -18,36 +18,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa6ba2bec5c862bb336d4b9bea0f47aad91fe0c1
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: fa68389b804452e2a17b9880978cd56d291cefb6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540201"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079415"
 ---
 # <a name="setlocale"></a>setlocale
-Definisce le impostazioni locali (paese/area geografica e la lingua) da utilizzare quando si traducono le costanti a caratteri "wide" e valori letterali stringa.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#pragma setlocale( "[locale-string]" )  
-```  
-  
-## <a name="remarks"></a>Note  
- 
-Poiché l'algoritmo per la conversione dei caratteri multibyte in caratteri "wide" può variare dalle impostazioni locali o la compilazione può aver luogo in impostazioni locali diverse da dove un file eseguibile verrà eseguito, questo pragma consente di specificare le impostazioni locali di destinazione in fase di compilazione. In questo modo si garantisce che le stringhe di caratteri "wide" saranno memorizzate nel formato corretto.  
-  
-Il valore predefinito *stringa delle impostazioni locali* è "".  
-  
-Le impostazioni locali "C" esegue il mapping di ogni carattere nella stringa al relativo valore come un **wchar_t** (short senza segno). Altri valori validi per `setlocale` sono quelle voci disponibili nel [stringhe relative a lingue](../c-runtime-library/language-strings.md) elenco. Ad esempio, generare:  
-  
-```  
-#pragma setlocale("dutch")  
-```  
-  
-La possibilità di generare una stringa di linguaggio dipende dal supporto di ID lingua e dalla tabella codici nel computer.  
-  
-## <a name="see-also"></a>Vedere anche  
- 
+
+Definisce le impostazioni locali (paese/area geografica e la lingua) da utilizzare quando si traducono le costanti a caratteri "wide" e valori letterali stringa.
+
+## <a name="syntax"></a>Sintassi
+
+```
+#pragma setlocale( "[locale-string]" )
+```
+
+## <a name="remarks"></a>Note
+
+Poiché l'algoritmo per la conversione dei caratteri multibyte in caratteri "wide" può variare dalle impostazioni locali o la compilazione può aver luogo in impostazioni locali diverse da dove un file eseguibile verrà eseguito, questo pragma consente di specificare le impostazioni locali di destinazione in fase di compilazione. In questo modo si garantisce che le stringhe di caratteri "wide" saranno memorizzate nel formato corretto.
+
+Il valore predefinito *stringa delle impostazioni locali* è "".
+
+Le impostazioni locali "C" esegue il mapping di ogni carattere nella stringa al relativo valore come un **wchar_t** (short senza segno). Altri valori validi per `setlocale` sono quelle voci disponibili nel [stringhe relative a lingue](../c-runtime-library/language-strings.md) elenco. Ad esempio, generare:
+
+```cpp
+#pragma setlocale("dutch")
+```
+
+La possibilità di generare una stringa di linguaggio dipende dal supporto di ID lingua e dalla tabella codici nel computer.
+
+## <a name="see-also"></a>Vedere anche
+
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384416"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076035"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Controlli ActiveX MFC: aggiunta di eventi personalizzati
 
@@ -48,7 +48,7 @@ La procedura seguente aggiunge un evento personalizzato specifico, ClickIn. È p
 
 1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi evento**.
 
-     Verrà visualizzata l'aggiunta guidata evento.
+   Verrà visualizzata l'aggiunta guidata evento.
 
 1. Nel **nome dell'evento** casella, innanzitutto selezionare qualsiasi evento esistente, quindi fare clic sul **Custom** radio e quindi digitare *ClickIn*.
 
@@ -94,7 +94,7 @@ Ora che è stato aggiunto l'evento personalizzato ClickIn tramite l'aggiunta gui
 
 1. Nella finestra Proprietà scegliere il **messaggi** pulsante.
 
-     La finestra proprietà consente di visualizzare un elenco di messaggi che possono essere gestiti dal controllo ActiveX. Qualsiasi messaggio visualizzato in grassetto già dispone di una funzione di gestione assegnata.
+   La finestra proprietà consente di visualizzare un elenco di messaggi che possono essere gestiti dal controllo ActiveX. Qualsiasi messaggio visualizzato in grassetto già dispone di una funzione di gestione assegnata.
 
 1. Dalla finestra delle proprietà, selezionare il messaggio che si desidera gestire. In questo esempio selezionare WM_LBUTTONDOWN.
 
@@ -131,7 +131,7 @@ La procedura seguente aggiunge un personalizzata fare clic su eventi.
 
 1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi evento**.
 
-     Verrà visualizzata l'aggiunta guidata evento.
+   Verrà visualizzata l'aggiunta guidata evento.
 
 1. Nel **nome dell'evento** elenco a discesa selezionare un nome di evento. Per questo esempio, selezionare **fare clic su**.
 

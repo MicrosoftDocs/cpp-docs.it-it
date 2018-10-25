@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4c2ad96674058ac57ccdc7cef9537f1cb413b92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079701"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (classe)
 
@@ -132,7 +132,6 @@ COleObjectFactory(
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
 
-
 COleObjectFactory(
     REFCLSID clsid,
     CRuntimeClass* pRuntimeClass,
@@ -163,7 +162,7 @@ Contiene uno o più dei flag seguenti:
 
 - `afxRegFreeThreading` Imposta il modello di threading nel Registro di sistema ThreadingModel = gratuito.
 
-     È possibile combinare i due flag `afxRegApartmentThreading` e `afxRegFreeThreading` impostare ThreadingModel impostato su Both. Visualizzare [InprocServer32](/windows/desktop/com/inprocserver32) nel SDK di Windows per ulteriori informazioni sulla registrazione del modello di threading.
+   È possibile combinare i due flag `afxRegApartmentThreading` e `afxRegFreeThreading` impostare ThreadingModel impostato su Both. Visualizzare [InprocServer32](/windows/desktop/com/inprocserver32) nel SDK di Windows per ulteriori informazioni sulla registrazione del modello di threading.
 
 *lpszProgID*<br/>
 Puntatore a una stringa contenente un identificatore di programma verbali, ad esempio "Microsoft Excel."
@@ -349,7 +348,7 @@ Breve discussione dei due formati per il completamento di questa funzione:
 
 - **UpdateRegistry (** `bRegister` **)** questo form della funzione è sottoponibile a override. Se *bRegistrazione immediata* è TRUE, questo registra funzione del controllo classe con il Registro di sistema. In caso contrario, Annulla la registrazione della classe.
 
-     Se si usa la creazione guidata controllo ActiveX MFC per creare il progetto, la creazione guidata controllo fornisce una sostituzione per questa funzione virtuale pura.
+   Se si usa la creazione guidata controllo ActiveX MFC per creare il progetto, la creazione guidata controllo fornisce una sostituzione per questa funzione virtuale pura.
 
 ##  <a name="updateregistryall"></a>  COleObjectFactory:: UpdateRegistryAll
 

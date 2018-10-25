@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd53bc778b3229522d34993c72833500732323b3
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 654ddd149eb6875bede85bdef51641c359644f51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821101"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075632"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Creazione del progetto (Esercitazione di ATL, parte 1)
 
@@ -30,13 +30,13 @@ Questa esercitazione illustra in dettaglio di un progetto ATL senza attributi ch
 > Questa esercitazione crea lo stesso codice sorgente dell'esempio di poligono. Se si desidera evitare di immettere manualmente il codice sorgente, è possibile scaricarlo dal [esempio del poligono](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). È quindi possibile fare riferimento al codice sorgente poligono quando si eseguire l'esercitazione, o usarlo per verificare la presenza di errori nel progetto.
 > Per eseguire la compilazione, aprire stdafx. h e sostituire:
 > ```
-> #ifndef WINVER  
-> #define WINVER 0x0400   
+> #ifndef WINVER
+> #define WINVER 0x0400
 > #endif
 > ```
 > con
 > ```
-> #ifndef WINVER  
+> #ifndef WINVER
 > #define WINVER 0x0500
 > #define _WIN32_WINNT 0x0500
 > #endif

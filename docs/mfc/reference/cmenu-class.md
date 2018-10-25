@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3303fc38f4f389a00e532e553f87c3a0af3d70d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c13b4d5c3779d6c4b57ff53a1016b344ed097099
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441239"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083360"
 ---
 # <a name="cmenu-class"></a>CMenu (classe)
 
@@ -123,7 +123,7 @@ class CMenu : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMenu:: AppendMenu](#appendmenu)|Aggiunge un nuovo elemento alla fine di questo menu.|
+|[CMenu::AppendMenu](#appendmenu)|Aggiunge un nuovo elemento alla fine di questo menu.|
 |[CMenu::Attach](#attach)|Associa un handle del menu di Windows per un `CMenu` oggetto.|
 |[CMenu::CheckMenuItem](#checkmenuitem)|Inserisce un segno di spunta accanto a o rimuove un segno di spunta da una voce di menu nel menu a comparsa.|
 |[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|Inserisce un pulsante di opzione accanto a una voce di menu e rimuove il pulsante di opzione da tutte le altre voci di menu del gruppo.|
@@ -146,7 +146,7 @@ class CMenu : public CObject
 |[CMenu::GetMenuString](#getmenustring)|Recupera l'etichetta della voce di menu specificato.|
 |[CMenu::GetSafeHmenu](#getsafehmenu)|Restituisce il `m_hMenu` sottoposto a wrapping da questo `CMenu` oggetto.|
 |[CMenu::GetSubMenu](#getsubmenu)|Recupera un puntatore a un menu a comparsa.|
-|[CMenu:: InsertMenu](#insertmenu)|Inserisce una nuova voce di menu in corrispondenza della posizione specificata, lo spostamento di altri elementi di menu a discesa.|
+|[CMenu::InsertMenu](#insertmenu)|Inserisce una nuova voce di menu in corrispondenza della posizione specificata, lo spostamento di altri elementi di menu a discesa.|
 |[CMenu::InsertMenuItem](#insertmenuitem)|Inserisce una nuova voce di menu in corrispondenza della posizione specificata in un menu.|
 |[CMenu::LoadMenu](#loadmenu)|Carica una risorsa di menu dal file eseguibile e lo collega a un `CMenu` oggetto.|
 |[CMenu::LoadMenuIndirect](#loadmenuindirect)|Carica un menu di scelta da un modello dal menu in memoria e lo collega a un `CMenu` oggetto.|
@@ -202,7 +202,6 @@ BOOL AppendMenu(
     UINT nFlags,
     UINT_PTR nIDNewItem = 0,
     LPCTSTR lpszNewItem = NULL);
-
 
 BOOL AppendMenu(
     UINT nFlags,
@@ -931,7 +930,6 @@ BOOL InsertMenu(
     UINT_PTR nIDNewItem = 0,
     LPCTSTR lpszNewItem = NULL);
 
-
 BOOL InsertMenu(
     UINT nPosition,
     UINT nFlags,
@@ -1120,7 +1118,6 @@ BOOL ModifyMenu(
     UINT nFlags,
     UINT_PTR nIDNewItem = 0,
     LPCTSTR lpszNewItem = NULL);
-
 
 BOOL ModifyMenu(
     UINT nPosition,

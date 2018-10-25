@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 40fdfa363da286952139248088c737b348873ec8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063679"
 ---
 # <a name="category-macros"></a>Macro di categoria
 
@@ -51,11 +51,11 @@ Queste macro definiscono le mappe di categoria.
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Contrassegna l'inizio della mappa di categoria.|
 |[END_CATEGORY_MAP](#end_category_map)|Contrassegna la fine dell'oggetto map di categoria.|
 |[IMPLEMENTED_CATEGORY](#implemented_category)|Indica le categorie che vengono implementate dall'oggetto COM.|
-|[REQUIRED_CATEGORY](#required_category)|Indica le categorie che sono necessari del contenitore dall'oggetto COM.|  
+|[REQUIRED_CATEGORY](#required_category)|Indica le categorie che sono necessari del contenitore dall'oggetto COM.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcom. h  
+**Intestazione:** atlcom. h
 
 ##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
 

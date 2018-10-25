@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018623e9e6a093c4f86b8768e0fd5329f4ea3282
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6da48b12b657944864b1a33216692fce296e5dfd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443774"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083451"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Multithreading: Quando usare le classi di sincronizzazione di MFC
 
@@ -38,17 +38,17 @@ Per determinare quale classe di sincronizzazione è consigliabile usare, richied
 
 1. L'applicazione deve attendere per un evento prima di poter accedere alla risorsa (ad esempio, i dati devono essere ricevuti da una porta di comunicazione prima può essere scritta in un file)?
 
-     In caso affermativo, usare `CEvent`.
+   In caso affermativo, usare `CEvent`.
 
 2. Possa più di un thread all'interno di accesso dell'applicazione stessa questa risorsa in una sola volta (ad esempio, l'applicazione consente fino a cinque windows con le viste nello stesso documento)?
 
-     In caso affermativo, usare `CSemaphore`.
+   In caso affermativo, usare `CSemaphore`.
 
 3. Se più applicazioni possono utilizzare questa risorsa (ad esempio, la risorsa è in una DLL)?
 
-     In caso affermativo, usare `CMutex`.
+   In caso affermativo, usare `CMutex`.
 
-     Se no, usare `CCriticalSection`.
+   Se no, usare `CCriticalSection`.
 
 `CSyncObject` non viene mai usato direttamente. È la classe di base per altri quattro classi di sincronizzazione.
 

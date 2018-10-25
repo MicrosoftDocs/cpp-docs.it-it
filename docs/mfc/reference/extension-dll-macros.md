@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320bbc9fde5888f75149d6f3f9fad60deb869924
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 18fda4f020c4143a29ed88526c61f9fdf45a096a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054657"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Macro e funzioni per la gestione di DLL
 
@@ -221,6 +221,7 @@ Chiamare questa funzione nella DLL estensione MFC `DllMain` per inizializzare la
 ```
 BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModule );
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *state*<br/>
@@ -282,6 +283,7 @@ Utilizzare questa funzione per impostare il flag di stato per ogni modulo, che i
 ```
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *bSet*<br/>

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387835"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078193"
 ---
 # <a name="colepropertiesdialog-class"></a>Classe COlePropertiesDialog
 
@@ -138,15 +138,15 @@ Per impostazione predefinita, la finestra di dialogo proprietà dell'oggetto OLE
 
 - Generale
 
-     Questa pagina contiene informazioni sul sistema per il file rappresentato dall'elemento documento selezionato. In questa pagina, l'utente può convertire l'elemento selezionato in un altro tipo.
+   Questa pagina contiene informazioni sul sistema per il file rappresentato dall'elemento documento selezionato. In questa pagina, l'utente può convertire l'elemento selezionato in un altro tipo.
 
 - Visualizza
 
-     Questa pagina contiene le opzioni per la visualizzazione dell'elemento, l'icona di modifica e modifica della scalabilità dell'immagine.
+   Questa pagina contiene le opzioni per la visualizzazione dell'elemento, l'icona di modifica e modifica della scalabilità dell'immagine.
 
 - Collegamento
 
-     Questa pagina contiene le opzioni per la modifica della posizione dell'elemento collegato e aggiornare l'elemento collegato. In questa pagina, l'utente può interrompere il collegamento dell'elemento selezionato.
+   Questa pagina contiene le opzioni per la modifica della posizione dell'elemento collegato e aggiornare l'elemento collegato. In questa pagina, l'utente può interrompere il collegamento dell'elemento selezionato.
 
 Per aggiungere pagine oltre a quelli forniti per impostazione predefinita, modificare il [m_psh](#m_psh) variabile membro prima di disattivare il costruttore del `COlePropertiesDialog`-classe derivata. Si tratta di un'implementazione avanzata del `COlePropertiesDialog` costruttore.
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b572af3bdfd444687af98172da9ada0736dac25
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd420544f341159fa4281c4f837fa222d357e1b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429513"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068697"
 ---
 # <a name="diagnostic-services"></a>Servizi diagnostici
 
@@ -103,7 +103,6 @@ Inoltre, la libreria di runtime C supporta anche un set di funzioni di diagnosti
 |-|-|
 |[AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Disattiva gli avvisi del compilatore per l'uso di funzioni MFC deprecate.|
 
-
 ## <a name="afx_secure_no_warnings"></a> AFX_SECURE_NO_WARNINGS
 
 Disattiva gli avvisi del compilatore per l'uso di funzioni MFC deprecate.
@@ -113,6 +112,7 @@ Disattiva gli avvisi del compilatore per l'uso di funzioni MFC deprecate.
 ```
 _AFX_SECURE_NO_WARNINGS
 ```
+
 ### <a name="example"></a>Esempio
 
 Questo esempio di codice potrebbe causare un avviso del compilatore se afx_secure_no_warnings non sono state definite.
@@ -309,6 +309,7 @@ Utilizzare per convalidare la correttezza dei dati.
 ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *booleanExpression*<br/>
@@ -370,7 +371,6 @@ static char THIS_FILE[] = __FILE__;
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
 [ASSERT](#assert)<br/>
 [VERIFY](#verify)
-
 
 ##  <a name="trace"></a>  TRACE
 
@@ -450,7 +450,6 @@ Questa variabile viene definita solo nella versione di Debug di MFC. Per ulterio
 
 **Intestazione:** afx.h
 
-
 ## <a name="afxdump"></a> AfxDump (interno)
 
 Funzione interna utilizzata per eseguire il dump dello stato di un oggetto durante il debug di MFC.
@@ -460,6 +459,7 @@ Funzione interna utilizzata per eseguire il dump dello stato di un oggetto duran
 ```
 void AfxDump(const CObject* pOb);
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *casella postale*<br/>
@@ -478,8 +478,6 @@ Il codice del programma non deve chiamare `AfxDump`, ma è necessario chiamare i
 ### <a name="see-also"></a>Vedere anche
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -597,8 +595,6 @@ Il codice del programma non deve chiamare `AfxDump`, ma è necessario chiamare i
 ### <a name="see-also"></a>Vedere anche
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 

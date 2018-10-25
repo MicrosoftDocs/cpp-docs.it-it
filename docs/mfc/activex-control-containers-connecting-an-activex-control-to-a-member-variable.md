@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae0cefa518ce44913f5c316a096d221fa9bd41aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1e6fed56e21f2b5d97b9b89596630cd63f544148
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433855"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078687"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contenitori di controlli ActiveX: connessione di un controllo ActiveX a una variabile membro
 
@@ -45,7 +45,7 @@ Il modo più semplice per un controllo ActiveX all'interno dell'applicazione con
 
 1. Nel **nome della variabile** immettere un nome.
 
-     Ad esempio, *m_circctl*.
+   Ad esempio, *m_circctl*.
 
 1. Fare clic su **fine** per accettare le scelte effettuate e chiudere l'aggiunta guidata variabile membro.
 

@@ -22,30 +22,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 762623d6460404b4de85a45adaff7c5662bac258
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: d63f0856b70761c6c6b4a31ddeedfa8921c3a304
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052824"
 ---
 # <a name="commands-and-tables"></a>Comandi e tabelle
 
-Comandi e tabelle è possibile accedere a set di righe; vale a dire, aprire i set di righe, eseguire i comandi e associare le colonne. Il [CCommand](../../data/oledb/ccommand-class.md) e [CTable](../../data/oledb/ctable-class.md) classi creare un'istanza di oggetti comando e la tabella, rispettivamente. Tali classi derivano da [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) come illustrato nella figura seguente.  
-  
-![CCommand e CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
-Comando e le classi di tabella  
-  
-Nella tabella precedente `TAccessor` può essere qualsiasi tipo di funzione di accesso elencata nelle [tipi di funzione di accesso](../../data/oledb/accessors-and-rowsets.md). `TRowset` può essere qualsiasi tipo di set di righe elencata nelle [tipi di set di righe](../../data/oledb/accessors-and-rowsets.md). `TMultiple` Specifica il tipo di risultato (una o più set di risultati).  
-  
-Il [Creazione guidata Consumer OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) consente di specificare se si desidera che un oggetto comando o di tabella.  
-  
-- Per le origini dati senza comandi, è possibile usare il `CTable` classe. In genere viene utilizzato per semplici set di righe che non specificare alcun parametro e non richiede più risultati. Questa semplice classe apre una tabella in un'origine dati utilizzando un nome di tabella specificato.  
-  
-- Per le origini dati che supportano i comandi, è possibile usare il `CCommand` classe. Per eseguire un comando, chiamare [aperto](../../data/oledb/ccommand-open.md) in questa classe. In alternativa, è possibile chiamare `Prepare` per preparare un comando che si desidera eseguire più volte.  
-  
-     `CCommand` dispone di tre argomenti di modello: un tipo di funzione di accesso, un tipo di set di righe e un tipo di risultato (`CNoMultipleResults`, per impostazione predefinita, o `CMultipleResults`). Se si specifica `CMultipleResults`, il `CCommand` supportate dalla classe di `IMultipleResults` interfaccia e gestisca più set di righe. Il [DBVIEWER](https://github.com/Microsoft/VCSamples) esempio viene illustrato come gestire i risultati di più.  
-  
-## <a name="see-also"></a>Vedere anche  
+Comandi e tabelle è possibile accedere a set di righe; vale a dire, aprire i set di righe, eseguire i comandi e associare le colonne. Il [CCommand](../../data/oledb/ccommand-class.md) e [CTable](../../data/oledb/ctable-class.md) classi creare un'istanza di oggetti comando e la tabella, rispettivamente. Tali classi derivano da [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) come illustrato nella figura seguente.
+
+![CCommand e CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")<br/>
+Comando e le classi di tabella
+
+Nella tabella precedente `TAccessor` può essere qualsiasi tipo di funzione di accesso elencata nelle [tipi di funzione di accesso](../../data/oledb/accessors-and-rowsets.md). `TRowset` può essere qualsiasi tipo di set di righe elencata nelle [tipi di set di righe](../../data/oledb/accessors-and-rowsets.md). `TMultiple` Specifica il tipo di risultato (una o più set di risultati).
+
+Il [Creazione guidata Consumer OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) consente di specificare se si desidera che un oggetto comando o di tabella.
+
+- Per le origini dati senza comandi, è possibile usare il `CTable` classe. In genere viene utilizzato per semplici set di righe che non specificare alcun parametro e non richiede più risultati. Questa semplice classe apre una tabella in un'origine dati utilizzando un nome di tabella specificato.
+
+- Per le origini dati che supportano i comandi, è possibile usare il `CCommand` classe. Per eseguire un comando, chiamare [aperto](../../data/oledb/ccommand-open.md) in questa classe. In alternativa, è possibile chiamare `Prepare` per preparare un comando che si desidera eseguire più volte.
+
+   `CCommand` dispone di tre argomenti di modello: un tipo di funzione di accesso, un tipo di set di righe e un tipo di risultato (`CNoMultipleResults`, per impostazione predefinita, o `CMultipleResults`). Se si specifica `CMultipleResults`, il `CCommand` supportate dalla classe di `IMultipleResults` interfaccia e gestisca più set di righe. Il [DBVIEWER](https://github.com/Microsoft/VCSamples) esempio viene illustrato come gestire i risultati di più.
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

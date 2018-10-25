@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514b4708129d625ea7880e4c61be22c4b1ac2db5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95f23fa132a263970047a480ccde37382b6d03de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912888"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052164"
 ---
 # <a name="fpcontract"></a>fp_contract
 
-Determina se contrazione a virgola mobile viene eseguita. Una contrazione a virgola mobile è un'istruzione, ad esempio FMA (considerati-Multiply-Add) che combina due separato operazioni a virgola mobile in una singola istruzione. Utilizzo di queste istruzioni può influire sulla precisione a virgola mobile, perché anziché arrotondamento dopo ogni operazione, il processore può arrotondare una sola volta dopo entrambe le operazioni.
+Determina se contrazione a virgola mobile viene eseguita. Una contrazione a virgola mobile è un'istruzione, ad esempio FMA (considerati-aggiunta multipla) che combina due distinti operazioni a virgola mobile in una singola istruzione. L'uso di queste istruzioni può influire sulla precisione a virgola mobile, in quanto anziché dopo ogni operazione di arrotondamento, il processore può arrotondare una sola volta dopo entrambe le operazioni.
 
 ## <a name="syntax"></a>Sintassi
 
-> **fp_contract #pragma (** { **sul** | **off** } **)**  
+> **fp_contract #pragma (** { **sul** | **off** } **)**
 
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Note
 
-Per impostazione predefinita **fp_contract** viene **su**. Ciò indica al compilatore di usare istruzioni contrazione a virgola mobile, laddove possibile. Impostare **fp_contract** alla **off** per mantenere le singole istruzioni a virgola mobile.
+Per impostazione predefinita **fp_contract** viene **su**. Ciò indica al compilatore di usare le istruzioni contrazione a virgola mobile, laddove possibile. Impostare **fp_contract** al **off** per mantenere le singole istruzioni a virgola mobile.
 
-Per ulteriori informazioni sul comportamento della virgola mobile, vedere [/fp (specifica il comportamento a virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md).
+Per altre informazioni sul comportamento della virgola mobile, vedere [/fp (specifica il comportamento della virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Altri pragma a virgola mobile sono i seguenti:
 
@@ -47,8 +47,8 @@ Altri pragma a virgola mobile sono i seguenti:
 
 ## <a name="example"></a>Esempio
 
-Il codice generato da questo esempio non utilizza un'istruzione di istruzione fused multiply-aggiunta anche quando è disponibile nel processore di destinazione. Se impostare come commento `#pragma fp_contract (off)`, il codice generato potrebbe usare un'istruzione di istruzione fused multiply-aggiunta se è disponibile.  
-  
+Il codice generato da questo esempio non usa un'istruzione fused multiply-aggiunta anche quando è disponibile nel processore di destinazione. Commento `#pragma fp_contract (off)`, il codice generato potrebbe usare un'istruzione fused multiply-aggiunta, se disponibile.
+
 ```cpp
 // pragma_directive_fp_contract.cpp
 // on x86 and x64 compile with: /O2 /fp:fast /arch:AVX2

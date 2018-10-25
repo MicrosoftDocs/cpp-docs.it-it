@@ -20,21 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6d09245bdf05f770e6b0e3161cf71902944b608c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0b8d769d39a362cd62da2dcc573470391c8530ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103646"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079181"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Visualizzazione e modifica di dati in un form
 
-Molte applicazioni di accesso ai dati selezionano i dati e visualizzarli nei campi in un form. La classe di database [CRecordView](../../mfc/reference/crecordview-class.md) ti offre una [CFormView](../../mfc/reference/cformview-class.md) oggetto connesso direttamente a un oggetto recordset. Usa la visualizzazione di record [DDX (DDX)](../../mfc/dialog-data-exchange-and-validation.md) per spostare i valori dei campi del record corrente dal recordset ai controlli nel form e per riportare informazioni aggiornate per il recordset. Il recordset, Usa a sua volta, il trasferimento di campi di record (RFX) per spostare dati tra i relativi membri dati dei campi e le colonne corrispondenti in una tabella nell'origine dati.  
-  
-È possibile usare la creazione guidata applicazione MFC o **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per creare la classe di visualizzazione e la relativa classe recordset associato insieme.  
-  
-Visualizzazione di record e recordset relativi vengono eliminati definitivamente quando si chiude il documento. Per altre informazioni sulle visualizzazioni di record, vedere [visualizzazioni di Record](../../data/record-views-mfc-data-access.md). Per altre informazioni su RFX, vedere [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
-  
-## <a name="see-also"></a>Vedere anche  
+Molte applicazioni di accesso ai dati selezionano i dati e visualizzarli nei campi in un form. La classe di database [CRecordView](../../mfc/reference/crecordview-class.md) ti offre una [CFormView](../../mfc/reference/cformview-class.md) oggetto connesso direttamente a un oggetto recordset. Usa la visualizzazione di record [DDX (DDX)](../../mfc/dialog-data-exchange-and-validation.md) per spostare i valori dei campi del record corrente dal recordset ai controlli nel form e per riportare informazioni aggiornate per il recordset. Il recordset, Usa a sua volta, il trasferimento di campi di record (RFX) per spostare dati tra i relativi membri dati dei campi e le colonne corrispondenti in una tabella nell'origine dati.
+
+È possibile usare la creazione guidata applicazione MFC o **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per creare la classe di visualizzazione e la relativa classe recordset associato insieme.
+
+Visualizzazione di record e recordset relativi vengono eliminati definitivamente quando si chiude il documento. Per altre informazioni sulle visualizzazioni di record, vedere [visualizzazioni di Record](../../data/record-views-mfc-data-access.md). Per altre informazioni su RFX, vedere [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+
+## <a name="see-also"></a>Vedere anche
 
 [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee094005b8daf25d23e449711bac3dbc4a93c79
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: dc57c1667fd9cfd6d3236fbd1891dc1444912c3c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077439"
 ---
 # <a name="set-class"></a>Classe set
 
@@ -905,7 +905,6 @@ Restituisce l'iteratore successivo all'ultimo valore.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1124,7 +1123,6 @@ Restituisce un iteratore che fa riferimento alla posizione di un elemento in un 
 ```cpp
 iterator find(const Key& key);
 
-
 const_iterator find(const Key& key) const;
 ```
 
@@ -1288,19 +1286,16 @@ Inserisce un elemento o un intervallo di elementi in un set.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1308,13 +1303,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1987,7 +1980,6 @@ set(
     initializer_list<Type> IList,
     const Compare& Comp,
     const Allocator& Al);
-
 
 template <class InputIterator>
 set(

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082931"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Aggiornamento di un controllo ActiveX esistente
 
@@ -213,11 +213,11 @@ Per usare un controllo con licenza in una pagina HTML in un computer privo di li
 
 1. Inserire il \<oggetto > tag per il controllo con licenza dopo il tag di gestione delle licenze.
 
-     Ad esempio, una pagina HTML che visualizza il controllo MaskedEdit di Microsoft è illustrata di seguito. Il primo ID di classe che è per il controllo di gestione delle licenze, il secondo ID di classe che è per il controllo di modifica con maschera. Modificare i tag in modo che punti al percorso relativo del file lpk creato in precedenza e aggiungere un tag object incluso l'ID di classe per il controllo.
+   Ad esempio, una pagina HTML che visualizza il controllo MaskedEdit di Microsoft è illustrata di seguito. Il primo ID di classe che è per il controllo di gestione delle licenze, il secondo ID di classe che è per il controllo di modifica con maschera. Modificare i tag in modo che punti al percorso relativo del file lpk creato in precedenza e aggiungere un tag object incluso l'ID di classe per il controllo.
 
 1. Inserire il \<INCORPORAMENTO > attributo per il file LPK, se si usa il plug-in NCompass ActiveX.
 
-     Se il controllo può essere visualizzato su altri browser che supportano i attive, Netscape, ad esempio, usando il plug-in NCompass ActiveX, è necessario aggiungere il \<INCORPORAMENTO > sintassi come illustrato di seguito.
+   Se il controllo può essere visualizzato su altri browser che supportano i attive, Netscape, ad esempio, usando il plug-in NCompass ActiveX, è necessario aggiungere il \<INCORPORAMENTO > sintassi come illustrato di seguito.
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bb7d9732751160a89e42857e77b587f79aca010
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d98030101ba71adfbb928a7415d8578de0fb69e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440849"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079389"
 ---
 # <a name="cwinappex-class"></a>Classe CWinAppEx
 
@@ -383,7 +383,6 @@ Per altre informazioni sugli strumenti utente e come includerli nell'applicazion
 
 ##  <a name="exitinstance"></a>  CWinAppEx::ExitInstance
 
-
 ```
 virtual int ExitInstance();
 ```
@@ -441,7 +440,6 @@ Un puntatore a globale `CContextMenuManager` oggetto.
 Se non viene inizializzato l'oggetto CContextMenuManager, questa funzione chiama [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) prima che venga restituito un puntatore.
 
 ##  <a name="getdataversion"></a>  CWinAppEx::GetDataVersion
-
 
 ```
 int GetDataVersion() const;
@@ -900,7 +898,6 @@ Se l'applicazione contiene già un gestore della descrizione comando e si chiama
 
 ##  <a name="isresourcesmartupdate"></a>  CWinAppEx::IsResourceSmartUpdate
 
-
 ```
 BOOL IsResourceSmartUpdate() const;
 ```
@@ -949,16 +946,13 @@ BOOL LoadState(
     CMDIFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
 
-
 BOOL LoadState(
     CFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
 
-
 BOOL LoadState(
     COleIPFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
-
 
 virtual BOOL LoadState(
     LPCTSTR lpszSectionName = NULL,
@@ -1099,14 +1093,13 @@ Per supportare il comportamento del mouse personalizzato, è necessario chiamare
 
 ##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle
 
-
 ```
 virtual BOOL OnWorkspaceIdle(CWnd*);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CWnd&#38;*
+[in] *CWnd&#38;*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1178,16 +1171,13 @@ virtual BOOL SaveState(
     LPCTSTR lpszSectionName = NULL,
     CFrameImpl* pFrameImpl = NULL);
 
-
 BOOL SaveState(
     CMDIFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
 
-
 BOOL SaveState(
     CFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
-
 
 BOOL SaveState(
     COleIPFrameWndEx* pFrame,

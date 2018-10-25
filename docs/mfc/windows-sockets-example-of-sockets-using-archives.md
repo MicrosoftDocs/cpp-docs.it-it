@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427277"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062226"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: esempio di socket che utilizzano archivi
 
@@ -40,11 +40,11 @@ Per l'invio, la funzione di esempio esegue il ciclo per un numero specificato di
 
 - Un "header" che specifica la natura dei dati (in questo caso, il valore di *bValue* variabile e verrà inviato il numero di copie).
 
-     Entrambi gli elementi vengono generati in modo casuale per questo esempio.
+   Entrambi gli elementi vengono generati in modo casuale per questo esempio.
 
 - Il numero specificato di copie dei dati.
 
-     Interna **per** ciclo invii *bValue* il numero di volte specificato.
+   Interna **per** ciclo invii *bValue* il numero di volte specificato.
 
 - Una stringa denominata *strText* che il destinatario visualizza all'utente.
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052808"
 ---
 # <a name="creating-an-active-document-container-application"></a>Creazione di un'applicazione contenitore di documenti attivi
 
@@ -57,9 +57,9 @@ Il modo più semplice e consigliato per creare un'applicazione contenitore di do
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` fornisce il supporto di stampa. Questo codice sostituisce `DoPreparePrinting`, ovvero la preparazione predefinita alla stampa.
+   `OnPreparePrinting` fornisce il supporto di stampa. Questo codice sostituisce `DoPreparePrinting`, ovvero la preparazione predefinita alla stampa.
 
-     Il contenimento del documento attivo fornisce uno schema di stampa avanzato:
+   Il contenimento del documento attivo fornisce uno schema di stampa avanzato:
 
    - È possibile chiamare prima il documento attivo tramite relativo `IPrint` interfaccia e ordinargli di eseguire la stampa. Questo comportamento è diverso dal contenimento OLE precedente, in cui il contenitore doveva eseguire il rendering di un'immagine dell'elemento contenuto nella stampante `CDC` oggetto.
 
@@ -67,7 +67,7 @@ Il modo più semplice e consigliato per creare un'applicazione contenitore di do
 
    - Se l'operazione fallisce, eseguire il rendering dell'elemento.
 
-     Le funzioni membro statiche `COleDocObjectItem::OnPrint` e `COleDocObjectItem::OnPreparePrinting`, come implementate nel codice precedente, gestiscono questo schema di stampa avanzato.
+   Le funzioni membro statiche `COleDocObjectItem::OnPrint` e `COleDocObjectItem::OnPreparePrinting`, come implementate nel codice precedente, gestiscono questo schema di stampa avanzato.
 
 11. Aggiungere qualsiasi implementazione personalizzata e compilare l'applicazione.
 

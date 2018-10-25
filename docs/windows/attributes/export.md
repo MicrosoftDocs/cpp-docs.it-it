@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a636b7d4c943896bcd1e5e7b3580c2d3f7410fc8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1529f6d43c3a4543a172229abe2adf0ce6a99c49
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791193"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060195"
 ---
 # <a name="export"></a>esportazione
 
@@ -70,9 +70,9 @@ struct MyStruct {
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi del compilatore](compiler-attributes.md)<br/>
-[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)  
+[Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)

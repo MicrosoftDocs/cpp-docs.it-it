@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0a0fc54c002511b9c091acc5d5e3fbe4636ad933
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072239"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemi di progettazione dell'architettura OLE DB
 
-Tenere presente quanto segue prima di avviare l'applicazione OLE DB:  
-  
+Tenere presente quanto segue prima di avviare l'applicazione OLE DB:
+
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Quale implementazione di programmazione si userà per scrivere un'applicazione OLE DB?
 
 Microsoft offre varie librerie per portare a termine questa attività: una libreria di modelli OLE DB, OLE DB attributi e le interfacce OLE DB non elaborate in OLE DB SDK. Inoltre, sono disponibili procedure guidate che consentono scrivere un programma. Queste implementazioni sono descritte nel [modelli OLE DB, attributi e altre implementazioni](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).

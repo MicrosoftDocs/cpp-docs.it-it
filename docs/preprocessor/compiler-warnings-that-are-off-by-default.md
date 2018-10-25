@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540802"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083191"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avvisi del compilatore disattivati per impostazione predefinita
 Il compilatore include avvisi che sono stati disabilitate per impostazione predefinita, in quanto la maggior parte degli sviluppatori non desiderano visualizzarli. In alcuni casi, essi rappresentano una scelta stilistiche, sono idiomi comuni nel codice precedente o usufruire di un'estensione Microsoft del linguaggio. In altri casi, questi indicano un'area in cui i programmatori spesso si basano su presupposti non corretti, che possono causare un comportamento imprevisto o non definito. Alcuni di questi avvisi siano molto poco significativi nelle intestazioni della libreria. Librerie di runtime C e le librerie standard C++ sono destinate a non generare alcun avviso solo a livello di avviso [/W4](../build/reference/compiler-option-warning-level.md).
@@ -154,12 +154,12 @@ Gli avvisi seguenti sono stati disabilitate per impostazione predefinita in Visu
 |C5042 (livello 3)|«*funzione*': le dichiarazioni di funzione nell'ambito del blocco non possono essere specificato 'inline' in C++ standard, rimuovere l'identificatore 'inline' <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Compilatore inserirà la mitigazione Spectre per il carico di memoria se è specificata l'opzione /Qspectre <sup>15.7</sup>|
 
-<sup>14.1</sup> questo avviso non è disponibile a partire da Visual Studio 2015 Update 1.  
-<sup>14.3</sup> questo avviso non è disponibile a partire da Visual Studio 2015 Update 3.  
-<sup>15.3</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.3.  
-<sup>15.5</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.5.  
-<sup>Versione 15.7</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.7.  
-<sup>Perm</sup> questo avviso è disattivato, a meno che il [/PERMISSIVE--](../build/reference/permissive-standards-conformance.md) è impostata l'opzione del compilatore.  
+<sup>14.1</sup> questo avviso non è disponibile a partire da Visual Studio 2015 Update 1.<br/>
+<sup>14.3</sup> questo avviso non è disponibile a partire da Visual Studio 2015 Update 3.<br/>
+<sup>15.3</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.3.<br/>
+<sup>15.5</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.5.<br/>
+<sup>Versione 15.7</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.7.<br/>
+<sup>Perm</sup> questo avviso è disattivato, a meno che il [/PERMISSIVE--](../build/reference/permissive-standards-conformance.md) è impostata l'opzione del compilatore.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avvisi disattivata per impostazione predefinita nelle versioni precedenti
 

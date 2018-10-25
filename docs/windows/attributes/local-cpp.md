@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e24efe4d4ad4f4e28b93503ecf82936e3113c1ed
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e510e4faa707c954c52ae9daae4c4dc0d4c800dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791956"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057156"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -53,11 +53,11 @@ Visualizzare [call_as](call-as.md) per un esempio di come usare **locale**.
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|`dispinterface`|
 
-Per altre informazioni, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di interfaccia](interface-attributes.md)<br/>
 [Attributi di metodo](method-attributes.md)<br/>
-[call_as](call-as.md)  
+[call_as](call-as.md)

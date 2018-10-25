@@ -1,7 +1,7 @@
 ---
 title: Classe CMenuTearOffManager | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc4a6ee892c70a53e28031ff8dd9ef874d252a86
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9d33f5cb060bfab32426a4c9492244fb1c432b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071888"
 ---
 # <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
 
@@ -96,7 +96,6 @@ Nell'esempio seguente viene illustrato come creare e inizializzare un `CMenuTear
 
 ##  <a name="build"></a>  CMenuTearOffManager::Build
 
-
 ```
 void Build(
     UINT uiTearOffBarID,
@@ -105,8 +104,9 @@ void Build(
 
 ### <a name="parameters"></a>Parametri
 
-*uiTearOffBarID*<br/>
-[in] [in] *strText*
+[in] *uiTearOffBarID*<br/>
+
+[in] *strText*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -123,7 +123,6 @@ CMenuTearOffManager();
 Nella maggior parte dei casi, non è necessario creare un `CMenuTearOffManager` manualmente. Il framework dell'applicazione crea il `CMenuTearOffManager` dell'oggetto quando si chiama [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).
 
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath
-
 
 ```
 LPCTSTR GetRegPath() const;
@@ -165,14 +164,13 @@ L'intervallo di ID di menu dalla *uiTearOffMenuFirst* al *uiTearOffMenuLast* dev
 
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID
 
-
 ```
 BOOL IsDynamicID(UINT uiID) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *uiID*
+[in] *uiID*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -180,14 +178,13 @@ BOOL IsDynamicID(UINT uiID) const;
 
 ##  <a name="parse"></a>  CMenuTearOffManager::Parse
 
-
 ```
 UINT Parse(CString& str);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *str*
+[in] *str*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -195,19 +192,17 @@ UINT Parse(CString& str);
 
 ##  <a name="reset"></a>  CMenuTearOffManager::Reset
 
-
 ```
 void Reset(HMENU hmenu);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *hmenu*
+[in] *hmenu*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse
-
 
 ```
 void SetInUse(
@@ -217,13 +212,13 @@ void SetInUse(
 
 ### <a name="parameters"></a>Parametri
 
-*uiCmdId*<br/>
-[in] [in] *bUtilizzare*
+[in] *uiCmdId*<br/>
+
+[in] *bUtilizzare*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus
-
 
 ```
 void SetupTearOffMenus(HMENU hMenu);
@@ -231,7 +226,7 @@ void SetupTearOffMenus(HMENU hMenu);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *hMenu*
+[in] *hMenu*<br/>
 
 ### <a name="remarks"></a>Note
 

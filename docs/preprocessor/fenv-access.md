@@ -18,23 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c06556d47bf0c471aa7e4fab610971e2b7ad11e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540605"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081469"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Disabilita (**sul**) o Abilita (**off**) le ottimizzazioni che è stato possibile modificare l'ambiente a virgola mobile e contrassegno i test e cambia la modalità.
 
 ## <a name="syntax"></a>Sintassi
 
-> **fenv_access #pragma (** { **sul** | **off** } **)**  
+> **fenv_access #pragma (** { **sul** | **off** } **)**
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita **fenv_access** viene **off**. Se il compilatore non può presupporre che il codice non accedere o modificare l'ambiente a virgola mobile, quindi può eseguire numerose ottimizzazioni di codice a virgola mobile. Impostare **fenv_access** al **su** per informare il compilatore che il codice accede l'ambiente a virgola mobile per verificare i flag di stato, eccezioni, o per impostare il flag della modalità di controllo. Il compilatore disabilita le ottimizzazioni in modo che il codice possa accedere l'ambiente a virgola mobile in modo coerente. 
+Per impostazione predefinita **fenv_access** viene **off**. Se il compilatore non può presupporre che il codice non accedere o modificare l'ambiente a virgola mobile, quindi può eseguire numerose ottimizzazioni di codice a virgola mobile. Impostare **fenv_access** al **su** per informare il compilatore che il codice accede l'ambiente a virgola mobile per verificare i flag di stato, eccezioni, o per impostare il flag della modalità di controllo. Il compilatore disabilita le ottimizzazioni in modo che il codice possa accedere l'ambiente a virgola mobile in modo coerente.
 
 Per altre informazioni sul comportamento della virgola mobile, vedere [/fp (specifica il comportamento della virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md).
 

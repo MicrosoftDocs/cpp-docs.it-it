@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429207"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055008"
 ---
 # <a name="icommandui-interface"></a>Interfaccia ICommandUI
 
@@ -73,6 +73,7 @@ Imposta l'elemento di interfaccia utente per questo comando per lo stato di sele
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>Note
 
 Questa proprietà imposta l'elemento di interfaccia utente per questo comando per lo stato di selezione appropriata. Impostare controllo sui valori seguenti:
@@ -86,6 +87,7 @@ Indica il meccanismo di routing di comandi per continuare il routing del messagg
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>Note
 
 Si tratta di una funzione membro avanzata che deve essere usata in combinazione con un gestore ON_COMMAND_EX che restituisce FALSE. Per altre informazioni, vedere tecniche nota TN006: mappe messaggi.
@@ -96,6 +98,7 @@ Abilita o disabilita l'elemento di interfaccia utente per questo comando.
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>Note
 
 Questa proprietà Abilita o disabilita l'elemento di interfaccia utente per questo comando. Impostare Enabled su true per abilitare l'elemento su FALSE per disabilitarla.
@@ -106,6 +109,7 @@ Ottiene l'ID dell'oggetto di interfaccia utente rappresentato dall'oggetto IComm
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>Note
 
 Questa proprietà ottiene l'ID (handle) della voce di menu, pulsante della barra degli strumenti o un altro oggetto di interfaccia utente rappresentato dall'oggetto ICommandUI.
@@ -116,6 +120,7 @@ Ottiene l'indice dell'oggetto di interfaccia utente rappresentato dall'oggetto I
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>Note
 
 Questa proprietà ottiene l'indice (handle) della voce di menu, pulsante della barra degli strumenti o un altro oggetto di interfaccia utente rappresentato dall'oggetto ICommandUI.
@@ -126,6 +131,7 @@ Imposta l'elemento di interfaccia utente per questo comando per lo stato di sele
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>Note
 
 Questa proprietà imposta l'elemento di interfaccia utente per questo comando per lo stato di selezione appropriata. Impostare l'opzione a true per abilitare l'elemento; in caso contrario, FALSE.
@@ -136,6 +142,7 @@ Imposta il testo dell'elemento dell'interfaccia utente per questo comando.
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>Note
 
 Questa proprietà imposta il testo dell'elemento dell'interfaccia utente per questo comando. Impostare il testo su un handle di stringa di testo.

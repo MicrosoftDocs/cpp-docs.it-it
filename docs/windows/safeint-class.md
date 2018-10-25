@@ -1,7 +1,7 @@
 ---
 title: Classe SafeInt | Microsoft Docs
 ms.custom: ''
-ms.date: 09/27/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,16 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b7d9c6b68f67185bb9cc529949fcc7c43e91d21e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163296"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081862"
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 
 Estende le primitive di integer per evitare l'overflow di numeri interi e consente di confrontare i diversi tipi di numeri interi.
+
+> [!NOTE] 
+> La versione più recente di questa libreria è disponibile all'indirizzo [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -259,7 +262,7 @@ SafeInt (
 I template <typename U>
 SafeInt (
    const U& i
-)  
+)
 ```
 
 ### <a name="parameters"></a>Parametri

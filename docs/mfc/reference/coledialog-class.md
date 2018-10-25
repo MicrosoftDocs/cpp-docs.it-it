@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c6cebf6af24de860c583398c16c87824ede0075
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ecfe5ba4ac2144ff626d6d37d8639f1798acda8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401277"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079298"
 ---
 # <a name="coledialog-class"></a>Classe COleDialog
 
@@ -105,6 +105,4 @@ Vedere il `DoModal` funzione membro nelle classi derivate per informazioni sui m
 
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
-
 

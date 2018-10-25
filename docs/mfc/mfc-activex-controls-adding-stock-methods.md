@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42907273423d69ed93df5700b33556047338fe2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e103e43f23746f8274ad00da4d043e3446dfc706
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391426"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053028"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Controlli ActiveX MFC: aggiunta di metodi predefiniti
 
@@ -51,7 +51,7 @@ Aggiunta di un metodo è semplice usando il [Aggiunta guidata metodo](../ide/add
 
 1. Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi metodo**.
 
-     Verrà visualizzata l'aggiunta guidata metodo.
+   Verrà visualizzata l'aggiunta guidata metodo.
 
 1. Nel **nome del metodo** fare clic su **aggiornare**.
 

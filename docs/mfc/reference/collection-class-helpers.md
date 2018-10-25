@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083373"
 ---
 # <a name="collection-class-helpers"></a>Supporti delle classi Collection
 
@@ -152,7 +152,6 @@ Numero di elementi per eseguire il dump.
 Il `CArray::Dump`, `CList::Dump`, e `CMap::Dump` funzioni chiamare questo metodo se la profondità del dump è maggiore di 0.
 
 L'implementazione predefinita non esegue alcuna operazione. Se gli elementi della raccolta vengono ricavati `CObject`, la sostituzione in genere si ripete attraverso gli elementi della raccolta, chiamare `Dump` per ogni elemento a sua volta.
-
 
 ### <a name="requirements"></a>Requisiti
 

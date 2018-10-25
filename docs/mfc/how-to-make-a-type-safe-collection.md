@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d0d250e17ddd8beaef2a9f5cff4d4e1046fdcb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7368e067e1324c3263440a7a6b165099c870735
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078154"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Procedura: creazione di una raccolta indipendente dai tipi
 
@@ -45,11 +45,11 @@ La libreria Microsoft Foundation Class fornisce gli insiemi indipendente dai tip
 
 1. Dichiarare una variabile del tipo di classe della raccolta. Ad esempio:
 
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
 1. Chiamare le funzioni membro dell'oggetto della raccolta. Ad esempio:
 
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
 1. Se necessario, implementare il [funzioni helper](../mfc/reference/collection-class-helpers.md) e [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements). Per informazioni sull'implementazione di queste funzioni, vedere [implementazione di funzioni di supporto](#_core_implementing_helper_functions).
 
@@ -85,27 +85,27 @@ Esistono due modi per creare raccolte indipendente dai tipi con le raccolte non 
 
 1. Usare una delle classi non basate su modelli, ad esempio `CWordArray`direttamente.
 
-     Ad esempio, è possibile creare un `CWordArray` e aggiungervi tutti i valori a 32 bit, quindi recuperarli. Non è nient'altro per eseguire operazioni. È sufficiente utilizzare le funzionalità predefinite.
+   Ad esempio, è possibile creare un `CWordArray` e aggiungervi tutti i valori a 32 bit, quindi recuperarli. Non è nient'altro per eseguire operazioni. È sufficiente utilizzare le funzionalità predefinite.
 
-     È anche possibile usare una raccolta predefinita, ad esempio `CObList`, per contenere gli oggetti derivati da `CObject`. Oggetto `CObList` raccolta viene definita per contenere i puntatori a `CObject`. Quando si recupera un oggetto dall'elenco, potrebbe essere necessario il cast del risultato al tipo corretto poiché il `CObList` funzioni restituiscono puntatori a `CObject`. Ad esempio, se si archiviano `CPerson` oggetti un `CObList` raccolta, è necessario eseguire il cast di un elemento recuperato in un puntatore a un `CPerson` oggetto. L'esempio seguente usa un' `CObList` insieme in cui contenere `CPerson` oggetti:
+   È anche possibile usare una raccolta predefinita, ad esempio `CObList`, per contenere gli oggetti derivati da `CObject`. Oggetto `CObList` raccolta viene definita per contenere i puntatori a `CObject`. Quando si recupera un oggetto dall'elenco, potrebbe essere necessario il cast del risultato al tipo corretto poiché il `CObList` funzioni restituiscono puntatori a `CObject`. Ad esempio, se si archiviano `CPerson` oggetti un `CObList` raccolta, è necessario eseguire il cast di un elemento recuperato in un puntatore a un `CPerson` oggetto. L'esempio seguente usa un' `CObList` insieme in cui contenere `CPerson` oggetti:
 
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-     Questa tecnica di utilizzo di un tipo di raccolta predefiniti e il cast necessario potrebbe essere sufficiente per molte delle esigenze di raccolta. Se è necessario maggiore controllo dei tipi o ulteriori funzionalità, usare una classe di base del modello o seguire la procedura successiva.
+   Questa tecnica di utilizzo di un tipo di raccolta predefiniti e il cast necessario potrebbe essere sufficiente per molte delle esigenze di raccolta. Se è necessario maggiore controllo dei tipi o ulteriori funzionalità, usare una classe di base del modello o seguire la procedura successiva.
 
 #### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>Per derivare ed estendere una raccolta indipendente dai tipi non basate su modelli
 
 1. Derivare la propria classe di raccolta da una delle classi non basate su modelli predefiniti.
 
-     Quando si deriva una classe, è possibile aggiungere le funzioni wrapper indipendente dai tipi per fornire un'interfaccia indipendente dai tipi per le funzioni esistenti.
+   Quando si deriva una classe, è possibile aggiungere le funzioni wrapper indipendente dai tipi per fornire un'interfaccia indipendente dai tipi per le funzioni esistenti.
 
-     Ad esempio, se si deriva un elenco dal `CObList` per contenere `CPerson` oggetti, è possibile aggiungere le funzioni wrapper `AddHeadPerson` e `GetHeadPerson`, come illustrato di seguito.
+   Ad esempio, se si deriva un elenco dal `CObList` per contenere `CPerson` oggetti, è possibile aggiungere le funzioni wrapper `AddHeadPerson` e `GetHeadPerson`, come illustrato di seguito.
 
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
+   [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-     Queste funzioni wrapper forniscono un modo indipendente dai tipi per aggiungere e recuperare `CPerson` oggetti nell'elenco derivata. È possibile notare che per il `GetHeadPerson` (funzione), si incapsula semplicemente il cast del tipo.
+   Queste funzioni wrapper forniscono un modo indipendente dai tipi per aggiungere e recuperare `CPerson` oggetti nell'elenco derivata. È possibile notare che per il `GetHeadPerson` (funzione), si incapsula semplicemente il cast del tipo.
 
-     È anche possibile aggiungere nuove funzionalità che definisce nuove funzioni che estendono le funzionalità della raccolta invece di limitarsi a inserire le funzionalità esistenti nei wrapper indipendente dai tipi. Ad esempio, l'articolo [l'eliminazione di tutti gli oggetti in una raccolta CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) descrive una funzione per eliminare tutti gli oggetti contenuti in un elenco. Questa funzione è stato possibile aggiungere alla classe derivata come una funzione membro.
+   È anche possibile aggiungere nuove funzionalità che definisce nuove funzioni che estendono le funzionalità della raccolta invece di limitarsi a inserire le funzionalità esistenti nei wrapper indipendente dai tipi. Ad esempio, l'articolo [l'eliminazione di tutti gli oggetti in una raccolta CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) descrive una funzione per eliminare tutti gli oggetti contenuti in un elenco. Questa funzione è stato possibile aggiungere alla classe derivata come una funzione membro.
 
 ## <a name="see-also"></a>Vedere anche
 

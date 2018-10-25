@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: db9476e225b19f76fb695063c9c5058e8d9b2871
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379411"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080026"
 ---
 # <a name="runtimeclass-class"></a>Classe RuntimeClass
 
@@ -145,7 +145,7 @@ Ottiene una matrice che può contenere l'interfaccia implementati dalla classe c
 ```cpp
 STDMETHOD(
    GetIids
-)  
+)
    (_Out_ ULONG *iidCount,
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
 ```
@@ -246,7 +246,7 @@ Recupera un puntatore all'ID di interfaccia specificato.
 ```cpp
 STDMETHOD(
    QueryInterface
-)  
+)
    (REFIID riid,
    _Deref_out_ void **ppvObject);
 ```

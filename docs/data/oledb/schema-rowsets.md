@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 370c028c9d28cce9d0eb36a20bd2014ac14bba60
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: d33ada08132d5748b2cf2630ac44c81a52cec7c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989983"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082788"
 ---
 # <a name="schema-rowsets"></a>Rowset dello schema
 
-Schema (o metadati) sono qualsiasi informazioni sulla struttura o un'organizzazione, ad esempio le informazioni sul provider, set di righe, tabelle, colonne, un database o altre informazioni oltre il contenuto effettivo del database. OLE DB ti permette di ottenere tali informazioni senza aprire il set di righe con i rowset dello schema.  
-  
-Per informazioni su come usare i set di righe dello schema, vedere [recupero di metadati con i rowset dello Schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
-  
-## <a name="see-also"></a>Vedere anche  
+Schema (o metadati) sono qualsiasi informazioni sulla struttura o un'organizzazione, ad esempio le informazioni sul provider, set di righe, tabelle, colonne, un database o altre informazioni oltre il contenuto effettivo del database. OLE DB ti permette di ottenere tali informazioni senza aprire il set di righe con i rowset dello schema.
+
+Per informazioni su come usare i set di righe dello schema, vedere [recupero di metadati con i rowset dello Schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
+
+## <a name="see-also"></a>Vedere anche
 
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

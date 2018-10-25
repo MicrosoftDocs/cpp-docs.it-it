@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085225"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080117"
 ---
-# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY macro  
+# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY macro
 
-Queste macro immettere le interfacce dell'oggetto nella propria mappa COM in modo che siano accessibili da `QueryInterface`. L'ordine delle voci nella mappa COM sia le interfacce di ordine disporrà di un IID corrispondente durante `QueryInterface`.  
+Queste macro immettere le interfacce dell'oggetto nella propria mappa COM in modo che siano accessibili da `QueryInterface`. L'ordine delle voci nella mappa COM sia le interfacce di ordine disporrà di un IID corrispondente durante `QueryInterface`.
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Queste macro immettere le interfacce dell'oggetto nella propria mappa COM in mod
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Elabora la mappa COM della classe di base durante l'elaborazione raggiunge questa voce nella mappa COM.|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Un meccanismo generale per l'uso di hook nel ATL `QueryInterface` per la logica.|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Uguale allo [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), ad eccezione del fatto che l'esecuzione di query per qualsiasi IID comporta una chiamata a *func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Restituisce E_NOINTERFACE e termina l'elaborazione della mappa COM quando viene eseguita una query per l'interfaccia specificata.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Restituisce E_NOINTERFACE e termina l'elaborazione della mappa COM quando viene eseguita una query per l'interfaccia specificata.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -70,6 +70,7 @@ Immette interfacce la mappa dell'interfaccia COM.
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>Parametri
 
 *x*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlcom. h
@@ -406,4 +408,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 L'interfaccia IID verrà costruita aggiungendo *x* a `IID_`. Ad esempio, se *x* viene `IPersistStorage`, sarà l'IID `IID_IPersistStorage`.
 
-  

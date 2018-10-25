@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f13a7fc5ec780eef91f96d2da06c5450fccf0e8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 276d6f2ac0ef9cfeb6c5fe7645dc2e6bf7a2fd11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791788"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052333"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -65,9 +65,9 @@ __interface IMyI
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di metodo](method-attributes.md)  
+[Attributi di metodo](method-attributes.md)

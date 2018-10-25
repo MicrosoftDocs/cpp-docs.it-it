@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3daa42008bd385b2d45d05106162c99fb9ca0b12
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235506"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082879"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble (parte 1)
 
@@ -32,7 +32,7 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
 
 In questa procedura dettagliata viene modificato l'esempio classico di Scribble 1.0 di MFC che consente di utilizzare il mouse per disegnare delle linee. Questa parte della procedura dettagliata mostra come modificare l'esempio di Scribble in modo che mostri una barra multifunzione. [Parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) aggiunti altri pulsanti alla barra multifunzione.
 
-## <a name="prerequisites"></a>Prerequisiti 
+## <a name="prerequisites"></a>Prerequisiti
 
 Il [esempio MFC di Scribble 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Per altre informazioni sulla conversione per Visual Studio 2017, vedere [Guida al Porting: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
@@ -146,7 +146,7 @@ Questa procedura dettagliata copia i file di risorse in base all'esempio creato 
    1. Importare il file filesmall, che contiene undici 16 x 16 (16 x 176) le immagini. Modificare l'ID della bitmap da `IDB_RIBBON_FILESMALL`.
 
    > [!NOTE]
-   > Poiché è necessario solo le immagini di prime otto 16x16 (16x128), si potrebbe Ritaglia facoltativamente la larghezza a destra di questa bitmap da 176 a 128. 
+   > Poiché è necessario solo le immagini di prime otto 16x16 (16x128), si potrebbe Ritaglia facoltativamente la larghezza a destra di questa bitmap da 176 a 128.
 
    1. Importare il filelarge, che contiene nove 32 x 32 (32 x 288) le immagini. Modificare l'ID della bitmap da `IDB_RIBBON_FILELARGE`.
 
@@ -161,7 +161,7 @@ Questa procedura dettagliata copia i file di risorse in base all'esempio creato 
    1. Importare la bitmap panelicons.bmp, la quale contiene otto immagini 16x16. Nel **delle proprietà** finestra di **Editor delle Bitmap**, regolare la larghezza della bitmap a 64 (16x64). Modificare l'ID della bitmap da `IDB_PANEL_ICONS`.
 
    > [!NOTE]
-   > Poiché è necessario solo le immagini 16x16 primi quattro (16x64), si potrebbe Ritaglia facoltativamente la larghezza a destra di questa bitmap da 128 a 64. 
+   > Poiché è necessario solo le immagini 16x16 primi quattro (16x64), si potrebbe Ritaglia facoltativamente la larghezza a destra di questa bitmap da 128 a 64.
 
 ##  <a name="addribbon"></a> Aggiunta di una risorsa barra multifunzione al progetto
 

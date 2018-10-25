@@ -20,25 +20,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3cf18d1b06c6a738659bf30bf58fc10c48aa0ce5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a90f60f830b4d5ec98685dbd8cd1c573d0fbcb4e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091036"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070296"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Servizi e pooling di risorse OLE DB
 
-Per funzionare bene con pool OLE DB o con qualsiasi servizio OLE DB, il provider deve supportare l'aggregazione di tutti gli oggetti. Questo è un requisito di OLE DB versione 1.5 o successive del provider. È fondamentale per l'utilizzo dei servizi. I provider che non supportano l'aggregazione non è possibile raggruppare in pool e non vengono forniti altri servizi.  
-  
-Per inserire in un pool, i provider devono supportare il modello di threading free. Il pool di risorse determina il modello di thread del provider in base al `DBPROP_THREADMODEL` proprietà.  
-  
-Se i provider presenta uno stato di connessione globali che potrebbe cambiare durante l'origine dati è in uno stato inizializzato, è opportuno che il nuovo `DBPROP_RESETDATASOURCE` proprietà. Questa proprietà viene chiamata prima una connessione viene riutilizzata e offre l'opportunità di pulire lo stato prima del successivo utilizzo il provider. Se il provider non è possibile pulire uno stato associato alla connessione, può restituire `DBPROPSTATUS_NOTSETTABLE` per la proprietà e la connessione non verrà riutilizzate.  
-  
-I provider che si connettono a un database remoto e in grado di rilevare se deve supportare la connessione vada persa la `DBPROP_CONNECTIONSTATUS` proprietà. Questa proprietà offre servizi OLE DB la possibilità di rilevare le connessioni interrotte e assicurarsi che non vengono restituiti al pool.  
-  
-Infine, inserimento automatico delle transazioni a livello generale non funziona se non viene implementato lo stesso livello del pooling. Provider che supportano l'inserimento automatico delle transazioni deve supportare la disabilitazione di questa integrazione esponendo le `DBPROP_INIT_OLEDBSERVICES` proprietà e la disattivazione di inserimento se la `DBPROPVAL_OS_TXNENLISTMENT` viene deselezionato.  
-  
-## <a name="see-also"></a>Vedere anche  
+Per funzionare bene con pool OLE DB o con qualsiasi servizio OLE DB, il provider deve supportare l'aggregazione di tutti gli oggetti. Questo è un requisito di OLE DB versione 1.5 o successive del provider. È fondamentale per l'utilizzo dei servizi. I provider che non supportano l'aggregazione non è possibile raggruppare in pool e non vengono forniti altri servizi.
+
+Per inserire in un pool, i provider devono supportare il modello di threading free. Il pool di risorse determina il modello di thread del provider in base al `DBPROP_THREADMODEL` proprietà.
+
+Se i provider presenta uno stato di connessione globali che potrebbe cambiare durante l'origine dati è in uno stato inizializzato, è opportuno che il nuovo `DBPROP_RESETDATASOURCE` proprietà. Questa proprietà viene chiamata prima una connessione viene riutilizzata e offre l'opportunità di pulire lo stato prima del successivo utilizzo il provider. Se il provider non è possibile pulire uno stato associato alla connessione, può restituire `DBPROPSTATUS_NOTSETTABLE` per la proprietà e la connessione non verrà riutilizzate.
+
+I provider che si connettono a un database remoto e in grado di rilevare se deve supportare la connessione vada persa la `DBPROP_CONNECTIONSTATUS` proprietà. Questa proprietà offre servizi OLE DB la possibilità di rilevare le connessioni interrotte e assicurarsi che non vengono restituiti al pool.
+
+Infine, inserimento automatico delle transazioni a livello generale non funziona se non viene implementato lo stesso livello del pooling. Provider che supportano l'inserimento automatico delle transazioni deve supportare la disabilitazione di questa integrazione esponendo le `DBPROP_INIT_OLEDBSERVICES` proprietà e la disattivazione di inserimento se la `DBPROPVAL_OS_TXNENLISTMENT` viene deselezionato.
+
+## <a name="see-also"></a>Vedere anche
 
 [Tecniche avanzate del provider](../../data/oledb/advanced-provider-techniques.md)

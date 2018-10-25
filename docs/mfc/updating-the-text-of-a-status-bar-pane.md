@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae8b15431edbdd24a7afd6c7e25be6b9eadb4107
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393321"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081391"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aggiornamento del testo di un riquadro barra di stato
 
@@ -40,17 +40,17 @@ Ad esempio, si supponga che dispone di un riquadro `ID_INDICATOR_PAGE` come l'id
 
 1. Definire l'ID del comando. del riquadro
 
-     Nel **View** menu, fare clic su **visualizzazione risorse**. Fare doppio clic la risorsa del progetto e fare clic su **simboli risorsa**. Nella finestra di dialogo Simboli risorsa, fare clic su `New`. Digitare un nome di ID comando: ad esempio, `ID_INDICATOR_PAGE`. Specificare un valore per l'ID oppure accettare il valore suggerito dalla finestra di dialogo Simboli risorsa. Ad esempio, per `ID_INDICATOR_PAGE`, accettare il valore predefinito. Chiudere la finestra di dialogo Simboli risorsa.
+   Nel **View** menu, fare clic su **visualizzazione risorse**. Fare doppio clic la risorsa del progetto e fare clic su **simboli risorsa**. Nella finestra di dialogo Simboli risorsa, fare clic su `New`. Digitare un nome di ID comando: ad esempio, `ID_INDICATOR_PAGE`. Specificare un valore per l'ID oppure accettare il valore suggerito dalla finestra di dialogo Simboli risorsa. Ad esempio, per `ID_INDICATOR_PAGE`, accettare il valore predefinito. Chiudere la finestra di dialogo Simboli risorsa.
 
 1. Definire una stringa predefinita da visualizzare nel riquadro.
 
-     Con la visualizzazione di risorse è aperta, fare doppio clic su **tabella di stringhe** nella finestra che elenca i tipi di risorsa per l'applicazione. Con il **tabella di stringhe** editor aperto, scegliere **nuova stringa** dal **Inserisci** menu. Nella finestra proprietà di stringa, selezionare l'ID di comando del riquadro (ad esempio, `ID_INDICATOR_PAGE`) e digitare un valore di stringa predefinito, ad esempio "Page". Chiudere l'editor di stringa. (Necessaria una stringa predefinita per evitare un errore del compilatore.)
+   Con la visualizzazione di risorse è aperta, fare doppio clic su **tabella di stringhe** nella finestra che elenca i tipi di risorsa per l'applicazione. Con il **tabella di stringhe** editor aperto, scegliere **nuova stringa** dal **Inserisci** menu. Nella finestra proprietà di stringa, selezionare l'ID di comando del riquadro (ad esempio, `ID_INDICATOR_PAGE`) e digitare un valore di stringa predefinito, ad esempio "Page". Chiudere l'editor di stringa. (Necessaria una stringa predefinita per evitare un errore del compilatore.)
 
 1. Aggiungere il riquadro per il *indicatori* matrice.
 
-     Nel file MAINFRM. CPP, individuare il *indicatori* matrice. Questa matrice vengono elencati gli ID comando per tutti gli indicatori della barra di stato, in ordine da sinistra a destra. Nel punto appropriato nella matrice, immettere l'ID di comando del riquadro, come illustrato di seguito per `ID_INDICATOR_PAGE`:
+   Nel file MAINFRM. CPP, individuare il *indicatori* matrice. Questa matrice vengono elencati gli ID comando per tutti gli indicatori della barra di stato, in ordine da sinistra a destra. Nel punto appropriato nella matrice, immettere l'ID di comando del riquadro, come illustrato di seguito per `ID_INDICATOR_PAGE`:
 
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
 Il metodo consigliato per visualizzare il testo in un riquadro consiste nel chiamare il `SetText` funzione membro di classe `CCmdUI` in una funzione del gestore di aggiornamento per il riquadro. Potrebbe ad esempio, si desidera impostare una variabile integer *m_nPage* che contiene il numero di pagina corrente e l'uso `SetText` per impostare il testo del riquadro a una versione di stringa di tale numero.
 
@@ -63,19 +63,19 @@ La procedura seguente viene illustrato come utilizzare una funzione del gestore 
 
 1. Aggiungere un gestore di aggiornamento di comando per il comando.
 
-     Aggiungere manualmente un prototipo per il gestore, come illustrato di seguito per `ID_INDICATOR_PAGE` (in MAINFRM. H):
+   Aggiungere manualmente un prototipo per il gestore, come illustrato di seguito per `ID_INDICATOR_PAGE` (in MAINFRM. H):
 
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+   [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
 1. In appropriato. CPP file, aggiungere la definizione del gestore, come illustrato di seguito per `ID_INDICATOR_PAGE` (in MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+   [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-     Le ultime tre righe di questo gestore di sono il codice che visualizza il testo.
+   Le ultime tre righe di questo gestore di sono il codice che visualizza il testo.
 
 1. Nella mappa messaggi appropriata, aggiungere la macro ON_UPDATE_COMMAND_UI, come illustrato di seguito per `ID_INDICATOR_PAGE` (in MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+   [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
 Dopo aver definito il valore della *m_nPage* variabile membro (della classe `CMainFrame`), questa tecnica fa sì che il numero di pagina vengano visualizzati nel riquadro durante l'elaborazione inattiva in modo che l'applicazione aggiorna altri indicatori. Se *m_nPage* le modifiche, la visualizzazione viene modificata durante il successivo ciclo inattivo.
 

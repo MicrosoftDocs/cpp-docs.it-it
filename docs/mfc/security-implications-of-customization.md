@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442084"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080845"
 ---
 # <a name="security-implications-of-customization"></a>Implicazioni relative alla sicurezza della personalizzazione
 
@@ -38,7 +38,7 @@ Si consiglia di uno di questi tre modi per chiudere le vulnerabilità nel Regist
 
 - Store i dati in un file protetto anziché nel Registro di sistema.
 
-     Per portare a termine questi primi due modi diversi, derivare una classe dalla classe [classe CSettingsStore](../mfc/reference/csettingsstore-class.md) ed eseguire l'override di metodi per implementare la crittografia o l'archiviazione all'esterno del Registro di sistema.
+   Per portare a termine questi primi due modi diversi, derivare una classe dalla classe [classe CSettingsStore](../mfc/reference/csettingsstore-class.md) ed eseguire l'override di metodi per implementare la crittografia o l'archiviazione all'esterno del Registro di sistema.
 
 - È anche possibile disabilitare le personalizzazioni all'interno dell'applicazione.
 

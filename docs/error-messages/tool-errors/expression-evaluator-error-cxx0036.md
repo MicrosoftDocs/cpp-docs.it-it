@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2d82a1254a11dbda3164ea1c350dc14e2b1a122
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a94ed846d2d4ebda2e457ee772a9f8bf081d69d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050112"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077172"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Errore dell‘analizzatore di espressioni CXX0036
 
@@ -32,20 +32,20 @@ Questo messaggio può essere generato da uno qualsiasi dei numerosi errori nell'
 
 - La sintassi dell'operatore di contesto (**{}**) è stato specificato in modo errato.
 
-     La sintassi dell'operatore di contesto è:
+   La sintassi dell'operatore di contesto è:
 
      {*funzione*,*modulo*,*dll*}*espressione*
 
-     Specifica il contesto di *espressione*. L'operatore di contesto è la stessa precedenza e l'utilizzo come un cast di tipo.
+   Specifica il contesto di *espressione*. L'operatore di contesto è la stessa precedenza e l'utilizzo come un cast di tipo.
 
-     È possibile omettere le virgole finali. Se una qualsiasi delle *funzione*, *modulo*, o *dll* contiene una virgola letterale, è necessario racchiudere l'intero nome tra parentesi.
+   È possibile omettere le virgole finali. Se una qualsiasi delle *funzione*, *modulo*, o *dll* contiene una virgola letterale, è necessario racchiudere l'intero nome tra parentesi.
 
 - Il nome della funzione sia stato digitato in modo non corretto o non esiste nel modulo o libreria a collegamento dinamico.
 
-     Perché C è un linguaggio di distinzione maiuscole/minuscole *funzione* deve essere specificato esattamente del caso con è definito nell'origine.
+   Perché C è un linguaggio di distinzione maiuscole/minuscole *funzione* deve essere specificato esattamente del caso con è definito nell'origine.
 
 - Modulo o della DLL non è stata trovata.
 
-     Controllare il nome e percorso completo del modulo specificato o della DLL.
+   Controllare il nome e percorso completo del modulo specificato o della DLL.
 
 Questo errore è identico all'errore CAN0036.

@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90754db9c648395ad916cf03682a5c87c0b7da3b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3cc592deaed967a7b6e93f9250103e28fb058de3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235308"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080754"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Procedura dettagliata: Creazione e uso di una libreria statica (C++)
 
@@ -35,9 +35,9 @@ In questa procedura dettagliata vengono illustrate le seguenti attività:
 
 - [Creazione di un'applicazione console che fa riferimento alla libreria statica](#CreateAppToRefTheLib)
 
-- [Utilizzo della funzionalità della libreria statica nell'app](#UseLibInApp)
+- [Uso della funzionalità della libreria statica nell'applicazione](#UseLibInApp)
 
-- [L'esecuzione dell'app](#RunApp)
+- [Esecuzione dell'app](#RunApp)
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -54,7 +54,7 @@ Conoscenza delle nozioni di base del linguaggio C++.
    > [!NOTE]
    > Per le versioni di Visual Studio precedenti 2017, nelle **nuovo progetto** finestra di dialogo espandere **installati** > **modelli**  >  **Visual C++**, quindi selezionare **Win32**. Nel riquadro centrale, selezionare **Progetto console Win32**.
 
-1. Specificare un nome per il progetto, ad esempio, *MathFuncsLib*, ovvero nel **nome** casella. Specificare un nome per la soluzione, ad esempio, *StaticLibrary*, ovvero nel **Nome soluzione** casella. Fare clic sul pulsante **OK** .
+1. Specificare il nome del progetto, ad esempio *MathFuncsLib*, nella casella **Nome** . Specificare un nome per la soluzione, ad esempio *StaticLibrary*, nella casella **Nome soluzione** . Fare clic sul pulsante **OK** .
 
     - Per Visual Studio 2017,
 
@@ -74,13 +74,13 @@ Conoscenza delle nozioni di base del linguaggio C++.
 
 ### <a name="to-add-a-class-to-the-static-library"></a>Per aggiungere una classe alla libreria statica
 
-1. Per creare un file di intestazione per una nuova classe, aprire il menu di scelta rapida per il **MathFuncsLib** del progetto **Esplora soluzioni**, quindi scegliere **Add**  >   **Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** nel riquadro sinistro in **Visual C++**, selezionare **Codice**. Nel riquadro centrale selezionare **File di intestazione (.h)**. Specificare un nome per il file di intestazione, ad esempio, *MathFuncsLib. H*e quindi scegliere il **Add** pulsante. Viene visualizzato un file di intestazione vuoto.
+1. Per creare un file di intestazione per una nuova classe, aprire il menu di scelta rapida per il **MathFuncsLib** del progetto **Esplora soluzioni**, quindi scegliere **Add**  >   **Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** nel riquadro sinistro in **Visual C++**, selezionare **Codice**. Nel riquadro centrale selezionare **File di intestazione (.h)**. Specificare un nome per il file d'intestazione, ad esempio *MathFuncsLib.h*e quindi scegliere il pulsante **Aggiungi** . Viene visualizzato un file di intestazione vuoto.
 
 1. Aggiungere una classe denominata `MyMathFuncs` per eseguire operazioni matematiche comuni quali addizione, sottrazione, moltiplicazione e divisione. Il codice dovrebbe essere simile:
 
    [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]
 
-1. Per creare un file di origine per la nuova classe, aprire il menu di scelta rapida per il **MathFuncsLib** del progetto **Esplora soluzioni**, quindi scegliere **Add**  >   **Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** nel riquadro sinistro in **Visual C++**, selezionare **Codice**. Nel riquadro centrale selezionare **File di C++ (.cpp)**. Specificare un nome per il file di origine, ad esempio, *MathFuncsLib. cpp*e quindi scegliere il **Add** pulsante. Viene visualizzato un file di origine vuoto.
+1. Per creare un file di origine per la nuova classe, aprire il menu di scelta rapida per il **MathFuncsLib** del progetto **Esplora soluzioni**, quindi scegliere **Add**  >   **Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** nel riquadro sinistro in **Visual C++**, selezionare **Codice**. Nel riquadro centrale selezionare **File di C++ (.cpp)**. Specificare un nome per il file di origine, ad esempio *MathFuncsLib.cpp*e quindi scegliere il pulsante **Aggiungi** . Viene visualizzato un file di origine vuoto.
 
 1. Usare questo file di origine per implementare la funzionalità per **MyMathFuncs**. Il codice dovrebbe essere simile:
 
@@ -97,12 +97,12 @@ Conoscenza delle nozioni di base del linguaggio C++.
 
 1. Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
 
-1. Nel riquadro sinistro della finestra di **nuovo progetto** finestra di dialogo espandere **installato** > **Visual C++** e quindi selezionare **Windows Desktop**. Nel riquadro centrale, selezionare **Creazione guidata applicazione Desktop Windows**. 
+1. Nel riquadro sinistro della finestra di **nuovo progetto** finestra di dialogo espandere **installato** > **Visual C++** e quindi selezionare **Windows Desktop**. Nel riquadro centrale, selezionare **Creazione guidata applicazione Desktop Windows**.
 
    > [!NOTE]
    > Per le versioni di Visual Studio precedenti 2017, nelle **nuovo progetto** finestra di dialogo espandere **installati** > **modelli**  >  **Visual C++**, quindi selezionare **Win32**. Nel riquadro centrale, selezionare **Progetto console Win32**.
 
-1. Specificare un nome per il progetto, ad esempio, *MyExecRefsLib*, ovvero nel **nome** casella. Nell'elenco a discesa accanto a **Soluzione**selezionare **Aggiungi a soluzione**. Il comando aggiunge il nuovo progetto alla soluzione che contiene le librerie statiche. Fare clic sul pulsante **OK** .
+1. Specificare il nome del progetto, ad esempio *MyExecRefsLib*, nella casella **Nome** . Nell'elenco a discesa accanto a **Soluzione**selezionare **Aggiungi a soluzione**. Il comando aggiunge il nuovo progetto alla soluzione che contiene le librerie statiche. Fare clic sul pulsante **OK** .
 
     - Per Visual Studio 2017,
 
@@ -118,7 +118,7 @@ Conoscenza delle nozioni di base del linguaggio C++.
 
         1. Assicurarsi che **applicazione Console** sia selezionata. Quindi controllare la **progetto vuoto** e selezionare **fine**.
 
-##  <a name="UseLibInApp"></a> Utilizzo della funzionalità della libreria statica nell'app
+##  <a name="UseLibInApp"></a> Uso della funzionalità della libreria statica nell'applicazione
 
 ### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Per usare questa funzionalità della libreria statica nell'applicazione
 
@@ -138,13 +138,13 @@ Conoscenza delle nozioni di base del linguaggio C++.
 
 1. Compilare l'eseguibile scegliendo **compilare** > **Compila soluzione** nella barra dei menu.
 
-##  <a name="RunApp"></a> L'esecuzione dell'app
+##  <a name="RunApp"></a> Esecuzione dell'app
 
 ### <a name="to-run-the-app"></a>Per eseguire l'app
 
 1. Assicurarsi che **MyExecRefsLib** sia selezionato come progetto predefinito aprendo il menu di scelta rapida di **MyExecRefsLib** in **Esplora soluzioni**e quindi selezionando **Imposta come progetto di avvio**.
 
-1. Per eseguire il progetto, nella barra dei menu, scegliere **Debug** > **Avvia senza eseguire debug**. L'output dovrebbe essere simile:
+1. Per eseguire il progetto, sulla barra dei menu scegliere **Debug** > **Avvia senza eseguire debug**. L'output dovrebbe essere simile:
 
     ```Output
     a + b = 106.4

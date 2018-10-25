@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d618ace9d922daabecf908c76a319e89a9fdedcc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dff9f3c988e7ffdf8f15b5502bb0326e2692a128
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094182"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079038"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Del compilatore (livello 3) avviso C4996
 
@@ -82,7 +82,6 @@ Microsoft è stato rinominato alcune funzioni POSIX in CRT deve essere conforme 
 Per risolvere questo problema, è in genere consigliabile che si modifica il codice per usare invece i nomi delle funzioni suggerita. Tuttavia, i nomi aggiornati sono specifiche di Microsoft. Se è necessario usare i nomi di funzione esistenti per motivi di portabilità, è possibile disattivare la visualizzazione degli avvisi. Le funzioni POSIX sono ancora disponibili nella libreria con i nomi originali.
 
 Per disattivare gli avvisi di deprecazione per queste funzioni, definire la macro del preprocessore  **\_CRT\_NONSTDC\_NO\_avvisi**. È possibile definire questa macro nella riga di comando includendo l'opzione `/D_CRT_NONSTDC_NO_WARNINGS`.
-
 
 ### <a name="unsafe-crt-library-functions"></a>Funzioni della libreria CRT unsafe
 

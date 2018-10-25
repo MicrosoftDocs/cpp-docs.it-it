@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af14755b9be9413feb3a519d09200577c9260c5a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052914"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053709"
 ---
 # <a name="atl-control-containment-faq"></a>Domande frequenti sul contenimento di controlli ATL
 
@@ -37,7 +37,7 @@ Codice di hosting di controlli ATL non richiede di usare tutte le classi ATL; è
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Esegue il wrapping di un' **"Atlaxwin80"** finestra, che fornisce metodi per la creazione della finestra, la creazione di un controllo e/o associare un controllo con licenza per la finestra e il recupero di puntatori a interfaccia per l'oggetto host.|
 |[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Funge da classe base per classi di controlli ActiveX basati su una risorsa finestra di dialogo. Tali controlli possono contenere altri controlli ActiveX.|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Funge da classe base per classi di finestre di dialogo basata su una risorsa finestra di dialogo. Tali finestre di dialogo può contenere i controlli ActiveX.|
-|[CWindow](../atl/reference/cwindow-class.md)|Fornisce un metodo, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), che restituisce un puntatore a interfaccia su un controllo, l'ID della finestra host specificato. Inoltre, i wrapper di API Windows esposte da `CWindow` generalmente semplificare la gestione di finestra.|  
+|[CWindow](../atl/reference/cwindow-class.md)|Fornisce un metodo, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), che restituisce un puntatore a interfaccia su un controllo, l'ID della finestra host specificato. Inoltre, i wrapper di API Windows esposte da `CWindow` generalmente semplificare la gestione di finestra.|
 
 ## <a name="what-is-the-atl-control-hosting-api"></a>Che cos'è la libreria ATL API di Hosting di controllo?
 
@@ -62,11 +62,11 @@ Il `HWND` parametri nelle prime tre funzioni devono essere una finestra esistent
 Le prime sette funzioni chiamano [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) in modo implicito.
 
 > [!NOTE]
->  L'API di hosting di controlli costituisce la base del supporto ATL per contenimento dei controlli ActiveX. Tuttavia, è in genere necessario chiamare direttamente queste funzioni, se è possibile sfruttare o le funzionalità complete di classi wrapper ATL. Per altre informazioni, vedere [cui classi facilitare ActiveX contenimento di controlli ATL](which-atl-classes-facilitate-activex-control-containment-q.md).  
+>  L'API di hosting di controlli costituisce la base del supporto ATL per contenimento dei controlli ActiveX. Tuttavia, è in genere necessario chiamare direttamente queste funzioni, se è possibile sfruttare o le funzionalità complete di classi wrapper ATL. Per altre informazioni, vedere [cui classi facilitare ActiveX contenimento di controlli ATL](which-atl-classes-facilitate-activex-control-containment-q.md).
 
 ## <a name="what-is-atlaxwin100"></a>Che cos'è AtlAxWin100?
 
-`AtlAxWin100` è il nome di una classe della finestra che consente di fornire funzionalità di hosting di controlli ATL. Quando si crea un'istanza di questa classe, la procedura della finestra utilizzeranno automaticamente l'API di hosting di controlli per creare un oggetto host associato alla finestra e caricarla con il controllo che si specifica come il titolo della finestra. 
+`AtlAxWin100` è il nome di una classe della finestra che consente di fornire funzionalità di hosting di controlli ATL. Quando si crea un'istanza di questa classe, la procedura della finestra utilizzeranno automaticamente l'API di hosting di controlli per creare un oggetto host associato alla finestra e caricarla con il controllo che si specifica come il titolo della finestra.
 
 ## <a name="when-do-i-need-to-call-atlaxwininit"></a>Quando è necessario chiamare AtlAxWinInit?
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36c6ac4d8c3e2899b744d1c456ae3079ec031698
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 63c7a6b640039f6e3008cab924c9d58dfcb1fcc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053583"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080611"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>Avviso del compilatore (livello 4) C4295
 
@@ -36,7 +36,6 @@ L'esempio seguente genera l'errore C4295. Per risolvere questo problema, si potr
 ```C
 // C4295.c
 // compile with: /W4
-
 
 int main() {
    char a[3] = "abc";           // C4295

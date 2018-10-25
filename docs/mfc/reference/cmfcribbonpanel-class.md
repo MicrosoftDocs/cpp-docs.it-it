@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422226"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082580"
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 
 Implementa un riquadro contenente un set di elementi della barra multifunzione. Quando il pannello viene disegnato, visualizza tutti gli elementi possibili in base alle proprie dimensioni.
 
 Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
-
 
 ## <a name="syntax"></a>Sintassi
 
@@ -540,7 +539,6 @@ Il nome del pannello della barra multifunzione.
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 Puntatore alla categoria della barra multifunzione che contiene questo pannello della barra multifunzione.
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ Quando l'utente seleziona il pulsante dell'applicazione, verrà visualizzato il 
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *nChar*
+[in] *nChar*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in] Specifica l'indice in base zero dell'elemento da sostituire.
 
-[in] [out] *pElem* un puntatore valido per l'elemento che sostituisce l'elemento originale.
+*pElem*<br/>
+[in, out] Un puntatore valido per l'elemento che sostituisce l'elemento originale.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in] Specifica l'ID di comando dell'elemento da sostituire.
 
-[in] [out] *pElem* un puntatore valido per l'elemento che sostituirà l'elemento originale.
+*pElem*<br/>
+[in, out] Un puntatore valido per l'elemento che sostituirà l'elemento originale.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in] Specifica l'indice in base zero dell'elemento della barra multifunzione da aggiungere.
 
-[in] [out] *pRTC* un puntatore alle informazioni sulla classe di runtime per l'elemento della barra multifunzione che viene aggiunto al pannello della barra multifunzione.
+*pRTC*<br/>
+[in, out] Puntatore alle informazioni sulla classe di runtime per l'elemento della barra multifunzione che viene aggiunto al pannello della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in] Specifica l'ID di comando dell'elemento della barra multifunzione da aggiungere.
 
-[in] [out] *pRTC* un puntatore alle informazioni sulla classe di runtime associati all'elemento della barra multifunzione che viene aggiunto al pannello della barra multifunzione.
+*pRTC*<br/>
+[in, out] Puntatore alle informazioni sulla classe di runtime associati all'elemento della barra multifunzione che viene aggiunto al pannello della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1781077896465d8a7a1d925262c3fd0696d24380
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a077cd90055a17f9aff71d67d2cb9a511a1caf0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078037"
 ---
 # <a name="mfc-library-versions"></a>Versioni di librerie MFC
 
@@ -95,7 +95,7 @@ I progetti MFC usano il simbolo del preprocessore \_UNICODE per indicare il supp
 
 Librerie statiche per MFC utilizzano le seguenti convenzioni di denominazione. I nomi delle librerie si presentano come
 
-> *u*AFX*c**d*.LIB
+> <em>u</em>AFX<em>cd</em>. LIB
 
 dove le lettere mostrate in minuscolo corsivo sono dei segnaposti per gli identificatori i cui significati sono mostrati nella tabella seguente:
 

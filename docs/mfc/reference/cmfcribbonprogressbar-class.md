@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27fec3420343b5b6af240f89bb922256cee52a7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c056ce5a9747be280e465e2054402f43761c64e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375563"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071573"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
 
@@ -81,7 +81,7 @@ Oggetto `CMFCRibbonProgressBar` possono operare in due modalità: normale e infi
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari metodi nel `CMFCRibbonProgressBar` classe. Nell'esempio viene illustrato come impostare l'indicatore di stato per l'utilizzo della modalità infinita (in cui il tempo di completamento di un'operazione è sconosciuto), impostare i valori minimi e massimo per l'indicatore di stato e impostare la posizione corrente dell'indicatore di stato. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonProgressBar` . Nell'esempio viene illustrato come impostare l'indicatore di stato per l'utilizzo della modalità infinita (in cui il tempo di completamento di un'operazione è sconosciuto), impostare i valori minimi e massimo per l'indicatore di stato e impostare la posizione corrente dell'indicatore di stato. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -103,7 +103,6 @@ Costruisce e Inizializza un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribb
 
 ```
 CMFCRibbonProgressBar();
-
 
 CMFCRibbonProgressBar(
     UINT nID,
@@ -174,7 +173,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -206,7 +205,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Note
 

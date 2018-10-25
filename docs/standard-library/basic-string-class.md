@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b86f8bca0cade273fc3b6bc1e7c936bf917bb4ba
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 61c7b7c5a8e1df8f22140bcd4debab3504144032
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235984"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082427"
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 
@@ -606,7 +606,6 @@ Fornisce un riferimento al carattere con un indice specificato in una stringa.
 ```cpp
 const_reference at(size_type _Off) const;
 
-
 reference at(size_type _Off);
 ```
 
@@ -674,7 +673,6 @@ Restituisce un riferimento all'ultimo elemento nella stringa.
 
 ```cpp
 const_reference back() const;
-
 
 reference back();
 ```
@@ -848,7 +846,6 @@ Restituisce un iteratore che punta al primo elemento nella stringa.
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -1140,12 +1137,10 @@ Esegue un confronto con distinzione maiuscole/minuscole con una stringa specific
 int compare(
     const basic_string<CharType, Traits, Allocator>& str) const;
 
-
 int compare(
     size_type _Pos1,
     size_type _Num1,
     const basic_string<CharType, Traits, Allocator>& str) const;
-
 
 int compare(
     size_type _Pos1,
@@ -1154,16 +1149,13 @@ int compare(
     size_type _Off,
     size_type count) const;
 
-
 int compare(
     const value_type* ptr) const;
-
 
 int compare(
     size_type _Pos1,
     size_type _Num1,
     const value_type* ptr) const;
-
 
 int compare(
     size_type _Pos1,
@@ -1843,7 +1835,6 @@ Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -2022,17 +2013,14 @@ size_type find(
     value_type _Ch,
     size_type _Off = 0) const;
 
-
 size_type find(
     const value_type* ptr,
     size_type _Off = 0) const;
-
 
 size_type find(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2200,17 +2188,14 @@ size_type find_first_not_of(
     value_type _Ch,
     size_type _Off = 0) const;
 
-
 size_type find_first_not_of(
     const value_type* ptr,
     size_type _Off = 0) const;
-
 
 size_type find_first_not_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_first_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2391,17 +2376,14 @@ size_type find_first_of(
     value_type _Ch,
     size_type _Off = 0) const;
 
-
 size_type find_first_of(
     const value_type* ptr,
     size_type _Off = 0) const;
-
 
 size_type find_first_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_first_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2581,17 +2563,14 @@ size_type find_last_not_of(
     value_type _Ch,
     size_type _Off = npos) const;
 
-
 size_type find_last_not_of(
     const value_type* ptr,
     size_type _Off = npos) const;
-
 
 size_type find_last_not_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_last_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2773,17 +2752,14 @@ size_type find_last_of(
     value_type _Ch,
     size_type _Off = npos) const;
 
-
 size_type find_last_of(
     const value_type* ptr,
     size_type _Off = npos) const;
-
 
 size_type find_last_of(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type find_last_of(
     const basic_string<CharType, Traits, Allocator>& str,
@@ -2947,7 +2923,6 @@ Restituisce un riferimento al primo elemento in una stringa.
 
 ```cpp
 const_reference front() const;
-
 
 reference front();
 ```
@@ -3559,7 +3534,7 @@ Il primo elemento della stringa ha un indice zero e agli elementi seguenti vengo
 
 Il riferimento restituito può essere invalidato da riallocazioni o modifiche delle stringhe per le stringhe non **const**.
 
-Durante la compilazione con [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) impostato su 1 o 2, se si tenta di accedere a un elemento all'esterno dei limiti della stringa si verifica un errore di runtime. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Durante la compilazione con [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) impostato su 1 o 2, se si tenta di accedere a un elemento all'esterno dei limiti della stringa si verifica un errore di runtime. Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Esempio
 
@@ -3711,7 +3686,6 @@ Restituisce un iteratore al primo elemento in una stringa invertita.
 ```cpp
 const_reverse_iterator rbegin() const;
 
-
 reverse_iterator rbegin();
 ```
 
@@ -3807,7 +3781,6 @@ Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento
 
 ```cpp
 const_reverse_iterator rend() const;
-
 
 reverse_iterator rend();
 ```
@@ -4402,17 +4375,14 @@ size_type rfind(
     value_type _Ch,
     size_type _Off = npos) const;
 
-
 size_type rfind(
     const value_type* ptr,
     size_type _Off = npos) const;
-
 
 size_type rfind(
     const value_type* ptr,
     size_type _Off,
     size_type count) const;
-
 
 size_type rfind(
     const basic_string<CharType, Traits, Allocator>& str,

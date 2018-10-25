@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4538d74d251cbae4c3e5fc30629ca10cdb9fbce3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48e8052575514d36b0e82f9f6c151b9df18eaed9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442786"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079532"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 
@@ -615,7 +615,6 @@ Nell'esempio seguente viene illustrato come recuperare i valori predefiniti di u
 
 ##  <a name="adjustframes"></a>  CMFCVisualManager::AdjustFrames
 
-
 ```
 static void __stdcall AdjustFrames();
 ```
@@ -623,7 +622,6 @@ static void __stdcall AdjustFrames();
 ### <a name="remarks"></a>Note
 
 ##  <a name="adjusttoolbars"></a>  CMFCVisualManager::AdjustToolbars
-
 
 ```
 static void __stdcall AdjustToolbars();
@@ -649,19 +647,17 @@ Eseguire l'override di questa funzione in un gestore visualizzazione derivata e 
 
 ##  <a name="cmfcvisualmanager"></a>  CMFCVisualManager::CMFCVisualManager
 
-
 ```
 CMFCVisualManager(BOOL bTemporary = FALSE);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *BFILE*
+[in] *BFILE*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="destroyinstance"></a>  CMFCVisualManager::DestroyInstance
-
 
 ```
 static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
@@ -669,12 +665,11 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAutoDestroyOnly*
+[in] *bAutoDestroyOnly*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="dodrawheadersortarrow"></a>  CMFCVisualManager::DoDrawHeaderSortArrow
-
 
 ```
 void DoDrawHeaderSortArrow(
@@ -686,15 +681,14 @@ void DoDrawHeaderSortArrow(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect*
-*bIsUp*<br/>
-[in] [in] *bDlgCtrl*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bIsUp*<br/>
+[in] *bDlgCtrl*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManager::DrawComboBorderWinXP
-
 
 ```
 virtual BOOL DrawComboBorderWinXP(CDC*,
@@ -706,16 +700,15 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CDC**
-*CRect*<br/>
-[in] [in] *BOOL*
+[in] *CDC&#42;*<br/>
+[in] *CRect*<br/>
+[in] *BOOL*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManager::DrawComboDropButtonWinXP
-
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(CDC*,
@@ -727,16 +720,15 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CDC**
-*CRect*<br/>
-[in] [in] *BOOL*
+[in] *CDC&#42;*<br/>
+[in] *CRect*<br/>
+[in] *BOOL*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManager::DrawPushButtonWinXP
-
 
 ```
 virtual BOOL DrawPushButtonWinXP(CDC*,
@@ -747,16 +739,16 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CDC**
-*CRect*<br/>
-[in] [in] *CMFCButton** [in] *UINT*
+[in] *CDC&#42;*<br/>
+[in] *CRect*<br/>
+[in] *CMFCButton&#42;*<br/>
+[in] *UINT*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="drawtextonglass"></a>  CMFCVisualManager::DrawTextOnGlass
-
 
 ```
 virtual BOOL DrawTextOnGlass(
@@ -770,12 +762,12 @@ virtual BOOL DrawTextOnGlass(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *strText*
-*rect*<br/>
-[in] [in] *dwFlags*
-*nGlowSize*<br/>
-[in] [in] *clrText*
+[in] *pDC*<br/>
+[in] *strText*<br/>
+[in] *rect*<br/>
+[in] *dwFlags*<br/>
+[in] *nGlowSize*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -783,14 +775,13 @@ virtual BOOL DrawTextOnGlass(
 
 ##  <a name="enabletoolbarbuttonfill"></a>  CMFCVisualManager::EnableToolbarButtonFill
 
-
 ```
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAttivare il*
+[in] *bAttivare il*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -854,7 +845,6 @@ Eseguire l'override di questo metodo nella classe derivata per personalizzare il
 
 ##  <a name="getcaptionbuttonextraborder"></a>  CMFCVisualManager::GetCaptionButtonExtraBorder
 
-
 ```
 virtual CSize GetCaptionButtonExtraBorder() const;
 ```
@@ -864,7 +854,6 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="getdockingpanecaptionextraheight"></a>  CMFCVisualManager::GetDockingPaneCaptionExtraHeight
-
 
 ```
 virtual int GetDockingPaneCaptionExtraHeight() const;
@@ -894,14 +883,13 @@ Eseguire l'override di questo metodo in un gestore visualizzazione personalizzat
 
 ##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManager::GetHighlightedMenuItemTextColor
 
-
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pButton*
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -917,7 +905,7 @@ static CMFCVisualManager* GetInstance();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CMFCVisualManager` oggetto.
+Puntatore a un oggetto `CMFCVisualManager` .
 
 ### <a name="remarks"></a>Note
 
@@ -941,7 +929,6 @@ Eseguire l'override di questa funzione in una classe derivata per personalizzare
 
 ##  <a name="getmenuimagemargin"></a>  CMFCVisualManager::GetMenuImageMargin
 
-
 ```
 virtual int GetMenuImageMargin() const;
 ```
@@ -952,7 +939,6 @@ virtual int GetMenuImageMargin() const;
 
 ##  <a name="getmenuitemtextcolor"></a>  CMFCVisualManager::GetMenuItemTextColor
 
-
 ```
 virtual COLORREF GetMenuItemTextColor(
     CMFCToolBarMenuButton* pButton,
@@ -962,8 +948,9 @@ virtual COLORREF GetMenuItemTextColor(
 
 ### <a name="parameters"></a>Parametri
 
-*pButton*<br/>
-[in] [in] *bHighlighted* [in] *bDisattivato*
+[in] *pButton*<br/>
+[in] *bHighlighted*<br/>
+[in] *bDisattivato*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1024,7 +1011,6 @@ Eseguire l'override di questo metodo per personalizzare le dimensioni del bordo 
 
 ##  <a name="getpopupmenugap"></a>  CMFCVisualManager::GetPopupMenuGap
 
-
 ```
 virtual int GetPopupMenuGap() const;
 ```
@@ -1077,14 +1063,13 @@ Eseguire l'override di questa funzione per personalizzare il colore del testo di
 
 ##  <a name="getribbonhyperlinktextcolor"></a>  CMFCVisualManager::GetRibbonHyperlinkTextColor
 
-
 ```
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pHyperLink*
+[in] *pHyperLink*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1092,21 +1077,19 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 ##  <a name="getribbonpopupbordersize"></a>  CMFCVisualManager::GetRibbonPopupBorderSize
 
-
 ```
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CMFCRibbonPanelMenu**
+[in] *CMFCRibbonPanelMenu&#42;*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>  CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset
-
 
 ```
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
@@ -1118,7 +1101,6 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
 
 ##  <a name="getribbonquickaccesstoolbarrightmargin"></a>  CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin
 
-
 ```
 virtual int GetRibbonQuickAccessToolBarRightMargin();
 ```
@@ -1129,21 +1111,19 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
 
 ##  <a name="getribbonquickaccesstoolbartextcolor"></a>  CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor
 
-
 ```
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bDisattivato*
+[in] *bDisattivato*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getribbonslidercolors"></a>  CMFCVisualManager::GetRibbonSliderColors
-
 
 ```
 virtual void GetRibbonSliderColors(
@@ -1157,17 +1137,16 @@ virtual void GetRibbonSliderColors(
 
 ### <a name="parameters"></a>Parametri
 
-*pSlider*<br/>
-[in] [in] *bIsHighlighted*
-*bIsPressed*<br/>
-[in] [in] *bIsDisabled*
-*clrLine*<br/>
-[in] [in] *clrFill*
+[in] *pSlider*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsDisabled*<br/>
+[in] *clrLine*<br/>
+[in] *clrFill*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getribbonstatusbartextcolor"></a>  CMFCVisualManager::GetRibbonStatusBarTextColor
-
 
 ```
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
@@ -1175,14 +1154,13 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pStatusBar*
+[in] *pStatusBar*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManager::GetShowAllMenuItemsHeight
-
 
 ```
 virtual int GetShowAllMenuItemsHeight(
@@ -1192,15 +1170,14 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *sizeDefault*
+[in] *pDC*<br/>
+[in] *sizeDefault*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getsmartdockingbaseguidecolors"></a>  CMFCVisualManager::GetSmartDockingBaseGuideColors
-
 
 ```
 virtual void GetSmartDockingBaseGuideColors(
@@ -1210,13 +1187,12 @@ virtual void GetSmartDockingBaseGuideColors(
 
 ### <a name="parameters"></a>Parametri
 
-*clrBaseGroupBackground*<br/>
-[in] [in] *clrBaseGroupBorder*
+[in] *clrBaseGroupBackground*<br/>
+[in] *clrBaseGroupBorder*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getsmartdockinghighlighttonecolor"></a>  CMFCVisualManager::GetSmartDockingHighlightToneColor
-
 
 ```
 virtual COLORREF GetSmartDockingHighlightToneColor();
@@ -1242,7 +1218,6 @@ Restituisce uno dei seguenti valori enumerati: AFX_SDT_VS2008 AFX_SDT_DEFAULT, A
 
 ##  <a name="getstatusbarpanetextcolor"></a>  CMFCVisualManager::GetStatusBarPaneTextColor
 
-
 ```
 virtual COLORREF GetStatusBarPaneTextColor(
     CMFCStatusBar* pStatusBar,
@@ -1251,8 +1226,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 
 ### <a name="parameters"></a>Parametri
 
-*pStatusBar*<br/>
-[in] [in] *pPane*
+[in] *pStatusBar*<br/>
+[in] *pPane*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1310,21 +1285,19 @@ Eseguire l'override di questa funzione in una classe derivata se si desidera per
 
 ##  <a name="gettabhorzmargin"></a>  CMFCVisualManager::GetTabHorzMargin
 
-
 ```
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CMFCBaseTabCtrl&#42;*
+[in] *CMFCBaseTabCtrl&#42;*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="gettabtextcolor"></a>  CMFCVisualManager::GetTabTextColor
-
 
 ```
 virtual COLORREF GetTabTextColor(
@@ -1335,15 +1308,15 @@ virtual COLORREF GetTabTextColor(
 
 ### <a name="parameters"></a>Parametri
 
-*CMFCBaseTabCtrl&#42;*<br/>
-[in] [in] *int* [in] *BOOL*
+[in] *CMFCBaseTabCtrl&#42;*<br/>
+[in] *int*<br/>
+[in] *BOOL*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="gettaskspanegroupcaptionheight"></a>  CMFCVisualManager::GetTasksPaneGroupCaptionHeight
-
 
 ```
 int GetTasksPaneGroupCaptionHeight() const;
@@ -1355,7 +1328,6 @@ int GetTasksPaneGroupCaptionHeight() const;
 
 ##  <a name="gettaskspanegroupcaptionhorzoffset"></a>  CMFCVisualManager::GetTasksPaneGroupCaptionHorzOffset
 
-
 ```
 int GetTasksPaneGroupCaptionHorzOffset() const;
 ```
@@ -1365,7 +1337,6 @@ int GetTasksPaneGroupCaptionHorzOffset() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="gettaskspanegroupcaptionvertoffset"></a>  CMFCVisualManager::GetTasksPaneGroupCaptionVertOffset
-
 
 ```
 int GetTasksPaneGroupCaptionVertOffset() const;
@@ -1377,7 +1348,6 @@ int GetTasksPaneGroupCaptionVertOffset() const;
 
 ##  <a name="gettaskspanegroupvertoffset"></a>  CMFCVisualManager::GetTasksPaneGroupVertOffset
 
-
 ```
 int GetTasksPaneGroupVertOffset() const;
 ```
@@ -1387,7 +1357,6 @@ int GetTasksPaneGroupVertOffset() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="gettaskspanehorzmargin"></a>  CMFCVisualManager::GetTasksPaneHorzMargin
-
 
 ```
 int GetTasksPaneHorzMargin() const;
@@ -1399,7 +1368,6 @@ int GetTasksPaneHorzMargin() const;
 
 ##  <a name="gettaskspaneiconhorzoffset"></a>  CMFCVisualManager::GetTasksPaneIconHorzOffset
 
-
 ```
 int GetTasksPaneIconHorzOffset() const;
 ```
@@ -1409,7 +1377,6 @@ int GetTasksPaneIconHorzOffset() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="gettaskspaneiconvertoffset"></a>  CMFCVisualManager::GetTasksPaneIconVertOffset
-
 
 ```
 int GetTasksPaneIconVertOffset() const;
@@ -1421,7 +1388,6 @@ int GetTasksPaneIconVertOffset() const;
 
 ##  <a name="gettaskspanetaskhorzoffset"></a>  CMFCVisualManager::GetTasksPaneTaskHorzOffset
 
-
 ```
 int GetTasksPaneTaskHorzOffset() const;
 ```
@@ -1431,7 +1397,6 @@ int GetTasksPaneTaskHorzOffset() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="gettaskspanevertmargin"></a>  CMFCVisualManager::GetTasksPaneVertMargin
-
 
 ```
 int GetTasksPaneVertMargin() const;
@@ -1471,7 +1436,6 @@ Eseguire l'override di questa funzione per personalizzare il colore del testo di
 
 ##  <a name="gettoolbarcustomizebuttonmargin"></a>  CMFCVisualManager::GetToolBarCustomizeButtonMargin
 
-
 ```
 virtual int GetToolBarCustomizeButtonMargin() const;
 ```
@@ -1481,7 +1445,6 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="gettoolbardisabledcolor"></a>  CMFCVisualManager::GetToolbarDisabledColor
-
 
 ```
 virtual COLORREF GetToolbarDisabledColor() const;
@@ -1509,7 +1472,6 @@ Eseguire l'override di questo metodo in un gestore visualizzazione personalizzat
 
 ##  <a name="gettoolbarhighlightcolor"></a>  CMFCVisualManager::GetToolbarHighlightColor
 
-
 ```
 virtual COLORREF GetToolbarHighlightColor();
 ```
@@ -1520,7 +1482,6 @@ virtual COLORREF GetToolbarHighlightColor();
 
 ##  <a name="gettooltipinfo"></a>  CMFCVisualManager::GetToolTipInfo
 
-
 ```
 virtual BOOL GetToolTipInfo(
     CMFCToolTipInfo& params,
@@ -1529,8 +1490,8 @@ virtual BOOL GetToolTipInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*params*<br/>
-[in] [in] *NLE*
+[in] *params*<br/>
+[in] *NLE*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1550,7 +1511,6 @@ TRUE se la sovrapposizione con pulsanti Nascondi automaticamente; In caso contra
 
 ##  <a name="isautodestroy"></a>  CMFCVisualManager::IsAutoDestroy
 
-
 ```
 BOOL IsAutoDestroy() const;
 ```
@@ -1561,14 +1521,13 @@ BOOL IsAutoDestroy() const;
 
 ##  <a name="isdefaultwinxppopupbutton"></a>  CMFCVisualManager::IsDefaultWinXPPopupButton
 
-
 ```
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CMFCDesktopAlertWndButton**
+[in] *CMFCDesktopAlertWndButton&#42;*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1624,7 +1583,6 @@ Diverso da zero se il framework utilizza l'effetto di illuminazione quando diseg
 
 ##  <a name="isframemenucheckeditems"></a>  CMFCVisualManager::IsFrameMenuCheckedItems
 
-
 ```
 BOOL IsFrameMenuCheckedItems() const;
 ```
@@ -1634,7 +1592,6 @@ BOOL IsFrameMenuCheckedItems() const;
 ### <a name="remarks"></a>Note
 
 ##  <a name="ishighlightonenotetabs"></a>  CMFCVisualManager::IsHighlightOneNoteTabs
-
 
 ```
 virtual BOOL IsHighlightOneNoteTabs() const;
@@ -1646,7 +1603,6 @@ virtual BOOL IsHighlightOneNoteTabs() const;
 
 ##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManager::IsHighlightWholeMenuItem
 
-
 ```
 virtual BOOL IsHighlightWholeMenuItem();
 ```
@@ -1656,7 +1612,6 @@ virtual BOOL IsHighlightWholeMenuItem();
 ### <a name="remarks"></a>Note
 
 ##  <a name="islayeredribbonkeytip"></a>  CMFCVisualManager::IsLayeredRibbonKeyTip
-
 
 ```
 virtual BOOL IsLayeredRibbonKeyTip() const;
@@ -1700,7 +1655,6 @@ Il [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) chiama que
 
 ##  <a name="isoffsetpressedbutton"></a>  CMFCVisualManager::IsOffsetPressedButton
 
-
 ```
 virtual BOOL IsOffsetPressedButton() const;
 ```
@@ -1722,7 +1676,6 @@ virtual BOOL IsOwnerDrawCaption();
 TRUE se tutte le finestre cornice nell'applicazione includono didascalie owner draw; FALSE in caso contrario.
 
 ##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManager::IsOwnerDrawMenuCheck
-
 
 ```
 virtual BOOL IsOwnerDrawMenuCheck();
@@ -1746,7 +1699,6 @@ Diverso da zero quando il gestore visualizzazione Visualizza ombreggiature sotto
 
 ##  <a name="istoolbarbuttonfillenabled"></a>  CMFCVisualManager::IsToolbarButtonFillEnabled
 
-
 ```
 BOOL IsToolbarButtonFillEnabled() const;
 ```
@@ -1757,21 +1709,19 @@ BOOL IsToolbarButtonFillEnabled() const;
 
 ##  <a name="istoolbarroundshape"></a>  CMFCVisualManager::IsToolbarRoundShape
 
-
 ```
 virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CMFCToolBar&#42;*
+[in] *CMFCToolBar&#42;*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManager::IsWindowsThemingSupported
-
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
@@ -1783,7 +1733,6 @@ virtual BOOL IsWindowsThemingSupported() const;
 
 ##  <a name="onactivateapp"></a>  CMFCVisualManager::OnActivateApp
 
-
 ```
 virtual void OnActivateApp(
     CWnd* pWnd,
@@ -1792,8 +1741,8 @@ virtual void OnActivateApp(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd*<br/>
-[in] [in] *bActive*
+[in] *pWnd*<br/>
+[in] *bActive*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1931,7 +1880,6 @@ I possibili stati di un pulsante della barra degli strumenti vengono `ButtonsIsR
 
 ##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManager::OnDrawButtonSeparator
 
-
 ```
 virtual void OnDrawButtonSeparator(
     CDC* pDC,
@@ -1943,10 +1891,11 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pButton*
-*rect*<br/>
-[in] [in] *lo stato* [in] *bHorz*
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *dello stato*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1986,7 +1935,6 @@ L'override del metodo in una classe derivata per personalizzare l'aspetto del bo
 
 ##  <a name="ondrawcaptionbarbuttonborder"></a>  CMFCVisualManager::OnDrawCaptionBarButtonBorder
 
-
 ```
 virtual void OnDrawCaptionBarButtonBorder(
     CDC* pDC,
@@ -2001,19 +1949,18 @@ virtual void OnDrawCaptionBarButtonBorder(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pBar*
-*rect*<br/>
-[in] [in] *bIsPressed*
-*bIsHighlighted*<br/>
-[in] [in] *bIsDisabled*
-*bHasDropDownArrow*<br/>
-[in] [in] *bIsSysButton*
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsDisabled*<br/>
+[in] *bHasDropDownArrow*<br/>
+[in] *bIsSysButton*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManager::OnDrawCaptionBarInfoArea
-
 
 ```
 virtual void OnDrawCaptionBarInfoArea(
@@ -2024,8 +1971,9 @@ virtual void OnDrawCaptionBarInfoArea(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pBar* [in] *rect*
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -2075,7 +2023,6 @@ L'override del metodo in una classe derivata per personalizzare l'aspetto dei pu
 
 ##  <a name="ondrawcheckbox"></a>  CMFCVisualManager::OnDrawCheckBox
 
-
 ```
 virtual void OnDrawCheckBox(
     CDC* pDC,
@@ -2087,15 +2034,15 @@ virtual void OnDrawCheckBox(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect*
-*bHighlighted*<br/>
-[in] [in] *bChecked* [in] *bEnabled*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bHighlighted*<br/>
+[in] *bChecked*<br/>
+[in] *bEnabled*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawcheckboxex"></a>  CMFCVisualManager::OnDrawCheckBoxEx
-
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -2109,12 +2056,12 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect*
-*nState*<br/>
-[in] [in] *bHighlighted*
-*bPressed*<br/>
-[in] [in] *bEnabled*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *nState*<br/>
+[in] *bHighlighted*<br/>
+[in] *bPressed*<br/>
+[in] *bEnabled*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -2196,14 +2143,13 @@ Eseguire l'override di questo metodo nei gestore visualizzazione derivata per pe
 
 ##  <a name="ondrawcontrolborder"></a>  CMFCVisualManager::OnDrawControlBorder
 
-
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pWndCtrl*
+[in] *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -2277,7 +2223,6 @@ L'override del metodo in un gestore visualizzazione derivato per personalizzare 
 
 ##  <a name="ondrawexpandingbox"></a>  CMFCVisualManager::OnDrawExpandingBox
 
-
 ```
 virtual void OnDrawExpandingBox(
     CDC* pDC,
@@ -2288,10 +2233,10 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect*
-*bIsOpened*<br/>
-[in] [in] *colorBox*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bIsOpened*<br/>
+[in] *colorBox*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -2395,7 +2340,6 @@ Se *bIsUp* è TRUE, il gestore visualizzazione Disegna una freccia di ordinament
 
 ##  <a name="ondrawmenuarrowoncustomizelist"></a>  CMFCVisualManager::OnDrawMenuArrowOnCustomizeList
 
-
 ```
 virtual void OnDrawMenuArrowOnCustomizeList(
     CDC* pDC,
@@ -2405,8 +2349,9 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rectCommand* [in] *bSelected*
+[in] *pDC*<br/>
+[in] *rectCommand*<br/>
+[in] *bSelected*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -2438,7 +2383,6 @@ L'implementazione predefinita di questo metodo consente di visualizzare il bordo
 
 ##  <a name="ondrawmenucheck"></a>  CMFCVisualManager::OnDrawMenuCheck
 
-
 ```
 virtual void OnDrawMenuCheck(
     CDC* pDC,
@@ -2450,15 +2394,15 @@ virtual void OnDrawMenuCheck(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pButton*
-*rect*<br/>
-[in] [in] *bHighlight* [in] *bIsRadio*
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *bHighlight*<br/>
+[in] *bIsRadio*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawmenuitembutton"></a>  CMFCVisualManager::OnDrawMenuItemButton
-
 
 ```
 virtual void OnDrawMenuItemButton(
@@ -2471,15 +2415,15 @@ virtual void OnDrawMenuItemButton(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pButton*
-*rectButton*<br/>
-[in] [in] *bHighlight* [in] *bDisattivato*
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rectButton*<br/>
+[in] *bHighlight*<br/>
+[in] *bDisattivato*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawmenulabel"></a>  CMFCVisualManager::OnDrawMenuLabel
-
 
 ```
 virtual COLORREF OnDrawMenuLabel(
@@ -2489,15 +2433,14 @@ virtual COLORREF OnDrawMenuLabel(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect*
+[in] *pDC*<br/>
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawmenuresizebar"></a>  CMFCVisualManager::OnDrawMenuResizeBar
-
 
 ```
 virtual void OnDrawMenuResizeBar(
@@ -2508,8 +2451,9 @@ virtual void OnDrawMenuResizeBar(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect* [in] *nResizeFlags*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *nResizeFlags*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -2553,7 +2497,6 @@ Eseguire l'override di questo metodo in un gestore visualizzazione derivato per 
 
 ##  <a name="ondrawmenushadow"></a>  CMFCVisualManager::OnDrawMenuShadow
 
-
 ```
 virtual void OnDrawMenuShadow(
     CDC* pDC,
@@ -2569,14 +2512,15 @@ virtual void OnDrawMenuShadow(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rectClient*
-*rectExclude*<br/>
-[in] [in] *nDepth*
-*iMinBrightness*<br/>
-[in] [in] *iMaxBrightness*
-*pBmpSaveBottom*<br/>
-[in] [in] *pBmpSaveRight* [in] *bRTL*
+[in] *pDC*<br/>
+[in] *rectClient*<br/>
+[in] *rectExclude*<br/>
+[in] *nDepth*<br/>
+[in] *iMinBrightness*<br/>
+[in] *iMaxBrightness*<br/>
+[in] *pBmpSaveBottom*<br/>
+[in] *pBmpSaveRight*<br/>
+[in] *bRTL*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -2618,7 +2562,6 @@ L'implementazione predefinita per questo metodo viene chiamato [CDC::DrawFrameCo
 
 ##  <a name="ondrawminiframeborder"></a>  CMFCVisualManager::OnDrawMiniFrameBorder
 
-
 ```
 virtual void OnDrawMiniFrameBorder(
     CDC* pDC,
@@ -2629,10 +2572,10 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pFrameWnd*
-*rectBorder*<br/>
-[in] [in] *rectBorderSize*
+[in] *pDC*<br/>
+[in] *pFrameWnd*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -2754,7 +2697,6 @@ Eseguire l'override di questo metodo in un gestore visualizzazione derivato per 
 
 ##  <a name="ondrawpanedivider"></a>  CMFCVisualManager::OnDrawPaneDivider
 
-
 ```
 virtual void OnDrawPaneDivider(
     CDC* pDC,
@@ -2765,15 +2707,14 @@ virtual void OnDrawPaneDivider(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pSlider*
-*rect*<br/>
-[in] [in] *bAutoHideMode*
+[in] *pDC*<br/>
+[in] *pSlider*<br/>
+[in] *rect*<br/>
+[in] *bAutoHideMode*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawpopupwindowborder"></a>  CMFCVisualManager::OnDrawPopupWindowBorder
-
 
 ```
 virtual void OnDrawPopupWindowBorder(
@@ -2783,13 +2724,12 @@ virtual void OnDrawPopupWindowBorder(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect*
+[in] *pDC*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManager::OnDrawPopupWindowButtonBorder
-
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -2800,13 +2740,13 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rectClient* [in] *pButton*
+[in] *pDC*<br/>
+[in] *rectClient*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManager::OnDrawPopupWindowCaption
-
 
 ```
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -2817,8 +2757,9 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rectCaption* [in] *pPopupWnd*
+[in] *pDC*<br/>
+[in] *rectCaption*<br/>
+[in] *pPopupWnd*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3006,7 +2947,6 @@ L'override del metodo in una classe derivata per personalizzare l'aspetto della 
 
 ##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManager::OnDrawRibbonCategoryScroll
 
-
 ```
 virtual void OnDrawRibbonCategoryScroll(
     CDC* pDC,
@@ -3015,8 +2955,8 @@ virtual void OnDrawRibbonCategoryScroll(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pScroll*
+[in] *pDC*<br/>
+[in] *pScroll*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -3052,7 +2992,6 @@ Eseguire l'override di questo metodo in un gestore visualizzazione derivato per 
 
 ##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManager::OnDrawRibbonCheckBoxOnList
 
-
 ```
 virtual void OnDrawRibbonCheckBoxOnList(
     CDC* pDC,
@@ -3064,15 +3003,15 @@ virtual void OnDrawRibbonCheckBoxOnList(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pCheckBox*
-*rect*<br/>
-[in] [in] *bIsSelected* [in] *bHighlighted*
+[in] *pDC*<br/>
+[in] *pCheckBox*<br/>
+[in] *rect*<br/>
+[in] *bIsSelected*<br/>
+[in] *bHighlighted*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawribboncolorpalettebox"></a>  CMFCVisualManager::OnDrawRibbonColorPaletteBox
-
 
 ```
 virtual void OnDrawRibbonColorPaletteBox(
@@ -3090,16 +3029,16 @@ virtual void OnDrawRibbonColorPaletteBox(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pColorButton*
-*pIcon*<br/>
-[in] [in] *colore*
-*rect*<br/>
-[in] [in] *bDrawTopEdge*
-*bDrawBottomEdge*<br/>
-[in] [in] *bIsHighlighted*
-*bIsChecked*<br/>
-[in] [in] *bIsDisabled*
+[in] *pDC*<br/>
+[in] *pColorButton*<br/>
+[in] *pIcon*<br/>
+[in] *colore*<br/>
+[in] *rect*<br/>
+[in] *bDrawTopEdge*<br/>
+[in] *bDrawBottomEdge*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsChecked*<br/>
+[in] *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -3129,7 +3068,6 @@ Eseguire l'override di questo metodo in un gestore visualizzazione derivato per 
 
 ##  <a name="ondrawribbondefaultpanebuttoncontext"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext
 
-
 ```
 virtual void OnDrawRibbonDefaultPaneButtonContext(
     CDC* pDC,
@@ -3138,13 +3076,12 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pButton*
+[in] *pDC*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator
-
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
@@ -3157,15 +3094,15 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pButton*
-*rect*<br/>
-[in] [in] *bIsSelected* [in] *bHighlighted*
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *bIsSelected*<br/>
+[in] *bHighlighted*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawribbongalleryborder"></a>  CMFCVisualManager::OnDrawRibbonGalleryBorder
-
 
 ```
 virtual void OnDrawRibbonGalleryBorder(
@@ -3176,13 +3113,13 @@ virtual void OnDrawRibbonGalleryBorder(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pButton* [in] *rectBorder*
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rectBorder*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManager::OnDrawRibbonGalleryButton
-
 
 ```
 virtual void OnDrawRibbonGalleryButton(
@@ -3192,13 +3129,12 @@ virtual void OnDrawRibbonGalleryButton(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pButton*
+[in] *pDC*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManager::OnDrawRibbonKeyTip
-
 
 ```
 virtual void OnDrawRibbonKeyTip(
@@ -3210,10 +3146,10 @@ virtual void OnDrawRibbonKeyTip(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pElement*
-*rect*<br/>
-[in] [in] *str*
+[in] *pDC*<br/>
+[in] *pElement*<br/>
+[in] *rect*<br/>
+[in] *str*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -3293,7 +3229,6 @@ L'override del metodo in un gestore visualizzazione derivato per personalizzare 
 
 ##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManager::OnDrawRibbonMenuCheckFrame
 
-
 ```
 virtual void OnDrawRibbonMenuCheckFrame(
     CDC* pDC,
@@ -3303,8 +3238,9 @@ virtual void OnDrawRibbonMenuCheckFrame(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pButton* [in] *rect*
+[in] *pDC*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -3622,7 +3558,6 @@ Eseguire l'override di questo metodo in un gestore visualizzazione derivato per 
 
 ##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManager::OnDrawScrollButtons
 
-
 ```
 virtual void OnDrawScrollButtons(
     CDC* pDC,
@@ -3634,10 +3569,11 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect*
-*nBorderSize*<br/>
-[in] [in] *iImage* [in] *bHilited*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *nBorderSize*<br/>
+[in] *iImage*<br/>
+[in] *bHilited*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -3673,7 +3609,6 @@ Vengono usati separatori sulle barre di controllo per separare gruppi di icone c
 
 ##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManager::OnDrawShowAllMenuItems
 
-
 ```
 virtual void OnDrawShowAllMenuItems(
     CDC* pDC,
@@ -3683,8 +3618,9 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect* [in] *dello stato*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *dello stato*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -4146,7 +4082,6 @@ L'override del metodo in una classe derivata per personalizzare la didascalia pe
 
 ##  <a name="ondrawtasksgroupicon"></a>  CMFCVisualManager::OnDrawTasksGroupIcon
 
-
 ```
 virtual void OnDrawTasksGroupIcon(
     CDC* pDC,
@@ -4159,12 +4094,12 @@ virtual void OnDrawTasksGroupIcon(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pGroup*
-*nIconHOffset*<br/>
-[in] [in] *bIsHighlighted*
-*bIsSelected*<br/>
-[in] [in] *bCanCollapse*
+[in] *pDC*<br/>
+[in] *pGroup*<br/>
+[in] *nIconHOffset*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsSelected*<br/>
+[in] *bCanCollapse*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -4198,7 +4133,6 @@ L'override del metodo in una classe derivata per personalizzare l'aspetto dei so
 
 ##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManager::OnDrawToolBoxFrame
 
-
 ```
 virtual void OnDrawToolBoxFrame(
     CDC* pDC,
@@ -4207,8 +4141,8 @@ virtual void OnDrawToolBoxFrame(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rect*
+[in] *pDC*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -4240,7 +4174,6 @@ Eseguire l'override di questo metodo per eseguire il codice personalizzato quand
 
 ##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManager::OnErasePopupWindowButton
 
-
 ```
 virtual void OnErasePopupWindowButton(
     CDC* pDC,
@@ -4250,8 +4183,9 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *rectClient* [in] *pButton*
+[in] *pDC*<br/>
+[in] *rectClient*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -4445,7 +4379,6 @@ I possibili stati di un pulsante della barra degli strumenti vengono `ButtonsIsR
 
 ##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManager::OnFillCaptionBarButton
 
-
 ```
 virtual COLORREF OnFillCaptionBarButton(
     CDC* pDC,
@@ -4460,14 +4393,14 @@ virtual COLORREF OnFillCaptionBarButton(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pBar*
-*rect*<br/>
-[in] [in] *bIsPressed*
-*bIsHighlighted*<br/>
-[in] [in] *bIsDisabled*
-*bHasDropDownArrow*<br/>
-[in] [in] *bIsSysButton*
+[in] *pDC*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsDisabled*<br/>
+[in] *bHasDropDownArrow*<br/>
+[in] *bIsSysButton*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4777,7 +4710,6 @@ L'override del metodo in un gestore visualizzazione derivato per personalizzare 
 
 ##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup
 
-
 ```
 virtual void OnFillRibbonQuickAccessToolBarPopup(
     CDC* pDC,
@@ -4787,8 +4719,9 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 
 ### <a name="parameters"></a>Parametri
 
-*pDC*<br/>
-[in] [in] *pMenuBar* [in] *rect*
+[in] *pDC*<br/>
+[in] *pMenuBar*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -4960,7 +4893,6 @@ Eseguire l'override di questo metodo in un gestore visualizzazione derivato per 
 
 ##  <a name="onncactivate"></a>  CMFCVisualManager::OnNcActivate
 
-
 ```
 virtual BOOL OnNcActivate(
     CWnd* pWnd,
@@ -4969,8 +4901,8 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>Parametri
 
-*pWnd*<br/>
-[in] [in] *bActive*
+[in] *pWnd*<br/>
+[in] *bActive*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5054,14 +4986,13 @@ static void RedrawAll();
 
 ##  <a name="ribboncategorycolortorgb"></a>  CMFCVisualManager::RibbonCategoryColorToRGB
 
-
 ```
 virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-[in] *colore*
+[in] *colore*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5177,5 +5108,4 @@ Per impostazione predefinita, questa funzionalità è disabilitata.
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager::GetInstance](#getinstance)<br/>
 [Gestione visualizzazione](../../mfc/visualization-manager.md)
-
 

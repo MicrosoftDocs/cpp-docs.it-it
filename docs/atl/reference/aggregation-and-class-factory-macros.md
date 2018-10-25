@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7115d73319dc7b76386367fb93329906cd72a027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043417"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073409"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Aggregazione e macro di Class Factory
 
@@ -51,7 +51,7 @@ Queste macro forniscono modi di controllo dell'aggregazione e di dichiarazione c
 |[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Dichiara che l'oggetto deve essere aggregato.|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Controlla il valore di unknown esterno e dichiara l'oggetto come aggregabile o non aggregabile, come appropriato.|
 |[MACRO DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Protegge l'oggetto esterno dall'eliminazione durante la costruzione di un oggetto interno.|
-|[DECLARE_VIEW_STATUS](#declare_view_status)|Specifica i flag VIEWSTATUS al contenitore.|  
+|[DECLARE_VIEW_STATUS](#declare_view_status)|Specifica i flag VIEWSTATUS al contenitore.|
 
 ## <a name="requirements"></a>Requisiti
 

@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b157cfb497c355f44a15c8e42b81bc30753a4a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29632784248d624f184550f0c598d05cd26b85cf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079545"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
 
@@ -183,7 +183,6 @@ virtual void DoPaint(
 *pDC*<br/>
 Puntatore a un contesto di dispositivo per il disegno.
 
-
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
 
 Imposta lo stato attivo a questo controllo.
@@ -193,6 +192,7 @@ Imposta lo stato attivo a questo controllo.
 ```
 virtual void Focus();
 ```
+
 ## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 
 Restituisce un documento collegato a questo controllo di anteprima.
@@ -226,6 +226,7 @@ Colore del testo della finestra di anteprima.
 ```
 COLORREF m_clrTextColor;
 ```
+
 ## <a name="m_font"></a> Tipo di carattere CMFCPreviewCtrlImpl::m_font utilizzato per visualizzare il testo nella finestra di anteprima.
 
 ### <a name="syntax"></a>Sintassi
@@ -233,6 +234,7 @@ COLORREF m_clrTextColor;
 ```
 CFont m_font;
 ```
+
 ## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
 
 Un puntatore a un documento il cui contenuto viene visualizzato in anteprima nel controllo.
@@ -252,6 +254,7 @@ Indica il ridisegno del controllo.
 ```
 virtual void Redraw();
 ```
+
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
 
 Chiamato dal gestore di anteprime per creare una relazione tra l'implementazione di documento e il controllo di anteprima.

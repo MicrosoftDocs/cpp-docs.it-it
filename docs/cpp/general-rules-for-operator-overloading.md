@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c3064da609c8a81a6e264c7f46d37d4cd5681d1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a6eb1b97acfe2fa41511433de3990da8923de7d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059545"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regole generali per overload di operatori
 
@@ -48,7 +48,7 @@ Le regole seguenti vincolano l'implementazione degli operatori di overload. Tutt
     }
     ```
 
-     L'esempio di codice precedente dichiara l'operatore minore di come una funzione membro; tuttavia, gli operatori di addizione vengono dichiarati come funzioni globali con l'accesso Friend. Si noti che più di un'implementazione può essere fornita per un dato operatore. Nel caso dell'operatore di addizione precedente, le due implementazioni sono fornite per facilitare l'operazione commutativa. È ugualmente probabile che gli operatori che aggiungono una `Point` a un `Point`, **int** a un `Point`e così via, può essere implementato.
+   L'esempio di codice precedente dichiara l'operatore minore di come una funzione membro; tuttavia, gli operatori di addizione vengono dichiarati come funzioni globali con l'accesso Friend. Si noti che più di un'implementazione può essere fornita per un dato operatore. Nel caso dell'operatore di addizione precedente, le due implementazioni sono fornite per facilitare l'operazione commutativa. È ugualmente probabile che gli operatori che aggiungono una `Point` a un `Point`, **int** a un `Point`e così via, può essere implementato.
 
 - Gli operatori rispettano la precedenza, il raggruppamento e il numero di operandi stabiliti dall'utilizzo tipico con tipi incorporati. Pertanto, non è possibile esprimere il concetto "Aggiungi 2 e 3 per un oggetto di tipo `Point`," prevedendo che 2 da aggiungere al *x* coordinate e 3 da aggiungere al *y* coordinare.
 

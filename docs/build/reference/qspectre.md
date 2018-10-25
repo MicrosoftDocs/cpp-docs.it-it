@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7bef66e8b3c326f205b6399538a811bcc83c9f9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328519"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070400"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +36,7 @@ Il **/Qspectre** opzione è disponibile in Visual Studio 2017 versione 15.5.5 e 
 
 Il **/Qspectre** opzione è disattivata per impostazione predefinita.
 
-Nella versione iniziale, il **/Qspectre** opzione funzionava solo nel codice ottimizzato. In Visual Studio 2017 versione 15.7 e successive, il **/Qspectre** opzione è supportata in tutti i livelli di ottimizzazione. 
+Nella versione iniziale, il **/Qspectre** opzione funzionava solo nel codice ottimizzato. In Visual Studio 2017 versione 15.7 e successive, il **/Qspectre** opzione è supportata in tutti i livelli di ottimizzazione.
 
 Sono disponibili nelle versioni con mitigazione Spectre anche le librerie di Microsoft Visual C++. Le librerie mitigate di Spectre per Visual Studio 2017 possono essere scaricate in Visual Studio Installer. Vengono trovati nel **singoli componenti** disponibile nella scheda **compilatori, strumenti di compilazione e runtime**, e il nome include "Libs per Spectre". DLL e librerie di runtime statica con mitigazione attivata sono entrambe disponibili per un subset dei runtime Visual C++: codice di avvio di VC + +, vcruntime140, msvcp140, concrt140 e vcamp140. Le DLL sono supportate per la distribuzione dell'applicazione locale di sola lettura. il contenuto di Visual C++ 2017 Runtime librerie Redistributable non è stato modificato. È anche possibile installare le librerie mitigate di Spectre per MFC e ATL, disponibili nel **singoli componenti** disponibile nella scheda **SDK, librerie e Framework**.
 
