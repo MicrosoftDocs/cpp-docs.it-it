@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721292"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136172"
 ---
 # <a name="linker-options"></a>Opzioni del linker
 
@@ -60,7 +60,7 @@ Nella riga di comando, non sono tra maiuscole e minuscole; le opzioni del linker
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Imposta il tipo (IJW, pure o safe) di un'immagine CLR.|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Conserva l'ultimo codice di errore delle funzioni chiamate con il meccanismo P/Invoke.|
 |[/CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|Specifica l'attributo threading da applicare al punto di ingresso del programma CLR.|
-|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|Specifica se verrà applicato l'attributo SuppressUnmanagedCodeSecurity alle chiamate PInvoke generate dal linker effettuate dal codice gestito in DLL native.|
+|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|Specifica se verrà applicato l'attributo SuppressUnmanagedCodeSecurity alle chiamate PInvoke generate dal linker effettuate dal codice gestito in DLL native.|
 |[/DEBUG](../../build/reference/debug-generate-debug-info.md)|Crea informazioni di debug.|
 |[/DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|Specifica i dati da includere nelle informazioni di debug.|
 |[/DEF](../../build/reference/def-specify-module-definition-file.md)|Passa a LIB un file di definizione moduli (estensione def).|
