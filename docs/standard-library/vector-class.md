@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dddbcfba7920efdda1f222843299ef29f19f0c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 926a0f90f366f3644bfce33f15a0a85dd1792a85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235789"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076751"
 ---
 # <a name="vector-class"></a>Classe vector
 
@@ -370,7 +370,7 @@ Ultimo elemento del vettore. Se il vettore è vuoto, il valore restituito non è
 
 Se il valore restituito di `back` viene assegnato a un oggetto `const_reference`, l'oggetto vector non può essere modificato. Se il valore restituito di `back` viene assegnato a un oggetto `reference`, l'oggetto vector può essere modificato.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si tenta di accedere a un elemento di un vettore vuoto si verificherà un errore di runtime.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si tenta di accedere a un elemento di un vettore vuoto si verificherà un errore di runtime.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Esempio
 
@@ -402,7 +402,6 @@ Restituisce un iteratore ad accesso casuale al primo elemento nel vettore.
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -789,7 +788,6 @@ Restituisce un puntatore al primo elemento nel vettore.
 ```cpp
 const_pointer data() const;
 
-
 pointer data();
 ```
 
@@ -1165,7 +1163,7 @@ Riferimento al primo elemento dell'oggetto vector. Se il vettore è vuoto, il va
 
 Se il valore restituito `front` viene assegnato a un oggetto `const_reference`, l'oggetto vector non può essere modificato. Se il valore restituito di `front` viene assegnato a un oggetto **reference**, l'oggetto vector può essere modificato.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si tenta di accedere a un elemento di un vettore vuoto si verificherà un errore di runtime.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si tenta di accedere a un elemento di un vettore vuoto si verificherà un errore di runtime.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Esempio
 
@@ -1410,7 +1408,7 @@ Se la posizione specificata è maggiore o uguale alla dimensione del contenitore
 
 Se il valore restituito di `operator[]` viene assegnato a un oggetto `const_reference`, l'oggetto vector non può essere modificato. Se il valore restituito di `operator[]` viene assegnato a un riferimento, l'oggetto vector può essere modificato.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si tenta di accedere a un elemento non incluso nei limiti del vettore si verificherà un errore di runtime.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si tenta di accedere a un elemento non incluso nei limiti del vettore si verificherà un errore di runtime.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Esempio
 
@@ -1554,7 +1552,6 @@ Aggiunge un elemento alla fine del vettore.
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

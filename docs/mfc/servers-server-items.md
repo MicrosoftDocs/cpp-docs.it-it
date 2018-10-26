@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c134f0d0b0c8ee3009e372de7712a6c0894a51de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438860"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082905"
 ---
 # <a name="servers-server-items"></a>Server: elementi server
 
@@ -43,7 +43,7 @@ Se si utilizza la creazione guidata applicazione per scrivere il codice "di avvi
 
 1. Nella classe derivata, eseguire l'override della funzione membro `OnDraw`.
 
-     Il framework chiama `OnDraw` per eseguire il rendering dell'elemento OLE in un metafile. L'applicazione contenitore utilizza tale metafile per eseguire il rendering dell'elemento. La classe di visualizzazione dell'applicazione dispone inoltre di una funzione membro `OnDraw`, utilizzata per eseguire il rendering dell'elemento quando l'applicazione server è attiva.
+   Il framework chiama `OnDraw` per eseguire il rendering dell'elemento OLE in un metafile. L'applicazione contenitore utilizza tale metafile per eseguire il rendering dell'elemento. La classe di visualizzazione dell'applicazione dispone inoltre di una funzione membro `OnDraw`, utilizzata per eseguire il rendering dell'elemento quando l'applicazione server è attiva.
 
 1. Implementare un override di `OnGetEmbeddedItem` per la classe documento server. Per altre informazioni, vedere l'articolo [server: implementazione di documenti Server](../mfc/servers-implementing-server-documents.md) e l'esempio OLE MFC [HIERSVR](../visual-cpp-samples.md).
 

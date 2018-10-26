@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7bd8c505c857082732e56ff2b4bf1a5bed76647
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 913bc04533668e6576a84641937992504f49390a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420309"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080078"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX
 
@@ -34,7 +34,6 @@ Questo articolo illustra l'uso della finestra delle proprietà per installare i 
 
 >[!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
-
 
 > [!NOTE]
 >  Questo articolo usa un finestra di dialogo progetto basato su ActiveX controllo contenitore denominato contenitore e un controllo incorporato denominato Circ come esempi di procedure e codice.
@@ -70,7 +69,7 @@ Per altre informazioni sulle macro di sink di evento, vedere [mappe Sink di even
 
 1. Nella finestra Proprietà, selezionare l'ID di controllo del controllo ActiveX incorporato. In questo esempio Usa `IDC_CIRCCTRL1`.
 
-     Finestra delle proprietà visualizza un elenco di eventi che possono essere attivati da controllo ActiveX incorporato. Qualsiasi funzione membro visualizzato in grassetto già dispone di funzioni di gestione assegnate.
+   Finestra delle proprietà visualizza un elenco di eventi che possono essere attivati da controllo ActiveX incorporato. Qualsiasi funzione membro visualizzato in grassetto già dispone di funzioni di gestione assegnate.
 
 1. Selezionare l'evento che si vuole che la classe di finestra di dialogo per la gestione. Per questo esempio, selezionare **fare clic su**.
 

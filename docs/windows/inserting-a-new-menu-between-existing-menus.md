@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 558c6e14c226a9d6138f0bad36cb1620e4ce18be
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6d3344dd35f14aa04eba124a11b6f8637590bab4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314950"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077569"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus-c"></a>Inserimento di un nuovo Menu tra menu esistenti (C++)
 
@@ -41,4 +41,4 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor dei menu](../windows/menu-editor.md)  
+[Editor dei menu](../windows/menu-editor.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c881e31d178d6303939c94d68e2824fb11ec2cbd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9d4155fec333061c65f148f29e849dc4717f0d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425404"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073760"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Utilizzo di una barra di finestra di dialogo con un controllo Rebar
 
@@ -41,13 +41,13 @@ Nella seguente procedura vengono illustrati i passaggi necessari per ottenere tr
 
 1. Nel nuovo gestore, modificare il codice esistente affinché corrisponda all'esempio seguente:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
 
 1. Aggiungere un gestore per il messaggio WM_MOVE.
 
 1. Nel nuovo gestore, modificare il codice esistente affinché corrisponda all'esempio seguente:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
 
 I nuovi gestori di simulano la trasparenza della barra di finestra di dialogo per l'inoltro del messaggio WM_ERASEBKGND per la finestra padre e imposto il ridisegno ogni volta che viene spostato l'oggetto barra finestra di dialogo.
 

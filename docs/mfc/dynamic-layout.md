@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2fb7b2468946be29553f54fcedde98e43881d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413250"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068827"
 ---
 # <a name="dynamic-layout"></a>Layout dinamico
 
@@ -65,7 +65,7 @@ La procedura precedente è utile per specificare le proprietà del layout dinami
 
 1. Nel codice di implementazione della classe della finestra individuare o creare un punto in cui specificare il layout dinamico per la finestra di dialogo. Ad esempio, si può aggiungere un metodo come `AdjustLayout` nella finestra di dialogo e chiamarlo da punti in cui è necessario modificare il layout. Il metodo può innanzitutto essere chiamato dal costruttore o dopo aver apportato modifiche alla finestra di dialogo.
 
-2. Per la finestra di dialogo, chiamare [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un metodo per il `CWnd` classe. `GetDynamicLayout` Restituisce un puntatore a un `CMFCDynamicLayout` oggetto.
+2. Per la finestra di dialogo, chiamare [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un metodo per il `CWnd` classe. `GetDynamicLayout` restituisce un puntatore a un oggetto `CMFCDynamicLayout` .
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -119,7 +119,7 @@ La procedura precedente è utile per specificare le proprietà del layout dinami
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     La risorsa denominata deve fare riferimento a una finestra di dialogo che contiene le informazioni sul layout sotto forma di un' **AFX_DIALOG_LAYOUT** voce nel file di risorse, come nell'esempio seguente:
+   La risorsa denominata deve fare riferimento a una finestra di dialogo che contiene le informazioni sul layout sotto forma di un' **AFX_DIALOG_LAYOUT** voce nel file di risorse, come nell'esempio seguente:
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////
