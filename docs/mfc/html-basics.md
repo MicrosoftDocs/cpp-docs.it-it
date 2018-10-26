@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b25f957615d738d0608f911736bb42f8e3731dd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dbe2c743f04e8fc8dc67947b9bd9d5560dd35182
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391620"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052694"
 ---
 # <a name="html-basics"></a>Nozioni fondamentali su HTML
 
@@ -47,9 +47,9 @@ La procedura seguente usa i tag HTML per compilare una semplice pagina Web. In q
 
 1. Commutatore al browser e dal **File** menu, scegliere **Open**, o un tipo *file://C:/webpages/first.htm* nella casella di modifica URL del browser. Si verrà visualizzata una pagina vuota con la didascalia della finestra "Tag HTML superiore".
 
-     Si noti che i tag vengono abbinati e sono incluse in parentesi acute. I tag non sono tra maiuscole e minuscole, ma l'uso delle maiuscole viene spesso usato per mettere in risalto i tag.
+   Si noti che i tag vengono abbinati e sono incluse in parentesi acute. I tag non sono tra maiuscole e minuscole, ma l'uso delle maiuscole viene spesso usato per mettere in risalto i tag.
 
-     Il tag \<HTML > inizia il documento e il tag \</HTML > lo termina. I tag di fine (non è sempre obbligatorio) sono gli stessi tag di inizio, ma dispone di una barra (/) davanti al tag. Non devono essere presenti spazi tra la parentesi angolare di (<) e l'inizio del tag.
+   Il tag \<HTML > inizia il documento e il tag \</HTML > lo termina. I tag di fine (non è sempre obbligatorio) sono gli stessi tag di inizio, ma dispone di una barra (/) davanti al tag. Non devono essere presenti spazi tra la parentesi angolare di (<) e l'inizio del tag.
 
 1. Passare al blocco note e dopo il  \< /HEAD >, digitare:
 
@@ -64,9 +64,9 @@ La procedura seguente usa i tag HTML per compilare una semplice pagina Web. In q
 
 1. Tornare al browser e aggiornare la pagina.
 
-     Le parole verranno visualizzati nell'area client della finestra del browser. Si noti che il ritorno a capo viene ignorato. Se si desidera disporre di un'interruzione di riga, è necessario includere un `<BR>` tag dopo la prima riga.
+   Le parole verranno visualizzati nell'area client della finestra del browser. Si noti che il ritorno a capo viene ignorato. Se si desidera disporre di un'interruzione di riga, è necessario includere un `<BR>` tag dopo la prima riga.
 
-     Per tutti i passaggi che seguono, inserire il testo in un punto qualsiasi compreso tra \<BODY > e  \< /BODY > per aggiungere al corpo del documento.
+   Per tutti i passaggi che seguono, inserire il testo in un punto qualsiasi compreso tra \<BODY > e  \< /BODY > per aggiungere al corpo del documento.
 
 9. Aggiungere un'intestazione:
 

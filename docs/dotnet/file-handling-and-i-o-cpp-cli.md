@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ee17fe577f30735ca78661394c432519d0a4050
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f6fa8dcf1488b693b53cde591c548122767f1af7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397000"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075112"
 ---
 # <a name="file-handling-and-io-ccli"></a>Gestione di file e I/O (C++/CLI)
 Illustra diverse operazioni di file usando .NET Framework.
@@ -182,6 +182,7 @@ int main()
    return 0;
 }
 ```
+
 ## <a name="read_text"></a> Leggere un File di testo
 
 Il codice seguente viene illustrato come aprire e leggere un file di testo una riga alla volta, utilizzando il <xref:System.IO.StreamReader> definito nella classe di <xref:System.IO?displayProperty=fullName> dello spazio dei nomi. Un'istanza di questa classe viene usata per aprire un file di testo e quindi il <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metodo viene utilizzato per recuperare ciascuna riga.
