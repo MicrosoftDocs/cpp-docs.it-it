@@ -66,7 +66,7 @@
 ###### [Lettura di stringhe in un provider OLE DB](reading-strings-into-the-ole-db-provider.md)
 ###### [Archiviazione di stringhe in un provider OLE DB](storing-strings-in-the-ole-db-provider.md)
 ##### [Miglioramento di un provider semplice in sola lettura](enhancing-the-simple-read-only-provider.md)
-###### [Modifica dell'ereditarietà di RMyProviderRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [Modifica dell'ereditarietà di RCustomRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [Determinazione dinamica delle colonne restituite al consumer](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [Test di un provider in sola lettura](testing-the-read-only-provider.md)
 #### [Creazione di un provider aggiornabile](creating-an-updatable-provider.md)
