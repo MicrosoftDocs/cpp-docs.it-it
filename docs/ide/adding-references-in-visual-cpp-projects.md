@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407596"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162165"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Aggiunta di riferimenti nei progetti Visual C++
 
@@ -84,11 +84,11 @@ Sono disponibili le proprietà seguenti su vari tipi di riferimenti. Esse consen
 
 - **Copia assembly satellite locale**
 
-   Specifica se copiare automaticamente gli assembly satellite dell'assembly di riferimento nel percorso di destinazione durante una compilazione. Usato solo se **Copia localmente** è impostato su `true`.
+   Specifica se copiare automaticamente gli assembly satellite dell'assembly di riferimento nel percorso di destinazione durante una compilazione. Usato solo se **Copia localmente** è impostato su **true**.
 
 - **Output assembly di riferimento**
 
-   Specifica se l'assembly viene usato nel processo di compilazione. Se impostato su `true`, l'assembly verrà usato nella riga di comando del compilatore durante la compilazione.
+   Specifica se l'assembly viene usato nel processo di compilazione. Se impostato su **true**, l'assembly verrà usato nella riga di comando del compilatore durante la compilazione.
 
 ### <a name="project-to-project-reference-properties"></a>Proprietà riferimento da progetto a progetto
 
@@ -144,7 +144,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
 - **Nome sicuro**
 
-   Impostato su `true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
+   Impostato su`true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
 
 - **Version**
 

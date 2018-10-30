@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f94d60d4c6e804a9bd27293bb0eff67b29a1e8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 85f8b31ee9faec433fa0c9f1ff64d5bfa1e9665a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092063"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161255"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 
@@ -65,7 +65,7 @@ Tipo statico dell'oggetto puntato dal parametro `inptr`.
 Risultato di cast desiderato.
 
 *isReference*<br/>
-`true` se l'input è un riferimento; `false` se l'input è un puntatore.
+**true** se l'input è un riferimento; **false** se l'input è un puntatore.
 
 ## <a name="return-value"></a>Valore restituito
 

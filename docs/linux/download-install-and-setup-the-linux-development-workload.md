@@ -2,7 +2,7 @@
 title: Installare il carico di lavoro Linux C++ in Visual Studio | Microsoft Docs
 description: Descrive come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 403f1bcd8634c3f471f34ff1266501de5bf05d52
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 060859879c6164bd8af10763ae5f828c9136abe5
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601392"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307906"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
@@ -41,7 +41,7 @@ Se non si ha già un computer Linux, è possibile creare una macchina virtuale L
 
 Un'altra opzione, in Windows 10, prevede l'attivazione del sottosistema Windows per Linux. Per altre informazioni, vedere [Windows 10 Installation Guide](/windows/wsl/install-win10) (Guida all'installazione di Windows 10).
 
-## <a name="linux-setup"></a>Configurazione di Linux
+## <a name="linux-setup-ubuntu"></a>Configurazione di Linux: Ubuntu
 
 Nel computer Linux di destinazione devono essere installati **openssh-server**, **g + +**, **gdb**e **gdbserver** installato e il daemon ssh deve essere in esecuzione. **zip** è necessario per la sincronizzazione automatica delle intestazioni remote con il computer locale per il supporto di Intellisense. Se queste applicazioni non sono già presenti, è possibile installarle come indicato di seguito:
 
@@ -49,10 +49,27 @@ Nel computer Linux di destinazione devono essere installati **openssh-server**, 
 
    `sudo apt-get install openssh-server g++ gdb gdbserver zip`
 
-   È possibile che sia chiesta la password radice dato il comando sudo.  In questo caso, immetterla e continuare.  Al termine, verranno installati questi strumenti e servizi.
+   È possibile che sia chiesta la password radice dato il comando sudo.  In questo caso, immetterla e continuare. Al termine, verranno installati gli strumenti e i servizi necessari.
 
 1. Assicurarsi che il servizio ssh sia in esecuzione nel computer Linux eseguendo il comando seguente:
 
    `sudo service ssh start`
 
-   Il servizio sarà avviato ed eseguito in background, pronto per accettare le connessioni.
+   Il servizio viene avviato ed eseguito in background, pronto per accettare le connessioni.
+
+## <a name="linux-setup-fedora"></a>Configurazione di Linux: Fedora
+
+Il computer di destinazione che esegue Fedora usa il programma di installazione dei pacchetti **dnf**. Per scaricare **openssh-server**, **g++**, **gdb**, **gdbserver** e **zip** e riavviare il daemon ssh, seguire queste istruzioni:
+
+1. Al prompt dei comandi della shell nel computer Linux, eseguire le operazioni seguenti:
+
+   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+
+   È possibile che sia chiesta la password radice dato il comando sudo.  In questo caso, immetterla e continuare. Al termine, verranno installati gli strumenti e i servizi necessari.
+
+1. Assicurarsi che il servizio ssh sia in esecuzione nel computer Linux eseguendo il comando seguente:
+
+   `sudo systemctl start sshd`
+
+   Il servizio viene avviato ed eseguito in background, pronto per accettare le connessioni.
+
