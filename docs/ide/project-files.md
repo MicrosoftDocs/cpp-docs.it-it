@@ -1,32 +1,30 @@
 ---
-title: File di progetto | Microsoft Docs
+title: File di progetto di esempio | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- .vcproj files
-- Visual C++ projects, project file format
-- VCPROJ (Visual C++ project file) format
-- project files [C++], .vcproj file format
+- .vcxproj files
+- C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7202dff0bd1a790a4e8727bbac9d375daecb8e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 591802e04348ca08bded17504b3fb19fb9aa7213
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389030"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072385"
 ---
 # <a name="project-files"></a>File di progetto
 
-Un file di progetto Visual C++ è un file basato su XML che ha estensione vcxproj e contiene le informazioni necessarie per compilare un progetto Visual C++.
+Un file di progetto Visual C++ è un file basato su XML che ha estensione vcxproj e contiene le informazioni necessarie per compilare un progetto Visual C++. Il file di progetto importa vari file di progetto con estensione *props* o *targets*. Questi file contengono informazioni di compilazione aggiuntive e, a loro volta, possono fare riferimento ad altri file *props* o *targets*. Le macro presenti nel percorso del file (ad esempio `$(VCTargetsPath)`) dipendono dall'installazione di Visual Studio. Per altre informazioni su queste macro e sui file con estensione *props* e *targets*, vedere [Pagina delle proprietà Directory di VC++](vcpp-directories-property-page.md), [Utilizzo di Proprietà del progetto](working-with-project-properties.md#bkmkPropertiesVersusMacros) e [Macro comuni per i comandi e le proprietà di compilazione](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Esempio
 
