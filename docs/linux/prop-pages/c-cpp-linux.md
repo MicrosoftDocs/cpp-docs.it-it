@@ -13,12 +13,12 @@ f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061560"
 ---
 # <a name="cc-properties-linux-c"></a>Proprietà C/C++ (Linux C++)
 
@@ -85,4 +85,4 @@ Proprietà | Descrizione | Scelte
 Compila come | Specifica il linguaggio di compilazione per i file con estensione c e cpp.  Il valore predefinito verrà rilevato in base all'estensione c o cpp. (-x c, -x c++) | **Predefinita**: impostazione predefinita.<br/>**Compila come codice C**: consente di compilare come codice C.<br/>**Compila come codice C++**: consente di compilare come codice C++.<br/>
 File di inclusione forzati | Uno o più file di inclusione forzati (-include [nome])
 
-## <a name="additional-options"></a>Opzioni aggiuntive 
+## <a name="additional-options"></a>Opzioni aggiuntive

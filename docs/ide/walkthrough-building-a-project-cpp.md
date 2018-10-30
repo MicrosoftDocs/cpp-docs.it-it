@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca30330e721575443ba9d3f7b0b19c315427eb2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3071b779338150816cb1d52d16932ac0e3878538
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234125"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079319"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Procedura dettagliata: Compilazione di un progetto (C++)
 
@@ -49,7 +49,7 @@ In questa procedura dettagliata si introdurrà deliberatamente un errore di sint
 
 1. Aggiungere il punto e virgola alla fine della riga che include l'errore di sintassi:
 
-     `return 0;`
+   `return 0;`
 
 1. Nella barra dei menu scegliere **Compila** > **Compila soluzione**.
 

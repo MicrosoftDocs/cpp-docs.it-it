@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db1a8370a43b8b0c43c7c228c7b3acf9dd2c8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04a4c2005dc0a7e0e052002198bebb7c78267843
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082879"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059956"
 ---
 # <a name="scanf-type-field-characters"></a>Caratteri di campo di tipo per scanf
 
@@ -54,7 +54,6 @@ Il carattere `type` è l'unico campo di formato obbligatorio e viene visualizzat
 |`n`|Nessun input letto dal flusso o buffer.|Puntatore a `int`in cui è stato correttamente archiviato il numero di caratteri letti dal flusso o dal buffer fino un determinato punto della chiamata corrente alle funzioni `scanf` o `wscanf` .|No.|
 |`s`|Stringa, fino al primo carattere di spazio vuoto (spazio, scheda o una nuova riga). Per leggere stringhe non delimitati da caratteri di spazio, usare il set di parentesi quadre (`[ ]`), come illustrato in [scanf Width Specification](../c-runtime-library/scanf-width-specification.md).|Una volta usato con funzioni `scanf` , specifica una matrice di caratteri a singolo byte; quando usato con funzioni `wscanf` , specifica una matrice di caratteri wide. In entrambi i casi, la matrice di caratteri deve essere sufficientemente grande per il campo di input e il carattere di terminazione null che viene aggiunto automaticamente.|Obbligatorio. La dimensione include lo spazio per una terminazione NULL.|
 |`S`|Stringa di caratteri di dimensione opposta fino al primo carattere di spazio vuoto (spazio, scheda o una nuova riga). Per leggere stringhe non delimitate da caratteri di spazio, usare il set di parentesi quadre (`[ ]`), come illustrato in [Specifica della larghezza per scanf](../c-runtime-library/scanf-width-specification.md).|Quando viene usato con funzioni `scanf`, specifica una matrice di caratteri wide. Quando viene usato con funzioni `wscanf`, specifica una matrice di caratteri a un byte. In entrambi i casi, la matrice di caratteri deve essere sufficientemente grande per il campo di input e il carattere di terminazione null che viene aggiunto automaticamente.|Obbligatorio. La dimensione include lo spazio per una terminazione NULL.|
-
 
 Gli argomenti di dimensione, se necessario, devono essere passati nell'elenco di parametri immediatamente dopo l'argomento a cui si applicano. Ad esempio, il seguente codice:
 

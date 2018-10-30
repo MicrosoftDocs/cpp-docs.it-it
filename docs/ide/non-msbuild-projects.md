@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c7473cd7d6f2f07d81011eca0826b8066513d23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420556"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069256"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Progetti Apri cartella in Visual C++
 
@@ -245,6 +245,7 @@ Per risolvere i problemi di IntelliSense causati dalla mancanza di percorsi di i
   ]
 }
 ```
+
 ### <a name="define-tasks-with-tasksvsjson"></a>Definire le attività con tasks.vs.json
 
 È possibile automatizzare gli script di compilazione o qualsiasi altra operazione esterna per i file inclusi nell'area di lavoro corrente eseguendoli come attività direttamente nell'IDE. Per configurare una nuova attività, è possibile fare clic con il pulsante destro del mouse su un file o una cartella e scegliere **Configura attività**.

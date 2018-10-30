@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04bec9c0de7734ae2c78dd3e9c124eac3d0a55d8
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: bd8d0cebc34b8f0d59f54e720d6a37a52ab2d9e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069321"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Procedura dettagliata: debug di un progetto (C++)
 
@@ -35,7 +35,7 @@ In questa procedura dettagliata si modifica il programma per risolvere il proble
 
 ### <a name="to-fix-a-program-that-has-a-bug"></a>Per correggere un programma che presenta un bug
 
-1. Per conoscere cosa accade quando un oggetto `Cardgame` viene distrutto, visualizzare il distruttore per la classe `Cardgame`.
+1. Per conoscere cosa accade quando un oggetto `Cardgame` viene eliminato definitivamente, visualizzare il distruttore per la classe `Cardgame`.
 
    Sulla barra dei menu scegliere **Visualizza** > **Visualizzazione classi**.
 
@@ -45,11 +45,11 @@ In questa procedura dettagliata si modifica il programma per risolvere il proble
 
 1. Per diminuire il valore `totalParticipants` al termine di un'istanza di Cardgame, aggiungere il codice seguente tra le parentesi graffe di apertura e chiusura del distruttore `Cardgame::~Cardgame`.
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
 
 1. Dopo le modifiche, il file Cardgame.cpp risulta simile al codice seguente:
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
 1. Nella barra dei menu scegliere **Compila** > **Compila soluzione**.
 

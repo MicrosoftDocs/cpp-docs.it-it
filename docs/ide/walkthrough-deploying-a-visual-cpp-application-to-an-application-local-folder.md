@@ -14,37 +14,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f749a288ac08adfb5df5291ce3dd92b95c2301e8
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3db193c0537869e4b99bc4c0c94cc79c70f5e827
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234242"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060663"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Procedura dettagliata: distribuzione di un'applicazione Visual C++ in una cartella locale di un'applicazione
 
-Viene descritto come distribuire un'applicazione Visual C++ copiando i file nella cartella corrispondente.  
-  
-## <a name="prerequisites"></a>Prerequisiti  
-  
-- Un computer in cui è installato Visual Studio.  
-  
-- Un altro computer che non dispone delle librerie Visual C++.  
-  
-### <a name="to-deploy-an-application-to-an-application-local-folder"></a>Per distribuire un'applicazione Visual C++ in una cartella locale di un'applicazione  
-  
-1. Creare e compilare un'applicazione MFC seguendo i passaggi descritti in [Procedura dettagliata: Distribuzione di un'applicazione Visual C++ tramite un progetto di installazione](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
-  
-1. Copiare i file di libreria di runtime C (CRT) e MFC appropriati dalla directory di installazione di Visual Studio nella cartella \\VC\\redist\\*versione* e quindi incollarli nella cartella \Release\ del progetto MFC. Per altre informazioni sui file aggiuntivi che può essere necessario copiare, vedere [Determinazione delle DLL da ridistribuire](determining-which-dlls-to-redistribute.md).  
-  
-1. Eseguire l'applicazione MFC in un secondo computer che non dispone delle librerie Visual C++.  
-  
-   1. Copiare il contenuto della cartella \Release\ e incollarlo nella cartella dell'applicazione nel secondo computer.  
-  
-   1. Eseguire l'applicazione nel secondo computer.  
-  
-   L'applicazione viene eseguita correttamente perché le librerie Visual C++ sono disponibili nella cartella locale dell'applicazione.  
-  
-## <a name="see-also"></a>Vedere anche  
+Viene descritto come distribuire un'applicazione Visual C++ copiando i file nella cartella corrispondente.
+
+## <a name="prerequisites"></a>Prerequisiti
+
+- Un computer in cui è installato Visual Studio.
+
+- Un altro computer che non dispone delle librerie Visual C++.
+
+### <a name="to-deploy-an-application-to-an-application-local-folder"></a>Per distribuire un'applicazione Visual C++ in una cartella locale di un'applicazione
+
+1. Creare e compilare un'applicazione MFC seguendo i passaggi descritti in [Procedura dettagliata: Distribuzione di un'applicazione Visual C++ tramite un progetto di installazione](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+
+1. Copiare i file di libreria di runtime C (CRT) e MFC appropriati dalla directory di installazione di Visual Studio nella cartella \\VC\\redist\\*versione* e quindi incollarli nella cartella \Release\ del progetto MFC. Per altre informazioni sui file aggiuntivi che può essere necessario copiare, vedere [Determinazione delle DLL da ridistribuire](determining-which-dlls-to-redistribute.md).
+
+1. Eseguire l'applicazione MFC in un secondo computer che non dispone delle librerie Visual C++.
+
+   1. Copiare il contenuto della cartella \Release\ e incollarlo nella cartella dell'applicazione nel secondo computer.
+
+   1. Eseguire l'applicazione nel secondo computer.
+
+   L'applicazione viene eseguita correttamente perché le librerie Visual C++ sono disponibili nella cartella locale dell'applicazione.
+
+## <a name="see-also"></a>Vedere anche
 
 [Esempi di distribuzione](deployment-examples.md)<br/>

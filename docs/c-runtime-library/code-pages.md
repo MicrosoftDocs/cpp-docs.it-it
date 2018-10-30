@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eafdf3a140dd8a5976cf2fe8554b3b076111b74
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113721"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060507"
 ---
 # <a name="code-pages"></a>Tabelle codici
 
@@ -43,7 +43,7 @@ La libreria di runtime Microsoft utilizza i seguenti tipi di tabelle codici:
     setlocale ( LC_ALL, "" );
     ```
 
-     imposta inoltre le impostazioni locali alla tabella codici ANSI predefinita del sistema.
+   imposta inoltre le impostazioni locali alla tabella codici ANSI predefinita del sistema.
 
 - Tabella codici delle impostazioni locali. Il comportamento di una serie di routine di runtime dipende dall'impostazione locale corrente, inclusa la tabella codici delle impostazioni locali. Per altre informazioni, vedere [Routine dipendenti dalle impostazioni locali](../c-runtime-library/locale.md). Per impostazione predefinita, tutte le routine dipendenti dalle impostazioni locali della libreria di runtime Microsoft utilizzano la tabella codici che corrisponde alle impostazioni locali "C". Durante il runtime è possibile modificare o eseguire una query nella tabella codici delle impostazioni locali in uso con una chiamata a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 

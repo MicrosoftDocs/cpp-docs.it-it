@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 56614dc0829834e77cfdf10d8d88ed44492237e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235542"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070140"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Procedura dettagliata: verifica di un progetto (C++)
 
@@ -41,7 +41,7 @@ In questa procedura dettagliata si verifica il valore di una variabile mentre il
 
 1. Selezionare la riga di codice seguente:
 
-     `Cardgame.solitaire(1);`
+   `Cardgame.solitaire(1);`
 
 1. Per impostare un punto di interruzione su questa riga, sulla barra dei menu scegliere **Debug** > **Imposta/Rimuovi punto di interruzione** oppure premere **F9**. A sinistra della riga viene visualizzato un cerchio rosso, che indica che è impostato un punto di interruzione. Per rimuovere un punto di interruzione, scegliere nuovamente il comando di menu o premere **F9**.
 

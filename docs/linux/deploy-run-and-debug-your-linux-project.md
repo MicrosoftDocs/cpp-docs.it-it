@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: d2ffd41fe224e492eb4b27a355f6df864e0dd066
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410824"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069947"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Distribuire, eseguire e sottoporre a debug il progetto Linux
 
@@ -41,7 +41,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
     - In modalità **gdb** il debugger di Visual Studio indirizza GDB al sistema remoto, che è più compatibile se la versione locale di GDB non è compatibile con la versione installata nel computer di destinazione. |
 
-    > [!NOTE] 
+    > [!NOTE]
     > Se non è possibile raggiungere i punti di interruzione in modalità di debug gdbserver, provare la modalità gdb. gdb deve prima essere [installato](../linux/download-install-and-setup-the-linux-development-workload.md) nella destinazione remota.
 
 2. Selezionare la destinazione remota usando la barra degli strumenti standard **Debug** in Visual Studio.
@@ -64,7 +64,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
     Se non sono presenti errori, l'app verrà avviata e il debugger verrà sospeso in corrispondenza del punto di interruzione.
 
-    ![Raggiungere un punto di interruzione](media/hit_breakpoint.png)  
+    ![Raggiungere un punto di interruzione](media/hit_breakpoint.png)
 
     È ora possibile interagire con l'applicazione nello stato corrente, visualizzare le variabili ed eseguire un'istruzione alla volta il codice premendo i tasti funzione, ad esempio **F10** o **F11**.
 
@@ -79,7 +79,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 ## <a name="configure-other-debugging-options"></a>Configurare le altre opzioni di debug
 
 * Gli argomenti della riga di comando possono essere passati all'eseguibile usando l'elemento **Argomenti del programma** nella pagina delle proprietà del **debug**.
-  
+
   ![Argomenti del programma](media/settings_programarguments.png)
 
 * Le opzioni specifiche del debugger possono essere passate a GDB usando la voce **Comandi aggiuntivi del debugger**.  Può essere utile ad esempio ignorare i segnali SIGILL (istruzione non valida).  Per ottenere questo risultato, è possibile usare il comando **handle**,  aggiungendo quanto segue alla voce **Comandi aggiuntivi del debugger** come illustrato in precedenza:

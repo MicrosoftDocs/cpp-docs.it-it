@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092243"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057045"
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT
 
@@ -123,7 +123,6 @@ Ogni immagine di eseguibile (EXE o DLL) può avere un CRT proprio collegato stat
 È anche possibile evitare alcuni di questi problemi se tutte le immagini nel processo usano la stessa versione caricata in modo dinamico del CRT. Per assicurarsi che tutti i componenti usino la stessa versione DLL del CRT, crearli con l'opzione **/MD** e usare lo stesso set di strumenti del compilatore e le stesse impostazioni delle proprietà.
 
 È necessario prestare attenzione se il programma passa determinate risorse CRT (ad esempio, handle di file, impostazioni locali e variabili di ambiente) tra i limiti DLL, anche quando si usa la stessa versione del CRT. Per altre informazioni su questi problemi e su come risolverli, vedere [Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
-
 
 ## <a name="see-also"></a>Vedere anche
 

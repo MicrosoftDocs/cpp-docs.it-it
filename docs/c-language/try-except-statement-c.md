@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f367bd5d9e61d44c24a876bf1d69ad24406d0630
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957b76b6b39586016e9ed7b921b7bfa51a1fdf34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036215"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075138"
 ---
 # <a name="try-except-statement-c"></a>Istruzione try-except (C)
 
@@ -49,11 +49,11 @@ L'istruzione composta dopo la clausola `__try` è la sezione protetta. L'istruzi
 
 1. Se si verifica un'eccezione durante l'esecuzione della sezione protetta o nelle routine chiamate dalla sezione protetta, l'espressione `__except` viene valutata e il valore restituito determina come viene gestita l'eccezione. Sono disponibili tre valori:
 
-     `EXCEPTION_CONTINUE_SEARCH` L'eccezione non viene riconosciuta. Continuare la ricerca dello stack per un gestore, prima per contenere le istruzioni **try-except**, quindi per i gestori con la precedenza successiva più elevata.
+   `EXCEPTION_CONTINUE_SEARCH` L'eccezione non viene riconosciuta. Continuare la ricerca dello stack per un gestore, prima per contenere le istruzioni **try-except**, quindi per i gestori con la precedenza successiva più elevata.
 
-     `EXCEPTION_CONTINUE_EXECUTION` L'eccezione viene riconosciuta ma viene ignorata. Continuare l'esecuzione nel punto in cui si è verificata l'eccezione.
+   `EXCEPTION_CONTINUE_EXECUTION` L'eccezione viene riconosciuta ma viene ignorata. Continuare l'esecuzione nel punto in cui si è verificata l'eccezione.
 
-     `EXCEPTION_EXECUTE_HANDLER` L'eccezione viene riconosciuta. Trasferire il controllo al gestore eccezioni eseguendo l'istruzione composta `__except`, quindi continuare l'esecuzione nel punto in cui si è verificata l'eccezione.
+   `EXCEPTION_EXECUTE_HANDLER` L'eccezione viene riconosciuta. Trasferire il controllo al gestore eccezioni eseguendo l'istruzione composta `__except`, quindi continuare l'esecuzione nel punto in cui si è verificata l'eccezione.
 
 Poiché l'espressione `__except` viene valutata come un'espressione C, è limitata a un singolo valore, l'operatore di espressione condizionale o l'operatore virgola. Se è necessaria un'elaborazione più estesa, l'espressione può chiamare una routine che restituisce uno dei tre valori sopra elencati.
 

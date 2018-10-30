@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1edc9e4a6172b3ac55e7a8bc9b21cdc571774d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 24056346520897988fe92587ab45aa7cbc754199
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074995"
 ---
 # <a name="porting-third-party-libraries"></a>Porting di librerie di terze parti
 
-Quando si aggiorna un progetto alla versione corrente di Visual C++, è necessario aggiornare anche le eventuali librerie usate dal progetto, in modo che sia le librerie sia il progetto siano compilati con la stessa versione del compilatore. Per altre informazioni, vedere [Panoramica dei potenziali problemi di aggiornamento](overview-of-potential-upgrade-issues-visual-cpp.md). 
+Quando si aggiorna un progetto alla versione corrente di Visual C++, è necessario aggiornare anche le eventuali librerie usate dal progetto, in modo che sia le librerie sia il progetto siano compilati con la stessa versione del compilatore. Per altre informazioni, vedere [Panoramica dei potenziali problemi di aggiornamento](overview-of-potential-upgrade-issues-visual-cpp.md).
 
 ## <a name="introducing-vcpkg"></a>Introduzione a vcpkg
 
@@ -35,7 +35,7 @@ In passato la ricerca e l'aggiornamento delle librerie di terze parti potevano e
 Se la libreria desiderata non è presente nel catalogo **vcpkg**, è possibile segnalare il problema nel [repository GitHub](https://github.com/Microsoft/vcpkg/issues), dove la community e il team di Visual C++ potranno visualizzarlo ed eventualmente creare il file della porta corrispondente.
 
 Per le librerie di proprietà di terze parti (non open source) è consigliabile contattare il provider della libreria. Tuttavia, può essere utile per Microsoft ricevere la segnalazione delle librerie proprietarie in uso che bloccano l'elaborazione e di quelle che risultano affidabili. Usare l'indirizzo vcupgrade@microsoft.com.
-  
-## <a name="see-also"></a>Vedere anche  
+
+## <a name="see-also"></a>Vedere anche
 
 [Guida al porting e aggiornamento in Visual C++](visual-cpp-porting-and-upgrading-guide.md)

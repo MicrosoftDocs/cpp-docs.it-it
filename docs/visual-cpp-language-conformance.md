@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a40738b5a360e521ff890ef53240609a9afde32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd4848ae88d7bd66286ef13b3505a741d9b55c5c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388976"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060885"
 ---
 # <a name="visual-c-language-conformance"></a>Conformità al linguaggio Visual C++
 
@@ -93,8 +93,6 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 |&nbsp;&nbsp;[P0283R2 Attributi non riconosciuti ignorati](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0702R1 Correzione della deduzione di argomenti del modello di classe per i costruttori di elenchi di inizializzatori](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 
-  
-  
 |Area funzionalità| |
 |----|---|
 |__Funzionalità del linguaggio di base ++17 (report sui difetti)__|__Supportato__|
@@ -105,8 +103,6 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 |&nbsp;&nbsp;[P0962R2: rilasciare regole di individuazione del punto di personalizzazione per cicli range-for:](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|No|
 |&nbsp;&nbsp;[P0969R0: consentire binding strutturati a membri accessibili](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|No|
 
-  
-  
 |Area funzionalità| |
 |----|---|
 |__Funzionalità del linguaggio di base C++20__|__Supportato__|
@@ -117,7 +113,6 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 |&nbsp;&nbsp;[P0683R1 Inizializzatori del membro predefinito per campi bit](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0683r1.html)|No|
 |&nbsp;&nbsp;[P0704R1 Correzione lvalue const per puntatori a membri con qualificatore ref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|No|
 |&nbsp;&nbsp;[P0734R0 Concetti](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0734r0.pdf)|No|
-
 
 ## <a name="standard-library-features"></a>Funzionalità della libreria standard
 
@@ -258,38 +253,55 @@ Un gruppo di documenti elencati insieme indica che una funzionalità è stata vo
 
 ### <a name="supported-values"></a>Valori supportati
 
-__No__ significa che la funzionalità non è ancora implementata.  
-__Parziale__ significa che l'implementazione in Visual Studio 2017 è incompleta. Per altre informazioni, vedere la sezione Note.  
-__N/D__ significa che i documenti della proposta non descrivono le funzionalità. Questi documenti hanno modificato il linguaggio dello standard, ma non hanno creato lavoro per gli implementatori. Sono riportati di seguito per motivi di completezza.  
-__VS 2010__ indica le funzionalità supportate in Visual Studio 2010.  
-__VS 2013__ indica le funzionalità supportate in Visual Studio 2013.  
-__VS 2015__ indica le funzionalità supportate in Visual Studio 2015 RTM.  
-__VS 2015.2__ e __VS 2015.3__ indicano le funzionalità supportate rispettivamente in Visual Studio 2015 Update 2 e Visual Studio 2015 Update 3.  
-__VS 2017__ indica le funzionalità supportate in Visual Studio 2017 RTM.  
-__VS 2017 15.3__ indica le funzionalità supportate in Visual Studio 2017 versione 15.3.  
-__VS 2017 15.5__ indica le funzionalità supportate in Visual Studio 2017 versione 15.5.
-__VS 2017 15.7__ indica le funzionalità supportate in Visual Studio 2017 versione 15.7.
+__No__ significa che la funzionalità non è ancora implementata.<br/>
+__Parziale__ significa che l'implementazione in Visual Studio 2017 è incompleta. Per altre informazioni, vedere la sezione Note.<br/>
+__N/D__ significa che i documenti della proposta non descrivono le funzionalità. Questi documenti hanno modificato il linguaggio dello standard, ma non hanno creato lavoro per gli implementatori. Sono riportati di seguito per motivi di completezza.<br/>
+__VS 2010__ indica le funzionalità supportate in Visual Studio 2010.<br/>
+__VS 2013__ indica le funzionalità supportate in Visual Studio 2013.<br/>
+__VS 2015__ indica le funzionalità supportate in Visual Studio 2015 RTM.<br/>
+__VS 2015.2__ e __VS 2015.3__ indicano le funzionalità supportate rispettivamente in Visual Studio 2015 Update 2 e Visual Studio 2015 Update 3.<br/>
+__VS 2017__ indica le funzionalità supportate in Visual Studio 2017 RTM.<br/>
+__VS 2017 15.3__ indica le funzionalità supportate in Visual Studio 2017 versione 15.3.<br/>
+__VS 2017 15.5__ indica le funzionalità supportate in Visual Studio 2017 versione 15.5.<br/>
+__VS 2017 15.7__ indica le funzionalità supportate in Visual Studio 2017 versione 15.7.<br/>
 
 ### <a name="notes"></a>Note
 
 <a name="note_A"></a>__A__ Nella modalità /std:c++14 le specifiche di eccezione dinamiche non vengono implementate e throw() viene ancora considerato come sinonimo di \_\_declspec(nothrow). In C++17 le specifiche di eccezione dinamiche sono state per lo più rimosse da P0003R5. Vestige: throw() viene deprecato e si comporta come sinonimo di noexcept. Nella modalità /std:c + + 17 MSVC ora si conforma allo standard assegnando a throw() lo stesso comportamento di noexcept, vale a dire l'impostazione avviene tramite terminazione.
-L'opzione del compilatore /Zc:noexceptTypes- richiede il comportamento precedente di \_\_declspec(nothrow). Throw() sarà probabilmente rimosso in C++20. Per agevolare la migrazione del codice in risposta a queste modifiche nello standard e nell'implementazione Microsoft, sono stati aggiunti nuovi avvisi del compilatore per problemi relativi alle specifiche di eccezione in **/std:c++17** e **/permissive-**.  
-<a name="note_B"></a>__B__ Supporto nella modalità /permissive- in Visual Studio 2017 versione 15.7. Vedere [Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) (Nuovo supporto per la ricerca nome in due fasi in MSV) per altre informazioni.  
-<a name="note_C"></a>__C__ Il supporto del compilatore per l'espressione SFINAE è sufficiente per la libreria standard a partire da Visual Studio 2015 Update 2. È supportata in Visual Studio 2017 15.7 indipendentemente che la modalità whether /permissive sia impostata. Alcuni bug devono ancora essere corretti. La soluzione alternativa "tipo di tag univoco" non è più necessaria ed è stata rimossa dall'implementazione STL.  
-<a name="note_D"></a>__D__ Il supporto del compilatore per le regole del preprocessore C99 è incompleto in Visual Studio 2017. Le macro variadic sono supportate, ma sono presenti molti bug nel comportamento del preprocessore.  Il preprocessore è in fase di revisione. In via sperimentale, le modifiche saranno inserite presto nella modalità **/permissive-**.  
-<a name="note_E"></a>__E__ Contrassegnato come non applicabile perché i compilatori sono consentiti, ma non necessari, per supportare i tipi integer estesi.  Come GCC e Clang, Microsoft ha scelto di non supportarli.  
-<a name="note_F"></a>__F__ Analogamente, questo elemento è contrassegnato come non applicabile perché i compilatori sono consentiti, ma non richiesti, per implementare questa ottimizzazione.  
-<a name="note_G"></a>__G__ Supporto disponibile in [/std:c + + 14](./build/reference/std-specify-language-standard-version.md) con un messaggio di avviso che può essere rimosso.  
-<a name="note_J"></a>__J__ Le funzionalità che non sono state completate in Visual Studio 2015 sono descritte in dettaglio altrove in questa tabella.  
-<a name="note_K"></a>__K__ Si tratta di un'implementazione completamente nuova, non compatibile con la versione precedente std::experimental, che richiedeva supporto per symlink, correzioni di bug e modifiche nel comportamento richiesto dallo standard. Attualmente, con \<filesystem > sono inclusi il nuovo std::filesystem e il precedente std::experimental::filesystem. Con \<experimental/filesystem> è inclusa solo la precedente implementazione sperimentale. L'implementazione sperimentale sarà RIMOSSA nella prossima versione delle librerie con modifiche di rilievo per l'ABI.  
-<a name="note_L"></a>__L__ Funzionalità supportata da una funzione intrinseca del compilatore.   
-<a name="note_14"></a>__14__ Queste funzionalità C++ 17/20 sono sempre abilitate, anche quando si specifica [/std:c + + 14](build/reference/std-specify-language-standard-version.md) (impostazione predefinita). Il motivo è che la funzionalità è stata implementata prima dell'introduzione delle opzioni **/std** oppure a causa dell'imprevista complessità dell'implementazione condizionale.  
-<a name="note_17"></a>__17__ Queste funzionalità sono abilitate da [/std:c++17](./build/reference/std-specify-language-standard-version.md) (o dall'opzione del compilatore [/std:c++latest](./build/reference/std-specify-language-standard-version.md)).  
-<a name="note_byte"></a>__byte__ `std::byte` è abilitato da [/std:c++17](./build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](./build/reference/std-specify-language-standard-version.md)), ma poiché è in conflitto con le intestazioni di Windows SDK in alcuni casi, dispone di una macro dettagliata per il rifiuto esplicito. Può essere disabilitato definendo `_HAS_STD_BYTE` come `0`.  
-<a name="note_C11"></a>__C11__ La libreria CRT universale ha implementato le parti della libreria standard C11 richieste da C++ 17, fatta eccezione per gli identificatori di conversione alternativa E/O `strftime()` C99, `fopen()` in modalità esclusiva C11 e `aligned_alloc()` C11. L'implementazione di quest'ultimo è improbabile, perché C11 specificava `aligned_alloc()` in un modo non compatibile con l'implementazione Microsoft di `free()`. In particolare `free()` deve essere in grado di gestire allocazioni notevolmente allineate.  
-<a name="note_rem"></a>__rem__ Funzionalità rimosse quando si specifica l'opzione del compilatore [/std:c++17](./build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](./build/reference/std-specify-language-standard-version.md)). Per queste funzionalità sono disponibili macro per il rifiuto esplicito: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` e `_HAS_UNEXPECTED`.  
-<a name="note_charconv"></a>__charconv__  from_chars() e to_chars() sono disponibili per numeri interi. Attualmente si sta lavorando sul virgola mobile from_chars(), affinché sia seguito dal virgola mobile to_chars().  
-<a name ="note_parallel"></a> __parallel__  La libreria degli algoritmi paralleli di C++17 è completa. Ciò non significa tuttavia che vengono parallelizzati sempre tutti gli algoritmi. Sono stati parallelizzati gli algoritmi più importanti e le firme dei criteri di esecuzione sono disponibili anche quando gli algoritmi non sono parallelizzati. L'intestazione interna centrale dell'implementazione STL (yvals.h) contiene le "note sugli algoritmi paralleli" seguenti: C++ consente a un'implementazione di implementare gli algoritmi paralleli come chiamate agli algoritmi seriali.   Con questa implementazione è possibile eseguire la parallelizzazione di diverse chiamate di algoritmi comuni, ma non di tutti.  
+
+L'opzione del compilatore /Zc:noexceptTypes- richiede il comportamento precedente di \_\_declspec(nothrow). Throw() sarà probabilmente rimosso in C++20. Per agevolare la migrazione del codice in risposta a queste modifiche nello standard e nell'implementazione Microsoft, sono stati aggiunti nuovi avvisi del compilatore per problemi relativi alle specifiche di eccezione in **/std:c++17** e **/permissive-**.
+
+<a name="note_B"></a>__B__ Supporto nella modalità /permissive- in Visual Studio 2017 versione 15.7. Vedere [Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) (Nuovo supporto per la ricerca nome in due fasi in MSV) per altre informazioni.
+
+<a name="note_C"></a>__C__ Il supporto del compilatore per l'espressione SFINAE è sufficiente per la libreria standard a partire da Visual Studio 2015 Update 2. È supportata in Visual Studio 2017 15.7 indipendentemente che la modalità whether /permissive sia impostata. Alcuni bug devono ancora essere corretti. La soluzione alternativa "tipo di tag univoco" non è più necessaria ed è stata rimossa dall'implementazione STL.
+
+<a name="note_D"></a>__D__ Il supporto del compilatore per le regole del preprocessore C99 è incompleto in Visual Studio 2017. Le macro variadic sono supportate, ma sono presenti molti bug nel comportamento del preprocessore.  Il preprocessore è in fase di revisione. In via sperimentale, le modifiche saranno inserite presto nella modalità **/permissive-**.
+
+<a name="note_E"></a>__E__ Contrassegnato come non applicabile perché i compilatori sono consentiti, ma non necessari, per supportare i tipi integer estesi.  Come GCC e Clang, Microsoft ha scelto di non supportarli.
+
+<a name="note_F"></a>__F__ Analogamente, questo elemento è contrassegnato come non applicabile perché i compilatori sono consentiti, ma non richiesti, per implementare questa ottimizzazione.
+
+<a name="note_G"></a>__G__ Supporto disponibile in [/std:c + + 14](./build/reference/std-specify-language-standard-version.md) con un messaggio di avviso che può essere rimosso.
+
+<a name="note_J"></a>__J__ Le funzionalità che non sono state completate in Visual Studio 2015 sono descritte in dettaglio altrove in questa tabella.
+
+<a name="note_K"></a>__K__ Si tratta di un'implementazione completamente nuova, non compatibile con la versione precedente std::experimental, che richiedeva supporto per symlink, correzioni di bug e modifiche nel comportamento richiesto dallo standard. Attualmente, con \<filesystem > sono inclusi il nuovo std::filesystem e il precedente std::experimental::filesystem. Con \<experimental/filesystem> è inclusa solo la precedente implementazione sperimentale. L'implementazione sperimentale sarà RIMOSSA nella prossima versione delle librerie con modifiche di rilievo per l'ABI.
+
+<a name="note_L"></a>__L__ Funzionalità supportata da una funzione intrinseca del compilatore.
+
+<a name="note_14"></a>__14__ Queste funzionalità C++ 17/20 sono sempre abilitate, anche quando si specifica [/std:c + + 14](build/reference/std-specify-language-standard-version.md) (impostazione predefinita). Il motivo è che la funzionalità è stata implementata prima dell'introduzione delle opzioni **/std** oppure a causa dell'imprevista complessità dell'implementazione condizionale.
+
+<a name="note_17"></a>__17__ Queste funzionalità sono abilitate da [/std:c++17](./build/reference/std-specify-language-standard-version.md) (o dall'opzione del compilatore [/std:c++latest](./build/reference/std-specify-language-standard-version.md)).
+
+<a name="note_byte"></a>__byte__ `std::byte` è abilitato da [/std:c++17](./build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](./build/reference/std-specify-language-standard-version.md)), ma poiché è in conflitto con le intestazioni di Windows SDK in alcuni casi, dispone di una macro dettagliata per il rifiuto esplicito. Può essere disabilitato definendo `_HAS_STD_BYTE` come `0`.
+
+<a name="note_C11"></a>__C11__ La libreria CRT universale ha implementato le parti della libreria standard C11 richieste da C++ 17, fatta eccezione per gli identificatori di conversione alternativa E/O `strftime()` C99, `fopen()` in modalità esclusiva C11 e `aligned_alloc()` C11. L'implementazione di quest'ultimo è improbabile, perché C11 specificava `aligned_alloc()` in un modo non compatibile con l'implementazione Microsoft di `free()`. In particolare `free()` deve essere in grado di gestire allocazioni notevolmente allineate.
+
+<a name="note_rem"></a>__rem__ Funzionalità rimosse quando si specifica l'opzione del compilatore [/std:c++17](./build/reference/std-specify-language-standard-version.md) (o [/std:c++latest](./build/reference/std-specify-language-standard-version.md)). Per queste funzionalità sono disponibili macro per il rifiuto esplicito: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` e `_HAS_UNEXPECTED`.
+
+<a name="note_charconv"></a>__charconv__  from_chars() e to_chars() sono disponibili per numeri interi. Attualmente si sta lavorando sul virgola mobile from_chars(), affinché sia seguito dal virgola mobile to_chars().
+
+<a name ="note_parallel"></a> __parallel__  La libreria degli algoritmi paralleli di C++17 è completa. Ciò non significa tuttavia che vengono parallelizzati sempre tutti gli algoritmi. Sono stati parallelizzati gli algoritmi più importanti e le firme dei criteri di esecuzione sono disponibili anche quando gli algoritmi non sono parallelizzati. L'intestazione interna centrale dell'implementazione STL (yvals.h) contiene le "note sugli algoritmi paralleli" seguenti: C++ consente a un'implementazione di implementare gli algoritmi paralleli come chiamate agli algoritmi seriali.   Con questa implementazione è possibile eseguire la parallelizzazione di diverse chiamate di algoritmi comuni, ma non di tutti.
 
 Vengono parallelizzati gli algoritmi seguenti:
 
@@ -314,4 +326,4 @@ Di seguito sono specificati gli algoritmi che attualmente non vengono paralleliz
 [Novità di Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Visual C++: novità dalla versione 2003 alla 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
-[Blog del team di Visual C++](https://blogs.msdn.microsoft.com/vcblog/)  
+[Blog del team di Visual C++](https://blogs.msdn.microsoft.com/vcblog/)

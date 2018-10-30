@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821290"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067943"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 
-> [!NOTE]  
-> Questa documentazione per sviluppatori si applica a Visual Studio 2015 e Visual Studio 2017. 
+> [!NOTE]
+> Questa documentazione per sviluppatori si applica a Visual Studio 2015 e Visual Studio 2017.
 
-> Coloro che cercano un package ridistribuibile di Visual C++ per poter eseguire un programma possono visitare l'[Area download Microsoft](http://www.microsoft.com/download/) e digitare **Visual C++** nella casella di ricerca.  
-  
+> Coloro che cercano un package ridistribuibile di Visual C++ per poter eseguire un programma possono visitare l'[Area download Microsoft](http://www.microsoft.com/download/) e digitare **Visual C++** nella casella di ricerca.
+
 
 Microsoft Visual C++, in genere abbreviato in Visual C++ o MSVC, è il nome di librerie e strumenti di sviluppo in linguaggio assembly, C e C++ disponibili come parte di Visual Studio in Windows. Questi strumenti e librerie consentono di creare app per la piattaforma UWP (Universal Windows Platform), applicazioni server e desktop Windows native, app e librerie multipiattaforma eseguite in Windows, Linux, Android e iOS, nonché librerie e app gestite che usano .NET Framework. È possibile usare Visual C++ per scrivere un'ampia gamma di app che spaziano da semplici app console ad app più sofisticate e complesse per desktop Windows, da driver di dispositivo e componenti del sistema operativo a giochi multipiattaforma per dispositivi mobili e da app per i più piccoli dispositivi IoT ad app HPC (High Performance Computing) multi-server nel cloud di Azure.
 

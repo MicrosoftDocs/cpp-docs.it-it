@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2884abbf02c9eb244d6fb446c7158b708c211557
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0dca0359ea385e3a30f5dab6e8745a2d567ec1e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066453"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055255"
 ---
 # <a name="thread-local-storage"></a>archiviazione thread-local
 
@@ -94,7 +94,7 @@ Nella dichiarazione di variabili thread-local associate in modo statico, è nece
     Thread int tls_i = sizeof( tls_i )    /* Okay  */
     ```
 
-     Tenere presente che un'espressione sizeof che include la variabile in fase di inizializzazione non rappresenta un riferimento a se stessa ed è consentita.
+   Tenere presente che un'espressione sizeof che include la variabile in fase di inizializzazione non rappresenta un riferimento a se stessa ed è consentita.
 
 - L'attributo **__declspec(thread)** può interferire con il [caricamento ritardato](../build/reference/linker-support-for-delay-loaded-dlls.md) delle importazioni delle DLL **.**
 

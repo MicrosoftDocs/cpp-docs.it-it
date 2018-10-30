@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062119"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Come segnalare un problema con il set di strumenti Visual C++ o la documentazione
 
@@ -381,7 +381,7 @@ Per problemi con l'uso del compilatore, del linker e altri strumenti e librerie 
 
 Per impostazione predefinita **tutte le informazioni contenute nelle segnalazioni, i commenti e le risposte sono pubblicamente visibili**. In genere, tutto ciò rappresenta un vantaggio, in quanto consente all'intera community di visualizzare i problemi, le soluzioni e soluzioni alternative individuate da altri utenti. Tuttavia, se per motivi di privacy o di proprietà intellettuale, si teme che i propri dati o la propria identità diventino di dominio pubblico, sono disponibili alcune opzioni.
 
-Se non si vuole rivelare la propria identità [creare un nuovo account Microsoft](https://signup.live.com/) che non divulghi informazioni dettagliate personali. Usare questo account per creare la segnalazione. 
+Se non si vuole rivelare la propria identità [creare un nuovo account Microsoft](https://signup.live.com/) che non divulghi informazioni dettagliate personali. Usare questo account per creare la segnalazione.
 
 **Nel titolo o nel contenuto della segnalazione iniziale che sono pubblici, non inserire informazioni che si vogliono mantenere private.** Si noti invece che i dettagli saranno inviati privatamente in un commento a parte. Per assicurarsi che la segnalazione sia indirizzata al destinatario corretto, includere **cppcompiler** nell'elenco degli argomenti nella segnalazione del problema. Dopo aver segnalato il problema, è possibile specificare chi potrà visualizzare le risposte e gli allegati.
 

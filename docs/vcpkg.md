@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821427"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072694"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux e MacOS
 
@@ -37,11 +37,11 @@ Se si crea un clone di vcpkg con librerie private nella raccolta di port, è pos
 
 [1] *Nota: per alcune librerie proprietarie, le origini non sono disponibili. In questi casi, vcpkg scaricherà file binari precompilati compatibili.*
 
-## <a name="installation"></a>Installazione 
+## <a name="installation"></a>Installazione
 
 Clonare il repository vcpkg da GitHub: https://github.com/Microsoft/vcpkg. È possibile scaricarlo nel percorso di cartella preferito.
 
-Eseguire il programma di avvio automatico nella cartella radice: 
+Eseguire il programma di avvio automatico nella cartella radice:
 
 - **bootstrap-vcpkg.bat** (Windows)
 - **./bootstrap-vcpkg.sh** (Linux, MacOS)
@@ -76,7 +76,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 Dopo avere ottenuto il nome di una libreria tramite **vcpkg search**, è possibile usare **vcpkg install** per scaricare la libreria e compilarla. vcpkg usa il file portfile della libreria nella directory ports. Se non si specifica alcuna tripletta, vcpkg esegue installazione e compilazione per la tripletta predefinita per la piattaforma di destinazione: x86-windows, x64-linux.cmake o x64-osx.cmake.
 
-Per le librerie di Linux, vcpkg dipende dal fatto che gcc sia installato o meno nel computer locale. In MacOS, vcpkg usa Clang. 
+Per le librerie di Linux, vcpkg dipende dal fatto che gcc sia installato o meno nel computer locale. In MacOS, vcpkg usa Clang.
 
 Se il file portfile specifica dipendenze, vcpkg scaricherà e installerà anche le dipendenze. Dopo aver completato il download, vcpkg compila la libreria con qualsiasi sistema di compilazione usato dalla libreria. I progetti CMake e (in Windows) MSBuild sono la scelta preferita, ma sono supportati anche MAKE e qualsiasi altro sistema di compilazione. Se vcpkg non trova il sistema di compilazione specificato nel computer locale, lo scarica e installa.
 
@@ -91,7 +91,7 @@ Additional packages (*) will be installed to complete this operation.
 
 ```
 
-Per i progetti CMAKE, usare CMAKE_TOOLCHAIN_FILE per rendere disponibili le librerie con `find_package()`. Ad esempio:  
+Per i progetti CMAKE, usare CMAKE_TOOLCHAIN_FILE per rendere disponibili le librerie con `find_package()`. Ad esempio:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -132,14 +132,13 @@ Se è necessario usare una versione specifica di una libreria, diversa dalla ver
 1. Eseguire **vcpkg install \<libreria>**.
 1. Usare **vcpkg integrate project** per creare un pacchetto NuGet che fa riferimento a tale libreria per progetti specifici.
 
-## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrare con Visual Studio Code (Linux/MacOS) 
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrare con Visual Studio Code (Linux/MacOS)
 
 Eseguire **vcpkg integrate install** per configurare Visual Studio Code in Linux/MacOS con il percorso dell'integrazione vcpkg e abilitare IntelliSense per i file di origine.
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Linux come destinazione da Windows via WSL
 
 È possibile produrre file binari di Linux da un computer Windows usando il Sottosistema Windows per Linux (WSL). Seguire le istruzioni per [impostare WSL in Windows 10](/windows/wsl/install-win10) e configurarlo con il [estensione di Visual Studio per Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). È possibile inserire tutte le librerie compilate per Windows e Linux nella stessa cartella e accedervi sia da Windows che da WSL.
-
 
 ## <a name="export_binaries_per_project"></a> Esportare i file binari compilati e le intestazioni
 
