@@ -1,7 +1,7 @@
 ---
 title: Modifica dell'ereditarietà di RCustomRowset | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1a9b6e238d3824451ab0f820917c34c97826ffab
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 13e15b470be6f6a5af4f8012e3a70896f648e665
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060390"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216513"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>Modifica dell'ereditarietà di RCustomRowset
 
@@ -35,28 +35,28 @@ A questo scopo, creare una nuova classe, `CCustomRowsetImpl`, in CustomRS.h:
 // CustomRS.h
 
 template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage>>
-class CCustomRowsetImpl:
+class CMyRowsetImpl:
    public CRowsetImpl<T, Storage, CreatorClass, ArrayType, CSimpleRow, IRowsetLocateImpl< T, IRowsetLocate >>
 {
 ...
 };
 ```
 
-A questo punto, modificare la mappa dell'interfaccia COM in CustomRS.h essere come segue:
+A questo punto, modifica mappa dell'interfaccia COM *Custom*RS essere come segue:
 
 ```cpp
-BEGIN_COM_MAP(CCustomRowsetImpl)
+BEGIN_COM_MAP(CMyRowsetImpl)
    COM_INTERFACE_ENTRY(IRowsetLocate)
    COM_INTERFACE_ENTRY_CHAIN(_RowsetBaseClass)
 END_COM_MAP()
 ```
 
-Verrà creata una mappa dell'interfaccia COM che comunica `CCustomRowsetImpl` chiamare `QueryInterface` sia per il `IRowset` e `IRowsetLocate` interfacce. Per ottenere tutti l'implementazione per l'altro set di righe classi, i collegamenti della mappa la `CCustomRowsetImpl` classe verso il `CRowsetBaseImpl` classe definiti tramite i modelli OLE DB; la mappa usa la macro COM_INTERFACE_ENTRY_CHAIN, richiedendo di modelli OLE DB per analizzare la mappa COM in `CRowsetBaseImpl` in risposta a un `QueryInterface` chiamare.
+Questo codice crea una mappa dell'interfaccia COM che comunica `CMyRowsetImpl` chiamare `QueryInterface` sia per il `IRowset` e `IRowsetLocate` interfacce. Per ottenere tutti l'implementazione per l'altro set di righe classi, i collegamenti della mappa la `CMyRowsetImpl` classe verso il `CRowsetBaseImpl` classe definiti tramite i modelli OLE DB; la mappa usa la macro COM_INTERFACE_ENTRY_CHAIN, richiedendo di modelli OLE DB per analizzare la mappa COM in `CRowsetBaseImpl` in risposta a un `QueryInterface` chiamare.
 
-Infine, collegare `RAgentRowset` al `CCustomRowsetBaseImpl` modificando `RAgentRowset` da cui ereditare `CCustomRowsetImpl`, come indicato di seguito:
+Infine, collegare `RAgentRowset` al `CMyRowsetBaseImpl` modificando `RAgentRowset` da cui ereditare `CMyRowsetImpl`, come indicato di seguito:
 
 ```cpp
-class RAgentRowset : public CCustomRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
+class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
 ```
 
 `RAgentRowset` a questo punto è possibile usare il `IRowsetLocate` interfaccia sfruttando il resto dell'implementazione per la classe di set di righe.
@@ -65,4 +65,4 @@ Quando questa operazione, è possibile [determinare in modo dinamico le colonne 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+[Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 652f09146ba0bb193efbf889995f6de5f53a9492
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0973bb21771796f40a0464e2376101ee35a0d1a3
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074475"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204550"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Controlli ActiveX MFC: aggiunta di metodi personalizzati
 
 Metodi personalizzati differiscono da metodi predefiniti che non sono già implementati da `COleControl`. È necessario fornire l'implementazione per ogni metodo personalizzato da aggiungere al controllo.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
 Un utente di un controllo ActiveX può chiamare un metodo personalizzato in qualsiasi momento per eseguire azioni specifiche del controllo. Voce della mappa di invio per i metodi personalizzati è nel formato DISP_FUNCTION.
 

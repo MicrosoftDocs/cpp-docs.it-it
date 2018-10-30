@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d7f9c3eeda36c6894103c96f1031f6770daf0c71
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50068775"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204717"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controlli ActiveX MFC: licenze di un controllo ActiveX
 
 Gestione delle licenze, una funzionalità facoltativa di controlli ActiveX, consente di controllare chi è in grado di utilizzare o distribuire il controllo. (Per analisi aggiuntiva dei problemi relativi alle licenze, vedere i problemi di gestione delle licenze in [aggiornamento di un controllo ActiveX esistente](../mfc/upgrading-an-existing-activex-control.md).)
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
 Questo articolo tratta gli argomenti seguenti:
 

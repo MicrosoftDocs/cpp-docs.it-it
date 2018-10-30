@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fb31eb15a61f1d4cbee7ba7402de508a84124461
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053279"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204704"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Controlli ActiveX MFC: localizzazione di un controllo ActiveX
 
 Questo articolo vengono illustrate le procedure per la localizzazione di interfacce di controlli ActiveX.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
 Se si desidera adattare un controllo ActiveX per un mercato internazionale, è possibile localizzare il controllo. Windows supporta molte lingue oltre all'inglese, tra cui svedese, tedesco e francese predefinito. Ciò può presentare problemi per il controllo se la sua interfaccia è solo in inglese.
 

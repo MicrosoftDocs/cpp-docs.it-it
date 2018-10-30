@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccf2da630c72962ee3e74badc250de5cce5f14e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a4cdccf92df9681a85a03369ad0ba1792a6b25
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407153"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204730"
 ---
 # <a name="mfc-activex-control-wizard"></a>Creazione guidata controllo ActiveX MFC
 
 Un controllo ActiveX è un tipo specifico di [server di automazione](../../mfc/automation-servers.md); è un componente riutilizzabile. L'applicazione che ospita il controllo ActiveX è il [client di automazione](../../mfc/automation-clients.md) di tale controllo. Se l'obiettivo consiste nel creare un componente riutilizzabile, quindi utilizzare la procedura guidata per creare un controllo. Visualizzare [controlli ActiveX MFC](../../mfc/mfc-activex-controls.md) per altre informazioni.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](../activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](../activex-controls.md).
 
 In alternativa, è possibile creare un'automazione server MFC applicazione usando il [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md).
 

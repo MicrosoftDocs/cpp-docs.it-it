@@ -1,7 +1,7 @@
 ---
 title: Parole chiave C | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: d9a5255609c3abb4846ce08a2163407eee6f240c
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860888"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161905"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 
@@ -48,17 +48,19 @@ Le parole chiave e gli identificatori speciali seguenti sono riconosciuti dal co
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
-|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
-|**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
+|**__asm**<sup>3</sup>|**dllimport**<sup>2</sup>|**__int8**<sup>3</sup>|**naked**<sup>2</sup>|
+|**__based**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
+|**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**thread**<sup>2</sup>|
+|**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
+|**dllexport**<sup>2</sup>|**__inline**<sup>3</sup>|**__leave**<sup>3</sup>||
 
 <sup>1</sup> La parola chiave **__based** ha usi limitati nelle compilazioni di destinazione a 32 bit e a 64 bit.
 
 <sup>2</sup> Questi sono identificatori speciali se usati con **__declspec**. L'uso di questi identificatori in altri contesti non è limitato.
 
-Le estensioni Microsoft sono attivate per impostazione predefinita. Per assicurarsi che i programmi siano completamente portabili, è possibile disabilitare le estensioni Microsoft specificando l'opzione della riga di comando /Za (compilare per la compatibilità ANSI) durante la compilazione. In questo caso, le parole chiave specifiche di Microsoft sono disabilitate.
+<sup>3</sup> Per garantire la compatibilità con le versioni precedenti, queste parole chiave sono disponibili sia con due caratteri di sottolineatura iniziali sia con un singolo carattere di sottolineatura iniziale quando sono abilitate le estensioni Microsoft.
+
+Le estensioni Microsoft sono attivate per impostazione predefinita. Per assicurarsi che i programmi siano completamente portabili, è possibile disabilitare le estensioni Microsoft specificando l'opzione [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) durante la compilazione. In questo caso, vengono disabilitate alcune parole chiave specifiche di Microsoft.
 
 Quando le estensioni Microsoft sono abilitate, è possibile utilizzare le parole chiave elencate in precedenza nei programmi. Per la compatibilità ANSI, la maggior parte di tali parole chiave è preceduta da un doppio carattere di sottolineatura. Le quattro eccezioni **dllexport**, **dllimport**, **naked** e **thread** vengono usate solo con **__declspec** e non richiedono un doppio carattere di sottolineatura iniziale. Ai fini della compatibilità con le versioni precedenti, sono supportate le versioni con singolo carattere di sottolineatura delle parole chiave rimanenti.
 

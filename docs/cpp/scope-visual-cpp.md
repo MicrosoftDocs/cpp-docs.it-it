@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e3d6501e969b103146aa53311069e5fdd4d048e
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080441"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204561"
 ---
 # <a name="scope-c"></a>Ambito (C++)
 
@@ -41,7 +41,7 @@ Sono disponibili sei tipi di ambito:
 
 - **Ambito locale** un nome dichiarato all'interno di una funzione o espressione lambda, inclusi i nomi dei parametri, hanno ambito locale. Essi sono spesso detto "variabili locali". Sono visibili solo dal relativo punto di dichiarazione alla fine del corpo della funzione o espressione lambda. Ambito locale è un tipo di ambito del blocco, che è descritti più avanti in questo articolo.
 
-- **Ambito di classe** i nomi dei membri della classe hanno un ambito di classe, che estende in tutta la definizione della classe indipendentemente dal punto di dichiarazione. Accessibilità del membro classe è controllato dall'ulteriore il **pubblici**, **privato**, e **protetti** parole chiave. I membri pubblici o protetti sono accessibili solo tramite gli operatori di selezione dei membri (**.** oppure **->**) o gli operatori puntatore a membro (**.** <strong>\*</strong> oppure **->** <strong>\*</strong>).
+- **Ambito di classe** i nomi dei membri della classe hanno un ambito di classe, che estende in tutta la definizione della classe indipendentemente dal punto di dichiarazione. Accessibilità del membro classe ulteriormente è controllato dal **pubbliche**, **privato**, e **protetti** parole chiave. I membri pubblici o protetti sono accessibili solo tramite gli operatori di selezione dei membri (**.** oppure **->**) o gli operatori puntatore a membro (**.** <strong>\*</strong> oppure **->** <strong>\*</strong>).
 
 - **Ambito dell'istruzione** i nomi dichiarati un **per**, **se**, **mentre**, o **passare** istruzione sono visibili fino alla fine del blocco di istruzioni.
 
@@ -49,7 +49,7 @@ Sono disponibili sei tipi di ambito:
 
 ## <a name="hiding-names"></a>Nascondere nomi
 
-È possibile nascondere un nome dichiarandolo in un blocco chiuso. Nella figura seguente `i` viene ridichiarato nel blocco interno, quindi nascondendo la variabile associata a `i` nell'ambito blocco esterno.
+È possibile nascondere un nome dichiarandolo in un blocco chiuso. Nella figura seguente `i` viene ridichiarato nel blocco interno, quindi nascondendo la variabile associata a `i` nell'ambito del blocco esterno.
 
 ![Blocco&#45;nascondere il nome di ambito](../cpp/media/vc38sf1.png "vc38SF1") ambito del blocco e nascondere nome
 

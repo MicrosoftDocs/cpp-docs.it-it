@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dff9f3c988e7ffdf8f15b5502bb0326e2692a128
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4ed220aad7dd90ff2b5ca97c4cf5160fd4d00ed4
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079038"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204574"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Del compilatore (livello 3) avviso C4996
 
@@ -35,7 +35,7 @@ Si tratta di alcuni comuni messaggi C4996 generati dalla libreria di Runtime C e
 
 - [' std::*nome_funzione*::\_Unchecked\_iteratori::\_Deprecate' chiamare per std::*nome_funzione*con parametri potenzialmente non sicuri: questa chiamata si basa su il chiamante per verificare che i valori passati siano corretti. Per disabilitare questo avviso, utilizzare -D_SCL_SECURE_NO_WARNINGS. Vedere la documentazione su come usare Visual C++ 'Iteratori verificati'](#unsafe-standard-library-functions)
 
-- [Questa funzione o variabile è stata sostituita da funzionalità più recenti di libreria o dal sistema operativo. È consigliabile usare *new_item* invece. Vedere la Guida online per i dettagli.](#obsolete-crt-functions-and-variables)
+- [Questa funzione o variabile è stato sostituito dalla funzionalità di libreria o dal sistema operativo più recente. È consigliabile usare *new_item* invece. Vedere la Guida online per i dettagli.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>Causa
 
@@ -256,7 +256,7 @@ Per informazioni su come eliminare questi avvisi, vedere [afx_secure_no_warnings
 
 ### <a name="obsolete-crt-functions-and-variables"></a>Le variabili e funzioni CRT obsolete
 
-**Questa funzione o variabile è stata sostituita da funzionalità più recenti di libreria o dal sistema operativo. È consigliabile usare** *new_item* **invece. Vedere la Guida online per i dettagli.**
+**Questa funzione o variabile è stato sostituito dalla funzionalità di libreria o dal sistema operativo più recente. È consigliabile usare** *new_item* **invece. Vedere la Guida online per i dettagli.**
 
 Alcune funzioni e variabili globali della libreria sono deprecate come obsolete. Queste funzioni e variabili potrebbero essere rimosse nelle future versioni della libreria. Il compilatore genera un avviso di deprecazione per questi elementi e suggerisce l'alternativa preferita.
 

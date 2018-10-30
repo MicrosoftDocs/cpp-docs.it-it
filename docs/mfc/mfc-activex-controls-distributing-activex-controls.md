@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 734707256bb97e25452c45829fd99a1e0fb06fd0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d75f84a8cb5ca2cb5a867cc640410c7de978d4fc
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060312"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204665"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Controlli ActiveX MFC: distribuzione dei controlli ActiveX
 
@@ -53,7 +53,7 @@ Questo articolo vengono illustrati diversi problemi relativi alla ridistribuzion
 - [Registrazione di controlli](#_core_registering_controls)
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
 ##  <a name="_core_ansi_or_unicode_control_versions"></a> Versioni ANSI o Unicode controllo
 

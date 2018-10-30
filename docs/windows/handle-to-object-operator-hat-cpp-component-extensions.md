@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa8434230081afe0ad104853e80ba5aa28ec280e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5fe5bf67df643f83d555d3f2d6fc9a0aadf84b01
+ms.sourcegitcommit: 68cd127a6606f0aed2eb1bc9a75cdfb95b9b6526
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054137"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204890"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operatore handle a oggetto (^) (C + c++ /CLI e c++ /CX)
 
@@ -44,7 +44,7 @@ Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Il sistema utilizza CLR *garbage collector* meccanismo per determinare se l'oggetto non è più in uso e può essere eliminato. Common Language Runtime gestisce un heap in cui alloca gli oggetti e utilizza i riferimenti gestiti (variabili) nel programma per indicare la posizione degli oggetti nell'heap. Quando un oggetto non è più utilizzato, la memoria che occupava nell'heap viene liberata. Periodicamente, il Garbage Collector comprime l'heap per migliorare l'utilizzo della memoria liberata. La compressione dell'heap può comportare lo spostamento degli oggetti nell'heap invalidando le posizioni indicate dai riferimenti gestiti. Tuttavia, il Garbage Collector conosce la posizione di tutti i riferimenti gestiti e li aggiorna automaticamente per indicare la posizione corrente degli oggetti nell'heap.
+Il sistema utilizza CLR *garbage collector* meccanismo per determinare se l'oggetto non è più in uso e può essere eliminato. Common Language Runtime gestisce un heap in cui alloca gli oggetti e utilizza i riferimenti gestiti (variabili) nel programma per indicare la posizione degli oggetti nell'heap. Quando un oggetto non è più utilizzato, la memoria che occupava nell'heap viene liberata. Periodicamente, il Garbage Collector comprime l'heap per migliorare l'utilizzo della memoria liberata. La compattazione dell'heap è possibile spostare gli oggetti sull'heap, che invalida i percorsi a cui fa riferimento riferimenti gestiti. Tuttavia, il Garbage Collector conosce la posizione di tutti i riferimenti gestiti e li aggiorna automaticamente per indicare la posizione corrente degli oggetti nell'heap.
 
 Dal momento che i puntatori nativi C++ (`*`) e i riferimenti (`&`) non sono riferimenti gestiti, il Garbage Collector non può aggiornare automaticamente gli indirizzi a cui puntano. Per risolvere questo problema, utilizzare il dichiaratore di handle per specificare una variabile che il Garbage Collector riconosce e che consente l'aggiornamento automatico.
 

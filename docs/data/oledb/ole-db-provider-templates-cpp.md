@@ -1,7 +1,7 @@
 ---
 title: Modelli Provider OLE DB (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0eef554fd6b7fbd16ff7c34434d08d917b5dcea9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4d4d93f656279cf5e5c548ef09bf809364c9d90e
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080065"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216409"
 ---
 # <a name="ole-db-provider-templates-c"></a>Modelli provider OLE DB (C++)
 
@@ -39,13 +39,13 @@ I provider possono essere semplici o complesse. Il provider possa supportare una
 
 Ogni provider implementa un set standard di oggetti COM per gestire le richieste dal client, con un significato standard che eventuali consumer OLE DB possono accedere ai dati da qualsiasi provider, indipendentemente dalla lingua (ad esempio C++ e Basic).
 
-Ogni oggetto COM contiene diverse interfacce, alcuni dei quali sono necessari e alcuni dei quali sono facoltativi. Implementando le interfacce obbligatorie, un provider garantisce un livello minimo di funzionalità (detto conformità) che deve essere in grado di usare qualsiasi client. Un provider può implementare interfacce facoltative per fornire funzionalità aggiuntive. [L'architettura del modello di Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md) descrive queste interfacce in modo dettagliato. Il client deve chiamare sempre `QueryInterface` per determinare se un provider supporta una determinata interfaccia.
+Ogni oggetto COM contiene diverse interfacce, alcuni dei quali sono necessari e alcuni dei quali sono facoltativi. Implementando le interfacce obbligatorie, un provider garantisce un livello minimo di funzionalità (detto conformità) che deve essere in grado di usare qualsiasi client. Un provider può implementare interfacce facoltative per fornire funzionalità aggiuntive. Il [architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md) descrive queste interfacce in modo dettagliato. Il client deve chiamare sempre `QueryInterface` per determinare se un provider supporta una determinata interfaccia.
 
 ## <a name="ole-db-specification-level-support"></a>Supporto a livello di OLE DB specifica
 
-I modelli di provider OLE DB supportano la specifica della versione 2.7 OLE DB. Utilizzare i modelli di provider OLE DB, è possibile implementare un provider conforme a livello 0. L'esempio di Provider, ad esempio, Usa i modelli per implementare un server di comando non-MS-DOS che esegue il comando DIR DOS per eseguire una query nel file system. L'esempio di Provider restituisce le informazioni sulla directory in un set di righe, ovvero il meccanismo standard OLE DB per la restituzione di dati tabulari.
+I modelli di provider OLE DB supportano la specifica della versione 2.7 OLE DB. Utilizzare i modelli di provider OLE DB, è possibile implementare un provider conforme a livello 0. Il `Provider` campione, ad esempio, Usa i modelli per implementare un server di comando non-MS-DOS che esegue il comando DIR DOS per eseguire una query nel file system. Il `Provider` esempio restituisce le informazioni sulla directory in un set di righe, ovvero il meccanismo standard OLE DB per la restituzione di dati tabulari.
 
-Il tipo più semplice di provider supportati da modelli OLE DB è un provider di sola lettura con nessun comando. Provider con i comandi sono anche supportate, così come funzionalità di aggiunta di segnalibri e di lettura/scrittura. È possibile implementare un provider di lettura/scrittura per scrivere codice aggiuntivo. Le transazioni e set di righe dinamici non sono supportate dalla versione corrente, ma è possibile aggiungerli se si desidera.
+Il tipo più semplice di provider supportati da modelli OLE DB è un provider di sola lettura con nessun comando. Provider con i comandi sono anche supportate, così come le funzionalità di aggiunta di segnalibri e di lettura/scrittura. È possibile implementare un provider di lettura/scrittura per scrivere codice aggiuntivo. Le transazioni e set di righe dinamici non sono supportate dalla versione corrente, ma è possibile aggiungerli se si desidera.
 
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Quando devi creare un Provider OLE DB?
 
@@ -53,9 +53,9 @@ Non è sempre necessario creare un proprio provider; Microsoft offre diversi pro
 
 - L'accesso ai dati tramite qualsiasi linguaggio, ad esempio C++, Basic e Visual Basic Scripting Edition. Consente ai programmatori diversi all'interno dell'organizzazione di accedere agli stessi dati nello stesso modo, indipendentemente dal fatto che di linguaggio usano.
 
-- Esposizione dei dati ad altri dati di origini, ad esempio SQL Server, Excel e Access. Ciò può essere molto utile se si desidera trasferire i dati tra formati diversi.
+- Aprire i dati ad altre origini dati, ad esempio SQL Server, Excel e Access. Ciò può essere utile se si desidera trasferire i dati tra formati diversi.
 
-- Che fanno parte di operazioni di cross-zdroj dat (eterogenei). Può trattarsi di un metodo molto efficace del data warehouse. Tramite i provider OLE DB, è possibile mantenere i dati nel relativo formato nativo e ancora essere in grado di accedervi in un'operazione semplice.
+- Che fanno parte di operazioni di cross-zdroj dat (eterogenei). Può trattarsi di un metodo efficace per il data warehousing. Tramite i provider OLE DB, è possibile mantenere i dati nel relativo formato nativo e ancora essere in grado di accedervi in un'operazione semplice.
 
 - Aggiunta di funzionalità aggiuntive ai dati, ad esempio l'elaborazione delle query.
 
@@ -81,5 +81,5 @@ Per altre informazioni, vedere:
 ## <a name="see-also"></a>Vedere anche
 
 [Accesso ai dati](../data-access-in-cpp.md)<br/>
-[Documentazione di OLE DB SDK](/previous-versions/windows/desktop/ms722784)
-[riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643)
+[Documentazione di OLE DB SDK](/previous-versions/windows/desktop/ms722784)<br/>
+[guida di riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643)<br/>

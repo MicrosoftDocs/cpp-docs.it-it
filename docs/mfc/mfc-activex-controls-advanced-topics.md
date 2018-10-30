@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b0c4b137079d90a1f51cb852f6046c676d32b8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: defc160b2b45185031160e0ba3dd553f8896e372
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50067930"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204691"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Controlli ActiveX MFC: argomenti avanzati
 
@@ -44,7 +44,7 @@ Questo articolo illustra argomenti avanzati relativi allo sviluppo di controlli 
 - [Accedere ai controlli che non sono visibili in fase di esecuzione](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
 ##  <a name="_core_using_database_classes_in_activex_controls"></a> Uso di classi di Database nei controlli ActiveX
 

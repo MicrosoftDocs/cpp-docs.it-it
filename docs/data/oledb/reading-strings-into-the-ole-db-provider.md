@@ -15,22 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a2a580c5ae3d80349b74e6ce7606763c32201805
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b1730c839ab2eb87511a241c28409646a999cfd6
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063328"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216253"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lettura di stringhe in un provider OLE DB
 
 Il `RCustomRowset::Execute` funzione apre un file e legge le stringhe. Il consumer passa il nome del file al provider chiamando [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757). Il provider riceve il nome del file e lo archivia nella variabile membro `m_szCommandText`. `Execute` legge il nome del file da `m_szCommandText`. Se il nome del file non è valido o non è disponibile, il file `Execute` restituisce un errore. In caso contrario, viene aperto il file e le chiamate `fgets` per recuperare le stringhe. Per ciascun insieme di stringhe, letture `Execute` crea un'istanza del record utente (`CAgentMan`) e lo inserisce in una matrice.
 
-Se il file non può essere aperto, `Execute` dovrà restituire DB_E_NOTABLE. Se viene restituito E_FAIL, il provider non funzionerà con molti utenti e non passerà OLE DB [test di conformità](../../data/oledb/testing-your-provider.md).
+Se il file non può essere aperto, `Execute` dovrà restituire DB_E_NOTABLE. Se viene restituito E_FAIL, il provider non funzionerà con molti utenti e non passa OLE DB [test di conformità](../../data/oledb/testing-your-provider.md).
 
 ## <a name="example"></a>Esempio
-
-La versione modificata `Execute` funzione si presenta come segue:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -106,4 +104,4 @@ public:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Implementazione di un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md)
+[Implementazione di un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

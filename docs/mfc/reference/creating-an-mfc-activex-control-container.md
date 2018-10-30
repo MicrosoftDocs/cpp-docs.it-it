@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37119934a70f8a68d32ed83699fa6deb012d8879
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bc12be2b7d3e25059333d4f22bd2d8eb458b959c
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404436"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204392"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Creazione di un contenitore di controlli ActiveX MFC
 
 Un contenitore di controlli ActiveX è un programma principale che fornisce l'ambiente per un controllo ActiveX (precedentemente OLE) per l'esecuzione. È possibile creare un'applicazione in grado di contenere i controlli ActiveX con o senza MFC, ma è molto più semplice a che fare con MFC.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](../activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](../activex-controls.md).
 
 Creazione di un programma MFC di contenitori tramite il [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md) consente di accedere a molte funzionalità implementate dalle classi MFC e ActiveX dei controlli ActiveX e automazione. Queste funzionalità includono la modifica visiva, automazione, i file compositi, creazione e il supportano per i controlli. Opzioni di modifica visiva la creazione guidata applicazione MFC che supporterà il programma padre includono la creazione di un contenitore, un server ridotto, un server completo e un programma che corrisponde a un contenitore e un server.
 

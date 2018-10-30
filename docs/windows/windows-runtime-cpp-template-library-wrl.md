@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429748"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204613"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Libreria di modelli di Windows Runtime C++ (WRL)
 
@@ -69,7 +69,7 @@ Informazioni su come creare un'app UWP che usa [Microsoft Media Foundation](/win
 Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per creare un componente COM di base e un metodo di base per registrare e utilizzare il componente COM da un'app desktop.
 
 [Procedura: Creare direttamente un'istanza dei componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
-Informazioni su come usare il [makeandinitialize](../windows/make-function.md) e [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funzioni per creare un'istanza di un componente dal modulo che lo definisce.
+Informazioni sull'utilizzo delle funzioni [Microsoft::WRL::Details::MakeAndInitialize](../windows/make-function.md) e [Microsoft::WRL::Make](../windows/makeandinitialize-function.md) per creare un'istanza di un componente dal modulo che lo definisce.
 
 [Procedura: Usare winmdidl.exe e midlrt.exe per creare file con estensione h dai metadati di Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Viene illustrato come utilizzare i componenti personalizzati di Windows Runtime da WRL creando un file IDL dai metadati di .winmd.
@@ -119,11 +119,11 @@ Libreria modelli C++ per Windows Runtime offre tipi che rappresentano alcuni con
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](../windows/comptr-class.md) è un *puntatore intelligente* tipo che rappresenta l'interfaccia specificata dal parametro di modello. Utilizzare `ComPtr` per dichiarare una variabile che può accedere ai membri di un oggetto derivato dall'interfaccia. `ComPtr` mantiene automaticamente un conteggio dei riferimenti per un puntatore di interfaccia sottostante e rilascia l'interfaccia quando il conteggio dei riferimenti va a zero.
+[ComPtr](../windows/comptr-class.md) è un tipo di *puntatore intelligente* che rappresenta l'interfaccia specificata dal parametro di modello. Utilizzare `ComPtr` per dichiarare una variabile che può accedere ai membri di un oggetto derivato dall'interfaccia. `ComPtr` mantiene automaticamente un conteggio dei riferimenti per un puntatore di interfaccia sottostante e rilascia l'interfaccia quando il conteggio dei riferimenti va a zero.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](../windows/runtimeclass-class.md) rappresenta una classe istanziata che eredita un set di interfacce specificate. Oggetto `RuntimeClass` oggetto può fornire una combinazione di supporto per uno o più interfacce di Windows Runtime COM, o un riferimento debole a un componente.
+[RuntimeClass](../windows/runtimeclass-class.md) rappresenta una classe di cui è stata creata un'istanza che eredita un set di interfacce specificate. Oggetto `RuntimeClass` oggetto può fornire una combinazione di supporto per uno o più interfacce di Windows Runtime COM, o un riferimento debole a un componente.
 
 ### <a name="module"></a>Modulo
 
@@ -131,11 +131,11 @@ Libreria modelli C++ per Windows Runtime offre tipi che rappresentano alcuni con
 
 ### <a name="callback"></a>Callback
 
-Il [Callback](../windows/callback-function-windows-runtime-cpp-template-library.md) funzione crea un oggetto la cui funzione membro è un gestore eventi (un metodo di callback). Utilizzare la funzione `Callback` per scrivere operazioni asincrone.
+La funzione [Callback](../windows/callback-function-windows-runtime-cpp-template-library.md) crea un oggetto la cui funzione membro è un gestore eventi (un metodo di callback). Utilizzare la funzione `Callback` per scrivere operazioni asincrone.
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](../windows/eventsource-class.md) viene usato per gestire *delegare* gestori eventi. Libreria modelli C++ per Windows Runtime consente di implementare un delegato e utilizzare `EventSource` per aggiungere, rimuovere e richiamare delegati.
+[EventSource](../windows/eventsource-class.md) viene utilizzato per gestire i gestori eventi del *delegato* . Libreria modelli C++ per Windows Runtime consente di implementare un delegato e utilizzare `EventSource` per aggiungere, rimuovere e richiamare delegati.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -143,11 +143,11 @@ Il [Callback](../windows/callback-function-windows-runtime-cpp-template-library.
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](../windows/ftmbase-class.md) rappresenta un oggetto gestore del marshalling a thread libero. `FtmBase` crea una tabella globale (GIT) dell'interfaccia e aiuta a gestire il marshalling e gli oggetti proxy.
+[FtmBase](../windows/ftmbase-class.md) rappresenta un oggetto di gestore del marshalling con modello di threading Free. `FtmBase` crea una tabella globale (GIT) dell'interfaccia e aiuta a gestire il marshalling e gli oggetti proxy.
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](../windows/weakref-class.md) è un tipo di puntatore intelligente che rappresenta un *riferimento debole*, che fa riferimento a un oggetto che può o potrebbe non essere accessibile. Oggetto `WeakRef` oggetto può essere usato solamente da Windows Runtime e non da COM classico.
+[WeakRef](../windows/weakref-class.md) è un tipo di puntatore intelligente che rappresenta un *riferimento debole*che fa riferimento a un oggetto che potrebbe essere accessibile o meno. Oggetto `WeakRef` oggetto può essere usato solamente da Windows Runtime e non da COM classico.
 
 Un oggetto `WeakRef` in genere rappresenta un oggetto la cui esistenza è controllata da un thread o da un'applicazione esterna. Ad esempio, un oggetto `WeakRef` può fare riferimento a un oggetto file. Quando il file viene aperto, `WeakRef` è valido e il file a cui si fa riferimento è accessibile. Ma quando il file viene chiuso, `WeakRef` non è valido e il file non è accessibile.
 

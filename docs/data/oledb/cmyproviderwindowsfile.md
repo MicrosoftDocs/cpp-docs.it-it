@@ -20,22 +20,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 947efa181a6b632050c01c4f2b327cf11a113e3f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bbbde895c7c83264d0ad77bf50bfc14428cdb99f
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070933"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216266"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-La procedura guidata crea una classe che contiene una riga di dati. In questo caso, viene chiamato `CCustomWindowsFile`. Nell'esempio di codice per `CCustomWindowsFile` viene generato dalla procedura guidata, sono elencati tutti i file in una directory tramite il `WIN32_FIND_DATA` struttura. `CCustomWindowsFile` eredita dal `WIN32_FIND_DATA` struttura:
+La procedura guidata crea una classe che contiene una sola riga di dati. In questo caso, viene chiamato `CCustomWindowsFile`. Nell'esempio di codice per `CCustomWindowsFile` viene generato dalla procedura guidata, sono elencati tutti i file in una directory tramite il `WIN32_FIND_DATA` struttura. `CCustomWindowsFile` eredita dal `WIN32_FIND_DATA` struttura:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
 // CustomRS.H
 
-class CCustomWindowsFile:
+class CCustomWindowsFile: 
    public WIN32_FIND_DATA
 {
 public:
@@ -49,7 +49,7 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-`CCustomWindowsFile` viene chiamato il [classe di record utente](../../data/oledb/user-record.md) poiché contiene anche una mappa che descrive le colonne nel set di righe del provider. In questa mappa contiene una voce per ogni campo nel set di righe usando le macro PROVIDER_COLUMN_ENTRY. Le macro di specificare il nome di colonna, ordinale e offset a una voce di struttura. Le voci delle colonne del provider nel codice precedente contengano gli offset nel `WIN32_FIND_DATA` struttura. Quando il consumer chiama `IRowset::GetData`, i dati vengono trasferiti in un buffer contiguo. Anziché ricorrere a operazioni di aritmetica dei puntatori, la mappa consente di specificare un membro dati.
+`CCustomWindowsFile` viene chiamato il [classe di record utente](../../data/oledb/user-record.md) poiché dispone anche di una mappa che descrive le colonne nel set di righe del provider. In questa mappa contiene una voce per ogni campo nel set di righe usando le macro PROVIDER_COLUMN_ENTRY. Le macro di specificare il nome di colonna, ordinale e offset a una voce di struttura. Le voci delle colonne del provider nel codice precedente contengano gli offset nel `WIN32_FIND_DATA` struttura. Quando il consumer chiama `IRowset::GetData`, i dati vengono trasferiti in un buffer contiguo. Anziché ricorrere a operazioni di aritmetica dei puntatori, la mappa consente di specificare un membro dati.
 
 Il `CCustomRowset` classe contiene inoltre il `Execute` (metodo). `Execute` è che legge effettivamente i dati dall'origine native. Il codice seguente illustra la procedura guidata genera `Execute` (metodo). La funzione Usa Win32 `FindFirstFile` e `FindNextFile` API per recuperare informazioni sui file nella directory e li inserisce nelle istanze del `CCustomWindowsFile` classe.
 
@@ -84,10 +84,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }
 ```
 
-Directory in cui cercare è rappresentata da `m_strCommandText`; questo file contiene il testo rapprentato dal `ICommandText` interfaccia nell'oggetto comando. Se viene specificata alcuna directory, Usa la directory corrente.
+Di seguito viene illustrata la directory in cui cercare `m_strCommandText`; questo file contiene il testo rapprentato dal `ICommandText` interfaccia nell'oggetto comando. Se viene specificata alcuna directory, Usa la directory corrente.
 
-Il metodo creerà una voce per ogni file (corrispondente a una riga) e lo inserisce nel `m_rgRowData` (membro dati). Il `CRowsetImpl` classe definisce il `m_rgRowData` (membro dati). I dati in questa matrice rappresentano l'intera tabella e viene usati in tutti i modelli.
+Il metodo creerà una voce per ogni file (corrispondente a una riga) e lo inserisce nel `m_rgRowData` (membro dati). Il `CRowsetImpl` classe definisce il `m_rgRowData` (membro dati). I dati in questa matrice viene visualizzati l'intera tabella e viene usati in tutti i modelli.
 
 ## <a name="see-also"></a>Vedere anche
 
-[File del provider generati tramite procedura guidata](../../data/oledb/provider-wizard-generated-files.md)
+[File del provider generati tramite procedura guidata](../../data/oledb/provider-wizard-generated-files.md)<br/>

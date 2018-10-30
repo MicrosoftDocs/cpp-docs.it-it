@@ -19,49 +19,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c1958604edbb2f9d9c10e58082e70c2df400b8c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e37ed0ac918b004513aa64308870a534a7b2af40
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077374"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216292"
 ---
 # <a name="user-record"></a>Record utente
 
-Record utente fornisce la struttura di codice e i dati che rappresenta i dati della colonna per un set di righe. Un record utente può essere creato in fase di compilazione o in fase di esecuzione. Quando si crea un provider tramite la creazione guidata Provider OLE DB ATL, la procedura guidata crea un record utente predefinito aspetto simile al seguente (supponendo che venga specificato un nome di provider [short name] della *Custom*):
+Record utente fornisce la struttura di codice e i dati che rappresenta i dati della colonna per un set di righe. Un record utente può essere creato in fase di compilazione o in fase di esecuzione. Quando si crea un provider tramite il **Creazione guidata Provider OLE DB ATL**, la procedura guidata crea un record utente predefinito aspetto simile al seguente (supponendo che venga specificato un nome di provider [short name] del *MyProvider*):
 
 ```cpp
 class CWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
-
-BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+  
+BEGIN_PROVIDER_COLUMN_MAP(CMyProviderWindowsFile)
    PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
    PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
    PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
    PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
    PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
 END_PROVIDER_COLUMN_MAP()
-
+  
 };
 ```
 
-I modelli di provider OLE DB di gestire tutte le specifiche di OLE DB riguardanti le interazioni con il client. Per acquisire i dati di colonna necessari per una risposta, il provider chiama il `GetColumnInfo` (funzione), che è necessario inserire nel record utente. È possibile eseguire l'override esplicito `GetColumnInfo` nel record utente, ad esempio, dichiarando nel file con estensione h come illustrato di seguito:
+I modelli di provider OLE DB di gestire tutte le specifiche di OLE DB sulle interazioni con il client. Per acquisire i dati di colonna necessari per una risposta, il provider chiama il `GetColumnInfo` (funzione), che è necessario inserire nel record utente. È possibile eseguire l'override esplicito `GetColumnInfo` nel record utente, ad esempio, dichiarando nel file con estensione h come illustrato di seguito:
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
 ```
 
-Equivale a:
+Ciò equivale a:
 
 ```cpp
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)
 ```
 
-È inoltre necessario implementare `GetColumnInfo` in file con estensione cpp del record utente.
+Implementare poi `GetColumnInfo` in file con estensione cpp del record utente.
 
 Le macro PROVIDER_COLUMN_MAP aiuto per la creazione di un `GetColumnInfo` funzione:
 
@@ -71,7 +71,7 @@ Le macro PROVIDER_COLUMN_MAP aiuto per la creazione di un `GetColumnInfo` funzio
 
 - END_PROVIDER_COLUMN_MAP chiude la matrice e la funzione. Inserisce anche il numero di elementi di matrice nel *pcCols* parametro.
 
-Quando viene creato un record utente in fase di esecuzione `GetColumnInfo` utilizza le *pThis* parametro per la ricezione di un puntatore a un'istanza di set di righe o un comando. I comandi e i set di righe deve supportare il `IColumnsInfo` interfaccia, in modo che informazioni di colonna possono essere ottenute dal puntatore ' this '.
+Quando viene creato un record utente in fase di esecuzione `GetColumnInfo` utilizza le *pThis* parametro per la ricezione di un puntatore a un'istanza di set di righe o un comando. I comandi e i set di righe deve supportare il `IColumnsInfo` interfaccia, in modo che le informazioni di colonna possono essere eseguite dal puntatore ' this '.
 
 `CommandClass` e `RowsetClass` sono i comandi e set di righe che utilizzano il record utente.
 
@@ -79,4 +79,4 @@ Per un esempio più dettagliato di come eseguire l'override `GetColumnInfo` in u
 
 ## <a name="see-also"></a>Vedere anche
 
-[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

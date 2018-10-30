@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5a02330d938e1952d3e6b547d49ddb551bf594a5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062613"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204587"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controlli ActiveX MFC: utilizzo del data binding in un controllo ActiveX
 
 Uno degli usi più potenti di controlli ActiveX è l'associazione dati, che consente a una proprietà del controllo da associare a un campo specifico in un database. Quando un utente modifica i dati in questa proprietà associata, il controllo lo notifica database e richiede che il campo record aggiornato. Il database di notifica quindi il controllo dell'esito positivo o negativo della richiesta.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
 Questo articolo illustra la parte di controllo dell'attività. Implementazione di interazioni di associazione dati con il database è responsabilità del contenitore del controllo. Come è gestire le interazioni del database nel contenitore esula dall'ambito di questa documentazione. Nella parte restante di questo articolo viene spiegato come si prepara il controllo per il data binding.
 

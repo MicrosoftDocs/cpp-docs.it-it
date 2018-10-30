@@ -22,26 +22,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4808f9165fa6f139b0d3b576620e9db80eb360d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 211c83ec63611c493f03e48b58619caca373ce65
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076997"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216357"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-La procedura guidata genera una voce per l'oggetto set di righe. In questo caso,verrà chiamata `CCustomRowset`. Il `CCustomRowset` classe eredita da una classe del provider OLE DB denominata `CRowsetImpl`, che implementa le interfacce necessarie per l'oggetto set di righe. Il codice seguente mostra la catena di ereditarietà per `CRowsetImpl`:
+La procedura guidata genera una voce per l'oggetto set di righe. In questo caso, viene chiamato `CCustomRowset`. Il `CCustomRowset` classe eredita da una classe del provider OLE DB denominata `CRowsetImpl`, che implementa le interfacce necessarie per l'oggetto set di righe. Il codice seguente mostra la catena di ereditarietà per `CRowsetImpl`:
 
 ```cpp
-template <class T, class Storage, class CreatorClass,
+template <class T, class Storage, class CreatorClass, 
    class ArrayType = CAtlArray<Storage>>
 class CMyRowsetImpl:
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType,
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, 
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
-`CRowsetImpl` Usa anche il `IAccessor` e `IColumnsInfo` interfacce. Usa queste interfacce per i campi di output nelle tabelle. La classe fornisce anche un'implementazione per `IRowsetIdentity`, che consente al consumer determinare se due righe coincidano. Il `IRowsetInfo` interfaccia implementa la proprietà dell'oggetto set di righe. Il `IConvertType` interfaccia consente al provider per risolvere le differenze tra tipi di dati richiesti dal consumer e quelli usati dal provider.
+`CRowsetImpl` Usa anche il `IAccessor` e `IColumnsInfo` interfacce. Usa queste interfacce per i campi di output nelle tabelle. La classe fornisce anche un'implementazione per `IRowsetIdentity`, che consente al consumer determinare se due righe sono uguali. Il `IRowsetInfo` interfaccia implementa la proprietà dell'oggetto set di righe. Il `IConvertType` interfaccia consente al provider per risolvere le differenze tra tipi di dati richiesti dal consumer e quelli usati dal provider.
 
 Il `IRowset` interfaccia gestisce il recupero dei dati. Il consumer chiama prima di tutto un metodo denominato `GetNextRows` per restituire un handle a una riga, nota come un `HROW`. Il consumer chiama quindi `IRowset::GetData` con tale `HROW` per recuperare i dati richiesti.
 
@@ -51,4 +51,4 @@ Il *RowsetInterface* parametro consente di usare anche il `IRowsetLocate` o `IRo
 
 ## <a name="see-also"></a>Vedere anche
 
-[File del provider generati tramite procedura guidata](../../data/oledb/provider-wizard-generated-files.md)
+[File del provider generati tramite procedura guidata](../../data/oledb/provider-wizard-generated-files.md)<br/>

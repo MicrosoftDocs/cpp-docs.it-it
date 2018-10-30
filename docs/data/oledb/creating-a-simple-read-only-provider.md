@@ -1,7 +1,7 @@
 ---
 title: Creazione di un Provider semplice in sola lettura | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b32517e8254f383e624c5262f3a806e66ed28824
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c8fd4e5eb25ab1e8e6b20b576a0688da7b5aa2ef
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056256"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216396"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Creazione di un provider semplice in sola lettura
 
-Dopo avere creato un provider OLE DB tramite la creazione guidata progetto ATL e creazione guidata Provider OLE DB ATL, è possibile aggiungere altre funzionalità che si desidera supportare. Inizia a progettare il provider esaminando il tipo di dati vengono inviati al consumatore e in quali condizioni. È particolarmente importante determinare se è necessario supportare i comandi, transazioni e altri oggetti facoltativi. Una buona progettazione fin dall'inizio offre una maggiore velocità di implementazione e di test.
+Dopo aver creato un provider OLE DB tramite il **Creazione guidata progetto ATL** e **Creazione guidata Provider OLE DB ATL**, è possibile aggiungere altre funzionalità che si desidera supportare. Inizia a progettare il provider esaminando il tipo di dati verranno inviati al consumatore e in quali condizioni. È particolarmente importante determinare se è necessario supportare i comandi, transazioni e altri oggetti facoltativi. Una buona progettazione fin dall'inizio offre una maggiore velocità di implementazione e di test.
 
 Nell'esempio è presentato in due parti:
 
@@ -35,4 +35,4 @@ Nell'esempio è presentato in due parti:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+[Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>

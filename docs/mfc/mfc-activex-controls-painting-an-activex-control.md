@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4e5b0f1b38e73523a476c83e19ab9bf812fdc2fa
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056009"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204535"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controlli ActiveX MFC: disegno di un controllo ActiveX
 
 In questo articolo viene descritto il processo di creazione del controllo ActiveX e come è possibile modificare il codice di disegno per ottimizzare il processo. (Vedere [ottimizzazione del disegno del controllo](../mfc/optimizing-control-drawing.md) per le tecniche su come ottimizzare il disegno in mancanza di controlli singolarmente ripristino gli oggetti GDI precedentemente selezionati. Una volta che tutti i controlli sono stati disegnati, il contenitore può automaticamente ripristinare gli oggetti originali.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituisce ActiveX, vedere [controlli ActiveX](activex-controls.md).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
 Gli esempi in questo articolo hanno origine da un controllo creato dalla Creazione guidata controllo ActiveX MFC con le impostazioni predefinite. Per altre informazioni sulla creazione di un'applicazione di base del controllo mediante la creazione guidata controllo ActiveX MFC, vedere l'articolo [Creazione guidata controllo ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md).
 
