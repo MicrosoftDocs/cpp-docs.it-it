@@ -1,26 +1,16 @@
 ---
-title: Funzioni membro pulsante di selezione | Microsoft Docs
-ms.custom: ''
+title: Funzioni membro pulsante di selezione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - spin button control, methods
 - CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 88f00aedcf269996277c154f9dd051534a9c5e49
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffd07377d54fcfff93ab4ab3771515a90ccf2785
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431528"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542597"
 ---
 # <a name="spin-button-member-functions"></a>Funzioni membro pulsante di selezione
 

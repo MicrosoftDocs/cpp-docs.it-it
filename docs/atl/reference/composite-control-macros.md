@@ -1,29 +1,19 @@
 ---
-title: Macro di controlli compositi | Microsoft Docs
-ms.custom: ''
+title: Macro di controlli compositi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
 - atlcom/ATL::END_SINK_MAP
 - atlcom/ATL::SINK_ENTRY
-dev_langs:
-- C++
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75e34fd4cfa53257f0e8a497cf8bc245c90f6732
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 10965fed5aac2eb037cf9894998688e3e7c2bffa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077354"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498977"
 ---
 # <a name="composite-control-macros"></a>Macro di controlli compositi
 

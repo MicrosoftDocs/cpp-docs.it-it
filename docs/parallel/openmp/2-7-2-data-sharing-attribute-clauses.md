@@ -1,23 +1,13 @@
 ---
-title: 2.7.2 attributi per la condivisione dei dati clausole | Microsoft Docs
-ms.custom: ''
+title: 2.7.2 Clausole di attributi per la condivisione di dati
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 47347d3c-18bd-441f-99cf-7737564c417f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4b8c53cace8d50f10fe638ea8604c46e457f69ee
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4c9209a4d627c6212087b621b223a3fb81b48ce3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559653"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Clausole di attributi per la condivisione di dati
 

@@ -1,10 +1,6 @@
 ---
-title: setlocale, _wsetlocale | Microsoft Docs
-ms.custom: ''
+title: setlocale, _wsetlocale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsetlocale
 - setlocale
@@ -25,8 +21,6 @@ f1_keywords:
 - _wsetlocale
 - _tsetlocale
 - setlocale
-dev_langs:
-- C++
 helpviewer_keywords:
 - wsetlocale function
 - setlocale function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0f2c0478ba5898ab369a04362734891f6d45cf42
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451836"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548538"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -74,7 +64,7 @@ Identificatore delle impostazioni locali.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se un valore valido *delle impostazioni locali* e *categoria* sono specificati e restituisce un puntatore alla stringa associata all'oggetto specificato *delle impostazioni locali* e *categoria*. Se il *delle impostazioni locali* oppure *categoria* non è valido, restituisce un puntatore null e le impostazioni locali correnti del programma non vengono modificate.
+Se un valore valido *delle impostazioni locali* e *categoria* vengono assegnati, restituisce un puntatore alla stringa associata all'oggetto specificato *delle impostazioni locali* e *categoria*. Se il *delle impostazioni locali* oppure *categoria* non è valido, restituisce un puntatore null e le impostazioni locali correnti del programma non vengono modificate.
 
 Ad esempio, la chiamata
 
@@ -88,13 +78,13 @@ imposta tutte le categorie, restituendo solo la stringa
 en-US
 ```
 
-È possibile copiare la stringa restituita da **setlocale** per ripristinare la parte delle informazioni sulle impostazioni locali del programma. Globale o thread archiviazione locale viene usata per la stringa restituita da **setlocale**. Le chiamate successive a **setlocale** sovrascrivere la stringa, che consente di invalidare i puntatori di stringa restituiti dalle chiamate precedenti.
+È possibile copiare la stringa restituita da **setlocale** per ripristinare la parte delle informazioni sulle impostazioni locali del programma. Archiviazione locale globale o il thread viene usata per la stringa restituita da **setlocale**. Le chiamate successive a **setlocale** sovrascrivere la stringa, che consente di invalidare i puntatori di stringa restituiti dalle chiamate precedenti.
 
 ## <a name="remarks"></a>Note
 
-Usare la **setlocale** funzione per impostare, modificare o eseguire una query alcune o tutte le informazioni delle impostazioni locali di programma corrente specificate dal *delle impostazioni locali* e *categoria*. *impostazioni locali* fa riferimento alla località (paese/area geografica e lingua) per il quale è possibile personalizzare alcuni aspetti del programma. Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari. Se si imposta *delle impostazioni locali* per la stringa predefinita per una lingua che include più forme supportate nel computer in uso, è consigliabile controllare il **setlocale** un valore restituito per vedere quale lingua è attiva. Ad esempio, se si imposta *delle impostazioni locali* su "cinese" il valore restituito potrebbe essere "cinese semplificato" o "cinese tradizionale".
+Usare la **setlocale** funzione per impostare, modificare o eseguire una query alcune o tutte le informazioni delle impostazioni locali di programma corrente specificate dal *delle impostazioni locali* e *categoria*. *impostazioni locali* fa riferimento alla località (paese/area geografica e lingua) per il quale è possibile personalizzare alcuni aspetti del programma. Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari. Se si imposta *delle impostazioni locali* sulla stringa predefinita per una lingua con più forme supportate nel computer, è consigliabile controllare le **setlocale** un valore restituito per sapere quale lingua è attiva. Ad esempio, se si imposta *delle impostazioni locali* su "cinese" il valore restituito potrebbe essere "cinese semplificato" o "cinese tradizionale".
 
-**wsetlocale** è una versione a caratteri "wide" **setlocale**; il *impostazioni locali* argomento e il valore restituito di **wsetlocale** sono stringhe a caratteri "wide". **wsetlocale** e **setlocale** si comportano in modo identico in caso contrario.
+**wsetlocale** è una versione a caratteri wide di **setlocale**; il *impostazioni internazionali* argomento e il valore restituito **wsetlocale** sono stringhe a caratteri wide. **wsetlocale** e **setlocale** hanno lo stesso comportamento in caso contrario.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -109,21 +99,21 @@ Il *categoria* argomento specifica le parti di informazioni sulle impostazioni l
 **LC_ALL**|Tutte le categorie, come indicato di seguito.
 **LC_COLLATE**|Il **strcoll**, **stricoll**, **wcscoll**, **wcsicoll**, **strxfrm**, **_ strncoll**, **strnicoll**, **wcsncoll**, **wcsnicoll**, e **wcsxfrm** funzioni.
 **LC_CTYPE**|Le funzioni di gestione dei caratteri (tranne **isdigit**, **isxdigit**, **mbstowcs**, e **mbtowc**, che non sono interessate).
-**LC_MONETARY**|Le informazioni di formattazione monetaria restituite dal **localeconv** (funzione).
-**LC_NUMERIC**|Carattere per la routine di output formattate del separatore decimale (ad esempio **printf**), per le routine di conversione dei dati e per le informazioni di formattazione non monetarie restituite da **localeconv**. Oltre a carattere del separatore decimale **LC_NUMERIC** separatore imposta le migliaia e il raggruppamento di controllare la stringa restituita da [localeconv](localeconv.md).
+**LC_MONETARY**|Informazioni di formattazione monetaria restituite dal **localeconv** (funzione).
+**LC_NUMERIC**|Carattere per le routine di output formattato del separatore decimale (ad esempio **printf**), per le routine di conversione dei dati e per le informazioni di formattazione non monetarie restituite dalle **localeconv**. Oltre al carattere del separatore decimale, **LC_NUMERIC** separatore set migliaia e il controllo del raggruppamento stringa restituita da [localeconv](localeconv.md).
 **LC_TIME**|Il **strftime** e **wcsftime** funzioni.
 
-Questa funzione convalida il parametro di categoria. Se il parametro di categoria non è uno dei valori forniti nella tabella precedente, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **NULL**.
+Questa funzione convalida il parametro di categoria. Se il parametro di categoria non è uno dei valori forniti nella tabella precedente, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposterà **errno** al **EINVAL** e restituisce **NULL**.
 
-Il *delle impostazioni locali* argomento è un puntatore a una stringa che specifica le impostazioni locali. Per informazioni relative al formato del *delle impostazioni locali* argomento, vedere [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Se *locale* punta a una stringa vuota, le impostazioni locali corrispondono all'ambiente nativo definito in fase di implementazione. Il valore **C** specifica l'ambiente ANSI minimo per la conversione C. Il **C** delle impostazioni locali si presuppongono che tutti i **char** tipi di dati sono di 1 byte e che il valore è sempre minore di 256.
+Il *delle impostazioni locali* argomento è un puntatore a una stringa che specifica le impostazioni locali. Per informazioni sul formato del *delle impostazioni locali* argomento, vedere [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Se *locale* punta a una stringa vuota, le impostazioni locali corrispondono all'ambiente nativo definito in fase di implementazione. Un valore pari **C** specifica l'ambiente ANSI minimo per la conversione C. Il **C** delle impostazioni locali si presuppongono che tutti **char** i tipi di dati siano di 1 byte e che il valore è sempre minore di 256.
 
 All'avvio del programma, viene eseguito l'equivalente dell'istruzione seguente:
 
 `setlocale( LC_ALL, "C" );`
 
-Il *delle impostazioni locali* argomento può richiedere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e codice di paese/area geografica, una tabella codici, o una stringa di lingua, codice di paese/area geografica e tabella codici. Il set dei nomi delle impostazioni locali disponibili, le lingue, i codici paese e le tabelle codici include tutti quelli supportati dalle API NLS di Windows, ad eccezione delle tabelle codici che richiedono più di due byte per carattere, ad esempio UTF-7 e UTF-8. Se si fornisce un valore di tabella codici di UTF-8 o UTF-7 **setlocale** , verrà restituito **NULL**. Il set di nomi delle impostazioni locali supportate da **setlocale** descritte in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe lingua e paese/area geografica supportati da **setlocale** sono racchiusi [stringhe relative a lingue](../../c-runtime-library/language-strings.md) e [stringhe paese/area geografica](../../c-runtime-library/country-region-strings.md). Ai fini delle prestazioni e delle manutenibilità delle stringhe delle impostazioni locali, è consigliabile incorporare il nome delle impostazioni locali nel codice o serializzarlo nell'archiviazione. È più probabile che in seguito a un aggiornamento del sistema operativo venga modificato il formato del nome della lingua e del paese e non le stringhe del nome delle impostazioni locali.
+Il *delle impostazioni locali* argomento può richiedere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e codice di paese/area geografica, una tabella codici, o una stringa lingua, codice di paese/area geografica e tabella codici. Il set dei nomi delle impostazioni locali disponibili, le lingue, i codici paese e le tabelle codici include tutti quelli supportati dalle API NLS di Windows, ad eccezione delle tabelle codici che richiedono più di due byte per carattere, ad esempio UTF-7 e UTF-8. Se si specifica un valore di tabella codici di UTF-7 o UTF-8 **setlocale** avrà esito negativo, restituendo **NULL**. Il set di nomi delle impostazioni locali supportate da **setlocale** descritti in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set delle stringhe lingua e paese/area geografica supportati da **setlocale** sono elencati [stringhe lingua](../../c-runtime-library/language-strings.md) e [Country/Region Strings](../../c-runtime-library/country-region-strings.md). Ai fini delle prestazioni e delle manutenibilità delle stringhe delle impostazioni locali, è consigliabile incorporare il nome delle impostazioni locali nel codice o serializzarlo nell'archiviazione. È più probabile che in seguito a un aggiornamento del sistema operativo venga modificato il formato del nome della lingua e del paese e non le stringhe del nome delle impostazioni locali.
 
-Un puntatore null passato come il *delle impostazioni locali* argomento indica **setlocale** di eseguire query anziché impostare l'ambiente internazionale. Se il *delle impostazioni locali* argomento è un puntatore null, non vengono modificate le impostazioni del programma corrente delle impostazioni locali. Al contrario, **setlocale** restituisce un puntatore alla stringa di cui è associata il *categoria* delle impostazioni locali correnti del thread. Se il *categoria* argomento **LC_ALL**, la funzione restituisce una stringa che indica l'impostazione corrente di tutte le categorie, separate da punti e virgola. Ad esempio, la sequenza di chiamate
+Un puntatore null passato come il *delle impostazioni locali* argomento indica **setlocale** per eseguire una query invece di impostare l'ambiente internazionale. Se il *delle impostazioni locali* argomento è un puntatore null, impostazioni locali correnti del programma non viene modificato. Al contrario, **setlocale** restituisce un puntatore alla stringa di cui è associata il *categoria* delle impostazioni locali correnti del thread. Se il *categoria* l'argomento è **LC_ALL**, la funzione restituisce una stringa che indica l'impostazione corrente di ogni categoria, separato da punti e virgola. Ad esempio, la sequenza di chiamate
 
 ```C
 // Set all categories and return "en-US"
@@ -165,7 +155,7 @@ Negli esempi seguenti riguardano la **LC_ALL** categoria. Le stringhe "OCP" e "A
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Imposta le impostazioni locali per la lingua, paese/area geografica e tabella codici indicata dal  *\<lingua >*,  *\<paese >*, e  *\<code_page >* stringhe. È possibile utilizzare varie combinazioni di lingua, paese e tabella codici. Questa chiamata imposta ad esempio le impostazioni locali sulla lingua francese del Canada con la tabella codici 1252:
+   Imposta le impostazioni locali sulla lingua, paese/area geografica e tabella codici indicata dal  *\<lingua >*,  *\<country >*, e  *\<code_page >* stringhe. È possibile utilizzare varie combinazioni di lingua, paese e tabella codici. Questa chiamata imposta ad esempio le impostazioni locali sulla lingua francese del Canada con la tabella codici 1252:
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -179,7 +169,7 @@ Negli esempi seguenti riguardano la **LC_ALL** categoria. Le stringhe "OCP" e "A
 
 - `setlocale( LC_ALL, "<language>" );`
 
-   Imposta le impostazioni locali sulla lingua indicata da *\<language>* e usa il paese/area geografica predefinito per la lingua specificata e la tabella codici ANSI predefinita dell'utente per tale paese/area geografica, secondo quanto ottenuto dal sistema operativo host. Ad esempio, nell'esempio le chiamate a **setlocale** sono funzionalmente equivalenti:
+   Imposta le impostazioni locali sulla lingua indicata da *\<language>* e usa il paese/area geografica predefinito per la lingua specificata e la tabella codici ANSI predefinita dell'utente per tale paese/area geografica, secondo quanto ottenuto dal sistema operativo host. Ad esempio, quanto segue le chiamate a **setlocale** sono funzionalmente equivalenti:
 
    `setlocale( LC_ALL, "en-US" );`
 
@@ -193,7 +183,7 @@ Negli esempi seguenti riguardano la **LC_ALL** categoria. Le stringhe "OCP" e "A
 
    Imposta la tabella codici sul valore indicato da *<code_page>*, con il paese/area geografica e la lingua predefiniti (come definito dal sistema operativo host) per la tabella codici specificata.
 
-La categoria deve essere **LC_ALL** oppure **LC_CTYPE** per rendere effettiva una modifica della tabella codici. Ad esempio, se il valore predefinito paese/area geografica e la lingua del sistema operativo host sono "United States" e "English", i seguenti due chiamate a **setlocale** sono funzionalmente equivalenti:
+La categoria deve essere **LC_ALL** oppure **LC_CTYPE** per rendere effettiva una modifica della tabella codici. Ad esempio, se il paese/area predefinita e la lingua del sistema operativo host sono "United States" e "English", i seguenti due chiamate a **setlocale** sono funzionalmente equivalenti:
 
 `setlocale( LC_ALL, ".1252" );`
 
@@ -318,7 +308,7 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 
 ## <a name="see-also"></a>Vedere anche
 
-[Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
