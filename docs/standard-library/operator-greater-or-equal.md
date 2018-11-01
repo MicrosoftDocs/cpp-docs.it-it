@@ -1,10 +1,6 @@
 ---
-title: operator&gt;= | Microsoft Docs
-ms.custom: ''
+title: operator&gt;=
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - operator>=
 - std::>=
@@ -12,23 +8,17 @@ f1_keywords:
 - '>='
 - std.>=
 - std::operator>=
-dev_langs:
-- C++
 helpviewer_keywords:
 - '>= operator, comparing specific objects'
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 958d87b0c9eb07c3d5c0fea5f2ff06f7b12aee75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f7ed1fcf0c4e3290d110d9aa12b66289cb331f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855812"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459033"
 ---
 # <a name="operatorgt"></a>operator&gt;=
 

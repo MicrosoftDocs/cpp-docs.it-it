@@ -1,23 +1,13 @@
 ---
-title: -arch (x64) | Microsoft Docs
-ms.custom: ''
+title: /arch (x64)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 553574981f445f19605d7a076594054670f2d685
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1ee086eff73b0538390764ef26b051919d65bcf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431008"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456797"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 

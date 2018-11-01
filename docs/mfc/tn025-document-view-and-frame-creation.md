@@ -1,28 +1,18 @@
 ---
-title: 'Tn025: creazione Di documenti, visualizzazioni e Frame creazione | Microsoft Docs'
-ms.custom: ''
+title: 'TN025: creazione di documenti, visualizzazioni e frame'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.creation
-dev_langs:
-- C++
 helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75530d8133806357dba7a30862095ea08bd022b9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa8bc305848ce95e0b5bfef1ac6785b18bc84015
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422012"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50634759"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: creazione di documenti, visualizzazioni e frame
 

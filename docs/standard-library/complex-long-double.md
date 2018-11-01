@@ -1,29 +1,19 @@
 ---
-title: complex&lt;long double&gt; | Microsoft Docs
-ms.custom: ''
+title: complex&lt;long double&gt;
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - std::complex<long double>
 - complex<long double>
 - std.complex<long double>
-dev_langs:
-- C++
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e1d17b66285b60190a5c91c8defd5adf51f79a6a
-ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
+ms.openlocfilehash: 19d4569523879911209bf0c05e762eba2c9852a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456576"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 

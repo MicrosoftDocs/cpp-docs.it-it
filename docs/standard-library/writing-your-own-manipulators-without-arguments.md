@@ -1,25 +1,15 @@
 ---
-title: Scrittura di manipolatori personalizzati senza gli argomenti | Microsoft Docs
-ms.custom: ''
+title: Scrittura di manipolatori personalizzati senza gli argomenti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e8bfad1919863a58554604fe6d32b4563e57a14a
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 0c3037c007e9388485f9553f9d2b0a69a1980b9a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235711"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428407"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Scrittura di manipolatori personalizzati senza gli argomenti
 

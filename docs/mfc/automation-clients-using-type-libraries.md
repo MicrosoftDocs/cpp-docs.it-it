@@ -1,14 +1,8 @@
 ---
-title: 'Client di automazione: Utilizzo delle librerie dei tipi | Microsoft Docs'
-ms.custom: ''
+title: 'Client di automazione: utilizzo delle librerie dei tipi'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - MkTypLib
-dev_langs:
-- C++
 helpviewer_keywords:
 - clients, Automation
 - dispatch class [MFC]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 001dfb29a5ac0f6d93b0715bd2b86ccd60e91259
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bd11bd8f2666bb2c211f7abe93d473f466963bd6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054605"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437050"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Client di automazione: utilizzo delle librerie dei tipi
 

@@ -1,27 +1,17 @@
 ---
-title: Regole in modalità batch | Microsoft Docs
-ms.custom: ''
+title: Regole in modalità batch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - inference rules in NMAKE
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ddc5983f6a18146d12c75484e0db70f12797b35
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 46387fc13c28d95d7b19fb18774daa6fc3064970
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706238"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429770"
 ---
 # <a name="batch-mode-rules"></a>Regole in modalità batch
 

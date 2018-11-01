@@ -1,10 +1,6 @@
 ---
-title: _strdate_s, _wstrdate_s | Microsoft Docs
-ms.custom: ''
+title: _strdate_s, _wstrdate_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate_s
 - _wstrdate_s
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e4e9ff3783fc7a89e7af42ebf283209c034c0d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629008"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -98,17 +88,17 @@ Zero in caso di esito positivo. Il valore restituito è un codice di errore se s
 
 ## <a name="security-issues"></a>Problemi relativi alla sicurezza
 
-Passando un oggetto non valido non **NULL** valore per il buffer comporterà una violazione di accesso se il *numberOfElements* parametro è maggiore di 9.
+Passando un valore non valido non **NULL** valore per il buffer causerà una violazione di accesso se il *numberOfElements* parametro è maggiore di 9.
 
-Passando i valori per le dimensioni che è maggiore della dimensione effettiva dei *buffer* comporterà il sovraccarico del buffer.
+Il passaggio di valori per le dimensioni che è maggiore delle dimensioni effettive del *buffer* comporterà un sovraccarico del buffer.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni forniscono versioni più sicure di **strDate** e **wstrdate**. Il **strdate_s** funzione Copia la data di sistema corrente nel buffer a cui puntata *buffer*formattato **mm**/**gg** / **yy**, dove **mm** corrisponde a due cifre che rappresenta il mese **gg** corrisponde a due cifre che rappresenta il giorno e **AA**  è le ultime due cifre dell'anno. Ad esempio, la stringa **12/05/99** rappresenta il 5 dicembre 1999. Il buffer deve avere una lunghezza di almeno 9 caratteri.
+Queste funzioni forniscono versioni più sicure di **strDate** e **wstrdate**. Il **strdate_s** funzione Copia la data di sistema corrente nel buffer a cui punta *buffer*formattato **mm**/**gg** / **yy**, dove **mm** corrisponde a due cifre che rappresenta il mese **gg** corrisponde a due cifre che rappresenta il giorno, e **AA**  sia le ultime due cifre dell'anno. Ad esempio, la stringa **12/05/99** rappresenta il 5 dicembre 1999. Il buffer deve avere una lunghezza di almeno 9 caratteri.
 
-**wstrdate_s** è una versione a caratteri wide **strdate_s**; l'argomento e il valore restituito di **wstrdate_s** sono stringhe a caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+**wstrdate_s** è una versione a caratteri wide di **strdate_s**; l'argomento e il valore restituito **wstrdate_s** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
-Se *buffer* è un **NULL** puntatore, o se *numberOfElements* è inferiore a 9 caratteri, viene richiamato il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL** se il buffer è **NULL** oppure se *numberOfElements*è minore o uguale a 0 o set **errno** alla **ERANGE** se *numberOfElements* è inferiore a 9.
+Se *buffer* è un **NULL** puntatore, o se *numberOfElements* è minore di 9 caratteri, viene richiamato il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL** se il buffer **NULL** oppure se *numberOfElements*è minore o uguale a 0 oppure impostano **errno** al **ERANGE** se *numberOfElements* è minore di 9.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

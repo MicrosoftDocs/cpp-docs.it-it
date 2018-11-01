@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2978 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2978
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2978
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40d7569a250812d6807c4723366b88e2f290be85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045185"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428106"
 ---
 # <a name="compiler-error-c2978"></a>Errore del compilatore C2978
 

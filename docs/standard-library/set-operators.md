@@ -1,8 +1,6 @@
 ---
-title: Operatori &lt;set&gt; | Microsoft Docs
-ms.custom: ''
+title: Operatori &lt;set&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - set/std::operator!=
 - set/std::operator&gt;
@@ -10,8 +8,6 @@ f1_keywords:
 - set/std::operator&lt;
 - set/std::operator&lt;=
 - set/std::operator==
-dev_langs:
-- C++
 ms.assetid: b4256ebc-c449-4688-95db-fced42d20d4d
 helpviewer_keywords:
 - std::operator!= (set)
@@ -20,12 +16,12 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a90c7e2ea7af1200b3e6cfee895b69b29352fb21
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f6354da2a7b4cf6419be4aae1a8d5f20356a4012
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314866"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441821"
 ---
 # <a name="ltsetgt-operators"></a>Operatori &lt;set&gt;
 

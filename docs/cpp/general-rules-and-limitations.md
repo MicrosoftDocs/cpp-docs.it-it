@@ -1,23 +1,13 @@
 ---
-title: Regole e limitazioni generali | Microsoft Docs
-ms.custom: ''
+title: Regole e limitazioni generali
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0222af4bd53b21750cb6debc477e10c96f9d5594
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 931ae04ef47262f15d037a2b5eeb35bd01a8419d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061586"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439230"
 ---
 # <a name="general-rules-and-limitations"></a>Regole e limitazioni generali
 

@@ -1,28 +1,18 @@
 ---
-title: Struct forward_iterator_tag | Microsoft Docs
-ms.custom: ''
+title: Struct forward_iterator_tag
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xutility/std::forward_iterator_tag
-dev_langs:
-- C++
 helpviewer_keywords:
 - forward_iterator_tag struct
 - forward_iterator_tag class
 ms.assetid: 68b633ac-b135-4e9e-837d-14248a262ec5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c0a618524fae49d8a5bfdb9ad945285e877d7cc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04d526e7778dc219a8d9a49db40751b4418cc82d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845505"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434255"
 ---
 # <a name="forwarditeratortag-struct"></a>Struct forward_iterator_tag
 
