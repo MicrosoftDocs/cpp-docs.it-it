@@ -1,11 +1,6 @@
 ---
-title: trunc, truncf, truncl | Microsoft Docs
-ms.custom: ''
+title: trunc, truncf, truncl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - trunc
 - truncf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/trunc
 - math/truncf
 - math/truncl
-dev_langs:
-- C++
 helpviewer_keywords:
 - trunc function
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67c179065a6b2c6fc10a4ba6ba87868c8306a2aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519860"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -72,7 +61,7 @@ Valore da troncare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce un valore intero pari *x*, arrotondati per difetto.
+Se l'operazione riesce, restituisce un valore intero pari *x*, arrotondato verso lo zero.
 
 In caso contrario, può restituire uno dei valori seguenti:
 
@@ -86,7 +75,7 @@ Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **trunc** che accettano e restituiscono **float** e **lungo** **doppie** tipi. In un programma C **trunc** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **trunc** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **trunc** accetta e restituisce sempre un **doppie**.
 
 Poiché i valori a virgola mobile più grandi sono numeri interi esatti, questa funzione non genererà un overflow autonomamente. Tuttavia, è possibile causare l'overflow della funzione restituendo un valore in un tipo Integer.
 

@@ -1,11 +1,6 @@
 ---
-title: feholdexcept | Documenti Microsoft
-ms.custom: ''
+title: feholdexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feholdexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6250de98b2eb3f8cc8c475d341c1d63a79262362
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525737"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -55,17 +44,17 @@ int feholdexcept(
 ### <a name="parameters"></a>Parametri
 
 *penv*<br/>
-Puntatore a un **fenv_t** oggetto che contiene una copia dell'ambiente a virgola mobile.
+Puntatore a un **fenv_t** oggetto per contenere una copia dell'ambiente a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce zero se e solo se la funzione è in grado di attivare correttamente la gestione delle eccezioni a virgola mobile non significative.
+Restituisce zero se e solo se la funzione è in grado di attivare correttamente la gestione delle eccezioni a virgola mobile senza interruzioni.
 
 ## <a name="remarks"></a>Note
 
-Il **feholdexcept** funzione viene utilizzata per archiviare lo stato dell'ambiente punto Mobile corrente nel **fenv_t** oggetto a cui punta *penv*e per impostare l'ambiente non interrompere l'esecuzione in caso di eccezioni a virgola mobile. Questa attività è nota come modalità senza interruzioni.  Questa modalità continua fino a quando l'ambiente viene ripristinato tramite [fesetenv](fesetenv1.md) o [feupdateenv](feupdateenv.md).
+Il **feholdexcept** funzione viene utilizzata per archiviare lo stato dell'ambiente a virgola mobile corrente nel **fenv_t** oggetto a cui fa riferimento *penv*e per impostare l'ambiente non interrompere l'esecuzione in corrispondenza di eccezioni a virgola mobile. Questa attività è nota come modalità senza interruzioni.  Questa modalità continua fino a quando l'ambiente viene ripristinato tramite [fesetenv](fesetenv1.md) o [feupdateenv](feupdateenv.md).
 
-È possibile usare questa funzione all'inizio di una subroutine che deve nascondere uno o più eccezioni a virgola mobile dal chiamante. Per segnalare un'eccezione, è possibile eliminare semplicemente le eccezioni indesiderate mediante [feclearexcept,](feclearexcept1.md) e quindi terminare la modalità di interruzione non con una chiamata a **feupdateenv**.
+È possibile usare questa funzione all'inizio di una subroutine che deve nascondere uno o più eccezioni a virgola mobile dal chiamante. Per segnalare un'eccezione, è possibile eliminare semplicemente le eccezioni non utilizzando [feclearexcept](feclearexcept1.md) e quindi terminare la modalità senza interruzioni con una chiamata a **feupdateenv**.
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 

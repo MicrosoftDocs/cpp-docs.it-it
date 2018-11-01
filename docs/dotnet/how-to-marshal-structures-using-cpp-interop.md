@@ -1,12 +1,7 @@
 ---
-title: "Procedura: effettuare il marshalling strutture utilizzando l'interoperabilità C++ | Microsoft Docs"
+title: "Procedura: Effettuare il marshalling di strutture utilizzando l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Interop, structures
 - structures [C++], marshaling
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 6c41e11653eebbea121e1faf0979817d4fde04fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c44b23bf0f73191b86b4970c57313d9bc38c8b7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521329"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Procedura: Effettuare il marshalling di strutture utilizzando l'interoperabilità C++
 

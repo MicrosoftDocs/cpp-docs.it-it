@@ -1,22 +1,12 @@
 ---
-title: /Qsafe_fp_loads | Microsoft Docs
-ms.custom: ''
+title: /Qsafe_fp_loads
 ms.date: 01/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf7f31d416525c98999f4d8da6036862ae1ca270
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e1ef4237fe3af39e76777609a06f90bd585ca422
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504428"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 

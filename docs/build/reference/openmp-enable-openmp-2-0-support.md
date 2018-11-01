@@ -1,29 +1,19 @@
 ---
-title: -openmp (Attiva supporto OpenMP 2.0) | Microsoft Docs
-ms.custom: ''
+title: /openmp (Attiva supporto OpenMP 2.0)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
-dev_langs:
-- C++
 helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6ba594249ff2a6551519d4254ff526cbd03fa97
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 03992a0e8eef3ba9b2683ecb87809b53cb551636
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704106"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518066"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (Attiva supporto OpenMP 2.0)
 
