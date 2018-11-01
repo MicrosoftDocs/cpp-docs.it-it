@@ -1,11 +1,6 @@
 ---
-title: cacosh, cacoshf, cacoshl | Microsoft Docs
-ms.custom: ''
+title: cacosh, cacoshf, cacoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacosh
 - cacoshf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cacosh
 - complex/cacoshf
 - complex/cacoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacosh function
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c61130dbfcc0363ef020216389299634cfcd002f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668195"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
@@ -79,11 +68,11 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il coseno iperbolico inverso del *z*, in radianti. Il risultato è illimitata e non negativo lungo l'asse reale e nell'intervallo [-iπ, iπ +] lungo l'asse immaginaria.
+Il coseno iperbolico inverso di *z*, espresso in radianti. Il risultato è unbounded e un valore non negativo lungo l'asse reale e nell'intervallo [-iπ, + iπ] lungo l'asse immaginario.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cacosh** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **cacosh** accetta e restituisce sempre un **_Dcomplex** valore.
+Dato che C++ consente l'overload, è possibile chiamare overload di **cacosh** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **cacosh** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 

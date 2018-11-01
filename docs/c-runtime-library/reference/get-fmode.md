@@ -1,10 +1,6 @@
 ---
-title: _get_fmode | Microsoft Docs
-ms.custom: ''
+title: _get_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_fmode
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - get_fmode
 - _get_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_fmode function
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a28909e5e848712305fb28e8ac4d46180f8948cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f326069c1c190b0fa1c1bbd5ee4ead7346481a38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658029"
 ---
 # <a name="getfmode"></a>_get_fmode
 
@@ -48,15 +38,15 @@ Ottiene la modalità di conversione file predefinita per le operazioni di I/O de
 ## <a name="syntax"></a>Sintassi
 
 ```C
-errno_t _get_fmode( 
-   int * pmode 
+errno_t _get_fmode( 
+   int * pmode 
 );
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *pmode*<br/>
-Un puntatore a un integer da riempire con la modalità predefinita corrente: **o_text** oppure **O_BINARY**.
+Un puntatore a un numero intero deve essere compilato con la modalità predefinita corrente: **o_text** oppure **O_BINARY**.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -64,7 +54,7 @@ Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo.
 
 ## <a name="remarks"></a>Note
 
-La funzione ottiene il valore della variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione file predefinita per quelle a basso livello e trasmettere le operazioni dei / o file, ad esempio **Open**, **pipe**, **fopen**, e [ freopen](freopen-wfreopen.md).
+La funzione ottiene il valore della variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione file predefinita per quelle a basso livello e flusso di operazioni dei / o file, ad esempio **Open**, **pipe**, **fopen**, e [ freopen](freopen-wfreopen.md).
 
 ## <a name="requirements"></a>Requisiti
 

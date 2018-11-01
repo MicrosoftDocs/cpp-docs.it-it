@@ -1,10 +1,6 @@
 ---
-title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -31,8 +27,6 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a66fc0149b33d8fb5fe2d7eab411bf66e8dbdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660361"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
@@ -88,7 +78,7 @@ int _wprintf_p_l(
 *format*<br/>
 Controllo del formato.
 
-*Argomento*<br/>
+*argomento*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -100,18 +90,18 @@ Restituisce il numero di caratteri stampati o un valore negativo se si verifica 
 
 ## <a name="remarks"></a>Note
 
-Il **printf_p** funzione formatta e visualizza una serie di caratteri e valori nel flusso di output standard **stdout**. Se gli argomenti seguono il *formato* stringa, la *formato* stringa deve contenere specifiche che determinano il formato di output per gli argomenti (vedere [diparametriposizionaliprintf_p](../../c-runtime-library/printf-p-positional-parameters.md)).
+Il **printf_p** funzione formatta e stampa una serie di caratteri e valori nel flusso di output standard **stdout**. Se seguita da argomenti di *formato* stringa, il *formato* stringa deve contenere le specifiche che determinano il formato di output per gli argomenti (vedere [diparametriposizionaliprintf_p](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-La differenza tra **printf_p** e **printf_s** consiste nel fatto che **printf_p** supporta i parametri posizionali, che consentono di specificare l'ordine in cui gli argomenti sono usato nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+La differenza tra **printf_p** e **printf_s** è quello **printf_p** supporta i parametri posizionali, che consente di specificare l'ordine in cui gli argomenti sono usato nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
-**wprintf_p** è la versione a caratteri "wide" di **printf_p**; si comportano in modo identico, se il flusso viene aperto in modalità ANSI. **printf_p** attualmente non supporta output in un flusso UNICODE.
+**wprintf_p** è la versione a caratteri wide di **printf_p**; si comportano in modo identico se il flusso viene aperto in modalità ANSI. **printf_p** attualmente non supporta output in un flusso UNICODE.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente.
 
-Se *formato* oppure *argomento* sono **NULL**, o stringa di formato contiene caratteri di formattazione non validi, **printf_p** e **wprintf_p** funzioni richiamano un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** alla **EINVAL**.
+Se *formato* oppure *argomento* sono **NULL**, o stringa di formato contiene caratteri di formattazione non validi, **printf_p** e **wprintf_p** funzioni richiamano un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** al **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -127,7 +117,7 @@ Se *formato* oppure *argomento* sono **NULL**, o stringa di formato contiene car
 |**printf_p**, **printf_p_l**|\<stdio.h>|
 |**wprintf_p**, **wprintf_p_l**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

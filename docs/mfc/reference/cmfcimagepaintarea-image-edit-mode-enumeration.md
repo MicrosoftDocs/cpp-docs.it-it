@@ -1,27 +1,17 @@
 ---
-title: 'Enumerazione cmfcimagepaintarea:: Image_edit_mode | Microsoft Docs'
-ms.custom: ''
+title: Enumerazione CMFCImagePaintArea::IMAGE_EDIT_MODE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - IMAGE_EDIT_MODE Enumeration
-dev_langs:
-- C++
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 913a87383e617f331043751c4e3089acac744c7f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6460a83d63a0dd08d8607061bf1deca471fad3c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374644"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658042"
 ---
 # <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>Enumerazione CMFCImagePaintArea::IMAGE_EDIT_MODE
 

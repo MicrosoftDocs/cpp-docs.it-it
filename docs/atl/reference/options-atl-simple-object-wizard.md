@@ -1,27 +1,17 @@
 ---
-title: Creazione guidata oggetto semplice ATL, opzioni | Microsoft Docs
-ms.custom: ''
+title: Opzioni, Creazione guidata oggetto semplice ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a337ceffbbfb1577b58fea2f60213cd79052b00
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861369"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650504"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opzioni, Creazione guidata oggetto semplice ATL
 

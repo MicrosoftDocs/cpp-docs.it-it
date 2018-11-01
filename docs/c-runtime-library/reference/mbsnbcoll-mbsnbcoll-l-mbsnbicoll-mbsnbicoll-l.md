@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
@@ -32,8 +28,6 @@ f1_keywords:
 - _ftcsnicoll
 - _ftcsncoll
 - mbsnbcoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcoll_l function
 - mbsnbcoll_l function
@@ -48,20 +42,16 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19e17552a674d4931134eb9d7b436a0f858843d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c18faa3c93969a683b3ee3ef58dd02e1c1ae61f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665198"
 ---
 # <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
-Confronta *n* byte di due stringhe di caratteri multibyte con le informazioni di tabella codici multibyte.
+Confronta *n* byte di due stringhe di caratteri multibyte usando informazioni della tabella codici multibyte.
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -114,17 +104,17 @@ Il valore restituito indica la relazione delle sottostringhe di *string1* e *str
 |0|*String1* identica alla sottostringa *string2* sottostringa.|
 |> 0|*String1* sottostringa maggiore *string2* sottostringa.|
 
-Se *string1* oppure *string2* è **NULL** oppure *conteggio* è maggiore di **INT_MAX**, non valido viene richiamato il gestore di parametro, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostare **errno** al **EINVAL**. Per utilizzare **_NLSCMPERROR**, includere String. h o Mbstring. h.
+Se *string1* oppure *string2* viene **NULL** oppure *conteggio* è maggiore di **INT_MAX**, non valido viene richiamato il gestore di parametro, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostare **errno** al **EINVAL**. Per utilizzare **_NLSCMPERROR**, includere String. h o Mbstring. h.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni occupa, al massimo i primi *conteggio* byte *string1* e *string2* e restituisce un valore che indica la relazione tra il valore risultante le sottostringhe di *string1* e *string2*. Se il byte finale nella sottostringa di *string1* oppure *string2* è un byte iniziale, non è incluso nel confronto, queste funzioni confrontare solo completati caratteri contenuti nelle sottostringhe. **mbsnbicoll** è una versione di distinzione **mbsnbcoll**. Ad esempio [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) e [mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **mbsnbcoll** e **mbsnbicoll** collate le due stringhe di caratteri multibyte in base al ordine lessicografico specificato da multibyte [codici](../../c-runtime-library/code-pages.md) attualmente in uso.
+Ognuna di queste funzioni collaziona, al massimo i primi *conteggio* byte *string1* e *string2* e restituisce un valore che indica la relazione tra l'oggetto risultante le sottostringhe della *string1* e *string2*. Se il byte finale nella sottostringa di lunghezza *string1* oppure *string2* è un byte iniziale, non è incluso nel confronto; queste funzioni confrontano solo i caratteri completati nelle sottostringhe. **mbsnbicoll** è una versione di maiuscole e minuscole **mbsnbcoll**. Ad esempio [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) e [mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **mbsnbcoll** e **mbsnbicoll** collate le due stringhe di caratteri multibyte in base al ordine lessicografico specificato dalla [codici](../../c-runtime-library/code-pages.md) attualmente in uso.
 
-Per alcune tabelle codici e i set di caratteri corrispondenti, l'ordine dei caratteri nel set di caratteri può differire dall'ordine lessicografico dei caratteri. Ciò non è vero nelle impostazioni locali "C". L'ordine dei caratteri nel set di caratteri ASCII è lo stesso dell'ordine lessicografico dei caratteri. In alcune tabelle codici europee, tuttavia, il carattere "a" (valore 0x61) precede il carattere "ä" (valore 0xE4) nel set di caratteri, ma il carattere "ä" precede lessicograficamente il carattere "a". Per eseguire un confronto lessicografico delle stringhe di byte in questo caso, utilizzare **mbsnbcoll** anziché **mbsnbcmp**; per controllare solo per l'uguaglianza di stringhe, usare **mbsnbcmp**.
+Per alcune tabelle codici e i set di caratteri corrispondenti, l'ordine dei caratteri nel set di caratteri può differire dall'ordine lessicografico dei caratteri. Ciò non è vero nelle impostazioni locali "C". L'ordine dei caratteri nel set di caratteri ASCII è lo stesso dell'ordine lessicografico dei caratteri. In alcune tabelle codici europee, tuttavia, il carattere "a" (valore 0x61) precede il carattere "ä" (valore 0xE4) nel set di caratteri, ma il carattere "ä" precede lessicograficamente il carattere "a". Per eseguire un confronto lessicografico delle stringhe di byte in questo caso, usare **mbsnbcoll** invece **mbsnbcmp**; per controllare solo per l'uguaglianza di stringhe, usare **mbsnbcmp**.
 
-Poiché il **col** funzioni collate stringhe a livello lessicografico per il confronto, mentre il **cmp** funzioni di test è sufficiente per l'uguaglianza di stringhe, il **coll** funzioni sono molto più lento rispetto al relativo **cmp** versioni. Pertanto, il **col** funzioni devono essere utilizzate solo quando sussiste una differenza tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri nella tabella codici corrente e questa differenza è di particolare interesse per il confronto.
+Poiché il **coll** funzioni collaziona stringhe a livello lessicografico per il confronto, mentre il **cmp** funzioni testano semplicemente l'uguaglianza delle stringhe, il **coll** funzioni sono molto più lento rispetto al relativo **cmp** versioni. Pertanto, il **coll** funzioni devono essere utilizzate solo quando è presente una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e questa differenza è di particolare interesse per il confronto.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
