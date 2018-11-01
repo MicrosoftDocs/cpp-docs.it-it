@@ -1,17 +1,11 @@
 ---
-title: Esecuzione di LIB | Microsoft Docs
-ms.custom: ''
+title: Esecuzione di LIB
 ms.date: 09/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
-dev_langs:
-- C++
 helpviewer_keywords:
 - -MACHINE target platform option
 - command files, LIB
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235418"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656976"
 ---
 # <a name="running-lib"></a>Esecuzione di LIB
 
@@ -86,7 +76,7 @@ Per LIB, il **/LTCG** opzione specifica che gli input da cl.exe includono i file
 
 Nel processo di compilazione, l'output di LIB viene inviato al collegamento. COLLEGAMENTO ha un proprio separato **/LTCG** opzione che consente di eseguire varie ottimizzazioni, tra cui Ottimizzazione intero programma e strumentazione di ottimizzazione PGO (PGO). Per altre informazioni sull'opzione di collegamento, vedere [/LTCG](ltcg-link-time-code-generation.md).
 
-> **O IL COMPUTER**
+> **/MACHINE**
 
 Specifica la piattaforma di destinazione per il programma. In genere, non è necessario specificare questa opzione. LIB deduce il tipo di computer dai file con estensione obj. Tuttavia, in alcune circostanze, LIB non è possibile determinare il tipo di computer e genera un messaggio di errore. Se si verifica questo errore, specificare questa opzione. In modalità /EXTRACT, questa opzione è solo per la verifica. Usare `lib /?` nella riga di comando per visualizzare i tipi di computer disponibili.
 
@@ -94,7 +84,7 @@ Specifica la piattaforma di destinazione per il programma. In genere, non è nec
 
 Evita la visualizzazione di LIB copyright messaggio e numero di versione e impedire che vengano visualizzati dei file di comando.
 
-> **/ VERBOSE**
+> **/VERBOSE**
 
 Visualizza i dettagli sullo stato di avanzamento della sessione, inclusi i nomi dei file con estensione obj da aggiungere. Le informazioni vengono inviate all'output standard e possono essere reindirizzate a un file.
 

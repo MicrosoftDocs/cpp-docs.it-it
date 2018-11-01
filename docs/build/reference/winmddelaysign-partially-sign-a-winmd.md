@@ -1,25 +1,15 @@
 ---
-title: -WINMDDELAYSIGN (firma parzialmente un winmd) | Microsoft Docs
-ms.custom: ''
+title: /WINMDDELAYSIGN (firmare parzialmente un winmd)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.WINMDDelaySign
-dev_langs:
-- C++
 ms.assetid: 445cd602-62cb-400a-8e3a-4beb6572724d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b31f6ae5baf9aadbb40b4b45f532b344b6b2e037
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 367dbe0e638e3748f259f22c1e3536bbd7398272
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605998"
 ---
 # <a name="winmddelaysign-partially-sign-a-winmd"></a>/WINMDDELAYSIGN (firmare parzialmente un winmd)
 

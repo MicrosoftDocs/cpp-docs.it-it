@@ -1,14 +1,8 @@
 ---
-title: Modifica delle risorse grafiche (Editor di immagini di C++ per le icone) | Microsoft Docs
-ms.custom: ''
+title: Modifica delle risorse grafiche (Editor di immagini di C++ per le icone)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], editing
 - graphics [C++]
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - graphics [C++], Image editor
 - graphics [C++], editing
 ms.assetid: 09e422c5-f712-4378-b973-c7a3bbc92b9c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b7ff12ccf3868aac6189c749cc96c31046939c34
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 066ba931ed49a81acb55490401f553746e253261
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072928"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578919"
 ---
 # <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Modifica delle risorse grafiche (Editor di immagini di C++ per le icone)
 

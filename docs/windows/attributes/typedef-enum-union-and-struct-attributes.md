@@ -1,27 +1,16 @@
 ---
-title: TypeDef, Enum, Union e struct (attributi) (COM C++) | Microsoft Docs
-ms.custom: ''
+title: TypeDef, Enum, Union e struct (attributi) (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631062"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Attributi Typedef, Enum, Union e Struct
 
@@ -85,7 +74,7 @@ Gli attributi seguenti si applicano per la [typedef](../../cpp/aliases-and-typed
 |[aggregates](aggregates.md)|Indica che un controllo viene aggregata la classe di destinazione.|
 |[appobject](appobject.md)|Identifica la coclasse come un oggetto applicazione che è associato a un'applicazione completa .exe e indica che le funzioni e le proprietà della coclasse sono disponibili a livello globale in questa libreria dei tipi.|
 |[coclass](coclass.md)|Crea un controllo ActiveX.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Aggiunge una voce di interfaccia a una mappa COM.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Aggiunge una voce di interfaccia a una mappa COM.|
 |[control](control.md)|Specifica che il tipo definito dall'utente è un controllo.|
 |[custom](custom-cpp.md)|È possibile definire un attributo personalizzato.|
 |[db_column](db-column.md)|Associa una colonna specificata al set di righe.|
@@ -107,7 +96,7 @@ Gli attributi seguenti si applicano per la [typedef](../../cpp/aliases-and-typed
 |[requires_category](requires-category.md)|Specifica le categorie di componenti necessari della classe di destinazione.|
 |[size_is](size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori con dimensioni, ridimensionati i puntatori ai puntatori a dimensioni e unidimensionali o le matrici multidimensionali.|
 |[source](source-cpp.md)|In una classe specifica le interfacce di origine dell'oggetto COM per i punti di connessione. In una proprietà o metodo, indica che il membro restituisce un oggetto o una variante che rappresenta l'origine degli eventi.|
-|[Threading](threading-cpp.md)|Specifica il modello di threading per un oggetto COM.|
+|[threading](threading-cpp.md)|Specifica il modello di threading per un oggetto COM.|
 |[unique](unique-cpp.md)|Specifica un puntatore univoco.|
 |[uuid](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o interfaccia.|
 |[version](version-cpp.md)|Identifica una particolare versione tra più versioni di una classe.|

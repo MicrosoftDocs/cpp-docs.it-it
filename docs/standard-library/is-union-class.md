@@ -1,28 +1,18 @@
 ---
-title: Classe is_union | Microsoft Docs
-ms.custom: ''
+title: Classe is_union
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_union
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_union class
 - is_union
 ms.assetid: 80eda256-40b8-4db5-9ac1-d58bb8032a3e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 433e3ab596fb5f7b2399e2834e78e84366e4c56c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b29705f0e84e9aff9dbefe4297a67ac2a75da8b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636631"
 ---
 # <a name="isunion-class"></a>Classe is_union
 

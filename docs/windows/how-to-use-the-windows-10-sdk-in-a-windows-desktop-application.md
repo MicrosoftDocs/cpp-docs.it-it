@@ -1,24 +1,14 @@
 ---
-title: "Procedura: usare Windows 10 SDK in un'applicazione Desktop di Windows | Microsoft Docs"
+title: "Procedura: Usare Windows 10 SDK in un'applicazione di Windows Desktop"
 ms.custom: get-started-article
 ms.date: 07/12/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: afe678ca4ea381709b126168639df3f710867b9e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669118"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedura: Usare Windows 10 SDK in un'applicazione di Windows Desktop
 
@@ -26,7 +16,7 @@ Quando si crea un progetto desktop di Windows classico in Visual Studio 2017, si
 
 Se si desidera come destinazione una versione precedente del SDK, è possibile aprire **progetto | Proprietà** e scegliere tra le altre versioni del SDK disponibili nell'elenco a discesa versione del SDK Windows.
 
-A partire da Visual Studio 2015 e Windows 10 SDK, la libreria CRT è stata separata in due parti, una (ucrtbase) che contiene le funzioni che sono accettabili per essere usate nelle App Windows universali e quella che contiene tutto il resto (vcruntime140). Dal momento che Windows SDK per Windows 10 contiene nuove funzioni, come la maggior parte delle funzioni C99, è necessario eseguire questi passaggi per usare queste funzioni. Vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md).
+A partire da Visual Studio 2015 e Windows 10 SDK, la libreria CRT è stata separata in due parti, una (ucrtbase) che contiene le funzioni che sono accettabili per essere usate nelle App Windows universali e quella che contiene tutto il resto (vcruntime140). Dal momento che Windows SDK per Windows 10 contiene nuove funzioni, come la maggior parte delle funzioni C99, è necessario eseguire questi passaggi per usare queste funzioni. Vedere [CRT Library Features](../c-runtime-library/crt-library-features.md).
 
 ### <a name="to-target-the-windows-10-sdk"></a>Per impostare Windows SDK per Windows 10 come destinazione
 

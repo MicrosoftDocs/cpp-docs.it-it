@@ -1,27 +1,17 @@
 ---
-title: C R6025 di errore di Runtime | Microsoft Docs
-ms.custom: ''
+title: R6025 di errore di Runtime C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - R6025
-dev_langs:
-- C++
 helpviewer_keywords:
 - R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 420fd702aa97d07e8aadb16a90c0a6a6636f6aa9
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 461bfb2aa46053ec56fff67de70038b1fcd97389
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860266"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639562"
 ---
 # <a name="c-runtime-error-r6025"></a>R6025 di errore di Runtime C
 

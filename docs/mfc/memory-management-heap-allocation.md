@@ -1,12 +1,6 @@
 ---
-title: 'Gestione della memoria: Allocazione di Heap | Microsoft Docs'
-ms.custom: ''
+title: 'Gestione della memoria: allocazione di heap'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory [MFC], detecting leaks
 - delete operator [MFC], using with debug MFC
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - heap allocation [MFC]
 - detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cc158ceda21bfb04053bbc490a3333a76e2d7afe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c669fa611193b9a04e4854c84dec604e585991c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383818"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641155"
 ---
 # <a name="memory-management-heap-allocation"></a>Gestione della memoria: allocazione di heap
 

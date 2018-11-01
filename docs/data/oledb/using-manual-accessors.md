@@ -1,28 +1,17 @@
 ---
-title: Usare funzioni di accesso manuali | Microsoft Docs
-ms.custom: ''
+title: Utilizzo delle funzioni di accesso manuali
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - command handling, OLE DB Templates
 - manual accessors
 - accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: d9b65b70473ca415c0f5f48d003faea179ebf27a
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8b969b7bb939d8e7d2217234795b564e8d137208
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054995"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651763"
 ---
 # <a name="using-manual-accessors"></a>Utilizzo delle funzioni di accesso manuali
 

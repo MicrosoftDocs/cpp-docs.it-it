@@ -1,10 +1,6 @@
 ---
-title: _putch_nolock, _putwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _putch_nolock, _putwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putwch_nolock
 - _putch_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - putch_nolock
 - putwch_nolock
 - _putwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - putwch_nolock function
 - puttch_nolock function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e380f59e2f8015efdb6d3af07bfe509337da38a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b3ce1bb36e8a6d938ad620af21e8c1d3bc768db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403332"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663312"
 ---
 # <a name="putchnolock-putwchnolock"></a>_putch_nolock, _putwch_nolock
 

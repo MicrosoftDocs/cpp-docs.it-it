@@ -1,27 +1,17 @@
 ---
-title: Specifica il nome del percorso | Microsoft Docs
-ms.custom: ''
+title: Specifica del nome del percorso
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - names [C++], compiler output files
 - cl.exe compiler, output files
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 636326e5af577b4e26c61a2094fe73dd4a680f2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f83adcb87994d13edd1c1579183377a365e2051e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638360"
 ---
 # <a name="specifying-the-pathname"></a>Specifica del nome del percorso
 

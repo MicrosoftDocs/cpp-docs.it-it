@@ -1,27 +1,16 @@
 ---
-title: Implementazione di un Consumer semplice | Microsoft Docs
-ms.custom: ''
+title: Implementazione di un consumer semplice
 ms.date: 10/12/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 1d1c4e3d5bd1686cfe34508383e37967b0b91106
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 141c2f48b2069410b14f969171f2b1c185a0506e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055958"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669027"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementazione di un consumer semplice
 
