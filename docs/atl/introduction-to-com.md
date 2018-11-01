@@ -1,25 +1,16 @@
 ---
-title: Introduzione a COM | Microsoft Docs
+title: Introduzione a COM
 ms.custom: index-page
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - COM
 ms.assetid: 120735d9-db71-4ad3-a730-ce576ea2354e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a98c7bb473e36e53e8cbe0f90f9dd94f655392d6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7a200a964e0cba09878929e4362385e5badd10c1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073226"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492856"
 ---
 # <a name="introduction-to-com"></a>Introduzione a COM
 
@@ -42,5 +33,5 @@ Questi concetti sono fondamentali per COM:
 ## <a name="see-also"></a>Vedere anche
 
 [Introduzione a COM e a ATL](../atl/introduction-to-com-and-atl.md)<br/>
-[Modello a oggetti del componente](/windows/desktop/com/the-component-object-model)
+[Component Object Model (COM)](/windows/desktop/com/the-component-object-model)
 

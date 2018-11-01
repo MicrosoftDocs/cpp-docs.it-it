@@ -1,28 +1,17 @@
 ---
-title: Local (attributo COM C++) | Microsoft Docs
-ms.custom: ''
+title: Local (attributo COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.local
-dev_langs:
-- C++
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e510e4faa707c954c52ae9daae4c4dc0d4c800dd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 377d6ffbddb5f88533c8b4f054f0d658a9b19573
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489089"
 ---
 # <a name="local-c"></a>local (C++)
 
