@@ -1,10 +1,6 @@
 ---
-title: Classe single_link_registry | Microsoft Docs
-ms.custom: ''
+title: Classe single_link_registry
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - single_link_registry
 - AGENTS/concurrency::single_link_registry
@@ -14,21 +10,15 @@ f1_keywords:
 - AGENTS/concurrency::single_link_registry::contains
 - AGENTS/concurrency::single_link_registry::count
 - AGENTS/concurrency::single_link_registry::remove
-dev_langs:
-- C++
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f03e3366caaf6b18ecb8f401fb3209f859113ca0
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163634"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454496"
 ---
 # <a name="singlelinkregistry-class"></a>Classe single_link_registry
 

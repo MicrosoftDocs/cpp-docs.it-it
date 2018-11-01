@@ -1,10 +1,6 @@
 ---
-title: mbrlen | Microsoft Docs
-ms.custom: ''
+title: mbrlen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbrlen
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbrlen
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77e5cb106a971bcaf02662bfd8459267a134173a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75ae134db0e74099a9b19f4820a44a197fdfda2e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404441"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438454"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -69,18 +59,18 @@ Uno dei valori seguenti:
 
 |||
 |-|-|
-0|Alla successiva *conteggio* o byte di un numero inferiore completano il carattere multibyte che rappresenta il carattere wide null.
-1 per *conteggio*, inclusi,|Alla successiva *conteggio* o byte di un numero inferiore completano un carattere multibyte valido. Il valore restituito è il numero di byte che completa il carattere multibyte.
-(size_t)(-2)|Alla successiva *conteggio* byte contribuiscono a un carattere multibyte incompleto ma potenzialmente valido e tutti i *conteggio* byte sono stati elaborati.
-(size_t)(-1)|Si è verificato un errore di codifica. Alla successiva *conteggio* o numero di byte inferiore non contribuisce a un carattere multibyte valido e completo. In questo caso **errno** è impostato su EILSEQ e lo stato di conversione *mbstate* non è specificato.
+0|La prossima *conteggio* o byte di un numero inferiore completano il carattere multibyte che rappresenta il carattere wide null.
+1 per *conteggio*, inclusi,|La prossima *conteggio* o meno byte completano un carattere multibyte valido. Il valore restituito è il numero di byte che completa il carattere multibyte.
+(size_t)(-2)|La prossima *conteggio* byte contribuiscono a un carattere multibyte incompleto ma potenzialmente valido e tutti i *conteggio* byte sono stati elaborati.
+(size_t)(-1)|Si è verificato un errore di codifica. La prossima *conteggio* o un numero di byte non contribuisce a un carattere multibyte valido e completo. In questo caso **errno** è impostato su EILSEQ e lo stato di conversione *mbstate* non è specificato.
 
 ## <a name="remarks"></a>Note
 
-Il **mbrlen** funzione controlla al massimo *conteggio* byte a partire dal byte a cui punta *str* per determinare il numero di byte necessari per completare quella successiva carattere multibyte, comprese tutte le sequenze di spostamento. È equivalente alla chiamata `mbrtowc(NULL, str, count, &mbstate)` in cui *mbstate* entrambi un utente fornito dal **mbstate_t** oggetto o un oggetto interno statico fornito dalla libreria.
+Il **mbrlen** funzione controlla al massimo *conteggio* byte a partire dal byte a cui fa riferimento *str* per determinare il numero di byte necessari per completare la successiva carattere multibyte, comprese tutte le sequenze di spostamento. È equivalente alla chiamata `mbrtowc(NULL, str, count, &mbstate)` in cui *mbstate* è entrambi una fornita dall'utente **mbstate_t** oggetto o un oggetto interno statico fornito dalla libreria.
 
-Il **mbrlen** funzione Salva e Usa lo stato di spostamento di un carattere multibyte incompleto nel *mbstate* parametro. In questo modo **mbrlen** la possibilità di ricominciare nel mezzo di un carattere multibyte se necessario, esaminando al massimo *conteggio* byte. Se *mbstate* è un puntatore null **mbrlen** utilizza un interno statico **mbstate_t** oggetto usato per archiviare lo stato di spostamento. Perché l'interno **mbstate_t** oggetto non è thread-safe, è consigliabile allocare sempre e passare la propria *mbstate* parametro.
+Il **mbrlen** funzione Salva e Usa lo stato di spostamento di un carattere multibyte incompleto nel *mbstate* parametro. In questo modo **mbrlen** la possibilità di ricominciare nel mezzo di un carattere multibyte se necessario, esaminando al massimo *conteggio* byte. Se *mbstate* è un puntatore null **mbrlen** Usa un interno statico **mbstate_t** oggetto usato per archiviare lo stato di spostamento. Perché l'interno **mbstate_t** oggetto non è thread-safe, è consigliabile che è sempre possibile allocare e passare il proprio *mbstate* parametro.
 
-Il **mbrlen** rispetto alla funzione [mbclen, mblen, mblen_l](mbclen-mblen-mblen-l.md) dal relativo riavviabilità. Lo stato di spostamento viene archiviato *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili.  Ad esempio, un'applicazione deve usare **wcsrlen** anziché **wcslen** se una chiamata successiva a **wcsrtombs** utilizzato al posto del **wcstombs**.
+Il **mbrlen** la funzione differisce da [mbclen, mblen, mblen_l](mbclen-mblen-mblen-l.md) dalla relativa possibilità di essere riavviata. Lo stato di spostamento viene archiviato *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili.  Ad esempio, un'applicazione deve utilizzare **wcsrlen** invece di **wcslen** se una chiamata successiva a **wcsrtombs** viene usato al posto di **wcstombs**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -98,7 +88,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-In questo esempio mostra come l'interpretazione dei caratteri multibyte dipende dalla tabella codici corrente e illustra le funzionalità di ripresa **mbrlen**.
+Questo esempio viene illustrato come l'interpretazione dei caratteri multibyte dipende dalla tabella codici corrente e illustra le funzionalità di ripresa **mbrlen**.
 
 ```C
 // crt_mbrlen.c

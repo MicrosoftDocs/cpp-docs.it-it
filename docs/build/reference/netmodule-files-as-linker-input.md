@@ -1,58 +1,48 @@
 ---
-title: file con estensione netmodule come Input del Linker | Documenti Microsoft
-ms.custom: ''
+title: .File con estensione netmodule come input del linker
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bbb2ab74e8c9d0285b9bec2f9979257d89797022
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 050736e5536a1e38b73524f31491b3a01dc99193
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443577"
 ---
 # <a name="netmodule-files-as-linker-input"></a>.File con estensione netmodule come input del linker
 
-link.exe ora accetta file MSIL con estensione obj e netmodule come input. Il file di output generato dal linker è un assembly o un file netmodule senza dipendenza da fase di esecuzione in uno qualsiasi dei file obj o netmodule forniti al linker.
+link.exe ora accetta file MSIL con estensione obj e netmodule come input. Il file di output generato dal linker è un assembly o un file con estensione netmodule senza dipendenza da fase di esecuzione in uno qualsiasi dei file obj o netmodule che sono stati introdotti nel linker.
 
-i file netmodule vengono creati dal compilatore Visual C++ con [/LN (creazione di un modulo MSIL)](../../build/reference/ln-create-msil-module.md) o dal linker con [/NOASSEMBLY (Crea un modulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md). file obj vengono sempre creati in una compilazione di Visual C++. Per altri compilatori di Visual Studio, utilizzare il **/target: module** l'opzione del compilatore.
+netmodule vengono creati dal compilatore Visual C++ con [/LN (Crea modulo MSIL)](../../build/reference/ln-create-msil-module.md) o dal linker con [/NOASSEMBLY (Crea un modulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md). file obj vengono sempre creati in una compilazione di Visual C++. Per altri compilatori di Visual Studio, usare il **/target: module** opzione del compilatore.
 
-È necessario passare al linker i file con estensione obj e la compilazione di Visual C++ che ha creato il file netmodule. Il passaggio di un file netmodule non è più supportato perché il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+È necessario passare al linker il file con estensione obj dalla compilazione di Visual C++ che ha creato il file con estensione netmodule. Il passaggio di un file con estensione netmodule non è più supportato perché il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
-Per informazioni su come richiamare il linker dalla riga di comando, vedere [sintassi della riga di comando del Linker](../../build/reference/linker-command-line-syntax.md), [codice C/C++ di compilazione nella riga di comando](../../build/building-on-the-command-line.md), e [impostare il percorso e le variabili di ambiente Le compilazioni da riga di comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Per informazioni su come richiamare il linker dalla riga di comando, vedere [sintassi della riga di comando del Linker](../../build/reference/linker-command-line-syntax.md), [codice C/C++ di compilazione dalla riga di comando](../../build/building-on-the-command-line.md), e [impostare il percorso e le variabili di ambiente Le compilazioni da riga di comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Passaggio di un file con estensione netmodule o DLL al linker che è stato compilato dal compilatore Visual C++ con **/clr** può comportare un errore del linker. Per ulteriori informazioni, vedere [scegliendo il formato del file di Input. netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).
+Il passaggio di un file con estensione netmodule o DLL al linker compilato dal compilatore Visual C++ con **/clr** può comportare un errore del linker. Per altre informazioni, vedere [scelta del formato dei file con estensione netmodule un file di Input](../../build/reference/choosing-the-format-of-netmodule-input-files.md).
 
-Il linker accetta file obj nativi, nonché i file con estensione obj MSIL compilati con **/clr**. Quando si passano i file obj misti nella stessa compilazione, verificabilità del file di output risultante, per impostazione predefinita, sarà uguale al livello più basso di verificabilità dei moduli di input.
+Il linker accetta file con estensione obj native, nonché i file MSIL con estensione obj compilati con **/clr**. Quando si passano i file obj misti nella stessa compilazione, la verificabilità del file di output risultante, per impostazione predefinita, sarà uguale al livello più basso di verificabilità dei moduli di input.
 
 Se si dispone di un'applicazione composta da due o più assembly e si desidera che l'applicazione sia contenuta in uno solo, è necessario ricompilare gli assembly e collegare i file con estensione obj o netmodule per produrre un singolo assembly.
 
-È necessario specificare un punto di ingresso utilizzando [/ENTRY (simbolo del punto di ingresso)](../../build/reference/entry-entry-point-symbol.md) durante la creazione di un'immagine eseguibile.
+È necessario specificare un punto di ingresso usando [/ENTRY (simbolo del punto di ingresso)](../../build/reference/entry-entry-point-symbol.md) durante la creazione di un'immagine eseguibile.
 
-Durante il collegamento con un file con estensione obj o. netmodule MSIL, utilizzare [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md), quando il linker rileva file obj MSIL o. netmodule, in caso contrario verrà riavviato il collegamento con /LTCG.
+Durante il collegamento con un file con estensione obj o netmodule MSIL, utilizzare [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md), in caso contrario, quando il linker rileva il codice MSIL con estensione obj o netmodule, riavvierà il collegamento con /LTCG.
 
 I file MSIL con estensione obj o netmodule possono essere passati anche a cl.exe.
 
 I file di input MSIL con estensione obj o netmodule non possono disporre di risorse incorporate. Una risorsa è incorporata in un file di output (modulo o assembly) con [/ASSEMBLYRESOURCE (incorpora una risorsa gestita)](../../build/reference/assemblyresource-embed-a-managed-resource.md) l'opzione del linker o con il **/resource** opzione del compilatore in altri compilatori di Visual Studio.
 
-Quando si esegue il collegamento MSIL e, se non si specifica anche [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md), si verrà visualizzato un messaggio informativo che segnala che il collegamento viene riavviato. Questo messaggio può essere ignorato, ma to migliorare le prestazioni del linker MSIL (collegamento), specificare in modo esplicito **/LTCG**.
+Quando si esegue il collegamento MSIL e se non si specifica anche [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md), si verrà visualizzato un messaggio informativo che segnala che il collegamento viene riavviato. Questo messaggio può essere ignorato, ma to migliorare le prestazioni del linker con MSIL (collegamento), specificare in modo esplicito **/LTCG**.
 
 ## <a name="example"></a>Esempio
 
-Nel codice C++ il **catch** blocco di un corrispondente **provare** verrà richiamato per un'eccezione non di sistema. Tuttavia, per impostazione predefinita, CLR esegue il wrapping di eccezioni non di sistema con <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Quando viene creato un assembly da moduli di Visual C++ e non di Visual C++ e si desidera un **catch** bloccare nel codice C++ a essere richiamato dal corrispondente **provare** clausola quando il **provare**blocco genera un'eccezione non di sistema, è necessario aggiungere il `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` attributo per il codice sorgente per i moduli non C++.
+Nel codice C++ di **intercettare** blocco di un oggetto corrispondente **provare** verrà richiamato per un'eccezione non di sistema. Tuttavia, per impostazione predefinita, CLR esegue il wrapping di eccezioni non di sistema con <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. Quando viene creato un assembly da moduli di Visual C++ e Visual C++ non e si desidera un **intercettare** block nel codice C++ da richiamare dal corrispondente **provare** clausola quando il **provare**blocco genera un'eccezione non di sistema, è necessario aggiungere il `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` attributo per il codice sorgente per i moduli C++ non.
 
 ```cpp
 // MSIL_linking.cpp

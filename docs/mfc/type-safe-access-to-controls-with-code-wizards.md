@@ -1,28 +1,18 @@
 ---
-title: Accesso indipendente dai tipi ai controlli con creazioni guidate codice | Microsoft Docs
-ms.custom: ''
+title: Accesso indipendente dai tipi a controlli con creazioni guidate codice
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DDX (dialog data exchange), access to controls
 - code wizards
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e96f7b3ab0875c233241ee0f6dacfcf51ab79564
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f0bf03adff83ef25f3537291516368151a31a03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436288"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Accesso indipendente dai tipi a controlli con creazioni guidate codice
 

@@ -1,23 +1,13 @@
 ---
-title: A.16 utilizzo di blocchi | Microsoft Docs
-ms.custom: ''
+title: A.16   Utilizzo di blocchi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 873bf32b-6cfe-4ce1-b994-bef80b50f399
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2bb901ab311221f1375bb5f3bfe7f996981e97a6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6afb94660acdc79ea5a7eb61d3bf7e21fd70d751
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432750"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458982"
 ---
 # <a name="a16---using-locks"></a>A.16   Utilizzo di blocchi
 

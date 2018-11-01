@@ -1,27 +1,17 @@
 ---
-title: Creazione di un'applicazione MFC | Microsoft Docs
-ms.custom: ''
+title: Creazione di un'applicazione MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [MFC]
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec61db21b27ef49f660751605b4788599f7f3485
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: df1e49ffe9e4350d2023bc471d3687bec5defa04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434606"
 ---
 # <a name="creating-an-mfc-application"></a>Creazione di un'applicazione MFC
 

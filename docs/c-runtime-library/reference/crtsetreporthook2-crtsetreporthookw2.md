@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportHook2, _CrtSetReportHookW2 | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -25,24 +21,18 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17dc0fc97a46e6ce0b5bda68ec8adc6ef37c4218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402260"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446774"
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
@@ -67,7 +57,7 @@ int _CrtSetReportHookW2(
 L'azione da intraprendere: **_CRT_RPTHOOK_INSTALL** oppure **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Hook di report per installare o rimuovere la versione a caratteri "narrow" o caratteri "wide" di questa funzione.
+Per installare o rimuovere la versione a caratteri narrow o caratteri wide di questa funzione hook di report.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -75,11 +65,11 @@ Hook di report per installare o rimuovere la versione a caratteri "narrow" o car
 
 ## <a name="remarks"></a>Note
 
-**_CrtSetReportHook2** e **_CrtSetReportHookW2** consentono di collegare o scollegare una funzione, mentre [CrtSetReportHook](crtsetreporthook.md) consente solo di una funzione hook.
+**_CrtSetReportHook2** e **_CrtSetReportHookW2** consentono di associare o annullare l'esecuzione di una funzione, mentre [CrtSetReportHook](crtsetreporthook.md) consente solo di una funzione hook.
 
-**_CrtSetReportHook2** oppure **_CrtSetReportHookW2** deve essere usato al posto della **CrtSetReportHook** quando viene effettuata la chiamata di funzione hook in una DLL e quando più DLL potrebbe essere stata caricata e impostando le proprie funzioni hook. In questo caso, le DLL possono essere scaricate in un ordine diverso rispetto all'ordine di caricamento e la funzione di hook può sempre puntare a una DLL scaricata. Il processo di arresto anomalo di alcun output di debug se sono state aggiunte le funzioni hook con **CrtSetReportHook**.
+**_CrtSetReportHook2** oppure **_CrtSetReportHookW2** deve essere usato al posto della **CrtSetReportHook** quando viene effettuata la chiamata di hook in una DLL e quando più DLL vengono caricate e impostano le loro funzioni di hook. In questo caso, le DLL possono essere scaricate in un ordine diverso rispetto all'ordine di caricamento e la funzione di hook può sempre puntare a una DLL scaricata. Qualsiasi output di debug Arresta il processo se le funzioni di hook aggiunte con **CrtSetReportHook**.
 
-Le funzioni aggiunte con hook **CrtSetReportHook** vengono chiamati se non esistono alcun hook funzioni aggiunte con **_CrtSetReportHook2** o **_CrtSetReportHookW2** o se tutti hook le funzioni aggiunte con **_CrtSetReportHook2** e **_CrtSetReportHookW2** restituiscono **FALSE**.
+Ogni funzione di hook aggiunte con **CrtSetReportHook** vengono chiamati se sono presenti funzioni di hook aggiunte con **_CrtSetReportHook2** oppure **_CrtSetReportHookW2** o se tutti collegata le funzioni aggiunte con **_CrtSetReportHook2** e **_CrtSetReportHookW2** restituiscono **FALSE**.
 
 La versione a caratteri wide di questa funzione è disponibile. Le funzioni di hook per i report accettano una stringa il cui tipo (caratteri wide o narrow) deve corrispondere alla versione di questa funzione usata. Usare il prototipo seguente di funzione di hook per i report usati con la versione a caratteri wide di questa funzione:
 
@@ -93,10 +83,10 @@ Usare il prototipo seguente per gli hook di report a caratteri narrow:
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Queste funzioni convalidano i relativi parametri. Se *modalità* oppure **pfnNewNook** è valido, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1.
+Queste funzioni convalidano i relativi parametri. Se *modalità* oppure **pfnNewNook** è valido, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1.
 
 > [!NOTE]
-> Se l'applicazione viene compilata con **/clr** e la funzione di segnalazione viene chiamata dopo che l'applicazione è stato terminato principale, CLR verrà generata un'eccezione se la funzione di segnalazione chiama le funzioni CRT.
+> Se l'applicazione viene compilata con **/clr** e creazione di report viene chiamata la funzione dopo che è stato chiuso l'applicazione principale, CLR genererà un'eccezione se la funzione di creazione di report chiama le funzioni CRT.
 
 ## <a name="requirements"></a>Requisiti
 

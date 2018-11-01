@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Microsoft Docs
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,21 +20,15 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405731"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429015"
 ---
 # <a name="quickexit"></a>quick_exit
 
@@ -60,15 +49,15 @@ Codice di stato da restituire all'ambiente host.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **quick_exit** funzione non può restituire al chiamante.
+Il **quick_exit** funzione non può restituire il controllo al chiamante.
 
 ## <a name="remarks"></a>Note
 
-Il **quick_exit** funzione causa la chiusura del programma normale. Chiama le funzioni registrate da **atexit**, **OnExit** o segnalare i gestori registrati per il **segnale** (funzione). Comportamento sarà indefinito se **quick_exit** viene chiamato più di una volta o se il **uscire** viene anche chiamata di funzione.
+Il **quick_exit** funzione causa la chiusura del programma normale. Chiama le funzioni registrate da **atexit**, **OnExit** o segnalare i gestori registrati per il **segnale** (funzione). Comportamento sarà indefinito se **quick_exit** viene chiamato più di una volta, o se il **uscire** viene anche chiamata di funzione.
 
-Il **quick_exit** chiamate di funzioni, last-in, First-Out (LIFO) ordine, le funzioni registrate da **at_quick_exit**, ad eccezione di quelle già chiamate durante la registrazione della funzione.  Il comportamento non è definito se viene eseguita una chiamata a [longjmp](longjmp.md) durante una chiamata a una funzione registrata che interrompe la chiamata alla funzione.
+Il **quick_exit** chiamate a funzioni, in last-in, First-Out (LIFO) ordine, le funzioni registrate da **at_quick_exit**, tranne per le funzioni già chiamate durante la registrazione della funzione.  Il comportamento non è definito se viene eseguita una chiamata a [longjmp](longjmp.md) durante una chiamata a una funzione registrata che interrompe la chiamata alla funzione.
 
-Dopo aver chiamate le funzioni registrate, **quick_exit** richiama **Exit** tramite il *stato* valore per restituire il controllo all'ambiente host.
+Dopo che le funzioni registrate sono state chiamate, **quick_exit** richiama **Exit** utilizzando il *stato* valore per restituire il controllo all'ambiente host.
 
 ## <a name="requirements"></a>Requisiti
 

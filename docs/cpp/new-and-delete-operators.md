@@ -1,30 +1,20 @@
 ---
-title: nuovo ed eliminare operatori | Microsoft Docs
-ms.custom: ''
+title: Operatori new e delete
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - delete_cpp
 - new
-dev_langs:
-- C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 447a03cec8beba331aedc8077a44dc9090fccbc6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078531"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441301"
 ---
 # <a name="new-and-delete-operators"></a>Operatori new e delete
 
