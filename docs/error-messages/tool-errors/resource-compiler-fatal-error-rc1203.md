@@ -1,27 +1,17 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1203 | Microsoft Docs
-ms.custom: ''
+title: Errore irreversibile del compilatore di risorse RC1203
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC1203
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC1203
 ms.assetid: 60d08fb1-6a51-407c-854e-9a68080cfe2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 638af9b85aecdd4eaba712cee68bf4ec96f3ab56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: feb7441ed409cf66b1a14fc4f0c40a04912872aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081455"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438558"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>Errore irreversibile del compilatore di risorse RC1203
 

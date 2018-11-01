@@ -1,20 +1,13 @@
 ---
-title: DLL (C + c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: DLL (C++/CX)
 ms.date: 02/06/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac06336e5ba80406157285ebe660080aff6e319
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445708"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
@@ -24,7 +17,7 @@ ms.locfileid: "43763633"
 
 Nella quasi totalità dei casi, quando si desidera creare una DLL per usare in un'app UWP, crearla come un componente Windows Runtime usando il modello di progetto lo stesso nome. È possibile creare un progetto di componente Windows Runtime per le DLL che hanno tipi Windows Runtime pubblici o privati. Un componente Windows Runtime è possibile accedere da app scritte in qualsiasi linguaggio compatibile con Windows Runtime. Per impostazione predefinita, le impostazioni del compilatore per un componente Windows Runtime progetto usare la **/ZW** passare. Un file .winmd deve avere lo stesso nome dello spazio dei nomi radice. Ad esempio, è possibile creare un'istanza di una classe denominata A.B.C.MyClass solo se è definita in un file di metadati denominato A.winmd o A.B.winmd o A.B.C.winmd. Il nome della DLL non deve necessariamente corrispondere al nome del file con estensione winmd.
 
-Per altre informazioni, vedere [creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Per altre informazioni, vedere [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 ### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>Per fare riferimento a un componente Windows Runtime terze parti binario nel progetto
 

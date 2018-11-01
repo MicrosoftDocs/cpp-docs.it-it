@@ -1,10 +1,6 @@
 ---
-title: strlwr, wcslwr | Microsoft Docs
-ms.custom: ''
+title: strlwr, wcslwr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strlwr
 - wcslwr
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - wcslwr
 - strlwr
-dev_langs:
-- C++
 helpviewer_keywords:
 - strlwr function
 - wcslwr function
 ms.assetid: b9274824-4365-4674-b656-823c89653656
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c4a16f990ee9a1b3337d3d805e904b5c1219e0fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14e2e31c3c92b8c2baad5abcd4503a39601e4b8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406901"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440209"
 ---
 # <a name="strlwr-wcslwr"></a>strlwr, wcslwr
 

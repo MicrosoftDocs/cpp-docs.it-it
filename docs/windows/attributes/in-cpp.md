@@ -1,28 +1,17 @@
 ---
-title: in (attributo COM C++) | Microsoft Docs
-ms.custom: ''
+title: in (attributo COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.in
-dev_langs:
-- C++
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d31de803e1a867c7a9e509ced71eb3801d3946ff
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bf23b1c776eccc284e5329b62bd45b0bd678823f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066838"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449699"
 ---
 # <a name="in-c"></a>in (C++)
 

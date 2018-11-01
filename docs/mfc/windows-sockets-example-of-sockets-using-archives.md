@@ -1,27 +1,17 @@
 ---
-title: 'Windows Sockets: Esempio di socket che utilizzano archivi | Microsoft Docs'
-ms.custom: ''
+title: 'Windows Sockets: esempio di socket che utilizzano archivi'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - sockets [MFC], with archives
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062226"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436270"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: esempio di socket che utilizzano archivi
 

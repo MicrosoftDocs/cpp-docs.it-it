@@ -1,27 +1,16 @@
 ---
-title: 'Procedura: definire e usare classi e struct (C + + / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura: Definire e usare classi e struct (C++/CLI)'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 26e3d1c0a102eda66ced6902a47a97782b3e1e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436157"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procedura: Definire e usare classi e struct (C++/CLI)
 

@@ -1,30 +1,20 @@
 ---
-title: Struttura _ATL_MODULE70 | Microsoft Docs
-ms.custom: ''
+title: Struttura _ATL_MODULE70
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - _ATL_MODULE70
 - ATL::_ATL_MODULE70
 - ATL._ATL_MODULE70
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL_MODULE70 structure
 - _ATL_MODULE70 structure
 ms.assetid: b059b2c8-dfd1-4ac9-b07d-39df638cc7b3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f84b90613bcf542a9ace44505565951819fcaa91
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bf733a10a0be53eafb634c645dad6a4b58b8206d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108443"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438844"
 ---
 # <a name="atlmodule70-structure"></a>Struttura _ATL_MODULE70
 

@@ -1,10 +1,6 @@
 ---
-title: tell | Microsoft Docs
-ms.custom: ''
+title: tell
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tell
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 ms.assetid: 3a92a40d-f472-4545-a493-f57c340ee798
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 383a40e81820f8f9579cad9055e3569b3e3ab042
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26583258628c25b4cc0cd1685334547100303ee4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406859"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432424"
 ---
 # <a name="tell"></a>tell
 

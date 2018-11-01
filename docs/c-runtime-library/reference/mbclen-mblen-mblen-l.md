@@ -1,10 +1,6 @@
 ---
-title: _mbclen, mblen, _mblen_l | Microsoft Docs
-ms.custom: ''
+title: _mbclen, mblen, _mblen_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbclen
 - mblen
@@ -31,8 +27,6 @@ f1_keywords:
 - _ftclen
 - _tclen
 - mbclen
-dev_langs:
-- C++
 helpviewer_keywords:
 - tclen function
 - _mblen_l function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 932695b9d3474f892460e222fd1d9cc2b34c0dd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434386"
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
 
@@ -93,15 +83,15 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**mbclen** restituisce 1 o 2, a seconda che il carattere multibyte *c* è 1 o 2 byte. Non si è verificato alcun errore restituito per **mbclen**. Se *mbstr* non **NULL**, **mblen** restituisce la lunghezza, espressa in byte, del carattere multibyte. Se *mbstr* viene **NULL** o cui punta il carattere null di caratteri wide, **mblen** restituisce 0. Se l'oggetto che *mbstr* punta a non formano un carattere multibyte valido all'interno della prima *conteggio* caratteri **mblen** restituisce -1.
+**mbclen** restituisce 1 o 2, a seconda che il carattere multibyte *c* è 1 o 2 byte. Non si è verificato alcun errore restituito per **mbclen**. Se *mbstr* non è **NULL**, **mblen** restituisce la lunghezza, espressa in byte, del carattere multibyte. Se *mbstr* viene **NULL** o punta al carattere null di caratteri wide **mblen** restituisce 0. Se l'oggetto che *mbstr* punta a non formano un carattere multibyte valido entro i primi *conteggio* caratteri **mblen** restituisce -1.
 
 ## <a name="remarks"></a>Note
 
-Il **mbclen** funzione restituisce la lunghezza, espressa in byte, del carattere multibyte *c*. Se *c* non fa riferimento al byte iniziale di un carattere multibyte in base a una chiamata implicita a **ismbblead**, il risultato del **mbclen** è imprevedibile.
+Il **mbclen** funzione restituisce la lunghezza, espressa in byte, del carattere multibyte *c*. Se *c* non punta al byte di apertura di un carattere multibyte a quanto determinato da una chiamata implicita a **ismbblead**, il risultato della **mbclen** è imprevedibile.
 
-**mblen** restituisce la lunghezza in byte del *mbstr* se è un carattere multibyte valido e determina la validità di caratteri multibyte associate con la tabella codici. **mblen** esamina *conteggio* o un minor numero di byte contenuti nei *mbstr*, ma non più di **MB_CUR_MAX** byte.
+**mblen** restituisce la lunghezza in byte del *mbstr* se è un carattere multibyte valido e determina la validità di caratteri multibyte associata alla tabella codici. **mblen** esamina *conteggio* o un minor numero di byte contenuti in *mbstr*, ma non oltre **MB_CUR_MAX** byte.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

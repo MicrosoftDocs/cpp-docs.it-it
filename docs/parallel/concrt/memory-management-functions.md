@@ -1,25 +1,15 @@
 ---
-title: Funzioni di gestione della memoria | Microsoft Docs
-ms.custom: ''
+title: Funzioni di gestione della memoria
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bfbef45593a95cb8b317e7585119a6afbffd7a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d8dfc8bbb200258818c38e931e978cc3be292525
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454081"
 ---
 # <a name="memory-management-functions"></a>Funzioni di gestione della memoria
 

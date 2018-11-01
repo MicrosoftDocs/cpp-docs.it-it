@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2139 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2139
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2139
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b8da6a8bb4ca7630a3deff3b1ec79ca512ae2e0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f462b7d26e21b9313949bb3968b5b39e81bb30b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090100"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437127"
 ---
 # <a name="compiler-error-c2139"></a>Errore del compilatore C2139
 

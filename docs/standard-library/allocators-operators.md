@@ -1,20 +1,16 @@
 ---
-title: Operatori &lt;allocators&gt; | Microsoft Docs
-ms.custom: ''
+title: Operatori &lt;allocators&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
-dev_langs:
-- C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 0bc4ce7c36d3ba097b04b1704fea7633eb7d26ea
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430264"
 ---
 # <a name="ltallocatorsgt-operators"></a>Operatori &lt;allocators&gt;
 

@@ -1,29 +1,19 @@
 ---
-title: -ALLOWISOLATION (ricerca di manifesti) | Microsoft Docs
-ms.custom: ''
+title: /ALLOWISOLATION (Ricerca di manifesti)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /ALLOWISOLATION
 - VC.Project.VCLinkerTool.AllowIsolation
-dev_langs:
-- C++
 helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c9197e67e46932f08a266258c41dab7922af2900
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7b2cb4160a0d25aa65d2c5eb345ba1bc08b1c6b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428093"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Ricerca di manifesti)
 

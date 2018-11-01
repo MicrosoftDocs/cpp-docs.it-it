@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3353 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3353
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3353
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3353
 ms.assetid: 5699c04b-d504-46ce-bf71-c200318fed71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63316a5a74c3981ec0f68d949eba654f8d6bbfef
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eb7b55f63e911f155c13e777e2e84ae7b587e9a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110198"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432669"
 ---
 # <a name="compiler-error-c3353"></a>Errore del compilatore C3353
 

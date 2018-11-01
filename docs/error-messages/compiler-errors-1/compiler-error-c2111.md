@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2111 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2111
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2111
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2111
 ms.assetid: 38fd42ec-1480-4a44-aaca-ae4593ed5f50
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1fcfac1e268ae3e8c6a16af31a1e7f06c073a5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9545e44518a7a377378929d684bf08573a214b18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023423"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437137"
 ---
 # <a name="compiler-error-c2111"></a>Errore del compilatore C2111
 

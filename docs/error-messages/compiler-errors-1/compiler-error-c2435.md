@@ -1,37 +1,27 @@
 ---
-title: Errore del compilatore C2435 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C2435
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2435
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2435
 ms.assetid: be6aa8f8-579b-42ea-bdd8-2d01393646ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ddf078420da8aba170bbd21a0db775f9246cea4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5cd7a83575da7ab2a30401406d0c2ccf6c1b603e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703642"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438533"
 ---
 # <a name="compiler-error-c2435"></a>Errore del compilatore C2435
 
-> '*var*': inizializzazione dinamica richiede CRT gestito; Impossibile compilare con /CLR: safe
+> «*var*': l'inizializzazione dinamica richiede codice CRT gestito; Impossibile compilare con /CLR: safe
 
 ## <a name="remarks"></a>Note
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
-Inizializzazione di variabili globali per dominio di applicazione richiede la libreria CRT compilata con `/clr:pure`, che non genera un'immagine verificabile.
+Inizializzazione della variabile globale per dominio di applicazione richiede la libreria CRT compilate con `/clr:pure`, che non produce un'immagine di verificabile.
 
 Per altre informazioni, vedere [appdomain](../../cpp/appdomain.md) e [process](../../cpp/process.md).
 

@@ -1,27 +1,17 @@
 ---
-title: Classe numpunct_byname | Microsoft Docs
-ms.custom: ''
+title: Classe numpunct_byname
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocnum/std::numpunct_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 511547b8a02a956a2ed7eff2da384f3adcfbd5ed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 64e8918b052b05088ff48aefb0f0f9ab8c6df586
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912797"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432873"
 ---
 # <a name="numpunctbyname-class"></a>Classe numpunct_byname
 

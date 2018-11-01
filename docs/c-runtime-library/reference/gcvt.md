@@ -1,10 +1,6 @@
 ---
-title: _gcvt | Microsoft Docs
-ms.custom: ''
+title: _gcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _gcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt function
 - _CVTBUFSIZE
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d824d42a102aee68619d602044c39f398af177dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430862"
 ---
 # <a name="gcvt"></a>_gcvt
 
@@ -64,7 +54,7 @@ char *_gcvt(
 *valore*<br/>
 Valore da convertire.
 
-*digits*<br/>
+*cifre*<br/>
 Numero di cifre significative archiviate.
 
 *buffer*<br/>
@@ -76,11 +66,11 @@ Posizione di archiviazione per il risultato.
 
 ## <a name="remarks"></a>Note
 
-Il **gcvt** funzione converte a virgola mobile *valore* in una stringa di caratteri (che include un separatore decimale e un byte sign possibili) e archivia la stringa *buffer*. Il *buffer* deve essere sufficientemente grande da contenere il valore convertito oltre a un carattere di terminazione null che viene aggiunto automaticamente. Se una dimensione del buffer *cifre* + 1 viene utilizzato, la funzione sovrascrive la fine del buffer. Ciò perché la stringa convertita include un separatore decimale e può contenere informazioni su segno ed esponente. Non sono previste misure per l'overflow. **gcvt** tenta di produrre *cifre* cifre nel formato decimale. In caso contrario, produce *cifre* cifre nel formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
+Il **gcvt** funzione converte a virgola mobile *valore* in una stringa di caratteri (che include un separatore decimale e un possibile byte del segno) e archivia la stringa nella *buffer*. Il *buffer* deve essere sufficientemente grande da contenere il valore convertito oltre a un carattere di terminazione null, che viene aggiunto automaticamente. Se una dimensione del buffer *cifre* + 1 viene usato, la funzione sovrascrive la fine del buffer. Ciò perché la stringa convertita include un separatore decimale e può contenere informazioni su segno ed esponente. Non sono previste misure per l'overflow. **gcvt** tenta di produrre *cifre* cifre nel formato decimale. Se non è possibile, produce *cifre* cifre nel formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
 
-Un *buffer* lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi mobile valore a virgola.
+Oggetto *buffer* lunghezza **_CVTBUFSIZE** è sufficiente per Mobile valore a virgola.
 
-Questa funzione convalida i relativi parametri. Se *buffer* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **NULL**.
+Questa funzione convalida i relativi parametri. Se *buffer* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **NULL**.
 
 ## <a name="requirements"></a>Requisiti
 

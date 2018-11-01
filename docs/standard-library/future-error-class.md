@@ -1,25 +1,15 @@
 ---
-title: Classe future_error | Microsoft Docs
-ms.custom: ''
+title: Classe future_error
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - future/std::future_error
-dev_langs:
-- C++
 ms.assetid: 6071c545-ac2a-49ef-9967-07b0125da861
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e5d5c24a658f53dbef4075d68f5aead5454356b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2b3f754c0ceb7384d99c6a657de214d30aca24b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430473"
 ---
 # <a name="futureerror-class"></a>Classe future_error
 
@@ -41,7 +31,7 @@ const char *what() const throw();
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<futura >
+**Intestazione:** \<future >
 
 **Spazio dei nomi:** std
 

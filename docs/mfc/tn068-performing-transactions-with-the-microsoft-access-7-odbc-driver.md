@@ -1,29 +1,19 @@
 ---
-title: 'TN068: Esecuzione di transazioni con il Driver ODBC di Microsoft Access 7 | Microsoft Docs'
-ms.custom: ''
+title: 'TN068: esecuzione di transazioni con il driver ODBC di Microsoft Access 7'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.data.odbc
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN068 [MFC]
 - transactions [MFC], calling BeginTrans
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4006ee6953342fd55b644eeb2a8e8f30c1d80285
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3121587f85c4ea19cc92e39569008b597d24ea58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395843"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428704"
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: esecuzione di transazioni con il driver ODBC di Microsoft Access 7
 

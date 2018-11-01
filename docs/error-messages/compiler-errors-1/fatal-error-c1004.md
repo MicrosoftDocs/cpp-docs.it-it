@@ -1,27 +1,17 @@
 ---
-title: Errore irreversibile C1004 | Microsoft Docs
-ms.custom: ''
+title: Errore irreversibile C1004
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1004
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1004
 ms.assetid: dbe034b0-6eb0-41b4-a50c-2fccf9e78ad4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a284de510fde49602a06fb9282c0ddd59eeb0ac1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 13fb8963b33569facf62ccedfe9ce8b7bbbbfdc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428119"
 ---
 # <a name="fatal-error-c1004"></a>Errore irreversibile C1004
 

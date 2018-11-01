@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2064 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2064
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2064
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7099c8a8371d7a08c95693fffe0d8814303e783e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3571793f19cfc5b95f785f0539187a7d87ce0577
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430251"
 ---
 # <a name="compiler-error-c2064"></a>Errore del compilatore C2064
 

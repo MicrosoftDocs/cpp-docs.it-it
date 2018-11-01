@@ -1,27 +1,17 @@
 ---
-title: Errore irreversibile C1013 | Microsoft Docs
-ms.custom: ''
+title: Errore irreversibile C1013
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1013
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1013
 ms.assetid: 5514a679-efe7-4055-bdd3-5693ca0c332f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33c10062cac83984fb1c68835780497b89c4cbc1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ee0b8ce97ba5d49e2784f7cd3c74c3b930c6a21
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431676"
 ---
 # <a name="fatal-error-c1013"></a>Errore irreversibile C1013
 

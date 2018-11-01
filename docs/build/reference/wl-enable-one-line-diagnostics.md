@@ -1,29 +1,19 @@
 ---
-title: -WL (abilitare la diagnostica di una sola riga) | Microsoft Docs
-ms.custom: ''
+title: /WL (Attiva le informazioni di diagnostica su una sola riga)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /wl
-dev_langs:
-- C++
 helpviewer_keywords:
 - -WL compiler option [C++]
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e82a3273673d45d1abf3ac201d7a0f63334cecbb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2d2f3c1c7bac19fc0e401067f43e78e3770c6304
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718672"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428158"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (Attiva le informazioni di diagnostica su una sola riga)
 

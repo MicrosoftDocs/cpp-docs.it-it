@@ -1,26 +1,16 @@
 ---
-title: Riferimento a operatori MASM | Microsoft Docs
-ms.custom: ''
+title: Riferimento a operatori MASM
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c9f5beb0e3525de6df88e44248410810502962e
-ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
+ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49459153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430459"
 ---
 # <a name="masm-operators-reference"></a>Riferimento a operatori MASM
 

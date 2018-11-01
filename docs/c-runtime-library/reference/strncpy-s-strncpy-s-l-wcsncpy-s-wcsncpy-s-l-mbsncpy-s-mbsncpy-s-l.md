@@ -1,10 +1,6 @@
 ---
-title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l | Microsoft Docs
-ms.custom: ''
+title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -33,8 +29,6 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -51,23 +45,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: add1f3ec75a3746d30e256ef32034b3d604f223a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418211"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430069"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
 Copia i caratteri di una stringa in un'altra.  Queste versioni di [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbsncpy_s** e **mbsncpy_s_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsncpy_s** e **mbsncpy_s_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -171,7 +161,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero se ha esito positivo, **STRUNCATE** se troncamento ha avuto luogo, in caso contrario un codice di errore.
+Zero in caso di esito positivo, **STRUNCATE** se il troncamento si è verificato, in caso contrario un codice di errore.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
@@ -180,13 +170,13 @@ Zero se ha esito positivo, **STRUNCATE** se troncamento ha avuto luogo, in caso 
 |**NULL**|qualsiasi|qualsiasi|**EINVAL**|non modificato|
 |qualsiasi|qualsiasi|**NULL**|**EINVAL**|*strDest*[0] impostato su 0|
 |qualsiasi|0|qualsiasi|**EINVAL**|non modificato|
-|non **NULL**|troppo piccolo|qualsiasi|**ERANGE**|*strDest*[0] impostato su 0|
+|Non **NULL**|troppo piccolo|qualsiasi|**ERANGE**|*strDest*[0] impostato su 0|
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni tentino di copiare il primo *1!d* caratteri *strSource* al *strDest*, dove *1!d* è il minore dei *conteggio*  e la lunghezza della *strSource*. Se tali *1!d* caratteri contenuta interamente *strDest* (la cui dimensione è specificata come *numberOfElements*) e lasciare spazio per una terminazione null, quindi tali caratteri vengono copiati e viene aggiunto un carattere di terminazione null; in caso contrario, *strDest*[0] è impostato per il carattere null e il parametro non valido viene richiamato gestore, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Queste funzioni tentano di copiare i primi *1!d* caratteri di *strSource* al *strDest*, dove *1!d* è il minore di *conteggio*  e la lunghezza del *strSource*. Se tali *1!d* adattino caratteri *strDest* (con dimensioni specificate come *numberOfElements*) e rimane comunque spazio per un carattere di terminazione null, quindi questi caratteri vengono copiati e viene aggiunto un carattere di terminazione null; in caso contrario, *strDest*[0] è impostato per il carattere null e il parametro non valido viene richiamato gestore, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
-Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *conteggio* viene **truncate**, quindi la maggior parte dei *strSource* come si adatterà *strDest* viene copiato mentre ancora lasciando spazio sufficiente per il terminazione null che viene sempre aggiunto.
+Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *conteggio* viene **truncate**, quindi la maggior parte dei *strSource* che rientra in *strDest* viene copiato lasciando però spazio per il terminazione null che viene sempre aggiunto.
 
 Ad esempio,
 
@@ -195,24 +185,24 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-significa che, ti chiediamo **strncpy_s** copiare cinque caratteri in un buffer cinque byte; in tal nessuno spazio per una terminazione null, pertanto **strncpy_s** zeri out la stringa e chiama il non è valido gestore di parametri.
+significa che, chiediamo **strncpy_s** di copiare cinque caratteri in un buffer di lunghezza di cinque byte; ciò non lascia spazio per il carattere di terminazione null, di conseguenza **strncpy_s** Azzera la stringa e chiama non valido gestore di parametri.
 
-Se è necessario un comportamento di troncamento, usare **truncate** o (*dimensioni* - 1):
+Se è necessario il comportamento di troncamento, usare **truncate** o (*dimensioni* - 1):
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-Si noti che a differenza **strncpy**, se *conteggio* è maggiore della lunghezza di *strSource*, la stringa di destinazione non possono essere riempita con caratteri null fino alla lunghezza *conteggio*.
+Si noti che a differenza **strncpy**, se *conteggio* è maggiore della lunghezza di *strSource*, la stringa di destinazione non è stato applicato un riempimento con caratteri null fino alla lunghezza *conteggio*.
 
-Il comportamento delle **strncpy_s** è definito se le stringhe di origine e di destinazione si sovrappongono.
+Il comportamento delle **strncpy_s** è definito se le stringhe di origine e destinazione si sovrappongono.
 
-Se *strDest* oppure *strSource* è **NULL**, oppure *numberOfElements* è 0, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
+Se *strDest* oppure *strSource* viene **NULL**, oppure *numberOfElements* è 0, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
 
-**wcsncpy_s** e **mbsncpy_s** sono versioni a caratteri wide e caratteri multibyte di **strncpy_s**. Gli argomenti e il valore restituito del **wcsncpy_s** e **mbsncpy_s** variano di conseguenza. In alternativa queste sei funzioni si comportano in modo identico.
+**wcsncpy_s** e **mbsncpy_s** sono versioni a caratteri wide e caratteri multibyte di **strncpy_s**. Gli argomenti e il valore restituito di **wcsncpy_s** e **mbsncpy_s** variano di conseguenza. In alternativa queste sei funzioni si comportano in modo identico.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -226,7 +216,7 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 |**tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **strncpy_s_l**, **wcsncpy_s_l** e **mbsncpy_s_l** non dispone di alcuna dipendenza dalle impostazioni locali e vengono forniti solo per **tcsncpy_s_l** e non intende essere chiamato in modo diretto.
+> **strncpy_s_l**, **wcsncpy_s_l** e **mbsncpy_s_l** non dipendono dalle impostazioni locali e vengono forniti solo per **tcsncpy_s_l** e non possono essere chiamato in modo diretto.
 
 ## <a name="requirements"></a>Requisiti
 

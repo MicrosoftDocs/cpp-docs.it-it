@@ -1,27 +1,17 @@
 ---
-title: Impostazioni dell'applicazione, creazione guidata DLL MFC | Microsoft Docs
-ms.custom: ''
+title: Impostazioni applicazione, Creazione guidata DLL MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.dll.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a96b166f5fc2873736d01438d91fc971120abf2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66e7b907e3ed50c97e5cc864d51c621713cbf992
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437040"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455952"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Impostazioni applicazione, Creazione guidata DLL MFC
 

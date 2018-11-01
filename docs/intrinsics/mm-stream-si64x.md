@@ -1,28 +1,18 @@
 ---
-title: _mm_stream_si64x | Microsoft Docs
-ms.custom: ''
+title: _mm_stream_si64x
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _mm_stream_si64x
-dev_langs:
-- C++
 helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 568f1c32553a07de7f1ac7bf8ad3d0652e26d437
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9e93fb5e6e9a9ad926a13a4b69c1dddbfb55f2f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417657"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431252"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x
 
@@ -33,9 +23,9 @@ Genera il MOVNTI (istruzione). Scrive i dati `Source` in una posizione di memori
 ## <a name="syntax"></a>Sintassi
 
 ```
-void _mm_stream_si64x( 
-   __int64 * Dest, 
-   __int64 Source 
+void _mm_stream_si64x( 
+   __int64 * Dest, 
+   __int64 Source 
 );
 ```
 
@@ -44,7 +34,7 @@ void _mm_stream_si64x(
 *dest*<br/>
 [out] Puntatore alla posizione in cui scrivere i dati di origine.
 
-*Source*<br/>
+*Origine*<br/>
 [in] I dati da scrivere.
 
 ## <a name="requirements"></a>Requisiti

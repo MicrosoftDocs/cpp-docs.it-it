@@ -1,12 +1,6 @@
 ---
-title: 'Eccezioni: Utilizzo di macro MFC ed eccezioni C++ | Microsoft Docs'
-ms.custom: ''
+title: 'Eccezioni: utilizzo di macro MFC ed eccezioni C++'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception objects [MFC]
 - memory leaks [MFC], exception object not deleted
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c12a281962e807c8d1bd28284accb0ddcd62456
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 021f80f71a3921ed10b07f481ff7b7ce934d9f7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434401"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443381"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Eccezioni: utilizzo di macro MFC ed eccezioni C++
 

@@ -1,27 +1,17 @@
 ---
-title: Del compilatore (livello 3) avviso C4281 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 3) C4281
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4281
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4281
 ms.assetid: a9771261-5725-4fc6-87b6-16cf92113a25
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 106269be7d63126854aa1396bd6045532b4102ed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69496438d8078ee0298bdb447fcf4f7df1b75464
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46079141"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441990"
 ---
 # <a name="compiler-warning-level-3-c4281"></a>Avviso del compilatore (livello 3) C4281
 

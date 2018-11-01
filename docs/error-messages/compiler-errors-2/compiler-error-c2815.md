@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2815 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2815
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2815
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2815
 ms.assetid: d0256fd6-0721-4c99-b03c-52d96e77a613
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 192c991cfee9fb1925601719ea61c47c5227c753
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ab6708e7ae0a56bd71adebad4fb42d6ea9abe116
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057658"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432656"
 ---
 # <a name="compiler-error-c2815"></a>Errore del compilatore C2815
 

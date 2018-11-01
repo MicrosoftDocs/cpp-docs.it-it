@@ -1,27 +1,17 @@
 ---
-title: classe com_error | Microsoft Docs
-ms.custom: ''
+title: Classe _com_error
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - _com_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfbaf1f0c88eaeb71bc4dfbbf2dca72c8d07251e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 093509d838ba6dc06a9b84b4c680c631a47826ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117439"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435179"
 ---
 # <a name="comerror-class"></a>Classe _com_error
 
@@ -56,7 +46,7 @@ Oggetto **com_error** oggetto rappresenta una condizione di eccezione rilevata d
 |[Descrizione](../cpp/com-error-description.md)|Le chiamate `IErrorInfo::GetDescription` (funzione).|
 |[HelpContext](../cpp/com-error-helpcontext.md)|Le chiamate `IErrorInfo::GetHelpContext` (funzione).|
 |[HelpFile](../cpp/com-error-helpfile.md)|Le chiamate `IErrorInfo::GetHelpFile` (funzione)|
-|[Source](../cpp/com-error-source.md)|Le chiamate `IErrorInfo::GetSource` (funzione).|
+|[Origine](../cpp/com-error-source.md)|Le chiamate `IErrorInfo::GetSource` (funzione).|
 |[GUID](../cpp/com-error-guid.md)|Le chiamate `IErrorInfo::GetGUID` (funzione).|
 
 ### <a name="format-message-extractor"></a>Formato messaggio estrattore

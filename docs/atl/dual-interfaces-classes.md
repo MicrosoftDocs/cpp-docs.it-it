@@ -1,28 +1,19 @@
 ---
-title: Classi (ATL) delle interfacce duali | Microsoft Docs
-ms.custom: ''
+title: Classi (ATL) delle interfacce duali
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.interfaces.dual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dual interfaces, classes
 - dual interfaces
 ms.assetid: c2b1b165-ff39-4e4a-a683-91eca9158304
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 528534abd396827815ea4913af4a0b42a5703f31
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 494ce694a4b328b5fb161444457de2ef085c81a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429666"
 ---
 # <a name="dual-interfaces-classes"></a>Classi delle interfacce duali
 
