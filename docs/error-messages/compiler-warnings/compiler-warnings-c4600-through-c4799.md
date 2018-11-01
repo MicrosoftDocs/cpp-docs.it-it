@@ -1,9 +1,6 @@
 ---
-title: Del compilatore avvisi C4600 a C4799 | Microsoft Docs
+title: Del compilatore avvisi C4600 a C4799
 ms.date: 07/03/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4602
 - C4603
@@ -61,19 +58,13 @@ f1_keywords:
 - C4770
 - C4792
 - C4794
-dev_langs:
-- C++
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f25e0f42383aa993cd0d3f0190eed768fe39359
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854044"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553154"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Del compilatore avvisi C4600 a C4799
 

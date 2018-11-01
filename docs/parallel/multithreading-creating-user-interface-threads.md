@@ -1,15 +1,9 @@
 ---
-title: "Multithreading: Creazione di thread dell'interfaccia utente MFC | Microsoft Docs"
-ms.custom: ''
+title: "Multithreading: Creazione di thread dell'interfaccia utente MFC"
 ms.date: 08/27/2018
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 - SECURITY_ATTRIBUTES
-dev_langs:
-- C++
 helpviewer_keywords:
 - multithreading [C++], user interface threads
 - threading [C++], creating threads
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 06158f50364320c96223d5627386a059761baa77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e618f11e3c574e5f53dff150beeb313d26fd4a6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416318"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566829"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Creazione di thread dell'interfaccia utente MFC
 

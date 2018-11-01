@@ -1,32 +1,22 @@
 ---
-title: Classe IConnectionPointContainerImpl | Microsoft Docs
-ms.custom: ''
+title: Classe IConnectionPointContainerImpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IConnectionPointContainerImpl
 - ATLCOM/ATL::IConnectionPointContainerImpl
 - ATLCOM/ATL::IConnectionPointContainerImpl::EnumConnectionPoints
 - ATLCOM/ATL::IConnectionPointContainerImpl::FindConnectionPoint
-dev_langs:
-- C++
 helpviewer_keywords:
 - connectable objects
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5931d12acfead0a3832e84c3008bfde2ffd4a8d6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 247013322925ad6fe246b079bcff7e0521e5561d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551645"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>Classe IConnectionPointContainerImpl
 

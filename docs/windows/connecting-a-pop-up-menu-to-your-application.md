@@ -1,29 +1,18 @@
 ---
-title: La connessione di un Menu a comparsa all'applicazione C++ | Microsoft Docs
-ms.custom: ''
+title: La connessione di un Menu a comparsa all'applicazione C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - pop-up menus [C++], connecting to applications
 - context menus [C++], connecting to applications
 - menus [C++], pop-up
 - shortcut menus [C++], connecting to applications
 ms.assetid: 295cbf0e-6416-478e-bc3d-472fb98e0e52
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 643e758d063744c155ff3e03a2ff8d6bede78822
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8a0cb64caaa58b464b0d5abb52093350c5e3cfeb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50075151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556494"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-c-application"></a>La connessione di un Menu a comparsa all'applicazione C++
 

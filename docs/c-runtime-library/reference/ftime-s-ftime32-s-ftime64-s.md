@@ -1,10 +1,6 @@
 ---
-title: _ftime_s, _ftime32_s, _ftime64_s | Microsoft Docs
-ms.custom: ''
+title: _ftime_s, _ftime32_s, _ftime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftime_s
 - _ftime64_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftime32_s
 - ftime32_s
 - ftime64_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftime32_s function
 - ftime_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a23b31fb88b60b05e587bf62ab07ec7e72de869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435477"
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
@@ -71,24 +61,24 @@ Puntatore a un **timeb**, **__timeb32**, o **__timeb64** struttura.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero in caso di esito positivo, un codice di errore in caso di esito negativo. Se *timeptr* viene **NULL**, il valore restituito è **EINVAL**.
+Zero in caso di esito positivo, un codice di errore in caso di esito negativo. Se *timeptr* viene **NULL**, il valore restituito sarà **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **ftime_s** funzione Ottiene l'ora locale corrente e lo archivia nella struttura a cui puntata *timeptr*. Il **timeb**, **__timeb32**, e **__timeb64** strutture vengono definite in SYS\Timeb.h. Le strutture contengono quattro valori, elencati nella tabella seguente.
+Il **ftime_s** funzione Ottiene l'ora locale corrente e lo archivia nella struttura a cui punta *timeptr*. Il **timeb**, **__timeb32**, e **__timeb64** strutture sono definite in sys\timeb.h. Le strutture contengono quattro valori, elencati nella tabella seguente.
 
 |Campo|Descrizione|
 |-|-|
 |**dstflag**|Diverso da zero se l'ora legale è in vigore per il fuso orario locale. (Vedere [tzset](tzset.md) per una spiegazione del modo in cui viene determinata l'ora legale.)|
 |**millitm**|Frazione di secondo in millisecondi.|
 |**time**|Ora in secondi trascorsi dalla mezzanotte (00.00.00) del 1 gennaio 1970 nel formato UTC (Coordinated Universal Time).|
-|**timezone**|La differenza in minuti, in direzione ovest, tra l'ora UTC e l'ora locale. Il valore di **fuso orario** è impostato il valore della variabile globale **TimeZone** (vedere **tzset**).|
+|**timezone**|La differenza in minuti, in direzione ovest, tra l'ora UTC e l'ora locale. Il valore di **timezone** viene impostato dal valore della variabile globale **TimeZone** (vedere **tzset**).|
 
-Il **_ftime64_s** funzione, che usa il **__timeb64** struttura, consente le date di creazione di file relativamente a 23:59:59, 31 dicembre 3000 UTC; mentre **_ftime32_s** rappresenta solo le date a 23:59:59 18 gennaio 2038, ore UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
+Il **_ftime64_s** funzione, che usa le **__timeb64** struttura, consente di esprimere backup tramite 23:59:59, 31 dicembre 3000 UTC, le date di creazione di file mentre **_ftime32_s** rappresenta solo le date fino: 23.59.59 del 18 gennaio 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
 
-Il **ftime_s** funzione equivale a **_ftime64_s**, e **timeb** contiene un'ora a 64 bit, a meno che non **_USE_32BIT_TIME_T** è definito, nel qual caso il comportamento precedente è attiva; **ftime_s** utilizza un tempo a 32 bit e **timeb** contiene un'ora a 32 bit.
+Il **ftime_s** è equivalente alla funzione **_ftime64_s**, e **timeb** contiene un'ora a 64 bit, a meno che non **_USE_32BIT_TIME_T** è è definito, nel qual caso è il comportamento precedente in vigore. **ftime_s** Usa un'ora a 32 bit e **timeb** contiene un'ora a 32 bit.
 
-**ftime_s** convalida i propri parametri. Se passato come un puntatore null *timeptr*, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL**.
+**ftime_s** convalida i propri parametri. Se viene passato un puntatore null come *timeptr*, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposterà **errno** al **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

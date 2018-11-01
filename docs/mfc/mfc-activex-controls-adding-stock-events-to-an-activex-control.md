@@ -1,10 +1,6 @@
 ---
-title: 'Controlli ActiveX MFC: Aggiunta di eventi predefiniti a un controllo ActiveX | Microsoft Docs'
-ms.custom: ''
+title: 'Controlli ActiveX MFC: aggiunta di eventi predefiniti a un controllo ActiveX'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - EVENT__STOCK_ERROR
 - EVENT__STOCK_READYSTATECHANGE
@@ -19,8 +15,6 @@ f1_keywords:
 - EVENT__STOCK_KEYPRESS
 - EVENT__STOCK_CLICK
 - EVENT__STOCK_KEYUP
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events
 - KeyPress event
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3bf023dbc52ccac7311a62aba1a290b1a03190dd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d224bfada94878fcec69b0675bd0faa03575ed27
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060559"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540010"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controlli ActiveX MFC: aggiunta di eventi predefiniti a un controllo ActiveX
 

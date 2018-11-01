@@ -1,10 +1,6 @@
 ---
-title: log, logf, logl, log10, log10f, log10l | Documenti Microsoft
-ms.custom: ''
+title: log, logf, logl, log10, log10f, log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402842"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543299"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -86,7 +76,7 @@ Valore di cui trovare il logaritmo.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **registro** funzioni restituiscono il logaritmo naturale (base *espulsione*) di *x* se ha esito positivo. Il **log10** funzioni restituiscono il logaritmo in base 10. Se *x* è negativo, queste funzioni restituiscono un indefinito (IND), per impostazione predefinita. Se *x* è 0, che restituiscono valori infiniti (INF).
+Il **log** le funzioni restituiscono il logaritmo naturale (base *elettronica*) di *x* se ha esito positivo. Il **log10** funzioni restituiscono il logaritmo in base 10. Se *x* è negativo, queste funzioni restituiscono un indefinito (IND), per impostazione predefinita. Se *x* è 0, restituiscono infinity (INF).
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
@@ -94,17 +84,17 @@ Il **registro** funzioni restituiscono il logaritmo naturale (base *espulsione*)
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|NON VALIDO|_DOMAIN|
 
-**log** e **log10** ha un'implementazione che utilizza Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**registro** e **log10** dispongono di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Note
 
-C++ consente l'overload, pertanto è possibile chiamare degli overload di **registro** e **log10** che accettino e restituiscano **float** oppure **long double** valori. In un programma C **registro** e **log10** accettano e restituiscono sempre un **doppie**.
+C++ consente l'overload, quindi è possibile chiamare overload di **registro** e **log10** che accettino e restituiscano **float** oppure **long double** valori. In un programma C **registro** e **log10** accettano e restituiscono sempre un **double**.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**log**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+|**registro**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

@@ -1,10 +1,6 @@
 ---
-title: _creat, _wcreat | Microsoft Docs
-ms.custom: ''
+title: _creat, _wcreat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _creat
 - _wcreat
@@ -27,8 +23,6 @@ f1_keywords:
 - _creat
 - tcreat
 - _tcreat
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcreat function
 - _wcreat function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a6b987faa30439f0f374838fe7fcd4d942b8cc7
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451849"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494991"
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
-Crea un nuovo file. **creat** e **wcreat** sono state deprecate; utilizzare [sopen_s, wsopen_s](sopen-s-wsopen-s.md) invece.
+Crea un nuovo file. **creat** e **wcreat** sono stati deprecati; usare [sopen_s, wsopen_s](sopen-s-wsopen-s.md) invece.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -84,13 +74,13 @@ Queste funzioni, se hanno esito positivo, restituiscono un descrittore di file a
 |**EMFILE**|Non sono disponibili altri descrittori di file.|
 |**ENOENT**|Impossibile trovare il file specificato.|
 
-Se *filename* viene **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1.
+Se *nomefile* viene **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **creat** funzione crea un nuovo file o apre e tronca uno esistente. **wcreat** è una versione a caratteri "wide" **creat**; il *filename* argomento **wcreat** è una stringa di caratteri "wide". **wcreat** e **creat** si comportano in modo identico in caso contrario.
+Il **creat** funzione crea un nuovo file o si apre e tronca una esistente. **wcreat** è una versione a caratteri wide di **creat**; gli *nomefile* argomento **wcreat** è una stringa di caratteri "wide". **wcreat** e **creat** hanno lo stesso comportamento in caso contrario.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -98,7 +88,7 @@ Il **creat** funzione crea un nuovo file o apre e tronca uno esistente. **wcreat
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tcreat**|**_creat**|**_creat**|**_wcreat**|
 
-Se il file specificato da *filename* non esiste, un nuovo file viene creato con l'impostazione di autorizzazione specificata e viene aperto per la scrittura. Se il file esiste già e impostazione delle autorizzazioni consente la scrittura, **creat** tronca il file di lunghezza 0, eliminazione del contenuto precedente e lo apre per la scrittura. L'impostazione di autorizzazione *pmode*, si applica solo a file appena creato. Il nuovo file riceve l'impostazione di autorizzazione specificata dopo averlo chiuso per la prima volta. L'espressione integer *pmode* contiene una o entrambe le costanti manifesto **s_iwrite** e **s_iread**, definita in SYS\Stat.h. Quando vengono fornite entrambe le costanti, queste sono combinate con i bit per bit o un operatore ( **&#124;** ). Il *pmode* parametro è impostato su uno dei valori seguenti.
+Se il file specificato da *filename* non esiste, un nuovo file viene creato con l'impostazione di autorizzazione specificata e viene aperto per la scrittura. Se il file esiste già e l'impostazione di autorizzazione consente la scrittura, **creat** tronca il file di lunghezza 0, eliminando il contenuto precedente e lo apre per la scrittura. L'impostazione di autorizzazione *pmode*, viene applicata solo i file appena creati. Il nuovo file riceve l'impostazione di autorizzazione specificata dopo averlo chiuso per la prima volta. L'espressione integer *pmode* contiene una o entrambe le costanti manifeste **s_iwrite** e **s_iread**, definite in sys\stat.h. Quando vengono specificate entrambe le costanti, queste vengono unite con il bit per bit o un operatore ( **&#124;** ). Il *pmode* parametro è impostato su uno dei valori seguenti.
 
 |Valore|Definizione|
 |-----------|----------------|
@@ -106,9 +96,9 @@ Se il file specificato da *filename* non esiste, un nuovo file viene creato con 
 |**S_IREAD**|Lettura consentita.|
 |**S_IREAD** &AMP;#124; **S_IWRITE**|Lettura e scrittura consentite.|
 
-Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Le modalità **s_iwrite** e **s_iread** | **s_iwrite** sono quindi equivalenti. I file aperti mediante **creat** sono sempre aperti in modalità di compatibilità (vedere [sopen](sopen-wsopen.md)) con **sh_denyno**.
+Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Le modalità **s_iwrite** e **s_iread** | **s_iwrite** sono quindi equivalenti. I file aperti tramite **creat** vengono sempre aperti in modalità di compatibilità (vedere [sopen](sopen-wsopen.md)) con **sh_denyno**.
 
-**creat** si applica la maschera corrente di autorizzazione file a *pmode* prima di impostare le autorizzazioni (vedere [umask](umask.md)). **creat** viene fornito principalmente per la compatibilità con le librerie precedenti. Una chiamata a **Open** con **o_creat** e **o_trunc** nel *oflag* parametro equivale al **creat**ed è preferibile per il nuovo codice.
+**creat** applica la maschera di autorizzazione file corrente per *pmode* prima di impostare le autorizzazioni (vedere [umask](umask.md)). **creat** viene fornito soprattutto per compatibilità con le librerie precedenti. Una chiamata a **Open** con **o_creat** e **o_trunc** nel *oflag* parametro equivale al **creat**ed è preferibile per nuovo codice.
 
 ## <a name="requirements"></a>Requisiti
 

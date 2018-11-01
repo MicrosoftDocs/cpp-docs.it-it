@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3229 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3229
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3229
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3229
 ms.assetid: f2d90923-aa8b-444f-ab10-1f37dbb864e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 31e6f5cb581e60c116929e717260f34ad9e5de66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a3716bafd92bbcd5875ab2ba317f0c6826289c59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052887"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543884"
 ---
 # <a name="compiler-error-c3229"></a>Errore del compilatore C3229
 

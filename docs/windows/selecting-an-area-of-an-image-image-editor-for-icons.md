@@ -1,31 +1,20 @@
 ---
-title: Selezione di un'Area di un'immagine (Editor di immagini per le icone) | Microsoft Docs
-ms.custom: ''
+title: Selezione di un'area di immagini (Editor di immagini per le icone)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], image selection
 - Image editor [C++], selecting images
 - images [C++], selecting
 - cursors [C++], selecting areas of
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 73a773a5633ceb38173a4181e5e3effe2329fce0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2522d23b30a91639e887a8761871e3df8139f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565113"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Selezione di un'area di immagini (Editor di immagini per le icone)
 
