@@ -1,11 +1,6 @@
 ---
-title: fma, fmaf, fmal | Microsoft Docs
-ms.custom: ''
+title: fma, fmaf, fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401477"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529948"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -107,9 +96,9 @@ In caso contrario, può restituire uno dei valori seguenti:
 |Problema|INVIO|
 |-----------|------------|
 |*x* = infinito *y* = 0 o<br /><br /> *x* = 0, *y* = infinito|NaN|
-|*x* oppure *y* = ± esatta infinito *z* = infinito con segno opposto|NaN|
+|*x* oppure *y* = esatta + INFINITY, *z* = infinito con segno opposto|NaN|
 |*x* oppure *y* = NaN|NaN|
-|non (*x* = 0, *y*= indefinito) e *z* = NaN<br /><br /> non (*x*= un valore indefinito *y*= 0) e *z* = NaN|NaN|
+|non (*x* = 0, *y*= indefinito) e *z* = NaN<br /><br /> non (*x*= indefinito, *y*= 0) e *z* = NaN|NaN|
 |Errore di intervallo di overflow|±HUGE_VAL, ±HUGE_VALF o ±HUGE_VALL|
 |Errore di intervallo di underflow|valore corretto dopo l'arrotondamento.|
 
@@ -117,7 +106,7 @@ Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **fma** che accettano e restituiscono **float** e **lungo** **doppie** tipi. In un programma C **fma** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **fma** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **fma** accetta e restituisce sempre un **doppie**.
 
 Questa funzione calcola il valore come per la precisione infinita e quindi arrotonda il risultato finale.
 

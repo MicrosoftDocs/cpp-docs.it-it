@@ -1,10 +1,6 @@
 ---
-title: _get_pgmptr | Microsoft Docs
-ms.custom: ''
+title: _get_pgmptr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_pgmptr
 apilocation:
@@ -23,49 +19,43 @@ apitype: DLLExport
 f1_keywords:
 - get_pgmptr
 - _get_pgmptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_pgmptr function
 - _get_pgmptr function
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0488e2a7b8cd907872e835abb63e62f29f259455
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40c9f237aadb5f44066bcbf40fe378fb2ce96fc5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562500"
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
 
-Ottiene il valore corrente di **pgmptr** (variabile globale).
+Ottiene il valore corrente del **pgmptr** (variabile globale).
 
 ## <a name="syntax"></a>Sintassi
 
 ```C
-errno_t _get_pgmptr( 
-   char **pValue 
+errno_t _get_pgmptr( 
+   char **pValue 
 );
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *pValue*<br/>
-Un puntatore a una stringa in cui inserire il valore corrente di **pgmptr** variabile.
+Un puntatore a una stringa da riempire con il valore corrente del **pgmptr** variabile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pValue* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **EINVAL**.
+Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pValue* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Chiamare solo **get_pgmptr** se il programma ha un punto di ingresso "narrow", ad esempio **Main ()** oppure **WinMain ()**. Il **pgmptr** (variabile globale) contiene il percorso completo del file eseguibile associato al processo. Per altre informazioni, vedere [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+Chiamare solo **get_pgmptr** se il programma ha un punto di ingresso narrow, ad esempio **Main ()** oppure **WinMain ()**. Il **pgmptr** (variabile globale) contiene il percorso completo del file eseguibile associato al processo. Per altre informazioni, vedere [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 
 ## <a name="requirements"></a>Requisiti
 
