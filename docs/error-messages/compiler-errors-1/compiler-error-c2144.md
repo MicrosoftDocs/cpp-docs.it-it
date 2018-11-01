@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2144 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C2144
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2144
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60a6b0a6019ab6ddf1a403d2cbd4f6ef96b2a865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171148"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483330"
 ---
 # <a name="compiler-error-c2144"></a>Errore del compilatore C2144
 
@@ -29,15 +19,15 @@ ms.locfileid: "33171148"
 
 Il compilatore prevedeva *token* e trovare *tipo* invece.
 
-Questo errore può essere causato da una parentesi graffa di chiusura mancanti, parentesi di chiusura o punto e virgola.
+Questo errore può essere causato da una parentesi graffa di chiusura mancanti, parentesi di chiusura o punti e virgola.
 
 C2144 può verificarsi anche quando si tenta di creare una macro da una parola chiave CLR che contiene un carattere di spazio vuoto.
 
-È inoltre possibile visualizzare C2144 se si sta tentando di inoltro del tipo. Vedere [inoltro dei tipi (C + + CLI)](../../windows/type-forwarding-cpp-cli.md) per ulteriori informazioni.
+È inoltre possibile visualizzare C2144 se si sta tentando di inoltro del tipo. Vedere [l'inoltro di tipi (C + + CLI)](../../windows/type-forwarding-cpp-cli.md) per altre informazioni.
 
 ## <a name="examples"></a>Esempi
 
-L'esempio seguente genera l'errore C2144 e viene illustrato un modo per risolvere questo problema:
+L'esempio seguente genera l'errore C2144 e viene illustrato un modo per risolvere il problema:
 
 ```cpp
 // C2144.cpp
@@ -50,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-L'esempio seguente genera l'errore C2144 e viene illustrato un modo per risolvere questo problema:
+L'esempio seguente genera l'errore C2144 e viene illustrato un modo per risolvere il problema:
 
 ```cpp
 // C2144_2.cpp

@@ -1,10 +1,6 @@
 ---
-title: _umask_s | Microsoft Docs
-ms.custom: ''
+title: _umask_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - unmask_s
 - _umask_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask_s function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d45cb3ded6fd2c3d7a380069a7d7f3fd79619810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878a22cb2884c36e792ff8dead1453582addb5b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480668"
 ---
 # <a name="umasks"></a>_umask_s
 
@@ -67,7 +57,7 @@ Valore precedente dell'impostazione di autorizzazione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un codice di errore se *modalità* non specifica una modalità valida o il *pOldMode* puntatore **NULL**.
+Restituisce un codice di errore se *modalità* non specifica una modalità valida o il *pOldMode* puntatore si trova **NULL**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
@@ -76,11 +66,11 @@ Restituisce un codice di errore se *modalità* non specifica una modalità valid
 |qualsiasi|**NULL**|**EINVAL**|non modificato|
 |modalità non valida|qualsiasi|**EINVAL**|non modificato|
 
-Se si verifica una delle condizioni precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **umask_s** restituisce **EINVAL** e imposta **errno** a **EINVAL**.
+Se si verifica una delle condizioni precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **umask_s** restituisce **EINVAL** e imposta **errno** al **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **umask_s** funzione imposta la maschera di autorizzazione file del processo corrente per la modalità specificata dal *modalità*. La maschera di autorizzazione file modifica l'impostazione di autorizzazione dei nuovi file creati da **creat**, **Open**, o **sopen**. Se un bit nella maschera è impostato su 1, il bit corrispondente nel valore di autorizzazione richiesto del file è impostato su 0 (non consentito). Se un bit nella maschera è 0, il bit corrispondente viene lasciato invariato. L'impostazione di autorizzazione per un nuovo file non viene impostata fino a quando il file non viene chiuso per la prima volta.
+Il **umask_s** funzione imposta la maschera di autorizzazione file del processo corrente sulla modalità specificata da *modalità*. La maschera di autorizzazione file modifica l'impostazione di autorizzazione dei nuovi file creati da **creat**, **Open**, o **sopen**. Se un bit nella maschera è impostato su 1, il bit corrispondente nel valore di autorizzazione richiesto del file è impostato su 0 (non consentito). Se un bit nella maschera è 0, il bit corrispondente viene lasciato invariato. L'impostazione di autorizzazione per un nuovo file non viene impostata fino a quando il file non viene chiuso per la prima volta.
 
 L'espressione integer *pmode* contiene una o entrambe le costanti manifesto seguenti, definite in SYS\STAT. H:
 
@@ -90,7 +80,7 @@ L'espressione integer *pmode* contiene una o entrambe le costanti manifesto segu
 |**S_IREAD**|Lettura consentita.|
 |**S_IREAD** \| **S_IWRITE**|Lettura e scrittura consentite.|
 
-Quando vengono fornite entrambe le costanti, queste sono combinate con l'operatore OR bit per bit ( **|** ). Se il *modalità* argomento **s_iread**, la lettura non è consentita (il file è di sola scrittura). Se il *modalità* argomento **s_iwrite**, la scrittura non è consentita (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, il bit di lettura con l'impostazione **umask_s** non influisce sulle modalità del file.
+Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per bit ( **|** ). Se il *modalità* l'argomento è **s_iread**, non è consentita la lettura (il file è di sola scrittura). Se il *modalità* l'argomento è **s_iwrite**, non è consentita la scrittura (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, il bit di lettura con l'impostazione **umask_s** non ha alcun effetto sulle modalità del file.
 
 Se *pmode* non è una combinazione di una delle costanti manifesto o non include un set alternativo di costanti, la funzione semplicemente li ignorerà.
 

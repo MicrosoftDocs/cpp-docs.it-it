@@ -1,27 +1,17 @@
 ---
-title: 'TN046: Convenzioni relative ai commenti per le classi MFC | Microsoft Docs'
-ms.custom: ''
+title: 'TN046: convenzioni relative ai commenti per le classi MFC'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.mfc
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN046
 ms.assetid: 0d6ff3c9-4a5d-44df-b121-be4b0a649947
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9984e85bbdd047f7673d683e5c5237d93acb818b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e1787e91a94ca2fcbbe9f1f59f81bb3dfed61faa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476558"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: convenzioni relative ai commenti per le classi MFC
 

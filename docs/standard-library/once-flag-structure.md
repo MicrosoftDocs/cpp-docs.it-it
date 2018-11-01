@@ -1,25 +1,15 @@
 ---
-title: Struttura once_flag | Microsoft Docs
-ms.custom: ''
+title: Struttura once_flag
 ms.date: 09/17/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - mutex/std::once_flag
-dev_langs:
-- C++
 ms.assetid: 71bfb88d-ca8c-4082-a6e1-ff52151e8629
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67cfbe06461598fbd04e124629399baa63fdd5d9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 004a5545e2eccab83b0846e2ae30b88c8431c99d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104335"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481971"
 ---
 # <a name="onceflag-structure"></a>Struttura once_flag
 

@@ -1,27 +1,16 @@
 ---
-title: Ruolo del programmatore nell'uso di una visualizzazione di Record (accesso ai dati MFC) | Microsoft Docs
-ms.custom: ''
+title: Ruolo del programmatore nell'uso di una visualizzazione di record (accesso ai dati MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: f84c7491524e8acccb0c904ed51a97ce66bb2151
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1f1361baafa5bb3dc884adcc464a3571aee04dd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056048"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478637"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Ruolo del programmatore nell'uso di una visualizzazione di record (accesso ai dati MFC)
 

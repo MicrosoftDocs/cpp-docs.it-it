@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3490 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3490
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3490
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 503302d323f45b5f7c3971803fef0547ff28e0c8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 55580533d6a1a6b80f79b017ba78a08fb44df744
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077698"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478156"
 ---
 # <a name="compiler-error-c3490"></a>Errore del compilatore C3490
 

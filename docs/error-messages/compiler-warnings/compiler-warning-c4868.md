@@ -1,38 +1,33 @@
 ---
-title: C4868 di avviso del compilatore | Documenti Microsoft
+title: Avviso del compilatore C4868
 ms.date: 10/26/2017
-ms.topic: error-reference
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 922a1a8434da8449758b9d55ebe89ace2f262cd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481317"
 ---
-# <a name="compiler-warning-level-4-c4868"></a>Compilatore (livello 4) Avviso C4868
+# <a name="compiler-warning-level-4-c4868"></a>Avviso (livello 4) del compilatore C4868
 
-> '_file_(*riga numero*)' compilatore non può imporre l'ordine di valutazione da sinistra a destra nell'elenco di inizializzatori tra parentesi graffe
+> «_file_(*line_number*)' compilatore non può imporre l'ordine di valutazione da sinistra a destra nell'elenco di inizializzatori tra parentesi graffe
 
-Gli elementi di un elenco di inizializzatori tra parentesi graffe devono essere valutate in ordine da sinistra a destra. Esistono due casi in cui il compilatore non è in grado di garantire questo ordine: il primo è quando alcuni elementi sono gli oggetti passati per valore. il secondo è durante la compilazione con `/clr` e alcuni elementi sono campi di oggetti o sono gli elementi della matrice. Quando il compilatore non garantisce la valutazione da sinistra a destra viene genera avviso C4868.
+Gli elementi di un elenco di inizializzatori tra parentesi graffe devono essere valutate in ordine da sinistra a destra. Esistono due casi in cui il compilatore è in grado di garantire questo ordine: il primo è quando alcuni elementi sono gli oggetti passati per valore. il secondo è durante la compilazione con `/clr` e alcuni degli elementi siano campi di oggetti o gli elementi della matrice. Quando il compilatore non garantisce la valutazione da sinistra a destra Genera avviso C4868.
 
-Questo avviso può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual C++ 2015 Update 2. Il codice compilato prima di Visual C++ 2015 Update 2 è ora possibile generare C4868.
+Questo avviso può essere generato in seguito a operazioni di conformità del compilatore eseguite per Visual C++ 2015 Update 2. Codice compilato prima di Visual C++ 2015 Update 2 è ora possibile generare C4868.
 
-Per impostazione predefinita, questo avviso non è attivo. Utilizzare `/Wall` per attivare l'avviso.
+Per impostazione predefinita, questo avviso non è attivo. Usare `/Wall` per attivare questo avviso.
 
-Per risolvere il problema, considerare innanzitutto se è necessaria, ad esempio quando la valutazione degli elementi può produrre effetti collaterali dipendente dall'ordinamento valutazione da sinistra a destra degli elementi dell'elenco di inizializzatori. In molti casi, l'ordine in cui vengono valutati gli elementi non ha un effetto osservabile.
+Per risolvere questo problema, prima di tutto valutare se la valutazione da sinistra a destra degli elementi dell'elenco di inizializzatori è necessaria, ad esempio quando la valutazione degli elementi può produrre effetti collaterali dipendente dall'ordinamento. In molti casi, l'ordine in cui vengono valutati gli elementi non hanno alcun effetto osservabile.
 
-Se l'ordine di valutazione deve essere scritto da sinistra a destra, considerare se è possibile passare gli elementi `const` alternativa, fare riferimento. Una modifica ad esempio si elimina l'avviso nell'esempio di codice seguente.
+Se l'ordine di valutazione deve essere da sinistra a destra, è consigliabile se è possibile passare gli elementi `const` fare invece riferimento. Una modifica simile al seguente elimina l'avviso nell'esempio di codice seguente.
 
 ## <a name="example"></a>Esempio
 
-In questo esempio genera l'errore C4868 e Mostra un modo per risolvere il problema:
+In questo esempio genera C4868 e Mostra un modo per risolvere il problema:
 
 ```cpp
 // C4868.cpp

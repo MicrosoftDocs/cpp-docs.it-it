@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2090 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2090
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2090
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2090
 ms.assetid: e8176e55-382b-453d-aa27-6597f0274afd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 613d3214e652e994ec07e1fe4396b4eb15798067
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d805a4d6e0da0e94288ac36c6680a952b7633b86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469394"
 ---
 # <a name="compiler-error-c2090"></a>Errore del compilatore C2090
 

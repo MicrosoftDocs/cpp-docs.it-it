@@ -1,15 +1,9 @@
 ---
-title: 'Sfondo OLE: Implementazione MFC | Microsoft Docs'
-ms.custom: ''
+title: 'Sfondo OLE: implementazione MFC'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - IMarshall
 - IMoniker
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC libraries, implementing
 - OLE MFC library implementation
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d6fdd0fa05ec21151a28c516adcb224f5e9b0ec
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409831"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476674"
 ---
 # <a name="ole-background-mfc-implementation"></a>Sfondo OLE: implementazione MFC
 

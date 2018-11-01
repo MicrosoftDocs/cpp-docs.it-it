@@ -1,12 +1,6 @@
 ---
-title: Procedure guidate ed editor risorse | Microsoft Docs
-ms.custom: ''
+title: Procedure guidate ed editor risorse
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - application wizards [MFC], and MFC
 - MFC, resource editors
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a02a6e1f2b40f777cef0f82f92d0c41ff40595b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe55336d38393787988eac3a6f57394f3923260e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472748"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Procedure guidate ed editor risorse
 

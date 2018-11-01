@@ -1,28 +1,18 @@
 ---
-title: Strutture utilizzate da MFC | Microsoft Docs
-ms.custom: ''
+title: Strutture utilizzate da MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.structures
-dev_langs:
-- C++
 helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fad8c3f3dc2c1b7b421497ac7d849613706ef542
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 06735e4bf8967a95c2f14c0187a653cfda8a15fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475569"
 ---
 # <a name="structures-used-by-mfc"></a>Strutture utilizzate da MFC
 
