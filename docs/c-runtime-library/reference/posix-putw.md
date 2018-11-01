@@ -1,10 +1,6 @@
 ---
-title: putw | Microsoft Docs
-ms.custom: ''
+title: putw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - putw
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - putw
-dev_langs:
-- C++
 helpviewer_keywords:
 - putw function
 ms.assetid: a004fbb6-7643-4f3f-9ee1-87a23154d49a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 530ab8cab3508f3e353de4233f1b3057bbf15da7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 336a387d2f032fad4709033a63f6b170ce8eb5bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400340"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489700"
 ---
 # <a name="putw"></a>putw
 

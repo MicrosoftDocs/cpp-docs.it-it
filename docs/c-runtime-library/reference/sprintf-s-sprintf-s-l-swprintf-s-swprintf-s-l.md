@@ -1,10 +1,6 @@
 ---
-title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _swprintf_s_l
 - _sprintf_s_l
@@ -31,8 +27,6 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0200740df3b41e356bcf83f0756b8a5267b38166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51469ccec348545ff780d14d5f433099def3eb69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511943"
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
@@ -125,23 +115,23 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 ## <a name="return-value"></a>Valore restituito
 
-Il numero di caratteri scritti o -1 se si è verificato un errore. Se *buffer* oppure *formato* è un puntatore null **sprintf_s** e **swprintf_s** restituiscono -1 e impostano **errno**al **EINVAL**.
+Il numero di caratteri scritti o -1 se si è verificato un errore. Se *buffer* oppure *formato* è un puntatore null **sprintf_s** e **swprintf_s** restituiscono -1 e impostano **errno**alla **EINVAL**.
 
-**sprintf_s** restituisce il numero di byte archiviati nel *buffer*, senza contare il carattere di terminazione null. **swprintf_s** restituisce il numero di caratteri "wide" archiviati in *buffer*, senza contare il carattere "wide" null finale.
+**sprintf_s** restituisce il numero di byte archiviati nel *buffer*, senza contare il carattere di terminazione null. **swprintf_s** restituisce il numero di caratteri wide archiviati nel *buffer*, senza contare il carattere wide null finale.
 
 ## <a name="remarks"></a>Note
 
-Il **sprintf_s** funzione formatta e archivia una serie di caratteri e i valori *buffer*. Ogni *argomento* (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in *formato*. Il formato è costituito da caratteri ordinari e ha lo stesso modulo e funziona come le *formato* argomento per [printf](printf-printf-l-wprintf-wprintf-l.md). Un carattere Null viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **sprintf_s** funzione formatta e archivia una serie di caratteri e i valori *buffer*. Ciascuna *argomenti* (se presente) viene convertita e restituita in base alla specifica di formato corrispondente in *formato*. Il formato è costituito da caratteri ordinari e ha lo stesso formato e funzione il *formato* argomento per [printf](printf-printf-l-wprintf-wprintf-l.md). Un carattere Null viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-Una differenza principale tra **sprintf_s** e [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) consiste nel fatto che **sprintf_s** controlla la stringa di formato per i caratteri di formattazione validi, mentre [ sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) controlla solo se la stringa di formato o il buffer **NULL** puntatori. Se il controllo non riesce, il gestore di parametro non valido viene richiamato, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** alla **EINVAL**.
+Una delle principali differenze tra **sprintf_s** e [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) è quello **sprintf_s** controlla la stringa di formato per i caratteri di formattazione validi, mentre [ sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) controlla solo se la stringa di formato o di buffer vengono **NULL** puntatori. Se il controllo non riesce, il gestore di parametro non valido viene richiamato, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** al **EINVAL**.
 
-La principale differenza tra **sprintf_s** e [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) consiste nel fatto che **sprintf_s** accetta un parametro di lunghezza che specifica le dimensioni del buffer di output in caratteri. Se il buffer è troppo piccolo per il testo formattato, incluso il carattere di terminazione null, quindi il buffer viene impostato su una stringa vuota inserendo un carattere null in *buffer*[0], e viene richiamato il gestore di parametri non validi. A differenza **snprintf**, **sprintf_s** garantisce che il buffer sarà a terminazione null a meno che le dimensioni del buffer sono zero.
+La principale differenza tra **sprintf_s** e [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) è quello **sprintf_s** accetta un parametro di lunghezza che specifica le dimensioni del buffer di output in caratteri. Se il buffer è troppo piccolo per il testo formattato, incluso il carattere null di terminazione, il buffer viene impostato su una stringa vuota inserendo un carattere null in *buffer*[0], e viene richiamato il gestore di parametri non validi. A differenza **snprintf**, **sprintf_s** garantisce che il buffer sarà essere con terminazione null a meno che la dimensione del buffer sia zero.
 
-**swprintf_s** è una versione a caratteri wide **sprintf_s**; gli argomenti puntatori per **swprintf_s** sono stringhe a caratteri "wide". Rilevamento degli errori in di codifica **swprintf_s** può essere diverso da quello in **sprintf_s**. Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+**swprintf_s** è una versione a caratteri wide di **sprintf_s**; gli argomenti puntatori per **swprintf_s** sono stringhe a caratteri wide. Rilevamento degli errori in di codifica **swprintf_s** può essere diverso da quello in **sprintf_s**. Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Esistono versioni **sprintf_s** che offrono un controllo maggiore su ciò che accade se il buffer è troppo piccolo. Per altre informazioni, vedere [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Sono disponibili versioni di **sprintf_s** che offrono un controllo maggiore su ciò che accade se il buffer è troppo piccolo. Per altre informazioni, vedere [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

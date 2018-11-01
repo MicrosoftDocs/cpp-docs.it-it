@@ -1,25 +1,15 @@
 ---
-title: Gestione visualizzazione | Microsoft Docs
-ms.custom: ''
+title: Gestione visualizzazione
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fce4b036c6a6ae3692353ae02e7d36eb5ddfd1e1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398489"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521372"
 ---
 # <a name="visualization-manager"></a>Gestione visualizzazione
 

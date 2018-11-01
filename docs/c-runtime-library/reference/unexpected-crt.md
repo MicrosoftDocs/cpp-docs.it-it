@@ -1,10 +1,6 @@
 ---
-title: unexpected (CRT) | Microsoft Docs
-ms.custom: ''
+title: unexpected (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - unexpected
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd8dc51c41ebf938f59493cbd62fac3e0a491601
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408107"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534020"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
@@ -49,7 +39,7 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Note
 
-Il **imprevisto** routine non viene usata con l'implementazione corrente di gestione delle eccezioni C++. **imprevisto** chiamate **terminare** per impostazione predefinita. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come relativo argomento. **imprevisto** chiama l'ultima funzione fornita come argomento al **set_unexpected**.
+Il **imprevisto** routine non viene usata con l'implementazione corrente di gestione delle eccezioni C++. **imprevista** chiamate **terminare** per impostazione predefinita. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come relativo argomento. **imprevista** chiama l'ultima funzione fornita come argomento al **set_unexpected**.
 
 ## <a name="requirements"></a>Requisiti
 

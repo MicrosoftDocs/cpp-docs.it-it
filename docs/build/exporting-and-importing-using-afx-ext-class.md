@@ -1,14 +1,8 @@
 ---
-title: Esportazione e importazione tramite AFX_EXT_CLASS | Microsoft Docs
-ms.custom: ''
+title: Esportazione e importazione tramite AFX_EXT_CLASS
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - afx_ext_class
-dev_langs:
-- C++
 helpviewer_keywords:
 - AFX_EXT_CLASS macro
 - exporting classes [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46964b4babc7d7afd4b523ee37981296e9f7dc57
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 521fa0e0f786111e4e273685d2db6f6d011c72c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711941"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482576"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Esportazione e importazione tramite AFX_EXT_CLASS
 

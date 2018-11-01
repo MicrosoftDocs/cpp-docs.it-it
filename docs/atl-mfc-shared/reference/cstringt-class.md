@@ -1,10 +1,6 @@
 ---
-title: Classe CStringT | Microsoft Docs
-ms.custom: ''
+title: Classe CstringT
 ms.date: 10/18/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -79,23 +75,17 @@ f1_keywords:
 - CSTRINGT/CStringT::Trim
 - CSTRINGT/CStringT::TrimLeft
 - CSTRINGT/CStringT::TrimRight
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], in ATL
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf54f03ffd18c9f02920049fa60781a781865cc6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 28b2f929e9f8695904bcd3f02dd2d315ab3ca349
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483408"
 ---
 # <a name="cstringt-class"></a>Classe CstringT
 

@@ -1,10 +1,6 @@
 ---
-title: lfind | Microsoft Docs
-ms.custom: ''
+title: lfind
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - lfind
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - lfind
-dev_langs:
-- C++
 helpviewer_keywords:
 - lfind function
 ms.assetid: 2528e787-94b6-4740-8a8d-6efc276d1f42
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fe22dfe77cfef52ec8f160ea441d42dc397872a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b17d8a1f3565e7165b445baf73a674e1ce4c9475
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399787"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489986"
 ---
 # <a name="lfind"></a>lfind
 

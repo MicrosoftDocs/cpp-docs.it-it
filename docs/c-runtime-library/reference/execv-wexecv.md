@@ -1,10 +1,6 @@
 ---
-title: _execv, _wexecv | Microsoft Docs
-ms.custom: ''
+title: _execv, _wexecv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexecv
 - _execv
@@ -25,24 +21,18 @@ f1_keywords:
 - _execv
 - _wexecv
 - wexecv
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wexecv function
 - _execv function
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8c6013e7d62b3738efe717c95e1464f31e2f0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399086"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523951"
 ---
 # <a name="execv-wexecv"></a>_execv, _wexecv
 
@@ -92,7 +82,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando.
 
-Il **execv** funzioni convalidano i propri parametri. Se *cmdname* è un puntatore null, o se *argv* è un puntatore null, puntatore a una matrice vuota, o se la matrice contiene una stringa vuota come primo argomento, il **execv** funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1. Nessun processo viene avviato.
+Il **execv** funzioni convalidano i propri parametri. Se *cmdname* è un puntatore null, o se *argv* è un puntatore null, un puntatore a una matrice vuota, o se la matrice contiene una stringa vuota come primo argomento, il **execv** funzioni richiamano il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1. Nessun processo viene avviato.
 
 ## <a name="requirements"></a>Requisiti
 

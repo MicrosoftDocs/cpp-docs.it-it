@@ -1,28 +1,18 @@
 ---
-title: Creazione di Windows | Microsoft Docs
-ms.custom: ''
+title: Creazione di finestre
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - object creation [MFC], windows
 - windows [MFC], creating
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bf0263bfd67a2bfbd9489c7cfea6946ee2eda9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c6b51ec0cd619375b76810a95e80042589e599d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544677"
 ---
 # <a name="creating-windows"></a>Creazione di finestre
 

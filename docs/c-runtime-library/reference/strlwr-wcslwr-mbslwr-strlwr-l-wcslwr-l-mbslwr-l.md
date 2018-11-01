@@ -1,10 +1,6 @@
 ---
-title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft Docs
-ms.custom: ''
+title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_l
 - _strlwr
@@ -35,8 +31,6 @@ f1_keywords:
 - strlwr_l
 - _tcslwr
 - mbslwr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcslwr function
 - _strlwr function
@@ -61,23 +55,19 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3468795c1f99bd6e79f9b10aae2a220a1876f4c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413258"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505690"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
 Converte una stringa in minuscolo. Sono disponibili versioni più sicure di queste funzioni. Vedere [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
 > [!IMPORTANT]
-> **mbslwr** e **mbslwr_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbslwr** e **mbslwr_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -146,11 +136,11 @@ Ognuna di queste funzioni restituisce un puntatore alla stringa convertita. Dato
 
 ## <a name="remarks"></a>Note
 
-Il **strlwr** funzione converte le lettere maiuscole nel *str* in caratteri minuscoli in base il **LC_CTYPE** impostazione della categoria delle impostazioni locali. Gli altri caratteri non sono interessati. Per ulteriori informazioni sul **LC_CTYPE**, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso utilizzare le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il **l** suffisso sono identiche ad eccezione del fatto che usano le impostazioni locali passate al contrario. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il **strlwr** funzione converte le lettere maiuscole *str* in minuscolo in base il **LC_CTYPE** impostazione di categoria delle impostazioni locali. Gli altri caratteri non sono interessati. Per ulteriori informazioni sul **LC_CTYPE**, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso usano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il **l** suffisso sono identiche ma usano le impostazioni locali passate In alternativa. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il **wcslwr** e **mbslwr** funzioni sono versioni a caratteri wide e caratteri multibyte di **strlwr**. L'argomento e il valore restituito del **wcslwr** sono caratteri wide, mentre quelli di stringhe **mbslwr** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+Il **wcslwr** e **mbslwr** funzioni sono versioni a caratteri wide e caratteri multibyte di **strlwr**. L'argomento e il valore restituito **wcslwr** sono caratteri wide, mentre quelli di stringhe **mbslwr** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Se *str* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono la stringa originale e set **errno** alla **EINVAL**.
+Se *str* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono la stringa originale e impostano **errno** al **EINVAL**.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

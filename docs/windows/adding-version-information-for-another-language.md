@@ -1,14 +1,8 @@
 ---
-title: Aggiunta di informazioni sulla versione per un altro linguaggio (C++) | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di informazioni sulla versione per un altro linguaggio (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.version
-dev_langs:
-- C++
 helpviewer_keywords:
 - languages, version information
 - New Version Info Block
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - resources [C++], adding version information
 - version information, adding for languages
 ms.assetid: 17f6273c-e1cc-441a-a3d8-f564341cbf20
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 97ad11f7982fd5a413c6740fe969c5edc20636a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d79fb575817d5ba743e4efc460154eb03dca4f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389382"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534589"
 ---
 # <a name="adding-version-information-for-another-language-c"></a>Aggiunta di informazioni sulla versione per un altro linguaggio (C++)
 

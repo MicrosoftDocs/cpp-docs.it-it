@@ -1,27 +1,17 @@
 ---
-title: '&lt;cstdlib&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cstdlib&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <cstdlib>
-dev_langs:
-- C++
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b526c9e65fc0c5a6b2645a068c5e616462fbcae0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da2f9eb96caf95918cf5d4ce2bc331b622481823
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841729"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503429"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 

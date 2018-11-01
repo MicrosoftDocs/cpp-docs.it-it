@@ -1,20 +1,13 @@
 ---
-title: Tipi fondamentali (C + c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: Tipi fondamentali (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d8a9340abf7ca16fe2f0e6d6660bf14f00bd594
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161229"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529129"
 ---
 # <a name="fundamental-types-ccx"></a>Tipi fondamentali (C++/CX)
 

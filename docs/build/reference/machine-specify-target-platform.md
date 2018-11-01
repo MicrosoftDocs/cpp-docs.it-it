@@ -1,15 +1,9 @@
 ---
-title: -MACHINE (specifica la piattaforma di destinazione) | Microsoft Docs
-ms.custom: ''
+title: /MACHINE (Specifica la piattaforma di destinazione)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.TargetMachine
 - /machine
-dev_langs:
-- C++
 helpviewer_keywords:
 - mapfiles, creating linker
 - target platform
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - /MACHINE linker option
 - MACHINE linker option
 ms.assetid: 8d41bf4b-7e53-4ab9-9085-d852b08d31c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e159fe15b0aed441b1a96047a3ffb035077d6266
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 872370269e9ab8acaaa8cafe7fb47b1121bcbb97
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546438"
 ---
 # <a name="machine-specify-target-platform"></a>/MACHINE (Specifica la piattaforma di destinazione)
 

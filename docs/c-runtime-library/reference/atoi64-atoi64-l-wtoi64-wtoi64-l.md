@@ -1,10 +1,6 @@
 ---
-title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l | Microsoft Docs
-ms.custom: ''
+title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoi64_l
 - _wtoi64
@@ -35,8 +31,6 @@ f1_keywords:
 - wtoi64_l
 - _atoi64_l
 - atoi64_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstoi64 function
 - wtoi64 function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fbb0f49edcba73bdf2b7e83d6495573cc2cc0567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c80480be8895db6afe499d5426b91dcde786d654
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396677"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515479"
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -98,9 +88,9 @@ Impostazioni locali da usare.
 
 Ogni funzione restituisce il **__int64** valore prodotto interpretando i caratteri di input sotto forma di numero. Il valore restituito è 0 per **_atoi64** se l'input non può essere convertito in un valore di quel tipo.
 
-In caso di overflow con valori integrali positivi grandi, **_atoi64** restituisce **I64_MAX** e **I64_MIN** in caso di overflow con i valori integrali negativi grandi.
+In caso di overflow con valori integrali positivi elevati, **_atoi64** restituisce **I64_MAX** e **I64_MIN** in caso di overflow con valori integrali negativi elevati.
 
-In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono 0.
+In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono 0.
 
 ## <a name="remarks"></a>Note
 
@@ -112,9 +102,9 @@ Il *str* argomento **_atoi64** ha il formato seguente:
 
 > [*whitespace*] [*sign*] [*cifre*]
 
-Un *whitespace* è costituito da caratteri spazio o tabulazione, ovvero vengono ignorati; *sign* è un segno più (+) o meno (-); e *cifre* sono uno o più cifre.
+Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* uno o più cifre.
 
-**_wtoi64** è identica a **_atoi64** con la differenza che accetta una stringa di caratteri "wide" come parametro.
+**_wtoi64** è identica alla **_atoi64** con la differenza che accetta una stringa di caratteri "wide" come parametro.
 
 Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -134,7 +124,7 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 ## <a name="example"></a>Esempio
 
-Questo programma viene illustrato come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la **_atoi64** funzioni.
+Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la **_atoi64** funzioni.
 
 ```C
 // crt_atoi64.c
