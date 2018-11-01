@@ -1,39 +1,29 @@
 ---
-title: Errore del compilatore C2393 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C2393
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2393
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 057537c8efcf6e827d9ac9aaf36c0eace6d24156
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 39ca693aed3f08e7b2df3d687f94d93384393f23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704030"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566855"
 ---
 # <a name="compiler-error-c2393"></a>Errore del compilatore C2393
 
-> '*simbolo*': Impossibile allocare il simbolo per dominio di applicazione nel segmento '*segmento*'
+> «*simbolo*': Impossibile allocare il simbolo per dominio di applicazione nel segmento '*segmento*»
 
 ## <a name="remarks"></a>Note
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
-L'utilizzo di [appdomain](../../cpp/appdomain.md) variabili implica che si esegue la compilazione con **/clr: pure** o **/CLR: safe**, e un'immagine safe o pura non può contenere segmenti di dati.
+L'uso di [appdomain](../../cpp/appdomain.md) variabili implica che si esegue la compilazione con **/clr: pure** oppure **/CLR: safe**, e un'immagine safe o pura non può contenere segmenti di dati.
 
-Vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) per ulteriori informazioni.
+Visualizzare [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) per altre informazioni.
 
 ## <a name="example"></a>Esempio
 

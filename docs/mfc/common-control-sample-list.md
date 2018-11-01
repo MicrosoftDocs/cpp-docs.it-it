@@ -1,25 +1,15 @@
 ---
-title: Elenco di esempi comuni di controllo | Microsoft Docs
-ms.custom: ''
+title: Elenco di esempi di controlli comuni
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - sample applications [MFC], common controls
 ms.assetid: 8ae39e2d-12a8-4b17-909d-5bf155749123
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f9108f2fbc7196a5c3110cf4a12bf4f225e454e9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bd1879b8f6f6396fa04f03142cff883c5bee03d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561460"
 ---
 # <a name="common-control-sample-list"></a>Elenco di esempi di controlli comuni
 

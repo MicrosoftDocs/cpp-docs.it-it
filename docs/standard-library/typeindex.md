@@ -1,25 +1,15 @@
 ---
-title: '&lt;typeindex&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;typeindex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <typeindex>
-dev_langs:
-- C++
 ms.assetid: a9551137-f74b-4f02-af64-ff00214cea1f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 189fb7cd3757a3f71a50badc682b7b4db611b4e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e22ce63c01185112ed512217156470e6f2948cd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566621"
 ---
 # <a name="lttypeindexgt"></a>&lt;typeindex&gt;
 
