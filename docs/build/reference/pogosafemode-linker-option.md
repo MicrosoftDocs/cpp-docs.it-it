@@ -1,28 +1,18 @@
 ---
-title: / POGOSAFEMODE (PGO eseguito in modalità provvisoria thread) | Documenti Microsoft
-ms.custom: ''
+title: / POGOSAFEMODE (PGO eseguito in modalità provvisoria thread)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 f1_keywords:
 - POGOSAFEMODE
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81392c67b47a0fa90c057ee4295667a054e34498
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544430"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (PGO eseguito in modalità provvisoria thread)
 
-**L'opzione /POGOSAFEMODE è deprecata a partire da Visual Studio 2015**. Usare la [/GENPROFILE: esatta](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) e **/GENPROFILE:NOEXACT** invece delle opzioni. Il **/POGOSAFEMODE** opzione del linker specifica che la compilazione instrumentata viene creata per utilizzare la modalità thread-safe per profilo dell'acquisizione di dati durante l'ottimizzazione guidata da profilo (PGO) set di training viene eseguito.
+**L'opzione /POGOSAFEMODE è deprecata a partire da Visual Studio 2015**. Usare la [/GENPROFILE: esatto](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) e **/GENPROFILE:NOEXACT** invece delle opzioni. Il **/POGOSAFEMODE** l'opzione del linker specifica che la compilazione instrumentata viene creata per utilizzare la modalità thread-safe per profilo dell'acquisizione di dati durante l'ottimizzazione PGO (PGO) le esecuzioni di training.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -30,25 +20,25 @@ ms.locfileid: "32377333"
 
 ## <a name="remarks"></a>Note
 
-Ottimizzazione guidata da profilo (PGO) è disponibili due modalità possibili durante la fase di profilo: *modalità veloce* e *modalità provvisoria*. Una volta profilatura in modalità veloce, Usa un'istruzione di incremento per aumentare i contatori di dati. L'istruzione di incremento è più veloce ma non è thread-safe. Una volta profilatura in modalità provvisoria, utilizza l'istruzione di incremento interlocked per aumentare i contatori di dati. Questa istruzione ha la stessa funzionalità come l'istruzione di incremento ed è thread-safe, ma risulta più lento.
+Ottimizzazione PGO (PGO) dispone di due possibili modalità durante la fase di analisi: *modalità veloce* e *modalità provvisoria*. Una volta profilatura in modalità veloce, Usa un'istruzione di incremento per aumentare i contatori di dati. L'istruzione di incremento è più veloce ma non è thread-safe. Una volta profilatura in modalità provvisoria, utilizza l'istruzione di incremento con interlock per aumentare i contatori di dati. Questa istruzione ha la stessa funzionalità come l'istruzione di incremento ed è thread-safe, ma è più lenta.
 
-Il **/POGOSAFEMODE** opzione imposta la compilazione instrumentata per utilizzare la modalità provvisoria. Questa opzione può essere utilizzato quando deprecate [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) viene specificato, durante la fase del linker strumentazione PGO.
+Il **/POGOSAFEMODE** opzione imposta la compilazione instrumentata per utilizzare la modalità provvisoria. Questa opzione può solo essere usata quando deprecate [/LTCG: PGINSTRUMENT](ltcg-link-time-code-generation.md) viene specificato, durante la fase del linker strumentazione PGO.
 
-Per impostazione predefinita, profilazione opera in modalità veloce. **/ POGOSAFEMODE** è obbligatorio solo se si desidera utilizzare la modalità provvisoria.
+Per impostazione predefinita, profilazione PGO viene eseguita in modalità veloce. **/ POGOSAFEMODE** è necessaria solo se si desidera utilizzare la modalità provvisoria.
 
-Per eseguire la profilazione in modalità provvisoria, è necessario utilizzare **/GENPROFILE: esatta** (impostazione consigliata), oppure utilizzare la variabile di ambiente [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) o l'opzione del linker **/POGOSAFEMODE**, a seconda del sistema. Se si sta eseguendo la profilatura di un x64 computer, è necessario utilizzare l'opzione del linker. Se si sta eseguendo la profilatura di x86 computer, è possibile utilizzare l'opzione del linker o definire la variabile di ambiente a qualsiasi valore prima di iniziare il processo di strumentazione PGO.
+Per eseguire la profilazione PGO in modalità provvisoria, è necessario utilizzare **/GENPROFILE: esatto** (scelta consigliata), oppure usare la variabile di ambiente [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) o l'opzione del linker **/POGOSAFEMODE**, a seconda del sistema. Se si sta eseguendo la profilatura su un x64 computer, è necessario usare l'opzione del linker. Se si sta eseguendo la profilatura su un x86 computer, è possibile usare l'opzione del linker o definire la variabile di ambiente su un valore qualsiasi prima di iniziare il processo di strumentazione PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
 
-1. Selezionare il **proprietà di configurazione** > **Linker** > **ottimizzazione** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **Linker** > **ottimizzazione** pagina delle proprietà.
 
-1. Nel **generazione codice in fase di collegamento** proprietà, scegliere **ottimizzazione PGO - strumento (/: PGINSTRUMENT)**.
+1. Nel **Link Time Code Generation** proprietà, scegliere **ottimizzazione PGO - strumento (/: PGINSTRUMENT)**.
 
-1. Selezionare il **le proprietà di configurazione** > **Linker** > **riga di comando** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
-1. Immettere il **/POGOSAFEMODE** opzione nel **opzioni aggiuntive** casella. Scegliere **OK** per salvare le modifiche.
+1. Immettere il **/POGOSAFEMODE** opzione nel **opzioni aggiuntive** casella. Scegli **OK** per salvare le modifiche.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

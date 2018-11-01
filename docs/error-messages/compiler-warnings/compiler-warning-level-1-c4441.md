@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 1) C4441 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 1) C4441
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4441
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a505c47ea348175a16c91c309646428f1222d091
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45d7a6af09677c1e63dab5ffcc55c35d8203b40b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033433"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539698"
 ---
 # <a name="compiler-warning-level-1-c4441"></a>Avviso del compilatore (livello 1) C4441
 

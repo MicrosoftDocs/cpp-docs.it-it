@@ -1,25 +1,15 @@
 ---
-title: Finestre delle proprietà come procedure guidate | Microsoft Docs
-ms.custom: ''
+title: Finestre delle proprietà come procedure guidate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73b6b0462012fc54b3bd6f2cb22422f5b1431288
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e8ba740d31681de214d2a497bc2694a94d09d84d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374210"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542623"
 ---
 # <a name="property-sheets-as-wizards"></a>Finestre delle proprietà come procedure guidate
 

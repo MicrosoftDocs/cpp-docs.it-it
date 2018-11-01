@@ -1,27 +1,17 @@
 ---
-title: Avviso della riga di comando D9028 | Microsoft Docs
-ms.custom: ''
+title: Avviso della riga di comando D9028
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - D9028
-dev_langs:
-- C++
 helpviewer_keywords:
 - D9028
 ms.assetid: 03852b51-fa59-4114-ab1f-2af0509119af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef739da3bc106a654e11c4a13bae7be59d35fc90
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f22e8eced1a5dd74e4a3917a211be05044a3f486
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044132"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566140"
 ---
 # <a name="command-line-warning-d9028"></a>Avviso della riga di comando D9028
 

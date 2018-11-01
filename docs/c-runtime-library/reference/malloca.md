@@ -1,10 +1,6 @@
 ---
-title: _malloca | Microsoft Docs
-ms.custom: ''
+title: _malloca
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _malloca
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - malloca
 - _malloca
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, stack
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c6f6b731bce5667ca992e7181518bf0a9eb2b87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563982"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -59,15 +49,15 @@ Byte da allocare dallo stack.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **malloca** routine restituisce un **void** puntatore per lo spazio allocato, che è assolutamente corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Se *dimensioni* è 0, **malloca** alloca un elemento di lunghezza zero e restituisce un puntatore valido a tale elemento.
+Il **malloca** routine restituisce un **void** puntatore allo spazio allocato, che è assolutamente corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Se *dimensioni* è 0, **malloca** alloca un elemento di lunghezza zero e restituisce un puntatore valido a tale elemento.
 
 Se lo spazio non può essere allocato viene generata un'eccezione di overflow dello stack. L'eccezione di overflow dello stack non è un'eccezione C++; si tratta di un'eccezione strutturata. Invece di usare la gestione delle eccezioni C++, è necessario usare la [gestione delle eccezioni strutturata](../../cpp/structured-exception-handling-c-cpp.md).
 
 ## <a name="remarks"></a>Note
 
-**malloca** alloca *dimensioni* byte dall'heap se la richiesta supera una determinata dimensione in byte fornita da o lo stack del programma **_ALLOCA_S_THRESHOLD**. La differenza tra **malloca** e **alloca** consiste nel fatto che **alloca** alloca sempre nello stack, indipendentemente dalle dimensioni. A differenza **alloca**, che non richiede o consentire una chiamata a **libero** per liberare la memoria allocata in modo **malloca** richiede l'utilizzo di [freea](freea.md)per liberare memoria. Nella modalità di debug **malloca** sempre alloca memoria dall'heap.
+**malloca** alloca *dimensioni* byte di stack del programma o dell'heap se la richiesta supera una determinata dimensione in byte fornito dal **_ALLOCA_S_THRESHOLD**. La differenza tra **malloca** e **alloca** è quello **alloca** alloca sempre nello stack, indipendentemente dalle dimensioni. A differenza **alloca**, che non richiede o consente una chiamata a **gratuita** per liberare la memoria allocata in questo modo, **malloca** richiede l'uso di [freea](freea.md)per liberare la memoria. Nella modalità di debug **malloca** alloca sempre la memoria dall'heap.
 
-Esistono restrizioni per chiamare in modo esplicito **malloca** in un gestore di eccezioni (EH). Le routine EH in esecuzione su processori x86 operano nel relativo frame di memoria: eseguono le attività nello spazio di memoria che non è basato sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, in modo esplicito, la chiamata **malloca** in uno dei seguenti scenari genera un errore di programma durante la restituzione alla routine EH chiamante:
+Esistono alcune restrizioni per chiamare in modo esplicito **malloca** in un gestore di eccezioni (EH, Exception HANDLING). Le routine EH in esecuzione su processori x86 operano nel relativo frame di memoria: eseguono le attività nello spazio di memoria che non è basato sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, chiamare in modo esplicito **malloca** in uno dei seguenti scenari genera un errore di programma durante la restituzione alla routine EH chiamante:
 
 - Espressione di filtro eccezioni di Windows NT SEH: **except** (`_malloca ()` )
 
@@ -75,12 +65,12 @@ Esistono restrizioni per chiamare in modo esplicito **malloca** in un gestore di
 
 - Espressione della clausola catch EH C++
 
-Tuttavia, **malloca** può essere chiamato direttamente all'interno di una routine EH o da un callback fornito dall'applicazione che viene richiamato da uno degli scenari EH elencati in precedenza.
+Tuttavia **malloca** può essere chiamato direttamente dall'interno di una routine EH o da un callback fornito dall'applicazione che viene richiamato da uno degli scenari EH elencati in precedenza.
 
 > [!IMPORTANT]
 > In Windows XP, se **malloca** viene chiamato all'interno di un blocco try/catch, è necessario chiamare [resetstkoflw](resetstkoflw.md) nel blocco catch.
 
-Oltre alle restrizioni menzionate sopra, quando si utilizza il [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opzione **malloca** non può essere utilizzato **except** blocchi. Per altre informazioni, vedere [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Oltre alle restrizioni menzionate sopra, quando si usa la [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opzione **malloca** non può essere utilizzato nella **except** blocchi. Per altre informazioni, vedere [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Requisiti
 

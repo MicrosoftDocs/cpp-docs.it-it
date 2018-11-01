@@ -1,25 +1,15 @@
 ---
-title: Punto di dichiarazione in C++ | Microsoft Docs
-ms.custom: ''
+title: Punto di dichiarazione in C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - point of declaration
 ms.assetid: 92ea8707-80cb-497c-b479-f907b8401859
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68ac24fcfe35701dd75d74800661aa5e41c005f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d6cb4c3813d88c8b29fbcb2e0827805f406e6c81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072065"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560654"
 ---
 # <a name="point-of-declaration-in-c"></a>Punto di dichiarazione in C++
 

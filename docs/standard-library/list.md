@@ -1,28 +1,18 @@
 ---
-title: '&lt;list&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;list&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <list>
 - std::<list>
-dev_langs:
-- C++
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bfb3ca14ddd52b81aa597ff83452ba3ed01541a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cfe6e8b4f75a3dbf824574654bfba83dcbbd8ba6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857740"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558011"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 

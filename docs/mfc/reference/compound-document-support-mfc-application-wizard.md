@@ -1,25 +1,15 @@
 ---
-title: Supporto documenti compositi, creazione guidata applicazione MFC | Microsoft Docs
-ms.custom: ''
+title: Supporto documenti compositi, Creazione guidata applicazione MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
-dev_langs:
-- C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fef6fd59166a0999221d420f58e0f329c780fd06
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 572bb10d8aa2af38858bac50f795fb660d5476b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416071"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543039"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Supporto documenti compositi, Creazione guidata applicazione MFC
 

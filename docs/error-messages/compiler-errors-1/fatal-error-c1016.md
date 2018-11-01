@@ -1,27 +1,17 @@
 ---
-title: Errore irreversibile C1016 | Microsoft Docs
-ms.custom: ''
+title: Errore irreversibile C1016
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1016
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1016
 ms.assetid: 33f45c3e-2d8f-43ad-a445-c412d1d54ce1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72da7f9413724fe83352e888eff8b5e577fb0eda
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7463c6962817716611f3571e073712f374773fa7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052257"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566036"
 ---
 # <a name="fatal-error-c1016"></a>Errore irreversibile C1016
 

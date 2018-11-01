@@ -1,27 +1,17 @@
 ---
-title: Errore irreversibile del compilatore di risorse RC1022 | Microsoft Docs
-ms.custom: ''
+title: Errore irreversibile del compilatore di risorse RC1022
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC1022
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC1022
 ms.assetid: 30a0f3c7-08a8-4c40-b0de-46ee5feb789d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4186b531fce1b608122df676139b9c676ce2df27
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6ee09105822ea7dd4243741ed00ce36978f09583
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540908"
 ---
 # <a name="resource-compiler-fatal-error-rc1022"></a>Errore irreversibile del compilatore di risorse RC1022
 

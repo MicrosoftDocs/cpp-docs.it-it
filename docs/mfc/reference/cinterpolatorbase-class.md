@@ -1,10 +1,6 @@
 ---
-title: Classe CInterpolatorBase | Microsoft Docs
-ms.custom: ''
+title: Classe CInterpolatorBase
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CInterpolatorBase
 - AFXANIMATIONCONTROLLER/CInterpolatorBase
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetCustomInterpolator
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetDuration
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetInitialValueAndVelocity
-dev_langs:
-- C++
 helpviewer_keywords:
 - CInterpolatorBase [MFC], CInterpolatorBase
 - CInterpolatorBase [MFC], CreateInstance
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5287c54aad0a4ec41145f8241123489ea74d19f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541466"
 ---
 # <a name="cinterpolatorbase-class"></a>Classe CInterpolatorBase
 
@@ -66,14 +56,14 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 |Nome|Descrizione|
 |----------|-----------------|
 |[CInterpolatorBase::CreateInstance](#createinstance)|Crea un'istanza di `CInterpolatorBase` e archivia un puntatore a un interpolatore personalizzato che gestirà gli eventi.|
-|[CInterpolatorBase::GetDependencies](#getdependencies)|Ottiene le dipendenze dell'interpolatore. Esegue l'override`CUIAnimationInterpolatorBase::GetDependencies`.|
-|[CInterpolatorBase::GetDuration](#getduration)|Ottiene la durata dell'interpolatore. Esegue l'override`CUIAnimationInterpolatorBase::GetDuration`.|
-|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Ottiene il valore finale a cui punta l'interpolatore. Esegue l'override`CUIAnimationInterpolatorBase::GetFinalValue`.|
+|[CInterpolatorBase::GetDependencies](#getdependencies)|Ottiene le dipendenze dell'interpolatore. Esegue l'override di `CUIAnimationInterpolatorBase::GetDependencies`.|
+|[CInterpolatorBase::GetDuration](#getduration)|Ottiene la durata dell'interpolatore. Esegue l'override di `CUIAnimationInterpolatorBase::GetDuration`.|
+|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Ottiene il valore finale a cui punta l'interpolatore. Esegue l'override di `CUIAnimationInterpolatorBase::GetFinalValue`.|
 |[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Crea un'interpolazione il valore a un offset specificato (esegue l'override `CUIAnimationInterpolatorBase::InterpolateValue`.)|
 |[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|Crea un'interpolazione la velocità a un offset specificato (esegue l'override `CUIAnimationInterpolatorBase::InterpolateVelocity`.)|
 |[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|Archivia un puntatore a un interpolatore personalizzato che gestirà gli eventi.|
 |[CInterpolatorBase::SetDuration](#setduration)|Imposta la durata dell'interpolatore (esegue l'override `CUIAnimationInterpolatorBase::SetDuration`.)|
-|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Imposta valore iniziale e la velocità dell'interpolatore. Esegue l'override`CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.|
+|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Imposta valore iniziale e la velocità dell'interpolatore. Esegue l'override di `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.|
 
 ## <a name="remarks"></a>Note
 

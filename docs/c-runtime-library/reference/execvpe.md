@@ -1,10 +1,6 @@
 ---
-title: execvpe | Microsoft Docs
-ms.custom: ''
+title: execvpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - execvpe
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - execvpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - execvpe function
 ms.assetid: ee657071-c459-4bb6-82a2-8925c888f624
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b851a21a58ea81d817f58b446d550a52bb8e0880
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55457b245927db0aabe34e89d5b4dfd59f0efb43
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560004"
 ---
 # <a name="execvpe"></a>execvpe
 

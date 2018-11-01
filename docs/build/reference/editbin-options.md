@@ -1,27 +1,17 @@
 ---
-title: Opzioni di EDITBIN | Microsoft Docs
-ms.custom: ''
+title: Opzioni di EDITBIN
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - editbin
-dev_langs:
-- C++
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0850f242b8368a9592a5622e627c781b4df4cde5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 263cfb79897ae60daff64521928db865f1dcb874
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710138"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540543"
 ---
 # <a name="editbin-options"></a>Opzioni di EDITBIN
 
@@ -47,7 +37,7 @@ EDITBIN dispone delle opzioni seguenti:
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|Specifica se l'immagine eseguibile è compatibile con la funzionalità Protezione esecuzione programmi di Windows.|
 |[/REBASE](../../build/reference/rebase.md)|Imposta gli indirizzi di base per gli oggetti specificati.|
 |[/RELEASE](../../build/reference/release.md)|Imposta il checksum nell'intestazione.|
-|[O DELLA SEZIONE](../../build/reference/section-editbin.md)|Esegue l'override gli attributi di una sezione.|
+|[/SECTION](../../build/reference/section-editbin.md)|Esegue l'override gli attributi di una sezione.|
 |[/STACK](../../build/reference/stack.md)|Imposta la dimensione dello stack dell'immagine eseguibile in byte.|
 |[/SUBSYSTEM](../../build/reference/subsystem.md)|Specifica l'ambiente di esecuzione.|
 |[/SWAPRUN](../../build/reference/swaprun.md)|Specifica che l'immagine eseguibile deve essere copiata nel file di scambio e quindi eseguita da li.|
