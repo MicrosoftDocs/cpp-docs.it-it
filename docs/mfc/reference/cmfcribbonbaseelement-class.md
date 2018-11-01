@@ -1,10 +1,6 @@
 ---
-title: Classe CMFCRibbonBaseElement | Microsoft Docs
-ms.custom: ''
+title: Classe CMFCRibbonBaseElement
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonBaseElement
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement
@@ -121,8 +117,6 @@ f1_keywords:
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::UpdateTooltipInfo
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnProcessKey
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnSetFocus
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], AddToKeyList
 - CMFCRibbonBaseElement [MFC], AddToListBox
@@ -238,16 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ac668ab85b9a76a5cc0101d0a373fa310128801
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403227"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514361"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 
@@ -404,7 +394,7 @@ A seconda delle dimensioni, un elemento della barra multifunzione Visualizza un'
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari metodi nel `CMFCRibbonBaseElement` classe. Nell'esempio viene illustrato come ottenere un `CMFCRibbonBaseElement` dell'oggetto da un `CMFCRibbonStatusBar` classe, impostare la descrizione dell'elemento della barra multifunzione, impostare il testo, impostare un keytip e impostare il testo della descrizione comando per l'elemento della barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonBaseElement` . Nell'esempio viene illustrato come ottenere un `CMFCRibbonBaseElement` dell'oggetto da un `CMFCRibbonStatusBar` classe, impostare la descrizione dell'elemento della barra multifunzione, impostare il testo, impostare un keytip e impostare il testo della descrizione comando per l'elemento della barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]

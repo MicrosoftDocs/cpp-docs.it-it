@@ -1,30 +1,20 @@
 ---
-title: -diagnostics (opzioni del compilatore diagnostica) | Microsoft Docs
-ms.custom: ''
+title: /Diagnostics (opzioni di diagnostica del compilatore)
 ms.date: 11/11/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /diagnostics
 - VC.Project.VCCLCompilerTool.DiagnosticsFormat
-dev_langs:
-- C++
 helpviewer_keywords:
 - /diagnostics compiler diagnostic options [C++]
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2d0e6567f8666df4ec170ad7911ef08f5a1d335
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: d9b485f749f4d4d9fce4e07d9bcd6d6de564fb58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531796"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (opzioni di diagnostica del compilatore)
 

@@ -1,27 +1,17 @@
 ---
-title: __umulh | Microsoft Docs
-ms.custom: ''
+title: __umulh
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __umulh
-dev_langs:
-- C++
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 840dc430189a81108d92aa692e7e5b9845375910
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b116de7cd91d26463858fb03e5f319e2a2da1cde
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430826"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524800"
 ---
 # <a name="umulh"></a>__umulh
 
@@ -32,9 +22,9 @@ Restituire i 64 bit alti del prodotto di due valori Unsigned Integer a 64 bit.
 ## <a name="syntax"></a>Sintassi
 
 ```
-unsigned __int64 __umulh( 
-   unsigned __int64 a, 
-   unsigned __int64 b 
+unsigned __int64 __umulh( 
+   unsigned __int64 a, 
+   unsigned __int64 b 
 );
 ```
 

@@ -1,27 +1,17 @@
 ---
-title: Classe bad_alloc | Microsoft Docs
-ms.custom: ''
+title: Classe bad_alloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - new/std::bad_alloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 571885410363aee55d15e68b81ba4fd9e2b8e54b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1ebb427277c985fdab711d5bd84dcea54898a83b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705588"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515609"
 ---
 # <a name="badalloc-class"></a>Classe bad_alloc
 

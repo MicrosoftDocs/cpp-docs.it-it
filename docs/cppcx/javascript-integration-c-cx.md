@@ -1,24 +1,17 @@
 ---
-title: Integrazione JavaScript (C + c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: Integrazione JavaScript (C++/CX)
 ms.date: 01/18/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 5b3b4406-e20e-4c40-9d1d-5dcd860beeac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f5e61c5555a59b4842d109eec5c7cbb060abe46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 629fb2de097ca1a8dea7c5c236caf6c74a8a10bc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106977"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550488"
 ---
 # <a name="javascript-integration-ccx"></a>Integrazione JavaScript (C++/CX)
 
-Per altre informazioni, vedere [creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Per altre informazioni, vedere [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 ## <a name="see-also"></a>Vedere anche
 

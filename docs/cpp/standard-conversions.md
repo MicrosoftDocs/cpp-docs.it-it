@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
-ms.translationtype: MT
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861447"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070584"
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 
@@ -81,11 +81,11 @@ Le promozioni a mantenimento del valore e le promozioni che mantengono il segno 
 
 - Un operando di **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, o **>=**
 
-     Questi operatori si basano sul segno per determinare il risultato. Di conseguenza, le promozioni a mantenimento del valore e le promozioni che mantengono il segno portano a risultati diversi, se applicate a tali operandi.
+   Questi operatori si basano sul segno per determinare il risultato. Di conseguenza, le promozioni a mantenimento del valore e le promozioni che mantengono il segno portano a risultati diversi, se applicate a tali operandi.
 
 - L'operando sinistro del **>>** o **>>=**
 
-     Questi operatori trattano le quantità con segno e quelle senza segno in maniera differente, quando si esegue un'operazione di spostamento. Nel caso delle quantità con segno, spostare una quantità a destra comporta la propagazione del bit di segno verso le posizioni di bit vuote. Nel caso delle quantità senza segno, le posizioni di bit vuote vengono riempite con zero.
+   Questi operatori trattano le quantità con segno e quelle senza segno in maniera differente, quando si esegue un'operazione di spostamento. Nel caso delle quantità con segno, spostare una quantità a destra comporta la propagazione del bit di segno verso le posizioni di bit vuote. Nel caso delle quantità senza segno, le posizioni di bit vuote vengono riempite con zero.
 
 - Argomento in una funzione in overload o operando di un operatore di overload che dipende dal segno del tipo dello stesso operando per corrispondere all'argomento. (Vedere [operatori di overload](../cpp/operator-overloading.md) per altre informazioni sulla definizione di operatori di overload.)
 
@@ -221,7 +221,7 @@ Il secondo caso in cui un puntatore a una classe può essere convertito in un pu
 
 Il risultato di tale conversione è un puntatore al "sotto-oggetto", la parte dell'oggetto descritto completamente dalla classe base.
 
-Nel codice seguente vengono definite due classi, `A` e `B`, dove `B` è derivata da `A`. (Per altre informazioni sull'ereditarietà, vedere [classi derivate da](../cpp/inheritance-cpp.md).) Definisce quindi `bObject` un oggetto di tipo `B` e due puntatori (`pA` e `pB`) che puntano all'oggetto.
+Nel codice seguente vengono definite due classi, `A` e `B`, dove `B` è derivata da `A`. (Per altre informazioni sull'ereditarietà, vedere [classi derivate da](../cpp/inheritance-cpp.md).) Definisce quindi  un oggetto di tipo `bObject` e due puntatori (`B` e `pB`) che puntano all'oggetto.
 
 ```cpp
 // C2039 expected

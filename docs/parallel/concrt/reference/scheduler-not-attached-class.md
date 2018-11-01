@@ -1,29 +1,19 @@
 ---
-title: Classe scheduler_not_attached | Microsoft Docs
-ms.custom: ''
+title: Classe scheduler_not_attached
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached::scheduler_not_attached
-dev_langs:
-- C++
 helpviewer_keywords:
 - scheduler_not_attached class
 ms.assetid: 26001970-b400-463b-be3d-8623359c399a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 410cb7f1af100a2740309c919989896fb7964b19
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159202445f95e8fbac93902dec43fc0f99180e8e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401719"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560667"
 ---
 # <a name="schedulernotattached-class"></a>Classe scheduler_not_attached
 

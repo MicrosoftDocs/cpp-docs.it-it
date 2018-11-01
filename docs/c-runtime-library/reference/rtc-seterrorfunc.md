@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorFunc | Microsoft Docs
-ms.custom: ''
+title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorFunc
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
-dev_langs:
-- C++
 helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e146f699f9026260470b1c540c7567f074896a38
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514738"
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 
-Definisce una funzione come gestore per la segnalazione dei controlli degli errori di runtime (RTC). Questa funzione è obsoleta. Utilizzare **RTC_SetErrorFuncW** invece.
+Definisce una funzione come gestore per la segnalazione dei controlli degli errori di runtime (RTC). Questa funzione è deprecata. usare **RTC_SetErrorFuncW** invece.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -58,11 +48,11 @@ L'indirizzo della funzione che gestirà i controlli degli errori di runtime.
 
 ## <a name="return-value"></a>Valore restituito
 
-La funzione di errore definita in precedenza. Se non è disponibile alcuna funzione definita in precedenza, restituisce **NULL**.
+La funzione di errore definita in precedenza. Se non esiste alcuna funzione definita in precedenza, restituisce **NULL**.
 
 ## <a name="remarks"></a>Note
 
-Non utilizzare questa funzione; In alternativa, usare **RTC_SetErrorFuncW**. Viene mantenuta solo per compatibilità con le versioni precedenti.
+Non usare questa funzione; Usare invece **RTC_SetErrorFuncW**. Viene mantenuta solo per compatibilità con le versioni precedenti.
 
 ## <a name="requirements"></a>Requisiti
 

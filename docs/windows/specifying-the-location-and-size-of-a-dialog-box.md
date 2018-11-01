@@ -1,27 +1,16 @@
 ---
-title: Specifica la posizione e dimensione di una finestra di dialogo (C++) | Microsoft Docs
-ms.custom: ''
+title: Specifica la posizione e dimensione di una finestra di dialogo (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e825dc7b20c0ce75ca1f55fb9ad0310571316a1c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2c39cf5076ea38635268120da96fec6c82e23c47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435818"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524933"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box-c"></a>Specifica la posizione e dimensione di una finestra di dialogo (C++)
 

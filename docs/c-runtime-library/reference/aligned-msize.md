@@ -1,10 +1,6 @@
 ---
-title: _aligned_msize | Microsoft Docs
-ms.custom: ''
+title: _aligned_msize
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_msize
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_msize
 - aligned_msize
-dev_langs:
-- C++
 helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2375ec8f61a95ec018ea55cc1f891ad8049748c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97c739eed1f54f0c6705d37542eb13c6ec6879d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393105"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524848"
 ---
 # <a name="alignedmsize"></a>_aligned_msize
 
@@ -71,11 +61,11 @@ Restituisce le dimensioni (in byte) come intero senza segno.
 
 ## <a name="remarks"></a>Note
 
-Il **aligned_msize** funzione restituisce le dimensioni, in byte, del blocco di memoria allocata da una chiamata a [aligned_malloc](aligned-malloc.md) oppure [aligned_realloc](aligned-realloc.md). Il *allineamento* e *offset* valori devono essere lo stesso come i valori passati alla funzione che il blocco allocato.
+Il **aligned_msize** funzione restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a [aligned_malloc](aligned-malloc.md) oppure [aligned_realloc](aligned-realloc.md). Il *allineamento* e *offset* valori devono essere quello utilizzato per i valori passati alla funzione che ha allocato il blocco.
 
-Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C **aligned_msize** risolve [_aligned_msize_dbg](aligned-msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **aligned_msize** viene risolto [aligned_msize_dbg](aligned-msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null o *allineamento* non è una potenza di 2 **msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** alla **EINVAL** e restituisce -1.
+Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null oppure *allineamento* non è una potenza di 2 **msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** al **EINVAL** e restituisce -1.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,28 +1,19 @@
 ---
-title: 'Controlli ATL: Classi di supporto generale | Microsoft Docs'
-ms.custom: ''
+title: 'Di controlli ATL: Classi di supporto generale'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.controls
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [ATL]
 - general support classes
 ms.assetid: cf73f1d2-7542-48e3-b8c8-9d3abf29f85b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18bf4bf2d2081402762026d6f26bd4650f9908fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49b7ff751db33ce2647ea7d4865ebea93949813b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551437"
 ---
 # <a name="controls-general-support-classes"></a>Controlli: Classi di supporto generale
 
