@@ -1,26 +1,16 @@
 ---
-title: Agenti asincroni | Microsoft Docs
-ms.custom: ''
+title: Agenti asincroni
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e226a43358c8279b51a4f02849737c25554ccc5b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 949074981d77702fd23ee3ff70f219c013fa6543
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467600"
 ---
 # <a name="asynchronous-agents"></a>Agenti asincroni
 
