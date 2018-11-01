@@ -1,27 +1,17 @@
 ---
-title: Errore irreversibile C1905 | Microsoft Docs
-ms.custom: ''
+title: Errore irreversibile C1905
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1905
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1905
 ms.assetid: fefc6769-477f-45a2-9878-6f0a5f42472c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 263bf0ff63d71f381e68ea33b294abd423f59bf4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3fb4db30d91e0dd8c9dbeeebca46210122e5ff07
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663153"
 ---
 # <a name="fatal-error-c1905"></a>Errore irreversibile C1905
 

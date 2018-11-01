@@ -1,10 +1,6 @@
 ---
-title: vscanf, vwscanf | Microsoft Docs
-ms.custom: ''
+title: vscanf, vwscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vscanf
 - vwscanf
@@ -24,19 +20,13 @@ f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
-dev_langs:
-- C++
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 825d0d61fccc6d0f83ae8b11648a3c7a3a9c50a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ba72e0dc313617211f7b9608bcbd8919bbc62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414324"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625085"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
@@ -74,12 +64,12 @@ Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _
 
 ## <a name="remarks"></a>Note
 
-Il **vscanf** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni fornite per il *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **vscanf** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni specificate dal *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde all'identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> Quando si usa **vscanf** per leggere una stringa, specificare sempre una larghezza per il **%s** formato (ad esempio **"% 32s"** anziché **"%s"**); in caso contrario, input in formato non corretto può causare un sovraccarico del buffer. In alternativa, è possibile usare [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) o [fgets](fgets-fgetws.md).
+> Quando si usa **vscanf** per leggere una stringa, specificare sempre una larghezza per il **%s** formato (ad esempio **"% 32s"** anziché **"%s"**); in caso contrario, input formattato in modo non corretto può causare un sovraccarico del buffer. In alternativa, è possibile usare [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) o [fgets](fgets-fgetws.md).
 
-**vwscanf** è una versione a caratteri wide **vscanf**; il *formato* argomento **vwscanf** è una stringa di caratteri "wide". **vwscanf** e **vscanf** comportarsi in modo analogo, se il flusso viene aperto in modalità ANSI. **vscanf** non supporta input da un flusso UNICODE.
+**vwscanf** è una versione a caratteri wide di **vscanf**; gli *formato* argomento **vwscanf** è una stringa di caratteri "wide". **vwscanf** e **vscanf** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vscanf** non supporta l'input da un flusso UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -96,7 +86,7 @@ Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e 
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

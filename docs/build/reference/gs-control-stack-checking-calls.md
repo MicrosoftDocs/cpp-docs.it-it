@@ -1,14 +1,8 @@
 ---
-title: -Gs (verifica le chiamate ai controlli di Stack) | Microsoft Docs
-ms.custom: ''
+title: /Gs (Verifica le chiamate ai controlli di stack)
 ms.date: 10/25/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /GS
-dev_langs:
-- C++
 helpviewer_keywords:
 - disabling stack probes
 - GS compiler option [C++]
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f6b2d31552127807af6fa731574b04770b2a7fe
-ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
+ms.openlocfilehash: 52e203380045c3e23b04950cb241176f10321c2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646469"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Verifica le chiamate ai controlli di stack)
 

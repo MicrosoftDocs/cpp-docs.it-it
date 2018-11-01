@@ -1,29 +1,19 @@
 ---
-title: Classe CD2DRoundedRect | Microsoft Docs
-ms.custom: ''
+title: Classe CD2DRoundedRect
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DRoundedRect
 - AFXRENDERTARGET/CD2DRoundedRect
 - AFXRENDERTARGET/CD2DRoundedRect::CD2DRoundedRect
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DRoundedRect [MFC], CD2DRoundedRect
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2037a00eb00fac1a14eca50031d213a5827ac425
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6c1aa2bb9593cdf12aadc39ef8a85cc8ad14078a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448027"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677474"
 ---
 # <a name="cd2droundedrect-class"></a>Classe CD2DRoundedRect
 

@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 1) C4549 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 1) C4549
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4549
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4549
 ms.assetid: 81a07676-625b-4f58-9b0c-3ee22830b04a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b36a7516c244c49e56d7070684f5914407d625c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5732b2f963be52512d5d80f2552af4a80acb3372
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027362"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657236"
 ---
 # <a name="compiler-warning-level-1-c4549"></a>Avviso del compilatore (livello 1) C4549
 

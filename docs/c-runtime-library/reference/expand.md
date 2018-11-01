@@ -1,10 +1,6 @@
 ---
-title: _expand | Microsoft Docs
-ms.custom: ''
+title: _expand
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _expand
 apilocation:
@@ -29,23 +25,17 @@ f1_keywords:
 - _nexpand
 - bexpand
 - _expand
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f709df131ded856881dc171c2e1549d3d5d378e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1606bedbb1264bddb7674c829fe456f506d6584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402351"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665660"
 ---
 # <a name="expand"></a>_expand
 
@@ -70,24 +60,24 @@ Nuova dimensione in byte.
 
 ## <a name="return-value"></a>Valore restituito
 
-**Espandi sito** restituisce un puntatore void al blocco di memoria riallocato. **Espandi sito**, a differenza **realloc**, non è possibile spostare un blocco di modifica delle dimensioni. Pertanto, se è disponibile memoria sufficiente espandere il blocco senza spostarlo, la *memblock* parametro **Espandi sito** è identico al valore restituito.
+**Espandi** restituisce un puntatore void al blocco di memoria riallocato. **Espandi**, a differenza **realloc**, non è possibile spostare un blocco di modifica delle dimensioni. In questo modo, se vi è memoria sufficiente espandere il blocco senza spostarlo, il *memblock* parametro per **Espandi** corrisponde al valore restituito.
 
-**Espandi sito** restituisce **NULL** quando viene rilevato un errore durante l'operazione. Ad esempio, se **Espandi sito** viene utilizzata per la compattazione di un blocco di memoria, si potrebbe rilevare eventuali danneggiamenti dell'heap piccolo blocco o un puntatore di blocco non valido e restituisce **NULL**.
+**Espandi** restituisce **NULL** quando viene rilevato un errore durante l'operazione. Ad esempio, se **Espandi** viene usato per la compattazione di un blocco di memoria, potrebbe rilevare il danneggiamento dell'heap di piccoli blocchi o un puntatore di blocco non valido e restituire **NULL**.
 
-Se è disponibile memoria sufficiente espandere il blocco alla dimensione specificata senza spostarlo, la funzione restituisce **NULL**. **Espandi sito** non restituisce mai un blocco espansa su una dimensione minore di richiesta. Se si verifica un errore, **errno** indica la natura dell'errore. Per ulteriori informazioni **errno**, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se la memoria è insufficiente per espandere il blocco alla dimensione specificata senza spostarlo, la funzione restituisce **NULL**. **Espandi** non restituisce mai un blocco espanso a una dimensione minore di richiesta. Se si verifica un errore, **errno** indica la natura dell'errore. Per altre informazioni sulle **errno**, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per controllare la nuova dimensione dell'elemento, utilizzare **msize**. Per ottenere un puntatore a un tipo diverso da **void**, usare un cast del tipo sul valore restituito.
+Il valore restituito punta a uno spazio di archiviazione che garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per verificare la nuova dimensione dell'elemento, usare **msize**. Per ottenere un puntatore a un tipo diverso da **void**, usare un cast del tipo sul valore restituito.
 
 ## <a name="remarks"></a>Note
 
-Il **Espandi sito** (funzione) modifica la dimensione di un blocco di memoria precedentemente allocato dal tentativo di espandere o comprimere il blocco senza spostare la posizione nell'heap. Il *memblock* parametro punta all'inizio del blocco. Il *dimensioni* parametro fornisce la nuova dimensione del blocco, in byte. Il contenuto del blocco rimane invariato fino alla dimensione nuova o alla precedente, a seconda di quale delle due è la più breve. *memblock* non deve essere un blocco che è stato liberato.
+Il **Espandi** funzione modifica la dimensione di un blocco di memoria precedentemente allocata dal tentativo di espandere o contrarre il blocco senza spostarne la posizione nell'heap. Il *memblock* parametro punta all'inizio del blocco. Il *dimensioni* parametro fornisce la nuova dimensione del blocco, espressa in byte. Il contenuto del blocco rimane invariato fino alla dimensione nuova o alla precedente, a seconda di quale delle due è la più breve. *memblock* non deve essere un blocco liberato.
 
 > [!NOTE]
-> Su piattaforme a 64 bit, **Espandi sito** potrebbe non accetta il blocco se la nuova dimensione è minore rispetto alla dimensione corrente; in particolare, se il blocco è inferiore a 16 KB di dimensioni e pertanto allocata in Low Fragmentation Heap **Espandi sito**  lascia il blocco invariato e restituisce *memblock*.
+> Su piattaforme a 64 bit **Espandi** potrebbe non contrarre il blocco se la nuova dimensione è minore rispetto alla dimensione corrente; in particolare, se il blocco è stato inferiore a 16 KB e quindi allocato nel Low Fragmentation Heap, **Espandi**  lascia il blocco invariato e restituisce *memblock*.
 
-Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C **Espandi sito** risolve [expand_dbg](expand-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **Espandi** viene risolto [expand_dbg](expand-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-Questa funzione convalida i relativi parametri. Se *memblock* è un puntatore null, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**. Se *dimensioni* è maggiore di **heap_maxreq**, **errno** è impostata su **ENOMEM** e la funzione restituisce **NULL**.
+Questa funzione convalida i relativi parametri. Se *memblock* è un puntatore null, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**. Se *dimensioni* è maggiore di quella **heap_maxreq**, **errno** è impostata su **ENOMEM** e la funzione restituisce **NULL**.
 
 ## <a name="requirements"></a>Requisiti
 

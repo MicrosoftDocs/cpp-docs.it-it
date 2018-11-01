@@ -1,27 +1,18 @@
 ---
-title: Machine Learning errore non irreversibile A2119 | Microsoft Docs
-ms.custom: ''
+title: Errore ML non irreversibile A2119
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
 ms.topic: error-reference
 f1_keywords:
 - A2119
-dev_langs:
-- C++
 helpviewer_keywords:
 - A2119
 ms.assetid: 4d4ee6da-3a58-495c-a1da-c3a405c4c18d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c1034c91f6eebd240c746c881284bed2baf5e618
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6905f02369c9063d35c93ba9a30ffc2f394d23ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686899"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633064"
 ---
 # <a name="ml-nonfatal-error-a2119"></a>Errore ML non irreversibile A2119
 

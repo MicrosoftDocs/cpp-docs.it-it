@@ -1,8 +1,6 @@
 ---
-title: Funzioni &lt;ostream&gt; | Microsoft Docs
-ms.custom: ''
+title: Funzioni &lt;ostream&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - ostream/std::swap
 - ostream/std::endl
@@ -14,12 +12,12 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 494c750ec80000ef9090824e0436f6e443593847
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: fa498f4acbb151eab4321bcddc6af027ee266237
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636774"
 ---
 # <a name="ltostreamgt-functions"></a>Funzioni &lt;ostream&gt;
 

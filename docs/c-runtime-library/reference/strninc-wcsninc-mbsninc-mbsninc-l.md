@@ -1,10 +1,6 @@
 ---
-title: _strninc, _wcsninc, _mbsninc, _mbsninc_l | Microsoft Docs
-ms.custom: ''
+title: _strninc, _wcsninc, _mbsninc, _mbsninc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsninc
 - _mbsninc_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ftcsninc
 - _wcsninc
 - _mbsninc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsninc_l function
 - mbsninc function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 21218c411ad8bab9e3e4bd73eea266d0889f6c7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411332"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643183"
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
-Sposta un puntatore di stringa da **n** caratteri.
+Sposta un puntatore di stringa dal **n** caratteri.
 
 > [!IMPORTANT]
-> **mbsninc** e **mbsninc_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsninc** e **mbsninc_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -101,7 +91,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un puntatore a *str* dopo *str* stato incrementato dal *conteggio* caratteri o **NULL** se fornito puntatore **NULL**. Se *conteggio* è maggiore o uguale al numero di caratteri *str*, il risultato è indefinito.
+Ognuna di queste routine restituisce un puntatore a *str* dopo *str* aver incrementato *count* caratteri oppure **NULL** se fornito puntatore si trova **NULL**. Se *conteggio* è maggiore o uguale al numero di caratteri *str*, il risultato è indefinito.
 
 ## <a name="remarks"></a>Note
 
@@ -113,9 +103,9 @@ Il **mbsninc** funzione incrementi *str* dal *conteggio* caratteri multibyte. **
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**strninc** e **wcsninc** sono stringhe di caratteri a byte singolo e le versioni di stringa di caratteri wide di **mbsninc**. **wcsninc** e **strninc** vengono forniti solo per questo mapping e non deve essere utilizzato in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
+**strninc** e **wcsninc** stringa di caratteri a byte singolo e versioni di stringa di caratteri wide di **mbsninc**. **wcsninc** e **strninc** sono disponibili solo per questo mapping e non deve essere utilizzato in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 
-**mbsninc_l** è identica ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**mbsninc_l** è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

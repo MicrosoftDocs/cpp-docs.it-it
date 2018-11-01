@@ -1,10 +1,6 @@
 ---
-title: _fpclass, _fpclassf | Microsoft Docs
-ms.custom: ''
+title: _fpclass, _fpclassf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpclass
 - _fpclassf
@@ -28,24 +24,18 @@ f1_keywords:
 - math/_fpclass
 - float/_fpclass
 - math/_fpclassf
-dev_langs:
-- C++
 helpviewer_keywords:
 - fpclass function
 - floating-point numbers, IEEE representation
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 79895cf19c188addee45236df5dc47d3f4ebf6a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 987c87cc7a03f4a24e47654ae52e8a2416a15184
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398377"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590970"
 ---
 # <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
 
@@ -70,13 +60,13 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **fpclass** e **_fpclassf** funzioni restituiscono un valore intero che indica la classificazione dell'argomento a virgola mobile *x*. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.
+Il **fpclass** e **_fpclassf** funzioni di restituiranno un valore intero che indica la classificazione a virgola mobile dell'argomento *x*. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.
 
 |Valore|Descrizione|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Segnalazione NaN|
 |**_FPCLASS_QNAN**|NaN non interattivo|
-|**_FPCLASS_NINF**|Valore di infinito negativo (-INF)|
+|**_FPCLASS_NINF**|Infinito negativo (-INF)|
 |**_FPCLASS_NN**|Valore diverso da zero normalizzato negativo|
 |**_FPCLASS_ND**|Denormalizzato negativo|
 |**_FPCLASS_NZ**|Zero negativo (- 0)|
@@ -87,7 +77,7 @@ Il **fpclass** e **_fpclassf** funzioni restituiscono un valore intero che indic
 
 ## <a name="remarks"></a>Note
 
-Il **fpclass** e **_fpclassf** funzioni sono specifiche di Microsoft. Sono simili a [fpclassify](fpclassify.md), ma restituiscono informazioni più dettagliate sull'argomento. Il **_fpclassf** funzione è disponibile solo quando compilato per x64 della piattaforma.
+Il **fpclass** e **_fpclassf** funzioni sono specifiche di Microsoft. Sono simili a [fpclassify](fpclassify.md), ma restituiscono informazioni più dettagliate sull'argomento. Il **_fpclassf** funzione di disponibile solo quando viene compilato per x64 piattaforma.
 
 ## <a name="requirements"></a>Requisiti
 

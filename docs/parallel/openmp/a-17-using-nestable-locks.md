@@ -1,23 +1,13 @@
 ---
-title: A.17 utilizzo di blocchi annidabili | Microsoft Docs
-ms.custom: ''
+title: A.17   Utilizzo di blocchi annidabili
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 8ef386ed-ddc4-4d40-80aa-cc39f0fb5e4b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16f2888df773f8611f1d8b41bac16523e2ab0565
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 769285bc0831d8968490b698d6fd9f96ff8d517f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376059"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579663"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   Utilizzo di blocchi annidabili
 

@@ -1,10 +1,6 @@
 ---
-title: _get_printf_count_output | Microsoft Docs
-ms.custom: ''
+title: _get_printf_count_output
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_printf_count_output
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - get_printf_count_output
 - _get_printf_count_output
-dev_langs:
-- C++
 helpviewer_keywords:
 - '%n format'
 - get_printf_count_output function
 - _get_printf_count_output function
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 216df8d973f391db2b6114d9bbcb50dcf509c5b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 477e4a9e987f27bd70b9707e91b9ea9d84b69993
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398368"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610635"
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
 
-Indica se [printf_l, printf wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-famiglia di funzioni supportano la **%n** formato.
+Indica se [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-supporto per le funzioni della famiglia il **%n** formato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -53,11 +43,11 @@ int _get_printf_count_output();
 
 ## <a name="return-value"></a>Valore restituito
 
-Diverso da zero se **%n** è supportato, 0 se **%n** non è supportata.
+Se diverso da zero **%n** è supportato, 0 se **%n** non è supportato.
 
 ## <a name="remarks"></a>Note
 
-Se **%n** è non supportato (il valore predefinito), che si verifichi **%n** nella stringa di formato di uno qualsiasi del **printf** funzioni verranno richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se **%n** è abilitato il supporto (vedere [set_printf_count_output](set-printf-count-output.md)) quindi **%n** si comporterà come descritto in [sintassi specifica del formato: printf e wprintf Funzioni](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Se **%n** è non supportato (impostazione predefinita), che si verifichi **%n** nella stringa di formato di uno qualsiasi dei **printf** funzioni richiamerà il gestore di parametri non validi come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se **%n** supporto è abilitato (vedere [set_printf_count_output](set-printf-count-output.md)) quindi **%n** si comporterà come descritto in [sintassi specifica del formato: printf e wprintf Funzioni](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,12 +1,6 @@
 ---
-title: Sequenza di distruzione di finestre | Microsoft Docs
-ms.custom: ''
+title: Sequenza di distruzione di finestre
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - destruction, windows
 - destroying windows
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - sequence [MFC]
 - windows [MFC], destroying
 ms.assetid: 2d819196-6240-415f-a308-db43745e616c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 04ef1aa9dadbbe965ab17945da681a0e1189c404
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 07312d6c7bba219cebcfa2c73a8d66c9c97ec08e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446646"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571353"
 ---
 # <a name="window-destruction-sequence"></a>Sequenza di distruzione di finestre
 

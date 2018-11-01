@@ -1,10 +1,6 @@
 ---
-title: _initterm, _initterm_e | Microsoft Docs
-ms.custom: ''
+title: _initterm, _initterm_e
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _initterm_e
 - _initterm
@@ -26,24 +22,18 @@ f1_keywords:
 - initterm
 - _initterm
 - initterm_e
-dev_langs:
-- C++
 helpviewer_keywords:
 - initterm function
 - initterm_e function
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 470ad6cbf13efb170f61aa12f7859f2baa248c2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65963e95507d4d6444ebcc9038b5b8cf797f9feb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395835"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620714"
 ---
 # <a name="initterm-initterme"></a>_initterm, _initterm_e
 

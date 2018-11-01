@@ -1,12 +1,6 @@
 ---
-title: Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C++ o C | Microsoft Docs
-ms.custom: ''
+title: Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [C], exporting
 - functions [C], C or C++ executables and
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - exporting DLLs [C++], C functions in C++ executables
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 88d9b18620c2e648ab519a59745876569b66ec30
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0b7347ee29e973e1043a153f8284baa47b674a4d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708097"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631816"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++
 

@@ -1,23 +1,13 @@
 ---
-title: Linguaggio C/C++ e librerie Standard | Microsoft Docs
-ms.custom: ''
+title: Linguaggio C/C++ e librerie Standard
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 541dd02905f00cdd56042aca4df703a2d047f57f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c071db1dcc6363e29f5dd7ca895330d738e021cf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056625"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614422"
 ---
 # <a name="cc-language-and-standard-libraries"></a>Linguaggio C/C++ e librerie Standard
 

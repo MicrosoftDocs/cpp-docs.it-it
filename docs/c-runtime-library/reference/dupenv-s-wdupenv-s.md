@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s, _wdupenv_s | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s, _wdupenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s
 - _wdupenv_s
@@ -28,8 +24,6 @@ f1_keywords:
 - dupenv_s
 - _tdupenv_s
 - _wdupenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _dupenv_s function
 - _tdupenv_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a918b866b0b43fb0e6b31e2deb5d9861dabe9a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646500"
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
 
@@ -87,26 +77,26 @@ Nome della variabile di ambiente.
 
 Zero se eseguita correttamente, un codice di errore se non eseguita correttamente.
 
-Queste funzioni convalidano i relativi parametri; Se *buffer* oppure *varname* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni impostano **errno** alla **EINVAL** e restituire **EINVAL**.
+Queste funzioni convalidano i propri parametri. Se *buffer* oppure *varname* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni impostano **errno** al **EINVAL** e restituiti **EINVAL**.
 
-Se queste funzioni non è possibile allocare memoria sufficiente, impostano *buffer* alla **NULL** e *numberOfElements* su 0, quindi restituiscono **ENOMEM**.
+Se queste funzioni non possono allocare memoria sufficiente, impostano *buffer* al **NULL** e *numberOfElements* a 0, quindi restituiscono **ENOMEM**.
 
 ## <a name="remarks"></a>Note
 
-Il **dupenv_s** funzione Cerca nell'elenco delle variabili di ambiente per *varname*. Se la variabile viene trovata, **dupenv_s** alloca un buffer e copia il valore della variabile nel buffer. Indirizzo e la lunghezza del buffer vengono restituiti in *buffer* e *numberOfElements*. Allocando lo stesso, buffer **dupenv_s** costituisce un'alternativa più comoda [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md).
+Il **dupenv_s** funzione Cerca nell'elenco delle variabili di ambiente per *varname*. Se la variabile viene trovata, **dupenv_s** alloca un buffer e copia il valore della variabile nel buffer. Indirizzo e la lunghezza del buffer vengono restituiti in *buffer* e *numberOfElements*. Allocando il buffer stesso, **dupenv_s** offre un'alternativa più pratica a [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > È responsabilità del programma chiamante liberare la memoria chiamando [free](free.md).
 
-Se la variabile non viene trovata, quindi *buffer* è impostata su **NULL**, *numberOfElements* è impostato su 0, e il valore restituito è 0 poiché questa situazione non viene considerata come un errore condizione.
+Se la variabile non viene trovata, quindi *buffer* è impostata su **NULL**, *numberOfElements* è impostato su 0, e il valore restituito è 0, poiché questa situazione non viene considerata come un errore condizione.
 
-Se non si è interessati nelle dimensioni del buffer è possibile passare **NULL** per *numberOfElements*.
+Se non si è interessati alla dimensione del buffer è possibile passare **NULL** per *numberOfElements*.
 
 **dupenv_s** non distinzione maiuscole / minuscole nel sistema operativo Windows. **dupenv_s** Usa la copia dell'ambiente puntato dalla variabile globale **Environ** per accedere all'ambiente. Vedere la sezione Osservazioni in [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md) per una discussione sulle **Environ**.
 
-Il valore in *buffer* è una copia del valore della variabile di ambiente; modificarlo non ha alcun effetto sull'ambiente. Per modificare il valore di una variabile di ambiente, usare la funzione [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
+Il valore in *buffer* è una copia del valore della variabile di ambiente; modificarlo non influisce sull'ambiente. Per modificare il valore di una variabile di ambiente, usare la funzione [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
 
-**wdupenv_s** è una versione a caratteri wide **dupenv_s**; gli argomenti del **wdupenv_s** sono stringhe a caratteri "wide". Il **wenviron** (variabile globale) è una versione a caratteri "wide" **Environ**. Vedere la sezione Osservazioni in [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md) per altre informazioni sui **wenviron**.
+**wdupenv_s** è una versione a caratteri wide di **dupenv_s**; gli argomenti del **wdupenv_s** sono stringhe a caratteri wide. Il **wenviron** (variabile globale) è una versione a caratteri wide di **Environ**. Vedere la sezione Osservazioni in [getenv_s, wgetenv_s](getenv-s-wgetenv-s.md) per altre informazioni sui **wenviron**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

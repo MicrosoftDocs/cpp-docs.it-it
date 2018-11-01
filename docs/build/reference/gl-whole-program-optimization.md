@@ -1,31 +1,21 @@
 ---
-title: -GL (Ottimizzazione intero programma) | Microsoft Docs
-ms.custom: ''
+title: /GL (Ottimizzazione intero programma)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /gl
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
-dev_langs:
-- C++
 helpviewer_keywords:
 - /GL compiler option [C++]
 - whole program optimizations and C++ compiler
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97561a63a21550cc06f29a95f6ddf05687758b83
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7e9300c6c851eb013d8304bd90e3ca9aa4b2c022
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723658"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640823"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Ottimizzazione intero programma)
 

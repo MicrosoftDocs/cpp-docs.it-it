@@ -1,10 +1,6 @@
 ---
-title: Classe CUserToolsManager | Microsoft Docs
-ms.custom: ''
+title: Classe CUserToolsManager
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CUserToolsManager
 - AFXUSERTOOLSMANAGER/CUserToolsManager
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXUSERTOOLSMANAGER/CUserToolsManager::SaveState
 - AFXUSERTOOLSMANAGER/CUserToolsManager::SetDefExt
 - AFXUSERTOOLSMANAGER/CUserToolsManager::SetFilter
-dev_langs:
-- C++
 helpviewer_keywords:
 - CUserToolsManager [MFC], CUserToolsManager
 - CUserToolsManager [MFC], CreateNewTool
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fdc79325fcf05eda37399a9e913c79a03f6da5d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 405260d4bc2f7cdf163dbd7a00f342b8afc87d48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054587"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668115"
 ---
 # <a name="cusertoolsmanager-class"></a>Classe CUserToolsManager
 

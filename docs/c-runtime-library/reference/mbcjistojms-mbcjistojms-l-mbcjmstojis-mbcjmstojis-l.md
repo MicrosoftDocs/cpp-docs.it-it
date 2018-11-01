@@ -1,10 +1,6 @@
 ---
-title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l | Microsoft Docs
-ms.custom: ''
+title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbcjistojms
 - _mbcjmstojis
@@ -32,8 +28,6 @@ f1_keywords:
 - mbcjmstojis_l
 - mbcjistojms_l
 - mbcjmstojis
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbcjmstojis_l function
 - _mbcjistojms function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07d34331e38362a6491e3231566443b5fe03260e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22cf8eeb5f99b6abee624aa3b1d06246d7230652
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665894"
 ---
 # <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
@@ -95,15 +85,15 @@ Nelle impostazioni locali giapponesi queste funzioni restituiscono un carattere 
 
 ## <a name="remarks"></a>Note
 
-Il **mbcjistojms** funzione converte un carattere Giappone settore JIS (Standard) a un carattere Kanji Microsoft (Shift JIS). Il carattere viene convertito solo se i byte di anticipo e di traccia sono compresi nell'intervallo 0x21 - 0x7E. Se il responsabile o un byte versione di valutazione è esterno all'intervallo, **errno** è impostata su **EILSEQ**. Per altre informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Il **mbcjistojms** funzione converte un carattere Standard JIS (Japan Industry) in un carattere Microsoft Kanji (Shift-JIS). Il carattere viene convertito solo se i byte di apertura e di chiusura sono compresi nell'intervallo 0x21 - 0x7E. Se il responsabile o i byte di valutazione è esterno all'intervallo, **errno** è impostata su **EILSEQ**. Per altre informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Il **mbcjmstojis** funzione converte un carattere Shift JIS in un carattere JIS. Il carattere viene convertito solo se il byte di apertura è compreso nell'intervallo tra 0x81-0x9F o 0xE0 - 0xFC e il byte di chiusura è compreso nell'intervallo 0x40-0x7E o 0x80 - 0xFC. Si noti che alcuni punti di codice in tale intervallo non hanno un carattere assegnato e quindi non possono essere convertiti.
+Il **mbcjmstojis** funzione converte un carattere Shift-JIS in un carattere JIS. Il carattere viene convertito solo se il byte di apertura è compreso nell'intervallo 0x81-0x9F o 0xE0 - 0xFC e il byte di chiusura è compreso nell'intervallo 0x40-0x7E o 0x80 - 0xFC. Si noti che alcuni punti di codice in tale intervallo non hanno un carattere assegnato e quindi non possono essere convertiti.
 
-Il valore *c* deve essere un valore a 16 bit con 8 bit superiori rappresentano il byte iniziale del carattere da convertire e cui 8 bit inferiori rappresentano il byte di chiusura.
+Il valore *c* deve essere un valore a 16 il cui 8 bit superiori rappresentano il byte di apertura del carattere da convertire e 8 bit inferiori rappresentano il byte di chiusura.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Nelle versioni precedenti, **mbcjistojms** e **mbcjmstojis** chiamate **jistojms** e **jmstojis**, rispettivamente. **mbcjistojms**, **mbcjistojms_l**, **mbcjmstojis** e **mbcjmstojis_l** deve pertanto essere utilizzato.
+Nelle versioni precedenti **mbcjistojms** e **mbcjmstojis** chiamate **jistojms** e **jmstojis**, rispettivamente. **mbcjistojms**, **mbcjistojms_l**, **mbcjmstojis** e **mbcjmstojis_l** invece deve essere utilizzato.
 
 ## <a name="requirements"></a>Requisiti
 

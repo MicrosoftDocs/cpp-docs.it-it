@@ -1,25 +1,15 @@
 ---
-title: Valore restituito di cl.exe | Microsoft Docs
-ms.custom: ''
+title: Valore restituito di cl.exe
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, return value
 ms.assetid: 7c2d7f33-ee0d-4199-8ef4-75fe2b007670
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b4baca82dd9cf4581a5e20a7c426f4d79e383f3c
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 39b53731d94e3b5ff5fcb666caac6a584c34d287
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894668"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656079"
 ---
 # <a name="return-value-of-clexe"></a>Valore restituito di cl.exe
 

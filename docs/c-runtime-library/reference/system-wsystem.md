@@ -1,10 +1,6 @@
 ---
-title: system, _wsystem | Microsoft Docs
-ms.custom: ''
+title: system, _wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624666"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -71,7 +61,7 @@ Comando da eseguire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se *comando* viene **NULL** e l'interprete dei comandi viene trovato, restituisce un valore diverso da zero. Se l'interprete dei comandi non viene trovato, restituisce 0 e imposta **errno** alla **ENOENT**. Se *comando* non **NULL**, **sistema** restituisce il valore restituito dall'interprete dei comandi. Restituisce il valore 0 solo se l'interprete dei comandi restituisce il valore 0. Valore restituito di - 1 indica un errore e **errno** è impostata su uno dei valori seguenti:
+Se *comandi* viene **NULL** e viene trovato l'interprete dei comandi, restituisce un valore diverso da zero. Se l'interprete dei comandi non viene trovato, restituisce 0 e imposta **errno** al **ENOENT**. Se *comandi* non è **NULL**, **sistema** restituisce il valore restituito dall'interprete dei comandi. Restituisce il valore 0 solo se l'interprete dei comandi restituisce il valore 0. Valore restituito di - 1 indica un errore, e **errno** è impostato su uno dei valori seguenti:
 
 |||
 |-|-|
@@ -84,11 +74,11 @@ Per altre informazioni su questi codici restituiti, vedere [_doserrno, errno, _s
 
 ## <a name="remarks"></a>Note
 
-Il **sistema** funzione passa *comando* all'interprete dei comandi, che esegue la stringa come un comando del sistema operativo. **sistema** Usa la **COMSPEC** e **percorso** CMD.exe di file di variabili di ambiente per individuare l'interprete dei comandi. Se *comando* viene **NULL**, la funzione verifica solo se è presente l'interprete dei comandi.
+Il **system** funzione passa *comando* all'interprete dei comandi, che esegue la stringa come un comando del sistema operativo. **System** utilizza le **COMSPEC** e **percorso** CMD.exe di file di variabili di ambiente per individuare l'interprete dei comandi. Se *comandi* viene **NULL**, la funzione verifica solo se è presente l'interprete dei comandi.
 
-È necessario svuotare in modo esplicito, tramite [fflush](fflush.md) oppure [FlushAll](flushall.md), o chiudere qualsiasi flusso prima di chiamare **sistema**.
+È necessario scaricare in modo esplicito, tramite [fflush](fflush.md) oppure [FlushAll](flushall.md), o si chiude qualsiasi flusso prima di chiamare **sistema**.
 
-**wsystem** è una versione a caratteri "wide" **system**; il *comando* argomento **wsystem** è una stringa di caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+**wsystem** è una versione a caratteri wide di **system**; gli *comando* argomento **wsystem** è una stringa di caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -107,7 +97,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Questo esempio viene utilizzato **sistema** al tipo di un file di testo.
+Questo esempio viene usato **sistema** al tipo di un file di testo.
 
 ```C
 // crt_system.c

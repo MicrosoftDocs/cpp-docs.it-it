@@ -1,30 +1,20 @@
 ---
-title: -KEYCONTAINER (specifica un contenitore di chiavi per firmare un Assembly) | Microsoft Docs
-ms.custom: ''
+title: /KEYCONTAINER (Specifica un contenitore di chiavi per firmare un assembly)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.KeyContainer
 - /keycontainer
-dev_langs:
-- C++
 helpviewer_keywords:
 - KEYCONTAINER linker option
 - /KEYCONTAINER linker option
 - -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 850a8173dba3e69eaf52fdf174674e1dba58a4d8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3467350602d0e5b4fbb7df5f92238e18e39532bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723762"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616567"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (Specifica un contenitore di chiavi per firmare un assembly)
 

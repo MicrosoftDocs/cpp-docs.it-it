@@ -1,23 +1,13 @@
 ---
-title: Direttive assembly ARM | Microsoft Docs
-ms.custom: ''
+title: Direttive assembly ARM
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c37e010caa6c7cfb44ddaf2f7dd1e28bbb5c291
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717704"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592452"
 ---
 # <a name="arm-assembler-directives"></a>Direttive assembly ARM
 
@@ -67,7 +57,7 @@ Nella maggior parte, l'assembler ARM Microsoft Usa il linguaggio assembly ARM, d
 
    > **ESPORTARE**|**GLOBAL** <em>sym</em>{**[**<em>tipo</em>**]**}
 
-   *sym* è il simbolo da esportare.  [*tipo*], se specificato, può essere `[DATA]` per indicare che il simbolo punta ai dati o `[FUNC]` per indicare che il simbolo punta al codice. `GLOBAL` è un sinonimo `EXPORT`.
+   *sym* è il simbolo da esportare.  [*tipo*], se specificato, può essere `[DATA]` per indicare che il simbolo punta ai dati o `[FUNC]` per indicare che il simbolo punta al codice. `GLOBAL` è un sinonimo di `EXPORT`.
 
 - EXPORTAS
 

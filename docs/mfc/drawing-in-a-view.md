@@ -1,12 +1,6 @@
 ---
-title: Disegno in una visualizzazione | Microsoft Docs
-ms.custom: ''
+title: Disegno in una visualizzazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - drawing [MFC], in views
 - views [MFC], printing
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3df6ac176669114c70ebdd17985068d6b383c37
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: da1729834076ebc62eee9e482934f9410c03e78c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651847"
 ---
 # <a name="drawing-in-a-view"></a>Disegno in una visualizzazione
 

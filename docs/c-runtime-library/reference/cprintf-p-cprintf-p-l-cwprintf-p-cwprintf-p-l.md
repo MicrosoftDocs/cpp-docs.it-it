@@ -1,10 +1,6 @@
 ---
-title: _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cprintf_p_l
 - _cwprintf_p_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _cwprintf_p
 - _tcprintf_p
 - cprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cwprintf_p_l function
 - cwprintf_p function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 328e6fba2854e2cee82bdb9b7ccfe2e62e7c1ddc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402647"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658458"
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
@@ -95,7 +85,7 @@ int _cwprintf_p_l(
 *format*<br/>
 Stringa di controllo del formato.
 
-*Argomento*<br/>
+*argomento*<br/>
 Parametri facoltativi.
 
 *locale*<br/>
@@ -107,16 +97,16 @@ Il numero di caratteri stampati o un valore negativo se si verifica un errore.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni formattano e stampano una serie di caratteri e valori direttamente sulla console, utilizzando il **putch** e **putwch** funzioni ai caratteri di output. Ogni *argomento* (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in *formato*. Il formato ha lo stesso modulo e funziona come le *formato* parametro per il [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) (funzione). La differenza tra **cprintf_p** e **cprintf_s** consiste nel fatto che **cprintf_p** supporta i parametri posizionali, che consentono di specificare l'ordine in cui gli argomenti sono usato nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Queste funzioni formattano e stampano una serie di caratteri e valori direttamente sulla console, utilizzando il **putch** e **putwch** funzioni ai caratteri di output. Ciascuna *argomenti* (se presente) viene convertita e restituita in base alla specifica di formato corrispondente in *formato*. Il formato ha la stessa forma e funzione il *formato* parametro per il [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) (funzione). La differenza tra **cprintf_p** e **cprintf_s** è quello **cprintf_p** supporta i parametri posizionali, che consente di specificare l'ordine in cui gli argomenti sono usato nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
-A differenza di **fprintf_p**, **printf_p**, e **sprintf_p** funzioni, né **cprintf_p** né **cwprintf_p** converte i caratteri di avanzamento di riga in combinazioni di ritorno a capo e avanzamento riga (CR-LF) quando l'output. Una differenza importante è che **cwprintf_p** Visualizza i caratteri Unicode quando si utilizza Windows NT. A differenza **cprintf_p**, **cwprintf_p** utilizza le impostazioni locali della console corrente.
+A differenza di **fprintf_p**, **printf_p**, e **sprintf_p** funzioni, né **cprintf_p** né **cwprintf_p** converte i caratteri di avanzamento di riga in combinazioni di ritorno a capo e avanzamento riga (CR-LF) durante l'output. Una differenza importante è che **cwprintf_p** consente di visualizzare caratteri Unicode se usato in Windows NT. A differenza **cprintf_p**, **cwprintf_p** utilizza le impostazioni locali di console corrente.
 
 Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente.
 
-Inoltre, come **cprintf_s** e **cwprintf_s**, convalidano il puntatore di input e la stringa di formato. Se *formato* oppure *argomento* sono **NULL**, o stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+Inoltre, come **cprintf_s** e **cwprintf_s**, convalidano il puntatore di input e la stringa di formato. Se *formato* oppure *argomento* sono **NULL**, o stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -1,27 +1,17 @@
 ---
-title: '&lt;exception&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;exception&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <exception>
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bbd57085225bb21b9f7ce8bd34c537d3bc414797
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6260b100bf62662738cb5fa1c5f74df89086f033
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845817"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612797"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 

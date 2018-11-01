@@ -1,25 +1,15 @@
 ---
-title: I comandi in un Makefile | Microsoft Docs
-ms.custom: ''
+title: Comandi di un makefile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - commands, makefiles
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cfbf931d2758a361c739ca410547273c5530366e
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8b640e8a7a1773e69792453de6cb70bcb09c988f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894733"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668234"
 ---
 # <a name="commands-in-a-makefile"></a>Comandi di un makefile
 

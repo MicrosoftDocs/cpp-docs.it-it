@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2150 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2150
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2150
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2150
 ms.assetid: 21e82a10-c1d4-4c0d-9dc6-c5d92ea42a31
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef0920c98fe59fe5bca49bba4c62a486a61c0a55
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9c6465ef87c12135ad4e6709741f0027d8ea3c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024711"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638191"
 ---
 # <a name="compiler-error-c2150"></a>Errore del compilatore C2150
 

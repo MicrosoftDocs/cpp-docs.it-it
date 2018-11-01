@@ -1,28 +1,18 @@
 ---
-title: Modifica di un gestore di messaggi | Microsoft Docs
-ms.custom: ''
+title: Modifica di un gestore messaggi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.editing.msghandler
-dev_langs:
-- C++
 helpviewer_keywords:
 - message handlers [MFC]
 - message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca7f6a3c4aacf99b63db0e535856c771576bd5ff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c316b4cf138c21b697181bcf132fa3766128a7ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632713"
 ---
 # <a name="editing-a-message-handler"></a>Modifica di un gestore messaggi
 
@@ -39,6 +29,6 @@ Per passare a una definizione di funzione membro dal [Visualizzazione classi](/v
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Aggiunta di una funzione membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Aggiunta di una variabile membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Una funzione Virtual in override](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Override di una funzione virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestore messaggi MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
 [Esplorazione della struttura delle classi](../../ide/navigating-the-class-structure-visual-cpp.md)

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3499 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3499
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3499
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd4fbd928637eacaac3316ff2f4a1e6855365395
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 937b4e993919f5b6e28e3c389476854be36fa1cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668286"
 ---
 # <a name="compiler-error-c3499"></a>Errore del compilatore C3499
 

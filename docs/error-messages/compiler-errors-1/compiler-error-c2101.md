@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2101 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2101
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2101
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2101
 ms.assetid: 42f0136f-8cc1-4f2b-be1c-721ec9278e66
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 247bd168e1ea82d4533c794ae5c14d34a49064d0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 68fa83f3325a2a7b91d32495aa9b6924e5ca8c0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041363"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603294"
 ---
 # <a name="compiler-error-c2101"></a>Errore del compilatore C2101
 

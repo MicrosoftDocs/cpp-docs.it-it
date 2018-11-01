@@ -1,18 +1,16 @@
 ---
-title: Typedef &lt;streambuf&gt; | Microsoft Docs
-ms.custom: ''
+title: Typedef &lt;streambuf&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 81c7cd875c6083ee77701116f6b1179760373ec0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 505739861771a05dd39741f432579a6e9b2d0c26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953992"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664061"
 ---
 # <a name="ltstreambufgt-typedefs"></a>Typedef &lt;streambuf&gt;
 

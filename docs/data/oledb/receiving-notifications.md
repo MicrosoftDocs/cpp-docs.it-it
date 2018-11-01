@@ -1,12 +1,6 @@
 ---
-title: Ricevere notifiche | Microsoft Docs
-ms.custom: ''
+title: Ricezione di notifiche
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - notifications [C++], OLE DB consumers
 - receiving notifications in OLE DB
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - rowsets, event notifications
 - OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 244ebbfdb1ca706550fa26acd29e0af067cb1a7a
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 20572fa444f585d231bc5374bebac4dbb71166a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079714"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647772"
 ---
 # <a name="receiving-notifications"></a>Ricezione di notifiche
 

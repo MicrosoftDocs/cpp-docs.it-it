@@ -1,29 +1,19 @@
 ---
-title: Classi file e Database | Microsoft Docs
-ms.custom: ''
+title: Classi File e Database
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.file
-dev_langs:
-- C++
 helpviewer_keywords:
 - database classes [MFC], MFC
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b03f248b2f5a142903801dd64e8a8f5845fff1db
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2abcd1592316ef5bea01adbf738e3d0a2cae93df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377754"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661941"
 ---
 # <a name="file-and-database-classes"></a>Classi File e Database
 

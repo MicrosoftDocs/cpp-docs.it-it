@@ -1,12 +1,6 @@
 ---
-title: 'Esempio di contenimento dei documenti attivi: Raccoglitore di Office | Microsoft Docs'
-ms.custom: ''
+title: 'Esempio di contenimento di documenti attivi: raccoglitore di Office'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - active documents [MFC], containers
 - examples [MFC], active document containment
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 757fb13ac93fdf26aec67d570ab097b353975604
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 032b2cb39d75c108239d882039f7c797a357a6bc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408544"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616650"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Esempio di contenimento di documenti attivi: raccoglitore di Office
 

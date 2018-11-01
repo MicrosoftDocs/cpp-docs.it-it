@@ -1,12 +1,6 @@
 ---
-title: 'Contenitori di controlli ActiveX: Gestione degli eventi da un controllo ActiveX | Microsoft Docs'
-ms.custom: ''
+title: 'Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
 - ActiveX control containers [MFC], event sinks
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b7e01fec89ffa625f785cc72aff4d94a9c1b489
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 5deff0a50de813cc5faa43a86e591d3003a3c03e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204379"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659628"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX
 

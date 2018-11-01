@@ -1,10 +1,6 @@
 ---
-title: atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs
-ms.custom: ''
+title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoll
 - _atoll_l
@@ -31,24 +27,18 @@ f1_keywords:
 - _tstoll
 - _wtoll_l
 - atoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - atoll function
 - _wtoll_l function
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15a0753a487d969d3f75e1e41b6509ea40b9b19f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a857e0f04ff875a740a8a5d1401484cdaf9d3c75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396115"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613977"
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
@@ -83,11 +73,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il **lungo** **lungo** valore che viene prodotto interpretando i caratteri di input sotto forma di numero. Il valore restituito per **atoll** è 0 se l'input non può essere convertito in un valore di quel tipo.
+Ogni funzione restituisce il **lungo** **lungo** valore che viene prodotto interpretando i caratteri di input sotto forma di numero. Il valore restituito per **Palmira** è 0 se l'input non può essere convertito in un valore di quel tipo.
 
-Overflow con valori integrali positivi grandi, per **atoll** restituisce **LLONG_MAX**, e di overflow con i valori integrali negativi grandi dimensioni, viene restituito **LLONG_MIN**.
+Per gli overflow con valori integrali positivi elevati, **Palmira** restituisce **LLONG_MAX**, e di overflow con valori integrali negativi elevati, restituisce **LLONG_MIN**.
 
-In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono 0.
+In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono 0.
 
 ## <a name="remarks"></a>Note
 
@@ -95,15 +85,15 @@ Queste funzioni convertono una stringa di caratteri a un **lungo** **lungo** val
 
 La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere potrebbe essere il carattere null ('\0' or L'\0') che termina la stringa.
 
-Il *str* argomento **atoll** ha il formato seguente:
+Il *str* argomento **Palmira** ha il formato seguente:
 
 > [*whitespace*] [*sign*] [*cifre*]
 
-Un *whitespace* è costituito da caratteri spazio o tabulazione, ovvero vengono ignorati; *sign* è un segno più (+) o meno (-); e *cifre* sono uno o più cifre.
+Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* uno o più cifre.
 
-**wtoll** è identica a **atoll** con la differenza che accetta una stringa di caratteri "wide" come parametro.
+**wtoll** è identica alla **Palmira** con la differenza che accetta una stringa di caratteri "wide" come parametro.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche alle versioni che non sono, ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno le **l** suffisso sono identiche alle versioni di cui non è presente, ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -122,7 +112,7 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche alle version
 
 ## <a name="example"></a>Esempio
 
-Questo programma viene illustrato come utilizzare il **atoll** funzioni per convertire i numeri memorizzati come stringhe in valori numerici.
+Questo programma mostra come usare il **Palmira** funzioni per convertire numeri memorizzati come stringhe in valori numerici.
 
 ```C
 // crt_atoll.c

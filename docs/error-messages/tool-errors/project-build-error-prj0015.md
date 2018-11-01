@@ -1,27 +1,17 @@
 ---
-title: Errore di compilazione PRJ0015 del progetto | Microsoft Docs
-ms.custom: ''
+title: Errore di compilazione progetto PRJ0015
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0015
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0015
 ms.assetid: 2096c8f1-e96c-49a4-a690-1cb893a8bf6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d70c8b4fe35519479056e25455914ac80fc00cb3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b83c8f6ba7dac5b4af44cb03d941750fb0092df4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646771"
 ---
 # <a name="project-build-error-prj0015"></a>Errore di compilazione progetto PRJ0015
 

@@ -1,23 +1,13 @@
 ---
-title: Utilizzo degli oggetti accelerator e accelerator_view | Microsoft Docs
-ms.custom: ''
+title: Utilizzo degli oggetti accelerator e accelerator_view
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6427c9b30706cd7854cc1335e7459232ed1fa4a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4144adf288ddefd7f7dd00ada91f97aea94e6bce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402865"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668598"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilizzo degli oggetti accelerator e accelerator_view
 

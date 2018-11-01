@@ -1,25 +1,17 @@
 ---
-title: Creare un progetto di app console C++ | Microsoft Docs
+title: Creare un progetto di app console C++
 description: Creare un'app console Hello World in Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
-ms.technology:
-- cpp-tools
 ms.devlang: C++
-dev_langs:
-- C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1dbd3c15aaf8d4702905ba1b8301b36cb9c1a2e0
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 96573240728eaf77e7f222486b2d9f515a8cfe69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029554"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619895"
 ---
 # <a name="create-a-c-console-app-project"></a>Creare un progetto di app console C++
 

@@ -1,27 +1,16 @@
 ---
-title: Gli attributi del metodo (COM C++) | Microsoft Docs
-ms.custom: ''
+title: Attributi del metodo (COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8f5f9af9e302b9346b2bd42acdf1e268a59113f7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791372"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667922"
 ---
 # <a name="method-attributes"></a>Attributi del metodo
 
@@ -55,7 +44,7 @@ Gli attributi seguenti si applicano ai metodi in una classe, coclasse o interfac
 |[propput](propput.md)|Specifica una funzione impostazione della proprietà.|
 |[propputref](propputref.md)|Specifica una funzione impostazione della proprietà che utilizza un riferimento anziché un valore.|
 |[ptr](ptr.md)|Definisce un puntatore come puntatore completo.|
-|[Intervallo](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
+|[range](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
 |[requestedit](requestedit.md)|Indica che la proprietà supporta il `OnRequestEdit` notifica.|
 |[restricted](restricted.md)|Specifica che un membro di un modulo, interfaccia o interfaccia dispatch non può essere chiamato in modo arbitrario.|
 |[satype](satype.md)|Specifica il tipo di dati di `SAFEARRAY` struttura.|

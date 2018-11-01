@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3333 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3333
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3333
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3333
 ms.assetid: 51693978-fba6-435a-a696-74735cc875de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b0193020adb6d3ec82d444a51551da30285535b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8f2a3a0a31234491b451bcae5c03aa76f3cb4ea8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068845"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598848"
 ---
 # <a name="compiler-error-c3333"></a>Errore del compilatore C3333
 

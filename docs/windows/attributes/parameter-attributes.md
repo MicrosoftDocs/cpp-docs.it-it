@@ -1,27 +1,16 @@
 ---
-title: Attributi dei parametri (COM C++) | Microsoft Docs
-ms.custom: ''
+title: Attributi dei parametri (COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 160e71111a9080367390302a59c41a53580ffe0b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791203"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619631"
 ---
 # <a name="parameter-attributes"></a>Attributi dei parametri
 
@@ -39,9 +28,9 @@ Gli attributi seguenti si applicano ai parametri di un metodo in una classe o in
 |[lcid](lcid.md)|Consente di passare un identificatore delle impostazioni locali a una funzione.|
 |[length_is](length-is.md)|Specifica il numero di elementi della matrice deve essere trasmesso.|
 |[max_is](max-is.md)|Definisce il valore massimo per un indice di matrice valida.|
-|[Facoltativo](optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
+|[optional](optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
 |[out](out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|
-|[Intervallo](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
+|[range](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
 |[ref](ref-cpp.md)|Identifica un puntatore di riferimento.|
 |[retval](retval.md)|Specifica il parametro che riceve il valore restituito del membro.|
 |[satype](satype.md)|Specifica il tipo di dati di `SAFEARRAY` struttura.|

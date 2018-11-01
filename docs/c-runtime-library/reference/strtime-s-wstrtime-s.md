@@ -1,10 +1,6 @@
 ---
-title: _strtime_s, _wstrtime_s | Microsoft Docs
-ms.custom: ''
+title: _strtime_s, _wstrtime_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime_s
 - _strtime_s
@@ -26,8 +22,6 @@ f1_keywords:
 - strtime_s
 - wstrtime_s
 - _strtime_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wstrtime_s function
 - copying time to buffers
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642364"
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -97,15 +87,15 @@ Se si verifica una condizione di errore, viene richiamato il gestore di parametr
 
 ## <a name="security-issues"></a>Problemi relativi alla sicurezza
 
-Passando un oggetto non valido non -**NULL** valore per il buffer comporterà una violazione di accesso se il *numberOfElements* parametro è maggiore di 9.
+Passando un valore non valido non -**NULL** valore per il buffer causerà una violazione di accesso se il *numberOfElements* parametro è maggiore di 9.
 
-Passa un valore per *numberOfElements* maggiore di sovraccarico del buffer comporterà la dimensione effettiva del buffer.
+Passaggio di un valore per *numberOfElements* maggiore determinerà le dimensioni effettive del buffer di sovraccarico del buffer.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni forniscono versioni più sicure di [strtime](strtime-wstrtime.md) e [wstrtime](strtime-wstrtime.md). Il **strtime_s** funzione Copia l'ora locale corrente nel buffer a cui puntato *timestr*. L'ora in formato **hh.mm.ss** in cui **hh** corrisponde a due cifre che rappresenta l'ora in notazione di 24 ore, **mm** corrisponde a due cifre che rappresenta i minuti dopo l'ora e **ss** corrisponde a due cifre che rappresentano secondi. Ad esempio, la stringa **18:23:44** rappresenta 23 minuti e 44 secondi trascorsi 6 ore Il buffer deve avere una lunghezza di almeno 9 byte. Le dimensioni effettive sono specificate dal secondo parametro.
+Queste funzioni forniscono versioni più sicure di [strtime](strtime-wstrtime.md) e [wstrtime](strtime-wstrtime.md). Il **strtime_s** funzione di copia l'ora locale corrente nel buffer a cui punta *timestr*. L'ora è formattata come **hh.mm.ss** in cui **hh** corrisponde a due cifre che rappresenta l'ora nella notazione 24 ore, **mm** sono due cifre che rappresentano i minuti trascorsi dopo l'ora e i **ss** corrisponde a due cifre che rappresentano i secondi. Ad esempio, la stringa **18:23:44** rappresenta 23 minuti e 44 secondi dopo i 6 PM Il buffer deve avere una lunghezza di almeno 9 byte. Le dimensioni effettive sono specificate dal secondo parametro.
 
-**wstrtime** è una versione a caratteri wide **strtime**; l'argomento e il valore restituito di **wstrtime** sono stringhe a caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+**wstrtime** è una versione a caratteri wide di **strtime**; l'argomento e il valore restituito **wstrtime** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

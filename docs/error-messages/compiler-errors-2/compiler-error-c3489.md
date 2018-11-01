@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3489 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3489
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3489
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5b1631c9be33204edfa697cb349148d274fe30e6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a3ea5fa30a54603d15da8e515dab672c0e058e60
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660733"
 ---
 # <a name="compiler-error-c3489"></a>Errore del compilatore C3489
 

@@ -1,29 +1,18 @@
 ---
-title: Creazione di una nuova finestra di dialogo (C++) | Microsoft Docs
-ms.custom: ''
+title: Creazione di una nuova finestra di dialogo (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [C++], creating
 - Dialog Editor [C++], creating dialog boxes
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: fae55d0b4ce4a766952afcec7f78ec6b20fbb258
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed1bb21029b2a61eb51b54386ed51ef08b90e149
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426640"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605331"
 ---
 # <a name="creating-a-new-dialog-box-c"></a>Creazione di una nuova finestra di dialogo (C++)
 

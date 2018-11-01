@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3420 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3420
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3420
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3420
 ms.assetid: 99b53c77-f36b-4574-9199-b53111becccb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3997bc0744bf1e1db34fe7ce1de666ebd3e3b8cd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3db109598ce0741ca34a230d8925994543bcb5ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078569"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645939"
 ---
 # <a name="compiler-error-c3420"></a>Errore del compilatore C3420
 

@@ -1,23 +1,13 @@
 ---
-title: Profile-Guided Optimization errori e avvisi | Microsoft Docs
-ms.custom: ''
+title: Errori e avvisi di ottimizzazione GPO
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 ms.assetid: f67b1011-fb64-4df3-9356-d52c9423ff3f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 775702c7ecfdb579d8edcfb3e1786f5152dfcc7c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4c452ac8d3b4e06c3b32527a86a4049f0d8a433
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109418"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623145"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Errori e avvisi di ottimizzazione GPO
 

@@ -1,12 +1,6 @@
 ---
-title: 'Eccezioni: Rilevamento ed eliminazione di eccezioni | Microsoft Docs'
-ms.custom: ''
+title: 'Eccezioni: rilevamento ed eliminazione di eccezioni'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - exceptions [MFC], deleting
 - AND_CATCH macro [MFC]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 370062d3e17127e711f2b4356cbb133a6c1d20b9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074124"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625908"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Eccezioni: rilevamento ed eliminazione di eccezioni
 

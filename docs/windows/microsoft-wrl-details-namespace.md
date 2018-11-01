@@ -1,24 +1,14 @@
 ---
-title: Namespace Microsoft::WRL::Details | Microsoft Docs
-ms.custom: ''
+title: Spazio dei nomi Microsoft::WRL::Details
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 3f8f6849ec20956d10147a0e6ecb2fd023874807
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644379"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Spazio dei nomi Microsoft::WRL::Details
 
@@ -84,7 +74,7 @@ namespace Microsoft::WRL::Details;
 |[Funzione ActivationFactoryCallback](../windows/activationfactorycallback-function.md)|Ottiene la factory di attivazione per l'ID di attivazione specificato.|
 |[Funzione Move](../windows/move-function.md)|Sposta l'argomento specificato da una posizione a altra.|
 |[Funzione RaiseException](../windows/raiseexception-function.md)|Genera un'eccezione nel thread chiamante.|
-|[Funzione swap (WRL)](../windows/swap-function-wrl.md)|Scambia i valori dei due argomenti specificati.|
+|[Funzione swap(WRL)](../windows/swap-function-wrl.md)|Scambia i valori dei due argomenti specificati.|
 |[Funzione TerminateMap](../windows/terminatemap-function.md)|Arresta la class factory nel modulo specificato.|
 
 ## <a name="requirements"></a>Requisiti

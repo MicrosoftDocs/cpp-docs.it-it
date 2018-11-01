@@ -1,25 +1,15 @@
 ---
-title: Note tecniche per numero | Microsoft Docs
-ms.custom: ''
+title: Note tecniche per numero
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.tables.mfc.technotes
-dev_langs:
-- C++
 ms.assetid: aaa449be-9167-4510-a490-af872c4f60a2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5eccf9b92e30f523d2adbcf83305678305691b5a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5a102f36c5556af48a1b3f79e39f256bc5797ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50634876"
 ---
 # <a name="technical-notes-by-number"></a>Note tecniche per numero
 

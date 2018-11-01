@@ -1,27 +1,17 @@
 ---
-title: Classe is_error_condition_enum | Microsoft Docs
-ms.custom: ''
+title: Classe is_error_condition_enum
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - system_error/std::is_error_condition_enum
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_error_condition_enum class
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01650db9c1aec141852f66a2f4e2f09f5d5e78ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b5b55431db806bb109a58199ad9d2d7c16f38ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842300"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612719"
 ---
 # <a name="iserrorconditionenum-class"></a>Classe is_error_condition_enum
 

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2700 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2700
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2700
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2700
 ms.assetid: a231eb86-bdae-4b37-a606-06854f47929f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75b4b52c09467bea6e41be7b9fc016884859bd39
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 204e43f3fc98e8adcc444c3e4753c8cb65744ab5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115775"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620922"
 ---
 # <a name="compiler-error-c2700"></a>Errore del compilatore C2700
 
