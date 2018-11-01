@@ -1,27 +1,17 @@
 ---
-title: Oggetti dipendenti | Microsoft Docs
-ms.custom: ''
+title: Dipendenti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dependents
 - NMAKE program, dependents
 - dependents, NMAKE
 ms.assetid: 0a7b4499-ac6e-4c99-a304-027dd3818ab2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 56ea492c6b5295403976133e30667153754dd237
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d3a009af72168403a8066866484f79d94395772e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702000"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561291"
 ---
 # <a name="dependents"></a>Dipendenti
 

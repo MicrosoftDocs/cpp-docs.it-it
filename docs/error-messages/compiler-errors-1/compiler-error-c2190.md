@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2190 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2190
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2190
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2190
 ms.assetid: 34e15f85-d979-4948-80fc-46c414508a70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fdca31d191700057a255d99c6d943f4b4e6a981
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b52797b945b1a652506b4a85171e60a91544bbf0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092843"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546481"
 ---
 # <a name="compiler-error-c2190"></a>Errore del compilatore C2190
 

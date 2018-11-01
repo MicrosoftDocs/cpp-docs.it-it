@@ -1,26 +1,16 @@
 ---
-title: 'Contenitori: Implementazione di un contenitore | Microsoft Docs'
-ms.custom: ''
+title: 'Contenitori: implementazione di un contenitore'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28c93e5d1331d7195b894fe88c3fe5fc11e7c31d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546705"
 ---
 # <a name="containers-implementing-a-container"></a>Contenitori: implementazione di un contenitore
 

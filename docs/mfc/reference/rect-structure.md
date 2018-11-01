@@ -1,29 +1,19 @@
 ---
-title: Struttura RECT | Microsoft Docs
-ms.custom: ''
+title: Struttura RECT
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - LPRECT
 - RECT
-dev_langs:
-- C++
 helpviewer_keywords:
 - RECT structure [MFC]
 - LPRECT structure [MFC]
 ms.assetid: 1b3160de-64e9-40d1-89eb-af3e0fd6acf0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eae2b248f4aa4586bf6453dcc37b521387327d25
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1cb997fc0f1ec89eabf5e4d2c2c5ccb15e3bafec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334569"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549012"
 ---
 # <a name="rect-structure"></a>Struttura RECT
 
