@@ -1,31 +1,21 @@
 ---
-title: -IMPLIB (nome alla libreria di importazione) | Microsoft Docs
-ms.custom: ''
+title: /IMPLIB (Assegna un nome alla libreria di importazione)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /implib
 - VC.Project.VCLinkerTool.ImportLIbrary
-dev_langs:
-- C++
 helpviewer_keywords:
 - IMPLIB linker option
 - /IMPLIB linker option
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 25d997bf7df96d3f6ee518a8b7ca0568a44efa93
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 268a091d3e0bc825acae96dafc5d92ffa11c7bc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707642"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589579"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (Assegna un nome alla libreria di importazione)
 

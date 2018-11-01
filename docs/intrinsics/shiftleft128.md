@@ -1,27 +1,17 @@
 ---
-title: __shiftleft128 | Microsoft Docs
-ms.custom: ''
+title: __shiftleft128
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __shiftleft128
-dev_langs:
-- C++
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bfbe0ba26d247891a26d87d9f7526cefc292d3fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b68f0497b3f71398a2c8e1e3abded0c1db9a5ae2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436378"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676434"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 
@@ -32,10 +22,10 @@ Sposta una quantità di 128 bit, rappresentata come due quantità di 64 bit `Low
 ## <a name="syntax"></a>Sintassi
 
 ```
-unsigned __int64 __shiftleft128( 
-   unsigned __int64 LowPart, 
-   unsigned __int64 HighPart, 
-   unsigned char Shift 
+unsigned __int64 __shiftleft128( 
+   unsigned __int64 LowPart, 
+   unsigned __int64 HighPart, 
+   unsigned char Shift 
 );
 ```
 

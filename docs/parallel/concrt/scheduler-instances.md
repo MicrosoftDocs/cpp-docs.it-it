@@ -1,25 +1,15 @@
 ---
-title: Le istanze dell'utilità di pianificazione | Microsoft Docs
-ms.custom: ''
+title: Istanze dell'utilità di pianificazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc11888c3f655572bbdf33a5238e07f8ef99ba90
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375654"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570170"
 ---
 # <a name="scheduler-instances"></a>Istanze dell'utilità di pianificazione
 

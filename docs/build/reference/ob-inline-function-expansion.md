@@ -1,16 +1,10 @@
 ---
-title: -Ob (espansione funzioni Inline) | Microsoft Docs
-ms.custom: ''
+title: /Ob (Espansione funzioni inline)
 ms.date: 09/25/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
 - /ob
-dev_langs:
-- C++
 helpviewer_keywords:
 - inline functions, function expansion compiler option [C++]
 - -Ob1 compiler option [C++]
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43c67e4919680167bdde5e9f8ad9426229956fad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a53069c44e72d0d873ccb0b600c48480527d111f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401992"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582664"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Espansione funzioni inline)
 

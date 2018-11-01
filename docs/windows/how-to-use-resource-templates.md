@@ -1,12 +1,6 @@
 ---
-title: 'Procedura: usare i modelli di risorse (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura: usare i modelli di risorse (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - language-specific template files [C++]
 - resource templates
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 677828343fa7247e64a8dfbd8faede4efbc9df24
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d92579214dec96ea67537b4eb37e4554054d411d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393750"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577385"
 ---
 # <a name="how-to-use-resource-templates-c"></a>Procedura: usare i modelli di risorse (C++)
 

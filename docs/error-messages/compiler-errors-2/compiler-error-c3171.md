@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3171 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3171
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3171
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3171
 ms.assetid: 1ce26997-7ef1-4c9f-84da-003ea1a4251e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32c58f2ecd9651c347f45c29139ffe0ed65a6e3b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 602c9ca1051646fca2c5788c036354047fad2522
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082261"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599478"
 ---
 # <a name="compiler-error-c3171"></a>Errore del compilatore C3171
 

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2764 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2764
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2764
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3456a9bcca6df1a658600ecf6085bb060f988b3f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ba16431fc71a0e594b77dcc6dab62ed6c49c9137
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587099"
 ---
 # <a name="compiler-error-c2764"></a>Errore del compilatore C2764
 

@@ -1,27 +1,17 @@
 ---
-title: Struttura DELETEITEMSTRUCT | Microsoft Docs
-ms.custom: ''
+title: Struttura DELETEITEMSTRUCT
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - DELETEITEMSTRUCT
-dev_langs:
-- C++
 helpviewer_keywords:
 - DELETEITEMSTRUCT structure [MFC]
 ms.assetid: 48d3998c-f4a8-402a-bf90-df3770a78685
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9061205bdf3697e492b846d160a5b4dd2d154bb9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: dd1f48fd584016dab740bc8a6bd05ff3b756e41b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065018"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486880"
 ---
 # <a name="deleteitemstruct-structure"></a>Struttura DELETEITEMSTRUCT
 

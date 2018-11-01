@@ -1,12 +1,6 @@
 ---
-title: Funzioni di libreria Run-Time di C per il Thread di controllo | Microsoft Docs
-ms.custom: ''
+title: Funzioni della libreria di runtime del linguaggio C per il controllo dei thread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - _beginthread function
 - _endthread function
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - _endthreadex function
 ms.assetid: 39d0529c-c392-4c6f-94f5-105d1e8054e4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a665ee3ec640d84d185d4923e0777f853b187ce6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ea04e42730b0e7d1f0fafe5d3139d2b1a6aed970
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448129"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572159"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funzioni della libreria di runtime del linguaggio C per il controllo dei thread
 

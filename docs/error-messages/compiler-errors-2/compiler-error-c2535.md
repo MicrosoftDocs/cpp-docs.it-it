@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2535 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2535
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2535
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2535
 ms.assetid: a958f83e-e2bf-4a59-b44b-d406ec325d7e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d9bb276ded32d8b263e64a8ea70f2c1953ee24b
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: b2b5452cfe59284d56b019674ffbabbda0dc62d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574022"
 ---
 # <a name="compiler-error-c2535"></a>Errore del compilatore C2535
 

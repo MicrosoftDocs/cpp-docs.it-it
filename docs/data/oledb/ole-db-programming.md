@@ -1,28 +1,17 @@
 ---
-title: Programmazione con OLE DB | Microsoft Docs
-ms.custom: ''
+title: Programmazione con OLE DB
 ms.date: 10/22/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB [C++]
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: aafeb4aa4e723c4c3bea1398731b03492b37b1da
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8b56378eb93216891f4c0b540d622dbdb412b8cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070998"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576917"
 ---
 # <a name="ole-db-programming"></a>Programmazione con OLE DB
 

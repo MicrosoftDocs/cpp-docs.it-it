@@ -1,12 +1,6 @@
 ---
-title: 'Windows Sockets: Porte e indirizzi Socket | Microsoft Docs'
-ms.custom: ''
+title: 'Windows Sockets: porte e indirizzi socket'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ports [MFC], definition
 - Windows Sockets [MFC], ports
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7f97bfa42e379f0806eb85e3f030465b2a181d01
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d132001cb792877e3d476508a6a5bb456dfb5987
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631361"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: porte e indirizzi socket
 

@@ -1,10 +1,6 @@
 ---
-title: mbsrtowcs | Microsoft Docs
-ms.custom: ''
+title: mbsrtowcs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsrtowcs
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsrtowcs
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ccb5bda16238888905678ffb3b6de01b93555ad0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2bc0c8c9e2d871b6d1748c42dc02c627244dbf69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597145"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
@@ -72,7 +62,7 @@ Puntatore indiretto alla posizione della stringa di caratteri multibyte da conve
 Il numero massimo di caratteri (non byte) da convertire e archiviare nella *wcstr*.
 
 *mbstate*<br/>
-Un puntatore a un **mbstate_t** oggetto stato di conversione. Se questo valore è un puntatore Null, viene usato un oggetto stato di conversione interno statico. Perché l'interno **mbstate_t** oggetto non è thread-safe, è consigliabile passare sempre la propria *mbstate* parametro.
+Un puntatore a un **mbstate_t** oggetto stato di conversione. Se questo valore è un puntatore Null, viene usato un oggetto stato di conversione interno statico. Perché l'interno **mbstate_t** oggetto non è thread-safe, è consigliabile passare sempre il proprio *mbstate* parametro.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -80,23 +70,23 @@ Restituisce il numero di caratteri convertito correttamente, escluso il caratter
 
 ## <a name="remarks"></a>Note
 
-Il **mbsrtowcs** funzione converte una stringa di caratteri multibyte indirettamente a cui puntata *mbstr*, in caratteri wide archiviati nel buffer a cui puntato *wcstr*, da utilizzando lo stato di conversione contenuto in *mbstate*. La conversione continuerà per ogni carattere fino a quando non viene rilevato un carattere di terminazione null multibyte carattere, viene rilevata una sequenza multibyte che non corrisponde a un carattere valido per le impostazioni locali correnti, o fino alla *conteggio* caratteri sono stati convertiti. Se **mbsrtowcs** rileva il carattere multibyte null ('\0') prima o quando *conteggio* si verifica, lo converte in un carattere di terminazione null a 16 bit e si arresta.
+Il **mbsrtowcs** funzione converte una stringa di caratteri multibyte indirettamente a cui punta *mbstr*, in caratteri wide archiviati nel buffer a cui fa riferimento *wcstr*, da usando lo stato di conversione contenuto in *mbstate*. La conversione continuerà per ogni carattere fino a quando non viene rilevato un carattere di terminazione null multibyte carattere, viene rilevata una sequenza multibyte che non corrisponde a un carattere valido nelle impostazioni locali correnti, o fino a quando *conteggio* sono stati convertiti in caratteri. Se **mbsrtowcs** rileva il carattere multibyte null ('\0') prima o quando *conteggio* si verifica, lo converte in un carattere di terminazione null a 16 bit e si arresta.
 
-Di conseguenza, la stringa di caratteri "wide" in *wcstr* è con terminazione null solo se **mbsrtowcs** rileva un carattere multibyte null durante la conversione. Se le sequenze a cui punta *mbstr* e *wcstr* si sovrappongono, il comportamento di **mbsrtowcs** è definito. **mbsrtowcs** è interessato dalla categoria LC_TYPE delle impostazioni locali correnti.
+Pertanto, la stringa di caratteri "wide" in *wcstr* sono con terminazione null solo se **mbsrtowcs** rileva un carattere multibyte null durante la conversione. Se le sequenze a cui punta *mbstr* e *wcstr* si sovrappongono, il comportamento delle **mbsrtowcs** è definito. **mbsrtowcs** dipende dalla categoria LC_TYPE delle impostazioni locali correnti.
 
-Il **mbsrtowcs** rispetto alla funzione [mbstowcs, mbstowcs_l](mbstowcs-mbstowcs-l.md) dal relativo riavviabilità. Lo stato di conversione viene archiviato *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili.  Ad esempio, un'applicazione deve usare **mbsrlen** anziché **mbslen**, se una chiamata successiva a **mbsrtowcs** utilizzato al posto del **mbstowcs**.
+Il **mbsrtowcs** la funzione differisce da [mbstowcs, mbstowcs_l](mbstowcs-mbstowcs-l.md) dalla relativa possibilità di essere riavviata. Cui è archiviato lo stato di conversione *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili.  Ad esempio, un'applicazione deve utilizzare **mbsrlen** invece di **mbslen**, se una chiamata successiva a **mbsrtowcs** viene usato al posto di **mbstowcs**.
 
-Se *wcstr* non è un puntatore null, l'oggetto del puntatore a cui punta *mbstr* viene assegnato un puntatore null se la conversione è stata arrestata perché è stato raggiunto un carattere di terminazione null. In caso contrario, viene assegnato l'indirizzo subito dopo l'ultimo carattere multibyte convertito, se presente. Ciò consente a una chiamata di funzione successiva di riavviare la conversione nel punto in cui la chiamata è stata arrestata.
+Se *wcstr* non è un puntatore null, l'oggetto del puntatore a cui punta *mbstr* viene assegnato un puntatore null se conversione è stata arrestata perché è stato raggiunto un carattere di terminazione null. In caso contrario, viene assegnato l'indirizzo subito dopo l'ultimo carattere multibyte convertito, se presente. Ciò consente a una chiamata di funzione successiva di riavviare la conversione nel punto in cui la chiamata è stata arrestata.
 
-Se il *wcstr* l'argomento è un puntatore null, la *conteggio* argomento viene ignorato e **mbsrtowcs** restituisce le dimensioni necessarie in caratteri "wide" per la stringa di destinazione. Se *mbstate* è un puntatore null, la funzione utilizza un interno statico non thread-safe **mbstate_t** oggetto stato di conversione. Se la sequenza di caratteri *mbstr* non dispone di un multibyte corrispondente rappresentazione dei caratteri, viene restituito -1 e il **errno** è impostato su **EILSEQ**.
+Se il *wcstr* l'argomento è un puntatore null, il *conteggio* verrà ignorato e **mbsrtowcs** restituisce le dimensioni necessarie in caratteri wide della stringa di destinazione. Se *mbstate* è un puntatore null, la funzione Usa un interno statico non thread-safe **mbstate_t** oggetto stato di conversione. Se la sequenza di caratteri *mbstr* non ha un multibyte corrispondente rappresentazione in caratteri, viene restituito -1 e il **errno** è impostata su **EILSEQ**.
 
-Se *mbstr* un puntatore null, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce -1.
+Se *mbstr* isa un puntatore null, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce -1.
 
 In C++, questa funzione presenta un overload di modello che richiama la relativa controparte sicura più recente. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Eccezioni
 
-Il **mbsrtowcs** funzione è multithread-safe finché nessuna funzione nel thread corrente chiama **setlocale** fino a quando questa funzione è in esecuzione e il *mbstate* argomento non è un puntatore null.
+Il **mbsrtowcs** funzione è multithread-safe finché nessuna funzione nel thread corrente chiami **setlocale** fino a quando questa funzione è in esecuzione e il *mbstate* argomento non è un puntatore null.
 
 ## <a name="requirements"></a>Requisiti
 

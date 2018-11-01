@@ -1,25 +1,15 @@
 ---
-title: "Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble (parte 2) | Microsoft Docs"
-ms.custom: ''
+title: "Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 2)"
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: d618d79c50892523b3e4a71be163b8778402e48e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235438"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570339"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 2)
 

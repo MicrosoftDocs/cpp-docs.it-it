@@ -1,25 +1,15 @@
 ---
-title: Struttura is_error_code_enum | Microsoft Docs
-ms.custom: ''
+title: Struttura is_error_code_enum
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - future/std::is_error_code_enum
-dev_langs:
-- C++
 ms.assetid: 84ae4b99-66d2-41ba-9b50-645fcbe14630
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7d28754bd005627fc6c14d5d8870941158bff937
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54def287aa6b4bbb06d88006615b5df45b482051
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843340"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676421"
 ---
 # <a name="iserrorcodeenum-structure"></a>Struttura is_error_code_enum
 
@@ -34,7 +24,7 @@ struct is_error_code_enum<Future_errc> : public true_type;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<futura >
+**Intestazione:** \<future >
 
 **Spazio dei nomi:** std
 

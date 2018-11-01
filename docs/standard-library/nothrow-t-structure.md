@@ -1,27 +1,17 @@
 ---
-title: Struttura nothrow_t | Microsoft Docs
-ms.custom: ''
+title: Struttura nothrow_t
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - nothrow_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - nothrow_t class
 ms.assetid: dc7d5d42-ed5a-4919-88fe-bbad519b7a1d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a34d9b4e87e2a9036afe7dc12b85fa6d4354209
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2313c436a1fd25149fa7ea72f122a6f323b40028
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575799"
 ---
 # <a name="nothrowt-structure"></a>Struttura nothrow_t
 

@@ -1,10 +1,6 @@
 ---
-title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l | Microsoft Docs
-ms.custom: ''
+title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -38,8 +34,6 @@ f1_keywords:
 - mbsnccnt
 - _strncnt
 - _wcsncnt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strncnt function
 - _mbsnbcnt function
@@ -56,23 +50,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6322f9511f0813eeaeb49383f49c73e361048cd9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451576"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573431"
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
 Restituisce il numero di caratteri o byte entro un numero specificato.
 
 > [!IMPORTANT]
-> **mbsnbcnt**, **mbsnbcnt_l**, **mbsnccnt**, e **mbsnccnt_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsnbcnt**, **mbsnbcnt_l**, **mbsnccnt**, e **mbsnccnt_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -112,24 +102,24 @@ size_t _mbsnccnt_l(
 Stringa da esaminare.
 
 *count*<br/>
-Numero di caratteri o byte per essere esaminate in *str*.
+Numero di caratteri o byte da esaminare nel *str*.
 
 *locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**mbsnbcnt** e **mbsnbcnt_l** restituire il numero di byte trovato nel primo *conteggio* di caratteri multibyte di *str*. **mbsnccnt** e **mbsnccnt_l** restituire il numero dei caratteri trovati nel primo *conteggio* di byte di *str*. Se viene rilevato un carattere null prima l'esame delle *str* ha completato, restituiscono il numero di byte o caratteri trovati prima del carattere null. Se *str* è costituito da meno di *conteggio* caratteri o byte, restituiscono il numero di caratteri o byte nella stringa. Se *conteggio* è minore di zero, restituiscono 0. Nelle versioni precedenti, queste funzioni sono un valore restituito di tipo **int** anziché **size_t**.
+**mbsnbcnt** e **mbsnbcnt_l** restituisce il numero di byte trovati entro i primi *conteggio* caratteri multibyte di *str*. **mbsnccnt** e **mbsnccnt_l** restituisce il numero di caratteri trovati entro i primi *conteggio* di byte di *str*. Se viene rilevato un carattere null prima di esaminare *str* è completato, restituiscono il numero di byte o caratteri trovati prima del carattere null. Se *str* costituito da meno *conteggio* caratteri o byte, restituiscono il numero di caratteri o byte nella stringa. Se *conteggio* è minore di zero, le funzioni restituiscono 0. Nelle versioni precedenti, queste funzioni è un valore restituito di tipo **int** invece **size_t**.
 
-**strncnt** restituisce il numero di caratteri nel primo *conteggio* byte della stringa a byte singolo *str*. **wcsncnt** restituisce il numero di caratteri nel primo *conteggio* caratteri "wide" della stringa di caratteri wide *str*.
+**strncnt** restituisce il numero di caratteri nei primi *conteggio* byte della stringa a byte singolo *str*. **wcsncnt** restituisce il numero di caratteri nei primi *conteggio* caratteri "wide" della stringa di caratteri wide *str*.
 
 ## <a name="remarks"></a>Note
 
-**mbsnbcnt** e **mbsnbcnt_l** contare il numero di byte trovato nel primo *conteggio* di caratteri multibyte di *str*. **mbsnbcnt** e **mbsnbcnt_l** sostituire **mtob** e deve essere usato al posto di **mtob**.
+**mbsnbcnt** e **mbsnbcnt_l** contare il numero di byte trovati entro i primi *conteggio* caratteri multibyte di *str*. **mbsnbcnt** e **mbsnbcnt_l** sostituire **mtob** e deve essere usato al posto del **mtob**.
 
-**mbsnccnt** e **mbsnccnt_l** contare il numero dei caratteri trovati nel primo *conteggio* di byte di *str*. Se **mbsnccnt** e **mbsnccnt_l** riscontra un carattere null nel secondo byte di un carattere a byte doppio, il primo byte viene anche considerato null e non è incluso nel valore del conteggio restituito. **mbsnccnt** e **mbsnccnt_l** sostituire **btom** e deve essere usato al posto di **btom**.
+**mbsnccnt** e **mbsnccnt_l** contare il numero di caratteri trovati entro i primi *conteggio* di byte di *str*. Se **mbsnccnt** e **mbsnccnt_l** si verifica un carattere null nel secondo byte di un carattere a byte doppio, il primo byte viene considerato null e non è incluso nel valore del conteggio restituito. **mbsnccnt** e **mbsnccnt_l** sostituire **btom** e deve essere usato al posto del **btom**.
 
-Se *str* è un **NULL** puntatore o viene *conteggio* è 0, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), **errno** è impostata su **EINVAL**, e la funzione restituisce 0.
+Se *str* è un **NULL** puntatore o viene *count* è 0, queste funzioni richiamano il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), **errno** è impostata su **EINVAL**, e la funzione restituisce 0.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

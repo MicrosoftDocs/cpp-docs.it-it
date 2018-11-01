@@ -1,25 +1,18 @@
 ---
-title: '/Zc: ternary (Applica regole di operatore condizionale) | Microsoft Docs'
+title: '/Zc: ternary (Applica regole di operatore condizionale)'
 ms.date: 3/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zc:ternary
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-author: corob-msft
-ms.author: corob
-ms.openlocfilehash: a8cd0a4034b07d170bc9ca531d60cce508681a2a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2bc9e924656b9e1cb914255780adc4ae50220275
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717823"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618192"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc: ternary (Applica regole di operatore condizionale)
 

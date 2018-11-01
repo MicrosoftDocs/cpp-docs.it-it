@@ -1,27 +1,17 @@
 ---
-title: '&lt;tuple&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;tuple&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <tuple>
-dev_langs:
-- C++
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ba25328b86a51e34cba60bd55b63ce2eab696d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e46b3997096c6e61f7dd6140131e3f10223b8e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864584"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586667"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 

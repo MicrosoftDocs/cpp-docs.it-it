@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3070 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3070
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3070
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3070
 ms.assetid: ac88584d-40a6-4176-90f3-2371c3c935f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f9f770097126afd31725c511335eb44713a556e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e1175fc1289a2504795a9d19bcd6274462b7a84
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677838"
 ---
 # <a name="compiler-error-c3070"></a>Errore del compilatore C3070
 

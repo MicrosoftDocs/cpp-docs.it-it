@@ -1,10 +1,6 @@
 ---
-title: Funzioni intrinseche interlockedbittestandreset | Microsoft Docs
-ms.custom: ''
+title: Funzioni intrinseche _interlockedbittestandreset
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _interlockedbittestandreset_rel
 - _interlockedbittestandreset64
@@ -17,23 +13,17 @@ f1_keywords:
 - _interlockedbittestandreset64_cpp
 - _interlockedbittestandreset64_HLEAcquire
 - _interlockedbittestandreset
-dev_langs:
-- C++
 helpviewer_keywords:
 - lock_btr instruction
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6916b746aac8bbd4b1008289ec2eacd3afaa5571
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc85b1a1bb76575f63d7c43bead08a6e850d026f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447650"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605400"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>Funzioni intrinseche _interlockedbittestandreset
 

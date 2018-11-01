@@ -1,10 +1,6 @@
 ---
-title: _putw | Microsoft Docs
-ms.custom: ''
+title: _putw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putw
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs:
-- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5e33bc207fe83795c31f6c8b61d931985760e3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404012"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602683"
 ---
 # <a name="putw"></a>_putw
 
@@ -60,18 +50,18 @@ int _putw(
 *binint*<br/>
 Integer binario da restituire.
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il valore scritto. Valore restituito di **EOF** potrebbe indicare un errore. Poiché **EOF** è anche un integer legittimo, utilizzare **ferror** per verificare un errore. Se *flusso* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **EOF**.
+Restituisce il valore scritto. Un valore restituito pari **EOF** potrebbe indicare un errore. In quanto **EOF** è anche un integer legittimo, utilizzare **ferror** per verificare un errore. Se *stream* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EOF**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **putw** funzione scrive un valore binario di tipo **int** fino alla posizione corrente di *flusso.* **putw** non interessa l'allineamento degli elementi nel flusso né se non utilizza alcun allineamento speciale. **putw** viene utilizzata principalmente per la compatibilità con le librerie precedenti. Con, possono verificarsi problemi di portabilità **putw** perché le dimensioni di un **int** e l'ordine dei byte all'interno di un' **int** differiscono fra sistemi.
+Il **putw** funzione scrive un valore binario di tipo **int** alla posizione corrente del *flusso.* **putw** non interessa l'allineamento degli elementi nel flusso né se non utilizza alcun allineamento speciale. **putw** viene utilizzato principalmente per garantire la compatibilità con le librerie precedenti. I problemi di portabilità possono verificarsi durante **putw** perché le dimensioni di un **int** e l'ordine dei byte all'interno di un **int** differiscono fra sistemi.
 
 ## <a name="requirements"></a>Requisiti
 

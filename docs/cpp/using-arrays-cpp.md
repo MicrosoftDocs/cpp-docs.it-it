@@ -1,25 +1,15 @@
 ---
-title: Uso delle matrici (C++) | Microsoft Docs
-ms.custom: ''
+title: Utilizzo di matrici (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [C++]
 ms.assetid: 7818a7fe-7e82-4881-a3d1-7d25162b7fc7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2976dbdd880cb200547f5fb2ac5d529877628ff0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7f7a987a2b4c18e59dd058ccfc4375c304188398
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089749"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575513"
 ---
 # <a name="using-arrays-c"></a>Utilizzo di matrici (C++)
 
@@ -60,4 +50,4 @@ Nel codice precedente, `multi` è una matrice tridimensionale di tipo **doppie**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Array](../cpp/arrays-cpp.md)
+[Matrici](../cpp/arrays-cpp.md)

@@ -1,26 +1,16 @@
 ---
-title: Esecuzione del programma come un Server locale | Microsoft Docs
-ms.custom: ''
+title: Esecuzione del programma come un Server locale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [ATL], running services as local server
 - ATL services, running as local servers
 ms.assetid: eb9701e6-e2a8-4666-897f-0c893aec8ac7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7ff7c2f7564a5da2c7a1db3913526a95660fe1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a55dba861457eae888f519fb3bbd6c7a66e623c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610860"
 ---
 # <a name="running-the-program-as-a-local-server"></a>Esecuzione del programma come un Server locale
 

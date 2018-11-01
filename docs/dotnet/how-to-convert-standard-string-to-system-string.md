@@ -1,28 +1,18 @@
 ---
-title: 'Procedura: convertire stringhe Standard in System:: String | Microsoft Docs'
+title: 'Procedura: convertire stringhe standard in System::String'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Standard Library, converting strings to System::String
 - string conversion [C++], C++ Standard Library string
 - strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 0a715cb4e19e6cf8ec5c6339dbc755747396466c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c09ac5e86066e4382c511dce45e4ec6e5301d54
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414641"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575565"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>Procedura: convertire stringhe standard in System::String
 

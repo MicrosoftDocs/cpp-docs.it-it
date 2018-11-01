@@ -1,27 +1,17 @@
 ---
-title: Aggiunta di un gestore messaggi MFC | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di un gestore messaggi MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.adding.mfc.msghandler
-dev_langs:
-- C++
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9980a367c0272fe35e2135c1fb5a7df1c19a314
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: edb48b510be1de73abe3361f9bd409a8fed929d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593544"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Aggiunta di un gestore messaggi MFC
 
@@ -38,7 +28,7 @@ Usando la finestra proprietà per definire le funzioni di gestione di eventi e m
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Aggiunta di una funzione membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Aggiunta di una variabile membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Una funzione Virtual in override](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Override di una funzione virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Esplorazione della struttura delle classi](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
 [Editor finestre](../../windows/dialog-editor.md)
 

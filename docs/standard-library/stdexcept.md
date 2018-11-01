@@ -1,27 +1,17 @@
 ---
-title: '&lt;stdexcept&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;stdexcept&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <stdexcept>
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdexcept header
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c28e4bbccb3c28c314226b8f215407292d5e200
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a8c99f2651d10d4fc2aff413a06256127f32d7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863621"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582793"
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 

@@ -1,27 +1,16 @@
 ---
-title: Manifesto delle risorse (C++) | Microsoft Docs
-ms.custom: ''
+title: Risorse del manifesto (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2da93d1baaf95799c7ef68d6cc854d554fbe6c47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 081fd12a86c31973c7856ca7b9f3fcb129e2eb81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578282"
 ---
 # <a name="manifest-resources-c"></a>Risorse del manifesto (C++)
 
@@ -43,7 +32,7 @@ Nei progetti desktop C++, le risorse di manifesto sono file XML che descrivono l
 </dependency>
 ```
 
-Per un'applicazione di Windows XP o Windows Vista, la risorsa del manifesto non soltanto specifica che l'applicazione usa la versione più recente dei controlli comuni di Windows (versione 6.0, come nell'esempio precedente), ma supporta anche il [controllo Syslink](/windows/desktop/Controls/syslink-overview).
+Per un'applicazione di Windows XP o Windows Vista, la risorsa del manifesto non soltanto specifica che l'applicazione usa la versione più recente dei controlli comuni di Windows (versione 6.0, come nell'esempio precedente), ma supporta anche il nuovo [controllo Syslink](/windows/desktop/Controls/syslink-overview).
 
 Per visualizzare la versione e digitare le informazioni contenute in una risorsa di manifesto, è possibile aprire il file in un visualizzatore XML o nell'editor di testo di Visual Studio. Per altre informazioni, vedere [Apertura di una risorsa di manifesto nell'Editor di testo di Visual Studio](../windows/how-to-open-a-manifest-resource.md).
 

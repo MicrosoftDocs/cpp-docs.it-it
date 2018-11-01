@@ -1,28 +1,19 @@
 ---
-title: 'Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando | Microsoft Docs'
+title: 'Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando'
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2d02560f9a76ee6f7a2aa7170f2bca6a95fe3ce8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860407"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602254"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando
 
@@ -160,7 +151,7 @@ Per compilare un programma che contiene i file di codice di origine aggiuntivi, 
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp`
 
-Il `/EHsc` opzione della riga di comando indica al compilatore di abilitare la gestione delle eccezioni C++. Per altre informazioni, vedere [/EH (Modello di gestione delle eccezioni)](../build/reference/eh-exception-handling-model.md).
+L'opzione della riga di comando `/EHsc` indica al compilatore di abilitare la gestione delle eccezioni di C++. Per altre informazioni, vedere [/EH (Modello di gestione delle eccezioni)](../build/reference/eh-exception-handling-model.md).
 
 Quando si specificano un file di origine, il compilatore Usa il primo file di input per creare il nome del programma. In questo caso, restituisce come output un programma denominato file1.exe. Per modificare il nome in program1.exe, aggiungere un' [/out](../build/reference/out-output-file-name.md) l'opzione del linker:
 

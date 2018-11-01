@@ -1,29 +1,19 @@
 ---
-title: operatore PTR | Microsoft Docs
-ms.custom: ''
+title: Operatore PTR
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
 f1_keywords:
 - PTR
 - operator PTR
-dev_langs:
-- C++
 helpviewer_keywords:
 - PTR operator
 - operator PTR
 ms.assetid: df280f36-ca06-4578-b99d-0aa139b2b969
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07fcb86eb6b1a9a084f985cb5192491a7c487703
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b6552b2611808fadafe54b330aa4825e63c56a9a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692790"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614097"
 ---
 # <a name="operator-ptr"></a>Operatore PTR
 

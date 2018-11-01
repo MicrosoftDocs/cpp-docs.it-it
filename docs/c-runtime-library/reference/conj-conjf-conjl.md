@@ -1,11 +1,6 @@
 ---
-title: conj, conjf, conjl | Microsoft Docs
-ms.custom: ''
+title: conj, conjf, conjl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - conj
 - conjf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/conj
 - complex/conjf
 - complex/conjl
-dev_langs:
-- C++
 helpviewer_keywords:
 - conj function
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb91b566c499ba9f34c7c67c9cdc24d67924601d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579959"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -79,11 +68,11 @@ Numero complesso.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il complesso coniugato di *z*.  Il risultato ha la stessa parte di reale e immaginaria *z*, ma con segno opposto.
+Il complesso coniugato di *z*.  Il risultato ha la stessa parte reale e immaginaria come *z*, ma con segno opposto.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **conj** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **conj** accetta e restituisce sempre un **_Dcomplex** valore.
+Dato che C++ consente l'overload, è possibile chiamare overload di **conj** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **conj** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 

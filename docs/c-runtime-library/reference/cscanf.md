@@ -1,10 +1,6 @@
 ---
-title: cscanf | Microsoft Docs
-ms.custom: ''
+title: cscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cscanf
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - cscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - cscanf function
 ms.assetid: 51aa2da2-0d53-4272-b510-f3eabf049ea7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ade1deef1998626cad06770a0be8679556f0b0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b808cdc17dbf3cc9968cb94a1f199f3dc8b8a1e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393979"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573225"
 ---
 # <a name="cscanf"></a>cscanf
 

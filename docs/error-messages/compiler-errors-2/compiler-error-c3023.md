@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3023 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3023
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3023
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3023
 ms.assetid: 89dcce98-3cd7-4931-a50f-87df1d2ebc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3941af133d03b3cc4eae11785b8f870e8058809f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 397a68db2b97adc07ae2a22c9cf909f77a125725
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026062"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607792"
 ---
 # <a name="compiler-error-c3023"></a>Errore del compilatore C3023
 

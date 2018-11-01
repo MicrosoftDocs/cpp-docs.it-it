@@ -1,26 +1,16 @@
 ---
-title: Riferimenti al preprocessore C/C++ | Microsoft Docs
-ms.custom: ''
+title: Riferimenti al preprocessore C/C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c7c1b84c23ae16828e2d73cb1f45084dfd5806e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1ad46a1a3006cbca52336bf65bcfbafd37e59752
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607662"
 ---
 # <a name="cc-preprocessor-reference"></a>Riferimenti al preprocessore C/C++
 Il *riferimenti al preprocessore C/C++* viene illustrato il preprocessore come viene implementato in Microsoft C/C++. Il preprocessore esegue alcune operazioni preliminari sui file C e C++ prima che siano passati al compilatore. È possibile utilizzare il preprocessore per compilare in modo condizionale il codice, inserire file, specificare i messaggi di errore in fase di compilazione e applicare le regole specifiche del computer alle sezioni di codice.

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3252 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3252
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3252
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3252
 ms.assetid: aa9ad096-e9ac-41c7-8ad9-b966751c7c75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70a38090bcbe1a984e643d6d995abe2c79339163
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee9245fb8eb89b9234e76dc10304b1d05bc1fdcb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080623"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600382"
 ---
 # <a name="compiler-error-c3252"></a>Errore del compilatore C3252
 

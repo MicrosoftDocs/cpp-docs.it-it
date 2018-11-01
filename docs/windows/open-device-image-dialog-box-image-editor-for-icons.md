@@ -1,28 +1,17 @@
 ---
-title: Aprire &lt;dispositivo&gt; immagine nella finestra di dialogo (Editor di immagini per le icone) (C++) | Microsoft Docs
-ms.custom: ''
+title: Aprire &lt;dispositivo&gt; immagine nella finestra di dialogo (C++) (Editor di immagini per le icone)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.opendeviceimage
-dev_langs:
-- C++
 helpviewer_keywords:
 - Open <Device> Image dialog box [C++]
 ms.assetid: 27cb60ec-8704-4e58-ab1c-8cc3b34e66be
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b87de96f260bdd5bf0faaad6c590b0bd3d6f0dfe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93167712f2cdf79e21200567e17b7c08622b94d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604451"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-c-image-editor-for-icons"></a>Aprire &lt;dispositivo&gt; immagine nella finestra di dialogo (C++) (Editor di immagini per le icone)
 

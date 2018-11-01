@@ -1,12 +1,6 @@
 ---
-title: Inizializzazione e pulizia di documenti e visualizzazioni | Microsoft Docs
-ms.custom: ''
+title: Inizializzazione e pulizia di documenti e visualizzazioni
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - initializing documents [MFC]
 - views [MFC], cleaning up
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - document objects [MFC], life cycle of
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdc1efa9d2284a48e4f906a326efcd62dd6c61b9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7bfc80e636a3018e52dec411f17bdf25073cf4c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412951"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584639"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>Inizializzazione e pulizia di documenti e visualizzazioni
 

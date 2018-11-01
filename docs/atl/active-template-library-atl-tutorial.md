@@ -1,12 +1,7 @@
 ---
-title: Esercitazione relativa Active Template Library (ATL) | Microsoft Docs
+title: Esercitazione relativa alla Libreria ATL (Active Template Library)
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, tutorials
 - controls [ATL], tutorials
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: beb5f2592453f0063ceefe973311dd3c46f691d1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b4a47cd22026663acb1cade6f2b4c098c4887965
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755647"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570573"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Esercitazione relativa alla Libreria ATL (Active Template Library)
 

@@ -1,12 +1,6 @@
 ---
-title: Programmazione di iostream | Microsoft Docs
-ms.custom: ''
+title: Programmazione di iostream
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - text output [C++]
 - text [C++], formatting
@@ -23,16 +17,12 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f5ab6545ffa8bf75ba93102ca77696f23209649b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56b6d2a69372c9c8232823feb085780c38c00f0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592504"
 ---
 # <a name="iostream-programming"></a>Programmazione di iostream
 

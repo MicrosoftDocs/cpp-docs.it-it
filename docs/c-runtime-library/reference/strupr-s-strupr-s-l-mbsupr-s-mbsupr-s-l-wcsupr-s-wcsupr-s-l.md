@@ -1,10 +1,6 @@
 ---
-title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l | Microsoft Docs
-ms.custom: ''
+title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strupr_s
 - _strupr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _wcsupr_s_l
 - _strupr_s
 - _strupr_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsupr_s_l function
 - strupr_s_l function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad2ff06320b3251e80935776246927e4cadb50c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415660"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569690"
 ---
 # <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
 Converte una stringa in maiuscolo, usando le impostazioni locali correnti o le impostazioni locali specificate passate. Queste versioni di [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbsupr_s** e **mbsupr_s_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsupr_s** e **mbsupr_s_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -158,13 +148,13 @@ Impostazioni locali da usare.
 
 Zero in caso di esito positivo. Un codice di errore diverso da zero in caso di esito negativo.
 
-Queste funzioni convalidano i relativi parametri. Se *str* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e impostare **errno** al **EINVAL**. Se *numberOfElements* è minore della lunghezza della stringa, le funzioni restituiscono **ERANGE** e impostare **errno** a **ERANGE**.
+Queste funzioni convalidano i relativi parametri. Se *str* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e impostare **errno** al **EINVAL**. Se *numberOfElements* è minore della lunghezza della stringa, le funzioni restituiscono **ERANGE** e impostare **errno** al **ERANGE**.
 
 ## <a name="remarks"></a>Note
 
-Il **strupr_s** funzione converte, posto, ogni lettera minuscola in *str* in lettere maiuscole. **wcsupr_s** è la versione a caratteri "wide" di **strupr_s**. **mbsupr_s** è la versione a caratteri multibyte **strupr_s**.
+Il **strupr_s** converte sul posto, ogni lettera minuscola in funzione *str* in lettere maiuscole. **wcsupr_s** è la versione a caratteri wide di **strupr_s**. **mbsupr_s** è la versione a caratteri multibyte di **strupr_s**.
 
-La conversione è determinata dal **LC_CTYPE** impostazione della categoria delle impostazioni locali. Gli altri caratteri non sono interessati. Per ulteriori informazioni sul **LC_CTYPE**, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso Usa le impostazioni locali correnti; la visione con il **l** suffisso sono identiche ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La conversione è determinata dal **LC_CTYPE** impostazione di categoria delle impostazioni locali. Gli altri caratteri non sono interessati. Per ulteriori informazioni sul **LC_CTYPE**, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso Usa le impostazioni locali correnti; le versioni con il **l** suffisso sono identiche ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,10 +1,6 @@
 ---
-title: memcmp, wmemcmp | Microsoft Docs
-ms.custom: ''
+title: memcmp, wmemcmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcmp
 - wmemcmp
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - memcmp
 - wmemcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e40264c3ee7e48a545c88d7d48891126117ecc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404389"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610466"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -75,15 +65,15 @@ Numero di caratteri da confrontare. (Confronta byte per **memcmp**, caratteri wi
 
 Il valore restituito indica la relazione tra i buffer.
 
-|Valore restituito|Relazione del primo *conteggio* caratteri buf1 e buf2|
+|Valore restituito|Relazione dei primi *conteggio* caratteri di buf1 e buf2|
 |------------------|---------------------------------------------------------------|
-|< 0|*buffer1* minore *buffer2*|
-|0|*buffer1* identico a *buffer2*|
+|< 0|*buffer1* minore di *buffer2*|
+|0|*buffer1* identica alla *buffer2*|
 |> 0|*buffer1* maggiore *buffer2*|
 
 ## <a name="remarks"></a>Note
 
-Confronta i primi *conteggio* caratteri *buffer1* e *buffer2* e restituisce un valore che indica la relazione. Il segno di un valore restituito diverso da zero è il segno della differenza tra la prima coppia di valori diversi nei buffer. I valori vengono interpretati come **unsigned** **char** per **memcmp**e come **wchar_t** per **wmemcmp**.
+Confronta i primi *conteggio* caratteri di *buffer1* e *buffer2* e restituisce un valore che indica la relazione. Il segno di un valore restituito diverso da zero è il segno della differenza tra la prima coppia di valori diversi nei buffer. I valori vengono interpretati come **unsigned** **char** per **memcmp**e come **wchar_t** per **wmemcmp**.
 
 ## <a name="requirements"></a>Requisiti
 

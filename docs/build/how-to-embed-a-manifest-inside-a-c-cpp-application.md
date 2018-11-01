@@ -1,27 +1,17 @@
 ---
-title: "Procedura: incorporare un manifesto in un'applicazione C/C++ | Microsoft Docs"
-ms.custom: ''
+title: "Procedura: incorporare un manifesto in un'applicazione C/C++"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28952907165b4423e4894991e5307890cb1ae7ac
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894772"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624864"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procedura: incorporare un manifesto in un'applicazione C/C++
 

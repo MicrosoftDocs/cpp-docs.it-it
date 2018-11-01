@@ -1,27 +1,17 @@
 ---
-title: Impostazioni dell'applicazione, creazione guidata controllo ActiveX MFC | Microsoft Docs
-ms.custom: ''
+title: Impostazioni applicazione, Creazione guidata controllo ActiveX MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cfaebdabb9011fd76b18701c81c722671ff8fc3d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 17d8ad581640611a5b517edd15609aa8052ecae4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433549"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677136"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Impostazioni applicazione, Creazione guidata controllo ActiveX MFC
 
@@ -42,7 +32,7 @@ Questa schermata della Creazione guidata controllo ActiveX MFC può essere usata
 
    - Il file vcxproj contiene il codice usato per compilare e configurare il file della Guida al momento della compilazione del progetto.
 
-   - Il file *projnamePropPage*cpp comprende una [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) funzione nel costruttore.
+   - Il file *projnamePropPage*.cpp comprende una funzione [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) nel costruttore.
 
    - Il file projname.hpj è il file di progetto usato dal compilatore della Guida per creare il file della Guida del controllo ActiveX. Rappresenta un file di testo contenente le informazioni sulla compilazione del file della Guida e sui percorsi dei file aggiuntivi (ad esempio le bitmap) inclusi nel file della Guida.
 

@@ -1,28 +1,17 @@
 ---
-title: modulo (attributo COM C++) | Microsoft Docs
-ms.custom: ''
+title: modulo (attributo COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.module
-dev_langs:
-- C++
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 492e5e5c28b50ea8a7a20d654310ebba26d2f701
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5692e07e71683b1c24f86a43e989ee3df1fbe904
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50067501"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570612"
 ---
 # <a name="module-c"></a>modulo (C++)
 

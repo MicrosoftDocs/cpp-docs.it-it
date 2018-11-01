@@ -1,26 +1,15 @@
 ---
-title: Creazione di un Consumer senza utilizzare una procedura guidata | Microsoft Docs
-ms.custom: ''
+title: Creazione di un consumer senza utilizzare una procedura guidata
 ms.date: 10/12/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 8a1217ab305d937c63a707d6e093eb38f7f89698
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a4b95674c2c9c6f0a5dae29e68cff44c759e0fa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079896"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578607"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Creazione di un consumer senza utilizzare una procedura guidata
 

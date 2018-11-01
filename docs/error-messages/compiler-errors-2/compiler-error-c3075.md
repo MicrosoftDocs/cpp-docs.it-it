@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3075 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3075
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3075
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3075
 ms.assetid: f431daa9-e0fa-48f0-a5c3-f99be96b55e3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb2cbcb8908803cef2347fe5eb60342647094f95
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0494961b47e99ce1f3e559302aff56278098a912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023332"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591633"
 ---
 # <a name="compiler-error-c3075"></a>Errore del compilatore C3075
 

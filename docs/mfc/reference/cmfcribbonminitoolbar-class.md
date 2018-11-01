@@ -1,10 +1,6 @@
 ---
-title: Classe CMFCRibbonMiniToolBar | Microsoft Docs
-ms.custom: ''
+title: Classe CMFCRibbonMiniToolBar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::SetCommands
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::Show
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::ShowWithContextMenu
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], IsContextMenuMode
 - CMFCRibbonMiniToolBar [MFC], IsRibbonMiniToolBar
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 738327ac44f7d2e28250c19eecdd64e8b761a361
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 665de65d64262415e20ca5ac05e1e06b2c1862c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381920"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573381"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
 
@@ -59,7 +49,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |`CMFCRibbonMiniToolBar::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
 |`CMFCRibbonMiniToolBar::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||
-|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|Esegue l'override`CMFCPopupMenu::IsRibbonMiniToolBar`.|
+|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|Esegue l'override di `CMFCPopupMenu::IsRibbonMiniToolBar`.|
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Imposta l'elenco di comandi da visualizzare sulla barra degli strumenti.|
 |[CMFCRibbonMiniToolBar::Show](#show)|Visualizza la barra di formattazione rapida in coordinate dello schermo specificate.|
 |[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Visualizza la barra di formattazione rapida con un menu di scelta rapida.|

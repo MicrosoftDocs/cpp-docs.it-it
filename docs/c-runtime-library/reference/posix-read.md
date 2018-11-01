@@ -1,10 +1,6 @@
 ---
-title: read | Microsoft Docs
-ms.custom: ''
+title: read
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - read
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - read
-dev_langs:
-- C++
 helpviewer_keywords:
 - read function
 ms.assetid: 9e0eead4-d38c-4f65-87f5-f6c12da40ead
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9884ae414e9493026df6400fa9dcc447f165822
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c32b300107a699f1a91f4652a69722258790e224
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397720"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569533"
 ---
 # <a name="read"></a>read
 

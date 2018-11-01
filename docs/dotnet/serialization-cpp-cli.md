@@ -1,12 +1,6 @@
 ---
-title: Serializzazione (C + + CLI) | Microsoft Docs
-ms.custom: ''
+title: Serializzazione (C++/CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - serialization [C++]
 - SerializableAttribute class, managed applications
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ae8fe34cbb1307fc0d8799b9a0cd662a1a1fdde7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74810328d654787be46794a31d857eb3fd0731ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387575"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478143"
 ---
 # <a name="serialization-ccli"></a>Serializzazione (C++/CLI)
 

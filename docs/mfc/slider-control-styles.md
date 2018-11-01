@@ -1,28 +1,18 @@
 ---
-title: Stili del controllo Slider | Microsoft Docs
-ms.custom: ''
+title: Stili del controllo Slider
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - slider controls [MFC], styles
 - CSliderCtrl class [MFC], styles
 - styles [MFC], CSliderCtrl
 - styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ddc96133f07011969e3d2afc4b1707e9f395e6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b143d0d27bcb8ee975d4056cf0a307db7b330c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424118"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588734"
 ---
 # <a name="slider-control-styles"></a>Stili del controllo Slider
 

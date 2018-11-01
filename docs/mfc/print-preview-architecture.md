@@ -1,12 +1,6 @@
 ---
-title: Architettura dell'anteprima di stampa | Microsoft Docs
-ms.custom: ''
+title: Architettura dell'anteprima di stampa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - print preview [MFC], process
 - previewing printing
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - printing [MFC], print preview
 - print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e89349811b2d340357e003ad31394cea13eb36b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2a57b3c8ef6df46c2e2524cb44dd29d68751389b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417592"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569677"
 ---
 # <a name="print-preview-architecture"></a>Architettura dell'anteprima di stampa
 

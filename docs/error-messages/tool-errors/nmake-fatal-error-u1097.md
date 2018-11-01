@@ -1,27 +1,17 @@
 ---
-title: Errore irreversibile U1097 di NMAKE | Microsoft Docs
-ms.custom: ''
+title: 'Errore irreversibile U1097 di NMAKE '
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - U1097
-dev_langs:
-- C++
 helpviewer_keywords:
 - U1097
 ms.assetid: dc6868b3-8425-4920-858a-774ad0c4c5f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 352964f92c6475aa860dc8b0a73cd9e95a8b56ed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 52339a00511c8d41270fff8c9ca532ac193d8df9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043833"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596261"
 ---
 # <a name="nmake-fatal-error-u1097"></a>Errore irreversibile U1097 di NMAKE 
 

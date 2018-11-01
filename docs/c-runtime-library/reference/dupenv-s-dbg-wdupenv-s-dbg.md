@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
@@ -24,8 +20,6 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ef129cec096734c23e911a5dc77bf3bd0b2df03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579591"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
@@ -86,24 +76,24 @@ Nome della variabile di ambiente.
 Tipo del blocco di memoria richiesto: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntatore al nome del file di origine o **NULL**.
+Puntatore al nome del file di origine oppure **NULL**.
 
 *linenumber*<br/>
-Numero di riga nel file di origine o **NULL**.
+Numero di riga nel file di origine oppure **NULL**.
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero se eseguita correttamente, un codice di errore se non eseguita correttamente.
 
-Queste funzioni convalidano i relativi parametri; Se *buffer* oppure *varname* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni impostano **errno** alla **EINVAL** e restituire **EINVAL**.
+Queste funzioni convalidano i propri parametri. Se *buffer* oppure *varname* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni impostano **errno** al **EINVAL** e restituiti **EINVAL**.
 
-Se queste funzioni non è possibile allocare memoria sufficiente, impostano *buffer* alla **NULL** e *numberOfElements* su 0, quindi restituiscono **ENOMEM**.
+Se queste funzioni non possono allocare memoria sufficiente, impostano *buffer* al **NULL** e *numberOfElements* a 0, quindi restituiscono **ENOMEM**.
 
 ## <a name="remarks"></a>Note
 
-Il **dupenv_s_dbg** e **wdupenv_s_dbg** funzioni sono identici a quelli **dupenv_s** e **wdupenv_s** ad eccezione del fatto che, quando **Debug** è definito, queste funzioni usano la versione di debug [malloc](malloc.md), [malloc_dbg](malloc-dbg.md)per allocare memoria per il valore della variabile di ambiente. Per informazioni sulle funzionalità di debug di **malloc_dbg**, vedere [malloc_dbg](malloc-dbg.md).
+Il **dupenv_s_dbg** e **wdupenv_s_dbg** sono identiche alle funzioni **dupenv_s** e **wdupenv_s** ad eccezione del fatto che, quando **Debug** è definito, queste funzioni usano la versione di debug [malloc](malloc.md), [malloc_dbg](malloc-dbg.md)per allocare memoria per il valore della variabile di ambiente. Per informazioni sulle funzionalità di debug della **malloc_dbg**, vedere [malloc_dbg](malloc-dbg.md).
 
-Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire il flag **CRTDBG_MAP_ALLOC**. Quando si **CRTDBG_MAP_ALLOC** è definito, le chiamate a **dupenv_s** e **wdupenv_s** vengono mappate nuovamente a **dupenv_s_dbg** e **wdupenv_s_dbg**, rispettivamente, con il *blockType* impostato su **NORMAL_BLOCK**. Quindi, non è necessario chiamare queste funzioni in modo esplicito a meno che non si vogliano contrassegnare blocchi di memoria heap come **CLIENT_BLOCK**. Per altre informazioni sui tipi di blocco, vedere [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipi di blocchi sull'heap di debug).
+Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire il flag **CRTDBG_MAP_ALLOC**. Quando **CRTDBG_MAP_ALLOC** è definito, le chiamate a **dupenv_s** e **wdupenv_s** vengono mappate nuovamente a **dupenv_s_dbg** e **wdupenv_s_dbg**, rispettivamente, con il *blockType* impostato su **NORMAL_BLOCK**. Di conseguenza, non è necessario chiamare queste funzioni in modo esplicito, a meno che non si desidera contrassegnare come blocchi di memoria heap **CLIENT_BLOCK**. Per altre informazioni sui tipi di blocco, vedere [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipi di blocchi sull'heap di debug).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

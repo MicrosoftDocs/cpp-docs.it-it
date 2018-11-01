@@ -1,10 +1,6 @@
 ---
-title: Classe COleDispatchDriver | Microsoft Docs
-ms.custom: ''
+title: Classe COleDispatchDriver
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDispatchDriver
 - AFXDISP/COleDispatchDriver
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXDISP/COleDispatchDriver::SetProperty
 - AFXDISP/COleDispatchDriver::m_bAutoRelease
 - AFXDISP/COleDispatchDriver::m_lpDispatch
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDispatchDriver [MFC], COleDispatchDriver
 - COleDispatchDriver [MFC], AttachDispatch
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7093d25e8221ce3fc3ec8d0d13f8bbc5b420d2
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821322"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569225"
 ---
 # <a name="coledispatchdriver-class"></a>Classe COleDispatchDriver
 
@@ -97,7 +87,7 @@ Questa classe può essere utilizzata direttamente, ma viene generalmente usato s
 
 Per altre informazioni sull'uso di `COleDispatchDriver`, vedere gli articoli seguenti:
 
-- [Client di automazione](../../mfc/automation-clients.md)
+- [Automation Clients](../../mfc/automation-clients.md)
 
 - [Server di automazione](../../mfc/automation-servers.md)
 
@@ -166,11 +156,11 @@ Il modulo `COleDispatchDriver`() consente di creare un `COleDispatchDriver` dell
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [COleDispatchDriver:: CreateDispatch](#createdispatch).
+  Vedere l'esempio relativo a [COleDispatchDriver::CreateDispatch](#createdispatch).
 
 ##  <a name="createdispatch"></a>  COleDispatchDriver:: CreateDispatch
 
-Crea un' [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) oggetto di interfaccia e lo collega al `COleDispatchDriver` oggetto.
+Crea un oggetto interfaccia [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) e lo collega all'oggetto `COleDispatchDriver` .
 
 ```
 BOOL CreateDispatch(
@@ -240,7 +230,7 @@ void GetProperty(
 Identifica la proprietà da recuperare.
 
 *vtProp*<br/>
-Specifica la proprietà da recuperare. Per i valori possibili, vedere la sezione relativa alle osservazioni [COleDispatchDriver:: InvokeHelper](#invokehelper).
+Specifica la proprietà da recuperare. Per i valori possibili, vedere la sezione Note per [COleDispatchDriver::InvokeHelper](#invokehelper).
 
 *pvProp*<br/>
 Indirizzo della variabile che riceverà il valore della proprietà. Deve corrispondere al tipo specificato da *vtProp*.
@@ -304,7 +294,7 @@ I valori possibili per il *vtRet* argomento vengono forniti dall'enumerazione VA
 |VT_VARIANT|**VARIANT**|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Il *pbParamInfo* argomento è un elenco delimitato da spazio **VTS _** costanti. Uno o più di questi valori, separati da spazi (non virgole), specificano l'elenco dei parametri della funzione. I valori possibili sono elencati con il [EVENT_CUSTOM](event-maps.md#event_custom) macro.
+Il *pbParamInfo* argomento è un elenco delimitato da spazio **VTS _** costanti. Uno o più di questi valori, separati da spazi (non virgole), specificano l'elenco dei parametri della funzione. I valori possibili sono elencati con la macro [EVENT_CUSTOM](event-maps.md#event_custom) .
 
 Questa funzione converte i parametri in valori VARIANTARG, quindi richiama il [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) (metodo). Se la chiamata a `Invoke` ha esito negativo, questa funzione genera un'eccezione. Se il SCODE (codice di stato) restituito da `IDispatch::Invoke` è DISP_E_EXCEPTION, questa funzione genera un [COleException](../../mfc/reference/coleexception-class.md) dell'oggetto; in caso contrario, genera una [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
@@ -312,7 +302,7 @@ Per altre informazioni, vedere [VARIANTARG](/previous-versions/windows/desktop/a
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [COleDispatchDriver:: CreateDispatch](#createdispatch).
+  Vedere l'esempio relativo a [COleDispatchDriver::CreateDispatch](#createdispatch).
 
 ##  <a name="m_bautorelease"></a>  COleDispatchDriver::m_bAutoRelease
 
@@ -407,7 +397,7 @@ void AFX_CDECL SetProperty(
 Identifica la proprietà da impostare.
 
 *vtProp*<br/>
-Specifica il tipo della proprietà da impostare. Per i valori possibili, vedere la sezione relativa alle osservazioni [COleDispatchDriver:: InvokeHelper](#invokehelper).
+Specifica il tipo della proprietà da impostare. Per i valori possibili, vedere la sezione Note per [COleDispatchDriver::InvokeHelper](#invokehelper).
 
 *...*<br/>
 Un singolo parametro del tipo specificato da *vtProp*.

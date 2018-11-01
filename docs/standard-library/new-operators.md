@@ -1,20 +1,16 @@
 ---
-title: Operatori &lt;new&gt; | Microsoft Docs
-ms.custom: ''
+title: Operatori &lt;new&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-author: corob-msft
-ms.author: corob
-ms.openlocfilehash: 31db26453efbecceb136b614b8eabf178a0cdfea
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 87f7b6cfd6a06ab03b27ebe6aa4dd41b0b900673
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100366"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570534"
 ---
 # <a name="ltnewgt-operators"></a>Operatori &lt;new&gt;
 

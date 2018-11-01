@@ -1,23 +1,13 @@
 ---
-title: Errori del compilatore di risorse RC1000 through RC4413 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore di risorses RC1000 through RC4413
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14264cfa506595ba8ecde1d5e7747cd43b6e6543
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d679981fcf31ed2667cebe122a1ef975f9b8167e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574386"
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>Errore del compilatore di risorses RC1000 through RC4413
 

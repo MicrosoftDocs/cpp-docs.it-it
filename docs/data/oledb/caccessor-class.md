@@ -1,32 +1,21 @@
 ---
-title: Classe CAccessor | Microsoft Docs
-ms.custom: ''
+title: Classe CAccessor
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL.CAccessor<T>
 - ATL::CAccessor
 - CAccessor
 - ATL::CAccessor<T>
 - ATL.CAccessor
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 0ac3ad9da312ba1723fd7201b804260e11a64660
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 942a8e9eca7d09809594cbac1e4c14959aa96fbf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632678"
 ---
 # <a name="caccessor-class"></a>Classe CAccessor
 

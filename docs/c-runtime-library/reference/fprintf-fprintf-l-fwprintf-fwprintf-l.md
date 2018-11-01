@@ -1,10 +1,6 @@
 ---
-title: fprintf, _fprintf_l, fwprintf, _fwprintf_l | Microsoft Docs
-ms.custom: ''
+title: fprintf, _fprintf_l, fwprintf, _fwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwprintf
 - fprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7578a8a8c2bef7fe68e9a08ae987ac7c1609cb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403882"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637297"
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
@@ -85,13 +75,13 @@ int _fwprintf_l(
 
 ### <a name="parameters"></a>Parametri
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 *format*<br/>
 Stringa di controllo del formato.
 
-*Argomento*<br/>
+*argomento*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -99,17 +89,17 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fprintf** restituisce il numero di byte scritti. **fwprintf** restituisce il numero di caratteri "wide" scritto. Ognuna di queste funzioni restituisce invece un valore negativo quando si verifica un errore di output. Se *flusso* oppure *formato* è **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno -1 e impostare **errno** alla **EINVAL**. La stringa di formato non è selezionata per i caratteri di formattazione validi come avviene quando si utilizza **fprintf_s** oppure **fwprintf_s**.
+**fprintf** restituisce il numero di byte scritti. **fwprintf** restituisce il numero di caratteri wide scritti. Ognuna di queste funzioni restituisce invece un valore negativo quando si verifica un errore di output. Se *stream* oppure *formato* viene **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e impostare **errno** al **EINVAL**. La stringa di formato non è selezionata per i caratteri di formattazione validi come succede quando si usa **fprintf_s** oppure **fwprintf_s**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-**fprintf** formatta e visualizza una serie di caratteri e valori di output *flusso*. Ogni funzione *argomento* (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in *formato*. Per **fprintf**, la *formato* argomento ha la stessa sintassi e utilizzare presente nel **printf**.
+**fprintf** formatta e stampa una serie di caratteri e valori di output *flusso*. Ogni funzione *argomenti* (se presente) viene convertita e restituita in base alla specifica di formato corrispondente in *formato*. Per la **fprintf**, il *formato* argomento ha la stessa sintassi e utilizzo in cui sia presente nel **printf**.
 
-**fwprintf** è una versione a caratteri wide **fprintf**; nella **fwprintf**, *formato* è una stringa di caratteri "wide". Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fprintf** non supporta attualmente l'output in un flusso UNICODE.
+**fwprintf** è una versione a caratteri wide di **fprintf**; nella **fwprintf**, *formato* è una stringa di caratteri "wide". Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fprintf** non supporta attualmente l'output in un flusso UNICODE.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente.

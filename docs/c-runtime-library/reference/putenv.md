@@ -1,10 +1,6 @@
 ---
-title: putenv | Microsoft Docs
-ms.custom: ''
+title: putenv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - putenv
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - putenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - putenv function
 ms.assetid: 1dc49ef3-6b12-484c-8e60-7048bcc999f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d4081220515a86e5c9f87498e220f247e60724b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 395875ef918fb5d3e9ab2ce4269f61d860b1ee96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676863"
 ---
 # <a name="putenv"></a>putenv
 
