@@ -1,15 +1,9 @@
 ---
-title: -TLBOUT (nome. Al File TLB) | Microsoft Docs
-ms.custom: ''
+title: /TLBOUT (Assegna un nome al file TLB)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.TypeLibraryFile
 - /tlbout
-dev_langs:
-- C++
 helpviewer_keywords:
 - tlb files, renaming
 - TLBOUT linker option
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7d9ab5157bb39b890c867c90e3b6a77cf189c9ef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97659341d4566cd34fe705b89758929f0c1e995d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421271"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613811"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Assegna un nome al file TLB)
 

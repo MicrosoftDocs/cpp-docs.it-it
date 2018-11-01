@@ -1,31 +1,21 @@
 ---
-title: Basati su puntatori (C++) | Microsoft Docs
-ms.custom: ''
+title: Puntatori based (C++)
 ms.date: 10/09/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __based
 - _based
 - __based_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - __based keyword [C++]
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4465cb2965983c37ac9d758e424b58b5ed3304fd
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 771d3ee132e4cd63499fec886ef9f7cd06ec0260
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676369"
 ---
 # <a name="based-pointers-c"></a>Puntatori based (C++)
 

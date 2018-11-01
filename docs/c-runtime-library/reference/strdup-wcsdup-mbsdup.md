@@ -1,10 +1,6 @@
 ---
-title: _strdup, _wcsdup, _mbsdup | Microsoft Docs
-ms.custom: ''
+title: _strdup, _wcsdup, _mbsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -30,8 +26,6 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413512"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461516"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Duplica le stringhe.
 
 > [!IMPORTANT]
-> **mbsdup** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsdup** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -87,11 +77,11 @@ Stringa di origine con terminazione null.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore al percorso di archiviazione per la stringa copiata oppure **NULL** se l'archiviazione non può essere allocata.
+Ognuna di queste funzioni restituisce un puntatore al percorso di archiviazione per la stringa copiata oppure **NULL** se non è possibile allocare l'archiviazione.
 
 ## <a name="remarks"></a>Note
 
-Il **StrDup** chiamate di funzione [malloc](malloc.md) allocare spazio di archiviazione per una copia del *strSource* e quindi li copia *strSource* per il spazio allocato.
+Il **StrDup** chiamate di funzione [malloc](malloc.md) allocare spazio di archiviazione per una copia del *strSource* , che quindi copia *strSource* per il spazio allocato.
 
 **wcsdup** e **mbsdup** sono versioni a caratteri wide e caratteri multibyte di **StrDup**. Gli argomenti e il valore restituito di **wcsdup** sono caratteri wide, mentre quelli di stringhe **mbsdup** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
@@ -101,9 +91,9 @@ Il **StrDup** chiamate di funzione [malloc](malloc.md) allocare spazio di archiv
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-Poiché **StrDup** chiamate **malloc** per allocare spazio di archiviazione per la copia del *strSource*, è consigliabile sempre rilasciare la memoria chiamando la [libero](free.md) routine sul puntatore che viene restituito dalla chiamata a **StrDup**.
+In quanto **StrDup** chiamate **malloc** allocare spazio di archiviazione per la copia dei *strSource*, è consigliabile sempre rilasciare la memoria chiamando la [libero](free.md) sul puntatore che viene restituito dalla chiamata alla routine **StrDup**.
 
-Se **debug** e **CRTDBG_MAP_ALLOC** sono definiti **StrDup** e **wcsdup** vengono sostituiti dalle chiamate a **strdup_dbg**  e **wcsdup_dbg** per consentire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
+Se **debug** e **CRTDBG_MAP_ALLOC** vengono definiti **StrDup** e **wcsdup** vengono sostituite da chiamate agli **strdup_dbg**  e **wcsdup_dbg** per consentire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
 
 ## <a name="requirements"></a>Requisiti
 

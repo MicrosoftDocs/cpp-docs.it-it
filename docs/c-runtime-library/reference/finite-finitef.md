@@ -1,10 +1,6 @@
 ---
-title: _finite, _finitef | Microsoft Docs
-ms.custom: ''
+title: _finite, _finitef
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _finite
 - _finitef
@@ -28,23 +24,17 @@ f1_keywords:
 - math/_finite
 - math/_finitef
 - float/_finite
-dev_langs:
-- C++
 helpviewer_keywords:
 - finite function
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3367f13e68aa85e53d9f5f0ee83521ef465d3996
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b1bce6f1b2da77ed9de255f49dd8d0160e33e31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396641"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431663"
 ---
 # <a name="finite-finitef"></a>_finite, _finitef
 
@@ -69,11 +59,11 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Entrambi **finite** e **finitef** restituiscono un valore diverso da zero se l'argomento *x* è finito; ovvero, se -INF < *x* < + INF. Restituisce 0 se l'argomento è infinito o NAN.
+Entrambe **finite** e **finitef** restituiscono un valore diverso da zero se l'argomento *x* è finita; ovvero, se -INF < *x* < + INF. Restituisce 0 se l'argomento è infinito o NAN.
 
 ## <a name="remarks"></a>Note
 
-Il **finite** e **finitef** funzioni sono specifiche di Microsoft. Il **finitef** funzione è disponibile quando compilato per x86, ARM e ARM64 piattaforme.
+Il **finite** e **finitef** funzioni sono specifiche di Microsoft. Il **finitef** la funzione è solo disponibile quando compilato per x86, ARM o ARM64 piattaforme.
 
 ## <a name="requirements"></a>Requisiti
 

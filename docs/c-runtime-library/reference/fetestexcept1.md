@@ -1,11 +1,6 @@
 ---
-title: fetestexcept | Documenti Microsoft
-ms.custom: ''
+title: fetestexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fetestexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0450fcaddf8ca05484d0b2bd122ff006eb8355f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae170e4c5826e2053b330d81773b75f176303332
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397398"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667441"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -55,7 +44,7 @@ int fetestexcept(
 
 ### <a name="parameters"></a>Parametri
 
-*excepts*<br/>
+*tranne che ai*<br/>
 OR bit per bit dei flag di stato a virgola mobile da testare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -64,7 +53,7 @@ Se l'esito è positivo, restituisce una maschera di bit che contiene OR bit per 
 
 ## <a name="remarks"></a>Note
 
-Usare la funzione fetestexcept per determinare le eccezioni generate da un'operazione a virgola mobile. Usare la *excepts* parametro per specificare i flag di stato eccezione da testare. Il **fetestexcept** funzione vengono utilizzate queste macro delle eccezioni definite in \<fenv. h > in *excepts* e il valore restituito:
+Usare la funzione fetestexcept per determinare le eccezioni generate da un'operazione a virgola mobile. Usare la *eccetto* parametro per specificare quali flag di stato di eccezione da testare. Il **fetestexcept** funzione vengono utilizzate queste macro di eccezioni definite nelle \<fenv. h > in *eccetto* e il valore restituito:
 
 |Macro di eccezioni|Descrizione|
 |---------------------|-----------------|
@@ -75,7 +64,7 @@ Usare la funzione fetestexcept per determinare le eccezioni generate da un'opera
 |FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|
 |FE_ALLEXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
 
-L'oggetto specificato *excepts* argomento può essere 0, una delle macro eccezioni a virgola mobile supportati o bit per bit o di due o più delle macro. L'effetto di eventuali altri *excepts* valore dell'argomento non è definito.
+L'oggetto specificato *eccetto* argomento può essere 0, una delle macro di eccezioni a virgola mobile supportate o bit per bit di due o più macro. L'effetto di qualsiasi altra *eccetto* valore dell'argomento non è definito.
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 

@@ -1,10 +1,6 @@
 ---
-title: isupper, _isupper_l, iswupper, _iswupper_l | Microsoft Docs
-ms.custom: ''
+title: isupper, _isupper_l, iswupper, _iswupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -27,8 +23,6 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d58fc8e10fbc533787fe0e7b99194e282bb906f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 498644fc2de8a687e2b9b63a88591385055db6c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402101"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588435"
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
@@ -83,11 +73,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di una lettera maiuscola. **IsUpper** restituisce un valore diverso da zero se *c* è una lettera maiuscola (A - Z). **iswupper** restituisce un valore diverso da zero se *c* è un carattere "wide" che corrisponde a una lettera maiuscola, oppure se *c* fa parte di un set definito dall'implementazione di caratteri "wide" di cui nessuna **iswcntrl**, **iswdigit**, **iswpunct**, oppure **iswspace** è diverso da zero. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di una lettera maiuscola. **IsUpper** restituisce un valore diverso da zero se *c* è un carattere maiuscolo (A - Z). **iswupper** restituisce un valore diverso da zero se *c* è un carattere wide che corrisponde a una lettera maiuscola, oppure se *c* fa parte di un set definito dall'implementazione di caratteri wide per cui nessuno dei **iswcntrl**, **iswdigit**, **iswpunct**, oppure **iswspace** è diverso da zero. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni con il **l** suffisso usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno le **l** suffisso usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento delle **isupper** e **isupper_l** è definito se *c* non è EOF o compreso nell'intervallo tra 0 e 0xFF, inclusivo. Quando si utilizza una libreria di debug CRT e *c* non fa parte di questi valori, la generazione di funzioni è un'asserzione.
+Il comportamento delle **isupper** e **isupper_l** non è definito se *c* non è EOF o nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* è non uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

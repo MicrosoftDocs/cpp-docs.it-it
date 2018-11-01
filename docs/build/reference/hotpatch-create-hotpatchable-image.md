@@ -1,31 +1,21 @@
 ---
-title: -hotpatch (Crea immagine con patch a caldo) | Microsoft Docs
-ms.custom: ''
+title: /hotpatch (Crea immagine con funzionalità di patch a caldo)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /hotpatch
 - VC.Project.VCCLCompilerTool.CreateHotpatchableImage
-dev_langs:
-- C++
 helpviewer_keywords:
 - hot patching
 - -hotpatch compiler option [C++]
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97e1b6197ea60099457db7788ad7e24b96c9fcb8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b304edffc024fac084338789134269745111ba00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716976"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581441"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Crea immagine con funzionalità di patch a caldo)
 

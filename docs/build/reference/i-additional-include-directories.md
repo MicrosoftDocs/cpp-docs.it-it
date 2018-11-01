@@ -1,5 +1,5 @@
 ---
-title: /I (Directory di inclusione aggiuntive)
+title: /I (directory di inclusione aggiuntive)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
@@ -14,24 +14,22 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: b922a4472246bb13bfed4022f2f85061c5d1217b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
+ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563865"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750392"
 ---
-# <a name="i-additional-include-directories"></a>/I (Directory di inclusione aggiuntive)
+# <a name="i-additional-include-directories"></a>/I (directory di inclusione aggiuntive)
 
 Aggiunge una directory all'elenco delle directory cercati i file di inclusione.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-/I[ ]directory
-```
+> **/I**[]*directory*
 
-## <a name="arguments"></a>Argomenti
+### <a name="arguments"></a>Argomenti
 
 *Directory*<br/>
 La directory da aggiungere all'elenco delle directory cercati i file di inclusione.
@@ -40,13 +38,13 @@ La directory da aggiungere all'elenco delle directory cercati i file di inclusio
 
 Per aggiungere più di una directory, usare questa opzione più volte. Le directory vengono cercate solo fino a quando non viene trovato il file di inclusione specificato.
 
-È possibile usare questa opzione con l'Ignora percorso di inclusione Standard ([/X (Ignora a percorsi di inclusione Standard)](../../build/reference/x-ignore-standard-include-paths.md)) opzione.
+È possibile usare questa opzione con il ([/X (Ignora a percorsi di inclusione Standard)](../../build/reference/x-ignore-standard-include-paths.md)) opzione.
 
 Il compilatore cerca le directory nell'ordine seguente:
 
-1. Directory contenenti file di origine.
+1. Se specificato con un [#include (direttiva)](../../preprocessor/hash-include-directive-c-cpp.md) in forma di virgolette doppie, per prima cosa cerca le directory locali. La ricerca inizia nella stessa directory del file che contiene il **#include** istruzione. Se l'operazione non riesce a trovare il file, Cerca nella directory dei attualmente aperto file di inclusione, in ordine inverso in cui sono stati aperti. La ricerca inizia nella directory del file di inclusione padre e continua nelle directory superiori dei file di inclusione padre del padre.
 
-1. Directory specificate con il **/I** opzione nell'ordine che vengono rilevate da CL.
+1. Se specificato con un **#include** direttiva in angolo racchiudere tra parentesi quadre form o se la ricerca di directory locale non è riuscita, la ricerca nelle directory specificate usando la **/I** opzione nell'ordine in cui vengono rilevate li CL nella riga di comando.
 
 1. Directory specificate nella **inclusione** variabile di ambiente.
 
@@ -54,9 +52,7 @@ Il compilatore cerca le directory nell'ordine seguente:
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Fare clic sulla cartella **C/C++** .
-
-1. Scegliere il **generale** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **generale** pagina delle proprietà.
 
 1. Modificare il **directory di inclusione aggiuntive** proprietà.
 
@@ -66,7 +62,7 @@ Il compilatore cerca le directory nell'ordine seguente:
 
 ## <a name="example"></a>Esempio
 
-Il comando seguente cerca i file di inclusione richiesti da Main. c nell'ordine seguente: prima nella directory che contiene Main. c, quindi nella directory \INCLUDE, quindi nella directory \MY\INCLUDE e infine nelle directory assegnato a di inclusione variabile di ambiente.
+Il comando seguente cerca i file di inclusione richiesti da Main. c nel seguente ordine: in primo luogo, se specificato con le virgolette doppie, vengono cercati i file locali. Successivamente, ricerca continua nella directory \INCLUDE, quindi nella directory \MY\INCLUDE e infine nelle directory assegnato alla variabile di ambiente INCLUDE.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

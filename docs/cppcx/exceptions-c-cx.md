@@ -1,20 +1,13 @@
 ---
-title: Eccezioni (C + c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: Eccezioni (C++/CX)
 ms.date: 01/18/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e7514fdfc07fcbb4a1fff42d80fd138ab7d6043
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471701"
 ---
 # <a name="exceptions-ccx"></a>Eccezioni (C++/CX)
 
@@ -22,7 +15,7 @@ Gestione degli errori in C + + c++ /CX si basa sulle eccezioni. Il livello più 
 
 ## <a name="exceptions"></a>Eccezioni
 
-Nel programma C++, puoi generare e intercettare un'eccezione proveniente da un'operazione di Windows Runtime, un'eccezione derivata da `std::exception`, o un tipo definito dall'utente. Devi generare un'eccezione di Windows Runtime solo quando l'eccezione supera il limite dell'interfaccia binaria (ABI), ad esempio, quando il codice che intercetta la tua eccezione è scritto in JavaScript. Quando un'eccezione non Windows Runtime C++ raggiunge il limite dell'ABI, l'eccezione viene convertita in un `Platform::FailureException` eccezione, che rappresenta un valore HRESULT E_FAIL. Per altre informazioni su ABI, vedere [creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Nel programma C++, puoi generare e intercettare un'eccezione proveniente da un'operazione di Windows Runtime, un'eccezione derivata da `std::exception`, o un tipo definito dall'utente. Devi generare un'eccezione di Windows Runtime solo quando l'eccezione supera il limite dell'interfaccia binaria (ABI), ad esempio, quando il codice che intercetta la tua eccezione è scritto in JavaScript. Quando un'eccezione non Windows Runtime C++ raggiunge il limite dell'ABI, l'eccezione viene convertita in un `Platform::FailureException` eccezione, che rappresenta un valore HRESULT E_FAIL. Per ulteriori informazioni su ABI, vedi [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 È possibile dichiarare un [platform:: Exception](platform-exception-class.md) usando uno dei due costruttori che accettano un parametro HRESULT oppure un parametro HRESULT e un [platform:: String](platform-string-class.md)^ parametro che può essere passato attraverso il ABI a qualsiasi app di Windows Runtime che lo gestisce. In alternativa, puoi dichiarare un'eccezione usando uno di due overload del metodo [Exception::CreateException](platform-exception-class.md#createexception) che accettano un parametro HRESULT o un parametro HRESULT e un parametro `Platform::String^` .
 
@@ -66,11 +59,11 @@ Nell'esempio riportato di seguito viene illustrato come intercettare l'eccezione
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-Per intercettare le eccezioni generate durante un'operazione asincrona, utilizzare la classe dell'attività e Aggiungi una continuazione di gestione degli errori. La continuazione di gestione degli errori effettua il marshalling delle eccezioni generate in altri thread nel thread chiamante affinché tu possa gestire tutte le potenziali eccezioni da un unico punto nel codice. Per altre informazioni, vedere [programmazione asincrona in C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+Per intercettare le eccezioni generate durante un'operazione asincrona, utilizzare la classe dell'attività e Aggiungi una continuazione di gestione degli errori. La continuazione di gestione degli errori effettua il marshalling delle eccezioni generate in altri thread nel thread chiamante affinché tu possa gestire tutte le potenziali eccezioni da un unico punto nel codice. Per altre informazioni, vedere [Programmazione asincrona in C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 ## <a name="unhandlederrordetected-event"></a>Evento UnhandledErrorDetected
 
-In Windows 8.1 puoi sottoscrivere il [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) evento statico, che fornisce l'accesso agli errori non gestiti che stanno per arrestare il processo. Indipendentemente dall'origine, l'errore raggiunge il gestore come un [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) oggetto passato con gli argomenti dell'evento. Quando chiami `Propagate` sull'oggetto, crea e genera un'eccezione `Platform::*Exception` del tipo corrispondente al codice di errore. Nei blocchi catch puoi salvare lo stato utente, se necessario, quindi consentire il termine del processo chiamando `throw`oppure ripristinare uno stato noto del programma. 'esempio seguente mostra il modello di base:
+In Windows 8.1 puoi sottoscrivere il [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) evento statico, che fornisce l'accesso agli errori non gestiti che stanno per arrestare il processo. Indipendentemente dall'origine, l'errore raggiunge il gestore come oggetto [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) passato con gli argomenti dell'evento. Quando chiami `Propagate` sull'oggetto, crea e genera un'eccezione `Platform::*Exception` del tipo corrispondente al codice di errore. Nei blocchi catch puoi salvare lo stato utente, se necessario, quindi consentire il termine del processo chiamando `throw`oppure ripristinare uno stato noto del programma. 'esempio seguente mostra il modello di base:
 
 In app.xaml.h:
 

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2412 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2412
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2412
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2412
 ms.assetid: d1842b89-da09-4c35-89a1-84dc844a9f3e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee9c3b7b414bcbfa07fb289a76e9e481da6697c6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 85eb7f9ccf3251787f9631592a5fcca1aa1202a9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588032"
 ---
 # <a name="compiler-error-c2412"></a>Errore del compilatore C2412
 

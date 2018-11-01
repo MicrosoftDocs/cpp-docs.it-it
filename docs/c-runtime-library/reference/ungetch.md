@@ -1,10 +1,6 @@
 ---
-title: ungetch | Microsoft Docs
-ms.custom: ''
+title: ungetch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ungetch
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ungetch
-dev_langs:
-- C++
 helpviewer_keywords:
 - ungetch function
 ms.assetid: 6921232f-6317-41cd-948b-91d56a11bc0e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff42d774418a4c1e649ff355ccc8180132e75857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ede8c8c8a939b79132e41c2f4fd5713570c147df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407200"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484243"
 ---
 # <a name="ungetch"></a>ungetch
 

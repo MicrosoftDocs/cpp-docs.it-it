@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3714 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3714
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3714
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7102378acc2fe12335f1f2b3579f93cf02161b16
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9bfdf8b26ab599ef1a28483af7ebc28f0dbc1912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109652"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441873"
 ---
 # <a name="compiler-error-c3714"></a>Errore del compilatore C3714
 

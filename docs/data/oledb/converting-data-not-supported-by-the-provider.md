@@ -1,26 +1,15 @@
 ---
-title: Conversione di dati non supportati dal Provider | Microsoft Docs
-ms.custom: ''
+title: Conversione di dati non supportati dal provider
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB provider templates, unsupported data types
 ms.assetid: f495e50f-530a-4fab-ab54-e0c359785845
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 79889125675a3e544802eb700718dee0829457c5
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a53781f71a55dfb07dc996e5e25644d9337e4c63
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066123"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473439"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>Conversione di dati non supportati dal provider
 

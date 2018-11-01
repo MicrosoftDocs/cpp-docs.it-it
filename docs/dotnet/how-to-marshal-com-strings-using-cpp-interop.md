@@ -1,12 +1,7 @@
 ---
-title: "Procedura: effettuare il marshalling di stringhe COM tramite l'interoperabilità C++ | Microsoft Docs"
+title: "Procedura: Effettuare il marshalling di stringhe COM utilizzando l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: f758352c11cc5e7d8c66c2a29b69504b2c5ad641
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394179"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559120"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Procedura: Effettuare il marshalling di stringhe COM utilizzando l'interoperabilità C++
 

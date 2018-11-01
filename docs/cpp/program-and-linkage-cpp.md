@@ -1,23 +1,13 @@
 ---
-title: Programmi e collegamento (C++) | Microsoft Docs
-ms.custom: ''
+title: Programmi e collegamento (C++)
 ms.date: 04/09/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ef0f08efbcdf09420d53710a3f16326381f13c3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f509979a293f194333e610fbdae7be9d32ec121
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559861"
 ---
 # <a name="program-and-linkage-c"></a>Programma e collegamento (C++)
 

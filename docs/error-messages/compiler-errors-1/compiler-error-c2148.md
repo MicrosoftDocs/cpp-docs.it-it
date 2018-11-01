@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2148 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2148
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2148
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2148
 ms.assetid: e510c2c9-7b57-4ce8-be03-ba363e2cc5d9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b8e76228ff585f47a2cbe210ac3eb96d5d281a93
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 893f1f029b2ea1aaf7ff53a5ee5cee7fcbe36e7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114020"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440352"
 ---
 # <a name="compiler-error-c2148"></a>Errore del compilatore C2148
 

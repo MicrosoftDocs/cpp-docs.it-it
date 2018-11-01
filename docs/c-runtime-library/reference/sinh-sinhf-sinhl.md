@@ -1,10 +1,6 @@
 ---
-title: sinh, sinhf, sinhl | Documenti Microsoft
-ms.custom: ''
+title: sinh, sinhf, sinhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinhl
 - sinhf
@@ -26,8 +22,6 @@ f1_keywords:
 - sinh
 - sinhf
 - sinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sinh function
 - sinhl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 220bbeb1d78957be153e23b578f217c8098f7e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569806"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -72,7 +62,7 @@ Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **sinh** le funzioni restituiscono il seno iperbolico del *x*. Per impostazione predefinita, se il risultato è troppo grande **sinh** imposta **errno** al **ERANGE** e restituisce ±**HUGE_VAL**.
+Il **sinh** le funzioni restituiscono il seno iperbolico *x*. Per impostazione predefinita, se il risultato è troppo grande **sinh** imposta **errno** al **ERANGE** e restituisce +**HUGE_VAL**.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
@@ -83,7 +73,7 @@ Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_err
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **sinh** che accettano e restituiscono **float** oppure **lungo** **doppie** valori. In un programma C **sinh** accetta e restituisce sempre **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **sinh** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **sinh** accetta e restituisce sempre **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 

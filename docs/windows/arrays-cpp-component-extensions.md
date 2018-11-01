@@ -1,33 +1,23 @@
 ---
-title: Matrici (C + c++ /CLI e c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: Matrici (C + c++ /CLI e c++ /CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
 - lang::array
-dev_langs:
-- C++
 helpviewer_keywords:
 - array keyword [C++]
 - arrays [C++], multidimensional
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 29f84515bfa802af8d6463d34de9b6717c8df044
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1421434b1271d3c9caa11258647dd6ae357a2c0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632063"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Matrici (C + c++ /CLI e c++ /CX)
 

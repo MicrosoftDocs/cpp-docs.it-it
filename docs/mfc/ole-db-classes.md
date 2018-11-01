@@ -1,28 +1,18 @@
 ---
-title: Classi OLE DB | Microsoft Docs
-ms.custom: ''
+title: Classi OLE DB
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB consumers, support
 - COleDBRecordView class [MFC]
 ms.assetid: 65245d26-8743-4efd-9a72-90e19aef3c3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: efdc77adac947af81be9595ffabc313610e11ce9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b8d0924817afddf05dc775221a8d4498f2d4ed0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425223"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677734"
 ---
 # <a name="ole-db-classes"></a>Classi OLE DB
 

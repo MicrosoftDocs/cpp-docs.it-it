@@ -1,10 +1,6 @@
 ---
-title: open | Microsoft Docs
-ms.custom: ''
+title: apri
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - open
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - open
-dev_langs:
-- C++
 helpviewer_keywords:
 - open function
 ms.assetid: e3139118-4da2-434b-a551-fcf3fccf49b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 554be4f45b56b45bb169c39b4f3cbcc4d3c3e4e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 41cf59e17ad87dd9c2c8079ec48efa470a1eac3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396507"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632030"
 ---
 # <a name="open"></a>apri
 

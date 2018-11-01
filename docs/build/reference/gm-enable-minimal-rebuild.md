@@ -1,17 +1,11 @@
 ---
-title: -Gm (Attiva ricompilazione minima) | Microsoft Docs
-ms.custom: ''
+title: /Gm (Attiva ricompilazione minima)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MinimalRebuild
 - /Gm
 - /FD
 - VC.Project.VCCLWCECompilerTool.MinimalRebuild
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Gm compiler option [C++]
 - minimal rebuild
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f18881e79a3f82941f04dccbde210b2c62dcbca
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2a5bc4008ab9376367b3a32040c2a4a70147187f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570404"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (Attiva ricompilazione minima)
 

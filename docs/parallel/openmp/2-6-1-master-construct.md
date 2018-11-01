@@ -1,23 +1,13 @@
 ---
-title: 2.6.1 costrutto di master | Microsoft Docs
-ms.custom: ''
+title: 2.6.1 Costrutto master
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c092064b-ea57-4d4e-9c99-a004d65656fe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d82ae673e428c635172f35f9b0f682aa65dc2b8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0501b1fdfbd36829cee2793fc0f7bb03daeda900
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475530"
 ---
 # <a name="261-master-construct"></a>2.6.1 Costrutto master
 

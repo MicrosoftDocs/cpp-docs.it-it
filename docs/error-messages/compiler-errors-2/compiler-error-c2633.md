@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2633 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2633
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2633
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2633
 ms.assetid: a7aceb65-4255-42d6-a8fb-e3cb6c4d2270
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2750cad468158ec5f8eddc967392ea68c1029119
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 746f01706c7c0ec09a64c5faee748f9582ac9a14
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108562"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662566"
 ---
 # <a name="compiler-error-c2633"></a>Errore del compilatore C2633
 

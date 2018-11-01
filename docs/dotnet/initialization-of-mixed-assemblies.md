@@ -1,12 +1,6 @@
 ---
-title: Inizializzazione di assembly misti | Microsoft Docs
-ms.custom: ''
+title: Inizializzazione di assembly misti
 ms.date: 03/09/2018
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - mixed assemblies [C++], loader lock
 - loader lock [C++]
@@ -16,23 +10,18 @@ helpviewer_keywords:
 - custom locales [C++]
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439575"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665010"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inizializzazione di assembly misti
 
 Gli sviluppatori di Windows devono essere sempre diffidenti nei confronti del blocco del caricatore durante l'esecuzione di codice durante `DllMain`. Tuttavia, esistono alcune considerazioni aggiuntive che entrano in gioco quando si lavora con C + + / assembly clr in modalità mista.
 
-Il codice all'interno [DllMain](/windows/desktop/Dlls/dllmain) non deve accedere a CLR. Questo significa che `DllMain` non deve chiamare direttamente o indirettamente funzioni gestite, che nessun codice gestito deve essere dichiarato o implementato in `DllMain`e che all'interno di `DllMain`non deve avere luogo nessuna procedura di Garbage Collection o caricamento automatico di libreria.
+Il codice all'interno di [DllMain](/windows/desktop/Dlls/dllmain) non deve accedere a CLR. Questo significa che `DllMain` non deve chiamare direttamente o indirettamente funzioni gestite, che nessun codice gestito deve essere dichiarato o implementato in `DllMain`e che all'interno di `DllMain`non deve avere luogo nessuna procedura di Garbage Collection o caricamento automatico di libreria.
 
 ## <a name="causes-of-loader-lock"></a>Cause del blocco del caricatore
 

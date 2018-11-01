@@ -1,12 +1,7 @@
 ---
-title: 'Procedura: compilare codice MFC e ATL tramite - clr | Microsoft Docs'
+title: 'Procedura: compilare codice MFC e ATL tramite - clr'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], interoperability
 - ATL [C++], interoperability
@@ -18,17 +13,12 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 09cfc38626cab785eb7fa1c34178aa28aa23dac6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e5e9f800d6316e3b4f1209ec62440ae42233fc13
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069934"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638074"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Procedura: compilare codice MFC e ATL tramite /clr
 

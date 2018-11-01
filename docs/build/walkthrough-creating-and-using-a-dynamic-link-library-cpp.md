@@ -1,26 +1,17 @@
 ---
-title: 'Procedura dettagliata: Creare e usare il proprio libreria a collegamento dinamico (C++) | Microsoft Docs'
+title: 'Procedura dettagliata: Creare e usare il proprio libreria a collegamento dinamico (C++)'
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9806a17bfb603ff54609f2d509c50d0a5d91e15d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821257"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591009"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: Creare e usare il proprio libreria a collegamento dinamico (C++)
 
@@ -64,7 +55,7 @@ In questo set di attività, si crea un progetto per la DLL, aggiungere il codice
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017-version-153-or-later"></a>Per creare un progetto DLL in Visual Studio 2017 versione 15.3 o versione successiva
 
-1. Nella barra dei menu, scegliere **File** > **New** > **progetto** per aprire la **nuovo progetto** nella finestra di dialogo.
+1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Nuovo progetto**.
 
 1. Nel riquadro sinistro della finestra di **nuovo progetto** finestra di dialogo, espandere **installato** e **Visual C++** se necessario e quindi scegliere **Windows Desktop** . Nel riquadro centrale, selezionare **Creazione guidata applicazione Desktop Windows**. Immettere `MathLibrary` nella **nome** casella per specificare un nome per il progetto.
 
@@ -405,7 +396,7 @@ Premere un tasto qualsiasi per chiudere la finestra di comando.
 
 Ora che è stata creata una DLL e un'applicazione client, è possibile provare. Provare a impostare i punti di interruzione nel codice dell'app client ed eseguire l'app nel debugger. Che cosa accade quando si esegue una chiamata di libreria. Aggiungere altre funzioni nella libreria o un'altra app client che usa la DLL di scrittura.
 
-Quando si distribuisce l'app, è necessario distribuire anche le DLL Usa. Il modo più semplice per rendere disponibili le DLL che si compila o che includono di terze parti per l'app è di inserirli nella stessa directory dell'app, noto anche come *distribuzione app-local*. Per altre informazioni sulla distribuzione, vedere [distribuzione in Visual C++](..\ide\deployment-in-visual-cpp.md).
+Quando si distribuisce l'app, è necessario distribuire anche le DLL Usa. Il modo più semplice per rendere disponibili le DLL che si compila o che includono di terze parti per l'app è di inserirli nella stessa directory dell'app, noto anche come *distribuzione app-local*. Per altre informazioni sulla distribuzione, vedere [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,25 +1,15 @@
 ---
-title: '&lt;cstdint&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cstdint&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <cstdint>
-dev_langs:
-- C++
 ms.assetid: 87afafb2-c630-4383-a2fc-a6b47c639e21
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6bc849aadab49b5fa164f8f91699071fdc84776f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cc380c4cfe1061a3b4abf7b9d766282425555b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579361"
 ---
 # <a name="ltcstdintgt"></a>&lt;cstdint&gt;
 

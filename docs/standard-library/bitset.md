@@ -1,28 +1,18 @@
 ---
-title: '&lt;bitset&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;bitset&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <bitset>
-dev_langs:
-- C++
 helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9294edb0a6b258fff9041c01dc4354e918a8c380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a0a38c97027c8d41fca3d6d7e9b7b96e80b3232
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841634"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656911"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 

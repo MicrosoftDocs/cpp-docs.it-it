@@ -1,10 +1,6 @@
 ---
-title: _msize_dbg | Microsoft Docs
-ms.custom: ''
+title: _msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - _msize_dbg
 - msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451758"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629125"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -55,23 +45,23 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>Parametri
 
-*Dati utente*<br/>
+*userData*<br/>
 Puntatore al blocco di memoria per il quale determinare le dimensioni.
 
 *blockType*<br/>
-Tipo del blocco di memoria specificato: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**.
+Tipo di blocco di memoria specificato: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Al termine, **msize_dbg** restituisce le dimensioni (in byte) del blocco di memoria specificato; in caso contrario restituirà **NULL**.
+Al termine, **msize_dbg** restituisce le dimensioni (in byte) del blocco di memoria specificato; in caso contrario, restituisce **NULL**.
 
 ## <a name="remarks"></a>Note
 
-**msize_dbg** è una versione di debug nel _[msize](msize.md) (funzione). Quando si [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **msize_dbg** viene ridotta a una chiamata a **msize**. Entrambi **msize** e **msize_dbg** calcolare le dimensioni di un blocco di memoria nell'heap di base, ma **msize_dbg** aggiunge due funzionalità di debug: include i buffer presenti a entrambi i lati dell'utente parte del blocco di memoria in dimensione restituita e consente i calcoli delle dimensioni per i tipi di blocco specifico.
+**msize_dbg** è una versione di debug nel _[msize](msize.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **msize_dbg** viene ridotta a una chiamata a **msize**. Entrambe **msize** e **msize_dbg** calcolare le dimensioni di un blocco di memoria nell'heap di base, ma **msize_dbg** aggiunge due funzionalità di debug: include i buffer su entrambi i lati dell'utente parte del blocco di memoria nelle dimensioni restituite e consente i calcoli delle dimensioni per tipi di blocchi specifici.
 
 Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la sua versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null **msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** alla **EINVAL** e restituisce -1.
+Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null **msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** al **EINVAL** e restituisce -1.
 
 ## <a name="requirements"></a>Requisiti
 

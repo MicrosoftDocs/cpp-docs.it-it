@@ -1,10 +1,6 @@
 ---
-title: strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft Docs
-ms.custom: ''
+title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspn_l
 - wcsspn
@@ -30,8 +26,6 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415161"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477314"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
 Restituisce l'indice del primo carattere in una stringa, che non appartiene a un set di caratteri.
 
 > [!IMPORTANT]
-> **mbsspn** e **mbsspn_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsspn** e **mbsspn_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -99,15 +89,15 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un valore intero che specifica la lunghezza della sottostringa di *str* costituito interamente caratteri *strCharSet*. Se *str* inizia con un carattere non incluso in *strCharSet*, la funzione restituisce 0.
+Restituisce un valore intero che specifica la lunghezza della sottostringa in *str* composta interamente di caratteri *strCharSet*. Se *str* inizia con un carattere non incluso in *strCharSet*, la funzione restituisce 0.
 
 ## <a name="remarks"></a>Note
 
-Il **strspn** funzione restituisce l'indice del primo carattere in *str* che non appartiene al set di caratteri *strCharSet*. La ricerca non include i caratteri Null di terminazione.
+Il **strspn** restituisce l'indice del primo carattere nella *str* che non appartiene al set di caratteri *strCharSet*. La ricerca non include i caratteri Null di terminazione.
 
-**wcsspn** e **mbsspn** sono versioni a caratteri wide e caratteri multibyte di **strspn**. Gli argomenti di **wcsspn** sono caratteri wide, mentre quelli di stringhe **mbsspn** sono stringhe a caratteri multibyte. **mbsspn** convalida i propri parametri. Se *str* oppure *strCharSet* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, **_mbspn** imposta **errno** al **EINVAL** e restituisce 0. **strspn** e **wcsspn** non convalidano i relativi parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcsspn** e **mbsspn** sono versioni a caratteri wide e caratteri multibyte di **strspn**. Gli argomenti di **wcsspn** sono caratteri wide, mentre quelli di stringhe **mbsspn** sono stringhe a caratteri multibyte. **mbsspn** convalida i propri parametri. Se *str* oppure *strCharSet* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, **_mbspn** imposta **errno** al **EINVAL** e restituisce 0. **strspn** e **wcsspn** non convalidano i relativi parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

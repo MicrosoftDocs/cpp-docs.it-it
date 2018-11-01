@@ -1,10 +1,6 @@
 ---
-title: _mktemp, _wmktemp | Microsoft Docs
-ms.custom: ''
+title: _mktemp, _wmktemp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmktemp
 - _mktemp
@@ -27,8 +23,6 @@ f1_keywords:
 - tmktemp
 - _wmktemp
 - _mktemp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmktemp function
 - _mktemp function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 087348b3cc59fb1b47699fc0e64f533c22d992b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaba9e4a68523c0d79762c6a7ff54c238e397d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404347"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554166"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 
@@ -80,11 +70,11 @@ Modello di nome di file.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore a nameTemplate modificato. La funzione restituisce **NULL** se *nameTemplate* non è corretto o non sono più presenti nomi univoci possono essere creati da nameTemplate specificato.
+Ognuna di queste funzioni restituisce un puntatore a di nameTemplate modificato. La funzione restituisce **NULL** se *nameTemplate* non è corretto o non è più nomi univoci possono essere creati da di nameTemplate specificato.
 
 ## <a name="remarks"></a>Note
 
-Il **mktemp** funzione crea un nome file univoco modificando il *nameTemplate* argomento. **mktemp** gestisce automaticamente gli argomenti di stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso dal sistema in fase di esecuzione. **wmktemp** è una versione a caratteri wide **mktemp**; l'argomento e il valore restituito di **wmktemp** sono stringhe a caratteri "wide". **wmktemp** e **mktemp** si comportano in modo identico in caso contrario, con la differenza che **wmktemp** gestiscono le stringhe di caratteri multibyte.
+Il **mktemp** funzione crea un nome file univoco modificando il *nameTemplate* argomento. **mktemp** gestisce automaticamente gli argomenti stringa di caratteri multibyte come appropriato, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso dal sistema in fase di esecuzione. **wmktemp** è una versione a caratteri wide di **mktemp**; l'argomento e il valore restituito **wmktemp** sono stringhe a caratteri wide. **wmktemp** e **mktemp** hanno lo stesso comportamento in caso contrario, con la differenza che **wmktemp** non gestisce le stringhe di caratteri multibyte.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -92,17 +82,17 @@ Il **mktemp** funzione crea un nome file univoco modificando il *nameTemplate* a
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-Il *nameTemplate* argomento ha il formato *base * * XXXXXX*, dove *base* fa parte il nuovo nome di file che viene fornito e ogni X è un segnaposto per un carattere fornito da **mktemp**. Ogni carattere del segnaposto nella *nameTemplate* deve essere una x maiuscola **mktemp** mantiene *base* e sostituisce il primo X finale con un carattere alfabetico. **mktemp** sostituisce il seguente carattere finale x con un valore di cinque cifre; questo valore è un numero univoco che identifica la chiamata di processo, o nei programmi multithread, il thread chiamante.
+Il *nameTemplate* argomento ha il formato *base * * XXXXXX*, dove *base* è la parte del nome del nuovo file che viene fornito e ogni X è un segnaposto per un carattere fornito da **mktemp**. Ogni carattere del segnaposto nella *nameTemplate* deve essere una x maiuscola. **mktemp** mantiene *base* e sostituisce la prima X finale con un carattere alfabetico. **mktemp** sostituisce il carattere finale seguente x con un valore di cinque cifre; questo valore è un numero univoco che identifica il processo chiamante oppure nei programmi multithreading, il thread chiamante.
 
-Ogni chiamata completata a **mktemp** modifica *nameTemplate*. In ogni chiamata successiva dello stesso processo o thread con lo stesso *nameTemplate* argomento **mktemp** cerca i nomi di file che corrispondono a quelli restituiti da **mktemp** in chiamate precedenti. Se non esiste alcun file per un determinato nome **mktemp** restituisce tale nome. Se sono presenti file per tutti i nomi, in precedenza restituiti **mktemp** crea un nuovo nome sostituendo il carattere alfabetico e utilizzato nel nome restituito in precedenza con la successiva lettera minuscola disponibile, in ordine, dal 'a' a 'z'. Ad esempio, se *base* è:
+Ogni chiamata completata a **mktemp** modificato *nameTemplate*. In ogni chiamata successiva dallo stesso processo o thread con lo stesso *nameTemplate* argomento **mktemp** controlli per i nomi di file che corrispondono ai nomi restituiti da **mktemp** in chiamate precedenti. Se non esiste alcun file per un determinato nome, **mktemp** restituisce tale nome. Se sono presenti file per tutti i nomi, in precedenza restituiti **mktemp** crea un nuovo nome sostituendo il carattere alfabetico usato nel nome restituito in precedenza con la successiva lettera minuscola disponibile, in ordine dalla 'a' a 'z'. Ad esempio, se *base* è:
 
 > **Fn**
 
-e il valore di cinque cifre fornito dal **mktemp** 12345, il nome restituito è:
+e il valore di cinque cifre fornito da **mktemp** è 12345, il primo nome restituito è:
 
 > **fna12345**
 
-Se questo nome viene utilizzato per creare file FNA12345 e il file esiste ancora, il nome successivo restituito in una chiamata dallo stesso processo oppure thread con lo stesso *base* per *nameTemplate* è:
+Se questo nome viene usato per creare il file FNA12345 e questo file esiste ancora, il successivo nome restituito in una chiamata dallo stesso processo o thread con lo stesso *base* per *nameTemplate* è:
 
 > **fnb12345**
 
@@ -110,9 +100,9 @@ Se FNA12345 non esiste, il successivo nome restituito è:
 
 > **fna12345**
 
-**mktemp** consente di creare un massimo di 26 nomi di file univoco per qualsiasi combinazione specifica di *base* e *nameTemplate* valori. Pertanto, FNZ12345 è l'ultimo nome file univoco **mktemp** possono creare per il *base* e *nameTemplate* valori utilizzati in questo esempio.
+**mktemp** può creare al massimo 26 nomi di file univoci per qualsiasi combinazione specificata di *base* e *nameTemplate* valori. Pertanto, FNZ12345 è l'ultimo nome file univoco **mktemp** possono creare per il *base* e *nameTemplate* valori usati in questo esempio.
 
-In caso di errore, **errno** è impostata. Se *nameTemplate* ha un formato non valido (ad esempio, un valore minore di 6 x), **errno** è impostato su **EINVAL**. Se **mktemp** è in grado di creare un nome univoco perché tutti i nomi di file possibile 26 esistono già, **mktemp** imposta nameTemplate su una stringa vuota e restituisce **EEXIST**.
+In caso di errore **errno** è impostata. Se *nameTemplate* ha un formato non valido (ad esempio meno di 6 x), **errno** è impostata su **EINVAL**. Se **mktemp** è in grado di creare un nome univoco, poiché tutti i 26 possibili nomi di file già presenti, **mktemp** imposta nameTemplate su una stringa vuota e restituisce **EEXIST**.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

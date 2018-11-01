@@ -1,10 +1,6 @@
 ---
-title: sscanf, _sscanf_l, swscanf, _swscanf_l | Microsoft Docs
-ms.custom: ''
+title: sscanf, _sscanf_l, swscanf, _swscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - swscanf
 - sscanf
@@ -29,8 +25,6 @@ f1_keywords:
 - _stscanf_l
 - sscanf
 - _swscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - swscanf function
 - _stscanf function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ac67b27564f694631977fd21c96922132b633e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661968"
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
@@ -94,9 +84,9 @@ int _swscanf_l(
 Dati archiviati
 
 *format*<br/>
-Stringa di controllo del formato. Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Stringa di controllo del formato. Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*Argomento*<br/>
+*argomento*<br/>
 Argomenti facoltativi
 
 *locale*<br/>
@@ -104,22 +94,22 @@ Impostazioni locali da usare
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della conversione prima.
+Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della prima conversione.
 
-Se *buffer* oppure *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+Se *buffer* oppure *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **sscanf** funzione legge i dati dal *buffer* nel percorso specificato da ciascuna *argomento*. Ogni *argomento* deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo in *formato*. Il *formato* controlli argomento l'interpretazione dell'input di campi e ha lo stesso modulo e funziona come il *formato* argomento per il **scanf** (funzione). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **sscanf** funzione legge i dati dal *buffer* nella posizione specificata da ogni *argomento*. Ogni *argomenti* deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo nelle *formato*. Il *formato* argomento controlla l'interpretazione dell'input campi e ha lo stesso formato e funzione come il *formato* argomento per il **scanf** (funzione). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> Durante la lettura di una stringa con **sscanf**, specificare sempre una larghezza per il **%s** formato (ad esempio **"% 32s"** anziché **"%s"**); in caso contrario , input formattato in modo non corretto può causare un sovraccarico del buffer.
+> Durante la lettura di una stringa con **sscanf**, specificare sempre una larghezza per il **%s** formato (ad esempio **"% 32s"** anziché **"%s"**); in caso contrario , input formattato in modo errato può facilmente causare un sovraccarico del buffer.
 
-**swscanf** è una versione a caratteri wide **sscanf**; gli argomenti da **swscanf** sono stringhe a caratteri "wide". **sscanf** non gestisce i caratteri esadecimali multibyte. **swscanf** non gestisce esadecimale a larghezza intera Unicode o caratteri "area di compatibilità". In caso contrario, **swscanf** e **sscanf** si comportano in modo identico.
+**swscanf** è una versione a caratteri wide di **sscanf**; gli argomenti **swscanf** sono stringhe a caratteri wide. **sscanf** non gestisce caratteri esadecimali multibyte. **swscanf** non gestisce esadecimali a larghezza intera Unicode o caratteri "area di compatibilità". In caso contrario, **swscanf** e **sscanf** si comportano in modo identico.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

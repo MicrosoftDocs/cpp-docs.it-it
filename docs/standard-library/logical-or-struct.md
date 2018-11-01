@@ -1,30 +1,20 @@
 ---
-title: Struct logical_or | Microsoft Docs
-ms.custom: ''
+title: logical_or (struct)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::logical_or
-dev_langs:
-- C++
 helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86074c341e26965778aaa5668c219c721a984d79
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f0d585fe2d8fd231f9d39c89aa0b1bcdbdc090b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318908"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572653"
 ---
-# <a name="logicalor-struct"></a>Struct logical_or
+# <a name="logicalor-struct"></a>logical_or (struct)
 
 Oggetto funzione predefinito che esegue l'operazione di disgiunzione logica ( `operator||`) negli argomenti.
 

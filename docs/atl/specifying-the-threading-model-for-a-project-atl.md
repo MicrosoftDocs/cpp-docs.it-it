@@ -1,12 +1,6 @@
 ---
-title: Specifica il modello di Threading per un progetto (ATL) | Microsoft Docs
-ms.custom: ''
+title: Specifica di un modello di threading per un progetto (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ATL_FREE_THREADED macro
 - _ATL_APARTMENT_THREADED macro
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - threading [ATL], models
 - _ATL_SINGLE_THREADED macro
 ms.assetid: 6b571078-521c-4f3e-9f08-482aa235a822
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8a37a3ec730b727f6e214aafad1a4acc65b1dc3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 419c9880573c2058b3bb60b9c77e4f3ca065fab7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760029"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569884"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>Specifica di un modello di threading per un progetto (ATL)
 

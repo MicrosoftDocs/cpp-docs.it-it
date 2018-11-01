@@ -1,10 +1,6 @@
 ---
-title: modf, modff, modfl | Microsoft Docs
-ms.custom: ''
+title: modf, modff, modfl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - modff
 - modf
@@ -30,23 +26,17 @@ f1_keywords:
 - math/modf
 - math/modff
 - math/modfl
-dev_langs:
-- C++
 helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87cddb8b565cdc369e6b1e9679583db64039bb49
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404831"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478065"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -79,11 +69,11 @@ Questa funzione restituisce la parte frazionaria con segno di *x*. Non vi è res
 
 ## <a name="remarks"></a>Note
 
-Il **modf** funzioni suddividono il valore a virgola mobile *x* in frazionari e parti di integer, ognuno dei quali ha lo stesso segno *x*. La parte decimale con segno del *x* viene restituito. La parte intera viene archiviata come valore a virgola mobile e alla *intptr*.
+Il **modf** funzioni suddividono il valore a virgola mobile *x* in parte frazionaria e parte intera, ognuno dei quali ha lo stesso segno *x*. La parte frazionaria con segno di *x* viene restituito. La parte intera viene archiviata come un valore a virgola mobile in corrispondenza *intptr*.
 
-**modf** ha un'implementazione che utilizza Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**modf** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ consente l'overload, pertanto è possibile chiamare degli overload di **modf** che accettano e restituiscono **float** oppure **lungo** **doppie** parametri. In un programma C **modf** sempre accetta due valori double e restituisce un valore double.
+C++ consente l'overload, quindi è possibile chiamare overload di **modf** che accettano e restituiscono **float** oppure **long** **double** parametri. In un programma C **modf** sempre accetta due valori double e restituisce un valore double.
 
 ## <a name="requirements"></a>Requisiti
 

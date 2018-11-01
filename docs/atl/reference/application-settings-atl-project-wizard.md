@@ -1,27 +1,17 @@
 ---
-title: Creazione guidata progetto di ATL, impostazioni applicazione | Microsoft Docs
-ms.custom: ''
+title: Impostazioni applicazione, Creazione guidata progetto ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.atl.com.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 127e5187f2e6511279633ffe9b5e26b24014f6b2
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e026db8c1d2caacd9af15fb923d194750c9d8217
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070647"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622131"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto ATL
 

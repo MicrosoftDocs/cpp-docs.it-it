@@ -1,16 +1,10 @@
 ---
-title: 'Operatori di uguaglianza: = = e! = | Microsoft Docs'
-ms.custom: ''
+title: 'Operatori di uguaglianza: == e !='
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - not_eq
 - '!='
 - ==
-dev_langs:
-- C++
 helpviewer_keywords:
 - '!= operator'
 - equality operator
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1072892c4ad69396c62a728f7e828e9c683d155
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d6248d4a31c478b62e5fbe304d9bde9b51b7cb06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068481"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635597"
 ---
 # <a name="equality-operators--and-"></a>Operatori di uguaglianza: == e !=
 

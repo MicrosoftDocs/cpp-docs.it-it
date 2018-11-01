@@ -1,10 +1,6 @@
 ---
-title: strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l | Microsoft Docs
-ms.custom: ''
+title: strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcsnlen
 - strnlen_s
@@ -40,8 +36,6 @@ f1_keywords:
 - _mbstrnlen
 - strnlen
 - _tcscnlen_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcscnlen function
 - _mbstrnlen function
@@ -63,23 +57,19 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 22adcaafc54a6b086629b7b9087b7088001bba85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7f5050a0ab4ff0f35a28faf039688eedc2f3a8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602566"
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 
 Ottiene la lunghezza di una stringa, usando le impostazioni locali correnti o quelle che sono state passate. Queste sono le versioni più sicure di [strlen, wcslen, mbslen, mbslen_l, mbstrlen, mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).
 
 > [!IMPORTANT]
-> **mbsnlen**, **mbsnlen_l**, **mbstrnlen**, e **mbstrnlen_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsnlen**, **mbsnlen_l**, **mbstrnlen**, e **mbstrnlen_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -133,7 +123,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Queste funzioni restituiscono il numero di caratteri nella stringa, escluso il valore null finale. Se è presente alcun carattere di terminazione null entro i primi *numberOfElements* byte della stringa (o i caratteri "wide" per **wcsnlen**), quindi *numberOfElements* viene restituito al indicare la condizione di errore. le stringhe con terminazione null hanno lunghezze è rigorosamente minore *numberOfElements*.
+Queste funzioni restituiscono il numero di caratteri nella stringa, escluso il valore null finale. Se è presente alcun carattere di terminazione null entro i primi *numberOfElements* byte della stringa (o caratteri wide per **wcsnlen**), quindi *numberOfElements* viene restituito al indicare la condizione di errore. stringhe con terminazione null hanno lunghezze è rigorosamente minore *numberOfElements*.
 
 **mbstrnlen** e **mbstrnlen_l** restituiscono -1 se la stringa contiene un carattere multibyte non valido.
 
@@ -142,13 +132,13 @@ Queste funzioni restituiscono il numero di caratteri nella stringa, escluso il v
 > [!NOTE]
 > **strnlen** non è una sostituzione per **strlen**; **strnlen** dovrà essere utilizzato solo per calcolare le dimensioni dei dati non attendibili entranti in un buffer di dimensione nota, ad esempio, un pacchetto di rete. **strnlen** calcola la lunghezza ma non oltrepassa la fine del buffer se la stringa senza terminazione. Per altre situazioni, utilizzare **strlen**. (Lo stesso vale per **wcsnlen**, **mbsnlen**, e **mbstrnlen**.)
 
-Ognuna di queste funzioni restituisce il numero di caratteri *str*, escluso il carattere di terminazione null. Tuttavia, **strnlen** e **strnlen_s** interpretare la stringa come stringa di caratteri a byte singolo e di conseguenza, il valore restituito è sempre uguale al numero di byte, anche se la stringa contiene multibyte caratteri. **wcsnlen** e **wcsnlen_s** sono versioni a caratteri wide di **strnlen** e **strnlen_s** rispettivamente; gli argomenti per **wcsnlen**  e **wcsnlen_s** sono stringhe a caratteri "wide" e il numero di caratteri è espresso in unità a caratteri "wide". In caso contrario, **wcsnlen** e **strnlen** si comportano in modo identico, come gli **strnlen_s** e **wcsnlen_s**.
+Ognuna di queste funzioni restituisce il numero di caratteri *str*, escluso il carattere di terminazione null. Tuttavia **strnlen** e **strnlen_s** interpretare la stringa come una stringa di caratteri a byte singolo e di conseguenza, il valore restituito è sempre uguale al numero di byte, anche se la stringa contiene multibyte caratteri. **wcsnlen** e **wcsnlen_s** sono versioni a caratteri wide di **strnlen** e **strnlen_s** rispettivamente; gli argomenti per **wcsnlen**  e **wcsnlen_s** sono stringhe a caratteri wide e il numero di caratteri si trovano in unità a caratteri wide. In caso contrario, **wcsnlen** e **strnlen** si comportano in modo identico, come fanno **strnlen_s** e **wcsnlen_s**.
 
 **strnlen**, **wcsnlen**, e **mbsnlen** non convalidano i relativi parametri. Se *str* viene **NULL**, si verifica una violazione di accesso.
 
 **strnlen_s** e **wcsnlen_s** convalidano i propri parametri. Se *str* viene **NULL**, le funzioni restituiscono 0.
 
-**mbstrnlen** inoltre convalida i propri parametri. Se *str* viene **NULL**, o se *numberOfElements* è maggiore di **INT_MAX**, **mbstrnlen** genera un'eccezione di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **mbstrnlen** imposta **errno** al **EINVAL** e restituisce -1.
+**mbstrnlen** inoltre convalida i propri parametri. Se *str* viene **NULL**, o se *numberOfElements* è maggiore di quella **INT_MAX**, **mbstrnlen** genera un'eccezione di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **mbstrnlen** imposta **errno** al **EINVAL** e restituisce -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -158,9 +148,9 @@ Ognuna di queste funzioni restituisce il numero di caratteri *str*, escluso il c
 |**tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
 |**tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
-**mbsnlen** e **mbstrnlen** restituiscono il numero di caratteri multibyte in una stringa di caratteri multibyte. **mbsnlen** riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte corrente che è attualmente in uso o in base alle impostazioni locali passato; ma non testa la validità dei caratteri multibyte. **mbstrnlen** verifica la validità di caratteri multibyte e riconosce le sequenze di caratteri multibyte. Se la stringa che viene passata a **mbstrnlen** contiene un carattere multibyte non valido **errno** è impostato su **EILSEQ**.
+**mbsnlen** e **mbstrnlen** restituisce il numero di caratteri multibyte in una stringa di caratteri multibyte. **mbsnlen** riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso o in base alle impostazioni locali passate, ma non testa la validità dei caratteri multibyte. **mbstrnlen** verifica la validità di caratteri multibyte e riconosce le sequenze di caratteri multibyte. Se la stringa che viene passata a **mbstrnlen** contiene un carattere multibyte non valido **errno** è impostata su **EILSEQ**.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno il **l** suffisso utilizzare le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali e le versioni che hanno il **l** suffisso In alternativa, usare il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali; vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno le **l** suffisso usare le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali e le versioni che hanno il **l** suffisso Usare invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

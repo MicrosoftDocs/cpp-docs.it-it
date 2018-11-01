@@ -1,27 +1,17 @@
 ---
-title: Errore irreversibile del compilatore di risorse RW1023 | Microsoft Docs
-ms.custom: ''
+title: Errore irreversibile del compilatore di risorse RW1023
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RW1023
-dev_langs:
-- C++
 helpviewer_keywords:
 - RW1023
 ms.assetid: 1fe0964a-a8cc-4ffa-a427-dbce39f23173
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 298cde9d9f44ace74e7e46080dcbeeff72b8bb33
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: da4f9588d115654fd676585cad4256ca91ea8ac3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093493"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660851"
 ---
 # <a name="resource-compiler-fatal-error-rw1023"></a>Errore irreversibile del compilatore di risorse RW1023
 

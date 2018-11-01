@@ -1,10 +1,6 @@
 ---
-title: _CrtMemCheckpoint | Microsoft Docs
-ms.custom: ''
+title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtMemCheckpoint
 apilocation:
@@ -23,22 +19,16 @@ f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
 - crtdbg/_CrtMemCheckpoint
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107570"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589517"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -59,7 +49,7 @@ Puntatore alla **CrtMemState** struttura da riempire con il checkpoint di memori
 
 ## <a name="remarks"></a>Note
 
-Il **CrtMemCheckpoint** funzione crea uno snapshot dello stato corrente dell'heap di debug in qualsiasi momento. Questo snapshot potrà essere usato da altre funzioni dello stato dell'heap, ad esempio [_CrtMemDifference](crtmemdifference.md), per rilevare perdite di memoria e altri problemi. Quando [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtMemState** vengono rimosse durante la pre-elaborazione.
+Il **CrtMemCheckpoint** funzione crea uno snapshot dello stato corrente dell'heap di debug in qualsiasi momento. Questo snapshot potrà essere usato da altre funzioni dello stato dell'heap come [_CrtMemDifference](crtmemdifference.md) per aiutare a rilevare perdite di memoria e altri problemi. Quando [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtMemState** vengono rimosse durante la pre-elaborazione.
 
 L'applicazione deve passare un puntatore a un'istanza precedentemente allocata della **CrtMemState** struttura, definita in CRTDBG. h, nelle *stato* parametro. Se **CrtMemCheckpoint** rileva un errore durante la creazione di checkpoint, la funzione genera un **CRT_WARN** report che descrive il problema di debug.
 

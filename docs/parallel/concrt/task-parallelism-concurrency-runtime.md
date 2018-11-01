@@ -1,12 +1,6 @@
 ---
-title: Attività di parallelismo (Runtime di concorrenza) | Microsoft Docs
-ms.custom: ''
+title: Parallelismo delle attività (runtime di concorrenza)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ec6e99b3e4f1e86d9f0ee42ca92a93a57b1a1fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378085"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630425"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallelismo delle attività (runtime di concorrenza)
 
@@ -270,7 +260,7 @@ La libreria PPL divide i gruppi di attività in queste due categorie: *gruppi di
 
 >  La libreria PPL definisce inoltre le [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo, che usa il `structured_task_group` classe per eseguire un set di attività in parallelo. Poiché l'algoritmo `parallel_invoke` presenta una sintassi più concisa, è consigliabile usarlo in alternativa alla classe `structured_task_group` quando è possibile. L'argomento [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md) descrive `parallel_invoke` in maggiore dettaglio.
 
-Usare `parallel_invoke` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ed è necessario attendere il completamento di tutte le attività prima di continuare.  Questa tecnica è spesso detta *fork e join* parallelismo. Usare `task_group` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ma è possibile attendere il completamento delle attività in un secondo momento. È possibile, ad esempio, aggiungere attività a un oggetto `task_group` e attendere il completamento delle attività in un'altra funzione o da parte di un altro thread.
+Usare `parallel_invoke` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ed è necessario attendere il completamento di tutte le attività prima di continuare. Questa tecnica è spesso detta *fork e join* parallelismo. Usare `task_group` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ma è possibile attendere il completamento delle attività in un secondo momento. È possibile, ad esempio, aggiungere attività a un oggetto `task_group` e attendere il completamento delle attività in un'altra funzione o da parte di un altro thread.
 
 I gruppi di attività supportano il concetto di annullamento. L'annullamento consente di segnalare l'annullamento dell'operazione globale a tutte le attività attive.  L'annullamento impedisce inoltre l'avvio delle attività che non sono ancora avviate. Per altre informazioni sull'annullamento, vedere [annullamento nella libreria PPL](cancellation-in-the-ppl.md).
 

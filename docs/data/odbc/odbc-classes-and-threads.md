@@ -1,28 +1,17 @@
 ---
-title: Classi e thread ODBC | Microsoft Docs
-ms.custom: ''
+title: Classi e thread ODBC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ODBC classes, and threads
 - ODBC, multithreaded applications
 - threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: ab115db1387adb71a69b735d676fa657d370752f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1d470e79ba5a6a73a30743a21da0462a6b89e7da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50052473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608169"
 ---
 # <a name="odbc-classes-and-threads"></a>Classi e thread ODBC
 

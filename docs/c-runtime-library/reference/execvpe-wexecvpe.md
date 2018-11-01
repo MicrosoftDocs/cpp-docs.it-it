@@ -1,10 +1,6 @@
 ---
-title: _execvpe, _wexecvpe | Microsoft Docs
-ms.custom: ''
+title: _execvpe, _wexecvpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvpe
 - _wexecvpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execvpe
 - _wexecvpe
 - _execvpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecvpe function
 - execvpe function
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97020ba4e1b20bfc95f48eaa1afe6fa111a9b769
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401230"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431694"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -97,7 +87,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _dose
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando e una matrice di puntatori alle impostazioni di ambiente. Queste funzioni usano la **percorso** variabile di ambiente per individuare il file da eseguire.
 
-Il **execvpe** funzioni convalidano i propri parametri. Se il *cmdname* è un puntatore null, o se *argv* è un puntatore null, un puntatore a una matrice vuota o un puntatore a una matrice che contiene una stringa vuota come primo argomento, queste funzioni richiamano il non è valido gestore di parametri, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1. Nessun processo viene avviato.
+Il **execvpe** funzioni convalidano i propri parametri. Se il *cmdname* è un puntatore null, o se *argv* è un puntatore null, un puntatore a una matrice vuota o un puntatore a una matrice che contiene una stringa vuota come primo argomento, queste funzioni richiamano il non è valido gestore di parametri, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1. Nessun processo viene avviato.
 
 ## <a name="requirements"></a>Requisiti
 

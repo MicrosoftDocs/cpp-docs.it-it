@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 1) C4312 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 1) C4312
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4312
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b6b6032ac22233c1662c6a7cc94d5ade7ae3a98
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 666df7904a7aac88983af40d31a67271beaa0b1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095352"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440235"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>Avviso del compilatore (livello 1) C4312
 

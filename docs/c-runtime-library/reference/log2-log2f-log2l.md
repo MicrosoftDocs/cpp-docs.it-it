@@ -1,11 +1,6 @@
 ---
-title: log2, log2f, log2l | Microsoft Docs
-ms.custom: ''
+title: log2, log2f, log2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log2
 - log2l
@@ -23,19 +18,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16fb56b1a3aef56e201d469974c5de434a08aa41
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f1db48abdc7237dc46a0ea8a3ea5647a0fce62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399527"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579309"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -73,7 +62,7 @@ Valore di cui determinare il logaritmo in base 2.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce restituiscono log2 *x*.
+In caso di esito positivo restituisce LOG2 *x*.
 
 In caso contrario può restituire uno dei valori seguenti:
 
@@ -91,7 +80,7 @@ Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Note
 
-Se x è un numero intero, questa funzione restituisce in pratica l'indice in base zero del bit più significativo 1 della *x*.
+Se x è un numero intero, questa funzione restituisce essenzialmente l'indice in base zero del bit 1 più significativo della *x*.
 
 ## <a name="requirements"></a>Requisiti
 

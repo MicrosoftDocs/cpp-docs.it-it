@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3703 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3703
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3703
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 730409d9db313294e23693b6d50d4b0aff0f8869
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0b34760bc3f5b23148ce84cf590685efad2008df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428080"
 ---
 # <a name="compiler-error-c3703"></a>Errore del compilatore C3703
 

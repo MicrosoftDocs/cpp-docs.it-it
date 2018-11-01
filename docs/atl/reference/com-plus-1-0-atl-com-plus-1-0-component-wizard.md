@@ -1,25 +1,15 @@
 ---
-title: COM+ 1.0, creazione guidata componente ATL COM+ 1.0 | Microsoft Docs
-ms.custom: ''
+title: COM+ 1.0, Creazione guidata componente ATL COM+ 1.0
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
-dev_langs:
-- C++
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861785"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562058"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Creazione guidata componente ATL COM+ 1.0
 

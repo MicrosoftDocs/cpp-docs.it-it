@@ -1,27 +1,17 @@
 ---
-title: '&lt;map&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;map&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <map>
-dev_langs:
-- C++
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac523342cc175721b9c1ef33a3d8ac4cad83033b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 727938b09ae60fd72a2421c2b800d8910f82934e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853365"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659849"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 

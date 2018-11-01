@@ -1,25 +1,15 @@
 ---
-title: Container Class::erase | Microsoft Docs
-ms.custom: ''
+title: Container Class::erase
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - erase method
 ms.assetid: abc091c5-5a80-4bd8-93a8-a2d9bde2efec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 368b722f03a68445ddd016705aa8bebc6f33e6f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11e13fc74de779076b40ba338a21a6736eb04e06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553023"
 ---
 # <a name="container-classerase"></a>Container Class::erase
 
@@ -42,7 +32,7 @@ iterator erase(
 
 ## <a name="remarks"></a>Note
 
-La prima funzione membro rimuove l'elemento della sequenza controllata a cui puntata *WHERE*. La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`). Entrambe restituiscono un iteratore che definisce il primo elemento rimanente oltre tutti gli elementi rimossi, [end](../standard-library/container-class-end.md) se tale elemento non esiste.
+La prima funzione membro rimuove l'elemento della sequenza controllata a cui punta *WHERE*. La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`). Entrambe restituiscono un iteratore che definisce il primo elemento rimanente oltre tutti gli elementi rimossi, [end](../standard-library/container-class-end.md) se tale elemento non esiste.
 
 Le funzioni membro generano un'eccezione solo se un'operazione di copia genera un'eccezione.
 

@@ -1,29 +1,19 @@
 ---
-title: -DEBUGTYPE (opzioni delle informazioni di Debug) | Microsoft Docs
-ms.custom: ''
+title: /DEBUGTYPE (opzioni delle informazioni di debug)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /debugtype
-dev_langs:
-- C++
 helpviewer_keywords:
 - /DEBUGTYPE linker option
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1255c92a7de4a0f1707cd20f91e8b9f1de640942
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f730e485b7dc29cb8fe98bdcc7ea50f5e8c622d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676993"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (opzioni delle informazioni di debug)
 

@@ -1,10 +1,6 @@
 ---
-title: _controlfp_s | Microsoft Docs
-ms.custom: ''
+title: _controlfp_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _controlfp_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - controlfp_s
 - _controlfp_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - floating-point numbers, control word
 - controlfp_s function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 443b9ee53606bc3075e62e98012edfca79747cd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405091"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506678"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -74,18 +64,18 @@ Zero se ha esito positivo oppure un **errno** valore codice di errore.
 
 ## <a name="remarks"></a>Note
 
-Il **controlfp_s** funzione è una versione indipendente dalla piattaforma e più sicura di **_control87**, che ottiene la parola di controllo a virgola mobile in indirizzo che viene archiviato in  *currentControl* e imposta usando *newControl*. I bit dei valori indicano lo stato di controllo a virgola mobile. Lo stato di controllo a virgola mobile consente al programma di modificare le modalità di precisione, arrotondamento e infinito nel pacchetto matematico a virgola mobile, a seconda della piattaforma. È anche possibile usare **controlfp_s** per mascherare o annullare il mascheramento eccezioni a virgola mobile.
+Il **controlfp_s** funzione è una versione indipendente dalla piattaforma e più sicura di **_control87**, che ottiene la parola di controllo a virgola mobile nell'indirizzo archiviato in  *currentControl* e impostata usando *newControl*. I bit dei valori indicano lo stato di controllo a virgola mobile. Lo stato di controllo a virgola mobile consente al programma di modificare le modalità di precisione, arrotondamento e infinito nel pacchetto matematico a virgola mobile, a seconda della piattaforma. È anche possibile usare **controlfp_s** per mascherare o annullare il mascheramento delle eccezioni a virgola mobile.
 
 Se il valore per *maschera* è uguale a 0, **controlfp_s** Ottiene la parola di controllo a virgola mobile e archivia il valore recuperato in *currentControl*.
 
-Se *maschera* è diverso da zero, viene impostato un nuovo valore per la parola di controllo: per qualsiasi bit impostato (vale a dire, uguale a 1) in *mask*, il bit corrispondente nella *nuova* viene utilizzato per aggiornare il controllo Word. In altre parole, *fpcntrl* = ((*fpcntrl* & ~*mask*) &#124; (*newControl* & *maschera* )) in cui *fpcntrl* è la parola di controllo a virgola mobile. In questo scenario *currentControl* è impostata sul valore dopo la modifica viene completata, non è il valore di bit della parola di controllo precedente.
+Se *maschera* è diverso da zero, viene impostato un nuovo valore per la parola di controllo: per ogni bit impostato (vale a dire, uguale a 1) nel *maschera*, il bit corrispondente nella *nuovo* viene usato per aggiornare il controllo Word. In altre parole, *fpcntrl* = ((*fpcntrl* & ~*maschera*) &#124; (*newControl* & *maschera* )) in cui *fpcntrl* corrisponde alla parola di controllo a virgola mobile. In questo scenario *currentControl* è impostata sul valore dopo il completamento della modifica, non è il valore di bit della parola di controllo precedente.
 
 > [!NOTE]
 > Per impostazione predefinita, le librerie di runtime mascherano tutte le eccezioni a virgola mobile.
 
-**controlfp_s** è quasi identica a quella di **_control87** funzionino in Intel (x86), piattaforme x64 e ARM. Se si desidera basarsi su piattaforme ARM, x86 o x64, è possibile utilizzare **_control87** oppure **controlfp_s**.
+**controlfp_s** è quasi identico per il **_control87** funzionino in Intel piattaforme ARM, x64 e (x86). Se la destinazione è x86, x64 o piattaforme ARM, è possibile usare **_control87** oppure **controlfp_s**.
 
-La differenza tra **_control87** e **controlfp_s** è denormalizzato nel modo in cui gestiscono i valori. Per Intel (x86), x64 e piattaforme ARM **_control87** consente di impostare e cancellare la maschera di eccezione DENORMALIZZATO operando. **controlfp_s** non modifica la maschera di eccezione DENORMALIZZATO operando. In questo esempio viene illustrata la differenza:
+La differenza tra **_control87** e **controlfp_s** è nella modalità di gestione i valori denormalizzati. Per Intel (x86), x64 e piattaforme ARM **_control87** consente di impostare e cancellare la maschera di eccezione operando DENORMALIZZATO. **controlfp_s** non modifica la maschera di eccezione operando DENORMALIZZATO. In questo esempio viene illustrata la differenza:
 
 ```C
 _control87( _EM_INVALID, _MCW_EM );
@@ -95,9 +85,9 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged.
 ```
 
-I valori possibili per la costante mask (*maschera*) e i nuovi valori di controllo (*newControl*) vengono visualizzati nella tabella seguente i valori esadecimali. Utilizzare le costanti portabile elencate di seguito (**_MCW_EM**, **_EM_INVALID**e così via) come argomenti alle funzioni, anziché fornire esadecimale valori in modo esplicito.
+I valori possibili per la costante maschera (*maschera*) e nuovi valori di controllo (*newControl*) vengono visualizzati nella tabella di valori esadecimali seguente. Usare le costanti portabili elencate di seguito (**_MCW_EM**, **_EM_INVALID**e così via) come argomenti per queste funzioni, anziché specificare i valori esadecimali in modo esplicito.
 
-Le piattaforme derivate Intel (x86) supportano i valori di input e output DENORMALIZZATI nell'hardware. Il comportamento x86 mantiene i valori DENORMALIZZATI. La piattaforma ARM e x64 piattaforme con SSE2 supportano abilitare DENORMALIZZATO operandi e risultati per essere scaricato o forzato su zero. Il **controlfp_s**, **controlfp**, e **_control87** funzioni forniscono una maschera per modificare questo comportamento. Nell'esempio seguente viene illustrato l'uso di questa maschera:
+Le piattaforme derivate Intel (x86) supportano i valori di input e output DENORMALIZZATI nell'hardware. Il comportamento x86 mantiene i valori DENORMALIZZATI. La piattaforma ARM e x64 il supporto di piattaforme con SSE2 consentono gli operandi DENORMALIZZATI e i risultati scaricati o forzato su zero. Il **controlfp_s**, **controlfp**, e **_control87** funzioni forniscono una maschera per modificare questo comportamento. Nell'esempio seguente viene illustrato l'uso di questa maschera:
 
 ```C
 unsigned int current_word = 0;
@@ -109,25 +99,25 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Sulle piattaforme ARM, il **controlfp_s** funzione si applica al registro FPSCR. In x64 architetture, solo la parola di controllo SSE2 che viene archiviato nel MXCSR register è interessato. Su piattaforme Intel (x86) **controlfp_s** interessa le parole di controllo per il x87 e SSE2, se presente. È possibile che le parole due controllo come non coerenti tra loro (a causa di una chiamata precedente a [__control87_2](control87-controlfp-control87-2.md), ad esempio); se è presente un'incoerenza tra le parole, due controllo **controlfp_s** imposta il **EM_AMBIGUOUS** flag in *currentControl*. Si tratta di un avviso che la parola di controllo restituita potrebbe non rappresentare con precisione lo stato di entrambe le parole di controllo a virgola mobile.
+Sulle piattaforme ARM, la **controlfp_s** funzione viene applicata al registro fpscr. In x64 architetture, solo la parola di controllo SSE2 archiviata nel registro MXCSR è interessata. Su piattaforme Intel (x86) **controlfp_s** interessa le parole di controllo per x87 e SSE2, se presente. È possibile che le due parole di controllo come non coerenti tra loro (a causa di una chiamata precedente a [__control87_2](control87-controlfp-control87-2.md), ad esempio); se non c'è un'incoerenza tra le due parole di controllo, **controlfp_s** imposta la **EM_AMBIGUOUS** contrassegna nella *currentControl*. Si tratta di un avviso che la parola di controllo restituita potrebbe non rappresentare con precisione lo stato di entrambe le parole di controllo a virgola mobile.
 
-Nel ARM e x64 architetture, modificare la modalità di infinito o la precisione a virgola mobile non è supportate. Se la maschera di controllo di precisione viene utilizzata in x64 piattaforma, la funzione genera un'asserzione e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Nel ARM e x64 architetture, la modifica della modalità infinito o la precisione a virgola mobile non sono supportate. Se la maschera di controllo di precisione viene utilizzata in x64 piattaforma, la funzione genera un'asserzione e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 Se la maschera non è impostata correttamente, questa funzione genera un'eccezione di parametro non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, questa funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
 
-Questa funzione viene ignorata quando utilizza [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) per la compilazione perché common language runtime (CLR) supporta solo la precisione a virgola mobile predefinita.
+Questa funzione viene ignorata quando si usa [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) alla compilazione poiché common language runtime (CLR) supporta solamente la precisione a virgola mobile predefinita.
 
-### <a name="mask-constants-and-values"></a>Le costanti di maschera e valori
+### <a name="mask-constants-and-values"></a>Costanti di maschera e valori
 
-Per il **_MCW_EM** mask deselezionandolo imposta l'eccezione, che consente l'eccezione hardware; impostandolo nasconde l'eccezione. Se un **_EM_UNDERFLOW** oppure **_EM_OVERFLOW** si verifica, viene generata alcuna eccezione hardware fino a quando non viene eseguita l'istruzione successiva a virgola mobile. Per generare un'eccezione hardware subito dopo **_EM_UNDERFLOW** oppure **_EM_OVERFLOW**, chiamare l'istruzione di FWAIT MASM.
+Per il **_MCW_EM** maschera, deselezionandolo imposta l'eccezione, che consente l'eccezione hardware; impostazione consente di nascondere l'eccezione. Se un **_EM_UNDERFLOW** oppure **_EM_OVERFLOW** si verifica, viene generata alcuna eccezione hardware fino a quando non viene eseguita la successiva istruzione a virgola mobile. Per generare un'eccezione hardware immediatamente dopo aver **_EM_UNDERFLOW** oppure **_EM_OVERFLOW**, chiamare l'istruzione FWAIT MASM.
 
 |Maschera|Valore hex|Costante|Valore hex|
 |----------|---------------|--------------|---------------|
-|**_MCW_DN** (denormalizzato controllo)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
-|**_MCW_EM** (maschera di eccezione di interrupt)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
-|**_MCW_IC** (controllo infinito)<br /><br /> (Non supportata su ARM o x64 piattaforme.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
-|**_MCW_RC** (arrotondamento per controllo)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** (precisione)<br /><br /> (Non supportata su ARM o x64 piattaforme.)|0x00030000|**_PC_24** (24 bit)<br /><br /> **_PC_53** (53 bit)<br /><br /> **_PC_64** (64 bit)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_DN** (controllo denormalizzato)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
+|**_MCW_EM** (maschera eccezione interruzione)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
+|**_MCW_IC** (controllo infinito)<br /><br /> (Non su ARM o x64 piattaforme supportate.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
+|**_MCW_RC** (controllo arrotondamento)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
+|**_MCW_PC** (controllo precisione)<br /><br /> (Non su ARM o x64 piattaforme supportate.)|0x00030000|**_PC_24** (24 bit)<br /><br /> **_PC_53** (53 bit)<br /><br /> **_PC_64** (64 bit)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>Requisiti
 

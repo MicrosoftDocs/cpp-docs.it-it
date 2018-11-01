@@ -1,12 +1,6 @@
 ---
-title: Controllo di calendario mensile incorporato di accesso | Microsoft Docs
-ms.custom: ''
+title: Accesso al controllo calendario mensile incorporato
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DateTimePicker control [MFC], accessing month calendar
 - CDateTimeCtrl class [MFC], accessing embedded control
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - month calendar controls [MFC], changing the font
 - DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a92660223c84c5f53bc848e72b03316602180d36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 56a735f9e79ca4f5423201139adc740878afb279
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652536"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Accesso al controllo calendario mensile incorporato
 

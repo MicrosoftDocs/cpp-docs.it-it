@@ -1,10 +1,6 @@
 ---
-title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Microsoft Docs
-ms.custom: ''
+title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsncat_s_l
 - wcsncat_s
@@ -35,8 +31,6 @@ f1_keywords:
 - strncat_s
 - _mbsncat_s
 - _tcsncat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - _mbsncat_s function
@@ -53,23 +47,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d88467034eeab3f3a269f735d5b158d94a429873
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418471"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500750"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
 Aggiunge caratteri a una stringa. Queste versioni di [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbsncat_s** e **mbsncat_s_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsncat_s** e **mbsncat_s_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -185,9 +175,9 @@ Restituisce 0 in caso di esito positivo e un codice di errore in caso di errore.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni tenta di aggiungere il primo *1!d* caratteri *strSource* alla fine della *strDest*, dove *1!d* è il minore dei *count* e la lunghezza di *strSource*. Se aggiunta quelli *1!d* caratteri contenuta interamente *strDest* (la cui dimensione è specificata come *numberOfElements*) e ancora lasciare spazio per una terminazione null, quindi tali caratteri vengono aggiunti, iniziando in corrispondenza di terminazione null di originale *strDest*, e un carattere di terminazione null nuovo accodati; in caso contrario, *strDest*[0] è impostato per il carattere null e il parametro non valido gestore viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Queste funzioni tentano di aggiungere il primo *1!d* caratteri di *strSource* alla fine del *strDest*, dove *1!d* è il minore di *conteggio* e la lunghezza di *strSource*. Se l'aggiunta di quelli *1!d* adattino caratteri *strDest* (con dimensioni specificate come *numberOfElements*) e rimane comunque spazio per un carattere di terminazione null, quindi tali caratteri vengono aggiunti, iniziando in corrispondenza di terminazione null di originale *strDest*, e un nuovo carattere null di terminazione è aggiunto; in caso contrario, *strDest*[0] è impostato per il carattere null e il parametro non valido gestore viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
-Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *conteggio* viene [truncate](../../c-runtime-library/truncate.md) quindi quanti più *strSource* come adatta alla pagina viene aggiunto al *strDest* lasciando spazio sufficiente per accodare un terminazione null.
+Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se *conteggio* viene [truncate](../../c-runtime-library/truncate.md) , la parte del *strSource* che fit viene aggiunto al *strDest* lasciando però spazio per l'aggiunta un terminazione null.
 
 Ad esempio,
 
@@ -197,9 +187,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-significa che, ti chiediamo **strncat_s** per aggiungere tre caratteri a due caratteri in un buffer di cinque caratteri; in tal nessuno spazio per una terminazione null, pertanto **strncat_s** zeri out la stringa e chiama il gestore di parametri non validi.
+significa che, chiediamo **strncat_s** per aggiungere tre caratteri a due caratteri in un buffer di cinque caratteri; ciò non lascia spazio per il carattere di terminazione null, di conseguenza **strncat_s** la stringa di zeri e chiama il gestore di parametri non validi.
 
-Se è necessario un comportamento di troncamento, usare **truncate** o regolare il *dimensioni* parametro conseguenza:
+Se è necessario il comportamento di troncamento, usare **truncate** o regolare il *dimensioni* parametro conseguenza:
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -213,11 +203,11 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 In tutti i casi, la stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-Se *strSource* oppure *strDest* è **NULL**, oppure è *numberOfElements* è uguale a zero, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione restituisce **EINVAL** senza modificare i relativi parametri.
+Se *strSource* oppure *strDest* viene **NULL**, oppure è *numberOfElements* è uguale a zero, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione restituisce **EINVAL** senza modificare i parametri.
 
-**wcsncat_s** e **mbsncat_s** sono versioni a caratteri wide e caratteri multibyte di **strncat_s**. Gli argomenti di stringa e valore restituito del **wcsncat_s** sono caratteri wide, mentre quelli di stringhe **mbsncat_s** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcsncat_s** e **mbsncat_s** sono versioni a caratteri wide e caratteri multibyte di **strncat_s**. Gli argomenti stringa e il valore restituito di **wcsncat_s** sono caratteri wide, mentre quelli di stringhe **mbsncat_s** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -230,7 +220,7 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 |**tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l** e **_wcsncat_s_l** non dispone di alcuna dipendenza dalle impostazioni locali, vengono fornite soltanto per **tcsncat_s_l**.
+**strncat_s_l** e **wcsncat_s_l** non dipendono dalle impostazioni locali; vengono fornite soltanto per **tcsncat_s_l**.
 
 ## <a name="requirements"></a>Requisiti
 

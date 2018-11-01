@@ -1,12 +1,6 @@
 ---
-title: Considerazioni per la scrittura di codice Prolog-Epilog | Microsoft Docs
-ms.custom: ''
+title: Considerazioni per la scrittura di codice Prolog-Epilog
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - stack frame layout
 - prolog code
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8cb66865d40e101f951b64aef07c0bb312f91611
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a70c444af9e1622b3f46837fcfa2d5e8856abf30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117569"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660564"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considerazioni per la scrittura di codice di prologo e di epilogo
 

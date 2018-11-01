@@ -1,25 +1,15 @@
 ---
-title: Gestione delle eccezioni in Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Gestione di eccezioni in Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b168bf95e44a41973d92230f559246b03f275601
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9639e0df6081e185349537ef40d85c1143b9f904
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073084"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570651"
 ---
 # <a name="exception-handling-in-visual-c"></a>Gestione di eccezioni in Visual C++
 

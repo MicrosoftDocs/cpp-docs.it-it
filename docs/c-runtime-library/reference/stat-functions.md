@@ -1,10 +1,6 @@
 ---
-title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32 | Microsoft Docs
-ms.custom: ''
+title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstat64
 - _stati64
@@ -78,8 +74,6 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -112,16 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13ce367bdee78be1610a36c887a04f2130375114
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418013"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637281"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -190,26 +180,26 @@ Puntatore alla struttura che archivia i risultati.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce 0 se si ottengono le informazioni sullo stato dei file. Valore restituito di -1 indica un errore, nel qual caso **errno** è impostata su **ENOENT**, che indica che il nome file o percorso non trovato. Valore restituito di **EINVAL** indica un parametro non valido. **errno** è impostata su **EINVAL** in questo caso.
+Ognuna di queste funzioni restituisce 0 se si ottengono le informazioni sullo stato dei file. Valore restituito di -1 indica un errore, nel qual caso **errno** è impostata su **ENOENT**, che indica che il nome file o percorso non è stato trovato. Un valore restituito pari **EINVAL** indica un parametro non valido. **errno** è impostata su **EINVAL** in questo caso.
 
 Per altre informazioni su questo e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-L'indicatore di data in un file può essere rappresentato se più recente rispetto a mezzanotte del 1 ° gennaio 1970 e prima di 23:59:59, 31 dicembre 3000 UTC, a meno che non si utilizza **_stat32** oppure **_wstat32**, o non è definita **_ USE_32BIT_TIME_T**, nel qual caso la data può essere rappresentata solo fino a 23:59:59 18 gennaio 2038, UTC.
+L'indicatore di data in un file può essere rappresentato se più recente rispetto alla mezzanotte del 1 gennaio 1970 e precedente 23:59:59, 31 dicembre 3000 UTC, a meno che non si utilizza **_stat32** oppure **_wstat32**, o non è definita **_ USE_32BIT_TIME_T**, nel qual caso la data può essere rappresentata solo fino al: 23.59.59 del 18 gennaio 2038, UTC.
 
 ## <a name="remarks"></a>Note
 
-Il **Stat** funzione Ottiene informazioni sul file o directory specificata da *percorso* e lo archivia nella struttura a cui puntata *buffer*. **Stat** gestisce automaticamente gli argomenti di stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso.
+Il **Stat** funzione di acquisizione di informazioni sul file o directory specificata da *path* e la archivia nella struttura a cui fa riferimento *buffer*. **Stat** gestisce automaticamente gli argomenti stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso.
 
-**wstat** è una versione a caratteri "wide" **Stat**; il *percorso* argomento **wstat** è una stringa di caratteri "wide". **wstat** e **Stat** si comportano in modo identico con la differenza che **wstat** gestiscono le stringhe di caratteri multibyte.
+**wstat** è una versione a caratteri wide di **Stat**; gli *path* argomento **wstat** è una stringa di caratteri "wide". **wstat** e **Stat** si comportano in modo identico con la differenza che **wstat** non gestisce le stringhe di caratteri multibyte.
 
-Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** oppure **64**) indica le dimensioni del tempo utilizzato tipo; il secondo suffisso è **i32** oppure **i64**, che indica se le dimensioni del file sono rappresentata come intero a 32 bit o 64 bit.
+Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** oppure **64**) indica la dimensione del tempo di usare il tipo; il secondo suffisso è **i32** oppure **i64**, che indica se le dimensioni del file sono rappresentata come intero a 32 bit o 64 bit.
 
-**Stat** equivale a **_stat64i32**, e **struct** **Stat** contiene un'ora a 64 bit. Ciò è vero, a meno che **_USE_32BIT_TIME_T** è definito, nel qual caso il comportamento precedente è attiva; **Stat** utilizza un tempo a 32 bit, e **struct** **Stat** contiene un'ora a 32 bit. Lo stesso vale per **_stati64**.
+**Stat** equivale a **_stat64i32**, e **struct** **Stat** contiene un'ora a 64 bit. Ciò è vero, a meno che **_USE_32BIT_TIME_T** è definito, nel qual caso il comportamento precedente è in vigore. **Stat** Usa un'ora a 32 bit, e **struct** **Stat** contiene un'ora a 32 bit. Lo stesso vale per **_stati64**.
 
 > [!NOTE]
-> **wstat** non funziona con i collegamenti simbolici Windows Vista. In questi casi **wstat** visualizzerà sempre una dimensione pari a 0. **Stat** funziona correttamente con i collegamenti simbolici.
+> **wstat** non funziona con i collegamenti simbolici di Windows Vista. In questi casi **wstat** visualizzerà sempre un file di dimensioni pari a 0. **Stat** funziona correttamente con i collegamenti simbolici.
 
-Questa funzione convalida i relativi parametri. Se entrambi *percorso* oppure *buffer* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Questa funzione convalida i relativi parametri. Se uno dei due *percorso* oppure *buffer* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variazioni tipo time e tipo lunghezza file di _stat
 
@@ -234,7 +224,7 @@ Questa funzione convalida i relativi parametri. Se entrambi *percorso* oppure *b
 |**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
 |**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
 
-Il **Stat** struttura, definita in SYS\STAT. H, inclusi i campi seguenti.
+Il **Stat** struttura, definita in SYS\STAT. H, include i campi seguenti.
 
 |Campo||
 |-|-|
@@ -242,15 +232,15 @@ Il **Stat** struttura, definita in SYS\STAT. H, inclusi i campi seguenti.
 **st_atime**|Ora dell'ultimo accesso del file. Valido su NTFS, ma non nelle unità disco formattate come FAT.
 **st_ctime**|Ora di creazione del file. Valido su NTFS, ma non nelle unità disco formattate come FAT.
 **st_dev**|Numero unità del disco contenente il file (uguale a **st_rdev**).
-**st_ino**|Numero del nodo informazioni (il **inode**) per il file (specifico di UNIX). Nel file System UNIX, il **inode** descrive il file data e timestamp, autorizzazioni e contenuto. Quando i file di disco rigido collegate a un'altra, essi condividono lo stesso **inode**. Il **inode**e pertanto **st_ino**, non ha alcun significato nei file system FAT, HPFS o NTFS.
-**st_mode**|Maschera di bit per informazioni sulla modalità di file. Il **s_ifdir** bit viene impostato se *percorso* specifica una directory; la **s_ifreg** bit viene impostato se *percorso* specifica un file normale o un dispositivo. I bit di lettura/scrittura dell'utente sono impostati in base alla modalità di autorizzazione del file; i bit di esecuzione utente sono impostati secondo l'estensione.
+**st_ino**|Numero del nodo informazioni (i **inode**) per il file (specifico di UNIX). Nel file System UNIX, il **inode** descrive la data del file e timbri data / ora, le autorizzazioni e contenuto. Quando sono file disco rigido collegate a un'altra, essi condividono lo stesso **inode**. Il **inode**e pertanto **st_ino**, non ha alcun significato nei file system FAT, HPFS o NTFS.
+**st_mode**|Maschera di bit per informazioni sulla modalità di file. Il **s_ifdir** bit viene impostato se *path* specifica una directory; la **s_ifreg** bit viene impostato se *percorso* specifica un file normale o un dispositivo. I bit di lettura/scrittura dell'utente sono impostati in base alla modalità di autorizzazione del file; i bit di esecuzione utente sono impostati secondo l'estensione.
 **st_mtime**|Ora dell'ultima modifica del file.
 **st_nlink**|Sempre 1 nel file system non NTFS.
 **st_rdev**|Numero unità del disco contenente il file (uguale a **st_dev**).
-**st_size**|Dimensioni del file in byte. un valore integer a 64 bit per le varianti con il **i64** suffisso.
+**st_size**|Dimensioni del file in byte. un intero a 64 bit per le varianti con il **i64** suffisso.
 **st_uid**|Identificatore numerico dell'utente proprietario del file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows.
 
-Se *percorso* fa riferimento a un dispositivo, la **st_size**, vari campi ora, **st_dev**, e **st_rdev** campi il **Stat**  struttura sono prive di significato. Dal momento che STAT. H usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in TYPES.H, è necessario includere TYPES.H prima di STAT.H nel codice.
+Se *percorso* fa riferimento a un dispositivo, il **st_size**, vari campi ora, **st_dev**, e **st_rdev** nei campi di **Stat**  struttura sono prive di significato. Dal momento che STAT. H usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in TYPES.H, è necessario includere TYPES.H prima di STAT.H nel codice.
 
 ## <a name="requirements"></a>Requisiti
 

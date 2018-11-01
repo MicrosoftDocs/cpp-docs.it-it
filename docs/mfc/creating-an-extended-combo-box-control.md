@@ -1,27 +1,17 @@
 ---
-title: Creazione di un controllo casella combinata estesa | Microsoft Docs
-ms.custom: ''
+title: Creazione di un controllo casella combinata estesa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - extended combo boxes
 - CComboBoxEx class [MFC], creating extended combo box controls
 - extended combo boxes [MFC], creating
 ms.assetid: a964267e-97b6-4e77-9f89-55bb5c68913f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1a4a27e7d233f1ee6f68dbcfa2a70d3d50e9984
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1e81664403f45a0a35cd24ceea16e1425b03403
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668767"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>Creazione di un controllo casella combinata estesa
 

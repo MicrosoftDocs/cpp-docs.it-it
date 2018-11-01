@@ -1,25 +1,15 @@
 ---
-title: Sequenza delle operazioni per la compilazione di applicazioni MFC | Microsoft Docs
-ms.custom: ''
+title: Sequenza delle operazioni per la compilazione di applicazioni MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 305533a0bd6113e3df2c29f5f8b16ae54e0bb2be
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b99a6b0e9f9728d74057d05f7ad9082017e31005
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623548"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Sequenza delle operazioni per la compilazione di applicazioni MFC
 

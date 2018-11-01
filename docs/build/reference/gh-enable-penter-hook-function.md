@@ -1,30 +1,20 @@
 ---
-title: -Gh (Attiva funzione Hook penter) | Microsoft Docs
-ms.custom: ''
+title: /Gh (Attiva funzione hook _penter)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _penter
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Gh compiler option [C++]
 - Gh compiler option [C++]
 - _penter function
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 608472f3133464137d2d0f96128453e4239b16a2
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 8b013d3d6506c1436a1f7f2245461980c0493b5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162087"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452312"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (Attiva funzione hook _penter)
 

@@ -1,12 +1,6 @@
 ---
-title: Importazione ed esportazione di funzioni Inline | Microsoft Docs
-ms.custom: ''
+title: Importazione ed esportazione di funzioni inline
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - exporting functions [C++], inline functions
 - inline functions [C++], importing
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 431b7c3becffb4e5b2543984fd66cae0a1507738
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 407ca39aa53cf622b531fa0ca7818682c82c561f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439104"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importazione ed esportazione di funzioni inline
 

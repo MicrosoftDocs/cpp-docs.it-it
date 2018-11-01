@@ -1,27 +1,17 @@
 ---
-title: Utilizzo degli operatori di estrazione | Microsoft Docs
-ms.custom: ''
+title: Utilizzo degli operatori di estrazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - extraction operators [C++]
 - '&gt;&gt; operator [C++], extraction operators'
 - operators [C++], extraction
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 96dc02c8bcd82c5b26d3cef71aa2085913ea259d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fc6ffd2f033dfe3df60260f734d93b79d6824f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855588"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626226"
 ---
 # <a name="using-extraction-operators"></a>Utilizzo degli operatori di estrazione
 

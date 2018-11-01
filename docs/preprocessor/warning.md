@@ -1,31 +1,21 @@
 ---
-title: avviso | Microsoft Docs
-ms.custom: ''
+title: avviso
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, warning
 - push pragma warning
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90cb11a6e6ab0c088c0b2425856d61556e76564c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631722"
 ---
 # <a name="warning-pragma"></a>Warning (pragma)
 Consente la modifica selettiva del comportamento dei messaggi di avviso del compilatore.
@@ -46,7 +36,7 @@ Sono disponibili i seguenti parametri identificatore-avviso.
 |identificatore-avviso|Significato|
 |------------------------|-------------|
 |*1, 2, 3, 4*|Applica il livello specificato agli avvisi specificati. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita.|
-|*default*|Reimposta il comportamento dell'avviso sul valore predefinito. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per altre informazioni, vedere [gli avvisi del compilatore disattivati per impostazione predefinita](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
+|*default*|Reimposta il comportamento dell'avviso sul valore predefinito. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per altre informazioni, vedere [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |*disable*|Non genera i messaggi di avviso specificati.|
 |*Errore*|Segnala gli avvisi specificati come errori.|
 |*once*|Visualizza i messaggi specificati solo una volta.|
