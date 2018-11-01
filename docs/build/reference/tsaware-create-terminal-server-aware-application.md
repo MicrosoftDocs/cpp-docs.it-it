@@ -1,15 +1,9 @@
 ---
-title: -TSAWARE (crea un'applicazione con supporto Terminal Server) | Microsoft Docs
-ms.custom: ''
+title: /TSAWARE (Crea un'applicazione con supporto Terminal Server)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /tsaware
 - VC.Project.VCLinkerTool.TerminalServerAware
-dev_langs:
-- C++
 helpviewer_keywords:
 - Terminal Server
 - /TSAWARE linker option
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ac9aeaaf4ccaaf3f813adbf9f65eb3db7df353f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4b6cebfd30c6572c2ea7d9a0e59625ac8fd66de1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723950"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566595"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Crea un'applicazione con supporto Terminal Server)
 

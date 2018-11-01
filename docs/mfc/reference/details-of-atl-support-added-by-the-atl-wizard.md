@@ -1,28 +1,18 @@
 ---
-title: Informazioni dettagliate sul supporto ATL aggiunto dalla procedura guidata ATL | Microsoft Docs
-ms.custom: ''
+title: Informazioni dettagliate sul supporto ATL aggiunto dalla procedura guidata
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.atl.support
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: efa96037139e61e16b752b45617bb8a3c54be993
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5684e1f53e9df120feca89cbb6b2ba70bd38d439
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564775"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Informazioni dettagliate sul supporto ATL aggiunto dalla procedura guidata
 
@@ -45,6 +35,6 @@ Quando si aggiunge il supporto ATL a un progetto DLL MFC, si noterà alcune diff
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Aggiunta di una funzione membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Aggiunta di una variabile membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Una funzione Virtual in override](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Override di una funzione virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestore messaggi MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
 [Esplorazione della struttura delle classi](../../ide/navigating-the-class-structure-visual-cpp.md)

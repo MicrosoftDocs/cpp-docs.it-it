@@ -1,29 +1,19 @@
 ---
-title: Classe CD2DPointF | Microsoft Docs
-ms.custom: ''
+title: Classe CD2DPointF
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DPointF
 - AFXRENDERTARGET/CD2DPointF
 - AFXRENDERTARGET/CD2DPointF::CD2DPointF
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f36756579a07692f190e0ea919d6d82e3cb4128d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b9f6634e4b5980d8318557a8822549d226910b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439848"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559107"
 ---
 # <a name="cd2dpointf-class"></a>Classe CD2DPointF
 
