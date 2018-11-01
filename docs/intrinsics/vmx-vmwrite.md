@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmwrite | Microsoft Docs
-ms.custom: ''
+title: __vmx_vmwrite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmwrite
-dev_langs:
-- C++
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f333a37972a31b5815a05797bfabb603f5a26947
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c5c6e0edcb3136986cfd8e05f3d5217b3d021fa7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820680"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529246"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
@@ -33,7 +23,7 @@ Scrive il valore specificato per il campo specificato nella struttura di control
 ## <a name="syntax"></a>Sintassi
 
 ```
-unsigned char __vmx_vmwrite( 
+unsigned char __vmx_vmwrite( 
    size_t Field,
    size_t FieldValue
 );
@@ -56,7 +46,7 @@ unsigned char __vmx_vmwrite(
 
 ## <a name="remarks"></a>Note
 
-Il `__vmx_vmwrite` è equivalente alla funzione il `VMWRITE` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/articles/intel-sdm) del sito e quindi vedere Appendice C di tale documento.
+La funzione `__vmx_vmwrite` è equivalente alle `VMWRITE` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/articles/intel-sdm) del sito e quindi vedere Appendice C di tale documento.
 
 ## <a name="requirements"></a>Requisiti
 
