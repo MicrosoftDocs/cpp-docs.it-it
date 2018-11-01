@@ -1,16 +1,10 @@
 ---
-title: -GS (controllo sicurezza Buffer) | Microsoft Docs
-ms.custom: ''
+title: /GS (Controllo sicurezza buffer)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
 - VC.Project.VCCLCompilerTool.BufferSecurityCheck
 - /GS
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers [C++], buffer overruns
 - buffer overruns, compiler /GS switch
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be077ecb92a3344911431a3ecbbdd7d3dc038eab
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 30fd602bb1c094694a9ebb6095349e971842d5f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557547"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Controllo sicurezza buffer)
 

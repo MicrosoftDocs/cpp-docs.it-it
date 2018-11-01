@@ -1,31 +1,21 @@
 ---
-title: Errore del compilatore C2482 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C2482
 ms.date: 09/15/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2482
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3dd23069f389d0a02e10d26edb7ee4fd3c373cb
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 481920fa2d8c32bc872e7b8805188cc674e6fe28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256006"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564814"
 ---
 # <a name="compiler-error-c2482"></a>Errore del compilatore C2482
 
->'*identificatore*': inizializzazione dinamica dei dati 'thread' non consentita nel codice gestito o WinRT
+>«*identificatore*': l'inizializzazione dinamica dei dati di 'thread' non consentiti nel codice gestito o WinRT
 
 ## <a name="remarks"></a>Note
 
@@ -33,7 +23,7 @@ Nel gestito o WinRT code, le variabili dichiarate utilizzando il [declspec](../.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2482 in gestite (**/clr**) e WinRT (**/ZW**) codice:
+L'esempio seguente genera l'errore C2482 in gestiti (**/clr**) e WinRT (**/ZW**) codice:
 
 ```cpp
 // C2482.cpp
@@ -46,4 +36,4 @@ int j = j;   // OK in C++; C error
 Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
 
-Per risolvere questo problema, inizializzare archiviazione thread-local tramite una costante **constexpr**, o un'espressione statica. Eseguire qualsiasi inizializzazione specifico del thread separatamente.
+Per risolvere questo problema, inizializzare l'archiviazione thread-local tramite una costante **constexpr**, o un'espressione statica. Eseguire separatamente qualsiasi inizializzazione specifico del thread.

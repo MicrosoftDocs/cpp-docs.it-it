@@ -1,26 +1,15 @@
 ---
-title: 'Procedura: dichiarare gli identificatori di Override (C + + / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura: dichiarare gli identificatori di Override (C + + / CLI)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 1089f2d9326cf268bd76ad59242e2664060b78fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0c2d65aa44141b1dbe30fb39d66beabde93fa99
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555545"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Procedura: Dichiarare gli identificatori di override nelle compilazioni native (C++/CLI)
 

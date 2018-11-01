@@ -1,30 +1,20 @@
 ---
-title: -IGNOREIDL (Don&#39;t elabora gli attributi in MIDL) | Microsoft Docs
-ms.custom: ''
+title: /IGNOREIDL (Don&#39;t elabora gli attributi in MIDL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.IgnoreEmbeddedIDL
 - /ignoreidl
-dev_langs:
-- C++
 helpviewer_keywords:
 - IGNOREIDL linker option
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c06e06633e6d0a990c72ebb65a4bd999df45a55
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f6c5fcbae52ed695f2d0c389607ac4231f069788
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406672"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534355"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t elabora gli attributi in MIDL)
 
