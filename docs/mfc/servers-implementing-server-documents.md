@@ -1,28 +1,18 @@
 ---
-title: 'Server: Implementazione di documenti Server | Microsoft Docs'
-ms.custom: ''
+title: 'Server: implementazione di documenti server'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE server applications [MFC], managing server documents
 - OLE server applications [MFC], implementing OLE servers
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7907935971fae7d990c651410e5b76982b798075
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 17c90eb6350a2bf3cd5b695a99dea954dd89a033
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436491"
 ---
 # <a name="servers-implementing-server-documents"></a>Server: implementazione di documenti server
 
