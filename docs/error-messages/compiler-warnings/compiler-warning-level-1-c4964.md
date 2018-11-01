@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 1) C4964 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 1) C4964
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4964
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4964
 ms.assetid: b89c9274-8a92-4b7c-aa30-3fbb1b68ac73
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7f1644e4603bae36ec9d407294dea78a27e60539
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 556c6e0963fc41d76cd123373cc4cd85edc66962
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086668"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492052"
 ---
 # <a name="compiler-warning-level-1-c4964"></a>Avviso del compilatore (livello 1) C4964
 

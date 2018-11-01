@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3298 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3298
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3298
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3298
 ms.assetid: 458c2680-95bb-4d5e-895f-ce4115844193
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 06296fed3f33b56cb53cf3bc4531205638f0a204
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a2d8f6ab72a5e72a646cb1fca64635bc72dd2ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053687"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492837"
 ---
 # <a name="compiler-error-c3298"></a>Errore del compilatore C3298
 

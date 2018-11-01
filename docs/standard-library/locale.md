@@ -1,29 +1,19 @@
 ---
-title: '&lt;impostazioni locali&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;locale&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs:
-- C++
 helpviewer_keywords:
 - locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ee98361507236744608145dde6e326964a71b82
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 54d6f5306f4517c6450f36051df51385d8d8f578
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953577"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494304"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 
@@ -93,5 +83,5 @@ Definisce le classi modello e le funzioni che possono essere utilizzate dai prog
 ## <a name="see-also"></a>Vedere anche
 
 [Tabelle codici](../c-runtime-library/code-pages.md)<br/>
-[Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

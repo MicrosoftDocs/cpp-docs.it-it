@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3744 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3744
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3744
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3744
 ms.assetid: a447d050-80d1-406a-9a6e-f15c527d717c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d644a621fc6d8e460e1b97e5baec360de8662365
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 407ed4b30b55b63aa9bf36de9f8675a531d70534
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063723"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516233"
 ---
 # <a name="compiler-error-c3744"></a>Errore del compilatore C3744
 

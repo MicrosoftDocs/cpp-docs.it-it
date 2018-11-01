@@ -1,10 +1,6 @@
 ---
-title: vsscanf_s, vswscanf_s | Microsoft Docs
-ms.custom: ''
+title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vswscanf_s
 - vsscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
-dev_langs:
-- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbcf6d0a8b54cc08242d613b24c415ac1ef05fd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3106e3533f5bb65334f8a4f3d38f55d886faef4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417103"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477168"
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
 
@@ -70,15 +60,15 @@ Elenco di argomenti variabili.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della conversione prima.
+Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della prima conversione.
 
-Se *buffer* oppure *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+Se *buffer* oppure *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **vsscanf_s** funzione legge i dati dal *buffer* nelle posizioni forniti da ciascun argomento nella *arglist* elenco di argomenti. Gli argomenti nell'elenco di argomenti specificano i puntatori alle variabili che hanno un tipo che corrisponde a un identificatore di tipo in *formato*. A differenza delle versioni meno sicuro **vsscanf**, è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **C**, **s**, **S**, o set di controllo di stringa sono racchiusi tra parentesi **[]**. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede.
+Il **vsscanf_s** funzione legge i dati dal *buffer* nelle posizioni specificate da ciascun argomento in di *arglist* elenco di argomenti. Gli argomenti nell'elenco di argomenti specificano i puntatori alle variabili che hanno un tipo che corrisponde all'identificatore di tipo in *formato*. A differenza delle versioni meno sicure **vsscanf**, è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **C**, **s**, **S**, o set di controllo stringa racchiusi tra **[]**. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede.
 
 La dimensione del buffer include il carattere di terminazione null. Potrebbe essere usato un campo di specifica della larghezza per assicurarsi che il token letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.
 
@@ -87,9 +77,9 @@ Per altre informazioni, vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scan
 > [!NOTE]
 > Il parametro di dimensione è di tipo **unsigned**, non **size_t**.
 
-Il *formato* controlli argomento l'interpretazione dell'input di campi e ha lo stesso modulo e funziona come il *formato* argomento per il **scanf_s** (funzione). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il *formato* argomento controlla l'interpretazione dell'input campi e ha lo stesso formato e funzione come il *formato* argomento per il **scanf_s** (funzione). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-**vswscanf_s** è una versione a caratteri wide **vsscanf_s**; gli argomenti da **vswscanf_s** sono stringhe a caratteri "wide". **vsscanf_s** non gestisce i caratteri esadecimali multibyte. **vswscanf_s** non gestisce esadecimale a larghezza intera Unicode o caratteri "area di compatibilità". In caso contrario, **vswscanf_s** e **vsscanf_s** si comportano in modo identico.
+**vswscanf_s** è una versione a caratteri wide di **vsscanf_s**; gli argomenti **vswscanf_s** sono stringhe a caratteri wide. **vsscanf_s** non gestisce caratteri esadecimali multibyte. **vswscanf_s** non gestisce esadecimali a larghezza intera Unicode o caratteri "area di compatibilità". In caso contrario, **vswscanf_s** e **vsscanf_s** si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

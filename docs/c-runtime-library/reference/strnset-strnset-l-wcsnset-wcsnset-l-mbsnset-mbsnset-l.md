@@ -1,10 +1,6 @@
 ---
-title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l | Microsoft Docs
-ms.custom: ''
+title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnset
 - _strnset
@@ -43,8 +39,6 @@ f1_keywords:
 - _mbsnset
 - _wcsnset
 - _tcsncset
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsnset function
 - strnset_l function
@@ -71,23 +65,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 7eefbe3a193157751a991bb069ebe94f48946e7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466696"
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
 Inizializza i caratteri di una stringa sul carattere specificato. Esistono versioni più sicure di queste funzioni. Vedere [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
 
 > [!IMPORTANT]
-> **mbsnset** e **mbsnset_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsnset** e **mbsnset_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -147,11 +137,11 @@ Restituisce un puntatore alla stringa modificata.
 
 ## <a name="remarks"></a>Note
 
-Il **strnset** funzione imposta, al massimo, il primo *conteggio* caratteri *str* a *c* (convertito in **char**). Se *conteggio* è maggiore della lunghezza di *str*, la lunghezza del *str* utilizzato al posto del *conteggio*.
+Il **strnset** funzione imposta, al massimo i primi *conteggio* caratteri del *str* al *c* (convertito in **char**). Se *conteggio* è maggiore della lunghezza di *str*, la lunghezza del *str* viene usato al posto di *conteggio*.
 
-**wcsnset** e **mbsnset** sono versioni a caratteri wide e caratteri multibyte di **strnset**. Gli argomenti di stringa e valore restituito di **wcsnset** sono caratteri wide, mentre quelli di stringhe **mbsnset** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcsnset** e **mbsnset** sono versioni a caratteri wide e caratteri multibyte di **strnset**. Gli argomenti stringa e il valore restituito di **wcsnset** sono caratteri wide, mentre quelli di stringhe **mbsnset** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-**mbsnset** convalida i propri parametri; se *str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, **mbsnset** restituisce **NULL** e imposta **errno** a **EINVAL**. **strnset** e **wcsnset** non convalidano i relativi parametri.
+**mbsnset** convalida i parametri; se *str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, **mbsnset** restituisce **NULL** e imposta **errno** al **EINVAL**. **strnset** e **wcsnset** non convalidano i relativi parametri.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
