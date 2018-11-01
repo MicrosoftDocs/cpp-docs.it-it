@@ -1,9 +1,6 @@
 ---
-title: Classe RuntimeClass | Microsoft Docs
-ms.custom: ''
+title: Classe RuntimeClass
 ms.date: 09/11/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -18,8 +15,6 @@ f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass::Release
 - implements/Microsoft::WRL::RuntimeClass::RuntimeClass
 - implements/Microsoft::WRL::RuntimeClass::~RuntimeClass
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass class
 - Microsoft::WRL::RuntimeClass::AddRef method
@@ -34,17 +29,12 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: db9476e225b19f76fb695063c9c5058e8d9b2871
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 23b7d0237562324ddae2207435b2071e8d66e572
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596820"
 ---
 # <a name="runtimeclass-class"></a>Classe RuntimeClass
 

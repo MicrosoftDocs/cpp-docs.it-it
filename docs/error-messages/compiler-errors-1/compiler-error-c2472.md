@@ -1,37 +1,27 @@
 ---
-title: Errore del compilatore C2472 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C2472
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2472
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2472
 ms.assetid: 3b36bcdc-2ba5-4357-ab88-7545ba0551cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43279190847322fa2154c6faababdcd41b490eef
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d2f104bb61915f8d19d5fff22eea17929c0e8d74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632739"
 ---
 # <a name="compiler-error-c2472"></a>Errore del compilatore C2472
 
-> '*funzione*' non possono essere generati in codice gestito: '*messaggio*'; compilare con /clr per generare un'immagine mista
+> '*funzione*' non può essere generata nel codice gestito: '*messaggio*'; compilare con /clr per generare un'immagine mista
 
 ## <a name="remarks"></a>Note
 
 Questo errore si verifica quando vengono usati tipi non supportati dal codice gestito all'interno di un ambiente Common Language Runtime (CLR). Compilare con **/clr** per risolvere l'errore.
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
 ## <a name="example"></a>Esempio
 

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2777 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2777
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2777
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2777
 ms.assetid: 5fe158c0-2a65-488a-aca2-61d4a8b32d43
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57dc92e267004cbb41fa9a6153ddc09f9aeb6fc5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cfbe2c729141108565f00b7b5a7fd581b49e516d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077438"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589254"
 ---
 # <a name="compiler-error-c2777"></a>Errore del compilatore C2777
 

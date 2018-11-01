@@ -1,10 +1,6 @@
 ---
-title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -31,8 +27,6 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451412"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579594"
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -119,11 +109,11 @@ Il numero di caratteri scritti o -1 se si è verificato un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **sprintf_p** funzione formatta e archivia una serie di caratteri e i valori *buffer*. Ogni argomento di *argument_list* (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in *formato*. Il *formato* argomento Usa il [formattare sintassi specifica per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carattere Null viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito. La differenza tra **sprintf_p** e **sprintf_s** consiste nel fatto che **sprintf_p** supporta i parametri posizionali, che consentono di specificare l'ordine in cui gli argomenti sono usato nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Il **sprintf_p** funzione formatta e archivia una serie di caratteri e i valori *buffer*. Ogni argomento nel *argument_list* (se presente) viene convertita e restituita in base alla specifica di formato corrispondente in *formato*. Il *formato* argomento utilizza le [sintassi specifica per le funzioni printf e wprintf formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carattere Null viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito. La differenza tra **sprintf_p** e **sprintf_s** è quello **sprintf_p** supporta i parametri posizionali, che consente di specificare l'ordine in cui gli argomenti sono usato nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
-**swprintf_p** è una versione a caratteri wide **sprintf_p**; gli argomenti puntatori per **swprintf_p** sono stringhe a caratteri "wide". Rilevamento degli errori in di codifica **swprintf_p** può essere diverso da quello in **sprintf_p**. **swprintf_p** e **fwprintf_p** si comportano in modo identico con la differenza che **swprintf_p** scrive l'output in una stringa anziché a una destinazione di tipo **FILE**, e **swprintf_p** richiede il *conteggio* parametro per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+**swprintf_p** è una versione a caratteri wide di **sprintf_p**; gli argomenti puntatori per **swprintf_p** sono stringhe a caratteri wide. Rilevamento degli errori in di codifica **swprintf_p** può essere diverso da quello in **sprintf_p**. **swprintf_p** e **fwprintf_p** si comportano in modo identico con la differenza che **swprintf_p** scrive l'output in una stringa anziché in una destinazione di tipo **FILE**, e **swprintf_p** richiede il *conteggio* parametro per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
-**sprintf_p** restituisce il numero di byte archiviati nel *buffer*, senza contare il carattere di terminazione null. **swprintf_p** restituisce il numero di caratteri "wide" archiviati in *buffer*, senza contare il carattere "wide" null finale. Se *buffer* oppure *formato* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+**sprintf_p** restituisce il numero di byte archiviati nel *buffer*, senza contare il carattere di terminazione null. **swprintf_p** restituisce il numero di caratteri wide archiviati nel *buffer*, senza contare il carattere wide null finale. Se *buffer* oppure *formato* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

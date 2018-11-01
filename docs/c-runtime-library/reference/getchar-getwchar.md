@@ -1,10 +1,6 @@
 ---
-title: getchar, getwchar | Microsoft Docs
-ms.custom: ''
+title: getchar, getwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getchar
 - getwchar
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - getwchar
 - GetChar
-dev_langs:
-- C++
 helpviewer_keywords:
 - gettchar function
 - characters, reading
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c05fca568c8d69d34aa1386030eef3f2cb09f11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399621"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626603"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -57,11 +47,11 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il carattere letto. Per indicare un errore di lettura o una condizione di fine del file, **getchar** restituisce **EOF**, e **getwchar** restituisce **WEOF**. Per **getchar**, utilizzare **ferror** oppure **feof** per controllare l'errore o per la fine del file.
+Restituisce il carattere letto. Per indicare una condizione di fine del file, o un errore di lettura **getchar** restituisce **EOF**, e **getwchar** restituisce **WEOF**. Per la **getchar**, usare **ferror** oppure **feof** per verificare un errore o la fine del file.
 
 ## <a name="remarks"></a>Note
 
-Ogni routine legge un singolo carattere da **stdin** e incrementa il puntatore del file associato in modo da puntare al carattere successivo. **GetChar** corrisponde al [fgetchar](fgetc-fgetwc.md), ma viene implementato come una funzione che come macro.
+Ogni routine legge un singolo carattere dalla **stdin** e incrementa il puntatore del file associato in modo da puntare al carattere successivo. **GetChar** equivale a [fgetchar](fgetc-fgetwc.md), ma viene implementato come una funzione o una macro.
 
 Queste funzioni bloccano il thread chiamante e pertanto sono thread-safe. Per una versione che non blocca il thread, vedere [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
@@ -78,7 +68,7 @@ Queste funzioni bloccano il thread chiamante e pertanto sono thread-safe. Per un
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

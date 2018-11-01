@@ -1,10 +1,6 @@
 ---
-title: fgetc, fgetwc | Microsoft Docs
-ms.custom: ''
+title: fgetc, fgetwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetwc
 - fgetc
@@ -25,8 +21,6 @@ f1_keywords:
 - _fgettc
 - fgetwc
 - fgetc
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgettc function
 - characters, reading
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f06c5c2f092932d97755a8f0cff63cde3a9682c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401285"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639920"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -64,20 +54,20 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parametri
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fgetc** restituisce il carattere letto come un **int** o restituisce **EOF** per indicare un errore o fine del file. **fgetwc** viene restituito, come un [wint_t](../../c-runtime-library/standard-types.md), il carattere "wide" che corrisponde al carattere letto o restituisce **WEOF** per indicare un errore o fine del file. Per entrambe le funzioni, usare **feof** oppure **ferror** per distinguere tra un errore e una condizione di fine del file. Se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. Se *flusso* viene **NULL**, **fgetc** e **fgetwc** richiamano il gestore di parametri non validi, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituire **EOF**.
+**fgetc** restituisce il carattere letto come un **int** o restituisce **EOF** per indicare un errore o fine del file. **fgetwc** viene restituito, come un [wint_t](../../c-runtime-library/standard-types.md), il carattere wide che corrisponde al carattere letto o restituisce **WEOF** per indicare un errore o fine del file. Per entrambe le funzioni, usare **feof** oppure **ferror** per distinguere un errore e una condizione di fine del file. Se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. Se *stream* viene **NULL**, **fgetc** e **fgetwc** richiamano il gestore di parametri non validi, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **EOF**.
 
 ## <a name="remarks"></a>Note
 
 Ognuna di queste funzioni legge un singolo carattere dalla posizione corrente del file associato *flusso*. La funzione quindi incrementa il puntatore del file associato (se definito) per puntare al carattere successivo. Se il flusso è alla fine del file, viene impostato l'indicatore di fine del file per il flusso.
 
-**fgetc** equivale a **getc**, ma viene implementato solo come funzione, anziché come una funzione e una macro.
+**fgetc** equivale a **getc**, ma è implementata solo come funzione, anziché come una funzione e macro.
 
-**fgetwc** è la versione a caratteri "wide" di **fgetc**; legge **c** come un carattere multibyte o un carattere Wide a seconda se *flusso* viene aperto in modalità di testo o binario.
+**fgetwc** è la versione a caratteri wide di **fgetc**; legge **c** come un carattere multibyte o un carattere Wide a seconda se *flusso* viene aperto in la modalità testo o in modalità binaria.
 
 Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread.
 

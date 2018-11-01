@@ -1,27 +1,17 @@
 ---
-title: Classe is_error_code_enum | Microsoft Docs
-ms.custom: ''
+title: Classe is_error_code_enum
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - system_error/std::is_error_code_enum
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_error_code_enum class
 ms.assetid: cee5be2d-7c20-4cec-a352-1ab8b7d32601
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d7024817c5a02d7c4a529167ca65a292b34be119
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d890eb6a1b7c93f9ae5b87018c3bf1d6eeae8abb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607012"
 ---
 # <a name="iserrorcodeenum-class"></a>Classe is_error_code_enum
 

@@ -1,27 +1,17 @@
 ---
-title: Strumenti del linker LNK1314 errore | Microsoft Docs
-ms.custom: ''
+title: Errore degli strumenti del linker LNK1314
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1314
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1314
 ms.assetid: 0b5cd599-61ea-4ac7-8f25-c6d3a8b14655
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8863c22bea588417025164bf2d303d01cfe6d7b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6ff30ba92614983783395024ba2ee82a8f8b8b19
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042949"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491234"
 ---
 # <a name="linker-tools-error-lnk1314"></a>Errore degli strumenti del linker LNK1314
 

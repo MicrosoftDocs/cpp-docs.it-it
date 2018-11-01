@@ -1,8 +1,6 @@
 ---
-title: Funzioni &lt;ios&gt; | Microsoft Docs
-ms.custom: ''
+title: Funzioni &lt;ios&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - xiosbase/std::defaultfloat
 - xiosbase/std::boolalpha
@@ -52,12 +50,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: a19d023400179e1e7e16541b7e3d7ef38ad963ba
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: bf22c0e4775ef93b1965a7c9d61f024441bea821
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101093"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509682"
 ---
 # <a name="ltiosgt-functions"></a>Funzioni &lt;ios&gt;
 

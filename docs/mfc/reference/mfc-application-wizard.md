@@ -1,28 +1,18 @@
 ---
-title: Creazione guidata applicazione MFC | Microsoft Docs
-ms.custom: ''
+title: Creazione guidata applicazione MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57ad8e7817472cf1d9fcef53585f50339408d985
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b860d09ddb2f07909797ba7f24776e1850d27cc7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376954"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602806"
 ---
 # <a name="mfc-application-wizard"></a>Creazione guidata applicazione MFC
 

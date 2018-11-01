@@ -1,27 +1,17 @@
 ---
-title: C R6028 di errore di Runtime | Microsoft Docs
-ms.custom: ''
+title: R6028 di errore di Runtime C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - R6028
-dev_langs:
-- C++
 helpviewer_keywords:
 - R6028
 ms.assetid: 81e99079-4388-4244-a4f7-4641c508871c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbcc1f34fced7a7ea752d8733662f7510a01aad5
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 4992641c2456f0322b5c52eb907b159904e4c9f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581818"
 ---
 # <a name="c-runtime-error-r6028"></a>R6028 di errore di Runtime C
 

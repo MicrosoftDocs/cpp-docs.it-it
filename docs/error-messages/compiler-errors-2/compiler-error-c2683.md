@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2683 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2683
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2683
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c13836c845e1efc33c409939bdbec49b25c84e63
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 49e4897ad5db866aa1ca42589859bedff12718df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625156"
 ---
 # <a name="compiler-error-c2683"></a>Errore del compilatore C2683
 

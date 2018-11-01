@@ -1,26 +1,15 @@
 ---
-title: 'Procedura: usare matrici in C + + / CLI | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura: utilizzare matrici in C++/CLI'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 23c989a30ab46adf08f7a7e59262f27c24d27159
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425886"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596248"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>Procedura: utilizzare matrici in C++/CLI
 
@@ -631,4 +620,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Array](../windows/arrays-cpp-component-extensions.md)
+[Matrici](../windows/arrays-cpp-component-extensions.md)

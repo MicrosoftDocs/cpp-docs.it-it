@@ -1,27 +1,17 @@
 ---
-title: Creazione guidata componente ASP ATL, opzioni | Microsoft Docs
-ms.custom: ''
+title: Opzioni, Creazione guidata componente ASP ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.options
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fda466ad45b5b91f02920d68eef8eab071010830
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d8d8eaa6190bd04d626b9a23c9d27d1f9daeb003
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595637"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opzioni, Creazione guidata componente ASP ATL
 

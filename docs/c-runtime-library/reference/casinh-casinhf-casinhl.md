@@ -1,11 +1,6 @@
 ---
-title: casinh, casinhf, casinhl | Microsoft Docs
-ms.custom: ''
+title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casinh
 - casinhl
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 460c5cdd41d49b9448aa8d4b7fbd2454e8301e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393966"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580776"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
-Recupera il seno iperbolico inverso di un numero complesso, con tagli branch all'esterno dell'intervallo [-i, + i] lungo l'asse immaginaria.
+Recupera il seno iperbolico inverso di un numero complesso, con raggi compreso nell'intervallo [-i, + i] lungo l'asse immaginario.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -79,11 +68,11 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il seno iperbolico inverso di *z*, in radianti. Il risultato viene disassociato lungo l'asse reale e nell'intervallo [-iπ/2 + iπ/2] lungo l'asse immaginaria.
+Il seno iperbolico inverso di *z*, espresso in radianti. Il risultato è non associato lungo l'asse reale e nell'intervallo [-iπ/2 + 2 iπ] lungo l'asse immaginario.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **casinh** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **casinh** accetta e restituisce sempre un **_Dcomplex** valore.
+Dato che C++ consente l'overload, è possibile chiamare overload di **casinh** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **casinh** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 

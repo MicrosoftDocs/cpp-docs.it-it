@@ -1,29 +1,19 @@
 ---
-title: Creazione di un'applicazione MFC di tipo Esplora File | Microsoft Docs
-ms.custom: ''
+title: Creazione di un'applicazione MFC di tipo Esplora file
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcexplorer.project
-dev_langs:
-- C++
 helpviewer_keywords:
 - browsers [MFC], Explorer-style applications
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff6e3796de3f37275d136cc378e402d4c3272637
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3ddeb2e875ccdb45dd0bc2b29a2da3c1498138ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564762"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Creazione di un'applicazione MFC di tipo Esplora file
 

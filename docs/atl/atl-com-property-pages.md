@@ -1,12 +1,6 @@
 ---
-title: Pagine delle proprietà COM ATL | Microsoft Docs
-ms.custom: ''
+title: Pagine delle proprietà COM ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - property pages, COM
 - ATL COM objects
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - COM objects, ATL
 - ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5bc17bfc415576d50c84e880bef955e49d926c86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095859"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595559"
 ---
 # <a name="atl-com-property-pages"></a>Pagine delle proprietà COM ATL
 

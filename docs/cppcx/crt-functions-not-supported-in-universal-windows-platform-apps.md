@@ -1,20 +1,13 @@
 ---
-title: Funzioni CRT non supportate nelle App della piattaforma Windows universale | Microsoft Docs
-ms.custom: ''
+title: Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c90200f5a02528b04be5a3856a7174c22c80061b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2de3edb11d65236f14c4c8fdf52fe6c855399dba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104081"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527686"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)
 

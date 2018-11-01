@@ -1,12 +1,6 @@
 ---
-title: Annullamento nella libreria PPL | Microsoft Docs
-ms.custom: ''
+title: Annullamento nella libreria PPL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - parallel algorithms, canceling [Concurrency Runtime]
 - canceling parallel algorithms [Concurrency Runtime]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f84ca4c924c837ec008c16d6ff3b77af379df4cd
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b776aedb71f81d7dc27f9322ed87fd080c8819a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163803"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558726"
 ---
 # <a name="cancellation-in-the-ppl"></a>Annullamento nella libreria PPL
 

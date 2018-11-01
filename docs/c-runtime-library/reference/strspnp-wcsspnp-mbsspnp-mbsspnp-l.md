@@ -1,10 +1,6 @@
 ---
-title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l | Microsoft Docs
-ms.custom: ''
+title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspnp
 - _wcsspnp
@@ -34,8 +30,6 @@ f1_keywords:
 - _wcsspnp
 - _strspnp
 - mbsspnp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strspnp function
 - _wcsspnp function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80f257d7aef9678258644758e083817cbbfbe134
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272375948c8c650b226bfb71073c6c65c5b8acef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635292"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Restituisce un puntatore al primo carattere in una stringa specificata non incluso un'altra stringa specificata.
 
 > [!IMPORTANT]
-> **mbsspnp** e **mbsspnp_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsspnp** e **mbsspnp_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -102,13 +92,13 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strspnp**, **wcsspnp**, e **mbsspnp** restituiscono un puntatore al primo carattere in *str* che non appartiene al set di caratteri in *charset*. Ognuna di queste funzioni restituisce **NULL** se *str* interamente costituito da caratteri da *charset*. Per ognuna di queste routine non è riservato alcun valore restituito per indicare un errore.
+**strspnp**, **wcsspnp**, e **mbsspnp** restituiscono un puntatore al primo carattere nella *str* che non appartiene al set di caratteri nella *charset*. Ognuna di queste funzioni restituisce **NULL** se *str* interamente costituito da caratteri compresi *charset*. Per ognuna di queste routine non è riservato alcun valore restituito per indicare un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **mbsspnp** funzione restituisce un puntatore al carattere multibyte che è il primo carattere in *str* che non appartiene al set di caratteri *charset*. **mbsspnp** riconosce le sequenze di caratteri multibyte in base al [tabella codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso. La ricerca non include i caratteri Null di terminazione.
+Il **mbsspnp** funzione restituisce un puntatore al carattere multibyte che è il primo carattere nella *str* che non appartiene al set di caratteri *charset*. **mbsspnp** riconosce le sequenze di caratteri multibyte in base al [tabella codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso. La ricerca non include i caratteri Null di terminazione.
 
-Se entrambi *str* oppure *charset* è un puntatore null, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **NULL** e imposta **errno** al **EINVAL**.
+Se uno dei due *str* oppure *charset* è un puntatore null, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **NULL** e imposta **errno** al **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -116,9 +106,9 @@ Se entrambi *str* oppure *charset* è un puntatore null, questa funzione richiam
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**strspnp** e **wcsspnp** sono versioni a caratteri "wide" di carattere a byte singolo **mbsspnp**. **strspnp** e **wcsspnp** si comportano in modo identico alle **mbsspnp** in caso contrario, vengono fornite solo per questo mapping e non deve essere utilizzate per qualsiasi altro motivo. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
+**strspnp** e **wcsspnp** sono caratteri a byte singolo e versioni a caratteri wide di **mbsspnp**. **strspnp** e **wcsspnp** si comportano in modo identico alle **mbsspnp** in caso contrario, essi sono disponibili solo per questo mapping e non deve essere utilizzate per qualsiasi altro motivo. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 
-**mbsspnp_l** è identica ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**mbsspnp_l** è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

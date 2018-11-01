@@ -1,27 +1,17 @@
 ---
-title: Classe ctype_base | Microsoft Docs
-ms.custom: ''
+title: Classe ctype_base
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::ctype_base
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3def685a8cd108666b3e1b8be9314fc7585a9837
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531131"
 ---
 # <a name="ctypebase-class"></a>Classe ctype_base
 
@@ -79,7 +69,7 @@ Definisce una maschera di enumerazione. Ogni costante di enumerazione caratteriz
 
 - **graph** (funzione [isgraph](../standard-library/locale-functions.md#isgraph))
 
-È possibile caratterizzare una combinazione di classificazioni usando "o" con queste costanti. In particolare, è sempre true che **alnum** = = ( **alpha** &#124; **cifra** \) e **grafico** \= \= \( **alnum** &#124; **punct**).
+È possibile caratterizzare una combinazione di classificazioni usando "o" con queste costanti. In particolare, è sempre vero che **alnum** = = ( **alfa** &#124; **cifra** \) e **graph** \= \= \( **alnum** &#124; **punct**).
 
 ## <a name="requirements"></a>Requisiti
 

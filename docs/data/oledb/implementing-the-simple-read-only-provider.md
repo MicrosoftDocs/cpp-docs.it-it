@@ -1,26 +1,15 @@
 ---
-title: Implementazione di Provider semplice in sola lettura | Microsoft Docs
-ms.custom: ''
+title: Implementazione di un provider semplice in sola lettura
 ms.date: 10/26/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - read-only provider
 ms.assetid: 22a8adb5-19da-43b5-9733-0ea72bb8684c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 517020762fa4baf45fc4ff0477e2a561ef353b39
-ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
+ms.openlocfilehash: f7cce90f7f5f1316542986d236265c629357fe8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216422"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617243"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implementazione di un provider semplice in sola lettura
 

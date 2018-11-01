@@ -1,17 +1,11 @@
 ---
-title: -Za, - Ze (Disabilita estensioni linguaggio) | Microsoft Docs
-ms.custom: ''
+title: /Za, /Ze (Disabilita estensioni linguaggio)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions
 - /za
 - /ze
 - VC.Project.VCCLCompilerTool.DisableLanguageExtensions
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Za compiler option [C++]
 - Za compiler option [C++]
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d239b6153a2fc725c2add3eddb5fbaace406469
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a3d25f71739f9948f2c0237efbaeaf8fa89f2114
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712820"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549721"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Disabilita estensioni linguaggio)
 

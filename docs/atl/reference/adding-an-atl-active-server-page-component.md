@@ -1,28 +1,18 @@
 ---
-title: Aggiunta di un componente ASP ATL | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di un componente ASP ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ASP components, adding
 - ASP components
 - ATL, ASP components
 - ATL ASP components
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 7cbe52d4f6bcc82d17880d6eaa6a38f76809952d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861512"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630594"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Aggiunta di un componente ASP ATL
 

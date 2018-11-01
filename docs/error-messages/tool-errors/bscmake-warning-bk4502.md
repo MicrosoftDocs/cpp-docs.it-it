@@ -1,29 +1,19 @@
 ---
-title: Avviso BK4502 di BSCMAKE | Microsoft Docs
-ms.custom: ''
+title: Avviso BK4502 di BSCMAKE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - BK4502
 - BK1513
-dev_langs:
-- C++
 helpviewer_keywords:
 - BK1513
 - BK4502
 ms.assetid: ee412ec8-df03-4cdb-91ee-5d609ded8691
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4142993b3f4f5bda2b3e4ce322aa26d7beca8584
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 34b0204744b390ac32371ff2611e43b215dc0f40
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596352"
 ---
 # <a name="bscmake-warning-bk4502"></a>Avviso BK4502 di BSCMAKE
 

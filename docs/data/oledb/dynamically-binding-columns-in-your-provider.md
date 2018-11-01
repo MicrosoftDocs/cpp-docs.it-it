@@ -1,28 +1,17 @@
 ---
-title: Associazione dinamica di colonne nel Provider | Microsoft Docs
-ms.custom: ''
+title: Associazione dinamica di colonne nel provider
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - columns [C++], dynamic column binding
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: de3c278ece6b53528ce0f013f35780e60fda9531
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5ceb3b21d59bef3dcbe9d5b53e6a9b779b8b381f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509318"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Associazione dinamica di colonne nel provider
 

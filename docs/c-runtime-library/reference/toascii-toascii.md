@@ -1,10 +1,6 @@
 ---
-title: toascii, __toascii | Microsoft Docs
-ms.custom: ''
+title: toascii, __toascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __toascii
 apilocation:
@@ -25,24 +21,18 @@ f1_keywords:
 - toascii
 - ctype/toascii
 - ctype/__toascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - toascii function
 - string conversion, to ASCII characters
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead516a7e298e56d13d8f1a09a054057796ca64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408422"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578971"
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -64,13 +54,13 @@ Carattere da convertire.
 
 ## <a name="return-value"></a>Valore restituito
 
-**ToAscii** converte il valore del *c* per il functoid da ASCII a 7 bit intervallo e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
+**ToAscii** converte il valore del *c* per il codice ASCII a 7 bit, intervallo e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **ToAscii** routine converte il carattere specificato in un carattere ASCII, troncando a 7 bit di ordine inferiore. Non vengono applicate altre trasformazioni.
+Il **ToAscii** routine converte il carattere specificato in un carattere ASCII troncandolo ai 7 bit meno significativi. Non vengono applicate altre trasformazioni.
 
-Il **ToAscii** routine è definita come macro, a meno che non è definito il _CTYPE_DISABLE_MACROS macro del preprocessore. Per motivi di compatibilità **toascii** è definito come macro solo quando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) non è definito o è definito come 0; in caso contrario, viene definito.
+Il **ToAscii** routine è definita come macro solo se è stata definita la macro del preprocessore ctype_disable_macros. Per motivi di compatibilità **toascii** viene definita come macro solo quando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) non è definito o è definito come 0; in caso contrario, non è definita.
 
 ## <a name="requirements"></a>Requisiti
 

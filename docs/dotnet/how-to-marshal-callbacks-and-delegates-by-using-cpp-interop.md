@@ -1,12 +1,7 @@
 ---
-title: "Procedura: effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++ | Microsoft Docs"
+title: "Procedura: Effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - data marshaling [C++], callbacks and delegates
 - C++ Interop, callbacks and delegates
@@ -15,17 +10,12 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: db3d4cf59aa3ec14e964d53a54afbe5a9fe0aecd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b72b99798a2c719f1ba919478132c7133fd71ca1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615722"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Procedura: Effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++
 

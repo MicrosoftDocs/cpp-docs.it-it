@@ -1,27 +1,16 @@
 ---
-title: Interfaccia gli attributi (COM C++) | Microsoft Docs
-ms.custom: ''
+title: Attributi di interfaccia (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: cd12db4235d22245c3f31ce7dfe3fd2470133dfd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791273"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556644"
 ---
 # <a name="interface-attributes"></a>Attributi di interfaccia
 

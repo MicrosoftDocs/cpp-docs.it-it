@@ -1,10 +1,6 @@
 ---
-title: strcpy, wcscpy, _mbscpy | Microsoft Docs
-ms.custom: ''
+title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcpy
 - wcscpy
@@ -29,8 +25,6 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -43,23 +37,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c996fc8ceb81d98d24e3c95330f2ed9c37097e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413921"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640063"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Copia una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **mbscpy** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbscpy** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -107,12 +97,12 @@ Ognuna di queste funzioni restituisce la stringa di destinazione. Nessun valore 
 
 ## <a name="remarks"></a>Note
 
-Il **strcpy** funzione copie *strSource*, incluso il carattere null di terminazione, nel percorso specificato da *strDestination*. Il comportamento delle **strcpy** è definito se le stringhe di origine e di destinazione si sovrappongono.
+Il **strcpy** funzione copie *strSource*, incluso il carattere null di terminazione, nel percorso specificato dal *strDestination*. Il comportamento delle **strcpy** è definito se le stringhe di origine e destinazione si sovrappongono.
 
 > [!IMPORTANT]
-> Poiché **strcpy** non verifica la presenza di spazio sufficiente in *strDestination* prima di copiare *strSource*, è una causa possibile dei sovraccarichi del buffer. È quindi consigliabile usare [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) in alternativa.
+> In quanto **strcpy** non verifica la presenza di spazio sufficiente nella *strDestination* prima di copiare *strSource*, è una causa possibile dei sovraccarichi del buffer. È quindi consigliabile usare [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) in alternativa.
 
-**wcscpy** e **mbscpy** sono, rispettivamente, le versioni a caratteri wide e caratteri multibyte di **strcpy**. Gli argomenti e il valore restituito di **wcscpy** sono caratteri wide, mentre quelli di stringhe **mbscpy** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcscpy** e **mbscpy** sono, rispettivamente, le versioni a caratteri wide e a caratteri multibyte di **strcpy**. Gli argomenti e il valore restituito di **wcscpy** sono caratteri wide, mentre quelli di stringhe **mbscpy** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

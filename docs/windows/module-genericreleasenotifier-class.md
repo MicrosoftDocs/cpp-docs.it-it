@@ -1,34 +1,24 @@
 ---
-title: 'Classe Module:: genericreleasenotifier | Microsoft Docs'
-ms.custom: ''
+title: Classe Module::GenericReleaseNotifier
 ms.date: 09/17/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::GenericReleaseNotifier
 - module/Microsoft::WRL::Module::GenericReleaseNotifier::callback_
 - module/Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier
 - module/Microsoft::WRL::Module::GenericReleaseNotifier::Invoke
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier class
 - Microsoft::WRL::Module::GenericReleaseNotifier::callback_ data member
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ad7081e22762409682250da0330575885378e8ab
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c708dc101fde9d2631eca33ebe101f4aed421094
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161879"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572354"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Classe Module::GenericReleaseNotifier
 

@@ -1,10 +1,6 @@
 ---
-title: vscanf_s, vwscanf_s | Microsoft Docs
-ms.custom: ''
+title: vscanf_s, vwscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vscanf_s
 - vwscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - _vtscanf_s
 - vscanf_s
 - vwscanf_s
-dev_langs:
-- C++
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c32d1e50f554c32917f9fa0450abba15463386ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90100a5fbc03371a11f437acc12562d9ccf957f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415647"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519470"
 ---
 # <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
 
@@ -65,17 +55,17 @@ Elenco di argomenti variabili.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore, o se il carattere di fine del file o il carattere di fine della stringa viene rilevato il primo tentativo di leggere un carattere. Se *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **vscanf_s** e **vwscanf_s** restituiscono **EOF** e impostare **errno** a **EINVAL**.
+Restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore, o se viene rilevato il carattere di fine del file o il carattere di fine della stringa al primo tentativo di leggere un carattere. Se *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **vscanf_s** e **vwscanf_s** restituiscono **EOF** e impostare **errno** a **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **vscanf_s** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni fornite per il *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **vscanf_s** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni specificate dal *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde all'identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-**vwscanf_s** è una versione a caratteri wide **vscanf_s**; il *formato* argomento **vwscanf_s** è una stringa di caratteri "wide". **vwscanf_s** e **vscanf_s** comportarsi in modo analogo, se il flusso viene aperto in modalità ANSI. **vscanf_s** non supporta input da un flusso UNICODE.
+**vwscanf_s** è una versione a caratteri wide di **vscanf_s**; gli *formato* argomento **vwscanf_s** è una stringa di caratteri "wide". **vwscanf_s** e **vscanf_s** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vscanf_s** non supporta l'input da un flusso UNICODE.
 
-A differenza **vscanf** e **vwscanf**, **vscanf_s** e **vwscanf_s** richiedono le dimensioni del buffer per essere specificati per tutti i parametri di tipo di input **c**, **C**, **s**, **S**, o set di controllo che sono racchiusi tra parentesi stringa **[]**. La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. Le dimensioni del buffer in caratteri per un **wchar_t** stringa non è la stessa dimensione in byte.
+A differenza **vscanf** e **vwscanf**, **vscanf_s** e **vwscanf_s** richiedono le dimensioni del buffer necessario specificarlo per tutti i parametri di tipo di input **c**, **C**, **s**, **S**, o set di controllo sono racchiusi tra parentesi stringa **[]**. La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. Le dimensioni del buffer in caratteri per un **wchar_t** stringa non è quello utilizzato per la dimensione in byte.
 
 La dimensione del buffer include il carattere di terminazione null. È possibile usare un campo di specifica della larghezza per assicurarsi che il token che viene letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.
 
@@ -99,7 +89,7 @@ Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e 
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
