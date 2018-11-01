@@ -1,10 +1,6 @@
 ---
-title: -w,-W0,-W1, - W2,-W3, - W4,-w1,-w2,-w3,-w4,-Wall, -wd,-we, -wo, -Wv, - WX (livello avviso) | Microsoft Docs
-ms.custom: ''
+title: /w, /W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, /Wall, /wd, / we, /wo, /Wv, /WX (livello avviso)
 ms.date: 01/31/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DisableSpecificWarnings
 - VC.Project.VCCLCompilerTool.WarningLevel
@@ -24,8 +20,6 @@ f1_keywords:
 - /wd
 - /we
 - /wo
-dev_langs:
-- C++
 helpviewer_keywords:
 - /W1 compiler option [C++]
 - w compiler option [C++]
@@ -63,16 +57,12 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0badc4359d399788d7c40f5d299132abca1fe922
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4842e845013bf69a7bc033ba7b6abf5ecc7d5079
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725218"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441743"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w, /W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, /Wall, /wd, / we, /wo, /Wv, /WX (livello avviso)
 

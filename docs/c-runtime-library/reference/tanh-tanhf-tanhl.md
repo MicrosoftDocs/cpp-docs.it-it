@@ -1,10 +1,6 @@
 ---
-title: Tanh, tanhf, tanhl | Documenti Microsoft
-ms.custom: ''
+title: Tanh, tanhf, tanhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tanh
 - tanhf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanhf
 - tanhl
 - _tanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanhl function
 - _tanhl function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432387"
 ---
 # <a name="tanh-tanhf-tanhl"></a>Tanh, tanhf, tanhl
 
@@ -71,15 +61,15 @@ Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **tanh** le funzioni restituiscono la tangente iperbolica di *x*. Non vi è restituzione di errori.
+Il **tanh** le funzioni restituiscono la tangente iperbolica del *x*. Non vi è restituzione di errori.
 
-|Input|Eccezione SEH|**Matherr** (eccezione)|
+|Input|Eccezione SEH|**Matherr** eccezione|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **tanh** che accettano e restituiscono **float** oppure **lungo** **doppie** valori. In un programma C **tanh** accetta e restituisce sempre **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **tanh** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **tanh** accetta e restituisce sempre **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 

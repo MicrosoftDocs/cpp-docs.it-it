@@ -1,10 +1,6 @@
 ---
-title: fputc, fputwc | Microsoft Docs
-ms.custom: ''
+title: fputc, fputwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fputc
 - fputwc
@@ -25,8 +21,6 @@ f1_keywords:
 - fputc
 - fputwc
 - _fputtc
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputtc function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af93e0c42002dc557f691daadd2fc003dced0247
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401418"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447177"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -67,18 +57,18 @@ wint_t fputwc(
 *c*<br/>
 Carattere da scrivere.
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il carattere scritto. Per **fputc**, il valore restituito **EOF** indica un errore. Per **fputwc**, il valore restituito **WEOF** indica un errore. Se *flusso* viene **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **EOF** e impostare **errno** al **EINVAL**.
+Ognuna di queste funzioni restituisce il carattere scritto. Per la **fputc**, un valore restituito **EOF** indica un errore. Per la **fputwc**, un valore restituito **WEOF** indica un errore. Se *stream* viene **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **EOF** e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni scrive il singolo carattere *c* in un file in corrispondenza della posizione indicata dall'indicatore di posizione file associato (se definiti) e sposta in avanti l'indicatore come appropriato. Nel caso di **fputc** e **fputwc**, è associato il file *flusso*. Se il file non è in grado di supportare le richieste di posizionamento o è stato aperto in modalità Append, il carattere viene aggiunto alla fine del flusso.
+Ognuna di queste funzioni scrive il carattere singolo *c* in un file in corrispondenza della posizione indicata dall'indicatore di posizione file associato (se definiti) e sposta in avanti l'indicatore come appropriato. Nel caso del **fputc** e **fputwc**, è associato il file *flusso*. Se il file non è in grado di supportare le richieste di posizionamento o è stato aperto in modalità Append, il carattere viene aggiunto alla fine del flusso.
 
 Le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fputc** non supporta attualmente l'output in un flusso UNICODE.
 
@@ -88,8 +78,8 @@ Seguono note specifiche per le routine.
 
 |Routine|Note|
 |-------------|-------------|
-|**fputc**|Equivalente a **putc**, ma è implementata solo come funzione, anziché come una funzione e una macro.|
-|**fputwc**|Versione a caratteri "wide" di **fputc**. Scrive *c* come un carattere multibyte o un carattere Wide a seconda se *flusso* viene aperto in modalità testo oppure in modalità binaria.|
+|**fputc**|Equivalente a **putc**, ma implementata solo come funzione, anziché come una funzione e macro.|
+|**fputwc**|Versione a caratteri Wide di **fputc**. Scrive *c* come un carattere multibyte o un carattere Wide a seconda se *stream* viene aperto in modalità testo o binario.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -104,7 +94,7 @@ Seguono note specifiche per le routine.
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console, ovvero**stdin**, **stdout**, e **stderr**, ovvero devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console —**stdin**, **stdout**, e **stderr**, ovvero devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

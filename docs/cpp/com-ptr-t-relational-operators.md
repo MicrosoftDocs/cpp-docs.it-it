@@ -1,10 +1,6 @@
 ---
-title: Operatori relazionali com_ptr_t | Microsoft Docs
-ms.custom: ''
+title: Operatori relazionali _com_ptr_t
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::operator>
 - _com_ptr_t::operator>=
@@ -12,8 +8,6 @@ f1_keywords:
 - _com_ptr_t::operator==
 - _com_ptr_t::operator!=
 - _com_ptr_t::operator<
-dev_langs:
-- C++
 helpviewer_keywords:
 - '>= operator [C++], comparing specific objects'
 - '!= operator'
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6c338009b7dcd8f3810d48e17a4af470bee0837e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eea752410ce350417252c1de58e73ec49bf3f54f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109314"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440300"
 ---
 # <a name="comptrt-relational-operators"></a>Operatori relazionali _com_ptr_t
 
@@ -54,72 +44,72 @@ Confrontare l'oggetto del puntatore intelligente a un altro puntatore intelligen
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<typename _OtherIID> 
-bool operator==( const _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator==( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID>  
-bool operator==( _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID>  
+bool operator==( _com_ptr_t<_OtherIID>& p );
 
-template<typename _InterfaceType> 
-bool operator==( _InterfaceType* p );
+template<typename _InterfaceType> 
+bool operator==( _InterfaceType* p );
 
-template<> 
-bool operator==( Interface* p );
+template<> 
+bool operator==( Interface* p );
 
-template<> 
-bool operator==( const _com_ptr_t& p ) throw();
+template<> 
+bool operator==( const _com_ptr_t& p ) throw();
 
-template<> 
-bool operator==( _com_ptr_t& p ) throw();
+template<> 
+bool operator==( _com_ptr_t& p ) throw();
 
-bool operator==( Int null );
+bool operator==( Int null );
 
-template<typename _OtherIID> 
-bool operator!=( const _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator!=( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
-bool operator!=( _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator!=( _com_ptr_t<_OtherIID>& p );
 
-template<typename _InterfaceType> 
-bool operator!=( _InterfaceType* p );
+template<typename _InterfaceType> 
+bool operator!=( _InterfaceType* p );
 
-bool operator!=( Int null );
+bool operator!=( Int null );
 
-template<typename _OtherIID> 
-bool operator<( const _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator<( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
-bool operator<( _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator<( _com_ptr_t<_OtherIID>& p );
 
-template<typename _InterfaceType> 
-bool operator<( _InterfaceType* p );
+template<typename _InterfaceType> 
+bool operator<( _InterfaceType* p );
 
-template<typename _OtherIID> 
-bool operator>( const _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator>( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
-bool operator>(_com_ptr_t< _OtherIID>& p );
+template<typename _OtherIID> 
+bool operator>(_com_ptr_t< _OtherIID>& p );
 
-template<typename _InterfaceType> 
-bool operator>( _InterfaceType* p );
+template<typename _InterfaceType> 
+bool operator>( _InterfaceType* p );
 
-template<typename _OtherIID> 
-bool operator<=( const _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator<=( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
-bool operator<=( _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator<=( _com_ptr_t<_OtherIID>& p );
 
-template<typename _InterfaceType> 
-bool operator<=( _InterfaceType* p );
+template<typename _InterfaceType> 
+bool operator<=( _InterfaceType* p );
 
 template<typename _OtherIID>
-bool operator>=( const _com_ptr_t<_OtherIID>& p );
+bool operator>=( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
-bool operator>=( _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator>=( _com_ptr_t<_OtherIID>& p );
 
-template<typename _InterfaceType> 
-bool operator>=( _InterfaceType* p );
+template<typename _InterfaceType> 
+bool operator>=( _InterfaceType* p );
 ```
 
 ## <a name="remarks"></a>Note

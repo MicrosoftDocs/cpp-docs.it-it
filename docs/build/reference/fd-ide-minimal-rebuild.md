@@ -1,29 +1,19 @@
 ---
-title: -FD (ricompilazione minima IDE) | Microsoft Docs
-ms.custom: ''
+title: /FD (Ricompilazione minima IDE)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /FD
-dev_langs:
-- C++
 helpviewer_keywords:
 - /FD compiler option [C++]
 - -FD compiler option [C++]
 - FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 474602ce51ff9eb84f54d7580104f641d9b5b2a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a902096bf13105e6a6a66b7bd3ccc56b8f7cf624
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396194"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433592"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Ricompilazione minima IDE)
 

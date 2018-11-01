@@ -1,12 +1,7 @@
 ---
-title: Compilare il codice C/C++ nella riga di comando | Documenti Microsoft
+title: Compilare codice C/C++ nella riga di comando
 ms.custom: conceptual
 ms.date: 06/21/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -14,89 +9,85 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: bc5080ff14cf8629c98077bf1e3e39e4b824b48b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322316"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452039"
 ---
-# <a name="build-cc-code-on-the-command-line"></a>Compilare il codice C/C++ nella riga di comando
+# <a name="build-cc-code-on-the-command-line"></a>Compilare codice C/C++ nella riga di comando
 
-È possibile compilare applicazioni C e C++ nella riga di comando utilizzando gli strumenti inclusi in Visual Studio.
+È possibile compilare applicazioni C e C++ nella riga di comando usando gli strumenti inclusi in Visual Studio.
 
 ## <a name="how-to-get-the-command-line-tools"></a>Come ottenere gli strumenti da riga di comando
 
-Quando si sceglie uno dei carichi di lavoro C++ in Visual Studio Installer, viene installato Visual Studio *set strumenti della piattaforma*. Un set di strumenti della piattaforma sono gli strumenti di tutti i C e C++ per una determinata versione di Visual Studio, inclusi i compilatori C/C++, i linker, assembler e altri strumenti di compilazione, nonché le librerie corrispondenti. È possibile utilizzare tutti questi strumenti della riga di comando e vengono inoltre usati internamente dall'IDE di Visual Studio. Esistono separati i compilatori ospitati da x86 e x64 ospitati e strumenti per compilare il codice per x86, x64, ARM e ARM64 destinazioni. Ogni set di strumenti per una particolare architettura di host e la destinazione build viene archiviato nella directory di Litware.
+Quando si sceglie uno dei carichi di lavoro di C++ in Visual Studio Installer, l'installazione di Visual Studio *set strumenti della piattaforma*. Un set di strumenti della piattaforma include tutti i C e C++ gli strumenti per una specifica versione di Visual Studio, tra cui i compilatori C/C++, ai linker, gli assembler e altri strumenti di compilazione, nonché le librerie corrispondente. È possibile usare tutti questi strumenti dalla riga di comando e vengono inoltre utilizzati internamente dall'IDE di Visual Studio. Esistono compilatori ospitati da x86 e x64 ospitati separati e strumenti per compilare il codice per x86, x64, ARM e ARM64 destinazioni. Ogni set di strumenti per una particolare architettura di host e la destinazione build viene archiviato nella directory di Litware.
 
-Per funzionare correttamente, gli strumenti richiedono diverse variabili di ambiente da impostare. Questi vengono utilizzati per aggiungerli al percorso e impostare includono file, file di libreria e percorsi del SDK. Per rendere semplice impostare queste variabili di ambiente, il programma di installazione crea personalizzato *file di comando*, o i file, batch durante l'installazione. È possibile eseguire uno di questi file di comando in una finestra del prompt dei comandi per impostare un host specifico e architettura di destinazione build, versione di Windows SDK, piattaforma di destinazione e set di strumenti della piattaforma. Per comodità, il programma di installazione crea inoltre tasti di scelta rapida nel menu di avvio (o alla pagina iniziale in Windows 8. x) che iniziano finestre del prompt dei comandi per sviluppatori utilizzando questi file di comando, in modo che tutte le variabili di ambiente necessarie sono impostata ed è possibile usarla.
+Per funzionare correttamente, gli strumenti richiedono diverse variabili di ambiente specifiche da impostare. Questi vengono usati per aggiungerli al percorso e impostare includono file, file di libreria e percorsi SDK. Per renderlo semplice impostare queste variabili di ambiente, il programma di installazione crea personalizzato *file di comando*, o file batch, durante l'installazione. È possibile eseguire uno di questi file di comando in una finestra del prompt dei comandi per impostare un host specifico e architettura di destinazione build, versione di Windows SDK, piattaforma di destinazione e set strumenti della piattaforma. Per praticità, il programma di installazione crea anche i collegamenti nel menu di avvio (o alla pagina iniziale su Windows 8.x) windows il prompt dei comandi per gli sviluppatori che iniziano con questi file di comando, in modo che tutte le variabili di ambiente necessarie sono impostata e pronte all'uso.
 
-Le variabili di ambiente necessarie sono specifiche per l'installazione e l'architettura di compilazione scegliere e potrebbero essere modificate da aggiornamenti del prodotto. Pertanto, è consigliabile utilizzare uno dei collegamenti al prompt dei comandi installati o file di comando anziché impostare le variabili di ambiente Windows manualmente. Per altre informazioni, vedere [impostare il percorso e le variabili di ambiente per la compilazione dalla riga di comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Le variabili di ambiente necessarie sono specifiche per l'installazione e l'architettura di compilazione scegliere e potrebbero essere modificate da aggiornamenti del prodotto. Pertanto, è consigliabile usare uno dei collegamenti al prompt dei comandi installati o file di comando invece di impostare le variabili di ambiente nel Windows manualmente. Per altre informazioni, vedere [impostare il percorso e le variabili di ambiente per compilazioni da riga di comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Il set di strumenti della riga di comando, i file di comando e i collegamenti di prompt dei comandi installati dipendono dal processore del computer e le opzioni selezionate durante l'installazione. Come minimo, vengono installati gli strumenti ospitati da x86 a 32 bit che compilano codice nativi x86 a 32 bit e tra gli strumenti di compilazione a 64 bit nativi x64 codice. Se si dispone di Windows a 64 bit, vengono installati anche gli strumenti basati su x64 a 64 bit che codice nativo a 64 bit di compilazione e tra gli strumenti di compilazione di codice nativo a 32 bit. Se si sceglie di installare gli strumenti di piattaforma UWP C++ facoltativi, vengono installati anche gli strumenti nativi 32 bit e 64 bit per compilare codice ARM. Altri carichi di lavoro può installare altri strumenti.
+Il set di strumenti della riga di comando, i file di comando e tasti di scelta rapida del prompt dei comandi installati dipendono dal processore del computer e le opzioni selezionate durante l'installazione. Come minimo, vengono installati gli strumenti ospitati da x86 a 32 bit che compilare codice x86 nativo a 32 bit e strumenti di compilazione a 64 bit nativi x64 codice multipiattaforma. Se si dispone di Windows a 64 bit, vengono installati anche gli strumenti basati su x64 a 64 bit che compilano il codice nativo a 64 bit e tra gli strumenti di compilazione codice nativo a 32 bit. Se si sceglie di installare gli strumenti (Universal Windows Platform) C++ facoltativi, vengono installati anche gli strumenti nativi a 32 e 64 bit che creano codice ARM. Altri carichi di lavoro può installare altri strumenti.
 
-## <a name="developer-command-prompt-shortcuts"></a>Tasti di scelta rapida del prompt dei comandi per sviluppatori
+## <a name="developer-command-prompt-shortcuts"></a>Tasti di scelta rapida del prompt dei comandi per gli sviluppatori
 
-Collegamenti di prompt dei comandi vengono installati in una cartella specifica della versione Visual Studio nel menu Start. Ecco un elenco di tasti di scelta rapida i prompt dei comandi di base e le architetture di compilazione che supportano:
+I tasti di scelta rapida del prompt dei comandi vengono installati in una cartella specifica della versione Visual Studio nel menu Start. Ecco un elenco di tasti di scelta rapida i prompt dei comandi di base e le architetture di compilazione che supportano:
 
-- **Prompt dei comandi sviluppatore** -imposta l'ambiente da utilizzare strumenti nativi x86 a 32 bit per compilare il codice a 32 bit, nativo x86.
-- **x86 prompt dei comandi degli strumenti nativi** -imposta l'ambiente da utilizzare strumenti nativi x86 a 32 bit per compilare il codice a 32 bit, nativo x86.
-- **x64 prompt dei comandi degli strumenti nativi** -imposta l'ambiente da utilizzare strumenti a 64 bit, x64 nativo per compilare il codice a 64 bit, x64 nativo.
-- **x86_x64 Cross prompt dei comandi** -imposta l'ambiente da utilizzare strumenti nativi x86 a 32 bit per compilare il codice a 64 bit, x64 nativo.
-- **x64_x86 Cross prompt dei comandi** -imposta l'ambiente da utilizzare strumenti a 64 bit, x64 nativo per compilare il codice a 32 bit, nativo x86.
+- **Prompt dei comandi sviluppatore** -configura l'ambiente per usare strumenti nativi x86 a 32 bit per compilare codice x86 nativo a 32 bit.
+- **x86 prompt dei comandi degli strumenti nativi** -configura l'ambiente per usare strumenti nativi x86 a 32 bit per compilare codice x86 nativo a 32 bit.
+- **x64 prompt dei comandi degli strumenti nativi** -configura l'ambiente per usare gli strumenti a 64 bit, x64 nativo per compilare il codice a 64 bit, x64 nativo.
+- **Prompt di comandi degli strumenti x86_x64 Cross** -imposta l'ambiente da utilizzare strumenti nativi x86 a 32 bit per compilare il codice a 64 bit, x64 nativo.
+- **Prompt di comandi degli strumenti x64_x86 Cross** -configura l'ambiente per usare gli strumenti a 64 bit, x64 nativo per compilare codice x86 nativo a 32 bit.
 
-I nomi effettivi di cartella e il collegamento dello menu Start variano a seconda la versione di Visual Studio è stato installato e l'installazione di nome alternativo se si imposta uno. Ad esempio, se si dispone di Visual Studio 2017 installato ed è stato specificato è un'installazione nome alternativo del *anteprima*, il collegamento del prompt dei comandi per sviluppatori è denominato **prompt dei comandi per sviluppatori per Visual Studio 2017 (anteprima)**, in una cartella denominata **Visual Studio 2017**.
+I nomi effettivi di scelta rapida e cartella dello menu avvio variano a seconda la versione di Visual Studio installata e il nome alternativo dell'installazione se si imposta uno. Ad esempio, se si dispone di Visual Studio 2017 installato e si è specificato, un'installazione nome alternativo del *Preview*, il collegamento prompt dei comandi per gli sviluppatori è denominato **prompt dei comandi per gli sviluppatori per Visual Studio 2017 (anteprima)**, in una cartella denominata **Visual Studio 2017**.
 
-Se è stato installato il [Build Tools per Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (che include anche il set di strumenti del compilatore di Visual Studio 2015 Update 3), solo la specifica dell'architettura nativa o tra prompt dei comandi sviluppatore vengono installate le opzioni degli strumenti e non generali **prompt dei comandi sviluppatore** scelta rapida.
+Se sono stati installati il [Build Tools per Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (che include anche il set di strumenti del compilatore di Visual Studio 2015 Update 3), solo di specifici dell'architettura nativa o cross prompt dei comandi per gli sviluppatori vengono installate le opzioni degli strumenti e non generali **prompt dei comandi sviluppatore** scelta rapida.
 
 <a name="developer_command_prompt"></a>
-### <a name="to-open-a-developer-command-prompt-window"></a>Per aprire una finestra del prompt dei comandi per sviluppatori
+### <a name="to-open-a-developer-command-prompt-window"></a>Per aprire una finestra del prompt dei comandi per gli sviluppatori
 
-1. Sul desktop, aprire le finestre **avviare** menu e quindi scorrere l'elenco per trovare e aprire la cartella per la versione di Visual Studio, ad esempio **Visual Studio 2017**. In alcune versioni precedenti di Visual Studio, i tasti di scelta rapida sono in una sottocartella denominata **strumenti di Visual Studio**.
+1. Sul desktop, aprire il Windows **avviare** dal menu e quindi scorrere per trovare e aprire la cartella per la versione di Visual Studio, ad esempio **Visual Studio 2017**. In alcune versioni precedenti di Visual Studio, i tasti di scelta rapida sono nella sottocartella **strumenti di Visual Studio**.
 
-1. Nella cartella, scegliere il **prompt dei comandi sviluppatore** per la versione di Visual Studio. Questo collegamento verrà avviata una finestra prompt dei comandi per gli sviluppatori che utilizza l'architettura di compilazione predefinito di strumenti nativi x86 a 32 bit per compilare il codice a 32 bit, nativo x86. Se si preferisce un'architettura di compilazione non predefinito, scegliere una delle nativo o strumenti di prompt dei comandi per specificare l'architettura di host e di destinazione.
+1. Nella cartella, scegliere il **prompt dei comandi sviluppatore** per la versione di Visual Studio. Questo collegamento viene avviata una finestra del prompt dei comandi per gli sviluppatori che usa l'architettura di compilazione predefinita di strumenti nativi x86 a 32 bit per compilare codice x86 nativo a 32 bit. Se si preferisce un'architettura di compilazione non predefinito, scegliere uno degli nativo o strumenti di prompt dei comandi per specificare l'architettura di host e di destinazione.
 
-Un modo più veloce per aprire una finestra del prompt dei comandi per sviluppatori è immettere *prompt dei comandi sviluppatore* nella casella di ricerca desktop, quindi scegliere il risultato desiderato.
+È un modo più veloce per aprire una finestra del prompt dei comandi per gli sviluppatori immettere *prompt dei comandi sviluppatore* nella casella di ricerca desktop, quindi scegliere il risultato desiderato.
 
-## <a name="developer-command-files-and-locations"></a>Percorsi e i file di comando per sviluppatori
+## <a name="developer-command-files-and-locations"></a>Percorsi e i file di comando per gli sviluppatori
 
-Se si preferisce impostare l'ambiente di architettura di compilazione in una finestra prompt dei comandi esistente, è possibile utilizzare uno dei file di comando (file batch) creato dal programma di installazione per impostare l'ambiente necessario. È consigliabile solo per eseguire questa operazione in una nuova finestra del prompt dei comandi e non è consigliabile per ambienti commutatore successive nella stessa finestra di comando. Il percorso di questi file dipende dalla versione di Visual Studio è stato installato e dal percorso e denominazione le scelte effettuate durante l'installazione. Per Visual Studio 2017, il percorso di installazione tipica in un computer a 64 bit è \Programmi file (x86) \Microsoft Visual Studio\2017\\*edition*, dove *edizione* potrebbe essere Community, Professional, Enterprise, BuildTools o un altro nome fornito. Per Visual Studio 2015, il percorso di installazione tipico è in \Programmi file (x86) \Microsoft Visual Studio 14.0.
+Se si preferisce impostare l'ambiente di architettura di compilazione in una finestra del prompt dei comandi esistente, è possibile usare uno dei file di comando (file batch) creato dal programma di installazione per impostare l'ambiente obbligatorio. È consigliabile solo per eseguire questa operazione in una nuova finestra del prompt dei comandi e non è consigliabile si successive cambiare ambiente, nella stessa finestra di comando. Il percorso di questi file dipende dal, la versione di Visual Studio installata e sul percorso e denominazione scelte effettuate durante l'installazione. Per Visual Studio 2017, il percorso di installazione tipica in un computer a 64 bit è \Microsoft Visual Studio\2017 file (x86) \Programmi\\*edition*, dove *edition* potrebbe essere Community, Professional, Enterprise, BuildTools o un altro nome fornito. Per Visual Studio 2015, il percorso di installazione tipico è in \Programmi file (x86) \Microsoft Visual Studio 14.0.
 
-Il file di comando prompt dei comandi per sviluppatori primario, vsdevcmd. bat, si trova nella sottodirectory della directory di installazione Common7\Tools. Quando viene specificato alcun parametro, si imposta l'ambiente e l'host e la destinazione build architettura per utilizzare gli strumenti nativi x86 a 32 bit per x86 a 32 bit di compilazione codice.
+Il file di comando prompt dei comandi sviluppatore principale, vsdevcmd. bat, si trova nella sottodirectory della directory di installazione Common7\Tools. Quando viene specificato alcun parametro, si imposta l'ambiente e l'host e la destinazione build architettura per utilizzare gli strumenti nativi x86 a 32 bit x86 a 32 bit creare codice.
 
-File di comando aggiuntive sono disponibili per impostare le architetture di compilazione specifica, a seconda dell'architettura di processore e i carichi di lavoro di Visual Studio e le opzioni che è stato installato. In Visual Studio 2017, queste si trovano nella sottodirectory VC\Auxiliary\Build della directory di installazione di Visual Studio. In Visual Studio 2015, si trovano in VC\bin, VC o VC\bin\\*architetture* le sottodirectory della directory di installazione, dove *architetture* fa parte di nativo o opzioni di compilatore incrociato. Questi file di comando impostare i parametri predefiniti e chiamare vsdevcmd. bat per configurare l'ambiente di compilazione specificata architettura. Un'installazione tipica potrebbe includere questi file di comando:
+File di comando aggiuntive sono disponibili per impostare le architetture di compilazione specifica, a seconda dell'architettura di processore e le opzioni installate e i carichi di lavoro di Visual Studio. In Visual Studio 2017, queste si trovano nella sottodirectory VC\Auxiliary\Build della directory di installazione di Visual Studio. In Visual Studio 2015, questi si trovano nel VC, VC\bin o VC\bin\\*architetture* le sottodirectory della directory di installazione, in cui *architetture* è uno dei nativo o opzioni del compilatore incrociato. Questi file di comando impostare i parametri predefiniti e chiamare vsdevcmd. bat per configurare l'ambiente di architettura di compilazione specificato. Un'installazione tipica potrebbe includere questi file di comando:
 
 |File di comando|Architetture di host e di destinazione|
 |---|---|
-|**vcvars32.bat**| Utilizzare gli strumenti nativi x86 a 32 bit per compilazione x86 a 32 bit codice.|
-|**vcvars64.bat**| Utilizzare gli strumenti nativi x64 a 64 bit a 64 bit x64 di compilazione codice.|
-|**vcvarsx86_amd64.bat**| Utilizzare gli strumenti di cross nativi x86 a 32 bit a 64 bit x64 di compilazione codice.|
-|**vcvarsamd64_x86.bat**| Utilizzare gli strumenti di cross bit nativi x64 a 64 bit per x86 a 32 bit di compilazione codice.|
-|**vcvarsx86_arm.bat**| Utilizzare gli strumenti di cross nativi x86 a 32 bit per compilare il codice ARM.|
-|**vcvarsamd64_arm.bat**| Utilizzare gli strumenti di cross bit nativi x64 a 64 bit per compilare il codice ARM.|
-|**vcvarsall.bat**| Utilizzare i parametri per specificare l'host e architetture di destinazione, nonché le opzioni di SDK e piattaforma. Per un elenco delle opzioni supportate, chiamare utilizzando un **/Help** parametro.|
+|**vcvars32.bat**| Usare gli strumenti nativi x86 a 32 bit x86 a 32 bit creare codice.|
+|**vcvars64.bat**| Usare gli strumenti nativi x64 a 64 bit x64 a 64 bit creare codice.|
+|**vcvarsx86_amd64.bat**| Usare gli strumenti di cross-nativi x86 a 32 a 64 bit x64 di compilazione codice.|
+|**vcvarsamd64_x86.bat**| Usare gli strumenti di cross-bit nativi x64 a 64 bit a 32 bit x86 di compilazione codice.|
+|**vcvarsx86_arm.bat**| Usare gli strumenti di cross nativi x86 a 32 bit per compilare codice ARM.|
+|**vcvarsamd64_arm.bat**| Usare gli strumenti di cross-bit nativi x64 a 64 bit per compilare codice ARM.|
+|**vcvarsall.bat**| Usare i parametri per specificare l'host e architetture di destinazione, nonché le opzioni di SDK e piattaforma. Per un elenco delle opzioni supportate, chiamare usando un **/Help** parametro.|
 
 > [!CAUTION]
-> Il file vcvarsall. bat e altri file di comando di Visual Studio possono variare da computer a computer. Non sostituire un file vcvarsall.bat mancante o danneggiato usando un file da un altro computer. Eseguire di nuovo il programma di installazione di Visual Studio per sostituire il file mancante.
+> Il file vcvarsall. bat e altri file di comando di Visual Studio possono variare da computer a computer. Non sostituire un file vcvarsall.bat mancante o danneggiato usando un file da un altro computer. Eseguire nuovamente il programma di installazione di Visual Studio per sostituire il file mancante.
 >
-> Il file vcvarsall.bat varia anche da versione a versione. Se la versione corrente di Visual Studio è installata in un computer che dispone anche di una versione precedente di Visual Studio, non eseguire vcvarsall. bat o un altro file di comando di Visual Studio da diverse versioni nella stessa finestra del prompt dei comandi.
+> Il file vcvarsall.bat varia anche da versione a versione. Se la versione corrente di Visual Studio è installata in un computer che ha anche una versione precedente di Visual Studio, non eseguire vcvarsall. bat o un altro file di comando di Visual Studio da diverse versioni nella stessa finestra del prompt dei comandi.
 
-## <a name="use-the-developer-tools-in-an-existing-command-window"></a>Utilizzare gli strumenti di sviluppo in una finestra di comando esistente
+## <a name="use-the-developer-tools-in-an-existing-command-window"></a>Usare gli strumenti di sviluppo in un prompt dei comandi esistenti
 
-Il modo più semplice per specificare un'architettura di compilazione specifica in una finestra di comando esistente è utilizzare il file vcvarsall. bat. È possibile utilizzare vcvarsall. bat per impostare le variabili di ambiente per configurare la riga di comando per la compilazione nativa a 32 o 64 bit, o per la compilazione incrociata per x86, x64 o processori ARM; destinazione Microsoft Store, piattaforma Windows universale o piattaforme Desktop di Windows; Per specificare quali Windows SDK usare; e per specificare la versione di set di strumenti della piattaforma. Se non sono forniti argomenti, vcvarsall. bat Configura le variabili di ambiente per usare il compilatore nativo a 32 bit corrente per x86 destinazioni Windows Desktop. Tuttavia, è possibile utilizzare per configurare qualsiasi di nativo o tra gli strumenti di compilazione. Se si specifica una configurazione del compilatore che non è installata o non è disponibile nell'architettura del computer, viene visualizzato un messaggio di errore.
+Il modo più semplice per specificare un'architettura di build specifica in un prompt dei comandi esistente è usare il file vcvarsall. bat. È possibile utilizzare vcvarsall. bat per impostare le variabili di ambiente per configurare la riga di comando per la compilazione nativa a 32 o 64 bit, o per la compilazione incrociata per processori ARM, x64 o x86 Microsoft Store, Universal Windows Platform o le piattaforme Windows Desktop; di destinazione Per specificare quali SDK di Windows da usare; e per specificare la versione del set di strumenti della piattaforma. Se viene fornito alcun argomento, vcvarsall. bat Configura le variabili di ambiente per utilizzare il compilatore nativo a 32 bit corrente per x86 destinazioni Windows Desktop. Tuttavia, è possibile usare per configurare qualsiasi di nativi o incrociati gli strumenti di compilazione. Se si specifica una configurazione del compilatore che non è installata o non è disponibile nell'architettura del computer, viene visualizzato un messaggio di errore.
 
 ### <a name="vcvarsall-syntax"></a>sintassi di vcvarsall
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
 
-*architettura*<br/>
-Questo argomento facoltativo specifica l'architettura di host e di destinazione da utilizzare. Se *architettura* viene omesso, viene usato l'ambiente di compilazione predefinito. Questi argomenti sono supportati:
+*Architettura*<br/>
+Questo argomento facoltativo specifica l'architettura di host e di destinazione da usare. Se *architettura* viene omesso, viene usato l'ambiente di compilazione predefinito. Questi argomenti sono supportati:
 
-|*architettura*|Compilatore|Architettura del computer host|Compilare l'architettura dell'output (destinazione)|
+|*Architettura*|Compilatore|Architettura del computer host|Compilare l'architettura dell'output (destinazione)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 nativo a 32 bit|x86, x64|x86|
 |**x86\_amd64** oppure **x86\_x64**|x64 su x86 (incrociato)|x86, x64|X64|
@@ -104,38 +95,38 @@ Questo argomento facoltativo specifica l'architettura di host e di destinazione 
 |**x86_arm64**|ARM64 su x86 (incrociato)|x86, x64|ARM64|
 |**AMD64** o **x64**|x64 nativo a 64 bit|X64|X64|
 |**AMD64\_x86** oppure **x64\_x86**|x86 su x64 incrociato|X64|x86|
-|**AMD64\_arm** oppure **x64\_arm**|ARM su x64 incrociato|X64|ARM|
-|**AMD64\_arm64** oppure **x64\_arm64**|ARM64 in x64 incrociato|X64|ARM64|
+|**AMD64\_arm** oppure **x64\_Azure Resource Manager**|ARM su x64 incrociato|X64|ARM|
+|**AMD64\_arm64** oppure **x64\_arm64**|ARM64 su x64 incrociato|X64|ARM64|
 
 *platform_type*<br/>
-Questo argomento facoltativo consente di specificare **archiviare** oppure **uwp** come il tipo di piattaforma. Per impostazione predefinita, l'ambiente è impostata per compilare le app desktop o console.
+Questo argomento facoltativo consente di specificare **archiviare** oppure **uwp** come il tipo di piattaforma. Per impostazione predefinita, l'ambiente è impostata per compilare App desktop o console.
 
 *winsdk_version*<br/>
-(Facoltativo) specifica la versione del SDK di Windows da utilizzare. Per impostazione predefinita, viene utilizzato la versione più recente è stato installato Windows SDK. Per specificare la versione di Windows SDK, è possibile utilizzare un numero completo di Windows 10 SDK, ad esempio **10.0.10240.0**, oppure specificare **8.1** per usare il SDK di Windows 8.1.
+Facoltativamente, specifica la versione del SDK di Windows da usare. Per impostazione predefinita, viene usata la versione più recente è stato installato Windows SDK. Per specificare la versione del SDK di Windows, è possibile usare un numero completo di Windows 10 SDK, ad esempio **10.0.10240.0**, oppure specificare **8.1** per usare il SDK di Windows 8.1.
 
 *vcversion*<br/>
-(Facoltativo) specifica il set di strumenti del compilatore Visual Studio da utilizzare. Per impostazione predefinita, l'ambiente è impostata per utilizzare il set di strumenti di Visual Studio 2017 del compilatore corrente. Uso **-vcvars_ver = 14.0** per specificare il set di strumenti del compilatore di Visual Studio 2015.
+Facoltativamente, specifica il set di strumenti del compilatore Visual Studio da usare. Per impostazione predefinita, l'ambiente è impostata per usare il set di strumenti di Visual Studio 2017 del compilatore corrente. Uso **-vcvars_ver=14.0 = 14.0** per specificare il set di strumenti del compilatore di Visual Studio 2015.
 
 <a name="vcvarsall"></a>
-#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>Per configurare l'ambiente di compilazione in una finestra prompt dei comandi esistente
+#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>Per configurare l'ambiente di compilazione in una finestra del prompt dei comandi esistente
 
-1. Al prompt dei comandi, utilizzare il comando CD per passare alla directory di installazione di Visual Studio. Quindi, utilizzare nuovamente CD per passare alla sottodirectory che contiene i file di comando specifiche della configurazione. Per Visual Studio 2017, si tratta della sottodirectory VC\Auxiliary\Build. Per Visual Studio 2015, utilizzare la sottodirectory VC.
+1. Al prompt dei comandi, usare il comando CD per passare alla directory di installazione di Visual Studio. Quindi, utilizzare nuovamente i CD per passare alla sottodirectory che contiene i file di comando specifiche della configurazione. Per Visual Studio 2017, si tratta della sottodirectory VC\Auxiliary\Build. Per Visual Studio 2015, usare la sottodirectory VC.
 
-1. Immettere il comando per l'ambiente di sviluppo preferito. Ad esempio, per compilare codice ARM per UWP su una piattaforma a 64 bit utilizzando il SDK di Windows più recente e il set di strumenti del compilatore di Visual Studio 2017 RTM, utilizzare la riga di comando:
+1. Immettere il comando per l'ambiente di sviluppo preferito. Ad esempio, per compilare codice ARM per la piattaforma UWP su una piattaforma a 64 bit usando la versione più recente di Windows SDK e il set di strumenti del compilatore di Visual Studio 2017 RTM, è possibile utilizzare questa riga di comando:
 
    `vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10`
 
-## <a name="create-your-own-command-prompt-shortcut"></a>Creare il propria collegamento prompt dei comandi
+## <a name="create-your-own-command-prompt-shortcut"></a>Creare il proprio collegamento prompt dei comandi
 
-Se si apre la finestra di dialogo proprietà per uno dei collegamenti di prompt dei comandi per sviluppatori esistente, è possibile visualizzare la destinazione del comando utilizzata. Ad esempio, la destinazione per il **x64 prompt dei comandi degli strumenti nativi per VS 2017** scelta rapida è simile a:
+Se si apre la finestra di dialogo proprietà per uno dei collegamenti di prompt dei comandi per gli sviluppatori esistenti, è possibile visualizzare la destinazione del comando usata. Ad esempio, la destinazione per il **x64 nativo prompt dei comandi di strumenti per Visual Studio 2017** collegamento è qualcosa di simile a:
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
-Set di file batch specifici per l'architettura di *architettura* parametro e chiamare vcvarsall. bat. Quando passa a vcvarsall. bat o solo è possibile chiamare direttamente vcvarsall. bat, è possibile passare le stesse opzioni aggiuntive per questi file batch. Per specificare i parametri per la propria scelta rapida di comando, è necessario aggiungerli alla fine del comando in virgolette doppie. Ad esempio, per configurare un collegamento per compilare codice ARM per UWP su una piattaforma a 64 bit utilizzando il SDK di Windows più recente e il set di strumenti del compilatore di Visual Studio 2017 RTM, utilizzare simile a questa destinazione del comando nel collegamento:
+Set di file batch specifici dell'architettura la *architettura* parametro e chiamare vcvarsall. bat. È possibile passare le stesse opzioni aggiuntive per i file batch come verrebbero passate a vcvarsall. bat o vcvarsall. bat è possibile semplicemente chiamare direttamente. Per specificare i parametri per il proprio scelta rapida di comando, aggiungerli alla fine del comando in virgolette doppie. Ad esempio, per configurare un collegamento per compilare codice ARM per la piattaforma UWP su una piattaforma a 64 bit usando la versione più recente di Windows SDK e il set di strumenti del compilatore di Visual Studio 2017 RTM, usare simile a questa destinazione del comando nel collegamento:
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10"`
 
-È necessario modificare il percorso perché rifletta la directory di installazione di Visual Studio.
+È necessario modificare il percorso in modo da riflettere la directory di installazione di Visual Studio.
 
 ## <a name="command-line-tools"></a>Strumenti da riga di comando
 
@@ -148,15 +139,15 @@ Usare il compilatore (cl.exe) per compilare e collegare file del codice sorgente
 Usare il linker (link.exe) per collegare file oggetto e librerie compilati in app e DLL.
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-Utilizzare MSBuild (msbuild.exe) per compilare i progetti Visual C++ e soluzioni di Visual Studio. Ciò equivale all'esecuzione di **compilare** progetto oppure **Compila soluzione** comando nell'IDE di Visual Studio.
+Usare MSBuild (msbuild.exe) per creare soluzioni di Visual Studio e progetti di Visual C++. Ciò equivale all'esecuzione di **compilare** progetto oppure **Compila soluzione** comando nell'IDE di Visual Studio.
 
 [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-Usare DEVENV (devenv.exe) combinati con un'opzione della riga di comando, ad esempio, **Compila** o **/Clean**, ovvero per eseguire determinati comandi di compilazione senza visualizzare l'IDE di Visual Studio.
+Usare DEVENV (devenv.exe) combinato con un'opzione della riga di comando, ad esempio, **/Build** o **/Clean**, ovvero per eseguire determinati comandi di compilazione senza visualizzare l'IDE di Visual Studio.
 
 [NMAKE](../build/nmake-reference.md)<br/>
 Usare NMAKE (nmake.exe) per automatizzare le attività di compilazione di progetti Visual C++ usando un makefile tradizionale.
 
-Quando si compila dalla riga di comando, il comando F1 non è disponibile per la Guida immediata. Al contrario, è possibile utilizzare un motore di ricerca per ottenere informazioni su avvisi, errori e messaggi oppure è possibile utilizzare i file della Guida in linea. Utilizzare la ricerca nella [docs.microsoft.com](https://docs.microsoft.com/cpp/), immettere la stringa di ricerca nella casella di ricerca nella parte superiore della pagina.
+Quando si compila dalla riga di comando, il comando F1 non è disponibile per il supporto immediato. In alternativa, è possibile usare un motore di ricerca per ottenere informazioni su avvisi, errori e messaggi oppure è possibile usare i file della Guida offline. Usare la ricerca nella [docs.microsoft.com](https://docs.microsoft.com/cpp/), immettere la stringa di ricerca nella casella di ricerca nella parte superiore della pagina.
 
 ## <a name="in-this-section"></a>In questa sezione
 
@@ -175,7 +166,7 @@ Descrive come creare e compilare un programma C++/CLI che usa .NET Framework.
 Descrive come creare e compilare un programma C++/CX che usa Windows Runtime.
 
 [Impostare le variabili di percorso e di ambiente per le compilazioni da riga di comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
-Viene descritto come avviare un prompt dei comandi con le variabili di ambiente necessarie impostato per le compilazioni da riga di comando che hanno come destinazione x86, x64 e ARM piattaforme usando un set di strumenti a 32 o 64 bit.
+Viene descritto come avviare una finestra del prompt dei comandi con le variabili di ambiente necessarie impostato per le compilazioni da riga di comando che hanno come destinazione x86, x64 e ARM piattaforme usando un set di strumenti a 32 o 64 bit.
 
 [Riferimenti a NMAKE](../build/nmake-reference.md)<br/>
 Fornisce collegamenti ad articoli in cui viene descritta l'utilità Microsoft Program Maintenance Utility (NMAKE.EXE).
@@ -195,7 +186,7 @@ Fornisce collegamenti ad articoli in cui vengono descritte le opzioni del compil
 Fornisce collegamenti ad articoli in cui vengono descritte le opzioni del linker e fornite informazioni su CL.exe.
 
 [Strumenti per la compilazione in C/C++](../build/reference/c-cpp-build-tools.md)<br/>
-Fornisce collegamenti a C e C++ compilare strumenti inclusi in Visual Studio.
+Offre gli strumenti inclusi in Visual Studio per creare collegamenti a C/C++.
 
 ## <a name="see-also"></a>Vedere anche
 

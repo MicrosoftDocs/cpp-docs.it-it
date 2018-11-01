@@ -1,10 +1,6 @@
 ---
-title: Classe CAtlArray | Microsoft Docs
-ms.custom: ''
+title: Classe CAtlArray
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlArray
 - ATLCOLL/ATL::CAtlArray
@@ -26,21 +22,15 @@ f1_keywords:
 - ATLCOLL/ATL::SetCount
 - ATLCOLL/ATL::INARGTYPE
 - ATLCOLL/ATL::OUTARGTYPE
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c16337949340b03bbaa517ca98ac9b65a5bb2bb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053930"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442679"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 

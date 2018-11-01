@@ -1,10 +1,6 @@
 ---
-title: itoa_s, le funzioni itow_s | Documenti Microsoft
-ms.custom: ''
+title: itoa_s, itow_s funzioni
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _itoa_s
 - _ltoa_s
@@ -60,8 +56,6 @@ f1_keywords:
 - ultot_s
 - i64tot_s
 - ui64tot_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -81,20 +75,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71808a65a58209f843cd65b4e53f49a1c9fd17f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47eb030790359f25a7df5275a247c071fb3d599f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404987"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441705"
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
-Converte un intero in una stringa. Queste sono versioni del [itoa, funzioni itow](itoa-itow.md) a livello di sicurezza come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Converte un intero in una stringa. Queste sono versioni del [itoa, le funzioni itow](itoa-itow.md) a livello di sicurezza come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -151,7 +141,7 @@ Buffer di output che contiene il risultato della conversione.
 Dimensioni del *buffer* in caratteri o i caratteri "wide".
 
 *radix*<br/>
-La radice o base numerica da usare per convertire *valore*, che deve essere compreso tra 2 e 36.
+La radice o base numerica da usare per convertire *valore*, che deve essere compreso nell'intervallo da 2 a 36.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -164,21 +154,21 @@ Zero se con esito positivo; un codice di errore in caso di errore. Se si applica
 |qualsiasi|**NULL**|qualsiasi|qualsiasi|**EINVAL**|
 |qualsiasi|qualsiasi|<=0|qualsiasi|**EINVAL**|
 |qualsiasi|qualsiasi|<= lunghezza della stringa di risultato richiesta|qualsiasi|**EINVAL**|
-|qualsiasi|qualsiasi|qualsiasi|*radice* < 2 o *radice* > 36|**EINVAL**|
+|qualsiasi|qualsiasi|qualsiasi|*radix* < 2 oppure *radice* 36 >|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemi di sicurezza
 
-Queste funzioni possono generare una violazione di accesso se *buffer* non punta alla memoria valida e non è **NULL**, o se la lunghezza del buffer non è sufficiente per contenere la stringa di risultato.
+Queste funzioni possono generare una violazione di accesso se *buffer* punta alla memoria valida e non **NULL**, o se la lunghezza del buffer non è sufficiente per contenere la stringa di risultato.
 
 ## <a name="remarks"></a>Note
 
-Ad eccezione di parametri e il valore restituito, il **itoa_s** e **itow_s** famiglie di funzione hanno lo stesso comportamento come corrispondente meno sicura **itoa** e**itow** versioni.
+Fatta eccezione per i parametri e valore restituito, il **itoa_s** e **itow_s** famiglie di funzioni hanno lo stesso comportamento meno sicure corrispondenti **itoa** e**itow** versioni.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-La libreria CRT include pratiche macro per definire la dimensione del buffer necessarie per convertire il valore possibile più lungo di ogni tipo di integer, inclusi il carattere di terminazione null e firmare carattere, per diverse basi comuni. Per informazioni, vedere [macro conteggio di conversione massimo](itoa-itow.md#maximum-conversion-count-macros).
+CRT include macro pratiche per definire le dimensioni del buffer richiesto per convertire il valore più lungo possibile di ogni tipo di integer, incluso il carattere di terminazione null e firmare carattere per svariate basi comuni. Per informazioni, vedere [macro di conteggio di conversione di massimo](itoa-itow.md#maximum-conversion-count-macros).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -1,10 +1,6 @@
 ---
-title: Classe CDockingManager | Microsoft Docs
-ms.custom: ''
+title: Classe CDockingManager
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDockingManager
 - AFXDOCKINGMANAGER/CDockingManager
@@ -85,8 +81,6 @@ f1_keywords:
 - AFXDOCKINGMANAGER/CDockingManager::m_nDockSensitivity
 - AFXDOCKINGMANAGER/CDockingManager::m_nTimeOutBeforeDockingBarDock
 - AFXDOCKINGMANAGER/CDockingManager::m_nTimeOutBeforeToolBarDock
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDockingManager [MFC], AddDockSite
 - CDockingManager [MFC], AddHiddenMDITabbedBar
@@ -166,16 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6a920c92a0a3b3948ad89e31cfaf317f54ad6724
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074735"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438041"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 

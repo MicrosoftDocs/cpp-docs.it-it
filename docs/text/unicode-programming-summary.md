@@ -1,26 +1,16 @@
 ---
-title: Riepilogo della programmazione Unicode | Microsoft Docs
-ms.custom: ''
+title: Riepilogo della programmazione Unicode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ac931aca05c9df6d5b201fdafb8872c1ee9c789
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080676"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437937"
 ---
 # <a name="unicode-programming-summary"></a>Riepilogo della programmazione Unicode
 
