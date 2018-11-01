@@ -1,12 +1,7 @@
 ---
-title: Parole chiave (C++) | Microsoft Docs
+title: Parole chiave (C++)
 ms.custom: index-page
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 645a0edb053320499c3ecca1c9d2ffd639b15931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659312"
 ---
 # <a name="keywords-c"></a>Parole chiave (C++)
 
@@ -85,7 +76,7 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
 
 In Microsoft C++ gli identificatori con due caratteri di sottolineatura iniziali sono riservati alle implementazioni del compilatore. Pertanto, per convenzione le parole chiave specifiche di Microsoft sono precedute da un doppio carattere di sottolineatura. Queste parole non possono essere usate come nomi di identificatori.
 
-Le estensioni Microsoft sono attivate per impostazione predefinita. Per garantire che i programmi siano completamente portabili, è possibile disabilitare le estensioni Microsoft specificando il [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) opzione durante la compilazione. Quando si esegue questa operazione, alcune parole chiave specifiche di Microsoft sono disabilitate.
+Le estensioni Microsoft sono attivate per impostazione predefinita. Per assicurarsi che i programmi siano completamente portabili, è possibile disabilitare le estensioni Microsoft specificando l'opzione [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) durante la compilazione. In questo caso, vengono disabilitate alcune parole chiave specifiche di Microsoft.
 
 Quando le estensioni Microsoft sono abilitate, è possibile usare le parole chiave specifiche di Microsoft nei programmi. Per la compatibilità con ANSI, tali parole chiave sono precedute da un doppio carattere di sottolineatura. Per garantire la compatibilità, versioni singolo carattere di sottolineatura di molte delle parole chiave sottolineate doppia sono supportate. È inoltre **cdecl** è disponibile senza alcuna sottolineatura iniziale.
 

@@ -1,27 +1,17 @@
 ---
-title: '&lt;cwctype&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cwctype&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <cwctype>
-dev_langs:
-- C++
 helpviewer_keywords:
 - cwctype header
 ms.assetid: 46476f95-b8c3-4ab2-a172-9a1be91124b7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab85b43b75b142275f9a4a31c7e685e98aa4abf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dbadebfd54519dc4b839fbbf25aed000d217a572
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843314"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512879"
 ---
 # <a name="ltcwctypegt"></a>&lt;cwctype&gt;
 

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3213 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3213
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3213
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3213
 ms.assetid: 1f079e36-b3e9-40f8-8e95-08eeba3adc82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a23f61dc8170ff7cd5638d2b2f394d288f48c5f3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1b08b0ef5b8fefcfa1dd55ef3a16ee4ef5d027e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637814"
 ---
 # <a name="compiler-error-c3213"></a>Errore del compilatore C3213
 

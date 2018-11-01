@@ -1,10 +1,6 @@
 ---
-title: _fsopen, _wfsopen | Microsoft Docs
-ms.custom: ''
+title: _fsopen, _wfsopen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfsopen
 - _fsopen
@@ -28,8 +24,6 @@ f1_keywords:
 - _tfsopen
 - _wfsopen
 - _fsopen
-dev_langs:
-- C++
 helpviewer_keywords:
 - opening files, streams
 - fsopen function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ce69c6789ba65f61c54957dde3dfa6965bc32e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 197a4f690a6626edbfec27ea4abef1999b6cedaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677487"
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
 
@@ -84,13 +74,13 @@ Tipo di condivisione consentita.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore al flusso. Un valore di puntatore Null indica un errore. Se *filename* oppure *modalità* è **NULL** o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **NULL** e impostare **errno** al **EINVAL**.
+Ognuna di queste funzioni restituisce un puntatore al flusso. Un valore di puntatore Null indica un errore. Se *nomefile* oppure *modalità* viene **NULL** o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **NULL** e impostare **errno** al **EINVAL**.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **fsopen** funzione si apre il file specificato da *filename* come flusso e prepara il file per una successiva lettura o scrittura condivisa, come definito dal modo e *shflag*argomenti. **wfsopen** è una versione a caratteri "wide" **fsopen**; il *filename* e *modalità* argomenti **wfsopen** sono stringhe a caratteri "wide". **wfsopen** e **fsopen** si comportano in modo identico in caso contrario.
+Il **fsopen** funzione si apre il file specificato da *filename* sotto forma di flusso e prepara il file per la successiva lettura o scrittura condivisa, come definito dal modo e *shflag*argomenti. **wfsopen** è una versione a caratteri wide di **fsopen**; gli *nomefile* e *modalità* argomenti **wfsopen** sono stringhe a caratteri Wide. **wfsopen** e **fsopen** hanno lo stesso comportamento in caso contrario.
 
 La stringa di caratteri *modalità* specifica il tipo di accesso richiesto per il file, come illustrato nella tabella seguente.
 
@@ -105,20 +95,20 @@ La stringa di caratteri *modalità* specifica il tipo di accesso richiesto per i
 
 Usare la **"w"** e **"w +"** tipi con cautela, poiché possono distruggere i file esistenti.
 
-Quando viene aperto un file con il **"a"** oppure **"+"** , tipo di accesso tutte le operazioni vengono eseguite alla fine del file di scrittura. Il puntatore del file può essere riposizionato usando [fseek](fseek-fseeki64.md) oppure [rewind](rewind.md), ma viene sempre spostato di nuovo alla fine del file prima di qualsiasi operazione di scrittura. Di conseguenza, i dati esistenti non possono essere sovrascritti. Quando il **"r +"**, **"w +"**, o **"a +"** viene specificato il tipo di accesso, sono consentite sia la lettura e scrittura (il file viene definito aperto per aggiornamento). Tuttavia, quando si passa da lettura a scrittura, deve esserci un'operazione [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md) intermedia. La posizione corrente può essere specificata per il [fsetpos](fsetpos.md) oppure [fseek](fseek-fseeki64.md) operazione, se lo si desidera. Oltre ai valori specificati sopra, uno dei caratteri seguenti può essere inclusi in *modalità* per specificare la modalità di conversione per le nuove righe e per la gestione dei file.
+Quando un file viene aperto con il **"a"** oppure **"a +"** accedere a tipo, tutte le operazioni vengono eseguite alla fine del file di scrittura. Il puntatore del file possa essere riposizionato usando [fseek](fseek-fseeki64.md) oppure [rewind](rewind.md), ma viene sempre spostato di nuovo alla fine del file prima di qualsiasi operazione di scrittura. Di conseguenza, i dati esistenti non possono essere sovrascritti. Quando la **"r +"**, **"w +"**, o **"a +"** viene specificato il tipo di accesso, sono consentite sia la lettura e scrittura (il file viene definito aperto per l'aggiornamento). Tuttavia, quando si passa da lettura a scrittura, deve esserci un'operazione [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md) intermedia. La posizione corrente può essere specificata per il [fsetpos](fsetpos.md) oppure [fseek](fseek-fseeki64.md) operazione, se lo si desidera. Oltre ai valori specificati sopra, uno dei caratteri seguenti può essere inclusi in *modalità* per specificare la modalità di conversione per le nuove righe e per la gestione dei file.
 
 |Termine|Definizione|
 |----------|----------------|
-|**t**|Apre un file in modalità testo (convertito). In questa modalità, combinazioni di ritorno a capo return-line feed (CR-LF) vengono convertite in singolo avanzamento riga (LF) nell'input e i caratteri vengono convertiti in combinazioni CR-LF nell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. Nei file aperti per la lettura o lettura/scrittura, **fsopen** verifica la presenza di una combinazione CTRL + Z alla fine del file e la rimuove, se possibile. Ciò avviene perché in uso [fseek](fseek-fseeki64.md) e [ftell](ftell-ftelli64.md) per spostarsi all'interno di un file che termina con CTRL + Z potrebbe causare [fseek](fseek-fseeki64.md) in prossimità della fine del file, un comportamento non corretto.|
+|**t**|Apre un file in modalità testo (convertito). In questa modalità, combinazioni di ritorno a capo return-line feed (CR-LF) vengono convertite in singola riga (LF) nell'input e i caratteri vengono convertiti in combinazioni di CR-LF nell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. Nei file aperti per la lettura o lettura/scrittura **fsopen** cercato CTRL + Z alla fine del file e la rimuove, se possibile. Ciò avviene perché l'uso [fseek](fseek-fseeki64.md) e [ftell](ftell-ftelli64.md) per spostarsi all'interno di un file che termina con CTRL + Z può causare [fseek](fseek-fseeki64.md) a un comportamento non corretto verso la fine del file.|
 |**b**|Apre un file in modalità binaria (nessuna conversione); le conversioni sopra indicate vengono eliminate.|
 |**S**|Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco.|
 |**R**|Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco.|
 |**T**|Specifica un file come temporaneo. Se possibile, non viene scaricato su disco.|
 |**D**|Specifica un file come temporaneo. Viene eliminato quando viene chiuso l'ultimo puntatore del file.|
 
-Se **t** o **b** non è specificato in *mode*, la modalità di conversione è definita dalla variabile globale **_fmode** della modalità predefinita. Se **t** oppure **b** è il prefisso dell'argomento, la funzione ha esito negativo e restituisce **NULL**. Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Se **t** o **b** non è specificato in *mode*, la modalità di conversione è definita dalla variabile globale **_fmode** della modalità predefinita. Se **t** oppure **b** viene anteposto a argomento, la funzione ha esito negativo e restituisce **NULL**. Per una discussione sulle modalità testo e binaria, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-L'argomento *shflag* è un'espressione costante costituita da una delle seguenti costanti manifesto, definite in Share.
+L'argomento *shflag* è un'espressione costante costituita da una delle costanti manifesto seguenti, definite in Share. h.
 
 |Termine|Definizione|
 |----------|----------------|
@@ -138,8 +128,8 @@ L'argomento *shflag* è un'espressione costante costituita da una delle seguenti
 
 |Funzione|Intestazione obbligatoria|Intestazioni facoltative|
 |--------------|---------------------|----------------------|
-|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Per la costante manifesto per *shflag* parametro.|
-|**_wfsopen**|\<stdio.h> o \<wchar.h>|\<share.h><br /><br /> Per la costante manifesto per *shflag* parametro.|
+|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Per la costante manifesto *shflag* parametro.|
+|**_wfsopen**|\<stdio.h> o \<wchar.h>|\<share.h><br /><br /> Per la costante manifesto *shflag* parametro.|
 
 ## <a name="example"></a>Esempio
 

@@ -1,18 +1,12 @@
 ---
-title: /Gd, /Gr, /Gv, /Gz (convenzione di chiamata) | Microsoft Docs
-ms.custom: ''
+title: /Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /gr
 - /Gv
 - /gz
 - /Gd
 - VC.Project.VCCLCompilerTool.CallingConvention
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Gd compiler option [C++]
 - -Gv compiler option [C++]
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7e6c1466ecc7bce26eb4dabd816e1733f16ae13
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8eba665e34fc3b949283557461e33348106fd532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895136"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451514"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
 

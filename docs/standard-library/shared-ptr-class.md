@@ -1,10 +1,6 @@
 ---
-title: Classe shared_ptr | Microsoft Docs
-ms.custom: ''
+title: Classe shared_ptr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::shared_ptr
 - memory/std::shared_ptr::element_type
@@ -18,8 +14,6 @@ f1_keywords:
 - memory/std::shared_ptr::operator*
 - memory/std::shared_ptr::operator=
 - memory/std::shared_ptr::operator->
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::shared_ptr [C++]
 - std::shared_ptr [C++], element_type
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 57874a87dcd7102c98ec5a387f1d3346bfa00195
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109875"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627552"
 ---
 # <a name="sharedptr-class"></a>Classe shared_ptr
 

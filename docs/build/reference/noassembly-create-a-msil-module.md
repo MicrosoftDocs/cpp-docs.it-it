@@ -1,15 +1,9 @@
 ---
-title: -NOASSEMBLY (Crea un modulo MSIL) | Microsoft Docs
-ms.custom: ''
+title: /NOASSEMBLY (Crea un modulo MSIL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /NOASSEMBLY
 - VC.Project.VCLinkerTool.TurnOffAssemblyGeneration
-dev_langs:
-- C++
 helpviewer_keywords:
 - assemblies [C++]
 - -NOASSEMBLY linker option
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - NOASSEMBLY linker option
 - assemblies [C++], not creating an assembly
 ms.assetid: 3cea4e70-f451-4395-a626-1930b1b127fe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a5039822ff28cca7de11daec86a3ff1821cfee8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c1508de88b9678898990f0e5b946ad4ced8d6d24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701936"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582039"
 ---
 # <a name="noassembly-create-a-msil-module"></a>/NOASSEMBLY (Crea un modulo MSIL)
 

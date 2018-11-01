@@ -1,10 +1,6 @@
 ---
-title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l | Microsoft Docs
-ms.custom: ''
+title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswxdigit_l
 - iswxdigit
@@ -27,8 +23,6 @@ f1_keywords:
 - iswxdigit
 - isxdigit
 - _istxdigit
-dev_langs:
-- C++
 helpviewer_keywords:
 - isxdigit function
 - istxdigit function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92908e6d4c39f990da6fba5008c7ffe8af40ccc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7f70fedb19cca746ffb1e276c69b5fc98388b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403336"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659706"
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
@@ -84,13 +74,13 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di una cifra esadecimale. **isxdigit** restituisce un valore diverso da zero se *c* è una cifra esadecimale (A - F, a - f o 0 - 9). **iswxdigit** restituisce un valore diverso da zero se *c* è un carattere "wide" che corrisponde a un carattere di cifra esadecimale. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di una cifra esadecimale. **isxdigit** restituisce un valore diverso da zero se *c* è una cifra esadecimale (A - F, a - f o 0 - 9). **iswxdigit** restituisce un valore diverso da zero se *c* è un carattere wide che corrisponde a una cifra esadecimale. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Per le impostazioni locali "C", il **iswxdigit** funzione non supporta i caratteri Unicode a larghezza intera esadecimali.
+Per le impostazioni locali "C", il **iswxdigit** funzione non supporta caratteri esadecimali a larghezza intera Unicode.
 
-Le versioni di queste funzioni con il **l** suffisso usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno le **l** suffisso usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento delle **isxdigit** e **isxdigit_l** è definito se *c* non è EOF o compreso nell'intervallo tra 0 e 0xFF, inclusivo. Quando si utilizza una libreria di debug CRT e *c* non fa parte di questi valori, la generazione di funzioni è un'asserzione.
+Il comportamento delle **isxdigit** e **isxdigit_l** non è definito se *c* non è EOF o nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* è non uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

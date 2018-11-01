@@ -1,10 +1,6 @@
 ---
-title: _strdate, _wstrdate | Microsoft Docs
-ms.custom: ''
+title: _strdate, _wstrdate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8924ac1ad29408dd1d69a68c6f31d9194831fbc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411357"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639611"
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 
@@ -86,11 +76,11 @@ Ognuna di queste funzioni restituisce un puntatore alla stringa di caratteri ris
 
 Sono disponibili versioni più sicure di queste funzioni. Vedere [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). È consigliabile usare le funzioni più sicure laddove possibile.
 
-Il **strDate** funzione Copia la data di sistema corrente nel buffer a cui puntata *datestr*formattato **mm**/**gg** / **yy**, dove **mm** corrisponde a due cifre che rappresenta il mese **gg** corrisponde a due cifre che rappresenta il giorno e **AA**  è le ultime due cifre dell'anno. Ad esempio, la stringa **12/05/99** rappresenta il 5 dicembre 1999. La lunghezza del buffer deve essere di almeno 9 byte.
+Il **strDate** funzione Copia la data di sistema corrente nel buffer a cui punta *datestr*formattato **mm**/**gg** / **yy**, dove **mm** corrisponde a due cifre che rappresenta il mese **gg** corrisponde a due cifre che rappresenta il giorno, e **AA**  sia le ultime due cifre dell'anno. Ad esempio, la stringa **12/05/99** rappresenta il 5 dicembre 1999. La lunghezza del buffer deve essere di almeno 9 byte.
 
-Se *datestr* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+Se *datestr* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
-**wstrdate** è una versione a caratteri wide **strDate**; l'argomento e il valore restituito di **wstrdate** sono stringhe a caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+**wstrdate** è una versione a caratteri wide di **strDate**; l'argomento e il valore restituito **wstrdate** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,35 +1,25 @@
 ---
-title: Errore del compilatore C3768 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C3768
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3768
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704958"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676734"
 ---
 # <a name="compiler-error-c3768"></a>Errore del compilatore C3768
 
-> Impossibile accettare l'indirizzo di una funzione vararg virtuale in codice gestito pure
+> non è possibile accettare l'indirizzo di una funzione vararg virtuale in codice gestito pure
 
 ## <a name="remarks"></a>Note
 
-Il **/clr: pure** opzione del compilatore è deprecato in Visual Studio 2015 e non supportata in Visual Studio 2017.
+Il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
 
 Durante la compilazione con **/clr: pure**, è possibile accettare l'indirizzo di una macchina `vararg` (funzione).
 

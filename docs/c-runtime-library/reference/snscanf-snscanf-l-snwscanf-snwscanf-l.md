@@ -1,10 +1,6 @@
 ---
-title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Microsoft Docs
-ms.custom: ''
+title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf
 - _snscanf_l
@@ -35,8 +31,6 @@ f1_keywords:
 - sntscanf
 - snwscanf
 - snwscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - snscanf_l function
 - snwscanf function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d5d99cc7465f88c92588983d5356a004da466de4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626889"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
@@ -106,20 +96,20 @@ int __cdecl _snwscanf_l(
 Stringa di input da esaminare.
 
 *length*<br/>
-Numero di caratteri da esaminare *input*.
+Numero di caratteri da esaminare nel *input*.
 
 *format*<br/>
 Uno o più identificatori di formato.
 
 *...*<br/>
-Variabili facoltative che verranno utilizzate per archiviare i valori estratti dalla stringa di input dagli identificatori di formato in *formato*.
+Le variabili facoltative che verranno usate per archiviare i valori estratti dalla stringa di input dagli identificatori di formato in *formato*.
 
 *locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Entrambe queste funzioni restituiscono il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della conversione prima. Per altre informazioni, vedere [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Entrambe queste funzioni restituiscono il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della prima conversione. Per altre informazioni, vedere [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
 Se *input* oppure *formato* è un **NULL** puntatore, o se *lunghezza* è minore o uguale a zero, viene richiamato il gestore di parametri non validi, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostare **errno** al **EINVAL**.
 
@@ -127,9 +117,9 @@ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _
 
 ## <a name="remarks"></a>Note
 
-Questa funzione è simile a **sscanf** ad eccezione del fatto che consente di specificare un numero fisso di caratteri da esaminare dalla stringa di input. Per altre informazioni, vedere [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Questa funzione è simile a **sscanf** ad eccezione del fatto che fornisca la possibilità di specificare un numero fisso di caratteri da esaminare dalla stringa di input. Per altre informazioni, vedere [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -1,27 +1,14 @@
 ---
-title: File di intestazione (C++) | Microsoft Docs
-ms.custom: ''
+title: File di intestazione (C++)
 ms.date: 04/20/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - header files [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7d1e477b04421f7e8920bba47b2eba4e73df34cb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ea163f4d47022d886e40a09c47c252ffa186aee0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588812"
 ---
 # <a name="header-files-c"></a>File di intestazione (C++)
 

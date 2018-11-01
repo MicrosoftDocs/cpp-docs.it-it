@@ -1,25 +1,15 @@
 ---
-title: Operatore typeid | Microsoft Docs
-ms.custom: ''
+title: Operatore typeid
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db9e019c3c9cc7e7e71726a8bd11e83ca4c99cdf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dfbf5275391e2820c94d2827c9b2c3eb252365c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020667"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571925"
 ---
 # <a name="typeid-operator"></a>Operatore typeid
 

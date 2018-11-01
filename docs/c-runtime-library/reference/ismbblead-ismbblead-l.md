@@ -1,10 +1,6 @@
 ---
-title: _ismbblead, _ismbblead_l | Microsoft Docs
-ms.custom: ''
+title: _ismbblead, _ismbblead_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbblead_l
 - _ismbblead
@@ -28,8 +24,6 @@ f1_keywords:
 - _ismbblead_l
 - ismbblead
 - _istlead
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbblead_l function
 - ismbblead function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2d85459f4addf0688acb5a82b0108ec6133b749
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452546"
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 
@@ -75,13 +65,13 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un valore diverso da zero se il numero intero *c* è il primo byte di un carattere multibyte.
+Restituisce un valore diverso da zero se il valore integer *c* è il primo byte di un carattere multibyte.
 
 ## <a name="remarks"></a>Note
 
-I caratteri multibyte sono costituiti da un byte di apertura seguito da un byte finale. I byte di apertura si distinguono in quanto sono compresi in un intervallo specifico per un determinato set di caratteri. Ad esempio, in byte di apertura, solo di tabella codici 932 codice compresi tra 0x81-0x9F e 0xE0 - 0xFC.
+I caratteri multibyte sono costituiti da un byte di apertura seguito da un byte finale. I byte di apertura si distinguono in quanto sono compresi in un intervallo specifico per un determinato set di caratteri. Ad esempio, in byte di apertura, solo tabella codici 932 codice compresi tra 0x81-0x9F e 0xE0 - 0xFC.
 
-**ismbblead** utilizza le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. **ismbblead_l** è identica ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**ismbblead** Usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. **ismbblead_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

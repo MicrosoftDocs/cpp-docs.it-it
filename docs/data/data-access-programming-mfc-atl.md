@@ -1,12 +1,6 @@
 ---
-title: Accesso ai dati (MFC-ATL) di programmazione | Microsoft Docs
-ms.custom: ''
+title: Accesso ai dati (MFC-ATL) di programmazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], data access applications
 - databases [C++], MFC
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 3932c4bfb8bdc1700db8e41c60a0b25cdf31fc79
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8430c1bfc9716c760a1f57060d862975bf84e799
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078180"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639794"
 ---
 # <a name="data-access-programming-mfcatl"></a>Programmazione dell'accesso ai dati (MFC/ATL)
 

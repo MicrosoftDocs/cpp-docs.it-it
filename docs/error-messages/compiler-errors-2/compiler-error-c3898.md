@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3898 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3898
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3898
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3898
 ms.assetid: d9a90df6-87e4-4fe7-ab01-c226ee86bf10
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fe816c2637df5e5a474718d70b404bbc0c2df6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 503f295d62c598e3138b1a001d6b350c0d90ea84
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030029"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549734"
 ---
 # <a name="compiler-error-c3898"></a>Errore del compilatore C3898
 

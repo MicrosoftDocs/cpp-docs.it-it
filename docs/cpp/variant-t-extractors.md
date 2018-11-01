@@ -1,10 +1,6 @@
 ---
-title: estrattori variant_t | Microsoft Docs
-ms.custom: ''
+title: Estrattori _variant_t
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - _variant_t.operatordouble
 - operatorlong
@@ -38,8 +34,6 @@ f1_keywords:
 - _variant_t::operatorfloat
 - _variant_t.operatorIDispatch
 - _variant_t.operatorshort
-dev_langs:
-- C++
 helpviewer_keywords:
 - extractors, _variant_t class
 - operator CY
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a9d4e13a4b7382d15e601eba16a5a12edd2d00f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a4294c520339d09b51108410458f6f80d8c04824
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034148"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539480"
 ---
 # <a name="variantt-extractors"></a>Estrattori _variant_t
 
@@ -74,16 +64,16 @@ Estrarre dati da incapsulato `VARIANT` oggetto.
 ## <a name="syntax"></a>Sintassi
 
 ```
-operator short( ) const; 
-operator long( ) const; 
-operator float( ) const; 
-operator double( ) const; 
-operator CY( ) const; 
-operator _bstr_t( ) const; 
-operator IDispatch*( ) const; 
-operator bool( ) const; 
-operator IUnknown*( ) const; 
-operator DECIMAL( ) const; 
+operator short( ) const; 
+operator long( ) const; 
+operator float( ) const; 
+operator double( ) const; 
+operator CY( ) const; 
+operator _bstr_t( ) const; 
+operator IDispatch*( ) const; 
+operator bool( ) const; 
+operator IUnknown*( ) const; 
+operator DECIMAL( ) const; 
 operator BYTE( ) const;
 operator VARIANT() const throw();
 operator char() const;

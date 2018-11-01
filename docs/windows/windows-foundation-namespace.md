@@ -1,29 +1,19 @@
 ---
-title: Spazio Namespace | Microsoft Docs
-ms.custom: ''
+title: Spazio dei nomi Windows::Foundation
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/ABI::Windows::Foundation
 - client/Windows::Foundation
-dev_langs:
-- C++
 helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6e1b5445b36fa0e1527fbd228ff7ce1929266b30
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: aa4673d2de5e44e87db2a0e86ed1997c5a0394c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685363"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497124"
 ---
 # <a name="windowsfoundation-namespace"></a>Spazio dei nomi Windows::Foundation
 

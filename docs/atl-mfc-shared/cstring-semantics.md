@@ -1,27 +1,17 @@
 ---
-title: Semantica di CString | Microsoft Docs
-ms.custom: ''
+title: Semantica di CString
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - semantics in Cstring
 - CString objects, assignment semantics
 - assignment statements, assigning CString objects
 ms.assetid: d4023480-526f-499a-85f6-324b4de5b85f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 256c71cace15a3906ac048819ab2ffdef2071ff4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f563b24a9df61a91711433a4e4987f8f800545ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761273"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657795"
 ---
 # <a name="cstring-semantics"></a>Semantica di CString
 

@@ -1,10 +1,6 @@
 ---
-title: getche | Microsoft Docs
-ms.custom: ''
+title: getche
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getche
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - getche
-dev_langs:
-- C++
 helpviewer_keywords:
 - getche function
 ms.assetid: 95e62bb8-eec0-4145-b2e8-f6406849af52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 78a78d3a9e374118abe9bdd9230b9e06eac6259a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3536cbf85074c492259420a8d68ea7ce8cbe74d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663918"
 ---
 # <a name="getche"></a>getche
 

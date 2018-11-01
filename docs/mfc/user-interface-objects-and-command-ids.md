@@ -1,12 +1,6 @@
 ---
-title: Oggetti dell'interfaccia utente e ID di comando | Microsoft Docs
-ms.custom: ''
+title: Oggetti dell'interfaccia utente e ID comando
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - keyboard shortcuts, associating with IDs
 - MFC, command routing
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - command routing [MFC], MFC
 - command handling [MFC], user-interface objects
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e8a61699ddd2c48e36bdfd5936fb4ab7aa56e0a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 508e7076797d48e0940b509afa3b94a7b766ebf3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416123"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615358"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Oggetti dell'interfaccia utente e ID comando
 

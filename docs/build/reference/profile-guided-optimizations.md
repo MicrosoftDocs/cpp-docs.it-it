@@ -1,26 +1,16 @@
 ---
-title: Le ottimizzazioni PGO | Microsoft Docs
-ms.custom: ''
+title: Ottimizzazioni guidate da profilo (PGO)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b4914b809e8e88ca07cf97af2f4d5405087cf549
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eb23d91de210ddc9e12886924af3450ce67330d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632553"
 ---
 # <a name="profile-guided-optimizations"></a>Ottimizzazioni guidate da profilo (PGO)
 

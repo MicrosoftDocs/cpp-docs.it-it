@@ -1,10 +1,6 @@
 ---
-title: _fcvt_s | Microsoft Docs
-ms.custom: ''
+title: _fcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt_s
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2897c199b1b7022de8d5735c4da5f02d7627a418
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404061"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536851"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -91,14 +81,14 @@ Puntatore all'indicatore di segno archiviato.
 
 Zero in caso di esito positivo. Il valore restituito è un codice di errore se si verifica un errore. I codici di errore sono definiti in Errno.h. Per un elenco di questi errori, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione chiama il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **EINVAL**.
+Se uno parametro non è valido, come elencato nella tabella seguente, questa funzione chiama il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EINVAL**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*sizeInBytes*|predefinito|count|dec|segno|INVIO|Valore *buffer*|
+|*buffer*|*sizeInBytes*|predefinito|count|dec|segno|INVIO|Valore in *buffer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
-|Non **NULL** (punta a valide per la memoria)|<=0|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
+|Non **NULL** (punta alla memoria valida)|<=0|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
 |qualsiasi|qualsiasi|qualsiasi|qualsiasi|**NULL**|qualsiasi|**EINVAL**|Non modificato.|
 |qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|**NULL**|**EINVAL**|Non modificato.|
 
@@ -108,13 +98,13 @@ Se uno parametro non è valido, come elencato nella tabella seguente, questa fun
 
 ## <a name="remarks"></a>Note
 
-Il **fcvt_s** funzione converte un numero a virgola mobile in una stringa di caratteri con terminazione null. Il *valore* parametro indica il numero a virgola mobile da convertire. **fcvt_s** archivia le cifre del *valore* sotto forma di stringa e aggiunge un carattere null ('\0'). Il *conteggio* parametro specifica il numero di cifre da archiviare dopo il separatore decimale. Cifre in eccesso vengono arrotondati a *conteggio* inserito. Se ci sono meno di *conteggio* cifre di precisione, la stringa viene riempito di zeri.
+Il **fcvt_s** funzione converte un numero a virgola mobile in una stringa di caratteri con terminazione null. Il *valore* parametro indica il numero a virgola mobile da convertire. **fcvt_s** archivia le cifre del *valore* sotto forma di stringa e aggiunge un carattere null ('\0'). Il *conteggio* parametro specifica il numero di cifre da archiviare dopo il separatore decimale. Cifre in eccesso vengono arrotondate alle *conteggio* inserisce. Se ci sono meno *conteggio* cifre di precisione, la stringa viene riempita con zeri.
 
-Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *valore* possono essere ottenuti dalla *dec* e *sign* dopo la chiamata. Il *dec* parametro punta a un valore intero; questo valore intero fornisce la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il parametro *sign* punta a un numero intero che indica il segno di *valore*. Il valore integer è impostato su 0 se *valore* è un valore positivo e viene impostato su un numero diverso da zero se *valore* è negativo.
+Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *valore* può essere ottenuto dalla *dec* e *sign* dopo la chiamata. Il *dec* parametro punta a un valore intero; questo valore intero indica la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il parametro *sign* punta a un numero intero che indica il segno dei *valore*. Il valore integer viene impostato su 0 se *valore* è un valore positivo e viene impostato su un numero diverso da zero se *valore* è negativo.
 
-Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi mobile valore a virgola.
+Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per Mobile valore del punto.
 
-La differenza tra **ecvt_s** e **fcvt_s** è l'interpretazione del *conteggio* parametro. **ecvt_s** interpreta *conteggio* come il numero totale di cifre nella stringa di output, e **fcvt_s** interpreta *conteggio* come il numero di cifre dopo il separatore decimale.
+La differenza tra **ecvt_s** e **fcvt_s** consiste nell'interpretazione dei *conteggio* parametro. **ecvt_s** interpreta *conteggio* come numero totale di cifre nella stringa di output, e **fcvt_s** interpreta *conteggio* come il numero di cifre dopo il separatore decimale.
 
 In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

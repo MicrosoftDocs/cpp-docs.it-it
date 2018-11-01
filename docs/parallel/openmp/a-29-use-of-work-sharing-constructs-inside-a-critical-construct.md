@@ -1,23 +1,13 @@
 ---
-title: A.29 uso di condivisione lavoro costruisce in un costrutto critical | Microsoft Docs
-ms.custom: ''
+title: A.29   Utilizzo di costrutti per la condivisione del lavoro in un costrutto critical
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: d5c8a83f-2f51-4f23-8ddf-d267e347507f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8574687d8fa037e0adca908e3aa761a2619d26a8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fac5576f859f63298d658b51c4307bb238e301c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424144"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643586"
 ---
 # <a name="a29---use-of-work-sharing-constructs-inside-a-critical-construct"></a>A.29   Utilizzo di costrutti per la condivisione del lavoro in un costrutto critical
 

@@ -1,27 +1,17 @@
 ---
-title: Commento sulle operazioni | Microsoft Docs
-ms.custom: ''
+title: ': Commento sulle operazioni'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Operations comment in MFC source files
 - comments, MFC
 - MFC source files, Operations comments
 ms.assetid: f3bff48d-26be-4db6-8435-9e4d079838c9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73c4a7a70c9f2ed987337426793bd462c2a94309
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6b84da721bd22723d0eb5a0b520462cd8a4613e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653195"
 ---
 # <a name="-operations-comment"></a>// Commento sulle operazioni
 

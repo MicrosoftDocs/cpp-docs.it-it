@@ -1,12 +1,6 @@
 ---
-title: 'Oggetti dati e origini dati: creazione e distruzione | Microsoft Docs'
-ms.custom: ''
+title: 'Oggetti dati e origini dati (OLE): creazione e distruzione'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - destroying data objects [MFC]
 - object creation [MFC], data source objects
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c14c6725b4ff93ed59e8d11c51ab4e50a4a6de4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614968"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Oggetti dati e origini dati (OLE): creazione e distruzione
 
@@ -74,7 +64,7 @@ Le origini dati vengono create quando un'applicazione deve copiare dati negli Ap
 
 1. I dati selezionati vengono inseriti nell'origine dati chiamando una delle funzioni nel gruppo `COleDataSource::CacheData` o `COleDataSource::DelayRenderData`.
 
-1. L'applicazione chiama la funzione membro `SetClipboard` (o la funzione membro `DoDragDrop` se si tratta di un'operazione di trascinamento della selezione) che appartiene all'oggetto creato nel passaggio 3.
+1. L'applicazione chiama la funzione membro `SetClipboard` (o la funzione membro `DoDragDrop` se si tratta di un'operazione di trascinamento e rilascio) che appartiene all'oggetto creato nel passaggio 3.
 
 1. Se si tratta di un **tagliare** operazione oppure `DoDragDrop` restituisce **DROPEFFECT_MOVE**, i dati selezionati nel passaggio 1 viene eliminati dal documento.
 

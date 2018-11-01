@@ -1,11 +1,6 @@
 ---
-title: csin, csinf, csinl | Microsoft Docs
-ms.custom: ''
+title: csin, csinf, csinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csin
 - csinf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csin
 - complex/csinf
 - complex/csinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csin function
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 572220af53fe937dd0d5306f0e0e7d287b1d41b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397314"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633493"
 ---
 # <a name="csin-csinf-csinl"></a>csin, csinf, csinl
 
@@ -79,11 +68,11 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il seno *z*, in radianti.
+Il seno *z*, espresso in radianti.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **csin** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **csin** accetta e restituisce sempre un **_Dcomplex** valore.
+Dato che C++ consente l'overload, è possibile chiamare overload di **csin** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **csin** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 

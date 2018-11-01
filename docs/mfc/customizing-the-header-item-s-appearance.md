@@ -1,27 +1,17 @@
 ---
-title: Personalizzare l'elemento dell'intestazione&#39;aspetto s | Microsoft Docs
-ms.custom: ''
+title: Personalizzare l'elemento dell'intestazione&#39;aspetto
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - header controls [MFC], customization of items
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75e32021420848e7493d9652bb37cb12fa4df56b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8610a3fcc489e69d95f0b0d2e78987664130555e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511021"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Personalizzare l'elemento dell'intestazione&#39;aspetto
 

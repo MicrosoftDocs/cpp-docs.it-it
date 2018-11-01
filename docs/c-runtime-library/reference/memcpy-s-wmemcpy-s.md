@@ -1,10 +1,6 @@
 ---
-title: memcpy_s, wmemcpy_s | Microsoft Docs
-ms.custom: ''
+title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12bf97e596a7cb4e3befa4c0633a8ef2df29a6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607155"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 
@@ -86,14 +76,14 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 |------------|----------------|-----------|---|------------------|------------------------|
 |qualsiasi|qualsiasi|qualsiasi|0|0|Non modificato|
 |**NULL**|qualsiasi|qualsiasi|non zero|**EINVAL**|Non modificato|
-|qualsiasi|qualsiasi|**NULL**|non zero|**EINVAL**|*distruttore* viene azzerato|
-|qualsiasi|< *Conteggio*|qualsiasi|non zero|**ERANGE**|*distruttore* viene azzerato|
+|qualsiasi|qualsiasi|**NULL**|non zero|**EINVAL**|*dest* è azzerato|
+|qualsiasi|< *conteggio*|qualsiasi|non zero|**ERANGE**|*dest* è azzerato|
 
 ## <a name="remarks"></a>Note
 
-**memcpy_s** copie *conteggio* byte dal *src* a *dest*; **wmemcpy_s** copie *conteggio* caratteri "wide" (due byte). Se l'origine e destinazione si sovrappongono, il comportamento delle **memcpy_s** è definito. Uso **memmove_s** per gestire le aree di sovrapposizione.
+**memcpy_s** copie *conteggio* byte dal *src* alla *dest*; **wmemcpy_s** copie *conteggio* caratteri "wide" (due byte). Se l'origine e destinazione si sovrappongono, il comportamento delle **memcpy_s** è definito. Uso **memmove_s** per gestire le aree di sovrapposizione.
 
-Queste funzioni convalidano i relativi parametri. Se *conteggio* è diverso da zero e *dest* oppure *src* è un puntatore null, o *destSize* sono minori di quelle *conteggio*, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** oppure **ERANGE** e impostare **errno** al valore restituito.
+Queste funzioni convalidano i relativi parametri. Se *conteggio* è diverso da zero e *dest* oppure *src* è un puntatore null, o *destSize* inferiori *conteggio*, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** oppure **ERANGE** e impostare **errno** al valore restituito.
 
 ## <a name="requirements"></a>Requisiti
 

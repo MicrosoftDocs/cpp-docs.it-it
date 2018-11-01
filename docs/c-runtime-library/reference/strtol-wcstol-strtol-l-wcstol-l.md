@@ -1,10 +1,6 @@
 ---
-title: strtol, wcstol, _strtol_l, _wcstol_l | Microsoft Docs
-ms.custom: ''
+title: strtol, wcstol, _strtol_l, _wcstol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strtol
 - wcstol
@@ -30,8 +26,6 @@ f1_keywords:
 - wcstol
 - _strtol_l
 - _tcstol_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcstol function
 - wcstol_l function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70f854e9bb78932f5d9fc102c835476e6b52d68b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5aa69a44a2ce8bde0ee16b02ecd9923f247c7e65
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416327"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617464"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
@@ -101,15 +91,15 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strtol** restituisce il valore rappresentato nella stringa *strSource*, tranne quando la rappresentazione potrebbe provocare un overflow, in tal caso, restituisce **LONG_MAX** o **LONG_ MIN**. **strtol** restituisce 0 se è non possibile eseguire alcuna conversione. **wcstol** restituisce i valori in modo analogo a **strtol**. Per entrambe le funzioni **errno** è impostata su **ERANGE** in caso di overflow o underflow.
+**strtol** restituisce il valore rappresentato nella stringa *strSource*, tranne quando la rappresentazione potrebbe causare un overflow, nel qual caso restituisce **LONG_MAX** o **LONG_ MIN**. **strtol** restituisce 0 se è non possibile eseguire alcuna conversione. **wcstol** restituisce i valori in modo analogo a **strtol**. Per entrambe le funzioni **errno** è impostata su **ERANGE** in caso di overflow o underflow.
 
 Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **strtol** funzione converte *strSource* a un **lungo**. **strtol** interrompe la lettura della stringa *strSource* con il primo carattere non riconosciuto come parte di un numero. Ciò potrebbe essere il carattere di terminazione null, o potrebbe essere il primo carattere numerico maggiore o uguale a *base*.
+Il **strtol** funzione converte *strSource* a un **long**. **strtol** interrompe la lettura della stringa *strSource* in corrispondenza del primo carattere non riconosciuti come parte di un numero. Ciò potrebbe essere il carattere null di terminazione, o potrebbe essere il primo carattere numerico maggiore o uguale a *base*.
 
-**wcstol** è una versione a caratteri wide **strtol**; relativo *strSource* argomento è una stringa di caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+**wcstol** è una versione a caratteri wide di **strtol**; relativo *strSource* argomento è una stringa di caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -118,15 +108,15 @@ Il **strtol** funzione converte *strSource* a un **lungo**. **strtol** interromp
 |**tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-Le impostazioni locali correnti **LC_NUMERIC** categoria determina il riconoscimento del carattere radice *strSource * *;* per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni senza il **l** suffisso usano le impostazioni locali; **strtol_l** e **wcstol_l** sono identiche alle corrispondenti funzioni senza il **l** suffisso ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le impostazioni locali correnti **LC_NUMERIC** impostazione di categoria determina il riconoscimento del carattere di base *strSource * *;* per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni senza il **l** suffisso usare le impostazioni locali correnti. **strtol_l** e **wcstol_l** sono identiche alle funzioni corrispondenti senza il **l** suffisso ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *endptr* non **NULL**, un puntatore al carattere che ha interrotto l'analisi viene archiviato in una posizione a cui puntata *endptr*. Se è non possibile eseguire alcuna conversione sono state trovate le cifre non valide o è stata specificata una base non valida, il valore di *strSource* archiviato in una posizione a cui puntata *endptr*.
+Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui fa riferimento *endptr*. Se è non possibile eseguire alcuna conversione (non trovate cifre valide sono stati o è stata specificata una base non valida), il valore di *strSource* viene archiviato in corrispondenza della posizione a cui punta *endptr*.
 
 **strtol** prevede *strSource* in modo che punti a una stringa nel formato seguente:
 
 > [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cifre* &#124; *lettere*]  
 
-Un *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; *cifre* sono uno o più cifre decimali. *lettere* sono uno o più lettere 'a' a 'z' ('A' a 'Z').  Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui puntata *strSource* vengono utilizzati per determinare la base. Se il primo carattere è 0 e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se *base* è 0 e il primo carattere analizzato è '0', si presuppone un integer ottale e un carattere '8' o '9' arresterà l'analisi.
+Oggetto *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. *cifre* sono uno o più cifre decimali. *lettere* sono uno o più lettere 'a' a 'z' (o 'A' a 'Z').  Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui punta *strSource* vengono usate per determinare la base. Se il primo carattere è 0 e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se *base* è 0 e il primo carattere letto è '0', si presuppone un intero ottale e un carattere '8' o '9' arresterà l'analisi.
 
 ## <a name="requirements"></a>Requisiti
 

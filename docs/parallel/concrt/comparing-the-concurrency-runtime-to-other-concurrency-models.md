@@ -1,25 +1,15 @@
 ---
-title: Confronto tra Runtime di concorrenza e altri modelli di concorrenza | Microsoft Docs
-ms.custom: ''
+title: Confronto tra runtime di concorrenza e altri modelli di concorrenza
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c0647b05f0f9dce7c3f9b9b1b79668646dbb874
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b5c24761f176d9c256c1ef6aee85b25231cea2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423357"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655845"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Confronto tra runtime di concorrenza e altri modelli di concorrenza
 

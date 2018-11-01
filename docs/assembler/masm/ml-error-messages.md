@@ -1,27 +1,18 @@
 ---
-title: Messaggi di errore ML | Microsoft Docs
-ms.custom: ''
+title: Messaggi di errore ML
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
 ms.topic: error-reference
 f1_keywords:
 - vc.errors.ml
-dev_langs:
-- C++
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 836daf438fa5a7f4c797b5b15ffab89720a7af98
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: aa0440afae980e218c32ab3296bd7c6fb2b444d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43675965"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677799"
 ---
 # <a name="ml-error-messages"></a>Messaggi di errore ML
 

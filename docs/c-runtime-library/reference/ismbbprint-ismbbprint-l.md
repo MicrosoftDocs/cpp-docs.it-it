@@ -1,10 +1,6 @@
 ---
-title: _ismbbprint, _ismbbprint_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbprint, _ismbbprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbprint_l
 - _ismbbprint
@@ -26,24 +22,18 @@ f1_keywords:
 - _ismbbprint
 - ismbbprint
 - ismbbprint_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbprint_l function
 - ismbbprint function
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49618a119f089e70e88bbdb9efcdae9bab616560
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fc697dd3ee4fee487beedf5e6e3deb706cc5f75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400076"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660486"
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
 
@@ -75,7 +65,7 @@ Impostazioni locali da usare.
 
 `isprint(c) || _ismbbkprint(c)`
 
-è diverso da zero per *c*, oppure 0 in caso contrario. **ismbbprint** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **ismbbprint_l** è identica ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+è diverso da zero per *c*, oppure 0 in caso contrario. **ismbbprint** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **ismbbprint_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

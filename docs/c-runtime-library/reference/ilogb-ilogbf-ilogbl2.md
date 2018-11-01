@@ -1,11 +1,6 @@
 ---
-title: ilogb, ilogbf, ilogbl2 | Microsoft Docs
-ms.custom: ''
+title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1436874e1ab35cc72dc40390adf5597529d3bf57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63e04246d29fde50c745a5f353829bd337a814ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398179"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551983"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -82,7 +73,7 @@ Valore specificato.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce l'esponente in base 2 di *x* come con un segno **int** valore.
+Se l'operazione riesce, restituisce l'esponente in base 2 del *x* come signed **int** valore.
 
 In caso contrario, restituisce uno dei valori seguenti definiti in \<math.h>:
 
@@ -95,7 +86,7 @@ Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **ilogb** che accettano e restituiscono **float** e **lungo** **doppie** tipi. In un programma C **ilogb** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **ilogb** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **ilogb** accetta e restituisce sempre un **doppie**.
 
 Chiamare questa funzione è simile alla chiamata l'equivalente **logb** (funzione), quindi eseguire il cast del valore restituito **int**.
 

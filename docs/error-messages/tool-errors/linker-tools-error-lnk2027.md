@@ -1,27 +1,17 @@
 ---
-title: Errore LNK2027 degli strumenti del linker | Microsoft Docs
-ms.custom: ''
+title: Errore degli strumenti del linker LNK2027
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2027
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2027
 ms.assetid: e2f857a8-8e8a-4697-bbff-12ccb84a35c1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 022e363af575e29e3085dcaec21257fa7e4ab5f1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e74912780bab3056ead36ae3705f0910805228e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116847"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545899"
 ---
 # <a name="linker-tools-error-lnk2027"></a>Errore degli strumenti del linker LNK2027
 

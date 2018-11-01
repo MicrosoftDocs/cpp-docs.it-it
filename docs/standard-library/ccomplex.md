@@ -1,25 +1,15 @@
 ---
-title: '&lt;ccomplex&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;ccomplex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <ccomplex>
-dev_langs:
-- C++
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de5c67fc88da6fc4674b7dad67b5f74dcc3ce54d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0f8c31afac0608b4de66bd10602264666d39426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667935"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 

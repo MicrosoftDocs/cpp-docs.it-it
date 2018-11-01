@@ -1,27 +1,17 @@
 ---
-title: Usa il linguaggio Assembly in blocchi asm | Microsoft Docs
-ms.custom: ''
+title: Utilizzo del linguaggio assembly in blocchi __asm
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - assembly language [C++], features
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c262296aaaea38cd91bb1d7bf5113a950629e34
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e2da242bf22b8b01a315d5bb09498764b54e1504
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688527"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631426"
 ---
 # <a name="using-assembly-language-in-asm-blocks"></a>Utilizzo del linguaggio assembly in blocchi __asm
 

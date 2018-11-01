@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorType | Microsoft Docs
-ms.custom: ''
+title: _RTC_SetErrorType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorType
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83395727b37ea3901e2e3c28d7adb6663f043d12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635672"
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 
@@ -59,7 +49,7 @@ int _RTC_SetErrorType(
 Numero compreso tra zero e uno minore del valore restituito da [_RTC_NumErrors](rtc-numerrors.md).
 
 *ErrType*<br/>
-Valore da assegnare a questo *errnum*. Ad esempio, si può usare **_CRT_ERROR**. Se si utilizza **CrtDbgReport** come gestore di errori *ErrType* può essere solo uno dei simboli definiti in [CrtSetReportMode](crtsetreportmode.md). Se si usa un gestore di errori personalizzato ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), è possibile avere un numero di *ErrType* pari al numero di *errnum*.
+Valore da assegnare a questo *errnum*. Ad esempio, si può usare **_CRT_ERROR**. Se si usa **CrtDbgReport** come gestore degli errori *ErrType* può essere solo uno dei simboli definiti in [CrtSetReportMode](crtsetreportmode.md). Se si ha un proprio gestore di errori ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), è possibile avere un numero di *ErrType*pari al numero di *errnum*.
 
 Un' *ErrType* di rtc_errtype_ignore ha un significato speciale per **CrtSetReportMode**; l'errore viene ignorato.
 

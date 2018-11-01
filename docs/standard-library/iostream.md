@@ -1,10 +1,6 @@
 ---
-title: '&lt;iostream&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;iostream&gt;'
 ms.date: 09/20/2017
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <iostream>
 - iostream/std::cerr
@@ -15,21 +11,15 @@ f1_keywords:
 - iostream/std::wcin
 - iostream/std::wclog
 - iostream/std::wcout
-dev_langs:
-- C++
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ed484dcfdb94b60545a84563c77a3f242cc6c316
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aabdc761cc55507f4718a63a0c082325ae1badf7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850652"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504286"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 

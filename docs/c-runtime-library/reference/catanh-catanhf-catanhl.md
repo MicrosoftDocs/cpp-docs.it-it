@@ -1,11 +1,6 @@
 ---
-title: catanh, catanhf, catanhl | Microsoft Docs
-ms.custom: ''
+title: catanh, catanhf, catanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catanh
 - catanhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catanh
 - complex/catanhf
 - complex/catanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catanh function
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd74d00e7f5be5e7631bc33fb9b7ea13eb32a407
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393950"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646362"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 
-Recupera la tangente iperbolica inversa di un numero complesso, con tagli branch all'esterno dell'intervallo [-1; + 1] lungo l'asse reale.
+Recupera la tangente iperbolica inversa di un numero complesso, con raggi compreso nell'intervallo [-1; + 1] lungo l'asse reale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -79,11 +68,11 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-La tangente iperbolica inversa di *z*, in radianti. Il risultato è unbounded lungo l'asse reale e nell'intervallo [-iπ/2; + iπ/2] lungo l'asse immaginaria. Se si verificherà un errore di dominio *z* è compreso nell'intervallo [-1, + 1]. Se si verificherà un errore polo *z* è -1 o + 1.
+La tangente iperbolica inversa di *z*, espresso in radianti. Il risultato è unbounded lungo l'asse reale e nell'intervallo [-iπ/2 + 2; iπ] lungo l'asse immaginario. Se si verificherà un errore di dominio *z* è compreso nell'intervallo [-1, + 1]. Se si verificherà un errore polo *z* è -1 o + 1.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **catanh** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **catanh** accetta e restituisce sempre un **_Dcomplex** valore.
+Dato che C++ consente l'overload, è possibile chiamare overload di **catanh** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **catanh** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 

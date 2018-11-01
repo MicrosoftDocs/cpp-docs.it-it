@@ -1,10 +1,6 @@
 ---
-title: isdigit, iswdigit, _isdigit_l, _iswdigit_l | Microsoft Docs
-ms.custom: ''
+title: isdigit, iswdigit, _isdigit_l, _iswdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -30,8 +26,6 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7701b287d6ec4de757249aca5ccd252b38c58267
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0bffe54bb68eaf7a26c338ad52522ff9b48335aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401298"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636579"
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 
@@ -88,11 +78,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere di cifra decimale. **IsDigit** restituisce un valore diverso da zero se *c* è una cifra decimale (0 - 9). **iswdigit** restituisce un valore diverso da zero se *c* è un carattere "wide" che corrisponde a un carattere di cifra decimale. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere di cifra decimale. **IsDigit** restituisce un valore diverso da zero se *c* è una cifra decimale (0 - 9). **iswdigit** restituisce un valore diverso da zero se *c* è un carattere wide che corrisponde a un carattere di cifra decimale. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni con il **l** suffisso usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno le **l** suffisso usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento delle **isdigit** e **isdigit_l** è definito se *c* non è EOF o compreso nell'intervallo tra 0 e 0xFF, inclusivo. Quando si utilizza una libreria di debug CRT e *c* non fa parte di questi valori, la generazione di funzioni è un'asserzione.
+Il comportamento delle **isdigit** e **isdigit_l** non è definito se *c* non è EOF o nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* è non uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

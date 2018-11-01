@@ -1,35 +1,25 @@
 ---
-title: C3445 errore del compilatore | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C3445
 ms.date: 04/10/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3445
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3445
 ms.assetid: 0d272bfc-136b-4025-a9ba-5e4eea5f8215
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c37f04b907183b883772fd144ae0179683f088f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eddeb5a56c953ca0864e29187fbe28c53bdee24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256766"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574213"
 ---
-# <a name="compiler-error-c3445"></a>C3445 errore del compilatore
+# <a name="compiler-error-c3445"></a>Errore del compilatore C3445
 
-> inizializzazione di elenco copia di '*tipo*' non è possibile utilizzare un costruttore esplicito
+> Copia-list-initialization di '*tipo*' non è possibile usare un costruttore esplicito
 
-Secondo lo standard C++ 17 ISO, il compilatore deve prendere in considerazione un costruttore esplicito per la risoluzione dell'overload in elenco-inizializzazione di copia, ma deve generare un errore se tale overload scelto.
+Secondo lo standard c++17 ISO, il compilatore deve prendere in considerazione un costruttore esplicito per la risoluzione dell'overload di inizializzazione elenco copie, ma deve generare un errore se viene scelto tale overload.
 
-A partire da Visual Studio 2017, il compilatore rileva errori relativi alla creazione di un oggetto utilizzando un elenco di inizializzatori non trovate da Visual Studio 2015. Questi errori potrebbero causare un comportamento non definito in fase di esecuzione o di arresti anomali del sistema.
+A partire da Visual Studio 2017, il compilatore rileva gli errori correlati alla creazione di oggetti utilizzando un elenco di inizializzatori che non sono stati trovati da Visual Studio 2015. Questi errori potrebbero causare arresti anomali del sistema o un comportamento non definito in fase di esecuzione.
 
 ## <a name="example"></a>Esempio
 
@@ -50,7 +40,7 @@ int main()
 }
 ```
 
-Per correggere l'errore, utilizzare invece l'inizializzazione diretta:
+Per correggere l'errore, usare invece l'inizializzazione diretta:
 
 ```cpp
 // C3445b.cpp

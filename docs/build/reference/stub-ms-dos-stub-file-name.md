@@ -1,15 +1,9 @@
 ---
-title: -STUB (nome File Stub MS-DOS) | Microsoft Docs
-ms.custom: ''
+title: /STUB (nome file stub MS-DOS)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /stub
 - VC.Project.VCLinkerTool.DosStub
-dev_langs:
-- C++
 helpviewer_keywords:
 - Win32 [C++], attaching MS-DOS stub program
 - STUB linker option
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - Windows API [C++], attaching MS-DOS stub program
 - -STUB linker option
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c279d6f33befb4c308afe0c92b7dcca3d45ba66
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 289812ce8c6167a82204946c0a362ccad6896a39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707720"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642637"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (nome file stub MS-DOS)
 

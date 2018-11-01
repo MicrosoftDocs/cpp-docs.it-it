@@ -1,28 +1,17 @@
 ---
-title: 'Procedura: creare progetti C++ verificabili (C + + / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura: creare progetti C++ verificabili (C++/CLI)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: a84fcd660f8cc7ef5686fe0e03f9b520d1251bc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408934"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630438"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Procedura: creare progetti C++ verificabili (C + + / CLI)
 

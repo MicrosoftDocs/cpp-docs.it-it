@@ -1,27 +1,17 @@
 ---
-title: Struttura atomic_flag | Microsoft Docs
-ms.custom: ''
+title: Struttura atomic_flag
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - atomic/std::atomic_flag
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
-dev_langs:
-- C++
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f763181424bafc4b8b3af41c135753dbe2f2577b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 13af0c26b765aa7ebbbd1ec22b5a0ed1b8cce0ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110318"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550423"
 ---
 # <a name="atomicflag-structure"></a>Struttura atomic_flag
 

@@ -1,14 +1,8 @@
 ---
-title: Tra cui condivisi (di sola lettura) o calcolati simboli | Microsoft Docs
-ms.custom: ''
+title: Inclusione di simboli condivisi (in sola lettura) o calcolati
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.shared.calculated
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], read-only
 - symbols [C++], shared
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8a2bb3a95f2b9e5506ee761906a7df213f97b927
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9d57ceb202ce88a6668b8eb3cc93b41c1f11f2b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645994"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Inclusione di simboli condivisi (in sola lettura) o calcolati
 

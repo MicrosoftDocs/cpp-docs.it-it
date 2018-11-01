@@ -1,12 +1,6 @@
 ---
-title: Ottimizzazione dell'Assembly Inline | Microsoft Docs
-ms.custom: ''
+title: Ottimizzazione dell'assembly Inline
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - storage, optimizing in inline assembly
 - optimization, inline assembly
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - optimizing performance, inline assembly
 - __asm keyword [C++], optimizing
 ms.assetid: 52a7ec83-9782-4d96-94c1-53bb2ac9e8c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49660bdc6d2eb84e6e1bbaeb5ebf0d57e484e9e1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d4956ba12e0bc268d78a895e6cb1ec6e2059262a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687876"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538866"
 ---
 # <a name="optimizing-inline-assembly"></a>Ottimizzazione dell'assembly Inline
 

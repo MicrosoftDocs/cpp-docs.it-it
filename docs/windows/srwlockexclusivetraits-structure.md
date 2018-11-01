@@ -1,32 +1,22 @@
 ---
-title: SRWLockExclusiveTraits (struttura) | Microsoft Docs
-ms.custom: ''
+title: SRWLockExclusiveTraits (Struttura)
 ms.date: 09/27/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7737c802634b618b9ea363c231a44d9381ad30ae
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4005f0dc1f75b79650963efc9a6f9f7522bc3395
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235165"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476466"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits (Struttura)
 

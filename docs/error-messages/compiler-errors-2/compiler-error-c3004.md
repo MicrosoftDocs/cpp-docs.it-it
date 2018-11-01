@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3004 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3004
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3004
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3004
 ms.assetid: 819c2b57-8366-4ca7-9135-1f0c5e5b6bb6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9ccca52b5977c5d709b79dbc6351b5a94605849
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 88f781f8cb3e661998651bb4b1a7b0d54b183a0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068801"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657185"
 ---
 # <a name="compiler-error-c3004"></a>Errore del compilatore C3004
 

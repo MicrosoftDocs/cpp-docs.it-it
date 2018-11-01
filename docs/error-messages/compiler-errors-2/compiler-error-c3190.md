@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3190 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3190
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3190
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bed7f3b29ffeab2ae26516c51cf6ce09acab3e54
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1f30026d8f853aedc863bef4ecfa32b0bd3262b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088527"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665322"
 ---
 # <a name="compiler-error-c3190"></a>Errore del compilatore C3190
 

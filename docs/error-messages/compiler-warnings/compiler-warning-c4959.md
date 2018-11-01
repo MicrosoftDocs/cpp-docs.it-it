@@ -1,39 +1,29 @@
 ---
-title: Avviso del compilatore C4959 | Documenti Microsoft
-ms.custom: ''
+title: Avviso del compilatore C4959
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4959
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4959
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2819664fa94ca777339156dc9a31da17b991c6da
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 646347dec7bc2bac7fa73c8f754d2f9549cb2ba6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473658"
 ---
 # <a name="compiler-warning-c4959"></a>Avviso del compilatore C4959
 
-> non è possibile definire struct non gestito '*tipo*' in /CLR: safe perché l'accesso ai membri produce codice non verificabile
+> non è possibile definire una struttura non gestita '*tipo*' in /CLR: safe perché l'accesso ai membri produce codice non verificabile
 
 ## <a name="remarks"></a>Note
 
 L'accesso a un membro di un tipo non gestito produrrà un'immagine (peverify.exe) non verificabile.
 
-Per ulteriori informazioni, vedere [codice Pure e verificabile (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Per altre informazioni, vedere [codice Pure e verificabile (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-Il **/CLR: safe** opzione del compilatore è deprecato in Visual Studio 2015 e non supportata in Visual Studio 2017.
+Il **/CLR: safe** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
 
 Questo avviso viene generato come errore e può essere disabilitato tramite il pragma [warning](../../preprocessor/warning.md) o l'opzione del compilatore [/wd](../../build/reference/compiler-option-warning-level.md) .
 

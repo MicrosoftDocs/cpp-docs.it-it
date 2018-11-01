@@ -1,27 +1,17 @@
 ---
-title: Classe independent_bits_engine | Microsoft Docs
-ms.custom: ''
+title: Classe independent_bits_engine
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::independent_bits_engine
-dev_langs:
-- C++
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb76c477c54192dc6b6b969ecd4cdd32850c015f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635838"
 ---
 # <a name="independentbitsengine-class"></a>Classe independent_bits_engine
 

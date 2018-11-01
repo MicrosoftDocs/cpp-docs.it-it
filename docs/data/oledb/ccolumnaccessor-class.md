@@ -1,30 +1,19 @@
 ---
-title: Classe CColumnAccessor | Microsoft Docs
-ms.custom: ''
+title: Classe CColumnAccessor
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - CColumnAccessor
 - ATL::CColumnAccessor
 - ATL.CColumnAccessor
-dev_langs:
-- C++
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 1e55d4c15ca5d5a3733c44cf89b788b85c905513
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 85d3d9d4339634ea7948d7d5e9e09725b7fd8758
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611367"
 ---
 # <a name="ccolumnaccessor-class"></a>Classe CColumnAccessor
 

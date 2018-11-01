@@ -1,31 +1,21 @@
 ---
-title: ref new, gcnew (C + c++ /CLI e c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: ref new, gcnew (C + c++ /CLI e c++ /CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - gcnew
 - ref new
 - gcnew_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c9553ac6bf1d2e8e8d92745456f1f52d1de1c9ba
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: dd78bcb7283cb08f4971192274686710fe22181f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057042"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641768"
 ---
 # <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new, gcnew (C + c++ /CLI e c++ /CX)
 

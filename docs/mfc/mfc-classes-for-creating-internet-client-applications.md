@@ -1,12 +1,6 @@
 ---
-title: Classi MFC per la creazione di applicazioni Client Internet | Microsoft Docs
-ms.custom: ''
+title: Classi MFC per la creazione di applicazioni client Internet
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, WinInet classes
 - WinInet classes [MFC], classes
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e2365c0009bee3974cefcb7e9cb77f57045d712
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7e05bfdc8af680ae8fc7412d20b57151b8581af8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388739"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554349"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Classi MFC per la creazione di applicazioni client Internet
 

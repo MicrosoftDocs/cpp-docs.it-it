@@ -1,28 +1,18 @@
 ---
-title: Finestre delle proprietà e pagine delle proprietà in MFC | Microsoft Docs
-ms.custom: ''
+title: Finestre delle proprietà e pagine delle proprietà in MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - property pages [MFC], MFC
 - controls [MFC], property sheets
 - property sheets, MFC
 - tab dialog boxes
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f35282ce46aff3a3f0fba5fca505653cd892a392
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fa5e48459b4d53ff6e5a80e7b315826f266de29f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430047"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654389"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Finestre delle proprietà e pagine delle proprietà in MFC
 

@@ -1,26 +1,16 @@
 ---
-title: Classe lock_guard | Microsoft Docs
-ms.custom: ''
+title: Classe lock_guard
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
-dev_langs:
-- C++
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e096d21699d4e6218bbadedcd1cc0bcc65f92f2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 45a01c5fdd431bcfad1eeb5ab0531c11c89e9767
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108189"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645549"
 ---
 # <a name="lockguard-class"></a>Classe lock_guard
 

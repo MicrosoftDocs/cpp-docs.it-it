@@ -1,8 +1,6 @@
 ---
-title: Operatori &lt;array&gt; | Microsoft Docs
-ms.custom: ''
+title: Operatori &lt;array&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - array/std::array::operator!=
 - array/std::array::operator<
@@ -10,15 +8,13 @@ f1_keywords:
 - array/std::array::operator>
 - array/std::array::operator>=
 - array/std::array::operator==
-dev_langs:
-- C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 4c4db60d3573629447bbf675c408586feec61f12
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e0fc38cee1fbb29b1c235d3e8fab9aa45d83113a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107126"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632245"
 ---
 # <a name="ltarraygt-operators"></a>Operatori &lt;array&gt;
 

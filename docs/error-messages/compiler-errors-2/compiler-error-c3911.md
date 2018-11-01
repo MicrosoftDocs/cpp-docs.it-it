@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3911 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3911
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3911
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98b2b1b4712d71c5baa7179ce3c348ace3761bb2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c00a3bb388130d9a570e9fd731a9ed1200ed179
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622183"
 ---
 # <a name="compiler-error-c3911"></a>Errore del compilatore C3911
 

@@ -1,26 +1,16 @@
 ---
-title: Utilizzo di controlli Tree | Microsoft Docs
-ms.custom: ''
+title: Utilizzo di controlli Tree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fc3efbf48a9005bf117c2dd7ab5f1bd01ed556d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2a42392253f158365af6bf9f7a5e4a1f4df93e95
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653402"
 ---
 # <a name="using-tree-controls"></a>Utilizzo di controlli Tree
 
@@ -38,7 +28,7 @@ Uso tipico di un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.
 
 - Usare le varie funzioni Get per esaminare il contenuto del controllo. È inoltre possibile scorrere il contenuto del controllo albero con le funzioni che consentono di recuperare gli handle di elementi padre, figlio e nodi di pari livello di un elemento specificato. È anche possibile ordinare gli elementi figlio di un nodo specifico.
 
-- Al termine con il controllo, assicurarsi che venga eliminato correttamente. Se il controllo struttura ad albero è in una finestra di dialogo o se è una vista, e il `CTreeCtrl` oggetto verrà eliminato automaticamente. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CTreeCtrl` vengono eliminati correttamente.
+- Al termine con il controllo, assicurarsi che venga eliminato correttamente. Se il controllo struttura ad albero è in una finestra di dialogo o se è una vista, e il `CTreeCtrl` oggetto verrà eliminato automaticamente. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CTreeCtrl` vengono eliminati definitivamente in modo corretto.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,10 +1,6 @@
 ---
-title: tmpfile | Microsoft Docs
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409069"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530325"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -52,15 +42,15 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, **tmpfile** restituisce un puntatore di flusso. In caso contrario, restituisce un **NULL** puntatore.
+Caso di esito positivo **tmpfile** restituisce un puntatore di flusso. In caso contrario, restituisce un **NULL** puntatore.
 
 ## <a name="remarks"></a>Note
 
 Il **tmpfile** funzione crea un file temporaneo e restituisce un puntatore a tale flusso. Il file temporaneo viene creato nella directory radice. Per creare un file temporaneo in una directory diversa dalla radice, usare [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in combinazione con [fopen](fopen-wfopen.md).
 
-Se non è possibile aprire il file, **tmpfile** restituisce un **NULL** puntatore. Il file temporaneo viene eliminato automaticamente quando il file viene chiuso, quando il programma termina normalmente, o quando **rmtmp** viene chiamato, presupponendo che la directory di lavoro corrente rimane invariato. Il file temporaneo viene aperto in **w + b** modalità (lettura/scrittura binario).
+Se non è possibile aprire il file, **tmpfile** restituisce un **NULL** puntatore. Questo file temporaneo viene eliminato automaticamente quando il file viene chiuso quando il programma termina normalmente oppure **rmtmp** viene chiamato, presupponendo che la directory di lavoro corrente rimane invariato. Il file temporaneo viene aperto in **w + b** modalità (lettura/scrittura binaria).
 
-Errore può verificarsi se si tenta di più di TMP_MAX (vedere STDIO. H) chiamate con **tmpfile**.
+Errore può verificarsi se tentano più di TMP_MAX (vedere STDIO. H) le chiamate con **tmpfile**.
 
 ## <a name="requirements"></a>Requisiti
 

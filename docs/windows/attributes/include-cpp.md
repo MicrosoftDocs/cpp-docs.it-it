@@ -1,28 +1,17 @@
 ---
-title: include (attributo COM C++) | Microsoft Docs
-ms.custom: ''
+title: include (attributo COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.include
-dev_langs:
-- C++
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 14a58573af8b8cb917d7aaaa864b6b4d61e70172
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6fb385877285602c1eb6649d11e16558d7fb07ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063003"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544755"
 ---
 # <a name="include-c"></a>include (C++)
 

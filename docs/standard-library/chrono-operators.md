@@ -1,17 +1,15 @@
 ---
-title: Operatori &lt;chrono&gt; | Microsoft Docs
-ms.custom: ''
+title: Operatori &lt;chrono&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 73019bc3d9aca2ef6bc094fd93f1f8b627dad2e4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d86fbf15313c25dd28b9220c654750ee8bc96d81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631855"
 ---
 # <a name="ltchronogt-operators"></a>Operatori &lt;chrono&gt;
 
