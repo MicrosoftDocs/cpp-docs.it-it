@@ -1,10 +1,6 @@
 ---
-title: Classe CAnimationTimerEventHandler | Microsoft Docs
-ms.custom: ''
+title: Classe CAnimationTimerEventHandler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationTimerEventHandler
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPreUpdate
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnRenderingTooSlow
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::SetAnimationController
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], CreateInstance
 - CAnimationTimerEventHandler [MFC], OnPostUpdate
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad48c372043c06c2bc3a64537734a30d79e81a50
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c94cb3849d4101365d137733c08135b86db23801
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395000"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518664"
 ---
 # <a name="canimationtimereventhandler-class"></a>Classe CAnimationTimerEventHandler
 
@@ -50,9 +40,9 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationTimerEventHandler::CreateInstance](#createinstance)|Crea un'istanza di `CAnimationTimerEventHandler` callback.|
-|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Gestisce gli eventi che si verificano dopo l'aggiornamento di un'animazione è terminato. Esegue l'override`CUIAnimationTimerEventHandlerBase::OnPostUpdate`.|
-|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|Gestisce gli eventi che si verificano prima dell'inizio dell'aggiornamento un'animazione. Esegue l'override`CUIAnimationTimerEventHandlerBase::OnPreUpdate`.|
-|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Gestisce gli eventi che si verificano quando la frequenza dei fotogrammi per il rendering per un'animazione scende di sotto della frequenza di fotogrammi. Esegue l'override`CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`.|
+|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Gestisce gli eventi che si verificano dopo l'aggiornamento di un'animazione è terminato. Esegue l'override di `CUIAnimationTimerEventHandlerBase::OnPostUpdate`.|
+|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|Gestisce gli eventi che si verificano prima dell'inizio dell'aggiornamento un'animazione. Esegue l'override di `CUIAnimationTimerEventHandlerBase::OnPreUpdate`.|
+|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Gestisce gli eventi che si verificano quando la frequenza dei fotogrammi per il rendering per un'animazione scende di sotto della frequenza di fotogrammi. Esegue l'override di `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`.|
 |[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore al controller di animazione per instradare gli eventi.|
 
 ## <a name="remarks"></a>Note

@@ -1,23 +1,13 @@
 ---
-title: E. Definito dall'implementazione di comportamenti in OpenMP C/C++ | Microsoft Docs
-ms.custom: ''
+title: E. Comportamenti definiti dall'implementazione in OpenMP C/C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c0dd06d5b068c53708f40cb3f8287eac7406255
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 704062f36102a06e6e7b8cf015f6330f925a6bba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055281"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619349"
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Comportamenti definiti dall'implementazione in OpenMP C/C++
 

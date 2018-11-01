@@ -1,28 +1,18 @@
 ---
-title: -CLRTHREADATTRIBUTE (imposta l'attributo Thread CLR) | Microsoft Docs
-ms.custom: ''
+title: /CLRTHREADATTRIBUTE (Imposta l'attributo thread CLR)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.CLRThreadAttribute
-dev_langs:
-- C++
 helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bea5b75c9f0691ef74c35ed405d64fc3389c4fcd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3aae02a004226bf1042488d3a654dae9f751e8af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705796"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668481"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Imposta l'attributo thread CLR)
 

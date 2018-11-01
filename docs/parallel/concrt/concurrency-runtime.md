@@ -1,27 +1,17 @@
 ---
-title: Runtime di concorrenza | Microsoft Docs
-ms.custom: ''
+title: Runtime di concorrenza
 ms.date: 07/20/2018
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac7999919daa7dc028bd8e12e7d98b737afc4e36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413809"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495953"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 
@@ -109,9 +99,9 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 |||
 |-|-|
 |[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni sull'uso del Runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app di Windows Runtime scritte in C++ e XAML.|
-|[Esempi di codice per il Runtime di concorrenza e la libreria PPL in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornisce le applicazioni di esempio e utilità che illustrano il runtime di concorrenza.|
-|[Programmazione parallela nel blog del codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|
-|[Elaborazione parallela in C++ e codice nativo forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|
+|[Esempi di codice per la libreria di modelli in parallelo e di runtime di concorrenza in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornisce le applicazioni di esempio e utilità che illustrano il runtime di concorrenza.|
+|[Blog relativo alla programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|
+|[Forum relativo all'elaborazione parallela in C++ e codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|
 |[Programmazione parallela](/dotnet/standard/parallel-programming/index)|Illustra il modello di programmazione parallelo che è disponibile in .NET Framework.|
 
 ## <a name="see-also"></a>Vedere anche

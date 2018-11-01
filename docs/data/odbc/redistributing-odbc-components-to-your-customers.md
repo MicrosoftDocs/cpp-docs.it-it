@@ -1,12 +1,6 @@
 ---
-title: Ridistribuzione dei componenti ODBC ai clienti | Microsoft Docs
-ms.custom: ''
+title: Ridistribuzione dei componenti ODBC ai clienti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ODBC components, redistributing
 - ODBC, distributing components
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - components [C++]
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 9b28d743b933caab5a017d89b636a78fd8890c10
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: cfbe6b2c440f84a4c470255bc964adf6c5145cf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069490"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676786"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Ridistribuzione dei componenti ODBC ai clienti
 

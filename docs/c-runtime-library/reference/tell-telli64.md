@@ -1,10 +1,6 @@
 ---
-title: _tell, _telli64 | Microsoft Docs
-ms.custom: ''
+title: _tell, _telli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _telli64
 - _tell
@@ -26,8 +22,6 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47958fdb3723c16f8f2dce03ace54c75ce6176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409986"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660148"
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 
@@ -64,20 +54,20 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parametri
 
-*Handle*<br/>
+*handle*<br/>
 Descrittore del file che fa riferimento a un file aperto.
 
 ## <a name="return-value"></a>Valore restituito
 
 Posizione corrente del puntatore del file. Nei dispositivi che non supportano la ricerca, il valore restituito è indefinito.
 
-Valore restituito di L-1 indica un errore. Se *gestire* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EBADF** e restituiscono-1L.
+Un valore restituito-1L indica un errore. Se *gestiscono* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EBADF** e restituiscono-1L.
 
 Per altre informazioni su questo e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Note
 
-Il **Tell** funzione Ottiene la posizione corrente del puntatore del file (se presente) associata con il *gestire* argomento. La posizione viene espressa come numero di byte dall'inizio del file. Per il **_telli64** funzione, questo valore è espresso come intero a 64 bit.
+Il **Tell** funzione Ottiene la posizione corrente del puntatore del file (se presente) associata con il *gestire* argomento. La posizione viene espressa come numero di byte dall'inizio del file. Per il **_telli64** funzione, questo valore viene espresso come intero a 64 bit.
 
 ## <a name="requirements"></a>Requisiti
 

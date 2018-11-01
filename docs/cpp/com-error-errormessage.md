@@ -1,27 +1,17 @@
 ---
-title: _com_error::ErrorMessage | Microsoft Docs
-ms.custom: ''
+title: _com_error::ErrorMessage
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - _com_error::ErrorMessage
-dev_langs:
-- C++
 helpviewer_keywords:
 - ErrorMessage method [C++]
 ms.assetid: e47335b6-01af-4975-a841-121597479eb7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: afe11d570658ee077e8fdffe925349731f1921fd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b1c1b5a79cdf5ee2a4a17d969d23ce0d0d85ab54
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111368"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504494"
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
 
@@ -41,7 +31,7 @@ Restituisce la stringa di messaggio per il valore HRESULT registrati all'interno
 
 ## <a name="remarks"></a>Note
 
-Recupera il testo del messaggio di sistema appropriato per HRESULT registrati all'interno di `_com_error` oggetto. Il testo del messaggio di sistema viene ottenuto mediante una chiamata Win32 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (funzione). La stringa restituita è allocata da `FormatMessage` API e viene rilasciata quando l'oggetto `_com_error` viene eliminato.
+Recupera il testo del messaggio di sistema appropriato per HRESULT registrati all'interno di `_com_error` oggetto. Il testo del messaggio di sistema viene ottenuto mediante una chiamata Win32 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (funzione). La stringa restituita è allocata da `FormatMessage` API e viene rilasciata quando l'oggetto `_com_error` viene eliminato definitivamente.
 
 **Fine sezione specifica Microsoft**
 

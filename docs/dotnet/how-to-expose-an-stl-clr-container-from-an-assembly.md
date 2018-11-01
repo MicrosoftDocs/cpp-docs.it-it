@@ -1,27 +1,16 @@
 ---
-title: 'Procedura: esporre un contenitore STL/CLR da un Assembly | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura: esporre un contenitore STL/CLR da un assembly'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: b4e2c9195557369fba380518a06fa08be7daeb1a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ba881210f7ee48acd0e92dce3432cae92f3072ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317966"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590086"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Procedura: esporre un contenitore STL/CLR da un assembly
 

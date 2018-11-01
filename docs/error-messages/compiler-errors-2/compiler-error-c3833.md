@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3833 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3833
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3833
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6adc8e8a60668f94d8502fb392c5d9603d552159
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eb320dda9a69937e49f669153bb77e484c5a15fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549591"
 ---
 # <a name="compiler-error-c3833"></a>Errore del compilatore C3833
 

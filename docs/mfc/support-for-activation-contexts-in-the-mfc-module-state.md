@@ -1,26 +1,16 @@
 ---
-title: Supporto per contesti di attivazione nello stato del modulo MFC | Microsoft Docs
-ms.custom: ''
+title: Supporto per contesti di attivazione nello stato del modulo MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - activation contexts [MFC]
 - activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e162ae0540157209733d9cf4833ad922d69949a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5e3d5c9195f18c54de63ec7ecd38b165feca5df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619023"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Supporto per contesti di attivazione nello stato del modulo MFC
 
@@ -46,7 +36,7 @@ Contesto di attivazione funziona in applicazioni MFC, le DLL dell'utente e le DL
 
 Anche se lo stato del contesto di attivazione può essere modificato utilizzando i processi descritti in [usando l'API di contesto di attivazione](/windows/desktop/SbsCs/using-the-activation-context-api), utilizzando il meccanismo di contesto di attivazione MFC può essere utile durante lo sviluppo di architetture di plug-in basate sulle DLL in cui non è facile (o non è possibile) commutare manualmente lo stato di attivazione prima e dopo le chiamate individuali a plug-in esterni.
 
-Il contesto di attivazione viene creato nel [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). Viene eliminato nel distruttore `AFX_MODULE_STATE`. L'handle del contesto di attivazione viene conservato in `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` descritto nella [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate).)
+Il contesto di attivazione viene creato nel [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). Viene eliminato definitivamente nel distruttore `AFX_MODULE_STATE`. L'handle del contesto di attivazione viene conservato in `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` descritto nella [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate).)
 
 Il [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro attiva e disattiva il contesto di attivazione. `AFX_MANAGE_STATE` è abilitata per le librerie MFC statiche, nonché per le DLL MFC, per consentire al codice MFC di operare nel proprio contesto di attivazione selezionato dalla DLL dell'utente.
 

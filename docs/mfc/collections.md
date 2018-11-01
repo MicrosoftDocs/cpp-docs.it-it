@@ -1,12 +1,6 @@
 ---
-title: Le raccolte | Microsoft Docs
-ms.custom: ''
+title: Raccolte
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, collections
 - arrays [MFC], classes
@@ -23,16 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f7ded70431b80257433058cc9af89bcb137c4247
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490857"
 ---
 # <a name="collections"></a>Raccolte
 

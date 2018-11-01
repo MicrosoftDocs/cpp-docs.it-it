@@ -1,28 +1,18 @@
 ---
-title: Pagine delle proprietà (MFC) | Microsoft Docs
-ms.custom: ''
+title: Pagine delle proprietà (MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6d72a6dbe8480e37751b760961f466db02c0c0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403078"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620909"
 ---
 # <a name="property-pages-mfc"></a>Pagine delle proprietà (MFC)
 
@@ -77,7 +67,7 @@ Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per
 *ID*<br/>
 L'ID risorsa della casella combinata finestra controllo associato alla proprietà del controllo specificata dalla *pszPropName*.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro associata al controllo di pagina di proprietà specificato da *id* e la proprietà specificata dal *pszPropName*.
 
 *pszPropName*<br/>
@@ -111,7 +101,7 @@ Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per
 *ID*<br/>
 L'ID risorsa della casella combinata finestra controllo associato alla proprietà del controllo specificata dalla *pszPropName*.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro associata al controllo di pagina di proprietà specificato da *id* e la proprietà specificata dal *pszPropName*.
 
 *pszPropName*<br/>
@@ -145,7 +135,7 @@ Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per
 *ID*<br/>
 L'ID risorsa della casella combinata finestra controllo associato alla proprietà del controllo specificata dalla *pszPropName*.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro associata al controllo di pagina di proprietà specificato da *id* e la proprietà specificata dal *pszPropName*.
 
 *pszPropName*<br/>
@@ -179,7 +169,7 @@ Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per
 *ID*<br/>
 L'ID risorsa del controllo casella di controllo associato con la proprietà del controllo specificata dalla *pszPropName*.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro associata al controllo di pagina di proprietà specificato da *id* e la proprietà specificata dal *pszPropName*.
 
 *pszPropName*<br/>
@@ -213,7 +203,7 @@ Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per
 *ID*<br/>
 L'ID risorsa dell'elenco di controllo associato con la proprietà del controllo specificata dalla casella *pszPropName*.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro associata al controllo di pagina di proprietà specificato da *id* e la proprietà specificata dal *pszPropName*.
 
 *pszPropName*<br/>
@@ -247,7 +237,7 @@ Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per
 *ID*<br/>
 L'ID risorsa dell'elenco di controllo associato con la proprietà del controllo specificata dalla casella *pszPropName*.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro associata al controllo di pagina di proprietà specificato da *id* e la proprietà specificata dal *pszPropName*.
 
 *pszPropName*<br/>
@@ -281,7 +271,7 @@ Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per
 *ID*<br/>
 L'ID risorsa dell'elenco di controllo associato con la proprietà del controllo specificata dalla casella *pszPropName*.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro associata al controllo di pagina di proprietà specificato da *id* e la proprietà specificata dal *pszPropName*.
 
 *pszPropName*<br/>
@@ -338,7 +328,7 @@ Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per
 *ID*<br/>
 L'ID risorsa dell'opzione pulsante controllo associato alla proprietà del controllo specificata dalla *pszPropName*.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro associata al controllo di pagina di proprietà specificato da *id* e la proprietà specificata dal *pszPropName*.
 
 *pszPropName*<br/>
@@ -414,7 +404,7 @@ Puntatore a un oggetto `CDataExchange`. Il framework fornisce questo oggetto per
 *ID*<br/>
 L'ID risorsa del controllo associato con la proprietà del controllo specificata dalla *pszPropName*.
 
-*Membro*<br/>
+*membro*<br/>
 La variabile membro associata al controllo di pagina di proprietà specificato da *id* e la proprietà specificata dal *pszPropName*.
 
 *pszPropName*<br/>

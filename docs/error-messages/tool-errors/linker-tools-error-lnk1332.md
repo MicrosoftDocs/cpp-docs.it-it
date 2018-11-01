@@ -1,27 +1,17 @@
 ---
-title: Errore LNK1332 degli strumenti del linker | Microsoft Docs
-ms.custom: ''
+title: Errore degli strumenti del linker LNK1332
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1332
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1332
 ms.assetid: b31d5ca0-c27f-4177-896b-2637dccbde24
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b256c61b9e9de6bf19e754054de1f55fcdec5f0b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fbc871b6fdf046c5bbc5053da9bde39580ed279
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537683"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Errore degli strumenti del linker LNK1332
 

@@ -1,29 +1,18 @@
 ---
-title: Modelli Consumer OLE DB (C++) | Microsoft Docs
-ms.custom: ''
+title: Modelli consumer OLE DB (C++)
 ms.date: 10/22/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - databases [C++], OLE DB templates
 - OLE DB consumers [C++], data access
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 71c8c6d84bf4ee92d74a0b4cb68c9e8abc545a22
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2494293330e7c0f47a6f72e8833c82c21df8dca1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069893"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573777"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelli consumer OLE DB (C++)
 

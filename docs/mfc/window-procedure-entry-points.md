@@ -1,28 +1,18 @@
 ---
-title: Finestra punti di ingresso di procedura | Microsoft Docs
-ms.custom: ''
+title: Punti di ingresso della routine della finestra
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - state management, window procedures
 - MFC, managing state data
 - window procedure entry points
 - entry points, window procedures
 ms.assetid: a6b46a7f-6e42-45f2-9ae6-82e19fc57148
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3226df51d2a83484de78d0d76c9af67e150e8eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9e395ff96d27476bc2869e23139cb2d1233f02ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403188"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500919"
 ---
 # <a name="window-procedure-entry-points"></a>Punti di ingresso della routine della finestra
 

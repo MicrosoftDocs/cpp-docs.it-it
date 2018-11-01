@@ -1,14 +1,8 @@
 ---
-title: Utilizzo di CObject | Microsoft Docs
-ms.custom: ''
+title: Utilizzo di CObject
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - CObject
-dev_langs:
-- C++
 helpviewer_keywords:
 - examples [MFC], CObject
 - root base class for MFC
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 734f9f66a37828b1fed04fc5366dd545e6c5e370
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 443a381c33458e61ba49eb10724d31614831f422
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082189"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564827"
 ---
 # <a name="using-cobject"></a>Utilizzo di CObject
 

@@ -1,29 +1,18 @@
 ---
-title: 'Recordset: Applicazione di parametri a un Recordset (ODBC) | Microsoft Docs'
-ms.custom: ''
+title: 'Recordset: applicazione di parametri a un recordset (ODBC)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - parameterizing recordsets
 - ODBC recordsets, parameterizing
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 728af30d0c3fd29d55880e62d3750ddfebf13c50
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fdea70f8d87604ca0665baa64c8652c14295a670
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065252"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506574"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: applicazione di parametri a un recordset (ODBC)
 

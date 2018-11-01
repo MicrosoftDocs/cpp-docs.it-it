@@ -1,10 +1,6 @@
 ---
-title: _fread_nolock | Microsoft Docs
-ms.custom: ''
+title: _fread_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fread_nolock
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _fread_nolock
 - fread_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - data [C++], reading from input stream
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 444a4b371eb6b4add140c5d0d96f48a69e35152c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81827363d670c7cdeeddcb86390323bf431c6f98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396709"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597288"
 ---
 # <a name="freadnolock"></a>_fread_nolock
 
@@ -69,7 +59,7 @@ Dimensione dell'elemento in byte.
 *count*<br/>
 Numero massimo di elementi da leggere.
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
@@ -78,7 +68,7 @@ Vedere [fread](fread.md).
 
 ## <a name="remarks"></a>Note
 
-Questa funzione è una versione non blocca il thread di **fread**. È identico a **fread** ad eccezione del fatto che non è protetta da interferenze da altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Questa funzione è una versione non blocca il thread del **fread**. È identico a **fread** ad eccezione del fatto che non è protetta da interferenze da altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ## <a name="requirements"></a>Requisiti
 

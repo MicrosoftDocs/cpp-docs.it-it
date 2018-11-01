@@ -1,26 +1,16 @@
 ---
-title: Le definizioni per il riepilogo della grammatica | Microsoft Docs
-ms.custom: ''
+title: Definizioni per il riepilogo della grammatica
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c11f2f839ef806d74eae65c9fc8fe3a71cd2e9c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 133000c0cc8ef636a3f9752d2f6fc7f1934bd831
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760816"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521125"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Definizioni per il riepilogo della grammatica
 
@@ -30,9 +20,9 @@ I non terminali sono segnaposto nella sintassi. La maggior parte viene definita 
 
 `constant`, *constant-expression*, *identifier*, *keyword*, `operator`, `punctuator`
 
-Un componente facoltativo viene indicato dal pedice <sub>opt</sub>. Ad esempio, di seguito viene indicata un'espressione facoltativa racchiusa tra parentesi graffe:
+Un componente facoltativo viene indicato da <sub>opt</sub> con indice. Ad esempio, di seguito viene indicata un'espressione facoltativa racchiusa tra parentesi graffe:
 
-**{** *espressione*<sub>opt</sub> **}**
+**{** *expression*<sub>opt</sub> **}**
 
 ## <a name="see-also"></a>Vedere anche
 

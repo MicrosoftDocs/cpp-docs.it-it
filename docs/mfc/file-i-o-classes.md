@@ -1,14 +1,8 @@
 ---
-title: Le classi dei / O di file | Microsoft Docs
-ms.custom: ''
+title: Classi dei / O file
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.file
-dev_langs:
-- C++
 helpviewer_keywords:
 - disk file classes [MFC]
 - stdio classes [MFC]
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - stream classes [MFC]
 - memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fad854b054ca32819597126c5a4c0b9652df9210
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6a47372e77ca8b6adee44125705dc3f4d6b267b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442136"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443108"
 ---
 # <a name="file-io-classes"></a>Classi I/O di file
 

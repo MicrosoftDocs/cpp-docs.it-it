@@ -1,10 +1,6 @@
 ---
-title: Classe CVSListBox | Microsoft Docs
-ms.custom: ''
+title: Classe CVSListBox
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXVSLISTBOX/CVSListBox::SelectItem
 - AFXVSLISTBOX/CVSListBox::SetItemData
 - AFXVSLISTBOX/CVSListBox::GetListHwnd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CVSListBox [MFC], CVSListBox
 - CVSListBox [MFC], AddItem
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d4bb676685a05ee9cedd9074f6d04ba357c5085
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513763"
 ---
 # <a name="cvslistbox-class"></a>Classe CVSListBox
 
@@ -68,16 +58,16 @@ class CVSListBox : public CVSListBoxBase
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CVSListBox::AddItem](#additem)|Aggiunge una stringa a un controllo elenco. Esegue l'override`CVSListBoxBase::AddItem`.|
-|[CVSListBox::EditItem](#edititem)|Avvia un'operazione di modifica del testo di un elemento controllo elenco. Esegue l'override`CVSListBoxBase::EditItem`.|
-|[CVSListBox::GetCount](#getcount)|Recupera il numero di stringhe in un controllo elenco modificabile. Esegue l'override`CVSListBoxBase::GetCount`.|
-|[CVSListBox::GetItemData](#getitemdata)|Recupera un valore a 32 bit specifiche dell'applicazione associata a un elemento controllo elenco modificabile. Esegue l'override`CVSListBoxBase::GetItemData`.|
-|[CVSListBox::GetItemText](#getitemtext)|Recupera il testo di un elemento controllo elenco modificabile. Esegue l'override`CVSListBoxBase::GetItemText`.|
-|[CVSListBox::GetSelItem](#getselitem)|Recupera l'indice in base zero dell'elemento attualmente selezionato in un controllo elenco modificabile. Esegue l'override`CVSListBoxBase::GetSelItem`.|
-|`CVSListBox::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Per altre informazioni e la sintassi del metodo, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override`CVSListBoxBase::PreTranslateMessage`.|
-|[CVSListBox::RemoveItem](#removeitem)|Rimuove un elemento da un controllo elenco modificabile. Esegue l'override`CVSListBoxBase::RemoveItem`.|
-|[CVSListBox::SelectItem](#selectitem)|Seleziona una stringa di controllo elenco modificabile. Esegue l'override`CVSListBoxBase::SelectItem`.|
-|[CVSListBox::SetItemData](#setitemdata)|Associa un valore a 32 bit specifiche dell'applicazione a un elemento controllo elenco modificabile. Esegue l'override`CVSListBoxBase::SetItemData`.|
+|[CVSListBox::AddItem](#additem)|Aggiunge una stringa a un controllo elenco. Esegue l'override di `CVSListBoxBase::AddItem`.|
+|[CVSListBox::EditItem](#edititem)|Avvia un'operazione di modifica del testo di un elemento controllo elenco. Esegue l'override di `CVSListBoxBase::EditItem`.|
+|[CVSListBox::GetCount](#getcount)|Recupera il numero di stringhe in un controllo elenco modificabile. Esegue l'override di `CVSListBoxBase::GetCount`.|
+|[CVSListBox::GetItemData](#getitemdata)|Recupera un valore a 32 bit specifiche dell'applicazione associata a un elemento controllo elenco modificabile. Esegue l'override di `CVSListBoxBase::GetItemData`.|
+|[CVSListBox::GetItemText](#getitemtext)|Recupera il testo di un elemento controllo elenco modificabile. Esegue l'override di `CVSListBoxBase::GetItemText`.|
+|[CVSListBox::GetSelItem](#getselitem)|Recupera l'indice in base zero dell'elemento attualmente selezionato in un controllo elenco modificabile. Esegue l'override di `CVSListBoxBase::GetSelItem`.|
+|`CVSListBox::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Per altre informazioni e la sintassi del metodo, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override di `CVSListBoxBase::PreTranslateMessage`.|
+|[CVSListBox::RemoveItem](#removeitem)|Rimuove un elemento da un controllo elenco modificabile. Esegue l'override di `CVSListBoxBase::RemoveItem`.|
+|[CVSListBox::SelectItem](#selectitem)|Seleziona una stringa di controllo elenco modificabile. Esegue l'override di `CVSListBoxBase::SelectItem`.|
+|[CVSListBox::SetItemData](#setitemdata)|Associa un valore a 32 bit specifiche dell'applicazione a un elemento controllo elenco modificabile. Esegue l'override di `CVSListBoxBase::SetItemData`.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 

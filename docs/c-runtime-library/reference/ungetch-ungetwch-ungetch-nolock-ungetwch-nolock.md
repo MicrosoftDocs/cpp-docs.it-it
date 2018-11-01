@@ -1,10 +1,6 @@
 ---
-title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430303"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -92,11 +82,11 @@ Carattere da inserire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Entrambe le funzioni restituiscono il carattere *c* se ha esito positivo. Se si verifica un errore **ungetch** restituisce un valore di **EOF** e **ungetwch** restituisce **WEOF**.
+Entrambe le funzioni restituiscono il carattere *c* se ha esito positivo. Se si verifica un errore **ungetch** restituisce il valore **EOF** e **ungetwch** restituisce **WEOF**.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni push il carattere *c* nuovamente alla console, causando *c* sia il carattere successivo letto dal **getch** oppure **getche** (o **getwch** oppure **getwche**). **ungetch** e **ungetwch** esito negativo se vengono chiamati più di una volta prima della successiva operazione di lettura. Il *c* argomento potrebbe non essere **EOF** (oppure **WEOF**).
+Queste funzioni inseriscono il carattere *c* nuovamente alla console, causando *c* sia il carattere successivo letto dal **getch** oppure **getche** (o **getwch** oppure **getwche**). **ungetch** e **ungetwch** esito negativo se vengono chiamati più di una volta prima della lettura successiva. Il *c* argument non può essere **EOF** (o **WEOF**).
 
 Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 

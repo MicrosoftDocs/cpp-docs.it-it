@@ -1,11 +1,6 @@
 ---
-title: cacos, cacosf, cacosl | Microsoft Docs
-ms.custom: ''
+title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacos
 - cacosf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6734080e8aff91d9276ef59203e2a3911ee9e7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543195"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Recupera l'arcocoseno del numero complesso con tagli branch all'esterno dell'intervallo [-1, + 1] lungo l'asse reale.
+Recupera l'arcocoseno di un numero complesso, con raggi compreso nell'intervallo [-1, + 1] lungo l'asse reale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -72,11 +61,11 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-L'arcocoseno dei *z*, in radianti. Il risultato è unbounded lungo l'asse immaginaria e nel nell'intervallo [0, π] lungo l'asse reale. Se si verificherà un errore di dominio *z* è compreso nell'intervallo [-1, + 1].
+L'arcocoseno di un *z*, espresso in radianti. Il risultato è unbounded lungo l'asse immaginario e nel nell'intervallo [0, π] lungo l'asse reale. Se si verificherà un errore di dominio *z* è compreso nell'intervallo [-1, + 1].
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cacos** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **cacos** accetta e restituisce sempre un **_Dcomplex** valore.
+Dato che C++ consente l'overload, è possibile chiamare overload di **cacos** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **cacos** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 

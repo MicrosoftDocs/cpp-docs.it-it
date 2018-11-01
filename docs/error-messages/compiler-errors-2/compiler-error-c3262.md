@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3262 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3262
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3262
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3262
 ms.assetid: 3e74b9aa-de3c-4492-9331-ee73012b958b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 928ab2f6d12abb757d904417d28bd86e25be94a2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1b6f9c1cd8ed983ba0784a49b8972325047c8d9b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115872"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574344"
 ---
 # <a name="compiler-error-c3262"></a>Errore del compilatore C3262
 

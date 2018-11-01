@@ -1,27 +1,17 @@
 ---
-title: Compilatore Warning (level 1) C4048 | Microsoft Docs
-ms.custom: ''
+title: Compilatore Warning (level 1) C4048
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4048
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4048
 ms.assetid: 8429f513-4732-40f1-8e56-4c224e723bcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e705d570522cdd645ee8d72159b74be750c147a9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6ea9968c8dd116fada08b44c5f9274de63aa08bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112449"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511774"
 ---
 # <a name="compiler-warning-level-1-c4048"></a>Compilatore Warning (level 1) C4048
 

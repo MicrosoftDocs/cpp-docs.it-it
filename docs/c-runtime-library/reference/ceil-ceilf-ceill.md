@@ -1,10 +1,6 @@
 ---
-title: ceil, ceilf, ceill | Microsoft Docs
-ms.custom: ''
+title: ceil, ceilf, ceill
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ceilf
 - ceil
@@ -27,24 +23,18 @@ f1_keywords:
 - ceil
 - ceilf
 - ceill
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating value ceilings
 - ceill function
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa68ff857db09d1426fbed6ea497624e13cc362a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b128f20593d41fff3c4c50f6d68f8643798c5b66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394265"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637190"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -77,17 +67,17 @@ Valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **ceil** le funzioni restituiscono un valore a virgola mobile che rappresenta l'intero più piccolo che è maggiore o uguale a *x*. Non vi è restituzione di errori.
+Il **ceil** le funzioni restituiscono un valore a virgola mobile che rappresenta l'integer più piccolo maggiore o uguale a *x*. Non vi è restituzione di errori.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|none|**DOMAIN**|
+|+ **QNAN**, **IND**|none|**DOMINIO**|
 
-**ceil** ha un'implementazione che utilizza Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**ceil** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **ceil** che accettano **float** oppure **lungo** **doppie** tipi. In un programma C **ceil** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **ceil** che accettano **float** oppure **long** **double** tipi. In un programma C **ceil** accetta e restituisce sempre un **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 

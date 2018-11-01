@@ -1,10 +1,6 @@
 ---
-title: _cgets_s, _cgetws_s | Microsoft Docs
-ms.custom: ''
+title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -26,8 +22,6 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b00f9eee699b7e556c2fcc3f88abd8d783a261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396797"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588539"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 
@@ -99,12 +89,12 @@ Il valore restituito è zero se ha esito positivo; in caso contrario si verifica
 |*buffer*|*numberOfElements*|*pSizeRead*|INVIO|Contenuto di *buffer*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|qualsiasi|qualsiasi|**EINVAL**|N/D|
-|non **NULL**|zero|qualsiasi|**EINVAL**|non modificato|
-|non **NULL**|qualsiasi|**NULL**|**EINVAL**|stringa di lunghezza zero|
+|Non **NULL**|zero|qualsiasi|**EINVAL**|non modificato|
+|Non **NULL**|qualsiasi|**NULL**|**EINVAL**|stringa di lunghezza zero|
 
 ## <a name="remarks"></a>Note
 
-**cgets_s** e **cgetws_s** leggono una stringa dalla console e copiare la stringa (con un carattere di terminazione null) in *buffer*. **cgetws_s** è la versione a caratteri "wide" della funzione; a parte la dimensione di carattere, il comportamento di queste due funzioni è identica. La dimensione massima della stringa da leggere viene passata come il *numberOfElements* parametro. Questa dimensione deve includere un carattere aggiuntivo per la terminazione null. Il numero effettivo di caratteri letti viene inserito nella *pSizeRead*.
+**cgets_s** e **cgetws_s** leggono una stringa dalla console e copiare la stringa (con un carattere di terminazione null) in *buffer*. **cgetws_s** è la versione a caratteri wide della funzione; a dimensioni del carattere, il comportamento di queste due funzioni sono identica. La dimensione massima della stringa da leggere viene passata come il *numberOfElements* parametro. Questa dimensione deve includere un carattere aggiuntivo per la terminazione null. Il numero effettivo di caratteri letti viene inserito nella *pSizeRead*.
 
 Se si verifica un errore durante l'operazione o nella convalida dei parametri, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e **EINVAL** viene restituito.
 

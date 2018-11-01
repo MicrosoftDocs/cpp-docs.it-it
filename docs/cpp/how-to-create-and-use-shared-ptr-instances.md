@@ -1,23 +1,15 @@
 ---
-title: 'Procedura: creare e utilizzare istanze shared_ptr | Microsoft Docs'
+title: 'Procedura: creare e utilizzare istanze shared_ptr'
 ms.custom: how-to
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 168569ba04b0b2599f951982dede90468f936347
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f437ccb476456a8081fa3be293bf67adb4fb2d0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606648"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Procedura: creare e utilizzare istanze shared_ptr
 

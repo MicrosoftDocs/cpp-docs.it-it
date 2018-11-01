@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s | Microsoft Docs
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412150"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488114"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -67,15 +57,15 @@ Restituisce 0 in caso di esito positivo e un codice di errore in caso di errore.
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|non modificato|
 
-Se si verifica l'errore di convalida dei parametri precedente, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e il valore restituito è **EINVAL**.
+Se si verifica l'errore di convalida dei parametri precedente, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e il valore restituito sarà **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **tmpfile_s** funzione crea un file temporaneo e un puntatore viene inserito in tale flusso con il *pFilePtr* argomento. Il file temporaneo viene creato nella directory radice. Per creare un file temporaneo in una directory diversa dalla radice, usare [tmpnam_s](tmpnam-s-wtmpnam-s.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in combinazione con [fopen](fopen-wfopen.md).
+Il **tmpfile_s** funzione crea un file temporaneo e inserisce un puntatore a tale flusso nel *pFilePtr* argomento. Il file temporaneo viene creato nella directory radice. Per creare un file temporaneo in una directory diversa dalla radice, usare [tmpnam_s](tmpnam-s-wtmpnam-s.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in combinazione con [fopen](fopen-wfopen.md).
 
-Se non è possibile aprire il file, **tmpfile_s** scrive **NULL** per il *pFilePtr* parametro. Il file temporaneo viene eliminato automaticamente quando il file viene chiuso, quando il programma termina normalmente, o quando **rmtmp** viene chiamato, presupponendo che la directory di lavoro corrente rimane invariato. Il file temporaneo viene aperto in **w + b** modalità (lettura/scrittura binario).
+Se non è possibile aprire il file, **tmpfile_s** scrive **NULL** per il *pFilePtr* parametro. Questo file temporaneo viene eliminato automaticamente quando il file viene chiuso quando il programma termina normalmente oppure **rmtmp** viene chiamato, presupponendo che la directory di lavoro corrente rimane invariato. Il file temporaneo viene aperto in **w + b** modalità (lettura/scrittura binaria).
 
-Errore può verificarsi se si tenta di oltre **TMP_MAX_S** (vedere STDIO. H) chiamate con **tmpfile_s**.
+Può verificarsi un errore se si tenta di superare **TMP_MAX_S** (vedere STDIO. H) le chiamate con **tmpfile_s**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -88,7 +78,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="example"></a>Esempio
 
 > [!NOTE]
-> In questo esempio può richiedere privilegi amministrativi per l'esecuzione in Windows.
+> In questo esempio può richiedere privilegi amministrativi per l'esecuzione su Windows.
 
 ```C
 // crt_tmpfile_s.c

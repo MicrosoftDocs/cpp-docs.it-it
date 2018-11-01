@@ -1,10 +1,6 @@
 ---
-title: Classe IObjectWithSiteImpl | Microsoft Docs
-ms.custom: ''
+title: Classe IObjectWithSiteImpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
 - ATLCOM/ATL::IObjectWithSiteImpl
@@ -12,21 +8,15 @@ f1_keywords:
 - ATLCOM/ATL::IObjectWithSiteImpl::SetChildSite
 - ATLCOM/ATL::IObjectWithSiteImpl::SetSite
 - ATLCOM/ATL::IObjectWithSiteImpl::m_spUnkSite
-dev_langs:
-- C++
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eea09c8490bd2b34cc4c5cd99946d0d9dca7a44c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 776f6f67c0490afb9d3ca975fcee7596d415ac12
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068214"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608891"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Classe IObjectWithSiteImpl
 

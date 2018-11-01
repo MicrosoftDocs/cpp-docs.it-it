@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3388 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3388
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3388
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4447d2d72c2a0a56df9f3a64549f201f86ddf129
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1f6e51542cc852543d648f9f94a964ae0cab3b30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512680"
 ---
 # <a name="compiler-error-c3388"></a>Errore del compilatore C3388
 

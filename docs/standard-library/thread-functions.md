@@ -1,8 +1,6 @@
 ---
-title: Funzioni &lt;thread&gt; | Microsoft Docs
-ms.custom: ''
+title: Funzioni &lt;thread&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - thread/std::get_id
 - thread/std::sleep_for
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 25c03be7ffb504f2bec47677aec70360d0f8b38f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c0a8e42cb7ee78c399459be82e50ef37ab203816
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704252"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631270"
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 

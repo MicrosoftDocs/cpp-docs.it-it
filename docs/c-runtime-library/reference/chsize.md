@@ -1,10 +1,6 @@
 ---
-title: _chsize | Microsoft Docs
-ms.custom: ''
+title: _chsize
 ms.date: 03/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _chsize
-dev_langs:
-- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb40d218439ebe308e7d7cf01ab5043a2ebb3b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395754"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600642"
 ---
 # <a name="chsize"></a>_chsize
 
@@ -65,7 +55,7 @@ Nuova lunghezza, in byte, del file.
 
 ## <a name="return-value"></a>Valore restituito
 
-**chsize** restituisce il valore 0 se le dimensioni del file viene modificata. Valore restituito di -1 indica un errore: **errno** è impostata su **EACCES** se il file specificato è di sola lettura o il file specificato è bloccato per impedire l'accesso, a **EBADF** se la non è valido, descrittore **ENOSPC** se non lo spazio viene lasciato sul dispositivo, o **EINVAL** se *dimensioni* è minore di zero.
+**chsize** restituisce il valore 0 se le dimensioni del file viene modificata. Valore restituito di -1 indica un errore: **errno** è impostata su **EACCES** se il file specificato è di sola lettura o il file specificato è bloccato a impedire l'accesso, se **EBADF** se la non è valido, descrittore **ENOSPC** se non è rimasto spazio nel dispositivo, o **EINVAL** se *dimensioni* è minore di zero.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -73,7 +63,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 Il **chsize** funzione estende o tronca il file associato *fd* per la lunghezza specificata dal *dimensioni*. Il file deve essere aperto in una modalità che consente la scrittura. Se il file viene esteso, vengono aggiunti caratteri null ("\0"). Se il file viene troncato, si perderanno tutti i dati a partire dalla fine del file abbreviato fino alla fine del file originale.
 
-Questa funzione convalida i relativi parametri. Se *dimensioni* è minore di zero o *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Questa funzione convalida i relativi parametri. Se *dimensioni* è minore di zero oppure *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Requisiti
 

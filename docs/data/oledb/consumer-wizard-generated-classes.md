@@ -1,12 +1,6 @@
 ---
-title: Classi generate dalla creazione guidata consumer | Microsoft Docs
-ms.custom: ''
+title: Classi generate mediante la Creazione guidata consumer
 ms.date: 10/17/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attribute-injected classes and methods
 - wizard-generated classes and methods
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 0473aaae7309f7f041883eea0afab5acc9095c9d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2ebc2094ba7f12087de51119a134e2ef65ef92d4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083347"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641138"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classi generate mediante la Creazione guidata consumer
 

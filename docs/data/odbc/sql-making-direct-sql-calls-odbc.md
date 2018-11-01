@@ -1,12 +1,6 @@
 ---
-title: 'SQL: Esecuzione di chiamate SQL dirette (ODBC) | Microsoft Docs'
-ms.custom: ''
+title: 'SQL: esecuzione di chiamate SQL dirette (ODBC)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - SQL, direct calls from ODBC
 - SQL, calling directly from ODBC
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - SQL calls
 - direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 2201a8936c1f28221bfcb628139a979e042715b9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 17b3279a4803a61595af64ab18629d6cf69f0f10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079220"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549851"
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL: esecuzione di chiamate SQL dirette (ODBC)
 

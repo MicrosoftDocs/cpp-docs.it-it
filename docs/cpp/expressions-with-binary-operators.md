@@ -1,27 +1,17 @@
 ---
-title: Espressioni con operatori binari | Microsoft Docs
-ms.custom: ''
+title: Espressioni con operatori binari
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2386f11aaff3a38501751b9966f8e187f3429478
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072030"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505127"
 ---
 # <a name="expressions-with-binary-operators"></a>Espressioni con operatori binari
 

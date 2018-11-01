@@ -1,10 +1,6 @@
 ---
-title: Classe CNonStatelessWorker | Microsoft Docs
-ms.custom: ''
+title: Classe CNonStatelessWorker
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CNonStatelessWorker
 - ATLUTIL/ATL::CNonStatelessWorker
@@ -12,21 +8,15 @@ f1_keywords:
 - ATLUTIL/ATL::CNonStatelessWorker::Execute
 - ATLUTIL/ATL::CNonStatelessWorker::Initialize
 - ATLUTIL/ATL::CNonStatelessWorker::Terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7aaae3728113cfd91c0655d2eac445cdd4b34246
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619625"
 ---
 # <a name="cnonstatelessworker-class"></a>Classe CNonStatelessWorker
 

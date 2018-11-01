@@ -1,12 +1,6 @@
 ---
-title: Suggerimenti per la scelta di una classe Collection | Microsoft Docs
-ms.custom: ''
+title: Suggerimenti per la scelta di una classe di raccolte
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - type safety of collection classes [MFC]
 - collection classes [MFC], serialization
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb6338d7a40059da5f4e351dfac0d8d879e8c21
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404787"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446735"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Suggerimenti per la scelta di una classe di raccolte
 
@@ -95,7 +85,7 @@ Nella tabella seguente, [Caratteristiche delle classi di raccolta MFC](#_core_ch
 |`CUIntArray`|No|No|Yes|Sì 3|
 |`CWordArray`|No|Yes|Yes|Sì 3|
 
-1. Per serializzare, è necessario chiamare esplicitamente la proprietà dell'insieme `Serialize` funzione; per eseguire il dump, è necessario chiamare esplicitamente il `Dump` (funzione). Non è possibile usare il modulo `ar << collObj` per la serializzazione o il modulo `dmp` `<< collObj` per eseguire il dump.
+1. Per serializzare, è necessario chiamare in modo esplicito la funzione `Serialize` dell'oggetto raccolta. Per eseguire il dump, è necessario chiamare esplicitamente la funzione `Dump`. Non è possibile usare il modulo `ar << collObj` per la serializzazione o il modulo `dmp` `<< collObj` per eseguire il dump.
 
 2. La serializzabilità dipende infatti dal tipo di raccolta sottostante. Ad esempio, se una matrice di puntatori tipizzata è basata su `CObArray`, è serializzabile, mentre se è basata su `CPtrArray`, non è serializzabile. In generale, le classi "Ptr" non possono essere serializzate.
 

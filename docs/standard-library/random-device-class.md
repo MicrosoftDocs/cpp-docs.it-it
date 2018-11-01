@@ -1,18 +1,12 @@
 ---
-title: Classe random_device | Microsoft Docs
-ms.custom: ''
+title: Classe random_device
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::random_device
 - random/std::random_device::min
 - random/std::random_device::max
 - random/std::random_device::entropy
 - random/std::random_device::operator()
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::random_device [C++]
 - std::random_device [C++], min
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac22e146ac305be92d0b4be214465e64e8b6873
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 783b8f587094c6d603cc02f41b516ebd7b1e9a08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856111"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580648"
 ---
 # <a name="randomdevice-class"></a>Classe random_device
 

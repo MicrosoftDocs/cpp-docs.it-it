@@ -1,28 +1,18 @@
 ---
-title: __svm_skinit | Microsoft Docs
-ms.custom: ''
+title: __svm_skinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_skinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fa468fddd24bd622d839bb1882af99d393a3d99
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630d4b9d93802038bd00b65495bb18455b0c61a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426133"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591217"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
@@ -46,7 +36,7 @@ void __svm_skinit(
 
 ## <a name="remarks"></a>Note
 
-Il `__svm_skinit` è equivalente alla funzione il `SKINIT` istruzioni in linguaggio macchina. Questa funzione è parte di un sistema di sicurezza che usa il processore e un Trusted Platform Module (TPM) per verificare e caricare il software considerato attendibile chiamato un kernel di sicurezza (SK). Un monitor di macchina virtuale è un esempio di un kernel di sicurezza. Il sistema di sicurezza verifica caricati durante il processo di inizializzazione dei componenti del programma e protegge i componenti dalla manomissione da parte degli interrupt, accesso al dispositivo o un altro programma se il computer è un computer multiprocessore.
+La funzione `__svm_skinit` è equivalente alle `SKINIT` istruzioni in linguaggio macchina. Questa funzione è parte di un sistema di sicurezza che usa il processore e un Trusted Platform Module (TPM) per verificare e caricare il software considerato attendibile chiamato un kernel di sicurezza (SK). Un monitor di macchina virtuale è un esempio di un kernel di sicurezza. Il sistema di sicurezza verifica caricati durante il processo di inizializzazione dei componenti del programma e protegge i componenti dalla manomissione da parte degli interrupt, accesso al dispositivo o un altro programma se il computer è un computer multiprocessore.
 
 Il `SLB` parametro specifica l'indirizzo fisico di un blocco di 64 KB di memoria denominata la *Secure blocco del caricatore* (SLB). Il bilanciamento del carico software contiene un programma denominato il caricatore sicuro che consente di stabilire l'ambiente operativo per il computer e successivamente carica il kernel di sicurezza.
 
