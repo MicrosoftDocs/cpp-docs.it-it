@@ -1,28 +1,18 @@
 ---
-title: 'File di informazioni: Panoramica | Microsoft Docs'
-ms.custom: ''
+title: Cenni preliminari sulla compilazione di file di informazioni di visualizzazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - .bsc files, about .bsc files
 - bsc files, about bsc files
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 493f25ba6839058a9ff749cb0dbb3853b1b16494
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d620c7170ef5e84a05496af6e74d3a22f594749b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469969"
 ---
 # <a name="building-browse-information-files-overview"></a>Cenni preliminari sulla compilazione di file di informazioni di visualizzazione
 

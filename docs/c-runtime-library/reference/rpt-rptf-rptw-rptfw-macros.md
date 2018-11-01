@@ -1,10 +1,6 @@
 ---
-title: Macro _RPT, _RPTF, _RPTW, _RPTFW | Microsoft Docs
-ms.custom: ''
+title: _RPT, _RPTF, _RPTW, _RPTFW Macros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -37,8 +33,6 @@ f1_keywords:
 - _RPTF3
 - RPT2
 - _RPTF1
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _RPTW3 macro
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69347ab698661346b8d598dda1bb007d071a21f8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104147"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440094"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW Macros
 
@@ -155,7 +145,7 @@ Il **rptw** e **rptfw** macro sono versioni a caratteri wide di queste macro. Ru
 
 Il **macro rpt** chiamata di macro le [CrtDbgReport](crtdbgreport-crtdbgreportw.md) funzione per generare un report di debug con un messaggio utente. Il **rptw** chiamata di macro le **CrtDbgReportW** funzione per generare lo stesso report con caratteri "wide". Il **rptf** e **rptfw** macro di creano un report di debug con il numero di riga e file di origine in cui è stata chiamata la macro di report, anche per il messaggio utente. Il messaggio utente viene creato tramite la sostituzione il **arg**[*n*] gli argomenti in di *formato* stringa, usando le stesse regole definite dal [printf](printf-printf-l-wprintf-wprintf-l.md)(funzione).
 
-**CrtDbgReport** oppure **CrtDbgReportW** genera il report di debug e ne determina le destinazioni in base a modalità rapporto correnti e file definito per *reportType*. Le funzioni [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.
+**CrtDbgReport** oppure **CrtDbgReportW** genera il report di debug e ne determina le destinazioni in base a modalità rapporto correnti e file definito per *reportType*. Le funzioni [_CrtSetReportFile](crtsetreportmode.md) e [_CrtSetReportMode](crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.
 
 Se un' **macro rpt** macro viene chiamata e né **CrtSetReportMode** né **crtsetreportfile** è stato chiamato, i messaggi vengono visualizzati come indicato di seguito.
 

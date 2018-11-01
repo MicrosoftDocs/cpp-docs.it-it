@@ -1,10 +1,6 @@
 ---
-title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l | Microsoft Docs
-ms.custom: ''
+title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclegal_l
 - _ismbclegal
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbclegal_l
 - ismbcsymbol
 - ismbclegal
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcsymbol function
 - ismbclegal_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d2bd03eb230d85a1f93038d50566b8ccae468a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402595"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454574"
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -95,18 +85,18 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c*< = 255 ed è presente un corrispondente **ismbb** routine (ad esempio **ismbcalnum** corrisponde a **ismbbalnum**), il il risultato è il valore restituito dell'oggetto corrispondente **ismbb** routine.
+Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c*< = 255 ed è presente un corrispondente **ismbb** routine (ad esempio, **ismbcalnum** corrisponde al **ismbbalnum**), il il risultato è il valore restituito dell'oggetto corrispondente **ismbb** routine.
 
 ## <a name="remarks"></a>Note
 
 Ognuna di queste funzioni testa una particolare condizione su un determinato carattere multibyte.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni con il **l** suffisso sono identiche ma usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condizione di test|Esempio della tabella codici 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|Multibyte valido|Restituisce se diverso da zero e solo se il primo byte *c* è all'interno degli intervalli 0x81-0x9F o 0xE0 - 0xFC, mentre il secondo byte è all'interno degli intervalli 0x40-0x7E o 0x80 - FC.|
-|**_ismbcsymbol**|Simbolo multibyte|Restituisce se diverso da zero e solo se 0x8141 < =*c*< = 0x81AC.|
+|**_ismbclegal**|Multibyte valido|Restituisce diverso da zero se e solo se il primo byte della *c* è compreso negli intervalli 0x81-0x9F o 0xE0 - 0xFC, mentre il secondo byte è compreso negli intervalli 0x40-0x7E o 0x80 - FC.|
+|**_ismbcsymbol**|Simbolo multibyte|Restituisce diverso da zero se e solo se 0x8141< < =*c*< lt;=0x81ac.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

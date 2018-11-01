@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportFile | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportFile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportFile
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3df4f54ad8e191dac7110a914bdde1cec888ff9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402338"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464246"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
-Dopo aver utilizzato [CrtSetReportMode](crtsetreportmode.md) per specificare **_CRTDBG_MODE_FILE**, è possibile specificare l'handle di file per ricevere il testo del messaggio. **Crtsetreportfile** viene utilizzato anche dalle [CrtDbgReport, CrtDbgReportW](crtdbgreport-crtdbgreportw.md) per specificare la destinazione di testo (solo versione debug).
+Dopo aver usato [CrtSetReportMode](crtsetreportmode.md) per specificare **_CRTDBG_MODE_FILE**, è possibile specificare l'handle di file per ricevere il testo del messaggio. **Crtsetreportfile** viene usata anche dal [CrtDbgReport, CrtDbgReportW](crtdbgreport-crtdbgreportw.md) per specificare la destinazione del testo (solo versione di debug).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -62,13 +52,13 @@ Nuovo file di report per *reportType*.
 
 ## <a name="return-value"></a>Valore restituito
 
-Al termine, **crtsetreportfile** restituisce il precedente file report definito per il tipo di report specificato nel *reportType*. Se viene passato un valore non valido *reportType*, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **_CRTDBG_HFILE_ERROR**. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
+Al termine, **crtsetreportfile** restituisce il file di report precedente definito per il tipo di report specificato in *reportType*. Se viene passato un valore non valido per *reportType*, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **_CRTDBG_HFILE_ERROR**. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
 ## <a name="remarks"></a>Note
 
-**Crtsetreportfile** viene usato con il [CrtSetReportMode](crtsetreportmode.md) funzione per definire la destinazione o le destinazioni per un tipo di report specifico generato dal **CrtDbgReport**. Quando si **CrtSetReportMode** è stato chiamato per assegnare il **_CRTDBG_MODE_FILE** reporting per un tipo di report specifico, in modalità **crtsetreportfile** devono quindi essere chiamati per definire il file specifico o un flusso da utilizzare come destinazione. Quando si [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **crtsetreportfile** vengono rimosse durante la pre-elaborazione.
+**Crtsetreportfile** viene usato con il [CrtSetReportMode](crtsetreportmode.md) funzione per definire la destinazione o destinazioni per un tipo specifico di report generato da **CrtDbgReport**. Quando **CrtSetReportMode** è stato chiamato per assegnare le **_CRTDBG_MODE_FILE** modalità per un tipo specifico di report, reporting **crtsetreportfile** deve essere chiamato da definire il file specifico o un flusso da usare come destinazione. Quando [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **crtsetreportfile** vengono rimosse durante la pre-elaborazione.
 
-Nell'elenco seguente vengono mostrate le scelte disponibili per *Impossibile* e il comportamento risultante del **CrtDbgReport**. Queste opzioni sono definite flag di bit in Crtdbg.h.
+L'elenco seguente mostra le scelte disponibili per *Impossibile* e il comportamento risultante di **CrtDbgReport**. Queste opzioni sono definite flag di bit in Crtdbg.h.
 
 - **handle di file**
 
@@ -88,7 +78,7 @@ Nell'elenco seguente vengono mostrate le scelte disponibili per *Impossibile* e 
 
 - **_CRTDBG_FILE_STDERR**
 
-   Scrive il messaggio in **stderr**, che può essere reindirizzato come indicato di seguito:
+   Scrive un messaggio a **stderr**, che può essere reindirizzato nel modo seguente:
 
    ```C
    freopen( "c:\\log2.txt", "w", stderr);
@@ -100,13 +90,13 @@ Nell'elenco seguente vengono mostrate le scelte disponibili per *Impossibile* e 
 
 - **_CRTDBG_FILE_STDOUT**
 
-   Scrive il messaggio in **stdout**, che è possibile reindirizzare.
+   Scrive un messaggio a **stdout**, che è possibile reindirizzare.
 
 - **_CRTDBG_REPORT_FILE**
 
    Restituisce la modalità di report corrente.
 
-Il file di report usato da ogni tipo di report può essere controllato separatamente. Ad esempio, è possibile specificare che una *reportType* dei **CRT_ERROR** vengano segnalate al **stderr**, mentre un *reportType* di **CRT_ASSERT** possibile segnalare a un handle di file definito dall'utente o un flusso.
+Il file di report usato da ogni tipo di report può essere controllato separatamente. Ad esempio, è possibile specificare che un *reportType* dei **CRT_ERROR** quindi segnalati al **stderr**, mentre un *reportType* di **CRT_ASSERT** segnalati per un handle di file definito dall'utente o un flusso.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -114,7 +104,7 @@ Il file di report usato da ogni tipo di report può essere controllato separatam
 |-------------|---------------------|---------------------|
 |**_CrtSetReportFile**|\<crtdbg.h>|\<errno.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 **Librerie:** solo le versioni di debug delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
 

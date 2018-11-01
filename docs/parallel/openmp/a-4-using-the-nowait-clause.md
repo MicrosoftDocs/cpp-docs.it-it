@@ -1,23 +1,13 @@
 ---
-title: A.4 utilizzo della clausola nowait | Microsoft Docs
-ms.custom: ''
+title: A.4   Utilizzo della clausola nowait
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: d3de2111-05ea-4ee3-a66c-57bd988712af
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da4b69ed8ccf59fb90d17da2b85d7693d661785b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f839397787c35e88ea325c2db81b15b3a4e7508
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444502"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454925"
 ---
 # <a name="a4---using-the-nowait-clause"></a>A.4   Utilizzo della clausola nowait
 

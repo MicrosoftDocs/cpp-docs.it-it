@@ -1,10 +1,6 @@
 ---
-title: Classe bernoulli_distribution | Microsoft Docs
-ms.custom: ''
+title: Classe bernoulli_distribution
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::bernoulli_distribution
 - random/std::bernoulli_distribution::reset
@@ -17,8 +13,6 @@ f1_keywords:
 - random/std::bernoulli_distribution::param_type::p
 - random/std::bernoulli_distribution::param_type::operator==
 - random/std::bernoulli_distribution::param_type::operator!=
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::bernoulli_distribution [C++]
 - std::bernoulli_distribution [C++], reset
@@ -29,16 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cc8b144ab8cf619469723f6fd19a4ffdac085e6d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b5ddbadea4d16d7a76df332074ec5c80fae57eb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105848"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457755"
 ---
 # <a name="bernoullidistribution-class"></a>Classe bernoulli_distribution
 

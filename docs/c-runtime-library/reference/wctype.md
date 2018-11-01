@@ -1,10 +1,6 @@
 ---
-title: wctype | Microsoft Docs
-ms.custom: ''
+title: wctype
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctype
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctype
-dev_langs:
-- C++
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb5003db02ed27c2906ebc3619313489e40e5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456901"
 ---
 # <a name="wctype"></a>wctype
 
@@ -57,7 +47,7 @@ Stringa di proprietà.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se il **LC_CTYPE** categoria di impostazioni locali correnti non definisce una regola di classificazione il cui nome corrisponde alla stringa di proprietà *proprietà*, la funzione restituisce zero. In caso contrario, restituisce un valore diverso da zero adatto per l'uso come secondo argomento per una chiamata successiva a [towctrans](towctrans.md).
+Se il **LC_CTYPE** categoria delle impostazioni locali correnti non definisce una regola di classificazione il cui nome corrisponde alla stringa di proprietà *proprietà*, la funzione restituisce zero. In caso contrario, restituisce un valore diverso da zero adatto per l'uso come secondo argomento per una chiamata successiva a [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Note
 
@@ -67,10 +57,10 @@ La funzione determina una regola di classificazione per i codici di caratteri wi
 |--------------|-------------|
 |iswalnum(c)|iswctype (c, wctype ("alnum"))|
 |iswalpha(c)|iswctype (c, wctype ("alfa"))|
-|iswcntrl(c)|iswctype (c, wctype ("CTRL"))|
-|iswdigit(c)|iswctype (c, wctype ("cifre"))|
+|iswcntrl(c)|iswctype (c, wctype ("cntrl"))|
+|iswdigit(c)|iswctype (c, wctype ("digit"))|
 |iswgraph(c)|iswctype (c, wctype ("grafico"))|
-|iswlower(c)|iswctype (c, wctype ("inferiore"))|
+|iswlower(c)|iswctype (c, wctype ("basso"))|
 |iswprint(c)|iswctype (c, wctype ("print"))|
 |iswpunct(c)|iswctype (c, wctype ("punct"))|
 |iswspace(c)|iswctype (c, wctype ("spazio"))|

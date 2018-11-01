@@ -1,12 +1,6 @@
 ---
-title: Lo scorrimento, disposizione, ordinamento e ricerca nei controlli List | Microsoft Docs
-ms.custom: ''
+title: Scorrimento, disposizione, ordinamento e ricerca nei controlli List
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - image lists [MFC], sorting
 - image lists [MFC], arranging
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - CListCtrl class [MFC], sorting
 - CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ef92f87c1b51a4cf0d60bc3ae1141d43cc87ccd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3cc322a41c06b385cdd298629b8b96778f6a0f2d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426939"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467108"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Scorrimento, disposizione, ordinamento e ricerca nei controlli List
 

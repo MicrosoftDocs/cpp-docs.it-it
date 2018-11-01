@@ -1,29 +1,19 @@
 ---
-title: Visualizzazione classi (Windows) | Microsoft Docs
-ms.custom: ''
+title: Classi visualizzazione (Windows)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
-dev_langs:
-- C++
 helpviewer_keywords:
 - form and record views [MFC]
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b347fcc14b477ab83a3bc0b6dfa2c0c80adeb791
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5fc08ec23e0a2b2ba105aa3a633ee862dc452450
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428871"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462299"
 ---
 # <a name="view-classes-windows"></a>Classi visualizzazione (Windows)
 

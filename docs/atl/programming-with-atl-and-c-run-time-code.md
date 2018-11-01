@@ -1,28 +1,18 @@
 ---
-title: Programmazione con codice di runtime C e ATL | Microsoft Docs
-ms.custom: ''
+title: Programmazione con il codice runtime C e ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL_MIN_CRT macro
 - CRT, using with ATL
 - _ATL_MIN_CRT macro
 - ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 473c4f20f1271e82ba69b50bfe4b392975f21489
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a14f8155545666df7ec64b15072258163f559266
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088774"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466781"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programmazione con il codice runtime C e ATL
 
