@@ -1,10 +1,6 @@
 ---
-title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft Docs
-ms.custom: ''
+title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _hypotf
 - hypot
@@ -32,8 +28,6 @@ f1_keywords:
 - hypot
 - _hypot
 - _hypotf
-dev_langs:
-- C++
 helpviewer_keywords:
 - hypotenuse calculation
 - hypot function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a8488b160c10eb29f0448127c44d3514f8debf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400203"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439533"
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -94,13 +84,13 @@ Valori a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, **hypot** restituisce la lunghezza dell'ipotenusa; in caso di overflow, **hypot** restituisce INF (infinito) e il **errno** variabile è impostata su **ERANGE** . È possibile utilizzare **matherr** per modificare la gestione degli errori.
+Caso di esito positivo **hypot** restituisce la lunghezza dell'ipotenusa; in caso di overflow **hypot** restituisce INF (infinito) e il **errno** variabile è impostata su **ERANGE** . È possibile usare **matherr** per modificare la gestione degli errori.
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **hypot** funzioni calcolano la lunghezza dell'ipotenusa di un triangolo rettangolo, determinato lunghezza dei due lati *x* e *y* (in altre parole, la radice quadrata di *x*<sup>2</sup> + *y*<sup>2</sup>).
+Il **hypot** funzioni calcolano la lunghezza dell'ipotenusa di un triangolo rettangolo, dato la lunghezza dei due lati *x* e *y* (in altre parole, la radice quadrata del *x*<sup>2</sup> + *y*<sup>2</sup>).
 
 Le versioni delle funzioni con caratteri di sottolineatura iniziali sono fornite per compatibilità con standard precedenti. Il comportamento è identico per le versioni senza caratteri di sottolineatura iniziali. È consigliabile usare le versioni senza caratteri di sottolineatura iniziali per il nuovo codice.
 

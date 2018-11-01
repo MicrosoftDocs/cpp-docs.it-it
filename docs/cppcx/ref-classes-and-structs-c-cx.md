@@ -1,20 +1,13 @@
 ---
-title: Le classi e struct (C + c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: Classi e struct di riferimento (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e38b57fbdf5c6e815f4e099c7cb7d37674799877
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a817529f24f1df3a3258b4596cd4d14533356a02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456225"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classi e struct di riferimento (C++/CX)
 

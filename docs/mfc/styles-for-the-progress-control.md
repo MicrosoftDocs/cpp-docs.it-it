@@ -1,28 +1,18 @@
 ---
-title: Stili per il controllo Progress | Microsoft Docs
-ms.custom: ''
+title: Stili per il controllo Progress
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - PBS_SMOOTH style
 - progress controls [MFC], styles
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce520991b078f01e0551661516bfe7f24c53cf46
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 494f5df03d15e1662f20aff644fb414a7254ad5f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451727"
 ---
 # <a name="styles-for-the-progress-control"></a>Stili per il controllo Progress
 

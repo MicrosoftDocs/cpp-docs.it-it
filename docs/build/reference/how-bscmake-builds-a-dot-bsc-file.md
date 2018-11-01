@@ -1,25 +1,15 @@
 ---
-title: Modalità di compilazione BSCMAKE una. File BSC | Microsoft Docs
-ms.custom: ''
+title: Modalità di compilazione di un file bsc in BSCMAKE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aadf3b29b0714cc47850e177ebe6e1d0e54df784
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 053bc7565accce5db8998ae8efec256ef37d37b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719433"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442588"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Modalità di compilazione di un file bsc in BSCMAKE
 

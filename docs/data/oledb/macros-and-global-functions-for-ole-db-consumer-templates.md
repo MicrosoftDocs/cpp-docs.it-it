@@ -1,10 +1,6 @@
 ---
-title: Macro e funzioni globali per modelli Consumer OLE DB | Microsoft Docs
-ms.custom: ''
+title: Macro e funzioni globali per modelli consumer OLE DB
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -54,8 +50,6 @@ f1_keywords:
 - BEGIN_PARAM_MAP
 - END_PARAM_MAP
 - SET_PARAM_TYPE
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB consumer templates, macros
 - macros, OLE DB consumer template
@@ -106,17 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 8077714292929b66d7e03014aa567f524a2709dc
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 95d39b6068405a88a20b311a5851e593591a24db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069167"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445500"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macro e funzioni globali per modelli consumer OLE DB
 

@@ -1,11 +1,6 @@
 ---
-title: fmin, fminf, fminl | Microsoft Docs
-ms.custom: ''
+title: fmin, fminf, fminl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmin
 - fminf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abf16c4cc21d1dc396f0b81aadc8d495c6bdd4b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464363"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -89,7 +80,7 @@ Secondo valore da confrontare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce il meno elevato tra *x* oppure *y*.
+Se ha esito positivo, restituisce il meno elevato tra *x* oppure *y*.
 
 |Input|Risultato|
 |-----------|------------|
@@ -97,11 +88,11 @@ Se l'operazione riesce, restituisce il meno elevato tra *x* oppure *y*.
 |*y* è NaN|*x*|
 |*x* e *y* sono NaN|NaN|
 
-La funzione non provoca [matherr](matherr.md) per essere richiamati, che si verifichino eventuali eccezioni a virgola mobile o modificare il valore di **errno**.
+La funzione non provoca [matherr](matherr.md) per essere richiamati, provocare eventuali eccezioni a virgola mobile o modificare il valore di **errno**.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **fmin** che accettano e restituiscono **float** e **lungo** **doppie** tipi. In un programma C **fmin** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **fmin** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **fmin** accetta e restituisce sempre un **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,12 +1,6 @@
 ---
-title: Controllo List e visualizzazione elenco | Microsoft Docs
-ms.custom: ''
+title: Controllo List e visualizzazione elenco
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CListView class [MFC], and CListCtrl
 - views [MFC], list and list control
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9925bd7188faa97ab5aa32dc2830dc6498726381
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d57e1a3370b1b868178ac9e7e40ea97bce6e3c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436754"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440456"
 ---
 # <a name="list-control-and-list-view"></a>Controllo List e visualizzazione elenco
 

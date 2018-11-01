@@ -1,33 +1,23 @@
 ---
-title: Del compilatore (livello 2) Avviso C4396 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 2) C4396
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4396
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa0a084e90db9d48f517bfe65c6340eb532f0ae6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118570"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445318"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Avviso del compilatore (livello 2) C4396
 
 "name": impossibile utilizzare l'identificatore inline quando una dichiarazione Friend fa riferimento alla specializzazione di un modello di funzione
 
-Una specializzazione di un modello di funzione non è possibile specificare uno qualsiasi dei [inline](../../cpp/inline-functions-cpp.md) identificatori. Il compilatore genera l'avviso C4396 e ignora l'identificatore inline.
+Una specializzazione di un modello di funzione non può specificare uno degli identificatori [inline](../../cpp/inline-functions-cpp.md) . Il compilatore genera l'avviso C4396 e ignora l'identificatore inline.
 
 ### <a name="to-correct-this-error"></a>Per correggere l'errore
 

@@ -1,28 +1,18 @@
 ---
-title: Classe remove_pointer | Microsoft Docs
-ms.custom: ''
+title: Classe remove_pointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::remove_pointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - remove_pointer class
 - remove_pointer
 ms.assetid: 2cd4e417-32fb-4f53-bd16-4e8a98240832
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ba798b6e67f4813e780740bae27ade69df5c189
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6bc735af1c1af292b32b56aae599eef019836254
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104225"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450649"
 ---
 # <a name="removepointer-class"></a>Classe remove_pointer
 

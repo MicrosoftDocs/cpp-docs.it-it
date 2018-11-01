@@ -1,39 +1,29 @@
 ---
-title: Errore del compilatore C3862 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C3862
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3862
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5b21e457feb6d090e4abaf531293987eb3504457
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2ba130862b1debbe2991ca7cbcae50192f900cd8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704971"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446241"
 ---
 # <a name="compiler-error-c3862"></a>Errore del compilatore C3862
 
-> '*funzione*': non è possibile compilare una funzione non gestita con /clr: pure o /CLR: safe
+> «*funzione*': non è possibile compilare una funzione non gestita con /clr: pure o /CLR: safe
 
 ## <a name="remarks"></a>Note
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
-Una compilazione con **/clr: pure** o **/CLR: safe** produrrà solo un'immagine MSIL, un'immagine senza codice nativo (non gestito).  Pertanto, è possibile utilizzare il `unmanaged` pragma in un **/clr: pure** o **/CLR: safe** compilazione.
+Una compilazione con **/clr: pure** oppure **/CLR: safe** produrrà solo un'immagine MSIL, un'immagine con alcun codice nativo (non gestito).  Pertanto, è possibile utilizzare il `unmanaged` pragma in un **/clr: pure** oppure **/CLR: safe** compilazione.
 
-Per ulteriori informazioni, vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) e [managed, unmanaged](../../preprocessor/managed-unmanaged.md).
+Per altre informazioni, vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) e [managed, unmanaged](../../preprocessor/managed-unmanaged.md).
 
 ## <a name="example"></a>Esempio
 

@@ -1,10 +1,6 @@
 ---
-title: stricmp, wcsicmp | Microsoft Docs
-ms.custom: ''
+title: stricmp, wcsicmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - stricmp
 - wcsicmp
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - stricmp
 - wcsicmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - stricmp function
 - wcsicmp function
 ms.assetid: 2e3c6703-2635-4961-a253-e2c4c5029ed8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f8db06722610b91100956bc9d7af23e02277aa6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff3e160af253765fbafc7c3ee0082639c231a1e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406820"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441210"
 ---
 # <a name="stricmp-wcsicmp"></a>stricmp, wcsicmp
 
