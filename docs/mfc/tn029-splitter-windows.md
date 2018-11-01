@@ -1,28 +1,18 @@
 ---
-title: 'TN029: Barra di divisione Windows | Microsoft Docs'
-ms.custom: ''
+title: 'TN029: finestre con separatore'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.windows.splitter
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24556d7a331a74936631eef4fec2e293126cdbab
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379525"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501985"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: finestre con separatore
 

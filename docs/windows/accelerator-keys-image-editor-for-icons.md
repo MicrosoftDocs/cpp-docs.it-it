@@ -1,30 +1,19 @@
 ---
-title: Tasti di scelta rapida (Editor di immagini di C++ per le icone) | Microsoft Docs
-ms.custom: ''
+title: Tasti di scelta rapida (Editor di immagini di C++ per le icone)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 062b860849d968e18657afb66b568a1bf6f2b6d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317745"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505105"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Tasti di scelta rapida (Editor di immagini di C++ per le icone)
 

@@ -1,10 +1,6 @@
 ---
-title: strnset, wcsnset | Microsoft Docs
-ms.custom: ''
+title: strnset, wcsnset
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strnset
 - wcsnset
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - wcsnset
 - strnset
-dev_langs:
-- C++
 helpviewer_keywords:
 - strnset function
 - wcsnset function
 ms.assetid: e7868ac9-dc34-4606-bd3c-0fb2e7c51631
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2e4332c92faf6a5e357b868feb2a6837b69f434b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e325237cdd8e1ff597bf0fbbe59be741bc9ef18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406560"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492313"
 ---
 # <a name="strnset-wcsnset"></a>strnset, wcsnset
 

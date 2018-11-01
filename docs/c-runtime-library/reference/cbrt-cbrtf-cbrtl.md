@@ -1,10 +1,6 @@
 ---
-title: cbrt, cbrtf, cbrtl | Microsoft Docs
-ms.custom: ''
+title: cbrt, cbrtf, cbrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cbrt
 - cbrtf
@@ -26,23 +22,17 @@ f1_keywords:
 - cbrtl
 - cbrt
 - cbrtf
-dev_langs:
-- C++
 helpviewer_keywords:
 - cbrtl function
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29dee00f35c2b4d75e838e5abe2ee24de9753013
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505534"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -77,13 +67,13 @@ Valore a virgola mobile
 
 Il **cbrt** le funzioni restituiscono la radice cubica di *x*.
 
-|Input|Eccezione SEH|**matherr** (eccezione)|
+|Input|Eccezione SEH|**matherr** eccezione|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|none|none|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cbrt** che accettano **float** oppure **lungo** **doppie** tipi. In un programma C **cbrt** accetta e restituisce sempre **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **cbrt** che accettano **float** oppure **long** **double** tipi. In un programma C **cbrt** accetta e restituisce sempre **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 

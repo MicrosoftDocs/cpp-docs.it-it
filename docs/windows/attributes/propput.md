@@ -1,28 +1,17 @@
 ---
-title: propput (attributo COM C++) | Microsoft Docs
-ms.custom: ''
+title: propput (attributo COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.propput
-dev_langs:
-- C++
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d9064a73dcafff8efbaffd50501dd86c2e91a29e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1902ba61417be457b4c296b513e1632bfdd8cec6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792053"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492729"
 ---
 # <a name="propput"></a>propput
 
@@ -53,7 +42,7 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio dell'uso dei
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|`propget`, `propputref`|
 
-Per altre informazioni sui contesti di attributi, vedere [contesti di attributi](cpp-attributes-com-net.md#contexts).
+Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Vedere anche
 

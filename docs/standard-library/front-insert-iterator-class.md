@@ -1,31 +1,21 @@
 ---
-title: Classe front_insert_iterator | Microsoft Docs
-ms.custom: ''
+title: Classe front_insert_iterator
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - iterator/std::front_insert_iterator
 - iterator/std::front_insert_iterator::container_type
 - iterator/std::front_insert_iterator::reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::front_insert_iterator [C++]
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fcd8d623b4ce16f7f7af671d06dae568ec2a53d1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 322b513dc648bf10fe593d9541560c4d22da21fb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318202"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522941"
 ---
 # <a name="frontinsertiterator-class"></a>Classe front_insert_iterator
 

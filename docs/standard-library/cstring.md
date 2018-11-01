@@ -1,28 +1,18 @@
 ---
-title: '&lt;cstring&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cstring&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <cstring>
-dev_langs:
-- C++
 helpviewer_keywords:
 - <cstring> header
 - cstring header
 ms.assetid: d665429f-5d39-4712-9c0a-68c8abcc3536
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ef5ddad29126ac8725159061d5ee5cb4f3699e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91b7d340f77c01f163603a860725bdf289340b3e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849418"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493665"
 ---
 # <a name="ltcstringgt"></a>&lt;cstring&gt;
 

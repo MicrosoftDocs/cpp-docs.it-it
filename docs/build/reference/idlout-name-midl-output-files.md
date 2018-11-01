@@ -1,15 +1,9 @@
 ---
-title: -IDLOUT (assegna un nome file di Output MIDL) | Microsoft Docs
-ms.custom: ''
+title: /IDLOUT (Assegna un nome ai file di output MIDL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /idlout
 - VC.Project.VCLinkerTool.MergedIDLBaseFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - MIDL, output file names
 - .idl files, path
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ef4f8b418edcdb903fa8f807cb5e08d63eaeeed
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b21e8eb266de9a0baa0512a82acb0ae8a9f650a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500425"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Assegna un nome ai file di output MIDL)
 

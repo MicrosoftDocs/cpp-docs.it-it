@@ -1,27 +1,17 @@
 ---
-title: Membri dati modificabili (C++) | Microsoft Docs
-ms.custom: ''
+title: Membri dati modificabili (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - mutable_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de0a208341e6a687d1319c4d8d60cc8671555dd6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8d592eb97f70bfc26c075317c57ec4d5c78e3956
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514179"
 ---
 # <a name="mutable-data-members-c"></a>Membri dati modificabili (C++)
 

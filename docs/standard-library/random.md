@@ -1,27 +1,17 @@
 ---
-title: '&lt;random&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;random&gt;'
 ms.date: 08/24/2017
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <random>
-dev_langs:
-- C++
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b8704d0bc64734a9edd4f3bfca50c2d1b2ecc37b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511852"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 

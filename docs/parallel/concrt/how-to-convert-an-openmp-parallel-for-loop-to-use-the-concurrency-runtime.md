@@ -1,28 +1,18 @@
 ---
-title: 'Procedura: convertire un ciclo OpenMP parallel for usare il Runtime di concorrenza | Microsoft Docs'
-ms.custom: ''
+title: "Procedura: Convertire un ciclo OpenMP parallel for per l'utilizzo del runtime di concorrenza"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, parallel for loops
 - converting from OpenMP to the Concurrency Runtime, parallel loops
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5295a7e38ef511cd2703961ffe8fe6f22faa74ae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ab80df8bfe4c06ee36e0a60db4800be68576909
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407959"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488559"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP parallel for per l'utilizzo del runtime di concorrenza
 

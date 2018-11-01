@@ -1,10 +1,6 @@
 ---
-title: _byteswap_uint64, _byteswap_ulong, _byteswap_ushort | Microsoft Docs
-ms.custom: ''
+title: _byteswap_uint64, _byteswap_ulong, _byteswap_ushort
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _byteswap_uint64
 - _byteswap_ulong
@@ -29,8 +25,6 @@ f1_keywords:
 - _byteswap_ushort
 - _byteswap_uint64
 - byteswap_ushort
-dev_langs:
-- C++
 helpviewer_keywords:
 - _byteswap_uint64 function
 - byteswap_uint64 function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - byteswap_ulong function
 - _byteswap_ulong function
 ms.assetid: 83bda211-f02f-4cf0-8a78-d6de1f175970
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97c89a612298de63942257d5c997b2382c2ff28d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f9409ebcc7e2bf29d5d6b9303f127188f9e6229
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393040"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503145"
 ---
 # <a name="byteswapuint64-byteswapulong-byteswapushort"></a>_byteswap_uint64, _byteswap_ulong, _byteswap_ushort
 

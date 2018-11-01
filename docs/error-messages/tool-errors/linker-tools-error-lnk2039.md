@@ -1,27 +1,17 @@
 ---
-title: Strumenti del linker LNK2039 errore | Microsoft Docs
-ms.custom: ''
+title: Errore degli strumenti del linker LNK2039
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2039
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac4fdde90911427a1a193bfb6f3a950a7bdcf180
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fad8960424cd73240d547ef894b2ae5cdf358601
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081793"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498276"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Errore degli strumenti del linker LNK2039
 

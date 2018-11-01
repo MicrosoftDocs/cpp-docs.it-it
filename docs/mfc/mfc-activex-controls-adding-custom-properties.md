@@ -1,26 +1,16 @@
 ---
-title: 'Controlli ActiveX MFC: Aggiunta di proprietà personalizzate | Microsoft Docs'
-ms.custom: ''
+title: 'Controlli ActiveX MFC: aggiunta di proprietà personalizzate'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0070103724385dcb598c20cd15bc29f341628bce
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079441"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496421"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controlli ActiveX MFC: aggiunta di proprietà personalizzate
 

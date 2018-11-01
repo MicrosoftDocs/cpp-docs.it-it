@@ -1,12 +1,6 @@
 ---
-title: Derivazione di una classe documento da CDocument | Microsoft Docs
-ms.custom: ''
+title: Derivazione di una classe documento da CDocument
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDocument class [MFC], deriving from
 - classes [MFC], deriving from CDocument
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - derived classes [MFC], functions often overridden
 - document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b45dadbc062bbba61cdcb4c883f91943b1b18ba8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 042ba7adc8d36e57a714e03ec67c1c0f22b4da78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429825"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496122"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>Derivazione di una classe documento da CDocument
 

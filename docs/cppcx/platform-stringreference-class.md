@@ -1,8 +1,6 @@
 ---
-title: 'Classe platform:: stringreference | Microsoft Docs'
-ms.custom: ''
+title: Classe Platform::StringReference
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -10,19 +8,13 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs:
-- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b177cf30b4eee49d144ddf3516a4bbf3da91c85
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105796"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498384"
 ---
 # <a name="platformstringreference-class"></a>Classe Platform::StringReference
 
@@ -72,7 +64,7 @@ class StringReference
 
 ## <a name="data"></a>  Metodo stringreference:: data
 
-Restituisce il contenuto di questo `StringReference` sotto forma di matrice di valori char16.
+Restituisce i contenuti di questo `StringReference` come matrice di valori char16.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -199,7 +191,7 @@ Numero di elementi in `__strArg`.
 
 ### <a name="remarks"></a>Note
 
-La prima versione di questo costruttore rappresenta il costruttore predefinito. La seconda versione inizializza la nuova classe `StringReference` dell'istanza dall'oggetto specificato dal parametro `__fstrArg`. Il terzo e quarto overload Inizializza una nuova `StringReference` istanza da una matrice di valori char16. char16 rappresenta un carattere di testo UNICODE a 16 bit.
+La prima versione di questo costruttore rappresenta il costruttore predefinito. La seconda versione inizializza la nuova classe `StringReference` dell'istanza dall'oggetto specificato dal parametro `__fstrArg`. Il terzo e il quarto overload inizializzano una nuova istanza di `StringReference` da una matrice di valori char16. char16 rappresenta un carattere di testo UNICODE a 16 bit.
 
 ## <a name="see-also"></a>Vedere anche
 

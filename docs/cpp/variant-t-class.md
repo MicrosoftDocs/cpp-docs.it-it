@@ -1,14 +1,8 @@
 ---
-title: classe variant_t | Microsoft Docs
-ms.custom: ''
+title: Classe _variant_t
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - _variant_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - _variant_t class [C++], operators
 - _variant_t class
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - VARIANT object
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd9e7347b1ba85f34587b3ce9e94963efb23efd8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110627"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502739"
 ---
 # <a name="variantt-class"></a>Classe _variant_t
 

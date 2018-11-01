@@ -1,25 +1,16 @@
 ---
-title: Classi di sicurezza (ATL) | Microsoft Docs
-ms.custom: ''
+title: Classi di sicurezza (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - security classes [C++]
 ms.assetid: 0477f1a4-c1af-4c4f-bbca-08f7b844e028
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 859fe416d9152e294f8edac5f703c721de7570f0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e5218e7d805a5dbe13658778b417f969691b88b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086538"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534108"
 ---
 # <a name="security-classes"></a>Classi di sicurezza
 

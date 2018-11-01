@@ -1,10 +1,6 @@
 ---
-title: Interfaccia IThreadPoolConfig | Microsoft Docs
-ms.custom: ''
+title: Interfaccia IThreadPoolConfig
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IThreadPoolConfig
 - ATLUTIL/ATL::IThreadPoolConfig
@@ -12,21 +8,15 @@ f1_keywords:
 - ATLUTIL/ATL::GetTimeout
 - ATLUTIL/ATL::SetSize
 - ATLUTIL/ATL::SetTimeout
-dev_langs:
-- C++
 helpviewer_keywords:
 - IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 156a0a827a67e80369ca8b834b62bcf0e431ab14
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a021ac833bfdb0dd0da1a585d141e477232fc645
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076346"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505378"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Interfaccia IThreadPoolConfig
 

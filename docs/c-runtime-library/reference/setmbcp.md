@@ -1,10 +1,6 @@
 ---
-title: _setmbcp | Microsoft Docs
-ms.custom: ''
+title: _setmbcp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmbcp
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _setmbcp
 - setmbcp
-dev_langs:
-- C++
 helpviewer_keywords:
 - setmbcp function
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 91993171def417adfc389420d1376e5a71f8cda0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1f4967baa5fda68a7df33bcd08935dca23fab16
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532210"
 ---
 # <a name="setmbcp"></a>_setmbcp
 
@@ -55,16 +45,16 @@ int _setmbcp(
 
 ### <a name="parameters"></a>Parametri
 
-*Tabella codici*<br/>
+*tabella codici*<br/>
 Nuova impostazione della tabella codici per le routine multibyte indipendenti dalle impostazioni locali.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce 0 se la tabella codici è impostata correttamente. Se viene fornito un valore di tabella codici non valido per *codepage*, restituisce -1 e l'impostazione della tabella codici è rimasto invariato. Set **errno** alla **EINVAL** se si verifica un errore di allocazione di memoria.
+Restituisce 0 se la tabella codici è impostata correttamente. Se viene fornito un valore di tabella codici non valida per *codepage*, restituisce -1 e l'impostazione della tabella codici rimane invariata. Set **errno** al **EINVAL** se si verifica un errore di allocazione di memoria.
 
 ## <a name="remarks"></a>Note
 
-Il **setmbcp** funzione specifica una nuova tabella codici multibyte. Per impostazione predefinita, il sistema di runtime imposta automaticamente la tabella codici multibyte sulla tabella codici ANSI predefinita del sistema. L'impostazione della tabella codici multibyte influisce su tutte le routine multibyte non dipendenti dalle impostazioni locali. Tuttavia, è possibile indicare **setmbcp** per utilizzare la tabella codici definita per le impostazioni locali correnti (vedere l'elenco seguente delle costanti manifesto e associati i risultati di comportamento). Per un elenco delle routine multibyte dipendenti dalla tabella codici delle impostazioni locali, anziché dalla tabella codici multibyte, vedere [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
+Il **setmbcp** funzione specifica una nuova tabella codici multibyte. Per impostazione predefinita, il sistema di runtime imposta automaticamente la tabella codici multibyte sulla tabella codici ANSI predefinita del sistema. L'impostazione della tabella codici multibyte influisce su tutte le routine multibyte non dipendenti dalle impostazioni locali. Tuttavia, è possibile indicare **setmbcp** per usare la tabella codici definita per le impostazioni locali correnti (vedere l'elenco seguente di costanti manifeste e associati i risultati di comportamento). Per un elenco delle routine multibyte dipendenti dalla tabella codici delle impostazioni locali, anziché dalla tabella codici multibyte, vedere [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
 La tabella codici multibyte influisce anche sull'elaborazione dei caratteri multibyte per le routine della libreria di runtime seguenti:
 
@@ -74,17 +64,17 @@ La tabella codici multibyte influisce anche sull'elaborazione dei caratteri mult
 |[_fullpath](fullpath-wfullpath.md)|[Funzioni _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-Inoltre, tutte le routine di libreria run-time che ricevono caratteri multibyte *argv* o *envp* argomenti come parametri di programma (ad esempio il **Exec** e **spawn** famiglie) elaborare queste stringhe in base alla tabella codici multibyte corrente. Pertanto, queste routine sono inoltre influenzate da una chiamata a **setmbcp** che modifica la tabella codici multibyte.
+Inoltre, tutte le routine di libreria di runtime che ricevono i caratteri multibyte *argv* o *envp* argomenti come parametri di programma (ad esempio il **Exec** e**spawn** famiglie) elaborano queste stringhe in base alla tabella codici multibyte. Pertanto, queste routine sono anche interessate da una chiamata a **setmbcp** che modifica la tabella codici multibyte.
 
-Il *codepage* argomento può essere impostato su uno dei valori seguenti:
+Il *codepage* argomento può essere impostato su uno qualsiasi dei valori seguenti:
 
 - **_MB_CP_ANSI** tabella codici ANSI di uso ottenuta dal sistema operativo all'avvio del programma.
 
-- **_MB_CP_LOCALE** utilizzare codici il corrente delle impostazioni locali ottenuto da una precedente chiamata a [setlocale](setlocale-wsetlocale.md).
+- **Mb_cp_locale** usare codici di impostazioni locali correnti ottenuta da una precedente chiamata a [setlocale](setlocale-wsetlocale.md).
 
-- **_MB_CP_OEM** tabella codici OEM utilizzare ottenuta dal sistema operativo all'avvio del programma.
+- **_MB_CP_OEM** tabella codici OEM usare ottenuta dal sistema operativo all'avvio del programma.
 
-- **_MB_CP_SBCS** tabella di codici a byte singolo utilizzo. Quando la tabella codici è impostata su **_MB_CP_SBCS**, una routine, ad esempio [ismbblead](ismbblead-ismbblead-l.md) restituisce sempre false.
+- **_MB_CP_SBCS** tabella codici a byte singolo di uso. Quando la tabella codici è impostata su **_MB_CP_SBCS**, una routine, ad esempio [ismbblead](ismbblead-ismbblead-l.md) restituisce sempre false.
 
 - Qualsiasi altro valore di tabella codici valido, indipendentemente dal fatto che il valore corrisponda a una tabella codici ANSI, OEM o qualsiasi altra tabella codici supportata dal sistema operativo (ad eccezione di UTF-7 e UTF-8, che non sono supportati).
 

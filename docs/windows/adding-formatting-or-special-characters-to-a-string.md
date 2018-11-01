@@ -1,29 +1,18 @@
 ---
-title: Aggiunta di caratteri speciali o di formattazione a una risorsa di tipo stringa (C++) | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di caratteri speciali o di formattazione a una risorsa di tipo stringa (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - special characters, adding to strings
 - ASCII characters, adding to strings
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 73dd54920e23850235b770d2999e87e69a45c618
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50071927"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493847"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>Aggiunta di caratteri speciali o di formattazione a una risorsa di tipo stringa (C++)
 

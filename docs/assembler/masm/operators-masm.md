@@ -1,23 +1,13 @@
 ---
-title: Operatori (MASM) | Microsoft Docs
-ms.custom: ''
+title: Operatori (MASM)
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: f30adee8-1566-4fc4-9eef-1ec8bde6c716
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5b43080018c1193321887cd2e79b06e79d10bab8
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fba2237aebec4ccea282cc2c5abd6b867825df87
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493704"
 ---
 # <a name="operators-masm"></a>Operatori (MASM)
 

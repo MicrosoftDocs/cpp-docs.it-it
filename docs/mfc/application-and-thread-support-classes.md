@@ -1,14 +1,8 @@
 ---
-title: Classi di supporto dell'applicazione e Thread | Microsoft Docs
-ms.custom: ''
+title: Classi di supporto per applicazioni e thread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
-dev_langs:
-- C++
 helpviewer_keywords:
 - application objects [MFC], thread support classes
 - lock classes [MFC]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce9c799c8dbc2a98c7d45dfa9a2e444024c9a7a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f69ea6a87d0e1ae16a6079a414d623af6dd88fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496261"
 ---
 # <a name="application-and-thread-support-classes"></a>Classi di supporto per applicazioni e thread
 

@@ -1,10 +1,6 @@
 ---
-title: Classe CComboBoxEx | Microsoft Docs
-ms.custom: ''
+title: CComboBoxEx (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CComboBoxEx
 - AFXCMN/CComboBoxEx
@@ -23,8 +19,6 @@ f1_keywords:
 - AFXCMN/CComboBoxEx::SetImageList
 - AFXCMN/CComboBoxEx::SetItem
 - AFXCMN/CComboBoxEx::SetWindowTheme
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComboBoxEx [MFC], CComboBoxEx
 - CComboBoxEx [MFC], Create
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0300bee10564209237e59ccfa48c14443ae3a90c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92a81e318c74f1acd39fbfe870a7ad1277b25125
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399990"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501634"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (classe)
 
@@ -269,7 +259,7 @@ CComboBox* GetComboBoxCtrl();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CComboBox` oggetto.
+Puntatore a un oggetto `CComboBox` .
 
 ### <a name="remarks"></a>Note
 

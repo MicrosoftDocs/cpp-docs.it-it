@@ -1,10 +1,6 @@
 ---
-title: localtime_s, _localtime32_s, _localtime64_s | Microsoft Docs
-ms.custom: ''
+title: localtime_s, _localtime32_s, _localtime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _localtime64_s
 - _localtime32_s
@@ -28,8 +24,6 @@ f1_keywords:
 - localtime_s
 - localtime64_s
 - _localtime64_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _localtime64_s function
 - localtime32_s function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 513bfe5baa16c9cae5052da084c65f580aad7f2e
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255808"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492780"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 
-Converte un **time_t** tempo valore a un **tm** struttura e corregge per il fuso orario locale. Queste sono versioni di [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Converte un **time_t** ora valore a un **tm** struttura e lo corregge per il fuso orario locale. Queste sono versioni di [localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -84,42 +74,42 @@ Zero in caso di esito positivo. Il valore restituito è un codice di errore se s
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*tmDest*|*sourceTime*|Valore restituito|Valore *tmDest*|Richiama il gestore di parametri non validi|
+|*tmDest*|*sourceTime*|Valore restituito|Valore in *tmDest*|Richiama il gestore di parametri non validi|
 |-----------|------------|------------------|--------------------|---------------------------------------|
 |**NULL**|qualsiasi|**EINVAL**|Non modificato|Yes|
-|Non **NULL** (punta a valide per la memoria)|**NULL**|**EINVAL**|Tutti i campi impostati su -1|Yes|
-|Non **NULL** (punta a valide per la memoria)|minore di 0 o maggiore di **_MAX__TIME64_T**|**EINVAL**|Tutti i campi impostati su -1|No|
+|Non **NULL** (punta alla memoria valida)|**NULL**|**EINVAL**|Tutti i campi impostati su -1|Yes|
+|Non **NULL** (punta alla memoria valida)|minore di 0 o maggiore di **_MAX__TIME64_T**|**EINVAL**|Tutti i campi impostati su -1|No|
 
-Nel caso delle prime due condizioni di errore viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituire **EINVAL**.
+Nel caso delle prime due condizioni di errore viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **_localtime32_s** funzione converte un'ora archiviata come una [time_t](../../c-runtime-library/standard-types.md) valore e archivia il risultato in una struttura di tipo [tm](../../c-runtime-library/standard-types.md). Il **lungo** valore *sourceTime* rappresenta i secondi trascorsi dalla mezzanotte (00: 00:00), 1 ° gennaio 1970, UTC. Questo valore viene in genere ottenuto dal [ora](time-time32-time64.md) (funzione).
+Il **_localtime32_s** funzione converte un'ora archiviata come una [time_t](../../c-runtime-library/standard-types.md) valore e archivia il risultato in una struttura di tipo [tm](../../c-runtime-library/standard-types.md). Il **lungo** valore *sourceTime* rappresenta i secondi trascorsi dalla mezzanotte (00: 00:00), 1 gennaio 1970, UTC. Questo valore viene in genere ottenuto dal [ora](time-time32-time64.md) (funzione).
 
-**_localtime32_s** corregge per il fuso orario locale se l'utente imposta prima la variabile di ambiente globali **TZ**. Quando si **TZ** è impostata, tre altre variabili di ambiente (**TimeZone**, **Daylight**, e **tzname**) vengono impostati automaticamente anche. Se il **TZ** variabile non è impostata, **localtime32_s** tenta di usare le informazioni sul fuso orario specificati nell'applicazione Data/ora nel Pannello di controllo. Se non è possibile ottenere queste informazioni, viene usato il valore PST8PDT per impostazione predefinita, che indica il fuso orario Pacifico (Stati Uniti). Vedere [_tzset](tzset.md) per una descrizione di queste variabili. **Fuso orario** è un'estensione Microsoft e non fa parte della definizione dello standard ANSI del **localtime**.
+**_localtime32_s** lo corregge per il fuso orario locale se l'utente imposta innanzitutto la variabile di ambiente globali **TZ**. Quando **TZ** è impostata, tre altre variabili di ambiente (**TimeZone**, **Daylight**, e **tzname**) vengono automaticamente impostate anche. Se il **TZ** variabile non è impostata, **localtime32_s** tenta di usare le informazioni sul fuso orario specificate nell'applicazione Data/ora nel Pannello di controllo. Se non è possibile ottenere queste informazioni, viene usato il valore PST8PDT per impostazione predefinita, che indica il fuso orario Pacifico (Stati Uniti). Vedere [_tzset](tzset.md) per una descrizione di queste variabili. **TZ** è un'estensione Microsoft e non fa parte della definizione dello standard ANSI dei **localtime**.
 
 > [!NOTE]
 > L'ambiente di destinazione deve provare a determinare se è in vigore l'ora legale.
 
-**_localtime64_s**, che usa la **__time64_t** struttura, consente date relativamente a 23:59:59, 18 gennaio 3001, ora UTC (coordinated universal time), mentre **_localtime32_s** rappresenta le date a 23:59:59 18 gennaio 2038, ore UTC.
+**_localtime64_s**, che usa la **__time64_t** struttura, consente di esprimere backup e 23:59:59, 18 gennaio 3001, tempo universale coordinato (UTC), le date mentre **_localtime32_s** rappresenta le date fino: 23.59.59 del 18 gennaio 2038, UTC.
 
-**localtime_s** è una funzione inline che restituisce **_localtime64_s**, e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come precedente 32 bit **time_t**, è possibile definire **_USE_32BIT_TIME_T**. Questo determinerebbe **localtime_s** restituisca **_localtime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
+**localtime_s** è una funzione inline equivalente a **_localtime64_s**, e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come il vecchio 32 bit **time_t**, è possibile definire **_USE_32BIT_TIME_T**. In questo modo **localtime_s** restituisca **_localtime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
 
-I campi del tipo di struttura [tm](../../c-runtime-library/standard-types.md) archiviare i valori seguenti, ognuno dei quali è un **int**.
+I campi del tipo di struttura [tm](../../c-runtime-library/standard-types.md) archiviano i valori seguenti, ognuno dei quali è un **int**.
 
 |Campo|Descrizione|
 |-|-|
-|**tm_sec**|Secondi dopo minuto (0 - 59).|
+|**tm_sec**|Secondi dopo il minuto (0 - 59).|
 |**tm_min**|Minuti dopo l'ora (0 - 59).|
-|**tm_hour**|Ore da mezzanotte (0 - 23).|
+|**tm_hour**|Ore dalla mezzanotte (0 - 23).|
 |**tm_mday**|Giorno del mese (1-31).|
 |**tm_mon**|Mese (0 - 11; Gennaio = 0).|
 |**tm_year**|Anno (anno corrente meno 1900).|
-|**tm_wday**|Giorno della settimana (0 - 6. Domenica = 0).|
+|**tm_wday**|Giorno della settimana (0 - 6; Domenica = 0).|
 |**tm_yday**|Giorno dell'anno (0 - 365; Il 1 ° gennaio = 0).|
 |**tm_isdst**|Valore positivo se è in vigore l'ora legale. 0 se l'ora legale non è in vigore. Valore negativo se lo stato dell'ora legale è sconosciuto.|
 
-Se il **TZ** variabile di ambiente viene impostata, la libreria di run-time di C si presuppone che le regole appropriate negli Stati Uniti per implementare il calcolo dell'ora legale (DST).
+Se il **TZ** variabile di ambiente viene impostata, la libreria di runtime C presuppone l'uso delle regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).
 
 ## <a name="requirements"></a>Requisiti
 

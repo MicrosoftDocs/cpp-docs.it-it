@@ -1,25 +1,17 @@
 ---
-title: Installare il supporto di C++ in Visual Studio 2017 | Microsoft Docs
+title: Installare il supporto di C++ in Visual Studio 2017
 description: Installare il supporto di Visual Studio per Visual C++
 ms.custom: mvc
 ms.date: 09/17/2018
 ms.topic: tutorial
-ms.technology:
-- cpp-tools
 ms.devlang: C++
-dev_langs:
-- C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80e84bb7c81ccd9c3347989e68041125993ee73c
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507237"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installare il supporto di C++ in Visual Studio
 

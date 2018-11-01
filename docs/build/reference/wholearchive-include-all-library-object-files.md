@@ -1,21 +1,13 @@
 ---
-title: -WHOLEARCHIVE (Include tutti i file oggetto della raccolta) | Microsoft Docs
-ms.custom: ''
+title: /WHOLEARCHIVE (Include tutti i file oggetto della raccolta)
 ms.date: 11/04/2016
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3a59ed53227e0c9bf598f96b1bb72247a3341b0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 26bd720a2ecd07bccb1317e1540cb071e7027078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494224"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE (Include tutti i file oggetto della raccolta)
 
