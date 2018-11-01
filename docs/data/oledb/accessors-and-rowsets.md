@@ -1,12 +1,6 @@
 ---
-title: Le funzioni di accesso e rowset | Microsoft Docs
-ms.custom: ''
+title: Funzioni di accesso e rowset
 ms.date: 10/22/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -23,17 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 3632a99e09104cba2916b3da7230dd2769b78b42
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651256"
 ---
 # <a name="accessors-and-rowsets"></a>Funzioni di accesso e rowset
 

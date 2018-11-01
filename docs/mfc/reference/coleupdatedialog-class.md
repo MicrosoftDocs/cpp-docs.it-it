@@ -1,31 +1,21 @@
 ---
-title: Classe COleUpdateDialog | Microsoft Docs
-ms.custom: ''
+title: Classe COleUpdateDialog
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
 - AFXODLGS/COleUpdateDialog
 - AFXODLGS/COleUpdateDialog::COleUpdateDialog
 - AFXODLGS/COleUpdateDialog::DoModal
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f427c59362e348d7b50aa3e24e608cf180ddc41
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 454d6686a389b1578bb777e8573e9281b2a5e6c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423195"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642956"
 ---
 # <a name="coleupdatedialog-class"></a>Classe COleUpdateDialog
 

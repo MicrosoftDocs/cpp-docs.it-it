@@ -1,10 +1,6 @@
 ---
-title: _chmod, _wchmod | Microsoft Docs
-ms.custom: ''
+title: _chmod, _wchmod
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chmod
 - _wchmod
@@ -25,8 +21,6 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e4944f871195b276189014ed9d5d294b9b445fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399952"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595130"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -67,11 +57,11 @@ Impostazione di autorizzazione per il file.
 
 ## <a name="return-value"></a>Valore restituito
 
-Queste funzioni restituiscono 0 se l'impostazione di autorizzazione viene modificata. Il valore restituito-1 indica un errore. Se non è stato possibile trovare il file specificato, **errno** è impostata su **ENOENT**; se non è valido, un parametro **errno** è impostata su **EINVAL**.
+Queste funzioni restituiscono 0 se l'impostazione di autorizzazione viene modificata. Valore restituito di -1 indica un errore. Se non è stato possibile trovare il file specificato, **errno** è impostata su **ENOENT**; se non è valido, un parametro **errno** è impostata su **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **chmod** funzione consente di modificare l'impostazione delle autorizzazioni del file specificato da *filename*. L'impostazione di autorizzazione controlla l'accesso in lettura e scrittura al file. L'espressione integer *pmode* contiene una o entrambe le seguenti costanti manifesto, definite in SYS\Stat.h.
+Il **chmod** funzione consente di modificare l'impostazione di autorizzazione del file specificato da *filename*. L'impostazione di autorizzazione controlla l'accesso in lettura e scrittura al file. L'espressione integer *pmode* contiene una o entrambe le costanti manifesto seguenti, definite in sys\stat.h.
 
 |*pmode*|Significato|
 |-|-|
@@ -79,11 +69,11 @@ Il **chmod** funzione consente di modificare l'impostazione delle autorizzazioni
 **S_IWRITE**|Scrittura consentita. (In effetti, consente la lettura e la scrittura)
 **S_IREAD** &AMP;#124; **S_IWRITE**|Lettura e scrittura consentite.
 
-Quando vengono fornite entrambe le costanti, queste sono combinate con i bit per bit o un operatore (**|**). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Di conseguenza, le modalità **s_iwrite** e **s_iread** | **s_iwrite** sono equivalenti.
+Quando vengono specificate entrambe le costanti, queste vengono unite con il bit per bit o un operatore (**|**). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Di conseguenza, le modalità **s_iwrite** e **s_iread** | **s_iwrite** sono equivalenti.
 
-**wchmod** è una versione a caratteri "wide" **chmod**; il *filename* argomento **wchmod** è una stringa di caratteri "wide". **wchmod** e **chmod** si comportano in modo identico in caso contrario.
+**wchmod** è una versione a caratteri wide di **chmod**; gli *nomefile* argomento **wchmod** è una stringa di caratteri "wide". **wchmod** e **chmod** hanno lo stesso comportamento in caso contrario.
 
-Questa funzione convalida i relativi parametri. Se *pmode* non è una combinazione di una delle costanti manifesto o non include un set alternativo di costanti, la funzione semplicemente ignora quelli. Se *filename* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce -1.
+Questa funzione convalida i relativi parametri. Se *pmode* non è una combinazione di una delle costanti manifesto o non include un set alternativo di costanti, la funzione semplicemente li ignora. Se *nomefile* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

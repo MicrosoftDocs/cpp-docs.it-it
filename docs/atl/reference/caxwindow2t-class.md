@@ -1,10 +1,6 @@
 ---
-title: Classe CAxWindow2T | Microsoft Docs
-ms.custom: ''
+title: Classe CAxWindow2T
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAxWindow2T
 - ATLWIN/ATL::CAxWindow2T
@@ -13,21 +9,15 @@ f1_keywords:
 - ATLWIN/ATL::CAxWindow2T::CreateControlLic
 - ATLWIN/ATL::CAxWindow2T::CreateControlLicEx
 - ATLWIN/ATL::CAxWindow2T::GetWndClassName
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2cfb82cfa21d5cc69e66d7980c4878e1659a7a79
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3e28bfe15c55342cbdfb50b125243c170ba97698
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036228"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665431"
 ---
 # <a name="caxwindow2t-class"></a>Classe CAxWindow2T
 

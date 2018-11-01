@@ -1,28 +1,18 @@
 ---
-title: Si esegue l'override del Routing dei comandi Standard | Microsoft Docs
-ms.custom: ''
+title: Override del routing dei comandi standard
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, command routing
 - command routing [MFC], overriding
 - command handling [MFC], routing commands
 - overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33ee603f680919d69684ab94acfa0515d3ec6292
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 132831939c05f7e8f84c306f5d08bba9cd5e8ea4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439497"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648442"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Override del routing dei comandi standard
 

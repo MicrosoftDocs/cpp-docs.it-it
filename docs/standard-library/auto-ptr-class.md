@@ -1,18 +1,12 @@
 ---
-title: Classe auto_ptr | Microsoft Docs
-ms.custom: ''
+title: Classe auto_ptr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::auto_ptr
 - memory/std::auto_ptr::element_type
 - memory/std::auto_ptr::get
 - memory/std::auto_ptr::release
 - memory/std::auto_ptr::reset
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::auto_ptr [C++]
 - std::auto_ptr [C++], element_type
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02ef77c32ffcaed416611df108f2619aa7ad2b45
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620948"
 ---
 # <a name="autoptr-class"></a>Classe auto_ptr
 

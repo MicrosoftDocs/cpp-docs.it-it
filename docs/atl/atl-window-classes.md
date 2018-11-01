@@ -1,12 +1,6 @@
 ---
-title: Classi di finestra ATL | Microsoft Docs
-ms.custom: ''
+title: Classi di finestra ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL, windows
 - windows [C++], subclassing
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - superclassing
 - superclassing, ATL
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a13ec85cc393b1d7bff39f26866e48525e46d336
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3c9188cedda35d8ba9e265edbb333ae8bdd79f37
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071029"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641168"
 ---
 # <a name="atl-window-classes"></a>Classi di finestra ATL
 

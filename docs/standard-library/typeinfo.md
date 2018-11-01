@@ -1,31 +1,21 @@
 ---
-title: '&lt;typeinfo&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;typeinfo&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - typeinfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - typeinfo header
 ms.assetid: 97ebc4d0-0e0e-41c3-9787-fdef2e38e56f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb353276892dfadbdfcea1c03816d6735481aeef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cb793bdc4bacec5ad21d1cbbed21f871370cb40e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647031"
 ---
 # <a name="lttypeinfogt"></a>&lt;typeinfo&gt;
 
-Includere l'intestazione standard \<typeinfo > per definire i diversi tipi associati con l'operatore di identificazione del tipo [operatore typeid](../cpp/typeid-operator.md), che consente di ottenere informazioni sui tipi statici e dinamici.
+Includere l'intestazione standard \<typeinfo > per definire diversi tipi associati con l'operatore di identificazione del tipo [operatore typeid](../cpp/typeid-operator.md), che restituisce informazioni sui tipi statici e dinamici.
 
 ## <a name="syntax"></a>Sintassi
 

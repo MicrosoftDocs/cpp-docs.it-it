@@ -1,10 +1,6 @@
 ---
-title: vsscanf, vswscanf | Microsoft Docs
-ms.custom: ''
+title: vsscanf, vswscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vsscanf
 - vswscanf
@@ -24,22 +20,16 @@ f1_keywords:
 - _vstscanf
 - vsscanf
 - vswscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7267e308f8b75a0e040e3fe33d51a9bdeea3914f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415891"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478584"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 
@@ -73,20 +63,20 @@ Elenco di argomenti variabili.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della conversione prima.
+Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della prima conversione.
 
-Se *buffer* oppure *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+Se *buffer* oppure *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **vsscanf** funzione legge i dati dal *buffer* nelle posizioni forniti da ciascun argomento nella *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo in *formato*. Il *formato* controlli argomento l'interpretazione dell'input di campi e ha lo stesso modulo e funziona come il *formato* argomento per il **scanf** (funzione). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **vsscanf** funzione legge i dati dal *buffer* nelle posizioni specificate da ciascun argomento in di *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile che contiene un tipo che corrisponde all'identificatore di tipo in *formato*. Il *formato* argomento controlla l'interpretazione dell'input campi e ha lo stesso formato e funzione come il *formato* argomento per il **scanf** (funzione). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> Quando si usa **vsscanf** per leggere una stringa, specificare sempre una larghezza per il **%s** formato (ad esempio **"% 32s"** anziché **"%s"**); in caso contrario, input in formato non corretto può causare un sovraccarico del buffer.
+> Quando si usa **vsscanf** per leggere una stringa, specificare sempre una larghezza per il **%s** formato (ad esempio **"% 32s"** anziché **"%s"**); in caso contrario, input formattato in modo non corretto può causare un sovraccarico del buffer.
 
-**vswscanf** è una versione a caratteri wide **vsscanf**; gli argomenti da **vswscanf** sono stringhe a caratteri "wide". **vsscanf** non gestisce i caratteri esadecimali multibyte. **vswscanf** non gestisce esadecimale a larghezza intera Unicode o caratteri "area di compatibilità". In caso contrario, **vswscanf** e **vsscanf** si comportano in modo identico.
+**vswscanf** è una versione a caratteri wide di **vsscanf**; gli argomenti **vswscanf** sono stringhe a caratteri wide. **vsscanf** non gestisce caratteri esadecimali multibyte. **vswscanf** non gestisce esadecimali a larghezza intera Unicode o caratteri "area di compatibilità". In caso contrario, **vswscanf** e **vsscanf** si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
