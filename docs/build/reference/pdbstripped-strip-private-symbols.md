@@ -1,15 +1,9 @@
 ---
-title: -PDBSTRIPPED (Rimuove simboli privati) | Microsoft Docs
-ms.custom: ''
+title: /PDBSTRIPPED (Rimuove simboli privati)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /pdbstripped
 - VC.Project.VCLinkerTool.StripPrivateSymbols
-dev_langs:
-- C++
 helpviewer_keywords:
 - /PDBSTRIPPED linker option
 - -PDBSTRIPPED linker option
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - PDB files, stripping private symbols
 - PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0680f265214849c2e46c4ceb23dcb71bdff61c3f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d03ee9d4f2ad3626dc260d171ef349a3a392fd36
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710840"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626031"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (Rimuove simboli privati)
 

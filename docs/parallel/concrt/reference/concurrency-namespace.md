@@ -1,10 +1,6 @@
 ---
-title: concorrenza Namespace | Microsoft Docs
-ms.custom: ''
+title: Spazio dei nomi concurrency
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
 - agents/concurrency
@@ -21,21 +17,15 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d423d80606da9edcec2cb5f4da4d02e39213ba7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386028"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629853"
 ---
 # <a name="concurrency-namespace"></a>Spazio dei nomi concurrency
 
@@ -155,7 +145,7 @@ namespace concurrency;
 |[Struttura ITopologyExecutionResource](itopologyexecutionresource-structure.md)|Interfaccia a una risorsa di esecuzione come definita da Gestione risorse.|
 |[Struttura ITopologyNode](itopologynode-structure.md)|Interfaccia a un nodo di topologia come definito da Gestione risorse. Un nodo contiene una o più risorse di esecuzione.|
 |[Struttura IUMSCompletionList](iumscompletionlist-structure.md)|Rappresenta un elenco di completamento UMS. Quando si blocca il thread UMS, il contesto di pianificazione definito dell'utilità di pianificazione viene inviato per decidere cosa pianificare sulla radice del processore virtuale sottostante mentre il thread originale è bloccato. Quando il thread originale si sblocca, il sistema operativo lo mette in coda nell'elenco di completamento accessibile tramite l'interfaccia. L'utilità di pianificazione può eseguire una query nell'elenco di completamento sul contesto di pianificazione designato o in qualsiasi altra posizione alla ricerca di lavoro.|
-|[Struttura IUMSScheduler](iumsscheduler-structure.md)|Interfaccia a un'astrazione di un'utilità di pianificazione di lavoro che vuole che Gestione risorse del runtime di concorrenza passi thread UMS pianificabili in modalità utente. Gestione risorse usa questa interfaccia per comunicare con le utilità di pianificazione dei thread UMS.  L'interfaccia `IUMSScheduler` eredita dall'interfaccia `IScheduler`.|
+|[Struttura IUMSScheduler](iumsscheduler-structure.md)|Interfaccia a un'astrazione di un'utilità di pianificazione di lavoro che vuole che Gestione risorse del runtime di concorrenza passi thread UMS pianificabili in modalità utente. Gestione risorse usa questa interfaccia per comunicare con le utilità di pianificazione dei thread UMS.  L'interfaccia `IUMSScheduler` eredita dall'interfaccia `IScheduler` .|
 |[Struttura IUMSThreadProxy](iumsthreadproxy-structure.md)|Astrazione per un thread di esecuzione. Se si vuole che all'utilità di pianificazione siano concessi thread UMS, impostare il valore per l'elemento dei criteri dell'utilità di pianificazione `SchedulerKind` su `UmsThreadDefault` e implementare l'interfaccia `IUMSScheduler`. I thread UMS sono supportati solo su sistemi operativi a 64 bit con Windows 7 e versioni successive.|
 |[Struttura IUMSUnblockNotification](iumsunblocknotification-structure.md)|Rappresenta una notifica di Gestione risorse indicante che un proxy del thread, che si è bloccato e ha attivato un valore restituito al contesto di pianificazione definito dell'utilità di pianificazione, si è sbloccato ed è pronto per essere pianificato. Questa interfaccia non è valida una volta riprogrammato il contesto di esecuzione associato del proxy del thread, restituito dal metodo `GetContext`.|
 |[Struttura IVirtualProcessorRoot](ivirtualprocessorroot-structure.md)|Un'astrazione per un thread hardware sulla quale un proxy del thread può eseguire.|

@@ -1,10 +1,6 @@
 ---
-title: cosh, coshf, coshl | Documenti Microsoft
-ms.custom: ''
+title: cosh, coshf, coshl
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cosh
 - coshf
@@ -26,24 +22,18 @@ f1_keywords:
 - cosh
 - coshf
 - coshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosh function
 - coshf function
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395471"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609534"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -69,18 +59,18 @@ Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il coseno iperbolico del *x*.
+Coseno iperbolico degli *x*.
 
-Per impostazione predefinita, se il risultato è troppo grande in un **cosh**, **coshf**, o **coshl** chiama, la funzione restituisce **HUGE_VAL** e imposta **errno** al **ERANGE**.
+Per impostazione predefinita, se il risultato è troppo grande in un **cosh**, **coshf**, o **coshl** chiamare, la funzione restituisce **HUGE_VAL** e imposta **errno** alla **ERANGE**.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|none|**DOMAIN**|
+|+ **QNAN**, **IND**|none|**DOMINIO**|
 |*x* ≥ 7.104760e + 002|**INESATTO**+**OVERFLOW**|**OVERFLOW**|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cosh** che accettano e restituiscono **float** oppure **lungo** **doppie** valori. In un programma C **cosh** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **cosh** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **cosh** accetta e restituisce sempre un **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -92,7 +82,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio incluso in [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
+Vedere l'esempio nella [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
 
 ## <a name="see-also"></a>Vedere anche
 

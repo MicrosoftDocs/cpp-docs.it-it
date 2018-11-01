@@ -1,15 +1,11 @@
 ---
-title: Funzioni &lt;regex&gt; | Microsoft Docs
-ms.custom: ''
+title: Funzioni &lt;regex&gt;
 ms.date: 09/10/2018
-ms.topic: reference
 f1_keywords:
 - regex/std::regex_match
 - regex/std::regex_replace
 - regex/std::regex_search
 - regex/std::swap
-dev_langs:
-- C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
 helpviewer_keywords:
 - std::regex_match [C++]
@@ -17,12 +13,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: 36d7aea8caec3f39d69a5928102c27d13848b538
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624822"
 ---
 # <a name="ltregexgt-functions"></a>Funzioni &lt;regex&gt;
 

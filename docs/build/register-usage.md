@@ -1,27 +1,17 @@
 ---
-title: Utilizzo dei registri | Documenti Microsoft
-ms.custom: ''
+title: Utilizzo dei registri
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c77469a8cef03827101f4bf367c00a3bb440820
-ms.sourcegitcommit: 4fc6869067d533b175207befd2dc60346afee285
+ms.openlocfilehash: fa04318ad4af298f300fbbbad8c01d0df9500ec7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225219"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629983"
 ---
-# <a name="register-usage"></a>Uso dei registri
+# <a name="register-usage"></a>Utilizzo dei registri
 
-X64 architettura fornisce 16 registri di utilizzo generale (in seguito indicati come registri integer), nonché XMM/YMM 16 registri disponibili per l'uso con virgola mobile. I registri volatili sono registri temporanei che il chiamante suppone vengano eliminati definitivamente con una chiamata. I registri non volatili devono conservare i relativi valori durante le chiamate di funzione e, se usati, devono essere salvati dal chiamante.
+X64 architettura fornisce 16 registri per utilizzo generico (in seguito indicati come registri integer), nonché 16 registri XMM/YMM registra disponibili per l'uso con virgola mobile. I registri volatili sono registri temporanei che il chiamante suppone vengano eliminati definitivamente con una chiamata. I registri non volatili devono conservare i relativi valori durante le chiamate di funzione e, se usati, devono essere salvati dal chiamante.
 
 ## <a name="register-volatility-and-preservation"></a>Registrare la volatilità e conservazione
 
@@ -50,7 +40,7 @@ Nella tabella seguente viene descritto il modo in cui ogni registro viene usato 
 |XMM5, YMM5|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; sesto argomento di tipo vettore quando si usa `__vectorcall`.|
 |XMM6:XMM15, YMM6:YMM15|Non volatile (XMM), volatile (metà superiore di YMM)|Deve essere mantenuto dal chiamato. I registri YMM devono essere mantenuti in base alle esigenze del chiamante.|
 
-All'uscita di funzione e in ingresso della funzione di libreria di Runtime C chiama e chiamate di sistema di Windows, il flag di direzione della CPU è previsto registro flag da cancellare.
+In uscita dalla funzione e in ingresso nella funzione di libreria di Runtime C chiamate e le chiamate di sistema di Windows, il flag di direzione della CPU dovrebbe register flag da cancellare.
 
 ## <a name="see-also"></a>Vedere anche
 

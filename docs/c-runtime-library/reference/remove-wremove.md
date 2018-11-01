@@ -1,10 +1,6 @@
 ---
-title: remove, _wremove | Microsoft Docs
-ms.custom: ''
+title: remove, _wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406433"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613970"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -69,13 +59,13 @@ Percorso del file da rimuovere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce 0 se il file viene eliminato correttamente. In caso contrario, restituisce -1 e imposta **errno** agli **EACCES** per indicare che il percorso specifica un file di sola lettura o il file è aperto, o a **ENOENT** per indicare che il nome file o percorso non è stato trovato o che il percorso specifica una directory.
+Ognuna di queste funzioni restituisce 0 se il file viene eliminato correttamente. In caso contrario, restituisce -1 e imposta **errno** al **EACCES** per indicare che il percorso specifica un file di sola lettura o il file è aperto, o a **ENOENT** per indicare che la nome file o percorso non è stato trovato o il percorso specifica una directory.
 
 Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-La funzione **remove** elimina il file specificato da *path*. **wremove** è una versione a caratteri wide **Remove**; il *percorso* argomento **wremove** è una stringa di caratteri "wide". **wremove** e **Remove** si comportano in modo identico in caso contrario. Tutti gli handle in un file devono essere chiusi prima che possano essere eliminati.
+La funzione **remove** elimina il file specificato da *path*. **wremove** è una versione a caratteri wide di **Remove**; gli *percorso* argomento **wremove** è una stringa di caratteri "wide". **wremove** e **Rimuovi** hanno lo stesso comportamento in caso contrario. Tutti gli handle in un file devono essere chiusi prima che possano essere eliminati.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

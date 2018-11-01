@@ -1,28 +1,18 @@
 ---
-title: Sequenza di operazioni per la creazione di applicazioni di Database | Microsoft Docs
-ms.custom: ''
+title: Sequenza delle operazioni per la creazione di applicazioni database
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [MFC], database
 - database applications [MFC]
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 483a36f62a147d9b71a489c2f611fc45c1b7fa54
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 0f512408b54d6aa9cc5c2b44dbd359e31e8bc57f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860732"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624901"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Sequenza delle operazioni per la creazione di applicazioni database
 

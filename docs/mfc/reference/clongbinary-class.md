@@ -1,31 +1,21 @@
 ---
-title: Classe CLongBinary | Microsoft Docs
-ms.custom: ''
+title: CLongBinary (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CLongBinary
 - AFXDB_/CLongBinary
 - AFXDB_/CLongBinary::CLongBinary
 - AFXDB_/CLongBinary::m_dwDataLength
 - AFXDB_/CLongBinary::m_hData
-dev_langs:
-- C++
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 89eab2862b5a724d1fd55c4d7f0b634b2d5b2e84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441811"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656036"
 ---
 # <a name="clongbinary-class"></a>CLongBinary (classe)
 

@@ -1,28 +1,18 @@
 ---
-title: Panoramica delle funzioni membro | Microsoft Docs
-ms.custom: ''
+title: Cenni preliminari di funzioni membro
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - this pointer, and nonstatic member functions
 - nonstatic member functions [C++]
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 409f896e7b2c345d1558700f86182d06793f543d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: faa7d016c8f48e9a5ee57c8efa4ce3dfd3f3eb01
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652447"
 ---
 # <a name="overview-of-member-functions"></a>Cenni preliminari di funzioni membro
 

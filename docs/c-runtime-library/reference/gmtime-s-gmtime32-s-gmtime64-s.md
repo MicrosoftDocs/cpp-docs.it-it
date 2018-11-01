@@ -1,10 +1,6 @@
 ---
-title: gmtime_s, _gmtime32_s, _gmtime64_s | Microsoft Docs
-ms.custom: ''
+title: gmtime_s, _gmtime32_s, _gmtime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gmtime32_s
 - gmtime_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _gmtime64_s
 - gmtime_s
 - _gmtime32_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - gmtime_s function
 - gmtime32_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b15896ff9ec96ed8dd9867c14d252edaad2c67a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d9bfc7858dbc718e0f6c07358c5ebcec546063e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405276"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650008"
 ---
 # <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -76,7 +66,7 @@ errno_t _gmtime64_s(
 ### <a name="parameters"></a>Parametri
 
 *tmDest*<br/>
-Puntatore a un [tm](../../c-runtime-library/standard-types.md) struttura. I campi della struttura restituita presentano il valore valutato del *timer* argomento in formato UTC anziché nell'ora locale.
+Puntatore a un [tm](../../c-runtime-library/standard-types.md) struttura. I campi della struttura restituita contengono il valore valutato del *timer* argomento in formato UTC anziché nell'ora locale.
 
 *sourceTime*<br/>
 Puntatore all'ora archiviata. L'ora è rappresentata come secondi trascorsi dalla mezzanotte (00.00.00) del 1 gennaio 1970 nel formato UTC (Coordinated Universal Time).
@@ -87,17 +77,17 @@ Zero in caso di esito positivo. Il valore restituito è un codice di errore se s
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*tmDest*|*sourceTime*|INVIO|Valore *tmDest*|
+|*tmDest*|*sourceTime*|INVIO|Valore in *tmDest*|
 |-----------|------------|------------|--------------------|
 |**NULL**|qualsiasi|**EINVAL**|Non modificato.|
-|Non **NULL** (punta a valide per la memoria)|**NULL**|**EINVAL**|Tutti i campi impostati su -1.|
-|non **NULL**|< 0|**EINVAL**|Tutti i campi impostati su -1.|
+|Non **NULL** (punta alla memoria valida)|**NULL**|**EINVAL**|Tutti i campi impostati su -1.|
+|Non **NULL**|< 0|**EINVAL**|Tutti i campi impostati su -1.|
 
-Nel caso delle prime due condizioni di errore viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituire **EINVAL**.
+Nel caso delle prime due condizioni di errore viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **_gmtime32_s** funzione suddivide il *sourceTime* valore e lo archivia in una struttura di tipo **tm**, definito in time. h. L'indirizzo della struttura viene passato *tmDest*. Il valore di *sourceTime* in genere viene ottenuto da una chiamata ai [tempo](time-time32-time64.md) (funzione).
+Il **_gmtime32_s** funzione suddivide la *sourceTime* valore e archiviarlo in una struttura di tipo **tm**, definita in time. h. L'indirizzo della struttura viene passato *tmDest*. Il valore di *sourceTime* viene in genere ottenuto da una chiamata ai [ora](time-time32-time64.md) (funzione).
 
 > [!NOTE]
 > L'ambiente di destinazione deve provare a determinare se è in vigore l'ora legale. La libreria di runtime C presuppone l'uso delle regole relative agli Stati Uniti per implementare il calcolo dell'ora legale.
@@ -106,19 +96,19 @@ Ognuno dei campi della struttura è di tipo **int**, come illustrato nella tabel
 
 |Campo|Descrizione|
 |-|-|
-|**tm_sec**|Secondi dopo minuto (0 - 59).|
+|**tm_sec**|Secondi dopo il minuto (0 - 59).|
 |**tm_min**|Minuti dopo l'ora (0 - 59).|
-|**tm_hour**|Ore da mezzanotte (0 - 23).|
+|**tm_hour**|Ore dalla mezzanotte (0 - 23).|
 |**tm_mday**|Giorno del mese (1-31).|
 |**tm_mon**|Mese (0 - 11; Gennaio = 0).|
 |**tm_year**|Anno (anno corrente meno 1900).|
-|**tm_wday**|Giorno della settimana (0 - 6. Domenica = 0).|
+|**tm_wday**|Giorno della settimana (0 - 6; Domenica = 0).|
 |**tm_yday**|Giorno dell'anno (0 - 365; Il 1 ° gennaio = 0).|
-|**tm_isdst**|Restituisce sempre 0 per **gmtime_s**.|
+|**tm_isdst**|Sempre 0 per **gmtime_s**.|
 
-**_gmtime64_s**, che usa la **__time64_t** struttura, consente date relativamente a 23:59:59, 31 dicembre 3000, all'ora UTC, mentre **gmtime32_s** rappresentano solo una data tramite 23:59:59 18 gennaio 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per entrambe queste funzioni.
+**_gmtime64_s**, che usa la **__time64_t** struttura, consente le date di esprimere backup tramite 23:59:59, 31 dicembre 3000 UTC, mentre **gmtime32_s** rappresenta solo le date tramite : 23.59.59 del 18 gennaio 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per entrambe queste funzioni.
 
-**gmtime_s** è una funzione inline che restituisce **_gmtime64_s** e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come precedente 32 bit **time_t**, è possibile definire **_USE_32BIT_TIME_T**. Questo determinerebbe **gmtime_s** essere allineati al **_gmtime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
+**gmtime_s** è una funzione inline equivalente a **_gmtime64_s** e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come il vecchio 32 bit **time_t**, è possibile definire **_USE_32BIT_TIME_T**. In questo modo **gmtime_s** essere allineata a **_gmtime32_s**. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.
 
 ## <a name="requirements"></a>Requisiti
 

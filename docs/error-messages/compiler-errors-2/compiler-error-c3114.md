@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3114 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3114
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3114
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7d0e324c00c4b304deca1d2538913a88690d023
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6ce5b9860cd75619f26a3585981af5807c33535a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054610"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606674"
 ---
 # <a name="compiler-error-c3114"></a>Errore del compilatore C3114
 

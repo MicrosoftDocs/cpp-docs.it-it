@@ -1,25 +1,15 @@
 ---
-title: Routine di scambio di dati di finestra di dialogo standard | Microsoft Docs
-ms.custom: ''
+title: Routine DDX (Dialog Data Exchange) standard
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e493f978606f4013da21c292ccf8f520e4e56ea5
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070413"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618309"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Routine DDX (Dialog Data Exchange) standard
 

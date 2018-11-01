@@ -1,12 +1,6 @@
 ---
-title: Linee guida per sviluppatori di C++ per l'esecuzione speculativa i canali | Microsoft Docs
-ms.custom: ''
+title: Linee guida per sviluppatori di C++ per l'esecuzione speculativa i canali
 ms.date: 07/10/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, security
 - security [C++]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821400"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631031"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Linee guida per sviluppatori di C++ per l'esecuzione speculativa i canali
 

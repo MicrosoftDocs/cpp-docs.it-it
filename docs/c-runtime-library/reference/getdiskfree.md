@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Microsoft Docs
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,20 +26,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602280"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
-Informazioni su un'unità disco viene utilizzato per popolare un **diskfree_t** struttura.
+Informazioni su un'unità disco vengono utilizzate per popolare una **diskfree_t** struttura.
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -65,15 +55,15 @@ unsigned _getdiskfree(
 L'unità disco per cui si desidera ottenere informazioni.
 
 *DriveInfo*<br/>
-Un **diskfree_t** struttura che verrà popolato con informazioni sull'unità.
+Oggetto **diskfree_t** struttura che verrà popolato con informazioni sull'unità.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore restituito è zero. Se la funzione ha esito negativo, il valore restituito è il codice di errore. Il valore **errno** è impostato per individuare eventuali errori restituiti dal sistema operativo. Per ulteriori informazioni sulle condizioni di errore indicate da **errno**, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
+Se la funzione ha esito positivo, il valore restituito è zero. Se la funzione ha esito negativo, il valore restituito è il codice di errore. Il valore **errno** è impostato per individuare eventuali errori restituiti dal sistema operativo. Per altre informazioni sulle condizioni di errore indicate da **errno**, vedere [costanti errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Note
 
-Il **diskfree_t** struttura viene definita in Direct. h.
+Il **diskfree_t** struttura è definita in Direct. h.
 
 ```C
 struct _diskfree_t {
@@ -84,7 +74,7 @@ struct _diskfree_t {
 };
 ```
 
-Questa funzione convalida i relativi parametri. Se il *driveinfo* puntatore **NULL** oppure *unità* specifica un'unità non valida, questa funzione richiama un gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**. Le unità valide sono comprese tra 0 e 26. Un *unità* il valore 0 specifica l'unità corrente; successivamente, i numeri vengono associati alle lettere dell'alfabeto inglese in modo che 1 indica l'unità A, 3 indica l'unità C e così via.
+Questa funzione convalida i relativi parametri. Se il *driveinfo* puntatore viene **NULL** oppure *unità* specifica un'unità non valida, questa funzione richiama un gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**. Le unità valide sono comprese tra 0 e 26. Oggetto *unità* valore pari a 0 specifica l'unità corrente; successivamente, i numeri vengono associati alle lettere dell'alfabeto inglese in modo che 1 indica l'unità A, 3 indica che l'unità C e così via.
 
 ## <a name="requirements"></a>Requisiti
 

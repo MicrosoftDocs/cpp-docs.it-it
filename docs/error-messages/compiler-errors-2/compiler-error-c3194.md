@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3194 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3194
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3194
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3194
 ms.assetid: 49d3ffc6-eff6-4b46-865b-18811692a8bb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 923e4d5535a1be4f4c8a3f7b60730eb6a656ac33
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 181a18dde45c3363f1f77bc0cbbd5b0ffca3e898
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077100"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608906"
 ---
 # <a name="compiler-error-c3194"></a>Errore del compilatore C3194
 

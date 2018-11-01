@@ -1,14 +1,8 @@
 ---
-title: Iteratori verificati | Microsoft Docs
-ms.custom: ''
+title: Checked Iterators
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - _SECURE_SCL_THROWS
-dev_langs:
-- C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 74adf7d42fcb5e5e3114e1a06162022f9f062e67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4558294da52577e1ed490be537e92665ce6b15f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960239"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592764"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 

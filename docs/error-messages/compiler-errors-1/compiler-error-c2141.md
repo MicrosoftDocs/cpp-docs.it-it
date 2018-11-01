@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2141 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2141
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2141
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2141
 ms.assetid: 10cf770f-0500-4220-ac90-a863b7ea5fe6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e657c82f1f98547e7b8db337430a3ac635b320b2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 89395fa3419d79fa4dec3fecf9acfc681590d825
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088150"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593986"
 ---
 # <a name="compiler-error-c2141"></a>Errore del compilatore C2141
 

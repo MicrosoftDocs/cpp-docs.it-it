@@ -1,12 +1,6 @@
 ---
-title: Aggiunta di controlli manualmente | Microsoft Docs
-ms.custom: ''
+title: Aggiunta manuale di controlli
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows common controls [MFC], adding
 - dialog box controls [MFC], adding to dialog boxes
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - controls [MFC], adding to dialog boxes
 - common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72170e3e21f5ca895b95da0d5905a2167375f721
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf665247dd1ef24bb71d160097fa9514ff8be147
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434544"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589390"
 ---
 # <a name="adding-controls-by-hand"></a>Aggiunta manuale di controlli
 

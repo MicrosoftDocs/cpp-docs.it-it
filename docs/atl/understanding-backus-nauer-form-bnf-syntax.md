@@ -1,26 +1,16 @@
 ---
-title: ATL (Registrar) e Backus Nauer Form (BNF) sintassi | Microsoft Docs
-ms.custom: ''
+title: ATL (Registrar) e la sintassi di Backus Nauer Form (BNF)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e615068580bcc9078959cc6cdd7831d05b5a4acd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b14e2a4f1c29860b9a624b09805959a9f6b550f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020875"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596729"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Informazioni sulla sintassi di Backus Nauer Form (BNF)
 

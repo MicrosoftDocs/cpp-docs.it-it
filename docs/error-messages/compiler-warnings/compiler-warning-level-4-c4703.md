@@ -1,27 +1,17 @@
 ---
-title: Del compilatore (livello 4) Avviso C4703 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 4) C4703
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4703
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 202e6605365076f6141dd3ce098327e18a0bfe87
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bc4d0d493b6ee935d3f58bae70e2f7779158ec95
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603515"
 ---
 # <a name="compiler-warning-level-4-c4703"></a>Avviso del compilatore (livello 4) C4703
 

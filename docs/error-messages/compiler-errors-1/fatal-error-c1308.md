@@ -1,27 +1,17 @@
 ---
-title: Errore irreversibile C1308 | Microsoft Docs
-ms.custom: ''
+title: Errore irreversibile C1308
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1308
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1308
 ms.assetid: 46177997-069e-433a-8e20-93c846d78ffd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd778e95f3ace413dbeb409da3c4b2493208e8bf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0128953b3b3fa0f29a6764c1d7dab0ece67dfae7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104186"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640622"
 ---
 # <a name="fatal-error-c1308"></a>Errore irreversibile C1308
 

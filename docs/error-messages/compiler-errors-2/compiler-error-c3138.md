@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3138 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3138
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3138
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66ee7cad3b1514d75fedc968f6bf51554695c79
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d812c14c2f364681fe28a58bdaed68fe3ed8ad30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046907"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614474"
 ---
 # <a name="compiler-error-c3138"></a>Errore del compilatore C3138
 

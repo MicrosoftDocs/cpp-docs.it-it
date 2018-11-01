@@ -1,10 +1,6 @@
 ---
-title: _aligned_offset_malloc | Microsoft Docs
-ms.custom: ''
+title: _aligned_offset_malloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_offset_malloc
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_offset_malloc
 - aligned_offset_malloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8bcc5fe0d786c7fdb04455f231cc3c8e60b53a22
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 824edfd8bb96d805a030fb205dee62fa9eb4fd06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392845"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644639"
 ---
 # <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
 
@@ -71,13 +61,13 @@ Un puntatore al blocco di memoria allocato o **NULL** se l'operazione non riusci
 
 ## <a name="remarks"></a>Note
 
-**aligned_offset_malloc** è utile nelle situazioni in cui è necessaria l'allineamento su un elemento nidificato; ad esempio, se è stato necessario allineamento in una classe annidata.
+**aligned_offset_malloc** è utile nelle situazioni in cui è necessario l'allineamento su un elemento annidato, ad esempio, se era necessario l'allineamento in una classe annidata.
 
-**aligned_offset_malloc** basa **malloc**; per ulteriori informazioni, vedere [malloc](malloc.md).
+**aligned_offset_malloc** basa **malloc**; per altre informazioni, vedere [malloc](malloc.md).
 
-**aligned_offset_malloc** contrassegnato `__declspec(noalias)` e `__declspec(restrict)`, vale a dire che la funzione è sicuramente non per modificare le variabili globali e che il puntatore restituito non è associato un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**aligned_offset_malloc** contrassegnato `__declspec(noalias)` e `__declspec(restrict)`, vale a dire che la funzione è garantito che non modifichi le variabili globali e il puntatore restituito non viene applicato l'aliasing. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
-La funzione imposta **errno** alla **ENOMEM** se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore **heap_maxreq**. Per ulteriori informazioni **errno**, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Inoltre, **aligned_offset_malloc** convalida i propri parametri. Se *allineamento* non è una potenza di 2 o se *offset* è maggiore o uguale a *dimensioni* e diverso da zero, questa funzione richiama il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **NULL** e imposta **errno** al **EINVAL**.
+La funzione imposta **errno** al **ENOMEM** se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore di **heap_maxreq**. Per altre informazioni sulle **errno**, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). È inoltre **aligned_offset_malloc** convalida i propri parametri. Se *allineamento* non è una potenza di 2 o se *offset* è maggiore o uguale a *dimensioni* e diverso da zero, questa funzione richiama il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **NULL** e imposta **errno** al **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

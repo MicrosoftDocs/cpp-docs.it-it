@@ -1,10 +1,6 @@
 ---
-title: spawnlp | Microsoft Docs
-ms.custom: ''
+title: spawnlp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - spawnlp
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - spawnlp
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnlp function
 ms.assetid: 560da96f-4902-4620-8a92-0d128ecaa001
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3aa81f292cd23123e9e86c4fc75ba8747b7467a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 568ca2fcbf933b8f6bc17a16069cd1abf8009bbe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406069"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589670"
 ---
 # <a name="spawnlp"></a>spawnlp
 

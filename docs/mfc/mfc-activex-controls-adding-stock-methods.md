@@ -1,27 +1,17 @@
 ---
-title: 'Controlli ActiveX MFC: Aggiunta di metodi predefiniti | Microsoft Docs'
-ms.custom: ''
+title: 'Controlli ActiveX MFC: aggiunta di metodi predefiniti'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], stock methods
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7967b63a14c296d7f0d73bb403aa5b74a6c3689b
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204303"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585029"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Controlli ActiveX MFC: aggiunta di metodi predefiniti
 

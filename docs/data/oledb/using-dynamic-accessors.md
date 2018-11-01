@@ -1,27 +1,16 @@
 ---
-title: Usare funzioni di accesso dinamici | Microsoft Docs
-ms.custom: ''
+title: Utilizzo delle funzioni di accesso dinamiche
 ms.date: 10/18/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: df80dfb235a03fdc45dfaa8a60c5fa5c1afb30bb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4539247894c3980464e744c76cea450324372382
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649722"
 ---
 # <a name="using-dynamic-accessors"></a>Utilizzo delle funzioni di accesso dinamiche
 

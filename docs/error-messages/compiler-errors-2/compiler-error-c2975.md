@@ -1,37 +1,27 @@
 ---
-title: Errore del compilatore C2975 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C2975
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2975
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53cb020dc0d456f10b7cfbae82a16b2ebe5fda6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246983"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609755"
 ---
 # <a name="compiler-error-c2975"></a>Errore del compilatore C2975
 
-> '*argomento*': argomento di modello non valido per '*tipo*', è prevista un'espressione costante in fase di compilazione
+> «*argomenti*': argomento di modello non valido per '*tipo*',. prevista espressione costante in fase di compilazione
 
-L'argomento di modello non corrisponde alla dichiarazione di modello; un'espressione costante deve trovarsi tra parentesi angolari. Non sono consentite le variabili come argomenti effettivi di modello. Controllare la definizione di modello per individuare i tipi corretti.
+L'argomento di modello non corrisponde la dichiarazione di modello; un'espressione costante deve trovarsi tra parentesi acute. Le variabili non sono consentite come argomenti effettivi del modello. Controllare la definizione di modello per individuare i tipi corretti.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C2975 e inoltre illustrato l'utilizzo corretto:
+L'esempio seguente genera l'errore C2975 e anche illustrato l'utilizzo corretto:
 
 ```cpp
 // C2975.cpp
@@ -45,7 +35,7 @@ int main() {
 }
 ```
 
-C2975 si verifica anche quando si usa &#95; &#95;riga&#95; &#95; come una costante in fase di compilazione con [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md). Una soluzione, è possibile eseguire la compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) anziché **/ZI**.
+C2975 si verifica anche quando si usa &#95; &#95;riga&#95; &#95; come costante della fase di compilazione con [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md). Una soluzione, è possibile eseguire la compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) invece di **/ZI**.
 
 ```cpp
 // C2975b.cpp

@@ -1,10 +1,6 @@
 ---
-title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - vswprintf_s
 - vsprintf_s
 - _vstprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _vstprintf_s_l function
 - vsprintf_s_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f1ee1235b5fe6c3904c6dc201e7c8a183d95647
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ef1d99caddfcff78bc41c24f7c132c307958db2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416236"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616492"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 
@@ -118,19 +108,19 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**vsprintf_s** e **vswprintf_s** restituire il numero di caratteri scritti, senza includere il carattere di terminazione null o un valore negativo se si verifica un errore di output. Se *buffer* oppure *formato* è un puntatore null, se il conteggio è zero oppure se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno -1 e impostare **errno** alla **EINVAL**.
+**vsprintf_s** e **vswprintf_s** restituiscono il numero di caratteri scritti, escludendo il carattere null di terminazione o un valore negativo se si verifica un errore di output. Se *buffer* oppure *formato* è un puntatore null, se il conteggio è zero, o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati per la memoria a cui puntata *buffer*.
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati per la memoria a cui punta *buffer*.
 
-**vswprintf_s** conforme allo Standard ISO C per **vswprintf**, che richiede il secondo parametro *conteggio*, di tipo **size_t**.
+**vswprintf_s** è conforme allo Standard ISO per C **vswprintf**, che richiede il secondo parametro, *conteggio*, di tipo **size_t**.
 
 Queste funzioni differiscono dalle versioni non sicure solo nel fatto che le versioni sicure supportano i parametri posizionali. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,10 +1,6 @@
 ---
-title: _cputs, _cputws | Microsoft Docs
-ms.custom: ''
+title: _cputs, _cputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cputws
 - _cputs
@@ -25,8 +21,6 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c192adccb6fe0e0cee66f03b5d85d89fc2e446a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601175"
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 
@@ -72,11 +62,11 @@ Stringa di output.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, **cputs** restituisce 0. In caso contrario, restituisce un valore diverso da zero.
+Caso di esito positivo **cputs** restituisce 0. In caso contrario, restituisce un valore diverso da zero.
 
 ## <a name="remarks"></a>Note
 
-Il **cputs** funzione scrive la stringa con terminazione null che è a cui punta *str* direttamente alla console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.
+Il **cputs** funzione scrive la stringa con terminazione null che a cui punta *str* direttamente alla console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.
 
 Questa funzione convalida il relativo parametro. Se *str* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e viene restituito -1.
 

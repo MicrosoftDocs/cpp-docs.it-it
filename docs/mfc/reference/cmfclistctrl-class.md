@@ -1,10 +1,6 @@
 ---
-title: Classe CMFCListCtrl | Microsoft Docs
-ms.custom: ''
+title: Classe CMFCListCtrl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCListCtrl
 - AFXLISTCTRL/CMFCListCtrl
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXLISTCTRL/CMFCListCtrl::RemoveSortColumn
 - AFXLISTCTRL/CMFCListCtrl::SetSortColumn
 - AFXLISTCTRL/CMFCListCtrl::Sort
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCListCtrl [MFC], EnableMarkSortedColumn
 - CMFCListCtrl [MFC], EnableMultipleSort
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e85ba42db937a6b9abf3415115bb301739456bd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d289dc25dfdb07ae581c4669154517882867f2a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432776"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642264"
 ---
 # <a name="cmfclistctrl-class"></a>Classe CMFCListCtrl
 
@@ -79,7 +69,7 @@ class CMFCListCtrl : public CListCtrl
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari metodi nel `CMFCListCtrl` classe. Nell'esempio viene illustrato come creare un controllo elenco colonne di inserimento, inserire gli elementi, impostare il testo di un elemento e impostare il tipo di carattere del controllo elenco. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCListCtrl` . Nell'esempio viene illustrato come creare un controllo elenco colonne di inserimento, inserire gli elementi, impostare il testo di un elemento e impostare il tipo di carattere del controllo elenco. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#26](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]

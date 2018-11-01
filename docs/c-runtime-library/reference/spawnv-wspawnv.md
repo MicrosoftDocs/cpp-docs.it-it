@@ -1,10 +1,6 @@
 ---
-title: _spawnv, _wspawnv | Microsoft Docs
-ms.custom: ''
+title: _spawnv, _wspawnv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnv
 - _spawnv
@@ -25,8 +21,6 @@ f1_keywords:
 - wspawnv
 - _spawnv
 - _wspawnv
-dev_langs:
-- C++
 helpviewer_keywords:
 - wspawnv function
 - processes, creating
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ba46190ddf3707761ecf1e8537c336015426776d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f6e24135a040e0b081016041192d2ae196d1037
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576749"
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
 
@@ -78,11 +68,11 @@ Modalità di esecuzione del processo chiamante.
 Percorso del file da eseguire.
 
 *argv*<br/>
-Matrice di puntatori agli argomenti. L'argomento *argv*[0] è in genere un puntatore a un percorso in modalità reale o al nome del programma in modalità protetta e *argv*[1] tramite *argv*[**n**] sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. L'argomento *argv*[**n** + 1] deve essere un **NULL** puntatore per contrassegnare la fine dell'elenco di argomenti.
+Matrice di puntatori agli argomenti. L'argomento *argv*[0] è in genere un puntatore a un percorso in modalità reale o al nome del programma in modalità protetta, e *argv*[1] tramite *argv*[**n**] sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. L'argomento *argv*[**n** + 1] deve essere un **NULL** puntatore per contrassegnare la fine dell'elenco di argomenti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore restituito da un oggetto sincrono **spawnv** oppure **wspawnv** (**P_WAIT** specificato per *modalità*) è lo stato di uscita del nuovo processo. Il valore restituito da asincrono **spawnv** oppure **wspawnv** (**P_NOWAIT** oppure **P_NOWAITO** specificato per *modalità* ) è l'handle del processo. Lo stato di uscita è 0 se il processo è terminato normalmente. È possibile impostare lo stato di uscita su un valore diverso da zero se il processo generato chiama specificatamente la **uscire** routine con un argomento diverso da zero. Se il nuovo processo non ha impostato in modo esplicito uno stato di uscita positivo, uno stato di uscita positivo indica l'uscita anomala con interruzione. Il valore restituito-1 indica un errore (il nuovo processo non è avviato). In questo caso **errno** è impostata su uno dei valori seguenti.
+Il valore restituito da un oggetto sincrono **spawnv** oppure **wspawnv** (**P_WAIT** specificata per *modalità*) è lo stato di uscita del nuovo processo. Il valore restituito da un'asincrona **spawnv** oppure **wspawnv** (**P_NOWAIT** oppure **P_NOWAITO** specificato per *modalità* ) è l'handle del processo. Lo stato di uscita è 0 se il processo è terminato normalmente. È possibile impostare lo stato di uscita su un valore diverso da zero se il processo generato chiama specificatamente la **uscire** routine con un argomento diverso da zero. Se il nuovo processo non ha impostato in modo esplicito uno stato di uscita positivo, uno stato di uscita positivo indica l'uscita anomala con interruzione. Valore restituito di -1 indica un errore (non viene avviato il nuovo processo). In questo caso **errno** è impostato su uno dei valori seguenti.
 
 |||
 |-|-|
@@ -98,7 +88,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 Ognuna di queste funzioni crea ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando.
 
-Queste funzioni convalidano i relativi parametri. Se entrambi *cmdname* oppure *argv* è un puntatore null, oppure se *argv* punta a un puntatore null o *argv*[0] è una stringa vuota, non valido viene richiamato il gestore di parametro, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL**e restituiscono -1. Nessun nuovo processo viene generato.
+Queste funzioni convalidano i relativi parametri. Se uno dei due *cmdname* oppure *argv* è un puntatore null, o se *argv* punta a un puntatore null oppure *argv*[0] è una stringa vuota, non valido viene richiamato il gestore di parametro, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL**e restituiscono -1. Nessun nuovo processo viene generato.
 
 ## <a name="requirements"></a>Requisiti
 

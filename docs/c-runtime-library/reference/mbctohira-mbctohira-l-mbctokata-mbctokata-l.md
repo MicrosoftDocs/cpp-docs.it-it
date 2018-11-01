@@ -1,10 +1,6 @@
 ---
-title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l | Microsoft Docs
-ms.custom: ''
+title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctohira
 - _mbctohira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctokata_l
 - mbctohira_l
 - _mbctokata_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctokata function
 - _mbctokata_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 85c5cbca9d5decee1719f575f60db725c285d607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637801"
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -91,7 +81,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il carattere convertito *c*, se possibile. In caso contrario, restituisce il carattere *c* subisce modifiche.
+Ognuna di queste funzioni restituisce il carattere convertito *c*, se possibile. In caso contrario, restituisce il carattere *c* invariato.
 
 ## <a name="remarks"></a>Note
 
@@ -102,9 +92,9 @@ Il **mbctohira** e **mbctokata** funzioni testano un carattere *c* e, se possibi
 |**mbctohira**, **mbctohira_l**|Da katakana multibyte a hiragana multibyte.|
 |**mbctokata**, **mbctokata_l**|Da hiragana multibyte a katakana multibyte.|
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno il **l** suffisso utilizzare le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali e quelle che hanno il **l** suffisso usare il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno le **l** suffisso usare le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali e quelle che hanno il **l** suffisso usare il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Nelle versioni precedenti, **mbctohira** erà **jtohira** e **mbctokata** era denominato **jtokata**. Per il nuovo codice, usare i nuovi nomi.
+Nelle versioni precedenti **mbctohira** chiamava **jtohira** e **mbctokata** era denominato **jtokata**. Per il nuovo codice, usare i nuovi nomi.
 
 ## <a name="requirements"></a>Requisiti
 

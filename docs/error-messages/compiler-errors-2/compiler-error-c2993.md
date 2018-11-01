@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2993 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2993
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2993
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09b3c789cc15d2e146f1c5031003fc74d783e827
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5be4836332f67f2064f60a3b058db159a18ca1e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605024"
 ---
 # <a name="compiler-error-c2993"></a>Errore del compilatore C2993
 

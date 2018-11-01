@@ -1,27 +1,17 @@
 ---
-title: Implementazione di una finestra (ATL) | Microsoft Docs
-ms.custom: ''
+title: Implementazione di una finestra (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL, windows
 - CWindowImpl class, using
 - windows [C++], implementing in ATL
 ms.assetid: eb1ce8d6-72f9-4894-aae7-e60a61665628
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8712f5ab169838e94aa743a29dd4b73e5b0979f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f8c072b32e64f87042890c1bcf950ab3ac40e4a8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762756"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645835"
 ---
 # <a name="implementing-a-window"></a>Implementazione di una finestra
 

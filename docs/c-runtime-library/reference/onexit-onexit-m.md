@@ -1,10 +1,6 @@
 ---
-title: _onexit, _onexit_m | Microsoft Docs
-ms.custom: ''
+title: _onexit, _onexit_m
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -25,8 +21,6 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c190ce2c78135625a502d7509e56771fd670aa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609604"
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 
@@ -69,15 +59,15 @@ Puntatore a una funzione da chiamare all'uscita.
 
 ## <a name="return-value"></a>Valore restituito
 
-**OnExit** restituisce un puntatore alla funzione se ha esito positivo o **NULL** se non è disponibile spazio per archiviare il puntatore a funzione.
+**OnExit** restituisce un puntatore alla funzione se ha esito positivo oppure **NULL** se non è disponibile spazio per archiviare il puntatore a funzione.
 
 ## <a name="remarks"></a>Note
 
 Il **OnExit** funzione viene passata l'indirizzo di una funzione (*funzione*) da chiamare quando il programma termina normalmente. Le chiamate successive a **OnExit** creano un registro di funzioni che vengono eseguite in ordine LIFO (last-in-first-out). Le funzioni passate a **OnExit** non possono accettare parametri.
 
-Nel caso quando **OnExit** viene chiamato dall'interno di una DLL, le routine registrate con **OnExit** scaricamento di esecuzione in una DLL dopo **DllMain** viene chiamato con DLL_PROCESS_DETACH.
+Nel caso quando **OnExit** viene chiamato dall'interno di una DLL, le routine registrate con **OnExit** scaricamento dopo l'esecuzione in una DLL **DllMain** viene chiamato con DLL_PROCESS_DETACH.
 
-**OnExit** è un'estensione Microsoft. Per la portabilità ANSI, usare [atexit](atexit.md). Il **onexit_m** versione della funzione è per l'utilizzo in modalità mista.
+**OnExit** è un'estensione Microsoft. Per la portabilità ANSI, usare [atexit](atexit.md). Il **onexit_m** versione della funzione è per uso in modalità mista.
 
 ## <a name="requirements"></a>Requisiti
 

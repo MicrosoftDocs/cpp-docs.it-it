@@ -1,26 +1,16 @@
 ---
-title: Vantaggi dell'architettura documento / visualizzazione | Microsoft Docs
-ms.custom: ''
+title: Vantaggi dell'architettura documento / visualizzazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - views [MFC], advantages
 - document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 213fc108b11d6056df6696f92658e74a736c4a16
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccb2e786eb2397efd2d8b34e118f0935fdb05283
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392840"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655965"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Vantaggi dell'architettura documento/visualizzazione
 

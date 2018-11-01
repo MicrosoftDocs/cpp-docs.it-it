@@ -1,12 +1,6 @@
 ---
-title: Identificatori (C++) | Microsoft Docs
-ms.custom: ''
+title: Identificatori (C++)
 ms.date: 09/12/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c9e7999b7e39b3a529130bdacf99f088be181d71
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653661"
 ---
 # <a name="identifiers-c"></a>Identificatori (C++)
 
@@ -56,7 +46,7 @@ A B C D E F G H I J K L M
 N O P Q R S T U V W X Y Z
 ```
 
-Anche alcuni intervalli di nomi di caratteri universali sono consentiti in un identificatore.  Un nome di carattere universale in un identificatore non può definire un carattere di controllo o un carattere nel set di caratteri di origine di base. Per altre informazioni, vedere [set di caratteri](../cpp/character-sets.md). Questi intervalli di numeri punto di codice Unicode sono consentiti come nomi di caratteri universali per qualsiasi carattere in un identificatore:
+Anche alcuni intervalli di nomi di caratteri universali sono consentiti in un identificatore.  Un nome di carattere universale in un identificatore non può definire un carattere di controllo o un carattere nel set di caratteri di origine di base. Per altre informazioni, vedere [Character Sets](../cpp/character-sets.md). Questi intervalli di numeri punto di codice Unicode sono consentiti come nomi di caratteri universali per qualsiasi carattere in un identificatore:
 
 - 00A8, 00AA, 00AD, 00AF, 00B2-00B5, 00B7-00BA, 00BC-00BE, 00C0-00D6, 00D8-00F6, 00F8-00FF, 0100-02FF, 0370-167F, 1681-180D, 180F-1DBF, 1E00-1FFF, 200B-200D, 202A-202E, 203F-2040, 2054, 2060-206F, 2070-20CF, 2100-218F, 2460-24FF, 2776-2793, 2C00-2DFF, 2E80-2FFF, 3004-3007, 3021-302F, 3031-303F, 3040-D7FF, F900-FD3D, FD40-FDCF, FDF0-FE1F, FE30-FE44, FE47-FFFD, 10000-1FFFD, 20000-2FFFD, 30000-3FFFD, 40000-4FFFD, 50000-5FFFD, 60000-6FFFD, 70000-7FFFD, 80000-8FFFD, 90000-9FFFD, A0000-AFFFD, B0000-BFFFD, C0000-CFFFD, D0000-DFFFD, E0000-EFFFD
 

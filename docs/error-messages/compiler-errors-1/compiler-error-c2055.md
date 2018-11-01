@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2055 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2055
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2055
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2055
 ms.assetid: 6cec79cc-6bec-443f-9897-fbf5452718c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6c63d79325417fbd9b1f451fb4a51f13957b4df
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3c198168b4445e619148e5611621fa3ddba95d6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019342"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597275"
 ---
 # <a name="compiler-error-c2055"></a>Errore del compilatore C2055
 

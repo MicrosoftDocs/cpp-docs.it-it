@@ -1,31 +1,21 @@
 ---
-title: Classe CAnimationVariableChangeHandler | Microsoft Docs
-ms.custom: ''
+title: Classe CAnimationVariableChangeHandler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationVariableChangeHandler
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::OnValueChanged
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::SetAnimationController
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 23521a9ee9706787df0568547fe3419fe7e4fae5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 589691f8bb2bc14eba46245082ff972ca6b97fcc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424599"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604377"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Classe CAnimationVariableChangeHandler
 
@@ -50,7 +40,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 |Nome|Descrizione|
 |----------|-----------------|
 |`CAnimationVariableChangeHandler::CreateInstance`|Crea un'istanza di `CAnimationVariableChangeHandler` oggetto.|
-|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Chiamato quando viene modificato un valore di una variabile di animazione. Esegue l'override`CUIAnimationVariableChangeHandlerBase::OnValueChanged`.|
+|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Chiamato quando viene modificato un valore di una variabile di animazione. Esegue l'override di `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.|
 |[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore al controller di animazione per instradare gli eventi.|
 
 ## <a name="remarks"></a>Note

@@ -1,12 +1,6 @@
 ---
-title: Creazione di documenti Frame Windows | Microsoft Docs
-ms.custom: ''
+title: Creazione di finestre cornice del documento
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - frame windows [MFC], creating
 - document templates [MFC], and document frame windows
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 172076113a6bd7e223d99c238d0e05987cdcaae6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9c52cdbd940222b83de9c8e1e47e4e91ad424b44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611328"
 ---
 # <a name="creating-document-frame-windows"></a>Creazione di finestre cornice del documento
 

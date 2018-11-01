@@ -1,28 +1,18 @@
 ---
-title: Classe CComEnumOnSTL | Microsoft Docs
-ms.custom: ''
+title: Classe CComEnumOnSTL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComEnumOnSTL
 - atlcom/ATL::CComEnumOnSTL
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4821ba572d2719ebba6c693cc39b96971002512
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7b1efb3bd574edde59f6d8845d73a51dfabea433
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106324"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626616"
 ---
 # <a name="ccomenumonstl-class"></a>Classe CComEnumOnSTL
 

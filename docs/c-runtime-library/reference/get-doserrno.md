@@ -1,10 +1,6 @@
 ---
-title: _get_doserrno | Microsoft Docs
-ms.custom: ''
+title: _get_doserrno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_doserrno
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _get_doserrno
 - get_doserrno
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7cef2c068fad2f18cb1d11d33e551588800cb64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d28b9ec47108f7051a908f874584bbfddf5d6a3d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399569"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605166"
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 
@@ -47,27 +37,27 @@ Ottiene il valore di errore restituito dal sistema operativo prima che venga con
 ## <a name="syntax"></a>Sintassi
 
 ```C
-errno_t _get_doserrno( 
-   int * pValue 
+errno_t _get_doserrno( 
+   int * pValue 
 );
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *pValue*<br/>
-Un puntatore a un numero intero in cui inserire il valore corrente di **doserrno** macro globale.
+Un puntatore a un integer da riempire con il valore corrente del **doserrno** macro globale.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se **get_doserrno** ha esito positivo, restituisce zero; in caso contrario, restituisce un codice di errore. Se *pValue* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **EINVAL**.
+Se **get_doserrno** ha esito positivo, restituisce zero; in caso contrario, restituisce un codice di errore. Se *pValue* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **doserrno** macro globale è impostato su zero durante l'inizializzazione CRT, prima di processo dell'inizio dell'esecuzione. È impostata sul valore di errore del sistema operativo restituito da qualsiasi chiamata di funzione a livello del sistema che restituisce un errore del sistema operativo e non viene mai reimpostata su zero durante l'esecuzione. Quando si scrive codice per controllare il valore di errore restituito da una funzione, non sempre crittografata **doserrno** utilizzando [set_doserrno](set-doserrno.md) prima della chiamata di funzione. Perché un'altra chiamata di funzione potrebbe sovrascrivere **doserrno**, controllare il valore utilizzando **get_doserrno** immediatamente dopo la chiamata di funzione.
+Il **doserrno** macro globale è impostata su zero durante l'inizializzazione di CRT, prima di processo dell'inizio dell'esecuzione. È impostata sul valore di errore del sistema operativo restituito da qualsiasi chiamata di funzione a livello del sistema che restituisce un errore del sistema operativo e non viene mai reimpostata su zero durante l'esecuzione. Quando si scrive codice per controllare il valore di errore restituito da una funzione, deselezionare sempre **doserrno** utilizzando [set_doserrno](set-doserrno.md) prima della chiamata di funzione. Poiché un'altra chiamata di funzione potrebbe sovrascrivere **doserrno**, controllare il valore usando **get_doserrno** immediatamente dopo la chiamata di funzione.
 
-È consigliabile [get_errno](get-errno.md) anziché **get_doserrno** i codici di errore portabile.
+È consigliabile [get_errno](get-errno.md) invece di **get_doserrno** per i codici di errore portabili.
 
-I valori possibili del **doserrno** sono definite nel \<errno. h >.
+I valori possibili del **doserrno** sono definiti in \<errno. h >.
 
 ## <a name="requirements"></a>Requisiti
 

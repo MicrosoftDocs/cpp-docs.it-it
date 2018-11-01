@@ -1,10 +1,6 @@
 ---
-title: strset, wcsset | Microsoft Docs
-ms.custom: ''
+title: strset, wcsset
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcsset
 - strset
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - strset
 - wcsset
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsset function
 - strset function
 ms.assetid: 20e132d8-4b6c-4341-b1eb-8e19b46047e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef2ed501870a202a0db52f5f1926dc08e9c6bdf6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 352e2f0591c74b98ade309759b5d286c597fb624
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658926"
 ---
 # <a name="strset-wcsset"></a>strset, wcsset
 

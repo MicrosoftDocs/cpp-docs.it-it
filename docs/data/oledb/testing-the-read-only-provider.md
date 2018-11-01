@@ -1,29 +1,18 @@
 ---
-title: Test di Provider in sola lettura | Microsoft Docs
-ms.custom: ''
+title: Test di un provider in sola lettura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 309dc98988e4ae4fb1edd75bfb303fc8d9b078cd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 18edc1ae13ef66f9646edbcf1d0fdfdbe0586cff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611211"
 ---
 # <a name="testing-the-read-only-provider"></a>Test di un provider in sola lettura
 

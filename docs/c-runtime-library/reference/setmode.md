@@ -1,10 +1,6 @@
 ---
-title: _setmode | Microsoft Docs
-ms.custom: ''
+title: _setmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmode
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _setmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], console output
 - files [C++], modes
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59aed27ec4803cd1709635da44ef37d748342e29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617438"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -68,18 +58,18 @@ Nuova modalità di conversione.
 
 In caso di esito positivo, restituisce la modalità di conversione precedente.
 
-Se a questa funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** a una delle due **EBADF**, che indica un descrittore di file non valido, o **EINVAL**, che indica un oggetto non valido *modalità* argomento.
+Se a questa funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** a una delle due **EBADF**, che indica un descrittore di file non valido, o **EINVAL**, ovvero indica un valore non valido *modalità* argomento.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **setMode** funzione imposta *modalità* la modalità di conversione di file fornito dal *fd*. Passando **o_text** come *modalità* imposta il testo (convertito è) modalità. Combinazioni di ritorno a capo return-line feed (CR-LF) vengono convertite in una singola riga carattere di avanzamento nell'input. I caratteri di avanzamento riga sono convertiti in combinazioni di ritorno a capo-avanzamento riga in fase di output. Passando **O_BINARY** set (non convertita) modalità binaria, in cui queste conversioni sono eliminate.
+Il **setMode** funzione imposta *modalità* la modalità di conversione di file fornito dal *fd*. Il passaggio **o_text** come *modalità* imposta il testo (convertito è,) modalità. Combinazioni di ritorno a capo return-line feed (CR-LF) vengono convertite in una singola riga, carattere di avanzamento nell'input. I caratteri di avanzamento riga sono convertiti in combinazioni di ritorno a capo-avanzamento riga in fase di output. Il passaggio **O_BINARY** set (non convertita) modalità binaria, in cui queste conversioni sono eliminate.
 
-È inoltre possibile passare **_O_U16TEXT**, **_O_U8TEXT**, o **o_wtext** per abilitare la modalità Unicode, come illustrato nel secondo esempio più avanti in questo documento. **setMode** viene generalmente usata per modificare la modalità di traduzione predefinita di **stdin** e **stdout**, ma è possibile usare qualsiasi file. Se si applica **setMode** il descrittore del file per un flusso, chiamare il metodo **setMode** prima di eseguire qualsiasi operazione di input o output nel flusso.
+È anche possibile passare **_O_U16TEXT**, **_O_U8TEXT**, o **o_wtext** per abilitare la modalità Unicode, come illustrato nel secondo esempio più avanti in questo documento. **setMode** viene in genere usato per modificare la modalità di traduzione predefinita di **stdin** e **stdout**, ma è possibile usarlo per qualsiasi file. Se si applicano **setMode** al descrittore di file per un flusso, chiamare **setMode** prima di eseguire qualsiasi operazione di input o output nel flusso.
 
 > [!CAUTION]
-> Se si scrive dati in un flusso di file, in modo esplicito scaricare il codice usando [fflush](fflush.md) prima di usare **setMode** per modificare la modalità. Se non si scarica il codice, è possibile che si ottenga comportamento imprevisto. Se non sono stati scritti dati nel flusso, non sarà necessario scaricare il codice.
+> Se si scrittura dati in un flusso di file, scaricare esplicitamente il codice usando [fflush](fflush.md) prima di usare **setMode** per modificare la modalità. Se non si scarica il codice, è possibile che si ottenga comportamento imprevisto. Se non sono stati scritti dati nel flusso, non sarà necessario scaricare il codice.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,10 +1,6 @@
 ---
-title: _ismbbalpha, _ismbbalpha_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbalpha, _ismbbalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbalpha
 - _ismbbalpha_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbalpha_l
 - _ismbbalpha
 - _ismbbalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbalpha function
 - ismbbalpha_l function
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6fa4708cf4c5c297d5a537728d4e5988f21e21b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c08a92ae0630c977f12deb1d0bd7587f575efd86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399095"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588669"
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
 
@@ -74,7 +64,7 @@ Impostazioni locali da usare.
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-è diverso da zero per *c*, oppure 0 in caso contrario. **ismbbalpha** utilizza le impostazioni locali correnti per le impostazioni dei caratteri dipendenti dalle impostazioni locali. **ismbbalpha_l** è identica ad eccezione del fatto che usa le impostazioni locali passata.
+è diverso da zero per *c*, oppure 0 in caso contrario. **ismbbalpha** Usa le impostazioni locali correnti per le impostazioni del carattere dipendente dalle impostazioni locali. **ismbbalpha_l** è identica, ma usa le impostazioni locali passata.
 
 ## <a name="requirements"></a>Requisiti
 
