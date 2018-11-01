@@ -1,10 +1,6 @@
 ---
-title: _set_error_mode | Microsoft Docs
-ms.custom: ''
+title: _set_error_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_error_mode
 apilocation:
@@ -23,26 +19,20 @@ apitype: DLLExport
 f1_keywords:
 - set_error_mode
 - _set_error_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 130e9fee13401c8b598a5d6eef7d1fab3ed80ae9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406495"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502310"
 ---
 # <a name="seterrormode"></a>_set_error_mode
 
-Modifica **__error_mode** per determinare una posizione non predefinita in cui il runtime C scrive un messaggio di errore per un errore che potrebbe terminare il programma.
+Modifica **error_mode** per determinare una posizione non predefinita in cui il runtime C scrive un messaggio di errore per un errore che potrebbe terminare il programma.
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -66,7 +56,7 @@ Restituisce la precedente impostazione o -1 se si verifica un errore.
 
 ## <a name="remarks"></a>Note
 
-Controlla il sink di output di errore impostando il valore di **__error_mode**. Ad esempio, è possibile indirizzare l'output a un errore standard o usare il **MessageBox** API.
+Controlla il sink di output di errore impostando il valore della **error_mode**. Ad esempio, è possibile indirizzare l'output a un errore standard o usare il **MessageBox** API.
 
 Il *mode_val* parametro può essere impostato su uno dei valori seguenti.
 
@@ -75,11 +65,11 @@ Il *mode_val* parametro può essere impostato su uno dei valori seguenti.
 |**_OUT_TO_DEFAULT**|Il sink di errore è determinato dal **__app_type**.|
 |**_OUT_TO_STDERR**|Il sink di errore è un errore standard.|
 |**_OUT_TO_MSGBOX**|Il sink di errore è una finestra di messaggio.|
-|**_REPORT_ERRMODE**|Report corrente **__error_mode** valore.|
+|**_REPORT_ERRMODE**|Report corrente **error_mode** valore.|
 
 Se viene passato un valore diverso da quelli elencati, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **set_error_mode** imposta **errno** al **EINVAL** e restituisce -1.
 
-Quando viene usato con un [asserzione](assert-macro-assert-wassert.md), **set_error_mode** consente di visualizzare l'istruzione non riuscita nella finestra di dialogo e offre la possibilità di scegliere il **ignora** pulsante in modo che sia possibile continuare a eseguire il programma.
+Quando viene usato con un [assert](assert-macro-assert-wassert.md), **set_error_mode** Visualizza l'istruzione non riuscita nella finestra di dialogo e offre la possibilità di scegliere il **ignora** pulsante in modo che sia possibile continuare a eseguire il programma.
 
 ## <a name="requirements"></a>Requisiti
 

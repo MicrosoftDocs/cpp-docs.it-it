@@ -1,10 +1,6 @@
 ---
-title: strupr, wcsupr | Microsoft Docs
-ms.custom: ''
+title: strupr, wcsupr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strupr
 - wcsupr
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - strupr
 - wcsupr
-dev_langs:
-- C++
 helpviewer_keywords:
 - strupr function
 - wcsupr function
 ms.assetid: 17dfe1cd-3b09-4702-9f89-2207f44953e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 373c63df7a0f446f7c57cf794f31a96339a58d58
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f263ed98dbbc56065f2ca4d1b8b5f234132b7e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407226"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565256"
 ---
 # <a name="strupr-wcsupr"></a>strupr, wcsupr
 

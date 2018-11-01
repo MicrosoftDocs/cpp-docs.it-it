@@ -1,25 +1,15 @@
 ---
-title: Flussi di output | Microsoft Docs
-ms.custom: ''
+title: Flussi di output
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dde86faf5a19cfe57e445814b75bb3c8b82efbc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c64c46acca405f948e8314fb23944682adf09c43
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511111"
 ---
 # <a name="output-streams"></a>Flussi di output
 

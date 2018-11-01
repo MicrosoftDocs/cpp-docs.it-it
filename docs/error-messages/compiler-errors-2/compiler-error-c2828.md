@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2828 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2828
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2828
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2828
 ms.assetid: d8df6ed4-5954-46c2-b59b-52881d4e923d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65d9c36946459372924adc23caa5a44c40568f33
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d6dc742a181d8aebc041d9ffadd6256d3b7c9348
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051932"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535343"
 ---
 # <a name="compiler-error-c2828"></a>Errore del compilatore C2828
 

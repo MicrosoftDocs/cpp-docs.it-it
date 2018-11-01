@@ -1,12 +1,6 @@
 ---
-title: Routing dei comandi | Microsoft Docs
-ms.custom: ''
+title: comandi (routing)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 543b9e34c881285c295fb7ab7ee2107e36c99a9c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541700"
 ---
 # <a name="command-routing"></a>comandi (routing)
 
@@ -45,11 +35,11 @@ Come costosi è questo meccanismo di Rounting rispetto a ciò che il gestore fa 
 
 |Quando un oggetto di questo tipo riceve un comando . . .|Concede a se stesso e ad altri oggetti destinazione comando l'opportunità di gestire il comando in questo ordine:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Finestra cornice MDI (`CMDIFrameWnd`)|1.  Attiva `CMDIChildWnd`<br />2.  Questa finestra cornice<br />3.  Applicazione (`CWinApp` oggetto)|
-|Finestre cornice del documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Visualizzazione attiva<br />2.  Questa finestra cornice<br />3.  Applicazione (`CWinApp` oggetto)|
+|Finestra cornice MDI (`CMDIFrameWnd`)|1.  `CMDIChildWnd` attivo<br />2.  Questa finestra cornice<br />3.  Applicazione (oggetto `CWinApp`)|
+|Finestre cornice del documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Visualizzazione attiva<br />2.  Questa finestra cornice<br />3.  Applicazione (oggetto `CWinApp`)|
 |Visualizza|1.  Questa visualizzazione<br />2.  Documento collegato alla visualizzazione|
 |Document|1.  Documento corrente<br />2.  Modello di documento collegato al documento|
-|Finestra di dialogo|1.  Questa finestra di dialogo<br />2.  Finestra proprietaria della finestra di dialogo.<br />3.  Applicazione (`CWinApp` oggetto)|
+|Finestra di dialogo|1.  Questa finestra di dialogo<br />2.  Finestra proprietaria della finestra di dialogo.<br />3.  Applicazione (oggetto `CWinApp`)|
 
 Nei casi in cui le voci numerate nella seconda colonna della tabella precedente menzionano altri oggetti, come un documento, vedere l'elemento corrispondente nella prima colonna. Ad esempio, quando si legge nella seconda colonna che la visualizzazione inoltra un comando al suo documento, vedere la voce "Documento" nella prima colonna per continuare a seguire il routing.
 
