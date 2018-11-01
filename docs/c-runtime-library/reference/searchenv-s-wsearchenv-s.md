@@ -1,10 +1,6 @@
 ---
-title: _searchenv_s, _wsearchenv_s | Microsoft Docs
-ms.custom: ''
+title: _searchenv_s, _wsearchenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsearchenv_s
 - _searchenv_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b14dee908cdf1cc0d564047035a72f501df130b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410915"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505677"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 
@@ -101,13 +91,13 @@ Ambiente per la ricerca.
 Buffer per l'archiviazione del percorso completo.
 
 *numberOfElements*<br/>
-Dimensioni di *pathname* buffer.
+Dimensioni dei *pathname* buffer.
 
 ## <a name="return-value"></a>Valore restituito
 
 Zero se con esito positivo; un codice di errore in caso di errore.
 
-Se *filename* è una stringa vuota, il valore restituito è **ENOENT**.
+Se *nomefile* è una stringa vuota, il valore restituito viene **ENOENT**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
@@ -117,17 +107,17 @@ Se *filename* è una stringa vuota, il valore restituito è **ENOENT**.
 |**NULL**|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|non modificato|
 |qualsiasi|qualsiasi|qualsiasi|<= 0|**EINVAL**|non modificato|
 
-Se si verifica una di queste condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituire **EINVAL**.
+Se si verifica una di queste condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **searchenv_s** routine cerca il file di destinazione nel dominio specificato. Il *varname* variabile può essere qualsiasi ambiente o variabile definita dall'utente che specifica un elenco dei percorsi di directory, ad esempio **percorso**, **LIB**, e **inclusione** . Poiché **searchenv_s** tra maiuscole e minuscole, *varname* deve corrispondere al caso della variabile di ambiente. Se *varname* non corrisponde al nome di una variabile di ambiente definito nell'ambiente del processo, la funzione restituisce zero e il *pathname* variabile rimane invariata.
+Il **searchenv_s** routine cerca il file di destinazione nel dominio specificato. Il *varname* variabile può essere qualsiasi ambiente o variabile definita dall'utente che specifica un elenco di percorsi di directory, ad esempio **PATH**, **LIB**, e **inclusione** . In quanto **searchenv_s** tra maiuscole e minuscole, *varname* deve corrispondere al caso della variabile di ambiente. Se *varname* non corrisponde il nome di una variabile di ambiente definito nell'ambiente del processo, la funzione restituisce zero e il *pathname* variabile rimane invariata.
 
-La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione è in una di queste directory, il percorso appena creato viene copiato in *pathname*. Se il *filename* non viene trovato alcun file, *pathname* contiene una stringa vuota con terminazione null.
+La routine cerca innanzitutto il file nella directory di lavoro corrente. Se non trova il file, cerca nelle directory specificate dalla variabile d'ambiente. Se il file di destinazione è in una di queste directory, il percorso appena creato viene copiato nel *pathname*. Se il *nomefile* non viene trovato alcun file, *pathname* contiene una stringa vuota con terminazione null.
 
-Il *pathname* buffer deve essere almeno **MAX_PATH** caratteri per consentire la lunghezza del nome del percorso costruito completo. In caso contrario, **searchenv_s** potrebbe causare un sovraccarico di *pathname* buffer causando un comportamento imprevisto.
+Il *pathname* buffer deve essere almeno **MAX_PATH** caratteri per consentire la lunghezza totale del nome del percorso costruito. In caso contrario, **searchenv_s** potrebbe sovraccaricare la *pathname* buffer causando un comportamento imprevisto.
 
-**wsearchenv_s** è una versione a caratteri wide **searchenv_s**; gli argomenti da **wsearchenv_s** sono stringhe a caratteri "wide". **wsearchenv_s** e **searchenv_s** si comportano in modo identico in caso contrario.
+**wsearchenv_s** è una versione a caratteri wide di **searchenv_s**; gli argomenti **wsearchenv_s** sono stringhe a caratteri wide. **wsearchenv_s** e **searchenv_s** hanno lo stesso comportamento in caso contrario.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

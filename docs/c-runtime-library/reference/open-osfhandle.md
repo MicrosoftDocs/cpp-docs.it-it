@@ -1,10 +1,6 @@
 ---
-title: _open_osfhandle | Microsoft Docs
-ms.custom: ''
+title: _open_osfhandle
 ms.date: 05/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _open_osfhandle
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _open_osfhandle
 - open_osfhandle
-dev_langs:
-- C++
 helpviewer_keywords:
 - open_osfhandle function
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af3783420389dc008e39c818c39406f0b2af8af5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e8b7dc097c1af60894c627b8b660c4d9d81361db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569836"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519457"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -64,22 +54,22 @@ Tipi di operazioni consentite.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, **open_osfhandle** restituisce un descrittore di file di runtime C. In caso contrario, restituisce -1.
+Caso di esito positivo **open_osfhandle** restituisce un descrittore di file di runtime C. In caso contrario, restituisce -1.
 
 ## <a name="remarks"></a>Note
 
-Il **open_osfhandle** funzione alloca un descrittore di file di runtime C e la associa l'handle di file del sistema operativo specificato da *osfhandle*. Per evitare un avviso del compilatore, eseguire il cast di *osfhandle* argomento dal **gestire** al **intptr_t**. Il *flags* l'argomento è un'espressione integer formata da uno o più delle costanti manifesto definiti \<fcntl >. Quando due o più costanti del manifesto vengono usate per costituire il *flags* argomento, vengono combinate con l'operatore OR bit per bit ( **&#124;** ).
+Il **open_osfhandle** funzione alloca un descrittore di file di runtime C e la associa l'handle di file del sistema operativo specificato da *osfhandle*. Per evitare un avviso del compilatore, eseguire il cast di *osfhandle* argomento dal **gestire** al **intptr_t**. Il *flags* l'argomento è un'espressione integer formata da uno o più delle costanti manifeste definite in \<fcntl. h >. Quando vengono usate due o più costanti manifeste per comporre il *flags* argomento, le costanti vengono combinate con l'operatore OR bit per bit ( **&#124;** ).
 
-Queste costanti manifesto sono definite in \<fcntl >:
+Queste costanti manifeste definite \<fcntl. h >:
 
 |||
 |-|-|
-**\_O\_APPEND**|Posiziona un puntatore del file alla fine del file prima di ogni operazione di scrittura.
+**\_U\_APPEND**|Posiziona un puntatore del file alla fine del file prima di ogni operazione di scrittura.
 **\_O\_RDONLY**|Apre il file in sola lettura.
 **\_O\_TEXT**|Apre il file in modalità testo (convertito).
 **\_O\_WTEXT**|Apre il file in modalità Unicode (convertito in UTF-16).
 
-Il **open_osfhandle** chiamata trasferisce la proprietà dell'handle di file Win32 per il descrittore del file. Per chiudere un file aperto con **open_osfhandle**, chiamare [ \_chiudere](close.md). L'handle di file del sistema operativo sottostante viene chiuso anche da una chiamata a **Close**, pertanto non è necessario chiamare la funzione Win32 **CloseHandle** nell'handle di originale. Se il descrittore del file è di proprietà di un **FILE &#42;**  flusso, quindi chiamare [fclose](fclose-fcloseall.md) su quel **FILE &#42;**  stream e inoltre chiude il descrittore di file e il handle sottostante. In questo caso, non chiamare **Close** nel descrittore di file.
+Il **open_osfhandle** chiamata trasferisce la proprietà dell'handle di file Win32 per il descrittore del file. Per chiudere un file aperto con **open_osfhandle**, chiamare [ \_chiudere](close.md). L'handle di file del sistema operativo sottostante viene inoltre chiuso da una chiamata a **Close**, quindi non è necessario chiamare la funzione Win32 **CloseHandle** sull'handle originale. Se il descrittore del file è di proprietà di un **FILE &#42;**  flusso, quindi chiamare [fclose](fclose-fcloseall.md) su esso **FILE &#42;**  flusso chiude anche il descrittore di file e il handle sottostante. In questo caso, non chiamare **Close** nel descrittore di file.
 
 ## <a name="requirements"></a>Requisiti
 

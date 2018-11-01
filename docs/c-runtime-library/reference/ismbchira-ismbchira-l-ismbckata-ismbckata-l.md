@@ -1,10 +1,6 @@
 ---
-title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l | Microsoft Docs
-ms.custom: ''
+title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbckata
 - _ismbchira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbchira_l
 - _ismbchira_l
 - _ismbchira
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbckata function
 - _ismbchira function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fe2b9c824fcc45eb2d0fda82cd350d3a9435b94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403729"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506587"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,20 +83,20 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c* < = 255 ed è presente un corrispondente **ismbb** routine (ad esempio **ismbcalnum** corrisponde a **ismbbalnum**), il il risultato è il valore restituito dell'oggetto corrispondente **ismbb** routine.
+Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c* < = 255 ed è presente un corrispondente **ismbb** routine (ad esempio, **ismbcalnum** corrisponde al **ismbbalnum**), il il risultato è il valore restituito dell'oggetto corrispondente **ismbb** routine.
 
 ## <a name="remarks"></a>Note
 
 Ognuna di queste funzioni testa una particolare condizione su un determinato carattere multibyte.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni con il **l** suffisso sono identiche ma usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condizione di test (solo per la tabella codici 932)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Hiragana DBCS: 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Hiragana DBCS: 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Katakana DBCS: 0x8340 < =*c*< = 0x8396.|
-|**_ismbckata_l**|Katakana DBCS: 0x8340 < =*c*< = 0x8396.|
+|**_ismbchira**|Hiragana DBCS: 0x829f< < =*c*< lt;=0x82f1.|
+|**_ismbchira_l**|Hiragana DBCS: 0x829f< < =*c*< lt;=0x82f1.|
+|**_ismbckata**|Katakana DBCS: 0x8340< < =*c*< lt;=0x8396.|
+|**_ismbckata_l**|Katakana DBCS: 0x8340< < =*c*< lt;=0x8396.|
 
 **Fine della sezione specifica per la tabella codici 932**
 

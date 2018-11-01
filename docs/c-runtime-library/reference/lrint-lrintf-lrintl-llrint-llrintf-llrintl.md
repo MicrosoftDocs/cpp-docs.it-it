@@ -1,11 +1,6 @@
 ---
-title: lrint, lrintf, lrintl, llrint, llrintf, llrintl | Microsoft Docs
-ms.custom: ''
+title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lrint
 - lrintl
@@ -39,8 +34,6 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -49,16 +42,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ace427267a45c87213f62276e1d7799f27db1cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1fc404182d9d2a5cd6870fcb2cd1ff3e5f4da55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401259"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500842"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -116,7 +105,7 @@ Valore da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, restituisce il valore intero arrotondato del *x*.
+Se l'operazione riesce, restituisce il valore integrale arrotondato di *x*.
 
 |Problema|INVIO|
 |-----------|------------|
@@ -124,9 +113,9 @@ Se ha esito positivo, restituisce il valore intero arrotondato del *x*.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **lrint** e **llrint** che accettano **float** e **lungo**  **Double** tipi. In un programma C **lrint** e **llrint** hanno sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **lrint** e **llrint** che accettano **float** e **lungo**  **Double** tipi. In un programma C **lrint** e **llrint** hanno sempre un **double**.
 
-Se *x* non rappresenta l'equivalente a virgola mobile di un valore integrale, queste funzioni generano **FE_INEXACT**.
+Se *x* non rappresenta l'equivalente a virgola mobile e di un valore integrale, queste funzioni generano **FE_INEXACT**.
 
 **Informazioni specifiche Microsoft**: quando il risultato non è compreso nell'intervallo del tipo restituito o quando il parametro è NaN o infinito, il valore restituito è definito dall'implementazione. Il compilatore Microsoft restituisce un valore zero (0).
 

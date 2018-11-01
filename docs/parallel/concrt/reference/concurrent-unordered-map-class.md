@@ -1,10 +1,6 @@
 ---
-title: Classe concurrent_unordered_map | Microsoft Docs
-ms.custom: ''
+title: Classe concurrent_unordered_map
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_unordered_map
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map
@@ -15,21 +11,15 @@ f1_keywords:
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::key_eq
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::swap
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::unsafe_erase
-dev_langs:
-- C++
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77198b9282dbf3def8a92d5a824f7fbeb313310f
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 31eec71dd134a5c675f70070ce1457462d10b739
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163439"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509370"
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 

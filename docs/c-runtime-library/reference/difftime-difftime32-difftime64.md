@@ -1,10 +1,6 @@
 ---
-title: difftime, _difftime32, _difftime64 | Microsoft Docs
-ms.custom: ''
+title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _difftime32
 - difftime
@@ -28,8 +24,6 @@ f1_keywords:
 - difftime64
 - _difftime32
 - difftime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _difftime32 function
 - difftime function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a972a8f7ee2cc5e97c22afeaa21f86e4b4d6d509
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefa946f0458f79950b443c0a84272866845df8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398721"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505950"
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -71,17 +61,17 @@ Tempo iniziale.
 
 ## <a name="return-value"></a>Valore restituito
 
-**difftime** restituisce il tempo trascorso in secondi, da *timeStart* a *inizioOra di fine*. Il valore restituito è un numero a virgola mobile e precisione doppia. Il valore restituito può essere 0 e indica un errore.
+**difftime** restituisce il tempo trascorso in secondi, da *timeStart* al *inizioOra di fine*. Il valore restituito è un numero a virgola mobile e precisione doppia. Il valore restituito può essere 0 e indica un errore.
 
 ## <a name="remarks"></a>Note
 
 Il **difftime** funzione calcola la differenza tra i due valori temporali forniti *timeStart* e *inizioOra di fine*.
 
-Il valore di ora fornito deve adattarsi all'interno dell'intervallo di **time_t**. **time_t** è un valore a 64 bit. Pertanto, la fine dell'intervallo è stata estesa da 23:59:59 18 gennaio, 2038, ora UTC a 23:59:59, 31 dicembre, 3000. L'intervallo inferiore di **time_t** è ancora mezzanotte del 1 ° gennaio 1970.
+Il valore di ora fornito deve adattarsi all'interno dell'intervallo di **time_t**. **time_t** è un valore a 64 bit. Pertanto, la fine dell'intervallo è stata estesa da 23:59:59 18 gennaio, 2038, ora UTC a 23:59:59, 31 dicembre, 3000. L'intervallo di inferiore **time_t** è ancora mezzanotte del 1 ° gennaio 1970.
 
-**difftime** è una funzione inline che restituisce uno **_difftime32** o **_difftime64** a seconda che **_USE_32BIT_TIME_T** è definito. _difftime32 e _difftime64 possono essere utilizzati direttamente per imporre l'utilizzo di una determinata dimensione del tipo di tempo.
+**difftime** è una funzione inline equivalente a una delle due **_difftime32** oppure **_difftime64** a seconda che **_USE_32BIT_TIME_T** è definito. _difftime32 e _difftime64 possono essere utilizzati direttamente per imporre l'utilizzo di una determinata dimensione del tipo di tempo.
 
-Queste funzioni convalidano i relativi parametri. Se i parametri hanno un valore pari a zero o negativo, viene richiamato il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, queste funzioni restituiscono 0 e impostare **errno** alla **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se i parametri hanno un valore pari a zero o negativo, viene richiamato il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, queste funzioni restituiscono 0 e impostare **errno** al **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

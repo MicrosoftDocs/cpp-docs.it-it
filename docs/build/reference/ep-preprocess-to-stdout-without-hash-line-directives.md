@@ -1,15 +1,9 @@
 ---
-title: '-EP (pre-elabora in stdout senza direttive #line) | Microsoft Docs'
-ms.custom: ''
+title: '/EP (Pre-elabora in stdout senza direttive #line)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /ep
 - VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines
-dev_langs:
-- C++
 helpviewer_keywords:
 - copy preprocessor output to stdout
 - preprocessor output, copy to stdout
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - EP compiler option [C++]
 - /EP compiler option [C++]
 ms.assetid: 6ec411ae-e33d-4ef5-956e-0054635eabea
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 598c202cbac0176cb77243c7f0f891ef94c3dcc6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6da6bb80bcf6c5b6f130cbdec0be6a885fc5feb0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714883"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503038"
 ---
 # <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (Pre-elabora in stdout senza direttive #line)
 

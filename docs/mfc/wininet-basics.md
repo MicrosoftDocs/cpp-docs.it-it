@@ -1,27 +1,17 @@
 ---
-title: Nozioni di base di WinInet | Microsoft Docs
-ms.custom: ''
+title: Concetti di base su WinInet
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - OnStatusCallback method [MFC]
 - WinInet classes [MFC], displaying progress
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98ca2eab519cdfa3140d40adfd83070976dcc965
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f56d2bb6e6a0b49b3d69dbcc0bf6346b72e9f7b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435649"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519184"
 ---
 # <a name="wininet-basics"></a>Concetti di base su WinInet
 

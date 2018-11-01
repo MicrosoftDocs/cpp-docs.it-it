@@ -1,12 +1,6 @@
 ---
-title: 'Recordset: Applicazione di filtri di record (ODBC) | Microsoft Docs'
-ms.custom: ''
+title: 'Recordset: applicazione di filtri ai record (ODBC)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - data [MFC], filtering
 - recordsets [C++], filtering
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 6cdd5882c259c2f1746d1c6f41572631da4a2788
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079948"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514751"
 ---
 # <a name="recordset-filtering-records-odbc"></a>Recordset: applicazione di filtri ai record (ODBC)
 

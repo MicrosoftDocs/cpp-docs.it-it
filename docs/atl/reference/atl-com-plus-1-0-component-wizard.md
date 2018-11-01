@@ -1,28 +1,18 @@
 ---
-title: Creazione guidata 1.0 componente ATL COM+ | Microsoft Docs
-ms.custom: ''
+title: Creazione guidata componente ATL COM+ 1.0
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250406"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513776"
 ---
 # <a name="atl-com-10-component-wizard"></a>Creazione guidata componente ATL COM+ 1.0
 
@@ -31,7 +21,7 @@ Utilizzare questa procedura guidata per aggiungere un oggetto per il progetto ch
 È possibile specificare se l'oggetto supporta le interfacce duali e automazione. È inoltre possibile indicare il supporto per l'interfaccia informazioni degli errori, controllo di oggetti avanzati, transazioni e accodamento asincrono.
 
 > [!WARNING]
-> In Visual Studio 2017 versione 15.9 questa procedura guidata per codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto per ATL e MFC generale non è interessato dalla procedura di rimozione di questa procedura guidata. Se vuoi condividere commenti e suggerimenti su questa deprecazione, completare [questo sondaggio](https://www.surveymonkey.com/r/QDWKKCN). Commenti e suggerimenti è importante per noi.
+> In Visual Studio 2017 versione 15.9 questa procedura guidata del codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto generale per ATL e MFC non subisce attualmente l'effetto della rimozione di questa procedura guidata. Se vuoi condividere i tuoi commenti e suggerimenti su questa deprecazione, compila il [presente sondaggio](https://www.surveymonkey.com/r/QDWKKCN). I tuoi commenti e suggerimenti sono importanti per noi.
 
 ## <a name="remarks"></a>Note
 

@@ -1,29 +1,18 @@
 ---
-title: Aggiornamento dei rowset | Microsoft Docs
-ms.custom: ''
+title: aggiornamento rowset
 ms.date: 10/19/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - rowsets, updating data
 - updating data, rowsets
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: f4bac44066cae267e0b44d21a839de7ecdd9f2a5
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 03f1a5c964d6de6c4bba0c965e5c1debfd4c2034
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521303"
 ---
 # <a name="updating-rowsets"></a>aggiornamento rowset
 

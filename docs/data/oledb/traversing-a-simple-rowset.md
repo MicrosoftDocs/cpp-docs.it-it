@@ -1,12 +1,6 @@
 ---
-title: Scorrimento di un Rowset semplice | Microsoft Docs
-ms.custom: ''
+title: Scorrimento di un rowset semplice
 ms.date: 10/19/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - data access [C++], rowsets
 - rowsets [C++], accessing
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 358e7d4833587d459e813af442c4657cfa86a0ec
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2c873451e9d2a47007330a5f05af05122a166ffb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527267"
 ---
 # <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
 
