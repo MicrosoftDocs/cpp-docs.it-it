@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3813 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3813
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3813
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3813
 ms.assetid: ffdbc489-71bf-4cd6-988c-f824c9ab3ceb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b8984feb5b657c26d2137eb9a3c648f1bcf442bf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 302b21d709424cda50abd0247f7b82048511cd73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066271"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470590"
 ---
 # <a name="compiler-error-c3813"></a>Errore del compilatore C3813
 

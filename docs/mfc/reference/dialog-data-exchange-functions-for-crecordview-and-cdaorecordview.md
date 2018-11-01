@@ -1,10 +1,6 @@
 ---
-title: Funzioni di scambio di dati di finestra di dialogo per CRecordView e CDaoRecordView | Microsoft Docs
-ms.custom: ''
+title: Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - AFXDAO/DDX_FieldCBIndex
 - AFXDAO/DDX_FieldCBString
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXDAO/DDX_FieldRadio
 - AFXDAO/DDX_FieldScroll
 - AFXDAO/DDX_FieldText
-dev_langs:
-- C++
 helpviewer_keywords:
 - DDX_Field functions [MFC]
 - ODBC [MFC], dialog data exchange (DDX) support
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c2c954851348fcb96b28a4c47aee4b4475aeaca
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070283"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481822"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
 

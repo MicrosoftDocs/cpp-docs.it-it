@@ -1,29 +1,19 @@
 ---
-title: _rotl8, _rotl16 | Microsoft Docs
-ms.custom: ''
+title: _rotl8, _rotl16
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _rotl8
 - _rotl16
-dev_langs:
-- C++
 helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b70e3df22e4503d1e1a66d071c33aea7f2aef52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c294569b94589a0f64519725c72075374308e231
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412132"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474165"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 
@@ -34,13 +24,13 @@ Ruotare i valori di input a sinistra del bit più significativo (MSB) di un nume
 ## <a name="syntax"></a>Sintassi
 
 ```
-unsigned char _rotl8( 
-   unsigned char value, 
-   unsigned char shift 
+unsigned char _rotl8( 
+   unsigned char value, 
+   unsigned char shift 
 );
-unsigned short _rotl16( 
-   unsigned short value, 
-   unsigned char shift 
+unsigned short _rotl16( 
+   unsigned short value, 
+   unsigned char shift 
 );
 ```
 

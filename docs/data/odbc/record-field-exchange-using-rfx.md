@@ -1,26 +1,15 @@
 ---
-title: 'Trasferimento di campi di record: Utilizzo di RFX | Microsoft Docs'
-ms.custom: ''
+title: 'Trasferimento di campi di record: utilizzo di RFX'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: e10f082a4f0bac5d97c3352e88a075412ce98811
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e1ecb43226c9e21f3b13c2d5b7c2a0f93b72f3cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469550"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Trasferimento di campi di record: utilizzo di RFX
 

@@ -1,25 +1,15 @@
 ---
-title: Segni di punteggiatura (C++) | Microsoft Docs
-ms.custom: ''
+title: Segni di punteggiatura (C++)
 ms.date: 11/04/2016
-ms.technology:
-- devlang-cpp
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - punctuators [C++]
 ms.assetid: 1521564c-a977-488a-9490-068079897592
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438b3f0469d1e8426b1e0ec2a19a63d1ae63c041
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cef34a17de99a189a590ac3f13c0db9563df643c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039270"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478268"
 ---
 # <a name="punctuators-c"></a>Segni di punteggiatura (C++)
 

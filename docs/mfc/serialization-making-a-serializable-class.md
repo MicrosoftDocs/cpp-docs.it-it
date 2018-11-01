@@ -1,12 +1,6 @@
 ---
-title: 'Serializzazione: Creazione di una classe serializzabile | Microsoft Docs'
-ms.custom: ''
+title: 'Serializzazione: creazione di una classe serializzabile'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - serializable class [MFC]
 - DECLARE_SERIAL macro [MFC]
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f3824e87a2016a848b3723aaa293f235f6f9b09
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: aa9a7f6cb1cb28c701e3954cad27e60cf9f7df4f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054865"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486970"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializzazione: creazione di una classe serializzabile
 

@@ -1,10 +1,6 @@
 ---
-title: _mbbtype, _mbbtype_l | Microsoft Docs
-ms.custom: ''
+title: _mbbtype, _mbbtype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbbtype
 - _mbbtype_l
@@ -26,24 +22,18 @@ f1_keywords:
 - mbbtype
 - mbbtype_l
 - _mbbtype
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbbtype function
 - _mbbtype_l function
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 91b78b0dc57873810f96a793288da3f1457299de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6d17b99e4314c2ab836a16129ab8a0e6ac7720e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467171"
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
 
@@ -79,9 +69,9 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**mbbtype** restituisce il tipo di byte in una stringa. Questa decisione è sensibile al contesto, come specificato dal valore di *tipo*, che fornisce la condizione di test di controllo. *tipo* è il tipo byte precedente nella stringa. Le costanti manifesto nella tabella seguente sono definite in Mbctype.h.
+**mbbtype** restituisce il tipo di byte in una stringa. Questa decisione è sensibile al contesto, come specificato dal valore della *tipo*, che fornisce la condizione di test di controllo. *tipo* è il tipo byte precedente nella stringa. Le costanti manifesto nella tabella seguente sono definite in Mbctype.h.
 
-|Valore di *tipo*|**mbbtype** test per|Valore restituito|*c*|
+|Valore di *tipo*|**mbbtype** verifica la presenza di|Valore restituito|*c*|
 |---------------------|--------------------------|------------------|---------|
 |Qualsiasi valore eccetto 1|Byte singolo o byte iniziale valido|**_MBC_SINGLE** (0)|Byte singolo (0x20 - 0x7E, 0xA1 - 0xDF)|
 |Qualsiasi valore eccetto 1|Byte singolo o byte iniziale valido|**_MBC_LEAD** (1)|Byte iniziale di caratteri multibyte (0x81 - 0x9F, 0xE0 - 0xFC)|
@@ -91,11 +81,11 @@ Impostazioni locali da usare.
 
 ## <a name="remarks"></a>Note
 
-Il **mbbtype** funzione determina il tipo di un byte in un carattere multibyte. Se il valore di *tipo* è qualsiasi valore eccetto 1, **mbbtype** test per un valido a byte singolo o byte iniziale di un carattere multibyte. Se il valore di *tipo* è 1, **mbbtype** testa un byte finale valido di un carattere multibyte.
+Il **mbbtype** funzione determina il tipo di un byte in un carattere multibyte. Se il valore di *tipo* è qualsiasi valore eccetto 1, **mbbtype** test per una valida a byte singolo o byte iniziale di un carattere multibyte. Se il valore di *tipo* è 1, **mbbtype** testa un byte finale valido di un carattere multibyte.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Il **mbbtype** versione di questa funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la **mbbtype_l** versione è identica ad eccezione del fatto che usi il parametro delle impostazioni locali che verrà passato . Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali; vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Il **mbbtype** versione di questa funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; le **mbbtype_l** versione è identica, ma usa il parametro delle impostazioni locali che verrà passato . Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Nelle versioni precedenti, **mbbtype** erà **chkctype**. Per il nuovo codice, utilizzare **mbbtype** invece.
+Nelle versioni precedenti **mbbtype** chiamava **chkctype**. Per il nuovo codice, usare **mbbtype** invece.
 
 ## <a name="requirements"></a>Requisiti
 

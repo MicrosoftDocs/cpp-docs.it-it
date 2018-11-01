@@ -1,39 +1,29 @@
 ---
-title: Compilatore avviso (livello 1 e 4) C4700 | Documenti Microsoft
-ms.custom: ''
+title: Avviso del compilatore (livelli 1 e 4) C4700
 ms.date: 02/21/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4700
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 876ae98fb2fdea5a9d8bdaecb93b8c229213d329
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa3326bd5ab495dbc4c54130bb168422eb827dce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463219"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4700"></a>Avviso del compilatore (livelli 1 e 4) C4700
 
-> variabile locale non inizializzata '*nome*' utilizzato
+> variabile locale non inizializzata '*nome*' usato
 
-La variabile locale *nome* è stata *utilizzato*, vale a dire, leggere, prima che venga assegnato un valore. In C e C++, le variabili locali non vengono inizializzate per impostazione predefinita. Le variabili non inizializzate possono contenere qualsiasi valore e il relativo utilizzo determina un comportamento indefinito. Avviso C4700 quasi sempre indica un bug che può provocare risultati imprevisti o arresti anomali del sistema nel programma.
+La variabile locale *name* è stata *utilizzato*, vale a dire, leggere, prima che venga assegnato un valore. In C e C++, le variabili locali non vengono inizializzate per impostazione predefinita. Le variabili non inizializzate possono contenere qualsiasi valore e il relativo utilizzo conduce a un comportamento indefinito. Avviso C4700 quasi sempre indica un bug che può causare risultati imprevisti o arresti anomali del sistema nel programma.
 
-Per risolvere questo problema, è possibile inizializzare le variabili locali quando vengono dichiarate o assegnarvi un valore prima che vengano utilizzate. Una funzione può essere utilizzata per inizializzare una variabile che viene passato come parametro di riferimento, o quando il relativo indirizzo viene passato come parametro un puntatore.
+Per risolvere questo problema, è possibile inizializzare le variabili locali quando vengono dichiarate oppure assegnare un valore a essi prima che vengano utilizzate. Una funzione può essere usata per inizializzare una variabile che viene passato come parametro di riferimento, o quando il relativo indirizzo viene passato come un parametro del puntatore.
 
 ## <a name="example"></a>Esempio
 
-Questo esempio genera l'errore C4700 quando vengono utilizzate variabili t, u e v prima vengono inizializzate e Mostra il tipo di valore garbage che può generare. Le variabili di x, y e z non causano l'avviso, in quanto vengono inizializzati prima dell'uso:
+In questo esempio genera C4700 quando le variabili t, u e v vengono usati prima che vengono inizializzati e Mostra il tipo di valore garbage che può generare. Le variabili x, y e z non causano l'avviso, in quanto vengono inizializzati prima dell'uso:
 
 ```cpp
 // c4700.cpp
@@ -63,7 +53,7 @@ int main()
 }
 ```
 
-Quando questo codice è l'esecuzione, t, u e v sono non inizializzato, l'output per s è imprevedibile:
+Quando questo codice è run, t, u e v sono non inizializzato e l'output per s non è prevedibile:
 
 ```Output
 Value in s: 37816963

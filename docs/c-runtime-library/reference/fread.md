@@ -1,10 +1,6 @@
 ---
-title: fread | Microsoft Docs
-ms.custom: ''
+title: fread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fread
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 819ec0b494b6e800f858e2e5647164567531ab0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3516dc67047064b9293b1bb289888596736ed47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400928"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468835"
 ---
 # <a name="fread"></a>fread
 
@@ -67,20 +57,20 @@ Dimensione dell'elemento in byte.
 *count*<br/>
 Numero massimo di elementi da leggere.
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fread** restituisce il numero di elementi completi effettivamente letti, che possono essere minore *conteggio* se si verifica un errore o se viene raggiunta la fine del file prima di raggiungere *conteggio*. Usare la **feof** oppure **ferror** funzione per distinguere un errore di lettura da una condizione di fine del file. Se *dimensioni* oppure *conteggio* 0 **fread** restituisce 0 e il contenuto del buffer è rimasti invariato. Se *flusso* oppure *buffer* è un puntatore null **fread** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce 0.
+**fread** restituisce il numero di elementi completi letti, che possono essere minore di *conteggio* se si verifica un errore o se viene rilevata la fine del file prima di raggiungere *conteggio*. Usare la **feof** oppure **ferror** funzione per distinguere un errore di lettura da una condizione di fine del file. Se *dimensioni* oppure *conteggio* è uguale a 0, **fread** restituisce 0 e il contenuto del buffer è rimasti invariato. Se *stream* oppure *buffer* è un puntatore null **fread** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce 0.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **fread** funzione legge fino a *conteggio* elementi dello *dimensioni* byte dall'input *flusso* e li archivia in *buffer* . Il puntatore del file associato *flusso* (se presente) viene incrementato del numero di byte effettivamente letti. Se il flusso specificato viene aperto in modalità testo, coppie di ritorno a capo-avanzamento di riga restituito vengono sostituite con caratteri di avanzamento riga singola. La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.
+Il **fread** funzione legge fino a *conteggio* elementi di *dimensioni* byte dall'input *flusso* e li archivia in *buffer* . Il puntatore del file associato *flusso* (se presente) viene incrementato del numero di byte effettivamente letti. Se il flusso specificato viene aperto in modalità testo, le coppie di ritorno a capo con avanzamento di riga vengono sostituite con caratteri di avanzamento riga singola. La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.
 
-Questa funzione blocca gli altri thread. Se è necessaria una versione non di blocco, utilizzare **fread_nolock**.
+Questa funzione blocca gli altri thread. Se occorre una versione non di blocco, usare **fread_nolock**.
 
 ## <a name="requirements"></a>Requisiti
 

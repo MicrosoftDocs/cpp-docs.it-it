@@ -1,28 +1,17 @@
 ---
-title: Risoluzione dei problemi relativi all'Editor finestre (C++) | Microsoft Docs
-ms.custom: ''
+title: Risoluzione dei problemi relativi all'Editor finestre (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], troubleshooting
 - Dialog Editor [C++], troubleshooting
 - dialog boxes [C++], troubleshooting
 ms.assetid: 21882868-5ac4-4a41-a4a6-eaaa059402ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bb2101526a7676be2f7f8dac5d8e03df1d72bb42
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8ac47dc8ee75a0596552b56df5485b6132d2b5a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315353"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456445"
 ---
 # <a name="troubleshooting-the-dialog-editor-c"></a>Risoluzione dei problemi relativi all'Editor finestre (C++)
 

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2977 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2977
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2977
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2977
 ms.assetid: 3c4218e0-5d03-4a2b-b757-c507c35f3542
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad1fc9acabd37ca6c1f9c71a4f8447a8def6bb62
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c9f2971c60b2d1bbc703696467040c3b1d2e2756
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470226"
 ---
 # <a name="compiler-error-c2977"></a>Errore del compilatore C2977
 

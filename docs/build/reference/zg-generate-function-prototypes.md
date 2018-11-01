@@ -1,14 +1,8 @@
 ---
-title: -Zg (genera i prototipi delle funzioni) | Microsoft Docs
-ms.custom: ''
+title: /Zg (Genera i prototipi delle funzioni)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /zg
-dev_langs:
-- C++
 helpviewer_keywords:
 - Zg compiler option [C++]
 - /Zg compiler option [C++]
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27042a66944652508bd9e97110a232175a97233c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2ab2b11e2d657e2bce87f750dff79a616ccec55b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724659"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470990"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (Genera i prototipi delle funzioni)
 

@@ -1,10 +1,6 @@
 ---
-title: Macro offsetof | Microsoft Docs
-ms.custom: ''
+title: Macro offsetof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,22 +15,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - offsetof
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 308aac2493751cfe2147187ed9848347124a90d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458320"
 ---
 # <a name="offsetof-macro"></a>Macro offsetof
 
@@ -66,7 +56,7 @@ Nome del membro nella struttura di dati padre per il quale determinare l'offset.
 Il **offsetof** macro restituisce l'offset in byte del *memberName* dall'inizio della struttura specificata da *structName* come valore di tipo **size_ t**. È possibile specificare tipi con il **struct** (parola chiave).
 
 > [!NOTE]
-> **OffsetOf** non è una funzione e non può essere descritta usando un prototipo C.
+> **OffsetOf** non è una funzione e non può essere descritta utilizzando un prototipo C.
 
 ## <a name="requirements"></a>Requisiti
 

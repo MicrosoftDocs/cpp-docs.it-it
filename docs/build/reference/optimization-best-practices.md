@@ -1,26 +1,16 @@
 ---
-title: Le procedure consigliate di ottimizzazione | Microsoft Docs
-ms.custom: ''
+title: Le procedure consigliate di ottimizzazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d224f2551de968cef5dea5698099ad564b7894fb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 67a071ecd457495510b2015f05466e1aa9bfc989
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477350"
 ---
 # <a name="optimization-best-practices"></a>Le procedure consigliate di ottimizzazione
 

@@ -1,10 +1,6 @@
 ---
-title: rename, _wrename | Microsoft Docs
-ms.custom: ''
+title: rename, _wrename
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rename
 - _wrename
@@ -25,8 +21,6 @@ f1_keywords:
 - _wrename
 - _trename
 - Rename
-dev_langs:
-- C++
 helpviewer_keywords:
 - trename function
 - directories [C++], renaming
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f02829b394649b86dfda9baad7c5792853fce746
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463986"
 ---
 # <a name="rename-wrename"></a>rename, _wrename
 
@@ -92,7 +82,7 @@ Per altri possibili valori restituiti, vedere [doserrno, errno, syserrlist e sys
 
 La funzione **rename** rinomina la directory o il file specificato da *oldname* con il nome specificato da *newname*. Il nome precedente deve essere il percorso di un file o una directory esistente. Il nuovo nome deve essere il nome di un file o una directory esistente. È possibile usare **rename** per spostare un file da una directory o un dispositivo a un altro, assegnando a un percorso diverso nell'argomento *newname*. Non è tuttavia possibile usare **rename** per spostare una directory. Le directory possono essere rinominate, ma non spostate.
 
-**wrename** è una versione a caratteri wide **ridenominazione**; gli argomenti da **wrename** sono stringhe a caratteri "wide". **wrename** e **ridenominazione** si comportano in modo identico in caso contrario.
+**wrename** è una versione a caratteri wide di **Rename**; gli argomenti **wrename** sono stringhe a caratteri wide. **wrename** e **Rename** hanno lo stesso comportamento in caso contrario.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

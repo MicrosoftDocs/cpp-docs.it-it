@@ -1,10 +1,6 @@
 ---
-title: asin, asinf, asinl | Microsoft Docs
-ms.custom: ''
+title: asin, asinf, asinl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinf
 - asinl
@@ -26,8 +22,6 @@ f1_keywords:
 - asin
 - asinl
 - asinf
-dev_langs:
-- C++
 helpviewer_keywords:
 - asin function
 - asinl function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee65e4c8ce884ac42de35a23c81dbf5009dd1185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393277"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476048"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -70,19 +60,19 @@ Valore di cui deve essere calcolato l'arcoseno.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **asin** funzione restituisce l'arcoseno (la funzione inversa del seno) dei *x* nell'intervallo - π/2 in π/2 radianti.
+Il **asin** funzione restituisce l'arcoseno (la funzione inversa del seno) della *x* nell'intervallo - π/2 in π/2 radianti.
 
 Per impostazione predefinita, se *x* è minore di -1 o maggiore di 1 **asin** restituisce un valore indefinito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NON VALIDO**|**DOMAIN**|
-|± **QNAN**, **IND**|none|**DOMAIN**|
-|&#124;x&#124;>1|**NON VALIDO**|**DOMAIN**|
+|± ∞|**NON VALIDO**|**DOMINIO**|
+|+ **QNAN**, **IND**|none|**DOMINIO**|
+|&#124;x&#124;>1|**NON VALIDO**|**DOMINIO**|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **asin** con **float** e **lungo** **doppie** valori. In un programma C **asin** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **asin** con **float** e **long** **double** valori. In un programma C **asin** accetta e restituisce sempre un **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 

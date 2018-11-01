@@ -1,10 +1,6 @@
 ---
-title: Classe CCommandLineInfo | Microsoft Docs
-ms.custom: ''
+title: Classe CCommandLineInfo
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
 - AFXWIN/CCommandLineInfo
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXWIN/CCommandLineInfo::m_strPortName
 - AFXWIN/CCommandLineInfo::m_strPrinterName
 - AFXWIN/CCommandLineInfo::m_strRestartIdentifier
-dev_langs:
-- C++
 helpviewer_keywords:
 - CCommandLineInfo [MFC], CCommandLineInfo
 - CCommandLineInfo [MFC], ParseParam
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f5fd5eb6e4b58cbca21220bf6a7161505505dd3a
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080546"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481471"
 ---
 # <a name="ccommandlineinfo-class"></a>Classe CCommandLineInfo
 

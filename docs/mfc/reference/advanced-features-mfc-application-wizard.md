@@ -1,27 +1,17 @@
 ---
-title: Funzionalità avanzate, creazione guidata applicazione MFC | Microsoft Docs
-ms.custom: ''
+title: Funzionalità avanzate, Creazione guidata applicazione MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.advanced
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e59ef2b9a7224fafa5ee7a49077429f53448e37a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28850211fc43e162c227a8bb55da9cf92178ae41
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426991"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465533"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funzionalità avanzate, Creazione guidata applicazione MFC
 

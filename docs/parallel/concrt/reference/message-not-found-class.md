@@ -1,29 +1,19 @@
 ---
-title: Classe message_not_found | Microsoft Docs
-ms.custom: ''
+title: Classe message_not_found
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - message_not_found
 - CONCRT/concurrency::message_not_found
 - CONCRT/concurrency::message_not_found::message_not_found
-dev_langs:
-- C++
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e73a33817ef39d8998173dacc282e6ee9477944
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b6bd33e69d24e452414b2537ad70bf31e6b722f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458474"
 ---
 # <a name="messagenotfound-class"></a>Classe message_not_found
 

@@ -1,27 +1,17 @@
 ---
-title: -IGNORE (Ignora determinati avvisi) | Microsoft Docs
-ms.custom: ''
+title: /IGNORE (ignorare determinati avvisi)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /OVERWRITE
-dev_langs:
-- C++
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aee498951c01c332dffe720dbd6e3b77c8121aa5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4826ecae1f16cd3834cb6d47850fc686b3682614
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705861"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479692"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (ignorare determinati avvisi)
 

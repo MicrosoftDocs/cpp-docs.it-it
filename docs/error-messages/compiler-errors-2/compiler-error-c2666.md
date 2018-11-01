@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2666 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2666
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2666
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17c33f188dbf90e0e7c19ad55e0d14599541ec0d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072732"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479286"
 ---
 # <a name="compiler-error-c2666"></a>Errore del compilatore C2666
 

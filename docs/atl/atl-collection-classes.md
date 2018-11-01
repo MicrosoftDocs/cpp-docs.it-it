@@ -1,12 +1,6 @@
 ---
-title: Classi Collection ATL | Microsoft Docs
-ms.custom: ''
+title: Classi Collection ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DestructElements function
 - collection classes, choosing
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18369de567c830973bef26d886d5a2048bb0109f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dcb784fe2df8383382c7a9d184e9f241684bf931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474819"
 ---
 # <a name="atl-collection-classes"></a>Classi Collection ATL
 

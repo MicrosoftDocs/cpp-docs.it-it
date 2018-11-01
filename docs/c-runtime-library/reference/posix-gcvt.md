@@ -1,10 +1,6 @@
 ---
-title: gcvt | Microsoft Docs
-ms.custom: ''
+title: gcvt
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - gcvt
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - gcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - gcvt function
 ms.assetid: 913478fd-ef22-4dee-b558-ff2bd6d72f3d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32817ffd39a59b2369f2545b16ab529eaa79463a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc64a61f232d8d315724a1d4aa610f8186486146
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465195"
 ---
 # <a name="gcvt"></a>gcvt
 

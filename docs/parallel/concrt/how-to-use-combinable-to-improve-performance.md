@@ -1,26 +1,16 @@
 ---
-title: 'Procedura: usare la classe combinable per migliorare le prestazioni | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura: Usare la classe combinable per migliorare le prestazioni'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - combinable class, example
 - improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 22425ac212ee2bfb52354044b1a6193b6a9cd11a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5d68335046b08aa41028be11d833b334c1dc0055
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432088"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455264"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>Procedura: Usare la classe combinable per migliorare le prestazioni
 

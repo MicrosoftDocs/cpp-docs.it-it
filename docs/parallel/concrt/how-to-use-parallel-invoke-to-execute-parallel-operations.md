@@ -1,26 +1,16 @@
 ---
-title: 'Procedura: usare parallel_invoke per eseguire operazioni in parallelo | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura: Usare parallel_invoke per eseguire operazioni in parallelo'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 44d17bd45966c54a8a6c79afb0168a9407dd3e24
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374000"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473684"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Procedura: Usare parallel_invoke per eseguire operazioni in parallelo
 

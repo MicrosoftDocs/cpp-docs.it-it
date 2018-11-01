@@ -1,27 +1,17 @@
 ---
-title: Aggiunta di elementi al controllo Header | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di elementi al controllo Header
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [MFC], header
 - CHeaderCtrl class [MFC], adding items
 - header controls [MFC], adding items to
 ms.assetid: 2e9a28b1-7302-4a93-8037-c5a4183e589a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0eb06a15cac87b063ada1cbe8f130b3464be0b0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c751458a3a2e7e049364ef22a161a3dc9f81df13
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447180"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483564"
 ---
 # <a name="adding-items-to-the-header-control"></a>Aggiunta di elementi al controllo Header
 

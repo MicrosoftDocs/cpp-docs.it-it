@@ -1,10 +1,6 @@
 ---
-title: Classe CMFCColorDialog | Microsoft Docs
-ms.custom: ''
+title: Classe CMFCColorDialog
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
 - AFXCOLORDIALOG/CMFCColorDialog
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXCOLORDIALOG/CMFCColorDialog::SetNewColor
 - AFXCOLORDIALOG/CMFCColorDialog::SetPageOne
 - AFXCOLORDIALOG/CMFCColorDialog::SetPageTwo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCColorDialog [MFC], CMFCColorDialog
 - CMFCColorDialog [MFC], GetColor
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9f02441bceb2b608c960df858c4d4068e858c51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a786579797b9ffacca5b338e4cfd6991965704e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416045"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490366"
 ---
 # <a name="cmfccolordialog-class"></a>Classe CMFCColorDialog
 
@@ -64,7 +54,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|Restituisce il colore corrente selezionato.|
 |[CMFCColorDialog::GetPalette](#getpalette)|Restituisce una tavolozza di colori.|
-|`CMFCColorDialog::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Per la sintassi e altre informazioni, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override`CDialogEx::PreTranslateMessage`.|
+|`CMFCColorDialog::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Per la sintassi e altre informazioni, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override di `CDialogEx::PreTranslateMessage`.|
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Deriva una tavolozza dalla tavolozza di sistema.|
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Imposta il colore corrente selezionato.|
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Imposta il colore più equivalente al valore RGB specificato.|

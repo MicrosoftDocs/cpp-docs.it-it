@@ -1,35 +1,25 @@
 ---
-title: Funzioni intrinseche disponibili in tutte le architetture | Documenti Microsoft
-ms.custom: ''
+title: Funzioni intrinseche disponibili in tutte le architetture
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe070c2bae69563d65344072a56003f808d1486
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340619"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473281"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Funzioni intrinseche disponibili in tutte le architetture
 
-Il compilatore Microsoft C/C++ e la libreria di Runtime C (UCRT) Universal rendono disponibili alcune funzioni intrinseche su tutte le architetture.
+Il compilatore Microsoft C/C++ e Universal C Runtime Library (UCRT) rendono disponibili alcune funzioni intrinseche su tutte le architetture.
 
 ## <a name="compiler-intrinsics"></a>Intrinseci del compilatore
 
 Gli intrinseci seguenti sono disponibili con le architetture x86, AMD64 e ARM:
 
-|Funzione intrinseca|Header|
+|Funzione intrinseca|Intestazione|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
@@ -101,7 +91,7 @@ Gli intrinseci seguenti sono disponibili con le architetture x86, AMD64 e ARM:
 
 Le funzioni di libreria UCRT seguenti hanno formati intrinseci su tutte le architetture:
 
-|Funzione intrinseca|Header|
+|Funzione intrinseca|Intestazione|
 |---------------|------------|
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|

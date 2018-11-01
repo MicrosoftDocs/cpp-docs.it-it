@@ -1,30 +1,20 @@
 ---
-title: Esempi di allineamento della struttura | Documenti Microsoft
-ms.custom: ''
+title: Esempi di allineamento di strutture
 ms.date: 03/26/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9c4e8cb27d02777e40af56217bd82dec6e647b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466244"
 ---
 # <a name="examples-of-structure-alignment"></a>Esempi di allineamento di strutture
 
-I quattro esempi seguenti ogni dichiarano che una struttura allineata o union e corrispondenti viene illustrato il layout di tale struttura o unione in memoria. Ogni colonna in una figura rappresenta un byte di memoria e il numero nella colonna indica lo spostamento di tale byte. Il nome nella seconda riga di ogni figura corrisponde al nome di una variabile nella dichiarazione. Le colonne ombreggiate indicano il riempimento necessario per ottenere l'allineamento specificato.
+I quattro esempi seguenti dichiarano che una struttura allineata o unione e presentati illustrano il layout di tale struttura o unione in memoria. Ogni colonna in una figura rappresenta un byte di memoria e il numero della colonna indica lo spostamento di tale byte. Il nome nella seconda riga di ogni figura corrisponde al nome di una variabile nella dichiarazione. Colonne ombreggiate indicano il riempimento necessario per ottenere l'allineamento specificato.
 
 ## <a name="example-1"></a>Esempio 1
 

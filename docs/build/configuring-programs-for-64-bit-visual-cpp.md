@@ -1,12 +1,6 @@
 ---
-title: Configurare Visual C++ a 64 bit x64 destinazioni | Microsoft Docs
-ms.custom: ''
+title: Configurare Visual C++ per x64 a 64 bit, destinazioni
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - 64-bit compiler [C++], options
 - 64-bit compiler [C++]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fe77781970a0f5cba6334bd117e816b43413cb38
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a72e6f1905bad81fc0d79c1f90e88e96fe8b110b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487802"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Configurare Visual C++ per x64 a 64 bit, destinazioni
 

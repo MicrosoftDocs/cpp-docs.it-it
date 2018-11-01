@@ -1,10 +1,6 @@
 ---
-title: atof, _atof_l, _wtof, _wtof_l | Microsoft Docs
-ms.custom: ''
+title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtof_l
 - atof
@@ -36,8 +32,6 @@ f1_keywords:
 - corecrt_wstdlib/_wtof
 - _wtof_l
 - corecrt_wstdlib/_wtof_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstof function
 - atof_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78fe14783200e1e145c39b9b274d9e7e3ddb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471175"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -98,7 +88,7 @@ Impostazioni locali da usare.
 
 Ogni funzione restituisce il **doppie** valore prodotto interpretando i caratteri di input sotto forma di numero. Il valore restituito è 0.0 se l'input non può essere convertito in un valore di tale tipo.
 
-In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono 0.
+In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono 0.
 
 ## <a name="remarks"></a>Note
 
@@ -108,13 +98,13 @@ La stringa di input è una sequenza di caratteri che può essere interpretata co
 
 Il *str* argomento **atof** e **wtof** ha il formato seguente:
 
-[*whitespace*] [*sign*] [*cifre*] [__.__ *cifre*] [{**espulsione** &#124; **espulsione** } [*sign*]*cifre*]
+[*whitespace*] [*sign*] [*cifre*] [__.__ *cifre*] [{**elettronica** &#124; **elettronica** } [*sign*]*cifre*]
 
-Un *whitespace* è costituito da caratteri spazio o tabulazione, ovvero vengono ignorati; *sign* è un segno più (+) o meno (-); e *cifre* sono uno o più cifre decimali. Se non viene visualizzata alcuna cifra prima del separatore decimale, è necessario che sia presente almeno una cifra dopo il separatore decimale. Le cifre decimali possono essere seguite da un esponente che è costituito da una lettera di presentazione (**espulsione**, o **E**) e un numero intero decimale con segno facoltativo.
+Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* sono uno o più cifre decimali. Se non viene visualizzata alcuna cifra prima del separatore decimale, è necessario che sia presente almeno una cifra dopo il separatore decimale. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**elettronica**, o **elettronica**) e un intero decimale con segno facoltativo.
 
-Le versioni della libreria UCRT di queste funzioni non supportano la conversione dello stile di Fortran (**d** o **D**) lettere esponente. Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente.
+Le versioni UCRT di queste funzioni non supportano la conversione di stile Fortran (**1!d** oppure **1!d**) lettere esponente. Questa estensione non standard è supportata dalle versioni precedenti della libreria CRT e può rappresentare una modifica con impatto significativo per il codice esistente.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il *delle impostazioni locali* parametro passato al posto di quelle correnti.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ma usano le *delle impostazioni locali* parametro passato al posto di quelle correnti.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -132,7 +122,7 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 ## <a name="example"></a>Esempio
 
-Questo programma viene illustrato come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la **atof** e **atof_l** funzioni.
+Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la **atof** e **atof_l** funzioni.
 
 ```C
 // crt_atof.c

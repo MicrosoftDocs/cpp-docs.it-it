@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2718 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2718
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2718
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2718
 ms.assetid: 78cc71f8-c142-46fc-9aed-970635d74f0c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: facbee46968cf76e6709bceff4432ba289aed3cd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 00ad8da46364cd4a48ebdfde8b4de960e4e015f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045770"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473008"
 ---
 # <a name="compiler-error-c2718"></a>Errore del compilatore C2718
 

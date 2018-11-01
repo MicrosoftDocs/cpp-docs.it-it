@@ -1,28 +1,18 @@
 ---
-title: Stili di pulsante di selezione | Microsoft Docs
-ms.custom: ''
+title: Stili dei pulsanti di selezione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - styles [MFC], CSpinButtonCtrl
 - CSpinButtonCtrl class [MFC], styles
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71da44858ea018d0393af6267e4bb522a2c57391
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 73042dbbdc28819ecc736c282599189ee074ce77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393594"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457109"
 ---
 # <a name="spin-button-styles"></a>Stili dei pulsanti di selezione
 

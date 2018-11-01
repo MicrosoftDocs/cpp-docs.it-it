@@ -1,10 +1,6 @@
 ---
-title: CToolBarCtrl (classe) | Microsoft Docs
-ms.custom: ''
+title: CToolBarCtrl (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CToolBarCtrl
 - AFXCMN/CToolBarCtrl
@@ -96,8 +92,6 @@ f1_keywords:
 - AFXCMN/CToolBarCtrl::SetStyle
 - AFXCMN/CToolBarCtrl::SetToolTips
 - AFXCMN/CToolBarCtrl::SetWindowTheme
-dev_langs:
-- C++
 helpviewer_keywords:
 - CToolBarCtrl [MFC], CToolBarCtrl
 - CToolBarCtrl [MFC], AddBitmap
@@ -188,16 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7334fe1a48f0828a542baa77670f3ad7888b52e2
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083555"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463007"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 

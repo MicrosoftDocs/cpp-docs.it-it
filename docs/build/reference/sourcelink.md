@@ -1,27 +1,17 @@
 ---
-title: / SOURCELINK (Sourcelink includere file nel file PDB) | Microsoft Docs
-ms.custom: ''
+title: / SOURCELINK (Sourcelink includere file nel file PDB)
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /sourcelink
-dev_langs:
-- C++
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706667"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480990"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink includere file nel file PDB)
 
