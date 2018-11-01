@@ -1,12 +1,6 @@
 ---
-title: 'Controlli ActiveX MFC: Aggiunta eventi personalizzati | Microsoft Docs'
-ms.custom: ''
+title: 'Controlli ActiveX MFC: aggiunta di eventi personalizzati'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events [MFC]
 - EVENT_CUSTOM prefix [MFC]
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ad44cb097f03270b09612ad756d34725464a1765
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076035"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554908"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Controlli ActiveX MFC: aggiunta di eventi personalizzati
 

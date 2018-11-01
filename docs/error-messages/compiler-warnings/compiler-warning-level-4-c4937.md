@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 4) C4937 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 4) C4937
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4937
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4937
 ms.assetid: 2bb9f0e7-bbd6-4697-84de-95955e32ae29
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7bc6232458b357f41e859c58d4b6b77f78ef2a7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 64565ad37c965aa0af3b912988586b37270be6a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548755"
 ---
 # <a name="compiler-warning-level-4-c4937"></a>Avviso del compilatore (livello 4) C4937
 

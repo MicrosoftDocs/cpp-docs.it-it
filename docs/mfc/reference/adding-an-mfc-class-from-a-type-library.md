@@ -1,27 +1,17 @@
 ---
-title: Aggiunta di una classe MFC da una libreria dei tipi | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di una classe MFC da una libreria dei tipi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 588a7a432e3d16ce8fd009d6dd25c5c018ab2472
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5cd94ad6d400cf2db60131e822f430f87a129cbe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401212"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548018"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Aggiunta di una classe MFC da una libreria dei tipi
 
@@ -46,6 +36,6 @@ La procedura guidata crea una classe MFC, derivata da [COleDispatchDriver](../..
 
 ## <a name="see-also"></a>Vedere anche
 
-[Client di automazione](../../mfc/automation-clients.md)<br/>
+[Automation Clients](../../mfc/automation-clients.md)<br/>
 [Client di automazione: uso delle librerie dei tipi](../../mfc/automation-clients-using-type-libraries.md)
 
