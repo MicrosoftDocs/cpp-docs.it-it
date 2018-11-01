@@ -1,27 +1,19 @@
 ---
-title: 'Classe platform:: OutOfMemoryException | Microsoft Docs'
-ms.custom: ''
+title: Classe Platform::OutOfMemoryException
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::OutOfMemoryException
 - VCCORLIB/Platform::OutOfMemoryException::OutOfMemoryException
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::OutOfMemoryException
 ms.assetid: 49c19f6b-f66c-4448-b861-91dcbf32de2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32061f76462b089a649d89dccd8c76f7a0d722f0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: bf13e1589f651b7791fe67f6061b06b1a0bd897f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109758"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478182"
 ---
 # <a name="platformoutofmemoryexception-class"></a>Classe Platform::OutOfMemoryException
 

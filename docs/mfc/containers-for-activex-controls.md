@@ -1,25 +1,15 @@
 ---
-title: I contenitori per i controlli ActiveX | Microsoft Docs
-ms.custom: ''
+title: Contenitori per i controlli ActiveX
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b14359fa6bb602240f4cba173c41660c6863f939
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 3b0ec605fd6e30033e303ff61872734136cfb73b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204328"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441912"
 ---
 # <a name="containers-for-activex-controls"></a>Contenitori per i controlli ActiveX
 

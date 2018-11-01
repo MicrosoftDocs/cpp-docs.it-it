@@ -1,10 +1,6 @@
 ---
-title: Del compilatore irreversibili da C999 a C1999 | Documenti Microsoft
-ms.custom: ''
+title: Errori del compilatore irreversibili da C999 a C1999
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1012
 - C1013
@@ -165,19 +161,13 @@ helpviewer_keywords:
 - C1901
 - C1903
 - C1904
-dev_langs:
-- C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdd0949d2d76cad636f833a75ea1371246ee3ebf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677331"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errori del compilatore irreversibili da C999 a C1999
 
@@ -224,7 +214,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Errore irreversibile C1048|opzione '*string*' sconosciuta in '*option*'|
 |Errore irreversibile C1049|argomento numerico '*value*' non valido|
 |[Errore irreversibile C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|formato obsoleto del file del database di programma '*file*'. Eliminare e ricompilare.|
-|[Errore irreversibile C1052](fatal-error-c1052.md)|file di database di programma '*filename*', è stato generato dal linker con /debug: fastlink; compilatore non può aggiornare questi file PDB;. eliminarlo o usare /Fd per specificare un nome di file PDB diverso|
+|[Errore irreversibile C1052](fatal-error-c1052.md)|file di database di programma, '*filename*', è stato generato dal linker con /debug: fastlink; compilatore non può aggiornare questi file PDB;. eliminarlo o usare /Fd per specificare un nome file PDB diverso|
 |Errore irreversibile C1053|'*function*': funzione troppo lunga|
 |[Errore irreversibile C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|limite del compilatore: inizializzatori eccessivamente annidati|
 |[Errore irreversibile C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|limite del compilatore: chiavi insufficienti|
@@ -273,7 +263,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Errore irreversibile C1109|impossibile trovare '*symbol*' nella DLL*file*|
 |Errore irreversibile C1110|troppe definizioni di modello/generiche annidate|
 |Errore irreversibile C1111|troppi parametri di modello/generici|
-|Errore irreversibile C1112|limite del compilatore: `'number`' troppi argomenti di macro, solo *numero* consentito|
+|Errore irreversibile C1112|limite del compilatore: `'number`' troppi argomenti di macro, solo *numero* consentiti|
 |[Errore irreversibile C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using non riuscito in '*file*'|
 |Errore irreversibile C1114|'*file*': WinRT non supporta #using di un assembly gestito|
 |[Errore irreversibile C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|chiamata a GetProcAddress non riuscita per '*function*'|

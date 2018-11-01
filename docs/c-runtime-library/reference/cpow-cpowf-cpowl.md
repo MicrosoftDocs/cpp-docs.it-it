@@ -1,11 +1,6 @@
 ---
-title: cpow, cpowf, cpowl | Microsoft Docs
-ms.custom: ''
+title: cpow, cpowf, cpowl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cpow
 - cpowf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cpow
 - complex/cpowf
 - complex/copwl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cpow function
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8311b4c8bd8c082b03f01a2df253c55d170c560e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562487"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
 
@@ -82,11 +71,11 @@ L'esponente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore di *x* elevato alla potenza di *y* con un ramo per tagliare *x* lungo l'asse vero negativo.
+Il valore di *x* elevato alla potenza del *y* con un ramo tagliato *x* lungo l'asse reale negativo.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cpow** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **cpow** accetta e restituisce sempre un **_Dcomplex** valore.
+Dato che C++ consente l'overload, è possibile chiamare overload di **cpow** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **cpow** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,33 +1,23 @@
 ---
-title: Classe CPaneDialog | Microsoft Docs
-ms.custom: ''
+title: Classe CPaneDialog
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CPaneDialog
 - AFXPANEDIALOG/CPaneDialog
 - AFXPANEDIALOG/CPaneDialog::Create
 - AFXPANEDIALOG/CPaneDialog::HandleInitDialog
 - AFXPANEDIALOG/CPaneDialog::SetOccDialogInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CPaneDialog [MFC], Create
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ae69ad1629868a1001f9caa477c75d4f6ab5e61
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 95fc66ba55734c415cb41151cdc9b83d1b154898
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065044"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431929"
 ---
 # <a name="cpanedialog-class"></a>Classe CPaneDialog
 

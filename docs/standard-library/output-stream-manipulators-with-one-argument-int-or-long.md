@@ -1,25 +1,15 @@
 ---
-title: Manipolatori del flusso di output con un solo argomento (int o long) | Microsoft Docs
-ms.custom: ''
+title: Manipolatori del flusso di output con un solo argomento (int o long)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - output streams, int or long argument manipulators
 ms.assetid: 338f3164-b5e2-4c5a-a605-7d9dc3629ca1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f569b064d2ee5de5bd1aa39c9d443c8a49ca2677
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e093512af2741329c58db0b613453f3388bacdf2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961851"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530989"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Manipolatori del flusso di output con un solo argomento (int o long)
 

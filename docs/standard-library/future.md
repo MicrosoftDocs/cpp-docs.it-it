@@ -1,25 +1,15 @@
 ---
-title: '&lt;future&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;future&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <future>
-dev_langs:
-- C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954018"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555762"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 

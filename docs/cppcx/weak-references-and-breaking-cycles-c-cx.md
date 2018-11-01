@@ -1,20 +1,13 @@
 ---
-title: Riferimenti deboli e cicli di interruzione (C + c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: Riferimenti deboli e cicli di interruzione (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a262b608bef9ba2e1393337660f58b7f14fb05c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e035f298100408bd16b1087439d3ce5ac057fd2c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108967"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572900"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Riferimenti deboli e cicli di interruzione (C++/CX)
 

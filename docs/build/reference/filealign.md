@@ -1,29 +1,20 @@
 ---
-title: /FILEALIGN (Allinea le sezioni nei file) | Microsoft Docs
+title: /FILEALIGN (Allinea le sezioni nei file)
 ms.date: 10/23/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /filealign
-dev_langs:
-- C++
 helpviewer_keywords:
 - linker align sections
 - /FILEALIGN linker option
 - -FILEALIGN linker option
 - FILEALIGN linker option
 ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 630fe7014c87487a9b4df61de60ac8f5518593e0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d218ce4793e68fe3b700a0776fa5db665568f736
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720018"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494581"
 ---
 # <a name="filealign-align-sections-in-files"></a>/FILEALIGN (Allinea le sezioni nei file)
 

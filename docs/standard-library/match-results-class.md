@@ -1,27 +1,17 @@
 ---
-title: Classe match_results | Microsoft Docs
-ms.custom: ''
+title: Classe match_results
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - regex/std::match_results
-dev_langs:
-- C++
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef413badb7f8882321e9d561a960ee17ee9cda84
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bfb1a8b779f741360b406d9a5c24a36bca5e54f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662514"
 ---
 # <a name="matchresults-class"></a>Classe match_results
 

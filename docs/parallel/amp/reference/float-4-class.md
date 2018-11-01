@@ -1,10 +1,6 @@
 ---
-title: Classe float_4 | Microsoft Docs
-ms.custom: ''
+title: Classe float_4
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
 - amp_short_vectors/Concurrency::graphics::float_4::zxw
@@ -271,19 +267,13 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_x
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
-dev_langs:
-- C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ed16f627cefa12c0fe48c26b8efc24bdc9bd0b57
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97302504303a540eb691f7af15f7d346d0d50ce3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447063"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459774"
 ---
 # <a name="float4-class"></a>Classe float_4
 

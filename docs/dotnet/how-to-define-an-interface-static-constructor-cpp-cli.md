@@ -1,28 +1,17 @@
 ---
-title: 'Procedura: definire un costruttore statico di interfaccia (C + + / CLI) | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura: definire un costruttore statico di interfaccia (C++/CLI)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: e2da339259efd77ea7992e63e6137a15017fdc31
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0617454e0957dccc7e28a5172a40273b5d93bede
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402837"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566387"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>Procedura: definire un costruttore statico di interfaccia (C++/CLI)
 

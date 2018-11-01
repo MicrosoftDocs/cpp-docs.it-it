@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2930 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2930
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2930
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2930
 ms.assetid: f07eecd1-e5d1-4518-bd89-b1fd2a003a17
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ca348a1ccf6703152088b3da7b0f858e8bab3c5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 20fa3e81e66bb30bd63e579a863b6071de4ef871
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035298"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434827"
 ---
 # <a name="compiler-error-c2930"></a>Errore del compilatore C2930
 

@@ -1,8 +1,6 @@
 ---
-title: 'Classe platform:: Object | Microsoft Docs'
-ms.custom: ''
+title: Classe Platform::Object
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
@@ -11,21 +9,15 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs:
-- C++
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39c51c10ad8c697fcc21c56fcef247c17e8faab5
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493613"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 

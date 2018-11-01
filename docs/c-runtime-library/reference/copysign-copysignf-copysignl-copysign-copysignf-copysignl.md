@@ -1,10 +1,6 @@
 ---
-title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl | Microsoft Docs
-ms.custom: ''
+title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - copysignf
 - copysignl
@@ -32,8 +28,6 @@ f1_keywords:
 - _copysign
 - copysignl
 - _copysignf
-dev_langs:
-- C++
 helpviewer_keywords:
 - copysignl function
 - _copysignl function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f54b45e0b4488e76c501f67b1e98de071157ad7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f450da4a4391f94d1905beefdeca8e3f01fec51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394730"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662813"
 ---
 # <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
@@ -106,7 +96,7 @@ Il **copysign** le funzioni restituiscono un valore a virgola mobile che combina
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **copysign** che accettano e restituiscono **float** oppure **lungo** **doppie** valori. In un programma C **copysign** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **copysign** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **copysign** accetta e restituisce sempre un **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 

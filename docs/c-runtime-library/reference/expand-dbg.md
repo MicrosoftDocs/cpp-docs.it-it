@@ -1,10 +1,6 @@
 ---
-title: _expand_dbg | Microsoft Docs
-ms.custom: ''
+title: _expand_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _expand_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - expand_dbg
 - _expand_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 023bda761454a6a1e18ce68c8e7576af2759abbf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc3aa2b7e39b52eb71ac10a9b5c4a221ba6fb70c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663801"
 ---
 # <a name="expanddbg"></a>_expand_dbg
 
@@ -58,7 +48,7 @@ void *_expand_dbg(
 
 ### <a name="parameters"></a>Parametri
 
-*Dati utente*<br/>
+*userData*<br/>
 Puntatore al blocco di memoria allocato precedentemente.
 
 *newSize*<br/>
@@ -68,24 +58,24 @@ Nuove dimensioni richieste per il blocco, in byte.
 Tipo di blocco ridimensionato richiesto: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntatore al nome del file di origine che ha richiesto espandere operazione o **NULL**.
+Operazione di espansione puntatore al nome del file di origine che ha richiesto oppure **NULL**.
 
 *linenumber*<br/>
-Numero di riga nel file di origine in cui è stata richiesta l'operazione di espansione o **NULL**.
+Numero di riga nel file di origine in cui è stata richiesta l'operazione di espansione oppure **NULL**.
 
-Il *filename* e *linenumber* parametri sono disponibili solo quando **expand_dbg** è stato chiamato in modo esplicito o [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)è stata definita una costante del preprocessore.
+Il *nomefile* e *linenumber* parametri sono disponibili solo quando **expand_dbg** è stato chiamato in modo esplicito o [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)è stata definita la costante del preprocessore.
 
 ## <a name="return-value"></a>Valore restituito
 
-Al termine, **expand_dbg** restituisce un puntatore al blocco di memoria ridimensionato. Poiché la memoria non viene spostata, l'indirizzo è lo stesso usato per userData. Se si è verificato un errore o il blocco non può essere estesa per la dimensione richiesta, viene restituito **NULL**. Se si verifica un errore, **errno** con informazioni dal sistema operativo sulla natura dell'errore. Per ulteriori informazioni **errno**, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Al termine, **realloc_dbg** restituisce un puntatore al blocco di memoria ridimensionato. Poiché la memoria non viene spostata, l'indirizzo è lo stesso usato per userData. Se si è verificato un errore o Impossibile espandere il blocco alla dimensione richiesta, viene restituito **NULL**. Se si verifica un errore, **errno** è con le informazioni dal sistema operativo sulla natura dell'errore. Per altre informazioni sulle **errno**, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **expand_dbg** funzione è una versione di debug nel _[espandere](expand.md) (funzione). Quando si [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **expand_dbg** viene ridotta a una chiamata a **Espandi sito**. Entrambi **Espandi sito** e **expand_dbg** ridimensiona un blocco di memoria nell'heap di base, ma **expand_dbg** contiene diverse funzionalità di debug: buffer presenti a entrambi i lati dell'utente parte del blocco in cui verificare la presenza di perdite, un parametro di tipo blocco per registrare i tipi specifici di allocazioni e *filename*/*linenumber* informazioni per determinare l'origine di richieste di allocazione.
+Il **realloc_dbg** funzione è una versione di debug nel _[espandere](expand.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **expand_dbg** viene ridotta a una chiamata a **Espandi**. Entrambe **Espandi** e **expand_dbg** ridimensiona un blocco di memoria nell'heap di base, ma **expand_dbg** contiene diverse funzionalità di debug: buffer presenti a entrambi i lati dell'utente parte del blocco da verificare per le perdite, un parametro di tipo blocco per tenere traccia di tipi specifici di allocazioni e *nomefile*/*linenumber* informazioni per determinare l'origine di richieste di allocazione.
 
-**expand_dbg** ridimensiona il blocco di memoria specificato con una quantità di spazio a quella richiesta *newSize*. *newSize* potrebbe essere maggiore o minore della dimensione del blocco di memoria allocato in origine. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Il ridimensionamento viene eseguito espandendo o contraendo il blocco di memoria originale. **expand_dbg** non consente di spostare il blocco di memoria, come avviene la [realloc_dbg](realloc-dbg.md) (funzione).
+**realloc_dbg** ridimensiona il blocco di memoria specificato con quantità di spazio leggermente superiore al valore richiesto *newSize*. *newSize* può essere maggiore o minore della dimensione del blocco di memoria allocato in origine. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Il ridimensionamento viene eseguito espandendo o contraendo il blocco di memoria originale. **realloc_dbg** non si sposta il blocco di memoria, come avviene il [realloc_dbg](realloc-dbg.md) (funzione).
 
-Quando si *newSize* è superiore a quella del blocco originale viene espanso dimensioni, il blocco di memoria. Durante un'espansione, se il blocco di memoria non può essere espanso per contenere la dimensione richiesta **NULL** viene restituito. Quando si *newSize* è inferiore a quello del blocco originale viene ristretta dimensioni, il blocco di memoria fino a quando non viene ottenuta le nuove dimensioni.
+Quando *newSize* è maggiore del blocco originale delle dimensioni, il blocco di memoria viene espanso. Durante l'espansione, se il blocco di memoria non può essere espanso per contenere le dimensioni richieste, **NULL** viene restituito. Quando *newSize* inferiori rispetto a quelle del blocco originale sono concordata dimensioni, il blocco di memoria fino a quando non viene ottenuta la nuova dimensione.
 
 Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la sua versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

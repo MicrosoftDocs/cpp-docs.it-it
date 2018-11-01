@@ -1,10 +1,6 @@
 ---
-title: Classe queue | Microsoft Docs
-ms.custom: ''
+title: Classe queue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - queue/std::queue::container_type
 - queue/std::queue::size_type
@@ -15,8 +11,6 @@ f1_keywords:
 - queue/std::queue::pop
 - queue/std::queue::push
 - queue/std::queue::size
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::queue [C++], container_type
 - std::queue [C++], size_type
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103703"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429731"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -123,7 +113,7 @@ Ultimo elemento dell'oggetto queue. Se l'oggetto queue è vuoto, il valore resti
 
 Se il valore restituito di `back` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `back` viene assegnato a un `reference`, l'oggetto queue può essere modificato.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Esempio
 
@@ -235,7 +225,7 @@ Se il valore restituito di `front` viene assegnato a un oggetto `const_reference
 
 La funzione membro restituisce un `reference` al primo elemento della sequenza controllata, che deve essere non vuoto.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Esempio
 

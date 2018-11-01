@@ -1,28 +1,18 @@
 ---
-title: Asserzione e messaggi forniti dall'utente (C++) | Microsoft Docs
-ms.custom: ''
+title: Asserzione e messaggi forniti dall'utente (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - user-supplied messages [C++], run time
 - user-supplied messages [C++], preprocessor time
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fdbf1ba3c4cfda4163076386def70c700c156aa7
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 913aa199b4acd2ceb6daf7a24d8c50c28234b74a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50057876"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507740"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Asserzione e messaggi forniti dall'utente (C++)
 

@@ -1,26 +1,16 @@
 ---
-title: . File exe come Input del Linker | Microsoft Docs
-ms.custom: ''
+title: File EXE come input del linker
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - executable files, as linker output
 - .exe files
 ms.assetid: 73714c30-6f03-4e72-881e-090e5240ba93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be674af25fceec377d2d7b8979b3a52de91cf640
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6f80c3b44a3639c14571e282aa264ef0e1fd9d5f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712478"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454886"
 ---
 # <a name="exe-files-as-linker-input"></a>File EXE come input del linker
 

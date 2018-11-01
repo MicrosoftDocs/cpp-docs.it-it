@@ -1,29 +1,19 @@
 ---
-title: 'Procedura: effettuare il marshalling dei puntatori a funzione utilizzando PInvoke | Microsoft Docs'
+title: 'Procedura: Effettuare il marshalling di puntatori a funzione utilizzando PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - data marshaling [C++], callbacks and delegates
 - interop [C++], callbacks and delegates
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 5246105f8824c3514213a3f7733b731789837403
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f12c86b7e32955622a4a2c598d01057e303a329
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415083"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435607"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Procedura: Effettuare il marshalling di puntatori a funzione utilizzando PInvoke
 

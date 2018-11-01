@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2974 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2974
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2974
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2974
 ms.assetid: 1b444260-f2bf-48d7-ab1e-35573d8c4a0e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 478639ee1eccf841361e8e7e880ac33669d69e1e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2fa0fae07435f3ab63398b7b3f02f9c662e7b436
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100482"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501374"
 ---
 # <a name="compiler-error-c2974"></a>Errore del compilatore C2974
 

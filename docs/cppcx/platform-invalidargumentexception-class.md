@@ -1,27 +1,19 @@
 ---
-title: 'Classe platform:: InvalidArgumentException | Microsoft Docs'
-ms.custom: ''
+title: Classe Platform::InvalidArgumentException
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::InvalidArgumentException
 - VCCORLIB/Platform::InvalidArgumentException::InvalidArgumentException
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ccd6a2ac0b47db7d808f3f90a228ecf497e95be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 11b1e0e2166bba2dc366520161729a8d84e865d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643612"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Classe Platform::InvalidArgumentException
 

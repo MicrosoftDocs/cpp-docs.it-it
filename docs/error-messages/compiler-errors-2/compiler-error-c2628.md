@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2628 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2628
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2628
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2628
 ms.assetid: 19a25e77-d5be-4107-88d5-0745b6281f98
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43a7d0515013158932f627b883ab36a2793ab5bd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90df41ba8ae85e57e40848f8b50f4c1df7c7b541
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051348"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664945"
 ---
 # <a name="compiler-error-c2628"></a>Errore del compilatore C2628
 

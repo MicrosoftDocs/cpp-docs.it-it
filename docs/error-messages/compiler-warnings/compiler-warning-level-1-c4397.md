@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 1) C4397 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 1) C4397
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4397
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f5a3ccc7b55a9a4aabad5d5567f08b0a56d4ba87
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ad690d78c1544adbe365a35ba3b5921c883631e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46064529"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498770"
 ---
 # <a name="compiler-warning-level-1-c4397"></a>Avviso del compilatore (livello 1) C4397
 

@@ -1,8 +1,6 @@
 ---
-title: Typedef &lt;fstream&gt; | Microsoft Docs
-ms.custom: ''
+title: Typedef &lt;fstream&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - fstream/std::filebuf
 - fstream/std::fstream
@@ -13,12 +11,12 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: dcae38b92d4740758bad00bc6e07555654dfd973
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d5a4b0e2d671bb787501767d4321bd3ed61deb88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018054"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481939"
 ---
 # <a name="ltfstreamgt-typedefs"></a>Typedef &lt;fstream&gt;
 

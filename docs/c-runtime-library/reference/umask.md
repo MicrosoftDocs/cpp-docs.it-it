@@ -1,10 +1,6 @@
 ---
-title: _umask | Microsoft Docs
-ms.custom: ''
+title: _umask
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _umask
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3053bfb19cc81dff15d41d1b5bc6d405da619f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677162"
 ---
 # <a name="umask"></a>_umask
 
@@ -64,7 +54,7 @@ Impostazione di autorizzazione predefinita.
 
 ## <a name="remarks"></a>Note
 
-Il **umask** funzione imposta la maschera di autorizzazione file del processo corrente per la modalità specificata dal *pmode*. La maschera di autorizzazione file modifica l'impostazione di autorizzazione dei nuovi file creati da **creat**, **Open**, o **sopen**. Se un bit nella maschera è impostato su 1, il bit corrispondente nel valore di autorizzazione richiesto del file è impostato su 0 (non consentito). Se un bit nella maschera è 0, il bit corrispondente viene lasciato invariato. L'impostazione di autorizzazione per un nuovo file non viene impostata fino a quando il file non viene chiuso per la prima volta.
+Il **umask** funzione imposta la maschera di autorizzazione file del processo corrente sulla modalità specificata da *pmode*. La maschera di autorizzazione file modifica l'impostazione di autorizzazione dei nuovi file creati da **creat**, **Open**, o **sopen**. Se un bit nella maschera è impostato su 1, il bit corrispondente nel valore di autorizzazione richiesto del file è impostato su 0 (non consentito). Se un bit nella maschera è 0, il bit corrispondente viene lasciato invariato. L'impostazione di autorizzazione per un nuovo file non viene impostata fino a quando il file non viene chiuso per la prima volta.
 
 L'espressione integer *pmode* contiene una o entrambe le costanti manifesto seguenti, definite in SYS\STAT. H:
 
@@ -74,7 +64,7 @@ L'espressione integer *pmode* contiene una o entrambe le costanti manifesto segu
 **S_IREAD**|Lettura consentita.
 **S_IREAD** \| **S_IWRITE**|Lettura e scrittura consentite.
 
-Quando vengono fornite entrambe le costanti, queste sono combinate con l'operatore OR bit per bit ( **|** ). Se il *pmode* argomento **s_iread**, la lettura non è consentita (il file è di sola scrittura). Se il *pmode* argomento **s_iwrite**, la scrittura non è consentita (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, il bit di lettura con l'impostazione **umask** non influisce sulle modalità del file.
+Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per bit ( **|** ). Se il *pmode* l'argomento è **s_iread**, non è consentita la lettura (il file è di sola scrittura). Se il *pmode* l'argomento è **s_iwrite**, non è consentita la scrittura (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, il bit di lettura con l'impostazione **umask** non ha alcun effetto sulle modalità del file.
 
 Se *pmode* non è una combinazione di una delle costanti manifesto o non include un set alternativo di costanti, la funzione semplicemente li ignorerà.
 

@@ -1,30 +1,20 @@
 ---
-title: -cgthreads (thread di generazione di codice) | Microsoft Docs
-ms.custom: ''
+title: /cgthreads (thread di generazione di codice)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /cgthreads
-dev_langs:
-- C++
 helpviewer_keywords:
 - /cgthreads compiler option (C++)
 - -cgthreads compiler option (C++)
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb6849a4b30e903d05b5ac3d37fce558074110a5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b06a800fca529a86b393ca00dcffce30ac7a21fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606466"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (thread di generazione di codice)
 

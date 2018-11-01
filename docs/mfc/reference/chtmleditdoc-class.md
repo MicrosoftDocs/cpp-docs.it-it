@@ -1,10 +1,6 @@
 ---
-title: Classe CHtmlEditDoc | Microsoft Docs
-ms.custom: ''
+title: Classe CHtmlEditDoc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CHtmlEditDoc
 - AFXHTML/CHtmlEditDoc
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXHTML/CHtmlEditDoc::GetView
 - AFXHTML/CHtmlEditDoc::IsModified
 - AFXHTML/CHtmlEditDoc::OpenURL
-dev_langs:
-- C++
 helpviewer_keywords:
 - CHtmlEditDoc [MFC], CHtmlEditDoc
 - CHtmlEditDoc [MFC], GetView
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77219f4cac64faf2604c427a2c4abf3babfd26a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1398f71abaa01569c8361bf3ee72f6dc13e9d711
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425365"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516194"
 ---
 # <a name="chtmleditdoc-class"></a>Classe CHtmlEditDoc
 
