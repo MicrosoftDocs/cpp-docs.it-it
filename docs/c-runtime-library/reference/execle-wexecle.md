@@ -1,10 +1,6 @@
 ---
-title: _execle, _wexecle | Microsoft Docs
-ms.custom: ''
+title: _execle, _wexecle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execle
 - _wexecle
@@ -25,24 +21,18 @@ f1_keywords:
 - wexecle
 - _execle
 - _wexecle
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecle function
 - execle function
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 519cdb78132c50513ae3197985de7faaceff7c91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400642"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530520"
 ---
 # <a name="execle-wexecle"></a>_execle, _wexecle
 
@@ -101,7 +91,7 @@ Per altre informazioni su questi codici restituiti, vedere [_doserrno, errno, _s
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passa ogni argomento della riga di comando come parametro separato e passa una matrice di puntatori alle impostazioni di ambiente.
 
-Il **execle** funzioni convalidano i propri parametri. Se *cmdname* oppure *arg0* è un puntatore null o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1. Non viene avviato alcun nuovo processo.
+Il **execle** funzioni convalidano i propri parametri. Se *cmdname* oppure *arg0* è un puntatore null o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1. Non viene avviato alcun nuovo processo.
 
 ## <a name="requirements"></a>Requisiti
 

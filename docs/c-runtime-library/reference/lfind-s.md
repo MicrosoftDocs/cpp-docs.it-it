@@ -1,10 +1,6 @@
 ---
-title: _lfind_s | Microsoft Docs
-ms.custom: ''
+title: _lfind_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind_s
 - _lfind_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - keys, finding in arrays
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 963b657a009f7376a17706b4ac1e5fb4e8b69237
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404818"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648441"
 ---
 # <a name="lfinds"></a>_lfind_s
 
@@ -98,9 +88,9 @@ Se alla funzione vengono passati parametri non validi, viene richiamato il gesto
 
 ## <a name="remarks"></a>Note
 
-Il **lfind_s** funzione esegue una ricerca lineare per il valore *chiave* in una matrice di *numero* elementi, ognuno dei *larghezza* byte. A differenza **bsearch_s**, **lfind_s** non richiede che la matrice da ordinare. Il *base* argomento è un puntatore alla base della matrice da cercare. Il *confrontare* argomento è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che specifica la relazione. **lfind_s** chiama il *confrontare* routine una o più volte durante la ricerca, passando il *contesto* puntatore e i puntatori a due elementi di matrice per ogni chiamata. Il *confrontare* routine deve confrontare gli elementi quindi restituito diverso da zero (Ciò significa che gli elementi sono diversi) oppure 0 (vale a dire gli elementi sono identici).
+Il **lfind_s** funzione esegue una ricerca lineare per il valore *chiave* in una matrice di *numero* elementi, ognuno dei *larghezza* byte. A differenza **bsearch_s**, **lfind_s** richiede che la matrice da ordinare. Il *base* argomento è un puntatore alla base della matrice da cercare. Il *confrontare* argomento è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che specifica la relazione. **lfind_s** chiama il *confrontare* routine una o più volte durante la ricerca, passando il *contesto* puntatore e i puntatori a due elementi della matrice per ogni chiamata. Il *confrontare* routine deve confrontare gli elementi quindi restituire diverso da zero (ovvero che gli elementi sono diversi) o 0 (ovvero gli elementi sono identici).
 
-**lfind_s** è simile a **lfind** tranne l'aggiunta del *contesto* puntatore all'elenco di parametri della funzione e gli argomenti della funzione di confronto. Il *contesto* puntatore può essere utile se la struttura dei dati cercati fa parte di un oggetto e il *confrontare* deve accedere ai membri dell'oggetto funzione. Il *confrontare* funzione possibile il cast del puntatore void nell'oggetto appropriato tipo e accedere ai membri di tale oggetto. L'aggiunta del *contesto* parametro rende **lfind_s** più sicura perché un contesto aggiuntivo consente di evitare i bug reentrancy associati all'utilizzo di variabili statiche per rendere i dati disponibili per il *confrontare* (funzione).
+**lfind_s** è simile a **lfind** tranne l'aggiunta del *contesto* puntatore all'elenco di parametri della funzione e gli argomenti della funzione di confronto. Il *contesto* puntatore può essere utile se la struttura dei dati cercati fa parte di un oggetto e il *confrontare* deve accedere ai membri dell'oggetto funzione. Il *confrontare* funzione può eseguire il cast del puntatore void nei membri di accesso e tipo di oggetto appropriato di quell'oggetto. L'aggiunta del *contesto* parametro rende **lfind_s** più sicuro perché può essere usato un contesto aggiuntivo per evitare i bug di reentrancy associati all'uso di variabili statiche per rendere disponibili per i dati di *confrontare* (funzione).
 
 ## <a name="requirements"></a>Requisiti
 

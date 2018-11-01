@@ -1,31 +1,21 @@
 ---
-title: operatore &lt; &gt; | Microsoft Docs
-ms.custom: ''
+title: operator &lt;&gt;
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
 f1_keywords:
 - <>
 - operator <>
-dev_langs:
-- C++
 helpviewer_keywords:
 - operator <>
 - <> operator
 ms.assetid: bc5acf43-df3e-499b-a3ed-1672cfa0d1ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c85f411ee782349eff9e802e3f010b222aaa888a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 97895212964c3b02a20b2cbfbfab8824511ecfb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468861"
 ---
-# <a name="operator-ltgt"></a>Operatore &lt;&gt;
+# <a name="operator-ltgt"></a>operator &lt;&gt;
 
 Considera *testo* come un singolo elemento di valore letterale.
 

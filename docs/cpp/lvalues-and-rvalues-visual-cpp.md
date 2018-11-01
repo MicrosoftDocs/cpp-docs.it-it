@@ -1,26 +1,16 @@
 ---
-title: 'Valore categorie: Elementi lvalue e rvalue (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Valore categorie: Elementi lvalue e rvalue (C++)'
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f19a06ac0583dd4cb911818787408aeca30b2ec
-ms.sourcegitcommit: 2f84d56b6ab19ba745b32ecd96b193c73cd62adf
+ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866215"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546354"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Elementi lvalue e rvalue (C++)
 
@@ -30,7 +20,7 @@ C++17 standard definisce le categorie di espressione valore come indicato di seg
 
 - Oggetto *glvalue* è un'espressione la cui valutazione determina l'identità di un oggetto, un campo di bit o una funzione.
 - Oggetto *prvalue* è un'espressione la cui valutazione Inizializza un oggetto o un campo di bit oppure calcola il valore dell'operando di un operatore, come specificato dal contesto in cui compare.
-- Un' *xvalue* è un glvalue che denota un oggetto o un campo di bit possono essere riutilizzate con risorse (in genere perché si trova verso la fine della relativa durata). [Esempio: determinati tipi di espressioni che includono i riferimenti rvalue (8.3.2) producono xvalues, ad esempio una chiamata a una funzione il cui tipo restituito è un riferimento rvalue o un cast a un tipo di riferimento rvalue. ]
+- Un' *xvalue* è un glvalue che denota un oggetto o un campo di bit possono essere riutilizzate con risorse (in genere perché si trova verso la fine della relativa durata). [Esempio: determinati tipi di espressioni che includono i riferimenti rvalue (8.3.2) producono xvalues, ad esempio una chiamata a una funzione il cui tipo restituito è un riferimento rvalue o un cast a un tipo di riferimento rvalue. ]
 - Un' *lvalue* è un glvalue che non è un xvalue.
 - Un' *rvalue* è un prvalue o un xvalue.
 

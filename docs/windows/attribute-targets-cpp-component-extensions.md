@@ -1,26 +1,16 @@
 ---
-title: Attributo destinazioni (C + c++ /CLI e c++ /CLI CX) | Microsoft Docs
-ms.custom: ''
+title: Attributo destinazioni (C + c++ /CLI e c++ /CLI CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3ffa13167de3de14e2338942cc9a41acf84b8aae
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8d191b284350be13111f07c4bd9d4f06ce67eb2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50058955"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467704"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>Attributo destinazioni (C + c++ /CLI e c++ /CLI CX)
 

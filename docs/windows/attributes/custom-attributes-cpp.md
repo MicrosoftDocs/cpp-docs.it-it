@@ -1,27 +1,16 @@
 ---
-title: Gli attributi personalizzati (C++) | Microsoft Docs
-ms.custom: ''
+title: Attributi personalizzati (C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - custom attributes
 - custom attributes, defining
 ms.assetid: af9998a5-aa12-4b94-9a43-97ce99026e29
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 95de2fdbb2535de994b0c5de94d3941e27b69680
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: c16337e15fedca25bbba31503026358e39a66026
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567180"
 ---
 # <a name="custom-attributes-c"></a>Attributi personalizzati (C++)
 

@@ -1,28 +1,18 @@
 ---
-title: Classe common_type | Microsoft Docs
-ms.custom: ''
+title: Classe common_type
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::common_type
-dev_langs:
-- C++
 helpviewer_keywords:
 - common_type class
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53ea9683576e891d120ce17651ed853a0f101780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f627705109315d3fee84c1777390f00e1e2010ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850027"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605231"
 ---
 # <a name="commontype-class"></a>Classe common_type
 

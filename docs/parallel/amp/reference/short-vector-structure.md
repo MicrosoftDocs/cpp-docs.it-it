@@ -1,27 +1,17 @@
 ---
-title: Struttura short_vector | Microsoft Docs
-ms.custom: ''
+title: Struttura short_vector
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - short_vector
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
-dev_langs:
-- C++
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f0efa594f5b4b6aa8b443d0d81e07df6148a32a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 535aeee1ea52ae6b248220d9330cd1d2235a99a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411547"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594051"
 ---
 # <a name="shortvector-structure"></a>Struttura short_vector
 

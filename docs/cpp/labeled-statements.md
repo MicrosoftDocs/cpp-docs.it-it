@@ -1,26 +1,16 @@
 ---
-title: Con l'etichetta istruzioni | Microsoft Docs
-ms.custom: ''
+title: Istruzioni con etichetta
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5fd0850c12adeb6d45298445f8f739978591b133
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072108"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432721"
 ---
 # <a name="labeled-statements"></a>Istruzioni con etichetta
 

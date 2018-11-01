@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2914 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2914
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2914
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2914
 ms.assetid: fc6a0592-f53e-4f5a-88cb-780bbed4acf2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fddc7d479e743162a43a96a80b8d362678bf51f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2500736f799032aea71173931139404b4406a16a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659586"
 ---
 # <a name="compiler-error-c2914"></a>Errore del compilatore C2914
 

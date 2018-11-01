@@ -1,10 +1,6 @@
 ---
-title: Classe CRichEditView | Microsoft Docs
-ms.custom: ''
+title: CRichEditView (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CRichEditView
 - AFXRICH/CRichEditView
@@ -55,8 +51,6 @@ f1_keywords:
 - AFXRICH/CRichEditView::WrapChanged
 - AFXRICH/CRichEditView::m_nBulletIndent
 - AFXRICH/CRichEditView::m_nWordWrap
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRichEditView [MFC], CRichEditView
 - CRichEditView [MFC], AdjustDialogPosition
@@ -106,16 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81ecc91d8c942a36920368bdb4054ffc2145478d
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890725"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476617"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 
@@ -1236,7 +1226,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Parametri
 
-*PF*<br/>
+*pf*<br/>
 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) gli attributi di formattazione di paragrafo struttura che contiene il nuovo valore predefinito.
 
 ### <a name="return-value"></a>Valore restituito

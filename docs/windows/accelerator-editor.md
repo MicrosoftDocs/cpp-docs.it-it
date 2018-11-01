@@ -1,14 +1,8 @@
 ---
-title: Editor tasti di scelta rapida (C++) | Microsoft Docs
-ms.custom: ''
+title: Editor tasti di scelta rapida (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
 - tables [C++], accelerator key
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 42870002ff84b697599443da8ab9b9b88dbbd7ca
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fdb2d9cf0954142da990a0a9f995cb482060345d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621494"
 ---
 # <a name="accelerator-editor-c"></a>Editor tasti di scelta rapida (C++)
 
@@ -34,7 +23,7 @@ Una tabella di tasti di scelta rapida è una risorsa di Windows C++ che contiene
 
 In genere i tasti di scelta rapida vengono usati per i comandi di programma disponibili anche in un menu o in una barra degli strumenti. Tuttavia, è possibile usare la tabella di tasti di scelta rapida per definire le combinazioni di tasti per i comandi che non hanno un oggetto dell'interfaccia utente associato.
 
-È possibile usare [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code) per associare i comandi di tasti di scelta rapida al codice.
+È possibile usare [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code) per associare i comandi dei tasti di scelta rapida al codice.
 
 Con il **acceleratore** editor, è possibile:
 

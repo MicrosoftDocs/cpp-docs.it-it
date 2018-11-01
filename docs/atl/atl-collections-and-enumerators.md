@@ -1,28 +1,18 @@
 ---
-title: ATL raccolte ed enumeratori | Microsoft Docs
-ms.custom: ''
+title: Raccolte ed enumeratori ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - enumerator interfaces
 - collections, ATL classes
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4949e8cff59a40b25c2015bf776d0844d29116a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044275"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617283"
 ---
 # <a name="atl-collections-and-enumerators"></a>Raccolte ed enumeratori ATL
 

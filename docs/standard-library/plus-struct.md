@@ -1,30 +1,20 @@
 ---
-title: Struct plus | Microsoft Docs
-ms.custom: ''
+title: plus (struct)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::plus
-dev_langs:
-- C++
 helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff3d6f9376678240f53113d925a868adfcb4da6d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5cb37d0f0a1f3704176a4e419882f0dcfacd7921
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314521"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454522"
 ---
-# <a name="plus-struct"></a>Struct plus
+# <a name="plus-struct"></a>plus (struct)
 
 Oggetto funzione predefinito che esegue l'operazione di addizione (`operator+` binario) negli argomenti.
 

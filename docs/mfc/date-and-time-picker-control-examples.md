@@ -1,25 +1,15 @@
 ---
-title: Esempi di controllo selezione data e ora | Microsoft Docs
-ms.custom: ''
+title: Esempi di controllo selezione data e ora
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DateTimePicker control [MFC]
 ms.assetid: f03c3a22-7725-45eb-8f8e-dddb2d15c3ca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa687d5b4b102db9a5aeee2bfb805f9e03550622
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2457900e9e23a30b2fd5997545658146067a9773
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432971"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511722"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Esempi di controllo selezione data e ora
 

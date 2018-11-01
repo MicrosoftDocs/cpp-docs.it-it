@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2316 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2316
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2316
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2316
 ms.assetid: 9ad08eb5-060b-4eb0-8d66-0dc134f7bf67
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2868d3a81fcbc94d8b20adcdc775363eb0a8eaeb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 53e7743ec0d84451feb1dc1cd8849439aa142336
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033017"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641181"
 ---
 # <a name="compiler-error-c2316"></a>Errore del compilatore C2316
 

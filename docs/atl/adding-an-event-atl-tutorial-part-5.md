@@ -1,23 +1,14 @@
 ---
-title: Aggiunta di un evento (ATL dell'esercitazione, parte 5) | Microsoft Docs
+title: Aggiunta di un evento (Esercitazione di ATL, parte 5)
 ms.custom: get-started-article
 ms.date: 09/27/2018
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9cec895019855e2d3744f722bd15ad3a10288597
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 4576af12f73e907fa8826ad71185a42ed9b9308e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821309"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643040"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Aggiunta di un evento (Esercitazione di ATL, parte 5)
 

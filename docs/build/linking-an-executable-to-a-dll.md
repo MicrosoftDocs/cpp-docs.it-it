@@ -1,12 +1,6 @@
 ---
-title: Collegare un eseguibile a una DLL | Microsoft Docs
-ms.custom: ''
+title: Collegare un eseguibile a una DLL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - run time [C++], linking
 - dynamic load linking [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0781a2257197314b75ae46ec2557d0b698cb9a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 24912c13d3528377ab849a4205ef072eb26490d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702014"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648773"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Collegare un eseguibile a una DLL
 

@@ -1,27 +1,17 @@
 ---
-title: Classe type_index | Microsoft Docs
-ms.custom: ''
+title: Classe type_index
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - typeindex/std::type_index
-dev_langs:
-- C++
 helpviewer_keywords:
 - type_index class
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e301b8d47c1a054a5b80bff105950d876d90b047
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8807a041ab1c6ef47a9c3c12dac2688f121f6cfa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853996"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650491"
 ---
 # <a name="typeindex-class"></a>Classe type_index
 

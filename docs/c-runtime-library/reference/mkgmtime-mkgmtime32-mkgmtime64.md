@@ -1,10 +1,6 @@
 ---
-title: _mkgmtime, _mkgmtime32, _mkgmtime64 | Microsoft Docs
-ms.custom: ''
+title: _mkgmtime, _mkgmtime32, _mkgmtime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mkgmtime32
 - _mkgmtime64
@@ -29,8 +25,6 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -42,20 +36,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcb587cf5504f661512ccf88cf4f15d0555e2f18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d96d79a45e05e4b371315c0612ed086f6ea2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405140"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452260"
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
-Converte un'ora UTC rappresentata da un **struct** **tm** a un'ora UTC rappresentata da un **time_t** tipo.
+Converte un'ora UTC rappresentata da un **struct** **tm** a un'ora UTC rappresentata da una **time_t** tipo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -78,15 +68,15 @@ Un puntatore all'ora UTC come un **struct** **tm** da convertire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Una quantità di tipo **__time32_t** oppure **__time64_t** che rappresenta il numero di secondi trascorsi dalla mezzanotte del 1 gennaio 1970, in Coordinated Universal Time (UTC). Se la data è compresa nell'intervallo (vedere la sezione Osservazioni) o l'input non può essere interpretato come un'ora valida, il valore restituito è -1.
+Una quantità di tipo **__time32_t** oppure **__time64_t** che rappresenta il numero di secondi trascorsi dalla mezzanotte del 1 gennaio 1970, nel formato Coordinated Universal Time (UTC). Se la data è compreso nell'intervallo (vedere la sezione Osservazioni) o l'input non può essere interpretato come un'ora valida, il valore restituito è -1.
 
 ## <a name="remarks"></a>Note
 
-Il **_mkgmtime32** e **_mkgmtime64** funzioni consentono di convertire un'ora UTC in un **__time32_t** o **__time64_t** tipo che rappresenta l'ora in ORA UTC. Per convertire un'ora locale in ora UTC, utilizzare **mktime**, **_mktime32**, e **_mktime64** invece.
+Il **_mkgmtime32** e **_mkgmtime64** funzioni convertono un'ora UTC per un **__time32_t** oppure **__time64_t** tipo che rappresenta l'ora in ORA UTC. Per convertire un'ora locale in ora UTC, usare **mktime**, **_mktime32**, e **_mktime64** invece.
 
-**mkgmtime** è una funzione inline che restituisce **_mkgmtime64**, e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come precedente 32 bit **time_t**, è possibile definire **_USE_32BIT_TIME_T**. Ciò non è consigliabile perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038 (l'intervallo massimo di 32 bit **time_t**), e non è consentito affatto su piattaforme a 64 bit.
+**mkgmtime** è una funzione inline che restituisca **_mkgmtime64**, e **time_t** equivale a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come il vecchio 32 bit **time_t**, è possibile definire **_USE_32BIT_TIME_T**. Questa operazione è sconsigliata perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038 (intervallo massimo di 32 bit **time_t**), e non è consentito affatto su piattaforme a 64 bit.
 
-Il tempo passata struttura verrà modificato come indicato di seguito, nello stesso modo quando vengono modificati con la **_mktime** funzioni: il **tm_wday** e **tm_yday** i campi vengono impostati new i valori in basano ai valori della **tm_mday** e **tm_year**. Quando si specifica un **tm** struttura temporale, impostare il **tm_isdst** campo:
+La struttura dell'ora passata verrà modificata come segue, allo stesso modo quando vengono modificati con il **_mktime** funzioni: il **tm_wday** e **tm_yday** i campi vengono impostati su nuovi i valori in basano ai valori della **tm_mday** e **tm_year**. Quando si specifica un **tm** struttura temporale, impostare il **tm_isdst** campo:
 
 - Zero (0) per indicare che è attiva l'ora solare.
 
@@ -94,11 +84,11 @@ Il tempo passata struttura verrà modificato come indicato di seguito, nello ste
 
 - Un valore minore di zero per fare in modo che il codice della libreria di runtime del linguaggio C calcoli se è attiva l'ora legale o l'ora solare.
 
-La libreria di runtime C usa la variabile di ambiente TZ per determinare l'ora legale corretta. Se la variabile TZ non è impostata, viene eseguita una query nel sistema operativo per ottenere il comportamento corretto per l'ora legale regionale. **tm_isdst** è un campo obbligatorio. Se non è impostata, il relativo valore non è definito e il valore restituito da **mktime** è imprevedibile.
+La libreria di runtime C usa la variabile di ambiente TZ per determinare l'ora legale corretta. Se la variabile TZ non è impostata, viene eseguita una query nel sistema operativo per ottenere il comportamento corretto per l'ora legale regionale. **tm_isdst** è un campo obbligatorio. Se non impostato, il relativo valore non è definito e il valore restituito da **mktime** è imprevedibile.
 
-L'intervallo del **_mkgmtime32** funzione è dalla mezzanotte del 1 ° gennaio 1970, UTC a 23:59:59 18 gennaio 2038, UTC. L'intervallo di **_mkgmtime64** va da mezzanotte del 1 gennaio 1970, UTC a 23:59:59, 31 dicembre 3000 UTC. Una data out-of-range restituisce un valore restituito-1. L'intervallo di **mkgmtime** dipende dal fatto che **_USE_32BIT_TIME_T** è definito. Se non è definito (impostazione predefinita) l'intervallo è quello di **_mkgmtime64**; in caso contrario, l'intervallo è limitato a 32 bit compreso tra **_mkgmtime32**.
+L'intervallo del **_mkgmtime32** funzione è dalla mezzanotte del 1 gennaio 1970 UTC a: 23.59.59 del 18 gennaio 2038, UTC. L'intervallo di **_mkgmtime64** va da mezzanotte del 1 gennaio 1970, UTC a 23:59:59, 31 dicembre 3000, UTC. Una data di out-of-range restituisce un valore restituito-1. L'intervallo di **mkgmtime** dipende dal fatto che **_USE_32BIT_TIME_T** è definito. Se non è definito (impostazione predefinita) l'intervallo è quello di **_mkgmtime64**; in caso contrario, l'intervallo è limitato a 32 bit compreso tra **_mkgmtime32**.
 
-Si noti che **gmtime** e **localtime** per la conversione utilizzare un singolo buffer allocato in modo statico. Se si fornisce questo buffer a **mkgmtime**, i contenuti precedenti verranno eliminati.
+Si noti che **gmtime** e **localtime** usano un singolo buffer allocato in modo statico per la conversione. Se si fornisce questo buffer a **mkgmtime**, i contenuti precedenti verranno eliminati.
 
 ## <a name="example"></a>Esempio
 

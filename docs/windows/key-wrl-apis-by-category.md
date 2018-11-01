@@ -1,24 +1,14 @@
 ---
-title: Chiave API WRL per categoria | Microsoft Docs
-ms.custom: ''
+title: API WRL chiave per categoria
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 529d561aa3ec486a7fa2b69e5ca8aa241b0879fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059870"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638061"
 ---
 # <a name="key-wrl-apis-by-category"></a>API WRL chiave per categoria
 

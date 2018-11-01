@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2761 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2761
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2761
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2761
 ms.assetid: 38c79a05-b56d-485b-820f-95e8c0cb926f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2083f08ad79a9fd53148e7c166ec276a9ddf4cde
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6ad42beea28bd2070d1c7dc12086146e6ab70ff5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075241"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667006"
 ---
 # <a name="compiler-error-c2761"></a>Errore del compilatore C2761
 

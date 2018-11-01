@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3219 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3219
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3219
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3219
 ms.assetid: 9c9757b0-1256-4cdf-9d8c-a3a72f300ce5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f60a17d257505752f9d2c791365f537fa02ffc2a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a93e9ed1a8e00eaecc664bda02a70c81b6c81ded
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022588"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621689"
 ---
 # <a name="compiler-error-c3219"></a>Errore del compilatore C3219
 

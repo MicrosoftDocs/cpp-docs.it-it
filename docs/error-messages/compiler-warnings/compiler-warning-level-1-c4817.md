@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 1) C4817 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 1) C4817
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4817
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4817
 ms.assetid: a68f5486-6940-4934-9f93-bfd4d71f92a9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e87d602b98fe3f70c29b26c39ebce94026606249
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bb6eb8899efdab3cae39f77079f7eed72344acc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666878"
 ---
 # <a name="compiler-warning-level-1-c4817"></a>Avviso del compilatore (livello 1) C4817
 

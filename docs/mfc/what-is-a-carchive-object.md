@@ -1,14 +1,8 @@
 ---
-title: Che cos'è un oggetto CArchive | Microsoft Docs
-ms.custom: ''
+title: Definizione di oggetto CArchive
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - CArchive
-dev_langs:
-- C++
 helpviewer_keywords:
 - archive objects [MFC]
 - archives [MFC], for serialization
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - CArchive class [MFC], about CArchive class [MFC]
 - buffering, serializable objects
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fe45b3e5444549001990f62db7028f9de6d49986
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 08260d1a1b21658e879410ff5201e5f455535332
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409663"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519340"
 ---
 # <a name="what-is-a-carchive-object"></a>Definizione di oggetto CArchive
 

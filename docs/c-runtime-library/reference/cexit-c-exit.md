@@ -1,10 +1,6 @@
 ---
-title: _cexit, _c_exit | Microsoft Docs
-ms.custom: ''
+title: _cexit, _c_exit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _c_exit
 - _cexit
@@ -26,8 +22,6 @@ f1_keywords:
 - c_exit
 - _c_exit
 - cexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - cleanup operations during processes
 - cexit function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b0840ccec85d46a13984b65ebe99e53b968bedeb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a075e8a8e965a195765b86ffa21fed0915dbf5ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395822"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495134"
 ---
 # <a name="cexit-cexit"></a>_cexit, _c_exit
 
@@ -59,7 +49,7 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Note
 
-Il **cexit** chiamate di funzioni, last-in, First-Out (LIFO) ordine, le funzioni registrate da **atexit** e **OnExit**. Quindi **cexit** Scarica tutti i buffer dei / o e chiude tutti i flussi aperti prima della restituzione. **c_exit** corrisponde al **Exit** ma restituisce al processo chiamante senza elaborazione **atexit** oppure **OnExit** o scaricare i buffer di flusso. Il comportamento delle **uscire**, **Exit**, **cexit**, e **c_exit** illustrato nella tabella seguente.
+Il **cexit** chiamate a funzioni, in last-in, First-Out (LIFO) ordine, le funzioni registrate da **atexit** e **OnExit**. Quindi **cexit** Scarica tutti i buffer dei / o e chiude tutti i flussi aperti prima della restituzione. **c_exit** equivale a **Exit** ma restituisce al processo chiamante senza elaborazione **atexit** oppure **OnExit** o scaricare i buffer di flusso. Il comportamento delle **uscire**, **Exit**, **cexit**, e **c_exit** è illustrato nella tabella seguente.
 
 |Funzione|Comportamento|
 |--------------|--------------|
@@ -68,7 +58,7 @@ Il **cexit** chiamate di funzioni, last-in, First-Out (LIFO) ordine, le funzioni
 |**_cexit**|Esegue le procedure complete di terminazione della libreria C e restituisce al chiamante, ma non termina il processo.|
 |**_c_exit**|Esegue le procedure rapide di terminazione della libreria C e restituisce al chiamante, ma non termina il processo.|
 
-Quando si chiama il **cexit** oppure **c_exit** funzioni, i distruttori per gli oggetti temporanei o automatici presenti al momento della chiamata non vengono chiamati. Un oggetto automatico è un oggetto definito in una funzione in cui l'oggetto non è dichiarato come statico. Un oggetto temporaneo è un oggetto creato dal compilatore. Per eliminare un oggetto automatico prima di chiamare **cexit** oppure **c_exit**, in modo esplicito chiama il distruttore per l'oggetto, come indicato di seguito:
+Quando si chiama il **cexit** oppure **c_exit** funzioni, i distruttori per gli oggetti temporanei o automatici presenti al momento della chiamata non vengono chiamati. Un oggetto automatico è un oggetto definito in una funzione in cui l'oggetto non è dichiarato come statico. Un oggetto temporaneo è un oggetto creato dal compilatore. Per eliminare un oggetto automatico prima di chiamare **cexit** oppure **c_exit**, in modo esplicito chiama il distruttore dell'oggetto, come indicato di seguito:
 
 ```cpp
 myObject.myClass::~myClass( );

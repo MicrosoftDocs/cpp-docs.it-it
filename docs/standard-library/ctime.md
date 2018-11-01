@@ -1,28 +1,18 @@
 ---
-title: '&lt;ctime&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;ctime&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <ctime>
 - std::<ctime>
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09ff596ef6b719e65ff38b40214a0c4f35744321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56c9e7a8b654d386cf9ad4aa491939dedcfab92a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650354"
 ---
 # <a name="ltctimegt"></a>&lt;ctime&gt;
 

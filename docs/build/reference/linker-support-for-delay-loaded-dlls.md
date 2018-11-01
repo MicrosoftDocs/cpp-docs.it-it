@@ -1,25 +1,15 @@
 ---
-title: Supporto per le DLL a caricamento ritardato nel linker | Microsoft Docs
-ms.custom: ''
+title: Supporto per le DLL a caricamento ritardato nel linker
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 555a46ee65a5d5d5565128a15af01a2c1cf18540
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 248a559735750f912030a37aea85a2cb34156887
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711908"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664542"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Supporto per le DLL a caricamento ritardato nel linker
 

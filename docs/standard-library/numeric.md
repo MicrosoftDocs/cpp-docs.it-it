@@ -1,27 +1,17 @@
 ---
-title: '&lt;numeric&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;numeric&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <numeric>
-dev_langs:
-- C++
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5705414bdc6915e758d66576855a45db5fcad23
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee93d254dcf49b38cb817ba460060fa72b81e01f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853115"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456173"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 

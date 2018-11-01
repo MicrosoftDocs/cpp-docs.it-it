@@ -1,27 +1,17 @@
 ---
-title: Classe mem_fun1_t | Microsoft Docs
-ms.custom: ''
+title: Classe mem_fun1_t
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::mem_fun1_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - mem_fun1_t class
 ms.assetid: 01a8c2c2-b2f7-4e3f-869c-5b5b9f06ea54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d9950d9198aec27ec3114d8a2b5151d105ee0b1
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9a1fe26e66eb2ad20e6889b95640fadd2b3c45a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110005"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613199"
 ---
 # <a name="memfun1t-class"></a>Classe mem_fun1_t
 

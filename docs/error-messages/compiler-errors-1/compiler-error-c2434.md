@@ -1,37 +1,27 @@
 ---
-title: Errore del compilatore C2434 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C2434
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2434
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45f9ccdef84713883c53dab0e7caf3b1519628de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c73a8d4fcde945ddf2495cc2d0d7dc47216f2db3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704227"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587590"
 ---
 # <a name="compiler-error-c2434"></a>Errore del compilatore C2434
 
-> '*simbolo*': un simbolo dichiarato con declspec (Process) può essere inizializzato in modo dinamico in /clr: pure modalità
+> '*simbolo*': un simbolo dichiarato con declspec (Process) non può essere inizializzato in modo dinamico in /clr: pure modalità
 
 ## <a name="remarks"></a>Note
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
-Non è possibile inizializzare dinamicamente una variabile per ogni processo in **/clr: pure**. Per ulteriori informazioni, vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) e [processo](../../cpp/process.md).
+Non è possibile inizializzare in modo dinamico una variabile per ogni processo nella casella **/clr: pure**. Per altre informazioni, vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) e [processo](../../cpp/process.md).
 
 ## <a name="example"></a>Esempio
 

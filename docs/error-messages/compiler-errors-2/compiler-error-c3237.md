@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3237 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3237
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3237
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3237
 ms.assetid: 690970c8-e13b-4ff3-96e3-5fd93c4d356b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbfeb7775bc6d48078affcc37c2dead3c920307a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9853fd67c2b053e337cfacb5478e206c79321263
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631777"
 ---
 # <a name="compiler-error-c3237"></a>Errore del compilatore C3237
 

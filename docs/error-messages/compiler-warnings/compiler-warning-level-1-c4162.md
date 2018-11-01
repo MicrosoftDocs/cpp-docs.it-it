@@ -1,27 +1,17 @@
 ---
-title: Compilatore Warning (level 1) C4162 | Microsoft Docs
-ms.custom: ''
+title: Compilatore Warning (level 1) C4162
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4162
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a36fa6a63443bf2272df7ce6125fd77afedf100f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c6b675fd47cb6e98255515c7cd77c6dd48ea02b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027180"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578265"
 ---
 # <a name="compiler-warning-level-1-c4162"></a>Compilatore Warning (level 1) C4162
 

@@ -1,17 +1,15 @@
 ---
-title: Funzioni &lt;forward_list&gt; | Microsoft Docs
-ms.custom: ''
+title: Funzioni &lt;forward_list&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - forward_list/std::swap
 ms.assetid: 0d6bc656-7049-4651-a4bd-c9a805e47756
-ms.openlocfilehash: 097dca5d26014696e218ff6439b81e1d0349b2c5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b425461f1428470b04a525efdd9a702ae038a283
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477337"
 ---
 # <a name="ltforwardlistgt-functions"></a>Funzioni &lt;forward_list&gt;
 

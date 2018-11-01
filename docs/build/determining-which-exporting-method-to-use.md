@@ -1,28 +1,18 @@
 ---
-title: Scelta del metodo di esportazione da usare | Microsoft Docs
-ms.custom: ''
+title: Scelta del metodo di esportazione da utilizzare
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - __declspec(dllexport) keyword [C++]
 - exporting DLLs [C++], method comparison
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07315ca7558c2e8b972e8e3aba741696b8097e8c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75cd03e2ebb8dab4069024469b2b8b5c45665704
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703574"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615133"
 ---
 # <a name="determining-which-exporting-method-to-use"></a>Scelta del metodo di esportazione da utilizzare
 

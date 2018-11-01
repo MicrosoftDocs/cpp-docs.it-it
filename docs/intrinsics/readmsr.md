@@ -1,29 +1,19 @@
 ---
-title: __readmsr | Microsoft Docs
-ms.custom: ''
+title: __readmsr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __readmsr
-dev_langs:
-- C++
 helpviewer_keywords:
 - Read Model Specific Register
 - rdmsr instruction
 - __readmsr intrinsic
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d21d33d1e90d7c4aac9ea833d0c5bd80f5172312
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45e9c21eb8d9ac213812236a91c050c3c9df8f8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641064"
 ---
 # <a name="readmsr"></a>__readmsr
 
@@ -34,8 +24,8 @@ Genera il `rdmsr` istruzione, che legge il Registro di specifica del modello spe
 ## <a name="syntax"></a>Sintassi
 
 ```
-__int64 __readmsr( 
-   int register 
+__int64 __readmsr( 
+   int register 
 );
 ```
 

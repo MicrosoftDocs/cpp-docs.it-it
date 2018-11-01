@@ -1,28 +1,18 @@
 ---
-title: add_cv Class | Microsoft Docs
-ms.custom: ''
+title: Classe add_cv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::add_cv
-dev_langs:
-- C++
 helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9bdb00c421e668313d92c829c4252c2637e2e18
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 37001815710b197ec77ed0d45a16ea971ad1edce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722137"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613200"
 ---
 # <a name="addcv-class"></a>Classe add_cv
 

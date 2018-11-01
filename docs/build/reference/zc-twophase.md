@@ -1,30 +1,20 @@
 ---
-title: /Zc:twoPhase-(disabilita la ricerca del nome in due fasi) | Microsoft Docs
-ms.custom: ''
+title: /Zc:twoPhase-(disabilita la ricerca del nome in due fasi)
 ms.date: 03/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
 - VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
-dev_langs:
-- C++
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30647ab07984c393b10d7c0fb74d0e2be35cdf26
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d5a53db5a5c0ae9c4cfec76e57f628499c8955c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648760"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(disabilita la ricerca del nome in due fasi)
 

@@ -1,12 +1,6 @@
 ---
-title: Elaborazione di cicli inattivi | Microsoft Docs
-ms.custom: ''
+title: Elaborazione di cicli inattivi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, background processing
 - PeekMessage method [MFC], elsewhere than message loop
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0cad16ca383ebbcc3e24723443ab951b8c1f7ab0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1eff76e2e5fd98e63dccb9110882656f69da6539
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429057"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604271"
 ---
 # <a name="idle-loop-processing"></a>Elaborazione di cicli inattivi
 

@@ -1,28 +1,19 @@
 ---
-title: Classi di supporto dell'interfaccia utente (ATL) | Microsoft Docs
-ms.custom: ''
+title: Classi di supporto dell'interfaccia utente (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.ui
-dev_langs:
-- C++
 helpviewer_keywords:
 - user interfaces, support classes
 - user interfaces, ATL classes
 ms.assetid: 313dfc95-308a-4118-b919-5a3c3673b865
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1aa28c172b4eb22366d2af55d040cb52c9e84a31
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7306ddbbc3cf70850e0c7c66e48abf402017e5db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755235"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644223"
 ---
 # <a name="ui-support-classes"></a>Classi di supporto dell'interfaccia utente
 

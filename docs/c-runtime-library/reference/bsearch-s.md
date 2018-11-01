@@ -1,10 +1,6 @@
 ---
-title: bsearch_s | Microsoft Docs
-ms.custom: ''
+title: bsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - bsearch_s
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - bsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2600b77031967bec5d5dd549a7dd8f34fc5c5e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd621c1dae2cae847bbbf032dec7e6972c526203
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430836"
 ---
 # <a name="bsearchs"></a>bsearch_s
 
@@ -78,7 +68,7 @@ Puntatore a un oggetto accessibile nella funzione di confronto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**bsearch_s** restituisce un puntatore a un'occorrenza di *chiave* nella matrice a cui puntata *base*. Se *chiave* non viene trovato, la funzione restituisce **NULL**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
+**bsearch_s** restituisce un puntatore a un'occorrenza di *chiave* nella matrice a cui punta *base*. Se *key* non viene trovato, la funzione restituisce **NULL**. Se la matrice non è in ordine crescente o contiene record duplicati con chiavi identiche, il risultato è imprevedibile.
 
 Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametro non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
@@ -94,7 +84,7 @@ Se alla funzione vengono passati parametri non validi, viene richiamato il gesto
 
 ## <a name="remarks"></a>Note
 
-Il **bsearch_s** funzione esegue una ricerca binaria di una matrice ordinata di *numero* elementi, ognuno dei *larghezza* byte. Il *base* valore è un puntatore alla base della matrice da cercare, e *chiave* è il valore cercato. Il *confrontare* parametro è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta a un elemento di matrice e restituisce uno dei valori seguenti che specifica la relazione:
+Il **bsearch_s** funzione esegue una ricerca binaria di una matrice ordinata di *numero* elementi, ognuno dei *larghezza* byte le dimensioni. Il *base* valore è un puntatore alla base della matrice da cercare, e *chiave* è il valore cercato. Il *confrontare* parametro è un puntatore a una routine fornita dall'utente che confronta la chiave richiesta a un elemento della matrice e restituisce uno dei valori seguenti che specifica la relazione:
 
 |Valore restituito da *confrontare* routine|Descrizione|
 |-----------------------------------------|-----------------|
@@ -102,7 +92,7 @@ Il **bsearch_s** funzione esegue una ricerca binaria di una matrice ordinata di 
 |0|La chiave è uguale all'elemento della matrice.|
 |> 0|La chiave è maggiore dell'elemento della matrice.|
 
-Il *contesto* puntatore può essere utile se la struttura dei dati cercati fa parte di un oggetto e la funzione di confronto deve accedere ai membri dell'oggetto. Il *confrontare* (funzione) può eseguire il cast del puntatore void nell'oggetto appropriato tipo e accedere ai membri di tale oggetto. L'aggiunta del *contesto* parametro rende **bsearch_s** più sicuro perché un contesto aggiuntivo può essere utilizzato per evitare i bug reentrancy associati all'utilizzo di variabili statiche per rendere i dati disponibili per il *confrontare* (funzione).
+Il *contesto* puntatore può essere utile se la struttura dei dati cercati fa parte di un oggetto e la funzione di confronto deve accedere ai membri dell'oggetto. Il *confrontare* funzione può eseguire il cast del puntatore void nei membri di accesso e tipo di oggetto appropriato di quell'oggetto. L'aggiunta del *contesto* parametro rende **bsearch_s** più sicuro perché può essere usato un contesto aggiuntivo per evitare i bug di reentrancy associati all'uso di variabili statiche per rendere disponibili per i dati di *confrontare* (funzione).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -114,7 +104,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Questo programma consente di ordinare una matrice di stringhe con [qsort_s](qsort-s.md) e quindi usa bsearch_s per trovare la parola "cat".
+Questo programma consente di ordinare una matrice di stringhe con [qsort_s](qsort-s.md)e quindi usa bsearch_s per trovare la parola "cat".
 
 ```cpp
 // crt_bsearch_s.cpp

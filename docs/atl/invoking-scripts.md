@@ -1,28 +1,18 @@
 ---
-title: Richiamo degli script (ATL) | Microsoft Docs
-ms.custom: ''
+title: Richiamo degli script (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - StringRegister
-dev_langs:
-- C++
 helpviewer_keywords:
 - StringRegister method
 - scripts, invoking registry in ATL
 ms.assetid: eabd41ee-586b-4266-9e92-5aaad04b73a4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83baa272206bb8250e76f4e53d75b0e8a8106242
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 170eb4c29571fcec8797727f54630894c9198442
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650554"
 ---
 # <a name="invoking-scripts"></a>Richiamo degli script
 

@@ -1,12 +1,6 @@
 ---
-title: 'Recordset: Dichiarazione di una classe per una Query predefinita (ODBC) | Microsoft Docs'
-ms.custom: ''
+title: 'Recordset: dichiarazione di una classe per una query già definita (ODBC)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ODBC recordsets, queries
 - predefined queries and recordsets
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 187b24b45ca24d45f6dd0f3f38cf62120633c790
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e83bf2ecb24a9abfd8dc9800a3a10d2d65025336
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50071247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50611263"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset: dichiarazione di una classe per una query già definita (ODBC)
 

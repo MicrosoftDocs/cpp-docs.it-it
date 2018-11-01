@@ -1,10 +1,6 @@
 ---
-title: strcmpi | Microsoft Docs
-ms.custom: ''
+title: strcmpi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strcmpi
 - strcmpi
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - strcmpi
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcmpi function
 ms.assetid: 74206b2f-9bca-4d32-9cdc-93cb94c2aaa1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7f21714042c012fc5b0856bea3e48e3dce18cc64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c87c67b0102272a78690c39ac3065b0b2904ae5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406407"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609625"
 ---
 # <a name="strcmpi"></a>strcmpi
 

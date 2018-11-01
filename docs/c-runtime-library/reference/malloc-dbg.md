@@ -1,10 +1,6 @@
 ---
-title: _malloc_dbg | Microsoft Docs
-ms.custom: ''
+title: _malloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _malloc_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - malloc_dbg
 - _malloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - malloc_dbg function
 - memory allocation
 - _malloc_dbg function
 ms.assetid: c97eca51-140b-4461-8bd2-28965b49ecdb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 64fb40028d9130278077f3d05dd1e25914dba212
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451784"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633610"
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -69,7 +59,7 @@ Puntatore al nome del file di origine che ha richiesto l'operazione di allocazio
 *linenumber*<br/>
 Numero di riga nel file di origine in cui è stata richiesta l'operazione di allocazione o **NULL**.
 
-Il *filename* e *linenumber* parametri sono disponibili solo quando **malloc_dbg** è stato chiamato in modo esplicito o [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)è stata definita una costante del preprocessore.
+Il *nomefile* e *linenumber* parametri sono disponibili solo quando **malloc_dbg** è stato chiamato in modo esplicito o [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)è stata definita la costante del preprocessore.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -77,11 +67,11 @@ Al termine, questa funzione restituisce un puntatore alla porzione utente del bl
 
 ## <a name="remarks"></a>Note
 
-**malloc_dbg** è una versione di debug di [malloc](malloc.md) (funzione). Quando si [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **malloc_dbg** viene ridotta a una chiamata a **malloc**. Entrambi **malloc** e **malloc_dbg** allocare un blocco di memoria nell'heap di base, ma **malloc_dbg** offre diverse funzionalità di debug: buffer presenti a entrambi i lati dell'utente parte del blocco in cui verificare la presenza di perdite, un parametro di tipo blocco per registrare i tipi specifici di allocazioni e *filename*/*linenumber* informazioni per determinare l'origine di richieste di allocazione.
+**malloc_dbg** è una versione di debug di [malloc](malloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **malloc_dbg** viene ridotta a una chiamata a **malloc**. Entrambe **malloc** e **malloc_dbg** allocare un blocco di memoria nell'heap di base, ma **malloc_dbg** offre diverse funzionalità di debug: buffer presenti a entrambi i lati dell'utente parte del blocco da verificare per le perdite, un parametro di tipo blocco per tenere traccia di tipi specifici di allocazioni e *nomefile*/*linenumber* informazioni per determinare l'origine di richieste di allocazione.
 
-**malloc_dbg** alloca il blocco di memoria con una quantità di spazio a quella richiesta *dimensioni*. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
+**malloc_dbg** alloca il blocco di memoria con quantità di spazio leggermente superiore al valore richiesto *dimensioni*. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
 
-**malloc_dbg** imposta **errno** a **ENOMEM** se fallisce un'allocazione di memoria o se la quantità di memoria richiesta (incluso l'overhead menzionato precedentemente) supera **_HEAP_ MAXREQ**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**malloc_dbg** imposta **errno** al **ENOMEM** se un'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta (incluso l'overhead menzionato precedentemente) supera **_HEAP_ MAXREQ**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la sua versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -99,7 +89,7 @@ Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-libra
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di utilizzo **malloc_dbg**, vedere [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+Per un esempio d'uso **malloc_dbg**, vedere [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
 
 ## <a name="see-also"></a>Vedere anche
 

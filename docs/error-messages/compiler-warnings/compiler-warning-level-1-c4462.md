@@ -1,26 +1,17 @@
 ---
-title: Compilatore avviso (livello 1) C4462 | Documenti Microsoft
+title: Avviso del compilatore (livello 1) C4462
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4462
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 105a78fe9f8a8d2b6442c9b403af0266de53d3b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 801a440f131e9428c7f217346a6fd26c72cc1374
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281401"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582325"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>Avviso del compilatore (livello 1) C4462
 
@@ -28,7 +19,7 @@ ms.locfileid: "33281401"
 
 L'avviso C4462 viene generato in un componente o app di Windows Runtime quando un elemento `TypedEventHandler` pubblico presenta come uno dei relativi parametri di tipo un riferimento alla classe contenitore.
 
-Questo avviso viene promossa automaticamente a un errore. Se si desidera modificare questo comportamento, utilizzare [#pragma avviso](../../preprocessor/warning.md). Ad esempio, per trasformare C4462 in un problema di avviso di livello 4, aggiungere questa riga al file del codice sorgente:
+Questo avviso viene promossa automaticamente a un errore. Se si vuole modificare questo comportamento, usare [#pragma avviso](../../preprocessor/warning.md). Ad esempio, per rendere C4462 un problema di avviso di livello 4, aggiungere questa riga al file del codice sorgente:
 
 ```cpp
 #pragma warning(4:4462)
@@ -41,18 +32,18 @@ In questo esempio genera l'avviso C4462:
 ```cpp
 namespace N
 {
-       public ref struct EventArgs sealed {};
-       public ref struct R sealed
-       {
-              R() {}
-              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
-       };
+       public ref struct EventArgs sealed {};
+       public ref struct R sealed
+       {
+              R() {}
+              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
+       };
 }
 
 [Platform::MTAThread]
 int main()
 {
-     auto x = ref new N::R();
+     auto x = ref new N::R();
 }
 ```
 

@@ -1,10 +1,6 @@
 ---
-title: _get_timezone | Microsoft Docs
-ms.custom: ''
+title: _get_timezone
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_timezone
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _get_timezone
 - get_timezone
-dev_langs:
-- C++
 helpviewer_keywords:
 - time zones
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 111cbff00d1f6119fbd806cc5fc3d14c28a7d7c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398276"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613915"
 ---
 # <a name="gettimezone"></a>_get_timezone
 
@@ -64,9 +54,9 @@ Zero se ha esito positivo oppure un **errno** valore se si verifica un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **get_timezone** funzione recupera la differenza in secondi tra l'ora UTC e l'ora locale come valore integer. Il valore predefinito è 28.800 secondi per l'ora solare Pacifico (otto ore in meno rispetto all'ora UTC).
+Il **get_timezone** funzione recupera la differenza in secondi tra l'ora UTC e l'ora locale come integer. Il valore predefinito è 28.800 secondi per l'ora solare Pacifico (otto ore in meno rispetto all'ora UTC).
 
-Se *secondi* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **EINVAL**.
+Se *secondi* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

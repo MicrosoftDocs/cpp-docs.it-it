@@ -1,28 +1,17 @@
 ---
-title: Finestra di dialogo Nuova risorsa barra degli strumenti (C++) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Nuova risorsa barra degli strumenti (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.newtoolbarresource
-dev_langs:
-- C++
 helpviewer_keywords:
 - New Toolbar Resource dialog box [C++]
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: cc933905cf4056d2be6c692728c621913687a6fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c45daeb2c07426918f1a636f4230c1c07026ca2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595923"
 ---
 # <a name="new-toolbar-resource-dialog-box-c"></a>Finestra di dialogo Nuova risorsa barra degli strumenti (C++)
 

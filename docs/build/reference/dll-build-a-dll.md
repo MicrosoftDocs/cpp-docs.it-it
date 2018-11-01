@@ -1,14 +1,8 @@
 ---
-title: -DLL (compilare una DLL) | Microsoft Docs
-ms.custom: ''
+title: /DLL (compilazione di una DLL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /dll
-dev_langs:
-- C++
 helpviewer_keywords:
 - -DLL linker option
 - /DLL linker option [C++]
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec5beed66de3834759f35a5021d0155eab0a066e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 71696e4ffae91ed1fa8a13e69e75523ce66e8361
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716833"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546341"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (compilazione di una DLL)
 

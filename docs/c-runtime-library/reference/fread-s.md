@@ -1,10 +1,6 @@
 ---
-title: fread_s | Microsoft Docs
-ms.custom: ''
+title: fread_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread_s
 apilocation:
@@ -23,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs:
-- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: febfab21889afab773dd9a8405b1e07dc7798f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401893"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519821"
 ---
 # <a name="freads"></a>fread_s
 
@@ -67,20 +57,20 @@ Dimensione dell'elemento da leggere in byte.
 *count*<br/>
 Numero massimo di elementi da leggere.
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fread_s** restituisce il numero di (intero) di elementi che sono stati letti nel buffer, che può essere minore *conteggio* se viene rilevata un errore di lettura o la fine del file prima *conteggio* viene raggiunto. Usare la **feof** oppure **ferror** funzione per distinguere un errore da una condizione di fine del file. Se *dimensioni* oppure *conteggio* 0 **fread_s** restituisce 0 e il contenuto del buffer è rimasti invariato. Se *flusso* oppure *buffer* è un puntatore null **fread_s** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce 0.
+**fread_s** restituisce il numero (intero) di elementi che sono stati letti nel buffer, che può essere minore di *conteggio* se viene rilevata un errore di lettura o la fine del file prima *conteggio* viene raggiunto. Usare la **feof** oppure **ferror** funzione per distinguere un errore da una condizione di fine del file. Se *dimensioni* oppure *conteggio* è uguale a 0, **fread_s** restituisce 0 e il contenuto del buffer è rimasti invariato. Se *stream* oppure *buffer* è un puntatore null **fread_s** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce 0.
 
 Per altre informazioni sui codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **fread_s** funzione legge fino a *conteggio* elementi dello *elementSize* byte dall'input *flusso* e li archivia in *buffer*.  Il puntatore del file che è associato *flusso* (se presente) viene incrementato del numero di byte effettivamente letti. Se il flusso specificato viene aperto in modalità testo, coppie di ritorno a capo-avanzamento di riga restituito vengono sostituite con caratteri di avanzamento riga singola. La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.
+Il **fread_s** funzione legge fino a *conteggio* elementi di *elementSize* byte dall'input *flusso* e li archivia in *buffer*.  Il puntatore del file che è associato *flusso* (se presente) viene incrementato del numero di byte effettivamente letti. Se il flusso specificato viene aperto in modalità testo, le coppie di ritorno a capo con avanzamento di riga vengono sostituite con caratteri di avanzamento riga singola. La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.
 
-Questa funzione blocca gli altri thread. Se è necessaria una versione non di blocco, utilizzare **fread_nolock**.
+Questa funzione blocca gli altri thread. Se è necessaria una versione non di blocco, usare **fread_nolock**.
 
 ## <a name="requirements"></a>Requisiti
 

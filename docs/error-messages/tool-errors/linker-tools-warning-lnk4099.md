@@ -1,27 +1,17 @@
 ---
-title: Strumenti del linker LNK4099 avviso | Microsoft Docs
-ms.custom: ''
+title: Avviso degli strumenti del linker LNK4099
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4099
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4099
 ms.assetid: 358170a4-07cd-43fe-918f-82c32757ffc5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50bdceaba2e72312febec4819b96df334b5398c2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dcf4d44c3a0b5b10035af763040c2912afc8c6f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442174"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>Avviso degli strumenti del linker LNK4099
 

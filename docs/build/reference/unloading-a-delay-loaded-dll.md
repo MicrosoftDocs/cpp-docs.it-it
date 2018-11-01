@@ -1,26 +1,16 @@
 ---
-title: Scaricamento di una DLL a caricamento ritardato | Microsoft Docs
-ms.custom: ''
+title: Scaricamento di una DLL a caricamento ritardato
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa7b9652c37b6c4e841a798dae3cfeb69779b5ff
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ac23a82282215e70a6895e021d25437bc8890c6a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719927"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460645"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Scaricamento di una DLL a caricamento ritardato
 

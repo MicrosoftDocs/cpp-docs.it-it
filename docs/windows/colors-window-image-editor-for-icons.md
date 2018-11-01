@@ -1,14 +1,8 @@
 ---
-title: I colori di finestra (Editor di immagini per le icone) | Microsoft Docs
-ms.custom: ''
+title: Finestra Colori (Editor di immagini per le icone)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.colorswindow
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], Colors Palette
 - Colors Palette, Image editor
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - colors [C++]
 - Color Indicator
 ms.assetid: 1d9b6c16-bf1d-4488-a19b-5d6fe601846a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a65959ffc149b93c6d9b28667647d8f49cfc1f2d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: aeed186ce38ffc9e2012f6e6b5a4c1af3efc9553
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647345"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Finestra Colori (Editor di immagini per le icone)
 

@@ -1,31 +1,21 @@
 ---
-title: Classe CClientDC | Microsoft Docs
-ms.custom: ''
+title: CClientDC (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CClientDC
 - AFXWIN/CClientDC
 - AFXWIN/CClientDC::CClientDC
 - AFXWIN/CClientDC::m_hWnd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3aa255552156fe0bbcb671f39afdcb966e7157ea
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5304fa322c62f67ed075be7912697f8c87b27392
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422181"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643833"
 ---
 # <a name="cclientdc-class"></a>CClientDC (classe)
 

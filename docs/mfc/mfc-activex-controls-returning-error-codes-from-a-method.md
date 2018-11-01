@@ -1,12 +1,6 @@
 ---
-title: 'Controlli ActiveX MFC: Restituzione di codici di errore da un metodo | Microsoft Docs'
-ms.custom: ''
+title: 'Controlli ActiveX MFC: restituzione di codici di errore da un metodo'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - SetNotSupported method, using
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9daaa86f6f57d28b56a7374ff64b0fcbca2a3d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c5fe88cf952337a7d070eae7a5da149a8e905bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383597"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676486"
 ---
 # <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Controlli ActiveX MFC: restituzione di codici di errore da un metodo
 

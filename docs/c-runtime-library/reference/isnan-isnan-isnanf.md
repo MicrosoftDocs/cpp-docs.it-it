@@ -1,10 +1,6 @@
 ---
-title: isnan, _isnan, _isnanf | Microsoft Docs
-ms.custom: ''
+title: isnan, _isnan, _isnanf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isnan
 - _isnanf
@@ -29,8 +25,6 @@ f1_keywords:
 - math/_isnan
 - math/_isnanf
 - _isnanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - NAN (not a number)
 - _isnan function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: baf92397087ebbac27c7fea8cf5f524b33736b19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401152"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650866"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
 
@@ -81,17 +71,17 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-In C, il **isnan** (macro) e il **isNaN** e **_isnanf** funzioni restituiscono un valore diverso da zero se l'argomento *x* è una NAN; in caso contrario è Restituisce 0.
+In C, il **isnan** macro e il **isNaN** e **_isnanf** funzioni restituiscono un valore diverso da zero se l'argomento *x* è NAN; in caso contrario è Restituisce 0.
 
-In C++, il **isnan** modello funzioni restituiscono **true** se l'argomento *x* è una NAN; in caso contrario restituiscono **false**.
+In C++, il **isnan** funzioni di modello restituiscono **true** se l'argomento *x* è NAN; in caso contrario restituiscono **false**.
 
 ## <a name="remarks"></a>Note
 
 C **isnan** macro e il **isNaN** e **_isnanf** funzioni testano valore a virgola mobile *x*, restituendo un valore diverso da zero se *x* non è un valore di numero (NAN). Viene generato un valore NaN quando il risultato dell'operazione a virgola mobile non può essere rappresentato in formato a virgola mobile IEEE 754 per il tipo specificato. Per informazioni sulla rappresentazione di un valore NaN per l'output, vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Quando viene compilato come C++, il **isnan** macro non è definita e una **isnan** definita funzione di modello. Restituisce un valore di tipo **bool** anziché un numero intero.
+Quando viene compilato come C++, il **isnan** macro non è definita e un **isnan** viene invece definita funzione del modello. Restituisce un valore di tipo **bool** anziché un numero intero.
 
-Il **isNaN** e **_isnanf** funzioni sono specifiche di Microsoft. Il **_isnanf** funzione disponibile solo quando viene compilato per x64.
+Il **isNaN** e **_isnanf** funzioni sono specifiche di Microsoft. Il **_isnanf** funzione di disponibile solo quando viene compilato per x64.
 
 ## <a name="requirements"></a>Requisiti
 

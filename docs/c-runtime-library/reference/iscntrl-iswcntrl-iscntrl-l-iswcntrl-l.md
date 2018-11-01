@@ -1,10 +1,6 @@
 ---
-title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Microsoft Docs
-ms.custom: ''
+title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c87745a4aa1c2e9d93f2c779e089e0bff6f66fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401529"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506753"
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 
@@ -85,11 +75,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere di controllo. **iscntrl** restituisce un valore diverso da zero se *c* è un carattere di controllo (0x00-0x1F o 0x7F). **iswcntrl** restituisce un valore diverso da zero se *c* è un controllo carattere wide. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere di controllo. **iscntrl** restituisce un valore diverso da zero se *c* è un carattere di controllo (0x00-0x1F o 0x7F). **iswcntrl** restituisce un valore diverso da zero se *c* è un controllo di carattere wide. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni con il **l** suffisso Usa il parametro delle impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno le **l** suffisso Usa il parametro delle impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento delle **iscntrl** e **iscntrl_l** è definito se *c* non è EOF o compreso nell'intervallo tra 0 e 0xFF, inclusivo. Quando si utilizza una libreria di debug CRT e *c* non fa parte di questi valori, la generazione di funzioni è un'asserzione.
+Il comportamento delle **iscntrl** e **iscntrl_l** non è definito se *c* non è EOF o nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* è non uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

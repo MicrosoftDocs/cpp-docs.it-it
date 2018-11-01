@@ -1,10 +1,6 @@
 ---
-title: atexit | Microsoft Docs
-ms.custom: ''
+title: atexit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atexit
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - atexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66954348d5d812fac7eca0b231304267cc26157
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556643"
 ---
 # <a name="atexit"></a>atexit
 
@@ -61,11 +51,11 @@ Funzione da chiamare.
 
 ## <a name="remarks"></a>Note
 
-Il **atexit** funzione viene passata l'indirizzo di una funzione *func* da chiamare quando il programma termina normalmente. Le chiamate successive a **atexit** creano un registro di funzioni che vengono eseguite nell'ordine last-in, First-Out (LIFO). Le funzioni passate a **atexit** non possono accettare parametri. **atexit** e **OnExit** utilizzano l'heap per contenere il Registro di funzioni. Per questa ragione, il numero di funzioni che possono essere registrate è limitato solo dalla memoria dell'heap.
+Il **atexit** funzione viene passata l'indirizzo di una funzione *func* da chiamare quando il programma termina normalmente. Le chiamate successive a **atexit** creano un registro di funzioni che vengono eseguite nell'ordine last-in, First-Out (LIFO). Le funzioni passate a **atexit** non possono accettare parametri. **atexit** e **OnExit** usano l'heap per mantenere il Registro di funzioni. Per questa ragione, il numero di funzioni che possono essere registrate è limitato solo dalla memoria dell'heap.
 
-Il codice di **atexit** funzione non deve contenere tutte le dipendenze in qualsiasi DLL che è stato già scaricato quando il **atexit** funzione viene chiamata.
+Il codice nel **atexit** funzione non deve contenere alcuna dipendenza da qualsiasi DLL che potrebbe già essere stata scaricata quando il **atexit** funzione viene chiamata.
 
-Per generare un'applicazione compatibile con ANSI, utilizzare lo standard ANSI **atexit** funzione (anziché simile **OnExit** funzione).
+Per creare un'applicazione compatibile con ANSI, usare lo standard ANSI **atexit** funzione (anziché simili **OnExit** (funzione)).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -75,7 +65,7 @@ Per generare un'applicazione compatibile con ANSI, utilizzare lo standard ANSI *
 
 ## <a name="example"></a>Esempio
 
-Questo programma push quattro funzioni nello stack di funzioni da eseguire quando **atexit** viene chiamato. Alla chiusura del programma, questi programmi vengono eseguiti in ordine LIFO (last-in-first-out).
+Questo programma inserisce quattro funzioni nello stack di funzioni da eseguire quando **atexit** viene chiamato. Alla chiusura del programma, questi programmi vengono eseguiti in ordine LIFO (last-in-first-out).
 
 ```C
 // crt_atexit.c

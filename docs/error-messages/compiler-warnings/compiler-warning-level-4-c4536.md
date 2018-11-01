@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 4) C4536 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 4) C4536
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4536
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4536
 ms.assetid: ab4d0686-f813-4e88-a264-b40d3630ed6c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e4f3e5c112d98a3940395599c3084885dfeee149
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ac651b7cf6ea3e3f5e7e68d5f6097af78accff77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599641"
 ---
 # <a name="compiler-warning-level-4-c4536"></a>Avviso del compilatore (livello 4) C4536
 

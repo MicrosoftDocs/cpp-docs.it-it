@@ -1,27 +1,17 @@
 ---
-title: Contenitori STL/CLR | Microsoft Docs
-ms.custom: ''
+title: Contenitori STL/CLR
 ms.date: 09/18/2018
-ms.technology:
-- cpp-cli
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: b11cb96e02adbf4b145794d570fde34dbed48ff7
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 1787e18cb36c77429cd4957bab167c77d5e25d8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494335"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496083"
 ---
 # <a name="stlclr-containers"></a>Contenitori STL/CLR
 

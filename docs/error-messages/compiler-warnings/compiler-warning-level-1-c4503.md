@@ -1,41 +1,31 @@
 ---
-title: Compilatore avviso (livello 1) C4503 | Documenti Microsoft
-ms.custom: ''
+title: Avviso del compilatore (livello 1) C4503
 ms.date: 05/14/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4503
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f60fdb44c5368ccc5c5f089002614332d95a63fe
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 94c88511d87c3adf3cf5687a94948c83ebc5b3d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255674"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459787"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Avviso del compilatore (livello 1) C4503
 
-> '*identificatore*': lunghezza nome decorato superata, nome troncato
+> «*identificatore*': lunghezza nome decorato superata, nome troncato
 
 ## <a name="remarks"></a>Note
 
-Questo avviso del compilatore è obsoleto e non viene generato in Visual Studio 2017 e compilatori successive.
+L'avviso del compilatore è obsoleta e non viene generato in Visual Studio 2017 e versioni successive compilatori.
 
-Il nome decorato supera il limite del compilatore (4096) e sono stato troncato. Per evitare questo avviso e il troncamento, ridurre il numero di argomenti o la lunghezza del nome di identificatori utilizzati. Nomi che periodo di tempo superiore al limite del compilatore presentano un hash applicato e non rischiano di un conflitto di nomi decorati.
+Il nome decorato supera il limite del compilatore (4096) e sono stato troncato. Per evitare questo avviso e il troncamento, ridurre il numero di argomenti o le lunghezze dei nomi di identificatori utilizzati. Nomi che sono di più rispetto al limite del compilatore un hash applicato e non sono a rischio di un conflitto di nomi decorati.
 
-Quando si utilizza una versione precedente di Visual Studio, l'avviso può essere generato quando il codice contiene modelli specializzato su modelli più volte. Ad esempio, una mappa delle mappe (libreria C++ Standard). In questa situazione, è possibile rendere il typedef di un tipo (un **struct**, ad esempio) che contiene la mappa.
+Quando si usa una versione precedente di Visual Studio, l'avviso può essere generato quando il codice contiene modelli specializzato su modelli più volte. Ad esempio, una mappa delle mappe (dalla libreria Standard C++). In questa situazione, è possibile rendere i typedef di un tipo (un **struct**, ad esempio) che contiene la mappa.
 
-È possibile, tuttavia, decidere di non ristrutturare il codice.  È possibile fornire un'applicazione che genera l'errore C4503, ma se si verificano errori in fase di collegamento su un simbolo troncato, può essere più difficile determinare il tipo del simbolo nel messaggio di errore. Il debug potrebbe anche essere più difficile; il debugger potrebbe avere difficoltà mapping del nome del simbolo per il nome del tipo. Tuttavia, la correttezza del programma, non è interessata dal nome troncato.
+È possibile, tuttavia, decidere di non ristrutturare il codice.  È possibile spedire un'applicazione che genera C4503, ma se si verificano errori in fase di collegamento in un simbolo troncato, può essere più difficile determinare il tipo del simbolo nel messaggio di errore. Il debug di maggio anche essere più difficile; il debugger potrebbe essere problematica, di conseguenza il mapping al nome del simbolo per il nome del tipo. Tuttavia, la correttezza del programma, non è interessata dal nome troncato.
 
 ## <a name="example"></a>Esempio
 
@@ -57,7 +47,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;
 ```
 
-In questo esempio viene illustrato un modo per riscrivere il codice per risolvere C4503:
+In questo esempio illustra un modo per riscrivere il codice per risolvere C4503:
 
 ```cpp
 // C4503b.cpp

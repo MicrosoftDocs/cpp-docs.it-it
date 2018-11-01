@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2533 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2533
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2533
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2533
 ms.assetid: 5b335652-076c-4824-87c8-a741f64a3ce0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 528b78e71713725907a9f0e2bd06cec1a8c62e67
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 00cb13d1999b00dfcaa5a2bc7bfb3b8eb16af5f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045406"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661877"
 ---
 # <a name="compiler-error-c2533"></a>Errore del compilatore C2533
 

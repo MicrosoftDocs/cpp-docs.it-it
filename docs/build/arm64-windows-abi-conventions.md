@@ -1,22 +1,12 @@
 ---
-title: Panoramica delle convenzioni ABI ARM64 | Microsoft Docs
-ms.custom: ''
+title: Panoramica delle convenzioni ABI ARM64
 ms.date: 07/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 585fd757c18c3a7c09645b64656e6ef77cde6dca
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861384"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599784"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 

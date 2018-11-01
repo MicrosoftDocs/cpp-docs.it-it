@@ -1,23 +1,13 @@
 ---
-title: Uniforme di inizializzazione e costruttori deleganti | Microsoft Docs
-ms.custom: ''
+title: Inizializzazione uniforme e costruttori deleganti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c5cb6421d9c8ce20f0c5e24de986ee50d9b2238
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116243"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496603"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inizializzazione uniforme e costruttori deleganti
 

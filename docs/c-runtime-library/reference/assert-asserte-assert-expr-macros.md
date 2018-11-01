@@ -1,10 +1,6 @@
 ---
-title: Macro _ASSERT, _ASSERTE, _ASSERT_EXPR | Microsoft Docs
-ms.custom: ''
+title: Macro _ASSERT, _ASSERTE, _ASSERT_EXPR
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,8 +18,6 @@ f1_keywords:
 - ASSERTE
 - _ASSERT
 - _ASSERT_EXPR
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _ASSERTE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d2d83c3afa8e22c1f75480fe2afefa8bf68be858
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598458"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>Macro _ASSERT, _ASSERTE, _ASSERT_EXPR
 
@@ -74,17 +64,17 @@ Il **assert_expr**, **macro Assert** e **ASSERTE** macro forniscono un'applicazi
 
 Poiché il **ASSERTE** macro specifica l'espressione non riuscita, e **assert_expr** consente si specifica un messaggio nel rapporto generato, consentono agli utenti di identificare il problema senza fare riferimento al codice sorgente dell'applicazione. Tuttavia, uno svantaggio è che ogni *messaggio* stampato dal **assert_expr** e tutte le espressioni valutate dal **ASSERTE** è incluso nell'output (versione di debug) file dell'applicazione come costante stringa. Pertanto, se un numero elevato di eseguono chiamate a **assert_expr** oppure **ASSERTE**, queste espressioni possono aumentare notevolmente le dimensioni del file di output.
 
-Se non diversamente specificato con le funzioni [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md), i messaggi vengono visualizzati in una finestra di dialogo popup equivalente all'impostazione:
+Se non diversamente specificato con le funzioni [_CrtSetReportMode](crtsetreportmode.md) e [_CrtsetReportFile](crtsetreportfile.md) , i messaggi vengono visualizzati in una finestra di dialogo popup equivalente all'impostazione:
 
 ```C
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 ````
 
-**CrtDbgReportW** genera il report di debug e ne determina la destinazione o destinazioni, in base alla modalità report o le modalità e file definito per il **CRT_ASSERT** tipo report. Per impostazione predefinita, le asserzioni non riuscite e gli errori di asserzione vengono indirizzati a una finestra di messaggio di debug. Le funzioni [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.
+**CrtDbgReportW** genera il report di debug e ne determina la destinazione o destinazioni, in base alla modalità report o le modalità e file definito per il **CRT_ASSERT** tipo report. Per impostazione predefinita, le asserzioni non riuscite e gli errori di asserzione vengono indirizzati a una finestra di messaggio di debug. Le funzioni [_CrtSetReportFile](crtsetreportmode.md) e [_CrtSetReportMode](crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.
 
 Quando la destinazione è una finestra di messaggio di debug e l'utente fa clic sui **ripetere** pulsante **CrtDbgReportW** restituisce 1, causando il **assert_expr**, **_ ASSERT** e **ASSERTE** macro per avviare il debugger fornito il cui debug just-in-time (JIT) è abilitato.
 
-Per altre informazioni sul processo di creazione dei report, vedere la funzione [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md). Per altre informazioni sulla risoluzione delle asserzioni non riuscite e sull'uso di queste macro come meccanismo di gestione degli errori di debug, vedere l'argomento relativo all' [uso delle macro per la verifica e la creazione di report](/visualstudio/debugger/macros-for-reporting).
+Per altre informazioni sul processo di creazione di rapporti, vedere la funzione [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) . Per altre informazioni sulla risoluzione delle asserzioni non riuscite e sull'uso di queste macro come meccanismo di gestione degli errori di debug, vedere l'argomento relativo all' [uso delle macro per la verifica e la creazione di report](/visualstudio/debugger/macros-for-reporting).
 
 Oltre al **macro Assert** macro, il [assert](assert-macro-assert-wassert.md) macro può essere usata per verificare la logica di programma. Questa macro è disponibile nelle versioni di debug e rilascio delle librerie. Anche le macro di debug [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) sono disponibili per generare un report di debug, ma non restituiscono un'espressione. Il **macro rpt** macro di generano un report semplice. Il **rptf** le macro includono il numero di riga e file di origine in cui è stata chiamata la macro di report nel report generato. Sono disponibili versioni a caratteri Wide di queste macro (**rptw**, **rptfw**). Le versioni a caratteri wide sono identiche alle versioni a caratteri narrow ad eccezione del fatto che le stringhe a caratteri wide vengono usate per tutti i parametri di stringa e l'output.
 

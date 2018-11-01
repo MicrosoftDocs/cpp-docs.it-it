@@ -1,29 +1,19 @@
 ---
-title: __faststorefence | Microsoft Docs
-ms.custom: ''
+title: __faststorefence
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __faststorefence_cpp
 - __faststorefence
-dev_langs:
-- C++
 helpviewer_keywords:
 - __faststorefence intrinsic
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5047dbb2023272ab03cc7d49f877f0fcc38a7b76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8a90dd61e0017788a91d8ff2eccbae9d12143619
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402187"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650645"
 ---
 # <a name="faststorefence"></a>__faststorefence
 

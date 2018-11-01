@@ -1,10 +1,6 @@
 ---
-title: _clear87, _clearfp | Microsoft Docs
-ms.custom: ''
+title: _clear87, _clearfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _clearfp
 - _clear87
@@ -26,8 +22,6 @@ f1_keywords:
 - _clearfp
 - _clear87
 - clear87
-dev_langs:
-- C++
 helpviewer_keywords:
 - clearing floating point status word
 - clearfp function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 195bd9f78ed9edfa47ec9ebbd2babbee676e5644
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477259"
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
 
@@ -59,15 +49,15 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-I bit nel valore restituito indicano lo stato a virgola mobile prima della chiamata a **_clear87** oppure **clearfp**. Per una definizione completa dei bit restituiti da **_clear87**, vedere float. h. Molte funzioni della libreria matematica modificano la parola di stato 8087/80287, con risultati imprevisti. I valori restituiti da **_clear87** e **_status87** diventano più affidabili tra gli stati noti della parola di stato a virgola mobile vengono eseguite meno operazioni a virgola mobile.
+I bit nel valore restituito indicano lo stato a virgola mobile prima della chiamata a **_clear87** oppure **clearfp**. Per una definizione completa dei bit restituiti da **_clear87**, vedere float. h. Molte funzioni della libreria matematica modificano la parola di stato 8087/80287, con risultati imprevisti. I valori restituiti da **_clear87** e **_status87** diventano più affidabili se vengono eseguite meno operazioni a virgola mobile tra gli stati noti della parola di stato a virgola mobile.
 
 ## <a name="remarks"></a>Note
 
-Il **_clear87** funzione Cancella i flag di eccezione nella parola di stato a virgola mobile, imposta il bit impegnato su 0 e restituisce la parola di stato. La parola di stato a virgola mobile è una combinazione della parola di stato 8087/80287 e di altre condizioni rilevate dal gestore eccezioni 8087/80287, come ad esempio l'overflow e underflow di stack a virgola mobile.
+Il **_clear87** funzione Cancella i flag di eccezione della parola di stato a virgola mobile, imposta il bit impegnato su 0 e restituisce la parola di stato. La parola di stato a virgola mobile è una combinazione della parola di stato 8087/80287 e di altre condizioni rilevate dal gestore eccezioni 8087/80287, come ad esempio l'overflow e underflow di stack a virgola mobile.
 
-**clearfp** è una versione indipendente dalla piattaforma e portabile del **_clear87** routine. È identico a **_clear87** su piattaforme Intel (x86) ed è anche supportato dalle piattaforme x64 e ARM. Per assicurarsi che il codice a virgola mobile sia portabile su x64 e ARM, usare **clearfp**. Se la destinazione è x86 solo piattaforme, è possibile utilizzare **_clear87** oppure **clearfp**.
+**clearfp** è una versione indipendente dalla piattaforma e portabile del **_clear87** routine. È identico a **_clear87** sulle piattaforme Intel (x86) e viene supportata anche dalle piattaforme ARM e x64. Per assicurarsi che il codice a virgola mobile sia portabile su x64 e ARM, usare **clearfp**. Se la destinazione è x86 solo le piattaforme, è possibile usare **_clear87** oppure **clearfp**.
 
-Queste funzioni sono deprecate durante la compilazione con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Poiché common language runtime supporta solo la precisione a virgola mobile predefinita.
+Queste funzioni sono deprecate durante la compilazione con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Poiché common language runtime supporta solamente la precisione a virgola mobile predefinita.
 
 ## <a name="requirements"></a>Requisiti
 

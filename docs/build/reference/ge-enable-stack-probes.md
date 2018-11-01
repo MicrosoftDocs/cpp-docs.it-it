@@ -1,14 +1,8 @@
 ---
-title: -Ge (Attiva ricerche dello Stack) | Microsoft Docs
-ms.custom: ''
+title: /Ge (Attiva ricerche dello stack)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /ge
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Ge compiler option [C++]
 - enable stack probes
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - stack checking calls
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1819e3e8aa5f48c36b8fc48641f13ac6059043e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 485a6a479f4d0d6c9e5eb745eda894a01f356e8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720928"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448932"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Attiva ricerche dello stack)
 

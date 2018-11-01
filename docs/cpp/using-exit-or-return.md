@@ -1,28 +1,18 @@
 ---
-title: Usando uscire o restituire | Microsoft Docs
-ms.custom: ''
+title: Utilizzo di exit o return
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - Exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - exit function
 - return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ce62f17008bf4a1ba805db40583e6c63b69a302
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d60084c0d07d3eeb3f49a1fea53de04d150a701b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059984"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442742"
 ---
 # <a name="using-exit-or-return"></a>Utilizzo di exit o return
 
@@ -68,7 +58,7 @@ int main() {
 
 Nell'esempio precedente, gli oggetti statici `sd1` e `sd2` vengono creati e inizializzati prima della voce a `main`. Dopo che il programma termina mediante il **restituire** istruzione, first `sd2` viene eliminato definitivamente e quindi `sd1`. Il distruttore della classe `ShowData` chiude i file associati a questi oggetti statici.
 
-Un altro modo per scrivere il codice consiste nel dichiarare gli oggetti `ShowData` con ambito blocco, consentendogli di essere eliminati quando escono dall'ambito:
+Un altro modo per scrivere il codice consiste nel dichiarare gli oggetti `ShowData` con ambito del blocco, consentendogli di essere eliminati quando escono dall'ambito:
 
 ```cpp
 int main() {

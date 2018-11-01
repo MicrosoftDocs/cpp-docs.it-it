@@ -1,27 +1,17 @@
 ---
-title: OpenMP in Visual C++ | Microsoft Docs
-ms.custom: ''
+title: OpenMP in Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - OpenMP in Visual C++
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6905fd7db56fce26dee01ad5e1c69e89d439b436
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc65b63c8bb1bd24b58e472a25779379925c7280
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428291"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511410"
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP in Visual C++
 

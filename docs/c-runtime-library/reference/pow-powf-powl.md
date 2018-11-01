@@ -1,10 +1,6 @@
 ---
-title: pow, powf, powl | Microsoft Docs
-ms.custom: ''
+title: pow, powf, powl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - powl
 - pow
@@ -27,8 +23,6 @@ f1_keywords:
 - pow
 - _powl
 - powf
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - powl function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5daf7348198cb6f3ba0186eb4586b2486548f6f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403830"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452009"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Calcola *x* elevato alla potenza di *y*.
+Calcola *x* elevato alla potenza del *y*.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -90,13 +80,13 @@ Restituisce il valore del *x*<sup>*y*</sup>. In caso di overflow o di underflow 
 
 ## <a name="remarks"></a>Note
 
-**pow** non riconosce i valori a virgola mobile e integrali maggiori di 2<sup>64</sup> (ad esempio, 1.0E100).
+**pow** non riconosce i valori a virgola mobile integrali maggiori di 2<sup>64</sup> (ad esempio, 1.0E100).
 
-**pow** ha un'implementazione che utilizza Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**pow** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-Poiché C++ consente l'overload, è possibile chiamare uno dei diversi overload di **pow**. In un programma C **pow** ha sempre due **double** valori e restituisce un **doppie** valore.
+Dato che C++ consente l'overload, è possibile chiamare tutte i vari overload di **pow**. In un programma C **pow** accetta sempre due **double** valori e restituisce un **double** valore.
 
-L'overload `pow(int, int)` non è più disponibile. Se si utilizza questo overload, il compilatore può generare [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Per evitare questo problema, eseguire il cast il primo parametro per **doppie**, **float**, o **lungo** **doppie**.
+L'overload `pow(int, int)` non è più disponibile. Se si utilizza questo overload, il compilatore può generare [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Per evitare questo problema, eseguire il cast il primo parametro per **doppie**, **float**, o **long** **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,24 +1,16 @@
 ---
-title: 'Classe platform:: box | Microsoft Docs'
-ms.custom: ''
+title: Classe Platform::Box
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
-dev_langs:
-- C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 133c8ebabe3e67526086661ab459bb6e96c4e727
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 387fa03caebed599d51292dd1b6d18ad4afd921c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106509"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429070"
 ---
 # <a name="platformbox-class"></a>Classe Platform::Box
 
@@ -38,7 +30,7 @@ ref class Box abstract;
 **Spazio dei nomi:** Platform
 |Member|Descrizione|
 |------------|-----------------|
-|[Box](#ctor)|Crea un `Box` che può incapsulare un valore del tipo specificato.|
+|[Box](#ctor)|Crea un oggetto `Box` che può incapsulare un valore del tipo specificato.|
 |[operatore di finestra&lt;const T&gt;^](#box-const-t)|Consente conversioni boxing da una classe di valori `const` `T` o da una classe `enum` `T` a `Box<T>`.|
 |[operatore di finestra&lt;const T volatile&gt;^](#box-const-volatile-t)|Abilita le conversioni boxing dal tipo `const volatile` o `T` della classe di valori `enum` `T` in `Box<T>`. |
 |[operatore di finestra&lt;T&gt;^](#box-t)|Consente conversioni boxing da una classe di valori `T` a `Box<T>`.|

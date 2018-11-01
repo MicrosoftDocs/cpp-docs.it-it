@@ -1,23 +1,13 @@
 ---
-title: '&lt;cstdbool&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cstdbool&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2aee3815748d5160678d15e1caf5635a9f3017bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c47cfb3e04626f8bc029a1f25b1d05fb29011db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843184"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510097"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 

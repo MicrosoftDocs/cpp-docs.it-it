@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3286 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3286
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3286
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ea2a6dcccd6de6d4fc3081106123f4ab37f71a2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c09ea34c7dabf2cadecad7c76d766c9496f5a5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052913"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461009"
 ---
 # <a name="compiler-error-c3286"></a>Errore del compilatore C3286
 

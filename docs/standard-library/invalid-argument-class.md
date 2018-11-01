@@ -1,27 +1,17 @@
 ---
-title: Classe invalid_argument | Microsoft Docs
-ms.custom: ''
+title: Classe invalid_argument
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdexcept/std::invalid_argument
-dev_langs:
-- C++
 helpviewer_keywords:
 - invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b7e6a555655ec6b05777c74a47090387ebf07f43
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e6b56e98a1adc7426fe0d1b65d623549a4391c8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314937"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528947"
 ---
 # <a name="invalidargument-class"></a>Classe invalid_argument
 

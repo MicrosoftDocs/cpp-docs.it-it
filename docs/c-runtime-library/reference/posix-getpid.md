@@ -1,10 +1,6 @@
 ---
-title: getpid | Microsoft Docs
-ms.custom: ''
+title: getpid
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getpid
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - getpid
-dev_langs:
-- C++
 helpviewer_keywords:
 - getpid function
 ms.assetid: 4eaabab4-362b-429f-854e-ae4941919824
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e59079cba5417a8815db572a003a9b89a3bc7e5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2def18eaf156a951597cd6776388f6637215a0fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398971"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649059"
 ---
 # <a name="getpid"></a>getpid
 

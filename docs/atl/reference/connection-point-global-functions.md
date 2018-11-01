@@ -1,29 +1,19 @@
 ---
-title: Funzioni globali del punto di connessione | Microsoft Docs
-ms.custom: ''
+title: Funzioni globali del punto di connessione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlAdvise
 - atlbase/ATL::AtlUnadvise
 - atlbase/ATL::AtlAdviseSinkMap
-dev_langs:
-- C++
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a1c972be0b4e14d881812195856465dbc7c9e70
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 200300eaea2bc98f1d87e2c1859610df8d0cb03b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50075788"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628930"
 ---
 # <a name="connection-point-global-functions"></a>Funzioni globali del punto di connessione
 

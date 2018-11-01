@@ -1,18 +1,15 @@
 ---
 layout: HubPage
-ms.topic: conceptual
-title: Documentazione di Visual C++ | Microsoft Docs
+title: Documentazione di Visual C++
 description: Informazioni su come usare C++ per lo sviluppo di applicazioni, servizi e strumenti per piattaforme e dispositivi.
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a64fd3c15f589fdd677354c43c9a5bb9a3484aa
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b4e660af273fac320fcebed19c135d8e37d1a50f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082541"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677864"
 ---
 <div id="main" class="v2">
     <div class="container">

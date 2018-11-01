@@ -1,10 +1,6 @@
 ---
-title: _matherr | Microsoft Docs
-ms.custom: ''
+title: _matherr
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _matherr
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _matherr
 - matherr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f8cba1887fe806c3a6cfa795437d3d60ed7f31e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445721"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -56,7 +46,7 @@ Puntatore alla struttura contenente le informazioni sull'errore.
 
 ## <a name="return-value"></a>Valore restituito
 
-**matherr** restituisce 0 per indicare un errore o un valore diverso da zero per indicare l'esito positivo. Se **matherr** restituisce 0, un messaggio di errore possono essere visualizzati e **errno** è impostata su un valore di errore appropriato. Se **matherr** restituisce un valore diverso da zero, nessun messaggio di errore viene visualizzato e **errno** non subisce modifiche.
+**matherr** restituisce 0 per indicare un errore o un valore diverso da zero per indicare l'esito positivo. Se **matherr** restituisce 0, un messaggio di errore possono essere visualizzati e **errno** è impostata su un valore di errore appropriato. Se **matherr** restituisce un valore diverso da zero, nessun messaggio di errore viene visualizzato e **errno** rimane invariato.
 
 Per altre informazioni sui codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -64,9 +54,9 @@ Per altre informazioni sui codici restituiti, vedere [_doserrno, errno, _sys_err
 
 Il **matherr** funzione elabora gli errori generati dalle funzioni a virgola mobile nella libreria matematica. Queste funzioni chiamano **matherr** quando viene rilevato un errore.
 
-Per la gestione di errori speciale, è possibile fornire una definizione diversa di **matherr**. Se si utilizza la versione collegata in modo dinamico della libreria di runtime C (CRT), è possibile sostituire il valore predefinito **matherr** routine in un client eseguibile con una versione definita dall'utente. Tuttavia, non è possibile sostituire il valore predefinito **matherr** routine in un client DLL della DLL CRT.
+Per la gestione di errori speciale, è possibile fornire una definizione diversa di **matherr**. Se si usa la versione collegata in modo dinamico della libreria run-time C (CRT), è possibile sostituire il valore predefinito **matherr** routine in un client eseguibile con una versione definita dall'utente. Tuttavia, non è possibile sostituire il valore predefinito **matherr** routine in un client DLL della DLL CRT.
 
-Quando si verifica un errore in una routine matematica, **matherr** viene chiamato con un puntatore a un **Exception** struttura del tipo (definito in \<Math. h >) come argomento. La struttura **_exception** contiene gli elementi seguenti.
+Quando si verifica un errore in una routine matematica, **matherr** viene chiamato con un puntatore a un **Exception** struttura dei tipi (definito in \<Math. h >) come argomento. La struttura **_exception** contiene gli elementi seguenti.
 
 ```C
 struct _exception
@@ -79,11 +69,11 @@ struct _exception
 };
 ```
 
-Il **tipo** membro specifica il tipo di errore matematico. È uno dei valori seguenti, definiti \<Math. h >:
+Il **tipo** membro specifica il tipo di errore matematico. È uno dei valori seguenti, definiti in \<Math. h >:
 
 |Macro|Significato|
 |-|-|
-**DOMAIN**|Errore di dominio di argomento
+**DOMINIO**|Errore di dominio di argomento
 **SING**|Singolarità dell'argomento
 **OVERFLOW**|Errore di intervallo di overflow
 **PLOSS**|Perdita parziale di significato

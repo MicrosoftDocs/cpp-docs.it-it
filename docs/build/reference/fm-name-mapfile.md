@@ -1,14 +1,8 @@
 ---
-title: -Fm (specifica file MAP) | Microsoft Docs
-ms.custom: ''
+title: /Fm (Specifica file map)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /fm
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Fm compiler option [C++]
 - mapfiles [C++], creating linker
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bce549cd782c8d79066b16d2e3791ba906e9c4f9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49a3d20aee54b06bae2670be139d748fd2aaca6d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469852"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Specifica file map)
 
