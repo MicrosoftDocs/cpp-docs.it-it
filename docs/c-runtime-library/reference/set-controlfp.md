@@ -1,10 +1,6 @@
 ---
-title: _set_controlfp | Microsoft Docs
-ms.custom: ''
+title: _set_controlfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_controlfp
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - set_controlfp
 - _set_controlfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_controlfp function
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2647e9719c2aa3fe303393fcc1da55de0385581
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499022"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
@@ -68,9 +58,9 @@ Nessuno.
 
 ## <a name="remarks"></a>Note
 
-Il **set_controlfp** è simile alla funzione **_control87**, ma imposta solo la parola di controllo a virgola mobile *newControl*. I bit dei valori indicano lo stato di controllo a virgola mobile. Lo stato di controllo a virgola mobile consente al programma di modificare le modalità di precisione, arrotondamento e infinito nel pacchetto matematico a virgola mobile. È anche possibile mascherare o annullare il mascheramento eccezioni a virgola mobile utilizzando **set_controlfp**. Per altre informazioni, vedere [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
+Il **set_controlfp** è simile alla funzione **_control87**, ma imposta solo la parola di controllo a virgola mobile *newControl*. I bit dei valori indicano lo stato di controllo a virgola mobile. Lo stato di controllo a virgola mobile consente al programma di modificare le modalità di precisione, arrotondamento e infinito nel pacchetto matematico a virgola mobile. È anche possibile mascherare o annullare il mascheramento delle eccezioni a virgola mobile usando **set_controlfp**. Per altre informazioni, vedere [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
-Questa funzione è deprecata durante la compilazione con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Poiché common language runtime supporta solo la precisione a virgola mobile predefinita.
+Questa funzione è deprecata durante la compilazione con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Poiché common language runtime supporta solamente la precisione a virgola mobile predefinita.
 
 ## <a name="requirements"></a>Requisiti
 

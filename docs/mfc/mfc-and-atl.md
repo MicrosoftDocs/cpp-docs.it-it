@@ -1,23 +1,13 @@
 ---
-title: MFC e ATL | Microsoft Docs
-ms.custom: ''
+title: MFC e ATL
 ms.date: 01/24/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e6533738100f68c1133e21e0fc8c537e1cd7d270
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 620d514e1bc1bad6c33eab16577639c4053cdf10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384260"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486359"
 ---
 # <a name="mfc-and-atl"></a>MFC e ATL
 

@@ -1,23 +1,13 @@
 ---
-title: Costruzione di Area dello Stack di parametri dinamici | Microsoft Docs
-ms.custom: ''
+title: Costruzione dinamica dell'area dello stack di parametri
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: a9689613-104f-4050-984a-ce79b37161d1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c121a2e15f7020db141dc64e9a3dc9735149c65
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a25fc14e322b013426ce13cc7d07d0dd1c77dc1c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704964"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484604"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Costruzione dinamica dell'area dello stack di parametri
 

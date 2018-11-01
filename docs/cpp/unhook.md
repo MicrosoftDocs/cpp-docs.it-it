@@ -1,29 +1,19 @@
 ---
-title: unhook | Microsoft Docs
-ms.custom: ''
+title: __unhook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __unhook
 - __unhook_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3efdce5bb7a9ab093a53b6a005492aecd509f560
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f6e5031cb77729ede053b275c90fa93bf251fcb6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486775"
 ---
 # <a name="unhook"></a>__unhook
 

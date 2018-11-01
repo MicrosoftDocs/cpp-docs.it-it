@@ -1,26 +1,16 @@
 ---
-title: Le impostazioni per il controllo Progress | Microsoft Docs
-ms.custom: ''
+title: Impostazioni per il controllo Progress
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CProgressCtrl class [MFC], settings
 - progress controls [MFC], settings
 ms.assetid: f4616e91-74fa-4000-ba0d-d3ddc0ee075b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b6b11189e3e0a8381ade372841e6c7b25a5a9fa0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 444dc45c816e0dfc2fd45bad999ad90c2acacc01
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481779"
 ---
 # <a name="settings-for-the-progress-control"></a>Impostazioni per il controllo Progress
 

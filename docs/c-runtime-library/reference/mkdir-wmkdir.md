@@ -1,10 +1,6 @@
 ---
-title: _mkdir, _wmkdir | Microsoft Docs
-ms.custom: ''
+title: _mkdir, _wmkdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmkdir
 - _mkdir
@@ -27,8 +23,6 @@ f1_keywords:
 - _tmkdir
 - wmkdir
 - _wmkdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmkdir function
 - folders [C++], creating
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40641911af9c61285049a5943cdc8f5c21cba99b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402140"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496617"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -68,12 +58,12 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Parametri
 
-*DirName*<br/>
+*nomedir*<br/>
 Percorso per una nuova directory.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il valore 0 se la nuova directory è stata creata. In un errore, la funzione restituisce -1 e imposta **errno** come indicato di seguito.
+Ognuna di queste funzioni restituisce il valore 0 se la nuova directory è stata creata. Su un errore, la funzione restituisce -1 e imposta **errno** come indicato di seguito.
 
 **EEXIST** Directory non è stata creata perché *dirname* è il nome di un file esistente, una directory o un dispositivo.
 
@@ -83,9 +73,9 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 ## <a name="remarks"></a>Note
 
-Il **mkdir** funzione crea una nuova directory con l'oggetto specificato *dirname.* **mkdir** possono creare solo una nuova directory per ogni chiamata, in modo che solo l'ultimo componente del *dirname* può denominare una nuova directory. **mkdir** non converte i delimitatori di percorso. In Windows NT, sia la barra rovesciata (\\) che la barra (/) sono delimitatori validi di percorso nelle stringhe di caratteri delle routine di runtime.
+Il **mkdir** funzione crea una nuova directory con la proprietà specificata *nomedir.* **mkdir** può creare solo una nuova directory per chiamata, in modo che solo l'ultimo componente del *nomedir* può denominare una nuova directory. **mkdir** non converte i delimitatori di percorso. In Windows NT, sia la barra rovesciata (\\) che la barra (/) sono delimitatori validi di percorso nelle stringhe di caratteri delle routine di runtime.
 
-**wmkdir** è una versione a caratteri wide **mkdir**; il *dirname* argomento **wmkdir** è una stringa di caratteri "wide". **wmkdir** e **mkdir** si comportano in modo identico in caso contrario.
+**wmkdir** è una versione a caratteri wide di **mkdir**; gli *dirname* argomento **wmkdir** è una stringa di caratteri "wide". **wmkdir** e **mkdir** hanno lo stesso comportamento in caso contrario.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

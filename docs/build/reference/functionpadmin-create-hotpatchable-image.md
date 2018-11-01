@@ -1,28 +1,18 @@
 ---
-title: /FUNCTIONPADMIN (Crea immagine con patch a caldo) | Microsoft Docs
-ms.custom: ''
+title: /FUNCTIONPADMIN (Crea immagine con funzionalità di patch a caldo)
 ms.date: 03/09/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /functionpadmin
-dev_langs:
-- C++
 helpviewer_keywords:
 - -FUNCTIONPADMIN linker option
 - /FUNCTIONPADMIN linker option
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a82611c453a96e9247e414d6adb777c07320482
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c1e84f308796eabcaea61518e3731f633c2f67e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474893"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (Crea immagine con funzionalità di patch a caldo)
 

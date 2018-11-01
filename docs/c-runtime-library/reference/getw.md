@@ -1,10 +1,6 @@
 ---
-title: _getw | Microsoft Docs
-ms.custom: ''
+title: _getw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getw
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _getw
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getw function
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3caffb90252780b833b80e3e5d1cd6d5ef6b0fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487607"
 ---
 # <a name="getw"></a>_getw
 
@@ -54,16 +44,16 @@ int _getw(
 
 ### <a name="parameters"></a>Parametri
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**getw** restituisce l'integer letto. Valore restituito di **EOF** indica un errore o fine del file. Tuttavia, poiché il **EOF** valore è anche un integer legittimo, utilizzare **feof** o **ferror** per verificare una condizione di errore o fine del file. Se *flusso* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EOF**.
+**getw** restituisce l'integer letto. Un valore restituito pari **EOF** indica un errore o fine del file. Tuttavia, poiché il **EOF** valore è anche un integer legittimo, utilizzare **feof** oppure **ferror** per verificare una condizione di errore o fine del file. Se *stream* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EOF**.
 
 ## <a name="remarks"></a>Note
 
-Il **getw** funzione legge il seguente valore binario di tipo **int** dal file associato *flusso* e incrementa il puntatore del file associato (se presente) in modo da puntare il carattere successivo da leggere. **getw** non presuppone alcun allineamento speciale degli elementi nel flusso. I problemi con la portabilità possono verificarsi con **getw** perché le dimensioni del **int** tipo e l'ordine dei byte all'interno di **int** tipo differiscono fra sistemi.
+Il **getw** funzione legge il seguente valore binario di tipo **int** dal file associato *flusso* e incrementa il puntatore del file associato (se presente) in modo da puntare il carattere successivo da leggere. **getw** non presuppone alcun allineamento speciale degli elementi nel flusso. Possono verificarsi problemi con la portabilità con **getw** perché le dimensioni del **int** tipo e l'ordine dei byte all'interno di **int** tipo differiscono fra sistemi.
 
 ## <a name="requirements"></a>Requisiti
 

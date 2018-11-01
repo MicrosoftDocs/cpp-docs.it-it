@@ -1,23 +1,13 @@
 ---
-title: Riferimenti sulle utilità ATL | Microsoft Docs
-ms.custom: ''
+title: Riferimenti sulle utilità ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e111cc4b7a62b61c926272d84df1d41cf53360b8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4391f1c93751da30915d5ca0acba1f68028d01b9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083438"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479184"
 ---
 # <a name="atl-utilities-reference"></a>Riferimenti sulle utilità ATL
 

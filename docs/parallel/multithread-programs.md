@@ -1,26 +1,16 @@
 ---
-title: Programmi multithread | Microsoft Docs
-ms.custom: ''
+title: Programmi multithread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - threading [C++], about threading
 - multithreading [C++], about threads
 ms.assetid: 02443596-f7e1-48d0-b3a4-39ee0e54e444
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 88c39590f27597d29a27ab60bbc95c3c46dc862c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b79fe84fbf7d910d53cb5bc333668b7d99ab8ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416864"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502042"
 ---
 # <a name="multithread-programs"></a>Programmi multithread
 
