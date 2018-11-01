@@ -1,30 +1,20 @@
 ---
-title: -EXPORT (Esporta una funzione) | Microsoft Docs
-ms.custom: ''
+title: /EXPORT (Esporta una funzione)
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
-dev_langs:
-- C++
 helpviewer_keywords:
 - /EXPORT linker option
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 22b79454b71f4908d71e683d8bebe4611da7cb14
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: a26df26849302ae1cce449f92cdeb5ee6dfd9baa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861861"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456130"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Esporta una funzione)
 

@@ -1,10 +1,6 @@
 ---
-title: _calloc_dbg | Microsoft Docs
-ms.custom: ''
+title: _calloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _calloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2759c19fb88b820fc346b5cf35e97522b7e74cb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454392"
 ---
 # <a name="callocdbg"></a>_calloc_dbg
 
@@ -64,7 +54,7 @@ Numero di blocchi di memoria richiesto.
 Dimensione richiesta di ciascun blocco di memoria (byte).
 
 *blockType*<br/>
-Tipo del blocco di memoria richiesto: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**.
+Tipo di blocco di memoria richiesto: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**.
 
 Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details).
 
@@ -74,7 +64,7 @@ Puntatore al nome del file di origine che ha richiesto l'operazione di allocazio
 *linenumber*<br/>
 Numero di riga nel file di origine in cui è stata richiesta l'operazione di allocazione o **NULL**.
 
-Il *filename* e *linenumber* parametri sono disponibili solo quando **calloc_dbg** è stato chiamato in modo esplicito o [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)è stata definita una costante del preprocessore.
+Il *nomefile* e *linenumber* parametri sono disponibili solo quando **calloc_dbg** è stato chiamato in modo esplicito o [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)è stata definita la costante del preprocessore.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -82,17 +72,17 @@ Al termine, questa funzione restituisce un puntatore alla porzione utente dell'u
 
 ## <a name="remarks"></a>Note
 
-**calloc_dbg** è una versione di debug di [calloc](calloc.md) (funzione). Quando si [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **calloc_dbg** viene ridotta a una chiamata a **calloc**. Entrambi **calloc** e **calloc_dbg** allocare *numero* blocchi di memoria nell'heap di base, ma **calloc_dbg** offre diversi debug funzionalità:
+**realloc_dbg** è una versione di debug di [calloc](calloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **calloc_dbg** viene ridotta a una chiamata a **calloc**. Entrambe **calloc** e **calloc_dbg** allocare *numero* blocchi di memoria nell'heap di base, ma **realloc_dbg** offre diversi debug funzionalità:
 
 - Buffer presenti su entrambi i lati della porzione utente del blocco in cui verificare la presenza di perdite.
 
 - Un parametro di tipo di blocco per tenere traccia di tipi specifici di allocazione.
 
-- *filename*/*linenumber* informazioni per determinare l'origine delle richieste di allocazione.
+- *nome file*/*linenumber* informazioni per determinare l'origine delle richieste di allocazione.
 
-**calloc_dbg** alloca ogni blocco di memoria con una quantità di spazio a quella richiesta *dimensioni*. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
+**realloc_dbg** alloca ogni blocco di memoria con quantità di spazio leggermente superiore al valore richiesto *dimensioni*. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
 
-**calloc_dbg** imposta **errno** a **ENOMEM** se fallisce un'allocazione di memoria; **EINVAL** viene restituito se la quantità di memoria richiesta (incluso l'overhead menzionato precedentemente) supera **heap_maxreq**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**realloc_dbg** imposta **errno** al **ENOMEM** se un'allocazione di memoria ha esito negativo; **EINVAL** viene restituito se la quantità di memoria richiesta (incluso l'overhead menzionato precedentemente) supera **heap_maxreq**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra la chiamata di una funzione standard dell'heap e la chiamata della relativa versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

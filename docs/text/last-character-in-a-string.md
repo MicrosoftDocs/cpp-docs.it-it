@@ -1,26 +1,16 @@
 ---
-title: Ultimo carattere in una stringa | Microsoft Docs
-ms.custom: ''
+title: Ultimo carattere di una stringa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - last character in string
 - MBCS [C++], last character in string
 ms.assetid: 0a180376-4e55-41e8-9c64-539c7b6d8047
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e207ec1d5489a629b765d398e26ac7c07771d0da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 535c2e58edab49e0e2a9dbc3fce9821d5909f1c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456264"
 ---
 # <a name="last-character-in-a-string"></a>Ultimo carattere di una stringa
 

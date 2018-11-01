@@ -1,10 +1,6 @@
 ---
-title: logb, logbf, logbl, _logb, _logbf | Microsoft Docs
-ms.custom: ''
+title: logb, logbf, logbl, _logb, _logbf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - logb
 - _logb
@@ -30,8 +26,6 @@ f1_keywords:
 - _logb
 - _logbf
 - logbf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _logbf function
 - mantissas, floating-point variables
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f09a243994112c3ce19d72213391e09ba23c3c4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402774"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466287"
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -92,13 +82,13 @@ Un valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-**logb** restituisce il valore dell'esponente non distorto *x* come un intero con segno rappresentato come un valore a virgola mobile.
+**logb** restituisce il valore dell'esponente non distorto del *x* come un intero con segno rappresentato come un valore a virgola mobile.
 
 ## <a name="remarks"></a>Note
 
-Il **logb** funzioni estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se *x* erano rappresentati con un intervallo infinito. Se l'argomento *x* è denormalizzato, viene considerato come se lo sono stato normalizzato.
+Il **logb** funzioni estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se *x* fosse rappresentato con un intervallo infinito. Se l'argomento *x* è denormalizzato, viene considerato come se fosse normalizzato.
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono **float** oppure **lungo** **doppie** valori. In un programma C **logb** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **logb** accetta e restituisce sempre un **doppie**.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|

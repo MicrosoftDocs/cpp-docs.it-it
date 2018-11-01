@@ -1,27 +1,17 @@
 ---
-title: Operatore reinterpret_cast | Microsoft Docs
-ms.custom: ''
+title: Operatore reinterpret_cast
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - reinterpret_cast_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd11dee65d020fdc1fb9f6702e675e807b0f61ab
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 421a1fdce6834f800cd33a55d75c9dc4f88ffc93
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067474"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463096"
 ---
 # <a name="reinterpretcast-operator"></a>Operatore reinterpret_cast
 

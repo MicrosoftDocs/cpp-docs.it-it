@@ -1,12 +1,6 @@
 ---
-title: Definizioni di argomenti | Microsoft Docs
-ms.custom: ''
+title: Definizioni di argomenti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - envp argument
 - main function, arguments
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e0c42478e5e6ce3c9efe66c45ed32292f2040a83
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3f194f337288f86190177fc7fa0f63bf18f45665
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084152"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444188"
 ---
 # <a name="argument-definitions"></a>Definizioni di argomenti
 

@@ -1,12 +1,6 @@
 ---
-title: Serializzazione in MFC | Microsoft Docs
-ms.custom: ''
+title: Serializzazione in MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - collection classes [MFC], serialization
 - bypassing serialization [MFC]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebd11488f0f86123bcf95d210072cc61dcc31c60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d439f5e13148d4359394739ec56048f00ceb35ba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462764"
 ---
 # <a name="serialization-in-mfc"></a>Serializzazione in MFC
 

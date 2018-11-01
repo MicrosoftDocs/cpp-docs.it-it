@@ -1,29 +1,18 @@
 ---
-title: Definizione di variabili membro per i controlli di finestra (C++) | Microsoft Docs
-ms.custom: ''
+title: Definizione di variabili membro per i controlli di finestra (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - member variables, defining for controls
 - variables, dialog box control member variables
 - controls [C++], member variables
 - Dialog Editor [C++], defining member variables for controls
 ms.assetid: 84347c63-c33c-4b04-91f5-6d008c45ba58
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 56a7d01d26656c8cf9def3bf09e3ccb18fb436fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402395"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449455"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>Definizione di variabili membro per i controlli di finestra (C++)
 
@@ -61,5 +50,5 @@ MFC
 [Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)<br/>
 [Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Override di una funzione virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)

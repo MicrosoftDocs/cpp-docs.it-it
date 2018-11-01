@@ -1,29 +1,19 @@
 ---
-title: Classe invalid_link_target | Microsoft Docs
-ms.custom: ''
+title: Classe invalid_link_target
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - invalid_link_target
 - CONCRT/concurrency::invalid_link_target
 - CONCRT/concurrency::invalid_link_target::invalid_link_target
-dev_langs:
-- C++
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65937e1daee2bcd75300f5dc6b19c444ee542f64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6748ea64f7be20dd5ce4573cd65b6e1084148b48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449114"
 ---
 # <a name="invalidlinktarget-class"></a>Classe invalid_link_target
 

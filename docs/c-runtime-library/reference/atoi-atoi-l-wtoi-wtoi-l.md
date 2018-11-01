@@ -1,10 +1,6 @@
 ---
-title: atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs
-ms.custom: ''
+title: atoi, _atoi_l, _wtoi, _wtoi_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoi
 - _wtoi_l
@@ -30,8 +26,6 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ec426518aed278f98ca334ba4ed34830f5836a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54c0a58a070fa42218a7b048d9eb57b05040738
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452247"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -92,7 +82,7 @@ Impostazioni locali da usare.
 
 Ogni funzione restituisce il **int** valore prodotto interpretando i caratteri di input sotto forma di numero. Il valore restituito è 0 per **atoi** e **wtoi**, se l'input non può essere convertito in un valore di quel tipo.
 
-In caso di overflow con i valori integrali negativi grandi dimensioni, **LONG_MIN** viene restituito. **atoi** e **wtoi** restituiscono **INT_MAX** e **INT_MIN** in queste condizioni. In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono 0.
+In caso di overflow con valori integrali negativi elevati, **LONG_MIN** viene restituito. **atoi** e **wtoi** restituire **INT_MAX** e **INT_MIN** in queste condizioni. In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono 0.
 
 ## <a name="remarks"></a>Note
 
@@ -102,7 +92,7 @@ Il *str* argomento **atoi** e **wtoi** ha il formato seguente:
 
 > [*whitespace*] [*sign*] [*cifre*]]
 
-Un *whitespace* è costituito da caratteri spazio o tabulazione, ovvero vengono ignorati; *sign* è un segno più (+) o meno (-); e *cifre* sono uno o più cifre.
+Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* uno o più cifre.
 
 Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -122,7 +112,7 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 ## <a name="example"></a>Esempio
 
-Questo programma viene illustrato come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la **atoi** funzioni.
+Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la **atoi** funzioni.
 
 ```C
 // crt_atoi.c

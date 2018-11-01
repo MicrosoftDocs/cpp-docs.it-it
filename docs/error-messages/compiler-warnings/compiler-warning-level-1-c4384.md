@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 1) C4384 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 1) C4384
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4384
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4384
 ms.assetid: fafa8eb2-cbfc-4edb-8b0f-511ff5d37ac0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54d913aac76f767728bbe7b4a31d4ea1c8bbd96d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0f2666011e88dfd59eaaca154f4407bece7c963c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026998"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454687"
 ---
 # <a name="compiler-warning-level-1-c4384"></a>Avviso del compilatore (livello 1) C4384
 
