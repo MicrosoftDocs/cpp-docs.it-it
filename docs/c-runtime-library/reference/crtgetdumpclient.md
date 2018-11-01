@@ -1,10 +1,6 @@
 ---
-title: _CrtGetDumpClient | Microsoft Docs
-ms.custom: ''
+title: _CrtGetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetDumpClient
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f15e41c91867c7728a1d006b8038aa1ca18010a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394409"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550735"
 ---
 # <a name="crtgetdumpclient"></a>_CrtGetDumpClient
 
-Recupera la funzione definita dall'applicazione corrente per il dump il **CLIENT_BLOCK** digitare blocchi di memoria (solo versione debug).
+Recupera la funzione definita dall'applicazione corrente per il dump di **CLIENT_BLOCK** digitare blocchi di memoria (solo versione di debug).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,7 +45,7 @@ Restituisce la routine di dump corrente.
 
 ## <a name="remarks"></a>Note
 
-Il **crtgetdumpclient** funzione recupera la funzione hook corrente per il dump di oggetti archiviati nel **CLIENT_BLOCK** blocchi di memoria per il runtime C di eseguire il debug processo del dump di memoria.
+Il **crtgetdumpclient** funzione recupera la funzione di hook corrente per il dump di oggetti archiviati nel **CLIENT_BLOCK** blocchi di memoria per il runtime C di eseguire il debug processo del dump di memoria.
 
 Per informazioni sull'uso di altre funzioni di runtime capaci di eseguire l'hook e sulla scrittura delle funzioni di hook definite dal client, vedere [Writing Your Own Debug Hook Functions](/visualstudio/debugger/debug-hook-function-writing) (Scrittura di funzioni hook di debug).
 
