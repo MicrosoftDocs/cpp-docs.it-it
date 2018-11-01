@@ -1,23 +1,13 @@
 ---
-title: Procedura di rimozione | Microsoft Docs
-ms.custom: ''
+title: Procedura di rimozione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 82c5d0ca-70be-4d1a-a306-bfe01c29159f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 294353baf8c15818ba836bd3093226a78aa6e44c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2d68a5c3fb1cc2d18b587d1419b0103d02b35a7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700661"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523104"
 ---
 # <a name="unwind-procedure"></a>Procedura di rimozione
 

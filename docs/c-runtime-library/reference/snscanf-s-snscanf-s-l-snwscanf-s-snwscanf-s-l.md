@@ -1,10 +1,6 @@
 ---
-title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf_s_l
 - _snwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _sntscanf_s_l
 - _snscanf_s_l
 - sntscanf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snscanf_s_l function
 - snwscanf_s function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08c269d0139767f260c68d07d660ecc818b36cc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7f6fbbcdb6e3fa9d3137337992b2de0d81c1287
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411409"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533328"
 ---
 # <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
@@ -102,7 +92,7 @@ int __cdecl _snwscanf_s_l(
 Stringa di input da esaminare.
 
 *length*<br/>
-Numero di caratteri da esaminare *input*.
+Numero di caratteri da esaminare nel *input*.
 
 *format*<br/>
 Uno o più identificatori di formato.
@@ -115,22 +105,22 @@ Argomenti facoltativi per poter essere assegnati in base alla stringa di formato
 
 ## <a name="return-value"></a>Valore restituito
 
-Entrambe queste funzioni restituiscono il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della conversione prima. Per altre informazioni, vedere [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Entrambe queste funzioni restituiscono il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della prima conversione. Per altre informazioni, vedere [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Se *input* oppure *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostare **errno** al **EINVAL**.
+Se *input* oppure *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Questa funzione è simile a **sscanf_s** ad eccezione del fatto che consente di specificare un numero fisso di caratteri da esaminare dalla stringa di input. Per altre informazioni, vedere [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Questa funzione è simile a **sscanf_s** ad eccezione del fatto che fornisca la possibilità di specificare un numero fisso di caratteri da esaminare dalla stringa di input. Per altre informazioni, vedere [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Il parametro di dimensione del buffer è necessario con i caratteri di campo di tipo **c**, **C**, **s**, **S**, e **[** . Per altre informazioni, vedere [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).
+Il parametro di dimensione del buffer è obbligatorio con i caratteri di campo di tipo **c**, **C**, **s**, **S**, e **[** . Per altre informazioni, vedere [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
 > Il parametro di dimensione è di tipo **unsigned**, non **size_t**.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

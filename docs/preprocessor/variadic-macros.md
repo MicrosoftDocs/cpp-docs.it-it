@@ -1,26 +1,16 @@
 ---
-title: Macro Variadic | Microsoft Docs
-ms.custom: ''
+title: Macro variadic
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f67829be4c0667094851108992111eab86c52c0b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0674359b8f620c2b5023ce2ef75b4e247ae765f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082866"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547449"
 ---
 # <a name="variadic-macros"></a>Macro variadic
 

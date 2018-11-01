@@ -1,10 +1,6 @@
 ---
-title: cos, cosf, cosl | Documenti Microsoft
-ms.custom: ''
+title: cos, cosf, cosl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519896"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -72,16 +62,16 @@ Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il coseno del *x*. Se *x* è maggiore o uguale a 263 o inferiore o uguale a -263, si verifica una perdita di significato nel risultato.
+Il coseno *x*. Se *x* è maggiore o uguale a 263 o inferiore o uguale a -263, si verifica una perdita di significato nel risultato.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|**DOMAIN**|
-|± INF|**NON VALIDO**|**DOMAIN**|
+|± QNAN, IND|none|**DOMINIO**|
+|+ INF|**NON VALIDO**|**DOMINIO**|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cos** che accettano e restituiscono **float** oppure **lungo** **doppie** valori. In un programma C **cos** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **cos** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **cos** accetta e restituisce sempre un **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -93,7 +83,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio incluso in [sin, sinf, sinl](sin-sinf-sinl.md).
+Vedere l'esempio nella [sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Vedere anche
 
