@@ -1,10 +1,6 @@
 ---
-title: _execvp, _wexecvp | Microsoft Docs
-ms.custom: ''
+title: _execvp, _wexecvp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvp
 - _wexecvp
@@ -25,24 +21,18 @@ f1_keywords:
 - _execvp
 - wexecvp
 - _wexecvp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execvp function
 - _wexecvp function
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47154bd999b421c2170118236a899dcc4e2860
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402218"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505313"
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 
@@ -92,7 +82,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando e utilizzando il **percorso** variabile di ambiente per individuare il file da eseguire.
 
-Il **execvp** funzioni convalidano i propri parametri. Se il *cmdname* è un puntatore null, o *argv* è un puntatore null, puntatore a una matrice vuota, o se la matrice contiene una stringa vuota come primo argomento, queste funzioni richiamano il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1. Nessun processo viene avviato.
+Il **execvp** funzioni convalidano i propri parametri. Se il *cmdname* è un puntatore null, o *argv* è un puntatore null, un puntatore a una matrice vuota, o se la matrice contiene una stringa vuota come primo argomento, queste funzioni richiamano il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1. Nessun processo viene avviato.
 
 ## <a name="requirements"></a>Requisiti
 

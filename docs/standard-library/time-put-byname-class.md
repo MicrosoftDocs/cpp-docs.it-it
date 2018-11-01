@@ -1,27 +1,17 @@
 ---
-title: Classe time_put_byname | Microsoft Docs
-ms.custom: ''
+title: Classe time_put_byname
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xloctime/std::time_put_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62d78fb7c2b9cbaee62baf59636303f90177cf7b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ffe7aa276e9380b6544a78c1c1735ab57765507a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699595"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495966"
 ---
 # <a name="timeputbyname-class"></a>Classe time_put_byname
 

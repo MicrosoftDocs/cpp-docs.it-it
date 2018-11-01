@@ -1,10 +1,6 @@
 ---
-title: Classe list | Microsoft Docs
-ms.custom: ''
+title: Classe list
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - list/std::list
 - list/std::list::allocator_type
@@ -53,8 +49,6 @@ f1_keywords:
 - list/std::list::splice
 - list/std::list::swap
 - list/std::list::unique
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::list [C++]
 - std::list [C++], allocator_type
@@ -104,16 +98,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0f874cc6b9f00f72c4c4b6d15e4503b8b49fbf8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107487"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481913"
 ---
 # <a name="list-class"></a>Classe list
 
@@ -339,7 +329,7 @@ Ultimo elemento dell'elenco. Se l'elenco è vuoto, il valore restituito è indef
 
 Se il valore restituito di `back` viene assegnato a `const_reference`, l'oggetto elenco non può essere modificato. Se il valore restituito da `back` viene assegnato a `reference`, l'oggetto elenco può essere modificato.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si prova ad accedere a un elemento in un elenco vuoto si verifica un errore di runtime.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si prova ad accedere a un elemento in un elenco vuoto si verifica un errore di runtime.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Esempio
 
@@ -1071,7 +1061,7 @@ Se l'elenco è vuoto, viene restituito un valore non definito.
 
 Se il valore restituito di `front` viene assegnato a `const_reference`, l'oggetto elenco non può essere modificato. Se il valore restituito da `front` viene assegnato a `reference`, l'oggetto elenco può essere modificato.
 
-Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si prova ad accedere a un elemento in un elenco vuoto si verifica un errore di runtime.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
+Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, se si prova ad accedere a un elemento in un elenco vuoto si verifica un errore di runtime.  Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Esempio
 
@@ -2370,7 +2360,7 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 *Where*<br/>
 Posizione nell'elenco di destinazione prima della quale occorre effettuare l'inserimento.
 
-*Source*<br/>
+*Origine*<br/>
 Elenco di origine da inserire nell'elenco di destinazione.
 
 *Iter*<br/>

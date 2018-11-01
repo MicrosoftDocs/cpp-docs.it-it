@@ -1,27 +1,17 @@
 ---
-title: Avviso di ottimizzazione PG1039 PGO | Microsoft Docs
-ms.custom: ''
+title: Avviso di ottimizzazione PGO PG1039
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PG1039
-dev_langs:
-- C++
 helpviewer_keywords:
 - PG1039
 ms.assetid: a67dfd66-b610-4d78-9658-2bcf7a506b9f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1dd62059697b7f5c50a9fe7863f62ebbe6bf56c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 566a87ef3bb48dc68f844b16cc4c0bc684cdc14e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050528"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487334"
 ---
 # <a name="profile-guided-optimization-warning-pg1039"></a>Avviso di ottimizzazione PGO PG1039
 

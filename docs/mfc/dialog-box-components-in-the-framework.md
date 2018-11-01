@@ -1,12 +1,6 @@
 ---
-title: Componenti della finestra di dialogo nel Framework | Microsoft Docs
-ms.custom: ''
+title: Componenti della finestra di dialogo nel framework
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - dialog classes [MFC], dialog box components
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - dialog templates [MFC], MFC framework
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6936a48d1a3e1845d56c73524c84800d9d605155
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: cf01e7b881b8f5c9c5ba9847ccf4e15dee3e18d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065511"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518586"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Componenti della finestra di dialogo nel framework
 

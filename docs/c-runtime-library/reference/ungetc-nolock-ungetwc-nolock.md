@@ -1,10 +1,6 @@
 ---
-title: _ungetc_nolock, _ungetwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetc_nolock, _ungetwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetwc_nolock
 - _ungetc_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - ungetc_nolock
 - _ungetc_nolock
 - _ungetwc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungettc_nolock function
 - _ungetwc_nolock function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14bd0f51ac01f2e335a5609a0140e30e83977433
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482862"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -71,18 +61,18 @@ wint_t _ungetwc_nolock(
 *c*<br/>
 Carattere da inserire.
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, ognuna di queste funzioni restituisce l'argomento di tipo carattere *c*. Se *c* non può essere inserito di nuovo o se non è stato letto alcun carattere, il flusso di input non viene modificato e **ungetc_nolock** restituisce * * EOF`; **_ungetwc_nolock` restituisce **WEOF**. Se *flusso* viene **NULL**, **EOF** oppure **WEOF** viene restituito e **errno** è impostato su  **EINVAL**.
+Se ha esito positivo, ognuna di queste funzioni restituisce l'argomento a caratteri *c*. Se *c* non è possibile reinserire o se non è stato letto alcun carattere, il flusso di input rimane invariato e **ungetc_nolock** restituisce * * EOF`; **_ungetwc_nolock` restituisce **WEOF**. Se *stream* viene **NULL**, **EOF** oppure **WEOF** restituito e **errno** è impostato su  **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni sono non blocca il thread versioni **ungetc** e **ungetwc**. Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Queste funzioni sono non blocca le versioni di **ungetc** e **ungetwc**. Le versioni con suffisso **_nolock** sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
