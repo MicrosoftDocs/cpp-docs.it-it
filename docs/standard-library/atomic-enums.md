@@ -1,19 +1,17 @@
 ---
-title: Enumerazioni &lt;atomic&gt; | Microsoft Docs
-ms.custom: ''
+title: Enumerazioni &lt;atomic&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - atomic/std::memory_order
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: c30e7ca78533b0b4c2a4eb49bd99bd13483d2b8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03247f6abd01b00fbbed3b33016cd4a12d8a13f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543744"
 ---
 # <a name="ltatomicgt-enums"></a>Enumerazioni &lt;atomic&gt;
 

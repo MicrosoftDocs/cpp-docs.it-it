@@ -1,27 +1,17 @@
 ---
-title: Supporto COM+ 1.0 nei progetti ATL | Microsoft Docs
-ms.custom: ''
+title: Supporto COM+ 1.0 nei progetti ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.MTS
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, COM+ 1.0 support
 ms.assetid: 51fb08ac-d632-4657-a4e0-d3f989f0b6f8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64046eab403dca8da630c9c5324d320e0c79d4cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4bc7683d6121dec748e30c1ea717042b9cf1ecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054298"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562461"
 ---
 # <a name="com-10-support-in-atl-projects"></a>Supporto COM+ 1.0 nei progetti ATL
 

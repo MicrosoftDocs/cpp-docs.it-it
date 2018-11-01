@@ -1,27 +1,17 @@
 ---
-title: Avviso del compilatore C4394 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore C4394
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4394
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4394
 ms.assetid: 5de94de0-17e3-4e7c-92f4-5c3c1b825120
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d99200dd01db610aa558e8a9df18b7afacdf3d7d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 00c9e139e920473590389c05f076a7cd91a4fb8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099512"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548851"
 ---
 # <a name="compiler-warning-c4394"></a>Avviso del compilatore C4394
 

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2513 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2513
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2513
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82df537e49ca17140d70977486314f43a072022d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 13840246a5dc6a1c1bdbcb55dc47f212ee353d81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561200"
 ---
 # <a name="compiler-error-c2513"></a>Errore del compilatore C2513
 

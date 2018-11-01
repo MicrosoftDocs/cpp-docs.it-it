@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2491 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2491
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2491
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2491
 ms.assetid: 4e5a8f81-124e-402c-a5ec-d35a89b5469e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40e6adfc369cd79f4c08c9099f5bc7db2b2281d8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3b48bebde6d7baedea73ed181cd4ea33adc44a69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110991"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563124"
 ---
 # <a name="compiler-error-c2491"></a>Errore del compilatore C2491
 
