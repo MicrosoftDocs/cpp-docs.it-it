@@ -1,10 +1,6 @@
 ---
-title: _lsearch | Microsoft Docs
-ms.custom: ''
+title: _lsearch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lsearch
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch
 - lsearch
-dev_langs:
-- C++
 helpviewer_keywords:
 - _lsearch function
 - values, searching for
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2aaf6626b2f7005181640f77026b6924c39cd325
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 340e8ac382972b15acc52013d5d6a51352db969c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532811"
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -84,9 +74,9 @@ Se la chiave viene trovata, **lsearch** restituisce un puntatore all'elemento de
 
 ## <a name="remarks"></a>Note
 
-Il **lsearch** funzione esegue una ricerca lineare per il valore *chiave* in una matrice di *numero* elementi, ognuno dei *larghezza* byte. A differenza **bsearch**, **lsearch** non richiede che la matrice da ordinare. Se *chiave* non viene trovato, **lsearch** lo aggiunge alla fine della matrice e incrementa *numero*.
+Il **lsearch** funzione esegue una ricerca lineare per il valore *chiave* in una matrice di *numero* elementi, ognuno dei *larghezza* byte. A differenza **bsearch**, **lsearch** richiede che la matrice da ordinare. Se *key* non viene trovato, **lsearch** lo aggiunge alla fine della matrice e incrementa *numero*.
 
-Il *confrontare* argomento è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che specifica la relazione. **lsearch** chiama il *confrontare* routine una o più volte durante la ricerca, passando i puntatori a due elementi di matrice per ogni chiamata. *confrontare* deve confrontare gli elementi e restituire un diverso da zero (ovvero gli elementi sono diversi) oppure 0 (vale a dire gli elementi sono identici).
+Il *confrontare* argomento è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che specifica la relazione. **lsearch** chiama il *confrontare* routine una o più volte durante la ricerca, passando i puntatori a due elementi della matrice per ogni chiamata. *confrontare* deve confrontare gli elementi e restituire un diverso da zero (vale a dire gli elementi sono diversi) o 0 (ovvero gli elementi sono identici).
 
 Questa funzione convalida i relativi parametri. Se *confrontare*, *chiave* oppure *numero* è **NULL**, o se *base* è **NULL**e *numero* è diverso da zero, oppure se *larghezza* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**.
 

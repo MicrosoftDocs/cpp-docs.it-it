@@ -1,10 +1,6 @@
 ---
-title: memmove_s, wmemmove_s | Microsoft Docs
-ms.custom: ''
+title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403895"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561187"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
@@ -86,13 +76,13 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|qualsiasi|qualsiasi|**EINVAL**|non modificato|
 |qualsiasi|qualsiasi|**NULL**|**EINVAL**|non modificato|
-|qualsiasi|< *Conteggio*|qualsiasi|**ERANGE**|non modificato|
+|qualsiasi|< *conteggio*|qualsiasi|**ERANGE**|non modificato|
 
 ## <a name="remarks"></a>Note
 
-Copie *conteggio* byte di caratteri dal *src* al *dest*. Se alcune aree dell'area di origine e destinazione si sovrappongono, **memmove_s** assicura che i byte di origine originale nell'area interessata dalla sovrapposizione vengono copiati prima venga sovrascritto.
+Le copie *conteggio* byte di caratteri da *src* al *dest*. Se alcune parti dell'area di origine e destinazione si sovrappongono, **memmove_s** assicura che i byte di origine originali nell'area sovrapposta vengono copiati prima di essere sovrascritti.
 
-Se *dest* oppure se *src* è un puntatore null o se la stringa di destinazione è troppo piccola, queste funzioni richiamano un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostare **errno** al **EINVAL**.
+Se *dest* o se *src* è un puntatore null o se la stringa di destinazione è troppo piccola, queste funzioni richiamano un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostare **errno** al **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

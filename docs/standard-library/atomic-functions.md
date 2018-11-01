@@ -1,8 +1,6 @@
 ---
-title: Funzioni &lt;atomic&gt; | Microsoft Docs
-ms.custom: ''
+title: Funzioni &lt;atomic&gt;
 ms.date: 07/11/2018
-ms.topic: reference
 f1_keywords:
 - atomic/std::atomic_compare_exchange_strong
 - atomic/std::atomic_compare_exchange_strong_explicit
@@ -34,8 +32,6 @@ f1_keywords:
 - atomic/std::atomic_thread_fence
 - atomic/std::kill_dependency
 ms.assetid: 5c53b4f8-6ff5-47d7-beb2-2d6ee3c6ea89
-author: mikeblome
-ms.author: mblome
 helpviewer_keywords:
 - std::atomic_compare_exchange_strong [C++]
 - std::atomic_compare_exchange_strong_explicit [C++]
@@ -66,14 +62,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c00f66eef11d2d26bbcaa07110e9d9e738fc7c2f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6ec4ff879b70e4d2cc16a3328217660db695e859
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533757"
 ---
 # <a name="ltatomicgt-functions"></a>Funzioni &lt;atomic&gt;
 

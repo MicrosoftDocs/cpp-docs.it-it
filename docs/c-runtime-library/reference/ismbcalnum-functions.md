@@ -1,10 +1,6 @@
 ---
-title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l | Microsoft Docs
-ms.custom: ''
+title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcalpha
 - _ismbcalnum
@@ -36,8 +32,6 @@ f1_keywords:
 - _ismbcalnum_l
 - _ismbcalnum
 - ismbcdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcalpha function
 - _ismbcalnum function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a90fe131ff216bd9f758f3312d366e0ec29d79ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404269"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532223"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,19 +102,19 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c*< = 255 ed è presente un corrispondente **ismbb** routine (ad esempio **ismbcalnum** corrisponde a **ismbbalnum**), il il risultato è il valore restituito dell'oggetto corrispondente **ismbb** routine.
+Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c*< = 255 ed è presente un corrispondente **ismbb** routine (ad esempio, **ismbcalnum** corrisponde al **ismbbalnum**), il il risultato è il valore restituito dell'oggetto corrispondente **ismbb** routine.
 
 ## <a name="remarks"></a>Note
 
 Ognuna di queste routine testa una particolare condizione su un determinato carattere multibyte.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni con il **l** suffisso sono identiche ma usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condizione di test|Esempio della tabella codici 932|
 |-------------|--------------------|---------------------------|
-|**ismbcalnum**, **ismbcalnum_l**|Carattere alfanumerico|Restituisce se diverso da zero e solo se *c* è una rappresentazione a un byte di una lettera ASCII: vedere gli esempi relativi **ismbcdigit** e **ismbcalpha**.|
-|**ismbcalpha**, **ismbcalpha_l**|Carattere alfabetico|Restituisce se diverso da zero e solo se *c* è una rappresentazione a un byte di una lettera ASCII: 0x41 < =*c*< = 0x5A o 0x61 < =*c*< = 0x7A; o una lettera katakana: 0xA6 < =*c*< = 0xDF.|
-|**ismbcdigit**, **ismbcdigit**|Carattere numerico|Restituisce se diverso da zero e solo se *c* è una rappresentazione a un byte di una cifra ASCII: 0x30 < =*c*< = 0x39.|
+|**ismbcalnum**, **ismbcalnum_l**|Carattere alfanumerico|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera ASCII inglese: vedere gli esempi relativi **ismbcdigit** e **ismbcalpha**.|
+|**ismbcalpha**, **ismbcalpha_l**|Carattere alfabetico|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera ASCII inglese: 0x41 < =*c*< = 0x5A o 0x61 < =*c*< = 0x7A, o una lettera katakana: 0xA6 < =*c*< = 0xDF.|
+|**ismbcdigit**, **ismbcdigit**|Carattere numerico|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una cifra ASCII: 0x30 < =*c*< = 0x39.|
 
 ## <a name="requirements"></a>Requisiti
 

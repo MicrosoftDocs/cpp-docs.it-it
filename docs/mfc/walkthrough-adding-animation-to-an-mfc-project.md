@@ -1,26 +1,16 @@
 ---
-title: 'Procedura dettagliata: Aggiunta di animazione a un progetto MFC | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura dettagliata: aggiunta di animazione a un progetto MFC'
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - animation [MFC]
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16613425633f55eeed152e86c1b4fea7f00a784c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 25e29654f1e192e03a078e4a963f27abeea6056d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234064"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522239"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Procedura dettagliata: aggiunta di animazione a un progetto MFC
 

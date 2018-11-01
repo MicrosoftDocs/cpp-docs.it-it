@@ -1,10 +1,6 @@
 ---
-title: _eof | Microsoft Docs
-ms.custom: ''
+title: _eof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _eof
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _eof
-dev_langs:
-- C++
 helpviewer_keywords:
 - eof function
 - end of file, testing for
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7ccad98491762d30db2741f8c3d9fe0d784dc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395124"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522395"
 ---
 # <a name="eof"></a>_eof
 
@@ -62,7 +52,7 @@ Il descrittore del file che fa riferimento al file aperto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**EOF** restituisce 1 se la posizione corrente è la fine del file oppure 0 in caso contrario. Il valore restituito-1 indica un errore. In questo caso, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EBADF**, che indica un descrittore di file non valido.
+**EOF** restituisce 1 se la posizione corrente è di fine del file oppure 0 in caso contrario. Valore restituito di -1 indica un errore. In questo caso, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EBADF**, che indica un descrittore di file non valido.
 
 ## <a name="remarks"></a>Note
 

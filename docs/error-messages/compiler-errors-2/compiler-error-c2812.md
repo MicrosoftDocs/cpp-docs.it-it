@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2812 | Documenti Microsoft
-ms.custom: ''
+title: Errore del compilatore C2812
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2812
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2812
 ms.assetid: 22aadb8c-7232-489d-a3ad-60662dda30a8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c5469e4f7be3c164cc63fa30f5069009846be48
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88b071f38cf41db9c929d25ffd526b3f2b7ca468
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531820"
 ---
 # <a name="compiler-error-c2812"></a>Errore del compilatore C2812
 
@@ -29,7 +19,7 @@ ms.locfileid: "34705023"
 
 ## <a name="remarks"></a>Note
 
-Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
 [direttiva #import](../../preprocessor/hash-import-directive-cpp.md) non è supportato con **/clr: pure** e **/CLR: safe** perché `#import` richiede l'uso di librerie di supporto del compilatore nativo.
 

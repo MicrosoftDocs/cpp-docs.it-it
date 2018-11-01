@@ -1,25 +1,15 @@
 ---
-title: Usa il nome di funzione senza () mancata generazione di codice | Microsoft Docs
-ms.custom: ''
+title: Mancata generazione di codice in seguito all'utilizzo di nomi di funzione senza ()
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13ca43386c9ef46f526538781a91fd1a81ade537
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3f68d2ab39ceacce5a74b033c061203b2b014284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534810"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>Mancata generazione di codice in seguito all'utilizzo di nomi di funzione senza ()
 

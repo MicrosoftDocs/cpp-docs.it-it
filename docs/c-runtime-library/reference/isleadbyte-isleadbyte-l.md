@@ -1,10 +1,6 @@
 ---
-title: isleadbyte, _isleadbyte_l | Microsoft Docs
-ms.custom: ''
+title: isleadbyte, _isleadbyte_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -25,8 +21,6 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs:
-- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 682cdde6983c5e590920c43418e510b9c275b34e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401018"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531889"
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 
@@ -66,15 +56,15 @@ Valore Integer da testare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**isleadbyte** restituisce un valore diverso da zero se l'argomento soddisfa la condizione di test oppure 0 se non esiste. Nelle impostazioni locali "C" e a byte singolo impostazioni locali (SBCS), del set di caratteri **isleadbyte** restituisce sempre 0.
+**isleadbyte** restituisce un valore diverso da zero se l'argomento soddisfa la condizione di test oppure 0 se non esiste. Set di impostazioni locali (SBCS), nelle impostazioni locali "C" e in un byte SBCS caratteri **isleadbyte** restituisce sempre 0.
 
 ## <a name="remarks"></a>Note
 
-Il **isleadbyte** (macro) restituisce un valore diverso da zero se l'argomento è il primo byte di un carattere multibyte. **isleadbyte** produce un risultato significativo per qualsiasi argomento integer da -1 (**EOF**) per **UCHAR_MAX** (0xFF), inclusivo.
+Il **isleadbyte** macro restituisce un valore diverso da zero se l'argomento è il primo byte di un carattere multibyte. **isleadbyte** produce un risultato significativo per qualsiasi argomento integer compreso tra -1 (**EOF**) per **UCHAR_MAX** (0xFF), inclusivo.
 
-Il tipo di argomento previsto **isleadbyte** viene **int**; se un carattere signed viene passato, il compilatore potrebbe convertirlo in un intero con l'estensione del segno, generando risultati imprevisti.
+Il tipo di argomento previsto dei **isleadbyte** viene **int**; se un carattere signed viene passato, il compilatore potrebbe convertirlo in un numero intero per l'estensione del segno, generando risultati imprevisti.
 
-La versione di questa funzione con il **l** suffisso è identico ad eccezione del fatto che usa le impostazioni locali passate anziché le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali.
+La versione di questa funzione con il **l** suffisso è identico, ma usa le impostazioni locali passate anziché le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

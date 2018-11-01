@@ -1,25 +1,15 @@
 ---
-title: x86 elenco oggetti intrinseci | Microsoft Docs
-ms.custom: ''
+title: Elenco intrinseci x86
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, x86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3ae21e0c7f39ef1f4b2ab5379c556b987fcf37b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 251e4741f069cf44376c2f6a7ed4e92aa949452b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560591"
 ---
 # <a name="x86-intrinsics-list"></a>Elenco intrinseci x86
 
@@ -31,9 +21,9 @@ Per informazioni sui singoli intrinseci, vedere queste risorse, in base al proce
 
 - [Guida relativa agli intrinseci di Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/). Usare la casella di ricerca per trovare specifici intrinseci.
 
-- [Manuali degli sviluppatori Software di Intel 64 e IA-32 architetture](https://software.intel.com/articles/intel-sdm)
+- [Manuali degli sviluppatori software per le architetture Intel 64 e IA-32](https://software.intel.com/articles/intel-sdm)
 
-- [Riferimento alla programmazione delle estensioni dei Set di istruzioni di architettura Intel](https://software.intel.com/isa-extensions)
+- [Riferimento alla programmazione delle estensioni dei set di istruzioni dell'architettura Intel](https://software.intel.com/isa-extensions)
 
 - [Introduzione a Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
@@ -1277,4 +1267,4 @@ La tabella seguente elenca le funzioni intrinseche disponibili per i processori 
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
 [Intrinseci ARM](../intrinsics/arm-intrinsics.md)<br/>
-[x64 (amd64) le funzioni intrinseche](../intrinsics/x64-amd64-intrinsics-list.md)
+[Oggetti intrinseci x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)

@@ -1,27 +1,17 @@
 ---
-title: Struttura AFX_EXTENSION_MODULE | Microsoft Docs
-ms.custom: ''
+title: Struttura AFX_EXTENSION_MODULE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - AFX_EXTENSION_MODULE
-dev_langs:
-- C++
 helpviewer_keywords:
 - AFX_EXTENSION_MODULE structure [MFC]
 ms.assetid: b85a989c-d0c5-4b28-b53c-dad45b75704e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98486078684fe4fa8da25dd8d0c78be96be70a08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee39fcec3083145dbc23c7739897bf89d47578a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539035"
 ---
 # <a name="afxextensionmodule-structure"></a>Struttura AFX_EXTENSION_MODULE
 

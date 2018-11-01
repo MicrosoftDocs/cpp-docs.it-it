@@ -1,11 +1,6 @@
 ---
-title: feclearexcept1 | Microsoft Docs
-ms.custom: ''
+title: feclearexcept1
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feclearexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
-ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
+ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070077"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551112"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -54,16 +43,16 @@ int feclearexcept(
 
 ### <a name="parameters"></a>Parametri
 
-*excepts*<br/>
+*tranne che ai*<br/>
 Flag di stato delle eccezioni da cancellare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce zero se *excepts* è uguale a zero, oppure se sono state cancellate tutte le eccezioni specificate. In caso contrario, viene restituito un valore diverso da zero.
+Restituisce zero se *eccetto* è uguale a zero, oppure se sono state cancellate tutte le eccezioni specificate. In caso contrario, viene restituito un valore diverso da zero.
 
 ## <a name="remarks"></a>Note
 
-Il **feclearexcept** funzione tenta di cancellare mobile punto specificato dal flag di stato di eccezione *excepts*. La funzione supporta queste macro di eccezioni, definite in fenv.h:
+Il **feclearexcept** funzione tenta di deselezionare mobile punto specificato dal flag di stato delle eccezioni *tranne che ai*. La funzione supporta queste macro di eccezioni, definite in fenv.h:
 
 |Macro di eccezioni|Descrizione|
 |---------------------|-----------------|
@@ -74,7 +63,7 @@ Il **feclearexcept** funzione tenta di cancellare mobile punto specificato dal f
 |FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|
 |FE_ALL_EXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
 
-Il *excepts* argomento può essere zero o OR bit per bit di uno o più delle macro eccezione supportata. Il risultato di qualsiasi altro valore di argomento non è definito.
+Il *eccetto* argomento può essere zero o l'operatore OR bit per bit di uno o più macro di eccezioni supportate. Il risultato di qualsiasi altro valore di argomento non è definito.
 
 ## <a name="requirements"></a>Requisiti
 

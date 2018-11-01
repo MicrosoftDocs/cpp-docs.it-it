@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3103 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3103
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3103
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3103
 ms.assetid: 7984bd3e-d51d-43e4-b6f4-08c1e9fb9704
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abdfbdae575b400dd44ba16bd453dc82eb03c721
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8dae731e36177dc199554615f74e92ebc5f6f5dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050159"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531945"
 ---
 # <a name="compiler-error-c3103"></a>Errore del compilatore C3103
 

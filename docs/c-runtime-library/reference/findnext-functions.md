@@ -1,10 +1,6 @@
 ---
-title: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64 | Microsoft Docs
-ms.custom: ''
+title: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfindnext
 - _findnext
@@ -58,8 +54,6 @@ f1_keywords:
 - _wfindnexti64
 - _tfindnext
 - _findnext32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfindnexti64 function
 - _tfindnext32 function
@@ -98,20 +92,16 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 540ec2aae5e13df68438c74e0371e91326e9bb0a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32d21b310d8a7826fd1d95f806d470a1fb7e492e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405562"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518508"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
-Trovare il nome successivo, se presente, che corrisponde la *filespec* argomento in una precedente chiamata a [FindFirst](findfirst-functions.md), quindi modificare il *fileinfo* struttura conseguenza contenuto.
+Trovare il nome successivo, se presente, che corrisponde il *filespec* argomento in una chiamata precedente a [FindFirst](findfirst-functions.md), quindi modificare il *fileinfo* contenuto della struttura di conseguenza.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -168,8 +158,8 @@ int _wfindnext64i32(
 
 ### <a name="parameters"></a>Parametri
 
-*Handle*<br/>
-Handle di ricerca restituiti da una chiamata precedente a **FindFirst**.
+*handle*<br/>
+Handle di ricerca restituito da una chiamata precedente a **FindFirst**.
 
 *FileInfo*<br/>
 Buffer delle informazioni del file.
@@ -180,25 +170,25 @@ Se l'esito è positivo, il valore restituito è 0. In caso contrario, restituisc
 
 |Valore errno|Condizione|
 |-|-|
-**EINVAL**|Parametro non valido: *fileinfo* era **NULL**. oppure il sistema operativo ha restituito un errore imprevisto.
+**EINVAL**|Parametri non validi: *fileinfo* era **NULL**. oppure il sistema operativo ha restituito un errore imprevisto.
 **ENOENT**|Non è stato possibile trovare altri file corrispondenti.
-**ENOMEM**|Memoria insufficiente o la lunghezza del nome file superato **MAX_PATH**.
+**ENOMEM**|Memoria insufficiente o lunghezza del nome file superata **MAX_PATH**.
 
 Se viene passato un parametro non valido, queste funzioni chiamano il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri).
 
 ## <a name="remarks"></a>Note
 
-È necessario chiamare [FindClose](findclose.md) dopo averli completati utilizzando il **FindFirst** oppure **FindNext** funzione (o tutte le varianti). Ciò consente di liberare le risorse usate da queste funzioni nell'applicazione.
+È necessario chiamare [FindClose](findclose.md) dopo aver completato l'uso di **FindFirst** oppure **FindNext** funzione (o eventuali varianti). Ciò consente di liberare le risorse usate da queste funzioni nell'applicazione.
 
-Le variazioni di queste funzioni con il **w** prefisso sono versioni a caratteri wide; in caso contrario, sono identiche alle corrispondenti funzioni a byte singolo.
+Le variazioni di queste funzioni con il **w** prefisso sono versioni a caratteri wide; in caso contrario, sono identiche alle funzioni a byte singolo corrispondente.
 
-Le varianti di queste funzioni supportano tipi time a 32 o 64 bit e dimensioni di file a 32 o a 64 bit. Il primo suffisso numerico (**32** oppure **64**) indica le dimensioni del tempo utilizzato tipo; il secondo suffisso è **i32** oppure **i64**, che indica se le dimensioni del file sono rappresentata come intero a 32 bit o 64 bit. Per informazioni su quali versioni supportano tipi time e dimensioni dei file a 32 bit e 64 bit, vedere la tabella seguente. Le varianti che usano un tipo time a 64 bit consentono di esprimere date di creazione di file fino alle 23.59.59 del 31 dicembre 3000 UTC, mentre quelle che usano solo tipi time a 32 bit consentono di rappresentare solo date fino alle 23.59.59 del 18 gennaio 2038 UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
+Le varianti di queste funzioni supportano tipi time a 32 o 64 bit e dimensioni di file a 32 o a 64 bit. Il primo suffisso numerico (**32** oppure **64**) indica la dimensione del tempo di usare il tipo; il secondo suffisso è **i32** oppure **i64**, che indica se le dimensioni del file sono rappresentata come intero a 32 bit o 64 bit. Per informazioni su quali versioni supportano tipi time e dimensioni dei file a 32 bit e 64 bit, vedere la tabella seguente. Le varianti che usano un tipo time a 64 bit consentono di esprimere date di creazione di file fino alle 23.59.59 del 31 dicembre 3000 UTC, mentre quelle che usano solo tipi time a 32 bit consentono di rappresentare solo date fino alle 23.59.59 del 18 gennaio 2038 UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
 
-A meno che non si dispone di un motivo specifico per utilizzare le versioni di specificare le dimensioni in fase in modo esplicito, utilizzare **FindNext** oppure **wfindnext** oppure, se è necessario supportare file di dimensioni superiori a 3 GB, usare **_ findnexti64** oppure **_wfindnexti64**. Tutte queste funzioni usano il tipo time a 64 bit. Nelle versioni precedenti queste funzioni usavano un tipo time a 32 bit. Se si tratta di una modifica di rilievo per un'applicazione, è possibile definire **_USE_32BIT_TIME_T** per ottenere il comportamento precedente. Se **_USE_32BIT_TIME_T** è definito **FindNext**, **_finnexti64** e le corrispondenti versioni di Unicode utilizzino un'ora a 32 bit.
+Se non si dispone di un motivo preciso per usare le versioni che specificano la dimensione time in modo esplicito, usare **FindNext** oppure **wfindnext** oppure, se è necessario supportare dimensioni superiori a 3 GB, usare **_ findnexti64** oppure **_wfindnexti64**. Tutte queste funzioni usano il tipo time a 64 bit. Nelle versioni precedenti queste funzioni usavano un tipo time a 32 bit. Se si tratta di una modifica di rilievo per un'applicazione, è possibile definire **_USE_32BIT_TIME_T** per ottenere il comportamento precedente. Se **_USE_32BIT_TIME_T** viene definito **FindNext**, **_finnexti64** e le corrispondenti versioni Unicode usano un tipo time a 32 bit.
 
 ### <a name="time-type-and-file-length-type-variations-of-findnext"></a>Varianti di _findnext per il tipo time e di lunghezza dei file
 
-|Funzioni|**_USE_32BIT_TIME_T** definito?|Tipo time|Tipo lunghezza file|
+|Funzioni|**_USE_32BIT_TIME_T** definiti?|Tipo Time|Tipo lunghezza file|
 |---------------|----------------------------------|---------------|----------------------|
 |**FindNext**, **wfindnext**|Non definito|64 bit|32 bit|
 |**FindNext**, **wfindnext**|Definito|32 bit|32 bit|

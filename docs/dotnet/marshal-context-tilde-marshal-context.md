@@ -1,9 +1,6 @@
 ---
-title: 'marshal_context:: ~ marshal_context | Microsoft Docs'
-ms.custom: ''
+title: marshal_context::~marshal_context
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshal_context::~marshal_context
@@ -11,22 +8,15 @@ f1_keywords:
 - marshal_context.~marshal_context
 - msclr::interop::marshal_context::~marshal_context
 - ~marshal_context
-dev_langs:
-- C++
 helpviewer_keywords:
 - marshal_context class [C++], operations
 ms.assetid: 34c41b38-4c33-4f61-b74e-831ac46b4ab5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 49f194f153f3e4f911333e22b11ebddf7efcaa32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3bf16ab2dde4047fb845cd700821d097f733a4d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447258"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528219"
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::~marshal_context
 
@@ -42,7 +32,7 @@ Elimina un oggetto `marshal_context`.
 
 Alcune conversioni di dati richiedono un contesto di marshalling. Visualizzare [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md) per altre informazioni su quali conversioni richiedono un contesto e quali file di marshalling deve essere incluso nell'applicazione.
 
-L'eliminazione di un oggetto `marshal_context` invaliderà i dati convertiti da quel contesto. Se si desidera mantenere i dati dopo l'eliminazione permanente di un oggetto `marshal_context`, è necessario copiarli manualmente in una variabile che rimarrà valida.
+L'eliminazione di un oggetto `marshal_context` invaliderà i dati convertiti da quel contesto. Se si desidera mantenere i dati dopo l'eliminazione definitiva di un oggetto `marshal_context`, è necessario copiarli manualmente in una variabile che rimarrà valida.
 
 ## <a name="requirements"></a>Requisiti
 

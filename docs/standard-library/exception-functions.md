@@ -1,8 +1,6 @@
 ---
-title: Funzioni &lt;exception&gt; | Microsoft Docs
-ms.custom: ''
+title: Funzioni &lt;exception&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - exception/std::current_exception
 - exception/std::get_terminate
@@ -26,12 +24,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 9401772e35527c63f47dc10bbb0e501029558825
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 5bd05bbd16ee8bbd021fd6a3e0d88fec16729d39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105406"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566998"
 ---
 # <a name="ltexceptiongt-functions"></a>Funzioni &lt;exception&gt;
 

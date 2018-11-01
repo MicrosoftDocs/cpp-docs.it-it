@@ -1,29 +1,19 @@
 ---
-title: __stosd | Microsoft Docs
-ms.custom: ''
+title: __stosd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __stosd
-dev_langs:
-- C++
 helpviewer_keywords:
 - stosd instruction
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8bb0d75cc4af033bf1bc942a918beecf2aedf911
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5dc5e9703f81cd843e34d6df4b05133660c48c54
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563748"
 ---
 # <a name="stosd"></a>__stosd
 
@@ -34,10 +24,10 @@ Genera un'istruzione di archivio stringa (`rep stosd`).
 ## <a name="syntax"></a>Sintassi
 
 ```
-void __stosd( 
-   unsigned long* Dest, 
-   unsigned long Data, 
-   size_t Count 
+void __stosd( 
+   unsigned long* Dest, 
+   unsigned long Data, 
+   size_t Count 
 );
 ```
 

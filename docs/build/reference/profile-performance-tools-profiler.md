@@ -1,28 +1,18 @@
 ---
-title: -PROFILE (Profiler strumenti di prestazioni) | Microsoft Docs
-ms.custom: ''
+title: /PROFILE (Profiler strumenti di prestazioni)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.Profile
-dev_langs:
-- C++
 helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 859ea4091502fa6c339a809a5b9e439c91462bd7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 26f4ba4efc20f5fee70b2937cdb943689c948888
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519916"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler strumenti di prestazioni)
 

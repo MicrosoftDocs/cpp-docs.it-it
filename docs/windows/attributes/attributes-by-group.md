@@ -1,26 +1,17 @@
 ---
-title: Attributi per gruppo | Microsoft Docs
+title: Attributi per gruppo
 ms.custom: index-page
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
 ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 382a2e22e87910e2dff9ba59eb167777429aab0d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7452ad3db642e132f4e46c1688d429dbaf78419a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059766"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532769"
 ---
 # <a name="attributes-by-group"></a>Attributi per gruppo
 
