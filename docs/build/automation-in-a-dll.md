@@ -1,26 +1,16 @@
 ---
-title: Automazione in una DLL | Microsoft Docs
-ms.custom: ''
+title: Automazione in una DLL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DLLs [C++], Automation
 - Automation [C++], DLLs
 ms.assetid: 2728ecd1-14e2-4ae0-a946-e749e11dbb74
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cde5d0e400f1bdd3f5a851d47da581380273b04a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b9d4f7a71ceb384069fcbef6bf791f0c5fd1b933
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536539"
 ---
 # <a name="automation-in-a-dll"></a>Automazione in una DLL
 

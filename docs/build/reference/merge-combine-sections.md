@@ -1,15 +1,9 @@
 ---
-title: -MERGE (Combina sezioni) | Microsoft Docs
-ms.custom: ''
+title: /MERGE (Combina sezioni)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /merge
 - VC.Project.VCLinkerTool.MergeSections
-dev_langs:
-- C++
 helpviewer_keywords:
 - sections, combining
 - /MERGE linker option
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - -MERGE linker option
 - MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01768ffcfd647d3e05c0b96647d544e3d68e77d0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0329c6a29a8667a09a56d894386f5c173a77916
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722668"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532184"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (Combina sezioni)
 

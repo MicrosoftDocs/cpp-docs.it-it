@@ -1,23 +1,13 @@
 ---
-title: Dati di rimozione per la gestione delle eccezioni, supporto del Debugger | Microsoft Docs
-ms.custom: ''
+title: Dati di rimozione per la gestione delle eccezioni, supporto del debugger
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 68f1e30d-9038-41af-a48f-02129bfe8928
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0196d30f0634d37db976dab9416d7a5d23f8b719
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 750af8ca462ab3874a3ea162a729aa92b25276ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707382"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523669"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Dati di rimozione per la gestione delle eccezioni, supporto del debugger
 

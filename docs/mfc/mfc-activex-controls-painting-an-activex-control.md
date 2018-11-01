@@ -1,26 +1,16 @@
 ---
-title: 'Controlli ActiveX MFC: Disegno di un controllo ActiveX | Microsoft Docs'
-ms.custom: ''
+title: 'Controlli ActiveX MFC: disegno di un controllo ActiveX'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e5b0f1b38e73523a476c83e19ab9bf812fdc2fa
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549526"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controlli ActiveX MFC: disegno di un controllo ActiveX
 

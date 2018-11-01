@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3265 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3265
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3265
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3cd295611f483a97dcf3621a6a923ec5153232e0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a675567e23764a0b361cab4bef4bc75019de3756
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024138"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552581"
 ---
 # <a name="compiler-error-c3265"></a>Errore del compilatore C3265
 

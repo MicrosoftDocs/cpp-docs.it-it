@@ -1,10 +1,6 @@
 ---
-title: time, _time32, _time64 | Microsoft Docs
-ms.custom: ''
+title: time, _time32, _time64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - time
 - _time64
@@ -29,8 +25,6 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs:
-- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f627f0b9cbcfea1d048122d63c56d03aa61062d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410567"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546577"
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 
@@ -69,13 +59,13 @@ Puntatore al percorso di archiviazione per l'ora.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce l'ora in secondi trascorso dalla mezzanotte del 1 ° gennaio 1970, oppure -1 in caso di errore.
+Restituisce l'ora come secondi trascorsi dalla mezzanotte del 1 gennaio 1970 oppure -1 in caso di errore.
 
 ## <a name="remarks"></a>Note
 
-Il **ora** funzione restituisce il numero di secondi trascorsi dalla mezzanotte (00: 00:00), 1 gennaio 1970, Coordinated Universal Time (UTC), in base al clock di sistema. Il valore restituito viene archiviato nel percorso specificato da *destTime*. Questo parametro può essere **NULL**, nel qual caso il valore restituito non è archiviato.
+Il **ora** funzione restituisce il numero di secondi trascorsi dalla mezzanotte (00: 00:00), 1 gennaio 1970, Coordinated Universal Time (UTC), in base al clock di sistema. Il valore restituito viene archiviato nella posizione specificata da *destTime*. Questo parametro può essere **NULL**, nel qual caso il valore restituito non viene archiviato.
 
-**tempo** è un wrapper **_time64** e **time_t** per impostazione predefinita, equivalente a **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come precedente 32 bit **time_t**, è possibile definire **_USE_32BIT_TIME_T**. Questa operazione non è consigliabile perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038. L'uso di questa macro non è consentito su piattaforme a 64 bit.
+**tempo** è un wrapper **_time64** e **time_t** per impostazione predefinita, equivalente al **__time64_t**. Se è necessario forzare il compilatore a interpretare **time_t** come il vecchio 32 bit **time_t**, è possibile definire **_USE_32BIT_TIME_T**. Questa operazione non è consigliabile perché l'applicazione potrebbe non riuscire dopo il 18 gennaio 2038. L'uso di questa macro non è consentito su piattaforme a 64 bit.
 
 ## <a name="requirements"></a>Requisiti
 

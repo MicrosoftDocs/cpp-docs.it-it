@@ -1,27 +1,17 @@
 ---
-title: Implementazione delle pagine delle proprietà | Microsoft Docs
-ms.custom: ''
+title: Implementazione delle pagine delle proprietà
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - IPropertyPage2 class
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f00e95aee0f3e16a979f4969a33b90746b4082ea
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062405"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543312"
 ---
 # <a name="implementing-property-pages"></a>Implementazione delle pagine delle proprietà
 

@@ -1,10 +1,6 @@
 ---
-title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snprintf_s
 - _snprintf_s_l
@@ -35,8 +31,6 @@ f1_keywords:
 - snwprintf_s
 - sntprintf_s
 - sntprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snprintf_s_l function
 - _snwprintf_s_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3744fc543cd5c478ffba01e3abca9b152145be6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5918ab1dd9b7108248e638f267ceb8757802231a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416439"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560030"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
@@ -122,7 +112,7 @@ int _snwprintf_s(
 Percorso di archiviazione per l'output.
 
 *sizeOfBuffer*<br/>
-Dimensioni dl percorso di archiviazione per l'output. Dimensioni **byte** per **snprintf_s** o dimensioni in **parole** per **snwprintf_s**.
+Dimensioni dl percorso di archiviazione per l'output. Dimensioni in **byte** per **snprintf_s** o dimensione in **parole** per **snwprintf_s**.
 
 *count*<br/>
 Numero massimo di caratteri da archiviare o [_TRUNCATE](../../c-runtime-library/truncate.md).
@@ -130,7 +120,7 @@ Numero massimo di caratteri da archiviare o [_TRUNCATE](../../c-runtime-library/
 *format*<br/>
 Stringa di controllo del formato.
 
-*Argomento*<br/>
+*argomento*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -138,26 +128,26 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**snprintf_s** restituisce il numero di caratteri archiviati in *buffer*, senza contare il carattere di terminazione null. **snwprintf_s** restituisce il numero di caratteri "wide" archiviati in *buffer*, senza contare il carattere "wide" null finale.
+**snprintf_s** restituisce il numero di caratteri archiviato nella *buffer*, senza contare il carattere di terminazione null. **snwprintf_s** restituisce il numero di caratteri wide archiviati nel *buffer*, senza contare il carattere wide null finale.
 
-Se lo spazio di archiviazione necessaria per archiviare i dati e un carattere di terminazione null supera *sizeOfBuffer*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione continua dopo il gestore di parametri non validi, queste funzioni impostano *buffer* su una stringa vuota, impostare **errno** al **ERANGE**e restituiscono -1.
+Se lo spazio di archiviazione necessaria per archiviare i dati e un carattere null di terminazione supera *sizeOfBuffer*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione continua dopo il gestore di parametri non validi, queste funzioni impostano *buffer* su una stringa vuota, impostare **errno** al **ERANGE**e restituiscono -1.
 
-Se *buffer* oppure *formato* è un **NULL** puntatore, o se *conteggio* è minore o uguale a zero, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1.
+Se *buffer* oppure *formato* è un **NULL** puntatore, o se *conteggio* è minore o uguale a zero, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **snprintf_s** funzione formatta e Archivia *conteggio* o un numero inferiore di caratteri in *buffer* e aggiunge un carattere di terminazione null. Ogni argomento (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in *formato*. La formattazione sia coerenza con il **printf** famiglia di funzioni; vedere [sintassi specifica del formato: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **snprintf_s** funzione formatta e Archivia *conteggio* o un minor numero di caratteri in *buffer* e aggiunge un carattere di terminazione null. Ogni argomento (se presente) viene convertita e restituita in base alla specifica di formato corrispondente in *formato*. La formattazione è coerenza con il **printf** famiglia di funzioni; vedere [sintassi specifica del formato: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-Se *conteggio* viene [truncate](../../c-runtime-library/truncate.md), quindi **snprintf_s** scrive la maggior parte della stringa come adattare in *buffer* lasciando spazio a un terminazione null. Se l'intera stringa (con terminazione null) rientra *buffer*, quindi **snprintf_s** restituisce il numero di caratteri scritti (senza includere il carattere di terminazione null); in caso contrario, **snprintf_s**  restituisce -1 per indicare che il troncamento si è verificato.
+Se *conteggio* viene [truncate](../../c-runtime-library/truncate.md), quindi **snprintf_s** scrive la parte della stringa che rientrano nel *buffer* lasciando spazio per un terminazione null. Se l'intera stringa (con terminazione null) rientra *buffer*, quindi **snprintf_s** restituisce il numero di caratteri scritti (escluso il carattere di terminazione null); in caso contrario, **snprintf_s**  restituisce -1 per indicare se il troncamento si è verificato.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente.
 
-**snwprintf_s** è una versione a caratteri wide **snprintf_s**; gli argomenti puntatori per **snwprintf_s** sono stringhe a caratteri "wide". Rilevamento degli errori in di codifica **snwprintf_s** potrebbero essere diversi da quello in **snprintf_s**. **snwprintf_s**, ad esempio **swprintf_s**, scrive l'output in una stringa anziché a una destinazione di tipo **FILE**.
+**snwprintf_s** è una versione a caratteri wide di **snprintf_s**; gli argomenti puntatori per **snwprintf_s** sono stringhe a caratteri wide. Rilevamento degli errori in di codifica **snwprintf_s** potrebbe essere diverso da quello in **snprintf_s**. **snwprintf_s**, ad esempio **swprintf_s**, scrive l'output in una stringa anziché in una destinazione di tipo **FILE**.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,10 +1,6 @@
 ---
-title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft Docs
-ms.custom: ''
+title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoldbl
 - _atoldbl_l
@@ -38,8 +34,6 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -55,16 +49,12 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da36dfae81f33f5fb30a1a4bc93a57437980d720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552035"
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
@@ -98,11 +88,11 @@ Restituisce 0 in caso di esito positivo. Sono possibili codici di errore **under
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni convertono una stringa in un valore a virgola mobile. La differenza tra queste funzioni e le **atof** famiglia di funzioni è che queste funzioni non generano codice a virgola mobile e non provocano eccezioni hardware. Al contrario, le condizioni di errore vengono segnalate come codici di errore.
+Queste funzioni convertono una stringa in un valore a virgola mobile. La differenza tra queste funzioni e le **atof** famiglia di funzioni è che queste funzioni non generano codice a virgola mobile e non causano eccezioni hardware. Al contrario, le condizioni di errore vengono segnalate come codici di errore.
 
-Se una stringa non dispone di un'interpretazione valida come valore a virgola mobile *valore* è impostata su zero e il valore restituito è zero.
+Se una stringa non ha un'interpretazione valida come valore a virgola mobile, *valore* è impostato su zero e il valore restituito il valore è uguale a zero.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche le versioni che non hanno il suffisso, ad eccezione del fatto che usano il *delle impostazioni locali* parametro viene passato al posto del thread corrente impostazioni locali.
+Le versioni di queste funzioni che hanno le **l** suffisso sono identiche le versioni che non hanno il suffisso, ad eccezione del fatto che usino il *delle impostazioni locali* parametro che viene passato al posto del thread corrente impostazioni locali.
 
 ## <a name="requirements"></a>Requisiti
 

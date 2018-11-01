@@ -1,28 +1,18 @@
 ---
-title: Esempi di script Registro di sistema | Microsoft Docs
-ms.custom: ''
+title: Esempi di script del Registro di sistema
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - scripting, examples
 - registrar scripts [ATL]
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e15d05be30b4343649e4866fbbea27e914dc320
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d15c2d9b6641f7d87f394327aa4be71e51afb613
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50068385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509357"
 ---
 # <a name="registry-scripting-examples"></a>Esempi di script del Registro di sistema
 

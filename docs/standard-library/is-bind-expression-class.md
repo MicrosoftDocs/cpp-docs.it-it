@@ -1,27 +1,17 @@
 ---
-title: Classe is_bind_expression | Microsoft Docs
-ms.custom: ''
+title: Classe is_bind_expression
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - functional/std::is_bind_expression
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 38cf4c4e9e92704e1f6ce635f2a429b4dc9bfcbb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f547b6f74a86612174cb0f510870171158678f7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519418"
 ---
 # <a name="isbindexpression-class"></a>Classe is_bind_expression
 

@@ -1,27 +1,17 @@
 ---
-title: Gli attributi definiti dall'utente (C + c++ /CLI e c++ /CLI CX) | Microsoft Docs
-ms.custom: ''
+title: Gli attributi definiti dall'utente (C + c++ /CLI e c++ /CLI CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: f64cf5415e79678f0e0b43b58aae2249601fb3d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328441"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546653"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>Gli attributi definiti dall'utente (C + c++ /CLI e c++ /CLI CX)
 

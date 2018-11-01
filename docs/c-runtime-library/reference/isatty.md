@@ -1,10 +1,6 @@
 ---
-title: _isatty | Microsoft Docs
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545587"
 ---
 # <a name="isatty"></a>_isatty
 
@@ -58,13 +48,13 @@ Descrittore di file che fa riferimento al dispositivo da testare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**isatty** restituisce un valore diverso da zero se il descrittore è associato a un dispositivo a caratteri. In caso contrario, **isatty** restituisce 0.
+**isatty** restituisce un valore diverso da zero se il descrittore è associato un dispositivo a caratteri. In caso contrario, **isatty** restituisce 0.
 
 ## <a name="remarks"></a>Note
 
-Il **isatty** funzione determina se *fd* è associato a un dispositivo a caratteri (un terminal, console, una stampante o della porta seriale).
+Il **isatty** funzione determina se *fd* è associato un dispositivo a caratteri (terminale, console, stampante o porta seriale).
 
-Questa funzione convalida il *fd* parametro. Se *fd* è un puntatore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e imposta **errno** alla **EBADF**.
+Questa funzione convalida il *fd* parametro. Se *fd* è un puntatore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e imposta **errno** al **EBADF**.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3021 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3021
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3021
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3021
 ms.assetid: 0cef6d97-e267-438a-ac8b-0daf5bbbc2cf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8cfe722dc46ddb9ac265c4719a448aa186592e2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4863947fe2fedf9301fac302820cb69193581222
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515128"
 ---
 # <a name="compiler-error-c3021"></a>Errore del compilatore C3021
 

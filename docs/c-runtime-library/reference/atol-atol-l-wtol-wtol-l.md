@@ -1,10 +1,6 @@
 ---
-title: atol, _atol_l, _wtol, _wtol_l | Microsoft Docs
-ms.custom: ''
+title: atol, _atol_l, _wtol, _wtol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atol
 - _wtol_l
@@ -31,8 +27,6 @@ f1_keywords:
 - _wtol
 - _ttol
 - _wtol_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstol function
 - atol function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: deb23d856fc0ec5aecfdb726256394d5135a18d4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537189"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -93,13 +83,13 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce il **lungo** valore prodotto interpretando i caratteri di input sotto forma di numero. Il valore restituito è 0 per **atol** se l'input non può essere convertito in un valore di quel tipo.
+Ogni funzione restituisce il **lungo** valore prodotto interpretando i caratteri di input sotto forma di numero. Il valore restituito è 0L per **atol** se l'input non può essere convertito in un valore di quel tipo.
 
-In caso di overflow con valori integrali positivi grandi, **atol** restituisce **LONG_MAX**; in caso di overflow con i valori integrali negativi grandi dimensioni, **LONG_MIN** è restituito. In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono 0.
+In caso di overflow con valori integrali positivi elevati, **atol** restituisce **LONG_MAX**; in caso di overflow con valori integrali negativi elevati, **LONG_MIN** è restituito. In tutti i casi, out-of-range **errno** è impostata su **ERANGE**. Se il parametro passato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono 0.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni convertono una stringa di caratteri a un valore long integer (**atol**).
+Queste funzioni convertono una stringa di caratteri in un valore long integer (**atol**).
 
 La stringa di input è una sequenza di caratteri che può essere interpretata come valore numerico del tipo specificato. La funzione interrompe la lettura della stringa di input in corrispondenza del primo carattere che non riconosce come parte di un numero. Questo carattere può essere il carattere null ('\0' o L'\0') che termina la stringa.
 
@@ -107,9 +97,9 @@ Il *str* argomento **atol** ha il formato seguente:
 
 > [*whitespace*] [*sign*] [*cifre*]]
 
-Un *whitespace* è costituito da caratteri spazio o tabulazione, ovvero vengono ignorati; *sign* è un segno più (+) o meno (-); e *cifre* sono uno o più cifre.
+Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* uno o più cifre.
 
-**wtol** è identica a **atol** con la differenza che accetta una stringa di caratteri "wide".
+**wtol** è identica alla **atol** con la differenza che accetta una stringa di caratteri "wide".
 
 Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -129,7 +119,7 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 ## <a name="example"></a>Esempio
 
-Questo programma viene illustrato come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la **atol** (funzione).
+Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici usando la **atol** (funzione).
 
 ```C
 // crt_atol.c

@@ -1,10 +1,6 @@
 ---
-title: _commit | Microsoft Docs
-ms.custom: ''
+title: _commit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _commit
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _commit
 - commit
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], flushing
 - flushing files to disk
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e9bc746c347bfb60fb78edbf025b676f8218c66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394831"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523071"
 ---
 # <a name="commit"></a>_commit
 
@@ -62,11 +52,11 @@ Il descrittore del file che fa riferimento al file aperto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**_commit** restituisce 0 se il file è stato scaricato su disco. Il valore restituito-1 indica un errore.
+**commit** restituisce 0 se il file è stato scaricato su disco. Valore restituito di -1 indica un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **_commit** funzione impone al sistema operativo per scrivere il file associato *fd* su disco. Questa chiamata assicura che il file specificato venga scaricato immediatamente, non a discrezione del sistema operativo.
+Il **commit** funzione impone al sistema operativo per scrivere il file associato *fd* su disco. Questa chiamata assicura che il file specificato venga scaricato immediatamente, non a discrezione del sistema operativo.
 
 Se *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostata su **EBADF**.
 

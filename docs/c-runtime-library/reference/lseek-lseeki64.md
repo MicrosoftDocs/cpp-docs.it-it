@@ -1,10 +1,6 @@
 ---
-title: _lseek, _lseeki64 | Microsoft Docs
-ms.custom: ''
+title: _lseek, _lseeki64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lseeki64
 - _lseek
@@ -25,8 +21,6 @@ f1_keywords:
 - _lseeki64
 - _lseek
 - lseeki64
-dev_langs:
-- C++
 helpviewer_keywords:
 - lseek function
 - _lseek function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb47214ac2de3c3e217bf41387ba206b94caf906
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19a312bcc3cdeea82bcebce6da95e26ef88992b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403378"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541687"
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 
@@ -78,13 +68,13 @@ Posizione iniziale.
 
 ## <a name="return-value"></a>Valore restituito
 
-**lseek** restituisce l'offset, in byte, della nuova posizione a partire dall'inizio del file. **_lseeki64** restituisce l'offset in un intero a 64 bit. La funzione restituisce-1L per indicare un errore. Se viene passato un parametro non valido, ad esempio un descrittore di file non valido o il valore per *origin* non è valido o la posizione specificata da *offset* è prima dell'inizio del file, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EBADF** e restituiscono-1L. Nei dispositivi che non supportano la ricerca (ad esempio terminali e stampanti), il valore restituito è indefinito.
+**lseek** restituisce l'offset, in byte, della nuova posizione dall'inizio del file. **_lseeki64** restituisce l'offset in un intero a 64 bit. La funzione restituisce-1L per indicare un errore. Se viene passato un parametro non valido, ad esempio un descrittore di file non valido o il valore per *origin* non è valido o la posizione specificata da *offset* è prima dell'inizio del file, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EBADF** e restituiscono-1L. Nei dispositivi che non supportano la ricerca (ad esempio terminali e stampanti), il valore restituito è indefinito.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **lseek** funzione Sposta il puntatore del file associato *fd* in un percorso nuovo *offset* byte da *origine*. L'operazione successiva nel file viene eseguita nella nuova posizione. L'argomento *origin* deve essere una delle costanti seguenti, definite in Stdio.h.
+Il **lseek** funzione passa il puntatore del file associato *fd* a una nuova posizione distante *offset* byte da *origin*. L'operazione successiva nel file viene eseguita nella nuova posizione. L'argomento *origin* deve essere una delle costanti seguenti, definite in Stdio.h.
 
 |*origine* valore||
 |-|-|
@@ -92,7 +82,7 @@ Il **lseek** funzione Sposta il puntatore del file associato *fd* in un percorso
 **SEEK_CUR**|Posizione corrente del puntatore del file.
 **SEEK_END**|Fine del file.
 
-È possibile utilizzare **lseek** per riposizionare il puntatore in un punto qualsiasi in un file o oltre la fine del file.
+È possibile usare **lseek** per riposizionare il puntatore del mouse in qualsiasi punto in un file o oltre la fine del file.
 
 ## <a name="requirements"></a>Requisiti
 

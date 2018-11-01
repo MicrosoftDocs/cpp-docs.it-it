@@ -1,28 +1,18 @@
 ---
-title: Registrazione di controlli OLE | Microsoft Docs
-ms.custom: ''
+title: Registrazione di controlli OLE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27e0589e7ba0b2428f4cfea1d2561ef5e666641e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 08ed3771edbc0ebebfe98643a2651ff10c85d41e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054163"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544794"
 ---
 # <a name="registering-ole-controls"></a>Registrazione di controlli OLE
 

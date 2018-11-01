@@ -1,27 +1,17 @@
 ---
-title: Struttura MINMAXINFO | Microsoft Docs
-ms.custom: ''
+title: Struttura MINMAXINFO
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - MINMAXINFO
-dev_langs:
-- C++
 helpviewer_keywords:
 - MINMAXINFO structure [MFC]
 ms.assetid: be6fb578-f98a-4581-9ada-be9df308ed2f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b63589edbe47aa09b8a6be92b5b7eb7e29077c96
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 11f55b1756623626769e21c006543b6993607b08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402291"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517845"
 ---
 # <a name="minmaxinfo-structure"></a>Struttura MINMAXINFO
 

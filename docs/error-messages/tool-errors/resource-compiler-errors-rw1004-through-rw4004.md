@@ -1,23 +1,13 @@
 ---
-title: Errori del compilatore di risorse RW1004 through RW4004 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore di risorses RW1004 through RW4004
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 ms.assetid: 56204484-3616-491e-8428-38f4930b85c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2e1a17b4609d5cf456030818f3a2112eeb4c7881
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f23db9bb92d035c9eddc4cf7917c84836095999
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527907"
 ---
 # <a name="resource-compiler-errors-rw1004-through-rw4004"></a>Errore del compilatore di risorses RW1004 through RW4004
 

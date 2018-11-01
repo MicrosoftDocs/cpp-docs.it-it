@@ -1,10 +1,6 @@
 ---
-title: wcrtomb_s | Microsoft Docs
-ms.custom: ''
+title: wcrtomb_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcrtomb_s
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcrtomb_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb_s function
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a035010c2af49c0d12b4b7f1d6429c66ba9032cc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7fe7fba861eecec562928cf381973f62a4db60fb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522464"
 ---
 # <a name="wcrtombs"></a>wcrtomb_s
 
@@ -73,7 +63,7 @@ Restituisce il numero di byte scritti o -1 se si è verificato un errore.
 Carattere multibyte convertito risultante.
 
 *sizeOfmbchar*<br/>
-Le dimensioni del *mbchar* variabile in byte.
+Le dimensioni dei *mbchar* variabile in byte.
 
 *wchar*<br/>
 Carattere wide da convertire.
@@ -87,17 +77,17 @@ Restituisce zero o un **errno** valore se si verifica un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **wcrtomb_s** funzione converte un carattere wide, a partire dallo stato di conversione specificato contenuto nel *mbstate*, rispetto a quello contenuto in *wchar*, nel indirizzo rappresentato da *mbchar*. Il *pReturnValue* valore sarà il numero di byte convertite, ma non più **MB_CUR_MAX** byte o un -1 se si è verificato un errore.
+Il **wcrtomb_s** funzione converte un carattere wide, a partire dallo stato di conversione specificato contenuto in *mbstate*, dal valore contenuto nel *wchar*, nel indirizzo rappresentato da *mbchar*. Il *pReturnValue* valore sarà il numero di byte convertiti, ma non oltre **MB_CUR_MAX** byte o -1 se si è verificato un errore.
 
-Se *mbstate* è null, interna **mbstate_t** viene utilizzato lo stato di conversione. Se il carattere contenuto nel *wchar* non dispone di un carattere multibyte corrispondente, il valore di *pReturnValue* sarà -1 e la funzione restituirà il **errno** valore del **EILSEQ**.
+Se *mbstate* è null, interna **mbstate_t** viene utilizzato lo stato di conversione. Se il carattere contenuto nel *wchar* non ha un carattere multibyte corrispondente, il valore di *pReturnValue* sarà -1 e la funzione restituirà il **errno** valore del **EILSEQ**.
 
-Il **wcrtomb_s** rispetto alla funzione [wctomb_s, wctomb_s_l](wctomb-s-wctomb-s-l.md) dal relativo riavviabilità. Lo stato di conversione viene archiviato *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili. Ad esempio, un'applicazione utilizzerebbe **wcsrlen** anziché **wcslen**, se una chiamata successiva a **wcsrtombs_s** utilizzati anziché **wcstombs_s**.
+Il **wcrtomb_s** la funzione differisce da [wctomb_s, wctomb_s_l](wctomb-s-wctomb-s-l.md) dalla relativa possibilità di essere riavviata. Cui è archiviato lo stato di conversione *mbstate* per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili. Ad esempio, un'applicazione deve usare **wcsrlen** invece **wcslen**, se una chiamata successiva a **wcsrtombs_s** sono state utilizzate al posto di **wcstombs_s**.
 
 In C++ l'uso di questa funzione è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento per le dimensioni) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Eccezioni
 
-Il **wcrtomb_s** funzione è multithread-safe finché nessuna funzione nel thread corrente chiama **setlocale** durante l'esecuzione di questa funzione e il *mbstate* è null.
+Il **wcrtomb_s** funzione è multithread-safe finché nessuna funzione nel thread corrente chiami **setlocale** durante l'esecuzione di questa funzione e il *mbstate* è null.
 
 ## <a name="example"></a>Esempio
 

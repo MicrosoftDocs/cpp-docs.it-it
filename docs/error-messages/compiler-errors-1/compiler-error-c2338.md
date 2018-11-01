@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2338 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2338
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2338
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77bc98afdad36e0505abb58ee06ec1c7e7654ae5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ca3feb2a71efa60229afdbf918109a5d5d59cad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071575"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539594"
 ---
 # <a name="compiler-error-c2338"></a>Errore del compilatore C2338
 

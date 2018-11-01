@@ -1,12 +1,6 @@
 ---
-title: 'Eccezioni: Conversione da macro eccezioni MFC | Microsoft Docs'
-ms.custom: ''
+title: 'Eccezioni: conversione da macro eccezioni MFC'
 ms.date: 08/27/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting exceptions [MFC]
 - exception objects [MFC]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 692814a189a4f64cbd1e11e4c8cc4741e2d2dc99
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 59b83438d5341fd6a139af64a2f365a739438741
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212626"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525893"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Eccezioni: conversione da macro eccezioni MFC
 

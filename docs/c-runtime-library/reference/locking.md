@@ -1,10 +1,6 @@
 ---
-title: _locking | Microsoft Docs
-ms.custom: ''
+title: _locking
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _locking
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _locking
-dev_langs:
-- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1666f631d9bceccb8925b2002b797753e024ab9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404146"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523809"
 ---
 # <a name="locking"></a>_locking
 
@@ -69,20 +59,20 @@ Numero di byte da bloccare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**Locking** restituisce 0 se ha esito positivo. Il valore restituito-1 indica un errore, nel qual caso [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) è impostata su uno dei valori seguenti.
+**Locking** restituisce 0 se ha esito positivo. Valore restituito di -1 indica un errore, nel qual caso [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) è impostato su uno dei valori seguenti.
 
 |Valore errno|Condizione|
 |-|-|
 **EACCES**|Violazione del blocco (file già bloccato o sbloccato).
 **EBADF**|Descrittore di file non valido.
-**EDEADLOCK**|Violazione di blocco. Restituito quando le **lk_lock** oppure **lk_rlck** flag è specificato e il file non può essere bloccato dopo 10 tentativi.
-**EINVAL**|Un argomento non valido fornito al **Locking**.
+**EDEADLOCK**|Violazione di blocco. Restituito quando la **lk_lock** oppure **lk_rlck** flag è specificato e il file non può essere bloccato dopo 10 tentativi.
+**EINVAL**|È stato assegnato un argomento non valido **Locking**.
 
 Se l'errore è causato da un parametro non corretto, ad esempio un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Note
 
-Il **Locking** funzione blocca o Sblocca *nbytes* byte del file specificato da *fd*. Il blocco di byte in un file impedisce l'accesso a tali byte da altri processi. Tutte le operazioni di blocco o sblocco iniziano dalla posizione corrente del puntatore del file e procedono per i successivi *nbytes* byte. È possibile bloccare byte oltre la fine del file.
+Il **Locking** funzione blocca o Sblocca *nbytes* byte del file specificato dal *fd*. Il blocco di byte in un file impedisce l'accesso a tali byte da altri processi. Tutte le operazioni di blocco o sblocco iniziano dalla posizione corrente del puntatore del file e procedono per i successivi *nbytes* byte. È possibile bloccare byte oltre la fine del file.
 
 L'argomento *mode* deve essere una delle seguenti costanti manifeste, definite in Locking.h.
 
@@ -90,11 +80,11 @@ L'argomento *mode* deve essere una delle seguenti costanti manifeste, definite i
 |-|-|
 **LK_LOCK**|Blocca i byte specificati. Se i byte non possono essere bloccati, il programma ripeterà immediatamente il tentativo dopo 1 secondo. Se, dopo 10 tentativi, i byte non possono essere bloccati, la costante restituisce un errore.
 **LK_NBLCK**|Blocca i byte specificati. Se i byte non possono essere bloccati, la costante restituisce un errore.
-**LK_NBRLCK**|Uguale a **lk_nblck**.
-**LK_RLCK**|Uguale a **lk_lock**.
+**LK_NBRLCK**|Uguale allo **lk_nblck**.
+**LK_RLCK**|Uguale allo **lk_lock**.
 **LK_UNLCK**|Sblocca i byte specificati, che devono essere stati bloccati in precedenza.
 
-È possibile bloccare più aree di un file che non si sovrappongano. Un'area da sbloccare deve essere stata bloccata in precedenza. **Locking** non di tipo merge le aree adiacenti, se due aree bloccate sono adiacenti, ogni area deve essere sbloccata separatamente. Le aree devono essere bloccate solo brevemente e devono essere sbloccate prima di chiudere un file o di uscire dal programma.
+È possibile bloccare più aree di un file che non si sovrappongano. Un'area da sbloccare deve essere stata bloccata in precedenza. **Locking** unisce aree adiacenti; se due aree bloccate sono adiacenti, ogni area deve essere sbloccata separatamente. Le aree devono essere bloccate solo brevemente e devono essere sbloccate prima di chiudere un file o di uscire dal programma.
 
 ## <a name="requirements"></a>Requisiti
 

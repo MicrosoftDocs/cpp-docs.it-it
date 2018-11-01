@@ -1,10 +1,6 @@
 ---
-title: strcat, wcscat, _mbscat | Microsoft Docs
-ms.custom: ''
+title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscat
 - wcscat
@@ -29,8 +25,6 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2daf6621cb2e72c38212227da20f6b847bb08e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546393"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 
 Aggiunge una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **mbscat_s** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbscat_s** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -109,10 +99,10 @@ Ognuna di queste funzioni restituisce la stringa di destinazione (*strDestinatio
 
 ## <a name="remarks"></a>Note
 
-Il **strcat** funzione Accoda *strSource* al *strDestination* e termina la stringa risulta con un carattere null. Il carattere iniziale di *strSource* sovrascrive il carattere di terminazione null di *strDestination*. Il comportamento delle **strcat** è definito se le stringhe di origine e di destinazione si sovrappongono.
+Il **strcat** funzione Accoda *strSource* al *strDestination* e termina la stringa risultante con un carattere null. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione del *strDestination*. Il comportamento delle **strcat** è definito se le stringhe di origine e destinazione si sovrappongono.
 
 > [!IMPORTANT]
-> Poiché **strcat** non verifica la presenza di spazio sufficiente in *strDestination* prima di accodare *strSource*, è una causa possibile dei sovraccarichi del buffer. In alternativa, considerare l'uso di [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
+> In quanto **strcat** non verifica la presenza di spazio sufficiente nella *strDestination* prima di accodare *strSource*, è una causa possibile dei sovraccarichi del buffer. In alternativa, considerare l'uso di [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
 
 **wcscat** e **mbscat** sono versioni a caratteri wide e caratteri multibyte di **strcat**. Gli argomenti e il valore restituito di **wcscat** sono caratteri wide, mentre quelli di stringhe **mbscat** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 

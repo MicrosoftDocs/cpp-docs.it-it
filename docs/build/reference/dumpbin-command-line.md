@@ -1,27 +1,17 @@
 ---
-title: Riga di comando DUMPBIN | Microsoft Docs
-ms.custom: ''
+title: Riga di comando DUMPBIN
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - dumpbin
-dev_langs:
-- C++
 helpviewer_keywords:
 - DUMPBIN program, command line
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c9028cebd7c75bb37bbfa958186ebb2e5d206094
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 72b907abbbb52a881feb415e47a768e61a9819ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724784"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539282"
 ---
 # <a name="dumpbin-command-line"></a>Riga di comando DUMPBIN
 

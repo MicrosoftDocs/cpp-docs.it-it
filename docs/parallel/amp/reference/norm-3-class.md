@@ -1,10 +1,6 @@
 ---
-title: Classe norm_3 | Microsoft Docs
-ms.custom: ''
+title: Classe norm_3
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::get_z
 - amp_short_vectors/Concurrency::graphics::norm_3::operator=
@@ -75,19 +71,13 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_yx
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
-dev_langs:
-- C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d36e8358d8bef7ad0404221d10cc1468131d263e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f350e5c5707dad93fe2863523e816d309647acd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385976"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513802"
 ---
 # <a name="norm3-class"></a>Classe norm_3
 

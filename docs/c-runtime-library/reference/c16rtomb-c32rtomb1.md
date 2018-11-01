@@ -1,11 +1,6 @@
 ---
-title: c16rtomb, c32rtomb1 | Microsoft Docs
-ms.custom: ''
+title: c16rtomb, c32rtomb1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -27,22 +22,16 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3282fb13e5b59ad3214c67410eef5186687114e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d735363bbb317b06c1ebc73a2b0678479a243ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394544"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536591"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -76,15 +65,15 @@ Un puntatore a un **mbstate_t** oggetto.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il numero di byte archiviati nell'oggetto matrice *mbchar*, comprese tutte le sequenze di spostamento. Se *wchar* non è un carattere wide valido, il valore (**size_t**)(-1) viene restituito, **errno** è impostata su **EILSEQ**e il valore di *stato* non è specificato.
+Il numero di byte archiviati nell'oggetto matrice *mbchar*, comprese tutte le sequenze di spostamento. Se *wchar* non è un carattere wide valido, il valore (**size_t**)(-1) viene restituito **errno** è impostata su **EILSEQ**e il valore di *stato* non è specificato.
 
 ## <a name="remarks"></a>Note
 
-Il **c16rtomb** funzione converte il carattere UTF-16 *wchar* alla sequenza di caratteri narrow multibyte equivalente nelle impostazioni locali correnti. Se *mbchar* non è un puntatore null, la funzione archivia la sequenza convertita nell'oggetto matrice a cui punta *mbchar*. Fino a **MB_CUR_MAX** byte sono archiviati in *mbchar*, e *stato* è impostato sullo stato di spostamento multibyte risultante.    Se *wchar* è un carattere wide null, una sequenza richiesta per il ripristino è archiviato lo stato iniziale di spostamento, se necessario, seguita dal carattere null, e *stato* è impostato sullo stato di conversione iniziale. Il **c32rtomb** funzione è identica, ma converte un carattere UTF-32.
+Il **c16rtomb** funzione converte il carattere UTF-16 *wchar* alla sequenza di caratteri narrow multibyte equivalente nelle impostazioni locali correnti. Se *mbchar* non è un puntatore null, la funzione archivia la sequenza convertita nell'oggetto matrice a cui punta *mbchar*. Fino a **MB_CUR_MAX** byte da archiviare in *mbchar*, e *stato* viene impostato sullo stato di spostamento multibyte risultante.    Se *wchar* è un carattere wide null, una sequenza richiesta per il ripristino è archiviato lo stato iniziale di spostamento, se necessario, seguita dal carattere null, e *stato* viene impostato sullo stato di conversione iniziale. Il **c32rtomb** funzione è identica, ma converte un carattere UTF-32.
 
-Se *mbchar* è un puntatore null, il comportamento è equivalente a una chiamata alla funzione che sostituisce un buffer interno per *mbchar* e un carattere wide null per *wchar*.
+Se *mbchar* è un puntatore null, il comportamento è equivalente a una chiamata alla funzione che sostituisce un buffer interno per *mbchar* e un carattere null wide per il *wchar*.
 
-Il *stato* oggetto stato di conversione consente di eseguire chiamate successive a questa funzione e altre funzioni riavviabili che mantengono lo stato di spostamento dei caratteri multibyte di output. I risultati sono indefiniti quando si usano insieme funzioni riavviabili e non riavviabili insieme o se una chiamata a **setlocale** viene fatta tra chiamate di funzioni riavviabili.
+Il *stato* oggetto stato di conversione consente di eseguire chiamate successive a questa funzione e altre funzioni riavviabili che mantengono lo stato di spostamento di caratteri multibyte di output. I risultati sono indefiniti quando si combinazione l'uso di funzioni riavviabili e non riavviabili insieme o se una chiamata a **setlocale** viene eseguito tra chiamate di funzioni riavviabili.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,25 +1,15 @@
 ---
-title: Costruzione di oggetti di flusso di input| Microsoft Docs
-ms.custom: ''
+title: Costruzione di oggetti di flusso di input
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - input stream objects
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c640f1b338fa4b0aa6dbcc408e0729fbf8ff90a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 89d681f1a092957bc966d2ec788a0f9aa2261ada
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543676"
 ---
 # <a name="constructing-input-stream-objects"></a>Costruzione di oggetti di flusso di input
 

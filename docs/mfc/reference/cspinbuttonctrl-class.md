@@ -1,10 +1,6 @@
 ---
-title: Classe CSpinButtonCtrl | Microsoft Docs
-ms.custom: ''
+title: CSpinButtonCtrl (classe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
 - AFXCMN/CSpinButtonCtrl
@@ -21,8 +17,6 @@ f1_keywords:
 - AFXCMN/CSpinButtonCtrl::SetBuddy
 - AFXCMN/CSpinButtonCtrl::SetPos
 - AFXCMN/CSpinButtonCtrl::SetRange
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSpinButtonCtrl [MFC], CSpinButtonCtrl
 - CSpinButtonCtrl [MFC], Create
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5486b743d18f23e8bcd541ca956f6dd123182580
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083516"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526409"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 

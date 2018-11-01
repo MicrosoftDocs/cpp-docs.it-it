@@ -1,27 +1,17 @@
 ---
-title: Errore di compilazione PRJ0002 del progetto | Microsoft Docs
-ms.custom: ''
+title: Errore di compilazione progetto PRJ0002
 ms.date: 08/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0002
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0002
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bc0e48130c17e04c2671395161452c9e66000047
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d8e13bcc03a02fd9dbc739566a92025a7b97d598
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195715"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516272"
 ---
 # <a name="project-build-error-prj0002"></a>Errore di compilazione progetto PRJ0002
 
