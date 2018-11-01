@@ -1,27 +1,17 @@
 ---
-title: Build di rilascio | Microsoft Docs
-ms.custom: ''
+title: Build di rilascio
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4b8d4f0d9b1bf0401cc6630b61449e87d72ff675
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 77e02b424b10b5e9606cc49152c2e21d7eeed9cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722124"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667454"
 ---
 # <a name="release-builds"></a>Build di rilascio
 

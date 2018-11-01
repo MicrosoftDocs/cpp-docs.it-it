@@ -1,29 +1,19 @@
 ---
-title: 'Librerie protette: libreria standard C++ | Microsoft Docs'
-ms.custom: ''
+title: 'Librerie protette: libreria standard C++'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - _SCL_SECURE_NO_DEPRECATE
-dev_langs:
-- C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a139be1598dfdeaaece5c4b2cf8d253beb754ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 340d300efb442fedb18b738c275bc0a79f874991
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859046"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630724"
 ---
 # <a name="safe-libraries-c-standard-library"></a>Librerie protette: libreria standard C++
 

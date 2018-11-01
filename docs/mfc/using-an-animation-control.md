@@ -1,27 +1,17 @@
 ---
-title: Utilizzo di un controllo Animation | Microsoft Docs
-ms.custom: ''
+title: Utilizzo di un controllo Animation
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [MFC], animation
 - CAnimateCtrl class [MFC], animation controls
 - animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3da9684d0218c631cbd745475d48f1cf23addde5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fa5ce6cc30d4bc31dbe52c0e559ce97e40acacba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404566"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630997"
 ---
 # <a name="using-an-animation-control"></a>Utilizzo di un controllo Animation
 
@@ -37,7 +27,7 @@ Uso tipico di un controllo animation segue il modello seguente:
 
 - Se non si intende eliminare definitivamente il controllo immediatamente, rimuovere la clip dalla memoria chiamando la `Close` funzione membro.
 
-- Se il controllo animazione si trova in una finestra di dialogo e il `CAnimateCtrl` oggetto verrà eliminato automaticamente. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CAnimateCtrl` vengono eliminati correttamente. Eliminazione definitiva del controllo automaticamente chiude del clip AVI.
+- Se il controllo animazione si trova in una finestra di dialogo e il `CAnimateCtrl` oggetto verrà eliminato automaticamente. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CAnimateCtrl` vengono eliminati definitivamente in modo corretto. Eliminazione definitiva del controllo automaticamente chiude del clip AVI.
 
 ## <a name="see-also"></a>Vedere anche
 

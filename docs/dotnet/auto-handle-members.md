@@ -1,24 +1,14 @@
 ---
-title: Membri auto_handle | Microsoft Docs
-ms.custom: ''
+title: Membri auto_handle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 8d4783c9-8d99-4c4a-9d6a-0012cbab2404
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 1a1e5e5dcc603b4226c5f1cdd62a28fb845c14e8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 716b1096e5ebfc18be19dae3ede4fcd54afb5005
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413887"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659823"
 ---
 # <a name="autohandle-members"></a>Membri auto_handle
 

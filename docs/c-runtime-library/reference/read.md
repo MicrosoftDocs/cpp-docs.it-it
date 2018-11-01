@@ -1,10 +1,6 @@
 ---
-title: _read | Microsoft Docs
-ms.custom: ''
+title: _read
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _read
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _read
-dev_langs:
-- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c67ce8ac0e754bf3003b23c56cd1d3f428be903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405809"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658443"
 ---
 # <a name="read"></a>_read
 
@@ -70,19 +60,19 @@ Numero massimo di byte.
 
 ## <a name="return-value"></a>Valore restituito
 
-**legge_re** restituisce il numero di byte letti, che potrebbe essere inferiore rispetto a *conteggio* se sono presenti meno di *conteggio* byte lasciato nel file o se il file è stato aperto in modalità testo, nel qual caso ogni ritorno a capo Return-line feed coppia '\r\n' viene sostituito con un carattere di avanzamento riga singola '\n'. Solo il singolo carattere di avanzamento riga viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
+**Read** restituisce il numero di byte letti, che può essere minore rispetto *conteggio* se ci sono meno *conteggio* byte lasciato nel file o se il file è stato aperto in modalità testo, nel qual caso ogni ritorno a capo ritorno a capo/avanzamento riga coppia "\r\n" viene sostituito con un carattere di avanzamento riga singola '\n'. Solo il singolo carattere di avanzamento riga viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
 
-Se la funzione tenta di leggere alla fine del file, restituisce 0. Se *fd* è non valido, il file non è aperto per la lettura, o il file è bloccato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** alla **EBADF**.
+Se la funzione tenta di leggere alla fine del file, restituisce 0. Se *fd* è non valido, il file non è aperto per la lettura, o il file è bloccato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** al **EBADF**.
 
 Se *buffer* è **NULL**, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostata su **EINVAL**.
 
-Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **ulte_riori** funzione legge un numero massimo di *conteggio* byte in *buffer* dal file associato *fd*. L'operazione di lettura inizia dalla posizione corrente del puntatore del file associato al file specificato. Dopo l'operazione di lettura, il puntatore del file punta al carattere successivo non letto.
+Il **Read** funzione legge un numero massimo di *conteggio* byte in *buffer* dal file associato *fd*. L'operazione di lettura inizia dalla posizione corrente del puntatore del file associato al file specificato. Dopo l'operazione di lettura, il puntatore del file punta al carattere successivo non letto.
 
-Se il file è stato aperto in modalità testo, la lettura termina quando **ulte_riori** rileva un carattere CTRL + Z, che viene considerato come un indicatore di fine del file. Usa [lseek](lseek-lseeki64.md) per cancellare l'indicatore di fine del file.
+Se il file è stato aperto in modalità testo, la lettura termina quando **Read** rileva un carattere CTRL + Z, che viene considerato come un indicatore di fine del file. Usa [lseek](lseek-lseeki64.md) per cancellare l'indicatore di fine del file.
 
 ## <a name="requirements"></a>Requisiti
 

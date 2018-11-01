@@ -1,10 +1,6 @@
 ---
-title: fgetchar | Microsoft Docs
-ms.custom: ''
+title: fgetchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetchar
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fgetchar
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetchar function
 ms.assetid: 2b27a6f2-d973-4d12-a66d-7e6b01e84470
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f71c2f7dc5ce63f26090a1463c934d38674086aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ca80adbb170923f725d88ac4f4e70fa7a034a0b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668858"
 ---
 # <a name="fgetchar"></a>fgetchar
 

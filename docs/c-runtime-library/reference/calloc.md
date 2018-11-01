@@ -1,10 +1,6 @@
 ---
-title: calloc | Microsoft Docs
-ms.custom: ''
+title: calloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - calloc
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - calloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6986e1caec25cd544919039f690544af429524af
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59aa535136cf32ea5dd68b8917ec969eee41e2ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394886"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666973"
 ---
 # <a name="calloc"></a>calloc
 
@@ -62,15 +52,15 @@ Lunghezza in byte di ogni elemento.
 
 ## <a name="return-value"></a>Valore restituito
 
-**calloc** restituisce un puntatore per lo spazio allocato. Lo spazio di archiviazione a cui punta il valore restituito garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da **void**, usare un cast del tipo sul valore restituito.
+**calloc** restituisce un puntatore allo spazio allocato. Lo spazio di archiviazione a cui punta il valore restituito garantisce il corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Per ottenere un puntatore a un tipo diverso da **void**, usare un cast del tipo sul valore restituito.
 
 ## <a name="remarks"></a>Note
 
-Il **calloc** funzione alloca spazio di archiviazione per una matrice di *numero* elementi, ognuno di lunghezza *dimensioni* byte. Ogni elemento viene inizializzato a 0.
+Il **calloc** funzione alloca spazio di archiviazione per una matrice di *numero* elementi, ognuno lungo *dimensioni* byte. Ogni elemento viene inizializzato a 0.
 
-**calloc** imposta **errno** a **ENOMEM** se fallisce un'allocazione di memoria o se la quantità di memoria richiesto supera **heap_maxreq**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**calloc** imposta **errno** al **ENOMEM** se un'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta supera **heap_maxreq**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**calloc** chiamate **malloc** per l'utilizzo di C++ [set_new_mode](set-new-mode.md) funzione per impostare la nuova modalità di gestione. Indica la nuova modalità di gestione se, in caso di errore, **malloc** consiste nel chiamare la routine del gestore di nuovo l'impostazione [set_new_handler](set-new-handler.md). Per impostazione predefinita **malloc** non chiama la nuova routine del gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **calloc** non riesce ad allocare memoria, **malloc** chiama la routine del gestore nuovo nello stesso modo in cui il **nuova** (operatore) Quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare
+**calloc** chiamate **malloc** usare C++ [set_new_mode](set-new-mode.md) funzione per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore **malloc** consiste nel chiamare la routine del nuovo gestore come impostato da [set_new_handler](set-new-handler.md). Per impostazione predefinita **malloc** non chiama la routine del nuovo gestore in caso di errore per allocare memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **calloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore Quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare
 
 ```C
 _set_new_mode(1);
@@ -78,9 +68,9 @@ _set_new_mode(1);
 
 all'inizio del programma o collegarsi a NEWMODE.OBJ (vedere [Opzioni di collegamento](../../c-runtime-library/link-options.md)).
 
-Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C **calloc** risolve [calloc_dbg](calloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **calloc** viene risolto [calloc_dbg](calloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-**calloc** contrassegnato `__declspec(noalias)` e `__declspec(restrict)`, vale a dire che la funzione è sicuramente non per modificare le variabili globali e che il puntatore restituito non è associato un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**calloc** contrassegnato `__declspec(noalias)` e `__declspec(restrict)`, vale a dire che la funzione è garantito che non modifichi le variabili globali e il puntatore restituito non è associato un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Requisiti
 

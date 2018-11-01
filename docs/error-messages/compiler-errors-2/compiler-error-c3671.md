@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3671 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3671
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3671
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 455b9e2a6accbc98ee8bce49a35a672d9cd9c20d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4b99578ed40b4ff70f3606840198b7062083ca83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667043"
 ---
 # <a name="compiler-error-c3671"></a>Errore del compilatore C3671
 

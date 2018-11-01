@@ -1,27 +1,17 @@
 ---
-title: Campi di Bit C++ | Microsoft Docs
-ms.custom: ''
+title: Campi di bit C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df4e5a068f76c35dc22b3915ad7e4ace421ca10b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644962"
 ---
 # <a name="c-bit-fields"></a>Campi di bit C++
 

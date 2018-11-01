@@ -1,26 +1,16 @@
 ---
-title: Effetti della memorizzazione nel buffer | Microsoft Docs
-ms.custom: ''
+title: Effetti della memorizzazione nel buffer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c28deb0f5e30d3ec28fac4805a86645bebf27f22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842378"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631439"
 ---
 # <a name="effects-of-buffering"></a>Effetti della memorizzazione nel buffer
 
@@ -49,7 +39,7 @@ Affinché il programma funzioni in modo logico, l'oggetto `cout` deve svuotarsi 
 cout <<"Please wait..." <<flush;
 ```
 
-Questo passaggio scarica il buffer, garantendo che il messaggio venga visualizzato prima dell'attesa. È inoltre possibile utilizzare il `endl` manipolatore, che scarica il buffer e restituisce un ritorno a capo-avanzamento riga, o è possibile utilizzare il `cin` oggetto. Questo oggetto (con l'oggetto `cerr` o `clog` ) in genere è associato all'oggetto `cout` . Quindi, qualsiasi uso di `cin` (oppure dell'oggetto `cerr` o `clog` ) scarica l'oggetto `cout` .
+Questo passaggio scarica il buffer, garantendo che il messaggio venga visualizzato prima dell'attesa. È anche possibile usare la `endl` manipolatore, che svuota il buffer e genera un ritorno a capo-avanzamento riga oppure è possibile usare il `cin` oggetto. Questo oggetto (con l'oggetto `cerr` o `clog` ) in genere è associato all'oggetto `cout` . Quindi, qualsiasi uso di `cin` (oppure dell'oggetto `cerr` o `clog` ) scarica l'oggetto `cout` .
 
 ## <a name="see-also"></a>Vedere anche
 

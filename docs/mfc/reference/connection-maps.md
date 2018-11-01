@@ -1,27 +1,17 @@
 ---
-title: Mappe di connessione | Microsoft Docs
-ms.custom: ''
+title: Mappe di connessione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
-dev_langs:
-- C++
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af235a597b70ac736ccd11de429d99e184d37b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399639"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624809"
 ---
 # <a name="connection-maps"></a>Mappe di connessione
 

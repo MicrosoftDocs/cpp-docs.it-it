@@ -1,28 +1,18 @@
 ---
-title: Opzioni del compilatore elencate in ordine alfabetico | Microsoft Docs
-ms.custom: ''
+title: Opzioni del compilatore elencate in ordine alfabetico
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiler options, C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99df40d5718a450019fb7cd26aa0c00a59c0a48
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701858"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646732"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
-Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni del compilatore. Per un elenco organizzato per categorie, vedere la [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
+Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni del compilatore. Per un elenco organizzato per categorie, vedere [Opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -79,9 +69,9 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/guard:cf](guard-enable-control-flow-guard.md)|Aggiunge controlli di sicurezza guard del flusso di controllo.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Usa la convezione di chiamata `__vectorcall` . (solo x86 e x64)|
 |[/Gw](gw-optimize-global-data.md)|Abilita l'ottimizzazione dei dati globale per l'intero programma|
-|[/GX](gx-enable-exception-handling.md)|Deprecato. Attiva la gestione sincrona delle eccezioni. Uso [/EH](eh-exception-handling-model.md) invece.|
+|[/GX](gx-enable-exception-handling.md)|Deprecato. Attiva la gestione sincrona delle eccezioni. Usare [/EH](eh-exception-handling-model.md) .|
 |[/Gy](gy-enable-function-level-linking.md)|Attiva il collegamento a livello di funzione.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Deprecato. Uguale allo [/RTC1](rtc-run-time-error-checks.md).|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Deprecato. Equivale a [/RTC1](rtc-run-time-error-checks.md).|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Usa la convenzione di chiamata `__stdcall` (solo x86).|
 |[/H](h-restrict-length-of-external-names.md)|Deprecato. Limita la lunghezza dei nomi esterni (pubblici).|
 |[/HELP](help-compiler-command-line-help.md)|Elenca le opzioni del compilatore.|
@@ -108,7 +98,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Og](og-global-optimizations.md)|Deprecato. Usa le ottimizzazioni globali.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Genera funzioni intrinseche.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Attiva [#pragma omp](../../preprocessor/omp.md) nel codice sorgente.|
-|[/OS](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per dimensione codice.|
+|[/Os](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per dimensione codice.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per velocità codice.|
 |[/Ox](ox-full-optimization.md)|Usa la massima ottimizzazione (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Omette il puntatore a frame (solo x86).|
@@ -140,7 +130,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/vmm](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà multipla.|
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà singola.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà virtuale.|
-|[/ volatile](volatile-volatile-keyword-interpretation.md)|Seleziona la modalità di interpretazione della parola chiave volatile.|
+|[/volatile](volatile-volatile-keyword-interpretation.md)|Seleziona la modalità di interpretazione della parola chiave volatile.|
 |[/w](compiler-option-warning-level.md)|Disabilita tutti gli avvisi.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Imposta il livello di avviso per l'output.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Imposta il livello di avviso per l'avviso specificato.|
@@ -155,7 +145,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/X](x-ignore-standard-include-paths.md)|Ignora la directory di inclusione standard.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Ignora tutte le altre opzioni del compilatore dell'intestazione precompilata nella generazione corrente.|
 |[/Yc](yc-create-precompiled-header-file.md)|Crea un file di intestazione precompilato.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|Deprecato. Inserisce informazioni di debug complete in tutti i file oggetto. Uso [/Zi](z7-zi-zi-debug-information-format.md) invece.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|Deprecato. Inserisce informazioni di debug complete in tutti i file oggetto. Usare [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Inserisce un riferimento PCH durante la creazione di una libreria di debug|
 |[/Yu](yu-use-precompiled-header-file.md)|Usa un file di intestazione precompilato durante la compilazione.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Genera l'errore compatibile C 7.0 le informazioni di debug.|

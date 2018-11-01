@@ -1,15 +1,9 @@
 ---
-title: /ALIGN (Allineamento sezione) | Microsoft Docs
-ms.custom: ''
+title: /ALIGN (Allineamento sezione)
 ms.date: 12/29/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.Alignment
 - /align
-dev_langs:
-- C++
 helpviewer_keywords:
 - sections, specifying alignment
 - ALIGN linker option
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb92d4b16be7903004831ffb25e2891f498a8989
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b68ec42db9c927fe8f56dad8f5670059359a1843
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718250"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665790"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Allineamento sezione)
 

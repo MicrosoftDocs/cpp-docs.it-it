@@ -1,28 +1,17 @@
 ---
-title: Export (attributo COM C++) | Microsoft Docs
-ms.custom: ''
+title: Export (attributo COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.export
-dev_langs:
-- C++
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1529f6d43c3a4543a172229abe2adf0ce6a99c49
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 951c0ef2f0da0fa897c299aa6b547d5c0788b285
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060195"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661591"
 ---
 # <a name="export"></a>esportazione
 

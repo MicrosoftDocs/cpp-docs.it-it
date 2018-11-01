@@ -1,11 +1,6 @@
 ---
-title: ctan, ctanf, ctanl | Microsoft Docs
-ms.custom: ''
+title: ctan, ctanf, ctanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctan
 - ctanf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ctan
 - complex/ctanf
 - complex/ctanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctan function
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c272e34202f81a9f16eab5b57da35c548790c417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661747"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -79,16 +68,16 @@ Numero complesso che rappresenta l'angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-La tangente del *z*.
+La tangente *z*.
 
-|Input|Eccezione SEH|**matherr** (eccezione)|
+|Input|Eccezione SEH|**matherr** eccezione|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|none|_DOMAIN|
-|± ∞ (**tan**, **tanf**)|NON VALIDO|_DOMAIN|
+|∞ + (**tan**, **tanf**)|NON VALIDO|_DOMAIN|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **ctan** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **ctan** accetta e restituisce sempre un **_Dcomplex** valore.
+Dato che C++ consente l'overload, è possibile chiamare overload di **ctan** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **ctan** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,12 +1,6 @@
 ---
-title: La gestione dei dati con variabili dati documento | Microsoft Docs
-ms.custom: ''
+title: Gestione di dati con variabili dati documento
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - documents [MFC], data storage
 - friend classes [MFC]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - document data [MFC]
 - member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e0a1db1e15733a0a3cd217c44aaaa325c146ee64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 756f0a3870f4b211cbc7bb40449733cf70610247
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435883"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630022"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Gestione di dati con variabili dati documento
 
