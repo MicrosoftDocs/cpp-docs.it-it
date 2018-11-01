@@ -1,10 +1,6 @@
 ---
-title: Funzioni intrinseche InterlockedIncrement | Microsoft Docs
-ms.custom: ''
+title: Funzioni intrinseche _InterlockedIncrement
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -27,8 +23,6 @@ f1_keywords:
 - _InterlockedIncrement_cpp
 - _InterlockedIncrement64_acq
 - _InterlockedIncrement16
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedIncrement64_rel intrinsic
 - _InterlockedIncrement16_rel intrinsic
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb9d35fea664a84e29d89503f7adae17fa969668
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aaa5918862c75c20fd6271109b3e8975709712b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384006"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509083"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Funzioni intrinseche _InterlockedIncrement
 
