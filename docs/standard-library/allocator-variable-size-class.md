@@ -1,30 +1,20 @@
 ---
-title: Classe allocator_variable_size | Microsoft Docs
-ms.custom: ''
+title: Classe allocator_variable_size
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::allocator_variable_size
 - allocators/stdext::allocators::allocator_variable_size
 - stdext::allocators::allocator_variable_size
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::allocator_variable_size
 - stdext::allocators [C++], allocator_variable_size
 ms.assetid: c3aa4105-ae45-4385-bbbe-9f23060478cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46ba5742f6beb308ada7ed64788577768afeac60
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a2c4681ec5252166754a45b026ea119651f18a38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953101"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558924"
 ---
 # <a name="allocatorvariablesize-class"></a>Classe allocator_variable_size
 
