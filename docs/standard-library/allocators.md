@@ -1,26 +1,16 @@
 ---
-title: Allocatori | Microsoft Docs
-ms.custom: ''
+title: Allocatori
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cc84748e35807ef0f270fe8fbbd7560a9a18e3b2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963495"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493873"
 ---
 # <a name="allocators"></a>Allocatori
 

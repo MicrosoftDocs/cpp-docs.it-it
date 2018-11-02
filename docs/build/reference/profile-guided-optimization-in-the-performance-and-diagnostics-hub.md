@@ -1,23 +1,13 @@
 ---
-title: Ottimizzazione GPO nell'Hub prestazioni e diagnostica | Microsoft Docs
-ms.custom: ''
+title: Ottimizzazione GPO nell'hub Prestazioni e diagnostica
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 275d65cdf4f0f5986ff80e65898732dadbd5f61f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 57e0c32b401f2c1c3216a120bc86efa649ee0104
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691095"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580856"
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>L'ottimizzazione PGO nell'Hub di diagnostica e prestazioni di Visual Studio 2013
 

@@ -1,12 +1,6 @@
 ---
-title: Versioni di librerie MFC | Microsoft Docs
-ms.custom: ''
+title: Versioni di librerie MFC
 ms.date: 1/09/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a077cd90055a17f9aff71d67d2cb9a511a1caf0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078037"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537657"
 ---
 # <a name="mfc-library-versions"></a>Versioni di librerie MFC
 

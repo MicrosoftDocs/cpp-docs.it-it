@@ -1,30 +1,20 @@
 ---
-title: Variabili di ambiente CL | Microsoft Docs
-ms.custom: ''
+title: Variabili di ambiente CL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - cl
-dev_langs:
-- C++
 helpviewer_keywords:
 - INCLUDE environment variable
 - cl.exe compiler, environment variables
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 74ac2cb1ad28720cc45aec4f6258d1152a55e861
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722735"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535773"
 ---
 # <a name="cl-environment-variables"></a>Variabili di ambiente CL
 

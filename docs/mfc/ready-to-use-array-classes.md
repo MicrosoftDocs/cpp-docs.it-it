@@ -1,29 +1,19 @@
 ---
-title: Classi Array pronte all'uso | Microsoft Docs
-ms.custom: ''
+title: Classi Array pronte all'uso
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.array
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [MFC], classes
 - collection classes [MFC], arrays
 - classes [MFC], array
 ms.assetid: fdeabf95-2fe7-43a8-8f88-d954133caf52
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ccf2238855309d080a137795630b5442f0080b76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6c2b43dc2eee3c2df27c5879d74c8ca11e68b820
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395622"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677747"
 ---
 # <a name="ready-to-use-array-classes"></a>Classi Array pronte all'uso
 

@@ -1,10 +1,6 @@
 ---
-title: _splitpath_s, _wsplitpath_s | Microsoft Docs
-ms.custom: ''
+title: _splitpath_s, _wsplitpath_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsplitpath_s
 - _splitpath_s
@@ -26,8 +22,6 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e5fd1407aa6c2b7630e0720eeec179ca27e7d31a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a6770b7f5f0f8ee82cf86757d14e03b33c1f5d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602904"
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 
@@ -100,25 +90,25 @@ errno_t _wsplitpath_s(
 Percorso completo.
 
 *Unità*<br/>
-Lettera, seguita da due punti (**:**). È possibile passare **NULL** per questo parametro se non è necessaria la lettera di unità.
+Lettera di unità, seguita da due punti (**:**). È possibile passare **NULL** per questo parametro se non è necessaria la lettera di unità.
 
 *driveNumberOfElements*<br/>
-Le dimensioni del *unità* buffer in caratteri a byte singolo o wide. Se *unità* viene **NULL**, questo valore deve essere 0.
+Le dimensioni dei *unità* buffer in caratteri a byte singolo o wide. Se *unità* viene **NULL**, questo valore deve essere 0.
 
 *dir*<br/>
-Percorso di directory, inclusa la barra finale. Barre ( **/** ), barre rovesciate ( **\\** ), o entrambi possono essere utilizzate. È possibile passare **NULL** per questo parametro se non è necessario il percorso della directory.
+Percorso di directory, inclusa la barra finale. Barre ( **/** ), barre rovesciate ( **\\** ), o entrambi possono essere usati. È possibile passare **NULL** per questo parametro se non è necessario il percorso della directory.
 
 *dirNumberOfElements*<br/>
-Le dimensioni del *dir* buffer in caratteri a byte singolo o wide. Se *dir* viene **NULL**, questo valore deve essere 0.
+Le dimensioni dei *dir* buffer in caratteri a byte singolo o wide. Se *dir* viene **NULL**, questo valore deve essere 0.
 
 *fname*<br/>
 Nome di file di base (senza estensione). È possibile passare **NULL** per questo parametro se non è necessario il nome del file.
 
 *nameNumberOfElements*<br/>
-Le dimensioni del *fname* buffer in caratteri a byte singolo o wide. Se *fname* viene **NULL**, questo valore deve essere 0.
+Le dimensioni dei *fname* buffer in caratteri a byte singolo o wide. Se *fname* viene **NULL**, questo valore deve essere 0.
 
 *ext*<br/>
-Estensioni di nome file, incluse quelle iniziali periodo (**.**). È possibile passare **NULL** per questo parametro se non è necessaria l'estensione del file.
+Estensione di file, incluso il punto iniziale (**.**). È possibile passare **NULL** per questo parametro se non è necessaria l'estensione del file.
 
 *extNumberOfElements*<br/>
 Il valore pari *ext* buffer in caratteri a byte singolo o wide. Se *ext* viene **NULL**, questo valore deve essere 0.
@@ -133,21 +123,21 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 |---------------|------------------|
 |*percorso* è **NULL**|**EINVAL**|
 |*unità* viene **NULL**, *driveNumberOfElements* è diverso da zero|**EINVAL**|
-|*unità* è non**NULL**, *driveNumberOfElements* è uguale a zero|**EINVAL**|
+|*unità* non viene impostata**NULL**, *driveNumberOfElements* è uguale a zero|**EINVAL**|
 |*dir* viene **NULL**, *dirNumberOfElements* è diverso da zero|**EINVAL**|
-|*dir* è non**NULL**, *dirNumberOfElements* è uguale a zero|**EINVAL**|
+|*dir* non viene impostata**NULL**, *dirNumberOfElements* è uguale a zero|**EINVAL**|
 |*fname* viene **NULL**, *nameNumberOfElements* è diverso da zero|**EINVAL**|
-|*fname* è non**NULL**, *nameNumberOfElements* è uguale a zero|**EINVAL**|
+|*fname* non viene impostata**NULL**, *nameNumberOfElements* è uguale a zero|**EINVAL**|
 |*ext* viene **NULL**, *extNumberOfElements* è diverso da zero|**EINVAL**|
-|*ext* è non**NULL**, *extNumberOfElements* è uguale a zero|**EINVAL**|
+|*ext* non viene impostata**NULL**, *extNumberOfElements* è uguale a zero|**EINVAL**|
 
-Se si verifica una delle condizioni precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituire **EINVAL**.
+Se si verifica una delle condizioni precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **EINVAL**.
 
-Se uno qualsiasi dei buffer è troppo breve per contenere il risultato, queste funzioni deselezionare tutti i buffer per le stringhe vuote, impostare **errno** alla **ERANGE**e restituire **ERANGE**.
+Se uno qualsiasi dei buffer è troppo breve per contenere il risultato, queste funzioni cancellano tutti i buffer per stringhe vuote, impostare **errno** al **ERANGE**e restituire **ERANGE**.
 
 ## <a name="remarks"></a>Note
 
-Il **splitpath_s** funzione suddivide un percorso nei suoi quattro componenti. **splitpath_s** gestisce automaticamente gli argomenti di stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **wsplitpath_s** è una versione a caratteri wide **splitpath_s**; gli argomenti da **wsplitpath_s** sono stringhe a caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+Il **splitpath_s** funzione suddivide un percorso nei suoi quattro componenti. **splitpath_s** gestisce automaticamente gli argomenti stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **wsplitpath_s** è una versione a caratteri wide di **splitpath_s**; gli argomenti **wsplitpath_s** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -155,7 +145,7 @@ Il **splitpath_s** funzione suddivide un percorso nei suoi quattro componenti. *
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Ogni componente del percorso completo è archiviata in un buffer separato; le costanti manifesto **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definita in STDLIB. H) specificare la dimensione massima consentita per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
+Ogni componente del percorso completo è archiviato in un buffer separato; le costanti manifeste **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definito in STDLIB. H) specificare le dimensioni massime consentite per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
 
 La tabella seguente elenca i valori delle costanti manifeste.
 
@@ -166,7 +156,7 @@ La tabella seguente elenca i valori delle costanti manifeste.
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-Se il percorso completo non contiene un componente (ad esempio, un nome file), **splitpath_s** assegna una stringa vuota al buffer di corrispondente.
+Se il percorso completo non contiene un componente (ad esempio, un nome di file), **splitpath_s** assegna una stringa vuota al buffer corrispondente.
 
 In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

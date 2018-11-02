@@ -1,29 +1,18 @@
 ---
-title: Creazione, lo spostamento e modifica dei pulsanti della barra degli strumenti (C++) | Microsoft Docs
-ms.custom: ''
+title: Creazione, lo spostamento e modifica dei pulsanti della barra degli strumenti (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - buttons [C++], custom toolbars
 - toolbar buttons [C++], editing
 - buttons
 - toolbar buttons [C++], creating
 ms.assetid: d0f0c6c6-9d7e-42b5-a86a-7558127386e7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b5b3daa57a4453e37826b276d2c89c807929d006
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 84f201f5bc20b7a392445c40708370bf79f1a77d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492339"
 ---
 # <a name="creating-moving-and-editing-toolbar-buttons"></a>Creazione, spostamento e modifica dei pulsanti delle barre degli strumenti
 

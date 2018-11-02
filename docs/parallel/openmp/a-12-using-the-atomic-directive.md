@@ -1,23 +1,13 @@
 ---
-title: A.12 uso della direttiva atomic | Microsoft Docs
-ms.custom: ''
+title: A.12   Utilizzo della direttiva atomic
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: d3ba3c87-413d-4efa-8a45-8a7f28ab0164
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 04daed582cfe87f6e4803b30919af3e07037de7f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f75b182e2cae11f0e72d5ca1e67f887294e8f69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504439"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12   Utilizzo della direttiva atomic
 

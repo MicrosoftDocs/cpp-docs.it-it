@@ -1,27 +1,17 @@
 ---
-title: Compilatore avviso (livello 4) C4564 | Microsoft Docs
-ms.custom: ''
+title: Avviso del compilatore (livello 4) C4564
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4564
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea8d392251c8168490d7841ad590731b5a08e7f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1948bdec5367fa7943f5a0de4338fd4ecd6c6581
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526230"
 ---
 # <a name="compiler-warning-level-4-c4564"></a>Avviso del compilatore (livello 4) C4564
 

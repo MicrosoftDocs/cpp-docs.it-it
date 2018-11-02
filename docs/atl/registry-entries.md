@@ -1,26 +1,16 @@
 ---
-title: Le voci del Registro di sistema (ATL) | Microsoft Docs
-ms.custom: ''
+title: Voci del Registro di sistema (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - registry, ATL services entries
 - registry, application IDs
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d74f458e28377dcc0bd7d6800cddc6e227c9f984
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b61aae9ba9316dded1dcb11353e52eb2fffd49a2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472878"
 ---
 # <a name="registry-entries"></a>Voci del Registro di sistema
 

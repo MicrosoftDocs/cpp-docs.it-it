@@ -1,24 +1,13 @@
 ---
-title: Applicazioni desktop (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Applicazioni desktop (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2d8c5188cccceb0c09de95c43a72a645ded0e6a9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 78f50948e96ede8c15e0ac89a591197722dd5b1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077519"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584028"
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 

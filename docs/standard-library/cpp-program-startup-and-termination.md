@@ -1,12 +1,6 @@
 ---
-title: Avvio e chiusura di un programma C++ | Microsoft Docs
-ms.custom: ''
+title: Avvio e chiusura di un programma C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Standard Library, program startup and termination
 - terminating execution
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f781df914384b553c53e5c42fe16d4c74c9ef99d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2246e50c81da9eb505fd30cfa31f9f24e3fe4703
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845115"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459189"
 ---
 # <a name="c-program-startup-and-termination"></a>Avvio e chiusura di un programma C++
 

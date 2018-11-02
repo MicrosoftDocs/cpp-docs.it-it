@@ -1,23 +1,13 @@
 ---
-title: Finestre di dialogo e procedure guidate MFC | Microsoft Docs
-ms.custom: ''
+title: Finestre di dialogo e procedure guidate MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a33809add82ec01779fae9e8cd825922443aa61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9574b270fdbffc0026d49452adf092fdf87d7cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404930"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493899"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Finestre di dialogo e procedure guidate MFC
 

@@ -1,10 +1,6 @@
 ---
-title: scanf, _scanf_l, wscanf, _wscanf_l | Microsoft Docs
-ms.custom: ''
+title: scanf, _scanf_l, wscanf, _wscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wscanf_l
 - scanf
@@ -29,8 +25,6 @@ f1_keywords:
 - _wscanf_l
 - scanf
 - _tscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tscanf_l function
 - _tscanf_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32d414685237e8d55e1c8acd5df74ea6922e222b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410694"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544768"
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
@@ -89,7 +79,7 @@ int _wscanf_l(
 *format*<br/>
 Stringa di formato controllo.
 
-*Argomento*<br/>
+*argomento*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -105,14 +95,14 @@ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _
 
 ## <a name="remarks"></a>Note
 
-Il **scanf** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati nel percorso specificato dalla *argomento*. Ogni *argomento* deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **scanf** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati nella posizione specificata da *argomento*. Ciascuna *argomenti* deve essere un puntatore a una variabile di un tipo che corrisponde all'identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> Durante la lettura di una stringa con **scanf**, specificare sempre una larghezza per il **%s** formato (ad esempio **"% 32s"** anziché **"%s"**); in caso contrario, input formattato in modo non corretto può causare un sovraccarico del buffer. In alternativa, valutare la possibilità di usare [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) o [fgets](fgets-fgetws.md).
+> Durante la lettura di una stringa con **scanf**, specificare sempre una larghezza per il **%s** formato (ad esempio **"% 32s"** anziché **"%s"**); in caso contrario, input non formattato correttamente può facilmente causare un sovraccarico del buffer. In alternativa, valutare la possibilità di usare [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) o [fgets](fgets-fgetws.md).
 
-**wscanf** è una versione a caratteri wide **scanf**; il *formato* argomento **wscanf** è una stringa di caratteri "wide". **wscanf** e **scanf** comportarsi in modo analogo, se il flusso viene aperto in modalità ANSI. **scanf** non supporta attualmente l'input da un flusso UNICODE.
+**wscanf** è una versione a caratteri wide di **scanf**; gli *formato* argomento **wscanf** è una stringa di caratteri "wide". **wscanf** e **scanf** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **scanf** attualmente non supporta l'input da un flusso UNICODE.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -130,7 +120,7 @@ Per altre informazioni, vedere [Campi per la specifica di formato: funzioni scan
 |**scanf**, **scanf_l**|\<stdio.h>|
 |**wscanf**, **wscanf_l**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

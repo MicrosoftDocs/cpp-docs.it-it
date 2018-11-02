@@ -1,28 +1,18 @@
 ---
-title: EnableIf (struttura) | Microsoft Docs
-ms.custom: ''
+title: EnableIf (struttura)
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::EnableIf
-dev_langs:
-- C++
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2512c9b8b552027f4a0b4d72788e19d77a35d92e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e42ebfefe37342f29a00547beb258a405b3c1668
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789189"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487288"
 ---
 # <a name="enableif-structure"></a>EnableIf (struttura)
 

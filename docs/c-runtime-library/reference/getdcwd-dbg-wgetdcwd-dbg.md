@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_dbg, _wgetdcwd_dbg | Microsoft Docs
-ms.custom: ''
+title: _getdcwd_dbg, _wgetdcwd_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdcwd_dbg
 - _wgetdcwd_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - getdcwd_dbg
 - _wgetdcwd_dbg
 - wgetdcwd_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - working directory
 - _getdcwd_dbg function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f68fc4fe1c19204433e8f5c9b6c7991d8f7f90e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 700cfe732dc390ca59a976694403bb3d91af5980
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402826"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547174"
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 
@@ -94,13 +84,13 @@ Numero di riga nel file di origine in cui è stata richiesta l'operazione di all
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore a *buffer*. Un **NULL** valore restituito indica un errore, e **errno** viene impostato su **ENOMEM**, indicando che non vi è memoria sufficiente per allocare *maxlen* byte (quando un **NULL** viene fornito come argomento *buffer*), o a **ERANGE**, che indica che il percorso è più lungo di *maxlen*  caratteri. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
+Restituisce un puntatore a *buffer*. Oggetto **NULL** restituire il valore indica un errore, e **errno** viene impostato su **ENOMEM**, che indica che vi sia memoria sufficiente per allocare *maxlen* byte (quando un **NULL** viene fornito come argomento *buffer*), oppure a **ERANGE**, che indica che il percorso è più lungo rispetto a *maxlen*  caratteri. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
 ## <a name="remarks"></a>Note
 
-Il **getdcwd_dbg** e **wgetdcwd_dbg** funzioni sono identici a quelli **getdcwd** e **wgetdcwd** ad eccezione del fatto che, quando **Debug** è definito, queste funzioni usano la versione di debug **malloc** e **malloc_dbg** per allocare memoria se **NULL** viene passato come le *buffer* parametro. Per altre informazioni, vedere [_malloc_dbg](malloc-dbg.md).
+Il **getdcwd_dbg** e **wgetdcwd_dbg** sono identiche alle funzioni **getdcwd** e **wgetdcwd** ad eccezione del fatto che, quando **Debug** è definito, queste funzioni usano la versione di debug **malloc** e **malloc_dbg** per allocare memoria se **NULL** passato come le *buffer* parametro. Per altre informazioni, vedere [_malloc_dbg](malloc-dbg.md).
 
-Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire il **CRTDBG_MAP_ALLOC** flag. Quando si **CRTDBG_MAP_ALLOC** è definito, le chiamate a **getdcwd** e **wgetdcwd** vengono mappate nuovamente a **getdcwd_dbg** e **_ wgetdcwd_dbg**, rispettivamente, con il *blockType* impostata su **NORMAL_BLOCK**. Quindi, non è necessario chiamare queste funzioni in modo esplicito a meno che non si vogliano contrassegnare blocchi di memoria heap come **CLIENT_BLOCK**. Per altre informazioni, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details).
+Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire le **CRTDBG_MAP_ALLOC** flag. Quando **CRTDBG_MAP_ALLOC** è definito, le chiamate a **getdcwd** e **wgetdcwd** vengono mappate nuovamente a **getdcwd_dbg** e **_ wgetdcwd_dbg**rispettivamente, con il *blockType* impostata su **NORMAL_BLOCK**. Di conseguenza, non è necessario chiamare queste funzioni in modo esplicito, a meno che non si desidera contrassegnare come blocchi di memoria heap **CLIENT_BLOCK**. Per altre informazioni, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

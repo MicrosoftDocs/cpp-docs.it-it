@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C2894 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C2894
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2894
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2894
 ms.assetid: 4e250579-2b59-4993-a6f4-49273e7ecf06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14305b88042421817133a3def8fd73db57055026
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4184f6360e36a4e8ca0cfc55dc6d9c515cf655d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095729"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494601"
 ---
 # <a name="compiler-error-c2894"></a>Errore del compilatore C2894
 

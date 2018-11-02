@@ -1,10 +1,6 @@
 ---
-title: _heapchk | Microsoft Docs
-ms.custom: ''
+title: _heapchk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapchk
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapchk
 - heapchk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - consistency checking of heaps
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3fc500ee86bde40def0e1e2d3dd3edad3127daf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399634"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580622"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -55,7 +45,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-**heapchk** restituisce una delle seguenti costanti manifesto integer definite in malloc. h.
+**heapchk** restituisce uno delle costanti manifesto integer seguenti definite in malloc. h.
 
 |Valore restituito|Condizione|
 |-|-|
@@ -69,7 +59,7 @@ Inoltre, se si verifica un errore, **heapchk** imposta **errno** al **ENOSYS**.
 
 ## <a name="remarks"></a>Note
 
-Il **heapchk** funzione consente di eseguire il debug di problemi di heap controllando la coerenza minima dell'heap. Se il sistema operativo non supporta **heapchk**(ad esempio, Windows 98), la funzione restituisce **heapok** e imposta **errno** a **ENOSYS**.
+Il **heapchk** funzione consente di eseguire il debug di problemi relativi all'heap tramite controllo della coerenza minima dell'heap. Se il sistema operativo non supporta **heapchk**(ad esempio, Windows 98), la funzione restituisce **heapok** e imposta **errno** a **ENOSYS**.
 
 ## <a name="requirements"></a>Requisiti
 

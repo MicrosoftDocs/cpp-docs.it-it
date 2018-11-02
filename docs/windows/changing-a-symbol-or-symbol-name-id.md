@@ -1,29 +1,18 @@
 ---
-title: Modifica di un simbolo o il nome del simbolo (ID) | Microsoft Docs
-ms.custom: ''
+title: Modifica di un simbolo o del nome di un simbolo (ID)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbol names
 - symbols [C++], names
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 873cf2adc273e5fd39a5680833277ce3790cdfae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 98df98a2ed466066d9f0d32d6686e55e75280167
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412886"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487399"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Modifica di un simbolo o del nome di un simbolo (ID)
 

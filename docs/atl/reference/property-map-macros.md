@@ -1,10 +1,6 @@
 ---
-title: Macro della mappa proprietà | Microsoft Docs
-ms.custom: ''
+title: Macro della mappa proprietà
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
 - atlcom/ATL::PROP_DATA_ENTRY
@@ -12,21 +8,15 @@ f1_keywords:
 - atlcom/ATL::PROP_ENTRY_TYPE_EX
 - atlcom/ATL::PROP_PAGE
 - atlcom/ATL::END_PROP_MAP
-dev_langs:
-- C++
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: caa298ebbb96b04145bf2beb52f93838708ae50b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7422c38bd21a458dccafa6d34fd4d6522f96132a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088902"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513818"
 ---
 # <a name="property-map-macros"></a>Macro della mappa proprietà
 

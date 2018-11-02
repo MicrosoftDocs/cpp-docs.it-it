@@ -1,28 +1,18 @@
 ---
-title: Strumenti di compilazione di C/C++ | Microsoft Docs
-ms.custom: ''
+title: Strumenti per la compilazione in C/C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - c.build
-dev_langs:
-- C++
 helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a6a223e092e7ad31dd263142d2a87712eaf556b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dd698aafca3c9bc489405e0ab9cb4dcec98a26ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726037"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510084"
 ---
 # <a name="cc-build-tools"></a>Strumenti per la compilazione in C/C++
 

@@ -1,28 +1,18 @@
 ---
-title: Fornire supporto di trascinamento e rilascio per gli elementi di intestazione | Microsoft Docs
-ms.custom: ''
+title: Fornire supporto di trascinamento della selezione per gli elementi di intestazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - HDS_DRAGDROP style
 - header items in header controls
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b2eaa5040d34a442868a8fa6cb9f2aae08b0a6f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 21ff14982baac93fac1cf3ee441353c079f4f760
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602969"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Fornire supporto di trascinamento della selezione per gli elementi di intestazione
 

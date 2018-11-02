@@ -1,10 +1,6 @@
 ---
-title: strdup, wcsdup | Microsoft Docs
-ms.custom: ''
+title: strdup, wcsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcsdup
 - strdup
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - wcsdup
 - strdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - strdup function
 ms.assetid: c9ac0935-b525-4e95-8a64-396fc7e34ee9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec5298b1256028bebc9cf801babe136c846ad18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92109b06fd968009f6c05c39b6e9c45e515315aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506652"
 ---
 # <a name="strdup-wcsdup"></a>strdup, wcsdup
 

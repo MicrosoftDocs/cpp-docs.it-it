@@ -1,32 +1,22 @@
 ---
-title: -doc (elabora i commenti di documentazione) (C/C++) | Microsoft Docs
-ms.custom: ''
+title: /doc (Elabora i commenti per la documentazione) (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - /doc
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - /doc compiler option [C++]
 - comments, C++ code
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 488ee353cf245303b5ea73be139a262aea5be49d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 39b614b1ab21a654a35e30b0d3acffa15d244fb0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706576"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530039"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Elabora i commenti per la documentazione) (C/C++)
 
@@ -45,7 +35,7 @@ Il nome del file con estensione xdc che il compilatore creerà. Valido solo quan
 
 I file con estensione xdc vengono elaborati in un file con estensione XML con xdcmake.exe. Per altre informazioni, vedere [riferimento a XDCMake](../../ide/xdcmake-reference.md).
 
-È possibile aggiungere i commenti della documentazione per i file del codice sorgente. Per altre informazioni, vedere [Recommended Tags for Documentation Comments](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).
+È possibile aggiungere i commenti della documentazione per i file del codice sorgente. Per altre informazioni, vedere [Tag consigliati per i commenti relativi alla documentazione](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).
 
 Per usare il file XML generato con IntelliSense, verificare il nome del file del file con estensione XML lo stesso nome di assembly che si desidera supportare e inserire il file con estensione XML è nella stessa directory dell'assembly. Quando l'assembly viene fatto riferimento nel progetto di Visual Studio, inoltre è possibile trovare il file. Xml. Per altre informazioni, vedere [uso di IntelliSense](/visualstudio/ide/using-intellisense) e [inserimento di commenti al codice XML](/visualstudio/ide/supplying-xml-code-comments).
 

@@ -1,30 +1,20 @@
 ---
-title: Classi di finestra di dialogo comuni OLE | Microsoft Docs
-ms.custom: ''
+title: Classi di finestre di dialogo comuni OLE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - dialog classes [MFC], OLE
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6ef5a7aed288331322243d316dde58d9f36cbd9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e11e072ad3133d5df9614afa8753178e11b2d025
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430423"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614071"
 ---
 # <a name="ole-common-dialog-classes"></a>Classi di finestre di dialogo comuni OLE
 

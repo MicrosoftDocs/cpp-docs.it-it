@@ -1,10 +1,6 @@
 ---
-title: _mbccpy_s, _mbccpy_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbccpy_s, _mbccpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbccpy_s
 - _mbccpy_s_l
@@ -26,8 +22,6 @@ f1_keywords:
 - mbccpy_s_l
 - mbccpy_s
 - _mbccpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tccpy_s_l function
 - _tccpy_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a3a52314209b62c818623e315757dcd358ec491
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404028"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575049"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -106,17 +96,17 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero se con esito positivo; un codice di errore in caso di errore. Se *src* oppure *dest* è **NULL**, o se più del **buffSizeinBytes** verrebbero copiati byte *dest*, quindi viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e **errno** è impostato su **EINVAL**.
+Zero se con esito positivo; un codice di errore in caso di errore. Se *src* oppure *dest* viene **NULL**, oppure se più **buffSizeinBytes** vengono copiati byte *dest*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **EINVAL** e **errno** è impostata su **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **mbccpy_s** funzione copia un carattere multibyte da *src* al *dest*. Se *src* non fa riferimento al byte iniziale di un carattere multibyte in base a una chiamata implicita a [ismbblead](ismbblead-ismbblead-l.md), quindi il singolo byte che *src* punta a viene copiato. Se *src* punta a un byte iniziale, ma il byte successivo è 0 e pertanto non valido, quindi viene copiato 0 *dest*, **errno** è impostata su **EILSEQ**e il restituito dalla funzione **EILSEQ**.
+Il **mbccpy_s** funzione copia un carattere multibyte da *src* al *dest*. Se *src* non punta al byte di apertura di un carattere multibyte a quanto determinato da una chiamata implicita a [ismbblead](ismbblead-ismbblead-l.md), quindi il singolo byte che *src* punta a viene copiato. Se *src* punta a un byte di apertura, ma il byte successivo è 0 e pertanto non è valido, quindi viene copiato 0 *dest*, **errno** è impostata su **EILSEQ**e il funzione restituisce **EILSEQ**.
 
-**mbccpy_s** non viene accodato un terminatore null; tuttavia, se *src* punta a un carattere null, viene copiato tale null *dest* (si tratta semplicemente una normale copia a un byte).
+**mbccpy_s** non viene accodato un carattere di terminazione null; tuttavia, se *src* punta a un carattere null, tale valore null viene copiato in *dest* (si tratta semplicemente una normale copia a byte singolo).
 
 Il valore in *pCopied* viene riempita con il numero di byte copiati. I valori possibili sono 1 e 2 se l'operazione ha esito positivo. Se **NULL** viene passato, questo parametro viene ignorato.
 
-|*src*|copiato *dest*|*pCopied*|Valore restituito|
+|*src*|copiati *dest*|*pCopied*|Valore restituito|
 |-----------|----------------------|---------------|------------------|
 |byte non di apertura|byte non di apertura|1|0|
 |0|0|1|0|
@@ -125,7 +115,7 @@ Il valore in *pCopied* viene riempita con il numero di byte copiati. I valori po
 
 Si noti che la seconda riga è semplicemente un caso speciale della prima. Si noti inoltre che la tabella presuppone *buffSizeInBytes* >= *pCopied*.
 
-**mbccpy_s** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **mbccpy_s_l** è identica a **mbccpy_s** ad eccezione del fatto che **mbccpy_s_l** utilizza le impostazioni locali passata per qualsiasi comportamento dipendente dalle impostazioni locali.
+**mbccpy_s** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **mbccpy_s_l** è identica alla **mbccpy_s** ad eccezione del fatto che **mbccpy_s_l** Usa le impostazioni locali passate per qualsiasi comportamento dipendente dalle impostazioni locali.
 
 In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

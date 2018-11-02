@@ -1,10 +1,6 @@
 ---
-title: _getch_nolock, _getwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _getch_nolock, _getwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getwch_nolock
 - _getch_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _getwch_nolock
 - _gettch_nolock
 - gettch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - _getwch_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e742dab8f77a4f66b77c7c9fdc4b45b5ace06be0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400704"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514296"
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
 
@@ -71,7 +61,7 @@ Restituisce il carattere letto. Non vi è restituzione di errori.
 
 ## <a name="remarks"></a>Note
 
-**getch_nolock** e **getwch_nolock** sono identici a quelli **getch** e **_getchw** con la differenza che esse non protette da interferenze di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+**getch_nolock** e **getwch_nolock** sono identiche alle **getch** e **_getchw** ad eccezione del fatto che non sono protette da interferenze da altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -1,26 +1,16 @@
 ---
-title: Aggiunta di un controllo ATL | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di un controllo ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16bea4bb35a7eeffa1c6986953d7245ff588abd3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 26667c2ad3bb2cedb42767fe42ff0ad358fa6d66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50075529"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487685"
 ---
 # <a name="adding-an-atl-control"></a>Aggiunta di un controllo ATL
 

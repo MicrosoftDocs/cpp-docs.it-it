@@ -1,31 +1,21 @@
 ---
-title: Classe CD2DSizeU | Microsoft Docs
-ms.custom: ''
+title: Classe CD2DSizeU
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DSizeU
 - AFXRENDERTARGET/CD2DSizeU
 - AFXRENDERTARGET/CD2DSizeU::CD2DSizeU
 - AFXRENDERTARGET/CD2DSizeU::IsNull
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e5f7db887afd196d5bde57866ae39f04e3cdb7f5
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bad73a53eabe0a4c75483e9871a4fdc4a361449b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080741"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512476"
 ---
 # <a name="cd2dsizeu-class"></a>Classe CD2DSizeU
 

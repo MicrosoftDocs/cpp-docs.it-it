@@ -1,27 +1,17 @@
 ---
-title: Illustrazione del Routing di comando | Microsoft Docs
-ms.custom: ''
+title: Illustrazione del routing dei comandi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
 - command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46449a90223bdb5e7774d4be5710014ff2c6ccae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3bc7c33762ab1868b29732d17e1a2e9700d11cf7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584561"
 ---
 # <a name="command-routing-illustration"></a>Illustrazione del routing dei comandi
 

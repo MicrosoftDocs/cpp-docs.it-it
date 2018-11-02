@@ -1,10 +1,6 @@
 ---
-title: _get_errno | Microsoft Docs
-ms.custom: ''
+title: _get_errno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_errno
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _get_errno
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_errno function
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fec59334ff6585e2385295c58c284df7e602ca1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6ffb76bb31fe1633af78ee73423bb06857e0b893
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535720"
 ---
 # <a name="geterrno"></a>_get_errno
 
@@ -47,23 +37,23 @@ Ottiene il valore corrente della variabile globale errno.
 ## <a name="syntax"></a>Sintassi
 
 ```C
-errno_t _get_errno( 
-   int * pValue 
+errno_t _get_errno( 
+   int * pValue 
 );
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *pValue*<br/>
-Un puntatore a un numero intero in cui inserire il valore corrente di **errno** variabile.
+Un puntatore a un integer da riempire con il valore corrente del **errno** variabile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pValue* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **EINVAL**.
+Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pValue* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-I valori possibili del **errno** sono definiti in errno. Vedere anche [Costanti errno](../../c-runtime-library/errno-constants.md).
+I valori possibili del **errno** sono definiti in errno. h. Vedere anche [Costanti errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="example"></a>Esempio
 

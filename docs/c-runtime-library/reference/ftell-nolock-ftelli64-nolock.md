@@ -1,10 +1,6 @@
 ---
-title: _ftell_nolock, _ftelli64_nolock | Microsoft Docs
-ms.custom: ''
+title: _ftell_nolock, _ftelli64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d1001b1f0465273771649404de306153edf920
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580843"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
 
@@ -63,16 +53,16 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>Parametri
 
-*Flusso*<br/>
+*flusso*<br/>
 Destinazione di **FILE** struttura.
 
 ## <a name="return-value"></a>Valore restituito
 
-Uguale a **ftell** e **_ftelli64**. Per altre informazioni, vedere [ftell, _ftelli64](ftell-ftelli64.md).
+Uguale allo **ftell** e **_ftelli64**. Per altre informazioni, vedere [ftell, _ftelli64](ftell-ftelli64.md).
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni sono non blocca il thread versioni **ftell** e **_ftelli64**, rispettivamente. Sono identici a **ftell** e **_ftelli64** con la differenza che esse non sono protette da interferenze da altri thread. Queste funzioni potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Queste funzioni sono non blocca le versioni di **ftell** e **_ftelli64**, rispettivamente. Sono identiche alle **ftell** e **_ftelli64** ad eccezione del fatto che non sono protette da interferenze da altri thread. Queste funzioni potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ## <a name="requirements"></a>Requisiti
 

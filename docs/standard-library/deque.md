@@ -1,27 +1,17 @@
 ---
-title: '&lt;deque&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;deque&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <deque>
-dev_langs:
-- C++
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a0f8ce0e6078f77dc62953ed84ec42d0be26b99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 006b4f3a82fd750d99fde9db7e98445c2f2bb088
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850587"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513009"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 

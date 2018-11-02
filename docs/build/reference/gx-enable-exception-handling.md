@@ -1,14 +1,8 @@
 ---
-title: -GX (Attiva gestione eccezioni) | Microsoft Docs
-ms.custom: ''
+title: /GX (Attiva gestione eccezioni)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /gx
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception handling, enabling
 - /GX compiler option [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 095db3db73f2be4012efe39f3b8cd8e645ad46c3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3e820791b651a029f048423daacf50ddc8b74a1d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620623"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (Attiva gestione eccezioni)
 

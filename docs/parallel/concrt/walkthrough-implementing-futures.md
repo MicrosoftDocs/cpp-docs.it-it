@@ -1,26 +1,16 @@
 ---
-title: 'Procedura dettagliata: Implementazione di future | Microsoft Docs'
-ms.custom: ''
+title: 'Procedura dettagliata: Implementazione di date future'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a3131e785c134f2e4875612f2d8a994f19ac766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4c43719199ef4009433ec65d54fcc238d82ac305
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447076"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525657"
 ---
 # <a name="walkthrough-implementing-futures"></a>Procedura dettagliata: Implementazione di date future
 

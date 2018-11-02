@@ -1,10 +1,6 @@
 ---
-title: _close | Microsoft Docs
-ms.custom: ''
+title: _close
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _close
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _close
-dev_langs:
-- C++
 helpviewer_keywords:
 - _close function
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eabf084d2e4dd7e280c0ff730d1ec34d86f1ed98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528024"
 ---
 # <a name="close"></a>_close
 
@@ -59,15 +49,15 @@ Il descrittore del file che fa riferimento al file aperto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**Close** restituisce 0 se il file è stato chiuso. Il valore restituito-1 indica un errore.
+**Chiudi** restituisce 0 se il file è stato chiuso. Valore restituito di -1 indica un errore.
 
 ## <a name="remarks"></a>Note
 
 Il **Close** funzione chiude il file associato *fd*.
 
-Il descrittore di file e il punto di controllo file del sistema operativo sottostante vengono chiusi. Non è pertanto necessario chiamare **CloseHandle** se il file è stato originariamente aperto con la funzione Win32 **CreateFile** e convertito in un descrittore di file mediante **open_osfhandle**.
+Il descrittore di file e il punto di controllo file del sistema operativo sottostante vengono chiusi. Non è pertanto necessario chiamare **CloseHandle** se il file è stato originariamente aperto usando la funzione Win32 **CreateFile** e convertito in un descrittore di file usando **open_osfhandle**.
 
-Questa funzione convalida i relativi parametri. Se *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostata su **EBADF**.
+Questa funzione convalida i relativi parametri. Se *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e **errno** è impostata su **EBADF**.
 
 ## <a name="requirements"></a>Requisiti
 
