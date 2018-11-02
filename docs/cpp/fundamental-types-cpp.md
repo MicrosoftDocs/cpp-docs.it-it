@@ -1,10 +1,6 @@
 ---
-title: Tipi fondamentali (C++) | Microsoft Docs
-ms.custom: ''
+title: Tipi fondamentali (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -19,8 +15,6 @@ f1_keywords:
 - unsigned_cpp
 - unsigned_int_cpp
 - wchar_t_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - specifiers [C++], type
 - float keyword [C++]
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7abb1efa9ca7260648574299cde454a33f84b3f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114891"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601370"
 ---
 # <a name="fundamental-types--c"></a>Tipi fondamentali (C++)
 
@@ -70,7 +60,7 @@ I tipi [void](../cpp/void-cpp.md) descrivono un set di valori vuoto. Nessuna var
 
 - L'operando sinistro dell'operatore virgola (per altre informazioni, vedere [Operatore virgola](../cpp/comma-operator.md) ).
 
-- Il secondo o terzo operando dell'operatore condizionale (`? :`). (per altre informazioni, vedere [Espressioni con operatore condizionale](../cpp/conditional-operator-q.md) ).
+- Il secondo o il terzo operando dell'operatore condizionale (`? :`) (per altre informazioni, vedere [Espressioni con operatore condizionale](../cpp/conditional-operator-q.md) ).
 
 La tabella seguente illustra le restrizioni relative alle dimensioni dei tipi. Queste restrizioni sono indipendenti dell'implementazione Microsoft.
 
