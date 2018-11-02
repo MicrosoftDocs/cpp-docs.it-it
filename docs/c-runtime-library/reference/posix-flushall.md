@@ -1,10 +1,6 @@
 ---
-title: flushall | Microsoft Docs
-ms.custom: ''
+title: flushall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - flushall
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - flushall
-dev_langs:
-- C++
 helpviewer_keywords:
 - flushall function
 ms.assetid: 481429ae-3980-4233-9495-a3ee56e7c838
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7bb866f774495c1eb8ee1684d629918f9a711c35
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65e4ded786bdb7bd6169beb42883bc0a2c363d02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397291"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534433"
 ---
 # <a name="flushall"></a>flushall
 

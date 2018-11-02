@@ -1,10 +1,6 @@
 ---
-title: lsearch | Microsoft Docs
-ms.custom: ''
+title: lsearch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - lsearch
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - lsearch
-dev_langs:
-- C++
 helpviewer_keywords:
 - lsearch function
 ms.assetid: 130da3fc-904a-4375-b0ab-79bfea8a455f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e0b20c9db9c9177749e8d7eb4ff02011f3b8a85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c30a088eac1d8ff8b03ad54ed045e7dfa18eebb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397964"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531849"
 ---
 # <a name="lsearch"></a>lsearch
 

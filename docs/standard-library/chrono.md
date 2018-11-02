@@ -1,10 +1,6 @@
 ---
-title: '&lt;chrono&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;chrono&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
@@ -13,19 +9,13 @@ f1_keywords:
 - chrono/std::chrono::hours
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
-dev_langs:
-- C++
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d701b290100f812f3c7845096960561cb101472
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 904e4df6b6c16b846ab4417d24a1d9836380d75b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544547"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -99,9 +89,9 @@ Per altre informazioni sui tipi di rapporto usati nei seguenti typedef, vedere [
 |Literal|Descrizione|
 |-------------|-----------------|
 |chrono::hours operator "" h(unsigned long long Val)|Specifica le ore come valore integrale.|
-|chrono:: Duration\<double, rapporto\<3600 >> operatore "" h (long double Val)|Specifica le ore come valore a virgola mobile.|
+|chrono:: Duration\<ratio double,\<3600 >> operatore "" h (long double Val)|Specifica le ore come valore a virgola mobile.|
 |chrono::minutes (operator "" min)(unsigned long long Val)|Specifica i minuti come valore integrale.|
-|chrono:: Duration\<double, rapporto\<60 >> (operatore "" min) (long double Val)|Specifica i minuti come valore a virgola mobile.|
+|chrono:: Duration\<ratio double,\<60 >> (operatore "" min) (long double Val)|Specifica i minuti come valore a virgola mobile.|
 |chrono::seconds operator "" s(unsigned long long Val)|Specifica i minuti come valore integrale.|
 |chrono::duration\<double> operator "" s(long double Val)|Specifica i secondi come valore a virgola mobile.|
 |chrono::milliseconds operator "" ms(unsigned long long Val)|Specifica i millisecondi come valore integrale.|

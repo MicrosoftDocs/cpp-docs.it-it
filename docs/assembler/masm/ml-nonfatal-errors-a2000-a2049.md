@@ -1,23 +1,14 @@
 ---
-title: Errori ML non irreversibili A2000-A2049 | Microsoft Docs
-ms.custom: ''
+title: Errori ML non irreversibili A2000-A2049
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
 ms.topic: error-reference
-dev_langs:
-- C++
 ms.assetid: 1ab0e263-7138-4fa5-9702-91237e1d6df2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b5b8ac96975b7e3c0733fd9733245576a3dfa999
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0357aa4bce1d8f297f7898caae003f89f20afaac
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565997"
 ---
 # <a name="ml-nonfatal-errors-a2000-a2049"></a>Errori ML non irreversibili A2000-A2049
 

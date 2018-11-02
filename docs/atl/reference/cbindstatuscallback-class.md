@@ -1,10 +1,6 @@
 ---
-title: Classe CBindStatusCallback | Microsoft Docs
-ms.custom: ''
+title: Classe CBindStatusCallback
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CBindStatusCallback
 - ATLCTL/ATL::CBindStatusCallback
@@ -27,28 +23,22 @@ f1_keywords:
 - ATLCTL/ATL::CBindStatusCallback::m_spBinding
 - ATLCTL/ATL::CBindStatusCallback::m_spMoniker
 - ATLCTL/ATL::CBindStatusCallback::m_spStream
-dev_langs:
-- C++
 helpviewer_keywords:
 - asynchronous data transfer [C++]
 - data transfer [C++]
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a816d10a0cb9665938e77ae8c649464b7b6768c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108482"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583313"
 ---
 # <a name="cbindstatuscallback-class"></a>Classe CBindStatusCallback
 
-Questa classe implementa l'interfaccia `IBindStatusCallback`.
+Questa classe implementa l'interfaccia `IBindStatusCallback` .
 
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
@@ -479,7 +469,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Parametri
 
-*HRESULT*<br/>
+*hresult*<br/>
 Codice di stato restituito dall'operazione di associazione.
 
 *szError*<br/>

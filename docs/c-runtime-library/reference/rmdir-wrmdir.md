@@ -1,10 +1,6 @@
 ---
-title: _rmdir, _wrmdir | Microsoft Docs
-ms.custom: ''
+title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wrmdir
 - _rmdir
@@ -27,8 +23,6 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11e6521060932bd1273b6a3888332ac2c8b2bb7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511124"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 
@@ -67,12 +57,12 @@ int _wrmdir(
 
 ### <a name="parameters"></a>Parametri
 
-*DirName*<br/>
+*nomedir*<br/>
 Percorso della directory da rimuovere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce 0 se la directory viene eliminata correttamente. Valore restituito di -1 indica un errore e **errno** è impostata su uno dei valori seguenti:
+Ognuna di queste funzioni restituisce 0 se la directory viene eliminata correttamente. Valore restituito di -1 indica un errore e **errno** è impostato su uno dei valori seguenti:
 
 |Valore errno|Condizione|
 |-|-|
@@ -86,7 +76,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 Il **rmdir** funzione Elimina la directory specificata da *dirname*. La directory deve essere vuota e non deve essere la directory di lavoro corrente o la directory radice.
 
-**wrmdir** è una versione a caratteri wide **rmdir**; il *dirname* argomento **wrmdir** è una stringa di caratteri "wide". **wrmdir** e **rmdir** si comportano in modo identico in caso contrario.
+**wrmdir** è una versione a caratteri wide di **rmdir**; gli *dirname* argomento **wrmdir** è una stringa di caratteri "wide". **wrmdir** e **rmdir** hanno lo stesso comportamento in caso contrario.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

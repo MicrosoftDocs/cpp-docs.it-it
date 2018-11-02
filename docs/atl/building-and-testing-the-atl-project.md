@@ -1,26 +1,16 @@
 ---
-title: Compilazione e test del progetto ATL | Microsoft Docs
-ms.custom: ''
+title: Compilazione e test del progetto ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - composite controls, building and testing the project
 - composite controls, containers for
 ms.assetid: 5c1541f8-f6cb-4c22-bd22-c66bcfbaa077
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a0ec4f98a36f6278c7e9101c4a8e8855d25758a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0a6363ca3c3cee7e23729121124457311e056a2a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483968"
 ---
 # <a name="building-and-testing-the-atl-project"></a>Compilazione e test del progetto ATL
 

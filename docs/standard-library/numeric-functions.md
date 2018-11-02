@@ -1,8 +1,6 @@
 ---
-title: Funzioni &lt;numeric&gt; | Microsoft Docs
-ms.custom: ''
+title: Funzioni &lt;numeric&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: ae1c3e043d35ba91813fb5288e100610986dbd76
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100183"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475101"
 ---
 # <a name="ltnumericgt-functions"></a>Funzioni &lt;numeric&gt;
 

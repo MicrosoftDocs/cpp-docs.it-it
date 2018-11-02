@@ -1,27 +1,17 @@
 ---
-title: Strumenti del linker LNK1313 errore | Documenti Microsoft
-ms.custom: ''
+title: Errore degli strumenti del linker LNK1313
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1313
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705088"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604230"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Errore degli strumenti del linker LNK1313
 
@@ -29,9 +19,9 @@ ms.locfileid: "34705088"
 
 ## <a name="remarks"></a>Note
 
-La versione corrente di Visual C++ non supporta il collegamento di file con estensione obj gestiti/nativi misto o nativo con file obj compilati con **/clr: pure**.
+La versione corrente di Visual C++ non supporta il collegamento dei file con estensione obj gestito/nativo misto o nativo con i file con estensione obj compilati con **/clr: pure**.
 
-Il **/clr: pure** opzione del compilatore è deprecato in Visual Studio 2015 e non supportata in Visual Studio 2017.
+Il **/clr: pure** opzione del compilatore è obsoleta in Visual Studio 2015 e non sono supportata in Visual Studio 2017.
 
 ## <a name="example"></a>Esempio
 

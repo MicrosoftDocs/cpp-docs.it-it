@@ -1,26 +1,18 @@
 ---
-title: 'Classe platform:: ValueType | Microsoft Docs'
-ms.custom: ''
+title: Platform::ValueType (classe)
 ms.date: 02/03/2017
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ValueType::ToString
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae1cab3d5cde3bc39f131acd1b01976dcb6d522b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 57fb089f0d9dc53ba8a65cef41e3341168ffea45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105107"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596404"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType (classe)
 

@@ -1,10 +1,6 @@
 ---
-title: _getch, _getwch | Microsoft Docs
-ms.custom: ''
+title: _getch, _getwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getch
 - _getwch
@@ -25,8 +21,6 @@ f1_keywords:
 - getwch
 - _getch
 - _getwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - getch function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b69149340d2fca15071292001b9936e9d3bd5470
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400116"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666310"
 ---
 # <a name="getch-getwch"></a>_getch, _getwch
 
@@ -66,7 +56,7 @@ Restituisce il carattere letto. Non vi è restituzione di errori.
 
 ## <a name="remarks"></a>Note
 
-Il **getch** e **getwch** funzioni senza il carattere di ripetizione di leggere un singolo carattere dalla console. Nessuna di queste funzioni può essere usata per leggere CTRL+C. Durante la lettura di un tasto funzione o un tasto di direzione, ogni funzione deve essere chiamata due volte. La prima chiamata restituisce 0 o 0xE0 e la seconda chiamata restituisce il codice effettivo.
+Il **getch** e **getwch** funzioni leggono un singolo carattere dalla console senza il carattere di ripetizione. Nessuna di queste funzioni può essere usata per leggere CTRL+C. Durante la lettura di un tasto funzione o un tasto di direzione, ogni funzione deve essere chiamata due volte. La prima chiamata restituisce 0 o 0xE0 e la seconda chiamata restituisce il codice effettivo.
 
 Queste funzioni bloccano il thread chiamante e pertanto sono thread-safe. Per le versioni che non bloccano il thread, vedere [_getch_nolock, _getwch_nolock](getch-nolock-getwch-nolock.md).
 

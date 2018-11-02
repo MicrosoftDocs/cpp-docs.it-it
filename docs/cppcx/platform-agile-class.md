@@ -1,8 +1,6 @@
 ---
-title: 'Classe platform:: Agile | Microsoft Docs'
-ms.custom: ''
+title: Classe Platform::Agile
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -11,21 +9,15 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3745ead4fec8466df3f164c415b21d98f68c0ef7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109784"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471201"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 
@@ -162,11 +154,11 @@ Tipo specificato dal parametro typename del modello.
 
 ### <a name="return-value"></a>Valore restituito
 
-L'indirizzo di un handle a un oggetto di tipo `T`.
+Indirizzo di un handle a un oggetto di tipo `T`.
 
 ### <a name="remarks"></a>Note
 
-Questa operazione rilascia la rappresentazione corrente di un oggetto di tipo `T`, se presente, reinizializza i membri dati dell'oggetto Agile, acquisisce il contesto di threading corrente e restituisce l'indirizzo di una variabile handle a oggetto che può rappresentare un oggetto non agile. Affinché un'istanza della classe Agile rappresentare un oggetto, utilizzare l'operatore di assegnazione ([Agile:: operator =](#operator-assign)) per assegnare l'oggetto all'istanza della classe Agile.
+Questa operazione rilascia la rappresentazione corrente di un oggetto di tipo `T`, se presente, reinizializza i membri dati dell'oggetto Agile, acquisisce il contesto di threading corrente e quindi restituisce l'indirizzo di una variabile handle-oggetto che può rappresentare un oggetto non Agile. Affinché un'istanza della classe Agile rappresentare un oggetto, utilizzare l'operatore di assegnazione ([Agile:: operator =](#operator-assign)) per assegnare l'oggetto all'istanza della classe Agile.
 
 ## <a name="getaddressofforinout"></a>  Metodo Agile:: getaddressofforinout
 

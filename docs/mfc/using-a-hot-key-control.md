@@ -1,26 +1,16 @@
 ---
-title: Usando un controllo tasto di scelta | Microsoft Docs
-ms.custom: ''
+title: Utilizzo di un controllo tasto di scelta
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be0d27016204724672c23f04fdee38f01b69e6a5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 335489011076b1e30a9c36720a3bf2e94c7918b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542194"
 ---
 # <a name="using-a-hot-key-control"></a>Utilizzo di un controllo tasto di scelta
 
@@ -36,7 +26,7 @@ Uso tipico di un controllo tasto di scelta segue il modello seguente:
 
 - Quando si conosce ciò che l'utente ha selezionato della chiave, è possibile impostare il tasto di scelta rapida utilizzando uno dei metodi descritti in [impostazione di un tasto di scelta rapida](../mfc/setting-a-hot-key.md).
 
-- Se il controllo tasto di scelta è in una finestra di dialogo e il `CHotKeyCtrl` oggetto verrà eliminato automaticamente. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CHotKeyCtrl` vengono eliminati correttamente.
+- Se il controllo tasto di scelta è in una finestra di dialogo e il `CHotKeyCtrl` oggetto verrà eliminato automaticamente. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CHotKeyCtrl` vengono eliminati definitivamente in modo corretto.
 
 ## <a name="see-also"></a>Vedere anche
 

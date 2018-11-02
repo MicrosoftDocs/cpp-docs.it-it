@@ -1,10 +1,6 @@
 ---
-title: 'Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn | Microsoft Docs'
-ms.custom: ''
+title: 'Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _j0
 - _j1
@@ -33,8 +29,6 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf461a7737ee1f23650ff80f203524c427fb644d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531863"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -94,23 +84,23 @@ Ordine Integer della funzione di Bessel.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce una funzione di Bessel *x*. Se *x* è negativa nella **_y0**, **_y1**, oppure **Yn** funzioni, la routine imposta **errno** per  **EDOM**, viene stampato un **domain** messaggio di errore **stderr**e restituisce **_HUGE_VAL**. È possibile modificare utilizzando la gestione degli errori **matherr**.
+Ognuna di queste routine restituisce una funzione di Bessel *x*. Se *x* è un valore negativo nel **_y0**, **_y1**, oppure **Yn** funzioni, la routine imposta **errno** per  **EDOM**, viene stampato un **dominio** messaggio di errore **stderr**e restituisce **_HUGE_VAL**. È possibile modificare utilizzando la gestione degli errori **matherr**.
 
 ## <a name="remarks"></a>Note
 
-Il **_j0**, **_j1**, e **Jn** routine restituiscono funzioni del primo tipo di Bessel: ordini 0, 1 e n, rispettivamente.
+Il **_j0**, **_j1**, e **Jn** routine restituiscono il primo tipo di funzioni di Bessel: ordini 0, 1 e n, rispettivamente.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NON VALIDO**|**DOMAIN**|
+|+ **QNAN**, **IND**|**NON VALIDO**|**DOMINIO**|
 
 Il **_y0**, **_y1**, e **Yn** routine restituiscono Bessel funzioni del secondo tipo: ordini 0, 1 e n, rispettivamente.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NON VALIDO**|**DOMAIN**|
+|+ **QNAN**, **IND**|**NON VALIDO**|**DOMINIO**|
 |± 0|**ZERODIVIDE**|**SING**|
-|&#124;x&#124; < 0,0|**NON VALIDO**|**DOMAIN**|
+|&#124;x&#124; < 0,0|**NON VALIDO**|**DOMINIO**|
 
 ## <a name="requirements"></a>Requisiti
 

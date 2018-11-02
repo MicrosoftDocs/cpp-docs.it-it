@@ -1,27 +1,17 @@
 ---
-title: Classe is_nothrow_copy_constructible | Microsoft Docs
-ms.custom: ''
+title: Classe is_nothrow_copy_constructible
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_nothrow_copy_constructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_nothrow_copy_constructible
 ms.assetid: f13a0bea-63b1-492a-9a45-d445df35c282
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b007b14bf6dbeb345c06f86825a794e2f1f15c90
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7682ce8fd8f127ac20a20fb0918e69d8c2d76947
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509630"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>Classe is_nothrow_copy_constructible
 

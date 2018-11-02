@@ -1,28 +1,18 @@
 ---
-title: ": Commento all'implementazione | Microsoft Docs"
-ms.custom: ''
+title: ": Commento all'implementazione"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Implementation comment in MFC source files
 - comments, MFC
 - MFC source files, Implementation comment
 - comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 874c7eb29f1908e6098ee4a9095f17a4dae00006
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab69fa25cc8dece635097f17bae97f831f7ec87f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402122"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552893"
 ---
 # <a name="-implementation-comment"></a>// Commento all'implementazione
 

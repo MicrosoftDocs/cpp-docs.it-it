@@ -1,14 +1,8 @@
 ---
-title: Classi di controllo | Microsoft Docs
-ms.custom: ''
+title: Classi dei controlli
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.control
-dev_langs:
-- C++
 helpviewer_keywords:
 - static display controls [MFC]
 - control classes [MFC]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a159677ffa12961e7f065b2cba2b1287c8ef7a58
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 880ef783316f710943fde323bc89a49d19b0a1fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509006"
 ---
 # <a name="control-classes"></a>Classi dei controlli
 

@@ -1,25 +1,15 @@
 ---
-title: Compilazione di C/C++ di applicazioni isolate | Microsoft Docs
-ms.custom: ''
+title: Compilazione di applicazioni isolate C/C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 8a2fe4fa-0489-433e-bfc6-495844d8d73a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 78d14f812700afa4ea0ad66b527a0e3888862f4d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6ff9ada45a1ddd7c0aa1da62f6dd7f6a7b7bf371
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716905"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534927"
 ---
 # <a name="building-cc-isolated-applications"></a>Compilazione di applicazioni isolate C/C++
 

@@ -1,27 +1,16 @@
 ---
-title: Rimozione di uno spazio tra i pulsanti di una barra degli strumenti (C++) | Microsoft Docs
-ms.custom: ''
+title: Rimozione di uno spazio tra i pulsanti di una barra degli strumenti (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Toolbar editor [C++], spacing toolbar buttons
 - toolbar buttons [C++], space between buttons
 ms.assetid: 3bbbacec-cd42-4c35-9ea5-de62daa4041d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a925ad172e5cf146d830207383d4bad0da57ff9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe463af7c23802ba375e2138ed913870503c8403
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417572"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543021"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar-c"></a>Rimozione di uno spazio tra i pulsanti di una barra degli strumenti (C++)
 

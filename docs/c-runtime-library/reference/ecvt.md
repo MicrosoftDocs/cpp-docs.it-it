@@ -1,10 +1,6 @@
 ---
-title: _ecvt | Microsoft Docs
-ms.custom: ''
+title: _ecvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ecvt
 apilocation:
@@ -22,28 +18,22 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _ecvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ecvt function
 - numbers, converting
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 36c9cb2e8cd9eb4dd67bb91e9e4dbd36d8d1fc8e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605727"
 ---
 # <a name="ecvt"></a>_ecvt
 
-Converte un **doppie** numero in una stringa. È disponibile una versione più sicura di questa funzione; vedere [_ecvt_s](ecvt-s.md).
+Converte un **doppie** numeri in una stringa. È disponibile una versione più sicura di questa funzione; vedere [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -72,21 +62,21 @@ Segno del numero convertito.
 
 ## <a name="return-value"></a>Valore restituito
 
-**ecvt** restituisce un puntatore alla stringa di cifre; **NULL** se si è verificato un errore.
+**ecvt** restituisce un puntatore alla stringa di cifre. **NULL** se si è verificato un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **ecvt** funzione converte un numero a virgola mobile in una stringa di caratteri. Il *valore* parametro indica il numero a virgola mobile da convertire. Questa funzione consente di archiviare fino a *conteggio* cifre *valore* sotto forma di stringa e aggiunge un carattere null ('\0'). Se il numero di cifre *valore* supera *conteggio*, le cifre di ordine inferiore viene arrotondata. Se ci sono meno di *conteggio* cifre, la stringa viene riempito di zeri.
+Il **ecvt** funzione converte un numero a virgola mobile in una stringa di caratteri. Il *valore* parametro indica il numero a virgola mobile da convertire. Questa funzione consente di archiviare fino a *conteggio* cifre *valore* sotto forma di stringa e aggiunge un carattere null ('\0'). Se il numero di cifre nella *valore* supera *conteggio*, la cifra meno significativa viene arrotondata. Se ci sono meno *conteggio* cifre, la stringa viene riempita con zeri.
 
 Il numero totale di cifre restituito da **ecvt** non supererà **_CVTBUFSIZE**.
 
-Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *valore* possono essere ottenuti dalla *dec* e *sign* dopo la chiamata. Il *dec* parametro punta a un valore integer che fornisce la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il *sign* parametro punta a un intero che indica il segno di numero convertito. Se il valore intero è 0, il numero è positivo. In caso contrario, il risultato sarà negativo.
+Nella stringa vengono archiviate solo cifre. La posizione del separatore decimale e il segno di *valore* può essere ottenuto dalla *dec* e *sign* dopo la chiamata. Il *dec* parametro punta a un valore intero che indica la posizione del separatore decimale rispetto all'inizio della stringa. Uno zero o un valore intero negativo indica che il separatore decimale si trova a sinistra della prima cifra. Il *sign* parametro punta a un numero intero che indica il segno del numero convertito. Se il valore intero è 0, il numero è positivo. In caso contrario, il risultato sarà negativo.
 
-La differenza tra **ecvt** e **fcvt** è l'interpretazione del *conteggio* parametro. **ecvt** interpreta *conteggio* come il numero totale di cifre nella stringa di output, mentre **fcvt** interpreta *conteggio* come il numero di cifre dopo il separatore decimale.
+La differenza tra **ecvt** e **fcvt** consiste nell'interpretazione dei *conteggio* parametro. **ecvt** interpreta *conteggio* come numero totale di cifre nella stringa di output, mentre **fcvt** interpreta *conteggio* come il numero di cifre dopo il separatore decimale.
 
-**ecvt** e **fcvt** per la conversione utilizzare un singolo buffer allocato in modo statico. Ogni chiamata a una di queste routine elimina definitivamente i risultati della chiamata precedente.
+**ecvt** e **fcvt** usano un singolo buffer allocato in modo statico per la conversione. Ogni chiamata a una di queste routine elimina definitivamente i risultati della chiamata precedente.
 
-Questa funzione convalida i relativi parametri. Se *dec* oppure *sign* è **NULL**, oppure *conteggio* è 0, viene richiamato il gestore di parametri non validi, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e **NULL** viene restituito.
+Questa funzione convalida i relativi parametri. Se *dic* o *sign* viene **NULL**, oppure *conteggio* è 0, viene richiamato il gestore di parametri non validi, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e **NULL** viene restituito.
 
 ## <a name="requirements"></a>Requisiti
 

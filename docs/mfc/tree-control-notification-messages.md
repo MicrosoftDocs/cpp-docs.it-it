@@ -1,12 +1,6 @@
 ---
-title: Struttura dei messaggi di notifica di controllo | Microsoft Docs
-ms.custom: ''
+title: Messaggi di notifica del controllo Tree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - notifications [MFC], tree controls
 - messages [MFC], notification
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - notifications [MFC], CTreeCtrl
 - tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07911dec25bf9d6b80f025e2f3738e3d98ffd2cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e187e08f894eeac37c8ad27aea45a1c8568c8a9b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508176"
 ---
 # <a name="tree-control-notification-messages"></a>Messaggi di notifica del controllo Tree
 

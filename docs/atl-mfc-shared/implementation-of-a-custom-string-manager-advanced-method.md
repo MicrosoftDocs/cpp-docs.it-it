@@ -1,25 +1,15 @@
 ---
-title: Implementazione di una stringa personalizzata (metodo avanzato) | Microsoft Docs
-ms.custom: ''
+title: Implementazione di una gestione stringhe personalizzata (metodo avanzato)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2dd21ffbaf3e3a6654e23346af39ab401484b1cd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 824e9b1b71615bd3fc488052d5e713dee2e0d015
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757234"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524818"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementazione di una gestione stringhe personalizzata (metodo avanzato)
 

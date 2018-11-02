@@ -1,10 +1,6 @@
 ---
-title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wscanf_s
 - _wscanf_s_l
@@ -29,8 +25,6 @@ f1_keywords:
 - scanf_s
 - _tscanf_s
 - _scanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - buffers [C++], buffer overruns
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8abf72b67c060bd6016b7e784ded5a30801ca6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fcf2a9f3ac8585e71caa9f2cc990c7e303a2f5f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528612"
 ---
 # <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 
@@ -91,7 +81,7 @@ int _wscanf_s_l(
 *format*<br/>
 Stringa di formato controllo.
 
-*Argomento*<br/>
+*argomento*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -99,19 +89,19 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore, o se il carattere di fine del file o il carattere di fine della stringa viene rilevato il primo tentativo di leggere un carattere. Se *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **scanf_s** e **wscanf_s** restituiscono **EOF** e impostare **errno** a **EINVAL**.
+Restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore, o se viene rilevato il carattere di fine del file o il carattere di fine della stringa al primo tentativo di leggere un carattere. Se *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **scanf_s** e **wscanf_s** restituiscono **EOF** e impostare **errno** a **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **scanf_s** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati nella posizione che viene fornita dalla *argomento*. Ogni *argomento* deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **scanf_s** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati in una posizione che viene fornita dalla *argomento*. Ciascuna *argomenti* deve essere un puntatore a una variabile di un tipo che corrisponde all'identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-**wscanf_s** è una versione a caratteri wide **scanf_s**; il *formato* argomento **wscanf_s** è una stringa di caratteri "wide". **wscanf_s** e **scanf_s** comportarsi in modo analogo, se il flusso viene aperto in modalità ANSI. **scanf_s** non supporta attualmente l'input da un flusso UNICODE.
+**wscanf_s** è una versione a caratteri wide di **scanf_s**; gli *formato* argomento **wscanf_s** è una stringa di caratteri "wide". **wscanf_s** e **scanf_s** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **scanf_s** attualmente non supporta l'input da un flusso UNICODE.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali che viene passato nel posto di quelle del thread corrente.
+Le versioni di queste funzioni che hanno le **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché le impostazioni locali del thread corrente.
 
-A differenza **scanf** e **wscanf**, **scanf_s** e **wscanf_s** richiedono le dimensioni del buffer per essere specificati per tutti i parametri di tipo diinput**c**, **C**, **s**, **S**, o set di controllo che sono racchiusi tra parentesi stringa **[]**. La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. Ad esempio, se si sta leggendo una stringa, la dimensione del buffer per tale stringa viene passata nel modo seguente:
+A differenza **scanf** e **wscanf**, **scanf_s** e **wscanf_s** richiedono le dimensioni del buffer necessario specificarlo per tutti i parametri di tipo diinput**c**, **C**, **s**, **S**, o set di controllo sono racchiusi tra parentesi stringa **[]**. La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. Ad esempio, se si sta leggendo una stringa, la dimensione del buffer per tale stringa viene passata nel modo seguente:
 
 ```C
 char s[10];
@@ -121,16 +111,16 @@ scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specificat
 La dimensione del buffer include il carattere di terminazione null. È possibile utilizzare un campo di specifica della larghezza per assicurare che il token che viene letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.
 
 > [!NOTE]
-> Il parametro di dimensione è di tipo **unsigned**, non **size_t**. Usare un cast statico per convertire un **size_t** valore **unsigned** configurazioni di compilazione a 64 bit.
+> Il parametro di dimensione è di tipo **unsigned**, non **size_t**. Usare un cast statico per convertire un **size_t** valore **unsigned** configurazioni della build per 64 bit.
 
-L'esempio seguente mostra che il parametro di dimensione del buffer indica il numero massimo di caratteri, non di byte. Nella chiamata a **wscanf_s**, la larghezza del carattere indicata dal tipo di buffer non corrisponde la larghezza del carattere indicata dall'identificatore di formato.
+L'esempio seguente mostra che il parametro di dimensione del buffer indica il numero massimo di caratteri, non di byte. Nella chiamata a **wscanf_s**, la larghezza del carattere indicato dal tipo di buffer non corrisponde la larghezza del carattere indicato dall'identificatore di formato.
 
 ```C
 wchar_t ws[10];
 wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
 ```
 
-Il **S** identificatore di formato indica l'utilizzo della larghezza del carattere che è "opposta" alla larghezza predefinita supportata dalla funzione. La larghezza del carattere è a byte singolo, ma la funziona supporta caratteri a byte doppio. In questo esempio viene letta una stringa con un massimo di 9 caratteri wide a byte singolo e li inserisce in un buffer di caratteri wide a byte doppio. I caratteri vengono trattati come valori a byte singolo; i primi due caratteri vengono archiviati in `ws[0]`, i due successivi vengono archiviati in `ws[1]` e così via.
+Il **S** identificatore di formato indica l'utilizzo della larghezza del carattere che è "opposta" la larghezza predefinita supportata dalla funzione. La larghezza del carattere è a byte singolo, ma la funziona supporta caratteri a byte doppio. In questo esempio viene letta una stringa con un massimo di 9 caratteri wide a byte singolo e li inserisce in un buffer di caratteri wide a byte doppio. I caratteri vengono trattati come valori a byte singolo; i primi due caratteri vengono archiviati in `ws[0]`, i due successivi vengono archiviati in `ws[1]` e così via.
 
 Nel caso dei caratteri, un singolo carattere può essere letto come segue:
 
@@ -164,7 +154,7 @@ Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e 
 |**scanf_s**, **scanf_s_l**|\<stdio.h>|
 |**wscanf_s**, **wscanf_s_l**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
