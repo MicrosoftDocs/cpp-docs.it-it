@@ -1,10 +1,6 @@
 ---
-title: _CrtGetAllocHook | Microsoft Docs
-ms.custom: ''
+title: _CrtGetAllocHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetAllocHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb811353d0ac252411cc5bfc8beb408b6e707089
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394522"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514959"
 ---
 # <a name="crtgetallochook"></a>_CrtGetAllocHook
 
@@ -55,7 +45,7 @@ Restituisce la funzione di hook di allocazione attualmente definita.
 
 ## <a name="remarks"></a>Note
 
-**Crtgetallochook** recupera la funzione hook definita dal client dell'applicazione corrente per il processo di allocazione memoria libreria debug del runtime di C.
+**Crtgetallochook** recupera la funzione di hook definite dal client dell'applicazione corrente per il processo di allocazione della memoria libreria debug del runtime di C.
 
 Per informazioni sull'uso di altre funzioni di runtime capaci di eseguire l'hook e sulla scrittura delle funzioni di hook definite dal client, vedere [Writing Your Own Debug Hook Functions](/visualstudio/debugger/debug-hook-function-writing) (Scrittura di funzioni hook di debug).
 
