@@ -1,11 +1,6 @@
 ---
-title: feraiseexcept | Microsoft Docs
-ms.custom: ''
+title: feraiseexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feraiseexcept
 apilocation:
@@ -23,21 +18,15 @@ apitype: HeaderDef
 f1_keywords:
 - feraiseexcept
 - fenv/feraiseexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfd60612c92f8e3ff542fd22bbf5b4a01f7b7365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532249"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -53,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>Parametri
 
-*excepts*<br/>
+*tranne che ai*<br/>
 Eccezioni a virgola mobile da generare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -62,7 +51,7 @@ Se tutte le eccezioni specificate vengono generate correttamente, restituisce 0.
 
 ## <a name="remarks"></a>Note
 
-Il **feraiseexcept** funzione tenta di generare le eccezioni a virgola mobile specificate da *excepts*.   Il **feraiseexcept** funzione supporta queste macro delle eccezioni, definite in \<fenv. h >:
+Il **feraiseexcept** funzione tenta di generare le eccezioni a virgola mobile specificate da *tranne che ai*.   Il **feraiseexcept** funzione supporta queste macro di eccezioni, definite \<fenv. h >:
 
 |Macro di eccezioni|Descrizione|
 |---------------------|-----------------|
@@ -73,11 +62,11 @@ Il **feraiseexcept** funzione tenta di generare le eccezioni a virgola mobile sp
 |FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|
 |FE_ALLEXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
 
-Il *excepts* argomento può essere uguale a zero, uno dei valori di macro di eccezione o bit per bit o di due o più delle macro eccezione supportata. Se una delle macro di eccezioni specificata è FE_OVERFLOW o FE_UNDERFLOW, può essere generata l'eccezione FE_INEXACT come effetto collaterale.
+Il *eccetto* argomento può essere uguale a zero, uno dei valori di macro di eccezione o bit per bit o di due o più macro di eccezioni supportate. Se una delle macro di eccezioni specificata è FE_OVERFLOW o FE_UNDERFLOW, può essere generata l'eccezione FE_INEXACT come effetto collaterale.
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 
-**Sezione specifica Microsoft:** specificato eccezioni *excepts* vengono generati nell'ordine FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Tuttavia, FE_INEXACT può essere generato quando viene generato FE_OVERFLOW o FE_UNDERFLOW, anche se non specificato *excepts*. **Fine sezione specifica Microsoft**
+**Specifica di Microsoft:** le eccezioni specificate in *eccetto* vengono generati nell'ordine FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Tuttavia, FE_INEXACT può essere generata quando viene generata FE_OVERFLOW o FE_UNDERFLOW, anche se non specificato nella *eccetto*. **Fine sezione specifica Microsoft**
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,12 +1,6 @@
 ---
-title: Gli attributi di controllo scheda e schede | Microsoft Docs
-ms.custom: ''
+title: Schede e attributi del controllo Tab
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [MFC], reference topics
 - tab controls [MFC], attributes
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - tabs [MFC], attributes
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ca9c0ae5c54fe535906b45f1ef9bb2c06f408da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba63fdca32af28d0763dd4cf2da3465a99ddeb1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571990"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Schede e attributi del controllo Tab
 

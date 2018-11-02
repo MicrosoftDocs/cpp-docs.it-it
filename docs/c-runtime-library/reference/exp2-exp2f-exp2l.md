@@ -1,11 +1,6 @@
 ---
-title: exp2, exp2f, exp2l | Microsoft Docs
-ms.custom: ''
+title: exp2, exp2f, exp2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - exp2
 - exp2f
@@ -30,23 +25,17 @@ f1_keywords:
 - math/exp2f
 - exp2l
 - math/exp2l
-dev_langs:
-- C++
 helpviewer_keywords:
 - exp2 function
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aea847d367200635c8fecbd694f8a50be859b3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396722"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562760"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -83,12 +72,12 @@ Valore dell'esponente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce l'esponente in base 2 di *x*, vale a dire, 2<sup>x</sup>. In caso contrario, restituisce uno dei valori seguenti:
+Se l'operazione riesce, restituisce l'esponente in base 2 del *x*, vale a dire 2<sup>x</sup>. In caso contrario, verrà restituito uno dei valori seguenti:
 
 |Problema|INVIO|
 |-----------|------------|
 |*x* = ± 0|1|
-|*x* = - INFINITY|+0|
+|*x* = - infinito|+0|
 |*x* = + INFINITY|+INFINITO|
 |*x* = NaN|NaN|
 |Errore di intervallo di overflow|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
@@ -104,7 +93,7 @@ Dato che C++ consente l'overload, è possibile chiamare overload di **exp2** che
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**EXP**, **expf**, **expl**|\<math.h>|\<cmath>|
+|**EXP**, **expf**, **soluz**|\<math.h>|\<cmath>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

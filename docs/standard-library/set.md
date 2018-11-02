@@ -1,27 +1,17 @@
 ---
-title: '&lt;set&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;set&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <set>
-dev_langs:
-- C++
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aacfbda591755af86857da6c7d0b7891d2e72ebb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5f33cbb179e3d0304f8128066dc04d6c3927d8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857051"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565373"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 

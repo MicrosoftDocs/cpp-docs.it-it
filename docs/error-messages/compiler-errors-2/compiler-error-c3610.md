@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3610 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3610
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3610
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3610
 ms.assetid: 9349a348-9d37-4a00-9eab-481039268d31
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b46b3669978ff3735d5a16015ca0a01e65f07ae9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9965e6420171b2ea48c8fb7bacc0a5a37ea2f227
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591061"
 ---
 # <a name="compiler-error-c3610"></a>Errore del compilatore C3610
 

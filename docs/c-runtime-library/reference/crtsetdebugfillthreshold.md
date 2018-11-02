@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDebugFillThreshold | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDebugFillThreshold
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0980331389a36fa123c6ee64989296f5afec5c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398659"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602202"
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
@@ -55,7 +45,7 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 ### <a name="parameters"></a>Parametri
 
 *newThreshold*<br/>
-Nuova dimensione di soglia in byte.
+Nuova dimensione della soglia in byte.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -63,7 +53,7 @@ Il valore di soglia precedente.
 
 ## <a name="remarks"></a>Note
 
-Le versioni di debug di alcune funzioni CRT con sicurezza avanzata riempiono il buffer passato con un carattere speciale (0xFE). Ciò consente di individuare i casi in cui la dimensione errata è stata passata alla funzione. Sfortunatamente, questo riduce anche le prestazioni. Per migliorare le prestazioni, utilizzare **crtsetdebugfillthreshold** per disabilitare il riempimento del buffer per i buffer più grandi il *newThreshold* soglia. Un *newThreshold* lo disabilita il valore 0 per tutti i buffer.
+Versioni di debug di alcune funzioni CRT con sicurezza avanzata riempiono il buffer passato con un carattere speciale (0xFE). Ciò consente di individuare i casi in cui la dimensione errata è stata passata alla funzione. Sfortunatamente, questo riduce anche le prestazioni. Per migliorare le prestazioni, usare **crtsetdebugfillthreshold** per disabilitare il riempimento del buffer per i buffer più grandi il *newThreshold* soglia. Oggetto *newThreshold* lo disabilita il valore 0 per tutti i buffer.
 
 La soglia predefinita è **SIZE_T_MAX**.
 

@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcat_s, _mbsnbcat_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcat_s, _mbsnbcat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
@@ -26,8 +22,6 @@ f1_keywords:
 - mbsnbcat_s
 - _mbsnbcat_s_l
 - mbsnbcat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsncat function
 - mbsnbcat_s function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead47b21a066d7e55c22d6bc8fba63cb73a0224
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497331"
 ---
 # <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
-Aggiunge a una stringa di caratteri multibyte, al massimo i primi **n** byte di un'altra stringa di caratteri multibyte. Queste sono versioni di [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Aggiunge una stringa di caratteri multibyte, al massimo i primi **n** byte di due stringhe di caratteri multibyte. Queste sono versioni di [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -93,13 +83,13 @@ errno_t _mbsnbcat_s_l(
 Stringa di destinazione di caratteri multibyte con terminazione Null.
 
 *sizeInBytes*<br/>
-Dimensioni di *dest* buffer in byte.
+Dimensioni dei *dest* buffer in byte.
 
 *src*<br/>
 Stringa di origine di caratteri multibyte con terminazione Null.
 
 *count*<br/>
-Numero di byte da *src* da aggiungere alla *dest*.
+Numero di byte dal *src* da aggiungere alla *dest*.
 
 *locale*<br/>
 Impostazioni locali da usare.
@@ -110,7 +100,7 @@ Zero in caso di esito positivo; in caso contrario un codice di errore.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|**distruttore**|*sizeInBytes*|*src*|Valore restituito|
+|**dest**|*sizeInBytes*|*src*|Valore restituito|
 |------------|-------------------|-----------|------------------|
 |**NULL**|qualsiasi|qualsiasi|**EINVAL**|
 |Qualsiasi|<= 0|qualsiasi|**EINVAL**|
@@ -120,9 +110,9 @@ Se si verifica una qualsiasi condizione di errore, la funzione genera un errore 
 
 ## <a name="remarks"></a>Note
 
-Il **mbsnbcat_s** funzione aggiunge *dest*, al massimo, il primo *conteggio* byte di *src*. Se il byte immediatamente prima del carattere null in *dest* è un byte iniziale, viene sovrascritto dal byte iniziale di *src*. In caso contrario, il byte iniziale di *src* sovrascrive il carattere di terminazione null di *dest*. Se un byte null viene visualizzato nella *src* prima *conteggio* byte vengano aggiunti, **mbsnbcat_s** aggiunge tutti i byte da *src*, fino a null carattere. Se *conteggio* è maggiore della lunghezza di *src*, la lunghezza del *src* è usato al posto di *conteggio*. La stringa risultante termina con un carattere null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+Il **mbsnbcat_s** funzione Accoda alla *dest*, al massimo, il primo *count* byte del *src*. Se il byte immediatamente prima del carattere null in *dest* è un byte iniziale, viene sovrascritto dal byte iniziale di *src*. In caso contrario, il byte iniziale di *src* sovrascrive il carattere null di terminazione del *dest*. Se un byte null viene visualizzato nella *src* prima *conteggio* byte vengano aggiunti, **mbsnbcat_s** aggiunge tutti i byte da *src*, fino al carattere null carattere. Se *conteggio* è maggiore della lunghezza di *src*, la lunghezza del *src* viene usato al posto della *conteggio*. La stringa risultante termina con un carattere null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno il **l** suffisso utilizzare le impostazioni locali correnti, mentre quelle che hanno il **l** suffisso usano il parametro delle impostazioni locali che passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali; vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno le **l** suffisso usano le impostazioni locali correnti, mentre quelle che hanno il **l** suffisso usano il parametro delle impostazioni locali di passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente eliminando quindi la necessità di specificare un argomento di dimensione e possono usare automaticamente le funzioni più recenti e sicure che sostituiscono quelle precedenti, meno sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

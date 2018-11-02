@@ -1,28 +1,17 @@
 ---
-title: out (attributo COM C++) | Microsoft Docs
-ms.custom: ''
+title: out (attributo COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.out
-dev_langs:
-- C++
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: fbb7bc07ab3b3942f1a3a6fa20c69327c0bd1a53
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 15b82ddca42f9b70ac16538cea19f8aedd799c05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574447"
 ---
 # <a name="out-c"></a>out (C++)
 

@@ -1,27 +1,17 @@
 ---
-title: Errore del compilatore C3296 | Microsoft Docs
-ms.custom: ''
+title: Errore del compilatore C3296
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3296
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3296
 ms.assetid: fc4c9dcd-16cf-4eee-a1ac-c43e7c29e443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 585d9eaaf37b913a0be339ccabd230aa79142526
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e9787b063a5a37af8d0e0fdd04492a743792646
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588110"
 ---
 # <a name="compiler-error-c3296"></a>Errore del compilatore C3296
 

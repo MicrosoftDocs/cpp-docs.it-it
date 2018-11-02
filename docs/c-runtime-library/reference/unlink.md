@@ -1,10 +1,6 @@
 ---
-title: unlink | Microsoft Docs
-ms.custom: ''
+title: unlink
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - unlink
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - unlink
-dev_langs:
-- C++
 helpviewer_keywords:
 - unlink function
 ms.assetid: 2cd82055-5770-48be-88ee-4b2c70541c46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3feab41c5f095253776991877989d9642fb60952
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21a424824778724b64c5108a4168e1cd90b8f629
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601669"
 ---
 # <a name="unlink"></a>unlink
 

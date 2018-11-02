@@ -1,12 +1,6 @@
 ---
-title: Finestre di dialogo in OLE | Microsoft Docs
-ms.custom: ''
+title: Finestre di dialogo in OLE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC dialog boxes [MFC], OLE dialog boxes
 - OLE dialog boxes
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eaa361a75843fb9f99e3378763a62cfaeeeb07c2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 53e802e973ca78619252fcc4100a7cc50009f2ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383623"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618507"
 ---
 # <a name="dialog-boxes-in-ole"></a>Finestre di dialogo in OLE
 

@@ -1,10 +1,6 @@
 ---
-title: _RTC_GetErrDesc | Microsoft Docs
-ms.custom: ''
+title: _RTC_GetErrDesc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_GetErrDesc
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - RTC_GetErrDesc
 - _RTC_GetErrDesc
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7154f6de192ee6b681ed0419126f3d4b682abb8c
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d164626ea89bbe10f5b2ffe4224bf6381e40bab0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451345"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590307"
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 

@@ -1,29 +1,19 @@
 ---
-title: Spectre | Microsoft Docs
-ms.custom: ''
+title: Spectre
 ms.date: 1/23/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - spectre_cpp
 - spectre
 - nomitigation
-dev_langs:
-- C++
 helpviewer_keywords:
 - __declspec keyword (C++), spectre
 - spectre __declspec keyword
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d919a810ed93e40218476369ef9981da59b89bb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2377a3c23be1e27bfe4f2df23eb00823635fa05d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592010"
 ---
 # <a name="spectre"></a>Spectre
 
@@ -46,7 +36,7 @@ Analisi degli esperti potrebbero determinare che una funzione è protetta da un 
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente viene illustrato come utilizzare `__declspec(spectre(nomitigation))`.
+L'esempio di codice mostra come usare un oggetto `__declspec(spectre(nomitigation))`.
 
 ```cpp
 // compile with: /c /Qspectre

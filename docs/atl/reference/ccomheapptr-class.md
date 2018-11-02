@@ -1,29 +1,19 @@
 ---
-title: Classe CComHeapPtr | Microsoft Docs
-ms.custom: ''
+title: Classe CComHeapPtr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComHeapPtr
 - ATLBASE/ATL::CComHeapPtr
 - ATLBASE/ATL::CComHeapPtr::CComHeapPtr
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3455e88c5a9852c902702544a0f915e8d20dc64e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eaa21700f63ae07565dba4b8b3b5dabac69e0168
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043235"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553734"
 ---
 # <a name="ccomheapptr-class"></a>Classe CComHeapPtr
 

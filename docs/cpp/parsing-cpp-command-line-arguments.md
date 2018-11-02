@@ -1,12 +1,6 @@
 ---
-title: Analisi di argomenti della riga di comando C++ | Microsoft Docs
-ms.custom: ''
+title: Analisi di argomenti della riga di comando C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - quotation marks, command-line arguments
 - double quotation marks
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a48e731e714f59a249e5fa689e046e94faf360e6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 53873fa9340253ab5e8459eb442385641246f930
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040219"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471032"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analisi di argomenti della riga di comando C++
 
