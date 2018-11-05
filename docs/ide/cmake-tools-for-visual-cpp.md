@@ -1,7 +1,7 @@
 ---
 title: Progetti CMake in Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235100"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143731"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Progetti CMake in Visual C++
 
@@ -89,7 +89,7 @@ Non tutti gli elementi della cache vengono importati.  Proprietà quali il gener
 Per compilare un progetto di CMake, sono disponibili le opzioni seguenti:
 
 1. Selezionare la destinazione nell'elenco a discesa **Debug** e premere **F5**, oppure fare clic sul pulsante **Run** (triangolo verde). Il progetto viene compilato automaticamente prima di tutto, come una soluzione Visual Studio.
-1. Fare clic con il pulsante destro del mouse su CMakeLists.txt e scegliere **Build**  dal menu di scelta rapida. Se nella struttura delle cartelle sono presenti più destinazioni, è possibile scegliere di compilare tutte o solo una destinazione specifica, oppure
+1. Fare clic con il pulsante destro del mouse su CMakeLists.txt e scegliere **Build**  dal menu di scelta rapida. Se nella struttura delle cartelle sono presenti più destinazioni, è possibile scegliere di compilare tutte o solo una destinazione specifica.
 1. Nel menu principale, selezionare **Genera | Genera soluzione** (**F7** o **Ctrl+Shift+B**). Assicurarsi che sia già selezionata una destinazione di CMake nell'elenco a discesa **Elemento di avvio** nella barra degli strumenti **Generale**.
 
 ![Comando del menu di compilazione CMake](media/cmake-build-menu.png "Comando del menu di compilazione CMake")
@@ -215,7 +215,7 @@ Per specificare un generatore Visual Studio, aprire CMakeSettings.json dal menu 
 
 1. **buildRoot**: esegue il mapping a **-DCMAKE_BINARY_DIR** esegue lo switch e specifica dove verrà creata la cache di CMake. Se la cartella non esiste, verrà creata.
 
-1. **variabili**: contiene una coppia nome-valore delle variabili di CMake che verrà trasferita come **-D**_nome_**=**_valore_ a CMake. Se le istruzioni per la compilazione del progetto CMake specificano l'aggiunta di qualsiasi variabile direttamente al file di cache di CMake, si consiglia di aggiungerle qui. L'esempio seguente illustra come specificare la coppia nome-valore:
+1. **variabili**: contiene una coppia nome-valore di variabili CMake che verrà trasferita come **-D** *_nome_=_valore_* a CMake. Se le istruzioni per la compilazione del progetto CMake specificano l'aggiunta di qualsiasi variabile direttamente al file di cache di CMake, si consiglia di aggiungerle qui. L'esempio seguente illustra come specificare la coppia nome-valore:
 
 ```json
 "variables": [
@@ -285,7 +285,7 @@ CMakeSettings.json supporta gli ambienti ereditati. Questa funzionalità consent
 
 L'esempio precedente equivale all'esecuzione del **Prompt dei comandi per gli sviluppatori per VS 2017** con gli argomenti **-arch=amd64 -host_arch=amd64**.
 
-La tabella seguente mostra i valori predefiniti e i loro equivalenti nella riga di comando:
+La tabella seguente mostra i valori predefiniti dei valori predefiniti:
 
 |Nome contesto|Descrizione|
 |-----------|-----------------|

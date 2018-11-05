@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f005beb9bc71724c289322822a3bae4c03f19d48
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084113"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136250"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -128,7 +128,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -271,7 +271,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
    Si supponga, ad esempio, che il codice definisca un operatore **new** e **delete di posizionamento**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -318,14 +318,14 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    Il codice precedente genera l'errore seguente in Visual Studio 2015:
@@ -525,7 +525,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Classi base virtuali private ed ereditarietà indiretta**
 
-   Le versioni precedenti del compilatore consentivano a una classe derivata di chiamare le funzioni di membro relative alle classi base *indirettamente derivate*`private virtual`. Questo comportamento precedente non era corretto e non è conforme allo standard C++. Il compilatore non accetta più il codice scritto in questo modo e genera l'errore del compilatore C2280 di conseguenza.
+   Le versioni precedenti del compilatore consentivano a una classe derivata di chiamare le funzioni di membro relative alle classi base `private virtual` *indirettamente derivate*. Questo comportamento precedente non era corretto e non è conforme allo standard C++. Il compilatore non accetta più il codice scritto in questo modo e genera l'errore del compilatore C2280 di conseguenza.
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -834,7 +834,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **#include: uso dell'identificatore di directory padre '..' nel percorso** (influisce solo su `/Wall` `/WX`)
 
-     Le versioni precedenti del compilatore non è stato rilevato l’utilizzo dell’identificatore di directory padre ‘... ‘ nel percorso del  `#include` direttive. Il codice scritto in questo modo è in genere usato in modo da includere le intestazioni che esistono di fuori del progetto usando in modo non corretto percorsi relativi al progetto. Questo comportamento precedente creava il rischio che il programma potesse essere compilato con l'inclusione di un file di origine diversa rispetto a quello previsto dal programmatore, o che i percorsi relativi non sarebbero stati portabili in altri ambienti di compilazione. Il compilatore ora rileva e invia una notifica al programmatore riguardo il codice scritto in questo modo e genera un avviso del compilatore C4464 facoltativo, se abilitato.
+   Le versioni precedenti del compilatore non è stato rilevato l’utilizzo dell’identificatore di directory padre ‘... ‘ nel percorso del  `#include` direttive. Il codice scritto in questo modo è in genere usato in modo da includere le intestazioni che esistono di fuori del progetto usando in modo non corretto percorsi relativi al progetto. Questo comportamento precedente creava il rischio che il programma potesse essere compilato con l'inclusione di un file di origine diversa rispetto a quello previsto dal programmatore, o che i percorsi relativi non sarebbero stati portabili in altri ambienti di compilazione. Il compilatore ora rileva e invia una notifica al programmatore riguardo il codice scritto in questo modo e genera un avviso del compilatore C4464 facoltativo, se abilitato.
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -1465,7 +1465,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    Esempio (prima):
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1473,7 +1473,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1483,7 +1483,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    Esempio (dopo)
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1491,7 +1491,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1774,7 +1774,7 @@ Usare il nuovo framework unit test di C++ in Visual Studio per scrivere unit tes
 
 #### <a name="architecture-dependency-graphs"></a>Grafici delle dipendenze dell'architettura
 
-Per comprendere meglio il codice, è ora possibile generare grafici delle dipendenze per i file binari, di classe, di spazio dei nomi e di inclusione in una soluzione. Nella barra dei menu scegliere **Architettura** > **Genera grafico dipendenze** e quindi **For Solution** (Per soluzione) o **For Include File** (Per file di inclusione) per generare un grafico dipendenze. Completata la generazione del grafico, è possibile esaminarlo espandendo ogni nodo, verificare le relazioni di dipendenza passando da un nodo all'altro ed esplorare il codice sorgente scegliendo **Visualizza contenuto** nel menu di scelta rapida per un nodo. Per generare un grafico dipendenze per i file di inclusione, nel menu di scelta rapida per un file di codice sorgente *.cpp o un file di intestazione *.h scegliere **Generate Graph of Include Files** (Genera grafico dei file di inclusione).
+Per comprendere meglio il codice, è ora possibile generare grafici delle dipendenze per i file binari, di classe, di spazio dei nomi e di inclusione in una soluzione. Nella barra dei menu scegliere **Architettura** > **Genera grafico dipendenze** e quindi **For Solution** (Per soluzione) o **For Include File** (Per file di inclusione) per generare un grafico dipendenze. Completata la generazione del grafico, è possibile esaminarlo espandendo ogni nodo, verificare le relazioni di dipendenza passando da un nodo all'altro ed esplorare il codice sorgente scegliendo **Visualizza contenuto** nel menu di scelta rapida per un nodo. Per generare un grafico dipendenze per i file di inclusione, nel menu di scelta rapida per un file di codice sorgente \*.cpp o un file di intestazione \*.h scegliere **Genera grafico dei file di inclusione**.
 
 #### <a name="architecture-explorer"></a>Esplora architettura
 
@@ -2100,7 +2100,7 @@ Il compilatore include modifiche di rilievo in questa versione.
 - Aggiunta l'opzione del linker `/CLRIMAGETYPE` per specificare il tipo di immagine CLR.
 - Aggiunta l'opzione del linker `/CLRSUPPORTLASTERROR` per mantenere l'ultimo codice di errore per le chiamate PInvoke.
 - Aggiunta l'opzione del linker `/CLRTHREADATTRIBUTE` per impostare l'attributo thread CLR.
-- Aggiunta l'opzione del linker `/CLRUNMANAGEDCODECHECK` per aggiunge SupressUnmanagedCodeSecurityAttribute.
+- Aggiunta l'opzione del linker `/CLRUNMANAGEDCODECHECK` per aggiunge SuppressUnmanagedCodeSecurityAttribute.
 - Aggiunta l'opzione del linker `/ERRORREPORT` per segnalare errori interni del linker.
 - Rimossa l'opzione del linker `/EXETYPE`. Il linker non supporta più la creazione di driver di dispositivo per Windows 95 e Windows 98. Usare un DDK appropriato per creare i driver di dispositivo. La parola chiave EXETYPE non è più valida per i file di definizione del modulo.
 - Aggiunta l'opzione del linker `/FUNCTIONPADMIN` per creare un'immagine con patch a caldo.

@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441369"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136120"
 ---
 # <a name="extract-function"></a>Estrai funzione
 **Cosa:** consente di trasformare un frammento di codice in una funzione.
@@ -41,7 +41,7 @@ ms.locfileid: "46441369"
 
 1. Nella finestra **Estrai funzione/metodo (sperimentale)** immettere il nuovo nome della funzione, selezionare il punto in cui inserire il codice e fare clic sul pulsante **OK**.
 
-   ![Funzione Estrai funzione](images/extractfunction_dialog.png)
+   ![Finestra di dialogo Estrai funzione](images/extractfunction_dialog.png)
 
 1. La nuova funzione verrà creata nel punto specificato, un prototipo di funzione nel file di intestazione corrispondente e il codice originale verrà modificato per chiamare tale funzione.
 

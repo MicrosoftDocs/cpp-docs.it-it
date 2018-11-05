@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98965b94c83b69e15c38319d7bc5a6e4151b323e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 91b97c653a5f035a767fbedcfcbfdfa7ca178327
+ms.sourcegitcommit: 038f1406b1172318f8832371ad14176f788c44fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704886"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50132153"
 ---
 # <a name="link-options"></a>Opzioni collegamento
 
@@ -57,6 +57,7 @@ Le versioni CLR in modalità pure di questi oggetti sono deprecate in Visual Stu
 |binmode.obj|pbinmode.obj|Imposta la modalità binaria come modalità di conversione di file predefinita. Vedere [_fmode](../c-runtime-library/fmode.md).|
 |chkstk.obj|N/D|Fornisce il controllo dello stack e il supporto di alloca quando non si usa CRT.|
 |commode.obj|pcommode.obj|Imposta il flag di commit globale su "commit". Vedere [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) e [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md).|
+|exe_initialize_mta.lib|N/D|Inizializza l'apartment MTA durante l'avvio del file EXE, che consente l'uso di oggetti COM in puntatori intelligenti globali. Poiché questa opzione emette un riferimento all'apartment MTA durante l'arresto, non utilizzarla per le DLL. Il collegamento a questo oggetto equivale a includere combase.h e a definire _EXE_INITIALIZE_MTA. |
 |fp10.obj|N/D|Modifica il controllo della precisione predefinito in 64 bit. Vedere [Supporto delle funzioni a virgola mobile](../c-runtime-library/floating-point-support.md).|
 |invalidcontinue.obj|pinvalidcontinue.obj|Imposta un gestore di parametri non validi predefinito che non esegue alcuna operazione, vale a dire che i parametri non validi passati alle funzioni CRT impostano semplicemente errno e restituiscono un risultato di errore.|
 |loosefpmath.obj|N/D|Assicura che il codice a virgola mobile tolleri i valori denormalizzati.|
