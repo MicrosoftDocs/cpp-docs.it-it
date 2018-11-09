@@ -1,18 +1,12 @@
 ---
-title: Limiti dei campi percorso | Microsoft Docs
-ms.custom: ''
+title: Limiti dei campi percorso
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _MAX_EXT
 - _MAX_DIR
 - _MAX_PATH
 - _MAX_FNAME
 - _MAX_DRIVE
-dev_langs:
-- C++
 helpviewer_keywords:
 - path field constants
 - MAX_FNAME constant
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0672245a87cdbcf2a4a6dba6d36c675f3faafbc5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89609de3fc5584a960480bff83566f5e38c8be1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390394"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477532"
 ---
 # <a name="path-field-limits"></a>Limiti dei campi percorso
 

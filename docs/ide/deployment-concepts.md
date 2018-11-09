@@ -1,12 +1,6 @@
 ---
-title: Concetti della distribuzione | Microsoft Docs
-ms.custom: ''
+title: Concetti principali della distribuzione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows Installer [C++]
 - dependencies [C++], application deployment and
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea2039cd9fa1c5071da143f557406d028f464d7e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ec2fd28aff6e7021ca978ccd0e3af86a6dbd36c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462686"
 ---
 # <a name="deployment-concepts"></a>Concetti principali della distribuzione
 

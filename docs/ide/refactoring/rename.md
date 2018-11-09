@@ -1,21 +1,13 @@
 ---
-title: Rinomina | Microsoft Docs
-ms.custom: ''
+title: Rinomina
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a00eed341e0fc1ca8573e2f66744ea04055f259
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b677d825675ebb0b60da8f43f778774e2e08695e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399207"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455510"
 ---
 # <a name="rename"></a>Rinomina
 **Cosa:** consente di rinominare gli identificatori per i simboli del codice, ad esempio campi, variabili locali, metodi, spazi dei nomi, proprietà e tipi.

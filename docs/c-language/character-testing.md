@@ -1,23 +1,13 @@
 ---
-title: Test del carattere | Microsoft Docs
-ms.custom: ''
+title: Test del carattere
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 376ba061-bae3-427e-9569-33fa5949a199
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2c558c5d32f75561d5722a656450d5f18f5166a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 31a90f28d710ffc1b58f9c6b3fcfd01fd8d2d00c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084939"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523201"
 ---
 # <a name="character-testing"></a>Test del carattere
 

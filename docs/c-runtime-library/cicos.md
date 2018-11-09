@@ -1,10 +1,6 @@
 ---
-title: _CIcos | Microsoft Docs
-ms.custom: ''
+title: _CIcos
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CIcos
 apilocation:
@@ -19,22 +15,16 @@ apitype: DLLExport
 f1_keywords:
 - CIcos
 - _CIcos
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d60c9ae40cc0a432fd5367d721a771fd0e25e66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc6cb9a45a7467e63129bd859817ebdfc23a0160
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386712"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497229"
 ---
 # <a name="cicos"></a>_CIcos
 

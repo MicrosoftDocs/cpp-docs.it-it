@@ -1,27 +1,17 @@
 ---
-title: Dichiaratori e dichiarazioni di variabili | Microsoft Docs
-ms.custom: ''
+title: Dichiaratori e dichiarazioni di variabili
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - declaring variables, declarators
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5bcef865eeaf82415cf1f8f8e1523ee2b783a46b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 711c0eb4e0b652f86de74803d5725c5dc3054b31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759281"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562786"
 ---
 # <a name="declarators-and-variable-declarations"></a>Dichiaratori e dichiarazioni di variabili
 
@@ -30,7 +20,7 @@ Nel resto di questa sezione viene descritto il formato e il significato delle di
 |Il tipo di variabile|Descrizione|
 |----------------------|-----------------|
 |[Variabili semplici](../c-language/simple-variable-declarations.md)|Le variabili contenenti un singolo valore con tipo integrale o a virgola mobile|
-|[Array](../c-language/array-declarations.md)|Le variabili composte di una raccolta di elementi con lo stesso tipo|
+|[Matrici](../c-language/array-declarations.md)|Le variabili composte di una raccolta di elementi con lo stesso tipo|
 |[Puntatori](../c-language/pointer-declarations.md)|Le variabili che puntano ad altre variabili e che contengono le posizioni delle variabili (sotto forma di indirizzi) invece dei valori|
 |[Variabili di enumerazione](../c-language/c-enumeration-declarations.md)|Le variabili semplici con tipo integrale che contengono un valore derivante da un set di costanti Integer denominate|
 |[Strutture](../c-language/structure-declarations.md)|Le variabili composte di una raccolta di valori che può contenere tipi differenti|

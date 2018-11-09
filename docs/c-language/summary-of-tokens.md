@@ -1,23 +1,13 @@
 ---
-title: Riepilogo di token | Microsoft Docs
-ms.custom: ''
+title: Riepilogo di token
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 2978cbf6-e66e-46fc-9938-caa052f2ccf7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e331661fc011fe0ab98a762f5c7081c35f06363c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f295f59ce5767fce5416dde3545188cb0b1d4408
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758479"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549539"
 ---
 # <a name="summary-of-tokens"></a>Riepilogo di token
 

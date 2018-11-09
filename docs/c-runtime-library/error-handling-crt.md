@@ -1,30 +1,20 @@
 ---
-title: Gestione degli errori (CRT) | Microsoft Docs
-ms.custom: ''
+title: Gestione degli errori (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.errors
-dev_langs:
-- C++
 helpviewer_keywords:
 - error handling, C routines for
 - logic errors
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f39fe3743c023bb0c4cb3130400e9bcb7b97db1b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7b3a5676c9297b1d7805f92b3a15cc71518ecd65
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704847"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551216"
 ---
 # <a name="error-handling-crt"></a>Gestione degli errori (CRT)
 

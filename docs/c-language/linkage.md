@@ -1,26 +1,16 @@
 ---
-title: Collegamento | Microsoft Docs
-ms.custom: ''
+title: Collegamento
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - linkage [C++]
 - linkage [C++], identifier names and scope
 ms.assetid: 986ee549-2d6c-487a-9e3b-a1f643bc5bdc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f633d3ebd366c0fa85733f96e5c11e6857a37ae6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fb9be0cbcb0622a3d1af2ba4fe56ef8f1cf8f16
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46064321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476216"
 ---
 # <a name="linkage"></a>Collegamento
 

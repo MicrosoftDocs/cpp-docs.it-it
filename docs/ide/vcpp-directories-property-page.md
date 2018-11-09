@@ -1,10 +1,6 @@
 ---
-title: Pagina delle proprietà Directory di VC++ | Microsoft Docs
-ms.custom: ''
+title: Directory di VC++ (pagina delle proprietà)
 ms.date: 10/09/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCDirectories.IncludePath
 - VC.Project.VCDirectories.ReferencePath
@@ -14,21 +10,15 @@ f1_keywords:
 - VC.Project.VCDirectories.LibraryPath
 - VS.ToolsOptionsPages.Projects.VCDirectories
 - VC.Project.VCDirectories.ExcludePath
-dev_langs:
-- C++
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1799bfedaacd5e1560b1294524f717db8912f6b0
-ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
+ms.openlocfilehash: eb0f16f0e9f917a991afc0e624c9fac9eb426fe2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072398"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455627"
 ---
 # <a name="vc-directories-property-page-windows"></a>Pagina delle proprietà Directory di VC++ (Windows)
 

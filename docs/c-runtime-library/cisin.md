@@ -1,10 +1,6 @@
 ---
-title: _CIsin | Microsoft Docs
-ms.custom: ''
+title: _CIsin
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apiname:
 - _CIsin
 apilocation:
@@ -19,22 +15,16 @@ apitype: DLLExport
 f1_keywords:
 - CIsin
 - _CIsin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CIsin intrinsic
 - CIsin intrinsic
 ms.assetid: f215f39a-2341-4f1c-ba8e-cb522451ceb2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d4593b02b08b1828ff4b29c8f55bfcaf4baa0c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89350cdc61b7c96b09242731f89c934727e44a19
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481304"
 ---
 # <a name="cisin"></a>_CIsin
 

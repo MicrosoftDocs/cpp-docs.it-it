@@ -1,27 +1,17 @@
 ---
-title: Parole chiave C | Microsoft Docs
-ms.custom: ''
+title: Parole chiave C
 ms.date: 10/09/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9a5255609c3abb4846ce08a2163407eee6f240c
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 8751889124c7c621ae1d4dad5a523762e7190ebb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161905"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580726"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 

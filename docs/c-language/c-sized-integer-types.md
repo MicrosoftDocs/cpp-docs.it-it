@@ -1,25 +1,15 @@
 ---
-title: Tipi Integer con dimensione C | Microsoft Docs
-ms.custom: ''
+title: Tipi Integer con dimensione C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - sized integer types
 ms.assetid: 0d6199b4-d0ab-4e8c-a769-785f5afb92eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 037ff61dbe1d1d42d8b0c751fcdc83f01a8dd112
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ced46b401296045909f5c812ca09abd3a5887f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101423"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432097"
 ---
 # <a name="c-sized-integer-types"></a>Tipi Integer con dimensione C
 

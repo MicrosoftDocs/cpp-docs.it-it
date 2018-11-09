@@ -1,28 +1,18 @@
 ---
-title: Archiviazione e allineamento di strutture | Microsoft Docs
-ms.custom: ''
+title: Archiviazione e allineamento di strutture
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - alignment of structures
 - structure storage
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 867b549575847a59f7d1e8a61792c8b097383a10
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc04eda222b4fed4fb24f8d9ef138f9503093ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092830"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460619"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Archiviazione e allineamento di strutture
 

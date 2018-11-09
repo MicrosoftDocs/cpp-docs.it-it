@@ -1,23 +1,13 @@
 ---
-title: Dimensioni massime delle matrici | Microsoft Docs
-ms.custom: ''
+title: Dimensione di matrice massima
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 4c782cf6-73f3-40b0-b306-229d22da4ee1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 247db5f61fe3ec4fcd631c90ac85e8c7a4b9e987
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e678816c904e71ec35297366c16665798d1c445b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057600"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463973"
 ---
 # <a name="largest-array-size"></a>Dimensione di matrice massima
 

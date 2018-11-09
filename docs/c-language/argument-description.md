@@ -1,12 +1,6 @@
 ---
-title: Descrizione di argomenti | Microsoft Docs
-ms.custom: ''
+title: Descrizione di argomenti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - envp argument
 - main function, syntax
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b8508b5a14e67092339a456f5b85f78d17906a5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 64c94798587ad64f369ca0ed03a7251d0eb9acb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447151"
 ---
 # <a name="argument-description"></a>Descrizione di argomenti
 

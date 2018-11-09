@@ -1,30 +1,20 @@
 ---
-title: Ricerca e ordinamento | Microsoft Docs
-ms.custom: ''
+title: Ricerca e ordinamento
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.programs
-dev_langs:
-- C++
 helpviewer_keywords:
 - sorting data
 - data [CRT], searching
 - searching [C++], CRT search functions
 - searching [C++]
 ms.assetid: 15e984f0-e155-46f5-8542-51c458792f54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 58cb583ed09e0caeaec6c4ce155fa66ce3fc4090
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7bdef8712d729195a948f616b2bde07c6be975c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410396"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497086"
 ---
 # <a name="searching-and-sorting"></a>Ricerca e ordinamento
 

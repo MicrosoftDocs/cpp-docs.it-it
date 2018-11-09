@@ -1,10 +1,6 @@
 ---
-title: Specifica di strumenti di compilazione personalizzati | Microsoft Docs
-ms.custom: ''
+title: Specifica di strumenti di compilazione personalizzata
 ms.date: 06/05/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -15,22 +11,16 @@ f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolAfterTargets
 - VC.Project.VCCustomBuildTool.Description
 - VC.Project.VCCustomBuildTool.AdditionalInputs
-dev_langs:
-- C++
 helpviewer_keywords:
 - build tools (C++), specifying
 - custom build tools (C++), specifying
 - builds (C++), custom build tools
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9e04cd1d5599663c878d7e9b06d9b0bd05a76242
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a4367f3ed914ff948969473b10f4772f1540936d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433907"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581805"
 ---
 # <a name="specify-custom-build-tools"></a>Specificare strumenti di compilazione personalizzati
 

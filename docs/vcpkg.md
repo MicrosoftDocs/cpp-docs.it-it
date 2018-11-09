@@ -1,25 +1,18 @@
 ---
-title: 'vcpkg: gestione pacchetti per C++ per Windows, Linux e MacOS | Microsoft Docs'
+title: 'vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux e MacOS'
 description: vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifica notevolmente l'acquisizione e installazione delle librerie C++ open source in Windows.
-keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: conceptual
-dev_langs:
-- C++
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 03446a9b4e1ec3a0425104b9e755efb902f79219
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072694"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598796"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux e MacOS
 

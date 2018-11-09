@@ -1,28 +1,18 @@
 ---
-title: Aggiunta guidata metodo | Microsoft Docs
-ms.custom: ''
+title: Aggiunta guidata metodo
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45c3b0ca9a3e6c88e4ae40a5eb52aeb3223d2860
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e03f1fe925a82baa8c291ebf6fc6ccca34a00b90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547849"
 ---
 # <a name="add-method-wizard"></a>Aggiunta guidata metodo
 

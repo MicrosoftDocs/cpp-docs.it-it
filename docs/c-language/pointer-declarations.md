@@ -1,28 +1,18 @@
 ---
-title: Dichiarazioni di puntatori | Microsoft Docs
-ms.custom: ''
+title: Dichiarazioni di puntatori
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointer declarations
 - declarations, pointers
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c09e73eec0f020ccc334d443248feb09631a0f7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095937"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432470"
 ---
 # <a name="pointer-declarations"></a>Dichiarazioni di puntatori
 

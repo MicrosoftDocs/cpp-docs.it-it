@@ -1,27 +1,17 @@
 ---
-title: Implementazione guidata punto di connessione | Microsoft Docs
-ms.custom: ''
+title: Implementazione guidata punto di connessione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.impl.cp.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - Implement Connection Point Wizard [C++]
 ms.assetid: c117f6c6-30f0-4adb-82b4-b1f34e0f0fa8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92312bc130ed24f2aafe2e4b95e2c4bcf6381215
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b818a1a149e95805a8694f6c8d8d1325b33211b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429669"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531534"
 ---
 # <a name="implement-connection-point-wizard"></a>Implementazione guidata punto di connessione
 

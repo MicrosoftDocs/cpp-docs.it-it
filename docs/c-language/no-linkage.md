@@ -1,26 +1,16 @@
 ---
-title: Nessun collegamento | Microsoft Docs
-ms.custom: ''
+title: Nessun collegamento
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - no linkage
 - linkage [C++], none
 ms.assetid: 5a413082-1034-4e04-b76b-8d14668bf434
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: acbce1b4a4a19c5fa1a015e01bd2078fc70f6e1c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9775270c5c1fb0b6758f994c432104d75e19d38d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063086"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505079"
 ---
 # <a name="no-linkage"></a>Nessun collegamento
 

@@ -1,28 +1,18 @@
 ---
-title: Tipi Integer | Microsoft Docs
-ms.custom: ''
+title: Tipi Integer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - integer data type, integer types in C++
 - integer constants
 - integer types
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 22392a4f02fb81a7c141aaa0e7966a05988dfece
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0359ef3037a44ed50326d19d1c184c463adcaa5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076671"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563579"
 ---
 # <a name="integer-types"></a>Tipi Integer
 

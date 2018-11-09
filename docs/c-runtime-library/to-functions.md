@@ -1,10 +1,6 @@
 ---
-title: Funzioni to | Microsoft Docs
-ms.custom: ''
+title: Funzioni to
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr90.dll
@@ -15,8 +11,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - To
-dev_langs:
-- C++
 helpviewer_keywords:
 - to functions
 - string conversion, to different characters
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8209e41e1b8a66e7f46c48a834df35fac2dcd491
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a6a1a69147c135ce539393e535f0e1f2d03ccfa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040163"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580758"
 ---
 # <a name="to-functions"></a>Funzioni to
 

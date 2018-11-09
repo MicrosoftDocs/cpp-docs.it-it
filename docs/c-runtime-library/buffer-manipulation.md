@@ -1,28 +1,18 @@
 ---
-title: Modifica del buffer | Microsoft Docs
-ms.custom: ''
+title: Modifica del buffer
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.memory
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a7544dfa80ce0c7481846383dd812ce30b78290
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e8a449cbfa6a52ccc2346e2215ce187c09d677e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389088"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590502"
 ---
 # <a name="buffer-manipulation"></a>Modifica del buffer
 

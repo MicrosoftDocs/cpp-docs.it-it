@@ -1,24 +1,14 @@
 ---
 title: Funzionalità di Visual C++ deprecate nella versione di anteprima di Visual Studio 2019
-ms.custom: ''
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Features deprecated in Visual Studio 2019
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2619b0f24aa2c8b381d3de82932ae86f441cbc88
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 7d3818a8352cbf3785703740590e0c70c14f8a7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623070"
 ---
 # <a name="visual-c-features-deprecated-in-visual-studio-2019-preview"></a>Funzionalità di Visual C++ deprecate nella versione di anteprima di Visual Studio 2019
 

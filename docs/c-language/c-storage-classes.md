@@ -1,12 +1,6 @@
 ---
-title: Classi di archiviazione C | Microsoft Docs
-ms.custom: ''
+title: Classi di archiviazione C
 ms.date: 08/31/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - static variables, lifetime
 - storage classes
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3bade146edd1b83f893af72fc4e760a46187679b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cb472ea0db67e0fd8d7f2a8e2af4513ffb0fbe1c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466183"
 ---
 # <a name="c-storage-classes"></a>Classi di archiviazione C
 

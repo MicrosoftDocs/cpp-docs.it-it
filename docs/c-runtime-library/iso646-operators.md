@@ -1,23 +1,13 @@
 ---
-title: Operatori ISO646 | Microsoft Docs
-ms.custom: ''
+title: Operatori ISO646
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 93e6d3e7-4889-4d8e-8dcb-c1a6b9bbe0f5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1105541fc0d048554cfe65408d1bb7451b59a381
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbb9822002d55ebb90baaff27911017ab6564b30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097718"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442497"
 ---
 # <a name="iso646-operators"></a>Operatori ISO646
 

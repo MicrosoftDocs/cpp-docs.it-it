@@ -1,26 +1,16 @@
 ---
-title: Riepilogo di durata e visibilità | Microsoft Docs
-ms.custom: ''
+title: Riepilogo di durata e di visibilità
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ef73c7e9592f1365e946d32d2aecc5894899316
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5bb53db4d6bcb9b4694fddd9abd5471c6c6197c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061526"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474802"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Riepilogo di durata e di visibilità
 

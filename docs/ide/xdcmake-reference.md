@@ -1,27 +1,17 @@
 ---
-title: Riferimento a XDCMake | Microsoft Docs
-ms.custom: ''
+title: Riferimento a XDCMake
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - xdcmake
-dev_langs:
-- C++
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1596722fc5db1c0de183b30bd5d60235cc1665fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 85c7ef351e6e91bfd51a7f1e87ecec4186986505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414797"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450271"
 ---
 # <a name="xdcmake-reference"></a>Riferimento a XDCMake
 

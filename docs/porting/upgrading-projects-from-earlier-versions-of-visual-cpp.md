@@ -1,26 +1,16 @@
 ---
-title: Aggiornamento di progetti da versioni precedenti di Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Aggiornamento di progetti da versioni precedenti di Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d403ccc52e7e0a941ed0f6edeec95a54399ea9b6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3b9740c47e7fc0b449bf53a11a0ba7a4486a9ce4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073058"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592816"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Aggiornamento di progetti da versioni precedenti di Visual C++
 

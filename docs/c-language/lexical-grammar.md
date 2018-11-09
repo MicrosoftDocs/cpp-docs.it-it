@@ -1,25 +1,15 @@
 ---
-title: Grammatica lessicale | Microsoft Docs
-ms.custom: ''
+title: Grammatica lessicale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lexical grammar
 ms.assetid: cb5847fa-aef3-47f5-8825-97c2bf4a3d87
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59abbf46ba875aef015982650b355c0c4153c7de
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ab25293306e65f858f83af22fc13a68ece05eed6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059888"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592777"
 ---
 # <a name="lexical-grammar"></a>Grammatica lessicale
 

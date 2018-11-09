@@ -1,157 +1,114 @@
 ---
-title: Riepilogo di espressioni | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
+title: Riepilogo di espressioni
+ms.date: 06/14/2018
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 456a9b98c260107f07c302174e4d9f95d6a62aa6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 320baa51d54f00ac4fdb6633922a8bb36cf92a94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543494"
 ---
 # <a name="summary-of-expressions"></a>Riepilogo di espressioni
-*primary-expression*:  
- *identifier*  
-  
- *constant*  
-  
- *string-literal*  
-  
- **(**  *expression*  **)**  
-  
- *expression*:  
- *assignment-expression*  
-  
- *expression*  **,**  *assignment-expression*  
-  
- *constant-expression*:  
- *conditional-expression*  
-  
- *conditional-expression*:  
- *logical-OR-expression*  
-  
- *logical-OR-expression*  **?**  *expression*  **:**  *conditional-expression*  
-  
- *assignment-expression*:  
- *conditional-expression*  
-  
- *unary-expression assignment-operator assignment-expression*  
-  
- *postfix-expression*:  
- *primary-expression*  
-  
- *postfix-expression*  **[**  *expression*  **]**  
-  
- *postfix-expression*  **(**  *argument-expression-list* opt **)**  
-  
- *postfix-expression*  **.**  *identifier*  
-  
- *postfix-expression*  **->**  *identifier*  
-  
- *postfix-expression*  **++**  
-  
- *postfix-expression*  **--**  
-  
- *argument-expression-list*:  
- *assignment-expression*  
-  
- *argument-expression-list*  **,**  *assignment-expression*  
-  
- *unary-expression*:  
- *postfix-expression*  
-  
- **++**  *unary-expression*  
-  
- **--**  *unary-expression*  
-  
- *unary-operator*  
-  
- *cast-expression*  
-  
- **sizeof**  *unary-expression*  
-  
- **sizeof (**  *type-name*  **)**  
-  
- *unary-operator*: uno tra  
- **& \* + - ~ !**  
-  
- *cast-expression*:  
- *unary-expression*  
-  
- **(**  *type-name*  **)**  *cast-expression*  
-  
- *multiplicative-expression*:  
- *cast-expression*  
-  
- *multiplicative-expression*  **\***  *cast-expression*  
-  
- *multiplicative-expression*  **/**  *cast-expression*  
-  
- *multiplicative-expression*  **%**  *cast-expression*  
-  
- *additive-expression*:  
- *multiplicative-expression*  
-  
- *additive-expression*  **+**  *multiplicative-expression*  
-  
- *additive-expression*  **-**  *multiplicative-expression*  
-  
- *shift-expression*:  
- *additive-expression*  
-  
- *shift-expression*  **<\<**  *additive-expression*  
-  
- *shift-expression*  **>>**  *additive-expression*  
-  
- *relational-expression*:  
- *shift-expression*  
-  
- *relational-expression*  **\<**  *shift-expression*  
-  
- *relational-expression*  **>**  *shift-expression relational-expression*  **\<=**  *shift-expression*  
-  
- *relational-expression*  **>=**  *shift-expression*  
-  
- *equality-expression*:  
- *relational-expression*  
-  
- *equality-expression*  **==**  *relational-expression*  
-  
- *equality-expression*  **!=**  *relational-expression*  
-  
- *AND-expression*:  
- *equality-expression*  
-  
- *AND-expression*  **&**  *equality-expression*  
-  
- *exclusive-OR-expression*:  
- *AND-expression*  
-  
- *exclusive-OR-expression*  **^**  *AND-expression*  
-  
- *inclusive-OR-expression*:  
- *exclusive-OR-expression*  
-  
- *inclusive-OR-expression*  **&#124;**  *exclusive-OR-expression*  
-  
- *logical-AND-expression*:  
- *inclusive-OR-expression*  
-  
- *logical-AND-expression*  **&&**  *inclusive-OR-expression*  
-  
- *logical-OR-expression*:  
- *logical-AND-expression*  
-  
- *logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*  
-  
-## <a name="see-also"></a>Vedere anche  
- [Grammatica di struttura della frase](../c-language/phrase-structure-grammar.md)
+
+*primary-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*string-literal*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(**  *expression*  **)**
+
+*expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression*  **,**  *assignment-expression*
+
+*constant-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
+
+*conditional-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **?**  *expression*  **:**  *conditional-expression*
+
+*assignment-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+
+*postfix-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*primary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **[**  *expression*  **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **(**  *argument-expression-list*<sub>opt</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **.**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **->**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **--**
+
+*argument-expression-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list*  **,**  *assignment-expression*
+
+*unary-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**++**  *unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**--**  *unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-operator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**sizeof**  *unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *type-name*  **)**
+
+*unary-operator*: uno tra<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**&** **&#42;** **+** **-** **~** **!**
+
+*cast-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(**  *type-name*  **)**  *cast-expression*
+
+*multiplicative-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **&#42;**  *cast-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **/**  *cast-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **%**  *cast-expression*
+
+*additive-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*  **+**  *multiplicative-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*  **-**  *multiplicative-expression*
+
+*shift-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*  **\<\<**  *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*  **>>**  *additive-expression*
+
+*relational-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **\<**  *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **>**  *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **\<=**  *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*  **>=**  *shift-expression*
+
+*equality-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*  **==**  *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*  **!=**  *relational-expression*
+
+*AND-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*AND-expression*  **&**  *equality-expression*
+
+*exclusive-OR-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*AND-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*exclusive-OR-expression*  **^**  *AND-expression*
+
+*inclusive-OR-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*exclusive-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*  **&#124;**  *exclusive-OR-expression*
+
+*logical-AND-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*  **&&**  *inclusive-OR-expression*
+
+*logical-OR-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
+
+## <a name="see-also"></a>Vedere anche
+
+- [Grammatica di struttura della frase](../c-language/phrase-structure-grammar.md)

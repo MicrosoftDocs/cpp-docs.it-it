@@ -1,10 +1,6 @@
 ---
-title: Funzioni e variabili globali CRT interne | Microsoft Docs
-ms.custom: ''
+title: Funzioni e variabili globali CRT interne
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apiname:
 - __acrt_iob_func
 - __AdjustPointer
@@ -570,8 +566,6 @@ f1_keywords:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - __acrt_iob_func
 - __AdjustPointer
@@ -847,16 +841,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 223e4860e1c7a0bd2f414b224c32818895b4398b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64288cec680c1c10b6ee3f8b0f046fb22d25ab7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485614"
 ---
 # <a name="internal-crt-globals-and-functions"></a>Funzioni e variabili globali CRT interne
 

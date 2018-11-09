@@ -1,10 +1,6 @@
 ---
-title: Funzioni _exec, _wexec | Microsoft Docs
-ms.custom: ''
+title: Funzioni _exec, _wexec
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr110_clr0400.dll
 - msvcr120.dll
@@ -34,8 +30,6 @@ f1_keywords:
 - texecvpe
 - _texecv
 - _wexec
-dev_langs:
-- C++
 helpviewer_keywords:
 - _texecle function
 - _texecv function
@@ -59,16 +53,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d53245519262261c082797c2764c90c4dd208057
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4974571764c22b26e84e93c68d679afc8a1cea73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48233649"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573368"
 ---
 # <a name="exec-wexec-functions"></a>Funzioni _exec, _wexec
 

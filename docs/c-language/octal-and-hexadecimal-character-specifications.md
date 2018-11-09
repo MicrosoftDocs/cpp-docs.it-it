@@ -1,26 +1,16 @@
 ---
-title: Specifiche dei caratteri ottali ed esadecimali | Microsoft Docs
-ms.custom: ''
+title: Specifiche dei caratteri ottali ed esadecimali
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7df785067fdde74fbbc4bb5a45dfdc1ca797da7b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3fccc6513f3507e4b1763336ac5ecbb78b31d847
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518625"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Specifiche dei caratteri ottali ed esadecimali
 

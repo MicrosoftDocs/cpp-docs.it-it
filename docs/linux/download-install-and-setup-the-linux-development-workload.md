@@ -1,24 +1,14 @@
 ---
-title: Installare il carico di lavoro Linux C++ in Visual Studio | Microsoft Docs
+title: Installare il carico di lavoro Linux C++ in Visual Studio
 description: Descrive come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
-ms.custom: ''
 ms.date: 10/12/2018
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
-ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
+ms.openlocfilehash: 2fa4036ece6dd161c73a5176740870c5593f4669
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143692"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441925"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 

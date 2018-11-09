@@ -1,29 +1,19 @@
 ---
-title: Aggiunta di un gestore dell'evento (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di un gestore eventi (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.eventhandler.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handlers, adding
 - properties [Visual Studio], MSBuild
 - MSBuild, properties
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd16628c48c30f6f554a842b70c5217753e305f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9256fca75b6980d87382bbeb794fa90b89f37c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512439"
 ---
 # <a name="adding-an-event-handler-visual-c"></a>Aggiunta di un gestore eventi (Visual C++)
 

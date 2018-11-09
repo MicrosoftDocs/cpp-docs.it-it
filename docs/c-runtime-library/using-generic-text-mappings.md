@@ -1,14 +1,8 @@
 ---
-title: Uso di mapping di testo generico | Microsoft Docs
-ms.custom: ''
+title: Utilizzo di mapping testo generico
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _UNICODE
-dev_langs:
-- C++
 helpviewer_keywords:
 - _TXCHAR type
 - TINT type
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4aeee73cb065e40d345dcbfe35ac2d6a7be03d90
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: b39e8563797ca0b57b54d2c85f851c8c45b29905
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234658"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471448"
 ---
 # <a name="using-generic-text-mappings"></a>Utilizzo di mapping testo generico
 

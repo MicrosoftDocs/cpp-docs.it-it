@@ -1,25 +1,15 @@
 ---
-title: Preparazione di un computer di test per l'esecuzione di un file eseguibile di debug | Microsoft Docs
-ms.custom: ''
+title: Preparazione di un computer per il test per l'esecuzione di un file eseguibile di debug
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 31369f6aad04a0bd7077e9718e0b85776ca39556
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377812"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509105"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparazione di un computer per il test per l'esecuzione di un file eseguibile di debug
 
@@ -46,4 +36,4 @@ Dopo aver installato le DDL di Visual C++, è possibile eseguire un debugger rem
 [Distribuzione in Visual C++](../ide/deployment-in-visual-cpp.md)<br>
 [Windows Installer Command line options](/windows/desktop/Msi/command-line-options) (Opzioni della riga di comando di Windows Installer)<br>
 [Esempi di distribuzione](../ide/deployment-examples.md)<br>
-[Debug remoto](/visualstudio/debugger/remote-debugging.md)
+[Remote Debugging](/visualstudio/debugger/remote-debugging.md)

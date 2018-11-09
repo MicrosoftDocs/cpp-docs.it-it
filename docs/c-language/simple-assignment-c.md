@@ -1,12 +1,6 @@
 ---
-title: Assegnazione semplice (C) | Microsoft Docs
-ms.custom: ''
+title: Assegnazione semplice (C)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - type conversion [C++], simple assignment
 - data type conversion [C++], simple assignment
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - simple assignment operator
 - equal sign
 ms.assetid: e7140a0a-7104-4b3a-b293-7adcc1fdd52b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff4e032e205680da84369075514e3177fa5fb33e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 76c48fc6774f97bab69f916ad7e5176e91d004ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051022"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574915"
 ---
 # <a name="simple-assignment-c"></a>Assegnazione semplice (C)
 

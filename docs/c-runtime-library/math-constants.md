@@ -1,14 +1,8 @@
 ---
-title: Costanti Math | Microsoft Docs
-ms.custom: ''
+title: Costanti Math
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.constants
-dev_langs:
-- C++
 helpviewer_keywords:
 - M_PI constant
 - M_PI_2 constant
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12a53aff22d55b8f99b05bf870276da1370fad13
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dae30ca5e44d00f5480431d5de2ea856047e0590
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531978"
 ---
 # <a name="math-constants"></a>Costanti Math
 

@@ -1,23 +1,13 @@
 ---
-title: Riepilogo di dichiarazioni | Microsoft Docs
-ms.custom: ''
+title: Riepilogo di dichiarazioni
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6e63fae717fc3e5c223ad512b5cd2eae82160431
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 21d6866f8e0b370d8a0d93253a6259302666963a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754647"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647200"
 ---
 # <a name="summary-of-declarations"></a>Riepilogo di dichiarazioni
 
@@ -176,7 +166,7 @@ ms.locfileid: "43754647"
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifico di Microsoft \*/<br/>
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Microsoft Specific \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>

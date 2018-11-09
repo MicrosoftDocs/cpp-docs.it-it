@@ -1,23 +1,13 @@
 ---
-title: Strutture, unioni, enumerazioni e campi di bit | Microsoft Docs
-ms.custom: ''
+title: Strutture, enumerazioni e campi di bit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 53f72553-c716-41fb-8384-89dc6712ee2a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f05c28d3db05533b436977f5e3dd3f3c7ee11d14
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 08811ecfc682faeb28dccba8531d1779b9ad92d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462195"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>Strutture, enumerazioni e campi di bit
 

@@ -1,10 +1,6 @@
 ---
-title: Caratteri di campo di tipo per scanf | Microsoft Docs
-ms.custom: ''
+title: Caratteri di campo di tipo per scanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr90.dll
 - msvcr80.dll
@@ -15,21 +11,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - scanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - scanf function, type field characters
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 04a4c2005dc0a7e0e052002198bebb7c78267843
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a73625093607869076851bd253864d796c46fd81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565464"
 ---
 # <a name="scanf-type-field-characters"></a>Caratteri di campo di tipo per scanf
 

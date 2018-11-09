@@ -1,23 +1,13 @@
 ---
-title: Tag consigliati per i commenti nella documentazione (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Tag consigliati per i commenti relativi alla documentazione (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b48b93b6134d0618e80552752c18beb1f03f689
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 251baedbf37901a58b34b66b7a10bbdcf5d66557
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564190"
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>Tag consigliati per i commenti relativi alla documentazione (Visual C++)
 

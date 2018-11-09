@@ -1,26 +1,16 @@
 ---
-title: Funzioni CRT non supportate da Windows Runtime | Microsoft Docs
-ms.custom: ''
+title: Funzioni CRT non supportate da Windows Runtime
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - unsupported CRT functions, Windows Runtime
 - Windows Runtime, unsupported CRT functions
 ms.assetid: bb8386d6-0ef8-460c-88d8-addff009b6f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8db95e066b68bed4288456eccb43f737f15842d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5989b584083e8a5474b333f3a4a497fbe583589b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601331"
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Funzioni CRT non supportate da Windows Runtime
 

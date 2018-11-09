@@ -1,21 +1,13 @@
 ---
-title: Percorso definizione spostamento | Microsoft Docs
-ms.custom: ''
+title: Percorso definizione spostamento
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd4fe2fb755919656fba935c29ab8a8591426bea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430058"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462361"
 ---
 # <a name="move-definition-location"></a>Percorso definizione spostamento
 **Cosa:** consente di spostare immediatamente la definizione di una funzione nel file di intestazione corrispondente.

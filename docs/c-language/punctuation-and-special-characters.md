@@ -1,12 +1,6 @@
 ---
-title: Punteggiatura e caratteri speciali | Microsoft Docs
-ms.custom: ''
+title: Punteggiatura e caratteri speciali
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - number sign
 - characters, special
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - '# preprocessor operator'
 - special characters
 ms.assetid: e239633e-36f6-4967-939c-bf2799323778
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f67ba7abc4348bdf329ac24e26dd75da008b4e83
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16ed4880bc76bd8ecac09033632a8b45dd42f00c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038736"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528596"
 ---
 # <a name="punctuation-and-special-characters"></a>Punteggiatura e caratteri speciali
 

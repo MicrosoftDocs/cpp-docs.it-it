@@ -1,30 +1,20 @@
 ---
-title: Compatibilità con le versioni precedenti | Microsoft Docs
-ms.custom: ''
+title: Compatibilità con le versioni precedenti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.programs
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRT, compatibility
 - backward compatibility, C run-time libraries
 - compatibility, C run-time libraries
 - backward compatibility
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3056b90f3c6f0f62158a9b6dcfe145cda9740c6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d418a3450f22e53c8cb320f0a1a27c9f2e434c54
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092193"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460554"
 ---
 # <a name="backward-compatibility"></a>Compatibilità con le versioni precedenti
 

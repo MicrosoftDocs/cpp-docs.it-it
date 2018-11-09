@@ -1,28 +1,18 @@
 ---
-title: Aggiunta di una variabile membro (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di una variabile membro (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes.member.variable
-dev_langs:
-- C++
 helpviewer_keywords:
 - member variables, adding
 - member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec9409067793da0e0a89be668f57e86588bdc2d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3c7f64fae00e489da7c71bcfe5731db72e1afdf7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595776"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Aggiunta di una variabile membro (Visual C++)
 

@@ -1,25 +1,15 @@
 ---
-title: File di intestazione e di origine di un controllo o di un programma ATL | Microsoft Docs
-ms.custom: ''
+title: File di intestazione e di origine di un controllo o programma ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 95fa6fa506e4f471b90d39659b0908e2755b72b0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc2fc7a81d2d32e6bc89e1c10b8fe090650db2ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398703"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630581"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>File di intestazione e di origine di un controllo o programma ATL
 

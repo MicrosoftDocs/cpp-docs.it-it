@@ -1,25 +1,15 @@
 ---
-title: Caratteri Wide | Microsoft Docs
-ms.custom: ''
+title: Caratteri Wide
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters
 ms.assetid: 165c4a12-8ab9-45fb-9964-c55e9956194c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3cf748aac5bc05dcc5bbb05b75ae34563398cad2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 619adfd398f3955708df3267613de40e71e15fa6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087500"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452065"
 ---
 # <a name="wide-characters"></a>Caratteri Wide
 

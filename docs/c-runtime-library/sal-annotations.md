@@ -1,12 +1,6 @@
 ---
-title: Annotazioni SAL | Microsoft Docs
-ms.custom: ''
+title: Annotazioni SAL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - __z annotation
 - ref annotation
@@ -53,16 +47,12 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 363d7ff6de4c808c3c7b8d37a9a9f95bf069723c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b25a3a7d0c44667bcceb2d04cf6024aa6173daed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617139"
 ---
 # <a name="sal-annotations"></a>Annotazioni SAL
 

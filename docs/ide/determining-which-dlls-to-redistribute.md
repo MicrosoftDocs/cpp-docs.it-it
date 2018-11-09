@@ -1,12 +1,6 @@
 ---
-title: Determinazione delle DLL da ridistribuire | Microsoft Docs
-ms.custom: ''
+title: Determinazione delle DLL da ridistribuire
 ms.date: 06/08/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a7b52e2c4d45d92f10b535b9d2d23b5a1e1a043
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: fdca832810312d2f36697da8fbaac539c5ce951c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452598"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinazione delle DLL da ridistribuire
 

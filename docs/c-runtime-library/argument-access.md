@@ -1,28 +1,18 @@
 ---
-title: Accesso agli argomenti | Microsoft Docs
-ms.custom: ''
+title: Accesso agli argomenti
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.arguments
-dev_langs:
-- C++
 helpviewer_keywords:
 - argument access macros [C++]
 - variable-length argument lists
 ms.assetid: 7046ae34-a0ec-44f0-815d-3209492a3e19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 38d4031fcfba793a99688b6fd1cc91a3f1519989
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8107cffa6a2da41c38b116b2e3fe36adf6ac945f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387093"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470408"
 ---
 # <a name="argument-access"></a>Accesso agli argomenti
 

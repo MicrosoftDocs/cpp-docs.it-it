@@ -1,12 +1,6 @@
 ---
-title: Programma di testo generico di esempio | Microsoft Docs
-ms.custom: ''
+title: Programma di testo generico di esempio
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - _TCHAR type
 - mappings, TCHAR.H data types
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - TCHAR type
 - TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3adde04ba8fe259c25f3439cef247192eea175f2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 768d0ef2ac3dc2b407ea3725ebeaede307c98302
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48233677"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490467"
 ---
 # <a name="a-sample-generic-text-program"></a>Programma di testo generico di esempio
 

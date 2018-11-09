@@ -1,18 +1,12 @@
 ---
-title: Costanti di condivisione | Microsoft Docs
-ms.custom: ''
+title: Condivisione costanti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _SH_DENYNO
 - _SH_DENYRD
 - _SH_DENYRW
 - _SH_DENYWR
 - _SH_COMPAT
-dev_langs:
-- C++
 helpviewer_keywords:
 - _SH_DENYRW constant
 - SH_DENYRD constant
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 05226ffcc5a10785391969f8162a76034efc4d92
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e1dc7879403072113c8b81658165c377a1bf4527
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532819"
 ---
 # <a name="sharing-constants"></a>Condivisione costanti
 

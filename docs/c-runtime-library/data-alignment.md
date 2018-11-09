@@ -1,27 +1,17 @@
 ---
-title: Allineamento dati | Microsoft Docs
-ms.custom: ''
+title: Allineamento dati
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - data.alignment
-dev_langs:
-- C++
 helpviewer_keywords:
 - data alignment [C++]
 ms.assetid: 35ac3d2d-a4b3-421b-954f-b7372b1f18e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa83c067e8a2f6794adde13ed8f163ac7ee52680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d835545bdc1f94de56846f35d510927c06c2560
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520285"
 ---
 # <a name="data-alignment"></a>Allineamento dati
 

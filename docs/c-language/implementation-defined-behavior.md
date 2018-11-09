@@ -1,28 +1,18 @@
 ---
-title: Comportamento definito a livello di implementazione | Microsoft Docs
-ms.custom: ''
+title: Comportamento definito in fase di implementazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C, portability of Microsoft C
 - portability [C++], Microsoft C to ANSI C
 - ANSI [C++], C standard
 - implementation-defined behavior
 ms.assetid: c9f50670-23cb-401f-8ad7-136972012eb9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 496403f21ddd7e55aa5a504dd12e2c1e5e423a88
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e74d4bceee722ced42ccf63e89fe8ad2a4b866e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447099"
 ---
 # <a name="implementation-defined-behavior"></a>Comportamento definito in fase di implementazione
 

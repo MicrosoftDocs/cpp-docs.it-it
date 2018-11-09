@@ -1,23 +1,13 @@
 ---
-title: Caratteri significativi con collegamento esterno | Microsoft Docs
-ms.custom: ''
+title: Caratteri significativi con collegamento esterno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 6f3b7e26-3fb0-4975-a95d-23a2072c1186
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df3c07a172c02e0ea095dbcea9d291235453ca25
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ff4562361d6e0c86c7b2e82cfb7ce6004e45ccf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035175"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632844"
 ---
 # <a name="significant-characters-with-external-linkage"></a>Caratteri significativi con collegamento esterno
 

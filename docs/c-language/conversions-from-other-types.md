@@ -1,26 +1,16 @@
 ---
-title: Conversioni da altri tipi | Microsoft Docs
-ms.custom: ''
+title: Conversioni da altri tipi
 ms.date: 01/29/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - values, converting
 - type casts, conversion
 ms.assetid: 30fbd974-8f5a-4b70-ac44-d3937b96b702
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b443526248eb09accce8b35133235c71c06c2627
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f9f2d73e57c576dcf8afed008a74e5e7dd9b9d6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448659"
 ---
 # <a name="conversions-from-other-types"></a>Conversioni da altri tipi
 

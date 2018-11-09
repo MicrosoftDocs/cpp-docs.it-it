@@ -1,27 +1,17 @@
 ---
-title: Operatori di incremento e decremento in forma prefissa | Microsoft Docs
-ms.custom: ''
+title: Operatori di incremento e decremento in forma prefissa
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - increment operators, types of
 - decrement operators, syntax
 - decrement operators
 ms.assetid: 9a441bb9-d94a-4b6a-9db2-0d0d76bc480d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7077e1b40701f8586ce8322ac9922517ac77b22b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9460d3fda9bca74cd9c95ffa7748a5ddc91e3f78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018288"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606934"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>Operatori di incremento e decremento in forma prefissa
 

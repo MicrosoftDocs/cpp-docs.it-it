@@ -1,29 +1,19 @@
 ---
-title: Mapping di routine | Microsoft Docs
-ms.custom: ''
+title: Mapping di routine
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.mappings
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tWinMain
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1d49f466b6df53162eab9d40e847a692942f860
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d07e759c67aa1a38f64272a6a974c8980d7ba71a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118466"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466300"
 ---
 # <a name="routine-mappings"></a>Mapping di routine
 

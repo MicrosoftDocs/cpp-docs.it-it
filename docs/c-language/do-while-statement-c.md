@@ -1,28 +1,18 @@
 ---
-title: Istruzione do-while (C) | Microsoft Docs
-ms.custom: ''
+title: Istruzione do-while (C)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - do
 - while
-dev_langs:
-- C++
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4b86fa6444889f77b306e4ae543e7d2db41d721b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: f2548ec60c7ee36d46d385cd7e7dda7bcfc2758d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860680"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462907"
 ---
 # <a name="do-while-statement-c"></a>Istruzione do-while (C)
 

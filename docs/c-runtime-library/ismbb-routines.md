@@ -1,10 +1,6 @@
 ---
-title: Routine _ismbb | Microsoft Docs
-ms.custom: ''
+title: Routines _ismbb
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr110.dll
 - msvcrt.dll
@@ -17,22 +13,16 @@ apitype: DLLExport
 f1_keywords:
 - _ismbb
 - ismbb
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86587495353090ced63d0487991f4275d3d0d5d5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e1dd62f45eed4ec1d8e89a746d01ca1984022ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092526"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481406"
 ---
 # <a name="ismbb-routines"></a>Routines _ismbb
 

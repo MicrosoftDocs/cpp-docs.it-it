@@ -1,28 +1,18 @@
 ---
-title: Operatori di cast | Microsoft Docs
-ms.custom: ''
+title: Operatori di cast
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cast operators
 - type casts, operators
 - operators [C++], cast
 - type conversion, cast operators
 ms.assetid: 43b90bbd-39ef-43e6-ae5d-e8a67a01de40
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abb4b84519b943d02eca277c9372a128f7d6c2fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dd84ae2e9868e53fedf9e7977fe4c253ad2db72f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098505"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443953"
 ---
 # <a name="cast-operators"></a>Operatori di cast
 

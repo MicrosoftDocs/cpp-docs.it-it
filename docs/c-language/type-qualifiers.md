@@ -1,12 +1,6 @@
 ---
-title: Qualificatori di tipo | Microsoft Docs
-ms.custom: ''
+title: Qualificatori di tipo
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - volatile keyword [C], type qualifier
 - type qualifiers
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - memory, access using volatile
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 31cfa4d0d443cc6bb854e8010f1e1535cd39b51b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083243"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507679"
 ---
 # <a name="type-qualifiers"></a>Qualificatori di tipo
 

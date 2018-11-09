@@ -1,28 +1,18 @@
 ---
-title: Prestazioni delle librerie multithread | Microsoft Docs
-ms.custom: ''
+title: Prestazioni librerie multithread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - threading [C++], performance
 - libraries, multithreaded
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f66aebc7b6d77e3697fabf783332a83bdd6f3fb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f73aa99d1800fc81408b739e556bc7845b348a80
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052107"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587564"
 ---
 # <a name="multithreaded-libraries-performance"></a>Prestazioni librerie multithread
 
