@@ -1,25 +1,15 @@
 ---
-title: Punti di sequenza C | Microsoft Docs
-ms.custom: ''
+title: Punti di sequenza C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13d8bbc422be20a0e377a5705e8ebcf88db079aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 995f4176c046da5d34a43860c8e8f01330aee56c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650827"
 ---
 # <a name="c-sequence-points"></a>Punti di sequenza C
 

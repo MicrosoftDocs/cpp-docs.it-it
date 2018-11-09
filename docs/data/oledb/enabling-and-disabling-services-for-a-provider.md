@@ -1,20 +1,20 @@
 ---
 title: Abilitazione e disabilitazione dei servizi per un provider
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 3deac1bb-f660-407a-92ef-95e139e280c0
-ms.openlocfilehash: ca621b005dd0bad60c70298e4d49abce6fb8d1d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23579b9561356e95d315c0fbe47132208753afa8
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665452"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265126"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Abilitazione e disabilitazione dei servizi per un provider
 
-I singoli servizi OLE DB possono essere abilitati o disabilitati per impostazione predefinita per tutte le applicazioni che accedono a un singolo provider. Questa operazione viene eseguita aggiungendo una voce del Registro di sistema OLEDB_SERVICES CLSID del provider, con un `DWORD` valore che specifica i servizi per abilitare o disabilitare, come illustrato nella tabella seguente.
+I singoli servizi OLE DB possono essere abilitati o disabilitati per impostazione predefinita per tutte le applicazioni che accedono a un singolo provider. Questa operazione viene eseguita aggiungendo una voce del Registro di sistema OLEDB_SERVICES CLSID del provider, con un valore DWORD che specifica i servizi per abilitare o disabilitare, come illustrato nella tabella seguente.
 
 |Servizi predefiniti abilitati|Valore della parola chiave|
 |------------------------------|-------------------|

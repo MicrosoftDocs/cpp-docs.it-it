@@ -1,26 +1,16 @@
 ---
-title: Ridistribuzione della libreria MFC | Microsoft Docs
-ms.custom: ''
+title: Ridistribuzione della libreria MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca55c71772fe3263f811f037b43b75cdca94294b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891a11e02b60bf5337b02956e9562b2f4b45a6e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659940"
 ---
 # <a name="redistributing-the-mfc-library"></a>Ridistribuzione della libreria MFC
 

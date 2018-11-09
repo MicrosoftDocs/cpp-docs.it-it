@@ -1,12 +1,6 @@
 ---
-title: Scelta di un metodo di distribuzione | Microsoft Docs
-ms.custom: ''
+title: Scelta di un metodo di distribuzione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - redistributing DLLs
 - manifests [C++]
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 407972d9df042854ec1cd5a61964782422f359a6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eb9b0784dc5a31accc086314e64758b5bd91033f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607649"
 ---
 # <a name="choosing-a-deployment-method"></a>Scelta di un metodo di distribuzione
 

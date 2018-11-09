@@ -1,27 +1,17 @@
 ---
-title: Matrici multidimensionali (C) | Microsoft Docs
-ms.custom: ''
+title: Matrici multidimensionali (C)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [C], multidimensional
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 369f6d7412deff1248e9927967e29459437ee738
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cd17eb060a6151417cbbe8dfdbfdc42ffe88ce98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091517"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623938"
 ---
 # <a name="multidimensional-arrays-c"></a>Matrici multidimensionali (C)
 

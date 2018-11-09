@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 4a0a0ea51cf6ac347cd79cb777f9cb6a51670063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584626"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264723"
 ---
 # <a name="provider-support-for-bookmarks"></a>Supporto dei bookmark nel provider
 
@@ -60,7 +60,7 @@ END_COM_MAP()
 
 Infine, gestire il `IColumnsInfo::GetColumnsInfo` chiamare. Normalmente si utilizzerebbe la macro PROVIDER_COLUMN_ENTRY per eseguire questa operazione. Tuttavia, un consumer potrebbe voler usare i segnalibri. È necessario essere in grado di modificare le colonne restituite dal provider a seconda del fatto che il consumer richiede un segnalibro.
 
-Per gestire il `IColumnsInfo::GetColumnsInfo` chiamare, eliminare il `PROVIDER_COLUMN` eseguire il mapping nel `CTextData` classe. La macro PROVIDER_COLUMN_MAP definisce una funzione `GetColumnInfo`. È necessario definire il proprio `GetColumnInfo` (funzione). La dichiarazione di funzione dovrebbe essere simile al seguente:
+Per gestire il `IColumnsInfo::GetColumnsInfo` chiamare, eliminare la mappa PROVIDER_COLUMN nel `CTextData` classe. La macro PROVIDER_COLUMN_MAP definisce una funzione `GetColumnInfo`. Definire il proprio `GetColumnInfo` (funzione). La dichiarazione di funzione dovrebbe essere simile al seguente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-Implementare poi il `GetColumnInfo` funzione nel file CustomRS.cpp come indicato di seguito:
+Implementare poi il `GetColumnInfo` funzionare nel *Custom*RS.cpp file come segue:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -119,7 +119,6 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols)
                         DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
-
    }
 
    // Next set the other columns up.
@@ -151,9 +150,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 
 `GetColumnInfo` Controlla prima se una proprietà denominata `DBPROP_IRowsetLocate` è impostata. Proprietà per ognuna delle interfacce facoltative l'oggetto set di righe OLE DB. Se l'utente vuole usare una di queste interfacce facoltative, imposta una proprietà su true. Il provider può quindi controllare questa proprietà e operazioni particolari basata su di essa.
 
-Nell'implementazione, si ottiene la proprietà usando il puntatore all'oggetto comando. Il `pThis` puntatore rappresenta la classe di set di righe o un comando. Perché si usano modelli in questo caso, è necessario passare questo come un `void` puntatore o il codice non viene compilato.
+Nell'implementazione, si ottiene la proprietà usando il puntatore all'oggetto comando. Il `pThis` puntatore rappresenta la classe di set di righe o un comando. Perché si usano modelli in questo caso, è necessario passare questo come un **void** puntatore o il codice non viene compilato.
 
-Specificare una matrice statica per contenere le informazioni di colonna. Se il consumer non desidera che la colonna del segnalibro, risulta sprecata una voce nella matrice. È possibile allocare dinamicamente questa matrice, ma è necessario assicurarsi che venga eliminata correttamente. In questo esempio definisce e Usa le macro ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX per inserire le informazioni nella matrice. È possibile aggiungere le macro del file CustomRS.H come illustrato nel codice seguente:
+Specificare una matrice statica per contenere le informazioni di colonna. Se il consumer non desidera che la colonna del segnalibro, risulta sprecata una voce nella matrice. È possibile allocare dinamicamente questa matrice, ma è necessario assicurarsi che venga eliminata correttamente. In questo esempio definisce e Usa le macro ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX per inserire le informazioni nella matrice. È possibile aggiungere le macro per la *Custom*RS. File H come illustrato nel codice seguente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -236,9 +235,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }
 ```
 
-Il **mentre** ciclo contiene codice per chiamare le `Compare` metodo nella `IRowsetLocate` interfaccia. Il codice che deve passare sempre in quanto si confrontano i segnalibri stesso esatti. Archiviare, inoltre, un segnalibro in una variabile temporanea in modo che è possibile utilizzarlo dopo il **mentre** ciclo termina per chiamare il `MoveToBookmark` funzione nei modelli consumer. Il `MoveToBookmark` chiamate di funzione il `GetRowsAt` metodo `IRowsetLocate`.
+Il **mentre** ciclo contiene codice per chiamare le `Compare` metodo nella `IRowsetLocate` interfaccia. Il codice che deve passare sempre perché si mettono a confronto i segnalibri stesso esatti. Archiviare, inoltre, un segnalibro in una variabile temporanea in modo che è possibile utilizzarlo dopo il **mentre** ciclo termina per chiamare il `MoveToBookmark` funzione nei modelli consumer. Il `MoveToBookmark` chiamate di funzione il `GetRowsAt` metodo `IRowsetLocate`.
 
-È anche necessario aggiornare il record dell'utente nel consumer. Aggiungere una voce nella classe per gestire un segnalibro e una voce nel `COLUMN_MAP`:
+È anche necessario aggiornare il record dell'utente nel consumer. Aggiungere una voce nella classe per gestire un segnalibro e una voce in COLUMN_MAP:
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////

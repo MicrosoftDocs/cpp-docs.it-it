@@ -1,12 +1,6 @@
 ---
-title: Conversione di applicazioni dati | Microsoft Docs
-ms.custom: ''
+title: Conversione di applicazioni dati
 ms.date: 05/12/2017
-ms.technology:
-- devlang-cpp
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], data access applications
 - databases [C++], MFC
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 8d10c285-c13f-4e6e-a09e-5ee0f2666b44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 51b041c60cd1bb8f866a6174e3cbb41ad613acc0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ccdd4c05537991ab7605d29c6d2eba1a22851a10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078167"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663931"
 ---
 # <a name="porting-data-applications"></a>Conversione di applicazioni dati
 Nel corso degli anni, Visual C++ ha proposto diversi metodi per usare i database. Nel 2011 Microsoft ha annunciato la scelta di ODBC come tecnologia preferenziale per l'accesso ai prodotti SQL Server da codice nativo. ODBC è uno standard del settore e l'uso di questa tecnologica consente di ottenere la massima portabilità del codice su più piattaforme e origini dati. La maggior parte dei prodotti database SQL e molti prodotti non SQL supportano ODBC. È possibile usare ODBC chiamando direttamente le API ODBC di basso livello oppure è possibile usare le classi wrapper ODBC MFC o una libreria wrapper C++ di terze parti.

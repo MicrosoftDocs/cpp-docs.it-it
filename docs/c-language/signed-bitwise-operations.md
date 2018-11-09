@@ -1,26 +1,16 @@
 ---
-title: Operazioni bit per bit con segno | Microsoft Docs
-ms.custom: ''
+title: Operazioni bit per bit con segno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - bitwise operations
 - signed bitwise operations
 ms.assetid: 1e5cf65b-ee32-41a0-a5c2-82c1854091f6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 184fd5a0e6c12cb58e9fed759459e7b8172896f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d178900a25a5d7a080068fb1919fcba2853bef14
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652010"
 ---
 # <a name="signed-bitwise-operations"></a>Operazioni bit per bit con segno
 

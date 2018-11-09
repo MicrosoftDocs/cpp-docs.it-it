@@ -1,25 +1,15 @@
 ---
-title: Definizioni e convenzioni | Microsoft Docs
-ms.custom: ''
+title: Definizioni e convenzioni
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7abaa67ce9bdee0b2f9a69fa11260c2b6bbfcf45
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 60806286ff8bbe64440c8b2f3e7af57b4390e2cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571444"
 ---
 # <a name="definitions-and-conventions"></a>Definizioni e convenzioni
 

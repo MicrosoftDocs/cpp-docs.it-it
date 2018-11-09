@@ -1,12 +1,6 @@
 ---
-title: Trigrammi | Microsoft Docs
-ms.custom: ''
+title: Trigrammi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ??) trigraph
 - ??- trigraph
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb65bf8cf2f9585ff12ba0a098d9ca441310933f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2106f7dda6ecc71478b29cfad3f15dfee0483025
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523901"
 ---
 # <a name="trigraphs"></a>Trigrammi
 

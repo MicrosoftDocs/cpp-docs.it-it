@@ -1,30 +1,20 @@
 ---
-title: Variabili globali e tipi standard | Microsoft Docs
-ms.custom: ''
+title: Variabili globali e tipi standard
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.variables
-dev_langs:
-- C++
 helpviewer_keywords:
 - global variables, CRT
 - standard types, CRT
 - standard types
 - types [CRT]
 ms.assetid: 8f8bad6f-2b78-4068-a0dc-77d58d978920
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59dfba20e2bf55bb314cd97d860a741a6d830957
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 035012f7c887bf4db264fbaaf703ce86c68b6ecb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089736"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623665"
 ---
 # <a name="global-variables-and-standard-types"></a>Variabili globali e tipi standard
 

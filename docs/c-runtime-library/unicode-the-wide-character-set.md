@@ -1,28 +1,18 @@
 ---
-title: 'Unicode: set di caratteri wide | Microsoft Docs'
-ms.custom: ''
+title: 'Unicode: set di caratteri wide'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.international
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], wide character set
 - wide characters [C++], Unicode
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fcd1c874c1701f471026deec73ab596971d3ad4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0432de1203d595947eb958a032870a929f00aeb0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450797"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618296"
 ---
 # <a name="unicode-the-wide-character-set"></a>Unicode: set di caratteri wide
 

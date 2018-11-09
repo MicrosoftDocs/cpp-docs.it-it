@@ -1,25 +1,15 @@
 ---
-title: Istruzione for (C) | Microsoft Docs
-ms.custom: ''
+title: Istruzione for (C)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6ad4b23e6caef15b5dabaaa3102d72e3ff84fbc
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 9f741e632bef7cf9561d849cbb3a6e0d3ecab03c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649900"
 ---
 # <a name="for-statement-c"></a>Istruzione for (C)
 

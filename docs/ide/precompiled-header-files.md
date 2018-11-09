@@ -1,14 +1,8 @@
 ---
-title: File di intestazione precompilata | Microsoft Docs
-ms.custom: ''
+title: File di intestazione precompilata
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - stdafx.h
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdafx.h
 - PCH files, file descriptions
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - precompiled header files, file descriptions
 - stdafx.cpp
 ms.assetid: 8228d87a-5609-41f3-9697-b16094c000e5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d93486d8df8cdb8bc253a0e71037f4e2ddf9e128
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: fed583464aa172887b80a8551adf86e02a76d210
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890479"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643209"
 ---
 # <a name="precompiled-header-files"></a>File di intestazione precompilata
 

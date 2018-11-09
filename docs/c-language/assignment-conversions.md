@@ -1,26 +1,16 @@
 ---
-title: Conversioni di assegnazione | Microsoft Docs
-ms.custom: ''
+title: Conversioni di assegnazione
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - conversions, assignment
 - assignment conversions
 ms.assetid: 4ee01013-de32-4aae-b12e-0051d0cde927
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90e77f4bd1eddaa11762b9449a54cb7127498bae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb3da57af62171ef9670267f94f01ccc097e5942
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038180"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649111"
 ---
 # <a name="assignment-conversions"></a>Conversioni di assegnazione
 

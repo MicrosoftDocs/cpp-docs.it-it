@@ -1,29 +1,19 @@
 ---
-title: Pagina delle proprietà Risorse gestite | Microsoft Docs
-ms.custom: ''
+title: pagina delle proprietà Risorse gestite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManagedResourceCompilerTool.ResourceFileName
 - VC.Project.VCManagedResourceCompilerTool.OutputFileName
 - VC.Project.VCManagedResourceCompilerTool.DefaultLocalizedResources
-dev_langs:
-- C++
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 687203787bdab69751aabf0672fe1269974b3014
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7445c9634ddd242935f3304efae76cc9eb8f007f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655611"
 ---
 # <a name="managed-resources-property-page"></a>pagina delle proprietà Risorse gestite
 

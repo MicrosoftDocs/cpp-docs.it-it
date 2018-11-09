@@ -1,26 +1,16 @@
 ---
-title: Costanti C | Microsoft Docs
-ms.custom: ''
+title: Costanti C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - constants, C
 - constants
 ms.assetid: f5bd7213-97ab-4cad-b913-1fc91a486935
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da2bfdc1894d15ae06cb56e457cf96d7fcd20664
-ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
+ms.openlocfilehash: 42f558f339e2d135b8dade7fed69c74da3574a76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49640716"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546497"
 ---
 # <a name="c-constants"></a>Costanti C
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: 18edc1ae13ef66f9646edbcf1d0fdfdbe0586cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cda4efcdb26499f910ad875b2bf7b7504a825cf6
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611211"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265100"
 ---
 # <a name="testing-the-read-only-provider"></a>Test di un provider in sola lettura
 
@@ -24,11 +24,11 @@ L'esempio in questo argomento crea un'applicazione di creazione guidata applicaz
 
 1. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
 
-1. Nel **tipi di progetto** riquadro, selezionare la **progetti Visual C++** cartella. Nel **modelli** riquadro, selezionare **applicazione MFC**.
+1. Nel **tipi di progetto** riquadro, selezionare la **installati** > **Visual C++** > **MFC/ATL** cartella. Nel **modelli** riquadro, selezionare **applicazione MFC**.
 
 1. Nome del progetto, immettere *TestProv*, quindi fare clic su **OK**.
 
-   Viene visualizzata la creazione guidata applicazione MFC.
+   Il **applicazione MFC** procedura guidata viene visualizzata.
 
 1. Nel **tipo di applicazione** pagina, selezionare **basato su finestra di dialogo**.
 
@@ -37,13 +37,14 @@ L'esempio in questo argomento crea un'applicazione di creazione guidata applicaz
 > [!NOTE]
 > L'applicazione non richiede il supporto di automazione se si aggiungono `CoInitialize` in `CTestProvApp::InitInstance`.
 
-È possibile visualizzare e modificare il **TestProv** finestra di dialogo (IDD_TESTPROV_DIALOG) selezionandolo nel **visualizzazione risorse**. Nella finestra di dialogo, inserire due caselle di riepilogo, una per ogni stringa del set di righe. Disattivare la proprietà di ordinamento per entrambe caselle di riepilogo premendo **Alt**+**invio** quando viene selezionata una casella di riepilogo, fare clic sui **stili** scheda e la cancellazione di  **Ordinamento** casella di controllo. Inoltre, inserire un **eseguire** pulsante sulla finestra di dialogo per recuperare il file. Il termine **TestProv** finestra di dialogo deve avere due caselle di riepilogo, denominate rispettivamente "String 1" e "String 2,"; include inoltre **OK**, **Annulla**, e **eseguire**  pulsanti.
+È possibile visualizzare e modificare il **TestProv** finestra di dialogo (IDD_TESTPROV_DIALOG) selezionandolo nel **visualizzazione risorse**. Nella finestra di dialogo, inserire due caselle di riepilogo, una per ogni stringa del set di righe. Disattivare la proprietà di ordinamento per entrambe caselle di riepilogo facendo clic **Alt**+**invio** quando è selezionata una casella di riepilogo, impostazione e la **ordinamento** proprietà **False**. Inoltre, inserire un **eseguire** pulsante sulla finestra di dialogo per recuperare il file. Il termine **TestProv** finestra di dialogo deve avere due caselle di riepilogo, denominate rispettivamente "String 1" e "String 2,"; include inoltre **OK**, **Annulla**, e **eseguire**  pulsanti.
 
 Aprire il file di intestazione per la classe di finestra di dialogo (in questo caso TestProvDlg). Aggiungere il codice seguente al file di intestazione (di fuori di qualsiasi dichiarazione di classe):
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // TestProvDlg.h
+#include <atldbcli.h>  
 
 class CProvider
 {
@@ -68,11 +69,11 @@ Aggiungere una funzione del gestore per il **eseguiti** pulsante premendo **Ctrl
 ///////////////////////////////////////////////////////////////////////
 // TestProvDlg.cpp
 
-void CtestProvDlg::OnRun()
+void CTestProvDlg::OnRun()
 {
    CCommand<CAccessor<CProvider>> table;
    CDataSource source;
-   CSession   session;
+   CSession session;
 
    if (source.Open("Custom.Custom.1", NULL) != S_OK)
       return;
@@ -91,36 +92,17 @@ void CtestProvDlg::OnRun()
 }
 ```
 
-Il `CCommand`, `CDataSource`, e `CSession` classi tutte appartengono ai modelli consumer OLE DB. Ogni classe corrisponde a un oggetto COM nel provider. Il `CCommand` oggetto accetta il `CProvider` (classe), dichiarati nel file di intestazione, come parametro di modello. Il `CProvider` parametro rappresenta le associazioni che usano per accedere ai dati dal provider. Di seguito è riportato il `Open` codice per l'origine dati, sessione e comando:
-
-```cpp
-if (source.Open("Custom.Custom.1", NULL) != S_OK)
-   return;
-
-if (session.Open(source) != S_OK)
-   return;
-
-if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
-   return;
-```
+Il `CCommand`, `CDataSource`, e `CSession` classi tutte appartengono ai modelli consumer OLE DB. Ogni classe corrisponde a un oggetto COM nel provider. Il `CCommand` oggetto accetta il `CProvider` (classe), dichiarati nel file di intestazione, come parametro di modello. Il `CProvider` parametro rappresenta le associazioni che usano per accedere ai dati dal provider. 
 
 Le righe per ciascuna delle classi aprire creano ciascun oggetto COM nel provider. Per individuare il provider, usare il `ProgID` del provider. È possibile ottenere il `ProgID` dal Registro di sistema o la ricerca nel file Custom.rgs (passare alla directory del provider e cercare il `ProgID` key).
 
-Il file mydata. txt viene incluso con il `MyProv` esempio. Per creare un file personalizzato, usare un editor e digitare un numero pari di stringhe, premendo INVIO tra ogni stringa. Se si sposta il file, specificare il nome del percorso.
+Il file mydata. txt viene incluso con il `MyProv` esempio. Per creare un file di uso personale, un editor e immettere un numero pari di stringhe, premendo **invio** tra ogni stringa. Se si sposta il file, specificare il nome del percorso.
 
 Passare la stringa "c:\\\Samples.\\\myprov\\\MyData.txt" nel `table.Open` riga. Se si esegue la `Open` chiamata, noterete che questa stringa viene passata al `SetCommandText` (metodo) nel provider. Si noti che il `ICommandText::Execute` metodo usato tale stringa.
 
-Per recuperare i dati, chiamare `MoveNext` sulla tabella. `MoveNext` chiama il `IRowset::GetNextRows`, `GetRowCount`, e `GetData` funzioni. Quando non sono presenti più righe (vale a dire la posizione corrente nel set di righe è supera a `GetRowCount`), il ciclo termina:
+Per recuperare i dati, chiamare `MoveNext` sulla tabella. `MoveNext` chiama il `IRowset::GetNextRows`, `GetRowCount`, e `GetData` funzioni. Quando non sono presenti più righe (vale a dire la posizione corrente nel set di righe è supera a `GetRowCount`), il ciclo termina.
 
-```cpp
-while (table.MoveNext() == S_OK)
-{
-   m_ctlString1.AddString(table.szField1);
-   m_ctlString2.AddString(table.szField2);
-}
-```
-
-Si noti che, se non sono presenti altre righe, provider restituiscono DB_S_ENDOFROWSET. Il valore di DB_S_ENDOFROWSET. inoltre non è un errore. È sempre consigliabile verificare con S_OK per annullare un ciclo di recupero di dati e non usare la macro SUCCEEDED.
+Se non sono presenti altre righe, i provider restituiscono DB_S_ENDOFROWSET. Il valore di DB_S_ENDOFROWSET. inoltre non è un errore. È sempre consigliabile verificare con S_OK per annullare un ciclo di recupero di dati e non usare la macro SUCCEEDED.
 
 È ora possibile compilare e testare il programma.
 

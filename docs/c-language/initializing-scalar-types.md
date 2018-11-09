@@ -1,12 +1,6 @@
 ---
-title: Inizializzazione di tipi scalari | Microsoft Docs
-ms.custom: ''
+title: Inizializzazione di tipi scalari
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - initializing scalar types
 - register variables
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fe692b6eb1d29492605e7a6d2e7d6839a3a33b71
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f991eff82e5b6919f7960513ae9bc502cad77069
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754592"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641090"
 ---
 # <a name="initializing-scalar-types"></a>Inizializzazione di tipi scalari
 

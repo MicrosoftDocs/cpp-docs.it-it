@@ -1,27 +1,15 @@
 ---
-title: Progetti CMake in Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Progetti CMake in Visual C++
 ms.date: 10/18/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
-ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
+ms.openlocfilehash: 07c32e30aa36d6e59122340da0b1026e7025780d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143731"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612498"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Progetti CMake in Visual C++
 

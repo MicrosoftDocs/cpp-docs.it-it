@@ -1,11 +1,6 @@
 ---
-title: Funzioni obsolete | Microsoft Docs
-ms.custom: ''
+title: Funzioni obsolete
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: conceptual
 f1_keywords:
 - is_wctype
 - _loaddll
@@ -24,24 +19,18 @@ f1_keywords:
 - stdlib/_sleep
 - time/_getsystime
 - time/_setsystime
-dev_langs:
-- C++
 helpviewer_keywords:
 - obsolete functions
 - _beep function
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0b43f7f8010129ca7e066b712633eadef083013c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 76c7a710b577d0fef4fe2a74dbee2a722c7f98b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677422"
 ---
 # <a name="obsolete-functions"></a>Funzioni obsolete
 

@@ -1,25 +1,16 @@
 ---
-title: Uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++ | Microsoft Docs
+title: Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C++
 ms.date: 06/08/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4aa276c0e9d97cd5b723499a21432290772a49a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45dcf185f57f7deedb3734d31ce17a6201c81959
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612277"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C++
 

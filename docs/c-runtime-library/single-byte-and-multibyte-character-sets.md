@@ -1,30 +1,20 @@
 ---
-title: Set di caratteri a un byte e multibyte | Microsoft Docs
-ms.custom: ''
+title: Set di caratteri a byte singolo e multibyte
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.character.multibyte
-dev_langs:
-- C++
 helpviewer_keywords:
 - SBCS (single byte character set)
 - MBCS [C++], about MBCS
 - character sets [C++], multibyte
 - character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54a702c0e87cefb9d241b1031f65da6a2df3fbe5
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1870fed732e5b940edb7690f9c3b58bb39c24572
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451888"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645380"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>Set di caratteri a byte singolo e multibyte
 

@@ -1,28 +1,18 @@
 ---
-title: Attributi IDL, Aggiunta guidata metodo | Microsoft Docs
-ms.custom: ''
+title: Attributi IDL, Aggiunta guidata metodo
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.idlattrib
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Method Wizard [C++]
 - IDL attributes, Add Method Wizard
 ms.assetid: f80c3bc1-b515-4d6c-83ee-98c2c21ba902
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce9042a980190bf1fe3da06fb4a9843f73294dee
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 073f821d7db0733c89c21ed4b2a85014aa151244
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398846"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615787"
 ---
 # <a name="idl-attributes-add-method-wizard"></a>Attributi IDL, Aggiunta guidata metodo
 

@@ -1,15 +1,9 @@
 ---
 title: Macro comuni per i comandi e le proprietà di compilazione
-ms.custom: ''
 ms.date: 05/29/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -98,16 +92,12 @@ helpviewer_keywords:
 - $(PlatformName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 278cb34a49650d88b9e7de9efd8456ff430aca63
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ccd5b7a8fe8a04b69a963e8edc3811cc3fd2772
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569927"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628579"
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Macro comuni per i comandi e le proprietà di compilazione
 

@@ -1,25 +1,15 @@
 ---
-title: Introduzione a Visual C++ per utenti UNIX | Microsoft Docs
-ms.custom: ''
+title: Introduzione a Visual C++ per utenti UNIX
 ms.date: 09/01/2017
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 963a43987163bf390f2ded652c5ea56eaa58bcb8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066968"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597548"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduzione a Visual C++ per utenti UNIX
 
