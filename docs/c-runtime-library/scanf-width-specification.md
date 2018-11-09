@@ -1,10 +1,6 @@
 ---
-title: Specifica della larghezza per scanf | Microsoft Docs
-ms.custom: ''
+title: Specifica della larghezza per scanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -15,21 +11,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - scanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e236f323d882ddc7091655d944f0ed78bdeac28
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445162"
 ---
 # <a name="scanf-width-specification"></a>Specifica della larghezza per scanf
 

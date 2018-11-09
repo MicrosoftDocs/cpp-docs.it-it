@@ -1,27 +1,17 @@
 ---
-title: Assegnazione composta C | Microsoft Docs
-ms.custom: ''
+title: Assegnazione composta C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - operators [C], assignment
 - compound assignment operators
 - assignment operators, compound
 ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c4450682abbb5efd739b5eb08d228b4c55d00ec
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 102f53378430074a59636eb18488a7ab51289731
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445136"
 ---
 # <a name="c-compound-assignment"></a>Assegnazione composta C
 

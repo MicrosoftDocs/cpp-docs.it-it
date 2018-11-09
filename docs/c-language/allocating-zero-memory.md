@@ -1,26 +1,16 @@
 ---
-title: Allocazione memoria azzerata | Microsoft Docs
-ms.custom: ''
+title: Allocazione memoria azzerata
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, zero memory
 - zero memory
 ms.assetid: 768f2ab9-83a1-4887-8eb5-c094c18489a8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bc3b7a92cdc8a05c73f15c7cea917d86a3b6bb46
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c7d5f307a38fff938c94cf2e1660cec99262a10a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085056"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447307"
 ---
 # <a name="allocating-zero-memory"></a>Allocazione memoria azzerata
 

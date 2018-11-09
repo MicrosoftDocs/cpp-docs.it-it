@@ -1,26 +1,16 @@
 ---
-title: Caratteri spazio vuoto| Microsoft Docs
-ms.custom: ''
+title: Carattere di spazio vuoto
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - white space, characters
 - characters, white space
 ms.assetid: 030ccbdc-2db3-4dd0-88c8-f5c2669ddebf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3aa487ee277954470cdd8b16f9f64f465c195897
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: adeea0dadfab53ee1a311343db6619f918c17e2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434939"
 ---
 # <a name="white-space-characters"></a>Carattere di spazio vuoto
 

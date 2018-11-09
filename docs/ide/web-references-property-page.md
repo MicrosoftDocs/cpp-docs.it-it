@@ -1,30 +1,20 @@
 ---
-title: Pagina delle proprietà Riferimenti Web | Microsoft Docs
-ms.custom: ''
+title: Pagina delle proprietà Riferimenti Web
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCSDLTool.Output
 - VC.Project.VCWebServiceProxyGeneratorTool.SuppressStartupBanner
 - VC.Project.VCWebServiceProxyGeneratorTool.Output
 - VC.Project.VCWebServiceProxyGeneratorTool.GeneratedProxyLanguage
-dev_langs:
-- C++
 helpviewer_keywords:
 - Web references, properties
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 568dfc1b925254bec792138c59ff7f1b3e19cb28
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 36c6ab609aaee5e77dd7ed2aa4b53b5690c5c90a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442071"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447970"
 ---
 # <a name="web-references-property-page"></a>Pagina delle proprietà Riferimenti Web
 
