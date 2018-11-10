@@ -1,10 +1,6 @@
 ---
-title: Classe binomial_distribution | Microsoft Docs
-ms.custom: ''
+title: Classe binomial_distribution
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::binomial_distribution
 - random/std::binomial_distribution::reset
@@ -19,8 +15,6 @@ f1_keywords:
 - random/std::binomial_distribution::param_type::t
 - random/std::binomial_distribution::param_type::operator==
 - random/std::binomial_distribution::param_type::operator!=
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::binomial_distribution [C++]
 - std::binomial_distribution [C++], reset
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f853ada608b2f70dc0a7c7e3fb78e5fb28d0fa83
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1cbb7aff254cee848d711b22414b38deee8cfc07
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100872"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512964"
 ---
 # <a name="binomialdistribution-class"></a>Classe binomial_distribution
 
