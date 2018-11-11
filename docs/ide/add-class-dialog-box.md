@@ -1,27 +1,17 @@
 ---
-title: Finestra di dialogo Aggiungi classe | Microsoft Docs
-ms.custom: ''
+title: Aggiungi classe (finestra di dialogo)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.addclass
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: 916259b8-8e5f-4267-bd10-313483beba67
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1eb848ae20ba9a587bfdf14881e1a3df3bbeb31
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 405f88f7f77ea75584ec3cfd76af1ea9a0457ed6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420283"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643196"
 ---
 # <a name="add-class-dialog-box"></a>Aggiungi classe (finestra di dialogo)
 
@@ -33,7 +23,7 @@ La finestra di dialogo **Aggiungi classe** contiene modelli che consentono se op
 
 - Creare automaticamente la nuova classe aggiungendo i file e codice sorgente appropriati al progetto.
 
-È possibile accedere alla finestra di dialogo **Aggiungi classe** dal menu **Progetto** , da **Esplora soluzioni** o dalla [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code).
+È possibile accedere alla finestra di dialogo **Aggiungi classe** dal menu **Progetto** , **Esplora soluzioni**o [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 >  Quando si prova ad aggiungere una classe che non è adatta al progetto corrente, si riceverà un messaggio di errore. Fare clic su **OK** per tornare alla finestra di dialogo **Aggiungi classe** .

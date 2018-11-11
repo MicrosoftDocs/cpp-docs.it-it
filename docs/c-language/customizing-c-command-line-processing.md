@@ -1,12 +1,6 @@
 ---
-title: Personalizzazione dell'elaborazione dalla riga di comando C | Microsoft Docs
-ms.custom: ''
+title: Personalizzazione dell'elaborazione dalla riga di comando C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - _spawn functions
 - command line, processing
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 541cfed194262aa5bff6810b19d5d2c89468ffa4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f7bc78c20aee4b91bf00fefd2615ba1a6611010
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090815"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623599"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizzazione dell'elaborazione dalla riga di comando C
 

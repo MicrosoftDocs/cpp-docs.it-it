@@ -1,25 +1,15 @@
 ---
-title: Delimitatori per i tag della documentazione di Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Delimitatori per i tag della documentazione di Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 44d867f9bc33c56bf57f55d75a4f8babbbf70748
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecc6018ef22b9c6b0ac64e379365555fb6b3d12f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401758"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589436"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitatori per i tag della documentazione di Visual C++
 

@@ -1,29 +1,19 @@
 ---
-title: Pagina delle proprietà Strumento Generatore di documenti XML | Microsoft Docs
-ms.custom: ''
+title: Pagina delle proprietà dello strumento generatore di documenti XML
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCXDCMakeTool.ValidateIntelliSense
 - VC.Project.VCXDCMakeTool.SuppressStartupBanner
 - VC.Project.VCXDCMakeTool.DocumentLibraryDependencies
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
-dev_langs:
-- C++
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72756a97d9d840b09d4b207cf47fedd8cddc59d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3e97aa61715f0cda8e339a1aabc8e947170b2e90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594233"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Pagina delle proprietà dello strumento generatore di documenti XML
 

@@ -1,12 +1,6 @@
 ---
-title: Prototipi di funzioni | Microsoft Docs
-ms.custom: ''
+title: Prototipi di funzioni
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - function prototypes
 - function return types, function prototypes
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb058b9984cfcd34669f2691fa20245c14d49344
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b424f07fb139e3ece48da7bfb5cff94f7b84334c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596807"
 ---
 # <a name="function-prototypes"></a>Prototipi di funzioni
 

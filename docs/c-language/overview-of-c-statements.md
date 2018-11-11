@@ -1,12 +1,6 @@
 ---
-title: Panoramica delle istruzioni C | Microsoft Docs
-ms.custom: ''
+title: Cenni preliminari sulle istruzioni C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - semicolon, in C statements
 - statements, C
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 334bee129f7ec2515874cf228c6c549eb71fecfe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 906beb7c5c2edfc448daadb1f4c5a111f7877b91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613720"
 ---
 # <a name="overview-of-c-statements"></a>Cenni preliminari sulle istruzioni C
 
