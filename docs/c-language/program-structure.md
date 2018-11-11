@@ -1,27 +1,17 @@
 ---
-title: Struttura del programma | Microsoft Docs
-ms.custom: ''
+title: Struttura del programma
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - program structure [C++], C
 - programs [C++], structure
 - C, program structure
 ms.assetid: b713b5a1-21a2-4e6f-9481-5f8594f1859e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5007deecce9adcaf03ab3d367539eac58c79498f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 210c3dcd020de2acd999792b876873478982cfef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059700"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563891"
 ---
 # <a name="program-structure"></a>Struttura del programma
 
