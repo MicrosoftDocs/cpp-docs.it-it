@@ -1,29 +1,19 @@
 ---
-title: Modifica di un'interfaccia COM | Microsoft Docs
-ms.custom: ''
+title: Modifica di un'interfaccia COM
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.com.editing.interfaces
-dev_langs:
-- C++
 helpviewer_keywords:
 - methods [C++], adding to COM interfaces
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 6c2909e0-af2d-4a37-bb39-ed372e6129cf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f660f9d69fc787384fcfbec37caec0064a58ec29
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 338782cbf7cc302c285e8e778389ae28e20f2b14
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861343"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657366"
 ---
 # <a name="editing-a-com-interface"></a>Modifica di un'interfaccia COM
 
