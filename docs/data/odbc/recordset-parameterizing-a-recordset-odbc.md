@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: fdea70f8d87604ca0665baa64c8652c14295a670
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506574"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331269"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: applicazione di parametri a un recordset (ODBC)
 
@@ -54,7 +54,7 @@ Gli usi tipici per i parametri includono:
 
    Stringa di filtro del recordset archiviato in `m_strFilter`, simile alla seguente:
 
-    ```
+    ```cpp
     "StudentID = ?"
     ```
 
@@ -62,7 +62,7 @@ Gli usi tipici per i parametri includono:
 
    Assegnare il valore del parametro come indicato di seguito:
 
-    ```
+    ```cpp
     strInputID = "100";
     ...
     m_strParam = strInputID;
@@ -70,7 +70,7 @@ Gli usi tipici per i parametri includono:
 
    È preferibile non impostare una stringa di filtro in questo modo:
 
-    ```
+    ```cpp
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted
                                        // for some drivers
     ```
@@ -79,15 +79,15 @@ Gli usi tipici per i parametri includono:
 
    Il valore del parametro è diverso ogni volta che viene ripetuta la query di set di record per un nuovo ID di studente.
 
-    > [!TIP]
-    >  Utilizzo di un parametro è semplicemente un filtro più efficiente. Per un recordset con parametri, il database deve elaborare un database SQL **seleziona** istruzione una sola volta. Per un recordset filtrato senza parametri, il **selezionate** istruzione deve essere elaborata ogni volta che si `Requery` con un nuovo valore di filtro.
+   > [!TIP]
+   > Utilizzo di un parametro è semplicemente un filtro più efficiente. Per un recordset con parametri, il database deve elaborare un database SQL **seleziona** istruzione una sola volta. Per un recordset filtrato senza parametri, il **selezionate** istruzione deve essere elaborata ogni volta che si `Requery` con un nuovo valore di filtro.
 
 Per altre informazioni sui filtri, vedere [Recordset: applicazione di filtri dei record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> Uso dei parametri della classe Recordset
 
 > [!NOTE]
->  In questa sezione si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa di massa di righe il recupero, l'implementazione di parametri è un processo simile. Per altre informazioni, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> In questa sezione si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa di massa di righe il recupero, l'implementazione di parametri è un processo simile. Per altre informazioni, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Prima di creare la classe del recordset, determinare i parametri necessari, quali sono i tipi di dati e come verranno utilizzati dal recordset.
 
@@ -116,7 +116,7 @@ Prima di creare la classe del recordset, determinare i parametri necessari, qual
 
 1. Modificare il [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) definizione di funzione membro nel file con estensione cpp. Aggiungere una chiamata di funzione RFX per ogni membro di dati di parametro che è stato aggiunto alla classe. Per informazioni sulla scrittura delle funzioni RFX, vedere [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md). Far precedere le chiamate RFX per i parametri con una singola chiamata a:
 
-    ```
+    ```cpp
     pFX->SetFieldType( CFieldExchange::param );
     // RFX calls for parameter data members
     ```
@@ -130,11 +130,10 @@ Prima di creare la classe del recordset, determinare i parametri necessari, qual
    In fase di esecuzione "?" vengono sostituiti, in ordine, per i valori dei parametri è passare. Il primo membro di dati di parametro impostato dopo la [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) chiamata sostituisce il primo "?"nella stringa SQL, il secondo membro di dati di parametro sostituisce la seconda"?" e così via.
 
 > [!NOTE]
->  L'ordine dei parametri è importante: l'ordine delle RFX chiamate per i parametri in di `DoFieldExchange` funzione deve corrispondere all'ordine dei segnaposto di parametro nella stringa SQL.
+> L'ordine dei parametri è importante: l'ordine delle RFX chiamate per i parametri in di `DoFieldExchange` funzione deve corrispondere all'ordine dei segnaposto di parametro nella stringa SQL.
 
 > [!TIP]
-
->  La stringa per lavorare con più probabile è la stringa specificata (se presente) per la classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) (membro dati), ma alcuni driver ODBC potrebbero consentire i parametri in altre clausole SQL.
+> La stringa per lavorare con più probabile è la stringa specificata (se presente) per la classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) (membro dati), ma alcuni driver ODBC potrebbero consentire i parametri in altre clausole SQL.
 
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> Passaggio di valori di parametro in fase di esecuzione
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595130"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518411"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -63,13 +63,13 @@ Queste funzioni restituiscono 0 se l'impostazione di autorizzazione viene modifi
 
 Il **chmod** funzione consente di modificare l'impostazione di autorizzazione del file specificato da *filename*. L'impostazione di autorizzazione controlla l'accesso in lettura e scrittura al file. L'espressione integer *pmode* contiene una o entrambe le costanti manifesto seguenti, definite in sys\stat.h.
 
-|*pmode*|Significato|
+| *pmode* | Significato |
 |-|-|
-**S_IREAD**|Solo lettura consentita.
-**S_IWRITE**|Scrittura consentita. (In effetti, consente la lettura e la scrittura)
-**S_IREAD** &AMP;#124; **S_IWRITE**|Lettura e scrittura consentite.
+| **\_S\_IREAD** | Solo lettura consentita. |
+| **\_S\_IWRITE** | Scrittura consentita. (In effetti, consente la lettura e la scrittura) |
+| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | Lettura e scrittura consentite. |
 
-Quando vengono specificate entrambe le costanti, queste vengono unite con il bit per bit o un operatore (**|**). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Di conseguenza, le modalità **s_iwrite** e **s_iread** | **s_iwrite** sono equivalenti.
+Quando vengono specificate entrambe le costanti, queste vengono unite con il bit per bit o un operatore (**\|**). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Di conseguenza, le modalità **s_iwrite** e **s_iread** \| **s_iwrite** sono equivalenti.
 
 **wchmod** è una versione a caratteri wide di **chmod**; gli *nomefile* argomento **wchmod** è una stringa di caratteri "wide". **wchmod** e **chmod** hanno lo stesso comportamento in caso contrario.
 
@@ -157,7 +157,6 @@ int main( void )
 ```Output
 
 A line of text.
-
 ```
 
 ```Output

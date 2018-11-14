@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677786"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331243"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -107,14 +107,14 @@ Il **fstat** funzione di acquisizione di informazioni sul file aperto associato 
 
 |Campo|Significato|
 |-|-|
-**st_atime**|Ora dell'ultimo accesso al file.
-**st_ctime**|Ora di creazione del file.
-**st_dev**|Se un dispositivo *fd*; in caso contrario, 0.
-**st_mode**|Maschera di bit per informazioni sulla modalità di file. Il **s_ifchr** bit viene impostato se *fd* fa riferimento a un dispositivo. Il **s_ifreg** bit viene impostato se *fd* fa riferimento a un file ordinario. I bit di lettura/scrittura vengono impostati in base alla modalità di autorizzazione del file. **S_ifchr** e altre costanti sono definite in sys\stat.h.
-**st_mtime**|Ora dell'ultima modifica del file.
-**st_nlink**|Sempre 1 nel file system non NTFS.
-**st_rdev**|Se un dispositivo *fd*; in caso contrario, 0.
-**st_size**|Dimensioni del file, in byte.
+| **st_atime** | Ora dell'ultimo accesso al file. |
+| **st_ctime** | Ora di creazione del file. |
+| **st_dev** | Se un dispositivo *fd*; in caso contrario, 0. |
+| **st_mode** | Maschera di bit per informazioni sulla modalità di file. Il **s_ifchr** bit viene impostato se *fd* fa riferimento a un dispositivo. Il **s_ifreg** bit viene impostato se *fd* fa riferimento a un file ordinario. I bit di lettura/scrittura vengono impostati in base alla modalità di autorizzazione del file. **S_ifchr** e altre costanti sono definite in sys\stat.h. |
+| **st_mtime** | Ora dell'ultima modifica del file. |
+| **st_nlink** | Sempre 1 nel file system non NTFS. |
+| **st_rdev** | Se un dispositivo *fd*; in caso contrario, 0. |
+| **st_size** | Dimensioni del file, in byte. |
 
 Se *fd* fa riferimento a un dispositivo, il **st_atime**, **st_ctime**, **st_mtime**, e **st_size** campi sono non significativo.
 
