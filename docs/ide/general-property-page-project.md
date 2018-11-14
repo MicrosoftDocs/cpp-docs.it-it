@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 5479b892a2cb97fb645dba4ffac70dd9ac4aeffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594515"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520478"
 ---
 # <a name="general-property-page-project"></a>Pagina delle proprietà Generale (Progetto)
 
@@ -110,29 +110,29 @@ Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresent
 
 - **Tipo configurazione**
 
-   È possibile scegliere tra diversi tipi di configurazione:
+  È possibile scegliere tra diversi tipi di configurazione:
 
-   - **Applicazione (.exe)**
+  - **Applicazione (.exe)**
 
-      Visualizza il set di strumenti del linker (Compilatore C/C++, MIDL, Compilatore di risorse, Linker, BSCMake, Generatore proxy del servizio Web XML, eventi di compilazione personalizzata, pre-compilazione, pre-collegamento e post-compilazione).
+     Visualizza il set di strumenti del linker (Compilatore C/C++, MIDL, Compilatore di risorse, Linker, BSCMake, Generatore proxy del servizio Web XML, eventi di compilazione personalizzata, pre-compilazione, pre-collegamento e post-compilazione).
 
-   - **Libreria dinamica (.dll)**
+  - **Libreria dinamica (.dll)**
 
-      Visualizza il set di strumenti del linker, specifica l'opzione del linker /DLL e aggiunge _WINDLL a CL.
+     Visualizza il set di strumenti del linker, specifica l'opzione del linker /DLL e aggiunge _WINDLL a CL.
 
-   - **Makefile**
+  - **Makefile**
 
-      Visualizza il set di strumenti di makefile (NMake).
+     Visualizza il set di strumenti di makefile (NMake).
 
-   - **Libreria statica (.lib)**
+  - **Libreria statica (.lib)**
 
-      Visualizza il set di strumenti Gestione librerie (uguale al set di strumenti del linker, ad eccezione dello strumento Gestione librerie sostitutivo per il linker e l'omissione di Generatore proxy del servizio Web XML).
+     Visualizza il set di strumenti Gestione librerie (uguale al set di strumenti del linker, ad eccezione dello strumento Gestione librerie sostitutivo per il linker e l'omissione di Generatore proxy del servizio Web XML).
 
-   - **Utilità**
+  - **Utilità**
 
-      Visualizza il set di strumenti delle utilità (MIDL, eventi di compilazione personalizzata, pre-compilazione e post-compilazione).
+     Visualizza il set di strumenti delle utilità (MIDL, eventi di compilazione personalizzata, pre-compilazione e post-compilazione).
 
-   Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
+  Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Uso di MFC**
 
