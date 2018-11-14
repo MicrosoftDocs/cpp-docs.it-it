@@ -1,15 +1,15 @@
 ---
 title: Opzioni del compilatore elencate per categoria
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532951"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598821"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opzioni del compilatore elencate per categoria
 
@@ -46,7 +46,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Gh](gh-enable-penter-hook-function.md)|Chiama la funzione hook `_penter`.|
 |[/GH](gh-enable-pexit-hook-function.md)|Chiama la funzione hook `_pexit`.|
 |[/GL](gl-whole-program-optimization.md)|Attiva l'ottimizzazione dell'intero programma.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Attiva una ricompilazione minima.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Deprecato. Attiva una ricompilazione minima.|
 |[/GR](gr-enable-run-time-type-information.md)|Attiva RTTI (Run-Time Type Information).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa la convezione di chiamata `__fastcall` . (solo x86)|
 |[/GS](gs-buffer-security-check.md)|Controlla la sicurezza del buffer.|
@@ -202,6 +202,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Deprecato. In alternativa, usare [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Deprecato. Crea un file informazioni di visualizzazione senza variabili locali.|
 |[/Ge](ge-enable-stack-probes.md)|Deprecato. Attiva le ricerche dello stack. Attivazione per impostazione predefinita.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Deprecato. Attiva una ricompilazione minima.|
 |[/GX](gx-enable-exception-handling.md)|Deprecato. Attiva la gestione sincrona delle eccezioni. Usare [/EH](eh-exception-handling-model.md) .|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Deprecato. Abilita controlli veloci. Usare [/RTC1](rtc-run-time-error-checks.md) .|
 |[/H](h-restrict-length-of-external-names.md)|Deprecato. Limita la lunghezza dei nomi esterni (pubblici).|
