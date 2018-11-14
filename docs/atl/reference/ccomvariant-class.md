@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: dd53bdea211610b208516860b29c1b0094f5a4da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523267"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522488"
 ---
 # <a name="ccomvariant-class"></a>Classe CComVariant
 
@@ -98,7 +98,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="parameters"></a>Parametri
 
 *pSrc*<br/>
-[in] Punta al [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) da collegare all'oggetto.
+[in] Punta al [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) da collegare all'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -242,7 +242,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="parameters"></a>Parametri
 
 *pSrc*<br/>
-[in] Un puntatore per il [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) da copiare.
+[in] Un puntatore per il [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) da copiare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -342,7 +342,7 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>Parametri
 
 *varSrc*<br/>
-[in] Il `CComVariant` oppure [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) da assegnare al `CComVariant` oggetto. I contenuti della variante origine vengono copiati nella destinazione senza conversione.
+[in] Il `CComVariant` oppure [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) da assegnare al `CComVariant` oggetto. I contenuti della variante origine vengono copiati nella destinazione senza conversione.
 
 *bstrSrc*<br/>
 [in] La stringa BSTR da assegnare al `CComVariant` oggetto. Il tipo del `CComVariant` VT_BSTR sarà l'oggetto.

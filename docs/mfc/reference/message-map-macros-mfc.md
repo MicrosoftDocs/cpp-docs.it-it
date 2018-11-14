@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474269"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327447"
 ---
 # <a name="message-map-macros-mfc"></a>Macro della mappa messaggi (MFC)
 
@@ -246,31 +246,12 @@ ON_COMMAND_EX(id, memberFxn);
 ID di comando.
 
 *memberFxn*<br/>
-Il nome della funzione di gestore di messaggi a cui il comando viene eseguito il mapping.
-
-### <a name="remarks"></a>Note
-
-Forma estesa di gestori di messaggi di comando è disponibile per utilizzi avanzati. ON_COMMAND_EX (macro) viene usato per tali gestori di messaggi e fornisce un superset della funzionalità [ON_COMMAND] (#on_command).  Funzioni membro esteso di gestori di comandi accettano un solo parametro, UINT contenente l'ID di comando e restituiscono un valore booleano. Il valore restituito deve essere TRUE per
-
-Questa macro esegue il mapping di un messaggio di comando a una funzione membro di gestore comando esteso.
-
-### <a name="syntax"></a>Sintassi
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>Parametri
-
-*ID*<br/>
-ID di comando.
-
-*memberFxn*<br/>
 Nome della funzione del gestore messaggi a cui viene eseguito il mapping del comando.
 
 ### <a name="remarks"></a>Note
 
 Forma estesa di gestori di messaggi di comando è disponibile per utilizzi avanzati. ON_COMMAND_EX (macro) viene usato per tali gestori di messaggi e fornisce un superset del [ON_COMMAND](message-map-macros-mfc.md#on_command) funzionalità. Funzioni membro esteso di gestori di comandi accettano un solo parametro, UINT contenente l'ID di comando e restituiscono un valore booleano. Il valore restituito deve essere TRUE per indicare che il comando è stato gestito; in caso contrario, il routing continuerà ad altri oggetti destinazione comando.
+
 Per altre informazioni, vedere la nota tecnica [TN006: mappe messaggi] tm006-messaggio-maps.md).
 
 ### <a name="requirements"></a>Requisiti

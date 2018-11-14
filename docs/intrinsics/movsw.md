@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 4bb8a6411c3700b3338fb7d5bc76884f84bb2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be80a7f50a62146ffcd6d271def6d254da5a88b2
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453615"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329865"
 ---
 # <a name="movsw"></a>__movsw
 
@@ -24,10 +24,10 @@ Genera una stringa di spostare (`rep movsw`) (istruzione).
 ## <a name="syntax"></a>Sintassi
 
 ```
-void __movsw( 
-   unsigned short* Dest, 
-   unsigned short* Source, 
-   size_t Count 
+void __movsw(
+   unsigned short* Dest,
+   unsigned short* Source,
+   size_t Count
 );
 ```
 

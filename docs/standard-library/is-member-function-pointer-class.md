@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_function_pointer class
 - is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
-ms.openlocfilehash: f50fec476a32d2cb7361b7ab8cc7d8b28d225d95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0eb758977abf889a7d5ec8cdec9213980493ba2e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665647"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521726"
 ---
 # <a name="ismemberfunctionpointer-class"></a>Classe is_member_function_pointer
 
@@ -69,7 +69,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output

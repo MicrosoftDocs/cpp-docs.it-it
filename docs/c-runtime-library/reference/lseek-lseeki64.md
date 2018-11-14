@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 19a312bcc3cdeea82bcebce6da95e26ef88992b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541687"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326095"
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 
@@ -78,9 +78,9 @@ Il **lseek** funzione passa il puntatore del file associato *fd* a una nuova pos
 
 |*origine* valore||
 |-|-|
-**SEEK_SET**|Inizio del file.
-**SEEK_CUR**|Posizione corrente del puntatore del file.
-**SEEK_END**|Fine del file.
+| **SEEK_SET** | Inizio del file. |
+| **SEEK_CUR** | Posizione corrente del puntatore del file. |
+| **SEEK_END** | Fine del file. |
 
 È possibile usare **lseek** per riposizionare il puntatore del mouse in qualsiasi punto in un file o oltre la fine del file.
 

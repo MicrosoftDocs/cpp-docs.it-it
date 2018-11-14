@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: c68bc835adf19df7f1538d30b2be162fe6dc6021
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584457"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327161"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -85,25 +85,25 @@ File descrittori passati **fdopen** sono di proprietà dall'oggetto restituito *
 
 Il *modalità* stringa di caratteri specifica il tipo di accesso al file richiesto per il file:
 
-|*mode*|Accedi a|
-|-|-|
-**"r"**|Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **fopen** chiamata ha esito negativo.
-**"w"**|Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente.
-**"a"**|Viene aperto per la scrittura alla fine del file (aggiunta). Creare il file se è inesistente.
-**"r+"**|Viene aperto per la lettura e la scrittura. Il file deve esistere.
-**"w+"**|Apre un file vuoto per la lettura e la scrittura. Se il file esiste, il contenuto viene eliminato in modo permanente.
-**"a+"**|Viene aperto per la lettura e l'aggiunta. Creare il file se è inesistente.
+| *mode* | Accedi a |
+|--------|--------|
+| **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **fopen** chiamata ha esito negativo. |
+| **"w"** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
+| **"a"** | Viene aperto per la scrittura alla fine del file (aggiunta). Creare il file se è inesistente. |
+| **"r+"** | Viene aperto per la lettura e la scrittura. Il file deve esistere. |
+| **"w+"** | Apre un file vuoto per la lettura e la scrittura. Se il file esiste, il contenuto viene eliminato in modo permanente. |
+| **"a+"** | Viene aperto per la lettura e l'aggiunta. Creare il file se è inesistente. |
 
 Quando un file viene aperto con il **"a"** oppure **"a +"** accedere a tipo, tutte le operazioni vengono eseguite alla fine del file di scrittura. Il puntatore del file può essere riposizionato usando [fseek](fseek-fseeki64.md) oppure [rewind](rewind.md), ma viene sempre spostato di nuovo alla fine del file prima di qualsiasi operazione di scrittura. Di conseguenza, i dati esistenti non possono essere sovrascritti. Quando la **"r +"**, **"w +"**, o **"a +"** viene specificato il tipo di accesso, sono consentite sia la lettura e scrittura (il file viene definito aperto per "update"). Tuttavia, quando si passa da lettura a scrittura, deve esserci una nuova [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), oppure [rewind](rewind.md) operazione. È possibile specificare la posizione corrente per il [fsetpos](fsetpos.md) oppure [fseek](fseek-fseeki64.md) operazione, se si desidera.
 
 Oltre ai valori specificati sopra, i caratteri seguenti possono essere incluso anche nelle *modalità* per specificare la modalità di conversione per caratteri di nuova riga:
 
-|*modalità* modificatore|Comportamento|
-|-|-|
-**t**|Aprire in modalità testo (convertita). In questa modalità, le combinazioni di ritorno a capo-avanzamento di riga (CR-LF) vengono convertite in un avanzamento riga (LF) al momento dell'input e i caratteri di avanzamento riga vengono convertiti in combinazioni di ritorno a capo-avanzamento di riga (CR-LF) al momento dell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file.
-**b**|Aprire in modalità binaria (non convertita). Tutte le conversioni dalla **t** modalità vengono soppressi.
-**c**|Abilitare il flag commit per la proprietà associata *nomefile* in modo che il contenuto del buffer di file viene scritti direttamente su disco se **fflush** oppure **FlushAll** viene chiamato.
-**n**|Reimpostare il flag commit per la proprietà associata *filename* per "no-commit". Questa è l'impostazione predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a Commode.obj. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a Commode.obj.
+| *modalità* modificatore | Comportamento |
+|-----------------|----------|
+| **t** | Aprire in modalità testo (convertita). In questa modalità, le combinazioni di ritorno a capo-avanzamento di riga (CR-LF) vengono convertite in un avanzamento riga (LF) al momento dell'input e i caratteri di avanzamento riga vengono convertiti in combinazioni di ritorno a capo-avanzamento di riga (CR-LF) al momento dell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. |
+| **b** | Aprire in modalità binaria (non convertita). Tutte le conversioni dalla **t** modalità vengono soppressi. |
+| **c** | Abilitare il flag commit per la proprietà associata *nomefile* in modo che il contenuto del buffer di file viene scritti direttamente su disco se **fflush** oppure **FlushAll** viene chiamato. |
+| **n** | Reimpostare il flag commit per la proprietà associata *filename* per "no-commit". Questa è l'impostazione predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a Commode.obj. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a Commode.obj. |
 
 Il **t**, **c**, e **n** *modalità* opzioni sono estensioni Microsoft per **fopen** e**fdopen**. Non usarle se si desidera mantenere la portabilità ANSI.
 

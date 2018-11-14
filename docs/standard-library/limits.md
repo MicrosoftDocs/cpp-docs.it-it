@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: aa143198ec662ae33263d1ee5d79ffadf51c61d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c029095d5298048874a7eb6f1a41209d6a6f4779
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632453"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524885"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -22,7 +22,6 @@ Definisce la classe modello `numeric_limits` e due enumerazioni relative all'arr
 
 ```cpp
 #include <limits>
-
 ```
 
 ## <a name="remarks"></a>Note

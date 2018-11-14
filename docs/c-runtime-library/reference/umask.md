@@ -26,12 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677162"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327668"
 ---
 # <a name="umask"></a>_umask
 
@@ -58,13 +58,13 @@ Il **umask** funzione imposta la maschera di autorizzazione file del processo co
 
 L'espressione integer *pmode* contiene una o entrambe le costanti manifesto seguenti, definite in SYS\STAT. H:
 
-|*pmode*||
+|*pmode*| |
 |-|-|
-**S_IWRITE**|Scrittura consentita.
-**S_IREAD**|Lettura consentita.
-**S_IREAD** \| **S_IWRITE**|Lettura e scrittura consentite.
+| **S_IWRITE** | Scrittura consentita. |
+| **S_IREAD** | Lettura consentita. |
+| **S_IREAD** &AMP;#124; **S_IWRITE** | Lettura e scrittura consentite. |
 
-Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per bit ( **|** ). Se il *pmode* l'argomento è **s_iread**, non è consentita la lettura (il file è di sola scrittura). Se il *pmode* l'argomento è **s_iwrite**, non è consentita la scrittura (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, il bit di lettura con l'impostazione **umask** non ha alcun effetto sulle modalità del file.
+Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per bit ( **&#124;** ). Se il *pmode* l'argomento è **s_iread**, non è consentita la lettura (il file è di sola scrittura). Se il *pmode* l'argomento è **s_iwrite**, non è consentita la scrittura (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, il bit di lettura con l'impostazione **umask** non ha alcun effetto sulle modalità del file.
 
 Se *pmode* non è una combinazione di una delle costanti manifesto o non include un set alternativo di costanti, la funzione semplicemente li ignorerà.
 

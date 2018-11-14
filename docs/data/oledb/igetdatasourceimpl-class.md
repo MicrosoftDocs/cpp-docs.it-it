@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 75b95f871023d7bfdea198a69377b1f360ab115f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd6b56f4281a2fdde77229ec54be6d6289a87148
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637840"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556569"
 ---
 # <a name="igetdatasourceimpl-class"></a>Classe IGetDataSourceImpl
 
-Fornisce un'implementazione del [IGetDataSource](/previous-versions/windows/desktop/ms709721) oggetto.
+Fornisce un'implementazione del [IGetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms709721(v=vs.85)) oggetto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -60,13 +60,13 @@ Restituisce un puntatore a interfaccia sull'oggetto origine dati che ha creato l
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-STDMETHOD(GetDataSource)(REFIID riid, 
+STDMETHOD(GetDataSource)(REFIID riid,
    IUnknown ** ppDataSource);
 ```
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IGetDataSource::GetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms725443(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="remarks"></a>Note
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580622"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331399"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -49,11 +49,11 @@ int _heapchk( void );
 
 |Valore restituito|Condizione|
 |-|-|
-**HEAPBADBEGIN**|Le informazioni di intestazione iniziali non sono valide o non è possibile trovarle.
-**HEAPBADNODE**|È stato trovato un nodo non valido o l'heap è danneggiato.
-**HEAPBADPTR**|Il puntatore nell'heap non è valido.
-**HEAPEMPTY**|L'heap non è stato inizializzato.
-**HEAPOK**|L'heap risulta coerente.
+| **HEAPBADBEGIN** | Le informazioni di intestazione iniziali non sono valide o non è possibile trovarle. |
+| **HEAPBADNODE** | È stato trovato un nodo non valido o l'heap è danneggiato. |
+| **HEAPBADPTR** | Il puntatore nell'heap non è valido. |
+| **HEAPEMPTY** | L'heap non è stato inizializzato. |
+| **HEAPOK** | L'heap risulta coerente. |
 
 Inoltre, se si verifica un errore, **heapchk** imposta **errno** al **ENOSYS**.
 

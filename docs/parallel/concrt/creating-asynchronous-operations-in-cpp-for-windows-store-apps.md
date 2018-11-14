@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563202"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333332"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Creazione di operazioni asincrone in C++ per le app UWP
 
@@ -148,11 +148,10 @@ Un'attività creata da un'operazione asincrona, ad esempio `IAsyncOperation<TRes
 La sezione seguente illustra un'app che legge un file da disco, individua le parole più comuni in tale file e quindi mostra i risultati nell'interfaccia utente. L'operazione finale, l'aggiornamento dell'interfaccia utente, si verifica nel thread dell'interfaccia utente.
 
 > [!IMPORTANT]
->  Questo comportamento è specifico per le app UWP. Per le app desktop non è possibile controllare la posizione in cui vengono eseguite le continuazioni. L'Utilità di pianificazione sceglie invece un thread di lavoro in cui eseguire ogni continuazione.
+> Questo comportamento è specifico per le app UWP. Per le app desktop non è possibile controllare la posizione in cui vengono eseguite le continuazioni. L'Utilità di pianificazione sceglie invece un thread di lavoro in cui eseguire ogni continuazione.
 
 > [!IMPORTANT]
-
->  Non chiamare [concurrency::task::wait](reference/task-class.md#wait) nel corpo di una continuazione che viene eseguita nell'apartment a thread singolo. In caso contrario, il runtime genera [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) poiché questo metodo blocca il thread corrente e può provocare la mancata risposta da parte dell'app. È tuttavia possibile chiamare il metodo [concurrency::task::get](reference/task-class.md#get) per ricevere il risultato dell'attività antecedente in una continuazione basata su attività.
+> Non chiamare [concurrency::task::wait](reference/task-class.md#wait) nel corpo di una continuazione che viene eseguita nell'apartment a thread singolo. In caso contrario, il runtime genera [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) poiché questo metodo blocca il thread corrente e può provocare la mancata risposta da parte dell'app. È tuttavia possibile chiamare il metodo [concurrency::task::get](reference/task-class.md#get) per ricevere il risultato dell'attività antecedente in una continuazione basata su attività.
 
 ##  <a name="example-app"></a> Esempio: Controllo dell'esecuzione in un'App di Windows Runtime con C++ e XAML
 

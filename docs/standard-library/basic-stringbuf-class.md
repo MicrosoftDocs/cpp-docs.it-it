@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 87ea8150e13076d176665bc3ddcc04482d639b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462025"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329644"
 ---
 # <a name="basicstringbuf-class"></a>Classe basic_stringbuf
 
@@ -183,7 +183,7 @@ Se la funzione non può essere eseguita correttamente, restituisce `traits_type:
 
 ### <a name="remarks"></a>Note
 
-Se _ *Meta* non risulta uguale a **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la funzione membro virtuale protetta tenta di inserire l'elemento **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) nel flusso di output. Questa operazione può essere eseguita in vari modi:
+Se  *\_Meta* non risulta uguale a **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la funzione membro virtuale protetta tenta di inserire l'elemento  **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) nel buffer di output. Questa operazione può essere eseguita in vari modi:
 
 - Se è disponibile una posizione di scrittura, la funzione può archiviare l'elemento in tale posizione e incrementare il puntatore successivo per il buffer di output.
 

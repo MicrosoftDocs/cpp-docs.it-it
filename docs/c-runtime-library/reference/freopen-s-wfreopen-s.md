@@ -29,12 +29,12 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 44e1cb14032d004e63825bf7b551d5f43ae400d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cdc16f21882c32933868000c6fd1d66accc74b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567596"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326512"
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
 
@@ -91,12 +91,12 @@ Se una qualsiasi delle *pFile*, *percorso*, *modalità*, oppure *flusso* sono **
 
 |*mode*|Accedi a|
 |-|-|
-**"r"**|Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **freopen_s** chiamata ha esito negativo.
-**"w"**|Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente.
-**"a"**|Viene aperto per la scrittura alla fine del file (aggiunta) senza rimuovere il marcatore di fine file (EOF) prima che nuovi dati vengano scritti sul file. Creare il file se è inesistente.
-**"r+"**|Viene aperto per la lettura e la scrittura. Il file deve esistere.
-**"w+"**|Apre un file vuoto per la lettura e la scrittura. Se il file esiste, il contenuto viene eliminato in modo permanente.
-**"a+"**|Viene aperto per la lettura e l'aggiunta. L'operazione di aggiunta comporta la rimozione del marcatore di EOF prima che nuovi dati vengano scritti sul file. Il marcatore EOF non viene ripristinato dopo il completamento della scrittura. Creare il file se è inesistente.
+| **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **freopen_s** chiamata ha esito negativo. |
+| **"w"** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
+| **"a"** | Viene aperto per la scrittura alla fine del file (aggiunta) senza rimuovere il marcatore di fine file (EOF) prima che nuovi dati vengano scritti sul file. Creare il file se è inesistente. |
+| **"r+"** | Viene aperto per la lettura e la scrittura. Il file deve esistere. |
+| **"w+"** | Apre un file vuoto per la lettura e la scrittura. Se il file esiste, il contenuto viene eliminato in modo permanente. |
+| **"a+"** | Viene aperto per la lettura e l'aggiunta. L'operazione di aggiunta comporta la rimozione del marcatore di EOF prima che nuovi dati vengano scritti sul file. Il marcatore EOF non viene ripristinato dopo il completamento della scrittura. Creare il file se è inesistente. |
 
 Usare la **"w"** e **"w +"** tipi con cautela, poiché possono distruggere i file esistenti.
 
@@ -108,8 +108,8 @@ Quando la **"r +"**, **"w +"**, o **"a +"** viene specificato il tipo di accesso
 
 |*modalità* modificatore|Modalità di conversione|
 |-|-|
-**t**|Aprire in modalità testo (convertita).
-**b**|Aprire in modalità binaria (non convertita). Le conversioni che includono caratteri di ritorno a capo e avanzamento riga vengono eliminate.
+| **t** | Aprire in modalità testo (convertita). |
+| **b** | Aprire in modalità binaria (non convertita). Le conversioni che includono caratteri di ritorno a capo e avanzamento riga vengono eliminate. |
 
 In modalità testo (convertita), le combinazioni di ritorno a capo con avanzamento di riga (CR-LF) vengono convertite in caratteri di singolo avanzamento riga (LF) in input. I caratteri vengono convertiti in combinazioni di CR-LF nell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. Nei file aperti per la lettura o di lettura e scrittura con **"a +"**, la libreria di runtime verifica la presenza di una combinazione CTRL + Z alla fine del file e rimuove, se possibile. Ciò avviene perché l'uso [fseek](fseek-fseeki64.md) e [ftell](ftell-ftelli64.md) per spostarsi all'interno di un file può causare [fseek](fseek-fseeki64.md) a un comportamento non corretto verso la fine del file. Il **t** opzione è un'estensione Microsoft che non deve essere usata in cui è richiesta la portabilità ANSI.
 

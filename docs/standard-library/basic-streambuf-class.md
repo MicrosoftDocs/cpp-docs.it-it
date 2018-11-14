@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565724"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524677"
 ---
 # <a name="basicstreambuf-class"></a>Classe basic_streambuf
 
@@ -457,7 +457,7 @@ Se la funzione non può essere eseguita correttamente, restituisce **traits_type
 
 ### <a name="remarks"></a>Note
 
-Se _ *Meta* non è uguale a **traits_type::eof**, la funzione membro virtuale protetto inserisce l'elemento **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) nel flusso di output. Questa operazione può essere eseguita in vari modi:
+Se  *\_Meta* non risulta uguale a **traits_type:: EOF**, la funzione membro virtuale protetta tenta di inserire l'elemento **traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) nel flusso di output. Questa operazione può essere eseguita in vari modi:
 
 - Se è disponibile `write position`, la funzione può archiviare l'elemento nella posizione di scrittura e incrementare il puntatore successivo per il buffer di output.
 
@@ -492,7 +492,7 @@ Se la funzione non può essere eseguita correttamente, restituisce **traits_type
 
 ### <a name="remarks"></a>Note
 
-Se _ *Meta* risulta uguale a **traits_type::eof**, l'elemento da reinserire è quello già nel flusso prima dell'elemento corrente. In caso contrario, l'elemento viene sostituito da **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). La funzione può reinserire un elemento in vari modi:
+Se  *\_Meta* risulta uguale a **traits_type:: EOF**, l'elemento da reinserire è effettivamente quello già nel flusso prima dell'elemento corrente. In caso contrario, l'elemento viene sostituito da **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). La funzione può reinserire un elemento in vari modi:
 
 - Se è disponibile una posizione di reinserimento, la funzione può archiviare l'elemento in tale posizione e decrementare il puntatore successivo per il buffer di input.
 
@@ -689,15 +689,12 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 3
-
 ```
 
 ```Output
-
-      33
+33
 51
 ```
 
@@ -967,14 +964,11 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 aa
-
 ```
 
 ```Output
-
 aa97
 ```
 

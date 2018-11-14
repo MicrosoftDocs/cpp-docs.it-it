@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480288"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326966"
 ---
 # <a name="pointers-to-members"></a>Puntatori a membri
 
@@ -25,28 +25,40 @@ Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del
 ```
 
 1. Identificatore di dichiarazione:
-  - Identificatore della classe di archiviazione facoltativo.
 
-  - Facoltativo **const** e/o **volatile** identificatori.
+   - Identificatore della classe di archiviazione facoltativo.
 
-  - Il tipo di identificatore: il nome di un tipo.  Questo è il tipo del membro a cui puntare, non la classe.
+   - Facoltativo **const** e/o **volatile** identificatori.
+
+   - Il tipo di identificatore: il nome di un tipo.  Questo è il tipo del membro a cui puntare, non la classe.
 
 1. Dichiaratore:
 
-  - Un modificatore facoltativo specifico di Microsoft. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).
-1. Il nome completo della classe che contiene i membri a cui puntare.
-  - Operatore ::.
-  - Il <strong>\*</strong> operatore.
-  - Facoltativo **const** e/o **volatile** identificatori.
-  - L'identificatore di denominazione del puntatore a membro.
+   - Un modificatore facoltativo specifico di Microsoft. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-  - Inizializzatore facoltativo:
-  - Il **=** operatore.
-  - Il **&** operatore.
-  - Nome completo della classe.
-  - Operatore `::`.
-  - Il nome di un membro non statico della classe del tipo appropriato.
-  - Come sempre, più dichiaratori (e tutti gli inizializzatori associati) sono consentiti in una singola dichiarazione.
+   - Il nome completo della classe che contiene i membri a cui puntare.
+
+   - Il __::__ operatore.
+
+   - Il __\*__ operatore.
+
+   - Facoltativo **const** e/o **volatile** identificatori.
+
+   - L'identificatore di denominazione del puntatore a membro.
+
+1. Inizializzatore facoltativo:
+
+   - Il **=** operatore.
+
+   - Il **&** operatore.
+
+   - Nome completo della classe.
+
+   - Il __::__ operatore.
+
+   - Il nome di un membro non statico della classe del tipo appropriato.
+
+Come sempre, più dichiaratori (e tutti gli inizializzatori associati) sono consentiti in una singola dichiarazione.
 
 Un puntatore a un membro di una classe differisce da un puntatore normale perché contiene informazioni per il tipo di membro e per la classe a cui appartiene il membro. Un puntatore normale identifica (con l'indirizzo) un singolo oggetto in memoria. Un puntatore a un membro di una classe identifica tale membro in qualsiasi istanza della classe. Nell'esempio seguente viene dichiarata una classe, `Window`, e alcuni puntatori ai dati dei membri.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-ms.openlocfilehash: e1ecb43226c9e21f3b13c2d5b7c2a0f93b72f3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d8ba1e66c1ffc46429b5c0e987be833aef2e72f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469550"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328532"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Trasferimento di campi di record: utilizzo di RFX
 
@@ -30,10 +30,13 @@ Nella tabella seguente viene illustrato il ruolo in relazione a ciò che il fram
 
 |Programmatore|Framework|
 |---------|-------------------|
-
-| Dichiarare le classi di recordset con una procedura guidata. Specificare i tipi di dati e i nomi dei membri dati di campo. | La procedura guidata deriva un `CRecordset` classi e le scritture una [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) eseguire l'override per l'utente, tra cui un RFX chiamata per ogni membro del campo dati alla funzione. | | ( Facoltativo) aggiungere manualmente eventuali necessarie membri dati di parametro alla classe. Aggiungere manualmente una chiamata di funzione RFX al `DoFieldExchange` per ogni membro di dati di parametro, aggiungere una chiamata a [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype) per il gruppo di parametri e specificare il numero totale di parametri in [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Visualizzare [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). | | | ( Facoltativo) associare manualmente le colonne aggiuntive ai membri di campo dati. Incrementare manualmente [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Visualizzare [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). | |
-
-| Costruire un oggetto della classe del recordset. Prima di usare l'oggetto, impostare i valori del parametro membri dati, se presente. | Per migliorare l'efficienza, il framework preassocia i parametri, usando ODBC. Quando si passano i valori dei parametri, il framework li passa all'origine dati. Solo i valori dei parametri vengono inviati per ripetere la query, a meno che non sono state modificate le stringhe di ordinamento e/o di filtro. | | Aprire un oggetto recordset usando [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open). | Viene eseguita la query del recordset, associa le colonne ai membri dati dei campi del recordset e chiamate `DoFieldExchange` per scambiare dati tra il primo record selezionato e i membri dati di campo del recordset. | | Il recordset con scorrimento [CRecordset](../../mfc/reference/crecordset-class.md#move) o un comando di menu o sulla barra degli strumenti. | Le chiamate `DoFieldExchange` per trasferire i dati per i membri di dati di campo del nuovo record corrente. | | Aggiungere, aggiornare ed eliminare i record. | Le chiamate `DoFieldExchange` per trasferire i dati all'origine dati. |
+|Dichiarare le classi di recordset con una procedura guidata. Specificare i tipi di dati e i nomi dei membri di campo dati.|La procedura guidata deriva un `CRecordset` classi e le scritture una [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) eseguire l'override per l'utente, tra cui un RFX chiamata per ogni membro del campo dati alla funzione.|
+|(Facoltativo) Aggiungere manualmente tutti i membri dati parametro necessari per la classe. Aggiungere manualmente una chiamata di funzione RFX al `DoFieldExchange` per ogni membro di dati di parametro, aggiungere una chiamata a [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype) per il gruppo di parametri e specificare il numero totale di parametri in [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Visualizzare [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).||
+|(Facoltativo) Associare manualmente le colonne aggiuntive ai membri di campo dati. Incrementare manualmente [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Visualizzare [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+|Costruire un oggetto della classe del recordset. Prima di usare l'oggetto, impostare i valori del parametro membri dati, se presente.|Per migliorare l'efficienza, il framework preassocia i parametri, usando ODBC. Quando si passano i valori dei parametri, il framework li passa all'origine dati. Solo i valori dei parametri vengono inviati per ripetere la query, a meno che non sono state modificate le stringhe di ordinamento e/o di filtro.|
+|Aprire un oggetto recordset usando [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open).|Viene eseguita la query del recordset, associa le colonne ai membri dati dei campi del recordset e chiamate `DoFieldExchange` per scambiare dati tra il primo record selezionato e i membri dati di campo del recordset.|
+|Il recordset con scorrimento [CRecordset](../../mfc/reference/crecordset-class.md#move) o un comando di menu o sulla barra degli strumenti.|Le chiamate `DoFieldExchange` per trasferire i dati per i membri di dati di campo del nuovo record corrente.|
+|Aggiungere, aggiornare ed eliminare i record.|Le chiamate `DoFieldExchange` per trasferire i dati all'origine dati.|
 
 ## <a name="see-also"></a>Vedere anche
 

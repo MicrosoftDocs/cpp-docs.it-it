@@ -28,12 +28,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 0ede14d56dc093b83078bf28eb01f5b5c55d8949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545925"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326563"
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -70,16 +70,16 @@ Il **create_locale** funzione consente di creare un oggetto che rappresenta dete
 
 **wcreate_locale** è una versione a caratteri wide di **create_locale**; il *impostazioni internazionali* argomento **wcreate_locale** è una stringa di caratteri "wide". **wcreate_locale** e **create_locale** hanno lo stesso comportamento in caso contrario.
 
-Il *categoria* argomento specifica le parti del comportamento specifici delle impostazioni locali che sono interessate. I flag utilizzati per *categoria* e le parti del programma interessate sono come illustrato nella tabella seguente.
+Il *categoria* argomento specifica le parti del comportamento specifici delle impostazioni locali che sono interessate. I flag utilizzati per *categoria* e le parti del programma interessate sono come illustrato in questa tabella:
 
-|*categoria* flag|Applicazione|
-|-|-|
-**LC_ALL**|Tutte le categorie, come indicato di seguito.
-**LC_COLLATE**|Il **strcoll**, **stricoll**, **wcscoll**, **wcsicoll**, **strxfrm**, **_ strncoll**, **strnicoll**, **wcsncoll**, **wcsnicoll**, e **wcsxfrm** funzioni.
-**LC_CTYPE**|Le funzioni di gestione dei caratteri (tranne **isdigit**, **isxdigit**, **mbstowcs**, e **mbtowc**, che non sono interessate).
-**LC_MONETARY**|Informazioni di formattazione monetaria restituite dal **localeconv** (funzione).
-**LC_NUMERIC**|Carattere per le routine di output formattato del separatore decimale (ad esempio **printf**), per le routine di conversione dei dati e per le informazioni di formattazione non monetarie restituite dalle **localeconv**. Oltre al carattere del separatore decimale, **LC_NUMERIC** separatore set migliaia e il controllo del raggruppamento stringa restituita da [localeconv](localeconv.md).
-**LC_TIME**|Il **strftime** e **wcsftime** funzioni.
+| *categoria* flag | Applicazione |
+|-----------------|---------|
+| **LC_ALL** |Tutte le categorie, come indicato di seguito. |
+| **LC_COLLATE** |Il **strcoll**, **stricoll**, **wcscoll**, **wcsicoll**, **strxfrm**, **_ strncoll**, **strnicoll**, **wcsncoll**, **wcsnicoll**, e **wcsxfrm** funzioni. |
+| **LC_CTYPE** | Le funzioni di gestione dei caratteri (tranne **isdigit**, **isxdigit**, **mbstowcs**, e **mbtowc**, che non sono interessate). |
+| **LC_MONETARY** | Informazioni di formattazione monetaria restituite dal **localeconv** (funzione). |
+| **LC_NUMERIC** | Carattere per le routine di output formattato del separatore decimale (ad esempio **printf**), per le routine di conversione dei dati e per le informazioni di formattazione non monetarie restituite dalle **localeconv**. Oltre al carattere del separatore decimale, **LC_NUMERIC** separatore set migliaia e il controllo del raggruppamento stringa restituita da [localeconv](localeconv.md). |
+| **LC_TIME** | Il **strftime** e **wcsftime** funzioni. |
 
 Questa funzione convalida il *categoria* e *delle impostazioni locali* parametri. Se il parametro di categoria non è uno dei valori forniti nella tabella precedente o se *delle impostazioni locali* viene **NULL**, la funzione restituisce **NULL**.
 

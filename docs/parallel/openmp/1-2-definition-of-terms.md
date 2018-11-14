@@ -2,12 +2,12 @@
 title: 1.2 Definizione dei termini
 ms.date: 11/04/2016
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-ms.openlocfilehash: ac117a03f784e617e5db246f4bda28e350d2e7a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd8bcc47a7fc9d1d0683c220ccd5ef1edac2b4e9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597210"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326030"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definizione dei termini
 
@@ -63,7 +63,7 @@ In questo documento vengono usati i termini seguenti:
 
 - blocco strutturato
 
-   Un blocco strutturato è un'istruzione (singola o composta) con una singola voce e una singola chiusura. Istruzione non è un blocco strutturato se è presente un salto da e verso tale istruzione (tra cui una chiamata a **longjmp**(3c) o l'utilizzo di **throw**, ma una chiamata a **uscire** è consentito). Un'istruzione composta è un blocco strutturato se l'esecuzione sempre inizia in corrispondenza dell'apertura **{** e termina sempre con la chiusura **}**. Un'istruzione di espressione, l'istruzione di selezione, l'istruzione di iterazione, oppure **provare** blocco viene un blocco strutturato se l'istruzione composta corrispondente ottenuto includendolo nel **{** e **}** sarebbe un blocco strutturato. Un'istruzione di salto, l'istruzione con etichetta o istruzione di dichiarazione non è un blocco strutturato.
+   Un blocco strutturato è un'istruzione (singola o composta) con una singola voce e una singola chiusura. Istruzione non è un blocco strutturato se è presente un salto da e verso tale istruzione (tra cui una chiamata a **longjmp**(3c) o l'utilizzo di **throw**, ma una chiamata a **uscire** è consentito). Un'istruzione composta è un blocco strutturato se l'esecuzione sempre inizia in corrispondenza dell'apertura **{** e termina sempre con la chiusura **}**. Un'istruzione di espressione, l'istruzione di selezione, l'istruzione di iterazione, oppure **provare** blocco viene un blocco strutturato se l'istruzione composta corrispondente ottenuto includendolo nel **{** e **}**  sarebbe un blocco strutturato. Un'istruzione di salto, l'istruzione con etichetta o istruzione di dichiarazione non è un blocco strutturato.
 
 - Team
 

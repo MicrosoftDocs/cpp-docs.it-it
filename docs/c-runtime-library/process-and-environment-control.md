@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: 74194311eb33a23de5643b3cb956c2e3f752dea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525619"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329410"
 ---
 # <a name="process-and-environment-control"></a>Controllo processo e ambiente
 
@@ -46,7 +46,7 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Chiama le funzioni registrate da **atexit** e **_onexit**, scarica tutti i buffer, chiude tutti i file aperti e termina il processo|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Termina il processo immediatamente, senza chiamare **atexit** o **_onexit** e senza scaricare il buffer|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Ottiene il valore della variabile di ambiente|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Ottiene il numero dell'ID del processo|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Ottiene il numero dell'ID del processo|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Ripristina l'ambiente dello stack salvato; usarla per eseguire un **goto** non locale|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Pianifica le routine per l'esecuzione alla chiusura del programma; usarla per assicurare la compatibilità con Microsoft C/C++ 7.0 e versioni precedenti|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Attende un nuovo processore dei comandi e chiude il flusso sulla pipe collegata|

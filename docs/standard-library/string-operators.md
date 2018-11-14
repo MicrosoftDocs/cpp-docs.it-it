@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644821"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332218"
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 
@@ -115,7 +115,7 @@ La stringa che rappresenta la concatenazione delle stringhe di input.
 
 ### <a name="remarks"></a>Note
 
-Le funzioni eseguono ciascuna l'overload `operator+` per concatenare due oggetti della classe modello [basic_string](../standard-library/basic-string-class.md). Tutte restituiscono `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*).
+Le funzioni eseguono ciascuna l'overload `operator+` per concatenare due oggetti della classe modello [basic_string](../standard-library/basic-string-class.md). Tutte restituiscono `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Per altre informazioni, vedere [append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Esempio
 
@@ -575,7 +575,7 @@ Scrive il valore della stringa specificata nel flusso di output *_Ostr*.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello esegue l'overload di **operator<<** per inserire un oggetto _ *Str* della classe modello [basic_string](../standard-library/basic-string-class.md) nel flusso \_ *Ostr.* La funzione restituisce effettivamente \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).
+Gli overload della funzione modello **operatore <<** per inserire un oggetto *str* della classe modello [basic_string](../standard-library/basic-string-class.md) nel flusso  *\_ Ostr*. La funzione restituisce effettivamente `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  operator&gt;
 

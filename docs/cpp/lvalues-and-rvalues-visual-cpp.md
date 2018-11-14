@@ -5,12 +5,12 @@ helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 301e6140699c921ee1b1229b9183c8555992f716
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546354"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330612"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Elementi lvalue e rvalue (C++)
 
@@ -20,7 +20,7 @@ C++17 standard definisce le categorie di espressione valore come indicato di seg
 
 - Oggetto *glvalue* è un'espressione la cui valutazione determina l'identità di un oggetto, un campo di bit o una funzione.
 - Oggetto *prvalue* è un'espressione la cui valutazione Inizializza un oggetto o un campo di bit oppure calcola il valore dell'operando di un operatore, come specificato dal contesto in cui compare.
-- Un' *xvalue* è un glvalue che denota un oggetto o un campo di bit possono essere riutilizzate con risorse (in genere perché si trova verso la fine della relativa durata). [Esempio: determinati tipi di espressioni che includono i riferimenti rvalue (8.3.2) producono xvalues, ad esempio una chiamata a una funzione il cui tipo restituito è un riferimento rvalue o un cast a un tipo di riferimento rvalue. ]
+- Un' *xvalue* è un glvalue che denota un oggetto o un campo di bit possono essere riutilizzate con risorse (in genere perché si trova verso la fine della relativa durata). Esempio: Determinati tipi di espressioni che includono i riferimenti rvalue (8.3.2) producono xvalues, ad esempio una chiamata a una funzione il cui tipo restituito è un riferimento rvalue o un cast a un tipo di riferimento rvalue.
 - Un' *lvalue* è un glvalue che non è un xvalue.
 - Un' *rvalue* è un prvalue o un xvalue.
 

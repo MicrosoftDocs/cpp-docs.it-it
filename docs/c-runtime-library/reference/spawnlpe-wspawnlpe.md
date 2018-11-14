@@ -31,12 +31,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: 079841800befcb7196c6428eb58a943410b13987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa390c039a3d663cb79cb311667e568a6a053131
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525125"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327980"
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe, _wspawnlpe
 
@@ -88,11 +88,11 @@ Il valore restituito da un oggetto sincrono **spawnlpe** oppure **wspawnlpe** (*
 
 |||
 |-|-|
-**E2BIG**|L'elenco di argomenti supera i 1024 byte.
-**EINVAL**|*modalità* argomento non è valido.
-**ENOENT**|Il file o il percorso non è stato trovato.
-**ENOEXEC**|Il file specificato non è eseguibile o il formato del file eseguibile non è valido.
-**ENOMEM**|Memoria insufficiente per eseguire il nuovo processo.
+| **E2BIG** | L'elenco di argomenti supera i 1024 byte. |
+| **EINVAL** | *modalità* argomento non è valido. |
+| **ENOENT** | Il file o il percorso non è stato trovato. |
+| **ENOEXEC** | Il file specificato non è eseguibile o il formato del file eseguibile non è valido. |
+| **ENOMEM** | Memoria insufficiente per eseguire il nuovo processo. |
 
 Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

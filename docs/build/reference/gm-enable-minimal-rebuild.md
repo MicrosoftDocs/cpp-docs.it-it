@@ -1,6 +1,6 @@
 ---
 title: /Gm (Attiva ricompilazione minima)
-ms.date: 11/04/2016
+ms.date: 11/12/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MinimalRebuild
 - /Gm
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-ms.openlocfilehash: 2a5bc4008ab9376367b3a32040c2a4a70147187f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7552da4764f009c0848f1d8f420f112be2d1120a
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570404"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598808"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (Attiva ricompilazione minima)
 
-Abilita la ricompilazione minima, che determina se è necessario ricompilare i file di origine C++ che includono modifiche alle definizioni delle classi C++ archiviate nei file di intestazione con estensione h.
+Deprecato. Abilita la ricompilazione minima, che determina se è necessario ricompilare i file di origine C++ che includono modifiche alle definizioni delle classi C++ archiviate nei file di intestazione con estensione h.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,10 +32,12 @@ Abilita la ricompilazione minima, che determina se è necessario ricompilare i f
 
 ## <a name="remarks"></a>Note
 
+**/Gm** è deprecata. Questa operazione potrebbe non attivare una compilazione per determinati tipi di modifiche ai file di intestazione. È possibile rimuovere questa opzione in modo sicuro dai progetti. Per migliorare i tempi di compilazione, è consigliabile si usano intestazioni precompilate e parallele e incrementali opzioni di compilazione invece. Per un elenco di opzioni del compilatore deprecate, vedere la **deprecate o rimosse le opzioni del compilatore** sezione [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+
 Il compilatore archivia le informazioni sulla dipendenza tra i file di origine e le definizioni delle classi nel file con estensione idb del progetto durante la prima compilazione. (Informazioni sulla dipendenza indicano quale file di origine dipende dalla definizione di classe, e il file h la definizione si trova in). Le compilazioni successive usano le informazioni archiviate nel file con estensione IDB per determinare se un file di origine deve essere compilata, anche se include un file con estensione h modificato.
 
 > [!NOTE]
->  La ricompilazione minima richiede che le definizioni delle classi non vengano modificate nei file di inclusione. Le definizioni delle classi devono essere globali per un progetto (dovrebbe esistere una sola definizione di una determinata classe) perché le informazioni sulla dipendenza nel file con estensione idb vengono create per l'intero progetto. Se esiste più di una definizione per una classe nel progetto, disabilitare la ricompilazione minima.
+> La ricompilazione minima richiede che le definizioni delle classi non vengano modificate nei file di inclusione. Le definizioni delle classi devono essere globali per un progetto (dovrebbe esistere una sola definizione di una determinata classe) perché le informazioni sulla dipendenza nel file con estensione idb vengono create per l'intero progetto. Se esiste più di una definizione per una classe nel progetto, disabilitare la ricompilazione minima.
 
 Poiché il linker incrementale non supporta i metadati di Windows inclusi nei file obj usando il [/ZW (compilazione di Windows Runtime)](../../build/reference/zw-windows-runtime-compilation.md) opzione, il **/Gm** opzione non è compatibile con  **/ZW**.
 
@@ -43,9 +45,7 @@ Poiché il linker incrementale non supporta i metadati di Windows inclusi nei fi
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Fare clic sulla cartella **C/C++** .
-
-1. Scegliere il **generazione di codice** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **Code Generation** pagina delle proprietà.
 
 1. Modificare il **Abilita ricompilazione minima** proprietà.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 854e3efce48b7ed863db1a94467a6da99d796a89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2748eee7db3a56b026e9d1896e35824c93938256
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636423"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326056"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 
@@ -23,8 +23,8 @@ Genera il `lsl` istruzione (limite di carico segmento).
 ## <a name="syntax"></a>Sintassi
 
 ```
-unsigned long __segmentlimit( 
-   unsigned long a 
+unsigned long __segmentlimit(
+   unsigned long a
 );
 ```
 

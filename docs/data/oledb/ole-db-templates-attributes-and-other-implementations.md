@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 97924110d6dd59e59eda9492713518dedf68af55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596599"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520640"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modelli, attributi e altre implementazioni OLE DB
 
@@ -25,7 +25,7 @@ Questa libreria contiene due parti:
 
 - **Modelli Provider OLE DB** usato per implementare un'applicazione server (provider) OLE DB.
 
-Per usare i modelli OLE DB è necessario avere una certa familiarità con i modelli C++, COM e le interfacce OLE DB. Se non si conosce sufficientemente OLE DB, vedere [riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643).
+Per usare i modelli OLE DB è necessario avere una certa familiarità con i modelli C++, COM e le interfacce OLE DB. Se non si conosce sufficientemente OLE DB, vedere [riferimento per programmatori OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
 Per altre informazioni, è possibile:
 
@@ -37,7 +37,7 @@ Per altre informazioni, è possibile:
 
 - Visualizzare l'elenco delle [esempi di modelli OLE DB](https://github.com/Microsoft/VCSamples).
 
-- Visualizzare [riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643) (nel Windows SDK).
+- Visualizzare [riferimento per programmatori OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (nel Windows SDK).
 
 ## <a name="ole-db-attributes"></a>Attributi OLE DB
 
@@ -49,7 +49,7 @@ La libreria MFC offre un'unica classe, [COleDBRecordView](../../mfc/reference/co
 
 ## <a name="ole-db-sdk-interfaces"></a>Interfacce OLE DB SDK
 
-Nei casi in cui i modelli OLE DB non supporta la funzionalità di OLE DB, è necessario utilizzare le interfacce OLE DB autonomamente. Per altre informazioni, vedere [riferimento per programmatori OLE DB](/previous-versions/windows/desktop/ms713643) nel SDK di Windows.
+Nei casi in cui i modelli OLE DB non supporta la funzionalità di OLE DB, è necessario utilizzare le interfacce OLE DB autonomamente. Per altre informazioni, vedere [riferimento per programmatori OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) nel SDK di Windows.
 
 ## <a name="see-also"></a>Vedere anche
 

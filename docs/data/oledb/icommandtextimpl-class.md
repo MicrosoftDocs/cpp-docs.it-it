@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: fafd1198776c558ff39ef35c0b7beca538e976ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d05af932d5f531a4dab02e7e0ca171f4484891a3
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677695"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556322"
 ---
 # <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
 
-Fornisce un'implementazione per il [ICommandText](/previous-versions/windows/desktop/ms714914) interfaccia.
+Fornisce un'implementazione per il [ICommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms714914(v=vs.85)) interfaccia.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -76,13 +76,13 @@ Restituisce il comando di testo impostato dall'ultima chiamata a [SetCommandText
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-STDMETHOD(GetCommandText)(GUID * pguidDialect, 
+STDMETHOD(GetCommandText)(GUID * pguidDialect,
    LPOLESTR * ppwszCommand);
 ```
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) nel *riferimento per programmatori OLE DB*. Il *pguidDialect* parametro viene ignorato per impostazione predefinita.
+Visualizzare [ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85)) nel *riferimento per programmatori OLE DB*. Il *pguidDialect* parametro viene ignorato per impostazione predefinita.
 
 ## <a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
 
@@ -91,13 +91,13 @@ Imposta il testo del comando, sostituendo il testo del comando esistenti.
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-STDMETHOD(SetCommandText)(REFGUID rguidDialect, 
+STDMETHOD(SetCommandText)(REFGUID rguidDialect,
    LPCOLESTR pwszCommand);
 ```
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757) nel *riferimento per programmatori OLE DB*.
+Visualizzare [ICommandText:: SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ## <a name="strcommandtext"></a> ICommandTextImpl:: M_strcommandtext
 

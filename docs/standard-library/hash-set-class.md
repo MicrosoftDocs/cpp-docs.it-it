@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0668342468e30733f8257ccd2682bfe785551857
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657509"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333602"
 ---
 # <a name="hashset-class"></a>Classe hash_set
 
@@ -565,7 +565,7 @@ La chiave degli elementi per cui trovare un corrispondenza nell'hash_set.
 
 La funzione membro restituisce il numero di elementi nell'intervallo seguente:
 
-[ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) ).
+\[ lower_bound (*key*), upper_bound (*chiave*)).
 
 ### <a name="example"></a>Esempio
 
@@ -1532,9 +1532,9 @@ Per ulteriori informazioni sul *tratti* vedere la [classe hash_set](../standard-
 
 ### <a name="remarks"></a>Note
 
-L'oggetto archiviato definisce la funzione membro
+L'oggetto archiviato definisce la funzione membro:
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 che restituisce **true** se `_xVal` precede e non è uguale a `_yVal` nell'ordinamento.
 
@@ -2294,9 +2294,9 @@ Per ulteriori informazioni sul *confrontare*, vedere la sezione osservazioni del
 
 ### <a name="remarks"></a>Note
 
-L'oggetto archiviato definisce la funzione membro
+L'oggetto archiviato definisce la funzione membro:
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 che restituisce **true** se `_xVal` precede e non è uguale a `_yVal` nell'ordinamento.
 

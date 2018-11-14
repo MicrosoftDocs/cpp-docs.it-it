@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518079"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326979"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -83,11 +83,11 @@ Il valore restituito da un oggetto sincrono **spawnl** oppure **wspawnl** (**P_W
 
 |||
 |-|-|
-**E2BIG**|L'elenco di argomenti supera i 1024 byte.
-**EINVAL**|*modalità* argomento non è valido.
-**ENOENT**|Il file o il percorso non è stato trovato.
-**ENOEXEC**|Il file specificato non è eseguibile o il formato del file eseguibile non è valido.
-**ENOMEM**|Memoria insufficiente per eseguire il nuovo processo.
+| **E2BIG** | L'elenco di argomenti supera i 1024 byte. |
+| **EINVAL** | *modalità* argomento non è valido. |
+| **ENOENT** | Il file o il percorso non è stato trovato. |
+| **ENOEXEC** | Il file specificato non è eseguibile o il formato del file eseguibile non è valido. |
+| **ENOMEM** | Memoria insufficiente per eseguire il nuovo processo. |
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

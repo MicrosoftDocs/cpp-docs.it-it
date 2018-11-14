@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: ecce997c451b39600606550dd1198cddfd764334
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463336"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520413"
 ---
 # <a name="creating-an-active-document-container-application"></a>Creazione di un'applicazione contenitore di documenti attivi
 
@@ -37,15 +37,15 @@ Il modo più semplice e consigliato per creare un'applicazione contenitore di do
 
 1. Scegliere **Fine**.
 
-9. Una volta completata la generazione dell'applicazione tramite la Creazione guidata applicazione MFC, aprire i seguenti file in Esplora soluzioni:
+1. Una volta completata la generazione dell'applicazione tramite la Creazione guidata applicazione MFC, aprire i seguenti file in Esplora soluzioni:
 
    - *MyProjview. cpp*
 
-10. Nelle *MyProjview. cpp*, apportare le modifiche seguenti:
+1. Nelle *MyProjview. cpp*, apportare le modifiche seguenti:
 
    - In `CMyProjView::OnPreparePrinting` sostituire il contenuto della funzione con il seguente codice:
 
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
    `OnPreparePrinting` fornisce il supporto di stampa. Questo codice sostituisce `DoPreparePrinting`, ovvero la preparazione predefinita alla stampa.
 
@@ -59,7 +59,7 @@ Il modo più semplice e consigliato per creare un'applicazione contenitore di do
 
    Le funzioni membro statiche `COleDocObjectItem::OnPrint` e `COleDocObjectItem::OnPreparePrinting`, come implementate nel codice precedente, gestiscono questo schema di stampa avanzato.
 
-11. Aggiungere qualsiasi implementazione personalizzata e compilare l'applicazione.
+1. Aggiungere qualsiasi implementazione personalizzata e compilare l'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 

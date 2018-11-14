@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 5a9026ca400c3e7c403ff8f2b86f486bcde79cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569780"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523169"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternative all'architettura documento/visualizzazione
 
@@ -48,15 +48,15 @@ Si consiglia di utilizzare la Creazione guidata applicazione MFC per creare appl
 
    Dichiarata in `CDocument`:
 
-   - Due oggetti `CString`.
+  - Due oggetti `CString`.
 
-   - Tre **BOOL**s.
+  - Tre **BOOL**s.
 
-   - Un puntatore `CDocTemplate`.
+  - Un puntatore `CDocTemplate`.
 
-   - Un oggetto `CPtrList` contenente un elenco delle visualizzazioni del documento.
+  - Un oggetto `CPtrList` contenente un elenco delle visualizzazioni del documento.
 
-   Inoltre, il documento richiede il tempo necessario per creare l'oggetto documento, i relativi oggetti visualizzazione, una finestra cornice e un oggetto modello di documento.
+  Inoltre, il documento richiede il tempo necessario per creare l'oggetto documento, i relativi oggetti visualizzazione, una finestra cornice e un oggetto modello di documento.
 
 - Trattare sia il documento che la visualizzazione come appendici inutilizzate. Inserire il codice di disegno e di gestione dei dati nella finestra cornice invece che nella visualizzazione. Questo approccio è più vicino al modello di programmazione del linguaggio C.
 

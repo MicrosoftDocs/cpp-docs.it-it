@@ -4,12 +4,12 @@ ms.date: 06/01/2018
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 396b1fe9f879e7adcdfe9a69fee5c9e1916ff545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542012"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524001"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Progetti Apri cartella in Visual C++
 
@@ -33,7 +33,8 @@ CMake è integrato nell'IDE di Visual Studio come Strumenti Visual C++ per CMake
 ## <a name="configuring-open-folder-projects"></a>Configurazione di progetti Apri cartella
 
 È possibile personalizzare un progetto Apri cartella mediante tre file con estensione json:
-|||
+
+| | |
 |-|-|
 |CppProperties.json|Specifica informazioni di configurazione personalizzate per l'esplorazione. Se necessario, creare questo file nella cartella radice del progetto.|
 |launch.vs.json|Specifica argomenti della riga di comando. Accessibile tramite il comando **Impostazioni per debug e avvio** nel menu di scelta rapida **Esplora soluzioni**.|
@@ -58,6 +59,7 @@ Il comportamento di IntelliSense e dell'esplorazione dipendono in parte dalla co
   ]
 }
 ```
+
 Una configurazione può avere una delle proprietà seguenti:
 
 |||
@@ -135,6 +137,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
   ]
 }
 ```
+
 È anche possibile definire una proprietà **environments** all'interno di una configurazione, in modo che venga applicata solo a tale configurazione ed esegua l'override di qualsiasi variabile globale con lo stesso nome. Nell'esempio seguente la configurazione x64 definisce una variabile **INCLUDE** locale che esegue l'override del valore globale:
 
 ```json
@@ -186,6 +189,7 @@ Tutte le variabili di ambiente personalizzate e predefinite sono disponibili anc
 #### <a name="macros"></a>Macro
 
 In CppProperties.json è possibile accedere alle seguenti macro incorporate:
+
 |||
 |-|-|
 |`${workspaceRoot}`| Percorso completo della cartella dell'area di lavoro|
@@ -258,11 +262,13 @@ Viene creato o aperto il file `tasks.vs.json` nella cartella .vs creata da Visua
   ]
 }
 ```
+
 Dopo aver salvato tasks.vs.json, è possibile fare clic con il pulsante destro del mouse su qualsiasi file con estensione cpp nella cartella, scegliere **Echo filename** (Echo nome file) dal menu di scelta rapida e vedere il nome del file visualizzato nella finestra Output.
 
 #### <a name="appliesto"></a>appliesTo
 
 È possibile creare attività per qualsiasi file o cartella specificandone il nome nel campo `appliesTo`, ad esempio `"appliesTo" : "hello.cpp"`. È possibile usare le maschere di file seguenti come valori:
+
 |||
 |-|-|
 |`"*"`| L'attività è disponibile per tutti i file e le cartelle nell'area di lavoro|
@@ -340,4 +346,3 @@ Quando si salva questo file, la nuova configurazione viene visualizzata nell'ele
 ## <a name="see-also"></a>Vedere anche
 
 [IDE e strumenti per lo sviluppo in Visual C++](ide-and-tools-for-visual-cpp-development.md)
-

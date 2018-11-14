@@ -1,10 +1,6 @@
 ---
-title: Classe negative_binomial_distribution | Microsoft Docs
-ms.custom: ''
+title: Classe negative_binomial_distribution
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::negative_binomial_distribution
 - random/std::negative_binomial_distribution::reset
@@ -19,8 +15,6 @@ f1_keywords:
 - random/std::negative_binomial_distribution::param_type::p
 - random/std::negative_binomial_distribution::param_type::operator==
 - random/std::negative_binomial_distribution::param_type::operator!=
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::negative_binomial_distribution [C++]
 - std::negative_binomial_distribution [C++], reset
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7d2035a1146c5e620d8f75dd6bba5095a7630e0a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a2cc6479c9da3b51c28e5408eb44ff1d02b97023
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103997"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523370"
 ---
 # <a name="negativebinomialdistribution-class"></a>Classe negative_binomial_distribution
 
@@ -160,7 +150,6 @@ int main()
 
     test(k_dist, p_dist, samples);
 }
-
 ```
 
 Prima esecuzione:

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 53f9d1ca823385c17bf2b235d844e40886092e44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618362"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524157"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Procedura dettagliata: Compilazione di un progetto (C++)
 
@@ -27,15 +27,15 @@ In questa procedura dettagliata si introdurrà deliberatamente un errore di sint
 
 1. In Game.cpp eliminare il punto e virgola nell'ultima riga in modo che risulti simile all'istruzione:
 
-    `return 0`
+   `return 0`
 
 1. Nella barra dei menu scegliere **Compila** > **Compila soluzione**.
 
 1. Un messaggio nella finestra **Elenco errori** indica che si è verificato un errore nella compilazione del progetto. La descrizione è simile al messaggio di errore:
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  Per visualizzare le informazioni della Guida su questo errore, evidenziarlo nella finestra **Elenco errori** e quindi premere **F1**.
+   Per visualizzare le informazioni della Guida su questo errore, evidenziarlo nella finestra **Elenco errori** e quindi premere **F1**.
 
 1. Aggiungere il punto e virgola alla fine della riga che include l'errore di sintassi:
 
@@ -43,7 +43,7 @@ In questa procedura dettagliata si introdurrà deliberatamente un errore di sint
 
 1. Nella barra dei menu scegliere **Compila** > **Compila soluzione**.
 
-  Un messaggio visualizzato nella finestra **Output** indica che il progetto è stato compilato correttamente.
+   Un messaggio visualizzato nella finestra **Output** indica che il progetto è stato compilato correttamente.
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

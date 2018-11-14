@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: a2aa5e2521eafbdd5ab7be93ad133f118a8d9356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ac5ebc991174ca5f835d30571b4995bedb5dea2
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536639"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329774"
 ---
 # <a name="binarynegate-class"></a>Classe binary_negate
 
@@ -49,7 +49,7 @@ La negazione della funzione binaria.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia di un oggetto funzione binaria _ *Func*. Definisce la relativa funzione membro `operator()` che restituisce **!**\_ *Func(left, right).*
+La classe modello archivia una copia di un oggetto funzione binaria *Func*. Definisce la relativa funzione membro `operator()` prevede la restituzione `!Func(left, right)`.
 
 Il costruttore di `binary_negate` viene usato raramente in modo diretto. La funzione di supporto [not2](../standard-library/functional-functions.md#not2) in genere è preferibile per dichiarare e usare il predicato adattatore **binary_negator**.
 

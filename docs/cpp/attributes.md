@@ -2,12 +2,12 @@
 title: Attributi in C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: a4d24324165f3cce60d259adf6e3d21638296cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 444abf2ddf6d4563dcbeb5b683adc52f903bd97f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471825"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520790"
 ---
 # <a name="attributes-in-c"></a>Attributi in C++
 
@@ -45,16 +45,16 @@ Attributi che rappresentano un'alternativa standardizzata alle estensioni specif
 
 - `[[nodiscard]]` **Visual Studio 2017 versione 15.3 e versioni successive:** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)) specifica che un valore restituito dalla funzione non può essere eliminato. Genera avviso di C4834, come illustrato in questo esempio:
 
-   ```cpp
-   [[nodiscard]]
-   int foo(int i) { return i * i; }
+    ```cpp
+    [[nodiscard]]
+    int foo(int i) { return i * i; }
 
-   int main()
-   {
-       foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
-       return 0;
-   }
-   ```
+    int main()
+    {
+        foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
+        return 0;
+    }
+    ```
 
 - `[[maybe_unused]]` **Visual Studio 2017 versione 15.3 e versioni successive:** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)) specifica che una variabile, funzione, classe, (typedef), membro dati non statici, enum o specializzazione di modello intenzionalmente non può essere utilizzata. Il compilatore non avvisa quando un'entità contrassegnata `[[maybe_unused]]` non viene utilizzato. Un'entità a cui viene dichiarata senza l'attributo può essere ridichiarata in un secondo momento con l'attributo e viceversa. Un'entità viene considerata contrassegnato dopo la prima dichiarazione contrassegnata viene analizzato e per il resto della traduzione dell'unità di conversione corrente.
 
@@ -75,12 +75,12 @@ Attributi che rappresentano un'alternativa standardizzata alle estensioni specif
     }
     ```
 
-   L'esempio genera questi avvisi:
+  L'esempio genera questi avvisi:
 
-   - 26494 (tipo di regola 5: inizializzare sempre un oggetto.)
+  - 26494 (tipo di regola 5: inizializzare sempre un oggetto.)
 
-   - 26485 (limiti regola 3: Nessun impatto della matrice sul puntatore.)
+  - 26485 (limiti regola 3: Nessun impatto della matrice sul puntatore.)
 
-   - 26481 (limiti Rule 1: non usare l'aritmetica dei puntatori. Usare span.)
+  - 26481 (limiti Rule 1: non usare l'aritmetica dei puntatori. Usare span.)
 
-   I primi due avvisi vengono attivati quando si compila questo codice con lo strumento di analisi codice CppCoreCheck installato e attivato. Ma il terzo avviso non viene attivato a causa dell'attributo. È possibile eliminare l'intero profilo limiti scrivendo [[gsl::suppress(bounds)]] senza includere un numero di regole specifici. Linee guida di base di C++ sono progettate per consentono di scrivere codice migliore e più sicuro. L'attributo suppress semplifica disattivare gli avvisi quando non volevano.
+  I primi due avvisi vengono attivati quando si compila questo codice con lo strumento di analisi codice CppCoreCheck installato e attivato. Ma il terzo avviso non viene attivato a causa dell'attributo. È possibile eliminare l'intero profilo limiti scrivendo [[gsl::suppress(bounds)]] senza includere un numero di regole specifici. Linee guida di base di C++ sono progettate per consentono di scrivere codice migliore e più sicuro. L'attributo suppress semplifica disattivare gli avvisi quando non volevano.

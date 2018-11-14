@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450674"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518866"
 ---
 # <a name="allocator-class"></a>Classe allocator
 
@@ -63,7 +63,7 @@ Tutti i contenitori della libreria Standard C++ hanno un parametro di modello ch
 
 Ad esempio, un oggetto allocatore potrebbe allocare spazio di archiviazione in un heap privato o nella memoria condivisa o potrebbe ottimizzare per le dimensioni piccole o grandi dell'oggetto. Potrebbe anche specificare, attraverso le definizioni di tipo fornite, che è possibile accedere agli elementi con speciali oggetti funzione di accesso che gestiscono la memoria condivisa o eseguono operazioni automatiche di Garbage Collection. Di conseguenza, una classe che alloca memoria usando un oggetto allocatore deve usare questi tipi per il puntatore di dichiarazione e gli oggetti di riferimento, proprio come i contenitori della libreria standard C++.
 
-**(Solo C_++98/03)** Quando si deriva dalla classe allocator, è necessario fornire uno struct [rebind](#rebind), il cui typedef `_Other` si riferisce alla nuova classe derivata.
+<strong>(98/c++03 solo)</strong>  Quando si deriva dalla classe allocator, è necessario fornire un [riassocia](#rebind) struct, la cui `_Other` typedef fa riferimento la classe derivata.
 
 Di conseguenza, un allocatore definisce i tipi seguenti:
 

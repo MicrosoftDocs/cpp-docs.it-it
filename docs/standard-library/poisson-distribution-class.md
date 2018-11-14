@@ -1,10 +1,6 @@
 ---
-title: Classe poisson_distribution | Microsoft Docs
-ms.custom: ''
+title: Classe poisson_distribution
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::poisson_distribution
 - random/std::poisson_distribution::reset
@@ -17,8 +13,6 @@ f1_keywords:
 - random/std::poisson_distribution::param_type::mean
 - random/std::poisson_distribution::param_type::operator==
 - random/std::poisson_distribution::param_type::operator!=
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::poisson_distribution [C++]
 - std::poisson_distribution [C++], reset
@@ -29,16 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 93b020dcdf9dd7db11be0a578885cee28e667534
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4c8e35c097513176551db16471ed3a8c4ca1e824
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100395"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521479"
 ---
 # <a name="poissondistribution-class"></a>Classe poisson_distribution
 
@@ -154,7 +144,6 @@ int main()
 
     test(p_dist, samples);
 }
-
 ```
 
 Primo test:

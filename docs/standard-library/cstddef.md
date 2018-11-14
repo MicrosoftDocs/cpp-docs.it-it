@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: df214b70aaf53dc6c2c8ba65e4d32e78da4f3ecd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 089c4fc9a9bc33809f20ad6c13048a8740c95fe0
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517728"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518554"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
@@ -21,7 +21,6 @@ Include l'intestazione della libreria C standard \<stddef.h> e aggiunge i nomi a
 
 ```cpp
 #include <cstddef>
-
 ```
 
 ## <a name="remarks"></a>Note

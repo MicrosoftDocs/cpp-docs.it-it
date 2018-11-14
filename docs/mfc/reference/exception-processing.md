@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 6f74f0fcef7f9dc63138dcdb29487120818974f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651412"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522088"
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 
@@ -116,7 +116,6 @@ Definisce un blocco di codice che rileva il primo tipo di eccezione generato nel
 
 ```
 CATCH(exception_class, exception_object_pointer_name)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -250,7 +249,7 @@ Per altre informazioni su END_CATCH (macro), vedere l'articolo [eccezioni](../..
 
 ##  <a name="end_catch_all"></a>  END_CATCH_ALL
 
-Contrassegna la fine dell'ultimo * * CATCH_ALL88 oppure **AND_CATCH_ALL** blocco.
+Contrassegna la fine dell'ultima <strong>CATCH_ALL88 o * * AND_CATCH_ALL</strong> blocco.
 
 ```
 END_CATCH_ALL

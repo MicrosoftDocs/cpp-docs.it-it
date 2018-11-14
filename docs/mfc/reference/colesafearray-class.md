@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648097"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525405"
 ---
 # <a name="colesafearray-class"></a>Classe COleSafeArray
 
@@ -408,7 +408,7 @@ Sottostante `VARIANT` valore di `COleSafeArray` oggetto.
 
 ### <a name="remarks"></a>Note
 
-La funzione consente di scollegare i dati in una matrice protetta impostando VARTYPE dell'oggetto parametro su VT_EMPTY. È responsabilità del chiamante liberare la matrice, chiamando la funzione di Windows [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).
+La funzione consente di scollegare i dati in una matrice protetta impostando VARTYPE dell'oggetto parametro su VT_EMPTY. È responsabilità del chiamante liberare la matrice, chiamando la funzione di Windows [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear).
 
 In caso di errore, la funzione genera un [COleException](../../mfc/reference/coleexception-class.md).
 
@@ -674,7 +674,7 @@ Puntatore ai dati da assegnare alla matrice. Tipi variant VT_DISPATCH VT_UNKNOWN
 
 ### <a name="remarks"></a>Note
 
-Questa funzione chiama automaticamente le funzioni di Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) e [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) prima e dopo l'assegnazione dell'elemento. Se l'elemento dati è una stringa, un oggetto o una variante, la funzione lo copia correttamente e se l'elemento esistente è una stringa, un oggetto o una variante, esso viene cancellato correttamente.
+Questa funzione chiama automaticamente le funzioni di Windows [SafeArrayLock](/windows/desktop/api/oleauto/nf-oleauto-safearraylock) e [SafeArrayUnlock](/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) prima e dopo l'assegnazione dell'elemento. Se l'elemento dati è una stringa, un oggetto o una variante, la funzione lo copia correttamente e se l'elemento esistente è una stringa, un oggetto o una variante, esso viene cancellato correttamente.
 
 Si noti che possono esistere più blocchi in una matrice. È pertanto possibile inserire elementi in una matrice mentre questa è bloccata da altre operazioni.
 

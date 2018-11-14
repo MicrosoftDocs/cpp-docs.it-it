@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - GetInterfacePtr method [C++]
 ms.assetid: 55e3e2c7-c939-48b5-a905-4b9cbefeea7e
-ms.openlocfilehash: 6746cc97696968ca59c2771d79573bd71d86df62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dba5b5e2fcebf87ef196e2f33adedf88cc42b559
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432474"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326173"
 ---
 # <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
 
@@ -22,7 +22,7 @@ Restituisce un puntatore a interfaccia incapsulato.
 ## <a name="syntax"></a>Sintassi
 
 ```
-Interface* GetInterfacePtr( ) const throw( ); 
+Interface* GetInterfacePtr( ) const throw( );
 Interface*& GetInterfacePtr() throw();
 ```
 

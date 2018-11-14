@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: 2c4c9fecd8e3c8e638af96bc7d047e03a0f31bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651321"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330616"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 
@@ -39,8 +39,12 @@ Questi metodi presentano accessibilità interna, ovvero sono accessibili solo al
 
 |nome|Descrizione|
 |----------|-----------------|
-
-|[Writeonlyarray](#begin)| Un iteratore che punta al primo elemento della matrice. | | [Writeonlyarray:: data](#data)| Un puntatore al buffer di dati. | | [Writeonlyarray](#end)| Un iteratore che punta alla posizione immediatamente successiva all'ultimo elemento nella matrice. | | [Writeonlyarray:: Fastpass](#fastpass)| Indica se la matrice può utilizzare il meccanismo FastPass, ovvero un'ottimizzazione eseguita in modo trasparente dal sistema. Non usarla nel codice | | [Writeonlyarray:: Length](#length)| Restituisce il numero di elementi nella matrice. | | [Writeonlyarray](#set)| Imposta l'elemento specificato sul valore specificato. |
+|[Writeonlyarray](#begin)|Iteratore che punta al primo elemento della matrice|
+|[Writeonlyarray:: data](#data)|Puntatore al buffer di dati.|
+|[Writeonlyarray](#end)|Iteratore che punta all'elemento dopo l'ultimo elemento nella matrice.|
+|[Writeonlyarray:: Fastpass](#fastpass)|Indica se la matrice può utilizzare il meccanismo FastPass, ovvero un'ottimizzazione eseguita in modo trasparente dal sistema. Non usarla nel codice|
+|[Writeonlyarray:: Length](#length)|Restituisce il numero di elementi nella matrice.|
+|[Writeonlyarray](#set)|Imposta l'elemento specificato sul valore specificato.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

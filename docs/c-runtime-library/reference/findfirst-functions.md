@@ -90,12 +90,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceaa8fea4414bab4bbb035aa4525b415ca7ac0b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542080"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331438"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
@@ -166,12 +166,12 @@ Buffer delle informazioni del file.
 
 Caso di esito positivo **FindFirst** restituisce un handle di ricerca univoco che identifica il file o un gruppo di file che soddisfano le *filespec* specifica, che può essere usato in una chiamata successiva a [_ FindNext](findnext-functions.md) o a [FindClose](findclose.md). In caso contrario, **FindFirst** restituisce -1 e imposta **errno** a uno dei valori seguenti.
 
-|Valore errno|Condizione|
+| Valore errno | Condizione |
 |-|-|
-**EINVAL**|Parametri non validi: *filespec* oppure *fileinfo* era **NULL**. oppure il sistema operativo ha restituito un errore imprevisto.
-**ENOENT**|Specifica del file per la quale non sono state trovate corrispondenze.
-**ENOMEM**|Memoria insufficiente.
-**EINVAL**|Specifica del nome file non valido o nome file specificato è maggiore **MAX_PATH**.
+| **EINVAL** | Parametri non validi: *filespec* oppure *fileinfo* era **NULL**. oppure il sistema operativo ha restituito un errore imprevisto. |
+| **ENOENT** | Specifica del file per la quale non sono state trovate corrispondenze. |
+| **ENOMEM** | Memoria insufficiente. |
+| **EINVAL** | Specifica del nome file non valido o nome file specificato è maggiore **MAX_PATH**. |
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

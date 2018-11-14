@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-ms.openlocfilehash: 05bbb5434e6626076aab0d574b04058ec730b77c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de87ca4996540737dad319fc920f4c76415250b9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444695"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330880"
 ---
 # <a name="putc-putwc"></a>putc, putwc
 
@@ -63,7 +63,7 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il carattere scritto. Per indicare un errore o condizione di fine del file, **putc** e **putchar** restituiscono * * EOF`; **putwc` e **putwchar** restituire **WEOF**. Per tutte e quattro le routine, usare [ferror](ferror.md) o [feof](feof.md) per verificare la presenza di un errore o della fine del file. Se viene passato un puntatore null *stream*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** oppure **WEOF** e impostare **errno** al **EINVAL**.
+Restituisce il carattere scritto. Per indicare un errore o condizione di fine del file, **putc** e **putchar** restituiscono **EOF**; **putwc** e **putwchar** restituiscono **WEOF**. Per tutte e quattro le routine, usare [ferror](ferror.md) o [feof](feof.md) per verificare la presenza di un errore o della fine del file. Se viene passato un puntatore null *stream*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** oppure **WEOF** e impostare **errno** al **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

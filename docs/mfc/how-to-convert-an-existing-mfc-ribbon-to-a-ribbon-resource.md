@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: 2ba2907a95018948670847282fd09e0a71a8c106
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 627c50758b10ad18e45fc1432340c0eb2dad7b19
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509565"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524365"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Procedura: convertire una barra multifunzione MFC esistente in una risorsa Ribbon
 
@@ -24,7 +24,6 @@ Le risorse barra multifunzione sono più facili da visualizzare, modificare e ge
 
 ```
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
-
 ```
 
    Salvare e chiudere il file.
@@ -41,7 +40,6 @@ Le risorse barra multifunzione sono più facili da visualizzare, modificare e ge
 
 ```
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
-
 ```
 
 1. Compilare il progetto ed eseguire il programma.

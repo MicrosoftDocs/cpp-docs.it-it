@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525268"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524430"
 ---
 # <a name="composite-control-global-functions"></a>Funzioni globali di controllo composito
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Per altre informazioni su come modificare gli script di risorsa, vedere [procedura: aprire un File di Script di risorsa in formato testo](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Per altre informazioni sulle istruzioni di definizione di risorsa di controllo, vedere [parametri comuni di controllo](/windows/desktop/menurc/common-control-parameters) in Windows SDK *: SDK Tools*.
+Per altre informazioni su come modificare gli script di risorsa, vedere [procedura: aprire un File di Script di risorsa in formato testo](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Per altre informazioni sulle istruzioni di definizione di risorsa di controllo, vedere [parametri di controllo comuni](/windows/desktop/menurc/common-control-parameters) in Windows SDK: SDK Tools.
 
 Per altre informazioni sulle finestre di dialogo in generale, consultare [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) e [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) nel SDK di Windows.
 
@@ -160,7 +160,7 @@ Un puntatore a una stringa da passare al controllo. Deve essere formattato in un
 
 - CLSID, ad esempio "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Un URL, ad esempio "http://www.microsoft.com"
+- Un URL, ad esempio "<http://www.microsoft.com>"
 
 - Un riferimento a un documento attivo, ad esempio "file://\\\Documents\MyDoc.doc"
 
@@ -212,7 +212,7 @@ Un puntatore a una stringa da passare al controllo. Deve essere formattato in un
 
 - CLSID, ad esempio "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Un URL, ad esempio "http://www.microsoft.com"
+- Un URL, ad esempio "<http://www.microsoft.com>"
 
 - Un riferimento a un documento attivo, ad esempio "file://\\\Documents\MyDoc.doc"
 
@@ -271,7 +271,7 @@ Un puntatore a una stringa da passare al controllo. Deve essere formattato in un
 
 - CLSID, ad esempio "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Un URL, ad esempio "http://www.microsoft.com"
+- Un URL, ad esempio "<http://www.microsoft.com>"
 
 - Un riferimento a un documento attivo, ad esempio "file://\\\Documents\MyDoc.doc"
 
@@ -325,7 +325,7 @@ Un puntatore a una stringa da passare al controllo. Deve essere formattato in un
 
 - CLSID, ad esempio "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Un URL, ad esempio "http://www.microsoft.com"
+- Un URL, ad esempio "<http://www.microsoft.com>"
 
 - Un riferimento a un documento attivo, ad esempio "file://\\\Documents\MyDoc.doc"
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 318cd86832875f3701c5d164ce9150e6adddb242
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e3904bda2a20392724f86df2443cd71a14a1ad6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467201"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525125"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
@@ -21,7 +21,6 @@ Definisce i tipi, le funzioni e gli operatori della libreria standard C++ che se
 
 ```cpp
 #include <utility>
-
 ```
 
 ## <a name="remarks"></a>Note

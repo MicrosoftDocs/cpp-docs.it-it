@@ -9,18 +9,18 @@ helpviewer_keywords:
 - error handling, classes
 - error information, classes
 ms.assetid: ba40c8fb-81fd-4f61-8f47-fa2cb540e274
-ms.openlocfilehash: a718590f57b9831139a10831d006c669b1546ef6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31e14a0177251af891adc1319953be70b72648fe
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601058"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519676"
 ---
 # <a name="error-information-classes"></a>Classi di informazioni di errore
 
 La classe seguente indica come viene gestite informazioni sull'errore:
 
-- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) determina se l'oggetto supporta la [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfaccia. `IErrorInfo` Consente di ripropagare al client informazioni di errore.
+- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) determina se l'oggetto supporta la [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfaccia. `IErrorInfo` Consente di ripropagare al client informazioni di errore.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,17 +1,17 @@
 ---
 title: Test del controllo modificato DHTML ATL
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 helpviewer_keywords:
 - HTML controls, testing
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: f0fec3e2430fd5956e3cc48cd64532efee30926d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501673"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330970"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Test del controllo modificato DHTML ATL
 
@@ -31,13 +31,13 @@ Ora testare i metodi che non fanno parte dell'interfaccia utente.
 
 1. Evidenziare il controllo, in modo che il bordo è attivato.
 
-1. Nel **controllo** menu, fare clic su **richiama metodi**.
+1. Nel **controllo** menu, scegliere **richiama metodi**.
 
-I metodi nell'elenco con l'etichetta **nome del metodo** rappresentano i metodi che è possibile chiamare il contenitore: `MethodInvoked` e `GoToURL`. Tutti gli altri metodi sono controllate dall'interfaccia utente.
+   I metodi nell'elenco con l'etichetta **nome del metodo** rappresentano i metodi che è possibile chiamare il contenitore: `MethodInvoked` e `GoToURL`. Tutti gli altri metodi sono controllate dall'interfaccia utente.
 
-1. Selezionare un metodo da richiamare e fare clic su `Invoke` per visualizzare la finestra di messaggio del metodo oppure passare a www.microsoft.com.
+1. Selezionare un metodo da richiamare e scegliere **Invoke** per visualizzare la finestra di messaggio del metodo o a cui passare `www.microsoft.com`.
 
-1. Nel **richiamare i metodi** finestra di dialogo, fare clic su **Chiudi**.
+1. Nel **richiamare i metodi** finestra di dialogo, scegliere **Chiudi**.
 
 Per altre informazioni sui vari elementi e i file che costituiscono un controllo DHTML ATL, vedere [identificazione degli elementi del progetto controllo DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 

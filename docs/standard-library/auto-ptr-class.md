@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620948"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327122"
 ---
 # <a name="autoptr-class"></a>Classe auto_ptr
 
@@ -282,11 +282,11 @@ Oggetto di tipo `auto_ptr`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento a un oggetto di tipo `auto_ptr`\< **Type**>.
+Riferimento a un oggetto di tipo `auto_ptr<Type>`.
 
 ### <a name="remarks"></a>Note
 
-L'assegnazione valuta l'espressione `delete myptr`, ma solo se il puntatore archiviato `myptr` modifiche in seguito all'assegnazione. Viene quindi trasferita la proprietà del puntatore archiviato in _ *Right*, archiviando \_ *Right*. [rilasciare](#release) in `myptr`. La funzione restituisce **\*this**.
+L'assegnazione valuta l'espressione `delete myptr`, ma solo se il puntatore archiviato `myptr` modifiche in seguito all'assegnazione. Viene quindi trasferita la proprietà del puntatore archiviato *a destra*, archiviando *destro*.[ rilasciare](#release) in `myptr`. La funzione restituisce __\*this__.
 
 ### <a name="example"></a>Esempio
 

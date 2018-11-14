@@ -39,12 +39,12 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: a8097a31ebbc56281008f14da58671d5b2e4e8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5479448a4e3a3cedba3a62d9b12b0dbe4160f7c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490779"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331698"
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
@@ -112,7 +112,7 @@ Il **_strtoi64** funzione converte *strSource* a un **__int64**. Entrambe le fun
 |**_tcstoi64**|**_strtoi64**|**_strtoi64**|**_wcstoi64**|
 |**_tcstoi64_l**|**_strtoi64_l**|**_strtoi64_l**|**_wcstoi64_l**|
 
-Le impostazioni locali **LC_NUMERIC** impostazione di categoria determina il riconoscimento del carattere di base *strSource * *;* per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni senza il suffisso l usano le impostazioni locali correnti. **_strtoi64_l** e **_wcstoi64_l** sono identiche alla funzione corrispondente senza il **l** suffisso ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le impostazioni locali **LC_NUMERIC** impostazione di categoria determina il riconoscimento del carattere di base *strSource*; per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni senza il suffisso l usano le impostazioni locali correnti. **_strtoi64_l** e **_wcstoi64_l** sono identiche alla funzione corrispondente senza il **l** suffisso ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui fa riferimento *endptr*. Se è non possibile eseguire alcuna conversione (non trovate cifre valide sono stati o è stata specificata una base non valida), il valore di *strSource* viene archiviato in corrispondenza della posizione a cui punta *endptr*.
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633584"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332387"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -62,7 +62,7 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, ognuna di queste funzioni restituisce l'argomento a caratteri *c*. Se *c* non è possibile reinserire o se non è stato letto alcun carattere, il flusso di input rimane invariato e **ungetc** restituisce * * EOF`; **ungetwc` restituisce **WEOF**. Se *stream* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **EOF** oppure **WEOF** viene restituita e **errno** è impostata su **EINVAL**.
+Se ha esito positivo, ognuna di queste funzioni restituisce l'argomento a caratteri *c*. Se *c* non è possibile reinserire o se non è stato letto alcun carattere, il flusso di input rimane invariato e **ungetc** restituisce **EOF**; **ungetwc** restituisce **WEOF**. Se *stream* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **EOF** oppure **WEOF** viene restituita e **errno** è impostata su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

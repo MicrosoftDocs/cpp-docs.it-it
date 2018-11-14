@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _PLOSS constant
 - math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
-ms.openlocfilehash: 8a649c4f6718ddfbfa466c307d2edb3aad396f7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f51d9a3a28118d922f81a44e31c9abc610645f13
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623837"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524993"
 ---
 # <a name="math-error-constants"></a>Costanti di errori matematici
 
@@ -37,7 +37,6 @@ ms.locfileid: "50623837"
 ```
 
 #include <math.h>
-
 ```
 
 ## <a name="remarks"></a>Note

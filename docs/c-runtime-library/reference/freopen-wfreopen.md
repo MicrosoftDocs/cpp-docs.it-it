@@ -29,12 +29,12 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-ms.openlocfilehash: 4fa5afb1baea33178c987b45e8b7dace4e4515eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c570837bddea1f5e986ae5f767279ab2637ea21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649527"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332504"
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 
@@ -88,12 +88,12 @@ Il **freopen** funzione chiude il file attualmente associato *stream* e riassegn
 
 |*mode*|Accedi a|
 |-|-|
-**"r"**|Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **freopen** chiamata ha esito negativo.
-**"w"**|Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente.
-**"a"**|Viene aperto per la scrittura alla fine del file (aggiunta) senza rimuovere il marcatore di fine file (EOF) prima che nuovi dati vengano scritti sul file. Creare il file se è inesistente.
-**"r+"**|Viene aperto per la lettura e la scrittura. Il file deve esistere.
-**"w+"**|Apre un file vuoto per la lettura e la scrittura. Se il file esiste, il contenuto viene eliminato in modo permanente.
-**"a+"**|Viene aperto per la lettura e l'aggiunta. L'operazione di aggiunta comporta la rimozione del marcatore di EOF prima che nuovi dati vengano scritti sul file. Il marcatore EOF non viene ripristinato dopo il completamento della scrittura. Creare il file se è inesistente.
+| **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **freopen** chiamata ha esito negativo. |
+| **"w"** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
+| **"a"** | Viene aperto per la scrittura alla fine del file (aggiunta) senza rimuovere il marcatore di fine file (EOF) prima che nuovi dati vengano scritti sul file. Creare il file se è inesistente. |
+| **"r+"** | Viene aperto per la lettura e la scrittura. Il file deve esistere. |
+| **"w+"** | Apre un file vuoto per la lettura e la scrittura. Se il file esiste, il contenuto viene eliminato in modo permanente. |
+| **"a+"** | Viene aperto per la lettura e l'aggiunta. L'operazione di aggiunta comporta la rimozione del marcatore di EOF prima che nuovi dati vengano scritti sul file. Il marcatore EOF non viene ripristinato dopo il completamento della scrittura. Creare il file se è inesistente. |
 
 Usare la **"w"** e **"w +"** tipi con cautela, poiché possono distruggere i file esistenti.
 
@@ -105,8 +105,8 @@ Quando la **"r +"**, **"w +"**, o **"a +"** viene specificato il tipo di accesso
 
 |*modalità* modificatore|Modalità di conversione|
 |-|-|
-**t**|Aprire in modalità testo (convertita).
-**b**|Aprire in modalità binaria (non convertita). Le conversioni che includono caratteri di ritorno a capo e avanzamento riga vengono eliminate.
+| **t** | Aprire in modalità testo (convertita). |
+| **b** | Aprire in modalità binaria (non convertita). Le conversioni che includono caratteri di ritorno a capo e avanzamento riga vengono eliminate. |
 
 In modalità testo (convertita), le combinazioni di ritorno a capo con avanzamento di riga (CR-LF) vengono convertite in caratteri di singolo avanzamento riga (LF) in input. I caratteri vengono convertiti in combinazioni di CR-LF nell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. Nei file aperti per la lettura o di lettura e scrittura con **"a +"**, la libreria di runtime verifica la presenza di una combinazione CTRL + Z alla fine del file e rimuove, se possibile. Ciò avviene perché l'uso [fseek](fseek-fseeki64.md) e [ftell](ftell-ftelli64.md) per spostarsi all'interno di un file può causare [fseek](fseek-fseeki64.md) a un comportamento non corretto verso la fine del file. Il **t** opzione è un'estensione Microsoft che non deve essere usata in cui è richiesta la portabilità ANSI.
 

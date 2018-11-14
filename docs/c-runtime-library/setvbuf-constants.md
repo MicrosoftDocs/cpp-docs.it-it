@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IOLBF constant
 - _IONBF constant
 ms.assetid: a6ec4dd5-1f24-498c-871a-e874cd28d33c
-ms.openlocfilehash: 25c25741f54c1383a5bad9038b5b5d761dacdd89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 661cf64c71e06c222503388df198d47429566602
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458048"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523806"
 ---
 # <a name="setvbuf-constants"></a>Costanti setvbuf
 
@@ -27,7 +27,6 @@ ms.locfileid: "50458048"
 ```
 
 #include <stdio.h>
-
 ```
 
 ## <a name="remarks"></a>Note

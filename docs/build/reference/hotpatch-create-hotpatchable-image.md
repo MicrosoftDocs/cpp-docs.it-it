@@ -1,6 +1,6 @@
 ---
 title: /hotpatch (Crea immagine con funzionalità di patch a caldo)
-ms.date: 11/04/2016
+ms.date: 11/12/2018
 f1_keywords:
 - /hotpatch
 - VC.Project.VCCLCompilerTool.CreateHotpatchableImage
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-ms.openlocfilehash: b304edffc024fac084338789134269745111ba00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c3431067f04ff36c63143f7d0e7483efa5376ba
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581441"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598795"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Crea immagine con funzionalità di patch a caldo)
 
@@ -48,10 +48,6 @@ Poiché le istruzioni sono sempre due byte o più grandi nell'architettura ARM e
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
-
-## <a name="guidance"></a>Materiale sussidiario
-
-Per altre informazioni sulla gestione degli aggiornamenti, vedere "Security Guidance for Update Management" all'indirizzo [ http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx ](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).
 
 ## <a name="see-also"></a>Vedere anche
 

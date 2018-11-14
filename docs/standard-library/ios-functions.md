@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: bf22c0e4775ef93b1965a7c9d61f024441bea821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18f42f8e5bcd69872e4300d154eb72f489015e36
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509682"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519685"
 ---
 # <a name="ltiosgt-functions"></a>Funzioni &lt;ios&gt;
 
@@ -213,7 +213,7 @@ Riferimento all'oggetto da cui è derivato _ *Str*.
 
 `fixed` è la notazione di visualizzazione predefinito per i numeri a virgola mobile. [scientific](../standard-library/ios-functions.md#scientific) fa sì che i numeri a virgola mobile vengano visualizzati usando la notazione scientifica.
 
-Il manipolatore chiama * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, `ios_base::floatfield`) e quindi restituisce *str*.
+Il manipolatore chiama *str*.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, `ios_base::floatfield` ) e quindi restituisce *str*.
 
 ### <a name="example"></a>Esempio
 
@@ -872,15 +872,13 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 1 2 3
-
 ```
 
 ```Output
-
-      1 2 3.1.
+Enter three characters: 1 2 3
+.1.
 .2.
 .3.
 ```

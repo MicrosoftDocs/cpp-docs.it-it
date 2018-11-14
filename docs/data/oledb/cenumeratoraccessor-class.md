@@ -37,12 +37,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: e94f7a5d34a134d4b05211bd5fa03f7c498fa45a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bcbf55c4bc6d546c8a2b4eca3ea2dbeafc613fa
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646490"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556348"
 ---
 # <a name="cenumeratoraccessor-class"></a>Classe CEnumeratorAccessor
 
@@ -86,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
 ## <a name="ntype"></a> Cenumeratoraccessor:: M_ntype
 
@@ -100,7 +100,7 @@ USHORT m_nType;
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
 ## <a name="szdescription"></a> Cenumeratoraccessor:: M_szdescription
 
@@ -114,7 +114,7 @@ WCHAR m_szDescription[129];
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
 ## <a name="szname"></a> Cenumeratoraccessor:: M_szname
 
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
 
@@ -142,7 +142,7 @@ WCHAR m_szParseName[129];
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
 ## <a name="see-also"></a>Vedere anche
 

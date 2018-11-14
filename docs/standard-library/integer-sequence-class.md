@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: f9ce63aeba4db7c49aee36bc9b847e6832d26f8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c996fdc2756ee489dc3b0abf9321a1d9ce47aded
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638714"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332400"
 ---
 # <a name="integersequence-class"></a>Classe integer_sequence
 
@@ -45,7 +45,7 @@ Un pacchetto di parametri non di tipo che rappresenta una sequenza di valori di 
 |||
 |-|-|
 |`static size_t size() noexcept`|Numero di elementi nella sequenza.|
-|typedef T value_type|Tipo di ciascun elemento nella sequenza. Deve essere un tipo integrale.|
+|`typedef T value_type`|Tipo di ciascun elemento nella sequenza. Deve essere un tipo integrale.|
 
 ## <a name="remarks"></a>Note
 
@@ -57,10 +57,9 @@ L'esempio seguente è basato sulla proposta originale [N3658](http://open-std.or
 
 Nella funzione `a2t`, una `index_sequence` è un alias di `integer_sequence` basato sul tipo integrale `size_t`. `make_index_sequence` è un alias che in fase di compilazione crea una `index_sequence` in base zero con lo stesso numero di elementi della matrice che viene passato dal chiamante. `a2t` passa la `index_sequence` per valore a `a2t_`, dove l'espressione `a[I]...` decomprime `I`, quindi gli elementi vengono inseriti nella funzione `make_tuple` che li usa come singoli argomenti. Ad esempio, se la sequenza contiene tre elementi, la funzione `make_tuple` viene chiamata make_tuple(a[0], a[1], a[2]). Gli elementi di matrice stessi ovviamente possono essere di qualsiasi tipo.
 
-La funzione apply accetta una classe [std::tuple](../standard-library/tuple-class.md) e genera un oggetto integer_sequence usando la classe helper `tuple_size`. Si noti che [std::decay_t](../standard-library/decay-class.md) è necessario perché [tuple_size](../standard-library/tuple-size-class-tuple.md) non funziona con i tipi di riferimento. La funzione `apply_` decomprime i membri della tupla, inoltrandoli come argomenti separati a una chiamata di funzione. In questo esempio la funzione è una semplice espressione lambda che stampa i valori.
+La funzione apply accetta una [std:: Tuple](../standard-library/tuple-class.md)e produce un `integer_sequence` utilizzando il `tuple_size` classe helper. Si noti che [std:: decay_t](../standard-library/decay-class.md) è necessario poiché [tuple_size](../standard-library/tuple-size-class-tuple.md) non funziona con i tipi di riferimento. La funzione `apply_` decomprime i membri della tupla, inoltrandoli come argomenti separati a una chiamata di funzione. In questo esempio la funzione è una semplice espressione lambda che stampa i valori.
 
-```
-
+```cpp
 #include <stddef.h>
 #include <iostream>
 #include <tuple>
@@ -114,7 +113,6 @@ int main()
     char c;
     cin >> c;
 }
-
 ```
 
 Per creare un oggetto `index_sequence` per un pacchetto di parametri, usare `index_sequence_for`\<T...>, ovvero un alias di `make_index_sequence`\<sizeof...(T)>.

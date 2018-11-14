@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566757"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518960"
 ---
 # <a name="servers-implementing-a-server"></a>Server: implementazione di un server
 
@@ -22,11 +22,11 @@ Il codice di server che fornisce la creazione guidata applicazioni rientra nelle
 
 - Definizione delle risorse di server:
 
-   - La risorsa di menu usata quando il server viene modificato un elemento incorporato in una finestra.
+  - La risorsa di menu usata quando il server viene modificato un elemento incorporato in una finestra.
 
-   - Le risorse di menu e barra degli strumenti usate quando il server è attivo sul posto.
+  - Le risorse di menu e barra degli strumenti usate quando il server è attivo sul posto.
 
-   Per altre informazioni su queste risorse, vedere [menu e risorse: aggiunte di Server](../mfc/menus-and-resources-server-additions.md).
+  Per altre informazioni su queste risorse, vedere [menu e risorse: aggiunte di Server](../mfc/menus-and-resources-server-additions.md).
 
 - La definizione di una classe dell'elemento derivato da `COleServerItem`. Per ulteriori informazioni su elementi del server, vedere [server: elementi Server](../mfc/servers-server-items.md).
 

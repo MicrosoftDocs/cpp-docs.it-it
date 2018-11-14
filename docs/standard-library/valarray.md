@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447788"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332634"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -21,12 +21,11 @@ Definisce la classe modello valarray e numerose funzioni e classi modello.
 
 ```cpp
 #include <valarray>
-
 ```
 
 ## <a name="remarks"></a>Note
 
-A queste funzioni e classi modello sono consentiti livelli insoliti di libertà ai fini del miglioramento delle prestazioni. In particolare, qualsiasi funzione che restituisce il tipo **valarray\<** T1**>** può restituire un oggetto di un altro tipo T2. In questo caso, qualsiasi funzione che accetta uno o più argomenti di tipo **valarray\<** T2**>** deve includere overload che accettano combinazioni arbitrarie di questi argomenti, ognuno sostituito da un argomento di tipo T2.
+A queste funzioni e classi modello sono consentiti livelli insoliti di libertà ai fini del miglioramento delle prestazioni. In particolare, qualsiasi funzione che restituisce il tipo `valarray<T1>` può restituire un oggetto di un altro tipo T2. In tal caso, qualsiasi funzione che accetta uno o più argomenti di tipo `valarray<T2>` deve includere overload che accettano combinazioni arbitrarie di questi argomenti, ognuno sostituiti da un argomento di tipo T2.
 
 ### <a name="functions"></a>Funzioni
 

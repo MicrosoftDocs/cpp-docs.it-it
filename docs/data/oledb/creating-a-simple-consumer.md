@@ -1,15 +1,15 @@
 ---
 title: Creazione di un consumer semplice
-ms.date: 10/09/2018
+ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 2a10e4da743c1f867d801ffe6767ab6b5b6c0290
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608052"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326641"
 ---
 # <a name="creating-a-simple-consumer"></a>Creazione di un consumer semplice
 
@@ -51,18 +51,18 @@ Successivamente, usare il **Creazione guidata Consumer OLE DB ATL** per aggiunge
 
 1. Nel **proprietà di Data Link** dialogo casella, eseguire le operazioni seguenti:
 
-    1. Nel **Provider** scheda, specificare un provider OLE DB.
+   1. Nel **Provider** scheda, specificare un provider OLE DB.
 
-    1. Nel **connessione** , specificare le informazioni necessarie, ad esempio nome del server, l'ID di accesso e password per l'origine dati e il database nel server.
+   1. Nel **connessione** , specificare le informazioni necessarie, ad esempio nome del server, l'ID di accesso e password per l'origine dati e il database nel server.
 
-       > [!NOTE]
-       > Si verifica un problema di sicurezza con il **Consenti salvataggio password** funzionalità delle **proprietà di Data Link** nella finestra di dialogo. Nelle **immettere le informazioni per l'accesso al server**, sono presenti due pulsanti di opzione: **Usa Windows protezione integrata NT** e **usare un nome utente specifico e una password**.
+      > [!NOTE]
+      > Si verifica un problema di sicurezza con il **Consenti salvataggio password** funzionalità delle **proprietà di Data Link** nella finestra di dialogo. Nelle **immettere le informazioni per l'accesso al server**, sono presenti due pulsanti di opzione: **Usa Windows protezione integrata NT** e **usare un nome utente specifico e una password**.
 
-       > [!NOTE]
-       > Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la **Consenti salvataggio password** casella di controllo), tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione utilizza Windows NT per verificare la tua identità.
+      > [!NOTE]
+      > Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la **Consenti salvataggio password** casella di controllo), tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione utilizza Windows NT per verificare la tua identità.
 
-       > [!NOTE]
-       > Se non è possibile utilizzare la sicurezza integrata di Windows NT, è consigliabile usare un'applicazione di livello intermedio per richiedere all'utente la password o per archiviare la password in un percorso con meccanismi di sicurezza per consentirne la protezione (invece che nel codice sorgente).
+      > [!NOTE]
+      > Se non è possibile utilizzare la sicurezza integrata di Windows NT, è consigliabile usare un'applicazione di livello intermedio per richiedere all'utente la password o per archiviare la password in un percorso con meccanismi di sicurezza per consentirne la protezione (invece che nel codice sorgente).
 
    1. Dopo aver selezionato il provider e altre impostazioni, fare clic su **Test connessione** per verificare le selezioni effettuate nelle pagine precedenti della finestra di dialogo. Se il **risultati** casella reports `Test connection succeeded`, fare clic su **OK** per creare il collegamento di dati.
 

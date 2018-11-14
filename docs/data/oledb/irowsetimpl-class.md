@@ -91,12 +91,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 744614dac72a96da2de8722d98789ab5babb170d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1826155bec3313afe503ee1c58f786a5c4739e8
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646687"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556985"
 ---
 # <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 
@@ -106,7 +106,7 @@ Fornisce un'implementazione dell'interfaccia `IRowset`.
 
 ```cpp
 template <
-   class T, 
+   class T,
    class RowsetInterface,
    class RowClass = CSimpleRow,
    class MapClass = CAtlMap <
@@ -162,7 +162,7 @@ Unità di archiviazione per tutti gli handle di riga utilizzato dal provider.
 
 ## <a name="remarks"></a>Note
 
-[IRowset](/previous-versions/windows/desktop/ms720986) è l'interfaccia di base del set di righe.
+[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) è l'interfaccia di base del set di righe.
 
 ## <a name="addrefrows"></a> IRowsetImpl:: Addrefrows
 
@@ -179,7 +179,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowset:: Addrefrows](/previous-versions/windows/desktop/ms719619) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IRowset:: Addrefrows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ## <a name="createrow"></a> IRowsetImpl:: CreateRow
 
@@ -222,7 +222,7 @@ STDMETHOD(GetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IRowset:: GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 Alcuni parametri corrispondono ai *riferimento per programmatori OLE DB* i parametri dei nomi diversi, descritte nelle `IRowset::GetData`:
 
@@ -255,7 +255,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 
 ### <a name="return-value"></a>Valore restituito
 
-Il [DBSTATUS](/previous-versions/windows/desktop/ms722617) flag per la colonna.
+Il [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) flag per la colonna.
 
 ## <a name="getnextrows"></a> IRowsetImpl:: GetNextRows
 
@@ -273,7 +273,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IRowset:: GetNextRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms709827(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ## <a name="irowsetimpl"></a> IRowsetImpl:: IRowsetImpl
 
@@ -305,7 +305,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowset:: Addrefrows](/previous-versions/windows/desktop/ms719619) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IRowset:: Addrefrows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -327,7 +327,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [:: ReleaseRows](/previous-versions/windows/desktop/ms719771) nel *riferimento per programmatori OLE DB*.
+Visualizzare [:: ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ## <a name="restartposition"></a> IRowsetImpl:: RestartPosition
 
@@ -341,7 +341,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IRowset:: RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="remarks"></a>Note
 
@@ -362,7 +362,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Parametri
 
 *statusFlags*<br/>
-Il [DBSTATUS](/previous-versions/windows/desktop/ms722617) flag da impostare per la colonna.
+Il [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) flag da impostare per la colonna.
 
 *TableRow*<br/>
 La riga corrente.

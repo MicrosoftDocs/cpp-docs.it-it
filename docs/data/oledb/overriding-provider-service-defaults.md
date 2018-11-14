@@ -5,16 +5,16 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: a9f8eb1c96c40336f39f14fe1a0ee29d60efd003
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 9f845834b844c16bf2820a295768696e8f6a6526
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265217"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556296"
 ---
 # <a name="overriding-provider-service-defaults"></a>Override delle impostazioni predefinite dei servizi di un provider
 
-Valore del Registro di sistema del provider per OLEDB_SERVICES viene restituito come valore predefinito per il [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) proprietà di inizializzazione sull'oggetto origine dati.
+Valore del Registro di sistema del provider per OLEDB_SERVICES viene restituito come valore predefinito per il [DBPROP_INIT_OLEDBSERVICES](https://docs.microsoft.com/previous-versions/windows/desktop/ms716898(v=vs.85)) proprietà di inizializzazione sull'oggetto origine dati.
 
 Purché esista la voce del Registro di sistema, vengono aggregati gli oggetti del provider. L'utente può eseguire l'override impostazione predefinita del provider per i servizi attivati impostando la proprietà DBPROP_INIT_OLEDBSERVICES prima dell'inizializzazione. Per abilitare o disabilitare un determinato servizio, l'utente ottiene il valore corrente della proprietà DBPROP_INIT_OLEDBSERVICES imposta o Cancella il bit relativo alla proprietà abilitare o disabilitare e reimposta la proprietà. È possibile impostare DBPROP_INIT_OLEDBSERVICES direttamente in OLE DB o nella stringa di connessione passata ad ADO o `IDataInitialize::GetDatasource`. Nella tabella seguente sono elencati i valori corrispondenti per abilitare o disabilitare singoli servizi.
 
@@ -30,7 +30,7 @@ Se la voce del Registro di sistema non esiste per il provider, non verranno racc
 
 ## <a name="see-also"></a>Vedere anche
 
-[Pooling delle risorse](/previous-versions/windows/desktop/ms713655)<br/>
-[Come i consumer utilizzano il pool di risorse](/previous-versions/windows/desktop/ms715907)<br/>
-[Come provider di lavorare in modo efficace con il pool di risorse](/previous-versions/windows/desktop/ms714906)<br/>
+[Pooling delle risorse](https://docs.microsoft.com/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
+[Come i consumer utilizzano il pool di risorse](https://docs.microsoft.com/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[Come provider di lavorare in modo efficace con il pool di risorse](https://docs.microsoft.com/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [Abilitazione e disabilitazione dei servizi OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

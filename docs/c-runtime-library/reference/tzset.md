@@ -23,12 +23,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661760"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330255"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -51,11 +51,11 @@ Il **tzset** funzione Usa l'impostazione corrente della variabile di ambiente **
 
 |Parametro|Descrizione|
 |-|-|
-*tzn*|Nome del fuso orario di tre lettere, ad esempio PST. È necessario specificare l'offset corretto dall'ora locale all'ora UTC.
-*hh*|La differenza in ore tra l'ora UTC e l'ora locale. Segno più (+) facoltativo per i valori positivi.
-*mm*|Minuti. Separate dalle *hh* da due punti (**:**).
-*ss*|Secondi. Separate dalle *mm* da due punti (**:**).
-*dzn*|Fuso orario con l'ora legale di tre lettere, ad esempio PDT. Se l'ora legale è mai attiva nella località, impostare **TZ** senza un valore per *dzn*. La libreria di runtime C presupporrà le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).
+| *tzn* | Nome del fuso orario di tre lettere, ad esempio PST. È necessario specificare l'offset corretto dall'ora locale all'ora UTC. |
+| *hh* | La differenza in ore tra l'ora UTC e l'ora locale. Segno più (+) facoltativo per i valori positivi. |
+| *mm* | Minuti. Separate dalle *hh* da due punti (**:**). |
+| *ss* | Secondi. Separate dalle *mm* da due punti (**:**). |
+| *dzn* | Fuso orario con l'ora legale di tre lettere, ad esempio PDT. Se l'ora legale è mai attiva nella località, impostare **TZ** senza un valore per *dzn*. La libreria di runtime C presupporrà le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST). |
 
 > [!NOTE]
 > Prestare attenzione nel calcolare il segno della differenza di tempo. Dal momento che la differenza di tempo è l'offset dall'ora locale all'ora UTC (anziché viceversa), il relativo segno potrebbe essere l'opposto di quanto ci si potrebbe intuitivamente aspettare. Per i fusi orari avanti rispetto all'ora UTC, la differenza di tempo è negativa; per quelli che sono indietro rispetto all'ora UTC, la differenza è positiva.

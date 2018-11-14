@@ -58,12 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471093"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524638"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -112,10 +112,10 @@ Ognuna di queste funzioni restituisce 0 se l'ora di modifica del file è cambiat
 
 |Valore errno|Condizione|
 |-|-|
-**EACCES**|Il percorso specifica una directory o un file di sola lettura
-**EINVAL**|Non è valido *volte* argomento
-**EMFILE**|Troppi file aperti (il file deve essere aperto per modificarne l'ora di modifica)
-**ENOENT**|Percorso o nome del file non trovato
+| **EACCES** | Il percorso specifica una directory o un file di sola lettura |
+| **EINVAL** | Non è valido *volte* argomento |
+| **EMFILE** | Troppi file aperti (il file deve essere aperto per modificarne l'ora di modifica) |
+| **ENOENT** | Percorso o nome del file non trovato |
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -123,14 +123,14 @@ La data può essere modificata per un file, se la data di modifica è successiva
 
 ## <a name="remarks"></a>Note
 
-Il **utime** funzione imposta l'ora di modifica per il file specificato da *filename * *.* Il processo deve disporre dell'accesso in scrittura al file per poter modificare l'ora. Nel sistema operativo Windows, è possibile modificare l'ora di accesso e l'ora di modifica nel **utimbuf** struttura. Se *tempi* è un **NULL** puntatore, l'ora di modifica viene impostato sull'ora locale corrente. In caso contrario, *tempi* deve puntare a una struttura di tipo **utimbuf**, definita in SYS\UTIME. H.
+Il **utime** funzione imposta l'ora di modifica per il file specificato da *filename*. Il processo deve disporre dell'accesso in scrittura al file per poter modificare l'ora. Nel sistema operativo Windows, è possibile modificare l'ora di accesso e l'ora di modifica nel **utimbuf** struttura. Se *tempi* è un **NULL** puntatore, l'ora di modifica viene impostato sull'ora locale corrente. In caso contrario, *tempi* deve puntare a una struttura di tipo **utimbuf**, definita in SYS\UTIME. H.
 
 Il **utimbuf** struttura consente di archiviare tempi di accesso e modifica di file utilizzati dal **utime** per cambiare le date di modifica dei file. La struttura contiene i campi seguenti, entrambi di tipo **time_t**:
 
-|Campo||
-|-|-|
-**actime**|Ora di accesso al file
-**modtime**|Ora di modifica del file
+| Campo |   |
+|-------|---|
+| **actime** | Ora di accesso al file |
+| **modtime** | Ora di modifica del file |
 
 Versioni specifiche del **utimbuf** struttura (**_utimebuf32** e **__utimbuf64**) vengono definiti utilizzando le versioni a 32 e 64 bit del tipo time. Queste strutture vengono usate nelle versioni a 32 bit e 64 bit specifiche di questa funzione. **utimbuf** stesso per impostazione predefinita Usa un tipo time a 64 bit, a meno che **_USE_32BIT_TIME_T** è definito.
 

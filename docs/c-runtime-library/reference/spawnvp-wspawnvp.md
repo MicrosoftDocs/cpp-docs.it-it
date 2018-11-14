@@ -30,12 +30,12 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: 5470c88ea0c39c421f027d219af5d3465324b1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b697eabd7a45eedbf9c892acee570a9e8b818d1b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649540"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330723"
 ---
 # <a name="spawnvp-wspawnvp"></a>_spawnvp, _wspawnvp
 
@@ -76,11 +76,11 @@ Il valore restituito da un oggetto sincrono **spawnvp** oppure **wspawnvp** (**P
 
 |||
 |-|-|
-**E2BIG**|L'elenco di argomenti supera i 1024 byte.
-**EINVAL**|*modalità* argomento non è valido.
-**ENOENT**|Il file o il percorso non è stato trovato.
-**ENOEXEC**|Il file specificato non è eseguibile o il formato del file eseguibile non è valido.
-**ENOMEM**|Memoria insufficiente per eseguire il nuovo processo.
+| **E2BIG** | L'elenco di argomenti supera i 1024 byte. |
+| **EINVAL** | *modalità* argomento non è valido. |
+| **ENOENT** | Il file o il percorso non è stato trovato. |
+| **ENOEXEC** | Il file specificato non è eseguibile o il formato del file eseguibile non è valido. |
+| **ENOMEM** | Memoria insufficiente per eseguire il nuovo processo. |
 
 Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - clocale header
 ms.assetid: 5bde3e01-cf67-4f1f-a383-447ec814d00e
-ms.openlocfilehash: 549522b2c71ed60a51b877adec806fc2cf365092
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ca899282891f26221ca5b786debfcaee114d0b2
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462257"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522051"
 ---
 # <a name="ltclocalegt"></a>&lt;clocale&gt;
 
@@ -21,7 +21,6 @@ Include l'intestazione della libreria C standard \<locale.h> e aggiunge i nomi a
 
 ```cpp
 #include <clocale>
-
 ```
 
 ## <a name="remarks"></a>Note

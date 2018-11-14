@@ -1,12 +1,12 @@
 ---
 title: Gestione delle eccezioni ARM64
 ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620597"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333589"
 ---
 # <a name="arm64-exception-handling"></a>Gestione delle eccezioni ARM64
 
@@ -56,7 +56,7 @@ Queste sono le ipotesi nella descrizione di gestione delle eccezioni:
 
 Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in qualsiasi posizione nell'area di variabile locale in base a considerazioni di ottimizzazione. L'obiettivo è ottimizzare il numero di variabili locali che può essere raggiunto da una singola istruzione basata su puntatore ai frame (r29) o il puntatore dello stack (sp). Tuttavia per `alloca` funzioni, deve essere collegato e r29 deve puntare alla parte inferiore dello stack. Per consentire una migliore copertura di register-coppia-addressing-modalità, non volatile registrare aave aree sono posizionate nella parte superiore dello stack dell'area locale. Ecco alcuni esempi che illustrano alcune delle sequenze di prologo della query più efficiente. Per ragioni di semplicità e migliore località della cache, l'ordine di archiviazione dei registri salvati dal chiamato in tutti i prologhi canonici è in ordine "in continua crescita di". `#framesz` di seguito rappresenta la dimensione dell'intero stack (escluso alloca area). `#localsz` e `#outsz` indicano le dimensioni di rete locale (tra cui Salva area per il \<r29, lr > coppia) e in uscita di dimensioni del parametro, rispettivamente.
 
-1. Concatenate, #localsz < = 512
+1. Concatenate, #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   Tutte le variabili locali sono accessibili basato su provider di servizi. \<R29, lr > punta al frame precedente. Per le dimensioni del fotogramma < = 512, il "sub sp,..." può essere ottimizzato se l'area regs salvato viene spostato nella parte inferiore dello stack. Lo svantaggio di che è che non è coerenza con altri layout precedente e salvato regs prendere parte dell'intervallo per la coppia regs e modalità di indirizzamento offset pre-elaborazione e post-indicizzate.
+   Tutte le variabili locali sono accessibili basato su provider di servizi. \<R29, lr > punta al frame precedente. Per le dimensioni del fotogramma \<= 512, il "sub sp,..." può essere ottimizzato se l'area regs salvato viene spostato nella parte inferiore dello stack. Lo svantaggio di che è che non è coerenza con altri layout precedente e salvato regs prendere parte dell'intervallo per la coppia regs e modalità di indirizzamento offset pre-elaborazione e post-indicizzate.
 
 1. Funzioni di ai e non foglia (lr viene salvato nell'area di Int salvato)
 
@@ -131,7 +131,7 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
 
    Tutte le variabili locali sono accessibili basato su provider di servizi. \<R29 > punta al frame precedente.
 
-1. Concatenate, #framesz < = 512, #outsz = 0
+1. Concatenate, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ Se fosse garantito che le eccezioni possono verificarsi solo all'interno di un c
 
 I codici di rimozione sono codificati in base alla tabella riportata di seguito. Tutti i codici di rimozione sono un byte singolo o doppie, ad eccezione di quello che alloca uno stack di grandi dimensioni. Esistono totalmente 21 codice di rimozione. Ogni rimozione codice mappe esattamente un'istruzione nel prologo/epilogo per consentire la rimozione di parzialmente eseguiti prologhi ed epiloghi.
 
-Codice di rimozione|BITS e l'interpretazione
+|Codice di rimozione|BITS e l'interpretazione|
 |-|-|
-`alloc_s`|000xxxxx: allocazione dello stack di piccole dimensioni con dimensioni < 512 (2 ^ 5 * 16).
-`save_r19r20_x`|    001zzzzz: salvare \<r19, r20 > coppia in [sp-#Z * 8]!, offset pre-indicizzate > =-248
-`save_fplr`|        01zzzzzz: salvare \<r29, lr > associa in [sp + #Z * 8], offset < = 504.
-`save_fplr_x`|        10zzzzzz: salvare \<r29, lr > associa in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512
-`alloc_m`|        11000xxx\|xxxxxxxx: allocazione dello stack di grandi dimensioni con dimensioni < 16 KB (2 ^ 11 * 16).
-`save_regp`|        110010xx\|xxzzzzzz: salvare r(19+#X) coppia in [sp + #Z * 8], offset < = 504
-`save_regp_x`|        110011xx\|xxzzzzzz: salvare r(19+#X) coppia in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512
-`save_reg`|        110100xx\|xxzzzzzz: salvare r(19+#X) reg in [sp + #Z * 8], offset < = 504
-`save_reg_x`|        x 1101010\|xxxzzzzz: salvare r(19+#X) reg in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -256
-`save_lrpair`|         x 1101011\|xxzzzzzz: salvare coppia \<r19 + 2 *#x10, lr > in [sp + #Z*8], offset < = 504
-`save_fregp`|        x 1101100\|xxzzzzzz: salvare d(8+#X) coppia in [sp + #Z * 8], offset < = 504
-`save_fregp_x`|        x 1101101\|xxzzzzzz: salvare d(8+#X) coppia, in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512
-`save_freg`|        x 1101110\|xxzzzzzz: salvare d(8+#X) reg in [sp + #Z * 8], offset < = 504
-`save_freg_x`|        11011110\|xxxzzzzz: salvare d(8+#X) reg in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -256
-`alloc_l`|         11100000\|xxxxxxxx\|xxxxxxxx\|xxxxxxxx: allocazione dello stack di grandi dimensioni con dimensioni < 256M (2 ^ 24 * 16)
-`set_fp`|        11100001: configurare r29: con: r29 mov, sp
-`add_fp`|        11100010\|xxxxxxxx: configurare r29 con: aggiungere r29, sp, #x10 * 8
-`nop`|            11100011: nessuna rimozione operazione è necessaria.
-`end`|            11100100: fine del codice di rimozione. Implica ret nell'epilogo.
-`end_c`|        11100101: fine del codice di rimozione nell'ambito corrente concatenata.
-`save_next`|        11100110: salvare successivo Int non volatile o FP registrare coppia.
-`arithmetic(add)`|    11100111\| 000zxxxx: aggiungere reg(z) cookie a lr (0 = x28, 1 = sp); aggiungere lr, lr, reg(z)
-`arithmetic(sub)`|    11100111\| 001zxxxx: sub reg(z) cookie da lr (0 = x28, 1 = sp); sub lr, lr, reg(z)
-`arithmetic(eor)`|    11100111\| 010zxxxx: eor lr con cookie reg(z) (0 = x28, 1 = sp); eor lr, lr, reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx: rol simulato di lr con cookie reg (x28); xip0 = neg x28; ror lr, xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx: ror lr con cookie reg(z) (0 = x28, 1 = sp); ror lr, lr, reg(z)
-||            11100111: xxxz---:---riservato
-||              11101xxx: riservato per casi di stack personalizzata riportati di seguito vengono generati solo per le routine di asm
-||              11101001: personalizzato stack per MSFT_OP_TRAP_FRAME
-||              11101010: personalizzato stack per MSFT_OP_MACHINE_FRAME
-||              11101011: personalizzato stack per MSFT_OP_CONTEXT
-||              1111xxxx: riservato
+|`alloc_s`|000xxxxx: allocazione dello stack di piccole dimensioni con dimensioni \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz: salvare \<r19, r20 > coppia in [sp-#Z * 8]!, offset pre-indicizzate > =-248 |
+|`save_fplr`|        01zzzzzz: salvare \<r29, lr > associa in [sp + #Z * 8], offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: salvare \<r29, lr > associa in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512 |
+|`alloc_m`|        11000xxx'xxxxxxxx: allocazione dello stack di grandi dimensioni con dimensioni \< 16 KB (2 ^ 11 * 16). |
+|`save_regp`|        110010xx'xxzzzzzz: salvare r(19+#X) coppia in [sp + #Z * 8], offset \<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: salvare r(19+#X) coppia in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512 |
+|`save_reg`|        110100xx'xxzzzzzz: salvare r(19+#X) reg in [sp + #Z * 8], offset \<= 504 |
+|`save_reg_x`|        x 1101010'xxxzzzzz: salvare r(19+#X) reg in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -256 |
+|`save_lrpair`|         x 1101011'xxzzzzzz: salvare coppia \<r19 + 2 *#x10, lr > in [sp + #Z*8], offset \<= 504 |
+|`save_fregp`|        x 1101100'xxzzzzzz: salvare d(8+#X) coppia in [sp + #Z * 8], offset \<= 504 |
+|`save_fregp_x`|        x 1101101'xxzzzzzz: salvare d(8+#X) coppia, in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512 |
+|`save_freg`|        x 1101110'xxzzzzzz: salvare d(8+#X) reg in [sp + #Z * 8], offset \<= 504 |
+|`save_freg_x`|        11011110' xxxzzzzz: salvare d(8+#X) reg in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -256 |
+|`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx: allocazione dello stack di grandi dimensioni con dimensioni \< 256M (2 ^ 24 * 16) |
+|`set_fp`|        11100001: configurare r29: con: r29 mov, sp |
+|`add_fp`|        11100010' xxxxxxxx: configurare r29 con: aggiungere r29, sp, #x10 * 8 |
+|`nop`|            11100011: nessuna rimozione operazione è necessaria. |
+|`end`|            11100100: fine del codice di rimozione. Implica ret nell'epilogo. |
+|`end_c`|        11100101: fine del codice di rimozione nell'ambito corrente concatenata. |
+|`save_next`|        11100110: salvare successivo Int non volatile o FP registrare coppia. |
+|`arithmetic(add)`|    11100111' 000zxxxx: aggiungere reg(z) cookie a lr (0 = x28, 1 = sp); aggiungere lr, lr, reg(z) |
+|`arithmetic(sub)`|    11100111' 001zxxxx: sub reg(z) cookie da lr (0 = x28, 1 = sp); Sub lr, lr, reg(z) |
+|`arithmetic(eor)`|    11100111' 010zxxxx: eor lr con cookie reg(z) (0 = x28, 1 = sp); EOR lr, lr, reg(z) |
+|`arithmetic(rol)`|    11100111' 0110xxxx: rol simulato di lr con cookie reg (x28); xip0 = neg x28; ROR lr, xip0 |
+|`arithmetic(ror)`|    11100111' 100zxxxx: ror lr con cookie reg(z) (0 = x28, 1 = sp); ROR lr, lr, reg(z) |
+| |            11100111: xxxz---:---riservato |
+| |              11101xxx: riservato per casi di stack personalizzata riportati di seguito vengono generati solo per le routine di asm |
+| |              11101001: personalizzato stack per MSFT_OP_TRAP_FRAME |
+| |              11101010: personalizzato stack per MSFT_OP_MACHINE_FRAME |
+| |              11101011: personalizzato stack per MSFT_OP_CONTEXT |
+| |              1111xxxx: riservato |
 
 Nelle istruzioni con valori di grandi dimensioni che coprono più byte, i bit più significativi vengono archiviati prima di tutto. I codici di rimozione sopra sono progettati in modo che cercando semplicemente il primo byte del codice, è possibile conoscere le dimensioni totali in byte del codice di rimozione. Dato che ogni codice di rimozione è mappato esattamente a un'istruzione di prologo/epilogo, per calcolare la dimensione del prologo o epilogo, deve essere eseguita è sufficiente scorrere dall'inizio della sequenza alla fine, usando una tabella di ricerca o un dispositivo simile per determinare quanto tempo il cor opcode risponde è.
 
@@ -382,7 +382,7 @@ Passaggio &|Valori di flag|n. di istruzioni|Codice operativo|Codice di rimozione
 5D|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5E|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*: Se **CR** = = 01 e **RegI** è un numero dispari, il passaggio 2 e ultimo save_rep nel passaggio 1 viene unito in uno save_regp.
+\* Se **CR** = = 01 e **RegI** è un numero dispari, il passaggio 2 e ultimo save_rep nel passaggio 1 viene unito in uno save_regp.
 
 \*\* Se **RegI** == **CR** = = 0, e **RegF** ! = 0, il primo stp per la virgola mobile non di decremento prefisso.
 

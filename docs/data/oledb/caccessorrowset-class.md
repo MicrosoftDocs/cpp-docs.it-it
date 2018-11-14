@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 78e7bac10bb496e2ff1c270916fc732dbe71d8db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f870cf6c079786c49846bcf7c3010998ccdbe00
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573165"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556481"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -71,7 +71,7 @@ Una classe di set di righe.
 |[CAccessorRowset](#caccessorrowset)|Costruttore.|
 |[Chiudi](#close)|Chiude il set di righe e le funzioni di accesso.|
 |[FreeRecordMemory](#freerecordmemory)|Libera tutte le colonne nel record corrente che devono essere liberate.|
-|[GetColumnInfo](#getcolumninfo)|Implements [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704).|
+|[GetColumnInfo](#getcolumninfo)|Implements [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)).|
 
 ## <a name="remarks"></a>Note
 
@@ -142,7 +142,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -152,7 +152,7 @@ Un valore HRESULT standard.
 
 L'utente deve liberare il buffer di stringa e le informazioni di colonna restituita. Utilizzare la seconda versione di questo metodo quando si usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ed è necessario eseguire l'override delle associazioni.
 
-Per altre informazioni, vedere [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) nel *riferimento per programmatori OLE DB*.
+Per altre informazioni, vedere [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ## <a name="see-also"></a>Vedere anche
 

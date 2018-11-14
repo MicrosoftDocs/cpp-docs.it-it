@@ -8,12 +8,12 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499567"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524131"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 
@@ -84,13 +84,13 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
       **Altro:** nelle **timeout della connessione**, specificare il numero di secondi di tempo di inattività consentiti prima che si verifica un timeout. Nelle **le autorizzazioni di accesso**, specificare le autorizzazioni di accesso per la connessione dati.
 
-       Per altre informazioni sulle proprietà di inizializzazione avanzata, vedere la documentazione fornita con ogni provider OLE DB specifico.
+      Per altre informazioni sulle proprietà di inizializzazione avanzata, vedere la documentazione fornita con ogni provider OLE DB specifico.
 
    - **Tutti i** scheda
 
       Questa scheda Visualizza un riepilogo delle proprietà di inizializzazione per l'origine dati e la connessione specificata. È possibile modificare questi valori.
 
-   Fare clic su **OK** alla fine. Il **Seleziona oggetto di Database** verrà visualizzata la finestra di dialogo. Da questa finestra di dialogo, selezionare la tabella, vista o stored procedure che verranno utilizzate dal consumer.
+      Fare clic su **OK** alla fine. Il **Seleziona oggetto di Database** verrà visualizzata la finestra di dialogo. Da questa finestra di dialogo, selezionare la tabella, vista o stored procedure che verranno utilizzate dal consumer.
 
 - **Classe**
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - memory header
 ms.assetid: ef8e38da-7c9d-4037-9ad1-20c99febf5dc
-ms.openlocfilehash: def0b5560abe3ad6d1a0777e2878d9a3030c44ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c63421995fdabc94a7e6495df8d9937049dbba9d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538450"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521935"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -23,7 +23,6 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ```cpp
 #include <memory>
-
 ```
 
 ## <a name="members"></a>Membri

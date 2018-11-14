@@ -4,12 +4,12 @@ title: Documentazione di Visual C++
 description: Informazioni su come usare C++ per lo sviluppo di applicazioni, servizi e strumenti per piattaforme e dispositivi.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b4e660af273fac320fcebed19c135d8e37d1a50f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b5629adf14e1ba5caad4157a28db65b4198b904
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677864"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328292"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -377,7 +377,7 @@ ms.locfileid: "50677864"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Estensioni componente</h3>
-                                                    <p>Estensioni componente per C++: C++/CLI per la programmazione .NET e C++/CX per la programmazione UWP.</p>
+                                                    <p>Estensioni componente per C++: C++/CLI per la programmazione .NET e C++/CX per la programmazione della piattaforma UWP.</p>
                                                 </div>
                                             </div>
                                         </div>

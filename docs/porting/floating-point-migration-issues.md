@@ -2,12 +2,12 @@
 title: Problemi relativi alla migrazione dei valori a virgola mobile
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: ea34f1eb8e8bd528273da5d7d18cd545cd22de37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530871"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332348"
 ---
 # <a name="floating-point-migration-issues"></a>Problemi relativi alla migrazione dei valori a virgola mobile
 
@@ -17,7 +17,7 @@ A volte durante l'aggiornamento dei progetti a una versione più recente di Visu
 
 La maggior parte delle funzioni matematiche di CRT sono state disponibili in Visual Studio per anni, ma a partire da Visual Studio 2013, tutte le funzioni richieste da ISO C99 sono incluse. L'implementazione di queste funzioni consente di bilanciare prestazioni e correttezza. Dato che generare un risultato con il corretto arrotondamento in ogni caso può avere costi proibitivi, queste funzioni sono progettate per ottenere in modo efficiente un'approssimazione molto vicina al risultato arrotondato correttamente. Nella maggior parte dei casi il risultato prodotto è compreso entro +/-1 unità di minore precisione, o *ulp*, rispetto al risultato arrotondato correttamente, sebbene in alcuni casi possa esistere un'imprecisione maggiore. Se si usa una libreria matematica diversa per ottenere queste funzioni prima, le differenze di implementazione possono causare la modifica dei risultati.
 
-Quando le funzioni matematiche sono state spostate nella libreria Universal CRT in Visual Studio 2015, sono stati usati alcuni nuovi algoritmi e sono stati corretti alcuni bug nell'implementazione delle funzioni introdotte in Visual Studio 2013. Le modifiche possono comportare differenze rilevabili nei risultati dei calcoli a virgola mobile che usano queste funzioni. Le funzioni con problemi di bug erano erf, exp2, remainder, remquo, scalbln, scalbn e le relative varianti float e long double.  Altre modifiche in Visual Studio 2015 hanno risolto i problemi relativi alla conservazione della parola di stato a virgola mobile e delle informazioni sullo stato di eccezione nelle funzioni _clear87, _clearfp, fegetenv, fesetenv e feholdexcept.
+Quando le funzioni matematiche sono state spostate nella libreria Universal CRT in Visual Studio 2015, sono stati usati alcuni nuovi algoritmi e sono stati corretti alcuni bug nell'implementazione delle funzioni introdotte in Visual Studio 2013. Le modifiche possono comportare differenze rilevabili nei risultati dei calcoli a virgola mobile che usano queste funzioni. Le funzioni con problemi di bug erano erf, exp2, remainder, remquo, scalbln, scalbn e le relative varianti float e long double.  Altre modifiche in Visual Studio 2015 hanno risolto i problemi relativi alla conservazione della parola di stato a virgola mobile e delle informazioni sullo stato di eccezione nelle funzioni _clear87, _clearfp, fegetenv, fesetenv e feholdexcept.
 
 ## <a name="processor-differences-and-compiler-flags"></a>Differenze del processore e flag del compilatore
 

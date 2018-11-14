@@ -1,6 +1,6 @@
 ---
 title: time, _time32, _time64
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 apiname:
 - time
 - _time64
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546577"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329150"
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 
@@ -70,8 +70,8 @@ Il **ora** funzione restituisce il numero di secondi trascorsi dalla mezzanotte 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
-|-------------|---------------------|
-|**tempo**, **_time32**, **_time64**|\<time.h>|\<CTime > o \<Time. h >|
+|-------|------|---------------------|
+|**tempo**,  **\_time32**,  **\_time64**|\<time.h>|\<CTime > o \<Time. h >|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

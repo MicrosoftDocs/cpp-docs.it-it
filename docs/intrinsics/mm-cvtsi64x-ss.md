@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 5fe798fdb6315be17653d85e438abf2308c1e8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b8d0e1a19441cd671143843ae4ac6e89bfeae50
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569377"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328942"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 
@@ -23,9 +23,9 @@ Genera l'errore x64 estesi versione dell'intero convertire 64 Bit di valore a vi
 ## <a name="syntax"></a>Sintassi
 
 ```
-__m128 _mm_cvtsi64x_ss( 
-   __m128 a, 
-   __int64 b 
+__m128 _mm_cvtsi64x_ss(
+   __m128 a,
+   __int64 b
 );
 ```
 

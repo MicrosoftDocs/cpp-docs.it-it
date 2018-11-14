@@ -8,12 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630425"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331217"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallelismo delle attività (runtime di concorrenza)
 
@@ -22,8 +22,7 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
 Usare le attività quando si scrive codice asincrono e si vuole che alcune operazioni si verifichino al completamento dell'operazione asincrona. Ad esempio, è possibile utilizzare un'attività di lettura asincrona da un file e quindi usare un'altra attività, ovvero un *attività di continuazione*, descritta più avanti in questo documento, ovvero per elaborare i dati dopo il rilascio. È possibile, invece, usare i gruppi di attività per scomporre il lavoro parallelo in sezioni più piccole. Si supponga, ad esempio, di avere un algoritmo ricorsivo che divide il lavoro rimanente in due partizioni. È possibile usare i gruppi di attività per eseguire queste partizioni contemporaneamente e quindi attendere che il lavoro diviso venga completato
 
 > [!TIP]
-
->  Quando si desidera applicare la stessa routine a ogni elemento di una raccolta in parallelo, usare un algoritmo parallelo, come [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for), invece di un'attività o un gruppo di attività. Per altre informazioni sugli algoritmi paralleli, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
+> Quando si desidera applicare la stessa routine a ogni elemento di una raccolta in parallelo, usare un algoritmo parallelo, come [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for), invece di un'attività o un gruppo di attività. Per altre informazioni sugli algoritmi paralleli, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="key-points"></a>Punti chiave
 
@@ -205,7 +204,6 @@ Prendere in considerazione un'app UWP che usa C++ e XAML e scrive un set di file
 1. In MainPage.xaml.cpp, implementare `WriteFilesAsync` come mostrato nell'esempio.
 
 > [!TIP]
-
 > `when_all` è una funzione non bloccante che produce `task` come risultato. A differenza [Task:: Wait](reference/task-class.md#wait), è opportuno chiamare questa funzione in un'app UWP nel thread ASTA (Application STA).
 
 ###  <a name="when-any"></a> La funzione when_any
@@ -229,14 +227,14 @@ Come con `when_all`, viene di solito usata una continuazione con `when_any` per 
 In questo esempio, è inoltre possibile specificare `task<pair<int, size_t>>` per produrre una continuazione basata sull'attività.
 
 > [!NOTE]
->  Come con `when_all`, le attività passate a `when_any` devono restituire tutte lo stesso tipo.
+> Come con `when_all`, le attività passate a `when_any` devono restituire tutte lo stesso tipo.
 
 È inoltre possibile usare la sintassi `||` per creare un'attività che venga completata dopo il completamento della prima attività di un set di attività, come illustrato nell'esempio seguente.
 
 `auto t = t1 || t2; // same as when_any`
 
 > [!TIP]
->  Come per gli `when_all`, `when_any` è bloccante ed è sicuro chiamare in un'app UWP nel thread ASTA.
+> Come per gli `when_all`, `when_any` è bloccante ed è sicuro chiamare in un'app UWP nel thread ASTA.
 
 ##  <a name="delayed-tasks"></a> Esecuzione posticipata di attività
 
@@ -257,8 +255,7 @@ La libreria PPL Usa la [Concurrency:: task_group](reference/task-group-class.md)
 La libreria PPL divide i gruppi di attività in queste due categorie: *gruppi di attività non strutturate* e *gruppi di attività strutturate*. La libreria PPL usa la classe `task_group` per rappresentare i gruppi di attività non strutturate e la classe `structured_task_group` per rappresentare i gruppi di attività strutturate.
 
 > [!IMPORTANT]
-
->  La libreria PPL definisce inoltre le [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo, che usa il `structured_task_group` classe per eseguire un set di attività in parallelo. Poiché l'algoritmo `parallel_invoke` presenta una sintassi più concisa, è consigliabile usarlo in alternativa alla classe `structured_task_group` quando è possibile. L'argomento [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md) descrive `parallel_invoke` in maggiore dettaglio.
+> La libreria PPL definisce inoltre le [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo, che usa il `structured_task_group` classe per eseguire un set di attività in parallelo. Poiché l'algoritmo `parallel_invoke` presenta una sintassi più concisa, è consigliabile usarlo in alternativa alla classe `structured_task_group` quando è possibile. L'argomento [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md) descrive `parallel_invoke` in maggiore dettaglio.
 
 Usare `parallel_invoke` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ed è necessario attendere il completamento di tutte le attività prima di continuare. Questa tecnica è spesso detta *fork e join* parallelismo. Usare `task_group` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ma è possibile attendere il completamento delle attività in un secondo momento. È possibile, ad esempio, aggiungere attività a un oggetto `task_group` e attendere il completamento delle attività in un'altra funzione o da parte di un altro thread.
 

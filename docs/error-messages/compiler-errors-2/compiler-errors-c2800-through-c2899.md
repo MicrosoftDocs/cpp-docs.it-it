@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601109"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332075"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Errori del compilatore da C2800 a C2899
 
@@ -74,7 +74,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2812](compiler-error-c2812.md)|#import non è supportato con /clr: pure e /CLR: safe|
 |[Errore del compilatore C2813](compiler-error-c2813.md)|#import non supportato con /MP|
 |[Errore del compilatore C2814](compiler-error-c2814.md)|«*membro*': un tipo nativo non può essere annidato all'interno di un tipo gestito o WinRT '*classe*»|
-|[Errore del compilatore C2815](compiler-error-c2815.md)|'operator delete': il primo parametro formale deve essere ' void *', ma '* tipo *' è stato usato|
+|[Errore del compilatore C2815](compiler-error-c2815.md)|'operator delete': il primo parametro formale deve essere ' void \*', ma '*tipo*' è stato usato|
 |C2816 errore del compilatore|Obsoleta.|
 |[Errore del compilatore C2817](compiler-error-c2817.md)|tipo restituito per 'operator delete' deve essere 'void'|
 |[Errore del compilatore C2818](compiler-error-c2818.md)|applicazione di 'operator ->' di overload è ricorsiva tramite il tipo '*classe*'|
@@ -83,7 +83,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2821](compiler-error-c2821.md)|il primo parametro formale 'operator new' deve essere 'size_t'|
 |C2822 errore del compilatore|rimozione locale non è supportata in questa piattaforma|
 |[Errore del compilatore C2823](compiler-error-c2823.md)|un modello o generico typedef non è valido|
-|[Errore del compilatore C2824](compiler-error-c2824.md)|tipo restituito per 'operator new' deve essere ' void *'|
+|[Errore del compilatore C2824](compiler-error-c2824.md)|tipo restituito per 'operator new' deve essere ' void \*'|
 |[Errore del compilatore C2825](compiler-error-c2825.md)|«*identificatore*': deve essere una classe o dello spazio dei nomi quando seguito da '::»|
 |Errore del compilatore C2826|Obsoleta.|
 |[Errore del compilatore C2827](compiler-error-c2827.md)|' operator *operatore*' non può essere sottoposto a override a livello globale con forma unaria|

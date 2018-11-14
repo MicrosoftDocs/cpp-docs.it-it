@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511124"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328000"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 
@@ -66,9 +66,9 @@ Ognuna di queste funzioni restituisce 0 se la directory viene eliminata corretta
 
 |Valore errno|Condizione|
 |-|-|
-**ENOTEMPTY**|Il percorso specificato non è una directory, la directory non è vuota o la directory è la directory di lavoro corrente o la directory radice.
-**ENOENT**|Il percorso non è valido.
-**EACCES**|Un programma ha un handle aperto per la directory.
+| **ENOTEMPTY** | Il percorso specificato non è una directory, la directory non è vuota o la directory è la directory di lavoro corrente o la directory radice. |
+| **ENOENT** | Il percorso non è valido. |
+| **EACCES** | Un programma ha un handle aperto per la directory. |
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

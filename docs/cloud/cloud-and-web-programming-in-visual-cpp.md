@@ -2,12 +2,12 @@
 title: Programmazione Web e cloud in Visual C++
 ms.date: 11/04/2016
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 310b6631167b36ee842c1f52c0c853746f7c3644
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 197d3d344d4be809c81f52f30e2462d35ebefbbe
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486749"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519633"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programmazione Web e cloud in Visual C++
 
@@ -17,11 +17,11 @@ In C++, esistono diverse opzioni per la connessione al Web e al cloud.
 
 - [Servizi mobili di Windows Azure](http://www.windowsazure.com/develop/mobile/)
 
-   Fornisce API native che è possibile usare nelle App Universal Windows Platform (UWP) o App desktop di Windows per connettersi a servizi mobili di Azure. Benché la maggior parte degli esempi nel sito Web sia in C#, è possibile usare anche C++. Per altre informazioni, vedere [Guida introduttiva: Aggiunta di un servizio mobile con C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
+  Fornisce API native che è possibile usare nelle App Universal Windows Platform (UWP) o App desktop di Windows per connettersi a servizi mobili di Azure. Benché la maggior parte degli esempi nel sito Web sia in C#, è possibile usare anche C++. Per altre informazioni, vedere [Guida introduttiva: Aggiunta di un servizio mobile con C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
 
 - [Libreria Client di archiviazione di Microsoft Azure per C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
-   La libreria Client di archiviazione di Azure per C++ offre un'API completa per l'uso di archiviazione di Azure, tra cui esemplificativo per effettuare le seguenti operazioni:
+  La libreria Client di archiviazione di Azure per C++ offre un'API completa per l'uso di archiviazione di Azure, tra cui esemplificativo per effettuare le seguenti operazioni:
 
   - Creare, leggere, eliminare ed elencare i contenitori blob, tabelle e code.
   - Creazione, lettura, eliminazione, elenco e copia BLOB più leggere e scrivere gli intervalli di blob.
@@ -31,30 +31,30 @@ In C++, esistono diverse opzioni per la connessione al Web e al cloud.
 
 - [API di OneDrive](https://dev.onedrive.com/README.htm)
 
-   L'API di OneDrive fornisce un set di servizi HTTP per connettere l'applicazione ai file e cartelle in Office 365 e SharePoint Server 2016.
+  L'API di OneDrive fornisce un set di servizi HTTP per connettere l'applicazione ai file e cartelle in Office 365 e SharePoint Server 2016.
 
 - [C++ REST SDK (nome in codice "Casablanca")](https://github.com/Microsoft/cpprestsdk)
 
-   Fornisce un'API moderna, multipiattaforma e asincrona per l'interazione con i servizi REST.
+  Fornisce un'API moderna, multipiattaforma e asincrona per l'interazione con i servizi REST.
 
   - Eseguire chiamate REST in qualsiasi server HTTP, con supporto incorporato per la serializzazione e analisi di documenti JSON
   - Supporta OAuth 1 e 2, che include un listener locale di reindirizzamento
   - Effettuare connessioni WebSocket rispetto ai servizi remoti
   - Un'attività completamente asincrona API basata su libreria PPL, tra cui un pool di thread predefinito
 
-   Supporta Windows Desktop (7 +), Windows Server (2012 e versioni successive), Universal Windows Platform, Linux, OSX, Android e iOS.
+  Supporta Windows Desktop (7 +), Windows Server (2012 e versioni successive), Universal Windows Platform, Linux, OSX, Android e iOS.
 
 - [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
-   Classe client HTTP di Windows Runtime modellata sulla classe .NET Framework con lo stesso nome nello spazio dei nomi System.Web. `HttpClient` supporta completamente il caricamento e il download asincrono su HTTP e i filtri pipeline, che permettono l'inserimento di gestori HTTP personalizzati nella pipeline. Windows SDK include filtri di esempio per reti a consumo, autenticazione OAuth e altro ancora. Per le app destinate solo a Universal Windows Platform, è consigliabile usare il `Windows::Web:HttpClient` classe.
+  Classe client HTTP di Windows Runtime modellata sulla classe .NET Framework con lo stesso nome nello spazio dei nomi System.Web. `HttpClient` supporta completamente il caricamento e il download asincrono su HTTP e i filtri pipeline, che permettono l'inserimento di gestori HTTP personalizzati nella pipeline. Windows SDK include filtri di esempio per reti a consumo, autenticazione OAuth e altro ancora. Per le app destinate solo a Universal Windows Platform, è consigliabile usare il `Windows::Web:HttpClient` classe.
 
-- [Interfaccia IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
+- [Interfaccia IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-   Fornisce un'interfaccia COM nativa che è possibile usare in app di Windows Runtime o App desktop di Windows per connettersi a Internet tramite HTTP e generare un'operazione GET, PUT e altri comandi HTTP. Per altre informazioni, vedere [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
+  Fornisce un'interfaccia COM nativa che è possibile usare in app di Windows Runtime o App desktop di Windows per connettersi a Internet tramite HTTP e generare un'operazione GET, PUT e altri comandi HTTP. Per altre informazioni, vedere [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
 - [Internet di Windows (WinInet)](/windows/desktop/WinInet/portal)
 
-   API Windows che è possibile usare in app desktop di Windows per connettersi a Internet.
+  API Windows che è possibile usare in app desktop di Windows per connettersi a Internet.
 
 ## <a name="see-also"></a>Vedere anche
 

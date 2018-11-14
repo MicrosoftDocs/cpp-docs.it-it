@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 63d933798a3ecffd20ed7189649f7b1556c9de15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb5d35782e70924605fd344e2c330e18d611f44c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519275"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519207"
 ---
 # <a name="run-time-object-model-services"></a>Servizi modelli a oggetti runtime
 
@@ -348,7 +348,6 @@ Entrambi questa macro o [IMPLEMENT_OLECREATE](#implement_olecreate) deve essere 
 ```
 IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
-
 ```
 
 ### <a name="parameters"></a>Parametri

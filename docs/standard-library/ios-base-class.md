@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648669"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333358"
 ---
 # <a name="iosbase-class"></a>Classe ios_base
 
@@ -914,7 +914,7 @@ I flag di formato precedente
 
 ### <a name="remarks"></a>Note
 
-La prima funzione membro chiama in modo efficace [flags](#flags)(_ *maschera* &#124; \_ *flag*) (set di bit selezionato) e quindi restituisce i flag di formato precedente. La seconda funzione membro chiama in modo efficace **flag**(\_ *maschera* **& fmtfl, flag & ~**`_Mask`) (Sostituisci bit selezionato in un filtro) e quindi restituisce i flag di formato precedente.
+La prima funzione membro chiama in modo efficace [flags](#flags)(  *\_maschera* &#124;  *\_flag*) (set di bit selezionato) e quindi restituisce il flag di formato precedente. La seconda funzione membro chiama `flags(_Mask & fmtfl, flags & ~_Mask)` (Sostituisci selezionato bit nella maschera) e quindi restituisce i flag di formato precedente.
 
 ### <a name="example"></a>Esempio
 

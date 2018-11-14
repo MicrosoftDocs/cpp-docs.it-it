@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642910"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525307"
 ---
 # <a name="styles-used-by-mfc"></a>Stili utilizzati da MFC
 
@@ -338,7 +338,7 @@ Applicare gli stili di casella di riepilogo per [classe CListBox](../../mfc/refe
 |LBS_HASSTRINGS|Specifica una casella di riepilogo di disegno contenente elementi formati da stringhe. La casella di riepilogo gestisce la memoria e i puntatori per le stringhe in modo che l'applicazione può usare il `GetText` funzione membro per recuperare il testo per un particolare elemento.|
 |LBS_MULTICOLUMN|Specifica una casella di riepilogo a più colonne che è necessario scorrere orizzontalmente. Il `SetColumnWidth` funzione membro imposta la larghezza delle colonne.|
 |LBS_MULTIPLESEL|Selezione di stringa viene attivata ogni volta che l'utente fa clic o doppio clic la stringa. È possibile selezionare qualsiasi numero di stringhe.|
-|LBS_NODATA|Specifica una casella di riepilogo senza dati. Specificare questo stile di visualizzazione quando il numero di elementi nella casella di riepilogo supererebbe mille. Una casella di riepilogo senza dati deve avere anche lo stile LBS_OWNERDRAWFIXED, ma non deve avere il LBS_SORT o LBS_HASSTRINGS lo stile. <br /></br / > ad eccezione del fatto che non contiene alcun dato di stringa o bitmap per un elemento una casella di riepilogo senza dati simile a una casella di riepilogo creato dal proprietario. Comandi per aggiungere, inserire o eliminare un elemento Ignora sempre qualsiasi elemento dati. le richieste per trovare una stringa all'interno della casella di elenco sempre esito negativo. Il sistema invia il messaggio WM_DRAWITEM alla finestra proprietaria quando è necessario disegnare un elemento. Il membro di itemID del `DRAWITEMSTRUCT` struttura passato con il messaggio WM_DRAWITEM specifica il numero di riga dell'elemento da disegnare. Una casella di riepilogo senza dati non invia un messaggio WM_DELETEITEM.|
+|LBS_NODATA|Specifica una casella di riepilogo senza dati. Specificare questo stile di visualizzazione quando il numero di elementi nella casella di riepilogo supererebbe mille. Una casella di riepilogo senza dati deve avere anche lo stile LBS_OWNERDRAWFIXED, ma non deve avere il LBS_SORT o LBS_HASSTRINGS lo stile.<br/><br/> Una casella di riepilogo senza dati è simile a una casella di riepilogo creato dal proprietario, ad eccezione del fatto che non contiene alcun dato di stringa o bitmap per un elemento. Comandi per aggiungere, inserire o eliminare un elemento Ignora sempre qualsiasi elemento dati. le richieste per trovare una stringa all'interno della casella di elenco sempre esito negativo. Il sistema invia il messaggio WM_DRAWITEM alla finestra proprietaria quando è necessario disegnare un elemento. Il membro di itemID del `DRAWITEMSTRUCT` struttura passato con il messaggio WM_DRAWITEM specifica il numero di riga dell'elemento da disegnare. Una casella di riepilogo senza dati non invia un messaggio WM_DELETEITEM.|
 |LBS_NOINTEGRALHEIGHT|La dimensione della casella di riepilogo è esattamente quella specificata dall'applicazione quando creata la casella di riepilogo. In genere, Windows ridimensiona una casella di riepilogo in modo che la casella di riepilogo non visualizza elementi parziali.|
 |LBS_NOREDRAW|Visualizzazione elenco non viene aggiornato quando vengono apportate modifiche. Questo stile può essere modificato in qualsiasi momento mediante l'invio di un messaggio WM_SETREDRAW.|
 |LBS_NOSEL|Specifica che la casella di riepilogo contiene gli elementi che possono essere visualizzati ma non è selezionati.|
@@ -350,7 +350,7 @@ Applicare gli stili di casella di riepilogo per [classe CListBox](../../mfc/refe
 |LBS_USETABSTOPS|Consente a una casella di riepilogo riconoscere ed espandere i caratteri di tabulazione quando crea le proprie stringhe. Le posizioni di scheda predefinita sono 32 DLU. (Una DLU rappresenta la distanza orizzontale o verticale. Una DLU orizzontali è uguale a un quarto di unità di base larghezza della finestra corrente. Le unità di base di finestra di dialogo vengano calcolate in base l'altezza e la larghezza del tipo di carattere del sistema corrente. Il `GetDialogBaseUnits` Windows funzione restituisce la finestra di dialogo corrente le unità di base in pixel.) Questo stile non deve essere utilizzato con LBS_OWNERDRAWFIXED.|
 |LBS_WANTKEYBOARDINPUT|Il proprietario della casella di riepilogo riceve WM_VKEYTOITEM o WM_CHARTOITEM messaggi ogni volta che l'utente preme un tasto mentre la casella di riepilogo ha lo stato attivo. In questo modo un'applicazione di eseguire un'elaborazione speciale della tastiera di input.|
 
-##<a name="message-box-styles"></a>  Stili Message-box
+## <a name="message-box-styles"></a>  Stili Message-box
 
 Applicano stili Message-box [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementi. Specificare una combinazione degli stili nel *NLE* parametro di `AfxMessageBox`. Per altre informazioni sugli stili di finestra di messaggio in Windows, vedere [funzione MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).
 
@@ -383,6 +383,7 @@ Gli stili di finestra di messaggio seguenti sono disponibili.
 |MB_ICONINFORMATION|Verrà visualizzata un'icona costituita da una "I" in un cerchio nella finestra di messaggio.|
 |MB_ICONQUESTION|Nella finestra di messaggio viene visualizzata un'icona di punto interrogativo.|
 |MB_ICONSTOP|Nella finestra di messaggio viene visualizzata un'icona di stradale di stop.|
+
 ### <a name="message-box-default-buttons"></a>Pulsanti predefiniti-finestra di messaggio
 
 |Stile|Descrizione|

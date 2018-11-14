@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _HEAPBADPTR constants
 - heap constants
 ms.assetid: 3f751bb9-2dc4-486f-b5f5-9061c96d3754
-ms.openlocfilehash: 4b944b993b99a9e03e6bda6e203150dcf913417f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9419ae53cd04812f45f5feeee73fa0f89c408a0c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523344"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522298"
 ---
 # <a name="heap-constants"></a>Constanti heap
 
@@ -37,7 +37,6 @@ ms.locfileid: "50523344"
 ```
 
 #include <malloc.h>
-
 ```
 
 ## <a name="remarks"></a>Note

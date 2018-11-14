@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 2106f7dda6ecc71478b29cfad3f15dfee0483025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f84e5c1a1455e35992aa4b118c345bc1fa6ae587
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523901"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331620"
 ---
 # <a name="trigraphs"></a>Trigrammi
 
@@ -34,29 +34,29 @@ Nella tabella seguente sono illustrate le nove sequenze di trigramma. Tutte le o
 
 ### <a name="trigraph-sequences"></a>Sequenze di trigramma
 
-|Trigramma|Carattere di punteggiatura.|
-|--------------|---------------------------|
-|??=|#|
-|??(|[|
-|??/|\|
-|??)|]|
-|??'|^|
-|??\<|{|
-|??!|&#124;|
-|??>|}|
-|??-|~|
+| Trigramma | Carattere di punteggiatura. |
+|----------|-----------------------|
+| ??= | # |
+| ??( | \[ |
+| ??/ | \\ |
+| ??) | ] |
+| ??' | ^ |
+| ??\< | { |
+| ??! | &#124; |
+| ??> | } |
+| ??- | ~ |
 
 Un trigramma è sempre considerato come un singolo carattere di origine. La conversione dei trigrammi avviene nella prima [fase di conversione](../preprocessor/phases-of-translation.md), prima del riconoscimento dei caratteri di escape nei valori letterali stringa e nelle costanti carattere. Sono riconosciuti solo i nove trigrammi riportati nella tabella precedente. Tutte le altre sequenze di caratteri non vengono convertite.
 
 La sequenza di caratteri di escape **\\?** impedisce l'errata interpretazione delle sequenze di caratteri simili a un trigramma. Per informazioni sulle sequenze di escape, vedere [Sequenze di escape](../c-language/escape-sequences.md). Ad esempio, se si tenta di stampare la stringa `What??!` con questa istruzione `printf`
 
-```
+```C
 printf( "What??!\n" );
 ```
 
 la stringa stampata sarà `What|` poiché `??!` è una sequenza di trigramma che viene sostituita con il carattere `|`. Scrivere l'istruzione come riportata di seguito per stampare correttamente la stringa:
 
-```
+```C
 printf( "What?\?!\n" );
 ```
 

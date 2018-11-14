@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WINVER in an upgraded Visual C++ project
 - _WIN32_WINNT in an upgraded Visual C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: 919e1656457d13eba3864be44f07f2b4c089b096
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3381b6657f78144e7804112135c437824d8555fe
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502492"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332245"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modifica di WINVER e _WIN32_WINNT
 
@@ -57,4 +57,4 @@ Per altre informazioni sul significato delle macro, vedere [Uso delle intestazio
 
 ## <a name="see-also"></a>Vedere anche
 
-[Cronologia delle modifiche di Visual C++](..\porting\visual-cpp-change-history-2003-2015.md)
+[Cronologia delle modifiche di Visual C++](../porting/visual-cpp-change-history-2003-2015.md)

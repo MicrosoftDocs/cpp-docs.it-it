@@ -2,12 +2,12 @@
 title: '&lt;ctgmath&gt;'
 ms.date: 11/04/2016
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: fca429b451f58fc261bb98c3453c78815f90ceec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64d72bb643e792fe39978d5c2e92e1bcf23cfc4f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439611"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524573"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
@@ -17,7 +17,6 @@ Include le intestazioni della libreria C++ standard \<ccomplex> e \<cmath> che o
 
 ```cpp
 #include <ctgmath>
-
 ```
 
 ## <a name="remarks"></a>Note

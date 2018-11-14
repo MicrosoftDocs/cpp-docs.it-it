@@ -6,12 +6,12 @@ helpviewer_keywords:
 - sample container
 - container headers
 ms.assetid: 4ab3dcf9-49c3-4e49-b5d6-1ec573e2aee4
-ms.openlocfilehash: 95779a6084f8717ced33fe06f32b1525cc5726f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1cd2bc87e9e3e42b78f86ed48a2b38a3a66b4dfb
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457330"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519882"
 ---
 # <a name="ltsample-containergt"></a>&lt;sample container&gt;
 
@@ -25,6 +25,5 @@ Illustra la struttura delle intestazioni del contenitore nella libreria standard
 ```
 
 #include <sample container> // Nonfunctional header
-
 ```
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: b6e7208628ee77df8647eaa46b00e6e22d294879
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdda18243366de059b26fd566b5eecb308cbed14
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529142"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556647"
 ---
 # <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
 
@@ -72,7 +72,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ## <a name="remarks"></a>Note
 
-Usare i consumer OLE DB `DBPROPIDSET` strutture per passare una matrice di ID proprietà per il quale l'utente vuole ottenere informazioni sulle proprietà. Le proprietà identificate in un'unica [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struttura appartengono al set di una proprietà.
+Usare i consumer OLE DB `DBPROPIDSET` strutture per passare una matrice di ID proprietà per il quale l'utente vuole ottenere informazioni sulle proprietà. Le proprietà identificate in un'unica [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) struttura appartengono al set di una proprietà.
 
 ## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
 
@@ -91,7 +91,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
 
-Costruttore. Inizializza la `rgProperties`, `cProperties`e (facoltativamente) `guidPropertySet` campi del [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struttura.
+Costruttore. Inizializza la `rgProperties`, `cProperties`e (facoltativamente) `guidPropertySet` campi del [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) struttura.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -124,7 +124,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-[in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struttura.
+[in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) struttura.
 
 ### <a name="remarks"></a>Note
 

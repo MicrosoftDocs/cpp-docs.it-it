@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: dffd15478f0ae10d42b49be3b202fbd4845abb56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b3c0f239b3c80d0b4d3c8425b03a3612a0e6db2
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544651"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556231"
 ---
 # <a name="iconverttypeimpl-class"></a>Classe IConvertTypeImpl
 
-Fornisce un'implementazione del [IConvertType](/previous-versions/windows/desktop/ms715926) interfaccia.
+Fornisce un'implementazione del [IConvertType](https://docs.microsoft.com/previous-versions/windows/desktop/ms715926(v=vs.85)) interfaccia.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,14 +61,14 @@ Fornisce informazioni sulla disponibilità di conversioni di tipi in un comando 
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-STDMETHOD(CanConvert)(DBTYPE wFromType, 
-   DBTYPE wToType, 
+STDMETHOD(CanConvert)(DBTYPE wFromType,
+   DBTYPE wToType,
    DBCONVERTFLAGS dwConvertFlags);
 ```
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IConvertType::CanConvert](https://docs.microsoft.com/previous-versions/windows/desktop/ms711224(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="remarks"></a>Note
 

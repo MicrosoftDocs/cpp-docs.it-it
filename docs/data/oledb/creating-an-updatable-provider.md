@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 39e0fffa10af560537a932d503946ec2469bef5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570586"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521401"
 ---
 # <a name="creating-an-updatable-provider"></a>Creazione di un provider aggiornabile
 
@@ -40,7 +40,7 @@ Si noti che `IRowsetUpdateImpl` deriva da `IRowsetChangeImpl`. Di conseguenza, `
 
 1. Nella classe del set di righe, ereditare `IRowsetChangeImpl` o `IRowsetUpdateImpl`. Queste classi forniscono interfacce appropriate per modificare l'archivio dati:
 
-     **Aggiunta di IRowsetChange**
+   **Aggiunta di IRowsetChange**
 
    Aggiungere `IRowsetChangeImpl` alla catena di ereditarietà usando questo formato:
 
@@ -50,7 +50,7 @@ Si noti che `IRowsetUpdateImpl` deriva da `IRowsetChangeImpl`. Di conseguenza, `
 
    Aggiungere inoltre `COM_INTERFACE_ENTRY(IRowsetChange)` per il `BEGIN_COM_MAP` sezione nella classe del set di righe.
 
-     **Aggiunta di IRowsetUpdate**
+   **Aggiunta di IRowsetUpdate**
 
    Aggiungere `IRowsetUpdate` alla catena di ereditarietà usando questo formato:
 
@@ -58,22 +58,27 @@ Si noti che `IRowsetUpdateImpl` deriva da `IRowsetChangeImpl`. Di conseguenza, `
     IRowsetUpdateImpl< rowset-name, storage>
     ```
 
-    > [!NOTE]
-    > È necessario rimuovere il `IRowsetChangeImpl` riga dalla catena di ereditarietà. Questa eccezione per la direttiva menzionata in precedenza deve includere il codice per `IRowsetChangeImpl`.
+   > [!NOTE]
+   > È necessario rimuovere il `IRowsetChangeImpl` riga dalla catena di ereditarietà. Questa eccezione per la direttiva menzionata in precedenza deve includere il codice per `IRowsetChangeImpl`.
 
 1. Aggiungere il codice seguente alla mappa COM (`BEGIN_COM_MAP ... END_COM_MAP`):
 
-    |Se si implementa|Aggiungere alla mappa COM|
-    |----------------------|--------------------|
-    |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|
-    |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|
+   |  Se si implementa   |           Aggiungere alla mappa COM             |
+   |---------------------|--------------------------------------|
+   | `IRowsetChangeImpl` | `COM_INTERFACE_ENTRY(IRowsetChange)` |
+   | `IRowsetUpdateImpl` | `COM_INTERFACE_ENTRY(IRowsetUpdate)` |
+
+   | Se si implementa | Aggiungere alla mappa proprietà |
+   |----------------------|-----------------------------|
+   | `IRowsetChangeImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)` |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. Nel comando, aggiungere il codice seguente alla mappa del set di proprietà (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
 
-    |Se si implementa|Aggiungere alla mappa proprietà|
-    |----------------------|-----------------------------|
-    |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|
-    |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|
+   |  Se si implementa   |                                             Aggiungere alla mappa proprietà                                              |
+   |---------------------|------------------------------------------------------------------------------------------------------------------|
+   | `IRowsetChangeImpl` |                            `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`                             |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. Nel mapping dei set di proprietà, è necessario anche includere tutte le impostazioni seguenti riportati di seguito:
 
@@ -97,41 +102,41 @@ Si noti che `IRowsetUpdateImpl` deriva da `IRowsetChangeImpl`. Di conseguenza, `
 
    È possibile trovare i valori usati in queste chiamate della macro esaminando in Atldb. h per l'ID di proprietà e i valori (se Atldb. h è diverso dalla documentazione online, Atldb. h sostituisce la documentazione).
 
-    > [!NOTE]
-    > Numero dei `VARIANT_FALSE` e `VARIANT_TRUE` impostazioni sono necessarie per i modelli OLE DB; indica che la specifica OLE DB possono essere di lettura/scrittura, ma i modelli OLE DB possono supportare solo un valore.
+   > [!NOTE]
+   > Numero dei `VARIANT_FALSE` e `VARIANT_TRUE` impostazioni sono necessarie per i modelli OLE DB; indica che la specifica OLE DB possono essere di lettura/scrittura, ma i modelli OLE DB possono supportare solo un valore.
 
-     **Se si implementa IRowsetChangeImpl**
+   **Se si implementa IRowsetChangeImpl**
 
    Se si implementa `IRowsetChangeImpl`, è necessario impostare le proprietà seguenti per il provider. Queste proprietà vengono utilizzate principalmente per richiedere interfacce tramite `ICommandProperties::SetProperties`.
 
-    - `DBPROP_IRowsetChange`: Verrà impostata automaticamente `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: Verrà impostata automaticamente `DBPROP_IRowsetChange`.
 
-    - `DBPROP_UPDATABILITY`: Una maschera di bit che specifica i metodi supportati in `IRowsetChange`: `SetData`, `DeleteRows`, o `InsertRow`.
+   - `DBPROP_UPDATABILITY`: Una maschera di bit che specifica i metodi supportati in `IRowsetChange`: `SetData`, `DeleteRows`, o `InsertRow`.
 
-    - `DBPROP_CHANGEINSERTEDROWS`: Il consumer può chiamare `IRowsetChange::DeleteRows` o `SetData` per le righe appena inserite.
+   - `DBPROP_CHANGEINSERTEDROWS`: Il consumer può chiamare `IRowsetChange::DeleteRows` o `SetData` per le righe appena inserite.
 
-    - `DBPROP_IMMOBILEROWS`: Set di righe non verranno riordinate righe inserite o aggiornate.
+   - `DBPROP_IMMOBILEROWS`: Set di righe non verranno riordinate righe inserite o aggiornate.
 
-     **Se si implementa IRowsetUpdateImpl**
+   **Se si implementa IRowsetUpdateImpl**
 
    Se si implementa `IRowsetUpdateImpl`, è necessario impostare anche le proprietà seguenti per il provider a tutte le proprietà per `IRowsetChangeImpl` elencate in precedenza:
 
-    - `DBPROP_IRowsetUpdate`.
+   - `DBPROP_IRowsetUpdate`.
 
-    - `DBPROP_OWNINSERT`: Deve essere VARIANT_TRUE e READ_ONLY.
+   - `DBPROP_OWNINSERT`: Deve essere VARIANT_TRUE e READ_ONLY.
 
-    - `DBPROP_OWNUPDATEDELETE`: Deve essere VARIANT_TRUE e READ_ONLY.
+   - `DBPROP_OWNUPDATEDELETE`: Deve essere VARIANT_TRUE e READ_ONLY.
 
-    - `DBPROP_OTHERINSERT`: Deve essere VARIANT_TRUE e READ_ONLY.
+   - `DBPROP_OTHERINSERT`: Deve essere VARIANT_TRUE e READ_ONLY.
 
-    - `DBPROP_OTHERUPDATEDELETE`: Deve essere VARIANT_TRUE e READ_ONLY.
+   - `DBPROP_OTHERUPDATEDELETE`: Deve essere VARIANT_TRUE e READ_ONLY.
 
-    - `DBPROP_REMOVEDELETED`: Deve essere VARIANT_TRUE e READ_ONLY.
+   - `DBPROP_REMOVEDELETED`: Deve essere VARIANT_TRUE e READ_ONLY.
 
-    - `DBPROP_MAXPENDINGROWS`.
+   - `DBPROP_MAXPENDINGROWS`.
 
-        > [!NOTE]
-        > Se si supportano le notifiche, potrebbe essere anche altre proprietà non corretta. vedere la sezione sulla `IRowsetNotifyCP` per questo elenco.
+   > [!NOTE]
+   > Se si supportano le notifiche, potrebbe essere anche altre proprietà non corretta. vedere la sezione sulla `IRowsetNotifyCP` per questo elenco.
 
 ##  <a name="vchowwritingtothedatasource"></a> La scrittura all'origine dati
 

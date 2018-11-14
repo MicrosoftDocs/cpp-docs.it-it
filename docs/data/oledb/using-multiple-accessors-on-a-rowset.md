@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ce150375b98c697c32767001911eade53ed2f8c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483291"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522025"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilizzo di più funzioni di accesso per un rowset
 
@@ -20,19 +20,19 @@ Esistono tre scenari di base in cui è necessario utilizzare più funzioni di ac
 
 - **Più set di righe di lettura/scrittura.** In questo scenario, si dispone di una tabella con una chiave primaria. Si desidera essere in grado di leggere tutte le colonne nella riga, inclusa la chiave primaria. Si vuole anche essere in grado di scrivere dati in tutte le colonne ad eccezione della chiave primaria (perché non è possibile scrivere per la colonna chiave primaria). In questo caso, configurare due funzioni di accesso:
 
-   - Funzione di accesso 0 contiene tutte le colonne.
+  - Funzione di accesso 0 contiene tutte le colonne.
 
-   - Funzione di accesso 1 contiene tutte le colonne ad eccezione della chiave primaria.
+  - Funzione di accesso 1 contiene tutte le colonne ad eccezione della chiave primaria.
 
 - **Prestazioni.** In questo scenario, uno o più colonne hanno una grande quantità di dati, ad esempio, grafica, file audio o video. Ogni volta che si sposta in una riga, probabilmente non si desidera recuperare la colonna con il file di dati di grandi dimensioni, in quanto tale operazione così potrebbe rallentare le prestazioni dell'applicazione.
 
-   È possibile configurare le funzioni di accesso separati in cui la prima funzione di accesso contiene tutte le colonne ad eccezione di quello con grandi quantità di dati e recupera i dati da queste colonne automaticamente. la prima funzione di accesso è la funzione di accesso automatico. La seconda funzione di accesso recupera solo le colonne contenenti i dati di grandi dimensioni, ma non recupera automaticamente i dati da questa colonna. È possibile avere altri metodi di recupero di dati di grandi dimensioni su richiesta o aggiornare.
+  È possibile configurare le funzioni di accesso separati in cui la prima funzione di accesso contiene tutte le colonne ad eccezione di quello con grandi quantità di dati e recupera i dati da queste colonne automaticamente. la prima funzione di accesso è la funzione di accesso automatico. La seconda funzione di accesso recupera solo le colonne contenenti i dati di grandi dimensioni, ma non recupera automaticamente i dati da questa colonna. È possibile avere altri metodi di recupero di dati di grandi dimensioni su richiesta o aggiornare.
 
-   - Funzione di accesso 0 è automatica; Recupera tutte le colonne ad eccezione di quello con dati di grandi dimensioni.
+  - Funzione di accesso 0 è automatica; Recupera tutte le colonne ad eccezione di quello con dati di grandi dimensioni.
 
-   - Funzione di accesso 1 non è una funzione di accesso automatico; Recupera la colonna con dati di grandi dimensioni.
+  - Funzione di accesso 1 non è una funzione di accesso automatico; Recupera la colonna con dati di grandi dimensioni.
 
-   Usare l'argomento automatica per specificare se la funzione di accesso è una funzione di accesso automatico.
+  Usare l'argomento automatica per specificare se la funzione di accesso è una funzione di accesso automatico.
 
 - **Più colonne di ISequentialStream.** In questo scenario, avere più di un'azienda di colonna `ISequentialStream` dei dati. Tuttavia, ogni funzione di accesso è limitato a una `ISequentialStream` flusso di dati. Per risolvere questo problema, configurare le funzioni di accesso diversi, ognuno dei quali dispone uno `ISequentialStream` puntatore.
 

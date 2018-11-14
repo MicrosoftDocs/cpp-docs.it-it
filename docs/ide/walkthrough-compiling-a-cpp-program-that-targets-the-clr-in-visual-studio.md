@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: f3e55799e2ce88ea53ad5d49f6ae0deb9ad50ec9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51e8b234792dea8dd7d61e4ac4b97a55bd5ea4e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506041"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524631"
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Procedura dettagliata: compilazione di un programma C++ destinato a CLR in Visual Studio
 
@@ -35,44 +35,44 @@ Questi argomenti presuppongono la conoscenza delle nozioni di base del linguaggi
 
 1. Digitare un nome di progetto.
 
-    Per impostazione predefinita la soluzione che contiene il progetto ha lo stesso nome del nuovo progetto, ma è possibile immettere un nome diverso. Se si vuole è anche possibile immettere un percorso diverso per il progetto.
+   Per impostazione predefinita la soluzione che contiene il progetto ha lo stesso nome del nuovo progetto, ma è possibile immettere un nome diverso. Se si vuole è anche possibile immettere un percorso diverso per il progetto.
 
-    Fare clic su **OK** per creare il nuovo progetto.
+   Fare clic su **OK** per creare il nuovo progetto.
 
 1. Se **Esplora soluzioni** non è visibile, scegliere **Esplora soluzioni** dal menu **Visualizza**.
 
 1. Aggiungere un nuovo file di origine al progetto:
 
-    - Fare clic con il pulsante destro del mouse sulla cartella **File di origine** in **Esplora soluzioni**, selezionare **Aggiungi** e fare clic su **Nuovo elemento**.
+   - Fare clic con il pulsante destro del mouse sulla cartella **File di origine** in **Esplora soluzioni**, selezionare **Aggiungi** e fare clic su **Nuovo elemento**.
 
-    - Fare clic su **File C++ (.cpp)** e digitare un nome file, quindi fare clic su **Aggiungi**.
+   - Fare clic su **File C++ (.cpp)** e digitare un nome file, quindi fare clic su **Aggiungi**.
 
-    Il file con estensione **cpp** viene visualizzato nella cartella **File di origine** in **Esplora soluzioni** e una finestra a schede consente di digitare il codice da inserire nel file.
+   Il file con estensione **cpp** viene visualizzato nella cartella **File di origine** in **Esplora soluzioni** e una finestra a schede consente di digitare il codice da inserire nel file.
 
 1. Fare clic sulla scheda appena creata in Visual Studio e digitare un programma Visual C++ valido oppure copiare e incollare uno dei programmi di esempio.
 
-    Ad esempio è possibile usare il programma disponibile in [Procedura: Scrivere un file di testo (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) (nel nodo **Gestione di file e I/O** della Guida alla programmazione).
+   Ad esempio è possibile usare il programma disponibile in [Procedura: Scrivere un file di testo (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) (nel nodo **Gestione di file e I/O** della Guida alla programmazione).
 
-    Se si usa il programma di esempio, si noti che viene usata la parola chiave `gcnew` anziché la parola chiave `new` quando si crea un oggetto .NET e che `gcnew` restituisce un handle (`^`) anziché un puntatore (`*`):
+   Se si usa il programma di esempio, si noti che viene usata la parola chiave `gcnew` anziché la parola chiave `new` quando si crea un oggetto .NET e che `gcnew` restituisce un handle (`^`) anziché un puntatore (`*`):
 
-    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
+   `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-    Per altre informazioni sulla nuova sintassi di Visual C++, vedere [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md).
+   Per altre informazioni sulla nuova sintassi di Visual C++, vedere [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md).
 
 1. Scegliere **Compila soluzione** dal menu **Compila**.
 
-    La finestra **Output** visualizza informazioni sullo stato della compilazione, quali la posizione del log di compilazione e un messaggio con lo stato del processo di compilazione.
+   La finestra **Output** visualizza informazioni sullo stato della compilazione, quali la posizione del log di compilazione e un messaggio con lo stato del processo di compilazione.
 
-    Se si apportano modifiche e si esegue il programma senza eseguire la compilazione, è possibile che una finestra di dialogo segnali che il progetto è obsoleto. Se si vuole che Visual Studio usi sempre le versioni correnti dei file anziché richiedere quale versione usare ogni volta che compila l'applicazione, selezionare la casella di controllo in questa finestra di dialogo prima di fare clic su **OK**.
+   Se si apportano modifiche e si esegue il programma senza eseguire la compilazione, è possibile che una finestra di dialogo segnali che il progetto è obsoleto. Se si vuole che Visual Studio usi sempre le versioni correnti dei file anziché richiedere quale versione usare ogni volta che compila l'applicazione, selezionare la casella di controllo in questa finestra di dialogo prima di fare clic su **OK**.
 
 1. Nel menu **Debug** fare clic su **Avvia senza eseguire debug**.
 
 1. Se è stato usato il programma di esempio, quando si esegue il programma una finestra di comando indica che il file di testo è stato creato.
 
-    Il file di testo **textfile.txt** è ora disponibile nella directory del progetto. È possibile aprire il file con il Blocco note.
+   Il file di testo **textfile.txt** è ora disponibile nella directory del progetto. È possibile aprire il file con il Blocco note.
 
-    > [!NOTE]
-    > Se si sceglie il modello di progetto CLR vuoto, viene impostata automaticamente l'opzione del compilatore `/clr`. Per verificare quanto sopra, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e fare clic su **Proprietà**, quindi selezionare l'opzione **Supporto Common Language Runtime** nel nodo **Generale** di **Proprietà di configurazione**.
+   > [!NOTE]
+   > Se si sceglie il modello di progetto CLR vuoto, viene impostata automaticamente l'opzione del compilatore `/clr`. Per verificare quanto sopra, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e fare clic su **Proprietà**, quindi selezionare l'opzione **Supporto Common Language Runtime** nel nodo **Generale** di **Proprietà di configurazione**.
 
 ## <a name="whats-next"></a>Argomenti successivi
 

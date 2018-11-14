@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 97d2e9fd8e64475d9194bb8b2ab12fdee315e176
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677344"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521076"
 ---
 # <a name="concurrency-namespace-enums"></a>enumerazioni dello spazio dei nomi Concurrency
 
@@ -164,6 +164,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|L'utilità di pianificazione non raccogliere le informazioni sullo stato. Il ribilanciamento è eseguito in base esclusivamente a livello di sottoscrizione per il thread di hardware sottostante. Per altre informazioni sui livelli di sottoscrizione, vedere [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Questo valore è riservato per l'utilizzo dal runtime.|
 |`ProgressFeedbackEnabled`|L'utilità di pianificazione consente di raccogliere le informazioni sullo stato e lo passa al gestore di risorse. Il gestore di risorse utilizzerà tali informazioni per ribilanciare le risorse per conto dell'utilità di pianificazione oltre al livello di sottoscrizione del thread di hardware sottostante. Per altre informazioni sui livelli di sottoscrizione, vedere [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|
+
 ##  <a name="join_type"></a>  Enumerazione join_type
 
 Tipo di un blocco della messaggistica `join`.

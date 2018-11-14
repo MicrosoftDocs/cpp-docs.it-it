@@ -106,12 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637281"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331204"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -228,17 +228,17 @@ Il **Stat** struttura, definita in SYS\STAT. H, include i campi seguenti.
 
 |Campo||
 |-|-|
-**st_gid**|Identificatore numerico del gruppo cui appartiene il file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows.
-**st_atime**|Ora dell'ultimo accesso del file. Valido su NTFS, ma non nelle unità disco formattate come FAT.
-**st_ctime**|Ora di creazione del file. Valido su NTFS, ma non nelle unità disco formattate come FAT.
-**st_dev**|Numero unità del disco contenente il file (uguale a **st_rdev**).
-**st_ino**|Numero del nodo informazioni (i **inode**) per il file (specifico di UNIX). Nel file System UNIX, il **inode** descrive la data del file e timbri data / ora, le autorizzazioni e contenuto. Quando sono file disco rigido collegate a un'altra, essi condividono lo stesso **inode**. Il **inode**e pertanto **st_ino**, non ha alcun significato nei file system FAT, HPFS o NTFS.
-**st_mode**|Maschera di bit per informazioni sulla modalità di file. Il **s_ifdir** bit viene impostato se *path* specifica una directory; la **s_ifreg** bit viene impostato se *percorso* specifica un file normale o un dispositivo. I bit di lettura/scrittura dell'utente sono impostati in base alla modalità di autorizzazione del file; i bit di esecuzione utente sono impostati secondo l'estensione.
-**st_mtime**|Ora dell'ultima modifica del file.
-**st_nlink**|Sempre 1 nel file system non NTFS.
-**st_rdev**|Numero unità del disco contenente il file (uguale a **st_dev**).
-**st_size**|Dimensioni del file in byte. un intero a 64 bit per le varianti con il **i64** suffisso.
-**st_uid**|Identificatore numerico dell'utente proprietario del file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows.
+| **st_gid** | Identificatore numerico del gruppo cui appartiene il file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows. |
+| **st_atime** | Ora dell'ultimo accesso del file. Valido su NTFS, ma non nelle unità disco formattate come FAT. |
+| **st_ctime** | Ora di creazione del file. Valido su NTFS, ma non nelle unità disco formattate come FAT. |
+| **st_dev** | Numero unità del disco contenente il file (uguale a **st_rdev**). |
+| **st_ino** | Numero del nodo informazioni (i **inode**) per il file (specifico di UNIX). Nel file System UNIX, il **inode** descrive la data del file e timbri data / ora, le autorizzazioni e contenuto. Quando sono file disco rigido collegate a un'altra, essi condividono lo stesso **inode**. Il **inode**e pertanto **st_ino**, non ha alcun significato nei file system FAT, HPFS o NTFS. |
+| **st_mode** | Maschera di bit per informazioni sulla modalità di file. Il **s_ifdir** bit viene impostato se *path* specifica una directory; la **s_ifreg** bit viene impostato se *percorso* specifica un file normale o un dispositivo. I bit di lettura/scrittura dell'utente sono impostati in base alla modalità di autorizzazione del file; i bit di esecuzione utente sono impostati secondo l'estensione. |
+| **st_mtime** | Ora dell'ultima modifica del file. |
+| **st_nlink** | Sempre 1 nel file system non NTFS. |
+| **st_rdev** | Numero unità del disco contenente il file (uguale a **st_dev**). |
+| **st_size** | Dimensioni del file in byte. un intero a 64 bit per le varianti con il **i64** suffisso. |
+| **st_uid** | Identificatore numerico dell'utente proprietario del file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows. |
 
 Se *percorso* fa riferimento a un dispositivo, il **st_size**, vari campi ora, **st_dev**, e **st_rdev** nei campi di **Stat**  struttura sono prive di significato. Dal momento che STAT. H usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in TYPES.H, è necessario includere TYPES.H prima di STAT.H nel codice.
 

@@ -27,23 +27,23 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 149d8ea9b23abffb73b5ea620ea094d6f5b792b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67052bdc5d49673146c036167c027d1efd882495
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498930"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556504"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Classe IColumnsInfoImpl
 
-Fornisce un'implementazione del [IColumnsInfo](/previous-versions/windows/desktop/ms724541) interfaccia.
+Fornisce un'implementazione del [IColumnsInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) interfaccia.
 
 ## <a name="syntax"></a>Sintassi
 
 ```cpp
 template <class T>
 class ATL_NO_VTABLE IColumnsInfoImpl :
-   public IColumnsInfo,  
+   public IColumnsInfo, 
    public CDBIDOps
 ```
 
@@ -83,7 +83,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
 
@@ -99,7 +99,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IColumnsInfo::MapColumnIDs](https://docs.microsoft.com/previous-versions/windows/desktop/ms714200(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586326"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519293"
 ---
 # <a name="cinternetsession-class"></a>Classe CInternetSession
 
@@ -318,12 +318,12 @@ Puntatore a una stringa con terminazione null che specifica il nome dell'utente 
 *pstrPassword*<br/>
 Un puntatore a una stringa con terminazione null che specifica la password da utilizzare per l'accesso. Se entrambe *pstrPassword* e *pstrUserName* sono NULL, la password anonima predefinita è il nome dell'utente tramite posta elettronica. Se *pstrPassword* è NULL (o una stringa vuota), ma *pstrUserName* non è NULL, viene usata una password vuota. La tabella seguente descrive il comportamento per le quattro possibili impostazioni di *pstrUserName* e *pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|Nome utente inviato al server FTP|Password inviati al server FTP|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL o ""|NULL o ""|"anonymous"|Nome messaggio di posta elettronica dell'utente|
-|Stringa non NULL|NULL o ""|*pstrUserName*|" "|
-|NULL|Stringa non NULL|ERRORE|ERRORE||
-|Stringa non NULL|Stringa non NULL|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | Nome utente inviato al server FTP | Password inviati al server FTP |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   NULL o ""   |   NULL o ""   |         "anonymous"         |      Nome messaggio di posta elettronica dell'utente      |
+| Stringa non NULL |   NULL o ""   |       *pstrUserName*        |             " "             |
+|      NULL       | Stringa non NULL |            ERROR            |            ERROR            |
+| Stringa non NULL | Stringa non NULL |       *pstrUserName*        |       *pstrPassword*        |
 
 *nPort*<br/>
 Numero che identifica la porta TCP/IP da usare nel server.

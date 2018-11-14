@@ -8,12 +8,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 7fd81a1ccf6702c74a013c5772d59f01121b61a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0da45fa18d12b3f1c93df6b8c8736ed1bfb58ade
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479222"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525004"
 ---
 # <a name="schedulerptr-structure"></a>Struttura scheduler_ptr
 
@@ -58,7 +58,7 @@ struct scheduler_ptr;
 
 ##  <a name="get"></a>  Metodo scheduler_ptr:: Get
 
-Restituisce il puntatore raw all'utilità di pianificazione
+Restituisce il puntatore raw all'utilità di pianificazione.
 
 ```
 scheduler_interface* get() const;
@@ -68,39 +68,39 @@ scheduler_interface* get() const;
 
 ##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool
 
-Verificare se il puntatore dell'utilità di pianificazione è diverso da null
-
-' ' operator bool () const;
-```
-
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
-
-Behave like a pointer
+Verifica se il puntatore dell'utilità di pianificazione è diverso da null.
 
 ```
-scheduler_interface * operator -> () const;
+operator bool() const;
 ```
 
-### Return Value
+##  <a name="operator_ptr"></a>  scheduler_ptr:: operator-&gt;
 
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
-
-Creates a scheduler pointer from shared_ptr to scheduler
+Si comporta come un puntatore.
 
 ```
-esplicita scheduler_ptr (std:: shared_ptr < scheduler_interface > dell'utilità di pianificazione);
-
-scheduler_ptr esplicito (_In_opt_ scheduler_interface * pScheduler);
+scheduler_interface* operator->() const;
 ```
 
-### Parameters
+### <a name="return-value"></a>Valore restituito
+
+##  <a name="ctor"></a>  Costruttore scheduler_ptr:: scheduler_ptr
+
+Crea un puntatore dell'utilità di pianificazione da shared_ptr all'utilità di pianificazione.
+
+```
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
+explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
+```
+
+### <a name="parameters"></a>Parametri
 
 *scheduler*<br/>
-The scheduler to convert.
+L'utilità di pianificazione da convertire.
 
 *pScheduler*<br/>
-The scheduler pointer to convert.
+Il puntatore dell'utilità di pianificazione da convertire.
 
-## See Also
+## <a name="see-also"></a>Vedere anche
 
-[concurrency Namespace](concurrency-namespace.md)
+[Spazio dei nomi concurrency](concurrency-namespace.md)

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 7ec574a1f7fce7ab435e2b35b7c3fe9002c3821c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436291"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522727"
 ---
 # <a name="choice-class"></a>Classe choice
 
@@ -214,7 +214,6 @@ Controlla se questo `choice` blocco della messaggistica è ancora stato iniziali
 
 ```
 bool has_value() const;
-
 ```
 
 ### <a name="return-value"></a>Valore restituito

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662852"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333537"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -153,13 +153,13 @@ Se si desidera gestire i messaggi di notifica Windows inviati da un controllo pu
 
 Ogni voce nella mappa messaggi assume il formato seguente:
 
-**On _** Notification **(**`id`, `memberFxn` **)**
+**VIA\_**_notifica_ **(** _id_, _memberFxn_ **)**
 
-in cui `id` specifica l'ID della finestra figlio del controllo che invia la notifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.
+in cui *id* specifica l'ID della finestra figlio del controllo che invia la notifica e *memberFxn* è il nome della funzione membro padre scritta per gestire la notifica.
 
 Prototipo di funzione dell'elemento padre è il seguente:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Le voci della mappa messaggi possibili sono i seguenti:
 

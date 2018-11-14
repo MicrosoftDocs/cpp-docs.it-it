@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618452"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329472"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset: selezione dei record (ODBC)
 
@@ -61,9 +61,8 @@ Quando si chiama un oggetto recordset [aperto](../../mfc/reference/crecordset-cl
 
 - Il [ordinamento](../../data/odbc/recordset-sorting-records-odbc.md) order per il recordset, se presente, contenuta nel [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) (membro dati). Il framework Usa questa stringa per costruire un database SQL **ORDER BY** clausola.
 
-
-    > [!TIP]
-    >  Usare il codice SQL **GROUP BY** clausola (ed eventualmente le **HAVING** clausola), aggiungere clausole alla fine della stringa del filtro.
+   > [!TIP]
+   > Usare il codice SQL **GROUP BY** clausola (ed eventualmente le **HAVING** clausola), aggiungere clausole alla fine della stringa del filtro.
 
 - I valori di qualsiasi [membri dati di parametro](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) specificati per la classe. I valori dei parametri è impostato subito prima di chiamare `Open` o `Requery`. Il framework associa i valori dei parametri per "?" segnaposto nella stringa SQL. In fase di compilazione, si specifica la stringa con segnaposto. In fase di esecuzione, il framework riempie i dettagli in base ai valori di parametro passato.
 

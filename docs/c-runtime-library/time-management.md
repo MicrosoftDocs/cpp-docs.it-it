@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: e7b34101e6c09238316d7dc0ebb223ede25d60bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67b993325c7f9c649d1509ce2c1ecf09a2404bc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623769"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328929"
 ---
 # <a name="time-management"></a>Gestione dell'ora
 
@@ -29,7 +29,7 @@ Le routine **_ftime** e **localtime** usano la variabile di ambiente **TZ**. Se 
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Converte l'ora dal tipo **struct tm** in una stringa di caratteri. Le versioni di queste funzioni con il suffisso **_s** sono più sicure.|
 |[clock](../c-runtime-library/reference/clock.md)|Restituisce il tempo trascorso per il processo.|
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Converte l'ora dal tipo **time_t**, **__time32_t** o **__time64_t** in una stringa di caratteri. Le versioni di queste funzioni con il suffisso **_s** sono più sicure.|
-|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcola la differenza tra due orari.|[System::DateTime::Subtract](https://msdn.microsoft.com/library/system.datetime.subtract.aspx)|
+|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcola la differenza tra due orari.|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Memorizza l'ora di sistema corrente nella variabile di tipo **struct _timeb** o **struct __timeb64**. Le versioni di queste funzioni con il suffisso **_s** sono più sicure.|
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|Imposta la data della modifica su un file aperto|
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Converte l'ora dal tipo **time_t** a **struct tm** o dal tipo **__time64_t** a **struct tm**. Le versioni di queste funzioni con il suffisso **_s** sono più sicure.|

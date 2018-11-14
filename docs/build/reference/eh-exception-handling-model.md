@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615059"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329300"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modello di gestione delle eccezioni)
 
@@ -29,12 +29,17 @@ Specifica il tipo di gestione delle eccezioni usato dal compilatore, quando otti
 
 ## <a name="arguments"></a>Argomenti
 
-|||
-|-|-|
-**a**|Il modello di gestione delle eccezioni che intercetta sia asincrone (strutturate) e le eccezioni sincrone (C++) mediante l'utilizzo di C++ `catch(...)` sintassi.
-**s**|Il modello di gestione delle eccezioni che intercetta solo le eccezioni (C++) sincrone e indica al compilatore di supporre che le funzioni dichiarate come **extern "C"** potrebbe generare un'eccezione.
-**c**|Se usato con **s** (**/EHsc**), intercetta solo le eccezioni C++ e indica al compilatore di supporre che le funzioni dichiarate come **extern "C"** mai generare un'eccezione C++. **/EHca** è equivalente a **/EHa**.
-**r**|Indica al compilatore di generare sempre controlli di terminazione di runtime per tutti i **noexcept** funzioni. Per impostazione predefinita, controlli di runtime per **noexcept** può essere ottimizzato se il compilatore determina la funzione chiama solo funzioni non generanti.
+**a**<br/>
+Il modello di gestione delle eccezioni che intercetta sia asincrone (strutturate) e le eccezioni sincrone (C++) mediante l'utilizzo di C++ `catch(...)` sintassi.
+
+**s**<br/>
+Il modello di gestione delle eccezioni che intercetta solo le eccezioni (C++) sincrone e indica al compilatore di supporre che le funzioni dichiarate come **extern "C"** potrebbe generare un'eccezione.
+
+**c**<br/>
+Se usato con **s** (**/EHsc**), intercetta solo le eccezioni C++ e indica al compilatore di supporre che le funzioni dichiarate come **extern "C"** mai generare un'eccezione C++. **/EHca** è equivalente a **/EHa**.
+
+**r**<br/>
+Indica al compilatore di generare sempre controlli di terminazione di runtime per tutti i **noexcept** funzioni. Per impostazione predefinita, controlli di runtime per **noexcept** può essere ottimizzato se il compilatore determina la funzione chiama solo funzioni non generanti.
 
 ## <a name="remarks"></a>Note
 

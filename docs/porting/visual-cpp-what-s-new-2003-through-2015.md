@@ -2,12 +2,12 @@
 title: 'Visual C++: novità dalla versione 2003 alla 2015'
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499619"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520181"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -260,7 +260,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
    Si supponga, ad esempio, che il codice definisca un operatore **new** e **delete di posizionamento**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
    Sono ora più conformi allo standard. Le versioni precedenti del compilatore hanno generato un costruttore e distruttore esplicito per unioni anonime. In Visual Studio 2015 sono stati eliminati.
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    Il codice precedente genera l'errore seguente in Visual Studio 2015:
@@ -328,14 +328,14 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -552,7 +552,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     }
    ```
 
-  oppure
+  \-oppure-
 
    ```cpp
     class base;  // as above
@@ -586,7 +586,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   Inoltre, nonostante il compilatore non fornisca una diagnostica specifica, il formato dell'operatore new inline viene considerato non valido.
 
 - **Chiamata di "operator *type*()" (conversione definita dall'utente) per i tipi non di classe**  Le versioni precedenti del compilatore consentivano la chiamata di "operator *type*()" per i tipi non di classe ignorandolo senza avvisare. Questo comportamento precedente creava un rischio di generazione di codice errato senza avvisare, determinando un comportamento imprevedibile in fase di esecuzione. Il compilatore non accetta più il codice scritto in questo modo e genera invece l'errore del compilatore C2228.
 
@@ -1673,10 +1673,10 @@ Questo supporto migliorato per gli standard ISO C/C++ può richiedere modifiche 
 - Supporto delle enumerazioni con ambito. La chiave di enumerazione enum class di C++ è ora supportata. Il codice seguente illustra come il comportamento di questa chiave sia diverso da quello precedente di enum.
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Supporto per lo sviluppo di app di Windows Runtime

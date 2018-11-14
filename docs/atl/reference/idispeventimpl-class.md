@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: a07cf577ec6be2c6d2d895a85f49f44318596ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497462"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524300"
 ---
 # <a name="idispeventimpl-class"></a>Classe IDispEventImpl
 
@@ -151,7 +151,7 @@ Un valore HRESULT standard.
 
 ##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
 
-Esegue il mapping di un set di nomi degli argomenti facoltativo e un singolo membro a un set corrispondente di integer DISPID, che può essere utilizzato nelle successive chiamate a [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+Esegue il mapping di un set di nomi degli argomenti facoltativo e un singolo membro a un set corrispondente di integer DISPID, che può essere utilizzato nelle successive chiamate a [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,7 +164,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) in Windows SDK.
+Visualizzare [GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) in Windows SDK.
 
 ##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
 
@@ -189,7 +189,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IDispatch:: GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) in Windows SDK.
+Visualizzare [IDispatch:: GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) in Windows SDK.
 
 ##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
 
@@ -204,7 +204,7 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>Parametri
 
 *PTI*<br/>
-[in] Un puntatore per il [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfaccia che contiene il tipo definito dall'utente.
+[in] Un puntatore per il [ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfaccia che contiene il tipo definito dall'utente.
 
 *hrt*<br/>
 [in] Handle alla descrizione del tipo da recuperare.
@@ -215,7 +215,7 @@ Il tipo di variante.
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ITypeInfo:: GetRefTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
+Visualizzare [ITypeInfo:: GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
 
 ##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
 

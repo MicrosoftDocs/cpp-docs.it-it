@@ -34,12 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463986"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326140"
 ---
 # <a name="rename-wrename"></a>rename, _wrename
 
@@ -72,9 +72,9 @@ Ognuna di queste funzioni restituisce 0 in caso di esito positivo. In caso di er
 
 |Valore errno|Condizione|
 |-|-|
-**EACCES**|La directory o il file specificato da *newname* esiste già o non può essere creato (percorso non valido) oppure *oldname* è una directory e *newname* specifica un percorso diverso.
-**ENOENT**|File o percorso specificato da *oldname* non trovato.
-**EINVAL**|Il nome contiene caratteri non validi.
+| **EACCES** | La directory o il file specificato da *newname* esiste già o non può essere creato (percorso non valido) oppure *oldname* è una directory e *newname* specifica un percorso diverso. |
+| **ENOENT** | File o percorso specificato da *oldname* non trovato. |
+| **EINVAL** | Il nome contiene caratteri non validi. |
 
 Per altri possibili valori restituiti, vedere [doserrno, errno, syserrlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: 259e3933c831ba685fa9d00d0f6471975a31f2cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7948348e0bbc0ea5c0eb1536d79d9eaad08b1087
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606843"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330697"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 
@@ -23,8 +23,8 @@ Genera l'errore x64 estesi versione del convertire valore scalare singolo precis
 ## <a name="syntax"></a>Sintassi
 
 ```
-__int64 _mm_cvtss_si64x( 
-   __m128 value 
+__int64 _mm_cvtss_si64x(
+   __m128 value
 );
 ```
 

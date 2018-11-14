@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: a8b204c2bf48802b8efcfe5ca487d62876942c29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540336"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333228"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -117,12 +117,12 @@ La stringa di caratteri *modalità* specifica il tipo di accesso richiesto per i
 
 |*mode*|Accedi a|
 |-|-|
-**"r"**|Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **fopen** chiamata ha esito negativo.
-**"w"**|Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente.
-**"a"**|Viene aperto per la scrittura alla fine del file (aggiunta) senza rimuovere il marcatore di fine file (EOF) prima che nuovi dati vengano scritti sul file. Creare il file se è inesistente.
-**"r+"**|Viene aperto per la lettura e la scrittura. Il file deve esistere.
-**"w+"**|Apre un file vuoto per la lettura e la scrittura. Se il file esiste, il contenuto viene eliminato in modo permanente.
-**"a+"**|Viene aperto per la lettura e l'aggiunta. L'operazione di aggiunta comporta la rimozione del marcatore di EOF prima che nuovi dati vengano scritti sul file. Il marcatore EOF non viene ripristinato dopo il completamento della scrittura. Creare il file se è inesistente.
+| **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **fopen** chiamata ha esito negativo. |
+| **"w"** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
+| **"a"** | Viene aperto per la scrittura alla fine del file (aggiunta) senza rimuovere il marcatore di fine file (EOF) prima che nuovi dati vengano scritti sul file. Creare il file se è inesistente. |
+| **"r+"** | Viene aperto per la lettura e la scrittura. Il file deve esistere. |
+| **"w+"** | Apre un file vuoto per la lettura e la scrittura. Se il file esiste, il contenuto viene eliminato in modo permanente. |
+| **"a+"** | Viene aperto per la lettura e l'aggiunta. L'operazione di aggiunta comporta la rimozione del marcatore di EOF prima che nuovi dati vengano scritti sul file. Il marcatore EOF non viene ripristinato dopo il completamento della scrittura. Creare il file se è inesistente. |
 
 Quando un file viene aperto usando il **"a"** tipo di accesso o il **"a +"** accedere a tipo, tutte le operazioni vengono eseguite alla fine del file di scrittura. Il puntatore del file può essere riposizionato usando [fseek](fseek-fseeki64.md) oppure [rewind](rewind.md), ma viene sempre spostato di nuovo alla fine del file prima di qualsiasi operazione di scrittura. Di conseguenza, i dati esistenti non possono essere sovrascritti.
 
@@ -134,8 +134,8 @@ Oltre ai valori precedenti, i caratteri seguenti possono essere accodati a *moda
 
 |*modalità* modificatore|Modalità di conversione|
 |-|-|
-**t**|Aprire in modalità testo (convertita).
-**b**|Aprire in modalità binaria (non convertita). Le conversioni che includono caratteri di ritorno a capo e avanzamento riga vengono eliminate.
+| **t** | Aprire in modalità testo (convertita). |
+| **b** | Aprire in modalità binaria (non convertita). Le conversioni che includono caratteri di ritorno a capo e avanzamento riga vengono eliminate. |
 
 In modalità testo, CTRL + Z viene interpretato come carattere EOF nell'input. Nei file aperti per la lettura/scrittura usando **"a +"**, **fopen** cercato CTRL + Z alla fine del file e la rimuove, se è possibile. Ciò avviene perché l'uso [fseek](fseek-fseeki64.md) e **ftell** per spostarsi all'interno di un file che termina con CTRL + Z può causare [fseek](fseek-fseeki64.md) si comporti in modo non corretto verso la fine del file.
 
@@ -149,14 +149,14 @@ Le opzioni seguenti possono essere aggiunte a *modalità* per specificare compor
 
 |*modalità* modificatore|Comportamento|
 |-|-|
-**c**|Abilitare il flag commit per la proprietà associata *nomefile* in modo che il contenuto del buffer di file viene scritti direttamente su disco se **fflush** oppure **FlushAll** viene chiamato.
-**n**|Reimpostare il flag commit per la proprietà associata *filename* per "no-commit". Questa è l'impostazione predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a COMMODE.OBJ. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a COMMODE.OBJ (vedere [Link Options](../../c-runtime-library/link-options.md)).
-**N**|Specifica che il file non viene ereditato dai processi figlio.
-**S**|Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco.
-**R**|Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco.
-**T**|Specifica un file come temporaneo. Se possibile, non viene scaricato su disco.
-**D**|Specifica un file come temporaneo. Viene eliminato quando viene chiuso l'ultimo puntatore del file.
-**CCS =**_codifica_|Specifica il set di utilizzare caratteri con codificato (uno dei **UTF-8**, **UTF-16LE**, o **UNICODE**) per questo file. Lasciare non specificato se si vuole la codifica ANSI.
+| **c** | Abilitare il flag commit per la proprietà associata *nomefile* in modo che il contenuto del buffer di file viene scritti direttamente su disco se **fflush** oppure **FlushAll** viene chiamato. |
+| **n** | Reimpostare il flag commit per la proprietà associata *filename* per "no-commit". Questa è l'impostazione predefinita. Esegue inoltre l'override del flag commit globale se il programma viene collegato a COMMODE.OBJ. L'impostazione predefinita del flag commit globale è "no-commit", a meno che il programma venga collegato in modo esplicito a COMMODE.OBJ (vedere [Link Options](../../c-runtime-library/link-options.md)). |
+| **N** | Specifica che il file non viene ereditato dai processi figlio. |
+| **S** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco. |
+| **R** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
+| **T** | Specifica un file come temporaneo. Se possibile, non viene scaricato su disco. |
+| **D** | Specifica un file come temporaneo. Viene eliminato quando viene chiuso l'ultimo puntatore del file. |
+| **CCS =**_codifica_ | Specifica il set di utilizzare caratteri con codificato (uno dei **UTF-8**, **UTF-16LE**, o **UNICODE**) per questo file. Lasciare non specificato se si vuole la codifica ANSI. |
 
 Caratteri validi per il *modalità* stringa usata nella **fopen** e **fdopen** corrispondono alle *oflag* argomenti utilizzati in [Open](open-wopen.md) e [sopen](sopen-wsopen.md), come indicato di seguito.
 

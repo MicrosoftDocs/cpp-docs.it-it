@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - '@@: symbol'
 ms.assetid: 4c0aa730-d534-4efd-9608-54d683d78654
-ms.openlocfilehash: 8dcc91792d4f564de72ea4e433eb5cc46348fd7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 539f2e143e50af8d8fbb0b2f61e49704d5dc8057
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537826"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325561"
 ---
-# <a name=""></a>@@:
+# <a name=""></a>\@\@:
 
-Definisce un'etichetta di codice solo tra riconoscibile *label1* e *label2*, dove *label1* è l'inizio del codice o il precedente `@@:` etichetta e la *label2* è quella successiva o fine del codice `@@:` etichetta. Visualizzare [ @B ](../../assembler/masm/at-b.md) e [ @F ](../../assembler/masm/at-f.md).
+Definisce un'etichetta di codice solo tra riconoscibile *label1* e *label2*, dove *label1* è l'inizio del codice o il precedente `@@:` etichetta e la *label2* è quella successiva o fine del codice `@@:` etichetta. Visualizzare [ \@B](../../assembler/masm/at-b.md) e [ \@F](../../assembler/masm/at-f.md).
 
 ## <a name="syntax"></a>Sintassi
 
-> @@:
+> **\@\@:**
 
 ## <a name="see-also"></a>Vedere anche
 

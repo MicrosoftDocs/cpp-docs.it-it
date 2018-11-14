@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 25bb370c0714bfef97bc6659deae2fbd21aed23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664568"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524358"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membri dati di stato dei campi in funzioni di accesso generate dalla creazione guidata
 
@@ -58,7 +58,7 @@ public:
 
 È anche possibile usare i valori di stato per impostare un valore NULL per un determinato campo. In questo modo risulta utile nei casi in cui si vuole distinguere un valore del campo come valore NULL anziché zero. È responsabilità dell'utente a decidere se NULL è un valore valido o un valore speciale e decidere come l'applicazione deve gestire. OLE DB definisce DBSTATUS_S_ISNULL come il termine corretto si intende specificare un valore NULL generico. Se il consumer legge i dati e il valore è null, il campo stato è impostato su DBSTATUS_S_ISNULL. Se l'utente desidera impostare un valore NULL, il consumer imposta il valore di stato su DBSTATUS_S_ISNULL prima di chiamare il provider.
 
-Aprire quindi cercare DBSTATUSENUM e OleDb. È quindi possibile confrontare il valore numerico dello stato con i valori di enumerazione DBSTATUSENUM diverso da zero. Se il nome dell'enumerazione non è sufficiente indicare qual è il problema, vedere la **lo stato** argomento nella **valori di Data Binding** sezione del [Guida per programmatori OLE DB](/previous-versions/windows/desktop/ms713643). In questo argomento contiene le tabelle di valori di stati utilizzati per ottenere o impostare i dati. Per informazioni sui valori di lunghezza, vedere la **lunghezza** argomento nella stessa sezione.
+Aprire quindi cercare DBSTATUSENUM e OleDb. È quindi possibile confrontare il valore numerico dello stato con i valori di enumerazione DBSTATUSENUM diverso da zero. Se il nome dell'enumerazione non è sufficiente indicare qual è il problema, vedere la **lo stato** argomento nella **valori di Data Binding** sezione del [Guida per programmatori OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). In questo argomento contiene le tabelle di valori di stati utilizzati per ottenere o impostare i dati. Per informazioni sui valori di lunghezza, vedere la **lunghezza** argomento nella stessa sezione.
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Recupero della lunghezza o lo stato di una colonna
 

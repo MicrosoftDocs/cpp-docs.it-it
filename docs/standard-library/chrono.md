@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 904e4df6b6c16b846ab4417d24a1d9836380d75b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544547"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331477"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -84,7 +84,7 @@ Per altre informazioni sui tipi di rapporto usati nei seguenti typedef, vedere [
 
 ### <a name="literals"></a>Valori letterali
 
-**(C++11)** L'intestazione \<chrono> definisce i seguenti[valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) che è possibile usare per maggiore praticità, indipendenza dai tipi e gestibilità del codice. Questi valori letterali sono definiti nello spazio dei nomi inline `literals::chrono_literals` e sono in ambito quando std::chrono è nell'ambito.
+**(C++11)**  il \<chrono > intestazione definisce gli elementi seguenti [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) che è possibile usare per maggiore praticità, indipendenza dai tipi e gestibilità del codice. Questi valori letterali sono definiti nello spazio dei nomi inline `literals::chrono_literals` e sono in ambito quando std::chrono è nell'ambito.
 
 |Literal|Descrizione|
 |-------------|-----------------|

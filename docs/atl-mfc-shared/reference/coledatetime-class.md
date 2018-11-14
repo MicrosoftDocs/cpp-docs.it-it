@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505898"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525340"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -104,7 +104,7 @@ class COleDateTime
 
 `COleDateTime` non è una classe di base.
 
-È uno dei possibili tipi per il [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) tipo di dati di automazione OLE. Oggetto `COleDateTime` valore rappresenta una data assoluta e il valore di ora.
+È uno dei possibili tipi per il [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) tipo di dati di automazione OLE. Oggetto `COleDateTime` valore rappresenta una data assoluta e il valore di ora.
 
 Il `DATE` tipo viene implementato come un valore a virgola mobile. Giorni sono misurati dal 30 dicembre 1899 a mezzanotte. Nella tabella seguente mostra alcune date e i relativi valori associati:
 
@@ -828,7 +828,7 @@ Questi operatori di assegnazione di overload copiare il valore di data/ora di or
 
 - **operatore = (** `dateSrc` **)** il valore e lo stato dell'operando vengono copiati in questa `COleDateTime` oggetto.
 
-- **operatore = (** *varSrc* **)** se la conversione del [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) valore (o [COleVariant](../../mfc/reference/colevariant-class.md) oggetto) per una data/ora (VT _ Data) ha esito positivo, il valore convertito viene copiato in questo `COleDateTime` oggetto e il relativo stato è impostato su valido. Se la conversione non riesce, il valore di questo oggetto è impostato su zero (30 dicembre 1899, mezzanotte) e il relativo stato come non valida.
+- **operatore = (** *varSrc* **)** se la conversione del [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) valore (o [COleVariant](../../mfc/reference/colevariant-class.md) oggetto) per una data/ora (VT _ Data) ha esito positivo, il valore convertito viene copiato in questo `COleDateTime` oggetto e il relativo stato è impostato su valido. Se la conversione non riesce, il valore di questo oggetto è impostato su zero (30 dicembre 1899, mezzanotte) e il relativo stato come non valida.
 
 - **operatore = (** `dtSrc` **)** il `DATE` valore viene copiato in questo `COleDateTime` oggetto e il relativo stato è impostato su valido.
 
@@ -836,11 +836,11 @@ Questi operatori di assegnazione di overload copiare il valore di data/ora di or
 
 - **operatore = (** *systimeSrc* **)** il [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) valore viene convertito e copiato in questo `COleDateTime` oggetto. Se la conversione ha esito positivo, lo stato di questo oggetto è impostato su valido. Se ha esito negativo, viene impostato come non valida.
 
-- **operatore = (** `udate` **)** il `UDATE` viene convertito e copiato in questo valore `COleDateTime` oggetto. Se la conversione ha esito positivo, lo stato di questo oggetto è impostato su valido. Se ha esito negativo, viene impostato come non valida. Oggetto `UDATE` struttura rappresenta una data di "decompressa". Vedere la funzione [VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) per altri dettagli.
+- **operatore = (** `udate` **)** il `UDATE` viene convertito e copiato in questo valore `COleDateTime` oggetto. Se la conversione ha esito positivo, lo stato di questo oggetto è impostato su valido. Se ha esito negativo, viene impostato come non valida. Oggetto `UDATE` struttura rappresenta una data di "decompressa". Vedere la funzione [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) per altri dettagli.
 
 - **operatore = (** `filetimeSrc` **)** il [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) valore viene convertito e copiato in questo `COleDateTime` oggetto. Se la conversione ha esito positivo, lo stato di questo oggetto è impostato su valido. altrimenti è impostato come non valida. `FILETIME` utilizza Coordinated Universal Time (UTC), pertanto se si passa a un'ora UTC della struttura, i risultati verranno convertiti dall'ora UTC nell'ora locale e verranno archiviati come ora variant. Questo comportamento è analogo a quello in Visual C++ 6.0 e Visual C++ .NET 2003 SP2. Visualizzare [tempi File](/windows/desktop/SysInfo/file-times) nel SDK di Windows per altre informazioni.
 
-Per altre informazioni, vedere la [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) voce nel SDK di Windows.
+Per altre informazioni, vedere la [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) voce nel SDK di Windows.
 
 Per altre informazioni sul `time_t` tipo di dati, vedere la [ora](../../c-runtime-library/reference/time-time32-time64.md) funzionare nel *Run-Time Library Reference*.
 
@@ -1083,7 +1083,7 @@ Vedere la tabella seguente per i limiti per i valori dei parametri:
 |*nMin*|0 - 59|
 |*nSec*|0 - 59|
 
-Se il giorno del mese causa l'overflow, viene convertito nel giorno del mese successivo e il mese corretto e/o anno viene incrementato di conseguenza. Un valore del giorno zero indica l'ultimo giorno del mese precedente. Il comportamento è identico [SystemTimeToVariantTime](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
+Se il giorno del mese causa l'overflow, viene convertito nel giorno del mese successivo e il mese corretto e/o anno viene incrementato di conseguenza. Un valore del giorno zero indica l'ultimo giorno del mese precedente. Il comportamento è identico [SystemTimeToVariantTime](/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
 
 Se il valore di data o ora specificato dai parametri non è valido, che lo stato di questo oggetto è impostato su non è valido e il valore di questo oggetto non viene modificato.
 

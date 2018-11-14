@@ -138,12 +138,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 9106d8e2eaba1cc16b645f79418d0ff02766b04d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592192"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519821"
 ---
 # <a name="unorderedmap-class"></a>Classe unordered_map
 
@@ -275,7 +275,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -519,7 +518,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -538,7 +536,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="bucket_size"></a>  unordered_map::bucket_size
@@ -705,7 +702,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -755,7 +751,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -803,7 +798,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -851,7 +845,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -898,7 +891,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -951,7 +943,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1229,7 +1220,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1324,7 +1314,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1365,7 +1354,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1403,7 +1391,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1442,7 +1429,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1555,7 +1541,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1595,7 +1580,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1636,7 +1620,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1692,7 +1675,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1766,7 +1748,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1785,7 +1766,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="local_iterator"></a>  unordered_map::local_iterator
@@ -1829,7 +1809,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1885,7 +1864,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1959,7 +1937,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1978,7 +1955,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="max_load_factor"></a>  unordered_map::max_load_factor
@@ -2054,7 +2030,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2073,7 +2048,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="max_size"></a>  unordered_map::max_size
@@ -2105,7 +2079,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2136,7 +2109,7 @@ Riferimento al valore dei dati dell'elemento inserito.
 
 Se non viene trovato il valore della chiave dell'argomento, viene inserito insieme al valore predefinito del tipo di dati.
 
-È possibile usare `operator[]` per inserire elementi in un oggetto map *m* con *m*[_ *Key*] = `DataValue`; in cui `DataValue` è il valore dell'oggetto `mapped_type` dell'elemento con valore di chiave \_ *Key*.
+`operator[]` può essere usato per inserire elementi in una mappa *m* utilizzando *m*[*chiave*] = `DataValue`, dove `DataValue` è il valore della `mapped_type` dell'elemento con una chiave valore del *chiave*.
 
 Quando si utilizza `operator[]` per inserire gli elementi, il riferimento restituito non indica se un inserimento modifica un elemento già esistente o ne crea uno nuovo. Le funzioni membro [find](../standard-library/map-class.md#find) e [insert](../standard-library/map-class.md#insert) possono essere usate per determinare se un elemento con una chiave specificata è già presente prima di un inserimento.
 
@@ -2184,7 +2157,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2301,7 +2273,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2348,7 +2319,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2416,7 +2386,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2489,7 +2458,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2532,7 +2500,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2603,7 +2570,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2866,7 +2832,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output

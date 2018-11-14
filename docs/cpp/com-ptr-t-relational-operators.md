@@ -28,12 +28,12 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-ms.openlocfilehash: eea752410ce350417252c1de58e73ec49bf3f54f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3b1d6d1579c9f9bf5eca4f8a3f6733f27584674
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440300"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326745"
 ---
 # <a name="comptrt-relational-operators"></a>Operatori relazionali _com_ptr_t
 
@@ -44,72 +44,72 @@ Confrontare l'oggetto del puntatore intelligente a un altro puntatore intelligen
 ## <a name="syntax"></a>Sintassi
 
 ```
-template<typename _OtherIID> 
-bool operator==( const _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID>
+bool operator==( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID>  
-bool operator==( _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID> 
+bool operator==( _com_ptr_t<_OtherIID>& p );
 
-template<typename _InterfaceType> 
-bool operator==( _InterfaceType* p );
+template<typename _InterfaceType>
+bool operator==( _InterfaceType* p );
 
-template<> 
-bool operator==( Interface* p );
+template<>
+bool operator==( Interface* p );
 
-template<> 
-bool operator==( const _com_ptr_t& p ) throw();
+template<>
+bool operator==( const _com_ptr_t& p ) throw();
 
-template<> 
-bool operator==( _com_ptr_t& p ) throw();
+template<>
+bool operator==( _com_ptr_t& p ) throw();
 
-bool operator==( Int null );
-
-template<typename _OtherIID> 
-bool operator!=( const _com_ptr_t<_OtherIID>& p );
-
-template<typename _OtherIID> 
-bool operator!=( _com_ptr_t<_OtherIID>& p );
-
-template<typename _InterfaceType> 
-bool operator!=( _InterfaceType* p );
-
-bool operator!=( Int null );
-
-template<typename _OtherIID> 
-bool operator<( const _com_ptr_t<_OtherIID>& p );
-
-template<typename _OtherIID> 
-bool operator<( _com_ptr_t<_OtherIID>& p );
-
-template<typename _InterfaceType> 
-bool operator<( _InterfaceType* p );
-
-template<typename _OtherIID> 
-bool operator>( const _com_ptr_t<_OtherIID>& p );
-
-template<typename _OtherIID> 
-bool operator>(_com_ptr_t< _OtherIID>& p );
-
-template<typename _InterfaceType> 
-bool operator>( _InterfaceType* p );
-
-template<typename _OtherIID> 
-bool operator<=( const _com_ptr_t<_OtherIID>& p );
-
-template<typename _OtherIID> 
-bool operator<=( _com_ptr_t<_OtherIID>& p );
-
-template<typename _InterfaceType> 
-bool operator<=( _InterfaceType* p );
+bool operator==( Int null );
 
 template<typename _OtherIID>
-bool operator>=( const _com_ptr_t<_OtherIID>& p );
+bool operator!=( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
-bool operator>=( _com_ptr_t<_OtherIID>& p );
+template<typename _OtherIID>
+bool operator!=( _com_ptr_t<_OtherIID>& p );
 
-template<typename _InterfaceType> 
-bool operator>=( _InterfaceType* p );
+template<typename _InterfaceType>
+bool operator!=( _InterfaceType* p );
+
+bool operator!=( Int null );
+
+template<typename _OtherIID>
+bool operator<( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID>
+bool operator<( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType>
+bool operator<( _InterfaceType* p );
+
+template<typename _OtherIID>
+bool operator>( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID>
+bool operator>(_com_ptr_t< _OtherIID>& p );
+
+template<typename _InterfaceType>
+bool operator>( _InterfaceType* p );
+
+template<typename _OtherIID>
+bool operator<=( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID>
+bool operator<=( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType>
+bool operator<=( _InterfaceType* p );
+
+template<typename _OtherIID>
+bool operator>=( const _com_ptr_t<_OtherIID>& p );
+
+template<typename _OtherIID>
+bool operator>=( _com_ptr_t<_OtherIID>& p );
+
+template<typename _InterfaceType>
+bool operator>=( _InterfaceType* p );
 ```
 
 ## <a name="remarks"></a>Note

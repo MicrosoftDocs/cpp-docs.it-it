@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 5a9fa47ab19a5935bf0c7c36dea37b3cfe6180ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512385"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327304"
 ---
 # <a name="strstreambuf-class"></a>Classe strstreambuf
 
@@ -186,11 +186,11 @@ Carattere da inserire nel buffer o `EOF`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la funzione non può essere eseguita correttamente, restituisce `EOF`. In caso contrario, se _ *Meta* == `EOF`, restituisce un valore diverso da `EOF`. In caso contrario, restituisce \_ *Meta*.
+Se la funzione non può essere eseguita correttamente, restituisce `EOF`. In caso contrario, se  *\_Meta* == `EOF`, restituisce un valore diverso da `EOF`. In caso contrario, restituisce  *\_Meta*.
 
 ### <a name="remarks"></a>Note
 
-Se _ *Meta* != `EOF`, la funzione membro virtuale protetta cerca di inserire l'elemento ( `char`)\_ *Meta* nel buffer di output. La funzione può eseguire questa operazione in vari modi:
+Se  *\_Meta* ! = `EOF`, la funzione membro virtuale protetta tenta di inserire l'elemento `(char)_Meta` nel buffer di output. Questa operazione può essere eseguita in vari modi:
 
 - Se è disponibile una posizione di scrittura, può archiviare l'elemento in tale posizione e incrementare il puntatore successivo per il buffer di output.
 
@@ -211,13 +211,13 @@ Carattere da inserire nel buffer o `EOF`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la funzione non può essere eseguita correttamente, restituisce `EOF`. In caso contrario, se _ *Meta* == `EOF`, restituisce un valore diverso da `EOF`. In caso contrario, restituisce \_ *Meta*.
+Se la funzione non può essere eseguita correttamente, restituisce `EOF`. In caso contrario, se  *\_Meta* == `EOF`, restituisce un valore diverso da `EOF`. In caso contrario, restituisce  *\_Meta*.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta prova a reinserire un elemento nel buffer di input e quindi di renderlo l'elemento corrente a cui punta il puntatore successivo.
+La funzione membro virtuale protetta tenta di reinserire un elemento nel buffer di input e quindi di renderlo l'elemento corrente a cui punta il puntatore successivo.
 
-Se _ *Meta* == `EOF`, l'elemento da reinserire è effettivamente quello già presente nel flusso prima dell'elemento corrente. In caso contrario, tale elemento viene sostituito da **ch** = ( `char`)\_ *Meta*. La funzione può reinserire un elemento in vari modi:
+Se  *\_Meta* == `EOF`, l'elemento da reinserire è effettivamente quello già nel flusso prima dell'elemento corrente. In caso contrario, l'elemento viene sostituito da `ch = (char)_Meta`. La funzione può reinserire un elemento in vari modi:
 
 - Se è disponibile una posizione di reinserimento e l'elemento archiviato esiste risulta uguale a `ch`, può decrementare il puntatore successivo per il buffer di input.
 
@@ -289,15 +289,15 @@ La funzione membro virtuale protetta tenta di modificare le posizioni correnti p
 
 La nuova posizione è determinata nel modo seguente:
 
-- Se `_Way` == `ios_base::beg`, la nuova posizione corrisponde all'inizio del flusso più _ *Off*.
+- Se `_Way == ios_base::beg`, la nuova posizione corrisponde all'inizio del flusso più *Off*.
 
-- Se `_Way` == `ios_base::cur`, la nuova posizione corrisponde alla posizione del flusso corrente più _ *Off*.
+- Se `_Way == ios_base::cur`, la nuova posizione corrisponde la posizione corrente del flusso più *Off*.
 
-- Se `_Way` == `ios_base::end`, la nuova posizione corrisponde alla fine del flusso più _ *Off*.
+- Se `_Way == ios_base::end`, la nuova posizione corrisponde alla fine del flusso più *Off*.
 
-Se `_Which` & **ios_base::in** è diverso da zero ed è presente il buffer di input, la funzione modifica la posizione di lettura successiva nel buffer di input. Se anche `_Which` & **ios_base::out** è diverso da zero, `_Way` != **ios_base::cur** ed è presente il buffer di output, la funzione imposta la posizione di scrittura successiva in modo che corrisponda alla posizione di lettura successiva.
+Se `_Which & ios_base::in` è diverso da zero ed esiste il buffer di input, la funzione modifica la posizione successiva da leggere nel buffer di input. Se `_Which & ios_base::out` anche è diverso da zero, `_Way != ios_base::cur`ed è presente il buffer di output, la funzione imposta anche la posizione successiva da scrivere in modo che corrisponda alla posizione di lettura successiva.
 
-In caso contrario, se `_Which` & `ios_base::out` è diverso da zero ed è presente il buffer di output, la funzione modifica la posizione successiva per la scrittura nel buffer di output. In caso contrario, l'operazione di posizionamento avrà esito negativo. Affinché un'operazione di posizionamento abbia esito positivo, è necessario che la risultante posizione del flusso si trovi all'interno della sequenza controllata.
+In caso contrario, se `_Which & ios_base::out` è diverso da zero ed è presente il buffer di output, la funzione modifica la posizione successiva da scrivere nel buffer di output. In caso contrario, l'operazione di posizionamento avrà esito negativo. Affinché un'operazione di posizionamento abbia esito positivo, è necessario che la risultante posizione del flusso si trovi all'interno della sequenza controllata.
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -321,7 +321,7 @@ Se la funzione modifica correttamente una o entrambe le posizioni del flusso, re
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta tenta di modificare le posizioni correnti per i flussi controllati. Per un oggetto della classe strstreambuf, una posizione del flusso è costituita essenzialmente da un offset del flusso. L'offset zero designa il primo elemento della sequenza controllata. La nuova posizione è determinata da _ *Sp*.
+La funzione membro virtuale protetta tenta di modificare le posizioni correnti per i flussi controllati. Per un oggetto della classe strstreambuf, una posizione del flusso è costituita essenzialmente da un offset del flusso. L'offset zero designa il primo elemento della sequenza controllata. La nuova posizione è determinata dal *_Sp*.
 
 Se `_Which` & **ios_base::in** è diverso da zero ed è presente il buffer di input, la funzione modifica la posizione di lettura successiva nel buffer di input. Se `_Which` & `ios_base::out` è diverso da zero ed è presente il buffer di output, la funzione imposta anche la posizione di scrittura successiva in modo che corrisponda alla posizione di lettura successiva. In caso contrario, se `_Which` & `ios_base::out` è diverso da zero ed è presente il buffer di output, la funzione modifica la posizione successiva per la scrittura nel buffer di output. In caso contrario, l'operazione di posizionamento avrà esito negativo. Affinché un'operazione di posizionamento abbia esito positivo, è necessario che la posizione del flusso risultante si trovi all'interno della sequenza controllata.
 
@@ -398,7 +398,7 @@ Buffer usato per l'output.
 
 Il primo costruttore archivia un puntatore null in tutti i puntatori che controllano il buffer di input, il buffer di output e l'allocazione strstreambuf. Imposta la modalità strstreambuf archiviata in modo da rendere la sequenza controllata modificabile ed estendibile. L'attività accetta inoltre *conteggio* come una dimensione di allocazione iniziale suggerita.
 
-Il secondo costruttore si comporta come il primo, ad eccezione del fatto che archivia _ *Allocfunc* come puntatore alla funzione da chiamare per allocare spazio di archiviazione e \_ *Freefunc* come puntatore alla funzione da chiamare per liberare tale spazio di archiviazione.
+Il secondo costruttore si comporta come la prima, ad eccezione del fatto che archivia  *\_Allocfunc* come puntatore alla funzione da chiamare per allocare spazio di archiviazione e  *\_Freefunc* del puntatore per la funzione da chiamare per liberare tale memoria.
 
 I tre costruttori seguenti:
 

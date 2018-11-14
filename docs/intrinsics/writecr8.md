@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _writecr8 intrinsic
 ms.assetid: 6f8bd632-dddb-4335-971e-1acee24aa2b9
-ms.openlocfilehash: d401673e7ee6cd18b8bc05140efc3b819e48a30f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a7b31ed7e370c4dd3fee9e5a205be6e34ba560b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471995"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325784"
 ---
 # <a name="writecr8"></a>__writecr8
 
@@ -22,8 +22,8 @@ Scrive il valore `Data` al registro CR8.
 ## <a name="syntax"></a>Sintassi
 
 ```
-void writecr8( 
-   unsigned __int64 Data 
+void writecr8(
+   unsigned __int64 Data
 );
 ```
 

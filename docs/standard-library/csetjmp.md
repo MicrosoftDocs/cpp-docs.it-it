@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - csetjmp header
 ms.assetid: 8f21fddd-5e9b-4219-a848-581cdd3569d9
-ms.openlocfilehash: f9d5ae02b29e8e8cc34e767b174c0986321dfc14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a170030ffc72f8d45a157ed97e207b93a18b0f9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636241"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518593"
 ---
 # <a name="ltcsetjmpgt"></a>&lt;csetjmp&gt;
 
@@ -21,7 +21,6 @@ Include l'intestazione della libreria C standard \<setjmp.h> e aggiunge i nomi a
 
 ```cpp
 #include <csetjmp>
-
 ```
 
 ## <a name="remarks"></a>Note

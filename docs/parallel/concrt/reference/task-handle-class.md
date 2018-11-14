@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: c1a12555b0b7277fd6b52d935518e4bb1f297285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 060be8614fc3a0a93d446c747b65de82b863ab3c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521359"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518880"
 ---
 # <a name="taskhandle-class"></a>Classe task_handle
 
@@ -74,7 +74,6 @@ L'operatore di chiamata di funzione che richiama il runtime per eseguire un'oper
 
 ```
 void operator()() const;
-
 ```
 
 ##  <a name="task_handle__ctor"></a> task_handle

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: cf1f519521d86f2b7782fb93ed3b4aca4ecd5b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643443"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326499"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -41,7 +41,7 @@ for (auto num : vec)
 
 Le categorie di iteratori disponibili sono cinque. Per la potenza, le categorie sono riepilogate in ordine crescente come:
 
-- **Output**. Un' *iteratore di output* `X` può scorrere in avanti su una sequenza utilizzando la **++** operatore e può scrivere una sola volta, un elemento usando la **&ast;** operatore.
+- **Output**. Un' *iteratore di output* `X` può scorrere in avanti su una sequenza utilizzando la **++** operatore e può scrivere una sola volta, un elemento usando la __\*__ operatore.
 
 - **Input**. Un' *iteratore di input* `X` può scorrere in avanti su una sequenza utilizzando il + + (operatore) e può leggere un elemento numero di volte qualsiasi utilizzando la **&ast;** operatore. È possibile confrontare gli iteratori di input usando la **++** e **! =** operatori. Dopo aver incrementato qualsiasi copia di un iteratore di input, non sarà possibile confrontare, dereferenziare o incrementare nessuna delle altre copie in modo sicuro.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 0b5c24761f176d9c256c1ef6aee85b25231cea2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655845"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332673"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Confronto tra runtime di concorrenza e altri modelli di concorrenza
 
@@ -33,7 +33,7 @@ I modelli di pianificazione di tipo preemptive e cooperativa rappresentano due m
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Pianificazione di tipo preemptive e cooperativa
 
-La*pianificazione di tipo preemptive* è un meccanismo round robin basato sulle priorità che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione per un periodo di tempo specificato, per poi passare a un'altra attività. La pianificazione di tipo preemptive è comune nei sistemi operativi multitasking come Windows *. La pianificazione cooperativa* è un meccanismo che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione finché l'attività non viene completata o non restituisce l'accesso alla risorsa. Il runtime di concorrenza usa la pianificazione cooperativa con l'utilità di pianificazione di tipo preemptive del sistema operativo per ottimizzare l'utilizzo delle risorse di elaborazione.
+La*pianificazione di tipo preemptive* è un meccanismo round robin basato sulle priorità che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione per un periodo di tempo specificato, per poi passare a un'altra attività. Pianificazione di tipo preemptive è comune nei sistemi operativi multitasking come Windows. *La pianificazione cooperativa* è un meccanismo che concede a ogni attività l'accesso esclusivo a una risorsa di calcolo fino a quando non al termine dell'attività o fino a quando l'attività restituisce l'accesso alla risorsa. Il runtime di concorrenza usa la pianificazione cooperativa con l'utilità di pianificazione di tipo preemptive del sistema operativo per ottimizzare l'utilizzo delle risorse di elaborazione.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Differenze tra le utilità di pianificazione di tipo preemptive e cooperativa
 

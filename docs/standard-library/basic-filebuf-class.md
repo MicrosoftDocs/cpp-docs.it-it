@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: fcf673d8e6d871a7920150b5f62fd3d62135b52c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500529"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332647"
 ---
 # <a name="basicfilebuf-class"></a>Classe basic_filebuf
 
@@ -504,11 +504,11 @@ Carattere da inserire nel buffer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la funzione non può essere eseguita correttamente, restituisce `traits_type::eof`. In caso contrario, restituisce **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Se la funzione non può essere eseguita correttamente, restituisce `traits_type::eof`. In caso contrario, restituisce **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(*\_Meta*).
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta reinserisce un elemento nel buffer di input e quindi lo imposta come elemento corrente (a cui punta il puntatore successivo). Se _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), l'elemento da reinserire è effettivamente quello già presente nel flusso prima dell'elemento corrente. In caso contrario, l'elemento viene sostituito da **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). La funzione può reinserire un elemento in vari modi:
+La funzione membro virtuale protetta reinserisce un elemento nel buffer di input e quindi lo imposta come elemento corrente (a cui punta il puntatore successivo). Se  *\_Meta* **= = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), l'elemento da reinserire è effettivamente quello già nel flusso prima dell'elemento corrente. In caso contrario, l'elemento viene sostituito da **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). La funzione può reinserire un elemento in vari modi:
 
 - Se è disponibile una posizione di reinserimento e l'elemento archiviato esiste risulta uguale a `ch`, può decrementare il puntatore successivo per il buffer di input.
 

@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443758"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522311"
 ---
 # <a name="options-atl-control-wizard"></a>Opzioni, Creazione guidata controllo ATL
-
-Inserisci qui "Riepilogo risultati di ricerca".
 
 Utilizzare questa pagina della procedura guidata per definire il tipo di controllo che si sta creando e il livello di supporto di interfaccia che contiene.
 
@@ -29,17 +27,17 @@ Il tipo di controllo da creare.
 
 - **Controllo composito**: un controllo ActiveX che può contenere, simile a una finestra di dialogo, altri controlli ActiveX o Windows. Un controllo composito include quanto segue:
 
-   - Un modello per la finestra di dialogo che implementa il controllo composito.
+  - Un modello per la finestra di dialogo che implementa il controllo composito.
 
-   - Una risorsa personalizzata, Registro di sistema, che registra automaticamente il controllo composito quando viene richiamato.
+  - Una risorsa personalizzata, Registro di sistema, che registra automaticamente il controllo composito quando viene richiamato.
 
-   - Una classe C++ che implementa il controllo composito.
+  - Una classe C++ che implementa il controllo composito.
 
-   - Un'interfaccia COM, esposta dal controllo composito.
+  - Un'interfaccia COM, esposta dal controllo composito.
 
-   - Una pagina HTML test che contiene il controllo composito.
+  - Una pagina HTML test che contiene il controllo composito.
 
-   Per impostazione predefinita, questo controllo imposta [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) su true, per indicare che si tratta di un controllo con finestra. Implementa una mappa di sink. Per altre informazioni, vedere [supporto per controlli DHTML](../../atl/atl-support-for-dhtml-controls.md).
+    Per impostazione predefinita, questo controllo imposta [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) su true, per indicare che si tratta di un controllo con finestra. Implementa una mappa di sink. Per altre informazioni, vedere [supporto per controlli DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Controllo DHTML**: controllo DHTML ATL una specifica interfaccia utente, utilizzando il codice HTML. La classe DHTML UI contiene una mappa COM. Per impostazione predefinita, questo controllo imposta [CComControlBase](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) su true, per indicare che si tratta di un controllo con finestra.
 

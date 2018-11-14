@@ -8,12 +8,12 @@ helpviewer_keywords:
 - PTR operator
 - operator PTR
 ms.assetid: df280f36-ca06-4578-b99d-0aa139b2b969
-ms.openlocfilehash: b6552b2611808fadafe54b330aa4825e63c56a9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87aa8ff044318d778f823827c451c0ad3332e279
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614097"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331997"
 ---
 # <a name="operator-ptr"></a>Operatore PTR
 
@@ -22,8 +22,8 @@ Forza l'operatore prima la *espressione* per essere considerata come se presenta
 ## <a name="syntax"></a>Sintassi
 
 > *tipo di* PTR *espressione*
-
-> [[*distanza*]] PTR *tipo*
+>
+> \[*distanza*] PTR *tipo*
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 1535c6beeaed9aadad89f06dbcbaf8ad38ddcc94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 437f78636d1fa75f5bb8e4304a347dc3b554c34d
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512775"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556263"
 ---
 # <a name="iopenrowsetimpl-class"></a>Classe IOpenRowsetImpl
 
@@ -52,11 +52,11 @@ La classe, derivata da `IOpenRowsetImpl`.
 
 ## <a name="remarks"></a>Note
 
-Il [IOpenRowset](/previous-versions/windows/desktop/ms716946) interfaccia è obbligatoria per un oggetto di sessione. Apre e restituisce un set di righe che include tutte le righe da una singola tabella di base o un indice.
+Il [IOpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716946(v=vs.85)) interfaccia è obbligatoria per un oggetto di sessione. Apre e restituisce un set di righe che include tutte le righe da una singola tabella di base o un indice.
 
 ## <a name="createrowset"></a> Iopenrowsetimpl:: CreateRowset
 
-Crea un oggetto set di righe. Non chiamato direttamente dall'utente. Visualizzare [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724) nel *riferimento per programmatori OLE DB.*
+Crea un oggetto set di righe. Non chiamato direttamente dall'utente. Visualizzare [IOpenRowset:: OPENROWSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) nel *riferimento per programmatori OLE DB.*
 
 ### <a name="syntax"></a>Sintassi
 
@@ -80,7 +80,7 @@ Un membro della classe modello che rappresenta la classe dell'utente del set di 
 *pRowsetObj*<br/>
 [out] Un puntatore a un oggetto set di righe. In genere non viene usato questo parametro, ma può essere utilizzato se è necessario eseguire altre operazioni sul set di righe prima di passarlo a un oggetto COM. La durata del *pRowsetObj* associato da *ppRowset*.
 
-Per altri parametri, vedere [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724) nel *riferimento per programmatori OLE DB.*
+Per altri parametri, vedere [IOpenRowset:: OPENROWSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) nel *riferimento per programmatori OLE DB.*
 
 ## <a name="openrowset"></a> Iopenrowsetimpl:: OPENROWSET
 
@@ -100,7 +100,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IOpenRowset:: OPENROWSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="remarks"></a>Note
 

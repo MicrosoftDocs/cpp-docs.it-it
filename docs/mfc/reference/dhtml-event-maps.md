@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 329b4176ad4d24651a41b5321c26318cf2af30e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547199"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519869"
 ---
 # <a name="dhtml-event-maps"></a>Mappe eventi DHTML
 
@@ -441,7 +441,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 
 ```
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -514,7 +513,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 
 ```
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -540,7 +538,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -566,7 +563,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONFOCUS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -592,7 +588,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONHELP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -618,7 +613,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -644,7 +638,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -670,7 +663,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONKEYUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -696,7 +688,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -722,7 +713,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -748,7 +738,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -774,7 +763,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -800,7 +788,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -826,7 +813,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONRESIZE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -852,7 +838,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONROWENTER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -878,7 +863,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -904,7 +888,6 @@ Usare questa macro per aggiungere una voce per il [mappa eventi DHTML](#begin_dh
 ```
 
 DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -972,7 +955,6 @@ Avvia la definizione di una mappa eventi DHTML e l'URL in una finestra di dialog
 
 ```
 BEGIN_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Note
@@ -993,7 +975,6 @@ Avvia la definizione di una mappa eventi DHTML incorporata in una finestra di di
 
 ```
 BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -1026,7 +1007,6 @@ Inizia la definizione di una mappa di voci di eventi URL in una finestra di dial
 
 ```
 BEGIN_URL_ENTRIES(className)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -1052,7 +1032,6 @@ Dichiara una mappa eventi DHTML e l'URL in una definizione di classe.
 
 ```
 DECLARE_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Note
@@ -1071,7 +1050,6 @@ Contrassegna la fine di una mappa eventi DHTML e l'URL.
 
 ```
 END_DHTML_URL_EVENT_MAP(className)
-
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -1093,7 +1071,6 @@ Contrassegna la fine di una mappa eventi DHTML incorporata.
 
 ```
 END_EMBED_DHTML_EVENT_MAP()
-
 ```
 
 ### <a name="example"></a>Esempio
@@ -1110,7 +1087,6 @@ Contrassegna la fine di una mappa di voci di eventi URL.
 
 ```
 END_URL_ENTRIES()
-
 ```
 
 ### <a name="example"></a>Esempio

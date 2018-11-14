@@ -30,12 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 0f2c0478ba5898ab369a04362734891f6d45cf42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9f44e9619b9c34c9424e0be78186d14f2d6a21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548538"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327135"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -96,12 +96,12 @@ Il *categoria* argomento specifica le parti di informazioni sulle impostazioni l
 
 |*categoria* flag|Applicazione|
 |-|-|
-**LC_ALL**|Tutte le categorie, come indicato di seguito.
-**LC_COLLATE**|Il **strcoll**, **stricoll**, **wcscoll**, **wcsicoll**, **strxfrm**, **_ strncoll**, **strnicoll**, **wcsncoll**, **wcsnicoll**, e **wcsxfrm** funzioni.
-**LC_CTYPE**|Le funzioni di gestione dei caratteri (tranne **isdigit**, **isxdigit**, **mbstowcs**, e **mbtowc**, che non sono interessate).
-**LC_MONETARY**|Informazioni di formattazione monetaria restituite dal **localeconv** (funzione).
-**LC_NUMERIC**|Carattere per le routine di output formattato del separatore decimale (ad esempio **printf**), per le routine di conversione dei dati e per le informazioni di formattazione non monetarie restituite dalle **localeconv**. Oltre al carattere del separatore decimale, **LC_NUMERIC** separatore set migliaia e il controllo del raggruppamento stringa restituita da [localeconv](localeconv.md).
-**LC_TIME**|Il **strftime** e **wcsftime** funzioni.
+| **LC_ALL** | Tutte le categorie, come indicato di seguito. |
+| **LC_COLLATE** | Il **strcoll**, **stricoll**, **wcscoll**, **wcsicoll**, **strxfrm**, **_ strncoll**, **strnicoll**, **wcsncoll**, **wcsnicoll**, e **wcsxfrm** funzioni. |
+| **LC_CTYPE** | Le funzioni di gestione dei caratteri (tranne **isdigit**, **isxdigit**, **mbstowcs**, e **mbtowc**, che non sono interessate). |
+| **LC_MONETARY** | Informazioni di formattazione monetaria restituite dal **localeconv** (funzione). |
+| **LC_NUMERIC** | Carattere per le routine di output formattato del separatore decimale (ad esempio **printf**), per le routine di conversione dei dati e per le informazioni di formattazione non monetarie restituite dalle **localeconv**. Oltre al carattere del separatore decimale, **LC_NUMERIC** separatore set migliaia e il controllo del raggruppamento stringa restituita da [localeconv](localeconv.md). |
+| **LC_TIME** | Il **strftime** e **wcsftime** funzioni. |
 
 Questa funzione convalida il parametro di categoria. Se il parametro di categoria non è uno dei valori forniti nella tabella precedente, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposterà **errno** al **EINVAL** e restituisce **NULL**.
 

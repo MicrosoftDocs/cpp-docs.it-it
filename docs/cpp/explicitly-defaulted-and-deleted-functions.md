@@ -2,12 +2,12 @@
 title: Funzioni impostate come predefinite ed eliminate in modo esplicito
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: a090bd1b1a60dd7a5a5350fcf81dec7f17e083c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662605"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327018"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funzioni impostate come predefinite ed eliminate in modo esplicito
 
@@ -36,12 +36,12 @@ Ciò risulta utile per i tipi semplici, ma i tipi complessi stessi definiscono s
    - Non viene generato automaticamente alcun operatore di assegnazione di spostamento.
 
 > [!NOTE]
->  Lo standard C++11 specifica inoltre le regole aggiuntive seguenti:
+> Lo standard C++11 specifica inoltre le regole aggiuntive seguenti:
 >
 > - Se un costruttore di copia o distruttore è dichiarato in modo esplicito, la generazione automatica dell'operatore di assegnazione di copia è deprecata.
 > - Se un operatore di assegnazione di copia o un distruttore è dichiarato in modo esplicito, la generazione automatica del costruttore di copia è deprecata.
 >
->  In entrambi i casi, in Visual Studio si continua automaticamente a generare le funzioni necessarie in modo implicito e non viene generato alcun avviso.
+> In entrambi i casi, in Visual Studio si continua automaticamente a generare le funzioni necessarie in modo implicito e non viene generato alcun avviso.
 
 Le conseguenze di tali regole possono inoltre comportare la creazione di gerarchie di oggetti. Ad esempio, se per qualsiasi motivo una classe di base non ha un costruttore predefinito che è possibile chiamato da una classe di derivazione, vale a dire, un **pubblico** o **protetti** costruttore che non accetta parametri, ovvero quindi una classe che deriva da non riesce a generare automaticamente il proprio costruttore predefinito.
 

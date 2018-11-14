@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 707287ea7abe255409911f5388cd1f96d976802b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454635"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326732"
 ---
 # <a name="ismbc-routines"></a>Routines _ismbc
 
@@ -42,7 +42,7 @@ Il valore di output è interessato dall'impostazione della categoria `LC_CTYPE` 
 |Routine|Condizione di test|Esempio della tabella codici 932|
 |-------------|--------------------|---------------------------|
 |[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Carattere alfanumerico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una lettera in inglese ASCII: vedere gli esempi per `_ismbcdigit` e `_ismbcalpha`.|
-|[_ismbcalpha, _ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|Carattere alfabetico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a un byte di un carattere ASCII inglese (vedere gli esempi per `_ismbcupper` e `_ismbclower`), oppure è una lettera dell'alfabeto Katakana (0xA6<=`c`<=0xDF).|
+|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Carattere alfabetico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a un byte di un carattere ASCII inglese (vedere gli esempi per `_ismbcupper` e `_ismbclower`), oppure è una lettera dell'alfabeto Katakana (0xA6<=`c`<=0xDF).|
 |[_ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Carattere numerico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una cifra ASCII: 0x30<=`c`<=0x39.|
 |[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Carattere grafico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di qualsiasi carattere stampabile ASCII o katakana, ad eccezione dello spazio ( ). Vedere gli esempi per `_ismbcdigit`, `_ismbcalpha` e `_ismbcpunct`.|
 |[_ismbclegal, _ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Carattere multibyte valido|Restituisce un valore diverso da zero se e solo se il primo byte di `c` è compreso negli intervalli 0x81 - 0x9F o 0xE0 - 0xFC, mentre il secondo byte è compreso negli intervalli 0x40 - 0x7E o 0x80 - FC.|

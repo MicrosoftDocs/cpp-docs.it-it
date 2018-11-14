@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-ms.openlocfilehash: c5c6e0edcb3136986cfd8e05f3d5217b3d021fa7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e368a1f6be51d37cdfe7ef352fca69e987fed62d
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529246"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328565"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
@@ -23,7 +23,7 @@ Scrive il valore specificato per il campo specificato nella struttura di control
 ## <a name="syntax"></a>Sintassi
 
 ```
-unsigned char __vmx_vmwrite( 
+unsigned char __vmx_vmwrite(
    size_t Field,
    size_t FieldValue
 );

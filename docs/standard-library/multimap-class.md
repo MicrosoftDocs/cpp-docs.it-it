@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 11f7362689e8dcfcf8272786050439f850f81e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0373543dcc47425f5d89ee3a85940c619bfc6182
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457998"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525431"
 ---
 # <a name="multimap-class"></a>Classe multimap
 
@@ -515,7 +515,7 @@ Il numero di elementi le cui chiavi di ordinamento corrispondono alla chiave del
 
 La funzione membro restituisce il numero di elementi nell'intervallo
 
-[ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )
+\[ lower_bound (*key*), upper_bound (*chiave*))
 
 che hanno un valore di chiave *chiave*.
 
@@ -790,7 +790,6 @@ int main()
     print(m1);
     cout << endl;
 }
-
 ```
 
 ## <a name="emplace_hint"></a>  multimap::emplace_hint
@@ -1098,7 +1097,6 @@ int main()
     findit(m1, 45);
     findit(m1, 6);
 }
-
 ```
 
 ## <a name="get_allocator"></a>  multimap::get_allocator
@@ -1331,7 +1329,6 @@ int main()
     print(m4);
     cout << endl;
 }
-
 ```
 
 ## <a name="iterator"></a>  multimap::iterator
@@ -1787,7 +1784,6 @@ int main()
     cout << endl;
 
 }
-
 ```
 
 ## <a name="op_eq"></a>  multimap::operator=

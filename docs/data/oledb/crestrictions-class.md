@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 0a6b6b10d4275cbfc2cd99180aa472d9476b17e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565135"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556517"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 
@@ -92,7 +92,7 @@ Uno dei valori di HRESULT standard.
 
 È possibile specificare un massimo di sette restrizioni su un set di righe dello schema.
 
-Visualizzare [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) per informazioni sulle restrizioni definite in ogni set di righe dello schema.
+Visualizzare [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) per informazioni sulle restrizioni definite in ogni set di righe dello schema.
 
 ## <a name="see-also"></a>Vedere anche
 

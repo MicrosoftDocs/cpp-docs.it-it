@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8bd31070588f80c29589767ef68b221bf15f0570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482754"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326539"
 ---
 # <a name="cdataconnection-class"></a>Classe CDataConnection
 
@@ -126,7 +126,7 @@ Crea e Inizializza un `CDataConnection` oggetto.
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-CDataConnection(); 
+CDataConnection();
 CDataConnection(const CDataConnection &ds);
 ```
 

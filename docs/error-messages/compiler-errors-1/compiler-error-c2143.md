@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: 0a7cbad52697ccedac75af73012f6dc69eec5a25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582611"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520114"
 ---
 # <a name="compiler-error-c2143"></a>Errore del compilatore C2143
 
@@ -33,7 +33,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 Per impostazione predefinita, in C++ si presuppone che `Ty::PutFuncType` non è un modello; pertanto, `<` viene interpretato come segno minore di.  È necessario indicare al compilatore in modo esplicito che `PutFuncType` è un modello in modo da poter analizzare correttamente la parentesi angolare. Per correggere questo errore, utilizzare la parola chiave `template` sul nome del tipo dipendente, come illustrato di seguito:
@@ -46,7 +45,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 C2143 può verificarsi quando si **/clr** viene usato e un `using` direttiva dispone di un errore di sintassi:

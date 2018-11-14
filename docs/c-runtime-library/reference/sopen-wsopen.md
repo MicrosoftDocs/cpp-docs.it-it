@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-ms.openlocfilehash: 4bb728b8e48190eb01e47dc9cd7de65a350f612d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3773550fd32df75f0a3819767de1171daebaf0f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626132"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330125"
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 
@@ -82,11 +82,11 @@ Se *nomefile* oppure *oflag* è un **NULL** puntatore, o se *oflag* o *shflag* n
 
 |Valore errno|Condizione|
 |-|-|
-**EACCES**|Il percorso specificato è una directory o il file è di sola lettura, ma è stata tentata un'operazione di apertura in scrittura.
-**EEXIST**|**O_creat** e **o_excl** flag, sono stati specificati ma *filename* esiste già.
-**EINVAL**|Non è valido *oflag* oppure *shflag* argomento.
-**EMFILE**|Non sono disponibili altri descrittori di file.
-**ENOENT**|Il file o il percorso non è stato trovato.
+| **EACCES** | Il percorso specificato è una directory o il file è di sola lettura, ma è stata tentata un'operazione di apertura in scrittura. |
+| **EEXIST** | **O_creat** e **o_excl** flag, sono stati specificati ma *filename* esiste già. |
+| **EINVAL** | Non è valido *oflag* oppure *shflag* argomento. |
+| **EMFILE** | Non sono disponibili altri descrittori di file. |
+| **ENOENT** | Il file o il percorso non è stato trovato. |
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -104,23 +104,23 @@ L'espressione integer *oflag* è costituita dalla combinazione di uno o più del
 
 |*oflag* costante|Comportamento|
 |-|-|
-**_O_APPEND**|Sposta il puntatore a file alla fine del file prima di ogni operazione di scrittura.
-**O_BINARY**|Apre il file in modalità binaria (non convertita). Vedere [fopen](fopen-wfopen.md) per una descrizione della modalità binaria.
-**O_CREAT**|Crea e apre un nuovo file per la scrittura. Non ha alcun effetto se il file specificato da *filename* esiste. Il *pmode* argomento è obbligatorio quando **o_creat** è specificato.
-**O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|Crea un file come temporaneo e se possibile non lo scarica su disco. Il *pmode* argomento è obbligatorio quando **o_creat** è specificato.
-**O_CREAT** &AMP;#124; **_O_TEMPORARY**|Crea un file come temporaneo; il file viene eliminato quando l'ultimo descrittore del file viene chiuso. Il *pmode* argomento è obbligatorio quando **o_creat** è specificato.
-**O_CREAT**&AMP;#124; ` _O_EXCL`|Restituisce un errore se un file specificato da *filename* esiste. Si applica solo se abbinata **o_creat**.
-**O_NOINHERIT**|Impedisce la creazione di un descrittore di file condiviso.
-**_O_RANDOM**|Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco.
-**_O_RDONLY**|Apre un file per la sola lettura. Non è possibile specificare con **o_rdwr** oppure **o_wronly**.
-**O_RDWR**|Apre un file per lettura e scrittura. Non è possibile specificare con **o_rdonly** oppure **o_wronly**.
-**_O_SEQUENTIAL**|Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco.
-**_O_TEXT**|Apre un file in modalità testo (convertito). Per altre informazioni, vedere [I/O file in modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [fopen](fopen-wfopen.md).
-**O_TRUNC**|Apre un file e lo tronca a lunghezza zero; il file deve disporre dell'autorizzazione di scrittura. Non è possibile specificare con **o_rdonly**. **O_trunc** abbinata **o_creat** apre un file esistente o crea un file. **Nota:** il **o_trunc** flag distrugge il contenuto del file specificato.
-**O_WRONLY**|Apre un file per la sola scrittura. Non è possibile specificare con **o_rdonly** oppure **o_rdwr**.
-**_O_U16TEXT**|Apre un file in modalità Unicode UTF-16.
-**_O_U8TEXT**|Apre un file in modalità Unicode UTF-8.
-**_O_WTEXT**|Apre un file in modalità Unicode.
+| **_O_APPEND** | Sposta il puntatore a file alla fine del file prima di ogni operazione di scrittura. |
+| **O_BINARY** | Apre il file in modalità binaria (non convertita). Vedere [fopen](fopen-wfopen.md) per una descrizione della modalità binaria. |
+| **O_CREAT** | Crea e apre un nuovo file per la scrittura. Non ha alcun effetto se il file specificato da *filename* esiste. Il *pmode* argomento è obbligatorio quando **o_creat** è specificato. |
+| **O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Crea un file come temporaneo e se possibile non lo scarica su disco. Il *pmode* argomento è obbligatorio quando **o_creat** è specificato. |
+| **O_CREAT** &AMP;#124; **_O_TEMPORARY** | Crea un file come temporaneo; il file viene eliminato quando l'ultimo descrittore del file viene chiuso. Il *pmode* argomento è obbligatorio quando **o_creat** è specificato. |
+| **O_CREAT**&AMP;#124; ` _O_EXCL` | Restituisce un errore se un file specificato da *filename* esiste. Si applica solo se abbinata **o_creat**. |
+| **O_NOINHERIT** | Impedisce la creazione di un descrittore di file condiviso. |
+| **_O_RANDOM** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
+| **_O_RDONLY** | Apre un file per la sola lettura. Non è possibile specificare con **o_rdwr** oppure **o_wronly**. |
+| **O_RDWR** | Apre un file per lettura e scrittura. Non è possibile specificare con **o_rdonly** oppure **o_wronly**. |
+| **_O_SEQUENTIAL** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso sequenziale dal disco. |
+| **_O_TEXT** | Apre un file in modalità testo (convertito). Per altre informazioni, vedere [I/O file in modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [fopen](fopen-wfopen.md). |
+| **O_TRUNC** | Apre un file e lo tronca a lunghezza zero; il file deve disporre dell'autorizzazione di scrittura. Non è possibile specificare con **o_rdonly**. **O_trunc** abbinata **o_creat** apre un file esistente o crea un file. **Nota:** il **o_trunc** flag distrugge il contenuto del file specificato. |
+| **O_WRONLY** | Apre un file per la sola scrittura. Non è possibile specificare con **o_rdonly** oppure **o_rdwr**. |
+| **_O_U16TEXT** | Apre un file in modalità Unicode UTF-16. |
+| **_O_U8TEXT** | Apre un file in modalità Unicode UTF-8. |
+| **_O_WTEXT** | Apre un file in modalità Unicode. |
 
 Per specificare la modalità di accesso ai file, è necessario specificare **o_rdonly**, **o_rdwr**, o **o_wronly**. Non vi è alcun valore predefinito per la modalità d'accesso.
 
@@ -132,18 +132,18 @@ L'argomento *shflag* è un'espressione costante costituita da una delle costanti
 
 |*shflag* costante|Comportamento|
 |-|-|
-**SH_DENYRW**|Nega l'accesso in lettura e scrittura a un file.
-**SH_DENYWR**|Nega l'accesso in scrittura a un file.
-**SH_DENYRD**|Nega l'accesso in lettura a un file.
-**SH_DENYNO**|Consente l'accesso in lettura e scrittura.
+| **SH_DENYRW** | Nega l'accesso in lettura e scrittura a un file. |
+| **SH_DENYWR** | Nega l'accesso in scrittura a un file. |
+| **SH_DENYRD** | Nega l'accesso in lettura a un file. |
+| **SH_DENYNO** | Consente l'accesso in lettura e scrittura. |
 
 Il *pmode* argomento è obbligatorio solo quando **o_creat** è specificato. Se il file non esiste, *pmode* specifica impostazioni di autorizzazione del file, che vengono impostate quando il nuovo file viene chiuso la prima volta. In caso contrario, *pmode* viene ignorato. *pmode* è un'espressione integer che contiene una o entrambe le costanti manifeste **s_iwrite** e **s_iread**, che sono definiti nella \<sys\stat.h. >. Quando vengono fornite entrambe le costanti, queste sono combinate con l'operatore OR bit per bit. Il significato dei *pmode* è come indicato di seguito.
 
 |*pmode*|Significato|
 |-|-|
-**S_IREAD**|Solo lettura consentita.
-**S_IWRITE**|Scrittura consentita. (In effetti, consente la lettura e la scrittura)
-**S_IREAD** &AMP;#124; **S_IWRITE**|Lettura e scrittura consentite.
+| **S_IREAD** | Solo lettura consentita. |
+| **S_IWRITE** | Scrittura consentita. (In effetti, consente la lettura e la scrittura) |
+| **S_IREAD** &AMP;#124; **S_IWRITE** | Lettura e scrittura consentite. |
 
 Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Nel sistema operativo Windows, tutti i file sono leggibili; non è possibile concedere l'autorizzazione di sola scrittura. Di conseguenza, le modalità **s_iwrite** e **s_iread** | **s_iwrite** sono equivalenti.
 

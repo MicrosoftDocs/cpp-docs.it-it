@@ -25,12 +25,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618491"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327551"
 ---
 # <a name="qsort"></a>qsort
 
@@ -41,7 +41,7 @@ Esegue un ordinamento rapido. È disponibile una versione più sicura di questa 
 ```C
 void qsort(
    void *base,
-   size_t num,
+   size_t number,
    size_t width,
    int (__cdecl *compare )(const void *, const void *)
 );
@@ -49,7 +49,7 @@ void qsort(
 
 ### <a name="parameters"></a>Parametri
 
-<br/>
+*base*<br/>
 Inizio della matrice di destinazione.
 
 *Numero*<br/>
@@ -68,7 +68,7 @@ Il **qsort** funzione implementa un algoritmo di ordinamento rapido per ordinare
 **qsort** chiama il *confrontare* routine uno o più volte durante l'ordinamento e passa i puntatori a due elementi di matrice per ogni chiamata.
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 La routine confronta gli elementi e restituisce uno dei valori seguenti.
@@ -81,7 +81,7 @@ La routine confronta gli elementi e restituisce uno dei valori seguenti.
 
 La matrice viene ordinata in ordine crescente, come definito dalla funzione di confronto. Per ordinare una matrice in ordine decrescente, invertire il senso di "maggiore di" e "minore di" nella funzione di confronto.
 
-Questa funzione convalida i relativi parametri. Se *confrontare* oppure *numero* viene **NULL**, oppure se *base* è **NULL** e **numero* è diverso da zero, oppure se *larghezza* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce e **errno** è impostata su **EINVAL**.
+Questa funzione convalida i relativi parametri. Se *confrontare* oppure *numero* viene **NULL**, oppure se *base* è **NULL** e *numero* è diverso da zero, oppure se *larghezza* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce e **errno** è impostata su **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

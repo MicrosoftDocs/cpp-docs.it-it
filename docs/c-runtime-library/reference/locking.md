@@ -25,12 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523809"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327044"
 ---
 # <a name="locking"></a>_locking
 
@@ -63,10 +63,10 @@ Numero di byte da bloccare.
 
 |Valore errno|Condizione|
 |-|-|
-**EACCES**|Violazione del blocco (file già bloccato o sbloccato).
-**EBADF**|Descrittore di file non valido.
-**EDEADLOCK**|Violazione di blocco. Restituito quando la **lk_lock** oppure **lk_rlck** flag è specificato e il file non può essere bloccato dopo 10 tentativi.
-**EINVAL**|È stato assegnato un argomento non valido **Locking**.
+| **EACCES** | Violazione del blocco (file già bloccato o sbloccato). |
+| **EBADF** | Descrittore di file non valido. |
+| **EDEADLOCK** | Violazione di blocco. Restituito quando la **lk_lock** oppure **lk_rlck** flag è specificato e il file non può essere bloccato dopo 10 tentativi. |
+| **EINVAL** | È stato assegnato un argomento non valido **Locking**. |
 
 Se l'errore è causato da un parametro non corretto, ad esempio un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
@@ -78,11 +78,11 @@ L'argomento *mode* deve essere una delle seguenti costanti manifeste, definite i
 
 |*modalità* valore|Effetto|
 |-|-|
-**LK_LOCK**|Blocca i byte specificati. Se i byte non possono essere bloccati, il programma ripeterà immediatamente il tentativo dopo 1 secondo. Se, dopo 10 tentativi, i byte non possono essere bloccati, la costante restituisce un errore.
-**LK_NBLCK**|Blocca i byte specificati. Se i byte non possono essere bloccati, la costante restituisce un errore.
-**LK_NBRLCK**|Uguale allo **lk_nblck**.
-**LK_RLCK**|Uguale allo **lk_lock**.
-**LK_UNLCK**|Sblocca i byte specificati, che devono essere stati bloccati in precedenza.
+| **LK_LOCK** | Blocca i byte specificati. Se i byte non possono essere bloccati, il programma ripeterà immediatamente il tentativo dopo 1 secondo. Se, dopo 10 tentativi, i byte non possono essere bloccati, la costante restituisce un errore. |
+| **LK_NBLCK** | Blocca i byte specificati. Se i byte non possono essere bloccati, la costante restituisce un errore. |
+| **LK_NBRLCK** | Uguale allo **lk_nblck**. |
+| **LK_RLCK** | Uguale allo **lk_lock**. |
+| **LK_UNLCK** | Sblocca i byte specificati, che devono essere stati bloccati in precedenza. |
 
 È possibile bloccare più aree di un file che non si sovrappongano. Un'area da sbloccare deve essere stata bloccata in precedenza. **Locking** unisce aree adiacenti; se due aree bloccate sono adiacenti, ogni area deve essere sbloccata separatamente. Le aree devono essere bloccate solo brevemente e devono essere sbloccate prima di chiudere un file o di uscire dal programma.
 

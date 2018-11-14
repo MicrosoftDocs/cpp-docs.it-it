@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-ms.openlocfilehash: 698ce137ba592bc88916e4ba2249d950120b0722
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 218fb14c118cb9208cdfc29176897543f680b593
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518495"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329722"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 
@@ -24,13 +24,13 @@ Ruotare i valori di input a destra del bit meno significativo di un numero speci
 ## <a name="syntax"></a>Sintassi
 
 ```
-unsigned char _rotr8( 
-   unsigned char value, 
-   unsigned char shift 
+unsigned char _rotr8(
+   unsigned char value,
+   unsigned char shift
 );
-unsigned short _rotr16( 
-   unsigned short value, 
-   unsigned char shift 
+unsigned short _rotr16(
+   unsigned short value,
+   unsigned char shift
 );
 ```
 

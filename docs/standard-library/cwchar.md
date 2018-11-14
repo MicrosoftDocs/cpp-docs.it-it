@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cwchar header
 ms.assetid: 7380b1bf-a220-46e5-b832-9f9f4e543aac
-ms.openlocfilehash: 1b0dcfeb625369822e73addfff5485525febfa43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 783119d51fb50706cc2f85b650f42b998b557146
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519739"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518064"
 ---
 # <a name="ltcwchargt"></a>&lt;cwchar&gt;
 
@@ -21,7 +21,6 @@ Include l'intestazione della libreria C standard \<wchar.h> e aggiunge i nomi as
 
 ```cpp
 #include <cwchar>
-
 ```
 
 ## <a name="remarks"></a>Note

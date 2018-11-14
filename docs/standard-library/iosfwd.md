@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: 6b259a0c2eaf816effaf72104e4cdf344a43c71c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b21e6e92c1fa1d01826ad8f6805d9a52b0fde42
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619310"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518320"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
@@ -21,7 +21,6 @@ Dichiara riferimenti in avanti a varie classi modello usate nelle intestazioni i
 
 ```cpp
 #include <iosfwd>
-
 ```
 
 ## <a name="typedefs"></a>Definizioni typedef

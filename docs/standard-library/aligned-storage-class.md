@@ -7,12 +7,12 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 0da2b206cd40f84ac33860c84bbb6a86f6f47fc0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a3145cb1837a3ea95c48022db391ddbccf55199
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477285"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51517163"
 ---
 # <a name="alignedstorage-class"></a>Classe aligned_storage
 
@@ -57,7 +57,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output

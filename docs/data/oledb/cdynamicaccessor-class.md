@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: ba456f11973a33eb3b65b8de940e5be76b821f89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12953da220016c7f66e9a2f01b4b8860d2e508b8
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461476"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557024"
 ---
 # <a name="cdynamicaccessor-class"></a>Classe CDynamicAccessor
 
@@ -156,7 +156,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|
 |[AddBindEntry](#addbindentry)|Aggiunge una voce binding alle colonne di output quando si sostituisce la funzione di accesso predefinito.|
 |[CDynamicAccessor](#cdynamicaccessor)|Crea e inizializza il `CDynamicAccessor` oggetto.|
-|[Chiudi](#close)|Separa tutte le colonne, libera la memoria allocata e rilascia il [IAccessor](/previous-versions/windows/desktop/ms719672) puntatore a interfaccia nella classe.|
+|[Chiudi](#close)|Separa tutte le colonne, libera la memoria allocata e rilascia il [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) puntatore a interfaccia nella classe.|
 |[GetBlobHandling](#getblobhandling)|Recupera il BLOB di gestione di valore per la riga corrente.|
 |[GetBlobSizeLimit](#getblobsizelimit)|Recupera le dimensioni BLOB massime in byte.|
 |[GetBookmark](#getbookmark)|Recupera il segnalibro per la riga corrente.|
@@ -196,7 +196,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>Parametri
 
 *Informazioni*<br/>
-[in] Oggetto `DBCOLUMNINFO` struttura che contiene informazioni sulla colonna. Vedere "Strutture DBCOLUMNINFO" nella [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) nel *riferimento per programmatori OLE DB*.
+[in] Oggetto `DBCOLUMNINFO` struttura che contiene informazioni sulla colonna. Vedere "Strutture DBCOLUMNINFO" nella [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -233,7 +233,7 @@ Se si utilizza il costruttore per inizializzare il `CDynamicAccessor` dell'ogget
 
 ## <a name="close"></a> CDynamicAccessor:: Close
 
-Separa tutte le colonne, libera la memoria allocata e rilascia il [IAccessor](/previous-versions/windows/desktop/ms719672) puntatore a interfaccia nella classe.
+Separa tutte le colonne, libera la memoria allocata e rilascia il [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) puntatore a interfaccia nella classe.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -313,7 +313,7 @@ Recupera le caratteristiche di colonna.
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-bool GetColumnFlags(DBORDINAL nColumn, 
+bool GetColumnFlags(DBORDINAL nColumn,
    DBCOLUMNFLAGS* pFlags) const throw();
 ```
 
@@ -323,7 +323,7 @@ bool GetColumnFlags(DBORDINAL nColumn, 
 [in] Numero di colonna. Numeri di colonna partono da 1. Un valore pari a 0 fa riferimento per la colonna del segnalibro, se presente.
 
 *pFlags*<br/>
-[out] Puntatore a una maschera di bit che descrive le caratteristiche della colonna. Vedere "Tipo enumerato DBCOLUMNFLAGS" nella [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) nel *riferimento per programmatori OLE DB*.
+[out] Puntatore a una maschera di bit che descrive le caratteristiche della colonna. Vedere "Tipo enumerato DBCOLUMNFLAGS" nella [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -340,22 +340,22 @@ Restituisce i metadati della colonna necessari per la maggior parte dei consumat
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-HRESULT GetColumnInfo(IRowset* pRowset, 
-   DBORDINAL* pColumns, 
-   DBCOLUMNINFO** ppColumnInfo, 
+HRESULT GetColumnInfo(IRowset* pRowset,
+   DBORDINAL* pColumns,
+   DBCOLUMNINFO** ppColumnInfo,
    OLECHAR** ppStringsBuffer) throw();
 ```
 
 #### <a name="parameters"></a>Parametri
 
 *pRowset*<br/>
-[in] Un puntatore per il [IRowset](/previous-versions/windows/desktop/ms720986) interfaccia.
+[in] Un puntatore per il [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) interfaccia.
 
 *pColumns*<br/>
 [out] Puntatore alla memoria in cui restituire il numero di colonne nel set di righe; Questo numero include la colonna del segnalibro, se presente.
 
 *ppColumnInfo*<br/>
-[out] Puntatore alla memoria in cui restituire una matrice di `DBCOLUMNINFO` strutture. Vedere "Strutture DBCOLUMNINFO" nella [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) nel *riferimento per programmatori OLE DB*.
+[out] Puntatore alla memoria in cui restituire una matrice di `DBCOLUMNINFO` strutture. Vedere "Strutture DBCOLUMNINFO" nella [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 *ppStringsBuffer*<br/>
 [out] Un puntatore alla memoria in cui si desidera restituire un puntatore alla risorsa di archiviazione per tutti i valori stringa (nomi utilizzati all'interno *columnid* o per *pwszName*) all'interno di un singolo blocco di allocazione.
@@ -366,7 +366,7 @@ Uno dei valori di HRESULT standard.
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) nel *riferimento per programmatori OLE DB* per informazioni sui tipi di dati `DBORDINAL`, `DBCOLUMNINFO`, e `OLECHAR`.
+Visualizzare [IColumnsInfo:: GetColumnInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) nel *riferimento per programmatori OLE DB* per informazioni sui tipi di dati `DBORDINAL`, `DBCOLUMNINFO`, e `OLECHAR`.
 
 ## <a name="getcolumnname"></a> CDynamicAccessor:: Getcolumnname
 
@@ -394,7 +394,7 @@ Recupera il tipo di dati di una colonna specificata.
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-bool GetColumnType(DBORDINAL nColumn, 
+bool GetColumnType(DBORDINAL nColumn,
    DBTYPE* pType) const throw();
 ```
 
@@ -417,13 +417,13 @@ Recupera la lunghezza della colonna specificata.
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-bool GetLength(DBORDINAL nColumn, 
+bool GetLength(DBORDINAL nColumn,
    DBLENGTH* pLength) const throw();
 
-bool GetLength(const CHAR* pColumnName, 
+bool GetLength(const CHAR* pColumnName,
    DBLENGTH* pLength) const throw();
 
-bool GetLength(const WCHAR* pColumnName, 
+bool GetLength(const WCHAR* pColumnName,
    DBLENGTH* pLength) const throw();
 ```
 
@@ -479,7 +479,7 @@ Recupera lo stato della colonna specificata.
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-bool GetStatus(DBORDINAL nColumn, 
+bool GetStatus(DBORDINAL nColumn,
    DBSTATUS* pStatus) const throw();
 
 bool GetStatus(const CHAR* pColumnName,
@@ -498,7 +498,7 @@ bool GetStatus(const WCHAR* pColumnName,
 [in] Puntatore a una stringa di caratteri che contiene il nome della colonna.
 
 *pStatus*<br/>
-[out] Puntatore alla variabile che contiene lo stato della colonna. Visualizzare [DBSTATUS](/previous-versions/windows/desktop/ms722617) nel *riferimento per programmatori OLE DB* per altre informazioni.
+[out] Puntatore alla variabile che contiene lo stato della colonna. Visualizzare [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -608,13 +608,13 @@ Imposta la lunghezza della colonna specificata.
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-bool SetLength(DBORDINAL nColumn, 
+bool SetLength(DBORDINAL nColumn,
    DBLENGTH nLength)throw();
 
-bool SetLength(const CHAR* pColumnName, 
+bool SetLength(const CHAR* pColumnName,
    DBLENGTH nLength) throw();
 
-bool SetLength(const WCHAR* pColumnName, 
+bool SetLength(const WCHAR* pColumnName,
    DBLENGTH nLength) throw();
 ```
 
@@ -640,13 +640,13 @@ Imposta lo stato della colonna specificata.
 ### <a name="syntax"></a>Sintassi
 
 ```cpp
-bool SetStatus(DBORDINAL nColumn, 
+bool SetStatus(DBORDINAL nColumn,
    DBSTATUS status)throw();
 
-bool SetStatus(const CHAR* pColumnName, 
+bool SetStatus(const CHAR* pColumnName,
    DBSTATUS status) throw();
 
-bool SetStatus(const WCHAR* pColumnName, 
+bool SetStatus(const WCHAR* pColumnName,
    DBSTATUS status) throw();
 ```
 
@@ -656,7 +656,7 @@ bool SetStatus(const WCHAR* pColumnName, 
 [in] Numero di colonna. Numeri di colonna partono da 1. Un valore pari a 0 fa riferimento per la colonna del segnalibro, se presente.
 
 *status*<br/>
-[in] Stato della colonna. Visualizzare [DBSTATUS](/previous-versions/windows/desktop/ms722617) nel *riferimento per programmatori OLE DB* per altre informazioni.
+[in] Stato della colonna. Visualizzare [DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
 *pColumnName*<br/>
 [in] Puntatore a una stringa di caratteri che contiene il nome della colonna.
@@ -673,16 +673,16 @@ Archivia i dati a una colonna specificata.
 
 ```cpp
 template <class ctype>
-bool SetValue( 
-   DBORDINAL nColumn, 
+bool SetValue(
+   DBORDINAL nColumn,
    constctype& data) throw( );
 
-template <class ctype>  
-bool SetValue( 
-   const CHAR * pColumnName, 
+template <class ctype> 
+bool SetValue(
+   const CHAR * pColumnName,
    const ctype& data) throw( );
 
-template <class ctype> 
+template <class ctype>
 bool SetValue(
    const WCHAR *pColumnName,
    const ctype& data) throw( );

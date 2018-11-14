@@ -2,12 +2,12 @@
 title: Aggiornare il codice a Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 5e417df380ff2239b7c09ba32cc02b784e9343d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668611"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331750"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Aggiornare il codice a Universal CRT
 
@@ -37,7 +37,7 @@ Poiché la libreria UCRT ora è un componente del sistema operativo Microsoft Wi
 
 È possibile usare la libreria UCRT in qualsiasi versione di Windows supportata da Visual Studio 2015 o Visual Studio 2017. La libreria può essere ridistribuita usando un pacchetto vcredist per le versioni supportate di Windows diverse da Windows 10. I pacchetti vcredist includono i componenti UCRT e li installano automaticamente nei sistemi operativi Windows su cui non sono installati per impostazione predefinita. Per altre informazioni, vedere [Ridistribuzione di file Visual C++](../ide/redistributing-visual-cpp-files.md).
 
-La distribuzione app-local della libreria UCRT è supportata, anche se non è consigliabile per motivi di prestazioni e di sicurezza. Le DLL per la distribuzione app-local e sono incluse come parte di Windows SDK, nella sottodirectory **redist**. Le DLL necessarie includono ucrtbase.dll e un set di DLL di **inoltro APISet** denominato api-ms-win-_subset_.dll. Il set di DLL necessarie in ogni sistema operativo varia, quindi si consiglia di includere tutte le DLL quando si usa la distribuzione app-local. Per altri dettagli e suggerimenti relativi alla distribuzione app-local, vedere [Distribuzione in Visual C++](../ide/deployment-in-visual-cpp.md).
+La distribuzione app-local della libreria UCRT è supportata, anche se non è consigliabile per motivi di prestazioni e di sicurezza. Le DLL per la distribuzione app-local e sono incluse come parte di Windows SDK, nella sottodirectory **redist**. Le DLL necessarie includono ucrtbase.dll e un set di DLL di **inoltro APISet** denominato api-ms-win-_subset_.dll. Il set di DLL necessarie in ogni sistema operativo varia, quindi si consiglia di includere tutte le DLL quando si usa la distribuzione app-local. Per altri dettagli e suggerimenti relativi alla distribuzione app-local, vedere [Distribuzione in Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Modifiche a funzioni e macro di Universal CRT
 

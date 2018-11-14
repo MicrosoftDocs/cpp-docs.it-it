@@ -23,12 +23,12 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-ms.openlocfilehash: d28b9ec47108f7051a908f874584bbfddf5d6a3d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 700f710e6d94f48b03697325bb720dbc539fe04e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605166"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331022"
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 
@@ -37,8 +37,8 @@ Ottiene il valore di errore restituito dal sistema operativo prima che venga con
 ## <a name="syntax"></a>Sintassi
 
 ```C
-errno_t _get_doserrno( 
-   int * pValue 
+errno_t _get_doserrno(
+   int * pValue
 );
 ```
 

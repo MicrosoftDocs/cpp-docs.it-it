@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-ms.openlocfilehash: 9bb39a668605276a82117c1f0a8fe6dd2db20eea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 155f1868123514dfec89ab448ef22f2da225c4d3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546250"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521472"
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias e typedef (C++)
 
@@ -68,7 +68,6 @@ using func = void(*)(int);
 // func can be assigned to a function pointer value
 void actual_function(int arg) { /* some code */ }
 func fptr = &actual_function;
-
 ```
 
 Una limitazione del **typedef** meccanismo è che non funziona con i modelli. Tuttavia, la sintassi di alias di tipo in C++11 consente la creazione di modelli di alias:
@@ -78,7 +77,6 @@ template<typename T> using ptr = T*;
 
 // the name 'ptr<T>' is now an alias for pointer to T
 ptr<int> ptr_int;
-
 ```
 
 ## <a name="example"></a>Esempio

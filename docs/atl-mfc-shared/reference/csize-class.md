@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: a0245862fe90c108b8ffc038b723a8b5bb62a665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7451b462087d6430c642ddbe3b7cf8141a792f2e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431911"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329371"
 ---
 # <a name="csize-class"></a>Classe CSize
 
@@ -173,11 +173,17 @@ CRect operator+(const RECT* lpRect) const throw();
 
 Vedere le seguenti descrizioni dei singoli operatori:
 
-- **operatore + (** `size` **)** questa operazione aggiunge due `CSize` valori.
+- **operatore + (** *dimensioni* **)**
 
-- **operatore + (** `point` **)** questa operazione viene eseguito l'offset (sposta) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) (oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) da questo valore `CSize` valore. Il **cx** e **cy** i membri di questo `CSize` valore vengono aggiunti per il **x** e **y** membri dati del **punto**  valore. Questo blocco è simile a quella di [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) che accetta un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametro.
+  Questa operazione aggiunge due `CSize` valori.
 
-- **operatore + (** `lpRect` **)** questa operazione viene eseguito l'offset (sposta) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (oppure [CRect](../../atl-mfc-shared/reference/crect-class.md)) da questo valore `CSize` valore. Il **cx** e **cy** membri di questo `CSize` valore vengono aggiunti al **a sinistra**, **top**, **destra**, e **inferiore** membri dati del `RECT` valore. Questo blocco è simile a quella di [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) che accetta un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametro.
+- **operatore + (** *puntare* **)**
+
+  Questa operazione viene eseguito l'offset (sposta) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) (o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) da questo valore `CSize` valore. Il `cx` e `cy` i membri di questo `CSize` valore vengono aggiunti per il `x` e `y` membri dati del `POINT` valore. Questo blocco è simile a quella di [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) che accetta un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametro.
+
+- **operatore + (** *lpRect* **)**
+
+   Questa operazione viene eseguito l'offset (sposta) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (o [CRect](../../atl-mfc-shared/reference/crect-class.md)) da questo valore `CSize` valore. Il `cx` e `cy` i membri di questo `CSize` valore vengono aggiunti per il `left`, `top`, `right`, e `bottom` membri dati del `RECT` valore. Questo blocco è simile a quella di [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) che accetta un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametro.
 
 ### <a name="example"></a>Esempio
 
@@ -198,13 +204,21 @@ CSize operator-() const throw();
 
 Il quarto operatore, il meno unario, modifica il segno del `CSize` valore. Vedere le seguenti descrizioni dei singoli operatori:
 
-- **operatore-(** `size` **)** questa operazione sottrae due `CSize` valori.
+- **operatore-(** *dimensioni* **)**
 
-- **operatore-(** `point` **)** questa operazione viene eseguito l'offset (sposta) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valore in base all'inverso additivo di questo `CSize` valore. Il **cx** e **cy** di questo `CSize` valore vengono sottratti dal **x** e **y** membri dati del **punto**  valore. Questo blocco è simile a quella di [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) che accetta un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametro.
+  Questa operazione sottrae due `CSize` valori.
 
-- **operatore-(** `lpRect` **)** questa operazione viene eseguito l'offset (sposta) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) valore in base all'inverso additivo di questo `CSize` valore. Il **cx** e **cy** membri di questo `CSize` valore vengono sottratti dal **a sinistra**, **top**, **destra**, e **inferiore** membri dati del `RECT` valore. Questo blocco è simile a quella di [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) che accetta un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametro.
+- **operatore-(** *puntare* **)**
 
-- **operatore-()** questa operazione restituisce l'inverso additivo di questo `CSize` valore.
+  Questa operazione viene eseguito l'offset (sposta) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) oppure [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valore in base all'inverso additivo di questo `CSize` valore. Il `cx` e `cy` di questo `CSize` valore viene sottratto dal `x` e `y` membri dati del `POINT` valore. Questo blocco è simile a quella di [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) che accetta un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametro.
+
+- **operatore-(** *lpRect* **)**
+
+  Questa operazione viene eseguito l'offset (sposta) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) valore in base all'inverso additivo di questo `CSize` valore. Il `cx` e `cy` i membri di questo `CSize` valore viene sottratto dal `left`, `top`, `right`, e `bottom` membri dati del `RECT` valore. Questo blocco è simile a quella di [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) che accetta un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametro.
+
+- **operatore-)**
+
+  Questa operazione restituisce l'inverso additivo di questo `CSize` valore.
 
 ### <a name="example"></a>Esempio
 

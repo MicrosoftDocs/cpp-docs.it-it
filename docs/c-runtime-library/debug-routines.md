@@ -10,12 +10,12 @@ helpviewer_keywords:
 - debug macros
 - debugging [CRT], runtime routines
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
-ms.openlocfilehash: f8ceb25f7ccdd10ff2b6dc7529563616b2fd0da6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1281b578435086dc7de04c7962145c2b265277a
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452182"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329468"
 ---
 # <a name="debug-routines"></a>Routine di debug
 
@@ -63,7 +63,7 @@ Per usare queste routine, il flag [_DEBUG](../c-runtime-library/debug.md) deve e
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Allocare un numero specificato di blocchi di memoria nell'heap con spazio aggiuntivo per un'intestazione di debug e buffer di sovrascrittura|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Ridimensiona un blocco di memoria specificato nell'heap espandendo o contraendo il blocco|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Liberare un blocco di memoria nell'heap|
-|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Creare un nome di percorso assoluto o completo per il nome di percorso relativo specificato usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) per allocare memoria.|[System::IO::File::Create](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
+|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Creare un nome di percorso assoluto o completo per il nome di percorso relativo specificato usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) per allocare memoria.|
 |[_getcwd_dbg, _wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|Ottenere la directory di lavoro corrente usando [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) per allocare memoria.|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Allocare un blocco di memoria nell'heap con spazio aggiuntivo per un'intestazione di debug e buffer di sovrascrittura|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Calcolare le dimensioni di un blocco di memoria nell'heap|
