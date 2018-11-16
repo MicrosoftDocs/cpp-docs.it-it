@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 1025b3469611ee1e880a2abd5a4e553a1317a0d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570716"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525522"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
 
@@ -64,19 +64,19 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
    Funzioni che sono state spostate:
 
-   - double abs(double) e float abs(float)
+  - double abs(double) e float abs(float)
 
-   - double pow (double, int), float pow (float, float) float pow (float, int) long double pow (long double, long double), long double pow (long double, int)
+  - double pow (double, int), float pow (float, float) float pow (float, int) long double pow (long double, long double), long double pow (long double, int)
 
-   - versioni float e long double di funzioni a virgola mobile acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc
+  - versioni float e long double di funzioni a virgola mobile acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc
 
-   Se si dispone di codice che usa abs con un tipo a virgola mobile che include solo l'intestazione math.h, le versioni a virgola mobile non saranno più disponibili, pertanto la chiamata, anche con un argomento a virgola mobile, a questo punto si risolve in abs(int). In questo modo si produce l'errore:
+  Se si dispone di codice che usa abs con un tipo a virgola mobile che include solo l'intestazione math.h, le versioni a virgola mobile non saranno più disponibili, pertanto la chiamata, anche con un argomento a virgola mobile, a questo punto si risolve in abs(int). In questo modo si produce l'errore:
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-   Per correggere questo avviso, è necessario sostituire la chiamata a `abs` con una versione a virgola mobile di `abs`, ad esempio `fabs` per un argomento double o `fabsf` per un argomento float o includere l'intestazione cmath e continuare a usare `abs`.
+  Per correggere questo avviso, è necessario sostituire la chiamata a `abs` con una versione a virgola mobile di `abs`, ad esempio `fabs` per un argomento double o `fabsf` per un argomento float o includere l'intestazione cmath e continuare a usare `abs`.
 
 - **Conformità del punto a virgola mobile**
 
@@ -116,7 +116,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
    Per aggiungere questa libreria all'input del linker nell'IDE, aprire il menu di scelta rapida per il nodo del progetto, scegliere **Proprietà**, quindi nella finestra di dialogo **Proprietà progetto** scegliere **Linker** e modificare l'**input del linker** per aggiungere `legacy_stdio_definitions.lib` all'elenco di valori delimitati da punto e virgola.
 
-   Se il progetto è collegato con librerie statiche compilate con una versione di Visual Studio precedente al 2015, il linker potrebbe segnalare un simbolo esterno non risolto. Questi errori potrebbero fare riferimento a definizioni stdio interne per_iob, _iob_func o importazioni correlate per determinate funzioni stdio nel formato _imp\_*. Microsoft consiglia di ricompilare tutte le librerie statiche con la versione più recente delle librerie e del compilatore C++ quando si aggiorna un progetto. Se la raccolta è una libreria di terze parti per cui l'origine non è disponibile, è consigliabile richiedere un aggiornamento binario da terze parti o incapsulare l'utilizzo di quella libreria in una DLL separata che deve essere compilata con la versione precedente del compilatore e delle librerie.
+   Se il progetto è collegato con librerie statiche compilate con una versione di Visual Studio precedente al 2015, il linker potrebbe segnalare un simbolo esterno non risolto. Questi errori potrebbero fare riferimento a definizioni stdio interne per `_iob`, `_iob_func` o importazioni correlate per determinate funzioni stdio nel formato _imp_\*. Microsoft consiglia di ricompilare tutte le librerie statiche con la versione più recente delle librerie e del compilatore C++ quando si aggiorna un progetto. Se la raccolta è una libreria di terze parti per cui l'origine non è disponibile, è consigliabile richiedere un aggiornamento binario da terze parti o incapsulare l'utilizzo di quella libreria in una DLL separata che deve essere compilata con la versione precedente del compilatore e delle librerie.
 
     > [!WARNING]
     > Se ci si collega con Windows SDK 8.1 o versione precedente, potrebbero verificarsi errori di simbolo esterno non risolto. In tal caso, è necessario risolvere l'errore aggiungendo legacy_stdio_definitions.lib all'input del linker come descritto in precedenza.
@@ -139,27 +139,27 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
    Nelle versioni precedenti, valori infiniti e NaN potrebbero essere formattati usando un set di stringhe sentinella di MSVC specifiche.
 
-   - Valori infiniti: 1.#INF
+  - Valori infiniti: 1.#INF
 
-   - NaN non interattivo: 1.#QNAN
+  - NaN non interattivo: 1.#QNAN
 
-   - Segnalazione NaN: 1.#SNAN
+  - Segnalazione NaN: 1.#SNAN
 
-   - NaN indefinito: 1.#IND
+  - NaN indefinito: 1.#IND
 
-   Ognuno di questi elementi potrebbe essere preceduto da un segno e potrebbe essere stato formattato in modo leggermente diverso a seconda della larghezza e della precisione del campo (talvolta con effetti insoliti, ad esempio `printf("%.2f\n", INFINITY)` visualizzerà 1.#J perché #INF potrebbe essere "arrotondato" a una precisione di 2 cifre). C99 ha introdotto nuovi requisiti relativi a come devono essere formattati valori infiniti e NaN. A questo punto l'implementazione di MSVC è conforme a tali requisiti. Sono disponibili le nuove stringhe seguenti:
+  Ognuno di questi elementi potrebbe essere preceduto da un segno e potrebbe essere stato formattato in modo leggermente diverso a seconda della larghezza e della precisione del campo (talvolta con effetti insoliti, ad esempio `printf("%.2f\n", INFINITY)` visualizzerà 1.#J perché #INF potrebbe essere "arrotondato" a una precisione di 2 cifre). C99 ha introdotto nuovi requisiti relativi a come devono essere formattati valori infiniti e NaN. A questo punto l'implementazione di MSVC è conforme a tali requisiti. Sono disponibili le nuove stringhe seguenti:
 
-   - Valori infiniti: inf
+  - Valori infiniti: inf
 
-   - NaN non interattivo: nan
+  - NaN non interattivo: nan
 
-   - Segnalazione NaN: nan(snan)
+  - Segnalazione NaN: nan(snan)
 
-   - NaN indefinito:nan(ind)
+  - NaN indefinito:nan(ind)
 
-   Uno di questi può essere preceduto da un segno. Se si usa un identificatore di formato lettere maiuscole (%F anziché %f), le stringhe vengono visualizzate in lettere maiuscole (INF anziché inf), così come richiesto.
+  Uno di questi può essere preceduto da un segno. Se si usa un identificatore di formato lettere maiuscole (%F anziché %f), le stringhe vengono visualizzate in lettere maiuscole (INF anziché inf), così come richiesto.
 
-   Le funzioni [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) sono state modificate per l'analisi di queste nuove stringhe in modo che venga eseguito il roundtrip con printf e scanf.
+  Le funzioni [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) sono state modificate per l'analisi di queste nuove stringhe in modo che venga eseguito il roundtrip con printf e scanf.
 
 - **Formattazione e analisi a virgola mobile**
 
@@ -171,8 +171,16 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
     printf("%.0f\n", pow(2.0, 80))
     ```
 
+   Output precedente:
+
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+    1208925819614629200000000
+    ```
+
+   Nuovo output:
+
+    ```Output
+    1208925819614629174706176
     ```
 
    Gli algoritmi di analisi precedenti considererebbero solo fino a 17 cifre significative dalla stringa di input ed eliminerebbero le restanti cifre. Ciò è sufficiente per generare un'approssimazione molto vicina del valore rappresentato dalla stringa e il risultato è in genere molto vicino al risultato arrotondato correttamente. La nuova implementazione considera tutte le cifre presenti e produce il risultato arrotondato correttamente per tutti gli input (fino a 768 cifre). Queste funzioni inoltre rispettano a questo punto la modalità di arrotondamento (controllabile tramite fesetround).  Si tratta di una modifica potenziale del comportamento poiché queste funzioni potrebbero restituire risultati diversi. I nuovi risultati sono sempre più corretti di quelli precedenti.
@@ -641,7 +649,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
    Si supponga, ad esempio, che il codice definisca un operatore **new di posizionamento** e **delete di posizionamento**:
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
