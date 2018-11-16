@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 6453e68b07013bc5f5799b7252ad9a88e73250f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac354ed34bc3ab849eecf9256b447308f449abfe
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532938"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693568"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Concetti di applicazioni isolate e assembly side-by-side
 
@@ -22,7 +22,7 @@ Un assembly side-by-side può essere condiviso o privato. Gli[assembly affiancat
 
 ## <a name="manifests-and-search-order"></a>Manifesti e ordine di ricerca
 
-Le applicazioni isolate e gli assembly affiancati sono descritti dai [manifesti](https://msdn.microsoft.com/library/aa375365). Un manifesto è un file XML che può essere esterno o incorporato in un'applicazione o in un assembly come risorsa. Il file manifesto di un'applicazione isolata viene utilizzato per gestire i nomi e le versioni di assembly side-by-side condivisi a cui l'applicazione deve essere associata in fase di esecuzione. Nel manifesto di un assembly side-by-side vengono specificati i nomi, le versioni, le risorse e gli assembly dipendenti degli assembly side-by-side. Nel caso di un assembly affiancato condiviso, il manifesto viene installato nella cartella %WINDIR%\WinSxS\Manifests\. Nel caso di un assembly privato, è consigliabile includere il manifesto nella DLL come risorsa con ID uguale a 1. È inoltre possibile assegnare all'assembly privato lo stesso nome della DLL. Per altre informazioni, vedere [sull'assembly privati](/windows/desktop/SbsCs/about-private-assemblies-).
+Le applicazioni isolate e gli assembly affiancati sono descritti dai [manifesti](/windows/desktop/sbscs/manifests). Un manifesto è un file XML che può essere esterno o incorporato in un'applicazione o in un assembly come risorsa. Il file manifesto di un'applicazione isolata viene utilizzato per gestire i nomi e le versioni di assembly side-by-side condivisi a cui l'applicazione deve essere associata in fase di esecuzione. Nel manifesto di un assembly side-by-side vengono specificati i nomi, le versioni, le risorse e gli assembly dipendenti degli assembly side-by-side. Nel caso di un assembly affiancato condiviso, il manifesto viene installato nella cartella %WINDIR%\WinSxS\Manifests\. Nel caso di un assembly privato, è consigliabile includere il manifesto nella DLL come risorsa con ID uguale a 1. È inoltre possibile assegnare all'assembly privato lo stesso nome della DLL. Per altre informazioni, vedere [sull'assembly privati](/windows/desktop/SbsCs/about-private-assemblies-).
 
 In fase di esecuzione, Windows utilizza le informazioni sull'assembly contenute nel manifesto dell'applicazione per cercare e caricare l'assembly affiancato corrispondente. Se un'applicazione isolata specifica una dipendenza da un assembly, il sistema operativo cerca l'assembly prima tra quelli condivisi nella cache di assembly nativi nella cartella %WINDIR%\WinSxS\. Se non trova l'assembly richiesto, il sistema operativo cerca un assembly privato in una cartella della struttura di directory dell'applicazione. Per altre informazioni, vedere [Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence)(Sequenza di ricerca dell'assembly).
 

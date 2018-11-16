@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-ms.openlocfilehash: 5d5e252dd7841d923a6de42f06518838f4314563
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91de1351b3e41701d302d290533b60d4fe791b80
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586654"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693009"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-c-image-editor-for-icons"></a>Icone e cursori: risorse immagine per i dispositivi di visualizzazione (Editor di immagini di C++ per le icone)
 
@@ -74,5 +74,5 @@ nessuno
 ## <a name="see-also"></a>Vedere anche
 
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
-[Icone](https://msdn.microsoft.com/library/windows/desktop/ms646973)<br/>
-[Cursori](https://msdn.microsoft.com/library/windows/desktop/ms646970)
+[Icone](/windows/desktop/menurc/icons)<br/>
+[Cursori](/windows/desktop/menurc/cursors)

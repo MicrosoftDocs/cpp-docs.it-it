@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CREATESTRUCT structure [MFC]
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
-ms.openlocfilehash: 13f715dc914ccc052945790aeaff9c47bd34ed46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de42ba3e26f7a06918a69358083e68f142836cc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619648"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694699"
 ---
 # <a name="createstruct-structure"></a>Struttura CREATESTRUCT
 
@@ -69,7 +69,7 @@ Specifica la nuova finestra [stile](../../mfc/reference/styles-used-by-mfc.md).
 Punta a una stringa con terminazione null che specifica il nome della nuova finestra.
 
 *lpszClass*<br/>
-Punta a una stringa con terminazione null che specifica nome della classe della finestra Nuovo Windows (un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura; per altre informazioni, vedere il SDK di Windows).
+Punta a una stringa con terminazione null che specifica nome della classe della finestra Nuovo Windows (un [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struttura; per altre informazioni, vedere il SDK di Windows).
 
 *dwExStyle*<br/>
 Specifica la [stile esteso](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) per la nuova finestra.

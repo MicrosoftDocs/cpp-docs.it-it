@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596664"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694335"
 ---
 # <a name="application-information-and-management"></a>Informazioni sull'applicazione e gestione
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>Parametri
 
 *lpWndClass*<br/>
-Puntatore a un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura che contiene informazioni sulla classe di finestra da registrare. Per altre informazioni su questa struttura, vedere il SDK di Windows.
+Puntatore a un [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struttura che contiene informazioni sulla classe di finestra da registrare. Per altre informazioni su questa struttura, vedere il SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parametri
 
 *nClassStyle*<br/>
-Specifica lo stile di classe di Windows o combinazione degli stili, creati con OR bit per bit ( **&#124;**) operatore, per la classe della finestra. Per un elenco di stili delle classi, vedere la [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura nel SDK di Windows. Se NULL, i valori predefiniti verranno impostati come indicato di seguito:
+Specifica lo stile di classe di Windows o combinazione degli stili, creati con OR bit per bit ( **&#124;**) operatore, per la classe della finestra. Per un elenco di stili delle classi, vedere la [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struttura nel SDK di Windows. Se NULL, i valori predefiniti verranno impostati come indicato di seguito:
 
 - Imposta lo stile del mouse su CS_DBLCLKS, che invia fare doppio clic su messaggi alla routine della finestra quando l'utente fa doppio clic del mouse.
 

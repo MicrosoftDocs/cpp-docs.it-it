@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 59258864eddb251b24f2e191d309707abf3736a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441106"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694595"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -388,7 +388,7 @@ UINT ArrangeIconicWindows() throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ArrangeIconicWindows](https://msdn.microsoft.com/library/windows/desktop/ms632671) in Windows SDK.
+Visualizzare [ArrangeIconicWindows](/windows/desktop/api/winuser/nf-winuser-arrangeiconicwindows) in Windows SDK.
 
 ##  <a name="attach"></a>  CWindow::Attach
 
@@ -433,7 +433,7 @@ BOOL BringWindowToTop() throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) in Windows SDK.
+Visualizzare [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -509,7 +509,7 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ChildWindowFromPoint](https://msdn.microsoft.com/library/windows/desktop/ms632676) in Windows SDK.
+Visualizzare [ChildWindowFromPoint](/windows/desktop/api/winuser/nf-winuser-childwindowfrompoint) in Windows SDK.
 
 ##  <a name="childwindowfrompointex"></a>  CWindow::ChildWindowFromPointEx
 
@@ -578,7 +578,7 @@ HWND Create(
 [in] Una variabile di tipo [u_menuorid](../../atl/reference/u-menuorid-class.md) specificando un handle a un menu o un identificatore di finestra. Il valore predefinito è 0U.
 
 *lpCreateParam*<br/>
-Un puntatore ai dati di creazione della finestra contenuti un [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) struttura.
+Un puntatore ai dati di creazione della finestra contenuti un [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struttura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -813,7 +813,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) in Windows SDK.
+Visualizzare [EnableWindow](/windows/desktop/api/winuser/nf-winuser-enablewindow) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -857,7 +857,7 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetClientRect](https://msdn.microsoft.com/library/windows/desktop/ms633503) in Windows SDK.
+Visualizzare [GetClientRect](/windows/desktop/api/winuser/nf-winuser-getclientrect) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1109,7 +1109,7 @@ HWND GetLastActivePopup() const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetLastActivePopup](https://msdn.microsoft.com/library/windows/desktop/ms633507) in Windows SDK.
+Visualizzare [GetLastActivePopup](/windows/desktop/api/winuser/nf-winuser-getlastactivepopup) in Windows SDK.
 
 ##  <a name="getmenu"></a>  CWindow::GetMenu
 
@@ -1157,7 +1157,7 @@ HWND GetParent() const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetParent](https://msdn.microsoft.com/library/windows/desktop/ms633510) in Windows SDK.
+Visualizzare [GetParent](/windows/desktop/api/winuser/nf-winuser-getparent) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1268,7 +1268,7 @@ HWND GetTopWindow() const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetTopWindow](https://msdn.microsoft.com/library/windows/desktop/ms633514) in Windows SDK.
+Visualizzare [GetTopWindow](/windows/desktop/api/winuser/nf-winuser-gettopwindow) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1363,7 +1363,7 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetWindowLongPtr](https://msdn.microsoft.com/library/windows/desktop/ms633585) in Windows SDK.
+Visualizzare [GetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra) in Windows SDK.
 
 ### <a name="remarks"></a>Note
 
@@ -1384,7 +1384,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/ms633518) in Windows SDK.
+Visualizzare [GetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-getwindowplacement) in Windows SDK.
 
 ##  <a name="getwindowprocessid"></a>  CWindow::GetWindowProcessID
 
@@ -1396,7 +1396,7 @@ DWORD GetWindowProcessID() throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetWindowThreadProcessID](https://msdn.microsoft.com/library/windows/desktop/ms633522) in Windows SDK.
+Visualizzare [GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1412,7 +1412,7 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetWindowRect](https://msdn.microsoft.com/library/windows/desktop/ms633519) in Windows SDK.
+Visualizzare [GetWindowRect](/windows/desktop/api/winuser/nf-winuser-getwindowrect) in Windows SDK.
 
 ##  <a name="getwindowrgn"></a>  CWindow::GetWindowRgn
 
@@ -1470,7 +1470,7 @@ int GetWindowTextLength() const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetWindowTextLength](https://msdn.microsoft.com/library/windows/desktop/ms633521) in Windows SDK.
+Visualizzare [GetWindowTextLength](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha) in Windows SDK.
 
 ##  <a name="getwindowthreadid"></a>  CWindow::GetWindowThreadID
 
@@ -1482,7 +1482,7 @@ DWORD GetWindowThreadID() throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetWindowThreadProcessID](https://msdn.microsoft.com/library/windows/desktop/ms633522) in Windows SDK.
+Visualizzare [GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1599,7 +1599,7 @@ BOOL IsChild(const HWND hWnd) const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IsChild](https://msdn.microsoft.com/library/windows/desktop/ms633524) in Windows SDK.
+Visualizzare [IsChild](/windows/desktop/api/winuser/nf-winuser-ischild) in Windows SDK.
 
 ##  <a name="isdialogmessage"></a>  CWindow::IsDialogMessage
 
@@ -1635,7 +1635,7 @@ BOOL IsIconic() const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IsIconic](https://msdn.microsoft.com/library/windows/desktop/ms633527) in Windows SDK.
+Visualizzare [IsIconic](/windows/desktop/api/winuser/nf-winuser-isiconic) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1663,7 +1663,7 @@ BOOL IsWindow() throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IsWindow](https://msdn.microsoft.com/library/windows/desktop/ms633528) in Windows SDK.
+Visualizzare [IsWindow](/windows/desktop/api/winuser/nf-winuser-iswindow) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1679,7 +1679,7 @@ BOOL IsWindowEnabled() const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IsWindowEnabled](https://msdn.microsoft.com/library/windows/desktop/ms646303) in Windows SDK.
+Visualizzare [IsWindowEnabled](/windows/desktop/api/winuser/nf-winuser-iswindowenabled) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1695,7 +1695,7 @@ BOOL IsWindowVisible() const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IsWindowVisible](https://msdn.microsoft.com/library/windows/desktop/ms633530) in Windows SDK.
+Visualizzare [IsWindowVisible](/windows/desktop/api/winuser/nf-winuser-iswindowvisible) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1711,7 +1711,7 @@ BOOL IsWindowUnicode() throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IsWindowUnicode](https://msdn.microsoft.com/library/windows/desktop/ms633529) in Windows SDK.
+Visualizzare [IsWindowUnicode](/windows/desktop/api/winuser/nf-winuser-iswindowunicode) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1727,7 +1727,7 @@ BOOL IsZoomed() const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IsZoomed](https://msdn.microsoft.com/library/windows/desktop/ms633531) in Windows SDK.
+Visualizzare [IsZoomed](/windows/desktop/api/winuser/nf-winuser-iszoomed) in Windows SDK.
 
 ##  <a name="killtimer"></a>  CWindow::KillTimer
 
@@ -1739,7 +1739,7 @@ BOOL KillTimer(UINT nIDEvent) throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [KillTimer](https://msdn.microsoft.com/library/windows/desktop/ms644903) in Windows SDK.
+Visualizzare [KillTimer](/windows/desktop/api/winuser/nf-winuser-killtimer) in Windows SDK.
 
 ##  <a name="lockwindowupdate"></a>  CWindow::LockWindowUpdate
 
@@ -1978,7 +1978,7 @@ BOOL PostMessage(
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [PostMessage](https://msdn.microsoft.com/library/windows/desktop/ms644944) in Windows SDK.
+Visualizzare [PostMessage](/windows/desktop/api/winuser/nf-winuser-postmessagea) in Windows SDK.
 
 Restituisce senza tempi di attesa per il thread elaborare il messaggio.
 
@@ -2206,7 +2206,7 @@ static LRESULT SendMessage(
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SendMessage](https://msdn.microsoft.com/library/windows/desktop/ms644950) in Windows SDK.
+Visualizzare [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -2255,7 +2255,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SendNotifyMessage](https://msdn.microsoft.com/library/windows/desktop/ms644953) in Windows SDK.
+Visualizzare [SendNotifyMessage](/windows/desktop/api/winuser/nf-winuser-sendnotifymessagea) in Windows SDK.
 
 Se la finestra è stata creata dal thread chiamante, `SendNotifyMessage` non termina finché la procedura della finestra ha elaborato il messaggio. In caso contrario, viene restituito immediatamente.
 
@@ -2269,7 +2269,7 @@ HWND SetActiveWindow() throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646311) in Windows SDK.
+Visualizzare [SetActiveWindow](/windows/desktop/api/winuser/nf-winuser-setactivewindow) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -2285,7 +2285,7 @@ HWND SetCapture() throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SetCapture](https://msdn.microsoft.com/library/windows/desktop/ms646262) in Windows SDK.
+Visualizzare [SetCapture](/windows/desktop/api/winuser/nf-winuser-setcapture) in Windows SDK.
 
 ##  <a name="setclipboardviewer"></a>  CWindow::SetClipboardViewer
 
@@ -2353,7 +2353,7 @@ HWND SetFocus() throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) in Windows SDK.
+Visualizzare [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -2441,7 +2441,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SetParent](https://msdn.microsoft.com/library/windows/desktop/ms633541) in Windows SDK.
+Visualizzare [SetParent](/windows/desktop/api/winuser/nf-winuser-setparent) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -2527,7 +2527,7 @@ UINT SetTimer(
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SetTimer](https://msdn.microsoft.com/library/windows/desktop/ms644906) in Windows SDK.
+Visualizzare [SetTimer](/windows/desktop/api/winuser/nf-winuser-settimer) in Windows SDK.
 
 ##  <a name="setwindowcontexthelpid"></a>  CWindow::SetWindowContextHelpId
 
@@ -2566,7 +2566,7 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SetWindowLongPtr](https://msdn.microsoft.com/library/windows/desktop/ms644898) in Windows SDK.
+Visualizzare [SetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-setwindowlongptra) in Windows SDK.
 
 Questa funzione sostituisce la `CWindow::SetWindowLong` (metodo). Per scrivere codice che è compatibile con le versioni a 32 bit sia 64 bit di Windows, usare `CWindow::SetWindowLongPtr`.
 
@@ -2580,7 +2580,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/ms633544) in Windows SDK.
+Visualizzare [SetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-setwindowplacement) in Windows SDK.
 
 ##  <a name="setwindowpos"></a>  CWindow::SetWindowPos
 
@@ -2673,7 +2673,7 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ShowOwnedPopups](https://msdn.microsoft.com/library/windows/desktop/ms633547) in Windows SDK.
+Visualizzare [ShowOwnedPopups](/windows/desktop/api/winuser/nf-winuser-showownedpopups) in Windows SDK.
 
 ##  <a name="showscrollbar"></a>  CWindow::ShowScrollBar
 
@@ -2697,7 +2697,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ShowWindow](https://msdn.microsoft.com/library/windows/desktop/ms633548) in Windows SDK.
+Visualizzare [ShowWindow](/windows/desktop/api/winuser/nf-winuser-showwindow) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -2713,7 +2713,7 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ShowWindowAsync](https://msdn.microsoft.com/library/windows/desktop/ms633549) in Windows SDK.
+Visualizzare [ShowWindowAsync](/windows/desktop/api/winuser/nf-winuser-showwindowasync) in Windows SDK.
 
 ##  <a name="updatewindow"></a>  CWindow::UpdateWindow
 

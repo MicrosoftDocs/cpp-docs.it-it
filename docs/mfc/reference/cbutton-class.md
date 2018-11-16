@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333537"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694803"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -384,7 +384,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità del messaggio BCM_GETIDEALSIZE, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.
+Questa funzione membro emula la funzionalità del messaggio BCM_GETIDEALSIZE, come descritto nel [pulsanti](/windows/desktop/controls/buttons) sezione del SDK di Windows.
 
 ##  <a name="getimagelist"></a>  CButton::GetImageList
 
@@ -405,7 +405,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità del messaggio BCM_GETIMAGELIST, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.
+Questa funzione membro emula la funzionalità del messaggio BCM_GETIMAGELIST, come descritto nel [pulsanti](/windows/desktop/controls/buttons) sezione del SDK di Windows.
 
 ##  <a name="getnote"></a>  CButton::GetNote
 
@@ -617,7 +617,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità del messaggio BCM_GETTEXTMARGIN, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.
+Questa funzione membro emula la funzionalità del messaggio BCM_GETTEXTMARGIN, come descritto nel [pulsanti](/windows/desktop/controls/buttons) sezione del SDK di Windows.
 
 ##  <a name="setbitmap"></a>  CButton:: SetBitmap
 
@@ -870,7 +870,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità del messaggio BCM_SETIMAGELIST, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.
+Questa funzione membro emula la funzionalità del messaggio BCM_SETIMAGELIST, come descritto nel [pulsanti](/windows/desktop/controls/buttons) sezione del SDK di Windows.
 
 ##  <a name="setnote"></a>  CButton::SetNote
 
@@ -1112,7 +1112,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità del messaggio BCM_SETTEXTMARGIN, come descritto nel [pulsanti](https://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.
+Questa funzione membro emula la funzionalità del messaggio BCM_SETTEXTMARGIN, come descritto nel [pulsanti](/windows/desktop/controls/buttons) sezione del SDK di Windows.
 
 ## <a name="see-also"></a>Vedere anche
 

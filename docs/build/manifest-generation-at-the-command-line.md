@@ -5,12 +5,12 @@ helpviewer_keywords:
 - manifests [C++]
 - manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-ms.openlocfilehash: e192122a5b9411f983683c2fa01fab2aded49ffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 440bf785f61a438099a394319a6df6e7389a608d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505365"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692528"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Generazione di manifesti dalla riga di comando
 
@@ -18,7 +18,7 @@ Quando si compilano applicazioni C/C++ dalla riga di comando usando nmake o stru
 
 ## <a name="see-also"></a>Vedere anche
 
-[Manifesti](https://msdn.microsoft.com/library/aa375365)<br/>
+[Manifesti](/windows/desktop/sbscs/manifests)<br/>
 [/INCREMENTAL (collegamento incrementale)](../build/reference/incremental-link-incrementally.md)<br/>
 [Assembly con nome sicuro (firma degli assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)<br/>
 [Modifica e continuazione](/visualstudio/debugger/edit-and-continue)<br/>

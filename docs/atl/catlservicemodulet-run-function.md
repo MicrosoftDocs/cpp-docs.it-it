@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-ms.openlocfilehash: 3abb6908a64864463c45d8fc4dc24bfc813db586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91b6465dd975a1e3227d1416f2b78a8abbd441ad
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458665"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694322"
 ---
 # <a name="catlservicemoduletrun-function"></a>Funzione CAtlServiceModuleT:: Run
 
-`Run` contiene le chiamate a `PreMessageLoop`, `RunMessageLoop`, e `PostMessageLoop`. Dopo essere stato chiamato, `PreMessageLoop` Archivia prima l'ID del thread. del servizio Il servizio userà questo ID per la chiusura inviando un messaggio WM_QUIT mediante la funzione API Win32, [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946).
+`Run` contiene le chiamate a `PreMessageLoop`, `RunMessageLoop`, e `PostMessageLoop`. Dopo essere stato chiamato, `PreMessageLoop` Archivia prima l'ID del thread. del servizio Il servizio userà questo ID per la chiusura inviando un messaggio WM_QUIT mediante la funzione API Win32, [PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea).
 
 `PreMessageLoop` chiama quindi `InitializeSecurity`. Per impostazione predefinita `InitializeSecurity` chiamate [CoInitializeSecurity](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) con il descrittore di sicurezza impostato su NULL, il che significa che ogni utente abbia accesso all'oggetto.
 

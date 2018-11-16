@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525307"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694777"
 ---
 # <a name="styles-used-by-mfc"></a>Stili utilizzati da MFC
 
@@ -445,7 +445,7 @@ Stili statici si applicano a [classe CStatic](../../mfc/reference/cstatic-class.
 
 ## <a name="window-styles"></a> Stili finestra
 
-Stili finestra si applicano a [classe CWnd](../../mfc/reference/cwnd-class.md) oggetti. Specificare una combinazione degli stili nel *dwStyle* parametro di [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) oppure [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Per altre informazioni sugli stili di finestra in Windows, vedere [stili di finestra (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).
+Stili finestra si applicano a [classe CWnd](../../mfc/reference/cwnd-class.md) oggetti. Specificare una combinazione degli stili nel *dwStyle* parametro di [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) oppure [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Per altre informazioni sugli stili di finestra in Windows, vedere [stili di finestra (Windows)](/windows/desktop/winmsg/window-styles).
 
 |Stile|Descrizione|
 |-----------|-----------------|
@@ -524,5 +524,5 @@ Stili finestra estesi si applicano a [classe CWnd](../../mfc/reference/cwnd-clas
 [Funzione MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)<br/>
 [Stili del controllo barra di scorrimento (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)<br/>
 [Stili del controllo statico (Windows)](/windows/desktop/Controls/static-control-styles)<br/>
-[Stili finestra (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)<br/>
+[Stili finestra (Windows)](/windows/desktop/winmsg/window-styles)<br/>
 [Stili finestra estesi (Windows)](/windows/desktop/winmsg/extended-window-styles)

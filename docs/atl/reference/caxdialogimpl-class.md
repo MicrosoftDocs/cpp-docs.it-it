@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: 1814d95ae4346706c8f78125903e26fca8136d68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb4ec679e26adc32ffc6d68ebff9b1ed73c2f43
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544599"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694231"
 ---
 # <a name="caxdialogimpl-class"></a>Classe CAxDialogImpl
 
@@ -177,7 +177,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parametri
 
 *hWndParent*<br/>
-[in] Handle alla finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funzione Win32.
+[in] Handle alla finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) funzione Win32.
 
 *dwInitParam*<br/>
 [in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.

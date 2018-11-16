@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: bbc1f7a5ff27fdb18b251b73d5b40e87f637ef21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548525"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693973"
 ---
 # <a name="ccontainedwindowt-class"></a>Classe CContainedWindowT
 
@@ -274,7 +274,7 @@ Il risultato dell'elaborazione del messaggio.
 
 ### <a name="remarks"></a>Note
 
-Per impostazione predefinita `DefWindowProc` chiama il [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) funzione Win32 per inviare le informazioni del messaggio alla routine della finestra specificata [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+Per impostazione predefinita `DefWindowProc` chiama il [CallWindowProc](/windows/desktop/api/winuser/nf-winuser-callwindowproca) funzione Win32 per inviare le informazioni del messaggio alla routine della finestra specificata [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage
 

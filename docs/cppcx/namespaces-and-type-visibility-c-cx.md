@@ -2,12 +2,12 @@
 title: Spazi dei nomi e visibilità del tipo (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440521"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693894"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Spazi dei nomi e visibilità del tipo (C++/CX)
 
@@ -40,7 +40,7 @@ Utilizza i modificatori di accesso riportati di seguito per controllare sia la v
 
 ## <a name="windows-runtime-namespaces"></a>Spazi dei nomi di Windows Runtime
 
-L'API di Windows è costituita da tipi dichiarati in di Windows::\* gli spazi dei nomi. Questi spazi dei nomi sono riservati a Windows e non è possibile aggiungere ad essi altri tipi. Il **Visualizzatore oggetti**ti consente di visualizzare questi spazi dei nomi nel file windows.winmd. Per la documentazione sugli spazi dei nomi, vedere l'articolo sulle [API di Windows](https://msdn.microsoft.com/library/windows/apps/br211377).
+L'API di Windows è costituita da tipi dichiarati in di Windows::\* gli spazi dei nomi. Questi spazi dei nomi sono riservati a Windows e non è possibile aggiungere ad essi altri tipi. Il **Visualizzatore oggetti**ti consente di visualizzare questi spazi dei nomi nel file windows.winmd. Per la documentazione sugli spazi dei nomi, vedere l'articolo sulle [API di Windows](/uwp/api/).
 
 ## <a name="ccx-namespaces"></a>spazi dei nomi C++/CX
 

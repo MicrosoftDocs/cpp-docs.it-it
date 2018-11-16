@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525418"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694790"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 
@@ -1566,7 +1566,7 @@ Handle a una struttura di posizione finestra posticipata o NULL.
 
 ### <a name="remarks"></a>Note
 
-Se viene passato NULL come le *hdwp* parametro, questo metodo consente di spostare la finestra normalmente. Se si passa un handle, questo metodo esegue un'operazione di spostamento finestra posticipata. È possibile ottenere un handle chiamando [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) o archiviando il valore restituito di una chiamata precedente a questo metodo.
+Se viene passato NULL come le *hdwp* parametro, questo metodo consente di spostare la finestra normalmente. Se si passa un handle, questo metodo esegue un'operazione di spostamento finestra posticipata. È possibile ottenere un handle chiamando [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos) o archiviando il valore restituito di una chiamata precedente a questo metodo.
 
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
 

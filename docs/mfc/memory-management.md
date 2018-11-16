@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: b5b91245d08c6c4a17c9ba96a0ca4dcf19932d9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22c5c2c835872a189fe342093a737d7887538256
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461382"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692743"
 ---
 # <a name="memory-management"></a>Gestione della memoria
 
@@ -21,7 +21,7 @@ Questo gruppo di articoli descrive come sfruttare i vantaggi dei servizi per uti
 
 Una differenza principale tra le due tecniche è che con allocazione di frame che generalmente usate con la memoria effettiva bloccato stesso, mentre con allocazione heap si ottengono sempre un puntatore al blocco di memoria. Un'altra differenza principale tra i due schemi è che gli oggetti nel frame vengono eliminati automaticamente, mentre gli oggetti degli heap devono essere eliminati esplicitamente dal programmatore.
 
-Per non MFC informazioni sulla gestione della memoria nelle applicazioni per Windows, vedere [gestione della memoria](https://msdn.microsoft.com/library/windows/desktop/aa366779) nel SDK di Windows.
+Per non MFC informazioni sulla gestione della memoria nelle applicazioni per Windows, vedere [gestione della memoria](/windows/desktop/memory/memory-management) nel SDK di Windows.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
 

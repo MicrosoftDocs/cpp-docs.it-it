@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605080"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694855"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -892,7 +892,7 @@ Specifica i componenti del descrittore di sicurezza da impostare. Il valore può
 |DACL_SECURITY_INFORMATION|Imposta l'elenco di controllo di accesso discrezionali della chiave (DACL). La chiave deve avere accesso WRITE_DAC, o il processo di chiamata deve essere il proprietario dell'oggetto.|
 |GROUP_SECURITY_INFORMATION|Imposta l'ID di sicurezza della chiave primaria di gruppo (SID). La chiave deve avere accesso WRITE_OWNER o il processo di chiamata deve essere il proprietario dell'oggetto.|
 |OWNER_SECURITY_INFORMATION|Imposta il SID del proprietario della chiave. La chiave deve avere accesso WRITE_OWNER o il processo di chiamata deve essere il proprietario dell'oggetto o disporre del privilegio SE_TAKE_OWNERSHIP_NAME abilitato.|
-|SACL_SECURITY_INFORMATION|Imposta l'elenco di controllo di accesso della chiave del sistema (SACL). La chiave deve avere accesso ACCESS_SYSTEM_SECURITY. La modalità appropriata per ottenere l'accesso è per abilitare il SE_SECURITY_NAME [privilegio](https://msdn.microsoft.com/library/windows/desktop/aa379306) nel token di accesso corrente del chiamante, aprire l'handle per l'accesso ACCESS_SYSTEM_SECURITY e quindi disabilitare il privilegio.|
+|SACL_SECURITY_INFORMATION|Imposta l'elenco di controllo di accesso della chiave del sistema (SACL). La chiave deve avere accesso ACCESS_SYSTEM_SECURITY. La modalità appropriata per ottenere l'accesso è per abilitare il SE_SECURITY_NAME [privilegio](/windows/desktop/secauthz/privileges) nel token di accesso corrente del chiamante, aprire l'handle per l'accesso ACCESS_SYSTEM_SECURITY e quindi disabilitare il privilegio.|
 
 *file PSD*<br/>
 Puntatore a un [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) struttura che specifica gli attributi di sicurezza da impostare per la chiave specificata.

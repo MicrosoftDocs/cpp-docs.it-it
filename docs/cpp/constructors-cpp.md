@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 91d85f62917ff722a61ecbc87c58379a00016b83
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523156"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694062"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
@@ -25,7 +25,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     explicit Box(int i) : m_width(i), m_length(i), m_height(i) // member init list
     {}
 
@@ -70,7 +70,7 @@ int main()
 
 Un costruttore può avere facoltativamente un elenco di inizializzatori di membro, che inizializza i membri di classe prima dell'esecuzione del corpo del costruttore. (Si noti che un elenco di inizializzatori di membro non è la stessa cosa come un *elenco di inizializzatori* di tipo [std:: initializer_list\<T >](../standard-library/initializer-list-class.md).)
 
-Un elenco di inizializzatori di membri è preferibile usare tramite l'assegnazione di valori nel corpo del costruttore perché direttamente Inizializza il membro. Nell'esempio seguente mostra l'inizializzatore di membro di elenco è costituito da tutti i **identifier(argument)** espressioni dopo i due punti:
+Un elenco di inizializzatori di membro è preferibile usare tramite l'assegnazione di valori nel corpo del costruttore perché direttamente Inizializza il membro. Nell'esempio seguente mostra l'inizializzatore di membro di elenco è costituito da tutti i **identifier(argument)** espressioni dopo i due punti:
 
 ```cpp
     Box(int width, int length, int height)
@@ -571,7 +571,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     Box(int i) :  Box(i, i, i);  // delegating constructor
     {}
 

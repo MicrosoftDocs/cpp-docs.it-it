@@ -10,25 +10,25 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-ms.openlocfilehash: 3441f111a82a336b329b6ee17d7bded32f7c2c07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebf1961d83d14bf95633d4248c2f970c54923274
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676733"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325991"
 ---
 # <a name="name-spaces"></a>Spazi dei nomi
 
 Il compilatore ha configurato gli "spazi dei nomi" per distinguere tra gli identificatori utilizzati per diversi tipi di elementi. I nomi all'interno di ogni spazio dei nomi devono essere univoci evitare conflitti, ma un nome identico può apparire in più spazi dei nomi. Ciò significa che è possibile utilizzare lo stesso identificatore per due o più elementi diversi, a condizione che gli elementi siano in spazi dei nomi diversi. Il compilatore può risolvere i riferimenti basati sul contesto sintattico dell'identificatore del programma.
 
 > [!NOTE]
->  Non confondere la nozione limitata del linguaggio C di uno spazio dei nomi con la funzionalità dello "spazio dei nomi" del linguaggio C++. Per altre informazioni, vedere [Spazi dei nomi](../cpp/namespaces-cpp.md) in *Riferimenti del linguaggio C++*.
+> Non confondere la nozione limitata del linguaggio C di uno spazio dei nomi con la funzionalità dello "spazio dei nomi" del linguaggio C++. Per altre informazioni, vedere [Spazi dei nomi](../cpp/namespaces-cpp.md) in Riferimenti del linguaggio C++.
 
 In questo elenco vengono descritti gli spazi dei nomi utilizzati nel linguaggio C.
 
-Le etichette di istruzione denominate fanno parte delle istruzioni. Le definizioni di etichette di istruzione vengono sempre seguite dai due punti, ma non fanno parte delle etichette **case**. Le modalità di utilizzo delle etichette di istruzione seguono sempre immediatamente la parola chiave `goto`. Le etichette di istruzione non devono essere differenti da altri nomi o dai nomi delle etichette di altre funzioni.
+Le etichette di istruzione denominate fanno parte delle istruzioni. Le definizioni di etichette di istruzione vengono sempre seguite dai due punti, ma non fanno parte delle etichette **case**. Le etichette di istruzione vengono sempre usate immediatamente dopo la parola chiave **goto**. Le etichette di istruzione non devono essere differenti da altri nomi o dai nomi delle etichette di altre funzioni.
 
-Tag di struttura, unione ed enumerazione - Questi tag fanno parte degli identificatori di tipo struttura, unione ed enumerazione e, se presenti, seguono sempre immediatamente le parole riservate `struct`, **union** o `enum`. I nomi di tag devono essere differenti da tutti gli altri tag della struttura, di enumerazione o di unione con la stessa visibilità.
+Tag di struttura, unione ed enumerazione - Questi tag fanno parte degli identificatori di tipo struttura, unione ed enumerazione e, se presenti, seguono sempre immediatamente le parole riservate **struct**, **union** o **enum**. I nomi di tag devono essere differenti da tutti gli altri tag della struttura, di enumerazione o di unione con la stessa visibilità.
 
 Membri di strutture o unioni - I nomi dei membri vengono allocati negli spazi dei nomi associati a ciascun tipo di unione e struttura. Pertanto, lo stesso identificatore può essere contemporaneamente il nome di un componente in un numero indefinito di strutture o unioni. Le definizioni dei nomi di componenti si verificano sempre negli identificatori del tipo di unione o struttura. La modalità di utilizzo dei nomi componente segue sempre immediatamente gli operatori di selezione dei membri (**->** e **.**). Il nome di un membro deve essere univoco nella struttura o unione, ma non deve essere diverso da altri nomi nel programma, inclusi i nomi dei membri di strutture e unioni differenti o il nome della struttura stessa.
 
@@ -38,7 +38,7 @@ Nomi typedef - I nomi typedef non possono essere usati come identificatori nello
 
 Ad esempio, poiché i tag della struttura, i membri della struttura e i nomi di variabili sono in tre spazi dei nomi diversi, i tre elementi denominati `student` in questo esempio non sono in conflitto. Il contesto di ogni elemento consente la corretta interpretazione di ogni occorrenza di `student` nel programma. Per informazioni sulle strutture, vedere [Dichiarazioni di struttura](../c-language/structure-declarations.md).
 
-```
+```C
 struct student {
    char student[20];
    int class;
@@ -46,7 +46,7 @@ struct student {
    } student;
 ```
 
-Quando viene visualizzato `student` dopo la parola chiave `struct`, il compilatore lo riconosce come un tag della struttura. Quando `student` viene visualizzato dopo un operatore di selezione dei membri (**->** o **.**), il nome fa riferimento al membro della struttura. In altri contesti, `student` fa riferimento alla variabile di struttura. Tuttavia, l'overload dello spazio dei nomi di tag non è consigliato poiché rende poco chiaro il significato.
+Quando viene visualizzato `student` dopo la parola chiave **struct**, il compilatore lo riconosce come un tag della struttura. Quando `student` viene visualizzato dopo un operatore di selezione dei membri (**->** o **.**), il nome fa riferimento al membro della struttura. In altri contesti, `student` fa riferimento alla variabile di struttura. Tuttavia, l'overload dello spazio dei nomi di tag non è consigliato poiché rende poco chiaro il significato.
 
 ## <a name="see-also"></a>Vedere anche
 

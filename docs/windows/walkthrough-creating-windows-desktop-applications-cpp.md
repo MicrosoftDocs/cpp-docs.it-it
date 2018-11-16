@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528378"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694049"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procedura dettagliata: Creare un'applicazione Desktop di Windows tradizionale (C++)
 
@@ -132,7 +132,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
 
    In questa funzione scrivere codice per gestire *messaggi* che l'applicazione riceve da Windows quando *eventi* si verificano. Ad esempio, se un utente sceglie un pulsante OK nell'applicazione, Windows invierà un messaggio all'utente ed è possibile scrivere codice all'interno di `WndProc` funzione che esegue qualsiasi operazione è appropriata. Viene chiamato *gestisce* un evento. È solo gestire gli eventi rilevanti per l'applicazione.
 
-   Per altre informazioni, vedere [Routine della finestra](https://msdn.microsoft.com/library/windows/desktop/ms632593).
+   Per altre informazioni, vedere [Routine della finestra](/windows/desktop/winmsg/window-procedures).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Per aggiungere funzionalità alla funzione WinMain
 
@@ -157,7 +157,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
 
    Per informazioni sui campi della struttura precedente, vedere [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Registrare il `WNDCLASSEX` con Windows in modo che si conosce la finestra e come inviare messaggi a esso. Usare la funzione [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) e passare la struttura della classe della finestra come argomento. Il `_T` macro viene usata in quanto viene usato il `TCHAR` tipo.
+1. Registrare il `WNDCLASSEX` con Windows in modo che si conosce la finestra e come inviare messaggi a esso. Usare la funzione [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) e passare la struttura della classe della finestra come argomento. Il `_T` macro viene usata in quanto viene usato il `TCHAR` tipo.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -237,7 +237,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
    return (int) msg.wParam;
    ```
 
-   Per altre informazioni sulle strutture e le funzioni usate nel ciclo di messaggi, vedere [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Per altre informazioni sulle strutture e le funzioni usate nel ciclo di messaggi, vedere [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    A questo punto, la funzione `WinMain` dovrebbe essere simile al codice seguente.
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477320"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694192"
 ---
 # <a name="cwinthread-class"></a>CWinThread (classe)
 
@@ -445,7 +445,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 Messaggio pubblicato viene eseguito il mapping al gestore messaggi appropriata dalla macro della mappa messaggi ON_THREAD_MESSAGE.
 
 > [!NOTE]
-> Quando si chiama [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), il messaggio viene inserito nella coda di messaggi del thread. Tuttavia, poiché i messaggi inseriti in questo modo non sono associati a una finestra, MFC non invierà loro ai gestori di messaggi o un comando. Per gestire questi messaggi, eseguire l'override la `PreTranslateMessage()` funzione i derivati CWinApp classe e gestire manualmente i messaggi.
+> Quando si chiama [PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea), il messaggio viene inserito nella coda di messaggi del thread. Tuttavia, poiché i messaggi inseriti in questo modo non sono associati a una finestra, MFC non invierà loro ai gestori di messaggi o un comando. Per gestire questi messaggi, eseguire l'override la `PreTranslateMessage()` funzione i derivati CWinApp classe e gestire manualmente i messaggi.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 

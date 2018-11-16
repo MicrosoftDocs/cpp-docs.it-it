@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 3ac8037e032112e269332d2bbf9c2065ade84ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04acfb9c653df85be8958d7248bafd93f3e0a30b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572098"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693668"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 
@@ -93,7 +93,7 @@ in cui `MyDlg` è il **nome breve** immesso nella finestra della procedura guida
 |Creazione di controlli|[Esercitazione ATL](../../atl/active-template-library-atl-tutorial.md)|
 |Tramite le finestre di dialogo ATL|[Classi di finestra ATL](../../atl/atl-window-classes.md)|
 |Creazione guidata progetto ATL|[Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)|
-|Finestre di dialogo|[Finestre di dialogo](https://msdn.microsoft.com/library/windows/desktop/ms632588) e argomenti successivi nel SDK di Windows|
+|Finestre di dialogo|[Finestre di dialogo](/windows/desktop/dlgbox/dialog-boxes) e argomenti successivi nel SDK di Windows|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -197,7 +197,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parametri
 
 *hWndParent*<br/>
-[in] Handle alla finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funzione Win32.
+[in] Handle alla finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) funzione Win32.
 
 *dwInitParam*<br/>
 [in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.

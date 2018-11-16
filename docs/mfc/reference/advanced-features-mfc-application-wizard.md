@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 28850211fc43e162c227a8bb55da9cf92178ae41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465533"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694296"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funzionalità avanzate, Creazione guidata applicazione MFC
 
@@ -57,7 +57,7 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
 
 - **Supporto Gestione riavvio**
 
-   Aggiunge il supporto per la [Gestione riavvio di Windows](/windows/desktop/RstMgr/using-restart-manager). In questo video viene illustrato come utilizzare Gestione riavvio da MFC: [procedura: utilizzo del nuovo Restart Manager](https://msdn.microsoft.com/vstudio/ee886407).
+   Aggiunge il supporto per la [Gestione riavvio di Windows](/windows/desktop/RstMgr/using-restart-manager). In questo video viene illustrato come utilizzare Gestione riavvio da MFC: [procedura: utilizzo del nuovo Restart Manager](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Riquadri frame avanzati**
 

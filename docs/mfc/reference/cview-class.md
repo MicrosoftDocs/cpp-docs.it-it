@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: f325423c940df46940d7074c599eb8e502e90586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669079"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694387"
 ---
 # <a name="cview-class"></a>Classe CView
 
@@ -548,7 +548,7 @@ L'implementazione predefinita consiste nel non fare nulla e restituire un valore
 
 Eseguire l'override di questa funzione per implementare l'effetto di un pulsante del mouse a destra trascinamento della selezione. Trascinamento pulsante destro del mouse in genere viene visualizzato un menu di opzioni quando viene rilasciato il pulsante del mouse a destra.
 
-L'override del `OnDropEx` deve eseguire una query per il pulsante del mouse a destra. È possibile chiamare [GetKeyState](https://msdn.microsoft.com/library/windows/desktop/ms646301) o archiviare lo stato del pulsante destro del mouse dalle [OnDragEnter](#ondragenter) gestore.
+L'override del `OnDropEx` deve eseguire una query per il pulsante del mouse a destra. È possibile chiamare [GetKeyState](/windows/desktop/api/winuser/nf-winuser-getkeystate) o archiviare lo stato del pulsante destro del mouse dalle [OnDragEnter](#ondragenter) gestore.
 
 - Se il pulsante del mouse a destra è inattivo, la sostituzione deve visualizzare un menu di scelta rapida che offre che il supporto gli effetti della selezione per l'origine del trascinamento.
 

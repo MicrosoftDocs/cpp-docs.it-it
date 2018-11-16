@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 495d30f9fabcb3a9586504282dee881362988c3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523486"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694309"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (struttura)
 
@@ -259,10 +259,10 @@ Usare la [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) 
 [in] Puntatore a un contesto di dispositivo.
 
 *iPartId*<br/>
-[in] La parte del controllo che ha l'aspetto del testo desiderato. Per altre informazioni vedere la colonna Parti della tabella in [Parti e stati](https://msdn.microsoft.com/library/windows/desktop/bb773210). Se questo valore è 0, il testo viene disegnato nel tipo di carattere predefinito o in un tipo di carattere selezionato nel contesto di dispositivo.
+[in] La parte del controllo che ha l'aspetto del testo desiderato. Per altre informazioni vedere la colonna Parti della tabella in [Parti e stati](/windows/desktop/controls/parts-and-states). Se questo valore è 0, il testo viene disegnato nel tipo di carattere predefinito o in un tipo di carattere selezionato nel contesto di dispositivo.
 
 *iStateId*<br/>
-[in] Lo stato del controllo che ha l'aspetto del testo desiderato. Per altre informazioni vedere la colonna Stati della tabella in [Parti e stati](https://msdn.microsoft.com/library/windows/desktop/bb773210).
+[in] Lo stato del controllo che ha l'aspetto del testo desiderato. Per altre informazioni vedere la colonna Stati della tabella in [Parti e stati](/windows/desktop/controls/parts-and-states).
 
 *strText*<br/>
 [in] Testo da disegnare.
@@ -293,7 +293,7 @@ Un tema definisce lo stile di visualizzazione di un'applicazione. Non viene usat
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Parti e stati](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[Parti e stati](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [Gestione finestre desktop](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>Parametri
 
 *Informazioni*<br/>
-[in, out] Oggetto [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) struttura che contiene le metriche scalabile associate con l'area non client di una finestra non ridotta a icona.
+[in, out] Oggetto [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) struttura che contiene le metriche scalabile associate con l'area non client di una finestra non ridotta a icona.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -439,7 +439,7 @@ TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="see-also"></a>Vedere anche
 
-[Struttura NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[Struttura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 

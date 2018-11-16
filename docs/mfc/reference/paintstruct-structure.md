@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PAINTSTRUCT structure [MFC]
 ms.assetid: 81ce4993-3e89-43b2-8c98-7946f1314d24
-ms.openlocfilehash: b5179a1bcba4a654ff235885ec2d0516e801fbb7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1b901ef26c61adbedb3bbe56808cd94bdfad30d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677123"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694647"
 ---
 # <a name="paintstruct-structure"></a>Struttura PAINTSTRUCT
 
@@ -36,7 +36,7 @@ typedef struct tagPAINTSTRUCT {
 Identifica il contesto di visualizzazione da utilizzare per il disegno.
 
 *fErase*<br/>
-Specifica se lo sfondo deve essere ridisegnato. Non è 0 se l'applicazione deve essere ridisegnata lo sfondo. L'applicazione è responsabile per disegnare lo sfondo se viene creata una classe di finestre Windows senza un pennello di sfondo (vedere la descrizione della `hbrBackground` membro della [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struttura nel SDK di Windows).
+Specifica se lo sfondo deve essere ridisegnato. Non è 0 se l'applicazione deve essere ridisegnata lo sfondo. L'applicazione è responsabile per disegnare lo sfondo se viene creata una classe di finestre Windows senza un pennello di sfondo (vedere la descrizione della `hbrBackground` membro della [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struttura nel SDK di Windows).
 
 *rcPaint*<br/>
 Specifica l'angolo superiore sinistro e inferiore destro angoli del rettangolo in cui viene richiesto il disegno.

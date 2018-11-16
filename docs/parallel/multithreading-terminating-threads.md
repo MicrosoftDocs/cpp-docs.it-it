@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: c92d95bc2aa63d78c98d10e25de79344fe1ee0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484019"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693295"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Terminazione dei thread in MFC
 
@@ -34,7 +34,7 @@ Normalmente in due situazioni causano un thread venga terminato: termina la funz
 
 Per un thread di lavoro, la terminazione normale di un thread è semplice: uscire dalla funzione di controllo e restituiscono un valore che indica il motivo della terminazione. È possibile usare la [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funzione o una **restituire** istruzione. In genere, 0 indica il completamento, ma che è responsabilità dell'utente.
 
-Per un thread dell'interfaccia utente, il processo è semplice: dall'interno del thread dell'interfaccia utente, chiamare [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) nel SDK di Windows. L'unico parametro che `PostQuitMessage` accetta sia il codice di uscita del thread. Come per il thread di lavoro, 0 indica in genere il corretto completamento.
+Per un thread dell'interfaccia utente, il processo è semplice: dall'interno del thread dell'interfaccia utente, chiamare [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) nel SDK di Windows. L'unico parametro che `PostQuitMessage` accetta sia il codice di uscita del thread. Come per il thread di lavoro, 0 indica in genere il corretto completamento.
 
 ##  <a name="_core_premature_thread_termination"></a> Chiusura anomala di Thread
 

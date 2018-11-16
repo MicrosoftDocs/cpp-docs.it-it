@@ -11,12 +11,12 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: 8b84c28db2afb914a73a0cb4d0d778c99cfd6635
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea7fc0fa7ea57de9f12f30804ace2cecccaa4bff
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616637"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330892"
 ---
 # <a name="project-and-solution-files"></a>File di soluzioni e di progetto
 

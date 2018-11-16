@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: a9d1e3638df46f9a60af54ae4c402337710c7561
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58d8453cc50c28527c1f777db1b47ea23299d38f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474737"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693945"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Risoluzione dei problemi relativi alle applicazioni isolate C/C++ e agli assembly side-by-side
 
@@ -37,7 +37,7 @@ Se l'applicazione viene distribuita in un computer che non dispone di Visual Stu
 
 1. Se l'applicazione dipende da assembly side-by-side e non è presente un manifesto, è necessario assicurarsi che il linker generi un manifesto per il progetto. Selezionare l'opzione del linker **Genera manifesto** nel **proprietà progetto** finestra di dialogo per il progetto.
 
-1. Se il manifesto è incorporato nel file binario, assicurarsi che l'ID di RT_MANIFEST sia corretto per questo tipo di file binario. Per altre informazioni sull'ID risorsa da usare, vedere [Using Side-by-Side Assemblies come risorsa (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Se il manifesto è in un file separato, aprirlo in un editor XML o in un editor di testo. Per altre informazioni sui manifesti e sulle regole di distribuzione, vedere [manifesti](https://msdn.microsoft.com/library/aa375365).
+1. Se il manifesto è incorporato nel file binario, assicurarsi che l'ID di RT_MANIFEST sia corretto per questo tipo di file binario. Per altre informazioni sull'ID risorsa da usare, vedere [Using Side-by-Side Assemblies come risorsa (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Se il manifesto è in un file separato, aprirlo in un editor XML o in un editor di testo. Per altre informazioni sui manifesti e sulle regole di distribuzione, vedere [manifesti](/windows/desktop/sbscs/manifests).
 
    > [!NOTE]
    > Se sono presenti sia un manifesto incorporato che un file manifesto separato, il caricatore del sistema operativo usa il manifesto incorporato e ignora il file separato. Tuttavia, in Windows XP accade il contrario: viene usato il file manifesto separato e viene ignorato il manifesto incorporato.

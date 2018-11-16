@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: fa7562f49834bf71da6bd095aec19360a43f1538
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447957"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694582"
 ---
 # <a name="ccomcontrolbase-class"></a>Classe CComControlBase
 
@@ -1547,7 +1547,7 @@ Restituisce TRUE se il controllo riceve correttamente lo stato attivo; in caso c
 
 ### <a name="remarks"></a>Note
 
-Per un controllo con finestra, la funzione API Windows [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) viene chiamato. Per un controllo senza finestra [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) viene chiamato. Tramite questa chiamata, un controllo senza finestra Ottiene lo stato attivo e può rispondere ai messaggi di finestra.
+Per un controllo con finestra, la funzione API Windows [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) viene chiamato. Per un controllo senza finestra [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) viene chiamato. Tramite questa chiamata, un controllo senza finestra Ottiene lo stato attivo e può rispondere ai messaggi di finestra.
 
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty
 

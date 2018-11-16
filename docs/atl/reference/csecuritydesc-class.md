@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: d06ec86b4a049daba945c347f4b424b5987010f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605804"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694075"
 ---
 # <a name="csecuritydesc-class"></a>Classe CSecurityDesc
 
@@ -186,7 +186,7 @@ Restituisce true se il metodo ha esito positivo, false in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo chiama [GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647).
+Questo metodo chiama [GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>Parametri
 
 *ControlBitsOfInterest*<br/>
-Maschera SECURITY_DESCRIPTOR_CONTROL che indica i bit del controllo da impostare. Per un elenco di flag che possono essere impostati, vedere [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
+Maschera SECURITY_DESCRIPTOR_CONTROL che indica i bit del controllo da impostare. Per un elenco di flag che possono essere impostati, vedere [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 *ControlBitsToSet*<br/>
 Maschera che indica i nuovi valori per i bit del controllo specificati dalla SECURITY_DESCRIPTOR_CONTROL il *ControlBitsOfInterest* maschera. Questo parametro può essere una combinazione dei flag elencati per il *ControlBitsOfInterest* parametro.
@@ -564,7 +564,7 @@ Restituisce true se l'operazione ha esito positivo, false in caso di esito negat
 
 ### <a name="remarks"></a>Note
 
-Questo metodo chiama [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
+Questo metodo chiama [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 

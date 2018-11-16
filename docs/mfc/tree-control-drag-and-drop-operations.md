@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: 5dc498008c6b019635cd361a950c6d2926e26541
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0adce847c514a41389d3c6a0a86651ee9dc486
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519366"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693308"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operazioni di trascinamento del controllo Tree
 
@@ -19,7 +19,7 @@ Un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) invia una
 
 Per ottenere un'immagine da visualizzare durante un'operazione di trascinamento chiamando il [funzione membro CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) funzione membro. Il controllo albero crea una bitmap di trascinamento in base all'etichetta dell'elemento da trascinare. Il controllo albero crea un elenco di immagini, bitmap a cui viene aggiunto e restituisce un puntatore ai [CImageList](../mfc/reference/cimagelist-class.md) oggetto.
 
-È necessario fornire il codice che effettivamente si trascina l'elemento. Ciò comporta in genere usando le funzionalità di trascinamento di funzioni dell'elenco immagini e l'elaborazione di [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) e [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (o [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) messaggi inviati una volta iniziato l'operazione di trascinamento. Per altre informazioni sulle funzioni dell'elenco immagini, vedere [CImageList](../mfc/reference/cimagelist-class.md) nel *riferimento MFC* e [elenchi di immagini](https://msdn.microsoft.com/library/windows/desktop/bb761389) nel SDK di Windows. Per ulteriori informazioni sul trascinamento di un elemento del controllo albero, vedere [trascinando l'elemento della visualizzazione struttura ad albero](/windows/desktop/Controls/tree-view-controls), anche in Windows SDK.
+È necessario fornire il codice che effettivamente si trascina l'elemento. Ciò comporta in genere usando le funzionalità di trascinamento di funzioni dell'elenco immagini e l'elaborazione di [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) e [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (o [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) messaggi inviati una volta iniziato l'operazione di trascinamento. Per altre informazioni sulle funzioni dell'elenco immagini, vedere [CImageList](../mfc/reference/cimagelist-class.md) nel *riferimento MFC* e [elenchi di immagini](/windows/desktop/controls/image-lists) nel SDK di Windows. Per ulteriori informazioni sul trascinamento di un elemento del controllo albero, vedere [trascinando l'elemento della visualizzazione struttura ad albero](/windows/desktop/Controls/tree-view-controls), anche in Windows SDK.
 
 Se gli elementi in un controllo albero sono le destinazioni di un'operazione di trascinamento e rilascio, è necessario conoscere quando il cursore del mouse si trova in un elemento di destinazione. È possibile scoprire chiamando il [HitTest](../mfc/reference/ctreectrl-class.md#hittest) funzione membro. Specificare un punto e integer o l'indirizzo di un [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) struttura che contiene le coordinate corrente del cursore del mouse. Quando la funzione termina, il numero intero o la struttura contiene un flag che indica la posizione del cursore del mouse rispetto al controllo albero. Se il cursore si trova su un elemento nel controllo albero, la struttura contiene l'handle dell'elemento nonché.
 

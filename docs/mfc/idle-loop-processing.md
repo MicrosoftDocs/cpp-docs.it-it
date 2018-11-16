@@ -16,18 +16,18 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 1eff76e2e5fd98e63dccb9110882656f69da6539
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35078b944412142a07906791e74209fd5dab06d3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604271"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693438"
 ---
 # <a name="idle-loop-processing"></a>Elaborazione di cicli inattivi
 
 Molte applicazioni eseguono lunghe operazioni di elaborazione "in"background. In alcuni casi le considerazioni sulle prestazioni è necessario utilizzare il multithreading per eseguire tali operazioni. Thread comportano un sovraccarico di sviluppo aggiuntivi, in modo che non sono consigliati per attività semplici come il lavoro di tempo di inattività di MFC nel [OnIdle](../mfc/reference/cwinthread-class.md#onidle) (funzione). Questo articolo illustra l'elaborazione inattiva. Per altre informazioni sull'uso del multithreading, vedere [argomenti relativi al Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Alcuni tipi di elaborazione in background vengono eseguiti in modo appropriato durante gli intervalli che l'utente non è in caso contrario, interagisce con l'applicazione. In un'applicazione sviluppata per il sistema operativo Microsoft Windows, un'applicazione può eseguire l'elaborazione di tempo di inattività suddividendo un processo lungo in numero di frammenti di piccole dimensioni. Dopo l'elaborazione di ogni frammento, l'applicazione restituisce il controllo di esecuzione per Windows utilizzando un [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) ciclo.
+Alcuni tipi di elaborazione in background vengono eseguiti in modo appropriato durante gli intervalli che l'utente non è in caso contrario, interagisce con l'applicazione. In un'applicazione sviluppata per il sistema operativo Microsoft Windows, un'applicazione può eseguire l'elaborazione di tempo di inattività suddividendo un processo lungo in numero di frammenti di piccole dimensioni. Dopo l'elaborazione di ogni frammento, l'applicazione restituisce il controllo di esecuzione per Windows utilizzando un [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) ciclo.
 
 Questo articolo illustra due modi per eseguire l'elaborazione dell'applicazione di inattività:
 
@@ -37,7 +37,7 @@ Questo articolo illustra due modi per eseguire l'elaborazione dell'applicazione 
 
 ##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage nel ciclo di messaggi MFC
 
-In un'applicazione sviluppata con MFC, ciclo di messaggi principale il `CWinThread` classe contiene un ciclo di messaggi che chiama il [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) API Win32. Questo ciclo anche le chiamate di `OnIdle` funzione membro di `CWinThread` tra i messaggi. Un'applicazione può elaborare i messaggi di questo tempo di inattività eseguendo l'override di `OnIdle` (funzione).
+In un'applicazione sviluppata con MFC, ciclo di messaggi principale il `CWinThread` classe contiene un ciclo di messaggi che chiama il [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) API Win32. Questo ciclo anche le chiamate di `OnIdle` funzione membro di `CWinThread` tra i messaggi. Un'applicazione può elaborare i messaggi di questo tempo di inattività eseguendo l'override di `OnIdle` (funzione).
 
 > [!NOTE]
 >  `Run`, `OnIdle`, e alcune altre funzioni membro sono ora membri della classe `CWinThread` invece che della classe `CWinApp`. L'oggetto `CWinApp` è derivato da `CWinThread`.

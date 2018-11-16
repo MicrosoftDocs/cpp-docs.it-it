@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5bf5deec5820976c742efa490bf02d0c0d830a09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464896"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693907"
 ---
 # <a name="discretedistribution-class"></a>Classe discrete_distribution
 
@@ -230,7 +230,7 @@ Il costruttore predefinito costruisce un oggetto il cui valore di probabilità a
 
 Il costruttore di intervalli dell'iteratore con i parametri *firstW* e *lastW* costruisce un oggetto di distribuzione usando i valori di peso presi dagli iteratori nella sequenza dell'intervallo [*firstW*, *lastW*).
 
-Il costruttore di elenchi dell'inizializzatore con il parametro *weightlist* costruisce un oggetto di distribuzione usando i pesi presi dall'oggetto *weightlist* nell'elenco dell'inizializzatore.
+Il costruttore di elenchi di inizializzatori con un *weightlist* parametro crea un oggetto di distribuzione con i pesi dall'elenco di inizializzatori *weightlist*.
 
 Il costruttore con i parametri *count*, *low*, *high* e *weightfunc* costruisce un oggetto di distribuzione inizializzato in base alle regole seguenti:
 
