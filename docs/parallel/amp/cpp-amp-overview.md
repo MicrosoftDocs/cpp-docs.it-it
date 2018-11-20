@@ -1,6 +1,6 @@
 ---
 title: Cenni preliminari su C++ AMP
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663788"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176991"
 ---
 # <a name="c-amp-overview"></a>Cenni preliminari su C++ AMP
 
@@ -362,7 +362,7 @@ Nelle applicazioni tipiche, gli elementi in un riquadro sono correlati in qualch
 
 Il diagramma seguente rappresenta una matrice bidimensionale di dati disposti in sezioni di campionamento.
 
-![Indicizzare i valori in un'estensione affiancata](../../parallel/amp/media/camptiledgridexample.png "camptiledgridexample")
+![Indicizzare i valori in un'estensione affiancata](../../parallel/amp/media/camptiledgridexample.png "indicizzare i valori in un'estensione affiancata")
 
 L'esempio di codice seguente usa i dati di campionamento dal diagramma precedente. Il codice sostituisce ogni valore nella sezione per la media dei valori nel riquadro.
 

@@ -1,18 +1,18 @@
 ---
 title: Contenitore documenti attivi
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - active documents [MFC], containers
 - active document containers [MFC]
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: ec2e4d11e00040cf0b94957db8466d127e0b5420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510838"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176783"
 ---
 # <a name="active-document-containers"></a>Contenitore documenti attivi
 
@@ -54,7 +54,7 @@ L'oggetto cornice, gli oggetti di visualizzazione e l'oggetto contenitore può i
 
 Nella figura seguente mostra le relazioni concettuale tra un contenitore e i relativi componenti (a sinistra) e il documento attivo e le relative visualizzazioni (a destra). Il documento attivo gestisce dati e archiviazione e la vista consente di visualizzare o, facoltativamente, visualizza tali dati. Le interfacce in grassetto sono quelle necessarie per la partecipazione di documenti attivi; tali grassetto e corsivo sono facoltativi. Sono necessarie tutte le altre interfacce.
 
-![Interfacce del contenitore documenti attivi](../mfc/media/vc37gj1.gif "vc37gj1")
+![Interfacce del contenitore documenti attivi](../mfc/media/vc37gj1.gif "interfacce del contenitore documenti attivi")
 
 Un documento che supporta solo una singola visualizzazione può implementare i componenti di visualizzazione sia il documento (ovvero interfacce corrispondenti) in un'unica classe concreta. Inoltre, un sito contenitore che supporta solo una vista in un momento possibile combinare i siti di documento e la visualizzazione in una singola classe concreta. Oggetto cornice del contenitore, è necessario comunque distinto e componente di documento del contenitore è semplicemente incluso qui per fornire una panoramica completa dell'architettura; quest'ultimo non è interessato dall'architettura di contenimento di documenti attivi.
 

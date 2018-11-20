@@ -1,6 +1,6 @@
 ---
 title: Gestione di finestre figlio MDI
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - MDICLIENT
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 2055c215392c6805791de729ff6ab8c6a9057308
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629411"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176796"
 ---
 # <a name="managing-mdi-child-windows"></a>Gestione di finestre figlio MDI
 
@@ -25,7 +25,8 @@ Finestre principali MDI (una per ogni applicazione) contengono una finestra figl
 
 In una finestra cornice MDI, la finestra cornice gestisce la finestra MDICLIENT, riposizionandola insieme alle barre di controllo. La finestra MDICLIENT, a sua volta, gestisce tutte le finestre di cornice figlio MDI. Nella figura seguente mostra la relazione tra una finestra cornice MDI, la relativa finestra MDICLIENT e finestre cornice documento figlio.
 
-![Finestre figlio in una finestra cornice MDI](../mfc/media/vc37gb1.gif "vc37gb1") Windows cornice MDI e gli elementi figlio
+![Finestre figlio in una finestra cornice MDI](../mfc/media/vc37gb1.gif "finestre figlio in una finestra cornice MDI") <br/>
+Finestre cornice MDI ed elementi figli
 
 Una finestra cornice MDI agisce anche insieme alla finestra figlio MDI corrente, se presente. La finestra cornice MDI delega i messaggi di comando alla finestra figlio MDI prima di tentare di gestirli essa stessa.
 

@@ -1,6 +1,6 @@
 ---
 title: 'Controlli ActiveX MFC: utilizzo dei tipi di carattere'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608914"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175821"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controlli ActiveX MFC: utilizzo dei tipi di carattere
 
@@ -204,7 +204,8 @@ Nella maggior parte dei casi il controllo deve sapere quando sono state modifica
 
 Se il controllo Usa la proprietà predefinita, le notifiche vengono gestite per i `OnFontChanged` funzione membro di `COleControl`. Quando si aggiungono le proprietà di tipo di carattere personalizzato, è possibile configurarli per usare la stessa implementazione. Nell'esempio nella sezione precedente, questa operazione è stata eseguita passando &*m_xFontNotification* quando si inizializza il *m_fontHeading* variabile membro.
 
-![Implementare più interfacce dell'oggetto font](../mfc/media/vc373q1.gif "vc373q1") implementa più interfacce di tipo di carattere dell'oggetto
+![Implementare più interfacce dell'oggetto font](../mfc/media/vc373q1.gif "implementa più interfacce dell'oggetto del tipo di carattere") <br/>
+Implementazione di interfacce di oggetti con più tipi di carattere
 
 Le linee continue nella figura precedente mostrano che entrambi gli oggetti del tipo di carattere sono usando la stessa implementazione di `IFontNotification`. Ciò può causare problemi se si vuole distinguere quale tipo di carattere modificato.
 

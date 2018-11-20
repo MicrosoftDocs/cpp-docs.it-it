@@ -1,6 +1,6 @@
 ---
 title: Cast
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: eb309319a4af6d604d8558552ce313ba1d0fb629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02ade663ee92d3a301fda95bb385c3ffa48ead12
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560797"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175548"
 ---
 # <a name="casting"></a>Cast
 
@@ -23,11 +23,13 @@ Nel linguaggio C++ se una classe è derivata da una classe base che contiene fun
 
 Poiché una classe derivata completamente contiene le definizioni di tutte le classi di base da cui deriva, è possibile eseguire il cast di un puntatore alla gerarchia di classi a una di queste classi base. Dato un puntatore a una classe base, è possibile eseguire la riduzione del puntatore nella gerarchia. Questo è possibile se l'oggetto a cui si sta puntando è effettivamente di un tipo derivato dalla classe base. In questo caso, l'oggetto effettivo è definito "oggetto completo". Al puntatore alla classe base viene detto di puntare a un "oggetto secondario" dell'intero oggetto. Si consideri ad esempio la gerarchia di classe illustrata nella figura che segue.
 
-![Gerarchia delle classi](../cpp/media/vc38zz1.gif "vc38ZZ1") gerarchia di classi
+![Gerarchia delle classi](../cpp/media/vc38zz1.gif "gerarchia delle classi") <br/>
+Gerarchia delle classi
 
 Un oggetto di tipo `C` potrebbe essere visualizzato come illustrato di seguito.
 
-![La classe C con sub&#45;gli oggetti B e A](../cpp/media/vc38zz2.gif "vc38ZZ2") classe C con oggetto secondario B e oggetto secondario A
+![La classe C con sub&#45;gli oggetti B e A](../cpp/media/vc38zz2.gif "classe C con sub&#45;oggetti B e A") <br/>
+Classe C con sottoggetti B e A
 
 Data un'istanza della classe `C`, esiste un oggetto secondario `B` e un oggetto secondario `A`. L'istanza di `C`, inclusi gli oggetti secondari `A` e `B`, è "l'oggetto completo".
 

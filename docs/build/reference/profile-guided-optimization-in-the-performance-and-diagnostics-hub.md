@@ -1,13 +1,13 @@
 ---
 title: Ottimizzazione GPO nell'hub Prestazioni e diagnostica
-ms.date: 03/14/2018
+ms.date: 11/19/2018
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
-ms.openlocfilehash: 57e0c32b401f2c1c3216a120bc86efa649ee0104
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8c0467e1a3051609f52053894ea59064e40a3ac
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580856"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176198"
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>L'ottimizzazione PGO nell'Hub di diagnostica e prestazioni di Visual Studio 2013
 
@@ -45,21 +45,21 @@ Quindi, impostare la configurazione della compilazione dell'applicazione su Rila
 
 Aprire l'Hub prestazioni e diagnostica, sulla barra dei menu, scegliere **Analyze**, **prestazioni e diagnostica**. Viene aperta una pagina della sessione di diagnostica con gli strumenti di analisi disponibili per il tipo di progetto.
 
-![PGO nell'Hub prestazioni e diagnostica](../../build/reference/media/pgofig0hub.png "PGOFig0Hub")
+![PGO nell'Hub prestazioni e diagnostica](../../build/reference/media/pgofig0hub.png "PGO nell'Hub prestazioni e diagnostica")
 
 Nelle **strumenti disponibili**, selezionare la **ottimizzazione PGO** casella di controllo. Scegliere il **avviare** per avviare il plug-in PGO.
 
-![Pagina Introduzione PGO](../../build/reference/media/pgofig1start.png "PGOFig1Start")
+![Pagina Introduzione PGO](../../build/reference/media/pgofig1start.png "pagina Introduzione PGO")
 
 Il **ottimizzazione PGO** pagina vengono descritti i passaggi gli utilizzi plug-in per migliorare le prestazioni dell'app. Scegliere il **avviare** pulsante.
 
-![Pagina Strumentazione PGO](../../build/reference/media/pgofig2instrument.png "PGOFig2Instrument")
+![Pagina Strumentazione PGO](../../build/reference/media/pgofig2instrument.png "pagina Strumentazione PGO")
 
 Nel **strumentazione** sezione, si utilizza il **Training inizialmente abilitato** possibilità di scegliere se includere la fase di avvio dell'app come parte del training. Se questa opzione non è selezionata, i dati del training non vengono registrati in un'applicazione instrumentata in esecuzione finché non si abilita il training in modo esplicito.
 
 Scegliere il **instrumentare** per compilare l'app con un set speciale di opzioni del compilatore. Il compilatore inserisce istruzioni probe nel codice generato. Queste istruzioni registrano i dati di profilatura durante la fase di training.
 
-![Pagina build instrumentata PGO](../../build/reference/media/pgofig3build.PNG "PGOFig3Build")
+![Pagina build instrumentata PGO](../../build/reference/media/pgofig3build.PNG "pagina build instrumentata PGO")
 
 Quando la compilazione instrumentata dell'applicazione è completa, l'applicazione viene avviata automaticamente.
 
@@ -67,22 +67,22 @@ In caso di eventuali errori o avvisi durante la compilazione, correggerli e quin
 
 Quando viene avviata l'app, è possibile usare la **avvia Training** e **Sospendi Training** collega nel **Training** sezione per controllare quando vengono registrate le informazioni di profilatura. È possibile usare la **Arresta applicazione** e **Avvia applicazione** collegamenti per arrestare e riavviare l'app.
 
-![Pagina training PGO](../../build/reference/media/pgofig4training.PNG "PGOFig4Training")
+![Pagina training PGO](../../build/reference/media/pgofig4training.PNG "pagina training PGO")
 
 Durante il training, eseguire gli scenari utente per acquisire le informazioni di profilatura di cui il plug-in PGO necessita per ottimizzare il codice. Dopo aver completato il training, chiudere l'app o scegliere il **Arresta applicazione** collegamento. Scegliere il **Analyze** per avviare la fase di analisi.
 
 Quando l'analisi è stata completata, il **analisi** sezione per visualizzare un report delle informazioni di profilatura acquisito durante la fase di training dello scenario utente. È possibile utilizzare questo report per esaminare le funzioni che sono state più chiamate e che hanno richiesto la maggior quantità di tempo da parte dell'applicazione. Il plug-in PGO utilizza le informazioni per determinare quale funzione dell'applicazione ottimizzare per velocità e quali ottimizzare per dimensione. Il plug-in PGO configura le ottimizzazioni di compilazione per creare la più piccola e veloce applicazione per gli scenari utente registrati durante il training.
 
-![Pagina analisi PGO](../../build/reference/media/pgofig5analyze.png "PGOFig5Analyze")
+![Pagina analisi PGO](../../build/reference/media/pgofig5analyze.png "pagina analisi PGO")
 
 Se il training ha acquisito le informazioni di profilatura previste, è possibile scegliere **Save Changes** per salvare i dati di profilatura analizzati nel progetto per ottimizzare le compilazioni future. Per eliminare i dati del profilo e avviare il training dall'inizio, scegliere **Ripeti Training**.
 
 Il file di dati di profilo viene salvato nel progetto in un **dati di Training PGO** cartella. Questi dati vengono utilizzati per controllare le impostazioni dell'ottimizzazione della compilazione del compilatore nell'applicazione.
 
-![File di dati PGO in Esplora soluzioni](../../build/reference/media/pgofig6data.png "PGOFig6Data")
+![File di dati PGO in Esplora soluzioni](../../build/reference/media/pgofig6data.png "file di dati PGO in Esplora soluzioni")
 
 Dopo le analisi, il plug-in PGO imposta le opzioni di compilazione nel progetto per utilizzare i dati di profiling per ottimizzare in modo selettivo l'applicazione durante la compilazione. È possibile continuare a modificare e compilare l'applicazione con gli stessi dati di profiling. Quando l'applicazione viene compilata, l'output della compilazione mostra quante funzioni e istruzioni sono state ottimizzate utilizzando i dati di profiling.
 
-![Diagnostica di output di ottimizzazione PGO](../../build/reference/media/pgofig7diagnostics.png "PGOFig7Diagnostics")
+![Diagnostica di output di ottimizzazione PGO](../../build/reference/media/pgofig7diagnostics.png "PGO output di diagnostica")
 
 Se si apportano modifiche significative al codice durante lo sviluppo, potrebbe essere necessario riqualificare l'applicazione per ottenere le migliori ottimizzazioni. È consigliabile riqualificare l'applicazione quando l'output di compilazione mostra che meno dell'80% delle funzioni o delle istruzioni sono state ottimizzate utilizzando i dati di profiling.

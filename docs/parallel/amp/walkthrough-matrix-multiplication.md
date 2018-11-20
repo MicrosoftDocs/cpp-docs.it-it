@@ -1,13 +1,13 @@
 ---
 title: 'Procedura dettagliata: moltiplicazione di matrici'
-ms.date: 11/06/2018
+ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ae86ff5a111348404616c8bb4fecd3bf22afc90c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327109"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176159"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Procedura dettagliata: moltiplicazione di matrici
 
@@ -41,13 +41,13 @@ Prima di iniziare:
 
 In questa sezione, prendere in considerazione la moltiplicazione di due matrici, A e B, che sono definiti come segue:
 
-![3&#45;da&#45;2 matrix](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")
+![3&#45;da&#45;matrice a 2](../../parallel/amp/media/campmatrixanontiled.png "3&#45;da&#45;matrice a 2")
 
-![2&#45;da&#45;3 matrix](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")
+![2&#45;da&#45;matrice 3 B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;da&#45;matrice 3 B")
 
 È una matrice 3 per 2 e B è una matrice 2 per 3. Il prodotto della moltiplicazione da B è la seguente matrice 3 per 3. Il prodotto viene calcolato moltiplicando le righe dell'oggetto da colonne di B elemento per elemento.
 
-![3&#45;da&#45;3 matrix](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;da&#45;matrice 3")
+![3&#45;da&#45;matrice prodotto 3](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;da&#45;matrice prodotto 3")
 
 ### <a name="to-multiply-without-using-c-amp"></a>Moltiplicare senza utilizzare C++ AMP
 
@@ -161,19 +161,19 @@ Per sfruttare i vantaggi del sezionamento nella moltiplicazione di matrici, l'al
 
 ![4&#45;da&#45;matrice 4](../../parallel/amp/media/campmatrixatiled.png "4&#45;da&#45;matrice a 4")
 
-![4&#45;da&#45;matrice 4](../../parallel/amp/media/campmatrixbtiled.png "4&#45;da&#45;matrice 4 B")
+![4&#45;da&#45;matrice 4 B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;da&#45;matrice 4 B")
 
-![4&#45;da&#45;matrice 4](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;da&#45;prodotto matrice 4")
+![4&#45;da&#45;matrice 4 prodotto](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;da&#45;matrice prodotto 4")
 
 Le matrici sono suddivisi in quattro 2x2 matrici, che sono definite come segue:
 
-![4&#45;da&#45;matrice 4 partizionata in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;da&#45;matrice 4 partizionata in 2&#45;per&#45;sub 2&#45;matrici")
+![4&#45;da&#45;matrice 4 oggetto suddiviso in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;da&#45;matrice 4 oggetto suddiviso in 2&#45;per&#45;sub 2&#45;matrici")
 
-![4&#45;da&#45;matrice 4 partizionata in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;da&#45;matrice 4 partizionata in 2&#45;per&#45;sub 2&#45;matrici")
+![4&#45;da&#45;matrice 4 B è suddiviso in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;da&#45;matrice 4 B è suddiviso in 2&#45;per&#45;sub 2&#45;matrici")
 
 Il prodotto di A e B possono essere scritti e calcolata come segue:
 
-![4&#45;da&#45;matrice 4 partizionata in 2&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;da&#45;prodotto 4 di oggetto e B")
+![4&#45;da&#45;matrice 4 partizionata in 2 a B&#45;da&#45;sub 2&#45;matrici](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;da&#45;matrice 4 A B suddiviso in 2&#45;per&#45;sub 2&#45;matrici")
 
 Poiché le matrici `a` tramite `h` sono 2x2 matrici, tutti i prodotti e somme di essi sono anche 2x2 matrici. Ne consegue che anche il prodotto di A e B è una 4x4 matrice, come previsto. Per controllare rapidamente l'algoritmo, calcolare il valore dell'elemento nella prima riga, prima colonna all'interno del prodotto. Nell'esempio, che sarà il valore dell'elemento nella prima riga e colonna prima di `ae + bg`. È sufficiente calcolare la prima colonna, la prima riga della `ae` e `bg` per ciascun termine. Tale valore per `ae` è `(1 * 1) + (2 * 5) = 11`. Il valore per `bg` è `(3 * 1) + (4 * 5) = 23`. Il valore finale è `11 + 23 = 34`, che sia corretto.
 

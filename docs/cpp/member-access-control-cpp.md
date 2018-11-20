@@ -1,17 +1,17 @@
 ---
 title: Controllo di accesso dei membri [C++]
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611419"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176225"
 ---
 # <a name="member-access-control-c"></a>Controllo di accesso dei membri [C++]
 
@@ -234,7 +234,8 @@ Nell'esempio precedente, chiamando la funzione virtuale `GetState` mediante un a
 
 In reticoli con ereditarietà multipla che includono classi base virtuali un nome specificato può essere raggiunto da più di un percorso. Poiché a questi percorsi differenti è possibile applicare un controllo di accesso diverso, il compilatore sceglie il percorso con maggiori possibilità di accesso. Vedere la figura riportata di seguito.
 
-![Accesso ai percorsi di un grafico di ereditarietà](../cpp/media/vc38v91.gif "vc38V91") accesso lungo i percorsi di un grafico di ereditarietà
+![Accesso ai percorsi di un grafico di ereditarietà](../cpp/media/vc38v91.gif "accesso ai percorsi di un grafico di ereditarietà") <br/>
+Rappresentazione grafica dell'accesso ai percorsi di un'ereditarietà
 
 Nella figura un nome dichiarato nella classe `VBase` viene sempre raggiunto tramite la classe `RightPath`. Il percorso corretto è più accessibile perché `RightPath` dichiara `VBase` come classe base pubblica, mentre `LeftPath` dichiara `VBase` come privata.
 

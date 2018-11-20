@@ -1,17 +1,17 @@
 ---
 title: Conversioni standard
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575448"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176978"
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 
@@ -189,7 +189,8 @@ Il primo caso è quando la classe base specificata è accessibile e la conversio
 
 L'accessibilità di una classe base dipende dal tipo di ereditarietà usato nella derivazione. Esaminare l'ereditarietà illustrata nella seguente figura.
 
-![Grafica dell'ereditarietà con base&#45;classe di accessibilità](../cpp/media/vc38xa1.gif "vc38XA1") grafico dell'ereditarietà per l'illustrazione di accessibilità della classe di Base
+![Grafica dell'ereditarietà con base&#45;classe di accessibilità](../cpp/media/vc38xa1.gif "grafica dell'ereditarietà con base&#45;classe accessibilità") <br/>
+Grafico dell'ereditarietà per l'illustrazione dell'accessibilità delle classi base
 
 Nella tabella seguente viene illustrata l'accessibilità della classe base per la situazione illustrata nella figura.
 

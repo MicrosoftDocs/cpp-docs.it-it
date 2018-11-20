@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: ac1fb2304c6d06a6d3e1638fa7ded8a6903ee9fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467782"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694088"
 ---
 # <a name="porting-from-unix-to-win32"></a>Porting da UNIX a Win32
 
@@ -61,7 +61,7 @@ Sito di terze parti di una società che offre software che supporta il porting d
 
 Un'altra opzione consiste nel porting di applicazioni UNIX direttamente in Win32. Se si usano librerie C/C++ ANSI e librerie del compilatore C disponibili in commercio, molte delle tradizionali chiamate di sistema basate su applicazioni UNIX risulteranno disponibili anche in applicazioni Win32.
 
-Non è necessario modificare il modello di output delle applicazioni basate su **stdio** dal momento che le API della console Win32 console simulano il modello **stdio** e sono presenti versioni di *curses* che usano le API della console Win32. Per altre informazioni, vedere [SetConsoleCursorPosition](https://msdn.microsoft.com/library/windows/desktop/ms686025).
+Non è necessario modificare il modello di output delle applicazioni basate su **stdio** dal momento che le API della console Win32 console simulano il modello **stdio** e sono presenti versioni di *curses* che usano le API della console Win32. Per altre informazioni, vedere [SetConsoleCursorPosition](/windows/console/setconsolecursorposition).
 
 Le applicazioni basate su socket Berkeley richiedono solo poche modifiche per funzionare come applicazioni Win32. L'interfaccia Windows Sockets è stata progettata per garantire la portabilità con i socket BSD apportando modifiche minime illustrate nelle sezioni introduttive della specifica WinSock.
 
@@ -69,7 +69,7 @@ Windows supporta RPC compatibile con DCE, di conseguenza si possono facilmente u
 
 Una delle principali differenze tra i due sistemi è data dal modello di processo. In UNIX è presente `fork`, che invece non è presente in Win32. A seconda del modo in cui vengono usati `fork` e la base di codice, è possibile usare due API disponibili in Win32: `CreateProcess` e `CreateThread`. Un'applicazione UNIX che supporta il fork di più copie di se stessa può essere rielaborata in Win32 in modo da includere più processi o un singolo processo a più thread. Se si usano più processi, esistono più metodi di IPC che consentono di comunicare tra i processi ed eventualmente aggiornare il codice e i dati del nuovo processo in modo che siano simili all'elemento padre, se è necessaria la funzionalità offerta da `fork`. Per altre informazioni su IPC, vedere [Comunicazioni tra processi](/windows/desktop/ipc/interprocess-communications).
 
-I modelli grafici di Windows e UNIX sono molto diversi. UNIX usa l'interfaccia grafica utente X Window, mentre Windows usa GDI. Anche se concettualmente simili, non esiste un mapping semplice dell'API X all'API GDI. È però disponibile il supporto OpenGL per la migrazione di applicazioni basate UNIX OpenGL. Esistono inoltre client e server X per Windows. Per informazioni su GDI, vedere [Contesti di dispositivo](https://msdn.microsoft.com/library/windows/desktop/dd183553).
+I modelli grafici di Windows e UNIX sono molto diversi. UNIX usa l'interfaccia grafica utente X Window, mentre Windows usa GDI. Anche se concettualmente simili, non esiste un mapping semplice dell'API X all'API GDI. È però disponibile il supporto OpenGL per la migrazione di applicazioni basate UNIX OpenGL. Esistono inoltre client e server X per Windows. Per informazioni su GDI, vedere [Contesti di dispositivo](/windows/desktop/gdi/device-contexts).
 
 Dovrebbe essere semplice eseguire il porting a Visual C++ in esecuzione in Windows di applicazioni UNIX di base, incluse molte applicazioni CGI. La libreria di runtime di Visual C++ include diverse funzioni, tra cui `open`, `fopen`, `read` e `write`. Inoltre, esiste un mapping uno-a-uno tra le API C UNIX e le API Win32: da `open` a `CreateFile`, da `read` a `ReadFile`, da `write` a `WriteFile`, da `ioctl` a `DeviceIOControl`, da `close` a `CloseFile` e così via.
 

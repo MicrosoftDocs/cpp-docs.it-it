@@ -1,6 +1,6 @@
 ---
 title: Architettura documento / visualizzazione
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509279"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176849"
 ---
 # <a name="documentview-architecture"></a>Architettura documento/visualizzazione
 
@@ -47,7 +47,8 @@ Il [CView](../mfc/reference/cview-class.md) (o una delle varie classi derivate) 
 
 La figura seguente mostra la relazione tra un documento e la relativa visualizzazione.
 
-![Visualizzazione è la parte del documento che viene visualizzato](../mfc/media/vc379n1.gif "vc379n1") documento e visualizzazione
+![Visualizzazione è la parte del documento che viene visualizzato](../mfc/media/vc379n1.gif "visualizzazione è la parte del documento visualizzata") <br/>
+Documento e visualizzazione
 
 L'implementazione di documenti/visualizzazioni nella libreria di classi consente di separare i dati stessi dalla relativa visualizzazione e da operazioni sui dati dell'utente. Tutte le modifiche apportate ai dati vengono gestite tramite la classe del documento. La visualizzazione chiamate di questa interfaccia per accedere e aggiornare i dati.
 

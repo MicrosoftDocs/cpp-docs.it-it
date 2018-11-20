@@ -1,6 +1,6 @@
 ---
 title: Ereditarietà singola
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -10,18 +10,19 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461854"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175626"
 ---
 # <a name="single-inheritance"></a>Ereditarietà singola
 
 Nell'ereditarietà singola, una forma comune di ereditarietà, le classi contengono solo una classe base. Esaminare la relazione illustrata nella figura seguente.
 
-![Singola di base&#45;grafico di ereditarietà](../cpp/media/vc38xj1.gif "vc38XJ1") grafico semplice dell'ereditarietà singola
+![Singola di base&#45;grafico di ereditarietà](../cpp/media/vc38xj1.gif "singolo Basic&#45;grafico di ereditarietà") <br/>
+Grafico semplice dell'ereditarietà singola
 
 Si noti la progressione da generale a specifico nella figura. Un altro attributo comune trovato nella progettazione delle gerarchie di classi corrisponde al fatto che la classe derivata ha una relazione "tipo di" con la classe base. Nella figura, `Book` è un tipo di `PrintedDocument` e `PaperbackBook` è un tipo di `book`.
 
@@ -47,12 +48,13 @@ Nell'esempio precedente, l'identificatore di accesso **pubblica** viene usato. V
 
 Una classe può essere usata come classe base per molte classi specifiche, come illustrato nella figura seguente.
 
-![Un grafo aciclico diretto descritto](../cpp/media/vc38xj2.gif "vc38XJ2") esempio di grafico aciclico diretto
+![Un grafo aciclico diretto descritto](../cpp/media/vc38xj2.gif "descritto un grafo aciclico diretto") <br/>
+Esempio di grafico aciclico diretto
 
 Nel diagramma precedente, denominato grafico aciclico diretto, alcune classi sono classi base per più di una classe derivata. Tuttavia, il contrario non è vero: esiste una sola classe base diretta per qualsiasi classe derivata specificata. Il grafico nella figura raffigura struttura a ereditarietà singola.
 
 > [!NOTE]
->  I grafici aciclici diretti non sono univoci per l'ereditarietà singola. Tali grafici vengono inoltre usati per rappresentare grafici di ereditarietà multipla.
+> I grafici aciclici diretti non sono univoci per l'ereditarietà singola. Tali grafici vengono inoltre usati per rappresentare grafici di ereditarietà multipla.
 
 Nell'ereditarietà la classe derivata contiene i membri della classe base e tutti i nuovi membri aggiunti. Di conseguenza, una classe derivata può fare riferimento ai membri della classe base, a meno che i membri non vengano ridefiniti nella classe derivata. L'operatore di risoluzione dell'ambito (`::`) può essere usato per fare riferimento a membri delle classi base dirette o indirette quando tali membri sono stati ridefiniti nella classe derivata. Si consideri l'esempio seguente:
 

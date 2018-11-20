@@ -1,6 +1,6 @@
 ---
 title: Finestre cornice
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document frame windows [MFC]
 - windows [MFC], MDI
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 09db7bab392778297f17c14f7bb807f91af4d896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619934"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175375"
 ---
 # <a name="frame-windows"></a>Finestre cornice
 
@@ -30,7 +30,8 @@ Quando un'applicazione in esecuzione in Windows, l'utente interagisce con i docu
 
 Il framework MFC utilizza finestre cornice per contenere le viste. I due componenti, frame e il contenuto, vengono rappresentate e gestite da due diverse classi in MFC. Una classe della finestra cornice gestisce il frame e una classe di visualizzazione gestisce il contenuto. La finestra di visualizzazione è un elemento figlio della finestra cornice. Disegno e l'interazione dell'utente con il documento essere eseguite nell'area client della visualizzazione, non l'area client della finestra cornice. La finestra cornice fornisce un frame visibile intorno a una visualizzazione completa di una barra del titolo e i controlli di finestra standard, ad esempio un menu di controllo, i pulsanti per ridurre e ingrandire la finestra e controlli per il ridimensionamento della finestra. Il "contenuto" costituito da dell'area client della finestra, che è completamente occupato da una finestra figlio, ovvero la visualizzazione. Nella figura seguente mostra la relazione tra una finestra cornice e una visualizzazione.
 
-![Visualizzazione della finestra cornice](../mfc/media/vc37fx1.gif "vc37fx1") finestra cornice e visualizzazione
+![Visualizzazione della finestra cornice](../mfc/media/vc37fx1.gif "Frame di visualizzazione della finestra") <br/>
+Finestra cornice e visualizzazione
 
 ## <a name="frame-windows-and-splitter-windows"></a>Frame Windows e Windows con separatore
 

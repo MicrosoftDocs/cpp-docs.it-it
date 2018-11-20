@@ -1,16 +1,16 @@
 ---
 title: Personalizzazione di tastiera e mouse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487387"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175680"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personalizzazione di tastiera e mouse
 
@@ -22,7 +22,8 @@ Nel **personalizzazione** nella finestra di dialogo l'utente può modificare i c
 
 La figura seguente mostra le **tastiera** scheda della finestra di **personalizzazione** nella finestra di dialogo.
 
-![Scheda tastiera nella finestra di dialogo Personalizza](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab") scheda di personalizzazione di tastiera
+![Scheda tastiera nella finestra di dialogo Personalizza](../mfc/media/mfcnextkeyboardtab.png "scheda tastiera nella finestra di dialogo Personalizza") <br/>
+Scheda di personalizzazione della tastiera
 
 L'utente interagisce con la scheda della tastiera per assegnare uno o più tasti di scelta rapida a un comando. I comandi disponibili sono elencati sul lato sinistro della scheda. L'utente può selezionare qualsiasi comando disponibile dal menu. Solo i comandi di menu possono essere associati a un tasto di scelta rapida. Dopo che l'utente immette un nuovo collegamento, il **assegnare** pulsante viene abilitato. Quando l'utente fa clic su questo pulsante, il comando selezionato viene automaticamente associato al tasto di scelta rapida.
 
@@ -36,7 +37,8 @@ Se si utilizza la procedura guidata per creare l'applicazione, il gestore della 
 
 La figura seguente mostra le **Mouse** scheda della finestra di **personalizzazione** nella finestra di dialogo.
 
-![Scheda mouse nella finestra di dialogo Personalizza](../mfc/media/mfcnextmousetab.png "mfcnextmousetab") Mouse personalizzazione scheda
+![Scheda mouse nella finestra di dialogo Personalizza](../mfc/media/mfcnextmousetab.png "scheda Mouse nella finestra di dialogo Personalizza") <br/>
+Scheda di personalizzazione del mouse
 
 L'utente interagisce con questa scheda per assegnare un comando di menu all'azione di doppio clic del mouse. L'utente seleziona una visualizzazione dalla parte sinistra della finestra e utilizza i controlli sulla parte destra per associare un comando all'azione di doppio clic. Dopo che l'utente fa clic su **Chiudi**, l'applicazione esegue il comando associato ogni volta che l'utente fa doppio clic in un punto qualsiasi nella visualizzazione.
 

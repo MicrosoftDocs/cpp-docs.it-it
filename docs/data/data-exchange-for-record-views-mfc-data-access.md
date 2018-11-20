@@ -1,6 +1,6 @@
 ---
 title: Scambio di dati per le visualizzazioni di record (accesso ai dati MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - RFX (record field exchange), data exchange mechanism
 - RFX (record field exchange), record views
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-ms.openlocfilehash: d3b1c5b997baa0938c532c7a2806d5e65eb125a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf9f32e970becd1ef8dc4e347512dcfaa7cf62ac
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546469"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175411"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Scambio di dati per le visualizzazioni di record (accesso ai dati MFC)
 
@@ -23,7 +23,7 @@ DDX per le visualizzazioni di record opera unitamente [RFX](../data/odbc/record-
 
 La figura seguente mostra la relazione tra DDX e RFX per visualizzazioni di record.
 
-![Finestra di dialogo&#45;scambio di dati e record&#45;campo exchange](../data/media/vc37xt1.gif "vc37xt1")<br/>
+![Finestra di dialogo&#45;scambio di dati e record&#45;campo exchange](../data/media/vc37xt1.gif "finestra di dialogo&#45;lo scambio di dati e record&#45;campo exchange")<br/>
 DDX (Dialog Data Exchange) e RFX (Record Field Exchange)
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../mfc/dialog-data-exchange-and-validation.md). Per altre informazioni su RFX, vedere [campi di Record (RFX)](../data/odbc/record-field-exchange-rfx.md).

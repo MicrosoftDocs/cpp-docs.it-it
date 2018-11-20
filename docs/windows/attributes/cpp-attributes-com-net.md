@@ -1,17 +1,17 @@
 ---
 title: Attributi di C++ per COM e .NET
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589280"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175769"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributi di C++ per COM e .NET
 
@@ -55,7 +55,7 @@ Come prima, quando viene compilato il progetto, il compilatore analizza ogni fil
 
 La figura seguente illustra la relazione tra il compilatore e il provider di attributi.
 
-![Comunicazione degli attributi Component](../media/vccompattrcomm.gif "vcCompAttrComm")
+![Comunicazione degli attributi Component](../media/vccompattrcomm.gif "comunicazione degli attributi di componente")
 
 > [!NOTE]
 > Utilizzo dell'attributo non modifica il contenuto del file di origine. L'unica volta che il codice generato dall'attributo è visibile sia durante le sessioni di debug. Inoltre, per ogni file di origine nel progetto, è possibile generare un file di testo che visualizza i risultati della sostituzione attributo. Per altre informazioni su questa procedura, vedere [/Fx (Merge del codice)](../../build/reference/fx-merge-injected-code.md) e [debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).

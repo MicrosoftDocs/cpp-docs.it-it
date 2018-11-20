@@ -1,6 +1,6 @@
 ---
 title: Inizializzatori
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544664"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176289"
 ---
 # <a name="initializers"></a>Inizializzatori
 
@@ -528,7 +528,8 @@ Variabili di tipo riferimento possono essere dichiarate senza inizializzatori so
 
 Nell'inizializzare una variabile di tipo riferimento, il compilatore utilizza il grafico di decisione illustrato nella figura che segue per scegliere tra la creazione di un riferimento a un oggetto o la creazione di un oggetto temporaneo a cui il riferimento punta.
 
-![Grafico delle decisioni per l'inizializzazione dei tipi di riferimento](../cpp/media/vc38s71.gif "vc38S71") grafico delle decisioni per l'inizializzazione di tipi di riferimento
+![Grafico delle decisioni per l'inizializzazione dei tipi di riferimento](../cpp/media/vc38s71.gif "grafico delle decisioni per l'inizializzazione dei tipi di riferimento") <br/>
+Grafico delle decisioni per l'inizializzazione dei tipi di riferimento
 
 I riferimenti a **volatili** tipi (dichiarati come **volatile** *typename* <strong>&</strong> *identificatore*) può essere inizializzato con **volatili** gli oggetti dello stesso tipo o con oggetti che non sono stati dichiarati **volatile**. Possono, tuttavia, essere inizializzati con **const** oggetti di quel tipo. Analogamente, i riferimenti a **const** tipi (dichiarati come **const** *typename* <strong>&</strong> *identificatore* ) può essere inizializzato con **const** oggetti dello stesso tipo (o qualsiasi elemento che dispone di una conversione al tipo o con gli oggetti che non sono stati dichiarati **const**). Possono, tuttavia, essere inizializzati con **volatile** oggetti di quel tipo.
 

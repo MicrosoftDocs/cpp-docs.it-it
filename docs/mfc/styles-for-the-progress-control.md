@@ -1,18 +1,18 @@
 ---
 title: Stili per il controllo Progress
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - PBS_SMOOTH style
 - progress controls [MFC], styles
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-ms.openlocfilehash: 494f5df03d15e1662f20aff644fb414a7254ad5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d33e9306c1d70bb58ad628297360bc6e34e6ce2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451727"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174954"
 ---
 # <a name="styles-for-the-progress-control"></a>Stili per il controllo Progress
 
@@ -34,11 +34,11 @@ Usare PBS_VERTICAL per orientare il controllo verticalmente anziché in orizzont
 
 Senza PBS_SMOOTH (stile):
 
-![Stile della barra di stato standard](../mfc/media/vc4ruw1.gif "vc4ruw1")
+![Stile della barra di stato standard](../mfc/media/vc4ruw1.gif "stile della barra di stato Standard")
 
 Con gli stili PBS_SMOOTH e PBS_VERTICAL:
 
-![Stato di avanzamento stile, uniforme e verticale](../mfc/media/vc4ruw2.gif "vc4ruw2")
+![Stato di avanzamento stile, uniforme e verticale](../mfc/media/vc4ruw2.gif "stile, uniforme e verticale dell'indicatore di stato")
 
 Per altre informazioni, vedere [stili Window](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc) nel *riferimento MFC*.
 

@@ -1,6 +1,6 @@
 ---
 title: Distruttori (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 5c56a6ffc43f8fa00ffd540a5922d8ac279475ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f26f797da75f0d7d7aa6f6849c9484cea35fb125
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586017"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175873"
 ---
 # <a name="destructors-c"></a>Distruttori (C++)
 
@@ -152,9 +152,8 @@ B1 dtor
 
 I distruttori delle classi base virtuali vengono chiamati in ordine inverso, rispetto a come appaiono in un grafico aciclico diretto (prima quelli che si trovano in profondità, da sinistra a destra, attraversamento post-ordine). La figura seguente rappresenta un grafico di ereditarietà.
 
-![Rappresentazione grafica dell'ereditarietà che mostra classi base virtuali](../cpp/media/vc392j1.gif "vc392J1")
-
-Grafico dell'ereditarietà che mostra le classi di base virtuali
+![Rappresentazione grafica dell'ereditarietà che mostra classi base virtuali](../cpp/media/vc392j1.gif "grafico di ereditarietà che mostra classi base virtuali") <br/>
+Rappresentazione grafica dell'ereditarietà con classi di base virtuali
 
 Di seguito vengono elencate le intestazioni di classe per le classi raffigurate nell'immagine.
 

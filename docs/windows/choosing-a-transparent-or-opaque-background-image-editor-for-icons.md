@@ -1,6 +1,6 @@
 ---
 title: Selezione di uno sfondo opaco o trasparente (Editor di immagini per le icone)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - opaque backgrounds [C++]
 - colors [C++], image
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [C++], transparency
 - images [C++], opaque background
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-ms.openlocfilehash: a7e4d427a6926d48b5115a1b5bb9ba2ca2d8068c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceea31b998d5c4dca52657db570ace664f7e373f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653531"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175431"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Selezione di uno sfondo opaco o trasparente (Editor di immagini per le icone)
 
@@ -21,7 +21,7 @@ Quando si sposta o si copia una selezione da un'immagine, sono tutti i pixel nel
 
 È possibile passare da uno sfondo trasparente (predefinito) a uno sfondo opaco e viceversa. Quando si usa uno strumento di selezione, il **sfondo trasparente** e **sfondo opaco** vengono visualizzate le opzioni nel **opzione** selettore sul **Editordiimmagini** sulla barra degli strumenti (come illustrato di seguito).
 
-![Opzioni sfondo &#45; opaco o trasparente](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
+![Opzioni sfondo &#45; opaco o trasparente](../windows/media/vcimageeditoropaqtranspback.gif "opzioni di sfondo &#45; opaco o trasparente")<br/>
 **Opzioni trasparenti e opache** nella **barra degli strumenti Editor di immagini**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Per passare da uno sfondo trasparente e opaco
@@ -32,9 +32,9 @@ Quando si sposta o si copia una selezione da un'immagine, sono tutti i pixel nel
 
    - `Transparent Background (T)`: Nelle parti della selezione che corrispondono al colore di sfondo corrente viene visualizzata l'immagine esistente.
 
-\- oppure -
+   \- oppure -
 
-- Nel **immagine** menu, seleziona o deselezionare **opaco**.
+1. Nel **immagine** menu, seleziona o deselezionare **opaco**.
 
 Durante l'esecuzione di una selezione attiva per modificare le parti dell'immagine sono trasparenti, è possibile modificare il colore di sfondo.
 

@@ -1,6 +1,6 @@
 ---
 title: Creazione di file di intestazione precompilata
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - pch
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 3014b2da9f9d9e03e9ea791c9a97ff59f842e8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482615"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176432"
 ---
 # <a name="creating-precompiled-header-files"></a>Creazione di file di intestazione precompilata
 
@@ -42,8 +42,6 @@ Questo argomento tratta gli argomenti di intestazione precompilata seguenti:
 
 Per informazioni sulle opzioni del compilatore correlate alle intestazioni precompilate, vedere [/Y (intestazioni precompilate)](../../build/reference/y-precompiled-headers.md).
 
-<a name="when-to-precompile-source-code"></a>
-
 ## <a name="when-to-precompile-source-code"></a>Condizioni per la precompilazione del codice sorgente
 
 Il codice precompilato è utile durante il ciclo di sviluppo per ridurre il tempo di compilazione, soprattutto se:
@@ -57,11 +55,9 @@ La prima compilazione, ovvero quello che crea il file di intestazione precompila
 È possibile precompilare i programmi C e C++. Nella programmazione C++, è pratica comune per separare le informazioni di interfaccia di classe in file di intestazione. Questi file di intestazione in un secondo momento possono essere incluso nei programmi che usano la classe. La precompilazione di queste intestazioni, è possibile ridurre il tempo di un programma per la compilazione.
 
 > [!NOTE]
->  Sebbene sia possibile usare un solo file di intestazione precompilata (PCH) per ogni file di origine, è possibile usare più file con estensione pch in un progetto.
+> Sebbene sia possibile usare un solo file di intestazione precompilata (PCH) per ogni file di origine, è possibile usare più file con estensione pch in un progetto.
 
-<a name="two-choices-for-precompiling-code"></a>
-
-# <a name="two-choices-for-precompiling-code"></a>Precompilazione del codice automatica e manuale
+## <a name="two-choices-for-precompiling-code"></a>Precompilazione del codice automatica e manuale
 
 Con Visual C++, è possibile precompilare qualsiasi codice C o C++. non si è limitati alla precompilazione solo i file di intestazione.
 
@@ -73,13 +69,9 @@ Sono le opzioni di intestazione precompilata [/Yc (Crea precompilati o meno File
 
 Gli argomenti di riferimento di opzione del compilatore per **/Yu** e **/Yc** illustra come accedere a questa funzionalità nell'ambiente di sviluppo.
 
-<a name="precompiled-header-consistency-rules"></a>
-
 ## <a name="precompiled-header-consistency-rules"></a>Regole di uniformità per le intestazioni precompilate
 
 Poiché i file PCH contengono informazioni sull'ambiente del computer, nonché informazioni sull'indirizzo di memoria sul programma, utilizzare solo un file PCH nel computer in cui è stato creato.
-
-<a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>
 
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>Regole di uniformità per l'utilizzo per singolo file delle intestazioni precompilate
 
@@ -134,8 +126,6 @@ Questi pragma vengono mantenuti come parte di un'intestazione precompilata e int
 |`data_seg`|`intrinsic`|`warning`|
 |`function`|`optimize`||
 
-<a name="consistency-rules-for-yc-and-yu"></a>
-
 ## <a name="consistency-rules-for-yc-and-yu"></a>Regole di uniformità per /Yc e /Yu
 
 Quando si usa un'intestazione precompilata creata con /Yc o /Yu, il compilatore confronta l'ambiente di compilazione corrente a quella esistente al momento della creazione del file PCH. Assicurarsi di specificare un ambiente coerenza con quello precedente (utilizzando le opzioni del compilatore coerente, direttive pragma e così via) per la compilazione corrente. Se il compilatore rileva un'incoerenza, genera un avviso e identifica l'incoerenza laddove possibile. Tali avvisi non indicano necessariamente un problema con il file PCH; sono semplicemente un avviso di possibili conflitti. Le sezioni seguenti illustrano i requisiti di coerenza per le intestazioni precompilate.
@@ -155,15 +145,11 @@ Questa tabella elenca le opzioni del compilatore potrebbero generare un avviso d
 > [!NOTE]
 >  La struttura di intestazione precompilata è destinata solo nei file di origine C e C++.
 
-<a name="using-precompiled-headers-in-a-project"></a>
-
 ## <a name="using-precompiled-headers-in-a-project"></a>Utilizzo di intestazioni precompilate in un progetto
 
 Nelle sezioni precedenti presentano una panoramica delle intestazioni precompilate: /Yc e /Yu, l'opzione /Fp e il [hdrstop](../../preprocessor/hdrstop.md) pragma. Questa sezione viene descritto un metodo per l'uso di opzioni di intestazione precompilata manuale in un progetto. termina con un makefile di esempio e il codice che gestisce.
 
 Per un altro approccio per usare le opzioni di intestazione precompilata manuale in un progetto, studiare a uno dei makefile che si trova nella directory MFC\SRC che viene creata durante l'installazione predefinita di Visual C++. Questi makefile adottano un approccio simile a quello presentato in questa sezione, ma diffondere l'utilizzo di macro Microsoft Program Maintenance Utility (NMAKE) e offrono un maggiore controllo del processo di compilazione.
-
-<a name="pch-files-in-the-build-process"></a>
 
 ## <a name="pch-files-in-the-build-process"></a>File PCH nel processo di compilazione
 
@@ -171,8 +157,8 @@ La codebase di un progetto software è in genere contenuta in più C o C++ i fil
 
 Nella figura Usa tre dispositivi diagrammatico per mostrare il flusso del processo di compilazione. Denominato rettangoli rappresentano ogni file o una macro. le tre macro rappresentano uno o più file. Le aree ombreggiate rappresentano ogni azione di compilazione o di collegamento. Le frecce indicano i file e le macro vengono combinate durante la compilazione o di un processo di collegamento.
 
-![Makefile che utilizza un file di intestazione precompilata](../../build/reference/media/vc30ow1.gif "struttura di un Makefile che utilizza un File di intestazione precompilata")
-##### <a name="structure-of-a-makefile-that-uses-a-precompiled-header-file"></a>Struttura di un makefile che utilizza un file di intestazione precompilata
+![Struttura di un makefile che utilizza un file di intestazione precompilata](../../build/reference/media/vc30ow1.gif "struttura di un makefile che utilizza un file di intestazione precompilata") <br/>
+Struttura di un makefile che utilizza un file di intestazione precompilata
 
 Iniziare nella parte superiore del diagramma, STABLEHDRS sia confine AS sono macro NMAKE in cui sono elencati i file probabilmente non devono essere ricompilati. Questi file vengono compilati dalla stringa di comando
 
@@ -187,8 +173,6 @@ Continuando verso il basso del diagramma, APPLIB rappresenta il codice di suppor
 MyApp rappresenta l'applicazione finale. Viene creata da MyApp. cpp, i file elencati nella macro UNSTABLEHDRS e codice precompilato da intestazione precompilata.
 
 Infine, il file eseguibile (MYAPP. Con estensione EXE) viene creato collegando i file elencati nella macro obj (APPLIB e MyApp).
-
-<a name="sample-makefile-for-pch"></a>
 
 ## <a name="sample-makefile-for-pch"></a>Makefile di esempio per PCH
 
@@ -254,8 +238,6 @@ NMAKE DEBUG=0
 ```
 
 Per altre informazioni su makefile, vedere [riferimenti a NMAKE](../../build/nmake-reference.md). Vedere anche [opzioni del compilatore](../../build/reference/compiler-options.md) e il [le opzioni del Linker](../../build/reference/linker-options.md).
-
-<a name="example-code-for-pch"></a>
 
 ## <a name="example-code-for-pch"></a>Codice di esempio per PCH
 

@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCRibbonCategory
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCRibbonCategory
 - AFXRIBBONCATEGORY/CMFCRibbonCategory
@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: b510befa8993337ce62b5bd3b00ea3f48091b0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657349"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176614"
 ---
 # <a name="cmfcribboncategory-class"></a>Classe CMFCRibbonCategory
 
@@ -244,7 +244,7 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
 
 Il diagramma seguente mostra una figura della categoria Home dall'applicazione di esempio RibbonApp.
 
-![Immagine CMFCRibbonCategory](../../mfc/reference/media/cmfcribboncategory.png "cmfcribboncategory")
+![Categoria principale dall'applicazione di esempio RibbonApp](../../mfc/reference/media/cmfcribboncategory.png "categoria Home dall'applicazione di esempio RibbonApp")
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -717,7 +717,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -909,7 +909,7 @@ CMFCRibbonPanel* HighlightPanel(
 *pHLPanel*<br/>
 [in] Puntatore al pannello della barra multifunzione per evidenziare.
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -932,7 +932,7 @@ CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore del mouse, rispetto all'angolo superiore sinistro della finestra.
 
 *bCheckPanelCaption*<br/>
@@ -956,7 +956,7 @@ int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore del mouse, rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -977,7 +977,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Punto da testare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1108,7 +1108,7 @@ virtual BOOL OnDrawImage(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo per l'immagine.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rettangolo di visualizzazione per l'immagine.
 
 *pElement*<br/>
@@ -1176,7 +1176,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore del mouse, rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1195,7 +1195,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -1210,7 +1210,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -1416,7 +1416,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 [in] Specifica il nuovo colore di categoria della barra multifunzione.
 
 ### <a name="remarks"></a>Note

@@ -1,13 +1,13 @@
 ---
 title: Raccolte (C++/CX)
-ms.date: 01/22/2017
+ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531589"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176393"
 ---
 # <a name="collections-ccx"></a>Raccolte (C++/CX)
 
@@ -15,7 +15,7 @@ In C + c++ /CX program, è possibile utilizzare in modo gratuito di contenitori 
 
 Windows Runtime definisce le interfacce per le raccolte e i tipi correlati e C + + c++ /CX fornisce le implementazioni concrete C++ nel file di intestazione Collection. h. Nella seguente immagine vengono mostrate le relazioni tra i tipi di raccolta:
 
-![C&#43;&#43;&#47;dell'albero di ereditarietà /CX per tipi di raccolte](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")
+![C&#43;&#43;&#47;dell'albero di ereditarietà /CX per tipi di raccolte](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;dell'albero di ereditarietà /CX per tipi di raccolta")
 
 - La classe [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) è simile alla classe [std::vector](../standard-library/vector-class.md).
 
@@ -63,7 +63,7 @@ Quando usi un ciclo `range for` sui contenitori `IVector` , usa `auto&&` per con
 
 La figura seguente mostra un ciclo `range for` su un elemento `IVector<Person^>`. Come puoi notare, l'esecuzione si interrompe al punto di interruzione sulla linea 64. La finestra **Controllo immediato** mostra che la variabile iteratore `p` è di fatto `VectorProxy<Person^>` con le variabili membro `m_v` e `m_i` . Tuttavia, quando chiami `GetType` su questa variabile, restituisce il tipo identico all'istanza `Person` di `p2`. Il vantaggio è che sebbene `VectorProxy` e `ArrowProxy` possano apparire in **Controllo immediato**, il debugger individua alcuni errori del compilatore per cui non in genere necessario scrivere codice.
 
-![VectorProxy nell'intervallo&#45;basato su ciclo for](../cppcx/media/vectorproxy-1.png "VectorProxy_1")
+![VectorProxy nell'intervallo&#45;basato su ciclo for](../cppcx/media/vectorproxy-1.png "VectorProxy nell'intervallo&#45;basato su ciclo for")
 
 Uno scenario che richiede la scrittura di codice attorno all'oggetto proxy è quando è necessario eseguire il `dynamic_cast` sugli elementi, ad esempio quando si cercano oggetti XAML di un determinato tipo in una raccolta di elementi `UIElement` . In questo caso, è necessario eseguire il cast dell'elemento su [Platform::Object](../cppcx/platform-object-class.md)e quindi eseguire il cast dinamico:
 

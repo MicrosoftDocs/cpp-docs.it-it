@@ -1,6 +1,6 @@
 ---
 title: Esempio di risultati di chiamata
-ms.date: 09/05/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - examples [C++], results of calling
 - results, thiscall call
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - results, __cdecl call
 - results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
-ms.openlocfilehash: 96582e48912bb591d869bbc4df179299e6459f1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcd1f9002362b7726883c6ce4f74fda9ab593544
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500938"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175412"
 ---
 # <a name="results-of-calling-example"></a>Esempio di risultati di chiamata
 
@@ -23,19 +23,22 @@ ms.locfileid: "50500938"
 
 Il nome decorato della funzione C è `_MyFunc`.
 
-![Convenzione di chiamata CDECL](../cpp/media/vc37i01.gif "vc37I01") il **cdecl** convenzione di chiamata
+![Convenzione di chiamata CDECL](../cpp/media/vc37i01.gif "convenzione di chiamata CDECL") <br/>
+Il **cdecl** convenzione di chiamata
 
 ## <a name="stdcall-and-thiscall"></a>__stdcall e thiscall
 
 Nome decorato di C (**stdcall**) è `_MyFunc@20`. Il nome decorato di C++ è specifico dell'implementazione.
 
-![&#95;&#95;stdcall e thiscall convenzioni di chiamata](../cpp/media/vc37i02.gif "vc37I02") di stdcall e thiscall convenzioni di chiamata
+![&#95;&#95;stdcall e thiscall convenzioni di chiamata](../cpp/media/vc37i02.gif "&#95;&#95;stdcall e thiscall convenzioni di chiamata") <br/>
+Convenzioni di chiamata __stdcall e thiscall
 
 ## <a name="fastcall"></a>__fastcall
 
 Nome decorato di C (**fastcall**) è `@MyFunc@20`. Il nome decorato di C++ è specifico dell'implementazione.
 
-![Per convenzione di chiamata &#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03") convenzione di chiamata fastcall
+![Per convenzione di chiamata &#95; &#95;fastcall](../cpp/media/vc37i03.gif "per la convenzione di chiamata &#95; &#95;fastcall") <br/>
+Convenzione di chiamata __fastcall
 
 **Fine sezione specifica Microsoft**
 

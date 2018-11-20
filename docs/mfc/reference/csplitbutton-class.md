@@ -1,6 +1,6 @@
 ---
 title: Classe CSplitButton
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSplitButton
 - AFXCMN/CSplitButton
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: ca4899714fa336d058b2a53bcd5103c5b0c993e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56c006eaa9b0c9860a973727602fd29a33d7ec43
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547277"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176628"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 
@@ -58,7 +58,7 @@ Il `CSplitButton` classe è derivata dal [CButton](../../mfc/reference/cbutton-c
 
 La figura seguente rappresenta una finestra di dialogo che contiene un controllo pager e un controllo pulsante di divisione (1). Freccia a discesa (2) è già stato fatto clic e viene visualizzato il sottomenu (3).
 
-![Finestra di dialogo con un controllo splitbutton e il cercapersone. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Finestra di dialogo con un controllo splitbutton e il cercapersone. ](../../mfc/reference/media/splitbutton_pager.png "Finestra di dialogo con un controllo splitbutton e il cercapersone.")
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*dwStyle*|[in] Una combinazione bit per bit (OR) di stili da applicare al controllo. Per altre informazioni, vedere [stili dei pulsanti](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
-|*Rect*|[in] Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|
+|*rect*|[in] Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo.|
 |*pParentWnd*|[in] Un puntatore non null a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo.|
 |*nID*|[in] L'ID del controllo.|
 
@@ -188,7 +188,7 @@ Il *nMenuId* parametro identifica una barra dei menu, ovvero un elenco delle voc
 
 La figura seguente rappresenta una finestra di dialogo che contiene un controllo pager e un controllo pulsante di divisione (1). Freccia a discesa (2) è già stato fatto clic e viene visualizzato il sottomenu (3).
 
-![Finestra di dialogo con un controllo splitbutton e il cercapersone. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Finestra di dialogo con un controllo splitbutton e il cercapersone. ](../../mfc/reference/media/splitbutton_pager.png "Finestra di dialogo con un controllo splitbutton e il cercapersone.")
 
 ### <a name="example"></a>Esempio
 

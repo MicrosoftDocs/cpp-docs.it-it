@@ -1,17 +1,17 @@
 ---
 title: Overload di funzioni
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333371"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176302"
 ---
 # <a name="function-overloading"></a>Overload di funzioni
 
@@ -280,7 +280,8 @@ La sequenza in cui vengono tentate le conversioni è la seguente:
 
    - La conversione da un puntatore a una classe derivata, a un puntatore a una classe base produce una corrispondenza migliore quanto più la classe base è vicina a una classe base diretta. Si supponga che la gerarchia di classi sia come illustrata di seguito.
 
-![Le conversioni preferite](../cpp/media/vc391t1.gif "vc391T1") conversioni preferite illustrando Graph
+![Grafico delle conversioni preferite](../cpp/media/vc391t1.gif "grafico delle conversioni preferite") <br/>
+Grafico che mostra le conversioni preferite
 
 La conversione dal tipo `D*` al tipo `C*` è preferibile rispetto alla conversione dal tipo `D*` al tipo `B*`. In modo simile, la conversione dal tipo `D*` al tipo `B*` è preferibile rispetto alla conversione dal tipo `D*` al tipo `A*`.
 
@@ -290,7 +291,8 @@ La stessa regola si applica alle conversioni da puntatore a membro. La conversio
 
 La regola precedente è valida solo insieme a un determinato percorso di derivazione. Esaminare il grafico illustrato nella seguente figura.
 
-![Con più&#45;ereditarietà multipla con conversioni preferite](../cpp/media/vc391t2.gif "vc391T2") ereditarietà multipla grafico che illustra le conversioni preferite
+![Più&#45;ereditarietà multipla con conversioni preferite](../cpp/media/vc391t2.gif "più&#45;ereditarietà multipla con conversioni preferite") <br/>
+Grafico dell'ereditarietà multipla indicante le conversioni preferite
 
 La conversione dal tipo `C*` al tipo `B*` è preferibile rispetto alla conversione dal tipo `C*` al tipo `A*`. Il motivo è che si trovano nello stesso percorso e `B*` è più vicino. Tuttavia, la conversione dal tipo `C*` al tipo `D*` non è preferibile alla conversione al tipo `A*`; non esiste alcuna preferenza poiché le conversioni seguono percorsi diversi.
 

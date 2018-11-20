@@ -1,6 +1,6 @@
 ---
 title: I modelli di documento e il processo di creazione documento / visualizzazione
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - icons, for multiple document templates
 - document templates [MFC], and views
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 544a9bf60ee2066688703faa7e430e2337454e66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606349"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174886"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Modelli di documenti e processo di creazione documento/visualizzazione
 
@@ -24,7 +24,8 @@ Per gestire il complesso processo di creazione di documenti con finestre cornice
 
 Alcune applicazioni supportano più tipi di documenti. Ad esempio, un'applicazione può supportare documenti di testo e documenti grafici. In tale applicazione, quando l'utente sceglie il comando Nuovo dal menu File, viene visualizzata una finestra di dialogo con un elenco di tipi di documento possibili da aprire. Per ogni tipo di documento supportato, nell'applicazione viene utilizzato un oggetto modello di documento distinto. Di seguito viene illustrata la configurazione di un'applicazione MDI che supporta due tipi di documento e mostra diversi documenti aperti.
 
-![Applicazione MDI con due tipi di documento](../mfc/media/vc387h1.gif "vc387h1") un'applicazione MDI con due tipi di documento
+![Applicazione MDI con due tipi di documento](../mfc/media/vc387h1.gif "applicazione MDI con due tipi di documento") <br/>
+Applicazione MDI con due tipi di documento
 
 I modelli di documento vengono creati e gestiti dall'oggetto applicazione. Una delle attività principali eseguite durante la funzione `InitInstance` dell'applicazione consiste nel creare uno o più modelli di documento del tipo appropriato. Questa funzionalità è descritta in [creazione di modelli di documento](../mfc/document-template-creation.md). L'oggetto applicazione include un puntatore a ogni modello di documento nell'elenco dei modelli e fornisce un'interfaccia per l'aggiunta dei modelli di documento.
 

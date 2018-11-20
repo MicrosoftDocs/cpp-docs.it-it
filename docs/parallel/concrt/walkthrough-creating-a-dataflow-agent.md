@@ -1,16 +1,16 @@
 ---
 title: 'Procedura dettagliata: Creazione di un agente del flusso di dati'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-ms.openlocfilehash: 35532fd01259bcbf64a70aaca16c621f875bb43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26ea7d520c3dbc4935699e5d52871d21739a3d88
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487646"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176081"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Procedura dettagliata: Creazione di un agente del flusso di dati
 
@@ -84,7 +84,7 @@ L'agente del flusso di dati funziona mediante la creazione di una rete di buffer
 
 Il diagramma seguente mostra la rete del flusso di dati completo per il `dataflow_agent` classe:
 
-![La rete del flusso di dati](../../parallel/concrt/media/concrt_dataflow.png "concrt_dataflow")
+![La rete del flusso di dati](../../parallel/concrt/media/concrt_dataflow.png "la rete del flusso di dati")
 
 Nella tabella seguente vengono descritti i membri della rete.
 

@@ -1,6 +1,6 @@
 ---
 title: Classe CWnd
-ms.date: 08/27/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CWnd
 - AFXWIN/CWnd
@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 365ecea539d47892b8697bb7b6ce2015bc18cda3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694894"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177108"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1816,7 +1816,7 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate client del punto da sottoporre a test.
 
 *nFlags*<br/>
@@ -1923,7 +1923,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Combinazione bit per bit (OR) di [stili di finestra](styles-used-by-mfc.md#window-styles). L'opzione WS_POPUP non è uno stile valido.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le dimensioni e posizione della finestra rispetto all'angolo superiore sinistro della finestra padre.
 
 *pParentWnd*<br/>
@@ -2060,7 +2060,7 @@ Puntatore al testo da visualizzare nel controllo. Imposta il valore della propri
 *dwStyle*<br/>
 Stili di Windows. Gli stili disponibili sono elencati sotto la sezione Osservazioni.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [struttura RECT](../../mfc/reference/rect-structure1.md).
 
 *ppt*<br/>
@@ -2175,7 +2175,7 @@ Per una finestra figlio, l'ID di finestra. in caso contrario, l'ID di un menu pe
 *lpParam*<br/>
 Puntatore ai dati dell'utente che viene passati per il [CWnd::OnCreate](#oncreate) metodo nella *lpCreateParams* campo.
 
-*Rect*<br/>
+*rect*<br/>
 Le dimensioni e posizione della finestra rispetto allo schermo o la finestra padre.
 
 *pParentWnd*<br/>
@@ -2766,7 +2766,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 TRUE per abilitare il layout dinamico. FALSE per disabilitare il layout dinamico.
 
 ### <a name="remarks"></a>Note
@@ -2785,7 +2785,7 @@ void EnableD2DSupport(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se attivare o disattivare il supporto D2D.
 
 *bUseDCRenderTarget*<br/>
@@ -2842,7 +2842,7 @@ void EnableScrollBarCtrl(
 *nBar*<br/>
 Identificatore della barra di scorrimento.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se la barra di scorrimento deve essere abilitato o disabilitato.
 
 ### <a name="remarks"></a>Note
@@ -2859,7 +2859,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se il controllo descrizione comando è abilitato o disabilitato. TRUE consente il controllo. FALSE la disabilita il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2895,7 +2895,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se rilevamento strumento suggerimenti vengono abilitati o disabilitati. Se questo parametro è TRUE, lo strumento di rilevamento verranno abilitati suggerimenti. Se questo parametro è FALSE, lo strumento di rilevamento suggerimenti verranno disabilitati.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2916,7 +2916,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se la finestra specificata deve essere abilitato o disabilitato. Se questo parametro è TRUE, verrà abilitata la finestra. Se questo parametro è FALSE, la finestra verrà disabilitata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -5688,10 +5688,10 @@ Di seguito illustra le varie icone di sistema che possono essere utilizzate in u
 
 |||
 |-|-|
-|![Arresta &#40;x&#41; sull'icona](../../mfc/reference/media/vc364f1.gif "vc364f1")|MB_ICONHAND MB_ICONSTOP e MB_ICONERROR|
-|![Guida &#40; &#41; sull'icona](../../mfc/reference/media/vc364f2.gif "vc364f2")|MB_ICONQUESTION|
-|![Importante &#40; &#33; &#41; icona](../../mfc/reference/media/vc364f3.gif "vc364f3")|MB_ICONEXCLAMATION e MB_ICONWARNING|
-|![Informazioni &#40;è&#41; sull'icona](../../mfc/reference/media/vc364f4.gif "vc364f4")|MB_ICONASTERISK e MB_ICONINFORMATION|
+|![Arresta &#40;x&#41; sull'icona](../../mfc/reference/media/vc364f1.gif "Arresta &#40;x&#41; icona")|MB_ICONHAND MB_ICONSTOP e MB_ICONERROR|
+|![Guida &#40;? &#41; icona](../../mfc/reference/media/vc364f2.gif "Guida &#40;?&#41; icona")|MB_ICONQUESTION|
+|![Importante &#40; &#33; &#41; icona](../../mfc/reference/media/vc364f3.gif "importanti &#40; &#33; &#41; icona")|MB_ICONEXCLAMATION e MB_ICONWARNING|
+|![Informazioni &#40;è&#41; sull'icona](../../mfc/reference/media/vc364f4.gif "informazioni &#40;è&#41; icona")|MB_ICONASTERISK e MB_ICONINFORMATION|
 
 ### <a name="example"></a>Esempio
 
@@ -6713,7 +6713,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 *dc*<br/>
 Specifica il contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica il rettangolo di delimitazione dell'area per il rendering.
 
 *szRequiredThumbnailSize*<br/>
@@ -6788,7 +6788,7 @@ afx_msg void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se il `CWnd` oggetto è stato abilitato o disabilitato. Questo parametro è TRUE se il `CWnd` è attivata; se il risultato è FALSE il `CWnd` è stata disabilitata.
 
 ### <a name="remarks"></a>Note
@@ -7497,7 +7497,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT imposta se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate x e y del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -7532,7 +7532,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT imposta se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate x e y del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -7563,7 +7563,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT imposta se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate x e y del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -7596,7 +7596,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT imposta se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate x e y del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -7631,7 +7631,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT imposta se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate x e y del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -7662,7 +7662,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT imposta se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate x e y del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -7964,7 +7964,7 @@ afx_msg void OnMouseHover(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nFlags*|[in] Una combinazione bit per bit (OR) di flag che indicano vengono premuti i tasti di modifica. Ad esempio, il flag MK_CONTROL indica che il tasto CTRL è premuto.|
-|*punto*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
+|*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
 
 ### <a name="remarks"></a>Note
 
@@ -8051,7 +8051,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT imposta se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate x e y del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -8257,7 +8257,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Contiene le coordinate x e y del cursore. Queste coordinate sono sempre coordinate dello schermo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -8284,7 +8284,7 @@ afx_msg void OnNcLButtonDblClk(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8309,7 +8309,7 @@ afx_msg void OnNcLButtonDown(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8334,7 +8334,7 @@ afx_msg void OnNcLButtonUp(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8359,7 +8359,7 @@ afx_msg void OnNcMButtonDblClk(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8382,7 +8382,7 @@ afx_msg void OnNcMButtonDown(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8405,7 +8405,7 @@ afx_msg void OnNcMButtonUp(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8428,7 +8428,7 @@ afx_msg void OnNcMouseHover(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nHitTest*|[in] Il valore di hit test restituito dai [CWnd::DefWindowProc](#defwindowproc) funzionano come risultato di elaborazione il [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) messaggio.|
-|*punto*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro della schermata.|
+|*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro della schermata.|
 
 ### <a name="remarks"></a>Note
 
@@ -8467,7 +8467,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8506,7 +8506,7 @@ afx_msg void OnNcRButtonDblClk(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8529,7 +8529,7 @@ afx_msg void OnNcRButtonDown(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8552,7 +8552,7 @@ afx_msg void OnNcRButtonUp(
 *nHitTest*<br/>
 Specifica la [codice di hit test](#onnchittest). Un hit test è un test che determina la posizione del cursore.
 
-*punto*<br/>
+*point*<br/>
 Specifica un `CPoint` oggetto contenente gli assi x e y della posizione del cursore coordinate dello schermo. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della schermata.
 
 ### <a name="remarks"></a>Note
@@ -8598,7 +8598,7 @@ void OnNcXButtonDblClk(
 |---------------|-----------------|
 |*nHitTest*|[in] Il valore di hit test restituito dai [CWnd::DefWindowProc](#defwindowproc) funzionano come risultato di elaborazione il [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) messaggio.|
 |*Npulsante*|[in] Un valore di XBUTTON1 se fa doppio clic sul primo pulsante Microsoft Intellimouse X o XBUTTON2 se il secondo pulsante X viene fatto doppio clic.|
-|*punto*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
+|*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
 
 ### <a name="remarks"></a>Note
 
@@ -8624,7 +8624,7 @@ afx_msg void OnNcXButtonDown(
 |---------------|-----------------|
 |*nHitTest*|[in] Il valore di hit test restituito dai [CWnd::DefWindowProc](#defwindowproc) funzionano come risultato di elaborazione il [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) messaggio.|
 |*Npulsante*|[in] Un valore di XBUTTON1 se il primo pulsante X del mouse viene premuto o XBUTTON2 se il secondo pulsante X viene premuto.|
-|*punto*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro della schermata.|
+|*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro della schermata.|
 
 ### <a name="remarks"></a>Note
 
@@ -8650,7 +8650,7 @@ afx_msg void OnNcXButtonUp(
 |---------------|-----------------|
 |*nHitTest*|[in] Il valore di hit test restituito dai [CWnd::DefWindowProc](#defwindowproc) funzionano come risultato di elaborazione il [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) messaggio.|
 |*Npulsante*|[in] Un valore di XBUTTON1 se il primo pulsante X del mouse viene rilasciato o XBUTTON2 se il secondo pulsante X viene rilasciato.|
-|*punto*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro della schermata.|
+|*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro della schermata.|
 
 ### <a name="remarks"></a>Note
 
@@ -9043,7 +9043,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT impostato se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica gli assi x e y coordinate del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -9078,7 +9078,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT impostato se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica gli assi x e y coordinate del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -9108,7 +9108,7 @@ Indica se sono diverse chiavi virtuale verso il basso. Questo parametro può ess
 
 - MK_SHIFT impostato se il tasto MAIUSC è premuto.
 
-*punto*<br/>
+*point*<br/>
 Specifica gli assi x e y coordinate del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -9307,7 +9307,7 @@ afx_msg void OnShowWindow(
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 Specifica se è attualmente visualizzata una finestra. È TRUE se la finestra è attualmente visualizzata; è FALSE se la finestra viene nascosto.
 
 *nStatus*<br/>
@@ -9350,7 +9350,7 @@ Specifica il tipo di richiesta di ridimensionamento. Questo parametro può esser
 
 - SIZE_MAXSHOW messaggio viene inviato a tutte le finestre popup quando un'altra finestra è stata ripristinata alla dimensione precedente.
 
-*CX*<br/>
+*cx*<br/>
 Specifica la nuova larghezza dell'area client.
 
 *CY*<br/>
@@ -9860,7 +9860,7 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate x e y del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra
 
 *PTI*<br/>
@@ -10312,7 +10312,7 @@ afx_msg void OnXButtonDblClk(
 |---------------|-----------------|
 |*nFlags*|[in] Una combinazione bit per bit (OR) di flag che indicano vengono premuti i tasti di modifica. Ad esempio, il flag MK_CONTROL indica che il tasto CTRL è premuto.|
 |*Npulsante*|[in] Un valore di XBUTTON1 se fa doppio clic sul primo pulsante Microsoft Intellimouse X o XBUTTON2 se il secondo pulsante X viene fatto doppio clic.|
-|*punto*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
+|*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
 
 ### <a name="remarks"></a>Note
 
@@ -10350,7 +10350,7 @@ afx_msg void OnXButtonDown(
 |---------------|-----------------|
 |*nFlags*|[in] Una combinazione bit per bit (OR) di flag che indicano vengono premuti i tasti di modifica. Ad esempio, il flag MK_CONTROL indica che il tasto CTRL è premuto.|
 |*Npulsante*|[in] Un valore di XBUTTON1 sia stato scelto il primo pulsante Microsoft Intellimouse X o XBUTTON2 se il secondo pulsante X è stato fatto clic.|
-|*punto*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
+|*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
 
 ### <a name="remarks"></a>Note
 
@@ -10388,7 +10388,7 @@ afx_msg void OnXButtonUp(
 |---------------|-----------------|
 |*nFlags*|[in] Una combinazione bit per bit (OR) di flag che indicano vengono premuti i tasti di modifica. Ad esempio, il flag MK_CONTROL indica che il tasto CTRL è premuto.|
 |*Npulsante*|[in] Un valore di XBUTTON1 se il primo pulsante Microsoft Intellimouse X è stato fatto doppio clic o XBUTTON2 se il secondo pulsante X è stato fatto doppio clic.|
-|*punto*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
+|*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
 
 ### <a name="remarks"></a>Note
 
@@ -11261,7 +11261,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Specifica il nuovo x e y coordinate (nelle coordinate del client) del punto di inserimento.
 
 ### <a name="remarks"></a>Note
@@ -11852,7 +11852,7 @@ Specifica la nuova posizione del lato sinistro della finestra.
 *y*<br/>
 Specifica la nuova posizione della parte superiore della finestra.
 
-*CX*<br/>
+*cx*<br/>
 Specifica la nuova larghezza della finestra.
 
 *CY*<br/>
@@ -12006,7 +12006,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 Specifica se le finestre popup devono essere mostrati o nascosti. Se questo parametro è TRUE, vengono visualizzate tutte le finestre popup nascoste. Se questo parametro è FALSE, tutte le finestre popup visibili sono nascoste.
 
 ### <a name="example"></a>Esempio
@@ -12034,7 +12034,7 @@ Specifica se la barra di scorrimento è un controllo o parte di un'area non clie
 
 - SB_VERT specifica che la finestra è una barra di scorrimento verticale.
 
-*bMostra*<br/>
+*bShow*<br/>
 Specifica se Windows Mostra o nasconde la barra di scorrimento. Se questo parametro è TRUE, viene visualizzata la barra di scorrimento; in caso contrario, la barra di scorrimento è nascosto.
 
 ### <a name="remarks"></a>Note
@@ -12341,7 +12341,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Specifica un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto oppure [PUNTARE](../../mfc/reference/point-structure1.md) struttura dei dati che definisce il punto da controllare.
 
 ### <a name="return-value"></a>Valore restituito

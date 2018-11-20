@@ -1,17 +1,17 @@
 ---
 title: Campi di bit C++
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: df4e5a068f76c35dc22b3915ad7e4ace421ca10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644962"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175093"
 ---
 # <a name="c-bit-fields"></a>Campi di bit C++
 
@@ -43,7 +43,8 @@ struct Date {
 
 Il layout concettuale di memoria di un oggetto di tipo `Date` viene illustrato nella figura seguente.
 
-![Layout di memoria dell'oggetto date](../cpp/media/vc38uq1.png "vc38UQ1") Layout di memoria dell'oggetto data
+![Layout di memoria dell'oggetto date](../cpp/media/vc38uq1.png "layout di memoria di un oggetto data") <br/>
+Layout a memoria fissa dell'oggetto Data
 
 Si noti che `nYear` è lungo 8 bit ed eccederebbe il confine di parola del tipo dichiarato **senza segno** **breve**. Pertanto, viene inizializzato all'inizio di una nuova **unsigned** **breve**. Non è necessario che tutti i campi di bit si adattino a un oggetto del tipo sottostante e le nuove unità di archiviazione vengono allocate a seconda del numero di bit necessari per la dichiarazione.
 
@@ -69,7 +70,8 @@ struct Date {
 
 quindi il layout di memoria è come illustrato nella figura seguente:
 
-![Layout dell'oggetto data con zero&#45;campo di bit di lunghezza](../cpp/media/vc38uq2.png "vc38UQ2") Layout dell'oggetto data con campo Bit a lunghezza Zero
+![Layout dell'oggetto data con zero&#45;campo di bit di lunghezza](../cpp/media/vc38uq2.png "oggetto di Layout di Date da zero&#45;campo di bit di lunghezza") <br/>
+Layout dell'oggetto Data con campo bit a lunghezza 0
 
 Il tipo sottostante di un campo di bit deve essere un tipo integrale, come descritto in [tipi fondamentali](../cpp/fundamental-types-cpp.md).
 

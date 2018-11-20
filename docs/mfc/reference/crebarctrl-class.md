@@ -1,6 +1,6 @@
 ---
 title: CReBarCtrl (classe)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
 - AFXCMN/CReBarCtrl
@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: ec3dcec2aa122f44c2b9aa6083f6faaa64157770
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502531"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177030"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 
@@ -189,7 +189,7 @@ La figura seguente mostra un controllo rebar contiene tre bande:
 
 - Fuori banda 2 contiene una casella combinata e quattro pulsanti standard.
 
-     ![Esempio di menu Rebar](../../mfc/reference/media/vc4scc1.gif "vc4scc1")
+   ![Esempio di menu Rebar](../../mfc/reference/media/vc4scc1.gif "esempio di menu Rebar")
 
 ## <a name="rebar-control"></a>Controllo Rebar
 
@@ -254,7 +254,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica la combinazione degli stili del controllo rebar applicato al controllo. Visualizzare [stili del controllo Rebar](/windows/desktop/Controls/rebar-control-styles) nel SDK di Windows per un elenco degli stili supportati.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, ovvero la posizione e le dimensioni del controllo rebar.
 
 *pParentWnd*<br/>
@@ -302,7 +302,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 *dwStyle*<br/>
 Specifica la combinazione degli stili del controllo rebar applicato al controllo. Per un elenco degli stili supportati, vedere [stili del controllo Rebar](/windows/desktop/Controls/rebar-control-styles) nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -916,7 +916,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametri
 
-*Common Language Runtime*<br/>
+*clr*<br/>
 Il valore COLORREF che rappresenta il nuovo colore di sfondo predefinito.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1041,7 +1041,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametri
 
-*Common Language Runtime*<br/>
+*clr*<br/>
 Un valore COLORREF che rappresenta il nuovo testo dei colori `CReBarCtrl` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1122,7 +1122,7 @@ BOOL SizeToRect(CRect& rect);
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che specifica il rettangolo che il controllo rebar deve essere dimensionato per.
 
 ### <a name="return-value"></a>Valore restituito

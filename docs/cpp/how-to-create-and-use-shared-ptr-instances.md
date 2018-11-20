@@ -1,15 +1,15 @@
 ---
 title: 'Procedura: creare e utilizzare istanze shared_ptr'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: f437ccb476456a8081fa3be293bf67adb4fb2d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606648"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176276"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Procedura: creare e utilizzare istanze shared_ptr
 
@@ -17,33 +17,33 @@ Il tipo `shared_ptr` è un puntatore intelligente nella libreria C++ standard pr
 
 Nella figura che segue vengono mostrate diverse istanze di `shared_ptr` che puntano a una posizione di memoria.
 
-[![Puntatore condiviso](../cpp/media/shared_ptr.png "shared_ptr")]
+![Diagramma di puntatore condiviso](../cpp/media/shared_ptr.png "diagramma puntatore condiviso")
 
-## <a name="example"></a>Esempio
+## <a name="example-1"></a>Esempio 1
 
 Se possibile, usare il [make_shared](../standard-library/memory-functions.md#make_shared) funzione per creare un `shared_ptr` quando viene creata la risorsa di memoria per la prima volta. `make_shared` è indipendente dalle eccezioni. Utilizza la stessa chiamata per allocare memoria per un blocco di controllo e la risorsa e quindi riduce l'overhead della costruzione. Se non si utilizza `make_shared`, è necessario utilizzare una nuova espressione esplicita per creare l'oggetto prima di passarlo al costruttore `shared_ptr`. Nell'esempio seguente vengono mostrati vari modi per dichiarare e inizializzare `shared_ptr` con un nuovo oggetto.
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example-2"></a>Esempio 2
 
 Nell'esempio che segue viene illustrato come dichiarare e inizializzare istanze di `shared_ptr` che assumono la proprietà condivisa di un oggetto che è già stato allocato da un altro oggetto `shared_ptr`. Si supponga che `sp2` sia un oggetto `shared_ptr` inizializzato.
 
 [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example-3"></a>Esempio 3
 
 `shared_ptr` è anche utile per i contenitori della libreria Standard C++ quando si utilizzano algoritmi che copiano elementi. È possibile eseguire il wrapping degli elementi in un oggetto `shared_ptr`, quindi copiarlo in altri contenitori, beninteso che la memoria sottostante è valida fino a quando serve e non oltre. Nell'esempio seguente viene illustrato come utilizzare l'algoritmo `replace_copy_if` su delle istanze di `shared_ptr` in un vettore.
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example-4"></a>Esempio 4
 
 È possibile utilizzare `dynamic_pointer_cast`, `static_pointer_cast` e `const_pointer_cast` per eseguire il cast di `shared_ptr`. Queste funzioni sono simili agli operatori `dynamic_cast`, `static_cast`, `const_cast`. Di seguito viene illustrato come verificare il tipo derivato di ogni elemento di un vettore di `shared_ptr` delle classi base e successivamente copiare gli elementi e visualizzare informazioni su di essi.
 
 [!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
-## <a name="example"></a>Esempio
+## <a name="example-5"></a>Esempio 5
 
 È possibile passare `shared_ptr` a un'altra funzione nei modi seguenti:
 
@@ -59,7 +59,7 @@ Nell'esempio che segue viene illustrato come dichiarare e inizializzare istanze 
 
 - Talvolta, ad esempio in un `std:vector<shared_ptr<T>>`, è necessario passare ogni `shared_ptr` a un corpo di espressione lambda o a un oggetto funzione denominata. Se l'espressione lambda o la funzione non memorizza il puntatore, passare `shared_ptr` con riferimento per evitare di richiamare il costruttore di copia per ogni elemento.
 
-## <a name="example"></a>Esempio
+## <a name="example-6"></a>Esempio 6
 
 Nell'esempio riportato di seguito viene illustrato come `shared_ptr` esegue l'overload di alcuni operatori di confronto per abilitare i confronti del puntatore sulla memoria che è posseduta dalle istanze di `shared_ptr`.
 

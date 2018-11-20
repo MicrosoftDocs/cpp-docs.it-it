@@ -1,6 +1,6 @@
 ---
 title: Classe CSmartDockingInfo
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524660"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176770"
 ---
 # <a name="csmartdockinginfo-class"></a>Classe CSmartDockingInfo
 
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 Gli handle di framework smart internamente i marcatori di ancoraggio. La figura seguente mostra i marcatori di ancoraggio intelligenti standard:
 
-![Marcatori standard per ancoraggio intelligente](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![Marcatori standard per ancoraggio intelligente](../../mfc/reference/media/nextsdmarkers.png "marcatori Standard per ancoraggio intelligente")
 
 In questa figura, l'immagine a sinistra mostra un marcatore ancoraggio intelligente gruppo centrale che non dispone di ancoraggio a una scheda abilitata. L'immagine centrale Mostra un marcatore di ancoraggio intelligente bordo destro. L'immagine a destra mostra un marcatore ancoraggio intelligente gruppo centrale che dispone di ancoraggio a una scheda abilitata. Il marcatore di ancoraggio intelligente gruppo centrale è una bitmap main e cinque gli smart ancoraggio bitmap di marcatore.
 
@@ -93,7 +93,7 @@ In questa figura, l'immagine a sinistra mostra un marcatore ancoraggio intellige
 
 La figura seguente mostra un esempio di marcatori di ancoraggio che sono stati personalizzati:
 
-![Marcatori personalizzati per ancoraggio intelligente](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![Marcatori personalizzati per ancoraggio intelligente](../../mfc/reference/media/nextsdmarkerscustom.png "marcatori personalizzati per ancoraggio intelligente")
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

@@ -1,21 +1,21 @@
 ---
 title: "Procedura: personalizzare il pulsante dell'applicazione"
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592790"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175327"
 ---
 # <a name="how-to-customize-the-application-button"></a>Procedura: personalizzare il pulsante dell'applicazione
 
 Quando si fa clic sul pulsante dell'applicazione, viene visualizzato un menu dei comandi. In genere, il menu contiene i comandi correlati al file, ad esempio **aperto**, **salvare**, **stampa**, e **uscita**.
 
-![Pulsante di applicazione della barra multifunzione MFC](../mfc/media/application_button.png "application_button")
+![Pulsante di applicazione della barra multifunzione MFC](../mfc/media/application_button.png "pulsante applicazione della barra multifunzione MFC")
 
 Per personalizzare il pulsante dell'applicazione, aprire il file nei **proprietà** finestra, modificarne le proprietà e quindi visualizzare in anteprima il controllo della barra multifunzione.
 
@@ -57,4 +57,3 @@ Il menu di applicazione non viene visualizzato nell'area di progettazione. Per v
 ## <a name="see-also"></a>Vedere anche
 
 [Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
-

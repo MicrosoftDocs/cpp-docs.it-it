@@ -1,6 +1,6 @@
 ---
 title: CRectTracker (classe)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473372"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176510"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (classe)
 
@@ -237,7 +237,7 @@ I quadratini di ridimensionamento vengono visualizzati sui lati e angoli del ret
 
 Un rettangolo ha 8 quadratini di ridimensionamento numerati 0-7. Ogni quadratino di ridimensionamento è rappresentato da un bit della maschera. il valore di tale bit è 2 ^ *n*, dove *n* è il numero di handle di ridimensionamento. Bit 0 a 3 corrisponde a quadratini di ridimensionamento, partendo dall'alto a sinistra lo spostamento in senso orario. BITS 4-7 corrispondono al lato quadratini di ridimensionamento partendo dall'alto lo spostamento in senso orario. La figura seguente mostra il ridimensionamento di un rettangolo gestisce e i relativi ridimensionare i numeri degli handle e i valori:
 
-![Numeri dei quadratini di ridimensionamento](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![Numeri dei quadratini di ridimensionamento](../../mfc/reference/media/vc35dp1.gif "il numero di quadratini di ridimensionamento")
 
 L'implementazione predefinita di `GetHandleMask` restituisce la maschera di bit in modo che vengano visualizzati i quadratini di ridimensionamento. Se il bit singolo è attivo, verrà disegnato il quadratino di ridimensionamento corrispondente.
 
@@ -270,7 +270,7 @@ int HitTest(CPoint point) const;
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Il punto, nelle coordinate del dispositivo, per eseguire il test.
 
 ### <a name="return-value"></a>Valore restituito
@@ -424,7 +424,7 @@ BOOL Track(
 *pWnd*<br/>
 Oggetto finestra che contiene il rettangolo.
 
-*punto*<br/>
+*point*<br/>
 Coordinate della posizione corrente del mouse rispetto all'area client del dispositivo.
 
 *bAllowInvert*<br/>
@@ -461,7 +461,7 @@ BOOL TrackRubberBand(
 *pWnd*<br/>
 Oggetto finestra che contiene il rettangolo.
 
-*punto*<br/>
+*point*<br/>
 Coordinate della posizione corrente del mouse rispetto all'area client del dispositivo.
 
 *bAllowInvert*<br/>

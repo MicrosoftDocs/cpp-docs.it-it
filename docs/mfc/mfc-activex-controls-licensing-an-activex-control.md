@@ -1,6 +1,6 @@
 ---
 title: 'Controlli ActiveX MFC: licenze di un controllo ActiveX'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4001d49da8477ab9dd481d0eb3ee02cb10e1e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465624"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176358"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controlli ActiveX MFC: licenze di un controllo ActiveX
 
 Gestione delle licenze, una funzionalità facoltativa di controlli ActiveX, consente di controllare chi è in grado di utilizzare o distribuire il controllo. (Per analisi aggiuntiva dei problemi relativi alle licenze, vedere i problemi di gestione delle licenze in [aggiornamento di un controllo ActiveX esistente](../mfc/upgrading-an-existing-activex-control.md).)
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
 Questo articolo tratta gli argomenti seguenti:
@@ -43,13 +43,15 @@ Per fornire il supporto della licenza per i controlli ActiveX, il [COleObjectFac
 
 La figura seguente illustra la verifica delle licenze di un controllo ActiveX che verrà usato durante lo sviluppo di un'applicazione contenitore. Come accennato in precedenza, lo sviluppatore dell'applicazione contenitore deve avere appropriate. File LICO installato nel computer di sviluppo per creare un'istanza del controllo.
 
-![Concesso in licenza verificato in fase di sviluppo di controllo di ActiveX](../mfc/media/vc374d1.gif "vc374d1") verifica di una licenza ActiveX controllo durante lo sviluppo
+![Concesso in licenza verificato in fase di sviluppo di controllo di ActiveX](../mfc/media/vc374d1.gif "controllo ActiveX concesso in licenza verificato in fase di sviluppo") <br/>
+Verifica di un controllo ActiveX con licenza durante lo sviluppo
 
 Il processo successivo, illustrato nella figura seguente, si verifica quando l'utente finale esegue l'applicazione contenitore.
 
 Quando l'applicazione viene avviata, un'istanza del controllo in genere deve essere creata. Il contenitore esegue questa operazione tramite una chiamata a `CreateInstanceLic`, passando la chiave di licenza incorporato come parametro. Un confronto tra stringhe viene reso tra la chiave di licenza incorporata e la copia del controllo del codice di licenza. Se la corrispondenza ha esito positivo, viene creata un'istanza del controllo e l'applicazione continua a essere eseguita normalmente. Si noti che il. In caso contrario non è necessario presente nel computer dell'utente del controllo.
 
-![Concesso in licenza verificato in fase di esecuzione controllo di ActiveX](../mfc/media/vc374d2.gif "vc374d2") verifica di una licenza controllo ActiveX durante l'esecuzione
+![Concesso in licenza verificato in fase di esecuzione controllo di ActiveX](../mfc/media/vc374d2.gif "controllo ActiveX concesso in licenza verificato in fase di esecuzione") <br/>
+Verifica di un controllo ActiveX con licenza durante l'esecuzione
 
 Licenze dei controlli è costituito da due componenti di base: codice specifico nell'implementazione del controllo DLL e il file di licenza. Il codice è costituito da due (o eventualmente tre) le chiamate di funzione e una stringa di caratteri indicato di seguito come "licenza stringa", contenente un avviso di copyright. Queste chiamate e la stringa di licenza sono disponibili nell'implementazione del controllo (. File CPP). Il file di licenza, generato dalla creazione guidata controllo ActiveX, è un file di testo con una dichiarazione di copyright. Il file viene denominato utilizzando il nome del progetto con una. Estensione del contratto di licenza, ad esempio esempio. CONTRATTO DI LICENZA. Un controllo con licenza deve essere accompagnato da file di licenza se è necessario utilizzare in fase di progettazione.
 

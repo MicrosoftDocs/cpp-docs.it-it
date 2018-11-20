@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCPropertySheet
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531612"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176406"
 ---
 # <a name="cmfcpropertysheet-class"></a>Classe CMFCPropertySheet
 
@@ -112,15 +112,15 @@ Per usare la classe `CMFCPropertySheet` nell'applicazione,seguire questa procedu
 
 Nella figura seguente vengono illustrate una finestra delle proprietà nello stile della barra degli strumenti incorporata di Microsoft Outlook. La barra degli strumenti di Outlook viene visualizzata a sinistra della finestra delle proprietà.
 
-![Colori di CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![Colori di CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "colori di CMFCPropertySheet")
 
 La figura seguente illustra una finestra delle proprietà che contiene un [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) oggetto. Tale oggetto è una finestra delle proprietà nello stile di una finestra delle proprietà dei controlli standard.
 
-![Elenchi e delle proprietà di CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![Elenchi e delle proprietà di CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "elenchi e delle proprietà di CMFCPropertySheet")
 
 La figura seguente mostra una finestra delle proprietà nello stile di un controllo albero.
 
-![Property Tree](../../mfc/reference/media/proptree.png "proptree")
+![Proprietà struttura ad albero](../../mfc/reference/media/proptree.png "dell'albero di proprietà")
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -391,7 +391,7 @@ virtual void OnDrawPageHeader(
 
 ### <a name="remarks"></a>Note
 
-Per impostazione predefinita, questo metodo non esegue alcuna operazione. Se si esegue l'override di questo metodo, chiamare il [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metodo prima che il framework chiama questo metodo.
+Per impostazione predefinita, questo metodo non effettua alcuna operazione. Se si esegue l'override di questo metodo, chiamare il [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metodo prima che il framework chiama questo metodo.
 
 ##  <a name="onremovetreepage"></a>  CMFCPropertySheet::OnRemoveTreePage
 
@@ -465,7 +465,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] L'ID di risorsa di un elenco di immagini.
 
-*CX*<br/>
+*cx*<br/>
 [in] La larghezza in pixel, di icone dell'elenco immagini.
 
 *clrTransparent*<br/>

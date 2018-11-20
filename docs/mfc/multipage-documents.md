@@ -1,6 +1,6 @@
 ---
 title: Documenti con più pagine
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - pagination [MFC]
 - overriding [MFC], View class functions for printing
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: 0c0363c1741b713ff24ec7ca7837f0f3c1b3eaf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587668"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176380"
 ---
 # <a name="multipage-documents"></a>Documenti con più pagine
 
@@ -68,7 +68,8 @@ Il [CView](../mfc/reference/cview-class.md) classe definisce diverse funzioni me
 
 La figura seguente illustra i passaggi coinvolti nel processo di stampa e viene illustrato dove ognuno dei `CView`di stampa vengono chiamate le funzioni membro. La parte restante di questo articolo illustra la maggior parte dei passaggi della procedura in modo più dettagliato. Altre parti del processo di stampa sono descritti nell'articolo [allocare risorse GDI](../mfc/allocating-gdi-resources.md).
 
-![Processo del ciclo di stampa](../mfc/media/vc37c71.gif "vc37c71") il ciclo di stampa
+![Processo del ciclo di stampa](../mfc/media/vc37c71.gif "processo del ciclo di stampa") <br/>
+Ciclo di stampa
 
 ##  <a name="_core_pagination"></a> Paginazione
 

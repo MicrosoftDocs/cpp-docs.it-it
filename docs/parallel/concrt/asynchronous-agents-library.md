@@ -1,16 +1,16 @@
 ---
 title: libreria di agenti asincroni
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629281"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175860"
 ---
 # <a name="asynchronous-agents-library"></a>libreria di agenti asincroni
 
@@ -26,7 +26,7 @@ La libreria di agenti è costituita da tre componenti: *agenti asincroni*, *bloc
 
 La figura seguente mostra come due agenti Usa blocchi di messaggi e le funzioni di passaggio dei messaggi per comunicare. In questa illustrazione `agent1` invia un messaggio al `agent2` tramite il [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) (funzione) e un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) oggetto. `agent2` Usa il [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) funzione per leggere il messaggio. `agent2` Usa lo stesso metodo per inviare un messaggio a `agent1`. Le frecce tratteggiate rappresentano il flusso di dati tra gli agenti. Le frecce continue connettono gli agenti per i blocchi di messaggio che scrivere o leggere dal.
 
-![I componenti della libreria di agenti](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")
+![I componenti della libreria di agenti](../../parallel/concrt/media/agent_librarycomp.png "i componenti della libreria di agenti")
 
 Un esempio di codice che implementa questa figura è illustrato più avanti in questo argomento.
 

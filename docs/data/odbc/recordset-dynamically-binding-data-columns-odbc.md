@@ -1,6 +1,6 @@
 ---
 title: 'Recordset: associazione dinamica di colonne di dati (ODBC)'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469680"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175665"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: associazione dinamica di colonne di dati (ODBC)
 
@@ -78,7 +78,7 @@ Associazione dinamica di aggiunta di colonne in fase di esecuzione sono necessar
 
    Un approccio consiste nella compilazione di uno o più elenchi dinamici, uno per i nuovi nomi delle colonne, un altro per i valori dei risultati e un terzo per i tipi di dati (se necessario). Questi elenchi, in particolare l'elenco di valori, forniscono le informazioni e lo spazio di archiviazione necessaria per l'associazione. La figura seguente illustra la compilazione degli elenchi.
 
-   ![Compilazione degli elenchi di colonne da associare in modo dinamico](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![Compilazione degli elenchi di colonne da associare in modo dinamico](../../data/odbc/media/vc37w61.gif "compilazione degli elenchi di colonne da associare in modo dinamico")<br/>
    Compilazione degli elenchi di colonne da associare in modo dinamico
 
 1. Aggiungere una chiamata di funzione RFX del recordset principale `DoFieldExchange` funzionare per ciascuna colonna aggiunta. Queste chiamate RFX l'operazione di recupero di un record, includendo le colonne aggiuntive e associando le colonne a membri dati di recordset o nella risorsa di archiviazione fornito in modo dinamico per loro.

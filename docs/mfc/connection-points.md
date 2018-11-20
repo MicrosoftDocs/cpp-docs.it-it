@@ -1,6 +1,6 @@
 ---
 title: Punti di connessione
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517637"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175483"
 ---
 # <a name="connection-points"></a>Punti di connessione
 
@@ -30,7 +30,8 @@ In passato, il modello COM (Component Object) è definito un meccanismo generale
 
 Una connessione è costituito da due parti: l'oggetto che chiama l'interfaccia, chiamato l'origine e l'oggetto che implementa l'interfaccia, chiamata sink. Un punto di connessione è l'interfaccia esposta dall'origine. Tramite l'esposizione di un punto di connessione, un'origine consente ai sink stabilire connessioni a se stessa (origine). Tramite la connessione punto meccanismo (il `IConnectionPoint` interface), viene passato un puntatore all'interfaccia sink per l'oggetto di origine. Puntatore ' this ' fornisce l'origine con accesso all'implementazione del sink di un set di funzioni membro. Ad esempio, per generare un evento implementato dal sink, origine possa chiamare il metodo appropriato dell'implementazione del sink. La figura seguente illustra la connessione punto appena descritto.
 
-![Punto di connessione implementato](../mfc/media/vc37lh1.gif "vc37lh1") An implementato punto di connessione
+![Punto di connessione implementato](../mfc/media/vc37lh1.gif "punto di connessione implementato") <br/>
+Punto di connessione implementato
 
 MFC implementa questo modello i [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) e [CCmdTarget](../mfc/reference/ccmdtarget-class.md) classi. Le classi derivate da `CConnectionPoint` implementano il `IConnectionPoint` interfaccia, utilizzato per esporre i punti di connessione ad altri oggetti. Le classi derivate da `CCmdTarget` implementano il `IConnectionPointContainer` interfaccia, che è possibile enumerare tutti i punti di connessione disponibili di un oggetto o trovare un punto di connessione specifico.
 
@@ -54,7 +55,8 @@ Infine, aggiungere una chiamata a `EnableConnections` nel costruttore della clas
 
 Dopo aver inserito questo codice, il `CCmdTarget`-classe derivata espone un punto di connessione per il `ISampleSink` interfaccia. La figura seguente illustra questo esempio.
 
-![Punto di connessione implementato tramite MFC](../mfc/media/vc37lh2.gif "vc37lh2") una connessione punto implementato con MFC
+![Punto di connessione implementato tramite MFC](../mfc/media/vc37lh2.gif "punto di connessione implementato tramite MFC") <br/>
+Un punto di connessione implementato con MFC
 
 In genere, i punti di connessione supportano "multicasting", ovvero la possibilità di trasmettere più nei sink connessa all'interfaccia stessa. Il frammento di esempio seguente viene illustrato come multicast scorrendo ogni sink in un punto di connessione:
 

@@ -1,18 +1,18 @@
 ---
 title: 'Procedura dettagliata: Uso della classe join per impedire un deadlock'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498822"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175914"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procedura dettagliata: Uso della classe join per impedire un deadlock
 
@@ -48,7 +48,7 @@ Questa procedura dettagliata contiene le sezioni seguenti:
 
 Il problema dei filosofi a cena illustra il deadlock si verifica in un'applicazione. In questo problema, cinque filosofi si trovano in una tabella round. Ogni filosofo Alterna meditare e cibo. Ogni filosofo deve condividere un bastoncino con la soluzione vicina a sinistra e un'altra bastoncino con il router adiacente a destra. La figura seguente mostra questo layout.
 
-![Il problema dei filosofi da pranzo](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+![Il problema dei filosofi a cena](../../parallel/concrt/media/dining_philosophersproblem.png "il problema dei filosofi a cena")
 
 Per consumare, un filosofo deve avere due bastoncini. Se ogni filosofo ha un solo bastoncino ed è in attesa di un altro, quindi non può consumare alcun filosofo e tutto mancanza di risorse.
 

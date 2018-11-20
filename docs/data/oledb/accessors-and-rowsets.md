@@ -1,6 +1,6 @@
 ---
 title: Funzioni di accesso e rowset
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651256"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175713"
 ---
 # <a name="accessors-and-rowsets"></a>Funzioni di accesso e rowset
 
@@ -34,7 +34,7 @@ Tutte le funzioni di accesso derivano da [CAccessorBase](../../data/oledb/cacces
 
 La figura seguente illustra i tipi di funzione di accesso.
 
-![Tipi di funzione di accesso](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![Tipi di funzione di accesso](../../data/oledb/media/vcaccessortypes.gif "i tipi di funzione di accesso")<br/>
 Classi di funzione di accesso
 
 - [CAccessor](../../data/oledb/caccessor-class.md) utilizzare questa funzione di accesso quando si conosce la struttura del database in fase di progettazione. `CAccessor` Associa un record di database, che contiene il buffer, in modo statico all'origine dati.
@@ -63,7 +63,7 @@ I modelli OLE DB supporta tre tipi di set di righe (vedere la figura precedente)
 
 La figura seguente illustra i tipi di set di righe.
 
-![Immagine di RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![Immagine di RowsetType](../../data/oledb/media/vcrowsettypes.gif "di RowsetType")<br/>
 Classi rowset
 
 [I set di righe dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) non accesso nei dati di archivio dati, ma invece accedere alle informazioni sull'archivio dati, note come metadati. I set di righe dello schema vengono in genere usati nelle situazioni in cui la struttura del database non è noto in fase di compilazione e deve essere ottenuta in fase di esecuzione.

@@ -1,18 +1,18 @@
 ---
 title: Cenni preliminari sul runtime di concorrenza
-ms.date: 07/20/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693645"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176666"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Cenni preliminari sul runtime di concorrenza
 
@@ -60,10 +60,10 @@ Il runtime di concorrenza è diviso in quattro componenti: libreria PPL (Paralle
 
 **Architettura del Runtime di concorrenza**
 
-![L'architettura del Runtime di concorrenza](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")
+![L'architettura del Runtime di concorrenza](../../parallel/concrt/media/concurrencyrun.png "l'architettura del Runtime di concorrenza")
 
 > [!IMPORTANT]
->  I componenti utilità di pianificazione e Gestione risorse non sono disponibili da un'app Universal Windows Platform (UWP) o quando si usa la classe dell'attività o altri tipi in ppltasks. h.
+> I componenti utilità di pianificazione e Gestione risorse non sono disponibili da un'app Universal Windows Platform (UWP) o quando si usa la classe dell'attività o altri tipi in ppltasks. h.
 
 Il Runtime di concorrenza è altamente *componibile*, vale a dire, è possibile combinare le funzionalità esistenti per eseguire altre operazioni. Il runtime di concorrenza compone molte funzionalità, ad esempio gli algoritmi paralleli, dai componenti di livello inferiore.
 

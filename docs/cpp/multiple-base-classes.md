@@ -1,18 +1,18 @@
 ---
 title: Più classi base
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483460"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176363"
 ---
 # <a name="multiple-base-classes"></a>Più classi base
 
@@ -52,11 +52,13 @@ Quando si dichiara una classe base virtuale, il **virtuale** parola chiave viene
 
 Si consideri la gerarchia di classi nella figura seguente, che illustra un oggetto Lunch-Line simulato.
 
-![Grafico della linea simulato pranzo](../cpp/media/vc38xp1.gif "vc38XP1") Graph Lunch-Line simulato
+![Grafico della linea simulato pranzo](../cpp/media/vc38xp1.gif "grafico della linea di pranzo simulato") <br/>
+Oggetto lunch-line simulato
 
 Nella figura `Queue` è la classe base sia per `CashierQueue` che per `LunchQueue`. Tuttavia, quando entrambe le classi vengono combinate per formare `LunchCashierQueue`, si verifica il problema seguente: la nuova classe contiene due oggetti secondari di tipo `Queue`, uno da `CashierQueue` e l'altro da `LunchQueue`. Nella figura seguente viene illustrato il layout di memoria concettuale (il layout di memoria effettivo può essere ottimizzato).
 
-![Simulated pranzo&#45;oggetto line](../cpp/media/vc38xp2.gif "vc38XP2") Oggetto Lunch-Line simulato
+![Simulated pranzo&#45;oggetto line](../cpp/media/vc38xp2.gif "Simulated pranzo&#45;oggetto riga") <br/>
+Oggetto Lunch-Line simulato
 
 Si noti che sono presenti due oggetti secondari `Queue` nell'oggetto `LunchCashierQueue`. Nel codice seguente `Queue` viene dichiarato come una classe base virtuale:
 
@@ -71,15 +73,18 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 
 Il **virtuale** parola chiave garantisce che solo una copia dell'oggetto subordinato `Queue` incluso (vedere la figura seguente).
 
-![Simulated pranzo&#45;oggetto line, le classi base virtuali](../cpp/media/vc38xp3.gif "vc38XP3") Simulated Oggetto Lunch-Line con le classi Base virtuali
+![Simulated pranzo&#45;oggetto line, le classi base virtuali](../cpp/media/vc38xp3.gif "Simulated pranzo&#45;oggetto line, le classi base virtuali") <br/>
+Oggetto lunch-line simulato con classi base virtuali
 
 Alla classe possono essere associati sia un componente virtuale che uno non virtuale di un tipo specifico. Ciò si verifica in condizioni illustrate nella figura seguente.
 
-![Componenti virtuali e di una classe](../cpp/media/vc38xp4.gif "vc38XP4") virtuali e i componenti non virtuali della stessa classe
+![Virtuale e non&#45;componenti virtuali di una classe](../cpp/media/vc38xp4.gif "virtuale e non&#45;componenti virtuali di una classe") <br/>
+Componenti virtuali e non virtuali della stessa classe
 
 Nella figura `CashierQueue` e `LunchQueue` usano `Queue` come classe base virtuale. Tuttavia, `TakeoutQueue` specifica `Queue` come classe base, non come classe base virtuale. Di conseguenza, `LunchTakeoutCashierQueue` dispone di due oggetti secondari di tipo `Queue`: uno dal percorso di ereditarietà che include `LunchCashierQueue` e uno dal percorso che include `TakeoutQueue`. Questa situazione viene illustrata nella figura seguente.
 
-![Ereditarietà virtuale e nel layout degli oggetti](../cpp/media/vc38xp5.gif "vc38XP5") Layout degli oggetti con ereditarietà non virtuale e virtuale
+![Non & virtuale&#45;ereditarietà virtuale nel layout degli oggetti](../cpp/media/vc38xp5.gif "virtuali & non&#45;ereditarietà virtuale nel layout oggetto") <br/>
+Layout degli oggetti con ereditarietà virtuale e non virtuale
 
 > [!NOTE]
 >  L'ereditarietà virtuale offre vantaggi significativi in termini di dimensione se paragonata all'ereditarietà non virtuale. Può introdurre tuttavia un ulteriore sovraccarico di elaborazione.
@@ -187,7 +192,8 @@ Le conversioni esplicite e implicite da puntatori o riferimenti ai tipi di class
 
 - Effetto della conversione esplicita del puntatore ottenuto usando l'operatore address-of in un tipo `A` della classe base. Si noti che l'assegnazione dell'indirizzo dell'oggetto al tipo `A*` non fornisce sempre il compilatore con informazioni sufficienti come quale oggetto secondario di tipo `A` è da selezionare; in questo caso, esistono due oggetti secondari.
 
-![Conversione ambigua di puntatori alle classi di base](../cpp/media/vc38xt1.gif "vc38XT1") conversione ambigua dei puntatori alle classi Base
+![Conversione ambigua di puntatori alle classi di base](../cpp/media/vc38xt1.gif "conversione ambigua di puntatori alle classi di base") <br/>
+Conversione ambigua di puntatori a classi di base
 
 La conversione nel tipo `A*` (puntatore a `A`) è ambigua poiché non è possibile discernere quale oggetto secondario di tipo `A` è quello corretto. Si noti che è possibile evitare l'ambiguità in modo esplicito specificando quale oggetto secondario si intende usare, come segue:
 
@@ -202,7 +208,8 @@ Se si usano le classi base virtuali, è possibile passare a funzioni, oggetti, t
 
 La figura seguente mostra come vengono composti gli oggetti mediante l'ereditarietà virtuale e non virtuale.
 
-![Derivazione virtuale e derivazione non virtuale](../cpp/media/vc38xr1.gif "vc38XR1") vs virtuale. non virtuale
+![Derivazione virtuale e non&#45;derivazione virtuale](../cpp/media/vc38xr1.gif "derivazione virtuale e non&#45;derivazione virtuale") <br/>
+Derivazione non virtuale e non virtuale
 
 Nella figura l'accesso a qualsiasi membro della classe `A` tramite le classi base non virtuali causa ambiguità; il compilatore non dispone di informazioni che spieghino se usare l'oggetto secondario associato a `B` o l'oggetto secondario associato a `C`. Tuttavia, quando `A` è specificato come classe base virtuale, non esiste alcuna ambiguità sull'oggetto secondario a cui viene eseguito l'accesso.
 

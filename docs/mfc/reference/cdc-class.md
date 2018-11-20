@@ -1,6 +1,6 @@
 ---
 title: CDC (classe)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CDC
 - AFXWIN/CDC
@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 40de8b3aca3cca7acb2fefa352f9358a16f43e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06c68d02433ce53c2b27167a985fc5854ca49700
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492080"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176913"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -1434,7 +1434,7 @@ Specifica la logica coordinata x dell'angolo superiore sinistro del rettangolo t
 *y*<br/>
 Specifica la coordinata y logica dell'angolo superiore sinistro del rettangolo tridimensionale.
 
-*CX*<br/>
+*cx*<br/>
 Specifica la larghezza del rettangolo tridimensionale.
 
 *CY*<br/>
@@ -1674,7 +1674,7 @@ Specifica la coordinata y logica dell'angolo superiore sinistro dell'icona.
 *hIcon*<br/>
 Identifica l'handle dell'icona da disegnare.
 
-*punto*<br/>
+*point*<br/>
 Specifica la logica coordinate x e y-dell'angolo superiore sinistro dell'icona. È possibile passare un [punto](../../mfc/reference/point-structure1.md) struttura o un' [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2429,7 +2429,7 @@ Specifica la logica coordinata x dell'angolo superiore sinistro del rettangolo.
 *y*<br/>
 Specifica la coordinata y logica dell'angolo superiore sinistro del rettangolo di destinazione.
 
-*CX*<br/>
+*cx*<br/>
 Specifica la larghezza del rettangolo.
 
 *CY*<br/>
@@ -3242,7 +3242,7 @@ Un puntatore a un `CBrush` oggetto se riesce; in caso contrario, NULL.
 
 Un pennello mezzitoni Mostra i pixel in alternativa i colori di sfondo e primo piano per creare un modello con dithering. Di seguito è riportato un esempio di un modello con dithering creato da un pennello mezzitoni.
 
-![Dettagli di un tratto di penna con dithering](../../mfc/reference/media/vc318s1.gif "vc318s1")
+![Dettagli di un tratto di penna con dithering](../../mfc/reference/media/vc318s1.gif "dettaglio di un tratto di penna con dithering")
 
 ##  <a name="getkerningpairs"></a>  CDC::GetKerningPairs
 
@@ -3565,7 +3565,7 @@ Specifica la coordinata x logica del punto da esaminare.
 *y*<br/>
 Specifica la coordinata y logica del punto da esaminare.
 
-*punto*<br/>
+*point*<br/>
 Specifica la logica coordinate x e y-del punto da esaminare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4278,7 +4278,7 @@ Specifica la coordinata x logica dell'endpoint per la riga.
 *y*<br/>
 Specifica la coordinata y logica dell'endpoint per la riga.
 
-*punto*<br/>
+*point*<br/>
 Specifica l'endpoint per la riga. È possibile passare un `POINT` struttura o un `CPoint` oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4485,7 +4485,7 @@ Specifica la coordinata x logica della nuova posizione.
 *y*<br/>
 Specifica la coordinata y logica della nuova posizione.
 
-*punto*<br/>
+*point*<br/>
 Specifica la nuova posizione. È possibile passare un `POINT` struttura o un `CPoint` oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -5115,7 +5115,7 @@ Specifica la coordinata x logica del punto.
 *y*<br/>
 Specifica la coordinata y logica del punto.
 
-*punto*<br/>
+*point*<br/>
 Specifica il punto da controllare nelle coordinate logiche. È possibile passare un `POINT` struttura o un `CPoint` oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -5331,7 +5331,7 @@ Specifica l'altezza dell'ellisse usato per disegnare gli angoli arrotondati (in 
 *lpRect*<br/>
 Specifica il rettangolo di delimitazione in unità logiche. È possibile passare un `CRect` oggetto o un puntatore a un `RECT` struttura per questo parametro.
 
-*punto*<br/>
+*point*<br/>
 La coordinata x del *puntare* specifica lo spessore dei puntini di sospensione per disegnare gli angoli arrotondati (in unità logiche). La coordinata y del *puntare* specifica l'altezza dell'ellisse per disegnare gli angoli arrotondati (in unità logiche). È possibile passare un `POINT` struttura o un `CPoint` oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -5908,7 +5908,7 @@ Specifica la coordinata x (in unità dispositivi) della nuova origine. Questo va
 *y*<br/>
 Specifica la coordinata y (in unità di dispositivo) dell'origine della nuova. Questo valore deve essere compreso nell'intervallo da 0 a 7.
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate x e y dell'origine della nuova. Ogni valore deve essere compreso nell'intervallo da 0 a 7. È possibile passare un `POINT` struttura o un `CPoint` oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6179,7 +6179,7 @@ Specifica la coordinata y logica del punto da impostare.
 *crColor*<br/>
 Un valore RGB COLORREF che specifica il colore utilizzato per disegnare il punto. Visualizzare [COLORREF](/windows/desktop/gdi/colorref) nel SDK di Windows per una descrizione di questo valore.
 
-*punto*<br/>
+*point*<br/>
 Specifica la logica coordinate x e y-del punto da impostare. È possibile passare un `POINT` struttura o un `CPoint` oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6218,7 +6218,7 @@ Specifica la coordinata y, in unità logiche, del punto da impostare.
 *crColor*<br/>
 Specifica il colore da utilizzare per disegnare il punto.
 
-*punto*<br/>
+*point*<br/>
 Specifica la logica coordinate x e y-del punto da impostare. È possibile passare un [punto](../../mfc/reference/point-structure1.md) struttura di data o un' [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6487,7 +6487,7 @@ CSize SetViewportExt(SIZE size);
 
 ### <a name="parameters"></a>Parametri
 
-*CX*<br/>
+*cx*<br/>
 Specifica l'extent di x del riquadro di visualizzazione (in unità di dispositivo).
 
 *CY*<br/>
@@ -6537,7 +6537,7 @@ Specifica la coordinata x (in unità di dispositivo) dell'origine del riquadro d
 *y*<br/>
 Specifica la coordinata y (in unità di dispositivo) dell'origine del riquadro di visualizzazione. Il valore deve essere compreso nell'intervallo del sistema di coordinate del dispositivo.
 
-*punto*<br/>
+*point*<br/>
 Specifica l'origine del riquadro di visualizzazione. I valori devono essere all'interno dell'intervallo di sistema di coordinate del dispositivo. È possibile passare un `POINT` struttura o un `CPoint` oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6568,7 +6568,7 @@ CSize SetWindowExt(SIZE size);
 
 ### <a name="parameters"></a>Parametri
 
-*CX*<br/>
+*cx*<br/>
 Specifica l'extent x (in unità logiche) della finestra.
 
 *CY*<br/>
@@ -6625,7 +6625,7 @@ Specifica la coordinata x logica modifica dell'origine della finestra.
 *y*<br/>
 Specifica la coordinata y logica modifica dell'origine della finestra.
 
-*punto*<br/>
+*point*<br/>
 Specifica le coordinate logiche modifica dell'origine della finestra. È possibile passare un `POINT` struttura o un `CPoint` oggetto per questo parametro.
 
 ### <a name="return-value"></a>Valore restituito

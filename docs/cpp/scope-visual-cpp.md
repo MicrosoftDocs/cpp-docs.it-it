@@ -1,6 +1,6 @@
 ---
 title: Ambito (C++)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506613"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176757"
 ---
 # <a name="scope-c"></a>Ambito (C++)
 
@@ -41,7 +41,8 @@ Sono disponibili sei tipi di ambito:
 
 È possibile nascondere un nome dichiarandolo in un blocco chiuso. Nella figura seguente `i` viene ridichiarato nel blocco interno, quindi nascondendo la variabile associata a `i` nell'ambito del blocco esterno.
 
-![Blocco&#45;nascondere il nome di ambito](../cpp/media/vc38sf1.png "vc38SF1") ambito del blocco e nascondere nome
+![Blocco&#45;nascondere il nome di ambito](../cpp/media/vc38sf1.png "blocca&#45;nascondere il nome di ambito") <br/>
+Nascondere il nome e l'ambito del blocco
 
 L'output del programma illustrato nella figura è:
 

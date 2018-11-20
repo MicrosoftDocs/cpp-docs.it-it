@@ -1,6 +1,6 @@
 ---
 title: Controlli ActiveX MFC
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - MFC ActiveX Controls (MFC)
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 95e1e1cc47d9c14448635fae5d6a9added8e15e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553271"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174872"
 ---
 # <a name="mfc-activex-controls"></a>Controlli ActiveX MFC
 
@@ -39,7 +39,8 @@ Tali controlli possono essere sviluppati per diversi scopi, ad esempio l'accesso
 
 Un controllo ActiveX viene implementato come server in-process (in genere un piccolo oggetto) che può essere utilizzato in qualsiasi contenitore OLE. Notare che la funzionalità completa di un controllo ActiveX è disponibile solo quando viene utilizzato all'interno di un contenitore OLE progettato per controlli ActiveX. Visualizzare [trasferire i controlli ActiveX in altre applicazioni](../mfc/containers-for-activex-controls.md) per un elenco di contenitori che supportano i controlli ActiveX. Questo tipo di contenitore, d'ora in poi chiamato "contenitore di controlli", può eseguire un controllo ActiveX utilizzando le proprietà e i metodi del controllo e riceve le notifiche dal controllo ActiveX sotto forma di eventi. Nella seguente figura viene illustrata questa interazione.
 
-![Interazione del contenitore di controlli ActiveX e il controllo](../mfc/media/vc37221.gif "vc37221") l'interazione tra contenitore di controlli ActiveX an e un controllo ActiveX con finestra
+![Interazione del contenitore di controlli ActiveX e il controllo](../mfc/media/vc37221.gif "contenitore di controlli di interazione di ActiveX e controllo") <br/>
+Interazione tra un contenitore di controlli ActiveX e un controllo ActiveX con finestra
 
 Per alcune informazioni recenti sull'ottimizzazione dei controlli ActiveX, vedere [controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
 
@@ -69,7 +70,8 @@ L'elemento finale è una dispatch map, utilizzata per esporre un set di funzioni
 
 Quando un controllo viene utilizzato in un contenitore di controlli, utilizza due meccanismi per comunicare: espone proprietà e metodi e genera eventi. Nella figura seguente viene illustrato come vengono implementati questi due meccanismi.
 
-![Controllo ActiveX comunica con il relativo contenitore](../mfc/media/vc37222.gif "vc37222") la comunicazione tra contenitore di controlli ActiveX an e un controllo ActiveX
+![Controllo ActiveX comunica con il relativo contenitore](../mfc/media/vc37222.gif "controllo ActiveX comunica con il proprio contenitore") <br/>
+Comunicazione tra un contenitore di controlli ActiveX e un controllo ActiveX
 
 Nella figura precedente viene inoltre illustrato in che modo altre interfacce OLE (oltre all'automazione e agli eventi) vengono gestite dai controlli.
 
@@ -83,7 +85,8 @@ Quando un [controllo senza finestra](../mfc/providing-windowless-activation.md) 
 
 Quando un controllo con finestra diventa attivo, diventa in grado di interagire pienamente con il contenitore, l'utente e Windows. Nella figura seguente vengono illustrati i canali di comunicazione tra il controllo ActiveX, il contenitore e il sistema operativo.
 
-![Msg l'elaborazione in un controllo ActiveX con finestra attiva](../mfc/media/vc37223.gif "vc37223") Windows elaborazione dei messaggi in un controllo ActiveX con finestra (quando si attiva)
+![Msg l'elaborazione in un controllo ActiveX con finestra attiva](../mfc/media/vc37223.gif "Msg nel controllo ActiveX con finestra attiva di elaborazione") <br/>
+Elaborazione dei messaggi Windows in un controllo ActiveX con finestra (se attivo)
 
 ##  <a name="_core_serializing_activex_elements"></a> Serializzazione
 

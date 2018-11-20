@@ -1,6 +1,6 @@
 ---
 title: Creazione di nuovi documenti, finestre e visualizzazioni
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643898"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175392"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Creazione di nuovi documenti, finestre e visualizzazioni
 
@@ -37,11 +37,14 @@ Le figure seguenti offrono una panoramica del processo di creazione di documenti
 
 Al termine di questo processo, gli oggetti che cooperano esistano e archiviano i puntatori tra loro. Le figure seguenti mostrano la sequenza in cui vengono creati gli oggetti. È possibile seguire la sequenza da una figura al.
 
-![Sequenza per la creazione di un documento](../mfc/media/vc387l1.gif "vc387l1") sequenza di creazione di un documento
+![Sequenza per la creazione di un documento](../mfc/media/vc387l1.gif "sequenza per la creazione di un documento") <br/>
+Sequenza di creazione di un documento
 
-![Sequenza di creazione di finestre cornice](../mfc/media/vc387l2.png "vc387l2") sequenza di creazione di una finestra cornice
+![Sequenza di creazione di finestre cornice](../mfc/media/vc387l2.png "Frame sequenza di creazione finestre") <br/>
+Sequenza di creazione di una finestra cornice
 
-![Sequenza per la creazione di una vista](../mfc/media/vc387l3.gif "vc387l3") sequenza di creazione di una vista
+![Sequenza per la creazione di una vista](../mfc/media/vc387l3.gif "sequenza per la creazione di una vista") <br/>
+Sequenza di creazione di una visualizzazione
 
 Per informazioni sul modo in cui il framework Inizializza il nuovo documento, visualizzazione e finestra cornice oggetti, vedere le classi [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) nel riferimento alla libreria MFC. Vedere anche [Nota tecnica 22](../mfc/tn022-standard-commands-implementation.md), che illustra i processi di creazione e inizializzazione ulteriormente sotto la relativa descrizione comandi standard del framework per il **New** e **aprire** gli elementi del **File** menu.
 

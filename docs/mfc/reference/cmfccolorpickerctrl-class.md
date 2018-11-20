@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCColorPickerCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 073012642597d0b38dcb0f76cf5662666447adc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38fe09b5fdde85dad485e126f6c094196fe68ff4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519054"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176926"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Classe CMFCColorPickerCtrl
 
@@ -97,7 +97,7 @@ Colori standard vengono selezionati da una tavolozza dei colori esagonale e colo
 
 La figura seguente illustra diverse `CMFCColorPickerCtrl` oggetti.
 
-![Finestra di dialogo di CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "colorpicker")
+![Finestra di dialogo di CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "nella finestra di dialogo di CMFCColorPickerCtrl")
 
 Il `CMFCColorPickerCtrl` supporta due coppie di stili. Gli stili ESADECIMALE e HEX_GREYSCALE sono appropriati per la selezione dei colori standard. Gli stili di selezione e la LUMINANZA sono appropriati per la selezione di colore personalizzato.
 
@@ -159,7 +159,7 @@ virtual void DrawCursor(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Specifica un'area rettangolare intorno al colore selezionato.
 
 ### <a name="remarks"></a>Note

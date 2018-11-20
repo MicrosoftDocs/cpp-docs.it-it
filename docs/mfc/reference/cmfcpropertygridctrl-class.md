@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCPropertyGridCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertyGridCtrl
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
@@ -150,16 +150,16 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 764a1fc33d91888c8c32111eca41666d9d0abbd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557326"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177056"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 Supporta un controllo griglia delle proprietà modificabile che può visualizzare le proprietà in ordine alfabetico o gerarchico.
 
@@ -293,7 +293,7 @@ La tabella seguente elenca quattro tipi di proprietà di selezione:
 
 Le illustrazioni seguenti rappresentano un controllo griglia delle proprietà che consente di visualizzare le proprietà in due modi. Nella prima figura consente di visualizzare le proprietà in una struttura gerarchica e il secondo consente di visualizzare le proprietà in ordine alfabetico.
 
-![Elenco di proprietà PropertySheet](../../mfc/reference/media/proplist.png "proplist")
+![Elenco di proprietà PropertySheet](../../mfc/reference/media/proplist.png "elenco di proprietà PropertySheet")
 
 ## <a name="example"></a>Esempio
 
@@ -461,7 +461,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Una combinazione bit per bit (OR) di [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Coordinate di un rettangolo di delimitazione che specifica le dimensioni e posizione della finestra, nel client di *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -558,7 +558,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare l'area Descrizione; FALSE per disabilitare l'area Descrizione. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -578,7 +578,7 @@ void EnableHeaderCtrl(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare il controllo di intestazione; FALSE per disabilitare il controllo intestazione. Il valore predefinito è TRUE.
 
 *lpszLeftColumn*<br/>
@@ -1272,7 +1272,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Un punto, nelle coordinate del client.
 
 ### <a name="remarks"></a>Note
@@ -1309,7 +1309,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica la posizione in cui disegnare l'area di descrizione.
 
 ### <a name="remarks"></a>Note
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 [in] Un valore di colore RGB.
 
 ### <a name="remarks"></a>Note

@@ -1,6 +1,6 @@
 ---
 title: Documenti, visualizzazioni e framework
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662371"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175756"
 ---
 # <a name="documents-views-and-the-framework"></a>Documenti, visualizzazioni e framework
 
@@ -59,7 +59,8 @@ Gli oggetti chiave in un'applicazione in esecuzione sono:
 
 In un'applicazione in esecuzione, questi oggetti in modo cooperativo rispondono alle azioni dell'utente, grazie a comandi e gli altri messaggi. Una singola applicazione gestisce uno o più modelli di documento. Ogni modello di documento crea e gestisce uno o più documenti (a seconda che l'applicazione sia SDI o MDI). L'utente visualizza e modifica dei documenti tramite una vista contenuta all'interno di una finestra cornice. La figura seguente mostra le relazioni tra questi oggetti per un'applicazione SDI.
 
-![Gli oggetti in un'applicazione SDI in esecuzione](../mfc/media/vc386v1.gif "vc386v1") oggetti in un'applicazione SDI in esecuzione
+![Gli oggetti in un'applicazione SDI in esecuzione](../mfc/media/vc386v1.gif "gli oggetti in un'applicazione SDI in esecuzione") <br/>
+Oggetti di un'applicazione SDI in esecuzione
 
 La parte restante di questa serie di articoli illustra come gli strumenti di framework, la creazione guidata applicazione MFC e l'editor di risorse, creare questi oggetti, come interagiscono tra loro e come si usarli nella fase di programmazione. Documenti, visualizzazioni e finestre cornice sono descritti più dettagliatamente [oggetti Window](../mfc/window-objects.md) e [architettura documento/visualizzazione](../mfc/document-view-architecture.md).
 

@@ -1,18 +1,18 @@
 ---
 title: Semantica delle espressioni
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490961"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175785"
 ---
 # <a name="semantics-of-expressions"></a>Semantica delle espressioni
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![Ordine di valutazione di un'espressione](../cpp/media/vc38zv1.gif "vc38ZV1") ordine di valutazione delle espressioni
+![Ordine di valutazione di un'espressione](../cpp/media/vc38zv1.gif "ordine di valutazione di un'espressione") <br/>
+Ordine di valutazione delle espressioni
 
 L'ordine in cui viene valutata l'espressione nella figura riportata sopra è determinato dalla precedenza e dall'associatività degli operatori:
 
@@ -55,7 +56,8 @@ L'ordine in cui viene valutata l'espressione nella figura riportata sopra è det
 
 Quando per raggruppare le sottoespressioni vengono usate le parentesi, queste alterano la precedenza e anche l'ordine in cui l'espressione viene valutata, come illustrato di seguito.
 
-![Ordine di valutazione dell'espressione tra parentesi](../cpp/media/vc38zv2.gif "vc38ZV2") ordine di valutazione dell'espressione con parentesi
+![Ordine di valutazione dell'espressione tra parentesi](../cpp/media/vc38zv2.gif "ordine di valutazione dell'espressione con parentesi") <br/>
+Ordine di valutazione dell'espressione con parentesi
 
 Le espressioni come quelle nella figura riportata sopra vengono valutate esclusivamente per i relativi effetti collaterali (in questo caso, per trasferire le informazioni del dispositivo di uscita di output standard).
 
@@ -68,7 +70,7 @@ Il linguaggio C++ specifica determinate compatibilità quando specifica gli oper
 |Tipo previsto|Tipi consentiti|
 |-------------------|-------------------|
 |*type*|`const` *Tipo*<br /> `volatile` *Tipo*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *Tipo*<br /> `volatile const` *type*&|
-|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|
+|*Tipo* \*|*Tipo* \*<br /> `const` *Tipo* \*<br /> `volatile` *Tipo* \*<br /> `volatile const` *Tipo* \*|
 |`const` *Tipo*|*type*<br /> `const` *Tipo*<br />`const` *type*&|
 |`volatile` *Tipo*|*type*<br /> `volatile` *Tipo*<br /> `volatile` *type*&|
 

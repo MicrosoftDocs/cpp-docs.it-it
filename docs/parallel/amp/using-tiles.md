@@ -1,13 +1,13 @@
 ---
 title: Utilizzo di sezioni
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588515"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176094"
 ---
 # <a name="using-tiles"></a>Utilizzo di sezioni
 
@@ -27,7 +27,7 @@ Per sfruttare i vantaggi del sezionamento, l'algoritmo deve suddividere il domin
 
 Il diagramma seguente rappresenta una 8x9 matrice di dati disposti in 2x3 sezioni.
 
-![8&#45;da&#45;matrice 9 diviso 2&#45;da&#45;3 riquadri](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;da&#45;matrice 9 diviso 2&#45;da&#45;3 riquadri](../../parallel/amp/media/usingtilesmatrix.png "8&#45;da&#45;matrice 9 diviso 2&#45;da&#45;3 riquadri")
 
 L'esempio seguente mostra il riquadro globale, e gli indici locali di questa sezione di matrice. Un' `array_view` viene creato usando gli elementi di tipo oggetto `Description`. Il `Description` contiene globale, di sezione e locali indici dell'elemento nella matrice. Il codice nella chiamata a `parallel_for_each` imposta i valori della variabile globale, riquadro e indici locali di ogni elemento. L'output visualizzerà i valori di `Description` strutture.
 

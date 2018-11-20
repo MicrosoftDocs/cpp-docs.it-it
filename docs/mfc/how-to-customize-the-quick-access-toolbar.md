@@ -1,21 +1,21 @@
 ---
 title: 'Procedura: personalizzare la barra di accesso rapido'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: d9bdc523218c7fad217d066eabd518aaff011df3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558483"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176328"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Procedura: personalizzare la barra di accesso rapido
 
 La barra di accesso rapido (QAT) è una barra degli strumenti personalizzabile che contiene un set di controlli che sono visualizzati accanto al pulsante Applicazione o nelle schede di categoria. Nella figura seguente viene illustrata una barra di accesso rapido tradizionale.
 
-![Barra di accesso rapido della barra multifunzione MFC](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")
+![Barra di accesso rapido della barra multifunzione MFC](../mfc/media/quick_access_toolbar.png "barra di accesso rapido della barra multifunzione MFC")
 
 Per personalizzare la barra di accesso rapido, aprirla nella **proprietà** finestra, modificare i relativi comandi e quindi visualizzare in anteprima il controllo della barra multifunzione.
 
@@ -55,4 +55,3 @@ I comandi della barra di accesso rapido non vengono visualizzati nell'area di pr
 ## <a name="see-also"></a>Vedere anche
 
 [Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
-

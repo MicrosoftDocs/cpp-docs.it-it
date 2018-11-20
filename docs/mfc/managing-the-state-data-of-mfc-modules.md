@@ -1,6 +1,6 @@
 ---
 title: Gestione dei dati dello stato dei moduli MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - global state [MFC]
 - data management [MFC], MFC modules
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-ms.openlocfilehash: 757fe9d8b4c9985cd3fa36d399cdc92057c03011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bed6f3b0dddf0d4ae5e8309d683e52c9e82410
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562214"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174875"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Gestione dei dati dello stato dei moduli MFC
 
@@ -28,11 +28,13 @@ Questo articolo illustra i dati dello stato dei moduli MFC e come questo stato v
 
 Come illustrato nella figura seguente, MFC include dati relativi allo stato per ogni modulo usato in un'applicazione. Esempi di questi dati includono gli handle dell'istanza di Windows (utilizzati per il caricamento delle risorse), i puntatori all'oggetto corrente `CWinApp` e `CWinThread` gli oggetti di un'applicazione, i conteggi dei riferimenti modulo OLE e un'ampia gamma di mappe che consentono di mantenere le connessioni tra Windows oggetto handle e le istanze corrispondenti di oggetti MFC. Tuttavia, quando un'applicazione usa più moduli, i dati dello stato di ciascun modulo non sono applicazione wide. Piuttosto, ogni modulo ha una propria copia privata dei dati dello stato di MFC.
 
-![I dati di un singolo modulo sullo stato &#40;applicazione&#41;](../mfc/media/vc387n1.gif "vc387n1") dati dello stato di un modulo singolo (applicazione)
+![I dati di un singolo modulo sullo stato &#40;applicazione&#41;](../mfc/media/vc387n1.gif "i dati di un singolo modulo sullo stato &#40;applicazione&#41;") <br/>
+Dati sullo stato di un modulo singolo (applicazione)
 
 Dati relativi allo stato di un modulo sono contenuti in una struttura ed sono sempre disponibile tramite un puntatore alla struttura. Quando il flusso di esecuzione entra in un modulo specifico, come illustrato nella figura seguente, lo stato del modulo che deve essere lo stato "effettivo" o "corrente". Pertanto, ogni oggetto thread dispone di un puntatore alla struttura dallo stato effettivo dell'applicazione. Mantenere questo puntatore aggiornato affatto volte in cui è fondamentale per la gestione dello stato globale dell'applicazione e il mantenimento dell'integrità dello stato di ogni modulo. Corretta gestione dello stato globale può causare comportamenti imprevedibili dell'applicazione.
 
-![Dati di più moduli dello stato](../mfc/media/vc387n2.gif "vc387n2") lo stato dei dati di più moduli
+![Dati di più moduli dello stato](../mfc/media/vc387n2.gif "dati di più moduli dello stato") <br/>
+Dati sullo stato di più moduli
 
 In altre parole, ogni modulo è responsabile di commutazione correttamente tra gli stati di modulo in tutti i relativi punti di ingresso. Un "punto di ingresso" sia in qualsiasi luogo in cui il flusso di esecuzione possibile immettere il codice del modulo. Punti di ingresso includono:
 
@@ -45,4 +47,3 @@ In altre parole, ogni modulo è responsabile di commutazione correttamente tra g
 ## <a name="see-also"></a>Vedere anche
 
 [Argomenti MFC generali](../mfc/general-mfc-topics.md)
-

@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCTasksPaneTaskGroup
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539607"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176588"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
 
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 La figura seguente illustra un gruppo di attività espanso:
 
-![Gruppo di attività espanso](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![Gruppo di attività espanso](../../mfc/reference/media/nexttaskgrpexpand.png "gruppo di attività espanso")
 
 La figura seguente illustra un gruppo di attività compresso:
 
-![Gruppo di attività compresso](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")
+![Gruppo di attività Collapsed](../../mfc/reference/media/nexttaskgrpcollapse.png "Collapsed gruppo di attività")
 
 La figura seguente illustra un gruppo di attività senza didascalia:
 
-![Gruppo di attività senza didascalia](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")
+![Gruppo di attività senza didascalia](../../mfc/reference/media/nexttaskgrpnocapt.png "gruppo di attività senza didascalia")
 
 La figura seguente mostra due gruppi di attività. Il primo gruppo di attività viene contrassegnato come speciale impostando il `m_bIsSpecial` flag su TRUE, mentre il secondo gruppo di attività non è speciale. Si noti che la didascalia per il primo gruppo di attività più scura del secondo gruppo di attività:
 
-![Gruppo di attività speciale](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")
+![Gruppo di attività speciale](../../mfc/reference/media/nexttaskgrpspecial.png "gruppo di attività speciale")
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

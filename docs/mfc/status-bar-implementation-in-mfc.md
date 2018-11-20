@@ -1,6 +1,6 @@
 ---
 title: Implementazione della barra di stato in MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - COldStatusBar
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: 25848e4467a0d767c40ffb00a1bd4d50a062d3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 521b24646b673159d14e89bd57ea698a7ba73381
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496279"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175369"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementazione della barra di stato in MFC
 
@@ -33,7 +33,8 @@ A partire dalla versione 4.0 di MFC, le barre di stato vengono implementate usan
 
 La figura seguente mostra una barra di stato che consente di visualizzare gli indicatori di diversi.
 
-![Barra di stato](../mfc/media/vc37dy1.gif "vc37dy1") una barra di stato
+![Barra di stato](../mfc/media/vc37dy1.gif "barra di stato") <br/>
+Barra di stato
 
 Ad esempio la barra degli strumenti, l'oggetto della barra di stato è incorporato nella relativa finestra cornice padre e viene creato automaticamente quando la finestra cornice viene costruita. La barra di stato, ad esempio tutte le barre di controllo, viene eliminata automaticamente anche quando il frame padre viene eliminato definitivamente.
 

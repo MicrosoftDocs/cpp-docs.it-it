@@ -1,6 +1,6 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
-ms.date: 04/05/2018
+ms.date: 11/19/2018
 apiname:
 - erff
 - erfl
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c64a7ac6c3a4d79c221ff1ca5f9460e9e6bdea6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450052"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176823"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -86,7 +86,7 @@ Il **erf** funzioni restituiscono la funzione di errore di Gauss *x*. Il **erfc*
 
 Il **erf** funzioni calcolano la funzione di errore di Gauss di *x*, che viene definito come:
 
-![Funzione di errore di x](media/crt_erf_formula.PNG "CRT_erf_formula")
+![La funzione di errore di x](media/crt_erf_formula.PNG "la funzione di errore di x")
 
 La funzione di errore di Gauss complementare è definita come 1 - Erf (x). Il **erf** funzioni restituiscono un valore compreso nell'intervallo tra -1,0 e 1,0. Non vi è restituzione di errori. Il **erfc** funzioni restituiscono un valore compreso nell'intervallo da 0 a 2. Se *x* è troppo grande per **erfc**, il **errno** variabile è impostata su **ERANGE**.
 

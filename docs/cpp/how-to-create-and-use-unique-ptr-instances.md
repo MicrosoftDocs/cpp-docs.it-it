@@ -1,15 +1,15 @@
 ---
 title: 'Procedura: creare e utilizzare istanze unique_ptr'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: 13823b34042d8658d0d690e6657e1f41db50f788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610249"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174881"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Procedura: creare e utilizzare istanze unique_ptr
 
@@ -17,7 +17,7 @@ Oggetto [unique_ptr](../standard-library/unique-ptr-class.md) condivide il punta
 
 Nel diagramma seguente è illustrato il passaggio di proprietà tra due istanze di `unique_ptr`.
 
-![Trasferimento della proprietà di un valore univoco&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")
+![Trasferimento della proprietà di un valore univoco&#95;ptr](../cpp/media/unique_ptr.png "trasferimento della proprietà di un valore univoco&#95;ptr")
 
 `unique_ptr` è definito nel `<memory>` intestazione della libreria Standard C++. È esattamente efficiente quanto un puntatore non elaborato e può essere usato nei contenitori della libreria Standard C++. L'aggiunta di `unique_ptr` istanze di contenitori della libreria Standard C++ è efficiente poiché il costruttore di spostamento del `unique_ptr` Elimina la necessità di un'operazione di copia.
 

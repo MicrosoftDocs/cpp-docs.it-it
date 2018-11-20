@@ -1,29 +1,34 @@
 ---
 title: Gestione visualizzazione
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521372"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175574"
 ---
 # <a name="visualization-manager"></a>Gestione visualizzazione
 
 Il gestore visualizzazione è un oggetto che controlla l'aspetto di un'intera applicazione. Agisce come una singola classe in cui è possibile inserire tutto il codice di disegno per l'applicazione. La libreria MFC include diversi gestori visualizzazione. È anche possibile creare il proprio gestore visualizzazione se si desidera creare una visualizzazione personalizzata per l'applicazione. Le immagini seguenti mostrano la stessa applicazione quando sono abilitati diversi gestori visualizzazione:
 
-![Rendering mediante CMFCVisualManagerWindows di MyApp](../mfc/media/vmwindows.png "vmwindows") MyApp che utilizza il gestore visualizzazione CMFCVisualManagerWindows
+![Rendering mediante CMFCVisualManagerWindows di MyApp](../mfc/media/vmwindows.png "MyApp rendering mediante CMFCVisualManagerWindows") <br/>
+MyApp che utilizza il gestore visualizzazione CMFCVisualManagerWindows
 
-![Rendering mediante CMFCVisualManagerVS2005 di MyApp](../mfc/media/vmvs2005.png "vmvs2005") MyApp che utilizza il gestore visualizzazione CMFCVisualManagerVS2005
+![Rendering mediante CMFCVisualManagerVS2005 di MyApp](../mfc/media/vmvs2005.png "MyApp rendering mediante CMFCVisualManagerVS2005") <br/>
+MyApp che utilizza il gestore visualizzazione CMFCVisualManagerVS2005
 
-![Rendering mediante CMFCVisualManagerOfficeXP di MyApp](../mfc/media/vmofficexp.png "vmofficexp") MyApp che utilizza il gestore visualizzazione CMFCVisualManagerOfficeXP
+![Rendering mediante CMFCVisualManagerOfficeXP di MyApp](../mfc/media/vmofficexp.png "MyApp rendering mediante CMFCVisualManagerOfficeXP") <br/>
+MyApp che utilizza il gestore visualizzazione CMFCVisualManagerOfficeXP
 
-![Rendering mediante CMFCVisualManagerOffice2003 di MyApp](../mfc/media/vmoffice2003.png "vmoffice2003") MyApp che utilizza il gestore visualizzazione CMFCVisualManagerOffice2003
+![Rendering mediante CMFCVisualManagerOffice2003 di MyApp](../mfc/media/vmoffice2003.png "MyApp rendering mediante CMFCVisualManagerOffice2003") <br/>
+MyApp che utilizza il gestore visualizzazione CMFCVisualManagerOffice2003
 
-![Rendering mediante CMFCVisualManagerOffice2007 di MyApp](../mfc/media/msoffice2007.png "msoffice2007") MyApp che utilizza il gestore visualizzazione CMFCVisualManagerOffice2007
+![Rendering mediante CMFCVisualManagerOffice2007 di MyApp](../mfc/media/msoffice2007.png "MyApp rendering mediante CMFCVisualManagerOffice2007") <br/>
+MyApp che utilizza il gestore visualizzazione CMFCVisualManagerOffice2007
 
 Per impostazione predefinita, il gestore visivo mantiene il codice di disegno per diversi elementi di interfaccia utente grafica. Per fornire elementi dell'interfaccia utente personalizzati, è necessario eseguire l'override di metodi di disegno correlati il gestore visualizzazione. Per l'elenco di questi metodi, vedere [classe CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md). I metodi che è possibile eseguire l'override per fornire un aspetto personalizzato sono tutti i metodi che iniziano con `OnDraw`.
 

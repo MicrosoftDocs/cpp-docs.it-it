@@ -1,24 +1,24 @@
 ---
 title: Finestra di progettazione della barra multifunzione (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - vc.editors.ribbon.F1
 helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 3b28783cb12aeeb03bf1687e5922b276af0d52c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521398"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175834"
 ---
 # <a name="ribbon-designer-mfc"></a>Finestra di progettazione della barra multifunzione (MFC)
 
 La finestra di progettazione della barra multifunzione permette di creare e personalizzare barre multifunzione in applicazioni MFC. Una barra multifunzione è un elemento dell'interfaccia utente che organizza i comandi in gruppi logici. Questi gruppi sono visualizzati in schede separate in una striscia che occupa tutta la parte superiore della finestra. La barra multifunzione sostituisce la barra dei menu e le barre degli strumenti. Una barra multifunzione può migliorare significativamente l'usabilità delle applicazioni. Per altre informazioni, vedere [barre multifunzione](/windows/desktop/uxguide/cmd-ribbons). La figura seguente mostra una barra multifunzione.
 
-![Controllo delle risorse della barra multifunzione MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")
+![Controllo delle risorse della barra multifunzione MFC](../mfc/media/ribbon_no_callouts.png "controllo risorsa barra multifunzione MFC")
 
 Nelle versioni precedenti di Visual Studio, dovevano essere creato mediante la scrittura di codice che usa le classi ribbon MFC, ad esempio le barre multifunzione [classe CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md). In Visual Studio 2010 e versioni successive, la finestra di progettazione della barra multifunzione fornisce un metodo alternativo per la creazione di barre multifunzione. Prima di tutto, creare e personalizzare una barra multifunzione come risorsa. Caricare quindi la risorsa barra multifunzione dal codice nell'applicazione MFC. È anche possibile usare risorse barra multifunzione e classi Ribbon MFC insieme. È possibile, ad esempio, crea una risorsa barra multifunzione e quindi a livello di programmazione aggiungervi più elementi in fase di esecuzione tramite il codice.
 
@@ -71,7 +71,7 @@ Per aprire una barra multifunzione nella finestra di progettazione della barra m
 
 La figura seguente mostra i diversi componenti presenti nella finestra di progettazione della barra multifunzione.
 
-![Finestra di progettazione della barra multifunzione MFC](../mfc/media/ribbon_designer.png "ribbon_designer")
+![Finestra di progettazione della barra multifunzione MFC](../mfc/media/ribbon_designer.png "progettazione della barra multifunzione MFC")
 
 - **Casella degli strumenti:** contiene controlli che possono essere trascinati nell'area di progettazione.
 
@@ -95,7 +95,7 @@ Gli argomenti seguenti descrivono come usare le funzionalità della finestra di 
 
 ## <a name="definitions-of-ribbon-elements"></a>Definizioni degli elementi della barra multifunzione
 
-![Barra multifunzione MFC](../mfc/media/ribbon.png "della barra multifunzione")
+![Barra multifunzione MFC](../mfc/media/ribbon.png "della barra multifunzione MFC")
 
 - **Pulsante dell'applicazione:** pulsante visualizzato nell'angolo superiore sinistro di una barra multifunzione. Il pulsante dell'applicazione sostituisce il menu File ed è visibile anche quando la barra multifunzione è ridotta a icona. Quando si fa clic su questo pulsante, viene visualizzato un menu che contiene un elenco di comandi.
 

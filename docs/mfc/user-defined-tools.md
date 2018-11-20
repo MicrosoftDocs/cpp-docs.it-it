@@ -1,15 +1,15 @@
 ---
 title: Strumenti definiti dall'utente
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607077"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175730"
 ---
 # <a name="user-defined-tools"></a>Strumenti definiti dall'utente
 
@@ -17,7 +17,8 @@ MFC supporta strumenti definiti dall'utente. Uno strumento definito dall'utente 
 
 Se è abilitato il supporto di strumenti definiti dall'utente, la finestra di dialogo di personalizzazione include automaticamente il **strumenti** scheda. La figura seguente mostra le **strumenti** pagina.
 
-![Scheda strumenti nella finestra di dialogo Personalizza](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab") personalizzazione finestra di dialogo Strumenti scheda
+![Scheda strumenti nella finestra di dialogo Personalizza](../mfc/media/custdialogboxtoolstab.png "scheda strumenti nella finestra di dialogo Personalizza") <br/>
+Scheda di personalizzazione della finestra Casella degli strumenti
 
 ## <a name="enabling-user-defined-tools-support"></a>Supporto di strumenti di attivazione definiti dall'utente
 
@@ -57,4 +58,3 @@ Se si desidera predefinire alcuni strumenti sull'avvio dell'applicazione, è nec
 [Classe CUserTool](../mfc/reference/cusertool-class.md)<br/>
 [Classe CUserToolsManager](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [Classe CWinAppEx](../mfc/reference/cwinappex-class.md)
-

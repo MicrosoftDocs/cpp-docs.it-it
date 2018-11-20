@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCTasksPane
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,16 +194,16 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563657"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176809"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 La classe `CMFCTasksPane` implementa un elenco di elementi selezionabili (attività).
 
@@ -350,11 +350,11 @@ Per usare i controlli `CMFCTasksPane` nell'applicazione, attenersi alla procedur
 
 Nella figura seguente viene illustrato un tipico controllo del riquadro attività. Il primo gruppo è un *speciale* gruppo e la relativa didascalia è un colore più scuro. Il terzo gruppo è compresso. L'ultimo gruppo viene allineato al bordo inferiore del riquadro attività e non ha didascalia e l'ultima attività nel gruppo è un'etichetta semplice:
 
-![Esempio di riquadro attività](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")
+![Esempio di riquadro attività](../../mfc/reference/media/nexttaskpane.png "esempio del riquadro attività")
 
 È possibile personalizzare l'aspetto del riquadro attività regolando i vari margini e offset. La figura seguente illustra l'importanza di queste variabili:
 
-![Gruppo di attività personalizzata](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")
+![Gruppo di attività personalizzata](../../mfc/reference/media/nexttaskgrpcustom.png "gruppo di attività personalizzata")
 
 ## <a name="example"></a>Esempio
 
@@ -679,7 +679,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare l'animazione che si verifica quando un gruppo di attività espande o comprime; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -696,7 +696,7 @@ void EnableGroupCollapse(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE se gli utenti possono comprimere i gruppi di attività; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -713,7 +713,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] True per abilitare i menu elenco a discesa nel **successivo** e **Previous** pulsanti di navigazione; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -738,7 +738,7 @@ void EnableNavigationToolbar(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare la barra di spostamento; in caso contrario, FALSE.
 
 *uiToolbarBmpRes*<br/>
@@ -778,7 +778,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per visualizzare i pulsanti di scorrimento nel riquadro attività anziché una barra di scorrimento. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -795,7 +795,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] True se a capo il testo delle etichette visualizzati nel riquadro attività. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -812,7 +812,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per eseguire il wrapping di attività nel riquadro attività. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -1720,7 +1720,7 @@ BOOL SetGroupTextColor(
 *Separa*<br/>
 [in] Specifica l'indice in base zero del gruppo.
 
-*Colore*<br/>
+*color*<br/>
 [in] Specifica il colore del testo.
 
 *colorHot*<br/>
@@ -1786,7 +1786,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] Specifica l'ID risorsa dell'elenco immagini.
 
-*CX*<br/>
+*cx*<br/>
 [in] Specifica le dimensioni delle icone dell'elenco immagini.
 
 *clrTransparent*<br/>
@@ -1914,7 +1914,7 @@ BOOL SetTaskTextColor(
 *nLo*<br/>
 [in] Specifica l'indice in base zero dell'attività.
 
-*Colore*<br/>
+*color*<br/>
 [in] Specifica il colore del testo per l'attività.
 
 *colorHot*<br/>
@@ -2009,7 +2009,7 @@ BOOL ShowTask(
 *nLo*<br/>
 [in] Specifica l'indice in base zero dell'attività per mostrare o nascondere.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE per mostrare l'attività. FALSE per nascondere l'attività.
 
 *bRedraw*<br/>
@@ -2039,7 +2039,7 @@ BOOL ShowTaskByCmdId(
 *uiCommandID*<br/>
 [in] Specifica l'ID di comando dell'attività per mostrare o nascondere.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE per mostrare l'attività. FALSE per nascondere l'attività.
 
 *bRedraw*<br/>

@@ -1,17 +1,17 @@
 ---
 title: Operatore dynamic_cast
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 75085fe6dd1478fee769e23938c55c6300429d86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529155"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176965"
 ---
 # <a name="dynamiccast-operator"></a>Operatore dynamic_cast
 
@@ -121,7 +121,8 @@ int main() {
 }
 ```
 
-![Classe gerarchia di ereditarietà multipla](../cpp/media/vc39011.gif "vc39011") gerarchia di classi con ereditarietà multipla
+![Classe gerarchia di ereditarietà multipla](../cpp/media/vc39011.gif "gerarchia che mostra l'ereditarietà multipla delle classi") <br/>
+Gerarchia delle classi con ereditarietà multipla
 
 Un puntatore a un oggetto di tipo `D` è possibile eseguire il cast `B` o `C`. Tuttavia, se `D` viene eseguito il cast in modo da puntare a un `A` dell'oggetto, quale istanza di `A` produrrebbe? Ciò comporterebbe un errore di cast ambiguo. Per risolvere questo problema, è possibile eseguire due cast non ambiguo. Ad esempio:
 
@@ -141,13 +142,15 @@ void f() {
 
 È possibile introdurre ulteriori ambiguità quando si usano le classi base virtuali. Prendere in considerazione nella gerarchia di classe illustrata nella figura seguente.
 
-![Gerarchia che mostra classi base virtuali delle classi](../cpp/media/vc39012.gif "vc39012") classe gerarchia che mostra classi Base virtuali
+![Gerarchia che mostra classi base virtuali delle classi](../cpp/media/vc39012.gif "classe gerarchia che mostra classi base virtuali") <br/>
+Gerarchia delle classi con classi di base virtuali
 
 In questa gerarchia, `A` è una classe base virtuale. Data un'istanza della classe `E` e un puntatore per il `A` oggetto secondario, un **dynamic_cast** a un puntatore a `B` avrà esito negativo a causa dell'ambiguità. È necessario innanzitutto il cast a tutte `E` dell'oggetto, quindi funzionano risalire la gerarchia, in modo non ambiguo, per raggiungere il valore corretto `B` oggetto.
 
 Prendere in considerazione nella gerarchia di classe illustrata nella figura seguente.
 
-![Classe gerarchia che mostra classi di base duplicate](../cpp/media/vc39013.gif "vc39013") classe gerarchia che mostra classi di Base Duplicate
+![Classe gerarchia che mostra classi di base duplicate](../cpp/media/vc39013.gif "classe gerarchia che mostra classi di base duplicate") <br/>
+Gerarchia delle classi con classi di base duplicate
 
 Dato un oggetto di tipo `E` e un puntatore al `D` sottoggetto, da cui spostarsi il `D` oggetto secondario all'estrema sinistra `A` sottoggetto, possono essere effettuate tre conversioni. È possibile eseguire una **dynamic_cast** conversione dalle `D` puntatore a un `E` puntatore, quindi una conversione (entrambi **dynamic_cast** o una conversione implicita) da `E`alla `B`e infine una conversione implicita da `B` a `A`. Ad esempio:
 

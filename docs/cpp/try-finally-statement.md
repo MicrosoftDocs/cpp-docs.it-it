@@ -1,6 +1,6 @@
 ---
 title: Istruzione try-finally
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326920"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175921"
 ---
 # <a name="try-finally-statement"></a>Istruzione try-finally
 
@@ -68,7 +68,8 @@ Se si verifica un'eccezione di **try** blocco, il sistema operativo deve trovare
 
 Si supponga ad esempio che una serie di chiamate di funzione colleghi la funzione A alla funzione D, come illustrato di seguito. Ogni funzione dispone di un gestore di terminazione. Se un'eccezione viene generata nella funzione D e gestita in A, i gestori di terminazione, man mano che il sistema rimuove lo stack, vengono chiamati nell'ordine seguente: D, C, B.
 
-![Ordine di terminazione&#45;esecuzione del gestore](../cpp/media/vc38cx1.gif "vc38CX1") ordine di esecuzione del gestore terminazioni
+![Ordine di terminazione&#45;esecuzione del gestore](../cpp/media/vc38cx1.gif "ordine di terminazione&#45;esecuzione del gestore") <br/>
+Ordine di terminazione esecuzione del gestore
 
 > [!NOTE]
 > Il comportamento di try-finally è diverso da alcuni altri linguaggi che supportano l'utilizzo di **infine**, ad esempio c#.  Un unico **try** potrebbe essere, ma non entrambi, dei **finally** e **except**.  Se entrambi devono essere utilizzati insieme, un'istruzione try-except deve racchiudere l'istruzione try-finally interna.  Sono diverse anche le regole che specificano quando viene eseguito ciascun blocco.

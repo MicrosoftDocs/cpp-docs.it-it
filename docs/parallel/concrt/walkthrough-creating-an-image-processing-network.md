@@ -1,16 +1,16 @@
 ---
 title: "Procedura dettagliata: creazione di una rete per l'elaborazione di immagini"
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643638"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176172"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Procedura dettagliata: creazione di una rete per l'elaborazione di immagini
 
@@ -134,7 +134,7 @@ Se l'applicazione richiede più quel messaggio blocca l'elaborazione del messagg
 
 La figura seguente mostra una rete di elaborazione delle immagini:
 
-![Rete di elaborazione di immagini](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")
+![Rete di elaborazione di immagini](../../parallel/concrt/media/concrt_imageproc.png "rete di elaborazione di immagini")
 
 Il `countdown_event` in questo esempio e consente di rete di elaborazione delle immagini informare l'applicazione principale quando sono state elaborate tutte le immagini. Il `countdown_event` classe Usa un [Concurrency:: event](../../parallel/concrt/reference/event-class.md) oggetto per segnalare quando un valore del contatore raggiunge lo zero. L'applicazione principale incrementa il contatore ogni volta che si invia un nome di file alla rete. Nodo terminale della rete decrementa il contatore dopo l'elaborazione di ogni immagine. Dopo l'applicazione principale attraversa la directory specificata, attende il `countdown_event` oggetto per segnalare che il contatore raggiunge lo zero.
 
@@ -152,7 +152,7 @@ Nel codice seguente viene illustrato l'esempio completo. Il `wmain` funzione ges
 
 Nella figura seguente mostra l'output di esempio. Ogni immagine di origine è sopra l'immagine modificata corrispondente.
 
-![Esempio di output per l'esempio](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")
+![Esempio di output per l'esempio](../../parallel/concrt/media/concrt_imageout.png "l'esempio produce l'output di esempio")
 
 `Lighthouse` viene creato da Tom Alphin e pertanto viene convertito in gradazioni di grigio. `Chrysanthemum`, `Desert`, `Koala`, e `Tulips` rosso come colore dominante e pertanto con i componenti di colore verde e blu rimossi e sono scurire. `Hydrangeas`, `Jellyfish`, e `Penguins` soddisfano i criteri predefiniti e pertanto sono seppia stato applicato.
 

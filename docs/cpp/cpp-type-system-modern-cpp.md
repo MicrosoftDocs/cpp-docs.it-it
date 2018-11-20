@@ -1,14 +1,14 @@
 ---
 title: Sistema di tipi C++ (C++ moderno)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521092"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176341"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
 
@@ -59,7 +59,7 @@ I tipi fondamentali sono riconosciuti dal compilatore che ha regole predefinite 
 
 Di seguito vengono mostrate le dimensioni relative dei tipi predefiniti:
 
-![Compilato di dimensioni in byte di&#45;nei tipi](../cpp/media/built-intypesizes.png "Built-inTYpeSizes")
+![Compilato di dimensioni in byte di&#45;nei tipi](../cpp/media/built-intypesizes.png "compilato di dimensioni in byte del&#45;nei tipi")
 
 Nella tabella seguente sono elencati i tipi fondamentali di uso più comune:
 
@@ -70,13 +70,13 @@ Nella tabella seguente sono elencati i tipi fondamentali di uso più comune:
 |bool|1 byte|Rappresenta i valori che possono essere true o false.|
 |char|1 byte|Utilizzare i caratteri ASCII negli oggetti std::string o nelle stringhe di tipo C precedenti che non dovranno mai essere convertiti in UNICODE.|
 |wchar_t|2 byte|Rappresenta valori a caratteri "wide" che è possibile codificare in formato Unicode (UTF-16 in Windows, per altri sistemi operativi potrebbe essere diverso). Si tratta del tipo di carattere utilizzato in stringhe di tipo `std::wstring`.|
-|unsigned char|1 byte|C++ non include alcun tipo `byte` predefinito.  Utilizzare il tipo unsigned char per rappresentare un valore byte.|
+|unsigned&nbsp;char|1 byte|C++ non include alcun tipo `byte` predefinito.  Utilizzare il tipo unsigned char per rappresentare un valore byte.|
 |unsigned int|4 byte|Scelta predefinita per i flag di bit.|
 |long long|8 byte|Rappresenta valori integer di grandi dimensioni.|
 
 ## <a name="the-void-type"></a>Tipo void
 
-Il **void** tipo è un tipo speciale; non è possibile dichiarare una variabile di tipo **void**, ma è possibile dichiarare una variabile di tipo `void *` (puntatore a **void**), ovvero In alcuni casi, è necessario quando si alloca memoria non elaborata (senza tipo). Tuttavia, i puntatori ai **void** sono non indipendente dai tipi e in genere l'uso è fortemente sconsigliato nel linguaggio C++ moderno. In una dichiarazione di funzione, una **void** valore restituito indica che la funzione non restituisce un valore; si tratta di un uso comune e accettabile **void**. Mentre il linguaggio C richiede funzioni con zero parametri per dichiarare **void** nell'elenco dei parametri, ad esempio `fou(void)`, questa pratica è sconsigliata nel linguaggio C++ moderno e deve essere dichiarato come `fou()`. Per altre informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Il **void** tipo è un tipo speciale; non è possibile dichiarare una variabile di tipo **void**, ma è possibile dichiarare una variabile di tipo __void \*__  (puntatore a **void**), che è talvolta necessario quando si alloca memoria non elaborata (senza tipo). Tuttavia, i puntatori ai **void** sono non indipendente dai tipi e in genere l'uso è fortemente sconsigliato nel linguaggio C++ moderno. In una dichiarazione di funzione, una **void** valore restituito indica che la funzione non restituisce un valore; si tratta di un uso comune e accettabile **void**. Mentre il linguaggio C richiede funzioni con zero parametri per dichiarare **void** nell'elenco dei parametri, ad esempio `fou(void)`, questa pratica è sconsigliata nel linguaggio C++ moderno e deve essere dichiarato come `fou()`. Per altre informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>qualificatore di tipo const
 

@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCDropDownToolBar
-ms.date: 10/188/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCDropDownToolBar
 - AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: ccbdd69baea104f306cfdca69efb46985ee97b91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c5115d2453f21d83eda39950ac45a0290e9bfa8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582000"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176939"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 
 Barra degli strumenti visualizzata quando l'utente tiene premuto un pulsante della barra degli strumenti di primo livello.
 
-   Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+   Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 ## <a name="syntax"></a>Sintassi
 
 ```
@@ -60,7 +60,7 @@ Una barra degli strumenti elenco a discesa non può essere personalizzato o anco
 
 La figura seguente mostra un `CMFCDropDownToolBar` oggetto:
 
-![Esempio di CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")
+![Esempio di CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "esempio di CMFCDropDownToolbar")
 
 Si crea una `CMFCDropDownToolBar` allo stesso modo si crea una barra degli strumenti comune dell'oggetto (vedere [classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)).
 
