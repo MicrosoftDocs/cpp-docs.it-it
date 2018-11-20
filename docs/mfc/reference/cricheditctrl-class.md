@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: e8575c2eb814bd7fb3cb307654b0e3622506c6c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 756f50afd9b67e4895d8d1b15652602630c24918
+ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505417"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51949544"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -426,7 +426,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile del controllo di modifica. Applicare una combinazione degli stili finestra elencati nella **osservazioni** sezione riportata di seguito, e [modifica degli stili del controllo](/windows/desktop/Controls/edit-control-styles), come descritto nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo di modifica. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](../../mfc/reference/rect-structure1.md) struttura.
 
 *pParentWnd*<br/>
@@ -488,7 +488,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 *dwStyle*<br/>
 Specifica lo stile del controllo di modifica. Applicare una combinazione degli stili finestra elencati nella **osservazioni** sezione del [Create](#create) e [modifica degli stili del controllo](/windows/desktop/Controls/edit-control-styles), come descritto nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1560,7 +1560,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se il controllo è impostato per rilevare automaticamente un URL. Se TRUE, viene abilitato. Se FALSE, viene disabilitato.
 
 ### <a name="return-value"></a>Valore restituito
