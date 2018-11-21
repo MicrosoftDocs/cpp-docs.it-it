@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: b860d09ddb2f07909797ba7f24776e1850d27cc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a96fdac743531a47c7d2e586292e87e1bbf9e249
+ms.sourcegitcommit: fd15246715907f7c0415e3a0c3eb80f7303d1139
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602806"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52255710"
 ---
 # <a name="mfc-application-wizard"></a>Creazione guidata applicazione MFC
 
@@ -61,7 +61,7 @@ Questa pagina della procedura guidata descrive le impostazioni dell'applicazione
 
    - Il progetto non offre alcun supporto per [Automation](../../mfc/automation.md), [MAPI](../../mfc/mapi-support-in-mfc.md), [Windows Sockets](../../mfc/windows-sockets-in-mfc.md), oppure Active Accessibility.
 
-   - Il progetto supporta un **Explorer** riquadro ancorato, un **clausola Ouput** riquadro ancorato e un **proprietà** riquadro ancorato.
+   - Il progetto supporta un **Explorer** riquadro ancorato, un **Output** riquadro ancorato e un **proprietà** riquadro ancorato.
 
 - [Classi generate, Creazione guidata applicazione MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md)
 
