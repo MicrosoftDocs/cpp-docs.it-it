@@ -255,7 +255,7 @@ The vector with first element flipped is:
     false false false true true
 ```
 
-###  <a name="reference_operator_bool">vector</a>::reference::operator bool\<
+###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
 Fornisce una conversione implicita da `vector<bool>::reference` al **bool**.
 
