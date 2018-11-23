@@ -2,12 +2,12 @@
 title: Proprietà del linker (Linux C++)
 ms.date: 9/26/2017
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: db2fc37189ca05835888faed26b242abc0fe5fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580674"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678340"
 ---
 # <a name="linker-properties-linux-c"></a>Proprietà del linker (Linux C++)
 

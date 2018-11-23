@@ -1,13 +1,13 @@
 ---
 title: 'Guida al porting: MFC Scribble'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: b41689b1e0207029f4494cfd91c261705789a733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539763"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175652"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guida al porting: MFC Scribble
 
@@ -31,7 +31,7 @@ Tenere presente che invece di aggiornare i progetti con la procedura guidata, è
 
 Quando si apre in Visual Studio 2017 un file di progetto creato in una versione precedente, viene chiesto se si vuole convertire il file di progetto alla versione più recente. In questo caso l'offerta è stata accettata. viene visualizzata la finestra di dialogo seguente:
 
-![Revisione modifiche a progetti e soluzioni](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")
+![Esamina modifiche a progetti e soluzioni](../porting/media/scribbleprojectupgrade.PNG "Esamina modifiche a progetti e soluzioni")
 
 Si è verificato un errore e viene visualizzato un messaggio per informare che la destinazione Itanium non è disponibile e la conversione non verrà eseguita.
 
@@ -43,7 +43,7 @@ All'epoca in cui è stato creato il progetto Scribble precedente, Itanium era un
 
 Visual Studio visualizza quindi un report di migrazione che elenca tutti i problemi riscontrati nel vecchio file di progetto.
 
-![Report di aggiornamento](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")
+![Report di aggiornamento](../porting/media/scribblemigrationreport.PNG "Report di aggiornamento")
 
 In questo caso, i problemi erano tutti avvisi e Visual Studio ha apportato le modifiche appropriate nel file di progetto. La grande differenza per quanto riguarda il progetto è che lo strumento di compilazione è cambiato da vcbuild a msbuild. Questa modifica è stata introdotta in Visual Studio 2010. Altre modifiche includono una riorganizzazione della sequenza di elementi nel file di progetto. Per questo progetto semplice nessuno dei problemi ha richiesto ulteriore attenzione.
 

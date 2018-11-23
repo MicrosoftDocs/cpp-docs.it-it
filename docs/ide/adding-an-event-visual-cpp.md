@@ -1,39 +1,83 @@
 ---
-title: Aggiunta di un evento (Visual C++)
-ms.date: 11/04/2016
+title: Aggiungere un evento
+ms.date: 11/12/2018
+f1_keywords:
+- vc.codewiz.event.overview
 helpviewer_keywords:
 - ActiveX controls [C++], adding events to
 - MFC ActiveX controls [C++], adding events
 - events [C++], ActiveX controls
+- add event wizard [C++]
 ms.assetid: fe34832a-edfc-4f86-aacb-8df77001873d
-ms.openlocfilehash: 6dd4ecd249e47523b08433bda12838fb8b220157
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d5a8f5666dd04e00f8a438fdbf00320c37e14f4
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444785"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693425"
 ---
-# <a name="adding-an-event-visual-c"></a>Aggiunta di un evento (Visual C++)
+# <a name="add-an-event"></a>Aggiungere un evento
 
-Dalla Visualizzazione classi è possibile aggiungere un evento usando l'[Aggiunta guidata evento](../ide/add-event-wizard.md) solo alla classe del controllo nel progetto del [controllo ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md). Se si vuole aggiungere un evento a un altro tipo di progetto, usare il pulsante **Eventi** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window).
+Dalla Visualizzazione classi è possibile aggiungere un evento usando l'[Aggiunta guidata evento](#add-event-wizard) solo alla classe del controllo nel progetto del [controllo ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md). Se si vuole aggiungere un evento a un altro tipo di progetto, usare il pulsante **Eventi** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window).
 
-### <a name="to-add-an-event-to-your-mfc-activex-control-project"></a>Per aggiungere un evento al progetto del controllo ActiveX MFC
+**Per aggiungere un evento al progetto del controllo ActiveX MFC:**
 
 1. Nella Visualizzazione classi espandere il nodo del progetto per visualizzare le classi nel progetto.
 
 1. Fare clic con il pulsante destro del mouse sulla classe del controllo del progetto.
 
-1. Nel menu di scelta rapida fare clic su **Aggiungi** e quindi su **Aggiungi evento** per visualizzare l'Aggiunta guidata evento.
+1. Nel menu di scelta rapida scegliere **Aggiungi** e quindi **Aggiungi evento** per visualizzare l'Aggiunta guidata evento.
 
 1. Specificare le informazioni sull'evento nelle caselle appropriate della procedura guidata.
 
-1. Fare clic su **Fine** per aggiungere l'evento al progetto.
+1. Selezionare **Fine** per aggiungere l'evento al progetto.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="in-this-section"></a>Contenuto della sezione
 
-[Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)<br>
-[Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)<br>
-[Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
-[Esplorazione della struttura delle classi](../ide/navigating-the-class-structure-visual-cpp.md)
+- [Aggiunta guidata evento](#add-event-wizard)
+
+## <a name="add-event-wizard"></a>Aggiunta guidata evento
+
+Questa procedura guidata aggiunge un evento al progetto di un controllo ActiveX MFC. È possibile specificare un evento personalizzato, personalizzare un evento predefinito oppure selezionare un evento da un elenco di eventi predefiniti.
+
+- **Nome evento**
+
+   Imposta il nome usato dai client di automazione per richiedere un evento dalla classe. Immettere un nome o selezionarne uno dall'elenco.
+
+- **Tipo evento**
+
+   Indica il tipo di evento da aggiungere. Disponibile solo se si seleziona un'opzione dall'elenco **Nome evento**.
+
+   |Opzione|Descrizione|
+   |------------|-----------------|
+   |**Predefinito**|Specifica l'implementazione di un evento predefinito per la classe, ad esempio il clic su un pulsante. Gli eventi predefiniti sono definiti nella libreria MFC (Microsoft Foundation Class).|
+   |**Personalizzato**|Specifica l'uso dell'implementazione personalizzata dell'evento.|
+
+- **Nome interno**
+
+   Imposta il nome della funzione membro che invia l'evento. Disponibile solo per gli eventi personalizzati. Il nome è basato sul **Nome evento**. Se si vuole specificare un nome diverso da **Nome evento** è possibile modificare il nome interno.
+
+- **Tipo parametro**
+
+   Imposta il tipo per **Nome parametro**. Selezionare il tipo dall'elenco.
+
+- **Nome parametro**
+
+   Imposta il nome di un parametro da passare all'evento. Dopo aver digitato il nome, è necessario selezionare **Aggiungi** per aggiungerlo all'elenco dei parametri.
+
+   Dopo aver selezionato **Aggiungi**, il nome del parametro viene visualizzato nell'**Elenco parametri**.
+
+   > [!NOTE]
+   > Se si specifica un nome di parametro e quindi si seleziona **Fine** prima di selezionare **Aggiungi**, il parametro non viene aggiunto all'evento. È necessario trovare il metodo e inserire il parametro manualmente.
+
+- **Aggiungi**
+
+   Aggiunge il parametro specificato in **Nome parametro** e il relativo tipo all'**Elenco parametri**. Selezionare **Aggiungi** per aggiungere un parametro all'elenco.
+
+- **Rimuovi**
+
+   Rimuove il parametro selezionato nell'**Elenco parametri** dall'elenco.
+
+- **Elenco parametri**
+
+   Visualizza tutti i parametri e i relativi tipi aggiunti per il metodo. Quando si aggiungono i parametri, la procedura guidata aggiorna l'**Elenco parametri** in modo da visualizzare ogni parametro con il relativo tipo.

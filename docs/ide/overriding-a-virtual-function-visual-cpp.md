@@ -1,6 +1,6 @@
 ---
-title: Override di una funzione virtual (Visual C++)
-ms.date: 11/04/2016
+title: Eseguire l'override di una funzione virtuale
+ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.virtualfunc.override
 helpviewer_keywords:
@@ -8,41 +8,32 @@ helpviewer_keywords:
 - base classes, overriding virtual functions defined in
 - Properties window, overriding virtual functions in
 ms.assetid: 2d8c76f2-7a6b-4c9c-8de5-4282ce7755b6
-ms.openlocfilehash: 193c84d2b9a0fe50ae84d3e69834feab27342042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bb3fd34bbfa14cce1595ed586c4e1b66518e7b7
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484138"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694023"
 ---
-# <a name="overriding-a-virtual-function-visual-c"></a>Override di una funzione virtual (Visual C++)
+# <a name="override-a-virtual-function"></a>Eseguire l'override di una funzione virtuale
 
 È possibile eseguire l'override delle funzioni virtuali definite in una classe di base dalla [finestra Proprietà](/visualstudio/ide/reference/properties-window) di Visual Studio.
 
-### <a name="to-override-a-virtual-function-in-the-properties-window"></a>Per eseguire l'override di una funzione virtuale nella finestra Proprietà
+**Per eseguire l'override di una funzione virtuale nella finestra Proprietà:**
 
-1. In Visualizzazione classi fare clic sulla classe.
+1. In Visualizzazione classi selezionare la classe.
 
-1. Nella finestra Proprietà fare clic sul pulsante **Override**.
+1. Nella finestra Proprietà selezionare il pulsante **Override**.
 
    > [!NOTE]
-   >  Il pulsante **Override** è disponibile quando si seleziona il nome della classe in Visualizzazione classi o quando si fa clic all'interno della finestra di origine.
+   > Il pulsante **Override** è disponibile quando si seleziona il nome della classe in Visualizzazione classi o quando si effettua una selezione all'interno della finestra di origine.
 
    Nella colonna di sinistra sono elencate le funzioni virtuali. La presenza del nome di una funzione virtuale anche nella colonna di destra indica che è già stato implementato un override.
 
-1. Se la funzione non ha alcun override, fare clic sulla cella nella colonna di destra della finestra Proprietà per visualizzare il nome suggerito dell'override della funzione come \<aggiungi>*FuncName*.
+1. Se la funzione non ha nessun override, selezionare la cella nella colonna a destra nella finestra Proprietà per visualizzare il nome suggerito per l'override della funzione come \<aggiungi>*FuncName*.
 
-1. Fare clic sul nome suggerito per aggiungere il codice stub per la funzione.
+1. Selezionare il nome suggerito per aggiungere il codice stub per la funzione.
 
 1. Per modificare una funzione in override, fare doppio clic sul nome della funzione in Visualizzazione classi e modificare il codice nella finestra di origine.
 
-Per rimuovere un override, fare clic sul nome della funzione di override nella colonna di destra e selezionare \<elimina >*FuncName*. Il codice della funzione viene impostato come commento.
-
-## <a name="see-also"></a>Vedere anche
-
-[Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)<br>
-[Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)<br>
-[Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
-[Esplorazione della struttura delle classi](../ide/navigating-the-class-structure-visual-cpp.md)
+Per rimuovere un override, selezionare il nome della funzione di override nella colonna a destra e selezionare \<elimina>*FuncName*. Il codice della funzione viene impostato come commento.
