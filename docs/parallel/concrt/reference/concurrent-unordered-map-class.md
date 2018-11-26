@@ -107,7 +107,7 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli su
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator]](#operator_at)|Di overload. Trova o inserisce un elemento con la chiave specificata. Questo metodo è indipendente dalla concorrenza.|
+|[operator[]](#operator_at)|Di overload. Trova o inserisce un elemento con la chiave specificata. Questo metodo è indipendente dalla concorrenza.|
 |[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_unordered_map` a questo oggetto. Questo metodo non è indipendente dalla concorrenza.|
 
 ## <a name="remarks"></a>Note
