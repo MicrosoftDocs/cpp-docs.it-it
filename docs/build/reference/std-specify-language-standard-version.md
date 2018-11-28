@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 28796826a7c312b92b3ec0510513ad4804800ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c91f02fe044b5e6afccfc075c5d73ec004b8222
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476039"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389955"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (specifica versione Standard del linguaggio)
 
@@ -19,11 +19,11 @@ Abilita supportate funzionalità del linguaggio C++ della versione specificata d
 
 ## <a name="syntax"></a>Sintassi
 
-> / std:<c++14|c++17|c++Latest>: [c++14 | c++17 | versione più recente di c + +]
+> / std:\[c++14\|c++17\|più recente di c + +]
 
 ## <a name="remarks"></a>Note
 
-Il **/std** opzione è disponibile in Visual Studio 2017 e versioni successive. Viene utilizzato per controllare la funzionalità standard del linguaggio abilitate durante la compilazione del codice di programmazione specifici della versione ISO C++. Questa opzione consente di disabilitare il supporto per alcune nuove funzionalità di linguaggio e libreria che può comportare l'interruzione del codice esistente che è conforme a una particolare versione del linguaggio standard. Per impostazione predefinita **/std: c + + 14** viene specificato, che disabilita la funzionalità del linguaggio e libreria standard disponibili nelle versioni successive del linguaggio C++ standard. Uso **/std: c + + 17** abilitare standard specifiche funzionalità di c++17 e comportamento. Per abilitare in modo esplicito il più recente del compilatore supportato e funzionalità della libreria standard, usare **/std: c + + più recente**.
+Il **/std** opzione è disponibile in Visual Studio 2017 e versioni successive. Viene utilizzato per controllare la funzionalità standard del linguaggio abilitate durante la compilazione del codice di programmazione specifici della versione ISO C++. Questa opzione consente di disabilitare il supporto per alcune nuove funzionalità di linguaggio e libreria che può comportare l'interruzione del codice esistente che è conforme a una particolare versione del linguaggio standard. Per impostazione predefinita **/std: c + + 14** viene specificato, che disabilita la funzionalità del linguaggio e libreria standard disponibili nelle versioni successive del linguaggio C++ standard. Uso **/std: c + + 17** abilitare standard specifiche funzionalità di c++17 e comportamento. Per abilitare in modo esplicito l'attuale implementazione del compilatore e funzionalità della libreria standard proposta per gli standard bozza, usare **/std: c + + più recente**.
 
 Il valore predefinito **/std: c + + 14** opzione Abilita il set di funzionalità di c++14 implementate dal compilatore Visual C++. Questa opzione Disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni più recenti del linguaggio standard, fatta eccezione per alcune funzionalità di c++17 già implementati nelle versioni precedenti del compilatore Visual C++. Per evitare modifiche di rilievo per gli utenti che hanno già acquisito dipendenze sulle funzionalità disponibili a partire da Visual Studio 2015 Update 2, queste funzionalità rimangono abilitati quando la **/std: c + + 14** è specificata l'opzione:
 
@@ -41,7 +41,10 @@ Per altre informazioni su quali C + + 14 e C + + 17 funzionalità vengono abilit
 
 Il **/std: c + + 17** opzione Abilita il set completo di c++17 funzionalità implementate dal compilatore Visual C++. Questa opzione disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni del documento di lavoro, nonché degli aggiornamenti per i difetti dello standard C++ dopo C++17.
 
-Il **/std: c + + più recente** opzione Abilita il set di funzionalità di linguaggio e libreria di C++ implementata da Visual C++ per tenere traccia più C + + 20 Working Draft e difetti aggiornamenti recenti dello Standard C++ che non sono inclusi in c++17. Usare questa opzione per ottenere il post-funzionalità C + + 17 lingue supportate dal compilatore e della libreria standard. Per un elenco di funzionalità della libreria e dei linguaggi supportati, vedere [What ' s New for Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). Il **/std: c + + più recente** non abilita la funzionalità protetta dall'opzione di **/ sperimentale** passare.
+Il **/std: c + + più recente** opzione Abilita il post-c++17 funzionalità del linguaggio e libreria attualmente implementata nel compilatore e librerie. Potrebbero includere le funzionalità di C + + 20 Working Draft e difetti aggiornamenti dello Standard C++ che non sono inclusi in c++17, come pure sperimentale proposte per la bozza di standard. Per un elenco di funzionalità della libreria e dei linguaggi supportati, vedere [What ' s New for Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). Il **/std: c + + più recente** non abilita la funzionalità protetta dall'opzione il **/ sperimentale** passa, ma potrebbe essere necessario abilitarli.
+
+> [!IMPORTANT]
+> Il compilatore e la libreria funzionalità abilitate dal **/std: c + + più recente** vengono forniti come-è e senza supporto. Sono soggetti a modifiche improvvise o rimozione senza preavviso. Sono progettati come anteprima della funzionalità del linguaggio che possono essere visualizzati nella prossima versione dello standard, ma lo standard è in corso. Usare **/std: c + + 17** usare le funzionalità nello standard ISO C++ più recenti.
 
 Il **/std** opzione attiva durante una compilazione C++ può essere rilevato mediante l'utilizzo delle [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) macro del preprocessore. Per altre informazioni, vedere [macro del preprocessore](../../preprocessor/predefined-macros.md).
 

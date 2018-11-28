@@ -1,15 +1,15 @@
 ---
 title: /sdl (Abilita ulteriori controlli di sicurezza)
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587460"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389942"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Abilita ulteriori controlli di sicurezza)
 
@@ -49,7 +49,17 @@ Quando **/sdl** è abilitato, il compilatore genera codice per eseguire questi c
 
 - Esegue una pulizia del puntatore limitata. In espressioni che non includono dereferenziazioni e nei tipi che non dispongono di un distruttore definito dall'utente, i riferimenti del puntatore vengono impostati su un indirizzo non valido in seguito ad una chiamata a `delete`. Questo consente di prevenire il riutilizzo di riferimenti del puntatore non aggiornati.
 
-- Esegue l'inizializzazione dei membri della classe. Inizializza automaticamente tutti i membri della classe a zero in fase di creazione di oggetti, prima che venga eseguito il costruttore. Questo consente di evitare l'utilizzo di dati non inizializzati associati ai membri della classe che il costruttore non inizializza in modo esplicito.
+- Esegue l'inizializzazione di puntatore a membro di classe. Membri di tipo puntatore della classe consente di inizializzare automaticamente **nullptr** nella creazione di istanze di oggetto (prima del costruttore). Ciò consente di impedire l'utilizzo dei puntatori non inizializzati che il costruttore non inizializza in modo esplicito. Viene chiamato l'inizializzazione di puntatore a membro generato dal compilatore, purché:
+
+  - L'oggetto non viene allocato usando un oggetto personalizzato (definito dall'utente) `operator new`
+
+  - L'oggetto non è allocata come parte di una matrice (ad esempio `new A[x]`)
+
+  - La classe non gestita o importata
+
+  - La classe ha un costruttore predefinito definito dall'utente.
+
+  Per essere inizializzato dalla funzione di inizializzazione classe generato dal compilatore, un membro deve essere un puntatore e non una proprietà o una costante.
 
 ## <a name="remarks"></a>Note
 
