@@ -1,6 +1,6 @@
 ---
 title: 'WM_ Message Handlers: F - K'
-ms.date: 11/04/2016
+ms.date: 11/27/2018
 f1_keywords:
 - ON_WM_FONTCHANGE
 - ON_WM_ICONERASEBKGND
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - WM_ messages [MFC]
 - ON_WM_KEYDOWN [MFC]
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
-ms.openlocfilehash: 993202e0d0037c510886e43004ee499599234a62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e21889a44d26cd57ce0645e2050eeeb2839ef17d
+ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609904"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52453898"
 ---
 # <a name="wm-message-handlers-f---k"></a>WM_ Message Handlers: F - K
 
@@ -44,7 +44,7 @@ Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a
 |---------------|------------------------|
 |ON_WM_FONTCHANGE()|void afx_msg [OnFontChange](../../mfc/reference/cwnd-class.md#onfontchange)();|
 |ON_WM_GETDLGCODE()|afx_msg UINT [OnGetDlgCode](../../mfc/reference/cwnd-class.md#ongetdlgcode)();|
-|ON_WM_GETMINMAXINFO()|void afx_msg [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(LPPOINT);|
+|ON_WM_GETMINMAXINFO()|void afx_msg [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(MINMAXINFO *);|
 |ON_WM_HELPINFO()|BOOL afx_msg [OnHelpInfo](../../mfc/reference/cwnd-class.md#onhelpinfo)(HELPINFO *);|
 |ON_WM_HOTKEY()|void afx_msg [OnHotKey](../../mfc/reference/cwnd-class.md#onhotkey)(UINT, UINT, UINT);|
 |ON_WM_HSCROLL()|void afx_msg [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)(UINT, UINT, CWnd *);|
