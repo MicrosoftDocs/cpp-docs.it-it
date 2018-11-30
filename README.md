@@ -1,21 +1,17 @@
- ## <a name="microsoft-open-source-code-of-conduct"></a>Codice di comportamento di Microsoft per l'open source
-
-Questo progetto ha adottato il [codice di comportamento di Microsoft per l'open source](https://opensource.microsoft.com/codeofconduct/).
-Per altre informazioni, vedere [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) (Domande frequenti sul codice di comportamento). In alternativa, per domande aggiuntive o commenti, contattare l'indirizzo [opencode@microsoft.com](mailto:opencode@microsoft.com).
-
 # <a name="visual-studio-2017-documentation-for-visual-c"></a>Documentazione di Visual Studio 2017 per Visual C++
 
-Introduzione Questo archivio contiene i file di origine per la documentazione tecnica di Visual C++ in continua evoluzione. Gli argomenti vengono pubblicati nel [sito della documentazione di Visual C++](https://docs.microsoft.com/cpp).
+Introduzione Questo repository contiene i file di origine per la documentazione tecnica di Visual C++ in continua evoluzione. Gli argomenti vengono pubblicati nel [sito della documentazione di Visual C++](https://docs.microsoft.com/cpp).
 
-Questo repository è stata spostato da Microsoft/vcppdocs MicrosoftDocs/cpp-docs-pr il 23 giugno 2017.
+Questo repository è stato spostato da Microsoft/vcppdocs a MicrosoftDocs/cpp-docs-pr il 23 giugno 2017.
 
-La documentazione per Visual Basic e Visual C# si trova all'interno di repository separati all'indirizzo [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs), mentre la documentazione di Visual Studio 2017 si trova nel repository all'indirizzo [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs).
+La documentazione di Visual Basic e Visual C# si trova in un repository separato all'indirizzo [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs) e la documentazione di Visual Studio 2017 si trova nel repository all'indirizzo [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs).
 
 ## <a name="contributing-to-the-documentation"></a>Collaborare alla stesura della documentazione
 
-Per collaborare alla stesura della documentazione, vedere la [guida per i collaboratori](CONTRIBUTING.md).
-Il contributo degli utenti per il miglioramento della documentazione di Visual C++ è vivamente incoraggiato. Tutti gli articoli di questo archivio usano il markdown tipico di GitHub.
+Il contributo degli utenti per il miglioramento della documentazione di Visual C++ è vivamente incoraggiato. Per una guida completa per aggiungere contributi a docs.microsoft.com, vedere la [Panoramica della Guida per i collaboratori Microsoft Docs](https://docs.microsoft.com/contribute). Per informazioni dettagliate su come contribuire alla documentazione di Visual C++, vedere [Contributi al codice](CONTRIBUTING.md).
 
-All'interno di questo archivio alcune cartelle sono dedicate ad aree funzionali specifiche di Visual Studio, ad esempio **standard-library** per gli argomenti relativi alla libreria standard C++, **ide** per gli argomenti relativi all'ambiente IDE (Interactive Development Environment) di Visual Studio e così via. In ogni cartella, la sottocartella **/media** contiene i file delle immagini degli argomenti. Per altre informazioni, vedere la [guida per i collaboratori](CONTRIBUTING.md).
+All'interno di questo repository alcune cartelle sono dedicate ad aree funzionali specifiche di Visual C++, ad esempio `standard-library` per gli argomenti relativi alla libreria standard C++, `ide` per gli argomenti relativi all'ambiente di sviluppo integrato (IDE) di Visual Studio e così via. In ogni cartella, la sottocartella `/media` contiene i file delle immagini degli argomenti. Per altre informazioni, vedere [Contributi al codice](CONTRIBUTING.md).
+
+## <a name="microsoft-open-source-code-of-conduct"></a>Codice di comportamento di Microsoft per l'open source
 
 Questo progetto ha adottato il [codice di comportamento di Microsoft per l'open source](https://opensource.microsoft.com/codeofconduct/). Per altre informazioni, vedere [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) (Domande frequenti sul codice di comportamento). In alternativa, per domande aggiuntive o commenti, contattare l'indirizzo [opencode@microsoft.com](mailto:opencode@microsoft.com).
