@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-ms.openlocfilehash: 2a261b3e578bef5464bbfda8528ffd8b491acb23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136edf6b5c95149302920af0c8a8dc9c07458e3b
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545951"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977771"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -70,7 +70,7 @@ Riallocare memoria modificando l'allineamento di un blocco è un errore.
 
 ## <a name="remarks"></a>Note
 
-**aligned_realloc_dbg** è una versione di debug di [aligned_realloc](aligned-realloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_realloc_dbg** viene ridotta a una chiamata a **aligned_realloc**. Entrambe **aligned_realloc** e **aligned_realloc_dbg** riallocano un blocco di memoria nell'heap di base, ma **aligned_realloc_dbg** contiene diverse funzionalità di debug : buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, un parametro di tipo blocco per tenere traccia di tipi specifici di allocazioni e *nomefile*/*linenumber* informazioni per determinare l'origine delle richieste di allocazione.
+**aligned_realloc_dbg** è una versione di debug di [aligned_realloc](aligned-realloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_realloc_dbg** viene ridotta a una chiamata a **aligned_realloc**. Entrambe **aligned_realloc** e **aligned_realloc_dbg** riallocano un blocco di memoria nell'heap di base, ma **aligned_realloc_dbg** contiene diverse funzionalità di debug : buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, e *nomefile*/*linenumber* informazioni per determinare l'origine delle richieste di allocazione. Rilevamento di tipi specifici di allocazioni con un parametro di tipo blocco non è una funzionalità di debug supportati per le allocazioni allineate. Allocazioni allineate verranno visualizzato come un tipo di blocco NORMAL_BLOCK.
 
 **aligned_realloc_dbg** rialloca il blocco di memoria specificato con quantità di spazio leggermente superiore al valore richiesto *newSize*. *newSize* può essere maggiore o minore della dimensione del blocco di memoria allocato in origine. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. La riallocazione potrebbe comportare lo spostamento del blocco di memoria originale in un'altra posizione nell'heap nonché la modifica della dimensione del blocco di memoria. Se il blocco di memoria viene spostato, i contenuti del blocco originale verranno sovrascritti.
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 4fc6789e5fecda38678052c7e805728a49219bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631870"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977810"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -64,7 +64,7 @@ Puntatore al blocco di memoria allocato o NULL se l'operazione non riuscita.
 
 ## <a name="remarks"></a>Note
 
-**aligned_malloc_dbg** è una versione di debug di [aligned_malloc](aligned-malloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_malloc_dbg** viene ridotta a una chiamata a `_aligned_malloc`. Entrambe `_aligned_malloc` e **aligned_malloc_dbg** allocare un blocco di memoria nell'heap di base, ma **aligned_malloc_dbg** offre diverse funzionalità di debug: buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, e *nomefile*/*linenumber* informazioni per determinare l'origine delle richieste di allocazione.
+**aligned_malloc_dbg** è una versione di debug di [aligned_malloc](aligned-malloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_malloc_dbg** viene ridotta a una chiamata a `_aligned_malloc`. Entrambe `_aligned_malloc` e **aligned_malloc_dbg** allocare un blocco di memoria nell'heap di base, ma **aligned_malloc_dbg** offre diverse funzionalità di debug: buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, e *nomefile*/*linenumber* informazioni per determinare l'origine delle richieste di allocazione. Rilevamento di tipi specifici di allocazioni con un parametro di tipo blocco non è una funzionalità di debug supportati per le allocazioni allineate. Allocazioni allineate verranno visualizzato come un tipo di blocco NORMAL_BLOCK.
 
 **aligned_malloc_dbg** alloca il blocco di memoria con quantità di spazio leggermente superiore al valore richiesto *dimensioni*. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
 

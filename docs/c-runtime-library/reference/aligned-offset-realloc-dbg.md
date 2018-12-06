@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_realloc_dbg function
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
-ms.openlocfilehash: e5ffb37227e1e20f32e065290056da05e7dcd065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7684a752f489eb726b2105b1055b6da1e86e9cd1
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625862"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977823"
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -72,7 +72,7 @@ Numero di riga nel file di origine in cui il **aligned_offset_realloc** è stato
 
 ## <a name="remarks"></a>Note
 
-**aligned_offset_realloc_dbg** è una versione di debug di [aligned_offset_realloc](aligned-offset-realloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_offset_realloc_dbg** viene ridotta a una chiamata a **aligned_offset_realloc**. Entrambe **aligned_offset_realloc** e **aligned_offset_realloc_dbg** riallocano un blocco di memoria nell'heap di base, ma **aligned_offset_realloc_dbg** alcune variazioni diverse funzionalità di debug: buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, un parametro di tipo blocco per tenere traccia di tipi specifici di allocazioni e *nomefile*/*linenumber*  informazioni per determinare l'origine delle richieste di allocazione.
+**aligned_offset_realloc_dbg** è una versione di debug di [aligned_offset_realloc](aligned-offset-realloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_offset_realloc_dbg** viene ridotta a una chiamata a **aligned_offset_realloc**. Entrambe **aligned_offset_realloc** e **aligned_offset_realloc_dbg** riallocano un blocco di memoria nell'heap di base, ma **aligned_offset_realloc_dbg** alcune variazioni diverse funzionalità di debug: buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, e *nomefile*/*linenumber* informazioni per determinare l'origine di richieste di allocazione. Rilevamento di tipi specifici di allocazioni con un parametro di tipo blocco non è una funzionalità di debug supportati per le allocazioni allineate. Allocazioni allineate verranno visualizzato come un tipo di blocco NORMAL_BLOCK.
 
 Ad esempio [aligned_offset_malloc](aligned-offset-malloc.md), **aligned_offset_realloc_dbg** consente l'allineamento in un offset all'interno della struttura di una struttura.
 

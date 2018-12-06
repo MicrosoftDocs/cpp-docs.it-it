@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507536"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977719"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -68,7 +68,7 @@ Un puntatore al blocco di memoria allocato o **NULL** se l'operazione non riusci
 
 ## <a name="remarks"></a>Note
 
-**aligned_offset_malloc_dbg** è una versione di debug di [aligned_offset_malloc](aligned-offset-malloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_offset_malloc_dbg** viene ridotta a una chiamata a **aligned_offset_malloc**. Entrambe **aligned_offset_malloc** e **aligned_offset_malloc_dbg** allocare un blocco di memoria nell'heap di base, ma **aligned_offset_malloc_dbg** offre diversi le funzionalità di debug: buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, un parametro di tipo blocco per tenere traccia di tipi specifici di allocazioni e *nomefile*/*linenumber* le informazioni per determinare l'origine delle richieste di allocazione.
+**aligned_offset_malloc_dbg** è una versione di debug di [aligned_offset_malloc](aligned-offset-malloc.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_offset_malloc_dbg** viene ridotta a una chiamata a **aligned_offset_malloc**. Entrambe **aligned_offset_malloc** e **aligned_offset_malloc_dbg** allocare un blocco di memoria nell'heap di base, ma **aligned_offset_malloc_dbg** offre diversi le funzionalità di debug: buffer presenti a entrambi i lati della porzione utente del blocco da verificare per le perdite, e *nomefile*/*linenumber* informazioni per determinare l'origine di richieste di allocazione. Rilevamento di tipi specifici di allocazioni con un parametro di tipo blocco non è una funzionalità di debug supportati per le allocazioni allineate. Allocazioni allineate verranno visualizzato come un tipo di blocco NORMAL_BLOCK.
 
 **aligned_offset_malloc_dbg** alloca il blocco di memoria con quantità di spazio leggermente superiore al valore richiesto *dimensioni*. Lo spazio aggiuntivo viene usato dal gestore dell'heap di debug per collegare i blocchi di memoria di debug e per fornire all'applicazione informazioni di intestazione di debug e buffer di sovrascrittura. Quando il blocco è allocato, la porzione utente del blocco viene riempita con il valore 0xCD e ciascuno dei buffer di sovrascrittura viene riempito con 0xFD.
 
