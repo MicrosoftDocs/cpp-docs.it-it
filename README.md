@@ -8,9 +8,9 @@ La documentazione di Visual Basic e Visual C# si trova in un repository separato
 
 ## <a name="contributing-to-the-documentation"></a>Collaborare alla stesura della documentazione
 
-Il contributo degli utenti per il miglioramento della documentazione di Visual C++ è vivamente incoraggiato. Per una guida completa per aggiungere contributi a docs.microsoft.com, vedere la [Panoramica della Guida per i collaboratori Microsoft Docs](https://docs.microsoft.com/contribute). Per informazioni dettagliate su come contribuire alla documentazione di Visual C++, vedere [Contributi al codice](CONTRIBUTING.md).
+Il contributo degli utenti per il miglioramento della documentazione di Visual C++ è vivamente incoraggiato. Per una guida completa per aggiungere contributi a docs.microsoft.com, vedere la [Panoramica della Guida per i collaboratori Microsoft Docs](https://docs.microsoft.com/contribute). Per informazioni dettagliate su come contribuire alla documentazione di Visual C++, vedere la [guida per i collaboratori](CONTRIBUTING.md).
 
-All'interno di questo repository alcune cartelle sono dedicate ad aree funzionali specifiche di Visual C++, ad esempio `standard-library` per gli argomenti relativi alla libreria standard C++, `ide` per gli argomenti relativi all'ambiente di sviluppo integrato (IDE) di Visual Studio e così via. In ogni cartella, la sottocartella `/media` contiene i file delle immagini degli argomenti. Per altre informazioni, vedere [Contributi al codice](CONTRIBUTING.md).
+All'interno di questo repository alcune cartelle sono dedicate ad aree funzionali specifiche di Visual C++, ad esempio `standard-library` per gli argomenti relativi alla libreria standard C++, `ide` per gli argomenti relativi all'ambiente di sviluppo integrato (IDE) di Visual Studio e così via. In ogni cartella, la sottocartella `/media` contiene i file delle immagini degli argomenti. Per altre informazioni, vedere la [guida per i collaboratori](CONTRIBUTING.md).
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Codice di comportamento di Microsoft per l'open source
 
