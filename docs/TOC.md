@@ -1,6 +1,6 @@
 # [Visual C++ in Visual Studio 2017](visual-cpp-in-visual-studio.md)
 # [Novità di Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)
-# [Esercitazione di Visual C++](build/vscpp-step-0-installation.md)
+# Esercitazione di Visual C++
 ## [Installare il supporto C++ in Visual Studio](build/vscpp-step-0-installation.md)
 ## [Creare un progetto di app console C++](build/vscpp-step-1-create.md)
 ## [Compilare ed eseguire un progetto di app console C++](build/vscpp-step-2-build.md)
