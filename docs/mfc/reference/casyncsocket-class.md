@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 29fe705292b223a0ae367d34d67a99aa60fb719c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660018"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179032"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (classe)
 
@@ -165,7 +165,7 @@ Usare un `CAsyncSocket` dell'oggetto, chiamare il relativo costruttore, quindi c
 > [!NOTE]
 >  Quando si usa socket MFC in thread secondari in un'applicazione MFC collegato in modo statico, è necessario chiamare `AfxSocketInit` in ogni thread che usa i socket per inizializzare le librerie di socket. Per impostazione predefinita, `AfxSocketInit` viene chiamato solo nel thread principale.
 
-Per altre informazioni, vedere [Windows Sockets: uso della classe CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) e relativi articoli., nonché [API Windows Sockets versione 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
+Per altre informazioni, vedere [Windows Sockets: Uso della classe CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) e relativi articoli., nonché [API Windows Sockets versione 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -194,7 +194,7 @@ virtual BOOL Accept(
 Un riferimento che identifica un nuovo socket che è disponibile per la connessione.
 
 *lpSockAddr*<br/>
-Un puntatore a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura che riceve l'indirizzo di connessione del socket, come nota nella rete. Il formato esatto delle *lpSockAddr* argomento è determinato dalla famiglia di indirizzi definita quando il socket è stato creato. Se *lpSockAddr* e/o *lpSockAddrLen* equivalgono a NULL, viene restituita alcuna informazione sull'indirizzo remoto del socket accettato.
+Un puntatore a un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura che riceve l'indirizzo di connessione del socket, come nota nella rete. Il formato esatto delle *lpSockAddr* argomento è determinato dalla famiglia di indirizzi definita quando il socket è stato creato. Se *lpSockAddr* e/o *lpSockAddrLen* equivalgono a NULL, viene restituita alcuna informazione sull'indirizzo remoto del socket accettato.
 
 *lpSockAddrLen*<br/>
 Un puntatore alla lunghezza dell'indirizzo nella *lpSockAddr* in byte. Il *lpSockAddrLen* è un parametro del valore risultato: inizialmente deve contenere la quantità di spazio a cui punta *lpSockAddr*; in caso di esito conterrà la lunghezza effettiva (in byte) dell'indirizzo restituito.
@@ -207,7 +207,7 @@ Diverso da zero se la funzione ha esito positivo. in caso contrario, 0 e un codi
 
 - Implementazione dei socket di Windows il WSAENETDOWN ha rilevato che il sottosistema di rete non è riuscita.
 
-- WSAEFAULT il *lpSockAddrLen* argomento è troppo piccolo (minore delle dimensioni di un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura).
+- WSAEFAULT il *lpSockAddrLen* argomento è troppo piccolo (minore delle dimensioni di un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura).
 
 - WSAEINPROGRESS A che chiamare blocco Windows Sockets è in corso.
 
@@ -268,7 +268,7 @@ Diverso da zero se la funzione ha esito positivo. in caso contrario, 0 e un codi
 
 ### <a name="remarks"></a>Note
 
-Questa funzione viene utilizzata per specificare quali funzioni di notifica di MFC callback verranno chiamate per il socket. `AsyncSelect` imposta automaticamente questo socket in modalità non di blocco. Per altre informazioni, vedere l'articolo [Windows Sockets: notifiche Socket](../../mfc/windows-sockets-socket-notifications.md).
+Questa funzione viene utilizzata per specificare quali funzioni di notifica di MFC callback verranno chiamate per il socket. `AsyncSelect` imposta automaticamente questo socket in modalità non di blocco. Per altre informazioni, vedere l'articolo [Windows Sockets: Le notifiche di socket](../../mfc/windows-sockets-socket-notifications.md).
 
 ##  <a name="attach"></a>  CAsyncSocket::Attach
 
@@ -330,7 +330,7 @@ La porta che identifica l'applicazione di socket.
 L'indirizzo di rete, un numero separato da punti, ad esempio "128.56.22.8". Passando il carattere NULL di stringa per questo parametro indica il `CAsyncSocket` deve restare in attesa di un'istanza dell'attività dei client su tutte le interfacce di rete.
 
 *lpSockAddr*<br/>
-Un puntatore a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura che contiene l'indirizzo da assegnare a questo socket.
+Un puntatore a un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura che contiene l'indirizzo da assegnare a questo socket.
 
 *nSockAddrLen*<br/>
 La lunghezza dell'indirizzo nella *lpSockAddr* in byte.
@@ -345,7 +345,7 @@ Diverso da zero se la funzione ha esito positivo. in caso contrario, 0 e un codi
 
 - WSAEADDRINUSE l'indirizzo specificato è già in uso. (Vedere l'opzione di socket SO_REUSEADDR sotto [SetSockOpt](#setsockopt).)
 
-- WSAEFAULT il *nSockAddrLen* argomento è troppo piccolo (minore delle dimensioni di un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura).
+- WSAEFAULT il *nSockAddrLen* argomento è troppo piccolo (minore delle dimensioni di un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura).
 
 - WSAEINPROGRESS A che chiamare blocco Windows Sockets è in corso.
 
@@ -410,7 +410,7 @@ L'indirizzo di rete del socket a cui è collegato questo oggetto: un nome di com
 La porta che identifica l'applicazione di socket.
 
 *lpSockAddr*<br/>
-Un puntatore a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura che contiene l'indirizzo del socket connesso.
+Un puntatore a un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura che contiene l'indirizzo del socket connesso.
 
 *nSockAddrLen*<br/>
 La lunghezza dell'indirizzo nella *lpSockAddr* in byte.
@@ -535,7 +535,7 @@ Diverso da zero se la funzione ha esito positivo. in caso contrario, 0 e un codi
 > [!IMPORTANT]
 > `Create` viene **non** thread-safe.  Se si chiama, in un ambiente a thread multipli in cui si poteva essere richiamato contemporaneamente da thread diversi, assicurarsi di proteggere ogni chiamata con un mutex o un altro blocco di sincronizzazione.
 
-Per altre informazioni sui socket di flusso e datagramma, vedere gli articoli [Windows Sockets: sfondo](../../mfc/windows-sockets-background.md) e [Windows Sockets: porte e indirizzi Socket](../../mfc/windows-sockets-ports-and-socket-addresses.md) e [Windows API Sockets versione 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
+Per altre informazioni sui socket di flusso e datagramma, vedere gli articoli [Windows Sockets: In background](../../mfc/windows-sockets-background.md) e [Windows Sockets: Porte e indirizzi Socket](../../mfc/windows-sockets-ports-and-socket-addresses.md) e [API di Windows Sockets 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
 
 ##  <a name="detach"></a>  CAsyncSocket::Detach
 
@@ -607,7 +607,7 @@ Fare riferimento a un `CString` oggetto che riceve un indirizzo IP numerico punt
 Riferimento a un UINT che archivia una porta.
 
 *lpSockAddr*<br/>
-Un puntatore per il [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura che riceve il nome del socket peer.
+Un puntatore per il [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura che riceve il nome del socket peer.
 
 *lpSockAddrLen*<br/>
 Un puntatore alla lunghezza dell'indirizzo nella *lpSockAddr* in byte. In fase di restituzione, il *lpSockAddrLen* argomento contiene le dimensioni effettive del *lpSockAddr* restituiti in byte.
@@ -693,7 +693,7 @@ Fare riferimento a un `CString` oggetto che riceve un indirizzo IP numerico punt
 Riferimento a un UINT che archivia una porta.
 
 *lpSockAddr*<br/>
-Un puntatore a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura che riceve l'indirizzo del socket.
+Un puntatore a un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura che riceve l'indirizzo del socket.
 
 *lpSockAddrLen*<br/>
 Un puntatore alla lunghezza dell'indirizzo nella *lpSockAddr* in byte.
@@ -808,7 +808,7 @@ Diverso da zero se la funzione ha esito positivo. in caso contrario, 0 e un codi
 
 Le opzioni seguenti sono supportate per `GetSockOpt`. Il tipo identifica il tipo di dati indirizzati dalla *lpOptionValue*. L'opzione TCP_NODELAY utilizza livello IPPROTO_TCP; tutte le altre opzioni utilizzano livello SOL_SOCKET.
 
-|Valore|Tipo|Significato|
+|Value|Tipo|Significato|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Socket è in ascolto.|
 |SO_BROADCAST|BOOL|Socket è configurato per la trasmissione dei messaggi trasmessi.|
@@ -827,7 +827,7 @@ Le opzioni seguenti sono supportate per `GetSockOpt`. Il tipo identifica il tipo
 
 Non è supportate per le opzioni di Berkeley Software Distribution (BSD) `GetSockOpt` sono:
 
-|Valore|Tipo|Significato|
+|Value|Tipo|Significato|
 |-----------|----------|-------------|
 |SO_RCVLOWAT|**int**|Ricevere il limite minimo.|
 |SO_RCVTIMEO|**int**|Timeout di ricezione.|
@@ -954,7 +954,7 @@ L'errore più recente in un socket. I codici di errore seguente si applica al `O
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere [Windows Sockets: notifiche Socket](../../mfc/windows-sockets-socket-notifications.md).
+Per altre informazioni, vedere [Windows Sockets: Le notifiche di socket](../../mfc/windows-sockets-socket-notifications.md).
 
 ##  <a name="onclose"></a>  CAsyncSocket::OnClose
 
@@ -979,7 +979,7 @@ L'errore più recente in un socket. Codici di errore seguenti si applicano al `O
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere [Windows Sockets: notifiche Socket](../../mfc/windows-sockets-socket-notifications.md).
+Per altre informazioni, vedere [Windows Sockets: Le notifiche di socket](../../mfc/windows-sockets-socket-notifications.md).
 
 ##  <a name="onconnect"></a>  CAsyncSocket::OnConnect
 
@@ -1029,7 +1029,7 @@ L'errore più recente in un socket. Codici di errore seguenti si applicano al `O
 > [!NOTE]
 >  Nelle [CSocket](../../mfc/reference/csocket-class.md), il `OnConnect` funzione di notifica non viene mai chiamato. Per le connessioni, è sufficiente chiamare `Connect`, che verrà restituito quando la connessione è stata completata (esito positivo o errore). Modalità di gestione delle notifiche di connessione è un dettaglio di implementazione di MFC.
 
-Per altre informazioni, vedere [Windows Sockets: notifiche Socket](../../mfc/windows-sockets-socket-notifications.md).
+Per altre informazioni, vedere [Windows Sockets: Le notifiche di socket](../../mfc/windows-sockets-socket-notifications.md).
 
 ### <a name="example"></a>Esempio
 
@@ -1056,7 +1056,7 @@ L'errore più recente in un socket. Codici di errore seguenti si applicano al `O
 
 Out-of-band dati sono un canale logicamente indipendente che è associato a ogni coppia di socket connessi typu SOCK_STREAM. Il canale viene in genere usato per inviare dati ad alta priorità.
 
-MFC supporta i dati out-of-band, ma gli utenti della classe `CAsyncSocket` consigliabile evitare di utilizzarlo. Il modo più semplice consiste nel creare un secondo socket per il passaggio di questo tipo di dati. Per altre informazioni sui dati out-of-band, vedere [Windows Sockets: notifiche Socket](../../mfc/windows-sockets-socket-notifications.md).
+MFC supporta i dati out-of-band, ma gli utenti della classe `CAsyncSocket` consigliabile evitare di utilizzarlo. Il modo più semplice consiste nel creare un secondo socket per il passaggio di questo tipo di dati. Per altre informazioni sui dati out-of-band, vedere [Windows Sockets: Le notifiche di socket](../../mfc/windows-sockets-socket-notifications.md).
 
 ##  <a name="onreceive"></a>  CAsyncSocket::OnReceive
 
@@ -1077,7 +1077,7 @@ L'errore più recente in un socket. Codici di errore seguenti si applicano al `O
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere [Windows Sockets: notifiche Socket](../../mfc/windows-sockets-socket-notifications.md).
+Per altre informazioni, vedere [Windows Sockets: Le notifiche di socket](../../mfc/windows-sockets-socket-notifications.md).
 
 ### <a name="example"></a>Esempio
 
@@ -1102,7 +1102,7 @@ L'errore più recente in un socket. Codici di errore seguenti si applicano al `O
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere [Windows Sockets: notifiche Socket](../../mfc/windows-sockets-socket-notifications.md).
+Per altre informazioni, vedere [Windows Sockets: Le notifiche di socket](../../mfc/windows-sockets-socket-notifications.md).
 
 ### <a name="example"></a>Esempio
 
@@ -1213,7 +1213,7 @@ Se il socket è di tipo SOCK_STREAM e il lato remoto ha chiuso la connessione no
 
 ##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom
 
-Chiamare questa funzione membro per ricevere un datagramma e archiviare l'indirizzo di origine nel [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura o nella *rSocketAddress*.
+Chiamare questa funzione membro per ricevere un datagramma e archiviare l'indirizzo di origine nel [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura o nella *rSocketAddress*.
 
 ```
 int ReceiveFrom(
@@ -1246,7 +1246,7 @@ Fare riferimento a un `CString` oggetto che riceve un indirizzo IP numerico punt
 Riferimento a un UINT che archivia una porta.
 
 *lpSockAddr*<br/>
-Un puntatore a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura che contiene l'indirizzo di origine al momento della restituzione.
+Un puntatore a un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura che contiene l'indirizzo di origine al momento della restituzione.
 
 *lpSockAddrLen*<br/>
 Un puntatore alla lunghezza dell'indirizzo di origine nella *lpSockAddr* in byte.
@@ -1298,13 +1298,13 @@ Per i socket di tipo SOCK_STREAM, viene restituite quante più informazioni perc
 
 Per i socket di datagramma, vengono estratti dati il primo datagramma, fino alla dimensione del buffer fornito. Se il datagramma è maggiore del buffer specificato, viene riempito il buffer con la prima parte del messaggio, i dati in eccesso vengono persi, e `ReceiveFrom` restituisce un valore di SOCKET_ERROR con il codice di errore è impostato su WSAEMSGSIZE.
 
-Se *lpSockAddr* è diverso da zero e il socket è di tipo SOCK_DGRAM, viene copiato l'indirizzo di rete del socket che ha inviato i dati per il corrispondente [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura. Il valore a cui punta *lpSockAddrLen* viene inizializzata per la dimensione della struttura e viene modificato in fase di restituzione per indicare le dimensioni effettive dell'indirizzo archiviato vengono eliminati. Se non è disponibile alcun dato in ingresso al socket, il `ReceiveFrom` chiamata in attesa di dati in arrivo, a meno che il socket non bloccante. In questo caso, viene restituito un valore di SOCKET_ERROR con il codice di errore impostato su WSAEWOULDBLOCK. Il `OnReceive` callback può essere utilizzato per determinare quando arrivano più dati.
+Se *lpSockAddr* è diverso da zero e il socket è di tipo SOCK_DGRAM, viene copiato l'indirizzo di rete del socket che ha inviato i dati per il corrispondente [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura. Il valore a cui punta *lpSockAddrLen* viene inizializzata per la dimensione della struttura e viene modificato in fase di restituzione per indicare le dimensioni effettive dell'indirizzo archiviato vengono eliminati. Se non è disponibile alcun dato in ingresso al socket, il `ReceiveFrom` chiamata in attesa di dati in arrivo, a meno che il socket non bloccante. In questo caso, viene restituito un valore di SOCKET_ERROR con il codice di errore impostato su WSAEWOULDBLOCK. Il `OnReceive` callback può essere utilizzato per determinare quando arrivano più dati.
 
 Se il socket è di tipo SOCK_STREAM e il lato remoto ha chiuso la connessione normalmente, un `ReceiveFrom` verrà terminata immediatamente con 0 byte ricevuti.
 
 ##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx
 
-Chiamare questa funzione membro per ricevere un datagramma e archiviare l'indirizzo di origine nel [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura o nella *rSocketAddress* (gestisce gli indirizzi IPv6).
+Chiamare questa funzione membro per ricevere un datagramma e archiviare l'indirizzo di origine nel [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura o nella *rSocketAddress* (gestisce gli indirizzi IPv6).
 
 ```
 int ReceiveFromEx(
@@ -1376,7 +1376,7 @@ Per i socket di tipo SOCK_STREAM, viene restituite quante più informazioni perc
 
 Per i socket di datagramma, vengono estratti dati il primo datagramma, fino alla dimensione del buffer fornito. Se il datagramma è maggiore del buffer specificato, viene riempito il buffer con la prima parte del messaggio, i dati in eccesso vengono persi, e `ReceiveFromEx` restituisce un valore di SOCKET_ERROR con il codice di errore è impostato su WSAEMSGSIZE.
 
-Se *lpSockAddr* è diverso da zero e il socket è di tipo SOCK_DGRAM, viene copiato l'indirizzo di rete del socket che ha inviato i dati per il corrispondente [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura. Il valore a cui punta *lpSockAddrLen* viene inizializzata per la dimensione della struttura e viene modificato in fase di restituzione per indicare le dimensioni effettive dell'indirizzo archiviato vengono eliminati. Se non è disponibile alcun dato in ingresso al socket, il `ReceiveFromEx` chiamata in attesa di dati in arrivo, a meno che il socket non bloccante. In questo caso, viene restituito un valore di SOCKET_ERROR con il codice di errore impostato su WSAEWOULDBLOCK. Il `OnReceive` callback può essere utilizzato per determinare quando arrivano più dati.
+Se *lpSockAddr* è diverso da zero e il socket è di tipo SOCK_DGRAM, viene copiato l'indirizzo di rete del socket che ha inviato i dati per il corrispondente [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura. Il valore a cui punta *lpSockAddrLen* viene inizializzata per la dimensione della struttura e viene modificato in fase di restituzione per indicare le dimensioni effettive dell'indirizzo archiviato vengono eliminati. Se non è disponibile alcun dato in ingresso al socket, il `ReceiveFromEx` chiamata in attesa di dati in arrivo, a meno che il socket non bloccante. In questo caso, viene restituito un valore di SOCKET_ERROR con il codice di errore impostato su WSAEWOULDBLOCK. Il `OnReceive` callback può essere utilizzato per determinare quando arrivano più dati.
 
 Se il socket è di tipo SOCK_STREAM e il lato remoto ha chiuso la connessione normalmente, un `ReceiveFromEx` verrà terminata immediatamente con 0 byte ricevuti.
 
@@ -1444,7 +1444,7 @@ Se si verifica alcun errore, `Send` restituisce il numero totale di caratteri in
 
 ### <a name="remarks"></a>Note
 
-`Send` Consente di scrivere dati in uscita sul flusso connessa o i socket di datagramma. Per i socket di datagramma, prestare attenzione a non superare le dimensioni massime del pacchetto IP delle subnet sottostante, che viene fornito dal `iMaxUdpDg` elemento il [WSADATA](../../mfc/reference/wsadata-structure.md) struttura restituita dalla `AfxSocketInit`. Se i dati sono troppo lunghi da passare in modo atomico tramite il protocollo sottostante, WSAEMSGSIZE viene restituito l'errore tramite `GetLastError`, e non vengono trasmessi dati.
+`Send` Consente di scrivere dati in uscita sul flusso connessa o i socket di datagramma. Per i socket di datagramma, prestare attenzione a non superare le dimensioni massime del pacchetto IP delle subnet sottostante, che viene fornito dal `iMaxUdpDg` elemento il [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) struttura restituita dalla `AfxSocketInit`. Se i dati sono troppo lunghi da passare in modo atomico tramite il protocollo sottostante, WSAEMSGSIZE viene restituito l'errore tramite `GetLastError`, e non vengono trasmessi dati.
 
 Si noti che per un datagramma socket corretto completamento di un `Send` non indica che i dati è stati recapitati correttamente.
 
@@ -1496,7 +1496,7 @@ Specifica il modo in cui viene effettuata la chiamata. La semantica di questa fu
 - Inviare MSG_OOB out-of-band dati (solo SOCK_STREAM).
 
 *lpSockAddr*<br/>
-Un puntatore a un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura che contiene l'indirizzo del socket destinazione.
+Un puntatore a un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura che contiene l'indirizzo del socket destinazione.
 
 *nSockAddrLen*<br/>
 La lunghezza dell'indirizzo nella *lpSockAddr* in byte.
@@ -1513,7 +1513,7 @@ Se si verifica alcun errore, `SendTo` restituisce il numero totale di caratteri 
 
 - Operazione di socket di Windows blocco WSAEINPROGRESS A è in corso.
 
-- WSAEFAULT il *lpBuf* oppure *lpSockAddr* parametri non fanno parte dello spazio di indirizzi, utente o la *lpSockAddr* argomento è troppo piccolo (minore delle dimensioni di un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura).
+- WSAEFAULT il *lpBuf* oppure *lpSockAddr* parametri non fanno parte dello spazio di indirizzi, utente o la *lpSockAddr* argomento è troppo piccolo (minore delle dimensioni di un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura).
 
 - WSAEINVAL il nome host non è valido.
 
@@ -1547,7 +1547,7 @@ Se si verifica alcun errore, `SendTo` restituisce il numero totale di caratteri 
 
 ### <a name="remarks"></a>Note
 
-`SendTo` Consente di scrivere dati in uscita su un socket viene utilizzata sui socket di datagramma o nel flusso. Per i socket di datagramma, prestare attenzione a non superare le dimensioni massime del pacchetto IP delle subnet sottostante, che viene fornito dal `iMaxUdpDg` elemento il [WSADATA](../../mfc/reference/wsadata-structure.md) struttura compilati dagli [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Se i dati sono troppo lunghi da passare in modo atomico tramite il protocollo sottostante, viene restituito l'errore WSAEMSGSIZE e non vengono trasmessi dati.
+`SendTo` Consente di scrivere dati in uscita su un socket viene utilizzata sui socket di datagramma o nel flusso. Per i socket di datagramma, prestare attenzione a non superare le dimensioni massime del pacchetto IP delle subnet sottostante, che viene fornito dal `iMaxUdpDg` elemento il [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) struttura compilati dagli [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Se i dati sono troppo lunghi da passare in modo atomico tramite il protocollo sottostante, viene restituito l'errore WSAEMSGSIZE e non vengono trasmessi dati.
 
 Si noti che il completamento di un `SendTo` non indica che i dati è stati recapitati correttamente.
 
@@ -1603,7 +1603,7 @@ Se si verifica alcun errore, `SendToEx` restituisce il numero totale di caratter
 
 - Operazione di socket di Windows blocco WSAEINPROGRESS A è in corso.
 
-- WSAEFAULT il *lpBuf* oppure *lpSockAddr* parametri non fanno parte dello spazio di indirizzi, utente o la *lpSockAddr* argomento è troppo piccolo (minore delle dimensioni di un [SOCKADDR](../../mfc/reference/sockaddr-structure.md) struttura).
+- WSAEFAULT il *lpBuf* oppure *lpSockAddr* parametri non fanno parte dello spazio di indirizzi, utente o la *lpSockAddr* argomento è troppo piccolo (minore delle dimensioni di un [SOCKADDR](/windows/desktop/winsock/sockaddr-2) struttura).
 
 - WSAEINVAL il nome host non è valido.
 
@@ -1639,7 +1639,7 @@ Se si verifica alcun errore, `SendToEx` restituisce il numero totale di caratter
 
 Questo metodo è identico [CAsyncSocket:: SendTo](#sendto) ad eccezione del fatto che gestisca IPv6 risolve protocolli anche come meno recenti.
 
-`SendToEx` Consente di scrivere dati in uscita su un socket viene utilizzata sui socket di datagramma o nel flusso. Per i socket di datagramma, prestare attenzione a non superare le dimensioni massime del pacchetto IP delle subnet sottostante, che viene fornito dal `iMaxUdpDg` elemento il [WSADATA](../../mfc/reference/wsadata-structure.md) struttura compilati dagli [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Se i dati sono troppo lunghi da passare in modo atomico tramite il protocollo sottostante, viene restituito l'errore WSAEMSGSIZE e non vengono trasmessi dati.
+`SendToEx` Consente di scrivere dati in uscita su un socket viene utilizzata sui socket di datagramma o nel flusso. Per i socket di datagramma, prestare attenzione a non superare le dimensioni massime del pacchetto IP delle subnet sottostante, che viene fornito dal `iMaxUdpDg` elemento il [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) struttura compilati dagli [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Se i dati sono troppo lunghi da passare in modo atomico tramite il protocollo sottostante, viene restituito l'errore WSAEMSGSIZE e non vengono trasmessi dati.
 
 Si noti che il completamento di un `SendToEx` non indica che i dati è stati recapitati correttamente.
 
@@ -1699,7 +1699,7 @@ Diverso da zero se la funzione ha esito positivo. in caso contrario, 0 e un codi
 
 `SetSockOpt` Imposta il valore corrente per un'opzione di socket associato a un socket di qualsiasi tipo, in qualsiasi stato. Anche se le opzioni possono essere presenti più livelli di protocollo, questa specifica definisce solo le opzioni che esistono a livello di socket di più in alto"". Opzioni di influire sulle operazioni di socket, ad esempio se i dati accelerati viene ricevuti nel flusso di dati normali, se i messaggi trasmessi possono essere inviati nel socket e così via.
 
-Esistono due tipi di opzioni di socket: le opzioni booleane che abilita o disabilita una funzionalità o comportamento e le opzioni che richiedono un valore intero o una struttura. Per abilitare un'opzione booleana *lpOptionValue* punta a un intero diverso da zero. Per disabilitare l'opzione *lpOptionValue* punta a un numero intero pari a zero. *nOptionLen* deve essere uguale a `sizeof(BOOL)` per le opzioni booleane. Per altre opzioni *lpOptionValue* punta al numero intero o una struttura che contiene il valore desiderato per l'opzione, e *nOptionLen* è la lunghezza del valore intero o della struttura.
+Esistono due tipi di opzioni di socket: Le opzioni booleane che abilita o disabilita una funzionalità o comportamento e le opzioni che richiedono un valore intero o una struttura. Per abilitare un'opzione booleana *lpOptionValue* punta a un intero diverso da zero. Per disabilitare l'opzione *lpOptionValue* punta a un numero intero pari a zero. *nOptionLen* deve essere uguale a `sizeof(BOOL)` per le opzioni booleane. Per altre opzioni *lpOptionValue* punta al numero intero o una struttura che contiene il valore desiderato per l'opzione, e *nOptionLen* è la lunghezza del valore intero o della struttura.
 
 SO_LINGER controlla l'azione eseguita quando l'invio di dati non è in coda su un socket e `Close` funzione viene chiamata per chiudere il socket.
 
@@ -1707,7 +1707,7 @@ Per impostazione predefinita, non è possibile associare un socket (vedere [asso
 
 Per informare l'implementazione di Windows Sockets che un `Bind` chiamata su un socket non dovrebbe essere impedita poiché l'indirizzo desiderato è già in uso da un altro socket, l'applicazione deve impostare l'opzione di socket SO_REUSEADDR per il socket prima di rilasciare il `Bind` chiamare. Si noti che l'opzione viene interpretata solo al momento della `Bind` chiamare: non è quindi necessario (ma innocuo) per impostare l'opzione su un socket che non deve essere associato a un indirizzo esistente, e impostare o reimpostare l'opzione dopo il `Bind` è chiamata Nessun effetto in questa o in un altro socket.
 
-Un'applicazione può richiedere che l'implementazione dei socket di Windows abilita l'uso di pacchetti "keep-alive" nelle connessioni di protocollo TCP (Transmission Control) attivando l'opzione di socket SO_KEEPALIVE. Un'implementazione di socket di Windows non deve necessariamente supportare l'uso di keep-alive: in caso affermativo, la semantica precisa sono specifici dell'implementazione, ma devono essere conformi a RFC 1122 sezione 4.2.3.6: "requisiti per l'host in Internet, ovvero i livelli di comunicazione." Se una connessione viene rimossa come risultato di "keep-alive" errore WSAENETRESET viene restituito il codice a tutte le chiamate in corso sul socket e tutte le chiamate successive avranno esito negativo con WSAENOTCONN.
+Un'applicazione può richiedere che l'implementazione dei socket di Windows abilita l'uso di pacchetti "keep-alive" nelle connessioni di protocollo TCP (Transmission Control) attivando l'opzione di socket SO_KEEPALIVE. Un'implementazione di socket di Windows non deve necessariamente supportare l'uso di keep-alive: in caso affermativo, la semantica precisa sono specifici dell'implementazione, ma devono essere conformi a RFC 1122 sezione 4.2.3.6: "I requisiti per gli host Internet, ovvero i livelli di comunicazione." Se una connessione viene rimossa come risultato di "keep-alive" errore WSAENETRESET viene restituito il codice a tutte le chiamate in corso sul socket e tutte le chiamate successive avranno esito negativo con WSAENOTCONN.
 
 L'opzione TCP_NODELAY disabilita l'algoritmo Nagle nei confronti. L'algoritmo Nagle viene usato per ridurre il numero di piccoli pacchetti inviati da un host grazie al buffering dei dati non riconosciuti trasmissione fino a quando non può essere inviato un pacchetto con dimensioni normali. Tuttavia, per alcune applicazioni di questo algoritmo può influire sulle prestazioni e TCP_NODELAY può essere utilizzato per disattivare tale funzionalità. Gli autori di applicazioni non impostare TCP_NODELAY, a meno che l'impatto di tale operazione è ben noto e desiderato, in quanto impostazione TCP_NODELAY può avere un impatto negativo sulle prestazioni di rete. TCP_NODELAY è l'unica opzione di socket che utilizza livello IPPROTO_TCP; è supportato tutte le altre opzioni utilizzano livello SOL_SOCKET.
 
@@ -1715,7 +1715,7 @@ Se l'opzione SO_DEBUG viene impostata da un'applicazione, alcune implementazioni
 
 Le opzioni seguenti sono supportate per `SetSockOpt`. Il tipo identifica il tipo di dati indirizzati dalla *lpOptionValue*.
 
-|Valore|Tipo|Significato|
+|Value|Tipo|Significato|
 |-----------|----------|-------------|
 |SO_BROADCAST|BOOL|Consentire la trasmissione di messaggi trasmessi sul socket.|
 |SO_DEBUG|BOOL|Registra informazioni di debug.|
@@ -1731,7 +1731,7 @@ Le opzioni seguenti sono supportate per `SetSockOpt`. Il tipo identifica il tipo
 
 Non è supportate per le opzioni di Berkeley Software Distribution (BSD) `SetSockOpt` sono:
 
-|Valore|Tipo|Significato|
+|Value|Tipo|Significato|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Socket è in ascolto|
 |SO_ERROR|**int**|Ottenere lo stato di errore e cancellare.|
@@ -1809,17 +1809,17 @@ Specifica `SOCK_STREAM` o `SOCK_DGRAM`.
 *lEvent*<br/>
 Maschera di bit che specifica una combinazione di eventi di rete in cui è interessata l'applicazione.
 
-- `FD_READ`: Utile ricevere notifiche di conformità per la lettura.
+- `FD_READ`: Se si desidera ricevere notifiche di conformità per la lettura.
 
-- `FD_WRITE`: Utile ricevere notifiche di conformità per la scrittura.
+- `FD_WRITE`: Se si desidera ricevere notifiche di conformità per la scrittura.
 
-- `FD_OOB`: Utile ricevere una notifica dell'arrivo dei dati out-of-band.
+- `FD_OOB`: Se si desidera ricevere una notifica dell'arrivo dei dati out-of-band.
 
-- `FD_ACCEPT`: Utile ricevere una notifica di connessioni in ingresso.
+- `FD_ACCEPT`: Se si desidera ricevere una notifica di connessioni in ingresso.
 
-- `FD_CONNECT`: Utile ricevere la notifica della connessione completato.
+- `FD_CONNECT`: Se si desidera ricevere una notifica della connessione completato.
 
-- `FD_CLOSE`: Utile ricevere una notifica di chiusura del socket.
+- `FD_CLOSE`: Se si desidera ricevere una notifica di chiusura del socket.
 
 *nProtocolType*<br/>
 Protocollo da usare con i socket che è specifico per la famiglia di indirizzi indicato.

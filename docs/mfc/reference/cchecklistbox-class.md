@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327343"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177836"
 ---
 # <a name="cchecklistbox-class"></a>Classe CCheckListBox
 
@@ -145,8 +145,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile della casella di elenco di controllo. Lo stile deve essere LBS_HASSTRINGS e LBS_OWNERDRAWFIXED (tutti gli elementi nell'elenco sono della stessa altezza) o LBS_OWNERDRAWVARIABLE (gli elementi dell'elenco sono di altezza diversa). Questo stile può essere combinato con altri [stili di casella di riepilogo](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) except LBS_USETABSTOPS.
 
-*Rect*<br/>
-Specifica le dimensioni della casella di elenco di controllo e la posizione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](../../mfc/reference/rect-structure1.md) struttura.
+*rect*<br/>
+Specifica le dimensioni della casella di elenco di controllo e la posizione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura.
 
 *pParentWnd*<br/>
 Specifica una finestra padre della casella di elenco di controllo (in genere un `CDialog` oggetto). Non deve essere NULL.
@@ -193,7 +193,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpDrawItemStruct*<br/>
-Un puntatore di tipo long a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) struttura che contiene informazioni sul tipo di disegno necessaria.
+Un puntatore di tipo long a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struttura che contiene informazioni sul tipo di disegno necessaria.
 
 ### <a name="remarks"></a>Note
 
@@ -240,7 +240,7 @@ Indice in base zero di una casella di controllo che è contenuta nella casella d
 
 Lo stato della casella di controllo specificato. La tabella seguente elenca i valori possibili.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |BST_CHECKED|La casella di controllo è selezionata.|
 |BST_UNCHECKED|Non è selezionata la casella di controllo.|
@@ -290,7 +290,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpMeasureItemStruct*<br/>
-Un puntatore di tipo long a un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) struttura.
+Un puntatore di tipo long a un [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) struttura.
 
 ### <a name="remarks"></a>Note
 
@@ -344,7 +344,7 @@ Lo stato del pulsante per la casella di controllo specificato. Vedere la sezione
 
 Nella tabella seguente sono elencati i valori possibili per il *nControllare* parametro.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |BST_CHECKED|Selezionare la casella di controllo specificata.|
 |BST_UNCHECKED|Deselezionare la casella di controllo specificata.|

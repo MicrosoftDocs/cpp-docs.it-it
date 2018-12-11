@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: cff81b7d260749d5be344edf3e0401a473b4f9e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178525"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
 
@@ -157,7 +157,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica la combinazione degli stili di controllo di data ora. Visualizzare [data e ora degli stili del controllo selezione](/windows/desktop/Controls/date-and-time-picker-control-styles) nel SDK di Windows per altre informazioni sugli stili di controllo selezione data e ora.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, ovvero la posizione e dimensioni del controllo selezione data e ora.
 
 *pParentWnd*<br/>
@@ -381,7 +381,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*psize*|[out] Puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che contiene la dimensione ideale per il controllo.|
+|*psize*|[out] Puntatore a un [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) struttura che contiene la dimensione ideale per il controllo.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 **int** valore che specifica quale area del controllo calendario mensile da impostare. Questo valore può essere uno dei seguenti.
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |MCSC_BACKGROUND|Impostare il colore di sfondo visualizzato tra i mesi.|
 |MCSC_MONTHBK|Impostare il colore di sfondo visualizzato all'interno di un mese.|

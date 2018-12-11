@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333267"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178779"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -331,13 +331,13 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpCompareItemStruct*<br/>
-Un puntatore di tipo long a un [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) struttura.
+Un puntatore di tipo long a un [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) struttura.
 
 ### <a name="return-value"></a>Valore restituito
 
 Indica la posizione relativa dei due elementi descritti nel `COMPAREITEMSTRUCT` struttura. Può essere uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |- 1|Elemento 1 precede l'elemento 2.|
 |0|Item 1 e item 2 è lo stesso ordine.|
@@ -382,8 +382,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile della casella combinata. Applicare qualsiasi combinazione di [stili casella combinata](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) alla casella.
 
-*Rect*<br/>
-Punta alla posizione e dimensioni della casella combinata. Può essere un' [struttura RECT](../../mfc/reference/rect-structure1.md) o un `CRect` oggetto.
+*rect*<br/>
+Punta alla posizione e dimensioni della casella combinata. Può essere un' [struttura RECT](/windows/desktop/api/windef/ns-windef-tagrect) o un `CRect` oggetto.
 
 *pParentWnd*<br/>
 Specifica una finestra padre della casella combinata (in genere un `CDialog`). Non deve essere NULL.
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpDeleteItemStruct*<br/>
-Un puntatore di tipo long a un Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) struttura che contiene informazioni sull'elemento eliminato. Visualizzare [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) per una descrizione della struttura.
+Un puntatore di tipo long a un Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) struttura che contiene informazioni sull'elemento eliminato. Visualizzare [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) per una descrizione della struttura.
 
 ### <a name="remarks"></a>Note
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpDrawItemStruct*<br/>
-Un puntatore a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) struttura che contiene informazioni sul tipo di disegno necessaria.
+Un puntatore a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struttura che contiene informazioni sul tipo di disegno necessaria.
 
 ### <a name="remarks"></a>Note
 
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>Parametri
 
 *lprect*<br/>
-Punta al [struttura RECT](../../mfc/reference/rect-structure1.md) che deve ricevere le coordinate.
+Punta al [struttura RECT](/windows/desktop/api/windef/ns-windef-tagrect) che deve ricevere le coordinate.
 
 ### <a name="example"></a>Esempio
 
@@ -1028,7 +1028,7 @@ Se ha esito positivo, il numero massimo di elementi che può archiviare la parte
 
 Chiamare questa funzione prima di aggiungere un numero elevato di elementi alla porzione della casella di riepilogo di `CComboBox`.
 
-Solo Windows 95 o 98: il *wParam* parametro è limitato a valori a 16 bit. Ciò significa che le caselle di riepilogo non possono contenere elementi oltre 32.767. Anche se il numero di elementi è limitato, le dimensioni totali degli elementi in una casella di riepilogo sono limitata solo dalla memoria disponibile.
+Windows 95 o 98 solo: Il *wParam* parametro è limitato a valori a 16 bit. Ciò significa che le caselle di riepilogo non possono contenere elementi oltre 32.767. Anche se il numero di elementi è limitato, le dimensioni totali degli elementi in una casella di riepilogo sono limitata solo dalla memoria disponibile.
 
 Questa funzione consente di velocizzare l'inizializzazione di caselle di riepilogo che hanno un numero elevato di elementi (più di 100). Prealloca la quantità di memoria in modo che le successive specificata [AddString](#addstring), [InsertString](#insertstring), e [Dir](#dir) funzioni accettano il minor tempo possibile. È possibile usare le stime per i parametri. Se sovrastima, alcuni memoria aggiuntiva viene allocata; Se si sottostima, l'allocazione normale viene utilizzato per gli elementi che superano la quantità preallocata.
 
@@ -1107,7 +1107,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpMeasureItemStruct*<br/>
-Un puntatore di tipo long a un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) struttura.
+Un puntatore di tipo long a un [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) struttura.
 
 ### <a name="remarks"></a>Note
 

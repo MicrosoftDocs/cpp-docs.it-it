@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467980"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178551"
 ---
 # <a name="crgn-class"></a>CRgn (classe)
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Imposta una `CRgn` dell'oggetto in modo che è equivalente all'unione di due determinati `CRgn` oggetti.|
 |[CRgn::CopyRgn](#copyrgn)|Imposta una `CRgn` dell'oggetto in modo che sia una copia di un elemento specificato `CRgn` oggetto.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Inizializza un `CRgn` oggetto con un'area ellittica.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inizializza una `CRgn` oggetto con un'area ellittica definita da un [RECT](../../mfc/reference/rect-structure1.md) struttura.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inizializza una `CRgn` oggetto con un'area ellittica definita da un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura.|
 |[CRgn::CreateFromData](#createfromdata)|Crea un'area dai dati di area e la trasformazione specificati.|
 |[CRgn::CreateFromPath](#createfrompath)|Crea un'area dal percorso selezionato nel contesto di dispositivo specificato.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inizializza un `CRgn` oggetto con un'area poligonale. Il sistema si chiude il poligono automaticamente, se necessario, tracciando una linea tra l'ultimo vertice al primo.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inizializza un `CRgn` oggetto con un'area composta da una serie di poligoni chiusi. I poligoni potrebbero essere non contigui, o si sovrappongano.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Inizializza un `CRgn` oggetto con un'area rettangolare.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inizializza una `CRgn` oggetto con un'area rettangolare definita da un [RECT](../../mfc/reference/rect-structure1.md) struttura.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inizializza una `CRgn` oggetto con un'area rettangolare definita da un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Inizializza un `CRgn` oggetto con un'area rettangolare con angoli arrotondati.|
 |[CRgn::EqualRgn](#equalrgn)|Verifica due `CRgn` oggetti per determinare se sono equivalenti.|
 |[CRgn::FromHandle](#fromhandle)|Restituisce un puntatore a un `CRgn` quando viene specificato un handle di un'area di Windows.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Parametri
 
 *lpXForm*<br/>
-Punta a un [XFORM](../../mfc/reference/xform-structure.md) struttura dei dati che definisce la trasformazione da eseguire nell'area. Se questo puntatore è NULL, viene utilizzata nella trasformazione di identità.
+Punta a un [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) struttura dei dati che definisce la trasformazione da eseguire nell'area. Se questo puntatore è NULL, viene utilizzata nella trasformazione di identità.
 
 *nCount*<br/>
 Specifica il numero di byte a cui punta *pRgnData*.
 
 *pRgnData*<br/>
-Punta a un [RGNDATA](../../mfc/reference/rgndata-structure.md) struttura dei dati che contiene i dati dell'area.
+Punta a un [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) struttura dei dati che contiene i dati dell'area.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Parametri
 
 *lpRgnData*<br/>
-Punta a un [RGNDATA](../../mfc/reference/rgndata-structure.md) struttura dei dati che riceve le informazioni. Se questo parametro è NULL, il valore restituito contiene il numero di byte necessari per i dati di area.
+Punta a un [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) struttura dei dati che riceve le informazioni. Se questo parametro è NULL, il valore restituito contiene il numero di byte necessari per i dati di area.
 
 *nCount*<br/>
 Specifica la dimensione, espressa in byte, del *lpRgnData* buffer.
@@ -705,7 +705,7 @@ Specifica il numero di unità di spostamento a sinistra o destra.
 *y*<br/>
 Specifica il numero di unità da spostare verso l'alto o verso il basso.
 
-*punto*<br/>
+*point*<br/>
 La coordinata x del *puntare* specifica il numero di unità di spostamento a sinistra o destra. La coordinata y del *puntare* specifica il numero di unità da spostare verso l'alto o verso il basso. Il *puntare* parametro può essere una `POINT` struttura o un `CPoint` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -768,7 +768,7 @@ Specifica la coordinata x logica del punto da testare.
 *y*<br/>
 Specifica la coordinata y logica del punto da testare.
 
-*punto*<br/>
+*point*<br/>
 Le coordinate x e y del *puntare* specificare le coordinate x e y del punto da verificare il valore di. Il *puntare* parametro può essere una `POINT` struttura o un `CPoint` oggetto.
 
 ### <a name="return-value"></a>Valore restituito

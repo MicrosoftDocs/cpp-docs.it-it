@@ -1,5 +1,5 @@
 ---
-title: 'TN014: controlli personalizzati'
+title: 'TN014: Controlli personalizzati'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557820"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178408"
 ---
-# <a name="tn014-custom-controls"></a>TN014: controlli personalizzati
+# <a name="tn014-custom-controls"></a>TN014: Controlli personalizzati
 
 In questa nota viene descritto il supporto MFC per i controlli di disegno automatico e personalizzati. Inoltre descrive creazione di una sottoclasse dinamica e viene descritta la relazione tra [CWnd](../mfc/reference/cwnd-class.md) gli oggetti e `HWND`s.
 
@@ -88,7 +88,7 @@ Tramite i comandi di disegno automatico è possibile compilare le classi di cont
     // insert code to delete an item from this combo box
     ```
 
-Per informazioni dettagliate sulle strutture di disegno ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md), [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md), [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md), e [DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)) vedere la documentazione MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, e `CWnd::OnDeleteItem` rispettivamente.
+Per informazioni dettagliate sulle strutture di disegno ([DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct), [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct), [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct), e [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)) vedere la documentazione MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, e `CWnd::OnDeleteItem` rispettivamente.
 
 ## <a name="using-self-draw-controls-and-menus"></a>Utilizzo dei menu e dei controlli di disegno automatico
 

@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bcaf24c14938bcf56eb083ad2dd79e4c245c7c84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613681"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178922"
 ---
 # <a name="cmenu-class"></a>CMenu (classe)
 
@@ -322,7 +322,7 @@ Specifica come verificare la voce di menu e come determinare la posizione dell'e
 
 ### <a name="return-value"></a>Valore restituito
 
-Lo stato precedente dell'elemento: MF_CHECKED o MF_UNCHECKED, o 0xFFFFFFFF se la voce di menu non esiste.
+Lo stato precedente dell'elemento: MF_CHECKED o MF_UNCHECKED oppure 0xFFFFFFFF se la voce di menu non esiste.
 
 ### <a name="remarks"></a>Note
 
@@ -551,7 +551,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpDrawItemStruct*<br/>
-Un puntatore a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) struttura che contiene informazioni sul tipo di disegno necessaria.
+Un puntatore a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struttura che contiene informazioni sul tipo di disegno necessaria.
 
 ### <a name="remarks"></a>Note
 
@@ -651,7 +651,7 @@ UINT GetDefaultItem(
 *gmdiFlags*<br/>
 Valore che specifica come la funzione Cerca le voci di menu. Questo parametro può essere Nessuno, uno o una combinazione dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |GMDI_GOINTOPOPUPS|Specifica che, se l'elemento predefinito è uno che si apre un sottomenu, la funzione è per eseguire la ricerca in modo ricorsivo il sottomenu corrispondente. Se il sottomenu non dispone di alcun elemento predefinito, il valore restituito identifica l'elemento che si apre il sottomenu.<br /><br /> Per impostazione predefinita, la funzione restituisce il primo elemento di impostazione predefinita nel menu specificato, indipendentemente dal tipo di un elemento che si apre un sottomenu.|
 |GMDI_USEDISABLED|Specifica che la funzione deve restituire un elemento predefinito, anche se è disabilitato.<br /><br /> Per impostazione predefinita, la funzione ignora elementi disabilitati o inattivi.|

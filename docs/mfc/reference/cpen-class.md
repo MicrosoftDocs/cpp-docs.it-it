@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-ms.openlocfilehash: dc9216d10b620a79aa8e20e240791207f25a65c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba85a811e0ea8c6d1658be3403ca466bb6877914
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531560"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178564"
 ---
 # <a name="cpen-class"></a>CPen (classe)
 
@@ -250,7 +250,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="parameters"></a>Parametri
 
 *lpLogPen*<br/>
-Punta a di Windows [LOGPEN](../../mfc/reference/logpen-structure.md) struttura che contiene informazioni sulla penna.
+Punta a di Windows [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) struttura che contiene informazioni sulla penna.
 
 ### <a name="return-value"></a>Valore restituito
 

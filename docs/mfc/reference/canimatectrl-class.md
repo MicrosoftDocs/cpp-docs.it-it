@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 5bbd59101815d18cae92b9996aff54f0cadaf9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608429"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178258"
 ---
 # <a name="canimatectrl-class"></a>Classe CAnimateCtrl
 
@@ -151,8 +151,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile del controllo animazione. Applicare qualsiasi combinazione delle finestre di stili descritti nella sezione Osservazioni seguente e gli stili di controllo animazione descritto nella [stili del controllo animazione](/windows/desktop/Controls/animation-control-styles) nel SDK di Windows.
 
-*Rect*<br/>
-Specifica del controllo animazione posizione e dimensioni. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](../../mfc/reference/rect-structure1.md) struttura.
+*rect*<br/>
+Specifica del controllo animazione posizione e dimensioni. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura.
 
 *pParentWnd*<br/>
 Specifica finestra padre del controllo animazione, in genere un `CDialog`. Non deve essere NULL.
@@ -205,7 +205,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 *dwStyle*<br/>
 Specifica lo stile del controllo animazione. Applicare qualsiasi combinazione della finestra e stili del controllo animazione descritto nella [stili del controllo animazione](/windows/desktop/Controls/animation-control-styles) nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>

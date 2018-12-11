@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544885"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178082"
 ---
 # <a name="cpagesetupdialog-class"></a>Classe CPageSetupDialog
 
@@ -142,7 +142,7 @@ Uno o più flag che è possibile usare per personalizzare le impostazioni della 
 
 - PSD_DISABLEORIENTATION disabilita il controllo di finestra di dialogo di orientamento della pagina.
 
-- Fa sì che PSD_RETURNDEFAULT `CPageSetupDialog` per restituire [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](../../mfc/reference/devnames-structure.md) strutture che vengono inizializzate per la stampante predefinita di sistema senza visualizzare una finestra di dialogo. Si presuppone che entrambe `hDevNames` e `hDevMode` sono NULL; in caso contrario, la funzione restituisce un errore. Se la stampante predefinita di sistema è supportata da un vecchio driver della stampante (precedenti a Windows versione 3.0), solo `hDevNames` verrà restituito. `hDevMode` è NULL.
+- Fa sì che PSD_RETURNDEFAULT `CPageSetupDialog` per restituire [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) strutture che vengono inizializzate per la stampante predefinita di sistema senza visualizzare una finestra di dialogo. Si presuppone che entrambe `hDevNames` e `hDevMode` sono NULL; in caso contrario, la funzione restituisce un errore. Se la stampante predefinita di sistema è supportata da un vecchio driver della stampante (precedenti a Windows versione 3.0), solo `hDevNames` verrà restituito. `hDevMode` è NULL.
 
 - PSD_DISABLEPAPER disabilita il controllo di selezione documento.
 
@@ -171,7 +171,7 @@ Usare la [DoModal](../../mfc/reference/cdialog-class.md#domodal) funzione per vi
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-Crea un contesto di dispositivo stampante dal [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](../../mfc/reference/devnames-structure.md) strutture.
+Crea un contesto di dispositivo stampante dal [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) strutture.
 
 ```
 HDC CreatePrinterDC();
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parametri
 
 *lpRectMargins*<br/>
-Puntatore a un [RECT](rect-structure.md) struttura oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che fornisce una descrizione (1/1000 pollici o mm 1/100) i margini di stampa per la stampante attualmente selezionata. Passare NULL per questo parametro, se non si è interessati a questo rettangolo.
+Puntatore a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che fornisce una descrizione (1/1000 pollici o mm 1/100) i margini di stampa per la stampante attualmente selezionata. Passare NULL per questo parametro, se non si è interessati a questo rettangolo.
 
 *lpRectMinMargins*<br/>
 Puntatore a un `RECT` struttura o `CRect` oggetto che fornisce una descrizione (1/1000 pollici o mm 1/100) i margini di stampa minimi per la stampante attualmente selezionata. Passare NULL per questo parametro, se non si è interessati a questo rettangolo.
@@ -341,7 +341,7 @@ Specifica un messaggio, che indica l'area della pagina da disegnare. Può essere
 - Area WM_PSD_YAFULLPAGERECT per una rappresentazione in forma di indirizzo del mittente. Quest'area si estende ai bordi dell'area della pagina di esempio.
 
 *lpRect*<br/>
-Puntatore a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oppure [RECT](rect-structure.md) oggetto contenente le coordinate dell'area di disegno.
+Puntatore a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oppure [RECT](/windows/desktop/api/windef/ns-windef-tagrect) oggetto contenente le coordinate dell'area di disegno.
 
 ### <a name="return-value"></a>Valore restituito
 

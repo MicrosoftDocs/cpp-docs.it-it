@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656092"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178616"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 
@@ -339,9 +339,9 @@ Un puntatore di tipo long a un `COMPAREITEMSTRUCT` struttura.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indica la posizione relativa dei due elementi descritti nel [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) struttura. Potrebbe essere uno qualsiasi dei valori seguenti:
+Indica la posizione relativa dei due elementi descritti nel [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) struttura. Potrebbe essere uno qualsiasi dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |-1|Elemento 1 precede l'elemento 2.|
 |0|Item 1 e item 2 è lo stesso ordine.|
@@ -374,7 +374,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile della casella di riepilogo. Applicare qualsiasi combinazione di [stili di casella di riepilogo](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) alla casella.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni di caselle di riepilogo e la posizione. Può essere un' `CRect` oggetto o un `RECT` struttura.
 
 *pParentWnd*<br/>
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpDeleteItemStruct*<br/>
-Un puntatore di tipo long a un Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) struttura che contiene informazioni sull'elemento eliminato.
+Un puntatore di tipo long a un Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) struttura che contiene informazioni sull'elemento eliminato.
 
 ### <a name="remarks"></a>Note
 
@@ -478,7 +478,7 @@ int Dir(
 *Attr*<br/>
 Può essere qualsiasi combinazione dei **enum** i valori descritti nella `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus), o qualsiasi combinazione dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |0x0000|File può essere letti da o scritti.|
 |0x0001|File può essere letto da ma non scritto.|
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpDrawItemStruct*<br/>
-Un puntatore di tipo long a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) struttura che contiene informazioni sul tipo di disegno necessaria.
+Un puntatore di tipo long a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struttura che contiene informazioni sul tipo di disegno necessaria.
 
 ### <a name="remarks"></a>Note
 
@@ -770,7 +770,7 @@ int GetItemRect(
 Specifica l'indice in base zero dell'elemento.
 
 *lpRect*<br/>
-Specifica un puntatore di tipo long a un [struttura RECT](../../mfc/reference/rect-structure1.md) che riceve le coordinate del client di casella di riepilogo dell'elemento.
+Specifica un puntatore di tipo long a un [struttura RECT](/windows/desktop/api/windef/ns-windef-tagrect) che riceve le coordinate del client di casella di riepilogo dell'elemento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -991,7 +991,7 @@ Chiamare questa funzione prima di aggiungere un numero elevato di elementi da un
 
 Questa funzione consente di velocizzare l'inizializzazione di caselle di riepilogo che hanno un numero elevato di elementi (più di 100). Prealloca la quantità di memoria in modo che le successive specificata [AddString](#addstring), [InsertString](#insertstring), e [Dir](#dir) funzioni accettano il minor tempo possibile. È possibile usare le stime per i parametri. Se sovrastima, alcuni memoria aggiuntiva viene allocata; Se si sottostima, l'allocazione normale viene utilizzato per gli elementi che superano la quantità preallocata.
 
-Solo Windows 95 o 98: il *nItems* parametro è limitato a valori a 16 bit. Ciò significa che le caselle di riepilogo non possono contenere elementi oltre 32.767. Anche se il numero di elementi è limitato, le dimensioni totali degli elementi in una casella di riepilogo sono limitata solo dalla memoria disponibile.
+Windows 95 o 98 solo: Il *nItems* parametro è limitato a valori a 16 bit. Ciò significa che le caselle di riepilogo non possono contenere elementi oltre 32.767. Anche se il numero di elementi è limitato, le dimensioni totali degli elementi in una casella di riepilogo sono limitata solo dalla memoria disponibile.
 
 ### <a name="example"></a>Esempio
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpMeasureItemStruct*<br/>
-Un puntatore di tipo long a un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) struttura.
+Un puntatore di tipo long a un [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) struttura.
 
 ### <a name="remarks"></a>Note
 

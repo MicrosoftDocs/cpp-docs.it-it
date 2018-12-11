@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694725"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178135"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 
@@ -110,8 +110,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile di controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Visualizzare [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel SDK di Windows per altre informazioni.
 
-*Rect*<br/>
-Specifica del controllo tasto di scelta dimensione e la posizione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [struttura RECT](../../mfc/reference/rect-structure1.md).
+*rect*<br/>
+Specifica del controllo tasto di scelta dimensione e la posizione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [struttura RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *pParentWnd*<br/>
 Specifica padre di finestra del controllo tasto di scelta, in genere un [CDialog](../../mfc/reference/cdialog-class.md). Non deve essere NULL.
@@ -150,7 +150,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 *dwStyle*<br/>
 Specifica lo stile di controllo tasto di scelta. Applicare qualsiasi combinazione di stili del controllo. Per altre informazioni, vedere [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>

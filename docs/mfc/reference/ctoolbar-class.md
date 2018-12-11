@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 4faa067f95f43939d6dbd05837f961b3baa7f17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593245"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178538"
 ---
 # <a name="ctoolbar-class"></a>Classe CToolBar
 
@@ -141,7 +141,7 @@ Per creare un pulsante della casella di controllo, assegnare lo stile TBBS_CHECK
 
 Per creare un pulsante di opzione, chiamare un [CCmdUI](../../mfc/reference/ccmdui-class.md) dell'oggetto [SetRadio](../../mfc/reference/ccmdui-class.md#setradio) funzione membro da un gestore ON_UPDATE_COMMAND_UI. Passare `SetRadio` argomento pari a 0 per non selezionato o diverso da zero per l'archiviazione. Per garantire un comportamento che si escludono a vicenda del gruppo di un'opzione, è necessario disporre gestori ON_UPDATE_COMMAND_UI per tutti i pulsanti nel gruppo.
 
-Per altre informazioni sull'uso `CToolBar`, vedere l'articolo [implementazione della barra degli strumenti MFC](../../mfc/mfc-toolbar-implementation.md) e [Nota tecnica 31: barre di controllo](../../mfc/tn031-control-bars.md).
+Per altre informazioni sull'uso `CToolBar`, vedere l'articolo [implementazione della barra degli strumenti MFC](../../mfc/mfc-toolbar-implementation.md) e [Nota tecnica 31: Le barre di controllo](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -406,7 +406,7 @@ virtual void GetItemRect(
 Indice dell'elemento (pulsante o separatore) devono essere recuperate le cui coordinate del rettangolo.
 
 *lpRect*<br/>
-Indirizzo della [RECT](../../mfc/reference/rect-structure1.md) struttura che contiene le coordinate dell'elemento.
+Indirizzo della [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura che contiene le coordinate dell'elemento.
 
 ### <a name="remarks"></a>Note
 
@@ -565,7 +565,7 @@ Nuovo indice per l'immagine del pulsante della bitmap.
 Per il separatore, che hanno lo stile TBBS_SEPARATOR, questa funzione imposta la larghezza del separatore in pixel in base al valore archiviato nella *iImage*.
 
 > [!NOTE]
->  È anche possibile impostare gli stati dei pulsanti tramite la *nStyle* parametro; tuttavia, poiché gli stati dei pulsanti sono controllati dal [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) gestore, qualsiasi stato che viene impostato utilizzando `SetButtonInfo` andranno perse durante l'elaborazione di inattività successiva. Visualizzare [come oggetti dell'interfaccia utente di aggiornamento](../../mfc/how-to-update-user-interface-objects.md) e [TN031: barre di controllo](../../mfc/tn031-control-bars.md) per altre informazioni.
+>  È anche possibile impostare gli stati dei pulsanti tramite la *nStyle* parametro; tuttavia, poiché gli stati dei pulsanti sono controllati dal [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) gestore, qualsiasi stato che viene impostato utilizzando `SetButtonInfo` andranno perse durante l'elaborazione di inattività successiva. Visualizzare [come aggiornare oggetti dell'interfaccia utente](../../mfc/how-to-update-user-interface-objects.md) e [TN031: Le barre di controllo](../../mfc/tn031-control-bars.md) per altre informazioni.
 
 Per informazioni sulle immagini bitmap e pulsanti, vedere la [CToolBar](../../mfc/reference/ctoolbar-class.md) Cenni preliminari e [CToolBar::LoadBitmap](#loadbitmap).
 
@@ -640,7 +640,7 @@ Stile del pulsante determina come viene visualizzato il pulsante e modo in cui r
 Prima di chiamare `SetButtonStyle`, chiamare il [GetButtonStyle](#getbuttonstyle) funzione membro per recuperare lo stile di pulsante o un separatore.
 
 > [!NOTE]
->  È anche possibile impostare gli stati dei pulsanti tramite la *nStyle* parametro; tuttavia, poiché gli stati dei pulsanti sono controllati dal [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) gestore, qualsiasi stato che viene impostato utilizzando `SetButtonStyle` andranno perse durante l'elaborazione di inattività successiva. Visualizzare [come oggetti dell'interfaccia utente di aggiornamento](../../mfc/how-to-update-user-interface-objects.md) e [TN031: barre di controllo](../../mfc/tn031-control-bars.md) per altre informazioni.
+>  È anche possibile impostare gli stati dei pulsanti tramite la *nStyle* parametro; tuttavia, poiché gli stati dei pulsanti sono controllati dal [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) gestore, qualsiasi stato che viene impostato utilizzando `SetButtonStyle` andranno perse durante l'elaborazione di inattività successiva. Visualizzare [come aggiornare oggetti dell'interfaccia utente](../../mfc/how-to-update-user-interface-objects.md) e [TN031: Le barre di controllo](../../mfc/tn031-control-bars.md) per altre informazioni.
 
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText
 

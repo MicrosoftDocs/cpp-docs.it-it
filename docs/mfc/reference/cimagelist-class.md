@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500763"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178590"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -295,7 +295,7 @@ Indice a base zero dell'immagine da utilizzare come origine dell'operazione di c
 *uFlags*<br/>
 Il valore di flag di bit che specifica il tipo di operazione di copia da apportare. Questo parametro può essere uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |ILCF_MOVE|L'immagine di origine viene copiata all'indice dell'immagine di destinazione. Questa operazione comporta più istanze di una determinata immagine. ILCF_MOVE è quello predefinito.|
 |ILCF_SWAP|Le immagini di origine e destinazione scambiano le posizioni all'interno dell'elenco immagini.|
@@ -348,7 +348,7 @@ BOOL Create(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parametri
 
-*CX*<br/>
+*cx*<br/>
 Dimensioni di ogni immagine, in pixel.
 
 *CY*<br/>
@@ -357,7 +357,7 @@ Dimensioni di ogni immagine, in pixel.
 *nFlags*<br/>
 Specifica il tipo di elenco immagini da creare. Questo parametro può essere una combinazione dei valori seguenti, ma può includere solo uno del `ILC_COLOR` valori.
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |ILC_COLOR|Se nessuno degli altri ILC_COLOR * flag è specificato, usare il comportamento predefinito. In genere, il valore predefinito è ILC_COLOR4; ma per i driver video precedente, il valore predefinito è ILC_COLORDDB.|
 |ILC_COLOR4|Usare una sezione di bitmap indipendente dalla periferica (DIB) 4 bit (16 colori) come le bitmap per l'elenco di immagini.|
@@ -479,7 +479,7 @@ static BOOL PASCAL DragEnter(
 *pWndLock*<br/>
 Puntatore alla finestra proprietaria dell'immagine di trascinamento.
 
-*punto*<br/>
+*point*<br/>
 Posizione in corrispondenza della quale visualizzare l'immagine di trascinamento. Coordinate sono relative all'angolo superiore sinistro della finestra (area non client).
 
 ### <a name="return-value"></a>Valore restituito
@@ -554,7 +554,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 Specifica se l'immagine di trascinamento è da visualizzare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -591,7 +591,7 @@ Posizione nella quale disegnare all'interno del contesto di dispositivo specific
 *nStyle*<br/>
 Flag che specifica lo stile di disegno. Può trattarsi di uno o più dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |ILD_BLEND25, ILD_FOCUS|Disegna l'immagine, la fusione del 25% con il colore di sistema. Questo valore non ha alcun effetto se l'elenco di immagini non contiene una maschera.|
 |ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Disegna l'immagine, la fusione del 50% con il colore di sistema. Questo valore non ha alcun effetto se l'elenco di immagini non contiene una maschera.|
@@ -694,7 +694,7 @@ Indice a base zero dell'immagine da disegnare.
 Oggetto [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che contiene le coordinate x e y in cui verrà disegnata l'immagine.
 
 *sz*<br/>
-Oggetto [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che indica la dimensione dell'immagine da disegnare.
+Oggetto [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) struttura che indica la dimensione dell'immagine da disegnare.
 
 *ptOrigin*<br/>
 Oggetto [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che contiene le coordinate x e y che specifica l'angolo superiore sinistro dell'operazione di disegno per quanto riguarda l'immagine stessa. Non vengono disegnati i pixel dell'immagine a sinistra della coordinata x e versioni successive la coordinata y.
@@ -712,7 +712,7 @@ Altri valori possibili sono illustrati sotto il *dwRop* membro del [IMAGELISTDRA
 *rgbBack*<br/>
 Immagine colore di sfondo, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |CLR_DEFAULT|Colore di sfondo predefinito. L'immagine viene disegnata utilizzando il colore di sfondo di elenco immagini.|
 |CLR_NONE|Nessun colore di sfondo. Viene disegnata l'immagine in modo trasparente.|
@@ -720,7 +720,7 @@ Immagine colore di sfondo, per impostazione predefinita CLR_DEFAULT. Questo para
 *rgbFore*<br/>
 Colore di primo piano immagine, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |CLR_DEFAULT|Colore di primo piano predefinito. L'immagine viene disegnata utilizzando il colore di sistema come il colore primo piano.|
 |CLR_NONE|Nessun colore di blend. L'immagine viene sfumato con il colore del contesto di dispositivo di destinazione.|

@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463007"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178980"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 
@@ -626,7 +626,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile del controllo della barra degli strumenti. Le barre degli strumenti deve sempre avere lo stile WS_CHILD. Inoltre, è possibile specificare qualsiasi combinazione di stili della barra degli strumenti e gli stili di finestra come descritto in **osservazioni**.
 
-*Rect*<br/>
+*rect*<br/>
 Facoltativamente Specifica dimensioni e la posizione del controllo della barra degli strumenti. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
 
 *pParentWnd*<br/>
@@ -680,7 +680,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 *dwStyle*<br/>
 Specifica lo stile del controllo della barra degli strumenti. Le barre degli strumenti deve sempre avere lo stile WS_CHILD. Inoltre, è possibile specificare qualsiasi combinazione di stili della barra degli strumenti e gli stili di finestra come descritto nel **osservazioni** sezione [crea](#create).
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Identificatore del comando del pulsante per abilitare o disabilitare.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 TRUE per abilitare il pulsante, FALSE per disabilitare il pulsante.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>Parametri
 
 *pSize*<br/>
-Un puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che riceve le dimensioni degli elementi.
+Un puntatore a un [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) struttura che riceve le dimensioni degli elementi.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1247,7 +1247,7 @@ Le informazioni sullo stato pulsante se ha esito positivo oppure - 1 in caso con
 
 ### <a name="remarks"></a>Note
 
-Questa funzione è particolarmente utile se si desidera recuperare più di uno degli Stati del pulsante. Per recuperare solo uno stato, usare una delle funzioni membro seguenti: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden ](#isbuttonhidden), oppure [IsButtonIndeterminate](#isbuttonindeterminate). Tuttavia, il `GetState` funzione membro è l'unico modo per rilevare lo stato del pulsante TBSTATE_WRAP.
+Questa funzione è particolarmente utile se si desidera recuperare più di uno degli Stati del pulsante. Per recuperare solo uno stato, usare una delle funzioni membro seguenti: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden), o [IsButtonIndeterminate](#isbuttonindeterminate). Tuttavia, il `GetState` funzione membro è l'unico modo per rilevare lo stato del pulsante TBSTATE_WRAP.
 
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString
 
@@ -2335,7 +2335,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione è particolarmente utile se si desidera impostare più di uno degli Stati del pulsante. Per impostare solo uno stato, usare una delle funzioni membro seguenti: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [Indeterminate](#indeterminate), oppure [PressButton](#pressbutton).
+Questa funzione è particolarmente utile se si desidera impostare più di uno degli Stati del pulsante. Per impostare solo uno stato, usare una delle funzioni membro seguenti: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [indeterminato](#indeterminate), o [PressButton](#pressbutton).
 
 ##  <a name="setstyle"></a>  CToolBarCtrl::SetStyle
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694803"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178643"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -219,7 +219,7 @@ Specifica il testo del controllo pulsante.
 *dwStyle*<br/>
 Specifica lo stile del controllo pulsante. Applicare qualsiasi combinazione di [stili di pulsante](../../mfc/reference/styles-used-by-mfc.md#button-styles) al pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo pulsante. Può essere un' `CRect` oggetto o un `RECT` struttura.
 
 *pParentWnd*<br/>
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpDrawItemStruct*<br/>
-Un puntatore di tipo long a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) struttura. La struttura contiene informazioni sull'elemento da disegnare e il tipo di disegno necessaria.
+Un puntatore di tipo long a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struttura. La struttura contiene informazioni sull'elemento da disegnare e il tipo di disegno necessaria.
 
 ### <a name="remarks"></a>Note
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 Il valore restituito da un controllo pulsante creato con BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON o stile BS_3STATE è uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Stato del pulsante è deselezionato.|
 |BST_CHECKED|Stato del pulsante è selezionato.|
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*pSize*|[out] Puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che riceve la descrizione di un rettangolo.|
+|*pSize*|[out] Puntatore a un [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) struttura che riceve la descrizione di un rettangolo.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 Un campo di bit che contiene la combinazione di valori che indicano lo stato corrente di un controllo pulsante. La tabella seguente elenca i valori possibili.
 
-|Stato del pulsante|Valore|Descrizione|
+|Stato del pulsante|Value|Descrizione|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|Stato iniziale.|
 |BST_CHECKED|0x0001|Il controllo pulsante è selezionato.|
@@ -699,7 +699,7 @@ void SetCheck(int nCheck);
 *nControllare*<br/>
 Specifica lo stato di selezione. Questo parametro può essere uno dei seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Impostare lo stato del pulsante su deselezionata.|
 |BST_CHECKED|Impostare lo stato del pulsante controllare.|
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*pSize*|[in] Puntatore a un [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che descrive un rettangolo di delimitazione.|
+|*pSize*|[in] Puntatore a un [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) struttura che descrive un rettangolo di delimitazione.|
 
 ### <a name="return-value"></a>Valore restituito
 

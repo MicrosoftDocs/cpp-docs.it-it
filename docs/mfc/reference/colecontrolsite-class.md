@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437804"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178921"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 
@@ -325,7 +325,7 @@ Puntatore al testo da visualizzare nel controllo. Imposta il valore della propri
 *dwStyle*<br/>
 Stili di Windows. Gli stili disponibili sono elencati sotto la **osservazioni** sezione.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo. Può essere un' `CRect` oggetto o un `RECT` struttura.
 
 *nID*<br/>
@@ -397,7 +397,7 @@ virtual HRESULT DoVerb(
 *nVerb*<br/>
 Specifica il verbo da eseguire. Può includere uno dei seguenti:
 
-|Valore|Significato|Simbolo|
+|Value|Significato|Simbolo|
 |-----------|-------------|------------|
 |0|verbo primario|OLEIVERB_PRIMARY|
 |-1|Verbo secondario|(Nessuno)|
@@ -443,7 +443,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se abilitare o disabilitare la finestra: TRUE se l'input della finestra deve essere abilitato, in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>Parametri
 
 *lpmsg*<br/>
-Un puntatore a un [struttura MSG](../../mfc/reference/msg-structure1.md). Questa struttura contiene il messaggio di Windows attiva il `SetFocus` richiesta per il controllo contenuto nel sito del controllo corrente.
+Un puntatore a un [struttura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg). Questa struttura contiene il messaggio di Windows attiva il `SetFocus` richiesta per il controllo contenuto nel sito del controllo corrente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1148,7 +1148,7 @@ La nuova posizione del lato sinistro della finestra.
 *y*<br/>
 La nuova posizione della parte superiore della finestra.
 
-*CX*<br/>
+*cx*<br/>
 La nuova larghezza della finestra
 
 *CY*<br/>

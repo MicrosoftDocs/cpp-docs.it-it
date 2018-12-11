@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481445"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178792"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -329,7 +329,7 @@ Punta a una stringa di caratteri con terminazione null che rappresenta il nome d
 *dwStyle*<br/>
 Specifica l'intervallo [stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributi. Includere lo stile FWS_ADDTOTITLE se si desidera che la barra del titolo da visualizzare automaticamente il nome del documento rappresentato nella finestra di.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e posizione della finestra. Il *rectDefault* valore consente a Windows specificare le dimensioni e la posizione della nuova finestra.
 
 *pParentWnd*<br/>
@@ -475,7 +475,7 @@ void FloatControlBar(
 *pBar*<br/>
 Punta alla barra di controllo per essere spostate.
 
-*punto*<br/>
+*point*<br/>
 La posizione in coordinate dello schermo, in cui verrà collocato l'angolo superiore sinistro della barra di controllo.
 
 *dwStyle*<br/>
@@ -844,7 +844,7 @@ Contiene uno dei seguenti valori dal `enum BorderCmd`:
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-Puntatore a un [RECT](../../mfc/reference/rect-structure1.md) struttura o un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che specifica le coordinate del bordo.
+Puntatore a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura o un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che specifica le coordinate del bordo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -902,7 +902,7 @@ virtual BOOL OnCreateClient(
 ### <a name="parameters"></a>Parametri
 
 *lpcs*<br/>
-Un puntatore a un Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) struttura.
+Un puntatore a un Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struttura.
 
 *pContext*<br/>
 Un puntatore a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) struttura.
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Parametri
 
 *tbpFlags*<br/>
-Flag che controllano lo stato corrente del pulsante dello stato. Specificare solo uno dei seguenti flag perché tutti gli stati si escludono a vicenda: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Flag che controllano lo stato corrente del pulsante dello stato. Poiché tutti gli stati si escludono a vicenda, specificare solo uno dei flag seguenti: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Note
 
@@ -1254,7 +1254,7 @@ void ShowControlBar(
 *pBar*<br/>
 Puntatore alla barra di controllo per essere visualizzato o nascosto.
 
-*bMostra*<br/>
+*bShow*<br/>
 Se TRUE, specifica che la barra di controllo deve essere visualizzato. Se FALSE, specifica che la barra di controllo deve essere nascosto.
 
 *bDelay*<br/>
@@ -1270,7 +1270,7 @@ void ShowOwnedWindows(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 Specifica se le finestre di proprietà devono essere mostrati o nascosti.
 
 ## <a name="see-also"></a>Vedere anche

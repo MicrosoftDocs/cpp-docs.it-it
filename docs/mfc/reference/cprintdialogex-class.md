@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 79d696f89ca7474220559abbf5464f32b6e684c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb88cc39ddaffe51b80484bbe8460507a1d0aecb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543325"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178447"
 ---
 # <a name="cprintdialogex-class"></a>Classe CPrintDialogEx
 
@@ -154,7 +154,7 @@ Questa funzione membro crea solo l'oggetto. Usare il `DoModal` funzione membro p
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-Crea un contesto di periferica (DC) della stampante dal [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](../../mfc/reference/devnames-structure.md) strutture.
+Crea un contesto di periferica (DC) della stampante dal [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) strutture.
 
 ```
 HDC CreatePrinterDC();
@@ -216,9 +216,9 @@ TRUE se ha esito positivo, in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Crea un contesto di periferica (DC) della stampante dal [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](../../mfc/reference/devnames-structure.md) strutture.
+Crea un contesto di periferica (DC) della stampante dal [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) strutture.
 
-`GetDefaults` non viene visualizzata la finestra delle proprietà di stampa. Invece, viene impostato il `hDevNames` e `hDevMode` i membri del [m_pdex](#m_pdex) per gli handle per il [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](../../mfc/reference/devnames-structure.md) strutture che vengono inizializzate per il stampante predefinita di sistema. Entrambe `hDevNames` e `hDevMode` devono essere NULL o `GetDefaults` ha esito negativo.
+`GetDefaults` non viene visualizzata la finestra delle proprietà di stampa. Invece, viene impostato il `hDevNames` e `hDevMode` i membri del [m_pdex](#m_pdex) per gli handle per il [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) strutture che vengono inizializzate per il stampante predefinita di sistema. Entrambe `hDevNames` e `hDevMode` devono essere NULL o `GetDefaults` ha esito negativo.
 
 Se è impostato il flag PD_RETURNDC, questa funzione non solo restituirà `hDevNames` e `hDevMode` (che si trova `m_pdex.hDevNames` e `m_pdex.hDevMode`) al chiamante, ma restituirà anche una controller di dominio della stampante in `m_pdex.hDC`. È responsabilità del chiamante per eliminare il controller di dominio della stampante e chiamare il Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) funzione sugli handle quando si usa più il `CPrintDialogEx` oggetto.
 

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476617"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178740"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 Puntatore a un contesto di dispositivo per l'area di output.
 
 *rectLayout*<br/>
-[RECT](../../mfc/reference/rect-structure1.md) oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) che definisce l'area di output.
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect) oppure [CRect](../../atl-mfc-shared/reference/crect-class.md) che definisce l'area di output.
 
 *nIndexStart*<br/>
 Indice in base zero del primo carattere da formattare.

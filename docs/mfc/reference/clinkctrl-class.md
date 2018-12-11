@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597561"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178045"
 ---
 # <a name="clinkctrl-class"></a>Classe CLinkCtrl
 
@@ -133,8 +133,8 @@ Puntatore a una stringa con terminazione zero contenente il contrassegnata il te
 *dwStyle*<br/>
 Specifica lo stile del controllo collegamento. Applicare qualsiasi combinazione di stili del controllo. Visualizzare [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel `Windows SDK` per altre informazioni.
 
-*Rect*<br/>
-Specifica le dimensioni e la posizione del controllo collegamento. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](../../mfc/reference/rect-structure1.md) struttura.
+*rect*<br/>
+Specifica le dimensioni e la posizione del controllo collegamento. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura.
 
 *pParentWnd*<br/>
 Finestra padre del controllo collegamento. Non deve essere NULL.
@@ -195,8 +195,8 @@ Specifica lo stile esteso del controllo collegamento. Per un elenco di stili est
 *dwStyle*<br/>
 Specifica lo stile del controllo collegamento. Applicare qualsiasi combinazione di stili del controllo. Per altre informazioni, vedere [stili dei controlli comuni](/windows/desktop/Controls/common-control-styles) nel SDK di Windows.
 
-*Rect*<br/>
-Specifica le dimensioni e la posizione del controllo collegamento. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](../../mfc/reference/rect-structure1.md) struttura.
+*rect*<br/>
+Specifica le dimensioni e la posizione del controllo collegamento. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura.
 
 *pParentWnd*<br/>
 Finestra padre del controllo collegamento. Non deve essere NULL.
@@ -245,7 +245,7 @@ int GetIdealSize(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*cxMaxWidth*|[in] La larghezza massima del collegamento, in pixel.|
-|[out] \* *pSize*|Un puntatore a un Windows [dimensioni](https://msdn.microsoft.com/library/windows/desktop/dd145106) struttura. Quando termina, questo metodo il *cy* membro delle `SIZE` struttura contiene l'altezza del testo collegamento ideale per la larghezza di testo di collegamento specificato dal *cxMaxWidth*. Il *cx* membro della struttura contiene la larghezza di testo di collegamento che è effettivamente necessario.|
+|[out] \* *pSize*|Un puntatore a un Windows [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) struttura. Quando termina, questo metodo il *cy* membro delle `SIZE` struttura contiene l'altezza del testo collegamento ideale per la larghezza di testo di collegamento specificato dal *cxMaxWidth*. Il *cx* membro della struttura contiene la larghezza di testo di collegamento che è effettivamente necessario.|
 
 ### <a name="return-value"></a>Valore restituito
 

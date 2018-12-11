@@ -311,18 +311,18 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524666"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178967"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 
 Il `CMFCToolBar` classe simile [classe CToolBar](../../mfc/reference/ctoolbar-class.md), ma fornisce supporto aggiuntivo per le funzionalità dell'interfaccia utente. Queste includono barre degli strumenti flat, barre degli strumenti con immagini con area sensibile, icone grandi, pulsanti cercapersone, barre degli strumenti bloccate, controlli Rebar, testo sotto le immagini, immagini di sfondo e barre degli strumenti a schede. La classe `CMFCToolBar` contiene inoltre il supporto incorporato per la personalizzazione da parte dell'utente delle barre degli strumenti e dei menu, il trascinamento della selezione tra barre degli strumenti e menu, i pulsanti della casella combinata, i pulsanti della casella di modifica, le selezioni colore e i pulsanti rollup.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -519,7 +519,7 @@ Per incorporare un `CMFCToolBar` oggetto nell'applicazione, seguire questa proce
 
 1. Chiamare [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) per specificare lo stile di ancoraggio.
 
-Per inserire un pulsante speciale, ad esempio una casella combinata o un elenco a discesa della barra degli strumenti, prenotare un pulsante fittizio nella risorsa padre e sostituire il pulsante fittizio in fase di esecuzione usando [CMFCToolBar::ReplaceButton](#replacebutton). Per altre informazioni, vedere [procedura dettagliata: inserimento di controlli in barre degli strumenti](../walkthrough-putting-controls-on-toolbars.md).
+Per inserire un pulsante speciale, ad esempio una casella combinata o un elenco a discesa della barra degli strumenti, prenotare un pulsante fittizio nella risorsa padre e sostituire il pulsante fittizio in fase di esecuzione usando [CMFCToolBar::ReplaceButton](#replacebutton). Per altre informazioni, vedere [procedura dettagliata: Inserimento di controlli nelle barre degli strumenti](../walkthrough-putting-controls-on-toolbars.md).
 
 `CMFCToolBar` è la classe base per le classi della libreria MFC [classe CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md), [classe CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md), e [classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md).
 
@@ -729,7 +729,7 @@ static void AutoGrayInactiveImages(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Valore booleano che specifica se dim immagini inattive. Se questo parametro è TRUE, le immagini inattive vengono visualizzati in grigio. In caso contrario, le immagini inattive non sono disattivate.
 
 *nGrayImagePercentage*<br/>
@@ -1123,7 +1123,7 @@ virtual void DrawSeparator(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione della posizione in cui viene disegnato il separatore in pixel.
 
 *bHorz*<br/>
@@ -1155,7 +1155,7 @@ void EnableCustomizeButton(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Abilita o disabilita il pulsante Personalizza.
 
 *iCustomizeCmd*<br/>
@@ -1205,7 +1205,7 @@ void EnableLargeIcons(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare le icone grandi, FALSE per disabilitare le icone grandi.
 
 ### <a name="remarks"></a>Note
@@ -1222,7 +1222,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare la personalizzazione rapida, FALSE per disabilitare la personalizzazione rapida.
 
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections
@@ -1235,14 +1235,14 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare la reflection di comando. FALSE per disabilitare la reflection di comando.
 
 ### <a name="remarks"></a>Note
 
 Chiamare questo metodo per abilitare la reflection di comando per i pulsanti della barra degli strumenti che contengono controlli incorporati, ad esempio le caselle combinate.
 
-Per ulteriori informazioni sulla reflection di comando, vedere [TN062: Reflection messaggi per i controlli Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
+Per ulteriori informazioni sulla reflection di comando, vedere [TN062: La Reflection per i controlli di Windows del messaggio](../../mfc/tn062-message-reflection-for-windows-controls.md).
 
 ##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels
 
@@ -1254,7 +1254,7 @@ void EnableTextLabels(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 TRUE se le etichette di testo vengono visualizzate sotto le icone dei pulsanti della barra degli strumenti; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -1271,7 +1271,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 
 ### <a name="parameters"></a>Parametri
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] L'handle di finestra da cercare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2146,7 +2146,7 @@ virtual int HitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Il punto da testare, nelle coordinate del client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2491,7 +2491,7 @@ TRUE se l'ultimo comando è stato inviato dal pulsante che *pButton* specifica; 
 
 ### <a name="remarks"></a>Note
 
-Questo metodo recupera un puntatore a un [struttura MSG](../../mfc/reference/msg-structure1.md) chiamando `CWnd::GetCurrentMessage`. Quindi Confronta l'oggetto HWND del pulsante con i `MSG::lParam` e `MSG::hwnd` membri per determinare se il pulsante è stata l'origine del comando.
+Questo metodo recupera un puntatore a un [struttura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) chiamando `CWnd::GetCurrentMessage`. Quindi Confronta l'oggetto HWND del pulsante con i `MSG::lParam` e `MSG::hwnd` membri per determinare se il pulsante è stata l'origine del comando.
 
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked
 
@@ -3905,5 +3905,5 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [Classe CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [Classe CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [Classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[Procedura dettagliata: inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

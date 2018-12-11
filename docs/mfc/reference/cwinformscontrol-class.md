@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547485"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178239"
 ---
 # <a name="cwinformscontrol-class"></a>Classe CWinFormsControl
 
@@ -113,8 +113,8 @@ Il tipo di dati del controllo da creare. Deve essere un [tipo](https://msdn.micr
 *dwStyle*<br/>
 Lo stile della finestra da applicare al controllo. Specificare una combinazione di [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles). Attualmente sono supportati solo gli stili seguenti: WS_TABSTOP, WS_VISIBLE, WS_DISABLED e WS_GROUP.
 
-*Rect*<br/>
-Oggetto [struttura RECT](../../mfc/reference/rect-structure1.md) che definisce le coordinate degli angoli superiore sinistro e inferiore destro del controllo (innanzitutto eseguire l'overload solo).
+*rect*<br/>
+Oggetto [struttura RECT](/windows/desktop/api/windef/ns-windef-tagrect) che definisce le coordinate degli angoli superiore sinistro e inferiore destro del controllo (innanzitutto eseguire l'overload solo).
 
 *nPlaceHolderID*<br/>
 L'handle del controllo statico titolare inserito nell'Editor di risorse. Il controllo Windows Form appena creato sostituisce il controllo statico, presupponendo che la posizione, nell'ordine z e stili (in secondo luogo eseguire l'overload solo).

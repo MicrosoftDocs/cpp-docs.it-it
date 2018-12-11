@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547316"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178460"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 
@@ -258,7 +258,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per utilizzare il tema di Windows corrente per disegnare i bordi pulsante; FALSE per non utilizzare il tema di Windows. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -503,7 +503,7 @@ AlignStyle m_nAlignStyle;
 
 Usare uno dei seguenti `CMFCButton::AlignStyle` valori di enumerazione per specificare l'allineamento del testo del pulsante:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |ALIGN_CENTER|(Impostazione predefinita) Consente di allineare il testo del pulsante al centro del pulsante.|
 |ALIGN_LEFT|Consente di allineare il testo del pulsante a sinistra del pulsante.|
@@ -531,7 +531,7 @@ FlatStyle  m_nFlatStyle;
 
 La tabella seguente elenca i `CMFCButton::m_nFlatStyle` valori di enumerazione che specificano l'aspetto di un pulsante.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |BUTTONSTYLE_3D|(Impostazione predefinita) Il pulsante viene visualizzato con le parti alta, tridimensionale. Quando si fa clic sul pulsante, viene visualizzato il pulsante per la pressione in un rientro di deep.|
 |BUTTONSTYLE_FLAT|Quando il mouse non posiziona su esso, il pulsante sembra essere bidimensionale e non ha generato i lati. Quando si posiziona il mouse su esso, il pulsante sembra avere lati bassi, tridimensionali. Quando si fa clic sul pulsante, viene visualizzato il pulsante per la pressione in un rientro superficiale.|
@@ -563,11 +563,11 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un riferimento a un rettangolo che delimita il pulsante.
 
 *uiState*<br/>
-[in] Stato del pulsante corrente. Per altre informazioni, vedere la `itemState` membro della [DRAWITEMSTRUCT (struttura)](../../mfc/reference/drawitemstruct-structure.md) argomento.
+[in] Stato del pulsante corrente. Per altre informazioni, vedere la `itemState` membro della [DRAWITEMSTRUCT (struttura)](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) argomento.
 
 ### <a name="remarks"></a>Note
 
@@ -593,7 +593,7 @@ virtual void OnDrawBorder(
 [in] Un riferimento a un rettangolo che delimita il pulsante.
 
 *uiState*<br/>
-[in] Stato del pulsante corrente. Per altre informazioni, vedere la `itemState` membro della [DRAWITEMSTRUCT (struttura)](../../mfc/reference/drawitemstruct-structure.md) argomento.
+[in] Stato del pulsante corrente. Per altre informazioni, vedere la `itemState` membro della [DRAWITEMSTRUCT (struttura)](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) argomento.
 
 ### <a name="remarks"></a>Note
 
@@ -639,7 +639,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un riferimento a un rettangolo che delimita il pulsante.
 
 *strText*<br/>

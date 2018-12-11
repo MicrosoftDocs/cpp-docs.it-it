@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693218"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177906"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Modifica degli stili di una finestra creata da MFC
 
@@ -46,7 +46,7 @@ Per le finestre cornice principale, è anche possibile specificare se la finestr
 
 Se si sta modificando gli attributi di finestra in un'applicazione esistente, seguire invece le istruzioni nella parte restante di questo articolo.
 
-Per modificare gli attributi di finestra predefinito usati da un'applicazione creata con la creazione guidata applicazione, eseguire l'override della finestra [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) funzione membro virtuale. `PreCreateWindow` un'applicazione può accedere il processo di creazione in genere gestito internamente dal [CDocTemplate](../mfc/reference/cdoctemplate-class.md) classe. Il framework chiama `PreCreateWindow` appena prima della creazione della finestra. Modificando la [CREATESTRUCT](../mfc/reference/createstruct-structure.md) struttura passata al `PreCreateWindow`, l'applicazione può modificare gli attributi utilizzati per creare la finestra. Ad esempio, per garantire una finestra non viene utilizzata una didascalia, utilizzare la seguente operazione bit per bit:
+Per modificare gli attributi di finestra predefinito usati da un'applicazione creata con la creazione guidata applicazione, eseguire l'override della finestra [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) funzione membro virtuale. `PreCreateWindow` un'applicazione può accedere il processo di creazione in genere gestito internamente dal [CDocTemplate](../mfc/reference/cdoctemplate-class.md) classe. Il framework chiama `PreCreateWindow` appena prima della creazione della finestra. Modificando la [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struttura passata al `PreCreateWindow`, l'applicazione può modificare gli attributi utilizzati per creare la finestra. Ad esempio, per garantire una finestra non viene utilizzata una didascalia, utilizzare la seguente operazione bit per bit:
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

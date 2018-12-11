@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 9489e1a36eac89ccff510c3c0fae467c2bb2deab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694621"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179006"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 
@@ -538,7 +538,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare il caricamento dello stato di ancoraggio, FALSE per disabilitare il caricamento dello stato di ancoraggio.
 
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu
@@ -557,7 +557,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare la gestione automatica del controllo barra dei menu di scelta rapida; FALSE per disabilitare la gestione automatica del controllo barra dei menu di scelta rapida.
 
 *uiCustomizeCmd*<br/>
@@ -694,7 +694,7 @@ TRUE se la descrizione comando è stato visualizzato. FALSE in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo se si desidera visualizzare la descrizione comando del pulsante della barra degli strumenti.
+Per impostazione predefinita, questo metodo non effettua alcuna operazione. Eseguire l'override di questo metodo se si desidera visualizzare la descrizione comando del pulsante della barra degli strumenti.
 
 ##  <a name="insertpane"></a>  CFrameWndEx::InsertPane
 
@@ -767,7 +767,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] La posizione del punto.
 
 *dwBarAlignment*<br/>
@@ -1062,7 +1062,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parametri
 
 *lpCreateStruct*<br/>
-[in] Un puntatore per il [struttura CREATESTRUCT](../../mfc/reference/createstruct-structure.md) per il nuovo frame.
+[in] Un puntatore per il [struttura CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) per il nuovo frame.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1240,7 +1240,7 @@ afx_msg void OnLButtonDown(
 *nFlags*<br/>
 [in] Indica se l'utente preme i tasti di modifica. Per i valori possibili, vedere il parametro *wParam* nelle [WM_LBUTTONDOWN notifica](/windows/desktop/inputdev/wm-lbuttondown).
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica di x e y coordinate dell'indicatore di misura, rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -1260,7 +1260,7 @@ afx_msg void OnLButtonUp(
 *nFlags*<br/>
 [in] Indica se l'utente preme i tasti di modifica. Per i valori possibili, vedere il parametro *wParam* nelle [WM_LBUTTONUP notifica](/windows/desktop/inputdev/wm-lbuttonup).
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica di x e y coordinate dell'indicatore di misura, rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -1338,7 +1338,7 @@ afx_msg void OnMouseMove(
 *nFlags*<br/>
 [in] Indica se un utente preme i tasti di modifica. Per i valori possibili, vedere il parametro *wParam* nelle [WM_MOUSEMOVE notifica](/windows/desktop/inputdev/wm-mousemove).
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica gli assi x e y coordinate del puntatore rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -1411,7 +1411,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] La posizione del puntatore in coordinate dello schermo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1435,7 +1435,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 [in] Valore enumerato di hit un puntatore. Per un elenco di valori possibili, vedere [WM_NCHITTEST notifica](/windows/desktop/inputdev/wm-nchittest).
 
-*punto*<br/>
+*point*<br/>
 [in] La posizione del puntatore in coordinate dello schermo.
 
 ### <a name="remarks"></a>Note
@@ -1628,7 +1628,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE se l'applicazione vengono illustrati i riquadri; FALSE in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1680,7 +1680,7 @@ afx_msg void OnSize(
 *NLE*<br/>
 [in] Tipo di ridimensionamento. Per i valori possibili, vedere il parametro *wParam* nelle [WM_SIZE notifica](/windows/desktop/winmsg/wm-size).
 
-*CX*<br/>
+*cx*<br/>
 [in] Nuova larghezza in pixel della cornice.
 
 *CY*<br/>
@@ -1704,7 +1704,7 @@ afx_msg void OnSizing(
 [in] Il bordo del frame in cui viene spostato. Vedere il parametro *wParam* nelle [WM_SIZING notifica](/windows/desktop/winmsg/wm-sizing).
 
 *pRect*<br/>
-[in, out] Puntatore a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oppure [RECT](../../mfc/reference/rect-structure1.md) struttura che contiene le coordinate del frame.
+[in, out] Puntatore a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oppure [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura che contiene le coordinate del frame.
 
 ### <a name="remarks"></a>Note
 
@@ -1874,7 +1874,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="parameters"></a>Parametri
 
 *lpwndpos*<br/>
-[in] Puntatore a un [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) struttura che contiene la nuova dimensione e posizione.
+[in] Puntatore a un [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) struttura che contiene la nuova dimensione e posizione.
 
 ### <a name="remarks"></a>Note
 
@@ -1898,7 +1898,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate dello schermo del punto da controllare.
 
 *nSensitivity*<br/>
@@ -1934,7 +1934,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametri
 
 *pMsg*<br/>
-[in] Un puntatore a un [MSG](../../mfc/reference/msg-structure1.md) struttura che contiene il messaggio da elaborare.
+[in] Un puntatore a un [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) struttura che contiene il messaggio da elaborare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2074,7 +2074,7 @@ void ShowPane(
 *pBar*<br/>
 [in] Puntatore alla barra di controllo per mostrare o nascondere.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Se TRUE, l'applicazione viene illustrata la barra di controllo. In caso contrario, l'applicazione consente di nascondere la barra di controllo.
 
 *bDelay*<br/>
