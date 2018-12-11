@@ -1,20 +1,27 @@
 ---
 title: Avviso della riga di comando D9036
-ms.date: 11/04/2016
+ms.date: 12/10/2018
 f1_keywords:
 - D9036
 helpviewer_keywords:
 - D9036
 ms.assetid: 68276e84-8d4e-4d4a-a9db-2874c81dfe66
-ms.openlocfilehash: b523413bce941d9721b88c1940739558fa56c753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2dd6cd528f6a3799176c77435ebd62d103303806
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465221"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248533"
 ---
 # <a name="command-line-warning-d9036"></a>Avviso della riga di comando D9036
 
-Utilizzare 'opzione_2' anziché 'opzione_1'
+> «*opzione\_2*'invece di'*opzione\_1*»
 
-È la continuazione dell'avviso D9036 [avviso della riga di comando D9035](../../error-messages/tool-errors/command-line-warning-d9035.md).
+## <a name="remarks"></a>Note
+
+È la continuazione dell'avviso D9036 [avviso della riga di comando D9035](../../error-messages/tool-errors/command-line-warning-d9035.md). Se una delle opzioni del compilatore è preferita anziché l'opzione deprecata, verrà elencato di seguito. Per collegamenti a ulteriori informazioni, vedere [opzioni del compilatore rimosse e deprecate](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options).
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni del compilatore deprecate e rimosse](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
+[Avviso della riga di comando D9035](command-line-warning-d9035.md)
