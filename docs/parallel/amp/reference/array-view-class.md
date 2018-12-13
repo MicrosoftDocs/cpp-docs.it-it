@@ -94,7 +94,7 @@ Il rango del `array_view` oggetto.
 |Nome|Descrizione|
 |----------|-----------------|
 |[operator()](#operator_call)|Restituisce il valore dell'elemento specificato dal parametro o parametri.|
-|[operator]](#operator_at)|Restituisce l'elemento specificato dai parametri.|
+|[operator[]](#operator_at)|Restituisce l'elemento specificato dai parametri.|
 |[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `array_view` in questo oggetto.|
 
 ### <a name="public-constants"></a>Costanti pubbliche

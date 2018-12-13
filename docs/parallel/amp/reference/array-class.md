@@ -77,7 +77,7 @@ Il rango della matrice.
 |----------|-----------------|
 |[operator std:: Vector&lt;value_type&gt;](#operator_vec)|Viene utilizzato `copy(*this, vector)` da convertire in modo implicito la matrice per un std::[vettore](../../../standard-library/vector-class.md) oggetto.|
 |[operator()](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|
-|[operator]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|
+|[operator[]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|
 |[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `array` in questo oggetto.|
 
 ### <a name="public-constants"></a>Costanti pubbliche
