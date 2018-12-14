@@ -143,7 +143,7 @@ In modalità testo, le combinazioni di ritorno a capo con avanzamento di riga ve
 
 Se **t** oppure **b** non è specificato in *modalità*, la modalità di traduzione predefinita è definita dalla variabile globale [fmode](../../c-runtime-library/fmode.md). Se **t** oppure **b** viene anteposto a argomento, la funzione ha esito negativo e restituisce **NULL**.
 
-Per altre informazioni su come usare le modalità binaria e di testo in formato Unicode e I/O flusso multibyte, vedere [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [I/O flusso Unicode in modalità testo e binaria](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Per altre informazioni su come usare le modalità binaria e di testo in formato Unicode e I/O flusso multibyte, vedere [I/O flusso Unicode in modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [I/O flusso Unicode in modalità testo e binaria](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 Le opzioni seguenti possono essere aggiunte a *modalità* per specificare comportamenti aggiuntivi.
 
