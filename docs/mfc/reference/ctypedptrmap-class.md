@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: f09b44c5b898ee0d583db45ca63ee67c3d1c5b47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494861"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657383"
 ---
 # <a name="ctypedptrmap-class"></a>Classe CTypedPtrMap
 
@@ -58,7 +58,7 @@ Classe dell'oggetto archiviato nella mappa.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[[] CTypedPtrMap::operator](#operator_at)|Inserisce un elemento nella mappa.|
+|[CTypedPtrMap::operator \[ \]](#operator_at)|Inserisce un elemento nella mappa.|
 
 ## <a name="remarks"></a>Note
 

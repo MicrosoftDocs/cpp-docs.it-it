@@ -1,6 +1,6 @@
 ---
 title: Passaggio di argomenti e convenzioni di denominazione
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473294"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627241"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passaggio di argomenti e convenzioni di denominazione
 
@@ -31,11 +31,11 @@ Nelle piattaforme x86, tutti gli argomenti vengono estesi a 32 bit quando vengon
 Il compilatore genera un codice di epilogo e di prologo per salvare e ripristinare i registri ESI, EDI, EBX e EBP, se sono utilizzati nella funzione.
 
 > [!NOTE]
->  Quando uno struct, un'unione o una classe vengono restituiti da una funzione per valore, tutte le definizioni del tipo devono essere uguali, altrimenti il programma può avere esito negativo in fase di esecuzione.
+> Quando uno struct, un'unione o una classe vengono restituiti da una funzione per valore, tutte le definizioni del tipo devono essere uguali, altrimenti il programma può avere esito negativo in fase di esecuzione.
 
 Per informazioni su come definire il proprio codice di prologo ed epilogo di funzione, vedere [chiamate alle funzioni Naked](../cpp/naked-function-calls.md).
 
-Per informazioni sull'impostazione predefinita le convenzioni di chiamata nel codice destinato alle piattaforme x64, vedere [Panoramica di x64 convenzioni di chiamata](../build/overview-of-x64-calling-conventions.md). Per informazioni sui problemi relativi alle convenzioni di chiamata nel codice destinato a piattaforme ARM, vedere [problemi comuni di migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md).
+Per informazioni sull'impostazione predefinita le convenzioni di chiamata nel codice destinato alle piattaforme x64, vedere [x64 convenzione di chiamata](../build/x64-calling-convention.md). Per informazioni sui problemi relativi alle convenzioni di chiamata nel codice destinato a piattaforme ARM, vedere [problemi comuni di migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md).
 
 Le seguenti convenzioni di chiamata sono supportate dal compilatore Visual C/C++.
 

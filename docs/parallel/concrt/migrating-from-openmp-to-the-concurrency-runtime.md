@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 4b70aa57a6485fefe0dbb678e72ba127502c89e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
+ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481926"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737624"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrazione da OpenMP al runtime di concorrenza
 
@@ -34,7 +34,7 @@ Può risultare utile per eseguire la migrazione del codice OpenMP esistente per 
 |È necessario il supporto di gestione delle eccezioni.|La libreria PPL consente di rilevare le eccezioni generate all'interno e all'esterno di un'area parallela o un ciclo. In OpenMP, è necessario gestire l'eccezione all'interno di loop o un'area parallela.|
 |È necessario un meccanismo di annullamento.|La libreria PPL consente alle applicazioni annullare le singole attività e alberi di lavoro parallelo. OpenMP richiede che l'applicazione per implementare un proprio meccanismo di annullamento.|
 |È necessario completare in un contesto diverso da cui inizia il codice parallelo.|Il Runtime di concorrenza consente di avviare un'attività in un contesto e quindi attendere o annullare l'attività in un altro contesto. In OpenMP, è necessario completare tutto il lavoro parallelo nel contesto da cui inizia.|
-|È necessario il supporto di debug migliorato.|Visual Studio fornisce il **stack in parallelo** e **attività in parallelo** windows in modo che si possono più facilmente il debug di applicazioni a thread multipli.<br /><br /> Per altre informazioni sul supporto del debug per il Runtime di concorrenza, vedere [utilizzando la finestra attività](/visualstudio/debugger/using-the-tasks-window), [usando la finestra Stack in parallelo](/visualstudio/debugger/using-the-parallel-stacks-window), e [procedura dettagliata: debug di un'operazione parallela Applicazione](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
+|È necessario il supporto di debug migliorato.|Visual Studio fornisce il **stack in parallelo** e **attività in parallelo** windows in modo che si possono più facilmente il debug di applicazioni a thread multipli.<br /><br /> Per altre informazioni sul supporto del debug per il Runtime di concorrenza, vedere [utilizzando la finestra attività](/visualstudio/debugger/using-the-tasks-window), [usando la finestra Stack in parallelo](/visualstudio/debugger/using-the-parallel-stacks-window), e [procedura dettagliata: Debug di un'applicazione parallela](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
 
 ## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Quando non eseguire la migrazione da OpenMP al Runtime di concorrenza
 
@@ -48,17 +48,17 @@ Di seguito vengono descritti i casi potrebbe non essere appropriato eseguire la 
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-[Procedura: Convertire un ciclo OpenMP parallel for per l'uso del runtime di concorrenza](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Procedura: Convertire un ciclo OpenMP parallel for usare il Runtime di concorrenza](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Dato un ciclo di base che usa il OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) e [per](../../parallel/openmp/reference/for-openmp.md) direttive, viene illustrato come convertire in modo che usi il Runtime di concorrenza [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.
 
-[Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'uso del runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'uso del Runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Dato una OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[per](../../parallel/openmp/reference/for-openmp.md) ciclo che non richiede tutte le iterazioni da eseguire, viene illustrato come convertire in modo che utilizzi il meccanismo di annullamento di Runtime di concorrenza.
 
-[Procedura: Convertire un ciclo OpenMP che usa la gestione delle eccezioni per l'uso del runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)<br/>
+[Procedura: Convertire un ciclo OpenMP che usa la gestione delle eccezioni per l'uso del Runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Dato una OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[per](../../parallel/openmp/reference/for-openmp.md) ciclo che esegue la gestione delle eccezioni, viene illustrato come convertire in modo che utilizzi il meccanismo di gestione delle eccezioni Runtime di concorrenza.
 
-[Procedura: Convertire un ciclo OpenMP che usa una variabile di riduzione per l'uso del runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Procedura: Convertire un ciclo OpenMP che usa una variabile di riduzione per usare il Runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Dato una OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[per](../../parallel/openmp/reference/for-openmp.md) ciclo che usa il [riduzione](../../parallel/openmp/reference/reduction.md) clausola, viene illustrato come convertire in modo che usi il Runtime di concorrenza.
 
 ## <a name="see-also"></a>Vedere anche

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 7543249719cd7fab10bac7824e69023fefbc35f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523728"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657552"
 ---
 # <a name="array-class"></a>Classe array
 
@@ -77,7 +77,7 @@ Il rango della matrice.
 |----------|-----------------|
 |[operator std:: Vector&lt;value_type&gt;](#operator_vec)|Viene utilizzato `copy(*this, vector)` da convertire in modo implicito la matrice per un std::[vettore](../../../standard-library/vector-class.md) oggetto.|
 |[operator()](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|
-|[operator[]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|
+|[operator\[\]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|
 |[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `array` in questo oggetto.|
 
 ### <a name="public-constants"></a>Costanti pubbliche
@@ -121,7 +121,7 @@ Il `array<T,N>` tipo viene usato in diversi scenari:
 
 **Intestazione:** amp.h
 
-**Spazio dei nomi:** Concurrency
+**Namespace:** Concorrenza
 
 ##  <a name="dtor"></a> ~ array
 

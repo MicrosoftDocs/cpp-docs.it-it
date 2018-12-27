@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 675112e108f57ad5208899005865570491e0d055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486588"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657539"
 ---
 # <a name="texture-class"></a>Classe texture
 
@@ -76,7 +76,7 @@ Numero di dimensioni della trama.
 |Nome|Descrizione|
 |----------|-----------------|
 |[operator()](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|
-|[operator]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|
+|[operator\[\]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|
 |[operator=](#operator_eq)|Copia l'oggetto specificato [trama](texture-class.md) a questo oggetto.|
 
 ### <a name="public-constants"></a>Costanti pubbliche
@@ -335,7 +335,7 @@ L'indice dell'elemento.
 *_Rank*<br/>
 Numero di dimensioni dell'indice.
 
-*valore*<br/>
+*value*<br/>
 Nuovo valore dell'elemento.
 
 ##  <a name="ctor"></a> Trama

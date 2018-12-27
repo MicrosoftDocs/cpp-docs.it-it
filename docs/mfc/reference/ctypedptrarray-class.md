@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: da31f6eef95364ad010d9c9aeb19225d42a42283
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 767d4782ec637a0404051e6871d584f73cefdcd2
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452325"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657474"
 ---
 # <a name="ctypedptrarray-class"></a>Classe CTypedPtrArray
 
@@ -67,7 +67,7 @@ Tipo degli elementi memorizzati nella matrice di classe di base.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[[] CTypedPtrArray::operator](#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|
+|[CTypedPtrArray::operator \[ \]](#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|
 
 ## <a name="remarks"></a>Note
 

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 31eec71dd134a5c675f70070ce1457462d10b739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509370"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657591"
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 
@@ -107,7 +107,7 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli su
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator[]](#operator_at)|Di overload. Trova o inserisce un elemento con la chiave specificata. Questo metodo è indipendente dalla concorrenza.|
+|[operator\[\]](#operator_at)|Di overload. Trova o inserisce un elemento con la chiave specificata. Questo metodo è indipendente dalla concorrenza.|
 |[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_unordered_map` a questo oggetto. Questo metodo non è indipendente dalla concorrenza.|
 
 ## <a name="remarks"></a>Note
@@ -425,7 +425,7 @@ Tipo di iteratore utilizzato per l'inserimento.
 *V*<br/>
 Il tipo del valore inserito nella mappa.
 
-*valore*<br/>
+*value*<br/>
 Valore da inserire.
 
 *WHERE*<br/>

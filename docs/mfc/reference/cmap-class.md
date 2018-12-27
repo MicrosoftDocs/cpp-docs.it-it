@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627318"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657578"
 ---
 # <a name="cmap-class"></a>Classe CMap
 
@@ -106,7 +106,7 @@ Tipo di dati usato per *valore* gli argomenti, in genere un riferimento a *valor
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[[] CMap::operator](#operator_at)|Inserisce un elemento nella mappa, la sostituzione di operatore per `SetAt`.|
+|[CMap::operator \[ \]](#operator_at)|Inserisce un elemento nella mappa, la sostituzione di operatore per `SetAt`.|
 
 ## <a name="remarks"></a>Note
 
@@ -116,7 +116,7 @@ Una variabile del tipo di che posizione viene utilizzata per l'accesso alternati
 
 Alcune funzioni membro di questa classe chiamano funzioni di supporto globale che devono essere personalizzati per la maggior parte degli utilizzi del `CMap` classe. Visualizzare [supporti delle classi Collection](../../mfc/reference/collection-class-helpers.md) nella sezione macro e funzioni globali delle **riferimento MFC**.
 
-`CMap` esegue l'override [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) per supportare la serializzazione e il dump dei relativi elementi. Se una mappa è archiviata in un archivio usando `Serialize`, ogni elemento della mappa viene serializzato a turno. L'implementazione predefinita del `SerializeElements` funzione helper esegue un'operazione OR bit per bit di scrittura. Per informazioni sulla serializzazione di elementi della raccolta puntatore derivano da `CObject` o altri tipi definiti dall'utente, vedere [procedura: creazione di una raccolta indipendente dai tipi](../../mfc/how-to-make-a-type-safe-collection.md).
+`CMap` esegue l'override [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) per supportare la serializzazione e il dump dei relativi elementi. Se una mappa è archiviata in un archivio usando `Serialize`, ogni elemento della mappa viene serializzato a turno. L'implementazione predefinita del `SerializeElements` funzione helper esegue un'operazione OR bit per bit di scrittura. Per informazioni sulla serializzazione di elementi della raccolta puntatore derivano da `CObject` o altri tipi definiti dall'utente, vedere [come: Creazione di una raccolta indipendente dai tipi](../../mfc/how-to-make-a-type-safe-collection.md).
 
 Se è necessario un dump di diagnostica dei singoli elementi della mappa (chiavi e valori), è necessario impostare la profondità del contesto di dump a 1 o versioni successive.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: 9639e0df6081e185349537ef40d85c1143b9f904
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a155d56cc234c11534f5456ef92ea913e094f1a8
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570651"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627280"
 ---
 # <a name="exception-handling-in-visual-c"></a>Gestione di eccezioni in Visual C++
 
@@ -31,11 +31,11 @@ Visual C++ supporta tre tipi di gestione delle eccezioni:
 
    A partire dalla versione 3.0, MCF utilizza le eccezioni C++, ma supporta ancora le precedenti macro di gestione delle eccezioni, che sono simili, nella forma, alle eccezioni C++. Sebbene per la creazione di nuovi programmi non sia consigliato utilizzare tali macro, le stesse sono ancora supportate per garantire la compatibilità con le versioni precedenti. Nei programmi che già utilizzano le macro, è possibile usare liberamente anche le eccezioni C++. A partire dalla versione 2.0 di Visual C++, durante la pre-elaborazione, le macro vengono valutate nelle parole chiave di gestione delle eccezioni definite nell'implementazione di Visual C++ del linguaggio C++. È possibile lasciare le macro di gestione delle eccezioni esistenti al loro posto, quando si inizia a utilizzare le eccezioni C++.
 
-Usare la [/EH](../build/reference/eh-exception-handling-model.md) opzione del compilatore per specificare il tipo di gestione delle eccezioni da usare in un progetto. Gestione delle eccezioni C++ è il valore predefinito. Non combinare i meccanismi di gestione degli errori; ad esempio non usare le eccezioni C++ con la gestione strutturata delle eccezioni. L'uso della gestione delle eccezioni C++ rende il codice più portabile e consente di gestire eccezioni di ogni tipo. Per altre informazioni sugli svantaggi della gestione strutturata delle eccezioni, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per consigli su come combinare le macro MFC ed eccezioni C++, vedere [eccezioni: utilizzo delle macro MFC ed eccezioni C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
+Usare la [/EH](../build/reference/eh-exception-handling-model.md) opzione del compilatore per specificare il tipo di gestione delle eccezioni da usare in un progetto. Gestione delle eccezioni C++ è il valore predefinito. Non combinare i meccanismi di gestione degli errori; ad esempio non usare le eccezioni C++ con la gestione strutturata delle eccezioni. L'uso della gestione delle eccezioni C++ rende il codice più portabile e consente di gestire eccezioni di ogni tipo. Per altre informazioni sugli svantaggi della gestione strutturata delle eccezioni, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per consigli su come combinare le macro MFC ed eccezioni C++, vedere [alle eccezioni: Utilizzo delle macro MFC ed eccezioni C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-Per informazioni sulla gestione delle eccezioni nelle applicazioni CLR, vedere [gestione delle eccezioni](../windows/exception-handling-cpp-component-extensions.md).
+Per informazioni sulla gestione delle eccezioni nelle applicazioni CLR, vedere [gestione delle eccezioni (C + c++ /CLI e c++ /CX)](../windows/exception-handling-cpp-component-extensions.md).
 
-Per informazioni sulla gestione delle eccezioni nei x64 processori, vedere [Exception Handling (x64)](../build/exception-handling-x64.md).
+Per informazioni sulla gestione delle eccezioni nei x64 processori, vedere [x64 la gestione delle eccezioni](../build/exception-handling-x64.md).
 
 ## <a name="see-also"></a>Vedere anche
 

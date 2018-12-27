@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437253"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627345"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Supporto per set di caratteri multibyte (MBCS, Multibyte Character Set)
 
@@ -46,7 +46,7 @@ La libreria di runtime C e MFC supportano programmazione a un byte, MBCS e Unico
 
 ### <a name="mbcsunicode-portability"></a>Portabilità di MBCS/Unicode
 
-Usando il file di intestazione Tchar.h, è possibile compilare applicazioni a un byte, MBCS e Unicode dalle stesse origini. Tchar. h definisce le macro precedute *tcs* , che eseguono il mapping al `str`, `_mbs`, o `wcs` funzioni, come appropriato. Per compilare applicazioni MBCS, definire il simbolo `_MBCS`. Per compilare Unicode, definire il simbolo `_UNICODE`. Per impostazione predefinita, `_MBCS` è definito per le applicazioni MFC. Per altre informazioni, vedere [mapping testo generico in Tchar. h](../text/generic-text-mappings-in-tchar-h.md).
+Usa il file di intestazione Tchar. h, è possibile compilare a un byte, MBCS e Unicode dalle stesse origini applicazioni. Tchar. h definisce le macro precedute *tcs* , che eseguono il mapping al `str`, `_mbs`, o `wcs` funzioni, come appropriato. Per compilare applicazioni MBCS, definire il simbolo `_MBCS`. Per compilare Unicode, definire il simbolo `_UNICODE`. Per impostazione predefinita, `_UNICODE` è definito per le applicazioni MFC. Per altre informazioni, vedere [mapping testo generico in Tchar. h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
 >  Comportamento sarà indefinito se si definiscono entrambi `_UNICODE` e `_MBCS`.

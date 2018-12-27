@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _InterlockedAddLargeStatistic intrinsic
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-ms.openlocfilehash: befcd74c432eb62ab3a718223ada6d0f441e72c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ada0a906b777ab8ac676ddfe0a5166e906999d
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432825"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627472"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
@@ -61,4 +61,4 @@ Questa funzione si comporta come una barriera di lettura / scrittura. Per altre 
 ## <a name="see-also"></a>Vedere anche
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
-[Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)
+[Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

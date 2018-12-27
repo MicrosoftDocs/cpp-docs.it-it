@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437937"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627267"
 ---
 # <a name="unicode-programming-summary"></a>Riepilogo della programmazione Unicode
 
@@ -22,7 +22,7 @@ Per poter sfruttare il supporto di run-time di C e MFC per Unicode, è necessari
 
 - Specificare il punto di ingresso.
 
-   Nel **Output** pagina della **Linker** cartella del progetto [pagine delle proprietà](../ide/property-pages-visual-cpp.md) nella finestra di dialogo, impostare il **punto di ingresso** simbolo da `wWinMainCRTStartup`.
+   Nel **avanzate** pagina della **Linker** cartella del progetto [pagine delle proprietà](../ide/property-pages-visual-cpp.md) nella finestra di dialogo, impostare il **punto di ingresso** simbolo da `wWinMainCRTStartup`.
 
 - Usare i tipi e funzioni di runtime portabile.
 

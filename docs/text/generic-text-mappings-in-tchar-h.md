@@ -1,5 +1,5 @@
 ---
-title: Mappature di testo generico in Tchar.h
+title: Mapping testo generico in Tchar. h
 ms.date: 11/04/2016
 f1_keywords:
 - tchar.h
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 969894502689dd5aeeeaa27404bafc3c483c1336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667584"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627507"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Mappature di testo generico in Tchar.h
+# <a name="generic-text-mappings-in-tcharh"></a>Mapping testo generico in Tchar. h
 
 Per semplificare il trasporto del codice per l'uso internazionale, la libreria di runtime Microsoft fornisce mapping testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti. È possibile usare questi mapping, che sono definiti in Tchar. h, per scrivere codice generico che può essere compilato per il formato a byte singolo, multibyte o set di caratteri Unicode, a seconda di una costante di manifesto definita utilizzando un `#define` istruzione. I mapping di testo generico sono estensioni Microsoft non compatibili con ANSI.
 

@@ -1,6 +1,6 @@
 ---
 title: Funzioni intrinseche _InterlockedExchange
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 034e0bb0c8c3f60d0686a5f88ee4b19ed473d72d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450687"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627176"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchange
 
@@ -186,4 +186,4 @@ Per un esempio d'uso `_InterlockedExchange`, vedere [InterlockedDecrement](../in
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)
+[Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

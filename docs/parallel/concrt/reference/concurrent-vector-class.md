@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 367a5ed6bf9d42730a309570c93afd1b315bae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501751"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657565"
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 
@@ -121,7 +121,7 @@ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli su
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[operator]](#operator_at)|Di overload. Fornisce l'accesso all'elemento in corrispondenza dell'indice specificato in un vettore simultaneo. Questo metodo è indipendente dalla concorrenza per le operazioni di lettura, nonché durante l'aumento delle dimensioni del vettore, purché si ha la sicurezza che il valore `_Index` è inferiore alla dimensione del vettore simultaneo.|
+|[operator\[\]](#operator_at)|Di overload. Fornisce l'accesso all'elemento in corrispondenza dell'indice specificato in un vettore simultaneo. Questo metodo è indipendente dalla concorrenza per le operazioni di lettura, nonché durante l'aumento delle dimensioni del vettore, purché si ha la sicurezza che il valore `_Index` è inferiore alla dimensione del vettore simultaneo.|
 |[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_vector` a questo oggetto. Questo metodo non è indipendente dalla concorrenza.|
 
 ## <a name="remarks"></a>Note

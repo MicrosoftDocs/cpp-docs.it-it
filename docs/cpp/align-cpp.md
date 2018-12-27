@@ -1,18 +1,18 @@
 ---
 title: align (C++)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - align_cpp
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: f5353354a334f6ee597bca3e49dfa2b4f98a0005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440443"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627332"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -78,9 +78,9 @@ Per altre informazioni, vedere:
 
 - [Funzionamento con compressione dei dati dell'allineamento](#vclrfhowalignworkswithdatapacking)
 
-- [Esempi di allineamento di strutture](../build/examples-of-structure-alignment.md) (specifico per x64)
+- [Esempi di allineamento di strutture](../build/x64-software-conventions.md#examples-of-structure-alignment) (specifico per x64)
 
-##  <a name="vclrfalignexamples"></a> Esempi di allineamento
+## <a name="vclrfalignexamples"></a> Esempi di allineamento
 
 Negli esempi seguenti viene illustrato come `__declspec(align(#))` influisce sulla dimensione e sull'allineamento delle strutture di dati. Negli esempi si presuppongono le seguenti definizioni:
 
@@ -171,7 +171,7 @@ void fn() {
 
 Se la memoria viene allocata nell'heap, l'allineamento dipende dalla funzione di allocazione che viene chiamata.  Ad esempio, se si usa `malloc`, il risultato dipende dalla dimensione dell'operando. Se *arg* > = 8, la memoria restituita verrà allineata a 8 byte. Se *arg* < 8, l'allineamento della memoria restituita sarà la prima potenza di 2 minore di *arg*. Ad esempio, se si usa malloc(7), l'allineamento sarà a 4 byte.
 
-##  <a name="vclrf_declspecaligntypedef"></a> Definizione di nuovi tipi con __declspec(align(#))
+## <a name="vclrf_declspecaligntypedef"></a> Definizione di nuovi tipi con __declspec(align(#))
 
 È possibile definire un tipo con una caratteristica di allineamento.
 
@@ -184,7 +184,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 A questo punto `aType` e `bType` sono le stesse dimensioni (8 byte), ma le variabili di tipo `bType` sono allineati a 32 byte.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a> Allineamento dei dati nell'archiviazione Thread-Local
+## <a name="vclrfthreadlocalstorageallocation"></a> Allineamento dei dati nell'archiviazione Thread-Local
 
 L'archiviazione locale di thread (TLS, Thread-Local Storage) statici creata con l'attributo `__declspec(thread)` e inserita nella sezione TLS dell'immagine funziona per l'allineamento esattamente come i dati statici normali. Per creare dati TLS, il sistema operativo alloca memoria con la stessa dimensione della sezione TLS e rispetta l'attributo di allineamento della sezione TLS.
 
@@ -207,7 +207,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> Funzionamento con compressione dei dati dell'allineamento
+## <a name="vclrfhowalignworkswithdatapacking"></a> Funzionamento con compressione dei dati dell'allineamento
 
 Il `/Zp` l'opzione del compilatore e `pack` pragma hanno l'effetto di comprimere i dati per i membri di struttura e unione. Questo esempio viene illustrato come `/Zp` e `__declspec(align(#))` funzionano insieme:
 
@@ -244,4 +244,4 @@ L'offset di un oggetto è basato sull'offset tra l'oggetto precedente e l'impost
 
 [__declspec](../cpp/declspec.md)<br/>
 [Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[Panoramica delle convenzioni di chiamata x64](../build/overview-of-x64-calling-conventions.md)
+[x64 convenzioni del software](../build/x64-software-conventions.md)

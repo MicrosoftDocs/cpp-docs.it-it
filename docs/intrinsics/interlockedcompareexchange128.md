@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 62c9501bb2a21aab241f37805d58c6ec12073ff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cfe9d650b66dc08a96599652b52f0b153198afa
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629957"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627398"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
@@ -131,4 +131,4 @@ Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. 
 
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
 [Funzioni intrinseche _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
-[Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)
+[Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

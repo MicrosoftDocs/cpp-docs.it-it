@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 849a7ba3c004263dc2f03adc301e5533bd8a2304
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
+ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525197"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411962"
 ---
 # <a name="vector-class"></a>Classe vector
 
@@ -1296,7 +1296,8 @@ int main( )
       cout << " " << *Iter;
    cout << endl;
 
-   v1.insert( v1.begin( )+1, v1.begin( )+2, v1.begin( )+4 );
+   const auto v2 = v1;
+   v1.insert( v1.begin( )+1, v2.begin( )+2, v2.begin( )+4 );
    cout << "v1 =";
    for (Iter = v1.begin( ); Iter != v1.end( ); Iter++ )
       cout << " " << *Iter;
@@ -1308,7 +1309,6 @@ int main( )
    vv1.insert( vv1.begin(), move( v1 ) );
    if ( vv1.size( ) != 0 && vv1[0].size( ) != 0 )
       {
-      vector < vector <int> >::iterator Iter;
       cout << "vv1[0] =";
       for (Iter = vv1[0].begin( ); Iter != vv1[0].end( ); Iter++ )
          cout << " " << *Iter;

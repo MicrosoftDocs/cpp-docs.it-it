@@ -1,6 +1,6 @@
 ---
 title: __fastcall
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __fastcall_cpp
 - __fastcall
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480041"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627364"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -29,11 +29,11 @@ Il **fastcall** convenzione di chiamata specifica che gli argomenti alle funzion
 |Convenzione della conversione maiuscolo/minuscolo e viceversa|Non viene effettuata alcuna conversione maiuscole/minuscole.|
 
 > [!NOTE]
->  Nelle versioni future del compilatore è possibile che vengano utilizzati registri differenti per archiviare i parametri.
+> Nelle versioni future del compilatore è possibile che vengano utilizzati registri differenti per archiviare i parametri.
 
 Usando il [/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md) l'opzione del compilatore, ogni funzione nel modulo viene compilata come **fastcall** a meno che la funzione viene dichiarata utilizzando un attributo in conflitto, o il nome della funzione `main` .
 
-Il **fastcall** (parola chiave) viene accettata e ignorata dai compilatori destinati a ARM e x64 architetture; su una x64 del chip, per convenzione, i primi quattro argomenti vengono passati nei registri quando possibile e argomenti aggiuntivi vengono passati nello stack. Per altre informazioni, vedere [Panoramica di x64 convenzioni di chiamata](../build/overview-of-x64-calling-conventions.md). In un chip ARM possono essere passati fino a quattro argomenti Integer e otto argomenti a virgola mobile nei registri e argomenti aggiuntivi vengono passati nello stack.
+Il **fastcall** (parola chiave) viene accettata e ignorata dai compilatori destinati a ARM e x64 architetture; su una x64 del chip, per convenzione, i primi quattro argomenti vengono passati nei registri quando possibile e argomenti aggiuntivi vengono passati nello stack. Per altre informazioni, vedere [x64 convenzione di chiamata](../build/x64-calling-convention.md). In un chip ARM possono essere passati fino a quattro argomenti Integer e otto argomenti a virgola mobile nei registri e argomenti aggiuntivi vengono passati nello stack.
 
 Per le funzioni di classi non statiche, se la funzione viene definita non inline, il modificatore della convenzione di chiamata non deve essere specificato nella definizione non inline. Questo significa che per i metodi membri non statici della classe la convenzione di chiamata specificata durante la dichiarazione è presunta in corrispondenza della definizione. Data la definizione di classe seguente
 

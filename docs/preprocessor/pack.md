@@ -1,6 +1,6 @@
 ---
 title: pack
-ms.date: 09/17/2018
+ms.date: 12/17/2018
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 0067b30c5c2eae9391defeea11c722d455ec8f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507601"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627514"
 ---
 # <a name="pack"></a>pack
 Specifica l'allineamento di compressione per una struttura, un'unione e i membri della classe.
@@ -57,7 +57,7 @@ Per ulteriori informazioni sulla modifica dell'allineamento, vedere questi argom
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [Esempi di allineamento di strutture](../build/examples-of-structure-alignment.md) (specifico per x64)
+- [Esempi di allineamento di strutture](../build/x64-software-conventions.md#examples-of-structure-alignment) (specifico per x64)
 
    > [!WARNING]
    > Si noti che in Visual Studio 2015 e versioni successive è possibile usare gli operatori standard alignas e alignof, che, a differenza di `__alignof` e `declspec( align )`, sono portabili tra compilatori. Lo standard C++ non contempla la compressione, pertanto è necessario usare comunque **pack** (o l'estensione corrispondente in altri compilatori) per specificare allineamenti inferiori alla dimensione parola dell'architettura di destinazione.
