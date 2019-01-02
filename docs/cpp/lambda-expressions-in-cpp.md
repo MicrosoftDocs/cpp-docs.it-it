@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176263"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978309"
 ---
 # <a name="lambda-expressions-in-c"></a>Espressioni lambda in C++
 
@@ -55,7 +55,7 @@ Questa figura illustra le parti della lambda:
 
 1. *trailing-return-type* facoltativo.
 
-1. *corpo dell'espressione lambda*)
+1. *corpo dell'espressione lambda*.
 
 ### <a name="capture-clause"></a>Clausola di acquisizione
 
@@ -102,9 +102,9 @@ void f(Args... args) {
 
 Per usare le espressioni lambda nel corpo di un metodo della classe, passare il **ciò** puntatore alla clausola di acquisizione per fornire l'accesso ai membri dati e i metodi della classe contenitrice.
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): il **ciò** puntatore può essere acquisito per valore specificando `*this` nella clausola di acquisizione. Acquisizione per valore significa che l'intera *chiusura*, che è l'oggetto funzione anonima che encapulates l'espressione lambda, viene copiato in ogni sito di chiamata in cui l'espressione lambda viene richiamata. Acquisizione per valore è utile quando l'espressione lambda verrà eseguita in operazioni parallele o asincrone, in particolare su alcune architetture hardware, ad esempio NUMA.
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Il **ciò** puntatore può essere acquisito per valore specificando `*this` nella clausola di acquisizione. Acquisizione per valore significa che l'intera *chiusura*, che è l'oggetto funzione anonima che encapulates l'espressione lambda, viene copiato in ogni sito di chiamata in cui l'espressione lambda viene richiamata. Acquisizione per valore è utile quando l'espressione lambda verrà eseguita in operazioni parallele o asincrone, in particolare su alcune architetture hardware, ad esempio NUMA.
 
-Per un esempio che illustra come usare le espressioni lambda con i metodi della classe, vedere "Esempio: usando un'espressione Lambda in un metodo" nella [esempi di espressioni Lambda](../cpp/examples-of-lambda-expressions.md).
+Per un esempio che illustra come usare le espressioni lambda con i metodi della classe, vedere "esempio: Un'espressione Lambda in un metodo di utilizzo"in [esempi di espressioni Lambda](../cpp/examples-of-lambda-expressions.md).
 
 Quando si usa la clausola di acquisizione, è consigliabile tenere in considerazione gli aspetti seguenti, in particolare quando si usano le espressioni lambda con il multithreading:
 
@@ -324,7 +324,7 @@ Per altre informazioni, vedere [generate_n](../standard-library/algorithm-functi
 
 ## <a name="constexpr-lambda-expressions"></a>espressioni lambda constexpr
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): un'espressione lambda può essere dichiarata come `constexpr` o usato in un'espressione costante quando l'inizializzazione di ciascun membro dati che l'it Consente di acquisire o introduce è consentita all'interno di un'espressione costante.
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Un'espressione lambda può essere dichiarata come `constexpr` o usato in un'espressione costante durante l'inizializzazione di ogni membro di dati che consente di acquisire o introduce è consentita all'interno di un'espressione costante.
 
 ```cpp
     int y = 32;

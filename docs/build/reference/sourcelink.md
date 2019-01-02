@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480990"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978283"
 ---
-# <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink includere file nel file PDB)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (file includono il collegamento all'origine nel file PDB)
 
-Specifica un file di configurazione SourceLink da includere nel file PDB generato dal linker.
+Specifica un file di configurazione di collegamento all'origine da includere nel file PDB generato dal linker.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,7 +28,7 @@ Specifica un formato JSON file di configurazione che contiene un mapping semplic
 
 ## <a name="remarks"></a>Note
 
-SourceLink è un sistema indipendenti dal controllo del codice sorgente e del linguaggio per fornire l'origine di debug per i file binari. SourceLink è supportata per i file binari nativi C++, a partire da Visual Studio 2017 versione 15.8. Per una panoramica di SourceLink, vedere [collegamento all'origine](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Per informazioni su come usare SourceLink nei propri progetti e come generare il file SourceLink come parte del progetto, vedere [SourceLink con](https://github.com/dotnet/sourcelink#using-sourcelink).
+Collegamento all'origine è un sistema indipendenti dal controllo del codice sorgente e del linguaggio per fornire l'origine di debug per i file binari. Collegamento di origine è supportato per i file binari nativi C++, a partire da Visual Studio 2017 versione 15.8. Per una panoramica del collegamento all'origine, vedere [collegamento all'origine](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Per informazioni su come usare il collegamento all'origine dei progetti e come generare il file SourceLink come parte del progetto, vedere [usando il collegamento all'origine](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Per impostare l'opzione del linker /SOURCELINK in Visual Studio
 
