@@ -25,7 +25,7 @@ Le descrizioni delle funzioni di modello dell'algoritmo utilizzano diverse espre
 
 - La frase "nell'intervallo \[ *oggetto*, *B*)" indica la sequenza di zero o più valori discreti a partire *oggetto* fino a ma senza includerlo *B* . Un intervallo è valido solo se *B* sia raggiungibile dal *oggetto;* è possibile archiviare *oggetto* in un oggetto *N* (*N*  =  *Un'*), incrementare l'oggetto zero o più volte (+ +*N*), in modo che l'oggetto risulta uguale a *B* dopo un numero finito di incrementi (*N*   ==  *B*).
 
-- La frase "ciascuna *N* compreso nell'intervallo \[ *oggetto*, *B*)" significa che *N* inizia con il valore *un*e viene incrementato zero o più volte fino a quando non è uguale al valore *B*. Il caso N* == *B* non è compreso nell'intervallo.
+- La frase "ciascuna *N* compreso nell'intervallo \[ *oggetto*, *B*)" significa che *N* inizia con il valore *un*e viene incrementato zero o più volte fino a quando non è uguale al valore *B*. Il caso *N* == *B* non è compreso nell'intervallo.
 
 - La frase "il valore minimo *N* compreso nell'intervallo \[ *oggetto*, *B*) tale che *X*" significa che la condizione *X* viene determinato per ogni *N* nell'intervallo \[ *oggetto*, *B*) finché la condizione *X*viene soddisfatta.
 
