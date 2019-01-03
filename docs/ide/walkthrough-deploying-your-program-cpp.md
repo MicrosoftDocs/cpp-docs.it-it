@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496434"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657513"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Procedura dettagliata: Distribuzione di un programma (C++)
 
@@ -62,7 +62,7 @@ La procedura dettagliata mostra come usare Windows Installer per distribuire l'a
 
 1. In **Esplora soluzioni** selezionare il progetto **Game Installer** e scegliere **Visualizza** > **Finestra Proprietà** o premere **F4** per aprire la finestra **Proprietà**.
 
-1. Specificare eventuali dettagli aggiuntivi da visualizzare nel programma di installazione.  Ad esempio, usare *Contoso* per **Produttore**, *Game Installer* per **Nome prodotto** e *http://www.contoso.com* per **URL supporto**.
+1. Specificare eventuali dettagli aggiuntivi da visualizzare nel programma di installazione.  Ad esempio, usare *Contoso* per **Produttore**, *Game Installer* per **Nome prodotto** e *http\://www.contoso.com* per **URL supporto**.
 
 1. Nella barra dei menu scegliere **Compilazione** > **Gestione configurazione**. Nella tabella **Progetto**, nella colonna **Compilazione** selezionare la casella per **Game Installer**. Fare clic su **Chiudi**.
 
