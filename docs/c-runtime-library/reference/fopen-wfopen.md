@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333228"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031291"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -97,7 +97,7 @@ Nella tabella seguente vengono riepilogate le modalità usate per vari **ccs** f
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Codifiche usate in base a flag ccs e indicatore ordine byte
 
-|flag CCS|Nessun indicatore ordine byte (o file nuovo)|Indicatore ordine byte (BOM): UTF-8|Indicatore ordine byte (BOM): UTF-16|
+|flag CCS|Nessun indicatore ordine byte (o file nuovo)|INDICATORE ORDINE BYTE: UTF-8|INDICATORE ORDINE BYTE: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -160,25 +160,25 @@ Le opzioni seguenti possono essere aggiunte a *modalità* per specificare compor
 
 Caratteri validi per il *modalità* stringa usata nella **fopen** e **fdopen** corrispondono alle *oflag* argomenti utilizzati in [Open](open-wopen.md) e [sopen](sopen-wsopen.md), come indicato di seguito.
 
-|I caratteri *modalità* stringa|Equivalente *oflag* valore per sopen|
+|I caratteri *modalità* stringa|Equivalente *oflag* affare \_aprire /\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**O_wronly** &#124; **o_append** (in genere **o_wronly** &#124; **o_creat** &#124;* * o_append * *)|
-|**+**|**O_rdwr** &#124; **o_append** (in genere **o_rdwr** &#124; **o_append** &#124; **o_creat** )|
-|**r**|**_O_RDONLY**|
-|**r +**|**O_RDWR**|
-|**w**|**O_wronly** (in genere **o_wronly** &#124; **o_creat** &#124;* * o_trunc * *)|
-|**w +**|**O_rdwr** (in genere **o_rdwr** &#124; **o_creat** &#124; **o_trunc**)|
-|**b**|**O_BINARY**|
-|**t**|**_O_TEXT**|
+|**a**|**\_U\_WRONLY** &#124;  **\_u\_ACCODA** (in genere  **\_u\_WRONLY** &#124;  **\_O\_per creare** &#124;  **\_O\_APPEND**)|
+|**+**|**\_U\_RDWR** &#124;  **\_u\_ACCODA** (in genere  **\_u\_RDWR** &#124;  **\_ U\_APPEND** &#124;  **\_u\_per creare** )|
+|**r**|**\_O\_RDONLY**|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_U\_WRONLY** (in genere  **\_u\_WRONLY** &#124;  **\_u\_per creare** &#124;  **\_O\_TRUNC**)|
+|**w +**|**\_U\_RDWR** (in genere  **\_u\_RDWR** &#124;  **\_u\_per creare** &#124;  **\_ U\_TRUNC**)|
+|**b**|**\_U\_BINARIO**|
+|**t**|**\_O\_TEXT**|
 |**c**|nessuno|
 |**n**|nessuno|
-|**S**|**_O_SEQUENTIAL**|
-|**R**|**_O_RANDOM**|
-|**T**|**_O_SHORTLIVED**|
-|**D**|**_O_TEMPORARY**|
-|**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**O_UTF8**|
-|**CCS = UTF-16LE**|**O_UTF16**|
+|**S**|**\_U\_SEQUENZIALE**|
+|**R**|**\_U\_RANDOM**|
+|**T**|**\_U\_SHORTLIVED**|
+|**D**|**\_U\_TEMPORANEO**|
+|**CCS = UNICODE**|**\_O\_WTEXT**|
+|**CCS = UTF-8**|**\_U\_UTF8**|
+|**CCS = UTF-16LE**|**\_U\_UTF16**|
 
 Se si usa **rb** modalità, non è necessario convertire il codice e se si prevede di leggere la maggior parte di un file di grandi dimensioni o non desidera massimizzare le prestazioni di rete, è opportuno considerare anche se per l'utilizzo della memoria file Win32 mappati in come opzione.
 

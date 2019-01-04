@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617438"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031278"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,7 +66,12 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 Il **setMode** funzione imposta *modalità* la modalità di conversione di file fornito dal *fd*. Il passaggio **o_text** come *modalità* imposta il testo (convertito è,) modalità. Combinazioni di ritorno a capo return-line feed (CR-LF) vengono convertite in una singola riga, carattere di avanzamento nell'input. I caratteri di avanzamento riga sono convertiti in combinazioni di ritorno a capo-avanzamento riga in fase di output. Il passaggio **O_BINARY** set (non convertita) modalità binaria, in cui queste conversioni sono eliminate.
 
-È anche possibile passare **_O_U16TEXT**, **_O_U8TEXT**, o **o_wtext** per abilitare la modalità Unicode, come illustrato nel secondo esempio più avanti in questo documento. **setMode** viene in genere usato per modificare la modalità di traduzione predefinita di **stdin** e **stdout**, ma è possibile usarlo per qualsiasi file. Se si applicano **setMode** al descrittore di file per un flusso, chiamare **setMode** prima di eseguire qualsiasi operazione di input o output nel flusso.
+È anche possibile passare **_O_U16TEXT**, **_O_U8TEXT**, o **o_wtext** per abilitare la modalità Unicode, come illustrato nel secondo esempio più avanti in questo documento.
+
+> [!CAUTION]
+> Modalità Unicode è per le funzioni di stampa a livello (ad esempio, `wprintf`) e non è supportata per le funzioni di stampa narrow. Utilizzo di una funzione di stampa narrow nel flusso Unicode in modalità attiva un'asserzione.
+
+**setMode** viene in genere usato per modificare la modalità di traduzione predefinita di **stdin** e **stdout**, ma è possibile usarlo per qualsiasi file. Se si applicano **setMode** al descrittore di file per un flusso, chiamare **setMode** prima di eseguire qualsiasi operazione di input o output nel flusso.
 
 > [!CAUTION]
 > Se si scrittura dati in un flusso di file, scaricare esplicitamente il codice usando [fflush](fflush.md) prima di usare **setMode** per modificare la modalità. Se non si scarica il codice, è possibile che si ottenga comportamento imprevisto. Se non sono stati scritti dati nel flusso, non sarà necessario scaricare il codice.
