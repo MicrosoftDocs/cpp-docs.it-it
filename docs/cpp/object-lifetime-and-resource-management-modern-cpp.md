@@ -3,12 +3,12 @@ title: Durata degli oggetti e gestione delle risorse (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: d7bf45881ef82ecf0d11892e5ddf3d3c16a437cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609937"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220630"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Durata degli oggetti e gestione delle risorse (C++ moderno)
 
@@ -85,6 +85,6 @@ Utilizzare una durata statica sporadicamente (statiche globali, funzione locale 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

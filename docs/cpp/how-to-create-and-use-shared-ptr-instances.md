@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: creare e utilizzare istanze shared_ptr'
+title: 'Procedura: Creare e utilizzare istanze shared_ptr'
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176276"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220595"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>Procedura: creare e utilizzare istanze shared_ptr
+# <a name="how-to-create-and-use-sharedptr-instances"></a>Procedura: Creare e utilizzare istanze shared_ptr
 
 Il tipo `shared_ptr` è un puntatore intelligente nella libreria C++ standard progettato per scenari in cui più proprietari potrebbero dover gestire la durata dell'oggetto in memoria. Dopo avere inizializzato un oggetto `shared_ptr`, è possibile copiarlo, passarlo come valore negli argomenti di funzione e assegnarlo ad altre istanze di `shared_ptr`. Tutte le istanze puntano allo stesso oggetto e condividono l'accesso a un "blocco di controllo" che incrementa e decrementa il conteggio dei riferimenti ogni qualvolta un nuovo oggetto `shared_ptr` viene aggiunto, esce dall'ambito o viene reimpostato. Quando il conteggio dei riferimenti arriva a zero, il blocco di controllo elimina la risorsa di memoria e se stesso.
 
@@ -67,4 +67,4 @@ Nell'esempio riportato di seguito viene illustrato come `shared_ptr` esegue l'ov
 
 ## <a name="see-also"></a>Vedere anche
 
-[Puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md)
+[Puntatori intelligenti (C++ moderno)](../cpp/smart-pointers-modern-cpp.md)

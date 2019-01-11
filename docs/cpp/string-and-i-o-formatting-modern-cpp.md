@@ -3,12 +3,12 @@ title: Formattazione di stringhe e I / O (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326186"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220504"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formattazione di stringhe e I/O (C++ moderno)
 
@@ -46,7 +46,7 @@ Alcuni vantaggi di Boost. Format sono:
 
 - Estensibile: Funziona per qualsiasi tipo che può essere trasmesso.
 
-- Utile: Posix Standard e stringhe di formato simili.
+- Utile: Posix standard e stringhe di formato simili.
 
 Sebbene Boost si basa su C++ [iostream](../standard-library/iostream-programming.md), che sono sicuri ed estensibili, non sono ottimizzate per le prestazioni. Quando è necessario ottimizzare le prestazioni, prendere in considerazione C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) e [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), che sono veloci e facile da usare. Tuttavia, non sono estendibili o senza vulnerabilità. (Le versioni sicure esistono, ma comportano una riduzione delle prestazioni leggero. Per altre informazioni, vedere [printf_s, printf_s_l, wprintf_s, wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) e [sprintf_s, sprintf_s_l, swprintf_s, swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
@@ -64,7 +64,7 @@ Il codice seguente vengono illustrate alcune delle funzionalità di formattazion
 
 ## <a name="see-also"></a>Vedere anche
 
-[Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

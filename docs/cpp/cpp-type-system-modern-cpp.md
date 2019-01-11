@@ -3,12 +3,12 @@ title: Sistema di tipi C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176341"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220673"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
 
@@ -16,11 +16,11 @@ Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è 
 
 ## <a name="terminology"></a>Terminologia
 
-**Variabile**: il collegamento simbolico nome di una quantità di dati in modo che il nome utilizzabile per accedere ai dati di cui fa riferimento a nell'ambito del codice in cui è definito. In C++ *variabile* viene generalmente usato per fare riferimento alle istanze di tipi di dati scalari, mentre le istanze di altri tipi sono in genere chiamate *oggetti*.
+**Variabile**: Il collegamento simbolico nome di una quantità di dati in modo che il nome utilizzabile per accedere ai dati di cui fa riferimento a nell'ambito del codice in cui è definito. In C++ *variabile* viene generalmente usato per fare riferimento alle istanze di tipi di dati scalari, mentre le istanze di altri tipi sono in genere chiamate *oggetti*.
 
-**Oggetto**: per motivi di semplicità e coerenza, in questo articolo viene usato il termine *oggetto* per fare riferimento a qualsiasi istanza di una classe o struttura, quando viene usato in senso generale include tutti i tipi, anche le variabili scalari.
+**Oggetto**: Per semplicità e coerenza, in questo articolo viene usato il termine *oggetto* per fare riferimento a qualsiasi istanza di una classe o struttura, quando viene usato in senso generale include tutti i tipi, anche le variabili scalari.
 
-**Tipo POD** (dati non aggiornati): questa categoria informale di tipi di dati in C++ fa riferimento a tipi che sono scalari (vedere la sezione tipi fondamentali) o vengono *classi POD*. Una classe POD non contiene membri dati statici che non siano anche POD e non contiene costruttori, distruttori e operatori di assegnazione definiti dall'utente. Una classe POD non include funzioni virtuali, né una classe base e né membri dati non statici privati o protetti. I tipi POD vengono spesso utilizzati per lo scambio di dati esterni, ad esempio con un modulo scritto nel linguaggio C (che presenta solo tipi POD).
+**Tipo POD** (dati non aggiornati): Questa categoria informale di tipi di dati in C++ fa riferimento a tipi che sono scalari (vedere la sezione tipi fondamentali) o vengono *classi POD*. Una classe POD non contiene membri dati statici che non siano anche POD e non contiene costruttori, distruttori e operatori di assegnazione definiti dall'utente. Una classe POD non include funzioni virtuali, né una classe base e né membri dati non statici privati o protetti. I tipi POD vengono spesso utilizzati per lo scambio di dati esterni, ad esempio con un modulo scritto nel linguaggio C (che presenta solo tipi POD).
 
 ## <a name="specifying-variable-and-function-types"></a>Specificare tipi di funzione e di variabile
 
@@ -170,6 +170,6 @@ Per ulteriori informazioni sul sistema di tipi di C++, vedere gli argomenti segu
 
 ## <a name="see-also"></a>Vedere anche
 
-[Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

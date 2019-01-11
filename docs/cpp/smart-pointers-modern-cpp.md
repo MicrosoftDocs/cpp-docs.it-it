@@ -3,12 +3,12 @@ title: Puntatori intelligenti (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: 5f04a4ab23241d63fc1694d419f85d8b694b7fff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616905"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220660"
 ---
 # <a name="smart-pointers-modern-c"></a>Puntatori intelligenti (C++ moderno)
 
@@ -68,23 +68,23 @@ Nella sezione seguente vengono riepilogati i diversi tipi di puntatori intellige
 Utilizzare questi puntatori intelligenti come prima scelta per incapsulare i puntatori in oggetti C++ non aggiornati (POCO, plain old C++ object).
 
 - `unique_ptr`<br/>
-   Consente esattamente un proprietario del puntatore sottostante. Utilizzarlo come scelta predefinita per POCO, a meno che non sia necessario un `shared_ptr`. Può essere spostato a un nuovo proprietario, ma non copiato o condiviso. Sostituisce `auto_ptr`, che è deprecato. Confrontare con `boost::scoped_ptr`. `unique_ptr` piccola ed efficiente; la dimensione è un indicatore di misura e supporta i riferimenti rvalue per inserimento rapido e il recupero da raccolte di libreria Standard C++. File di intestazione: `<memory>`. Per altre informazioni, vedere [procedura: creare e utilizzare istanze unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) e [classe unique_ptr](../standard-library/unique-ptr-class.md).
+   Consente esattamente un proprietario del puntatore sottostante. Utilizzarlo come scelta predefinita per POCO, a meno che non sia necessario un `shared_ptr`. Può essere spostato a un nuovo proprietario, ma non copiato o condiviso. Sostituisce `auto_ptr`, che è deprecato. Confrontare con `boost::scoped_ptr`. `unique_ptr` piccola ed efficiente; la dimensione è un indicatore di misura e supporta i riferimenti rvalue per inserimento rapido e il recupero da raccolte di libreria Standard C++. File di intestazione: `<memory>`. Per altre informazioni, vedere [Procedura: Creare e utilizzare istanze unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) e [classe unique_ptr](../standard-library/unique-ptr-class.md).
 
 - `shared_ptr`<br/>
-   Puntatore intelligente con conteggio dei riferimenti. Utilizzarlo quando si desidera assegnare un puntatore non elaborato a più proprietari, ad esempio quando si restituisce una copia di un puntatore da un contenitore, ma si desidera conservare l'originale. Il puntatore non elaborato non viene eliminato finché tutti i proprietari di `shared_ptr` non sono usciti dall'ambito o non hanno ceduto in altro modo la proprietà. Ha le dimensioni di due puntatori, uno per l'oggetto e uno per il blocco di controllo condiviso che contiene il conteggio dei riferimenti. File di intestazione: `<memory>`. Per altre informazioni, vedere [procedura: creare e utilizzare istanze shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) e [classe shared_ptr](../standard-library/shared-ptr-class.md).
+   Puntatore intelligente con conteggio dei riferimenti. Utilizzarlo quando si desidera assegnare un puntatore non elaborato a più proprietari, ad esempio quando si restituisce una copia di un puntatore da un contenitore, ma si desidera conservare l'originale. Il puntatore non elaborato non viene eliminato finché tutti i proprietari di `shared_ptr` non sono usciti dall'ambito o non hanno ceduto in altro modo la proprietà. Ha le dimensioni di due puntatori, uno per l'oggetto e uno per il blocco di controllo condiviso che contiene il conteggio dei riferimenti. File di intestazione: `<memory>`. Per altre informazioni, vedere [Procedura: Creare e utilizzare istanze shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) e [classe shared_ptr](../standard-library/shared-ptr-class.md).
 
 - `weak_ptr`<br/>
-    Puntatore intelligente per casi speciali da utilizzare insieme a `shared_ptr`. `weak_ptr` fornisce l'accesso a un oggetto di proprietà di una o più istanze di `shared_ptr`, ma non partecipa al conteggio dei riferimenti. Utilizzarlo quando si desidera osservare un oggetto, ma non è necessario che rimanga attivo. Necessario in alcuni casi per interrompere i riferimenti circolari tra istanze di `shared_ptr`. File di intestazione: `<memory>`. Per altre informazioni, vedere [procedura: creare e utilizzare istanze weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) e [classe weak_ptr](../standard-library/weak-ptr-class.md).
+    Puntatore intelligente per casi speciali da utilizzare insieme a `shared_ptr`. `weak_ptr` fornisce l'accesso a un oggetto di proprietà di una o più istanze di `shared_ptr`, ma non partecipa al conteggio dei riferimenti. Utilizzarlo quando si desidera osservare un oggetto, ma non è necessario che rimanga attivo. Necessario in alcuni casi per interrompere i riferimenti circolari tra istanze di `shared_ptr`. File di intestazione: `<memory>`. Per altre informazioni, vedere [Procedura: Creare e utilizzare istanze weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) e [classe weak_ptr](../standard-library/weak-ptr-class.md).
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Puntatori intelligenti per oggetti COM (programmazione Windows classica)
 
 Quando si utilizzano gli oggetti COM, eseguire il wrapping dei puntatori a interfaccia in un tipo di puntatore intelligente appropriato. La libreria ATL (Active Template Library) definisce diversi puntatori intelligenti che assolvono a funzioni diverse. È anche possibile utilizzare il tipo di puntatore intelligente `_com_ptr_t`, utilizzato dal compilatore durante la creazione di classi wrapper da file TLB. Si tratta della scelta migliore quando non si desidera includere i file di intestazione ATL.
 
 [Classe CComPtr](../atl/reference/ccomptr-class.md)<br/>
-Utilizzarlo solo se non si può utilizzare ATL. Esegue il conteggio dei riferimenti mediante i metodi `AddRef` e `Release`. Per altre informazioni, vedere [procedura: creare e utilizzare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+Utilizzarlo solo se non si può utilizzare ATL. Esegue il conteggio dei riferimenti mediante i metodi `AddRef` e `Release`. Per altre informazioni, vedere [Procedura: Creare e usare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
 [Classe CComQIPtr](../atl/reference/ccomqiptr-class.md)<br/>
-È simile a `CComPtr`, ma fornisce una sintassi semplificata per chiamare `QueryInterface` su oggetti COM. Per altre informazioni, vedere [procedura: creare e utilizzare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+È simile a `CComPtr`, ma fornisce una sintassi semplificata per chiamare `QueryInterface` su oggetti COM. Per altre informazioni, vedere [Procedura: Creare e usare istanze CComPtr e CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
 [Classe CComHeapPtr](../atl/reference/ccomheapptr-class.md)<br/>
 Puntatore intelligente a oggetti che utilizzano `CoTaskMemFree` per liberare memoria.
@@ -116,6 +116,6 @@ Classe che incapsula metodi per modificare un elenco di nodi `CAutoPtr`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

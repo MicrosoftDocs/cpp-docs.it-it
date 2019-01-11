@@ -3,12 +3,12 @@ title: Gestione di errori ed eccezioni (C++ moderno)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523288"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220569"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Gestione di errori ed eccezioni (C++ moderno)
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-Le eccezioni in C++ sono simili a quelle in linguaggi quali c# e Java. Nel **provare** bloccare, se è un'eccezione *generata* sarà *intercettata* dal primo associati **catch** blocchi il cui tipo corrisponde a quello del eccezione. In altre parole, l'esecuzione passa dal **throw** istruzione per il **catch** istruzione. Se non viene trovato alcun blocco catch, `std::terminate` viene richiamato e il programma viene chiuso. In C++, qualsiasi tipo può essere generato; Tuttavia, è consigliabile che si genera un tipo che deriva direttamente o indirettamente da `std::exception`. Nell'esempio precedente, il tipo di eccezione [invalid_argument](../standard-library/invalid-argument-class.md), viene definito nella libreria standard nel [ \<stdexcept >](../standard-library/stdexcept.md) file di intestazione. C++ non fornisce e non richiede, una **infine** blocchi per assicurarsi che tutte le risorse vengano rilasciate se viene generata un'eccezione. L'acquisizione della risorsa è l'espressione idiomatica initialization (RAII), che utilizza i puntatori intelligenti, fornisce la funzionalità richiesta per la pulizia delle risorse. Per altre informazioni, vedere [procedura: progettare la sicurezza di eccezione del](../cpp/how-to-design-for-exception-safety.md). Per informazioni sul meccanismo di rimozione dello stack C++, vedere [eccezioni e rimozione dello Stack](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
+Le eccezioni in C++ sono simili a quelle in linguaggi quali c# e Java. Nel **provare** bloccare, se è un'eccezione *generata* sarà *intercettata* dal primo associati **catch** blocchi il cui tipo corrisponde a quello del eccezione. In altre parole, l'esecuzione passa dal **throw** istruzione per il **catch** istruzione. Se non viene trovato alcun blocco catch, `std::terminate` viene richiamato e il programma viene chiuso. In C++, qualsiasi tipo può essere generato; Tuttavia, è consigliabile che si genera un tipo che deriva direttamente o indirettamente da `std::exception`. Nell'esempio precedente, il tipo di eccezione [invalid_argument](../standard-library/invalid-argument-class.md), viene definito nella libreria standard nel [ \<stdexcept >](../standard-library/stdexcept.md) file di intestazione. C++ non fornisce e non richiede, una **infine** blocchi per assicurarsi che tutte le risorse vengano rilasciate se viene generata un'eccezione. L'acquisizione della risorsa è l'espressione idiomatica initialization (RAII), che utilizza i puntatori intelligenti, fornisce la funzionalità richiesta per la pulizia delle risorse. Per altre informazioni, vedere [Procedura: Progettazione per la protezione dalle eccezioni](../cpp/how-to-design-for-exception-safety.md). Per informazioni sul meccanismo di rimozione dello stack C++, vedere [eccezioni e rimozione dello Stack](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
 
 ## <a name="basic-guidelines"></a>Linee guida di base
 
@@ -70,7 +70,7 @@ Gestione degli errori affidabile è impegnativa in qualsiasi linguaggio di progr
 
 - Utilizzare le eccezioni quando il codice che gestisce l'errore potrebbe essere separato dal codice che rileva l'errore da uno o più chiamate alle funzioni. Valutare se usare invece i codici di errore nei cicli critiche per le prestazioni quando il codice che gestisce l'errore è strettamente collegato al codice che lo rileva.
 
-- Per ogni funzione che potrebbe generare o propagare un'eccezione, specificare una delle tre garanzie di eccezione: la garanzia forte, la garanzia di base o la garanzia nothrow (noexcept). Per altre informazioni, vedere [procedura: progettare la sicurezza di eccezione del](../cpp/how-to-design-for-exception-safety.md).
+- Per ogni funzione che potrebbe generare o propagare un'eccezione, specificare una delle tre garanzie di eccezione: la garanzia forte, la garanzia di base o la garanzia nothrow (noexcept). Per altre informazioni, vedere [Procedura: Progettazione per la protezione dalle eccezioni](../cpp/how-to-design-for-exception-safety.md).
 
 - Generare eccezioni per valore e intercettarle per riferimento. Non rilevare ciò che è possibile gestire.
 
@@ -100,7 +100,7 @@ Le specifiche di eccezione sono introdotte in C++ che consente di specificare le
 
 ## <a name="see-also"></a>Vedere anche
 
-[Procedura: Interfaccia tra codice eccezionale e non eccezionale](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Procedura: Interfaccia tra codice eccezionale e Non eccezionale](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

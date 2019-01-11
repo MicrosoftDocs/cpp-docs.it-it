@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: creare e utilizzare istanze CComPtr e CComQIPtr'
+title: 'Procedura: Creare e usare istanze CComPtr e CComQIPtr'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8065e0b8782c1c28d83aa6fc9690150793fe51ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518703"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220548"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procedura: creare e utilizzare istanze CComPtr e CComQIPtr
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procedura: Creare e usare istanze CComPtr e CComQIPtr
 
 Nella programmazione Windows classica le librerie sono spesso implementate come oggetti COM (o, più precisamente, come server COM). Molti componenti del sistema operativo Windows sono implementati come server COM e molti autori forniscono librerie in questa forma. Per informazioni sui fondamenti di COM, vedere [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
@@ -39,4 +39,4 @@ ATL fornisce anche `CComQIPtr`che presenta una sintassi più semplice per interr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md)
+[Puntatori intelligenti (C++ moderno)](../cpp/smart-pointers-modern-cpp.md)

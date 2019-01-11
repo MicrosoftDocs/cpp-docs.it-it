@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: interfaccia tra codice eccezionale e non eccezionale'
+title: 'Procedura: Interfaccia tra codice eccezionale e Non eccezionale'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576683"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220625"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procedura: interfaccia tra codice eccezionale e non eccezionale
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procedura: Interfaccia tra codice eccezionale e Non eccezionale
 
 In questo articolo viene descritto come implementare una gestione delle eccezioni coerente in un modulo C++ e viene illustrato come convertire tali eccezioni da e verso i codici di errore ai limiti della eccezione.
 
@@ -19,7 +19,7 @@ Talvolta un modulo C++ deve interfacciarsi con del codice che non utilizza le ec
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>Chiamata a funzioni senza eccezioni da C++
 
-Quando si chiama una funzione senza eccezioni da C++, lo scopo è quello di eseguire il wrapping della funzione in una funzione C++ che rileva eventuali errori e quindi genera eventualmente un'eccezione. Quando si progetta una funzione wrapper, è necessario innanzitutto decidere quale tipo di garanzie fornire: nessuna generazione, avanzata o di base. In secondo luogo, occorre progettare la funzione in modo che tutte le risorse, ad esempio, gli handle dei file, vengano correttamente rilasciate se viene generata un'eccezione. In genere, questo significa utilizzare puntatori intelligenti o gestori di risorse simili per gestire la proprietà delle risorse. Per altre informazioni sulle considerazioni relative alla progettazione, vedere [procedura: progettare la sicurezza di eccezione del](../cpp/how-to-design-for-exception-safety.md).
+Quando si chiama una funzione senza eccezioni da C++, lo scopo è quello di eseguire il wrapping della funzione in una funzione C++ che rileva eventuali errori e quindi genera eventualmente un'eccezione. Quando si progetta una funzione wrapper, è necessario innanzitutto decidere quale tipo di garanzie fornire: nessuna generazione, avanzata o di base. In secondo luogo, occorre progettare la funzione in modo che tutte le risorse, ad esempio, gli handle dei file, vengano correttamente rilasciate se viene generata un'eccezione. In genere, questo significa utilizzare puntatori intelligenti o gestori di risorse simili per gestire la proprietà delle risorse. Per altre informazioni sulle considerazioni relative alla progettazione, vedere [come: Progettazione per la protezione dalle eccezioni](../cpp/how-to-design-for-exception-safety.md).
 
 ### <a name="example"></a>Esempio
 
@@ -236,5 +236,5 @@ Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gli errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Procedura: Progettare la sicurezza dell'eccezione](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Gestione di errori ed eccezioni (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Procedura: Progettazione per la protezione dalle eccezioni](../cpp/how-to-design-for-exception-safety.md)<br/>

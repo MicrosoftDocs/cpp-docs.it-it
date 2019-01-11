@@ -1,17 +1,17 @@
 ---
-title: "Procedura: progettare la sicurezza dell'eccezione"
+title: 'Procedura: Progettazione per la protezione dalle eccezioni'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327005"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220551"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Procedura: progettare la sicurezza dell'eccezione
+# <a name="how-to-design-for-exception-safety"></a>Procedura: Progettazione per la protezione dalle eccezioni
 
 Uno dei vantaggi del meccanismo di eccezione è che l'esecuzione, insieme ai dati sull'eccezione, passa direttamente dall'istruzione che genera l'eccezione alla prima istruzione catch che gestisce. Il gestore può essere un numero qualsiasi di livelli nello stack di chiamate. Le funzioni chiamate tra l'istruzione try e l'istruzione throw non sono necessarie per ottenere informazioni sull'eccezione gestita.  Tuttavia, devono essere progettate in modo tale da poter uscire dall'ambito "in modo imprevisto" in qualsiasi punto in cui un'eccezione può propagarsi dal basso, ed essere eseguite senza lasciarsi dietro oggetti parzialmente creati, memoria persa o strutture di dati in stati non utilizzabili.
 
@@ -95,7 +95,7 @@ In genere, protezione dalle eccezioni viene discussa in termini di tre garanzie 
 
 La garanzia di nessun errore o di nessuna generazione è la garanzia più forte che una funzione possa offrire. Dichiara che la funzione non genererà eccezioni o non consentirà la propagazione di eccezioni. Tuttavia, non è possibile fornire in modo affidabile una garanzia a meno che (a) non sia noto che anche tutte le funzioni chiamate da tale funzione siano senza errori o (b) sia noto che tutte le eccezioni generate vengono intercettate prima che raggiungano questa funzione o (c) sia noto come intercettare e gestire correttamente tutte le eccezioni che potrebbero raggiungere questa funzione.
 
-Sia la garanzia solida che quella di base si basano sul presupposto che i distruttori non contengano errori. Tutti i contenitori e i tipi nella libreria standard garantiscono che i propri distruttori non vengano generati. Esiste anche un requisito inverso: la libreria standard richiede che i tipi definiti dall'utente forniti (ad esempio, come argomenti di modello) debbano avere distruttori non generanti.
+Sia la garanzia solida che quella di base si basano sul presupposto che i distruttori non contengano errori. Tutti i contenitori e i tipi nella libreria standard garantiscono che i propri distruttori non vengano generati. È inoltre disponibile un requisito inverso: Richiede la libreria Standard che tipi definiti dall'utente che viene assegnato a esso, ad esempio, come argomenti di modello, deve avere distruttori non generanti.
 
 ### <a name="strong-guarantee"></a>Garanzia solida
 
@@ -121,5 +121,5 @@ I tipi predefiniti sono tutti privi di errori e i tipi della libreria standard s
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gli errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Procedura: Interfaccia tra codice eccezionale e non eccezionale](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Gestione di errori ed eccezioni (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Procedura: Interfaccia tra codice eccezionale e Non eccezionale](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
