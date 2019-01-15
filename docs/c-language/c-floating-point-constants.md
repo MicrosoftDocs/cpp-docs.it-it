@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: d7879f3382016e098db0c8073322b99d596e8f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bde8ecdfa7e93160a86829c466ab9a78b71d48e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664919"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220374"
 ---
 # <a name="c-floating-point-constants"></a>Costanti C a virgola mobile
 
@@ -48,7 +48,7 @@ Una costante a virgola mobile è un numero decimale che rappresenta un numero re
 
 Gli esempi seguenti illustrano alcune forme delle espressioni e delle costanti a virgola mobile:
 
-```
+```C
 15.75
 1.575E1   /* = 15.75   */
 1575e-2   /* = 15.75   */
@@ -60,16 +60,16 @@ Le costanti a virgola mobile sono positive a meno che non siano precedute da un 
 
 Una costante a virgola mobile senza suffisso **f**, **F**, **l** o **L** è di tipo `double`. Se il suffisso è costituito dalla lettera **f** o **F**, la costante è di tipo `float`. Se il suffisso è costituito dalla lettera **l** o **L**, la costante è di tipo `long double`. Ad esempio:
 
-```
-100L  /* Has type long double  */
-100F  /* Has type float        */
+```C
+10.0L  /* Has type long double  */
+10.0F  /* Has type float        */
 ```
 
 Si noti che a livello interno il compilatore Microsoft C rappresenta `long double` allo stesso modo del tipo `double`. Vedere [Archiviazione di tipi di base](../c-language/storage-of-basic-types.md) per informazioni sui tipi `double`, `float` e `long double`.
 
 È possibile omettere la parte intera della costante a virgola mobile, come illustrato negli esempi seguenti. Il numero .75 può essere rappresentato in diversi modi, inclusi i seguenti:
 
-```
+```C
 .0075e2
 0.075e1
 .075e1

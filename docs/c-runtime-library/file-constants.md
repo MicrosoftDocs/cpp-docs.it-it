@@ -25,19 +25,18 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 672297b2a1d6466f28a7addf74b8d88e2460b15e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517585"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220439"
 ---
 # <a name="file-constants"></a>Costanti file
 
 ## <a name="syntax"></a>Sintassi
 
 ```
-
 #include <fcntl.h>
 ```
 
@@ -47,7 +46,7 @@ L'espressione integer formata da una o più di queste costanti determina il tipo
 
 Le costanti di file sono le seguenti:
 
-|Costante|Descrizione|
+|Costante|Description|
 |-|-|
 | `_O_APPEND`  | Riposiziona il puntatore di file alla fine del file prima di ogni operazione di scrittura.  |
 | `_O_CREAT`  | Crea e apre un nuovo file per la scrittura; ciò non ha effetto se esiste il file specificato da *filename*.  |
