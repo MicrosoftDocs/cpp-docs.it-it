@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597564"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334677"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
@@ -432,7 +432,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *last*<br/>
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*valore*<br/>
+*value*<br/>
 Il valore a cui deve corrispondere il valore dell'elemento o che deve soddisfare la condizione con il valore di elemento specificato dal predicato binario.
 
 *comp*<br/>
@@ -743,7 +743,7 @@ Iteratore di input che indica la fine dell'intervallo.
 *dest*<br/>
 Iteratore di output che indica la destinazione per gli elementi copiati.
 
-*Pred*<br/>
+*_Pred*<br/>
 Condizione verificata in ogni elemento dell'intervallo. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Un predicato accetta un argomento e restituisce **true** oppure **false**.
 
 ### <a name="return-value"></a>Valore restituito
@@ -809,7 +809,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo d
 *last*<br/>
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da attraversare.
 
-*Val*<br/>
+*val*<br/>
 Valore degli elementi da conteggiare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -879,7 +879,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo i
 *last*<br/>
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*Pred*<br/>
+*_Pred*<br/>
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da conteggiare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1060,7 +1060,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *last*<br/>
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*Val*<br/>
+*val*<br/>
 Il valore da ricercare nell'intervallo ordinato.
 
 *comp*<br/>
@@ -1219,7 +1219,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *last*<br/>
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da attraversare.
 
-*Val*<br/>
+*val*<br/>
 Il valore da assegnare agli elementi nell'intervallo [ *primo*, *ultima*).
 
 ### <a name="remarks"></a>Note
@@ -1366,7 +1366,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo i
 *last*<br/>
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca del valore specificato.
 
-*Val*<br/>
+*val*<br/>
 Valore da ricercare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1555,7 +1555,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 *first2*<br/>
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo per cui trovare una corrispondenza.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo per cui trovare una corrispondenza.
 
 *comp*<br/>
@@ -1690,7 +1690,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo i
 *last*<br/>
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*Pred*<br/>
+*pred*<br/>
 Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** (soddisfatto) o **false** (non soddisfatto). La firma dei *pred* deve essere efficacemente `bool pred(const T& arg);`, dove `T` è un tipo a cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. Il **const** (parola chiave) viene visualizzata solo per illustrare che l'oggetto funzione o espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1806,7 +1806,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo i
 *last*<br/>
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*Pred*<br/>
+*pred*<br/>
 Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che non deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** (soddisfatto) o **false** (non soddisfatto). La firma dei *pred* deve essere efficacemente `bool pred(const T& arg);`, dove `T` è un tipo a cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. Il **const** (parola chiave) viene visualizzata solo per illustrare che l'oggetto funzione o espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1839,7 +1839,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo c
 *last*<br/>
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo che deve essere usato.
 
-*Func*<br/>
+*_Func*<br/>
 Oggetto funzione definito dall'utente che viene applicato a ogni elemento nell'intervallo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2061,7 +2061,7 @@ Iteratore di output che punta al primo elemento nell'intervallo in cui devono es
 *Conteggio*<br/>
 Tipo Signed Integer o Unsigned Integer che specifica il numero di elementi a cui verrà assegnato un valore dalla funzione del generatore.
 
-*Generazione*<br/>
+*Gen*<br/>
 Oggetto funzione chiamato senza argomenti e usato per generare i valori da assegnare a ognuno degli elementi nell'intervallo.
 
 ### <a name="remarks"></a>Note
@@ -2147,7 +2147,7 @@ Iteratore di input che punta alla posizione immediatamente successiva all'ultimo
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine ordinati consecutivi in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo dei due intervalli di origine ordinati consecutivi in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
 *comp*<br/>
@@ -2344,7 +2344,7 @@ void inplace_merge(
 *first*<br/>
 Iteratore bidirezionale che punta alla posizione del primo elemento nel primo dei due intervalli ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*intermedio*<br/>
+*middle*<br/>
 Iteratore bidirezionale che punta alla posizione del primo elemento nel secondo dei due intervalli ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
 *last*<br/>
@@ -2962,7 +2962,7 @@ Iteratore di input che punta alla posizione immediatamente successiva all'ultimo
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo da confrontare.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo intervallo da confrontare.
 
 *comp*<br/>
@@ -3104,7 +3104,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *last*<br/>
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*valore*<br/>
+*value*<br/>
 Valore la cui prima posizione o possibile prima posizione è da ricercare nell'intervallo ordinato.
 
 *comp*<br/>
@@ -3678,10 +3678,10 @@ Iteratore di input che punta alla posizione dell'ultimo elemento nel primo dei d
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine da combinare e ordinare in un singolo intervallo.
 
 *comp*<br/>
@@ -4941,7 +4941,7 @@ Iteratore di input che punta alla posizione immediatamente successiva all'ultimo
 *first2*<br/>
 Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo di destinazione ordinato.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione ordinato.
 
 *comp*<br/>
@@ -5130,13 +5130,13 @@ Iteratore di input che indica l'inizio di un intervallo in cui verificare una co
 *last*<br/>
 Iteratore di input che indica la fine di un intervallo.
 
-*eventdestination="dest1*<br/>
+*dest1*<br/>
 Iteratore di output usato per copiare gli elementi che restituiscono true per una condizione verificata usando *pred*.
 
 *dest2*<br/>
 Iteratore di output usato per copiare gli elementi che restituiscono false per una condizione verificata usando *pred*.
 
-*Pred*<br/>
+*_Pred*<br/>
 La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione da verificare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="remarks"></a>Note
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-La funzione random_shuffle è deprecata, sostituito da [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Per un esempio di codice e altre informazioni, vedere [ \<random >](../standard-library/random.md) e l'articolo di Stackoverflow [perché sono i metodi std:: random_shuffle deprecati in c++14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+La funzione random_shuffle è deprecata, sostituito da [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Per un esempio di codice e altre informazioni, vedere [ \<random >](../standard-library/random.md) e il post di Stack Overflow [perché sono i metodi std:: random_shuffle deprecati in c++14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  remove
 
@@ -5580,7 +5580,7 @@ Iteratore in avanti che indirizza la posizione del primo elemento nell'intervall
 *last*<br/>
 Iteratore in avanti che indirizza la posizione successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*Val*<br/>
+*val*<br/>
 Il valore da rimuovere dall'intervallo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -5662,10 +5662,10 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo d
 *last*<br/>
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione da cui rimuovere gli elementi.
 
-*Val*<br/>
+*val*<br/>
 Il valore da rimuovere dall'intervallo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -5744,10 +5744,10 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo d
 *last*<br/>
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione da cui rimuovere gli elementi.
 
-*Pred*<br/>
+*_Pred*<br/>
 Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -5838,7 +5838,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *last*<br/>
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*Pred*<br/>
+*_Pred*<br/>
 Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6004,7 +6004,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo d
 *last*<br/>
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta al primo elemento dell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
 
 *_OldVal*<br/>
@@ -6106,13 +6106,13 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo d
 *last*<br/>
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono copiati gli elementi.
 
-*Pred*<br/>
+*_Pred*<br/>
 Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
-*Val*<br/>
+*val*<br/>
 Nuovo valore da assegnare agli elementi il cui valore precedente soddisfa il predicato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6214,10 +6214,10 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *last*<br/>
 Iteratore che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
 
-*Pred*<br/>
+*_Pred*<br/>
 Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
-*Val*<br/>
+*val*<br/>
 Nuovo valore da assegnare agli elementi il cui valore precedente soddisfa il predicato.
 
 ### <a name="remarks"></a>Note
@@ -6359,7 +6359,7 @@ Iteratore bidirezionale che punta alla posizione del primo elemento nell'interva
 *last*<br/>
 Iteratore bidirezionale che punta alla posizione successiva all'ultimo elemento nell'intervallo di origine nel quale gli elementi vengono permutati.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono copiati gli elementi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6427,7 +6427,7 @@ void rotate(
 *first*<br/>
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da ruotare.
 
-*intermedio*<br/>
+*middle*<br/>
 Iteratore in avanti che definisce il limite all'interno dell'intervallo che punta alla posizione del primo elemento nella seconda parte dell'intervallo i cui elementi devono essere sostituiti con gli elementi della prima parte dell'intervallo.
 
 *ultimo*<br/>
@@ -6532,12 +6532,12 @@ OutputIterator rotate_copy(
 *first*<br/>
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da ruotare.
 
-*intermedio*<br/>
+*middle*<br/>
 Iteratore in avanti che definisce il limite all'interno dell'intervallo che punta alla posizione del primo elemento nella seconda parte dell'intervallo i cui elementi devono essere sostituiti con gli elementi della prima parte dell'intervallo.
 
 _ *Ultimo* iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ruotare.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6641,7 +6641,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 *first2*<br/>
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo per cui trovare una corrispondenza.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo per cui trovare una corrispondenza.
 
 *comp*<br/>
@@ -6789,7 +6789,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 *count*<br/>
 Le dimensioni della sottosequenza cercata.
 
-*Val*<br/>
+*val*<br/>
 Il valore degli elementi nella sequenza cercata.
 
 *comp*<br/>
@@ -6924,10 +6924,10 @@ Iteratore di input che punta alla posizione successiva all'ultimo elemento nel p
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti e ordinati in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
 *comp*<br/>
@@ -7104,7 +7104,7 @@ Iteratore di input che punta alla posizione successiva a quella dell'ultimo elem
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo di due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore di input che punta alla posizione successiva a quella dell'ultimo elemento nel secondo di due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
 
 **_** *Risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un singolo intervallo ordinato che rappresenta l'intersezione di due origine intervalli.
@@ -7277,7 +7277,7 @@ Iteratore di input che punta alla posizione successiva all'ultimo elemento nel p
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
 **_** *Risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un unico intervallo ordinato che rappresenta la differenza simmetrica dei due intervalli di origine.
@@ -7456,7 +7456,7 @@ Iteratore di input che punta alla posizione successiva all'ultimo elemento nel p
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo dei due intervalli di origine consecutivi ordinati devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
-*Last2*<br/>
+*last2*<br/>
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine consecutivi ordinati devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
 **_** *Risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un unico intervallo ordinato che rappresenta l'unione di due intervalli di origine.
@@ -7601,7 +7601,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  riproduzione casuale
+## <a name="shuffle"></a>  shuffle
 
 Riproduce con sequenza casuale (ridispone) gli elementi di un intervallo specifico usando un generatore di numeri casuali.
 
@@ -7620,7 +7620,7 @@ Iteratore del primo elemento dell'intervallo da riprodurre con sequenza casuale,
 *last*<br/>
 Iteratore dell'ultimo elemento dell'intervallo da riprodurre con sequenza casuale, esclusivo. Deve soddisfare i requisiti di `RandomAccessIterator` e `ValueSwappable`.
 
-*Generazione*<br/>
+*gen*<br/>
 Generatore di numeri casuali usato dalla funzione `shuffle()` per l'operazione. Deve soddisfare i requisiti di `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Note
@@ -7847,7 +7847,7 @@ Iteratore bidirezionale che punta alla posizione del primo elemento nell'interva
 *last*<br/>
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
-*Pred*<br/>
+*_Pred*<br/>
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
@@ -8215,10 +8215,10 @@ Iteratore di input che punta alla posizione immediatamente successiva all'ultimo
 *first2*<br/>
 Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo di origine da utilizzare.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
 
-*Func*<br/>
+*_Func*<br/>
 Oggetto funzione unario definito dall'utente usato nella prima versione dell'algoritmo applicato a ogni elemento nel primo intervallo di origine oppure oggetto funzione binario definito dall'utente usato nella seconda versione dell'algoritmo ordinato in avanti applicato a coppie ai due intervalli di origine.
 
 ### <a name="return-value"></a>Valore restituito
@@ -8478,7 +8478,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *last*<br/>
 Iteratore in avanti che punta alla posizione successiva all'ultimo elemento nell'intervallo di origine da copiare.
 
-*Risultato*<br/>
+*result*<br/>
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione che riceve la copia con duplicati consecutivi rimossi.
 
 *comp*<br/>
@@ -8597,7 +8597,7 @@ Posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 *last*<br/>
 Posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*valore*<br/>
+*value*<br/>
 Valore nell'intervallo ordinato che deve essere superato dal valore dell'elemento a cui punta l'iteratore restituito.
 
 *comp*<br/>
