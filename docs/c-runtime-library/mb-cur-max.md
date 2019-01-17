@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MB_CUR_MAX constant
 ms.assetid: fab22609-c14d-4c19-991c-bd09ff30e604
-ms.openlocfilehash: b5c1cfaccdc64eb3fd84476ac9c5637b55d305c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 640821f920021435f8e79d9316d5eb0836c5f145
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549836"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220127"
 ---
 # <a name="mbcurmax"></a>MB_CUR_MAX
 
@@ -19,7 +19,9 @@ Macro indicante il numero massimo di byte in un carattere multibyte per le impos
 
 ## <a name="syntax"></a>Sintassi
 
-`#include <stdlib.h>`
+```
+#include <stdlib.h>
+```
 
 ## <a name="remarks"></a>Note
 

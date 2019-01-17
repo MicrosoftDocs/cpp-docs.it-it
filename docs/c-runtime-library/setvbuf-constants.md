@@ -13,19 +13,18 @@ helpviewer_keywords:
 - IOLBF constant
 - _IONBF constant
 ms.assetid: a6ec4dd5-1f24-498c-871a-e874cd28d33c
-ms.openlocfilehash: 661cf64c71e06c222503388df198d47429566602
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8936789f4e3c9349e9d79616c8506c044dc79f70
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523806"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220400"
 ---
 # <a name="setvbuf-constants"></a>Costanti setvbuf
 
 ## <a name="syntax"></a>Sintassi
 
 ```
-
 #include <stdio.h>
 ```
 
@@ -37,7 +36,7 @@ I valori possibili sono forniti dalle costanti manifesto seguenti:
 
 |Costante|Significato|
 |--------------|-------------|
-|`_IOFBF`|Buffer completo: il buffer specificato nella chiamata a `setvbuf` viene utilizzato e la dimensione è specificata nella chiamata `setvbuf`. Se il puntatore del buffer è **NULL**, viene usato un buffer allocato automaticamente della dimensione specificata.|
+|`_IOFBF`|Buffer completo: viene utilizzato il buffer specificato nella chiamata a `setvbuf` e la dimensione è specificata nella chiamata `setvbuf`. Se il puntatore del buffer è **NULL**, viene usato un buffer allocato automaticamente della dimensione specificata.|
 |`_IOLBF`|Uguale a `_IOFBF`.|
 |`_IONBF`|Nessun buffer viene utilizzato, indipendentemente dagli argomenti nella chiamata a `setvbuf`.|
 

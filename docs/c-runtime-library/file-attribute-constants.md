@@ -25,19 +25,18 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-ms.openlocfilehash: 9aceef7f9c28da3ed3d0d98f4fc579a3c17480e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90aacc1e1e8c45f739c1f6aec973f55e7fab67d9
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660343"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220179"
 ---
 # <a name="file-attribute-constants"></a>Costanti di attributi file
 
 ## <a name="syntax"></a>Sintassi
 
 ```
-
 #include <io.h>
 ```
 
@@ -47,7 +46,7 @@ Queste costanti specificano gli attributi correnti del file o directory specific
 
 Gli attributi sono rappresentati dalle costanti manifesto seguenti:
 
-|Costante|Descrizione|
+|Costante|Description|
 |-|-|
 |`_A_ARCH`| Archiviazione. Da impostare ogni volta che il file viene modificato e cancellato dal comando BACKUP. Valore: 0x20|
 |`_A_HIDDEN`| File nascosto. Generalmente non visualizzato con il comando DIR, a meno che non venga usata l'opzione /AH. Restituisce informazioni su file comuni oltre che su quelli con questo attributo. Valore: 0x02|
