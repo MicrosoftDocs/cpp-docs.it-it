@@ -2,28 +2,16 @@
 title: Sommario
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: f9fffab938735421429c53cc760ad0db16484577
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13f2d0700f4200caee0b87e1923711fef5e7ae14
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620584"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397290"
 ---
 # <a name="contents"></a>Sommario
 
 [1. Introduzione](../../parallel/openmp/1-introduction.md)
-
-[1.1 Ambito](../../parallel/openmp/1-1-scope.md)
-
-[1.2 Definizione dei termini](../../parallel/openmp/1-2-definition-of-terms.md)
-
-[1.3 Modello di esecuzione](../../parallel/openmp/1-3-execution-model.md)
-
-[1.4 Conformità](../../parallel/openmp/1-4-compliance.md)
-
-[1.5 Riferimenti alle normative](../../parallel/openmp/1-5-normative-references.md)
-
-[1.6 Organizzazione](../../parallel/openmp/1-6-organization.md)
 
 [2. Direttive](../../parallel/openmp/2-directives.md)
 
@@ -131,14 +119,6 @@ ms.locfileid: "50620584"
 
 [4. Variabili di ambiente](../../parallel/openmp/4-environment-variables.md)
 
-[4.1 OMP_SCHEDULE](../../parallel/openmp/4-1-omp-schedule.md)
-
-[4.2 OMP_NUM_THREADS](../../parallel/openmp/4-2-omp-num-threads.md)
-
-[4.3 OMP_DYNAMIC](../../parallel/openmp/4-3-omp-dynamic.md)
-
-[4.4 OMP_NESTED](../../parallel/openmp/4-4-omp-nested.md)
-
 [A. Esempi](../../parallel/openmp/a-examples.md)
 
 [A.1 esecuzione di un ciclo semplice in parallelo](../../parallel/openmp/a-1-executing-a-simple-loop-in-parallel.md)
@@ -206,10 +186,6 @@ ms.locfileid: "50620584"
 [B. Stub per funzioni della libreria di runtime](../../parallel/openmp/b-stubs-for-run-time-library-functions.md)
 
 [C. Grammatica OpenMP C e C++](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)
-
-[C.1 Notazione](../../parallel/openmp/c-1-notation.md)
-
-[C.2 Regole](../../parallel/openmp/c-2-rules.md)
 
 [D. Uso della clausola schedule](../../parallel/openmp/d-using-the-schedule-clause.md)
 
