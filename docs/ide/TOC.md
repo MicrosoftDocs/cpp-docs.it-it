@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 429e20c77c2a5715d1d45b74b3d020ee52daec97
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397368"
+---
 # [IDE e strumenti per lo sviluppo in Visual C++](ide-and-tools-for-visual-cpp-development.md)
 # [Scrittura e refactoring del codice (C++)](writing-and-refactoring-code-cpp.md)
 ## [Modifica firma](refactoring/change-signature.md)
@@ -31,10 +39,6 @@
 ##### [Impostazioni applicazione, Creazione guidata progetto makefile](application-settings-makefile-project-wizard.md)
 #### [Procedura: Abilitare IntelliSense per progetti makefile](how-to-enable-intellisense-for-makefile-projects.md)
 ### [Procedura: Creare un progetto C++ da codice esistente](how-to-create-a-cpp-project-from-existing-code.md)
-#### [Specifica il percorso di progetto e i file di origine, Creazione guidata nuovo progetto da file di codice esistenti](specify-project-location-and-source-files.md)
-#### [Specifica le impostazioni del progetto, Creazione guidata nuovo progetto da file di codice esistenti](specify-project-settings-create-new-project-from-existing-code-files-wizard.md)
-#### [Specifica le impostazioni di configurazione per il debug, Creazione guidata nuovo progetto da file di codice esistenti](specify-debug-configuration-settings.md)
-#### [Specifica le impostazioni di configurazione per il rilascio, Creazione guidata nuovo progetto da file di codice esistenti](specify-release-configuration.md)
 ## [Utilizzo di Proprietà del progetto](working-with-project-properties.md)
 ### [Pagine delle proprietà (Visual C++)](property-pages-visual-cpp.md)
 #### [Pagina delle proprietà Generale (Progetto)](general-property-page-project.md)
@@ -61,7 +65,7 @@
 #### [Pagine delle proprietà HLSL](hlsl-property-pages.md)
 ##### [Pagine delle proprietà HLSL: Generale](hlsl-property-pages-general.md)
 ##### [Pagine delle proprietà HLSL: Avanzate](hlsl-property-pages-advanced.md)
-##### [Pagine delle proprietà HLSL: file di output](hlsl-property-pages-output-files.md)
+##### [Pagine delle proprietà HLSL: File di output](hlsl-property-pages-output-files.md)
 ## [Aggiunta di riferimenti nei progetti Visual C++](adding-references-in-visual-cpp-projects.md)
 ## [Procedura: Organizzare file di output dei progetti per le compilazioni](how-to-organize-project-output-files-for-builds.md)
 # [Distribuzione di applicazioni desktop native (Visual C++)](deploying-native-desktop-applications-visual-cpp.md)
@@ -77,9 +81,9 @@
 ### [Ridistribuzione della libreria MFC](redistributing-the-mfc-library.md)
 ### [Ridistribuzione di un'applicazione ATL](redistributing-an-atl-application.md)
 ## [Esempi di distribuzione](deployment-examples.md)
-### [Procedura dettagliata: distribuzione di un'applicazione Visual C++ tramite un progetto di installazione](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
-### [Procedura dettagliata: distribuzione di un'applicazione Visual C++ a una cartella locale di un'applicazione](walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
-### [Procedura dettagliata: distribuzione di un'applicazione Visual C++ tramite Visual C++ Redistributable Package](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
+### [Procedura dettagliata: Distribuzione di un'applicazione Visual C++ tramite un progetto di installazione](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
+### [Procedura dettagliata: Distribuzione di un'applicazione Visual C++ in una cartella dell'applicazione locale](walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
+### [Procedura dettagliata: Distribuzione di un'applicazione Visual C++ tramite Visual C++ Redistributable Package](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
 ### [Preparazione di un computer di test per l'esecuzione di un file eseguibile di debug](preparing-a-test-machine-to-run-a-debug-executable.md)
 ## [Ridistribuzione di applicazioni client Web](redistributing-web-client-applications.md)
 ## [Distribuzione ClickOnce per applicazioni Visual C++](clickonce-deployment-for-visual-cpp-applications.md)
@@ -128,10 +132,10 @@
 ### [Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 ## [Macro comuni per i comandi e le proprietà di compilazione](common-macros-for-build-commands-and-properties.md)
 ## [File di progetto di esempio](project-files.md)
-## [Procedura dettagliata: compilazione di un programma C++ destinato a CLR in Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
+## [Procedura dettagliata: Compilazione di un programma C++ destinato a CLR in Visual Studio](walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)
 # [Uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++](using-the-visual-studio-ide-for-cpp-desktop-development.md)
-## [Procedura dettagliata: uso di progetti e soluzioni (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
-## [Procedura dettagliata: compilazione di un progetto (C++)](walkthrough-building-a-project-cpp.md)
-## [Procedura dettagliata: test di un progetto (C++)](walkthrough-testing-a-project-cpp.md)
-## [Procedura dettagliata: debug di un progetto (C++)](walkthrough-debugging-a-project-cpp.md)
-## [Procedura dettagliata: distribuzione di un programma (C++)](walkthrough-deploying-your-program-cpp.md)
+## [Procedura dettagliata: Uso di progetti e soluzioni (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
+## [Procedura dettagliata: Compilazione di un progetto (C++)](walkthrough-building-a-project-cpp.md)
+## [Procedura dettagliata: Test di un progetto (C++)](walkthrough-testing-a-project-cpp.md)
+## [Procedura dettagliata: Debug di un progetto (C++)](walkthrough-debugging-a-project-cpp.md)
+## [Procedura dettagliata: Distribuzione di un programma (C++)](walkthrough-deploying-your-program-cpp.md)
