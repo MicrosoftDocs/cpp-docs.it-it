@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597538"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417642"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (specifica il comportamento a virgola mobile)
 
@@ -24,7 +24,7 @@ Specifica il modo in cui il compilatore considera le eccezioni, le ottimizzazion
 
 ## <a name="syntax"></a>Sintassi
 
-> **/fp:**[**preciso** | **strict** | **veloce** | **tranne**[ **-**]]
+> **/fp:**[**precise** | **strict** | **fast** | **except**[**-**]]
 
 ### <a name="arguments"></a>Argomenti
 
@@ -71,13 +71,13 @@ Il [/Za](../../build/reference/za-ze-disable-language-extensions.md) opzione (co
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Utilizzando i pragma per controllare il comportamento a virgola mobile
 
-Il compilatore fornisce tre directivess pragma per eseguire l'override del comportamento a virgola mobile specificato nella riga di comando: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), e [fp_contract](../../preprocessor/fp-contract.md). È possibile usare questi pragma per controllare il comportamento a virgola mobile a livello di funzione, non all'interno di una funzione. Si noti che questi pragma non corrispondono direttamente al **/fp** opzioni. La tabella seguente mostra come la **/fp** pragma e opzioni di eseguire il mapping tra loro. Per altre informazioni, vedere la documentazione per le singole opzioni e il pragma.
+Il compilatore fornisce tre direttive pragma per eseguire l'override del comportamento a virgola mobile specificato nella riga di comando: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), e [fp_contract](../../preprocessor/fp-contract.md). È possibile usare questi pragma per controllare il comportamento a virgola mobile a livello di funzione, non all'interno di una funzione. Si noti che questi pragma non corrispondono direttamente al **/fp** opzioni. La tabella seguente mostra come la **/fp** pragma e opzioni di eseguire il mapping tra loro. Per altre informazioni, vedere la documentazione per le singole opzioni e il pragma.
 
 ||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**/fp: fast**|Off|Off|Off|attivo|
-|**/fp: precise**|attivo|Off|Off|attivo|
-|**/fp: tranne**|attivo|attivo|attivo|Off|
+|**/fp:fast**|Off|Off|Off|attivo|
+|**/fp:precise**|attivo|Off|Off|attivo|
+|**/fp:except**|attivo|attivo|attivo|Off|
 
 ### <a name="the-default-floating-point-environment"></a>L'ambiente a virgola mobile predefinita
 

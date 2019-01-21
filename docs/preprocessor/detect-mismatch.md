@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: 2973a4738aa54e9f454190b18bcabff92077b284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb6f147f1591f010298e84cb28f05b40dafaeb63
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633324"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417629"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 Inserisce un record in un oggetto. Il linker controlla tali record per potenziali dati non corrispondenti.
@@ -21,7 +21,7 @@ Inserisce un record in un oggetto. Il linker controlla tali record per potenzial
 ## <a name="syntax"></a>Sintassi
 
 ```
-#pragma detect_mismatch( "name", "value"))
+#pragma detect_mismatch("name", "value")
 ```
 
 ## <a name="remarks"></a>Note
