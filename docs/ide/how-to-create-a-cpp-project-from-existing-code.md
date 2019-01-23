@@ -1,39 +1,77 @@
 ---
-title: 'Procedura: creare un progetto C++ da codice esistente'
-ms.date: 11/04/2016
+title: 'Procedura: Creare un progetto C++ da codice esistente'
+ms.date: 01/15/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
+- Create New Project From Existing Code Files Wizard, project settings
+f1_keywords:
+- vc.appwiz.importwiz.location
+- vc.appwiz.importwiz.appsettings
+- vc.appwiz.importwiz.debugsettings
+- vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: dafd4e939444c581a76e9ccfcab4c3f6bbe819d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 975d49e216c9aeb3f94ad385ef096794a446289f
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552503"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397342"
 ---
-# <a name="how-to-create-a-c-project-from-existing-code"></a>Procedura: creare un progetto C++ da codice esistente
+# <a name="how-to-create-a-c-project-from-existing-code"></a>Procedura: Creare un progetto C++ da codice esistente
 
-In Visual Studio è possibile trasferire file di codice esistenti in un progetto Visual C++ usando la procedura guidata **Creazione guidata nuovo progetto da file di codice esistenti**. Questa procedura guidata non è disponibile nelle edizioni Express precedenti di Visual Studio. La procedura guidata crea una nuova soluzione e un progetto che usa il sistema MSBuild per gestire i file di origine e la configurazione della build.
+In Visual Studio è possibile portare i file di codice esistenti in un progetto C++ usando la **Creazione guidata nuovo progetto da file di codice esistenti**. La procedura guidata crea una soluzione progetto che usa il sistema MSBuild per gestire i file di origine e la configurazione della build. Funziona in modo ottimale con progetti relativamente semplici, che non hanno gerarchie di cartelle complesse. La procedura guidata non è disponibile nelle edizioni Express precedenti di Visual Studio. 
 
-L'importazione di file di codice esistenti in un progetto di Visual C++ consente di usare tutte le funzionalità di gestione progetto MSBuild native incorporate nell'IDE. Se si preferisce usare il sistema di compilazione esistente, ad esempio makefile nmake, CMake o altri ancora, è possibile usare l'opzione Apri cartella. Per altre informazioni, vedere [Open Folder projects in Visual C++](../ide/non-msbuild-projects.md) (Aprire una cartella di progetti in Visual C++). Entrambe le opzioni consentono di usare funzionalità IDE come [IntelliSense](/visualstudio/ide/using-intellisense) e [Proprietà del progetto](../ide/working-with-project-properties.md).
+L'importazione di file di codice esistenti in un progetto C++ consente l'uso delle funzionalità di gestione progetto MSBuild native incorporate nell'IDE. Se si preferisce usare il sistema di compilazione esistente, ad esempio makefile nmake, CMake o altri ancora, è possibile usare le opzioni Apri cartella o CMake. Per altre informazioni, vedere [Progetti Apri cartella in Visual C++](../ide/non-msbuild-projects.md) o [CMake projects in Visual Studio](../ide/cmake-tools-for-visual-cpp.md) (Progetti CMake in Visual Studio). Entrambe le opzioni consentono di usare funzionalità IDE come [IntelliSense](/visualstudio/ide/using-intellisense) e [Proprietà del progetto](../ide/working-with-project-properties.md).
 
 ### <a name="to-create-a-c-project-from-existing-code"></a>Per creare un progetto C++ da codice esistente
 
-1. Nel menu **File** scegliere **Nuovo**, quindi fare clic su **Progetto da codice esistente**.
+1. Nel menu **File** selezionare **Nuovo** > **Progetto da codice esistente**.
 
-1. Nella prima pagina della procedura guidata **Creazione guidata nuovo progetto da file di codice esistenti**, selezionare **Visual C++** nell'elenco **Specificare il tipo di progetto che si desidera creare**. Scegliere **Avanti** per continuare.
+1. Nella prima pagina della procedura guidata **Creazione guidata nuovo progetto da file di codice esistenti** selezionare **Visual C++** nell'elenco **Specificare il tipo di progetto che si vuole creare**. Scegliere **Avanti** per continuare.
 
-1. Specificare il percorso del progetto e la directory dei file di origine. Per informazioni dettagliate su questa pagina, vedere [Specifica il percorso di progetto e i file di origine, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-project-location-and-source-files.md). Scegliere **Avanti** per continuare.
+1. Specificare il percorso del progetto, la directory dei file di origine e i tipi di file che la procedura guidata importa nel nuovo progetto. Scegliere **Avanti** per continuare.
 
-1. Specificare le impostazioni del progetto da usare. Per informazioni dettagliate su questa pagina, vedere [Specifica le impostazioni del progetto, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md). Scegliere **Avanti** per continuare.
+    | Impostazione | Description |
+    | --- | --- |
+    | **Percorso del file di progetto** | Specifica il percorso della directory del nuovo progetto. Questo è il percorso in cui la creazione guidata inserisce tutti i file (e le sottodirectory) del nuovo progetto.<br/><br/>Selezionare **Sfoglia** per visualizzare la finestra di dialogo **Percorso del file di progetto**. Passare alla cartella a destra e specificare la directory che contiene il nuovo progetto. |
+    | **Nome progetto** | Specifica il nome del nuovo progetto. I file di progetto con estensioni come vcxproj adottano questo nome, mentre i file di codice esistenti mantengono il nome originale. |
+    | **Aggiungi al progetto file dalle cartelle** | Selezionare questa opzione per impostare la procedura guidata per la copia dei file di codice esistenti dalle directory di origine (specificate nella casella di riepilogo sotto il controllo) al nuovo progetto.<br/><br/>Selezionare **Aggiungi sottocartelle** per specificare la copia dei file di codice da tutte le sottodirectory nel progetto. Le directory sono elencate nella colonna **Cartella**.<br/>- Selezionare **Aggiungi** per visualizzare la finestra di dialogo **Aggiungi al progetto file dalla cartella**, nella quale è possibile specificare le directory in cui la procedura guidata eseguirà la ricerca dei file di codice esistenti.<br/>- Selezionare **Rimuovi** per eliminare il percorso della directory selezionato nella casella di riepilogo.<br/><br/>Nella casella **Tipi di file da aggiungere al progetto** specificare i tipi di file che la procedura guidata aggiungerà al nuovo progetto in base alle estensioni di file specificate. Le estensioni di file sono precedute dal carattere jolly asterisco e sono delimitate da punti e virgola nell'elenco di estensioni. |
+    | **Mostra tutti i file in Esplora soluzioni** | Specifica che tutti i file del nuovo progetto sono visibili e vengono visualizzati nella finestra **Esplora soluzioni**. Questa opzione è attivata per impostazione predefinita. |
 
-1. Specificare le impostazioni di configurazione per il debug da usare. Per informazioni dettagliate su questa pagina, vedere [Specifica le impostazioni di configurazione per il debug, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-debug-configuration-settings.md). Scegliere **Avanti** per continuare.
+    ![Percorso progetto](media/location.png)
 
-1. Specificare le impostazioni di configurazione Rilascio da usare. Per informazioni dettagliate su questa pagina, vedere [Specifica le impostazioni di configurazione per il rilascio, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-release-configuration.md). Scegliere **Fine** per generare il nuovo progetto.
+1. Specificare le impostazioni del progetto da usare, ad esempio l'ambiente di compilazione del nuovo progetto e le impostazioni di compilazione corrispondenti a un tipo specifico di nuovo progetto da generare. Scegliere **Avanti** per continuare.
 
-## <a name="see-also"></a>Vedere anche
+    | Impostazione | Description |
+    | --- | --- |
+    | **Utilizza Visual Studio** | Specifica l'uso degli strumenti di compilazione inclusi in Visual Studio per compilare il nuovo progetto. Questa opzione è selezionata per impostazione predefinita.<br/><br/>Selezionare **Tipo di progetto** per specificare il tipo di progetto generato dalla procedura guidata. Scegliere **Progetto Applicazione Windows**, **Progetto di applicazione console**, **Progetto libreria di collegamento dinamico (DLL)** o **Progetto libreria statica (LIB)**.<br/><br/>Selezionare **Aggiungi supporto per ATL** per aggiungere il supporto per ATL al nuovo progetto.<br/><br/>Selezionare **Aggiungi supporto per MFC** per aggiungere il supporto per MFC al nuovo progetto.<br/><br/>Selezionare **Aggiungi supporto per Common Language Runtime** per aggiungere il supporto di programmazione CLR al progetto. Scegliere il **Supporto Common Language Runtime** corrispondente al tipo di conformità, ad esempio **Supporto Common Language Runtime (sintassi precedente)** per la conformità con la sintassi delle estensioni gestite per C++, la sintassi di programmazione di CLR usata prima di Visual C++ 2005. |
+    | **Utilizza sistema di compilazione esterno** | Specifica l'uso di strumenti di compilazione non inclusi in Visual Studio per compilare il nuovo progetto. Quando questa opzione è selezionata, è possibile specificare righe di comando di compilazione nelle pagine **Specifica le impostazioni di configurazione per il debug** e **Specifica le impostazioni di configurazione per il rilascio**. |
 
-[Specifica il percorso di progetto e i file di origine, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-project-location-and-source-files.md)<br>
-[Specifica le impostazioni del progetto, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)<br>
-[Specifica le impostazioni di configurazione per il debug, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-debug-configuration-settings.md)<br>
-[Specifica le impostazioni di configurazione per il rilascio, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-release-configuration.md)
+    ![Impostazioni progetto](media/settings.png)
+
+    > [!NOTE]
+    > Quando l'opzione **Utilizza sistema di compilazione esterno** è selezionata l'IDE non compila il progetto, pertanto le opzioni /D, /I, /FI, /AI o /FU non sono necessarie per la compilazione. Tuttavia queste opzioni devono essere impostate correttamente per consentire il funzionamento di IntelliSense.
+
+1. Specificare le impostazioni di configurazione per il debug da usare. Scegliere **Avanti** per continuare.
+
+    | Impostazione | Description |
+    | --- | --- |
+    | **Riga di comando di compilazione** | Specifica la riga di comando che esegue la compilazione del progetto. Immettere il nome del compilatore (e le eventuali opzioni o argomenti) o gli script di compilazione da usare per compilare il progetto. |
+    | **Riga di comando di ricompilazione** | Specifica la riga di comando che consente di ricompilare il nuovo progetto. |
+    | **Riga di comando per Pulisci** | Specifica la riga di comando che elimina i file di supporto generati dagli strumenti di compilazione per il progetto. |
+    | **Output (per il debug)** | Specifica il percorso della directory dei file di output per la configurazione di debug del progetto. |
+    | **Definizioni preprocessore (/D)** | Definisce i simboli del preprocessore per il progetto. Vedere [/D (definizioni preprocessore)](../build/reference/d-preprocessor-definitions.md). |
+    | **Percorsi di ricerca (/I)** | Specifica i percorsi di directory in cui il compilatore esegue la ricerca per risolvere i riferimenti di file passati alle direttive del preprocessore nel progetto. Vedere [/I (directory di inclusione aggiuntive)](../build/reference/i-additional-include-directories.md). |
+    | **File di inclusione imposti (/FI)** | Specifica i file di intestazione da elaborare quando si compila il progetto. Vedere [/FI (specifica il file di inclusione da usare)](../build/reference/fi-name-forced-include-file.md). |
+    | **Percorsi di ricerca dell'assembly .NET (/AI)** | Specifica i percorsi di directory in cui il compilatore esegue la ricerca per risolvere i riferimenti agli assembly .NET passati alle direttive del preprocessore nel progetto. Vedere [/AI (specifica le directory di metadati)](../build/reference/ai-specify-metadata-directories.md). |
+    | **Assembly .NET imposti (/FU)** | Specifica gli assembly .NET da elaborare quando si compila il progetto. Vedere [/FU (specifica file #using da usare)](../build/reference/fu-name-forced-hash-using-file.md). |
+
+    ![Configurazione progetto](media/config.png)
+
+    > [!NOTE]
+    > Le impostazioni della riga di comando **Compila**, **Ricompila**, **Pulisci** e l'impostazione **Output (per il debug)** sono abilitate solo se l'opzione **Utilizza sistema di compilazione esterno** è selezionata nella pagina **Specifica le impostazioni del progetto**.
+
+1. Specificare le impostazioni di configurazione per la versione da usare. Queste impostazioni corrispondono alle impostazioni di configurazione per il debug. Scegliere **Fine** per generare il nuovo progetto.
+
+    > [!NOTE]
+    > È possibile selezionare **Uguale alla configurazione di debug** per specificare che la procedura guidata genererà impostazioni progetto di configurazione per il rilascio identiche alle impostazioni progetto di configurazione per il debug. Questa opzione è selezionata per impostazione predefinita. Se la casella è selezionata, tutte le altre opzioni in questa pagina sono inattive.
