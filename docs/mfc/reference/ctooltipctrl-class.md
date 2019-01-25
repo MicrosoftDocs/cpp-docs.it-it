@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500412"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894146"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -121,7 +121,7 @@ class CToolTipCtrl : public CWnd
 |[CToolTipCtrl::HitTest](#hittest)|Test di un punto per determinare se è all'interno del rettangolo di delimitazione dello strumento specificato. In caso affermativo, recupera le informazioni sullo strumento.|
 |[CToolTipCtrl::Pop](#pop)|Rimuove una finestra di descrizione comando visualizzata dalla visualizzazione.|
 |[CToolTipCtrl::Popup](#popup)|Fa sì che il controllo corrente della descrizione comando da visualizzare in corrispondenza delle coordinate dell'ultimo messaggio di mouse.|
-|[CToolTipCtrl:: RelayEvent](#relayevent)|Passa un messaggio di mouse a un controllo descrizione comandi per l'elaborazione.|
+|[CToolTipCtrl::RelayEvent](#relayevent)|Passa un messaggio di mouse a un controllo descrizione comandi per l'elaborazione.|
 |[CToolTipCtrl::SetDelayTime](#setdelaytime)|Imposta iniziale, a comparsa e quindi la nuova visualizzazione durate per un controllo descrizione comandi.|
 |[CToolTipCtrl::SetMargin](#setmargin)|Imposta i margini superiore, sinistro, inferiore e a destra per una finestra del suggerimento dello strumento.|
 |[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Imposta la larghezza massima per una finestra del suggerimento dello strumento.|
@@ -455,7 +455,7 @@ void GetMargin(LPRECT lprc) const;
 *lprc*<br/>
 Indirizzo di un `RECT` struttura che riceverà le informazioni del margine. I membri del [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura non definisce un rettangolo di delimitazione. Ai fini di questo messaggio, i membri della struttura vengono interpretati come indicato di seguito:
 
-|Membro|Rappresentazione|
+|Member|Rappresentazione|
 |------------|--------------------|
 |`top`|Distanza tra il bordo superiore e parte superiore del testo della descrizione comando, in pixel.|
 |`left`|Distanza tra il bordo sinistro ed estremità sinistra del testo di suggerimento, in pixel.|
@@ -682,7 +682,7 @@ Esempio di codice seguente consente di visualizzare una finestra della descrizio
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]
 
-##  <a name="relayevent"></a>  CToolTipCtrl:: RelayEvent
+##  <a name="relayevent"></a>  CToolTipCtrl::RelayEvent
 
 Passa un messaggio di mouse a un controllo descrizione comandi per l'elaborazione.
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parametri
 
 *lpMsg*<br/>
-Puntatore a un [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) struttura che contiene il messaggio all'inoltro.
+Puntatore a un [MSG](/windows/desktop/api/winuser/ns-winuser-msg) struttura che contiene il messaggio all'inoltro.
 
 ### <a name="remarks"></a>Note
 
@@ -784,7 +784,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametri
 
-*Common Language Runtime*<br/>
+*clr*<br/>
 Il nuovo colore di sfondo.
 
 ### <a name="remarks"></a>Note
@@ -801,7 +801,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametri
 
-*Common Language Runtime*<br/>
+*clr*<br/>
 Il nuovo colore del testo.
 
 ### <a name="remarks"></a>Note

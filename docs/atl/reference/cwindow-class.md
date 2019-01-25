@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694595"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894458"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -217,7 +217,7 @@ class CWindow
 |[CWindow::GetDC](#getdc)|Recupera un contesto di dispositivo per l'area client.|
 |[CWindow::GetDCEx](#getdcex)|Recupera un contesto di dispositivo per l'area client e consente di opzioni di ritaglio.|
 |[CWindow::GetDescendantWindow](#getdescendantwindow)|Recupera la finestra di discendente specificata.|
-|[CWindow:: GetDlgControl](#getdlgcontrol)|Recupera un'interfaccia sul controllo specificato.|
+|[CWindow::GetDlgControl](#getdlgcontrol)|Recupera un'interfaccia sul controllo specificato.|
 |[CWindow::GetDlgCtrlID](#getdlgctrlid)|Recupera l'identificatore della finestra (figlio solo per windows).|
 |[CWindow::GetDlgHost](#getdlghost)|Recupera un puntatore a un'interfaccia per l'hosting di contenitore del controllo ATL.|
 |[CWindow::GetDlgItem](#getdlgitem)|Recupera la finestra figlio specificato.|
@@ -252,7 +252,7 @@ class CWindow
 |[CWindow::GetWindowRect](#getwindowrect)|Recupera le dimensioni di delimitazione della finestra.|
 |[CWindow::GetWindowRgn](#getwindowrgn)|Ottiene una copia dell'area della finestra di una finestra.|
 |[CWindow::GetWindowText](#getwindowtext)|Recupera il testo della finestra.|
-|[CWindow:: Getwindowtextlength](#getwindowtextlength)|Recupera la lunghezza del testo della finestra.|
+|[CWindow::GetWindowTextLength](#getwindowtextlength)|Recupera la lunghezza del testo della finestra.|
 |[CWindow::GetWindowThreadID](#getwindowthreadid)|Recupera l'identificatore del thread che ha creato la finestra specificata.|
 |[CWindow::GetWindowWord](#getwindowword)|Recupera un valore a 16 bit da un offset specificato nella memoria di finestra aggiuntiva.|
 |[CWindow::GotoDlgCtrl](#gotodlgctrl)|Imposta lo stato attivo a un controllo nella finestra di dialogo.|
@@ -317,7 +317,7 @@ class CWindow
 |[CWindow::SetWindowPlacement](#setwindowplacement)|Imposta la stato di visualizzazione e le posizioni.|
 |[CWindow::SetWindowPos](#setwindowpos)|Imposta le dimensioni, posizione e ordine Z.|
 |[CWindow::SetWindowRgn](#setwindowrgn)|Imposta l'area della finestra di una finestra.|
-|[CWindow:: SetWindowText](#setwindowtext)|Modifica il testo della finestra.|
+|[CWindow::SetWindowText](#setwindowtext)|Modifica il testo della finestra.|
 |[CWindow::SetWindowWord](#setwindowword)|Imposta un valore a 16 bit da un offset specificato nella memoria di finestra aggiuntiva.|
 |[CWindow::ShowCaret](#showcaret)|Visualizza il cursore di sistema.|
 |[CWindow::ShowOwnedPopups](#showownedpopups)|Mostra o nasconde le finestre popup appartenenti alla finestra.|
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) in Windows SDK.
+Visualizzare [ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) in Windows SDK.
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -562,7 +562,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] Handle alla finestra padre o proprietaria.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Una variabile di tipo [u_rect](../../atl/reference/u-rect-class.md) che specificano la posizione della finestra. Il valore predefinito è NULL. Quando questo parametro è NULL, il valore di `CWindow::rcDefault` viene usato.
 
 *szWindowName*<br/>
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) in Windows SDK.
+Visualizzare [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) in Windows SDK.
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -912,7 +912,7 @@ Handle per una finestra del discendente.
 
 `GetDescendantWindow` Cerca l'intero albero di finestre figlio, non solo le finestre che sono figli diretti.
 
-##  <a name="getdlgcontrol"></a>  CWindow:: GetDlgControl
+##  <a name="getdlgcontrol"></a>  CWindow::GetDlgControl
 
 Chiamare questa funzione per ottenere un puntatore a un'interfaccia di un controllo ActiveX che è ospitato da un controllo composito o una finestra di dialogo hosting del controllo.
 
@@ -928,7 +928,7 @@ HRESULT GetDlgControl(
 *nID*<br/>
 [in] L'ID risorsa del controllo in corso il recupero.
 
-*IID*<br/>
+*iid*<br/>
 [in] L'ID dell'interfaccia da ottenere dal controllo.
 
 *ppCtrl*<br/>
@@ -970,7 +970,7 @@ HRESULT GetDlgHost(
 *nID*<br/>
 [in] L'ID risorsa del controllo in corso il recupero.
 
-*IID*<br/>
+*iid*<br/>
 [in] L'ID dell'interfaccia da ottenere dal controllo.
 
 *ppHost*<br/>
@@ -1456,11 +1456,11 @@ Se il testo viene copiato correttamente, il valore restituito è TRUE. in caso c
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [GetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633520) in Windows SDK.
+Visualizzare [GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) in Windows SDK.
 
 La seconda versione di questo metodo consente di archiviare il testo in un oggetto BSTR; la terza versione consente di archiviare il risultato in un [CString](../../atl-mfc-shared/reference/cstringt-class.md), poiché `CSimpleString` è la classe di base di `CString`.
 
-##  <a name="getwindowtextlength"></a>  CWindow:: Getwindowtextlength
+##  <a name="getwindowtextlength"></a>  CWindow::GetWindowTextLength
 
 Recupera la lunghezza del testo della finestra.
 
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Blocco*<br/>
+*bLock*<br/>
 [in] Se TRUE (valore predefinito), la finestra verrà bloccata. In caso contrario, sarà sbloccato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2619,7 +2619,7 @@ int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 
 Visualizzare [SetWindowRgn](/windows/desktop/api/winuser/nf-winuser-setwindowrgn) in Windows SDK.
 
-##  <a name="setwindowtext"></a>  CWindow:: SetWindowText
+##  <a name="setwindowtext"></a>  CWindow::SetWindowText
 
 Modifica il testo della finestra.
 
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) in Windows SDK.
+Visualizzare [SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 

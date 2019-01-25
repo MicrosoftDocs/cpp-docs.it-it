@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571184"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894406"
 ---
 # <a name="cfindreplacedialog-class"></a>Classe CFindReplaceDialog
 
@@ -81,7 +81,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="remarks"></a>Note
 
-A differenza di altri Windows finestre di dialogo comuni, `CFindReplaceDialog` gli oggetti sono non modali, che consente agli utenti di interagire con altre finestre mentre si trovano sullo schermo. Esistono due tipi di `CFindReplaceDialog` oggetti: individuare le finestre di dialogo e finestre di dialogo Trova/Sostituisci. Anche se le finestre di dialogo consentono all'utente di ricerca di input e le stringhe di ricerca e sostituzione, non viene eseguita la ricerca o sostituzione di funzioni. È necessario aggiungerli all'applicazione.
+A differenza di altri Windows finestre di dialogo comuni, `CFindReplaceDialog` gli oggetti sono non modali, che consente agli utenti di interagire con altre finestre mentre si trovano sullo schermo. Esistono due tipi di `CFindReplaceDialog` oggetti: Sono disponibili le finestre di dialogo e finestre di dialogo Trova/Sostituisci. Anche se le finestre di dialogo consentono all'utente di ricerca di input e le stringhe di ricerca e sostituzione, non viene eseguita la ricerca o sostituzione di funzioni. È necessario aggiungerli all'applicazione.
 
 Per costruire un `CFindReplaceDialog` oggetto, usare il costruttore specificato (che non dispone di argomenti). Poiché si tratta di una finestra di dialogo non modale, allocare l'oggetto nell'heap usando la **nuovo** operatore, invece che nello stack.
 
@@ -89,7 +89,7 @@ Una volta una `CFindReplaceDialog` oggetto è stato costruito, è necessario chi
 
 Usare la [m_fr](#m_fr) struttura per inizializzare la finestra di dialogo prima di chiamare `Create`. Il `m_fr` struttura JE typu [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Per altre informazioni su questa struttura, vedere il SDK di Windows.
 
-Affinché la finestra padre ricevere una notifica di richieste di ricerca e sostituzione, è necessario utilizzare il Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funzione, utilizzare il [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro della mappa messaggi nel frame finestra che gestisce il messaggio registrato.
+Affinché la finestra padre ricevere una notifica di richieste di ricerca e sostituzione, è necessario utilizzare il Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funzione, utilizzare il [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro della mappa messaggi nel frame finestra che gestisce il messaggio registrato.
 
 È possibile determinare se l'utente ha deciso di terminare la finestra di dialogo con la `IsTerminating` funzione membro.
 
@@ -175,7 +175,7 @@ Diverso da zero se l'oggetto finestra di dialogo è stato creato correttamente; 
 
 ### <a name="remarks"></a>Note
 
-Affinché la finestra padre ricevere una notifica di richieste di ricerca e sostituzione, è necessario utilizzare il Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funzione il cui valore restituito è un numero di messaggio univoco per l'istanza dell'applicazione. La finestra cornice deve avere una voce della mappa messaggi che dichiara la funzione di callback ( `OnFindReplace` nell'esempio che segue) che gestisce il messaggio registrato. Il frammento di codice seguente è un esempio di come eseguire questa operazione per una classe della finestra cornice denominata `CMyRichEditView`:
+Affinché la finestra padre ricevere una notifica di richieste di ricerca e sostituzione, è necessario utilizzare il Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funzione il cui valore restituito è un numero di messaggio univoco per l'istanza dell'applicazione. La finestra cornice deve avere una voce della mappa messaggi che dichiara la funzione di callback ( `OnFindReplace` nell'esempio che segue) che gestisce il messaggio registrato. Il frammento di codice seguente è un esempio di come eseguire questa operazione per una classe della finestra cornice denominata `CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

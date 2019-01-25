@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694049"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893899"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procedura dettagliata: Creare un'applicazione Desktop di Windows tradizionale (C++)
 
@@ -26,7 +26,7 @@ L'API di Windows (noto anche come l'API Win32 API Desktop di Windows e Windows A
 
 - Un computer che esegue Microsoft Windows 7 o versioni successive. Si consiglia di Windows 10 per la migliore esperienza di sviluppo.
 
-- Una copia di Visual Studio 2017. Per informazioni su come scaricare e installare Visual Studio, vedere [installazione di Visual Studio](/visualstudio/install/install-visual-studio). Quando si esegue il programma di installazione, assicurarsi che il **sviluppo di applicazioni Desktop con C++** viene controllato il carico di lavoro. Non occorre preoccuparsi se non è stato installato il carico di lavoro durante l'installazione di Visual Studio. È possibile eseguire nuovamente il programma di installazione e installarlo ora.
+- A copy of Visual Studio 2017. Per informazioni su come scaricare e installare Visual Studio, vedere [installazione di Visual Studio](/visualstudio/install/install-visual-studio). Quando si esegue il programma di installazione, assicurarsi che il **sviluppo di applicazioni Desktop con C++** viene controllato il carico di lavoro. Non occorre preoccuparsi se non è stato installato il carico di lavoro durante l'installazione di Visual Studio. È possibile eseguire nuovamente il programma di installazione e installarlo ora.
 
    ![Sviluppo di applicazioni desktop con C++](../build/media/desktop-development-with-cpp.png "sviluppo Desktop con C++")
 
@@ -107,7 +107,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
    );
    ```
 
-   Per informazioni sui parametri e valore restituito di questa funzione, vedere [punto di ingresso WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   Per informazioni sui parametri e valore restituito di questa funzione, vedere [punto di ingresso WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
    > Quali sono tutte queste parole aggiuntive, ad esempio `CALLBACK`, oppure `HINSTANCE`, o `_In_`? L'API di Windows tradizionale Usa typedef e macro del preprocessore per sottraggono alcuni dettagli di tipi e specifici della piattaforma del codice, ad esempio le convenzioni di chiamata **declspec** dichiarazioni e pragma del compilatore. In Visual Studio, è possibile usare la funzionalità IntelliSense [informazioni rapide](/visualstudio/ide/using-intellisense#quick-info) funzionalità per vedere cosa definiscano typedef e macro. Posizionare il mouse sopra la parola di interesse, oppure selezionarlo e premere **Ctrl**+**K**, **Ctrl**+**ho** per un piccola finestra popup contenente la definizione. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense). Tipi restituiti e parametri usano spesso *annotazioni SAL* che consentono di catch gli errori di programmazione. Per altre informazioni, vedere [utilizzo delle annotazioni SAL per ridurre i difetti del codice C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
@@ -136,7 +136,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Per aggiungere funzionalità alla funzione WinMain
 
-1. Nel `WinMain` funzione, si popola una struttura di tipo [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). La struttura contiene informazioni sulla finestra, ad esempio, l'icona dell'applicazione, il colore di sfondo della finestra, il nome da visualizzare nella barra del titolo e importante, un puntatore a funzione alla routine della finestra. L'esempio che segue illustra una struttura `WNDCLASSEX` tipica.
+1. Nel `WinMain` funzione, si popola una struttura di tipo [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa). La struttura contiene informazioni sulla finestra, ad esempio, l'icona dell'applicazione, il colore di sfondo della finestra, il nome da visualizzare nella barra del titolo e importante, un puntatore a funzione alla routine della finestra. L'esempio che segue illustra una struttura `WNDCLASSEX` tipica.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -155,7 +155,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Per informazioni sui campi della struttura precedente, vedere [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
+   Per informazioni sui campi della struttura precedente, vedere [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa).
 
 1. Registrare il `WNDCLASSEX` con Windows in modo che si conosce la finestra e come inviare messaggi a esso. Usare la funzione [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) e passare la struttura della classe della finestra come argomento. Il `_T` macro viene usata in quanto viene usato il `TCHAR` tipo.
 
@@ -237,7 +237,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
    return (int) msg.wParam;
    ```
 
-   Per altre informazioni sulle strutture e le funzioni usate nel ciclo di messaggi, vedere [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Per altre informazioni sulle strutture e le funzioni usate nel ciclo di messaggi, vedere [MSG](/windows/desktop/api/winuser/ns-winuser-msg), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    A questo punto, la funzione `WinMain` dovrebbe essere simile al codice seguente.
 

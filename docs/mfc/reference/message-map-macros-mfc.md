@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327447"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893665"
 ---
 # <a name="message-map-macros-mfc"></a>Macro della mappa messaggi (MFC)
 
@@ -135,7 +135,7 @@ Questa macro è simile al [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_me
 
 Nella sezione di implementazione del metodo della classe, avviare la mappa dei messaggi con la macro BEGIN_TEMPLATE_MESSAGE_MAP; aggiungere le voci di macro per ognuno dei metodi gestore di messaggi come si farebbe per una mappa di messaggio standard. Come con BEGIN_MESSAGE_MAP (macro), completare la mappa dei messaggi di modello con il [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) macro.
 
-Per altre informazioni sull'implementazione di mappe messaggi per le classi modello, fare riferimento a [procedura: creare una mappa messaggi per una classe modello](../how-to-create-a-message-map-for-a-template-class.md).
+Per altre informazioni sull'implementazione di mappe messaggi per le classi modello, fare riferimento a [come: Creare una mappa messaggi per una classe modello](../how-to-create-a-message-map-for-a-template-class.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -252,7 +252,7 @@ Nome della funzione del gestore messaggi a cui viene eseguito il mapping del com
 
 Forma estesa di gestori di messaggi di comando è disponibile per utilizzi avanzati. ON_COMMAND_EX (macro) viene usato per tali gestori di messaggi e fornisce un superset del [ON_COMMAND](message-map-macros-mfc.md#on_command) funzionalità. Funzioni membro esteso di gestori di comandi accettano un solo parametro, UINT contenente l'ID di comando e restituiscono un valore booleano. Il valore restituito deve essere TRUE per indicare che il comando è stato gestito; in caso contrario, il routing continuerà ad altri oggetti destinazione comando.
 
-Per altre informazioni, vedere la nota tecnica [TN006: mappe messaggi] tm006-messaggio-maps.md).
+Per altre informazioni, vedere la nota tecnica [TN006: Mappe messaggi] tm006-messaggio-maps.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -261,7 +261,7 @@ File di intestazione: afxmsg_.h
 ### <a name="see-also"></a>Vedere anche
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006: mappe messaggi](../tn006-message-maps.md)
+[TN006: Mappe messaggi](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -383,97 +383,97 @@ L'ID del menu, barra degli strumenti ID, ID del pulsante o altri ID della risors
 
 Il `IOleCommandTarget` i comandi di menu standard sono stati implementati da MFC nelle macro seguenti:
 
-**ON_OLECMD_CLEARSELECTION)**
+**ON_OLECMD_CLEARSELECTION( )**
 
 Invia il comando Modifica Clear. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY)**
+**ON_OLECMD_COPY( )**
 
 Invia il comando Copy di modifica. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT)**
+**ON_OLECMD_CUT( )**
 
 Invia il comando Modifica Taglia. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW)**
+**ON_OLECMD_NEW( )**
 
 Invia il comando File nuovo. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
-**ON_OLECMD_OPEN)**
+**ON_OLECMD_OPEN( )**
 
 Invia il comando Apri File. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP)**
+**ON_OLECMD_PAGESETUP( )**
 
 Invia il comando Imposta pagina File. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE)**
+**ON_OLECMD_PASTE( )**
 
 Invia il comando Incolla modifica. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL)**
+**ON_OLECMD_PASTESPECIAL( )**
 
 Invia il comando Modifica Incolla speciale. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT)**
+**ON_OLECMD_PRINT( )**
 
 Invia il comando di stampa di File. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW)**
+**ON_OLECMD_PRINTPREVIEW( )**
 
 Invia il comando Anteprima di stampa di File. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO)**
+**ON_OLECMD_REDO( )**
 
 Invia il comando Modifica fase di rollforward. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE)**
+**ON_OLECMD_SAVE( )**
 
 Invia il comando di salvataggio File. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS)**
+**ON_OLECMD_SAVE_AS( )**
 
 Invia il comando Salva con nome File. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS)**
+**ON_OLECMD_SAVE_COPY_AS( )**
 
 Invia il comando File Salva copia con nome. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL)**
+**ON_OLECMD_SELECTALL( )**
 
 Invia il comando Modifica Seleziona tutto. Implementato come:
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO)**
+**ON_OLECMD_UNDO( )**
 
 Invia il comando Annulla modifica. Implementato come:
 
@@ -528,7 +528,7 @@ END_MESSAGE_MAP()
 
 ### <a name="see-also"></a>Vedere anche
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
 [Gestori definiti dall'utente](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
@@ -627,10 +627,10 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametri
 
-*ID1*<br/>
+*id1*<br/>
 ID del comando all'inizio di un intervallo contiguo di ID di comando.
 
-*ID2*<br/>
+*id2*<br/>
 ID comando alla fine di un intervallo contiguo di ID di comando.
 
 *memberFxn*<br/>
@@ -682,10 +682,10 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametri
 
-*ID1*<br/>
+*id1*<br/>
 ID del comando all'inizio di un intervallo contiguo di ID di comando.
 
-*ID2*<br/>
+*id2*<br/>
 ID comando alla fine di un intervallo contiguo di ID di comando.
 
 *memberFxn*<br/>
@@ -716,10 +716,10 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 *wNotifyCode*<br/>
 Il codice di notifica a cui risponde il gestore.
 
-*ID1*<br/>
+*id1*<br/>
 ID del comando all'inizio di un intervallo contiguo di ID di controllo.
 
-*ID2*<br/>
+*id2*<br/>
 ID comando alla fine di un intervallo contiguo di ID di controllo.
 
 *memberFxn*<br/>

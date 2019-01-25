@@ -37,12 +37,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 800ed98656493efc3e0ce59739dab7e4c0bc681f
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 9d660f507f50c00c8ccd6f19505f09285ede9e60
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54336628"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893600"
 ---
 # <a name="hstring-class"></a>Classe HString
 
@@ -140,7 +140,7 @@ HSTRING che riceve la copia.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo chiama il [WindowsDuplicateString](https://msdn.microsoft.com/library/br224634.aspx) (funzione).
+Questo metodo chiama il [WindowsDuplicateString](/windows/desktop/api/winstring/nf-winstring-windowsduplicatestring) (funzione).
 
 ## <a name="detach"></a>HString::Detach
 

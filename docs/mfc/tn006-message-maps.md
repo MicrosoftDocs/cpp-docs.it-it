@@ -1,5 +1,5 @@
 ---
-title: 'TN006: mappe messaggi'
+title: 'TN006: Mappe messaggi'
 ms.date: 06/25/2018
 f1_keywords:
 - vc.messages.maps
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693657"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894081"
 ---
-# <a name="tn006-message-maps"></a>TN006: mappe messaggi
+# <a name="tn006-message-maps"></a>TN006: Mappe messaggi
 
 In questa nota descrive le funzionalità di mappa dei messaggi MFC.
 
@@ -121,7 +121,7 @@ L'intervallo di messaggi definiti dall'utente che usano questo approccio deve es
 
 ## <a name="registered-windows-messages"></a>Messaggi Windows registrati
 
-Il [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funzione viene utilizzata per definire un nuovo messaggio della finestra che viene garantito l'univocità in tutto il sistema. La macro ON_REGISTERED_MESSAGE viene utilizzata per gestire questi messaggi. Questa macro accetta un nome di un *UINT quasi* variabile che contiene l'ID di messaggio windows registrati. Esempio:
+Il [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funzione viene utilizzata per definire un nuovo messaggio della finestra che viene garantito l'univocità in tutto il sistema. La macro ON_REGISTERED_MESSAGE viene utilizzata per gestire questi messaggi. Questa macro accetta un nome di un *UINT quasi* variabile che contiene l'ID di messaggio windows registrati. Esempio:
 
 ```cpp
 class CMyWnd : public CMyParentWndClass

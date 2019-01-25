@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: cec3a0fce1147ca58f2ee2c51b9d728d81dddda4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601409"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893437"
 ---
 # <a name="catlexemodulet-class"></a>Classe CAtlExeModuleT
 
@@ -52,7 +52,7 @@ La classe derivata da `CAtlExeModuleT`.
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Costruttore.|
-|[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|Distruttore.|
+|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -190,7 +190,7 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*lpCmdLine fa*<br/>
+*lpCmdLine*<br/>
 La riga di comando passati all'applicazione.
 
 *pnRetCode*<br/>
@@ -284,7 +284,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametri
 
 *nShowCmd*<br/>
-Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sezione. Il valore predefinito è SW_HIDE.
+Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sezione. Il valore predefinito è SW_HIDE.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametri
 
 *nShowCmd*<br/>
-Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sezione.
+Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sezione.
 
 ### <a name="return-value"></a>Valore restituito
 

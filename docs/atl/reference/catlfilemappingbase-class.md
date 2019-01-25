@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614379"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894016"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 
@@ -180,7 +180,7 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Parametri
 
-*oggetto hFile*<br/>
+*hFile*<br/>
 Handle per il file da cui creare un oggetto di mapping. *oggetto hFile* deve essere valido e non può essere impostata su INVALID_HANDLE_VALUE.
 
 *nMappingSize*<br/>
@@ -193,7 +193,7 @@ L'offset del file in cui ha inizio il mapping. Il valore di offset deve essere u
 La protezione desiderata per la visualizzazione del file quando viene eseguito il mapping di file. Visualizzare *flProtect* nelle [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) nel SDK di Windows.
 
 *dwViewDesiredAccess*<br/>
-Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.
+Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -201,7 +201,7 @@ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso d
 
 ### <a name="remarks"></a>Note
 
-Dopo aver creato un oggetto di mapping dei file, le dimensioni del file non può superare le dimensioni dell'oggetto mapping dei file. in caso affermativo, non tutto il contenuto del file sarà disponibile per la condivisione. Per altre informazioni, vedere [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.
+Dopo aver creato un oggetto di mapping dei file, le dimensioni del file non può superare le dimensioni dell'oggetto mapping dei file. in caso affermativo, non tutto il contenuto del file sarà disponibile per la condivisione. Per altre informazioni, vedere [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) nel SDK di Windows.
 
 ### <a name="example"></a>Esempio
 
@@ -239,7 +239,7 @@ Il puntatore a un `SECURITY_ATTRIBUTES` struttura che determina se l'handle rest
 La protezione desiderata per la visualizzazione di file, quando viene eseguito il mapping di file. Visualizzare *flProtect* in `CreateFileMapping` nel SDK di Windows.
 
 *dwViewDesiredAccess*<br/>
-Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.
+Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -273,7 +273,7 @@ Le dimensioni di mapping. Se è 0, la dimensione massima dell'oggetto mapping de
 L'offset del file in cui ha inizio il mapping. Il valore di offset deve essere un multiplo della granularità di allocazione di memoria del sistema.
 
 *dwViewDesiredAccess*<br/>
-Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) nel SDK di Windows.
+Specifica il tipo di accesso per la visualizzazione di file e, pertanto, la protezione delle pagine eseguito il mapping dal file. Visualizzare *dwDesiredAccess* nelle [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -314,7 +314,7 @@ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso d
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) nel SDK di Windows per altri dettagli.
+Visualizzare [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) nel SDK di Windows per altri dettagli.
 
 ## <a name="see-also"></a>Vedere anche
 

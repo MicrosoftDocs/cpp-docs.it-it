@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179084"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894536"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -858,7 +858,7 @@ class CWnd : public CCmdTarget
 |[CWnd::BeginModalState](#beginmodalstate)|Chiamare questa funzione membro per impostare lo stato modale per una finestra cornice.|
 |[CWnd::BeginPaint](#beginpaint)|Prepara `CWnd` per il disegno.|
 |[CWnd::BindDefaultProperty](#binddefaultproperty)|Associa la proprietà associata semplice predefinita dell'oggetto chiamante, come da contrassegno nella libreria dei tipi, a un cursore associato a un controllo origine dati.|
-|[CWnd:: BindProperty](#bindproperty)|Associa una proprietà con associazione al cursore per un controllo con associazione a dati a un controllo origine dati e registra tale relazione nel gestore delle associazioni MFC.|
+|[CWnd::BindProperty](#bindproperty)|Associa una proprietà con associazione al cursore per un controllo con associazione a dati a un controllo origine dati e registra tale relazione nel gestore delle associazioni MFC.|
 |[CWnd::BringWindowToTop](#bringwindowtotop)|Porta `CWnd` in cima a una pila di finestre sovrapposte.|
 |[CWnd::CalcWindowRect](#calcwindowrect)|Chiamata eseguita per calcolare il rettangolo della finestra dal rettangolo client.|
 |[CWnd::CancelToolTips](#canceltooltips)|Disabilita il controllo ToolTip.|
@@ -878,7 +878,7 @@ class CWnd : public CCmdTarget
 |[CWnd::CreateGrayCaret](#creategraycaret)|Crea un blocco grigio per il cursore di sistema e ottiene la proprietà del cursore.|
 |[CWnd::CreateSolidCaret](#createsolidcaret)|Crea un blocco in tinta unita per il cursore di sistema e ottiene la proprietà del cursore.|
 |[CWnd::DeleteTempMap](#deletetempmap)|Chiamato automaticamente dal gestore del tempo di inattività`CWinApp`, consente di eliminare qualsiasi oggetto `CWnd` temporaneo creato da `FromHandle`.|
-|[DestroyWindow](#destroywindow)|Elimina definitivamente la finestra di Windows collegata.|
+|[CWnd::DestroyWindow](#destroywindow)|Elimina definitivamente la finestra di Windows collegata.|
 |[CWnd::Detach](#detach)|Scollega un handle di Windows da un oggetto `CWnd` e restituisce l'handle.|
 |[CWnd::DlgDirList](#dlgdirlist)|Compila una casella di riepilogo con un elenco di file o directory.|
 |[CWnd::DlgDirListComboBox](#dlgdirlistcombobox)|Compila la casella di riepilogo di una casella combinata con un elenco di file o directory.|
@@ -901,12 +901,12 @@ class CWnd : public CCmdTarget
 |[CWnd::EndModalState](#endmodalstate)|Chiamare questa funzione membro per cambiare lo stato di una finestra cornice da modale a non modale.|
 |[CWnd::EndPaint](#endpaint)|Contrassegna la fine del disegno.|
 |[CWnd::ExecuteDlgInit](#executedlginit)|Inizializza una risorsa di una finestra di dialogo.|
-|[CWnd:: FilterToolTipMessage](#filtertooltipmessage)|Recupera il titolo o il testo associato a un controllo in una finestra di dialogo.|
+|[CWnd::FilterToolTipMessage](#filtertooltipmessage)|Recupera il titolo o il testo associato a un controllo in una finestra di dialogo.|
 |[CWnd::FindWindow](#findwindow)|Restituisce l'handle della finestra, identificata in base al nome e alla classe.|
 |[CWnd::FindWindowEx](#findwindowex)|Restituisce l'handle della finestra, identificata in base al nome e alla classe.|
 |[CWnd::FlashWindow](#flashwindow)|Fa lampeggiare una volta la finestra.|
 |[CWnd::FlashWindowEx](#flashwindowex)|Fa lampeggiare la finestra con funzionalità aggiuntive.|
-|[CWnd:: FromHandle](#fromhandle)|Restituisce un puntatore a un oggetto `CWnd` quando viene specificato un handle di una finestra. Se all'handle non è collegato un oggetto `CWnd`, viene creato e collegato un oggetto `CWnd` temporaneo.|
+|[CWnd::FromHandle](#fromhandle)|Restituisce un puntatore a un oggetto `CWnd` quando viene specificato un handle di una finestra. Se all'handle non è collegato un oggetto `CWnd`, viene creato e collegato un oggetto `CWnd` temporaneo.|
 |[CWnd::FromHandlePermanent](#fromhandlepermanent)|Restituisce un puntatore a un oggetto `CWnd` quando viene specificato un handle di una finestra. Se all'handle non è collegato un oggetto `CWnd`, viene creato e collegato un oggetto `CWnd` temporaneo.|
 |[CWnd::get_accChild](#get_accchild)|Chiamata eseguita dal framework per recuperare l'indirizzo di un'interfaccia `IDispatch` per l'elemento figlio specificato.|
 |[CWnd::get_accChildCount](#get_accchildcount)|Chiamata eseguita dal framework per recuperare il numero di elementi figlio appartenenti all'oggetto corrente.|
@@ -927,7 +927,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetCapture](#getcapture)|Recupera l'oggetto `CWnd` con il mouse capture.|
 |[CWnd::GetCaretPos](#getcaretpos)|Recupera le coordinate client della posizione corrente del cursore.|
 |[CWnd::GetCheckedRadioButton](#getcheckedradiobutton)|Restituisce l'ID del pulsante di opzione attualmente selezionato in un gruppo di pulsanti.|
-|[CWnd:: GetClientRect](#getclientrect)|Recupera le dimensioni dell'area client di `CWnd`.|
+|[CWnd::GetClientRect](#getclientrect)|Recupera le dimensioni dell'area client di `CWnd`.|
 |[CWnd::GetClipboardOwner](#getclipboardowner)|Recupera un puntatore al proprietario corrente degli Appunti.|
 |[CWnd::GetClipboardViewer](#getclipboardviewer)|Recupera un puntatore alla prima finestra nella catena di visualizzatori degli Appunti.|
 |[CWnd::GetControlUnknown](#getcontrolunknown)|Recupera un puntatore a un controllo ActiveX sconosciuto.|
@@ -937,7 +937,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetDescendantWindow](#getdescendantwindow)|Cerca tutte le finestre discendenti e restituisce la finestra con l'ID specificato.|
 |[CWnd::GetDesktopWindow](#getdesktopwindow)|Recupera la finestra del desktop di Windows.|
 |[CWnd::GetDlgCtrlID](#getdlgctrlid)|Se `CWnd` è una finestra figlio, chiamare questa funzione restituisce il valore ID.|
-|[GetDlgItem](#getdlgitem)|Recupera il controllo con l'ID specificato dalla finestra di dialogo specificata.|
+|[CWnd::GetDlgItem](#getdlgitem)|Recupera il controllo con l'ID specificato dalla finestra di dialogo specificata.|
 |[CWnd::GetDlgItemInt](#getdlgitemint)|Converte il testo di un controllo nella finestra di dialogo specificata in un valore Integer.|
 |[CWnd::GetDlgItemText](#getdlgitemtext)|Recupera la didascalia o il testo associato a un controllo.|
 |[CWnd::GetDSCCursor](#getdsccursor)|Recupera un puntatore al cursore sottostante definito dalle proprietà DataSource, UserName, Password e SQL di un controllo origine dati.|
@@ -1000,7 +1000,7 @@ class CWnd : public CCmdTarget
 |[CWnd::IsD2DSupportEnabled](#isd2dsupportenabled)|Determina se è abilitato il supporto D2D.|
 |[CWnd::IsDialogMessage](#isdialogmessage)|Determina se il messaggio specificato è destinato alla finestra di dialogo non modale e, in caso affermativo, lo elabora.|
 |[CWnd::IsDlgButtonChecked](#isdlgbuttonchecked)|Determina se un controllo pulsante è selezionato.|
-|[CWnd:: Isdynamiclayoutenabled](#isdynamiclayoutenabled)|Determina se il layout dinamico è abilitato in questa finestra. Se il layout dinamico è abilitato, la posizione e le dimensioni delle finestre figlio possono cambiare quando l'utente ridimensiona la finestra padre.|
+|[CWnd::IsDynamicLayoutEnabled](#isdynamiclayoutenabled)|Determina se il layout dinamico è abilitato in questa finestra. Se il layout dinamico è abilitato, la posizione e le dimensioni delle finestre figlio possono cambiare quando l'utente ridimensiona la finestra padre.|
 |[CWnd::IsIconic](#isiconic)|Determina se `CWnd` è ridotta a icona.|
 |[CWnd::IsTouchWindow](#istouchwindow)|Specifica se `CWnd` include il supporto del tocco.|
 |[CWnd::IsWindowEnabled](#iswindowenabled)|Determina se la finestra è abilitata per l'input da tastiera e mouse.|
@@ -1026,7 +1026,7 @@ class CWnd : public CCmdTarget
 |[CWnd::PostMessage](#postmessage)|Inserisce un messaggio nella coda dell'applicazione, quindi restituisce il controllo senza attendere che la finestra elabori il messaggio.|
 |[CWnd::PreCreateWindow](#precreatewindow)|Chiamata eseguita prima della creazione della finestra di Windows collegata a questo oggetto `CWnd`.|
 |[CWnd::PreSubclassWindow](#presubclasswindow)|Consente l'altra creazione di sottoclassi necessarie condizionata dal verificarsi [SubclassWindow](#subclasswindow) viene chiamato.|
-|[CWnd:: PreTranslateMessage](#pretranslatemessage)|Elemento usato da `CWinApp` per filtrare i messaggi della finestra prima che vengano inviati alle funzioni di Windows `TranslateMessage` e `DispatchMessage`.|
+|[CWnd::PreTranslateMessage](#pretranslatemessage)|Elemento usato da `CWinApp` per filtrare i messaggi della finestra prima che vengano inviati alle funzioni di Windows `TranslateMessage` e `DispatchMessage`.|
 |[CWnd::Print](#print)|Disegna la finestra corrente nel contesto di dispositivo specificato.|
 |[CWnd::PrintClient](#printclient)|Disegna qualsiasi finestra nel contesto di dispositivo specificato (in genere un contesto di dispositivo stampante).|
 |[CWnd::PrintWindow](#printwindow)|Copia una finestra visiva nel contesto di dispositivo specificato, in genere un contesto di dispositivo stampante.|
@@ -1040,7 +1040,7 @@ class CWnd : public CCmdTarget
 |[CWnd::ScrollWindowEx](#scrollwindowex)|Scorre il contenuto dell'area client. Simile a `ScrollWindow`, con funzionalità aggiuntive.|
 |[CWnd::SendChildNotifyLastMsg](#sendchildnotifylastmsg)|Fornisce un messaggio di notifica a una finestra figlio, dalla finestra padre, in modo che la finestra figlio possa gestire un'attività.|
 |[CWnd::SendDlgItemMessage](#senddlgitemmessage)|Invia un messaggio al controllo specificato.|
-|[CWnd:: SendMessage](#sendmessage)|Invia un messaggio all'oggetto `CWnd` e non restituisce il controllo fino a quando non ha elaborato il messaggio.|
+|[CWnd::SendMessage](#sendmessage)|Invia un messaggio all'oggetto `CWnd` e non restituisce il controllo fino a quando non ha elaborato il messaggio.|
 |[CWnd::SendMessageToDescendants](#sendmessagetodescendants)|Invia un messaggio a tutte le finestre discendenti della finestra.|
 |[CWnd::SendNotifyMessage](#sendnotifymessage)|Invia il messaggio specificato alla finestra e restituisce il controllo il prima possibile, a seconda che il thread chiamante abbia creato la finestra.|
 |[CWnd::SetActiveWindow](#setactivewindow)|Attiva la finestra.|
@@ -1093,7 +1093,7 @@ class CWnd : public CCmdTarget
 |[CWnd::Default](#default)|Chiama la routine predefinita per la finestra, che fornisce l'elaborazione predefinita per gli eventuali messaggi della finestra non elaborati da un'applicazione.|
 |[CWnd::DefWindowProc](#defwindowproc)|Chiama la routine predefinita per la finestra, che fornisce l'elaborazione predefinita per gli eventuali messaggi della finestra non elaborati da un'applicazione.|
 |[CWnd::DoDataExchange](#dodataexchange)|Per inviare, ricevere e convalidare i dati della finestra di dialogo. Chiamato da `UpdateData`.|
-|[CWnd:: GetCurrentMessage](#getcurrentmessage)|Restituisce un puntatore al messaggio che questa finestra sta elaborando. Deve essere chiamato solo quando un' `On` *messaggio* funzione membro di gestore di messaggi.|
+|[CWnd::GetCurrentMessage](#getcurrentmessage)|Restituisce un puntatore al messaggio che questa finestra sta elaborando. Deve essere chiamato solo quando un' `On` *messaggio* funzione membro di gestore di messaggi.|
 |[CWnd::InitDynamicLayout](#initdynamiclayout)|Chiamata eseguita dal framework per inizializzare il layout dinamico per la finestra.|
 |[CWnd::LoadDynamicLayoutResource](#loaddynamiclayoutresource)|Carica le informazioni di layout dinamico dal file di risorse.|
 |[CWnd::OnActivate](#onactivate)|Chiamata eseguita quando è in corso l'attivazione o la disattivazione di `CWnd`.|
@@ -1176,7 +1176,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcActivate](#onncactivate)|Chiamata eseguita quando l'area non client deve essere modificata per indicare uno stato attivo o inattivo.|
 |[CWnd::OnNcCalcSize](#onnccalcsize)|Chiamata eseguita quando devono essere calcolate le dimensioni e la posizione dell'area client.|
 |[CWnd::OnNcCreate](#onnccreate)|Chiamato nelle versioni precedenti a [OnCreate](#oncreate) quando viene creato l'area non client.|
-|[OnNcDestroy](#onncdestroy)|Chiamata eseguita quando l'area non client viene eliminata definitivamente.|
+|[CWnd::OnNcDestroy](#onncdestroy)|Chiamata eseguita quando l'area non client viene eliminata definitivamente.|
 |[CWnd::OnNcHitTest](#onnchittest)|Chiamata eseguita da Windows ogni volta che il mouse viene spostato se `CWnd` contiene il cursore o ha acquisito l'input del mouse con `SetCapture`.|
 |[CWnd::OnNcLButtonDblClk](#onnclbuttondblclk)|Chiamata eseguita quando l'utente fa doppio clic sul pulsante sinistro del mouse mentre il cursore si trova nell'area client di `CWnd`.|
 |[CWnd::OnNcLButtonDown](#onnclbuttondown)|Chiamata eseguita quando l'utente preme il pulsante sinistro del mouse mentre il cursore si trova nell'area client di `CWnd`.|
@@ -1761,7 +1761,7 @@ void CheckDlgButton(
 *nIDButton*<br/>
 Specifica il pulsante da modificare.
 
-*nControllare*<br/>
+*nCheck*<br/>
 Specifica l'azione da intraprendere. Se *nControllare* è diverso da zero, il `CheckDlgButton` funzione membro inserisce un segno di spunta accanto al pulsante che, se è 0, viene rimosso il segno di spunta. Per i pulsanti di tre stati, se *nControllare* è 2, lo stato del pulsante è indeterminato.
 
 ### <a name="remarks"></a>Note
@@ -1819,7 +1819,7 @@ CWnd* ChildWindowFromPoint(
 *point*<br/>
 Specifica le coordinate client del punto da sottoporre a test.
 
-*nFlags*<br/>
+*nflags*<br/>
 Specifica le finestre figlio da ignorare. Questo parametro può essere una combinazione dei valori seguenti:
 
 |Value|Significato|
@@ -2951,7 +2951,7 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>Parametri
 
-*Nrisultato*<br/>
+*nResult*<br/>
 Contiene il valore da restituire al chiamante di [RunModalLoop](#runmodalloop).
 
 ### <a name="remarks"></a>Note
@@ -3086,7 +3086,7 @@ Handle alla finestra padre sono cui finestre figlio da ricercare.
 Handle per una finestra figlio. La ricerca inizia con la finestra figlio successiva nell'ordine Z. La finestra figlio deve essere una finestra figlio diretto del *hwndParent*, non solo una finestra del discendente.
 
 *lpszClass*<br/>
-Puntatore a una stringa con terminazione null che specifica il nome della classe o un atomo classe creata da una chiamata precedente per il [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586) oppure [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
+Puntatore a una stringa con terminazione null che specifica il nome della classe o un atomo classe creata da una chiamata precedente per il [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa) oppure [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
 
 *lpszWindow*<br/>
 Puntatore a una stringa con terminazione null che specifica il nome della finestra (titolo della finestra). Se questo parametro è NULL, tutti i nomi di finestra corrispondono.
@@ -3699,7 +3699,7 @@ Specifica l'identificatore di tipo integer dell'ultimo pulsante di opzione nel g
 
 ID del pulsante di opzione selezionato oppure 0 se non è stato selezionato.
 
-##  <a name="getclientrect"></a>  CWnd:: GetClientRect
+##  <a name="getclientrect"></a>  CWnd::GetClientRect
 
 Copia le coordinate client della `CWnd` area client nella struttura a cui punta *lpRect*.
 
@@ -3790,7 +3790,7 @@ Restituisce un puntatore per il [MSG](/windows/desktop/api/winuser/ns-winuser-ta
 
   Vedere l'esempio relativo [CMDIFrameWnd::MDICascade](../../mfc/reference/cmdiframewnd-class.md#mdicascade).
 
-##  <a name="getdc"></a>  CWnd:: GetDC
+##  <a name="getdc"></a>  CWnd::GetDC
 
 Recupera un puntatore a un comune, una classe o un contesto di dispositivo privata per l'area client a seconda dello stile di classe specificato per il `CWnd`.
 
@@ -3938,7 +3938,7 @@ Poiché finestre di primo livello non è un valore di ID, il valore restituito d
 
   Vedere l'esempio relativo [CWnd::OnCtlColor](#onctlcolor).
 
-##  <a name="getdlgitem"></a>  GetDlgItem
+##  <a name="getdlgitem"></a>  CWnd::GetDlgItem
 
 Recupera un puntatore per la finestra di controllo o elemento figlio specificata in una finestra di dialogo o altra finestra.
 
@@ -4249,7 +4249,7 @@ BOOL GetMenuBarInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*parametri idObject*<br/>
+*idObject*<br/>
 Specifica l'oggetto menu. Per un elenco di valori possibili, vedere [GetMenuBarInfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo).
 
 *idItem*<br/>
@@ -4354,7 +4354,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Rimuovi flag*<br/>
+*nFlag*<br/>
 Specifica se la funzione restituisce un puntatore alla finestra successiva o finestra precedente. Può essere entrambi GW_HWNDNEXT, che restituisce la finestra che segue il `CWnd` oggetto elenco del gestore delle finestre o GW_HWNDPREV, che restituisce la finestra precedente nell'elenco del gestore delle finestre.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4587,7 +4587,7 @@ BOOL GetScrollBarInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*parametri idObject*<br/>
+*idObject*<br/>
 Specifica l'oggetto menu. Per un elenco di valori possibili, vedere [GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo).
 
 *psbi*<br/>
@@ -5451,7 +5451,7 @@ Diverso da zero se il controllo specificato è selezionato e 0 se non è selezio
 
 Se il pulsante è un controllo a tre stati, la funzione membro determina se lo è visualizzata in grigio, selezionata, o nessuna delle due.
 
-##  <a name="isdynamiclayoutenabled"></a>  CWnd:: Isdynamiclayoutenabled
+##  <a name="isdynamiclayoutenabled"></a>  CWnd::IsDynamicLayoutEnabled
 
 Determina se il layout dinamico è abilitato in questa finestra. Se il layout dinamico è abilitato, la posizione e le dimensioni delle finestre figlio possono cambiare quando l'utente ridimensiona la finestra padre.
 
@@ -5673,7 +5673,7 @@ Punta a un `CString` oggetto o una stringa a terminazione null che contiene il m
 *lpszCaption*<br/>
 Punta a un `CString` oggetto o una stringa a terminazione null da utilizzare per la didascalia della finestra di messaggio. Se *lpszCaption* è NULL, la didascalia predefinita viene usato "Error".
 
-*NLE*<br/>
+*nType*<br/>
 Specifica il contenuto e il comportamento della finestra di messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -5858,7 +5858,7 @@ Specifica l'evento che si sono verificati. Questo valore deve essere uno dei [co
 *idObjectType*<br/>
 Identifica il tipo di oggetto che ha generato l'evento. Questo valore è uno degli operatori [degli identificatori dell'oggetto](/windows/desktop/WinAuto/object-identifiers) o un valore di ID di oggetto personalizzato.
 
-*parametri idObject*<br/>
+*idObject*<br/>
 Indica se l'evento è stato generato da un oggetto o un elemento figlio dell'oggetto. Se questo valore è CHILDID_SELF, l'evento è stato generato dall'oggetto stesso. In caso contrario, questo valore è l'ID figlio dell'elemento che ha generato l'evento.
 
 ### <a name="remarks"></a>Note
@@ -5941,7 +5941,7 @@ virtual BOOL OnAmbientProperty(
 *pSite*<br/>
 Puntatore al sito del controllo che ha richiesto la proprietà di ambiente.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà di ambiente richiesta.
 
 *pvar*<br/>
@@ -6022,7 +6022,7 @@ afx_msg void OnCancelMode();
 
 Se il `CWnd` oggetto ha lo stato attivo, relativo `OnCancelMode` funzione membro viene chiamata quando viene visualizzata una finestra di dialogo o finestra di messaggio. In questo modo il `CWnd` l'opportunità di annullare le modalità, ad esempio stato mouse capture.
 
-L'implementazione predefinita risponde chiamando il [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) funzione Windows. Eseguire l'override di questa funzione membro nella classe derivata per gestire altre modalità.
+L'implementazione predefinita risponde chiamando il [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) funzione Windows. Eseguire l'override di questa funzione membro nella classe derivata per gestire altre modalità.
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6039,7 +6039,7 @@ Un puntatore alla finestra per ottenere l'input del mouse
 
 ### <a name="remarks"></a>Note
 
-Una finestra riceve questo messaggio anche se chiama [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) stesso. Un'applicazione non deve tentare di impostare il mouse capture in risposta a questo messaggio. Quando riceve questo messaggio, una finestra deve essere ridisegnato, se necessario, in modo da riflettere il nuovo stato mouse capture.
+Una finestra riceve questo messaggio anche se chiama [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) stesso. Un'applicazione non deve tentare di impostare il mouse capture in risposta a questo messaggio. Quando riceve questo messaggio, una finestra deve essere ridisegnato, se necessario, in modo da riflettere il nuovo stato mouse capture.
 
 Vedere il SDK di Windows per informazioni sul `ReleaseCapture` funzione Windows.
 
@@ -6118,7 +6118,7 @@ afx_msg void OnChar(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Contiene il valore della chiave del codice del carattere.
 
 *nRepCnt*<br/>
@@ -6161,7 +6161,7 @@ afx_msg int OnCharToItem(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Specifica il valore del tasto premuto dall'utente.
 
 *pListBox*<br/>
@@ -6391,7 +6391,7 @@ afx_msg void OnContextMenu(
 *pWnd*<br/>
 Handle per la finestra in cui il pulsante destro del mouse è stato selezionato il puntatore del mouse. Può trattarsi di una finestra figlio della finestra di ricezione del messaggio. Per altre informazioni sull'elaborazione di questo messaggio, vedere la sezione Osservazioni.
 
-*POS*<br/>
+*pos*<br/>
 Fare clic sulla posizione del cursore, nelle coordinate dello schermo, al momento del passaggio del mouse.
 
 ### <a name="remarks"></a>Note
@@ -6533,7 +6533,7 @@ afx_msg void OnDeadChar(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Specifica il valore del carattere dei messaggi non recapitabili-key.
 
 *nRepCnt*<br/>
@@ -6808,7 +6808,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 ### <a name="parameters"></a>Parametri
 
-*Curvatura*<br/>
+*bEnding*<br/>
 Specifica se è in corso della sessione. È TRUE se la sessione; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -6999,7 +6999,7 @@ Uno o più dei valori seguenti, che indica quale tipo di input i processi dell'a
 
 - DLGC_WANTMESSAGE tutto l'input da tastiera. L'applicazione passa il messaggio al controllo.
 
-- Chiave scheda DLGC_WANTTAB.
+- DLGC_WANTTAB TAB key.
 
 ### <a name="remarks"></a>Note
 
@@ -7119,7 +7119,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>Note
 
-Questo metodo riceve la [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) notifica, che è descritti nel SDK di Windows. Questo messaggio viene inserito all'inizio della coda di messaggi associata al thread che ha registrato il tasto di scelta rapida. Usare la [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) (funzione) per registrare un tasto di scelta rapida a livello di sistema.
+Questo metodo riceve la [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) notifica, che è descritti nel SDK di Windows. Questo messaggio viene inserito all'inizio della coda di messaggi associata al thread che ha registrato il tasto di scelta rapida. Usare la [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) (funzione) per registrare un tasto di scelta rapida a livello di sistema.
 
 > [!NOTE]
 > Questa funzione membro viene chiamata dal framework per consentire all'applicazione di gestire un messaggio di Windows. I parametri passati alla funzione riflettono i parametri ricevuti dal framework quando è stato ricevuto il messaggio. Se si chiama l'implementazione della classe di base di questa funzione, questa userà i parametri passati in origine con il messaggio e non i parametri che si forniscono alla funzione.
@@ -7377,7 +7377,7 @@ afx_msg void OnKeyDown(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Specifica il codice tasto virtuale della chiave specificata. Per un elenco di codici di tasti virtuali standard, vedere winuser. h
 
 *nRepCnt*<br/>
@@ -7386,7 +7386,7 @@ Specifica il codice tasto virtuale della chiave specificata. Per un elenco di co
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |0-7|Analisi codice (valore OEM dipendente).|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è una chiave estesa).|
@@ -7422,7 +7422,7 @@ afx_msg void OnKeyUp(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Specifica il codice tasto virtuale della chiave specificata. Per un elenco di codici di tasti virtuali standard, vedere winuser. h
 
 *nRepCnt*<br/>
@@ -7431,7 +7431,7 @@ Specifica il codice tasto virtuale della chiave specificata. Per un elenco di co
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|
@@ -7744,7 +7744,7 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 A seconda delle impostazioni di compilazione, specifica il carattere ANSI o Unicode che l'utente ha premuto.
 
 *nFlags*<br/>
@@ -7757,7 +7757,7 @@ Contiene un puntatore all'oggetto selezionato `CMenu`. Il puntatore può essere 
 
 La parola più significativa del valore restituito deve contenere uno dei seguenti codici di comando:
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |0|Indica a Windows per rimuovere il carattere che l'utente preme e crea un segnale acustico breve sul relatore del sistema.|
 |1|Indica a Windows per chiudere il menu corrente.|
@@ -8597,7 +8597,7 @@ void OnNcXButtonDblClk(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nHitTest*|[in] Il valore di hit test restituito dai [CWnd::DefWindowProc](#defwindowproc) funzionano come risultato di elaborazione il [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) messaggio.|
-|*Npulsante*|[in] Un valore di XBUTTON1 se fa doppio clic sul primo pulsante Microsoft Intellimouse X o XBUTTON2 se il secondo pulsante X viene fatto doppio clic.|
+|*nButton*|[in] Un valore di XBUTTON1 se fa doppio clic sul primo pulsante Microsoft Intellimouse X o XBUTTON2 se il secondo pulsante X viene fatto doppio clic.|
 |*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
 
 ### <a name="remarks"></a>Note
@@ -8623,7 +8623,7 @@ afx_msg void OnNcXButtonDown(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nHitTest*|[in] Il valore di hit test restituito dai [CWnd::DefWindowProc](#defwindowproc) funzionano come risultato di elaborazione il [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) messaggio.|
-|*Npulsante*|[in] Un valore di XBUTTON1 se il primo pulsante X del mouse viene premuto o XBUTTON2 se il secondo pulsante X viene premuto.|
+|*nButton*|[in] Un valore di XBUTTON1 se il primo pulsante X del mouse viene premuto o XBUTTON2 se il secondo pulsante X viene premuto.|
 |*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro della schermata.|
 
 ### <a name="remarks"></a>Note
@@ -8649,7 +8649,7 @@ afx_msg void OnNcXButtonUp(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nHitTest*|[in] Il valore di hit test restituito dai [CWnd::DefWindowProc](#defwindowproc) funzionano come risultato di elaborazione il [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) messaggio.|
-|*Npulsante*|[in] Un valore di XBUTTON1 se il primo pulsante X del mouse viene rilasciato o XBUTTON2 se il secondo pulsante X viene rilasciato.|
+|*nButton*|[in] Un valore di XBUTTON1 se il primo pulsante X del mouse viene rilasciato o XBUTTON2 se il secondo pulsante X viene rilasciato.|
 |*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro della schermata.|
 
 ### <a name="remarks"></a>Note
@@ -8732,7 +8732,7 @@ afx_msg UINT OnNotifyFormat(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*pWnd*|[in] Un puntatore a un `CWnd` oggetto che rappresenta l'invio di finestra di [WM_NOTIFY](/windows/desktop/controls/wm-notify) messaggio.<br /><br /> Questo parametro è il puntatore a un controllo se il *Ncomando* parametro è NF_QUERY o il puntatore alla finestra padre di un controllo se *Ncomando* è NF_REQUERY.|
-|*Ncomando*|[in] Un valore di comando che specializza il messaggio WM_NOTIFY. I valori possibili sono:<br /><br /> -NF_QUERY-<br />     Il messaggio è una query per determinare se le strutture ANSI o Unicode devono essere utilizzate nei messaggi di WM_NOTIFY. Questo messaggio viene inviato da un controllo alla finestra padre durante la creazione di un controllo in risposta al form NF_REQUERY di questo messaggio.<br />-NF_REQUERY-<br />     Il messaggio è una richiesta per un controllo inviare il modulo NF_QUERY di questo messaggio alla finestra padre. Questa richiesta viene inviata dalla finestra padre e chiede di controllo da rieseguire una query sul tipo di struttura padre da utilizzare nei messaggi WM_NOTIFY. Se il *Ncomando* parametro NF_REQUERY, il valore restituito è il risultato dell'operazione di riesecuzione.|
+|*nCommand*|[in] Un valore di comando che specializza il messaggio WM_NOTIFY. I valori possibili sono:<br /><br /> -NF_QUERY-<br />     Il messaggio è una query per determinare se le strutture ANSI o Unicode devono essere utilizzate nei messaggi di WM_NOTIFY. Questo messaggio viene inviato da un controllo alla finestra padre durante la creazione di un controllo in risposta al form NF_REQUERY di questo messaggio.<br />-NF_REQUERY-<br />     Il messaggio è una richiesta per un controllo inviare il modulo NF_QUERY di questo messaggio alla finestra padre. Questa richiesta viene inviata dalla finestra padre e chiede di controllo da rieseguire una query sul tipo di struttura padre da utilizzare nei messaggi WM_NOTIFY. Se il *Ncomando* parametro NF_REQUERY, il valore restituito è il risultato dell'operazione di riesecuzione.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -9337,7 +9337,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Parametri
 
-*NLE*<br/>
+*nType*<br/>
 Specifica il tipo di richiesta di ridimensionamento. Questo parametro può essere uno dei valori seguenti:
 
 - La finestra SIZE_MAXIMIZED ha stato ingrandita.
@@ -9353,7 +9353,7 @@ Specifica il tipo di richiesta di ridimensionamento. Questo parametro può esser
 *cx*<br/>
 Specifica la nuova larghezza dell'area client.
 
-*CY*<br/>
+*cy*<br/>
 Specifica la nuova altezza dell'area client.
 
 ### <a name="remarks"></a>Note
@@ -9468,7 +9468,7 @@ Specifica se la finestra estesi o nonextended stili sono stati modificati. Quest
 - GWL_STYLE stili nonextended della finestra sono stati modificati.
 
 *lpStyleStruct*<br/>
-Punta a un [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) struttura che contiene gli stili di nuovo per la finestra. Un'applicazione può esaminare gli stili, ma non può modificarle.
+Punta a un [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) struttura che contiene gli stili di nuovo per la finestra. Un'applicazione può esaminare gli stili, ma non può modificarle.
 
 ### <a name="remarks"></a>Note
 
@@ -9495,7 +9495,7 @@ Specifica se la finestra estesi o nonextended stili sono stati modificati. Quest
 - GWL_STYLE stili nonextended della finestra sono stati modificati.
 
 *lpStyleStruct*<br/>
-Punta a un [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) struttura che contiene gli stili di nuovo per la finestra. Un'applicazione è possibile esaminare gli stili e modificarle.
+Punta a un [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) struttura che contiene gli stili di nuovo per la finestra. Un'applicazione è possibile esaminare gli stili e modificarle.
 
 ### <a name="remarks"></a>Note
 
@@ -9515,7 +9515,7 @@ afx_msg void OnSysChar(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Specifica il codice carattere ASCII un tasto di menu controllo.
 
 *nRepCnt*<br/>
@@ -9524,7 +9524,7 @@ Specifica il numero di ripetizioni (il numero di volte in cui che la sequenza di
 *nFlags*<br/>
 Il *nFlags* parametro può avere questi valori:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-15|Specifica il numero di ripetizioni. Il valore è il numero di volte in cui che la sequenza di tasti viene ripetuta come risultato dell'utente tenendo premuto il tasto...|
 |16-23|Specifica il codice di analisi. Il valore dipende da OEM (OEM)|
@@ -9639,7 +9639,7 @@ afx_msg void OnSysDeadChar(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Specifica il valore del carattere dei messaggi non recapitabili-key.
 
 *nRepCnt*<br/>
@@ -9678,7 +9678,7 @@ afx_msg void OnSysKeyDown(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Specifica il codice tasto virtuale del tasto premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h
 
 *nRepCnt*<br/>
@@ -9687,7 +9687,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|
@@ -9725,7 +9725,7 @@ afx_msg void OnSysKeyUp(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Specifica il codice tasto virtuale del tasto premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h
 
 *nRepCnt*<br/>
@@ -9734,7 +9734,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|
@@ -9863,7 +9863,7 @@ virtual INT_PTR OnToolHitTest(
 *point*<br/>
 Specifica le coordinate x e y del cursore. Queste coordinate sono sempre rispetto all'angolo superiore sinistro della finestra
 
-*PTI*<br/>
+*pTI*<br/>
 Un puntatore a un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struttura. I seguenti valori di struttura vengono impostati per impostazione predefinita:
 
 - *HWND*  =  `m_hWnd` Handle per una finestra
@@ -9959,7 +9959,7 @@ afx_msg void OnUniChar(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*NChar*|[in] Specifica il codice carattere del tasto premuto.|
+|*nChar*|[in] Specifica il codice carattere del tasto premuto.|
 |*nRepCnt*|[in] Specifica il numero di ripetizioni per il messaggio corrente. Il valore è il numero di volte in cui che la sequenza di tasti è autorepeated come risultato dell'utente tenendo premuto il tasto. Se la sequenza di tasti viene mantenuto sufficientemente lungo, vengono inviati più messaggi. Tuttavia, il numero di ripetizioni non è cumulativo.|
 |*nFlags*|[in] Flag che specificano l'analisi codice chiave estesi, codice del contesto, lo stato della chiave precedente e stato di transizione, come illustrato nella tabella seguente:<br /><br /> **0-7:** Specifica il codice di analisi. Il valore dipende dall'OEM (OEM).<br /><br /> **8:** Specifica una chiave estesa, ad esempio le chiavi ALT e CTRL destra che vengono visualizzati su una tastiera 101 o tasto 102 avanzata. Il flag impostato su 1 se la chiave è una chiave estesa; in caso contrario, è 0.<br /><br /> **9-12:**  Utilizzato internamente da Windows.<br /><br /> **13:**  Specifica il codice del contesto. Il flag impostato su 1 se si tiene premuto il tasto ALT mentre viene premuto il tasto; in caso contrario, il valore è 0.<br /><br /> **14:**  Specifica lo stato di chiave precedente. Il flag è 1 se la chiave è inattivo prima che il messaggio viene inviato, oppure 0 se il tasto è rilasciato.<br /><br /> **15:**  Specifica lo stato di transizione. Il flag è 1 se la chiave viene rilasciata, oppure 0 se il tasto viene premuto.|
 
@@ -10311,7 +10311,7 @@ afx_msg void OnXButtonDblClk(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nFlags*|[in] Una combinazione bit per bit (OR) di flag che indicano vengono premuti i tasti di modifica. Ad esempio, il flag MK_CONTROL indica che il tasto CTRL è premuto.|
-|*Npulsante*|[in] Un valore di XBUTTON1 se fa doppio clic sul primo pulsante Microsoft Intellimouse X o XBUTTON2 se il secondo pulsante X viene fatto doppio clic.|
+|*nButton*|[in] Un valore di XBUTTON1 se fa doppio clic sul primo pulsante Microsoft Intellimouse X o XBUTTON2 se il secondo pulsante X viene fatto doppio clic.|
 |*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
 
 ### <a name="remarks"></a>Note
@@ -10349,7 +10349,7 @@ afx_msg void OnXButtonDown(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nFlags*|[in] Una combinazione bit per bit (OR) di flag che indicano vengono premuti i tasti di modifica. Ad esempio, il flag MK_CONTROL indica che il tasto CTRL è premuto.|
-|*Npulsante*|[in] Un valore di XBUTTON1 sia stato scelto il primo pulsante Microsoft Intellimouse X o XBUTTON2 se il secondo pulsante X è stato fatto clic.|
+|*nButton*|[in] Un valore di XBUTTON1 sia stato scelto il primo pulsante Microsoft Intellimouse X o XBUTTON2 se il secondo pulsante X è stato fatto clic.|
 |*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
 
 ### <a name="remarks"></a>Note
@@ -10387,7 +10387,7 @@ afx_msg void OnXButtonUp(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nFlags*|[in] Una combinazione bit per bit (OR) di flag che indicano vengono premuti i tasti di modifica. Ad esempio, il flag MK_CONTROL indica che il tasto CTRL è premuto.|
-|*Npulsante*|[in] Un valore di XBUTTON1 se il primo pulsante Microsoft Intellimouse X è stato fatto doppio clic o XBUTTON2 se il secondo pulsante X è stato fatto doppio clic.|
+|*nButton*|[in] Un valore di XBUTTON1 se il primo pulsante Microsoft Intellimouse X è stato fatto doppio clic o XBUTTON2 se il secondo pulsante X è stato fatto doppio clic.|
 |*point*|[in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica il *x* e *y* coordinate del cursore rispetto all'angolo superiore sinistro dell'area client.|
 
 ### <a name="remarks"></a>Note
@@ -10879,7 +10879,7 @@ ID dell'ultimo in un intervallo di barre di controllo da riposizionare e ridimen
 *nIDLeftOver*<br/>
 Specifica l'ID del riquadro che contiene il resto dell'area client.
 
-*Rimuovi flag*<br/>
+*nFlag*<br/>
 Può avere uno dei valori seguenti:
 
 - `CWnd::reposDefault` Esegue il layout delle barre di controllo. *lpRectParam* non viene usato e può essere NULL.
@@ -11044,7 +11044,7 @@ Se [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) e [SW
 
 Se la finestra ha il [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) lo stile, le aree restituite specificate da *prgnUpdate* e *lpRectUpdate* rappresentano l'area totale della finestra a scorrimento che è necessario essere aggiornati, tra cui tutte le aree in finestre figlio che devono essere aggiornati.
 
-Se il [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) flag è specificato, Windows non aggiornerà correttamente la schermata se parte di una finestra figlio viene eseguito lo scorrimento. La parte della finestra a scorrimento figlio che si trova all'esterno del rettangolo di origine non verranno cancellata e non verrà ridisegnata correttamente nella nuova destinazione. Usare la [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) funzione di Windows alle finestre figlio move che si trova completamente all'interno di *lpRectScroll* rettangolo. Il cursore viene riposizionato in riferimento se è impostato il flag SW_SCROLLCHILDREN e il rettangolo di accento circonflesso interseca il rettangolo di scorrimento.
+Se il [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) flag è specificato, Windows non aggiornerà correttamente la schermata se parte di una finestra figlio viene eseguito lo scorrimento. La parte della finestra a scorrimento figlio che si trova all'esterno del rettangolo di origine non verranno cancellata e non verrà ridisegnata correttamente nella nuova destinazione. Usare la [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) funzione di Windows alle finestre figlio move che si trova completamente all'interno di *lpRectScroll* rettangolo. Il cursore viene riposizionato in riferimento se è impostato il flag SW_SCROLLCHILDREN e il rettangolo di accento circonflesso interseca il rettangolo di scorrimento.
 
 Tutte le coordinate di input e outpue (per *lpRectScroll*, *lpRectClip*, *lpRectUpdate*, e *prgnUpdate*) si presuppone che siano coordinate del client, indipendentemente dal fatto che la finestra ha lo stile della classe CS_OWNDC o CS_CLASSDC. Usare la [LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp) e [DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) funzioni di Windows per la conversione da e verso le coordinate logiche, se necessario.
 
@@ -11247,7 +11247,7 @@ Un puntatore all'oggetto window che in precedenza ha ricevuto tutti l'input del 
 
 ### <a name="remarks"></a>Note
 
-Quando `CWnd` non richiede più input del mouse, l'applicazione deve chiamare il [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) funzionare in modo che le altre finestre possono ricevere l'input del mouse.
+Quando `CWnd` non richiede più input del mouse, l'applicazione deve chiamare il [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) funzionare in modo che le altre finestre possono ricevere l'input del mouse.
 
 Mentre l'input del mouse viene acquisito, nessun messaggio WM_NCHITTEST o WM_SETCURSOR viene inviato alla finestra attiva.
 
@@ -11331,7 +11331,7 @@ void SetDlgItemInt(
 *nID*<br/>
 Specifica l'ID intero del controllo da modificare.
 
-*nValore*<br/>
+*nValue*<br/>
 Specifica il valore intero utilizzato per generare il testo dell'elemento.
 
 *bSigned*<br/>
@@ -11855,7 +11855,7 @@ Specifica la nuova posizione della parte superiore della finestra.
 *cx*<br/>
 Specifica la nuova larghezza della finestra.
 
-*CY*<br/>
+*cy*<br/>
 Specifica la nuova altezza della finestra.
 
 *nFlags*<br/>
@@ -12051,7 +12051,7 @@ BOOL ShowWindow(int nCmdShow);
 
 ### <a name="parameters"></a>Parametri
 
-*CmdShow*<br/>
+*nCmdShow*<br/>
 Specifica come il `CWnd` deve essere visualizzata. Deve essere uno dei valori seguenti:
 
 - SW_HIDE nasconde la finestra e passa l'attivazione a un'altra finestra.
@@ -12086,7 +12086,7 @@ Diverso da zero se la finestra è visualizzata in precedenza; 0 se il `CWnd` pre
 
   Vedere l'esempio relativo [CWnd::CalcWindowRect](#calcwindowrect).
 
-##  <a name="subclassdlgitem"></a>  CWnd:: SubclassDlgItem
+##  <a name="subclassdlgitem"></a>  CWnd::SubclassDlgItem
 
 Chiamare questa funzione membro di "in modo dinamico sottoclasse" un controllo creato da un modello di finestra di dialogo e collegarlo a questo `CWnd` oggetto.
 
@@ -12416,7 +12416,7 @@ BOOL RegisterTouchWindow(
 
 ### <a name="parameters"></a>Parametri
 
-*bRegistrazione immediata*<br/>
+*bRegister*<br/>
 TRUE indica register Windows touch supporto; FALSE in caso contrario.
 
 *ulFlags*<br/>

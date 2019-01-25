@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609410"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893613"
 ---
 # <a name="csnapinitemimpl-class"></a>Classe CSnapInItemImpl
 
@@ -106,7 +106,7 @@ TRUE se l'oggetto è un'estensione lo snap-in. in caso contrario, FALSE.
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-Questo metodo implementa la funzione Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
+Questo metodo implementa la funzione Win32 [IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
 
 ```
 AddMenuItems(
@@ -144,7 +144,7 @@ AddMenuItems(
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-Questo metodo implementa la funzione Win32 [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842).
+Questo metodo implementa la funzione Win32 [IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command).
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-Questo metodo implementa la funzione Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
+Questo metodo implementa la funzione Win32 [IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2).
 
 ```
 CreatePropertyPages(
@@ -218,7 +218,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 [in] Formato degli Appunti (testo, testo RTF o testo RTF con gli elementi OLE).
 
 *pStream*<br/>
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-Il [RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165) struttura dell'oggetto dati lo snap-in.
+Il [RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem) struttura dell'oggetto dati lo snap-in.
 
 ```
 RESULTDATAITEM m_resultDataItem;

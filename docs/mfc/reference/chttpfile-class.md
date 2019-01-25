@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564459"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893652"
 ---
 # <a name="chttpfile-class"></a>Classe CHttpFile
 
@@ -55,14 +55,14 @@ class CHttpFile : public CInternetFile
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CHttpFile:: AddRequestHeaders](#addrequestheaders)|Aggiunge le intestazioni per la richiesta inviata a un server HTTP.|
+|[CHttpFile::AddRequestHeaders](#addrequestheaders)|Aggiunge le intestazioni per la richiesta inviata a un server HTTP.|
 |[CHttpFile::EndRequest](#endrequest)|Termina una richiesta inviata a un server HTTP con il [SendRequestEx](#sendrequestex) funzione membro.|
 |[CHttpFile::GetFileURL](#getfileurl)|Ottiene l'URL per il file specificato.|
 |[CHttpFile::GetObject](#getobject)|Ottiene l'oggetto di destinazione del verbo in una richiesta a un server HTTP.|
 |[CHttpFile::GetVerb](#getverb)|Ottiene il verbo che è stato usato in una richiesta a un server HTTP.|
-|[QueryInfo](#queryinfo)|Restituisce le intestazioni di richiesta o risposta dal server HTTP.|
-|[QueryInfoStatusCode](#queryinfostatuscode)|Recupera il codice di stato associato a una richiesta HTTP e la inserisce nell'oggetto fornito `dwStatusCode` parametro.|
-|[CHttpFile:: SendRequest](#sendrequest)|Invia una richiesta a un server HTTP.|
+|[CHttpFile::QueryInfo](#queryinfo)|Restituisce le intestazioni di richiesta o risposta dal server HTTP.|
+|[CHttpFile::QueryInfoStatusCode](#queryinfostatuscode)|Recupera il codice di stato associato a una richiesta HTTP e la inserisce nell'oggetto fornito `dwStatusCode` parametro.|
+|[CHttpFile::SendRequest](#sendrequest)|Invia una richiesta a un server HTTP.|
 |[CHttpFile::SendRequestEx](#sendrequestex)|Invia una richiesta a un server HTTP con il [scrivere](../../mfc/reference/cinternetfile-class.md#write) oppure [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) metodi di `CInternetFile`.|
 
 ## <a name="remarks"></a>Note
@@ -87,7 +87,7 @@ Per altre informazioni su come `CHttpFile` funziona con le altre classi MFC Inte
 
 **Intestazione:** afxinet. h
 
-##  <a name="addrequestheaders"></a>  CHttpFile:: AddRequestHeaders
+##  <a name="addrequestheaders"></a>  CHttpFile::AddRequestHeaders
 
 Chiamare questa funzione membro per aggiungere uno o gestiscono altre intestazioni della richiesta HTTP alla richiesta HTTP.
 
@@ -157,7 +157,7 @@ CHttpFile(
 
 ### <a name="parameters"></a>Parametri
 
-*oggetto hFile*<br/>
+*hFile*<br/>
 Handle per un file di Internet.
 
 *hSession*<br/>
@@ -182,7 +182,7 @@ Un puntatore a un [CHttpConnection](../../mfc/reference/chttpconnection-class.md
 
 Non si costruisce mai una `CHttpFile` direttamente l'oggetto, anziché chiamare [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oppure [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) invece.
 
-Il valore predefinito per `dwContext` inviato da MFC per la `CHttpFile` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CHttpFile` oggetto. Quando si chiama `CInternetSession::OpenURL` oppure `CHttpConnection` per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Il valore predefinito per `dwContext` inviato da MFC per la `CHttpFile` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CHttpFile` oggetto. Quando si chiama `CInternetSession::OpenURL` oppure `CHttpConnection` per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
 ##  <a name="endrequest"></a>  CHttpFile::EndRequest
 
@@ -212,7 +212,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esi
 
 ### <a name="remarks"></a>Note
 
-Il valore predefinito per *dwContext* inviato da MFC per il `CHttpFile` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CHttpFile` oggetto. Quando si chiama [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oppure [CHttpConnection](../../mfc/reference/chttpconnection-class.md) per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Il valore predefinito per *dwContext* inviato da MFC per il `CHttpFile` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CHttpFile` oggetto. Quando si chiama [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oppure [CHttpConnection](../../mfc/reference/chttpconnection-class.md) per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL
 
@@ -262,7 +262,7 @@ Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto cont
 
 Utilizzare questa funzione membro solo dopo una chiamata a [SendRequest](#sendrequest) o in un `CHttpFile` oggetto è stato creato dal [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
-##  <a name="queryinfo"></a>  QueryInfo
+##  <a name="queryinfo"></a>  CHttpFile::QueryInfo
 
 Chiamare questa funzione membro per restituire una risposta o intestazioni della richiesta da una richiesta HTTP.
 
@@ -293,7 +293,7 @@ Una combinazione di attributo per eseguire query e i flag seguenti che specifica
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS in genere, l'applicazione esegue query le intestazioni di risposta, ma un'applicazione può richiedere anche le intestazioni delle richieste con questo flag.
 
-- Questo flag HTTP_QUERY_FLAG_SYSTEMTIME delle intestazioni il cui valore è una stringa data/ora, ad esempio "Last-Modified-Time," restituisce il valore dell'intestazione come Win32 standard [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struttura che non richiede l'applicazione analizzare i dati. Se si usa questo flag, è possibile usare il `SYSTEMTIME` eseguire l'override della funzione.
+- Questo flag HTTP_QUERY_FLAG_SYSTEMTIME delle intestazioni il cui valore è una stringa data/ora, ad esempio "Last-Modified-Time," restituisce il valore dell'intestazione come Win32 standard [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struttura che non richiede l'applicazione analizzare i dati. Se si usa questo flag, è possibile usare il `SYSTEMTIME` eseguire l'override della funzione.
 
 - HTTP_QUERY_FLAG_NUMBER delle intestazioni il cui valore è un numero, ad esempio il codice di stato, questo flag restituisce i dati sotto forma di numero a 32 bit.
 
@@ -315,7 +315,7 @@ Un riferimento per la [CString](../../atl-mfc-shared/reference/cstringt-class.md
 Un valore di indice. Visualizzare *lpdwIndex*.
 
 *pSysTime*<br/>
-Un puntatore a un Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struttura.
+Un puntatore a un Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struttura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -383,7 +383,7 @@ I possibili *dwInfoLevel* i valori includono:
 
 - HTTP_QUERY_RAW_HEADERS_CRLF
 
-##  <a name="queryinfostatuscode"></a>  QueryInfoStatusCode
+##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode
 
 Chiamare questa funzione membro per ottenere il codice di stato associato a una richiesta HTTP e inserirlo nella classe fornita *dwStatusCode* parametro.
 
@@ -424,7 +424,7 @@ Codici di stato HTTP comuni:
 |500|Errore sconosciuto del server|
 |503|Raggiunta la capacità del server|
 
-##  <a name="sendrequest"></a>  CHttpFile:: SendRequest
+##  <a name="sendrequest"></a>  CHttpFile::SendRequest
 
 Chiamare questa funzione membro per inviare una richiesta a un server HTTP.
 
@@ -506,7 +506,7 @@ Questa funzione consente all'applicazione di inviare i dati utilizzando il [scri
 
 Dopo aver scritto il contenuto del file, chiamare [EndRequest](#endrequest) per terminare l'operazione.
 
-Il valore predefinito per *dwContext* inviato da MFC per il `CHttpFile` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CHttpFile` oggetto. Quando si chiama [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oppure [CHttpConnection](../../mfc/reference/chttpconnection-class.md) per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Il valore predefinito per *dwContext* inviato da MFC per il `CHttpFile` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CHttpFile` oggetto. Quando si chiama [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) oppure [CHttpConnection](../../mfc/reference/chttpconnection-class.md) per costruire un `CHttpFile` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
 ### <a name="example"></a>Esempio
 

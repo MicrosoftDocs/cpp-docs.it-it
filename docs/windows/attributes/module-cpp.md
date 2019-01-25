@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 5692e07e71683b1c24f86a43e989ee3df1fbe904
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570612"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893522"
 ---
 # <a name="module-c"></a>modulo (C++)
 
@@ -101,11 +101,11 @@ Se questo attributo viene usato in un progetto che usa ATL, il comportamento del
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
 - `type` = **unspecified**
 
@@ -166,7 +166,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi autonomi](stand-alone-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[Libreria](/windows/desktop/Midl/library)<br/>
+[library](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

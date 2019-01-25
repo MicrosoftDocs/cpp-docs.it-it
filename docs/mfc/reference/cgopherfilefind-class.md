@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 7d5c8ceeaeb87b2e0f099ac027bbacc744598e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dafa313d9d2c7aae13e83a891c79d437ac276e08
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662410"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894497"
 ---
 # <a name="cgopherfilefind-class"></a>Classe CGopherFileFind
 
@@ -58,13 +58,13 @@ class CGopherFileFind : public CFileFind
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CGopherFileFind:: FindFile](#findfile)|Trova un file in un server gopher.|
-|[CGopherFileFind:: FindNextFile](#findnextfile)|Continua la ricerca di file da una chiamata precedente a [FindFile](#findfile).|
+|[CGopherFileFind::FindFile](#findfile)|Trova un file in un server gopher.|
+|[CGopherFileFind::FindNextFile](#findnextfile)|Continua la ricerca di file da una chiamata precedente a [FindFile](#findfile).|
 |[CGopherFileFind::GetCreationTime](#getcreationtime)|Ottiene l'ora di creazione del file specificato.|
 |[CGopherFileFind::GetLastAccessTime](#getlastaccesstime)|Ottiene l'ora di che ultimo accesso al file specificato.|
 |[CGopherFileFind::GetLastWriteTime](#getlastwritetime)|Ottiene l'ora che ultima scrittura nel file specificato.|
 |[CGopherFileFind::GetLength](#getlength)|Ottiene la lunghezza del file trovato, in byte.|
-|[CGopherFileFind:: GetLocator](#getlocator)|Ottenere un `CGopherLocator` oggetto.|
+|[CGopherFileFind::GetLocator](#getlocator)|Ottenere un `CGopherLocator` oggetto.|
 |[CGopherFileFind::GetScreenName](#getscreenname)|Ottiene il nome di una schermata gopher.|
 |[CGopherFileFind::IsDots](#isdots)|Verifica se i marcatori di directory di corrente directory e padre durante lo scorrimento dei file.|
 
@@ -123,9 +123,9 @@ L'identificatore di contesto per l'operazione. Visualizzare **osservazioni** per
 
 ### <a name="remarks"></a>Note
 
-Il valore predefinito per *dwContext* inviato da MFC per il `CGopherFileFind` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CGopherFileFind` oggetto. Quando si costruisce un `CGopherFileFind` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Il valore predefinito per *dwContext* inviato da MFC per il `CGopherFileFind` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CGopherFileFind` oggetto. Quando si costruisce un `CGopherFileFind` dell'oggetto, è possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
-##  <a name="findfile"></a>  CGopherFileFind:: FindFile
+##  <a name="findfile"></a>  CGopherFileFind::FindFile
 
 Chiamare questa funzione membro per trovare un file gopher.
 
@@ -167,7 +167,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0. Per ottenere informaz
 
 Dopo avere chiamato `FindFile` per recuperare il primo oggetto gopher, è possibile chiamare [FindNextFile](#findnextfile) per recuperare i file successivi gopher.
 
-##  <a name="findnextfile"></a>  CGopherFileFind:: FindNextFile
+##  <a name="findnextfile"></a>  CGopherFileFind::FindNextFile
 
 Chiamare questa funzione membro per continuare la ricerca di file iniziata con una chiamata a [CGopherFileFind:: FindFile](#findfile).
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametri
 
 *pTimeStamp*<br/>
-Un puntatore a un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struttura che contiene l'ora di creazione del file.
+Un puntatore a un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struttura che contiene l'ora di creazione del file.
 
 *refTime*<br/>
 Un riferimento a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto.
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Un riferimento a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto.
 
 *pTimeStamp*<br/>
-Un puntatore a un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struttura che contiene l'ora dell'ultimo accesso al file.
+Un puntatore a un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struttura che contiene l'ora dell'ultimo accesso al file.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametri
 
 *pTimeStamp*<br/>
-Un puntatore a un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struttura che contiene l'ora ultima scrittura di file.
+Un puntatore a un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struttura che contiene l'ora ultima scrittura di file.
 
 *refTime*<br/>
 Un riferimento a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto.
@@ -286,7 +286,7 @@ La lunghezza, espressa in byte, del file trovato.
 
   Vedere l'esempio relativo [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) (implementazione della classe base).
 
-##  <a name="getlocator"></a>  CGopherFileFind:: GetLocator
+##  <a name="getlocator"></a>  CGopherFileFind::GetLocator
 
 Chiamare questa funzione membro per ottenere il [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) dell'oggetto che [FindFile](#findfile) viene utilizzato per trovare il file gopher.
 

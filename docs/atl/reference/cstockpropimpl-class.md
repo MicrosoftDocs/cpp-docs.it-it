@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: ff7610d85d73a99d55d6181fad178d0b12be0c32
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a22a419018f3f4b2b7e6cee2471bf0f162b65f2e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332426"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894003"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 
@@ -156,7 +156,7 @@ La classe usata per gestire le informazioni sul tipo per *T*. Il valore predefin
 |[put_BorderStyle](#put_borderstyle)|Chiamare questo metodo per impostare lo stile del bordo del controllo.|
 |[put_BorderVisible](#put_bordervisible)|Chiamare questo metodo per impostare il valore del flag che indica se il bordo del controllo è visibile o meno.|
 |[put_BorderWidth](#put_borderwidth)|Chiamare questo metodo per impostare lo spessore del bordo del controllo.|
-|[PUT Caption](#put_caption)|Chiamare questo metodo per impostare il testo da visualizzare con il controllo.|
+|[put_Caption](#put_caption)|Chiamare questo metodo per impostare il testo da visualizzare con il controllo.|
 |[put_DrawMode](#put_drawmode)|Chiamare questo metodo per impostare la modalità del controllo disegno, ad esempio, XOR penna o Inverti colori.|
 |[put_DrawStyle](#put_drawstyle)|Chiamare questo metodo per impostare lo stile di disegno del controllo, ad esempio, a tinta unita, tratteggiato o punteggiato.|
 |[put_DrawWidth](#put_drawwidth)|Chiamare questo metodo per impostare la larghezza (espressa in pixel) utilizzata dai metodi di disegno del controllo.|
@@ -559,7 +559,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="parameters"></a>Parametri
 
 *ppPicture*<br/>
-Variabile che riceve un puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.
+Variabile che riceve un puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1005,7 +1005,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Parametri
 
 *pPicture*<br/>
-Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.
+Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1153,7 +1153,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Parametri
 
 *pPicture*<br/>
-Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) per altri dettagli.
+Puntatore alla proprietà dell'immagine. Visualizzare [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
 

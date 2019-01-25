@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4e93f167b9cb28a83c42220fa58b17d5c4845a75
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523819"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894289"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
 
@@ -91,8 +91,8 @@ class CCmdTarget : public CObject
 |[CCmdTarget::GetTypeLibCache](#gettypelibcache)|Ottiene la cache della libreria di tipi.|
 |[CCmdTarget::IsInvokeAllowed](#isinvokeallowed)|Consente di chiamata al metodo di automazione.|
 |[CCmdTarget::IsResultExpected](#isresultexpected)|Restituisce diversi da zero se una funzione di automazione devono restituire un valore.|
-|[CCmdTarget:: OnCmdMsg](#oncmdmsg)|Esegue il routing e l'invio dei messaggi di comando.|
-|[CCmdTarget:: OnFinalRelease](#onfinalrelease)|La pulizia dopo l'ultimo riferimento OLE viene rilasciato.|
+|[CCmdTarget::OnCmdMsg](#oncmdmsg)|Esegue il routing e l'invio dei messaggi di comando.|
+|[CCmdTarget::OnFinalRelease](#onfinalrelease)|La pulizia dopo l'ultimo riferimento OLE viene rilasciato.|
 |[CCmdTarget::RestoreWaitCursor](#restorewaitcursor)|Ripristina il cursore a forma di clessidra.|
 
 ## <a name="remarks"></a>Note
@@ -163,7 +163,7 @@ BOOL DoOleVerb(
 Identificatore numerico del verbo.
 
 *lpMsg*<br/>
-Puntatore per il [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) struttura che descrive l'evento richiamato dal verbo (ad esempio, un doppio clic).
+Puntatore per il [MSG](/windows/desktop/api/winuser/ns-winuser-msg) struttura che descrive l'evento richiamato dal verbo (ad esempio, un doppio clic).
 
 *hWndParent*<br/>
 Punto di controllo della finestra del documento contenente l'oggetto.
@@ -411,7 +411,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 Un ID di invio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -444,7 +444,7 @@ Questa funzione restituisce 0 solo una volta in modo che si otterranno i valori 
 
 `IsResultExpected` Restituisce un valore diverso da zero se viene chiamato quando una chiamata di funzione di automazione non è in corso.
 
-##  <a name="oncmdmsg"></a>  CCmdTarget:: OnCmdMsg
+##  <a name="oncmdmsg"></a>  CCmdTarget::OnCmdMsg
 
 Chiamato dal framework per inviare o smistare messaggi di comando e per gestire l'aggiornamento di oggetti dell'interfaccia utente comandi.
 
@@ -484,11 +484,11 @@ In rari casi, è possibile eseguire l'override di questa funzione membro per est
 
 Se esegue l'override `OnCmdMsg`, è necessario specificare il valore appropriato *nCode*, il codice di notifica del comando, e *pExtra*, che dipende dal valore del *nCode* . La tabella seguente elenca i relativi valori:
 
-|*nCode* valore|*pExtra* valore|
+|*nCode* valore|*pExtra* value|
 |-------------------|--------------------|
-|CN_UPDATE_COMMAND_UI|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
 |CN_EVENT|AFX_EVENT\*|
-|MEDIANTE|CCmdUI\*|
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|
 |CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|
 |CN_OLE_UNREGISTER|NULL|
 

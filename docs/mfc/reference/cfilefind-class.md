@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 983c8c46100312947f9b5c357df23b51d6eaabc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9eb192e546bcfbba385beea4f1716ce03bbc8ade
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462154"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894055"
 ---
 # <a name="cfilefind-class"></a>Classe CFileFind
 
@@ -95,7 +95,7 @@ class CFileFind : public CObject
 |[CFileFind::GetFileURL](#getfileurl)|Ottiene l'URL, incluso il percorso del file, del file trovato.|
 |[CFileFind::GetLastAccessTime](#getlastaccesstime)|Ottiene l'ora dell'ultimo accesso al file.|
 |[CFileFind::GetLastWriteTime](#getlastwritetime)|Ottiene l'ora il file ultimo è stato modificato e salvato.|
-|[CFileFind:: GetLength](#getlength)|Ottiene la lunghezza del file trovato, in byte.|
+|[CFileFind::GetLength](#getlength)|Ottiene la lunghezza del file trovato, in byte.|
 |[CFileFind::GetRoot](#getroot)|Ottiene la directory radice del file trovato.|
 |[CFileFind::IsArchived](#isarchived)|Determina se viene archiviato il file trovato.|
 |[CFileFind::IsCompressed](#iscompressed)|Determina se il file trovato è compresso.|
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametri
 
 *pTimeStamp*<br/>
-Un puntatore a un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struttura che contiene l'ora di creazione del file.
+Un puntatore a un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struttura che contiene l'ora di creazione del file.
 
 *refTime*<br/>
 Un riferimento a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto.
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Un riferimento a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto.
 
 *pTimeStamp*<br/>
-Un puntatore a un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struttura che contiene l'ora dell'ultimo accesso al file.
+Un puntatore a un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struttura che contiene l'ora dell'ultimo accesso al file.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametri
 
 *pTimeStamp*<br/>
-Un puntatore a un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struttura che contiene l'ora ultima scrittura di file.
+Un puntatore a un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struttura che contiene l'ora ultima scrittura di file.
 
 *refTime*<br/>
 Un riferimento a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto.
@@ -522,7 +522,7 @@ Diverso da zero se ha esito positivo. 0 se ha esito negativo. `GetLastWriteTime`
 
   Vedere l'esempio relativo [CFileFind:: GetLength](#getlength).
 
-##  <a name="getlength"></a>  CFileFind:: GetLength
+##  <a name="getlength"></a>  CFileFind::GetLength
 
 Chiamare questa funzione membro per ottenere la lunghezza del file trovato, in byte.
 

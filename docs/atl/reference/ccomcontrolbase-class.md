@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694582"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894432"
 ---
 # <a name="ccomcontrolbase-class"></a>Classe CComControlBase
 
@@ -124,12 +124,12 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Verifica che il *iVerb* parametro utilizzato dal `IOleObjectImpl::DoVerb` causa l'interfaccia utente del controllo attivare e restituisce TRUE.|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Consente di visualizzare le pagine delle proprietà del controllo.|
 |[CComControlBase::FireViewChange](#fireviewchange)|Chiamare questo metodo per indicare il contenitore di ridisegnare il controllo o inviare una notifica di sink di notifica registrata la visualizzazione del controllo è stato modificato.|
-|[CComControlBase:: GetAmbientAppearance](#getambientappearance)|Recupera DISPID_AMBIENT_APPEARANCE, l'aspetto corrente l'impostazione per il controllo: 0 per flat e 1 per 3D.|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Recupera DISPID_AMBIENT_APPEARANCE, l'aspetto corrente l'impostazione per il controllo: 0 per flat e 1 per 3D.|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Recupera DISPID_AMBIENT_AUTOCLIP, un flag che indica se il contenitore supporta il ridimensionamento automatico dell'area di visualizzazione controllo.|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Recupera DISPID_AMBIENT_BACKCOLOR, il colore di sfondo dell'ambiente per tutti i controlli, definito dal contenitore.|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Recupera DISPID_AMBIENT_CHARSET, il carattere di ambiente impostate per tutti i controlli, definiti dal contenitore.|
 |[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Recupera DISPID_AMBIENT_CODEPAGE, il carattere di ambiente impostate per tutti i controlli, definiti dal contenitore.|
-|[CComControlBase:: GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Recupera DISPID_AMBIENT_DISPLAYASDEFAULT, un flag che è TRUE se il contenitore ha contrassegnato il controllo in questo sito come pulsante predefinito e pertanto un controllo button deve disegnarsi con un intervallo più spesso.|
+|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Recupera DISPID_AMBIENT_DISPLAYASDEFAULT, un flag che è TRUE se il contenitore ha contrassegnato il controllo in questo sito come pulsante predefinito e pertanto un controllo button deve disegnarsi con un intervallo più spesso.|
 |[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Recupera DISPID_AMBIENT_DISPLAYNAME, il nome di contenitore è fornito per il controllo.|
 |[CComControlBase::GetAmbientFont](#getambientfont)|Recupera un puntatore al contenitore dell'ambiente `IFont` interfaccia.|
 |[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Recupera un puntatore al contenitore dell'ambiente `IFontDisp` interfaccia dispatch.|
@@ -151,7 +151,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetZoomInfo](#getzoominfo)|Recupera gli assi x e y i valori del numeratore e del denominatore del fattore di zoom per il controllo è attivato per la modifica in loco.|
 |[CComControlBase::InPlaceActivate](#inplaceactivate)|Fa sì che il controllo per la transizione dallo stato inattivo per qualsiasi stato il verbo *iVerb* indica.|
 |[CComControlBase::InternalGetSite](#internalgetsite)|Chiamare questo metodo per eseguire una query il sito di controllo per un puntatore all'interfaccia identificata.|
-|[CComControlBase:: OnDraw](#ondraw)|Eseguire l'override di questo metodo per creare il controllo.|
+|[CComControlBase::OnDraw](#ondraw)|Eseguire l'override di questo metodo per creare il controllo.|
 |[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|Il valore predefinito `OnDrawAdvanced` prepara un contesto di dispositivo normalizzato per il disegno e quindi chiama la classe di controllo `OnDraw` (metodo).|
 |[CComControlBase::OnKillFocus](#onkillfocus)|Verifica che il controllo è attivo sul posto e dispone di un sito di controllo valido, quindi segnala il contenitore che il controllo ha perso lo stato attivo.|
 |[CComControlBase::OnMouseActivate](#onmouseactivate)|Verifica che l'interfaccia utente è in modalità utente, quindi attiva il controllo.|
@@ -182,7 +182,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_bUIActive](#m_buiactive)|Flag che indica di interfaccia utente del controllo, ad esempio menu e barre degli strumenti, è attivo.|
 |[CComControlBase::m_bUsingWindowRgn](#m_busingwindowrgn)|Flag che indica che il controllo utilizza l'area della finestra fornito dal contenitore.|
 |[CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)|Flag che indica il controllo è stata privi di finestra, ma può o potrebbe non essere ora privi di finestra.|
-|[CComControlBase](#m_bwindowonly)|Flag che indica che il controllo deve essere a finestre, anche se il contenitore supporta i controlli privi di finestra.|
+|[CComControlBase::m_bWindowOnly](#m_bwindowonly)|Flag che indica che il controllo deve essere a finestre, anche se il contenitore supporta i controlli privi di finestra.|
 |[CComControlBase::m_bWndLess](#m_bwndless)|Flag che indica che il controllo è attivo.|
 |[CComControlBase::m_hWndCD](#m_hwndcd)|Contiene un riferimento all'handle della finestra associato al controllo.|
 |[CComControlBase::m_nFreezeEvents](#m_nfreezeevents)|Un conteggio del numero di volte in cui il contenitore ha bloccato gli eventi (rifiutati di accettare gli eventi) senza una corrispondente thaw degli eventi (accettazione degli eventi).|
@@ -258,7 +258,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 Il GUID dell'interfaccia richiesto.
 
 *ppv*<br/>
@@ -404,7 +404,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore di sfondo*<br/>
+*BackColor*<br/>
 La proprietà DISPID_AMBIENT_BACKCOLOR.
 
 ### <a name="return-value"></a>Valore restituito
@@ -445,7 +445,7 @@ La proprietà DISPID_AMBIENT_CODEPAGE.
 
 Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
 
-##  <a name="getambientdisplayasdefault"></a>  CComControlBase:: GetAmbientDisplayAsDefault
+##  <a name="getambientdisplayasdefault"></a>  CComControlBase::GetAmbientDisplayAsDefault
 
 Recupera DISPID_AMBIENT_DISPLAYASDEFAULT, un flag che è TRUE se il contenitore ha contrassegnato il controllo in questo sito come pulsante predefinito e pertanto un controllo button deve disegnarsi con un intervallo più spesso.
 
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>Parametri
 
 *ppFont*<br/>
-Un puntatore al contenitore dell'ambiente [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) interfaccia dispatch.
+Un puntatore al contenitore dell'ambiente [IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp) interfaccia dispatch.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -531,7 +531,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore di primo piano*<br/>
+*ForeColor*<br/>
 La proprietà DISPID_AMBIENT_FORECOLOR.
 
 ### <a name="return-value"></a>Valore restituito
@@ -603,7 +603,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificatore della proprietà contenitore da recuperare.
 
 *var*<br/>
@@ -800,7 +800,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametri
 
-*inserimento delle dipendenze*<br/>
+*di*<br/>
 Struttura che conterrà il fattore di zoom numeratore e del denominatore. Per altre informazioni, vedere [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Note
@@ -1037,7 +1037,7 @@ unsigned m_bWasOnceWindowless:1;
 > [!NOTE]
 >  Per usare questo membro dei dati all'interno della classe di controllo, è necessario dichiararla come membro dei dati nella classe del controllo. La classe del controllo non erediterà il membro dati dalla classe di base perché è dichiarato all'interno di un'unione nella classe di base.
 
-##  <a name="m_bwindowonly"></a>  CComControlBase
+##  <a name="m_bwindowonly"></a>  CComControlBase::m_bWindowOnly
 
 Flag che indica che il controllo deve essere a finestre, anche se il contenitore supporta i controlli privi di finestra.
 
@@ -1217,7 +1217,7 @@ Il `m_spInPlaceSite` puntatore è valido solo se il [m_bNegotiatedWnd](#m_bnegot
 
 La tabella seguente illustra come la `m_spInPlaceSite` dipende dal tipo di puntatore il [m_bWndLess](#m_bwndless) e [m_bInPlaceSiteEx](#m_binplacesiteex) i flag di membro dei dati:
 
-|m_spInPlaceSite tipo|m_bWndLess valore|m_bInPlaceSiteEx valore|
+|m_spInPlaceSite tipo|m_bWndLess valore|m_bInPlaceSiteEx Value|
 |---------------------------|-----------------------|-----------------------------|
 |`IOleInPlaceSiteWindowless`|true|TRUE o FALSE|
 |`IOleInPlaceSiteEx`|false|true|
@@ -1239,7 +1239,7 @@ CComPtr<IOleAdviseHolder>
 
 L'interfaccia `m_spOleAdviseHolder` implementa la [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) e [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) metodi per definire ed eliminare le connessioni consultive al contenitore. Contenitore del controllo deve implementare un sink di notifica mediante il supporto di [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) interfaccia.
 
-##  <a name="ondraw"></a>  CComControlBase:: OnDraw
+##  <a name="ondraw"></a>  CComControlBase::OnDraw
 
 Eseguire l'override di questo metodo per creare il controllo.
 
@@ -1249,7 +1249,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametri
 
-*inserimento delle dipendenze*<br/>
+*di*<br/>
 Un riferimento per la [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) struttura che contiene informazioni sul disegno, ad esempio l'aspetto di disegno, i limiti del controllo, e se il disegno sia ottimizzato o No.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1276,7 +1276,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametri
 
-*inserimento delle dipendenze*<br/>
+*di*<br/>
 Un riferimento per la [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) struttura che contiene informazioni sul disegno, ad esempio l'aspetto di disegno, i limiti del controllo, e se il disegno sia ottimizzato o No.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1460,7 +1460,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*ADVF*<br/>
+*advf*<br/>
 Consigliare i flag che specificano il modo in cui la chiamata a [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) viene effettuata. I valori sono compresi i [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) enumerazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1477,7 +1477,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>Parametri
 
-*PMK*<br/>
+*pmk*<br/>
 Puntatore al moniker del nuovo del controllo.
 
 ### <a name="return-value"></a>Valore restituito

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - CHotKeyCtrl class [MFC], setting hot key
 ms.assetid: 6f3bc141-e346-4dce-9ca7-3e6b2c453f3f
-ms.openlocfilehash: a5dc885767137a4e53d1ea0d066944d5f276c38c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebaddb4a64a4d9d47b82fd36f118c74527554e53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508797"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893224"
 ---
 # <a name="setting-a-hot-key"></a>Impostazione di un tasto di scelta rapida
 
@@ -19,7 +19,7 @@ L'applicazione può usare le informazioni fornite da un tasto di scelta rapida (
 
 - Configurare un tasto di scelta rapida globale per l'attivazione di una finestra non figlio mediante l'invio di un [messaggio WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) messaggio nella finestra di attivazione.
 
-- Configurare un tasto di scelta rapida specifici di thread chiamando la funzione di Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).
+- Configurare un tasto di scelta rapida specifici di thread chiamando la funzione di Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey).
 
 ## <a name="see-also"></a>Vedere anche
 

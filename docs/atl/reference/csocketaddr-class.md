@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-ms.openlocfilehash: 9ab0367d5a83096c1bb6e9166ee2b43fe2000ab4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc0c5f0abc125138c5068682c828a3438dec5102
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570456"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893353"
 ---
 # <a name="csocketaddr-class"></a>Classe CSocketAddr
 
@@ -204,7 +204,7 @@ addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Un riferimento a un elemento specifico di [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) elenco.
+Un riferimento a un elemento specifico di [addrinfo](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa) elenco.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -220,7 +220,7 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a un elenco collegato di uno o più `addrinfo` strutture contenenti informazioni relative alla risposta sull'host. Per altre informazioni, vedere [addrinfo struttura](https://msdn.microsoft.com/library/windows/desktop/ms737530).
+Puntatore a un elenco collegato di uno o più `addrinfo` strutture contenenti informazioni relative alla risposta sull'host. Per altre informazioni, vedere [addrinfo struttura](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa).
 
 ## <a name="see-also"></a>Vedere anche
 

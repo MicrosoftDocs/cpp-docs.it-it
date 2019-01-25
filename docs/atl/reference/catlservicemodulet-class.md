@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: b577ee002e34fa051b6e1dd5ffca71f935d93433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad682980fbc885d79598b41a5dcc094bb65db8cf
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619141"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893535"
 ---
 # <a name="catlservicemodulet-class"></a>Classe CAtlServiceModuleT
 
@@ -76,8 +76,8 @@ Identificatore della risorsa del servizio.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAtlServiceModuleT:: Handler](#handler)|La routine del gestore per il servizio.|
-|[CAtlServiceModuleT:: InitializeSecurity](#initializesecurity)|Fornisce il valore predefinito delle impostazioni di sicurezza per il servizio.|
+|[CAtlServiceModuleT::Handler](#handler)|La routine del gestore per il servizio.|
+|[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Fornisce il valore predefinito delle impostazioni di sicurezza per il servizio.|
 |[CAtlServiceModuleT::Install](#install)|Installa e crea il servizio.|
 |[CAtlServiceModuleT::IsInstalled](#isinstalled)|Conferma che il servizio sia stato installato.|
 |[CAtlServiceModuleT::LogEvent](#logevent)|Scrive nel registro eventi.|
@@ -90,14 +90,14 @@ Identificatore della risorsa del servizio.
 |[CAtlServiceModuleT::ParseCommandLine](#parsecommandline)|Analizza la riga di comando ed esegue la registrazione, se necessario.|
 |[CAtlServiceModuleT::PreMessageLoop](#premessageloop)|Questo metodo viene chiamato immediatamente prima di immettere il ciclo di messaggi.|
 |[CAtlServiceModuleT::RegisterAppId](#registerappid)|Registra il servizio nel Registro di sistema.|
-|[CAtlServiceModuleT:: Run](#run)|Esegue il servizio.|
-|[CAtlServiceModuleT::](#servicemain)|Il metodo chiamato da Gestione controllo servizi.|
+|[CAtlServiceModuleT::Run](#run)|Esegue il servizio.|
+|[CAtlServiceModuleT::ServiceMain](#servicemain)|Il metodo chiamato da Gestione controllo servizi.|
 |[CAtlServiceModuleT::SetServiceStatus](#setservicestatus)|Aggiorna lo stato del servizio.|
-|[CAtlServiceModuleT:: Start](#start)|Chiamato da `CAtlServiceModuleT::WinMain` all'avvio del servizio.|
+|[CAtlServiceModuleT::Start](#start)|Chiamato da `CAtlServiceModuleT::WinMain` all'avvio del servizio.|
 |[CAtlServiceModuleT::Uninstall](#uninstall)|Arresta e rimuove il servizio.|
 |[CAtlServiceModuleT::Unlock](#unlock)|Decrementa il conteggio dei blocchi del servizio.|
 |[CAtlServiceModuleT::UnregisterAppId](#unregisterappid)|Rimuove il servizio dal Registro di sistema.|
-|[CAtlServiceModuleT:: WinMain](#winmain)|Questo metodo implementa il codice necessario per eseguire il servizio.|
+|[CAtlServiceModuleT::WinMain](#winmain)|Questo metodo implementa il codice necessario per eseguire il servizio.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -143,7 +143,7 @@ CAtlServiceModuleT() throw();
 
 Inizializza i membri dati e imposta lo stato del servizio iniziale.
 
-##  <a name="handler"></a>  CAtlServiceModuleT:: Handler
+##  <a name="handler"></a>  CAtlServiceModuleT::Handler
 
 La routine del gestore per il servizio.
 
@@ -172,7 +172,7 @@ Se non viene riconosciuto il codice dell'operazione, il metodo [CAtlServiceModul
 
 Un servizio predefinito generato da ATL gestisce solo l'istruzione di interruzione. Se Gestione controllo servizi passa l'istruzione di interruzione, il servizio indica a Gestione controllo servizi che il programma sta per essere arrestato. Chiama quindi il servizio `PostThreadMessage` per inviare un messaggio quit a se stesso. Questo termina il ciclo di messaggi e il servizio verrà chiuso.
 
-##  <a name="initializesecurity"></a>  CAtlServiceModuleT:: InitializeSecurity
+##  <a name="initializesecurity"></a>  CAtlServiceModuleT::InitializeSecurity
 
 Fornisce il valore predefinito delle impostazioni di sicurezza per il servizio.
 
@@ -369,7 +369,7 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*lpCmdLine fa*<br/>
+*lpCmdLine*<br/>
 Riga di comando
 
 *pnRetCode*<br/>
@@ -421,7 +421,7 @@ Deve essere true per registrare come un servizio.
 
 Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
 
-##  <a name="run"></a>  CAtlServiceModuleT:: Run
+##  <a name="run"></a>  CAtlServiceModuleT::Run
 
 Esegue il servizio.
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametri
 
 *nShowCmd*<br/>
-Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sezione. Il valore predefinito è SW_HIDE.
+Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sezione. Il valore predefinito è SW_HIDE.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametri
 
 *nShowCmd*<br/>
-Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sezione.
+Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sezione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -542,7 +542,7 @@ HRESULT UnregisterAppId() throw();
 
 Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
 
-##  <a name="winmain"></a>  CAtlServiceModuleT:: WinMain
+##  <a name="winmain"></a>  CAtlServiceModuleT::WinMain
 
 Questo metodo implementa il codice necessario per avviare il servizio.
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametri
 
 *nShowCmd*<br/>
-Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sezione.
+Specifica come visualizzare la finestra. Questo parametro può essere uno dei valori descritti nel [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sezione.
 
 ### <a name="return-value"></a>Valore restituito
 

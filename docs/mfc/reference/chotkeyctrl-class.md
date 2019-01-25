@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178135"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894510"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 
@@ -67,7 +67,7 @@ Questo controllo (e pertanto il `CHotKeyCtrl` classe) è disponibile solo per i 
 
 Quando l'utente ha scelto una combinazione di tasti, l'applicazione può recuperare la combinazione di chiave specificata dal controllo e utilizzare il messaggio di messaggio WM_SETHOTKEY per configurare il tasto di scelta rapida nel sistema. Ogni volta che l'utente preme il tasto di scelta rapida in seguito, da qualsiasi parte del sistema, la finestra specificata nel messaggio di messaggio WM_SETHOTKEY riceve un messaggio WM_SYSCOMMAND specificando SC_HOTKEY. Questo messaggio è attiva la finestra che lo riceve. Il tasto di scelta rapida rimane valido finché l'applicazione che ha chiamato WM_SETHOTKEY non viene chiusa.
 
-Questo meccanismo è diverso dal supporto delle chiavi attivo che varia a seconda di Windows e il messaggio WM_HOTKEY [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) e [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funzioni.
+Questo meccanismo è diverso dal supporto delle chiavi attivo che varia a seconda di Windows e il messaggio WM_HOTKEY [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) e [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funzioni.
 
 Per altre informazioni sull'uso `CHotKeyCtrl`, vedere [controlli](../../mfc/controls-mfc.md) e [usando CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 
@@ -232,7 +232,7 @@ static CString GetKeyName(
 
 ### <a name="parameters"></a>Parametri
 
-*VK*<br/>
+*vk*<br/>
 Il codice tasto virtuale.
 
 *fExtended*<br/>
@@ -300,7 +300,7 @@ Matrice di flag che specifica le combinazioni di tasti non valide. Può essere u
 
 - HKCOMB_C CTRL
 
-- CTRL + ALT HKCOMB_CA
+- HKCOMB_CA CTRL+ALT
 
 - Chiavi HKCOMB_NONE non modificato
 

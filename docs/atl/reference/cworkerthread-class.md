@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: 9469770dc0538b968cfaafa2de45f28bd864193c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecde92cbd9fb9e028e79c9a0ce75859ce85790a
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532002"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893457"
 ---
 # <a name="cworkerthread-class"></a>Classe CWorkerThread
 
@@ -54,7 +54,7 @@ La classe che fornisce la funzione di creazione di thread, ad esempio [CRTThread
 |Nome|Descrizione|
 |----------|-----------------|
 |[CWorkerThread::CWorkerThread](#cworkerthread)|Il costruttore per il thread di lavoro.|
-|[CWorkerThread:: ~ CWorkerThread](#dtor)|Il distruttore per il thread di lavoro.|
+|[CWorkerThread::~CWorkerThread](#dtor)|Il distruttore per il thread di lavoro.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -166,7 +166,7 @@ Costruttore.
 CWorkerThread() throw();
 ```
 
-##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread
+##  <a name="dtor"></a>  CWorkerThread::~CWorkerThread
 
 Distruttore.
 
@@ -248,7 +248,7 @@ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso d
 
 ### <a name="remarks"></a>Note
 
-Quando viene rimosso l'handle [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) viene chiamato sull'oggetto associato passato al [AddHandle](#addhandle). Se questa chiamata ha esito negativo, `CWorkerThread` chiamerà il Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) dell'handle di funzione.
+Quando viene rimosso l'handle [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) viene chiamato sull'oggetto associato passato al [AddHandle](#addhandle). Se questa chiamata ha esito negativo, `CWorkerThread` chiamerà il Windows [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) dell'handle di funzione.
 
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown
 
@@ -277,5 +277,5 @@ Si noti che la chiamata `Shutdown` su un oggetto inizializzato con un puntatore 
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Classi](../../atl/reference/atl-classes.md)<br/>
-[Multithreading: creazione di thread di lavoro](../../parallel/multithreading-creating-worker-threads.md)<br/>
+[Multithreading: Creazione di thread di lavoro](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [Interfaccia IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)

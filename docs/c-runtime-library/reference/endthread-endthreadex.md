@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 48a2ce90b6bc90d40f6071898e1e5182502e938f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597483"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893301"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -62,7 +62,7 @@ Codice di uscita del thread
 > [!NOTE]
 > Per un file eseguibile collegato a Libcmt.lib, non chiamare l'API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) di Win32 per non impedire al sistema di runtime di recuperare le risorse allocate. **endthread** e **endthreadex** recuperano le risorse del thread allocate, quindi chiamare **ExitThread**.
 
-**endthread** chiude automaticamente l'handle del thread. (Questo comportamento è diverso da Win32 **ExitThread** API.) Pertanto, quando si usano **beginthread** e **endthread**, non chiudere in modo esplicito l'handle del thread chiamando Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
+**endthread** chiude automaticamente l'handle del thread. (Questo comportamento è diverso da Win32 **ExitThread** API.) Pertanto, quando si usano **beginthread** e **endthread**, non chiudere in modo esplicito l'handle del thread chiamando Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API.
 
 Ad esempio Win32 **ExitThread** API **endthreadex** non chiude l'handle del thread. Pertanto, quando si usano **beginthreadex** e **endthreadex**, è necessario chiudere l'handle del thread chiamando Win32 **CloseHandle** API.
 

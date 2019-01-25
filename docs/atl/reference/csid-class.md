@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465364"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894315"
 ---
 # <a name="csid-class"></a>Classe CSid
 
@@ -86,10 +86,10 @@ class CSid
 |-|-|
 |[operatore = =](#operator_eq_eq)|Verifica due oggetti descrittore di sicurezza per verificarne l'uguaglianza|
 |[operatore! =](#operator_neq)|Verifica due oggetti descrittore di sicurezza per verificarne la disuguaglianza|
-|[Operatore \<](#operator_lt_)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|
-|[operatore >](#operator_gt_)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|
-|[Operatore \<=](#operator_lt__eq)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|
-|[operatore > =](#operator_gt__eq)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|
+|[operator \<](#operator_lt_)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|
+|[operator >](#operator_gt_)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|
+|[operator \<=](#operator_lt__eq)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|
+|[operator >=](#operator_gt__eq)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|
 
 ## <a name="remarks"></a>Note
 
@@ -232,7 +232,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) nel SDK di Windows per altri dettagli.
+Visualizzare [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) nel SDK di Windows per altri dettagli.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -400,7 +400,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il `SID` (ID di sicurezza) o `CSid` visualizzato sul lato sinistro dell'operatore = =.
 
 *rhs*<br/>
@@ -422,7 +422,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il `SID` (ID di sicurezza) o `CSid` visualizzato sul lato sinistro della! = (operatore).
 
 *rhs*<br/>
@@ -444,7 +444,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il `SID` (ID di sicurezza) o `CSid` visualizzato sul lato sinistro della! = (operatore).
 
 *rhs*<br/>
@@ -466,7 +466,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il `SID` (ID di sicurezza) o `CSid` visualizzato sul lato sinistro della! = (operatore).
 
 *rhs*<br/>
@@ -488,7 +488,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il `SID` (ID di sicurezza) o `CSid` visualizzato sul lato sinistro della! = (operatore).
 
 *rhs*<br/>
@@ -510,7 +510,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il `SID` (ID di sicurezza) o `CSid` visualizzato sul lato sinistro della! = (operatore).
 
 *rhs*<br/>
@@ -556,7 +556,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 Restituisce il valore del membro dati che archivia un valore che indica lo stato del `CSid` oggetto.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |SidTypeUser|Indica che un utente `SID` (ID di sicurezza).|
 |SidTypeGroup|Indica un gruppo `SID`.|

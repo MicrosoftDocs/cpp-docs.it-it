@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694530"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894241"
 ---
 # <a name="caccesstoken-class"></a>Classe CAccessToken
 
@@ -215,7 +215,7 @@ bool CreateImpersonationToken(
 *pImp*<br/>
 Puntatore al nuovo `CAccessToken` oggetto.
 
-*registrazione inventario software*<br/>
+*sil*<br/>
 Specifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerato che specifica il livello di rappresentazione del token di nuovo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -224,7 +224,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-`CreateImpersonationToken` le chiamate [DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616) per creare un nuovo token di rappresentazione.
+`CreateImpersonationToken` le chiamate [DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) per creare un nuovo token di rappresentazione.
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -661,7 +661,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Chiama il [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) funzione Win32.
+Chiama il [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) funzione Win32.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -781,7 +781,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*PDigitare*<br/>
+*pType*<br/>
 Indirizzo della [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) variabile che, in caso di esito positivo riceve il tipo di token.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1056,7 +1056,7 @@ Indica se il controllo di accesso deve essere eseguita rispetto al contesto di s
 
 Se questo parametro è FALSE, il controllo dell'accesso viene eseguito utilizzando il contesto di sicurezza per il thread chiamante. Se il thread è una rappresentazione di un client, il contesto di sicurezza può essere quello di un processo client. Se questo parametro è TRUE, il controllo di accesso viene effettuato utilizzando il contesto di sicurezza del processo per il thread chiamante.
 
-*registrazione inventario software*<br/>
+*sil*<br/>
 Specifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerato che specifica il livello di rappresentazione del token.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1093,7 +1093,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Quando `PrivilegeCheck` viene restituito, il `Attributes` membro della ognuno [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) struttura è impostata su SE_PRIVILEGE_USED_FOR_ACCESS se è abilitato il privilegio corrispondente. Questo metodo chiama il [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) funzione Win32.
+Quando `PrivilegeCheck` viene restituito, il `Attributes` membro della ognuno [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) struttura è impostata su SE_PRIVILEGE_USED_FOR_ACCESS se è abilitato il privilegio corrispondente. Questo metodo chiama il [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) funzione Win32.
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

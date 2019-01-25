@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178525"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894341"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
 
@@ -74,14 +74,14 @@ class CDateTimeCtrl : public CWnd
 |[CDateTimeCtrl::GetDateTimePickerInfo](#getdatetimepickerinfo)|Recupera le informazioni sul controllo selezione data e ora corrente.|
 |[CDateTimeCtrl::GetIdealSize](#getidealsize)|Restituisce la dimensione ideale del controllo selezione data e ora che è necessario per visualizzare la data corrente o l'ora.|
 |[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)|Recupera il colore per una parte del calendario mensile all'interno del controllo selezione data e ora.|
-|[:: GetMonthCalCtrl](#getmonthcalctrl)|Recupera il `CMonthCalCtrl` oggetto associato al controllo di selezione data e ora.|
+|[CDateTimeCtrl::GetMonthCalCtrl](#getmonthcalctrl)|Recupera il `CMonthCalCtrl` oggetto associato al controllo di selezione data e ora.|
 |[CDateTimeCtrl::GetMonthCalFont](#getmonthcalfont)|Recupera il tipo di carattere attualmente usato da data e controllo di calendario mensile figlio del controllo di selezione ora.|
 |[CDateTimeCtrl::GetMonthCalStyle](#getmonthcalstyle)|Ottiene lo stile del controllo selezione data e ora corrente.|
 |[CDateTimeCtrl::GetRange](#getrange)|Recupera corrente minimi e massimi consentiti tempi di sistema per un controllo selezione data e ora.|
 |[CDateTimeCtrl::GetTime](#gettime)|Recupera il tempo attualmente selezionato da un controllo selezione data e ora e lo inserisce in un determinato `SYSTEMTIME` struttura.|
-|[CDateTimeCtrl:: SetFormat](#setformat)|Imposta la visualizzazione di un controllo selezione data e ora in base a una stringa di formato specificato.|
+|[CDateTimeCtrl::SetFormat](#setformat)|Imposta la visualizzazione di un controllo selezione data e ora in base a una stringa di formato specificato.|
 |[CDateTimeCtrl::SetMonthCalColor](#setmonthcalcolor)|Imposta il colore per una parte del calendario mensile all'interno di un controllo selezione data e ora.|
-|[CDateTimeCtrl:: SetMonthCalFont](#setmonthcalfont)|Imposta il tipo di carattere che verrà utilizzato controllo calendario mensile di data e ora di selezione del controllo figlio.|
+|[CDateTimeCtrl::SetMonthCalFont](#setmonthcalfont)|Imposta il tipo di carattere che verrà utilizzato controllo calendario mensile di data e ora di selezione del controllo figlio.|
 |[CDateTimeCtrl::SetMonthCalStyle](#setmonthcalstyle)|Imposta lo stile del controllo selezione data e ora corrente.|
 |[CDateTimeCtrl::SetRange](#setrange)|Impostare gli orari di sistema minimo e massimo consentito per un controllo selezione data e ora.|
 |[CDateTimeCtrl::SetTime](#settime)|Imposta il tempo in un controllo selezione data e ora.|
@@ -243,7 +243,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [DTM_GETM
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]
 
-##  <a name="getmonthcalctrl"></a>  :: GetMonthCalCtrl
+##  <a name="getmonthcalctrl"></a>  CDateTimeCtrl::GetMonthCalCtrl
 
 Recupera il `CMonthCalCtrl` oggetto associato al controllo di selezione data e ora.
 
@@ -353,7 +353,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 Nella prima versione, un riferimento a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oggetto che riceverà le informazioni sull'ora di sistema. Nella seconda versione, un riferimento a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto che riceverà le informazioni sull'ora di sistema.
 
 *pTimeDest*<br/>
-Un puntatore per il [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struttura per ricevere le informazioni sull'ora di sistema. Non deve essere NULL.
+Un puntatore per il [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struttura per ricevere le informazioni sull'ora di sistema. Non deve essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -403,7 +403,7 @@ Esempio di codice seguente recupera la dimensione ideale per visualizzare il con
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]
 
-##  <a name="setformat"></a>  CDateTimeCtrl:: SetFormat
+##  <a name="setformat"></a>  CDateTimeCtrl::SetFormat
 
 Imposta la visualizzazione di un controllo selezione data e ora in base a una stringa di formato specificato.
 
@@ -470,7 +470,7 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [DTM_SETM
 
   Vedere l'esempio relativo [CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor).
 
-##  <a name="setmonthcalfont"></a>  CDateTimeCtrl:: SetMonthCalFont
+##  <a name="setmonthcalfont"></a>  CDateTimeCtrl::SetMonthCalFont
 
 Imposta il tipo di carattere che verrà utilizzato controllo calendario mensile di data e ora di selezione del controllo figlio.
 
@@ -583,7 +583,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 Un riferimento a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oggetto che contiene il da cui verrà impostato il controllo.
 
 *pTimeNew*<br/>
-Nella seconda versione precedente, un puntatore a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto contenente l'ora in cui verrà impostato il controllo. Nella terza versione precedente, un puntatore a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struttura che contiene l'ora in cui verrà impostato il controllo.
+Nella seconda versione precedente, un puntatore a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto contenente l'ora in cui verrà impostato il controllo. Nella terza versione precedente, un puntatore a un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struttura che contiene l'ora in cui verrà impostato il controllo.
 
 ### <a name="return-value"></a>Valore restituito
 

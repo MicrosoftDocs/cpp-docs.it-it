@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: 9cb4ec679e26adc32ffc6d68ebff9b1ed73c2f43
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 852656b33eca1a8c87c6931b58cd49c0c41fe3dc
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694231"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893639"
 ---
 # <a name="caxdialogimpl-class"></a>Classe CAxDialogImpl
 
@@ -52,7 +52,7 @@ La classe di finestra di base per `CDialogImplBaseT`.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAxDialogImpl::](#advisesinkmap)|Chiamare questo metodo per inviare o annullare tutte le voci nella mappa di eventi dell'oggetto sink della mappa.|
+|[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Chiamare questo metodo per inviare o annullare tutte le voci nella mappa di eventi dell'oggetto sink della mappa.|
 |[CAxDialogImpl::Create](#create)|Chiamare questo metodo per creare una finestra di dialogo non modale.|
 |[CAxDialogImpl::DestroyWindow](#destroywindow)|Chiamare questo metodo per eliminare una finestra di dialogo non modale.|
 |[CAxDialogImpl::DoModal](#domodal)|Chiamare questo metodo per creare una finestra di dialogo modale.|
@@ -101,7 +101,7 @@ Per ulteriori informazioni sul `CAxDialogImpl`, vedere [domande frequenti sul co
 
 **Intestazione:** atlwin. h
 
-##  <a name="advisesinkmap"></a>  CAxDialogImpl::
+##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap
 
 Chiamare questo metodo per inviare o annullare tutte le voci nella mappa di eventi dell'oggetto sink della mappa.
 
@@ -135,7 +135,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 *dwInitParam*<br/>
 [in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.
 
-*RECT &AMP;*<br/>
+*RECT&*<br/>
 Questo parametro non viene usato. Questo parametro viene passato dal `CComControl`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -255,7 +255,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="parameters"></a>Parametri
 
 *pMsg*<br/>
-Puntatore a un [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) struttura che contiene il messaggio da controllare.
+Puntatore a un [MSG](/windows/desktop/api/winuser/ns-winuser-msg) struttura che contiene il messaggio da controllare.
 
 ### <a name="return-value"></a>Valore restituito
 

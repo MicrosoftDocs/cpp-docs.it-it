@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: 2ffe37059eb6ab81eb9dd67243ba125766b92dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f831980c803fcbce45e502321e39440b72382f95
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467301"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893743"
 ---
 # <a name="cwndclassinfo-class"></a>Classe CWndClassInfo
 
@@ -141,7 +141,7 @@ TCHAR m_szAutoName[13];
 
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc
 
-Mantiene le informazioni sulla classe di finestra in un [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577) struttura.
+Mantiene le informazioni sulla classe di finestra in un [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa) struttura.
 
 ```
 WNDCLASSEX m_wc;

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437817"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893990"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Procedura: Gestire un'istanza dell'utilità di pianificazione
 
 Le istanze dell'utilità di pianificazione consentono di associare i criteri di pianificazione specifici a vari tipi di carichi di lavoro. In questo argomento contiene due esempi di base che illustrano come creare e gestire un'istanza dell'utilità di pianificazione.
 
-Gli esempi creano le utilità di pianificazione che usano i criteri dell'utilità di pianificazione predefinita. Per un esempio che crea un'utilità di pianificazione che utilizza un criterio personalizzato, vedere [procedura: specificare i criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Gli esempi creano le utilità di pianificazione che usano i criteri dell'utilità di pianificazione predefinita. Per un esempio che crea un'utilità di pianificazione che utilizza un criterio personalizzato, vedere [come: Specificare i criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Per gestire un'istanza di utilità di pianificazione nell'applicazione
 
@@ -38,7 +38,7 @@ Gli esempi creano le utilità di pianificazione che usano i criteri dell'utilit�
 
 1. Passare l'handle all'evento per il [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) (funzione) di attesa per l'utilità di pianificazione arrestato.
 
-1. Chiamare il [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) (funzione) per chiudere l'handle all'oggetto evento.
+1. Chiamare il [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) (funzione) per chiudere l'handle all'oggetto evento.
 
 ## <a name="example"></a>Esempio
 
@@ -73,7 +73,7 @@ Current scheduler id: 0
 
 Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `scheduler-instance.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
 
-**CL.exe /EHsc dell'utilità di pianificazione-Instance. cpp**
+**cl.exe /EHsc scheduler-instance.cpp**
 
 ## <a name="see-also"></a>Vedere anche
 
