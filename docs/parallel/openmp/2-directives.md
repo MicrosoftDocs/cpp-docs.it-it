@@ -2,12 +2,12 @@
 title: 2. Direttive
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: bf96d5ee6963a76c2b2462d5b3a0639c1141ea15
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894246"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087340"
 ---
 # <a name="2-directives"></a>2. Direttive
 
@@ -111,12 +111,12 @@ Restrizioni per il `parallel` direttiva sono i seguenti:
 ### <a name="cross-references"></a>Riferimenti incrociati
 
 - `private`, `firstprivate`, `default`, `shared`, `copyin`, e `reduction` clausole ([sezione 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-2-omp-num-threads.md) variabile di ambiente
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) library function
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) variabile di ambiente
-- [omp_set_nested](3-1-9-omp-set-nested-function.md) function
-- [OMP_NESTED](4-4-omp-nested.md) variabile di ambiente
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md) funzione della libreria
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) variabile di ambiente
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) library function
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) variabile di ambiente
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) function
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested) variabile di ambiente
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) funzione della libreria
 
 ## <a name="24-work-sharing-constructs"></a>2.4 costrutti di condivisione del lavoro
 
@@ -227,7 +227,7 @@ Restrizioni per il `for` direttiva sono i seguenti:
 #### <a name="cross-references"></a>Riferimenti incrociati
 
 - `private`, `firstprivate`, `lastprivate`, e `reduction` clausole ([sezione 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-1-omp-schedule.md) variabile di ambiente
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) variabile di ambiente
 - [ordinati](#266-ordered-construct) costruire
 - [pianificazione](d-using-the-schedule-clause.md) clausola
 
@@ -520,7 +520,7 @@ Restrizioni per il `ordered` direttiva sono i seguenti:
 
 Questa sezione viene presentata una direttiva e numerose clausole per controllare l'ambiente dei dati durante l'esecuzione di aree parallele, come indicato di seguito:
 
-- Oggetto `threadprivate` (direttiva) (vedere la sezione seguente) viene fornita per rendere locale a un thread di ambito file, dell'ambito dello spazio dei nomi o variabili statico dall'ambito del blocco.
+- Oggetto [threadprivate](#271-threadprivate-directive) direttiva viene fornita per rendere locale a un thread di ambito file, dell'ambito dello spazio dei nomi o variabili statico dall'ambito del blocco.
 
 - Le clausole che possono essere specificate per le direttive per controllare gli attributi di condivisione delle variabili per la durata dei costrutti di condivisione del lavoro o paralleli sono descritte nel [sezione 2.7.2](#272-data-sharing-attribute-clauses).
 
@@ -582,8 +582,8 @@ void f(int n) {
 
 #### <a name="cross-references"></a>Riferimenti incrociati
 
-- [thread dinamico](3-1-7-omp-set-dynamic-function.md)
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) variabile di ambiente
+- [thread dinamico](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) variabile di ambiente
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 le clausole di attributi per la condivisione dei dati
 

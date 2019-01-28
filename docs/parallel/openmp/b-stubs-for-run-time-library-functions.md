@@ -1,24 +1,24 @@
 ---
-title: B. Stub per funzioni della libreria Run-time
-ms.date: 11/04/2016
+title: B. Stub per funzioni della libreria run-time
+ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 3b2d48155a3baf4d317d3114bb5ae5a8ed306bef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551450"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087262"
 ---
-# <a name="b-stubs-for-run-time-library-functions"></a>B. Stub per funzioni della libreria Run-time
+# <a name="b-stubs-for-run-time-library-functions"></a>B. Stub per funzioni della libreria run-time
 
 In questa sezione fornisce gli stub per le funzioni della libreria di runtime definite in OpenMP C e C++ API. Gli stub vengono forniti per consentire la portabilità tra piattaforme che non supportano il OpenMP C e C++ API. In queste piattaforme, programmi di OpenMP devono essere collegati con una libreria che contiene queste funzioni stub. Le funzioni stub si presuppongono che le direttive nel programma OpenMP vengono ignorate. Di conseguenza, queste emulano la semantica seriale.
 
 > [!NOTE]
->  La variabile di blocco che viene visualizzato nelle funzioni di blocco deve avvenire esclusivamente tramite queste funzioni. Si dovrebbe non essere inizializzato o in caso contrario, è stato modificato nel programma utente. Gli utenti non devono dare per scontati meccanismi utilizzati dalle implementazioni OpenMP C e C++ per implementare i blocchi basati sullo schema usato dalle funzioni di stub.
+> La variabile di blocco che viene visualizzato nelle funzioni di blocco deve avvenire esclusivamente tramite queste funzioni. Si dovrebbe non essere inizializzato o in caso contrario, è stato modificato nel programma utente. Gli utenti non devono dare per scontati meccanismi utilizzati dalle implementazioni OpenMP C e C++ per implementare i blocchi basati sullo schema usato dalle funzioni di stub.
 
-### <a name="code"></a>Codice
+## <a name="code"></a>Codice
 
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #include "omp.h"

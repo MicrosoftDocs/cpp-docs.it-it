@@ -2,12 +2,12 @@
 title: 3. Funzioni della libreria run-time
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 7d48338683037c06ca208bff32c5c2e9b546a9fe
-ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
+ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065022"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087314"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funzioni della libreria run-time
 
@@ -49,7 +49,7 @@ Il `omp_set_num_threads` funzione imposta il numero predefinito di thread da usa
 void omp_set_num_threads(int num_threads);
 ```
 
-Il valore del parametro *num_threads* deve essere un numero intero positivo. Il suo effetto varia a seconda se è abilitata la regolazione dinamica del numero di thread. Per un set completo di regole che stabiliscono l'interazione tra il `omp_set_num_threads` funzione e regolazione dinamica del thread, vedere sezione 2.3.
+Il valore del parametro *num_threads* deve essere un numero intero positivo. Il suo effetto varia a seconda se è abilitata la regolazione dinamica del numero di thread. Per un set completo di regole che stabiliscono l'interazione tra il `omp_set_num_threads` funzione e regolazione dinamica del thread, vedere [sezione 2.3](2-directives.md#23-parallel-construct).
 
 Questa funzione ha gli effetti descritti in precedenza quando viene chiamato da una parte del programma in cui il `omp_in_parallel` funzione restituisce zero. Se viene chiamato da una parte del programma in cui il `omp_in_parallel` funzione restituisce un valore diverso da zero, il comportamento di questa funzione è indefinito.
 
@@ -60,7 +60,7 @@ Questa chiamata ha la precedenza sul `OMP_NUM_THREADS` variabile di ambiente. Il
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
 - [omp_get_dynamic](#318-omp_get_dynamic-function) function
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) variabile di ambiente
-- [num_threads](2-3-parallel-construct.md) clausola
+- [num_threads](2-directives.md#23-parallel-construct) clausola
 
 ### <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads (funzione)
 
@@ -78,8 +78,8 @@ Se il numero di thread non è stato impostato in modo esplicito dall'utente, il 
 #### <a name="cross-references"></a>Riferimenti incrociati
 
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
-- [num_threads](2-3-parallel-construct.md)
-- [parallel](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
+- [parallel](2-directives.md#23-parallel-construct)
 
 ### <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads (funzione)
 
@@ -107,7 +107,7 @@ Il `omp_get_max_threads` valore restituito della funzione è utilizzabile per al
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
 - [omp_set_num_threads](#311-omp_set_num_threads-function)
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
-- [num_threads](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
 
 ### <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num (funzione)
 
