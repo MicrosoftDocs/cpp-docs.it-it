@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: 76c7a710b577d0fef4fe2a74dbee2a722c7f98b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f42593620c3457694bd57ccdc5a90216b3a28f1
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677422"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893886"
 ---
 # <a name="obsolete-functions"></a>Funzioni obsolete
 
@@ -45,7 +45,7 @@ Alcune funzioni di libreria sono obsolete e hanno equivalenti più recenti. Si c
 |`_unloaddll`|[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
 |`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)|
-|`_beep`|[Beep](https://msdn.microsoft.com/library/windows/desktop/ms679277)|
+|`_beep`|[Beep](/windows/desktop/api/utilapiset/nf-utilapiset-beep)|
 |`_sleep`|[Sleep](/windows/desktop/api/synchapi/nf-synchapi-sleep)|
 |`_getsystime`|[GetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
 |`_setsystime`|[SetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
