@@ -15,7 +15,7 @@ ms.locfileid: "54220712"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Esportazione da una DLL tramite i file DEF
 
-Una definizione di modulo o un file DEF (def) è un file di testo contenente uno o più istruzioni di modulo che descrivono alcuni attributi di una DLL. Se non si usa la **dllexport** (parola chiave) per esportare le funzioni della DLL, è necessario un file DEF.
+Una definizione di modulo o un file DEF (*.def) è un file di testo contenente uno o più istruzioni di modulo che descrivono alcuni attributi di una DLL. Se non si usa la **dllexport** (parola chiave) per esportare le funzioni della DLL, è necessario un file DEF.
 
 Un file DEF minimo deve contenere le istruzioni di definizione moduli seguenti:
 
