@@ -2,12 +2,12 @@
 title: 'Visual C++: novità dalla versione 2003 alla 2015'
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520181"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894354"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -1854,7 +1854,7 @@ Sono state aggiunte nuove macro alla libreria ATL per espandere la funzionalità
 
 #### <a name="animation-and-d2d-support"></a>Animazione e supporto D2D
 
-MFC supporta ora l'animazione e la grafica Direct2D. La libreria MFC offre diverse nuove classi e funzioni MFC per supportare questa funzionalità. Sono anche disponibili due nuove procedure dettagliate che illustrano come aggiungere un oggetto D2D e un oggetto di animazione a un progetto. Le procedure dettagliate sono **Procedura dettagliata: aggiunta di un oggetto D2D a un progetto MFC** e **Procedura dettagliata: aggiunta di animazione a un progetto MFC**.
+MFC supporta ora l'animazione e la grafica Direct2D. La libreria MFC offre diverse nuove classi e funzioni MFC per supportare questa funzionalità. Sono anche disponibili due nuove procedure dettagliate che illustrano come aggiungere un oggetto D2D e un oggetto di animazione a un progetto. Le procedure dettagliate seguenti sono **Procedura dettagliata: aggiunta di un oggetto D2D a un progetto MFC** e **Procedura dettagliata: aggiunta di animazione a un progetto MFC**.
 
 ### <a name="ide"></a>IDE
 
@@ -2197,7 +2197,7 @@ Il compilatore include modifiche di rilievo in questa versione.
 
 - Informazioni su come eseguire un'applicazione delle estensioni gestite per C++ compilata con il compilatore della versione corrente in una versione precedente del runtime.
 - Domande frequenti sulle estensioni gestite per C++.
-- È stata aggiunta una procedura dettagliata che illustra come eseguire il porting di un'applicazione nativa esistente delle estensioni gestite per C++ per consentire l'interazione con i componenti di .NET Framework.
+- È stata aggiunta una procedura dettagliata che illustra come eseguire il porting di un'applicazione nativa esistente per usare le estensioni gestite per C++: Procedura dettagliata: porting di un'applicazione C++ nativa esistente per l'interoperabilità con i componenti di .NET Framework.
 - È ora possibile creare un delegato per un metodo di un tipo di valore.
 - La conformità del compilatore con lo standard C++ è stata notevolmente migliorata per Visual C++ .NET 2003.
 - Aggiunta l'opzione del compilatore `/arch`.
