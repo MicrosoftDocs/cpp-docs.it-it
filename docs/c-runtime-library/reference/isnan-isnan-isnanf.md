@@ -1,6 +1,6 @@
 ---
 title: isnan, _isnan, _isnanf
-ms.date: 04/05/2018
+ms.date: 01/31/2019
 apiname:
 - _isnan
 - _isnanf
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650866"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703090"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
 
@@ -73,13 +73,13 @@ Valore a virgola mobile da verificare.
 
 In C, il **isnan** macro e il **isNaN** e **_isnanf** funzioni restituiscono un valore diverso da zero se l'argomento *x* è NAN; in caso contrario è Restituisce 0.
 
-In C++, il **isnan** funzioni di modello restituiscono **true** se l'argomento *x* è NAN; in caso contrario restituiscono **false**.
+In C++, il **isnan** funzione di modello restituisce **true** se l'argomento *x* è NaN; in caso contrario, restituisce **false**.
 
 ## <a name="remarks"></a>Note
 
-C **isnan** macro e il **isNaN** e **_isnanf** funzioni testano valore a virgola mobile *x*, restituendo un valore diverso da zero se *x* non è un valore di numero (NAN). Viene generato un valore NaN quando il risultato dell'operazione a virgola mobile non può essere rappresentato in formato a virgola mobile IEEE 754 per il tipo specificato. Per informazioni sulla rappresentazione di un valore NaN per l'output, vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
+Poiché un valore NaN non risulta uguale a qualsiasi altro valore NaN, è necessario utilizzare una di queste funzioni o le macro per rilevare uno. NaN viene generato quando il risultato di un'operazione a virgola mobile non può essere rappresentato in formato a virgola mobile IEEE 754 per il tipo specificato. Per informazioni su come un valore NaN per l'output, vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Quando viene compilato come C++, il **isnan** macro non è definita e un **isnan** viene invece definita funzione del modello. Restituisce un valore di tipo **bool** anziché un numero intero.
+Quando viene compilato come C++, il **isnan** macro non è definita e un **isnan** viene invece definita funzione del modello. Si comporta esattamente come la macro, ma restituisce un valore di tipo **bool** anziché un numero intero.
 
 Il **isNaN** e **_isnanf** funzioni sono specifiche di Microsoft. Il **_isnanf** funzione di disponibile solo quando viene compilato per x64.
 
@@ -87,7 +87,7 @@ Il **isNaN** e **_isnanf** funzioni sono specifiche di Microsoft. Il **_isnanf**
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------------|-------------------------------|
-|**isNaN**, **_isnanf**|\<math.h>|\<math.h> o \<cmath>|
+|**isnan**, **_isnanf**|\<math.h>|\<math.h> o \<cmath>|
 |**_isnan**|\<float.h>|\<float.h> o \<cfloat>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
@@ -95,5 +95,8 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="see-also"></a>Vedere anche
 
 [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[_finite, _finitef](finite-finitef.md)<br/>
+[fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
+[isfinite, _finite, _finitef](finite-finitef.md)<br/>
+[isinf](isinf.md)<br/>
+[isnormal](isnormal.md)<br/>

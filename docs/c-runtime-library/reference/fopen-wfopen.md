@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031291"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702908"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -82,7 +82,7 @@ Controllare sempre il valore restituito per verificare se il puntatore è NULL p
 
 **fopen** supporta flussi di file Unicode. Per aprire un file Unicode, passare un **ccs** flag che specifica la codifica voluta a **fopen**, come indicato di seguito.
 
-> **FILE *fp = fopen ("NewFile. txt", "ccs rt +, =**_codifica_**");**
+> **FILE \*fp = fopen("newfile.txt", "rt+, ccs=**_encoding_**");**
 
 I valori consentiti di *codifica* vengono **UNICODE**, **UTF-8**, e **UTF-16LE**.
 
@@ -97,7 +97,7 @@ Nella tabella seguente vengono riepilogate le modalità usate per vari **ccs** f
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Codifiche usate in base a flag ccs e indicatore ordine byte
 
-|flag CCS|Nessun indicatore ordine byte (o file nuovo)|INDICATORE ORDINE BYTE: UTF-8|INDICATORE ORDINE BYTE: UTF-16|
+|flag CCS|Nessun indicatore ordine byte (o file nuovo)|BOM: UTF-8|BOM: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -111,7 +111,7 @@ Se *modalità* viene **", ccs =**_codifica_**"**, **fopen** tenta innanzitutto d
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tfopen**|**fopen**|**fopen**|**_wfopen**|
+|**_tfopen**|**fopen**|**fopen**|**_wfopen**|
 
 La stringa di caratteri *modalità* specifica il tipo di accesso richiesto per il file, come indicato di seguito.
 
@@ -156,29 +156,29 @@ Le opzioni seguenti possono essere aggiunte a *modalità* per specificare compor
 | **R** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
 | **T** | Specifica un file come temporaneo. Se possibile, non viene scaricato su disco. |
 | **D** | Specifica un file come temporaneo. Viene eliminato quando viene chiuso l'ultimo puntatore del file. |
-| **CCS =**_codifica_ | Specifica il set di utilizzare caratteri con codificato (uno dei **UTF-8**, **UTF-16LE**, o **UNICODE**) per questo file. Lasciare non specificato se si vuole la codifica ANSI. |
+| **ccs=**_encoding_ | Specifica il set di utilizzare caratteri con codificato (uno dei **UTF-8**, **UTF-16LE**, o **UNICODE**) per questo file. Lasciare non specificato se si vuole la codifica ANSI. |
 
 Caratteri validi per il *modalità* stringa usata nella **fopen** e **fdopen** corrispondono alle *oflag* argomenti utilizzati in [Open](open-wopen.md) e [sopen](sopen-wsopen.md), come indicato di seguito.
 
 |I caratteri *modalità* stringa|Equivalente *oflag* affare \_aprire /\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**\_U\_WRONLY** &#124;  **\_u\_ACCODA** (in genere  **\_u\_WRONLY** &#124;  **\_O\_per creare** &#124;  **\_O\_APPEND**)|
-|**+**|**\_U\_RDWR** &#124;  **\_u\_ACCODA** (in genere  **\_u\_RDWR** &#124;  **\_ U\_APPEND** &#124;  **\_u\_per creare** )|
+|**a**|**\_O\_WRONLY** &#124; **\_O\_APPEND** (usually **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124; **\_O\_APPEND**)|
+|**a+**|**\_O\_RDWR** &#124; **\_O\_APPEND** (usually **\_O\_RDWR** &#124; **\_O\_APPEND** &#124; **\_O\_CREAT** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_U\_WRONLY** (in genere  **\_u\_WRONLY** &#124;  **\_u\_per creare** &#124;  **\_O\_TRUNC**)|
-|**w +**|**\_U\_RDWR** (in genere  **\_u\_RDWR** &#124;  **\_u\_per creare** &#124;  **\_ U\_TRUNC**)|
-|**b**|**\_U\_BINARIO**|
+|**r+**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (usually **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (usually **\_O\_RDWR** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
+|**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
 |**c**|nessuno|
 |**n**|nessuno|
-|**S**|**\_U\_SEQUENZIALE**|
-|**R**|**\_U\_RANDOM**|
+|**S**|**\_O\_SEQUENTIAL**|
+|**R**|**\_O\_RANDOM**|
 |**T**|**\_U\_SHORTLIVED**|
 |**D**|**\_U\_TEMPORANEO**|
-|**CCS = UNICODE**|**\_O\_WTEXT**|
-|**CCS = UTF-8**|**\_U\_UTF8**|
-|**CCS = UTF-16LE**|**\_U\_UTF16**|
+|**ccs=UNICODE**|**\_O\_WTEXT**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 Se si usa **rb** modalità, non è necessario convertire il codice e se si prevede di leggere la maggior parte di un file di grandi dimensioni o non desidera massimizzare le prestazioni di rete, è opportuno considerare anche se per l'utilizzo della memoria file Win32 mappati in come opzione.
 

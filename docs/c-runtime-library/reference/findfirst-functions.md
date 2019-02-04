@@ -4,6 +4,16 @@ ms.date: 11/04/2016
 apiname:
 - _findfirst
 - _wfindfirst
+- _findfirst32
+- _wfindfirst32
+- _findfirst32i64
+- _wfindfirst32i64
+- _findfirst64
+- _wfindfirst64
+- _findfirst64i32
+- _wfindfirst64i32
+- _findfirsti64
+- _wfindfirsti64
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -90,12 +100,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: ceaa8fea4414bab4bbb035aa4525b415ca7ac0b8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 47a1d7301b59a942a1af860f310e1f1f9da12ec7
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331438"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703142"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
@@ -159,7 +169,7 @@ intptr_t _wfindfirst64i32(
 *filespec*<br/>
 Specifica del file di destinazione. Può includere caratteri jolly.
 
-*FileInfo*<br/>
+*fileinfo*<br/>
 Buffer delle informazioni del file.
 
 ## <a name="return-value"></a>Valore restituito
@@ -193,10 +203,10 @@ Se non si dispone di un motivo preciso per usare le versioni che specificano la 
 
 ### <a name="time-type-and-file-length-type-variations-of-findfirst"></a>Varianti di _findfirst per il tipo time e di lunghezza dei file
 
-|Funzioni|**_USE_32BIT_TIME_T** definiti?|Tipo Time|Tipo lunghezza file|
+|Funzioni|**_USE_32BIT_TIME_T** defined?|Tipo Time|Tipo lunghezza file|
 |---------------|----------------------------------|---------------|----------------------|
-|**FindFirst**, **wfindfirst**|Non definito|64 bit|32 bit|
-|**FindFirst**, **wfindfirst**|Definito|32 bit|32 bit|
+|**_findfirst**, **_wfindfirst**|Non definito|64 bit|32 bit|
+|**_findfirst**, **_wfindfirst**|Definito|32 bit|32 bit|
 |**_findfirst32**, **_wfindfirst32**|Non interessato dalla definizione macro|32 bit|32 bit|
 |**_findfirst64**, **_wfindfirst64**|Non interessato dalla definizione macro|64 bit|64 bit|
 |**_findfirsti64**, **_wfindfirsti64**|Non definito|64 bit|64 bit|
@@ -208,7 +218,7 @@ Se non si dispone di un motivo preciso per usare le versioni che specificano la 
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tfindfirst**|**_findfirst**|**_findfirst**|**_wfindfirst**|
+|**_tfindfirst**|**_findfirst**|**_findfirst**|**_wfindfirst**|
 |**_tfindfirst32**|**_findfirst32**|**_findfirst32**|**_wfindfirst32**|
 |**_tfindfirst64**|**_findfirst64**|**_findfirst64**|**_wfindfirst64**|
 |**_tfindfirsti64**|**_findfirsti64**|**_findfirsti64**|**_wfindfirsti64**|

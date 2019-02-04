@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wgetdcwd
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677019"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702934"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -61,10 +62,10 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Parametri
 
-*Unità*<br/>
+*drive*<br/>
 Integer non negativo che specifica l'unità (0 = unità predefinita, 1 = A, B = 2, e così via).
 
-Se l'unità specificata non è disponibile o il tipo di unità (ad esempio disco rimovibile, fisso, CD-ROM, RAM, o un'unità di rete) non può essere determinato, viene richiamato il gestore di parametro non valido, descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Se l'unità specificata non è disponibile, o il tipo di unità (ad esempio, rimovibile, fisso, CD-ROM, disco nella RAM, o unità di rete) non può essere determinato, viene richiamato il gestore di parametri non validi. Per altre informazioni, vedere [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 *buffer*<br/>
 Posizione di archiviazione per il percorso o **NULL**.
@@ -74,13 +75,13 @@ Se **NULL** è specificato, questa funzione alloca un buffer di almeno *maxlen* 
 *maxlen*<br/>
 Numero intero positivo diverso da zero che specifica la lunghezza massima del percorso, in caratteri: **char** per **getdcwd** e **wchar_t** per **wgetdcwd**.
 
-Se *maxlen* non è maggiore di zero, il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), viene richiamato.
+Se *maxlen* è minore o uguale a zero, viene richiamato il gestore di parametri non validi. Per altre informazioni, vedere [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Valore restituito
 
 Puntatore a una stringa che rappresenta il percorso completo della directory di lavoro corrente nell'unità specificata, oppure **NULL**, che indica un errore.
 
-Se *buffer* è specificato come **NULL** ed è presente memoria sufficiente per allocare *maxlen* vuoti, si verifica un errore e **errno** è Impostare su **ENOMEM**. Se la lunghezza del percorso, che include il carattere null di terminazione, supera *maxlen*, si verifica un errore e **errno** è impostata su **ERANGE**. Per altre informazioni su questi codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se *buffer* è specificato come **NULL** ed è presente memoria sufficiente per allocare *maxlen* vuoti, si verifica un errore e **errno** è Impostare su **ENOMEM**. Se la lunghezza del percorso incluso il carattere null di terminazione supera *maxlen*, si verifica un errore, e **errno** è impostata su **ERANGE**. Per altre informazioni su questi codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 

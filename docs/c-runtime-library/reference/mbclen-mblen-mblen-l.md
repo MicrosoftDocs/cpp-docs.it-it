@@ -1,10 +1,11 @@
 ---
-title: _mbclen, mblen, _mblen_l
-ms.date: 11/04/2016
+title: _mbclen, mblen, _mblen_l, _mbclen_l
+ms.date: 01/22/2019
 apiname:
 - _mbclen
 - mblen
 - _mblen_l
+- _mbclen_l
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,6 +24,7 @@ f1_keywords:
 - mblen
 - ftclen
 - _mbclen
+- _mbclen_l
 - tclen
 - _ftclen
 - _tclen
@@ -33,17 +35,18 @@ helpviewer_keywords:
 - _tclen function
 - mblen_l function
 - _mbclen function
+- _mbclen_l function
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434386"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702960"
 ---
-# <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
+# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
 Ottiene la lunghezza e determina la validità di un carattere multibyte.
 
@@ -55,6 +58,10 @@ Ottiene la lunghezza e determina la validità di un carattere multibyte.
 ```C
 size_t _mbclen(
    const unsigned char *c
+);
+size_t _mbclen_l(
+   unsigned char const* c,
+   _locale_t locale
 );
 int mblen(
    const char *mbstr,
@@ -83,7 +90,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**mbclen** restituisce 1 o 2, a seconda che il carattere multibyte *c* è 1 o 2 byte. Non si è verificato alcun errore restituito per **mbclen**. Se *mbstr* non è **NULL**, **mblen** restituisce la lunghezza, espressa in byte, del carattere multibyte. Se *mbstr* viene **NULL** o punta al carattere null di caratteri wide **mblen** restituisce 0. Se l'oggetto che *mbstr* punta a non formano un carattere multibyte valido entro i primi *conteggio* caratteri **mblen** restituisce -1.
+**mbclen** restituisce 1 o 2, a seconda che il carattere multibyte *c* è 1 o 2 byte. Non si è verificato alcun errore restituito per **mbclen**. Se *mbstr* non viene **NULL**, **mblen** restituisce la lunghezza, espressa in byte, del carattere multibyte. Se *mbstr* viene **NULL** o punta al carattere null di caratteri wide **mblen** restituisce 0. Quando l'oggetto che *mbstr* punta a non formano un carattere multibyte valido entro i primi *conteggio* caratteri **mblen** restituisce -1.
 
 ## <a name="remarks"></a>Note
 
@@ -91,13 +98,13 @@ Il **mbclen** funzione restituisce la lunghezza, espressa in byte, del carattere
 
 **mblen** restituisce la lunghezza in byte del *mbstr* se è un carattere multibyte valido e determina la validità di caratteri multibyte associata alla tabella codici. **mblen** esamina *conteggio* o un minor numero di byte contenuti in *mbstr*, ma non oltre **MB_CUR_MAX** byte.
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dal **LC_CTYPE** impostazione di categoria delle impostazioni locali; vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il **l** suffisso usare le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Il **l** versioni con suffisso si comportano allo stesso, ma usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tclen**|Mapping a una macro o a una funzione inline|**_mbclen**|Mapping a una macro o a una funzione inline|
+|**_tclen**|Mapping a una macro o a una funzione inline|**_mbclen**|Mapping a una macro o a una funzione inline|
 
 ## <a name="requirements"></a>Requisiti
 
