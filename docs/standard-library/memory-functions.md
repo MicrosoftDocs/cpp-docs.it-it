@@ -1,6 +1,6 @@
 ---
 title: Funzioni &lt;memory&gt;
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519178"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763934"
 ---
 # <a name="ltmemorygt-functions"></a>Funzioni &lt;memory&gt;
 
@@ -135,7 +135,7 @@ Limite di allineamento da tentare.
 *Dimensione*<br/>
 Dimensioni in byte dell'archivio allineato.
 
-*PTR*<br/>
+*Ptr*<br/>
 Indirizzo iniziale del pool di archiviazione contiguo disponibile da utilizzare. Questo parametro è anche un parametro di output e verrà impostato per contenere il nuovo indirizzo iniziale se l'allineamento ha esito positivo. Se `align()` ha esito negativo, questo parametro non viene modificato.
 
 *Barra spaziatrice*<br/>
@@ -261,7 +261,7 @@ void declare_no_pointers(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*ptr*|Indirizzo del primo carattere che non contiene più puntatori tracciabili.|
-|*Dimen_sioni*|Dimensione del blocco che inizia in corrispondenza *ptr* che non contiene puntatori tracciabili.|
+|*_Size*|Dimensione del blocco che inizia in corrispondenza *ptr* che non contiene puntatori tracciabili.|
 
 ### <a name="remarks"></a>Note
 
@@ -299,7 +299,7 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parametri
 
-*PTR*<br/>
+*Ptr*<br/>
 Il puntatore dell'oggetto da eliminare.
 
 *Altro*<br/>
@@ -327,7 +327,7 @@ Tipo controllato dal puntatore condiviso restituito.
 *Altro*<br/>
 Tipo controllato dal puntatore di tipo argument condiviso.
 
-*SP*<br/>
+*sp*<br/>
 Puntatore di tipo argument condiviso.
 
 ### <a name="remarks"></a>Note
@@ -387,7 +387,7 @@ Tipo del metodo Deleter.
 *Ty*<br/>
 Tipo controllato dal puntatore condiviso.
 
-*SP*<br/>
+*sp*<br/>
 Puntatore condiviso.
 
 ### <a name="remarks"></a>Note
@@ -647,13 +647,13 @@ Numero di elementi per allocare spazio per la nuova matrice.
 
 ### <a name="remarks"></a>Note
 
-Il primo overload viene usato per i singoli oggetti, il secondo overload viene richiamato per le matrici e il terzo overload impedisce di specificare la dimensione di una matrice nell'argomento tipo (make_unique\<T[N]>). Questa costruzione non è supportata dallo standard corrente. Quando si usa `make_unique` per creare un `unique_ptr` a una matrice, è necessario inizializzare gli elementi della matrice separatamente. Se si sta considerando questo overload, una scelta migliore consiste probabilmente nell'usare un [std::vector](../standard-library/vector-class.md).
+Il primo overload viene usato per i singoli oggetti, il secondo overload viene richiamato per le matrici e il terzo overload impedisce di specificare la dimensione di una matrice nell'argomento tipo (make_unique\<T [N] >); questa costruzione non è supportata dall'oggetto corrente standard. Quando si usa `make_unique` per creare un `unique_ptr` a una matrice, è necessario inizializzare gli elementi della matrice separatamente. Se si sta considerando questo overload, una scelta migliore consiste probabilmente nell'usare un [std::vector](../standard-library/vector-class.md).
 
 Poiché `make_unique` viene implementato con cautela per la sicurezza dell'eccezione, si consiglia di utilizzare `make_unique` anziché chiamare direttamente i costruttori `unique_ptr`.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio riportato di seguito viene illustrato come usare `make_unique`. Per altri esempi, vedere [Procedura: creare e utilizzare istanze unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
+Nell'esempio riportato di seguito viene illustrato come usare `make_unique`. Per altri esempi, vedere [Procedura: Creare e utilizzare istanze unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -700,7 +700,7 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parametri
 
-*a sinistra*<br/>
+*_left*<br/>
 Puntatore debole non valido.
 
 *right*<br/>
@@ -1104,7 +1104,7 @@ Iteratore in avanti che punta al primo elemento dell'intervallo di destinazione 
 *last*<br/>
 Iteratore in avanti che punta all'ultimo elemento dell'intervallo di destinazione da inizializzare.
 
-*Val*<br/>
+*val*<br/>
 Valore da utilizzare per inizializzare l'intervallo di destinazione.
 
 ### <a name="remarks"></a>Note
@@ -1176,7 +1176,7 @@ Iteratore in avanti che punta al primo elemento dell'intervallo di destinazione 
 *count*<br/>
 Numero di elementi da inizializzare.
 
-*Val*<br/>
+*val*<br/>
 Valore da utilizzare per inizializzare l'intervallo di destinazione.
 
 ### <a name="remarks"></a>Note

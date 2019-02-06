@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481822"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764012"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
 
@@ -124,7 +124,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) oppure [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a un membro del campo dati nell'oggetto associato `CRecordset` o `CDaoRecordset` oggetto.
 
 *pRecordset*<br/>
@@ -172,7 +172,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) oppure [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a un membro del campo dati nell'oggetto associato `CRecordset` o `CDaoRecordset` oggetto.
 
 *pRecordset*<br/>
@@ -220,7 +220,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID risorsa del controllo casella di controllo associato con la proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
 
 *pRecordset*<br/>
@@ -310,7 +310,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) oppure [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a un membro del campo dati nell'oggetto associato `CRecordset` o `CDaoRecordset` oggetto.
 
 *pRecordset*<br/>
@@ -358,7 +358,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) oppure [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a un membro del campo dati nell'oggetto associato `CRecordset` o `CDaoRecordset` oggetto.
 
 *pRecordset*<br/>
@@ -406,7 +406,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID del primo in un gruppo (con stile WS_GROUP) dei controlli pulsante di opzione adiacenti nel [CRecordView](../../mfc/reference/crecordview-class.md) oppure [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a un membro del campo dati nell'oggetto associato `CRecordset` o `CDaoRecordset` oggetto.
 
 *pRecordset*<br/>
@@ -454,7 +454,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID del primo in un gruppo (con stile WS_GROUP) dei controlli pulsante di opzione adiacenti nel [CRecordView](../../mfc/reference/crecordview-class.md) oppure [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a un membro del campo dati nell'oggetto associato `CRecordset` o `CDaoRecordset` oggetto.
 
 *pRecordset*<br/>
@@ -476,7 +476,7 @@ Visualizzare [DDX_FieldText](#ddx_fieldtext) per un esempio DDX_Field generale. 
 
   **Intestazione** afxdao. h
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
 Il `DDX_FieldSlider` funzione Sincronizza la posizione di anteprima di un controllo dispositivo di scorrimento in una visualizzazione di record e un' **int** membro dei dati del campo di un oggetto recordset associato con la visualizzazione dei record (o qualsiasi variabile di tipo integer scelto per eseguirne il mapping a).
 
 ### <a name="syntax"></a>Sintassi
@@ -503,7 +503,7 @@ Un puntatore a un [CDataExchange](cdataexchange-class.md) oggetto. Il framework 
 *nIDC*<br/>
 L'ID risorsa del controllo dispositivo di scorrimento.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento al valore da scambiare. Questo parametro contiene o verrà utilizzato per impostare una posizione di anteprima corrente del controllo dispositivo di scorrimento.
 
 *pRecordset*<br/>
@@ -653,7 +653,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) oppure [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a un membro del campo dati nell'oggetto associato `CRecordset` o `CDaoRecordset` oggetto. Il tipo di dati del valore dipende da quali versioni di overload del `DDX_FieldText` è utilizzare.
 
 *pRecordset*<br/>
