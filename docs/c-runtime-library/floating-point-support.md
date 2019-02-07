@@ -1,6 +1,6 @@
 ---
 title: Supporto delle funzioni matematiche e a virgola mobile
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558236"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703129"
 ---
 # <a name="math-and-floating-point-support"></a>Supporto delle funzioni matematiche e a virgola mobile
 
@@ -69,7 +69,6 @@ Le versioni precedenti a 16 bit di Microsoft C/C++ e Microsoft Visual C++ suppor
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Imposta la modalità di arrotondamento a virgola mobile specificata
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|Determina quali flag di stato delle eccezioni a virgola mobile sono impostati
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|Ripristina un ambiente a virgola mobile e quindi genera le eccezioni precedenti
-[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Determina se un valore è finito
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Calcola il limite minimo
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Calcola un'operazione congiunta di moltiplicazione e addizione
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Calcola il valore massimo degli argomenti
@@ -87,7 +86,11 @@ Le versioni precedenti a 16 bit di Microsoft C/C++ e Microsoft Visual C++ suppor
 [ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Calcola l'esponente in base 2 come valore Integer
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|Calcola il valore assoluto di un tipo Integer
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Calcola il quoziente e il resto di due valori Integer
+[isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Determina se un valore è finito
+[isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Confrontare l'ordine di due valori a virgola mobile
+[isinf](../c-runtime-library/reference/isinf.md)|Determina se un valore a virgola mobile è infinito
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Verifica se un valore a virgola mobile è un valore NaN
+[isnormal](../c-runtime-library/reference/isnormal.md)|Verifica se un valore a virgola mobile è sia finito sia non subnormale
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcola la funzione di Bessel
 [ldexp, ldexpf, ldexpl](../c-runtime-library/reference/ldexp.md)|Calcola x*2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Calcola il logaritmo naturale del valore assoluto della funzione gamma
@@ -118,6 +121,7 @@ Le versioni precedenti a 16 bit di Microsoft C/C++ e Microsoft Visual C++ suppor
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Moltiplica un numero a virgola mobile per una potenza integrale di **FLT_RADIX**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Imposta la parola di controllo a virgola mobile
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Abilita o disabilita le istruzioni SSE2
+[signbit](../c-runtime-library/reference/signbit.md)|Verifica il bit più significativo di un valore a virgola mobile
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Calcola il seno
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Calcola il seno iperbolico
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcola la radice quadrata
@@ -134,3 +138,4 @@ Le versioni precedenti a 16 bit di Microsoft C/C++ e Microsoft Visual C++ suppor
 ## <a name="see-also"></a>Vedere anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Primitive a virgola mobile](../c-runtime-library/reference/floating-point-primitives.md)<br/>
