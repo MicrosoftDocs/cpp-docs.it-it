@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618309"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850177"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Routine DDX (Dialog Data Exchange) standard
 
@@ -90,7 +90,7 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID risorsa del controllo casella combinata associato alla proprietà di controllo.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
 
 ### <a name="remarks"></a>Note
@@ -125,7 +125,7 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID risorsa del controllo casella combinata associato alla proprietà di controllo.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
 
 ### <a name="remarks"></a>Note
@@ -160,7 +160,7 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID risorsa del controllo casella di controllo associato con la proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
 
 ### <a name="remarks"></a>Note
@@ -234,7 +234,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID risorsa del controllo selezione data e ora associato alla variabile membro.
 
-*valore*<br/>
+*value*<br/>
 Nelle prime due versioni, un riferimento a un `CTime` o `COleDateTime` variabile membro, la finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati. Nella terza versione, un riferimento a un `CString` oggetto visualizzazione controllo membro di dati.
 
 ### <a name="remarks"></a>Note
@@ -278,16 +278,11 @@ Un riferimento a un [classe CWinFormsControl](cwinformscontrol-class.md) oggetto
 
 `DDX_ManagedControl` le chiamate [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) per creare un controllo che corrisponde l'ID di controllo risorsa. Uso `DDX_ManagedControl` per creare i controlli dall'ID di risorsa nella [CDialog](cdialog-class.md#oninitdialog). Per lo scambio di dati, è necessario non utilizzare le funzioni DDX/DDV con i controlli Windows Form.
 
-Per altre informazioni, vedere [procedura: eseguire operazioni di associazione dati DDX/DDV con Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Per altre informazioni, vedere [Procedura: Associazione di dati DDX/DDV con Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxwinforms. h
-
-### <a name="see-also"></a>Vedere anche
-
-[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog](cdialog-class.md#oninitdialog)
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -308,7 +303,7 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID risorsa del controllo indirizzo IP associato alla proprietà di controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento per il valore DWORD contenente il valore del campo di quattro del controllo indirizzo IP. I campi vengono compilati o leggere come indicato di seguito.
 
 |Campo|Che contiene il valore del campo di bit|
@@ -381,7 +376,7 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID risorsa del controllo casella di elenco associato con la proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
 
 ### <a name="remarks"></a>Note
@@ -418,7 +413,7 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID risorsa del controllo casella di elenco associato con la proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
 
 ### <a name="remarks"></a>Note
@@ -460,7 +455,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID risorsa del controllo calendario mensile associato alla variabile membro.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a un `CTime` o `COleDateTime` variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
 
 ### <a name="remarks"></a>Note
@@ -495,7 +490,7 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID risorsa del primo controllo radio nel gruppo.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
 
 ### <a name="remarks"></a>Note
@@ -529,7 +524,7 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID risorsa del controllo barra di scorrimento associato la proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -561,7 +556,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID risorsa del controllo dispositivo di scorrimento.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento al valore da scambiare. Questo parametro contiene o imposta la posizione corrente del controllo dispositivo di scorrimento.
 
 ### <a name="remarks"></a>Note
@@ -643,7 +638,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *nIDC*<br/>
 L'ID di un controllo di modifica nella finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a un membro dati nella finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo. Il tipo di dati *valore* varia a seconda di quale delle versioni di overload del `DDX_Text` è utilizzare.
 
 ### <a name="remarks"></a>Note
@@ -656,5 +651,7 @@ Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Routine di convalida dei dati della finestra di dialogo standard](../../mfc/reference/standard-dialog-data-validation-routines.md)<br/>
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+[Routine di convalida dei dati della finestra di dialogo standard](standard-dialog-data-validation-routines.md)<br/>
+[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
+[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
+[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)

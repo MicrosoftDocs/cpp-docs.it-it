@@ -1,18 +1,18 @@
 ---
 title: /Source-CharSet (Imposta origine Set di caratteri)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - source-charset
 - /source-charset
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: 6927c6e54a89f619182916c561dcbe7d1c92a25b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a204000be6e4e434b6ef4aabf6bbc0db1593fb0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663827"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849717"
 ---
 # <a name="source-charset-set-source-character-set"></a>/Source-CharSet (Imposta origine Set di caratteri)
 
@@ -48,9 +48,9 @@ Se si desidera impostare il set di caratteri di origine e il set di caratteri di
 
 1. Espandere la **le proprietà di configurazione**, **C/C++**, **riga di comando** cartella.
 
-1. Nelle **opzioni avanzate**, aggiungere il **/source-charset** opzione e specificare la codifica preferita.
+1. Nelle **opzioni aggiuntive**, aggiungere il **/source-charset** opzione e specificare la codifica preferita.
 
-1. Scegli **OK** per salvare le modifiche.
+1. Scegliere **OK** per salvare le modifiche.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,5 +1,5 @@
 ---
-title: 'MFC: utilizzo di classi di database con documenti e viste'
+title: 'MFC: Uso di classi di Database con documenti e visualizzazioni'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [C++], database applications
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624835"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849745"
 ---
-# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: utilizzo di classi di database con documenti e viste
+# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Uso di classi di Database con documenti e visualizzazioni
 
 È possibile usare le classi di database MFC con o senza l'architettura documento/visualizzazione. In questo argomento viene descritto l'utilizzo di documenti e visualizzazioni. Viene spiegato:
 
@@ -31,7 +31,7 @@ ms.locfileid: "50624835"
 
 - [Altre considerazioni](#_core_other_factors).
 
-Per alternative, vedere [MFC: utilizzo di classi di Database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md).
+Per alternative, vedere [MFC: Utilizzo di classi di Database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ##  <a name="_core_writing_a_form.2d.based_application"></a> Scrittura di un'applicazione basata su Form
 
@@ -63,14 +63,14 @@ Molte semplici applicazioni basate su form non sono necessario documenti. Se l'a
 
 ##  <a name="_core_other_factors"></a> Altri fattori
 
-Le applicazioni basate su form non sono in genere utili per meccanismo di serializzazione di documenti del framework, in modo che si potrebbe voler rimuovere, disabilitare o sostituire il **New** e **Open** i comandi di **File** menu. Vedere l'articolo [serializzazione: serializzazione Visual Studio. Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md).
+Le applicazioni basate su form non sono in genere utili per meccanismo di serializzazione di documenti del framework, in modo che si potrebbe voler rimuovere, disabilitare o sostituire il **New** e **Open** i comandi di **File** menu. Vedere l'articolo [serializzazione: Visual Studio di serializzazione. Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Si potrebbe anche voler apportare usare delle numerose possibilità dell'interfaccia utente in grado di supportare il framework. Ad esempio, è possibile usare più `CRecordView` gli oggetti in una finestra con separatore, aprire recordset multipli in diversi più finestre dei documenti (MDI) interfaccia figlio e così via.
 
 Si potrebbe voler implementare la stampa delle informazioni presenti nella propria visualizzazione, si tratti di un form è implementato con `CRecordView` o qualsiasi altro. Come le classi derivate da `CFormView`, `CRecordView` supportano la stampa, ma è possibile eseguire l'override di `OnPrint` funzione membro per consentire la stampa. Per altre informazioni, vedere la classe [CFormView](../mfc/reference/cformview-class.md).
 
-Non è possibile usare documenti e visualizzazioni affatto. In tal caso, vedere [MFC: utilizzo di classi di Database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md).
+Non è possibile usare documenti e visualizzazioni affatto. In tal caso, vedere [MFC: Utilizzo di classi di Database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classi di Database MFC (.. / data/mfc-database-classes-odbc-and-dao.md)
+[Classi di database MFC](../data/mfc-database-classes-odbc-and-dao.md)

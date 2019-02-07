@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522088"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851682"
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 
@@ -47,7 +47,7 @@ Per altre informazioni ed esempi, vedere l'articolo [eccezioni](../../mfc/except
 |[AND_CATCH_ALL](#and_catch_all)|Definisce un blocco di codice per il rilevamento di tutti gli altri tipi di ulteriore eccezione generate in un precedente **PROVARE** blocco.|
 |[END_CATCH](#end_catch)|Termina l'ultima **INTERCETTARE** oppure **AND_CATCH** blocco di codice.|
 |[END_CATCH_ALL](#end_catch_all)|Termina l'ultima **CATCH_ALL** blocco di codice.|
-|[ISTRUZIONE THROW](#throw)|Genera un'eccezione specificata.|
+|[THROW](#throw)|Genera un'eccezione specificata.|
 |[THROW_LAST](#throw_last)|Genera l'eccezione attualmente gestita al gestore esterno successivo.|
 
 ### <a name="exception-throwing-functions"></a>Funzioni che generano eccezioni
@@ -88,7 +88,7 @@ MFC fornisce la funzione di terminazione seguente:
 |-|-|
 |[AfxAbort](#afxabort)|Chiamato per terminare un'applicazione quando un errore irreversibile generato.|
 
-##  <a name="try"></a>  PROVA
+##  <a name="try"></a>  TRY
 
 Configura un **PROVARE** blocco.
 
@@ -120,10 +120,10 @@ CATCH(exception_class, exception_object_pointer_name)
 
 ### <a name="parameters"></a>Parametri
 
-*classe_eccezione*<br/>
+*exception_class*<br/>
 Specifica il tipo di eccezione da testare. Per un elenco di classi di eccezioni standard, vedere la classe [CException](../../mfc/reference/cexception-class.md).
 
-*nome_puntatore_oggetto_eccezione*<br/>
+*exception_object_pointer_name*<br/>
 Specifica un nome per un puntatore dell'oggetto eccezione che verrà creato dalla macro. È possibile usare il nome del puntatore per accedere all'oggetto eccezione all'interno di **CATCH** blocco. Questa variabile viene dichiarata automaticamente.
 
 ### <a name="remarks"></a>Note
@@ -153,7 +153,7 @@ CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="parameters"></a>Parametri
 
-*nome_puntatore_oggetto_eccezione*<br/>
+*exception_object_pointer_name*<br/>
 Specifica un nome per un puntatore dell'oggetto eccezione che verrà creato dalla macro. È possibile utilizzare il nome del puntatore per accedere all'oggetto eccezione all'interno del blocco `CATCH_ALL`. Questa variabile viene dichiarata automaticamente.
 
 ### <a name="remarks"></a>Note
@@ -183,10 +183,10 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 
 ### <a name="parameters"></a>Parametri
 
-*classe_eccezione*<br/>
+*exception_class*<br/>
 Specifica il tipo di eccezione da testare. Per un elenco di classi di eccezioni standard, vedere la classe [CException](../../mfc/reference/cexception-class.md).
 
-*nome_puntatore_oggetto_eccezione*<br/>
+*exception_object_pointer_name*<br/>
 Un nome per un puntatore dell'oggetto eccezione che verrà creato dalla macro. È possibile usare il nome del puntatore per accedere all'oggetto eccezione all'interno di **AND_CATCH** blocco. Questa variabile viene dichiarata automaticamente.
 
 ### <a name="remarks"></a>Note
@@ -215,7 +215,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="parameters"></a>Parametri
 
-*nome_puntatore_oggetto_eccezione*<br/>
+*exception_object_pointer_name*<br/>
 Un nome per un puntatore dell'oggetto eccezione che verrà creato dalla macro. È possibile usare il nome del puntatore per accedere all'oggetto eccezione all'interno di **AND_CATCH_ALL** blocco. Questa variabile viene dichiarata automaticamente.
 
 ### <a name="remarks"></a>Note
@@ -372,12 +372,6 @@ Questa funzione viene chiamata quando vengono utilizzati argomenti non validi.
 
 **Intestazione:** afx.h
 
-### <a name="see-also"></a>Vedere anche
-
-[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
-[Classe CInvalidArgException](cinvalidargexception-class.md)<br/>
-[ISTRUZIONE THROW](#throw)
-
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 
 Genera un'eccezione di memoria.
@@ -491,10 +485,10 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="parameters"></a>Parametri
 
-*SC*<br/>
+*sc*<br/>
 Un codice di stato OLE che indica il motivo dell'eccezione.
 
-*risorse umane*<br/>
+*hr*<br/>
 Handle per un codice di risultato che indica il motivo dell'eccezione.
 
 ### <a name="remarks"></a>Note
@@ -520,14 +514,14 @@ void AFXAPI AfxThrowDaoException(
 *nAfxDaoError*<br/>
 Valore intero che rappresenta un oggetto DAO estesa di codice di errore, che è uno dei valori elencato in [CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).
 
-*SCODE*<br/>
+*scode*<br/>
 Un codice di errore OLE da DAO, di tipo SCODE. Per informazioni, vedere [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode).
 
 ### <a name="remarks"></a>Note
 
 Il framework chiama anche `AfxThrowDaoException`. La chiamata, è possibile passare uno dei parametri o entrambi. Ad esempio, se si desidera generare uno degli errori definiti nella **CDaoException::nAfxDaoError** ma non si desidera eseguire sulle *scode* parametro, passare un codice valido nel *nAfxDaoError* parametro e il valore predefinito per accettare *scode*.
 
-Per informazioni sulle eccezioni relative a classi DAO MFC, vedere la classe `CDaoException` in questo libro e l'articolo [alle eccezioni: eccezioni di Database](../../mfc/exceptions-database-exceptions.md).
+Per informazioni sulle eccezioni relative a classi DAO MFC, vedere la classe `CDaoException` in questo libro e l'articolo [alle eccezioni: Le eccezioni del database](../../mfc/exceptions-database-exceptions.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -549,10 +543,10 @@ void AfxThrowDBException(
 *nRetCode*<br/>
 Un valore di tipo RETCODE, che definisce il tipo di errore che ha causato l'eccezione viene generata.
 
-*PDB*<br/>
+*pdb*<br/>
 Un puntatore al `CDatabase` oggetto che rappresenta la connessione all'origine dati a cui è associato all'eccezione.
 
-*HStmt*<br/>
+*hstmt*<br/>
 Un handle HSTMT ODBC che specifica l'handle di istruzione a cui è associato all'eccezione.
 
 ### <a name="remarks"></a>Note
@@ -587,5 +581,6 @@ Vedere l'esempio relativo [CATCH](#catch).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[Classe CException](../../mfc/reference/cexception-class.md)
+[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
+[Classe CException](cexception-class.md)<br/>
+[Classe CInvalidArgException](cinvalidargexception-class.md)

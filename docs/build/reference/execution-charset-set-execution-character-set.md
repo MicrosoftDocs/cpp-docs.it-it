@@ -1,6 +1,6 @@
 ---
 title: /Execution-CharSet (set esecuzione Set di caratteri)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
 - /execution-charset
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13ff185cf7026f1b42f732aae26c11e98d13e9a2
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663970"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849609"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/Execution-CharSet (set esecuzione Set di caratteri)
 
@@ -47,9 +47,9 @@ Se si desidera impostare il set di caratteri di origine e il set di caratteri di
 
 1. Espandere la **le proprietà di configurazione**, **C/C++**, **riga di comando** cartella.
 
-1. Nelle **opzioni avanzate**, aggiungere il **/execution-charset** opzione e specificare la codifica preferita.
+1. Nelle **opzioni aggiuntive**, aggiungere il **/execution-charset** opzione e specificare la codifica preferita.
 
-1. Scegli **OK** per salvare le modifiche.
+1. Scegliere **OK** per salvare le modifiche.
 
 ## <a name="see-also"></a>Vedere anche
 

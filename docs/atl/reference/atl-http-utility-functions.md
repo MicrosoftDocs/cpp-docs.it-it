@@ -2,12 +2,12 @@
 title: Funzioni di utilità HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481715"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849648"
 ---
 # <a name="atl-http-utility-functions"></a>Funzioni di utilità HTTP ATL
 
@@ -75,10 +75,6 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 ### <a name="remarks"></a>Note
 
 Si comporta come la versione corrente di [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) ma non richiede WinInet o Internet Explorer per l'installazione.
-
-### <a name="see-also"></a>Vedere anche
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -186,7 +182,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*mento*<br/>
+*chIn*<br/>
 Carattere da testare per motivi di sicurezza.
 
 ### <a name="return-value"></a>Valore restituito
@@ -250,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 Un valore di colore RGB.
 
 *pbOut*<br/>
@@ -279,7 +275,7 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Parametri
 
-*ST*<br/>
+*st*<br/>
 L'ora di sistema devono essere ottenuti come una stringa di formato HTTP.
 
 *strTime*<br/>
@@ -287,5 +283,6 @@ Un riferimento a una variabile di stringa per la ricezione HTTP data ora come de
 
 ## <a name="see-also"></a>Vedere anche
 
-[Concetti](../../atl/active-template-library-atl-concepts.md)<br/>
-[Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)
+[Concetti](../active-template-library-atl-concepts.md)<br/>
+[Componenti Desktop COM ATL](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)

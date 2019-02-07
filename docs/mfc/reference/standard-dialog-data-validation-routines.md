@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dce982f76e25da424c02d621c1b760ec29e88918
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513945"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850164"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Routine di convalida dei dati della finestra di dialogo standard
 
@@ -54,7 +54,7 @@ void AFXAPI DDV_MaxChars(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *nChars*<br/>
@@ -85,7 +85,7 @@ void AFXAPI DDV_MinMaxByte(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -159,7 +159,7 @@ void AFXAPI DDV_MinMaxDouble(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -193,7 +193,7 @@ void AFXAPI DDV_MinMaxDWord(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -227,7 +227,7 @@ void AFXAPI DDV_MinMaxFloat(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -261,7 +261,7 @@ void AFXAPI DDV_MinMaxInt(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -295,7 +295,7 @@ void AFXAPI DDV_MinMaxLong(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -329,7 +329,7 @@ void AFXAPI DDV_MinMaxLongLong(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -403,7 +403,7 @@ void AFXAPI DDV_MinMaxShort(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -437,7 +437,7 @@ void AFXAPI DDV_MinMaxSlider(
 *pDX*<br/>
 Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento al valore da convalidare. Questo parametro contiene oppure Imposta posizione di anteprima corrente del controllo dispositivo di scorrimento.
 
 *minVal*<br/>
@@ -471,7 +471,7 @@ void AFXAPI DDV_MinMaxUInt(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -505,7 +505,7 @@ void AFXAPI DDV_MinMaxULongLong(
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -521,11 +521,6 @@ Per altre informazioni sulle DDV, vedere [convalida e DDX](../../mfc/dialog-data
 ### <a name="requirements"></a>Requisiti
 
   **Intestazione** afxdd_.h
-
-## <a name="see-also"></a>Vedere anche
-
-[Routine DDX (Dialog Data Exchange) standard](../../mfc/reference/standard-dialog-data-exchange-routines.md)<br/>
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
 
@@ -546,7 +541,7 @@ Chiamare `DDV_MinMaxUnsigned` per verificare che il valore nel controllo associa
 *pDX*<br/>
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
-*valore*<br/>
+*value*<br/>
 Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono convalidati.
 
 *minVal*<br/>
@@ -563,9 +558,10 @@ Per altre informazioni sulle DDV, vedere [convalida e DDX](../dialog-data-exchan
 
 **Intestazione:** afxdd_.h
 
-### <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
 
+[Routine DDX (Dialog Data Exchange) standard](standard-dialog-data-exchange-routines.md)<br/>
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
-[DDX_Slider](#ddx_slider)<br/>
-[DDX_FieldSlider](#ddx_fieldslider)
+[DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
+[DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)
 

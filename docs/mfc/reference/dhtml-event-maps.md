@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 306fb718e7c333e6ff603b7c6c88c10f03f567b5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519869"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850337"
 ---
 # <a name="dhtml-event-maps"></a>Mappe eventi DHTML
 
@@ -165,7 +165,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 I DISPID dell'evento da gestire.
 
 *elemName*<br/>
@@ -192,7 +192,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch dell'evento da gestire.
 
 *controlName*<br/>
@@ -219,7 +219,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch dell'evento da gestire.
 
 *elemName*<br/>
@@ -246,7 +246,7 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch dell'evento da gestire.
 
 *elemName*<br/>
@@ -916,7 +916,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch dell'evento da gestire.
 
 *elemName*<br/>
@@ -1110,7 +1110,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
 *className*<br/>
 Nome della classe che contiene la mappa di voci di eventi URL. Questa classe deve derivare direttamente o indirettamente da [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Mappa di voci di eventi URL deve essere all'interno di un [mappa eventi URL e DHTML](#begin_dhtml_url_event_map)).
 
-*URL*<br/>
+*url*<br/>
 La risorsa URL o HTML della pagina.
 
 *mapName*<br/>
@@ -1148,6 +1148,6 @@ Deve essere usata in combinazione con [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtm
 
 **Intestazione:** afxdhtml. h
 
-### <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 [Macro e funzioni globali](mfc-macros-and-globals.md)

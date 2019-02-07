@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: cb71e1846348adf4cf8a8eb385e6c5f7ac2bac74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efe37f66790832874f7ff2aa9623b07b5fba5371
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636527"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851635"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (eseguibili e imposta origine set di caratteri UTF-8)
 
@@ -35,9 +35,9 @@ Per impostazione predefinita, Visual Studio rileva un contrassegno di ordine dei
 
 1. Espandere la **le proprietà di configurazione**, **C/C++**, **riga di comando** cartella.
 
-1. Nelle **opzioni avanzate**, aggiungere il **/utf-8** opzione e specificare la codifica preferita.
+1. Nelle **opzioni aggiuntive**, aggiungere il **/utf-8** opzione per specificare la codifica preferita.
 
-1. Scegli **OK** per salvare le modifiche.
+1. Scegliere **OK** per salvare le modifiche.
 
 ## <a name="see-also"></a>Vedere anche
 

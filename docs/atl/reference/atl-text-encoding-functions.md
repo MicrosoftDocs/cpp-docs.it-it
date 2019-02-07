@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: a97f914905c2f98bc948b76e1d79d4af0f5dbadd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2a076b666577920c940413fba4951f7de5f24fc6
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327499"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850259"
 ---
 # <a name="atl-text-encoding-functions"></a>Funzioni di codifica del testo ATL
 
@@ -76,7 +76,7 @@ inline char AtlGetHexValue(char chIn) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*mento*<br/>
+*chIn*<br/>
 Il carattere esadecimale '0'-'9', 'A'-'F', o da 'a'-'f'.
 
 ### <a name="return-value"></a>Valore restituito
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>Parametri
 
-*mantenuti*<br/>
+*pReserved*<br/>
 Un puntatore riservato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -218,7 +218,7 @@ inline short AtlHexValue(char chIn) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*mento*<br/>
+*chIn*<br/>
 Il carattere esadecimale '0'-'9', 'A'-'F', o da 'a'-'f'.
 
 ### <a name="return-value"></a>Valore restituito
@@ -721,7 +721,7 @@ Il numero di caratteri necessari per un buffer che può contenere i dati con cod
 
 Questa implementazione la UUEncode segue la specifica P1003.2b/D11 POSIX.
 
-### <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
 
-[Concetti](../../atl/active-template-library-atl-concepts.md)<br/>
-[Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)
+[Concetti](../active-template-library-atl-concepts.md)<br/>
+[Componenti Desktop COM ATL](../atl-com-desktop-components.md)

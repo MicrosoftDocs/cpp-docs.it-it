@@ -4,13 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], manifest
+- resources [C++], opening
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
-ms.openlocfilehash: 081fd12a86c31973c7856ca7b9f3fcb129e2eb81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d135cb2d512313f107eef7e95ec90d7972b68b4
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578282"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850190"
 ---
 # <a name="manifest-resources-c"></a>Risorse del manifesto (C++)
 
@@ -34,9 +35,23 @@ Nei progetti desktop C++, le risorse di manifesto sono file XML che descrivono l
 
 Per un'applicazione di Windows XP o Windows Vista, la risorsa del manifesto non soltanto specifica che l'applicazione usa la versione più recente dei controlli comuni di Windows (versione 6.0, come nell'esempio precedente), ma supporta anche il nuovo [controllo Syslink](/windows/desktop/Controls/syslink-overview).
 
-Per visualizzare la versione e digitare le informazioni contenute in una risorsa di manifesto, è possibile aprire il file in un visualizzatore XML o nell'editor di testo di Visual Studio. Per altre informazioni, vedere [Apertura di una risorsa di manifesto nell'Editor di testo di Visual Studio](../windows/how-to-open-a-manifest-resource.md).
+Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedi [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.
+Per visualizzare la versione e digitare le informazioni contenute in una risorsa di manifesto, è possibile aprire il file in un visualizzatore XML o nell'editor di testo di Visual Studio. Se si apre una risorsa di manifesto da [Visualizzazione risorse](../windows/resource-view-window.md), la risorsa verrà aperta in formato binario. Per visualizzare il contenuto di una risorsa di manifesto in un formato più leggibile, è necessario aprire la risorsa dal **Esplora soluzioni**.
+
+## <a name="to-open-a-manifest-resource-in-the-text-editor"></a>Per aprire una risorsa di manifesto nell'Editor di testo
+
+1. Con il progetto aperto in **Esplora soluzioni**, espandere il **i file di risorse** cartella.
+
+1. Fare doppio clic sul file .manifest.
+
+   La risorsa di manifesto verrà aperto nel **Editor di testo**.
+
+## <a name="to-open-a-manifest-resource-in-another-editor"></a>Per aprire una risorsa di manifesto in un altro editor
+
+1. Nelle **Esplora soluzioni**, fare doppio clic su file. manifest e scegliere **Apri con...**  dal menu di scelta rapida.
+
+1. Nel **Apri con** finestra di dialogo, specificare l'editor da usare e quindi selezionare **Open**.
 
 ## <a name="limitations"></a>Limitazioni
 

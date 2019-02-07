@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: d3df96c92c39b9fdc05a019ed1ada033dc36d05e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a546c821690bcbe1afedd4909810317553e3b283
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536552"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849753"
 ---
 # <a name="database-macros-and-globals"></a>Macro e funzioni globali di database
 
@@ -31,7 +31,7 @@ Prima di MFC 4.2, le macro `AFX_SQL_ASYNC` e `AFX_SQL_SYNC` assegnato operazioni
 |||
 |-|-|
 |[AFX_ODBC_CALL](#afx_odbc_call)|Chiama una funzione API ODBC che restituisce `SQL_STILL_EXECUTING`. `AFX_ODBC_CALL` ripetutamente chiamerà la funzione fino a raggiungere non è più restituisce `SQL_STILL_EXECUTING`.|
-|[MACRO AFX_SQL_ASYNC](#afx_sql_async)|Chiama `AFX_ODBC_CALL`.|
+|[AFX_SQL_ASYNC](#afx_sql_async)|Chiama `AFX_ODBC_CALL`.|
 |[AFX_SQL_SYNC](#afx_sql_sync)|Chiama una funzione API ODBC che non restituisce `SQL_STILL_EXECUTING`.|
 
 ### <a name="database-globals"></a>Funzioni globali di database
@@ -58,10 +58,6 @@ Assicurarsi che questa chiamata si verifica prima di qualsiasi chiamata di class
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** \<AFXDLL . h >
-
-### <a name="see-also"></a>Vedere anche
-
-[Macro e funzioni globali](mfc-macros-and-globals.md)
 
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 
@@ -94,7 +90,7 @@ Questo esempio viene usato `AFX_ODBC_CALL` per chiamare il `SQLColumns` funzione
 
 **Intestazione:** AFXDB. h
 
-##  <a name="afx_sql_async"></a>  MACRO AFX_SQL_ASYNC
+##  <a name="afx_sql_async"></a>  AFX_SQL_ASYNC
 
 L'implementazione di questa macro è stata modificata in MFC 4.2.
 
@@ -104,7 +100,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>Parametri
 
-*richieste pull*<br/>
+*prs*<br/>
 Puntatore a un oggetto `CRecordset` o a un oggetto `CDatabase`. A partire da MFC 4.2 il valore di questo parametro viene ignorato.
 
 *SQLFunc*<br/>

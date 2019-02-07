@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: dbb243453b6d869082a4232b12b27f5510d84aa5
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657630"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850440"
 ---
 # <a name="diagnostic-services"></a>Servizi diagnostici
 
@@ -91,9 +91,9 @@ Inoltre, la libreria di runtime C supporta anche un set di funzioni di diagnosti
 
 |||
 |-|-|
-|[AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Disattiva gli avvisi del compilatore per l'uso di funzioni MFC deprecate.|
+|[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Disattiva gli avvisi del compilatore per l'uso di funzioni MFC deprecate.|
 
-## <a name="afx_secure_no_warnings"></a> AFX_SECURE_NO_WARNINGS
+## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 Disattiva gli avvisi del compilatore per l'uso di funzioni MFC deprecate.
 
@@ -186,7 +186,7 @@ ASSERT_KINDOF(classname, pobject)
 *nomeclasse*<br/>
 Il nome di un `CObject`-classe derivata.
 
-*pObject*<br/>
+*pobject*<br/>
 Un puntatore a un oggetto classe.
 
 ### <a name="remarks"></a>Note
@@ -320,12 +320,6 @@ Se uno di questi test non riesce, viene visualizzato un messaggio di avviso allo
 
 **Intestazione:** afx.h
 
-### <a name="see-also"></a>Vedere anche
-
-[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
-[VERIFY](#verify)<br/>
-[ATLENSURE](#altensure)
-
 ## <a name="this_file"></a> THIS_FILE
 
 Si espande nel nome del file in fase di compilazione.
@@ -355,12 +349,6 @@ static char THIS_FILE[] = __FILE__;
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afx.h
-
-### <a name="see-also"></a>Vedere anche
-
-[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
-[ASSERT](#assert)<br/>
-[VERIFY](#verify)
 
 ##  <a name="trace"></a>  TRACE
 
@@ -452,7 +440,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametri
 
-*casella postale*<br/>
+*pOb*<br/>
 Un puntatore a un oggetto di una classe derivata da `CObject`.
 
 ### <a name="remarks"></a>Note
@@ -464,10 +452,6 @@ Il codice del programma non deve chiamare `AfxDump`, ma è necessario chiamare i
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afx.h
-
-### <a name="see-also"></a>Vedere anche
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -569,7 +553,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametri
 
-*casella postale*<br/>
+*pOb*<br/>
 Un puntatore a un oggetto di una classe derivata da `CObject`.
 
 ### <a name="remarks"></a>Note
@@ -581,10 +565,6 @@ Il codice del programma non deve chiamare `AfxDump`, ma è necessario chiamare i
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afx.h
-
-### <a name="see-also"></a>Vedere anche
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
@@ -776,7 +756,7 @@ BOOL AfxIsValidAddress(
 
 ### <a name="parameters"></a>Parametri
 
-*LP*<br/>
+*lp*<br/>
 Punti all'indirizzo di memoria da sottoporre a test.
 
 *nBytes*<br/>
@@ -861,7 +841,7 @@ L'allocatore di memoria di debug della libreria Microsoft Foundation Class può 
 *nSize*<br/>
 Le dimensioni dell'allocazione di memoria proposto.
 
-*bPackager*<br/>
+*bObject*<br/>
 TRUE se l'allocazione avviene per un `CObject`-oggetto derivato; in caso contrario, FALSE.
 
 *lRequestNumber*<br/>
@@ -942,4 +922,5 @@ Oggetti incorporati o stack globale, non vengono enumerate. Il puntatore passato
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)

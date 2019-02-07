@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: cd1f38236baf2caca9f2a2a426f28f797291fb13
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524651"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850203"
 ---
 # <a name="delegate-and-interface-map-macros"></a>Macro della mappa dell'interfaccia e delegato
 
@@ -40,7 +40,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 
 ### <a name="parameters"></a>Parametri
 
-*CLASSE*<br/>
+*CLASS*<br/>
 La classe in cui è ospitato il controllo gestito.
 
 ### <a name="remarks"></a>Note
@@ -50,10 +50,6 @@ Questa macro contrassegna l'inizio di un elenco di voci di delegato, che costitu
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** msclr\event.h
-
-### <a name="see-also"></a>Vedere anche
-
-[Procedura: Elaborare eventi di Windows Form da classi C++ native](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
@@ -102,17 +98,13 @@ ID di comando.
 
 Questo delegato registra i metodi di callback con un comando di origine. Quando si aggiunge un delegato all'oggetto origine del comando, il metodo di callback diventa un gestore per i comandi provenienti dall'origine specificata.
 
-Per altre informazioni, vedere [procedura: aggiungere comandi (Routing) al controllo Windows Form](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Per altre informazioni, vedere [Procedura: Comando Aggiungi controllo Routing per i Windows Form](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Per altre informazioni sull'uso di Windows Form, vedere [usando un controllo utente di Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxwinforms. h (definito nell'assembly atlmfc\lib\mfcmifc80.dll)
-
-### <a name="see-also"></a>Vedere anche
-
-[Procedura: Aggiungere il routing dei comandi al controllo Windows Form](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
 ##  <a name="commanduihandler"></a>CommandUIHandler
 
@@ -142,11 +134,6 @@ Per altre informazioni sull'uso di Windows Form, vedere [usando un controllo ute
 
 **Intestazione:** afxwinforms. h (definito nell'assembly atlmfc\lib\mfcmifc80.dll)
 
-### <a name="see-also"></a>Vedere anche
-
-[Procedura: Aggiungere il routing dei comandi al controllo Windows Form](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[CommandHandler](#commandhandler)
-
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
 Termina una mappa di delegato.
@@ -164,10 +151,6 @@ Questa macro contrassegna la fine di un elenco di voci di delegato, che costitui
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** msclr\event.h
-
-### <a name="see-also"></a>Vedere anche
-
-[Procedura: Elaborare eventi di Windows Form da classi C++ native](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
@@ -187,11 +170,6 @@ Per altre informazioni sulle mappe dell'interfaccia, vedere [Nota tecnica 38](..
 
 **Intestazione:** afxwin.h
 
-### <a name="see-also"></a>Vedere anche
-
-[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
-[BEGIN_INTERFACE_MAP](#begin_interface_map)
-
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
 Crea una voce nella mappa di delegati.
@@ -204,7 +182,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="parameters"></a>Parametri
 
-*MEMBRO*<br/>
+*MEMBER*<br/>
 Metodo del gestore eventi da aggiungere al controllo.
 
 *ARG0*<br/>
@@ -219,7 +197,7 @@ Ogni voce della mappa di delegati corrisponde a un delegato del gestore eventi g
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente viene illustrato come utilizzare EVENT_DELEGATE_ENTRY per creare una voce della mappa di delegati per il `OnClick` gestore eventi; vedere l'esempio di codice in MAKE_DELEGATE anche. Per altre informazioni, vedere [procedura: Sink di eventi di Windows Form da classi C++ Native](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+Esempio di codice seguente viene illustrato come utilizzare EVENT_DELEGATE_ENTRY per creare una voce della mappa di delegati per il `OnClick` gestore eventi; vedere l'esempio di codice in MAKE_DELEGATE anche. Per altre informazioni, vedere [Procedura: Elaborare eventi di Windows Form da classi C++ Native](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -230,12 +208,6 @@ END_DELEGATE_MAP()
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** msclr\event.h
-
-### <a name="see-also"></a>Vedere anche
-
-[MAKE_DELEGATE](#make_delegate)<br/>
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
@@ -251,7 +223,7 @@ INTERFACE_PART( theClass, iid, localClass)
 
 *theClass*<br/>
 Nome della classe che contiene la mappa dell'interfaccia.
-*IID*<br/>
+*iid*<br/>
 IID che deve essere eseguito il mapping alla classe incorporata.
 *localClass*<br/>
 Il nome della classe locale.
@@ -281,7 +253,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 *DELEGATO*<br/>
 Delegare il tipo del gestore eventi gestito, ad esempio [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).
 
-*MEMBRO*<br/>
+*MEMBER*<br/>
 Il nome del metodo del gestore eventi da associare al controllo.
 
 ### <a name="remarks"></a>Note
@@ -290,7 +262,7 @@ Questa macro crea un delegato del gestore eventi gestito typu *DELEGARE* e del n
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente viene illustrato come chiamare `MAKE_DELEGATE` per collegare un' `OnClick` gestore eventi da un controllo MFC `MyControl`. Per una descrizione dettagliata del funzionamento di questa macro in un'applicazione MFC, vedere [procedura: Sink di eventi di Windows Form da classi C++ Native](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+Esempio di codice seguente viene illustrato come chiamare `MAKE_DELEGATE` per collegare un' `OnClick` gestore eventi da un controllo MFC `MyControl`. Per una descrizione dettagliata del funzionamento di questa macro in un'applicazione MFC, vedere [come: Elaborare eventi di Windows Form da classi C++ Native](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -306,9 +278,8 @@ void CMyView::OnInitialUpdate()
 
 **Intestazione:** msclr\event.h
 
-### <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
 
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)<br/>
-[EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
+[Procedura: Elaborare eventi di Windows Form da classi C++ native](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
+[Procedura: Aggiungere il routing dei comandi al controllo Windows Form](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>

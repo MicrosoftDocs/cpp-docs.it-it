@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477155"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850134"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Gli helper e funzioni globali di analisi di URL Internet
 
@@ -102,13 +102,13 @@ Analizza una stringa URL e restituisce il tipo di servizio e i relativi componen
 
 Ad esempio, `AfxParseURL` analizza URL nel formato *service://server/dir/dir/object.ext:port* e restituisce i relativi componenti, come illustrato di seguito:
 
-*strServer* = = "server"
+*strServer* == "server"
 
-*strObject* = = "/ dir/dir/object/object.ext"
+*strObject* == "/dir/dir/object/object.ext"
 
-*nPort* = = #port
+*nPort* == #port
 
-*dwServiceType* = = #service
+*dwServiceType* == #service
 
 > [!NOTE]
 >  Per chiamare questa funzione, il progetto deve includere AFXINET. H.
@@ -214,10 +214,6 @@ Analizza una stringa URL e restituisce il tipo di servizio e i relativi componen
 
   **Intestazione** afxinet. h
 
-## <a name="see-also"></a>Vedere anche
-
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 
 Utilizzare questa funzione globale per determinare il tipo di un handle di Internet.
@@ -274,11 +270,6 @@ Nell'elenco seguente include tipi Internet possibili restituiti da `AfxGetIntern
 
 **Intestazione:** afxinet. h
 
-### <a name="see-also"></a>Vedere anche
-
-[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
-[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
-
 ## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
 Genera un'eccezione di Internet.
@@ -308,9 +299,9 @@ Si è responsabile di determinare la causa in base al codice di errore del siste
 
 **Intestazione:** afxinet. h
 
-### <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 [Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
 [Classe CInternetException](cinternetexception-class.md)<br/>
-[ISTRUZIONE THROW](#throw)
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 

@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521385"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849476"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -41,6 +41,7 @@ Internamente, `__fastfail` viene implementato tramite diversi meccanismi specifi
 |x86|int 0x29|ecx|
 |X64|int 0x29|rcx|
 |ARM|Opcode 0xDEFB|r0|
+|ARM64|OpCode 0xF003|x0|
 
 Una richiesta di errore immediato è autonoma e in genere richiede l'esecuzione di solo due istruzioni. Dopo l'esecuzione di una richiesta di errore immediato, il kernel eseguirà l'azione appropriata. Quando viene generato un evento di errore immediato, nel codice in modalità utente non ci sono dipendenze di memoria oltre al puntatore all'istruzione stesso. Ciò ottimizza l'affidabilità, anche nel caso di un grave danneggiamento della memoria.
 
@@ -56,7 +57,7 @@ Il supporto del meccanismo nativo di errore immediato è iniziato in Windows 8. 
 
 |Funzione intrinseca|Architettura|
 |---------------|------------------|
-|`__fastfail`|x86, x64, ARM|
+|`__fastfail`|x86, x64, ARM, ARM64|
 
 **File di intestazione** \<intrin. h >
 
