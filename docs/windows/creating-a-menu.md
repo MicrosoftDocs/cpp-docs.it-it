@@ -1,5 +1,5 @@
 ---
-title: Creazione di un Menu (C++)
+title: Creazione di menu (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.menu
@@ -10,15 +10,28 @@ helpviewer_keywords:
 - menus [C++], adding items
 - commands [C++], adding to menus
 - menu items, adding to menus
+- submenus
+- submenus [C++], creating
+- menus [C++], creating
+- context menus [C++], Menu Editor
+- pop-up menus [C++], creating
+- menus [C++], pop-up
+- menus [C++], creating
+- shortcut menus [C++], creating
+- pop-up menus [C++], displaying
+- pop-up menus [C++], connecting to applications
+- context menus [C++], connecting to applications
+- shortcut menus [C++], connecting to applications
+- pop-up menus
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: 438480032f1fe9208e406b4ee499267e42148a48
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702804"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905771"
 ---
-# <a name="creating-a-menu-c"></a>Creazione di un Menu (C++)
+# <a name="creating-menus-c"></a>Creazione di menu (C++)
 
 > [!NOTE]
 > Il **finestra risorse** non è disponibile nelle edizioni Express.
@@ -45,6 +58,14 @@ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse ne
 
    > [!NOTE]
    > Per creare un singolo elemento menu sulla barra dei menu, impostare il **Popup** proprietà **False**.
+
+## <a name="to-create-a-submenu"></a>Per creare un sottomenu
+
+1. Selezionare il comando di menu per il quale si desidera creare un sottomenu.
+
+1. Nella casella **Nuovo elemento** visualizzata a destra, digitare il nome del nuovo comando di menu. Questo nuovo comando verrà visualizzato come prima voce del sottomenu.
+
+1. Aggiungere altri comandi di menu alla voce del sottomenu.
 
 ## <a name="to-insert-a-new-menu-between-existing-menus"></a>Per inserire un nuovo menu tra menu esistenti
 
@@ -82,6 +103,53 @@ Fare clic sulla barra dei menu e scegliere **Inserisci nuovo** dal menu di scelt
 1. Premere **invio** per completare il comando di menu.
 
    La casella del nuovo elemento è selezionata, pertanto è possibile creare comandi di menu aggiuntivi.
+
+## <a name="to-create-pop-up-menus"></a>Per creare menu a comparsa
+
+I[menu a comparsa](../mfc/menus-mfc.md) visualizzano i comandi usati frequentemente. Possono essere sensibili al contesto per la posizione del puntatore. Quando si usa il menu a comparsa nell'applicazione è necessario compilare il menu e quindi connetterlo al codice dell'applicazione.
+
+Dopo aver creato la risorsa di menu, il codice dell'applicazione deve caricare la risorsa di menu e usare [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) per visualizzare il menu. Dopo che l'utente ha chiuso il menu a comparsa selezionando al suo esterno o ha selezionato un comando, che verrà restituito. Se l'utente sceglie un comando, tale messaggio di comando verrà inviato alla finestra di cui è stato passato l'handle.
+
+### <a name="to-create-a-pop-up-menu"></a>Per creare un menu a comparsa
+
+1. [Creare un menu](../windows/creating-a-menu.md) con un titolo vuoto (non viene fornito un titolo **Didascalia**).
+
+1. [Aggiungere un comando di menu al nuovo menu](../windows/adding-commands-to-a-menu.md). Spostare il primo comando di menu di scelta sotto il titolo del menu vuoto (la didascalia temporanea indica `Type Here`). Digitare una **Didascalia** e qualsiasi altra informazione.
+
+   Ripetere questo processo per tutti gli altri comandi di menu a comparsa.
+
+1. Salvare la risorsa di menu.
+
+### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Per connettere un menu a comparsa all'applicazione
+
+1. Aggiungere un gestore di messaggi per WM_CONTEXTMENU (ad esempio). Per altre informazioni, vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md).
+
+1. Aggiungere al gestore messaggio il codice seguente:
+
+    ```cpp
+    CMenu menu;
+    VERIFY(menu.LoadMenu(IDR_MENU1));
+    CMenu* pPopup = menu.GetSubMenu(0);
+    ASSERT(pPopup != NULL);
+    pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, AfxGetMainWnd());
+    ```
+
+   > [!NOTE]
+   > Il [CPoint](../atl-mfc-shared/reference/cpoint-class.md) passato per il messaggio di gestore di è in coordinate dello schermo.
+
+   > [!NOTE]
+   > La connessione di un menu a comparsa all'applicazione richiede MFC.
+
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Per visualizzare una risorsa di menu come menu a comparsa
+
+In genere, quando si usa la **Menu** editor, una risorsa di menu viene visualizzata come una barra dei menu. Tuttavia, potrebbero esserci risorse di menu che vengono aggiunte alla barra dei menu dell'applicazione durante l'esecuzione del programma.
+
+Il menu di scelta rapida e scegliere **Visualizza come Popup** dal menu di scelta rapida.
+
+   Questa opzione è solo una preferenza di visualizzazione e non verrà modificato il menu di scelta.
+
+   > [!NOTE]
+   > Per modificare la visualizzazione della barra dei menu, fare clic su **Visualizza come Popup** nuovamente (che consente di rimuovere il segno di spunta e restituisce la visualizzazione della barra dei menu).
 
 ## <a name="requirements"></a>Requisiti
 
