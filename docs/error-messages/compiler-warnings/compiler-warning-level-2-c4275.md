@@ -1,21 +1,21 @@
 ---
 title: Avviso del compilatore (livello 2) C4275
-ms.date: 11/04/2016
+ms.date: 02/08/2019
 f1_keywords:
 - C4275
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-ms.openlocfilehash: 985a622e2c89306c453ae6c860d21e6265d0fff1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e0e80d465d77bd4fe99fbcaa98e289b8a4c8b63
+ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594324"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55987027"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Avviso del compilatore (livello 2) C4275
 
-non - interfaccia DLL classkey 'identificatore' utilizzato come base per l'identificatore' interfaccia DLL classkey'
+> non - classe di interfaccia DLL*classe_1*'usata come base per la classe di interfaccia DLL'*classe_2*'
 
 È stata derivata una classe esportata da una classe che non è stata esportata.
 
@@ -25,17 +25,17 @@ Per ridurre al minimo la possibilità di danneggiamento dei dati durante l'espor
 
 - Nessun metodo inline della classe può modificare i dati statici.
 
-- Nessun metodo inline della classe utilizza le funzioni CRT o altre funzioni della libreria di usano i dati statici.
+- Nessun metodo inline della classe Usa funzioni CRT o altre funzioni della libreria che usano i dati statici.
 
-- Nessuna funzione resa inline classe usano funzioni CRT o altre funzioni della libreria, in cui, ad esempio, accedere ai dati statici.
+- Nessuna funzione resa inline classe usano funzioni CRT o altre funzioni della libreria, in cui si accede ai dati statici.
 
 - Nessun metodo della classe (indipendentemente l'incorporamento) possono usare i tipi in cui la creazione di istanze nel file EXE e DLL hanno differenze di dati statici.
 
 È possibile evitare l'esportazione di classi definendo una DLL che definisce una classe con funzioni virtuali e le funzioni è possibile chiamare per creare un'istanza e l'eliminazione di oggetti del tipo.  È quindi possibile semplicemente chiamare funzioni virtuali sul tipo.
 
-In Visual C++ è possibile ignorare l'avviso C4275 se si deriva da un tipo nella libreria Standard C++, la compilazione di una versione di debug (**/MTd**) e il messaggio di errore del compilatore in cui si intende Container_base.
+In Visual C++ è possibile ignorare l'avviso C4275 se si deriva da un tipo nella libreria Standard C++, la compilazione di una versione di debug (**/MTd**) e in cui si intende il messaggio di errore del compilatore `_Container_base`.
 
-```
+```cpp
 // C4275.cpp
 // compile with: /EHsc /MTd /W2 /c
 #include <vector>
