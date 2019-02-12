@@ -1,14 +1,14 @@
 ---
 title: Installare il carico di lavoro Linux C++ in Visual Studio
 description: Descrive come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
-ms.date: 10/12/2018
+ms.date: 02/06/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 2fa4036ece6dd161c73a5176740870c5593f4669
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441925"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763887"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
@@ -16,7 +16,7 @@ ms.locfileid: "50441925"
 
 ## <a name="visual-studio-setup"></a>Configurazione di Visual Studio
 
-1. Digitare "Programma di installazione di Visual Studio" nella casella di ricerca di Windows: ![casella di ricerca di Windows](media/visual-studio-installer-search.png)
+1. Digitare "Programma di installazione di Visual Studio" nella casella di ricerca di Windows: ![Casella di ricerca di Windows](media/visual-studio-installer-search.png)
 2. Cercare il programma di installazione nei risultati **App** e farci doppio clic sopra. Quando il programma di installazione si apre, scegliere **Modifica** e quindi fare clic sulla scheda **Carichi di lavoro**. Scorrere verso il basso fino ad **Altri set di strumenti** e selezionare il carico di lavoro **Linux development with C++** (Sviluppo di applicazioni Linux con C++).
 
    ![Carico di lavoro Visual C++ per lo sviluppo di applicazioni Linux](media/linuxworkload.png)
@@ -27,7 +27,7 @@ ms.locfileid: "50441925"
 
 ## <a name="options-for-creating-a-linux-environment"></a>Opzioni per la creazione di un ambiente Linux
 
-Se non si ha già un computer Linux, è possibile creare una macchina virtuale Linux in Azure. Per altre informazioni, vedere [Guida introduttiva: Creare una macchina virtuale Linux nel portale di Azure](/azure/virtual-machines/linux/quick-create-portal).
+Se non si ha già un computer Linux, è possibile creare una macchina virtuale Linux in Azure. Per altre informazioni, vedere [Avvio rapido: Creare una macchina virtuale Linux nel portale di Azure](/azure/virtual-machines/linux/quick-create-portal).
 
 Un'altra opzione, in Windows 10, prevede l'attivazione del sottosistema Windows per Linux. Per altre informazioni, vedere [Windows 10 Installation Guide](/windows/wsl/install-win10) (Guida all'installazione di Windows 10).
 
@@ -53,7 +53,7 @@ Il computer di destinazione che esegue Fedora usa il programma di installazione 
 
 1. Al prompt dei comandi della shell nel computer Linux, eseguire le operazioni seguenti:
 
-   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+   `sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip`
 
    È possibile che sia chiesta la password radice dato il comando sudo.  In questo caso, immetterla e continuare. Al termine, verranno installati gli strumenti e i servizi necessari.
 
