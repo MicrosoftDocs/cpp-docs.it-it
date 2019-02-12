@@ -1,6 +1,6 @@
 ---
 title: Macro e funzioni globali per modelli consumer OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557115"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148998"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macro e funzioni globali per modelli consumer OLE DB
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Note
 
-Se *hErr* S_OK, non è `AtlTraceErrorRecords` trasferisce le informazioni di Record errori OLE DB per il dispositivo di dump (il **Debug** scheda della finestra di Output o un file). Le informazioni del Record di errore, che vengano ottenute dal provider, includono il numero di riga, origine, descrizione, file della Guida, contesto e GUID per ogni voce di record di errore. `AtlTraceErrorRecords` Queste informazioni solo nelle build di debug di dump. Nelle build di rilascio, è uno stub vuoto ottimizzato out.
-
-#### <a name="see-also"></a>Vedere anche
-
-[Classe CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)
+Se *hErr* S_OK, non è `AtlTraceErrorRecords` trasferisce le informazioni di Record errori OLE DB per il dispositivo di dump (il **Debug** scheda della finestra di Output o un file). Le informazioni del Record di errore, che vengano ottenute dal provider, includono il numero di riga, origine, descrizione, file della Guida, contesto e GUID per ogni voce di record di errore. `AtlTraceErrorRecords` Queste informazioni solo nelle build di debug di dump. Nelle build di rilascio, è uno stub vuoto ottimizzato out. Per altre informazioni, vedere [classe CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md).
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -618,7 +614,7 @@ BOOKMARK_ENTRY(variable)
 
 #### <a name="parameters"></a>Parametri
 
-*Variabile*<br/>
+*variable*<br/>
 [in] La variabile da associare alla colonna del segnalibro.
 
 #### <a name="example"></a>Esempio
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>Vedere anche
-
-[Classe CBookmark](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+Per altre informazioni, vedere [mediante segnalibri](using-bookmarks.md) e [classe CBookmark](../../data/oledb/cbookmark-class.md).
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
