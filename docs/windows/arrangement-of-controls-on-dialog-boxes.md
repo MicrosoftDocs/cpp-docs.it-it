@@ -3,6 +3,7 @@ title: Disposizione dei controlli nelle finestre di dialogo (C++) | Microsoft Do
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.dialog.grouping
+- vc.editors.dialog.combo
 helpviewer_keywords:
 - controls [C++], positioning
 - dialog box controls [C++], placement
@@ -57,13 +58,34 @@ helpviewer_keywords:
 - Tabstop property for controls
 - controls [C++], focus
 - dialog box controls [C++], tab order
+- Dialog Editor [C++], selecting controls
+- dominant controls
+- dialog box controls [C++], selecting in editor
+- controls [C++], selecting
+- size, controls
+- controls [C++], dominant
+- controls [C++], removing from groups
+- Dialog Editor [C++], dominant control
+- Size to Content command
+- size, controls
+- text, autosizing controls to fit text
+- controls [C++], sizing
+- Make Same Size command
+- combo boxes, sizing
+- list controls [C++], scroll bar width
+- CListBox::SetHorizontalExtent
+- controls [C++], scroll bar
+- scroll bars [C++], displaying in controls
+- horizontal scroll bar width
+- CListBox class, scroll bar width
+- scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 210fbf8e062b4dd8c469f9c40a015bbc19bc2843
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 99667898428fe9532d59277bfedafd24927304dc
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152742"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264881"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes-c"></a>Disposizione dei controlli nelle finestre di dialogo (C++)
 
@@ -116,7 +138,7 @@ Quadratini di ridimensionamento di controlli Blocca sulle guide quando vengono s
 
 I segni di graduazione nei righelli che determinano la spaziatura tra i controlli e le guide sono definiti dalle unità di finestra di dialogo (DLU-Dialog Unit). Una DLU si basa sulle dimensioni del tipo di carattere della finestra di dialogo, normalmente 8 punte MS Shell Dlg. Una DLU orizzontale sia la larghezza media del tipo di carattere finestra dialogo diviso per quattro. Una DLU verticale è l'altezza di average del tipo di carattere diviso per 8.
 
-#### <a name="to-size-a-group-of-controls-with-guides"></a>Per impostare le dimensioni di un gruppo di controlli con guide
+Per impostare le dimensioni di un gruppo di controlli con guide:
 
 1. Per una Guida di allineamento un lato del controllo (o controlli).
 
@@ -126,7 +148,7 @@ I segni di graduazione nei righelli che determinano la spaziatura tra i controll
 
 1. Spostare due guide per ridimensionare il controllo (o i controlli).
 
-#### <a name="to-change-the-intervals-of-the-tick-marks"></a>Modificare gli intervalli di segni di graduazione
+Modificare gli intervalli di segni di graduazione:
 
 1. Dal **formato** menu, scegliere **impostazioni Guide**.
 
@@ -136,32 +158,23 @@ I segni di graduazione nei righelli che determinano la spaziatura tra i controll
 
 È possibile usare i tasti speciali in combinazione con il mouse per disabilitare l'effetto di blocco delle Guide. Usando il **Alt** chiave disabilita gli effetti di blocco della Guida selezionata. Lo spostamento di una Guida con i **MAIUSC** chiave che impedisce lo spostamento con la Guida di controlli bloccati.
 
-#### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Per disabilitare l'effetto di blocco delle Guide
+- Per disabilitare l'effetto di blocco delle guide, trascinare il controllo e tenendo premuto il **Alt** chiave.
 
-Trascinare il controllo e tenendo premuto il **Alt** chiave.
+- Per spostare le guide senza spostare i controlli bloccati, trascinare la Guida e tenendo premuto il **MAIUSC** chiave.
 
-#### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Per spostare le guide senza spostare i controlli bloccati
-
-Trascinare la Guida e tenendo premuto il **MAIUSC** chiave.
-
-#### <a name="to-turn-off-the-guides"></a>Per disattivare le guide
-
-1. Dal **formato** menu, scegliere **impostazioni Guide**.
-
-1. Nel **impostazioni della Guida** nella finestra di dialogo **Guide**, selezionare **None**.
+- Per disattivare le guide, dal **formato** menu, scegliere **impostazioni Guide**. Quindi nel **impostazioni della Guida** nella finestra di dialogo **Guide**, selezionare **None**.
 
    > [!NOTE]
    > È anche possibile fare doppio clic sulla barra del righello per accedere la **impostazioni della Guida** nella finestra di dialogo.
 
-\- oppure -
-
-Nel **formato** dal menu **Attiva/Disattiva guide**.
+> [!TIP]
+> È in un collegamento per disattivare le guide di **formato** dal menu **Attiva/Disattiva guide**.
 
 ### <a name="modify-the-layout-grid"></a>Modificare la griglia del layout
 
 Quando si esegue l'inserimento o la disposizione dei controlli in una finestra di dialogo, è possibile usare la griglia del layout per il posizionamento più preciso. Quando la griglia è attivata, i controlli vengono visualizzati per "Blocca" le linee punteggiate della griglia come se magnetizzato. È possibile attivare e disattivare questa funzionalità "Blocca sulla griglia" e modificare le dimensioni delle celle della griglia di layout.
 
-#### <a name="to-turn-the-layout-grid-on-or-off"></a>Per attivare o disattivare la griglia di layout
+Per attivare la griglia del layout o disattivare:
 
 1. Dal **formato** menu, scegliere **impostazioni Guide**.
 
@@ -169,11 +182,120 @@ Quando si esegue l'inserimento o la disposizione dei controlli in una finestra d
 
    È comunque possibile controllare la griglia in singoli **finestra di dialogo** finestre dell'editor tramite il **Attiva/Disattiva griglia** pulsante il [sulla barra degli strumenti dell'Editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-#### <a name="to-change-the-size-of-the-layout-grid"></a>Per modificare le dimensioni della griglia di layout
+Per modificare le dimensioni della griglia di layout:
 
 1. Dal **formato** menu, scegliere **impostazioni Guide**.
 
 1. Nel **impostazioni della Guida** finestra di dialogo digitare l'altezza e larghezza DLU per le celle della griglia. Larghezza o all'altezza minima è di 4 DLU.
+
+## <a name="selecting-controls"></a>Selezione di controlli
+
+Selezionare i controlli alla dimensione, allineare, spostare, copiare, o eliminarli e quindi completare l'operazione desiderata. Nella maggior parte dei casi, è necessario selezionare più di un controllo per utilizzare gli strumenti di ridimensionamento e l'allineamento della [sulla barra degli strumenti dell'Editor finestre](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+Quando viene selezionato un controllo, ha un bordo intorno a esso ombreggiato pieni (attivi) o (inattivo) vuoto "quadratini di ridimensionamento," quadratini che vengono visualizzate sul bordo di selezione. Quando si selezionano più controlli, al controllo dominante dispone di quadratini di ridimensionamento a tinta unita e tutti gli altri comandi selezionati sono quadratini vuoti.
+
+Quando si esegue il ridimensionamento o allineare più controlli, il **dialogo** editor viene utilizzato il "controllo dominante" per determinare come gli altri controlli vengono ridimensionati o allineati. Per impostazione predefinita, il controllo dominante è il primo controllo selezionato.
+
+### <a name="to-select-multiple-controls"></a>Per selezionare più controlli
+
+1. Nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), selezionare la **puntatore** dello strumento.
+
+1. Usare uno dei passaggi seguenti per effettuare la selezione:
+
+   - Trascinare il puntatore del mouse per disegnare una casella di selezione intorno ai controlli che si desidera selezionare nella finestra di dialogo. Quando si rilascia il pulsante del mouse, tutti i controlli all'interno e che si intersecano vengono selezionati la casella di selezione.
+
+   - Tenere premuto il **MAIUSC** la chiave e selezionare i controlli che si desidera includere nella selezione.
+
+   - Tenere premuto il **Ctrl** la chiave e selezionare i controlli che si desidera includere nella selezione.
+
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Per rimuovere un controllo da un gruppo di controlli selezionati o per aggiungere un controllo a un gruppo di controlli selezionati
+
+Con un gruppo di controlli selezionati, tenere premuto il **MAIUSC** , selezionare il controllo che si desidera rimuovere o aggiungere alla selezione esistente.
+
+   > [!NOTE]
+   > Tenendo premuto il **Ctrl** chiave e selezione di un controllo all'interno di una selezione renderà che controllano il controllo dominante della selezione.
+
+### <a name="to-specify-the-dominant-control"></a>Per specificare il controllo dominante
+
+Tenere premuto il **Ctrl** , selezionare il controllo che si desidera utilizzare per determinare la dimensione o la posizione di altri controlli *primo*.
+
+> [!NOTE]
+> Quadratini di ridimensionamento del controllo dominante sono pieni, mentre gli handle dei controlli subordinati sono vuoti. Ulteriore operazione di ridimensionamento o l'allineamento è basato sul controllo dominante.
+
+### <a name="to-change-the-dominant-control"></a>Per modificare il controllo dominante
+
+1. Facendo clic all'esterno di tutti i controlli attualmente selezionati, deselezionare la selezione corrente.
+
+1. Ripetere la procedura precedente, selezionare prima un altro controllo.
+
+## <a name="sizing-controls"></a>Il ridimensionamento di controlli
+
+Usare i quadratini di ridimensionamento per ridimensionare un controllo. Quando il puntatore è posizionato su un quadratino di ridimensionamento, assume la forma per indicare le direzioni in cui è possibile ridimensionare il controllo. Quadratini di ridimensionamento attivi sono pieni. Se un quadratino di ridimensionamento è vuoto, non è possibile ridimensionare il controllo lungo l'asse.
+
+È anche possibile modificare le dimensioni di un controllo per il controllo per i margini o le guide di allineamento o spostando un controllo bloccato e la Guida da un altro.
+
+### <a name="to-size-an-individual-control"></a>Per ridimensionare un singolo controllo
+
+1. Selezionare il controllo.
+
+1. Trascinare i quadratini di ridimensionamento per modificare le dimensioni del controllo:
+
+   - Quadratini di ridimensionamento all'inizio e i lati modificano la dimensione orizzontale o verticale.
+
+   - Quadratini di ridimensionamento negli angoli modificano le dimensioni orizzontali e verticali.
+
+   > [!TIP]
+   > È possibile ridimensionare l'unità di una finestra di dialogo (DLU) controllo contemporaneamente tenendo premuto il **Shift** chiave e l'uso di **freccia destra** e **freccia giù** chiavi.
+
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Per ridimensionare automaticamente un controllo per adattarsi al testo in esso contenuti
+
+Scegli **adatta al contenuto** dal **formato** menu o fare clic sul controllo e scegliere **adatta al contenuto** dal menu di scelta rapida.
+
+### <a name="to-make-controls-the-same-width-height-or-size"></a>Per rendere controlla la stessa larghezza, altezza o dimensione
+
+È possibile ridimensionare un gruppo di controlli in base alla dimensione del controllo dominante.
+
+1. Selezionare i controlli che si intende ridimensionare.
+
+   Il controllo selezionato per primo nella serie è il controllo dominante. Le dimensioni finali dei controlli nel gruppo dipendono dalle dimensioni del controllo dominante.
+
+1. Dal **formato** menu, scegliere **Rendi uguali**, quindi scegliere **entrambi**, **altezza**, o **larghezza**.
+
+### <a name="to-set-the-size-of-the-combo-box-and-its-drop-down-list"></a>Per impostare le dimensioni della casella combinata finestra e dell'elenco a discesa
+
+È possibile ridimensionare una casella combinata quando viene aggiunta alla finestra di dialogo. È anche possibile specificare le dimensioni della casella di riepilogo a discesa. Per altre informazioni, vedere [aggiunta di valori da un controllo casella combinata](../windows/adding-values-to-a-combo-box-control.md).
+
+#### <a name="to-size-a-combo-box"></a>Impostare le dimensioni di una casella combinata
+
+1. Selezionare il controllo casella combinata nella finestra di dialogo.
+
+   Inizialmente, solo i quadratini di ridimensionamento di sinistra e destra sono attivi.
+
+1. Usare i quadratini di ridimensionamento per impostare la larghezza della casella combinata.
+
+È anche possibile impostare la dimensione verticale della porzione elenco a discesa della casella combinata.
+
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Per impostare le dimensioni della casella combinata elenco della casella di riepilogo
+
+1. Selezionare il pulsante freccia in giù a destra della casella combinata.
+
+   ![Freccia su una casella combinata in un progetto MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")
+
+   La struttura del controllo cambia per mostrare le dimensioni della casella combinata con l'area di riepilogo a discesa elenco esteso.
+
+1. Utilizzare il quadratino di ridimensionamento inferiore per modificare le dimensioni iniziali dell'area di riepilogo.
+
+   ![Casella combinata&#45;ridimensionamento di casella in un progetto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+
+1. Selezionare la freccia a discesa per chiudere la parte dell'elenco a discesa della casella combinata.
+
+### <a name="to-set-the-width-of-a-horizontal-scroll-bar-and-make-it-appear"></a>Per impostare la larghezza della barra di scorrimento orizzontale e far sembrare
+
+Quando si aggiunge una casella di riepilogo con una barra di scorrimento orizzontale per una finestra di dialogo utilizzando le classi MFC, la barra di scorrimento non verrà visualizzato automaticamente nell'applicazione.
+
+Impostare una larghezza massima per l'elemento più largo chiamando [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) nel codice.
+
+   Senza questo valore è impostato, la barra di scorrimento non sarà più visualizzato, anche quando gli elementi nella casella di riepilogo sono larghi della casella.
 
 ## <a name="group-radio-buttons-on-a-dialog-box"></a>Gruppo di pulsanti di opzione in una finestra di dialogo
 
@@ -208,29 +330,22 @@ Una finestra di dialogo può contenere più gruppi di pulsanti di opzione. Per a
 
 1. È quindi possibile modificare il codice per specificare il pulsante di opzione da visualizzare come selezionato. Ad esempio, `m_radioBox1 = 0;` seleziona il primo pulsante di opzione nel gruppo.
 
-## <a name="align-groups-of-controls"></a>Allineare gruppi di controlli
+## <a name="to-align-groups-of-controls"></a>Per allineare i gruppi di controlli
 
-Le procedure seguenti illustrano come allineare i controlli:
-
-### <a name="to-align-groups-of-controls"></a>Per allineare i gruppi di controlli
-
-1. [Selezionare i controlli](../windows/selecting-multiple-controls.md) che si desidera allineare. Assicurarsi di selezionare il controllo che si desidera essere prima di tutto al controllo dominante o impostarlo in modo che sia il controllo dominante prima di eseguire l'allineamento o comando di ridimensionamento.
+1. Selezionare i controlli che si desidera allineare. Assicurarsi di selezionare il controllo che si desidera essere prima di tutto al controllo dominante o impostarlo in modo che sia il controllo dominante prima di eseguire l'allineamento o comando di ridimensionamento.
 
    L'ultima posizione del gruppo di controlli dipende dalla posizione del controllo dominante. Per altre informazioni sulla selezione del controllo dominante, vedere [impostazione del controllo dominante](../windows/specifying-the-dominant-control.md).
 
 1. Dal **formato** menu, scegliere **Align**e quindi scegliere una delle seguenti allineamenti:
 
-   - `Lefts`: consente di allineare i controlli selezionati lungo il lato sinistro.
-
-   - `Centers`: consente di allineare i controlli selezionati in senso orizzontale lungo il punto centrale.
-
-   - `Rights`: consente di allineare i controlli selezionati lungo il lato destro.
-
-   - `Tops`: consente di allineare i controlli selezionati lungo il bordo superiore.
-
-   - `Middles`: consente di allineare i controlli selezionati verticalmente lungo il punto centrale.
-
-   - `Bottoms`: consente di allineare i controlli selezionati lungo il bordo inferiore.
+   |Valore|Descrizione|
+   |-----|-----------|
+   |`Lefts`|Consente di allineare i controlli selezionati lungo il lato sinistro.|
+   |`Centers`|Consente di allineare i controlli selezionati in senso orizzontale lungo il punto centrale.|
+   |`Rights`|Consente di allineare i controlli selezionati lungo il lato destro.|
+   |`Tops`|Consente di allineare i controlli selezionati lungo il bordo superiore.|
+   |`Middles`|Consente di allineare i controlli selezionati verticalmente lungo il punto centrale.|
+   |`Bottoms`|Consente di allineare i controlli selezionati lungo il bordo inferiore.|
 
 ### <a name="to-even-the-spacing-between-controls"></a>Anche la spaziatura tra i controlli
 
@@ -265,55 +380,6 @@ Il **dialogo** editor consente ai controlli di spazio in modo uniforme tra i con
    - `Bottom`: consente di allineare i pulsanti di comando lungo il bordo inferiore della finestra di dialogo.
 
        Se si seleziona un controllo diverso da un pulsante di comando, la posizione non è interessata.
-
-## <a name="change-the-tab-order-of-controls"></a>Modificare l'ordine di tabulazione dei controlli
-
-L'ordine di tabulazione è l'ordine in cui il **scheda** chiave sposta lo stato attivo di input da un controllo successivo all'interno di una finestra di dialogo. In genere l'ordine di tabulazione procede da sinistra a destra e dall'alto verso il basso in una finestra di dialogo. Ogni controllo ha un **Tabstop** proprietà che determina se un controllo riceve lo stato attivo.
-
-### <a name="to-set-input-focus-for-a-control"></a>Per impostare lo stato attivo di input per un controllo
-
-Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), selezionare **True** oppure **False** nel **Tabstop** proprietà.
-
-Anche i controlli che non hanno le **Tabstop** impostata su **True** devono far parte dell'ordine di tabulazione. Ordine di tabulazione è importante, ad esempio, quando si [definire le chiavi di accesso (tasti di scelta)](../windows/defining-mnemonics-access-keys.md) per i controlli privi di didascalie. Testo statico che contiene una chiave di accesso per un controllo correlato deve precedere il relativo controllo nell'ordine di tabulazione.
-
-> [!NOTE]
-> Se la finestra di dialogo contiene la sovrapposizione di controlli, la modifica dell'ordine di tabulazione può cambiare il modo in cui che vengono visualizzati i controlli. Controlli disponibili più avanti nell'ordine di tabulazione vengono sempre visualizzati sopra i controlli sovrapposti che li precedono nell'ordine di tabulazione.
-
-### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Per visualizzare l'ordine di tabulazione corrente per tutti i controlli in una finestra di dialogo
-
-Nel **formato** dal menu **ordine di tabulazione**.
-
-\- oppure -
-
-- Premere **Ctrl** + **1!d**.
-
-### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Per modificare l'ordine di tabulazione per tutti i controlli in una finestra di dialogo
-
-1. Nel **formato** dal menu **ordine di tabulazione**.
-
-   Un numero nell'angolo superiore sinistro di ogni controllo indica la posizione nell'ordine di tabulazione corrente.
-
-1. Impostare l'ordine di tabulazione facendo clic su ogni controllo nell'ordine desiderato la **scheda** chiave da seguire.
-
-1. Premere **invio** per uscire **ordine di tabulazione** modalità.
-
-   > [!TIP]
-   > Dopo aver immesso **ordine di tabulazione** modalità, è possibile premere **Esc** oppure **invio** per disabilitare la possibilità di modificare l'ordine di tabulazione.
-
-### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Per modificare l'ordine di tabulazione per due o più controlli
-
-1. Dal **formato** menu, scegliere **ordine di tabulazione**.
-
-1. Specificare dove inizierà la modifica nell'ordine. Tenere premuto prima di tutto il **Ctrl** della chiave e selezionare il controllo, quindi selezionare quello in cui si desidera modificare l'ordine per iniziare.
-
-   Ad esempio, se si desidera modificare l'ordine dei controlli `7` attraverso `9`, tenere premuto **Ctrl**, quindi selezionare controllo `6` prima.
-
-   > [!NOTE]
-   > Per impostare un controllo specifico al numero `1` (innanzitutto in ordine di tabulazione), fare doppio clic sul controllo.
-
-1. Versione di **Ctrl** chiave, quindi selezionare i controlli nell'ordine desiderato la **scheda** chiave da seguire da quel punto.
-
-1. Premere **invio** per uscire **ordine di tabulazione** modalità.
 
 Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 

@@ -1,6 +1,6 @@
 ---
 title: _read
-ms.date: 11/04/2016
+ms.date: 02/13/2019
 apiname:
 - _read
 apilocation:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658443"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264790"
 ---
 # <a name="read"></a>_read
 
@@ -41,9 +41,9 @@ Legge i dati da un file.
 
 ```C
 int _read(
-   int fd,
-   void *buffer,
-   unsigned int count
+   int const fd,
+   void * const buffer,
+   unsigned const buffer_size
 );
 ```
 
@@ -55,22 +55,22 @@ Il descrittore del file che fa riferimento al file aperto.
 *buffer*<br/>
 Percorso di archiviazione per i dati.
 
-*count*<br/>
-Numero massimo di byte.
+*buffer_size*<br/>
+Numero massimo di byte da leggere.
 
 ## <a name="return-value"></a>Valore restituito
 
-**Read** restituisce il numero di byte letti, che può essere minore rispetto *conteggio* se ci sono meno *conteggio* byte lasciato nel file o se il file è stato aperto in modalità testo, nel qual caso ogni ritorno a capo ritorno a capo/avanzamento riga coppia "\r\n" viene sostituito con un carattere di avanzamento riga singola '\n'. Solo il singolo carattere di avanzamento riga viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
+**Read** restituisce il numero di byte letti, che può essere minore rispetto *buffer_size* se ci sono meno *buffer_size* byte lasciato nel file, o se il file è stato aperto in modalità testo. In modalità testo, ogni ritorno a capo con avanzamento riga coppia `\r\n` viene sostituito con un carattere di avanzamento riga singola `\n`. Solo il singolo carattere di avanzamento riga viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
 
 Se la funzione tenta di leggere alla fine del file, restituisce 0. Se *fd* è non valido, il file non è aperto per la lettura, o il file è bloccato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** al **EBADF**.
 
-Se *buffer* è **NULL**, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostata su **EINVAL**.
+Se *buffer* viene **NULL**, o se *buffer_size* > **INT_MAX**, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostata su **EINVAL**.
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **Read** funzione legge un numero massimo di *conteggio* byte in *buffer* dal file associato *fd*. L'operazione di lettura inizia dalla posizione corrente del puntatore del file associato al file specificato. Dopo l'operazione di lettura, il puntatore del file punta al carattere successivo non letto.
+Il **Read** funzione legge un numero massimo di *buffer_size* byte in *buffer* dal file associato *fd*. L'operazione di lettura inizia dalla posizione corrente del puntatore del file associato al file specificato. Dopo l'operazione di lettura, il puntatore del file punta al carattere successivo non letto.
 
 Se il file è stato aperto in modalità testo, la lettura termina quando **Read** rileva un carattere CTRL + Z, che viene considerato come un indicatore di fine del file. Usa [lseek](lseek-lseeki64.md) per cancellare l'indicatore di fine del file.
 
@@ -106,18 +106,18 @@ char buffer[60000];
 
 int main( void )
 {
-   int fh;
-   unsigned int nbytes = 60000, bytesread;
+   int fh, bytesread;
+   unsigned int nbytes = 60000;
 
    /* Open file for input: */
-   if( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ) )
+   if ( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ))
    {
       perror( "open failed on input file" );
       exit( 1 );
    }
 
    /* Read in input: */
-   if( ( bytesread = _read( fh, buffer, nbytes ) ) <= 0 )
+   if (( bytesread = _read( fh, buffer, nbytes )) <= 0 )
       perror( "Problem reading file" );
    else
       printf( "Read %u bytes from file\n", bytesread );

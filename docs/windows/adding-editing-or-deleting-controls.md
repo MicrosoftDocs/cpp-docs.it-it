@@ -36,13 +36,19 @@ helpviewer_keywords:
 - variables, dialog box control member variables
 - controls [C++], member variables
 - Dialog Editor [C++], defining member variables for controls
+- controls [C++], troubleshooting
+- Dialog Editor [C++], troubleshooting
+- dialog boxes [C++], troubleshooting
+- InitCommonControls
+- RichEdit 1.0 control
+- rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b4edb5b7a51e4f6d368759ebc2e05a1cc585f19a
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742752"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264868"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Aggiunta, modifica o eliminazione di controlli
 
@@ -51,44 +57,6 @@ Usando il **dialogo** editor, è possibile aggiungere, ridimensionare, modificar
 Il **Editor finestre** verrà visualizzata la scheda nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox) quando si lavora nel **dialogo** editor. È anche possibile personalizzare il **casella degli strumenti** finestra per semplificare l'utilizzo. Per altre informazioni, vedere [usando la casella degli strumenti](/visualstudio/ide/using-the-toolbox) e [Mostra o Nascondi la finestra Casella degli strumenti](showing-or-hiding-the-dialog-editor-toolbar.md).
 
 È possibile usare il menu di scelta rapida nel **finestra di dialogo** registrato di editor di aggiungere rapidamente controlli ActiveX a una finestra di dialogo ed è possibile aggiungere controlli ActiveX per il **della casella degli strumenti** per l'accesso rapido.
-
-I controlli standard disponibili nel **casella degli strumenti** con impostazione predefinita gli eventi sono:
-
-|Nome controllo|Evento predefinito|
-|---|---|
-|[Controllo Button](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Controllo casella di controllo](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Controllo casella combinata](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Controllo di modifica](../mfc/reference/cedit-class.md)|EN_CHANGE|
-|Casella di gruppo|(Non applicabile)|
-|[Controllo casella di riepilogo](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Controllo pulsante di opzione](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Controllo Static Text](../mfc/reference/cstatic-class.md)|(Non applicabile)|
-|[Controllo immagine](../mfc/reference/cpictureholder-class.md)|(Non applicabile)|
-|[Controllo Rich Edit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
-|[Controllo barra di scorrimento](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
-
-Per altre informazioni sull'uso di **RichEdit 1.0** controllare con MFC, vedere [utilizzo del controllo RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) e [esempi di controlli di modifica avanzate](../mfc/rich-edit-control-examples.md).
-
-Il [Windows Common Controls](../mfc/controls-mfc.md) disponibile nel **della casella degli strumenti** incrementano le funzionalità nell'applicazione. e comprendono:
-
-|Nome controllo|Evento predefinito|
-|---|---|
-|[Controllo dispositivo di scorrimento](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Controllo di selezione](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Controllo Progress](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Controllo hot Key](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Controllo elenco](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Controllo albero](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Controllo struttura a schede](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Controllo Animation](../mfc/using-an-animation-control.md)|ACN_START|
-|[Controllo Date Time Picker](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Controllo calendario mensile](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[Controllo indirizzo IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Controllo Extended Combo Box](../mfc/creating-an-extended-combo-box-control.md)||
-|[Controllo personalizzato](custom-controls-in-the-dialog-editor.md)|TTN_GETDISPINFO|
-
-Per altre informazioni, vedere [classi di controlli](../mfc/control-classes.md), [classi di finestre di dialogo](../mfc/dialog-box-classes.md), e [stili barra di scorrimento](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
 
 Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
@@ -239,14 +207,53 @@ Nel **Edit** dal menu **eliminare**.
    > [!TIP]
    > Quando si usa la **dialogo** editor, in molti casi, è possibile fare clic il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi usati frequentemente.
 
+## <a name="known-issue"></a>Problema noto
+
+Dopo aver aggiunto un controllo comune o un controllo rich edit una finestra di dialogo, questa sarà visibile quando si testa la finestra di dialogo o non verrà visualizzata la finestra di dialogo.
+
+Per vedere un esempio del problema:
+
+1. Creare un progetto Win32, modificare le impostazioni dell'applicazione in modo da creare un'applicazione Windows (non un'app console).
+
+1. Nelle [visualizzazione risorse](../windows/resource-view-window.md), fare doppio clic sul file RC.
+
+1. Sotto l'opzione di finestra di dialogo, fare doppio clic il **sulle** casella.
+
+1. Aggiungere un **IP Address Control** alla finestra di dialogo.
+
+1. Salvare e **Ricompila tutto**.
+
+1. Eseguire il programma.
+
+1. Nella finestra di dialogo **aiutare** dal menu fare clic sul **sulle** comando; nessuna finestra di dialogo viene visualizzata la finestra.
+
+Attualmente, il **dialogo** editor non aggiunge automaticamente codice al progetto quando si trascina i controlli comuni seguenti o i controlli in una finestra di dialogo rich edit. Né Visual Studio fornisce un errore o un avviso quando si verifica questo problema. Per risolvere il problema, aggiungere manualmente il codice per il controllo.
+
+||||
+|-|-|-|
+|Dispositivo di scorrimento|Controllo albero|Selezione data e ora|
+|Controllo di selezione|Controllo struttura a schede|Calendario mensile|
+|Controllo Progress|Controllo Animation|Controllo indirizzo IP|
+|Tasto di scelta rapida|Controllo Rich Edit|Casella combinata estesa|
+|Controllo elenco|Controllo Rich Edit 2.0|Controllo personalizzato|
+
+Per usare i controlli comuni in una finestra di dialogo, è necessario chiamare [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) o `AFXInitCommonControls` prima di creare la finestra di dialogo.
+
+Per usare i controlli RichEdit, è necessario chiamare `LoadLibrary`. Per altre informazioni, vedere [About Rich Edit Controls](/windows/desktop/Controls/about-rich-edit-controls) nel SDK di Windows e [Panoramica del controllo Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
+
+> [!NOTE]
+> Per usare un controllo RichEdit con MFC, è necessario chiamare innanzitutto [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) per caricare il controllo RichEdit 2.0 (RICHED20. DLL), o chiamare [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) per caricare il controllo RichEdit 1.0 precedente (RICHED32. DLL).
+>
+> È possibile usare l'oggetto corrente [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) classe con il controllo RichEdit 1.0 precedente, ma `CRichEditCtrl` solo è progettato per supportare il controllo RichEdit 2.0. Poiché RichEdit 1.0 e 2.0 RichEdit sono simili, funzionerà la maggior parte dei metodi. Si noti, tuttavia, esistono alcune differenze tra i controlli di 1.0 e 2.0, in modo che alcuni metodi potrebbero non funzionare correttamente o non funzionano affatto.
+
 ## <a name="requirements"></a>Requisiti
 
 Win32
 
 ## <a name="see-also"></a>Vedere anche
 
+[Editor finestre](../windows/dialog-editor.md)<br/>
 [Controlli delle finestre di dialogo](controls-in-dialog-boxes.md)<br/>
-[Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
 
 <!-- excluded links
