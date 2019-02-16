@@ -1,16 +1,16 @@
 ---
 title: Simboli predefiniti di ATL
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 37d24dcfb65566b2b13c8b1ba8c826ec68271477
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8b0db77b2add584e2fa8716a2d1821f5cae1fc
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654402"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320458"
 ---
 # <a name="atl-predefined-symbols"></a>Simboli predefiniti di ATL
 
@@ -20,14 +20,14 @@ Questi simboli sono definiti nei file di intestazione ATL, ma supportano le azio
 |-|-|
 |IDABORT|Controllo: Pulsante Interrompi della finestra di dialogo|
 |IDC_STATIC|Controllo: Controllo statico|
-|IDCANCEL|Controllo: Pulsante Annulla casella finestra di dialogo|
-|IDIGNORE|Controllo: Pulsante Ignora casella finestra di dialogo|
+|IDCANCEL|Controllo: Pulsante Annulla finestra di dialogo|
+|IDIGNORE|Controllo: Pulsante Ignora della finestra di dialogo|
 |IDNO|Controllo: Nessun pulsante di finestra di dialogo|
 |IDOK|Controllo: Pulsante OK della finestra di dialogo|
-|IDR_ACCELERATOR1|Risorse: Tabella di tasti di scelta rapida|
+|IDR_ACCELERATOR1|Risorsa: Tabella di tasti di scelta rapida|
 |IDRETRY|Controllo: Pulsante Riprova della finestra di dialogo|
 |IDS_PROJNAME|Stringa: Nome dell'applicazione corrente|
-|IDYES|Controllo: Pulsante Sì nella finestra di dialogo|
+|IDYES|Controllo: Pulsante Sì finestra di dialogo|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -36,4 +36,5 @@ ATL
 ## <a name="see-also"></a>Vedere anche
 
 [ID simbolo predefiniti](../windows/predefined-symbol-ids.md)<br/>
-[Simboli: identificatori di risorsa](../windows/symbols-resource-identifiers.md)
+[Simboli predefiniti di MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Simboli predefiniti di Win32](../windows/win32-predefined-symbols.md)<br/>

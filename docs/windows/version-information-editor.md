@@ -1,6 +1,6 @@
 ---
 title: Editor di informazioni sulla versione (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
 - vc.editors.version
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 94afb429af6eb1b0d570a444f49145a31c2fec1f
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: 8420feb6ddde116a24bee5333f4ef8f83ff4e0d4
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742674"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320471"
 ---
 # <a name="version-information-editor-c"></a>Editor di informazioni sulla versione (C++)
 
@@ -39,29 +39,25 @@ Una risorsa di informazioni sulla versione include un blocco superiore e uno o p
 > [!NOTE]
 > Lo standard Windows prevede la presenza di una sola risorsa di versione, denominata VS_VERSION_INFO.
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+## <a name="how-to"></a>Procedure
 
 Il **le informazioni sulla versione** editor consente di:
 
-## <a name="to-edit-a-string-in-a-version-information-resource"></a>Per modificare una stringa in una risorsa di informazioni sulla versione
+### <a name="to-edit-a-string-in-a-version-information-resource"></a>Per modificare una stringa in una risorsa di informazioni sulla versione
 
 Selezionare una sola volta l'elemento per selezionarlo, quindi nuovamente per iniziare a modificarlo. Apportare le modifiche direttamente nel **le informazioni sulla versione** tabella o nella [finestra proprietà](/visualstudio/ide/reference/properties-window). Le modifiche verranno riflesse in entrambe le posizioni.
 
-   > [!NOTE]
-   > Quando si modifica il `FILEFLAGS` chiavi nel **informazioni sulla versione** editor, si noterà che non è possibile impostare il **Debug**, **Private Build**, o **speciali Compilare** delle proprietà (nelle **proprietà** finestra) per i file con estensione RC:
+Quando si modifica il `FILEFLAGS` chiavi nel **informazioni sulla versione** editor, si noterà che non è possibile impostare il **Debug**, **Private Build**, o **speciali Compilare** delle proprietà (nelle **proprietà** finestra) per i file con estensione RC:
 
-   - Il **le informazioni sulla versione** editor imposta il **eseguire il Debug** proprietà con un `#ifdef` nello script della risorsa, in base il `_DEBUG` flag di compilazione.
+- Il **le informazioni sulla versione** editor imposta il **eseguire il Debug** proprietà con un `#ifdef` nello script della risorsa, in base il `_DEBUG` flag di compilazione.
 
-   - Se il `Private Build` chiave ha un **valore** impostata **informazioni sulla versione** tabella corrispondente **Private Build** proprietà (nel **proprietà**  finestra) per il `FILEFLAGS` chiave verrà **True**. Se **Valore** è vuoto, la proprietà sarà **False**. Allo stesso modo, il **Special Build** chiave (nel **informazioni sulla versione** tabella) è associata ai **Special Build** proprietà per il `FILEFLAGS` chiave.
+- Se il `Private Build` chiave ha un **valore** impostata **informazioni sulla versione** tabella corrispondente **Private Build** proprietà (nel **proprietà**  finestra) per il `FILEFLAGS` chiave verrà **True**. Se **Valore** è vuoto, la proprietà sarà **False**. Allo stesso modo, il **Special Build** chiave (nel **informazioni sulla versione** tabella) è associata ai **Special Build** proprietà per il `FILEFLAGS` chiave.
 
 È possibile ordinare la sequenza di informazioni di blocco di stringhe scegliendo il **Key** o il **valore** le intestazioni di colonna. Queste intestazioni riordinano automaticamente le informazioni nella sequenza selezionata.
 
-## <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Per aggiungere le informazioni sulla versione per un'altra lingua (nuovo blocco di informazioni sulla versione)
+### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Per aggiungere le informazioni sulla versione per un'altra lingua (nuovo blocco di informazioni sulla versione)
 
 1. Aprire una risorsa di informazioni sulla versione facendo doppio clic in [Visualizzazione risorse](../windows/resource-view-window.md).
-
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 1. Fare clic con il pulsante destro del mouse all'interno della tabella di informazioni sulla versione e scegliere **Nuovo blocco informazioni sulla versione** dal menu di scelta rapida.
 
@@ -69,18 +65,15 @@ Selezionare una sola volta l'elemento per selezionarlo, quindi nuovamente per in
 
 1. Nella finestra **Proprietà** , scegliere la lingua appropriata e il set di caratteri per il nuovo blocco.
 
-## <a name="to-delete-a-version-information-block"></a>Per eliminare un blocco di informazioni sulla versione
+### <a name="to-delete-a-version-information-block"></a>Per eliminare un blocco di informazioni sulla versione
 
 1. Aprire la risorsa di informazioni sulla versione facendo doppio clic sull'icona in [Visualizzazione risorse](../windows/resource-view-window.md).
-
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 1. Fare clic con il pulsante destro del mouse sull'intestazione del blocco da eliminare, quindi scegliere **Elimina blocco informazioni sulla versione** dal menu di scelta rapida.
 
    Questo comando Elimina l'intestazione selezionata e lascia intatto il resto di informazioni sulla versione. È possibile annullare l'azione.
 
-## <a name="to-access-version-information-from-within-your-program"></a>Per accedere alle informazioni sulla versione dal programma
+### <a name="to-access-version-information-from-within-your-program"></a>Per accedere alle informazioni sulla versione dal programma
 
 Per accedere alle informazioni sulla versione dal programma, usare le funzioni [GetFileVersionInfo](/windows/desktop/api/winver/nf-winver-getfileversioninfoa) e [VerQueryValue](/windows/desktop/api/winver/nf-winver-verqueryvaluea) .
 

@@ -23,13 +23,23 @@ helpviewer_keywords:
 - context menus [C++], connecting to applications
 - shortcut menus [C++], connecting to applications
 - pop-up menus
+- menu commands [C++], selecting
+- menus [C++], selecting
+- commands [C++], menu commands
+- commands [C++], copying on menus
+- menu items, moving
+- commands [C++], moving on menus
+- menu items, copying
+- menu items, deleting
+- commands [C++], deleting from menus
+- menus [C++], deleting
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: da5fc355ae11ee5efb1c58be9e33bd4fb8bff02d
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905771"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320523"
 ---
 # <a name="creating-menus-c"></a>Creazione di menu (C++)
 
@@ -38,7 +48,7 @@ ms.locfileid: "55905771"
 
 Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="to-create-a-standard-menu"></a>Per creare un menu standard
+## <a name="create-a-standard-menu"></a>Creare un menu standard
 
 1. Dal **View** dal menu **visualizzazione risorse** e quindi fare clic sul **Menu** intestazione e scegliere **Aggiungi risorsa**. Scegliere **Menu**.
 
@@ -59,7 +69,7 @@ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse ne
    > [!NOTE]
    > Per creare un singolo elemento menu sulla barra dei menu, impostare il **Popup** proprietà **False**.
 
-## <a name="to-create-a-submenu"></a>Per creare un sottomenu
+## <a name="create-a-submenu"></a>Creare un sottomenu
 
 1. Selezionare il comando di menu per il quale si desidera creare un sottomenu.
 
@@ -75,7 +85,7 @@ Selezionare un nome di menu di scelta e premere esistente di **Inserisci** chiav
 
 Fare clic sulla barra dei menu e scegliere **Inserisci nuovo** dal menu di scelta rapida.
 
-## <a name="to-add-commands-to-a-menu"></a>Per aggiungere comandi a un menu
+## <a name="add-commands-to-a-menu"></a>Aggiungere comandi a un menu
 
 1. Creare un menu.
 
@@ -104,7 +114,7 @@ Fare clic sulla barra dei menu e scegliere **Inserisci nuovo** dal menu di scelt
 
    La casella del nuovo elemento è selezionata, pertanto è possibile creare comandi di menu aggiuntivi.
 
-## <a name="to-create-pop-up-menus"></a>Per creare menu a comparsa
+## <a name="create-pop-up-menus"></a>Creare menu a comparsa
 
 I[menu a comparsa](../mfc/menus-mfc.md) visualizzano i comandi usati frequentemente. Possono essere sensibili al contesto per la posizione del puntatore. Quando si usa il menu a comparsa nell'applicazione è necessario compilare il menu e quindi connetterlo al codice dell'applicazione.
 
@@ -150,6 +160,52 @@ Il menu di scelta rapida e scegliere **Visualizza come Popup** dal menu di scelt
 
    > [!NOTE]
    > Per modificare la visualizzazione della barra dei menu, fare clic su **Visualizza come Popup** nuovamente (che consente di rimuovere il segno di spunta e restituisce la visualizzazione della barra dei menu).
+
+## <a name="edit-multiple-menus-or-menu-commands"></a>Modifica di più menu o comandi di menu
+
+### <a name="to-select-multiple-menu-commands"></a>Per selezionare più comandi di menu
+
+È possibile selezionare più nomi di menu o comandi di menu per l'esecuzione delle operazioni bulk, ad esempio l'eliminazione o modifica delle proprietà.
+
+Mentre si tiene premuto il **Ctrl** della chiave, selezionare il menu o comandi del sottomenu desiderato.
+
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>Per spostare e copiare menu e comandi di menu
+
+È possibile spostare o copiare menu e comandi di menu usando il metodo di trascinamento e rilascio o usando i comandi nel menu di scelta rapida (attivato con il clic destro del mouse).
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Per spostare o copiare menu o comandi di menu usando il metodo di trascinamento e rilascio
+
+1. Trascinare o copiare l'elemento che si vuole spostare in:
+
+   - La nuova posizione del menu corrente.
+
+   - Un altro menu. È possibile passare agli altri menu trascinandovi sopra il puntatore del mouse.
+
+1. Trascinare il comando di menu quando la guida di inserimento mostra la posizione desiderata.
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Per spostare o copiare menu o comandi di menu usando i comandi di menu di scelta rapida
+
+1. Fare clic con il pulsante destro del mouse su uno o più menu o comandi di menu.
+
+1. Dal menu di scelta rapida scegliere **Taglia** (per spostare) o **Copia**.
+
+1. Se stai spostando gli elementi in un altro menu risorse o file script di risorsa [aprirlo in un'altra finestra](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+1. Selezionare la posizione del menu o del comando di menu che si vuole spostare o copiare.
+
+1. Dal menu di scelta rapida scegliere **Incolla**. L'elemento spostato o copiato viene inserito prima dell'elemento selezionato.
+
+   > [!NOTE]
+   > È anche possibile trascinare, copiare e incollare in altre finestre dai menu.
+
+### <a name="to-delete-a-menu-or-menu-command"></a>Per eliminare un menu o un comando di menu
+
+1. Fare clic con il pulsante destro del mouse sul nome del menu o sul comando di menu.
+
+1. Scegliere **Elimina** dal menu di scelta rapida.
+
+   > [!NOTE]
+   > Analogamente, è possibile usare il menu di scelta rapida per eseguire altre azioni quali Copia, Taglia, Incolla, Inserisci nuovo, Inserisci separatore, Modifica ID, Visualizza come popup, tasti di scelta e così via.
 
 ## <a name="requirements"></a>Requisiti
 

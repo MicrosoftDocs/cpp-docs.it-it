@@ -1,6 +1,6 @@
 ---
 title: Editor di risorse (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vs.editors.resource
 - vc.resvw.resource.editors
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 43eab011cefed116723bd983b685c1c8c230326f
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: aeeca87ceb5b2c5e54da7087b5020ccbc1c39039
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226319"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320809"
 ---
 # <a name="resource-editors-c"></a>Editor di risorse (C++)
 
@@ -36,8 +36,6 @@ Quando si crea o si apre una risorsa, si apre automaticamente l'editor appropria
 
 > [!NOTE]
 > Perché i progetti gestiti non usano i file di script di risorsa, è necessario aprire le risorse dal **Esplora soluzioni**. È possibile usare l' [Editor immagini](../windows/image-editor-for-icons.md) e l' [Editor binario](binary-editor.md) per usare i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.
-
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
 |Usare|Per modificare|
 |----------------|----------------|
@@ -51,7 +49,10 @@ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse ne
 |[Editor barra degli strumenti](../windows/toolbar-editor.md)|Risorse della barra degli strumenti in progetti Visual C++. L'editor barra degli strumenti fa parte dell'Editor immagini.|
 |[Editor di informazioni sulla versione](../windows/version-information-editor.md)|Informazioni sulla versione in progetti Visual C++.|
 
-## <a name="view-and-edit-resources-in-a-resource-editor"></a>Visualizzare e modificare le risorse in un editor di risorse
+> [!NOTE]
+> Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
+
+## <a name="view-and-edit-resources"></a>Visualizzazione e modifica risorse
 
 Ogni tipo di risorsa è un **risorsa** editor specifici di quel tipo di risorsa. È possibile ridisporre, ridimensionare, aggiungere controlli e funzionalità o in caso contrario, modificare alcuni aspetti di una risorsa tramite l'editor associato. È anche possibile modificare una risorsa in [formato di testo](../windows/how-to-open-a-resource-script-file-in-text-format.md) e [formato binario](../windows/opening-a-resource-for-binary-editing.md).
 
@@ -62,16 +63,13 @@ Le risorse possono anche essere modificate all'esterno del progetto, vedere [com
 > [!NOTE]
 > Proprietà di una risorsa [può essere modificato utilizzando la finestra proprietà](../windows/changing-the-properties-of-a-resource.md).
 
-Per modificare le proprietà di una risorsa:
+### <a name="to-edit-the-properties-of-a-resource"></a>Per modificare le proprietà di una risorsa
 
 1. Nelle [visualizzazione di risorse](../windows/resource-view-window.md), fare doppio clic la risorsa che si desidera modificare e scegliere **proprietà** dal menu di scelta rapida.
 
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
-
 1. Nel [finestra proprietà](/visualstudio/ide/reference/properties-window), modificare le proprietà della risorsa.
 
-Per annullare una modifica apportata alle proprietà di una risorsa:
+### <a name="to-undo-a-change-made-to-the-properties-of-a-resource"></a>Per annullare una modifica apportata alle proprietà di una risorsa
 
 1. Assicurarsi che la risorsa abbia lo stato attivo **visualizzazione risorse**.
 
@@ -81,7 +79,7 @@ Per annullare una modifica apportata alle proprietà di una risorsa:
 
 È possibile accedere alle risorse Win32 nel [visualizzazione risorse](../windows/resource-view-window.md) riquadro.
 
-Per visualizzare una risorsa Win32 in un editor di risorse:
+#### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Per visualizzare una risorsa Win32 in un editor di risorse
 
 1. Selezionare **visualizzazione di risorse** dalle **visualizzazione** menu.
 
@@ -89,37 +87,30 @@ Per visualizzare una risorsa Win32 in un editor di risorse:
 
 1. Dal **visualizzazione risorse**, espandere la cartella del progetto che contiene le risorse che si desidera visualizzare. Ad esempio, se si desidera visualizzare una risorsa finestra di dialogo, espandere la **dialogo** cartella.
 
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
-
 1. Fare doppio clic sulla risorsa, ad esempio, **IDD_ABOUTBOX**.
 
    La risorsa viene visualizzata nell'editor appropriato. Ad esempio, per le risorse finestra di dialogo, la risorsa viene aperta la **dialogo** editor.
 
    È anche possibile [visualizzare le risorse in un file RC (script di risorsa) senza un progetto aperto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
-Per eliminare una risorsa di Win 32 esistente:
+#### <a name="to-delete-an-existing-win-32-resource"></a>Per eliminare una risorsa esistente di Win 32
 
 1. Nelle **visualizzazione risorse**, espandere il nodo per un tipo di risorsa.
 
-2. Pulsante destro del mouse sulla risorsa di cui si desidera eliminare e scegliere **Elimina** dal menu di scelta rapida.
+1. Pulsante destro del mouse sulla risorsa di cui si desidera eliminare e scegliere **Elimina** dal menu di scelta rapida.
 
    > [!NOTE]
    > È possibile eliminare una risorsa con lo stesso comando di menu di scelta rapida quando il file RC sono aperti in una finestra del documento all'esterno di un progetto.
 
-### <a name="resources-in-managed-projects"></a>Risorse nei progetti gestiti
+### <a name="managed-project-resources"></a>Risorse di progetto gestito
 
 Poiché i progetti gestiti non usano i file di script di risorsa, è necessario aprire le risorse dal **Esplora soluzioni**. È possibile usare l' [Editor immagini](../windows/image-editor-for-icons.md) e l' [Editor binario](binary-editor.md) per usare i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. L'editor di risorse di Visual Studio non supporta la modifica di risorse incorporate.
 
-Per visualizzare una risorsa gestita in un editor di risorse:
-
-Nelle **Esplora soluzioni**, fare doppio clic sulla risorsa, ad esempio *BITMAP1*.
+- Per visualizzare una risorsa gestita in un editor di risorse, in **Esplora soluzioni**, fare doppio clic sulla risorsa, ad esempio *BITMAP1*.
 
    La risorsa viene visualizzata nell'editor appropriato.
 
-Per eliminare una risorsa gestita esistente:
-
-Nelle **Esplora soluzioni**, fare doppio clic la risorsa che si desidera eliminare, quindi scegliere **eliminare** dal menu di scelta rapida.
+- Per eliminare una risorsa gestita esistente, in **Esplora soluzioni**, fare doppio clic la risorsa che si desidera eliminare, quindi scegliere **eliminare** dal menu di scelta rapida.
 
 ## <a name="preview-resources"></a>Risorse di anteprima
 
@@ -132,12 +123,9 @@ La funzione di anteprima non è applicabile alle risorse: Tasti di scelta rapida
 > [!NOTE]
 > Per visualizzare in anteprima le risorse richiede Win32.
 
-Per visualizzare in anteprima le risorse:
+### <a name="to-preview-resources"></a>Per visualizzare in anteprima le risorse
 
 1. Nelle [visualizzazione di risorse](../windows/resource-view-window.md) o una finestra del documento, selezionare la risorsa, ad esempio, `IDD_ABOUTBOX`.
-
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 1. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), selezionare la **pagine delle proprietà** pulsante.
 
@@ -154,5 +142,4 @@ nessuno
 
 [Uso di file di risorse](../windows/working-with-resource-files.md)<br/>
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
-[Simboli: identificatori di risorsa](../windows/symbols-resource-identifiers.md)<br/>
-[Menu e altre risorse](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Identificatori di risorsa (simboli)](../windows/symbols-resource-identifiers.md)<br/>

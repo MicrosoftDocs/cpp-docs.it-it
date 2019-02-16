@@ -1,6 +1,6 @@
 ---
 title: Editor stringhe (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.string.F1
 - vc.editors.string
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 24e4e6ba5b9c2dff1a179bea39830f4a3bbe5879
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 8f33ef6d0198f083e7cf1b1e1dc2129be9b3fab4
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702979"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320562"
 ---
 # <a name="string-editor-c"></a>Editor stringhe (C++)
 
@@ -47,18 +47,15 @@ Quando si sviluppa un'applicazione possono essere presenti più tabelle di strin
 
 Le tabelle di stringhe semplificano la localizzazione dell'applicazione in diverse lingue. Se tutte le stringhe si trovano in una tabella di stringhe, è possibile localizzare l'applicazione traducendo le stringhe e altre risorse senza modificare il codice sorgente. Questa situazione è più vantaggiosa manualmente ricerca e sostituzione di varie stringhe nei file di origine.
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti (progetti destinati a common language runtime), vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [procedura dettagliata: Localizzazione di Windows Form](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
+## <a name="how-to"></a>Procedure
 
 Usare la **stringa** editor per le azioni seguenti:
 
-## <a name="to-find-a-string-resource-in-the-string-table"></a>Per trovare una risorsa stringa nella tabella di stringhe
+### <a name="to-find-a-string-resource-in-the-string-table"></a>Per trovare una risorsa stringa nella tabella di stringhe
 
 È possibile eseguire la ricerca di una o più stringhe nella tabella di stringhe e usare [le espressioni regolari](/visualstudio/ide/using-regular-expressions-in-visual-studio) con il **Cerca nei file** comando (**Edit** menu) per individuare tutte le istanze di stringhe che corrispondono a un criterio.
 
 1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
-
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 1. Nel **Edit** dal menu **Trova e sostituisci**, quindi scegliere **trovare**.
 
@@ -71,18 +68,15 @@ Usare la **stringa** editor per le azioni seguenti:
    > [!TIP]
    > Per usare le espressioni regolari nella ricerca nei file, usare il **Cerca nei file** comando. Digitare un'espressione regolare per corrispondono a un criterio o selezionare il pulsante a destra del **Find What** casella per visualizzare un elenco di espressioni regolari di ricerca. Quando si seleziona un'espressione da questo elenco, viene sostituita come testo di ricerca nella **Find What** casella. Se si utilizzano espressioni regolari, assicurarsi di **usare: Le espressioni regolari** casella di controllo è selezionata.
 
-## <a name="to-add-or-delete-a-string-resource"></a>Per aggiungere o eliminare una risorsa di stringa
+### <a name="to-add-or-delete-a-string-resource"></a>Per aggiungere o eliminare una risorsa di stringa
 
 Rapidamente è possibile inserire o eliminare le voci nella tabella stringa tramite il **stringa** editor. Nuove stringhe vengono posizionate alla fine della tabella e vengono assegnate l'identificatore successivo disponibile. È quindi possibile modificare il **ID**, **valore**, o **didascalia** le proprietà nel [finestra proprietà](/visualstudio/ide/reference/properties-window) in base alle esigenze.
 
 Il **stringa** editor garantisce che non si usa un ID che è già in uso. Se si seleziona un ID già in uso, il **stringa** editor sarà ricevere una notifica e quindi assegnare un ID univoco di tipo generico, ad esempio `IDS_STRING58113`.
 
-### <a name="to-add-a-string-table-entry"></a>Per aggiungere una voce di tabella di stringhe
+#### <a name="to-add-a-string-table-entry"></a>Per aggiungere una voce di tabella di stringhe
 
 1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
-
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 1. Fare doppio clic all'interno della tabella di stringhe e scegliere **NewString** dal menu di scelta rapida.
 
@@ -95,26 +89,19 @@ Il **stringa** editor garantisce che non si usa un ID che è già in uso. Se si 
    > [!NOTE]
    > Stringhe null non sono consentite nelle tabelle di stringhe di Windows. Se si crea una voce nella tabella di stringhe che è una stringa null, si riceverà un messaggio che chiede di "Immettere una stringa per questa voce di tabella".
 
-### <a name="to-delete-a-string-table-entry"></a>Per eliminare una voce della tabella di stringhe
+#### <a name="to-delete-a-string-table-entry"></a>Per eliminare una voce della tabella di stringhe
 
-1. Selezionare la voce che si vuole eliminare.
+Selezionare la voce che si vuole eliminare. Effettua una delle seguenti operazioni:
 
-1. Nel **Edit** dal menu **eliminare**.
+- Nel **Edit** dal menu **eliminare**.
 
-\- oppure -
+- Fare doppio clic la stringa di cui si desidera eliminare e scegliere **Elimina** dal menu di scelta rapida.
 
- Fare doppio clic la stringa di cui si desidera eliminare e scegliere **Elimina** dal menu di scelta rapida.
+- Premere il **eliminare** chiave.
 
-\- oppure -
-
- Premere il **eliminare** chiave.
-
-## <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Per spostare una stringa dal file di script una sola risorsa a un altro
+### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Per spostare una stringa dal file di script una sola risorsa a un altro
 
 1. Aprire le tabelle di stringhe in entrambi i file RC. (Per altre informazioni, vedere [visualizzazione di risorse in un File di Script di risorsa all'esterno di un progetto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).)
-
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 1. Fare doppio clic la stringa di cui si desidera spostare e scegliere **Taglia** dal menu di scelta rapida.
 
@@ -125,18 +112,15 @@ Il **stringa** editor garantisce che non si usa un ID che è già in uso. Se si 
    > [!NOTE]
    > Se il **ID** o **valore** conflitti stringa spostato con un oggetto esistente **ID** oppure **valore** nel file di destinazione, entrambi i **ID** o il **valore** delle modifiche stringa spostata. Se esiste una stringa con lo stesso **ID**, il **ID** delle modifiche stringa spostata. Se esiste una stringa con lo stesso **valore**, il **valore** delle modifiche stringa spostata.
 
-## <a name="to-change-the-properties-of-a-string-resource"></a>Per modificare le proprietà di una risorsa stringa
+### <a name="to-change-the-properties-of-a-string-resource"></a>Per modificare le proprietà di una risorsa stringa
 
 Per modificare l'ID, value e le proprietà delle didascalie, è possibile usare la modifica sul posto.
 
-### <a name="to-change-a-string-or-its-identifier"></a>Modificare il relativo identificatore o una stringa
+#### <a name="to-change-a-string-or-its-identifier"></a>Modificare il relativo identificatore o una stringa
 
 1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
 
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
-
-2. Selezionare la stringa di cui si desidera modificare e fare doppio clic il **ID**, **valore**, o **didascalia** colonna. È ora possibile:
+1. Selezionare la stringa di cui si desidera modificare e fare doppio clic il **ID**, **valore**, o **didascalia** colonna. È ora possibile:
 
    - Selezionare un **ID** dalle **elenco a discesa ID** elenco o digitare un `ID` direttamente sul posto.
 
@@ -147,12 +131,9 @@ Per modificare l'ID, value e le proprietà delle didascalie, è possibile usare 
         > [!NOTE]
         >  È anche possibile modificare le proprietà della stringa nel [finestra proprietà](/visualstudio/ide/reference/properties-window).
 
-### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Per modificare la proprietà caption di più risorse di tipo stringa
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Per modificare la proprietà caption di più risorse di tipo stringa
 
 1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
-
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 1. Selezionare le stringhe che si desidera modificare, tenere premuti i **Ctrl** della chiave per la selezione di ognuno di essi.
 
@@ -160,12 +141,9 @@ Per modificare l'ID, value e le proprietà delle didascalie, è possibile usare 
 
 1. Premere **INVIO**.
 
-## <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Aggiungere caratteri speciali o di formattazione a una risorsa stringa
+### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Aggiungere caratteri speciali o di formattazione a una risorsa stringa
 
 1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
-
-   > [!NOTE]
-   > Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 1. Selezionare la stringa da modificare.
 
@@ -193,7 +171,6 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [Editor di risorse](../windows/resource-editors.md)<br/>
-[File di risorse](../windows/resource-files-visual-studio.md)<br/>
 [Stringhe](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)<br/>
 [Informazioni sulle stringhe](/windows/desktop/menurc/about-strings)<br/>
 [Personalizzazione del layout delle finestre](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

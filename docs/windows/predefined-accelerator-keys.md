@@ -1,6 +1,6 @@
 ---
 title: Tasti di scelta rapida (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232123"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320510"
 ---
 # <a name="accelerator-keys-c"></a>Tasti di scelta rapida (C++)
-
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*.
 
 ## <a name="predefined-accelerator-keys"></a>Tasti di scelta rapida predefiniti
 
@@ -79,7 +77,7 @@ Esistono numerosi tasti di scelta rapida predefiniti che possono far parte di un
 |VK_XBUTTON1|Windows: Pulsante del mouse X1|
 |VK_XBUTTON2|Windows: Pulsante del mouse X2|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>Associazione di un tasto di scelta rapida a una voce di menu
+## <a name="accelerator-key-association"></a>Associazione di chiavi di tasti di scelta rapida
 
 Molte volte si vuole che una voce di menu e una combinazione di tasti esegua lo stesso comando del programma. Ciò è possibile assegnando lo stesso identificatore di risorsa (ID) alla voce di menu e a una voce nella tabella dei tasti di scelta rapida dell'applicazione. È quindi modificare la didascalia della voce di menu per visualizzare il nome del tasto di scelta rapida. Per altre informazioni sulle voci di menu e tasti di scelta rapida, vedere [associazione di una voce di Menu con un tasto di scelta rapida](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [Editor tasti di scelta rapida](../windows/accelerator-editor.md)<br/>
-[Editor di risorse](../windows/resource-editors.md)

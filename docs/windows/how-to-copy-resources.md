@@ -1,6 +1,6 @@
 ---
 title: 'Procedura: Gestire le risorse (C++)'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
@@ -30,18 +30,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: e8b976f974e397b8012ebf59ede08ee64f4f7191
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 1f176b3fa19374b402039ecca60e690ade5c0cef
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150792"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320627"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedura: Gestire le risorse (C++)
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="to-copy-resources"></a>Per copiare risorse
+## <a name="copy-resources"></a>Copiare le risorse
 
 È possibile copiare le risorse da un file a un altro senza modificarle oppure è possibile modificare la lingua o condizione di una risorsa durante la copia.
 
@@ -77,7 +75,7 @@ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse ne
    > [!NOTE]
    > Per evitare conflitti con i valori nel file esistente o i nomi dei simboli, Visual C++ potrebbe modificare il valore di simbolo della risorsa trasferita o il nome e valore quando copiate nel nuovo file.
 
-### <a name="to-change-the-language-or-condition-of-a-resource-while-copying"></a>Per modificare la lingua o condizione di una risorsa durante la copia
+### <a name="change-the-language-or-condition-of-a-resource-while-copying"></a>Modificare la lingua o condizione di una risorsa durante la copia
 
 Durante la copia in una risorsa, è possibile modificarne la proprietà relativa alla lingua o alla condizione oppure entrambe.
 
@@ -91,23 +89,21 @@ La lingua e la condizione di una risorsa vengono visualizzate tra parentesi dopo
 IDD_AboutBox (Finnish - XX33)
 ```
 
-Per copiare una risorsa esistente e modificarne la lingua e condizione:
+#### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Per copiare una risorsa esistente e modificarne la lingua e la condizione
 
 1. Nel file RC o nella [visualizzazione risorse](../windows/resource-view-window.md) finestra, fare doppio clic la risorsa a cui si desidera copiare.
 
-1. Scegli **Inserisci copia** dal menu di scelta rapida.
-
-1. Nel **Inserisci copia risorsa** nella finestra di dialogo:
+1. Scegli **Inserisci copia** dal menu di scelta rapida e impostare il seguente:
 
    - Per il **linguaggio** elenco a discesa, selezionare la lingua.
 
    - Nel **condizione** , digitare la condizione.
 
-## <a name="to-edit-managed-resource-files"></a>Per modificare i file di risorse gestite
+## <a name="edit-resources"></a>Modificare le risorse
 
 File di risorse gestite (con estensione resx) sono file XML. Quando si aggiunge un file di risorse gestito per il progetto dal **Aggiungi nuovo elemento** finestra di dialogo, il **Editor risorse gestite** apre per impostazione predefinita.
 
-## <a name="to-import-and-export-resources"></a>Per importare ed esportare risorse
+## <a name="import-and-export-resources"></a>Importazione / esportazione di risorse
 
 È possibile importare risorse grafiche (bitmap, icone, cursori e barre degli strumenti), file HTML e risorse personalizzate da usare in Visual C++. È inoltre possibile esportare gli stessi tipi di file da un progetto Visual C++ in file separati utilizzabili all'esterno dell'ambiente di sviluppo.
 
@@ -131,9 +127,7 @@ File di risorse gestite (con estensione resx) sono file XML. Quando si aggiunge 
 
 1. Nelle **risorsa** visualizzare, fare doppio clic la risorsa da esportare.
 
-1. Selezionare **esportare** menu di scelta rapida.
-
-1. Nel **Esporta risorsa** dialogo casella, accettare il nome del file corrente o digitarne uno nuovo.
+1. Selezionare **esportare** menu di scelta rapida e accettare il nome del file corrente o digitarne uno nuovo.
 
 1. Passare alla cartella in cui si desidera salvare il file e scegliere **esportare**.
 
@@ -144,4 +138,5 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
-[Editor di risorse](../windows/resource-editors.md)
+[Creare le risorse](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Includere le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)<br/>

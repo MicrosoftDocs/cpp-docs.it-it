@@ -1,6 +1,6 @@
 ---
 title: Accelerator Editor (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
 - vc.editors.accelerator
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 5ece5c7e85a3ef59b728474746e9553a751d43c6
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 90ef142336cf88c5e40f78f6cc651b2bb35a0f6c
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226345"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320640"
 ---
 # <a name="accelerator-editor-c"></a>Accelerator Editor (C++)
 
@@ -56,9 +56,7 @@ Per un elenco dei tasti di scelta rapida predefiniti, vedere [tasti di scelta ra
    > [!NOTE]
    > Windows non consente di creare tabelle di tasti di scelta rapida vuote. Se si crea una tabella di tasti di scelta rapida priva di voci, questa verrà eliminata automaticamente al salvataggio della tabella.
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="accelerator-properties"></a>Proprietà di tasti di scelta rapida
+## <a name="accelerator-properties"></a>Tasti di scelta rapida proprietà
 
 È possibile impostare le proprietà di tasti di scelta rapida nel [finestra proprietà](/visualstudio/ide/reference/properties-window) in qualsiasi momento. È anche possibile usare la **acceleratore** editor per modificare le proprietà di tasti di scelta rapida della tabella di tasti di scelta rapida. Le modifiche apportate tramite il **delle proprietà** finestra o il **acceleratore** editor hanno lo stesso risultato: le modifiche vengono applicate immediatamente nella tabella di tasti di scelta rapida.
 
@@ -123,9 +121,6 @@ Il **tipo** proprietà determina se la combinazione di tasti di scelta rapida as
 In un progetto C++, è possibile modificare una tabella di tasti di scelta rapida direttamente con la modifica sul posto nel **acceleratore** editor.
 
 Le procedure seguenti si riferiscono all'uso delle pagine delle proprietà standard, tuttavia, la modifica sul posto e il metodo di pagina di proprietà hanno lo stesso risultato. Le modifiche apportate utilizzando le pagine delle proprietà o la modifica sul posto vengono applicate immediatamente nella tabella di tasti di scelta rapida.
-
-> [!NOTE]
-> Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Per eseguire una modifica in una tabella dei tasti di scelta rapida
 
@@ -211,7 +206,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor di risorse](../windows/resource-editors.md)
-
-[Modifica in una tabella dei tasti di scelta rapida](../windows/editing-in-an-accelerator-table.md)<br/>
+[Editor di risorse](../windows/resource-editors.md)<br/>
 [Tasti di scelta rapida predefiniti](../windows/predefined-accelerator-keys.md)<br/>
