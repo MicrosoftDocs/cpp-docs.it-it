@@ -1,6 +1,6 @@
 ---
 title: La definizione di valori e controllare l'accesso
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
 helpviewer_keywords:
@@ -22,16 +22,14 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 3a885ad57ba05304d51cb45d0b498d81ad37a148
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 20319cd08d6d1e77faef1275e63bf3ffd354356b
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264855"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336488"
 ---
 # <a name="defining-control-access-and-values"></a>La definizione di valori e controllare l'accesso
-
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="change-the-tab-order-of-controls"></a>Modificare l'ordine di tabulazione dei controlli
 
@@ -48,11 +46,7 @@ Anche i controlli che non hanno le **Tabstop** impostata su **True** devono far 
 
 ### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Per visualizzare l'ordine di tabulazione corrente per tutti i controlli in una finestra di dialogo
 
-Nel **formato** dal menu **ordine di tabulazione**.
-
-\- oppure -
-
-- Premere **Ctrl** + **1!d**.
+Andare alla **formato** dal menu **ordine di tabulazione**, o premere **Ctrl** + **1!d**.
 
 ### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Per modificare l'ordine di tabulazione per tutti i controlli in una finestra di dialogo
 
@@ -60,7 +54,7 @@ Nel **formato** dal menu **ordine di tabulazione**.
 
    Un numero nell'angolo superiore sinistro di ogni controllo indica la posizione nell'ordine di tabulazione corrente.
 
-1. Impostare l'ordine di tabulazione facendo clic su ogni controllo nell'ordine desiderato la **scheda** chiave da seguire.
+1. Impostare l'ordine di tabulazione, selezionare ogni controllo nell'ordine desiderato la **scheda** chiave da seguire.
 
 1. Premere **invio** per uscire **ordine di tabulazione** modalità.
 
@@ -90,9 +84,9 @@ In genere, gli utenti della tastiera spostare lo stato attivo di input da un con
 
 1. Selezionare il controllo nella finestra di dialogo.
 
-2. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), nella **didascalia** proprietà, digitare un nuovo nome per il controllo, digitare una e commerciale (`&`) davanti alla lettera desiderata come chiave di accesso per tale controllo. Ad esempio `&Radio1`.
+1. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), nella **didascalia** proprietà, digitare un nuovo nome per il controllo, digitare una e commerciale (`&`) davanti alla lettera desiderata come chiave di accesso per tale controllo. Ad esempio `&Radio1`.
 
-3. Premere **INVIO**.
+1. Premere **INVIO**.
 
    Nella barra del titolo visualizzato per indicare la chiave di accesso, ad esempio, viene visualizzata una sottolineatura **R**adio1.
 
@@ -100,17 +94,14 @@ In genere, gli utenti della tastiera spostare lo stato attivo di input da un con
 
 1. Creare una didascalia per il controllo utilizzando un **testo statico** controllare nel [della casella degli strumenti](/visualstudio/ide/reference/toolbox).
 
-2. Nella didascalia di testo statico, digitare una e commerciale (`&`) davanti alla lettera desiderata come tasto di scelta rapida.
+1. Nella didascalia di testo statico, digitare una e commerciale (`&`) davanti alla lettera desiderata come tasto di scelta rapida.
 
-3. Assicurarsi che il controllo di testo statico precede immediatamente il controllo che etichetta nell'ordine di tabulazione.
+1. Assicurarsi che il controllo di testo statico precede immediatamente il controllo che etichetta nell'ordine di tabulazione.
 
-Tutte le chiavi di accesso all'interno di una finestra di dialogo devono essere univoche.
+> [!NOTE]
+> Tutte le chiavi di accesso all'interno di una finestra di dialogo devono essere univoche. Per verificare le chiavi di accesso duplicato, vedere la **formato** menu e selezionare **tasti di scelta**.
 
-### <a name="to-check-for-duplicate-access-keys"></a>Per verificare la presenza di chiavi di accesso duplicati
-
-1. Nel **formato** menu, fare clic su **tasti**.
-
-## <a name="add-values-to-a-combo-box-control"></a>Aggiungere i valori per un controllo casella combinata
+## <a name="combo-box-values"></a>Valori della casella combinata
 
 È possibile aggiungere valori per un controllo casella combinata, purché hanno le **finestra di dialogo** editor aperto.
 
@@ -119,7 +110,7 @@ Tutte le chiavi di accesso all'interno di una finestra di dialogo devono essere 
 
 ### <a name="to-enter-values-into-a-combo-box-control"></a>Immettere i valori in un controllo casella combinata
 
-1. Selezionare la casella combinata facendo clic su di esso.
+1. Scegliere la casella combinata finestra controllo selezionandolo.
 
 1. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), scorrere verso il basso il **dati** proprietà.
 
@@ -145,6 +136,40 @@ Dopo aver immesso i valori nel **dati** proprietà, selezionare la **Test** puls
    Provare a scorrere l'elenco di valore intero. I valori vengono visualizzati esattamente come vengono digitati nel **dati** proprietà nel **proprietà** finestra. Non sono ortografia o controllo maiuscole/minuscole.
 
    Premere **Esc** da restituire per il **nella finestra di dialogo** editor.
+
+   È quindi possibile modificare il codice per specificare il pulsante di opzione da visualizzare come selezionato. Ad esempio, `m_radioBox1 = 0;` seleziona il primo pulsante di opzione nel gruppo.
+È quindi possibile modificare il codice per specificare il pulsante di opzione da visualizzare come selezionato. Ad esempio, `m_radioBox1 = 0;` seleziona il primo pulsante di opzione nel gruppo.
+
+## <a name="radio-button-values"></a>I valori di pulsante di opzione
+
+Quando si aggiungono pulsanti di opzione per una finestra di dialogo, è possibile gestirli come un gruppo impostando una **gruppo** proprietà nel **proprietà** finestra per il primo pulsante del gruppo. Nell' [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md)viene quindi visualizzato un ID di controllo per tale pulsante di opzione, consentendo di aggiungere una variabile membro per il gruppo di pulsanti di opzione.
+
+È possibile avere più di un gruppo di pulsanti di opzione in una finestra di dialogo. Aggiungere ciascun gruppo utilizzando la procedura seguente.
+
+### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>Per aggiungere un gruppo di pulsanti di opzione a una finestra di dialogo
+
+1. Selezionare il controllo pulsante di opzione nella [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox) e scegliere il percorso nella finestra di dialogo in cui inserire il controllo.
+
+1. Ripetere il passaggio precedente per aggiungere tutti i pulsanti di opzione in base alle esigenze. Assicurarsi che i pulsanti di opzione nel gruppo siano consecutivi nell'ordine di tabulazione.
+
+1. Nella finestra [Proprietà](/visualstudio/ide/reference/properties-window)impostare la proprietà **Group** del *primo* pulsante di opzione nell'ordine di tabulazione su **True**.
+
+   Modifica il **gruppo** proprietà **True** aggiunge lo stile WS_GROUP alla voce del pulsante nell'oggetto finestra di dialogo dello script di risorsa e impedisce che l'utente può selezionare più di un pulsante di opzione alla volta in il gruppo di pulsanti (se l'utente seleziona un pulsante di opzione, altri utenti nel gruppo siano deselezionato).
+
+   > [!NOTE]
+   > La proprietà **Group** deve essere impostata su **True**solo per il primo pulsante di opzione del gruppo. Se sono disponibili controlli aggiuntivi che non fanno parte del gruppo di pulsanti, impostare su **True** anche la proprietà *Group* del primo controllo **non incluso nel gruppo** . È possibile identificare rapidamente il primo controllo esterno al gruppo usando **Ctrl**+**1!d** per visualizzare l'ordine di tabulazione.
+
+### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Per aggiungere una variabile membro per il gruppo di pulsanti di opzione
+
+1. Fare doppio clic il primo controllo pulsante di opzione nell'ordine di tabulazione (controllo dominante e a quello con il **gruppo** impostata su **True**) e scegliere **Aggiungi variabile** dal menu di scelta rapida.
+
+1. Nell' [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md)selezionare la casella di controllo **Variabile controllo** , quindi il pulsante di opzione **Valore** .
+
+1. Nella casella **Nome variabile** digitare il nome della nuova variabile membro.
+
+1. Nella casella di riepilogo **Tipo variabile** , selezionare **int** o digitare *int*.
+
+   È quindi possibile modificare il codice per specificare il pulsante di opzione da visualizzare come selezionato. Ad esempio, `m_radioBox1 = 0;` seleziona il primo pulsante di opzione nel gruppo.
 
 ## <a name="requirements"></a>Requisiti
 

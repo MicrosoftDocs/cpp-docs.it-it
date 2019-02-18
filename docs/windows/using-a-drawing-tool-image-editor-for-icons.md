@@ -1,6 +1,6 @@
 ---
-title: Utilizzo di uno strumento di disegno
-ms.date: 11/04/2016
+title: 'Procedura: Usare uno strumento di disegno'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
 helpviewer_keywords:
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320549"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336553"
 ---
-# <a name="using-a-drawing-tool"></a>Utilizzo di uno strumento di disegno
+# <a name="how-to-use-a-drawing-tool"></a>Procedura: Usare uno strumento di disegno
 
 Il **immagine** mano di disegno e la cancellazione di tutti funzionano nello stesso modo gli strumenti dell'editor: si seleziona lo strumento e, se necessario, [selezionare i colori di primo piano e sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e le opzioni di dimensioni e la forma. Quindi spostare il puntatore all'immagine e fare clic o trascinare per disegnare e cancellare.
+
+## <a name="drawing-tools"></a>Gli strumenti di disegno
 
 Quando si seleziona il **gomma** dello strumento, **pennello** strumento, o **aerografo** strumento, il selettore di opzioni consente di visualizzare le opzioni per tale strumento.
 
@@ -34,7 +36,7 @@ Quando si seleziona il **gomma** dello strumento, **pennello** strumento, o **ae
 
 È possibile selezionare gli strumenti di disegno dal **Editor di immagini** sulla barra degli strumenti o il **immagine** menu.
 
-## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Selezionare e usare uno strumento di disegno nella barra degli strumenti Editor di immagini
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Selezionare e usare uno strumento di disegno nella barra degli strumenti Editor di immagini
 
 1. Selezionare un pulsante sul **Editor di immagini** sulla barra degli strumenti.
 
@@ -65,7 +67,7 @@ Quando si seleziona il **gomma** dello strumento, **pennello** strumento, o **ae
 
 1. Nel sottomenu scegliere lo strumento da usare.
 
-## <a name="drawing-lines-or-closed-figures"></a>Disegno di linee o figure chiuse
+## <a name="lines-or-closed-figures"></a>Linee o figure chiuse
 
 L'editor di immagini di strumenti per tracciare linee e utilizzano figure chiuse tutte nello stesso modo: si posiziona il punto di inserimento in un punto e trascinare in un altro. Per le righe, questi aspetti sono gli endpoint. Per figure chiuse, questi aspetti sono gli angoli opposti del rettangolo di delimitazione nella figura.
 
@@ -97,7 +99,7 @@ Le righe vengono disegnate in un'ampiezza determinata dalla selezione corrente d
 
 1. Trascinare il puntatore del mouse nell'angolo opposto.
 
-## <a name="create-a-custom-brush"></a>Creare un pennello personalizzato
+## <a name="custom-brushes"></a>Pennelli personalizzati
 
 Un pennello personalizzato è una porzione rettangolare di un'immagine che vengono prelevati e utilizzati come uno dei **immagine** pennelli pronte all'uso dell'editor. È possibile eseguire su una selezione di tutte le operazioni, è possibile eseguire su anche un pennello personalizzato.
 
@@ -105,11 +107,7 @@ Un pennello personalizzato è una porzione rettangolare di un'immagine che vengo
 
 1. [Selezionare la parte dell'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) che si desidera utilizzare per un pennello.
 
-1. Che contiene il **MAIUSC** chiave verso il basso, scegliere la selezione e trascinarla sull'immagine.
-
-   \- oppure -
-
-1. Dal **immagine** menu, scegliere **Usa selezione come pennello**.
+1. Tenere premuto il **MAIUSC** chiave verso il basso, scegliere la selezione e trascinarla sull'immagine. O dal **immagine** menu, scegliere **Usa selezione come pennello**.
 
    La selezione diventa un pennello personalizzato che distribuisce i colori nella selezione tra l'immagine. Le copie della selezione vengono lasciate lungo il percorso di trascinamento. Più lenta il trascinamento, vengono eseguite le altre copie.
 
@@ -138,8 +136,6 @@ Premere il **segno** (**+**) chiave raddoppiare le dimensioni del pennello, o il
 
 Premere **Esc** o scegliere un altro strumento di disegno.
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
-
 ## <a name="requirements"></a>Requisiti
 
 nessuno
@@ -149,4 +145,4 @@ nessuno
 [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
-[Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)
+[Uso dei colori](../windows/working-with-color-image-editor-for-icons.md)

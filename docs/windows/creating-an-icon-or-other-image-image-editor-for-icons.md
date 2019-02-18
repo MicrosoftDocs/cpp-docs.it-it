@@ -1,6 +1,6 @@
 ---
-title: Creazione di un'icona o di un'altra immagine
-ms.date: 11/04/2016
+title: "Procedura: Creare un'icona o un'altra immagine"
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -87,14 +87,14 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 3ce4d10c9ab085973f1ab00dba205c22ff17f42f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320731"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336592"
 ---
-# <a name="creating-an-icon-or-other-image"></a>Creazione di un'icona o di un'altra immagine
+# <a name="how-to-create-an-icon-or-other-image"></a>Procedura: Creare un'icona o un'altra immagine
 
 È possibile creare una nuova immagine (bitmap, icona, del cursore o sulla barra degli strumenti), quindi usare l'editor di immagini per personalizzare l'aspetto del controllo. È anche possibile creare una nuova bitmap in base a un [modello](../windows/how-to-use-resource-templates.md).
 
@@ -133,13 +133,9 @@ Quando si crea una nuova icona o una risorsa di cursore, la **immagine** editor 
 
 Quando si apre la risorsa icona o cursore nel [editor di immagini](../windows/image-editor-for-icons.md), l'immagine che corrisponde maggiormente il dispositivo di visualizzazione corrente viene aperto per impostazione predefinita.
 
-#### <a name="new-ltdevicegt-image-type-dialog-box"></a>Nuove &lt;dispositivo&gt; nella finestra di dialogo tipo di immagine
-
 Il **New &lt;dispositivo&gt; tipo di immagine** nella finestra di dialogo consente di creare una nuova immagine del dispositivo di un tipo specificato. Per aprire la **New \<dispositivo > immagine** nella finestra di dialogo **tipo nuova immagine** sulla **immagine** menu. Sono incluse le proprietà seguenti **tipo di immagine di destinazione** e **Custom**.
 
-##### <a name="target-image-type"></a>Tipo di immagine di destinazione
-
-Elenca i tipi di immagini disponibili. Selezionare il tipo di immagine che si desidera aprire:
+Il **tipo di immagine di destinazione** proprietà sono elencati i tipi di immagini disponibili. Selezionare il tipo di immagine che si desidera aprire:
 
 ||||
 |-|-|-|
@@ -153,9 +149,7 @@ Elenca i tipi di immagini disponibili. Selezionare il tipo di immagine che si de
 > [!NOTE]
 > Le immagini esistenti non essere visualizzate in questo elenco.
 
-##### <a name="custom"></a>Personalizzato
-
-Apre la **immagine personalizzata** nella finestra di dialogo in cui è possibile creare una nuova immagine con dimensioni personalizzate e numero di colori.
+Il **personalizzati** verrà visualizzata la proprietà di **immagine personalizzata** nella finestra di dialogo in cui è possibile creare una nuova immagine con dimensioni personalizzate e numero di colori.
 
 Il **immagine personalizzata** nella finestra di dialogo consente di creare una nuova immagine con dimensioni personalizzate e numero di colori. Sono incluse le proprietà seguenti:
 
@@ -164,8 +158,6 @@ Il **immagine personalizzata** nella finestra di dialogo consente di creare una 
 |**Width**|Fornisce uno spazio per immettere la larghezza dell'immagine personalizzata in pixel (1-512, limite di 2048).|
 |**Height**|Fornisce uno spazio per l'utente di immettere l'altezza per l'immagine personalizzata in pixel (1-512, limite di 2048).|
 |**Colori**|Fornisce uno spazio che consente di scegliere il numero di colori per l'immagine personalizzata: 2, 16 o 256.|
-
-#### <a name="open-ltdevicegt-image-dialog-box"></a>Aprire &lt;dispositivo&gt; dialogo dell'immagine
 
 Usare la **apre &lt;dispositivo&gt; immagine** finestra di dialogo per aprire immagini per i dispositivi nei progetti C++. Elenca immagini per i dispositivi esistenti nella risorsa corrente (immagini che fanno parte della risorsa corrente). È la seguente proprietà inclusione:
 
@@ -184,13 +176,13 @@ Usare la **apre &lt;dispositivo&gt; immagine** finestra di dialogo per aprire im
 
    Se un segno più (**+**) visualizzato accanto al tipo di risorsa immagine nel **Inserisci risorsa** finestra di dialogo, significa che i modelli della barra degli strumenti sono disponibili. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **New**.
 
-### <a name="add-an-image-for-a-different-display-device"></a>Aggiungere un'immagine per un diverso dispositivo di visualizzazione
+### <a name="to-add-an-image-for-a-different-display-device"></a>Per aggiungere un'immagine per un diverso dispositivo di visualizzazione
 
 1. Nel **immagine** dal menu **nuova immagine del dispositivo** (o fare doppio clic nella **Editor di immagini** riquadro e scegliere **nuova immagine per dispositivo** dal menu di scelta rapida).
 
 1. Selezionare il tipo di immagine da aggiungere. È anche possibile selezionare **Custom** per creare un'icona con dimensioni non sono disponibile nell'elenco predefinito.
 
-### <a name="copy-a-device-image"></a>Copiare un'immagine per dispositivo
+### <a name="to-copy-a-device-image"></a>Per copiare un'immagine per dispositivo
 
 1. Nel **immagine** dal menu **Apri immagine dispositivo** e scegliere un'immagine dall'elenco di immagini corrente. Ad esempio, scegliere i 32 × 32, versione 16 colori di un'icona.
 
@@ -200,14 +192,14 @@ Usare la **apre &lt;dispositivo&gt; immagine** finestra di dialogo per aprire im
 
 1. Incollare l'immagine dell'icona (**Ctrl**+**V**) da uno **Editor di immagini** finestra a altra. Se si incolla dimensioni maggiori in dimensioni inferiori, è possibile utilizzare gli handle icona per ridimensionare l'immagine.
 
-### <a name="delete-a-device-image"></a>Eliminare un'immagine per dispositivo
+### <a name="to-delete-a-device-image"></a>Per eliminare un'immagine per dispositivo
 
 Mentre l'immagine dell'icona viene visualizzata nel **immagine** editor, selezionare **Elimina immagine del dispositivo** dal **immagine** menu. Quando si elimina l'ultima immagine dell'icona nella risorsa, viene eliminata anche la risorsa.
 
    > [!NOTE]
    > Quando si preme il **CANC** chiave, le immagini e i colori disegnate su un'icona vengono eliminati, ma l'icona resta; è ora possibile riprogettare lo. Se si preme **CANC** intenzionalmente, è possibile premere **Ctrl**+**Z** per annullare l'azione.
 
-### <a name="create-transparent-or-inverse-regions-in-device-images"></a>Creare aree trasparenti o di inversione nelle immagini per i dispositivi
+### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Per creare aree trasparenti o di inversione nelle immagini per i dispositivi
 
 Nel [editor di immagini](../windows/image-editor-for-icons.md), l'immagine icona o cursore iniziale ha un attributo trasparente. Anche se le immagini di icone e cursori sono rettangolari, molti non sono presenti, perché le parti dell'immagine sono trasparenti; l'immagine nella schermata sottostante mostra tramite l'icona o cursore. Quando si trascina un'icona, le parti dell'immagine possono essere in un colore invertito. Per creare questo effetto, impostare il colore dello schermo e inverso nel [finestra colori](../windows/colors-window-image-editor-for-icons.md).
 
@@ -343,8 +335,6 @@ Quando si crea una bitmap, viene creata l'immagine in formato bitmap (bmp). È p
 
    > [!NOTE]
    > Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate. Per altre informazioni, vedere [Creating Resource Files](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) nel *manuale dello sviluppatore di .NET Framework*.
-
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Requisiti
 

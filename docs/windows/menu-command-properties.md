@@ -1,6 +1,6 @@
 ---
-title: Proprietà dei comandi di menu (C++)
-ms.date: 11/04/2016
+title: Comandi di menu (C++)
+ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
 - keyboard shortcuts [C++], menu association
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 8989b96640bbb64eb5dcba09d60363dd0989263f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 9f91973fdf2d5a45c631f24d3eed41482a91a834
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320575"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336605"
 ---
-# <a name="menu-command-properties-c"></a>Proprietà dei comandi di menu (C++)
+# <a name="menu-commands-c"></a>Comandi di menu (C++)
 
 Le informazioni seguenti sono organizzate in base al **dal Menu** le proprietà visualizzate nel [finestra proprietà](/visualstudio/ide/reference/properties-window) quando si seleziona un comando di menu. Queste limitazioni sono elencate in ordine alfabetico anche se il **proprietà** finestra consente inoltre di visualizzare queste proprietà per categoria.
 
@@ -43,11 +43,9 @@ Le informazioni seguenti sono organizzate in base al **dal Menu** le proprietà 
 |**Right to Left Order**|Consente la visualizzazione dei comandi di menu da destra a sinistra nei casi in cui l'interfaccia è localizzata in una lingua che prevede la lettura da destra a sinistra, quale l'ebraico o l'arabo.|
 |**Separatore**|Se **True**, il comando di menu è un separatore. Tipo: **Bool**. Valore predefinito: **False**.|
 
-## <a name="associate-menu-commands"></a>Associare i comandi di menu
+## <a name="associate-menu-commands"></a>Associare i comandi di Menu
 
 Spesso è utile che una voce di menu e una combinazione di tasti eseguano lo stesso comando del programma. I comandi di identici vengono eseguiti usando il **Menu** editor assegnare lo stesso identificatore di risorsa per il comando di menu e una voce nella tabella di tasti di scelta rapida dell'applicazione. Quindi si modifica la [Didascalia](../windows/menu-command-properties.md) del comando di menu per visualizzare il nome del tasto di scelta rapida.
-
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Per associare un comando di menu a un tasto di scelta rapida
 
@@ -59,13 +57,13 @@ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse ne
 
    - Digitare il nome del tasto di modifica (**Ctrl**, **Alt**, o **MAIUSC**) seguito da un segno più (**+**) e il nome, una lettera, o simbolo del tasto aggiuntivo.
 
-       Ad esempio, per assegnare **Ctrl**+**O** per il **Open** comando la **File** menu è modificare il comando di menu  **Didascalia** in modo che risulti simile al testo seguente:
+   Ad esempio, per assegnare **Ctrl**+**O** per il **Open** comando la **File** menu è modificare il comando di menu  **Didascalia** in modo che risulti simile al testo seguente:
 
-        ```
-        &Open...\tCtrl+O
-        ```
+   ```
+   &Open...\tCtrl+O
+   ```
 
-       Il comando di menu nel **Menu** editor viene aggiornato per riflettere la nuova didascalia durante la digitazione.
+   Il comando di menu nel **Menu** editor viene aggiornato per riflettere la nuova didascalia durante la digitazione.
 
 1. [Creare la voce della tabella dei tasti di scelta rapida](../windows/adding-an-entry-to-an-accelerator-table.md) nell'editor **tasti di scelta rapida** , assegnando lo stesso identificatore del comando di menu. Usare una combinazione di tasti che sia facile da ricordare.
 
@@ -98,5 +96,4 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [Editor dei menu](../windows/menu-editor.md)<br/>
-[Aggiunta di comandi a un menu](../windows/adding-commands-to-a-menu.md)<br/>
 [Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: Modifica di un'immagine
-ms.date: 11/04/2016
+title: "Procedura: Modificare un'immagine"
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
 - vc.editors.image.editing
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 928a37d1b85378c3c50f41dba441259ace2d3af9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 906244b692253a8423af55eb91d46622087713e3
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320679"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336528"
 ---
-# <a name="editing-an-image"></a>Modifica di un'immagine
+# <a name="how-to-edit-an-image"></a>Procedura: Modificare un'immagine
 
 È possibile usare gli strumenti di selezione per definire un'area di un'immagine che si desidera tagliare, copiare, cancellare, Inverti, ridimensionare o spostare. Con il **rettangolo di selezione** strumento è possibile definire e selezionare un'area rettangolare dell'immagine. Con il **Selezione irregolare** strumento è possibile creare una struttura a mano libera dell'area di cui si desidera selezionare per le operazioni Taglia, copia o un'altra operazione.
 
@@ -56,9 +56,7 @@ ms.locfileid: "56320679"
 
 È anche possibile creare un pennello personalizzato da una selezione. Per altre informazioni, vedere [creazione di un pennello personalizzato](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="selecting-an-image"></a>Selezione di un'immagine
+## <a name="select-an-image"></a>Selezionare un'immagine
 
 1. Nel **Editor di immagini** sulla barra degli strumenti (o dalle **immagine** dal menu **strumenti** comando), scegliere lo strumento di selezione desiderato.
 
@@ -72,7 +70,7 @@ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse ne
 
 1. Selezionare l'immagine di fuori della selezione corrente. Il bordo di selezione cambia lo stato attivo e comprende l'intera immagine ancora una volta.
 
-## <a name="editing-parts-of-an-image"></a>Modifica di parti di un'immagine
+## <a name="edit-parts-of-an-image"></a>Modificare le parti di un'immagine
 
 È possibile eseguire le operazioni di modifica standard, ovvero Taglia, copia, la cancellazione e lo spostamento, su un [selezione](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), se la selezione è l'intera immagine o solo una parte di esso. Poiché il **immagine** editor utilizza le **negli Appunti di Windows**, è possibile trasferire immagini tra il **immagine** editor e altre applicazioni per Windows.
 
@@ -119,7 +117,7 @@ Dal **Edit** menu, scegliere **eliminare**.
 
 Per altre informazioni sul disegno con una selezione, vedere [creazione di un pennello personalizzato](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-## <a name="flipping-an-image"></a>Capovolgimento di un'immagine
+## <a name="flip-an-image"></a>Capovolge un'immagine
 
 È possibile capovolgere o ruotare un'immagine per creare un'immagine speculare dell'originale, è possibile capovolgere l'immagine o ruotare di 90 gradi l'immagine a destra in una fase.
 
@@ -132,7 +130,7 @@ Per altre informazioni sul disegno con una selezione, vedere [creazione di un pe
    > [!NOTE]
    > È anche possibile usare la [tasti di scelta rapida (collegamento)](../windows/accelerator-keys-image-editor-for-icons.md) per tali comandi o accedere ai comandi dal menu di scelta rapida (fare clic all'esterno dell'immagine nell'editor di immagini).
 
-## <a name="resizing-an-image"></a>Ridimensionamento di un'immagine
+## <a name="resize-an-image"></a>Ridimensionare un'immagine
 
 Il comportamento dei **immagine** editor durante il ridimensionamento di un'immagine dipende dal fatto che è stata [selezionati](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) l'intera immagine o solo una parte di esso.
 
@@ -185,7 +183,7 @@ In genere, il **immagine** ingrandire un'immagine quando viene ridimensionata sp
 
 1. Trascinare uno dei quadratini di ridimensionamento fino a quando la selezione è la dimensione giusta.
 
-## <a name="editing-an-image-outside-of-a-project"></a>Modifica di un'immagine all'esterno di un progetto
+## <a name="edit-an-image-outside-of-a-project"></a>Modificare un'immagine all'esterno di un progetto
 
 È possibile aprire e modificare le immagini nell'ambiente di sviluppo, esattamente come farebbe in qualsiasi applicazione di grafica. Le immagini che si lavora con non devono essere parte di un progetto di Visual Studio per modifica autonoma.
 
@@ -197,7 +195,7 @@ In genere, il **immagine** ingrandire un'immagine quando viene ridimensionata sp
 
 1. Individuare e aprire l'immagine che si desidera modificare.
 
-## <a name="changing-image-properties"></a>Modifica delle proprietà di un'immagine
+## <a name="change-image-properties"></a>Modificare le proprietà di immagine
 
 È possibile impostare o modificare le proprietà di un'immagine utilizzando il [finestra proprietà](/visualstudio/ide/reference/properties-window).
 

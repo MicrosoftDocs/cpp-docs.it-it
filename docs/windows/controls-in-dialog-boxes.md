@@ -1,6 +1,6 @@
 ---
 title: I controlli nelle finestre di dialogo (C++) | Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264842"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336514"
 ---
 # <a name="controls-in-dialog-boxes-c"></a>Controlli nelle finestre di dialogo (C++)
 
@@ -30,25 +30,11 @@ Quando si aggiunge un controllo a una finestra di dialogo o riposizionarlo, la p
 
 Dopo aver aggiunto un controllo alla finestra di dialogo, è possibile modificare le proprietà, ad esempio la didascalia, nella [finestra proprietà](/visualstudio/ide/reference/properties-window). È possibile selezionare più controlli e modificarne le proprietà in una sola volta.
 
-- [Aggiunta, modifica o eliminazione di controlli](adding-editing-or-deleting-controls.md)
+- [Procedura: Aggiungere, modificare o eliminare i controlli](adding-editing-or-deleting-controls.md)
 
-- [Selezione di controlli](../windows/selecting-controls.md)
+- [Procedura: Disporre i controlli](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [Ridimensionamento di singoli controlli](../windows/sizing-individual-controls.md)
-
-- [Impostazione della stessa larghezza, altezza o dimensione per i controlli](../windows/making-controls-the-same-width-height-or-size.md)
-
-- [Impostazione della dimensione di una casella combinata e dell'elenco a discesa](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)
-
-- [Aggiunta di valori a un controllo casella combinata](../windows/adding-values-to-a-combo-box-control.md)
-
-- [Impostazione della larghezza di una barra di scorrimento orizzontale](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)
-
-- [La disposizione dei controlli nelle finestre di dialogo](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [Definizione di tasti di scelta](../windows/defining-mnemonics-access-keys.md)
-
-- [Impostazione della posizione e della dimensione di una finestra di dialogo](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+- [Procedura: Definire i valori e controllare l'accesso](../windows/defining-mnemonics-access-keys.md)
 
 I controlli standard disponibili nel **casella degli strumenti** con impostazione predefinita gli eventi sono:
 
@@ -110,8 +96,6 @@ Per questi controlli personalizzati, sono limitati a:
 - Digitare un valore esadecimale a 32 bit che imposta lo stile del controllo.
 
 - Impostazione dello stile esteso.
-
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Requisiti
 

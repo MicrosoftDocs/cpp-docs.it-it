@@ -1,6 +1,6 @@
 ---
 title: Editor finestre (C++)
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: fef4a7f0d4c785a40ea946127d8e3c84c797e1aa
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264894"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336696"
 ---
 # <a name="dialog-editor-c"></a>Editor finestre (C++)
 
@@ -38,28 +38,18 @@ Uno dei primi passaggi per creare una nuova finestra di dialogo (o un modello di
 
 È possibile archiviare una finestra di dialogo come modello in modo da poterla riusare. È possibile passare facilmente dalla progettazione della finestra di dialogo e alla modifica del codice che la implementa e viceveresa.
 
-È inoltre possibile modificare le proprietà di uno o più controlli nell'editor finestre. È possibile modificare l'ordine di tabulazione, vale a dire, l'ordine in cui i controlli vengono attivati lo stato attivo quando la **scheda** viene premuto, oppure è possibile definire una chiave di accesso (una combinazione di tasti) che consente agli utenti di scegliere un controllo usando la tastiera. Per un elenco dei tasti di scelta predefiniti, vedere [Tasti di scelta rapida per l'editor finestre](../windows/accelerator-keys-for-the-dialog-editor.md).
+È inoltre possibile modificare le proprietà di uno o più controlli nell'editor finestre. È possibile modificare l'ordine di tabulazione, vale a dire, l'ordine in cui i controlli vengono attivati lo stato attivo quando la **scheda** viene premuto, oppure è possibile definire una chiave di accesso (una combinazione di tasti) che consente agli utenti di scegliere un controllo usando la tastiera.
 
 Il **dialogo** editor consente anche di usare i controlli personalizzati, inclusi i controlli ActiveX. Inoltre, è possibile modificare una [visualizzazione maschera](../mfc/reference/cformview-class.md), le [visualizzazioni di record](../data/record-views-mfc-data-access.md)o [le barre delle finestre di dialogo](../mfc/dialog-bars.md).
 
 A partire da Visual Studio 2015, è possibile utilizzare l'editor finestre per definire layout dinamico che specificano come controlli spostano e ridimensionare quando l'utente ridimensiona una finestra di dialogo. Per altre informazioni, vedere [Dynamic Layout](../mfc/dynamic-layout.md).
 
-- [Creazione di una nuova finestra di dialogo](../windows/creating-a-new-dialog-box.md)
-
-- [Creazione di una finestra di dialogo da cui non è possibile uscire in fase di esecuzione](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+- [Procedura: Creare una finestra di dialogo](../windows/creating-a-new-dialog-box.md)
 
 - [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)
 
-- [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md)
-
-- [Verifica di una finestra di dialogo](../windows/testing-a-dialog-box.md)
-
-- [Risoluzione dei problemi relativi all'editor finestre](../windows/troubleshooting-the-dialog-editor.md)
-
    > [!TIP]
-   > Quando si usa la **dialogo** editor, in molti casi, è possibile fare clic il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi usati frequentemente.
-
-Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nel *manuale dello sviluppatore di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione delle risorse nelle App gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).
+   > Quando si usa la **dialogo** editor, in molti casi, è possibile selezionare il pulsante destro del mouse per visualizzare un menu di scelta rapida dei comandi usati frequentemente.
 
 ## <a name="dialog-editor-toolbar"></a>Barra degli strumenti dell'editor finestre
 
