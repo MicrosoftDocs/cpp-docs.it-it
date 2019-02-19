@@ -1,15 +1,15 @@
 ---
-title: 'Conversione: diagnostica'
+title: 'Conversione: Diagnostica'
 ms.date: 11/04/2016
 ms.assetid: 3730ca7c-0147-452d-bd4a-6a1e97e9793e
-ms.openlocfilehash: 4863b97dc1db7ff295b5f786ca97da2551d0fa62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a274b7c5f29b091b2bf29922abfa4d66d3447b47
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664997"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152599"
 ---
-# <a name="translation-diagnostics"></a>Conversione: diagnostica
+# <a name="translation-diagnostics"></a>Conversione: Diagnostica
 
 **ANSI 2.1.1.3** Come viene identificato un elemento di diagnostica
 
