@@ -1,17 +1,17 @@
 ---
 title: / CETCOMPAT (compatibile con la tecnologia di imposizione del flusso di controllo)
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703429"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418692"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (compatibile con la tecnologia di imposizione del flusso di controllo)
 
@@ -24,7 +24,7 @@ Specifica se contrassegnare un'immagine eseguibile come compatibile con tecnolog
 ## <a name="arguments"></a>Argomenti
 
 **NO**<br/>
-Specifica che il executalbe non deve essere contrassegnato compatibile con CET.
+Specifica che il file eseguibile non deve essere contrassegnato compatibile con CET.
 
 ## <a name="remarks"></a>Note
 
@@ -44,7 +44,7 @@ Il **/CETCOMPAT** opzione è disponibile a partire il set di strumenti di Visual
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
-- Questa opzione non ha un equivalente a livello di codice.
+Questa opzione non ha un equivalente a livello di codice.
 
 ## <a name="see-also"></a>Vedere anche
 
