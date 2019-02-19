@@ -5,12 +5,12 @@ helpviewer_keywords:
 - phrase structure grammar
 - grammar, phrase structure
 ms.assetid: 546c2961-5d37-4ef9-a0ce-74e7550e3899
-ms.openlocfilehash: 500bc949c93003bdd3d025d1dfaee071929a1812
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dd87cd455971bbe83d76d424280e23f2e53a1fb
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537943"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148439"
 ---
 # <a name="phrase-structure-grammar"></a>Grammatica a struttura di frase
 

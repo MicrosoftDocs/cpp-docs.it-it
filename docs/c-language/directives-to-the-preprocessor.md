@@ -2,12 +2,12 @@
 title: Direttive al preprocessore
 ms.date: 11/04/2016
 ms.assetid: adc6251e-cf6b-4508-bdbb-55f446c838d3
-ms.openlocfilehash: 0abc21f38f5776acd9167f0526160dc5e1bb8cbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 520d181c3a58ee2c626678a3afd9126f1ef183cc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450056"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149037"
 ---
 # <a name="directives-to-the-preprocessor"></a>Direttive al preprocessore
 

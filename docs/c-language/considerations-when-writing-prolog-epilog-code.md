@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: e7bfeccf41b9e4dace49e9ab209a94598c492b41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515531"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146482"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Considerazioni sulla scrittura di codice di prologo/epilogo
 

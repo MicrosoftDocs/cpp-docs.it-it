@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 1b14f7a7d0c1d682c641ab441dc3e40c23688392
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88d0256e2ce948fbdfffb24037517690ef4b7cb7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463258"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152495"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedenza e ordine di valutazione
 

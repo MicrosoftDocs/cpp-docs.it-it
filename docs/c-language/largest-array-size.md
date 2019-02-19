@@ -2,12 +2,12 @@
 title: Dimensione di matrice massima
 ms.date: 11/04/2016
 ms.assetid: 4c782cf6-73f3-40b0-b306-229d22da4ee1
-ms.openlocfilehash: e678816c904e71ec35297366c16665798d1c445b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f48bdade27d0d037609e3ad0e64b2f0fc7b9a9
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463973"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147360"
 ---
 # <a name="largest-array-size"></a>Dimensione di matrice massima
 

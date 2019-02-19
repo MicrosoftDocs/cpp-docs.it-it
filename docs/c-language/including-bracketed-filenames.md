@@ -2,12 +2,12 @@
 title: Inclusione di nomi file tra parentesi
 ms.date: 11/04/2016
 ms.assetid: 6a4e5411-c35e-48b8-90ef-b37ac324ed94
-ms.openlocfilehash: ddca97f6e40a9a64d809cd39c2e810890844a0ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87de00814f58ed86ee33abdcf96dd210f418c5ba
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555688"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147581"
 ---
 # <a name="including-bracketed-filenames"></a>Inclusione di nomi file tra parentesi
 

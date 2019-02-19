@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: 5c557b3db2e58001fa0b7a1a5bef5b1043e2cd86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607285"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152287"
 ---
 # <a name="structure-declarations"></a>Dichiarazioni di struttura
 

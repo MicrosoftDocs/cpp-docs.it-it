@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - dllexport attribute [C++], storage-class attribute
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
-ms.openlocfilehash: b4f0674e68f2c7b8deeae663c42470b83777ac78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d703045773e4d2c320eaef2aa80c4ce74d23472
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572387"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149310"
 ---
 # <a name="dll-import-and-export-functions"></a>Funzioni di importazione ed esportazione DLL
 

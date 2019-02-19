@@ -5,12 +5,12 @@ helpviewer_keywords:
 - constants, C
 - constants
 ms.assetid: f5bd7213-97ab-4cad-b913-1fc91a486935
-ms.openlocfilehash: 42f558f339e2d135b8dade7fed69c74da3574a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39559f85585b3ba7f21935f43abfb6ada4b0a605
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546497"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152703"
 ---
 # <a name="c-constants"></a>Costanti C
 

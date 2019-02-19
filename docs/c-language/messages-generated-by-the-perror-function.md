@@ -2,12 +2,12 @@
 title: Messaggi generati dalla funzione perror
 ms.date: 11/04/2016
 ms.assetid: ec560a55-adf2-4959-9ebf-9ac4e58ab3b5
-ms.openlocfilehash: aee7e307f7d4d1db993afe11f72291d3862db791
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b398494d3fb4a4b15161c3e93b13651a08bb875a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545860"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147568"
 ---
 # <a name="messages-generated-by-the-perror-function"></a>Messaggi generati dalla funzione perror
 

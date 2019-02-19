@@ -2,12 +2,12 @@
 title: Termine caratteri di nuova riga
 ms.date: 11/04/2016
 ms.assetid: ab145180-a098-41b5-8db0-2520272964ba
-ms.openlocfilehash: 5eff71a0faa80b541245cc602549067722934031
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e600ad6a515965c6ce01280d555e7eab3134b8fd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519769"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150805"
 ---
 # <a name="terminating-newline-characters"></a>Termine caratteri di nuova riga
 

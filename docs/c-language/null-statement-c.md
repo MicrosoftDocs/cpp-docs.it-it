@@ -7,12 +7,12 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
-ms.openlocfilehash: bee044049ed14796a97edc62bbb180ab19700564
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503051"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148452"
 ---
 # <a name="null-statement-c"></a>Istruzione Null (C)
 
@@ -22,7 +22,7 @@ Un'istruzione "null" è un'istruzione che contiene solo un punto e virgola; può
 
 > **;**
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Istruzioni quali **do**, **for**, **if** e `while` richiedono che un'istruzione eseguibile venga visualizzata come corpo dell'istruzione. L'istruzione null soddisfa il requisito della sintassi nei casi in cui non è necessario un corpo effettivo dell'istruzione.
 

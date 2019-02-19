@@ -7,12 +7,12 @@ helpviewer_keywords:
 - maximum string length
 - strings [C++], length
 ms.assetid: 99a80e4a-6212-47b7-a6bd-bdf99bd44928
-ms.openlocfilehash: f2e5461c433a0d195682c1a0f4312a71a8ff5032
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 650088249e4c6abd515c29b873a9f09dc1d2a60a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483985"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148309"
 ---
 # <a name="maximum-string-length"></a>Lunghezza massima della stringa
 

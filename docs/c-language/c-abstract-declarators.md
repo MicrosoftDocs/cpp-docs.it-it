@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarators, abstract
 - abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
-ms.openlocfilehash: 5dc58b71c8b2032342b6604112673086dc94649b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ca0f4a367abf939ed4307611517a883d8b82e0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429822"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152664"
 ---
 # <a name="c-abstract-declarators"></a>Dichiaratori astratti C
 

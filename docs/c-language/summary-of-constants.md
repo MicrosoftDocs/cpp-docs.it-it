@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
-ms.openlocfilehash: 1da2a7434ced7f38fa199e5911e01709983fda91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f927d977d818bed28c5fd7392f7933cd1a63ced3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547862"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150025"
 ---
 # <a name="summary-of-constants"></a>Riepilogo di costanti
 

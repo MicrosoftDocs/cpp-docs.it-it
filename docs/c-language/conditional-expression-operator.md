@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: b93e99aef4b7d8a1b20373fda1e4d9672b416b7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506145"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150623"
 ---
 # <a name="conditional-expression-operator"></a>Operatore di espressione condizionale
 

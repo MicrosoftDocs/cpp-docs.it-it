@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: f84e5c1a1455e35992aa4b118c345bc1fa6ae587
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331620"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152300"
 ---
 # <a name="trigraphs"></a>Trigrammi
 

@@ -2,12 +2,12 @@
 title: Ambito del presente manuale
 ms.date: 11/04/2016
 ms.assetid: 406e7cc0-27cb-46b4-b38e-c200f3fddafd
-ms.openlocfilehash: eca379daa1fff9c90491bdd0be1ea03fc770f0b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac5003e24a7f0965107b712da7db0549b28831f1
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453352"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148907"
 ---
 # <a name="scope-of-this-manual"></a>Ambito del presente manuale
 

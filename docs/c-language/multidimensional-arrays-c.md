@@ -6,12 +6,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-ms.openlocfilehash: cd17eb060a6151417cbbe8dfdbfdc42ffe88ce98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623938"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151013"
 ---
 # <a name="multidimensional-arrays-c"></a>Matrici multidimensionali (C)
 

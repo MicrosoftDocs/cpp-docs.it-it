@@ -2,12 +2,12 @@
 title: Righe vuote
 ms.date: 11/04/2016
 ms.assetid: 793a7b8f-6e8a-4641-a354-9f66e3c96ee2
-ms.openlocfilehash: 70d59397e3b5187c4bb32d103c359a15ce8aefc6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddda830ec38e4ab99f98ca3e8b762c01bcca19f7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637145"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152339"
 ---
 # <a name="blank-lines"></a>Righe vuote
 

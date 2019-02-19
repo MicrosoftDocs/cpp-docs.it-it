@@ -5,12 +5,12 @@ helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-ms.openlocfilehash: a6049f060a81f75f6c85686a6526b590de688eaa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13c81728f02963863b641348b58380da099b0013
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581545"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148244"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretazione di più dichiaratori complessi
 

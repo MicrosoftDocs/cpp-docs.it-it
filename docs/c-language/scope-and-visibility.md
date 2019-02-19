@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 4010025a5a80fa513c8f86c41612350b2a23c15e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656729"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151286"
 ---
 # <a name="scope-and-visibility"></a>Ambito e visibilità
 

@@ -2,12 +2,12 @@
 title: Intervallo di valori char
 ms.date: 11/04/2016
 ms.assetid: 15ae9781-ec21-4333-bba8-6d2383bbf7f1
-ms.openlocfilehash: 64b8f8d27211a4067c6e17063d336888773c0a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c188856ab15c18ccd52aa89235d149366d0b316e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500698"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147425"
 ---
 # <a name="range-of-char-values"></a>Intervallo di valori char
 

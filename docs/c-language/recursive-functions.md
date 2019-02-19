@@ -7,12 +7,12 @@ helpviewer_keywords:
 - functions [C], calling recursively
 - recursive function calls
 ms.assetid: 59739040-3081-4006-abbc-9d8423992bce
-ms.openlocfilehash: 69d7a1c82b7efb215b941aa5a6e9d94276bed529
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0c820ab75fda4bae83db78fa402d7a07cb7fe
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630126"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152430"
 ---
 # <a name="recursive-functions"></a>Funzioni ricorsive
 

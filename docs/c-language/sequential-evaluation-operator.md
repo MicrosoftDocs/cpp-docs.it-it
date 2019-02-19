@@ -6,12 +6,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: 1da8c64ad12d794178ec2e24c3b6c2d587d029e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527188"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149128"
 ---
 # <a name="sequential-evaluation-operator"></a>Operatore di valutazione sequenziale
 

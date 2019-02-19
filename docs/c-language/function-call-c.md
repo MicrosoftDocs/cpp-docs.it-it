@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [C], calling
 - function calls
 ms.assetid: 35c66719-3f15-4d3b-97da-4e19dc97b308
-ms.openlocfilehash: 46e010ed625e23aa6c21b8c78280b714c68582b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d22bdebc8fa832afb14a2cc09e6a441b7b9e8a5a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478117"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147412"
 ---
 # <a name="function-call-c"></a>Chiamata di funzione (C)
 

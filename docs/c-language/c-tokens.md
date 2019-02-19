@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: d56f43decef15f9f94049b345b5c12393cf771cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f92692fb19b0eeff2fe9af179fc8fe3fa6c2f7e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427391"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149726"
 ---
 # <a name="c-tokens"></a>Token C
 

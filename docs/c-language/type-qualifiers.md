@@ -10,12 +10,12 @@ helpviewer_keywords:
 - memory, access using volatile
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
-ms.openlocfilehash: 31cfa4d0d443cc6bb854e8010f1e1535cd39b51b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5cb7ab3de8938b77dc95be3ee442f71d3b18b42
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507679"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147308"
 ---
 # <a name="type-qualifiers"></a>Qualificatori di tipo
 

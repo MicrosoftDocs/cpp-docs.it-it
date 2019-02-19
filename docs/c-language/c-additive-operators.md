@@ -8,12 +8,12 @@ helpviewer_keywords:
 - additive operators
 - arithmetic operators [C++], additive operators
 ms.assetid: bb8ac205-b061-41fc-8dd4-dab87c8b900c
-ms.openlocfilehash: af7302adaafc3a91287f6d15a11c8e784f35c33d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29bea87e56aa90a8deab7ad7280b3fbdfb45c82b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650684"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151195"
 ---
 # <a name="c-additive-operators"></a>Operatori di addizione C
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: be6a60d5765954efbc4a1cc6b991ac989e20b8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615319"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149986"
 ---
 # <a name="simple-variable-declarations"></a>Dichiarazioni di variabili semplici
 

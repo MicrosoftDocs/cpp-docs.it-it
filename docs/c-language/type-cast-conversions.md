@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type casts [C++], about type-cast conversion
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
-ms.openlocfilehash: d2de646d9ad3082c43ce896fdf4bc3c7e55a4405
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d54e4c15f84ccecad629d48341e5d3ae26d8cecf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505301"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151657"
 ---
 # <a name="type-cast-conversions"></a>Conversioni di cast di tipo
 

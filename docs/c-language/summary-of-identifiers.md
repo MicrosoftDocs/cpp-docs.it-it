@@ -2,12 +2,12 @@
 title: Riepilogo di identificatori
 ms.date: 11/04/2016
 ms.assetid: 2fe74b88-79e4-4e09-9d87-c258905ec31a
-ms.openlocfilehash: dccf5ce6919924d873f6951b0fd7fbddceb044c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b690e434705d20806573f61c48f528ced6dad82c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620246"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152859"
 ---
 # <a name="summary-of-identifiers"></a>Riepilogo di identificatori
 

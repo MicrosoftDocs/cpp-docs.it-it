@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: 47bdbb0de4f21d93f890638f6d439dc962dda07b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518690"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151949"
 ---
 # <a name="goto-and-labeled-statements-c"></a>Istruzioni goto e con etichetta (C)
 

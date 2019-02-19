@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - integers
 ms.assetid: 4ea91011-5b88-41f8-ab3c-c0bca57c6987
-ms.openlocfilehash: 07ffbb1efc2ca35bc4c9617d807165114b114874
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e78436958372db49202e6deaf6fd0840b5bcdd13
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661396"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146905"
 ---
 # <a name="integers"></a>Integer
 

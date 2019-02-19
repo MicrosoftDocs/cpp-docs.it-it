@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
-ms.openlocfilehash: e9a0fec7a9df03d624e8984e8bd3593388cda35a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3975076ee65d267f3d278e20a7770e6750c06d3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479278"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148985"
 ---
 # <a name="return-statement-c"></a>Istruzione return (C)
 

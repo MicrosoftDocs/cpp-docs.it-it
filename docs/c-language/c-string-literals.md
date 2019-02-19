@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C++], string literals
 - literal strings, C
 ms.assetid: 4b05523e-49a2-4900-b21a-754350af3328
-ms.openlocfilehash: bd8b49645e34224cbea7e801f197bfbcbc012915
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31028b51b8010dd7e598ca5e635a35562379bf40
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635626"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152313"
 ---
 # <a name="c-string-literals"></a>Valori letterali stringa C
 
@@ -33,7 +33,7 @@ Un valore "letterale stringa" è una sequenza di caratteri dal set di caratteri 
 
 &nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence*
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Nell'esempio seguente viene riportato un valore letterale stringa semplice:
 

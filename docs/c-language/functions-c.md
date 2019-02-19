@@ -5,12 +5,12 @@ helpviewer_keywords:
 - functions [C]
 - Visual C, functions
 ms.assetid: 31839f65-49f4-43e1-85ec-8769924ffa96
-ms.openlocfilehash: 2d434e5bb0e876d7b2d87500d75dc62154a5327b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50b03b6eb155b9f64803faccd65bce156455bc41
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649644"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148153"
 ---
 # <a name="functions-c"></a>Funzioni (C)
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: b186a1923eadedd201119ff8fbbd0a730c33cff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9940fdf983f6141c0de207509bb800533b0f1eb8
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611900"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152326"
 ---
 # <a name="try-except-statement-c"></a>Istruzione try-except (C)
 

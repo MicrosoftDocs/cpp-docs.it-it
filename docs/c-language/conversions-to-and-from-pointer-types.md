@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-ms.openlocfilehash: c7487cb4fd268edf1db7531a2a40b5535cd425f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623405"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147243"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversioni da e verso tipi di puntatore
 

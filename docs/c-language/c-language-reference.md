@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C, language reference
 - language reference, C
 ms.assetid: 3a306c30-8dd2-435b-bd1c-c143b02c0872
-ms.openlocfilehash: 1cab6dd4925c7d656cfeadf47be232159a6d1260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c5417ff3ced770c8dc8a70932d70d9d96b4331d
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507285"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151234"
 ---
 # <a name="c-language-reference"></a>Riferimenti del linguaggio C
 

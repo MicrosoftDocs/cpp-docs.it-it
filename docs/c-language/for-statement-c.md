@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-ms.openlocfilehash: 9f741e632bef7cf9561d849cbb3a6e0d3ecab03c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df00bcab2f9f9e51a6f37e19670b6cd240fa5cc4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649900"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152833"
 ---
 # <a name="for-statement-c"></a>Istruzione for (C)
 

@@ -2,12 +2,12 @@
 title: Specifica di convenzioni di chiamata
 ms.date: 11/04/2016
 ms.assetid: d6b23b76-eab5-4f6d-8731-9a89b6089d28
-ms.openlocfilehash: c9dc3b980efe8ceb519263e7979973f9f7901470
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b817a5f67462cb250477e2015499022bd6c0fe6c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434320"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147100"
 ---
 # <a name="specifying-calling-conventions"></a>Specifica di convenzioni di chiamata
 

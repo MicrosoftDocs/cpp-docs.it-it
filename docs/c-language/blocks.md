@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: be231a92-c712-464e-ae25-a4becb20f7f5
-ms.openlocfilehash: c7ae46278fa76f2ca1a6f24a376f84dd77a97b16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f308864e6e85f74e40d9c9df200a0254fea366a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477896"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152625"
 ---
 # <a name="blocks"></a>Blocchi
 

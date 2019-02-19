@@ -8,18 +8,18 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-ms.openlocfilehash: 64c94798587ad64f369ca0ed03a7251d0eb9acb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71301bd5eedf2806e97b8d24d95beaf2843427ad
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447151"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148504"
 ---
 # <a name="argument-description"></a>Descrizione di argomenti
 
 Il parametro `argc` nelle funzioni **main** e **wmain** corrisponde a un Integer che specifica il numero degli argomenti che vengono passati al programma dalla riga di comando. Poiché il nome del programma è considerato un argomento, il valore di `argc` è almeno uno.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il parametro `argv` è una matrice di puntatori a stringhe con terminazione null che rappresentano gli argomenti del programma. Ogni elemento della matrice punta a una rappresentazione di stringa di un argomento passato a **main** (o a **wmain**). Per altre informazioni sulle matrici, vedere [Dichiarazioni di matrice](../c-language/array-declarations.md). Il parametro `argv` può essere dichiarato sia come matrice di puntatori al tipo `char` (`char *argv[]`), che come puntatore a puntatori al tipo `char` (`char **argv`). Per **wmain** il parametro `argv` può essere dichiarato sia come matrice di puntatori al tipo `wchar_t` (`wchar_t *argv[]`) che come puntatore a puntatori al tipo `wchar_t` (`wchar_t **argv`).
 

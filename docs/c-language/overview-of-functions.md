@@ -5,12 +5,12 @@ helpviewer_keywords:
 - functions [C++]
 - control flow, function calls
 ms.assetid: b6f4637f-02b9-49d8-8601-1f886bd2cfb9
-ms.openlocfilehash: 3b2f2cfe5cd769b3cdaef002a970ad21c48162ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c54dcdeec1bad1ffbd335d411e39c77be0ad961
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557365"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150324"
 ---
 # <a name="overview-of-functions"></a>Cenni preliminari sulle funzioni
 

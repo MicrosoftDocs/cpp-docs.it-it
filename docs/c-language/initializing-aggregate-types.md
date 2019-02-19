@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: ebc7f6185c8115df6e6b77a034307f8998b1c2ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530302"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151494"
 ---
 # <a name="initializing-aggregate-types"></a>Inizializzazione di tipi di aggregazione
 

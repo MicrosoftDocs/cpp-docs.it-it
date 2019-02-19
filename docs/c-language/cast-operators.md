@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], cast
 - type conversion, cast operators
 ms.assetid: 43b90bbd-39ef-43e6-ae5d-e8a67a01de40
-ms.openlocfilehash: dd84ae2e9868e53fedf9e7977fe4c253ad2db72f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3d892a5aede4cd2d6a980b440875f0ac9837120
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443953"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147945"
 ---
 # <a name="cast-operators"></a>Operatori di cast
 

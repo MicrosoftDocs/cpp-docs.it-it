@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: fb33fd051c7639ccb77c59c5f88f46e45be58d17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507281"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149648"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatori relazionali e operatori di uguaglianza C
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - character data types [C]
 - types [C], character
 ms.assetid: d3ca8cda-c0d7-43af-9472-697e8ef015ce
-ms.openlocfilehash: 7ca87ec1cb11f8a00beb6f5eb670b3e292bb1f70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f894114d4e980b11edf55c4d4b7c4e60af396fb1
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619336"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151585"
 ---
 # <a name="character-types"></a>Tipi di carattere
 

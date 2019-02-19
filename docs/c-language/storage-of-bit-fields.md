@@ -2,12 +2,12 @@
 title: Archiviazione dei campi di bit
 ms.date: 11/04/2016
 ms.assetid: 4816a241-1580-4d1c-82ed-13d359733959
-ms.openlocfilehash: 7aa6e02c347ff14bb0552320567b343c7215ebc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4dbfb3c6ad27fb023881dafde74bb27132959085
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499086"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147529"
 ---
 # <a name="storage-of-bit-fields"></a>Archiviazione dei campi di bit
 

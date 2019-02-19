@@ -2,12 +2,12 @@
 title: Resti
 ms.date: 11/04/2016
 ms.assetid: 79764580-a350-4151-b717-a4459c0f3368
-ms.openlocfilehash: 9aaeae3f3ce65e358f1b78e783d1c876e4862446
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55b1ae0dc46be9c94fa243f6de25728cdd95819c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472020"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147867"
 ---
 # <a name="remainders"></a>Resti
 

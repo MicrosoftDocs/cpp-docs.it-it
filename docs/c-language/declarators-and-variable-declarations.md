@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 711c0eb4e0b652f86de74803d5725c5dc3054b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562786"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147490"
 ---
 # <a name="declarators-and-variable-declarations"></a>Dichiaratori e dichiarazioni di variabili
 

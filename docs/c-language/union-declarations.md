@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: af51f184c199cc7f93f25f95fd4ef5c613e5f017
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524777"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149258"
 ---
 # <a name="union-declarations"></a>Dichiarazioni di unione
 

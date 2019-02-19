@@ -2,12 +2,12 @@
 title: Inclusione di nomi file tra virgolette
 ms.date: 11/04/2016
 ms.assetid: 789a047e-ea38-4c99-b71d-a2ad9c81daee
-ms.openlocfilehash: 11beaa3a91f476348c57b12ab3febad7cb9c89fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4083519d6f6b9b4d037b0c2998737f3a5062c6cf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656716"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149869"
 ---
 # <a name="including-quoted-filenames"></a>Inclusione di nomi file tra virgolette
 

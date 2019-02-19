@@ -7,12 +7,12 @@ helpviewer_keywords:
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-ms.openlocfilehash: 5fe3297467705a9a54cf0ebc87e99801bf3a0fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd5f702588a11b7841f77de539d113206833cde9
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549097"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150220"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Espressioni L-Value e R-Value
 

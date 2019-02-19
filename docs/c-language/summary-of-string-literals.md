@@ -2,12 +2,12 @@
 title: Riepilogo di valori letterali stringa
 ms.date: 11/04/2016
 ms.assetid: d2693900-f4e2-4820-b7de-085d51827aee
-ms.openlocfilehash: 72f5aa6405ae97bfb6141db737affa0c3aca2a65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc235a26849c284d8b46216606d40d07452e2237
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648123"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149687"
 ---
 # <a name="summary-of-string-literals"></a>Riepilogo di valori letterali stringa
 

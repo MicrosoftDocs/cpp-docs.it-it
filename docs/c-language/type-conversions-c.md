@@ -8,12 +8,12 @@ helpviewer_keywords:
 - integral promotions
 - type casts, when performed
 ms.assetid: d130ee7c-03c3-48f4-af7b-1fdba0d3b086
-ms.openlocfilehash: 27dcdbf810199c62b7c267270ad62ed1ed677494
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 281234b857a97acbb57ebbfca7b678a637d00764
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503354"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147399"
 ---
 # <a name="type-conversions-c"></a>Conversioni di tipi (C)
 

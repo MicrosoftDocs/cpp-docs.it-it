@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - demoting integers
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
-ms.openlocfilehash: 5dca8d414e7cf7dd04d405208ad6a86dd4372542
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edfb8f03094c10cf0cf33b0eb799d5d822ac017d
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480908"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152651"
 ---
 # <a name="demotion-of-integers"></a>Abbassamento di livello degli interi
 

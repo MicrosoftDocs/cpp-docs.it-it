@@ -7,12 +7,12 @@ helpviewer_keywords:
 - prolog code
 - epilog code
 ms.assetid: 2543c8af-00d4-4a2a-8a87-e746da1f9929
-ms.openlocfilehash: 250a47157e915dfe2f2a9e5f6d912bbf83334d55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b752dd6fa378bc1275e8a7da90420aa2b8247e4e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430375"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152196"
 ---
 # <a name="naked-functions"></a>Funzioni naked
 

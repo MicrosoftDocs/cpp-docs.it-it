@@ -5,12 +5,12 @@ helpviewer_keywords:
 - storage class specifiers, internal
 - internal linkage, storage-class specifiers
 ms.assetid: feca8ab5-23df-4b6c-921a-4d51f9be35d7
-ms.openlocfilehash: a211fd72de3907bc6743ad106b36c0e44c2fe821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efc9a4b080f7141c8ac9404804bf43fbe54c30c1
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439586"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149375"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Identificatori di classi di archiviazione per dichiarazioni di livello interno
 

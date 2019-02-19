@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: 98e685556fe5dc874f2af818d8c86d0dcadefe29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5664634687c689316427c8652865ba9423e24f4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575669"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147815"
 ---
 # <a name="storage-class"></a>Classe di archiviazione
 

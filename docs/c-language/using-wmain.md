@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - wmain function
 ms.assetid: d0300812-adc4-40c6-bba3-b2da25468c80
-ms.openlocfilehash: 65efacb76e80dedee13d8e1af017686075c1168e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d467d50a7188cd665f64de8b6f0ce6e6a37df752
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460593"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148491"
 ---
 # <a name="using-wmain"></a>Utilizzo di wmain
 
@@ -23,7 +23,7 @@ Nel modello di programmazione Unicode è possibile definire una versione a carat
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 I parametri formali vengono dichiarati nella funzione **wmain** in un formato simile a quello di **main**. È quindi possibile passare al programma argomenti a caratteri estesi e, se lo si desidera, un puntatore di ambiente a caratteri estesi. I parametri `argv` e `envp` in **wmain** sono di tipo `wchar_t*`. Ad esempio:
 

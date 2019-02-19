@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ANSI [C++]
 - ANSI [C++], C standard
 ms.assetid: c3a188c8-42bc-41fb-a78d-637f3175ade0
-ms.openlocfilehash: e3c3c0e06fb4c5369c404bfe47b5192be4c9d2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8eebf43877b7599cecd438b94d1d0e13ff956139
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630555"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147698"
 ---
 # <a name="ansi-conformance"></a>Conformità ANSI
 

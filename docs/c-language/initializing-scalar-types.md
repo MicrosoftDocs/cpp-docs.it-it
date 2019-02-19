@@ -12,12 +12,12 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-ms.openlocfilehash: f991eff82e5b6919f7960513ae9bc502cad77069
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641090"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151143"
 ---
 # <a name="initializing-scalar-types"></a>Inizializzazione di tipi scalari
 

@@ -2,12 +2,12 @@
 title: Spostamenti a destra
 ms.date: 11/04/2016
 ms.assetid: c878e97d-ea3c-4c6b-90a8-b1b24b2d5b19
-ms.openlocfilehash: f39c1f2f49f5a8a1f3bb5eb3f21736eedf32077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c34373f69a41ad65031753cd352098dce7e98ef4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518209"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149479"
 ---
 # <a name="right-shifts"></a>Spostamenti a destra
 

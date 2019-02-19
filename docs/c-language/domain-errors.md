@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - domain errors
 ms.assetid: 67faa973-c872-40bc-a25f-2ef5559db96c
-ms.openlocfilehash: d3161643452aad6dd439e5fa93197164c23eaf65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e81a5f722bc55ebe4c36e4321511afb751b4d73
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639673"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152508"
 ---
 # <a name="domain-errors"></a>Errori di dominio
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: c9a7c17c5cf52cb263d61fe79baa331c5b4d57a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637144"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152534"
 ---
 # <a name="source-files-and-source-programs"></a>File e programmi di origine
 
