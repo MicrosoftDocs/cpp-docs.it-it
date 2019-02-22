@@ -1,6 +1,6 @@
 ---
 title: /Za, /Ze (Disabilita estensioni linguaggio)
-ms.date: 11/04/2016
+ms.date: 02/19/2019
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions
 - /za
@@ -18,36 +18,34 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: a3d25f71739f9948f2c0237efbaeaf8fa89f2114
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d24affdf92222ac50ffe72b3a1606d3f7030de60
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549721"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676474"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Disabilita estensioni linguaggio)
 
-Il **/Za** opzione del compilatore genera un errore per i costrutti di linguaggio che non sono compatibili con ANSI C89 o ISO c++11. Il **/Ze** opzione del compilatore, che è attivata per impostazione predefinita, abilita le estensioni Microsoft.
+Il **/Za** opzione del compilatore Disabilita e genera gli errori per le estensioni Microsoft a C che non sono compatibili con ANSI C89/ISO C90. Deprecate **/Ze** opzione del compilatore attiva le estensioni Microsoft. Le estensioni Microsoft sono attivate per impostazione predefinita.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-/Za
-/Ze
-```
+> **/Za**<br/>
+> **/Ze**
 
 ## <a name="remarks"></a>Note
 
 > [!NOTE]
->  Il **/Ze** opzione è deprecata poiché il comportamento è attivato per impostazione predefinita. È consigliabile usare la [/Zc (conformità)](../../build/reference/zc-conformance.md) opzioni del compilatore per controllare le funzionalità di estensione del linguaggio specifico. Per un elenco di opzioni del compilatore deprecate, vedere la **deprecate o rimosse le opzioni del compilatore** sezione [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+> L'uso di **/Za** quando codice viene compilato come C++ non è consigliata. Il **/Ze** opzione è deprecata poiché il comportamento è attivato per impostazione predefinita. Per un elenco di opzioni del compilatore deprecate, vedere [opzioni del compilatore rimosse e deprecate](compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options).
 
-Il compilatore Visual C++ offre una serie di funzionalità oltre a quelli specificati in standard ANSI C89, ISO C99 e ISO C++. Queste funzionalità sono noti collettivamente come estensioni Microsoft a C e C++. Queste estensioni sono disponibili per impostazione predefinita e non è disponibile quando il **/Za** opzione specificata. Per altre informazioni sulle estensioni specifiche, vedere [Extensions Microsoft a C e C++](../../build/reference/microsoft-extensions-to-c-and-cpp.md).
+Il compilatore Microsoft C/C++ supporta la compilazione del codice C in due modi:
 
-È consigliabile disabilitare le estensioni del linguaggio, specificando il **/Za** opzione se si prevede di portare il proprio programma in altri ambienti. Quando **/Za** è specificato, il compilatore considera Microsoft estesi parole chiave come identificatori semplici, disabilita le altre estensioni di Microsoft e viene definito automaticamente il `__STDC__` la macro predefinita per i programmi C.
+- Il compilatore Usa modalità di compilazione di C per impostazione predefinita, quando un file di origine ha un *1).c* estensione, o quando il [/Tc](tc-tp-tc-tp-specify-source-file-type.md) o [/TC](tc-tp-tc-tp-specify-source-file-type.md) è specificata l'opzione. Il compilatore C è un compilatore C89/C90 che, per impostazione predefinita, abilita le estensioni Microsoft per il linguaggio C. Per altre informazioni sulle estensioni specifiche, vedere [Extensions Microsoft a C e C++](microsoft-extensions-to-c-and-cpp.md). Quando entrambi compilazione C e il **/Za** opzione vengono specificati, il compilatore C rigorosamente conforme allo standard/C90 C89. Il compilatore considera Microsoft estesi parole chiave come identificatori semplici, disabilita le altre estensioni di Microsoft e viene definito automaticamente il [ \_ \_STDC\_ \_ ](../../preprocessor/predefined-macros.md) predefiniti macro per i programmi C.
 
-Altre opzioni del compilatore abbinate **/Za** può influire sul modo in cui il compilatore garantisce conformità agli standard.
+- Il compilatore possa compilare codice C in modalità di compilazione di C++. Questo comportamento è quello predefinito per i file di origine che non hanno una *1).c* estensione e quando il [/Tp](tc-tp-tc-tp-specify-source-file-type.md) o [/TP](tc-tp-tc-tp-specify-source-file-type.md) opzione specificata. In modalità di compilazione C++, il compilatore supporta le parti degli standard ISO C99 e C11 che sono state incorporate nello standard C++. Quasi tutto il codice C è anche il codice C++ valido. Un numero ridotto di parole chiave C e costrutti di codice non è valido codice C++, o viene interpretato in modo diverso in C++. Il compilatore si comporta conformemente alle C++ standard in questi casi. In modalità di compilazione C++, il **/Za** opzione può causare comportamenti imprevisti e non è consigliato.
 
-Per informazioni su modi specificare le impostazioni del comportamento specifico conformi agli standard, vedere la [/Zc](../../build/reference/zc-conformance.md) opzione del compilatore.
+Altre opzioni del compilatore possono influire sul modo in cui il compilatore garantisce conformità agli standard. Per informazioni su modi specificare standard C e C++ comportamento impostazioni specifiche, vedere la [/Zc](zc-conformance.md) opzione del compilatore. Per altre impostazioni di conformità standard C++, vedere la [/PERMISSIVE--](permissive-standards-conformance.md) e [/std](std-specify-language-standard-version.md) opzioni del compilatore.
 
 Per altre informazioni sui problemi di conformità in Visual C++, vedere [comportamento non standard](../../cpp/nonstandard-behavior.md).
 
@@ -55,16 +53,18 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [compor
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Nel riquadro di spostamento, scegliere **le proprietà di configurazione**, **C/C++**, **Language**.
+1. Nel riquadro di spostamento, scegliere **le proprietà di configurazione** > **C/C++** > **lingua**.
 
 1. Modificare il **Disabilita estensioni linguaggio** proprietà.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
-- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>.
+Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (conformità)](../../build/reference/zc-conformance.md)
+[Opzioni del compilatore](compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](setting-compiler-options.md)<br/>
+[/Zc (conformità)](zc-conformance.md)<br/>
+[/permissive/ (conformità agli standard)](permissive-standards-conformance.md)<br/>
+[/std (specifica la versione standard del linguaggio)](std-specify-language-standard-version.md)<br/>

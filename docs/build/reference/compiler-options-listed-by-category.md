@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248572"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676500"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opzioni del compilatore elencate per categoria
 
 In questo articolo viene fornito un elenco organizzato per categorie delle opzioni del compilatore. Per un elenco alfabetico, vedere [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
 
-### <a name="optimization"></a>Ottimizzazione
+## <a name="optimization"></a>Ottimizzazione
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -31,7 +31,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Oy](oy-frame-pointer-omission.md)|Omette i puntatori ai frame. (solo x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Genera codice ottimizzato per un'architettura specifica o per una gamma di architetture.|
 
-### <a name="code-generation"></a>Generazione del codice
+## <a name="code-generation"></a>Generazione del codice
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -72,7 +72,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/RTC](rtc-run-time-error-checks.md)|Attiva il controllo degli errori di runtime.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Seleziona la modalità di interpretazione della parola chiave volatile.|
 
-### <a name="output-files"></a>File di output
+## <a name="output-files"></a>File di output
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -87,7 +87,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Fp](fp-name-dot-pch-file.md)|Specifica un nome del file di intestazione precompilato.|
 |[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|Assegnare un nome generato del browser file SBR.|
 
-### <a name="preprocessor"></a>Preprocessore
+## <a name="preprocessor"></a>Preprocessore
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -105,7 +105,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/u](u-u-undefine-symbols.md)|Rimuove tutte le macro predefinite.|
 |[/X](x-ignore-standard-include-paths.md)|Ignora la directory di inclusione standard.|
 
-### <a name="language"></a>Linguaggio
+## <a name="language"></a>Linguaggio
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -129,7 +129,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Zs](zs-syntax-check-only.md)|Controlla solo la sintassi.|
 |[/ZW](zw-windows-runtime-compilation.md)|Produce un file di output per l'esecuzione nel Runtime di Windows.|
 
-### <a name="linking"></a>Collegamento
+## <a name="linking"></a>Collegamento
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -143,7 +143,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/MT](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare un file eseguibile con multithreading, usando LIBCMT.lib.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Esegue la compilazione per creare un file eseguibile con multithreading di debug, usando LIBCMTD.lib.|
 
-### <a name="miscellaneous"></a>Varie
+## <a name="miscellaneous"></a>Varie
 
 |Opzione|Scopo|
 |------------|-------------|
@@ -159,7 +159,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/H](h-restrict-length-of-external-names.md)|Deprecato. Limita la lunghezza dei nomi esterni (pubblici).|
 |[/HELP](help-compiler-command-line-help.md)|Elenca le opzioni del compilatore.|
 |[/J](j-default-char-type-is-unsigned.md)|Modifica il tipo `char` predefinito.|
-|[/ JMC](jmc.md)|Supporta il debug nativo C++ Just My Code.|
+|[/JMC](jmc.md)|Supporta il debug nativo C++ Just My Code.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Il compilatore e il linker creeranno un file binario che può essere eseguito nel kernel di Windows.|
 |[/MP](mp-build-with-multiple-processes.md)|Compila contemporaneamente più file di origine.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Evita la visualizzazione dell'intestazione di iscrizione.|
@@ -195,7 +195,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/permissive-](permissive-standards-conformance.md)|Impostare la modalità standard-operazioni di conformità.|
 |[/std](std-specify-language-standard-version.md)|Selettore di compatibilità di versione standard C++.|
 
-### <a name="deprecated-and-removed-compiler-options"></a>Opzioni del compilatore deprecate e rimosse
+## <a name="deprecated-and-removed-compiler-options"></a>Opzioni del compilatore deprecate e rimosse
 
 |Opzione|Scopo|
 |------------|-------------|
