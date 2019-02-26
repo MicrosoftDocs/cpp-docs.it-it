@@ -2,18 +2,17 @@
 title: Visual C++ in Visual Studio
 description: Visual C++ è il nome del compilatore Microsoft C++, dell'editor di codice e degli strumenti correlati nell'IDE di Visual Studio. Usare Visual C++ per sviluppare programmi per Windows, Linux, Android e iOS.
 ms.date: 09/26/2018
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0b5f263bb6716d4f66673257115d37cd17a59051
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327187"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809648"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 

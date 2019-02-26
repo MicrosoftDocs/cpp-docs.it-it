@@ -38,7 +38,7 @@ ms.locfileid: "56151657"
 |Tipi integrali|Qualsiasi tipo di Integer o di tipo a virgola mobile o un puntatore a un oggetto|
 |A virgola mobile|Qualsiasi tipo aritmetico|
 |Puntatore a un oggetto o (**void** <strong>\*</strong>)|Qualsiasi tipo intero (**void** <strong>\*</strong>), un puntatore a un oggetto o un puntatore a funzione|
-|Puntatore a funzione|Qualsiasi tipo di integrale (void *), un puntatore a un oggetto o un puntatore a funzione|
+|Puntatore a funzione|Qualsiasi tipo di integrale, un puntatore a un oggetto o un puntatore a funzione|
 |Una struttura, un'unione o una matrice|nessuno|
 |Tipo void|Qualsiasi tipo|
 

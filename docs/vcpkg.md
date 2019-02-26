@@ -3,16 +3,15 @@ title: 'vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux
 description: vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifica notevolmente l'acquisizione e installazione delle librerie C++ open source in Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518684"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809711"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux e MacOS
 
@@ -32,7 +31,7 @@ Se si crea un clone di vcpkg con librerie private nella raccolta di port, è pos
 
 ## <a name="installation"></a>Installazione
 
-Clonare il repository vcpkg da GitHub: https://github.com/Microsoft/vcpkg. È possibile scaricarlo nel percorso di cartella preferito.
+Clonare il repository vcpkg da GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). È possibile scaricarlo nel percorso di cartella preferito.
 
 Eseguire il programma di avvio automatico nella cartella radice:
 
@@ -207,7 +206,7 @@ Il contenuto di un'istanza di vcpkg è:
 
 ## <a name="command-line-reference"></a>Riferimenti alla riga di comando
 
-|Comando|Descrizione|
+|Comando|Description|
 |---------|---------|
 |**vcpkg search [pat]**|Cerca i pacchetti disponibili da installare|
 |**vcpkg install \<pacchetto>...**|Installa un pacchetto|
@@ -229,7 +228,7 @@ Il contenuto di un'istanza di vcpkg è:
 
 ### <a name="options"></a>Opzioni
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |---------|---------|
 |**--triplet \<t>**|Specifica la tripletta dell'architettura di destinazione (impostazione predefinita: `%VCPKG_DEFAULT_TRIPLET%`, vedere anche **vcpkg help triplet**)|
 |**--vcpkg-root \<percorso>**|Specifica la directory radice di vcpkg (impostazione predefinita: `%VCPKG_ROOT%`)|

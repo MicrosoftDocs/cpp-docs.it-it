@@ -1,17 +1,16 @@
 ---
 title: Conformità al linguaggio Visual C++
 ms.date: 11/15/2017
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 78c4be98ecc8e0a42e2cd0967f2bedece9dabc86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604057753e67d08c12204f9d3b09bce0e1212966
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630412"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809763"
 ---
 # <a name="visual-c-language-conformance"></a>Conformità al linguaggio Visual C++
 
@@ -157,7 +156,7 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 |&nbsp;&nbsp;[P0521R0 Deprecazione di shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0607R0 Variabili inline per la libreria standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 Deprecazione di \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4562 Nozioni fondamentali della libreria: ricerca di Boyer-Moore()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Correzione dei tipi restituiti dal servizio di ricerca](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4562 Nozioni fondamentali della libreria: algoritmo di Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Correzione dei tipi restituiti dal servizio di ricerca](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0031R0 constexpr per \<array> (nuovamente) e \<iterator>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0040R3 Estensione degli strumenti di gestione della memoria](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0084R2 Tipo restituito emplace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
@@ -296,7 +295,7 @@ L'opzione del compilatore /Zc:noexceptTypes- richiede il comportamento precedent
 
 <a name="note_charconv"></a>__charconv__  from_chars() e to_chars() sono disponibili per numeri interi. Attualmente si sta lavorando sul virgola mobile from_chars(), affinché sia seguito dal virgola mobile to_chars().
 
-<a name ="note_parallel"></a> __parallel__  La libreria degli algoritmi paralleli di C++17 è completa. Ciò non significa tuttavia che vengono parallelizzati sempre tutti gli algoritmi. Sono stati parallelizzati gli algoritmi più importanti e le firme dei criteri di esecuzione sono disponibili anche quando gli algoritmi non sono parallelizzati. L'intestazione interna centrale dell'implementazione STL (yvals.h) contiene le "note sugli algoritmi paralleli" seguenti: C++ consente a un'implementazione di implementare gli algoritmi paralleli come chiamate agli algoritmi seriali.   Con questa implementazione è possibile eseguire la parallelizzazione di diverse chiamate di algoritmi comuni, ma non di tutti.
+<a name ="note_parallel"></a> __parallel__  La libreria degli algoritmi paralleli di C++17 è completa. Ciò non significa tuttavia che vengono parallelizzati sempre tutti gli algoritmi. Sono stati parallelizzati gli algoritmi più importanti e le firme dei criteri di esecuzione sono disponibili anche quando gli algoritmi non sono parallelizzati. L'intestazione interna centrale dell'implementazione STL, yvals.h, contiene le seguenti "Parallel Algorithms Notes" (Note per algoritmi paralleli): C++ consente un'implementazione per inserire algoritmi paralleli come chiamate agli algoritmi seriali.   Con questa implementazione è possibile eseguire la parallelizzazione di diverse chiamate di algoritmi comuni, ma non di tutti.
 
 Vengono parallelizzati gli algoritmi seguenti:
 

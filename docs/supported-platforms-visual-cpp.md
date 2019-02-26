@@ -1,20 +1,19 @@
 ---
 title: Piattaforme supportate (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 helpviewer_keywords:
 - Visual C++, platforms supported
 - platforms [C++]
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5a077ae90078e4157c154cae2821e67642eff64a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8bd090acf94876ee7939b5d1d80613f688b89d7
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459436"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809633"
 ---
 # <a name="supported-platforms-visual-c"></a>Piattaforme supportate (Visual C++)
 
