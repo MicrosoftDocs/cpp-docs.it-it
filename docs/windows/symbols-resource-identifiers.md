@@ -10,12 +10,12 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 7359fdfd1007cb49025908ffea51093622943052
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: c76b870ad1fdfeda7370af03c6396bedba9530ab
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320497"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954861"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identificatori di risorsa (simboli) (C++)
 
@@ -29,12 +29,12 @@ Molto spesso i nomi dei simboli sono denominati identificatori.
 
 I simboli offrono un modo descrittivo per fare riferimento alle risorse e agli oggetti dell'interfaccia utente sia nel codice sorgente che durante l'uso negli editor di risorse. I simboli possono essere visualizzati e modificati facilmente mediante la [finestra di dialogo Simboli risorsa](../windows/viewing-resource-symbols.md).
 
-Quando si crea una nuova risorsa o un nuovo oggetto risorsa, gli [editor di risorse](../windows/resource-editors.md) forniscono alla risorsa un nome predefinito, ad esempio `IDC_RADIO1`, e le assegnano un valore. La definizione, costituita dal nome e dal valore, viene archiviata nel file Resource.h.
+Quando si crea una nuova risorsa o un nuovo oggetto risorsa, gli [editor di risorse](../windows/resource-editors.md) forniscono alla risorsa un nome predefinito, ad esempio `IDC_RADIO1`, e le assegnano un valore. La definizione di nome e dal valore viene archiviata nel `Resource.h` file.
 
 > [!NOTE]
 > Quando si copiano risorse o oggetti risorsa da un file RC a un altro, Visual C++ potrebbe modificare il valore del simbolo della risorsa trasferita o il nome e il valore del simbolo, allo scopo di evitare conflitti con i nomi o i valori dei simboli nel file esistente.
 
-Il numero di risorse e simboli è direttamente proporzionale alle dimensioni e al livello di complessità dell'applicazione. Può quindi risultare difficile tenere traccia di un numero elevato di simboli distribuiti in diversi file. La finestra di dialogo [Simboli risorsa](../windows/resource-symbols-dialog-box.md) semplifica la gestione dei simboli offrendo uno strumento centrale che consente di:
+Il numero di risorse e simboli è direttamente proporzionale alle dimensioni e al livello di complessità dell'applicazione. Può quindi risultare difficile tenere traccia di un numero elevato di simboli distribuiti in diversi file. Il **simboli risorsa** nella finestra di dialogo semplifica la gestione dei simboli offrendo uno strumento centrale che consente:
 
 - [Creare i simboli](../windows/creating-new-symbols.md)
 
