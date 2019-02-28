@@ -2,17 +2,17 @@
 title: negate (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::negate
+- functional/std::negate
 helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-ms.openlocfilehash: 029fd73faf5326a0d1b99885864b1ed992080e8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d865577ed7052937b9fa2c2c1023b3a4befcb776
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654714"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006617"
 ---
 # <a name="negate-struct"></a>negate (struct)
 

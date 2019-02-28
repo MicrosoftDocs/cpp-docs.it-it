@@ -2,17 +2,17 @@
 title: greater (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::greater
+- functional/std::greater
 helpviewer_keywords:
 - greater struct
 - greater function
 ms.assetid: ebc348e1-edcd-466b-b21a-db95bd8f9079
-ms.openlocfilehash: c6c47ae6511f815fe31f02c08e94b23b6f78f27c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7867de3a56893499f8d705e81ac3b34fabcf188c
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613109"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006279"
 ---
 # <a name="greater-struct"></a>greater (struct)
 

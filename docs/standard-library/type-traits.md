@@ -1,22 +1,22 @@
 ---
 title: '&lt;type_traits&gt;'
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - <type_traits>
 helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: f56334cbb25132d45dfabb68cbcd5b832096a87c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514682"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006726"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-Definisce modelli che forniscono costanti in fase di compilazione in grado di offrire informazioni sulle proprietà dei rispettivi argomenti tipo o produrre tipi trasformati.
+Definisce modelli per le costanti in fase di compilazione che offrono informazioni sulle proprietà dei rispettivi argomenti tipo o producono tipi trasformati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,29 +26,33 @@ Definisce modelli che forniscono costanti in fase di compilazione in grado di of
 
 ## <a name="remarks"></a>Note
 
-Le classi e i modelli in \<type_traits > vengono usate per supportare l'inferenza del tipo, classificazione e la trasformazione in fase di compilazione, per rilevare gli errori relativi ai tipi e che consentono di ottimizzare il codice generico. Questi modelli e classi includono tratti di tipo unario che descrivono una proprietà di un tipo, tratti di tipo binario che descrivono una relazione tra tipi e tratti di trasformazione che modificano una proprietà di un tipo.
+Le classi e i modelli in \<type_traits > vengono usate per supportare l'inferenza del tipo, classificazione e la trasformazione in fase di compilazione. Vengono inoltre utilizzati per rilevare gli errori relativi ai tipi e che consentono di ottimizzare il codice generico. Tratti di tipo unario descrivono una proprietà di un tipo, tratti di tipo binario descrivono una relazione tra i tipi e tratti di trasformazione modificano una proprietà di un tipo.
 
-Per supportare i tratti di tipo viene definita una classe helper `integral_constant`. Questa classe dispone delle specializzazioni modello `true_type` e `false_type` che formano le classi di base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo è *include true*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo è *include false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type).
+La classe helper `integral_constant` e relative specializzazioni del modello `true_type` e `false_type` formano le classi di base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo *resti valido*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo *contenga false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Un *modificatore di tipo* o *tratto di trasformazione* è un modello che accetta uno o più argomenti di modello e include un membro, `type`, che è sinonimo di tipo modificato.
 
 ### <a name="alias-templates"></a>Modelli di alias
 
-Per semplificare le espressioni dei tratti di tipo, sono forniti [modelli di alias](../cpp/aliases-and-typedefs-cpp.md) per `typename some_trait<T>::type`, dove " `some_trait`" corrisponde al nome della classe di modelli. Ad esempio, [add_const](../standard-library/add-const-class.md) include il modello di alias per il rispettivo tipo `add_const_t`, definito come:
+Per semplificare le espressioni dei tratti, digitare [modelli di alias](../cpp/aliases-and-typedefs-cpp.md) per `typename some_trait<T>::type` vengono fornite, in cui *some_trait* è il nome della classe modello. Ad esempio, [add_const](../standard-library/add-const-class.md) include il modello di alias per il rispettivo tipo `add_const_t`, definito come:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-|||||
-|-|-|-|-|
-|add_const_t|aligned_storage_t|make_signed_t|remove_pointer_t|
-|add_cv_t|aligned_union_t|make_unsigned_t|remove_reference_t|
-|add_lvalue_reference_t|common_type_t|remove_all_extents_t|remove_volatile_t|
-|add_pointer_t|conditional_t|remove_const_t|result_of_t|
-|add_rvalue_reference_t|decay_t|remove_cv_t|underlying_type_t|
-|add_volatile_t|enable_if_t|remove_extent_t||
+Questi sono gli alias forniti per il `type` membri:
+
+||||
+|-|-|-|
+| add_const_t | add_cv_t | add_lvalue_reference_t |
+| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
+| aligned_storage_t | aligned_union_t | common_type_t |
+| conditional_t | decay_t | enable_if_t |
+| invoke_result_t | make_signed_t | make_unsigned_t |
+| remove_all_extents_t | remove_const_t | remove_cv_t |
+| remove_extent_t | remove_pointer_t | remove_reference_t |
+| remove_volatile_t | result_of_t | underlying_type_t |
 
 ### <a name="classes"></a>Classi
 
@@ -133,6 +137,10 @@ Proprietà dei tipi
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Verifica se il tipo è assegnabile mediante spostamento e se l'assegnazione è nota come operazione che non genera eccezioni.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Verifica se il tipo è distruttibile e se il distruttore è noto come elemento che non genera eccezioni.|
 |`has_virtual_destructor`|Verifica se il tipo ha un distruttore virtuale.|
+| [is_invocable](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando tipi di argomenti specificati.<br/> Aggiunta di c++17. |
+| [is_invocable_r](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato mediante i tipi di argomento specificati e il risultato è convertibile nel tipo specificato.<br/> Aggiunta di c++17. |
+| [is_nothrow_invocable](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando l'argomento specificato di tipi ed è noto per non generare eccezioni.<br/> Aggiunta di c++17. |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando i tipi di argomento specificato ed è noto per non generare eccezioni e il risultato è convertibile nel tipo specificato.<br/> Aggiunta di c++17. |
 
 Query sulle proprietà del tipo
 
@@ -200,7 +208,8 @@ Altre trasformazioni
 |[conditional](../standard-library/conditional-class.md)|Se la condizione è true, genera il primo tipo specificato, altrimenti genera il secondo.|
 |[decay](../standard-library/decay-class.md)|Genera il tipo come passato da valore. Crea un tipo di non riferimento, non constante o non volatile oppure crea un puntatore al tipo.|
 |[enable_if](../standard-library/enable-if-class.md)|Se la condizione è true, genera il primo tipo specificato, altrimenti non genera alcun tipo.|
-|[result_of](../standard-library/result-of-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati.|
+|[invoke_result](invoke-result-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. <br/>Aggiunta di c++17. |
+|[result_of](../standard-library/result-of-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. <br/>Aggiunto in c++14, deprecata in c++17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Genera il tipo integrale sottostante per un tipo di enumerazione.|
 
 ## <a name="see-also"></a>Vedere anche

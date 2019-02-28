@@ -1,21 +1,21 @@
 ---
 title: Classe const_mem_fun1_t
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun1_t
+- functional/std::const_mem_fun1_t
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 53724c3d9b795d8cbde7a4bcda3531e43d41c4a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548786"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006357"
 ---
 # <a name="constmemfun1t-class"></a>Classe const_mem_fun1_t
 
-Classe di adattatori che consente a una funzione membro **const** che accetta un singolo argomento di essere chiamata come oggetto funzione binaria, una volta inizializzata con un argomento di puntatore.
+Classe di adattatori che consente a una funzione membro **const** che accetta un singolo argomento di essere chiamata come oggetto funzione binaria, una volta inizializzata con un argomento di puntatore. Deprecate in c++11, rimossi in c++17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,21 +23,21 @@ Classe di adattatori che consente a una funzione membro **const** che accetta un
 template <class Result, class Type, class Arg>
 class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 {
-    explicit const_mem_fun1_t(Result (Type::* _Pm)(Arg) const);
-    Result operator()(const Type* _Pleft, Arg right) const;
+    explicit const_mem_fun1_t(Result (Type::* member_ptr)(Arg) const);
+    Result operator()(const Type* left, Arg right) const;
 };
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*_Pm*<br/>
+*member_ptr*<br/>
 Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-*Pleft*<br/>
-Il **const** oggetto a cui il *_Pm* funzione membro viene chiamata su.
+*left*<br/>
+Il **const** oggetto a cui il *member_ptr* funzione membro viene chiamata su.
 
 *right*<br/>
-L'argomento che viene assegnato a *_Pm*.
+L'argomento che viene assegnato a *member_ptr*.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -45,11 +45,11 @@ Funzione binaria adattabile.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia della *_Pm*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` prevede la restituzione ( *pleft*->\*<em>Pm</em>) ( *destro* ) **const**.
+La classe modello archivia una copia della *member_ptr*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` prevede la restituzione `(left->member_ptr)(right) const`.
 
 ## <a name="example"></a>Esempio
 
-Il costruttore di `const_mem_fun1_t` non viene usato in genere direttamente. Per adattare le funzioni membro, viene usata la funzione helper `mem_fun`. Per un esempio di come usare gli adattatori di funzione membro, vedere [mem_fun](../standard-library/functional-functions.md#mem_fun).
+Il costruttore di `const_mem_fun1_t` viene usato raramente in modo diretto. `mem_fn` Consente di adattare le funzioni membro. Visualizzare [mem_fn](../standard-library/functional-functions.md#mem_fn) per un esempio di come usare gli adattatori di funzione membro.
 
 ## <a name="requirements"></a>Requisiti
 

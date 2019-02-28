@@ -1,22 +1,22 @@
 ---
 title: Classe pointer_to_binary_function
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::pointer_to_binary
+- functional/std::pointer_to_binary
 helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: dd96aa1bf7f1f19b84e2e83e3ab5b33c4a0c5bfc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 88d38be258c6ceb1054e0d31cc52e4d8d25186ec
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332101"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006799"
 ---
 # <a name="pointertobinaryfunction-class"></a>Classe pointer_to_binary_function
 
-Converte un puntatore a funzione binaria in una funzione binaria adattabile.
+Converte un puntatore a funzione binaria in una funzione binaria adattabile. Deprecate in c++11, rimossi in c++17.
 
 ## <a name="syntax"></a>Sintassi
 

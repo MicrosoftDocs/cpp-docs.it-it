@@ -2,17 +2,17 @@
 title: modulus (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::modulus
+- functional/std::modulus
 helpviewer_keywords:
 - modulus class
 - modulus struct
 ms.assetid: 86d342f7-b7b1-46a4-b0bb-6b7ae827369b
-ms.openlocfilehash: e5ab03cf51a001e6e62d3bc09c2899b8a319456b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0488fbd6d943281de9eafdd33accf0375be17d
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478624"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006331"
 ---
 # <a name="modulus-struct"></a>modulus (struct)
 

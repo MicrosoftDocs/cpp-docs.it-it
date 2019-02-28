@@ -2,17 +2,17 @@
 title: logical_not (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::logical_not
+- functional/std::logical_not
 helpviewer_keywords:
 - logical_not class
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
-ms.openlocfilehash: 0c647219cfb485910765f02e772c3e3220312fa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fd554a28775a6b625332ac250a46171dd369f50
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593271"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006565"
 ---
 # <a name="logicalnot-struct"></a>logical_not (struct)
 

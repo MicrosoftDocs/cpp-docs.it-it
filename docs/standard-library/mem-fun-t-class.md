@@ -1,21 +1,21 @@
 ---
 title: Classe mem_fun_t
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::mem_fun_t
+- functional/std::mem_fun_t
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-ms.openlocfilehash: 32c66eb20215bc68efd0f0bb43c30f951da1bae9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf1080f5f832bd79a347ee7fd847ff56a7567fdf
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456368"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006513"
 ---
 # <a name="memfunt-class"></a>Classe mem_fun_t
 
-Classe di adattatori che consente un `non_const` funzione membro che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di puntatore.
+Classe di adattatori che consente un `non_const` funzione membro che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di puntatore. Deprecate in c++11, rimossi in c++17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,7 +34,7 @@ class mem_fun_t : public unary_function<Type *, Result> {
 *_Pm*<br/>
 Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-*Pleft*<br/>
+*_Pleft*<br/>
 L'oggetto che il *_Pm* funzione membro viene chiamata su.
 
 ## <a name="return-value"></a>Valore restituito
