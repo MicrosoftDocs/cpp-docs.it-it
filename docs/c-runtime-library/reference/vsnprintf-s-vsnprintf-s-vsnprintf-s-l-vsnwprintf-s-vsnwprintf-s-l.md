@@ -19,6 +19,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _vsnprintf_s
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 6654588754bbd8a8d6f6ac4c5dcd8361e932a5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 255c3b760dec1495a4f9a82915878a5504844f24
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480561"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210705"
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -120,7 +121,7 @@ Numero massimo di caratteri wide da scrivere, escluso il carattere Null di termi
 *format*<br/>
 Specifica di formato.
 
-*valore di ArgPtr*<br/>
+*argptr*<br/>
 Puntatore a un elenco di argomenti.
 
 *locale*<br/>
@@ -142,8 +143,8 @@ Se *buffer* oppure *formato* è un **NULL** puntatore, o se *conteggio* è minor
 |-----------------|------------|-------------|
 |*buffer* è **NULL**|-1|**EINVAL**|
 |*formato* è **NULL**|-1|**EINVAL**|
-|*conteggio* < = 0|-1|**EINVAL**|
-|*sizeOfBuffer* troppo piccolo (e *conteggio* ! = **truncate**)|-1 (e *buffer* impostato su una stringa vuota)|**ERANGE**|
+|*count* <= 0|-1|**EINVAL**|
+|*sizeOfBuffer* too small (and *count* != **_TRUNCATE**)|-1 (e *buffer* impostato su una stringa vuota)|**ERANGE**|
 
 ## <a name="remarks"></a>Note
 
@@ -165,16 +166,16 @@ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli.
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vsntprintf_s**|**_vsnprintf_s**|**_vsnprintf_s**|**_vsnwprintf_s**|
-|**vsntprintf_s_l**|**_vsnprintf_s_l**|**_vsnprintf_s_l**|**_vsnwprintf_s_l**|
+|**_vsntprintf_s**|**_vsnprintf_s**|**_vsnprintf_s**|**_vsnwprintf_s**|
+|**_vsntprintf_s_l**|**_vsnprintf_s_l**|**_vsnprintf_s_l**|**_vsnwprintf_s_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
 |**vsnprintf_s**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vsnprintf_s**, **vsnprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vsnwprintf_s**, **vsnwprintf_s_l**|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vsnprintf_s**, **_vsnprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vsnwprintf_s**, **_vsnwprintf_s_l**|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
 
 \* Richiesto per la compatibilità con UNIX V.
 

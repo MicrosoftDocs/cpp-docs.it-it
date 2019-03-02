@@ -18,6 +18,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tstoi
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: 5c03f2766701f7e360ad0bf4f0fc701d2a7e983c
-ms.sourcegitcommit: b401a05c5c0f5cc4b32893d7382c05a51e4ab783
+ms.openlocfilehash: b6a1f52e6c83f53230c736db3a506aed4b52e434
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50999986"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210692"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -90,7 +91,7 @@ Queste funzioni convertono una stringa di caratteri in un valore integer (**atoi
 
 Il *str* argomento **atoi** e **wtoi** ha il formato seguente:
 
-> [*whitespace*] [*sign*] [*cifre*]]
+> [*whitespace*] [*sign*] [*digits*]]
 
 Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* uno o più cifre.
 
@@ -100,15 +101,15 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tstoi**|**atoi**|**atoi**|**_wtoi**|
-|**ttoi**|**atoi**|**atoi**|**_wtoi**|
+|**_tstoi**|**atoi**|**atoi**|**_wtoi**|
+|**_ttoi**|**atoi**|**atoi**|**_wtoi**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |--------------|---------------------|
 |**atoi**|\<stdlib.h>|
-|**atoi_l**, **wtoi**, **wtoi_l**|\<stdlib.h> or \<wchar.h>|
+|**_atoi_l**, **_wtoi**, **_wtoi_l**|\<stdlib.h> or \<wchar.h>|
 
 ## <a name="example"></a>Esempio
 

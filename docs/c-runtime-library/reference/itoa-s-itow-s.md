@@ -1,5 +1,5 @@
 ---
-title: itoa_s, itow_s funzioni
+title: _itoa_s, _itow_s functions
 ms.date: 03/21/2018
 apiname:
 - _itoa_s
@@ -24,6 +24,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _itoa_s
@@ -75,12 +76,12 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 47eb030790359f25a7df5275a247c071fb3d599f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e534a9010f3f39c517b7b0f2bf50041190caf7d8
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441705"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210354"
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
@@ -131,7 +132,7 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>Parametri
 
-*valore*<br/>
+*value*<br/>
 Numero da convertire.
 
 *buffer*<br/>
@@ -174,7 +175,7 @@ CRT include macro pratiche per definire le dimensioni del buffer richiesto per c
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
 |**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
 |**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
 |**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
@@ -184,8 +185,8 @@ CRT include macro pratiche per definire le dimensioni del buffer richiesto per c
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**itoa_s**, **ltoa_s**, **ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
-|**itow_s**, **ltow_s**, **ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> or \<wchar.h>|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> or \<wchar.h>|
 
 Queste funzioni sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

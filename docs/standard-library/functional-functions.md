@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 559110361b9d3d8c66ff261860f8885ff56d44d5
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: 352efc31010a9fe665348ca35adfd68835407e67
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006729"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210993"
 ---
 # <a name="ltfunctionalgt-functions"></a>Funzioni &lt;functional&gt;
 
@@ -63,16 +63,16 @@ Queste funzioni sono deprecate in c++17:
 Associa gli argomenti a un oggetto richiamabile.
 
 ```cpp
-template <class Fty, class T1, class T2, ..., class TN>
-unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
+template <class FT, class T1, class T2, ..., class TN>
+unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 
-template <class Ret, class Fty, class T1, class T2, ..., class TN>
-unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
+template <class RTy, class FT, class T1, class T2, ..., class TN>
+unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Fty*<br/>
+*Fey*<br/>
 Tipo di oggetto da chiamare.
 
 *TN*<br/>
@@ -86,11 +86,11 @@ Ennesimo argomento di chiamata.
 
 ### <a name="remarks"></a>Note
 
-I tipi `Fty, T1, T2, ..., TN` devono essere costruibili mediante copia e `INVOKE(fn, t1, ..., tN)` deve essere un'espressione valida per alcuni valori `w1, w2, ..., wN`.
+I tipi `FT, T1, T2, ..., TN` deve essere costruibile, copia e `INVOKE(fn, t1, ..., tN)` deve essere un'espressione valida per alcuni valori `w1, w2, ..., wN`.
 
-La prima funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo di risultato debole. L'effetto della `g(u1, u2, ..., uM)` viene `INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, dove `cv` è qualificatori cv di `g` e i valori e i tipi degli argomenti associati `v1, v2, ..., vN` vengono determinati come indicato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato.
+La prima funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo di risultato debole. L'effetto della `g(u1, u2, ..., uM)` viene `INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, dove `cv` è qualificatori cv di `g` e i valori e i tipi degli argomenti associati `v1, v2, ..., vN` vengono determinati come indicato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato.
 
-La seconda funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo nidificato `result_type` sinonimo di `Ret`. L'effetto di `g(u1, u2, ..., uM)` è `INVOKE(f, v1, v2, ..., vN, Ret)`, dove `cv` corrisponde ai qualificatori CV di `g` e i valori e i tipi degli argomenti associati `v1, v2, ..., vN` vengono determinati come specificato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato e con un tipo restituito specificato.
+La seconda funzione modello restituisce un wrapper di chiamata di inoltro `g` con un tipo nidificato `result_type` sinonimo di `RTy`. L'effetto di `g(u1, u2, ..., uM)` è `INVOKE(f, v1, v2, ..., vN, RTy)`, dove `cv` corrisponde ai qualificatori CV di `g` e i valori e i tipi degli argomenti associati `v1, v2, ..., vN` vengono determinati come specificato di seguito. È possibile usarla per associare argomenti a un oggetto chiamabile in modo da avere un oggetto chiamabile con un elenco di argomenti personalizzato e con un tipo restituito specificato.
 
 I valori degli argomenti associati `v1, v2, ..., vN` e i rispettivi tipi corrispondenti `V1, V2, ..., VN` dipendono dal tipo dell'argomento corrispondente `ti` di tipo `Ti` nella chiamata a `bind` e dai qualificatori CV `cv` del wrapper di chiamata `g` come segue:
 
@@ -98,15 +98,15 @@ se `ti` è di tipo `reference_wrapper<T>`, l'argomento `vi` è `ti.get()` e il r
 
 Se il valore di `std::is_bind_expression<Ti>::value` viene **true** dell'argomento `vi` viene `ti(u1, u2, ..., uM)` e il relativo tipo `Vi` è `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
 
-se il valore `j` di `std::is_placeholder<Ti>::value` è diverso da zero, l'argomento `vi` è `uj` e il relativo tipo `Vi` è `Uj&`;
+Se il valore `j` dei `std::is_placeholder<Ti>::value` è diverso da zero l'argomento `vi` viene `uj` e il relativo tipo `Vi` è `Uj&`;
 
 in caso contrario, l'argomento `vi` è `ti` e il relativo tipo `Vi` è `Ti` `cv` `&`.
 
 Ad esempio, data una funzione `f(int, int)`, l'espressione `bind(f, _1, 0)` restituisce un wrapper di chiamata di inoltro `cw` in modo che `cw(x)` chiami `f(x, 0)`. L'espressione `bind(f, 0, _1)` restituisce un wrapper di chiamata di inoltro `cw` in modo che `cw(x)` chiami `f(0, x)`.
 
-Il numero degli argomenti presenti in una chiamata a `bind` in aggiunta all'argomento `fn` deve essere uguale al numero degli argomenti che è possibile passare all'oggetto chiamabile `fn`. Di conseguenza, `bind(cos, 1.0)` è corretto, mentre `bind(cos)` e `bind(cos, _1, 0.0)` sono entrambi errati.
+Il numero di argomenti in una chiamata a `bind` e l'argomento `fn` deve essere uguale al numero di argomenti che può essere passato all'oggetto chiamabile `fn`. Ad esempio, `bind(cos, 1.0)` sia corretto ed entrambe `bind(cos)` e `bind(cos, _1, 0.0)` non sono corrette.
 
-Il numero degli argomenti presenti nella chiamata di funzione al wrapper di chiamata restituito da `bind` deve essere almeno uguale al valore con numero più alto di `is_placeholder<PH>::value` per tutti gli argomenti segnaposto nella chiamata a `bind`. Di conseguenza, `bind(cos, _2)(0.0, 1.0)` è corretto (e restituisce `cos(1.0)`), mentre `bind(cos, _2)(0.0)` è errato.
+Il numero degli argomenti presenti nella chiamata di funzione al wrapper di chiamata restituito da `bind` deve essere almeno uguale al valore con numero più alto di `is_placeholder<PH>::value` per tutti gli argomenti segnaposto nella chiamata a `bind`. Ad esempio, `bind(cos, _2)(0.0, 1.0)` sia corretto (e restituisce `cos(1.0)`), e `bind(cos, _2)(0.0)` non è corretto.
 
 ### <a name="example"></a>Esempio
 
@@ -161,7 +161,7 @@ int main()
 
 ## <a name="bind1st"></a> bind1st
 
-Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria associando il primo argomento della funzione binaria a un valore specificato. Deprecate in c++11, rimossi in c++17.
+Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria. Associa il primo argomento della funzione binaria al valore specificato. Deprecate in c++11, rimossi in c++17.
 
 ```cpp
 template <class Operation, class Type>
@@ -182,9 +182,9 @@ L'oggetto funzione unaria risultante dall'associazione del primo argomento dell'
 
 ### <a name="remarks"></a>Note
 
-I binder di funzione sono un tipo di adattatore di funzione e restituiscono oggetti funzione. Pertanto, possono essere usati in determinati tipi di composizione di funzione per costruire espressioni più complicate e potenti.
+I Binder di funzione sono un tipo di adattatore di funzione. Quanto restituiscono oggetti funzione, possono essere utilizzati in determinati tipi di composizione di funzioni per costruire espressioni più complicate e potenti.
 
-Se *func* è un oggetto di tipo `Operation` e `c` è una costante, quindi `bind1st` ( `func`, `c`) equivale alla [binder1st](../standard-library/binder1st-class.md) costruttore di classe `binder1st` <  `Operation`> ( `func`, `c`) ed è più pratico.
+Se *func* è un oggetto di tipo `Operation` e `c` è una costante, quindi `bind1st( func, c )` equivale al [binder1st](../standard-library/binder1st-class.md) costruttore della classe `binder1st<Operation>( func, c )`ed è più pratico per usare.
 
 ### <a name="example"></a>Esempio
 
@@ -255,7 +255,7 @@ The number of elements in v1 less than 10 is: 2.
 
 ## <a name="bind2nd"></a> bind2nd
 
-Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria associando il secondo argomento della funzione binaria a un valore specificato. Deprecate in c++11, rimossi in c++17.
+Funzione di modello helper che crea un adattatore per convertire un oggetto funzione binaria in un oggetto funzione unaria. Associa il secondo argomento della funzione binaria al valore specificato. Deprecate in c++11, rimossi in c++17.
 
 ```cpp
 template <class Operation, class Type>
@@ -272,13 +272,13 @@ Valore a cui deve essere associato il secondo argomento dell'oggetto funzione bi
 
 ### <a name="return-value"></a>Valore restituito
 
-L'oggetto funzione unaria risultante dall'associazione del secondo argomento dell'oggetto funzione binaria al valore *a destra*.
+Il risultato di oggetto funzione unaria di associazione del secondo argomento dell'oggetto funzione binaria da *a destra*.
 
 ### <a name="remarks"></a>Note
 
-I binder di funzione sono un tipo di adattatore di funzione e restituiscono oggetti funzione. Pertanto, possono essere usati in determinati tipi di composizione di funzione per costruire espressioni più complicate e potenti.
+I Binder di funzione sono un tipo di adattatore di funzione. Quanto restituiscono oggetti funzione, possono essere utilizzati in determinati tipi di composizione di funzioni per costruire espressioni più complicate e potenti.
 
-Se *func* è un oggetto di tipo `Operation` e `c` è una costante, quindi `bind2nd` ( `func`, `c` ) equivale alla [binder2nd](../standard-library/binder2nd-class.md) costruttore di classe **binder2nd\<operazione >** ( `func`, `c` ) ed è più pratico.
+Se *func* è un oggetto di tipo `Operation` e `c` è una costante, quindi `bind2nd( func, c )` equivale al [binder2nd](../standard-library/binder2nd-class.md) costruttore della classe `binder2nd<Operation>( func, c )`ed è più pratico da utilizzare.
 
 ### <a name="example"></a>Esempio
 
@@ -349,7 +349,7 @@ The number of elements in v1 less than 10 is: 2.
 
 ## <a name="bit_and"></a> bit_and
 
-Oggetto funzione predefinito che esegue l'operazione AND bit per bit (`operator&` binario) sui relativi argomenti.
+Un oggetto funzione predefinito che esegue un'operazione con AND bit per bit (binario `operator&`) sui relativi argomenti.
 
 ```cpp
 template <class Type = void>
@@ -389,7 +389,7 @@ Il funtore `bit_and` è limitato ai tipi integrali per i tipi di dati di base o 
 
 ## <a name="bit_not"></a> bit_not
 
-Oggetto funzione predefinito che esegue l'operazione di complemento (NOT) bit per bit (`operator~` unario) sul relativo argomento. Aggiunto in c++14.
+Un oggetto funzione predefinito che esegue un complemento (NOT) operazione bit per bit (unario `operator~`) sul relativo argomento. Aggiunto in c++14.
 
 ```cpp
 template <class Type = void>
@@ -425,7 +425,7 @@ Il funtore `bit_not` è limitato ai tipi integrali per i tipi di dati di base o 
 
 ## <a name="bit_or"></a> bit_or
 
-Oggetto funzione predefinito che esegue l'operazione OR bit per bit (`operator|`) negli argomenti.
+Un oggetto funzione predefinito che esegue un'operazione OR bit per bit (`operator|`) sui relativi argomenti.
 
 ```cpp
 template <class Type = void>
@@ -465,7 +465,7 @@ Il funtore `bit_or` è limitato ai tipi integrali per i tipi di dati di base o a
 
 ## <a name="bit_xor"></a> bit_xor
 
-Oggetto funzione predefinito che esegue l'operazione XOR bit per bit (`operator^` binario) sui relativi argomenti.
+Un oggetto funzione predefinito che esegue un'operazione XOR bit per bit (binario `operator^`) sui relativi argomenti.
 
 ```cpp
 template <class Type = void>
@@ -594,13 +594,13 @@ Richiama l'oggetto chiamabile *fn* utilizzando i parametri *args*. In pratica `I
 
 - `(t1.get().*f)(t2, ..., tN)` Quando `f` è un puntatore a funzione membro della classe `T` e `std::decay_t<decltype(t1)>` è una specializzazione di `std::reference_wrapper`.
 
-- `((*t1).*f)(t2, ..., tN)` Quando `f` è un puntatore a funzione membro della classe `T` e `t1` non è uno dei tipi precedenti.
+- `((*t1).*f)(t2, ..., tN)` Quando `f` è un puntatore a funzione membro della classe `T` e `t1` non corrisponde a uno dei tipi precedenti.
 
 - `t1.*f` quando N == 1 e `f` è un puntatore ai dati dei membri di una classe `T` e `t1` è un oggetto di tipo `T`, un riferimento a un oggetto di tipo `T` o un riferimento a un oggetto di un tipo derivato da `T`.  Ovvero, quando `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` è true.
 
 - `t1.get().*f` Quando N = = 1 e `f` è un puntatore ai dati dei membri di una classe `T` e `std::decay_t<decltype(t1)>` è una specializzazione di `std::reference_wrapper`.
 
-- `(*t1).*f` Quando N = = 1 e `f` è un puntatore ai dati dei membri di una classe `T` e `t1` non è uno dei tipi precedenti.
+- `(*t1).*f` Quando N = = 1 e `f` è un puntatore ai dati dei membri di una classe `T` e `t1` non corrisponde a uno dei tipi precedenti.
 
 - `f(t1, t2, ..., tN)` in tutti gli altri casi.
 
@@ -620,50 +620,61 @@ struct Demo
 
     Demo(int const n) : n_{n} {}
 
-    void operator()(int const i, int const j) const
+    void operator()( int const i, int const j ) const
     {
         std::cout << "Demo operator( " << i << ", "
-            << j << " ) is " << i * j << std::endl;
+            << j << " ) is " << i * j << "\n";
     }
 
-    void difference(int const i) const 
+    void difference( int const i ) const
     {
         std::cout << "Demo.difference( " << i << " ) is "
-            << n_ - i << std::endl;
+            << n_ - i << "\n";
     }
 };
 
 void divisible_by_3(int const i)
 {
-    std::cout << i;
-    (i % 3) ? std::cout << " isn't divisible by 3."
-        : std::cout << " is divisible by 3.";
-    std::cout << std::endl;
+    std::cout << i << ( i % 3 == 0 ? " is" : " isn't" )
+        << " divisible by 3.\n";
 }
 
 int main()
 {
-    // Invoke a function object (call operator).
     Demo d{ 42 };
+    Demo * pd{ &d };
+
+    // Invoke a function object (call operator).
     std::invoke( d, 3, -7 );
 
-    // Invoke a member function.
-    std::invoke(&Demo::difference, d, 29);
+    // Invoke a member function or pointer to member function:
+    std::invoke( &Demo::difference, d, 29 );
+    std::invoke( &Demo::difference, pd, 13 );
 
-    // Invoke a data member.
-    std::cout << "n_: " << std::invoke(&Demo::n_, d) << '\n';
+    // Invoke a data member on an object or pointer to object:
+    std::cout << "d.n_: " << std::invoke( &Demo::n_, d ) << "\n";
+    std::cout << "pd->n_: " << std::invoke( &Demo::n_, pd ) << "\n";
 
-    // Invoke a stand-alone (free) function.
+    // Invoke a stand-alone (free) function:
     std::invoke( divisible_by_3, 42 );
 
-    // Invoke a lambda.
-    std::invoke( [](int const i){
-        std::cout << i; 
-        (i % 7) ? std::cout << " isn't divisible by 7."
-            : std::cout << " is divisible by 7.";
-        std::cout << std::endl;
-    }, 42 );
+    // Invoke a lambda:
+    auto divisible_by_7 = []( int const i ) {
+        std::cout << i << ( i % 7 == 0 ? " is" : " isn't" )
+            << " divisible by 7.\n";
+        };
+    std::invoke( divisible_by_7, 42 );
 }
+```
+
+```Output
+Demo operator( 3, -7 ) is -21
+Demo.difference( 29 ) is 13
+Demo.difference( 13 ) is 29
+d.n_: 42
+pd->n_: 42
+42 is divisible by 3.
+42 is divisible by 7.
 ```
 
 ## <a name="mem_fn"></a> mem_fn
@@ -671,13 +682,13 @@ int main()
 Genera un wrapper di chiamata semplice.
 
 ```cpp
-template <class Ret, class Ty>
-unspecified mem_fn(Ret Ty::*pm);
+template <class RTy, class Ty>
+unspecified mem_fn(RTy Ty::*pm);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*RET*<br/>
+*RTy*<br/>
 Tipo restituito della funzione di cui è stato eseguito il wrapping.
 
 *Ty*<br/>
@@ -685,11 +696,11 @@ Tipo di puntatore a funzione membro.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello restituisce un wrapper di chiamata semplice `cw`, con un tipo di risultato debole, in modo che l'espressione `cw(t, a2, ..., aN)` equivalga a `INVOKE(pm, t, a2, ..., aN)`. Non genera eccezioni.
+La funzione modello restituisce un wrapper di chiamata semplice `cw`, con un tipo di risultato debole, in modo che l'espressione `cw(t, a2, ..., aN)` equivale a `INVOKE(pm, t, a2, ..., aN)`. Che non generi alcuna eccezione.
 
-Il wrapper di chiamata restituito deriva da `std::unary_function<cv Ty*, Ret>` (definendo il tipo nidificato `result_type` come sinonimo di *Ret* e il tipo annidato `argument_type` come un sinonimo `cv Ty*`) solo se il tipo  *Ty* è un puntatore a funzione membro con qualificatore cv `cv` che non accetta argomenti.
+Il wrapper di chiamata restituito deriva da `std::unary_function<cv Ty*, RTy>` (e definisce il tipo annidato `result_type` come sinonimo di *RTy* e il tipo annidato `argument_type` come un sinonimo `cv Ty*`) solo se il tipo *Ty*  è un puntatore a funzione membro con qualificatore cv `cv` che non accetta argomenti.
 
-Il wrapper di chiamata restituito deriva da `std::binary_function<cv Ty*, T2, Ret>` (definendo il tipo nidificato `result_type` come sinonimo di *Ret*, il tipo annidato `first argument_type` come un sinonimo `cv Ty*`e il tipo annidato `second argument_type`come un sinonimo `T2`) solo se il tipo *Ty* è un puntatore a funzione membro con qualificatore cv `cv` che accetta un argomento, di tipo `T2`.
+Il wrapper di chiamata restituito deriva da `std::binary_function<cv Ty*, T2, RTy>` (e definisce il tipo annidato `result_type` come sinonimo di *RTy*, il tipo annidato `first argument_type` come un sinonimo `cv Ty*`e il tipo annidato `second argument_type` come un sinonimo `T2`) solo se il tipo *Ty* è un puntatore a funzione membro con qualificatore cv `cv` che accetta un argomento, di tipo `T2`.
 
 ### <a name="example"></a>Esempio
 
@@ -731,25 +742,25 @@ int main()
 
 ## <a name="mem_fun"></a> mem_fun
 
-Funzioni di modello helper utilizzate per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzate con gli argomenti di puntatore. Deprecate in c++11 in favore di [mem_fn](#mem_fn) e [associare](#bind)e rimossi in c++17.
+Funzioni di modello helper utilizzate per costruire gli adattatori dell'oggetto funzione per funzioni membro una volta inizializzate con gli argomenti di puntatore. Deprecate in c++11 per [mem_fn](#mem_fn) e [associare](#bind)e rimossi in c++17.
 
 ```cpp
 template <class Result, class Type>
-mem_fun_t<Result, Type> mem_fun (Result(Type::* pmem)());
+mem_fun_t<Result, Type> mem_fun (Result(Type::* pMem)());
 
 template <class Result, class Type, class Arg>
-mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg));
+mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg));
 
 template <class Result, class Type>
-const_mem_fun_t<Result, Type> mem_fun(Result (Type::* pmem)() const);
+const_mem_fun_t<Result, Type> mem_fun(Result (Type::* pMem)() const);
 
 template <class Result, class Type, class Arg>
-const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
+const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*pmem*<br/>
+*pMem*<br/>
 Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -822,21 +833,21 @@ Funzioni modello helper usate per costruire gli adattatori dell'oggetto funzione
 
 ```cpp
 template <class Result, class Type>
-mem_fun_ref_t<Result, Type> mem_fun_ref(Result (Type::* pmem)());
+mem_fun_ref_t<Result, Type> mem_fun_ref(Result (Type::* pMem)());
 
 template <class Result, class Type, class Arg>
-mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (Type::* pmem)(Arg));
+mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (Type::* pMem)(Arg));
 
 template <class Result, class Type>
-const_mem_fun_ref_t<Result, Type> mem_fun_ref(Result Type::* pmem)() const);
+const_mem_fun_ref_t<Result, Type> mem_fun_ref(Result Type::* pMem)() const);
 
 template <class Result, class Type, class Arg>
-const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) const);
+const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) const);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*pmem*<br/>
+*pMem*<br/>
 Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -923,16 +934,16 @@ With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 
 ## <a name="not1"></a> not1
 
-Restituisce il complemento di un predicato unario. Deprecato in favore di [not_fn](#not_fn) in c++17.
+Restituisce il complemento di un predicato unario. Deprecato per [not_fn](#not_fn) in c++17.
 
 ```cpp
 template <class UnaryPredicate>
-unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
+unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*pred*<br/>
+*predicate*<br/>
 Predicato unario da negare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -941,7 +952,7 @@ Predicato unario che è la negazione del predicato unario modificato.
 
 ### <a name="remarks"></a>Note
 
-Se viene costruito un oggetto `unary_negate` da un predicato unario **Pred**( *x*), restituisce **!Pred**( *x*).
+Se un `unary_negate` viene costruito da un predicato unario `predicate( x )`, quindi restituisce `!predicate( x )`.
 
 ### <a name="example"></a>Esempio
 
@@ -995,7 +1006,7 @@ The number of elements in v1 not greater than 10 is: 3.
 
 ## <a name="not2"></a> not2
 
-Restituisce il complemento di un predicato binario. Deprecato in favore di [not_fn](#not_fn) in c++17.
+Restituisce il complemento di un predicato binario. Deprecato per [not_fn](#not_fn) in c++17.
 
 ```cpp
 template <class BinaryPredicate>
@@ -1013,7 +1024,7 @@ Predicato binario che è la negazione del predicato binario modificato.
 
 ### <a name="remarks"></a>Note
 
-Se viene costruito un oggetto `binary_negate` da un predicato binario **BinPred**( *x*, *y*), restituisce ! **BinPred**( *x*, *y*).
+Se un `binary_negate` viene costruito da un predicato binario `binary_predicate( x, y )`, quindi restituisce `!binary_predicate( x, y )`.
 
 ### <a name="example"></a>Esempio
 
@@ -1085,7 +1096,7 @@ Un oggetto richiamabile utilizzato per costruire la chiamata di inoltro wrapper.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello restituisce un wrapper di chiamata equivalente a `return call_wrapper(std::forward<Callable>(func))` basato su questa classe solo exposition:
+La funzione modello restituisce un wrapper di chiamata, ad esempio `return call_wrapper(std::forward<Callable>(func))`, in base a questa classe solo exposition:
 
 ```cpp
 class call_wrapper
@@ -1116,7 +1127,7 @@ private:
 
 Il costruttore esplicito per l'oggetto chiamabile *func* richiede il tipo `std::decay_t<Callable>` per soddisfare i requisiti delle `MoveConstructible`, e `is_constructible_v<FD, Callable>` deve essere true. Inizializza l'oggetto chiamabile con wrapping `fd` dal `std::forward<Callable>(func)`e genera un'eccezione generata dalla costruzione di `fd`.
 
-Il wrapper espone gli operatori di chiamata si distinguevano lvalue o rvalue riferimento categoria e qualificazione const, come illustrato di seguito,
+Il wrapper espone gli operatori di chiamata si distinguevano qualificazione const e categoria di riferimento lvalue o rvalue come illustrato di seguito:
 
 ```cpp
 template<class... Args> auto operator()(Args&&... args) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
@@ -1125,7 +1136,7 @@ template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<
 template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
 ```
 
-Le prime due sono equivalenti a `return !INVOKE(fd, std::forward<Args>(args)...)`, e i due secondi equivalgono alle `return !INVOKE(std::move(fd), std::forward<Args>(args)...)`.
+Le prime due sono le stesse `return !std::invoke(fd, std::forward<Args>(args)...)`. I secondi due sono gli stessi `return !std::invoke(std::move(fd), std::forward<Args>(args)...)`.
 
 ### <a name="example"></a>Esempio
 
@@ -1194,7 +1205,7 @@ La seconda funzione modello restituisce la funzione binaria [pointer_to_binary_f
 
 ### <a name="remarks"></a>Note
 
-Un puntatore a funzione è un oggetto funzione e può essere passato a qualsiasi algoritmo della libreria standard C++ che prevede una funzione come parametro, ma non è adattabile. Per usarlo con un adattatore, ad esempio in associazione a un valore o con un negator, deve essere fornito con i tipi nidificati che rendono possibile tale adattamento. La conversione dei puntatori a funzioni unarie e binarie mediante la funzione helper `ptr_fun` consente agli adattatori di funzione di interagire con tali puntatori.
+Un puntatore a funzione è un oggetto funzione. Può essere passato a qualsiasi algoritmo che si aspetta una funzione come parametro, ma non è adattabile. Sono necessarie usarlo con un adattatore, ad esempio, per eseguire l'associazione a un valore o da negare, informazioni sui relativi tipi annidati. La conversione dei puntatori a funzioni unarie e binarie mediante la funzione helper `ptr_fun` consente agli adattatori di funzione di interagire con tali puntatori.
 
 ### <a name="example"></a>Esempio
 
@@ -1297,13 +1308,13 @@ tiger cougar
 Scambia due oggetti `function`.
 
 ```cpp
-template <class Fty>
-void swap(function<Fty>& f1, function<Fty>& f2);
+template <class FT>
+void swap(function<FT>& f1, function<FT>& f2);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Fty*<br/>
+*FT*<br/>
 Tipo controllato dagli oggetti funzione.
 
 *f1*<br/>

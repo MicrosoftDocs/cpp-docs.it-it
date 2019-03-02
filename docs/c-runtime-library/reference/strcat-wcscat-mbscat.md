@@ -18,6 +18,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _mbscat
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 629b66a5c9dded3a910919f5e302a97c4f731240
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546393"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210406"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 
@@ -112,7 +113,7 @@ In C++ queste funzioni presentano overload di modello che richiamano le relative
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcscat**|**strcat**|**_mbscat**|**wcscat**|
+|**_tcscat**|**strcat**|**_mbscat**|**wcscat**|
 
 ## <a name="requirements"></a>Requisiti
 

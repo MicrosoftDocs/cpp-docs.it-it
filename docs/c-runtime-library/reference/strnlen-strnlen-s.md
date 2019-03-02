@@ -23,6 +23,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wcsnlen
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-ms.openlocfilehash: f7f5050a0ab4ff0f35a28faf039688eedc2f3a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 960d57ed8c2b1d1dbc6843932b8c76fef35c34a0
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602566"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210666"
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 
@@ -132,7 +133,7 @@ Queste funzioni restituiscono il numero di caratteri nella stringa, escluso il v
 > [!NOTE]
 > **strnlen** non è una sostituzione per **strlen**; **strnlen** dovrà essere utilizzato solo per calcolare le dimensioni dei dati non attendibili entranti in un buffer di dimensione nota, ad esempio, un pacchetto di rete. **strnlen** calcola la lunghezza ma non oltrepassa la fine del buffer se la stringa senza terminazione. Per altre situazioni, utilizzare **strlen**. (Lo stesso vale per **wcsnlen**, **mbsnlen**, e **mbstrnlen**.)
 
-Ognuna di queste funzioni restituisce il numero di caratteri *str*, escluso il carattere di terminazione null. Tuttavia **strnlen** e **strnlen_s** interpretare la stringa come una stringa di caratteri a byte singolo e di conseguenza, il valore restituito è sempre uguale al numero di byte, anche se la stringa contiene multibyte caratteri. **wcsnlen** e **wcsnlen_s** sono versioni a caratteri wide di **strnlen** e **strnlen_s** rispettivamente; gli argomenti per **wcsnlen**  e **wcsnlen_s** sono stringhe a caratteri wide e il numero di caratteri si trovano in unità a caratteri wide. In caso contrario, **wcsnlen** e **strnlen** si comportano in modo identico, come fanno **strnlen_s** e **wcsnlen_s**.
+Ognuna di queste funzioni restituisce il numero di caratteri *str*, escluso il carattere di terminazione null. Tuttavia **strnlen** e **strnlen_s** interpretare la stringa come una stringa di caratteri a byte singolo e di conseguenza, il valore restituito è sempre uguale al numero di byte, anche se la stringa contiene multibyte personaggi. **wcsnlen** e **wcsnlen_s** sono versioni a caratteri wide di **strnlen** e **strnlen_s** rispettivamente; gli argomenti per **wcsnlen**  e **wcsnlen_s** sono stringhe a caratteri wide e il numero di caratteri si trovano in unità a caratteri wide. In caso contrario, **wcsnlen** e **strnlen** si comportano in modo identico, come fanno **strnlen_s** e **wcsnlen_s**.
 
 **strnlen**, **wcsnlen**, e **mbsnlen** non convalidano i relativi parametri. Se *str* viene **NULL**, si verifica una violazione di accesso.
 
@@ -144,9 +145,9 @@ Ognuna di queste funzioni restituisce il numero di caratteri *str*, escluso il c
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsnlen**|**strnlen**|**strnlen**|**wcsnlen**|
-|**tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
-|**tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
+|**_tcsnlen**|**strnlen**|**strnlen**|**wcsnlen**|
+|**_tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
+|**_tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
 **mbsnlen** e **mbstrnlen** restituisce il numero di caratteri multibyte in una stringa di caratteri multibyte. **mbsnlen** riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso o in base alle impostazioni locali passate, ma non testa la validità dei caratteri multibyte. **mbstrnlen** verifica la validità di caratteri multibyte e riconosce le sequenze di caratteri multibyte. Se la stringa che viene passata a **mbstrnlen** contiene un carattere multibyte non valido **errno** è impostata su **EILSEQ**.
 
@@ -158,8 +159,8 @@ Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostaz
 |-------------|---------------------|
 |**strnlen**, **strnlen_s**|\<string.h>|
 |**wcsnlen**, **wcsnlen_s**|\<string.h> o \<wchar.h>|
-|**mbsnlen**, **mbsnlen_l**|\<mbstring.h>|
-|**mbstrnlen**, **mbstrnlen_l**|\<stdlib.h>|
+|**_mbsnlen**, **_mbsnlen_l**|\<mbstring.h>|
+|**_mbstrnlen**, **_mbstrnlen_l**|\<stdlib.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

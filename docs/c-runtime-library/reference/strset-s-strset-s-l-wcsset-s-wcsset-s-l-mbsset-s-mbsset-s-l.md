@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wcsset_s_l
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 2cb2e9a6ba4179f8e362749e01324fe7e38cf5eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031678f75dacd8112ac897053066216e7b3b2450
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452533"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211017"
 ---
 # <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
@@ -141,8 +142,8 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsset_s**|**_strset_s**|**_mbsset_s**|**_wcsset_s**|
-|**tcsset_s_l**|**_strset_s_l**|**_mbsset_s_l**|**_wcsset_s_l**|
+|**_tcsset_s**|**_strset_s**|**_mbsset_s**|**_wcsset_s**|
+|**_tcsset_s_l**|**_strset_s_l**|**_mbsset_s_l**|**_wcsset_s_l**|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -152,7 +153,7 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 |**_strset_s_l**|\<tchar.h>|
 |**_wcsset_s**|\<string.h> o \<wchar.h>|
 |**_wcsset_s_l**|\<tchar.h>|
-|**mbsset_s**, **mbsset_s_l**|\<mbstring.h>|
+|**_mbsset_s**, **_mbsset_s_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

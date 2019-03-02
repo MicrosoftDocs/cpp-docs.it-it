@@ -19,6 +19,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _strrev
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: 3a35e72875f4166179a119ec6994828302809afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8794177f4f92a1928ffeaaa1d7e183aa67cf886
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435561"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210965"
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
@@ -105,7 +106,7 @@ Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostaz
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsrev**|**_strrev**|**_mbsrev**|**_wcsrev**|
+|**_tcsrev**|**_strrev**|**_mbsrev**|**_wcsrev**|
 |**n/d**|**n/d**|**_mbsrev_l**|**n/d**|
 
 ## <a name="requirements"></a>Requisiti
@@ -114,7 +115,7 @@ Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostaz
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
 |**_wcsrev**|\<string.h> o \<wchar.h>|
-|**mbsrev**, **mbsrev_l**|\<mbstring.h>|
+|**_mbsrev**, **_mbsrev_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

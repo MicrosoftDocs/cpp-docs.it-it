@@ -10,12 +10,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 99867f146ca80d8b48c9be9deb59044207b33af1
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320510"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210497"
 ---
 # <a name="accelerator-keys-c"></a>Tasti di scelta rapida (C++)
 
@@ -25,61 +25,61 @@ Esistono numerosi tasti di scelta rapida predefiniti che possono far parte di un
 
 |Chiave|Descrizione|
 |---------|-----------------|
-|VK_ACCEPT|Accettazione IME|
-|VK_BROWSER_BACK|Windows: Tasto Indietro del browser|
-|VK_BROWSER_FAVORITES|Windows: Tasto Preferiti del browser|
-|VK_BROWSER_FORWARD|Windows: Tasto Avanti del browser|
-|VK_BROWSER_HOME|Windows: Chiave di avvio del browser e Home|
-|VK_BROWSER_REFRESH|Windows: Tasto Aggiorna del browser|
-|VK_BROWSER_SEARCH|Windows: Tasto Cerca del browser|
-|VK_BROWSER_STOP|Windows: Tasto Stop del browser|
-|VK_CONVERT|Conversione IME|
-|VK_FINAL|Modalità finale IME|
-|VK_HANGUEL|Modalità Hanguel IMEE, mantenuta per garantire compatibilità. Usare VK_HANGUL|
-|VK_HANGUL|Modalità Hangul IME|
-|VK_HANJA|Modalità Hanja IME|
-|VK_JUNJA|Modalità Junja IME|
-|VK_KANA|Modalità Kana IME|
-|VK_KANJI|Modalità Kanji IME|
-|VK_LAUNCH_APP1|Windows: Chiave iniziale al passaggio 1 dell'applicazione|
-|VK_LAUNCH_APP2|Windows: Chiave iniziale dell'applicazione 2|
-|VK_LAUNCH_MAIL|Windows: Chiave iniziale della posta|
-|VK_LAUNCH_MEDIA_SELECT|Windows: Selezionare la chiave Media|
-|VK_LCONTROL|Tasto CTRL a sinistra|
-|VK_LMENU|Tasto MENU a sinistra|
-|VK_LSHIFT|Tasto MAIUSC a sinistra|
-|VK_MEDIA_NEXT_TRACK|Windows: Tasto del brano successivo|
-|VK_MEDIA_PLAY_PAUSE|Windows: Tasto del supporto multimediale Riproduci/Pausa|
-|VK_MEDIA_PREV_TRACK|Windows: Tasto del brano precedente|
-|VK_MEDIA_STOP|Windows: Tasto del supporto multimediale Stop|
-|VK_MODECHANGE|Richiesta di modifica della modalità IME|
-|VK_NONCONVERT|Annullamento della conversione IME|
-|VK_OEM_1|Windows: Per la tastiera standard degli Stati Uniti, il ';:' chiave|
-|VK_OEM_102|Windows: Il tasto parentesi angolare o il tasto barra rovesciata della tastiera RT 102-key|
-|VK_OEM_2|Windows: Per la tastiera standard degli Stati Uniti, il '/'? key|
-|VK_OEM_3|Windows: Per la tastiera standard degli Stati Uniti, il ' ~' chiave|
-|VK_OEM_4|Windows: Per la tastiera standard degli Stati Uniti, il ' [{' chiave|
-|VK_OEM_5|Windows: Per la tastiera standard degli Stati Uniti, il '\\&#124;' chiave|
-|VK_OEM_6|Windows: Per la tastiera standard degli Stati Uniti, il ']}' chiave|
-|VK_OEM_7|Windows: Per la tastiera standard degli Stati Uniti, la chiave 'single-quote/virgolette'|
-|VK_OEM_COMMA|Windows: Per qualsiasi paese/area geografica, la chiave ''|
-|VK_OEM_MINUS|Windows: Per qualsiasi paese/area geografica, il '-' chiave|
-|VK_OEM_PERIOD|Windows: Per qualsiasi paese/area geografica, il '.' chiave|
-|VK_OEM_PLUS|Windows: Per qualsiasi paese/area geografica, il tasto '+'|
-|VK_PACKET|Windows: Utilizzato per passare caratteri Unicode come se fossero sequenze di tasti.|
-|VK_RCONTROL|Tasto CTRL a destra|
-|VK_RMENU|Tasto MENU a destra|
-|VK_RSHIFT|Tasto MAIUSC a destra|
-|VK_SLEEP|Tasto di sospensione del computer|
-|VK_VOLUME_DOWN|Windows: Tasto di riduzione volume|
-|VK_VOLUME_MUTE|Windows: Tasto di disattivazione del volume|
-|VK_VOLUME_UP|Windows: Tasto di aumento del volume|
-|VK_XBUTTON1|Windows: Pulsante del mouse X1|
-|VK_XBUTTON2|Windows: Pulsante del mouse X2|
+|VK_ACCEPT|(IME) accettare|
+|VK_BROWSER_BACK|(Windows) Browser **nuovamente** chiave|
+|VK_BROWSER_FAVORITES|(Windows) Browser **Preferiti** chiave|
+|VK_BROWSER_FORWARD|(Windows) Browser **inoltrare** chiave|
+|VK_BROWSER_HOME|(Windows) Browser **avviare** e **Home** chiave|
+|VK_BROWSER_REFRESH|(Windows) Browser **Aggiorna** chiave|
+|VK_BROWSER_SEARCH|(Windows) Browser **ricerca** chiave|
+|VK_BROWSER_STOP|(Windows) Browser **arrestare** chiave|
+|VK_CONVERT|Convert (IME)|
+|VK_FINAL|Modalità finale IME)|
+|VK_HANGUEL|(IME) Modalità Hanguel (mantenuta per garantire la compatibilità, usare VK_HANGUL)|
+|VK_HANGUL|(IME) Modalità Hangul|
+|VK_HANJA|(IME) Modalità Hanja|
+|VK_JUNJA|(IME) Modalità Junja|
+|VK_KANA|(IME) Modalità Kana|
+|VK_KANJI|(IME) Modalità Kanji|
+|VK_LAUNCH_APP1|(Windows) **Avvio applicazione 1** chiave|
+|VK_LAUNCH_APP2|(Windows) **Avvio dell'applicazione 2** chiave|
+|VK_LAUNCH_MAIL|(Windows) **Avvio della posta elettronica** chiave|
+|VK_LAUNCH_MEDIA_SELECT|(Windows) **Selezione del supporto** chiave|
+|VK_LCONTROL|**Ctrl sinistro** chiave|
+|VK_LMENU|**Menu a sinistra** chiave|
+|VK_LSHIFT|**Left Shift** chiave|
+|VK_MEDIA_NEXT_TRACK|(Windows) **Brano successivo** chiave|
+|VK_MEDIA_PLAY_PAUSE|(Windows) **Multimediale Riproduci/Pausa** chiave|
+|VK_MEDIA_PREV_TRACK|(Windows) **Brano precedente** chiave|
+|VK_MEDIA_STOP|(Windows) **Arrestare supporti** chiave|
+|VK_MODECHANGE|Richiesta di modifica di modalità (IME)|
+|VK_NONCONVERT|Annullamento della conversione (IME)|
+|VK_OEM_1|(Windows) Per la tastiera standard degli Stati Uniti, il **;:** chiave|
+|VK_OEM_102|(Windows) Il tasto parentesi angolare o il tasto barra rovesciata della tastiera RT 102-key|
+|VK_OEM_2|(Windows) Per la tastiera standard degli Stati Uniti, il **/?** key|
+|VK_OEM_3|(Windows) Per la tastiera standard degli Stati Uniti, il **`~** chiave|
+|VK_OEM_4|(Windows) Per la tastiera standard degli Stati Uniti, il **[{** chiave|
+|VK_OEM_5|(Windows) Per la tastiera standard degli Stati Uniti, il **\\ &#124;** chiave|
+|VK_OEM_6|(Windows) Per la tastiera standard degli Stati Uniti, il **]}** chiave|
+|VK_OEM_7|(Windows) Per la tastiera standard degli Stati Uniti, la chiave 'single-quote/virgolette'|
+|VK_OEM_COMMA|(Windows) Per qualsiasi paese/area geografica, il **,** chiave|
+|VK_OEM_MINUS|(Windows) Per qualsiasi paese/area geografica, il **-** chiave|
+|VK_OEM_PERIOD|(Windows) Per qualsiasi paese/area geografica, il **.** key|
+|VK_OEM_PLUS|(Windows) Per qualsiasi paese/area geografica, il **+** chiave|
+|VK_PACKET|(Windows) Utilizzato per passare caratteri Unicode come se fossero sequenze di tasti.|
+|VK_RCONTROL|**Ctrl destro** chiave|
+|VK_RMENU|**Dal Menu a destra** chiave|
+|VK_RSHIFT|**Spostamento a destra** chiave|
+|VK_SLEEP|**Sospensione di computer** chiave|
+|VK_VOLUME_DOWN|(Windows) **Volume giù** chiave|
+|VK_VOLUME_MUTE|(Windows) **Disattivazione del volume** chiave|
+|VK_VOLUME_UP|(Windows) **Aumento del volume** chiave|
+|VK_XBUTTON1|(Windows) **X1** pulsante del mouse|
+|VK_XBUTTON2|(Windows) **X2** pulsante del mouse|
 
 ## <a name="accelerator-key-association"></a>Associazione di chiavi di tasti di scelta rapida
 
-Molte volte si vuole che una voce di menu e una combinazione di tasti esegua lo stesso comando del programma. Ciò è possibile assegnando lo stesso identificatore di risorsa (ID) alla voce di menu e a una voce nella tabella dei tasti di scelta rapida dell'applicazione. È quindi modificare la didascalia della voce di menu per visualizzare il nome del tasto di scelta rapida. Per altre informazioni sulle voci di menu e tasti di scelta rapida, vedere [associazione di una voce di Menu con un tasto di scelta rapida](../windows/associating-a-menu-command-with-an-accelerator-key.md).
+Molte volte si vuole che una voce di menu e una combinazione di tasti esegua lo stesso comando del programma. Questa operazione può essere assegnando lo stesso identificatore di risorsa (ID) alla voce di menu e a una voce nella tabella di tasti di scelta rapida dell'applicazione. È quindi modificare la didascalia della voce di menu per visualizzare il nome del tasto di scelta rapida. Per altre informazioni sulle voci di menu e tasti di scelta rapida, vedere [comandi di Menu](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
 ## <a name="requirements"></a>Requisiti
 

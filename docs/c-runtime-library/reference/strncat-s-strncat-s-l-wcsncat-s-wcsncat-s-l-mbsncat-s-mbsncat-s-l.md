@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - strncat_s_l
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6651bb6ac405ed51945f021e8d1e19f1db05d5e7
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500750"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210939"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -217,8 +218,8 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
-|**tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
+|**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
+|**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
 **strncat_s_l** e **wcsncat_s_l** non dipendono dalle impostazioni locali; vengono fornite soltanto per **tcsncat_s_l**.
 
@@ -228,7 +229,7 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 |-------------|---------------------|
 |**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<string.h> o \<wchar.h>|
-|**mbsncat_s**, **mbsncat_s_l**|\<mbstring.h>|
+|**_mbsncat_s**, **_mbsncat_s_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
