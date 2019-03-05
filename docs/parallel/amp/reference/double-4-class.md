@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 3de59c57c1303fec06e5926f445cdbbb21e13c55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631751"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275402"
 ---
 # <a name="double4-class"></a>Classe double_4
 
@@ -533,7 +533,7 @@ class double_4;
 |double_4::wxyz||
 |double_4::wxz||
 |double_4::wxzy||
-|double_4::wY||
+|double_4::wy||
 |double_4::wyx||
 |double_4::wyxz||
 |double_4::wyz||
@@ -549,7 +549,7 @@ class double_4;
 |double_4::xwyz||
 |double_4::xwz||
 |double_4::xwzy||
-|double_4::XY||
+|double_4::xy||
 |double_4::xyw||
 |double_4::xywz||
 |double_4::xyz||
@@ -600,7 +600,7 @@ class double_4;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> double_4
 
@@ -651,7 +651,7 @@ explicit inline double_4(
 *_V0*<br/>
 Il valore per inizializzare l'elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 Il valore per inizializzare l'elemento 1.
 
 *_V2*<br/>
@@ -660,7 +660,7 @@ Il valore per inizializzare l'elemento 2.
 *_V3*<br/>
 Il valore per inizializzare l'elemento 3.
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore di inizializzazione.
 
 *_Other*<br/>

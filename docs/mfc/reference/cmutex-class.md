@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 823f38a6292152774f72c97963b9add5d429d2f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508784"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273296"
 ---
 # <a name="cmutex-class"></a>Classe CMutex
 
@@ -43,7 +43,7 @@ Un metodo alternativo per l'utilizzo `CMutex` oggetti consiste nell'aggiungere u
 
 Per accedere alle risorse controllate da `CMutex` oggetti in questo modo, prima di tutto creare una variabile di tipo [CSingleLock](../../mfc/reference/csinglelock-class.md) oppure digitare [CMultiLock](../../mfc/reference/cmultilock-class.md) nella funzione membro di accesso della risorsa. Quindi chiamare l'oggetto di blocco `Lock` funzione membro (ad esempio [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). A questo punto, i thread verranno sia ottenere l'accesso alla risorsa, attendere che la risorsa essere rilasciato e ottenere l'accesso, attendere la risorsa deve essere rilasciato e raggiungere il timeout non riesce ad accedere alla risorsa. In ogni caso, la risorsa è stato eseguito l'accesso in modo thread-safe. Per rilasciare la risorsa, usare l'oggetto di blocco `Unlock` funzione membro (ad esempio [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), o consentire l'oggetto di blocco uscire dall'ambito.
 
-Per altre informazioni sull'uso `CMutex` oggetti, vedere l'articolo [Multithreading: come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Per altre informazioni sull'uso `CMutex` oggetti, vedere l'articolo [Multithreading: Come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -90,4 +90,3 @@ Per accedere o rilasciare un `CMutex` dell'oggetto, creare un [CMultiLock](../..
 
 [Classe CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

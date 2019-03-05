@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-ms.openlocfilehash: 2d65af79971aab88884efe1f92d1090194b737d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31bd43f7f7a6fbccd4680db013ac5c654123061e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459566"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259893"
 ---
 # <a name="csinglelock-class"></a>Classe CSingleLock
 
@@ -55,7 +55,7 @@ Per poter usare le classi di sincronizzazione [CSemaphore](../../mfc/reference/c
 
 Usare un `CSingleLock` oggetto, chiamare il relativo costruttore all'interno di una funzione membro nella classe della risorsa controllata. Chiamare quindi il [IsLocked](#islocked) funzione membro per determinare se la risorsa è disponibile. Se si tratta, continuare con il resto della funzione membro. Se la risorsa è disponibile, attendere per un determinato periodo di tempo per la risorsa deve essere rilasciato o restituito un errore. Al termine dell'uso della risorsa, chiama il [Unlock](#unlock) funzionare se il `CSingleLock` oggetto è per essere riusata o consentire il `CSingleLock` oggetto da distruggere.
 
-`CSingleLock` gli oggetti richiedono la presenza di un oggetto derivato dalla [CSyncObject](../../mfc/reference/csyncobject-class.md). Questo è in genere un membro dati della classe della risorsa controllata. Per altre informazioni su come usare `CSingleLock` oggetti, vedere l'articolo [Multithreading: come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+`CSingleLock` gli oggetti richiedono la presenza di un oggetto derivato dalla [CSyncObject](../../mfc/reference/csyncobject-class.md). Questo è in genere un membro dati della classe della risorsa controllata. Per altre informazioni su come usare `CSingleLock` oggetti, vedere l'articolo [Multithreading: Come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

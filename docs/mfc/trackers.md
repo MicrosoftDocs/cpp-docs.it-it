@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 - OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
-ms.openlocfilehash: 74e70f989d3803b11f05150f9b55c6dfe79ed876
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6dffb5b4326d08daf59098e1888169c2353dafe2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481952"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262714"
 ---
 # <a name="trackers"></a>Tracker
 
@@ -24,7 +24,7 @@ Il [CRectTracker](../mfc/reference/crecttracker-class.md) classe fornisce un'int
 
 L'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) illustra un'interfaccia comune usando strumenti per l'individuazione e gli elementi OLE client dal punto di vista di un'applicazione contenitore. Per una dimostrazione degli stili diversi e dalla capacità di un oggetto di individuazione, vedere l'esempio generale di MFC [TRACKER](../visual-cpp-samples.md).
 
-Per altre informazioni sull'implementazione di tracker nell'applicazione OLE, vedere [Tracker: implementazione di tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+Per altre informazioni sull'implementazione di tracker nell'applicazione OLE, vedere [Tracker: Implementazione di tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
 
 ## <a name="see-also"></a>Vedere anche
 

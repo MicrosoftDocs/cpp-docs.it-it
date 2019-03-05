@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: eb49ee135dce4ee0d5e37acd2382a34e1d99b083
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894241"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265483"
 ---
 # <a name="caccesstoken-class"></a>Classe CAccessToken
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 30caf7b42cf570a5dcd92d48817ef3743cf63811
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677435"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270858"
 ---
 # <a name="colecmdui-class"></a>Classe COleCmdUI
 
@@ -101,7 +101,7 @@ virtual void Enable(BOOL bOn);
 
 ### <a name="parameters"></a>Parametri
 
-*Bin*<br/>
+*bOn*<br/>
 Indica se il comando è associato il `COleCmdUI` oggetto deve essere abilitato o disabilitato. NonZero consente il comando. 0 disabilita il comando.
 
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck
@@ -114,10 +114,10 @@ virtual void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parametri
 
-*nControllare*<br/>
+*nCheck*<br/>
 Un valore che determina lo stato da impostare un elemento toggle di attivazione/disattivazione comando. I valori sono:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |**1**|Imposta il comando su on.|
 |**2**|Imposta il comando su indeterminato; lo stato non è possibile determinare perché l'attributo di questo comando è in entrambi e disattivare gli stati nella selezione pertinente.|
@@ -140,4 +140,3 @@ Puntatore al testo da utilizzare con il comando.
 
 [Classe CCmdUI](../../mfc/reference/ccmdui-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

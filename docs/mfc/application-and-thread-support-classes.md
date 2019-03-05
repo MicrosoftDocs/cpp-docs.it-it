@@ -11,12 +11,12 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-ms.openlocfilehash: 5f69ea6a87d0e1ae16a6079a414d623af6dd88fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 667725a60fb0c907a9c2d017674f9d097d1f4946
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496261"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262038"
 ---
 # <a name="application-and-thread-support-classes"></a>Classi di supporto per applicazioni e thread
 
@@ -74,4 +74,3 @@ Gestisce più recente (MRU) elenco file usati.
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

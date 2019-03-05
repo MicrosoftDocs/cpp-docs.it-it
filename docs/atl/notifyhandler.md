@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: 72c8fa3a0773a67c32a0652eb048885564a734be
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 204309c334a8f5cd5be702bba016678537d66211
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694608"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275701"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 

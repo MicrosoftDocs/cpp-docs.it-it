@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: utilizzo della classe CAsyncSocket'
+title: 'Windows Sockets: Uso della classe CAsyncSocket'
 ms.date: 11/04/2016
 f1_keywords:
 - CAsyncSocket
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: abce497f49347719af08e71a75afa12cb99507f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459293"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263108"
 ---
-# <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: utilizzo della classe CAsyncSocket
+# <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Uso della classe CAsyncSocket
 
 Questo articolo illustra come usare classi [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Tenere presente che questa classe incapsula l'API di socket di Windows a un livello molto basso. `CAsyncSocket` deve essere utilizzato dai programmatori che conoscono le comunicazioni di rete in modo dettagliato ma vuole che la comodità di callback per la notifica degli eventi di rete. Basato su questo presupposto, questo articolo fornisce solo istruzioni di base. È probabilmente consigliabile usare `CAsyncSocket` se si desidera semplicità dei socket di Windows di gestione di più protocolli di rete in un'applicazione MFC, ma non si desidera sacrificare la flessibilità. Si potrebbe anche ritiene che è possibile ottenere un'efficienza maggiore per le altre comunicazioni di programmazione diretta rispetto è stato possibile usando il modello alternativo più generale della classe `CSocket`.
 
 `CAsyncSocket` è documentato nel *riferimenti alla libreria MFC*. Visual C++ fornisce anche la specifica di Windows Sockets, che si trova in Windows SDK. I dettagli vengono lasciati all'utente. Visual C++ non fornisce un'applicazione di esempio per `CAsyncSocket`.
 
-Se si vuole una soluzione semplice e non sono estremamente competente sulle comunicazioni di rete, usare una classe [CSocket](../mfc/reference/csocket-class.md) con un `CArchive` oggetto. Visualizzare [Windows Sockets: uso di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md) per altre informazioni.
+Se si vuole una soluzione semplice e non sono estremamente competente sulle comunicazioni di rete, usare una classe [CSocket](../mfc/reference/csocket-class.md) con un `CArchive` oggetto. Vedere [Windows Sockets: Utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md) per altre informazioni.
 
 Questo articolo illustra le attività seguenti:
 
@@ -44,7 +44,7 @@ Questo articolo illustra le attività seguenti:
 
    [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
-     oppure
+     -oppure-
 
    [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
@@ -62,18 +62,18 @@ Questo articolo illustra le attività seguenti:
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-   I termini "della porta" e "indirizzo socket" sono illustrati in [Windows Sockets: porte e indirizzi Socket](../mfc/windows-sockets-ports-and-socket-addresses.md).
+   I termini "della porta" e "indirizzo socket" sono illustrati in [Windows Sockets: Porte e indirizzi Socket](../mfc/windows-sockets-ports-and-socket-addresses.md).
 
 1. Se il socket è un client, connettere l'oggetto socket a un server socket, usando [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect).
 
-     oppure
+     -oppure-
 
    Se il socket è un server, impostare il socket per iniziare l'ascolto (con [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen)) per i tentativi di connessione da un client. Dopo aver ricevuto una richiesta di connessione, accettarla con [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).
 
    Dopo aver accettato una connessione, è possibile eseguire attività quali la convalida delle password.
 
     > [!NOTE]
-    >  Il `Accept` membro funzione accetta un riferimento a un nuovo oggetto vuoto `CSocket` oggetto come parametro. È necessario costruire l'oggetto prima di chiamare `Accept`. Se l'oggetto socket esce dall'ambito, la connessione verrà chiusa. Non chiamare `Create` per questo nuovo oggetto socket. Per un esempio, vedere l'articolo [Windows Sockets: sequenza di operazioni](../mfc/windows-sockets-sequence-of-operations.md).
+    >  Il `Accept` membro funzione accetta un riferimento a un nuovo oggetto vuoto `CSocket` oggetto come parametro. È necessario costruire l'oggetto prima di chiamare `Accept`. Se l'oggetto socket esce dall'ambito, la connessione verrà chiusa. Non chiamare `Create` per questo nuovo oggetto socket. Per un esempio, vedere l'articolo [Windows Sockets: Sequenza di operazioni](../mfc/windows-sockets-sequence-of-operations.md).
 
 1. Eseguire le comunicazioni con altri socket chiamando il `CAsyncSocket` funzioni membro dell'oggetto che incapsulano le funzioni di Windows Sockets API.
 
@@ -85,7 +85,7 @@ Questo articolo illustra le attività seguenti:
 
    Il distruttore chiama l'oggetto [Chiudi](../mfc/reference/casyncsocket-class.md#close) funzione membro prima dell'eliminazione dell'oggetto.
 
-Per un esempio di questa sequenza nel codice (effettivamente per una `CSocket` oggetto), vedere [Windows Sockets: sequenza di operazioni](../mfc/windows-sockets-sequence-of-operations.md).
+Per un esempio di questa sequenza nel codice (effettivamente per una `CSocket` oggetto), vedere [Windows Sockets: Sequenza di operazioni](../mfc/windows-sockets-sequence-of-operations.md).
 
 ##  <a name="_core_your_responsibilities_with_casyncsocket"></a> Le responsabilità del cliente con CAsyncSocket
 
@@ -97,19 +97,18 @@ Quando si crea un oggetto della classe [CAsyncSocket](../mfc/reference/casyncsoc
 
 - Conversione tra caratteri Unicode e multibyte impostare le stringhe (MBCS).
 
-Per le definizioni dei termini e altre informazioni, vedere [Windows Sockets: blocco](../mfc/windows-sockets-blocking.md), [Windows Sockets: ordinamento dei Byte](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: conversione di stringhe](../mfc/windows-sockets-converting-strings.md) .
+Per le definizioni dei termini e altre informazioni, vedere [Windows Sockets: Bloccando](../mfc/windows-sockets-blocking.md), [Windows Sockets: L'ordine dei byte](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: Conversione di stringhe](../mfc/windows-sockets-converting-strings.md).
 
 Nonostante questi problemi, classe `CAsycnSocket` potrebbe essere la scelta giusta se l'applicazione richiede la flessibilità e controllo è possibile ottenere. Se non è comunque consigliabile classe `CSocket` invece. `CSocket` Consente di nascondere molti dettagli da parte dell'utente: it pompe messaggi durante le chiamate di blocco di Windows e ti offre l'accesso a `CArchive`, che gestisce le differenze nell'ordine dei byte e la conversione delle stringhe.
 
 Per altre informazioni, vedere:
 
-- [Windows Sockets: sfondo](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Background](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: socket di flusso](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Socket di Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: socket di datagramma](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Socket di datagramma](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
-

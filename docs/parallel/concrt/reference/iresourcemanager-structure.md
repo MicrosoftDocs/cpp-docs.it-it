@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 7c6ed48c8896b54faa8418719f0ab7c7fa1df7c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f8f5992d9ce55100d193196a3c0f94b468ef892
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657200"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275271"
 ---
 # <a name="iresourcemanager-structure"></a>Struttura IResourceManager
 
@@ -37,18 +37,18 @@ struct IResourceManager;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IResourceManager:: OSVersion](#osversion)|Tipo enumerato che rappresenta la versione del sistema operativo.|
+|[IResourceManager::OSVersion](#osversion)|Tipo enumerato che rappresenta la versione del sistema operativo.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IResourceManager:: CreateNodeTopology](#createnodetopology)|Presente solo in modalità debug compilazioni di runtime, questo metodo è progettato per facilitare il test di Resource Manager su topologie hardware, senza richiedere hardware effettivo corrispondente alla configurazione un hook di test. Con le compilazioni delle vendite al dettaglio del runtime, questo metodo restituirà senza eseguire alcuna azione.|
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|Presente solo in modalità debug compilazioni di runtime, questo metodo è progettato per facilitare il test di Resource Manager su topologie hardware, senza richiedere hardware effettivo corrispondente alla configurazione un hook di test. Con le compilazioni delle vendite al dettaglio del runtime, questo metodo restituirà senza eseguire alcuna azione.|
 |[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Restituisce il numero di nodi disponibili per Gestione risorse.|
 |[IResourceManager::GetFirstNode](#getfirstnode)|Restituisce il primo nodo nell'ordine dell'enumerazione come definito da Gestione risorse.|
-|[IResourceManager:: Reference](#reference)|Incrementa il conteggio dei riferimenti nell'istanza di Resource Manager.|
+|[IResourceManager::Reference](#reference)|Incrementa il conteggio dei riferimenti nell'istanza di Resource Manager.|
 |[IResourceManager::RegisterScheduler](#registerscheduler)|Registra un'utilità di pianificazione con Resource Manager. Dopo aver registrato l'utilità di pianificazione, che deve comunicare con l'utilizzo di Resource Manager di `ISchedulerProxy` interfaccia restituita.|
-|[IResourceManager:: Release](#release)|Decrementa il conteggio dei riferimenti nell'istanza di Resource Manager. Il gestore di risorse viene eliminato definitivamente quando il conteggio dei riferimenti va a `0`.|
+|[IResourceManager::Release](#release)|Decrementa il conteggio dei riferimenti nell'istanza di Resource Manager. Il gestore di risorse viene eliminato definitivamente quando il conteggio dei riferimenti va a `0`.|
 
 ## <a name="remarks"></a>Note
 

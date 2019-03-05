@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3673b7ae8630a344e640df70a23698247b0ff8ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694075"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262636"
 ---
 # <a name="csecuritydesc-class"></a>Classe CSecurityDesc
 
@@ -61,7 +61,7 @@ class CSecurityDesc
 |Nome|Descrizione|
 |----------|-----------------|
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Costruttore.|
-|[Ci CSecurityDesc:: ~ CSecurityDesc](#dtor)|Distruttore.|
+|[CSecurityDesc::~CSecurityDesc](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -98,7 +98,7 @@ class CSecurityDesc
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSecurityDesc::operator SECURITY_DESCRIPTOR const *](#operator_const_security_descriptor__star)|Restituisce un puntatore al `SECURITY_DESCRIPTOR` struttura.|
+|[CSecurityDesc::operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|Restituisce un puntatore al `SECURITY_DESCRIPTOR` struttura.|
 |[CSecurityDesc::operator =](#operator_eq)|Operatore di assegnazione.|
 
 ## <a name="remarks"></a>Note
@@ -532,7 +532,7 @@ Il `SECURITY_DESCRIPTOR` struttura oppure `CSecurityDesc` oggetto da assegnare a
 
 Restituisce l'aggiornato `CSecurityDesc` oggetto.
 
-##  <a name="operator_const_security_descriptor__star"></a>  CSecurityDesc::operator SECURITY_DESCRIPTOR const *
+##  <a name="operator_const_security_descriptor__star"></a>  CSecurityDesc::operator const SECURITY_DESCRIPTOR *
 
 Esegue il cast a un puntatore a un valore di `SECURITY_DESCRIPTOR` struttura.
 
@@ -582,7 +582,7 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>Parametri
 
-*Elenco DACL*<br/>
+*Dacl*<br/>
 Fare riferimento a un `CDacl` oggetto che specifica l'elenco DACL per il descrittore di sicurezza. Questo parametro non deve essere NULL. Per impostare un elenco DACL nel descrittore di sicurezza, la prima forma del metodo deve essere utilizzata con *bPresent* impostato su false.
 
 *bPresent*<br/>
@@ -609,7 +609,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*SID*<br/>
+*Sid*<br/>
 Fare riferimento a un [IDSR](../../atl/reference/csid-class.md) oggetto per il nuovo gruppo primario del descrittore di sicurezza. Questo parametro non deve essere NULL. Un descrittore di sicurezza può essere contrassegnato come non hanno un DACL né un SACL, ma deve disporre di un gruppo e un proprietario, anche questi sono il SID NULL (ovvero un SID predefinito con un significato speciale).
 
 *bDefaulted*<br/>
@@ -629,7 +629,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*SID*<br/>
+*Sid*<br/>
 Il [IDSR](../../atl/reference/csid-class.md) oggetto per il nuovo proprietario primario del descrittore di sicurezza. Questo parametro non deve essere NULL.
 
 *bDefaulted*<br/>
@@ -649,7 +649,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametri
 
-*Elenco SACL*<br/>
+*Sacl*<br/>
 Puntatore a un `CSacl` oggetto che specifica l'elenco SACL per il descrittore di sicurezza. Questo parametro non deve essere NULL e deve essere un oggetto CSacl. Differenza DACL, non si verifica alcuna differenza tra NULL e un SACL vuoto, come oggetti SACL non specificano i diritti di accesso, solo le informazioni di controllo.
 
 *bDefaulted*<br/>
@@ -675,7 +675,7 @@ bool ToString(
 *pstr*<br/>
 Puntatore a una stringa con terminazione null che riceverà il [descrittore di sicurezza in formato stringa](/windows/desktop/SecAuthZ/security-descriptor-string-format).
 
-*sistema internazionale di misura*<br/>
+*si*<br/>
 Specifica una combinazione di flag di bit SECURITY_INFORMATION per indicare i componenti del descrittore di sicurezza da includere nella stringa di output.
 
 ### <a name="return-value"></a>Valore restituito
@@ -688,7 +688,7 @@ Una volta il descrittore di sicurezza in formato stringa, può più facilmente e
 
 Il *sistema internazionale di misura* parametro può contenere i flag SECURITY_INFORMATION seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |OWNER_SECURITY_INFORMATION|Includere il proprietario.|
 |GROUP_SECURITY_INFORMATION|Includere il gruppo primario.|

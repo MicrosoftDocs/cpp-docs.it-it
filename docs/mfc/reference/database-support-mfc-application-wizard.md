@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: 9635b7e045812cc90c5d6e9662b8475e411a0b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654207"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259958"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Supporto database, Creazione guidata applicazione MFC
 
@@ -24,7 +24,7 @@ Questa pagina fornisce le opzioni che consentono di specificare il livello di da
    |Opzione|Descrizione|
    |------------|-----------------|
    |**None**|Non offre alcun supporto del database. Questa è l'opzione predefinita.|
-   |**Solo i file di intestazione**|Fornisce il livello di base del supporto di database per l'applicazione. Se si seleziona il supporto ODBC in **tipo di Client**, la creazione guidata applicazione MFC include nel progetto il file di intestazione AFXDB. H. Aggiunge le librerie di collegamento, ma non crea tutte le classi specifiche del database. È possibile creare set di record in un secondo momento e usarli per esaminare e aggiornare i record. Se si seleziona il supporto OLE DB sotto **tipo di Client**, sono inclusi i seguenti file di intestazione: ATLBASE. AFXOLEDB H. FILE ATLPLUS H. H|
+   |**Solo i file di intestazione**|Fornisce il livello di base del supporto di database per l'applicazione. Se si seleziona il supporto ODBC in **tipo di Client**, la creazione guidata applicazione MFC include nel progetto il file di intestazione AFXDB. H. Aggiunge le librerie di collegamento, ma non crea tutte le classi specifiche del database. È possibile creare set di record in un secondo momento e usarli per esaminare e aggiornare i record. Se si seleziona il supporto OLE DB sotto **tipo di Client**, sono inclusi i file di intestazione seguente: ATLBASE. AFXOLEDB H. FILE ATLPLUS H. H|
    |**Visualizzazione database senza supporto file**|Include i file di intestazione di database, le librerie di collegamento, una visualizzazione di record e un set di record. (Disponibile solo per le applicazioni con il **supporto per l'architettura documento/visualizzazione** opzione selezionata nel [tipo di applicazione](../../mfc/reference/application-type-mfc-application-wizard.md) pagina.) Questa opzione include il supporto dei documenti, ma non per la serializzazione. Se si sceglie di includere una vista di database, è necessario specificare l'origine dei dati.|
    |**Vista di database con supporto file**|Include i file di intestazione di database, le librerie di collegamento, una visualizzazione di record e un set di record. (Disponibile solo per le applicazioni con il **supporto per l'architettura documento/visualizzazione** opzione selezionata nel **tipo di applicazione** pagina.) Questa opzione supporta la serializzazione di documenti, che è possibile usare, ad esempio, per aggiornare un file del profilo utente. Le applicazioni di database è in genere funzionano in base al record anziché su un file per ogni singolo e pertanto non è necessaria la serializzazione. Tuttavia, è possibile un utilizzo speciale per la serializzazione. Se si sceglie di includere una vista di database, è necessario specificare l'origine dei dati.|
 

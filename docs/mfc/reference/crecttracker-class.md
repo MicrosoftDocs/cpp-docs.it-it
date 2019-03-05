@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176510"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259581"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (classe)
 
@@ -72,12 +72,12 @@ class CRectTracker
 |[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Chiamato per disegnare il bordo di un `CRectTracker` oggetto.|
 |[CRectTracker::GetHandleMask](#gethandlemask)|Chiamata eseguita per ottenere la maschera di un `CRectTracker` quadratini di ridimensionamento dell'elemento.|
 |[CRectTracker::GetTrueRect](#gettruerect)|Restituisce la larghezza e altezza del rettangolo, inclusi i quadratini di ridimensionamento.|
-|[CRectTracker:: HitTest](#hittest)|Restituisce la posizione corrente del cursore correlato al `CRectTracker` oggetto.|
+|[CRectTracker::HitTest](#hittest)|Restituisce la posizione corrente del cursore correlato al `CRectTracker` oggetto.|
 |[CRectTracker::NormalizeHit](#normalizehit)|Normalizza un codice di hit test.|
 |[CRectTracker::OnChangedRect](#onchangedrect)|Chiamato quando il rettangolo è stato ridimensionato o spostato.|
-|[CRectTracker:: SetCursor](#setcursor)|Imposta il cursore, in base alla propria posizione nel rettangolo.|
+|[CRectTracker::SetCursor](#setcursor)|Imposta il cursore, in base alla propria posizione nel rettangolo.|
 |[CRectTracker::Track](#track)|Consente all'utente di manipolare il rettangolo.|
-|[CRectTracker](#trackrubberband)|Consente all'utente "rettangolo" la selezione.|
+|[CRectTracker::TrackRubberBand](#trackrubberband)|Consente all'utente "rettangolo" la selezione.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -85,7 +85,7 @@ class CRectTracker
 |----------|-----------------|
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|Determina le dimensioni dei quadratini di ridimensionamento.|
 |[CRectTracker::m_nStyle](#m_nstyle)|Style(s) corrente dello strumento di rilevamento.|
-|[CRectTracker::](#m_rect)|Posizione corrente, in pixel, del rettangolo.|
+|[CRectTracker::m_rect](#m_rect)|Posizione corrente, in pixel, del rettangolo.|
 |[CRectTracker::m_sizeMin](#m_sizemin)|Determina l'altezza e larghezza minimo rettangolo.|
 
 ## <a name="remarks"></a>Note
@@ -260,7 +260,7 @@ Puntatore per il `RECT` coordina la struttura che conterrà il dispositivo del `
 
 Le dimensioni del rettangolo includono l'altezza e larghezza di qualsiasi quadratini di ridimensionamento che si trova il bordo esterno. Al momento restituendo *lpTrueRect* è sempre un rettangolo in coordinate dispositivo normalizzato.
 
-##  <a name="hittest"></a>  CRectTracker:: HitTest
+##  <a name="hittest"></a>  CRectTracker::HitTest
 
 Chiamare questa funzione per scoprire se l'utente ha catturato un quadratino di ridimensionamento.
 
@@ -309,7 +309,7 @@ int m_nHandleSize;
 
 Inizializzato con il valore di sistema predefinito.
 
-##  <a name="m_rect"></a>  CRectTracker::
+##  <a name="m_rect"></a>  CRectTracker::m_rect
 
 Posizione del rettangolo corrente nelle coordinate del client (pixel).
 
@@ -445,7 +445,7 @@ Questa funzione consente di acquisire il mouse fino a quando l'utente rilascia i
 
 Se *bAllowInvert* è TRUE, il rettangolo di rilevamento possa essere invertito su asse x o asse y.
 
-##  <a name="trackrubberband"></a>  CRectTracker
+##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand
 
 Chiamare questa funzione per eseguire operazioni rettangolo di selezione.
 

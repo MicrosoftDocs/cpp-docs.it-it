@@ -140,18 +140,18 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: e9f083f37c2e92172b05b907d733f9dbdb27ce45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559744"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275961"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>Classe CMFCVisualManagerWindows
 
 `CMFCVisualManagerWindows` Simula l'aspetto di Microsoft Windows XP o Microsoft Vista quando l'utente seleziona Windows XP o un tema di Vista.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -309,7 +309,7 @@ virtual BOOL DrawComboBorderWinXP(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
 
@@ -332,7 +332,7 @@ virtual BOOL DrawComboDropButtonWinXP(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
 
@@ -616,7 +616,7 @@ virtual void OnDrawCaptionButton(
 [in] *bActive*<br/>
 [in] *bHorz*<br/>
 [in] *bMaximized*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *nImageID*<br/>
 
 ### <a name="remarks"></a>Note
@@ -639,7 +639,7 @@ virtual void OnDrawCaptionButtonIcon(
 [in] *pButton*<br/>
 [in] *id*<br/>
 [in] *bActive*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *ptImage*<br/>
 
 ### <a name="remarks"></a>Note
@@ -683,7 +683,7 @@ virtual void OnDrawComboBorder(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *pButton*<br/>
@@ -706,7 +706,7 @@ virtual void OnDrawComboDropButton(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *pButton*<br/>
@@ -740,7 +740,7 @@ virtual void OnDrawEditBorder(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *pButton*<br/>
 
@@ -1483,7 +1483,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bin*<br/>
+[in] *bOn*<br/>
 
 ### <a name="remarks"></a>Note
 

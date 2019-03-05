@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-ms.openlocfilehash: 87e216f1959a7c169673822ffa7041ed511817d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af3cde9445ae4b128e7e54a5f154db01b2eecd3b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473619"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279263"
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serializzazione dei dati da e verso i file
 
@@ -48,4 +48,3 @@ In generale, i dati di tipo classe devono essere in grado di serializzarsi. Vale
 ## <a name="see-also"></a>Vedere anche
 
 [Uso di documenti](../mfc/using-documents.md)
-

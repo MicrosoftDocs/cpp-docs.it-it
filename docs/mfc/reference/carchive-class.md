@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465611"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266328"
 ---
 # <a name="carchive-class"></a>Classe CArchive
 
@@ -132,7 +132,7 @@ L'estrazione di overload ( **>>**) e l'inserimento ( **<<**) gli operatori sono 
 
 `CArchive` supporta anche la programmazione con le classi MFC Windows Sockets [CSocket](../../mfc/reference/csocket-class.md) e [CSocketFile](../../mfc/reference/csocketfile-class.md). Il [IsBufferEmpty](#isbufferempty) supporta la funzione membro che l'utilizzo.
 
-Per ulteriori informazioni sul `CArchive`, vedere gli articoli [serializzazione](../../mfc/serialization-in-mfc.md) e [Windows Sockets: uso di socket con archivi](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Per ulteriori informazioni sul `CArchive`, vedere gli articoli [serializzazione](../../mfc/serialization-in-mfc.md) e [Windows Sockets: Utilizzo di socket con archivi](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -298,7 +298,7 @@ Questa funzione viene fornita per supportare la programmazione con la classe MFC
 
 Il motivo per usare `IsBufferEmpty` con un archivio associato un `CSocketFile` oggetto è che i buffer dell'archivio può contenere più di un messaggio o i record. Dopo aver ricevuto un messaggio, è consigliabile usare `IsBufferEmpty` per controllare un ciclo che continua a ricevere i dati fino a quando il buffer è vuoto. Per altre informazioni, vedere la [Receive](../../mfc/reference/casyncsocket-class.md#receive) la funzione membro della classe `CAsyncSocket`, che mostra come usare `IsBufferEmpty`.
 
-Per altre informazioni, vedere [Windows Sockets: uso di socket con archivi](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Per altre informazioni, vedere [Windows Sockets: Utilizzo di socket con archivi](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isloading"></a>  CArchive::IsLoading
 
@@ -352,7 +352,7 @@ void MapObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametri
 
-*casella postale*<br/>
+*pOb*<br/>
 Un puntatore costante per l'oggetto archiviato.
 
 ### <a name="remarks"></a>Note
@@ -834,7 +834,7 @@ void WriteObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametri
 
-*casella postale*<br/>
+*pOb*<br/>
 Un puntatore costante per l'oggetto archiviato.
 
 ### <a name="remarks"></a>Note

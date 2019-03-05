@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-ms.openlocfilehash: 5e9d72ddde6b885343c27ef7cdea44d4d61d20c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97b398dd80bb38b1579458ae0b8b65f082458e23
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509435"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257917"
 ---
 # <a name="cw2aex-class"></a>Classe CW2AEX
 
@@ -43,7 +43,7 @@ Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza pre
 |Nome|Descrizione|
 |----------|-----------------|
 |[CW2AEX::CW2AEX](#cw2aex)|Costruttore.|
-|[CW2AEX:: ~ CW2AEX](#dtor)|Distruttore.|
+|[CW2AEX::~CW2AEX](#dtor)|Distruttore.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 

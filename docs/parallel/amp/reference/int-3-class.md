@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c3588ccfc1e775ebecc245c055f600da4d2652ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440534"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266848"
 ---
 # <a name="int3-class"></a>Classe int_3
 
@@ -156,7 +156,7 @@ class int_3;
 |int_3::operator/=||
 |int_3::operator^=||
 |int_3::operator&#124;=||
-|int_3::operator ~||
+|int_3::operator~||
 |int_3::operator++||
 |int_3::operator+=||
 |int_3::operator<\<=||
@@ -213,7 +213,7 @@ class int_3;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ## <a name="ctor"></a> int_3
 
@@ -256,13 +256,13 @@ explicit inline int_3(
 *_V0*<br/>
 Il valore per inizializzare l'elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 Il valore per inizializzare l'elemento 1.
 
 *_V2*<br/>
 Il valore per inizializzare l'elemento 2.
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore di inizializzazione.
 
 *_Other*<br/>

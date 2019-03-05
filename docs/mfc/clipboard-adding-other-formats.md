@@ -1,5 +1,5 @@
 ---
-title: 'Appunti: aggiunta di altri formati'
+title: 'Appunti: Aggiunta di altri formati'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - formats [MFC], Clipboard
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 991736714d52b4b5fb1a001fb17f1daefed5ddb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560563"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280218"
 ---
-# <a name="clipboard-adding-other-formats"></a>Appunti: aggiunta di altri formati
+# <a name="clipboard-adding-other-formats"></a>Appunti: Aggiunta di altri formati
 
-Questo argomento illustra come espandere l'elenco dei formati supportati, in particolare per il supporto OLE. L'argomento [negli Appunti: copiare e incollare dati](../mfc/clipboard-copying-and-pasting-data.md) viene descritta l'implementazione minima necessaria per supportare copiando e incollando dagli Appunti. Se questo è tutto implementare, sono gli unici formati inseriti negli Appunti **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, **inseriti**ed eventualmente **CF_LINKSOURCE**. La maggior parte delle applicazioni saranno necessario più formati negli Appunti rispetto a questi tre.
+Questo argomento illustra come espandere l'elenco dei formati supportati, in particolare per il supporto OLE. L'argomento [negli Appunti: Copiando e incollando dati](../mfc/clipboard-copying-and-pasting-data.md) viene descritta l'implementazione minima necessaria per supportare copiando e incollando dagli Appunti. Se questo è tutto implementare, sono gli unici formati inseriti negli Appunti **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, **inseriti**ed eventualmente **CF_LINKSOURCE**. La maggior parte delle applicazioni saranno necessario più formati negli Appunti rispetto a questi tre.
 
 ##  <a name="_core_registering_custom_formats"></a> Registrazione di formati personalizzati
 
@@ -48,5 +48,4 @@ Questa tecnica viene usata nel programma di esempio OLE MFC [HIERSVR](../visual-
 
 ## <a name="see-also"></a>Vedere anche
 
-[Appunti: uso del meccanismo degli Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-
+[Appunti: Utilizzo del meccanismo degli Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

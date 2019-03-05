@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-ms.openlocfilehash: 60028ce439dc344696bb3814efb74e0daa21f6ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23821c91cd4158f6ec3989cdf537a5d8067e8225
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522200"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282292"
 ---
 # <a name="cancellationtoken-class"></a>Classe cancellation_token
 
@@ -135,7 +135,7 @@ static cancellation_token none();
 
 Token di annullamento che non può essere annullato.
 
-##  <a name="operator_neq"></a> operatore! =
+##  <a name="operator_neq"></a> operator!=
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -190,7 +190,7 @@ template<typename _Function>
 *_Function*<br/>
 Tipo dell'oggetto funzione che verrà richiamato quando `cancellation_token` viene annullato.
 
-*Func*<br/>
+*_Func*<br/>
 Oggetto funzione che verrà richiamato quando `cancellation_token` viene annullato.
 
 ### <a name="return-value"></a>Valore restituito

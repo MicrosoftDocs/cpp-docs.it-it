@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-ms.openlocfilehash: b99a6b0e9f9728d74057d05f7ad9082017e31005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3c165a0bf495da4e6cda05c7e109b338b0a364f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623548"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278678"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Sequenza delle operazioni per la compilazione di applicazioni MFC
 
@@ -47,4 +47,3 @@ La tabella seguente illustra la sequenza generale che potrebbe seguono in genere
 [Sequenza di operazioni per la creazione di controlli ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
 [Sequenza delle operazioni per la creazione di applicazioni di database](../mfc/sequence-of-operations-for-creating-database-applications.md)<br/>
 [Compilazione nel framework](../mfc/building-on-the-framework.md)
-

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 35e9a8c9d32cba53c9ea8a3b7f4644e20b01ef77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8657421e67239cdeb782cffbbd42e0c50f6c0e96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588747"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258879"
 ---
 # <a name="cd2dpathgeometry-class"></a>Classe CD2DPathGeometry
 
@@ -112,7 +112,7 @@ CD2DPathGeometry(
 *pParentTarget*<br/>
 Puntatore alla destinazione di rendering.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 ##  <a name="create"></a>  CD2DPathGeometry::Create

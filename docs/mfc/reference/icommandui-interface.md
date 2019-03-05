@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467099"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268174"
 ---
 # <a name="icommandui-interface"></a>Interfaccia ICommandUI
 
@@ -51,7 +51,7 @@ Questa interfaccia fornisce metodi e proprietà che gestiscono i comandi dell'in
 
 `ICommandUI` viene usato all'interno di un gestore ON_UPDATE_COMMAND_UI in un' [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-classe derivata. Quando un utente di un'applicazione attiva (Seleziona o clic) viene visualizzato un menu, ogni voce di menu come abilitata o disabilitata. La destinazione di ogni comando di menu fornisce queste informazioni mediante l'implementazione di un gestore ON_UPDATE_COMMAND_UI. Per ogni oggetto comando dell'interfaccia utente nell'applicazione, usare la finestra proprietà per creare una voce nella mappa messaggi e prototipo di funzione per ogni gestore.
 
-Per altre informazioni sul modo in cui il `ICommandUI` interfaccia viene utilizzata nel routing dei comandi, vedere [procedura: aggiungere comandi (Routing) al controllo Windows Form](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Per altre informazioni sul modo in cui il `ICommandUI` interfaccia viene utilizzata nel routing dei comandi, vedere [come: Comando Aggiungi controllo Routing per i Windows Form](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Per altre informazioni sull'uso di Windows Form, vedere [usando un controllo utente di Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Note
 
-Si tratta di una funzione membro avanzata che deve essere usata in combinazione con un gestore ON_COMMAND_EX che restituisce FALSE. Per altre informazioni, vedere tecniche nota TN006: mappe messaggi.
+Si tratta di una funzione membro avanzata che deve essere usata in combinazione con un gestore ON_COMMAND_EX che restituisce FALSE. Per altre informazioni, vedere TN006 Nota tecnica: Mappe messaggi.
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 

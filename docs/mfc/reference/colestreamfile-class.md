@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 25d3da4ac9092fe53e84e446e93ff7aa030e6709
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577541"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258732"
 ---
 # <a name="colestreamfile-class"></a>Classe COleStreamFile
 
@@ -62,7 +62,7 @@ Un `IStorage` l'oggetto deve esistere prima che il flusso può essere aperto o c
 
 `COleStreamFile` gli oggetti vengono modificati esattamente come [CFile](../../mfc/reference/cfile-class.md) oggetti.
 
-Per altre informazioni sulla modifica dei flussi e archivi, vedere l'articolo [contenitori: file compositi](../../mfc/containers-compound-files.md)...
+Per altre informazioni sulla modifica dei flussi e archivi, vedere l'articolo [contenitori: File compositi](../../mfc/containers-compound-files.md)...
 
 Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream) e [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) nel SDK di Windows.
 
@@ -245,4 +245,3 @@ Per altre informazioni, vedere [IStorage::OpenStream](/windows/desktop/api/objid
 
 [Classe CFile](../../mfc/reference/cfile-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

@@ -120,18 +120,18 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: bd0e238dd936dfff0677e41831c72229171cb656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 099f1cccd178068f9b96bda6193b5ee9df3b66c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274960"
 ---
 # <a name="cpanecontainer-class"></a>Classe CPaneContainer
 
 Il `CPaneContainer` classe è un componente di base del modello di ancoraggio implementato da MFC. Un oggetto di questa classe archivia i puntatori in due riquadri ancorati o in due istanze di `CPaneContainer.` . Archivia inoltre un puntatore nel divisore che separa i riquadri o i contenitori. Annidando i contenitori all'interno di altri contenitori, il framework può compilare un albero binario che rappresenta layout di ancoraggio complessi. La radice dell'albero binario è archiviata in una [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) oggetto.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -443,7 +443,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *dimensioni*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -455,7 +455,7 @@ virtual void GetMinSizeLeft(CSize& size) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *dimensioni*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -467,7 +467,7 @@ virtual void GetMinSizeRight(CSize& size) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *dimensioni*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -733,7 +733,7 @@ virtual void OnShowPane(
 ### <a name="parameters"></a>Parametri
 
 [in] *pBar*<br/>
-[in] *bMostra*<br/>
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>Note
 

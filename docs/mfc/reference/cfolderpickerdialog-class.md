@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: ba189badaa9b1605e3467526e7b92a18a1bb5a73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1718919a4fe9019ef591d83473c118eba966900
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561304"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276182"
 ---
 # <a name="cfolderpickerdialog-class"></a>Classe CFolderPickerDialog
 
@@ -79,7 +79,7 @@ Una combinazione di uno o più flag che consentono di personalizzare la finestra
 *pParentWnd*<br/>
 Puntatore alla finestra padre o il proprietario dell'oggetto finestra di dialogo.
 
-*dwSize diverso da*<br/>
+*dwSize*<br/>
 Le dimensioni della struttura OPENFILENAME.
 
 ### <a name="remarks"></a>Note

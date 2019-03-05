@@ -10,12 +10,12 @@ helpviewer_keywords:
 - map classes [MFC]
 - template classes [MFC]
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
-ms.openlocfilehash: 93104c978ead80598a540da1469065643cb27442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be5639802f6f4a11a29326efd71d9634797c9f5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466053"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267004"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Classi modello per matrici, elenchi e mappe
 
@@ -44,4 +44,3 @@ Classe di modello per le mappe indipendente dai tipi con i puntatori.
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

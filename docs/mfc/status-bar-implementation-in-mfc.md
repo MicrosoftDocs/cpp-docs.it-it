@@ -16,12 +16,12 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: 521b24646b673159d14e89bd57ea698a7ba73381
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: abd16ecb5e6a492bc42c747f60ec0859e1bc05cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175369"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270072"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementazione della barra di stato in MFC
 
@@ -53,4 +53,3 @@ Ad esempio la barra degli strumenti, l'oggetto della barra di stato è incorpora
 ## <a name="see-also"></a>Vedere anche
 
 [Barre di stato](../mfc/status-bars.md)
-

@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: cf7e5f9c9b44524491737b27098bc91bb472cb32
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3fa829c5333a87d908d36438fe8ffcd253f9fb5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694283"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279991"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe CMFCShellTreeCtrl
 
 Il `CMFCShellTreeCtrl` classe estende [classe CTreeCtrl](../../mfc/reference/ctreectrl-class.md) funzionalità visualizzando una gerarchia di elementi della Shell.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 ## <a name="syntax"></a>Sintassi
 
 ```
@@ -101,7 +101,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Valore booleano che specifica se abilitare il menu di scelta rapida.
 
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags
@@ -140,7 +140,7 @@ BOOL GetItemPath(
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo. in caso contrario 0.
+Valore diverso da zero in caso di esito positivo, 0 in caso contrario.
 
 ### <a name="remarks"></a>Note
 

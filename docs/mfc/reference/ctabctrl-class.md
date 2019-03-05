@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621429"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259542"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 
@@ -113,14 +113,14 @@ class CTabCtrl : public CWnd
 |[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Recupera gli stili estesi che sono attualmente in uso per il controllo struttura a schede.|
 |[CTabCtrl::GetImageList](#getimagelist)|Recupera l'elenco di immagini associato a un controllo struttura a schede.|
 |[CTabCtrl::GetItem](#getitem)|Recupera informazioni su una scheda in un controllo struttura a schede.|
-|[CTabCtrl::GetItemCount](#getitemcount)|Recupera il numero delle schede nel controllo struttura a schede.|
+|[CTabCtrl::GetItemCount](#getitemcount)|Recupera il numero di schede nel controllo Struttura a schede.|
 |[CTabCtrl::GetItemRect](#getitemrect)|Recupera il rettangolo di delimitazione per la scheda in un controllo struttura a schede.|
 |[CTabCtrl::GetItemState](#getitemstate)|Recupera lo stato dell'elemento del controllo scheda indicato.|
 |[CTabCtrl::GetRowCount](#getrowcount)|Recupera il numero corrente di righe di schede in un controllo struttura a schede.|
 |[CTabCtrl::GetToolTips](#gettooltips)|Recupera l'handle della finestra del controllo ToolTip associato a un controllo struttura a schede.|
 |[CTabCtrl::HighlightItem](#highlightitem)|Imposta lo stato di evidenziazione di un elemento di scheda.|
 |[CTabCtrl::HitTest](#hittest)|Determina quale scheda, se presente, è in una posizione sullo schermo specificata.|
-|[CTabCtrl:: InsertItem](#insertitem)|Inserisce una nuova scheda in un controllo struttura a schede.|
+|[CTabCtrl::InsertItem](#insertitem)|Inserisce una nuova scheda in un controllo struttura a schede.|
 |[CTabCtrl::RemoveImage](#removeimage)|Rimuove un'immagine dall'elenco di immagini di un controllo struttura a schede.|
 |[CTabCtrl::SetCurFocus](#setcurfocus)|Imposta lo stato attivo per una scheda specificata in un controllo struttura a schede.|
 |[CTabCtrl::SetCurSel](#setcursel)|Seleziona una scheda in un controllo struttura a schede.|
@@ -193,7 +193,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile del controllo scheda. Applicare qualsiasi combinazione di [scheda stili del controllo](/windows/desktop/Controls/tab-control-styles), come descritto nel SDK di Windows. Visualizzare **osservazioni** per un elenco degli stili finestra è anche possibile applicare al controllo.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo scheda. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
 
 *pParentWnd*<br/>
@@ -249,7 +249,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 *dwStyle*<br/>
 Specifica lo stile del controllo scheda. Applicare qualsiasi combinazione di [scheda stili del controllo](/windows/desktop/Controls/tab-control-styles), come descritto nel SDK di Windows. Visualizzare **osservazioni** nelle [crea](#create) per un elenco degli stili finestra è anche possibile applicare al controllo.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -457,7 +457,7 @@ Quando viene inviato il messaggio, il `mask` membro specifica gli attributi da r
 
 ##  <a name="getitemcount"></a>  CTabCtrl::GetItemCount
 
-Recupera il numero delle schede nel controllo struttura a schede.
+Recupera il numero di schede nel controllo Struttura a schede.
 
 ```
 int GetItemCount() const;
@@ -517,7 +517,7 @@ Maschera che specifica quali lo stato dell'elemento flag da restituire. Per un e
 
 Un riferimento a un valore DWORD che riceve le informazioni di stato. Il valore può essere uno dei seguenti:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|L'elemento di scheda di controllo è selezionata.|
 |TCIS_HIGHLIGHTED|Viene evidenziato l'elemento del controllo scheda e la scheda e testo vengono disegnati utilizzando il colore di evidenziazione corrente. Quando si usa il colore di evidenziazione, questo sarà un'interpolazione true, non un colore retinato.|
@@ -599,7 +599,7 @@ Puntatore a un [TCHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtchi
 
 Restituisce l'indice in base zero della scheda o - 1 se non sono in corrispondenza della posizione specificata.
 
-##  <a name="insertitem"></a>  CTabCtrl:: InsertItem
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem
 
 Inserisce una nuova scheda in un controllo struttura a schede esistenti.
 
@@ -645,7 +645,7 @@ Puntatore a un [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) st
 *lpszItem*<br/>
 Indirizzo di una stringa con terminazione null che contiene il testo della scheda.
 
-*Immagine*<br/>
+*nImage*<br/>
 Indice a base zero di un'immagine da inserire da un elenco di immagini.
 
 *nMask*<br/>
@@ -688,7 +688,7 @@ void RemoveImage(int nImage);
 
 ### <a name="parameters"></a>Parametri
 
-*Immagine*<br/>
+*nImage*<br/>
 Indice in base zero dell'immagine da rimuovere.
 
 ### <a name="remarks"></a>Note
@@ -858,7 +858,7 @@ Maschera che specifica quali lo stato dell'elemento flag da impostare. Per un el
 *dwState*<br/>
 Un riferimento a un valore DWORD che contiene le informazioni sullo stato. Il valore può essere uno dei seguenti:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|L'elemento di scheda di controllo è selezionata.|
 |TCIS_HIGHLIGHTED|Viene evidenziato l'elemento del controllo scheda e la scheda e testo vengono disegnati utilizzando il colore di evidenziazione corrente. Quando si usa il colore di evidenziazione, questo sarà un'interpolazione true, non un colore retinato.|
@@ -877,7 +877,7 @@ int SetMinTabWidth(int cx);
 
 ### <a name="parameters"></a>Parametri
 
-*CX*<br/>
+*cx*<br/>
 Larghezza minima da impostare per un elemento del controllo scheda. Se questo parametro è impostato su -1, il controllo utilizzerà l'ampiezza delle tabulazioni predefinita.
 
 ### <a name="return-value"></a>Valore restituito

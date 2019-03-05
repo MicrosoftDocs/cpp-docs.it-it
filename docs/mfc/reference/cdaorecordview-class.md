@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: db1636bebd0cc29124018b5fad2c0535079706d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541206"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277773"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView (classe)
 
@@ -173,7 +173,7 @@ Un puntatore a un `CDaoRecordset`-oggetto derivato se l'oggetto è stato creato 
 
 È necessario eseguire l'override di questa funzione membro per creare o ottenere un oggetto recordset e restituire un puntatore a esso. Se si dichiara la classe di visualizzazione di record con ClassWizard, la procedura guidata scrive una sostituzione predefinita per l'utente. Implementazione predefinita di ClassWizard restituisce il puntatore di recordset archiviato nella vista del record, se presente. Se non, costruisce un oggetto recordset del tipo specificato con la creazione guidata classe e le chiamate relative `Open` membro funzione per aprire la tabella o eseguire la query e quindi restituisce un puntatore all'oggetto.
 
-Per altre informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: uso di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).
+Per altre informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: Uso di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  CDaoRecordView::OnMove
 

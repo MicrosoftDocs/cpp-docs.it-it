@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: f31bbda1bb6428b6bcca25d6eddce98156fac1d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3fa73320ae34283b0cdac559111a53a879c031c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588838"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274271"
 ---
 # <a name="csocketfile-class"></a>Classe CSocketFile
 
@@ -50,7 +50,7 @@ Nell'esempio seguente, `m_dwExpected` è il numero approssimativo di byte che l'
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]
 
-Per altre informazioni, vedere [socket di Windows in MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: uso di socket con archivi](../../mfc/windows-sockets-using-sockets-with-archives.md), nonché [API Windows Sockets versione 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
+Per altre informazioni, vedere [socket di Windows in MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: Utilizzo di socket con archivi](../../mfc/windows-sockets-using-sockets-with-archives.md), nonché [API Windows Sockets versione 2](/windows/desktop/WinSock/windows-sockets-start-page-2).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -93,7 +93,7 @@ In modalità "compatible archivio", un `CSocketFile` oggetto offre prestazioni m
 
 Con `CSocketFile`, tuttavia, dei dati sono basato su messaggi; il buffer può contenere più messaggi, pertanto la ricezione di un valore più basso rispetto al numero di byte richiesto non implica fine del file. L'applicazione non vengono bloccati in questo caso come potrebbe accadere con `CFile`, e può continuare a leggere i messaggi dal buffer fino a quando il buffer è vuoto. Il [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) funzione è utile per monitorare lo stato del buffer dell'archivio in questo caso.
 
-Per altre informazioni sull'uso delle `CSocketFile`, vedere gli articoli [Windows Sockets: uso di socket con archivi](../../mfc/windows-sockets-using-sockets-with-archives.md) e [Windows Sockets: esempio di socket con gli archivi](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
+Per altre informazioni sull'uso delle `CSocketFile`, vedere gli articoli [Windows Sockets: Utilizzo di socket con archivi](../../mfc/windows-sockets-using-sockets-with-archives.md) e [Windows Sockets: Esempio di socket che utilizzano archivi](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
 ## <a name="see-also"></a>Vedere anche
 

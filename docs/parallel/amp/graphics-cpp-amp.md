@@ -2,12 +2,12 @@
 title: Grafica (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570317"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260881"
 ---
 # <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 
@@ -135,9 +135,9 @@ Esistono limiti alla grandezza di ogni dimensione dell'oggetto `texture`, come i
 
 |Trama|Limitazione delle dimensioni per ogni dimensione|
 |-------------|---------------------|
-|trama\<T, 1 >|16384|
-|trama\<T, 2 >|16384|
-|trama\<T, 3 >|2048|
+|texture\<T,1>|16384|
+|texture\<T,2>|16384|
+|texture\<T,3>|2048|
 
 ### <a name="reading-from-texture-objects"></a>Lettura da oggetti texture
 
@@ -344,8 +344,8 @@ Il tipo di elemento di un oggetto `texture_view`, il relativo stato const e il n
 
 |Tipo|Componenti|Lettura|Write|Campionamento|Accesso alle mipmap|
 |----------|----------------|----------|-----------|--------------|-------------------|
-|texture_view\<const T, N >|1, 2, 4|Yes|No (1)|Yes|Sì, indicizzabile. L'intervallo viene determinato al momento della creazione delle istanze.|
-|Texture_view\<T, N >|1<br /><br /> 2, 4|Yes<br /><br /> No (2)|Yes<br /><br /> Yes|No (1)<br /><br /> No (1)|Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.<br /><br /> Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.|
+|texture_view\<const T, N >|1, 2, 4|Sì|No (1)|Sì|Sì, indicizzabile. L'intervallo viene determinato al momento della creazione delle istanze.|
+|Texture_view\<T, N >|1<br /><br /> 2, 4|Sì<br /><br /> No (2)|Sì<br /><br /> Sì|No (1)<br /><br /> No (1)|Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.<br /><br /> Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.|
 
 Da questa tabella, è possibile vedere che le visualizzazioni di trama in sola lettura supportano completamente le nuove funzionalità a fronte dell'impossibilità di scrivere sulla visualizzazione. Le visualizzazioni di trama che consentono la scrittura sono limitate in quanto possono accedere a un solo livello di mipmap. Le visualizzazioni di trama in lettura e scrittura sono ancora più specializzate di quelle scrivibili, poiché richiedono che il tipo di elemento della visualizzazione di trama abbia un solo componente. Si noti che il campionamento non è supportato per le visualizzazioni di trama scrivibili perché è un'operazione orientata alla lettura.
 

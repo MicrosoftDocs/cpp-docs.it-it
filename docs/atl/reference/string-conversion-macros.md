@@ -11,12 +11,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 1cad89fe065c0827169a22cc9699b677323d8594
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271762"
 ---
 # <a name="string-conversion-macros"></a>Macro di conversione di stringhe
 
@@ -24,7 +24,7 @@ Queste macro forniscono stringa le funzionalità di conversione.
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  Macro di conversione di stringhe MFC e ATL
 
-Le macro di conversione di stringhe presentate in questo argomento sono valide sia per ATL che per MFC. Per altre informazioni sulla conversione di stringhe MFC, vedere [TN059: utilizzo delle macro conversione MFC MBCS/Unicode](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [macro MFC e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md).
+Le macro di conversione di stringhe presentate in questo argomento sono valide sia per ATL che per MFC. Per altre informazioni sulla conversione di stringhe MFC, vedere [TN059: Utilizzo di macro di conversione Unicode/MBCS MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [macro MFC e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md).
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  Macro di conversione di stringhe TEXTMETRIC e DEVMODE
 

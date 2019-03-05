@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Usare la gestione delle eccezion per interrompere un ciclo Parallel'
+title: 'Procedura: Utilizzare eccezioni per interrompere un ciclo Parallel'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: a9557f2fc809647215dbb5fd928f5c638af6ed62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19d732d98f24172471d96cd5e2962b2a99ab0203
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532886"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262311"
 ---
-# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Procedura: Usare la gestione delle eccezion per interrompere un ciclo Parallel
+# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Procedura: Utilizzare eccezioni per interrompere un ciclo Parallel
 
 Questo argomento illustra come scrivere un algoritmo di ricerca per una struttura ad albero di base.
 
@@ -66,7 +66,7 @@ Did not find node with value 17522.
 
 Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `task-tree-search.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
 
-**CL.exe /EHsc attività-struttura-Search. cpp**
+**cl.exe /EHsc task-tree-search.cpp**
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -77,4 +77,3 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 [Classe task_group](reference/task-group-class.md)<br/>
 [Classe structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)<br/>
 [parallel_for_each (funzione)](reference/concurrency-namespace-functions.md#parallel_for_each)
-

@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: aa1874dee72f7734c690ce9e86998a5120b2974b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273426"
 ---
 # <a name="int4-class"></a>Classe int_4
 
@@ -452,7 +452,7 @@ class int_4;
 |int_4::operator/=||
 |int_4::operator^=||
 |int_4::operator&#124;=||
-|int_4::operator ~||
+|int_4::operator~||
 |int_4::operator++||
 |int_4::operator+=||
 |int_4::operator<\<=||
@@ -607,7 +607,7 @@ class int_4;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> int_4
 
@@ -658,7 +658,7 @@ explicit inline int_4(
 *_V0*<br/>
 Il valore per inizializzare l'elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 Il valore per inizializzare l'elemento 1.
 
 *_V2*<br/>
@@ -667,7 +667,7 @@ Il valore per inizializzare l'elemento 2.
 *_V3*<br/>
 Il valore per inizializzare l'elemento 3.
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore di inizializzazione.
 
 *_Other*<br/>

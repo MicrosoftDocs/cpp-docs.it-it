@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659927"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273803"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Due modi per creare un oggetto CArchive
 
@@ -60,7 +60,7 @@ Oltre a potere serializzare un documento tramite il framework, esistono altre si
 
    Il secondo argomento di `CArchive` costruttore è un valore enumerato che specifica se l'archivio verrà usata per l'archiviazione o il caricamento di dati verso e dal file. Il `Serialize` funzione di un oggetto questo stato viene controllato tramite la chiamata di `IsStoring` funzione per l'oggetto di archiviazione.
 
-Dopo aver terminato l'archiviazione o il caricamento dei dati da o verso il `CArchive` dell'oggetto, chiuderlo. Anche se il `CArchive` (e `CFile`) oggetti chiuderà automaticamente l'archivio (e file), è consigliabile farlo in modo esplicito poiché semplifica il recupero da errori. Per altre informazioni sulla gestione degli errori, vedere l'articolo [eccezioni: eccezioni di intercettazione ed eliminazione](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Dopo aver terminato l'archiviazione o il caricamento dei dati da o verso il `CArchive` dell'oggetto, chiuderlo. Anche se il `CArchive` (e `CFile`) oggetti chiuderà automaticamente l'archivio (e file), è consigliabile farlo in modo esplicito poiché semplifica il recupero da errori. Per altre informazioni sulla gestione degli errori, vedere l'articolo [alle eccezioni: Rilevamento ed eliminazione di eccezioni](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 #### <a name="to-close-the-carchive-object"></a>Per chiudere l'oggetto CArchive
 
@@ -70,5 +70,4 @@ Dopo aver terminato l'archiviazione o il caricamento dei dati da o verso il `CAr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Serializzazione: serializzazione di un oggetto](../mfc/serialization-serializing-an-object.md)
-
+[Serializzazione: Serializzazione di un oggetto](../mfc/serialization-serializing-an-object.md)

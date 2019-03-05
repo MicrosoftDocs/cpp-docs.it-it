@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522488"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281096"
 ---
 # <a name="ccomvariant-class"></a>Classe CComVariant
 
@@ -44,7 +44,7 @@ class CComVariant : public tagVARIANT
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|Costruttore.|
-|[CComVariant:: ~ CComVariant](#dtor)|Distruttore.|
+|[CComVariant::~CComVariant](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -59,14 +59,14 @@ class CComVariant : public tagVARIANT
 |[CComVariant::GetSize](#getsize)|Restituisce le dimensioni in numero di byte del contenuto del `CComVariant` oggetto.|
 |[CComVariant::ReadFromStream](#readfromstream)|Carica una variante da un flusso.|
 |[CComVariant::SetByRef](#setbyref)|Inizializza la `CComVariant` oggetto e imposta il `vt` membro VT_BYREF.|
-|[CComVariant:: WriteToStream](#writetostream)|Salva la variante sottostante in un flusso.|
+|[CComVariant::WriteToStream](#writetostream)|Salva la variante sottostante in un flusso.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |||
 |-|-|
 |[CComVariant:: operator <](#operator_lt)|Indica se il `CComVariant` oggetto è minore di variante specificata.|
-|[CComVariant:: operator >](#operator_gt)|Indica se il `CComVariant` oggetto è maggiore di variante specificata.|
+|[CComVariant::operator >](#operator_gt)|Indica se il `CComVariant` oggetto è maggiore di variante specificata.|
 |[operatore! =](#operator_neq)|Indica se il `CComVariant` oggetto variante specificata non è uguale.|
 |[operator =](#operator_eq)|Assegna un valore per il `CComVariant` oggetto.|
 |[operatore = =](#operator_eq_eq)|Indica se il `CComVariant` oggetto variante specificata è uguale.|
@@ -179,7 +179,7 @@ O, il puntatore SAFERRAY utilizzato per inizializzare il `CComVariant` oggetto. 
 
 Il distruttore gestisce la pulizia chiamando [CComVariant::Clear](#clear).
 
-##  <a name="dtor"></a>  CComVariant:: ~ CComVariant
+##  <a name="dtor"></a>  CComVariant::~CComVariant
 
 Distruttore.
 
@@ -310,7 +310,7 @@ In tutti gli altri casi, una variante di tipo VT_BSTR temporanea viene convertit
 
 Le dimensioni restituite dal metodo corrispondano al numero di byte utilizzati dal [CComVariant:: WriteToStream](#writetostream) in condizioni di esito positivo.
 
-##  <a name="operator_eq"></a>  CComVariant:: operator =
+##  <a name="operator_eq"></a>  CComVariant::operator =
 
 Assegna un valore e tipo corrispondente per il `CComVariant` oggetto.
 
@@ -373,7 +373,7 @@ Oppure, un puntatore SAFEARRAY da assegnare al `CComVariant` oggetto. Una copia 
 *cSrc*<br/>
 [in] Il carattere da assegnare al `CComVariant` oggetto. Il tipo del `CComVariant` VT_I1 sarà l'oggetto.
 
-##  <a name="operator_eq_eq"></a>  CComVariant:: operator = =
+##  <a name="operator_eq_eq"></a>  CComVariant::operator ==
 
 Indica se il `CComVariant` oggetto variante specificata è uguale.
 
@@ -469,7 +469,7 @@ Il puntatore utilizzato per inizializzare il `CComVariant` oggetto.
 
 [!code-cpp[NVC_ATL_Utilities#76](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]
 
-##  <a name="writetostream"></a>  CComVariant:: WriteToStream
+##  <a name="writetostream"></a>  CComVariant::WriteToStream
 
 Salva la variante sottostante in un flusso.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, about event handling
 ms.assetid: e4812b0d-6fdd-4e8c-bdb8-378a25c7bde2
-ms.openlocfilehash: 8634765bcfdc483e014b8552c67a57a11236f426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e939c693f3f474cce9d2ca118bc86d163d6146dc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277469"
 ---
 # <a name="event-handling-and-atl"></a>Gestione di eventi e ATL
 
@@ -42,4 +42,3 @@ Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active T
 ## <a name="see-also"></a>Vedere anche
 
 [Concetti](../atl/active-template-library-atl-concepts.md)
-

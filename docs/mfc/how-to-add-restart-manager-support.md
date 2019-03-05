@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Aggiungere il supporto di Gestione riavvio'
+title: 'Procedura: Aggiungere il supporto Gestione riavvio'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 77267cdad1fa976d73381ca798ca5002c09dc7ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23f860c43c63e3153f4b87f8eaf05d61709af82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565136"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279783"
 ---
-# <a name="how-to-add-restart-manager-support"></a>Procedura: Aggiungere il supporto di Gestione riavvio
+# <a name="how-to-add-restart-manager-support"></a>Procedura: Aggiungere il supporto Gestione riavvio
 
 Gestione riavvio è una funzionalità aggiunta a Visual Studio per Windows Vista o sistemi operativi successivi. che consente di riavviare l'applicazione in caso di chiusure o riavvii imprevisti. Il funzionamento di Gestione riavvio dipende dal tipo di applicazione Se l'applicazione è un editor di documenti, Gestione riavvio consente all'applicazione di salvare automaticamente lo stato e il contenuto di qualsiasi documento aperto e riavvia l'applicazione dopo una chiusura imprevista. Se l'applicazione non è un editor di documenti, Gestione riavvio riavvierà l'applicazione, ma per impostazione predefinita non potrà salvare lo stato dell'applicazione.
 
@@ -37,7 +37,7 @@ Per impostazione predefinita, le applicazioni MFC create tramite la creazione gu
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
 ```
 
-1. Verificare che il metodo `InitInstance` dell'applicazione chiami il metodo `InitInstance` padre: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) o `CWinAppEx::InitInstance`. Il `InitInstance` metodo è responsabile della verifica la *m_dwRestartManagerSupportFlags* parametro.
+1. Assicurarsi che il `InitInstance` metodo dell'applicazione chiama il relativo elemento padre `InitInstance` metodo: [CWinApp:: InitInstance](../mfc/reference/cwinapp-class.md#initinstance) o `CWinAppEx::InitInstance`. Il `InitInstance` metodo è responsabile della verifica la *m_dwRestartManagerSupportFlags* parametro.
 
 1. Compilare ed eseguire l'applicazione.
 
@@ -48,4 +48,3 @@ Per impostazione predefinita, le applicazioni MFC create tramite la creazione gu
 [Classe CWinApp](../mfc/reference/cwinapp-class.md)<br/>
 [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)<br/>
 [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
-

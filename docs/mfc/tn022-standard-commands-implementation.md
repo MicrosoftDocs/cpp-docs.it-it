@@ -1,5 +1,5 @@
 ---
-title: 'TN022: implementazione di comandi standard'
+title: 'TN022: Implementazione di comandi standard'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.commands
@@ -59,14 +59,14 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504338"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279357"
 ---
-# <a name="tn022-standard-commands-implementation"></a>TN022: implementazione di comandi standard
+# <a name="tn022-standard-commands-implementation"></a>TN022: Implementazione di comandi standard
 
 > [!NOTE]
 >  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
@@ -468,30 +468,29 @@ Per ogni ID di comando, vi è una stringa di messaggio di richiesta riga standar
 
 Diversi ID di comando standard vengono utilizzate come indicatori di barre di stato. Questi usare la stessa interfaccia utente di comando di aggiornamento meccanismo di gestione per visualizzare lo stato corrente di visual durante il tempo di inattività dell'applicazione. Poiché non possono essere selezionati dall'utente (vale a dire, è possibile effettuare il push un riquadro barra di stato), quindi non ha senso disporre di un gestore ON_COMMAND per questi ID di comando.
 
-- ID_INDICATOR_CAPS: Indicatore del blocco limite di utilizzo.
+- ID_INDICATOR_CAPS: Indicatore di blocco di limite di utilizzo.
 
-- ID_INDICATOR_NUM: Indicatore del blocco NUM.
+- ID_INDICATOR_NUM: Indicatore lock NUM.
 
 - ID_INDICATOR_SCRL: Indicatore del blocco BLOC SCORR.
 
-- ID_INDICATOR_KANA: Indicatore del blocco dei caratteri KANA (applicabile solo ai sistemi giapponesi).
+- ID_INDICATOR_KANA : KANA bloccare indicatore (applicabile solo ai sistemi giapponesi).
 
 Tutte e tre questi vengono implementati in `CFrameWnd::OnUpdateKeyIndicator`, un helper di implementazione che usa l'ID di comando per eseguire il mapping alla chiave virtuale appropriato. Un'implementazione comune Abilita o disabilita (per i riquadri di stati disabilitati non = Nessun testo) il `CCmdUI` oggetti a seconda del fatto che la chiave virtuale appropriata è attualmente bloccata.
 
 Personalizzazione di questo gestore di comando non è consigliata.
 
-- ID_INDICATOR_EXT: Indicatore selezionare estesa.
+- ID_INDICATOR_EXT: Indicatore di selezione estesa.
 
-- ID_INDICATOR_OVR: Indicatore di sovrascrittura.
+- ID_INDICATOR_OVR : Indicatore di sovrascrittura.
 
-- ID_INDICATOR_REC: Indicatore della registrazione.
+- ID_INDICATOR_REC: Indicatore di registrazione.
 
 Non è attualmente disponibile alcuna implementazione standard per questi indicatori.
 
-Se si sceglie di implementare questi indicatori, è consigliabile usare questi ID indicatore e mantenere l'ordine degli indicatori nella barra di stato (vale a dire, nell'ordine indicato: EXT, CAP, NUM, BLOC SCORR, SSC, CONS.).
+Se si sceglie di implementare questi indicatori, è consigliabile usare questi ID di indicatore e mantenere l'ordine degli indicatori nella barra di stato (vale a dire, nell'ordine indicato: EXT, CAP, NUM, SCRL, OVR, REC).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

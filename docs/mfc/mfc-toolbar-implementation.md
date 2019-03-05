@@ -17,12 +17,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: 93cf2f2a11c34b1bbe2d62e4e4cc6afab16e2fd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce3b373bab67ba49a1f7aa41f2a9456ae7199028
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666791"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267810"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementazione della barra degli strumenti MFC
 
@@ -108,4 +108,3 @@ Una volta create, un `CToolBar` oggetto crea l'immagine della barra degli strume
 
 [Barre degli strumenti](../mfc/toolbars.md)<br/>
 [Editor barra degli strumenti](../windows/toolbar-editor.md)
-

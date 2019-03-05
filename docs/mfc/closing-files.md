@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, file operations
 - files [MFC], closing
 ms.assetid: 8415a3a8-3c75-45b0-ac2a-d5385f49bdb3
-ms.openlocfilehash: 04e5084615b1f1cf85d9f41e2c4dcc84910b9d05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69a0960c1edabab00cb71702acda526ee9ebd798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636263"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267056"
 ---
 # <a name="closing-files"></a>Chiusura dei file
 
@@ -25,4 +25,3 @@ Se è stato allocato il [CFile](../mfc/reference/cfile-class.md) oggetto sul fra
 ## <a name="see-also"></a>Vedere anche
 
 [File](../mfc/files-in-mfc.md)
-

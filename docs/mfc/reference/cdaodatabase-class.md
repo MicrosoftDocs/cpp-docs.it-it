@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272899"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase (classe)
 
@@ -104,8 +104,8 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Restituisce il numero di record interessato dall'ultimo aggiornamento, modifica o l'operazione di aggiunta o da una chiamata a `Execute`.|
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|Restituisce il numero di relazioni definite tra le tabelle nel database.|
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Restituisce informazioni su una relazione specificata definita tra le tabelle nel database.|
-|[CDaoDatabase:](#gettabledefcount)|Restituisce il numero di tabelle definiti nel database.|
-|[CDaoDatabase:: GetTableDefInfo](#gettabledefinfo)|Restituisce informazioni su una tabella specificata nel database.|
+|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|Restituisce il numero di tabelle definiti nel database.|
+|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|Restituisce informazioni su una tabella specificata nel database.|
 |[CDaoDatabase::GetVersion](#getversion)|Restituisce la versione del motore di database associato al database.|
 |[CDaoDatabase::IsOpen](#isopen)|Restituisce se diverso da zero la `CDaoDatabase` è attualmente collegato a un database.|
 |[CDaoDatabase::Open](#open)|Stabilisce una connessione a un database.|
@@ -534,7 +534,7 @@ Il tipo di database è indicato da file o della directory che si tratta del perc
 
 |Nome del percorso punta a...|Tipo di database|
 |--------------------------|-------------------|
-|. File con estensione MDB|Database Microsoft Jet (Microsoft Access)|
+|.MDB file|Database Microsoft Jet (Microsoft Access)|
 |Directory che contiene. File DBF|database dBASE|
 |Directory che contiene. File con estensione XLS|Database di Microsoft Excel|
 |Directory che contiene. File PDX|Database Paradox|
@@ -587,9 +587,9 @@ Opzioni che specificano quali informazioni del recordset da recuperare. Le opzio
 
 - Nome AFX_DAO_PRIMARY_INFO (impostazione predefinita), il tipo
 
-- Informazioni AFX_DAO_SECONDARY_INFO primaria oltre: data di creazione, data dell'ultimo aggiornamento, i record, aggiornabile
+- Più informazioni AFX_DAO_SECONDARY_INFO primario: Data di creazione, data dell'ultimo aggiornamento, i record, aggiornabile
 
-- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: ODBCTimeout SQL, Connect,
+- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: SQL, Connect, ODBCTimeout
 
 *lpszName*<br/>
 Stringa contenente il nome di una query definita nel database, per la ricerca in base al nome.
@@ -715,7 +715,7 @@ Il numero di tabledefs definite nel database.
 
 `GetTableDefCount` è utile se è necessario per riprodurre a ciclo tabledefs tutti nella raccolta TableDefs del database. Per ottenere informazioni su una tabella specificata nella raccolta, vedere [GetTableDefInfo](#gettabledefinfo).
 
-##  <a name="gettabledefinfo"></a>  CDaoDatabase:: GetTableDefInfo
+##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo
 
 Chiamare questa funzione membro per ottenere i vari tipi di informazioni su una tabella definita nel database.
 
@@ -744,9 +744,9 @@ Opzioni che specificano le informazioni sulla tabella da recuperare. Le opzioni 
 
 - Gli attributi nome AFX_DAO_PRIMARY_INFO (impostazione predefinita), aggiornabile,
 
-- Informazioni AFX_DAO_SECONDARY_INFO primaria oltre: nome della tabella data di creazione, data dell'ultimo aggiornamento, origine, Connect
+- Più informazioni AFX_DAO_SECONDARY_INFO primario: Data di creazione, Data ultimo aggiornata del nome di tabella di origine, la connessione
 
-- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: regola di convalida, il testo di convalida, il conteggio dei Record
+- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: Convalida regola, il testo di convalida, il conteggio dei Record
 
 *lpszName*<br/>
 Il nome dell'oggetto tabledef, per la ricerca in base al nome.
@@ -882,7 +882,7 @@ void SetQueryTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parametri
 
-*nSecondi*<br/>
+*nSeconds*<br/>
 Il numero di secondi consentito prima un tentativo di query timeout.
 
 ### <a name="remarks"></a>Note

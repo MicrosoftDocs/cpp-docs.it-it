@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267238"
 ---
 # <a name="example-implementing-a-property-page"></a>Esempio: Implementazione di una pagina delle proprietà
 
@@ -45,7 +45,7 @@ In primo luogo, creare un nuovo progetto ATL per un server DLL denominato `ATLPa
 |----------|-----------|
 |Titolo|TextDocument|
 |Stringa doc|Proprietà TextDocument VCUE|
-|HelpFile|*\<vuoto >*|
+|HelpFile|*\<blank>*|
 
 I valori impostati in questa pagina della procedura guidata verranno restituiti per il contenitore della pagina proprietà quando chiama `IPropertyPage::GetPageInfo`. Cosa accade alle stringhe dopo che è dipendente per il contenitore, ma in genere verranno usati per identificare la pagina all'utente. Il titolo verrà visualizzato in genere in una scheda sopra la pagina e la stringa Doc potrebbe essere visualizzata in una barra di stato o una descrizione comando (anche se il frame di proprietà standard non usa questa stringa affatto).
 
@@ -127,7 +127,7 @@ Per visualizzare questa pagina, è necessario creare un oggetto di supporto semp
 
 Usare la [finestra di dialogo Aggiungi classe](../ide/add-class-dialog-box.md) e il [Creazione guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md) per generare una nuova classe e usare `Helper` come il nome breve. Una volta creata, aggiungere un metodo come illustrato nella tabella seguente.
 
-|Elemento|Valore|
+|Elemento|Value|
 |----------|-----------|
 |Nome metodo|`ShowPage`|
 |Parametri|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|

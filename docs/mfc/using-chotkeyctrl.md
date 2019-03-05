@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-ms.openlocfilehash: bf6ad9c8ea1b1a66f5a8abbf61f78c942ffda2fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f52d676f68718cdd4d16cf93bf0d7e3fd6b03822
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483772"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275753"
 ---
 # <a name="using-chotkeyctrl"></a>Utilizzo di CHotKeyCtrl
 
@@ -34,4 +34,3 @@ Usare un controllo tasto di scelta per ottenere l'input dell'utente per la quale
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli](../mfc/controls-mfc.md)
-

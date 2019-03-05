@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard, operations in CRichEditCtrl
 - rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
-ms.openlocfilehash: 345c0b3e79bc531101481dc7be9624539a06d832
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 882c589d0d25b54650affa7fd41f916ecf6097d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566186"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276871"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Operazioni sugli Appunti nei controlli Rich Edit
 
@@ -33,4 +33,3 @@ I controlli Rich Edit registrano due formati degli Appunti: il formato Rich Text
 
 [Uso di CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

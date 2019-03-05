@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: da7b1310f80bfb03645d386b59632e1c2811a367
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8820be3073c6ffaffdaa9d04a7338ad584d36ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651139"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267291"
 ---
 # <a name="csacl-class"></a>Classe CSacl
 
@@ -39,7 +39,7 @@ class CSacl : public CAcl
 |Nome|Descrizione|
 |----------|-----------------|
 |[CSacl::CSacl](#csacl)|Costruttore.|
-|[CSacl:: ~ CSacl](#dtor)|Distruttore.|
+|[CSacl::~CSacl](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 

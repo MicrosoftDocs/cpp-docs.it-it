@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-ms.openlocfilehash: 606adf0e6984ebe93951c80620407f9f1c8775f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 906b05800711e89592e5230bec7fa0fe1640379f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533978"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265717"
 ---
 # <a name="ithreadproxy-structure"></a>Struttura IThreadProxy
 
@@ -75,7 +75,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*switchState farà*<br/>
+*switchState*<br/>
 Indica lo stato del proxy del thread che sta eseguendo l'opzione. Il parametro è di tipo `SwitchingProxyState`.
 
 ### <a name="remarks"></a>Note
@@ -107,7 +107,7 @@ virtual void SwitchTo(
 *pContext*<br/>
 Il contesto di esecuzione passa in modo cooperativo.
 
-*switchState farà*<br/>
+*switchState*<br/>
 Indica lo stato del proxy del thread che sta eseguendo l'opzione. Il parametro è di tipo `SwitchingProxyState`.
 
 ### <a name="remarks"></a>Note

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 38f529f46623bc7095879b29fba09427626073ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178045"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260401"
 ---
 # <a name="clinkctrl-class"></a>Classe CLinkCtrl
 
@@ -301,7 +301,7 @@ L'indice di un elemento di controllo di collegamento.
 *strID*<br/>
 Oggetto [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) oggetto che contiene l'ID dell'elemento specificato.
 
-*IDdm*<br/>
+*szID*<br/>
 Una stringa con terminazione null che contiene l'ID dell'elemento specificato.
 
 *cchID*<br/>
@@ -445,7 +445,7 @@ BOOL SetItemID(
 *iLink*<br/>
 L'indice di un elemento di controllo di collegamento.
 
-*IDdm*<br/>
+*szID*<br/>
 Una stringa con terminazione null che contiene l'ID dell'elemento specificato.
 
 ### <a name="return-value"></a>Valore restituito

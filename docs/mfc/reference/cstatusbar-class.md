@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 70d700197e3d249812e8b09a2cba744a0fbc9803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279497"
 ---
 # <a name="cstatusbar-class"></a>Classe CStatusBar
 
@@ -67,15 +67,15 @@ class CStatusBar : public CControlBar
 |----------|-----------------|
 |[CStatusBar::CommandToIndex](#commandtoindex)|Ottiene l'indice per un ID di indicatore specificato.|
 |[CStatusBar::Create](#create)|Crea la barra di stato, lo collega al `CStatusBar` dell'oggetto e imposta l'altezza del tipo di carattere e barra iniziale.|
-|[CStatusBar:: CreateEx](#createex)|Crea una `CStatusBar` oggetto con gli stili aggiuntivi per l'oggetto incorporato `CStatusBarCtrl` oggetto.|
+|[CStatusBar::CreateEx](#createex)|Crea una `CStatusBar` oggetto con gli stili aggiuntivi per l'oggetto incorporato `CStatusBarCtrl` oggetto.|
 |[CStatusBar::DrawItem](#drawitem)|Chiamato quando un aspetto visivo di un disegno barra controllo di stato.|
 |[CStatusBar::GetItemID](#getitemid)|Ottiene l'ID di indicatore per un determinato indice.|
 |[CStatusBar::GetItemRect](#getitemrect)|Ottiene visualizzare rettangolo per un determinato indice.|
 |[CStatusBar::GetPaneInfo](#getpaneinfo)|Ottiene l'ID di indicatori, stile e spessore per un determinato indice.|
 |[CStatusBar::GetPaneStyle](#getpanestyle)|Ottiene lo stile indicatore per un determinato indice.|
 |[CStatusBar::GetPaneText](#getpanetext)|Ottiene il testo di indicatore per un determinato indice.|
-|[CStatusBar:: GetStatusBarCtrl](#getstatusbarctrl)|Consente l'accesso diretto al controllo sottostante comune.|
-|[CStatusBar:: SetIndicators](#setindicators)|Imposta gli ID di indicatore.|
+|[CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)|Consente l'accesso diretto al controllo sottostante comune.|
+|[CStatusBar::SetIndicators](#setindicators)|Imposta gli ID di indicatore.|
 |[CStatusBar::SetPaneInfo](#setpaneinfo)|Imposta l'ID di indicatori, stile e spessore per un determinato indice.|
 |[CStatusBar::SetPaneStyle](#setpanestyle)|Imposta stile dell'indicatore per un determinato indice.|
 |[CStatusBar::SetPaneText](#setpanetext)|Imposta il testo di indicatore per un determinato indice.|
@@ -108,7 +108,7 @@ Esistono tre modi per aggiornare il testo in un riquadro barra di stato:
 
 Chiamare [SetPaneStyle](#setpanestyle) per aggiornare lo stile di un riquadro barra di stato.
 
-Per altre informazioni sull'uso `CStatusBar`, vedere l'articolo [implementazione della barra di stato in MFC](../../mfc/status-bar-implementation-in-mfc.md) e [Nota tecnica 31: barre di controllo](../../mfc/tn031-control-bars.md).
+Per altre informazioni sull'uso `CStatusBar`, vedere l'articolo [implementazione della barra di stato in MFC](../../mfc/status-bar-implementation-in-mfc.md) e [Nota tecnica 31: Le barre di controllo](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -183,7 +183,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Inoltre, imposta il tipo di carattere iniziale e imposta lo stato dell'altezza della barra a un valore predefinito.
 
-##  <a name="createex"></a>  CStatusBar:: CreateEx
+##  <a name="createex"></a>  CStatusBar::CreateEx
 
 Chiamare questa funzione per creare una barra (una finestra figlio) di stato che verrà associato il `CStatusBar` oggetto.
 
@@ -362,7 +362,7 @@ Oggetto `CString` oggetto contenente il testo del riquadro.
 
 La seconda forma di questo membro funzione riempie un `CString` oggetto con il testo della stringa.
 
-##  <a name="getstatusbarctrl"></a>  CStatusBar:: GetStatusBarCtrl
+##  <a name="getstatusbarctrl"></a>  CStatusBar::GetStatusBarCtrl
 
 Questa funzione membro consente l'accesso diretto al controllo sottostante comune.
 
@@ -485,7 +485,7 @@ Indice del riquadro cui testo è da impostare.
 *lpszNewText*<br/>
 Puntatore per il nuovo testo del riquadro.
 
-*bAggiornamento*<br/>
+*bUpdate*<br/>
 Se TRUE, il riquadro viene invalidato dopo il testo viene impostato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -507,7 +507,7 @@ Dopo aver chiamato `SetPaneText`, è necessario aggiungere un gestore di aggiorn
 ## <a name="see-also"></a>Vedere anche
 
 [Esempio MFC viene](../../visual-cpp-samples.md)<br/>
-[DLGCBR32 esempio MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample DLGCBR32](../../visual-cpp-samples.md)<br/>
 [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)<br/>

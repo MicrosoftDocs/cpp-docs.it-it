@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8c8a6d3e83534cd5670e43a9009b8919a2e57f92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178258"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281373"
 ---
 # <a name="canimatectrl-class"></a>Classe CAnimateCtrl
 
@@ -47,7 +47,7 @@ class CAnimateCtrl : public CWnd
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAnimateCtrl:: CAnimateCtrl](#canimatectrl)|Costruisce un oggetto `CAnimateCtrl`.|
+|[CAnimateCtrl::CAnimateCtrl](#canimatectrl)|Costruisce un oggetto `CAnimateCtrl`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -102,7 +102,7 @@ Per altre informazioni sull'uso `CAnimateCtrl`, vedere [controlli](../../mfc/con
 
 **Intestazione:** afxcmn.h
 
-##  <a name="canimatectrl"></a>  CAnimateCtrl:: CAnimateCtrl
+##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl
 
 Costruisce un oggetto `CAnimateCtrl`.
 
@@ -288,13 +288,13 @@ BOOL Play(
 
 ### <a name="parameters"></a>Parametri
 
-*NDA*<br/>
+*nFrom*<br/>
 Indice in base zero del frame in cui inizia la riproduzione. Valore deve essere minore di 65.536. Un valore pari a 0 significa che iniziano con il primo fotogramma del clip AVI.
 
-*nPer*<br/>
+*nTo*<br/>
 Indice in base zero del frame in cui la riproduzione di end. Valore deve essere minore di 65.536. Il valore - 1 significa terminare con l'ultimo fotogramma del clip AVI.
 
-*sillaba nRep*<br/>
+*nRep*<br/>
 Numero di volte in cui riprodurre il clip AVI. Un valore di - 1 indica che il file di riproduzione per un periodo illimitato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -319,7 +319,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>Parametri
 
-*nPer*<br/>
+*nTo*<br/>
 Indice in base zero della pagina da visualizzare. Valore deve essere minore di 65.536. Il valore 0 indica la visualizzazione del primo fotogramma del clip AVI. Il valore -1 indica la visualizzazione dell'ultimo fotogramma del clip AVI.
 
 ### <a name="return-value"></a>Valore restituito
@@ -356,4 +356,3 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

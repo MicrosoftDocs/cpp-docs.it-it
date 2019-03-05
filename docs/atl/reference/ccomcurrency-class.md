@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451155"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277720"
 ---
 # <a name="ccomcurrency-class"></a>Classe CComCurrency
 
@@ -45,7 +45,7 @@ class CComCurrency
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|Restituisce l'indirizzo di un membro dati `m_currency`.|
-|[CComCurrency:: Getfraction](#getfraction)|Chiamare questo metodo per restituire il componente frazionario di un oggetto `CComCurrency`.|
+|[CComCurrency::GetFraction](#getfraction)|Chiamare questo metodo per restituire il componente frazionario di un oggetto `CComCurrency`.|
 |[CComCurrency::GetInteger](#getinteger)|Chiamare questo metodo per restituire il componente Integer di un oggetto `CComCurrency`.|
 |[CComCurrency::Round](#round)|Chiamare questo metodo per arrotondare un oggetto `CComCurrency` al valore intero più vicino.|
 |[CComCurrency::SetFraction](#setfraction)|Chiamare questo metodo per impostare il componente frazionario di un oggetto `CComCurrency`.|
@@ -88,7 +88,7 @@ L'oggetto `CComCurrency` fornisce accesso ai numeri su entrambi i lati del separ
 
 Quando si specificano i componenti integer e frazionario di un `CComCurrency` oggetto, tenere presente che il componente frazionario è un numero compreso nell'intervallo da 0 a 9999. Questo è importante quando si opera con valute come il dollaro americano, che indica gli importi usando solo due cifre significative dopo il separatore decimale.  Anche se le ultime due cifre non vengono visualizzate, devono essere tenute in considerazione.
 
-|Valore|Valori possibili di CComCurrency|
+|Value|Valori possibili di CComCurrency|
 |-----------|---------------------------------------|
 |$10.50|CComCurrency(10,5000) *o* CComCurrency(10.50)|
 |$10.05|CComCurrency(10,500) *o* CComCurrency(10.05)|
@@ -462,7 +462,7 @@ Oggetto `CComCurrency`.
 *cySrc*<br/>
 Una variabile di tipo valuta.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
 Il valore numerico da assegnare al `CComCurrency` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -642,5 +642,5 @@ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso d
 ## <a name="see-also"></a>Vedere anche
 
 [Classe COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
-[VALUTA](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
+[CURRENCY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

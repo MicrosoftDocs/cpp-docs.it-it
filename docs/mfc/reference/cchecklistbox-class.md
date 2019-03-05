@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177836"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273062"
 ---
 # <a name="cchecklistbox-class"></a>Classe CCheckListBox
 
@@ -337,7 +337,7 @@ void SetCheck(
 *nIndex*<br/>
 Indice in base zero di una casella di controllo che è contenuta nella casella di riepilogo.
 
-*nControllare*<br/>
+*nCheck*<br/>
 Lo stato del pulsante per la casella di controllo specificato. Vedere la sezione Osservazioni per i valori possibili.
 
 ### <a name="remarks"></a>Note
