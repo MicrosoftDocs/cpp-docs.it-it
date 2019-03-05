@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoIndexFieldInfo structure [MFC]
 - DAO (Data Access Objects), Index Fields collection
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
-ms.openlocfilehash: 358e6654060e92e0df83b118fa70e1c3a3a990b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d03a6f6eadd4cf6ccb5279edf18675605d0b1485
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304275"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>Struttura CDaoIndexFieldInfo
 
@@ -53,4 +53,3 @@ Chiamare il `GetIndexInfo` funzione membro dell'oggetto recordset o tabledef con
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
 [CDaoRecordset::GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)
-

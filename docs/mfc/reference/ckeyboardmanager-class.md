@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694270"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303607"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 
@@ -69,7 +69,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager::LoadState](#loadstate)|Carica le tabelle di tasti di scelta rapida dal Registro di sistema Windows.|
 |[CKeyboardManager::ResetAll](#resetall)|Ricarica le tabelle di tasti di scelta rapida dalla risorsa di application.|
 |[CKeyboardManager::SaveState](#savestate)|Salva il collegamento tabelle della chiave del Registro di sistema di Windows.|
-|[Ckeyboardmanager:: Showallaccelerators](#showallaccelerators)|Specifica se il framework Visualizza tutti i tasti di scelta rapida per tutti i comandi o un tasto di scelta rapida singolo per ogni comando. Questo metodo non influenza i comandi che hanno un solo tasto di scelta rapida.|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Specifica se il framework Visualizza tutti i tasti di scelta rapida per tutti i comandi o un tasto di scelta rapida singolo per ogni comando. Questo metodo non influenza i comandi che hanno un solo tasto di scelta rapida.|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Converte un carattere per il proprio registro superiore.|
 |[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Aggiorna una tabella di tasti di scelta rapida con una nuova tabella di tasti di scelta rapida.|
 
@@ -139,7 +139,7 @@ static BOOL FindDefaultAccelerator(
 [in] ID del comando.
 
 *str*<br/>
-[out] Un riferimento a un `CString` oggetto.
+[out] Riferimento a un oggetto `CString`.
 
 *pWndFrame*<br/>
 [in] Puntatore a una finestra cornice.
@@ -198,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |Parametro|Descrizione|
-|*NChar*|[in] Il carattere che questo metodo controlla.|
+|*nChar*|[in] Il carattere che questo metodo controlla.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -326,7 +326,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Carattere da convertire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -382,4 +382,3 @@ Utilizzare questa funzione per sostituire la tabella di collegamento esistente c
 [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Personalizzazione di tastiera e mouse](../../mfc/keyboard-and-mouse-customization.md)
-

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: b05de00697aa019382014402f7701a8341da5198
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512918"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304379"
 ---
 # <a name="canimationgroup-class"></a>Classe CAnimationGroup
 
@@ -70,13 +70,13 @@ class CAnimationGroup;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Crea un gruppo di animazione.|
-|[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|Distruttore. Chiamato quando è in corso l'eliminazione di un gruppo di animazione.|
+|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|Distruttore. Chiamato quando è in corso l'eliminazione di un gruppo di animazione.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAnimationGroup:: animate](#animate)|Aggiunge un'animazione a un gruppo.|
+|[CAnimationGroup::Animate](#animate)|Aggiunge un'animazione a un gruppo.|
 |[CAnimationGroup::ApplyTransitions](#applytransitions)|Applica le transizioni per gli oggetti di animazione.|
 |[CAnimationGroup::FindAnimationObject](#findanimationobject)|Trova un oggetto di animazione che contiene la variabile di animazione specificato.|
 |[CAnimationGroup::GetGroupID](#getgroupid)|Restituisce l'ID del gruppo.|
@@ -98,7 +98,7 @@ class CAnimationGroup;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|Specifica come cancellare le transizioni tra gli oggetti di animazione che appartengono al gruppo. Se questo membro è TRUE, le transizioni vengono rimossi automaticamente quando è stata pianificata un'animazione. In caso contrario, è necessario rimuovere manualmente le transizioni.|
-|[CAnimationGroup::](#m_bautodestroyanimationobjects)|Specifica come eliminare definitivamente gli oggetti di animazione. Se questo parametro è TRUE, verranno automaticamente distrutte gli oggetti di animazione quando viene eliminato il gruppo. In caso contrario, gli oggetti di animazione devono essere eliminati manualmente. Il valore predefinito è FALSE. Impostare questo valore su TRUE solo se tutti gli oggetti di animazione che appartengono al gruppo vengono allocati in modo dinamico con l'operatore new.|
+|[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|Specifica come eliminare definitivamente gli oggetti di animazione. Se questo parametro è TRUE, verranno automaticamente distrutte gli oggetti di animazione quando viene eliminato il gruppo. In caso contrario, gli oggetti di animazione devono essere eliminati manualmente. Il valore predefinito è FALSE. Impostare questo valore su TRUE solo se tutti gli oggetti di animazione che appartengono al gruppo vengono allocati in modo dinamico con l'operatore new.|
 |[CAnimationGroup::m_bAutodestroyKeyframes](#m_bautodestroykeyframes)|Specifica come eliminare definitivamente i fotogrammi chiave. Se questo valore è TRUE, tutti i fotogrammi chiave vengono rimossi e distrutto; in caso contrario, vengono rimossi solo dall'elenco. Il valore predefinito è TRUE.|
 |[CAnimationGroup::m_lstAnimationObjects](#m_lstanimationobjects)|Contiene un elenco di oggetti di animazione.|
 |[CAnimationGroup::m_lstKeyFrames](#m_lstkeyframes)|Contiene un elenco di fotogrammi chiave.|
@@ -123,7 +123,7 @@ Animazione gruppi vengono creati automaticamente dal controller di animazione (C
 
 **Intestazione:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup:: ~ CAnimationGroup
+##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup::~CAnimationGroup
 
 Distruttore. Chiamato quando è in corso l'eliminazione di un gruppo di animazione.
 
@@ -164,7 +164,7 @@ Un puntatore a un oggetto COM dello storyboard.
 
 *bDependOnKeyframes*
 
-##  <a name="animate"></a>  CAnimationGroup:: animate
+##  <a name="animate"></a>  CAnimationGroup::Animate
 
 Aggiunge un'animazione a un gruppo.
 
@@ -266,7 +266,7 @@ Specifica come cancellare le transizioni tra gli oggetti di animazione che appar
 BOOL m_bAutoclearTransitions;
 ```
 
-##  <a name="m_bautodestroyanimationobjects"></a>  CAnimationGroup::
+##  <a name="m_bautodestroyanimationobjects"></a>  CAnimationGroup::m_bAutodestroyAnimationObjects
 
 Specifica come eliminare definitivamente gli oggetti di animazione. Se questo parametro è TRUE, verranno automaticamente distrutte gli oggetti di animazione quando viene eliminato il gruppo. In caso contrario, gli oggetti di animazione devono essere eliminati manualmente. Il valore predefinito è FALSE. Impostare questo valore su TRUE solo se tutti gli oggetti di animazione che appartengono al gruppo vengono allocati in modo dinamico con l'operatore new.
 
@@ -380,7 +380,7 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Specifica come eliminare definitivamente le transizioni.
 
 ### <a name="remarks"></a>Note

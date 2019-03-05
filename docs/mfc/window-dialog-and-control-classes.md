@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - windows [MFC], dialog and control classes
 ms.assetid: b3610da6-9644-49b7-adbf-0e04f0d6d2b5
-ms.openlocfilehash: aef31f7831ef7480793abdf75eecaf11f6a6b7a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fc7d800cee7e3bf64f64028b2499935eb42a044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467253"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302559"
 ---
 # <a name="window-dialog-and-control-classes"></a>Classi Window, Dialog e Control
 
@@ -23,4 +23,3 @@ Classe di base per tutte le finestre. È possibile usare una delle classi deriva
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

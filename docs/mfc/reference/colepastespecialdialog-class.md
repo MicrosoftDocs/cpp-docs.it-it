@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530026"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303314"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Parametri
 
-*FMT*<br/>
+*fmt*<br/>
 Riferimento al tipo di dati da aggiungere.
 
 *lpszFormat*<br/>
@@ -134,10 +134,10 @@ Stringa che descrive il risultato se viene scelto questo formato nella finestra 
 *flags*<br/>
 I diversi collegamento e incorporamento opzioni disponibili per questo formato. Questo flag è una combinazione bit per bit di uno o più dei diversi valori del OLEUIPASTEFLAG tipo enumerato.
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Il formato degli Appunti da aggiungere.
 
-*TYMED*<br/>
+*tymed*<br/>
 I tipi di supporto disponibile in questo formato. Si tratta di una combinazione bit per bit di uno o più dei valori nel TYMED tipo enumerato.
 
 *nFormatID*<br/>
@@ -146,12 +146,12 @@ L'ID della stringa che identifica questo formato. Il formato di questa stringa �
 *bEnableIcon*<br/>
 Flag che determina se la casella di controllo Visualizza come icona è abilitata quando si sceglie il formato seguente nella casella di riepilogo.
 
-*per il lampeggiamento*<br/>
+*bLink*<br/>
 Flag che determina se il pulsante di opzione Incolla collegamento è abilitato quando si sceglie il formato seguente nella casella di riepilogo.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione può essere chiamata per aggiungere formati standard, ad esempio CF_TEXT o CF_TIFF né formati personalizzati che l'applicazione è registrata con il sistema. Per ulteriori informazioni su incollando gli oggetti dati nell'applicazione, vedere l'articolo [oggetti dati e origini dati: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
+Questa funzione può essere chiamata per aggiungere formati standard, ad esempio CF_TEXT o CF_TIFF né formati personalizzati che l'applicazione è registrata con il sistema. Per ulteriori informazioni su incollando gli oggetti dati nell'applicazione, vedere l'articolo [oggetti dati e origini dati: Manipolazione](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Per altre informazioni, vedere la [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) tipo di enumerazione e la [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura nel SDK di Windows.
 
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Il formato degli Appunti da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -193,7 +193,7 @@ Flag che determina se aggiungere CF_LINKSOURCE all'elenco dei formati di applica
 
 - CF_DIB
 
-- CF_EMBEDSOURCE
+- CF_METAFILEPICT
 
 - **"Oggetto incorporato"**
 

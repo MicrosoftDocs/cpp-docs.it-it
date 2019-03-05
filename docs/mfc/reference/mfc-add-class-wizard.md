@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 245963d4222188f16fd334d6950e04584ac1e978
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520842"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304093"
 ---
 # <a name="mfc-add-class-wizard"></a>Creazione guidata aggiunta classe MFC
 
@@ -109,7 +109,7 @@ In questa pagina, specificare il nome della classe, la classe di base e i nomi d
 
 - **ID del tipo**
 
-  Imposta l'ID del tipo della classe. Il **Typeid** finestra consente di concatenare il nome del progetto e il nuovo nome della classe come indicato di seguito: *ClasseMFC*. Questo ID è modificabile solo se si seleziona il **Automation** opzione **creabile da ID tipo**.
+  Imposta l'ID del tipo della classe. Il **ID tipo** finestra consente di concatenare il nome del progetto e il nuovo nome della classe come indicato di seguito: *MFCProj.MFCClass*. Questo ID è modificabile solo se si seleziona il **Automation** opzione **creabile da ID tipo**.
 
 - **Generare risorse DocTemplate**
 

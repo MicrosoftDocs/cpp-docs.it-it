@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485820"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305120"
 ---
 # <a name="cfileexception-class"></a>Classe CFileException
 
@@ -187,35 +187,35 @@ int m_cause;
 
 Questo membro dati è una variabile pubblica di tipo **int**. Di seguito sono elencati gli enumeratori e i relativi significati:
 
-- `CFileException::none` 0: si è verificato alcun errore.
+- `CFileException::none` 0: Si è verificato alcun errore.
 
-- `CFileException::genericException` 1: si è verificato un errore non specificato.
+- `CFileException::genericException` 1: Si è verificato un errore non specificato.
 
-- `CFileException::fileNotFound` 2: non è stato possibile trovare il file.
+- `CFileException::fileNotFound` 2: Non è stato possibile trovare il file.
 
-- `CFileException::badPath` 3: tutto o parte del percorso non valida.
+- `CFileException::badPath` 3: Tutto o parte del percorso non valida.
 
-- `CFileException::tooManyOpenFiles` 4: è stato superato il numero consentito di file aperti.
+- `CFileException::tooManyOpenFiles` 4: È stato superato il numero consentito di file aperti.
 
-- `CFileException::accessDenied` 5: il file non è accessibile.
+- `CFileException::accessDenied` 5: Non è stato possibile accedere al file.
 
-- `CFileException::invalidFile` 6: si è verificato un tentativo di utilizzare un handle di file non valido.
+- `CFileException::invalidFile` 6: Si è verificato un tentativo di utilizzare un handle di file non valido.
 
-- `CFileException::removeCurrentDir` 7: non è possibile rimuovere la directory di lavoro corrente.
+- `CFileException::removeCurrentDir` 7: Impossibile rimuovere la directory di lavoro corrente.
 
-- `CFileException::directoryFull` 8: non sono presenti più voci di directory.
+- `CFileException::directoryFull` 8: Non sono presenti più voci di directory.
 
-- `CFileException::badSeek` 9: si è verificato un errore durante il tentativo di impostare il puntatore del file.
+- `CFileException::badSeek` 9: Si è verificato un errore durante il tentativo di impostare il puntatore del file.
 
-- `CFileException::hardIO` 10: si è verificato un errore hardware.
+- `CFileException::hardIO` 10: Si è verificato un errore hardware.
 
-- `CFileException::sharingViolation` 11: SHARE. File EXE non è stato caricato o un'area condivisa era bloccata.
+- `CFileException::sharingViolation` 11: Condividi. File EXE non è stato caricato o un'area condivisa era bloccata.
 
-- `CFileException::lockViolation` 12: si è verificato un tentativo di bloccare un'area già bloccata.
+- `CFileException::lockViolation` 12: Si è verificato un tentativo di bloccare un'area già bloccata.
 
-- `CFileException::diskFull` 14: il disco è pieno.
+- `CFileException::diskFull` 14: Il disco è pieno.
 
-- `CFileException::endOfFile` 15: è stata raggiunta la fine del file.
+- `CFileException::endOfFile` 15: È stata raggiunta la fine del file.
 
     > [!NOTE]
     >  Questi enumeratori di causa `CFileException` sono diversi dagli enumeratori di causa `CArchiveException`.
@@ -313,4 +313,3 @@ Un puntatore alla stringa contenente il nome del file che ha causato l'eccezione
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Elaborazione delle eccezioni](../../mfc/reference/exception-processing.md)
-

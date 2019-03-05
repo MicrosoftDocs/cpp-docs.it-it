@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179058"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305081"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -465,7 +465,7 @@ class CDC : public CObject
 |[CDC::EndDoc](#enddoc)|Termina un processo di stampa avviato dal `StartDoc` funzione membro.|
 |[CDC::EndPage](#endpage)|Indica al driver di dispositivo che sta terminando una pagina.|
 |[CDC::EndPath](#endpath)|Chiude una parentesi quadra percorso e seleziona il percorso definito per la parentesi quadra nel contesto di dispositivo.|
-|[CDC:: EnumObjects](#enumobjects)|Enumera le penne e pennelli disponibile in un contesto di dispositivo.|
+|[CDC::EnumObjects](#enumobjects)|Enumera le penne e pennelli disponibile in un contesto di dispositivo.|
 |[CDC::Escape](#escape)|Consente alle applicazioni di accedere alle funzionalità che non sono direttamente disponibili da un dispositivo specifico mediante GDI. Consente inoltre l'accesso alle funzioni di escape di Windows. Escape chiamate effettuate da un'applicazione sono convertite e inviate al driver di dispositivo.|
 |[CDC::ExcludeClipRect](#excludecliprect)|Crea una nuova area di ritaglio costituito l'area di ritaglio esistente meno il rettangolo specificato.|
 |[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Impedisce la creazione all'interno di aree non valide di una finestra escludendo un'area nella finestra aggiornata da un'area di ritaglio.|
@@ -477,7 +477,7 @@ class CDC : public CObject
 |[CDC::FillSolidRect](#fillsolidrect)|Riempie un rettangolo con colori a tinta unita.|
 |[CDC::FlattenPath](#flattenpath)|Trasforma qualsiasi curve nel percorso selezionato nel contesto di dispositivo corrente e trasforma ogni curva in una sequenza di righe.|
 |[CDC::FloodFill](#floodfill)|Riempie un'area con il pennello corrente.|
-|[CDC:: frameRect](#framerect)|Disegna un bordo intorno a un rettangolo.|
+|[CDC::FrameRect](#framerect)|Disegna un bordo intorno a un rettangolo.|
 |[CDC::FrameRgn](#framergn)|Disegna un bordo intorno a un'area specifica usando un pennello.|
 |[CDC::FromHandle](#fromhandle)|Restituisce un puntatore a un `CDC` quando viene specificato un handle di un contesto di dispositivo. Se all'handle non è collegato un oggetto `CDC`, viene creato e collegato un oggetto `CDC` temporaneo.|
 |[CDC::GetArcDirection](#getarcdirection)|Restituisce l'orientamento arco attuale per il contesto di dispositivo.|
@@ -539,7 +539,7 @@ class CDC : public CObject
 |[CDC::GetWindowOrg](#getwindoworg)|Recupera le coordinate x e y dell'origine della finestra associata.|
 |[CDC::GetWorldTransform](#getworldtransform)|Recupera l'impostazione corrente world-trasformazione spazio nella pagina.|
 |[CDC::GradientFill](#gradientfill)|Compila le strutture di rettangolo e triangolo con un colore gradating.|
-|[CDC:: graystring](#graystring)|Consente di disegnare testo (grigio) nella posizione specificata in grigio.|
+|[CDC::GrayString](#graystring)|Consente di disegnare testo (grigio) nella posizione specificata in grigio.|
 |[CDC::HIMETRICtoDP](#himetrictodp)|Converte unità HIMETRIC in unità di dispositivo.|
 |[CDC::HIMETRICtoLP](#himetrictolp)|Converte unità HIMETRIC in unità logiche.|
 |[CDC::IntersectClipRect](#intersectcliprect)|Crea una nuova area di ritaglio che costituiscono l'intersezione tra l'area corrente e un rettangolo.|
@@ -586,7 +586,7 @@ class CDC : public CObject
 |[CDC::SelectObject](#selectobject)|Seleziona un oggetto drawing GDI, ad esempio una penna.|
 |[CDC::SelectPalette](#selectpalette)|Seleziona tavolozza logica.|
 |[CDC::SelectStockObject](#selectstockobject)|Seleziona uno dei predefiniti azionarie penne, pennelli o i tipi di carattere forniti da Windows.|
-|[CDC:: SETABORTPROC](#setabortproc)|Imposta una funzione di callback fornito dal programmatore che Windows viene chiamato se un processo di stampa deve essere interrotta.|
+|[CDC::SetAbortProc](#setabortproc)|Imposta una funzione di callback fornito dal programmatore che Windows viene chiamato se un processo di stampa deve essere interrotta.|
 |[CDC::SetArcDirection](#setarcdirection)|Imposta la direzione da utilizzare per le funzioni arco e il rettangolo di disegno.|
 |[CDC::SetAttribDC](#setattribdc)|Set `m_hAttribDC`, il contesto di dispositivo di attributo.|
 |[CDC::SetBkColor](#setbkcolor)|Imposta il colore di sfondo corrente.|
@@ -809,7 +809,7 @@ Specifica la larghezza, in unità logiche, del rettangolo di origine.
 *nSrcHeight*<br/>
 Specifica l'altezza, in unità logiche, del rettangolo di origine.
 
-*Blend*<br/>
+*blend*<br/>
 Specifica un [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) struttura.
 
 ### <a name="return-value"></a>Valore restituito
@@ -900,13 +900,13 @@ Specifica la coordinata y dell'angolo inferiore destro del rettangolo di delimit
 *x3*<br/>
 Specifica la coordinata x del punto che definisce l'arco iniziale del punto (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
-*Y3*<br/>
+*y3*<br/>
 Specifica la coordinata y del punto che definisce l'arco iniziale del punto (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
 *x4*<br/>
 Specifica la coordinata x del punto che definisce l'endpoint dell'arco (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
-*Y4*<br/>
+*y4*<br/>
 Specifica la coordinata y del punto che definisce l'endpoint dell'arco (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
 *lpRect*<br/>
@@ -970,13 +970,13 @@ Specifica la coordinata y dell'angolo inferiore destro del rettangolo di delimit
 *x3*<br/>
 Specifica la coordinata x del punto che definisce l'arco iniziale del punto (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
-*Y3*<br/>
+*y3*<br/>
 Specifica la coordinata y del punto che definisce l'arco iniziale del punto (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
 *x4*<br/>
 Specifica la coordinata x del punto che definisce l'endpoint dell'arco (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
-*Y4*<br/>
+*y4*<br/>
 Specifica la coordinata y del punto che definisce l'endpoint dell'arco (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
 *lpRect*<br/>
@@ -1153,13 +1153,13 @@ Specifica che la coordinata y dell'angolo inferiore destro della corda riquadro 
 *x3*<br/>
 Specifica la coordinata x del punto che definisce la corda iniziale del punto (in unità logiche).
 
-*Y3*<br/>
+*y3*<br/>
 Specifica la coordinata y del punto che definisce la corda iniziale del punto (in unità logiche).
 
 *x4*<br/>
 Specifica la coordinata x del punto che definisce endpoint della corda (in unità logiche).
 
-*Y4*<br/>
+*y4*<br/>
 Specifica la coordinata y del punto che definisce endpoint della corda (in unità logiche).
 
 *lpRect*<br/>
@@ -1437,7 +1437,7 @@ Specifica la coordinata y logica dell'angolo superiore sinistro del rettangolo t
 *cx*<br/>
 Specifica la larghezza del rettangolo tridimensionale.
 
-*CY*<br/>
+*cy*<br/>
 Specifica l'altezza del rettangolo tridimensionale.
 
 ### <a name="remarks"></a>Note
@@ -1580,7 +1580,7 @@ BOOL DrawFrameControl(
 *lpRect*<br/>
 Un puntatore a un `RECT` struttura che contiene le coordinate logiche del rettangolo.
 
-*NLE*<br/>
+*nType*<br/>
 Specifica il tipo di controllo frame da disegnare. Vedere le *uType* nel parametro [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) nel SDK di Windows per un elenco di valori possibili del parametro.
 
 *nState*<br/>
@@ -1624,7 +1624,7 @@ In alcuni casi *nState* dipende il *NLE* parametro. Nell'elenco seguente viene i
 
     - Freccia di sottomenu DFCS_MENUARROW
 
-    - Bullet DFCS_MENUBULLET
+    - DFCS_MENUBULLET Bullet
 
     - DFCS_MENUCHECK segno di spunta
 
@@ -2134,7 +2134,7 @@ Per la programmazione Win32, `CDC` offre ora sei funzioni membro che sostituisco
 
 - [CDC::EndPage](#endpage)
 
-- [CDC:: SETABORTPROC](#setabortproc)
+- [CDC::SetAbortProc](#setabortproc)
 
 - [CDC::StartDoc](#startdoc)
 
@@ -2432,7 +2432,7 @@ Specifica la coordinata y logica dell'angolo superiore sinistro del rettangolo d
 *cx*<br/>
 Specifica la larghezza del rettangolo.
 
-*CY*<br/>
+*cy*<br/>
 Specifica l'altezza del rettangolo.
 
 ### <a name="remarks"></a>Note
@@ -2488,7 +2488,7 @@ Solo i contesti di dispositivo di memoria e i dispositivi che supportano il supp
 
 Il `ExtFloodFill` funzione fornisce funzionalità simili ma una maggiore flessibilità.
 
-##  <a name="framerect"></a>  CDC:: frameRect
+##  <a name="framerect"></a>  CDC::FrameRect
 
 Disegna un bordo intorno al rettangolo specificato da *lpRect*.
 
@@ -2807,10 +2807,10 @@ BOOL GetCharABCWidthsI(
 *giFirst*<br/>
 Specifica il primo indice di glifo nel gruppo di indici di glifi consecutivi dal tipo di carattere corrente. Questo parametro viene utilizzato solo se il *IGP* parametro è NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Specifica il numero di indici di glifi.
 
-*IGP*<br/>
+*pgi*<br/>
 Un puntatore a una matrice contenente gli indici di glifi. Se il valore è NULL, il *giFirst* viene invece utilizzato il parametro. Il *cgi* parametro specifica il numero di indici di glifi in questa matrice.
 
 *lpabc*<br/>
@@ -2848,7 +2848,7 @@ Specifica il primo carattere in un gruppo consecutivo di caratteri nel tipo di c
 *nLastChar*<br/>
 Specifica l'ultimo carattere in un gruppo consecutivo di caratteri nel tipo di carattere corrente.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Punta a un buffer che riceverà i valori di larghezza di un gruppo di caratteri consecutivo nel tipo di carattere corrente.
 
 *lpFloatBuffer*<br/>
@@ -2883,13 +2883,13 @@ BOOL GetCharWidthI(
 *giFirst*<br/>
 Specifica il primo indice di glifo nel gruppo di indici di glifi consecutivi dal tipo di carattere corrente. Questo parametro viene utilizzato solo se il *IGP* parametro è NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Specifica il numero di indici di glifi.
 
-*IGP*<br/>
+*pgi*<br/>
 Un puntatore a una matrice contenente gli indici di glifi. Se il valore è NULL, il *giFirst* viene invece utilizzato il parametro. Il *cgi* parametro specifica il numero di indici di glifi in questa matrice.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Puntatore a un buffer che riceve la larghezza delle colonne.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3171,7 +3171,7 @@ DWORD GetGlyphOutline(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Specifica il carattere per il quale sono necessario restituire informazioni.
 
 *nFormat*<br/>
@@ -3190,7 +3190,7 @@ Punta a una struttura GLYPHMETRICS che descrive il posizionamento del glifo nell
 *cbBuffer*<br/>
 Specifica le dimensioni del buffer in cui la funzione Copia le informazioni relative al carattere di struttura. Se questo valore è 0 e il *nFormat* parametro è i valori GGO_BITMAP o GGO_NATIVE, la funzione restituisce le dimensioni del buffer richieste.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Punta a un buffer in cui la funzione Copia le informazioni relative al carattere di struttura. Se *nFormat* specifica il valore GGO_NATIVE, viene copiate le informazioni sotto forma di strutture TTPOLYGONHEADER e TTPOLYCURVE. Se questo valore è NULL e *nFormat* GGO_BITMAP o GGO_NATIVE valore, la funzione restituisce le dimensioni del buffer richieste.
 
 *lpmat2*<br/>
@@ -3386,7 +3386,7 @@ Specifica il primo carattere in un gruppo consecutivo di caratteri nel tipo di c
 *nLastChar*<br/>
 Specifica l'ultimo carattere in un gruppo consecutivo di caratteri nel tipo di carattere corrente.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Punta a un buffer che riceverà i valori di larghezza di un gruppo di caratteri consecutivo nel tipo di carattere corrente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3828,7 +3828,7 @@ BOOL GetTextExtentExPointI(
 *pgiIn*<br/>
 Un puntatore a una matrice di indici di glifi per il quale devono essere recuperati gli extent.
 
-*CGI*<br/>
+*cgi*<br/>
 Specifica il numero di glifi nella matrice a cui punta *pgiIn*.
 
 *nMaxExtent*<br/>
@@ -3867,7 +3867,7 @@ BOOL GetTextExtentPointI(
 *pgiIn*<br/>
 Un puntatore a una matrice di indici di glifi per il quale devono essere recuperati gli extent.
 
-*CGI*<br/>
+*cgi*<br/>
 Specifica il numero di glifi nella matrice a cui punta *pgiIn*.
 
 *lpSize*<br/>
@@ -4700,13 +4700,13 @@ Specifica la coordinata y dell'angolo inferiore destro del rettangolo di delimit
 *x3*<br/>
 Specifica la coordinata x del punto iniziale dell'arco (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
-*Y3*<br/>
+*y3*<br/>
 Specifica la coordinata y del punto iniziale dell'arco (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
 *x4*<br/>
 Specifica la coordinata x del punto finale dell'arco (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
-*Y4*<br/>
+*y4*<br/>
 Specifica la coordinata y del punto finale dell'arco (in unità logiche). Non è necessario che questo punto si trovano esattamente in corrispondenza dell'arco.
 
 *lpRect*<br/>
@@ -5325,7 +5325,7 @@ Specifica la coordinata y dell'angolo inferiore destro del rettangolo (in unità
 *x3*<br/>
 Specifica lo spessore dell'ellisse usato per disegnare gli angoli arrotondati (in unità logiche).
 
-*Y3*<br/>
+*y3*<br/>
 Specifica l'altezza dell'ellisse usato per disegnare gli angoli arrotondati (in unità logiche).
 
 *lpRect*<br/>
@@ -5380,7 +5380,7 @@ virtual CSize ScaleViewportExt(
 
 ### <a name="parameters"></a>Parametri
 
-*xNum +*<br/>
+*xNum*<br/>
 Specifica la quantità per cui moltiplicare l'extent di x corrente.
 
 *xDenom*<br/>
@@ -5420,7 +5420,7 @@ virtual CSize ScaleWindowExt(
 
 ### <a name="parameters"></a>Parametri
 
-*xNum +*<br/>
+*xNum*<br/>
 Specifica la quantità per cui moltiplicare l'extent di x corrente.
 
 *xDenom*<br/>
@@ -5775,7 +5775,7 @@ Specifica la direzione di arc precedente, se ha esito positivo. in caso contrari
 
 La direzione predefinita è in senso antiorario. Il `SetArcDirection` funzione specifica la direzione in cui le seguenti funzioni disegno:
 
-|Arc|Torta|
+|Arc|Grafico a torta|
 |---------|---------|
 |`ArcTo`|`Rectangle`|
 |`Chord`|`RoundRect`|
@@ -6022,9 +6022,9 @@ DWORD SetLayout(DWORD dwLayout);
 *dwLayout*<br/>
 Flag di controllo di layout del contesto di dispositivo e bitmap. Può essere una combinazione dei valori seguenti.
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
-|BIT LAYOUT_BITMAPORIENTATIONPRESERVED|Disabilita qualsiasi reflection per le chiamate a [CDC:: BitBlt](#bitblt) e [CDC::StretchBlt](#stretchblt).|
+|LAYOUT_BITMAPORIENTATIONPRESERVED|Disabilita qualsiasi reflection per le chiamate a [CDC:: BitBlt](#bitblt) e [CDC::StretchBlt](#stretchblt).|
 |LAYOUT_RTL|Imposta il layout orizzontale predefinito da destra a sinistra.|
 |LAYOUT_LTR|Imposta il layout predefinito per essere da sinistra a destra.|
 
@@ -6322,16 +6322,16 @@ int SetStretchBltMode(int nStretchMode);
 *nStretchMode*<br/>
 Specifica la modalità di adattamento. Può essere uno dei valori seguenti:
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |BLACKONWHITE|Esegue un'operazione booleana e utilizzando i valori di colore per pixel eliminato ed esistenti. Se la bitmap è una bitmap monocromatica, questa modalità consente di mantenere i pixel neri a scapito di pixel bianco.|
 |COLORONCOLOR|Elimina i pixel. Questa modalità consente di eliminare eliminate tutte le righe di pixel senza tentare di mantenere le relative informazioni.|
-|MEZZITONI|Esegue il mapping di pixel a partire dal rettangolo di origine in blocchi di pixel nel rettangolo di destinazione. Il colore medio sul blocco di destinazione del pixel simula il colore dei pixel origine.|
+|HALFTONE|Esegue il mapping di pixel a partire dal rettangolo di origine in blocchi di pixel nel rettangolo di destinazione. Il colore medio sul blocco di destinazione del pixel simula il colore dei pixel origine.|
 ||Dopo aver impostato il mezzitoni stretching modalità, un'applicazione deve chiamare la funzione Win32 [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) per impostare l'origine del pennello. Se non riesce a eseguire questa operazione, si verifica disallineamento del pennello.|
-|STRETCH_ANDSCANS|**Windows 95 o 98**: Uguale a BLACKONWHITE|
-|STRETCH_DELETESCANS|**Windows 95 o 98**: Uguale a COLORONCOLOR|
-|STRETCH_HALFTONE|**Windows 95 o 98**: Uguale a mezzitoni.|
-|STRETCH_ORSCANS|**Windows 95 o 98**: Uguale a WHITEONBLACK|
+|STRETCH_ANDSCANS|**Windows 95/98**: Uguale a BLACKONWHITE|
+|STRETCH_DELETESCANS|**Windows 95/98**: Uguale a COLORONCOLOR|
+|STRETCH_HALFTONE|**Windows 95/98**: Uguale a mezzitoni.|
+|STRETCH_ORSCANS|**Windows 95/98**: Uguale a WHITEONBLACK|
 |WHITEONBLACK|Esegue un'operazione OR booleana utilizzando i valori di colore per pixel eliminato ed esistenti. Se la bitmap è una bitmap monocromatica, questa modalità consente di mantenere un pixel bianco a scapito di pixel neri.|
 
 ### <a name="return-value"></a>Valore restituito
@@ -6490,7 +6490,7 @@ CSize SetViewportExt(SIZE size);
 *cx*<br/>
 Specifica l'extent di x del riquadro di visualizzazione (in unità di dispositivo).
 
-*CY*<br/>
+*cy*<br/>
 Specifica l'extent di y del riquadro di visualizzazione (in unità di dispositivo).
 
 *size*<br/>
@@ -6508,7 +6508,7 @@ Quando vengono impostate le seguenti modalità di mapping, le chiamate a `SetWin
 
 |MM_HIENGLISH|MM_LOMETRIC|
 |-------------------|------------------|
-|COME MM_HIMETRIC|MM_TEXT|
+|MM_HIMETRIC|MM_TEXT|
 |MM_LOENGLISH|MM_TWIPS|
 
 Quando è impostata la modalità MM_ISOTROPIC, un'applicazione deve chiamare il `SetWindowExt` funzione di membro prima di chiamare `SetViewportExt`.
@@ -6571,7 +6571,7 @@ CSize SetWindowExt(SIZE size);
 *cx*<br/>
 Specifica l'extent x (in unità logiche) della finestra.
 
-*CY*<br/>
+*cy*<br/>
 Specifica l'extent y (in unità logiche) della finestra.
 
 *size*<br/>
@@ -6589,7 +6589,7 @@ Quando vengono impostate le seguenti modalità di mapping, le chiamate a `SetWin
 
 - MM_HIENGLISH
 
-- COME MM_HIMETRIC
+- MM_HIMETRIC
 
 - MM_LOENGLISH
 

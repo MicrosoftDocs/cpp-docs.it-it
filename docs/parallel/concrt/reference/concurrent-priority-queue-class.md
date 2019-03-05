@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492294"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304782"
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
 
@@ -41,7 +41,7 @@ template <typename T,
 *T*<br/>
 Tipo di dati degli elementi da archiviare nella coda di priorità.
 
-*Confronta*<br/>
+*_Compare*<br/>
 Tipo dell'oggetto funzione tramite cui è possibile confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nella coda di priorità. Questo argomento è facoltativo e il predicato binario `less<T>` rappresenta il valore predefinito.
 
 *_Ax*<br/>
@@ -152,10 +152,10 @@ Classe Allocator da usare con questo oggetto.
 *_Init_capacity*<br/>
 Capacità iniziale dell'oggetto `concurrent_priority_queue`.
 
-*Ini_zia*<br/>
+*_Begin*<br/>
 Posizione del primo elemento nell'intervallo di elementi da copiare.
 
-*End*<br/>
+*_End*<br/>
 Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
 *_Src*<br/>
@@ -175,7 +175,7 @@ Il quarto e quinto costruttore viene specificata una copia della coda di priorit
 
 Il sesto e il settimo costruttore specificano un'operazione di spostamento della coda di priorità `_Src`.
 
-##  <a name="empty"></a> vuota
+##  <a name="empty"></a> empty
 
 Testa se la coda di priorità simultanea è vuota nel momento in cui questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.
 
@@ -259,7 +259,7 @@ void swap(concurrent_priority_queue& _Queue);
 
 ### <a name="parameters"></a>Parametri
 
-*Fronty*<br/>
+*_Queue*<br/>
 Il `concurrent_priority_queue` oggetto cui scambiare il contenuto con.
 
 ##  <a name="try_pop"></a> try_pop
@@ -283,4 +283,3 @@ Un riferimento a una variabile che verrà popolato con l'elemento con priorità 
 
 [Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
 [Contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md)
-

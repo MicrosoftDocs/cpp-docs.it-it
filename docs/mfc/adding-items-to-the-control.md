@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
-ms.openlocfilehash: 90a722405b7954b3d6e0e9f13b3f51a5e902a4af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88e008f06fb669db1c13872b1a58555eeb357d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602580"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304600"
 ---
 # <a name="adding-items-to-the-control"></a>Aggiunta di elementi al controllo
 
@@ -27,4 +27,3 @@ Per altre informazioni, vedere [aggiunta di elementi di visualizzazione elenco e
 
 [Uso di CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

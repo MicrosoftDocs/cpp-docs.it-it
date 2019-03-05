@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523923"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326622"
 ---
 # <a name="accelerator-class"></a>Classe accelerator
 
@@ -131,7 +131,7 @@ Un acceleratore è una funzionalità hardware ottimizzata per l'elaborazione dat
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
 ##  <a name="dtor"></a> </a> ~ accelerator
 
@@ -312,7 +312,7 @@ accelerator_view get_default_view() const;
 
 Il valore predefinito `accelerator_view` oggetto che è associato il `accelerator`.
 
-##  <a name="get_description"></a> get_Description
+##  <a name="get_description"></a> get_description
 
 Restituisce una breve descrizione del `accelerator` dispositivo.
 
@@ -444,7 +444,7 @@ Ottiene un valore booleano che indica se il `accelerator` viene emulato.
 __declspec(property(get= get_is_emulated)) bool is_emulated;
 ```
 
-##  <a name="operator_neq"></a> operatore! =
+##  <a name="operator_neq"></a> operator!=
 
 Confronta questo `accelerator` oggetto con un altro e restituisce **false** se sono uguali; in caso contrario, restituisce **true**.
 
@@ -505,7 +505,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="parameters"></a>Parametri
 
-*Percorso*<br/>
+*_Path*<br/>
 Il percorso dell'acceleratore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -604,7 +604,7 @@ concurrency::completion_future create_marker();
 
 Una future per tenere traccia del completamento di tutti i comandi inviati finora a questo `accelerator_view` oggetto.
 
-##  <a name="flush"></a> scaricamento
+##  <a name="flush"></a> flush
 
 Invia tutti i comandi in sospeso in coda per il [accelerator_view](accelerator-view-class.md) oggetto al tasto di scelta rapida per l'esecuzione.
 
@@ -692,7 +692,7 @@ Ottiene un valore booleano che indica se il [accelerator_view](accelerator-view-
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-##  <a name="operator_neq"></a> operatore! =
+##  <a name="operator_neq"></a> operator!=
 
 Confronta questo [accelerator_view](accelerator-view-class.md) oggetto con un altro e restituisce `false` se sono uguali; in caso contrario, restituisce `true`.
 

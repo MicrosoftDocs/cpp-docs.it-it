@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305016"
 ---
 # <a name="cview-class"></a>Classe CView
 
@@ -90,7 +90,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnDragScroll](#ondragscroll)|Chiamato per determinare se il cursore viene trascinato nell'area di scorrimento della finestra.|
 |[CView::OnDrop](#ondrop)|Chiamato quando un elemento trascinato nell'area di trascinamento e rilascio di una vista, il gestore predefinito.|
 |[CView::OnDropEx](#ondropex)|Chiamato quando un elemento trascinato nell'area di trascinamento e rilascio di una vista, gestore primario.|
-|[CView:: OnInitialUpdate](#oninitialupdate)|Chiamato dopo che una vista prima di tutto è collegata a un documento.|
+|[CView::OnInitialUpdate](#oninitialupdate)|Chiamato dopo che una vista prima di tutto è collegata a un documento.|
 |[CView::OnPrepareDC](#onpreparedc)|Chiamato prima che il `OnDraw` funzione membro viene chiamata per la visualizzazione su schermo o `OnPrint` funzione membro viene chiamata per l'anteprima di stampa o stampa.|
 |[CView::OnScroll](#onscroll)|Chiamato quando gli elementi OLE vengono trascinati oltre i bordi della visualizzazione.|
 |[CView::OnScrollBy](#onscrollby)|Chiamato quando si scorre una visualizzazione contenente gli elementi OLE sul posto attivi.|
@@ -101,11 +101,11 @@ class AFX_NOVTABLE CView : public CWnd
 |----------|-----------------|
 |[CView::OnActivateFrame](#onactivateframe)|Chiamato quando la finestra cornice contenente la visualizzazione viene attivata o disattivata.|
 |[CView::OnActivateView](#onactivateview)|Chiamato quando una visualizzazione viene attivata.|
-|[CView:: OnBeginPrinting](#onbeginprinting)|Chiamato quando inizia un processo di stampa; eseguire l'override per allocare graphics device interface (GDI) risorse.|
-|[CView::](#ondraw)|Chiamato per eseguire il rendering di un'immagine del documento per la visualizzazione su schermo, la stampa o l'anteprima di stampa. Implementazione necessaria.|
-|[OnEndPrinting](#onendprinting)|Chiamato quando termina un processo di stampa; eseguire l'override per deallocare risorse GDI.|
+|[CView::OnBeginPrinting](#onbeginprinting)|Chiamato quando inizia un processo di stampa; eseguire l'override per allocare graphics device interface (GDI) risorse.|
+|[CView::OnDraw](#ondraw)|Chiamato per eseguire il rendering di un'immagine del documento per la visualizzazione su schermo, la stampa o l'anteprima di stampa. Implementazione necessaria.|
+|[CView::OnEndPrinting](#onendprinting)|Chiamato quando termina un processo di stampa; eseguire l'override per deallocare risorse GDI.|
 |[CView::OnEndPrintPreview](#onendprintpreview)|Chiamato quando si esce dalla modalità di anteprima.|
-|[CView:: OnPreparePrinting](#onprepareprinting)|Chiamato prima della stampa un documento o visualizzare in anteprima; eseguire l'override per inizializzare la finestra di dialogo Stampa.|
+|[CView::OnPreparePrinting](#onprepareprinting)|Chiamato prima della stampa un documento o visualizzare in anteprima; eseguire l'override per inizializzare la finestra di dialogo Stampa.|
 |[CView::OnPrint](#onprint)|Chiamata eseguita per stampare o una pagina del documento di anteprima.|
 |[CView::OnUpdate](#onupdate)|Chiamata eseguita per notificare a una vista in cui il documento è stato modificato.|
 
@@ -293,7 +293,7 @@ Il *pActivateView* e *pDeactiveView* parametri puntano alla stessa vista se la f
 
 Questi parametri sono diversi quando [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) viene chiamato con una visualizzazione che è diversa da che cosa [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) restituirebbe. Ciò si verifica più spesso con le finestre con separatore.
 
-##  <a name="onbeginprinting"></a>  CView:: OnBeginPrinting
+##  <a name="onbeginprinting"></a>  CView::OnBeginPrinting
 
 Chiamata eseguita dal framework all'inizio di un processo di stampa o di anteprima di stampa, dopo la chiamata di `OnPreparePrinting` .
 
@@ -334,9 +334,9 @@ virtual DROPEFFECT OnDragEnter(
 Punta al [COleDataObject](../../mfc/reference/coledataobject-class.md) trascinati nell'area di rilascio della visualizzazione.
 
 *dwKeyState*<br/>
-Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contiene lo stato dei tasti di modifica. Questa è una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 La posizione corrente del mouse rispetto all'area client della visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -357,7 +357,7 @@ Per altre informazioni, vedere l'esempio di concetti avanzati MFC [OCLIENT](../.
 
 Implementazione predefinita consiste nel non fare nulla e restituire DROPEFFECT_NONE.
 
-Eseguire l'override di questa funzione per la preparazione per le chiamate successive al [OnDragOver](#ondragover) funzione membro. Tutti i dati necessari dall'oggetto dati devono essere recuperati in questo momento per un uso successivo nel `OnDragOver` funzione membro. La vista deve essere aggiornata anche in questo momento per fornire all'utente indicazioni visive. Per altre informazioni, vedere l'articolo [trascinamento della selezione: implementazione di obiettivo di rilascio](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Eseguire l'override di questa funzione per la preparazione per le chiamate successive al [OnDragOver](#ondragover) funzione membro. Tutti i dati necessari dall'oggetto dati devono essere recuperati in questo momento per un uso successivo nel `OnDragOver` funzione membro. La vista deve essere aggiornata anche in questo momento per fornire all'utente indicazioni visive. Per altre informazioni, vedere l'articolo [trascinamento della selezione: Implementazione di un obiettivo di rilascio](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragleave"></a>  CView::OnDragLeave
 
@@ -388,9 +388,9 @@ virtual DROPEFFECT OnDragOver(
 Punta al [COleDataObject](../../mfc/reference/coledataobject-class.md) trascinati sull'obiettivo di rilascio.
 
 *dwKeyState*<br/>
-Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contiene lo stato dei tasti di modifica. Questa è una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 La posizione corrente del mouse rispetto all'area client Vista.
 
 ### <a name="return-value"></a>Valore restituito
@@ -411,7 +411,7 @@ Per altre informazioni, vedere l'esempio di concetti avanzati MFC [OCLIENT](../.
 
 L'implementazione predefinita consiste nel non fare nulla e restituire DROPEFFECT_NONE.
 
-Eseguire l'override di questa funzione per fornire il feedback visivo utente durante l'operazione di trascinamento. Poiché questa funzione viene chiamata in modo continuo, qualsiasi codice contenuto al suo interno deve essere ottimizzato quanto più possibile. Per altre informazioni, vedere l'articolo [trascinamento della selezione: implementazione di obiettivo di rilascio](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Eseguire l'override di questa funzione per fornire il feedback visivo utente durante l'operazione di trascinamento. Poiché questa funzione viene chiamata in modo continuo, qualsiasi codice contenuto al suo interno deve essere ottimizzato quanto più possibile. Per altre informazioni, vedere l'articolo [trascinamento della selezione: Implementazione di un obiettivo di rilascio](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragscroll"></a>  CView::OnDragScroll
 
@@ -426,9 +426,9 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>Parametri
 
 *dwKeyState*<br/>
-Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contiene lo stato dei tasti di modifica. Questa è una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione del cursore, in pixel, rispetto allo schermo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -449,7 +449,7 @@ Per altre informazioni, vedere l'esempio di concetti avanzati MFC [OCLIENT](../.
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override di questa funzione quando si desidera fornire un comportamento speciale per questo evento. L'implementazione predefinita scorre automaticamente in windows quando il cursore viene trascinato nell'area di scorrimento predefinita all'interno del bordo di ogni finestra. Per altre informazioni, vedere l'articolo [trascinamento della selezione: implementazione di obiettivo di rilascio](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Eseguire l'override di questa funzione quando si desidera fornire un comportamento speciale per questo evento. L'implementazione predefinita scorre automaticamente in windows quando il cursore viene trascinato nell'area di scorrimento predefinita all'interno del bordo di ogni finestra. Per altre informazioni, vedere l'articolo [trascinamento della selezione: Implementazione di un obiettivo di rilascio](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondraw"></a>  CView::
 
@@ -496,7 +496,7 @@ L'effetto che l'utente ha richiesto.
 
 - DROPEFFECT_LINK crea un collegamento tra un oggetto dati e il relativo server.
 
-*punto*<br/>
+*point*<br/>
 La posizione corrente del mouse rispetto all'area client Vista.
 
 ### <a name="return-value"></a>Valore restituito
@@ -532,10 +532,10 @@ Punta al [COleDataObject](../../mfc/reference/coledataobject-class.md) che viene
 *dropDefault*<br/>
 L'effetto che l'utente ha scelto per l'operazione di rilascio predefinite basata sullo stato della chiave corrente. Potrebbe essere DROPEFFECT_NONE. Nella sezione Osservazioni vengono descritti gli effetti di rilascio.
 
-*elenco a discesa*<br/>
+*dropList*<br/>
 Un elenco degli effetti di trascinamento che supporta l'origine del trascinamento. I valori di effetto di rilascio possono essere combinati utilizzando l'operatore OR bit per bit ( **&#124;**) operazione. Nella sezione Osservazioni vengono descritti gli effetti di rilascio.
 
-*punto*<br/>
+*point*<br/>
 La posizione corrente del mouse rispetto all'area client Vista.
 
 ### <a name="return-value"></a>Valore restituito
@@ -576,7 +576,7 @@ Effetti di trascinamento descrivono l'azione associata a un'operazione di rilasc
 
 Per altre informazioni su come impostare il comando di menu di scelta predefiniti, vedere [SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem) nel SDK di Windows e [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) in questo volume.
 
-##  <a name="onendprinting"></a>  OnEndPrinting
+##  <a name="onendprinting"></a>  CView::OnEndPrinting
 
 Chiamato dal framework dopo che un documento è stato stampato o visualizzare in anteprima.
 
@@ -618,7 +618,7 @@ Punta al contesto di dispositivo stampante.
 *pInfo*<br/>
 Punta a una struttura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) che descrive il processo di stampa corrente.
 
-*punto*<br/>
+*point*<br/>
 Specifica il punto nella pagina in cui è stato ultima visualizzata in modalità di anteprima.
 
 *pView*<br/>
@@ -630,7 +630,7 @@ L'implementazione predefinita di questa funzione chiama il [OnEndPrinting](#onen
 
 Chiamare sempre la versione della classe base `OnEndPrintPreview` dall'override, in genere alla fine della funzione.
 
-##  <a name="oninitialupdate"></a>  CView:: OnInitialUpdate
+##  <a name="oninitialupdate"></a>  CView::OnInitialUpdate
 
 Chiamato dal framework dopo la visualizzazione prima di tutto è collegata al documento, ma prima la visualizzazione iniziale.
 
@@ -680,7 +680,7 @@ Chiamare la versione della classe base `OnPrepareDC` all'inizio della sostituzio
 
 [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]
 
-##  <a name="onprepareprinting"></a>  CView:: OnPreparePrinting
+##  <a name="onprepareprinting"></a>  CView::OnPreparePrinting
 
 Chiamato dal framework prima della stampa un documento o visualizzare in anteprima.
 
@@ -871,7 +871,7 @@ Se *lHint* è 0 e *pHint* è NULL, il documento ha inviato una notifica di un ag
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[MFC Sample MDIDOCVW](../../visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

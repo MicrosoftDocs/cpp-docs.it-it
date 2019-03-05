@@ -15,12 +15,12 @@ f1_keywords:
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-ms.openlocfilehash: 7474acf65058df009fcedc0d4d192af6441ddff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ddad8e4bc20be902332e1fd277d26b8d24b2ffd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550618"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326257"
 ---
 # <a name="concurrency-namespace-constants"></a>costanti dello spazio dei nomi di concorrenza
 

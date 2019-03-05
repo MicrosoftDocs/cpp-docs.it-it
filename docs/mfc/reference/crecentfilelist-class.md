@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: e38f63090e3de2a73c60618a36d25a397d595dac
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657422"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304834"
 ---
 # <a name="crecentfilelist-class"></a>Classe CRecentFileList
 
@@ -115,7 +115,7 @@ Specifica un puntatore all'elemento Shell da aggiungere all'elenco.
 *pLink*<br/>
 Specifica un puntatore alla Shell di collegamento da aggiungere all'elenco.
 
-*PIDL*<br/>
+*pidl*<br/>
 Specifica l'ottenuto per l'elemento di shell che deve essere aggiunto alla cartella docs recenti.
 
 ### <a name="remarks"></a>Note
@@ -137,7 +137,7 @@ CRecentFileList(
 
 ### <a name="parameters"></a>Parametri
 
-*Niniziare*<br/>
+*nStart*<br/>
 Offset per la numerazione nella visualizzazione del menu dell'elenco di file usati di recente (usati di recente).
 
 *lpszSection*<br/>
@@ -264,4 +264,3 @@ virtual void WriteList();
 ## <a name="see-also"></a>Vedere anche
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

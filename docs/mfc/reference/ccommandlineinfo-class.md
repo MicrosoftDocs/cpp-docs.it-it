@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303027"
 ---
 # <a name="ccommandlineinfo-class"></a>Classe CCommandLineInfo
 
@@ -85,11 +85,11 @@ Un'applicazione MFC in genere creerà un'istanza locale di questa classe nella [
 |*app* nomefile|Apre il file.|
 |*app* `/p` nomefile|Stampare il file alla stampante predefinita.|
 |*app* `/pt` porta driver della stampante nomefile|Stampare il file con la stampante specificata.|
-|*App* `/dde`|Verranno avviate e await comandi DDE.|
-|*App* `/Automation`|Avviare come un server di automazione OLE.|
-|*App* `/Embedding`|Avviare per modificare un elemento OLE incorporato.|
-|*App* `/Register`<br /><br /> *App* `/Regserver`|Informa l'applicazione per eseguire eventuali attività di registrazione.|
-|*App* `/Unregister`<br /><br /> *App* `/Unregserver`|Informa l'applicazione per eseguire eventuali attività di annullamento della registrazione.|
+|*app* `/dde`|Verranno avviate e await comandi DDE.|
+|*app* `/Automation`|Avviare come un server di automazione OLE.|
+|*app* `/Embedding`|Avviare per modificare un elemento OLE incorporato.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informa l'applicazione per eseguire eventuali attività di registrazione.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informa l'applicazione per eseguire eventuali attività di annullamento della registrazione.|
 
 Derivare una nuova classe da `CCommandLineInfo` per gestire altri contrassegni e valori dei parametri. Eseguire l'override [ParseParam](#parseparam) per gestire i flag di nuovo.
 
@@ -293,7 +293,7 @@ Il parametro o un flag.
 *bFlag*<br/>
 Indica se *pszParam* è un parametro o un flag.
 
-*aumento della quantità*<br/>
+*bLast*<br/>
 Indica se questo è l'ultimo parametro o flag della riga di comando.
 
 ### <a name="remarks"></a>Note
@@ -308,11 +308,11 @@ L'implementazione predefinita di questa funzione riconosce i flag seguenti: `/p`
 |*app* nomefile|Apre il file.|
 |*app* `/p` nomefile|Stampare il file alla stampante predefinita.|
 |*app* `/pt` porta driver della stampante nomefile|Stampare il file con la stampante specificata.|
-|*App* `/dde`|Verranno avviate e await comandi DDE.|
-|*App* `/Automation`|Avviare come un server di automazione OLE.|
-|*App* `/Embedding`|Avviare per modificare un elemento OLE incorporato.|
-|*App* `/Register`<br /><br /> *App* `/Regserver`|Informa l'applicazione per eseguire eventuali attività di registrazione.|
-|*App* `/Unregister`<br /><br /> *App* `/Unregserver`|Informa l'applicazione per eseguire eventuali attività di annullamento della registrazione.|
+|*app* `/dde`|Verranno avviate e await comandi DDE.|
+|*app* `/Automation`|Avviare come un server di automazione OLE.|
+|*app* `/Embedding`|Avviare per modificare un elemento OLE incorporato.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informa l'applicazione per eseguire eventuali attività di registrazione.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informa l'applicazione per eseguire eventuali attività di annullamento della registrazione.|
 
 Queste informazioni vengono archiviate nel [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), e [m_nShellCommand](#m_nshellcommand). I flag sono contrassegnati tramite una barra ' **/**'o trattino' **-**'.
 
@@ -328,4 +328,3 @@ Eseguire l'override di questa funzione nella classe derivata per gestire altri v
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

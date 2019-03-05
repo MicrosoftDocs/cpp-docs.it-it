@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-ms.openlocfilehash: af600704f82a0cad402948286fa0d4b11dca0c71
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0e5250b27ce6b902939ebcbfa03bf022a202788
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578373"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304015"
 ---
 # <a name="ccustomtransition-class"></a>Classe CCustomTransition
 
@@ -55,7 +55,7 @@ class CCustomTransition : public CBaseTransition;
 |----------|-----------------|
 |[CCustomTransition::Create](#create)|Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato. (Esegue l'override [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 |[CCustomTransition:: SetInitialValue](#setinitialvalue)|Imposta un valore iniziale, che verrà applicato a una variabile di animazione associata a questa transizione.|
-|[CCustomTransition:: SetInitialVelocity](#setinitialvelocity)|Imposta una velocità iniziale, che verranno applicate a una variabile di animazione associata a questa transizione.|
+|[CCustomTransition::SetInitialVelocity](#setinitialvelocity)|Imposta una velocità iniziale, che verranno applicate a una variabile di animazione associata a questa transizione.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -69,7 +69,7 @@ class CCustomTransition : public CBaseTransition;
 
 ## <a name="remarks"></a>Note
 
-La classe CCustomTransitions consente agli sviluppatori di implementare le transizioni personalizzate. Viene creato e usato come una transizione standard, ma il relativo costruttore accetta come parametro un puntatore a un interpolatore personalizzato. Eseguire la procedura seguente per usare le transizioni personalizzate: 1. Derivare una classe CCustomInterpolator e implementare almeno InterpolateValue metodo. 2. Assicurarsi che la durata dell'oggetto interpolatore personalizzato deve essere maggiore della durata dell'animazione in cui viene usato. 3. Creare un'istanza (utilizzando l'operatore new) di un oggetto CCustomTransition e passare un puntatore a un interpolatore personalizzato nel costruttore. 4. Se questi parametri sono obbligatori per l'interpolazione personalizzata, chiamare CCustomTransition:: SetInitialValue e CCustomTransition:: SetInitialVelocity. 5. Passare il puntatore alla transizione personalizzato al metodo AddTransition dell'oggetto di animazione, il cui valore deve essere aggiunta un'animazione con l'algoritmo personalizzato. 6. Quando si deve modificare il valore dell'oggetto di animazione Windows API di animazione chiamerà InterpolateValue (e altri metodi rilevanti) CCustomInterpolator.
+La classe CCustomTransitions consente agli sviluppatori di implementare le transizioni personalizzate. Viene creato e usato come una transizione standard, ma il relativo costruttore accetta come parametro un puntatore a un interpolatore personalizzato. Seguire i passaggi seguenti per utilizzare le transizioni personalizzate: 1. Derivare una classe CCustomInterpolator e implementare almeno InterpolateValue metodo. 2. Assicurarsi che la durata dell'oggetto interpolatore personalizzato deve essere maggiore della durata dell'animazione in cui viene usato. 3. Creare un'istanza (utilizzando l'operatore new) di un oggetto CCustomTransition e passare un puntatore a un interpolatore personalizzato nel costruttore. 4. Se questi parametri sono obbligatori per l'interpolazione personalizzata, chiamare CCustomTransition:: SetInitialValue e CCustomTransition:: SetInitialVelocity. 5. Passare il puntatore alla transizione personalizzato al metodo AddTransition dell'oggetto di animazione, il cui valore deve essere aggiunta un'animazione con l'algoritmo personalizzato. 6. Quando si deve modificare il valore dell'oggetto di animazione Windows API di animazione chiamerà InterpolateValue (e altri metodi rilevanti) CCustomInterpolator.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 8b9c452dc3dcb157b20558a1f7cb31103dc01f84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39868ed27a0dfb8756b4829ea7c378c798bd2ff3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561265"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304210"
 ---
 # <a name="ccolordialog-class"></a>Classe CColorDialog
 
@@ -255,7 +255,7 @@ void SetCurrentColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametri
 
-*Common Language Runtime*<br/>
+*clr*<br/>
 Un valore di colore RGB.
 
 ### <a name="remarks"></a>Note
@@ -272,4 +272,3 @@ Questa funzione viene chiamata dall'interno di un gestore di messaggi o `OnColor
 [Esempio MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

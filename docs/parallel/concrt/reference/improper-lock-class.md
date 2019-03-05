@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-ms.openlocfilehash: de7393c9186a1572040acd18854b5b3046b239f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c10a7f302b63c33869425c4e5bddb36a15373ea8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552789"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326564"
 ---
 # <a name="improperlock-class"></a>Classe improper_lock
 
@@ -61,7 +61,7 @@ improper_lock() throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Messaggio*<br/>
+*_Message*<br/>
 Messaggio descrittivo dell'errore.
 
 ## <a name="see-also"></a>Vedere anche

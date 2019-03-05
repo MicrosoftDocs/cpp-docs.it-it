@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: pagine delle proprietà'
+title: 'Controlli ActiveX MFC: Pagine delle proprietà'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176458"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303898"
 ---
-# <a name="mfc-activex-controls-property-pages"></a>Controlli ActiveX MFC: pagine delle proprietà
+# <a name="mfc-activex-controls-property-pages"></a>Controlli ActiveX MFC: Pagine delle proprietà
 
 Pagine delle proprietà consentono a un utente di un controllo ActiveX visualizzare e modificare proprietà del controllo ActiveX. Queste proprietà sono accessibili tramite la chiamata di una controllo finestra di dialogo proprietà che contiene uno o più pagine delle proprietà che forniscono un'interfaccia grafica personalizzata per visualizzare e modificare le proprietà del controllo.
 
@@ -45,15 +45,15 @@ Questo articolo vengono trattati argomenti relativi all'uso di pagine delle prop
 
 Per altre informazioni sull'utilizzo delle pagine delle proprietà in un controllo ActiveX, vedere gli articoli seguenti:
 
-- [Controlli ActiveX MFC: aggiunta di un'altra pagina delle proprietà personalizzata](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Controlli ActiveX MFC: Aggiunta di un'altra pagina delle proprietà personalizzata](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
-- [Controlli ActiveX MFC: uso delle pagine delle proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Controlli ActiveX MFC: Uso delle pagine proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 Per informazioni sull'uso di finestre delle proprietà in un'applicazione MFC diverso da un controllo ActiveX, vedere [finestre delle proprietà](../mfc/property-sheets-mfc.md).
 
 ##  <a name="_core_implementing_the_default_property_page"></a> Implementa la pagina delle proprietà predefinito
 
-Se si usa la creazione guidata controllo ActiveX per creare il progetto di controllo, la creazione guidata controllo ActiveX fornisce una classe di pagina delle proprietà predefinito per il controllo derivato da [classe COlePropertyPage](../mfc/reference/colepropertypage-class.md). Inizialmente, questa pagina delle proprietà è vuota, ma è possibile aggiungere qualsiasi controllo finestra di dialogo o un set di controlli a esso. Poiché la creazione guidata controllo ActiveX Crea classe pagina delle proprietà solo una per impostazione predefinita, le classi delle pagine proprietà aggiuntiva (anche derivato da `COlePropertyPage`) deve essere creata usando Visualizzazione classi. Per altre informazioni su questa procedura, vedere [controlli ActiveX MFC: aggiunta di un'altra pagina delle proprietà personalizzate](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
+Se si usa la creazione guidata controllo ActiveX per creare il progetto di controllo, la creazione guidata controllo ActiveX fornisce una classe di pagina delle proprietà predefinito per il controllo derivato da [classe COlePropertyPage](../mfc/reference/colepropertypage-class.md). Inizialmente, questa pagina delle proprietà è vuota, ma è possibile aggiungere qualsiasi controllo finestra di dialogo o un set di controlli a esso. Poiché la creazione guidata controllo ActiveX Crea classe pagina delle proprietà solo una per impostazione predefinita, le classi delle pagine proprietà aggiuntiva (anche derivato da `COlePropertyPage`) deve essere creata usando Visualizzazione classi. Per altre informazioni su questa procedura, vedere [controlli ActiveX MFC: Aggiunta di un'altra pagina delle proprietà personalizzata](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
 
 Implementazione di una proprietà di pagina (in questo caso, il valore predefinito) è un processo in tre passaggi:
 

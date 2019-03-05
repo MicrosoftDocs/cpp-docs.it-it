@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-ms.openlocfilehash: 7e155b82e963e7bf3f19fa44c66e4c22b8c602e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19918cf73c2b5b03db895c4751b22b1666ce01de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481432"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326686"
 ---
 # <a name="lightweight-tasks"></a>Attività leggere
 
@@ -26,10 +26,9 @@ Per creare un'attività leggera, chiamare il [concurrency::ScheduleGroup::Schedu
 
 ## <a name="example"></a>Esempio
 
-Per un esempio che illustra come adattare il codice esistente per usare un'attività leggera, vedere [procedura dettagliata: adattamento del codice esistente per usare le attività leggere](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).
+Per un esempio che illustra come adattare il codice esistente per usare un'attività leggera, vedere [procedura dettagliata: Adattamento del codice esistente per usare le attività leggere](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Procedura dettagliata: adattamento del codice esistente per l'uso di attività leggere](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
-
+[Procedura dettagliata: Adattamento del codice esistente per l'uso di attività leggere](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)

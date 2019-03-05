@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561421"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303170"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
 
@@ -132,7 +132,7 @@ Per aggiungere un pulsante della casella combinata a una barra degli strumenti, 
 
 3. Nel gestore di messaggi che elabora il messaggio AFX_WM_RESETTOOLBAR, sostituire il pulsante fittizio con il nuovo pulsante della casella combinata utilizzando [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Per altre informazioni, vedere [procedura dettagliata: inserimento di controlli in barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md). Per un esempio di un pulsante della barra degli strumenti della casella combinata, vedere il progetto di esempio VisualStudioDemo.
+Per altre informazioni, vedere [Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md). Per un esempio di un pulsante della barra degli strumenti della casella combinata, vedere il progetto di esempio VisualStudioDemo.
 
 ## <a name="example"></a>Esempio
 
@@ -285,7 +285,7 @@ virtual int Compare(
 
 Un valore che indica la relazione tra maiuscole e minuscole lessicografico tra stringhe. Nella tabella seguente sono elencati i valori possibili:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |\<0|La prima stringa è minore del secondo.|
 |0|La prima stringa è uguale a secondo.|
@@ -327,7 +327,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Puntatore alla finestra padre del pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rettangolo di delimitazione della casella combinata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -350,7 +350,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Puntatore alla finestra padre del pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rettangolo di delimitazione della nuova casella di modifica.
 
 *dwEditStyle*<br/>
@@ -413,7 +413,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare le caselle di modifica e casella combinata. FALSE per disabilitare le caselle di modifica e casella combinata.
 
 ### <a name="remarks"></a>Note
@@ -430,7 +430,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parametri
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [out] Riferimento a un pulsante di menu.
 
 ### <a name="return-value"></a>Valore restituito
@@ -825,7 +825,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Parametri
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Un handle di finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -990,10 +990,10 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametri
 
-*PDC*<br/>
+*Pdc*<br/>
 [in] Il contesto di dispositivo che visualizza il pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione del pulsante.
 
 *pImages*<br/>
@@ -1030,7 +1030,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Il contesto di dispositivo che visualizza il pulsante della casella combinata.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione del pulsante casella combinata.
 
 *bSelected*<br/>
@@ -1066,7 +1066,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Se si desidera nascondere o visualizzare il pulsante della casella combinata.
 
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize
@@ -1335,5 +1335,4 @@ void SetText(LPCTSTR lpszText);
 [Classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Procedura dettagliata: inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)

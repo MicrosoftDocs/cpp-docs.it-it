@@ -1,31 +1,31 @@
 ---
-title: 'Controlli ActiveX MFC: aggiunta di metodi predefiniti'
+title: 'Controlli ActiveX MFC: Aggiunta di metodi predefiniti'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], stock methods
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585029"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305211"
 ---
-# <a name="mfc-activex-controls-adding-stock-methods"></a>Controlli ActiveX MFC: aggiunta di metodi predefiniti
+# <a name="mfc-activex-controls-adding-stock-methods"></a>Controlli ActiveX MFC: Aggiunta di metodi predefiniti
 
 Un metodo è diverso da un metodo personalizzato in quanto si è già implementato dalla classe [COleControl](../mfc/reference/colecontrol-class.md). Ad esempio, `COleControl` contiene una funzione di membro predefinito che supporta il metodo di aggiornamento per il controllo. Voce della mappa di invio per questo metodo è DISP_STOCKFUNC_REFRESH.
 
 >[!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
-`COleControl` supporta due metodi predefiniti: metodo predefinito DoClick e l'aggiornamento. L'aggiornamento viene richiamato dall'utente del controllo per aggiornare immediatamente l'aspetto del controllo. DoClick viene richiamato per l'attivazione fare clic su del controllo eventi.
+`COleControl` supporta due metodi predefiniti: DoClick e all'aggiornamento. L'aggiornamento viene richiamato dall'utente del controllo per aggiornare immediatamente l'aspetto del controllo. DoClick viene richiamato per l'attivazione fare clic su del controllo eventi.
 
 |Metodo|Voce della mappa di invio|Commento|
 |------------|------------------------|-------------|
-|`DoClick`|**DISP_STOCKPROP_DOCLICK)**|Genera un evento Click.|
-|`Refresh`|**DISP_STOCKPROP_REFRESH)**|Aggiorna immediatamente l'aspetto del controllo.|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Genera un evento Click.|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|Aggiorna immediatamente l'aspetto del controllo.|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Aggiunta di un metodo predefinito tramite l'aggiunta guidata metodo
 
@@ -64,4 +64,3 @@ Questa riga assegna il metodo di aggiornamento di un numero ID specifico.
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
-

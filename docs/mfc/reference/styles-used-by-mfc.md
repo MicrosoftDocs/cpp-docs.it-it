@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694777"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304899"
 ---
 # <a name="styles-used-by-mfc"></a>Stili utilizzati da MFC
 
@@ -364,7 +364,7 @@ Gli stili di finestra di messaggio seguenti sono disponibili.
 |MB_OK|La finestra di messaggio contiene un pulsante di comando: OK.|
 |MB_OKCANCEL|La finestra di messaggio contiene due pulsanti di comando: OK e Annulla.|
 |MB_RETRYCANCEL|La finestra di messaggio contiene due pulsanti di comando: Riprova e Annulla.|
-|MB_YESNO|La finestra di messaggio contiene due pulsanti di comando: Sì e No.|
+|MB_YESNO|La finestra di messaggio contiene due pulsanti di comando: Sì e no.|
 |MB_YESNOCANCEL|La finestra di messaggio contiene tre pulsanti di comando: Sì, No e Annulla.|
 
 ### <a name="message-box-modality"></a>Modalità della finestra di messaggio

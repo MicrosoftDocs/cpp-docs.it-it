@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176575"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326751"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 
@@ -301,7 +301,7 @@ void EnablePaneProgressBar(
 *nIndex*<br/>
 [in] Specifica l'indice del riquadro con indicatore di stato per abilitare.
 
-*NLA*<br/>
+*nTotal*<br/>
 [in] Specifica il valore massimo per l'indicatore di stato.
 
 *bDisplayText*<br/>
@@ -596,7 +596,7 @@ void SetPaneAnimation(
 *nFrameRate*<br/>
 [in] Specifica la frequenza dei fotogrammi, in millisecondi, per l'animazione.
 
-*bAggiornamento*<br/>
+*bUpdate*<br/>
 [in] Se TRUE, è possibile aggiornare immediatamente il contenuto del riquadro. In caso contrario, il contenuto del riquadro viene aggiornato quando che venga invalidata.
 
 ### <a name="remarks"></a>Note
@@ -622,7 +622,7 @@ void SetPaneBackgroundColor(
 *clrBackground*<br/>
 [in] Specifica il nuovo colore di sfondo.
 
-*bAggiornamento*<br/>
+*bUpdate*<br/>
 [in] Se TRUE, è possibile aggiornare immediatamente il contenuto del riquadro. In caso contrario, non aggiornare il contenuto del riquadro fino a quando il riquadro viene invalidato da un altro metodo.
 
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon
@@ -650,7 +650,7 @@ void SetPaneIcon(
 *hIcon*<br/>
 [in] Specifica un handle per l'icona da impostare come l'immagine del riquadro.
 
-*bAggiornamento*<br/>
+*bUpdate*<br/>
 [in] Specifica se aggiornare immediatamente il contenuto del riquadro.
 
 *hBmp*<br/>
@@ -703,7 +703,7 @@ void SetPaneProgress(
 *nCurr*<br/>
 [in] Specifica il valore corrente dell'indicatore di stato.
 
-*bAggiornamento*<br/>
+*bUpdate*<br/>
 [in] Specifica se il riquadro deve essere aggiornato immediatamente.
 
 ### <a name="remarks"></a>Note
@@ -740,7 +740,7 @@ virtual BOOL SetPaneText(
 
 [in] *nIndex*<br/>
 [in] *lpszNewText*<br/>
-[in] *baggiornamento*<br/>
+[in] *bUpdate*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -765,7 +765,7 @@ void SetPaneTextColor(
 *clrText*<br/>
 [in] Specifica il colore del testo.
 
-*bAggiornamento*<br/>
+*bUpdate*<br/>
 [in] Se TRUE, è possibile aggiornare immediatamente il contenuto del riquadro. In caso contrario, non aggiornare il contenuto del riquadro fino a quando il riquadro viene invalidato da un altro metodo.
 
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth

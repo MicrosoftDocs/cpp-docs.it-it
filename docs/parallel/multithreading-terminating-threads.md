@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693295"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303631"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Terminazione dei thread in MFC
 
@@ -32,13 +32,13 @@ Normalmente in due situazioni causano un thread venga terminato: termina la funz
 
 ##  <a name="_core_normal_thread_termination"></a> Normale terminazione
 
-Per un thread di lavoro, la terminazione normale di un thread è semplice: uscire dalla funzione di controllo e restituiscono un valore che indica il motivo della terminazione. È possibile usare la [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funzione o una **restituire** istruzione. In genere, 0 indica il completamento, ma che è responsabilità dell'utente.
+Per un thread di lavoro, la terminazione normale di un thread è semplice: Uscire dalla funzione di controllo e restituiscono un valore che indica il motivo della terminazione. È possibile usare la [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funzione o una **restituire** istruzione. In genere, 0 indica il completamento, ma che è responsabilità dell'utente.
 
 Per un thread dell'interfaccia utente, il processo è semplice: dall'interno del thread dell'interfaccia utente, chiamare [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) nel SDK di Windows. L'unico parametro che `PostQuitMessage` accetta sia il codice di uscita del thread. Come per il thread di lavoro, 0 indica in genere il corretto completamento.
 
 ##  <a name="_core_premature_thread_termination"></a> Chiusura anomala di Thread
 
-Terminazione di un thread in modo anomalo è semplice quasi come: chiamare [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) dall'interno del thread. Passare il codice di uscita desiderato come unico parametro. Questo arresta l'esecuzione del thread, dealloca lo stack del thread, disconnette tutte le DLL associate al thread e consente di eliminare l'oggetto thread dalla memoria.
+Terminazione di un thread in modo anomalo è semplice quasi come: Chiamare [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) dall'interno del thread. Passare il codice di uscita desiderato come unico parametro. Questo arresta l'esecuzione del thread, dealloca lo stack del thread, disconnette tutte le DLL associate al thread e consente di eliminare l'oggetto thread dalla memoria.
 
 `AfxEndThread` Deve essere chiamato dall'interno del thread da terminare. Se si desidera terminare un thread da un altro thread, è necessario configurare un metodo di comunicazione tra i due thread.
 

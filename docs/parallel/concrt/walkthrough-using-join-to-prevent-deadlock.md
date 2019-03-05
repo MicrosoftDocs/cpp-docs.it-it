@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Uso della classe join per impedire un deadlock'
+title: 'Procedura dettagliata: Uso della classe join per impedire un Deadlock'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2f9e0f50866ed0635fbaa4b700dbf522f09458d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175914"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303053"
 ---
-# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procedura dettagliata: Uso della classe join per impedire un deadlock
+# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procedura dettagliata: Uso della classe join per impedire un Deadlock
 
 Questo argomento viene utilizzato il problema dei filosofi a cena per illustrare come usare il [Concurrency:: join](../../parallel/concrt/reference/join-class.md) classe per impedire un deadlock nell'applicazione. In un'applicazione software si verifica un *deadlock* quando due o più processi bloccano ognuno una risorsa e attendono entrambi che un altro processo rilasci altre risorse.
 
@@ -26,7 +26,7 @@ Prima di iniziare questa procedura dettagliata, leggere gli argomenti seguenti:
 
 - [Agenti asincroni](../../parallel/concrt/asynchronous-agents.md)
 
-- [Procedura dettagliata: creazione di un'applicazione basata sugli agenti](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [Procedura dettagliata: Creazione di un'applicazione basata sugli agenti](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)
 

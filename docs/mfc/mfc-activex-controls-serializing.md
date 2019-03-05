@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: serializzazione'
+title: 'Controlli ActiveX MFC: La serializzazione'
 ms.date: 09/12/2018
 f1_keywords:
 - _wVerMinor
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522213"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303348"
 ---
-# <a name="mfc-activex-controls-serializing"></a>Controlli ActiveX MFC: serializzazione
+# <a name="mfc-activex-controls-serializing"></a>Controlli ActiveX MFC: La serializzazione
 
 Questo articolo illustra come eseguire la serializzazione di un controllo ActiveX. La serializzazione è il processo di lettura o scrittura su un supporto di archiviazione permanente, ad esempio un file su disco. La libreria Microsoft Foundation classi (MFC) fornisce supporto incorporato per la serializzazione in classe `CObject`. `COleControl` estende il supporto per i controlli ActiveX tramite l'uso di un meccanismo di scambio di proprietà.
 
@@ -54,20 +54,20 @@ La tabella seguente elenca le funzioni di scambio possibili proprietà che è po
 
 |Funzioni di proprietà exchange|Scopo|
 |---------------------------------|-------------|
-|**PX_Blob)**|Serializza un tipo di proprietà di dati di oggetti BLOB (Binary Large).|
-|**PX_Bool)**|Serializza un tipo booleano della proprietà.|
-|**PX_Color)**|Serializza una proprietà di colore del tipo.|
-|**PX_Currency)**|Serializza un tipo **CY** proprietà (valuta).|
-|**PX_Double)**|Serializza un tipo **doppie** proprietà.|
-|**PX_Font)**|Serializza una proprietà di tipo carattere.|
-|**PX_Float)**|Serializza un tipo **float** proprietà.|
-|**PX_IUnknown)**|Serializza una proprietà di tipo `LPUNKNOWN`.|
-|**PX_Long)**|Serializza un tipo **lungo** proprietà.|
-|**PX_Picture)**|Serializza un tipo di proprietà immagine.|
-|**PX_Short)**|Serializza un tipo **breve** proprietà.|
-|**PXstring)**|Serializza un tipo `CString` proprietà.|
-|**PX_ULong)**|Serializza un tipo **ULONG** proprietà.|
-|**PX_UShort)**|Serializza un tipo **USHORT** proprietà.|
+|**PX_Blob( )**|Serializza un tipo di proprietà di dati di oggetti BLOB (Binary Large).|
+|**PX_Bool( )**|Serializza un tipo booleano della proprietà.|
+|**PX_Color( )**|Serializza una proprietà di colore del tipo.|
+|**PX_Currency( )**|Serializza un tipo **CY** proprietà (valuta).|
+|**PX_Double( )**|Serializza un tipo **doppie** proprietà.|
+|**PX_Font( )**|Serializza una proprietà di tipo carattere.|
+|**PX_Float( )**|Serializza un tipo **float** proprietà.|
+|**PX_IUnknown( )**|Serializza una proprietà di tipo `LPUNKNOWN`.|
+|**PX_Long( )**|Serializza un tipo **lungo** proprietà.|
+|**PX_Picture( )**|Serializza un tipo di proprietà immagine.|
+|**PX_Short( )**|Serializza un tipo **breve** proprietà.|
+|**PXstring( )**|Serializza un tipo `CString` proprietà.|
+|**PX_ULong( )**|Serializza un tipo **ULONG** proprietà.|
+|**PX_UShort( )**|Serializza un tipo **USHORT** proprietà.|
 
 Per altre informazioni su queste funzioni di scambio di proprietà, vedere [persistenza dei controlli OLE](../mfc/reference/persistence-of-ole-controls.md) nel *riferimento MFC*.
 
@@ -96,4 +96,3 @@ Per impostazione predefinita, un controllo "converte" i dati precedenti al forma
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
-

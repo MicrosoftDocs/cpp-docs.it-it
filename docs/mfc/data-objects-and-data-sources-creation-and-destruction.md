@@ -1,5 +1,5 @@
 ---
-title: 'Oggetti dati e origini dati (OLE): creazione e distruzione'
+title: 'Oggetti dati e origini dati: Creazione e distruzione'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - destroying data objects [MFC]
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614968"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304437"
 ---
-# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Oggetti dati e origini dati (OLE): creazione e distruzione
+# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Oggetti dati e origini dati: Creazione e distruzione
 
-Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md), oggetti dati e origini dati rappresentano entrambi i lati di un trasferimento di dati. Questo articolo descrive quando creare ed eliminare definitivamente questi oggetti e origini per eseguire i trasferimenti dei dati nel modo corretto, con informazioni su:
+Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md), oggetti dati e origini dati rappresentano entrambi i lati di un trasferimento di dati. Questo articolo descrive quando creare ed eliminare questi oggetti e origini per eseguire i trasferimenti dei dati nel modo corretto, con informazioni su:
 
 - [Creazione di oggetti dati](#_core_creating_data_objects)
 
@@ -40,7 +40,7 @@ Gli oggetti dati vengono usati dall'applicazione di destinazione, ovvero il clie
 
 Un oggetto dati è necessario in due situazioni comuni. La prima situazione è quella in cui nell'applicazione vengono rilasciati dati usando il trascinamento della selezione. La seconda situazione è quella in cui si sceglie Incolla o Incolla speciale dal menu Modifica.
 
-In una situazione che prevede il trascinamento della selezione non è necessario creare un oggetto dati. Un puntatore a un oggetto dati esistente verrà passato alla funzione `OnDrop`. Questo oggetto dati viene creato dal framework come parte dell'operazione di trascinamento della selezione e verrà anche eliminato dal framework. Questo non sempre avviene quando l'operazione Incolla viene eseguita con un altro metodo. Per altre informazioni, vedere [eliminazione definitiva di oggetti dati](#_core_destroying_data_objects).
+In una situazione che prevede il trascinamento della selezione non è necessario creare un oggetto dati. Un puntatore a un oggetto dati esistente verrà passato alla funzione `OnDrop`. Questo oggetto dati viene creato dal framework come parte dell'operazione di trascinamento e rilascio e verrà anche eliminato dal framework. Questo non sempre avviene quando l'operazione Incolla viene eseguita con un altro metodo. Per altre informazioni, vedere [eliminazione definitiva di oggetti dati](#_core_destroying_data_objects).
 
 Se l'applicazione esegue un'operazione Incolla o Incolla speciale, è consigliabile creare un oggetto `COleDataObject` e chiamarne la funzione membro `AttachClipboard`. In questo modo, l'oggetto dati viene associato ai dati negli Appunti. È quindi possibile usare questo oggetto dati nella funzione Incolla.
 
@@ -64,13 +64,13 @@ Le origini dati vengono create quando un'applicazione deve copiare dati negli Ap
 
 1. I dati selezionati vengono inseriti nell'origine dati chiamando una delle funzioni nel gruppo `COleDataSource::CacheData` o `COleDataSource::DelayRenderData`.
 
-1. L'applicazione chiama la funzione membro `SetClipboard` (o la funzione membro `DoDragDrop` se si tratta di un'operazione di trascinamento e rilascio) che appartiene all'oggetto creato nel passaggio 3.
+1. L'applicazione chiama la funzione membro `SetClipboard` (o la funzione membro `DoDragDrop` se si tratta di un'operazione di trascinamento della selezione) che appartiene all'oggetto creato nel passaggio 3.
 
 1. Se si tratta di un **tagliare** operazione oppure `DoDragDrop` restituisce **DROPEFFECT_MOVE**, i dati selezionati nel passaggio 1 viene eliminati dal documento.
 
 Questo scenario viene implementato dagli esempi OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Esaminare l'origine per ogni classe derivata da `CView` dell'applicazione per tutte le funzioni tranne `GetClipboardData` e `OnGetClipboardData`. Queste due funzioni si trovano nelle implementazioni delle classi derivate da `COleClientItem` o `COleServerItem`. Questi programmi di esempio offrono un buon esempio dell'implementazione di questi concetti.
 
-Un'altra situazione in cui si potrebbe voler creare un oggetto `COleDataSource` si verifica quando si modifica il comportamento predefinito di un'operazione di trascinamento della selezione. Per altre informazioni, vedere la [trascinamento della selezione: personalizzazione](../mfc/drag-and-drop-customizing.md) articolo.
+Un'altra situazione in cui si potrebbe voler creare un oggetto `COleDataSource` si verifica quando si modifica il comportamento predefinito di un'operazione di trascinamento e rilascio. Per altre informazioni, vedere il [trascinamento della selezione: Personalizzazione](../mfc/drag-and-drop-customizing.md) articolo.
 
 ##  <a name="_core_destroying_data_sources"></a> Eliminazione definitiva di origini dati
 

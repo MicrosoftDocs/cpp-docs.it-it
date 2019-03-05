@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: bf8ced746b70f64b83733152d845aa0291f07310
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894341"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302507"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
 

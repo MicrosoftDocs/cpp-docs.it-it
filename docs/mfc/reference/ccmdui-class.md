@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 7d550268fb417301116b5168d4c0ff76fdc35716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302871"
 ---
 # <a name="ccmdui-class"></a>Classe CCmdUI
 
@@ -50,7 +50,7 @@ class CCmdUI
 |Nome|Descrizione|
 |----------|-----------------|
 |[CCmdUI::ContinueRouting](#continuerouting)|Indica il meccanismo di routing dei comandi per continuare il routing del messaggio corrente lungo la catena dei gestori.|
-|[CCmdUI:: Enable](#enable)|Abilita o disabilita l'elemento dell'interfaccia utente per questo comando.|
+|[CCmdUI::Enable](#enable)|Abilita o disabilita l'elemento dell'interfaccia utente per questo comando.|
 |[CCmdUI::SetCheck](#setcheck)|Imposta lo stato di selezione dell'elemento dell'interfaccia utente per questo comando.|
 |[CCmdUI::SetRadio](#setradio)|Ad esempio il `SetCheck` funzione membro, ma opera su gruppi di opzione.|
 |[CCmdUI::SetText](#settext)|Imposta il testo per l'elemento dell'interfaccia utente per questo comando.|
@@ -77,7 +77,7 @@ Una voce di menu può essere sostituita con un pulsante della barra di controllo
 
 Nella tabella seguente sono riepilogati gli effetti `CCmdUI`di funzioni membro hanno sui vari elementi dell'interfaccia utente di comando.
 
-|Elemento dell'interfaccia utente|Abilita|SetCheck|SetRadio|SetText|
+|Elemento dell'interfaccia utente|Attiva|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
 |Voce di menu|Abilita o disabilita|Seleziona o deseleziona|Controlla l'uso di un punto|Set di elementi di testo|
 |Pulsante della barra degli strumenti|Abilita o disabilita|Consente di selezionare, viene deselezionata, o indeterminato|Uguale a `SetCheck`|(Non applicabile)|
@@ -117,7 +117,7 @@ virtual void Enable(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*Bin*<br/>
+*bOn*<br/>
 True per abilitare l'elemento su FALSE per disabilitarla.
 
 ### <a name="example"></a>Esempio
@@ -188,7 +188,7 @@ virtual void SetCheck(int nCheck = 1);
 
 ### <a name="parameters"></a>Parametri
 
-*nControllare*<br/>
+*nCheck*<br/>
 Specifica lo stato di controllo da impostare. Se 0, deseleziona; Se i controlli di 1, e se è 2, imposta indeterminato.
 
 ### <a name="remarks"></a>Note
@@ -205,7 +205,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*Bin*<br/>
+*bOn*<br/>
 TRUE per abilitare l'elemento; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note

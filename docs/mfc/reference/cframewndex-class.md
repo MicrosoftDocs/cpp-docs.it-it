@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179006"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302982"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 
@@ -209,7 +209,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::DockPane](#dockpane)|Ancora il riquadro specificato alla finestra cornice.|
 |[CFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Ancora un riquadro a sinistra di un altro riquadro.|
 |[CFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Abilita la modalità Nascondi automaticamente per i riquadri quando essi sono ancorate ai lati specificati della finestra cornice principale.|
-|[Cframewndex:: EnableDocking](#enabledocking)|Abilita l'ancoraggio di pannelli che appartengono alla finestra cornice.|
+|[CFrameWndEx::EnableDocking](#enabledocking)|Abilita l'ancoraggio di pannelli che appartengono alla finestra cornice.|
 |[CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Mostra o nasconde il menu principale in modalità schermo intero.|
 |[CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Abilita la modalità schermo intero per la finestra cornice.|
 |[CFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Abilita o disabilita il caricamento dello stato di ancoraggio.|
@@ -465,7 +465,7 @@ TRUE se una barra di riquadro correttamente è ancorato al lato specificato da f
 
 - CBRS_ALIGN_RIGHT: consente la barra di controllo ancorato al lato destro dell'area client di una finestra cornice.
 
-##  <a name="enabledocking"></a>  Cframewndex:: EnableDocking
+##  <a name="enabledocking"></a>  CFrameWndEx::EnableDocking
 
 Abilita l'ancoraggio dei riquadri della finestra cornice.
 
@@ -715,7 +715,7 @@ Puntatore a una barra di controllo da inserire nell'elenco di barre di controllo
 *pTarget*<br/>
 Puntatore a una barra di controllo prima o dopo cui inserire il riquadro.
 
-*bDopo*<br/>
+*bAfter*<br/>
 TRUE se si desidera inserire *pControlBar* dopo *pTarget*, FALSE in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1150,10 +1150,10 @@ afx_msg LRESULT OnDWMCompositionChanged(
 
 ### <a name="parameters"></a>Parametri
 
-*Windows Phone*<br/>
+*wp*<br/>
 [in] Questo parametro non viene utilizzato.
 
-*LP*<br/>
+*lp*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1174,10 +1174,10 @@ LRESULT OnExitSizeMove(
 
 ### <a name="parameters"></a>Parametri
 
-*Windows Phone*<br/>
+*wp*<br/>
 [in] Questo parametro non viene utilizzato.
 
-*LP*<br/>
+*lp*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1280,7 +1280,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in] Puntatore al pulsante della barra degli strumenti.
 
-*PTI*<br/>
+*pTI*<br/>
 [out] Un puntatore a una struttura di informazioni dello strumento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1304,7 +1304,7 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Codice carattere del tasto premuto.
 
 *nFlags*<br/>
@@ -1505,10 +1505,10 @@ afx_msg LRESULT OnPowerBroadcast(
 
 ### <a name="parameters"></a>Parametri
 
-*Windows Phone*<br/>
+*wp*<br/>
 [in] L'evento di risparmio energia. Per un elenco di valori possibili, vedere [messaggio WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast).
 
-*LP*<br/>
+*lp*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1531,13 +1531,13 @@ BOOL OnSetMenu(HMENU hmenu);
 
 ### <a name="parameters"></a>Parametri
 
-*Windows Phone*<br/>
+*wp*<br/>
 [in] Handle per il nuovo menu finestra cornice.
 
-*LP*<br/>
+*lp*<br/>
 [in] Handle per il nuovo menu finestra.
 
-*HMENU*<br/>
+*hmenu*<br/>
 [in] Handle per il nuovo menu finestra cornice.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1677,13 +1677,13 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Parametri
 
-*NLE*<br/>
+*nType*<br/>
 [in] Tipo di ridimensionamento. Per i valori possibili, vedere il parametro *wParam* nelle [WM_SIZE notifica](/windows/desktop/winmsg/wm-size).
 
 *cx*<br/>
 [in] Nuova larghezza in pixel della cornice.
 
-*CY*<br/>
+*cy*<br/>
 [in] Nuova altezza in pixel della cornice.
 
 ### <a name="remarks"></a>Note
@@ -1758,10 +1758,10 @@ afx_msg LRESULT OnToolbarContextMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Windows Phone*<br/>
+*wp*<br/>
 [in] Questo parametro non viene utilizzato.
 
-*LP*<br/>
+*lp*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1782,10 +1782,10 @@ afx_msg LRESULT OnToolbarCreateNew(
 
 ### <a name="parameters"></a>Parametri
 
-*Windows Phone*<br/>
+*wp*<br/>
 [in] Questo parametro non viene utilizzato.
 
-*LP*<br/>
+*lp*<br/>
 [in] Puntatore al testo per la barra del titolo della barra degli strumenti.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1809,7 +1809,7 @@ afx_msg LRESULT OnToolbarDelete(
 *unused*<br/>
 [in] Questo parametro non viene utilizzato.
 
-*LP*<br/>
+*lp*<br/>
 [in] Puntatore a una barra degli strumenti.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2036,7 +2036,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Menu di scelta*<br/>
+*menu*<br/>
 [in] Oggetto `CMenu` oggetto da modificare.
 
 *uiViewUserToolbarCmdFirst*<br/>

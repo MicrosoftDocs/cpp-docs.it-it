@@ -8,12 +8,12 @@ helpviewer_keywords:
 - objects [ATL]
 - ATL, simple objects
 ms.assetid: 9c57d2ef-0447-4c84-8982-3304b8e49847
-ms.openlocfilehash: df835b35bb036086382fc6adb4beed142f99be76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95a93268ca76516c1b3f736c106518ae6d94cc27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508300"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326816"
 ---
 # <a name="adding-an-atl-simple-object"></a>Aggiunta di un oggetto semplice ATL
 

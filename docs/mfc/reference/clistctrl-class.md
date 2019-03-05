@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 4bc50a8a77a4964cf92d003ed1e06213398f401c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525548"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304522"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -309,7 +309,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::FindItem](#finditem)|Cerca un elemento della visualizzazione elenco che specifica le caratteristiche.|
 |[CListCtrl::GetBkColor](#getbkcolor)|Recupera il colore di sfondo di un controllo visualizzazione elenco.|
 |[CListCtrl::GetBkImage](#getbkimage)|Recupera l'immagine di sfondo corrente di un controllo visualizzazione elenco.|
-|[CListCtrl:: GetCallbackMask](#getcallbackmask)|Recupera la maschera di callback per un controllo visualizzazione elenco.|
+|[CListCtrl::GetCallbackMask](#getcallbackmask)|Recupera la maschera di callback per un controllo visualizzazione elenco.|
 |[CListCtrl::GetCheck](#getcheck)|Recupera lo stato di visualizzazione corrente dell'immagine dello stato associato a un elemento.|
 |[CListCtrl::GetColumn](#getcolumn)|Recupera gli attributi della colonna di un controllo.|
 |[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)|Recupera l'ordine delle colonne (da sinistra a destra) di un controllo visualizzazione elenco.|
@@ -334,7 +334,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::GetInsertMark](#getinsertmark)|Recupera la posizione corrente del segno di inserimento.|
 |[CListCtrl::GetInsertMarkColor](#getinsertmarkcolor)|Recupera il colore del segno di inserimento corrente.|
 |[CListCtrl::GetInsertMarkRect](#getinsertmarkrect)|Recupera il rettangolo che delimita il punto di inserimento.|
-|[CListCtrl:: GetItem](#getitem)|Recupera gli attributi dell'elemento di una visualizzazione elenco.|
+|[CListCtrl::GetItem](#getitem)|Recupera gli attributi dell'elemento di una visualizzazione elenco.|
 |[CListCtrl::GetItemCount](#getitemcount)|Recupera il numero di elementi in un controllo visualizzazione elenco.|
 |[CListCtrl::GetItemData](#getitemdata)|Recupera il valore specifiche dell'applicazione associato a un elemento.|
 |[CListCtrl::GetItemIndexRect](#getitemindexrect)|Recupera il rettangolo di delimitazione per tutto o parte di un elemento secondario nel controllo visualizzazione elenco corrente.|
@@ -387,7 +387,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::SetColumn](#setcolumn)|Imposta gli attributi di una colonna della vista elenco.|
 |[CListCtrl::SetColumnOrderArray](#setcolumnorderarray)|Imposta l'ordine delle colonne (da sinistra a destra) di un controllo visualizzazione elenco.|
 |[CListCtrl::SetColumnWidth](#setcolumnwidth)|Modifica la larghezza di una colonna nella visualizzazione elenco o report.|
-|[CListCtrl:: SetExtendedStyle](#setextendedstyle)|Imposta gli stili estesi correnti di un controllo visualizzazione elenco.|
+|[CListCtrl::SetExtendedStyle](#setextendedstyle)|Imposta gli stili estesi correnti di un controllo visualizzazione elenco.|
 |[CListCtrl::SetGroupInfo](#setgroupinfo)|Imposta le informazioni per il gruppo specificato di un controllo visualizzazione elenco.|
 |[CListCtrl::SetGroupMetrics](#setgroupmetrics)|Imposta le metriche relative a gruppo un controllo visualizzazione elenco.|
 |[CListCtrl::SetHotCursor](#sethotcursor)|Imposta il cursore utilizzato quando la funzionalità di intercettazione è abilitata per un controllo visualizzazione elenco.|
@@ -398,7 +398,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::SetInfoTip](#setinfotip)|Imposta il testo della descrizione comando.|
 |[CListCtrl::SetInsertMark](#setinsertmark)|Imposta il punto di inserimento nella posizione specificata.|
 |[CListCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Imposta il colore del punto di inserimento.|
-|[CListCtrl:: SetItem](#setitem)|Imposta alcuni o tutti di una visualizzazione elenco attributi dell'elemento.|
+|[CListCtrl::SetItem](#setitem)|Imposta alcuni o tutti di una visualizzazione elenco attributi dell'elemento.|
 |[CListCtrl::SetItemCount](#setitemcount)|Prepara un controllo visualizzazione elenco per l'aggiunta di un numero elevato di elementi.|
 |[CListCtrl::SetItemCountEx](#setitemcountex)|Imposta il numero di elementi per un controllo visualizzazione elenco virtuale.|
 |[CListCtrl::SetItemData](#setitemdata)|Imposta il valore dell'elemento specifico dell'applicazione.|
@@ -446,9 +446,9 @@ Controlli di visualizzazione elenco è possono visualizzare i relativi contenuti
 
 - Visualizzazione di report
 
-   Ogni elemento viene visualizzato nella riga a sé stante, con informazioni aggiuntive distribuite in colonne a destra. La colonna più a sinistra contiene l'icona di piccole dimensioni e l'etichetta e le colonne successive contengono gli elementi secondari come specificato dall'applicazione. Un controllo header incorporato (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa queste colonne. Per altre informazioni sul controllo di intestazione e le colonne in una visualizzazione di report, vedere [utilizzo di CListCtrl: aggiunta di colonne al controllo (visualizzazione dei rapporti)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Ogni elemento viene visualizzato nella riga a sé stante, con informazioni aggiuntive distribuite in colonne a destra. La colonna più a sinistra contiene l'icona di piccole dimensioni e l'etichetta e le colonne successive contengono gli elementi secondari come specificato dall'applicazione. Un controllo header incorporato (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa queste colonne. Per altre informazioni sul controllo di intestazione e le colonne in una visualizzazione di report, vedere [CListCtrl utilizzando: Aggiunta di colonne al controllo (visualizzazione dei Report)](../../mfc/adding-columns-to-the-control-report-view.md).
 
-Lo stile di visualizzazione elenco corrente del controllo determina la visualizzazione corrente. Per altre informazioni su questi stili e il relativo utilizzo, vedere [utilizzo di CListCtrl: modifica degli stili del controllo elenco](../../mfc/changing-list-control-styles.md).
+Lo stile di visualizzazione elenco corrente del controllo determina la visualizzazione corrente. Per altre informazioni su questi stili e il relativo utilizzo, vedere [CListCtrl utilizzando: Modifica degli stili del controllo elenco](../../mfc/changing-list-control-styles.md).
 
 ## <a name="extended-styles"></a>Stili estesi
 
@@ -460,7 +460,7 @@ Oltre agli stili di elenco standard, classe `CListCtrl` supporta un vasto set di
 
 - Visualizzazioni elenco virtuali
 
-   Quando abilitata, consente il controllo supportare un massimo di elementi DWORD. Ciò è possibile, inserendo il sovraccarico di gestione dei dati dell'elemento dell'applicazione. Fatta eccezione per la selezione di elementi e informazioni di stato attivo, tutte le informazioni sull'elemento deve essere gestiti dall'applicazione. Per altre informazioni, vedere [utilizzo di CListCtrl: controlli List virtuali](../../mfc/virtual-list-controls.md).
+   Quando abilitata, consente il controllo supportare un massimo di elementi DWORD. Ciò è possibile, inserendo il sovraccarico di gestione dei dati dell'elemento dell'applicazione. Fatta eccezione per la selezione di elementi e informazioni di stato attivo, tutte le informazioni sull'elemento deve essere gestiti dall'applicazione. Per altre informazioni, vedere [CListCtrl utilizzando: Controlli List virtuali](../../mfc/virtual-list-controls.md).
 
 - Attivazione di uno e due clic
 
@@ -470,7 +470,7 @@ Oltre agli stili di elenco standard, classe `CListCtrl` supporta un vasto set di
 
    Quando abilitata, consente di trascinamento e rilascio riordinamento delle colonne in un controllo visualizzazione elenco. È disponibile solo nella visualizzazione di report.
 
-Per informazioni sull'uso di questi nuovi stili estesi, vedere [utilizzo di CListCtrl: modifica degli stili del controllo elenco](../../mfc/changing-list-control-styles.md).
+Per informazioni sull'uso di questi nuovi stili estesi, vedere [CListCtrl utilizzando: Modifica degli stili del controllo elenco](../../mfc/changing-list-control-styles.md).
 
 ## <a name="items-and-subitems"></a>Gli elementi e gli elementi secondari
 
@@ -478,7 +478,7 @@ Ogni elemento in un controllo visualizzazione elenco è costituito da un'icona (
 
 Classe `CListCtrl` offre diverse funzioni per l'inserimento, eliminazione, ricerca e modifica di questi elementi. Per altre informazioni, vedere [CListCtrl:: GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), e [CListCtrl::FindItem](#finditem), [aggiungendo elementi al controllo](../adding-items-to-the-control.md), e [scorrimento, disposizione, ordinamento e ricerca nei controlli list](../scrolling-arranging-sorting-and-finding-in-list-controls.md).
 
-Per impostazione predefinita, il controllo di visualizzazione elenco è responsabile per l'archiviazione di un'icona e testo gli attributi di elemento. Tuttavia, oltre a questi tipi di elemento, classe `CListCtrl` supporta "elementi di callback". Un elemento"callback" è un elemento della visualizzazione elenco per il quale l'applicazione, anziché il controllo, ovvero archivia il testo, icona o entrambi. Una maschera di callback viene utilizzata per specificare quali attributi di elemento (testo e/o sull'icona) vengono forniti dall'applicazione. Se un'applicazione utilizza elementi di callback, deve essere in grado di fornire gli attributi di testo e/o sull'icona su richiesta. Elementi di callback sono utili quando l'applicazione già gestisce alcune di queste informazioni. Per altre informazioni, vedere [utilizzo di CListCtrl: elementi di Callback e maschera di Callback](../callback-items-and-the-callback-mask.md).
+Per impostazione predefinita, il controllo di visualizzazione elenco è responsabile per l'archiviazione di un'icona e testo gli attributi di elemento. Tuttavia, oltre a questi tipi di elemento, classe `CListCtrl` supporta "elementi di callback". Un elemento"callback" è un elemento della visualizzazione elenco per il quale l'applicazione, anziché il controllo, ovvero archivia il testo, icona o entrambi. Una maschera di callback viene utilizzata per specificare quali attributi di elemento (testo e/o sull'icona) vengono forniti dall'applicazione. Se un'applicazione utilizza elementi di callback, deve essere in grado di fornire gli attributi di testo e/o sull'icona su richiesta. Elementi di callback sono utili quando l'applicazione già gestisce alcune di queste informazioni. Per altre informazioni, vedere [CListCtrl utilizzando: Elementi di callback e maschera di Callback](../callback-items-and-the-callback-mask.md).
 
 ## <a name="image-lists"></a>Elenchi di immagini
 
@@ -500,7 +500,7 @@ Le icone, le immagini degli elementi intestazione e dell'applicazione - definiti
 
    Usato nella visualizzazione del report per le immagini di piccole dimensioni che vengono visualizzati in ogni elemento di controllo di intestazione.
 
-Per impostazione predefinita, un controllo visualizzazione elenco Elimina definitivamente gli elenchi di immagini assegnati quando viene eliminato; Tuttavia, lo sviluppatore può personalizzare questo comportamento distruggendo ogni elenco immagini quando non viene più utilizzato, come determinato dall'applicazione. Per altre informazioni, vedere [utilizzo di CListCtrl: elementi elenco ed elenchi di immagini](../list-items-and-image-lists.md).
+Per impostazione predefinita, un controllo visualizzazione elenco Elimina definitivamente gli elenchi di immagini assegnati quando viene eliminato; Tuttavia, lo sviluppatore può personalizzare questo comportamento distruggendo ogni elenco immagini quando non viene più utilizzato, come determinato dall'applicazione. Per altre informazioni, vedere [CListCtrl utilizzando: Gli elementi dell'elenco ed elenchi di immagini](../list-items-and-image-lists.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile del controllo elenco. Applicare qualsiasi combinazione di stili del controllo elenco per il controllo. Visualizzare [stili di finestra di visualizzazione elenco](/windows/desktop/Controls/list-view-window-styles) nel SDK di Windows per un elenco completo di questi stili. Set di specifiche di un controllo utilizzando stili estesi [SetExtendedStyle](#setextendedstyle).
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo elenco. Può essere un' `CRect` oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
 
 *pParentWnd*<br/>
@@ -666,7 +666,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 *dwStyle*<br/>
 Specifica lo stile del controllo elenco. Applicare qualsiasi combinazione di stili del controllo elenco per il controllo. Per un elenco completo di questi stili, vedere [stili di finestra di visualizzazione elenco](/windows/desktop/Controls/list-view-window-styles) nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 Un puntatore a un [LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa) struttura contenente informazioni sull'elemento da cercare.
 
-*Niniziare*<br/>
+*nStart*<br/>
 Indice dell'elemento da cui iniziare la ricerca con oppure -1 a partire dall'inizio. L'elemento in corrispondenza *Niniziare* viene escluso dalla ricerca se *Niniziare* non è uguale a -1.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1700,7 +1700,7 @@ Restituisce uno dei valori seguenti:
 
 Questa funzione membro emula la funzionalità dei [LVM_GETINSERTMARKRECT](/windows/desktop/Controls/lvm-getinsertmarkrect) del messaggio, come descritto nel SDK di Windows.
 
-## <a name="getitem"></a>  CListCtrl:: GetItem
+## <a name="getitem"></a>  CListCtrl::GetItem
 
 Consente di recuperare alcuni o tutti gli attributi dell'elemento di una visualizzazione elenco.
 
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Un riferimento a un valore di posizione restituito da una chiamata precedente a `GetNextSelectedItem` o `GetFirstSelectedItemPosition`. Il valore viene aggiornato nella successiva posizione da questa chiamata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2556,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 Il numero di `RECT` contenute in strutture di *prc* matrice.
 
-*Repubblica popolare cinese*<br/>
+*prc*<br/>
 Un puntatore a una matrice di `RECT` strutture (o [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetti) che ricevono le aree di lavoro del controllo visualizzazione elenco. I valori in queste strutture sono nelle coordinate del client.
 
 ### <a name="remarks"></a>Note
@@ -2672,7 +2672,7 @@ Indirizzo di un `LVCOLUMN` struttura che contiene gli attributi della nuova colo
 Indirizzo di una stringa contenente l'intestazione della colonna.
 
 *nFormat*<br/>
-Intero che specifica l'allineamento della colonna. Può essere uno dei seguenti valori: LVCFMT_LEFT, LVCFMT_RIGHT o LVCFMT_CENTER.
+Intero che specifica l'allineamento della colonna. Può essere uno dei valori seguenti: LVCFMT_LEFT LVCFMT_RIGHT o LVCFMT_CENTER.
 
 *nWidth*<br/>
 Larghezza della colonna, in pixel. Se questo parametro è -1, la larghezza della colonna non è impostata.
@@ -2774,7 +2774,7 @@ Indice dell'elemento da inserire.
 *lpszItem*<br/>
 Indirizzo di una stringa contenente l'etichetta dell'elemento o LPSTR_TEXTCALLBACK se l'elemento è un elemento di callback. Per informazioni sugli elementi di callback, vedere [CListCtrl:: GetCallbackMask](#getcallbackmask).
 
-*Immagine*<br/>
+*nImage*<br/>
 Indice dell'immagine dell'elemento oppure I_IMAGECALLBACK se l'elemento è un elemento di callback. Per informazioni sugli elementi di callback, vedere [CListCtrl:: GetCallbackMask](#getcallbackmask).
 
 *nMask*<br/>
@@ -2833,7 +2833,7 @@ int InsertMarkHitTest(
 
 ### <a name="parameters"></a>Parametri
 
-*PowerPoint*<br/>
+*pPoint*<br/>
 Un puntatore a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordina la struttura contenente l'hit test, relativo all'area client del controllo elenco.
 
 *lvim*<br/>
@@ -3040,10 +3040,10 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>Parametri
 
-*. Nprimo*<br/>
+*nFirst*<br/>
 Indice del primo elemento da ridisegnare.
 
-*ultimo record. Nultimo*<br/>
+*nLast*<br/>
 Indice dell'ultimo elemento da ridisegnare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3114,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametri
 
-*CR*<br/>
+*cr*<br/>
 Colore di sfondo per impostare o il valore CLR_NONE per nessun colore di sfondo. Controlli di visualizzazione elenco con i colori di sfondo ridisegno significativamente più rapidamente di quelle senza i colori di sfondo. Per informazioni, vedere [COLORREF](/windows/desktop/gdi/colorref) nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3320,14 +3320,14 @@ BOOL SetColumnWidth(
 *nCol*<br/>
 Indice della colonna per cui è necessario impostare la larghezza. Nella visualizzazione elenco, questo parametro deve essere 0.
 
-*CX*<br/>
+*cx*<br/>
 La nuova larghezza della colonna. Può essere LVSCW_AUTOSIZE o LVSCW_AUTOSIZE_USEHEADER, come descritto in [LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
 Diverso da zero se ha esito positivo; in caso contrario 0.
 
-## <a name="setextendedstyle"></a>  CListCtrl:: SetExtendedStyle
+## <a name="setextendedstyle"></a>  CListCtrl::SetExtendedStyle
 
 Imposta gli stili estesi correnti di un controllo visualizzazione elenco.
 
@@ -3409,7 +3409,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>Parametri
 
-*connessione ibrida*<br/>
+*hc*<br/>
 Handle a una risorsa del cursore, utilizzato per rappresentare il cursore attivo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3490,10 +3490,10 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>Parametri
 
-*CX*<br/>
+*cx*<br/>
 La distanza, in pixel, tra le icone sull'asse x.
 
-*CY*<br/>
+*cy*<br/>
 La distanza, in pixel, tra le icone sull'asse y.
 
 *size*<br/>
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 Oggetto [COLORREF](/windows/desktop/gdi/colorref) struttura che specifica il colore per impostare il punto di inserimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3609,7 +3609,7 @@ Restituisce un `COLORREF` struttura che contiene il colore precedente.
 
 Questa funzione membro emula la funzionalità dei [LVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-setinsertmarkcolor) del messaggio, come descritto nel SDK di Windows.
 
-## <a name="setitem"></a>  CListCtrl:: SetItem
+## <a name="setitem"></a>  CListCtrl::SetItem
 
 Imposta alcuni o tutti di una visualizzazione elenco attributi dell'elemento.
 
@@ -3655,7 +3655,7 @@ Specifica quali attributi devono essere impostate (vedere la sezione Osservazion
 *lpszItem*<br/>
 Indirizzo di una stringa con terminazione null che specifica dell'etichetta dell'elemento.
 
-*Immagine*<br/>
+*nImage*<br/>
 Indice dell'immagine dell'elemento all'interno dell'elenco immagini.
 
 *nState*<br/>
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 Il nuovo [COLORREF](/windows/desktop/gdi/colorref) struttura che contiene il colore di contorno.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4022,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametri
 
-*CR*<br/>
+*cr*<br/>
 COLORREF che specifica il colore di sfondo testo nuovi. Per informazioni, vedere [COLORREF](/windows/desktop/gdi/colorref) nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4048,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parametri
 
-*CR*<br/>
+*cr*<br/>
 COLORREF che specifica il nuovo colore del testo. Per informazioni, vedere [COLORREF](/windows/desktop/gdi/colorref) nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4426,4 +4426,3 @@ Questa funzione dispone inoltre del controllo visualizzazione elenco in caso aff
 [Classe CWnd](cwnd-class.md)<br/>
 [Grafico della gerarchia](../hierarchy-chart.md)<br/>
 [Classe CImageList](cimagelist-class.md)
-

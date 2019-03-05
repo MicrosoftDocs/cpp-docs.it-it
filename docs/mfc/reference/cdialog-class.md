@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9eac0f7efdacc6181d8aaa15398f4d7365c0edd3
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178499"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305094"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -75,10 +75,10 @@ class CDialog : public CWnd
 |[CDialog::EndDialog](#enddialog)|Chiude una finestra di dialogo modale.|
 |[CDialog::GetDefID](#getdefid)|Ottiene l'ID del controllo pulsante predefinito per una finestra di dialogo.|
 |[CDialog::GotoDlgCtrl](#gotodlgctrl)|Sposta lo stato attivo a un controllo di finestra di dialogo specificata nella finestra di dialogo.|
-|[CDialog:: InitModalIndirect](#initmodalindirect)|Crea una finestra di dialogo modale da un modello di finestra di dialogo in memoria (non basata sulle risorse). I parametri vengono archiviati finché la funzione `DoModal` viene chiamato.|
+|[CDialog::InitModalIndirect](#initmodalindirect)|Crea una finestra di dialogo modale da un modello di finestra di dialogo in memoria (non basata sulle risorse). I parametri vengono archiviati finché la funzione `DoModal` viene chiamato.|
 |[CDialog::MapDialogRect](#mapdialogrect)|Converte le unità finestra di dialogo di un rettangolo in unità dello schermo.|
 |[CDialog::NextDlgCtrl](#nextdlgctrl)|Sposta lo stato attivo al successivo controllo finestra di dialogo nella finestra di dialogo.|
-|[CDialog](#oninitdialog)|Eseguire l'override per aumentare l'inizializzazione della finestra di dialogo.|
+|[CDialog::OnInitDialog](#oninitdialog)|Eseguire l'override per aumentare l'inizializzazione della finestra di dialogo.|
 |[CDialog::OnSetFont](#onsetfont)|Eseguire l'override per specificare il tipo di carattere è un controllo di finestra di dialogo da utilizzare quando disegna il testo.|
 |[CDialog::PrevDlgCtrl](#prevdlgctrl)|Sposta lo stato attivo al controllo della finestra di dialogo precedente nella finestra di dialogo.|
 |[CDialog::SetDefID](#setdefid)|Modifica il controllo di pulsanti di comando predefinito per una finestra di dialogo per un pulsante di comando specificato.|
@@ -301,7 +301,7 @@ void EndDialog(int nResult);
 
 ### <a name="parameters"></a>Parametri
 
-*Nrisultato*<br/>
+*nResult*<br/>
 Contiene il valore deve essere restituito dalla finestra di dialogo al chiamante di `DoModal`.
 
 ### <a name="remarks"></a>Note
@@ -448,7 +448,7 @@ Se si implementa il **annullare** pulsante in una finestra di dialogo non modale
 
 [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]
 
-##  <a name="oninitdialog"></a>  CDialog
+##  <a name="oninitdialog"></a>  CDialog::OnInitDialog
 
 Questo metodo viene chiamato in risposta al `WM_INITDIALOG` messaggio.
 
@@ -558,8 +558,7 @@ Specifica l'ID della Guida sensibile al contesto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLGCBR32 esempio MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample DLGCBR32](../../visual-cpp-samples.md)<br/>
 [Esempio MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

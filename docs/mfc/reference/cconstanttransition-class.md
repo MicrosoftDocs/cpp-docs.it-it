@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-ms.openlocfilehash: 2ec8ec36e59a0d4dc0e00f5e379bfbef492ce4db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9641af2f184d2edaa82922363dff75783e79f87e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662020"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326335"
 ---
 # <a name="cconstanttransition-class"></a>Classe CConstantTransition
 
@@ -75,7 +75,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 La durata della transizione.
 
 ##  <a name="create"></a>  CConstantTransition::Create

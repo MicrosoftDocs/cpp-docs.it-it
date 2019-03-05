@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - Activate When Visible option [MFC]
 ms.assetid: 8f7ddc5a-a7a6-4da8-bcb9-1b569f0ecb48
-ms.openlocfilehash: 42dbec7a55085235e43fa14ab6406bfb3526afdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7afe9617aa356916fe184828d7684f228293e39
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464831"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304730"
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>Disattivazione dell'opzione Attivo quando visibile
 
@@ -26,5 +26,4 @@ Il **OLEMISC_ACTIVATEWHENVISIBLE** flag viene omesso automaticamente se si scegl
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md)
-
+[Controlli ActiveX MFC: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md)

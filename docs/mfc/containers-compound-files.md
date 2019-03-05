@@ -1,5 +1,5 @@
 ---
-title: 'Contenitori: file composti'
+title: 'Contenitori: File compositi'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compound files [MFC]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 5a8ba0821d92ab41a4b95fb7b2a26da63c1df285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326620"
 ---
-# <a name="containers-compound-files"></a>Contenitori: file composti
+# <a name="containers-compound-files"></a>Contenitori: File compositi
 
 Questo articolo illustra i componenti e l'implementazione di file compositi e i vantaggi e svantaggi dell'utilizzo di file composti nelle applicazioni OLE.
 
@@ -42,7 +42,7 @@ Per l'implementazione dei file compositi OLE Usa tre tipi di oggetti: gli oggett
 
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Vantaggi e svantaggi dei file compositi
 
-File compositi offrono vantaggi non disponibili con i metodi precedenti dell'archiviazione file. e che comprendono:
+File compositi offrono vantaggi non disponibili con i metodi precedenti dell'archiviazione file. e comprendono:
 
 - L'accesso ai file incrementale.
 
@@ -66,7 +66,7 @@ La possibilità di determinare quando le modifiche agli oggetti in un file compo
 
 Per altre informazioni sulle modalità di accesso, vedere la *riferimento per programmatori OLE*.
 
-###  <a name="_core_standardization"></a> Standardizzazione
+###  <a name="_core_standardization"></a> Standardization
 
 La struttura dei file compositi standard consente a diverse applicazioni OLE esplorare i file compositi creati da un'applicazione OLE senza alcuna conoscenza dell'applicazione che effettivamente creato il file.
 
@@ -85,6 +85,6 @@ Nel *riferimento per programmatori OLE*, vedere [IStream](/windows/desktop/api/o
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori](../mfc/containers.md)<br/>
-[Contenitori: problemi dell'interfaccia utente](../mfc/containers-user-interface-issues.md)<br/>
+[Contenitori: Problemi dell'interfaccia utente](../mfc/containers-user-interface-issues.md)<br/>
 [Classe COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
 [Classe COleDocument](../mfc/reference/coledocument-class.md)

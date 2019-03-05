@@ -1,19 +1,19 @@
 ---
-title: 'Controlli ActiveX MFC: creazione di un server di automazione'
+title: 'Controlli ActiveX MFC: Creazione di un Server di automazione'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation servers [MFC], MFC ActiveX controls
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-ms.openlocfilehash: 6861d8b0798ece957c84f52a15032052aa83b9c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01f0162e124c5c49d45ce4a90f5243c88b09b5a0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448126"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303729"
 ---
-# <a name="mfc-activex-controls-creating-an-automation-server"></a>Controlli ActiveX MFC: creazione di un server di automazione
+# <a name="mfc-activex-controls-creating-an-automation-server"></a>Controlli ActiveX MFC: Creazione di un Server di automazione
 
 È possibile sviluppare un controllo ActiveX di MFC come un server di automazione allo scopo a livello di programmazione che controllano l'incorporamento in un'altra applicazione e chiamando i metodi del controllo dall'applicazione. Ad esempio un controllo deve essere ancora disponibile per essere ospitati in un contenitore di controlli ActiveX.
 
@@ -50,4 +50,3 @@ Se si aggiungono metodi per il controllo ActiveX dopo averlo usato in un'applica
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
-
