@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519982"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260387"
 ---
 # <a name="cdockingmanager-class"></a>Classe CDockingManager
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*Informazioni*<br/>
+*info*<br/>
 [in] Un riferimento a una struttura di informazioni che contiene ancora l'allineamento di riquadro.
 
 *ppDockBar*<br/>
@@ -521,7 +521,7 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Menu di scelta*<br/>
+*menu*<br/>
 [in] Menu per aggiungere i nomi dei riquadri e delle barre degli strumenti di ancoraggio.
 
 *bToolbarsOnly*<br/>
@@ -637,7 +637,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bDisattivare*<br/>
+*bDisable*<br/>
 [in] True per disabilitare il caricamento del layout di ancoraggio dal Registro di sistema. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -732,7 +732,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare il menu del sito di ancoraggio; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -763,7 +763,7 @@ void EnablePaneContextMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Se TRUE, la libreria consente di attivare il supporto per menu di scelta rapida automatica Se FALSE la libreria consente di disattivare il supporto per menu di scelta rapida automatica.
 
 *uiCustomizeCmd*<br/>
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*Informazioni*<br/>
+*info*<br/>
 [in] Una struttura che contiene le informazioni di allineamento del riquadro dock.
 
 *dwAlignToInsertAfter*<br/>
@@ -1102,7 +1102,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Un puntatore a un riquadro di destinazione.
 
-*bDopo*<br/>
+*bAfter*<br/>
 [in] TRUE per inserire il riquadro dopo la posizione del riquadro di destinazione; FALSE in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1170,7 +1170,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Il punto specificato.
 
 *dwBarAlignment*<br/>
@@ -1227,7 +1227,7 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>Parametri
 
-*Blocco*<br/>
+*bLock*<br/>
 [in] TRUE se la finestra è bloccata; FALSE in caso contrario.
 
 ### <a name="remarks"></a>Note
@@ -1346,7 +1346,7 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica la posizione del menu.
 
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint
@@ -1372,7 +1372,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica il punto, nelle coordinate dello schermo, da controllare.
 
 *nSensitivity*<br/>
@@ -1639,8 +1639,8 @@ static void SetDockingMode(
 *dockMode*<br/>
 Specifica la nuova modalità di ancoraggio. Per altre informazioni, vedere la sezione Osservazioni.
 
-*Tema*<br/>
-Specifica il tema che verrà usato per marcatori di ancoraggio. Può essere uno dei seguenti valori enumerati: AFX_SDT_VS2008 AFX_SDT_DEFAULT, AFX_SDT_VS2005,.
+*theme*<br/>
+Specifica il tema che verrà usato per marcatori di ancoraggio. Può essere uno dei seguenti valori enumerati: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Note
 
@@ -1709,7 +1709,7 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE per attivare la finestra del frame illustrato; FALSE per nascondere la finestra del frame.
 
 ##  <a name="showpanes"></a>  CDockingManager::ShowPanes
@@ -1722,7 +1722,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE per mostrare i riquadri; FALSE per nascondere i riquadri.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1760,7 +1760,7 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce uno dei seguenti valori enumerati: AFX_SDT_VS2008 AFX_SDT_DEFAULT, AFX_SDT_VS2005,.
+Restituisce uno dei seguenti valori enumerati: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Note
 

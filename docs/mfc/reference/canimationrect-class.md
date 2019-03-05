@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540179"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259490"
 ---
 # <a name="canimationrect-class"></a>Classe CAnimationRect
 
@@ -87,7 +87,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|Converte un CAnimationRect Rect.|
-|[CAnimationRect::operator =](#operator_eq)|Assegna CAnimationRect rect.|
+|[CAnimationRect::operator=](#operator_eq)|Assegna CAnimationRect rect.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -183,7 +183,7 @@ CAnimationRect(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 Specifica il rettangolo predefinito.
 
 *nGroupID*<br/>
@@ -204,7 +204,7 @@ Dimensioni del rettangolo.
 *nLeft*<br/>
 Specifica la coordinata del limite a sinistra.
 
-*Windows*<br/>
+*nTop*<br/>
 Specifica la coordinata del limite superiore.
 
 *nRight*<br/>
@@ -322,7 +322,7 @@ BOOL GetValue(CRect& rect);
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 Output. Quando questo metodo viene restituito, contiene il valore corrente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -401,7 +401,7 @@ Valore corrente del rettangolo di animazione Rect.
 
 Questa funzione chiama internamente GetValue. Se GetValue per qualche motivo non riesce, il rettangolo restituito conterrà i valori predefiniti per tutte le coordinate del rettangolo.
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+##  <a name="operator_eq"></a>  CAnimationRect::operator=
 
 Assegna CAnimationRect rect.
 
@@ -411,7 +411,7 @@ void operator=(const RECT& rect);
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 Il nuovo valore del rettangolo di animazione.
 
 ### <a name="remarks"></a>Note
@@ -428,7 +428,7 @@ void SetDefaultValue(const CRect& rect);
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 Specifica nuovi valori predefiniti per sinistro, superiore, destro e inferiore.
 
 ### <a name="remarks"></a>Note

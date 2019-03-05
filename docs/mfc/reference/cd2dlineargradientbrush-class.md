@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: 03c370be5bcfc61e1dd398604f27313d3de15f8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635825"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258725"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Classe CD2DLinearGradientBrush
 
@@ -54,7 +54,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Costruisce un oggetto CD2DLinearGradientBrush.|
-|[CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di pennello sfumato lineare D2D.|
+|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di pennello sfumato lineare D2D.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -67,14 +67,14 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 |[CD2DLinearGradientBrush::Get](#get)|Restituisce l'interfaccia ID2D1LinearGradientBrush|
 |[CD2DLinearGradientBrush::GetEndPoint](#getendpoint)|Recupera le coordinate finali della sfumatura lineare|
 |[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|Recupera le coordinate iniziali della sfumatura lineare|
-|[CD2DLinearGradientBrush::setEndPoint](#setendpoint)|Imposta le coordinate finali della sfumatura lineare nello spazio delle coordinate del pennello|
+|[CD2DLinearGradientBrush::SetEndPoint](#setendpoint)|Imposta le coordinate finali della sfumatura lineare nello spazio delle coordinate del pennello|
 |[CD2DLinearGradientBrush::SetStartPoint](#setstartpoint)|Imposta le coordinate iniziali della sfumatura lineare nello spazio delle coordinate del pennello|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|Restituisce l'interfaccia ID2D1LinearGradientBrush|
+|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|Restituisce l'interfaccia ID2D1LinearGradientBrush|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -99,7 +99,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush
+##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::~CD2DLinearGradientBrush
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di pennello sfumato lineare D2D.
 
@@ -159,7 +159,7 @@ Il comportamento della sfumatura compreso nell'intervallo [0,1] normalizzato.
 *pBrushProperties*<br/>
 Un puntatore all'opacità e alla trasformazione di un pennello.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 ##  <a name="create"></a>  CD2DLinearGradientBrush::Create
@@ -251,7 +251,7 @@ Puntatore a un ID2D1LinearGradientBrush.
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *
+##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*
 
 Restituisce l'interfaccia ID2D1LinearGradientBrush
 
@@ -263,7 +263,7 @@ operator ID2D1LinearGradientBrush*();
 
 Puntatore a un'interfaccia ID2D1LinearGradientBrush o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="setendpoint"></a>  CD2DLinearGradientBrush::setEndPoint
+##  <a name="setendpoint"></a>  CD2DLinearGradientBrush::SetEndPoint
 
 Imposta le coordinate finali della sfumatura lineare nello spazio delle coordinate del pennello
 
@@ -273,7 +273,7 @@ void SetEndPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Le coordinate bidimensionali finali della sfumatura lineare, nello spazio delle coordinate del pennello
 
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
@@ -286,7 +286,7 @@ void SetStartPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Le coordinate bidimensionali iniziali della sfumatura lineare, nello spazio delle coordinate del pennello
 
 ## <a name="see-also"></a>Vedere anche

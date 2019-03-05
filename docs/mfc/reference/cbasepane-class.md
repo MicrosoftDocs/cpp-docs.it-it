@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694790"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259814"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 
@@ -201,13 +201,13 @@ class CBasePane : public CWnd
 |[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` usare questo metodo.|
 |`CBasePane::accSelect`|Chiamata eseguita dal framework per modificare la selezione o per spostare lo stato attivo della tastiera dell'oggetto specificato. (Esegue l'override [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
 |[CBasePane::AddPane](#addpane)|Aggiunge un riquadro per il gestore di ancoraggio.|
-|[Cbasepane:: Adjustdockinglayout](#adjustdockinglayout)|Reindirizza una chiamata al gestore di ancoraggio per regolare il layout di ancoraggio.|
-|[Cbasepane:: Adjustlayout](#adjustlayout)|Chiamato dal framework quando il riquadro necessario regolare il layout interno.|
-|[Cbasepane:: Calcfixedlayout](#calcfixedlayout)|Calcola la dimensione orizzontale di una barra di controllo.|
-|[Cbasepane:: Canacceptpane](#canacceptpane)|Determina se un altro riquadro può essere ancorato al riquadro.|
+|[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|Reindirizza una chiamata al gestore di ancoraggio per regolare il layout di ancoraggio.|
+|[CBasePane::AdjustLayout](#adjustlayout)|Chiamato dal framework quando il riquadro necessario regolare il layout interno.|
+|[CBasePane::CalcFixedLayout](#calcfixedlayout)|Calcola la dimensione orizzontale di una barra di controllo.|
+|[CBasePane::CanAcceptPane](#canacceptpane)|Determina se un altro riquadro può essere ancorato al riquadro.|
 |[CBasePane::CanAutoHide](#canautohide)|Determina se il riquadro supporta la modalità Nascondi automaticamente.|
 |[CBasePane::CanBeAttached](#canbeattached)|Determina se il riquadro può essere ancorato a un altro riquadro.|
-|[Cbasepane:: Canbeclosed](#canbeclosed)|Determina se il riquadro può essere chiusa.|
+|[CBasePane::CanBeClosed](#canbeclosed)|Determina se il riquadro può essere chiusa.|
 |[CBasePane::CanBeDocked](#canbedocked)|Determina se il riquadro può essere ancorato a un altro riquadro.|
 |[CBasePane::CanBeResized](#canberesized)|Determina se è possibile ridimensionare il riquadro.|
 |[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Specifica se il riquadro può essere convertito in un documento a schede MDI.|
@@ -215,11 +215,11 @@ class CBasePane : public CWnd
 |[CBasePane::CanFocus](#canfocus)|Specifica se il riquadro può ricevere lo stato attivo.|
 |[CBasePane::CopyState](#copystate)|Copia lo stato di un riquadro specifico.|
 |[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|Se il riquadro può spostarsi, crea una finestra con mini-cornice.|
-|[Cbasepane:: CreateEx](#createex)|Crea il controllo del riquadro.|
-|[Cbasepane:: Dockpane](#dockpane)|Ancora un riquadro a un altro riquadro o a una finestra cornice.|
+|[CBasePane::CreateEx](#createex)|Crea il controllo del riquadro.|
+|[CBasePane::DockPane](#dockpane)|Ancora un riquadro a un altro riquadro o a una finestra cornice.|
 |[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|Ancora il riquadro usando le informazioni sul tipo in fase di esecuzione.|
 |[CBasePane::DockToFrameWindow](#docktoframewindow)|Ancora un riquadro ancorato in un frame.|
-|[Cbasepane:: Doesallowdyninsertbefore](#doesallowdyninsertbefore)|Determina se un altro riquadro può essere inserito in modo dinamico tra questo riquadro e il frame padre.|
+|[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Determina se un altro riquadro può essere inserito in modo dinamico tra questo riquadro e il frame padre.|
 |[CBasePane::EnableDocking](#enabledocking)|Consente di ancoraggio del riquadro per la cornice principale.|
 |[CBasePane::EnableGripper](#enablegripper)|Abilita o disabilita la barra gripper. Se la barra gripper è abilitata, l'utente può trascinare per riposizionare il riquadro.|
 |`CBasePane::FillWindowRect`|Utilizzato internamente.|
@@ -238,10 +238,10 @@ class CBasePane : public CWnd
 |[CBasePane::get_accSelection](#get_accselection)|Chiamata eseguita dal framework per recuperare gli elementi figlio selezionati dell'oggetto. (Esegue l'override [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
 |`CBasePane::get_accState`|Chiamata eseguita dal framework per recuperare lo stato corrente dell'oggetto specificato. (Esegue l'override [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
 |`CBasePane::get_accValue`|Chiamata eseguita dal framework per recuperare il valore dell'oggetto specificato. (Esegue l'override [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
-|[Cbasepane:: Getcaptionheight](#getcaptionheight)|Restituisce l'altezza della didascalia.|
+|[CBasePane::GetCaptionHeight](#getcaptionheight)|Restituisce l'altezza della didascalia.|
 |[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|Restituisce lo stile della barra di controllo.|
 |[CBasePane::GetCurrentAlignment](#getcurrentalignment)|Restituisce l'allineamento del riquadro corrente.|
-|[Cbasepane:: Getdockingmode](#getdockingmode)|Restituisce la modalità di ancoraggio corrente per il riquadro.|
+|[CBasePane::GetDockingMode](#getdockingmode)|Restituisce la modalità di ancoraggio corrente per il riquadro.|
 |[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|Restituisce un puntatore alla finestra che è il sito di ancoraggio del riquadro.|
 |[CBasePane::GetEnabledAlignment](#getenabledalignment)|Restituisce gli stili CBRS_ALIGN_ che vengono applicati al riquadro.|
 |[CBasePane::GetMFCStyle](#getmfcstyle)|Restituisce gli stili di riquadro specifico MFC.|
@@ -266,7 +266,7 @@ class CBasePane : public CWnd
 |[CBasePane::IsMDITabbed](#ismditabbed)|Determina se il riquadro è stato aggiunto a una finestra figlio MDI come documento a schede.|
 |[CBasePane::IsPaneVisible](#ispanevisible)|Specifica se il flag WS_VISIBLE è impostato per il riquadro.|
 |[CBasePane::IsPointNearDockSite](#ispointneardocksite)|Determina se un punto specificato si trova vicino al sito di ancoraggio.|
-|[Cbasepane:: isResizable](#isresizable)|Determina se è possibile ridimensionare il riquadro.|
+|[CBasePane::IsResizable](#isresizable)|Determina se è possibile ridimensionare il riquadro.|
 |[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|Determina se il riquadro viene ripristinato dal Registro di sistema.|
 |[CBasePane::IsTabbed](#istabbed)|Determina se il riquadro è stato inserito nel controllo della scheda di una finestra a schede.|
 |`CBasePane::IsTooltipTopmost`|Utilizzato internamente.|
@@ -279,7 +279,7 @@ class CBasePane : public CWnd
 |[CBasePane::OnMovePaneDivider](#onmovepanedivider)|Questo metodo non è attualmente utilizzato.|
 |[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Chiamato dal framework durante la generazione di un menu che contiene un elenco dei riquadri.|
 |[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Chiamato dal framework quando un riquadro viene rimosso dalla finestra cornice mini padre.|
-|[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` usare questo metodo.|
+|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` usare questo metodo.|
 |`CBasePane::OnUpdateCmdUI`|Utilizzato internamente.|
 |[CBasePane::PaneFromPoint](#panefrompoint)|Restituisce il riquadro che contiene il punto specificato.|
 |`CBasePane::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
@@ -297,7 +297,7 @@ class CBasePane : public CWnd
 |`CBasePane::SetRestoredFromRegistry`|Utilizzato internamente.|
 |[CBasePane::SetWindowPos](#setwindowpos)|Modifica le dimensioni, posizione e ordine Z di un riquadro.|
 |[CBasePane::ShowPane](#showpane)|Mostra o nasconde il riquadro.|
-|[Cbasepane:: Stretchpane](#stretchpane)|Adatta un riquadro in verticale o in orizzontale.|
+|[CBasePane::StretchPane](#stretchpane)|Adatta un riquadro in verticale o in orizzontale.|
 |[CBasePane::UndockPane](#undockpane)|Rimuove il riquadro dal sito di ancoraggio, dispositivo di scorrimento predefinito o finestra con mini-cornice in cui è attualmente ancorato.|
 
 ### <a name="protected-methods"></a>Metodi protetti
@@ -324,7 +324,7 @@ I suggerimenti di personalizzazione seguenti riguardano la `CBasePane Class` e t
 
   Queste sono flag che è possibile combinare con un'operazione OR bit per bit.
 
-`CBasePane` implementa i metodi booleani virtuali seguenti per riflettere questi flag: [cbasepane:: Canbeclosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). È possibile eseguirne l'override nelle classi derivate per personalizzarne il comportamento.
+`CBasePane` implementa i metodi booleani virtuali seguenti per riflettere questi flag: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). È possibile eseguirne l'override nelle classi derivate per personalizzarne il comportamento.
 
 - È possibile personalizzare il comportamento di ancoraggio eseguendo l'override [cbasepane:: Canacceptpane](#canacceptpane). Ha il riquadro restituito FALSE da questo metodo per impedire a un altro riquadro di ancoraggio a esso.
 
@@ -423,7 +423,7 @@ virtual void AdjustLayout();
 
 Il framework chiama questo metodo quando si dispone di un riquadro modificare il layout interno. L'implementazione di base non esegue alcuna operazione.
 
-##  <a name="calcfixedlayout"></a>  Cbasepane:: Calcfixedlayout
+##  <a name="calcfixedlayout"></a>  CBasePane::CalcFixedLayout
 
 Calcola la dimensione orizzontale di una barra di controllo.
 
@@ -449,7 +449,7 @@ La barra di controllo dimensioni, in pixel, di un `CSize` oggetto.
 
 Vedere la sezione Osservazioni sezione [CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)
 
-##  <a name="canacceptpane"></a>  Cbasepane:: Canacceptpane
+##  <a name="canacceptpane"></a>  CBasePane::CanAcceptPane
 
 Determina se un altro riquadro può essere ancorato al riquadro.
 
@@ -510,7 +510,7 @@ TRUE se il riquadro può essere ancorato a un'altra finestra del riquadro o il f
 
 L'implementazione predefinita restituisce FALSE. L'override del metodo in una classe derivata per abilitare o disabilitare la possibilità di ancorare senza chiamare [CBasePane::EnableDocking](#enabledocking).
 
-##  <a name="canbeclosed"></a>  Cbasepane:: Canbeclosed
+##  <a name="canbeclosed"></a>  CBasePane::CanBeClosed
 
 Determina se il riquadro può essere chiusa.
 
@@ -699,7 +699,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Lo stile della finestra (vedere [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo iniziale.
 
 *pParentWnd*<br/>
@@ -730,7 +730,7 @@ La libreria consente di aggiungere diversi nuovi stili per i riquadri. Nella tab
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Il riquadro può spostarsi.|
 |AFX_CBRS_AUTOHIDE|Il riquadro supporta la modalità Nascondi automaticamente|
-|AFX_CBRS_RESIZE|Il riquadro può essere ridimensionato. **Importante:** questo stile non è implementato.|
+|AFX_CBRS_RESIZE|Il riquadro può essere ridimensionato. **Importante:**  Questo stile non è implementato.|
 |AFX_CBRS_CLOSE|Il riquadro può essere chiuso.|
 |AFX_CBRS_AUTO_ROLLUP|Il riquadro può essere eseguito quando spostarla.|
 |AFX_CBRS_REGULAR_TABS|Quando un riquadro viene ancorato a un altro riquadro con questo stile, viene creata una finestra a schede normale. (Per altre informazioni, vedere [classe CTabbedPane](../../mfc/reference/ctabbedpane-class.md).)|
@@ -825,7 +825,7 @@ TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.
 
 Questo metodo ha esito negativo se un divisore di riquadro ( [classe CPaneDivider](../../mfc/reference/cpanedivider-class.md)) non è possibile creare. In caso contrario, restituisce sempre TRUE.
 
-##  <a name="doesallowdyninsertbefore"></a>  Cbasepane:: Doesallowdyninsertbefore
+##  <a name="doesallowdyninsertbefore"></a>  CBasePane::DoesAllowDynInsertBefore
 
 Determina se un altro riquadro può essere inserito in modo dinamico tra questo riquadro e il frame padre.
 
@@ -895,7 +895,7 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare la barra gripper; FALSE per disabilitarla.
 
 ### <a name="remarks"></a>Note
@@ -921,7 +921,7 @@ virtual BOOL FloatPane(
 *dockMethod*<br/>
 [in] Specifica il metodo di ancoraggio da usare per spostarsi nel riquadro.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Specifica se il riquadro mobile è visibile (TRUE) o nascosta (FALSE).
 
 ### <a name="return-value"></a>Valore restituito
@@ -1030,7 +1030,7 @@ virtual DWORD GetCurrentAlignment() const;
 
 L'allineamento corrente della barra di controllo. Nella tabella seguente mostra i valori possibili:
 
-|Valore|Allineamento|
+|Value|Allineamento|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Allineamento a sinistra.|
 |CBRS_ALIGN_RIGHT|Allineamento a destra.|
@@ -1275,7 +1275,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Puntatore al riquadro adiacente.
 
-*bDopo*<br/>
+*bAfter*<br/>
 [in] Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1427,7 +1427,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Il punto specificato.
 
 *dwBarAlignment*<br/>
@@ -1444,7 +1444,7 @@ TRUE se il punto è quasi del sito di ancoraggio. in caso contrario, FALSE.
 
 Il punto è disponibile il sito di ancoraggio quando si trova all'interno della sensibilità impostata nel gestore di ancoraggio. La riservatezza predefinita è 15 pixel.
 
-##  <a name="isresizable"></a>  Cbasepane:: isResizable
+##  <a name="isresizable"></a>  CBasePane::IsResizable
 
 Determina se è possibile ridimensionare il riquadro.
 
@@ -1551,7 +1551,7 @@ virtual HDWP MoveWindow(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica la nuova posizione e dimensioni del riquadro.
 
 *bRepaint*<br/>
@@ -1651,7 +1651,7 @@ virtual void OnPaneContextMenu(
 *pParentFrame*<br/>
 [in] Puntatore al frame padre.
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica la posizione del menu di scelta rapida.
 
 ### <a name="remarks"></a>Note
@@ -1712,7 +1712,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica il punto, nelle coordinate dello schermo, da controllare.
 
 *nSensitivity*<br/>
@@ -1925,10 +1925,10 @@ virtual HDWP SetWindowPos(
 *y*<br/>
 [in] Specifica la posizione della parte superiore della finestra.
 
-*CX*<br/>
+*cx*<br/>
 [in] Specifica la larghezza della finestra.
 
-*CY*<br/>
+*cy*<br/>
 [in] Specifica l'altezza della finestra.
 
 *nFlags*<br/>
@@ -1958,7 +1958,7 @@ virtual void ShowPane(
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Specifica se visualizzare (TRUE) o nascondere (FALSE) un riquadro.
 
 *bDelay*<br/>
@@ -1973,7 +1973,7 @@ Questo metodo visualizza o nasconde un riquadro. Usare questo metodo anziché `S
 
 Uso [CBasePane::IsVisible](#isvisible) per determinare la visibilità corrente di un riquadro.
 
-##  <a name="stretchpane"></a>  Cbasepane:: Stretchpane
+##  <a name="stretchpane"></a>  CBasePane::StretchPane
 
 Adatta un riquadro in verticale o in orizzontale.
 

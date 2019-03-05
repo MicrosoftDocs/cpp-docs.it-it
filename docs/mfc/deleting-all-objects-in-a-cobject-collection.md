@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 3e56c08f6165f6662c30e3ecbd6eda45c6696788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95d4cec61b230df5a019655617a25b1dc309cde4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257969"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Eliminazione di tutti gli oggetti in una raccolta CObject
 
@@ -81,4 +81,3 @@ Come con l'elenco riportato di seguito viene riportato sopra, è possibile chiam
 ## <a name="see-also"></a>Vedere anche
 
 [Accesso a tutti i membri di una raccolta](../mfc/accessing-all-members-of-a-collection.md)
-

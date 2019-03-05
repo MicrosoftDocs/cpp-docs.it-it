@@ -1,5 +1,5 @@
 ---
-title: Eliminazione definitiva di finestre cornice
+title: Distruzione di finestre cornice
 ms.date: 11/04/2016
 f1_keywords:
 - PostNcDestroy
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: f3b3e022f869a3019f80ba5ee082ce5a959853a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b64298bd2b0f14c30c824d78947a17628adec8b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645402"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258203"
 ---
-# <a name="destroying-frame-windows"></a>Eliminazione definitiva di finestre cornice
+# <a name="destroying-frame-windows"></a>Distruzione di finestre cornice
 
 Il framework MFC gestisce distruzione di finestre, nonché la creazione delle finestre associate con framework documenti e visualizzazioni. Se si creano finestre aggiuntive, è responsabile anche alla relativa eliminazione.
 
@@ -37,4 +37,3 @@ Quando si chiude la finestra principale, la chiusura dell'applicazione. Se vi ve
 ## <a name="see-also"></a>Vedere anche
 
 [Uso di finestre cornice](../mfc/using-frame-windows.md)
-

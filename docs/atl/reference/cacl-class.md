@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: a9653225f3057d6c5ba9fd49cf64487e766ca8d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05d9d5fe9cc344be3f903f247f34003056404c9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258567"
 ---
 # <a name="cacl-class"></a>Classe CAcl
 
@@ -242,7 +242,7 @@ Il [IDSR](../../atl/reference/csid-class.md) dell'oggetto a cui viene applicata 
 *pMask*<br/>
 La maschera che specifica le autorizzazioni per concedere o negare l'accesso.
 
-*PDigitare*<br/>
+*pType*<br/>
 Il tipo di voce ACE.
 
 *pFlags*<br/>

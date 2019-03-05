@@ -86,16 +86,16 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: 08acf9e47a26d4cbc5bcb96cbff086b19768e972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd1bc115f92e0c2605fe5f587a0567f672c6c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259802"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 Fornisce la funzionalità per disporre in set di righe i riquadri che derivano dalla [CPane Class](../../mfc/reference/cpane-class.md) .
 
@@ -620,7 +620,7 @@ virtual void OnShowRow(
 
 [in] *pos*<br/>
 
-[in] *bMostra*<br/>
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -655,7 +655,7 @@ static int __stdcall RectSideFromPoint(
 
 [in] *rect*<br/>
 
-[in] *punto*<br/>
+[in] *point*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -773,7 +773,7 @@ virtual BOOL ShowPane(
 *pBar*<br/>
 [in, out] Puntatore al riquadro per essere visualizzato o nascosto.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE per specificare che il riquadro viene visualizzato; FALSE per specificare che il riquadro deve essere nascosto.
 
 *bDelay*<br/>
@@ -803,7 +803,7 @@ void ShowRow(
 
 [in] *pRow*<br/>
 
-[in] *bMostra*<br/>
+[in] *bShow*<br/>
 
 [in] *bAdjustLayout*<br/>
 

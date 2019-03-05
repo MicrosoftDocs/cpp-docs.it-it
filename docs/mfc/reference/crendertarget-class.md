@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588643"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259880"
 ---
 # <a name="crendertarget-class"></a>Classe CRenderTarget
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Costruisce un oggetto CRenderTarget.|
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di destinazione di rendering.|
+|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di destinazione di rendering.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -224,7 +224,7 @@ class CRenderTarget : public CObject;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="_dtorcrendertarget"></a>  CRenderTarget:: ~ CRenderTarget
+##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di destinazione di rendering.
 
@@ -263,7 +263,7 @@ void Clear(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 Il colore a cui è viene cancellato l'area di disegno.
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 Valore RGB.
 
 *nAlpha*
@@ -402,7 +402,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parametri
 
-*ellisse*<br/>
+*ellipse*<br/>
 La posizione e un raggio di puntini di sospensione per disegnare, in pixel indipendenti dal dispositivo.
 
 *pBrush*<br/>
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 Le dimensioni del rettangolo da disegnare, in pixel indipendenti dal dispositivo
 
 *pBrush*<br/>
@@ -567,13 +567,13 @@ void DrawText(
 *strText*<br/>
 Un puntatore a una matrice di caratteri Unicode da disegnare.
 
-*Rect*<br/>
+*rect*<br/>
 Le dimensioni e posizione dell'area in cui viene disegnato il testo.
 
 *pForegroundBrush*<br/>
 Il pennello utilizzato per disegnare il testo.
 
-*TextFormat*<br/>
+*textFormat*<br/>
 Un oggetto che descrive i dettagli del testo da disegnare, ad esempio il tipo di carattere, dimensioni del carattere e la direzione di flusso di formattazione.
 
 *options*<br/>
@@ -632,7 +632,7 @@ void FillEllipse(
 
 ### <a name="parameters"></a>Parametri
 
-*ellisse*<br/>
+*ellipse*<br/>
 La posizione e un raggio, in device independent pixel, dell'ellisse per disegnare.
 
 *pBrush*<br/>
@@ -720,7 +720,7 @@ void FillRectangle(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 La dimensione del rettangolo da disegnare, in pixel indipendenti dal dispositivo.
 
 *pBrush*<br/>
@@ -1016,7 +1016,7 @@ void PushLayer(
 *layerParameters*<br/>
 I limiti del contenuto, maschera geometrica, opacità, maschera di opacità e opzioni di anti-aliasing per il livello.
 
-*Livello*<br/>
+*layer*<br/>
 Il livello che riceve le operazioni di disegno successivi.
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState

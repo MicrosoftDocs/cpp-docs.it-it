@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259295"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane (classe)
 
@@ -91,19 +91,19 @@ class CBaseTabbedPane : public CDockablePane
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Cbasetabbedpane:: addTab](#addtab)|Aggiunge una nuova scheda a un riquadro a schede.|
+|[CBaseTabbedPane::AddTab](#addtab)|Aggiunge una nuova scheda a un riquadro a schede.|
 |[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Specifica se un riquadro a schede vuoto può essere eliminato definitivamente.|
 |[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Applica le impostazioni della scheda, che vengono caricate dal Registro di sistema, di un riquadro a schede.|
 |[CBaseTabbedPane::CanFloat](#canfloat)|Determina se il riquadro può spostarsi. (Esegue l'override [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
 |[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determina se la didascalia per il riquadro a schede deve visualizzare lo stesso testo come scheda attiva.|
 |[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Esegue l'override [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|
-|[Cbasetabbedpane:: Detachpane](#detachpane)|Converte uno o più riquadri ancorabili in documenti MDI a schede.|
+|[CBaseTabbedPane::DetachPane](#detachpane)|Converte uno o più riquadri ancorabili in documenti MDI a schede.|
 |[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Abilita o disabilita la funzionalità del riquadro a schede per la sincronizzazione di testo del titolo con il testo dell'etichetta nella scheda attiva.|
 |[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Consente di ripristinare l'ordine di tabulazione interni in uno stato predefinito.|
 |[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Restituisce un riquadro che si trova in una scheda quando la scheda è identificata da un indice in base zero della scheda.|
 |||
 |[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Restituisce un riquadro in cui viene identificato tramite l'ID di riquadro.|
-|[Cbasetabbedpane:: Floattab](#floattab)|Separa un riquadro, ma solo se il riquadro si trova in una scheda rimovibile.|
+|[CBaseTabbedPane::FloatTab](#floattab)|Separa un riquadro, ma solo se il riquadro si trova in una scheda rimovibile.|
 |[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Restituisce l'ordine predefinito delle schede nel riquadro.|
 |[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Recupera un puntatore alla prima scheda visualizzata.|
 |[CBaseTabbedPane::GetMinSize](#getminsize)|Recupera il valore minimo consentito dimensioni per il riquadro. (Esegue l'override [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
@@ -113,7 +113,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Restituisce il numero di schede in una finestra scheda.|
 |[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Ottiene la finestra Scheda (sottoposta a wrapping) sottostante.|
 |[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Restituisce il numero delle schede visualizzate.|
-|[Cbasetabbedpane:: Hasautohidemode](#hasautohidemode)|Determina se il riquadro a schede che può essere usato in modalità Nascondi automaticamente.|
+|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Determina se il riquadro a schede che può essere usato in modalità Nascondi automaticamente.|
 |[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Determina se il riquadro a schede viene nascosto se solo uno scheda viene visualizzata.|
 |`CBaseTabbedPane::LoadSiblingPaneIDs`|Utilizzato internamente durante la serializzazione.|
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|Ricalcola le informazioni sul layout per il riquadro. (Esegue l'override [cpane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
@@ -129,7 +129,7 @@ class CBaseTabbedPane : public CDockablePane
 
 Questa classe è una classe astratta e non è possibile creare un'istanza. Implementa i servizi che sono comuni a tutti i tipi di riquadri a schede.
 
-Attualmente, la libreria include due classi derivate riquadro a schede: [classe CTabbedPane](../../mfc/reference/ctabbedpane-class.md) e [CMFCOutlookBar (classe)](../../mfc/reference/cmfcoutlookbar-class.md).
+Attualmente, la libreria include due classi derivate riquadro a schede: [Classe CTabbedPane](../../mfc/reference/ctabbedpane-class.md) e [CMFCOutlookBar (classe)](../../mfc/reference/cmfcoutlookbar-class.md).
 
 Oggetto `CBaseTabbedPane` esegue il wrapping di un puntatore a un [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) oggetto. [Classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) diventa quindi una finestra figlio del riquadro a schede.
 
@@ -155,7 +155,7 @@ Per altre informazioni su come creare riquadri a schede, vedere [CDockablePane C
 
 **Intestazione:** afxBaseTabbedPane.h
 
-##  <a name="addtab"></a>  Cbasetabbedpane:: addTab
+##  <a name="addtab"></a>  CBaseTabbedPane::AddTab
 
 Aggiunge una nuova scheda a un riquadro a schede.
 
@@ -263,7 +263,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 *bActiveTabOnly*<br/>
 [in] Quando si converte un riquadro a schede, specificare TRUE per convertire solo la scheda attiva. Specificare FALSE per convertire tutte le schede nel riquadro.
 
-##  <a name="detachpane"></a>  Cbasetabbedpane:: Detachpane
+##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane
 
 Scollega un riquadro dal riquadro a schede.
 
@@ -299,7 +299,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per sincronizzare la didascalia del riquadro a schede con una didascalia per la scheda attiva in caso contrario, FALSE.
 
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray
@@ -361,7 +361,7 @@ Se viene trovato nel riquadro, viene restituito un puntatore valido per il riqua
 
 Chiamare questo metodo per recuperare il riquadro che si trovano nella scheda specificata dal *nTabNum* parametro.
 
-##  <a name="floattab"></a>  Cbasetabbedpane:: Floattab
+##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab
 
 Separa un riquadro, ma solo se il riquadro si trova in una scheda rimovibile.
 
@@ -544,7 +544,7 @@ Il numero di schede visibili, che sarà maggiore o uguale a zero.
 
 Chiamare questo metodo per determinare il numero di schede visibili nel riquadro a schede.
 
-##  <a name="hasautohidemode"></a>  Cbasetabbedpane:: Hasautohidemode
+##  <a name="hasautohidemode"></a>  CBaseTabbedPane::HasAutoHideMode
 
 Determina se il riquadro a schede può passare alla modalità Nascondi automaticamente.
 
@@ -607,7 +607,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 [in] TRUE se il riquadro a schede che è stato creato in modo dinamico e non si controlla la sua durata; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -631,7 +631,7 @@ virtual BOOL ShowTab(
 *pBar*<br/>
 [in] Puntatore al riquadro per mostrare o nascondere.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE per mostrare il riquadro attività. FALSE per nascondere il riquadro.
 
 *bDelay*<br/>

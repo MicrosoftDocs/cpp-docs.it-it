@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-ms.openlocfilehash: ac00b1c5a937c32ecc02e11e735541119c388588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb8d6f696980ef91d7b43c960dc50289ea8500a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605790"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258242"
 ---
 # <a name="connection-point-macros"></a>Macro di punto di connessione
 
@@ -63,7 +63,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia da aggiungere alla mappa del punto di connessione.
 
 *piid*<br/>

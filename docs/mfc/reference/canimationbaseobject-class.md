@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430446"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258918"
 ---
 # <a name="canimationbaseobject-class"></a>Classe CAnimationBaseObject
 
@@ -74,32 +74,32 @@ class CAnimationBaseObject : public CObject;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Di overload. Costruisce un oggetto di animazione.|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di animazione.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di animazione.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAnimationBaseObject:: ApplyTransitions](#applytransitions)|Aggiunge le transizioni nello storyboard con la variabile di animazione incapsulato.|
+|[CAnimationBaseObject::ApplyTransitions](#applytransitions)|Aggiunge le transizioni nello storyboard con la variabile di animazione incapsulato.|
 |[CAnimationBaseObject::ClearTransitions](#cleartransitions)|Rimuove tutte le transizioni correlate.|
 |[CAnimationBaseObject::ContainsVariable](#containsvariable)|Determina se un oggetto di animazione contiene una variabile di animazione particolare.|
 |[CAnimationBaseObject::CreateTransitions](#createtransitions)|Crea le transizioni associate a un oggetto di animazione.|
 |[CAnimationBaseObject::DetachFromController](#detachfromcontroller)|Scollega un oggetto di animazione da controller di animazione padre.|
-|[CAnimationBaseObject:: EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Imposta il gestore dell'evento modificato valore Integer.|
-|[CAnimationBaseObject:: EnableValueChangedEvent](#enablevaluechangedevent)|Imposta il valore modificato gestore dell'evento.|
+|[CAnimationBaseObject::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Imposta il gestore dell'evento modificato valore Integer.|
+|[CAnimationBaseObject::EnableValueChangedEvent](#enablevaluechangedevent)|Imposta il valore modificato gestore dell'evento.|
 |[CAnimationBaseObject::GetAutodestroyTransitions](#getautodestroytransitions)|Indica se la transizione correlata vengono eliminati automaticamente.|
 |[CAnimationBaseObject::GetGroupID](#getgroupid)|Restituisce l'ID del gruppo corrente.|
 |[CAnimationBaseObject::GetObjectID](#getobjectid)|Restituisce l'ID dell'oggetto corrente.|
 |[CAnimationBaseObject::GetUserData](#getuserdata)|Restituisce i dati definiti dall'utente.|
 |[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Imposta un flag che consente di ordinare automaticamente eliminare definitivamente le transizioni.|
-|[CAnimationBaseObject:: SetID](#setid)|Imposta nuovi ID.|
+|[CAnimationBaseObject::SetID](#setid)|Imposta nuovi ID.|
 |[CAnimationBaseObject::SetUserData](#setuserdata)|Imposta i dati definiti dall'utente.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAnimationBaseObject:: GetAnimationVariableList](#getanimationvariablelist)|Raccoglie i puntatori alle variabili di animazione indipendente.|
+|[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|Raccoglie i puntatori alle variabili di animazione indipendente.|
 |[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|Stabilisce una relazione tra le variabili di animazione, contenute in un oggetto di animazione e il relativo contenitore.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
@@ -126,7 +126,7 @@ Questa classe implementa metodi di base per tutti gli oggetti di animazione. Un 
 
 **Intestazione:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject:: ~ CAnimationBaseObject
+##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject::~CAnimationBaseObject
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di animazione.
 
@@ -134,7 +134,7 @@ Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di anima
 virtual ~CAnimationBaseObject();
 ```
 
-##  <a name="applytransitions"></a>  CAnimationBaseObject:: ApplyTransitions
+##  <a name="applytransitions"></a>  CAnimationBaseObject::ApplyTransitions
 
 Aggiunge le transizioni nello storyboard con la variabile di animazione incapsulato.
 
@@ -198,7 +198,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 
 ### <a name="parameters"></a>Parametri
 
-*flag bAutodestroy*<br/>
+*bAutodestroy*<br/>
 Specifica se eliminare definitivamente gli oggetti di transizione automaticamente o rimuoverli solo nell'elenco corrispondente.
 
 ### <a name="remarks"></a>Note
@@ -254,7 +254,7 @@ void DetachFromController();
 
 Questo metodo viene utilizzato internamente.
 
-##  <a name="enableintegervaluechangedevent"></a>  CAnimationBaseObject:: EnableIntegerValueChangedEvent
+##  <a name="enableintegervaluechangedevent"></a>  CAnimationBaseObject::EnableIntegerValueChangedEvent
 
 Imposta il gestore dell'evento modificato valore Integer.
 
@@ -269,14 +269,14 @@ virtual void EnableIntegerValueChangedEvent(
 *pController*<br/>
 Un puntatore a un controller padre.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se abilitare o disabilitare l'evento di Modifica valore Integer.
 
 ### <a name="remarks"></a>Note
 
 Se il gestore dell'evento intero valore modificato è abilitato, è possibile gestire questo evento nel metodo CAnimationController:: OnAnimationIntegerValueChanged, che deve essere sottoposto a override in una classe derivata CAnimationController. Questo metodo viene chiamato ogni volta che viene modificato il valore integer di animazione.
 
-##  <a name="enablevaluechangedevent"></a>  CAnimationBaseObject:: EnableValueChangedEvent
+##  <a name="enablevaluechangedevent"></a>  CAnimationBaseObject::EnableValueChangedEvent
 
 Imposta il valore modificato gestore dell'evento.
 
@@ -291,14 +291,14 @@ virtual void EnableValueChangedEvent(
 *pController*<br/>
 Un puntatore a un controller padre.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se abilitare o disabilitare l'evento di modifica di valore.
 
 ### <a name="remarks"></a>Note
 
 Se il gestore dell'evento valore modificato è abilitato, è possibile gestire questo evento nel metodo CAnimationController::, che deve essere sottoposto a override in una classe derivata CAnimationController. Questo metodo viene chiamato ogni volta che viene modificato il valore di animazione.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationBaseObject:: GetAnimationVariableList
+##  <a name="getanimationvariablelist"></a>  CAnimationBaseObject::GetAnimationVariableList
 
 Raccoglie i puntatori alle variabili di animazione indipendente.
 
@@ -315,7 +315,7 @@ Un elenco che deve essere compilato con le variabili di animazione contenute in 
 
 ### <a name="remarks"></a>Note
 
-Si tratta di un metodo virtuale puro che deve essere sottoposto a override in una classe derivata. Un oggetto di animazione, a seconda del tipo, contiene una o più variabili di animazione. Ad esempio, CAnimationPoint contiene due variabili, per X e Y coordinate rispettivamente. La classe di base CAnimationBaseObject implementa alcuni metodi generici che agiscono su un elenco di variabili di animazione: ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Questi metodi chiamare GetAnimationVariableList, che viene compilato in una classe derivata con variabili di animazione effettivi contenute in un oggetto di animazione particolare, quindi eseguire un ciclo su nell'elenco ed eseguono le azioni necessarie. Se si crea un oggetto di animazione personalizzata, è necessario aggiungere all'elenco tutte le variabili di animazione contenute in tale oggetto.
+Si tratta di un metodo virtuale puro che deve essere sottoposto a override in una classe derivata. Un oggetto di animazione, a seconda del tipo, contiene una o più variabili di animazione. Ad esempio, CAnimationPoint contiene due variabili, per X e Y coordinate rispettivamente. La classe di base CAnimationBaseObject implementa alcuni metodi generici che agiscono su un elenco di animazione variabili: ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Questi metodi chiamare GetAnimationVariableList, che viene compilato in una classe derivata con variabili di animazione effettivi contenute in un oggetto di animazione particolare, quindi eseguire un ciclo su nell'elenco ed eseguono le azioni necessarie. Se si crea un oggetto di animazione personalizzata, è necessario aggiungere all'elenco tutte le variabili di animazione contenute in tale oggetto.
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 
@@ -438,7 +438,7 @@ Specifica l'automobile destroy flag.
 
 Impostare questo flag solo se è stata allocata utilizzando l'operatore new oggetto Transition. Se per qualche motivo vengono allocati gli oggetti di transizione nello stack, eliminare definitivamente l'automobile flag deve essere FALSE. Per impostazione predefinita questo flag è TRUE.
 
-##  <a name="setid"></a>  CAnimationBaseObject:: SetID
+##  <a name="setid"></a>  CAnimationBaseObject::SetID
 
 Imposta nuovi ID.
 

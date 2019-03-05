@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178643"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260140"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -121,7 +121,7 @@ class CButton : public CWnd
 |[CButton::GetSplitStyle](#getsplitstyle)|Recupera gli stili dei pulsanti di suddivisione che definiscono il controllo pulsante di menu combinato corrente.|
 |[CButton::GetState](#getstate)|Recupera il controllo dello stato, lo stato di evidenziazione e stato attivo di un controllo pulsante.|
 |[CButton::GetTextMargin](#gettextmargin)|Recupera il margine di testo del controllo pulsante.|
-|[CButton:: SetBitmap](#setbitmap)|Specifica una bitmap da visualizzare sul pulsante.|
+|[CButton::SetBitmap](#setbitmap)|Specifica una bitmap da visualizzare sul pulsante.|
 |[CButton::SetButtonStyle](#setbuttonstyle)|Modifica lo stile di un pulsante.|
 |[CButton::SetCheck](#setcheck)|Imposta lo stato di un controllo pulsante di selezione.|
 |[CButton::SetCursor](#setcursor)|Specifica un'immagine di cursore da visualizzare sul pulsante.|
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 Il valore restituito da un controllo pulsante creato con BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON o stile BS_3STATE è uno dei valori seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Stato del pulsante è deselezionato.|
 |BST_CHECKED|Stato del pulsante è selezionato.|
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 Nel primo overload, una [CString](../../atl-mfc-shared/using-cstring.md) oggetto che contiene il testo della nota associato al controllo di collegamento di comando corrente.
 
-oppure
+-oppure-
 
 Nel secondo overload, TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 Un campo di bit che contiene la combinazione di valori che indicano lo stato corrente di un controllo pulsante. La tabella seguente elenca i valori possibili.
 
-|Stato del pulsante|Value|Descrizione|
+|Stato del pulsante|Valore|Descrizione|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|Stato iniziale.|
 |BST_CHECKED|0x0001|Il controllo pulsante è selezionato.|
@@ -619,7 +619,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Questa funzione membro emula la funzionalità del messaggio BCM_GETTEXTMARGIN, come descritto nel [pulsanti](/windows/desktop/controls/buttons) sezione del SDK di Windows.
 
-##  <a name="setbitmap"></a>  CButton:: SetBitmap
+##  <a name="setbitmap"></a>  CButton::SetBitmap
 
 Chiamare questa funzione membro per associare una nuova bitmap con il pulsante.
 
@@ -696,10 +696,10 @@ void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parametri
 
-*nControllare*<br/>
+*nCheck*<br/>
 Specifica lo stato di selezione. Questo parametro può essere uno dei seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Impostare lo stato del pulsante su deselezionata.|
 |BST_CHECKED|Impostare lo stato del pulsante controllare.|

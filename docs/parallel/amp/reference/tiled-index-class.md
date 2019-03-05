@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257904"
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 
@@ -87,7 +87,7 @@ Lunghezza della dimensione meno significativa.
 |[Costante locale](#tiled_index__local)|Archivia un' `index` oggetto di rango 1, 2 o 3 che rappresenta il relativo indice nella sezione corrente di un [tiled_extent](tiled-extent-class.md) oggetto.|
 |[Rank (costante)](#tiled_index__rank)|Memorizza il rango del `tiled_index` oggetto.|
 |[Tile (costante)](#tiled_index__tile)|Archivia un' `index` oggetto di dimensioni pari a 1, 2 o 3 che rappresenta le coordinate della sezione corrente di un `tiled_extent` oggetto.|
-|[tile_dim0 (costante)](#tiled_index__tile_dim0)|Archivia la lunghezza della dimensione più significativa.|
+|[tile_dim0 Constant](#tiled_index__tile_dim0)|Archivia la lunghezza della dimensione più significativa.|
 |[tile_dim1 (costante)](#tiled_index__tile_dim1)|Archivia la lunghezza della dimensione significativa next-a-la maggior parte.|
 |[tile_dim2 (costante)](#tiled_index__tile_dim2)|Archivia la lunghezza della dimensione meno significativa.|
 |[tile_origin (costante)](#tiled_index__tile_origin)|Archivia un' `index` oggetto di coordinate di rango 1, 2 o 3, che rappresenta il globale dell'origine della sezione corrente in un `tiled_extent` oggetto.|
@@ -108,7 +108,7 @@ Lunghezza della dimensione meno significativa.
 
 **Intestazione:** amp.h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
 ## <a name="tiled_index__ctor"></a>  Costruttore tiled_index
 
@@ -130,10 +130,10 @@ tiled_index(
 
 #### <a name="parameters"></a>Parametri
 
-*Global*<br/>
+*_Global*<br/>
 Globale [indice](index-class.md) costruito `tiled_index`.
 
-*Locale*<br/>
+*_Local*<br/>
 Locale [indice](index-class.md) costruito `tiled_index`
 
 *_Tile*<br/>
@@ -190,7 +190,7 @@ Archivia un' [indice](index-class.md) oggetto di rango 1, 2 o 3, che rappresenta
 const index<rank> global;
 ```
 
-## <a name="tiled_index__local"></a>  locale
+## <a name="tiled_index__local"></a>  local
 
 Archivia un' [indice](index-class.md) oggetto di rango 1, 2 o 3 che rappresenta il relativo indice nella sezione corrente di un [tiled_extent](tiled-extent-class.md) oggetto.
 
@@ -210,7 +210,7 @@ Memorizza il rango del `tiled_index` oggetto.
 static const int rank = _Rank;
 ```
 
-## <a name="tiled_index__tile"></a>  riquadro
+## <a name="tiled_index__tile"></a>  tile
 
 Archivia un' [indice](index-class.md) oggetto di dimensioni pari a 1, 2 o 3 che rappresenta le coordinate della sezione corrente di un [tiled_extent](tiled-extent-class.md) oggetto.
 

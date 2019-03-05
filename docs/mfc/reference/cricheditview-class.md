@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178740"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259516"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 
@@ -143,7 +143,7 @@ class CRichEditView : public CCtrlView
 |[CRichEditView::GetParaFormatSelection](#getparaformatselection)|Recupera gli attributi per la selezione corrente di formattazione di paragrafo.|
 |[CRichEditView::GetPrintRect](#getprintrect)|Recupera il rettangolo di stampa per questa visualizzazione rich edit.|
 |[CRichEditView::GetPrintWidth](#getprintwidth)|Recupera la larghezza della stampa per questa visualizzazione rich edit.|
-|[CRichEditView:: GetRichEditCtrl](#getricheditctrl)|Recupera il controllo rich edit.|
+|[CRichEditView::GetRichEditCtrl](#getricheditctrl)|Recupera il controllo rich edit.|
 |[CRichEditView::GetSelectedItem](#getselecteditem)|Recupera l'elemento selezionato dalla visualizzazione di modifica avanzate.|
 |[CRichEditView::GetTextLength](#gettextlength)|Recupera la lunghezza del testo nella visualizzazione di modifica avanzate.|
 |[CRichEditView::GetTextLengthEx](#gettextlengthex)|Recupera il numero di caratteri o byte nella visualizzazione di modifica avanzate. Elenco di flag espanso per metodo per determinare la lunghezza.|
@@ -263,7 +263,7 @@ void DoPaste(
 *dataobj*<br/>
 Il [COleDataObject](../../mfc/reference/coledataobject-class.md) contenente i dati da incollare.
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Il formato degli Appunti desiderato.
 
 *hMetaPict*<br/>
@@ -298,7 +298,7 @@ Indica se la ricerca fa distinzione tra maiuscole e minuscole.
 *bWord*<br/>
 Indica se la ricerca deve corrispondere solo parole intere, non le parti di parole.
 
-*bAvanti*<br/>
+*bNext*<br/>
 Indica la direzione della ricerca. Se TRUE, la direzione di ricerca è verso la fine del buffer. Se FALSE, la direzione di ricerca è verso l'inizio del buffer.
 
 ### <a name="return-value"></a>Valore restituito
@@ -336,7 +336,7 @@ Indica se la ricerca fa distinzione tra maiuscole e minuscole.
 *bWord*<br/>
 Indica se la ricerca deve corrispondere solo parole intere, non le parti di parole.
 
-*bAvanti*<br/>
+*bNext*<br/>
 Indica la direzione della ricerca. Se TRUE, la direzione di ricerca è verso la fine del buffer. Se FALSE, la direzione di ricerca è verso l'inizio del buffer.
 
 ### <a name="return-value"></a>Valore restituito
@@ -573,7 +573,7 @@ int GetPrintWidth() const;
 
 La larghezza dell'area di stampa, misurata in MM_TWIPS.
 
-##  <a name="getricheditctrl"></a>  CRichEditView:: GetRichEditCtrl
+##  <a name="getricheditctrl"></a>  CRichEditView::GetRichEditCtrl
 
 Chiamare questa funzione per recuperare il [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) oggetto associato di `CRichEditView` oggetto.
 
@@ -683,7 +683,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Il formato degli Appunti di interesse.
 
 ### <a name="return-value"></a>Valore restituito
@@ -786,7 +786,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Stringa da trovare.
 
-*bAvanti*<br/>
+*bNext*<br/>
 La direzione di ricerca: TRUE indica verso l'alto. FALSE, backup.
 
 *bCase*<br/>
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 Il testo da sostituire.
 
-*bAvanti*<br/>
+*bNext*<br/>
 Indica la direzione della ricerca: TRUE è verso l'alto. FALSE, backup.
 
 *bCase*<br/>
@@ -1159,7 +1159,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struttura che contiene il carattere di nuova impostazione predefinita gli attributi di formattazione.
 
 ### <a name="remarks"></a>Note

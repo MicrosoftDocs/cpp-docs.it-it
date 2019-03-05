@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539126"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258372"
 ---
 # <a name="cbasetransition-class"></a>Classe CBaseTransition
 
@@ -74,7 +74,7 @@ class CBaseTransition : public CObject;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Costruisce un oggetto di transizione di base.|
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di transizione.|
+|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di transizione.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -83,14 +83,14 @@ class CBaseTransition : public CObject;
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|Aggiunge una transizione a uno storyboard.|
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Aggiunge una transizione a uno storyboard.|
 |[CBaseTransition::Clear](#clear)|Oggetto COM IUIAnimationTransition incapsulato versioni.|
-|[CBaseTransition:: Create](#create)|Crea una transizione di COM.|
+|[CBaseTransition::Create](#create)|Crea una transizione di COM.|
 |[CBaseTransition::GetEndKeyframe](#getendkeyframe)|Restituisce l'inizio del fotogramma chiave.|
 |[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|Restituisce un puntatore alla variabile correlati.|
 |[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|Restituisce l'inizio del fotogramma chiave.|
 |[CBaseTransition::GetTransition](#gettransition)|Di overload. Restituisce un puntatore all'oggetto di transizione COM sottostante.|
 |[CBaseTransition::GetType](#gettype)|Restituisce il tipo di transizione.|
 |[CBaseTransition::IsAdded](#isadded)|Indica se è stata aggiunta una transizione di uno storyboard.|
-|[CBaseTransition::](#setkeyframes)|Imposta i fotogrammi chiave per una transizione.|
+|[CBaseTransition::SetKeyframes](#setkeyframes)|Imposta i fotogrammi chiave per una transizione.|
 |[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|Stabilisce una relazione tra la variabile di animazione e di transizione.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
@@ -188,7 +188,7 @@ void Clear();
 
 Questo metodo deve essere chiamato dal metodo Create della classe derivata per evitare la perdita di interfaccia IUITransition.
 
-##  <a name="create"></a>  CBaseTransition:: Create
+##  <a name="create"></a>  CBaseTransition::Create
 
 Crea una transizione di COM.
 
@@ -370,7 +370,7 @@ Archivia il tipo di transizione.
 TRANSITION_TYPE m_type;
 ```
 
-##  <a name="setkeyframes"></a>  CBaseTransition::
+##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes
 
 Imposta i fotogrammi chiave per una transizione.
 
@@ -385,7 +385,7 @@ void SetKeyframes(
 *pStart*<br/>
 Un fotogramma chiave che specifica l'inizio della transizione.
 
-*in sospeso*<br/>
+*pEnd*<br/>
 Un fotogramma chiave che specifica la fine della transizione.
 
 ### <a name="remarks"></a>Note

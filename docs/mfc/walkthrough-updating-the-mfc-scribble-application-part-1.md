@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble (parte 1)"
+title: "Procedura dettagliata: L'aggiornamento dell'applicazione MFC Scribble (parte 1)"
 ms.date: 09/20/2018
 helpviewer_keywords:
 - examples [MFC], update existing application
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481848"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258762"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble (parte 1)
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: L'aggiornamento dell'applicazione MFC Scribble (parte 1)
 
 In questa procedura dettagliata viene illustrato come modificare un'applicazione MFC esistente per utilizzare l'interfaccia utente della barra multifunzione. Visual Studio supporta sia la barra multifunzione di Office 2007 che la barra multifunzione Windows 7 Scenic. Per altre informazioni sull'interfaccia utente della barra multifunzione, vedere [barre multifunzione](/windows/desktop/uxguide/cmd-ribbons).
 
@@ -113,7 +113,7 @@ I quattro passaggi successivi di questa procedura dettagliata richiedono risorse
 
 - Copiare un file di risorse appropriato da un'altra applicazione al progetto e importare le bitmap da quel file.
 
-Questa procedura dettagliata copia i file di risorse in base all'esempio creato nella [procedura dettagliata: creazione di una barra multifunzione dell'applicazione usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+Questa procedura dettagliata copia i file di risorse in base all'esempio creato in [procedura dettagliata: Creazione di un'applicazione barra multifunzione usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
 ### <a name="to-add-bitmaps-to-the-project"></a>Per aggiungere bitmap al progetto
 
@@ -169,7 +169,7 @@ Quando si converte un'applicazione che utilizza menu in un'applicazione che usa 
 
 1. È possibile personalizzare il **applicazione** pulsante modificandone le proprietà. Gli ID di messaggio che vengono utilizzati in questo codice sono già definiti nel menu per Scribble 1.0.
 
-1. Nella visualizzazione progettazione, scegliere il **applicazione** pulsante per visualizzare le relative proprietà. Modificare i valori delle proprietà come segue: **immagine** a `IDB_RIBBON_MAIN`, **dei messaggi di richiesta** alla `File`, **chiavi** a `f`, **Large Images** al `IDB_RIBBON_FILELARGE`, e **Small Images** a `IDB_RIBBON_FILESMALL`.
+1. Nella visualizzazione progettazione, scegliere il **applicazione** pulsante per visualizzare le relative proprietà. Modificare i valori delle proprietà come segue: **Immagine** al `IDB_RIBBON_MAIN`, **dei messaggi di richiesta** a `File`, **chiavi** a `f`, **Large Images** a `IDB_RIBBON_FILELARGE`e **Small Images** a `IDB_RIBBON_FILESMALL`.
 
 1. Le seguenti modifiche creano il menu visualizzato quando l'utente sceglie il **applicazione** pulsante. Fare clic sui puntini di sospensione (**...** ) accanto a **elementi principali** per aprire la **Editor elementi**.
 
@@ -238,7 +238,7 @@ Ora che è stato creato il **applicazione** pulsante, è possibile aggiungere el
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Per aggiungere una categoria Home e un pannello Modifica
 
-1. Il programma Scribble richiede solo una categoria. Nella visualizzazione progettazione, nelle **casella degli strumenti**, fare doppio clic su **categoria** per aggiungerne uno e visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **didascalia** al `&Home`, **Large Images** al `IDB_RIBBON_HOMELARGE`, **Small Images** a `IDB_RIBBON_HOMESMALL`.
+1. Il programma Scribble richiede solo una categoria. Nella visualizzazione progettazione, nelle **casella degli strumenti**, fare doppio clic su **categoria** per aggiungerne uno e visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **Didascalia** al `&Home`, **Large Images** al `IDB_RIBBON_HOMELARGE`, **Small Images** a `IDB_RIBBON_HOMESMALL`.
 
 1. Ogni categoria della barra multifunzione è organizzata in pannelli, ciascuno dei quali dispone di un nome. Ogni pannello contiene un set di controlli che completa le operazioni correlate. Questa categoria dispone di un solo pannello. Fare clic su **pannello**, quindi modificare **didascalia** a `Edit`.
 
@@ -269,4 +269,4 @@ Oggetto *gestore visualizzazione* è un oggetto globale che controlla l'aspetto 
 ## <a name="see-also"></a>Vedere anche
 
 [Procedure dettagliate](../mfc/walkthroughs-mfc.md)<br/>
-[Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Procedura dettagliata: L'aggiornamento dell'applicazione MFC Scribble (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

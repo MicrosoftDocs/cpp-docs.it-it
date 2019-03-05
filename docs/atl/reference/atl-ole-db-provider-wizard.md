@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: c01852c89d79b44bdae75b0ded9e2b8d1678cbd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441323"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258775"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Creazione guidata provider OLE DB ATL
 
@@ -88,4 +88,3 @@ Nella tabella seguente vengono descritte le opzioni per la creazione guidata Pro
 ## <a name="see-also"></a>Vedere anche
 
 [Provider OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
-

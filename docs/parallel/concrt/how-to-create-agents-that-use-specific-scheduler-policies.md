@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-ms.openlocfilehash: 955b1043800c8c10a24abff71a7764d0878b89d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aac86801015549b5552b51c06a30f8398346a06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663372"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257371"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Procedura: Creare agenti che usano criteri dell'utilità di pianificazione specifici
 
@@ -18,7 +18,7 @@ Un agente è un componente dell'applicazione che funziona in modo asincrono con 
 
 Ogni agente può avere requisiti dell'applicazione specifica. Ad esempio, un agente che consente l'interazione dell'utente (recupero dell'input o output di visualizzazione) potrebbe richiedere maggiore accesso prioritario alle risorse di calcolo. I criteri dell'utilità di pianificazione consentono di controllare la strategia utilizzata l'utilità di pianificazione quando gestisce le attività. In questo argomento viene illustrato come creare agenti che usano criteri dell'utilità di pianificazione specifiche.
 
-Per un esempio di base che usa i criteri di utilità di pianificazione personalizzata insieme a blocchi dei messaggi asincroni, vedere [procedura: specificare i criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Per un esempio di base che usa i criteri di utilità di pianificazione personalizzata insieme a blocchi dei messaggi asincroni, vedere [come: Specificare i criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
 Questo argomento Usa funzionalità dalla libreria di agenti asincroni, ad esempio agenti, blocchi di messaggi e le funzioni di passaggio dei messaggi, per eseguire operazioni. Per altre informazioni sulla libreria di agenti asincroni, vedere [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md).
 
@@ -26,7 +26,7 @@ Questo argomento Usa funzionalità dalla libreria di agenti asincroni, ad esempi
 
 L'esempio seguente definisce due classi che derivano da [Concurrency](../../parallel/concrt/reference/agent-class.md): `permutor` e `printer`. Il `permutor` classe calcola tutte le permutazioni di una stringa di input specificata. Il `printer` classe consente di stampare i messaggi di stato nella console. Il `permutor` classe esegue un'operazione complesse a livello, che può usare tutte le risorse di elaborazione disponibili. Per essere utile, il `printer` classe deve visualizzare ogni messaggio di stato di avanzamento in modo tempestivo.
 
-Per fornire il `printer` classe un accesso corretto alle risorse di calcolo, questo esempio Usa i passaggi descritti nella [procedura: gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) per creare un'istanza dell'utilità di pianificazione che dispone di un criterio personalizzato. I criteri personalizzati specificano la priorità del thread per la classe di priorità più alta.
+Per fornire il `printer` classe un accesso corretto alle risorse di calcolo, questo esempio Usa i passaggi descritti in [come: Gestire un'istanza dell'utilità di pianificazione](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) per creare un'istanza dell'utilità di pianificazione che dispone di un criterio personalizzato. I criteri personalizzati specificano la priorità del thread per la classe di priorità più alta.
 
 Per illustrare i vantaggi dell'uso di un'utilità di pianificazione che dispone di un criterio personalizzato, questo esempio viene eseguita l'attività complessiva due volte. L'esempio Usa prima di tutto l'utilità di pianificazione predefinita per entrambe le attività di pianificazione. L'esempio Usa quindi l'utilità di pianificazione predefinita per pianificare il `permutor` oggetti e un'utilità di pianificazione che dispone di un criterio personalizzato per pianificare il `printer` oggetto.
 
@@ -50,10 +50,9 @@ Sebbene entrambi i set di attività producono lo stesso risultato, la versione c
 
 Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `permute-strings.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
 
-**CL.exe /EHsc permutano-Strings. cpp**
+**cl.exe /EHsc permute-strings.cpp**
 
 ## <a name="see-also"></a>Vedere anche
 
 [Criteri dell'utilità di pianificazione](../../parallel/concrt/scheduler-policies.md)<br/>
 [Agenti asincroni](../../parallel/concrt/asynchronous-agents.md)
-

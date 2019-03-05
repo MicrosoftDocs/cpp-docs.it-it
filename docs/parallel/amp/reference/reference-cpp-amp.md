@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, reference
 ms.assetid: 372a8aed-8a53-48c9-996f-9c3cf09c9fa8
-ms.openlocfilehash: 5e6905adee6e6cad0c0c49488352f4a039aa27eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a334c7873675183dc06abfc2fe51472190996bf3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630059"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257507"
 ---
 # <a name="reference-c-amp"></a>Riferimento (C++ AMP)
 
@@ -41,4 +41,3 @@ Le funzioni di `precise_math` dello spazio dei nomi sono conformi a C99. Le vers
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 C++ AMP accelera l'esecuzione del codice C++ sfruttando il parallelismo dell'hardware che è in genere presente come un'unità di elaborazione grafica (GPU) in una scheda grafica discreta.
-

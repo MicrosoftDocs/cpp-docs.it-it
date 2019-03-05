@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737624"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259503"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrazione da OpenMP al runtime di concorrenza
 
@@ -48,17 +48,17 @@ Di seguito vengono descritti i casi potrebbe non essere appropriato eseguire la 
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-[Procedura: Convertire un ciclo OpenMP parallel for usare il Runtime di concorrenza](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Procedura: Convertire un ciclo OpenMP for parallelo per l'uso del runtime di concorrenza](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Dato un ciclo di base che usa il OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) e [per](../../parallel/openmp/reference/for-openmp.md) direttive, viene illustrato come convertire in modo che usi il Runtime di concorrenza [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.
 
-[Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'uso del Runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'uso del runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Dato una OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[per](../../parallel/openmp/reference/for-openmp.md) ciclo che non richiede tutte le iterazioni da eseguire, viene illustrato come convertire in modo che utilizzi il meccanismo di annullamento di Runtime di concorrenza.
 
-[Procedura: Convertire un ciclo OpenMP che usa la gestione delle eccezioni per l'uso del Runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[Procedura: Convertire un ciclo OpenMP che usa la gestione delle eccezioni per l'uso del runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Dato una OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[per](../../parallel/openmp/reference/for-openmp.md) ciclo che esegue la gestione delle eccezioni, viene illustrato come convertire in modo che utilizzi il meccanismo di gestione delle eccezioni Runtime di concorrenza.
 
-[Procedura: Convertire un ciclo OpenMP che usa una variabile di riduzione per usare il Runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Procedura: Convertire un ciclo OpenMP che usa una variabile di riduzione per l'uso del runtime di concorrenza](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Dato una OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[per](../../parallel/openmp/reference/for-openmp.md) ciclo che usa il [riduzione](../../parallel/openmp/reference/reduction.md) clausola, viene illustrato come convertire in modo che usi il Runtime di concorrenza.
 
 ## <a name="see-also"></a>Vedere anche
@@ -67,4 +67,3 @@ Dato una OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)
-

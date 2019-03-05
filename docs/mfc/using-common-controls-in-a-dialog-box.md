@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-ms.openlocfilehash: a17dac622ce1527a11d02888d6c4ce7905fcf669
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ade1b464d3851fb9294a1ba7180b48771f0468cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259191"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Utilizzo di controlli comuni in una finestra di dialogo
 
@@ -62,4 +62,3 @@ L'aggiunta di alcuni controlli comuni a una finestra di dialogo interromperà il
 
 [Creazione e uso di controlli](../mfc/making-and-using-controls.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

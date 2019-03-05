@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657552"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259023"
 ---
 # <a name="array-class"></a>Classe array
 
@@ -121,7 +121,7 @@ Il `array<T,N>` tipo viene usato in diversi scenari:
 
 **Intestazione:** amp.h
 
-**Namespace:** Concorrenza
+**Spazio dei nomi:** Concorrenza
 
 ##  <a name="dtor"></a> ~ array
 
@@ -464,7 +464,7 @@ void copy_to(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Il [array_view](array-view-class.md) oggetto in cui copiare.
 
 ##  <a name="cpu_access_type"></a> cpu_access_type
@@ -560,7 +560,7 @@ Il tipo di dati degli elementi del vettore.
 
 Un oggetto di tipo `vector<T>` che contiene una copia dei dati contenuti nella matrice.
 
-##  <a name="operator_call"></a> operator)
+##  <a name="operator_call"></a> operator()
 
 Restituisce il valore dell'elemento specificato dai parametri.
 
@@ -584,7 +584,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Il percorso dell'elemento.
 
 *_I0*<br/>
@@ -603,7 +603,7 @@ Il percorso dell'elemento.
 
 Il valore dell'elemento specificato dai parametri.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Restituisce l'elemento in corrispondenza dell'indice specificato.
 
@@ -620,7 +620,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Indice.
 
 *_I*<br/>
@@ -775,10 +775,10 @@ Il componente successivo-a-più significativo dell'extent di questa sezione.
 *_E2*<br/>
 Componente meno significativo dell'extent di questa sezione.
 
-*Ext*<br/>
+*_Ext*<br/>
 Il [extent](extent-class.md) oggetto che specifica l'extent della sezione. L'origine è 0.
 
-*IDX*<br/>
+*_Idx*<br/>
 Il [indice](index-class.md) oggetto che specifica la posizione dell'origine. La sottosezione rappresenta il resto dell'extent.
 
 *_I0*<br/>

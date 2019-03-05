@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495953"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258333"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 
@@ -38,8 +38,8 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 |||
 |-|-|
 |[Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [Procedura: Usare parallel_invoke per scrivere una routine di ordinamento in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [Procedura: Usare parallel_invoke per eseguire operazioni in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [Procedura: Creare un'attività che viene completata dopo un ritardo](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Illustra le attività e i gruppi di attività, che consentono di scrivere codice asincrono e scomporre il lavoro parallelo in sezioni più piccole.|
-|[Procedura dettagliata: implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md)|Illustra come combinare le funzionalità del runtime di concorrenza per eseguire più operazioni.|
-|[Procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|Illustra come spostare il lavoro eseguito dal thread della UI in un'applicazione MFC a un thread di lavoro.|
+|[Procedura dettagliata: Implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md)|Illustra come combinare le funzionalità del runtime di concorrenza per eseguire più operazioni.|
+|[Procedura dettagliata: Rimozione di lavoro da un thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|Illustra come spostare il lavoro eseguito dal thread della UI in un'applicazione MFC a un thread di lavoro.|
 |[Procedure consigliate nella libreria PPL (Parallel Patterns Library)](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [Procedure consigliate generali nel runtime di concorrenza](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Fornisce suggerimenti e procedure consigliate per lavorare con il PPL.|
 
 ## <a name="data-parallelism-in-the-ppl"></a>Parallelismo dei dati nella libreria PPL
@@ -47,7 +47,7 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 |||
 |-|-|
 |[Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)<br /><br /> [Procedura: Scrivere un ciclo parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)<br /><br /> [Procedura: Scrivere un ciclo parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)<br /><br /> [Procedura: Eseguire operazioni di mapping e riduzione in parallelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Illustra `parallel_for`, `parallel_for_each`, `parallel_invoke`e altri algoritmi paralleli. Usare gli algoritmi paralleli per risolvere i problemi di tipo *dati in parallelo* che coinvolgono raccolte di dati.|
-|[Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [Procedura: Usare i contenitori paralleli per aumentare l'efficienza](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [Procedura: Usare la classe combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [Procedura: Usare l'oggetto combinable per combinare set](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|Illustra la classe `combinable` , oltre a `concurrent_vector`, `concurrent_queue`, `concurrent_unordered_map`e altri contenitori paralleli. Usare i contenitori e gli oggetti paralleli quando sono necessari contenitori che consentono l'accesso thread-safe ai relativi elementi.|
+|[Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)<br /><br /> [Procedura: Usare i contenitori paralleli per aumentare l'efficienza](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br /><br /> [Procedura: Usare combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br /><br /> [Procedura: Usare combinable per combinare set](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)|Illustra la classe `combinable` , oltre a `concurrent_vector`, `concurrent_queue`, `concurrent_unordered_map`e altri contenitori paralleli. Usare i contenitori e gli oggetti paralleli quando sono necessari contenitori che consentono l'accesso thread-safe ai relativi elementi.|
 |[Procedure consigliate nella libreria PPL (Parallel Patterns Library)](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [Procedure consigliate generali nel runtime di concorrenza](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Fornisce suggerimenti e procedure consigliate per lavorare con il PPL.|
 
 ## <a name="canceling-tasks-and-parallel-algorithms"></a>Annullamento di attività e algoritmi paralleli
@@ -55,14 +55,14 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 |||
 |-|-|
 |[Annullamento nella libreria PPL](cancellation-in-the-ppl.md)|Descrive il ruolo dell'annullamento nella libreria PPL, ad esempio come avviare e rispondere alle richieste di annullamento.|
-|[Procedura: Usare l'annullamento per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [Procedura: Usare la gestione delle eccezion per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Illustra due modi per annullare un lavoro con dati in parallelo.|
+|[Procedura: Usare l'annullamento per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [Procedura: Usare la gestione delle eccezioni per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Illustra due modi per annullare un lavoro con dati in parallelo.|
 
 ## <a name="universal-windows-platform-apps"></a>App della piattaforma UWP (Universal Windows Platform)
 
 |||
 |-|-|
 |[Creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Vengono descritti alcuni punti chiave da tenere presenti quando si usa il Runtime di concorrenza per produrre operazioni asincrone in un'app UWP.|
-|[Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Viene illustrato come combinare attività PPL con le `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` interfacce per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.|
+|[Procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Viene illustrato come combinare attività PPL con le `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` interfacce per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.|
 |[Esempi di app di Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Contiene esempi di codice scaricabile e demo di App per Windows 8. x. Gli esempi in C++ usano le funzionalità del runtime di concorrenza come attività della libreria PPL per elaborare i dati in background per mantenere l'esperienza utente reattiva.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programmazione del flusso di dati nella libreria di agenti asincroni
@@ -70,10 +70,10 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 |||
 |-|-|
 |[Agenti asincroni](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [Funzioni di passaggio dei messaggi](../../parallel/concrt/message-passing-functions.md)<br /><br /> [Procedura: Implementare vari modelli producer-consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [Procedura: Fornire funzioni lavoro alle classi call e transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [Procedura: Usare la classe transformer in una pipeline di dati](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [Procedura: Effettuare una scelta tra le attività completate](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [Procedura: Inviare un messaggio a intervalli regolari](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [Procedura: Usare il filtro di blocco dei messaggi](../../parallel/concrt/how-to-use-a-message-block-filter.md)|Illustra genti asincroni, blocchi di messaggio e funzioni di passaggio dei messaggi, ovvero i blocchi predefiniti per l'esecuzione di operazioni di flusso dei dati nel runtime di concorrenza.|
-|[Procedura dettagliata: creazione di un'applicazione basata sugli agenti](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [Procedura dettagliata: creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|Illustra come creare applicazioni di base basate sugli agenti.|
-|[Procedura dettagliata: creazione di una rete per l'elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|Illustra come creare una rete di blocchi di messaggi asincroni che eseguono l'elaborazione di immagini.|
-|[Procedura dettagliata: uso della classe join per impedire un deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|Usa il problema dei filosofi a cena per illustrare come usare il runtime di concorrenza per impedire un deadlock nell'applicazione.|
-|[Procedura dettagliata: creazione di un blocco dei messaggi personalizzato](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)|Illustra come creare un tipo di blocco di messaggi personalizzato che consente di ordinare i messaggi in arrivo in base alla priorità.|
+|[Procedura dettagliata: Creazione di un'applicazione basata sugli agenti](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [Procedura dettagliata: Creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|Illustra come creare applicazioni di base basate sugli agenti.|
+|[Procedura dettagliata: Creazione di una rete per l'elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|Illustra come creare una rete di blocchi di messaggi asincroni che eseguono l'elaborazione di immagini.|
+|[Procedura dettagliata: Uso di join per evitare il deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|Usa il problema dei filosofi a cena per illustrare come usare il runtime di concorrenza per impedire un deadlock nell'applicazione.|
+|[Procedura dettagliata: Creazione di un blocco dei messaggi personalizzato](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)|Illustra come creare un tipo di blocco di messaggi personalizzato che consente di ordinare i messaggi in arrivo in base alla priorità.|
 |[Procedure consigliate nella libreria di agenti asincroni](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br /><br /> [Procedure consigliate generali nel runtime di concorrenza](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Fornisce suggerimenti e procedure consigliate per gli agenti.|
 
 ## <a name="exception-handling-and-debugging"></a>Gestione e debug delle eccezioni
@@ -107,4 +107,3 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento](../../parallel/concrt/reference/reference-concurrency-runtime.md)
-

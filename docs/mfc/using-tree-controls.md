@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-ms.openlocfilehash: 2a42392253f158365af6bf9f7a5e4a1f4df93e95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cff48018d728ef9578be38c0d94300011265fa1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653402"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258320"
 ---
 # <a name="using-tree-controls"></a>Utilizzo di controlli Tree
 
@@ -28,10 +28,9 @@ Uso tipico di un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.
 
 - Usare le varie funzioni Get per esaminare il contenuto del controllo. È inoltre possibile scorrere il contenuto del controllo albero con le funzioni che consentono di recuperare gli handle di elementi padre, figlio e nodi di pari livello di un elemento specificato. È anche possibile ordinare gli elementi figlio di un nodo specifico.
 
-- Al termine con il controllo, assicurarsi che venga eliminato correttamente. Se il controllo struttura ad albero è in una finestra di dialogo o se è una vista, e il `CTreeCtrl` oggetto verrà eliminato automaticamente. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CTreeCtrl` vengono eliminati definitivamente in modo corretto.
+- Al termine con il controllo, assicurarsi che venga eliminato correttamente. Se il controllo struttura ad albero è in una finestra di dialogo o se è una vista, e il `CTreeCtrl` oggetto verrà eliminato automaticamente. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CTreeCtrl` vengono eliminati correttamente.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Uso di CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

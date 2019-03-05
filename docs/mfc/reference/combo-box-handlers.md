@@ -27,12 +27,12 @@ helpviewer_keywords:
 - ON_CBN_SELENDOK
 - ON_CBN_SELCHANGE
 ms.assetid: 7f092412-01b7-4242-95ec-41ba506b9d71
-ms.openlocfilehash: 44fbf74174df833badd18ee29416ed936ea69293
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed83bcf565ec420d159c73ddfd82827aac88693f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438129"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259438"
 ---
 # <a name="combo-box-handlers"></a>Gestori caselle combinate
 
@@ -55,4 +55,3 @@ Le voci della mappa seguenti corrispondono ai prototipi di funzione.
 ## <a name="see-also"></a>Vedere anche
 
 [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)
-
