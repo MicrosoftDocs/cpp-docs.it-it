@@ -1,5 +1,5 @@
 ---
-title: 'TN070: nomi delle classi di finestre MFC'
+title: 'TN070: Nomi delle classi di finestre MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.classes
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: 609cfade60b1b7b51fb2fd5597c4d491d3eb861c
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8b06f7b3656284de18632185877fdbe382343f95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692664"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260571"
 ---
-# <a name="tn070-mfc-window-class-names"></a>TN070: nomi delle classi di finestre MFC
+# <a name="tn070-mfc-window-class-names"></a>TN070: Nomi delle classi di finestre MFC
 
 > [!NOTE]
 >  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
@@ -46,5 +46,4 @@ Il primo form (`Afx:%x:%x`) viene usato quando **hCursor**, **hbrBackground**, e
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)<br/>
-[TN020: convenzioni di numerazione e denominazione ID](../mfc/tn020-id-naming-and-numbering-conventions.md)
-
+[TN020: Convenzioni di numerazione e denominazione ID](../mfc/tn020-id-naming-and-numbering-conventions.md)

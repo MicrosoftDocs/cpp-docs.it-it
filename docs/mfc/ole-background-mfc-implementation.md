@@ -1,5 +1,5 @@
 ---
-title: 'Sfondo OLE: implementazione MFC'
+title: 'Sfondo OLE: Implementazione MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - IMarshall
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267277"
 ---
-# <a name="ole-background-mfc-implementation"></a>Sfondo OLE: implementazione MFC
+# <a name="ole-background-mfc-implementation"></a>Sfondo OLE: Implementazione MFC
 
 A causa della dimensione e della complessità delle API OLE non elaborate, chiamarle direttamente per scrivere applicazioni OLE può essere molto dispendioso in termini di tempo. L'obiettivo dell'implementazione di OLE da parte della libreria Microsoft Foundation Class è di ridurre la quantità di lavoro necessaria a scrivere applicazioni complete compatibili con OLE.
 
@@ -35,7 +35,7 @@ Interfaccia IMoniker il `IMoniker` interfaccia viene implementata dalla libreria
 
 Interfacce IUnknown e IMarshal il `IUnknown` interfaccia viene implementata dalla libreria di classi ma non viene esposta al programmatore. Il `IMarshal` interfaccia non è implementato dalla libreria di classi ma viene utilizzata internamente. I server di automazione costruiti utilizzando la libreria di classi includono già funzionalità di marshalling incorporate.
 
-Docfiles (file compositi) file compositi sono parzialmente supportati dalla libreria di classi. Non è supportata alcuna delle funzioni che modificano direttamente i file compositi al di là della creazione. MFC utilizza la classe `COleFileStream` per supportare l'elaborazione di flussi con funzioni di file standard. Per altre informazioni, vedere l'articolo [contenitori: file compositi](../mfc/containers-compound-files.md).
+Docfiles (file compositi) file compositi sono parzialmente supportati dalla libreria di classi. Non è supportata alcuna delle funzioni che modificano direttamente i file compositi al di là della creazione. MFC utilizza la classe `COleFileStream` per supportare l'elaborazione di flussi con funzioni di file standard. Per altre informazioni, vedere l'articolo [contenitori: File compositi](../mfc/containers-compound-files.md).
 
 Server in-Process e gestori di oggetti server In-process e gestori di oggetti consentano l'implementazione di modifica visiva di dati o oggetti modello COM (Component Object) completi in una libreria di collegamento dinamico (DLL). A tale scopo, è possibile implementare la propria DLL chiamando direttamente l'API OLE. Tuttavia, se si scrive un server di automazione che non dispone di interfaccia utente, è possibile utilizzare AppWizard per trasformarlo in un server in-process e inserirlo completamente in una DLL. Per altre informazioni su questi argomenti, vedere [server di automazione](../mfc/automation-servers.md).
 
@@ -47,5 +47,4 @@ Per altre informazioni sul modo in cui le classi OLE di Microsoft Foundation imp
 ## <a name="see-also"></a>Vedere anche
 
 [Sfondo OLE](../mfc/ole-background.md)<br/>
-[Sfondo OLE: strategie di implementazione](../mfc/ole-background-implementation-strategies.md)
-
+[Sfondo OLE: Strategie di implementazione](../mfc/ole-background-implementation-strategies.md)

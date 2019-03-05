@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476654"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270189"
 ---
 # <a name="extent-class-c-amp"></a>Classe extent (C++ AMP)
 
@@ -39,7 +39,7 @@ Il rango del `extent` oggetto.
 
 **Intestazione:** amp.h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
 ## <a name="members"></a>Membri
 
@@ -53,9 +53,9 @@ Il rango del `extent` oggetto.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Contiene](#contains)|Verifica che l'oggetto specificato `extent` oggetto con la classificazione specificata.|
+|[contains](#contains)|Verifica che l'oggetto specificato `extent` oggetto con la classificazione specificata.|
 |[size](#size)|Restituisce la dimensione lineare totale dell'extent (in unità degli elementi).|
-|[riquadro](#tile)|Produce un `tiled_extent` oggetto con i tile extents forniti dalle dimensioni specificate.|
+|[tile](#tile)|Produce un `tiled_extent` oggetto con i tile extents forniti dalle dimensioni specificate.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -95,7 +95,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Il `index` valore da testare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -119,7 +119,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parametri
 
-*Array*<br/>
+*_Array*<br/>
 Matrice di `_Rank` interi che viene usato per creare il nuovo `extent` oggetto.
 
 *_I*<br/>
@@ -181,7 +181,7 @@ Numero da moltiplicare.
 
 Oggetto `extent`.
 
-## <a name="operator_add"></a> Operatore operator +
+## <a name="operator_add"></a> operator+
 
 Restituisce un nuovo `extent` oggetto creato aggiungendo i corrispondenti `index` e `extent` elementi.
 
@@ -200,7 +200,7 @@ Il `index` oggetto che contiene gli elementi da aggiungere.
 
 Nuovo oggetto `extent`.
 
-##  <a name="operator_add_add"></a> operator + +
+##  <a name="operator_add_add"></a> operator++
 
 Incrementa ogni elemento dell'oggetto 'extent'.
 
@@ -215,7 +215,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 
 Per l'operatore di prefisso, il `extent` oggetto (`*this`). Per l'operatore di suffisso, un nuovo `extent` oggetto.
 
-##  <a name="operator_add_eq"></a> operator + =
+##  <a name="operator_add_eq"></a> operator+=
 
 Aggiunge il numero specificato ad ogni elemento dell'oggetto 'extent'.
 
@@ -342,7 +342,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Numero intero compreso tra 0 e il numero di dimensioni meno 1.
 
 ### <a name="return-value"></a>Valore restituito

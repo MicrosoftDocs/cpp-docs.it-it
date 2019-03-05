@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 79589cb631635f4ed8b85f4399a86e8fadf61dda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431656"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260634"
 ---
 # <a name="ctooltipmanager-class"></a>Classe CTooltipManager
 
@@ -41,7 +41,7 @@ class CTooltipManager : public CObject
 |----------|-----------------|
 |[CTooltipManager::CreateToolTip](#createtooltip)|Crea un controllo ToolTip per i tipi di controllo di Windows specificati.|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|Elimina un controllo ToolTip.|
-|[Settooltipparams](#settooltipparams)|Personalizza l'aspetto visivo del controllo ToolTip per i tipi di controllo di Windows specificati.|
+|[CTooltipManager::SetTooltipParams](#settooltipparams)|Personalizza l'aspetto visivo del controllo ToolTip per i tipi di controllo di Windows specificati.|
 |[CTooltipManager::SetTooltipText](#settooltiptext)|Imposta il testo e la descrizione per un controllo ToolTip.|
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||
 
@@ -78,7 +78,7 @@ static BOOL CreateToolTip(
 *pWndParent*<br/>
 [in] Elemento padre della descrizione comando.
 
-*NLE*<br/>
+*nType*<br/>
 [in] Tipo della descrizione comando.
 
 ### <a name="return-value"></a>Valore restituito
@@ -124,7 +124,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 Chiamare questo metodo per ogni [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) che è stato creato da [CTooltipManager::CreateToolTip](#createtooltip). Il controllo padre deve chiamare questo metodo dalla relativa `OnDestroy` gestore. Questa è necessaria per rimuovere correttamente la descrizione comando da framework. Questo metodo imposta *pToolTip* su NULL prima della restituzione.
 
-##  <a name="settooltipparams"></a>  Settooltipparams
+##  <a name="settooltipparams"></a>  CTooltipManager::SetTooltipParams
 
 Consente di personalizzare l'aspetto del controllo tooltip per i tipi di controllo di Windows specificati.
 
@@ -175,13 +175,13 @@ static void SetTooltipText(
 
 ### <a name="parameters"></a>Parametri
 
-*PTI*<br/>
+*pTI*<br/>
 [in] Un puntatore a un oggetto TOOLINFO.
 
 *pToolTip*<br/>
 [in, out] Puntatore al controllo descrizione comando per cui impostare il testo e la descrizione.
 
-*NLE*<br/>
+*nType*<br/>
 [in] Specifica il tipo di controllo a cui è associata questa descrizione comando.
 
 *strText*<br/>
@@ -196,7 +196,7 @@ Il valore di *NLE* deve essere lo stesso valore di *NLE* parametro del [CTooltip
 
 ##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ```
 void UpdateTooltips();

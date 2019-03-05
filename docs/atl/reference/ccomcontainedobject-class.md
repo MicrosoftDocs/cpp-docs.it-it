@@ -14,12 +14,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: 289174fbfc61b0bbca65233fe24d93537627e17d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492573"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273582"
 ---
 # <a name="ccomcontainedobject-class"></a>Classe CComContainedObject
 
@@ -37,7 +37,7 @@ class CComContainedObject : public Base
 
 #### <a name="parameters"></a>Parametri
 
-*base*<br/>
+*Base*<br/>
 La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
 ## <a name="members"></a>Membri
@@ -47,7 +47,7 @@ La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Costruttore. Inizializza il puntatore del membro dell'oggetto proprietario `IUnknown`.|
-|[CComContainedObject:: ~ CComContainedObject](#dtor)|Distruttore.|
+|[CComContainedObject::~CComContainedObject](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -94,14 +94,14 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*PV*<br/>
+*pv*<br/>
 [in] Dell'oggetto proprietario `IUnknown`.
 
 ### <a name="remarks"></a>Note
 
 Imposta il `m_pOuterUnknown` puntatore a membro (ereditate tramite il `Base` classe) per *pv*.
 
-##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject
+##  <a name="dtor"></a>  CComContainedObject::~CComContainedObject
 
 Distruttore.
 
@@ -141,13 +141,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] L'identificatore dell'interfaccia richiesto.
 
 *ppvObject*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal *iid*. Se l'oggetto non supporta questa interfaccia, *ppvObject* è impostato su NULL.
 
-*profilo di porta*<br/>
+*pp*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal tipo `Q`. Se l'oggetto non supporta questa interfaccia, *pp* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito

@@ -230,18 +230,18 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: f26aeb94bdb392040eee1ab4795e580cbce79e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e0c1f3ca593fed939b0cf3fa0fa3085d79d156
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660438"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282435"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>Classe CMFCVisualManagerOffice2007
 
 `CMFCVisualManagerOffice2007` Fornisce a un'applicazione un aspetto di Microsoft Office 2007.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -457,7 +457,7 @@ virtual COLORREF GetMenuItemTextColor(
 
 [in] *pButton*<br/>
 [in] *bHighlighted*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -547,7 +547,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -701,7 +701,7 @@ virtual BOOL GetToolTipInfo(
 ### <a name="parameters"></a>Parametri
 
 [in] *params*<br/>
-[in] *NLE*<br/>
+[in] *nType*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -876,7 +876,7 @@ virtual void OnDrawComboBorder(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *pButton*<br/>
@@ -899,7 +899,7 @@ virtual void OnDrawComboDropButton(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *bIsDropped*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *pButton*<br/>
@@ -942,7 +942,7 @@ virtual void OnDrawEditBorder(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 [in] *bIsHighlighted*<br/>
 [in] *pButton*<br/>
 
@@ -1043,7 +1043,7 @@ virtual void OnDrawMenuItemButton(
 [in] *pButton*<br/>
 [in] *rectButton*<br/>
 [in] *bHighlight*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 
 ### <a name="remarks"></a>Note
 

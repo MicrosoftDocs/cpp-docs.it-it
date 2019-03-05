@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178460"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269812"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 
@@ -221,7 +221,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*Bin*<br/>
+*bOn*<br/>
 [in] TRUE per visualizzare tutto il testo; FALSE per testo troncato.
 
 ### <a name="remarks"></a>Note
@@ -238,7 +238,7 @@ void EnableMenuFont(
 
 ### <a name="parameters"></a>Parametri
 
-*Bin*<br/>
+*bOn*<br/>
 [in] TRUE per utilizzare il tipo di carattere dal menu dell'applicazione come tipo di carattere di testo del pulsante; FALSE per utilizzare il carattere di sistema. Il valore predefinito è TRUE.
 
 *bRedraw*<br/>
@@ -511,7 +511,7 @@ Usare uno dei seguenti `CMFCButton::AlignStyle` valori di enumerazione per speci
 
 Il `CMFCButton` costruttore inizializza il membro a ALIGN_CENTER.
 
-##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) |
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk)|
 
 Indica se l'ultimo fare clic su evento ha avuto un doppio clic. |
 
@@ -743,7 +743,7 @@ void SetCheckedImage(
 *hIcon*<br/>
 [in] Handle per l'icona che contiene il bitmap e la maschera per la nuova immagine.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 [in] TRUE per specificare che le risorse di bitmap distrutto automaticamente. in caso contrario, FALSE. Il valore predefinito è TRUE.
 
 *hIconHot*<br/>
@@ -830,7 +830,7 @@ void SetImage(
 *hIcon*<br/>
 [in] Handle per l'icona che contiene il bitmap e la maschera per la nuova immagine.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 [in] TRUE per specificare che le risorse di bitmap distrutto automaticamente. in caso contrario, FALSE. Il valore predefinito è TRUE.
 
 *hIconHot*<br/>

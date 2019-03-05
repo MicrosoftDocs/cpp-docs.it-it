@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519191"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273179"
 ---
 # <a name="colecurrency-class"></a>Classe COleCurrency
 
@@ -62,7 +62,7 @@ class COleCurrency
 |Nome|Descrizione|
 |----------|-----------------|
 |[operator =](#operator_eq)|Copia un `COleCurrency` valore.|
-|[operatore +, -](#operator_plus_minus)|Aggiunge, sottrae e cambia l'accesso di `COleCurrency` valori.|
+|[operator +, -](#operator_plus_minus)|Aggiunge, sottrae e cambia l'accesso di `COleCurrency` valori.|
 |[operatore + =, =](#operator_plus_minus_eq)|Aggiunge e consente di sottrarre un `COleCurrency` valore da questo `COleCurrency` oggetto.|
 |[operatore * /](#operator_star)|Ridimensiona un `COleCurrency` valore da un valore integer.|
 |[operatore * =, / =](#operator_star_div_eq)|Ridimensiona la struttura `COleCurrency` valore da un valore integer.|
@@ -222,7 +222,7 @@ Per altre informazioni sulle operazioni che possono impostare lo stato non valid
 
 - [operator =](#operator_eq)
 
-- [operatore + -](#operator_plus_minus)
+- [operator + -](#operator_plus_minus)
 
 - [operator + = e =](#operator_plus_minus_eq)
 
@@ -283,7 +283,7 @@ Per altre informazioni sulle operazioni che possono impostare lo stato non valid
 
 - [operator =](#operator_eq)
 
-- [operatore +, -](#operator_plus_minus)
+- [operator +, -](#operator_plus_minus)
 
 - [operatore + =, =](#operator_plus_minus_eq)
 

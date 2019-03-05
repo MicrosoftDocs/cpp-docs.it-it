@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: e0ea787f0998a26f67418957584e9d12152aa618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c228d5030c3577af22feda6a0d03769867b1c5c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614578"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268461"
 ---
 # <a name="ioleobjectimpl-class"></a>Classe IOleObjectImpl
 

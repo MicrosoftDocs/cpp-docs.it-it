@@ -9,12 +9,12 @@ helpviewer_keywords:
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-ms.openlocfilehash: d3fe77c4d6d6b7bbea6e2b5f28954df4eec454d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6bb663b6ff9b9b039bd774f6e607c7acdb1c4b11
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545873"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261375"
 ---
 # <a name="using-cspinbuttonctrl"></a>Utilizzo di CSpinButtonCtrl
 
@@ -38,4 +38,3 @@ Per creare un controllo di selezione e una finestra buddy controllo di modifica,
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli](../mfc/controls-mfc.md)
-

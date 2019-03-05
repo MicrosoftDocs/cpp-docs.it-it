@@ -80,18 +80,18 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: edd7fcf24302de8ded4f3adda933c783c6997757
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb420021ec5b9839091c42b5eae6e1d5b9f7f977
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504351"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281239"
 ---
 # <a name="cmultipaneframewnd-class"></a>Classe CMultiPaneFrameWnd
 
 Il `CMultiPaneFrameWnd` classe estende [classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md). Può supportare più riquadri. Invece di un singolo handle incorporato in una barra di controllo `CMultiPaneFrameWnd` contiene un [classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) oggetto che consente all'utente di ancorare un' `CMultiPaneFrameWnd` a un altro e in modo dinamico creare più mobile, a schede Windows.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -408,7 +408,7 @@ virtual BOOL InsertPane(
 
 [in] *pControlBar*<br/>
 [in] *pTarget*<br/>
-[in] *bDopo*<br/>
+[in] *bAfter*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -474,7 +474,7 @@ virtual void OnShowPane(
 ### <a name="parameters"></a>Parametri
 
 [in] *pBar*<br/>
-[in] *bMostra*<br/>
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -489,7 +489,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *punto*<br/>
+[in] *point*<br/>
 [in] *nSensitivity*<br/>
 [in] *bCheckVisibility*<br/>
 

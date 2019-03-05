@@ -21,12 +21,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519733"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281331"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funzioni dello spazio dei nomi Concurrency::Direct3D (AMP)
 
@@ -37,14 +37,14 @@ ms.locfileid: "50519733"
 |[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|
 |[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
-|[mad](#mad)|[make_array](#make_array)|[rumore](#noise)|
-|[radianti](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
+|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
 |[step](#step)|[umax](#umax)|[umin](#umin)|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** amp. h **Namespace:** concorrenza
+**Intestazione:** amp. h **Namespace:** Concorrenza
 
 ##  <a name="abs"></a>  abs
 
@@ -56,7 +56,7 @@ inline int abs(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -81,13 +81,13 @@ inline int clamp(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Il valore da fissare
 
-*Min*<br/>
+*_Min*<br/>
 Il limite inferiore dell'intervallo di clamping.
 
-*Max*<br/>
+*_Max*<br/>
 Il limite superiore dell'intervallo di clamping.
 
 ### <a name="return-value"></a>Valore restituito
@@ -104,7 +104,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore intero senza segno
 
 ### <a name="return-value"></a>Valore restituito
@@ -156,7 +156,7 @@ Il runtime di AMP C++ offre informazioni dettagliate sull'errore in modalità di
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Acquisire un blocco in un accelerator_view per eseguire in modo sicuro le operazioni D3D sulle risorse condivise con accelerator_view. L'oggetto accelerator_view e tutte le risorse di AMP C++ associate ad accelerator_view internamente accettano questo blocco quando si eseguono operazioni e si bloccheranno mentre un altro thread utilizza il blocco di accesso di D3D. Questo blocco non è ricorrente: si tratta di un comportamento definito chiamare questa funzione da un thread che contiene già il blocco. È un comportamento definito eseguire operazioni su accelerator_view o su qualsiasi contenitore di dati associato ad accelerator_view dal thread che contiene il blocco di accesso di D3D. Vedere anche scoped_d3d_access_lock, una classe stile RAII per un blocco di accesso di D3D basata sull'ambito.
+Acquisire un blocco in un accelerator_view per eseguire in modo sicuro le operazioni D3D sulle risorse condivise con accelerator_view. L'oggetto accelerator_view e tutte le risorse di AMP C++ associate ad accelerator_view internamente accettano questo blocco quando si eseguono operazioni e si bloccheranno mentre un altro thread utilizza il blocco di accesso di D3D. Questo blocco è non ricorsivo: È un comportamento definito chiamare questa funzione da un thread che contiene già il blocco. È un comportamento definito eseguire operazioni su accelerator_view o su qualsiasi contenitore di dati associato ad accelerator_view dal thread che contiene il blocco di accesso di D3D. Vedere anche scoped_d3d_access_lock, una classe stile RAII per un blocco di accesso di D3D basata sull'ambito.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -207,7 +207,7 @@ inline int firstbithigh(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -224,7 +224,7 @@ inline int firstbitlow(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -252,7 +252,7 @@ Tipo di elementi nella matrice.
 *_Rank*<br/>
 Il rango della matrice.
 
-*Array*<br/>
+*_Array*<br/>
 Matrice in un accelerator_view Direct3D per il quale viene restituito l'interfaccia del buffer Direct3D sottostante.
 
 ### <a name="return-value"></a>Valore restituito
@@ -269,7 +269,7 @@ IUnknown* get_device(const accelerator_view Av);
 
 ### <a name="parameters"></a>Parametri
 
-*AV*<br/>
+*Av*<br/>
 L'oggetto accelerator_view D3D per il quale viene restituito l'interfaccia del dispositivo D3D sottostante.
 
 ### <a name="return-value"></a>Valore restituito
@@ -288,10 +288,10 @@ inline int imax(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore Integer
 
-*Y*<br/>
+*_Y*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -310,10 +310,10 @@ inline int imin(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore Integer
 
-*Y*<br/>
+*_Y*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -365,13 +365,13 @@ inline unsigned int mad(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Il primo argomento specificato.
 
-*Y*<br/>
+*_Y*<br/>
 Il secondo argomento specificato.
 
-*Z*<br/>
+*_Z*<br/>
 Il terzo argomento specificato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -424,7 +424,7 @@ inline float noise(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore a virgola mobile da cui generare Perlin noise
 
 ### <a name="return-value"></a>Valore restituito
@@ -441,7 +441,7 @@ inline float radians(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -460,7 +460,7 @@ inline double rcp(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Il valore per la quale calcolare il reciproco.
 
 ### <a name="return-value"></a>Valore restituito
@@ -477,7 +477,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore intero senza segno
 
 ### <a name="return-value"></a>Valore restituito
@@ -494,7 +494,7 @@ inline float saturate(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -511,7 +511,7 @@ inline int sign(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -531,13 +531,13 @@ inline float smoothstep(
 
 ### <a name="parameters"></a>Parametri
 
-*Min*<br/>
+*_Min*<br/>
 Valore a virgola mobile
 
-*Max*<br/>
+*_Max*<br/>
 Valore a virgola mobile
 
-*X*<br/>
+*_X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -556,10 +556,10 @@ inline float step(
 
 ### <a name="parameters"></a>Parametri
 
-*Y*<br/>
+*_Y*<br/>
 Valore a virgola mobile
 
-*X*<br/>
+*_X*<br/>
 Valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
@@ -578,10 +578,10 @@ inline unsigned int umax(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore Integer
 
-*Y*<br/>
+*_Y*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito
@@ -600,10 +600,10 @@ inline unsigned int umin(
 
 ### <a name="parameters"></a>Parametri
 
-*X*<br/>
+*_X*<br/>
 Valore Integer
 
-*Y*<br/>
+*_Y*<br/>
 Valore Integer
 
 ### <a name="return-value"></a>Valore restituito

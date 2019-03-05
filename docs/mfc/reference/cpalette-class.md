@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 1022d05265fc7c2b349dec22e41984e7d41820b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8abd03ff2b133eb6040799eff6879a19a64783ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586056"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274661"
 ---
 # <a name="cpalette-class"></a>CPalette (classe)
 
@@ -55,7 +55,7 @@ class CPalette : public CGdiObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CPalette:: AnimatePalette](#animatepalette)|Sostituisce le voci della tavolozza logica identificata dal `CPalette` oggetto. L'applicazione non dover aggiornare relativa area client, in quanto Windows mappa immediatamente le nuove voci della tavolozza di sistema.|
+|[CPalette::AnimatePalette](#animatepalette)|Sostituisce le voci della tavolozza logica identificata dal `CPalette` oggetto. L'applicazione non dover aggiornare relativa area client, in quanto Windows mappa immediatamente le nuove voci della tavolozza di sistema.|
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|Crea una tavolozza dei mezzitoni per il contesto di dispositivo e lo collega al `CPalette` oggetto.|
 |[CPalette::CreatePalette](#createpalette)|Crea una tavolozza dei colori di Windows e lo collega al `CPalette` oggetto.|
 |[CPalette::FromHandle](#fromhandle)|Restituisce un puntatore a un `CPalette` dell'oggetto quando viene specificato un handle a un oggetto di tavolozza di Windows.|
@@ -91,7 +91,7 @@ Per altre informazioni sull'uso `CPalette`, vedere [degli oggetti grafici](../..
 
 **Intestazione:** afxwin.h
 
-##  <a name="animatepalette"></a>  CPalette:: AnimatePalette
+##  <a name="animatepalette"></a>  CPalette::AnimatePalette
 
 Sostituisce le voci della tavolozza logica associata ai `CPalette` oggetto.
 
@@ -331,4 +331,3 @@ Per altre informazioni sulla struttura di Windows `PALETTEENTRY`, vedere [PALETT
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [CPalette::GetPaletteEntries](#getpaletteentries)<br/>
 [CPalette::SetPaletteEntries](#setpaletteentries)
-

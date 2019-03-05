@@ -132,16 +132,16 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450167"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278821"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 Implementa una finestra con mini-cornice contenente un riquadro. Il riquadro riempie l'area client della finestra.
 
@@ -285,7 +285,7 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 *pWnd*<br/>
 [in] Il riquadro per aggiungere o rimuovere.
 
-*bAggiungi*<br/>
+*bAdd*<br/>
 [in] Se diverso da zero, aggiungere il riquadro. Se è 0, rimuovere il riquadro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -425,7 +425,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.
 
 *pParentWnd*<br/>
@@ -467,7 +467,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.
 
 *pParentWnd*<br/>
@@ -731,7 +731,7 @@ virtual LRESULT HitTest(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Punto da testare.
 
 *bDetectCaption*<br/>
@@ -967,7 +967,7 @@ virtual void OnShowPane(
 *pBar*<br/>
 [in] Il riquadro che viene visualizzato o nascosto.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE se viene visualizzato il riquadro; FALSO se il riquadro è nascosto.
 
 ### <a name="remarks"></a>Note
@@ -999,7 +999,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Il punto che l'utente ha fatto clic, nelle coordinate dello schermo.
 
 *nSensitivity*<br/>

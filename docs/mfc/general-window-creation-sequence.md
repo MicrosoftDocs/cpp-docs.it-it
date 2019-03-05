@@ -7,12 +7,12 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: f69d32ea846e93974bc71340777b23750da73ba7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 949cf72910654b502ca4b57be72bedc2db63c315
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446787"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269227"
 ---
 # <a name="general-window-creation-sequence"></a>Sequenza generale di creazione finestre
 
@@ -40,4 +40,3 @@ Per le finestre cornice, è possibile usare la [LoadFrame](../mfc/reference/cfra
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione di finestre](../mfc/creating-windows.md)
-

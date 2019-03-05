@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677188"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262701"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 
@@ -53,7 +53,7 @@ La classe che fornisce la funzione utilizzata per creare il thread nel pool.
 |Nome|Descrizione|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|Il costruttore per il pool di thread.|
-|[CThreadPool:: ~ CThreadPool](#dtor)|Il distruttore per il pool di thread.|
+|[CThreadPool::~CThreadPool](#dtor)|Il distruttore per il pool di thread.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -62,13 +62,13 @@ La classe che fornisce la funzione utilizzata per creare il thread nel pool.
 |[CThreadPool::AddRef](#addref)|Implementazione di `IUnknown::AddRef`.|
 |[CThreadPool::GetNumThreads](#getnumthreads)|Chiamare questo metodo per ottenere il numero di thread nel pool.|
 |[CThreadPool::GetQueueHandle](#getqueuehandle)|Chiamare questo metodo per ottenere l'handle della porta di completamento i/o utilizzato per accodare gli elementi di lavoro.|
-|[:: GetSize](#getsize)|Chiamare questo metodo per ottenere il numero di thread nel pool.|
+|[CThreadPool::GetSize](#getsize)|Chiamare questo metodo per ottenere il numero di thread nel pool.|
 |[CThreadPool::GetTimeout](#gettimeout)|Chiamare questo metodo per ottenere il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.|
 |[CThreadPool::Initialize](#initialize)|Chiamare questo metodo per inizializzare il pool di thread.|
 |[CThreadPool::QueryInterface](#queryinterface)|Implementazione di `IUnknown::QueryInterface`.|
 |[CThreadPool::QueueRequest](#queuerequest)|Chiamare questo metodo per accodare un elemento di lavoro per essere gestito da un thread nel pool.|
 |[CThreadPool::Release](#release)|Implementazione di `IUnknown::Release`.|
-|[CThreadPool:: SetSize](#setsize)|Chiamare questo metodo per impostare il numero di thread nel pool.|
+|[CThreadPool::SetSize](#setsize)|Chiamare questo metodo per impostare il numero di thread nel pool.|
 |[CThreadPool::SetTimeout](#settimeout)|Chiamare questo metodo per impostare il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.|
 |[CThreadPool::Shutdown](#shutdown)|Chiamare questo metodo per arrestare il pool di thread.|
 
@@ -124,7 +124,7 @@ CThreadPool() throw();
 
 Inizializza il valore di timeout per ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. Il tempo predefinito è 36 secondi. Se necessario, è possibile definire il proprio valore intero positivo per questo simbolo prima di includere atlutil. h.
 
-##  <a name="dtor"></a>  CThreadPool:: ~ CThreadPool
+##  <a name="dtor"></a>  CThreadPool::~CThreadPool
 
 Il distruttore per il pool di thread.
 
@@ -160,7 +160,7 @@ HANDLE GetQueueHandle() throw();
 
 Restituisce l'handle di coda o NULL se il pool di thread non è stato inizializzato.
 
-##  <a name="getsize"></a>  :: GetSize
+##  <a name="getsize"></a>  CThreadPool::GetSize
 
 Chiamare questo metodo per ottenere il numero di thread nel pool.
 
@@ -254,7 +254,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Richiesta*<br/>
+*request*<br/>
 La richiesta da inserire in coda.
 
 ### <a name="return-value"></a>Valore restituito
@@ -281,7 +281,7 @@ Restituisce sempre 1.
 
 Questa classe non implementa il controllo della durata usando il conteggio dei riferimenti.
 
-##  <a name="setsize"></a>  CThreadPool:: SetSize
+##  <a name="setsize"></a>  CThreadPool::SetSize
 
 Chiamare questo metodo per impostare il numero di thread nel pool.
 

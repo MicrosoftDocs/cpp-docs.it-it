@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 6f4e6db693a5839fd3add503bfb9697679a98dd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635405"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264762"
 ---
 # <a name="multilinkregistry-class"></a>Classe multi_link_registry
 
@@ -52,7 +52,7 @@ Tipo di dati di blocco vengano archiviate nel `multi_link_registry` oggetto.
 |----------|-----------------|
 |[add](#add)|Aggiunge un collegamento per il `multi_link_registry` oggetto. (Esegue l'override [network_link_registry:: Add](network-link-registry-class.md#add).)|
 |[begin](#begin)|Restituisce un iteratore al primo elemento nel file di `multi_link_registry` oggetto. (Esegue l'override [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
-|[Contiene](#contains)|Le ricerche di `multi_link_registry` oggetto per un blocco specificato. (Esegue l'override [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[contains](#contains)|Le ricerche di `multi_link_registry` oggetto per un blocco specificato. (Esegue l'override [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
 |[count](#count)|Conta il numero di elementi nel `multi_link_registry` oggetto. (Esegue l'override [network_link_registry:: Count](network-link-registry-class.md#count).)|
 |[remove](#remove)|Rimuove un collegamento dal `multi_link_registry` oggetto. (Esegue l'override [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
 |[set_bound](#set_bound)|Impostare un limite superiore al numero di collegamenti che i `multi_link_registry` oggetto può contenere.|
@@ -79,14 +79,14 @@ virtual void add(_EType _Link);
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco da aggiungere.
 
 ### <a name="remarks"></a>Note
 
 Il metodo genera un' [invalid_link_target](invalid-link-target-class.md) eccezione se il collegamento è già presente nel Registro di sistema o se un limite è già stata impostata con il `set_bound` (funzione) e un collegamento è stato rimosso.
 
-##  <a name="begin"></a> iniziare
+##  <a name="begin"></a> begin
 
 Restituisce un iteratore al primo elemento nel file di `multi_link_registry` oggetto.
 
@@ -112,14 +112,14 @@ virtual bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco che deve essere eseguita la ricerca nel `multi_link_registry` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se il blocco specificato è stato trovato **false** in caso contrario.
 
-##  <a name="count"></a> conteggio
+##  <a name="count"></a> count
 
 Conta il numero di elementi nel `multi_link_registry` oggetto.
 
@@ -161,7 +161,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco deve essere rimosso, se trovato.
 
 ### <a name="return-value"></a>Valore restituito

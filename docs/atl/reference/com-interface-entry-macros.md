@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 8341061ba6365beb97f4413aab8bfbbfdc25e035
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693920"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276377"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY macro
 
@@ -118,7 +118,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia esposta.
 
 *x*<br/>
@@ -138,7 +138,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID specificato per l'interfaccia.
 
 *x*<br/>
@@ -157,10 +157,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Il nome di un `IUnknown` puntatore.
 
 ### <a name="remarks"></a>Note
@@ -181,7 +181,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Parametri
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Il nome di un `IUnknown` puntatore.
 
 ### <a name="remarks"></a>Note
@@ -202,10 +202,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Il nome di un `IUnknown` puntatore. Deve essere un membro della classe che contiene la mappa COM.
 
 *clsid*<br/>
@@ -227,7 +227,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Parametri
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Il nome di un `IUnknown` puntatore. Deve essere un membro della classe che contiene la mappa COM.
 
 *clsid*<br/>
@@ -268,13 +268,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia tear-off.
 
 *x*<br/>
 [in] Il nome della classe che implementa l'interfaccia.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] Il nome di un `IUnknown` puntatore. Deve essere un membro della classe che contiene la mappa COM. Nel costruttore dell'oggetto classe deve essere inizializzato su NULL.
 
 ### <a name="remarks"></a>Note
@@ -295,7 +295,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia tear-off.
 
 *x*<br/>
@@ -342,7 +342,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia esposta.
 
 *dw*<br/>
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 È possibile utilizzare questa macro per impedire l'utilizzo in un caso particolare di un'interfaccia. Ad esempio, è possibile inserire questa macro mappa COM subito prima COM_INTERFACE_ENTRY_AGGREGATE_BLIND per impedire che una query per l'interfaccia venga inoltrata a unknown interna dell'aggregazione.
 
 L'interfaccia IID verrà costruita aggiungendo *x* a `IID_`. Ad esempio, se *x* viene `IPersistStorage`, sarà l'IID `IID_IPersistStorage`.
-

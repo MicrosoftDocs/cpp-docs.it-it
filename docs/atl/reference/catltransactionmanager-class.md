@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270202"
 ---
 # <a name="catltransactionmanager-class"></a>Classe CAtlTransactionManager
 
@@ -51,7 +51,7 @@ class CAtlTransactionManager;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[~ CAtlTransactionManager](#dtor)|Distruttore CAtlTransactionManager.|
+|[~CAtlTransactionManager](#dtor)|Distruttore CAtlTransactionManager.|
 |[CAtlTransactionManager](#catltransactionmanager)|Costruttore CAtlTransactionManager.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -59,7 +59,7 @@ class CAtlTransactionManager;
 |Nome|Descrizione|
 |----------|-----------------|
 |[Chiudi](#close)|Chiude uno l'handle della transazione.|
-|[Eseguire il commit](#commit)|Richieste che eseguire il commit della transazione.|
+|[Commit](#commit)|Richieste che eseguire il commit della transazione.|
 |[creare](#create)|Crea l'handle della transazione.|
 |[CreateFile](#createfile)|Crea o apre un file, flusso di file o directory come un'operazione transazionale.|
 |[DeleteFile](#deletefile)|Elimina un file esistente come un'operazione transazionale.|
@@ -72,7 +72,7 @@ class CAtlTransactionManager;
 |[RegCreateKeyEx](#regcreatekeyex)|Crea la chiave del Registro di sistema e lo associa a una transazione. Se la chiave esiste già, la funzione lo apre.|
 |[RegDeleteKey](#regdeletekey)|Elimina una sottochiave e i relativi valori dalla visualizzazione del Registro di sistema specifiche della piattaforma specificata come un'operazione transazionale.|
 |[RegOpenKeyEx](#regopenkeyex)|Apre la chiave del Registro di sistema e lo associa a una transazione.|
-|[Eseguire il rollback](#rollback)|Richieste che essere eseguito il rollback della transazione.|
+|[Rollback](#rollback)|Richieste che essere eseguito il rollback della transazione.|
 |[SetFileAttributes](#setfileattributes)|Imposta gli attributi per un file o directory come un'operazione transazionale.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **Intestazione:** atltransactionmanager.h
 
-##  <a name="dtor"></a>  ~ CAtlTransactionManager
+##  <a name="dtor"></a>  ~CAtlTransactionManager
 
 Distruttore CAtlTransactionManager.
 
@@ -138,7 +138,7 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 Il wrapper chiama il `CloseHandle` (funzione). Il metodo viene chiamato automaticamente nel distruttore.
 
-##  <a name="commit"></a>  Eseguire il commit
+##  <a name="commit"></a>  Commit
 
 Richieste che eseguire il commit della transazione.
 
@@ -194,7 +194,7 @@ Il nome di un oggetto può essere creato o aperto.
 L'accesso all'oggetto, che può essere riepilogata come lettura, scrittura, entrambi o Nessuno (zero). I valori più comunemente usati sono GENERIC_READ, GENERIC_WRITE o entrambi: GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-La modalità di condivisione di un oggetto che può essere di lettura, scrittura, entrambi, Elimina, tutti di questi elementi o nessun: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+La modalità di condivisione di un oggetto, che può essere di lettura, scrittura, entrambi, Elimina, tutti di questi elementi o nessun: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
 Un puntatore a una struttura SECURITY_ATTRIBUTES che contiene un descrittore di sicurezza facoltativo e determina inoltre se l'handle restituito può essere ereditato dai processi figlio. Il parametro può essere NULL.
@@ -402,7 +402,7 @@ Questo parametro è riservato e deve essere zero.
 La classe definita dall'utente di questa chiave. Questo parametro può essere ignorato. Questo parametro può essere NULL.
 
 *dwOptions*<br/>
-Questo parametro può essere uno dei seguenti valori: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE o REG_OPTION_VOLATILE.
+Questo parametro può essere uno dei valori seguenti: REG_OPTION_BACKUP_RESTORE REG_OPTION_NON_VOLATILE o REG_OPTION_VOLATILE.
 
 *samDesired*<br/>
 Maschera che specifica i diritti di accesso per la chiave.
@@ -414,7 +414,7 @@ Puntatore a una struttura SECURITY_ATTRIBUTES che determina se l'handle restitui
 Puntatore a una variabile che riceve un handle per la chiave creata o aperta. Se la chiave non è una delle chiavi del Registro di sistema predefinito, chiamare il `RegCloseKey` dopo aver utilizzato l'handle.
 
 *lpdwDisposition*<br/>
-Un puntatore a una variabile che riceve uno dei seguenti valori disposition: REG_CREATED_NEW_KEY o REG_OPENED_EXISTING_KEY.
+Un puntatore a una variabile che riceve uno dei valori di disposizione seguente: REG_CREATED_NEW_KEY o REG_OPENED_EXISTING_KEY.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -485,7 +485,7 @@ Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. Se la f
 
 Il wrapper chiama il `RegOpenKeyTransacted` (funzione).
 
-##  <a name="rollback"></a>  Eseguire il rollback
+##  <a name="rollback"></a>  Rollback
 
 Richieste che essere eseguito il rollback della transazione.
 

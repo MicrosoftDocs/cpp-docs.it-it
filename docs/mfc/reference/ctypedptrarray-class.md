@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 767d4782ec637a0404051e6871d584f73cefdcd2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 8a6fc0786a169f9c1e73eb8acadfc51d063334c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275337"
 ---
 # <a name="ctypedptrarray-class"></a>Classe CTypedPtrArray
 
@@ -253,7 +253,7 @@ Un'altra matrice che contiene gli elementi da aggiungere a questa matrice.
 
 Per ulteriori osservazioni, vedere [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).
 
-##  <a name="operator_at"></a>  [] CTypedPtrArray::operator
+##  <a name="operator_at"></a>  CTypedPtrArray::operator [ ]
 
 Questi operatori inline chiamano `BASE_CLASS` **:: operator []**.
 

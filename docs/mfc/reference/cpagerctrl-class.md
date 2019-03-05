@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: cd3eed89753031de64d35a2b3602b1fb42356123
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270722"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*dwStyle*|[in] Una combinazione bit per bit (OR) di [stili window](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [stili del controllo pager](/windows/desktop/Controls/pager-control-styles) da applicare al controllo.|
-|*Rect*|[in] Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|
+|*rect*|[in] Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|
 |*pParentWnd*|[in] Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo. Questo parametro non può essere NULL.|
 |*nID*|[in] L'ID del controllo.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Combinazione bit per bit degli stili estesi da applicare al controllo. Per altre informazioni, vedere la *dwExStyle* parametro delle [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) (funzione).|
 |*dwStyle*|[in] Una combinazione bit per bit (OR) di [stili window](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [stili del controllo pager](/windows/desktop/Controls/pager-control-styles) da applicare al controllo.|
-|*Rect*|[in] Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|
+|*rect*|[in] Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|
 |*pParentWnd*|[in] Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo. Questo parametro non può essere NULL.|
 |*nID*|[in] L'ID del controllo.|
 
@@ -606,7 +606,7 @@ void SetScrollPos(int iPos);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*ipo*|[in] La nuova posizione di scorrimento, misurato in pixel.|
+|*iPos*|[in] La nuova posizione di scorrimento, misurato in pixel.|
 
 ### <a name="remarks"></a>Note
 
@@ -617,4 +617,3 @@ Questo metodo invia il [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) messag
 [Classe CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Controlli del pager](/windows/desktop/Controls/pager-controls)
-

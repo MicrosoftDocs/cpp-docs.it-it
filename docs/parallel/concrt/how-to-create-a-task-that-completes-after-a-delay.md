@@ -5,12 +5,12 @@ helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-ms.openlocfilehash: 89564a00dbfde078ef98cd53110853e30e33ad6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616337"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272258"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Procedura: Creare un'attività che viene completata dopo un ritardo
 
@@ -45,7 +45,7 @@ Di seguito viene riportato il codice completo per questo esempio:
 
 Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `task-delay.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
 
-**CL.exe /EHsc task-Delay. cpp**
+**cl.exe /EHsc task-delay.cpp**
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -58,4 +58,3 @@ Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual S
 [Classe call](../../parallel/concrt/reference/call-class.md)<br/>
 [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)
-

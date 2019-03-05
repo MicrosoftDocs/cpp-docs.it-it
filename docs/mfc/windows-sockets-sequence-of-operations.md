@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: sequenza di operazioni'
+title: 'Windows Sockets: Sequenza delle operazioni'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], operations
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578638"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265548"
 ---
-# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: sequenza di operazioni
+# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Sequenza delle operazioni
 
 Questo articolo viene illustrato, side-by-side, la sequenza delle operazioni per un server e a un socket client. Perché usano i socket `CArchive` oggetti, sono necessariamente [socket di flusso](../mfc/windows-sockets-stream-sockets.md).
 
@@ -33,10 +33,10 @@ Fino al momento della creazione di un `CSocketFile` dell'oggetto, la sequenza se
 ||`// seek a connection`<br /><br /> `sockClient.Connect(strAddr, nPort);`3,4|
 |`// construct a new, empty socket`<br /><br /> `CSocket sockRecv;`<br /><br /> `// accept connection`<br /><br /> `sockSrvr.Accept( sockRecv );` 5||
 |`// construct file object`<br /><br /> `CSocketFile file(&sockRecv);`|`// construct file object`<br /><br /> `CSocketFile file(&sockClient);`|
-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> oppure<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o entrambi:|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> oppure<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o entrambi:|
-|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> oppure<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> oppure<br /><br /> `arOut << dwValue;`6|
+|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -oppure-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o entrambi:|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -oppure-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o entrambi:|
+|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -oppure-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -oppure-<br /><br /> `arOut << dwValue;`6|
 
-1. In cui *nPort* è un numero di porta. Visualizzare [Windows Sockets: porte e indirizzi Socket](../mfc/windows-sockets-ports-and-socket-addresses.md) per informazioni dettagliate sulle porte.
+1. In cui *nPort* è un numero di porta. Vedere [Windows Sockets: Porte e indirizzi Socket](../mfc/windows-sockets-ports-and-socket-addresses.md) per informazioni dettagliate sulle porte.
 
 2. Il server deve sempre specificare una porta in modo che i client possono connettersi. Il `Create` chiamata specifica a volte anche un indirizzo. Sul lato client, usare i parametri predefiniti, che richiedono MFC per utilizzare qualsiasi porta disponibile.
 
@@ -56,15 +56,15 @@ La sequenza di chiamate mostrato nella tabella precedente è per un socket di fl
 
 Per altre informazioni, vedere:
 
-- [Windows Sockets: uso di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: uso della classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Uso della classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: porte e indirizzi socket](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows Sockets: Porte e indirizzi Socket](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows Sockets: socket di flusso](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Socket di Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: socket di datagramma](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Socket di datagramma](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -72,4 +72,3 @@ Per altre informazioni, vedere:
 [Classe CSocket](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: 8bf85c32093051b124d007a04eed2bbf10a56039
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4845093d3343e899a18c707846145c2630d7ac1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261492"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-DCOMCNFG è un'utilità di Windows NT 4.0 che consente di configurare varie impostazioni DCOM specifico nel Registro di sistema. La finestra DCOMCNFG dispone di tre pagine: protezione predefinita, le proprietà predefinite e le applicazioni. In Windows 2000 è presente una quarta pagina, protocolli predefiniti.
+DCOMCNFG è un'utilità di Windows NT 4.0 che consente di configurare varie impostazioni DCOM specifico nel Registro di sistema. La finestra DCOMCNFG ha tre pagine: Impostazioni di sicurezza predefinite, le proprietà predefinite e le applicazioni. In Windows 2000 è presente una quarta pagina, protocolli predefiniti.
 
 ## <a name="default-security-page"></a>Pagina sicurezza predefinita
 
-È possibile utilizzare la pagina Impostazioni di sicurezza predefinite per specificare le autorizzazioni predefinite per gli oggetti nel sistema. Questa pagina include tre sezioni: l'accesso, avvio e configurazione. Per modificare le impostazioni predefinite della sezione, fare clic sulla rispettiva **modifica predefinite** pulsante. Queste impostazioni di sicurezza predefiniti vengono archiviate nel Registro di sistema `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
+È possibile utilizzare la pagina Impostazioni di sicurezza predefinite per specificare le autorizzazioni predefinite per gli oggetti nel sistema. Questa pagina ha tre sezioni: L'accesso, avvio e configurazione. Per modificare le impostazioni predefinite della sezione, fare clic sulla rispettiva **modifica predefinite** pulsante. Queste impostazioni di sicurezza predefiniti vengono archiviate nel Registro di sistema `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`.
 
 ## <a name="default-protocols-page"></a>Pagina protocolli predefiniti
 
@@ -47,4 +47,3 @@ Modificare le impostazioni per un determinato oggetto con la pagina delle applic
 ## <a name="see-also"></a>Vedere anche
 
 [Servizi](../atl/atl-services.md)
-

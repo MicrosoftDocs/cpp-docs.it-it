@@ -7,12 +7,12 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-ms.openlocfilehash: d15c2d9b6641f7d87f394327aa4be71e51afb613
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dffdd111d33d6fbd845e1534cdef1d5c8e1749d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262935"
 ---
 # <a name="registry-scripting-examples"></a>Esempi di script del Registro di sistema
 
@@ -113,4 +113,3 @@ HKEY_CURRENT_USER
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione degli script del Registro di sistema](../atl/creating-registrar-scripts.md)
-

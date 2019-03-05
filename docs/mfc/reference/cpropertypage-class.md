@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 1816e6ee2dc0f358cb2da4c8bab572daa33a29c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561239"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260751"
 ---
 # <a name="cpropertypage-class"></a>Classe CPropertyPage
 
@@ -74,16 +74,16 @@ class CPropertyPage : public CDialog
 |[CPropertyPage::GetPSP](#getpsp)|Recupera il Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struttura associata la `CPropertyPage` oggetto.|
 |[CPropertyPage::OnApply](#onapply)|Chiamato dal framework quando viene selezionato il pulsante Applica.|
 |[CPropertyPage::OnCancel](#oncancel)|Chiamato dal framework quando si fa clic sul pulsante Annulla.|
-|[CPropertyPage:: OnKillActive](#onkillactive)|Chiamato dal framework quando la pagina corrente non è più la pagina attiva. Eseguire la convalida dei dati.|
+|[CPropertyPage::OnKillActive](#onkillactive)|Chiamato dal framework quando la pagina corrente non è più la pagina attiva. Eseguire la convalida dei dati.|
 |[CPropertyPage::OnOK](#onok)|Chiamato dal framework quando viene selezionato il OK, applica o Chiudi.|
 |[CPropertyPage::OnQueryCancel](#onquerycancel)|Chiamato dal framework quando si fa clic sul pulsante Annulla e prima che l'annullamento ha avuto luogo.|
 |[CPropertyPage::OnReset](#onreset)|Chiamato dal framework quando si fa clic sul pulsante Annulla.|
-|[CPropertyPage:: OnSetActive](#onsetactive)|Chiamato dal framework quando la pagina diventa la pagina attiva.|
+|[CPropertyPage::OnSetActive](#onsetactive)|Chiamato dal framework quando la pagina diventa la pagina attiva.|
 |[CPropertyPage::OnWizardBack](#onwizardback)|Chiamato dal framework quando si fa clic sul pulsante Indietro durante l'utilizzo di una finestra delle proprietà associata alla procedura guidata.|
 |[CPropertyPage::OnWizardFinish](#onwizardfinish)|Chiamato dal framework quando si fa clic sul pulsante Fine durante l'utilizzo di una finestra delle proprietà associata alla procedura guidata.|
 |[CPropertyPage::OnWizardNext](#onwizardnext)|Chiamato dal framework quando si fa clic sul pulsante Avanti quando si usa una finestra delle proprietà associata alla procedura guidata.|
 |[CPropertyPage::QuerySiblings](#querysiblings)|Inoltra il messaggio a ogni pagina della finestra delle proprietà.|
-|[CPropertyPage:: SetModified](#setmodified)|Chiamare per attivare o disattivare il pulsante Applica.|
+|[CPropertyPage::SetModified](#setmodified)|Chiamare per attivare o disattivare il pulsante Applica.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -234,7 +234,7 @@ ID del modello usato per questa pagina.
 *nIDCaption*<br/>
 ID del nome da inserire nella scheda per questa pagina. Se è 0, il nome verrà intraprese dal modello di finestra di dialogo per questa pagina.
 
-*dwSize diverso da*<br/>
+*dwSize*<br/>
 *lpszTemplateName* punta a una stringa contenente il nome del modello per questa pagina. Non può essere NULL.
 
 *nIDHeaderTitle*<br/>
@@ -333,7 +333,7 @@ Eseguire l'override di questa funzione membro per eseguire azioni sul pulsante A
 
 [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]
 
-##  <a name="onkillactive"></a>  CPropertyPage:: OnKillActive
+##  <a name="onkillactive"></a>  CPropertyPage::OnKillActive
 
 Questa funzione membro viene chiamata dal framework quando la pagina non è più la pagina attiva.
 
@@ -419,7 +419,7 @@ L'implementazione predefinita di `OnReset` non esegue alcuna operazione.
 
   Vedere l'esempio relativo [CPropertyPage::OnCancel](#oncancel).
 
-##  <a name="onsetactive"></a>  CPropertyPage:: OnSetActive
+##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive
 
 Questa funzione membro viene chiamata dal framework quando la pagina viene scelto dall'utente e diventa la pagina attiva.
 
@@ -551,7 +551,7 @@ Se una pagina restituisce un valore diverso da zero, la finestra delle propriet�
 
 [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]
 
-##  <a name="setmodified"></a>  CPropertyPage:: SetModified
+##  <a name="setmodified"></a>  CPropertyPage::SetModified
 
 Chiamare questa funzione membro per abilitare o disabilitare il pulsante Applica, se le impostazioni nella pagina delle proprietà devono essere applicate all'oggetto external appropriato in base.
 
@@ -577,7 +577,7 @@ Il framework tiene traccia delle quali pagine sono "dirty", vale a dire, pagine 
 [CMNCTRL1 esempio MFC](../../visual-cpp-samples.md)<br/>
 [CMNCTRL2 esempio MFC](../../visual-cpp-samples.md)<br/>
 [Esempio MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Esempio MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC Sample SNAPVW](../../visual-cpp-samples.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CPropertySheet](../../mfc/reference/cpropertysheet-class.md)<br/>

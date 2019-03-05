@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611003"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273608"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection (classe)
 
@@ -39,7 +39,7 @@ class CHttpConnection : public CInternetConnection
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CHttpConnection:: OpenRequest](#openrequest)|Apre una richiesta HTTP.|
+|[CHttpConnection::OpenRequest](#openrequest)|Apre una richiesta HTTP.|
 
 ## <a name="remarks"></a>Note
 
@@ -119,7 +119,7 @@ Un puntatore a una stringa con terminazione null che specifica la password da ut
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL o ""|NULL o ""|"anonymous"|Nome messaggio di posta elettronica dell'utente|
 |Stringa non NULL|NULL o ""|*pstrUserName*|" "|
-|Stringa Non NULL a NULL|ERRORE|ERRORE||
+|Stringa Non NULL a NULL|ERROR|ERROR||
 |Stringa non NULL|Stringa non NULL|*pstrUserName*|*pstrPassword*|
 
 *dwFlags*<br/>
@@ -129,7 +129,7 @@ Qualsiasi combinazione del `INTERNET_FLAG_*` flag. Vedere la tabella nel **osser
 
 È non creare mai un `CHttpConnection` direttamente. Piuttosto, si crea un oggetto chiamando [CInternetSession:: GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).
 
-##  <a name="openrequest"></a>  CHttpConnection:: OpenRequest
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest
 
 Chiamare la seguente funzione membro per aprire una connessione HTTP.
 
@@ -205,7 +205,7 @@ Un puntatore per il [CHttpFile](../../mfc/reference/chttpfile-class.md) oggetto 
 |INTERNET_FLAG_SECURE|Utilizza semantica sicura delle transazioni. Questo comporta l'utilizzo di SSL/PCT e il flag è significativo solo nelle richieste HTTP|
 |INTERNET_FLAG_NO_AUTO_REDIRECT|Utilizzato solo con HTTP, specifica che non reindirizzamenti devono essere gestiti automaticamente [CHttpFile:: SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|
 
-Esegue l'override dell'impostazione predefinita `dwContext` per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CHttpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Esegue l'override dell'impostazione predefinita `dwContext` per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CHttpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
 In questa funzione possono essere generate eccezioni.
 

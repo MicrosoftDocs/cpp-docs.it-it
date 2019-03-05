@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-ms.openlocfilehash: 23fc005a0c679576507c3a39ae37ce6c4545036b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668254"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281590"
 ---
 # <a name="join-class"></a>Classe join
 
@@ -98,7 +98,7 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -115,7 +115,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` consumata dell'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -162,13 +162,13 @@ join(
 *_NumInputs*<br/>
 Il numero di input si `join` blocco sarà consentito.
 
-*Filtro*<br/>
+*_Filter*<br/>
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
 Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `join` .
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `join` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
@@ -205,10 +205,10 @@ message_status propagate_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -233,7 +233,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto rilasciato.
 
 ##  <a name="reserve_message"></a> reserve_message
@@ -246,7 +246,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
 ### <a name="return-value"></a>Valore restituito

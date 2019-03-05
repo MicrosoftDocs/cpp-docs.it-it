@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694543"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262103"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (classe)
 
@@ -204,7 +204,7 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::SetControlLabel](#setcontrollabel)|Imposta il testo associato a un controllo, ad esempio il testo del pulsante o un'etichetta casella di modifica.|
 |[CFileDialog::SetControlState](#setcontrolstate)|Imposta la visibilità corrente e gli stati di un determinato controllo abilitato.|
 |[CFileDialog::SetControlText](#setcontroltext)|Imposta il testo per il controllo specificato in un tipo Esplora risorse **aperto** oppure **Salva con nome** finestra di dialogo comune.|
-|[CFileDialog:: Setdefext](#setdefext)|Imposta l'estensione predefinita per un tipo Esplora risorse **aperto** oppure **Salva con nome** finestra di dialogo comune.|
+|[CFileDialog::SetDefExt](#setdefext)|Imposta l'estensione predefinita per un tipo Esplora risorse **aperto** oppure **Salva con nome** finestra di dialogo comune.|
 |[CFileDialog::SetEditBoxText](#seteditboxtext)|Imposta il testo corrente in un controllo casella di modifica.|
 |[CFileDialog::SetProperties](#setproperties)|Fornisce un archivio delle proprietà che definisce i valori predefiniti da usare per l'elemento salvato.|
 |[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|Imposta lo stato selezionato di un particolare elemento in un gruppo di pulsanti di opzione o una casella combinata trovati nella finestra di dialogo.|
@@ -247,11 +247,11 @@ Sia l'aspetto e le funzionalità del `CFileDialog` con Windows Vista o versioni 
 
 Alcuni `CFileDialog` metodi non sono supportati in Windows Vista o versioni successive. Controllare l'argomento di metodo singolo per informazioni sul fatto che il metodo è supportato. Inoltre, le funzioni ereditate seguenti non sono supportate in Windows Vista o versioni successive:
 
-- [CDialog](../../mfc/reference/cdialog-class.md#oninitdialog)
+- [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-I messaggi di windows per il `CFileDialog` classe variano in base a quale sistema operativo in uso. Ad esempio, Windows XP non supporta [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) e [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) per il `CFileDialog` classe. Tuttavia, Windows Vista e sistemi operativi successivi li supportano. Per altre informazioni sui diversi messaggi che vengono generati e l'ordine in cui vengono ricevuti, vedere [CFileDialog esempio: ordine degli eventi di registrazione](../../visual-cpp-samples.md).
+I messaggi di windows per il `CFileDialog` classe variano in base a quale sistema operativo in uso. Ad esempio, Windows XP non supporta [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) e [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) per il `CFileDialog` classe. Tuttavia, Windows Vista e sistemi operativi successivi li supportano. Per altre informazioni sui diversi messaggi che vengono generati e l'ordine in cui vengono ricevuti, vedere [esempio CFileDialog: Ordine degli eventi di registrazione](../../visual-cpp-samples.md).
 
 Usare un `CFileDialog` dell'oggetto, creare prima l'oggetto utilizzando il `CFileDialog` costruttore. Dopo che è stata costruita la finestra di dialogo, è possibile impostare o modificare i valori di [CFileDialog::m_ofn](#m_ofn) struttura per inizializzare i valori o gli stati dei controlli casella di dialogo. Il `m_ofn` struttura è di tipo `OPENFILENAME`. Per altre informazioni, vedere la [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struttura nel SDK di Windows.
 
@@ -427,7 +427,7 @@ Un percorso della cartella da rendere disponibili all'utente. Ciò può essere s
 *fdap*<br/>
 Specifica la posizione della cartella all'interno dell'elenco.
 
-*PSI*<br/>
+*psi*<br/>
 Puntatore a un'istanza di IShellItem che rappresenta la cartella da rendere disponibili all'utente. Ciò può essere solo una cartella.
 
 ### <a name="remarks"></a>Note
@@ -558,7 +558,7 @@ explicit CFileDialog(
 *pParentWnd*<br/>
 [in] Puntatore alla finestra padre o proprietaria della finestra di dialogo file.
 
-*dwSize diverso da*<br/>
+*dwSize*<br/>
 [in] Le dimensioni del `OPENFILENAME` struttura. Questo valore dipende dalla versione del sistema operativo. MFC usato questo parametro per determinare il tipo di finestra di dialogo per creare appropriato. Le dimensioni predefinite pari a 0 indica che il codice MFC determinano le dimensioni di finestra dialogo corretto da usare in base alla versione del sistema operativo in cui viene eseguito il programma.
 
 *bVistaStyle*<br/>
@@ -893,7 +893,7 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Un riferimento a un valore di posizione restituito da una precedente `GetNextPathName` o `GetStartPosition` chiamata di funzione. NULL se è stata raggiunta la fine dell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1489,7 +1489,7 @@ Entrambe le versioni di questa funzione sono valide per le applicazioni che util
 
 Per usare questo metodo, è necessario creare la finestra di dialogo con lo stile OFN_EXPLORER. In caso contrario, la funzione avrà esito negativo con un'asserzione.
 
-##  <a name="setdefext"></a>  CFileDialog:: Setdefext
+##  <a name="setdefext"></a>  CFileDialog::SetDefExt
 
 Chiamare questa funzione per impostare l'estensione di file predefinita per una finestra di dialogo comune Open di tipo Esplora risorse o Salva con nome.
 
@@ -1642,4 +1642,3 @@ Questo esempio viene aggiornato il `CFileDialog` prima di visualizzarla. Prima d
 
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

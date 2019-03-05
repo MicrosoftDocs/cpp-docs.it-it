@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271255"
 ---
 # <a name="colepropertypage-class"></a>Classe COlePropertyPage
 
@@ -76,7 +76,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 |[COlePropertyPage::OnHelp](#onhelp)|Chiamato dal framework quando l'utente richiama la Guida.|
 |[COlePropertyPage::OnInitDialog](#oninitdialog)|Chiamato dal framework quando viene inizializzata la pagina delle proprietà.|
 |[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|Chiamato dal framework quando viene scelto un controllo OLE diverso con nuove proprietà.|
-|[COlePropertyPage:: OnSetPageSite](#onsetpagesite)|Chiamato dal framework quando la finestra delle proprietà fornisce il sito della pagina.|
+|[COlePropertyPage::OnSetPageSite](#onsetpagesite)|Chiamato dal framework quando la finestra delle proprietà fornisce il sito della pagina.|
 |[COlePropertyPage::SetControlStatus](#setcontrolstatus)|Imposta un flag che indica se l'utente ha modificato il valore del controllo.|
 |[COlePropertyPage::SetDialogResource](#setdialogresource)|Imposta risorsa finestra di dialogo della pagina delle proprietà.|
 |[COlePropertyPage::SetHelpInfo](#sethelpinfo)|Imposta il testo breve descrizione della pagina delle proprietà, il nome del file della Guida e il relativo contesto della Guida.|
@@ -89,7 +89,7 @@ Ad esempio, una pagina delle proprietà possa includere un controllo di modifica
 
 Ogni proprietà personalizzate o predefinite il controllo può avere un controllo di finestra di dialogo che consente di visualizzare il valore della proprietà corrente e, se necessario, modificare tale valore del controllo.
 
-Per altre informazioni sull'uso `COlePropertyPage`, vedere l'articolo [dei controlli ActiveX: pagine delle proprietà](../../mfc/mfc-activex-controls-property-pages.md).
+Per altre informazioni sull'uso `COlePropertyPage`, vedere l'articolo [controlli ActiveX: Pagine delle proprietà](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -222,7 +222,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà modificata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -284,7 +284,7 @@ Quando si visualizzano le proprietà di un controllo OLE nell'ambiente di svilup
 
 Eseguire l'override di questa funzione per ricevere una notifica dell'azione corrente ed eseguire eventuali azioni speciali.
 
-##  <a name="onsetpagesite"></a>  COlePropertyPage:: OnSetPageSite
+##  <a name="onsetpagesite"></a>  COlePropertyPage::OnSetPageSite
 
 Il framework chiama questa funzione quando la finestra delle proprietà fornisce sito della pagina della pagina delle proprietà.
 
@@ -385,7 +385,7 @@ Puntatore a una stringa contenente il nome della pagina delle proprietà.
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC esempio CIRC3](../../visual-cpp-samples.md)<br/>
+[MFC Sample CIRC3](../../visual-cpp-samples.md)<br/>
 [Esempio MFC TESTHELP](../../visual-cpp-samples.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>

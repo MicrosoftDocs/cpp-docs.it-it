@@ -6,18 +6,18 @@ helpviewer_keywords:
 - tree controls [MFC], item states overview
 - CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
-ms.openlocfilehash: 389c273f7c8727ecbb4ed5455987126e21e26a63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57c6714073f4939ffb791a78454e9eac6342309b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467951"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264599"
 ---
 # <a name="tree-control-item-states-overview"></a>Panoramica degli stati degli elementi del controllo Tree
 
-Ogni elemento in un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) nello stato corrente. Ad esempio, un elemento può essere selezionato, disabilitato, espanso e così via. In genere, il controllo albero imposta automaticamente lo stato di un elemento per riflettere le azioni dell'utente, come ad esempio la selezione di un elemento. Tuttavia, è possibile impostare lo stato di un elemento usando la [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) funzione membro e recuperare lo stato corrente di un elemento usando la [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) funzione membro. Per un elenco completo degli stati degli elementi, vedere [costanti del controllo di visualizzazione ad albero](/windows/desktop/Controls/tree-view-control-item-states) nel SDK di Windows.
+Ogni elemento in un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) nello stato corrente. Ad esempio, un elemento può essere selezionato, disabilitato, espanso e così via. In genere, il controllo struttura ad albero imposta automaticamente lo stato di un elemento per riflettere le azioni dell'utente, come ad esempio la selezione di un elemento. Tuttavia, è possibile impostare lo stato di un elemento usando la [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) funzione membro e recuperare lo stato corrente di un elemento usando la [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) funzione membro. Per un elenco completo degli stati degli elementi, vedere [costanti del controllo di visualizzazione ad albero](/windows/desktop/Controls/tree-view-control-item-states) nel SDK di Windows.
 
-Stato corrente di un elemento viene specificato per il *nState* parametro. Un controllo albero può modificare lo stato di un elemento per riflettere un'azione dell'utente, come ad esempio la selezione dell'elemento oppure l'impostazione dello stato attivo sull'elemento. Inoltre, un'applicazione può modificare lo stato di un elemento per disabilitare o nascondere l'elemento o per specificare un'immagine sovrapposta o un'immagine di stato.
+Stato corrente di un elemento viene specificato per il *nState* parametro. Un controllo struttura ad albero può modificare lo stato di un elemento per riflettere un'azione dell'utente, come ad esempio la selezione dell'elemento oppure l'impostazione dello stato attivo sull'elemento. Inoltre, un'applicazione può modificare lo stato di un elemento per disabilitare o nascondere l'elemento o per specificare un'immagine sovrapposta o un'immagine di stato.
 
 Quando si specifica o si modifica lo stato di un elemento, il *nStateMask* parametro specifica quali bit di set, stato e il *nState* parametro contiene i nuovi valori per questi bit. Ad esempio, nell'esempio seguente viene modificato lo stato corrente di un elemento padre (specificato da *hParentItem*) in un `CTreeCtrl` oggetto (`m_treeCtrl`) per `TVIS_EXPANDPARTIAL`:
 
@@ -31,4 +31,3 @@ Immagine dello stato di un elemento, impostare *nStateMask* deve includere il `T
 
 [Uso di CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: 96769c0012b1271263d2217fe9b5ea1a36ec8446
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bfce54253ffcd217bb98345893724a509879abc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629944"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274457"
 ---
 # <a name="ca2wex-class"></a>Classe CA2WEX
 

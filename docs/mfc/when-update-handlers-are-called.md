@@ -16,12 +16,12 @@ helpviewer_keywords:
 - command routing [MFC], update handlers
 - update handlers, calling
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
-ms.openlocfilehash: 036476ecc7a0528692e6fd3e3d69a2efeef6fd4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a52c147d1abf02b7c5e89abf868f87a07ab32cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454847"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277586"
 ---
 # <a name="when-update-handlers-are-called"></a>Quando vengono chiamati i gestori aggiornamento
 
@@ -38,4 +38,3 @@ Inizializzazione di menu è automatica in framework, che si verifica quando l'ap
 ## <a name="see-also"></a>Vedere anche
 
 [Procedura: Aggiornare oggetti dell'interfaccia utente](../mfc/how-to-update-user-interface-objects.md)
-

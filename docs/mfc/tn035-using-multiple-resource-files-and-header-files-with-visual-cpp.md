@@ -1,5 +1,5 @@
 ---
-title: 'TN035: utilizzo di più file di risorse e di intestazione in Visual C++'
+title: 'TN035: Uso di più file di risorse e i file di intestazione Visual c++'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567661"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279919"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: utilizzo di più file di risorse e di intestazione in Visual C++
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Uso di più file di risorse e i file di intestazione Visual c++
 
 > [!NOTE]
 >  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
@@ -111,7 +111,7 @@ AFXRES.H definisce i simboli standard, ad esempio `ID_FILE_NEW`, utilizzati dal 
 
 ## <a name="_mfcnotes_tn035_including"></a> Inclusi i file di intestazione aggiuntivi
 
-L'applicazione creata dalla Creazione guidata applicazioni include solo due file di intestazione: RESOURCE.H e AFXRES.H. Solo RESOURCE.H è specifico dell'applicazione. Potrebbe essere necessario includere file di intestazione di sola lettura aggiuntivi nei seguenti casi:
+L'applicazione creata dalla creazione guidata applicazioni include solo due file di intestazione: RISORSA. H e AFXRES. H. Solo RESOURCE.H è specifico dell'applicazione. Potrebbe essere necessario includere file di intestazione di sola lettura aggiuntivi nei seguenti casi:
 
 Il file di intestazione viene fornito da un'origine esterna oppure se si desidera condividere il file di intestazione tra più progetti o più parti dello stesso progetto.
 
@@ -300,7 +300,7 @@ Come descritto in precedenza, il menu comando Inclusioni impostazione del menu F
 
 Di seguito viene illustrato come Visual C++ gestisce queste informazioni in un file RC. Queste informazioni non sono necessarie per l'utilizzo di Visual C++, ma possono contribuire a una migliore comprensione della funzionalità Inclusioni impostazione per utilizzarla più agevolmente.
 
-Ciascuno dei tre tipi di informazioni di Inclusione impostazione viene archiviato nel file RC in due formati: (1) come #include o altre direttive interpretabili dal Compilatore di risorse e (2) come risorse TEXTINCLUDE speciali interpretabili solo da Visual C++.
+Ciascuno dei tre tipi di informazioni di inclusioni impostazione viene archiviato nel. File RC in due forme: (1) come #include o altre direttive interpretabili dal compilatore di risorse e (2) come risorse TEXTINCLUDE speciali interpretabili solo da Visual C++.
 
 Lo scopo della risorsa TEXTINCLUDE consiste nell'archiviare in modo sicuro le informazioni di inclusioni in un formato immediatamente presentabile in Visual C++ **inclusioni impostazione** nella finestra di dialogo. TEXTINCLUDE è un *tipo di risorsa* definito da Visual C++. Visual C++ riconosce tre risorse TEXTINCLUDE specifiche che presentano numeri di identificazione risorsa 1, 2 e 3:
 
@@ -383,4 +383,3 @@ END
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

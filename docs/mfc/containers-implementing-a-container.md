@@ -1,18 +1,18 @@
 ---
-title: 'Contenitori: implementazione di un contenitore'
+title: 'Contenitori: Implementazione di un contenitore'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546705"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271424"
 ---
-# <a name="containers-implementing-a-container"></a>Contenitori: implementazione di un contenitore
+# <a name="containers-implementing-a-container"></a>Contenitori: Implementazione di un contenitore
 
 Questo articolo riepiloga le procedure per l'implementazione di un contenitore e si fa riferimento ad altri articoli che forniscono che ulteriori spiegazioni sull'implementazione di contenitori. Elenca anche alcune funzionalità facoltative OLE che può essere utile implementare e gli articoli che descrivono queste funzionalità.
 
@@ -46,7 +46,7 @@ Poiché l'implementazione di queste funzionalità varia notevolmente da un'appli
 
 La creazione guidata applicazione deriverà la classe per l'utente, ma sarà probabilmente necessario eseguire l'override `OnChange` e altre funzioni elencate nel passaggio 2 della procedura precedente. Le implementazioni di base devono essere personalizzati per la maggior parte delle applicazioni, poiché queste funzioni vengono implementate in modo diverso da un'applicazione a quella successiva. Per esempi, vedere gli esempi MFC [DRAWCLI](../visual-cpp-samples.md) e [contenitore](../visual-cpp-samples.md).
 
-È necessario aggiungere un numero di elementi alla struttura di menu dell'applicazione contenitore per il supporto OLE. Per altre informazioni, vedere [menu e risorse: aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md).
+È necessario aggiungere un numero di elementi alla struttura di menu dell'applicazione contenitore per il supporto OLE. Per altre informazioni, vedere [menu e risorse: Aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md).
 
 È anche possibile supportare alcune delle funzionalità seguente nell'applicazione contenitore:
 
@@ -60,10 +60,9 @@ La creazione guidata applicazione deriverà la classe per l'utente, ma sarà pro
 
 - Include collegamenti a oggetti incorporati o le applicazioni contenitore/server di combinazione.
 
-   Per altre informazioni, vedere [contenitori: funzionalità avanzate](../mfc/containers-advanced-features.md).
+   Per altre informazioni, vedere [contenitori: Funzionalità avanzate](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori](../mfc/containers.md)<br/>
-[Contenitori: elementi client](../mfc/containers-client-items.md)
-
+[Contenitori: Elementi client](../mfc/containers-client-items.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-ms.openlocfilehash: f6bcbce291aec1941359504518e26ca936edb9e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604477"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275194"
 ---
 # <a name="csettingsstoresp-class"></a>Classe CSettingsStoreSP
 
@@ -53,7 +53,7 @@ class CSettingsStoreSP
 
 ## <a name="remarks"></a>Note
 
-È possibile usare il `CSettingsStoreSP` classe per reindirizzare tutte le operazioni del Registro di sistema MFC in altre posizioni, ad esempio un file XML o un database. A tale scopo, attenersi ai passaggi riportati di seguito:
+È possibile usare il `CSettingsStoreSP` classe per reindirizzare tutte le operazioni del Registro di sistema MFC in altre posizioni, ad esempio un file XML o un database. A tale scopo, attenersi alla seguente procedura:
 
 1. Creare una classe (ad esempio `CMyStore`) e derivarlo dal `CSettingsStore`.
 
@@ -83,7 +83,7 @@ CSettingsStore& CSettingsStoreSP Create(
 
 ### <a name="parameters"></a>Parametri
 
-*bPercorso amm*<br/>
+*bAdmin*<br/>
 [in] Un parametro booleano che determina se un `CSettingsStore` oggetto viene creato in modalità amministratore.
 
 *bReadOnly*<br/>

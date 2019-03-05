@@ -4,12 +4,12 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
-ms.openlocfilehash: 3b0ec605fd6e30033e303ff61872734136cfb73b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23cd9e41ee704327728322f869e67d1a2d0c6cd9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279822"
 ---
 # <a name="containers-for-activex-controls"></a>Contenitori per i controlli ActiveX
 
@@ -56,4 +56,3 @@ Di seguito sono le applicazioni non Microsoft che supportano contenimento dei co
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
-

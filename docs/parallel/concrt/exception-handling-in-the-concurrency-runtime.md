@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: 7611e9d3f0bbf961784c9fed23117750a101486f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8239913c369605503134a9ea4c99789528911868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437869"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272633"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Gestione delle eccezioni nel runtime di concorrenza
 
@@ -102,7 +102,7 @@ Questo esempio produce il seguente output:
 X = 15, Y = 30Caught exception: point is NULL.
 ```
 
-Per un esempio completo che Usa gestione delle eccezioni in un gruppo di attività, vedere [procedura: usare la gestione delle eccezioni per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Per un esempio completo che Usa gestione delle eccezioni in un gruppo di attività, vedere [come: Utilizzare eccezioni per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 [[Torna all'inizio](#top)]
 
@@ -193,4 +193,3 @@ Per altre informazioni sugli agenti asincroni, vedere [agenti asincroni](../../p
 [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)<br/>
 [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Agenti asincroni](../../parallel/concrt/asynchronous-agents.md)
-

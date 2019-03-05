@@ -2,12 +2,12 @@
 title: Parallelizzazione automatica e vettorizzazione automatica
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 06ab255e7769bfa56d5a8d22cdbe19d415ce6b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276624"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Parallelizzazione automatica e vettorizzazione automatica
 
@@ -107,7 +107,7 @@ Come con la parallelizzazione automatica, è possibile specificare il [/Qvec-rep
 
 Per altre informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-Per un esempio che illustra come la vettorizzazione funziona in pratica, vedere [progetto Austin parte 2 di 6: pagine](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+Per un esempio che illustra come la vettorizzazione funziona in pratica, vedere [progetto Austin parte 2 di 6: Pagina a usare CURL](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
 
 ## <a name="see-also"></a>Vedere anche
 

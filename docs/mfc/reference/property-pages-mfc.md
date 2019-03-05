@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620909"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269214"
 ---
 # <a name="property-pages-mfc"></a>Pagine delle proprietà (MFC)
 
@@ -33,9 +33,9 @@ Questo meccanismo di mapping dei dati esegue il mapping per le singole propriet�
 |[DDP_LBStringExact](#ddp_lbstringexact)|Collega la stringa selezionata nella casella di riepilogo con una proprietà del controllo. La stringa selezionata e il valore della proprietà stringa devono corrispondere esattamente.|
 |[DDP_PostProcessing](#ddp_postprocessing)|Termina il trasferimento dei valori delle proprietà dal controllo.|
 |[DDP_Radio](#ddp_radio)|Un gruppo di pulsanti di opzione nella pagina delle proprietà del controllo con proprietà di un controllo collegamenti.|
-|[DDP_TEXT](#ddp_text)|Collega un controllo nella pagina delle proprietà del controllo con una proprietà del controllo. Questa funzione gestisce diversi tipi di proprietà, ad esempio **doppie**, **breve**, BSTR, e **long**.|
+|[DDP_Text](#ddp_text)|Collega un controllo nella pagina delle proprietà del controllo con una proprietà del controllo. Questa funzione gestisce diversi tipi di proprietà, ad esempio **doppie**, **breve**, BSTR, e **long**.|
 
-Per altre informazioni sul `DoDataExchange` pagine di funzione e proprietà, vedere l'articolo [controlli ActiveX: pagine delle proprietà](../../mfc/mfc-activex-controls-property-pages.md).
+Per altre informazioni sul `DoDataExchange` pagine di funzione e proprietà, vedere l'articolo [controlli ActiveX: Pagine delle proprietà](../../mfc/mfc-activex-controls-property-pages.md).
 
 Di seguito è riportato un elenco delle macro utilizzate per creare e gestire pagine delle proprietà per un controllo OLE:
 
@@ -342,7 +342,7 @@ Questa funzione deve essere chiamata prima della corrispondente chiamata di funz
 
   **Intestazione** afxctl. h
 
-##  <a name="ddp_text"></a>  DDP_TEXT
+##  <a name="ddp_text"></a>  DDP_Text
 
 Chiamare questa funzione del controllo `DoDataExchange` (funzione) per sincronizzare il valore della proprietà con il controllo della pagina proprietà associata.
 
@@ -428,7 +428,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 ### <a name="parameters"></a>Parametri
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Il nome della classe del controllo per la cui proprietà vengono specificate le pagine.
 
 *count*<br/>
@@ -438,7 +438,7 @@ Il numero di pagine delle proprietà utilizzate dalla classe control.
 
 Nel file di implementazione (. cpp) che definisce le funzioni membro per la classe, avviare l'elenco di pagine di proprietà con BEGIN_PROPPAGEIDS (macro), quindi aggiungere le voci di macro per ognuna delle pagine delle proprietà e completare l'elenco delle pagine proprietà con il END_PROPPAGEIDS macro.
 
-Per altre informazioni sulle pagine delle proprietà, vedere l'articolo [controlli ActiveX: pagine delle proprietà](../../mfc/mfc-activex-controls-property-pages.md).
+Per altre informazioni sulle pagine delle proprietà, vedere l'articolo [controlli ActiveX: Pagine delle proprietà](../../mfc/mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -454,7 +454,7 @@ END_PROPPAGEIDS(class_name)
 
 ### <a name="parameters"></a>Parametri
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Il nome della classe del controllo cui appartiene la pagina delle proprietà.
 
 ### <a name="requirements"></a>Requisiti

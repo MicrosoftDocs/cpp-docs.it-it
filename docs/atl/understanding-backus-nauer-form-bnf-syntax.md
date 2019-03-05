@@ -5,12 +5,12 @@ helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: b14e2a4f1c29860b9a624b09805959a9f6b550f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b48e0b4abc8601b5173c3c7d2748c726646fbc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596729"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267108"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Informazioni sulla sintassi di Backus Nauer Form (BNF)
 
@@ -20,7 +20,7 @@ In questo argomento usando la sintassi BNF che usa la notazione del punto illust
 |------------------------|-------------|
 |::=|Equivalente|
 |&#124;|OR|
-|X +|Uno o più Xs.|
+|X+|Uno o più Xs.|
 |[X]|X è facoltativo. I delimitatori facoltativi sono indicati da \[].|
 |Eventuali **grassetto** testo|Un valore letterale stringa.|
 |Eventuali *corsivo* testo|Come costruire il valore letterale stringa.|
@@ -31,7 +31,7 @@ Come indicato nella tabella precedente, script di registrazione usare i valori l
 |--------------------|------------|
 |**ForceRemove**|Rimuove completamente il tasto successivo (se presente) e quindi ricreata.|
 |**NoRemove**|Non rimuove la successiva chiave durante l'annullamento della registrazione.|
-|**Val**|Specifica che `<Key Name>` è effettivamente un valore denominato.|
+|**val**|Specifica che `<Key Name>` è effettivamente un valore denominato.|
 |**Eliminazione**|Elimina la successiva chiave durante la registrazione.|
 |**s**|Specifica che il valore successivo è una stringa (REG_SZ).|
 |**d**|Specifica che il valore successivo è un valore DWORD (REG_DWORD).|
@@ -101,4 +101,3 @@ Specifica che il nome della chiave `testhex` è un valore DWORD impostato su 55 
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione degli script del Registro di sistema](../atl/creating-registrar-scripts.md)
-

@@ -10,20 +10,19 @@ helpviewer_keywords:
 - frame windows [MFC], dragging and dropping files in
 - drag and drop [MFC], Windows Explorer
 ms.assetid: 85560fe9-121b-4105-bd7b-216b966e19fa
-ms.openlocfilehash: 34fb6ec6d57bcf8bc1cf51a3ac0c0db5203b3ffa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0129b939e0fe2afd5dd29623bb44418bfd16c20d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498838"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260409"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Trascinamento di file in una finestra cornice
 
 La finestra cornice gestisce sia una relazione con Esplora File o File Manager.
 
-Da aggiunta di inizializzazione di alcuni chiama nell'override della `CWinApp` funzione membro `InitInstance`, come descritto in [CWinApp: la classe Application](../mfc/cwinapp-the-application-class.md), è possibile avere la finestra cornice indirettamente aprire i file trascinati da File Esplora risorse o File Manager ed eliminato nella finestra cornice. Visualizzare [gestione File trascinamento della selezione](../mfc/special-cwinapp-services.md).
+Dall'aggiunta di inizializzazione di alcuni chiama nell'override della `CWinApp` funzione membro `InitInstance`, come descritto in [CWinApp: La classe dell'applicazione](../mfc/cwinapp-the-application-class.md), è possibile avere indirettamente aprire i file trascinati da Esplora File o File Manager vengono nella finestra cornice di finestra cornice. Visualizzare [gestione File trascinamento della selezione](../mfc/special-cwinapp-services.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Uso di finestre cornice](../mfc/using-frame-windows.md)
-

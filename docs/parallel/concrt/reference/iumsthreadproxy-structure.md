@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 9a0fca40f353f64799c4df9001952cb668cd0678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657128"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263034"
 ---
 # <a name="iumsthreadproxy-structure"></a>Struttura IUMSThreadProxy
 

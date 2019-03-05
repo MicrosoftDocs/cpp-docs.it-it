@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520518"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268060"
 ---
 # <a name="colevariant-class"></a>Classe COleVariant
 
@@ -43,7 +43,7 @@ class COleVariant : public tagVARIANT
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleVariant:: COleVariant](#colevariant)|Costruisce un oggetto `COleVariant`.|
+|[COleVariant::COleVariant](#colevariant)|Costruisce un oggetto `COleVariant`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -108,7 +108,7 @@ La funzione imposta VARTYPE del *varSrc* su VT_EMPTY.
 
 Per altre informazioni, vedere la [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) e [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) voci nel SDK di Windows.
 
-##  <a name="colevariant"></a>  COleVariant:: COleVariant
+##  <a name="colevariant"></a>  COleVariant::COleVariant
 
 Costruisce un oggetto `COleVariant`.
 
@@ -169,7 +169,7 @@ Oggetto [CByteArray](../../mfc/reference/cbytearray-class.md) oggetto da copiare
 *lbSrc*<br/>
 Oggetto [CLongBinary](../../mfc/reference/clongbinary-class.md) oggetto da copiare nel nuovo `COleVariant` oggetto.
 
-*PIDL*<br/>
+*pidl*<br/>
 Un puntatore a un [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) struttura da copiare nel nuovo `COleVariant` oggetto.
 
 ### <a name="remarks"></a>Note
@@ -218,7 +218,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 ### <a name="parameters"></a>Parametri
 
-*VarType*<br/>
+*vartype*<br/>
 Il VARTYPE per questo `COleVariant` oggetto.
 
 *pSrc*<br/>
@@ -269,7 +269,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Parametri
 
-*Byte*<br/>
+*bytes*<br/>
 Un riferimento a un oggetto esistente [CByteArray](../../mfc/reference/cbytearray-class.md) oggetto.
 
 ##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT
@@ -390,7 +390,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 *lpszSrc*<br/>
 Una stringa con terminazione null da copiare nel nuovo `COleVariant` oggetto.
 
-*vtSrc*<br/>
+*VtSrc*<br/>
 Il VARTYPE per il nuovo `COleVariant` oggetto.
 
 ### <a name="remarks"></a>Note

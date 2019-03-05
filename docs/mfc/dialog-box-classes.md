@@ -10,12 +10,12 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 3533a548f009a65462ce0d821d782db0ada9aa4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5747e4450816b803f97ad5ff6338b9e01ad41bca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490005"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264040"
 ---
 # <a name="dialog-box-classes"></a>Classi di finestre di dialogo
 
@@ -43,7 +43,7 @@ Fornisce una finestra di dialogo standard per la selezione di un colore.
 [CFontDialog](../mfc/reference/cfontdialog-class.md)<br/>
 Fornisce una finestra di dialogo standard per la selezione di un tipo di carattere.
 
-[CFindReplaceDialog.](../mfc/reference/cfindreplacedialog-class.md)<br/>
+[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)<br/>
 Fornisce una finestra di dialogo standard per un'operazione di ricerca e sostituzione.
 
 [CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
@@ -80,7 +80,7 @@ Consente di visualizzare la finestra di dialogo Converti, l'interfaccia utente s
 [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)<br/>
 Incapsula la finestra di dialogo Windows OLE proprietà comune. Finestre di dialogo comuni OLE proprietà forniscono un modo semplice per visualizzare e modificare le proprietà di un elemento documento OLE in modo coerente con gli standard di Windows.
 
-[Classe COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)<br/>
+[COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)<br/>
 Consente di visualizzare la finestra di dialogo di aggiornamento, l'interfaccia utente standard per l'aggiornamento di tutti i collegamenti in un documento. La finestra di dialogo contiene un indicatore di stato per indicare come chiudere la procedura di aggiornamento è fino al completamento.
 
 [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)<br/>
@@ -132,4 +132,3 @@ Una struttura contenente informazioni su un processo di anteprima di stampa o st
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

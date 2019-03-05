@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178630"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275428"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (classe)
 
@@ -221,7 +221,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Determina se un punto specificato si trova vicino al sito di ancoraggio.|
 |[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|Determina se la finestra cornice è in modalità di anteprima di stampa.|
 |[CMDIFrameWndEx::LoadFrame](#loadframe)|Crea una finestra cornice da informazioni sulle risorse. Esegue l'override di `CMDIFrameWnd::LoadFrame`.|
-|[CMDIFrameWndEx:: Loadmdistate](#loadmdistate)|Carica il layout specificato di gruppi a schede MDI e l'elenco di documenti precedentemente aperti.|
+|[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|Carica il layout specificato di gruppi a schede MDI e l'elenco di documenti precedentemente aperti.|
 |[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Sposta la scheda attiva dalla finestra a schede attiva al gruppo di schede successivo o precedente.|
 |[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|Crea un nuovo gruppo a schede che dispone di una singola finestra.|
 |[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Negozia lo spazio del bordo in una finestra cornice durante l'attivazione sul posto OLE.|
@@ -719,7 +719,7 @@ Specifica la posizione delle etichette della scheda.
 *bTabCloseButton*<br/>
 Specifica se visualizzare i pulsanti Chiudi scheda.
 
-*Stile di visualizzazione*<br/>
+*style*<br/>
 Specifica lo stile delle schede. Usare STYLE_3D_SCROLLED per schede normali o STYLE_3D_ONENOTE per le schede di Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
@@ -1047,7 +1047,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Puntatore al riquadro prima o dopo il quale inserire il riquadro.
 
-*bDopo*<br/>
+*bAfter*<br/>
 [in] Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1193,7 +1193,7 @@ virtual BOOL LoadFrame(
 
 TRUE se il metodo ha esito positivo, in caso contrario FALSE.
 
-##  <a name="loadmdistate"></a>  CMDIFrameWndEx:: Loadmdistate
+##  <a name="loadmdistate"></a>  CMDIFrameWndEx::LoadMDIState
 
 Carica il layout specificato di gruppi a schede MDI e l'elenco di documenti precedentemente aperti.
 
@@ -1238,7 +1238,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAvanti*<br/>
+*bNext*<br/>
 [in] Se TRUE, spostare la scheda al gruppo di scheda successivo. Se FALSE, spostarlo al gruppo di scheda precedente.
 
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
@@ -1501,7 +1501,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in] Il pulsante della barra degli strumenti.
 
-*PTI*<br/>
+*pTI*<br/>
 [out] Puntatore a un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struttura.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Menu di scelta*<br/>
+*menu*<br/>
 [in] Un riferimento a un [CMenu (classe)](../../mfc/reference/cmenu-class.md) oggetto da modificare.
 
 *uiViewUserToolbarCmdFirst*<br/>

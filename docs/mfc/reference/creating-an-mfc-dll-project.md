@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 6a24fb136570d1b5984582cab3593a29d843a54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21173582f68b1d50fefbe22250546fcce63730b4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608117"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278834"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Creazione di un progetto DLL MFC
 
@@ -43,4 +43,3 @@ Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Es
 [Tipi di progetto Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)
-

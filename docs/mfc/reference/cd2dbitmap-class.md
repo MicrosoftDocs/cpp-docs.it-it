@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605868"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264716"
 ---
 # <a name="cd2dbitmap-class"></a>Classe CD2DBitmap
 
@@ -75,7 +75,7 @@ class CD2DBitmap : public CD2DResource;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Di overload. Costruisce un oggetto CD2DBitmap dal HBITMAP.|
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto bitmap D2D.|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto bitmap D2D.|
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
@@ -137,7 +137,7 @@ class CD2DBitmap : public CD2DResource;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap:: ~ CD2DBitmap
+##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto bitmap D2D.
 
@@ -201,7 +201,7 @@ Puntatore a una stringa con terminazione null che contiene il tipo di risorsa.
 *sizeDest*<br/>
 Dimensioni di destinazione della bitmap.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 *lpszPath*<br/>
@@ -260,7 +260,7 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 I dati da copiare.
 
-*Passo*<br/>
+*pitch*<br/>
 Lo stride o tono, della bitmap di origine archiviati nella srcData. Lo stride è il numero di byte di una linea di digitalizzazione (una riga di pixel in memoria). Lo stride può essere calcolato dalla formula seguente: larghezza in pixel \* byte per pixel e spaziatura interna di memoria.
 
 *destRect*<br/>
@@ -461,7 +461,7 @@ ID risorsa della bitmap.
 UINT m_uiResID;
 ```
 
-##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap *
+##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap*
 
 Restituisce l'interfaccia ID2D1Bitmap
 

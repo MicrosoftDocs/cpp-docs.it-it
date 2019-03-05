@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-ms.openlocfilehash: 99785e2e6ef1c0644833d582774380bff792ac9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ca67d4cac3786ce8bb059464d47acf17e3ecdc7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429276"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266066"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Funzionalità interfaccia utente, Creazione guidata applicazione MFC
 
@@ -27,7 +27,7 @@ In questo argomento illustra le opzioni che è possibile usare per specificare l
    |**Finestra di ridurre al minimo**|Include un pulsante di ingrandimento nella finestra cornice principale. Valore predefinito.|
    |**Pulsante di ingrandimento**|Include un pulsante di ingrandimento nella finestra cornice principale. Valore predefinito.|
    |**Ridotta a icona**|Ridotta a icona, verrà visualizzata la finestra cornice principale.|
-   |**Ingrandita**|Apre la finestra cornice principale alla dimensione completa dello schermo.|
+   |**Maximized**|Apre la finestra cornice principale alla dimensione completa dello schermo.|
    |**Menu di sistema**|Include un menu di sistema nella finestra cornice principale. Valore predefinito.|
    |**Finestra informazioni su**|Include un' **sulle** casella per l'applicazione. L'utente può accedere a questa casella da dell'applicazione **aiutare** menu. L'impostazione predefinita e non modificabile se non si seleziona **basato su finestra di dialogo**, nella [tipo di applicazione, creazione guidata applicazione MFC](../../mfc/reference/application-type-mfc-application-wizard.md) pagina.<br /><br /> **Nota** indica che la procedura guidata non si applica l'opzione per il progetto, se viene selezionata o deselezionata la casella di controllo dell'elemento non disponibile in genere, un'opzione disponibile. In questo caso, la procedura guidata aggiunge sempre un **sulle** casella al progetto se non si specifica innanzitutto il progetto come finestra di dialogo in base e quindi deselezionare la casella di controllo.|
    |**Barra di stato iniziale**|Aggiunge una barra di stato all'applicazione. La barra di stato contiene indicatori automatica per i tasti della tastiera BLOC MAIUSC, BLOC NUM e BLOC SCORR e stringhe di una riga di messaggio che visualizza la Guida per i comandi di menu e barra degli strumenti pulsanti. Se si seleziona questa opzione aggiunge anche i comandi di menu per visualizzare o nascondere la barra di stato. Per impostazione predefinita, un'applicazione ha una barra di stato. Non è disponibile per i tipi di applicazioni basate su finestra di dialogo.|
@@ -64,4 +64,3 @@ In questo argomento illustra le opzioni che è possibile usare per specificare l
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)
-

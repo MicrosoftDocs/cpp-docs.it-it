@@ -90,18 +90,18 @@ helpviewer_keywords:
 - CDockingPanesRow [MFC], ShowPane
 - CDockingPanesRow [MFC], UpdateVisibleState
 ms.assetid: e7a17832-0ebb-4bce-b799-cec9b60f76fe
-ms.openlocfilehash: a2d9c7894327a66c24fae3890856dbb95a6d10e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5720fa2ff8e85092b246002b7961ce3830ee7e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450128"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277989"
 ---
 # <a name="cdockingpanesrow-class"></a>Classe CDockingPanesRow
 
 Gestisce un elenco dei riquadri inseriti nella stessa riga orizzontale o verticale (colonna) di un sito di ancoraggio.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -699,7 +699,7 @@ virtual int ResizeByPaneDivider(int /*ignored*/);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *ignorato*<br/>
+[in] *ignored*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -743,7 +743,7 @@ virtual void ShowDockSiteRow(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bMostra*<br/>
+[in] *bShow*<br/>
 
 [in] *bDelay*<br/>
 
@@ -762,7 +762,7 @@ virtual BOOL ShowPane(
 
 [in] *pControlBar*<br/>
 
-[in] *bMostra*<br/>
+[in] *bShow*<br/>
 
 [in] *bDelay*<br/>
 

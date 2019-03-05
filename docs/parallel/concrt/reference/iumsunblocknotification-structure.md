@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: 219e32cedb02d4ecab73390e33601de32f9b0992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf083e2ad418269e49e53dc164f2a60f693d5d6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677968"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261388"
 ---
 # <a name="iumsunblocknotification-structure"></a>Struttura IUMSUnblockNotification
 
@@ -33,7 +33,7 @@ struct IUMSUnblockNotification;
 |Nome|Descrizione|
 |----------|-----------------|
 |[IUMSUnblockNotification::GetContext](#getcontext)|Restituisce il `IExecutionContext` interfaccia per il contesto di esecuzione associato al proxy thread che è stato sbloccato. Dopo che questo metodo viene restituito e riprogrammato il contesto di esecuzione sottostante tramite una chiamata verso la `IThreadProxy::SwitchTo` (metodo), questa interfaccia non è più valida.|
-|[IUMSUnblockNotification:: GetNextUnblockNotification](#getnextunblocknotification)|Restituisce il successivo `IUMSUnblockNotification` interfaccia nella catena restituita dal metodo `IUMSCompletionList::GetUnblockNotifications`.|
+|[IUMSUnblockNotification::GetNextUnblockNotification](#getnextunblocknotification)|Restituisce il successivo `IUMSUnblockNotification` interfaccia nella catena restituita dal metodo `IUMSCompletionList::GetUnblockNotifications`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

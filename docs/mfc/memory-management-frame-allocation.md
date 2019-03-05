@@ -1,5 +1,5 @@
 ---
-title: 'Gestione della memoria: allocazione di frame'
+title: 'Gestione della memoria: Allocazione di frame'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory leaks [MFC], frame allocation
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 45b0242ec8acafa2345482893d14decb02c4a3f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcd691f8e99b558fcadfc1cf51990b673c5b760c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447996"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262207"
 ---
-# <a name="memory-management-frame-allocation"></a>Gestione della memoria: allocazione di frame
+# <a name="memory-management-frame-allocation"></a>Gestione della memoria: Allocazione di frame
 
 Allocazione sul frame prende il nome da "frame dello stack" è impostato ogni volta che viene chiamata una funzione. Il frame dello stack è un'area di memoria che temporaneamente contiene gli argomenti alla funzione, nonché eventuali variabili definite locali rispetto alla funzione. Variabili di frame vengono spesso denominate "automatiche" variabili perché il compilatore alloca automaticamente lo spazio per loro.
 
@@ -42,4 +42,3 @@ Il vantaggio principale di allocazione di oggetti nel frame è che questi vengon
 ## <a name="see-also"></a>Vedere anche
 
 [Gestione della memoria](../mfc/memory-management.md)
-

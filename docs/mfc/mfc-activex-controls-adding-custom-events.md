@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: aggiunta di eventi personalizzati'
+title: 'Controlli ActiveX MFC: Aggiunta di eventi personalizzati'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events [MFC]
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: ad44cb097f03270b09612ad756d34725464a1765
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 626aae04e0b19dc951814e4741cad3729acd3b72
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554908"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263013"
 ---
-# <a name="mfc-activex-controls-adding-custom-events"></a>Controlli ActiveX MFC: aggiunta di eventi personalizzati
+# <a name="mfc-activex-controls-adding-custom-events"></a>Controlli ActiveX MFC: Aggiunta di eventi personalizzati
 
 Eventi personalizzati differiscono da eventi predefiniti che non vengono attivati automaticamente dalla classe `COleControl`. Un evento personalizzato riconosce una determinata azione, determinata dallo sviluppatore del controllo, come un evento. Le voci della mappa eventi per gli eventi personalizzati sono rappresentate da EVENT_CUSTOM (macro). La sezione seguente implementa un evento personalizzato per un progetto controllo ActiveX che è stato creato utilizzando la creazione guidata controllo ActiveX.
 
@@ -134,5 +134,5 @@ La procedura seguente aggiunge un personalizzata fare clic su eventi.
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: metodi](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controlli ActiveX MFC: Metodi](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

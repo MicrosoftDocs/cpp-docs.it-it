@@ -9,12 +9,12 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-ms.openlocfilehash: d0487f6a69d144e46adab496f3fd21696b5b434b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 986bc4f12223048a20f88da5d164b24dc1c08ace
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594106"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261180"
 ---
 # <a name="onupdatecommandui-macro"></a>Macro ON_UPDATE_COMMAND_UI
 
@@ -29,4 +29,3 @@ Come tutti i gestori, la funzione Mostra le **afx_msg** (parola chiave). Come tu
 ## <a name="see-also"></a>Vedere anche
 
 [Procedura: Aggiornare oggetti dell'interfaccia utente](../mfc/how-to-update-user-interface-objects.md)
-

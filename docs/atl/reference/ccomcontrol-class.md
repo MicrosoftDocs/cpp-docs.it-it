@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 3fe01128fc5f0a9d3058df2d6f95a6c038b28062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261583"
 ---
 # <a name="ccomcontrol-class"></a>Classe CComControl
 
@@ -109,7 +109,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
 *ppv*<br/>
@@ -220,7 +220,7 @@ Il testo da visualizzare nella finestra di messaggio.
 *lpszCaption*<br/>
 Il titolo della finestra di dialogo. Se NULL (predefinito), il titolo viene usato "Error".
 
-*NLE*<br/>
+*nType*<br/>
 Specifica il contenuto e il comportamento della finestra di dialogo. Vedere le [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) voce nella documentazione di Windows SDK per un elenco delle finestre di messaggio diversi disponibili. L'impostazione predefinita offre un semplice **OK** pulsante.
 
 ### <a name="return-value"></a>Valore restituito

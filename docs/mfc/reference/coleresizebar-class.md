@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: c4b7ce80762cdb49b6007eac7f6b26019b108795
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 631276a065652ec991c4c1b5264e87b7244fb7b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445110"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275948"
 ---
 # <a name="coleresizebar-class"></a>Classe COleResizeBar
 
@@ -105,7 +105,7 @@ Diverso da zero se la barra di ridimensionamento è stata creata. in caso contra
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[MFC Sample SUPERPAD](../../visual-cpp-samples.md)<br/>
 [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleServerDoc](../../mfc/reference/coleserverdoc-class.md)

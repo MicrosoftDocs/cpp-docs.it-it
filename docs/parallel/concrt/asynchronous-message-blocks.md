@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-ms.openlocfilehash: b78b4db4dda33e0a94da3624ea1ffd8748a601f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586121"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274163"
 ---
 # <a name="asynchronous-message-blocks"></a>Blocchi dei messaggi asincroni
 
@@ -92,18 +92,18 @@ Seleziona il primo messaggio disponibile da un set di origini.
 [join e a più tipi](#join)<br/>
 Attendere che tutti i messaggi essere ricevuti da un set di origini e quindi combinare i messaggi in un messaggio per un altro blocco di messaggio.
 
-[Timer](#timer)<br/>
+[timer](#timer)<br/>
 Invia un messaggio a un blocco di destinazione a intervalli regolari.
 
 Questi tipi di blocco dei messaggi hanno caratteristiche diverse che li rendono utili in situazioni diverse. Queste sono alcune delle caratteristiche:
 
-- *Tipo di propagazione*: indica se il blocco di messaggi funge da un'origine dei dati, un destinatario di dati o entrambi.
+- *Tipo di propagazione*: Indica se il blocco di messaggi funge da un'origine dei dati, un destinatario di dati o entrambi.
 
-- *Ordinamento dei messaggi*: indica se il blocco di messaggio mantiene l'ordine originale in cui i messaggi vengono inviati o ricevuti. Ogni tipo di blocco di messaggio predefinite mantiene l'ordine originale in cui invia o riceve messaggi.
+- *Ordinamento dei messaggi*: Indica se il blocco di messaggio mantiene l'ordine originale in cui i messaggi vengono inviati o ricevuti. Ogni tipo di blocco di messaggio predefinite mantiene l'ordine originale in cui invia o riceve messaggi.
 
-- *Conteggio di origine*: il numero massimo di origini che può leggere il blocco di messaggi.
+- *Conteggio di origine*: Il numero massimo di origini che può leggere il blocco di messaggi.
 
-- *Numero di destinazione*: il numero massimo di destinazioni in cui è possibile scrivere il blocco di messaggi.
+- *Numero di destinazione*: Il numero massimo di destinazioni in cui è possibile scrivere il blocco di messaggi.
 
 La tabella seguente illustra queste caratteristiche correlazione tra i vari tipi di blocco dei messaggi.
 
@@ -139,7 +139,7 @@ Questo esempio produce il seguente output:
 334455
 ```
 
-Per un esempio completo che illustra come usare il `unbounded_buffer` classe, vedere [procedura: implementare vari modelli Producer-Consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Per un esempio completo che illustra come usare il `unbounded_buffer` classe, vedere [come: Implementare vari modelli Producer-Consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Torna all'inizio](#top)]
 
@@ -161,7 +161,7 @@ Questo esempio produce il seguente output:
 555555
 ```
 
-Per un esempio completo che illustra come usare il `overwrite_buffer` classe, vedere [procedura: implementare vari modelli Producer-Consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Per un esempio completo che illustra come usare il `overwrite_buffer` classe, vedere [come: Implementare vari modelli Producer-Consumer](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Torna all'inizio](#top)]
 
@@ -181,7 +181,7 @@ Questo esempio produce il seguente output:
 333333
 ```
 
-Per un esempio completo che illustra come usare il `single_assignment` classe, vedere [questa procedura dettagliata: implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md).
+Per un esempio completo che illustra come usare il `single_assignment` classe, vedere [procedura dettagliata: Implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md).
 
 [[Torna all'inizio](#top)]
 
@@ -201,7 +201,7 @@ Questo esempio produce il seguente output:
 334455
 ```
 
-Per un esempio completo che illustra come usare il `call` classe, vedere [procedura: fornire funzioni lavoro alle classi call e transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
+Per un esempio completo che illustra come usare il `call` classe, vedere [come: Fornire funzioni lavoro alle classi call e transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
 
 [[Torna all'inizio](#top)]
 
@@ -225,7 +225,7 @@ Questo esempio produce il seguente output:
 10.8914.5218.15
 ```
 
-Per un esempio completo che illustra come usare il `transformer` classe, vedere [procedura: usare la classe transformer in una Pipeline di dati](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+Per un esempio completo che illustra come usare il `transformer` classe, vedere [come: Usare la classe transformer in una Pipeline di dati](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
 [[Torna all'inizio](#top)]
 
@@ -255,7 +255,7 @@ Poiché l'attività che calcola il 35<sup>th</sup> numero di Fibonacci è necess
 
 Questo esempio Usa la [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo per calcolare i numeri di Fibonacci in parallelo. Per altre informazioni sulle `parallel_invoke`, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
-Per un esempio completo che illustra come usare il `choice` classe, vedere [procedura: selezionare tra attività completate](../../parallel/concrt/how-to-select-among-completed-tasks.md).
+Per un esempio completo che illustra come usare il `choice` classe, vedere [come: Selezionare tra le attività completate](../../parallel/concrt/how-to-select-among-completed-tasks.md).
 
 [[Torna all'inizio](#top)]
 
@@ -287,7 +287,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 Questo esempio Usa la [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo per calcolare i numeri di Fibonacci in parallelo. Per altre informazioni sulle `parallel_invoke`, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
-Per esempi completi che illustrano come usare il `join` classe, vedere [come: selezionare tra attività completate](../../parallel/concrt/how-to-select-among-completed-tasks.md) e [procedura dettagliata: uso della classe join per impedire un Deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Per esempi completi che illustrano come usare il `join` classe, vedere [come: Selezionare tra le attività completate](../../parallel/concrt/how-to-select-among-completed-tasks.md) e [procedura dettagliata: Uso della classe join per impedire un Deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
 [[Torna all'inizio](#top)]
 
@@ -313,7 +313,7 @@ Questo esempio produce l'output di esempio seguente:
 Computing fib(42)..................................................result is 267914296
 ```
 
-Per un esempio completo che illustra come usare il `timer` classe, vedere [procedura: inviare un messaggio a intervalli regolari](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
+Per un esempio completo che illustra come usare il `timer` classe, vedere [come: Inviare un messaggio a intervalli regolari](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
 
 [[Torna all'inizio](#top)]
 
@@ -340,7 +340,7 @@ bool (T const &)
 
 Per eliminare le operazioni di copia dei dati, utilizzare la seconda forma della presenza di un tipo di aggregazione che viene propagato dal valore.
 
-Il filtro supporta messaggi di *dataflow* modello di programmazione, in cui componenti eseguono i calcoli quando ricevono dati. Per esempi che usano funzioni di filtro per controllare il flusso di dati in una rete di passaggio di messaggi, vedere [procedura: usare un filtro di blocco del messaggio](../../parallel/concrt/how-to-use-a-message-block-filter.md), [procedura dettagliata: creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), e [ Procedura dettagliata: Creazione di una rete di elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Il filtro supporta messaggi di *dataflow* modello di programmazione, in cui componenti eseguono i calcoli quando ricevono dati. Per esempi che usano funzioni di filtro per controllare il flusso di dati in una rete di passaggio dei messaggi, vedere [come: Usare un filtro di blocco di messaggio](../../parallel/concrt/how-to-use-a-message-block-filter.md), [procedura dettagliata: Creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), e [procedura dettagliata: Creazione di una rete di elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Torna all'inizio](#top)]
 
@@ -352,11 +352,10 @@ Provare a non-greedy e greedy. Entrambi usano la prenotazione dei messaggi per r
 
 Un join greedy, che legge i messaggi di input anche da numerose origini, Usa la prenotazione dei messaggi per leggere i messaggi aggiuntivi durante l'attesa di ricevere un messaggio da ogni origine. Si consideri ad esempio un join greedy che riceve i messaggi da blocchi di messaggi `A` e `B`. Se il join greedy riceve due messaggi da B, ma non ha ancora ricevuto un messaggio dal `A`, il join greedy consente di salvare l'identificatore di messaggio univoco per il secondo messaggio da `B`. Dopo il join greedy riceve un messaggio dal `A` e propaga questi messaggi, Usa l'identificatore di messaggio salvato per vedere se il secondo messaggio da `B` è ancora disponibile.
 
-È possibile usare la prenotazione dei messaggi quando si implementano i tipi di blocco di messaggio personalizzato. Per un esempio su come creare un tipo di blocco di messaggi personalizzato, vedere [procedura dettagliata: creazione di un blocco di messaggio personalizzato](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
+È possibile usare la prenotazione dei messaggi quando si implementano i tipi di blocco di messaggio personalizzato. Per un esempio su come creare un tipo di blocco di messaggi personalizzato, vedere [procedura dettagliata: Creazione di un blocco di messaggio personalizzato](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
 
 [[Torna all'inizio](#top)]
 
 ## <a name="see-also"></a>Vedere anche
 
 [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)
-

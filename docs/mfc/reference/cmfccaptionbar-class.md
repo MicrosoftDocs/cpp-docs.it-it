@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429354"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264989"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (classe)
 
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] True per abilitare il pulsante, FALSE per disabilitare il pulsante.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*<br/>
+*elem*<br/>
 [in] Un elemento della barra di didascalia per il quale recuperare l'allineamento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -356,7 +356,7 @@ virtual void OnDrawBackground(
 *pDC*<br/>
 [in] Puntatore al contesto di dispositivo della barra del titolo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Per riempire il rettangolo di delimitazione.
 
 ### <a name="remarks"></a>Note
@@ -380,7 +380,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Un contesto di dispositivo che consente di visualizzare i bordi.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione.
 
 ### <a name="remarks"></a>Note
@@ -406,7 +406,7 @@ virtual void OnDrawButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo che consente di visualizzare il pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione del pulsante.
 
 *strButton*<br/>
@@ -434,7 +434,7 @@ virtual void OnDrawImage(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo che consente di visualizzare l'immagine.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Specifica il rettangolo di delimitazione dell'immagine.
 
 ### <a name="remarks"></a>Note
@@ -457,7 +457,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo che consente di visualizzare il pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione del testo.
 
 *strText*<br/>
@@ -714,7 +714,7 @@ void SetText(
 *strText*<br/>
 [in] La stringa di testo da impostare.
 
-*TextAlignment =*<br/>
+*textAlignment*<br/>
 [in] L'allineamento del testo.
 
 ### <a name="remarks"></a>Note

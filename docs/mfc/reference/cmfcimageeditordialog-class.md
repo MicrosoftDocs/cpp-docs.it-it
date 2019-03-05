@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 68cfa663f9be9f190a6d3425a2ebf6ceb73e2007
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 57b1df49616967841a433a36a504beed0b900cde
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175073"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278535"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Classe CMFCImageEditorDialog
 

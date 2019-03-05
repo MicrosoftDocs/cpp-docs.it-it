@@ -5,12 +5,12 @@ helpviewer_keywords:
 - views [MFC], advantages
 - document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
-ms.openlocfilehash: ccb2e786eb2397efd2d8b34e118f0935fdb05283
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e250630bf3c9714fc01ff66b66fba3ac0d5b1cc1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655965"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265457"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Vantaggi dell'architettura documento/visualizzazione
 
@@ -32,11 +32,10 @@ Questo scenario sarebbe difficile al codice senza la separazione dei dati dalla 
 
 - [CView](../mfc/reference/cview-class.md)
 
-- [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)
+- [CDocument::UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)
 
 - [CView::GetDocument](../mfc/reference/cview-class.md#getdocument)
 
 ## <a name="see-also"></a>Vedere anche
 
 [Architettura documento/visualizzazione](../mfc/document-view-architecture.md)
-

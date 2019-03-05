@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interfaces, availability
 - QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-ms.openlocfilehash: 552d0a0f5cbc93bd0d8fc6eb4a77eecee851add6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ec3c6e0d2b534c3af49000202461a43a65dae9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261462"
 ---
 # <a name="queryinterface"></a>QueryInterface
 
@@ -28,4 +28,3 @@ Si noti che è necessario rispettare [conteggio dei riferimenti](../atl/referenc
 
 [Introduzione a COM](../atl/introduction-to-com.md)<br/>
 [QueryInterface: Spostamenti all'interno di un oggetto](/windows/desktop/com/queryinterface--navigating-in-an-object)
-

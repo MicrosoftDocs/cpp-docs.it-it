@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176614"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279471"
 ---
 # <a name="cmfcribboncategory-class"></a>Classe CMFCRibbonCategory
 
@@ -219,7 +219,7 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::SetData](#setdata)|Archivia i dati definiti dall'utente nella categoria della barra multifunzione.|
 |[CMFCRibbonCategory::SetKeys](#setkeys)|Assegna un suggerimento tasto di scelta per la categoria della barra multifunzione.|
 |[CMFCRibbonCategory::SetName](#setname)||
-|[CMFCRibbonCategory:: Settabcolor](#settabcolor)|Imposta il colore della categoria della barra multifunzione.|
+|[CMFCRibbonCategory::SetTabColor](#settabcolor)|Imposta il colore della categoria della barra multifunzione.|
 
 ## <a name="remarks"></a>Note
 
@@ -1161,7 +1161,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Il codice tasto virtuale per la chiave di un utente ha premuto.
 
 ### <a name="remarks"></a>Note
@@ -1310,7 +1310,7 @@ BOOL RemovePanel(
 *nIndex*<br/>
 [in] Numero di indice del pannello da rimuovere. Ottenute chiamando il [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) (metodo).
 
-*bElimina*<br/>
+*bDelete*<br/>
 [in] TRUE per eliminare l'oggetto pannello dalla memoria. FALSE per rimuovere l'oggetto pannello senza eliminarlo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1406,7 +1406,7 @@ void SetName(LPCTSTR lpszName);
 
 Per impostare il suggerimento tasto di scelta per la categoria della barra multifunzione, aggiungere una sequenza di escape di nuova riga seguita dai caratteri al suggerimento tasto di scelta *lpszName*.
 
-##  <a name="settabcolor"></a>  CMFCRibbonCategory:: Settabcolor
+##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor
 
 Imposta il colore della categoria della barra multifunzione.
 

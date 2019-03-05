@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: e40483781427e3135d89a9339a34f606d45db77c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547355"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263871"
 ---
 # <a name="colepropertiesdialog-class"></a>Classe COlePropertiesDialog
 

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694660"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275233"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Classe CMFCToolBarButton
 
@@ -390,7 +390,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in] Valore booleano che determina se il pulsante è definito dall'utente. Se questo parametro è TRUE, il pulsante è definito dall'utente. In caso contrario, l'immagine del pulsante viene caricato da una risorsa.
 
-*Bloccato*<br/>
+*bLocked*<br/>
 [in] Valore booleano che determina se il pulsante può essere personalizzato. Se questo parametro è TRUE, non è possibile personalizzare il pulsante. In caso contrario, è possibile personalizzare il pulsante.
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -462,7 +462,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Impostare questo parametro su true per abilitare input o su FALSE per disattivare l'input.
 
 ### <a name="remarks"></a>Note
@@ -479,7 +479,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parametri
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in] Un riferimento al pulsante di menu della destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -824,7 +824,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Parametri
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Un handle di finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1201,7 +1201,7 @@ Questo metodo restituisce FALSE.
 
 L'implementazione predefinita di questo metodo non esegue alcuna operazione e restituisce FALSE. Eseguire l'override di questo metodo per restituire un valore diverso da zero se il pulsante elabora il messaggio della Guida.
 
-Per altre informazioni sul messaggio WM_HELPHITTEST, vedere [TN028: supporto della Guida sensibile al contesto](../../mfc/tn028-context-sensitive-help-support.md).
+Per altre informazioni sul messaggio WM_HELPHITTEST, vedere [TN028: Supporto della Guida sensibile al contesto](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1294,7 +1294,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Il contesto di dispositivo che visualizza il pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione del pulsante.
 
 *pImages*<br/>
@@ -1335,7 +1335,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Il contesto di dispositivo che visualizza il pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione del pulsante.
 
 *bSelected*<br/>
@@ -1410,7 +1410,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Specifica se il pulsante è visibile. Se questo parametro è TRUE, il pulsante è visibile. In caso contrario, il pulsante non è visibile.
 
 ### <a name="remarks"></a>Note
@@ -1449,7 +1449,7 @@ virtual BOOL OnToolHitTest(
 *pWnd*<br/>
 [in] La finestra padre del pulsante. Può essere NULL.
 
-*PTI*<br/>
+*pTI*<br/>
 [in] Oggetto `TOOLINFO` struttura che contiene informazioni su uno strumento in un controllo tooltip.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1582,7 +1582,7 @@ virtual void Serialize(CArchive& ar);
 
 Questo metodo supporta i processi di trasferimento dei dati, ad esempio negli Appunti o operazioni di trascinamento e rilascio. Legge o scrive le proprietà del pulsante, ad esempio l'ID etichetta di testo e ID dell'immagine da o verso l'oggetto fornito `CArchive` oggetto.
 
-Per esempi di serializzazione, vedere [serializzazione: serializzazione di un oggetto](../../mfc/serialization-serializing-an-object.md).
+Per esempi di serializzazione, vedere [serializzazione: Serializzazione di un oggetto](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 
@@ -1689,7 +1689,7 @@ void SetRect(const CRect rect);
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il nuovo rettangolo di delimitazione del pulsante.
 
 ### <a name="remarks"></a>Note
@@ -1723,7 +1723,7 @@ void SetVisible(BOOL bShow=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Valore booleano che specifica se mostrare o nascondere il pulsante. Se questo parametro è TRUE, viene visualizzato il pulsante. Se il parametro è FALSE, il pulsante è nascosto.
 
 ### <a name="remarks"></a>Note
@@ -1740,7 +1740,7 @@ void Show(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Valore booleano che specifica se mostrare o nascondere il pulsante. Se questo parametro è TRUE, viene visualizzato il pulsante. Se il parametro è FALSE, il pulsante è nascosto.
 
 ### <a name="remarks"></a>Note

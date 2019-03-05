@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 6b0c37f61ef437662a4e624c3a81edb526e7464c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636858"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263078"
 ---
 # <a name="message-class"></a>Classe message
 
@@ -111,20 +111,20 @@ message(
 
 ### <a name="parameters"></a>Parametri
 
-*P*<br/>
+*_P*<br/>
 Il payload del messaggio.
 
-*ID*<br/>
+*_Id*<br/>
 ID univoco di questo messaggio.
 
-*Msg*<br/>
+*_Msg*<br/>
 Un riferimento o puntatore a un `message` oggetto.
 
 ### <a name="remarks"></a>Note
 
 Il costruttore che accetta un puntatore a un `message` dell'oggetto come argomento viene generata un' [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione se il parametro `_Msg` è `NULL`.
 
-##  <a name="dtor"></a> ~ messaggio
+##  <a name="dtor"></a> ~message
 
 Elimina definitivamente il `message` oggetto.
 

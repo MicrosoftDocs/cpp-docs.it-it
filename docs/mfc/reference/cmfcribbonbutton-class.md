@@ -114,18 +114,18 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: 743390955c583a130b53b9e80acd2b01d9742e1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550380"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278158"
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 
 La classe `CMFCRibbonButton` implementa i pulsanti che è possibile posizionare negli elementi della barra multifunzione, ad esempio pannelli, barre di accesso rapido e menu a comparsa.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -154,17 +154,17 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
 |[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Restituisce l'indice di una voce di menu a comparsa associata all'ID di comando.|
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
-|[Cmfcribbonbutton:: Getcompactsize](#getcompactsize)|Restituisce la dimensione compatta dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Restituisce la dimensione compatta dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
 |[CMFCRibbonButton::GetIcon](#geticon)||
 |[CMFCRibbonButton::GetImageIndex](#getimageindex)|Restituisce l'indice dell'immagine associata al pulsante.|
 |[CMFCRibbonButton::GetImageSize](#getimagesize)|Restituisce la dimensione dell'immagine dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
-|[Cmfcribbonbutton:: Getintermediatesize](#getintermediatesize)|Restituisce la dimensione dell'elemento della barra multifunzione nello stato intermedio. (Esegue l'override [cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Restituisce la dimensione dell'elemento della barra multifunzione nello stato intermedio. (Esegue l'override [cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
 |[CMFCRibbonButton::GetMenu](#getmenu)|Restituisce un handle a un menu di Windows assegnato al pulsante della barra multifunzione.|
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||
-|[Cmfcribbonbutton:: Getregularsize](#getregularsize)|Restituisce la dimensione regolare dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Restituisce la dimensione regolare dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
-|[Cmfcribbonbutton:: GetToolTipText](#gettooltiptext)|Restituisce il testo della descrizione comando dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Restituisce il testo della descrizione comando dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
 |[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Specifica se l'elemento della barra multifunzione dispone di una modalità compatta. (Esegue l'override [cmfcribbonbaseelement:: Hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
 |[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Specifica se l'elemento della barra multifunzione dispone di una modalità intermedia. (Esegue l'override [cmfcribbonbaseelement:: Hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
 |[CMFCRibbonButton::HasLargeMode](#haslargemode)|Specifica se l'elemento della barra multifunzione dispone di una modalità di dimensioni elevate. (Esegue l'override [cmfcribbonbaseelement:: Haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
@@ -184,11 +184,11 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
 |[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Esegue l'override [cmfcribbonbaseelement:: Oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
-|[Cmfcribbonbutton:: OnDraw](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonButton::OnDraw](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
 |[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Rimuove tutte le voci di menu dal menu a comparsa.|
 |[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Rimuove una voce di menu dal menu a comparsa.|
-|[Cmfcribbonbutton:: Setaccdata](#setaccdata)|(Esegue l'override [cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(Esegue l'override [cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
 |[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Specifica se il pulsante visualizza un'immagine di grandi o piccole dimensioni quando l'utente comprime il pulsante.|
 |[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Abilita il comando predefinito per il pulsante della barra multifunzione.|
 |[CMFCRibbonButton::SetDescription](#setdescription)|Imposta la descrizione dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: setDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|
@@ -364,7 +364,7 @@ virtual void DrawImage(
 ### <a name="parameters"></a>Parametri
 
 [in] *pDC*<br/>
-[in] *tipo*<br/>
+[in] *type*<br/>
 [in] *rectImage*<br/>
 
 ### <a name="remarks"></a>Note
@@ -419,7 +419,7 @@ CRect GetCommandRect() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getcompactsize"></a>  Cmfcribbonbutton:: Getcompactsize
+##  <a name="getcompactsize"></a>  CMFCRibbonButton::GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -472,13 +472,13 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *tipo*<br/>
+[in] *type*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getintermediatesize"></a>  Cmfcribbonbutton:: Getintermediatesize
+##  <a name="getintermediatesize"></a>  CMFCRibbonButton::GetIntermediateSize
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -514,7 +514,7 @@ CRect GetMenuRect() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getregularsize"></a>  Cmfcribbonbutton:: Getregularsize
+##  <a name="getregularsize"></a>  CMFCRibbonButton::GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -548,7 +548,7 @@ int GetTextRowHeight() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="gettooltiptext"></a>  Cmfcribbonbutton:: GetToolTipText
+##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -754,7 +754,7 @@ virtual void OnClick(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica la posizione di clic del mouse.
 
 ### <a name="remarks"></a>Note
@@ -824,7 +824,7 @@ BOOL RemoveSubItem(int nIndex);
 
 TRUE se l'elemento specificato è stato rimosso correttamente; in caso contrario, FALSE se *nIndex* è negativo o supera il numero di voci di menu nel menu a comparsa.
 
-##  <a name="setaccdata"></a>  Cmfcribbonbutton:: Setaccdata
+##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData
 
 Imposta i dati di accessibilità per il pulsante della barra multifunzione.
 

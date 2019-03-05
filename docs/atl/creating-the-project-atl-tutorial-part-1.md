@@ -3,12 +3,12 @@ title: Creazione del progetto (Esercitazione di ATL, parte 1)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: dab9bdab75bb710bf73314aae7283611d9a3b5cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539581"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273928"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Creazione del progetto (Esercitazione di ATL, parte 1)
 
@@ -56,11 +56,11 @@ Il **Creazione guidata progetto ATL** creerà il progetto tramite la generazione
 
 |File|Descrizione|
 |----------|-----------------|
-|Polygon|Contiene l'implementazione di `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, e `DllUnregisterServer`. Contiene inoltre la mappa di oggetti, ovvero un elenco degli oggetti nel progetto ATL. È inizialmente vuoto.|
+|Polygon.cpp|Contiene l'implementazione di `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, e `DllUnregisterServer`. Contiene inoltre la mappa di oggetti, ovvero un elenco degli oggetti nel progetto ATL. È inizialmente vuoto.|
 |Polygon.def|Questo file di definizione moduli fornisce al linker con informazioni sulle esportazioni richieste dalla DLL.|
-|Polygon. idl|L'interfaccia file definition language, che descrive le interfacce specifiche degli oggetti.|
+|Polygon.idl|L'interfaccia file definition language, che descrive le interfacce specifiche degli oggetti.|
 |Polygon.rgs|Questo script del Registro di sistema contiene informazioni per la registrazione della DLL del programma.|
-|Polygon|Il file di risorse, che inizialmente contiene le informazioni sulla versione e una stringa contenente il nome del progetto.|
+|Polygon.rc|Il file di risorse, che inizialmente contiene le informazioni sulla versione e una stringa contenente il nome del progetto.|
 |Resource.h|File di intestazione per il file di risorse.|
 |Polygonps.def|Questo file di definizione moduli fornisce al linker con informazioni sulle esportazioni richieste dal codice proxy e stub che supportano le chiamate tra gli apartment.|
 |stdafx.cpp|Il file che verranno `#include` i file di implementazione di ATL.|

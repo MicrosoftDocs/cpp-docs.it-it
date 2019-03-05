@@ -10,16 +10,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266146"
 ---
 # <a name="collection-class-helpers"></a>Supporti delle classi Collection
 
-Le classi di raccolte `CMap`, `CList`, e `CArray` usare funzioni di supporto globale basato su modelli per tali scopi come il confronto, la copia e la serializzazione di elementi. Come parte dell'implementazione di classi basate sullo `CMap`, `CList`, e `CArray`, è necessario eseguire l'override di queste funzioni in base alle esigenze con le versioni personalizzate in base al tipo di dati archiviati nella mappa, elenco o una matrice. Per informazioni sull'override, ad esempio le funzioni di supporto `SerializeElements`, vedere l'articolo [raccolte: come apportare una raccolta indipendente dai tipi](../../mfc/how-to-make-a-type-safe-collection.md). Si noti che `ConstructElements` e `DestructElements` sono state deprecate.
+Le classi di raccolte `CMap`, `CList`, e `CArray` usare funzioni di supporto globale basato su modelli per tali scopi come il confronto, la copia e la serializzazione di elementi. Come parte dell'implementazione di classi basate sullo `CMap`, `CList`, e `CArray`, è necessario eseguire l'override di queste funzioni in base alle esigenze con le versioni personalizzate in base al tipo di dati archiviati nella mappa, elenco o una matrice. Per informazioni sull'override, ad esempio le funzioni di supporto `SerializeElements`, vedere l'articolo [raccolte: Come effettuare una raccolta indipendente dai tipi](../../mfc/how-to-make-a-type-safe-collection.md). Si noti che `ConstructElements` e `DestructElements` sono state deprecate.
 
 La libreria Microsoft Foundation Class fornisce le funzioni globali seguenti nel afxtempl. h per personalizzare classi di raccolte:
 
@@ -105,7 +105,7 @@ Numero di elementi da copiare.
 
 L'implementazione predefinita viene usato l'operatore di assegnazione semplice ( **=** ) per eseguire l'operazione di copia. Se il tipo che viene copiato non dispone di un operator= in overload, l'implementazione predefinita esegue una copia bit per bit.
 
-Per informazioni sull'implementazione di questa e altre funzioni di supporto, vedere l'articolo [raccolte: come apportare una raccolta indipendente dai tipi](../how-to-make-a-type-safe-collection.md).
+Per informazioni sull'implementazione di questa e altre funzioni di supporto, vedere l'articolo [raccolte: Come effettuare una raccolta indipendente dai tipi](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -216,11 +216,11 @@ Numero di elementi da archiviare
 
 L'implementazione predefinita non bit per bit di lettura o scrittura.
 
-Per informazioni sull'implementazione di questa e altre funzioni di supporto, vedere l'articolo [raccolte: come apportare una raccolta indipendente dai tipi](../how-to-make-a-type-safe-collection.md).
+Per informazioni sull'implementazione di questa e altre funzioni di supporto, vedere l'articolo [raccolte: Come effettuare una raccolta indipendente dai tipi](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio nell'articolo [raccolte: come apportare una raccolta indipendente dai tipi](../how-to-make-a-type-safe-collection.md).
+Vedere l'esempio nell'articolo [raccolte: Come effettuare una raccolta indipendente dai tipi](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Requisiti
 

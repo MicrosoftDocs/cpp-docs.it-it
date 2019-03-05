@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-ms.openlocfilehash: 6e3f874aa7c20494483172d7c7c3efee362cf6a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ede76a81a77d489d0f2316bd3ae4cb7f84d704
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569871"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268616"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>Struttura IVirtualProcessorRoot
 
@@ -35,7 +35,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
 |Nome|Descrizione|
 |----------|-----------------|
 |[IVirtualProcessorRoot::Activate](#activate)|Fa sì che il proxy thread associato all'interfaccia contesto esecuzione `pContext` per avviare l'esecuzione in questa radice del processore virtuale.|
-|[IVirtualProcessorRoot:: Deactivate](#deactivate)|Fa sì che il proxy thread attualmente in esecuzione in questa radice del processore virtuale per arrestare l'invio del contesto di esecuzione. Il proxy thread riprende l'esecuzione in una chiamata al `Activate` (metodo).|
+|[IVirtualProcessorRoot::Deactivate](#deactivate)|Fa sì che il proxy thread attualmente in esecuzione in questa radice del processore virtuale per arrestare l'invio del contesto di esecuzione. Il proxy thread riprende l'esecuzione in una chiamata al `Activate` (metodo).|
 |[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Fa sì che i dati archiviati nella gerarchia di memoria dei singoli processori siano visibili a tutti i processori nel sistema. Assicura che un limite di memoria completa è stato eseguito su tutti i processori prima che il metodo restituisce.|
 |[IVirtualProcessorRoot::GetId](#getid)|Restituisce un identificatore univoco per la radice del processore virtuale.|
 

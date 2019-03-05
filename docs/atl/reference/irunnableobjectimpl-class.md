@@ -16,12 +16,12 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-ms.openlocfilehash: ebee914ffb9caea905b9bf2daab87dc379ab20e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44b1e0ae1b72a40b45abe0650eb69a279b5a84d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646523"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269656"
 ---
 # <a name="irunnableobjectimpl-class"></a>Classe IRunnableObjectImpl
 

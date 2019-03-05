@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 53dac18b2ee0176eba0a869a0af254ff2978cffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562227"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270423"
 ---
 # <a name="cexception-class"></a>CException (classe)
 
@@ -64,7 +64,7 @@ Le classi derivate e le relative descrizioni sono elencate di seguito:
 |[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|Eccezione OLE dispatch (automazione)|
 |[CUserException](../../mfc/reference/cuserexception-class.md)|Eccezione che indica che una risorsa non è stata trovata|
 |[CDaoException](../../mfc/reference/cdaoexception-class.md)|Eccezione relativa all'oggetto (vale a dire, condizioni di eccezione derivati per classi DAO) di accesso ai dati|
-|[Classe CInternetException](../../mfc/reference/cinternetexception-class.md)|Eccezione di Internet (vale a dire, condizioni di eccezione derivati per classi Internet).|
+|[CInternetException](../../mfc/reference/cinternetexception-class.md)|Eccezione di Internet (vale a dire, condizioni di eccezione derivati per classi Internet).|
 
 Queste eccezioni devono essere utilizzati con il [THROW](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [provare](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch), e [end_catch](exception-processing.md#end_catch) macro. Per altre informazioni sulle eccezioni, vedere [elaborazione delle eccezioni](exception-processing.md), oppure vedere l'articolo [gestione delle eccezioni (MFC)](../exception-handling-in-mfc.md).
 
@@ -180,7 +180,7 @@ virtual int ReportError(
 
 ### <a name="parameters"></a>Parametri
 
-*NLE*<br/>
+*nType*<br/>
 Specifica lo stile della finestra di messaggio. Applicare qualsiasi combinazione dei [stili message-box](styles-used-by-mfc.md#message-box-styles) alla casella. Se non si specifica questo parametro, il valore predefinito è MB_OK.
 
 *nMessageID*<br/>
@@ -231,5 +231,4 @@ else
 [Classe CObject](cobject-class.md)<br/>
 [Grafico della gerarchia](../hierarchy-chart.md)<br/>
 [Elaborazione delle eccezioni](exception-processing.md)<br/>
-[Procedura: creazione di una classi di eccezioni personalizzate](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[Procedura: Creare una classi di eccezioni personalizzate](http://go.microsoft.com/fwlink/p/?linkid=128045)

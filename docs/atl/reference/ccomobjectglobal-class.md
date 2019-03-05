@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: ebaec439393a67331293cbf47abd08a5e7e416af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec3abd04ce72cce98dae72a1ed8cbb8d9fe72079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485566"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267433"
 ---
 # <a name="ccomobjectglobal-class"></a>Classe CComObjectGlobal
 
@@ -32,7 +32,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Parametri
 
-*base*<br/>
+*Base*<br/>
 La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da qualsiasi altra interfaccia si desidera supportare nell'oggetto.
 
 ## <a name="members"></a>Membri
@@ -42,7 +42,7 @@ La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|Costruttore.|
-|[CComObjectGlobal:: ~ CComObjectGlobal](#dtor)|Distruttore.|
+|[CComObjectGlobal::~CComObjectGlobal](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -102,7 +102,7 @@ CComObjectGlobal(void* = NULL));
 
 Se non è stata derivata la classe base dalla [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire il proprio `FinalConstruct` (metodo). Il distruttore chiama `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal
+##  <a name="dtor"></a>  CComObjectGlobal::~CComObjectGlobal
 
 Distruttore.
 
@@ -132,7 +132,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
 *ppvObject*<br/>

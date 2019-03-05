@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-ms.openlocfilehash: cc0c5f0abc125138c5068682c828a3438dec5102
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: e94d92b11a7f200edb1815a0b384d0fc0428001f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893353"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280329"
 ---
 # <a name="csocketaddr-class"></a>Classe CSocketAddr
 

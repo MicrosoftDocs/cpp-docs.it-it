@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 107f791505bc41b8dbf9c0374c5e3821abbc0fe3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669066"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262623"
 ---
 # <a name="casyncmonikerfile-class"></a>Classe CAsyncMonikerFile
 
@@ -87,9 +87,9 @@ Moniker asincroni vengono utilizzati principalmente in applicazioni abilitate pe
 
 Per altre informazioni su come usare i controlli ActiveX e moniker asincroni nelle applicazioni di Internet, vedere gli articoli seguenti:
 
-- [Internet primi passaggi: Moniker asincroni](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Prime operazioni in Internet: Moniker asincroni](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [Internet primi passaggi: Controlli ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Prime operazioni in Internet: Controlli ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -234,7 +234,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 
 ### <a name="parameters"></a>Parametri
 
-*dwSize diverso da*<br/>
+*dwSize*<br/>
 Il tempo cumulativo (in byte) disponibile a partire dall'inizio dell'associazione dati. Può essere zero, che indica che la quantità di dati non è rilevante per l'operazione o che è diventato disponibile alcuna quantità specifica.
 
 *bscfFlag*<br/>
@@ -400,7 +400,7 @@ Un puntatore all'interfaccia di moniker asincrono `IMoniker`, un preciso moniker
 *pBindHost*<br/>
 Un puntatore al `IBindHost` interfaccia che verrà utilizzato per creare il moniker da un percorso potenzialmente relativo. Se l'host di binding non è valido o non fornisce un moniker, valore predefinito è la chiamata `Open(lpszFileName,pError)`. Per una descrizione del `IBindHost` interfaccia, vedere il SDK di Windows.
 
-*probabilmente pServiceProvider*<br/>
+*pServiceProvider*<br/>
 Puntatore all'interfaccia `IServiceProvider`. Se il provider del servizio non è valido o non riesce a fornire il servizio per `IBindHost`, per impostazione predefinita la chiamata `Open(lpszFileName,pError)`.
 
 *pUnknown*<br/>

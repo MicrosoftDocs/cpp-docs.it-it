@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579238"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270228"
 ---
 # <a name="cdaotabledef-class"></a>Classe CDaoTableDef
 
@@ -101,11 +101,11 @@ class CDaoTableDef : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDaoTableDef:: Append](#append)|Aggiunge una nuova tabella nel database.|
+|[CDaoTableDef::Append](#append)|Aggiunge una nuova tabella nel database.|
 |[CDaoTableDef::CanUpdate](#canupdate)|Restituisce diversi da zero se la tabella può essere aggiornata (è possibile modificare la definizione dei campi o proprietà della tabella).|
 |[CDaoTableDef::Close](#close)|Chiude un tabledef open.|
 |[CDaoTableDef::Create](#create)|Crea una tabella che può essere aggiunto al database usando [Append](#append).|
-|[CDaoTableDef:: CreateField](#createfield)|Chiamato per creare un campo per una tabella.|
+|[CDaoTableDef::CreateField](#createfield)|Chiamato per creare un campo per una tabella.|
 |[CDaoTableDef::CreateIndex](#createindex)|Chiamato per creare un indice per una tabella.|
 |[CDaoTableDef::DeleteField](#deletefield)|Chiamata eseguita per eliminare un campo da una tabella.|
 |[CDaoTableDef::DeleteIndex](#deleteindex)|Chiamata eseguita per eliminare un indice di una tabella.|
@@ -296,7 +296,7 @@ Una volta che si è denominata tabledef, è quindi possibile chiamare [Append](#
 
 Per informazioni correlate, vedere l'argomento "CreateTableDef Method" nella Guida di DAO.
 
-##  <a name="createfield"></a>  CDaoTableDef:: CreateField
+##  <a name="createfield"></a>  CDaoTableDef::CreateField
 
 Chiamare questa funzione membro per aggiungere un campo alla tabella.
 
@@ -315,7 +315,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *lpszName*<br/>
 Puntatore a un'espressione stringa che specifica il nome di questo campo.
 
-*NLE*<br/>
+*nType*<br/>
 Un valore che indica il tipo di dati del campo. L'impostazione può essere uno dei valori seguenti:
 
 |Tipo|Dimensioni (byte)|Descrizione|
@@ -327,8 +327,8 @@ Un valore che indica il tipo di dati del campo. L'impostazione può essere uno d
 |`dbCurrency`|8|Valuta ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|float|
 |`dbDouble`|8|double|
-|`dbDate`|8|Data/ora ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
-|`dbText`|1 - 255|Testo ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
+|`dbDate`|8|Date/Time ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
+|`dbText`|1 - 255|Text ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|File binario long (oggetto OLE), [CLongBinary](../../mfc/reference/clongbinary-class.md) o [CByteArray](../../mfc/reference/cbytearray-class.md)|
 |`dbMemo`|0|Memo ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 
@@ -346,7 +346,7 @@ Un valore che corrisponde alle caratteristiche del campo e che può essere combi
 |`dbUpdatableField`|Il valore del campo può essere modificato.|
 |`dbDescending`|Il campo viene ordinato in ordine decrescente (a-Z o 0 a 100) ordine (si applica solo a un oggetto di campo in una raccolta di campi di un oggetto Index). Se si omette questa costante, il campo viene ordinato in ordine crescente (A - Z o 0, 100) ordine (impostazione predefinita).|
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Un riferimento a un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) struttura.
 
 ### <a name="remarks"></a>Note
@@ -574,7 +574,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 L'indice dell'oggetto campo della tabella in base zero campi insieme, per la ricerca in base all'indice.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Un riferimento a un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) struttura.
 
 *dwInfoOptions*<br/>
@@ -582,9 +582,9 @@ Opzioni che specificano le informazioni sul campo da recuperare. Le opzioni disp
 
 - `AFX_DAO_PRIMARY_INFO` (Impostazione predefinita) Nome, tipo, dimensione, attributi. Usare questa opzione per ottenere prestazioni più veloci.
 
-- `AFX_DAO_SECONDARY_INFO` Informazioni principali, oltre a: posizione ordinale, richiesto, consentire Zero tabella di origine esterna nome, il campo di origine, lunghezza, ordine di ordinamento,
+- `AFX_DAO_SECONDARY_INFO` Informazioni principali, oltre a: Posizione ordinale, richiesta, consentire a lunghezza Zero, di confronto dell'ordine, nome esterna, campo di origine, la tabella di origine
 
-- `AFX_DAO_ALL_INFO` Informazioni primari e secondari, oltre a: regola di convalida, il testo di convalida, valore predefinito
+- `AFX_DAO_ALL_INFO` Informazioni primari e secondari, oltre a: Valore predefinito di regola, il testo di convalida, convalida
 
 *lpszName*<br/>
 Un puntatore al nome dell'oggetto campo, per la ricerca in base al nome. Il nome è una stringa con un massimo di 64 caratteri che identifica in modo univoco i nomi di campo.
@@ -644,9 +644,9 @@ Opzioni che specificano le informazioni sull'indice da recuperare. Le opzioni di
 
 - `AFX_DAO_PRIMARY_INFO` Campi nome, le informazioni di campo. Usare questa opzione per ottenere prestazioni più veloci.
 
-- `AFX_DAO_SECONDARY_INFO` Informazioni primarie, oltre a: database primario, Unique, Clustered, ignorare i valori null, obbligatorio, esterna
+- `AFX_DAO_SECONDARY_INFO` Informazioni principali, oltre a: Primaria e univoci, cluster, ignorare i valori null, obbligatorio, esterno
 
-- `AFX_DAO_ALL_INFO` Informazioni primari e secondari, oltre a: Distinct Count
+- `AFX_DAO_ALL_INFO` Informazioni primari e secondari, oltre a: Misura Distinct Count
 
 *lpszName*<br/>
 Un puntatore al nome dell'oggetto, indice di ricerca in base al nome.
@@ -865,19 +865,19 @@ La tabella seguente illustra i tipi possibili database e i corrispondenti identi
 |Database con il motore di database Jet|"[ `database`];"|" `drive`:\\\ *path*\\\ *nomefile*. MDB"|
 |file dBASE III|"dBASE III;"|" `drive`:\\\ *percorso*"|
 |file dBASE IV|"dBASE IV;"|" `drive`:\\\ *percorso*"|
-|file dBASE 5|"dBASE 5.0;"|" `drive`:\\\ *percorso*"|
+|dBASE 5|"dBASE 5.0;"|" `drive`:\\\ *percorso*"|
 |Paradox 3.x|"Paradox 3.x;"|" `drive`:\\\ *percorso*"|
 |Paradox 4.x|"Paradox 4.x;"|" `drive`:\\\ *percorso*"|
 |Paradox 5.x|"Paradox 5.x;"|" `drive`:\\\ *percorso*"|
-|3.0 di Excel|"Excel 3.0;"|" `drive`:\\\ *path*\\\ *nomefile*. XLS"|
-|Excel 4.0|"Excel 4.0".|" `drive`:\\\ *path*\\\ *nomefile*. XLS"|
+|Excel 3.0|"Excel 3.0;"|" `drive`:\\\ *path*\\\ *nomefile*. XLS"|
+|Excel 4.0|"Excel 4.0;"|" `drive`:\\\ *path*\\\ *nomefile*. XLS"|
 |Excel 5.0 o Microsoft Excel 95|"Excel 5.0;"|" `drive`:\\\ *path*\\\ *nomefile*. XLS"|
-|Excel 97|"Excel 8.0";|" `drive`:\\\ *path*\ *filename*. XLS"|
+|Excel 97|"Excel 8.0;"|" `drive`:\\\ *path*\ *filename*. XLS"|
 |Importazione di HTML|"HTML"importazione;|" `drive`:\\\ *path*\ *filename*"|
 |Esportazione HTML|"Esportazione HTML;"|" `drive`:\\\ *percorso*"|
-|Testo|"Testo";|"unità:\\\path"|
+|Testo|"Text;"|"unità:\\\path"|
 |ODBC|"ODBC; DATABASE = `database`; UID = *utente*; PWD = *password*; DSN = *datasourcename;* LOGINTIMEOUT = *secondi;*" (Ciò potrebbe non essere una stringa di connessione completa per tutti i server, ma è solo un esempio. È molto importante non siano presenti spazi tra i parametri.)|nessuno|
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [Profilo = *profilo*;]<br /><br /> [PWD = *password*;]<br /><br /> [DATABASE = `database`;] "|*"unità*:\\\ *path*\\\ *nomefile*. MDB"|
+|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*"unità*:\\\ *path*\\\ *nomefile*. MDB"|
 
 > [!NOTE]
 >  Btrieve non è più supportata a partire da DAO 3.5.

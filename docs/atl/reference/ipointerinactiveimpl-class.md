@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inactive objects
 - IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
-ms.openlocfilehash: 2c072dd158616b04d10e4aed091c7e26a3512ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7d9f048fceb3a569b024d7fe2b87f30a828b68e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487893"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266835"
 ---
 # <a name="ipointerinactiveimpl-class"></a>Classe IPointerInactiveImpl
 

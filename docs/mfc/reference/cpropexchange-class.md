@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-ms.openlocfilehash: 772388d069bdec274bd396b776d404711b694771
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4210399e32c2bb39008afa75b787c19e3338a7d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560372"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276352"
 ---
 # <a name="cpropexchange-class"></a>Classe CPropExchange
 
@@ -50,7 +50,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::ExchangePersistentProp](#exchangepersistentprop)|Scambia una proprietà tra un controllo e un file.|
 |[CPropExchange::ExchangeProp](#exchangeprop)|Scambia le proprietà di qualsiasi tipo predefinito.|
 |[CPropExchange::ExchangeVersion](#exchangeversion)|Scambia il numero di versione di un controllo OLE.|
-|[CPropExchange:: GetVersion](#getversion)|Recupera il numero di versione di un controllo OLE.|
+|[CPropExchange::GetVersion](#getversion)|Recupera il numero di versione di un controllo OLE.|
 |[CPropExchange::IsAsynchronous](#isasynchronous)|Determina se gli scambi di proprietà vengono eseguiti in modo asincrono.|
 |[CPropExchange::IsLoading](#isloading)|Indica se le proprietà vengono caricati nel controllo o salvato da quest'ultimo.|
 
@@ -68,7 +68,7 @@ Il framework passa un puntatore a questa `CPropExchange` oggetto per il controll
 
 `CPropExchange` può essere utilizzato per serializzare le proprietà di un controllo o inizializzare le proprietà di un controllo durante il caricamento o la creazione di un controllo. Il `ExchangeProp` e `ExchangeFontProp` dalle funzioni membro di `CPropExchange` sono in grado di archiviare proprietà a e caricarli dai supporti diversi.
 
-Per altre informazioni sull'uso `CPropExchange`, vedere l'articolo [controlli ActiveX MFC: pagine delle proprietà](../../mfc/mfc-activex-controls-property-pages.md).
+Per altre informazioni sull'uso `CPropExchange`, vedere l'articolo [controlli ActiveX MFC: Pagine delle proprietà](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -127,7 +127,7 @@ virtual BOOL ExchangeFontProp(
 *pszPropName*<br/>
 Il nome della proprietà scambiati.
 
-*tipo di carattere*<br/>
+*font*<br/>
 Un riferimento a un [CFontHolder](../../mfc/reference/cfontholder-class.md) oggetto che contiene la proprietà del tipo di carattere.
 
 *pFontDesc*<br/>
@@ -166,7 +166,7 @@ Il nome della proprietà scambiati.
 *ppUnk*<br/>
 Un puntatore a una variabile che contiene un puntatore alla proprietà `IUnknown` interfaccia (questa variabile è in genere un membro della classe).
 
-*IID*<br/>
+*iid*<br/>
 ID di interfaccia dell'interfaccia sulla proprietà che verrà utilizzato il controllo.
 
 *pUnkDefault*<br/>
@@ -254,7 +254,7 @@ Indica se convertire i dati persistenti alla versione corrente o lasciare la ste
 
 Diverso da zero se la funzione ha esito positivo. in caso contrario 0.
 
-##  <a name="getversion"></a>  CPropExchange:: GetVersion
+##  <a name="getversion"></a>  CPropExchange::GetVersion
 
 Chiamare questa funzione per recuperare il numero di versione del controllo.
 
@@ -294,4 +294,3 @@ Diverso da zero se il caricamento delle proprietà; in caso contrario 0.
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-

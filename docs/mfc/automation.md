@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: de376c6c5ab2be0da5f6b9495c6adb61e19d6622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572757"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265563"
 ---
 # <a name="automation"></a>automazione
 
@@ -49,7 +49,7 @@ Molte applicazioni commerciali, quali Microsoft Excel e Microsoft Visual C++, pe
 
 ##  <a name="_core_passing_parameters_in_automation"></a> Passaggio di parametri nell'automazione
 
-Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il tipo **VARIANT** supporta numerosi tipi di dati standard: interi a 2 e a 4 byte, numeri in virgola mobile a 4 e a 8 byte, stringhe e valori Boolean. Inoltre, supporta il **HRESULT** (codici di errore OLE), **valuta** (un tipo numerico a virgola fissa), e **data** tipi (assoluto data e ora), nonché puntatori alle `IUnknown` e `IDispatch` interfacce.
+Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il **VARIANT** tipo supporta numerosi tipi di dati standard: numeri interi a 2 e 4 byte, numeri a virgola mobile a 4 e 8 byte, stringhe e valori booleani. Inoltre, supporta il **HRESULT** (codici di errore OLE), **valuta** (un tipo numerico a virgola fissa), e **data** tipi (assoluto data e ora), nonché puntatori alle `IUnknown` e `IDispatch` interfacce.
 
 Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/colevariant-class.md) . Le classi **CURRENCY** e **DATE** di supporto sono incapsulate nelle classi [COleCurrency](../mfc/reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .
 

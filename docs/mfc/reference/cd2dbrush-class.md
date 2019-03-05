@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: 9e0be4b3b4f39d8fcf32f713bc8765d1f344babe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d079ec6c96f96919fde39b73297580ed2a0ac75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517884"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270982"
 ---
 # <a name="cd2dbrush-class"></a>Classe CD2DBrush
 
@@ -54,21 +54,21 @@ class CD2DBrush : public CD2DResource;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DBrush::CD2DBrush](#cd2dbrush)|Costruisce un oggetto CD2DBrush.|
-|[CD2DBrush:: ~ CD2DBrush](#_dtorcd2dbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto brush D2D.|
+|[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto brush D2D.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DBrush::Attach](#attach)|Collega esistente all'oggetto di interfaccia delle risorse|
-|[CD2DBrush:: Destroy](#destroy)|Elimina un oggetto CD2DBrush. (Esegue l'override [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DBrush::Destroy](#destroy)|Elimina un oggetto CD2DBrush. (Esegue l'override [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
 |[CD2DBrush::Detach](#detach)|Scollega interfaccia di risorse dall'oggetto|
 |[CD2DBrush::Get](#get)|Restituisce l'interfaccia ID2D1Brush|
 |[CD2DBrush::GetOpacity](#getopacity)|Ottiene il livello di opacità di questo pennello|
 |[CD2DBrush::GetTransform](#gettransform)|Ottiene la trasformazione corrente della destinazione di rendering|
 |[CD2DBrush::IsValid](#isvalid)|Controlla la validità della risorsa (esegue l'override [CD2DResource:: IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
 |[CD2DBrush::SetOpacity](#setopacity)|Imposta il livello di opacità di questo pennello|
-|[CD2DBrush::setTransform](#settransform)|Applica la trasformazione specificata alla destinazione di rendering, sostituendo la trasformazione esistente. Tutte le operazioni di disegnare successive si verificano nello spazio trasformato|
+|[CD2DBrush::SetTransform](#settransform)|Applica la trasformazione specificata alla destinazione di rendering, sostituendo la trasformazione esistente. Tutte le operazioni di disegnare successive si verificano nello spazio trasformato|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -95,7 +95,7 @@ class CD2DBrush : public CD2DResource;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="_dtorcd2dbrush"></a>  CD2DBrush:: ~ CD2DBrush
+##  <a name="_dtorcd2dbrush"></a>  CD2DBrush::~CD2DBrush
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto brush D2D.
 
@@ -135,7 +135,7 @@ Puntatore alla destinazione di rendering.
 *pBrushProperties*<br/>
 Un puntatore all'opacità e alla trasformazione di un pennello.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 ##  <a name="destroy"></a>  CD2DBrush:: Destroy
@@ -245,10 +245,10 @@ void SetOpacity(FLOAT opacity);
 
 ### <a name="parameters"></a>Parametri
 
-*Opacità*<br/>
+*opacity*<br/>
 Un valore compreso tra 0 e 1 che indica l'opacità del pennello. Questo valore è un moltiplicatore costante che viene ridimensionata in modo lineare il valore alfa di tutti i pixel riempita con il pennello. I valori dell'opacità sono compresi nell'intervallo da 0 a 1 prima che essi vengono moltiplicati insieme.
 
-##  <a name="settransform"></a>  CD2DBrush::setTransform
+##  <a name="settransform"></a>  CD2DBrush::SetTransform
 
 Applica la trasformazione specificata alla destinazione di rendering, sostituendo la trasformazione esistente. Tutte le operazioni di disegnare successive si verificano nello spazio trasformato.
 

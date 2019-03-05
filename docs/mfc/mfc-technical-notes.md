@@ -8,12 +8,12 @@ helpviewer_keywords:
 - technical notes, MFC
 - technical notes [MFC]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
-ms.openlocfilehash: 012253a571fc4302e692914e82907667280b95b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e107e82596b1063b507851c5943797bffbc0c5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640453"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262727"
 ---
 # <a name="mfc-technical-notes"></a>Note tecniche MFC
 
@@ -30,4 +30,3 @@ Esistono due modi per esplorare le note tecniche:
 ## <a name="see-also"></a>Vedere anche
 
 [Applicazioni desktop MFC](../mfc/mfc-desktop-applications.md)
-

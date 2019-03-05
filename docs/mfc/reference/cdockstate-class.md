@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 56be735aa99cfebe4ec64ff76f53d28cc9b9779e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443602"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262688"
 ---
 # <a name="cdockstate-class"></a>Classe CDockState
 
@@ -58,7 +58,7 @@ La barra può essere qualsiasi controllo ancorata a barre, tra cui una barra deg
 
 [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) recupera le informazioni sullo stato di tutti i frame della finestra `CControlBar` degli oggetti e li inserisce nel `CDockState` oggetto. È quindi possibile scrivere il contenuto del `CDockState` oggetto da archiviare con [Serialize](../../mfc/reference/cobject-class.md#serialize) oppure [CDockState::SaveState](#savestate). Se si desidera che in un secondo momento ripristinare lo stato delle barre di controllo nella finestra cornice, è possibile caricare lo stato con `Serialize` oppure [CDockState::LoadState](#loadstate), quindi utilizzare [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) per applicare il salvato stato da barre di controllo della finestra cornice.
 
-Per ulteriori informazioni sull'ancoraggio le barre di controllo, vedere gli articoli [barre di controllo](../../mfc/control-bars.md), [barre degli strumenti: ancorate e mobili](../../mfc/docking-and-floating-toolbars.md), e [Frame Windows](../../mfc/frame-windows.md).
+Per ulteriori informazioni sull'ancoraggio le barre di controllo, vedere gli articoli [barre di controllo](../../mfc/control-bars.md), [barre degli strumenti: Ancorate e mobili](../../mfc/docking-and-floating-toolbars.md), e [Frame Windows](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -144,4 +144,3 @@ Il nome del profilo è la sezione dell'applicazione. File INI o nel Registro di 
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

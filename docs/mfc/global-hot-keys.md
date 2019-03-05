@@ -7,12 +7,12 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-ms.openlocfilehash: 4cafee311f71d8165380b3fb7e192e7032b7941c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eedeb0547320c8b421fa72647f51b02f834af300
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273625"
 ---
 # <a name="global-hot-keys"></a>Tasti di scelta rapida globali
 
@@ -26,4 +26,3 @@ Ogni volta che l'utente preme un tasto di scelta rapida globale, la finestra spe
 
 [Uso di CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

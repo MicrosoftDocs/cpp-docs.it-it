@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 0b39109bd97e2bb83b7a51fdd6e626b63c4c8798
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef0756ee1dd0aa7d82caf218aa2c417df0c2778c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269254"
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
 
@@ -41,7 +41,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSecurityAttributes:: set](#set)|Chiamare questo metodo per impostare gli attributi del `CSecurityAttributes` oggetto.|
+|[CSecurityAttributes::Set](#set)|Chiamare questo metodo per impostare gli attributi del `CSecurityAttributes` oggetto.|
 
 ## <a name="remarks"></a>Note
 

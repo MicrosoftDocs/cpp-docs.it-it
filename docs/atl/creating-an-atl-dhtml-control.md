@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, creating
 ms.assetid: 1d8f0ede-7d8b-4959-976e-b4d0e2a87f5a
-ms.openlocfilehash: ca6641587512926c74349cc3acd91109a6174509
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd83909144526080ff10de0c75cc975089e88f91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480080"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273394"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>Creazione di un controllo DHTML ATL
 

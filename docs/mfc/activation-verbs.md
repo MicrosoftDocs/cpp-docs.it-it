@@ -1,5 +1,5 @@
 ---
-title: 'Attivazione: verbi'
+title: 'Attivazione: Verbi'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verbs [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: f6774f1de1e7abd318e5cd38fed1a2c805270c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443329"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267914"
 ---
-# <a name="activation-verbs"></a>Attivazione: verbi
+# <a name="activation-verbs"></a>Attivazione: Verbi
 
 Questo articolo spiega play ruolo primario e secondario verbi in OLE [attivazione](../mfc/activation-cpp.md).
 
@@ -29,7 +29,7 @@ Molti tipi di elementi OLE supportano solo un verbo e la modifica è quello più
 
 Un altro verbo utilizzato di frequente è aperta. Il verbo Open è identico alla modifica, ad eccezione del fatto viene avviata l'applicazione server in una finestra separata. Questo verbo deve essere usato quando l'applicazione del contenitore o l'applicazione server non supporta l'attivazione sul posto.
 
-Verbi di diverso da verbo primario devono essere richiamati tramite un comando sottomenu quando l'elemento è selezionato. Il sottomenu contiene tutti i verbi supportati dall'elemento e in genere è raggiungibile tramite il *typename* **oggetto** comando il **modifica** menu. Per informazioni sul *nomeTipo* **oggetto** comando, vedere l'articolo [menu e risorse: aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md).
+Verbi di diverso da verbo primario devono essere richiamati tramite un comando sottomenu quando l'elemento è selezionato. Il sottomenu contiene tutti i verbi supportati dall'elemento e in genere è raggiungibile tramite il *typename* **oggetto** comando il **modifica** menu. Per informazioni sul *nomeTipo* **oggetto** comando, vedere l'articolo [menu e risorse: Aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md).
 
 I verbi supportati da un'applicazione server sono elencati nel database di registrazione di Windows. Se l'applicazione server viene scritto con la libreria Microsoft Foundation Class, verranno automaticamente registrati tutti i verbi quando viene avviato il server. In caso contrario, è necessario registrarli durante la fase di inizializzazione dell'applicazione server. Per altre informazioni, vedere l'articolo [registrazione](../mfc/registration.md).
 
@@ -38,4 +38,3 @@ I verbi supportati da un'applicazione server sono elencati nel database di regis
 [Attivazione](../mfc/activation-cpp.md)<br/>
 [Contenitori](../mfc/containers.md)<br/>
 [Server](../mfc/servers.md)
-

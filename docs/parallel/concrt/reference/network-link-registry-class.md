@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 1d0aa8b3b5409659dee08b4e4365beac1a3a92be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492265"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273348"
 ---
 # <a name="networklinkregistry-class"></a>Classe network_link_registry
 
@@ -52,7 +52,7 @@ Tipo di dati di blocco vengano archiviate nel `network_link_registry`.
 |----------|-----------------|
 |[add](#add)|Quando sottoposto a override in una classe derivata, aggiunge un collegamento per il `network_link_registry` oggetto.|
 |[begin](#begin)|Quando sottoposto a override in una classe derivata, restituisce un iteratore al primo elemento nel file di `network_link_registry` oggetto.|
-|[Contiene](#contains)|Quando sottoposto a override in una classe derivata, Cerca il `network_link_registry` oggetto per un blocco specificato.|
+|[contains](#contains)|Quando sottoposto a override in una classe derivata, Cerca il `network_link_registry` oggetto per un blocco specificato.|
 |[count](#count)|Quando sottoposto a override in una classe derivata, restituisce il numero di elementi nel `network_link_registry` oggetto.|
 |[remove](#remove)|Quando sottoposto a override in una classe derivata, rimuove un blocco specificato da di `network_link_registry` oggetto.|
 
@@ -80,10 +80,10 @@ virtual void add(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco da aggiungere.
 
-##  <a name="begin"></a> iniziare
+##  <a name="begin"></a> begin
 
 Quando sottoposto a override in una classe derivata, restituisce un iteratore al primo elemento nel file di `network_link_registry` oggetto.
 
@@ -109,14 +109,14 @@ virtual bool contains(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco che viene cercato nel `network_link_registry` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se il blocco è stato trovato **false** in caso contrario.
 
-##  <a name="count"></a> conteggio
+##  <a name="count"></a> count
 
 Quando sottoposto a override in una classe derivata, restituisce il numero di elementi nel `network_link_registry` oggetto.
 
@@ -138,7 +138,7 @@ virtual bool remove(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco deve essere rimosso, se trovato.
 
 ### <a name="return-value"></a>Valore restituito

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176536"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268941"
 ---
 # <a name="asynchronous-agents"></a>Agenti asincroni
 
@@ -46,7 +46,7 @@ La tabella seguente illustra alcuni dei metodi importanti che appartengono al `a
 |------------|-----------------|
 |[start](reference/agent-class.md#start)|Le pianificazioni di `agent` oggetto per l'esecuzione e lo imposta sul `agent_runnable` dello stato.|
 |[run](reference/agent-class.md#run)|Esegue l'attività che deve essere eseguita dal `agent` oggetto.|
-|[Operazione eseguita](reference/agent-class.md#done)|Sposta un agente di `agent_done` dello stato.|
+|[done](reference/agent-class.md#done)|Sposta un agente di `agent_done` dello stato.|
 |[cancel](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|Se l'agente non è stato avviato, questo metodo annulla l'esecuzione dell'agente e lo imposta sul `agent_canceled` dello stato.|
 |[status](reference/agent-class.md#status)|Recupera lo stato corrente del `agent` oggetto.|
 |[wait](reference/agent-class.md#wait)|Attende che il `agent` oggetto immettere il `agent_done` o `agent_canceled` dello stato.|
@@ -59,9 +59,8 @@ Il runtime non gestisce le eccezioni generate dagli agenti asincroni. Per altre 
 
 ## <a name="example"></a>Esempio
 
-Per un esempio che illustra come creare un'applicazione basata su agente base, vedere [procedura dettagliata: creazione di un'applicazione basata su agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
+Per un esempio che illustra come creare un'applicazione basata su agente base, vedere [procedura dettagliata: Creazione di un'applicazione basata su agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)
-

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ON_BN_HILITE [MFC]
 - ON_BN_CLICKED [MFC]
 ms.assetid: 410ea968-478f-4806-b7b8-5d7c8dc2bf42
-ms.openlocfilehash: 55bf42d88cca805a8a75165e6fa868b9925d4d4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b79c781243b0af02479d37865a86577311789da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542376"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263442"
 ---
 # <a name="user-button-handlers"></a>Gestori dei pulsanti dell'utente
 
@@ -31,13 +31,12 @@ Le voci della mappa seguenti corrispondono ai prototipi di funzione.
 |Voce della mappa|Prototipo di funzione|
 |---------------|------------------------|
 |ON_BN_CLICKED ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
-|ON_BN_DISABLE ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
-|ON_BN_DOUBLECLICKED ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_BN_DISABLE( \<id>, \<memberFxn> )|() memberFxn void afx_msg;|
+|ON_BN_DOUBLECLICKED( \<id>, \<memberFxn> )|() memberFxn void afx_msg;|
 |ON_BN_HILITE ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
 |ON_BN_PAINT ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
-|ON_BN_UNHILITE ( \<id >, \<memberFxn >)|() memberFxn void afx_msg;|
+|ON_BN_UNHILITE( \<id>, \<memberFxn> )|() memberFxn void afx_msg;|
 
 ## <a name="see-also"></a>Vedere anche
 
 [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)
-

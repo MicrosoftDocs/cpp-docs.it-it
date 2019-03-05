@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tool tips [MFC], creating
 - CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
-ms.openlocfilehash: cc5ea515aa132bb390fa5e273cedc5f125bb3046
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0f008c70eeb43455408e5b0ad302df6b923608e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561252"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261206"
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>Utilizzo di CToolTipCtrl per creare e modificare un oggetto CToolTipCtrl
 
@@ -38,4 +38,3 @@ Di seguito è riportato un esempio di [CToolTipCtrl](../mfc/reference/ctooltipct
 
 [Uso di CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: fe5503eb78954bf39a135cd0e4acda6c37fc5fa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568701"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266294"
 ---
 # <a name="cipaddressctrl-class"></a>Classe CIPAddressCtrl
 
@@ -121,7 +121,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Stile del controllo indirizzo IP. Applicare una combinazione degli stili di finestra. È necessario includere lo stile WS_CHILD perché il controllo deve essere una finestra figlio. Visualizzare [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows per un elenco degli stili di windows.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a dimensioni e la posizione del controllo indirizzo IP. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
 
 *pParentWnd*<br/>
@@ -165,7 +165,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 *dwStyle*<br/>
 Stile del controllo indirizzo IP. Applicare una combinazione degli stili di finestra. È necessario includere lo stile WS_CHILD perché il controllo deve essere una finestra figlio. Visualizzare [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows per un elenco degli stili di windows.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -296,7 +296,7 @@ void SetFieldFocus(WORD nField);
 
 ### <a name="parameters"></a>Parametri
 
-*nCampo*<br/>
+*nField*<br/>
 Indice del campo in base zero in cui deve essere impostato lo stato attivo. Se questo valore è maggiore del numero di campi, lo stato attivo è impostato sul primo campo vuoto. Se tutti i campi sono non vuoto, lo stato attivo viene impostato sul primo campo.
 
 ### <a name="remarks"></a>Note
@@ -316,7 +316,7 @@ void SetFieldRange(
 
 ### <a name="parameters"></a>Parametri
 
-*nCampo*<br/>
+*nField*<br/>
 Indice del campo in base zero in cui verrà applicato l'intervallo.
 
 *nLower*<br/>
@@ -333,4 +333,3 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [IPM_SETR
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

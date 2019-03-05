@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 428f64dadb91887c4d076693e5dc939b6aff7680
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269383"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 
@@ -218,7 +218,7 @@ void FreeItem(LPITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parametri
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Un elenco di elementi da eliminare.
 
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount
@@ -231,7 +231,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parametri
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Puntatore a un elenco di elementi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -248,7 +248,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parametri
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] Puntatore a un elenco di elementi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -265,7 +265,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parametri
 
-*PIDL*<br/>
+*pidl*<br/>
 [in] L'elenco di elementi da scorrere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -317,7 +317,7 @@ HRESULT ItemFromPath(
 *lpszPath*<br/>
 [in] Stringa che specifica il percorso per l'elemento.
 
-*PIDL*<br/>
+*pidl*<br/>
 [out] Un riferimento a un PIDL. Il metodo Usa questo PIDL per archiviare il puntatore al relativo valore restituito.
 
 ### <a name="return-value"></a>Valore restituito

@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657500"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275662"
 ---
 # <a name="textureview-class"></a>Classe texture_view
 
@@ -103,7 +103,7 @@ Il rango del `texture_view`.
 
 **Namespace:** Concurrency:: Graphics
 
-##  <a name="dtor"></a> ~ texture_view
+##  <a name="dtor"></a> ~texture_view
 
 Elimina definitivamente il `texture_view` istanza.
 
@@ -303,7 +303,7 @@ value_type get(
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Indice dell'elemento da ottenere, possibilmente multidimensionale.
 
 *_Mip_level*<br/>
@@ -339,7 +339,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 Un riferimento a questo `texture_view` istanza.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Restituisce il valore dell'elemento in base all'indice.
 
@@ -355,7 +355,7 @@ value_type operator[] (int _I0) const restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 L'indice, possibilmente multidimensionale.
 
 *_I0*<br/>
@@ -365,7 +365,7 @@ L'indice di matrice unidimensionale.
 
 Il valore dell'elemento indicizzato da `_Index`.
 
-##  <a name="operator_call"></a> operator)
+##  <a name="operator_call"></a> operator()
 
 Restituisce il valore dell'elemento in base all'indice.
 
@@ -402,7 +402,7 @@ value_type operator() (
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 L'indice, possibilmente multidimensionale.
 
 *_I0*<br/>
@@ -458,7 +458,7 @@ Il valore specifica il livello di mipmap da campionare. I valori frazionari veng
 
 Il valore di esempio interpolato.
 
-##  <a name="set"></a> Set
+##  <a name="set"></a> set
 
 Imposta il valore dell'elemento in corrispondenza dell'indice specificato sul valore specificato.
 
@@ -470,7 +470,7 @@ void set(
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Indice dell'elemento da impostare, possibilmente multidimensionale.
 
 *value*<br/>

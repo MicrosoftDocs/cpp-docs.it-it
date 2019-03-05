@@ -1,5 +1,5 @@
 ---
-title: 'WM_ Message Handlers: F - K'
+title: 'Gestori messaggi WM _: F - K'
 ms.date: 11/27/2018
 f1_keywords:
 - ON_WM_FONTCHANGE
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - WM_ messages [MFC]
 - ON_WM_KEYDOWN [MFC]
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
-ms.openlocfilehash: e21889a44d26cd57ce0645e2050eeeb2839ef17d
-ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
+ms.openlocfilehash: fcb343994498f65fb58be3a499ac3e0fdc2166aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52453898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282084"
 ---
-# <a name="wm-message-handlers-f---k"></a>WM_ Message Handlers: F - K
+# <a name="wm-message-handlers-f---k"></a>Gestori messaggi WM _: F - K
 
 Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a destra:
 
@@ -50,12 +50,12 @@ Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a
 |ON_WM_HSCROLL()|void afx_msg [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)(UINT, UINT, CWnd *);|
 |ON_WM_HSCROLLCLIPBOARD()|void afx_msg [OnHScrollClipboard](../../mfc/reference/cwnd-class.md#onhscrollclipboard)(CWnd *, UINT, UINT);|
 |ON_WM_ICONERASEBKGND()|void afx_msg [OnIconEraseBkgnd](../../mfc/reference/cwnd-class.md#oniconerasebkgnd)(CDC *);|
-|ON_WM_INITMENU()|void afx_msg [OnInitMenu](../../mfc/reference/cwnd-class.md#oninitmenu)(CMenu *);|
-|ON_WM_INITMENUPOPUP()|void afx_msg [OnInitMenuPopup](../../mfc/reference/cwnd-class.md#oninitmenupopup)(CMenu *, UINT, valore booleano).|
-|ON_WM_INPUT()|void afx_msg [OnRawInput](../../mfc/reference/cwnd-class.md#onrawinput)(UINT, HRAWINPUT);|
+|ON_WM_INITMENU()|afx_msg void [OnInitMenu](../../mfc/reference/cwnd-class.md#oninitmenu)(CMenu*);|
+|ON_WM_INITMENUPOPUP()|afx_msg void [OnInitMenuPopup](../../mfc/reference/cwnd-class.md#oninitmenupopup)(CMenu*, UINT, BOOL);|
+|ON_WM_INPUT()|afx_msg void [OnRawInput](../../mfc/reference/cwnd-class.md#onrawinput)(UINT, HRAWINPUT);|
 |ON_WM_INPUT_DEVICE_CHANGE()|void afx_msg [OnInputDeviceChange](../../mfc/reference/cwnd-class.md#oninputdevicechange)(short senza segno);|
 |ON_WM_INPUTLANGCHANGE()|void afx_msg [OnInputLangChange](../../mfc/reference/cwnd-class.md#oninputlangchange)(BYTE, UINT);|
-|ON_WM_INPUTLANGCHANGEREQUEST()|void afx_msg [OnInputLangChangeRequest](../../mfc/reference/cwnd-class.md#oninputlangchangerequest)(UINT, HKL);|
+|ON_WM_INPUTLANGCHANGEREQUEST()|afx_msg void [OnInputLangChangeRequest](../../mfc/reference/cwnd-class.md#oninputlangchangerequest)(UINT, HKL);|
 |ON_WM_KEYDOWN()|void afx_msg [OnKeyDown](../../mfc/reference/cwnd-class.md#onkeydown)(UINT, UINT, UINT);|
 |ON_WM_KEYUP()|void afx_msg [OnKeyUp](../../mfc/reference/cwnd-class.md#onkeyup)(UINT, UINT, UINT);|
 |ON_WM_KILLFOCUS()|void afx_msg [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd *);|
@@ -64,4 +64,3 @@ Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a
 
 [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)<br/>
 [Gestori per WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

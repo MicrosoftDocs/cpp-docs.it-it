@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], character formatting in
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
-ms.openlocfilehash: b502ae36e01c683063a04efc790e7bc503a7a5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7467f9cd6a14dc6dfc2c03b6eb35f71802454fb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268642"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Formattazione caratteri nei controlli Rich Edit
 
@@ -29,4 +29,3 @@ Colore di primo piano è un attributo di tipo carattere, ma il colore di sfondo 
 
 [Uso di CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

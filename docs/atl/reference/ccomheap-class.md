@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: ae076ee7e2b1e04a997d0b345a2d89b4cc59183d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f8966c215ed53279f1391ce00adfc783f34f2d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276163"
 ---
 # <a name="ccomheap-class"></a>Classe CComHeap
 
@@ -38,9 +38,9 @@ class CComHeap : public IAtlMemMgr
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComHeap::Allocate](#allocate)|Chiamare questo metodo per allocare un blocco di memoria.|
-|[Ccomheap:: Free](#free)|Chiamare questo metodo per liberare un blocco di memoria allocata da questo gestore della memoria.|
+|[CComHeap::Free](#free)|Chiamare questo metodo per liberare un blocco di memoria allocata da questo gestore della memoria.|
 |[CComHeap::GetSize](#getsize)|Chiamare questo metodo per ottenere le dimensioni allocate di un blocco di memoria allocata da questo gestore della memoria.|
-|[Ccomheap:: ReAllocate](#reallocate)|Chiamare questo metodo per riallocare la memoria allocata da questo gestore di memoria.|
+|[CComHeap::Reallocate](#reallocate)|Chiamare questo metodo per riallocare la memoria allocata da questo gestore di memoria.|
 
 ## <a name="remarks"></a>Note
 
@@ -58,7 +58,7 @@ Vedere l'esempio relativo [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcommem. H
+**Intestazione:** ATLComMem.h
 
 ##  <a name="allocate"></a>  CComHeap::Allocate
 
@@ -83,7 +83,7 @@ Chiamare [ccomheap:: Free](#free) oppure [ccomheap:: ReAllocate](#reallocate) pe
 
 Implementato mediante [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).
 
-##  <a name="free"></a>  Ccomheap:: Free
+##  <a name="free"></a>  CComHeap::Free
 
 Chiamare questo metodo per liberare un blocco di memoria allocata da questo gestore della memoria.
 
@@ -121,7 +121,7 @@ Restituisce la dimensione del blocco di memoria allocata in byte.
 
 Implementato mediante [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).
 
-##  <a name="reallocate"></a>  Ccomheap:: ReAllocate
+##  <a name="reallocate"></a>  CComHeap::Reallocate
 
 Chiamare questo metodo per riallocare la memoria allocata da questo gestore di memoria.
 

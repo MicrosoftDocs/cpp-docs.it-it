@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: 1252f97a93e67348a00c9809e3f216d4ed63c4d8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: c93d8a2a18518cad8b6fb7fe014828011f78a653
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280992"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Classe CMFCToolBarDateTimeCtrl
 
@@ -80,7 +80,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |----------|-----------------|
 |[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|Specifica se un utente può durare il pulsante durante la personalizzazione. (Esegue l'override [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|
 |[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|Copia le proprietà di un altro pulsante della barra degli strumenti per il pulsante corrente. (Esegue l'override [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
-|`CMFCToolBarDateTimeCtrl::DuplicateData`|Riservato per utilizzi futuri.|
+|`CMFCToolBarDateTimeCtrl::DuplicateData`|Riservato per usi futuri.|
 |[CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)|Copia il testo dal pulsante della barra degli strumenti a un menu.|
 |`CMFCToolBarDateTimeCtrl::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
 |[CMFCToolBarDateTimeCtrl::GetByCmd](#getbycmd)|Recupera il primo `CMFCToolBarDateTimeCtrl` oggetto dell'applicazione con l'ID di comando specificato.|
@@ -617,4 +617,3 @@ Cerca un pulsante della barra degli strumenti con l'ID di comando specificato e 
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-

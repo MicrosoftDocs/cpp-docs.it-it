@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178551"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279368"
 ---
 # <a name="crgn-class"></a>CRgn (classe)
 
@@ -543,7 +543,7 @@ Specifica la coordinata y logica dell'angolo inferiore destro dell'area.
 *x3*<br/>
 Specifica lo spessore dell'ellisse usata per creare gli angoli arrotondati.
 
-*Y3*<br/>
+*y3*<br/>
 Specifica l'altezza dell'ellisse usata per creare gli angoli arrotondati.
 
 ### <a name="return-value"></a>Valore restituito
@@ -842,4 +842,3 @@ Utilizzare questa funzione anziché il `CreateRectRgn` funzione membro per evita
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

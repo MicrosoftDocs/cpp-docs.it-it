@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604121"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270553"
 ---
 # <a name="coleserveritem-class"></a>Classe COleServerItem
 
@@ -105,7 +105,7 @@ class COleServerItem : public CDocItem
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Inserisce i formati di presentazione e la conversione in un `COleDataSource` oggetto.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Copia l'elemento negli Appunti.|
-|[COleServerItem:: DoDragDrop](#dodragdrop)|Esegue un'operazione di trascinamento e rilascio.|
+|[COleServerItem::DoDragDrop](#dodragdrop)|Esegue un'operazione di trascinamento e rilascio.|
 |[COleServerItem::GetClipboardData](#getclipboarddata)|Ottiene l'origine dati per l'uso nel trasferimento dei dati (operazione di trascinamento o negli Appunti).|
 |[COleServerItem::GetDocument](#getdocument)|Restituisce il documento server contenente l'elemento.|
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|Ottiene i dati CF_OBJECTDESCRIPTOR per un elemento OLE.|
@@ -116,7 +116,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::IsLinkedItem](#islinkeditem)|Indica se l'elemento rappresenta un elemento OLE collegato.|
 |[COleServerItem::NotifyChanged](#notifychanged)|Aggiorna tutti i contenitori con aggiornamento automatico di collegamento.|
 |[COleServerItem::OnDoVerb](#ondoverb)|Chiamato per eseguire un verbo.|
-|[COleServerItem:: OnDraw](#ondraw)|Chiamato quando il contenitore richiede per disegnare l'elemento; implementazione necessaria.|
+|[COleServerItem::OnDraw](#ondraw)|Chiamato quando il contenitore richiede per disegnare l'elemento; implementazione necessaria.|
 |[COleServerItem::OnDrawEx](#ondrawex)|Chiamata eseguita per il disegno elemento specializzato.|
 |[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|Chiamato dal framework per ottenere i dati che possono essere copiati negli Appunti.|
 |[COleServerItem::OnGetExtent](#ongetextent)|Chiamato dal framework per recuperare la dimensione dell'elemento OLE.|
@@ -155,7 +155,7 @@ Il `COleServerItem` classe definisce diverse funzioni membro sottoponibile a ove
 
 Per utilizzare `COleServerItem`, una classe derivata da esso e implementare le [OnDraw](#ondraw) e [Serialize](../../mfc/reference/cobject-class.md#serialize) funzioni membro. Il `OnDraw` funzione fornisce la rappresentazione del metafile di un elemento, in modo che possa essere visualizzato quando un'applicazione contenitore viene aperto un documento composito. Il `Serialize` funzione di `CObject` fornisce la rappresentazione nativa di un elemento, che consente un elemento incorporato da trasferire tra le applicazioni server e il contenitore. [OnGetExtent](#ongetextent) fornisce la dimensione standard dell'elemento nel contenitore, l'abilitazione di contenitori ridimensionare l'elemento.
 
-Per altre informazioni sui server e argomenti correlati, vedere l'articolo [server: implementazione di un Server](../../mfc/servers-implementing-a-server.md) e "Creazione di un'applicazione di contenitore/Server" nell'articolo [contenitori: funzionalità avanzate](../../mfc/containers-advanced-features.md).
+Per altre informazioni sui server e argomenti correlati, vedere l'articolo [server: Implementazione di un Server](../../mfc/servers-implementing-a-server.md) e "Creazione di un'applicazione di contenitore/Server" nell'articolo [contenitori: Funzionalità avanzate](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -542,7 +542,7 @@ virtual BOOL OnDraw(
 *pDC*<br/>
 Un puntatore per il [CDC](../../mfc/reference/cdc-class.md) oggetto su cui disegnare l'elemento. Contesto di visualizzazione viene connesso automaticamente al contesto di visualizzazione dell'attributo in modo che è possibile chiamare funzioni di attributo, anche se potrebbe rendere il metafile specifici del dispositivo.
 
-*rsize.*<br/>
+*rSize*<br/>
 Dimensione in unità HIMETRIC, in cui disegnare metafile.
 
 ### <a name="return-value"></a>Valore restituito
@@ -580,7 +580,7 @@ Valore ricavato dall'enumerazione DVASPECT. Questo parametro può avere uno dei 
 
 - Elemento DVASPECT_DOCPRINT viene rappresentata come se fosse stampato utilizzando il comando Stampa dal menu File.
 
-*rsize.*<br/>
+*rSize*<br/>
 Dimensione dell'elemento in unità HIMETRIC.
 
 ### <a name="return-value"></a>Valore restituito
@@ -646,7 +646,7 @@ Specifica l'aspetto dell'elemento OLE cui limiti devono essere recuperate. Quest
 
 - Elemento DVASPECT_DOCPRINT viene rappresentata come se fosse stampato utilizzando il comando Stampa dal menu File.
 
-*rsize.*<br/>
+*rSize*<br/>
 Fare riferimento a un `CSize` oggetto che riceverà le dimensioni dell'elemento OLE.
 
 ### <a name="return-value"></a>Valore restituito

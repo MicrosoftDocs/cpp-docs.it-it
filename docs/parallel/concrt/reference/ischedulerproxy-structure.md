@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: a38b931da8ed2191f21d210449c100c410f74e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dddd43a5b3e68992e41f0b95893303e57e7c7ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523148"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268850"
 ---
 # <a name="ischedulerproxy-structure"></a>Struttura ISchedulerProxy
 
@@ -38,7 +38,7 @@ struct ISchedulerProxy;
 |----------|-----------------|
 |[ISchedulerProxy::BindContext](#bindcontext)|Associa un contesto di esecuzione con un proxy del thread, se non è già associato a uno.|
 |[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Crea una nuova radice del processore virtuale sul thread dell'hardware associato a una risorsa di esecuzione esistente.|
-|[ISchedulerProxy:: RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Richiede un'allocazione iniziale di radici del processore virtuale. Ogni radice del processore virtuale rappresenta la possibilità di eseguire un thread che può eseguire operazioni dell'utilità di pianificazione.|
+|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Richiede un'allocazione iniziale di radici del processore virtuale. Ogni radice del processore virtuale rappresenta la possibilità di eseguire un thread che può eseguire operazioni dell'utilità di pianificazione.|
 |[ISchedulerProxy::Shutdown](#shutdown)|Notifica al gestore di risorse che l'utilità di pianificazione è in corso l'arresto. In questo modo il gestore di risorse per recuperare immediatamente tutte le risorse concesse all'utilità di pianificazione.|
 |[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|Registra il thread corrente con Resource Manager, associandolo con questa utilità di pianificazione.|
 |[ISchedulerProxy::UnbindContext](#unbindcontext)|Rimuove l'associazione dal contesto di esecuzione specificato da un proxy del thread di `pContext` parametro e lo restituisce al pool libero della factory proxy thread. Questo metodo può essere chiamato solo in un contesto di esecuzione che è stato associato tramite il [ISchedulerProxy:: BindContext](#bindcontext) metodo e non è ancora stato avviato tramite il `pContext` parametro di un [IThreadProxy:: SwitchTo ](ithreadproxy-structure.md#switchto) chiamata al metodo.|

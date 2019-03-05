@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: utilizzo di immagini in un controllo ActiveX'
+title: 'Controlli ActiveX MFC: Utilizzo di immagini in un controllo ActiveX'
 ms.date: 11/04/2016
 f1_keywords:
 - LPPICTUREDISP
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: fe239f864f4b7730d28372ee3fc9d298131d28d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462101"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264560"
 ---
-# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Controlli ActiveX MFC: utilizzo di immagini in un controllo ActiveX
+# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Controlli ActiveX MFC: Utilizzo di immagini in un controllo ActiveX
 
 Questo articolo descrive il tipo di immagine comune e come implementarlo in un controllo ActiveX. Gli argomenti trattati includono:
 
@@ -31,7 +31,7 @@ Questo articolo descrive il tipo di immagine comune e come implementarlo in un c
 
 Un tipo immagine fa parte di un gruppo di tipi comuni ad alcuni controlli ActiveX. Il tipo immagine gestisce metafile, bitmap o icone e consente all'utente di specificare un'immagine da visualizzare in un controllo ActiveX. Le proprietà immagine personalizzate vengono implementate con un oggetto immagine e le funzioni Get/Set che consentono all'utente del controllo di accedere alla proprietà immagine. Gli utenti del controllo accedono alla proprietà immagine personalizzata usando la scheda delle proprietà delle immagini predefinita.
 
-Oltre al tipo di immagine standard, sono disponibili anche tipi di carattere e colore. Per altre informazioni sull'uso del tipo carattere nel controllo ActiveX, vedere l'articolo [Controlli ActiveX MFC: utilizzo dei tipi di carattere](../mfc/mfc-activex-controls-using-fonts.md).
+Oltre al tipo di immagine standard, sono disponibili anche tipi di carattere e colore. Per altre informazioni sull'uso del tipo carattere nel controllo ActiveX, vedere l'articolo [controlli ActiveX MFC: Usando i tipi di carattere](../mfc/mfc-activex-controls-using-fonts.md).
 
 Le classi dei controlli ActiveX forniscono numerosi componenti che è possibile usare per implementare la proprietà immagine all'interno del controllo. Questi componenti includono:
 
@@ -41,11 +41,11 @@ Le classi dei controlli ActiveX forniscono numerosi componenti che è possibile 
 
 - Supporto per le proprietà di tipo **LPPICTUREDISP**, implementate con le funzioni Get/Set.
 
-   L'uso della Visualizzazione classi consente di aggiungere rapidamente una o più proprietà personalizzate che supportano il tipo immagine. Per altre informazioni sull'aggiunta di proprietà del controllo ActiveX con Visualizzazione classi, vedere l'articolo [Controlli ActiveX MFC: proprietà](../mfc/mfc-activex-controls-properties.md).
+   L'uso della Visualizzazione classi consente di aggiungere rapidamente una o più proprietà personalizzate che supportano il tipo immagine. Per altre informazioni sull'aggiunta di proprietà del controllo ActiveX con Visualizzazione classi, vedere l'articolo [controlli ActiveX MFC: Proprietà](../mfc/mfc-activex-controls-properties.md).
 
 - Pagina delle proprietà che gestisce una o più proprietà immagine di un controllo.
 
-   Questa pagina proprietà fa parte di un gruppo di pagine delle proprietà predefinite disponibili per i controlli ActiveX. Per altre informazioni sulle pagine proprietà del controllo ActiveX, vedere l'articolo [Controlli ActiveX MFC: utilizzo delle pagine delle proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   Questa pagina proprietà fa parte di un gruppo di pagine delle proprietà predefinite disponibili per i controlli ActiveX. Per altre informazioni sulle pagine proprietà del controllo ActiveX, vedere l'articolo [controlli ActiveX MFC: Uso delle pagine proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementazione di una proprietà immagine personalizzata nel controllo ActiveX
 
@@ -150,6 +150,5 @@ Dopo aver completato le modifiche, ricompilare il progetto per incorporare le nu
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: uso dei tipi di carattere](../mfc/mfc-activex-controls-using-fonts.md)<br/>
-[Controlli ActiveX MFC: pagine delle proprietà](../mfc/mfc-activex-controls-property-pages.md)
-
+[Controlli ActiveX MFC: Usando i tipi di carattere](../mfc/mfc-activex-controls-using-fonts.md)<br/>
+[Controlli ActiveX MFC: Pagine delle proprietà](../mfc/mfc-activex-controls-property-pages.md)

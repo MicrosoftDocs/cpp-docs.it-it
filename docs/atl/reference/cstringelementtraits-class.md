@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-ms.openlocfilehash: f3e0bd447d2ff7c04ecf3c4a72b7dd2340c6bb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80efd4dbc4ff0541e083ed61bed872d5e69c7a74
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534225"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261882"
 ---
 # <a name="cstringelementtraits-class"></a>Classe CStringElementTraits
 

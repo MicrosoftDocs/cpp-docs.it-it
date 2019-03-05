@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: f831980c803fcbce45e502321e39440b72382f95
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 4aeac558c28d0ac89707423433e51f348bc35d29
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893743"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274115"
 ---
 # <a name="cwndclassinfo-class"></a>Classe CWndClassInfo
 

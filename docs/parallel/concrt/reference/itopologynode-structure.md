@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 4f880e3c44cd9f301aa65d45500ed7f1d1725bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 867e0543d1b9f2810a3fe761f038947c4d88da4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636657"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268629"
 ---
 # <a name="itopologynode-structure"></a>Struttura ITopologyNode
 
@@ -38,7 +38,7 @@ struct ITopologyNode;
 |[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Restituisce il numero di risorse di esecuzione raggruppate in questo nodo.|
 |[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Restituisce la prima risorsa di esecuzione raggruppata sotto questo nodo nell'ordine dell'enumerazione.|
 |[ITopologyNode::GetId](#getid)|Restituisce l'identificatore univoco di Resource Manager per questo nodo.|
-|[Itopologynode:: GetNext](#getnext)|Restituisce un'interfaccia in corrispondenza del nodo di topologia successivo nell'ordine dell'enumerazione.|
+|[ITopologyNode::GetNext](#getnext)|Restituisce un'interfaccia in corrispondenza del nodo di topologia successivo nell'ordine dell'enumerazione.|
 |[ITopologyNode::GetNumaNode](#getnumanode)|Restituisce il Windows assegnato numero del nodo NUMA a cui appartiene il nodo gestore delle risorse.|
 
 ## <a name="remarks"></a>Note

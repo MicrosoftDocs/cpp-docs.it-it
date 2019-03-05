@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::DECLARE_OLEMISC_STATUS
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
-ms.openlocfilehash: 9c4df80b2b9828077ec3738bc296f19aadf2df68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb5ff6d7570b03b32852fc450f58043446f721f4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658952"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267264"
 ---
 # <a name="object-status-macros"></a>Macro di stato oggetto
 
@@ -33,7 +33,7 @@ DECLARE_OLEMISC_STATUS( miscstatus )
 
 ### <a name="parameters"></a>Parametri
 
-*MiscStatus*<br/>
+*miscstatus*<br/>
 Tutti i flag OLEMISC.
 
 ### <a name="remarks"></a>Note

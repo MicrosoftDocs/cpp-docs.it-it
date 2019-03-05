@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: e17284ef8652e5d08b2305dc07d27f080ec64239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264847"
 ---
 # <a name="acceleratorview-class"></a>Classe accelerator_view
 
@@ -72,7 +72,7 @@ class accelerator_view;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[tasti di scelta rapida](#accelerator)|Ottiene l'oggetto `accelerator` per l'oggetto `accelerator_view`.|
+|[accelerator](#accelerator)|Ottiene l'oggetto `accelerator` per l'oggetto `accelerator_view`.|
 |[is_auto_selection](#is_auto_selection)|Ottiene un valore booleano che indica se il runtime selezionerà automaticamente un tasto di scelta appropriato quando la `accelerator_view` oggetto viene passato a un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|
 |[is_debug](#is_debug)|Ottiene un valore booleano che indica se il `accelerator_view` oggetto dispone del livello DEBUG abilitato per la segnalazione estensiva degli errori.|
 |[queuing_mode](#queuing_mode)|Ottiene la modalità di Accodamento per il `accelerator_view` oggetto.|
@@ -94,7 +94,7 @@ Un' `accelerator_view` oggetto può avere uno dei due [enumerazione queuing_mode
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
 ## <a name="accelerator"></a> tasti di scelta rapida
 
@@ -135,7 +135,7 @@ concurrency::completion_future create_marker();
 
 Una future per tenere traccia del completamento di tutti i comandi inviati finora a questo `accelerator_view` oggetto.
 
-## <a name="flush"></a> scaricamento
+## <a name="flush"></a> flush
 
 Invia che tutti i comandi in sospeso in coda per l'oggetto accelerator_view per il tasto di scelta rapida per l'esecuzione.
 
@@ -238,7 +238,7 @@ Ottiene un valore booleano che indica se l'oggetto accelerator_view dispone del 
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-## <a name="accelerator_view__operator_neq"></a> operatore! =
+## <a name="accelerator_view__operator_neq"></a> operator!=
 
 Confronta questo oggetto accelerator_view con un altro e restituisce **false** se sono uguali; in caso contrario, restituisce **true**.
 

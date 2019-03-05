@@ -1,5 +1,5 @@
 ---
-title: 'Gestori di messaggi WM_: A - C'
+title: 'Gestori messaggi WM _: A - C'
 ms.date: 11/04/2016
 f1_keywords:
 - ON_WM_CREATE
@@ -35,14 +35,14 @@ helpviewer_keywords:
 - ON_WM_ACTIVATEAPP [MFC]
 - ON_WM_CHANGECBCHAIN
 ms.assetid: 4e315896-d646-4b87-b0ab-41a4a753b045
-ms.openlocfilehash: 67ab1620d0ad815cc070935a2b314bbfa2ef1408
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08221e7569a8b4c4f4e8decba410bd1fe40f04d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596833"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266029"
 ---
-# <a name="wm-message-handlers-a---c"></a>Gestori di messaggi WM_: A - C
+# <a name="wm-message-handlers-a---c"></a>Gestori messaggi WM _: A - C
 
 Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a destra:
 
@@ -58,7 +58,7 @@ Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a
 |ON_WM_CHAR()|void afx_msg [OnChar](../../mfc/reference/cwnd-class.md#onchar)(UINT, UINT, UINT);|
 |ON_WM_CHARTOITEM()|int afx_msg [OnCharToItem](../../mfc/reference/cwnd-class.md#onchartoitem)(UINT, CWnd\*, UINT);|
 |ON_WM_CHILDACTIVATE()|void afx_msg [OnChildActivate](../../mfc/reference/cwnd-class.md#onchildactivate)();|
-|ON_WM_CLIPBOARDUPDATE()|void afx_msg [OnClipboardUpdate](../../mfc/reference/cwnd-class.md#onclipboardupdate)();|
+|ON_WM_CLIPBOARDUPDATE()|afx_msg void [OnClipboardUpdate](../../mfc/reference/cwnd-class.md#onclipboardupdate)();|
 |ON_WM_CLOSE()|void afx_msg [OnClose](../../mfc/reference/cwnd-class.md#onclose)();|
 |ON_WM_COMPACTING()|void afx_msg [OnCompacting](../../mfc/reference/cwnd-class.md#oncompacting)(UINT);|
 |ON_WM_COMPAREITEM()|int afx_msg [OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)(LPCOMPAREITEMSTRUCT);|
@@ -71,4 +71,3 @@ Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a
 
 [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)<br/>
 [Gestori per WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266419"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Procedure consigliate nella libreria di agenti asincroni
 
@@ -42,7 +42,7 @@ Lo stato in un agente è in genere isolare tenendo membri dati di `private` o `p
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-Per esempi completi su come definire e usare gli agenti, vedere [procedura dettagliata: creazione di un'applicazione basata su agenti](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) e [procedura dettagliata: creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
+Per esempi completi su come definire e usare gli agenti, vedere [procedura dettagliata: Creazione di un'applicazione basata su agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) e [procedura dettagliata: Creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
 
 [[Torna all'inizio](#top)]
 
@@ -58,7 +58,7 @@ Il `semaphore` oggetto limita la pipeline per elaborare al massimo due messaggi 
 
 Il producer in questo esempio invia un numero relativamente basso di messaggi al consumer. Pertanto, in questo esempio non illustra una condizione di memoria insufficiente o di memoria insufficiente potenziali. Tuttavia, questo meccanismo è utile quando una pipeline di dati contiene un numero relativamente elevato di messaggi.
 
-Per altre informazioni su come creare la classe semaphore che viene usata in questo esempio, vedere [procedura: usare la classe Context per implementare un semaforo di cooperazione](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Per altre informazioni su come creare la classe semaphore che viene usata in questo esempio, vedere [come: Usare la classe Context per implementare una classe semaforo di cooperazione](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 [[Torna all'inizio](#top)]
 
@@ -66,7 +66,7 @@ Per altre informazioni su come creare la classe semaphore che viene usata in que
 
 La libreria di agenti è particolarmente utile quando il lavoro eseguito da una pipeline di dati è grossolano. Ad esempio, un componente dell'applicazione può leggere i dati da un file o una connessione di rete e occasionalmente inviare i dati a un altro componente. Il protocollo utilizzato per la libreria di agenti per propagare i messaggi fa sì che il meccanismo di passaggio dei messaggi per presentano un overhead maggiore rispetto ai costrutti parallela di attività forniti dal [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Pertanto, assicurarsi che il lavoro eseguito da una pipeline di dati è sufficientemente lungo da compensare il sovraccarico.
 
-Anche se una pipeline di dati è più efficace quando le rispettive attività sono con granularità grossolana, ogni fase della pipeline di dati è possibile usare costrutti PPL, ad esempio i gruppi di attività e gli algoritmi paralleli per eseguire più operazioni con granularità fine. Per un esempio di una rete di dati con granularità grossolana che usa il parallelismo con granularità fine in ogni fase di elaborazione, vedere [procedura dettagliata: creazione di una rete di elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Anche se una pipeline di dati è più efficace quando le rispettive attività sono con granularità grossolana, ogni fase della pipeline di dati è possibile usare costrutti PPL, ad esempio i gruppi di attività e gli algoritmi paralleli per eseguire più operazioni con granularità fine. Per un esempio di una rete di dati con granularità grossolana che usa il parallelismo con granularità fine in ogni fase di elaborazione, vedere [procedura dettagliata: Creazione di una rete di elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Torna all'inizio](#top)]
 
@@ -118,9 +118,8 @@ Destroying resource 64...
 
 [Procedure consigliate del runtime di concorrenza](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Procedura dettagliata: creazione di un'applicazione basata sugli agenti](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
-[Procedura dettagliata: creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[Procedura dettagliata: creazione di una rete per l'elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Procedura dettagliata: Creazione di un'applicazione basata sugli agenti](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
+[Procedura dettagliata: Creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Procedura dettagliata: Creazione di una rete per l'elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Procedure consigliate nella libreria PPL (Parallel Patterns Library)](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Procedure consigliate generali nel runtime di concorrenza](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

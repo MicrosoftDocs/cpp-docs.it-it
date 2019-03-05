@@ -18,12 +18,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: ba3c705227e6ca189527d29d4f3ae0f21c71eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276949"
 ---
 # <a name="activation-c"></a>Attivazione (C++)
 
@@ -40,11 +40,10 @@ Attivazione sul posto promuove un approccio incentrato sul documento per la crea
 
 MFC non supporta l'attivazione sul posto annidato. Se si compila un'applicazione contenitore/server e che contenitore/server è incorporato in un altro contenitore e attivato sul posto, non è posto attivare oggetti incorporati.
 
-Cosa accade a un elemento incorporato quando l'utente fa doppio clic su varia a seconda dei verbi definiti per l'elemento. Per informazioni, vedere [attivazione: verbi](../mfc/activation-verbs.md).
+Cosa accade a un elemento incorporato quando l'utente fa doppio clic su varia a seconda dei verbi definiti per l'elemento. Per informazioni, vedere [attivazione: Verbi](../mfc/activation-verbs.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Contenitori](../mfc/containers.md)<br/>
 [Server](../mfc/servers.md)
-

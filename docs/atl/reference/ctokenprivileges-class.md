@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: e492ada977527d5c8709dd3afbf390bc678f789e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80302d59d081b7cdf6f29960c3d8f4859b4ecbf4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519795"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280446"
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 
@@ -97,7 +97,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 *pszPrivilege*<br/>
 Puntatore a una stringa con terminazione null che specifica il nome del privilegio, come definito in WINNT. File di intestazione H.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Se true, il privilegio è abilitato. Se false, il privilegio è disabilitato.
 
 *rPrivileges*<br/>
@@ -334,7 +334,7 @@ Esegue il cast a un puntatore a un valore di [TOKEN_PRIVILEGES](/windows/desktop
 
 [Esempio di sicurezza](../../visual-cpp-samples.md)<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>
-[IDENTIFICATORE UNIVOCO LOCALE](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
+[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
 [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

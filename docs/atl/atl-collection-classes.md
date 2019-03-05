@@ -1,5 +1,5 @@
 ---
-title: Classi Collection ATL
+title: Classi di raccolta ATL
 ms.date: 11/19/2018
 helpviewer_keywords:
 - DestructElements function
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176705"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272100"
 ---
-# <a name="atl-collection-classes"></a>Classi Collection ATL
+# <a name="atl-collection-classes"></a>Classi di raccolta ATL
 
 ATL fornisce molte classi per l'archiviazione e l'accesso ai dati. La classe a cui si decide di usare dipende da diversi fattori, tra cui:
 
@@ -84,8 +84,8 @@ Ognuna delle classi di raccolte disponibili offre caratteristiche di prestazioni
 
 |Forma|Ordered|Indicizzati|Inserire un<br /><br /> elemento|Ricerca<br /><br /> elemento specificato|Duplica<br /><br /> elementi|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
-|List|Yes|No|Fast (tempo costante)|Lento o (n)|Yes|
-|Matrice|Yes|Tramite valore integer (tempo costante)|Lento o (n), ad eccezione dell'inserimento finale, in cui un tempo costante case|Lento o (n)|Yes|
+|List|Sì|No|Fast (tempo costante)|Lento o (n)|Sì|
+|Matrice|Sì|Tramite valore integer (tempo costante)|Lento o (n), ad eccezione dell'inserimento finale, in cui un tempo costante case|Lento o (n)|Sì|
 |Mappa|No|Da chiave (tempo costante)|Fast (tempo costante)|Fast (tempo costante)|No (chiavi) Sì (valori)|
 |Mappa di rosso-bianco|Sì (per chiave)|Da chiave O (log n)|Veloce O (log n)|Veloce O (log n)|No|
 |Oggetto Multimap rosso-bianco|Sì (per chiave)|Da chiave O(log n) (valori multipli per ogni chiave)|Veloce O (log n)|Veloce O (log n)|Sì (valori multipli per ogni chiave)|

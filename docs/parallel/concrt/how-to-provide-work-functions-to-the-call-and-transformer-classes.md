@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: d9d472ddd8d5c7baf3cb16e1df33a2bdb74c5381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501000"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277691"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Procedura: Fornire funzioni lavoro alle classi call e transformer
 
@@ -19,7 +19,7 @@ In questo argomento vengono illustrati vari modi per fornire funzioni lavoro per
 
 Nel primo esempio viene illustrato come passare un'espressione lambda a un `call` oggetto. Nel secondo esempio viene illustrato come passare un oggetto funzione a un `call` oggetto. Il terzo esempio illustra come associare un metodo della classe per un `call` oggetto.
 
-A scopo illustrativo, ogni esempio in questo argomento viene usato il `call` classe. Per un esempio che usa il `transformer` classe, vedere [procedura: usare la classe transformer in una Pipeline di dati](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+A scopo illustrativo, ogni esempio in questo argomento viene usato il `call` classe. Per un esempio che usa il `transformer` classe, vedere [come: Usare la classe transformer in una Pipeline di dati](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
 ## <a name="example"></a>Esempio
 

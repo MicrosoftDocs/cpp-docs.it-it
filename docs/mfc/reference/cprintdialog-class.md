@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: d6d76ecb9042f299ce0c5e573870ee79954751c5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b6fd633a39f7038be45a8776c9b4673138cc34b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178766"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274947"
 ---
 # <a name="cprintdialog-class"></a>Classe CPrintDialog
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: 8b8e278564c2c293cabfcd56ab9ce2cdb4807e19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511735"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268525"
 ---
 # <a name="menus-and-resources-ole"></a>Menu e risorse (OLE)
 
@@ -39,28 +39,27 @@ OLE modifica visiva inserisce i requisiti aggiuntivi nel menu e altre risorse fo
 
 Questa operazione richiede tre layout di menu separati, uno per ogni modalità possibili dell'applicazione. Le tabelle di tasti di scelta rapida sono inoltre necessari per ogni nuova modalità. Un'applicazione contenitore può o potrebbe non supportare l'attivazione sul posto; in caso affermativo, richiede una nuova struttura di menu e tasti di scelta rapida associato.
 
-L'attivazione sul posto richiede che le applicazioni contenitore e il server devono negoziare lo spazio barra dei menu della barra degli strumenti e lo stato. Tutte le risorse devono essere progettate con questo a mente. L'articolo [menu e risorse: unione di Menu](../mfc/menus-and-resources-menu-merging.md) illustra in dettaglio in questo argomento.
+L'attivazione sul posto richiede che le applicazioni contenitore e il server devono negoziare lo spazio barra dei menu della barra degli strumenti e lo stato. Tutte le risorse devono essere progettate con questo a mente. L'articolo [menu e risorse: Se si uniscono menu](../mfc/menus-and-resources-menu-merging.md) illustra in dettaglio in questo argomento.
 
 A causa di questi problemi, le applicazioni documento OLE create con la creazione guidata applicazione possono avere fino a quattro menu separati e delle risorse di tabelle di tasti di scelta rapida. Questi vengono usati per i motivi seguenti:
 
 |Nome della risorsa|Usa|
 |-------------------|---------|
 |IDR_MAINFRAME|Usato in un'applicazione MDI se è aperto alcun file o in un'applicazione SDI indipendentemente dal file aperti. Si tratta del menu standard usato nelle applicazioni non OLE.|
-|IDR _\<progetto > tipo|Se i file sono aperti, usato in un'applicazione MDI. Utilizzato quando è in esecuzione un'applicazione autonoma. Si tratta del menu standard usato nelle applicazioni non OLE.|
-|IDR _\<progetto > TYPE_SRVR_IP|Utilizzato per il server o il contenitore quando è aperto un oggetto sul posto.|
-|IDR _\<progetto > TYPE_SRVR_EMB|Usato da un'applicazione server se un oggetto viene aperto senza usare l'attivazione sul posto.|
+|IDR_\<project>TYPE|Se i file sono aperti, usato in un'applicazione MDI. Utilizzato quando è in esecuzione un'applicazione autonoma. Si tratta del menu standard usato nelle applicazioni non OLE.|
+|IDR_\<project>TYPE_SRVR_IP|Utilizzato per il server o il contenitore quando è aperto un oggetto sul posto.|
+|IDR_\<project>TYPE_SRVR_EMB|Usato da un'applicazione server se un oggetto viene aperto senza usare l'attivazione sul posto.|
 
 Ognuno di questi nomi di risorse rappresenta un menu di scelta e, in genere, una tabella di tasti di scelta rapida. Uno schema analogo deve essere utilizzato in applicazioni MFC che non vengono create con la creazione guidata applicazione.
 
 Gli articoli seguenti illustrano gli argomenti relativi a contenitori, i server e l'unione necessari per implementare l'attivazione sul posto di menu:
 
-- [Menu e risorse: aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md)
+- [Menu e risorse: Aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md)
 
-- [Menu e risorse: aggiunte di server](../mfc/menus-and-resources-server-additions.md)
+- [Menu e risorse: Aggiunte di server](../mfc/menus-and-resources-server-additions.md)
 
-- [Menu e risorse: unione di menu](../mfc/menus-and-resources-menu-merging.md)
+- [Menu e risorse: Unione di menu](../mfc/menus-and-resources-menu-merging.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 [OLE](../mfc/ole-in-mfc.md)
-

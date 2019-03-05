@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WinInet classes [MFC], programming
 - Internet applications [MFC], client applications
 ms.assetid: 7aba135c-7c15-4e2f-8c34-bbaf792c89a6
-ms.openlocfilehash: 1e95a704a9aeabf288f76558133065806b227bcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9762e762680e2ac530b87baeac7afdea77ef6f14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456199"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265743"
 ---
 # <a name="steps-in-a-typical-internet-client-application"></a>Passaggi in un'applicazione client Internet tipica
 

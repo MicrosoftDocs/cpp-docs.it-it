@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271229"
 ---
 # <a name="cd2dgeometry-class"></a>Classe CD2DGeometry
 
@@ -82,7 +82,7 @@ class CD2DGeometry : public CD2DResource;
 |[CD2DGeometry::ComputeArea](#computearea)|Calcola l'area della geometria dopo che è stato trasformato dalla matrice specificata e resa bidimensionale utilizzando la tolleranza specificata.|
 |[CD2DGeometry::ComputeLength](#computelength)|Calcola la lunghezza della geometria come se fosse ogni segmento spiegato in una riga.|
 |[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Calcola il punto e il vettore tangente alla distanza indicata lungo la geometria dopo che è stato trasformato dalla matrice specificata e resa bidimensionale utilizzando la tolleranza specificata.|
-|[CD2DGeometry:: Destroy](#destroy)|Elimina un oggetto CD2DGeometry. (Esegue l'override [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DGeometry::Destroy](#destroy)|Elimina un oggetto CD2DGeometry. (Esegue l'override [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
 |[CD2DGeometry::Detach](#detach)|Scollega interfaccia di risorse dall'oggetto|
 |[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Indica se l'area riempita dalla geometria contiene il punto specificato dato l'appiattimento tolleranza specificata.|
 |[CD2DGeometry::Get](#get)|Restituisce l'interfaccia ID2D1Geometry|
@@ -155,7 +155,7 @@ CD2DGeometry(
 *pParentTarget*<br/>
 Puntatore alla destinazione di rendering.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry
@@ -234,7 +234,7 @@ BOOL ComputeArea(
 *worldTransform*<br/>
 La trasformazione da applicare a questa geometria prima di calcolare l'area.
 
-*Area*<br/>
+*area*<br/>
 Quando termina, questo metodo contiene un puntatore all'area della versione di questa geometria bidimensionale e trasformata. È necessario allocare spazio di archiviazione per questo parametro.
 
 *flatteningTolerance*<br/>
@@ -291,7 +291,7 @@ La distanza lungo la geometria del punto e della tangente da trovare. Se la dist
 *worldTransform*<br/>
 La trasformazione da applicare alla geometria prima di calcolare il punto specificato e una tangente.
 
-*punto*<br/>
+*point*<br/>
 Il percorso alla distanza indicata lungo la geometria. Se la geometria è vuota, questo punto contiene NaN come x e y valori.
 
 *unitTangentVector*<br/>
@@ -338,13 +338,13 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Punto da testare.
 
 *worldTransform*<br/>
 La trasformazione da applicare alla geometria prima del test di contenimento.
 
-*Contiene*<br/>
+*contains*<br/>
 Quando termina, questo metodo contiene un valore booleano che è TRUE se l'area riempita dalla geometria contiene punto; in caso contrario, FALSE. È necessario allocare spazio di archiviazione per questo parametro.
 
 *flatteningTolerance*<br/>
@@ -377,7 +377,7 @@ CD2DRectF& bounds) const;
 ### <a name="parameters"></a>Parametri
 
 *worldTransform*<br/>
-*Limiti*
+*bounds*
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -405,7 +405,7 @@ Lo stile del tratto che amplia la geometria.
 *worldTransform*<br/>
 Una trasformazione da applicare alla geometria dopo che la geometria viene trasformata e dopo che è stata tracciata la geometria.
 
-*Limiti*<br/>
+*bounds*<br/>
 Quando termina, questo metodo contiene i limiti della geometria ampliata. È necessario allocare spazio di archiviazione per questo parametro.
 
 *flatteningTolerance*<br/>
@@ -519,7 +519,7 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Il punto di test di contenimento.
 
 *strokeWidth*<br/>
@@ -531,7 +531,7 @@ Lo stile del tratto da applicare.
 *worldTransform*<br/>
 La trasformazione da applicare alla geometria tratteggiata.
 
-*Contiene*<br/>
+*contains*<br/>
 Quando termina, questo metodo contiene un valore booleano impostato su TRUE se il tratto della geometria contiene il punto specificato; in caso contrario, FALSE. È necessario allocare spazio di archiviazione per questo parametro.
 
 *flatteningTolerance*<br/>

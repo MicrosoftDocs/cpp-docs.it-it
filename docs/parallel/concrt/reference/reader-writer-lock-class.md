@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: 1c2696695992cac9d51d547913c41234beaecf57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 111d48b9c4a575078f2342bfaa944871bbd628f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268655"
 ---
 # <a name="readerwriterlock-class"></a>Classe reader_writer_lock
 
@@ -142,10 +142,10 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 
 #### <a name="parameters"></a>Parametri
 
-*Reader_writer_lock*<br/>
+*_Reader_writer_lock*<br/>
 Il `reader_writer_lock` oggetto da acquisire come writer.
 
-## <a name="scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock
+## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock
 
 Elimina definitivamente un `reader_writer_lock` dell'oggetto e rilascia il blocco specificato nel relativo costruttore.
 
@@ -175,7 +175,7 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 
 #### <a name="parameters"></a>Parametri
 
-*Reader_writer_lock*<br/>
+*_Reader_writer_lock*<br/>
 Il `reader_writer_lock` oggetto da acquisire come un lettore.
 
 ## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read distruttore

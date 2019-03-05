@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - command bars [MFC], MFC toolbars
 ms.assetid: c22ecc5b-a84c-4979-8d1a-8e3e71d5ce33
-ms.openlocfilehash: 7516ee4fa942070aad47f0cd6b8e1a65ff41ec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe294b42f6c149a32d3e96ee9e0e2dc18103fc5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260517"
 ---
 # <a name="toolbars"></a>Barre degli strumenti
 

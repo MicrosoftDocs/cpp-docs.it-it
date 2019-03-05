@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: d12ee07c9e36f52fc176066be0e91ce1a7307858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659069"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276286"
 ---
 # <a name="coledocobjectitem-class"></a>Classe COleDocObjectItem
 
@@ -53,12 +53,12 @@ class COleDocObjectItem : public COleClientItem
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleDocObjectItem:: DoDefaultPrinting](#dodefaultprinting)|Stampa il documento dell'applicazione contenitore usando le impostazioni della stampante predefinita.|
+|[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Stampa il documento dell'applicazione contenitore usando le impostazioni della stampante predefinita.|
 |[COleDocObjectItem::ExecCommand](#execcommand)|Esegue il comando specificato dall'utente.|
 |[COleDocObjectItem::GetActiveView](#getactiveview)|Recupera visualizzazione attiva del documento.|
 |[COleDocObjectItem::GetPageCount](#getpagecount)|Recupera il numero di pagine nel documento dell'applicazione contenitore.|
-|[COleDocObjectItem](#onprepareprinting)|Prepara il documento dell'applicazione contenitore per la stampa.|
-|[COleDocObjectItem](#onprint)|Stampa il documento dell'applicazione contenitore.|
+|[COleDocObjectItem::OnPreparePrinting](#onprepareprinting)|Prepara il documento dell'applicazione contenitore per la stampa.|
+|[COleDocObjectItem::OnPrint](#onprint)|Stampa il documento dell'applicazione contenitore.|
 |[COleDocObjectItem::QueryCommand](#querycommand)|Query per lo stato di uno o più comandi generati dagli eventi dell'interfaccia utente.|
 |[COleDocObjectItem::Release](#release)|Rilascia la connessione a un elemento collegato oggetto OLE e lo chiude se era aperta. Non elimina definitivamente l'elemento client.|
 
@@ -151,7 +151,7 @@ Identificatore univoco del gruppo di comandi. Per impostazione predefinita, NULL
 
 Restituisce S_OK se l'esito positivo. in caso contrario, restituisce uno dei seguenti codici di errore.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |E_UNEXPECTED|Si è verificato un errore imprevisto.|
 |E_FAIL|Si è verificato un errore.|

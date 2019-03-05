@@ -50,18 +50,18 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-ms.openlocfilehash: 454db8578fd061147948538b8d993205181edcdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b449b4b9f9074966ac269787b1b3ca6f977f48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264586"
 ---
 # <a name="cmfcautohidebutton-class"></a>Classe CMFCAutoHideButton
 
 Pulsante che visualizza o nasconde una [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) configurata per nascondere elementi.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -368,7 +368,7 @@ virtual void OnFillBackground(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione del pulsante Nascondi automaticamente.
 
 ### <a name="remarks"></a>Note
@@ -385,7 +385,7 @@ void ShowAttachedWindow(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Valore booleano che specifica se questo metodo visualizza l'oggetto associato `CDockablePane`.
 
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton
@@ -398,7 +398,7 @@ virtual void ShowButton(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Valore booleano che specifica se mostrare il pulsante Nascondi automaticamente.
 
 ##  <a name="move"></a>  CMFCAutoHideButton::Move

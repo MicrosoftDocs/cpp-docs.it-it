@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: ff68cc737f28763e5545b0ccaf2c0122e78cb051
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654678"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271203"
 ---
 # <a name="cd2dgeometrysink-class"></a>Classe CD2DGeometrySink
 
@@ -121,7 +121,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 ### <a name="parameters"></a>Parametri
 
-*Arco*<br/>
+*arc*<br/>
 Il segmento di arco da aggiungere alla figura
 
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
@@ -134,7 +134,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Parametri
 
-*curva di Bezier*<br/>
+*bezier*<br/>
 Struttura che descrive i punti di controllo e il punto finale della curva di Bézier da aggiungere.
 
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
@@ -149,7 +149,7 @@ void AddBeziers(
 
 ### <a name="parameters"></a>Parametri
 
-*elementi Bezier*<br/>
+*beziers*<br/>
 Una matrice di segmenti di Bézier che descrive le curve di Bezier per creare. Una curva viene disegnata dal punto corrente del sink di geometria (il punto finale dell'ultimo segmento disegnata o alla posizione specificata da BeginFigure) per il punto finale del segmento di Bézier prima nella matrice. Se la matrice contiene altri segmenti di curva di Bezier, ogni segmento di Bézier successivo Usa il punto finale del segmento di Bézier precedente come punto di inizio.
 
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine
@@ -162,7 +162,7 @@ void AddLine(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Il punto finale della riga da disegnare.
 
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines
@@ -177,7 +177,7 @@ void AddLines(
 
 ### <a name="parameters"></a>Parametri
 
-*Punti*<br/>
+*points*<br/>
 Matrice di uno o più punti che descrivono le righe da disegnare. Viene tracciata una linea dal punto corrente del sink di geometria (il punto finale dell'ultimo segmento disegnata o alla posizione specificata da BeginFigure) per il primo punto della matrice. Se la matrice contiene punti aggiuntivi, dal primo punto viene disegnata una linea e il secondo punto nella matrice, dal punto di secondo per il terzo punto e così via. Matrice di una sequenza dei punti di fine di righe da disegnare.
 
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
@@ -190,7 +190,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Parametri
 
-*curva di Bezier*<br/>
+*bezier*<br/>
 Struttura che descrive il punto di controllo e il punto finale della curva di Bézier quadratica da aggiungere.
 
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
@@ -205,7 +205,7 @@ void AddQuadraticBeziers(
 
 ### <a name="parameters"></a>Parametri
 
-*elementi Bezier*<br/>
+*beziers*<br/>
 Matrice di una sequenza di segmenti di curva di Bezier quadratica.
 
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-ms.openlocfilehash: 38b7c920f8ffcab6d709d9484f308a56cd6b8425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613278"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272945"
 ---
 # <a name="propagatorblock-class"></a>Classe propagator_block
 
@@ -135,7 +135,7 @@ void initialize_source_and_target(
 *_PScheduler*<br/>
 L'utilità di pianificazione da utilizzare per la pianificazione di attività.
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Il gruppo di pianificazione da utilizzare per la pianificazione di attività.
 
 ##  <a name="link_source"></a> link_source
@@ -148,7 +148,7 @@ virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
 
 ### <a name="parameters"></a>Parametri
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al `ISource` blocco che deve essere collegato.
 
 ##  <a name="process_input_messages"></a> process_input_messages
@@ -161,10 +161,10 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore al messaggio che deve essere elaborato.
 
-##  <a name="propagate"></a> propagazione
+##  <a name="propagate"></a> propagate
 
 Consente di passare in modo asincrono un messaggio da un blocco di origine per questo blocco di destinazione.
 
@@ -176,10 +176,10 @@ virtual message_status propagate(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -204,10 +204,10 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -240,7 +240,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Parametri
 
-*Filtro*<br/>
+*_Filter*<br/>
 Il metodo di filtro.
 
 ##  <a name="remove_network_links"></a> remove_network_links
@@ -263,10 +263,10 @@ virtual message_status send(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -305,7 +305,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
 
 ### <a name="parameters"></a>Parametri
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al `ISource` blocco che deve essere sconnesso.
 
 ##  <a name="unlink_sources"></a> unlink_sources

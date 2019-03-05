@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-ms.openlocfilehash: 2a16ad50911185c27906eee27902cee9971932c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c8976c013d0114a3115d3b0bc38fa4bc6acb5b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493678"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275688"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>La modifica del controllo DHTML ATL
 

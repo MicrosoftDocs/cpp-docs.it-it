@@ -5,12 +5,12 @@ helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-ms.openlocfilehash: e3b19ec180f9f4e75a2f280a0ecd159e5b932565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272217"
 ---
 # <a name="how-to-write-a-parallelforeach-loop"></a>Procedura: Scrivere un ciclo parallel_for_each
 
@@ -42,10 +42,9 @@ Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual S
 
 ## <a name="robust-programming"></a>Programmazione efficiente
 
-L'espressione lambda che nell'esempio viene passato per il `parallel_for_each` algoritmo utilizza il `InterlockedIncrement` funzione abilitare parallela delle iterazioni del ciclo di incrementare il contatore contemporaneamente. Se si usano funzioni quali `InterlockedIncrement` per sincronizzare l'accesso alle risorse condivise, è possibile presentare i colli di bottiglia delle prestazioni nel codice. È possibile usare un meccanismo di sincronizzazione senza blocco, ad esempio, il [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (classe), per eliminare l'accesso simultaneo alle risorse condivise. Per un esempio che usa il `combinable` in questo modo, vedere [procedura: usare la classe combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
+L'espressione lambda che nell'esempio viene passato per il `parallel_for_each` algoritmo utilizza il `InterlockedIncrement` funzione abilitare parallela delle iterazioni del ciclo di incrementare il contatore contemporaneamente. Se si usano funzioni quali `InterlockedIncrement` per sincronizzare l'accesso alle risorse condivise, è possibile presentare i colli di bottiglia delle prestazioni nel codice. È possibile usare un meccanismo di sincronizzazione senza blocco, ad esempio, il [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (classe), per eliminare l'accesso simultaneo alle risorse condivise. Per un esempio che usa il `combinable` in questo modo, vedere [come: Usare la classe combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for_each (funzione)](reference/concurrency-namespace-functions.md#parallel_for_each)
-

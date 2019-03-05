@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: 163da1ee6e98e974af0fd1a6b27e1b2df85e9ce0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26a1527dbdac4b2a9deb57fb13481f8d2f9cb5b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263819"
 ---
 # <a name="commonly-overridden-member-functions"></a>Funzioni membro comunemente sottoposte a override
 

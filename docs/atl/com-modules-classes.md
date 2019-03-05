@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM modules classes
 ms.assetid: 0a8a82dd-a153-47cd-9bbe-1a1ad5d1a6ff
-ms.openlocfilehash: dc18d35c52d99877ed493e61040547a983117ecf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6836215714e979f33f39549a61cbfc99b12bd3d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265041"
 ---
 # <a name="com-modules-classes"></a>Classi dei moduli COM
 
@@ -44,4 +44,3 @@ Le classi seguenti forniscono supporto per un modulo COM:
 
 [Panoramica della classe](../atl/atl-class-overview.md)<br/>
 [Classi di modulo](../atl/atl-module-classes.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176445"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262870"
 ---
 # <a name="parallel-algorithms"></a>Algoritmi paralleli
 
@@ -78,7 +78,7 @@ Questo esempio produce l'output di esempio seguente:
 
 Poiché il `parallel_for` algoritmo agisce su ogni elemento in parallelo, l'ordine in cui i valori vengono stampati nella console possono variare.
 
-Per un esempio completo che usa il `parallel_for` algoritmo, vedere [procedura: scrivere un ciclo parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
+Per un esempio completo che usa il `parallel_for` algoritmo, vedere [come: Scrivere un ciclo parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
 
 [[Torna all'inizio](#top)]
 
@@ -104,7 +104,7 @@ Questo esempio produce l'output di esempio seguente:
 
 Poiché il `parallel_for_each` algoritmo agisce su ogni elemento in parallelo, l'ordine in cui i valori vengono stampati nella console possono variare.
 
-Per un esempio completo che usa il `parallel_for_each` algoritmo, vedere [procedura: scrivere un ciclo parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
+Per un esempio completo che usa il `parallel_for_each` algoritmo, vedere [come: Scrivere un ciclo parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
 
 [[Torna all'inizio](#top)]
 
@@ -128,7 +128,7 @@ Questo esempio produce il seguente output:
 108 11.2 HelloHello
 ```
 
-Per esempi completi che usano il `parallel_invoke` algoritmo, vedere [procedura: usare parallel_invoke per scrivere una Routine di ordinamento parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) e [procedura: usare parallel_invoke per eseguire operazioni in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Per esempi completi che usano il `parallel_invoke` algoritmo, vedere [come: Usare parallel_invoke per scrivere una Routine di ordinamento parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) e [come: Usare parallel_invoke per eseguire operazioni in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 [[Torna all'inizio](#top)]
 
@@ -189,7 +189,7 @@ Nell'esempio seguente viene confrontato il tempo necessario per calcolare la som
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-Per un altro esempio che esegue una mappa e ridurre le operazioni in parallelo, vedere [procedura: eseguire mappa e ridurre le operazioni in parallelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Per un altro esempio che esegue una mappa e ridurre le operazioni in parallelo, vedere [come: Esecuzione della mappa e ridurre le operazioni in parallelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 [[Torna all'inizio](#top)]
 
@@ -199,16 +199,16 @@ Per parallelizzare un'operazione su un'origine dati, un passaggio essenziale con
 
 Tramite gli algoritmi `parallel_for`, `parallel_for_each` e `parallel_transform` vengono fornite le versioni sottoposte a overload che accettano un parametro aggiuntivo, `_Partitioner`. Tramite questo parametro viene definito il tipo di partitioner che consente la divisione del lavoro. Di seguito sono riportati i tipi di partitioner definiti dalla libreria PPL:
 
-[Concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
+[concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
 Il lavoro viene diviso in un numero fisso di intervalli (in genere il numero di thread di lavoro disponibili per il ciclo). Questo tipo di partitioner assomiglia a `static_partitioner`, tuttavia l'affinità della cache viene migliorata per quanto riguarda il mapping degli intervalli ai thread di lavoro. Questo tipo di partitioner può consentire il miglioramento delle prestazioni quando un ciclo viene eseguito più volte nello stesso set di dati (ad esempio un ciclo all'interno di un altro) e i dati sono adatti alla cache. Questo partitioner non è coinvolto completamente nell'annullamento. Inoltre non viene utilizzata la semantica di blocco cooperativo e, pertanto, non può essere utilizzato con cicli paralleli che hanno una dipendenza di inoltro.
 
-[Concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
+[concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
 Il lavoro viene diviso in un numero iniziale di intervalli (in genere il numero di thread di lavoro disponibili nel ciclo). Questo tipo viene utilizzato per impostazione predefinita dal runtime quando non viene chiamato un algoritmo parallelo sottoposto a overload che accetta un parametro `_Partitioner`. Ogni intervallo può essere suddiviso in intervalli secondari consentendo il bilanciamento del carico. Al termine di un intervallo di lavoro, gli intervalli di lavoro secondari vengo ridistribuiti da altri thread a questo tramite il runtime. Utilizzare questo partitioner se il carico di lavoro non rientra in una delle altre categorie o se è necessario un supporto completo per l'annullamento o il blocco cooperativo.
 
-[Concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
+[concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
 Il lavoro viene diviso in intervalli in modo che in ogni intervallo sia disponibile almeno il numero di iterazioni specificate dalla dimensione del blocco fornita. Questo tipo di partitioner è coinvolto nel bilanciamento del carico; tuttavia, gli intervalli non vengono suddivisi in intervalli secondari tramite il runtime. Per ogni thread di lavoro, tramite il runtime viene controllato l'annullamento e viene eseguito il bilanciamento del carico al termine delle iterazioni `_Chunk_size`.
 
-[Concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
+[concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
 Il lavoro viene diviso in un numero fisso di intervalli (in genere il numero di thread di lavoro disponibili per il ciclo). Le prestazioni possono migliorare grazie a questo tipo di partitioner poiché non viene utilizzata l'acquisizione del lavoro e pertanto il sovraccarico è inferiore. Utilizzare questo tipo di partitioner quando tramite ogni iterazione di un ciclo parallelo viene eseguita una quantità di lavoro fissa e uniforme e non è richiesto supporto per l'annullamento o l'inoltro del blocco cooperativo.
 
 > [!WARNING]
@@ -229,7 +229,7 @@ Il modo migliore per stabilire se è opportuno utilizzare un partitioner in qual
 
 [[Torna all'inizio](#top)]
 
-##  <a name="parallel_sorting"></a> Ordinamento parallelo
+##  <a name="parallel_sorting"></a> Parallel Sorting
 
 La libreria PPL fornisce tre algoritmi di ordinamento: [Concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [Concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), e [Concurrency:: parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Questi algoritmi sono utili quando si dispone di un set di dati per cui l'ordinamento in parallelo risulta vantaggioso. In particolare, l'ordinamento in parallelo è utile in caso di un set di dati di grandi dimensioni o quando, per ordinare i dati, si utilizza un'operazione di confronto dispendiosa dal punto di vista del calcolo. Ognuno di questi algoritmi consente l'ordinamento degli elementi sul posto.
 
@@ -343,4 +343,3 @@ In questo esempio, in cui si presuppone che sia accettabile per allocare spazio 
 [Funzione parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
 
 [Funzione parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)
-

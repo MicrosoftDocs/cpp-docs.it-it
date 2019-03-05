@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-ms.openlocfilehash: d8dfc8bbb200258818c38e931e978cc3be292525
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a7810267c3eaa11ad7592774440365620e7e8f4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454081"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276936"
 ---
 # <a name="memory-management-functions"></a>Funzioni di gestione della memoria
 
@@ -30,10 +30,9 @@ Usare la `Alloc` e `Free` funzioni quando si alloca e libera un set fisso di dim
 
 ## <a name="example"></a>Esempio
 
-Per un esempio che usa il `Alloc` e `Free` funzioni per migliorare le prestazioni di memoria, vedere [procedura: usare Alloc e Free per migliorare le prestazioni di memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Per un esempio che usa il `Alloc` e `Free` funzioni per migliorare le prestazioni di memoria, vedere [come: Usare Alloc e Free per migliorare le prestazioni della memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Procedura: Usare Alloc e Free per migliorare le prestazioni di memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
-

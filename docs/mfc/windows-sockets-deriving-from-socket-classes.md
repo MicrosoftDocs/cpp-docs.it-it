@@ -1,23 +1,23 @@
 ---
-title: 'Windows Sockets: derivazione dalle classi Socket'
+title: 'Windows Sockets: Derivazione dalle classi Socket'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - derived classes [MFC], from socket classes
 - Windows Sockets [MFC], deriving from socket classes
 - sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
-ms.openlocfilehash: d860aacef164155f87db33355211b1a8e598c91b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ab66cfd9212cd79752e2f6359b857194c6428c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648812"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270308"
 ---
-# <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: derivazione dalle classi Socket
+# <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Derivazione dalle classi Socket
 
 Questo articolo descrive alcune delle funzionalità che è possibile ottenere derivando una classe personalizzata da una delle classi socket.
 
-È possibile derivare le proprie classi socket da uno [CAsyncSocket](../mfc/reference/casyncsocket-class.md) oppure [CSocket](../mfc/reference/csocket-class.md) per aggiungere funzionalità personalizzate. In particolare, queste classi forniscono una serie di funzioni membro virtuali che è possibile eseguire l'override. Queste funzioni includono [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), e [OnClose](../mfc/reference/casyncsocket-class.md#onclose). È possibile sostituire le funzioni nella classe derivata socket per sfruttare i vantaggi delle notifiche sono utili in caso di eventi di rete. Il framework chiama queste funzioni di callback di notifica per la notifica degli eventi importanti socket, ad esempio la ricezione di dati che è possibile iniziare la lettura. Per altre informazioni sulle funzioni di notifica, vedere [Windows Sockets: notifiche Socket](../mfc/windows-sockets-socket-notifications.md).
+È possibile derivare le proprie classi socket da uno [CAsyncSocket](../mfc/reference/casyncsocket-class.md) oppure [CSocket](../mfc/reference/csocket-class.md) per aggiungere funzionalità personalizzate. In particolare, queste classi forniscono una serie di funzioni membro virtuali che è possibile eseguire l'override. Queste funzioni includono [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), e [OnClose](../mfc/reference/casyncsocket-class.md#onclose). È possibile sostituire le funzioni nella classe derivata socket per sfruttare i vantaggi delle notifiche sono utili in caso di eventi di rete. Il framework chiama queste funzioni di callback di notifica per la notifica degli eventi importanti socket, ad esempio la ricezione di dati che è possibile iniziare la lettura. Per altre informazioni sulle funzioni di notifica, vedere [Windows Sockets: Le notifiche di socket](../mfc/windows-sockets-socket-notifications.md).
 
 Classe inoltre `CSocket` fornisce il [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) funzione membro (un avanzato sottoponibile a override). MFC chiama questa funzione, anche se il socket è distribuendo messaggi basati su Windows. È possibile eseguire l'override `OnMessagePending` cercare messaggi specifici da Windows e di rispondere ad essi.
 
@@ -27,17 +27,16 @@ Nel `OnMessagePending` eseguire l'override, restituire **TRUE** o il valore rest
 
 Per altre informazioni, vedere:
 
-- [Windows Sockets: uso di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: Utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: uso della classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: Uso della classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: blocco](../mfc/windows-sockets-blocking.md)
+- [Windows Sockets: Il blocco](../mfc/windows-sockets-blocking.md)
 
-- [Windows Sockets: ordinamento dei byte](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Sockets: L'ordine dei byte](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows Sockets: conversione di stringhe](../mfc/windows-sockets-converting-strings.md)
+- [Windows Sockets: Conversione di stringhe](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
-

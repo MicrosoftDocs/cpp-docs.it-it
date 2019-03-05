@@ -106,17 +106,17 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694361"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267368"
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 
 Barra dei menu che implementa l'ancoraggio.
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -464,7 +464,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Un parametro booleano che indica se le ombreggiature devono essere abilitate per i menu a comparsa.
 
 ### <a name="remarks"></a>Note
@@ -878,7 +878,7 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *punto*<br/>
+[in] *point*<br/>
 
 [in] *pTI*<br/>
 
@@ -1062,7 +1062,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*Bin*<br/>
+*bOn*<br/>
 [in] Valore booleano che determina se vengono visualizzati i comandi di menu usati di recente.
 
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands

@@ -1,23 +1,23 @@
 ---
-title: 'Controlli ActiveX MFC: metodi'
+title: 'Controlli ActiveX MFC: Metodi'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
-ms.openlocfilehash: 9e8bc35989dc0e933cdb67c2574fb3bf6a4d99de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524579"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268408"
 ---
-# <a name="mfc-activex-controls-methods"></a>Controlli ActiveX MFC: metodi
+# <a name="mfc-activex-controls-methods"></a>Controlli ActiveX MFC: Metodi
 
 Un controllo ActiveX genera eventi per la comunicazione tra se stesso e il relativo contenitore del controllo. Un contenitore può anche comunicare con un controllo tramite metodi e proprietà. I metodi vengono chiamati anche le funzioni.
 
-Metodi e proprietà forniscono un'interfaccia esportata per l'uso da altre applicazioni, ad esempio i client di automazione e i contenitori di controlli ActiveX. Per ulteriori informazioni sulla proprietà del controllo ActiveX, vedere l'articolo [controlli ActiveX MFC: proprietà](../mfc/mfc-activex-controls-properties.md).
+Metodi e proprietà forniscono un'interfaccia esportata per l'uso da altre applicazioni, ad esempio i client di automazione e i contenitori di controlli ActiveX. Per ulteriori informazioni sulla proprietà del controllo ActiveX, vedere l'articolo [controlli ActiveX MFC: Proprietà](../mfc/mfc-activex-controls-properties.md).
 
-I metodi sono simili in uso e utilizzo generico per le funzioni membro di una classe C++. Esistono due tipi di metodi può implementare il controllo: predefinite e personalizzate. Simili a eventi predefiniti, i metodi predefiniti sono i metodi per il quale [COleControl](../mfc/reference/colecontrol-class.md) fornisce un'implementazione. Per altre informazioni sui metodi predefiniti, vedere l'articolo [controlli ActiveX MFC: aggiunta di metodi predefiniti](../mfc/mfc-activex-controls-adding-stock-methods.md). Metodi personalizzati, definiti dallo sviluppatore, consentono un'ulteriore personalizzazione del controllo. Per altre informazioni, vedere l'articolo [controlli ActiveX MFC: aggiunta di metodi personalizzati](../mfc/mfc-activex-controls-adding-custom-methods.md).
+I metodi sono simili in uso e utilizzo generico per le funzioni membro di una classe C++. Esistono due tipi di metodi può implementare il controllo: predefinite e personalizzate. Simili a eventi predefiniti, i metodi predefiniti sono i metodi per il quale [COleControl](../mfc/reference/colecontrol-class.md) fornisce un'implementazione. Per altre informazioni sui metodi predefiniti, vedere l'articolo [controlli ActiveX MFC: Aggiunta di metodi predefiniti](../mfc/mfc-activex-controls-adding-stock-methods.md). Metodi personalizzati, definiti dallo sviluppatore, consentono un'ulteriore personalizzazione del controllo. Per altre informazioni, vedere l'articolo [controlli ActiveX MFC: Aggiunta di metodi personalizzati](../mfc/mfc-activex-controls-adding-custom-methods.md).
 
 Il Microsoft della libreria MFC (Foundation Class) implementa un meccanismo che consente il controllo supporti i metodi predefiniti e personalizzati. La prima parte è una classe `COleControl`. Derivata da `CWnd`, `COleControl` funzioni membro supportano metodi predefiniti che sono comuni a tutti i controlli ActiveX. La seconda parte di questo meccanismo è la mappa di invio. Una mappa di invio è simile a una mappa dei messaggi; Tuttavia, anziché una funzione di mapping a un ID di messaggio di Windows, una dispatch map esegue il mapping di funzioni membro virtuali agli ID IDispatch.
 
@@ -34,13 +34,12 @@ Se è stata usata la [Creazione guidata controllo ActiveX MFC](../mfc/reference/
 
 Gli articoli seguenti illustrano i metodi in dettaglio:
 
-- [Controlli ActiveX MFC: aggiunta di metodi predefiniti](../mfc/mfc-activex-controls-adding-stock-methods.md)
+- [Controlli ActiveX MFC: Aggiunta di metodi predefiniti](../mfc/mfc-activex-controls-adding-stock-methods.md)
 
-- [Controlli ActiveX MFC: aggiunta di metodi personalizzati](../mfc/mfc-activex-controls-adding-custom-methods.md)
+- [Controlli ActiveX MFC: Aggiunta di metodi personalizzati](../mfc/mfc-activex-controls-adding-custom-methods.md)
 
-- [Controlli ActiveX MFC: restituzione di codici di errore da un metodo](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
+- [Controlli ActiveX MFC: Restituzione di codici di errore da un metodo](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
-

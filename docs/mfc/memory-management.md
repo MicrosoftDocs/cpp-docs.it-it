@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 22c5c2c835872a189fe342093a737d7887538256
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1c7f901009d5e1e7f0af20d493bb748b46b18480
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692743"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281291"
 ---
 # <a name="memory-management"></a>Gestione della memoria
 
@@ -43,4 +43,3 @@ Per non MFC informazioni sulla gestione della memoria nelle applicazioni per Win
 
 [Concetti](../mfc/mfc-concepts.md)<br/>
 [Argomenti MFC generali](../mfc/general-mfc-topics.md)
-

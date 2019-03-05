@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 39ae785b602b3928f0c32f9fc599527dab5558f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175860"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268044"
 ---
 # <a name="asynchronous-agents-library"></a>libreria di agenti asincroni
 
@@ -89,4 +89,3 @@ Viene descritto come utilizzare i vari modelli paralleli, ad esempio gli algorit
 
 [Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)<br/>
 Descrive il runtime di concorrenza che semplifica la programmazione parallela e contiene i collegamenti ad argomenti correlati.
-

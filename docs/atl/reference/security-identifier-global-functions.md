@@ -37,12 +37,12 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-ms.openlocfilehash: fc625ffe18aad5cf6e2b15dd61122c97bcf14d44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab5d743c7c6abf7ee3a849a28916ebd32788ef40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592478"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269409"
 ---
 # <a name="security-identifier-global-functions"></a>Funzioni globali di identificatore di sicurezza
 
@@ -58,7 +58,7 @@ Queste funzioni restituiscono comuni ben noto SID oggetti.
 |[Sids::AnonymousLogon](#anonymouslogon)|Restituisce il SID di SECURITY_ANONYMOUS_LOGON_RID.|
 |[Sids::AuthenticatedUser](#authenticateduser)|Restituisce il SID di SECURITY_AUTHENTICATED_USER_RID.|
 |[Sids::BackupOps](#backupops)|Restituisce il SID di DOMAIN_ALIAS_RID_BACKUP_OPS.|
-|[Sids::batch](#batch)|Restituisce il SID di SECURITY_BATCH_RID.|
+|[Sids::Batch](#batch)|Restituisce il SID di SECURITY_BATCH_RID.|
 |[Sids::CreatorGroup](#creatorgroup)|Restituisce il SID di SECURITY_CREATOR_GROUP_RID.|
 |[Sids::CreatorGroupServer](#creatorgroupserver)|Restituisce il SID di SECURITY_CREATOR_GROUP_SERVER_RID.|
 |[Sids::CreatorOwner](#creatorowner)|Restituisce il SID di SECURITY_CREATOR_OWNER_RID.|
@@ -69,15 +69,15 @@ Queste funzioni restituiscono comuni ben noto SID oggetti.
 |[Sids::Local](#local)|Restituisce il SID di SECURITY_LOCAL_RID.|
 |[Sids::Network](#network)|Restituisce il SID di SECURITY_NETWORK_RID.|
 |[Sids::NetworkService](#networkservice)|Restituisce il SID di SECURITY_NETWORK_SERVICE_RID.|
-|[Sids::null](#null)|Restituisce il SID di SECURITY_NULL_RID.|
+|[Sids::Null](#null)|Restituisce il SID di SECURITY_NULL_RID.|
 |[Sids::PreW2KAccess](#prew2kaccess)|Restituisce il SID di DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.|
 |[Sids::PowerUsers](#powerusers)|Restituisce il SID di DOMAIN_ALIAS_RID_POWER_USERS.|
 |[Sids::PrintOps](#printops)|Restituisce il SID di DOMAIN_ALIAS_RID_PRINT_OPS.|
-|[Sids::proxy](#proxy)|Restituisce il SID di SECURITY_PROXY_RID.|
+|[Sids::Proxy](#proxy)|Restituisce il SID di SECURITY_PROXY_RID.|
 |[Sids::RasServers](#rasservers)|Restituisce il SID di DOMAIN_ALIAS_RID_RAS_SERVERS.|
 |[Sids::Replicator](#replicator)|Restituisce il SID di DOMAIN_ALIAS_RID_REPLICATOR.|
 |[Sids::RestrictedCode](#restrictedcode)|Restituisce il SID di SECURITY_RESTRICTED_CODE_RID.|
-|[Sids::self](#self)|Restituisce il SID di SECURITY_PRINCIPAL_SELF_RID.|
+|[Sids::Self](#self)|Restituisce il SID di SECURITY_PRINCIPAL_SELF_RID.|
 |[Sids::ServerLogon](#serverlogon)|Restituisce il SID di SECURITY_SERVER_LOGON_RID.|
 |[Sids::Service](#service)|Restituisce il SID di SECURITY_SERVICE_RID.|
 |[Sids::System](#system)|Restituisce il SID di SECURITY_LOCAL_SYSTEM_RID.|
@@ -130,7 +130,7 @@ Restituisce il SID di DOMAIN_ALIAS_RID_BACKUP_OPS.
 CSid BackupOps() throw(...);
 ```
 
-##  <a name="batch"></a>  Sids::batch
+##  <a name="batch"></a>  Sids::Batch
 
 Restituisce il SID di SECURITY_BATCH_RID.
 
@@ -224,7 +224,7 @@ Utilizzare NetworkService per consentire all'utente NT AUTHORITY\NetworkService 
 
 Quando i contatori di log personalizzati vengono creati con la classe ATLServer CPerfMon nella MMC Perfmon, i contatori non risulti quando si visualizza il file di log, sebbene vengano visualizzati correttamente nella visualizzazione in tempo reale. Contatori delle prestazioni personalizzati CPerfMon non hanno le autorizzazioni necessarie per l'esecuzione con il servizio "Avvisi e registri di prestazioni" (smlogsvc.exe) in Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (o versione successiva) i sistemi operativi. Questo servizio viene eseguito con l'account "NT AUTHORITY\NetworkService".
 
-##  <a name="null"></a>  Sids::null
+##  <a name="null"></a>  Sids::Null
 
 Restituisce il SID di SECURITY_NULL_RID.
 
@@ -256,7 +256,7 @@ Restituisce il SID di DOMAIN_ALIAS_RID_PRINT_OPS.
 CSid PrintOps() throw(...);
 ```
 
-##  <a name="proxy"></a>  Sids::proxy
+##  <a name="proxy"></a>  Sids::Proxy
 
 Restituisce il SID di SECURITY_PROXY_RID.
 
@@ -288,7 +288,7 @@ Restituisce il SID di SECURITY_RESTRICTED_CODE_RID.
 CSid RestrictedCode() throw(...);
 ```
 
-##  <a name="self"></a>  Sids::self
+##  <a name="self"></a>  Sids::Self
 
 Restituisce il SID di SECURITY_PRINCIPAL_SELF_RID.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-ms.openlocfilehash: 3fc15da8cddfc74434210106d7d4c21ad84a66ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199c6969535afdd668440ea31d004aecc507ba42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265366"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Stringhe, Creazione guidata pagina delle proprietà ATL
 
@@ -33,4 +33,3 @@ Fornisce il testo associato alla proprietà pagina.
 
 [Creazione guidata pagina delle proprietà ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Opzioni, creazione guidata pagina delle proprietà ATL](../../atl/reference/options-atl-property-page-wizard.md)
-

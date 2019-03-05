@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: c7013fb53562fd76744bff19d1d37ce972a52d52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262467"
 ---
 # <a name="crecordview-class"></a>CRecordView (classe)
 
@@ -62,7 +62,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 La vista è una visualizzazione di form direttamente connessa a un `CRecordset` oggetto. La vista viene creata da una risorsa modello di finestra di dialogo e visualizza i campi del `CRecordset` oggetto nei controlli del modello di finestra di dialogo. Il `CRecordView` oggetto Usa finestra di dialogo data exchange (DDX) e il trasferimento di campi di record (RFX) per automatizzare lo spostamento dei dati tra i controlli nel form e i campi del set di record. `CRecordView` fornisce anche un'implementazione predefinita per lo spostamento al primo, successivo, precedente o gli ultimi record e un'interfaccia per l'aggiornamento del record attualmente nella vista.
 
 > [!NOTE]
->  Se si lavora con le classi di oggetti DAO (Data Access) anziché le classi di Open Database Connectivity (ODBC), usare una classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) invece. Per altre informazioni, vedere l'articolo [Overview: programmazione di Database](../../data/data-access-programming-mfc-atl.md).
+>  Se si lavora con le classi di oggetti DAO (Data Access) anziché le classi di Open Database Connectivity (ODBC), usare una classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) invece. Per altre informazioni, vedere l'articolo [Panoramica: Programmazione di database](../../data/data-access-programming-mfc-atl.md).
 
 Il modo più comune per creare la visualizzazione di record è con la creazione guidata applicazione. Creazione guidata applicazione inviterà crea la classe di visualizzazione di record e relativa classe recordset associato come parte dell'applicazione starter scheletro. Se non si crea la classe di visualizzazione di record con la creazione guidata applicazione, è possibile creare, in un secondo momento con la creazione guidata classe. Se è necessario semplicemente un modulo singolo, è più semplice l'approccio di creazione guidata applicazione. ClassWizard consente di decidere di usare una visualizzazione di record in un secondo momento nel processo di sviluppo. L'utilizzo di ClassWizard per creare una visualizzazione di record e un set di record separatamente e quindi connettersi a essi è l'approccio più flessibile perché offre maggior controllo nella classe recordset di denominazione e la relativa. H /. File CPP. Questo approccio consente inoltre di disporre di più visualizzazioni di record nella stessa classe recordset.
 
@@ -180,7 +180,7 @@ Un puntatore a un `CRecordset`-oggetto derivato se l'oggetto è stato creato cor
 
 È necessario eseguire l'override di questa funzione membro per creare o ottenere un oggetto recordset e restituire un puntatore a esso. Se si dichiara la classe di visualizzazione di record con ClassWizard, la procedura guidata scrive una sostituzione predefinita per l'utente. Implementazione predefinita di ClassWizard restituisce il puntatore di recordset archiviato nella vista del record, se presente. Se non, costruisce un oggetto recordset del tipo specificato con la creazione guidata classe e le chiamate relative `Open` membro funzione per aprire la tabella o eseguire la query e quindi restituisce un puntatore all'oggetto.
 
-Per altre informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: uso di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).
+Per altre informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: Uso di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  CRecordView::OnMove
 

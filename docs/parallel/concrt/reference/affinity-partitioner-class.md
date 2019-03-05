@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
-ms.openlocfilehash: 41073aceec5f9b8c3a5ac36a921e29c5270f44e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dac25755c388e5297ce671da09b7938f09f1ef03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499066"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262792"
 ---
 # <a name="affinitypartitioner-class"></a>Classe affinity_partitioner
 

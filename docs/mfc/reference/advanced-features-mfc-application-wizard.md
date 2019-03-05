@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694296"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278223"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funzionalità avanzate, Creazione guidata applicazione MFC
 
@@ -21,7 +21,7 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
 
    Genera un set di file della Guida per la Guida sensibile al contesto, accessibile premendo F1 e un menu oppure facendo clic su un **aiutare** pulsante in una finestra di dialogo. Il supporto della Guida richiede il compilatore della Guida. Se non è disponibile, è possibile installarlo eseguendo nuovamente il programma di installazione.
 
-   Visualizzare [della Guida HTML: Guida sensibile al contesto per i programmi](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e [file della Guida (HTML)](../../ide/help-files-html-help.md) per altre informazioni.
+   Vedere [della Guida HTML: Guida sensibile al contesto per i programmi](../../mfc/html-help-context-sensitive-help-for-your-programs.md) e [file della Guida (HTML)](../../ide/help-files-html-help.md) per altre informazioni.
 
 - **Stampa e anteprima di stampa**
 
@@ -57,7 +57,7 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
 
 - **Supporto Gestione riavvio**
 
-   Aggiunge il supporto per la [Gestione riavvio di Windows](/windows/desktop/RstMgr/using-restart-manager). In questo video viene illustrato come utilizzare Gestione riavvio da MFC: [procedura: utilizzo del nuovo Restart Manager](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Aggiunge il supporto per la [Gestione riavvio di Windows](/windows/desktop/RstMgr/using-restart-manager). In questo video viene illustrato come utilizzare Gestione riavvio da MFC: [Procedura: Usare il nuovo Gestione riavvio](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Riquadri frame avanzati**
 
@@ -76,4 +76,3 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)
-

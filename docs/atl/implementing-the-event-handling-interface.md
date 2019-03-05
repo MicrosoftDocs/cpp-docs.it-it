@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handling, ATL
 - interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-ms.openlocfilehash: 0e676076e09620cb3e69e788549d808be4f6df1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d977b59907266a2e0141defa8c496b1e7bc66a6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455458"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273413"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementazione di interfaccia di gestione degli eventi
 

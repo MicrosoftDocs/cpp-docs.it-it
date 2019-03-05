@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: fbdc6e6b9e7ffff1f14da79ed207644b518910fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564333"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277274"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Classe CD2DRadialGradientBrush
 
@@ -62,7 +62,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Costruisce un oggetto CD2DLinearGradientBrush.|
-|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di un pennello sfumatura radiale D2D.|
+|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di un pennello sfumatura radiale D2D.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -111,7 +111,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush
+##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::~CD2DRadialGradientBrush
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di un pennello sfumatura radiale D2D.
 
@@ -171,7 +171,7 @@ Il comportamento della sfumatura compreso nell'intervallo [0,1] normalizzato.
 *pBrushProperties*<br/>
 Un puntatore all'opacità e alla trasformazione di un pennello.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create
@@ -309,7 +309,7 @@ void SetCenter(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 Il centro dell'ellisse sfumatura, nello spazio delle coordinate del pennello
 
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset

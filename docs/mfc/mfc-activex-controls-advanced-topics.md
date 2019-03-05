@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: argomenti avanzati'
+title: 'Controlli ActiveX MFC: Argomenti avanzati'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 607fd1c0ee5ae35f46ef26584f7f8e3ac2f1c32f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645588"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277326"
 ---
-# <a name="mfc-activex-controls-advanced-topics"></a>Controlli ActiveX MFC: argomenti avanzati
+# <a name="mfc-activex-controls-advanced-topics"></a>Controlli ActiveX MFC: Argomenti avanzati
 
 Questo articolo illustra argomenti avanzati relativi allo sviluppo di controlli ActiveX. Sono inclusi:
 
@@ -174,7 +174,7 @@ Per altre informazioni sulla gestione delle interfacce della tastiera per un con
 
 - Tramite l'aggiunta guidata variabile membro, selezionare **variabile di controllo** e quindi selezionare il relativo ID. Immettere un nome di variabile membro e selezionare la classe del controllo wrapper come le **tipo di controllo**.
 
-     oppure
+     -oppure-
 
 - Dichiarare una variabile locale e una sottoclasse dell'elemento di finestra di dialogo. Inserire codice simile al seguente (`CMyCtrl` è la classe wrapper, IDC_MYCTRL1 è l'ID del controllo):
 
@@ -183,4 +183,3 @@ Per altre informazioni sulla gestione delle interfacce della tastiera per un con
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
-

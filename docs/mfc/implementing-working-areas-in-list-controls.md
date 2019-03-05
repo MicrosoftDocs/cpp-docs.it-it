@@ -5,12 +5,12 @@ helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: eac4c28497f4a00a333f5396fa71cdb2176106c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b166243c9032a113d46ff297b9f6e53429da21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525192"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281603"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementazione di aree di lavoro nei controlli List
 
@@ -41,4 +41,3 @@ L'esempio seguente assegna gli elementi dell'elenco esistente a ogni gruppo (`rc
 
 [Uso di CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

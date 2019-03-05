@@ -11,12 +11,12 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-ms.openlocfilehash: 1c8c0d32db202b8ba26afec708bcc8bab8e3282c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc606acfba26d27d0ab36045e4772593e760e98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461958"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272168"
 ---
 # <a name="registration"></a>Registrazione
 
@@ -46,7 +46,7 @@ RegEdit unisce il contenuto del file di testo con estensione reg in database di 
 
 Quando si crea un'applicazione server con la creazione guidata applicazione, la procedura guidata completa automaticamente automaticamente tutte le attività di inizializzazione. Questa sezione descrive le operazioni da eseguire se si scrive un'applicazione server manualmente.
 
-Quando un'applicazione server viene avviata da un'applicazione contenitore, le DLL di sistema OLE aggiungere l'opzione "/ incorporamento" alla riga di comando del server. Comportamento delle applicazioni server varia a seconda se è stata avviata da un contenitore, in modo che la prima cosa un'applicazione deve eseguire quando si inizia l'esecuzione è cercare la "/ incorporamento" o "-incorporamento" opzione della riga di comando. Se questa opzione è presente, caricare un set diverso di risorse che illustrano il server come un attivo sul posto o completamente aperto. Per altre informazioni, vedere [menu e risorse: aggiunte di Server](../mfc/menus-and-resources-server-additions.md).
+Quando un'applicazione server viene avviata da un'applicazione contenitore, le DLL di sistema OLE aggiungere l'opzione "/ incorporamento" alla riga di comando del server. Comportamento delle applicazioni server varia a seconda se è stata avviata da un contenitore, in modo che la prima cosa un'applicazione deve eseguire quando si inizia l'esecuzione è cercare la "/ incorporamento" o "-incorporamento" opzione della riga di comando. Se questa opzione è presente, caricare un set diverso di risorse che illustrano il server come un attivo sul posto o completamente aperto. Per altre informazioni, vedere [menu e risorse: Aggiunte di server](../mfc/menus-and-resources-server-additions.md).
 
 L'applicazione server deve anche chiamare relativo `CWinApp::RunEmbedded` funzione per analizzare la riga di comando. Se viene restituito un valore diverso da zero, l'applicazione non deve visualizzare la finestra è stato eseguito da un'applicazione contenitore, non come un'applicazione autonoma. Questa funzione Aggiorna la voce del server nel database di registrazione di sistema e le chiamate di `RegisterAll` funzione membro per eseguire la registrazione delle istanze.
 

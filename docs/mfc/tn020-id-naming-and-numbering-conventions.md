@@ -1,5 +1,5 @@
 ---
-title: 'TN020: convenzioni di numerazione e denominazione ID'
+title: 'TN020: Convenzioni di numerazione e denominazione ID'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518671"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267394"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: convenzioni di numerazione e denominazione ID
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Convenzioni di numerazione e denominazione ID
 
 In questa nota descrive la denominazione degli ID e convenzioni di numerazione 2.0 MFC utilizzate per le risorse, i comandi, le stringhe, controlli e finestre figlio.
 
@@ -37,16 +37,16 @@ MFC utilizza il prefisso "IDR _" per indicare un ID di risorsa che si applica a 
 
 |Prefisso|Usa|
 |------------|---------|
-|IDR _|Per più tipi di risorsa (principalmente usati per i menu, tasti di scelta rapida e le barre multifunzione).|
-|IDD _|Per le risorse modello di finestra di dialogo (ad esempio IDD_DIALOG1).|
+|IDR_|Per più tipi di risorsa (principalmente usati per i menu, tasti di scelta rapida e le barre multifunzione).|
+|IDD_|Per le risorse modello di finestra di dialogo (ad esempio IDD_DIALOG1).|
 |IDC_|Per le risorse di cursore.|
 |IDI_|Per le risorse di icona.|
-|IDB _|Per le risorse di bitmap.|
+|IDB_|Per le risorse di bitmap.|
 |IDS_|Per le risorse stringa.|
 
 All'interno di una risorsa, finestra di dialogo MFC adotta queste convenzioni:
 
-|Prefisso o l'etichetta|Usare|
+|Prefisso o l'etichetta|Usa|
 |---------------------|---------|
 |IDOK, IDCANCEL|Per gli ID standard del pulsante push.|
 |IDC_|Per altri controlli di finestra di dialogo.|
@@ -57,7 +57,7 @@ All'interno di una risorsa di menu, MFC adotta queste convenzioni:
 
 |Prefisso|Usa|
 |------------|---------|
-|IDM _|Per le voci di menu che non utilizzano l'architettura di comando MFC.|
+|IDM_|Per le voci di menu che non utilizzano l'architettura di comando MFC.|
 |ID_|Per i comandi di menu che usano l'architettura di comando MFC.|
 
 I comandi che seguono l'architettura di comandi MFC devono includere un gestore comando ON_COMMAND e possono avere un gestore ON_UPDATE_COMMAND_UI. Se questi gestori comando seguono l'architettura di comandi MFC, devono funzionare correttamente se sono associate a un comando di menu, un pulsante della barra degli strumenti o un pulsante della barra di finestra di dialogo. Lo stesso prefisso "ID _" è utilizzato anche per una stringa di richiesta dal menu visualizzato nella barra dei messaggi del programma. La maggior parte delle voci di menu nell'applicazione devono seguire le convenzioni di comando MFC. Tutti gli ID di comando standard (ad esempio, ID_FILE_NEW) seguono questa convenzione.
@@ -74,10 +74,10 @@ Si consiglia di definire tutti gli ID all'interno di intervalli consigliati. Il 
 
 |Prefisso|Tipo di risorsa|Intervallo valido|
 |------------|-------------------|-----------------|
-|IDR _|multipli|tra 1 e 0x6FFF|
-|IDD _|modelli di finestra di dialogo|tra 1 e 0x6FFF|
-|IDC _, IDI_, IDB _|cursori, icone, bitmap|tra 1 e 0x6FFF|
-|IDS _, CASO DELL'|stringhe di generale|da 1 a 0x7FFF|
+|IDR_|multipli|tra 1 e 0x6FFF|
+|IDD_|modelli di finestra di dialogo|tra 1 e 0x6FFF|
+|IDC_,IDI_,IDB_|cursori, icone, bitmap|tra 1 e 0x6FFF|
+|IDS_, IDP_|stringhe di generale|da 1 a 0x7FFF|
 |ID_|comandi|0x8000 e 0xDFFF|
 |IDC_|controlli|8 e 0xDFFF|
 
@@ -107,4 +107,3 @@ Motivi per i limiti di intervallo:
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

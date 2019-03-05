@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: d31bc72e485fbb15ed595a7c777c3685a00865c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894016"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270131"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 

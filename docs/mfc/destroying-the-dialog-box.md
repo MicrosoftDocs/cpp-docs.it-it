@@ -1,5 +1,5 @@
 ---
-title: Eliminazione definitiva della finestra di dialogo
+title: Distruzione della finestra di dialogo
 ms.date: 11/04/2016
 helpviewer_keywords:
 - dialog boxes [MFC], deleting
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], destroying
 - modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
-ms.openlocfilehash: f84e36a2a002610c294653012c40707fddcaba54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84ae5b336bb8eeac4f8ab7b6e5b9f00246f9ca15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607467"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261999"
 ---
-# <a name="destroying-the-dialog-box"></a>Eliminazione definitiva della finestra di dialogo
+# <a name="destroying-the-dialog-box"></a>Distruzione della finestra di dialogo
 
 Finestre di dialogo modali sono in genere create nello stack frame ed eliminati definitivamente quando termina la funzione che li ha creati. Distruttore dell'oggetto finestra di dialogo viene chiamato quando l'oggetto esce dall'ambito.
 
@@ -26,4 +26,3 @@ Finestre di dialogo non modali in genere vengono create e possedute da una fines
 ## <a name="see-also"></a>Vedere anche
 
 [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
-

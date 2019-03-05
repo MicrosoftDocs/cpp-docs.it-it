@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477948"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271398"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -314,7 +314,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile del controllo di visualizzazione albero. Applicare stili di finestra, descritto nella [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualsiasi combinazione delle [stili di visualizzazione del controllo albero](/windows/desktop/Controls/tree-view-control-window-styles) come descritto nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo di visualizzazione albero. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
 
 *pParentWnd*<br/>
@@ -360,7 +360,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 *dwStyle*<br/>
 Specifica lo stile del controllo di visualizzazione albero. Applicare stili di finestra, descritto nella [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualsiasi combinazione delle [stili di visualizzazione del controllo albero](/windows/desktop/Controls/tree-view-control-window-styles) come descritto nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *hItem*<br/>
 L'handle dell'elemento cui immagine da recuperare.
 
-*Immagine*<br/>
+*nImage*<br/>
 Integer che riceve l'indice dell'immagine dell'elemento all'interno di elenco di immagini di controllo di visualizzazione albero.
 
 *nSelectedImage*<br/>
@@ -1366,7 +1366,7 @@ Quando questa funzione viene chiamata, il *pt* parametro specifica le coordinate
 
 |||
 |-|-|
-|Valore|Significato|
+|Value|Significato|
 |TVHT_ABOVE|Sopra l'area client.|
 |TVHT_BELOW|Sotto l'area client.|
 |TVHT_NOWHERE|Nell'area client, ma di sotto l'ultimo elemento.|
@@ -1427,7 +1427,7 @@ Numero intero che specifica gli attributi da impostare. Vedere il `TVITEM` strut
 *lpszItem*<br/>
 Indirizzo di una stringa contenente il testo dell'elemento.
 
-*Immagine*<br/>
+*nImage*<br/>
 Indice dell'immagine dell'elemento nell'elenco di immagini di controllo di visualizzazione albero.
 
 *nSelectedImage*<br/>
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametri
 
-*Common Language Runtime*<br/>
+*clr*<br/>
 Valore COLORREF che contiene il nuovo colore di sfondo. Se questo valore è -1, il controllo consentirà di ripristinare utilizzando il colore di sistema per il colore di sfondo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1925,7 +1925,7 @@ Numero intero che specifica gli attributi da impostare. Vedere le `mask` membro 
 *lpszItem*<br/>
 Indirizzo di una stringa contenente il testo dell'elemento.
 
-*Immagine*<br/>
+*nImage*<br/>
 Indice dell'immagine dell'elemento nell'elenco di immagini di controllo di visualizzazione albero. Vedere le `iImage` membro del `TVITEM` struttura.
 
 *nSelectedImage*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *hItem*<br/>
 Handle dell'elemento cui immagine deve essere impostata.
 
-*Immagine*<br/>
+*nImage*<br/>
 Indice dell'immagine dell'elemento nell'elenco di immagini di controllo di visualizzazione albero.
 
 *nSelectedImage*<br/>
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametri
 
-*Common Language Runtime*<br/>
+*clr*<br/>
 Valore COLORREF che contiene il nuovo colore del testo. Se questo argomento è -1, il controllo consentirà di ripristinare utilizzando il colore di sistema per il colore del testo.
 
 ### <a name="return-value"></a>Valore restituito

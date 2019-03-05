@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
-ms.openlocfilehash: 7173cb5d28f574043710dffe91057f73358770e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53d039b15c9f4a79956bd86fbb93600854f90e5f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444798"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263052"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Classe CPrimitiveElementTraits
 

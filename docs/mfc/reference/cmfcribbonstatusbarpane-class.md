@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 183fd879b09595dda1dcd6caa8a8299debb20b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9911672ec139ab1598db8005e9b7b909e85dd33d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449335"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265730"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Classe CMFCRibbonStatusBarPane
 
@@ -215,7 +215,7 @@ TRUE se il riquadro è stato barra area estesa. FALSE in caso contrario.
 
 ##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ```
 virtual void OnDrawBorder(CDC*);
@@ -229,7 +229,7 @@ virtual void OnDrawBorder(CDC*);
 
 ##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);

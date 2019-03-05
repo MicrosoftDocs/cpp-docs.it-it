@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 5c9e3a7de10b6ba0913b02c5f79dcc63c89adce5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dea0f2ba358582b49de107c234a66a751e8f0b0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267186"
 ---
 # <a name="cfontdialog-class"></a>Classe CFontDialog
 
@@ -202,7 +202,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Oggetto [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struttura che contiene informazioni sulla formattazione carattere di tipo di carattere selezionato.
 
 ##  <a name="getcolor"></a>  CFontDialog::GetColor
@@ -397,4 +397,3 @@ Dopo la costruzione di un `CFontDialog` dell'oggetto, è possibile usare `m_cf` 
 [Esempio MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

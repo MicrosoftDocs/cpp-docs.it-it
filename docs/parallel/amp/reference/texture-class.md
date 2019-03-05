@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657539"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279744"
 ---
 # <a name="texture-class"></a>Classe texture
 
@@ -103,9 +103,9 @@ Numero di dimensioni della trama.
 
 **Intestazione:** amp_graphics. h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
-##  <a name="dtor"></a> ~ texture
+##  <a name="dtor"></a> ~texture
 
 Elimina definitivamente il `texture` oggetto.
 
@@ -132,7 +132,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Oggetto da copiare.
 
 *_Rank*<br/>
@@ -173,7 +173,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 L'indice dell'elemento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -216,7 +216,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 Il numero di byte tra ogni riga in una trama di gestione temporanea 2-dimensionale, o tra ogni riga di una sezione di profondità in a trama di gestione temporanea 3D.
 
-##  <a name="operator_call"></a> operator)
+##  <a name="operator_call"></a> operator()
 
 Restituisce il valore dell'elemento specificato dai parametri.
 
@@ -239,7 +239,7 @@ const value_type operator() (
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Indice.
 
 *_I0*<br/>
@@ -258,7 +258,7 @@ Numero di dimensioni dell'indice.
 
 Il valore dell'elemento specificato dai parametri.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Restituisce l'elemento in corrispondenza dell'indice specificato.
 
@@ -270,7 +270,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Indice.
 
 *_I0*<br/>
@@ -317,7 +317,7 @@ Ottiene il numero di byte tra ciascuna riga in un 2D o 3D trama di gestione temp
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;
 ```
 
-##  <a name="set"></a> Set
+##  <a name="set"></a> set
 
 Imposta il valore dell'elemento in corrispondenza dell'indice specificato.
 
@@ -329,7 +329,7 @@ void set(
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 L'indice dell'elemento.
 
 *_Rank*<br/>
@@ -552,7 +552,7 @@ Un accelerator_view che specifica la destinazione preferita per la copia da o ve
 *_Bits_per_scalar_element*<br/>
 Il numero di bit per ogni elemento scalare nel tipo scalare sottostante della trama. In generale, valore supportato è 8, 16, 32 e 64. Se si specifica 0, il numero di bit è lo stesso come il scalar_type sottostante. 64 è valido solo per le trame con base doppia.
 
-*Ext*<br/>
+*_Ext*<br/>
 L'extent in ogni dimensione della trama.
 
 *_E0*<br/>

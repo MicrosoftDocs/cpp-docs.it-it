@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: creazione di una sottoclasse per un controllo Windows'
+title: 'Controlli ActiveX MFC: Crea una sottoclasse di un controllo di Windows'
 ms.date: 09/12/2018
 f1_keywords:
 - precreatewindow
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 24284af7766f0fd968ca08724440509bc171fba6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277053"
 ---
-# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controlli ActiveX MFC: creazione di una sottoclasse per un controllo Windows
+# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controlli ActiveX MFC: Crea una sottoclasse di un controllo di Windows
 
 In questo articolo viene descritto il processo per la creazione di una sottoclasse di un controllo Windows comune per creare un controllo ActiveX. La creazione di una sottoclasse di un controllo Windows esistente è un modo rapido per sviluppare un controllo ActiveX. Il nuovo controllo disporrà delle funzionalità dei controlli Windows sottoclassati, come il disegno e la risposta ai clic del mouse. Esempio dei controlli ActiveX di MFC [pulsante](../visual-cpp-samples.md) è riportato un esempio di creazione di sottoclassi di un controllo di Windows.
 
@@ -98,4 +98,3 @@ Per un esempio di come riflette i messaggi vengono elaborati, vedere l'esempio d
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
-

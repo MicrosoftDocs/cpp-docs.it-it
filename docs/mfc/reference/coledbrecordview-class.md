@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518580"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280369"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
 
@@ -51,7 +51,7 @@ La vista è una visualizzazione di form direttamente connessa a un `CRowset` ogg
 È possibile usare le funzioni DDX con `COleDbRecordView` per ottenere i dati direttamente dal set di record di database e visualizzarlo in un controllo di finestra di dialogo. È consigliabile usare la `DDX_*` metodi (, ad esempio `DDX_Text`), non il `DDX_Field*` funzioni (ad esempio `DDX_FieldText`) con `COleDbRecordView`. `DDX_FieldText` non funziona con `COleDbRecordView` poiché `DDX_FieldText` accetta un argomento di tipo aggiuntivo `CRecordset*` (per `CRecordView`) o `CDaoRecordset*` (per `CDaoRecordView`).
 
 > [!NOTE]
->  Se si lavora con le classi di oggetti DAO (Data Access) anziché le classi modello del Consumer OLE DB, usare una classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) invece. Per altre informazioni, vedere l'articolo [Overview: programmazione di Database](../../data/data-access-programming-mfc-atl.md).
+>  Se si lavora con le classi di oggetti DAO (Data Access) anziché le classi modello del Consumer OLE DB, usare una classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) invece. Per altre informazioni, vedere l'articolo [Panoramica: Programmazione di database](../../data/data-access-programming-mfc-atl.md).
 
 `COleDBRecordView` tiene traccia della posizione dell'utente nel set di righe in modo che la visualizzazione di record può aggiornare l'interfaccia utente. Quando l'utente passa a un'estremità del set di righe, la visualizzazione dei record Disabilita oggetti dell'interfaccia utente, ad esempio voci di menu o i pulsanti della barra degli strumenti, ovvero per lo spostamento ulteriormente nella stessa direzione.
 
@@ -124,7 +124,7 @@ Un valore HRESULT standard.
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-Per altre informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: uso di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).
+Per altre informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: Uso di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove
 
@@ -164,4 +164,3 @@ Se si sposta oltre l'ultimo record del recordset, la visualizzazione dei record 
 ## <a name="see-also"></a>Vedere anche
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

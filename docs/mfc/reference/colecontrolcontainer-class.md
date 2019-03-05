@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274986"
 ---
 # <a name="colecontrolcontainer-class"></a>Classe COleControlContainer
 
@@ -196,7 +196,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà di ambiente da modificare.
 
 ### <a name="remarks"></a>Note
@@ -218,7 +218,7 @@ virtual void CheckDlgButton(
 *nIDButton*<br/>
 L'ID del pulsante da modificare.
 
-*nControllare*<br/>
+*nCheck*<br/>
 Specifica lo stato del pulsante. Può essere uno dei seguenti:
 
 - BST_CHECKED imposta lo stato del pulsante di controllati.
@@ -311,7 +311,7 @@ Puntatore al testo da visualizzare nel controllo. Imposta il valore della propri
 *dwStyle*<br/>
 Stili di Windows. Gli stili disponibili sono elencati sotto la **osservazioni** sezione.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo. Può essere un' `CRect` oggetto o un `RECT` struttura.
 
 *nID*<br/>
@@ -419,7 +419,7 @@ virtual BOOL GetAmbientProp(
 *pSite*<br/>
 Un puntatore a un sito di controllo da cui verrà recuperata la proprietà di ambiente.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà di ambiente desiderata.
 
 *pVarResult*<br/>
@@ -785,7 +785,7 @@ virtual void SetDlgItemInt(
 *nID*<br/>
 L'identificatore del controllo.
 
-*nValore*<br/>
+*nValue*<br/>
 Il valore intero da visualizzare.
 
 *bSigned*<br/>

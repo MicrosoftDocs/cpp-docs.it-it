@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - memory, managing
 ms.assetid: be564a5e-577e-40a7-bfe3-25ad21e57270
-ms.openlocfilehash: 76207259e7a4c769580ff41263642b278ee11f40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7e0085d79237b153150297f2a2d00998a93a514
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274401"
 ---
 # <a name="memory-management-classes"></a>Classi di gestione della memoria
 
@@ -61,4 +61,3 @@ Queste classi forniscono supporto per i puntatori dell'heap, i puntatori intelli
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../atl/atl-class-overview.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523169"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282552"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternative all'architettura documento/visualizzazione
 
@@ -62,9 +62,8 @@ Si consiglia di utilizzare la Creazione guidata applicazione MFC per creare appl
 
 - Eseguire l'override delle parti del framework MFC che creano il documento e la visualizzazione per evitarne la creazione. Il processo di creazione del documento ha inizio con una chiamata a `CWinApp::AddDocTemplate`. Eliminare tale chiamata dalla funzione membro `InitInstance` della classe dell'applicazione e, invece, creare manualmente una finestra cornice in `InitInstance`. Inserire il codice di gestione dei dati nella classe della finestra cornice. Il processo di creazione documento/visualizzazione è illustrato nel [creazione documento/visualizzazione](../mfc/document-view-creation.md). Questo approccio comporta più lavoro e richiede una conoscenza più approfondita del framework, ma elimina completamente il sovraccarico della struttura documento/visualizzazione.
 
-L'articolo [MFC: utilizzo di classi di Database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md) fornisce esempi più concreti delle alternative di documenti/visualizzazioni nel contesto di applicazioni di database.
+L'articolo [MFC: Usando le classi di Database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md) fornisce esempi più concreti delle alternative di documenti/visualizzazioni nel contesto di applicazioni di database.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Architettura documento/visualizzazione](../mfc/document-view-architecture.md)
-

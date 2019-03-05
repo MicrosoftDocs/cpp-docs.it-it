@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456043"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273036"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Classe CDataRecoveryHandler
 
@@ -146,7 +146,7 @@ Tutti i metodi del `CDataRecoveryHandler` classe sono virtuali. Eseguire l'overr
 
 Prima di poter usare un `CDataRecoveryHandler` dell'oggetto, è necessario chiamare [CDataRecoveryHandler::Initialize](#initialize).
 
-Poiché il `CDataRecoveryHandler` classe è strettamente connessa, Gestione riavvio `CDataRecoveryHandler` dipende dal parametro globale `m_dwRestartManagerSupportFlags`. Questo parametro determina quali autorizzazioni dispone di Gestione riavvio e le relative interazioni con l'applicazione. Per incorporare la gestione del riavvio in un'applicazione esistente, è necessario assegnare `m_dwRestartManagerSupportFlags` il valore appropriato nel costruttore dell'applicazione principale. Per altre informazioni su come usare Gestione riavvio, vedere [procedura: aggiunta di supporto di Gestione riavvio](../../mfc/how-to-add-restart-manager-support.md).
+Poiché il `CDataRecoveryHandler` classe è strettamente connessa, Gestione riavvio `CDataRecoveryHandler` dipende dal parametro globale `m_dwRestartManagerSupportFlags`. Questo parametro determina quali autorizzazioni dispone di Gestione riavvio e le relative interazioni con l'applicazione. Per incorporare la gestione del riavvio in un'applicazione esistente, è necessario assegnare `m_dwRestartManagerSupportFlags` il valore appropriato nel costruttore dell'applicazione principale. Per altre informazioni su come usare Gestione riavvio, vedere [come: aggiungere il supporto di Gestione riavvio](../../mfc/how-to-add-restart-manager-support.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -689,5 +689,4 @@ Per usare questo metodo, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES deve essere i
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Procedura: Aggiungere il supporto di Gestione riavvio](../../mfc/how-to-add-restart-manager-support.md)
-
+[Procedura: Aggiungere il supporto Gestione riavvio](../../mfc/how-to-add-restart-manager-support.md)

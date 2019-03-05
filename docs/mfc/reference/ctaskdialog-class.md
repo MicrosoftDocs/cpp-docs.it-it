@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177069"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265015"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -159,7 +159,7 @@ class CTaskDialog : public CObject
 |[CTaskDialog::GetVerificationCheckboxState](#getverificationcheckboxstate)|Recupera lo stato della casella di controllo di verifica.|
 |[CTaskDialog::IsCommandControlEnabled](#iscommandcontrolenabled)|Determina se un controllo pulsante di comando o un pulsante comune è abilitato.|
 |[CTaskDialog::IsRadioButtonEnabled](#isradiobuttonenabled)|Determina se un pulsante di opzione è abilitato.|
-|[CTaskDialog:: IsSupported](#issupported)|Determina se il computer che esegue l'applicazione supporta il `CTaskDialog`.|
+|[CTaskDialog::IsSupported](#issupported)|Determina se il computer che esegue l'applicazione supporta il `CTaskDialog`.|
 |[CTaskDialog::LoadCommandControls](#loadcommandcontrols)|Aggiunge i controlli pulsante di comando utilizzando i dati dalla tabella di stringhe.|
 |[CTaskDialog::LoadRadioButtons](#loadradiobuttons)|Aggiunge i pulsanti di opzione utilizzando i dati dalla tabella di stringhe.|
 |[CTaskDialog::NavigateTo](#navigateto)|Trasferisce lo stato attivo a un'altra `CTaskDialog`.|
@@ -247,7 +247,7 @@ Esempio di CTaskDialog
 
 ## <a name="requirements"></a>Requisiti
 
-**Versione minima richiesta del sistema operativo:** Windows Vista
+**Minima del sistema operativo:** Windows Vista
 
 **Intestazione:** afxtaskdialog.h
 
@@ -489,7 +489,7 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Parametri
 
-*Rimuovi flag*<br/>
+*nFlag*<br/>
 [in] Il tipo di pulsante comune associato il `CTaskDialog` classe.
 
 ### <a name="return-value"></a>Valore restituito
@@ -624,7 +624,7 @@ Se *nRadioButtonID* non è un identificatore valido per un pulsante di opzione, 
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="issupported"></a>  CTaskDialog:: IsSupported
+##  <a name="issupported"></a>  CTaskDialog::IsSupported
 
 Determina se il computer che esegue l'applicazione supporta il `CTaskDialog`.
 

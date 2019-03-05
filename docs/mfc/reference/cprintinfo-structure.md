@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: 259dfd6808a5e975fb22d11d0a8c569237733eae
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273361"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo (struttura)
 
@@ -67,7 +67,7 @@ Oggetto `CPrintInfo` oggetto viene passato tra il framework e la classe di visua
 
 Un altro esempio è il caso in cui la lunghezza del documento non è noto finché non viene stampato. In questo caso, la classe di visualizzazione verifica la fine del documento ogni volta che una pagina viene stampata. Quando viene raggiunta la fine, imposta la classe di visualizzazione di `m_bContinuePrinting` membro della `CPrintInfo` su FALSE; questo informa il framework per interrompere il ciclo di stampa.
 
-`CPrintInfo` viene usato dalle funzioni membro `CView` elencati nella sezione "vedere anche." Per altre informazioni sull'architettura di stampa specificato dalla libreria di classi Microsoft Foundation, vedere [Windows Frame](../../mfc/frame-windows.md) e [architettura documento/visualizzazione](../../mfc/document-view-architecture.md) e gli articoli [ Stampa](../../mfc/printing.md) e [Printing: documenti con più pagine](../../mfc/multipage-documents.md).
+`CPrintInfo` viene usato dalle funzioni membro `CView` elencati nella sezione "vedere anche." Per altre informazioni sull'architettura di stampa specificato dalla libreria di classi Microsoft Foundation, vedere [Windows Frame](../../mfc/frame-windows.md) e [architettura documento/visualizzazione](../../mfc/document-view-architecture.md) e gli articoli [ Stampa](../../mfc/printing.md) e [stampa: Documenti con più pagine](../../mfc/multipage-documents.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -319,10 +319,9 @@ I numeri di pagina in genere iniziano da 1. Questo valore viene archiviato nel `
 
 [Esempio MFC immagine](../../visual-cpp-samples.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[CView:: OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
-[OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>
+[CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
+[CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>
 [CView::OnEndPrintPreview](../../mfc/reference/cview-class.md#onendprintpreview)<br/>
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
-[CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
+[CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 4683e0ea4a56e6766c039b2fcb858a54e28d14ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443342"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268486"
 ---
 # <a name="cricheditcntritem-class"></a>Classe CRichEditCntrItem
 

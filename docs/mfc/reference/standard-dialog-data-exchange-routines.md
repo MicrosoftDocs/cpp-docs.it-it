@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 05eaa86133bb55cfbf62ec68f81e7ca7d9ab169b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274930"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Routine DDX (Dialog Data Exchange) standard
 

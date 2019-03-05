@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262883"
 ---
 # <a name="interface-elements"></a>Elementi dell'interfaccia utente
 
@@ -46,7 +46,7 @@ Ogni barra è suddiviso in righe di ancoraggio. Le righe di ancoraggio sono rapp
 
 ## <a name="mini-frame-windows"></a>Windows con mini-cornice
 
-Un riquadro mobile si trova in una finestra con mini-cornice. Finestre con mini-cornice sono rappresentate da due classi: [classe CMDITabInfo](../mfc/reference/cmditabinfo-class.md) (che può contenere un solo riquadro) e [classe CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) (che può contenere diversi riquadri). Per float un riquadro del codice, chiamare [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Dopo che viene spostato un riquadro, il framework crea automaticamente una finestra con mini-cornice e tale finestra con mini-cornice diventa padre del riquadro mobile. Quando il riquadro mobile ancora, il framework Reimposta il relativo elemento padre e il riquadro mobile diventa una barra (per le barre degli strumenti) o un sito di ancoraggio (per i riquadri ridimensionabili).
+Un riquadro mobile si trova in una finestra con mini-cornice. Finestre con mini-cornice sono rappresentate da due classi: [Classe CMDITabInfo](../mfc/reference/cmditabinfo-class.md) (che può contenere un solo riquadro) e [classe CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) (che può contenere diversi riquadri). Per float un riquadro del codice, chiamare [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Dopo che viene spostato un riquadro, il framework crea automaticamente una finestra con mini-cornice e tale finestra con mini-cornice diventa padre del riquadro mobile. Quando il riquadro mobile ancora, il framework Reimposta il relativo elemento padre e il riquadro mobile diventa una barra (per le barre degli strumenti) o un sito di ancoraggio (per i riquadri ridimensionabili).
 
 ## <a name="pane-dividers"></a>Divisori di riquadro
 
@@ -69,4 +69,3 @@ Il controllo barra di Outlook si basa anche sulle barre a schede. Il [classe CMF
 ## <a name="see-also"></a>Vedere anche
 
 [Concetti](../mfc/mfc-concepts.md)
-

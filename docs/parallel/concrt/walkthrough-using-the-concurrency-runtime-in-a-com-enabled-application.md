@@ -1,18 +1,18 @@
 ---
-title: "Procedura dettagliata: Uso del runtime di concorrenza in un'applicazione abilitata COM"
+title: "Procedura dettagliata: Uso del Runtime di concorrenza in un'applicazione abilitata COM"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-ms.openlocfilehash: 227d06c74826b8936909b774d1a7e3a222ac8023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d306377be4a000c54fb5556b15263a15b2d4618
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554934"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278197"
 ---
-# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Procedura dettagliata: Uso del runtime di concorrenza in un'applicazione abilitata COM
+# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Procedura dettagliata: Uso del Runtime di concorrenza in un'applicazione abilitata COM
 
 Questo documento illustra come usare il Runtime di concorrenza in un'applicazione che usa il modello COM (Component Object).
 
@@ -162,4 +162,3 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 [Gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)<br/>
 [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

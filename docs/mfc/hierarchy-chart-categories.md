@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC, hierarchy
 ms.assetid: 1f109428-4b84-4f7c-90a9-e71fe071311e
-ms.openlocfilehash: 94b7804c295ef7b5e32ddcf991e1ee437c8bc8b0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 8f6ee44011535dc6051b03d1edc35633ed11bbe2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175119"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268590"
 ---
 # <a name="hierarchy-chart-categories"></a>Categorie del grafico della gerarchia
 
@@ -21,4 +21,3 @@ ms.locfileid: "52175119"
 
 [Grafico della gerarchia](../mfc/hierarchy-chart.md)<br/>
 [Applicazioni desktop MFC](../mfc/mfc-desktop-applications.md)
-

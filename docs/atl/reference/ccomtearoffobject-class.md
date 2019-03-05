@@ -15,12 +15,12 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 78e9bda9c21ce53fa5b775b83be5c978c3fa1431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555259"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274609"
 ---
 # <a name="ccomtearoffobject-class"></a>Classe CComTearOffObject
 
@@ -35,7 +35,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parametri
 
-*base*<br/>
+*Base*<br/>
 La classe a comparsa, derivata da `CComTearOffObjectBase` e le interfacce si desidera che l'oggetto tear-off per il supporto.
 
 ATL implementa le interfacce tear-off in due fasi, ovvero il `CComTearOffObjectBase` metodi gestiscono il conteggio dei riferimenti e `QueryInterface`, mentre `CComTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -47,7 +47,7 @@ ATL implementa le interfacce tear-off in due fasi, ovvero il `CComTearOffObjectB
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Costruttore.|
-|[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Distruttore.|
+|[CComTearOffObject::~CComTearOffObject](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -113,14 +113,14 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*PV*<br/>
+*pv*<br/>
 [in] Puntatore che verrà convertita in un puntatore a un `CComObject<Owner>` oggetto.
 
 ### <a name="remarks"></a>Note
 
 Incrementa il conteggio dei riferimenti del proprietario di uno.
 
-##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject
+##  <a name="dtor"></a>  CComTearOffObject::~CComTearOffObject
 
 Distruttore.
 
@@ -154,7 +154,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Parametri
 
-*Proprietario*<br/>
+*Owner*<br/>
 [in] La classe per il quale un tear-off si prediligono.
 
 ### <a name="remarks"></a>Note
@@ -171,7 +171,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] IID dell'interfaccia richiesta.
 
 *ppvObject*<br/>

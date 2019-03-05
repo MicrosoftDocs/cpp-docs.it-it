@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: b71cce32d364200e6f6a8684ffd696c4ea33f1d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591672"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269396"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Classe CMFCVisualManagerWindows7
 
@@ -34,7 +34,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Costruttore predefinito.|
-|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Distruttore predefinito.|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Distruttore predefinito.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -54,7 +54,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|Esegue l'override [CMFCVisualManager::IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|
 |`CMFCVisualManagerWindows7::IsRibbonPresent`|Determina se un `CMFCRibbonBar` è presente ed è visibile.|
 |`CMFCVisualManagerWindows7::OnDrawButtonBorder`|Esegue l'override [CMFCVisualManagerWindows::OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|
-|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|Esegue l'override [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
+|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|Overrides [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
 |`CMFCVisualManagerWindows7::OnDrawComboDropButton`|Esegue l'override [CMFCVisualManagerWindows::OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|
 |`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|Esegue l'override [CMFCVisualManager::OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
 |`CMFCVisualManagerWindows7::OnDrawMenuBorder`|Esegue l'override [CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|
@@ -80,7 +80,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|Esegue l'override [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)|
 |`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|Esegue l'override [CMFCVisualManager::OnDrawRibbonStatusBarPane](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)|
 |`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|Esegue l'override [CMFCVisualManager::OnDrawRibbonTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)|
-|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|Esegue l'override [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|
+|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|Overrides [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|
 |`CMFCVisualManagerWindows7::OnFillBarBackground`|Esegue l'override [CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|
 |`CMFCVisualManagerWindows7::OnFillButtonInterior`|Esegue l'override [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|
 |[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|Il framework chiama questo metodo quando riempie area intorno immagini delle voci di menu.|
@@ -117,7 +117,7 @@ Il CMFCVisualManagerWindows7 eredita più metodi da entrambi i [classe CMFCVisua
 
 **Intestazione:** afxvisualmanagerwindows7.h
 
-##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7
+##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7
 
 Distruttore predefinito.
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in] Un puntatore a un `CMFCToolBarButton`. Il framework riempie lo sfondo di questo pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti dell'area del menu pulsante immagine.
 
 *state*<br/>

@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261700"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 
@@ -52,9 +52,9 @@ Il tipo di oggetto a cui fa riferimento il puntatore intelligente.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComPtrBase:: Advise](#advise)|Chiamare questo metodo per creare una connessione tra il `CComPtrBase`del punto di connessione e un sink del client.|
+|[CComPtrBase::Advise](#advise)|Chiamare questo metodo per creare una connessione tra il `CComPtrBase`del punto di connessione e un sink del client.|
 |[CComPtrBase::Attach](#attach)|Chiamare questo metodo per acquisire la proprietà di un indicatore di misura esistente.|
-|[CComPtrBase:: CoCreateInstance](#cocreateinstance)|Chiamare questo metodo per creare un oggetto di classe associata a un determinato ID di classe o ID di programma.|
+|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Chiamare questo metodo per creare un oggetto di classe associata a un determinato ID di classe o ID di programma.|
 |[CComPtrBase::CopyTo](#copyto)|Chiamare questo metodo per copiare il `CComPtrBase` puntatore a un'altra variabile di puntatore.|
 |[CComPtrBase::Detach](#detach)|Chiamare questo metodo per rilasciare la proprietà di un puntatore.|
 |[CComPtrBase::IsEqualObject](#isequalobject)|Chiamare questo metodo per verificare se l'oggetto specificato `IUnknown` punta allo stesso oggetto associato di `CComPtrBase` oggetto.|
@@ -71,7 +71,7 @@ Il tipo di oggetto a cui fa riferimento il puntatore intelligente.
 |[CComPtrBase::operator &](#operator_amp)|I & operatore.|
 |[CComPtrBase::operator *](#operator_star)|Operatore \*.|
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|Minore di-operatore di maggioranza.|
-|[CComPtrBase::operator = =](#operator_eq_eq)|L'operatore di uguaglianza.|
+|[CComPtrBase::operator ==](#operator_eq_eq)|L'operatore di uguaglianza.|
 |[CComPtrBase::operator ->](#operator_ptr)|Operatore puntatore-a-membri.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
@@ -88,7 +88,7 @@ Questa classe fornisce la base per altri puntatori intelligenti che usano routin
 
 **Intestazione:** atlcomcli
 
-##  <a name="advise"></a>  CComPtrBase:: Advise
+##  <a name="advise"></a>  CComPtrBase::Advise
 
 Chiamare questo metodo per creare una connessione tra il `CComPtrBase`del punto di connessione e un sink del client.
 
@@ -104,10 +104,10 @@ HRESULT Advise(
 *pUnk*<br/>
 Un puntatore al client `IUnknown`.
 
-*IID*<br/>
+*iid*<br/>
 Il GUID del punto di connessione. In genere, questo è lo stesso come interfaccia in uscita gestita dal punto di connessione.
 
-*PDW*<br/>
+*pdw*<br/>
 Puntatore a cookie che identifica in modo univoco la connessione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -128,7 +128,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*P2*<br/>
+*p2*<br/>
 Il `CComPtrBase` oggetto assumerà la proprietà del puntatore ' this '.
 
 ### <a name="remarks"></a>Note
@@ -147,7 +147,7 @@ Distruttore.
 
 Rilascia l'interfaccia a cui punta `CComPtrBase`.
 
-##  <a name="cocreateinstance"></a>  CComPtrBase:: CoCreateInstance
+##  <a name="cocreateinstance"></a>  CComPtrBase::CoCreateInstance
 
 Chiamare questo metodo per creare un oggetto di classe associata a un determinato ID di classe o ID di programma.
 
@@ -281,7 +281,7 @@ Restituisce il valore del [CComPtrBase::p](#p); vale a dire, un puntatore all'og
 
 Se le build di debug, se si verifica un errore di asserzione [CComPtrBase::p](#p) non è uguale a NULL.
 
-##  <a name="operator_eq_eq"></a>  CComPtrBase::operator = =
+##  <a name="operator_eq_eq"></a>  CComPtrBase::operator ==
 
 L'operatore di uguaglianza.
 
@@ -298,7 +298,7 @@ Un puntatore a un oggetto.
 
 Restituisce true se `CComPtrBase` e *pT* puntano allo stesso oggetto, false in caso contrario.
 
-##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>  CComPtrBase::operator -&gt;
 
 Operatore puntatore a membro.
 
@@ -369,7 +369,7 @@ template <class Q> HRESULT QueryInterface(Q
 *Q*<br/>
 Il tipo di oggetto cui puntatore a interfaccia è necessaria.
 
-*profilo di porta*<br/>
+*pp*<br/>
 Indirizzo della variabile di output che riceve il puntatore a interfaccia richiesto.
 
 ### <a name="return-value"></a>Valore restituito

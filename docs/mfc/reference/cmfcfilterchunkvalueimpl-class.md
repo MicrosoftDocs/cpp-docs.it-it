@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: a59cf087a52bd7b6a2eaa00d3091047e93e14d4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666843"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264443"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
 
@@ -69,7 +69,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Distrugge l'oggetto.|
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Distrugge l'oggetto.|
 |[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Costruisce l'oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -109,11 +109,11 @@ Esempio:
 
 Blocco CMFCFilterChunkValueImpl;
 
-hr = blocco. SetBoolValue(PKEY_IsAttachment, true);
+hr = chunk.SetBoolValue(PKEY_IsAttachment, true);
 
 oppure
 
-hr = blocco. SetFileTimeValue (PKEY_ItemDate, ftLastModified);
+hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -145,7 +145,7 @@ CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
 
 Distrugge l'oggetto.
 

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280641"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 
@@ -181,7 +181,7 @@ Un valore che può essere utile per la diagnostica e di test.
 
 Se il modello di thread è a thread multipli, `InterlockedIncrement` consente di impedire più di un thread di modificare il conteggio dei riferimenti allo stesso tempo.
 
-##  <a name="internalqueryinterface"></a>  CComObjectRootEx:: InternalQueryInterface
+##  <a name="internalqueryinterface"></a>  CComObjectRootEx::InternalQueryInterface
 
 Recupera un puntatore all'interfaccia richiesta.
 
@@ -201,7 +201,7 @@ static HRESULT InternalQueryInterface(
 *pEntries*<br/>
 [in] Un puntatore al `_ATL_INTMAP_ENTRY` struttura che accede a una mappa delle interfacce disponibili.
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
 *ppvObject*<br/>
@@ -333,7 +333,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
 *ppvObject*<br/>

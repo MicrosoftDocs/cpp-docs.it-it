@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: utilizzo dei tipi di carattere'
+title: 'Controlli ActiveX MFC: Usando i tipi di carattere'
 ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175821"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271307"
 ---
-# <a name="mfc-activex-controls-using-fonts"></a>Controlli ActiveX MFC: utilizzo dei tipi di carattere
+# <a name="mfc-activex-controls-using-fonts"></a>Controlli ActiveX MFC: Usando i tipi di carattere
 
 Se il controllo ActiveX viene visualizzato il testo, è possibile consentire all'utente di controllo modificare l'aspetto del testo, modificare una proprietà del tipo di carattere. Le proprietà del carattere vengono implementate come oggetti del tipo di carattere e può essere uno dei due tipi: predefinite o personalizzate. Le proprietà Font sono preimplementate che è possibile aggiungere tramite l'aggiunta guidata proprietà. Proprietà personalizzate del tipo di carattere non sono preimplementate e lo sviluppatore di controllo determina il comportamento e l'utilizzo della proprietà.
 
@@ -42,7 +42,7 @@ Le proprietà Font sono preimplementate dalla classe [COleControl](../mfc/refere
 
 Accedere all'oggetto del tipo di carattere tramite il [GetFont](../mfc/reference/colecontrol-class.md#getfont), [SetFont](../mfc/reference/colecontrol-class.md#setfont), e [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) funzioni di `COleControl`. L'utente di controllo avrà accesso all'oggetto font tramite il `GetFont` e `SetFont` funzioni esattamente come qualsiasi altra proprietà Get/Set. Quando l'accesso all'oggetto del tipo di carattere è richiesto da all'interno di un controllo, usare il `InternalGetFont` (funzione).
 
-Come descritto nella [controlli ActiveX MFC: proprietà](../mfc/mfc-activex-controls-properties.md), l'aggiunta di proprietà predefinite è facile con i [Aggiunta guidata proprietà](../ide/names-add-property-wizard.md). Si sceglie la proprietà del tipo di carattere e l'aggiunta guidata proprietà inserisce automaticamente la voce di tipo di carattere azionario nella mappa di invio del controllo.
+Come illustrato in [controlli ActiveX MFC: Le proprietà](../mfc/mfc-activex-controls-properties.md), l'aggiunta di proprietà predefinite è facile con il [Aggiunta guidata proprietà](../ide/names-add-property-wizard.md). Si sceglie la proprietà del tipo di carattere e l'aggiunta guidata proprietà inserisce automaticamente la voce di tipo di carattere azionario nella mappa di invio del controllo.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Aggiungere la proprietà del tipo di carattere azionario tramite l'aggiunta guidata proprietà
 
@@ -236,6 +236,5 @@ Dopo aver apportate queste modifiche al progetto, ricompilare il progetto e usar
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: uso di immagini in un controllo ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
-[Controlli ActiveX MFC: uso delle pagine delle proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-
+[Controlli ActiveX MFC: Utilizzo di immagini in un controllo ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[Controlli ActiveX MFC: Uso delle pagine proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)

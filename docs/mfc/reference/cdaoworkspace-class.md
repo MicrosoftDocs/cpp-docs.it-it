@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 92b2827d556583524b46f88f8bd9efeb57a5d83a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263455"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
@@ -94,9 +94,9 @@ class CDaoWorkspace : public CObject
 |[CDaoWorkspace::Append](#append)|Aggiunge un'area di lavoro appena creato alla raccolta di aree di lavoro del motore di database.|
 |[CDaoWorkspace::BeginTrans](#begintrans)|Inizia una nuova transazione, che viene applicato a tutti i database aperto nell'area di lavoro.|
 |[CDaoWorkspace::Close](#close)|Chiude l'area di lavoro e tutti gli oggetti contenuti. Le transazioni in sospeso il rollback.|
-|[CDaoWorkspace:: CommitTrans](#committrans)|Completa la transazione corrente e Salva le modifiche.|
-|[CDaoWorkspace:: CompactDatabase](#compactdatabase)|Consente di compattare un database (o Duplica).|
-|[CDaoWorkspace:: Create](#create)|Crea un nuovo oggetto dell'area di lavoro DAO.|
+|[CDaoWorkspace::CommitTrans](#committrans)|Completa la transazione corrente e Salva le modifiche.|
+|[CDaoWorkspace::CompactDatabase](#compactdatabase)|Consente di compattare un database (o Duplica).|
+|[CDaoWorkspace::Create](#create)|Crea un nuovo oggetto dell'area di lavoro DAO.|
 |[CDaoWorkspace::GetDatabaseCount](#getdatabasecount)|Restituisce il numero di oggetti di database DAO nella raccolta di database dell'area di lavoro.|
 |[CDaoWorkspace::GetDatabaseInfo](#getdatabaseinfo)|Restituisce informazioni su un database DAO specificato definito nella raccolta di database dell'area di lavoro.|
 |[CDaoWorkspace::GetIniPath](#getinipath)|Restituisce la posizione del database Microsoft Jet di impostazioni di inizializzazione del modulo nel Registro di sistema Windows.|
@@ -454,7 +454,7 @@ void GetDatabaseInfo(
 *nIndex*<br/>
 Indice a base zero dell'oggetto di database nella raccolta di database dell'area di lavoro, per la ricerca in base all'indice.
 
-*DBINFO*<br/>
+*dbinfo*<br/>
 Un riferimento a un [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) oggetto che restituisce le informazioni richieste.
 
 *dwInfoOptions*<br/>
@@ -462,9 +462,9 @@ Opzioni che specificano le informazioni relative al database da recuperare. Le o
 
 - Nome AFX_DAO_PRIMARY_INFO (impostazione predefinita), aggiornabili, le transazioni
 
-- Informazioni AFX_DAO_SECONDARY_INFO primaria oltre: Timeout della Query versione, ordine di ordinamento,
+- Più informazioni AFX_DAO_SECONDARY_INFO primario: Versione, ordinamento, Timeout Query
 
-- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: Connect
+- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: Connetti
 
 *lpszName*<br/>
 Il nome dell'oggetto di database, per la ricerca in base al nome. Il nome è una stringa con un massimo di 14 caratteri che identifica in modo univoco il nuovo oggetto dell'area di lavoro.
@@ -632,9 +632,9 @@ Opzioni che specificano le informazioni sull'area di lavoro da recuperare. Le op
 
 - Nome AFX_DAO_PRIMARY_INFO (impostazione predefinita)
 
-- Informazioni AFX_DAO_SECONDARY_INFO primaria oltre: nome utente
+- Più informazioni AFX_DAO_SECONDARY_INFO primario: Nome utente
 
-- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: isolare ODBCTrans
+- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: Isolare ODBCTrans
 
 *lpszName*<br/>
 Il nome dell'oggetto dell'area di lavoro, per la ricerca in base al nome. Il nome è una stringa con un massimo di 14 caratteri che identifica in modo univoco il nuovo oggetto dell'area di lavoro.
@@ -723,7 +723,7 @@ Anche se molte `CDaoWorkspace` funzioni possono essere chiamate solo dopo che è
 ||||
 |-|-|-|
 |[creare](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[Inattività](#idle)|[SetIniPath](#setinipath)|
+|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
 ##  <a name="repairdatabase"></a>  CDaoWorkspace::RepairDatabase
@@ -877,7 +877,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parametri
 
-*nSecondi*<br/>
+*nSeconds*<br/>
 Il numero di secondi prima che si verifica un errore quando si tenta di accedere a un database ODBC.
 
 ### <a name="remarks"></a>Note

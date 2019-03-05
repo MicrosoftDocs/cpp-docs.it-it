@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268960"
 ---
 # <a name="singleassignment-class"></a>Classe single_assignment
 
@@ -56,7 +56,7 @@ Il tipo di payload del messaggio archiviato e propagati dal buffer.
 |Nome|Descrizione|
 |----------|-----------------|
 |[has_value](#has_value)|Controlla se questo `single_assignment` blocco della messaggistica è ancora stato inizializzato con un valore.|
-|[valore](#value)|Ottiene un riferimento al payload del messaggio viene archiviato corrente il `single_assignment` blocco della messaggistica.|
+|[value](#value)|Ottiene un riferimento al payload del messaggio viene archiviato corrente il `single_assignment` blocco della messaggistica.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
@@ -106,7 +106,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -127,7 +127,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` consumata dell'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -160,7 +160,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore alla destinazione appena collegato.
 
 ##  <a name="propagate_message"></a> propagate_message
@@ -175,10 +175,10 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -195,7 +195,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Un puntatore a un `message` da questo `single_assignment` blocco della messaggistica ha assunto la proprietà.
 
 ##  <a name="release_message"></a> release_message
@@ -208,7 +208,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto rilasciato.
 
 ##  <a name="reserve_message"></a> reserve_message
@@ -221,7 +221,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -252,10 +252,10 @@ virtual message_status send_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -289,13 +289,13 @@ single_assignment(
 
 ### <a name="parameters"></a>Parametri
 
-*Filtro*<br/>
+*_Filter*<br/>
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
 Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `single_assignment` .
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `single_assignment` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
@@ -304,7 +304,7 @@ Se non si specificano i parametri `_PScheduler` o `_PScheduleGroup` , il runtime
 
 Il tipo `filter_method` è un funtore con firma `bool (T const &)` che viene richiamato da questo `single_assignment` blocco della messaggistica per determinare se è necessario accettare un messaggio offerto.
 
-##  <a name="dtor"></a> ~ single_assignment
+##  <a name="dtor"></a> ~single_assignment
 
 Elimina definitivamente il `single_assignment` blocco della messaggistica.
 
@@ -333,4 +333,3 @@ Questo metodo attende fino a quando non arriva un messaggio se nessun messaggio 
 [Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
 [Classe overwrite_buffer](overwrite-buffer-class.md)<br/>
 [Classe unbounded_buffer](unbounded-buffer-class.md)
-

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: bdfb7879bc926435bdcd72d6776646c449ffef80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 871db7abd2682d557bf2e80e9cb97624f0dc53a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263637"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>Costruzione di oggetti in una e due fasi
 
 È possibile scegliere tra due tecniche per la creazione di oggetti grafici, come penne e pennelli:
 
-- *Costruzione di una fase*: creare e inizializzare l'oggetto in un'unica fase, tutti con il costruttore.
+- *Costruzione di una fase*: Creare e inizializzare l'oggetto in un'unica fase, tutti con il costruttore.
 
-- *Costruzione di due fasi*: creare e inizializzare l'oggetto in due fasi separate. Costruttore crea l'oggetto e lo inizializza da una funzione di inizializzazione.
+- *Costruzione di due fasi*: Creare e inizializzare l'oggetto in due fasi separate. Costruttore crea l'oggetto e lo inizializza da una funzione di inizializzazione.
 
 Costruzione di due fasi è sempre sicura. Nella costruzione di una fase, il costruttore è stato possibile generare un'eccezione se è fornire argomenti non corretti o si verifica un errore di allocazione della memoria. Tale problema viene evitato da due fasi, anche se è necessario verificare la presenza di errori. In entrambi i casi, l'eliminazione dell'oggetto è lo stesso processo.
 
@@ -46,4 +46,3 @@ L'esempio breve seguente illustra entrambi i metodi di creazione di un oggetto p
 ## <a name="see-also"></a>Vedere anche
 
 [Oggetti grafici](../mfc/graphic-objects.md)
-

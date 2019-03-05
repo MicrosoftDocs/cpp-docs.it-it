@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: ffb469ec5f5542b5037d31bfdb5fd1eaab47ed38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e90dd3b23b33f6699f2df4ce0df9178f95816b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596536"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273250"
 ---
 # <a name="location-class"></a>Classe location
 
@@ -33,7 +33,7 @@ class location;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Posizione](#ctor)|Di overload. Costruisce un oggetto `location`.|
+|[location](#ctor)|Di overload. Costruisce un oggetto `location`.|
 |[~ location distruttore](#dtor)|Elimina un oggetto `location`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -121,7 +121,7 @@ location(
 
 *_LocationType*<br/>
 
-*ID*<br/>
+*_Id*<br/>
 
 *_BindingId*<br/>
 
@@ -132,7 +132,7 @@ location(
 
 Una posizione costruita predefinita rappresenta il sistema nel suo complesso.
 
-##  <a name="operator_neq"></a> operatore! =
+##  <a name="operator_neq"></a> operator!=
 
 Determina se due oggetti `location` rappresentano posizioni diverse.
 

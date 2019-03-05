@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178161"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261297"
 ---
 # <a name="cinternetsession-class"></a>Classe CInternetSession
 
@@ -62,17 +62,17 @@ class CInternetSession : public CObject
 |Nome|Descrizione|
 |----------|-----------------|
 |[CInternetSession::Close](#close)|Chiude la connessione a Internet quando viene terminata la sessione di Internet.|
-|[CInternetSession:: EnableStatusCallback](#enablestatuscallback)|Stabilisce una routine di callback dello stato.|
+|[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Stabilisce una routine di callback dello stato.|
 |[CInternetSession::GetContext](#getcontext)|Chiude la connessione a Internet quando viene terminata la sessione di Internet.|
 |[CInternetSession::GetCookie](#getcookie)|Restituisce i cookie per l'URL specificato e tutto il relativo elemento padre degli URL.|
 |[CInternetSession::GetCookieLength](#getcookielength)|Recupera la variabile che specifica la lunghezza del cookie memorizzato nel buffer.|
-|[CInternetSession:: GetFtpConnection](#getftpconnection)|Apre una sessione FTP con un server. Log per l'utente.|
-|[CInternetSession:: GetGopherConnection](#getgopherconnection)|Apre un server gopher per un'applicazione che sta tentando di aprire una connessione.|
-|[CInternetSession:: GetHttpConnection](#gethttpconnection)|Apre un server HTTP per un'applicazione che sta tentando di aprire una connessione.|
-|[CInternetSession:: OnStatusCallback](#onstatuscallback)|Aggiorna lo stato di un'operazione quando viene abilitato il callback dello stato.|
-|[CInternetSession:: OpenURL](#openurl)|Analizza e apre un URL.|
+|[CInternetSession::GetFtpConnection](#getftpconnection)|Apre una sessione FTP con un server. Log per l'utente.|
+|[CInternetSession::GetGopherConnection](#getgopherconnection)|Apre un server gopher per un'applicazione che sta tentando di aprire una connessione.|
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|Apre un server HTTP per un'applicazione che sta tentando di aprire una connessione.|
+|[CInternetSession::OnStatusCallback](#onstatuscallback)|Aggiorna lo stato di un'operazione quando viene abilitato il callback dello stato.|
+|[CInternetSession::OpenURL](#openurl)|Analizza e apre un URL.|
 |[CInternetSession::SetCookie](#setcookie)|Imposta un cookie per l'URL specificato.|
-|[CInternetSession:: SetOption](#setoption)|Imposta le opzioni per la sessione di Internet.|
+|[CInternetSession::SetOption](#setoption)|Imposta le opzioni per la sessione di Internet.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -180,7 +180,7 @@ virtual void Close();
 
 Vedere l'esempio relativo [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
 
-## <a name="enablestatuscallback"></a>  CInternetSession:: EnableStatusCallback
+## <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback
 
 Chiamare questa funzione membro per abilitare i callback dello stato.
 
@@ -294,7 +294,7 @@ Un valore DWORD che indica la lunghezza del cookie, archiviato nel buffer. Zero 
 
 Questo valore viene usato da [GetCookie](#getcookie).
 
-## <a name="getftpconnection"></a>  CInternetSession:: GetFtpConnection
+## <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection
 
 Chiamare questa funzione membro per stabilire una connessione FTP e ottenere un puntatore a un `CFtpConnection` oggetto.
 
@@ -343,7 +343,7 @@ Un puntatore a un [CFtpConnection](../../mfc/reference/cftpconnection-class.md) 
 
 Vedere l'esempio relativo [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
 
-## <a name="getgopherconnection"></a>  CInternetSession:: GetGopherConnection
+## <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection
 
 Chiamare questa funzione membro per stabilire una nuova connessione gopher e ottenere un puntatore a un `CGopherConnection` oggetto.
 
@@ -377,7 +377,7 @@ Un puntatore a un [CGopherConnection](../../mfc/reference/cgopherconnection-clas
 
 `GetGopherConnection` si connette a un server gopher e crea e restituisce un puntatore a un `CGopherConnection` oggetto. Non esegue qualsiasi operazione specifica nel server. Se si prevede di leggere o scrivere dati, ad esempio, è necessario eseguire queste operazioni in due fasi distinte. Vedere le classi [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), e [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) per informazioni su ricerca di file, aprire i file e la lettura o scrittura su file. Per informazioni sull'esplorazione di un sito FTP, vedere la funzione membro [OpenURL](#openurl). Vedere l'articolo [Internet programmazione con WinInet](../../mfc/win32-internet-extensions-wininet.md) per i passaggi di esecuzione di attività di connessione comuni gopher.
 
-## <a name="gethttpconnection"></a>  CInternetSession:: GetHttpConnection
+## <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection
 
 Chiamare questa funzione membro per stabilire una connessione HTTP e ottenere un puntatore a un `CHttpConnection` oggetto.
 
@@ -410,7 +410,7 @@ Un puntatore a una stringa contenente il nome utente.
 *pstrPassword*<br/>
 Un puntatore a una stringa contenente la password di accesso.
 
-*dwFlags*<br/>
+*dwflags*<br/>
 Qualsiasi combinazione del `INTERNET_FLAG_*` flag. Vedere la tabella nel **osservazioni** sezione del [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) per una descrizione delle *dwFlags* valori.
 
 ### <a name="return-value"></a>Valore restituito
@@ -421,7 +421,7 @@ Un puntatore a un [CHttpConnection](../../mfc/reference/chttpconnection-class.md
 
 `GetHttpConnection` si connette a un server HTTP e crea e restituisce un puntatore a un `CHttpConnection` oggetto. Non esegue qualsiasi operazione specifica nel server. Se si prevede di eseguire query di un'intestazione HTTP, ad esempio, è necessario eseguire questa operazione come passaggio separato. Vedere le classi [CHttpConnection](../../mfc/reference/chttpconnection-class.md) e [CHttpFile](../../mfc/reference/chttpfile-class.md) per informazioni sulle operazioni eseguibili con una connessione a un server HTTP. Per informazioni sull'esplorazione di un sito HTTP, vedere la funzione membro [OpenURL](#openurl). Vedere l'articolo [Internet programmazione con WinInet](../../mfc/win32-internet-extensions-wininet.md) per i passaggi di esecuzione di attività comuni di connessione HTTP.
 
-## <a name="onstatuscallback"></a>  CInternetSession:: OnStatusCallback
+## <a name="onstatuscallback"></a>  CInternetSession::OnStatusCallback
 
 Questa funzione membro viene chiamata dal framework per aggiornare lo stato quando viene abilitato il callback dello stato e un'operazione è in sospeso.
 
@@ -477,7 +477,7 @@ Eseguire l'override di questa funzione membro per richiedere un'azione prima del
 
 Per altre informazioni sulle operazioni asincrone, vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md).
 
-## <a name="openurl"></a>  CInternetSession:: OpenURL
+## <a name="openurl"></a>  CInternetSession::OpenURL
 
 Chiamare questo membro di funzione per inviare la richiesta specificata per il server HTTP e consentire al client di specificare altri RFC822, MIME o intestazioni HTTP da inviare insieme alla richiesta.
 
@@ -532,7 +532,7 @@ Il puntatore che `OpenURL` restituisce dipende *pstrURL*del tipo di servizio. La
 |file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
 |gopher://|`CGopherFile*`|
-|FTP: / /|`CInternetFile*`|
+|ftp://|`CInternetFile*`|
 
 ### <a name="remarks"></a>Note
 
@@ -580,7 +580,7 @@ In caso contrario, restituisce TRUE se ha esito positivo o FALSE. Per ottenere i
 
 Questa funzione membro implementa il comportamento del messaggio Win32 [InternetSetCookie](/windows/desktop/api/wininet/nf-wininet-internetsetcookiea), come descritto nel SDK di Windows.
 
-## <a name="setoption"></a>  CInternetSession:: SetOption
+## <a name="setoption"></a>  CInternetSession::SetOption
 
 Chiamare questa funzione membro per impostare le opzioni per la sessione di Internet.
 
@@ -602,7 +602,7 @@ BOOL SetOption(
 *dwOption*<br/>
 Opzione Internet da impostare. Visualizzare [flag di opzione](/windows/desktop/WinInet/option-flags) nel SDKfor Windows un elenco delle possibili opzioni.
 
-*lpBuffer.*<br/>
+*lpBuffer*<br/>
 Un buffer che contiene l'impostazione dell'opzione.
 
 *dwBufferLength*<br/>

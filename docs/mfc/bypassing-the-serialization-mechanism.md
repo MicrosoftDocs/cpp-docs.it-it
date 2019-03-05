@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], role of framework
 - serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
-ms.openlocfilehash: 4c76be874752a577aaeb4c3641818f8a2850b465
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1937098de30884be327c67a698dbb0023be248bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556598"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276117"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Esclusione del meccanismo di serializzazione
 
@@ -32,4 +32,3 @@ In questo scenario il `Serialize` override non esegue alcuna operazione, a meno 
 ## <a name="see-also"></a>Vedere anche
 
 [Uso di documenti](../mfc/using-documents.md)
-
