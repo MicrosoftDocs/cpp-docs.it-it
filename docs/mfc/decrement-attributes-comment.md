@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC source files, Attributes comment
 - public attributes comment
 ms.assetid: 96388e11-42df-4994-aedf-decd152961a7
-ms.openlocfilehash: 33ee18400e03b55a26c4ad17e8d1ba6853ccda88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a74d0f9d6ffb0bd2d057cf46f7308d8b6a81f98c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486073"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303235"
 ---
 # <a name="-attributes-comment"></a>// Commento sugli attributi
 
@@ -31,4 +31,3 @@ Nell'esempio di elenco dalla classe `CStdioFile`, sotto [un esempio dei commenti
 [Commento sui costruttori](../mfc/decrement-constructors-comment.md)<br/>
 [Commento sulle operazioni](../mfc/decrement-operations-comment.md)<br/>
 [Commento sui sottoponibili a override](../mfc/decrement-overridables-comment.md)
-

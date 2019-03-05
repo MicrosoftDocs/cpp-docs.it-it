@@ -10,12 +10,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: 9e2bf534abcacbbb4997971376d3831705ab2310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468621"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278763"
 ---
 # <a name="class-library-overview"></a>Cenni preliminari sulla libreria di classi
 
@@ -23,7 +23,7 @@ Questa panoramica vengono suddivisi in categorie e vengono descritte le classi i
 
 Le classi della libreria sono riportate qui nelle categorie seguenti:
 
-- [Classe Root: CObject](../mfc/root-class-cobject.md)
+- [Classe root: CObject](../mfc/root-class-cobject.md)
 
 - [Classi architettura dell'applicazione MFC](../mfc/mfc-application-architecture-classes.md)
 
@@ -120,4 +120,3 @@ Oltre alle classi elencate in questa panoramica, la libreria MFC contiene un num
 ## <a name="see-also"></a>Vedere anche
 
 [Applicazioni desktop MFC](../mfc/mfc-desktop-applications.md)
-

@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295201"
 ---
 # <a name="sourcelinkmanager-class"></a>Classe source_link_manager
 
@@ -64,7 +64,7 @@ Il Registro di collegamento di rete.
 |----------|-----------------|
 |[add](#add)|Aggiunge un collegamento all'origine per il `source_link_manager` oggetto.|
 |[begin](#begin)|Restituisce un iteratore al primo elemento nel file di `source_link_manager` oggetto.|
-|[Contiene](#contains)|Cerca il `network_link_registry` all'interno di questo `source_link_manager` oggetto per un blocco specificato.|
+|[contains](#contains)|Cerca il `network_link_registry` all'interno di questo `source_link_manager` oggetto per un blocco specificato.|
 |[count](#count)|Conta il numero di blocchi collegati nel `source_link_manager` oggetto.|
 |[reference](#reference)|Acquisisce un riferimento nel `source_link_manager` oggetto.|
 |[register_target_block](#register_target_block)|Registra il blocco di destinazione che contiene questo `source_link_manager` oggetto.|
@@ -96,10 +96,10 @@ void add(_EType _Link);
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco da aggiungere.
 
-##  <a name="begin"></a> iniziare
+##  <a name="begin"></a> begin
 
 Restituisce un iteratore al primo elemento nel file di `source_link_manager` oggetto.
 
@@ -125,14 +125,14 @@ bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco che deve essere eseguita la ricerca nel `source_link_manager` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se il blocco specificato è stato trovato **false** in caso contrario.
 
-##  <a name="count"></a> conteggio
+##  <a name="count"></a> count
 
 Conta il numero di blocchi collegati nel `source_link_manager` oggetto.
 
@@ -162,7 +162,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Il blocco di destinazione che contiene questo `source_link_manager` oggetto.
 
 ##  <a name="release"></a> Versione
@@ -183,7 +183,7 @@ bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco deve essere rimosso, se trovato.
 
 ### <a name="return-value"></a>Valore restituito

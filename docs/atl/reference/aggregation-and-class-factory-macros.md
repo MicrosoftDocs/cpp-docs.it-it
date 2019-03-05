@@ -17,12 +17,12 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889ed4bbfc21209a64cfd9e4fee4b2335ce62010
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497186"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274895"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Aggregazione e macro di Class Factory
 
@@ -33,14 +33,14 @@ Queste macro forniscono modi di controllo dell'aggregazione e di dichiarazione c
 |[DECLARE_AGGREGATABLE](#declare_aggregatable)|Dichiara che l'oggetto può essere aggregata (predefinito).|
 |[DECLARE_CLASSFACTORY](#declare_classfactory)|Dichiara la class factory sia [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), la class factory predefinita ATL.|
 |[DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex)|Dichiara la classe factory oggetto la class factory.|
-|[MACRO DECLARE_CLASSFACTORY2](#declare_classfactory2)|Dichiara [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) sia la class factory.|
-|[: DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)|Dichiara [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) sia la class factory.|
+|[DECLARE_CLASSFACTORY2](#declare_classfactory2)|Dichiara [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) sia la class factory.|
+|[DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)|Dichiara [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) sia la class factory.|
 |[DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)|Dichiara [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) sia la class factory.|
 |[DECLARE_GET_CONTROLLING_UNKNOWN](#declare_get_controlling_unknown)|Dichiara un virtuale `GetControllingUnknown` (funzione).|
 |[DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable)|Dichiara che l'oggetto non può essere aggregato.|
 |[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Dichiara che l'oggetto deve essere aggregato.|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Controlla il valore di unknown esterno e dichiara l'oggetto come aggregabile o non aggregabile, come appropriato.|
-|[MACRO DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Protegge l'oggetto esterno dall'eliminazione durante la costruzione di un oggetto interno.|
+|[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Protegge l'oggetto esterno dall'eliminazione durante la costruzione di un oggetto interno.|
 |[DECLARE_VIEW_STATUS](#declare_view_status)|Specifica i flag VIEWSTATUS al contenitore.|
 
 ## <a name="requirements"></a>Requisiti
@@ -121,7 +121,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 [in] Il nome della classe che implementa l'oggetto della classe factory.
 
 ### <a name="remarks"></a>Note
@@ -134,7 +134,7 @@ Il *cf* parametro deve derivare da [CComClassFactory](../../atl/reference/ccomcl
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 
-##  <a name="declare_classfactory2"></a>  MACRO DECLARE_CLASSFACTORY2
+##  <a name="declare_classfactory2"></a>  DECLARE_CLASSFACTORY2
 
 Dichiara [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) sia la class factory.
 
@@ -144,7 +144,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parametri
 
-*contratto di licenza*<br/>
+*lic*<br/>
 [in] Una classe che implementa `VerifyLicenseKey`, `GetLicenseKey`, e `IsLicenseValid`.
 
 ### <a name="remarks"></a>Note
@@ -168,7 +168,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parametri
 
-*licenza*<br/>
+*license*<br/>
 Una classe che implementa le funzioni statiche seguenti:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -191,7 +191,7 @@ Gli oggetti ATL acquisire normalmente una class factory derivando da [CComCoClas
 
 `CComClassFactory2` deriva da entrambe `CComClassFactory2Base` e *licenza*. `CComClassFactory2Base`, a sua volta deriva da `IClassFactory2` e **CComObjectRootEx\< CComGlobalsThreadModel >**.
 
-##  <a name="declare_classfactory_auto_thread"></a>  : DECLARE_CLASSFACTORY_AUTO_THREAD
+##  <a name="declare_classfactory_auto_thread"></a>  DECLARE_CLASSFACTORY_AUTO_THREAD
 
 Dichiara [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) sia la class factory.
 
@@ -354,7 +354,7 @@ Il vantaggio dell'uso DECLARE_POLY_AGGREGATABLE è evitare che dispone di entram
 
 La macro DECLARE_POLY_AGGREGATABLE viene dichiarata nell'oggetto automaticamente se si usa la creazione guidata controllo ATL per creare un controllo completo.
 
-##  <a name="declare_protect_final_construct"></a>  MACRO DECLARE_PROTECT_FINAL_CONSTRUCT
+##  <a name="declare_protect_final_construct"></a>  DECLARE_PROTECT_FINAL_CONSTRUCT
 
 Protegge l'oggetto venga eliminato se (durante [FinalConstruct](ccomobjectrootex-class.md#finalconstruct)) l'oggetto aggregato interno incrementa il conteggio dei riferimenti, quindi decrementa il conteggio su 0.
 

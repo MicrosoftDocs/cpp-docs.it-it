@@ -188,18 +188,18 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640245"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288415"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
 La classe `CMFCRibbonBar` implementa una barra multifunzione analoga a quella usata in Office 2007.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -221,7 +221,7 @@ class CMFCRibbonBar : public CPane
 |----------|-----------------|
 |[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|Attiva una categoria contesto già visibile.|
 |[CMFCRibbonBar::AddCategory](#addcategory)|Aggiunge una nuova categoria della barra multifunzione alla barra multifunzione.|
-|[CMFCRibbonBar:: Addcontextcategory](#addcontextcategory)|Aggiunge una categoria contesto.|
+|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|Aggiunge una categoria contesto.|
 |[CMFCRibbonBar::AddMainCategory](#addmaincategory)|Aggiunge una nuova categoria principale della barra multifunzione.|
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
@@ -277,7 +277,7 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|Determina se le descrizioni dei comandi per la barra multifunzione sono abilitate.|
 |[CMFCRibbonBar::IsTransparentCaption](#istransparentcaption)||
 |[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|Indica se la barra multifunzione ha un aspetto in stile Windows 7 (piccolo pulsante di applicazione rettangolare).|
-|[CMFCRibbonBar:: LoadFromResource](#loadfromresource)|Di overload. Carica una barra multifunzione dalle risorse dell'applicazione.|
+|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|Di overload. Carica una barra multifunzione dalle risorse dell'applicazione.|
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
 |[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|Esegue l'override di `CPane::OnRTLChanged`.|
@@ -319,7 +319,7 @@ Gli elementi visualizzati sulla barra multifunzione si espandono e comprimono pe
 
 È possibile usare la classe `CMFCRibbonStatusBar` per implementare una barra di stato analoga a quella usata in Office 2007. Una categoria della barra multifunzione contiene (e Visualizza) un gruppo di [sulla barra multifunzione pannelli](../../mfc/reference/cmfcribbonpanel-class.md). Ogni pannello della barra multifunzione contiene uno o più elementi della barra multifunzione, derivati dalla classe [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Per informazioni su come aggiungere una barra multifunzione all'applicazione MFC esistente, vedere [procedura dettagliata: aggiornamento dell'applicazione MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Per informazioni su come aggiungere una barra multifunzione all'applicazione MFC esistente, vedere [procedura dettagliata: L'aggiornamento dell'applicazione MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -410,7 +410,7 @@ L'esempio seguente illustra come usare il `AddCategory` metodo nel `CMFCRibbonBa
 
 [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]
 
-##  <a name="addcontextcategory"></a>  CMFCRibbonBar:: Addcontextcategory
+##  <a name="addcontextcategory"></a>  CMFCRibbonBar::AddContextCategory
 
 Crea e Inizializza una nuova categoria di contesto per la barra multifunzione.
 
@@ -738,7 +738,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare la funzionalità suggerimenti tasto di scelta; FALSE per disabilitare la funzionalità suggerimenti tasto di scelta.
 
 ### <a name="remarks"></a>Note
@@ -755,7 +755,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] True per abilitare la **anteprima di stampa** funzionalità; FALSE per disattivare la **anteprima di stampa** funzionalità.
 
 ### <a name="remarks"></a>Note
@@ -776,7 +776,7 @@ void EnableToolTips(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare le descrizioni comandi della barra multifunzione; FALSE per disabilitare le descrizioni comandi della barra multifunzione.
 
 *bEnableDescr*<br/>
@@ -1305,7 +1305,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Coordina la posizione del punto nella barra multifunzione.
 
 *bCheckActiveCategory*<br/>
@@ -1478,7 +1478,7 @@ virtual void OnClickButton(
 *pButton*<br/>
 [in] Puntatore al pulsante che è stato fatto clic.
 
-*punto*<br/>
+*point*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="remarks"></a>Note
@@ -1494,7 +1494,7 @@ virtual void OnEditContextMenu(
 ### <a name="parameters"></a>Parametri
 
 [in] *pEdit*<br/>
-[in] *punto*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1959,7 +1959,7 @@ void ShowCategory(
 *nIndex*<br/>
 [in] Indice della categoria della barra multifunzione.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Se TRUE, indicare la categoria della barra multifunzione; in caso contrario, nascondere la categoria della barra multifunzione.
 
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories
@@ -1977,7 +1977,7 @@ void ShowContextCategories(
 *uiContextID*<br/>
 [in] L'ID di categoria contesto.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] Se TRUE, Mostra le categorie che hanno l'ID specificato; in caso contrario, nascondere le categorie che hanno l'ID specificato.
 
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips
@@ -2014,7 +2014,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Codice carattere sequenza di tasti utente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2053,7 +2053,7 @@ TRUE se la barra multifunzione dispone di Windows 7 Cerca; in caso contrario, FA
 
 ### <a name="remarks"></a>Note
 
-##  <a name="loadfromresource"></a>  CMFCRibbonBar:: LoadFromResource
+##  <a name="loadfromresource"></a>  CMFCRibbonBar::LoadFromResource
 
 Di overload. Carica una barra multifunzione dalle risorse dell'applicazione.
 
@@ -2155,5 +2155,4 @@ TRUE Ricalcola il layout della barra multifunzione. FALSE in caso contrario.
 [Classe CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [Classe CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
+[Procedura dettagliata: L'aggiornamento dell'applicazione MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

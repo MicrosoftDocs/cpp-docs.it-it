@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 1724dd3eb73b82e34c5cc2b0c1965d73e099a708
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29b8fc3caf2d769fcc60772be7fdf1c25f13d100
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440053"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285386"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Aggiunta di una nuova interfaccia in un progetto ATL
 

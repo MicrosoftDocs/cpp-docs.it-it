@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 5feb97b274b6547ebc6868e27ead20824ce4e8ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 643e2a519c6d96c1070990dd86d571c5b7c09f95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635678"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288428"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Classe CMFCRibbonFontComboBox
 
@@ -149,7 +149,7 @@ Per altre informazioni sui set di caratteri valida che può essere assegnato a *
 
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ```
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;

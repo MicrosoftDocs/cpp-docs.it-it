@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603216"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274076"
 ---
 # <a name="ischeduler-structure"></a>Struttura IScheduler
 
@@ -37,12 +37,12 @@ struct IScheduler;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Fornisce un'utilità di pianificazione con un insieme di radici del processore virtuale per l'uso. Ogni `IVirtualProcessorRoot` interfaccia rappresenta il diritto di eseguire un thread singolo che può eseguire operazioni per conto dell'utilità di pianificazione.|
-|[IScheduler:: GetID](#getid)|Restituisce un identificatore univoco per l'utilità di pianificazione.|
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Fornisce un'utilità di pianificazione con un insieme di radici del processore virtuale per l'uso. Ogni `IVirtualProcessorRoot` interfaccia rappresenta il diritto di eseguire un thread singolo che può eseguire operazioni per conto dell'utilità di pianificazione.|
+|[IScheduler::GetId](#getid)|Restituisce un identificatore univoco per l'utilità di pianificazione.|
 |[IScheduler::GetPolicy](#getpolicy)|Restituisce una copia dei criteri dell'utilità di pianificazione. Per altre informazioni sui criteri dell'utilità di pianificazione, vedere [SchedulerPolicy](schedulerpolicy-class.md).|
-|[IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica all'utilità di pianificazione che i thread hardware rappresentati dal set di radici di processori virtuali nella matrice `ppVirtualProcessorRoots` vengono ora utilizzati da altre utilità di pianificazione.|
-|[IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica all'utilità di pianificazione che i thread hardware rappresentati dal set di radici di processori virtuali nella matrice `ppVirtualProcessorRoots` non vengono utilizzati da altre utilità di pianificazione.|
-|[IScheduler:: RemoveVirtualProcessors](#removevirtualprocessors)|Avvia la rimozione di radici di processori virtuali che sono stati precedentemente allocato a questa utilità di pianificazione.|
+|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica all'utilità di pianificazione che i thread hardware rappresentati dal set di radici di processori virtuali nella matrice `ppVirtualProcessorRoots` vengono ora utilizzati da altre utilità di pianificazione.|
+|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica all'utilità di pianificazione che i thread hardware rappresentati dal set di radici di processori virtuali nella matrice `ppVirtualProcessorRoots` non vengono utilizzati da altre utilità di pianificazione.|
+|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Avvia la rimozione di radici di processori virtuali che sono stati precedentemente allocato a questa utilità di pianificazione.|
 |[IScheduler:: STATISTICS](#statistics)|Vengono fornite informazioni relative alle velocità di arrivo e il completamento di attività e modifica della lunghezza della coda per un'utilità di pianificazione.|
 
 ## <a name="remarks"></a>Note

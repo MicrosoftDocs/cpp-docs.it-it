@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504247"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295123"
 ---
 # <a name="cftpconnection-class"></a>Classe CFtpConnection
 
@@ -61,15 +61,15 @@ class CFtpConnection : public CInternetConnection
 |----------|-----------------|
 |[CFtpConnection::Command](#command)|Invia un comando direttamente a un server FTP.|
 |[CFtpConnection::CreateDirectory](#createdirectory)|Crea una directory nel server.|
-|[CFtpConnection:: GetCurrentDirectory](#getcurrentdirectory)|Ottiene la directory corrente per questa connessione.|
-|[CFtpConnection:: Getcurrentdirectoryasurl](#getcurrentdirectoryasurl)|Ottiene la directory corrente per questa connessione sotto forma di URL.|
+|[CFtpConnection::GetCurrentDirectory](#getcurrentdirectory)|Ottiene la directory corrente per questa connessione.|
+|[CFtpConnection::GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|Ottiene la directory corrente per questa connessione sotto forma di URL.|
 |[CFtpConnection::GetFile](#getfile)|Ottiene un file dal server connesso|
-|[CFtpConnection:: OpenFile](#openfile)|Apre un file nel server connesso.|
+|[CFtpConnection::OpenFile](#openfile)|Apre un file nel server connesso.|
 |[CFtpConnection::PutFile](#putfile)|Inserisce un file nel server.|
-|[CFtpConnection:: Remove](#remove)|Rimuove un file dal server.|
+|[CFtpConnection::Remove](#remove)|Rimuove un file dal server.|
 |[CFtpConnection::RemoveDirectory](#removedirectory)|Rimuove la directory specificata dal server.|
 |[CFtpConnection::Rename](#rename)|Rinomina un file nel server.|
-|[CFtpConnection:: SetCurrentDirectory](#setcurrentdirectory)|Imposta la directory FTP corrente.|
+|[CFtpConnection::SetCurrentDirectory](#setcurrentdirectory)|Imposta la directory FTP corrente.|
 
 ## <a name="remarks"></a>Note
 
@@ -140,7 +140,7 @@ Un puntatore a una stringa con terminazione null che specifica la password da ut
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL o ""|NULL o ""|"anonymous"|Nome messaggio di posta elettronica dell'utente|
 |Stringa non NULL|NULL o ""|*pstrUserName*|" "|
-|Stringa Non NULL a NULL|ERRORE|ERRORE||
+|Stringa Non NULL a NULL|ERROR|ERROR||
 |Stringa non NULL|Stringa non NULL|*pstrUserName*|*pstrPassword*|
 
 *nPort*<br/>
@@ -216,7 +216,7 @@ Usare `GetCurrentDirectory` per determinare la directory di lavoro corrente per 
 
 Il `pstrDirName` parametro può essere un parzialmente o un nome file completo relativo alla directory corrente. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `CreateDirectory` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.
 
-##  <a name="getcurrentdirectory"></a>  CFtpConnection:: GetCurrentDirectory
+##  <a name="getcurrentdirectory"></a>  CFtpConnection::GetCurrentDirectory
 
 Chiamare questa funzione membro per ottenere il nome della directory corrente.
 
@@ -354,9 +354,9 @@ Se *dwFlags* FILE_TRANSFER_TYPE_ASCII, conversione dei dati dei file anche conve
 
 Entrambe *pstrRemoteFile* e *pstrLocalFile* possono essere entrambi nomi parzialmente qualificati di file relativo alla directory corrente o in modo completo. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `GetFile` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.
 
-Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
-##  <a name="openfile"></a>  CFtpConnection:: OpenFile
+##  <a name="openfile"></a>  CFtpConnection::OpenFile
 
 Chiamare questa funzione membro per aprire un file che si trova in un server FTP per la lettura o scrittura.
 
@@ -404,7 +404,7 @@ Dopo avere chiamato `OpenFile` e fino a quando la chiamata `CInternetConnection:
 
 Il *pstrFileName* parametro può essere un nome parzialmente qualificato completo o relativo alla directory corrente. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `OpenFile` traduce i separatori di nome di directory in caratteri appropriati prima di poterla usare.
 
-Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
 ##  <a name="putfile"></a>  CFtpConnection::PutFile
 
@@ -440,9 +440,9 @@ Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esi
 
 `PutFile` è una routine di alto livello che gestisce tutte le operazioni associate con l'archiviazione di un file in un server FTP. Le applicazioni che solo invio dei dati, o che richiedono un maggiore controllo sul trasferimento di file, devono usare [OpenFile](#openfile) e [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).
 
-Esegue l'override dell'impostazione predefinita `dwContext` per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Esegue l'override dell'impostazione predefinita `dwContext` per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
-##  <a name="remove"></a>  CFtpConnection:: Remove
+##  <a name="remove"></a>  CFtpConnection::Remove
 
 Chiamare questa funzione membro per eliminare il file specificato dal server connesso.
 
@@ -512,7 +512,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esi
 
 Il *pstrExisting* e *pstrNew* parametri possono essere un nome parzialmente qualificato completo o relativo alla directory corrente. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `Rename` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.
 
-##  <a name="setcurrentdirectory"></a>  CFtpConnection:: SetCurrentDirectory
+##  <a name="setcurrentdirectory"></a>  CFtpConnection::SetCurrentDirectory
 
 Chiamare questa funzione membro per modificare in una directory diversa sul server FTP.
 

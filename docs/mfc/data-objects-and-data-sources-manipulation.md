@@ -1,5 +1,5 @@
 ---
-title: 'Oggetti dati e origini dati: modifica'
+title: 'Oggetti dati e origini dati: Manipolazione'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636150"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286751"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>Oggetti dati e origini dati: modifica
+# <a name="data-objects-and-data-sources-manipulation"></a>Oggetti dati e origini dati: Manipolazione
 
 Dopo aver creata un oggetto dati o origine dati, è possibile eseguire un numero di operazioni comuni su dati, ad esempio inserimento e rimozione dei dati, l'enumerazione dei formati che di dati sono in e così via. Questo articolo descrive le tecniche necessarie per completare le operazioni più comuni. Gli argomenti trattati includono:
 
@@ -37,7 +37,7 @@ Inserimento dei dati in un'origine dati dipende dal fatto che i dati vengono for
 
 - Chiamare `COleDataSource::CacheGlobalData` ripetutamente per tutti i formati degli Appunti in cui vengono forniti i dati. Il formato degli Appunti da usare, passare un handle per la memoria che contiene i dati e, facoltativamente, un **FORMATETC** struttura che descrive i dati.
 
-     oppure
+     -oppure-
 
 - Se si desidera usare direttamente **STGMEDIUM** strutture, si chiama `COleDataSource::CacheData` invece di `COleDataSource::CacheGlobalData` nell'opzione precedente.
 
@@ -47,7 +47,7 @@ Si tratta di un argomento avanzato.
 
 - Chiamare `COleDataSource::DelayRenderData` ripetutamente per tutti i formati degli Appunti in cui vengono forniti i dati. Passare il formato degli Appunti da usare e, facoltativamente, un **FORMATETC** struttura che descrive i dati. Quando vengono richiesti i dati, il framework chiamerà `COleDataSource::OnRenderData`, che è necessario eseguire l'override.
 
-     oppure
+     -oppure-
 
 - Se si usa un' `CFile` oggetto da fornire i dati, chiamare `COleDataSource::DelayRenderFileData` invece di `COleDataSource::DelayRenderData` nell'opzione precedente. Quando vengono richiesti i dati, il framework chiamerà `COleDataSource::OnRenderFileData`, che è necessario eseguire l'override.
 
@@ -67,7 +67,7 @@ Prima di un'applicazione consente all'utente di incollare i dati al suo interno,
 
    - Chiamare il metodo dell'oggetto dati `BeginEnumFormats` funzione membro per l'enumerazione dei formati disponibili negli Appunti. Chiamare quindi `GetNextFormat` fino a quando gli Appunti restituisce un formato di applicazione supporta o non sono non altri formati.
 
-Se si usa **ON_UPDATE_COMMAND_UI**, è ora possibile abilitare l'Incolla e, possibilmente, elementi Incolla speciale dal menu Modifica. A tale scopo, chiamare `CMenu::EnableMenuItem` o `CCmdUI::Enable`. Per altre informazioni su quali contenitore le applicazioni devono eseguire con le voci di menu ed, vedere [menu e risorse: aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md).
+Se si usa **ON_UPDATE_COMMAND_UI**, è ora possibile abilitare l'Incolla e, possibilmente, elementi Incolla speciale dal menu Modifica. A tale scopo, chiamare `CMenu::EnableMenuItem` o `CCmdUI::Enable`. Per altre informazioni su quali contenitore le applicazioni devono eseguire con le voci di menu ed, vedere [menu e risorse: Aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md).
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Il recupero dei dati da un oggetto dati
 

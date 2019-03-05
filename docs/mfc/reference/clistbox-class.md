@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178616"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280316"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 
@@ -139,7 +139,7 @@ class CListBox : public CWnd
 |[CListBox::DeleteString](#deletestring)|Elimina una stringa da una casella di riepilogo.|
 |[CListBox::Dir](#dir)|Aggiunge i nomi file, le unità o entrambi dalla directory corrente per una casella di riepilogo.|
 |[CListBox::DrawItem](#drawitem)|Chiamato dal framework quando un aspetto visivo di una casella Cambia elenco creato dal proprietario.|
-|[CListBox:: FindString](#findstring)|Cerca una stringa in una casella di riepilogo.|
+|[CListBox::FindString](#findstring)|Cerca una stringa in una casella di riepilogo.|
 |[CListBox::FindStringExact](#findstringexact)|Trova la prima stringa di casella di riepilogo che corrisponde a una stringa specificata.|
 |[CListBox::GetAnchorIndex](#getanchorindex)|Recupera l'indice in base zero dell'elemento di ancoraggio corrente in una casella di riepilogo.|
 |[CListBox::GetCaretIndex](#getcaretindex)|Determina l'indice dell'elemento che contiene il rettangolo di attivazione in una casella di riepilogo a selezione multipla.|
@@ -169,7 +169,7 @@ class CListBox : public CWnd
 |[CListBox::SetCaretIndex](#setcaretindex)|Imposta il rettangolo di attivazione per l'elemento in corrispondenza dell'indice specificato in una casella di riepilogo a selezione multipla.|
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Imposta la larghezza della colonna di una casella di riepilogo a più colonne.|
 |[CListBox::SetCurSel](#setcursel)|Seleziona una stringa di casella di riepilogo.|
-|[CListBox:: SetHorizontalExtent](#sethorizontalextent)|Imposta la larghezza in pixel che una casella di riepilogo è possibile scorrere orizzontalmente.|
+|[CListBox::SetHorizontalExtent](#sethorizontalextent)|Imposta la larghezza in pixel che una casella di riepilogo è possibile scorrere orizzontalmente.|
 |[CListBox::SetItemData](#setitemdata)|Imposta il valore a 32 bit associato con l'elemento casella di riepilogo.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Imposta un puntatore all'elemento casella di riepilogo.|
 |[CListBox::SetItemHeight](#setitemheight)|Imposta l'altezza degli elementi in una casella di riepilogo.|
@@ -475,10 +475,10 @@ int Dir(
 
 ### <a name="parameters"></a>Parametri
 
-*Attr*<br/>
+*attr*<br/>
 Può essere qualsiasi combinazione dei **enum** i valori descritti nella `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus), o qualsiasi combinazione dei valori seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0x0000|File può essere letti da o scritti.|
 |0x0001|File può essere letto da ma non scritto.|
@@ -525,7 +525,7 @@ Visualizzare [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) pe
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  CListBox:: FindString
+##  <a name="findstring"></a>  CListBox::FindString
 
 Trova la prima stringa in una casella di riepilogo che contiene il prefisso specificato senza modificare la selezione della casella di riepilogo.
 
@@ -904,7 +904,7 @@ void GetText(
 *nIndex*<br/>
 Specifica l'indice in base zero della stringa da recuperare.
 
-*lpszbuffer viene*<br/>
+*lpszBuffer*<br/>
 Punta al buffer che riceve la stringa. Il buffer deve avere spazio sufficiente per la stringa e un carattere di terminazione null. La dimensione della stringa può essere determinata anticipo chiamando il `GetTextLen` funzione membro.
 
 *rString*<br/>
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parametri
 
-*bSelezionare*<br/>
+*bSelect*<br/>
 Specifica la modalità di selezione del set. Se *bSelezionare* è TRUE, la stringa è selezionata ed evidenziata; se FALSE, l'evidenziazione viene rimossa e la stringa non è più selezionata.
 
 *nFirstItem*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametri
 
-*nSelezionare*<br/>
+*nSelect*<br/>
 Specifica l'indice in base zero della stringa di selezione. Se *nSelezionare* è -1, la casella di riepilogo è impostata su Nessuna opzione di selezione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1261,7 +1261,7 @@ Per impostare o rimuovere una selezione in una casella di riepilogo a selezione 
 
 [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]
 
-##  <a name="sethorizontalextent"></a>  CListBox:: SetHorizontalExtent
+##  <a name="sethorizontalextent"></a>  CListBox::SetHorizontalExtent
 
 Imposta la larghezza, in pixel, mediante il quale una casella di riepilogo può essere necessario scorrere orizzontalmente.
 
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Contiene l'indice in base zero della stringa da impostare. Se -1, la selezione viene aggiunto o rimosso da tutte le stringhe, in base al valore *bSelezionare*.
 
-*bSelezionare*<br/>
+*bSelect*<br/>
 Specifica la modalità di selezione del set. Se *bSelezionare* è TRUE, la stringa è selezionata ed evidenziata; se FALSE, l'evidenziazione viene rimossa e la stringa non è più selezionata. La stringa specificata viene selezionata ed evidenziata per impostazione predefinita.
 
 ### <a name="return-value"></a>Valore restituito

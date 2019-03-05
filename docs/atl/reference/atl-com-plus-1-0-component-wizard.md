@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df13c94eb0cc2aa7e2dea49aba6901f01fce0a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513776"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326426"
 ---
 # <a name="atl-com-10-component-wizard"></a>Creazione guidata componente ATL COM+ 1.0
 
@@ -87,4 +87,3 @@ Fornisce informazioni sulle funzionalità COM per l'oggetto.
 ## <a name="see-also"></a>Vedere anche
 
 [Componente ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

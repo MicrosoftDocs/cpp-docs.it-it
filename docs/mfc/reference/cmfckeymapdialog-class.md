@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: e1ed48c851243611b052c79d13721076d27dcf8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94c6968d2f534ed0b6d247420e67910ecf906b05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452676"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294603"
 ---
 # <a name="cmfckeymapdialog-class"></a>Classe CMFCKeyMapDialog
 
@@ -213,7 +213,7 @@ virtual int OnPrintHeader(
 *nPage*<br/>
 [in] Il numero di pagina da stampare.
 
-*CX*<br/>
+*cx*<br/>
 [in] L'offset orizzontale dell'intestazione, in pixel.
 
 ### <a name="return-value"></a>Valore restituito
@@ -248,7 +248,7 @@ virtual int OnPrintItem(
 *y*<br/>
 [in] L'offset verticale tra la parte superiore della pagina e la posizione dell'elemento.
 
-*CX*<br/>
+*cx*<br/>
 [in] L'offset orizzontale tra sinistra della pagina e la posizione dell'elemento.
 
 *bCalcHeight*<br/>

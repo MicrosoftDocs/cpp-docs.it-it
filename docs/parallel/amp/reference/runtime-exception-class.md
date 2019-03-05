@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 627fc6788dd359779bf07da3da1901be4c3aeafd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289663"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception (classe)
 
@@ -33,7 +33,7 @@ class runtime_exception : public std::exception;
 |Nome|Descrizione|
 |----------|-----------------|
 |[Costruttore runtime_exception](#ctor)|Inizializza una nuova istanza della classe `runtime_exception`.|
-|[~ runtime_exception distruttore](#dtor)|Elimina definitivamente il `runtime_exception` oggetto.|
+|[~runtime_exception Destructor](#dtor)|Elimina definitivamente il `runtime_exception` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -57,7 +57,7 @@ class runtime_exception : public std::exception;
 
 **Intestazione:** amprt. h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
 ## <a name="runtime_exception__ctor"></a>  Costruttore runtime_exception
 
@@ -79,7 +79,7 @@ runtime_exception(
 
 ### <a name="parameters"></a>Parametri
 
-*Messaggio*<br/>
+*_Message*<br/>
 Descrizione dell'errore che ha causato l'eccezione.
 
 *_Hresult*<br/>
@@ -92,7 +92,7 @@ Il `runtime_exception` oggetto da copiare.
 
 Oggetto `runtime_exception`.
 
-## <a name="dtor"></a>  ~ runtime_exception distruttore
+## <a name="dtor"></a>  ~runtime_exception Destructor
 
 Elimina l'oggetto.
 

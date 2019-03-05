@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304080"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar (classe)
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Note
 
-Per un esempio di una barra di Outlook, vedere la [OutlookDemo esempio: applicazione MFC OutlookDemo](../../visual-cpp-samples.md).
+Per un esempio di una barra di Outlook, vedere il [esempio OutlookDemo: Applicazione MFC OutlookDemo](../../visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implementazione della barra di Outlook
 
@@ -267,7 +267,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in] Specifica un puntatore a una finestra padre. Non deve essere NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Specifica la dimensione e posizione in pixel della barra di outlook.
 
 *nID*<br/>

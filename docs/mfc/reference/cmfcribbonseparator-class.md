@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 05ac8b26cb6b6e7d8e622ecbaac1d4a81bfd35e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565932"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302767"
 ---
 # <a name="cmfcribbonseparator-class"></a>Classe CMFCRibbonSeparator
 
@@ -152,7 +152,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>Parametri
 
-*src*<br/>
+*Src*<br/>
 [in] Elemento della barra multifunzione di origine da copiare.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize
@@ -235,7 +235,7 @@ virtual void OnDrawOnList(
 |*pDC*|[in] Puntatore a un contesto di dispositivo.|
 |*strText*|[in] Testo visualizzato nell'elenco.|
 |*nTextOffset*|[in] Spaziatura tra il testo e il lato sinistro del rettangolo di delimitazione.|
-|*Rect*|[in] Specifica il rettangolo di delimitazione.|
+|*rect*|[in] Specifica il rettangolo di delimitazione.|
 |*bIsSelected*|[in] Ignorato.|
 |*bHighlighted*|[in] Ignorato.|
 

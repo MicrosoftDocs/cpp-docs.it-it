@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178382"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282448"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (classe)
 
@@ -194,7 +194,7 @@ CMDIChildWnd* CreateNewChild(
 *pClass*<br/>
 La classe di runtime della finestra figlio da creare.
 
-*Nrisorsa*<br/>
+*nResource*<br/>
 L'ID delle risorse condivise associato alla finestra figlio.
 
 *hMenu*<br/>
@@ -275,7 +275,7 @@ void MDICascade(int nType);
 
 ### <a name="parameters"></a>Parametri
 
-*NLE*<br/>
+*nType*<br/>
 Specifica un flag di propagazione. È possibile specificare solo il flag seguente: MDITILE_SKIPDISABLED, che impedisce che le finestre figlio MDI disabilitate a cascata in corso.
 
 ### <a name="remarks"></a>Note
@@ -440,7 +440,7 @@ void MDITile(int nType);
 
 ### <a name="parameters"></a>Parametri
 
-*NLE*<br/>
+*nType*<br/>
 Specifica un flag di affiancamento. Questo parametro può essere uno dei flag seguenti:
 
 - Finestre figlio MDI di riquadri MDITILE_HORIZONTAL in modo che una finestra viene visualizzata sopra un'altra.
@@ -460,8 +460,8 @@ Vedere l'esempio relativo [CMDIFrameWnd::MDICascade](#mdicascade).
 ## <a name="see-also"></a>Vedere anche
 
 [Esempio MFC MDI](../../visual-cpp-samples.md)<br/>
-[Esempio MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Esempio MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC Sample MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[MFC Sample SNAPVW](../../visual-cpp-samples.md)<br/>
 [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

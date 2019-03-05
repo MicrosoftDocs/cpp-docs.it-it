@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 97012e1d8cdc36f080245243c5f099b340225fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533861"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293485"
 ---
 # <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
 
@@ -162,7 +162,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Un valore RGB che specifica il colore di predefinito del pulsante automatico.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Specifica se il pulsante automatico è abilitato o disabilitato.
 
 ### <a name="remarks"></a>Note
@@ -186,7 +186,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Specifica se il [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) si apre la finestra di dialogo o la finestra di dialogo colore di sistema quando l'utente fa clic sul pulsante.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Specifica se il pulsante "altro" è abilitato o disabilitato.
 
 ### <a name="remarks"></a>Note
@@ -263,7 +263,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Punta al contesto di dispositivo usato per il rendering dell'immagine del pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che delimita il pulsante.
 
 *uiState*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 [in] Un valore RGB.
 
 ### <a name="remarks"></a>Note
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 [in] Il valore del colore RGB.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 [in] Colore selezionato dall'utente.
 
 ### <a name="remarks"></a>Note

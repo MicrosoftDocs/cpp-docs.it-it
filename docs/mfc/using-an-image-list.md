@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CImageList class [MFC], using
 - image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
-ms.openlocfilehash: fb0636d29d5bf72007eb440f763de0d5e1f4b581
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb95de134939e1b06e2a8b827424c986f8c48ef3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581246"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293875"
 ---
 # <a name="using-an-image-list"></a>Utilizzo di un elenco di immagini
 
@@ -32,4 +32,3 @@ Uso tipico di un elenco di immagini segue il modello seguente:
 
 [Uso di CImageList](../mfc/using-cimagelist.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

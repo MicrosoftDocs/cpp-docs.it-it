@@ -1,5 +1,5 @@
 ---
-title: 'Sfondo OLE: collegamento e incorporamento'
+title: 'Sfondo OLE: Collegamento e incorporamento'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE embedded items [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 7595d87ce54b0a34dd4e5f3489dd36e3918fd8a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280966"
 ---
-# <a name="ole-background-linking-and-embedding"></a>Sfondo OLE: collegamento e incorporamento
+# <a name="ole-background-linking-and-embedding"></a>Sfondo OLE: Collegamento e incorporamento
 
 L'utilizzo del comando Incolla in un'applicazione contenitore può creare un componente incorporato o un elemento incorporato. I dati di origine per un elemento incorporato sono archiviati come parte del documento OLE che lo contiene. In questo modo, un file di un documento di elaboratore di testo può contenere testo e anche bitmap, grafici, formule o qualsiasi altro tipo di dati.
 
@@ -30,7 +30,6 @@ Ogni elemento OLE, sia incorporato o collegato, è associato a un tipo che si ba
 ## <a name="see-also"></a>Vedere anche
 
 [Sfondo OLE](../mfc/ole-background.md)<br/>
-[Sfondo OLE: contenitori e server](../mfc/ole-background-containers-and-servers.md)<br/>
-[Contenitori: elementi client](../mfc/containers-client-items.md)<br/>
-[Server: elementi server](../mfc/servers-server-items.md)
-
+[Sfondo OLE: Contenitori e server](../mfc/ole-background-containers-and-servers.md)<br/>
+[Contenitori: Elementi client](../mfc/containers-client-items.md)<br/>
+[Server: Elementi del server](../mfc/servers-server-items.md)

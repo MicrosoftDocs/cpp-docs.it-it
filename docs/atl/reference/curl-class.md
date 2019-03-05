@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471513"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295656"
 ---
 # <a name="curl-class"></a>Classe cUrl
 
@@ -118,7 +118,7 @@ class CUrl
 
 - Nome utente: "someone"
 
-- Password: "segreto"
+- Password: "secret"
 
 - Nome host: "`www.microsoft.com`"
 
@@ -149,15 +149,15 @@ Flag che controllano la canonizzazione. Se nessun flag specificato (*dwFlags* = 
 
 - ATL_URL_BROWSER_MODE: Non codificare o decodificare i caratteri successivi a "#" o "" e non rimuove gli spazi finali dopo "". Se questo valore viene omesso, l'intero URL è codificato e spazio vuoto finale viene rimosso.
 
-- ATL_URL _DECODE: converte tutte le sequenze XX % per caratteri, inclusi le sequenze di escape, prima che l'URL viene analizzato.
+- _DECODE ATL_URL: Converte tutte le sequenze XX % in caratteri, tra cui le sequenze di escape, prima che l'URL viene analizzato.
 
-- ATL_URL _ENCODE_PERCENT: codifica qualsiasi segni di percentuale rilevati. Per impostazione predefinita, i segni di percentuale non vengono codificati.
+- ATL_URL _ENCODE_PERCENT: Codifica qualsiasi segni di percentuale rilevati. Per impostazione predefinita, i segni di percentuale non vengono codificati.
 
-- ATL_URL _ENCODE_SPACES_ONLY: codifica solo da spazi.
+- _ENCODE_SPACES_ONLY ATL_URL: Codifica solo da spazi.
 
-- ATL_URL _NO_ENCODE: non converte i caratteri non sicuri in sequenze di escape.
+- ATL_URL _NO_ENCODE: Non converte i caratteri non sicuri in sequenze di escape.
 
-- ATL_URL _NO_META: non rimuove le sequenze di metadati (ad esempio "."e"..") dall'URL.
+- ATL_URL _NO_META: Non rimuove le sequenze di metadati (ad esempio "."e"..") dall'URL.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -225,7 +225,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 Questo metodo aggiunge i singoli campi per costruire la stringa URL completata nel formato seguente:
 
-**\<schema > ://\<utente >:\<passare >\@\<dominio >:\<porta >\<percorso >\<aggiuntivi >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 Quando si chiama questo metodo, il *pdwMaxLength* il parametro inizialmente deve contenere la lunghezza massima del buffer di stringa a cui fanno riferimento le *lpszUrl* parametro. Il valore della *pdwMaxLength* parametro verrà aggiornato con la lunghezza effettiva della stringa dell'URL.
 
@@ -246,7 +246,7 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*URL*<br/>
+*urlThat*<br/>
 Il `CUrl` oggetto da copiare per creare l'URL.
 
 ##  <a name="dtor"></a>  CUrl:: ~ CUrl
@@ -447,7 +447,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*URL*<br/>
+*urlThat*<br/>
 Il `CUrl` oggetto da copiare nell'oggetto corrente.
 
 ### <a name="return-value"></a>Valore restituito

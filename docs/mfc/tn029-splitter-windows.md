@@ -1,5 +1,5 @@
 ---
-title: 'TN029: finestre con separatore'
+title: 'TN029: Finestre con separatore'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.windows.splitter
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294993"
 ---
-# <a name="tn029-splitter-windows"></a>TN029: finestre con separatore
+# <a name="tn029-splitter-windows"></a>TN029: Finestre con separatore
 
 Questa nota descrive le MFC [classe CSplitterWnd](../mfc/reference/csplitterwnd-class.md), che fornisce finestra divide e gestisce il ridimensionamento di altre finestre del riquadro.
 
@@ -60,11 +60,11 @@ Riquadro: Una finestra specifica dell'applicazione che un `CSplitterWnd` gestisc
 
 Usare un `CWnd`-derivato dell'oggetto, viene passato il RUNTIME_CLASS dell'oggetto dal `CreateView` funzionano come si farebbe se si usasse un `CView`-classe derivata. La classe deve usare IMPLEMENT_DYNCREATE e DECLARE_DYNCREATE perché il framework utilizza la creazione dinamica in fase di esecuzione. Anche se è presente una grande quantità di codice nel `CSplitterWnd` che è specifico per il `CView` (classe), [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) viene sempre utilizzato prima che vengano eseguite tali azioni.
 
-Barra di divisione: Un controllo che viene inserito tra righe e colonne di riquadri. Può essere usata per regolare le dimensioni delle righe o colonne di riquadri.
+Barra di divisione: Controllo che viene inserito tra righe e colonne di riquadri. Può essere usata per regolare le dimensioni delle righe o colonne di riquadri.
 
 Finestra con separatore: Un controllo in una dinamica `CSplitterWnd` che è possibile usare per creare nuove righe o colonne di riquadri. Si trova nella parte superiore della barra di scorrimento verticale o a sinistra delle barre di scorrimento orizzontale.
 
-Barra di divisione intersezione: L'intersezione di una barra di divisione verticale e una barra di divisione orizzontale. È possibile trascinarlo per regolare le dimensioni di una riga e colonna dei riquadri contemporaneamente.
+Intersezione di barra di divisione: L'intersezione di una barra di divisione verticale e una barra di divisione orizzontale. È possibile trascinarlo per regolare le dimensioni di una riga e colonna dei riquadri contemporaneamente.
 
 ## <a name="shared-scroll-bars"></a>Le barre di scorrimento condiviso
 
@@ -140,4 +140,3 @@ Il `CView` classe utilizza i seguenti comandi di alto livelli per delegare il `C
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

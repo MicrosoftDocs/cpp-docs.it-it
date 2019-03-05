@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-ms.openlocfilehash: 041fa90b030edd9b5324c183b0153a8a062735da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e32210217321e4eb59d7d3e666a4f5494eb3642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494965"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287700"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Scrittura di un'applicazione client Internet con classi WinInet MFC
 

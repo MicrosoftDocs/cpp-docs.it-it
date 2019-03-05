@@ -3,12 +3,12 @@ title: Aggiunta di un evento (Esercitazione di ATL, parte 5)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-ms.openlocfilehash: 4576af12f73e907fa8826ad71185a42ed9b9308e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57fc2adaadcca52cfc25736b5f9010fcb65a2ff0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643040"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278639"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Aggiunta di un evento (Esercitazione di ATL, parte 5)
 
@@ -49,7 +49,7 @@ Generare la libreria dei tipi a questo punto, perché il progetto verrà utilizz
 
 1. Ricompilare il progetto.
 
-     oppure
+     -oppure-
 
 1. Fare doppio clic su file in Polygon. idl **Esplora soluzioni** e fare clic su **compilare** menu di scelta rapida.
 

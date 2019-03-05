@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 36e4b5956e0739b44481fbabe6114c9648e7b229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477090"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304691"
 ---
 # <a name="concurrentqueue-class"></a>Classe concurrent_queue
 
@@ -128,13 +128,13 @@ Tipo di iteratore di input che specifica un intervallo di valori.
 *_Al*<br/>
 Classe Allocator da usare con questo oggetto.
 
-*OtherQ*<br/>
+*_OtherQ*<br/>
 Oggetto `concurrent_queue` di origine da cui copiare o spostare elementi.
 
-*Ini_zia*<br/>
+*_Begin*<br/>
 Posizione del primo elemento nell'intervallo di elementi da copiare.
 
-*End*<br/>
+*_End*<br/>
 Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
 ### <a name="remarks"></a>Note
@@ -157,7 +157,7 @@ Elimina la coda simultanea.
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a> vuota
+##  <a name="empty"></a> empty
 
 Verifica se la coda simultanea è vuota nel momento in cui questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.
 
@@ -214,7 +214,7 @@ bool try_pop(T& _Dest);
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Un riferimento a un percorso per archiviare l'elemento rimosso dalla coda.
 
 ### <a name="return-value"></a>Valore restituito

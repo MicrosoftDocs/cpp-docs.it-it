@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299322"
 ---
 # <a name="implementing-property-pages"></a>Implementazione delle pagine delle proprietà
 
@@ -37,10 +37,10 @@ Per creare una pagina delle proprietà utilizzando ATL:
    |------------------------------|----------------------------------|-----------|
    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Eseguire i controlli di integrità di base sul numero di oggetti passati alla pagina e le interfacce che supportano.|Eseguire il codice personalizzato prima di chiamare l'implementazione della classe base. Se gli oggetti da impostare non è conforme alle aspettative, è prima possibile deve avere esito negativo della chiamata.|
    |[attivare](../atl/reference/ipropertypageimpl-class.md#activate)|Inizializzare l'interfaccia utente della pagina (ad esempio, impostare i controlli di finestra di dialogo con valori di proprietà correnti degli oggetti, creare i controlli in modo dinamico o eseguire altre inizializzazioni).|Chiamare l'implementazione della classe base prima del codice in modo che la classe di base ha la possibilità di creare la finestra di dialogo e tutti i controlli prima di tentare di aggiornarle.|
-   |[Applicare](../atl/reference/ipropertypageimpl-class.md#apply)|Convalidare le impostazioni delle proprietà e aggiornare gli oggetti.|Non è necessario chiamare l'implementazione della classe base, dal momento che non esegue alcuna operazione oltre a traccia la chiamata.|
+   |[Apply](../atl/reference/ipropertypageimpl-class.md#apply)|Convalidare le impostazioni delle proprietà e aggiornare gli oggetti.|Non è necessario chiamare l'implementazione della classe base, dal momento che non esegue alcuna operazione oltre a traccia la chiamata.|
    |[Disattiva](../atl/reference/ipropertypageimpl-class.md#deactivate)|Pulire gli elementi relativi alle finestre.|Implementazione della classe base Elimina definitivamente la finestra di dialogo che rappresenta la pagina delle proprietà. Se è necessario eliminare prima la finestra di dialogo viene eliminato definitivamente, è necessario aggiungere il codice prima di chiamare la classe di base.|
 
-Per un'implementazione di pagina delle proprietà di esempio, vedere [esempio: implementazione di una pagina delle proprietà](../atl/example-implementing-a-property-page.md).
+Per un'implementazione di pagina delle proprietà di esempio, vedere [esempio: Implementazione di una pagina delle proprietà](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
 > Se si vuole ospitare controlli ActiveX nella pagina delle proprietà, è necessario modificare la derivazione della classe generato dalla procedura guidata. Sostituire **CDialogImpl\<CClasse >** con **CAxDialogImpl\<CClasse >** nell'elenco delle classi di base.

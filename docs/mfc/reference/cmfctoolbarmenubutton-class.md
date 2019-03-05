@@ -92,17 +92,17 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: ed786f3449f172f1aa4255a4ca677a400b767e83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429367"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281523"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Classe CMFCToolBarMenuButton
 
 Pulsante della barra degli strumenti contenente un menu di scelta rapida.
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -123,10 +123,10 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |Nome|Descrizione|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|Confronta questa istanza con l'oggetto fornito `CMFCToolBarButton` oggetto. (Esegue l'override [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
-|[Cmfctoolbarmenubutton:: CopyFrom](#copyfrom)|Copia le proprietà di un altro pulsante della barra degli strumenti per il pulsante corrente. (Esegue l'override [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
+|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Copia le proprietà di un altro pulsante della barra degli strumenti per il pulsante corrente. (Esegue l'override [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
 |[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|Inizializza il menu della barra degli strumenti da un handle di menu di Windows.|
 |[CMFCToolBarMenuButton::CreateMenu](#createmenu)|Consente di creare un menu di Windows che include i comandi nel menu della barra degli strumenti. Restituisce un handle per il menu di Windows.|
-|[Cmfctoolbarmenubutton:: CreatePopupMenu](#createpopupmenu)|Crea un oggetto menu di scelta rapida ( [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)) per visualizzare il menu della barra degli strumenti.|
+|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|Crea un oggetto menu di scelta rapida ( [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)) per visualizzare il menu della barra degli strumenti.|
 |[CMFCToolBarMenuButton::EnableQuickCustomize](#enablequickcustomize)||
 |[CMFCToolBarMenuButton::GetCommands](#getcommands)|Offre accesso in lettura all'elenco di comandi nel menu della barra degli strumenti.|
 |[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|Recupera il rettangolo di delimitazione per l'immagine del pulsante.|
@@ -137,7 +137,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::IsBorder](#isborder)||
 |[CMFCToolBarMenuButton::IsClickedOnMenu](#isclickedonmenu)||
 |[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|Determina se viene visualizzato il menu di scelta rapida.|
-|[Cmfctoolbarmenubutton:: Isemptymenuallowed](#isemptymenuallowed)|Chiamato dal framework per determinare se un utente può aprire un sottomenu dalla voce di menu selezionata.|
+|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Chiamato dal framework per determinare se un utente può aprire un sottomenu dalla voce di menu selezionata.|
 |[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|Determina se il pulsante è in modalità esclusiva, vale a dire, se il menu a comparsa rimane aperto anche quando l'utente sposta il puntatore su un altro della barra degli strumenti o un pulsante.|
 |[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|Determina se il menu di scelta rapida è in modalità tavolozza.|
 |[CMFCToolBarMenuButton::IsQuickMode](#isquickmode)||
@@ -253,7 +253,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *altri*<br/>
+[in] *other*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -306,7 +306,7 @@ Handle al menu se esito positivo. NULL se l'elenco di comandi associati con il p
 
 È possibile eseguire l'override di questo metodo in una classe derivata per personalizzare il modo in cui che viene generato il menu di scelta.
 
-##  <a name="createpopupmenu"></a>  Cmfctoolbarmenubutton:: CreatePopupMenu
+##  <a name="createpopupmenu"></a>  CMFCToolBarMenuButton::CreatePopupMenu
 
 Crea un `CMFCPopupMenu` oggetto per visualizzare il menu della barra degli strumenti.
 
@@ -481,7 +481,7 @@ virtual BOOL IsDroppedDown() const;
 
 TRUE se il pulsante di menu della barra degli strumenti viene visualizzato il sottomenu; in caso contrario, FALSE.
 
-##  <a name="isemptymenuallowed"></a>  Cmfctoolbarmenubutton:: Isemptymenuallowed
+##  <a name="isemptymenuallowed"></a>  CMFCToolBarMenuButton::IsEmptyMenuAllowed
 
 Specifica se le voci di menu viene visualizzata vuoti sottomenu.
 

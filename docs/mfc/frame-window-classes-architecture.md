@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
-ms.openlocfilehash: d1022d9a49e12585a6588e7b3202155f533e4706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: affa217f481cc6d9e125d526f1b97be9120e0990
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431707"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298009"
 ---
 # <a name="frame-window-classes-architecture"></a>Classi di finestre cornice (architettura)
 
@@ -36,4 +36,3 @@ Fornisce la finestra cornice per una visualizzazione quando viene modificato un 
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

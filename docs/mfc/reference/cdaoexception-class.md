@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: 224ce79094b174d0bd011bd89afbcfe6fb7735d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289000"
 ---
 # <a name="cdaoexception-class"></a>Classe CDaoException
 
@@ -47,8 +47,8 @@ class CDaoException : public CException
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDaoException:: GetErrorCount](#geterrorcount)|Restituisce il numero di errori nella raccolta di errori del motore di database.|
-|[CDaoException:: GetErrorInfo](#geterrorinfo)|Restituisce informazioni sull'errore relative a un oggetto di errore specifico nella raccolta di errori.|
+|[CDaoException::GetErrorCount](#geterrorcount)|Restituisce il numero di errori nella raccolta di errori del motore di database.|
+|[CDaoException::GetErrorInfo](#geterrorinfo)|Restituisce informazioni sull'errore relative a un oggetto di errore specifico nella raccolta di errori.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -71,7 +71,7 @@ In MFC, tutti gli errori DAO sono espressi come eccezioni, di tipo `CDaoExceptio
 
 Per i codici di errore DAO, vedere il file DAOERR. H. Per informazioni correlate, vedere l'argomento "Dati accesso errori intercettabili" nella Guida di DAO.
 
-Per altre informazioni sulla gestione delle eccezioni in generali o sta `CDaoException` oggetti, vedere gli articoli [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md) e [alle eccezioni: eccezioni di Database](../../mfc/exceptions-database-exceptions.md). Il secondo articolo contiene codice di esempio che illustra la gestione delle eccezioni in DAO.
+Per altre informazioni sulla gestione delle eccezioni in generali o sta `CDaoException` oggetti, vedere gli articoli [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md) e [alle eccezioni: Le eccezioni del database](../../mfc/exceptions-database-exceptions.md). Il secondo articolo contiene codice di esempio che illustra la gestione delle eccezioni in DAO.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -113,7 +113,7 @@ Tuttavia, è possibile creare in modo esplicito un oggetto eccezione, se si effe
 
 1. Se è stato costruito l'oggetto eccezione sull'heap, eliminarlo con il **eliminare** operatore al termine.
 
-Per altre informazioni sulla gestione degli errori nelle classi DAO MFC, vedere l'articolo [eccezioni: eccezioni di Database](../../mfc/exceptions-database-exceptions.md).
+Per altre informazioni sulla gestione degli errori nelle classi DAO MFC, vedere l'articolo [alle eccezioni: Le eccezioni del database](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="geterrorcount"></a>  CDaoException:: GetErrorCount
 
@@ -163,7 +163,7 @@ Chiamare questa funzione membro per ottenere i seguenti tipi di informazioni sul
 
 `GetErrorInfo` Archivia le informazioni in dell'oggetto eccezione `m_pErrorInfo` (membro dati). Per una breve descrizione delle informazioni restituite, vedere [m_pErrorInfo](#m_perrorinfo). Se si intercetta un'eccezione di tipo `CDaoException` generate da MFC, la `m_pErrorInfo` membro è già specificato. Se si sceglie di chiamare direttamente DAO, è necessario chiamare l'oggetto dell'eccezione `GetErrorInfo` funzione membro personale per riempire `m_pErrorInfo`. Per una descrizione più dettagliata, vedere la [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) struttura.
 
-Per informazioni sulle eccezioni di DAO ed esempio di codice, vedere l'articolo [eccezioni: eccezioni di Database](../../mfc/exceptions-database-exceptions.md).
+Per informazioni sulle eccezioni di DAO ed esempio di codice, vedere l'articolo [alle eccezioni: Le eccezioni del database](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
 

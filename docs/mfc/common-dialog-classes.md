@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-ms.openlocfilehash: 9e0ee68970b9ee3255ae72699dc185fc5de5a0f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5efd885421d8c73c191e2a5603f37d1df85a5168
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303067"
 ---
 # <a name="common-dialog-classes"></a>Classi di finestre di dialogo comuni
 
@@ -28,7 +28,7 @@ Oltre alla classe [CDialog](../mfc/reference/cdialog-class.md), MFC fornisce div
 |--------------------------|-------------|
 |[CColorDialog](../mfc/reference/ccolordialog-class.md)|Consente di selezionare i colori utente.|
 |[CFileDialog](../mfc/reference/cfiledialog-class.md)|Consente a utenti di selezionare un nome di file per aprire o salvare.|
-|[CFindReplaceDialog.](../mfc/reference/cfindreplacedialog-class.md)|Consente utente di avviare una ricerca o sostituzione in un file di testo.|
+|[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Consente utente di avviare una ricerca o sostituzione in un file di testo.|
 |[CFontDialog](../mfc/reference/cfontdialog-class.md)|Consente a utenti di specificare un tipo di carattere.|
 |[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Consente a utenti di specificare le informazioni per un processo di stampa.|
 |[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Finestra delle proprietà di stampa di Windows.|
@@ -42,4 +42,3 @@ Altre tre classi in MFC presentano caratteristiche simili a finestra di dialogo.
 [Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
 [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Finestre di dialogo in OLE](../mfc/dialog-boxes-in-ole.md)
-

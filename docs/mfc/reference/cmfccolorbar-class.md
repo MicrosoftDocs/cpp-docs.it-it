@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694842"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283254"
 ---
 # <a name="cmfccolorbar-class"></a>Classe CMFCColorBar
 
@@ -330,10 +330,10 @@ CMFCColorBar(
 
 ### <a name="parameters"></a>Parametri
 
-*Colori*<br/>
+*colors*<br/>
 [in] Una matrice di colori che consente di visualizzare il framework del controllo barra dei colori.
 
-*Colore*<br/>
+*color*<br/>
 [in] Il colore selezionato.
 
 *lpszAutoColor*<br/>
@@ -459,7 +459,7 @@ virtual BOOL CreateControl(
 *pParentWnd*<br/>
 [in] Puntatore alla finestra padre. Non può essere NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo di delimitazione che specifica la posizione in cui disegnare il controllo barra dei colori.
 
 *nID*<br/>
@@ -494,7 +494,7 @@ static BOOL CreatePalette(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*arColors*|[in] Una matrice di colori.|
-|*Tavolozza*|[in] Una tavolozza dei colori.|
+|*palette*|[in] Una tavolozza dei colori.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -521,7 +521,7 @@ L'etichetta standard per il pulsante automatico verrà **automatica**.
 *colorAutomatic*<br/>
 [in] Il colore predefinito che il framework applica quando si fa clic sul pulsante automatico.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare il pulsante automatico; FALSE per disabilitare il pulsante automatico. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -549,7 +549,7 @@ L'etichetta standard per questo pulsante è **altri colori...** .
 *bAltColorDlg*<br/>
 [in] True per visualizzare il [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) finestra di dialogo. FALSE per non visualizzare la finestra di [CColorDialog](../../mfc/reference/ccolordialog-class.md) nella finestra di dialogo. Il valore predefinito è TRUE.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare il pulsante, FALSE per disabilitare il pulsante. Il valore predefinito è TRUE.
 
 ##  <a name="getcolor"></a>  CMFCColorBar::GetColor
@@ -701,7 +701,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Il codice tasto virtuale per la chiave di un utente ha premuto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -808,7 +808,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 [in] Un valore di colore RGB.
 
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName
@@ -823,7 +823,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 [in] Il valore RGB di un colore.
 
 *strName*<br/>

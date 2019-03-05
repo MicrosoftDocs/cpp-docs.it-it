@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-ms.openlocfilehash: 79f620766e8d0888e606fcb45a0fd02c9de58fc9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: de23c59fdb59f6f40e256589c5450a8118bb8e5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522595"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281252"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Tipo di applicazione, Creazione guidata applicazione MFC
 

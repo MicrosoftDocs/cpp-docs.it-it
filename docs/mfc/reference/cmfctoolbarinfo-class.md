@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCToolBarInfo [MFC], m_uiMenuDisabledResID
 - CMFCToolBarInfo [MFC], m_uiMenuResID
 ms.assetid: 6dc84482-eaaa-491f-aa5d-dd7a57886b46
-ms.openlocfilehash: e1e460fe3efb5401227e91f49d8f7c4f6689fa27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2f8af439a2534f24cdba9b0ccdb12b150db6d0a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292250"
 ---
 # <a name="cmfctoolbarinfo-class"></a>Classe CMFCToolBarInfo
 

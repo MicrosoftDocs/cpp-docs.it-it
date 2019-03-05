@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: 4aa6da49f7d8235e0358f4fd042d3c720521eb0f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a08cfff3996d3dce617cf80293a96675083a39d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694205"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302546"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Classe CMFCShellListCtrl
 
@@ -159,7 +159,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Valore booleano che specifica se il framework Abilita menu di scelta rapida.
 
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder
@@ -177,7 +177,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo. in caso contrario 0.
+Valore diverso da zero in caso di esito positivo, 0 in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -198,7 +198,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo. in caso contrario 0.
+Valore diverso da zero in caso di esito positivo, 0 in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -252,7 +252,7 @@ BOOL GetItemPath(
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se ha esito positivo. FALSE in caso contrario.
+TRUE in caso di esito positivo, FALSE in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -288,7 +288,7 @@ TRUE se la cartella visualizzata è la cartella desktop; FALSE in caso contrario
 
 ##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ```
 virtual int OnCompareItems(

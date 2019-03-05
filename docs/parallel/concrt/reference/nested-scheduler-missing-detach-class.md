@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-ms.openlocfilehash: ff60c5d9486f4c82bd48971c1a511df9a3372e9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db51f7b083cc0cbd9337fbbe5c672d190208f328
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536799"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292447"
 ---
 # <a name="nestedschedulermissingdetach-class"></a>Classe nested_scheduler_missing_detach
 
@@ -61,7 +61,7 @@ nested_scheduler_missing_detach() throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Messaggio*<br/>
+*_Message*<br/>
 Messaggio descrittivo dell'errore.
 
 ## <a name="see-also"></a>Vedere anche

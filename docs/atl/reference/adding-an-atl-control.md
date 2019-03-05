@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-ms.openlocfilehash: 26667c2ad3bb2cedb42767fe42ff0ad358fa6d66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 836b19cef38549bcdf6cddeeda5bbb7fee08a1c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487685"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298438"
 ---
 # <a name="adding-an-atl-control"></a>Aggiunta di un controllo ATL
 

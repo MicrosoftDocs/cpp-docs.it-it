@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: 378c96622144a4acac27785cef844f0c1d21b98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630945"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283969"
 ---
 # <a name="cd2dtextlayout-class"></a>Classe CD2DTextLayout
 
@@ -52,7 +52,7 @@ class CD2DTextLayout : public CD2DResource;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Costruisce un oggetto CD2DTextLayout.|
-|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di layout di testo D2D.|
+|[CD2DTextLayout::~CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di layout di testo D2D.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -72,7 +72,7 @@ class CD2DTextLayout : public CD2DResource;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Restituisce l'interfaccia IDWriteTextLayout|
+|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|Restituisce l'interfaccia IDWriteTextLayout|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -92,7 +92,7 @@ class CD2DTextLayout : public CD2DResource;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout:: ~ CD2DTextLayout
+##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout::~CD2DTextLayout
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di layout di testo D2D.
 
@@ -121,13 +121,13 @@ Puntatore alla destinazione di rendering.
 *strText*<br/>
 Un oggetto CString che contiene la stringa per creare un nuovo oggetto CD2DTextLayout da.
 
-*TextFormat*<br/>
+*textFormat*<br/>
 Un oggetto CString che contiene il formato da applicare alla stringa.
 
 *sizeMax*<br/>
 Le dimensioni della finestra di layout.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 ##  <a name="create"></a>  CD2DTextLayout::Create
@@ -177,7 +177,7 @@ CString GetFontFamilyName(
 *currentPosition*<br/>
 La posizione del testo da esaminare.
 
-*TextRange*<br/>
+*textRange*<br/>
 L'intervallo di testo che presenta la stessa formattazione del testo in corrispondenza della posizione specificata da currentPosition. Ciò significa che l'esecuzione ha la stessa formattazione della posizione specificata, inclusi ma non solo il nome della famiglia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -199,7 +199,7 @@ CString GetLocaleName(
 *currentPosition*<br/>
 Posizione del testo da analizzare.
 
-*TextRange*<br/>
+*textRange*<br/>
 L'intervallo di testo che presenta la stessa formattazione del testo in corrispondenza della posizione specificata da currentPosition. Ciò significa che l'esecuzione ha la stessa formattazione della posizione specificata, inclusi il nome delle impostazioni locali.
 
 ### <a name="return-value"></a>Valore restituito
@@ -226,7 +226,7 @@ Un puntatore a un oggetto IDWriteTextLayout.
 IDWriteTextLayout* m_pTextLayout;
 ```
 
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout *
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout*
 
 Restituisce l'interfaccia IDWriteTextLayout
 
@@ -265,7 +265,7 @@ BOOL SetFontFamilyName(
 *pwzFontFamilyName*<br/>
 Il nome della famiglia che viene applicata l'intera stringa di testo all'interno dell'intervallo specificato dal textRange
 
-*TextRange*<br/>
+*textRange*<br/>
 Intervallo di testo a cui si applica questa modifica
 
 ### <a name="return-value"></a>Valore restituito
@@ -287,7 +287,7 @@ BOOL SetLocaleName(
 *pwzLocaleName*<br/>
 Una stringa del nome delle impostazioni locali con terminazione null
 
-*TextRange*<br/>
+*textRange*<br/>
 Intervallo di testo a cui si applica questa modifica
 
 ### <a name="return-value"></a>Valore restituito

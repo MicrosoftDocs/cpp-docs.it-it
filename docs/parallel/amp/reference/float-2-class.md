@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-ms.openlocfilehash: 61e9f46737e15bf4cb7a7d45b0560fd3e6dea1cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94a0936c1e5630ae53af9d9386d3c9248061ed71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579153"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299890"
 ---
 # <a name="float2-class"></a>Classe float_2
 
@@ -104,7 +104,7 @@ class float_2;
 |float_2::r||
 |float_2::rg||
 |float_2::x||
-|float_2::XY||
+|float_2::xy||
 |float_2::y||
 |float_2::yx||
 
@@ -116,7 +116,7 @@ class float_2;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> float_2
 
@@ -165,10 +165,10 @@ explicit inline float_2(
 *_V0*<br/>
 Il valore per inizializzare l'elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 Il valore per inizializzare l'elemento 1.
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore di inizializzazione.
 
 *_Other*<br/>

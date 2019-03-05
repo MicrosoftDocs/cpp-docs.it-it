@@ -1,5 +1,5 @@
 ---
-title: 'TN023: risorse MFC standard'
+title: 'TN023: Risorse MFC standard'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.resources
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559913"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277677"
 ---
-# <a name="tn023-standard-mfc-resources"></a>TN023: risorse MFC standard
+# <a name="tn023-standard-mfc-resources"></a>TN023: Risorse MFC standard
 
 In questa nota descrive le risorse standard fornito con e necessari per la libreria MFC.
 
@@ -39,17 +39,17 @@ Risorse ClipArt sono risorse aggiuntive che il framework non dipende, ma può es
 
 - Prompts.rc: Contiene le risorse di stringa di richiesta di menu per ogni comando predefinito, ad esempio "Crea un nuovo documento" per ID_FILE_NEW.
 
-- COMMDLG.rc: Un Visual C++ compatibile file RC che contiene i modelli di finestra di dialogo COMMDLG standard.
+- Commdlg.rc: Un file RC compatibile di Visual C++ che contiene i modelli di finestra di dialogo COMMDLG standard.
 
 Le risorse di framework standard sono risorse con ID definiti AFX che dipende dal framework per le implementazioni interne. Raramente occorre modificare queste risorse definite dal AFX. Tal caso, è necessario seguire la procedura descritta più avanti in questo argomento.
 
 Le risorse di framework seguenti sono contenute nella directory MFC\Include.:
 
-- AFXRES: Risorse utilizzate dal framework comuni.
+- Afxres.rc: Risorse comuni usate dal framework.
 
-- Afxprint. rc: Risorse specifiche per la stampa.
+- Afxprint.rc: Risorse specifiche per la stampa.
 
-- AFXOLECL.rc: Risorse specifiche per le applicazioni client OLE.
+- Afxolecl.rc: Risorse specifiche per le applicazioni client OLE.
 
 - Afxolev.rc: Risorse specifiche delle applicazioni di server completo OLE.
 
@@ -59,7 +59,7 @@ Le risorse di framework seguenti sono contenute nella directory MFC\Include.:
 
 1. Aprire il file di risorse dell'applicazione in Visual C++.
 
-1. Aprire Common.rc. Questo file contiene tutte le risorse binarie ClipArt. L'operazione potrebbe richiedere alcuni minuti perché il file Common.rc viene compilato.
+1. Open Common.rc. Questo file contiene tutte le risorse binarie ClipArt. L'operazione potrebbe richiedere alcuni minuti perché il file Common.rc viene compilato.
 
 1. Tenere premuto CTRL mentre si trascinano le risorse che si desidera utilizzare dalla Common.rc per file di risorse dell'applicazione.
 
@@ -103,4 +103,3 @@ In alcuni casi rari che è possibile personalizzare il contenuto delle risorse d
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

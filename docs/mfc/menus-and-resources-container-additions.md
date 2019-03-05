@@ -1,5 +1,5 @@
 ---
-title: 'Menu e risorse: aggiunte di contenitori'
+title: 'Menu e risorse: Aggiunte di contenitori'
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ea4159f8eb60f43f60eacd5831ce148c81aeb572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546614"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279338"
 ---
-# <a name="menus-and-resources-container-additions"></a>Menu e risorse: aggiunte di contenitori
+# <a name="menus-and-resources-container-additions"></a>Menu e risorse: Aggiunte di contenitori
 
 Questo articolo vengono illustrate le modifiche da apportare ai menu e altre risorse in un'applicazione contenitore di modifica visiva.
 
@@ -52,7 +52,7 @@ Per il menu Modifica, è necessario aggiungere gli elementi seguenti:
 
 Oltre alle modifiche elencate in questo articolo, il file di origine deve includere anche AFXOLECL. RC, è necessario per l'implementazione della libreria Microsoft Foundation Class. Inserisci nuovo oggetto è l'aggiunta di menu desiderato solo. È possibile aggiungere altri elementi, ma quelli elencati di seguito sono i più comuni.
 
-Se si vuole supportare l'attivazione sul posto di elementi contenuti, è necessario creare un nuovo menu per l'applicazione contenitore. Questo menu è costituito da menu di scelta rapida finestra utilizzata quando i file sono aperti, ma presenta due separatori tra le due dal menu File stesso. I separatori vengono utilizzati per indicare dove l'elemento server (componente) (applicazione) deve essere memorizzata menu quando attivato sul posto. Per altre informazioni su questa tecnica di unione di menu, vedere [menu e risorse: unione di Menu](../mfc/menus-and-resources-menu-merging.md).
+Se si vuole supportare l'attivazione sul posto di elementi contenuti, è necessario creare un nuovo menu per l'applicazione contenitore. Questo menu è costituito da menu di scelta rapida finestra utilizzata quando i file sono aperti, ma presenta due separatori tra le due dal menu File stesso. I separatori vengono utilizzati per indicare dove l'elemento server (componente) (applicazione) deve essere memorizzata menu quando attivato sul posto. Per altre informazioni su questa tecnica di unione di menu, vedere [menu e risorse: Menu Merging](../mfc/menus-and-resources-menu-merging.md).
 
 ##  <a name="_core_container_application_accelerator_table_additions"></a> Aggiunte alla tabella tasti di scelta rapida dell'applicazione contenitore
 
@@ -86,5 +86,4 @@ La maggior parte delle modifiche alle tabelle di stringhe per le applicazioni co
 ## <a name="see-also"></a>Vedere anche
 
 [Menu e risorse (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menu e risorse: aggiunte di server](../mfc/menus-and-resources-server-additions.md)
-
+[Menu e risorse: Aggiunte di server](../mfc/menus-and-resources-server-additions.md)

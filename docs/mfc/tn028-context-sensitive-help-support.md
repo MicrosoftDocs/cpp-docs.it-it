@@ -1,5 +1,5 @@
 ---
-title: 'TN028: supporto della guida sensibile al contesto'
+title: 'TN028: Supporto della Guida sensibile al contesto'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288285"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>TN028: supporto della guida sensibile al contesto
+# <a name="tn028-context-sensitive-help-support"></a>TN028: Supporto della Guida sensibile al contesto
 
 In questa nota descrive le regole per l'assegnazione degli ID di contesti della Guida e altri problemi della Guida in MFC. Supporto della Guida sensibile al contesto richiede al compilatore della Guida che è disponibile in Visual C++.
 
@@ -180,4 +180,3 @@ Nel secondo caso, il valore predefinito per nIDHelp è -1, che indica che l'ID d
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MAPI, MFC
 - enabling applications for mail [MFC]
 ms.assetid: 193449f7-b131-4ab0-9301-8d4f6cd1e7c4
-ms.openlocfilehash: 0f32b3626d23d0df0f0eb4fd6edc68188f754a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5f60e1ba8c2b68ddca312859694f532e38da965
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533582"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279107"
 ---
 # <a name="mapi"></a>MAPI
 
@@ -33,7 +33,6 @@ Per altre informazioni su MAPI, vedere gli articoli nella Guida in messaggistica
 
 ## <a name="see-also"></a>Vedere anche
 
-[CDocument:: OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)<br/>
-[CDocument:: OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)<br/>
+[CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)<br/>
+[CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)<br/>
 [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
-

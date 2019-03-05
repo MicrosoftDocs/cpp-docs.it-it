@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584145"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299361"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Cast di tipo degli oggetti classe MFC
 
@@ -62,17 +62,17 @@ STATIC_DOWNCAST(class_name, pobject)
 
 ### <a name="parameters"></a>Parametri
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Il nome della classe sottoposto a cast a.
 
-*pObject*<br/>
+*pobject*<br/>
 Il puntatore per eseguire il cast a un puntatore a un *class_name* oggetto.
 
 ### <a name="remarks"></a>Note
 
 *pObject* deve essere NULL o puntare a un oggetto di una classe che deriva direttamente o indirettamente, da *class_name*. Nelle build dell'applicazione con il simbolo del preprocessore debug definito, verrà verificata la macro se *pobject* non è NULL, o se invece punta a un oggetto che non è un "tipo di" classe specificata nel *class_name*parametro (vedere [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). Non- **debug** build, la macro esegue il cast senza alcun controllo del tipo.
 
-La classe specificata nella *class_name* parametro deve essere derivato da `CObject` e deve usare il DECLARE_DYNAMIC e IMPLEMENT_DYNAMIC, il DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE, o DECLARE_SERIAL e IMPLEMENT_ Macro seriale come illustrato nell'articolo [classe CObject: derivazione di una classe da CObject](../../mfc/deriving-a-class-from-cobject.md).
+La classe specificata nella *class_name* parametro deve essere derivato da `CObject` e deve usare il DECLARE_DYNAMIC e IMPLEMENT_DYNAMIC, il DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE, o DECLARE_SERIAL e IMPLEMENT_ Macro seriale come illustrato nell'articolo [classe CObject: Derivazione di una classe da CObject](../../mfc/deriving-a-class-from-cobject.md).
 
 Ad esempio, si potrebbe eseguire il cast puntatore a `CMyDoc`, denominato `pMyDoc`, a un puntatore a `CDocument` utilizzando la seguente espressione:
 

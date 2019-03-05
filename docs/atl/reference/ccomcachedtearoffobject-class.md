@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: 009bc1e20693a9e45490c58ea29ff9d28b6aa6ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277534"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Classe CComCachedTearOffObject
 
@@ -39,7 +39,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parametri
 
-*contenuti*<br/>
+*contained*<br/>
 La classe a comparsa, derivata da `CComTearOffObjectBase` e le interfacce si desidera che l'oggetto tear-off per il supporto.
 
 ## <a name="members"></a>Membri
@@ -49,7 +49,7 @@ La classe a comparsa, derivata da `CComTearOffObjectBase` e le interfacce si des
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|Costruttore.|
-|[CComCachedTearOffObject:: ~ CComCachedTearOffObject](#dtor)|Distruttore.|
+|[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -111,14 +111,14 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*PV*<br/>
+*pv*<br/>
 [in] Puntatore per il `IUnknown` del `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Note
 
 Inizializza la `CComContainedObject` membro [m_contained](#m_contained).
 
-##  <a name="dtor"></a>  CComCachedTearOffObject:: ~ CComCachedTearOffObject
+##  <a name="dtor"></a>  CComCachedTearOffObject::~CComCachedTearOffObject
 
 Distruttore.
 
@@ -160,7 +160,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parametri
 
-*contenuti*<br/>
+*contained*<br/>
 [in] La classe a comparsa, derivata da `CComTearOffObjectBase` e le interfacce si desidera che l'oggetto tear-off per il supporto.
 
 ### <a name="remarks"></a>Note
@@ -177,7 +177,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Il GUID dell'interfaccia richiesto.
 
 *ppvObject*<br/>

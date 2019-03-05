@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: d815abbd48e1744900853fcf81dc05b6af62788c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301636"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Classe CMFCDesktopAlertWndInfo
 
@@ -43,7 +43,7 @@ class CMFCDesktopAlertWndInfo
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCDesktopAlertWndInfo::operator =](#operator_eq)||
+|[CMFCDesktopAlertWndInfo::operator=](#operator_eq)||
 
 ### <a name="data-members"></a>Membri di dati
 
@@ -80,9 +80,9 @@ Nell'esempio seguente viene illustrato come utilizzare i vari membri nel `CMFCDe
 
 **Intestazione:** afxdesktopalertdialog. H
 
-##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator =
+##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator=
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ```
 CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
@@ -145,5 +145,5 @@ Quando l'utente fa clic sul collegamento, il comando con il [CMFCDesktopAlertWnd
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
-[Cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
+[CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
 [Classe CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)

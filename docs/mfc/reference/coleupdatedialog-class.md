@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 454d6686a389b1578bb777e8573e9281b2a5e6c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74607a2a145025533c660ae68f20ffb8e59d3fad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642956"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281733"
 ---
 # <a name="coleupdatedialog-class"></a>Classe COleUpdateDialog
 

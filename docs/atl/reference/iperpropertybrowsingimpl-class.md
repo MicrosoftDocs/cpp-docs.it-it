@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property pages, accessing information
 - IPerPropertyBrowsing, ATL implementation
 ms.assetid: 0b1a9be3-d242-4767-be69-663a21e4b728
-ms.openlocfilehash: ce7c581d4378cb1f6e5556d488164a9b5fd9098a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54c475e736425718e954b0e954ea2b327d938556
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585302"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299453"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>Classe IPerPropertyBrowsingImpl
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: 91ef4ed14fa1ddc25ff494f6666a50f5b39b8a54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676707"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286809"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Utilità di pianificazione (runtime di concorrenza)
 
@@ -41,7 +41,7 @@ L'Utilità di pianificazione gestisce i dettagli correlati alla pianificazione e
 
 [Confronto con altri modelli di concorrenza](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) descrive le differenze tra meccanismi di pianificazione di tipo preemptive e cooperative. L'Utilità di pianificazione usa la pianificazione cooperativa e un algoritmo di acquisizione del lavoro insieme all'utilità di pianificazione di tipo preemptive del sistema operativo per ottimizzare l'uso delle risorse di elaborazione.
 
-Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita in modo da evitare di dover gestire i dettagli dell'infrastruttura. Pertanto, l'Utilità di pianificazione in genere non viene usata direttamente. Tuttavia, per soddisfare le esigenze di qualità dell'applicazione, è possibile usare l'Utilità di pianificazione per fornire criteri di pianificazione personalizzati o associare utilità di pianificazione a specifiche attività. Si supponga ad esempio di avere una routine di ordinamento parallela che non possa essere usata con più di quattro processori. È possibile usare *criteri dell'utilità di pianificazione* per creare un'utilità di pianificazione che generi non più di quattro attività simultanee. L'esecuzione della routine di ordinamento su questa utilità di pianificazione consente alle altre utilità di pianificazione attive di usare tutte le risorse di elaborazione rimanenti.
+Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita in modo da evitare di dover gestire i dettagli dell'infrastruttura.  Pertanto, l'Utilità di pianificazione in genere non viene usata direttamente. Tuttavia, per soddisfare le esigenze di qualità dell'applicazione, è possibile usare l'Utilità di pianificazione per fornire criteri di pianificazione personalizzati o associare utilità di pianificazione a specifiche attività. Si supponga ad esempio di avere una routine di ordinamento parallela che non possa essere usata con più di quattro processori. È possibile usare *criteri dell'utilità di pianificazione* per creare un'utilità di pianificazione che generi non più di quattro attività simultanee. L'esecuzione della routine di ordinamento su questa utilità di pianificazione consente alle altre utilità di pianificazione attive di usare tutte le risorse di elaborazione rimanenti.
 
 ## <a name="related-topics"></a>Argomenti correlati
 
@@ -57,4 +57,3 @@ Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita in 
 |[PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Descrive come usare i vari modelli paralleli, ad esempio gli algoritmi paralleli, nelle applicazioni.|
 |[Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)|Descrive come usare gli agenti asincroni nelle applicazioni.|
 |[Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)|Descrive il runtime di concorrenza che semplifica la programmazione parallela e contiene i collegamenti ad argomenti correlati.|
-

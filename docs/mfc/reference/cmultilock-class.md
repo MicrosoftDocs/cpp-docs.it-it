@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-ms.openlocfilehash: 27c0eb396ac1384b691f51bf7089f6820157cf8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 107ed227c5515cbf2fcb08e957a64a4a17d8287a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613421"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288665"
 ---
 # <a name="cmultilock-class"></a>Classe CMultiLock
 
@@ -57,7 +57,7 @@ Usare un `CMultiLock` dell'oggetto, creare prima una matrice di oggetti di sincr
 
 `CMultiLock` gli oggetti sono particolarmente utili quando un thread è un numero elevato di `CEvent` può rispondere a oggetti. Creare una matrice contenente tutti i `CEvent` puntatori e chiamare `Lock`. In questo modo il thread in attesa fino a quando non viene segnalato uno degli eventi.
 
-Per altre informazioni su come usare `CMultiLock` oggetti, vedere l'articolo [Multithreading: come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Per altre informazioni su come usare `CMultiLock` oggetti, vedere l'articolo [Multithreading: Come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -191,4 +191,3 @@ La prima forma del `Unlock` tenta di sbloccare l'oggetto di sincronizzazione ges
 ## <a name="see-also"></a>Vedere anche
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

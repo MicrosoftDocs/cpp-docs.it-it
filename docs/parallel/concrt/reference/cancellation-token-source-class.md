@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: e0b636d22eede9eb6a9d9268241f912bb80fcbf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446748"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296787"
 ---
 # <a name="cancellationtokensource-class"></a>Classe cancellation_token_source
 
@@ -114,15 +114,16 @@ Tipo di iteratore.
 *_Src*<br/>
 Token il cui annullamento determina l'annullamento del token restituito. Si noti che l'origine del token restituita può anche essere annullata indipendentemente dall'origine contenuta nel parametro.
 
-*Ini_zia*<br/>
+*_Begin*<br/>
 Iteratore della libreria Standard C++ corrispondente all'inizio dell'intervallo dei token da ascoltare per l'annullamento.
 
-*End*<br/>
+*_End*<br/>
 Iteratore della libreria Standard C++ corrispondente alla fine dell'intervallo dei token da ascoltare per l'annullamento.
 
 ### <a name="return-value"></a>Valore restituito
 
-`cancellation_token_source` che viene annullato quando il token fornito dal parametro `_Src` viene annullato.
+
+  `cancellation_token_source` che viene annullato quando il token fornito dal parametro `_Src` viene annullato.
 
 ##  <a name="get_token"></a> get_token
 
@@ -136,7 +137,7 @@ cancellation_token get_token() const;
 
 Token di annullamento associato a questa origine.
 
-##  <a name="operator_neq"></a> operatore! =
+##  <a name="operator_neq"></a> operator!=
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-ms.openlocfilehash: f440476db3618c24f0fd1cfbfe028c959517a607
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1da5037deb0143c6d05009baccc8c1553616028
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642271"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288190"
 ---
 # <a name="catltemporaryfile-class"></a>Classe CAtlTemporaryFile
 
@@ -48,7 +48,7 @@ class CAtlTemporaryFile
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAtlTemporaryFile:: CAtlTemporaryFile](#catltemporaryfile)|Costruttore.|
+|[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|Costruttore.|
 |[CAtlTemporaryFile:: ~ CAtlTemporaryFile](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -88,7 +88,7 @@ class CAtlTemporaryFile
 
 Vedere l'esempio relativo [CAtlTemporaryFile:: CAtlTemporaryFile](#catltemporaryfile).
 
-##  <a name="catltemporaryfile"></a>  CAtlTemporaryFile:: CAtlTemporaryFile
+##  <a name="catltemporaryfile"></a>  CAtlTemporaryFile::CAtlTemporaryFile
 
 Costruttore.
 
@@ -104,7 +104,7 @@ Un file non venga effettivamente aperto fino a quando non viene effettuata una c
 
 [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlTemporaryFile:: ~ CAtlTemporaryFile
+##  <a name="dtor"></a>  CAtlTemporaryFile::~CAtlTemporaryFile
 
 Distruttore.
 

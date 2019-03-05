@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300888"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -139,10 +139,10 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::BeginModalState](#beginmodalstate)|Imposta la finestra cornice da modale.|
 |[CFrameWnd::Create](#create)|Chiamata per creare e inizializzare la finestra cornice di Windows associata il `CFrameWnd` oggetto.|
 |[CFrameWnd::CreateView](#createview)|Crea una visualizzazione all'interno di un frame che non è derivato da `CView`.|
-|[CFrameWnd:: DockControlBar](#dockcontrolbar)|Ancora una barra di controllo.|
-|[CFrameWnd:: EnableDocking](#enabledocking)|Consente a una barra di controllo ancorato.|
+|[CFrameWnd::DockControlBar](#dockcontrolbar)|Ancora una barra di controllo.|
+|[CFrameWnd::EnableDocking](#enabledocking)|Consente a una barra di controllo ancorato.|
 |[CFrameWnd::EndModalState](#endmodalstate)|Termina uno stato modale della finestra cornice. Abilita tutte le finestre per disabilitato `BeginModalState`.|
-|[CFrameWnd:: FloatControlBar](#floatcontrolbar)|Si muove una barra di controllo.|
+|[CFrameWnd::FloatControlBar](#floatcontrolbar)|Si muove una barra di controllo.|
 |[CFrameWnd::GetActiveDocument](#getactivedocument)|Restituisce l'attiva `CDocument` oggetto.|
 |[CFrameWnd::GetActiveFrame](#getactiveframe)|Restituisce l'attiva `CFrameWnd` oggetto.|
 |[CFrameWnd::GetActiveView](#getactiveview)|Restituisce l'attiva `CView` oggetto.|
@@ -151,21 +151,21 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::GetMenuBarState](#getmenubarstate)|Recupera lo stato di visualizzazione del menu dell'applicazione MFC corrente.|
 |[CFrameWnd::GetMenuBarVisibility](#getmenubarvisibility)|Indica se il comportamento predefinito del menu dell'applicazione MFC corrente è nascosto o visibile.|
 |[CFrameWnd::GetMessageBar](#getmessagebar)|Restituisce un puntatore a barra appartenenti alla finestra cornice di stato.|
-|[CFrameWnd:: GetMessageString](#getmessagestring)|Recupera messaggio corrispondente a un ID di comando.|
+|[CFrameWnd::GetMessageString](#getmessagestring)|Recupera messaggio corrispondente a un ID di comando.|
 |[CFrameWnd::GetTitle](#gettitle)|Recupera il titolo della barra di controllo correlati.|
 |[CFrameWnd::InitialUpdateFrame](#initialupdateframe)|Fa sì che il `OnInitialUpdate` funzione membro che appartengono a tutte le visualizzazioni nella finestra cornice da chiamare.|
 |[CFrameWnd::InModalState](#inmodalstate)|Restituisce un valore che indica se una finestra cornice è in uno stato modale.|
 |[CFrameWnd::IsTracking](#istracking)|Determina se barra di divisione è in movimento.|
 |[CFrameWnd::LoadAccelTable](#loadacceltable)|Chiamata per caricare una tabella di tasti di scelta rapida.|
-|[CFrameWnd:: LoadBarState](#loadbarstate)|Chiamare ripristino delle impostazioni sulla barra di controllo.|
+|[CFrameWnd::LoadBarState](#loadbarstate)|Chiamare ripristino delle impostazioni sulla barra di controllo.|
 |[CFrameWnd::LoadFrame](#loadframe)|Chiamare per creare dinamicamente una finestra cornice da informazioni sulle risorse.|
 |[CFrameWnd::NegotiateBorderSpace](#negotiateborderspace)|Negozia lo spazio del bordo della finestra cornice.|
 |[CFrameWnd::OnBarCheck](#onbarcheck)|Chiamato ogni volta che viene eseguita un'azione sulla barra di controllo specificato.|
 |[CFrameWnd::OnContextHelp](#oncontexthelp)|Gestisce MAIUSC + F1 Guida per gli elementi sul posto.|
-|[CFrameWnd:: Onsetpreviewmode](#onsetpreviewmode)|Imposta finestra cornice principale dell'applicazione da e verso la modalità di anteprima di stampa.|
+|[CFrameWnd::OnSetPreviewMode](#onsetpreviewmode)|Imposta finestra cornice principale dell'applicazione da e verso la modalità di anteprima di stampa.|
 |[CFrameWnd::OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|Chiamato dal framework quando viene aggiornato il menu associato.|
-|[RecalcLayout](#recalclayout)|Riposiziona le barre di controllo del `CFrameWnd` oggetto.|
-|[SaveBarState](#savebarstate)|Chiamata a salvare le impostazioni sulla barra di controllo.|
+|[CFrameWnd::RecalcLayout](#recalclayout)|Riposiziona le barre di controllo del `CFrameWnd` oggetto.|
+|[CFrameWnd::SaveBarState](#savebarstate)|Chiamata a salvare le impostazioni sulla barra di controllo.|
 |[CFrameWnd::SetActivePreviewView](#setactivepreviewview)|Definisce la visualizzazione specificata sia la visualizzazione attiva per l'anteprima avanzata.|
 |[CFrameWnd::SetActiveView](#setactiveview)|Imposta attivo `CView` oggetto.|
 |[CFrameWnd::SetDockState](#setdockstate)|Chiamare per ancorare la finestra frame nella finestra principale.|
@@ -267,7 +267,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
 
 ### <a name="parameters"></a>Parametri
 
-*CmdShow*<br/>
+*nCmdShow*<br/>
 Specifica il parametro da passare al [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow). Per impostazione predefinita, il frame viene visualizzato e viene ripristinato correttamente.
 
 ### <a name="remarks"></a>Note
@@ -380,7 +380,7 @@ Puntatore a un `CWnd` oggetto se riesce; in caso contrario, NULL.
 
 Utilizzare questa funzione membro per creare "visualizzazioni" che non sono `CView`-derivate all'interno di un frame. Dopo avere chiamato `CreateView`, manualmente è necessario impostare la visualizzazione su attivo e impostarlo in modo che sia visibile; queste attività non viene eseguite automaticamente da `CreateView`.
 
-##  <a name="dockcontrolbar"></a>  CFrameWnd:: DockControlBar
+##  <a name="dockcontrolbar"></a>  CFrameWnd::DockControlBar
 
 Fa sì che una barra di controllo ancorato alla finestra cornice.
 
@@ -416,7 +416,7 @@ Determina, nelle coordinate dello schermo, in cui sarà ancorata la barra di con
 
 La barra di controllo sarà ancorata a uno dei lati della finestra cornice specificata nelle chiamate a entrambe [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) e [CFrameWnd:: EnableDocking](#enabledocking). La scelta di lato è determinata dal *nDockBarID*.
 
-##  <a name="enabledocking"></a>  CFrameWnd:: EnableDocking
+##  <a name="enabledocking"></a>  CFrameWnd::EnableDocking
 
 Chiamare questa funzione per abilitare le barre di controllo ancorabile in una finestra cornice.
 
@@ -459,7 +459,7 @@ virtual void EndModalState();
 
 `EndModalState` Abilita tutte le finestre per disabilitato [BeginModalState](#beginmodalstate).
 
-##  <a name="floatcontrolbar"></a>  CFrameWnd:: FloatControlBar
+##  <a name="floatcontrolbar"></a>  CFrameWnd::FloatControlBar
 
 Chiamare questa funzione per causare una barra di controllo non è ancorato alla finestra cornice.
 
@@ -637,7 +637,7 @@ virtual CWnd* GetMessageBar();
 
 Puntatore alla finestra della barra di stato.
 
-##  <a name="getmessagestring"></a>  CFrameWnd:: GetMessageString
+##  <a name="getmessagestring"></a>  CFrameWnd::GetMessageString
 
 Eseguire l'override di questa funzione per fornire stringhe personalizzate per gli ID di comando.
 
@@ -744,7 +744,7 @@ Le tabelle di tasti di scelta rapida caricate dalle risorse vengono liberate aut
 
 Se si chiama `LoadFrame` per creare la finestra cornice, il framework di carica una tabella di tasti di scelta rapida con le risorse di menu e l'icona e una chiamata successiva a questa funzione membro non è quindi necessaria.
 
-##  <a name="loadbarstate"></a>  CFrameWnd:: LoadBarState
+##  <a name="loadbarstate"></a>  CFrameWnd::LoadBarState
 
 Chiamare questa funzione per ripristinare le impostazioni di ogni barra di controllo appartenenti alla finestra cornice.
 
@@ -934,7 +934,7 @@ virtual void OnHideMenuBar();
 
 Questo gestore dell'evento consente all'applicazione di eseguire azioni personalizzate quando il sistema sta per nascondere il menu di scelta. È possibile impedire che il menu di scelta da nascondere, ma è possibile, ad esempio, chiamare altri metodi per recuperare lo stile di menu o stato.
 
-##  <a name="onsetpreviewmode"></a>  CFrameWnd:: Onsetpreviewmode
+##  <a name="onsetpreviewmode"></a>  CFrameWnd::OnSetPreviewMode
 
 Chiamare questa funzione membro per impostare la finestra cornice principale dell'applicazione nella modalità di anteprima di stampa ed e al di fuori di essa.
 
@@ -983,7 +983,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 *pCmdUI*<br/>
 Un puntatore a un [CCmdUI](../../mfc/reference/ccmdui-class.md) oggetto che rappresenta il menu che ha generato il comando update. Il gestore aggiornamento chiama il [abilitare](../../mfc/reference/ccmdui-class.md#enable) funzione membro delle `CCmdUI` dell'oggetto tramite *pCmdUI* per aggiornare l'interfaccia utente.
 
-##  <a name="recalclayout"></a>  RecalcLayout
+##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout
 
 Chiamato dal framework quando le barre di controllo standard sono attivate o disattivato o quando la finestra cornice viene ridimensionata.
 
@@ -1010,7 +1010,7 @@ Passare questo statico `CRect` come parametro durante la creazione di una finest
 static AFX_DATA const CRect rectDefault;
 ```
 
-##  <a name="savebarstate"></a>  SaveBarState
+##  <a name="savebarstate"></a>  CFrameWnd::SaveBarState
 
 Chiamare questa funzione per archiviare le informazioni su ogni barra di controllo appartenente alla finestra cornice.
 
@@ -1115,7 +1115,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*nStyle*|[in] Specifica se il menu di scelta è per impostazione predefinita nascosto, oppure è visibile e ha lo stato attivo. Il *nStyle* parametro può avere i valori seguenti:<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     Il menu viene visualizzato in qualsiasi momento e per impostazione predefinita non hanno lo stato attivo.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     Il menu di scelta è nascosta per impostazione predefinita. Se il menu di scelta è nascosto, premere il tasto ALT per visualizzare il menu di scelta e assegnargli lo stato attivo. Se viene visualizzato il menu di scelta, premere il tasto ALT o ESC per nascondere menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinazione bit per bit (OR)): il menu di scelta è nascosta per impostazione predefinita. Se il menu di scelta è nascosto, premere il tasto F10 per visualizzare il menu di scelta e assegnargli lo stato attivo. Se viene visualizzato il menu di scelta, premere il tasto F10 per attivare o disattivare lo stato attivo o disattivare il menu di scelta. Fino a quando non si preme il tasto ALT o ESC per nasconderla, viene visualizzato il menu.|
+|*nStyle*|[in] Specifica se il menu di scelta è per impostazione predefinita nascosto, oppure è visibile e ha lo stato attivo. Il *nStyle* parametro può avere i valori seguenti:<br /><br />- AFX_MBV_KEEPVISIBLE (0x01) -<br />     Il menu viene visualizzato in qualsiasi momento e per impostazione predefinita non hanno lo stato attivo.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     Il menu di scelta è nascosta per impostazione predefinita. Se il menu di scelta è nascosto, premere il tasto ALT per visualizzare il menu di scelta e assegnargli lo stato attivo. Se viene visualizzato il menu di scelta, premere il tasto ALT o ESC per nascondere menu.<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinazione bit per bit (OR)): il menu di scelta è nascosta per impostazione predefinita. Se il menu di scelta è nascosto, premere il tasto F10 per visualizzare il menu di scelta e assegnargli lo stato attivo. Se viene visualizzato il menu di scelta, premere il tasto F10 per attivare o disattivare lo stato attivo o disattivare il menu di scelta. Fino a quando non si preme il tasto ALT o ESC per nasconderla, viene visualizzato il menu.|
 
 ### <a name="remarks"></a>Note
 

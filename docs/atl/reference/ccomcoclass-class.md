@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 51da70cc1972e6a69e28d7699703f803b6fa8701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630698"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282643"
 ---
 # <a name="ccomcoclass-class"></a>Classe CComCoClass
 
@@ -44,7 +44,7 @@ Puntatore al CLSID dell'oggetto.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComCoClass](#createinstance)|(Statico) Crea un'istanza della classe e le query per un'interfaccia.|
+|[CComCoClass::CreateInstance](#createinstance)|(Statico) Crea un'istanza della classe e le query per un'interfaccia.|
 |[CComCoClass::Error](#error)|(Statico) Restituisce informazioni dettagliate sull'errore al client.|
 |[CComCoClass::GetObjectCLSID](#getobjectclsid)|(Statico) Restituisce l'identificatore di classe oggetto.|
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Statico) Eseguire l'override per restituire la descrizione dell'oggetto.|
@@ -67,7 +67,7 @@ Puntatore al CLSID dell'oggetto.
 
 **Intestazione:** atlcom. h
 
-##  <a name="createinstance"></a>  CComCoClass
+##  <a name="createinstance"></a>  CComCoClass::CreateInstance
 
 Usare questi `CreateInstance` funzioni per creare un'istanza di COM e recuperare un puntatore a interfaccia senza usare l'API COM.
 
@@ -87,7 +87,7 @@ L'interfaccia COM che deve essere restituito attraverso *pp*.
 *punkOuter*<br/>
 [in] Unknown esterno o controllo sconosciuto della funzione di aggregazione.
 
-*profilo di porta*<br/>
+*pp*<br/>
 [out] L'indirizzo di una variabile puntatore che riceve il puntatore a interfaccia richiesto se la creazione ha esito positivo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -159,10 +159,10 @@ static HRESULT Error(
 *lpszDesc*<br/>
 [in] Stringa che descrive l'errore. La versione di Unicode `Error` specifica che *lpszDesc* è di tipo LPCOLESTR; la versione ANSI specifica un tipo di LPCSTR.
 
-*IID*<br/>
+*iid*<br/>
 [in] IID dell'interfaccia che definisce l'errore o GUID_NULL (valore predefinito) se l'errore è definito dal sistema operativo.
 
-*HRESULT*<br/>
+*hRes*<br/>
 [in] Il valore HRESULT desiderato restituito al chiamante. Il valore predefinito è 0. Per altre informazioni sulle *HRESULT*, vedere la sezione Osservazioni.
 
 *nID*<br/>

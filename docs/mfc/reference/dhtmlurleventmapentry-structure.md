@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - DHtmlUrlEventMapEntry structure [MFC]
 ms.assetid: 43117c1f-1a51-406c-aa2f-fea647080049
-ms.openlocfilehash: 0a1dc86080c094a7ac89940cd43a8edac973e10c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9b58067a9c8b6a71cd22b654a2f82ba0f8bfe36
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292653"
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>Struttura DHtmlUrlEventMapEntry
 
@@ -42,4 +42,3 @@ La mappa di evento associata all'URL.
 ## <a name="see-also"></a>Vedere anche
 
 [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

@@ -4,19 +4,19 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX controls [MFC]
 ms.assetid: 52aaec4d-3889-402e-b57d-758078f8ac57
-ms.openlocfilehash: f08c3113f3b8e85da9705b7951297722af95a40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f361af8b9f6409d34e4dd70936c4e3aa28c2d0b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576930"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282344"
 ---
 # <a name="activex-controls"></a>Controlli ActiveX
 
 In Visual C++ è possibile creare controlli ActiveX con MFC o ATL.
 
 >[!IMPORTANT]
-> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Molte funzionalità dei controlli ActiveX possono essere eseguite in modo più semplice e molto più sicuro con le tecnologie moderni come HTML5 e JavaScript, le estensioni del browser moderni o WebAssembly moduli. Per altre informazioni, vedere [un'interruzione passata, parte 2: browser attachEvent ActiveX, VBScript,...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) e [messaggistica Native](/microsoft-edge/extensions/guides/native-messaging) e [estensioni Microsoft Edge](/microsoft-edge/extensions) e [WebAssembly](https://webassembly.org/).
+> ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Molte funzionalità dei controlli ActiveX possono essere eseguite in modo più semplice e molto più sicuro con le tecnologie moderni come HTML5 e JavaScript, le estensioni del browser moderni o WebAssembly moduli. Per altre informazioni, vedere [un'interruzione passata, parte 2: Dire addio per ActiveX, VBScript, attachEvent...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) e [messaggistica Native](/microsoft-edge/extensions/guides/native-messaging) e [estensioni Microsoft Edge](/microsoft-edge/extensions) e [WebAssembly](https://webassembly.org/).
 
 - [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
 

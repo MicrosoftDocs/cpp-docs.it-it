@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: a7262416fa3555993ea237dd2f6b82b73ed9949c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c14ed1f11a7a414332b34566a314459d76b911b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429094"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303924"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
 
@@ -133,7 +133,7 @@ void GetLastRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [out] Contiene l'ultima posizione del controllo tooltip.
 
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide
@@ -169,7 +169,7 @@ void Track(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [in] Specifica la posizione e dimensioni del controllo tooltip.
 
 *strText*<br/>

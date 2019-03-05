@@ -13,12 +13,12 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-ms.openlocfilehash: 57bbd009bbcbe0ea3352ab27c5d6fbb630b7d050
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b68198c17d7bd030b88bc78ad4de1367c914703
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668013"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299154"
 ---
 # <a name="cdynamicchain-class"></a>Classe CDynamicChain
 
@@ -40,7 +40,7 @@ class CDynamicChain
 |Nome|Descrizione|
 |----------|-----------------|
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|Costruttore.|
-|[CDynamicChain:: ~ CDynamicChain](#dtor)|Distruttore.|
+|[CDynamicChain::~CDynamicChain](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -48,7 +48,7 @@ class CDynamicChain
 |----------|-----------------|
 |[CDynamicChain::CallChain](#callchain)|Indirizza un messaggio di Windows alla mappa messaggi di un altro oggetto.|
 |[CDynamicChain::RemoveChainEntry](#removechainentry)|Rimuove una voce della mappa messaggi dalla raccolta.|
-|[CDynamicChain::](#setchainentry)|Aggiunge una voce della mappa messaggi per la raccolta o modifica una voce esistente.|
+|[CDynamicChain::SetChainEntry](#setchainentry)|Aggiunge una voce della mappa messaggi per la raccolta o modifica una voce esistente.|
 
 ## <a name="remarks"></a>Note
 
@@ -130,7 +130,7 @@ Costruttore.
 CDynamicChain();
 ```
 
-##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain
+##  <a name="dtor"></a>  CDynamicChain::~CDynamicChain
 
 Distruttore.
 
@@ -159,7 +159,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 TRUE se la mappa dei messaggi viene rimosso correttamente dalla raccolta. In caso contrario, FALSE.
 
-##  <a name="setchainentry"></a>  CDynamicChain::
+##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry
 
 Aggiunge la mappa dei messaggi specificato alla raccolta.
 

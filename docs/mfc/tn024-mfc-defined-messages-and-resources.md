@@ -1,5 +1,5 @@
 ---
-title: 'TN024: risorse e messaggi definiti da MFC'
+title: 'TN024: Risorse e messaggi definiti MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.messages
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 26f6effbafd8136661f0b1dc9a6b22138a23e547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639634"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278132"
 ---
-# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: risorse e messaggi definiti da MFC
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Risorse e messaggi definiti MFC
 
 > [!NOTE]
 >  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
@@ -156,7 +156,7 @@ Per altre informazioni, vedere l'implementazione di `CMiniFrameWnd`.
 
 Questo messaggio viene inviato alla finestra di primo livello quando una finestra in un "gruppo livello superiore" viene attivata o disattivata. Una finestra è parte di un gruppo di livello superiore, se si tratta di una finestra di primo livello (padre o proprietario) o è di proprietà tale finestra. Questo messaggio è simile in uso a WM_ACTIVATEAPP, ma funziona nelle situazioni in cui windows appartenenti a diversi processi vengono combinati in una gerarchia di singola finestra (problema comune in applicazioni OLE).
 
-## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_EXITHELPMODE WM_COMMANDHELP, WM_HELPHITTEST,
+## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE
 
 Questi messaggi vengono usati nell'implementazione della Guida sensibile al contesto. Consultare [Nota tecnica 28](../mfc/tn028-context-sensitive-help-support.md) per altre informazioni.
 
@@ -203,4 +203,3 @@ Questo è un formato molto generico, consentendo tutti i messaggi di Windows e i
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

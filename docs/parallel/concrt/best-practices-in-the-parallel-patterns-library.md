@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 153dbf461176ee62f42dbe41a1c426a8c34ae716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc120ecc122678b54c7dd27b95445f523bc114a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503297"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293615"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Procedure consigliate nella libreria PPL (Parallel Patterns Library)
 
@@ -76,7 +76,7 @@ Per ridurre la quantità di sovraccarico di pianificazione in questo esempio, è
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-Per un esempio simile che usa una pipeline per eseguire l'elaborazione di immagini in parallelo, vedere [procedura dettagliata: creazione di una rete di elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Per un esempio simile che usa una pipeline per eseguire l'elaborazione di immagini in parallelo, vedere [procedura dettagliata: Creazione di una rete di elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Torna all'inizio](#top)]
 
@@ -90,7 +90,7 @@ Nell'esempio seguente viene illustrato l'uso dell'algoritmo `parallel_invoke` pe
 
 Per ridurre il sovraccarico, l'algoritmo `parallel_invoke` esegue l'ultima delle serie di attività nel contesto di chiamata.
 
-Per la versione completa di questo esempio, vedere [procedura: usare parallel_invoke per scrivere una Routine di ordinamento parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Per altre informazioni sul `parallel_invoke` algoritmo, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
+Per la versione completa di questo esempio, vedere [come: Usare parallel_invoke per scrivere una Routine di ordinamento parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Per altre informazioni sul `parallel_invoke` algoritmo, vedere [algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).
 
 [[Torna all'inizio](#top)]
 
@@ -102,17 +102,17 @@ Quando si lavora direttamente con un oggetto gruppo di attività, usare il [conc
 
 [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_7.cpp)]
 
-Poiché gli algoritmi paralleli usano i gruppi di attività, quando una delle iterazioni parallele annulla il gruppo di attività padre, viene annullata l'intera attività. Per la versione completa di questo esempio, vedere [procedura: usare l'annullamento per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
+Poiché gli algoritmi paralleli usano i gruppi di attività, quando una delle iterazioni parallele annulla il gruppo di attività padre, viene annullata l'intera attività. Per la versione completa di questo esempio, vedere [come: Usare l'annullamento per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
 
 Anche se il meccanismo di annullamento della gestione delle eccezioni risulta meno efficace per annullare il lavoro parallelo, in alcune situazioni questo sistema è più appropriato. Ad esempio il metodo seguente, `for_all`, esegue in modo ricorsivo una funzione lavoro in ciascun nodo di una struttura `tree`. In questo esempio, il `_children` membro dati è un [std:: List](../../standard-library/list-class.md) che contiene `tree` oggetti.
 
 [!code-cpp[concrt-task-tree-search#6](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_8.cpp)]
 
-Il chiamante del metodo `tree::for_all` può generare un'eccezione se non richiede che la funzione lavoro venga chiamata per ciascun elemento dell'albero. Nell'esempio seguente viene illustrata la funzione `search_for_value` che cerca un valore nell'oggetto `tree` fornito. La funzione `search_for_value` usa una funzione lavoro che genera un'eccezione quando l'elemento corrente della struttura ad albero corrisponde al valore fornito. La funzione `search_for_value` usa un blocco `try-catch` per acquisire l'eccezione e stampare il risultato nella console.
+Il chiamante del metodo `tree::for_all` può generare un'eccezione se non richiede che la funzione lavoro venga chiamata per ciascun elemento della struttura ad albero. Nell'esempio seguente viene illustrata la funzione `search_for_value` che cerca un valore nell'oggetto `tree` fornito. La funzione `search_for_value` usa una funzione lavoro che genera un'eccezione quando l'elemento corrente della struttura ad albero corrisponde al valore fornito. La funzione `search_for_value` usa un blocco `try-catch` per acquisire l'eccezione e stampare il risultato nella console.
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
-Per la versione completa di questo esempio, vedere [procedura: usare la gestione delle eccezioni per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Per la versione completa di questo esempio, vedere [come: Utilizzare eccezioni per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 Per ulteriori informazioni generali di annullamento e meccanismi di gestione delle eccezioni forniti dalla libreria PPL, vedere [annullamento nella libreria PPL](cancellation-in-the-ppl.md) e [gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
@@ -140,7 +140,7 @@ Nell'esempio di codice sono presenti i problemi seguenti, che possono determinar
 
 - L'annullamento dell'attività padre determina l'attività figlio, la chiamata a [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke), deve anche essere annullata. Di conseguenza, queste due risorse non vengono liberate.
 
-- L'annullamento dell'attività padre comporta la generazione di un'eccezione interna da parte dell'attività figlio.  Poiché il distruttore `Container` non gestisce questa eccezione, l'eccezione viene propagata verso l'alto e la terza risorsa non viene liberata.
+- L'annullamento dell'attività padre comporta la generazione di un'eccezione interna da parte dell'attività figlio. Poiché il distruttore `Container` non gestisce questa eccezione, l'eccezione viene propagata verso l'alto e la terza risorsa non viene liberata.
 
 - L'eccezione che viene generata dall'attività figlio si propaga mediante il distruttore `Container`. La generazione da un distruttore imposta l'applicazione su uno stato non definito.
 
@@ -198,7 +198,7 @@ Nell'esempio seguente si modifica l'esempio precedente mediante l'uso di un ogge
 
 [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_16.cpp)]
 
-Per la versione completa di questo esempio, vedere [procedura: usare la classe combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Per altre informazioni sul `combinable` classe, vedere [contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md).
+Per la versione completa di questo esempio, vedere [come: Usare la classe combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Per altre informazioni sul `combinable` classe, vedere [contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md).
 
 [[Torna all'inizio](#top)]
 
@@ -264,10 +264,9 @@ Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C
 [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)<br/>
 [Gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[Procedura dettagliata: creazione di una rete per l'elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Procedura dettagliata: Creazione di una rete per l'elaborazione di immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Procedura: Usare parallel_invoke per scrivere una routine di ordinamento in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br/>
-[Procedura: Usare l'annullamento per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
-[Procedura: Usare la classe combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+[Procedura: Usare l'annullamento per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
+[Procedura: Usare combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 [Procedure consigliate nella libreria di agenti asincroni](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
 [Procedure consigliate generali nel runtime di concorrenza](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

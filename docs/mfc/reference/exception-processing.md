@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55851682"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293745"
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 
@@ -158,7 +158,7 @@ Specifica un nome per un puntatore dell'oggetto eccezione che verrà creato dall
 
 ### <a name="remarks"></a>Note
 
-Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Richiama la macro `THROW_LAST` per spostare l'elaborazione sul frame dell'eccezione esterna. Se si usa **CATCH_ALL**, fine il **PROVARE** blocco con un end_catch_all (macro).
+Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Richiama la macro `THROW_LAST` per spostare l'elaborazione sul frame esterno dell'eccezione. Se si usa **CATCH_ALL**, fine il **PROVARE** blocco con un end_catch_all (macro).
 
 > [!NOTE]
 >  Il **CATCH_ALL** blocco viene definito come ambito C++ da parentesi graffe. Se si dichiarano delle variabili in questo ambito, è possibile accedere a queste variabili solo all'interno di tale ambito.

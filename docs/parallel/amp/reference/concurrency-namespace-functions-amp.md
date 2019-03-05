@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481796"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284840"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funzioni dello spazio dei nomi Concurrency (AMP)
 
@@ -73,13 +73,13 @@ inline bool atomic_compare_exchange(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Il percorso dal quale uno dei valori da confrontare è di lettura e a cui il nuovo valore, se presente, è da archiviare.
 
 *_Expected_value*<br/>
 Posizione da cui viene letto il secondo valore da confrontare.
 
-*valore*<br/>
+*value*<br/>
 Il valore da archiviare nella posizione di memoria specificata da `_Dest` se `_Dest` è uguale a `_Expected_value`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -109,10 +109,10 @@ inline float atomic_exchange(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Puntatore alla posizione di destinazione.
 
-*valore*<br/>
+*value*<br/>
 Nuovo valore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -137,10 +137,10 @@ inline unsigned int atomic_fetch_add(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Puntatore alla posizione di memoria.
 
-*valore*<br/>
+*value*<br/>
 Valore da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -165,10 +165,10 @@ inline unsigned int atomic_fetch_and(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Puntatore alla posizione di memoria.
 
-*valore*<br/>
+*value*<br/>
 Il valore da usare nel calcolo AND bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
@@ -188,7 +188,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Posizione nella memoria del valore deve essere diminuito.
 
 ### <a name="return-value"></a>Valore restituito
@@ -207,7 +207,7 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Posizione nella memoria del valore da incrementare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -232,10 +232,10 @@ inline unsigned int atomic_fetch_max(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Il percorso dal quale uno dei valori da confrontare è di lettura e a cui viene archiviato il numero massimo di due valori.
 
-*valore*<br/>
+*value*<br/>
 Il valore da confrontare con il valore in corrispondenza della posizione specificata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -260,10 +260,10 @@ inline unsigned int atomic_fetch_min(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Il percorso dal quale uno dei valori da confrontare è di lettura e a cui viene archiviato il valore minimo di due valori.
 
-*valore*<br/>
+*value*<br/>
 Il valore da confrontare con il valore in corrispondenza della posizione specificata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -288,10 +288,10 @@ inline unsigned int atomic_fetch_or(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Puntatore alla posizione di memoria.
 
-*valore*<br/>
+*value*<br/>
 Il valore da usare nel calcolo OR bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
@@ -316,10 +316,10 @@ inline unsigned int atomic_fetch_sub(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Puntatore alla posizione di destinazione.
 
-*valore*<br/>
+*value*<br/>
 Il valore da sottrarre.
 
 ### <a name="return-value"></a>Valore restituito
@@ -344,10 +344,10 @@ inline unsigned int atomic_fetch_xor(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Puntatore alla posizione di memoria.
 
-*valore*<br/>
+*value*<br/>
 Il valore da usare nel calcolo XOR.
 
 ### <a name="return-value"></a>Valore restituito
@@ -424,7 +424,7 @@ void copy(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Oggetto da copiare.
 
 *_DestIter*<br/>
@@ -513,7 +513,7 @@ concurrency::completion_future copy_async(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Oggetto da copiare.
 
 *_DestIter*<br/>
@@ -546,7 +546,7 @@ Oggetto `future<void>` che può esserci attesa.
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-Interrompe l'esecuzione di una funzione con la clausola di restrizione `restrict(amp)` . Quando il runtime AMP rileva la chiamata, viene generata un'eccezione [runtime_exception](runtime-exception-class.md) con il messaggio di errore "Reference Rasterizer: Shader abort instruction hit".
+Interrompe l'esecuzione di una funzione con la clausola di restrizione `restrict(amp)` . Quando il runtime AMP rileva la chiamata, viene generata una [runtime_exception](runtime-exception-class.md) eccezione con il messaggio di errore "Reference Rasterizer: Shader abort instruction hit".
 
 ```
 void direct3d_abort() restrict(amp);

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602930"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302812"
 ---
 # <a name="application-design-choices"></a>Scelte di progettazione delle applicazioni
 
@@ -52,7 +52,7 @@ Molte applicazioni di eseguire in Internet e sono accessibili a chiunque dispong
 
 L'applicazione potrebbe funzionare in un computer client o in un computer server. L'applicazione può anche essere archiviato in un server e quindi scaricata da Internet ed eseguire in un computer client. Classi WinInet MFC vengono utilizzate per le applicazioni client per scaricare i file. MFC e le classi di moniker asincrono vengono usati per scaricare i file e controllare le proprietà. Classi di controlli ActiveX e i documenti attivi vengono utilizzate per le applicazioni client e per le applicazioni che vengono scaricate dal server per l'esecuzione in un client.
 
-##  <a name="_core_the_web_page"></a> La pagina Web: Controlli ActiveX HTML, i documenti attivi,
+##  <a name="_core_the_web_page"></a> La pagina Web: HTML, i documenti attivi, i controlli ActiveX
 
 Microsoft offre diversi modi per fornire contenuti in una pagina Web. Le pagine Web possono utilizzare codice HTML o standard le estensioni, come il tag object, per fornire contenuto dinamico, ad esempio i controlli ActiveX.
 
@@ -92,4 +92,3 @@ La tabella seguente riepiloga i diversi modi di utilizzo di MFC per trasferire i
 [Nozioni di base sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Estensioni Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Moniker asincroni in Internet](../mfc/asynchronous-monikers-on-the-internet.md)
-

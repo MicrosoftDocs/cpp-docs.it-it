@@ -1,19 +1,19 @@
 ---
-title: 'Eccezioni: generazione di eccezioni da funzioni personalizzate'
+title: 'Eccezioni: Generazione di eccezioni da funzioni personalizzate'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], from functions
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: 4d0961bff706ccf86eb09d2dcbe695a13bfa8702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030bf3db9ff305f35cbfb0b518c8704114ce083d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297944"
 ---
-# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Eccezioni: generazione di eccezioni da funzioni personalizzate
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Eccezioni: Generazione di eccezioni da funzioni personalizzate
 
 È possibile usare il paradigma di gestione delle eccezioni MFC esclusivamente per rilevare le eccezioni generate dalle funzioni MFC o altre librerie. Oltre a intercettare le eccezioni generate dal codice della libreria, è possibile generare eccezioni dal codice se si siano scrivendo funzioni che possono verificarsi condizioni eccezionali.
 
@@ -43,4 +43,3 @@ Quando viene generata un'eccezione, l'esecuzione della funzione corrente viene a
 ## <a name="see-also"></a>Vedere anche
 
 [Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
-

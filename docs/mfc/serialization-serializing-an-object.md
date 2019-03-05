@@ -1,21 +1,21 @@
 ---
-title: 'Serializzazione: serializzazione di un oggetto'
+title: 'Serializzazione: Serializzazione di un oggetto'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - serializing objects [MFC]
 - serialization [MFC], objects
 - objects [MFC], serializing
 ms.assetid: 1db772b1-ad55-4fcf-b133-126cca082510
-ms.openlocfilehash: 10a7c52e6187f4db8345e1eadb88faeefa50b419
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c1106f180c587894283575a82a88e9e18b5c01a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588525"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290491"
 ---
-# <a name="serialization-serializing-an-object"></a>Serializzazione: serializzazione di un oggetto
+# <a name="serialization-serializing-an-object"></a>Serializzazione: Serializzazione di un oggetto
 
-L'articolo [serializzazione: creazione di una classe serializzabile](../mfc/serialization-making-a-serializable-class.md) viene illustrato come rendere serializzabile una classe. Dopo aver creato una classe serializzabile, è possibile serializzare gli oggetti della classe da e verso un file mediante un [CArchive](../mfc/reference/carchive-class.md) oggetto. In questo articolo viene descritto quanto segue:
+L'articolo [serializzazione: Creazione di una classe serializzabile](../mfc/serialization-making-a-serializable-class.md) viene illustrato come rendere serializzabile una classe. Dopo aver creato una classe serializzabile, è possibile serializzare gli oggetti della classe da e verso un file mediante un [CArchive](../mfc/reference/carchive-class.md) oggetto. In questo articolo viene descritto quanto segue:
 
 - [Definizione di oggetto CArchive è](../mfc/what-is-a-carchive-object.md).
 
@@ -30,4 +30,3 @@ L'articolo [serializzazione: creazione di una classe serializzabile](../mfc/seri
 ## <a name="see-also"></a>Vedere anche
 
 [Serializzazione](../mfc/serialization-in-mfc.md)
-

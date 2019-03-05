@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: 80d7eefaa4b12d5aab8970f4b3c81fc644226e07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f020ed9b58f631bfff09fe54c70e36146eb03368
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510864"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288090"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Creazione guidata componente ASP ATL
 

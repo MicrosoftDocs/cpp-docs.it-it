@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-ms.openlocfilehash: 42584a6514a48e7c02d98e1b619c06a11a8f277b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1676edf487d536d75ccd7901c5bdfa827cc143fe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641688"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326322"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Tipi di messaggi associati a oggetti dell'interfaccia utente
 
@@ -19,7 +19,7 @@ Nella tabella seguente illustra i tipi di oggetti con cui si usa e i tipi di mes
 
 ### <a name="user-interface-objects-and-associated-messages"></a>Oggetti dell'interfaccia utente e i messaggi associati
 
-|ID oggetto|Messages|
+|ID oggetto|Messaggi|
 |---------------|--------------|
 |Nome della classe, che rappresenta la finestra che lo contiene|Messaggi di Windows appropriati a un [CWnd](../../mfc/reference/cwnd-class.md)-classe derivata: una finestra di dialogo, finestra, finestra figlio, finestra figlio MDI o finestra cornice di primo livello.|
 |Identificatore del menu di scelta o tasto di scelta rapida|-Messaggio di comando (viene eseguita la funzione di programma).<br />-Messaggio UPDATE_COMMAND_UI (aggiorna dinamicamente la voce di menu).|

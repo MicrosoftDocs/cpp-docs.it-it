@@ -1,5 +1,5 @@
 ---
-title: 'Esempio di contenimento di documenti attivi: raccoglitore di Office'
+title: 'Esempio di contenimento dei documenti attivi: raccoglitore di Office'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - active documents [MFC], containers
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: 032b2cb39d75c108239d882039f7c797a357a6bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b06bc0f22ee71c8afbbc8feadca68895fc24a50b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616650"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279185"
 ---
-# <a name="example-of-active-document-containment-office-binder"></a>Esempio di contenimento di documenti attivi: raccoglitore di Office
+# <a name="example-of-active-document-containment-office-binder"></a>Esempio di contenimento dei documenti attivi: raccoglitore di Office
 
 Il Raccoglitore Microsoft Office è un esempio di un contenitore di documenti attivi. Un raccoglitore di Office include due riquadri principali, come avviene in genere i contenitori. Il riquadro a sinistra contiene le icone che corrispondono ai documenti attivi nel gestore di associazione. Ogni documento viene chiamato un *sezione* entro lo strumento di associazione. Ad esempio, uno strumento di associazione può contenere documenti di Word, i file di PowerPoint, fogli di calcolo di Excel e così via.
 
@@ -31,4 +31,3 @@ Esistono, ovviamente, altri possibili tipi di contenitori accanto a strumenti di
 ## <a name="see-also"></a>Vedere anche
 
 [Contenimento dei documenti attivi](../mfc/active-document-containment.md)
-

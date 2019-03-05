@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456823"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302013"
 ---
 # <a name="catlmodule-class"></a>Classe CAtlModule
 
@@ -57,7 +57,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |[CAtlModule::Lock](#lock)|Incrementa il conteggio dei blocchi.|
 |[CAtlModule::Term](#term)|Rilascia tutti i membri dati.|
 |[CAtlModule::Unlock](#unlock)|Consente di diminuire il conteggio dei blocchi.|
-|[CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto.|
+|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto.|
 |[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Questo metodo viene chiamato da `UpdateRegistryFromResourceD` per eseguire l'aggiornamento del Registro di sistema.|
 |[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Esegue lo script contenuto in una risorsa specificata per registrare o annullare la registrazione di un oggetto. Questo metodo Collega in modo statico al componente del Registro di sistema ATL.|
 
@@ -266,7 +266,7 @@ Un nome di risorsa.
 *nResID*<br/>
 Un ID risorsa.
 
-*bRegistrazione immediata*<br/>
+*bRegister*<br/>
 TRUE se l'oggetto deve essere registrato. FALSE in caso contrario.
 
 *pMapEntries*<br/>
@@ -300,7 +300,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 *lpszRes*<br/>
 Un nome di risorsa.
 
-*bRegistrazione immediata*<br/>
+*bRegister*<br/>
 Indica se l'oggetto deve essere registrato.
 
 *pMapEntries*<br/>
@@ -338,7 +338,7 @@ Un ID risorsa.
 *lpszRes*<br/>
 Un nome di risorsa.
 
-*bRegistrazione immediata*<br/>
+*bRegister*<br/>
 Indica se lo script di risorsa deve essere registrato.
 
 *pMapEntries*<br/>

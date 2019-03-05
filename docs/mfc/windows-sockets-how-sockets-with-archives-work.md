@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: funzionamento dei socket con archivi'
+title: 'Windows Sockets: Funzionamento dei socket con archivi'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300687"
 ---
-# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: funzionamento dei socket con archivi
+# <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Funzionamento dei socket con archivi
 
 Questo articolo illustra come un [CSocket](../mfc/reference/csocket-class.md) oggetto, un [CSocketFile](../mfc/reference/csocketfile-class.md) oggetto e un [CArchive](../mfc/reference/carchive-class.md) oggetto vengono combinate per semplificare l'invio e ricezione di dati tramite un Windows Socket.
 
-L'articolo [Windows Sockets: esempio di socket con gli archivi](../mfc/windows-sockets-example-of-sockets-using-archives.md) presenta le `PacketSerialize` (funzione). L'oggetto di archiviazione nel `PacketSerialize` esempio funziona in modo analogo a un oggetto di archiviazione passato a un MFC [Serialize](../mfc/reference/cobject-class.md#serialize) (funzione). La differenza fondamentale è che per i socket, l'archivio non è collegato a uno standard [CFile](../mfc/reference/cfile-class.md) oggetto (in genere associata a un file su disco) ma a un `CSocketFile` oggetto. Invece di connettersi a un file su disco, il `CSocketFile` si connette l'oggetto un `CSocket` oggetto.
+L'articolo [Windows Sockets: Esempio di socket con archivi](../mfc/windows-sockets-example-of-sockets-using-archives.md) presenta la `PacketSerialize` (funzione). L'oggetto di archiviazione nel `PacketSerialize` esempio funziona in modo analogo a un oggetto di archiviazione passato a un MFC [Serialize](../mfc/reference/cobject-class.md#serialize) (funzione). La differenza fondamentale è che per i socket, l'archivio non è collegato a uno standard [CFile](../mfc/reference/cfile-class.md) oggetto (in genere associata a un file su disco) ma a un `CSocketFile` oggetto. Invece di connettersi a un file su disco, il `CSocketFile` si connette l'oggetto un `CSocket` oggetto.
 
 Oggetto `CArchive` oggetto gestisce un buffer. Quando il buffer di un archivio (trasmissione) l'archiviazione è pieno, un oggetto associato `CFile` oggetto scrive i contenuti del buffer. Svuotamento del buffer di un archivio collegato a un socket è equivalente all'invio di un messaggio. Quando il buffer di un archivio di caricare (ricezione) è pieno, il `CFile` oggetto interrompe la lettura fino a quando il buffer è nuovamente disponibile.
 
@@ -46,9 +46,9 @@ Se `CSocket` non sono stati implementati come un oggetto di due stati, è possib
 
 In modalità "compatible archivio", un `CSocketFile` oggetto offre prestazioni migliori e riduce il rischio di "deadlock". Un deadlock si verifica quando entrambi i socket di invio e ricezione sono in attesa tra loro, o in attesa di una risorsa comune. Questa situazione può verificarsi se il `CArchive` oggetto ha collaborato con i `CSocketFile` esattamente come è visualizzato con un `CFile` oggetto. Con `CFile`, l'archivio può supporre che, se riceve un numero di byte quello richiesto, la fine del file è stato raggiunto. Con `CSocketFile`, tuttavia, dei dati sono basato su messaggi; il buffer può contenere più messaggi, pertanto la ricezione di un valore più basso rispetto al numero di byte richiesto non implica fine del file. L'applicazione non vengono bloccati in questo caso come potrebbe accadere con `CFile`, e può continuare a leggere i messaggi dal buffer fino a quando il buffer è vuoto. Il [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) funzionare in `CArchive` è utile per monitorare lo stato del buffer dell'archivio in questo caso.
 
-Per altre informazioni, vedere [Windows Sockets: uso di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
+Per altre informazioni, vedere [Windows Sockets: Utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[CObject:: Serialize](../mfc/reference/cobject-class.md#serialize)
+[CObject::Serialize](../mfc/reference/cobject-class.md#serialize)

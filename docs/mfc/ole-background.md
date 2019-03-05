@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294421"
 ---
 # <a name="ole-background"></a>Sfondo OLE
 
@@ -26,7 +26,7 @@ OLE è dotato di molti concetti diversi che operano raggiungimento dell'obiettiv
 
 - Collegamento e incorporamento
 
-   Collegamento e incorporamento sono i due metodi per archiviare gli elementi creati all'interno di un documento OLE che sono stati creati in un'altra applicazione. Per informazioni generali sulle differenze tra i due oggetti, vedere l'articolo [sfondo OLE: collegamento e incorporamento](../mfc/ole-background-linking-and-embedding.md). Per informazioni più dettagliate, vedere gli articoli [contenitori](../mfc/containers.md) e [server](../mfc/servers.md).
+   Collegamento e incorporamento sono i due metodi per archiviare gli elementi creati all'interno di un documento OLE che sono stati creati in un'altra applicazione. Per informazioni generali sulle differenze tra i due oggetti, vedere l'articolo [sfondo OLE: Collegamento e incorporamento](../mfc/ole-background-linking-and-embedding.md). Per informazioni più dettagliate, vedere gli articoli [contenitori](../mfc/containers.md) e [server](../mfc/servers.md).
 
 - Attivazione sul posto (modifica visiva)
 
@@ -42,7 +42,7 @@ OLE è dotato di molti concetti diversi che operano raggiungimento dell'obiettiv
 
 - File compositi
 
-   File compositi specificando un formato di file standard che semplifica l'archiviazione strutturata di documenti composti per le applicazioni OLE. All'interno di un file composto, le archiviazioni presentano molte funzionalità di directory e i flussi hanno molte funzionalità dei file. Questa tecnologia è l'acronimo di archiviazione strutturata. Per altre informazioni sui file compositi, vedere l'articolo [contenitori: file composti](../mfc/containers-compound-files.md).
+   File compositi specificando un formato di file standard che semplifica l'archiviazione strutturata di documenti composti per le applicazioni OLE. All'interno di un file composto, le archiviazioni presentano molte funzionalità di directory e i flussi hanno molte funzionalità dei file. Questa tecnologia è l'acronimo di archiviazione strutturata. Per altre informazioni sui file compositi, vedere l'articolo [contenitori: File compositi](../mfc/containers-compound-files.md).
 
 - Trasferimento dei dati uniformi
 
@@ -58,17 +58,16 @@ OLE è dotato di molti concetti diversi che operano raggiungimento dell'obiettiv
 
 Alcuni degli argomenti OLE più importanti sono illustrati negli articoli seguenti:
 
-- [Sfondo OLE: collegamento e incorporamento](../mfc/ole-background-linking-and-embedding.md)
+- [Sfondo OLE: Collegamento e incorporamento](../mfc/ole-background-linking-and-embedding.md)
 
-- [Sfondo OLE: contenitori e server](../mfc/ole-background-containers-and-servers.md)
+- [Sfondo OLE: Contenitori e server](../mfc/ole-background-containers-and-servers.md)
 
-- [Sfondo OLE: strategie di implementazione](../mfc/ole-background-implementation-strategies.md)
+- [Sfondo OLE: Strategie di implementazione](../mfc/ole-background-implementation-strategies.md)
 
-- [Sfondo OLE: implementazione MFC](../mfc/ole-background-mfc-implementation.md)
+- [Sfondo OLE: Implementazione MFC](../mfc/ole-background-mfc-implementation.md)
 
 Per informazioni generali su OLE non disponibili negli articoli precedenti, eseguire una ricerca OLE in MSDN.
 
 ## <a name="see-also"></a>Vedere anche
 
 [OLE](../mfc/ole-in-mfc.md)
-

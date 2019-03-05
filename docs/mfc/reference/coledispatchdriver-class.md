@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524937"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274577"
 ---
 # <a name="coledispatchdriver-class"></a>Classe COleDispatchDriver
 
@@ -56,12 +56,12 @@ class COleDispatchDriver
 |Nome|Descrizione|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|Allega un' `IDispatch` connessione al `COleDispatchDriver` oggetto.|
-|[COleDispatchDriver:: CreateDispatch](#createdispatch)|Crea un' `IDispatch` connessione e lo collega al `COleDispatchDriver` oggetto.|
+|[COleDispatchDriver::CreateDispatch](#createdispatch)|Crea un' `IDispatch` connessione e lo collega al `COleDispatchDriver` oggetto.|
 |[COleDispatchDriver::DetachDispatch](#detachdispatch)|Scollega un `IDispatch` connessione, senza rilasciarlo.|
-|[COleDispatchDriver:: GetProperty](#getproperty)|Ottiene una proprietà di automazione.|
-|[COleDispatchDriver:: InvokeHelper](#invokehelper)|Helper per chiamare i metodi di automazione.|
+|[COleDispatchDriver::GetProperty](#getproperty)|Ottiene una proprietà di automazione.|
+|[COleDispatchDriver::InvokeHelper](#invokehelper)|Helper per chiamare i metodi di automazione.|
 |[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|Rilascia un `IDispatch` connessione.|
-|[COleDispatchDriver:: SetProperty](#setproperty)|Imposta una proprietà di automazione.|
+|[COleDispatchDriver::SetProperty](#setproperty)|Imposta una proprietà di automazione.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -158,7 +158,7 @@ Il modulo `COleDispatchDriver`() consente di creare un `COleDispatchDriver` dell
 
   Vedere l'esempio relativo a [COleDispatchDriver::CreateDispatch](#createdispatch).
 
-##  <a name="createdispatch"></a>  COleDispatchDriver:: CreateDispatch
+##  <a name="createdispatch"></a>  COleDispatchDriver::CreateDispatch
 
 Crea un oggetto interfaccia [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) e lo collega all'oggetto `COleDispatchDriver` .
 
@@ -213,7 +213,7 @@ Per altre informazioni sul tipo LPDISPATCH, vedere [Implementing the IDispatch I
 
 [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]
 
-##  <a name="getproperty"></a>  COleDispatchDriver:: GetProperty
+##  <a name="getproperty"></a>  COleDispatchDriver::GetProperty
 
 Ottiene la proprietà dell'oggetto specificata da *dwDispID*.
 
@@ -239,7 +239,7 @@ Indirizzo della variabile che riceverà il valore della proprietà. Deve corrisp
 
 [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]
 
-##  <a name="invokehelper"></a>  COleDispatchDriver:: InvokeHelper
+##  <a name="invokehelper"></a>  COleDispatchDriver::InvokeHelper
 
 Chiama il metodo dell'oggetto o la proprietà specificata da *dwDispID*, nel contesto specificato dai *wFlags*.
 
@@ -381,7 +381,7 @@ Se il rilascio automatico è stato impostato per questa connessione, questa funz
 
   Vedere l'esempio relativo [COleDispatchDriver::AttachDispatch](#attachdispatch).
 
-##  <a name="setproperty"></a>  COleDispatchDriver:: SetProperty
+##  <a name="setproperty"></a>  COleDispatchDriver::SetProperty
 
 Imposta la proprietà dell'oggetto OLE specificata da *dwDispID*.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Gestori di messaggi WM_: N - O'
+title: 'Gestori messaggi WM _: N - O'
 ms.date: 11/04/2016
 f1_keywords:
 - ON_WM_NCHITTEST
@@ -37,23 +37,23 @@ helpviewer_keywords:
 - ON_WM_NCMBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 4efd1cda-b642-4e8b-89e8-73255fa70d77
-ms.openlocfilehash: 21c1ea3dfee864a4e28a0cbadfdfb73744e2d7da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59fd895823ff13039e6f78b8164cd19f3eac2af9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285360"
 ---
-# <a name="wm-message-handlers-n---o"></a>Gestori di messaggi WM_: N - O
+# <a name="wm-message-handlers-n---o"></a>Gestori messaggi WM _: N - O
 
 Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a destra:
 
 |Voce della mappa|Prototipo di funzione|
 |---------------|------------------------|
-|ON_WM_NCACTIVATE()|BOOL afx_msg [OnNcActivate](../../mfc/reference/cwnd-class.md#onncactivate)(BOOL);|
-|ON_WM_NCCALCSIZE()|void afx_msg [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)(BOOL, NCCALCSIZE_PARAMS ESTREMO *);|
-|ON_WM_NCCREATE()|BOOL afx_msg [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)(LPCREATESTRUCT);|
-|ON_WM_NCDESTROY()|void afx_msg [OnNcDestroy](../../mfc/reference/cwnd-class.md#onncdestroy)();|
+|ON_WM_NCACTIVATE()|afx_msg BOOL [OnNcActivate](../../mfc/reference/cwnd-class.md#onncactivate)(BOOL);|
+|ON_WM_NCCALCSIZE()|afx_msg void [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)(BOOL, NCCALCSIZE_PARAMS FAR*);|
+|ON_WM_NCCREATE()|afx_msg BOOL [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)(LPCREATESTRUCT);|
+|ON_WM_NCDESTROY()|afx_msg void [OnNcDestroy](../../mfc/reference/cwnd-class.md#onncdestroy)();|
 |ON_WM_NCHITTEST()|afx_msg LRESULT [OnNcHitTest](../../mfc/reference/cwnd-class.md#onnchittest)(CPoint);|
 |ON_WM_NCLBUTTONDBLCLK()|void afx_msg [OnNcLButtonDblClk](../../mfc/reference/cwnd-class.md#onnclbuttondblclk)(UINT, CPoint);|
 |ON_WM_NCLBUTTONDOWN()|void afx_msg [OnNcLButtonDown](../../mfc/reference/cwnd-class.md#onnclbuttondown)(UINT, CPoint);|
@@ -62,9 +62,9 @@ Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a
 |ON_WM_NCMBUTTONDOWN()|void afx_msg [OnNcMButtonDown](../../mfc/reference/cwnd-class.md#onncmbuttondown)(UINT, CPoint);|
 |ON_WM_NCMBUTTONUP()|void afx_msg [OnNcMButtonUp](../../mfc/reference/cwnd-class.md#onncmbuttonup)(UINT, CPoint);|
 |ON_WM_NCMOUSEHOVER()|void afx_msg [OnNcMouseHover](../../mfc/reference/cwnd-class.md#onncmousehover)(UINT, CPoint);|
-|ON_WM_NCMOUSELEAVE()|void afx_msg [OnNcMouseLeave](../../mfc/reference/cwnd-class.md#onncmouseleave)();|
+|ON_WM_NCMOUSELEAVE()|afx_msg void [OnNcMouseLeave](../../mfc/reference/cwnd-class.md#onncmouseleave)();|
 |ON_WM_NCMOUSEMOVE()|void afx_msg [OnNcMouseMove](../../mfc/reference/cwnd-class.md#onncmousemove)(UINT, CPoint);|
-|ON_WM_NCPAINT()|void afx_msg [OnNcPaint](../../mfc/reference/cwnd-class.md#onncpaint)();|
+|ON_WM_NCPAINT()|afx_msg void [OnNcPaint](../../mfc/reference/cwnd-class.md#onncpaint)();|
 |ON_WM_NCRBUTTONDBLCLK()|void afx_msg [OnNcRButtonDblClk](../../mfc/reference/cwnd-class.md#onncrbuttondblclk)(UINT, CPoint);|
 |ON_WM_NCRBUTTONDOWN()|void afx_msg [OnNcRButtonDown](../../mfc/reference/cwnd-class.md#onncrbuttondown)(UINT, CPoint);|
 |ON_WM_NCRBUTTONUP()|void afx_msg [OnNcRButtonUp](../../mfc/reference/cwnd-class.md#onncrbuttonup)(UINT, CPoint);|
@@ -78,4 +78,3 @@ Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a
 
 [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)<br/>
 [Gestori per WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

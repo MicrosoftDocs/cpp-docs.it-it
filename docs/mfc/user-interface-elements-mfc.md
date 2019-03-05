@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interfaces, creating
 - user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
-ms.openlocfilehash: 72087e4abef9904876de1b43044bcc59200e1356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf1c3f677ac8cd2e3ad91ef694f0637af8a6f578
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278613"
 ---
 # <a name="user-interface-elements-mfc"></a>Elementi dell'interfaccia utente (MFC)
 
@@ -83,4 +83,3 @@ Descrive le nozioni di base su come usare le finestre di MFC.
 
 [Applicazioni desktop MFC](../mfc/mfc-desktop-applications.md)<br/>
 Fornisce materiale di riferimento per la libreria MFC. MFC è un set di classi che costituiscono un framework applicazione, vale a dire il framework di un'applicazione scritta per l'API di Windows.
-

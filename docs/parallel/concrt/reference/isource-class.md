@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: 4e96dc11455015a83af9be545ba15c96b5e2f779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0704f3d666eca08bafb33f9236709478d347d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620519"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288766"
 ---
 # <a name="isource-class"></a>Classe ISource
 
@@ -59,7 +59,7 @@ Il tipo di dati del payload all'interno di messaggi generati dal blocco di origi
 |----------|-----------------|
 |[accept](#accept)|Quando sottoposto a override in una classe derivata, accetta un messaggio in cui è stato offerto da questo `ISource` blocco, trasferendo la proprietà al chiamante.|
 |[acquire_ref](#acquire_ref)|Quando sottoposto a override in una classe derivata, acquisisce un conteggio dei riferimenti su questo `ISource` blocco, per impedire l'eliminazione.|
-|[Utilizzare](#consume)|Quando sottoposto a override in una classe derivata, utilizza un messaggio offerto in precedenza da questo `ISource` block e riservato correttamente dalla destinazione, trasferimento di proprietà al chiamante.|
+|[consume](#consume)|Quando sottoposto a override in una classe derivata, utilizza un messaggio offerto in precedenza da questo `ISource` block e riservato correttamente dalla destinazione, trasferimento di proprietà al chiamante.|
 |[link_target](#link_target)|Quando sottoposto a override in una classe derivata, è possibile collegare un blocco di destinazione a questo `ISource` blocco.|
 |[release](#release)|Quando sottoposto a override in una classe derivata, rilascia una prenotazione corretta del messaggio precedente.|
 |[release_ref](#release_ref)|Quando sottoposto a override in una classe derivata, rilascia un conteggio dei riferimenti su questo `ISource` blocco.|
@@ -93,10 +93,10 @@ virtual message<T>* accept(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `accept` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -117,7 +117,7 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Note
@@ -136,10 +136,10 @@ virtual message<T>* consume(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` riservato `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `consume` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -150,7 +150,7 @@ Un puntatore al `message` che il chiamante ora possiede la proprietà dell'ogget
 
 Il `consume` è simile al metodo `accept`, ma deve essere sempre preceduto da una chiamata a `reserve` che ha restituito **true**.
 
-##  <a name="dtor"></a> ~ ISource
+##  <a name="dtor"></a> ~ISource
 
 Elimina definitivamente il `ISource` oggetto.
 
@@ -168,7 +168,7 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione da collegare a questa `ISource` blocco.
 
 ##  <a name="release"></a> Versione
@@ -183,10 +183,10 @@ virtual void release(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` riservato `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `release` (metodo).
 
 ##  <a name="release_ref"></a> release_ref
@@ -199,7 +199,7 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Note
@@ -218,10 +218,10 @@ virtual bool reserve(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `reserve` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -242,7 +242,7 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione da scollegare dal `ISource` blocco.
 
 ##  <a name="unlink_targets"></a> unlink_targets

@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 97302504303a540eb691f7af15f7d346d0d50ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459774"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275207"
 ---
 # <a name="float4-class"></a>Classe float_4
 
@@ -508,7 +508,7 @@ class float_4;
 |float_4::gbra||
 |float_4::gr||
 |float_4::gra||
-|float_4::Grab||
+|float_4::grab||
 |float_4::grb||
 |float_4::grba||
 |float_4::r||
@@ -533,7 +533,7 @@ class float_4;
 |float_4::wxyz||
 |float_4::wxz||
 |float_4::wxzy||
-|float_4::wY||
+|float_4::wy||
 |float_4::wyx||
 |float_4::wyxz||
 |float_4::wyz||
@@ -549,10 +549,10 @@ class float_4;
 |float_4::xwyz||
 |float_4::xwz||
 |float_4::xwzy||
-|float_4::XY||
+|float_4::xy||
 |float_4::xyw||
 |float_4::xywz||
-|float_4::XYZ||
+|float_4::xyz||
 |float_4::xyzw||
 |float_4::xz||
 |float_4::xzw||
@@ -600,7 +600,7 @@ class float_4;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> float_4
 
@@ -651,7 +651,7 @@ explicit inline float_4(
 *_V0*<br/>
 Il valore per inizializzare l'elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 Il valore per inizializzare l'elemento 1.
 
 *_V2*<br/>
@@ -660,7 +660,7 @@ Il valore per inizializzare l'elemento 2.
 *_V3*<br/>
 Il valore per inizializzare l'elemento 3.
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore di inizializzazione.
 
 *_Other*<br/>

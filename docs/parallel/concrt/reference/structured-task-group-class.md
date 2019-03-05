@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600668"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299295"
 ---
 # <a name="structuredtaskgroup-class"></a>Classe structured_task_group
 
@@ -121,10 +121,10 @@ void run(
 *_Function*<br/>
 Il tipo dell'oggetto funzione che verrà richiamato per eseguire il corpo dell'handle di attività.
 
-*Task_handle*<br/>
+*_Task_handle*<br/>
 Handle per il lavoro pianificato. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino a quando non le `wait` oppure `run_and_wait` metodo è stato chiamato su questo `structured_task_group` oggetto.
 
-*Selezione*<br/>
+*_Placement*<br/>
 Riferimento alla posizione in cui deve essere eseguita l'attività rappresentata dal parametro `_Task_handle`.
 
 ### <a name="remarks"></a>Note
@@ -152,10 +152,10 @@ task_group_status run_and_wait(const _Function& _Func);
 *_Function*<br/>
 Tipo dell'oggetto funzione che sarà richiamato per eseguire l'attività.
 
-*Task_handle*<br/>
+*_Task_handle*<br/>
 Handle per l'attività che verrà eseguita inline sul contesto di chiamata. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino al `run_and_wait` metodo completa l'esecuzione.
 
-*Func*<br/>
+*_Func*<br/>
 Una funzione che verrà chiamata per richiamare il corpo del lavoro. Potrebbe trattarsi di un'espressione lambda o un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.
 
 ### <a name="return-value"></a>Valore restituito

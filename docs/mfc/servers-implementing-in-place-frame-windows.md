@@ -1,5 +1,5 @@
 ---
-title: 'Server: implementazione di finestre cornice sul posto'
+title: 'Server: Implementazione di Windows sul posto Frame'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - frame windows [MFC], implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: 4973db6274ce800e8e1fc413ffbfd44a107a64b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278990"
 ---
-# <a name="servers-implementing-in-place-frame-windows"></a>Server: implementazione di finestre cornice sul posto
+# <a name="servers-implementing-in-place-frame-windows"></a>Server: Implementazione di Windows sul posto Frame
 
 In questo articolo viene illustrata la procedura per implementare le finestre cornice sul posto in un'applicazione server di modifica visiva se non si intende utilizzare la creazione guidata dell'applicazione per creare un'applicazione server. Anziché utilizzare la procedura descritta in questo articolo, è possibile usare una classe finestra cornice sul posto esistente da un'applicazione generato dalla creazione guidata applicazione o un esempio fornito con Visual C++.
 
@@ -45,14 +45,13 @@ In questo articolo viene illustrata la procedura per implementare le finestre co
 
 La serie di funzioni chiama il **se** istruzione crea la barra degli strumenti dalle risorse del server specificato. A questo punto, la barra degli strumenti fa parte della gerarchia della finestra del contenitore. Poiché questa barra degli strumenti è derivata da `CToolBar`, passerà i messaggi al proprietario, la finestra cornice dell'applicazione contenitore, a meno che non si modifichi il proprietario. Per questo motivo la chiamata a `SetOwner` è necessaria. Questa chiamata cambia la finestra a cui vengono inviati i comandi con la finestra cornice sul posto del server, causando così il passaggio dei messaggi al server. In questo modo il server può reagire alle operazioni sulla barra degli strumenti che fornisce.
 
-L'ID per la bitmap della barra degli strumenti deve corrispondere a quello delle altre risorse sul posto definite nell'applicazione server. Visualizzare [menu e risorse: aggiunte di Server](../mfc/menus-and-resources-server-additions.md) per informazioni dettagliate.
+L'ID per la bitmap della barra degli strumenti deve corrispondere a quello delle altre risorse sul posto definite nell'applicazione server. Vedere [menu e risorse: Aggiunte di server](../mfc/menus-and-resources-server-additions.md) per informazioni dettagliate.
 
 Per altre informazioni, vedere [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), e [CDocTemplate:: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) nel *Class Library Reference*.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Server](../mfc/servers.md)<br/>
-[Server: implementazione di un server](../mfc/servers-implementing-a-server.md)<br/>
-[Server: implementazione di documenti server](../mfc/servers-implementing-server-documents.md)<br/>
-[Server: elementi server](../mfc/servers-server-items.md)
-
+[Server: Implementazione di un Server](../mfc/servers-implementing-a-server.md)<br/>
+[Server: Implementazione di documenti Server](../mfc/servers-implementing-server-documents.md)<br/>
+[Server: Elementi del server](../mfc/servers-server-items.md)

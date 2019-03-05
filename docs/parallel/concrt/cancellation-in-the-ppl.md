@@ -9,19 +9,19 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fae45e04d8b573cca29cc31403a39fc7ee53cc6a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177017"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271736"
 ---
 # <a name="cancellation-in-the-ppl"></a>Annullamento nella libreria PPL
 
 In questo documento viene illustrato il ruolo dell'annullamento nella libreria PPL (Parallel Patterns Library), come annullare un lavoro parallelo e come determinare quando un lavoro parallelo è annullato.
 
 > [!NOTE]
->  Il runtime usa la gestione delle eccezioni per implementare l'annullamento. Non rilevare o gestire queste eccezioni nel codice. Inoltre, si consiglia di scrivere codice indipendente dalle eccezioni nei corpi delle funzioni per le attività. Ad esempio, è possibile usare la *Resource Acquisition Is Initialization* modello (RAII) per garantire che le risorse vengono gestite correttamente quando viene generata un'eccezione nel corpo di un'attività. Per un esempio completo che usa il modello RAII per pulire una risorsa in un'attività annullabile, vedere [procedura dettagliata: rimozione di lavoro da un Thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
+>  Il runtime usa la gestione delle eccezioni per implementare l'annullamento. Non rilevare o gestire queste eccezioni nel codice. Inoltre, si consiglia di scrivere codice indipendente dalle eccezioni nei corpi delle funzioni per le attività. Ad esempio, è possibile usare la *Resource Acquisition Is Initialization* modello (RAII) per garantire che le risorse vengono gestite correttamente quando viene generata un'eccezione nel corpo di un'attività. Per un esempio completo che usa il modello RAII per pulire una risorsa in un'attività annullabile, vedere [procedura dettagliata: Rimozione di lavoro da un Thread dell'interfaccia utente](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
 
 ## <a name="key-points"></a>Punti chiave
 
@@ -71,7 +71,7 @@ Nell'esempio seguente viene illustrato il codice necessario per creare l'albero 
 
 Sono disponibili più modi per annullare un lavoro parallelo. La modalità consigliata è quella che consiste nell'utilizzo di un token di annullamento. Gruppi di attività anche il supporto di [concurrency::task_group::cancel](reference/task-group-class.md#cancel) metodo e il [Concurrency](reference/structured-task-group-class.md#cancel) (metodo). L'ultimo modo consiste nel generare un'eccezione nel corpo di una funzione lavoro dell'attività. Indipendentemente dal metodo scelto, si tenga presente che l'annullamento non si verifica immediatamente. Sebbene un nuovo lavoro non venga avviato se un'attività o un gruppo di attività viene annullato, il lavoro attivo deve controllare e rispondere all'annullamento.
 
-Per altri esempi di annullare l'attività in parallelo, vedere [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [procedura: usare l'annullamento per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), e [come: utilizzo Eccezioni per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Per altri esempi di annullare l'attività in parallelo, vedere [procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [come: Usare l'annullamento per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), e [come: Utilizzare eccezioni per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 ###  <a name="tokens"></a> Utilizzo di un Token di annullamento per annullare un lavoro parallelo
 
@@ -156,7 +156,7 @@ Questo esempio viene verificata per l'annullamento su ogni 100<sup>th</sup> iter
 
 Se non si ha accesso all'oggetto gruppo di attività padre, chiamare il [Concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funzione per determinare se il gruppo di attività padre viene annullato.
 
-Il metodo `cancel` influisce solo sulle attività figlio. Se, ad esempio, si annulla il gruppo di attività `tg1` nell'illustrazione della struttura ad albero del lavoro parallelo, saranno interessate tutte le attività della struttura ad albero (`t1`, `t2`, `t3`, `t4` e `t5`). Se si annulla il gruppo di attività annidato, `tg2`, saranno interessate solo le attività `t4` e `t5` 
+Il metodo `cancel` influisce solo sulle attività figlio. Se, ad esempio, si annulla il gruppo di attività `tg1` nell'illustrazione della struttura ad albero del lavoro parallelo, saranno interessate tutte le attività della struttura ad albero (`t1`, `t2`, `t3`, `t4` e `t5`). Se si annulla il gruppo di attività annidato, `tg2`, saranno interessate solo le attività `t4` e `t5`
 
 Quando si chiama il metodo `cancel`, vengono annullati anche tutti i gruppi di attività figlio. Tuttavia, l'annullamento non influisce sugli elementi padre del gruppo di attività di un albero del lavoro parallelo. Negli esempi seguenti viene illustrata tale condizione in base all'illustrazione della struttura ad albero del lavoro parallelo.
 
@@ -164,7 +164,7 @@ Nel primo di questi esempi viene creata una funzione lavoro per l'attività `t4`
 
 [!code-cpp[concrt-task-tree#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_7.cpp)]
 
-Il secondo esempio è simile al primo, ad eccezione del fatto che l'attività annulla il gruppo di attività `tg1`. Questa operazione ha effetto su tutte le attività dell'albero (`t1`, `t2`, `t3`, `t4` e `t5`).
+Il secondo esempio è simile al primo, ad eccezione del fatto che l'attività annulla il gruppo di attività `tg1`. Questa operazione ha effetto su tutte le attività della struttura ad albero (`t1`, `t2`, `t3`, `t4` e `t5`).
 
 [!code-cpp[concrt-task-tree#3](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_8.cpp)]
 
@@ -182,13 +182,13 @@ L'utilizzo dei token di annullamento e del metodo `cancel` è più efficace dell
 > [!CAUTION]
 >  È consigliabile utilizzare le eccezioni per annullare un lavoro parallelo solo se necessario. I token di annullamento e i metodi `cancel` del gruppo di attività sono più efficienti e meno soggetti ad errori.
 
-Quando si genera un'eccezione nel corpo di una funzione lavoro passata a un gruppo di attività, il runtime archivia l'eccezione e ne esegue il marshalling nel contesto in attesa del completamento del gruppo di attività. Analogamente al metodo `cancel`, il runtime elimina tutte le attività non ancora avviate e non accetta nuove attività.
+Quando si genera un'eccezione nel corpo di una funzione lavoro passata a un gruppo di attività, il runtime archivia l'eccezione e ne effettua il marshalling nel contesto in attesa del completamento del gruppo di attività. Analogamente al metodo `cancel`, il runtime elimina tutte le attività non ancora avviate e non accetta nuove attività.
 
 Il terzo esempio è simile al secondo, ad eccezione del fatto che l'attività `t4` genera un'eccezione per annullare il gruppo di attività `tg2`. Questo esempio Usa un' `try` - `catch` blocco per verificare l'annullamento quando il gruppo di attività `tg2` attende il completamento delle attività figlio. Analogamente al primo esempio, viene determinato il passaggio allo stato annullato del gruppo di attività `tg2` ma senza annullare il gruppo di attività `tg1`.
 
 [!code-cpp[concrt-task-tree#4](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_9.cpp)]
 
-Nel quarto esempio viene usata la gestione delle eccezioni per annullare l'intero albero del lavoro. In questo esempio l'eccezione viene rilevata quando il gruppo di attività `tg1` attende il completamento delle relative attività figlio anziché quando il gruppo di attività `tg2` attende le relative attività figlio. Analogamente al secondo esempio, questa condizione determina il passaggio allo stato annullato di entrambi i gruppi di attività nell'albero, `tg1` e `tg2`.
+Nel quarto esempio viene usata la gestione delle eccezioni per annullare l'intero albero del lavoro. In questo esempio l'eccezione viene rilevata quando il gruppo di attività `tg1` attende il completamento delle relative attività figlio anziché quando il gruppo di attività `tg2` attende le relative attività figlio. Analogamente al secondo esempio, questa condizione determina il passaggio allo stato annullato di entrambi i gruppi di attività della struttura ad albero, `tg1` e `tg2`.
 
 [!code-cpp[concrt-task-tree#5](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_10.cpp)]
 
@@ -244,8 +244,8 @@ L'uso dell'annullamento è appropriato quando ogni membro di un gruppo di attivi
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Procedura: Usare l'annullamento per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Illustra come usare l'annullamento per implementare un algoritmo di ricerca parallelo.|
-|[Procedura: Usare la gestione delle eccezion per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Viene illustrato come usare la classe `task_group` per scrivere un algoritmo di ricerca per un albero di base.|
+|[Procedura: Usare l'annullamento per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Illustra come usare l'annullamento per implementare un algoritmo di ricerca parallelo.|
+|[Procedura: Usare la gestione delle eccezioni per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Viene illustrato come usare la classe `task_group` per scrivere un algoritmo di ricerca per un albero di base.|
 |[Gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Descrive il modo in cui il runtime gestisce le eccezioni generate dai gruppi di attività, dalle attività leggere e dagli agenti asincroni e come rispondere alle eccezioni nelle applicazioni.|
 |[Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Descrive il modo in cui le attività vengono correlate ai gruppi di attività e come usare le attività strutturate e non strutturate nelle applicazioni.|
 |[Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)|Descrive gli algoritmi paralleli per svolgere simultaneamente il lavoro sulle raccolte di dati.|
@@ -264,4 +264,3 @@ L'uso dell'annullamento è appropriato quando ogni membro di un gruppo di attivi
 [Classe structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)
 
 [parallel_for (funzione)](reference/concurrency-namespace-functions.md#parallel_for)
-

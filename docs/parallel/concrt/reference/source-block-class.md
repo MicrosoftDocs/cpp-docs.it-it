@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 609c7d78bdf2f16be4d82add454ef9546ea22588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ddfd5e139171c7097a793f12ac82767b8773107
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468692"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277365"
 ---
 # <a name="sourceblock-class"></a>Classe source_block
 
@@ -80,7 +80,7 @@ Tipo di processore per l'elaborazione dei messaggi.
 |----------|-----------------|
 |[accept](#accept)|Accetta un messaggio in cui è stato offerto da questo `source_block` oggetto, trasferimento di proprietà al chiamante.|
 |[acquire_ref](#acquire_ref)|Acquisisce un conteggio dei riferimenti su questo `source_block` oggetto, per impedire l'eliminazione.|
-|[Utilizzare](#consume)|Utilizza un messaggio offerto in precedenza da questo `source_block` dell'oggetto e riservato correttamente dalla destinazione, trasferimento di proprietà al chiamante.|
+|[consume](#consume)|Utilizza un messaggio offerto in precedenza da questo `source_block` dell'oggetto e riservato correttamente dalla destinazione, trasferimento di proprietà al chiamante.|
 |[link_target](#link_target)|Collega un blocco di destinazione a questo `source_block` oggetto.|
 |[release](#release)|Rilascia una prenotazione corretta del messaggio precedente.|
 |[release_ref](#release_ref)|Rilascia un conteggio dei riferimenti su questo `source_block` oggetto.|
@@ -137,10 +137,10 @@ virtual message<_Target_type>* accept(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `accept` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -163,7 +163,7 @@ virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 L'identità dell'oggetto di runtime il `message` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -196,7 +196,7 @@ virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
 
 ### <a name="parameters"></a>Parametri
 
-*Msg*<br/>
+*_Msg*<br/>
 Un puntatore a un `message` oggetto da inviare in modo asincrono.
 
 ##  <a name="consume"></a> Utilizzare
@@ -211,10 +211,10 @@ virtual message<_Target_type>* consume(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` riservato `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `consume` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -239,7 +239,7 @@ virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) =
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` consumata dell'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -273,7 +273,7 @@ void initialize_source(
 *_PScheduler*<br/>
 L'utilità di pianificazione da utilizzare per la pianificazione di attività.
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Il gruppo di pianificazione da utilizzare per la pianificazione di attività.
 
 ##  <a name="link_target"></a> link_target
@@ -286,7 +286,7 @@ virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore a un `ITarget` blocco da collegare a questa `source_block` oggetto.
 
 ### <a name="remarks"></a>Note
@@ -311,7 +311,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore al messaggio che deve essere elaborato.
 
 ##  <a name="propagate_output_messages"></a> propagate_output_messages
@@ -332,7 +332,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessa
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore al messaggio che deve essere propagata.
 
 ##  <a name="release"></a> Versione
@@ -347,10 +347,10 @@ virtual void release(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` riservato `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `release` (metodo).
 
 ### <a name="remarks"></a>Note
@@ -369,7 +369,7 @@ virtual void release_message(runtime_object_identity _MsgId) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto rilasciato.
 
 ##  <a name="release_ref"></a> release_ref
@@ -382,7 +382,7 @@ virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Note
@@ -409,10 +409,10 @@ virtual bool reserve(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `reserve` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -435,7 +435,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -480,7 +480,7 @@ virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
 
 ### <a name="parameters"></a>Parametri
 
-*Msg*<br/>
+*_Msg*<br/>
 Un puntatore a un `message` oggetto da inviare in modo sincrono.
 
 ##  <a name="unlink_target"></a> unlink_target
@@ -493,7 +493,7 @@ virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore a un `ITarget` scollegare da questo blocco `source_block` oggetto.
 
 ### <a name="remarks"></a>Note
@@ -510,7 +510,7 @@ virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget)
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Il `ITarget` blocco che è stato scollegato.
 
 ##  <a name="unlink_targets"></a> unlink_targets

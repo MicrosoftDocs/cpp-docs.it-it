@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: ce2db15b801d84ed0315345f5ab8084c437ef8ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285308"
 ---
 # <a name="chtmleditctrl-class"></a>Classe CHtmlEditCtrl
 
@@ -98,7 +98,7 @@ Questo parametro è inutilizzato.
 *dwStyle*<br/>
 Questo parametro è inutilizzato.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo.
 
 *pParentWnd*<br/>
@@ -138,4 +138,3 @@ virtual LPCTSTR GetStartDocument();
 ## <a name="see-also"></a>Vedere anche
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

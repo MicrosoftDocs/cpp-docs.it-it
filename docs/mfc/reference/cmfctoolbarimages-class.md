@@ -140,17 +140,17 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662774"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303343"
 ---
 # <a name="cmfctoolbarimages-class"></a>Classe CMFCToolBarImages
 
 Le immagini in una barra degli strumenti. Il `CMFCToolBarImages` classe gestisce le immagini della barra degli strumenti caricate da risorse dell'applicazione o dai file.
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 ## <a name="syntax"></a>Sintassi
 
 ```
@@ -295,7 +295,7 @@ int AddIcon(
 ### <a name="parameters"></a>Parametri
 
 *hIcon*<br/>
-[in] Handle per l'icona da aggiungere.
+[in] Handle all'icona da aggiungere.
 
 *bAlphaBlend*<br/>
 [in] TRUE se questa icona viene utilizzata con fusione alfa; in caso contrario, FALSE.
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] TRUE se il `CMFCToolBarImages` oggetto Usa l'intensità di colore (bit per pixel) della nuova immagine; FALSE se il `CMFCToolbarImages` oggetto mantiene l'intensità del colore corrente.
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Un riferimento a un `CMFCToolbarImages` oggetto che contiene l'immagine da aggiungere.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Parametri
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Elenco di immagini da utilizzare come origine per le immagini della barra degli strumenti.
 
 ### <a name="return-value"></a>Valore restituito
@@ -482,7 +482,7 @@ BOOL Draw(
 *bHilite*<br/>
 [in] TRUE se l'immagine deve essere evidenziata; in caso contrario, FALSE.
 
-*bDisattivato*<br/>
+*bDisabled*<br/>
 [in] TRUE se l'immagine deve essere disegnato in stile il disabilitato; in caso contrario, FALSE.
 
 *bIndeterminate*<br/>
@@ -585,7 +585,7 @@ static void FillDitheredRect(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Le coordinate del rettangolo da riempire.
 
 ### <a name="remarks"></a>Note
@@ -893,7 +893,7 @@ BOOL Load(
 *hinstRes*<br/>
 [in] Un'istanza della DLL della risorsa.
 
-*bAggiungi*<br/>
+*bAdd*<br/>
 [in] TRUE per aggiungere la bitmap caricata nella bitmap esistente, o FALSE per sostituire la bitmap esistente.
 
 *lpszBmpFileName*<br/>
@@ -923,7 +923,7 @@ BOOL LoadStr(
 
 [in] *lpszResourceName*<br/>
 [in] *hinstRes*<br/>
-[in] *bAggiungi*<br/>
+[in] *bAdd*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parametri
 
-*nValore*<br/>
+*nValue*<br/>
 [in] Il nuovo valore del canale alfa.
 
 ### <a name="remarks"></a>Note

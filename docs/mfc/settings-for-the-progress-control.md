@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CProgressCtrl class [MFC], settings
 - progress controls [MFC], settings
 ms.assetid: f4616e91-74fa-4000-ba0d-d3ddc0ee075b
-ms.openlocfilehash: 444dc45c816e0dfc2fd45bad999ad90c2acacc01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1960b15c2f76d7cbfc9f249a77481b795e6a27ea
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481779"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290752"
 ---
 # <a name="settings-for-the-progress-control"></a>Impostazioni per il controllo Progress
 
@@ -26,4 +26,3 @@ Per istruzioni sulla posizione corrente del controllo di stato, usare [StepIt](.
 
 [Uso di CProgressCtrl](../mfc/using-cprogressctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

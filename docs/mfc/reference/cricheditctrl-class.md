@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178993"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303434"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -635,7 +635,7 @@ DWORD FindWordBreak(
 *nCode*<br/>
 Indica l'azione da intraprendere. Per un elenco di valori possibili, vedere la descrizione per il parametro *codice* in EM_FINDWORDBREAK nel SDK di Windows.
 
-*Niniziare*<br/>
+*nStart*<br/>
 Posizione del carattere in base zero da cui iniziare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -658,7 +658,7 @@ long FormatRange(
 
 ### <a name="parameters"></a>Parametri
 
-*PFR*<br/>
+*pfr*<br/>
 Puntatore per il [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) struttura che contiene informazioni sul dispositivo di output. NULL indica che le informazioni memorizzate nella cache all'interno del controllo rich edit possono essere liberate.
 
 *bDisplay*<br/>
@@ -711,7 +711,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Nella prima versione, un puntatore a un `CHARFORMAT` struttura che contiene il carattere predefinito degli attributi di formattazione.
 
 Nella seconda versione, un puntatore a un `CHARFORMAT2` struttura, ovvero un'estensione di Rich Edit 2.0 per il `CHARFORMAT` struttura, che include il carattere predefinito degli attributi di formattazione.
@@ -830,7 +830,7 @@ int GetLine(
 *nIndex*<br/>
 Indice in base zero della riga da recuperare.
 
-*lpszbuffer viene*<br/>
+*lpszBuffer*<br/>
 Punti da buffer per la ricezione di testo. La prima parola del buffer deve specificare il numero massimo di byte che può essere copiato nel buffer.
 
 *nMaxLength*<br/>
@@ -1015,7 +1015,7 @@ void GetSel(
 
 ### <a name="parameters"></a>Parametri
 
-*CR*<br/>
+*cr*<br/>
 Fare riferimento a un [struttura CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) struttura per ricevere i limiti della selezione corrente.
 
 *nStartChar*<br/>
@@ -1050,7 +1050,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Nella prima versione, un puntatore a un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struttura per ricevere la formattazione degli attributi della selezione corrente del carattere.
 
 Nella seconda versione, un puntatore a un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struttura, ovvero un'estensione di Rich Edit 2.0 per il `CHARFORMAT` struttura per ricevere la formattazione degli attributi della selezione corrente del carattere.
@@ -1201,10 +1201,10 @@ int GetTextRange(
 
 ### <a name="parameters"></a>Parametri
 
-*. Nprimo*<br/>
+*nFirst*<br/>
 Indice della posizione del carattere immediatamente precedente al primo carattere dell'intervallo.
 
-*ultimo record. Nultimo*<br/>
+*nLast*<br/>
 Posizione del carattere immediatamente successivo all'ultimo carattere dell'intervallo.
 
 *refString*<br/>
@@ -1343,7 +1343,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nRiga*<br/>
+*nLine*<br/>
 Contiene il valore di indice per la riga desiderata nel testo del controllo di modifica, o contiene -1. Se *nRiga* è -1, specifica la riga corrente, vale a dire, la riga che contiene il punto di inserimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1370,7 +1370,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nRiga*<br/>
+*nLine*<br/>
 Specifica l'indice dei caratteri di un carattere nella riga la cui lunghezza è da recuperare. Se questo parametro è -1, viene restituita la lunghezza della riga corrente (la riga che contiene il punto di inserimento), senza includere la lunghezza di qualsiasi testo all'interno della riga selezionato. Quando si `LineLength` viene chiamato per un controllo di modifica a riga singola, questo parametro viene ignorato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1477,7 +1477,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Indice a base zero del carattere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1589,7 +1589,7 @@ COLORREF SetBackgroundColor(
 *bSysColor*<br/>
 Indica se è necessario impostare il colore di sfondo per il valore di sistema. Se questo valore è TRUE, *cr* viene ignorato.
 
-*CR*<br/>
+*cr*<br/>
 Colore di sfondo richiesto. Utilizzato solo se *bSysColor* è FALSE.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1617,7 +1617,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Nella prima versione, un puntatore a un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struttura che contiene il carattere di nuova impostazione predefinita gli attributi di formattazione.
 
 Nella seconda versione, un puntatore a un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struttura, ovvero un'estensione di Rich Edit 2.0 per il `CHARFORMAT` struttura, che contiene il carattere predefinito degli attributi di formattazione.
@@ -1887,7 +1887,7 @@ Indice in base zero del primo carattere per la selezione.
 *nEndChar*<br/>
 Indice in base zero dell'ultimo carattere per la selezione.
 
-*CR*<br/>
+*cr*<br/>
 [Struttura CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) struttura che contiene i limiti della selezione corrente.
 
 ### <a name="remarks"></a>Note
@@ -1919,7 +1919,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Nella prima versione, un puntatore a un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struttura che contiene la formattazione carattere nuovi attributi per la selezione corrente.
 
 Nella seconda versione, un puntatore a un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struttura, ovvero un'estensione di Rich Edit 2.0 per il `CHARFORMAT` struttura, che contiene il carattere di nuova formattazione degli attributi per la selezione corrente.
@@ -2032,7 +2032,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parametri
 
-*cloud Foundry*<br/>
+*cf*<br/>
 Nella prima versione, un puntatore a un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struttura che contiene la formattazione carattere nuovi attributi per la parola attualmente selezionata.
 
 Nella seconda versione, un puntatore a un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) struttura, ovvero un'estensione di Rich Edit 2.0 per il `CHARFORMAT` struttura, che contiene il carattere di nuova formattazione degli attributi per la parola attualmente selezionato.

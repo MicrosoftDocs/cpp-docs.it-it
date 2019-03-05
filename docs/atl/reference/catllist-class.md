@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 9e657bbf375a8babf1c03cc7254310956131d62b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449370"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285503"
 ---
 # <a name="catllist-class"></a>Classe CAtlList
 
@@ -76,7 +76,7 @@ Il codice usato per copiare o spostare gli elementi. Visualizzare [classe CEleme
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|Costruttore.|
-|[CAtlList:: ~ CAtlList](#dtor)|Distruttore.|
+|[CAtlList::~CAtlList](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -134,7 +134,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>Parametri
 
-*Elemento*<br/>
+*element*<br/>
 Il nuovo elemento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -181,7 +181,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>Parametri
 
-*Elemento*<br/>
+*element*<br/>
 Elemento da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -278,7 +278,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Elemento*<br/>
+*element*<br/>
 L'elemento da trovare nell'elenco.
 
 *posStartAfter*<br/>
@@ -334,7 +334,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il valore di posizione che specifica un particolare elemento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -425,7 +425,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Un valore di posizione, restituito da una chiamata precedente a `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), o altri `CAtlList` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -453,7 +453,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Un valore di posizione, restituito da una chiamata precedente a `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), o altri `CAtlList` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -533,10 +533,10 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il valore di posizione dopo il quale verrà inserito il nuovo elemento.
 
-*Elemento*<br/>
+*element*<br/>
 L'elemento da inserire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -561,10 +561,10 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il nuovo elemento verrà inserito nell'elenco prima di questo valore di posizione.
 
-*Elemento*<br/>
+*element*<br/>
 L'elemento da inserire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -605,7 +605,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il valore di posizione dell'elemento da spostare.
 
 ### <a name="remarks"></a>Note
@@ -626,7 +626,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il valore di posizione dell'elemento da spostare.
 
 ### <a name="remarks"></a>Note
@@ -663,7 +663,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il valore di posizione dell'elemento da rimuovere.
 
 ### <a name="remarks"></a>Note
@@ -758,10 +758,10 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il valore di posizione corrispondente all'elemento da modificare.
 
-*Elemento*<br/>
+*element*<br/>
 Il nuovo valore dell'elemento.
 
 ### <a name="remarks"></a>Note

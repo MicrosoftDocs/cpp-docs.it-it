@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-ms.openlocfilehash: 497b6e0f5bdeb817eccb0bb42f66763a97da2af0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6661da55d1091394cff9db4589bc05c721b5ab7c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445734"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281070"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Classe CAnimationManagerEventHandler
 

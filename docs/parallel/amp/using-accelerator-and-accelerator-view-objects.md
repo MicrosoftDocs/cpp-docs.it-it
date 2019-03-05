@@ -2,12 +2,12 @@
 title: Utilizzo degli oggetti accelerator e accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 4144adf288ddefd7f7dd00ada91f97aea94e6bce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668598"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272900"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilizzo degli oggetti accelerator e accelerator_view
 
@@ -168,9 +168,9 @@ Esistono due modi per usare più acceleratori nella propria app:
 
 I percorsi di dispositivo di tre acceleratori speciali sono disponibili come proprietà del `accelerator` classe:
 
-- [Membro dati Accelerator::direct3d_ref](reference/accelerator-class.md#direct3d_ref): questo acceleratore a thread singolo Usa software sulla CPU per emulare una scheda grafica generica. Per impostazione predefinita viene usato per eseguire il debug, ma non è utile nell'ambiente di produzione perché è più lento rispetto degli acceleratori hardware. Inoltre, è disponibile solo in DirectX SDK e il SDK di Windows, ed è improbabile venga installato nei computer dei tuoi clienti. Per altre informazioni, vedere [debug del codice GPU](/visualstudio/debugger/debugging-gpu-code).
+- [Membro dati Accelerator::direct3d_ref](reference/accelerator-class.md#direct3d_ref): Questo acceleratore a thread singolo Usa software sulla CPU per emulare una scheda grafica generica. Per impostazione predefinita viene usato per eseguire il debug, ma non è utile nell'ambiente di produzione perché è più lento rispetto degli acceleratori hardware. Inoltre, è disponibile solo in DirectX SDK e il SDK di Windows, ed è improbabile venga installato nei computer dei tuoi clienti. Per altre informazioni, vedere [debug del codice GPU](/visualstudio/debugger/debugging-gpu-code).
 
-- [Membro dati Accelerator::direct3d_warp](reference/accelerator-class.md#direct3d_warp): questo acceleratore fornisce una soluzione di fallback per l'esecuzione di codice C++ AMP nelle CPU multicore che utilizzano Streaming SIMD Extensions (SSE).
+- [membro dati Accelerator::direct3d_warp](reference/accelerator-class.md#direct3d_warp): Questo acceleratore fornisce una soluzione di fallback per l'esecuzione di codice C++ AMP nelle CPU multicore che utilizzano Streaming SIMD Extensions (SSE).
 
 - [Membro dati Accelerator:: cpu_accelerator](reference/accelerator-class.md#cpu_accelerator): È possibile utilizzare questo tasto di scelta rapida per la configurazione di matrici di gestione temporanea. Non può eseguire il codice C++ AMP. Per altre informazioni, vedere la [matrici di gestione temporanea in AMP C++](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) post nella programmazione parallela nel blog del codice nativo.
 

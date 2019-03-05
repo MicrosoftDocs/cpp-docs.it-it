@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: aggiungere controlli Ribbon e gestori eventi'
+title: 'Procedura: Aggiungere controlli Ribbon e gestori di eventi'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8a164101dc42241a2cc76c91a3baa66e02e4dc90
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518398"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291132"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Procedura: aggiungere controlli Ribbon e gestori eventi
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Procedura: Aggiungere controlli Ribbon e gestori di eventi
 
 Controlli della barra multifunzione sono elementi, quali pulsanti e caselle combinate, che aggiungono ai pannelli. I pannelli sono aree della barra multifunzione che consentono di visualizzare un gruppo di controlli correlati.
 
@@ -42,4 +42,3 @@ In questo argomento, si verrà aprire la finestra di progettazione della barra m
 
 [Esempio RibbonGadgets: Applicazione gadget della barra multifunzione](../visual-cpp-samples.md)<br/>
 [Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
-

@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644145"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289869"
 ---
 # <a name="cfile-class"></a>Classe CFile
 
@@ -89,7 +89,7 @@ class CFile : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CFile:: Abort](#abort)|Chiude un file ignorando tutti gli errori e avvisi.|
+|[CFile::Abort](#abort)|Chiude un file ignorando tutti gli errori e avvisi.|
 |[CFile::Close](#close)|Chiude un file ed elimina l'oggetto.|
 |[CFile::Duplicate](#duplicate)|Costruisce un oggetto duplicato basato su questo file.|
 |[CFile::Flush](#flush)|Scarica tutti i dati ancora da scrivere.|
@@ -98,7 +98,7 @@ class CFile : public CObject
 |[CFile::GetFileTitle](#getfiletitle)|Recupera il titolo del file selezionato.|
 |[CFile::GetLength](#getlength)|Recupera la lunghezza del file.|
 |[CFile::GetPosition](#getposition)|Recupera il puntatore del file corrente.|
-|[CFile:: GetStatus](#getstatus)|Recupera lo stato del file aperto o in quella statica, recupera lo stato del file specificato (funzione virtuale statico).|
+|[CFile::GetStatus](#getstatus)|Recupera lo stato del file aperto o in quella statica, recupera lo stato del file specificato (funzione virtuale statico).|
 |[CFile::LockRange](#lockrange)|Blocca un intervallo di byte in un file.|
 |[CFile::Open](#open)|Apre in modo sicuro un file con un'opzione di test di errore.|
 |[CFile:: Read](#read)|Operazioni di lettura dei dati (non memorizzato nel buffer) da un file nella posizione corrente del file.|
@@ -195,7 +195,7 @@ CAtlTransactionManager* pTM);
 
 ### <a name="parameters"></a>Parametri
 
-*oggetto hFile*<br/>
+*hFile*<br/>
 Handle di un file da aggiungere all'oggetto `CFile`.
 
 *lpszFileName*<br/>
@@ -264,7 +264,7 @@ Il costruttore con un parametro inizializza i membri e aggiunge un file esistent
 
 Il costruttore con due parametri inizializza i membri e prova ad aprire il file specificato. Se il costruttore apre correttamente il file specificato, il file viene aggiunto all'oggetto `CFile`. In caso contrario, questo costruttore genera un puntatore a un oggetto `CInvalidArgException`. Per altre informazioni su come gestire le eccezioni, vedere [eccezioni](../../mfc/exception-handling-in-mfc.md).
 
-Se un oggetto `CFile` apre correttamente un file specificato, il file verrà chiuso automaticamente quando l'oggetto `CFile` viene eliminato. In alternativa, è necessario chiudere esplicitamente il file quando non è più allegato all'oggetto `CFile`.
+Se un oggetto `CFile` apre correttamente un file specificato, il file verrà chiuso automaticamente quando l'oggetto `CFile` viene eliminato definitivamente. In alternativa, è necessario chiudere esplicitamente il file quando non è più allegato all'oggetto `CFile`.
 
 ### <a name="example"></a>Esempio
 
@@ -422,7 +422,7 @@ Il puntatore del file.
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-##  <a name="getstatus"></a>  CFile:: GetStatus
+##  <a name="getstatus"></a>  CFile::GetStatus
 
 Questo metodo recupera informazioni sullo stato relative a un determinato `CFile` istanza dell'oggetto o un percorso file specificato.
 
@@ -602,8 +602,8 @@ La tabella seguente descrive i possibili risultati di `Open`.
 |--------------|------------------------|------------------|----------------------------|
 |NULL|No|true|N/D|
 |PTR per `CFileException`|No|true|non modificato|
-|NULL|Yes|false|N/D|
-|PTR per `CFileException`|Yes|false|inizializzato per la descrizione errore|
+|NULL|Sì|false|N/D|
+|PTR per `CFileException`|Sì|false|inizializzato per la descrizione errore|
 
 ### <a name="example"></a>Esempio
 
@@ -720,7 +720,7 @@ UINT nFrom);
 *lOff*<br/>
 Numero di byte per spostare il puntatore del file. I valori positivi spostano il puntatore del file verso la fine del file. i valori negativi spostano il puntatore del file verso l'inizio del file.
 
-*NDA*<br/>
+*nFrom*<br/>
 Posizione per ricercare da. Vedere la sezione Osservazioni per i valori possibili.
 
 ### <a name="return-value"></a>Valore restituito

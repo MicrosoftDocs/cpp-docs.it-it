@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: afaddfcb0a75b7e753897768d993df7ab5d876c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566231"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301246"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivazione da una classe da CObject
 
@@ -28,7 +28,7 @@ Negli argomenti relativi a `CObject`, le condizioni per l'interfaccia "file" e "
 
 È possibile scegliere tra quattro livelli di funzionalità quando si deriva una classe dalla classe `CObject`:
 
-- Funzionalità di base: nessun supporto per la serializzazione o informazioni sulle classi in fase di esecuzione ma include la gestione diagnostica della memoria.
+- Funzionalità di base: Nessun supporto per la serializzazione o le informazioni sulla classe di runtime include ma la gestione di memoria diagnostico.
 
 - Informazioni sulla classe funzionalità di base, oltre al supporto di run-time.
 
@@ -44,12 +44,12 @@ Nella tabella seguente viene illustrata la relazione tra le macro utilizzate per
 
 ### <a name="macros-used-for-serialization-and-run-time-information"></a>Macro utilizzate per la serializzazione e informazioni di Run-Time
 
-|Utilizzato (macro)|CObject:: IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|
+|Utilizzato (macro)|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
 |Base `CObject` funzionalità|No|No|No|
 |`DECLARE_DYNAMIC`|Sì|No|No|
 |`DECLARE_DYNCREATE`|Yes|Yes|No|
-|`DECLARE_SERIAL`|Yes|Yes|Yes|
+|`DECLARE_SERIAL`|Yes|Yes|Sì|
 
 #### <a name="to-use-basic-cobject-functionality"></a>Usare la funzionalità di base da CObject
 
@@ -59,11 +59,10 @@ Nella tabella seguente viene illustrata la relazione tra le macro utilizzate per
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-In genere, tuttavia, è possibile eseguire l'override di alcune delle `CObject`di funzioni membro per gestire le specifiche della nuova classe. Ad esempio, è in genere possibile eseguire l'override di `Dump` funzione di `CObject` per fornire l'output di debug per il contenuto della classe. Per informazioni dettagliate su come eseguire l'override `Dump`, vedere l'articolo [diagnostica: il dump di oggetti contenuto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). È anche possibile eseguire l'override di `AssertValid` funzione di `CObject` per una verifica personalizzata per convalidare la coerenza dei membri dati degli oggetti classe. Per una descrizione di come eseguire l'override `AssertValid`, vedere [ASSERT_VALID e MFC CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
+In genere, tuttavia, è possibile eseguire l'override di alcune delle `CObject`di funzioni membro per gestire le specifiche della nuova classe. Ad esempio, è in genere possibile eseguire l'override di `Dump` funzione di `CObject` per fornire l'output di debug per il contenuto della classe. Per informazioni dettagliate su come eseguire l'override `Dump`, vedere l'articolo [diagnostica: Dump del contenuto oggetto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). È anche possibile eseguire l'override di `AssertValid` funzione di `CObject` per una verifica personalizzata per convalidare la coerenza dei membri dati degli oggetti classe. Per una descrizione di come eseguire l'override `AssertValid`, vedere [ASSERT_VALID e MFC CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 L'articolo [specificando i livelli di funzionalità](../mfc/specifying-levels-of-functionality.md) viene descritto come specificare gli altri livelli di funzionalità, tra cui informazioni sulle classi in fase di esecuzione, creazione di oggetti dinamici e la serializzazione.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Uso di CObject](../mfc/using-cobject.md)
-

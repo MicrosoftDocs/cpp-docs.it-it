@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: ed1dfd1dc8767b4f198ec6cc8dd626a04800bffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596768"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297918"
 ---
 # <a name="iatlmemmgr-class"></a>Classe IAtlMemMgr
 
@@ -756,7 +756,7 @@ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso d
 
 Quando `SetAmbientDispatch` viene chiamato con un puntatore a una nuova interfaccia, verrà usata questa nuova interfaccia per richiamare qualsiasi proprietà o metodo richiesto dal controllo ospitato, se tali proprietà non sono già fornite dal [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow:: AttachControl
+##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
 
 Associa un controllo esistente (e inizializzato in precedenza) all'oggetto host utilizzando la finestra identificata da *hWnd*.
 

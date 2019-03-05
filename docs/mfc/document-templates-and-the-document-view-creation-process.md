@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 79d24ef4b6687bce61295a92cdb90f4ce4a0d619
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174886"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290001"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Modelli di documenti e processo di creazione documento/visualizzazione
 
-Per gestire il complesso processo di creazione di documenti con finestre cornice e visualizzazioni associate, il framework utilizza due classi di modello di documento: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) per le applicazioni SDI e [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) per le applicazioni MDI. Una classe `CSingleDocTemplate` può creare e archiviare un documento di un tipo alla volta. Una classe `CMultiDocTemplate` gestisce un elenco di più documenti aperti di un unico tipo.
+Per gestire il complesso processo di creazione di documenti con finestre cornice e visualizzazioni associate, il framework utilizza due classi di modello di documento: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) per le applicazioni SDI e [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) per le applicazioni MDI. Una classe `CSingleDocTemplate` può creare e archiviare un documento di un tipo alla volta. Una classe `CMultiDocTemplate` gestisce un elenco di più documenti aperti di un unico tipo.
 
 Alcune applicazioni supportano più tipi di documenti. Ad esempio, un'applicazione può supportare documenti di testo e documenti grafici. In tale applicazione, quando l'utente sceglie il comando Nuovo dal menu File, viene visualizzata una finestra di dialogo con un elenco di tipi di documento possibili da aprire. Per ogni tipo di documento supportato, nell'applicazione viene utilizzato un oggetto modello di documento distinto. Di seguito viene illustrata la configurazione di un'applicazione MDI che supporta due tipi di documento e mostra diversi documenti aperti.
 
@@ -42,4 +42,3 @@ Ad esempio, un modello di documento è il terzo di tre per l'applicazione. Se es
 [Creazione di documenti/visualizzazioni](../mfc/document-view-creation.md)<br/>
 [Relazioni tra oggetti MFC](../mfc/relationships-among-mfc-objects.md)<br/>
 [Creazione di nuovi documenti, finestre e visualizzazioni](../mfc/creating-new-documents-windows-and-views.md)
-

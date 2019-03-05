@@ -344,18 +344,18 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 000f5229c14699c80e2ce18e4125d0c2ac6e382b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294330"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 
 Fornisce supporto per modificare l'aspetto dell'applicazione a un livello globale. La classe `CMFCVisualManager` funziona insieme a una classe che fornisce le istruzioni per disegnare i controlli GUI dell'applicazione utilizzando uno stile coerente. Queste altre classi sono definite come gestori visualizzazione ed ereditano da `CMFCBaseVisualManager`.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -643,7 +643,7 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *BFILE*<br/>
+[in] *bTemporary*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -771,7 +771,7 @@ void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAttivare il*<br/>
+[in] *bEnable*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -940,7 +940,7 @@ virtual COLORREF GetMenuItemTextColor(
 
 [in] *pButton*<br/>
 [in] *bHighlighted*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1107,7 +1107,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1202,7 +1202,7 @@ virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce uno dei seguenti valori enumerati: AFX_SDT_VS2008 AFX_SDT_DEFAULT, AFX_SDT_VS2005,.
+Restituisce uno dei seguenti valori enumerati: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Note
 
@@ -1481,7 +1481,7 @@ virtual BOOL GetToolTipInfo(
 ### <a name="parameters"></a>Parametri
 
 [in] *params*<br/>
-[in] *NLE*<br/>
+[in] *nType*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1816,7 +1816,7 @@ virtual BOOL OnDrawBrowseButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rettangolo che specifica il limite per il pulsante Sfoglia.
 
 *pEdit*<br/>
@@ -1856,7 +1856,7 @@ virtual void OnDrawButtonBorder(
 *pButton*<br/>
 [in] Un puntatore a un pulsante della barra degli strumenti. Il framework consente di disegnare il bordo del pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante della barra degli strumenti.
 
 *state*<br/>
@@ -1910,7 +1910,7 @@ virtual void OnDrawCaptionBarBorder(
 *pBar*<br/>
 [in] Un puntatore a un `CMFCCaptionBar` oggetto. Il framework crea questa barra del titolo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della barra del titolo.
 
 *clrBarBorder*<br/>
@@ -1999,7 +1999,7 @@ virtual void OnDrawCaptionButton (
 *bMaximized*<br/>
 [in] Un parametro booleano che specifica se il riquadro padre è ingrandito.
 
-*bDisattivato*<br/>
+*bDisabled*<br/>
 [in] Un parametro booleano che specifica se il pulsante della didascalia è disabilitato.
 
 *nImageID*<br/>
@@ -2074,10 +2074,10 @@ virtual void OnDrawComboBorder(
 *pDC*<br/>
 [in] Puntatore al contesto di dispositivo di un pulsante della casella combinata.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante casella combinata.
 
-*bDisattivato*<br/>
+*bDisabled*<br/>
 [in] Un parametro booleano che indica se il pulsante della casella combinata è disponibile.
 
 *bIsDropped*<br/>
@@ -2112,10 +2112,10 @@ virtual void OnDrawComboDropButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante a discesa.
 
-*bDisattivato*<br/>
+*bDisabled*<br/>
 [in] Un parametro booleano che indica se il pulsante a discesa non è disponibile.
 
 *bIsDropped*<br/>
@@ -2195,10 +2195,10 @@ virtual void OnDrawEditBorder(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del `CMFCToolBarEditBoxButton` oggetto.
 
-*bDisattivato*<br/>
+*bDisabled*<br/>
 [in] Un parametro booleano che indica se il pulsante è disponibile.
 
 *bIsHighlighted*<br/>
@@ -2285,7 +2285,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del controllo intestazione.
 
 *bIsPressed*<br/>
@@ -2318,7 +2318,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della freccia di ordinamento.
 
 *bIsUp*<br/>
@@ -2364,7 +2364,7 @@ virtual void OnDrawMenuBorder(
 *pMenu*<br/>
 [in] Un puntatore a un `CMFCPopupMenu` oggetto. Il framework Disegna un bordo intorno a questo menu di scelta rapida.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del menu di scelta rapida.
 
 ### <a name="remarks"></a>Note
@@ -2409,7 +2409,7 @@ virtual void OnDrawMenuItemButton(
 [in] *pButton*<br/>
 [in] *rectButton*<br/>
 [in] *bHighlight*<br/>
-[in] *bDisattivato*<br/>
+[in] *bDisabled*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -2466,7 +2466,7 @@ virtual void OnDrawMenuScrollButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante di scorrimento.
 
 *bIsScrollDown*<br/>
@@ -2532,7 +2532,7 @@ virtual void OnDrawMenuSystemButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante.
 
 *uiSystemCommand*<br/>
@@ -2640,7 +2640,7 @@ virtual void OnDrawPaneBorder(
 *pBar*<br/>
 [in] Un puntatore a un riquadro. Il gestore visualizzazione consente di disegnare il bordo di questo riquadro.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rettangolo che indica i limiti del riquadro.
 
 ### <a name="remarks"></a>Note
@@ -2849,7 +2849,7 @@ virtual void OnDrawRibbonCaption(
 *pBar*<br/>
 [in] Un puntatore a una barra multifunzione. Il gestore visualizzazione consente di disegnare la barra multifunzione.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della barra multifunzione.
 
 *rectText*<br/>
@@ -3162,7 +3162,7 @@ virtual void OnDrawRibbonLabel(
 *pLabel*<br/>
 [in] Un puntatore a un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) oggetto. Il framework crea questa etichetta della barra multifunzione.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pannello della barra multifunzione.
 
 ### <a name="remarks"></a>Note
@@ -3210,7 +3210,7 @@ virtual void OnDrawRibbonMainPanelFrame(
 *pPanel*<br/>
 [in] Un puntatore al `CMFCRibbonMainPanel`.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del `CMFCRibbonMainPanel`.
 
 ### <a name="remarks"></a>Note
@@ -3347,7 +3347,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 *pSeparator*<br/>
 [in] Un puntatore a un [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) oggetto. Il framework crea il separatore della barra multifunzione.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del separatore.
 
 ### <a name="remarks"></a>Note
@@ -3373,7 +3373,7 @@ virtual void OnDrawRibbonRecentFilesFrame(
 *pPanel*<br/>
 [in] Un puntatore per il **Main** pannello della barra multifunzione.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del frame per l'elenco dei file recenti.
 
 ### <a name="remarks"></a>Note
@@ -3399,7 +3399,7 @@ virtual void OnDrawRibbonSliderChannel(
 *pSlider*<br/>
 [in] Un puntatore a un oggetto CMFCRibbonSlider. Il framework crea il canale per questo dispositivo di scorrimento della barra multifunzione.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti per il canale del dispositivo di scorrimento della barra multifunzione.
 
 ### <a name="remarks"></a>Note
@@ -3428,7 +3428,7 @@ virtual void OnDrawRibbonSliderThumb(
 *pSlider*<br/>
 [in] Un puntatore a un `CMFCRibbonSlider`. Il framework consente di disegnare il controllo thumb per questo dispositivo di scorrimento della barra multifunzione.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del cursore per il dispositivo di scorrimento della barra multifunzione.
 
 *bIsHighlighted*<br/>
@@ -3467,7 +3467,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 *pSlider*<br/>
 [in] Un puntatore a un `CMFCRibbonSlider` oggetto. Il framework crea questo dispositivo di scorrimento della barra multifunzione.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti dei pulsanti zoom sul dispositivo di scorrimento della barra multifunzione.
 
 *bIsZoomOut*<br/>
@@ -3587,7 +3587,7 @@ virtual void OnDrawSeparator(
 *pBar*<br/>
 [in] Puntatore a un riquadro che contiene il separatore.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del separatore.
 
 *bIsHoriz*<br/>
@@ -3679,7 +3679,7 @@ virtual void OnDrawSplitterBorder(
 *pSplitterWnd*<br/>
 [in] Puntatore a una finestra con separatore. Il framework disegna il bordo di questa finestra.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della finestra con separatore.
 
 ### <a name="remarks"></a>Note
@@ -3705,7 +3705,7 @@ virtual void OnDrawSplitterBox(
 *pSplitterWnd*<br/>
 [in] Puntatore a una finestra con separatore. Il framework consente di disegnare la casella per questa finestra con separatore.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della finestra con separatore.
 
 ### <a name="remarks"></a>Note
@@ -3877,7 +3877,7 @@ virtual void OnDrawTabCloseButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti dei **Chiudi** pulsante.
 
 *pTabWnd*<br/>
@@ -3919,7 +3919,7 @@ virtual void OnDrawTabContent(
 [in] Un rettangolo che specifica i limiti all'interno della scheda.
 
 *iTab*<br/>
-[in] Indice a base zero della scheda. Il framework consente di disegnare l'area interna di questa scheda.
+[in] Indice in base zero della scheda. Il framework consente di disegnare l'area interna di questa scheda.
 
 *bIsActive*<br/>
 [in] Un parametro booleano che indica se una scheda è attiva.
@@ -3952,7 +3952,7 @@ virtual void OnDrawTabsButtonBorder(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante della scheda.
 
 *pButton*<br/>
@@ -4021,10 +4021,10 @@ virtual void OnDrawTasksGroupAreaBorder(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti dell'area del gruppo nel riquadro attività.
 
-*bOpzioni speciali*<br/>
+*bSpecial*<br/>
 [in] Un parametro booleano che specifica se il bordo è evidenziato. Il valore TRUE indica che il bordo è evidenziato.
 
 *bNoTitle*<br/>
@@ -4109,7 +4109,7 @@ virtual void OnDrawTearOffCaption(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della didascalia.
 
 *bIsActive*<br/>
@@ -4195,7 +4195,7 @@ virtual void OnEraseTabsArea(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti dell'area della scheda.
 
 *pTabWnd*<br/>
@@ -4224,7 +4224,7 @@ virtual void OnEraseTabsButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante della scheda.
 
 *pButton*<br/>
@@ -4255,7 +4255,7 @@ virtual BOOL OnEraseTabsFrame(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della finestra scheda.
 
 *pTabWnd*<br/>
@@ -4285,7 +4285,7 @@ virtual void OnFillAutoHideButtonBackground(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante Nascondi automaticamente.
 
 *pButton*<br/>
@@ -4355,7 +4355,7 @@ virtual void OnFillButtonInterior(
 *pButton*<br/>
 [in] Un puntatore a un [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Il framework riempie lo sfondo di questo pulsante.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante della barra degli strumenti.
 
 *state*<br/>
@@ -4412,7 +4412,7 @@ virtual COLORREF OnFillCommandsListBackground(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante.
 
 *bIsSelected*<br/>
@@ -4445,7 +4445,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del controllo intestazione.
 
 ### <a name="remarks"></a>Note
@@ -4530,7 +4530,7 @@ virtual void OnFillOutlookPageButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del pulsante pagina Outlook.
 
 *bIsHighlighted*<br/>
@@ -4561,7 +4561,7 @@ virtual void OnFillPopupWindowBackground(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della finestra popup.
 
 ### <a name="remarks"></a>Note
@@ -4619,7 +4619,7 @@ virtual void OnFillRibbonEdit(
 *pEdit*<br/>
 [in] Un puntatore a un `CMFCRibbonRichEditCtrl` oggetto. Il framework riempie l'area interna di questo controllo di modifica.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del controllo di modifica.
 
 *bIsHighlighted*<br/>
@@ -4691,7 +4691,7 @@ virtual void OnFillRibbonMenuFrame(
 *pPanel*<br/>
 [in] Un puntatore a un'istanza di [classe CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md). Il framework è riempire il fotogramma di menu del pannello della barra multifunzione.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della cornice di menu.
 
 ### <a name="remarks"></a>Note
@@ -4734,7 +4734,7 @@ virtual void OnFillSplitterBackground(
 *pSplitterWnd*<br/>
 [in] Un puntatore a un'istanza di [CSplitterWndEx classe](csplitterwndex-class.md). Il framework riempie lo sfondo per questa finestra con separatore.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della finestra con separatore.
 
 ### <a name="remarks"></a>Note
@@ -4795,10 +4795,10 @@ virtual void OnFillTasksGroupInterior(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti del gruppo di attività.
 
-*bOpzioni speciali*<br/>
+*bSpecial*<br/>
 [in] Valore booleano che indica se la parte interna viene riempita con un colore specifico.
 
 ### <a name="remarks"></a>Note
@@ -4847,7 +4847,7 @@ virtual void OnHighlightMenuItem(
 *pButton*<br/>
 [in] Un puntatore a un [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) oggetto da visualizzare. L'implementazione predefinita non usare questo parametro.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che specifica i limiti della voce di menu.
 
 *clrText*<br/>
@@ -5098,4 +5098,3 @@ Per impostazione predefinita, questa funzionalità è disabilitata.
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager::GetInstance](#getinstance)<br/>
 [Gestione visualizzazione](../../mfc/visualization-manager.md)
-

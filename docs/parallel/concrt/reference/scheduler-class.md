@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638269"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287901"
 ---
 # <a name="scheduler-class"></a>Classe Scheduler
 
@@ -109,7 +109,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Parametri
 
-*C_riteri per il*<br/>
+*_Policy*<br/>
 I criteri dell'utilità di pianificazione che descrive il comportamento dell'utilità di pianificazione appena creata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -136,7 +136,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*Selezione*<br/>
+*_Placement*<br/>
 Un riferimento a una posizione in cui le attività all'interno del gruppo di pianificazione verrà data priorità all'esecuzione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -195,7 +195,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*Selezione*<br/>
+*_Placement*<br/>
 Un riferimento al percorso per eseguire una query sull'utilità di pianificazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -234,7 +234,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*Eventi*<br/>
+*_Event*<br/>
 Handle per un oggetto di eventi di Windows che viene segnalato dal runtime quando l'utilità di pianificazione arrestato e distrugge.
 
 ##  <a name="release"></a> Versione
@@ -307,10 +307,10 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 Puntatore alla funzione da eseguire per utilizzare il corpo dell'attività leggera.
 
-*Data*<br/>
+*_Data*<br/>
 Un puntatore void per i dati che verranno passati come parametro al corpo dell'attività.
 
-*Selezione*<br/>
+*_Placement*<br/>
 Riferimento a una posizione in cui per l'attività leggera verrà data priorità all'esecuzione.
 
 ##  <a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy
@@ -323,7 +323,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Parametri
 
-*C_riteri per il*<br/>
+*_Policy*<br/>
 I criteri da impostare come i criteri dell'utilità di pianificazione predefinita.
 
 ### <a name="remarks"></a>Note
@@ -336,4 +336,3 @@ Se il `SetDefaultSchedulerPolicy` metodo viene chiamato quando un'utilità di pi
 [Classe Scheduler](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

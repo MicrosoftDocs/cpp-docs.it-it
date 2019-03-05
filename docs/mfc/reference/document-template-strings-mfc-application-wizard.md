@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-ms.openlocfilehash: 24a5fcaea272924e20c55b8c1f5d58111e4eba13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 563cdf51c8104035fe29cb2e11d6c2bc8155d97b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297463"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Stringhe modello documento, Creazione guidata applicazione MFC
 
@@ -42,4 +42,3 @@ In questa pagina della creazione guidata applicazione MFC, fornire o perfezionar
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)
-

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 060be8614fc3a0a93d446c747b65de82b863ab3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518880"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298087"
 ---
 # <a name="taskhandle-class"></a>Classe task_handle
 
@@ -68,7 +68,7 @@ Il runtime crea una copia della funzione lavoro che viene passato a un `task_han
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="task_handle__operator_call"></a> operator)
+##  <a name="task_handle__operator_call"></a> operator()
 
 L'operatore di chiamata di funzione che richiama il runtime per eseguire un'operazione dell'handle di attività.
 
@@ -86,7 +86,7 @@ task_handle(const _Function& _Func);
 
 ### <a name="parameters"></a>Parametri
 
-*Func*<br/>
+*_Func*<br/>
 La funzione che verrà richiamata per eseguire il lavoro rappresentato dal `task_handle` oggetto. Potrebbe trattarsi di un funtore lambda, un puntatore a una funzione, o qualsiasi oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.
 
 ### <a name="remarks"></a>Note

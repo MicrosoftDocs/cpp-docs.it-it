@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: c99aba319df6f84dbda7b9cf90a1abebdc3757f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570352"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291334"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Spazio dei nomi Concurrency::direct3d
 
@@ -60,8 +60,8 @@ namespace direct3d;
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Restituisce un flag booleano che indica se il timeout è disabilitato per l'oggetto accelerator_view specificato.|
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Di overload. Esegue un'operazione aritmetica di moltiplicazione/somma su tre argomenti: x \* y + z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Creare una matrice da un puntatore di interfaccia del buffer di D3D.|
-|[rumore](concurrency-direct3d-namespace-functions-amp.md#noise)|Genera un valore casuale usando l'algoritmo Perlin noise|
-|[radianti](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x da gradi a radianti|
+|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Genera un valore casuale usando l'algoritmo Perlin noise|
+|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Converte x da gradi a radianti|
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcola un reciproco veloce e approssimativo dell'argomento|
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverte l'ordine dei bit in x|
 |[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Fissa x all'interno dell'intervallo da 0 a 1|
@@ -75,7 +75,7 @@ namespace direct3d;
 
 **Intestazione:** amp.h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,19 +1,19 @@
 ---
-title: 'TN047: rilascio dei requisiti di transazione database'
+title: 'TN047: Requisiti di transazione di Database'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.data
 helpviewer_keywords:
 - TN047
 ms.assetid: f93c51cf-a8c0-43d0-aa47-7bcb8333d693
-ms.openlocfilehash: d609576c5ffda1a3ba8021e6a459943092c40e98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 968420658a90c983d8e6c3eaf1e0c61603fc5441
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658835"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276806"
 ---
-# <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: rilascio dei requisiti di transazione database
+# <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: Requisiti di transazione di Database
 
 Questa nota tecnica, che è descritti i requisiti di transazione delle classi di database ODBC MFC, è ora obsoleta. Prima di MFC 4.2, le classi di database necessari che i cursori mantenute in caso di recordset dopo una **CommitTrans** oppure **Rollback** operazione. Se il driver ODBC e DBMS non supporta questo livello di conservazione di cursore, quindi le classi di database non è stata abilitata transazioni.
 
@@ -23,4 +23,3 @@ A partire da MFC 4.2, le classi di database hanno aumentato la restrizione di ch
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

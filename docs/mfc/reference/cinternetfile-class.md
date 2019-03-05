@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586875"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279978"
 ---
 # <a name="cinternetfile-class"></a>Classe CInternetFile
 
@@ -65,7 +65,7 @@ class CInternetFile : public CStdioFile
 |[CInternetFile::Close](#close)|Chiude un `CInternetFile` e libera le risorse.|
 |[CInternetFile::Flush](#flush)|Scarica il contenuto del buffer di scrittura e garantisce che i dati in memoria vengono scritti nel computer di destinazione.|
 |[CInternetFile::GetLength](#getlength)|Restituisce le dimensioni del file.|
-|[CInternetFile:: Read](#read)|Legge il numero di byte specificati.|
+|[CInternetFile::Read](#read)|Legge il numero di byte specificati.|
 |[CInternetFile::ReadString](#readstring)|Legge un flusso di caratteri.|
 |[CInternetFile::Seek](#seek)|Riposiziona il puntatore del mouse in un file aperto.|
 |[CInternetFile::SetReadBufferSize](#setreadbuffersize)|Imposta le dimensioni del buffer in cui verranno letti i dati.|
@@ -143,7 +143,7 @@ CInternetFile(
 
 ### <a name="parameters"></a>Parametri
 
-*oggetto hFile*<br/>
+*hFile*<br/>
 Handle per un file di Internet.
 
 *pstrFileName*<br/>
@@ -216,7 +216,7 @@ Utilizzare questo operatore per ottenere l'handle di Windows per la sessione cor
 operator HINTERNET() const;
 ```
 
-##  <a name="read"></a>  CInternetFile:: Read
+##  <a name="read"></a>  CInternetFile::Read
 
 Chiamare questa funzione membro da leggere nella memoria specificata, iniziando in corrispondenza *lpvBuf*, il numero specificato di byte *nCount*.
 
@@ -294,7 +294,7 @@ virtual ULONGLONG Seek(
 *lOffset*<br/>
 Offset in byte, per spostare il puntatore di lettura/scrittura nel file.
 
-*NDA*<br/>
+*nFrom*<br/>
 Riferimento relativo per l'offset. Deve essere uno dei valori seguenti:
 
 - `CFile::begin` Spostare il puntatore del file *lOff* inoltrare byte dall'inizio del file.

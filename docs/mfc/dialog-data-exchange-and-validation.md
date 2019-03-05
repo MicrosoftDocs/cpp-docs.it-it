@@ -15,12 +15,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: a68f3bf3af3d7c782e0d3414ffa90871ef5bd3a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a52af898c844cce05a138b8bc0e608681d13a491
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297424"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Convalida e DDX (Dialog Data Exchange)
 
@@ -36,4 +36,3 @@ Finestra di dialogo data exchange (DDX) è un modo semplice per inizializzare i 
 
 [Finestre di dialogo](../mfc/dialog-boxes.md)<br/>
 [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
-

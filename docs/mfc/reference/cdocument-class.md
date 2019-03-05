@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609313"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299075"
 ---
 # <a name="cdocument-class"></a>CDocument (classe)
 
@@ -149,7 +149,7 @@ class CDocument : public CCmdTarget
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDocument:: AddView](#addview)|Collega una visualizzazione del documento.|
+|[CDocument::AddView](#addview)|Collega una visualizzazione del documento.|
 |[CDocument::BeginReadChunks](#beginreadchunks)|Consente di inizializzare suddividere in blocchi durante la lettura.|
 |[CDocument::CanCloseFrame](#cancloseframe)|Advanced sottoponibile a override; chiamato prima di chiudere una finestra cornice visualizzazione di questo documento.|
 |[CDocument::ClearChunkList](#clearchunklist)|Cancella l'elenco del blocco.|
@@ -176,7 +176,7 @@ class CDocument : public CCmdTarget
 |[CDocument::OnDrawThumbnail](#ondrawthumbnail)|L'override del metodo in una classe derivata per disegnare il contenuto di anteprima.|
 |[CDocument::OnLoadDocumentFromStream](#onloaddocumentfromstream)|Chiamato dal framework quando è necessario caricare i dati del documento dal flusso.|
 |[CDocument::OnNewDocument](#onnewdocument)|Chiamato per creare un nuovo documento.|
-|[CDocument:: OnOpenDocument](#onopendocument)|Chiamato per aprire un documento esistente.|
+|[CDocument::OnOpenDocument](#onopendocument)|Chiamato per aprire un documento esistente.|
 |[CDocument::OnPreviewHandlerQueryFocus](#onpreviewhandlerqueryfocus)|Indirizza il gestore di anteprime per restituire l'HWND dalla chiamata della funzione GetFocu.|
 |[CDocument::OnPreviewHandlerTranslateAccelerator](#onpreviewhandlertranslateaccelerator)|Indirizza il gestore di anteprime per gestire una sequenza di tasti passata dal message pump del processo in cui è in esecuzione il gestore di anteprime.|
 |[CDocument::OnRichPreviewBackColorChanged](#onrichpreviewbackcolorchanged)|Chiamato quando viene modificato il colore di sfondo anteprima avanzata.|
@@ -191,19 +191,19 @@ class CDocument : public CCmdTarget
 |[CDocument::RemoveChunk](#removechunk)|Rimuove un blocco con GUID specificato.|
 |[CDocument::RemoveView](#removeview)|Scollega una visualizzazione dal documento.|
 |[CDocument::ReportSaveLoadException](#reportsaveloadexception)|Advanced sottoponibile a override; chiamato quando un elemento aperto o operazione di salvataggio non può essere completata a causa di un'eccezione.|
-|[CDocument:: SaveModified](#savemodified)|Advanced sottoponibile a override; chiamato per chiedere all'utente se il documento deve essere salvato.|
+|[CDocument::SaveModified](#savemodified)|Advanced sottoponibile a override; chiamato per chiedere all'utente se il documento deve essere salvato.|
 |[CDocument::SetChunkValue](#setchunkvalue)|Imposta un valore di blocco.|
 |[CDocument::SetModifiedFlag](#setmodifiedflag)|Imposta un flag che indica che il documento è stato modificato dall'ultimo salvataggio.|
 |[CDocument::SetPathName](#setpathname)|Imposta il percorso del file di dati usato dal documento.|
 |[CDocument::SetTitle](#settitle)|Imposta il titolo del documento.|
-|[UpdateAllViews](#updateallviews)|Notifica a tutte le visualizzazioni di documento è stato modificato.|
+|[CDocument::UpdateAllViews](#updateallviews)|Notifica a tutte le visualizzazioni di documento è stato modificato.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDocument:: OnFileSendMail](#onfilesendmail)|Invia un messaggio di posta elettronica con il documento allegato.|
-|[CDocument:: OnUpdateFileSendMail](#onupdatefilesendmail)|Abilita il comando Invia messaggi se è presentano il supporto di posta elettronica.|
+|[CDocument::OnFileSendMail](#onfilesendmail)|Invia un messaggio di posta elettronica con il documento allegato.|
+|[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Abilita il comando Invia messaggi se è presentano il supporto di posta elettronica.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -466,7 +466,7 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parametri
 
-*rPosition.*<br/>
+*rPosition*<br/>
 Restituito da una precedente chiamata a un riferimento a un valore di posizione di `GetNextView` oppure [GetFirstViewPosition](#getfirstviewposition) funzioni membro. Questo valore non deve essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Parametri
 
-*CX*<br/>
+*cx*<br/>
 Specifica la larghezza e altezza della bitmap.
 
 *phbmp*<br/>
@@ -734,7 +734,7 @@ Gli eventi del documento può influire su più classi. Questo metodo è responsa
 
 La tabella seguente elenca i possibili valori per *deEvent* e gli eventi che corrispondono ai.
 
-|Valore|Evento corrispondente|
+|Value|Evento corrispondente|
 |-----------|-------------------------|
 |`onAfterNewDocument`|È stato creato un nuovo documento.|
 |`onAfterOpenDocument`|È stato aperto un nuovo documento.|
@@ -895,7 +895,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 
 ### <a name="parameters"></a>Parametri
 
-*pMsg*<br/>
+*pmsg*<br/>
 [in] Puntatore a un messaggio della finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1073,7 +1073,7 @@ virtual void RemoveChunk(
 *Guid*<br/>
 Specifica il GUID di un blocco da rimuovere.
 
-*PID*<br/>
+*Pid*<br/>
 Specifica il PID di un blocco da rimuovere.
 
 ### <a name="remarks"></a>Note
@@ -1220,7 +1220,7 @@ Punta alla stringa da usare come titolo del documento.
 
 Chiamare questa funzione consente di aggiornare i titoli di tutte le finestre cornice che consentono di visualizzare il documento.
 
-##  <a name="updateallviews"></a>  UpdateAllViews
+##  <a name="updateallviews"></a>  CDocument::UpdateAllViews
 
 Chiamare questa funzione dopo che il documento è stato modificato.
 
@@ -1254,8 +1254,8 @@ Questa funzione chiama il [CView::OnUpdate](../../mfc/reference/cview-class.md#o
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Esempio MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC Sample MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[MFC Sample SNAPVW](../../visual-cpp-samples.md)<br/>
 [Esempio MFC NPP](../../visual-cpp-samples.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>

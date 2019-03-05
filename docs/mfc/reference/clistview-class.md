@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: e7d542d253d0d4aa8d661effb7dd7147ea3c121b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4507c2a640296c2d2619b1da7a0ebae2bc6ef401
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592647"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291281"
 ---
 # <a name="clistview-class"></a>CListView (classe)
 

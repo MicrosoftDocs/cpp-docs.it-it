@@ -6,12 +6,12 @@ helpviewer_keywords:
 - slider controls
 - slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
-ms.openlocfilehash: 7bb5bda4a7b85ea8bb852649b20f10f0c4693188
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b358b4e92c7d9f214291b047a080f71b48183519
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533563"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284138"
 ---
 # <a name="using-slider-controls"></a>Utilizzo di controlli Slider
 
@@ -23,10 +23,9 @@ L'utilizzo tipico di un controllo dispositivo di scorrimento segue il modello de
 
 - Mentre l'utente interagisce con il controllo, questo invierà vari messaggi di notifica. È possibile estrarre il valore di dispositivo di scorrimento dal controllo chiamando il [GetPos](../mfc/reference/csliderctrl-class.md#getpos) funzione membro.
 
-- Una volta impostato il controllo, è necessario assicurarsi che venga eliminato definitivamente in modo corretto. Se il controllo dispositivo di scorrimento si trova in una finestra di dialogo, sia il controllo sia l'oggetto `CSliderCtrl` verranno eliminati definitivamente in modo automatico. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CSliderCtrl` vengono eliminati definitivamente in modo corretto.
+- Una volta impostato il controllo, è necessario assicurarsi che venga eliminato definitivamente in modo corretto. Se il controllo dispositivo di scorrimento si trova in una finestra di dialogo, sia il controllo sia l'oggetto `CSliderCtrl` verranno eliminati automaticamente in modo permanente. In caso contrario, è necessario assicurarsi che sia il controllo che l'oggetto `CSliderCtrl` vengono eliminati correttamente.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Uso di CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

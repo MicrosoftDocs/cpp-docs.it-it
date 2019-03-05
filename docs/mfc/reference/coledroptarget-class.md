@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300122"
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
 
@@ -115,9 +115,9 @@ Punta alla finestra che sta immettendo il cursore.
 Punta all'oggetto dati che contiene i dati che possono essere eliminati.
 
 *dwKeyState*<br/>
-Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contiene lo stato dei tasti di modifica. Questa è una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione corrente del cursore nelle coordinate del client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -180,9 +180,9 @@ Punta alla finestra che il cursore è posizionato.
 Punta all'oggetto dati che contiene i dati da eliminare.
 
 *dwKeyState*<br/>
-Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contiene lo stato dei tasti di modifica. Questa è una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione corrente del cursore nelle coordinate del client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -226,9 +226,9 @@ virtual DROPEFFECT OnDragScroll(
 Punta alla finestra che si trova attualmente il cursore.
 
 *dwKeyState*<br/>
-Contiene lo stato dei tasti di modifica. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
+Contiene lo stato dei tasti di modifica. Questa è una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione del cursore, in pixel, rispetto allo schermo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -278,7 +278,7 @@ L'effetto che l'utente ha scelto per l'operazione drop. Può trattarsi di uno o 
 
 - Verrà stabilito DROPEFFECT_LINK link tramite messaggio e-mail dai dati rilasciati ai dati originali.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione del cursore, in pixel, rispetto allo schermo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -317,10 +317,10 @@ Punta all'oggetto dati che contiene i dati da eliminare.
 *dropDefault*<br/>
 L'effetto che l'utente ha scelto per l'operazione di rilascio predefinite basata sullo stato della chiave corrente. Può essere DROPEFFECT_NONE. Nella sezione Osservazioni vengono descritti gli effetti di rilascio.
 
-*elenco a discesa*<br/>
+*dropList*<br/>
 Un elenco degli effetti di trascinamento che supporta l'origine del trascinamento. I valori di effetto di rilascio possono essere combinati utilizzando l'operatore OR bit per bit (**&#124;**) operazione. Nella sezione Osservazioni vengono descritti gli effetti di rilascio.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione del cursore, in pixel, rispetto allo schermo.
 
 ### <a name="return-value"></a>Valore restituito

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: be0b4639fd42461a19db10f88ced336cd1129fb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031c8596e568f01cdecd7139d959a77923c341eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294954"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Creazione di un controllo ActiveX MFC
 
@@ -44,4 +44,3 @@ Dopo aver creato il progetto, è possibile utilizzare le procedure guidate di co
 
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)
-

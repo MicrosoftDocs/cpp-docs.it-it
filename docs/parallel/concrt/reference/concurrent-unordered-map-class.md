@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284346"
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 
@@ -151,7 +151,7 @@ Riferimento al valore dei dati dell'elemento trovato.
 
 Se il valore della chiave dell'argomento non è presente, tramite la funzione viene generato un oggetto di classe `out_of_range`.
 
-##  <a name="begin"></a> iniziare
+##  <a name="begin"></a> begin
 
 Restituisce un iteratore che punta al primo elemento nel contenitore simultaneo. Questo metodo è concorrenza-safe.
 
@@ -247,10 +247,10 @@ Funzione di confronto di uguaglianza per questa mappa non ordinata.
 *_Allocator*<br/>
 Allocatore per questa mappa non ordinata.
 
-*Ini_zia*<br/>
+*_Begin*<br/>
 Posizione del primo elemento nell'intervallo di elementi da copiare.
 
-*End*<br/>
+*_End*<br/>
 Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
 *_Umap*<br/>
@@ -270,7 +270,7 @@ Tramite il quarto e il quinto costruttore viene specificata una copia della mapp
 
 Tramite l'ultimo costruttore viene specificato uno spostamento della mappa non ordinata simultanea `_Umap`.
 
-##  <a name="count"></a> conteggio
+##  <a name="count"></a> count
 
 Conta il numero di elementi corrispondenti a una chiave specificata. Questa funzione è concorrenza-safe.
 
@@ -287,7 +287,7 @@ Chiave da ricercare.
 
 Il numero di volte in cui numero di volte in cui che la chiave viene visualizzata nel contenitore.
 
-##  <a name="empty"></a> vuota
+##  <a name="empty"></a> empty
 
 Verifica se sono presenti o meno degli elementi. Questo metodo è concorrenza-safe.
 
@@ -344,7 +344,7 @@ Oggetto [coppia](../../../standard-library/pair-structure.md) dove il primo elem
 
 È possibile per gli inserimenti simultanei causare altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.
 
-##  <a name="find"></a> trovare
+##  <a name="find"></a> find
 
 Trova un elemento che corrisponde a una chiave specificata. Questa funzione è concorrenza-safe.
 
@@ -428,7 +428,7 @@ Il tipo del valore inserito nella mappa.
 *value*<br/>
 Valore da inserire.
 
-*WHERE*<br/>
+*_Where*<br/>
 Posizione iniziale in corrispondenza della quale cercare un punto di inserimento.
 
 *first*<br/>
@@ -509,7 +509,7 @@ Il numero massimo di elementi che possono essere inseriti in questo contenitore 
 
 Questo valore limite superiore potrebbe risultare superiore rispetto a ciò che effettivamente può contenere il contenitore.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Trova o inserisce un elemento con la chiave specificata. Questo metodo è indipendente dalla concorrenza.
 
@@ -561,7 +561,7 @@ Un riferimento a questo `concurrent_unordered_map` oggetto.
 
 Dopo l'eliminazione di tutti gli elementi esistenti, tramite `operator=` il contenuto di `_Umap` viene copiato o spostato nel vettore simultaneo.
 
-##  <a name="rehash"></a> rehash)
+##  <a name="rehash"></a> rehash
 
 Ricompila la tabella hash.
 
@@ -621,7 +621,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 L'indice di bucket.
 
 ### <a name="return-value"></a>Valore restituito
@@ -667,7 +667,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 Il bucket per la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
@@ -684,7 +684,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 L'indice di bucket.
 
 ### <a name="return-value"></a>Valore restituito
@@ -701,7 +701,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 L'indice di bucket.
 
 ### <a name="return-value"></a>Valore restituito
@@ -720,7 +720,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 L'indice di bucket.
 
 ### <a name="return-value"></a>Valore restituito
@@ -745,13 +745,13 @@ size_type unsafe_erase(
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE*<br/>
+*_Where*<br/>
 La posizione dell'iteratore da cancellare.
 
-*Ini_zia*<br/>
+*_Begin*<br/>
 Posizione del primo elemento nell'intervallo di elementi da cancellare.
 
-*End*<br/>
+*_End*<br/>
 Posizione del primo elemento oltre l'intervallo di elementi da cancellare.
 
 *KVal*<br/>
@@ -783,4 +783,3 @@ Il numero massimo di bucket in questo contenitore.
 
 [Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
 [Contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md)
-

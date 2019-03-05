@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454496"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290131"
 ---
 # <a name="singlelinkregistry-class"></a>Classe single_link_registry
 
@@ -51,7 +51,7 @@ Tipo di dati di blocco vengano archiviate nel `single_link_registry` oggetto.
 |----------|-----------------|
 |[add](#add)|Aggiunge un collegamento per il `single_link_registry` oggetto. (Esegue l'override [network_link_registry:: Add](network-link-registry-class.md#add).)|
 |[begin](#begin)|Restituisce un iteratore al primo elemento nel file di `single_link_registry` oggetto. (Esegue l'override [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
-|[Contiene](#contains)|Le ricerche di `single_link_registry` oggetto per un blocco specificato. (Esegue l'override [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[contains](#contains)|Le ricerche di `single_link_registry` oggetto per un blocco specificato. (Esegue l'override [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
 |[count](#count)|Conta il numero di elementi nel `single_link_registry` oggetto. (Esegue l'override [network_link_registry:: Count](network-link-registry-class.md#count).)|
 |[remove](#remove)|Rimuove un collegamento dal `single_link_registry` oggetto. (Esegue l'override [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
 
@@ -77,14 +77,14 @@ virtual void add(_EType _Link);
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco da aggiungere.
 
 ### <a name="remarks"></a>Note
 
 Il metodo genera un' [invalid_link_target](invalid-link-target-class.md) eccezione se è già presente un collegamento in questo registro di sistema.
 
-##  <a name="begin"></a> iniziare
+##  <a name="begin"></a> begin
 
 Restituisce un iteratore al primo elemento nel file di `single_link_registry` oggetto.
 
@@ -110,14 +110,14 @@ virtual bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco che deve essere eseguita la ricerca nel `single_link_registry` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
 **true** se è stato trovato il collegamento **false** in caso contrario.
 
-##  <a name="count"></a> conteggio
+##  <a name="count"></a> count
 
 Conta il numero di elementi nel `single_link_registry` oggetto.
 
@@ -139,7 +139,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Parametri
 
-*Collega*<br/>
+*_Link*<br/>
 Un puntatore a un blocco deve essere rimosso, se trovato.
 
 ### <a name="return-value"></a>Valore restituito

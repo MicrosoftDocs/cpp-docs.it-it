@@ -7,12 +7,12 @@ helpviewer_keywords:
 - message handlers [MFC]
 - message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
-ms.openlocfilehash: c316b4cf138c21b697181bcf132fa3766128a7ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 851b07c46fbc173031da838211beac7ba2d76954
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304769"
 ---
 # <a name="editing-a-message-handler"></a>Modifica di un gestore messaggi
 

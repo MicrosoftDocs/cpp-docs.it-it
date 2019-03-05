@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505121"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281681"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -149,7 +149,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::GetResizeMode](#getresizemode)|Recupera un valore che specifica come il controllo struttura a schede corrente può essere ridimensionato.|
 |[CMFCTabCtrl::GetScrollBar](#getscrollbar)|Recupera un puntatore all'oggetto barra di scorrimento che è associato il controllo struttura a schede.|
 |[CMFCTabCtrl::GetTabArea](#gettabarea)|Recupera il rettangolo di delimitazione dell'area di etichetta della scheda nella parte superiore o inferiore del controllo scheda. (Esegue l'override [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
-|`CMFCTabCtrl::GetTabFromPoint`|Recupera la scheda che contiene un punto specificato. (Esegue l'override [CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|
+|`CMFCTabCtrl::GetTabFromPoint`|Recupera la scheda contenente un punto specificato. (Esegue l'override [CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|
 |[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|Recupera la larghezza massima di una scheda.|
 |[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|Recupera l'altezza dell'area della scheda del controllo scheda corrente.|
 |[CMFCTabCtrl::GetTabsRect](#gettabsrect)|Recupera un rettangolo che delimita l'area della scheda del controllo scheda corrente. (Esegue l'override [CMFCBaseTabCtrl::GetTabsRect](../../mfc/reference/cmfcbasetabctrl-class.md#gettabsrect).)|
@@ -168,7 +168,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::IsLeftRightRounded](#isleftrightrounded)|Indica se l'aspetto di sinistra e destra di una scheda del controllo corrente viene arrotondato.|
 |[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|Indica se il controllo struttura a schede corrente è contenuto nell'area client di una finestra di interfaccia a documenti multipli.|
 |[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)|Indica se il controllo scheda corrente viene visualizzato nello stile di Microsoft OneNote.|
-|`CMFCTabCtrl::IsPtInTabArea`|Determina se un punto si trova l'area della scheda. (Esegue l'override [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
+|`CMFCTabCtrl::IsPtInTabArea`|Determina se un punto è all'interno dell'area delle schede. (Esegue l'override [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
 |[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|Indica se il controllo struttura a schede corrente ha una barra di scorrimento che è possibile scorrere le tabulazioni come gruppo.|
 |[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|Indica se il controllo struttura a schede Visualizza i pulsanti di scorrimento o un pulsante che visualizza un menu di finestre a schede.|
 |[CMFCTabCtrl::IsVS2005Style](#isvs2005style)|Indica se le schede vengono visualizzate nello stile di Visual Studio .NET 2005.|
@@ -178,7 +178,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Chiamato dal framework durante un'operazione di trascinamento quando il mouse viene spostato nell'intervallo di destinazione di rilascio. (Esegue l'override [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Visualizza un menu di scelta rapida di finestre a schede, attende fino a quando l'utente seleziona una scheda e rende la scheda selezionata scheda attiva.|
 |`CMFCTabCtrl::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. (Esegue l'override [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
-|`CMFCTabCtrl::RecalcLayout`|Ricalcola il layout interno del controllo scheda. (Esegue l'override [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
+|`CMFCTabCtrl::RecalcLayout`|Ricalcola il layout interno del controllo Struttura a schede. (Esegue l'override [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Imposta la scheda corrente di un controllo struttura a schede come scheda attiva in un gruppo di schede di interfaccia documento più.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Attiva una scheda. (Esegue l'override [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
 |[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|Abilita o disabilita l'uso di un tipo di carattere grassetto sulle schede attive.|
@@ -267,7 +267,7 @@ void ActivateMDITab(int nTab = -1);
 
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ```
 virtual BOOL AllowDestroyEmptyTabbedPane() const;
@@ -310,10 +310,10 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*Stile di visualizzazione*<br/>
+*style*<br/>
 [in] Stile del controllo struttura a schede. Per altre informazioni, vedere la sezione Note.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rettangolo che delimita il controllo struttura a schede.
 
 *pParentWnd*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] L'ID del controllo scheda.
 
-*Posizione*<br/>
+*location*<br/>
 [in] La posizione delle schede. Il valore predefinito è LOCATION_BOTTOM. Per altre informazioni, vedere la sezione Note.
 
 *bCloseBtn*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per visualizzare il pulsante Chiudi nella scheda attiva; FALSE per visualizzare il pulsante di chiusura nell'angolo superiore destro dell'area della scheda. Il valore predefinito è TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare le etichette delle schede modificabile; FALSE per disattivare le etichette delle schede modificabile.
 
 ### <a name="remarks"></a>Note
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per visualizzare un menu a comparsa di etichette di finestra a schede; FALSE per visualizzare i pulsanti di scorrimento in avanti e indietro. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -433,7 +433,7 @@ virtual BOOL EnsureVisible(int iTab);
 ### <a name="parameters"></a>Parametri
 
 *iTab*<br/>
-[in] Indice a base zero di una scheda.
+[in] Indice in base zero di una scheda.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -564,7 +564,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [out] Quando questo metodo termina, il *rect* parametro contiene un rettangolo che delimita l'area della scheda.
 
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea
@@ -577,7 +577,7 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [in, out] Quando questo metodo termina, questo parametro contiene un rettangolo che delimita il controllo scheda corrente.
 
 ### <a name="remarks"></a>Note
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametri
 
-*Stile di visualizzazione*<br/>
+*style*<br/>
 [in] Uno dei valori di enumerazione che specifica l'aspetto del controllo scheda. Per altre informazioni, vedere la tabella nella sezione Osservazioni.
 
 ### <a name="return-value"></a>Valore restituito
@@ -876,7 +876,7 @@ virtual DROPEFFECT OnDragEnter(
 *dwKeyState*<br/>
 [in] Contiene lo stato dei tasti di modifica. Questo parametro è una combinazione bit per bit (OR) dei valori seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per altre informazioni, vedere la **parametri del messaggio** sezione [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-*punto*<br/>
+*point*<br/>
 [in] Contiene la posizione corrente del cursore nelle coordinate del client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in] Lo stato dei tasti di modifica, ovvero una combinazione bit per bit (OR) di MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per altre informazioni, vedere "Parametri del messaggio" nella [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-*punto*<br/>
+*point*<br/>
 [in] La posizione corrente del mouse.
 
 ### <a name="return-value"></a>Valore restituito
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate del punto in cui visualizzare il menu di scelta rapida.
 
 ### <a name="remarks"></a>Note
@@ -1042,14 +1042,14 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] L'ID di una risorsa della bitmap che contiene l'elenco di immagini.
 
-*CX*<br/>
+*cx*<br/>
 [in] La larghezza di ogni immagine, in pixel. Il valore predefinito è 15.
 
 *clrTransp*<br/>
 [in] Colore trasparente immagine. Le parti dell'immagine di questo oggetto color sarà trasparente. Il valore predefinito è il colore magenta, RGB(255,0,255).
 
 *hImageList*<br/>
-[in] Handle per un elenco di immagini precaricati.
+[in] Handle a un elenco di immagini precaricato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parametri
 
-*bAnnulla*<br/>
+*bCancel*<br/>
 [in] TRUE per abbandonare l'operazione di ridimensionamento corrente. FALSE per il completamento operazione di ridimensionamento corrente. In entrambi i casi, il framework arresta disegnare il rettangolo di ridimensionamento.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar

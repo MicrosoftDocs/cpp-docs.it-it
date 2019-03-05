@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [MFC]
 - application framework [MFC]
 ms.assetid: 912684e6-4418-49dc-9877-a4cd19d69d20
-ms.openlocfilehash: c17adc830cd6201402c069f4facab835ed21ba0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb8e19b7e8a305367e5265707bbef2801176c010
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428588"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302311"
 ---
 # <a name="application-framework"></a>Framework applicazione
 

@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639325"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273894"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset (classe)
 
@@ -195,9 +195,9 @@ class CDaoRecordset : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDaoRecordset:: AddNew](#addnew)|Prepara per l'aggiunta di un nuovo record. Chiamare [Update](#update) per completare l'aggiunta.|
+|[CDaoRecordset::AddNew](#addnew)|Prepara per l'aggiunta di un nuovo record. Chiamare [Update](#update) per completare l'aggiunta.|
 |[CDaoRecordset::CanAppend](#canappend)|Restituisce diversi da zero se è possibile aggiungere nuovi record al set di record tramite il [AddNew](#addnew) funzione membro.|
-|[CDaoRecordset:: CanBookmark](#canbookmark)|Restituisce diversi da zero se il recordset supporta segnalibri.|
+|[CDaoRecordset::CanBookmark](#canbookmark)|Restituisce diversi da zero se il recordset supporta segnalibri.|
 |[CDaoRecordset::CancelUpdate](#cancelupdate)|Annulla eventuali aggiornamenti in sospeso a causa dell'errore un' [Edit](#edit) oppure [AddNew](#addnew) operazione.|
 |[CDaoRecordset::CanRestart](#canrestart)|Restituisce se diverso da zero [Requery](#requery) può essere chiamato per eseguire nuovamente la query del recordset.|
 |[CDaoRecordset::CanScroll](#canscroll)|Restituisce diversi da zero se è possibile scorrere i record.|
@@ -206,15 +206,15 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::Close](#close)|Chiude il recordset.|
 |[CDaoRecordset::Delete](#delete)|Elimina il record corrente dal recordset. È necessario scorrere in modo esplicito a un altro record dopo l'eliminazione.|
 |[CDaoRecordset::DoFieldExchange](#dofieldexchange)|Chiamata eseguita per lo scambio di dati (in entrambe le direzioni) tra i membri di dati del campo del set di record e record corrispondente nell'origine dati. Implementa DAO campi di record (DFX).|
-|[CDaoRecordset:: Edit](#edit)|Prepara per le modifiche apportate al record corrente. Chiamare `Update` per completare la modifica.|
-|[CDaoRecordset:: FillCache](#fillcache)|Riempie tutta o parte di una cache locale per un oggetto recordset che contiene i dati da un'origine dati ODBC.|
+|[CDaoRecordset::Edit](#edit)|Prepara per le modifiche apportate al record corrente. Chiamare `Update` per completare la modifica.|
+|[CDaoRecordset::FillCache](#fillcache)|Riempie tutta o parte di una cache locale per un oggetto recordset che contiene i dati da un'origine dati ODBC.|
 |[CDaoRecordset::Find](#find)|Individua innanzitutto successivo, precedente, o nell'ultima posizione di una determinata stringa in un recordset di tipo dynaset che soddisfa i criteri specificati e imposta che il record corrente.|
 |[CDaoRecordset::FindFirst](#findfirst)|Individua il primo record in un tipo dynaset o recordset di tipo di snapshot che soddisfa i criteri specificati e imposta che il record corrente.|
 |[CDaoRecordset::FindLast](#findlast)|Individua l'ultimo record in un tipo dynaset o recordset di tipo di snapshot che soddisfa i criteri specificati e imposta che il record corrente.|
 |[CDaoRecordset::FindNext](#findnext)|Individua il record successivo in un tipo dynaset o recordset di tipo di snapshot che soddisfa i criteri specificati e imposta che il record corrente.|
 |[CDaoRecordset::FindPrev](#findprev)|Individua il record precedente in un tipo dynaset o recordset di tipo di snapshot che soddisfa i criteri specificati e imposta che il record corrente.|
 |[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|Restituisce il numero del record corrente dell'oggetto recordset.|
-|[CDaoRecordset:: GetBookmark](#getbookmark)|Restituisce un valore che rappresenta il segnalibro in un record.|
+|[CDaoRecordset::GetBookmark](#getbookmark)|Restituisce un valore che rappresenta il segnalibro in un record.|
 |[CDaoRecordset::GetCacheSize](#getcachesize)|Restituisce un valore che specifica il numero di record in un recordset dynaset-type contenente i dati in locale da memorizzare nella cache da un'origine dati ODBC.|
 |[CDaoRecordset::GetCacheStart](#getcachestart)|Restituisce un valore che specifica il segnalibro del primo record del recordset da memorizzare nella cache.|
 |[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|Restituisce un `CString` che contiene più di recente il nome dell'indice utilizzato in un tipo di tabella, indicizzato `CDaoRecordset`.|
@@ -225,14 +225,14 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::GetEditMode](#geteditmode)|Restituisce un valore che indica lo stato di modifica per il record corrente.|
 |[CDaoRecordset::GetFieldCount](#getfieldcount)|Restituisce un valore che rappresenta il numero di campi in un recordset.|
 |[CDaoRecordset::GetFieldInfo](#getfieldinfo)|Restituisce i tipi specifici di informazioni sui campi del recordset.|
-|[CDaoRecordset:: GetFieldValue](#getfieldvalue)|Restituisce il valore di un campo in un recordset.|
+|[CDaoRecordset::GetFieldValue](#getfieldvalue)|Restituisce il valore di un campo in un recordset.|
 |[CDaoRecordset::GetIndexCount](#getindexcount)|Recupera il numero di indici in una tabella sottostante un recordset.|
 |[CDaoRecordset::GetIndexInfo](#getindexinfo)|Restituisce vari tipi di informazioni su un indice.|
 |[CDaoRecordset::GetLastModifiedBookmark](#getlastmodifiedbookmark)|Utilizzato per determinare più recentemente aggiunti o aggiornati i record.|
 |[CDaoRecordset::GetLockingMode](#getlockingmode)|Restituisce un valore che indica il tipo di blocco che viene applicata durante la modifica.|
 |[CDaoRecordset::GetName](#getname)|Restituisce un `CString` contenente il nome del set di record.|
 |[CDaoRecordset::GetParamValue](#getparamvalue)|Recupera il valore corrente del parametro specificato archiviato nell'oggetto DAOParameter sottostante.|
-|[CDaoRecordset:: GetPercentPosition](#getpercentposition)|Restituisce la posizione del record corrente come percentuale del numero totale di record.|
+|[CDaoRecordset::GetPercentPosition](#getpercentposition)|Restituisce la posizione del record corrente come percentuale del numero totale di record.|
 |[CDaoRecordset::GetRecordCount](#getrecordcount)|Restituisce il numero di record è possibile accedere in un oggetto recordset.|
 |[CDaoRecordset::GetSQL](#getsql)|Ottiene la stringa SQL utilizzata per selezionare i record per il recordset.|
 |[CDaoRecordset::GetType](#gettype)|Chiamata eseguita per determinare il tipo di un set di record: tipo di tabella, tipo dynaset o tipo di snapshot.|
@@ -245,34 +245,34 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::IsFieldNull](#isfieldnull)|Restituisce diversi da zero se il campo specificato nel record corrente è Null (non con nessun valore).|
 |[CDaoRecordset::IsFieldNullable](#isfieldnullable)|Restituisce diversi da zero se il campo specificato nel record corrente può essere impostato su Null (non con nessun valore).|
 |[CDaoRecordset::IsOpen](#isopen)|Restituisce se diverso da zero [aperto](#open) è stato chiamato in precedenza.|
-|[CDaoRecordset:: Move](#move)|Posiziona il recordset su un numero specificato di record del record corrente in entrambe le direzioni.|
+|[CDaoRecordset::Move](#move)|Posiziona il recordset su un numero specificato di record del record corrente in entrambe le direzioni.|
 |[CDaoRecordset::MoveFirst](#movefirst)|Posiziona il record corrente sul primo record del recordset.|
 |[CDaoRecordset::MoveLast](#movelast)|Posiziona il record corrente sull'ultimo record del recordset.|
 |[CDaoRecordset::MoveNext](#movenext)|Posiziona il record corrente sul record successivo nel set di record.|
 |[CDaoRecordset::MovePrev](#moveprev)|Posiziona il record corrente del record precedente nel recordset.|
-|[CDaoRecordset:: Open](#open)|Crea un nuovo set di record da una tabella, dynaset o snapshot.|
+|[CDaoRecordset::Open](#open)|Crea un nuovo set di record da una tabella, dynaset o snapshot.|
 |[CDaoRecordset::Requery](#requery)|Esegue la query del recordset nuovamente per aggiornare i record selezionati.|
 |[CDaoRecordset::Seek](#seek)|Individua il record in un oggetto recordset indicizzata-tipo di tabella che soddisfa i criteri specificati per l'indice corrente e imposta come il record corrente.|
-|[CDaoRecordset:: SetAbsolutePosition](#setabsoluteposition)|Imposta il numero del record corrente dell'oggetto recordset.|
+|[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|Imposta il numero del record corrente dell'oggetto recordset.|
 |[CDaoRecordset::SetBookmark](#setbookmark)|Posiziona il recordset in un record contenente il segnalibro specificato.|
-|[CDaoRecordset:: SetCacheSize](#setcachesize)|Imposta un valore che specifica il numero di record in un recordset dynaset-type contenente i dati in locale da memorizzare nella cache da un'origine dati ODBC.|
-|[CDaoRecordset:: SetCacheStart](#setcachestart)|Imposta un valore che specifica il segnalibro del primo record del recordset da memorizzare nella cache.|
-|[CDaoRecordset:: SetCurrentIndex](#setcurrentindex)|Chiamata eseguita per impostare un indice in un set di record di tipo di tabella.|
-|[CDaoRecordset:: SetFieldDirty](#setfielddirty)|Contrassegna il campo specificato nel record corrente come modificato.|
+|[CDaoRecordset::SetCacheSize](#setcachesize)|Imposta un valore che specifica il numero di record in un recordset dynaset-type contenente i dati in locale da memorizzare nella cache da un'origine dati ODBC.|
+|[CDaoRecordset::SetCacheStart](#setcachestart)|Imposta un valore che specifica il segnalibro del primo record del recordset da memorizzare nella cache.|
+|[CDaoRecordset::SetCurrentIndex](#setcurrentindex)|Chiamata eseguita per impostare un indice in un set di record di tipo di tabella.|
+|[CDaoRecordset::SetFieldDirty](#setfielddirty)|Contrassegna il campo specificato nel record corrente come modificato.|
 |[CDaoRecordset::SetFieldNull](#setfieldnull)|Imposta il valore del campo specificato nel record corrente su Null (non con nessun valore).|
 |[CDaoRecordset::SetFieldValue](#setfieldvalue)|Imposta il valore di un campo in un recordset.|
 |[CDaoRecordset::SetFieldValueNull](#setfieldvaluenull)|Imposta il valore di un campo in un recordset su Null. (non con nessun valore).|
 |[CDaoRecordset::SetLockingMode](#setlockingmode)|Imposta un valore che indica il tipo di blocco per rendere effettive durante la modifica.|
 |[CDaoRecordset::SetParamValue](#setparamvalue)|Imposta il valore corrente del parametro specificato archiviato nell'oggetto DAOParameter sottostante|
 |[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|Imposta il valore corrente del parametro specificato su Null (non con nessun valore).|
-|[CDaoRecordset:: SetPercentPosition](#setpercentposition)|Imposta la posizione del record corrente in un percorso corrispondente a una percentuale del numero totale di record in un recordset.|
+|[CDaoRecordset::SetPercentPosition](#setpercentposition)|Imposta la posizione del record corrente in un percorso corrispondente a una percentuale del numero totale di record in un recordset.|
 |[CDaoRecordset::Update](#update)|Completa un' `AddNew` o `Edit` operazione salvando i dati nuovi o modificati nell'origine dati.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDaoRecordset:: M_bcheckcachefordirtyfields](#m_bcheckcachefordirtyfields)|Contiene un flag che indica se i campi vengono automaticamente contrassegnati come modificato.|
+|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Contiene un flag che indica se i campi vengono automaticamente contrassegnati come modificato.|
 |[CDaoRecordset::m_nFields](#m_nfields)|Contiene il numero di membri dati di campi della classe recordset e il numero delle colonne selezionate dal recordset dall'origine dati.|
 |[CDaoRecordset::m_nParams](#m_nparams)|Contiene il numero di membri dati di parametro nella classe recordset, ovvero il numero di parametri passata con la query del recordset|
 |[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|Un puntatore all'interfaccia di DAO sottostante l'oggetto recordset.|
@@ -329,7 +329,7 @@ Per informazioni correlate, vedere l'argomento "Oggetto Recordset" nella Guida d
 
 **Intestazione:** afxdao. h
 
-##  <a name="addnew"></a>  CDaoRecordset:: AddNew
+##  <a name="addnew"></a>  CDaoRecordset::AddNew
 
 Chiamare questa funzione membro per aggiungere un nuovo record a un tipo di tabella o di tipo dynaset recordset.
 
@@ -385,7 +385,7 @@ Diverso da zero se il set di record consente l'aggiunta di nuovi record; in caso
 
 Per informazioni correlate, vedere l'argomento "Aggiunta Method" nella Guida di DAO.
 
-##  <a name="canbookmark"></a>  CDaoRecordset:: CanBookmark
+##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark
 
 Chiamare questa funzione membro per determinare se il recordset aperto in precedenza consente di contrassegnare singolarmente i record di utilizzo dei segnalibri.
 
@@ -567,7 +567,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Contiene un puntatore a un `CDaoFieldExchange` oggetto. Il framework già avere imposterà automaticamente questo oggetto per specificare un contesto per l'operazione di scambio di campo.
 
 ### <a name="remarks"></a>Note
@@ -580,7 +580,7 @@ Quando si dichiara la classe derivata recordset con ClassWizard, la procedura gu
 
 [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]
 
-##  <a name="edit"></a>  CDaoRecordset:: Edit
+##  <a name="edit"></a>  CDaoRecordset::Edit
 
 Chiamare questa funzione membro per consentire le modifiche apportate al record corrente.
 
@@ -622,7 +622,7 @@ Se l'origine dati supporta le transazioni, è possibile rendere il `Edit` delle 
 
 Per informazioni correlate, vedere gli argomenti "AddNew Method", "Modifica metodo", "Metodo Delete", "Metodo di aggiornamento" e "Property aggiornabile" nella Guida di DAO.
 
-##  <a name="fillcache"></a>  CDaoRecordset:: FillCache
+##  <a name="fillcache"></a>  CDaoRecordset::FillCache
 
 Chiamare questa funzione membro per memorizzare nella cache un numero specificato di record dal recordset.
 
@@ -903,7 +903,7 @@ Se non sono presenti record corrente, come quando non sono presenti record del r
 
 Per informazioni correlate, vedere l'argomento "Proprietà AbsolutePosition" nella Guida di DAO.
 
-##  <a name="getbookmark"></a>  CDaoRecordset:: GetBookmark
+##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark
 
 Chiamare questa funzione membro per ottenere il valore di segnalibro in un record specifico.
 
@@ -1122,7 +1122,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Indice a base zero del campo predefinito nella raccolta di campi del recordset, per la ricerca in base all'indice.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Un riferimento a un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) struttura.
 
 *dwInfoOptions*<br/>
@@ -1130,9 +1130,9 @@ Opzioni che specificano quali informazioni del recordset da recuperare. Le opzio
 
 - `AFX_DAO_PRIMARY_INFO` (Impostazione predefinita) Nome, tipo, dimensioni, attributi
 
-- `AFX_DAO_SECONDARY_INFO` Informazioni principali, oltre a: posizione ordinale, richiesto, consentire Zero tabella di origine esterna nome, il campo di origine, lunghezza, ordine di ordinamento,
+- `AFX_DAO_SECONDARY_INFO` Informazioni principali, oltre a: Posizione ordinale, richiesta, consentire a lunghezza Zero, di confronto dell'ordine, nome esterna, campo di origine, la tabella di origine
 
-- `AFX_DAO_ALL_INFO` Informazioni primari e secondari, oltre a: il valore predefinito, la regola di convalida, il testo di convalida
+- `AFX_DAO_ALL_INFO` Informazioni primari e secondari, oltre a: Testo di convalida regola di convalida, valore predefinito
 
 *lpszName*<br/>
 Nome del campo.
@@ -1145,7 +1145,7 @@ Per una descrizione delle informazioni restituite, vedere la [CDaoFieldInfo](../
 
 Per informazioni correlate, vedere l'argomento "Proprietà Attributes" nella Guida di DAO.
 
-##  <a name="getfieldvalue"></a>  CDaoRecordset:: GetFieldValue
+##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue
 
 Chiamare questa funzione membro per recuperare i dati in un recordset.
 
@@ -1237,9 +1237,9 @@ Opzioni che specificano le informazioni sull'indice da recuperare. Le opzioni di
 
 - `AFX_DAO_PRIMARY_INFO` (Impostazione predefinita) Campi nome, Info, campo
 
-- `AFX_DAO_SECONDARY_INFO` Informazioni primaria, oltre a: database primario, Unique, Clustered, IgnoreNulls, obbligatorio, esterni
+- `AFX_DAO_SECONDARY_INFO` Informazioni principali, oltre a: Area primaria, cluster, univoco, IgnoreNulls, obbligatorio, esterna
 
-- `AFX_DAO_ALL_INFO` Informazioni primari e secondari, oltre a: Distinct Count
+- `AFX_DAO_ALL_INFO` Informazioni primari e secondari, oltre a: Misura Distinct Count
 
 *lpszName*<br/>
 Un puntatore al nome dell'oggetto, indice di ricerca in base al nome.
@@ -1339,7 +1339,7 @@ Un oggetto della classe [COleVariant](../../mfc/reference/colevariant-class.md) 
 
 Per informazioni correlate, vedere l'argomento "Oggetto Parameter" nella Guida di DAO.
 
-##  <a name="getpercentposition"></a>  CDaoRecordset:: GetPercentPosition
+##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition
 
 Quando si lavora con un tipo dynaset o recordset di tipo snapshot, se si chiama `GetPercentPosition` prima di popolare completamente il recordset, la quantità di spostamento è rispetto al numero di record è possibile accedere come indicato dalla chiamata [GetRecordCount](#getrecordcount).
 
@@ -1424,7 +1424,7 @@ Uno dei seguenti valori che indica il tipo di un set di record:
 
 - `dbOpenTable` Recordset tipo di tabella
 
-- `dbOpenDynaset` Tipo dynaset
+- `dbOpenDynaset` Dynaset-type recordset
 
 - `dbOpenSnapshot` Recordset tipo di snapshot
 
@@ -1501,7 +1501,7 @@ Questa tabella mostra le operazioni di spostamento consentite con diverse combin
 ||Metodi MoveFirst, MoveLast|MovePrev,<br /><br /> Spostare < 0|Spostare 0|MoveNext,<br /><br /> Sposta > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
 |`IsBOF`= diverso da zero,<br /><br /> `IsEOF`=0|Allowed|Eccezione|Eccezione|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= diverso da zero|Allowed|Allowed|Eccezione|Eccezione|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|Eccezione|Eccezione|
 |Sia diverso da zero|Eccezione|Eccezione|Eccezione|Eccezione|
 |Entrambi 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1511,10 +1511,10 @@ L'effetto delle operazioni di spostamento non viene individuato un record sul va
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`, `MoveLast`|Diverso da zero|Diverso da zero|
+|`MoveFirst`, `MoveLast`|Nonzero|Nonzero|
 |`Move` 0|Nessuna modifica|Nessuna modifica|
-|`MovePrev`, `Move` < 0|Diverso da zero|Nessuna modifica|
-|`MoveNext`, `Move` > 0|Nessuna modifica|Diverso da zero|
+|`MovePrev`, `Move` < 0|Nonzero|Nessuna modifica|
+|`MoveNext`, `Move` > 0|Nessuna modifica|Nonzero|
 
 Per informazioni correlate, vedere l'argomento "Proprietà BOF, EOF proprietà" nella Guida di DAO.
 
@@ -1574,7 +1574,7 @@ Questa tabella mostra le operazioni di spostamento consentite con diverse combin
 ||Metodi MoveFirst, MoveLast|MovePrev,<br /><br /> Spostare < 0|Spostare 0|MoveNext,<br /><br /> Sposta > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
 |`IsBOF`= diverso da zero,<br /><br /> `IsEOF`=0|Allowed|Eccezione|Eccezione|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= diverso da zero|Allowed|Allowed|Eccezione|Eccezione|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|Eccezione|Eccezione|
 |Sia diverso da zero|Eccezione|Eccezione|Eccezione|Eccezione|
 |Entrambi 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1584,10 +1584,10 @@ L'effetto delle operazioni di spostamento non viene individuato un record sul va
 
 ||IsBOF|IsEOF|
 |------|-----------|-----------|
-|`MoveFirst`, `MoveLast`|Diverso da zero|Diverso da zero|
+|`MoveFirst`, `MoveLast`|Nonzero|Nonzero|
 |`Move` 0|Nessuna modifica|Nessuna modifica|
-|`MovePrev`, `Move` < 0|Diverso da zero|Nessuna modifica|
-|`MoveNext`, `Move` > 0|Nessuna modifica|Diverso da zero|
+|`MovePrev`, `Move` < 0|Nonzero|Nessuna modifica|
+|`MoveNext`, `Move` > 0|Nessuna modifica|Nonzero|
 
 Per informazioni correlate, vedere l'argomento "Proprietà BOF, EOF proprietà" nella Guida di DAO.
 
@@ -1601,7 +1601,7 @@ BOOL IsFieldDirty(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*PV*<br/>
+*pv*<br/>
 Un puntatore a membro di dati di campo cui si desidera controllare, oppure NULL per determinare se i campi sono dirty lo stato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1624,7 +1624,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*PV*<br/>
+*pv*<br/>
 Puntatore al membro dati campo il cui stato desiderato da controllare, oppure NULL per determinare se i campi sono Null.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1653,7 +1653,7 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="parameters"></a>Parametri
 
-*PV*<br/>
+*pv*<br/>
 Puntatore al membro dati campo il cui stato desiderato da controllare, oppure NULL per determinare se i campi sono Null.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1678,7 +1678,7 @@ Diverso da zero se l'oggetto recordset `Open` o `Requery` funzione membro è sta
 
 ### <a name="remarks"></a>Note
 
-##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset:: M_bcheckcachefordirtyfields
+##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields
 
 Contiene un flag che indica se memorizzati nella cache i campi contrassegnati automaticamente come dirty (modificati) e un valore Null.
 
@@ -1766,7 +1766,7 @@ L'uso di *m_strSort* non ha alcun effetto quando si apre un recordset utilizzand
 
 Per informazioni correlate, vedere l'argomento "Proprietà di ordinamento" nella Guida di DAO.
 
-##  <a name="move"></a>  CDaoRecordset:: Move
+##  <a name="move"></a>  CDaoRecordset::Move
 
 Chiamare questa funzione membro per posizionare il recordset *lRows* i record del record corrente.
 
@@ -2125,7 +2125,7 @@ Non è possibile chiamare `Seek` su una tabella collegata di qualsiasi tipo perc
 
 Per informazioni correlate, vedere l'argomento "Seek Method" nella Guida di DAO.
 
-##  <a name="setabsoluteposition"></a>  CDaoRecordset:: SetAbsolutePosition
+##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition
 
 Imposta il numero di record relativo di record corrente dell'oggetto recordset.
 
@@ -2178,7 +2178,7 @@ Si noti che se non si sta creando un set di record UNICODE, il `COleVariant` ogg
 
 Per informazioni correlate, vedere gli argomenti "Proprietà Bookmark" e la proprietà supporta"nella Guida di DAO.
 
-##  <a name="setcachesize"></a>  CDaoRecordset:: SetCacheSize
+##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize
 
 Chiamare questa funzione membro per impostare il numero di record da memorizzare nella cache.
 
@@ -2199,7 +2199,7 @@ Qualsiasi origine dati ODBC, ad esempio una tabella collegata, può avere una ca
 
 Per informazioni correlate, vedere l'argomento "Proprietà CacheSize e CacheStart" nella Guida di DAO.
 
-##  <a name="setcachestart"></a>  CDaoRecordset:: SetCacheStart
+##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart
 
 Chiamare questa funzione membro per specificare il segnalibro del primo record del recordset da memorizzare nella cache.
 
@@ -2226,7 +2226,7 @@ Si noti che se non si sta creando un set di record UNICODE, il `COleVariant` ogg
 
 Per informazioni correlate, vedere l'argomento CacheSize, proprietà CacheStart"nella Guida di DAO.
 
-##  <a name="setcurrentindex"></a>  CDaoRecordset:: SetCurrentIndex
+##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex
 
 Chiamare questa funzione membro per impostare un indice in un set di record di tipo di tabella.
 
@@ -2249,7 +2249,7 @@ Record restituiti da un set di record di tipo di tabella possono essere ordinate
 
 Per informazioni correlate, vedere l'argomento "Oggetto indice" e la definizione "indice corrente" nella Guida di DAO.
 
-##  <a name="setfielddirty"></a>  CDaoRecordset:: SetFieldDirty
+##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty
 
 Chiamare questa funzione membro per contrassegnare un membro dati di campo del set di record come come unchanged o modificati.
 
@@ -2261,7 +2261,7 @@ void SetFieldDirty(
 
 ### <a name="parameters"></a>Parametri
 
-*PV*<br/>
+*pv*<br/>
 Contiene l'indirizzo di un membro dati di campo nel recordset o NULL. Se NULL, vengono contrassegnati tutti i membri dati di campo nel set di record. (C++ NULL non è lo stesso come valori Null nella terminologia dei database, il che significa "non having alcun valore.")
 
 *bDirty*<br/>
@@ -2304,7 +2304,7 @@ void SetFieldNull(
 
 ### <a name="parameters"></a>Parametri
 
-*PV*<br/>
+*pv*<br/>
 Contiene l'indirizzo di un membro dati di campo nel recordset o NULL. Se NULL, vengono contrassegnati tutti i membri dati di campo nel set di record. (C++ NULL non è lo stesso come valori Null nella terminologia dei database, il che significa "non having alcun valore.")
 
 *bNull*<br/>
@@ -2475,7 +2475,7 @@ Il nome del campo del recordset, per la ricerca in base al nome.
 
 C++ NULL non è lo stesso come Null, ovvero, nella terminologia dei database, "non having alcun valore."
 
-##  <a name="setpercentposition"></a>  CDaoRecordset:: SetPercentPosition
+##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition
 
 Chiamare questa funzione membro per impostare un valore che cambia la posizione approssimativa del record corrente nell'oggetto recordset in base a una percentuale dei record del recordset.
 

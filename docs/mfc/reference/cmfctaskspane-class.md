@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293771"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 
@@ -225,19 +225,19 @@ class CMFCTasksPane : public CDockablePane
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Cmfctaskspane:: addgroup](#addgroup)|Aggiunge un nuovo gruppo di attività al controllo del riquadro attività.|
-|[Cmfctaskspane:: AddLabel](#addlabel)|Aggiunge una nuova etichetta statica nel gruppo di attività specificato.|
-|[Cmfctaskspane:: Addmrufileslist](#addmrufileslist)|Aggiunge le attività specificate da un elenco dei file aperti più di recente (MRU) in un gruppo.|
+|[CMFCTasksPane::AddGroup](#addgroup)|Aggiunge un nuovo gruppo di attività al controllo del riquadro attività.|
+|[CMFCTasksPane::AddLabel](#addlabel)|Aggiunge una nuova etichetta statica nel gruppo di attività specificato.|
+|[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)|Aggiunge le attività specificate da un elenco dei file aperti più di recente (MRU) in un gruppo.|
 |[CMFCTasksPane::AddPage](#addpage)|Aggiunge una nuova pagina al riquadro attività.|
 |[CMFCTasksPane::AddSeparator](#addseparator)||
-|[Cmfctaskspane:: Addtask](#addtask)|Aggiunge una nuova attività al gruppo di attività specificato.|
+|[CMFCTasksPane::AddTask](#addtask)|Aggiunge una nuova attività al gruppo di attività specificato.|
 |[CMFCTasksPane::AddWindow](#addwindow)|Aggiunge una finestra figlio al riquadro attività.|
 |[CMFCTasksPane::CollapseAllGroups](#collapseallgroups)||
 |[CMFCTasksPane::CollapseGroup](#collapsegroup)|Comprime un gruppo a livello di codice.|
 |[CMFCTasksPane::CreateDefaultMiniframe](#createdefaultminiframe)|(Esegue l'override [cpane:: Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe).)|
 |[CMFCTasksPane::CreateMenu](#createmenu)|Chiamato dal framework per creare un menu di scelta per il **altri riquadri attività** pulsante di menu.|
 |[CMFCTasksPane::EnableAnimation](#enableanimation)|Abilita o disabilita l'animazione come pacchetto o per espandere i gruppi di attività.|
-|[Cmfctaskspane:: Enablegroupcollapse](#enablegroupcollapse)|Specifica se i gruppi di attività possono essere compressi.|
+|[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)|Specifica se i gruppi di attività possono essere compressi.|
 |[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|Abilita o disabilita il menu di riepilogo a discesa **successivo** e **Previous** pulsanti di navigazione.|
 |[CMFCTasksPane::EnableNavigationToolbar](#enablenavigationtoolbar)|Abilita o disabilita la barra degli strumenti di navigazione.|
 |[CMFCTasksPane::EnableOffsetCustomControls](#enableoffsetcustomcontrols)||
@@ -374,7 +374,7 @@ L'esempio seguente illustra come costruire un oggetto `CMFCTasksPane` e usare i 
 
 **Intestazione:** afxtaskspane. H
 
-##  <a name="addgroup"></a>  Cmfctaskspane:: addgroup
+##  <a name="addgroup"></a>  CMFCTasksPane::AddGroup
 
 Aggiunge un nuovo gruppo di attività al controllo del riquadro attività.
 
@@ -404,7 +404,7 @@ int AddGroup(
 *bBottomLocation*<br/>
 [in] TRUE per creare il gruppo nella parte inferiore del controllo del riquadro attività; in caso contrario, FALSE.
 
-*bOpzioni speciali*<br/>
+*bSpecial*<br/>
 [in] TRUE per contrassegnare questo gruppo è un *speciale* gruppo; in caso contrario, FALSE. Per altre informazioni sui gruppi speciali, vedere la sezione Osservazioni di `CMFCTasksPane`.
 
 *hIcon*<br/>
@@ -434,7 +434,7 @@ int AddLabel(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice del gruppo in cui viene aggiunto l'etichetta.
 
 *lpszLabelName*<br/>
@@ -454,7 +454,7 @@ Indice a base zero del gruppo in cui è stato aggiunto l'etichetta, oppure -1 se
 
 Il framework gestisce le attività e le etichette in modo diverso. Quando un utente fa clic su un'attività, il framework esegue un comando. Quando un utente fa clic su un'etichetta, non viene eseguito alcun comando. Per altre informazioni, vedere [cmfctaskspane:: Addtask](#addtask).
 
-##  <a name="addmrufileslist"></a>  Cmfctaskspane:: Addmrufileslist
+##  <a name="addmrufileslist"></a>  CMFCTasksPane::AddMRUFilesList
 
 Aggiunge un'attività per ogni file archiviato in un elenco di file più recente (MRU) in un gruppo.
 
@@ -466,7 +466,7 @@ int AddMRUFilesList(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice di un gruppo. Questo metodo aggiunge l'elenco di file usati di recente per il gruppo specificato da questo parametro.
 
 *nMaxFiles*<br/>
@@ -501,13 +501,13 @@ int AddSeparator(int nGroup);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *separa*<br/>
+[in] *nGroup*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-##  <a name="addtask"></a>  Cmfctaskspane:: Addtask
+##  <a name="addtask"></a>  CMFCTasksPane::AddTask
 
 Aggiunge un'attività al gruppo di attività specificata.
 
@@ -522,7 +522,7 @@ int AddTask(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice di gruppo in cui l'attività viene aggiunta.
 
 *lpszTaskName*<br/>
@@ -556,7 +556,7 @@ int AddWindow(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice di gruppo in cui viene aggiunta la finestra.
 
 *hwndTask*<br/>
@@ -626,7 +626,7 @@ BOOL CollapseGroup(
 *bCollapse*<br/>
 [in] TRUE per comprimere il gruppo. FALSE per espandere il gruppo.
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo per comprimere l'elenco interno dei gruppi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -686,7 +686,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 Per impostazione predefinita, l'animazione che si verifica quando si espande o comprime di un gruppo di attività è abilitata.
 
-##  <a name="enablegroupcollapse"></a>  Cmfctaskspane:: Enablegroupcollapse
+##  <a name="enablegroupcollapse"></a>  CMFCTasksPane::EnableGroupCollapse
 
 Specifica se un utente può comprimere i gruppi di attività.
 
@@ -764,7 +764,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAttivare il*<br/>
+[in] *bEnable*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -898,7 +898,7 @@ BOOL GetGroupLocation(
 *pGroup*<br/>
 [in] Specifica il gruppo di attività il cui percorso viene recuperato.
 
-*Separa*<br/>
+*nGroup*<br/>
 [out] Contiene l'indice in base zero del gruppo di attività.
 
 ### <a name="return-value"></a>Valore restituito
@@ -957,7 +957,7 @@ BOOL GetPageByGroup(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo di attività.
 
 *nPage*<br/>
@@ -1017,10 +1017,10 @@ CMFCTasksPaneTask* GetTask(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo che contiene l'attività.
 
-*nLo*<br/>
+*nTask*<br/>
 [in] Specifica l'indice in base zero dell'attività nell'elenco specificato da *separa*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1037,7 +1037,7 @@ int GetTaskCount(int nGroup) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice del gruppo di attività.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1054,7 +1054,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo da recuperare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1087,10 +1087,10 @@ BOOL GetTaskLocation(
 *uiCommandID*<br/>
 [in] Specifica l'ID di comando dell'attività da trovare.
 
-*Separa*<br/>
+*nGroup*<br/>
 [out] Contiene l'indice di gruppo dell'attività.
 
-*nLo*<br/>
+*nTask*<br/>
 [out] Contiene l'indice dell'attività nel gruppo di attività.
 
 *hwndTask*<br/>
@@ -1511,7 +1511,7 @@ void RemoveAllTasks(int nGroup);
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo.
 
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup
@@ -1524,7 +1524,7 @@ void RemoveGroup(int nGroup);
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo da rimuovere.
 
 ### <a name="remarks"></a>Note
@@ -1559,10 +1559,10 @@ BOOL RemoveTask(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo di attività che contiene l'attività da rimuovere.
 
-*nLo*<br/>
+*nTask*<br/>
 [in] Specifica l'indice in base zero dell'attività da rimuovere.
 
 *bRedraw*<br/>
@@ -1694,7 +1694,7 @@ BOOL SetGroupName(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo.
 
 *lpszGroupName*<br/>
@@ -1717,7 +1717,7 @@ BOOL SetGroupTextColor(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo.
 
 *color*<br/>
@@ -1792,7 +1792,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *clrTransparent*<br/>
 [in] Specifica il colore trasparente.
 
-*oggetti HICON*<br/>
+*hIcons*<br/>
 [in] Specifica l'elenco di immagini che contiene le icone per il riquadro attività.
 
 ### <a name="remarks"></a>Note
@@ -1836,10 +1836,10 @@ BOOL SetTaskName(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo di attività.
 
-*nLo*<br/>
+*nTask*<br/>
 [in] Specifica l'indice in base zero dell'attività.
 
 *lpszTaskName*<br/>
@@ -1908,10 +1908,10 @@ BOOL SetTaskTextColor(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo di attività che contiene l'attività.
 
-*nLo*<br/>
+*nTask*<br/>
 [in] Specifica l'indice in base zero dell'attività.
 
 *color*<br/>
@@ -1960,7 +1960,7 @@ BOOL SetWindowHeight(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo che contiene il controllo di finestra.
 
 *hwndTask*<br/>
@@ -2003,10 +2003,10 @@ BOOL ShowTask(
 
 ### <a name="parameters"></a>Parametri
 
-*Separa*<br/>
+*nGroup*<br/>
 [in] Specifica l'indice in base zero del gruppo.
 
-*nLo*<br/>
+*nTask*<br/>
 [in] Specifica l'indice in base zero dell'attività per mostrare o nascondere.
 
 *bShow*<br/>

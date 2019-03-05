@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: f1a1e7fe00218efe7514fe59ea78ea30b33b878f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329566"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297593"
 ---
 # <a name="caxwindow-class"></a>Classe CAxWindow
 
@@ -273,7 +273,7 @@ Handle per una finestra esistente.
 
 Restituisce un riferimento all'oggetto `CAxWindow` corrente.
 
-##  <a name="querycontrol"></a>  CAxWindow:: QueryControl
+##  <a name="querycontrol"></a>  CAxWindow::QueryControl
 
 Recupera l'interfaccia specificata del controllo ospitato.
 
@@ -285,7 +285,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Specifica l'IID dell'interfaccia del controllo.
 
 *ppUnk*<br/>
@@ -298,7 +298,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 Un valore HRESULT standard.
 
-##  <a name="queryhost"></a>  CAxWindow:: QueryHost
+##  <a name="queryhost"></a>  CAxWindow::QueryHost
 
 Restituisce l'interfaccia specificata dell'host.
 
@@ -310,7 +310,7 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] Specifica l'IID dell'interfaccia del controllo.
 
 *ppUnk*<br/>
@@ -367,9 +367,8 @@ Esterno `IDocHostUIHandlerDispatch` interfaccia viene utilizzata da tutti i cont
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio ATLCON](../../visual-cpp-samples.md)<br/>
+[ATLCON Sample](../../visual-cpp-samples.md)<br/>
 [Classe CWindow](../../atl/reference/cwindow-class.md)<br/>
 [Nozioni fondamentali sul controllo composito](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Domande frequenti sul contenimento di controllo](../../atl/atl-control-containment-faq.md)
-

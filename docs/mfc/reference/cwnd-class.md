@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894536"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276546"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1121,7 +1121,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnCtlColor](#onctlcolor)|Chiamata eseguita se `CWnd` è l'elemento padre di un controllo quando il controllo sta per essere disegnato.|
 |[CWnd::OnDeadChar](#ondeadchar)|Chiamata eseguita quando una sequenza di tasti viene convertita in un carattere non utilizzato non di sistema (come i caratteri accentati).|
 |[CWnd::OnDeleteItem](#ondeleteitem)|Chiamata eseguita quando viene eliminata definitivamente una casella di riepilogo o una casella combinata figlio disegnata dal proprietario o quando vengono rimossi elementi dal controllo.|
-|[CWnd::OnDestroy](#ondestroy)|Chiamata eseguita quando viene eliminato definitivamente l'oggetto `CWnd`.|
+|[CWnd::OnDestroy](#ondestroy)|Chiamata eseguita quando viene eliminato in modo permanente l'oggetto `CWnd`.|
 |[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Chiamato quando viene svuotato Appunti tramite una chiamata a di Windows [EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) (funzione).|
 |[CWnd::OnDeviceChange](#ondevicechange)|Invia notifica a un'applicazione o driver di dispositivo di una modifica alla configurazione hardware di un dispositivo o del computer.|
 |[CWnd::OnDevModeChange](#ondevmodechange)|Chiamata eseguita per tutte le finestre di primo livello quando l'utente modifica le impostazioni della modalità dispositivo.|
@@ -1202,7 +1202,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnPaintClipboard](#onpaintclipboard)|Chiamata eseguita quando l'area client del visualizzatore degli Appunti deve essere ridisegnata.|
 |[CWnd::OnPaletteChanged](#onpalettechanged)|Chiamata eseguita per consentire alle finestre che usano una tavolozza dei colori di realizzare le tavolozze logiche e aggiornare le rispettive aree client.|
 |[CWnd::OnPaletteIsChanging](#onpaletteischanging)|Informa altre applicazioni quando un'applicazione sta per realizzare la propria tavolozza logica.|
-|[CWnd::OnParentNotify](#onparentnotify)|Chiamata eseguita quando una finestra figlio viene creata o eliminata definitivamente oppure quando l'utente fa clic su un pulsante del mouse mentre il cursore è posizionato sopra la finestra figlio.|
+|[CWnd::OnParentNotify](#onparentnotify)|Chiamata eseguita quando una finestra figlio viene creata o eliminata in modo permanente oppure quando l'utente fa clic su un pulsante del mouse mentre il cursore è posizionato sopra la finestra figlio.|
 |[CWnd::OnPowerBroadcast](#onpowerbroadcast)|Chiamata eseguita quando si verifica un evento di risparmio energia.|
 |[CWnd::OnQueryDragIcon](#onquerydragicon)|Chiamata eseguita quando un oggetto `CWnd` ridotto a icona sta per essere trascinato dall'utente.|
 |[CWnd::OnQueryEndSession](#onqueryendsession)|Chiamata eseguita quando l'utente sceglie di terminare la sessione di Windows.|
@@ -1213,7 +1213,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnRButtonDblClk](#onrbuttondblclk)|Chiamata eseguita quando l'utente fa doppio clic con il pulsante destro del mouse.|
 |[CWnd::OnRButtonDown](#onrbuttondown)|Chiamata eseguita quando l'utente preme il pulsante destro del mouse.|
 |[CWnd::OnRButtonUp](#onrbuttonup)|Chiamata eseguita quando l'utente rilascia il pulsante destro del mouse.|
-|[CWnd::OnRenderAllFormats](#onrenderallformats)|Chiamata eseguita quando l'applicazione proprietaria viene eliminata definitivamente e deve eseguire il rendering di tutti i formati.|
+|[CWnd::OnRenderAllFormats](#onrenderallformats)|Chiamata eseguita quando l'applicazione proprietaria viene eliminata in modo permanente e deve eseguire il rendering di tutti i formati.|
 |[CWnd::OnRenderFormat](#onrenderformat)|Chiamata eseguita per il proprietario degli Appunti quando è necessario eseguire il rendering di un formato particolare con rendering ritardato.|
 |[CWnd::OnSessionChange](#onsessionchange)|Chiamata eseguita per notificare a un'applicazione una modifica nello stato della sessione.|
 |[CWnd::OnSetCursor](#onsetcursor)|Chiamata eseguita se l'input del mouse non viene acquisto e il mouse causa lo spostamento del cursore all'interno di una finestra.|
@@ -1238,7 +1238,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTouchInput](#ontouchinput)|Consente di elaborare singoli input tramite tocco di Windows.|
 |[CWnd::OnTouchInputs](#ontouchinputs)|Consente di elaborare input tramite tocco di Windows.|
 |[CWnd::OnUniChar](#onunichar)|Chiamata eseguita alla pressione di un tasto. Vale a dire, la finestra corrente ha lo stato attivo della tastiera e un [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) messaggio viene convertito dalle [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) (funzione).|
-|[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|Chiamata eseguita quando un menu a discesa o un sottomenu viene eliminato definitivamente.|
+|[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|Chiamata eseguita quando un menu a discesa o un sottomenu viene eliminato in modo permanente.|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|Chiamata eseguita per cambiare lo stato dell'interfaccia utente per la finestra specificata e tutte le finestre figlio.|
 |[CWnd::OnUserChanged](#onuserchanged)|Chiamata eseguita dopo che l'utente ha effettuato l'accesso o la disconnessione.|
 |[CWnd::OnVKeyToItem](#onvkeytoitem)|Chiamato da una casella di riepilogo appartenente `CWnd` in risposta a un [WM_KEYDOWN](#onkeydown) messaggio.|
@@ -1281,7 +1281,7 @@ La classe `CWnd` consente inoltre di creare una finestra figlio di Windows per l
 
 È possibile creare una finestra figlio in due passaggi. In primo luogo, chiamare il costruttore `CWnd` per costruire il `CWnd` dell'oggetto, quindi chiamare il [Create](#create) funzione membro per creare la finestra figlio e collegarla al `CWnd` oggetto.
 
-Quando l'utente termina la finestra figlio, eliminare definitivamente l'oggetto `CWnd` oppure chiamare la funzione membro `DestroyWindow` per rimuovere la finestra ed eliminare definitivamente le relative strutture dei dati.
+Quando l'utente termina la finestra figlio, eliminare l'oggetto `CWnd` in modo permanente oppure chiamare la funzione membro `DestroyWindow` per rimuovere la finestra ed eliminare in modo permanente le relative strutture dei dati.
 
 All'interno della libreria Microsoft Foundation Class ulteriori classi sono derivate da `CWnd` per rendere disponibili tipi specifici di finestra. Molte di queste classi, tra cui [CFrameWnd](../../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md), [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md), [CView](../../mfc/reference/cview-class.md), e [CDialog](../../mfc/reference/cdialog-class.md), sono progettati per consentire ulteriori derivazioni. Le classi di controllo derivate da `CWnd`, ad esempio [CButton](../../mfc/reference/cbutton-class.md), può essere usato direttamente o può essere usato per un'ulteriore derivazione di classi.
 
@@ -1970,7 +1970,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 Identifica l'oggetto a cui accede il proxy Active Accessibility. Può essere uno dei valori seguenti
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |OBJID_CLIENT|Si riferisce all'area client della finestra.|
 
@@ -6127,7 +6127,7 @@ Contiene il numero di ripetizioni, il numero di volte in cui che la sequenza di 
 *nFlags*<br/>
 Contiene l'analisi codice, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-15|Specifica il numero di ripetizioni. Il valore è il numero di volte in cui che la sequenza di tasti viene ripetuta come risultato dell'utente tenendo premuto il tasto.|
 |16-23|Specifica il codice di analisi. Il valore dipende da OEM (OEM)|
@@ -7386,7 +7386,7 @@ Specifica il codice tasto virtuale della chiave specificata. Per un elenco di co
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |0-7|Analisi codice (valore OEM dipendente).|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è una chiave estesa).|
@@ -7431,7 +7431,7 @@ Specifica il codice tasto virtuale della chiave specificata. Per un elenco di co
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|
@@ -7757,7 +7757,7 @@ Contiene un puntatore all'oggetto selezionato `CMenu`. Il puntatore può essere 
 
 La parola più significativa del valore restituito deve contenere uno dei seguenti codici di comando:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |0|Indica a Windows per rimuovere il carattere che l'utente preme e crea un segnale acustico breve sul relatore del sistema.|
 |1|Indica a Windows per chiudere il menu corrente.|
@@ -9524,7 +9524,7 @@ Specifica il numero di ripetizioni (il numero di volte in cui che la sequenza di
 *nFlags*<br/>
 Il *nFlags* parametro può avere questi valori:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |0-15|Specifica il numero di ripetizioni. Il valore è il numero di volte in cui che la sequenza di tasti viene ripetuta come risultato dell'utente tenendo premuto il tasto...|
 |16-23|Specifica il codice di analisi. Il valore dipende da OEM (OEM)|
@@ -9648,7 +9648,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|
@@ -9687,7 +9687,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|
@@ -9734,7 +9734,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|

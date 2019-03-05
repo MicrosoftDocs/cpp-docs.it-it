@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-ms.openlocfilehash: c1a746487b799979cd83f2900a0f7a12d21a6837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b823cbcd85ebaaeb05979283ea4f8fea80f4b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524837"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290690"
 ---
 # <a name="registry-data-exchange-macros"></a>Macro di scambio di dati del Registro di sistema
 
@@ -79,13 +79,13 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>Parametri
 
-*Manca la chiave radice*<br/>
+*rootkey*<br/>
 Radice chiave del Registro di sistema.
 
-*sottochiave*<br/>
+*subkey*<br/>
 La sottochiave del Registro di sistema.
 
-*valueName*<br/>
+*valuename*<br/>
 La chiave del Registro di sistema.
 
 *membro*<br/>
@@ -113,13 +113,13 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>Parametri
 
-*Manca la chiave radice*<br/>
+*rootkey*<br/>
 Radice chiave del Registro di sistema.
 
-*sottochiave*<br/>
+*subkey*<br/>
 La sottochiave del Registro di sistema.
 
-*valueName*<br/>
+*valuename*<br/>
 La chiave del Registro di sistema.
 
 *membro*<br/>
@@ -147,13 +147,13 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>Parametri
 
-*Manca la chiave radice*<br/>
+*rootkey*<br/>
 Radice chiave del Registro di sistema.
 
-*sottochiave*<br/>
+*subkey*<br/>
 La sottochiave del Registro di sistema.
 
-*valueName*<br/>
+*valuename*<br/>
 La chiave del Registro di sistema.
 
 *membro*<br/>
@@ -181,13 +181,13 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>Parametri
 
-*Manca la chiave radice*<br/>
+*rootkey*<br/>
 Radice chiave del Registro di sistema.
 
-*sottochiave*<br/>
+*subkey*<br/>
 La sottochiave del Registro di sistema.
 
-*valueName*<br/>
+*valuename*<br/>
 La chiave del Registro di sistema.
 
 *membro*<br/>
@@ -204,4 +204,3 @@ Questa macro viene usata in combinazione con le macro BEGIN_RDX_MAP ed END_RDX_M
 
 [Macro](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
-

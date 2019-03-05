@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-ms.openlocfilehash: deeede132a919084399be54d5559605b99c4e4fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290716"
 ---
 # <a name="parallel-patterns-library-ppl"></a>PPL (Parallel Patterns Library)
 
@@ -58,4 +58,3 @@ Ogni iterazione del ciclo richiede una quantità di tempo diversa per il complet
 |[Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)|Descrive i vari contenitori e oggetti paralleli forniti dalla libreria PPL.|
 |[Annullamento nella libreria PPL](cancellation-in-the-ppl.md)|Illustra come annullare il lavoro eseguito da un algoritmo parallelo.|
 |[Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)|Descrive il runtime di concorrenza che semplifica la programmazione parallela e contiene i collegamenti ad argomenti correlati.|
-

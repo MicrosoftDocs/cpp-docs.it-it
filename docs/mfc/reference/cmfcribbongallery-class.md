@@ -78,17 +78,17 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: c6ebfc39c3fcfb467774fb898d9188c2dd3e69e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618864"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298633"
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
 
 Implementa raccolte della barra multifunzione di tipo Office 2007.
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -328,7 +328,7 @@ void EnableMenuResize(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] True per abilitare il ridimensionamento di menu. in caso contrario, FALSE.
 
 *bVertcalOnly*<br/>
@@ -348,7 +348,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per specificare che la barra laterale è abilitata; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -626,7 +626,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAttivare il*<br/>
+[in] *bEnable*<br/>
 
 ### <a name="remarks"></a>Note
 

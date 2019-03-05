@@ -9,12 +9,12 @@ helpviewer_keywords:
 - command handling [MFC], commands in documents
 - documents [MFC], handling messages in
 ms.assetid: c7375584-27af-4275-b2fd-afea476785d0
-ms.openlocfilehash: d2f0a7271452ace9b9e06ff995af61881db4403c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3cce539d52bd04e97a6b5f84cbd833b05afb5bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548954"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280433"
 ---
 # <a name="handling-commands-in-the-document"></a>Gestione dei comandi nel documento
 
@@ -23,4 +23,3 @@ La classe del documento è inoltre possibile gestire alcuni comandi generati da 
 ## <a name="see-also"></a>Vedere anche
 
 [Uso di documenti](../mfc/using-documents.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176692"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286913"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procedura dettagliata: Debug di un'applicazione C++ AMP
 
@@ -36,7 +36,7 @@ Prima di iniziare questa procedura dettagliata:
 
 - Lettura [Panoramica di C++ AMP](../../parallel/amp/cpp-amp-overview.md).
 
-- Assicurarsi che tale riga i numeri vengono visualizzati nell'editor di testo. Per altre informazioni, vedere [procedura: visualizzare i numeri di riga nell'Editor](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
+- Assicurarsi che tale riga i numeri vengono visualizzati nell'editor di testo. Per altre informazioni, vedere [Procedura: Visualizzare i numeri di riga nell'Editor](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
 - Assicurarsi che sia in esecuzione Windows 8 o Windows Server 2012 per supportare il debug nell'emulatore software.
 
@@ -220,7 +220,7 @@ Questa sezione illustra come eseguire il debug di codice della GPU, ovvero il co
 
 2. Nel **pagine delle proprietà** nella finestra di dialogo **delle proprietà di configurazione**, scegliere **debug**.
 
-3. Nel **Debugger da avviare** elenco, selezionare **Debugger Windows locale**.
+3. Nell'elenco **Debugger da avviare** selezionare **Debugger Windows locale**.
 
 4. Nel **tipo di Debugger** elenco, verificare che **automatico** sia selezionata.
 
@@ -335,7 +335,7 @@ Questa sezione illustra come eseguire il debug di codice della GPU, ovvero il co
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Blocco e sblocco dei thread GPU
 
-È possibile bloccare (sospendere) e sbloccare (riprendere) GPU thread dal **thread GPU** finestra o il **espressioni di controllo parallela** finestra. È possibile bloccare e sbloccare i thread della CPU stesso modo. Per informazioni, vedere [procedura: utilizzare la finestra thread](/visualstudio/debugger/how-to-use-the-threads-window).
+È possibile bloccare (sospendere) e sbloccare (riprendere) GPU thread dal **thread GPU** finestra o il **espressioni di controllo parallela** finestra. È possibile bloccare e sbloccare i thread della CPU stesso modo. Per informazioni, vedere [come: Utilizzare la finestra thread](/visualstudio/debugger/how-to-use-the-threads-window).
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Per bloccare e sbloccare i thread GPU
 

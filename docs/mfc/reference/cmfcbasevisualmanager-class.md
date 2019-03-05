@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a9d3be75331004529ca1bd71a0d9422f45cac40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440196"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292211"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Classe CMFCBaseVisualManager
 
@@ -138,7 +138,7 @@ virtual BOOL DrawCheckBox(
 *pDC*<br/>
 [in] Un puntatore a un contesto di dispositivo
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione della casella di controllo.
 
 *bHighlighted*<br/>
@@ -187,10 +187,10 @@ virtual BOOL DrawComboBorder(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rettangolo di delimitazione del bordo della casella combinata.
 
-*bDisattivato*<br/>
+*bDisabled*<br/>
 [in] Specifica se il bordo della casella combinata è disabilitato.
 
 *bIsDropped*<br/>
@@ -221,8 +221,8 @@ virtual BOOL DrawComboDropButton(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*pDC*|[in] Puntatore a un contesto di dispositivo.|
-|*Rect*|[in] Il rettangolo di delimitazione del pulsante elenco a discesa della casella combinata.|
-|*bDisattivato*|[in] Specifica se il pulsante elenco a discesa della casella combinata è disabilitato.|
+|*rect*|[in] Il rettangolo di delimitazione del pulsante elenco a discesa della casella combinata.|
+|*bDisabled*|[in] Specifica se il pulsante elenco a discesa della casella combinata è disabilitato.|
 |*bIsDropped*|[in] Specifica se viene eliminato il pulsante elenco a discesa della casella combinata a discesa.|
 |*bIsHighlighted*|[in] Specifica se il pulsante elenco a discesa della casella combinata è evidenziato.|
 
@@ -247,7 +247,7 @@ virtual BOOL DrawPushButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione del pulsante push.
 
 *pButton*<br/>
@@ -279,7 +279,7 @@ virtual BOOL DrawRadioButton(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di delimitazione del pulsante di opzione.
 
 *bHighlighted*<br/>

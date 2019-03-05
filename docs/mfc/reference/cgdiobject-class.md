@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177849"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301220"
 ---
 # <a name="cgdiobject-class"></a>Classe CGdiObject
 
@@ -68,7 +68,7 @@ class CGdiObject : public CObject
 |[CGdiObject::GetObject](#getobject)|Compila un buffer con dati che descrive l'oggetto GDI di Windows associato ai `CGdiObject` oggetto.|
 |[CGdiObject::GetObjectType](#getobjecttype)|Recupera il tipo dell'oggetto GDI.|
 |[CGdiObject::GetSafeHandle](#getsafehandle)|Restituisce `m_hObject` , a meno che **ciò** è NULL, in cui viene restituito NULL case.|
-|[CGdiObject:: UnrealizeObject](#unrealizeobject)|Reimposta l'origine di un pennello o reimposta una tavolozza logica.|
+|[CGdiObject::UnrealizeObject](#unrealizeobject)|Reimposta l'origine di un pennello o reimposta una tavolozza logica.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -250,7 +250,7 @@ La funzione recupera una struttura di dati il cui tipo dipende dal tipo dell'ogg
 |`CPen`|[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |`CBrush`|[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
-|`CBitmap`|[MAPPA DI BIT](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
+|`CBitmap`|[BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
 |`CPalette`|WORD|
 |`CRgn`|Non supportato|
 
@@ -366,7 +366,7 @@ Recupera un HANDLE all'oggetto GDI di Windows associata. in caso contrario, NULL
 operator HGDIOBJ() const;
 ```
 
-##  <a name="unrealizeobject"></a>  CGdiObject:: UnrealizeObject
+##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject
 
 Reimposta l'origine di un pennello o reimposta una tavolozza logica.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
-ms.openlocfilehash: 66e7b907e3ed50c97e5cc864d51c621713cbf992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f021f2023af839413306c1e3d56dc741749cf216
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455952"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276598"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Impostazioni applicazione, Creazione guidata DLL MFC
 
@@ -51,4 +51,3 @@ Selezionare se la DLL MFC deve supportare l'automazione e se è opportuno che il
 
 [Procedura guidata DLL MFC](../../mfc/reference/mfc-dll-wizard.md)<br/>
 [Creazione di un progetto DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md)
-

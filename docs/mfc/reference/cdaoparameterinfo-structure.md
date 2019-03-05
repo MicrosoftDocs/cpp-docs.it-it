@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 29248f04833662750d99b112fe2386c6ff4d97fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62addd44f8aa8fceafef6a27244994a2ec6b766b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273946"
 ---
 # <a name="cdaoparameterinfo-structure"></a>Struttura CDaoParameterInfo
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-ms.openlocfilehash: f9bed3814c4489cf3850ccab97efb23caeb51730
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1cc3dc734917da46af99e67da40fe243941102e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640804"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280667"
 ---
 # <a name="adding-an-mfc-class"></a>Aggiunta di una classe MFC
 
@@ -36,4 +36,3 @@ Per aggiungere le classi derivate dalle classi della libreria di classi MFC (Mic
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Panoramica della classe](../../mfc/class-library-overview.md)
-

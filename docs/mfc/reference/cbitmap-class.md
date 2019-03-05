@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178174"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296727"
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 
@@ -64,14 +64,14 @@ class CBitmap : public CGdiObject
 |Nome|Descrizione|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|Inizializza l'oggetto con una bitmap in memoria dipendente dalla periferica che ha un larghezza specificata, altezza e schema di bit.|
-|[CBitmap:: Createbitmapindirect](#createbitmapindirect)|Inizializza l'oggetto con una bitmap con la larghezza, altezza e schema di bit (se ne è specificata una) fornito un `BITMAP` struttura.|
+|[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Inizializza l'oggetto con una bitmap con la larghezza, altezza e schema di bit (se ne è specificata una) fornito un `BITMAP` struttura.|
 |[CBitmap::CreateCompatibleBitmap](#createcompatiblebitmap)|Inizializza l'oggetto con una mappa di bit in modo che risulti compatibile con un dispositivo specifico.|
 |[CBitmap::CreateDiscardableBitmap](#creatediscardablebitmap)|Inizializza l'oggetto con una bitmap annullabile che è compatibile con un dispositivo specifico.|
 |[CBitmap::FromHandle](#fromhandle)|Restituisce un puntatore a un `CBitmap` dell'oggetto se viene fornito un handle a un Windows `HBITMAP` bitmap.|
 |[CBitmap::GetBitmap](#getbitmap)|Riempie un `BITMAP` struttura con le informazioni della bitmap.|
 |[CBitmap::GetBitmapBits](#getbitmapbits)|Copia i bit della bitmap specificata nel buffer specificato.|
 |[CBitmap::GetBitmapDimension](#getbitmapdimension)|Restituisce la larghezza e altezza della bitmap. L'altezza e larghezza si presuppone che sia stato impostato in precedenza dal [SetBitmapDimension](#setbitmapdimension) funzione membro.|
-|[LoadBitmap](#loadbitmap)|Inizializza l'oggetto per il caricamento di una risorsa della bitmap denominata dal file eseguibile dell'applicazione e il collegamento della bitmap all'oggetto.|
+|[CBitmap::LoadBitmap](#loadbitmap)|Inizializza l'oggetto per il caricamento di una risorsa della bitmap denominata dal file eseguibile dell'applicazione e il collegamento della bitmap all'oggetto.|
 |[CBitmap::LoadMappedBitmap](#loadmappedbitmap)|Carica una bitmap e viene eseguito il mapping dei colori con i colori di sistema corrente.|
 |[CBitmap::LoadOEMBitmap](#loadoembitmap)|Inizializza l'oggetto caricamento di una bitmap di Windows predefinita e collegando la bitmap all'oggetto.|
 |[CBitmap::SetBitmapBits](#setbitmapbits)|Imposta i bit di una bitmap per i valori di bit specificato.|
@@ -157,7 +157,7 @@ Terminate le operazioni sull'oggetto `CBitmap` creato dalla funzione `CreateBitm
 
 Per altre informazioni, vedere la descrizione del `bmBits` campo il `BITMAP` struttura. La struttura [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) è descritta nella funzione membro [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
 
-##  <a name="createbitmapindirect"></a>  CBitmap:: Createbitmapindirect
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
 Inizializza una bitmap con la larghezza, altezza e schema di bit (se ne è specificata una) specificato nella struttura a cui punta *lpBitmap*.
 
@@ -336,7 +336,7 @@ La larghezza e altezza della bitmap, misurata in unità di 0,1 millimetro. L'alt
 
 L'altezza e larghezza si presuppone che sono state impostate in precedenza usando il [SetBitmapDimension](#setbitmapdimension) funzione membro.
 
-##  <a name="loadbitmap"></a>  LoadBitmap
+##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap
 
 Carica la risorsa del bitmap denominata da *lpszResourceName* o identificata dal numero di ID nelle *nIDResource* dal file eseguibile dell'applicazione.
 
@@ -524,4 +524,3 @@ GDI non usa questi valori, ad eccezione to restituirle quando un'applicazione ch
 [Esempio MFC MDI](../../visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

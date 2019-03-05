@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Automation classes [MFC]
 - OLE Automation [MFC]
 ms.assetid: 96e5372b-ff8a-4da1-933b-4d9bbf4dceb3
-ms.openlocfilehash: 590a2846f4e732179331eba1b0c61d3b9d6c1a19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08e33e1fce3f792e76e2eec4ecb59601c99d9822
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505911"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326296"
 ---
 # <a name="ole-automation-classes"></a>Classi di automazione OLE
 
@@ -30,4 +30,3 @@ Eccezione generata da un errore durante l'automazione OLE. Le eccezioni di autom
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

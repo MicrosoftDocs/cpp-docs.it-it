@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 13d73b09fc9fb88736242e7d0c04c33baa795914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608598"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285919"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
 
@@ -155,7 +155,7 @@ Il valore minimo dell'intervallo corrente.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -187,7 +187,7 @@ In modalità infinita, l'indicatore di stato riempie ripetutamente dal valore mi
 
 ##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ```
 virtual void OnDraw(CDC* pDC);
