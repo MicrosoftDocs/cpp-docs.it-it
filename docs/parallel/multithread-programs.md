@@ -5,12 +5,12 @@ helpviewer_keywords:
 - threading [C++], about threading
 - multithreading [C++], about threads
 ms.assetid: 02443596-f7e1-48d0-b3a4-39ee0e54e444
-ms.openlocfilehash: 0b79fe84fbf7d910d53cb5bc333668b7d99ab8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd10893ecd33d39b531b9451dec708ea31c121d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502042"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267316"
 ---
 # <a name="multithread-programs"></a>Programmi multithread
 

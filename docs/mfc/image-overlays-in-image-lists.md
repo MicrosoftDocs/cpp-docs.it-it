@@ -6,12 +6,12 @@ helpviewer_keywords:
 - image lists [MFC], image overlays in
 - CImageList class [MFC], image overlays in
 ms.assetid: aaf4e1c4-cd12-42c8-9af4-1bb458889b4e
-ms.openlocfilehash: dc5c28a38d3024f3d8cbd1fa8b9fe9c1c8a09f93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dd0b30ef29a48ebc763564e6fe23632cd300831
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603099"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262779"
 ---
 # <a name="image-overlays-in-image-lists"></a>Sovrapposizioni immagini negli elenchi di immagini
 
@@ -25,4 +25,3 @@ Si disegna una maschera di sovrimpressione su un'immagine con una singola chiama
 
 [Uso di CImageList](../mfc/using-cimagelist.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - declaring functions, message handler functions [MFC]
 ms.assetid: f8d3dbc1-4500-4f1e-a18d-7371edf36386
-ms.openlocfilehash: 3a1fdebf9842c4074e29de07d55d06f9b97dc018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24960abd54e2085ba643dc6438d8c1aa5220adc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268603"
 ---
 # <a name="declaring-message-handler-functions"></a>Dichiarazioni di funzioni gestore messaggi
 
@@ -26,4 +26,3 @@ Determinate regole e convenzioni controllano i nomi delle funzioni gestore messa
 ## <a name="see-also"></a>Vedere anche
 
 [Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
-

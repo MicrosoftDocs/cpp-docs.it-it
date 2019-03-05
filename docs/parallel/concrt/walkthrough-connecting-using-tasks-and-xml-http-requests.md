@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175847"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266510"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procedura dettagliata: Connessione tramite attività e richieste HTTP XML
 
@@ -24,7 +24,7 @@ Per altre informazioni sulle attività, vedere [Task Parallelism](../../parallel
 
 Questo documento viene innanzitutto illustrato come creare `HttpRequest` e le relative classi di supporti. Viene quindi illustrato come utilizzare questa classe da un'app UWP che usa C++ e XAML.
 
-Per un esempio che usa `IXMLHTTPRequest2` ma non le attività, vedere [avvio rapido: connessione mediante richieste HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
+Per un esempio che usa `IXMLHTTPRequest2` ma non le attività, vedere [Guida introduttiva: Connessione tramite richieste HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
 >  `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` sono le interfacce che è consigliabile per l'uso in un'app UWP. È anche possibile adattare questo esempio per l'uso in un'app desktop.
@@ -112,6 +112,6 @@ Ecco l'app in esecuzione:
 [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)<br/>
 [Programmazione asincrona in C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Guida introduttiva: Connessione mediante richieste HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[Avvio rapido: Connessione tramite richieste HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
 [classe task (Runtime di concorrenza)](../../parallel/concrt/reference/task-class.md)<br/>
 [Classe task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)

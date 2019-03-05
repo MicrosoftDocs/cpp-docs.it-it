@@ -1,17 +1,17 @@
 ---
-title: "Procedura: personalizzare il pulsante dell'applicazione"
+title: "Procedura: Personalizzare il pulsante dell'applicazione"
 ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175327"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269534"
 ---
-# <a name="how-to-customize-the-application-button"></a>Procedura: personalizzare il pulsante dell'applicazione
+# <a name="how-to-customize-the-application-button"></a>Procedura: Personalizzare il pulsante dell'applicazione
 
 Quando si fa clic sul pulsante dell'applicazione, viene visualizzato un menu dei comandi. In genere, il menu contiene i comandi correlati al file, ad esempio **aperto**, **salvare**, **stampa**, e **uscita**.
 
@@ -46,7 +46,7 @@ Nella tabella seguente definisce le proprietà del pulsante dell'applicazione.
 |**MRU Caption**|Specifica il testo visualizzato nel pannello dell'elenco dei recenti.|
 |**Immagini di piccole dimensioni**|Specifica l'identificatore dell'immagine che contiene una serie di 16x16 icone. Le icone vengono usate per i pulsanti nella raccolta di pulsanti.|
 |**Usare**|Abilita o disabilita Pannello di elenco dei recenti. Viene visualizzato il pannello di elenco recente nel menu dell'applicazione.|
-|**Larghezza**|Specifica la larghezza in pixel del Pannello di elenco dei recenti.|
+|**Width**|Specifica la larghezza in pixel del Pannello di elenco dei recenti.|
 
 Il menu di applicazione non viene visualizzato nell'area di progettazione. Per visualizzare questo report, è necessario visualizzare l'anteprima della barra multifunzione o eseguire l'applicazione.
 

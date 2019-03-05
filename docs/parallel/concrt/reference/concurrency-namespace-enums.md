@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521076"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271190"
 ---
 # <a name="concurrency-namespace-enums"></a>enumerazioni dello spazio dei nomi Concurrency
 
@@ -106,7 +106,7 @@ enum ConcRT_EventType;
 
 **Intestazione:** concrt. h **Namespace:** concorrenza
 
-##  <a name="concrt_traceflags"></a>  Enumerazione Concrt_TraceFlags
+##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration
 
 Flag di analisi per i tipi di evento
 
@@ -150,7 +150,7 @@ enum CriticalRegionType;
 
 **Intestazione:** concrtrm. h
 
-##  <a name="dynamicprogressfeedbacktype"></a>  Enumerazione DynamicProgressFeedbackType
+##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration
 
 Usato dai criteri `DynamicProgressFeedback` per descrivere se le risorse per l'utilità di pianificazione saranno ribilanciate sulla base di informazioni statistiche raccolte dall'utilità di pianificazione o solo sulla base di processori virtuali che passano allo stato inattivo e viceversa tramite chiamate ai metodi `Activate` e `Deactivate` sull'interfaccia `IVirtualProcessorRoot`. Per altre informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md).
 
@@ -217,16 +217,16 @@ enum PolicyElementKey;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|`ContextPriority`|La priorità del thread del sistema operativo di ogni contesto nell'utilità di pianificazione. Se questa chiave viene impostata sul valore `INHERIT_THREAD_PRIORITY` i contesti nell'utilità di pianificazione ereditano la priorità del thread che ha creato l'utilità di pianificazione.<br /><br /> I valori validi: I valori validi per il Windows `SetThreadPriority` (funzione) e il valore speciale `INHERIT_THREAD_PRIORITY`<br /><br /> Valore predefinito: `THREAD_PRIORITY_NORMAL`|
-|`ContextStackSize`|Dimensione stack riservata di ogni contesto nell'utilità di pianificazione nel kilobyte.<br /><br /> I valori validi: numeri interi positivi<br /><br /> Il valore predefinito: `0`, che indica che il valore predefinito del processo per la dimensione dello stack utilizzabile.|
-|`DynamicProgressFeedback`|Determina se le risorse per l'utilità di pianificazione saranno ribilanciate sulla base di informazioni statistiche raccolte dall'utilità di pianificazione o basati solo sul livello di sottoscrizione di thread hardware sottostante. Per altre informazioni, vedere [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> I valori validi: un membro del `DynamicProgressFeedbackType` enumerazione, ad esempio `ProgressFeedbackEnabled` o `ProgressFeedbackDisabled`<br /><br /> Valore predefinito: `ProgressFeedbackEnabled`|
-|`LocalContextCacheSize`|Quando la `SchedulingProtocol` chiave dei criteri è impostata sul valore `EnhanceScheduleGroupLocality`, specifica il numero massimo di contesti eseguibili consentito deve essere memorizzato nella cache per le code locali processore virtuale. Contesti simili vengono in genere eseguiti nell'ordine di last-in-first-out (LIFO) nel processore virtuale che li hanno causati diventi eseguibile. Si noti che questa chiave dei criteri non ha significato quando le `SchedulingProtocol` chiave è impostata sul valore `EnhanceForwardProgress`.<br /><br /> I valori validi: numeri interi Non negativi<br /><br /> Valore predefinito: `8`|
-|`MaxConcurrency`|La concorrenza massima livello desiderata dall'utilità di pianificazione. Resource manager tenterà di allocare inizialmente a questo numero di processori virtuali. Il valore speciale [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica che il livello di concorrenza desiderato è uguale al numero di thread hardware sul computer. Se il valore specificato per `MinConcurrency` è maggiore del numero di thread hardware sul computer e `MaxConcurrency` è specificato come `MaxExecutionResources`, il valore per `MaxConcurrency` viene generato in modo che corrisponda a ciò che è impostato per `MinConcurrency`.<br /><br /> I valori validi: numeri interi positivi e il valore speciale `MaxExecutionResources`<br /><br /> Valore predefinito: `MaxExecutionResources`|
+|`ContextPriority`|La priorità del thread del sistema operativo di ogni contesto nell'utilità di pianificazione. Se questa chiave viene impostata sul valore `INHERIT_THREAD_PRIORITY` i contesti nell'utilità di pianificazione ereditano la priorità del thread che ha creato l'utilità di pianificazione.<br /><br /> Valori validi: Uno dei valori validi per il Windows `SetThreadPriority` (funzione) e il valore speciale `INHERIT_THREAD_PRIORITY`<br /><br /> Valore predefinito: `THREAD_PRIORITY_NORMAL`|
+|`ContextStackSize`|Dimensione stack riservata di ogni contesto nell'utilità di pianificazione nel kilobyte.<br /><br /> Valori validi: Numeri interi positivi<br /><br /> Il valore predefinito: `0`, che indica che il valore predefinito del processo per la dimensione dello stack utilizzabile.|
+|`DynamicProgressFeedback`|Determina se le risorse per l'utilità di pianificazione saranno ribilanciate sulla base di informazioni statistiche raccolte dall'utilità di pianificazione o basati solo sul livello di sottoscrizione di thread hardware sottostante. Per altre informazioni, vedere [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Valori validi: Un membro del `DynamicProgressFeedbackType` enumerazione, ad esempio `ProgressFeedbackEnabled` o `ProgressFeedbackDisabled`<br /><br /> Valore predefinito: `ProgressFeedbackEnabled`|
+|`LocalContextCacheSize`|Quando la `SchedulingProtocol` chiave dei criteri è impostata sul valore `EnhanceScheduleGroupLocality`, specifica il numero massimo di contesti eseguibili consentito deve essere memorizzato nella cache per le code locali processore virtuale. Contesti simili vengono in genere eseguiti nell'ordine di last-in-first-out (LIFO) nel processore virtuale che li hanno causati diventi eseguibile. Si noti che questa chiave dei criteri non ha significato quando le `SchedulingProtocol` chiave è impostata sul valore `EnhanceForwardProgress`.<br /><br /> Valori validi: Numeri interi non negativi<br /><br /> Valore predefinito: `8`|
+|`MaxConcurrency`|La concorrenza massima livello desiderata dall'utilità di pianificazione. Resource manager tenterà di allocare inizialmente a questo numero di processori virtuali. Il valore speciale [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica che il livello di concorrenza desiderato è uguale al numero di thread hardware sul computer. Se il valore specificato per `MinConcurrency` è maggiore del numero di thread hardware sul computer e `MaxConcurrency` è specificato come `MaxExecutionResources`, il valore per `MaxConcurrency` viene generato in modo che corrisponda a ciò che è impostato per `MinConcurrency`.<br /><br /> Valori validi: Numeri interi positivi e il valore speciale `MaxExecutionResources`<br /><br /> Valore predefinito: `MaxExecutionResources`|
 |`MaxPolicyElementKey`|La chiave dell'elemento massimo dei criteri. Non è una chiave di elemento valido.|
-|`MinConcurrency`|Il livello di concorrenza minimo che deve essere fornito all'utilità di pianificazione da Gestione risorse. Il numero di processori virtuali assegnati a un'utilità di pianificazione si rivolgerà mai di sotto il valore minimo. Il valore speciale [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica che il livello di concorrenza minimo è uguale al numero di thread hardware sul computer. Se il valore specificato per `MaxConcurrency` è minore rispetto al numero di thread hardware sul computer e `MinConcurrency` è specificato come `MaxExecutionResources`, il valore per `MinConcurrency` si riducono in modo che corrisponda a ciò che è impostato per `MaxConcurrency`.<br /><br /> I valori validi: numeri interi Non negativi e il valore speciale `MaxExecutionResources`. Si noti che per i criteri dell'utilità di pianificazione utilizzati per la costruzione delle utilità di pianificazione del runtime di concorrenza, il valore `0` non è valido.<br /><br /> Valore predefinito: `1`|
-|`SchedulerKind`|Il tipo di thread che verrà utilizzata l'utilità di pianificazione per i contesti di esecuzione sottostanti. Per altre informazioni, vedere [SchedulerType](#schedulertype).<br /><br /> Valori validi: un membro dell'enumerazione `SchedulerType`, ad esempio `ThreadScheduler`<br /><br /> Il valore predefinito: `ThreadScheduler`. Questo si traduce in thread Win32 in tutti i sistemi operativi.|
-|`SchedulingProtocol`|Descrive quale algoritmo di pianificazione verrà utilizzato dall'utilità di pianificazione. Per altre informazioni, vedere [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> I valori validi: un membro del `SchedulingProtocolType` enumerazione, ad esempio `EnhanceScheduleGroupLocality` o `EnhanceForwardProgress`<br /><br /> Valore predefinito: `EnhanceScheduleGroupLocality`|
-|`TargetOversubscriptionFactor`|Tentativo del numero di processori virtuali per ogni thread hardware. Se necessario, il fattore dell'oversubscription di destinazione può essere incrementato da Gestione risorse per soddisfare `MaxConcurrency` con i thread hardware sul computer.<br /><br /> I valori validi: numeri interi positivi<br /><br /> Valore predefinito: `1`|
+|`MinConcurrency`|Il livello di concorrenza minimo che deve essere fornito all'utilità di pianificazione da Gestione risorse. Il numero di processori virtuali assegnati a un'utilità di pianificazione si rivolgerà mai di sotto il valore minimo. Il valore speciale [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica che il livello di concorrenza minimo è uguale al numero di thread hardware sul computer. Se il valore specificato per `MaxConcurrency` è minore rispetto al numero di thread hardware sul computer e `MinConcurrency` è specificato come `MaxExecutionResources`, il valore per `MinConcurrency` si riducono in modo che corrisponda a ciò che è impostato per `MaxConcurrency`.<br /><br /> Valori validi: Numeri interi non negativi e il valore speciale `MaxExecutionResources`. Si noti che per i criteri dell'utilità di pianificazione utilizzati per la costruzione delle utilità di pianificazione del runtime di concorrenza, il valore `0` non è valido.<br /><br /> Valore predefinito: `1`|
+|`SchedulerKind`|Il tipo di thread che verrà utilizzata l'utilità di pianificazione per i contesti di esecuzione sottostanti. Per altre informazioni, vedere [SchedulerType](#schedulertype).<br /><br /> Valori validi: Un membro del `SchedulerType` enumerazione, ad esempio, `ThreadScheduler`<br /><br /> Il valore predefinito: `ThreadScheduler`. Questo si traduce in thread Win32 in tutti i sistemi operativi.|
+|`SchedulingProtocol`|Descrive quale algoritmo di pianificazione verrà utilizzato dall'utilità di pianificazione. Per altre informazioni, vedere [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Valori validi: Un membro del `SchedulingProtocolType` enumerazione, ad esempio `EnhanceScheduleGroupLocality` o `EnhanceForwardProgress`<br /><br /> Valore predefinito: `EnhanceScheduleGroupLocality`|
+|`TargetOversubscriptionFactor`|Tentativo del numero di processori virtuali per ogni thread hardware. Se necessario, il fattore dell'oversubscription di destinazione può essere incrementato da Gestione risorse per soddisfare `MaxConcurrency` con i thread hardware sul computer.<br /><br /> Valori validi: Numeri interi positivi<br /><br /> Valore predefinito: `1`|
 |`WinRTInitialization`||
 
 ### <a name="requirements"></a>Requisiti

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 56042c799f22b0e35bbd0d03d96d649e508f6e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f8f5c5629e9794ca8ee2cc6bedbc4ba6bfdb24d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578945"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264937"
 ---
 # <a name="iexecutionresource-structure"></a>Struttura IExecutionResource
 
@@ -37,7 +37,7 @@ struct IExecutionResource;
 |[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Restituisce il numero di processori virtuali attivato radici e sottoscritti esterni thread attualmente associato al thread di hardware sottostante che rappresenta questa risorsa di esecuzione.|
 |[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Restituisce un identificatore univoco per il thread di hardware che rappresenta questa risorsa di esecuzione.|
 |[IExecutionResource::GetNodeId](#getnodeid)|Restituisce un identificatore univoco per il nodo del processore a cui appartiene questa risorsa di esecuzione.|
-|[IExecutionResource:: Remove](#remove)|Restituisce la risorsa di esecuzione a Resource Manager.|
+|[IExecutionResource::Remove](#remove)|Restituisce la risorsa di esecuzione a Resource Manager.|
 
 ## <a name="remarks"></a>Note
 

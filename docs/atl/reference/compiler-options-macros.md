@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: d0da6ebcb178735fc25c656241fe23497d941ab6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631153"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258476"
 ---
 # <a name="compiler-options-macros"></a>Macro di opzioni del compilatore
 
@@ -30,16 +30,16 @@ Queste macro controllano le funzionalità del compilatore specifici.
 |||
 |-|-|
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Un simbolo che attiva gli errori nei progetti convertiti da versioni precedenti di ATL.|
-|[ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Definire se uno o più degli oggetti di usare il threading apartment.|
+|[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Definire se uno o più degli oggetti di usare il threading apartment.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Assicura `CString` costruttori espliciti, impedendo tutte le conversioni non intenzionali.|
 |[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Definire questa macro per utilizzare C++ compatibile con la sintassi standard, che genera l'errore del compilatore C4867 quando una sintassi non standard viene utilizzata per inizializzare un puntatore a una funzione membro.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Definire se uno o più degli oggetti di usare il threading libero o neutrale.|
-|[ATL_MULTI_THREADED](#_atl_multi_threaded)|Un simbolo che indica il progetto avrà gli oggetti che sono contrassegnati come entrambi, Free o neutro. La macro [_ATL_FREE_THREADED](#_atl_free_threaded) invece deve essere utilizzato.|
+|[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Un simbolo che indica il progetto avrà gli oggetti che sono contrassegnati come entrambi, Free o neutro. La macro [_ATL_FREE_THREADED](#_atl_free_threaded) invece deve essere utilizzato.|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Un simbolo di cui non è possibile utilizzare lo spazio dei nomi predefinito come ATL.|
 |[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Un simbolo che impedisce che si sta compilando il progetto di codice correlato a COM.|
 |[ATL_NO_VTABLE](#atl_no_vtable)|Un simbolo che impedisce che il puntatore vtable inizializzato nel costruttore e distruttore della classe.|
 |[ATL_NOINLINE](#atl_noinline)|Un simbolo che indica una funzione non deve essere impostato come inline.|
-|[ATL_SINGLE_THREADED](#_atl_single_threaded)|Specificare se tutti gli oggetti utilizzano il modello di threading singolo.|
+|[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Specificare se tutti gli oggetti utilizzano il modello di threading singolo.|
 
 ##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS
 
@@ -77,7 +77,7 @@ Se l'oggetto `#define` viene aggiunto, le intestazioni ATL devono fare attenzion
 
 I nuovi progetti hanno questo `#define` in stdafx. h per impostazione predefinita.
 
-##  <a name="_atl_apartment_threaded"></a>  ATL_APARTMENT_THREADED
+##  <a name="_atl_apartment_threaded"></a>  _ATL_APARTMENT_THREADED
 
 Definire se uno o più degli oggetti di usare il threading apartment.
 
@@ -201,14 +201,14 @@ Un simbolo che indica una funzione non deve essere impostato come inline.
 
 ### <a name="parameters"></a>Parametri
 
-*MyFunction*<br/>
+*myfunction*<br/>
 Funzione che non deve essere impostato come inline.
 
 ### <a name="remarks"></a>Note
 
 Utilizzare questo simbolo, se si vuole specificare che una funzione non ottiene impostato come inline dal compilatore, anche se deve essere dichiarato come inline in modo che può essere inserito in un file di intestazione. Si espande **noinline**.
 
-##  <a name="_atl_single_threaded"></a>  ATL_SINGLE_THREADED
+##  <a name="_atl_single_threaded"></a>  _ATL_SINGLE_THREADED
 
 Definire se tutti gli oggetti utilizzano il singolo modello di threading
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-ms.openlocfilehash: e11e072ad3133d5df9614afa8753178e11b2d025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d34c141fc9a2b53eab6a4c0b0ce1799ff5243d84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614071"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263546"
 ---
 # <a name="ole-common-dialog-classes"></a>Classi di finestre di dialogo comuni OLE
 
@@ -41,7 +41,7 @@ Consente di visualizzare la finestra di dialogo Converti, l'interfaccia utente s
 [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)<br/>
 Incapsula la finestra di dialogo Windows OLE proprietà comune. Finestre di dialogo comuni OLE proprietà forniscono un modo semplice per visualizzare e modificare le proprietà di un elemento documento OLE in modo coerente con gli standard di Windows.
 
-[Classe COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)<br/>
+[COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)<br/>
 Consente di visualizzare la finestra di dialogo di aggiornamento, l'interfaccia utente standard per l'aggiornamento di tutti i collegamenti in un documento. La finestra di dialogo contiene un indicatore di stato per indicare come chiudere la procedura di aggiornamento è fino al completamento.
 
 [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)<br/>
@@ -53,4 +53,3 @@ Consente di visualizzare le finestre di dialogo Server occupato e Server non ris
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

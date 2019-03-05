@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: 754232ea57a77b4eb37a72ff98a3150419d0a248
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: d18cad73f9cf42ffd04ecbcde840d50f6167743a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657370"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266224"
 ---
 # <a name="cmapstringtostring-class"></a>Classe CMapStringToString
 
@@ -229,4 +229,3 @@ Chiamare questo metodo per cercare un elemento della mappa con una chiave che co
 [Esempio MFC COLLECT](../../visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

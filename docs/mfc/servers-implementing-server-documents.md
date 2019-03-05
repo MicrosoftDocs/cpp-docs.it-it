@@ -1,5 +1,5 @@
 ---
-title: 'Server: implementazione di documenti server'
+title: 'Server: Implementazione di documenti Server'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE server applications [MFC], managing server documents
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-ms.openlocfilehash: 17c90eb6350a2bf3cd5b695a99dea954dd89a033
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ced1cdb0b40b13fbda68150030efde5735ba7b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436491"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261869"
 ---
-# <a name="servers-implementing-server-documents"></a>Server: implementazione di documenti server
+# <a name="servers-implementing-server-documents"></a>Server: Implementazione di documenti Server
 
 Questo articolo illustra i passaggi che necessari per implementare correttamente un documento del server se non è stato specificato l'opzione Server OLE nella creazione guidata applicazione.
 
@@ -28,7 +28,7 @@ Questo articolo illustra i passaggi che necessari per implementare correttamente
 
    `OnGetEmbeddedItem` viene chiamato quando l'utente di un'applicazione contenitore crea o modifica un elemento incorporato. Deve restituire un elemento che rappresenta l'intero documento. Deve trattarsi di un oggetto del `COleServerItem`-classe derivata.
 
-1. Eseguire l'override di `Serialize` funzione membro per serializzare il contenuto del documento. Non è necessaria serializzare l'elenco di elementi del server a meno che non vengano utilizzati per rappresentare i dati nativi nel documento. Per altre informazioni, vedere *implementare gli elementi del Server* nell'articolo [server: elementi Server](../mfc/servers-server-items.md).
+1. Eseguire l'override di `Serialize` funzione membro per serializzare il contenuto del documento. Non è necessaria serializzare l'elenco di elementi del server a meno che non vengano utilizzati per rappresentare i dati nativi nel documento. Per altre informazioni, vedere *agli elementi del Server che implementa* nell'articolo [server: Gli elementi del server](../mfc/servers-server-items.md).
 
 Quando viene creato un documento di server, il framework registra automaticamente il documento con le DLL di sistema OLE. In questo modo le DLL identificare i documenti del server.
 
@@ -37,7 +37,6 @@ Per altre informazioni, vedere [COleServerItem](../mfc/reference/coleserveritem-
 ## <a name="see-also"></a>Vedere anche
 
 [Server](../mfc/servers.md)<br/>
-[Server: elementi server](../mfc/servers-server-items.md)<br/>
-[Server: implementazione di un server](../mfc/servers-implementing-a-server.md)<br/>
-[Server: implementazione di finestre cornice sul posto](../mfc/servers-implementing-in-place-frame-windows.md)
-
+[Server: Elementi del server](../mfc/servers-server-items.md)<br/>
+[Server: Implementazione di un Server](../mfc/servers-implementing-a-server.md)<br/>
+[Server: Implementazione di Windows sul posto Frame](../mfc/servers-implementing-in-place-frame-windows.md)

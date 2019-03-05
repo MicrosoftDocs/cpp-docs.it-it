@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177875"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269851"
 ---
 # <a name="ceditview-class"></a>Classe CEditView
 
@@ -76,7 +76,7 @@ class CEditView : public CCtrlView
 |[CEditView::GetSelectedText](#getselectedtext)|Recupera la selezione di testo corrente.|
 |[CEditView::LockBuffer](#lockbuffer)|Blocca il buffer.|
 |[CEditView::PrintInsideRect](#printinsiderect)|Esegue il rendering di testo all'interno di un rettangolo specificato.|
-|[CEditView:: SerializeRaw](#serializeraw)|Serializza un `CEditView` oggetto su disco come testo non elaborato.|
+|[CEditView::SerializeRaw](#serializeraw)|Serializza un `CEditView` oggetto su disco come testo non elaborato.|
 |[CEditView::SetPrinterFont](#setprinterfont)|Imposta un nuovo tipo di carattere della stampante.|
 |[CEditView::SetTabStops](#settabstops)|Imposta le tabulazioni per la visualizzazione su schermo e la stampa.|
 |[CEditView::UnlockBuffer](#unlockbuffer)|Sblocca il buffer.|
@@ -186,7 +186,7 @@ BOOL FindText(
 *lpszFind*<br/>
 Il testo da trovare.
 
-*bAvanti*<br/>
+*bNext*<br/>
 Specifica la direzione della ricerca. Se TRUE, la direzione di ricerca è verso la fine del buffer. Se FALSE, la direzione di ricerca è verso l'inizio del buffer.
 
 *bCase*<br/>
@@ -296,7 +296,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Il testo da trovare.
 
-*bAvanti*<br/>
+*bNext*<br/>
 Specifica la direzione della ricerca. Se TRUE, la direzione di ricerca è verso la fine del buffer. Se FALSE, la direzione di ricerca è verso l'inizio del buffer.
 
 *bCase*<br/>
@@ -355,7 +355,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 Il testo da trovare.
 
-*bAvanti*<br/>
+*bNext*<br/>
 Specifica la direzione della ricerca. Se TRUE, la direzione di ricerca è verso la fine del buffer. Se FALSE, la direzione di ricerca è verso l'inizio del buffer.
 
 *bCase*<br/>
@@ -492,7 +492,7 @@ Chiamare `UnlockBuffer` dopo aver utilizzato il puntatore restituito da [LockBuf
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[MFC Sample SUPERPAD](../../visual-cpp-samples.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CEdit](../../mfc/reference/cedit-class.md)<br/>

@@ -13,12 +13,12 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: 77d16eefa61fb30614cb6527792014cc8655abe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264323"
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
 
@@ -83,7 +83,7 @@ Lunghezza della dimensione meno significativa.
 
 |nome|Descrizione|
 |----------|-----------------|
-|[tile_dim0 (costante)](#tile_dim0)|Archivia la lunghezza della dimensione più significativa.|
+|[tile_dim0 Constant](#tile_dim0)|Archivia la lunghezza della dimensione più significativa.|
 |[tile_dim1 (costante)](#tile_dim1)|Archivia la lunghezza della dimensione significativa next-a-la maggior parte.|
 |[tile_dim2 (costante)](#tile_dim2)|Archivia la lunghezza della dimensione meno significativa.|
 
@@ -103,7 +103,7 @@ Lunghezza della dimensione meno significativa.
 
 **Intestazione:** amp.h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
 ## <a name="ctor"> </a>  Costruttore tiled_extent
 

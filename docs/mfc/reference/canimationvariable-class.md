@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 1ad14060c7607698cd647ae34fb35b6ea3ae547c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559562"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269032"
 ---
 # <a name="canimationvariable-class"></a>Classe CAnimationVariable
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Costruisce un oggetto variabile di animazione.|
-|[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|Distruttore. Chiamato quando un oggetto CAnimationVariable viene eliminata definitivamente.|
+|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|Distruttore. Chiamato quando un oggetto CAnimationVariable viene eliminata definitivamente.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -79,10 +79,10 @@ class CAnimationVariable;
 |[CAnimationVariable::ClearTransitions](#cleartransitions)|Cancella le transizioni.|
 |[CAnimationVariable::Create](#create)|Crea l'oggetto COM di variabile sottostante di animazione.|
 |[CAnimationVariable::CreateTransitions](#createtransitions)|Crea tutte le transizioni da applicare a questa variabile di animazione.|
-|[CAnimationVariable:: EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Abilita o disabilita l'evento IntegerValueChanged.|
-|[CAnimationVariable:: EnableValueChangedEvent](#enablevaluechangedevent)|Abilita o disabilita l'evento ValueChanged.|
+|[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Abilita o disabilita l'evento IntegerValueChanged.|
+|[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|Abilita o disabilita l'evento ValueChanged.|
 |[CAnimationVariable::GetDefaultValue](#getdefaultvalue)|Restituisce il valore predefinito.|
-|[CAnimationVariable:: GetParentAnimationObject](#getparentanimationobject)|Restituisce l'elemento padre oggetto di animazione.|
+|[CAnimationVariable::GetParentAnimationObject](#getparentanimationobject)|Restituisce l'elemento padre oggetto di animazione.|
 |[CAnimationVariable::GetValue](#getvalue)|Di overload. Restituisce il valore corrente della variabile di animazione.|
 |[CAnimationVariable::GetVariable](#getvariable)|Restituisce un puntatore a un oggetto COM IUIAnimationVariable.|
 |[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|Imposta il valore predefinito e rilascia un oggetto COM IUIAnimationVariable.|
@@ -120,7 +120,7 @@ La classe CAnimationVariable incapsula un oggetto COM IUIAnimationVariable. Cont
 
 **Intestazione:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable:: ~ CAnimationVariable
+##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable::~CAnimationVariable
 
 Distruttore. Chiamato quando un oggetto CAnimationVariable viene eliminata definitivamente.
 
@@ -198,7 +198,7 @@ void ClearTransitions(BOOL bAutodestroy);
 
 ### <a name="parameters"></a>Parametri
 
-*flag bAutodestroy*<br/>
+*bAutodestroy*<br/>
 Specifica se questo metodo deve eliminare gli oggetti di transizione.
 
 ### <a name="remarks"></a>Note
@@ -249,7 +249,7 @@ TRUE se le transizioni sono state create correttamente. in caso contrario, FALSE
 
 Questo metodo viene chiamato dal framework quando è necessario creare transizioni che sono stati aggiunti all'elenco interno della variabile di transizioni.
 
-##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable:: EnableIntegerValueChangedEvent
+##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable::EnableIntegerValueChangedEvent
 
 Abilita o disabilita l'evento IntegerValueChanged.
 
@@ -264,14 +264,14 @@ void EnableIntegerValueChangedEvent (
 *pController*<br/>
 Puntatore al controller principale.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Evento di attivazione, FALSE - TRUE: disattivare l'evento.
 
 ### <a name="remarks"></a>Note
 
 Quando l'evento ValueChanged è abilitata, il framework chiama il metodo virtuale CAnimationController:: OnAnimationIntegerValueChanged. È necessario eseguirne l'override in una classe derivata da CAnimationController per elaborare questo evento. Questo metodo viene chiamato ogni volta che viene modificato il valore intero della variabile di animazione.
 
-##  <a name="enablevaluechangedevent"></a>  CAnimationVariable:: EnableValueChangedEvent
+##  <a name="enablevaluechangedevent"></a>  CAnimationVariable::EnableValueChangedEvent
 
 Abilita o disabilita l'evento ValueChanged.
 
@@ -286,7 +286,7 @@ void EnableValueChangedEvent (
 *pController*<br/>
 Puntatore al controller principale.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Evento di attivazione, FALSE - TRUE: disattivare l'evento.
 
 ### <a name="remarks"></a>Note
@@ -309,7 +309,7 @@ Il valore predefinito.
 
 Utilizzare questa funzione per ottenere il valore predefinito della variabile di animazione. Il valore predefinito può essere impostato nel costruttore o dal metodo SetDefaultValue.
 
-##  <a name="getparentanimationobject"></a>  CAnimationVariable:: GetParentAnimationObject
+##  <a name="getparentanimationobject"></a>  CAnimationVariable::GetParentAnimationObject
 
 Restituisce l'elemento padre oggetto di animazione.
 
@@ -339,7 +339,7 @@ HRESULT GetValue(INT32& nValue);
 *dblValue*<br/>
 Il valore corrente della variabile di animazione.
 
-*nValore*<br/>
+*nValue*<br/>
 Il valore corrente della variabile di animazione.
 
 ### <a name="return-value"></a>Valore restituito

@@ -2,12 +2,12 @@
 title: Finestre di dialogo e procedure guidate MFC
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-ms.openlocfilehash: a9574b270fdbffc0026d49452adf092fdf87d7cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267472"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Finestre di dialogo e procedure guidate MFC
 
@@ -28,4 +28,3 @@ Le procedure guidate di Microsoft Foundation Class (MFC) generano il codice di b
 |[Supporto ATL in un progetto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|Crea le intestazioni e le macro richieste da Active Template Library (ATL).|
 |[Creazione guidata classe MFC](../../mfc/reference/mfc-class-wizard.md)|Crea un file con estensione h e un file con estensione cpp.|
 |[Applicazioni desktop MFC](../../mfc/mfc-desktop-applications.md)|Collega alla documentazione MFC.|
-

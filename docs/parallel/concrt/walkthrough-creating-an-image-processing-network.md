@@ -1,18 +1,18 @@
 ---
-title: "Procedura dettagliata: creazione di una rete per l'elaborazione di immagini"
+title: 'Procedura dettagliata: Creazione di una rete di elaborazione di immagini'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176172"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262811"
 ---
-# <a name="walkthrough-creating-an-image-processing-network"></a>Procedura dettagliata: creazione di una rete per l'elaborazione di immagini
+# <a name="walkthrough-creating-an-image-processing-network"></a>Procedura dettagliata: Creazione di una rete di elaborazione di immagini
 
 Questo documento illustra come creare una rete di blocchi di messaggi asincroni che eseguono l'elaborazione di immagini.
 
@@ -28,7 +28,7 @@ Prima di iniziare questa procedura dettagliata, leggere i documenti seguenti:
 
 - [Procedura: Usare il filtro di blocco dei messaggi](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-- [Procedura dettagliata: creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
+- [Procedura dettagliata: Creazione di un agente del flusso di dati](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
 
 Si consiglia inoltre di aver compreso i concetti fondamentali di GDI+ prima di iniziare questa procedura dettagliata.
 
@@ -162,7 +162,7 @@ Nella figura seguente mostra l'output di esempio. Ogni immagine di origine è so
 
 Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `image-processing-network.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
 
-**CL.exe /DUNICODE /EHsc immagine-elaborazione-Network. cpp /link gdiplus.lib**
+**cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-ms.openlocfilehash: 9c52cdbd940222b83de9c8e1e47e4e91ad424b44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66a951994a75cbd99debeb2c6511739411cdd470
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611328"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265998"
 ---
 # <a name="creating-document-frame-windows"></a>Creazione di finestre cornice del documento
 
@@ -38,4 +38,3 @@ Prestare attenzione al momento di decidere [quando inizializzare](../mfc/when-to
 ## <a name="see-also"></a>Vedere anche
 
 [Uso di finestre cornice](../mfc/using-frame-windows.md)
-

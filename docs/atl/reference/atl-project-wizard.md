@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: 7a53b33892b23d414a877721eca514931f82080e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9d69b6ca8cf1cff45098f0d63b452238db7ddfe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476700"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259763"
 ---
 # <a name="atl-project-wizard"></a>Creazione guidata progetto ATL
 
@@ -54,4 +54,3 @@ Inoltre, considerare le seguenti attività quando si creano e ottimizzazione di 
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Esercitazione](../../atl/active-template-library-atl-tutorial.md)
-

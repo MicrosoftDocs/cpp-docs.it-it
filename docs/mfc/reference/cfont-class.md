@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: f925940f0813e1912be9f2382b676e80db8240c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607897"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271866"
 ---
 # <a name="cfont-class"></a>Classe CFont
 
@@ -49,9 +49,9 @@ class CFont : public CGdiObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CFont::](#createfont)|Inizializza un `CFont` con le caratteristiche specificate.|
-|[CFont:: CreateFontIndirect](#createfontindirect)|Inizializza una `CFont` oggetto con le caratteristiche di base un `LOGFONT` struttura.|
-|[Cfont](#createpointfont)|Inizializza un `CFont` con l'altezza specificata, misurato in decimi di un punto e il carattere tipografico.|
+|[CFont::CreateFont](#createfont)|Inizializza un `CFont` con le caratteristiche specificate.|
+|[CFont::CreateFontIndirect](#createfontindirect)|Inizializza una `CFont` oggetto con le caratteristiche di base un `LOGFONT` struttura.|
+|[CFont::CreatePointFont](#createpointfont)|Inizializza un `CFont` con l'altezza specificata, misurato in decimi di un punto e il carattere tipografico.|
 |[CFont::CreatePointFontIndirect](#createpointfontindirect)|Uguale allo `CreateFontIndirect` ad eccezione del fatto che l'altezza del tipo di carattere viene misurato in decimi di un punto invece di unità logiche.|
 |[CFont::FromHandle](#fromhandle)|Restituisce un puntatore a un `CFont` dell'oggetto quando viene specificato un HFONT di Windows.|
 |[CFont::GetLogFont](#getlogfont)|Riempie una `LOGFONT` con le informazioni sul tipo di carattere logico associato per il `CFont` oggetto.|
@@ -98,7 +98,7 @@ L'oggetto risultante deve essere inizializzato con `CreateFont`, `CreateFontIndi
 
 [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]
 
-##  <a name="createfont"></a>  CFont::
+##  <a name="createfont"></a>  CFont::CreateFont
 
 Inizializza un `CFont` oggetto con le caratteristiche specificate.
 
@@ -192,7 +192,7 @@ Una volta terminato con il `CFont` oggetto creato dal `CreateFont` funzione, usa
 
 [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]
 
-##  <a name="createfontindirect"></a>  CFont:: CreateFontIndirect
+##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect
 
 Inizializza una `CFont` oggetto con le caratteristiche di base un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)struttura.
 
@@ -221,7 +221,7 @@ Quando non è più necessario il `CFont` oggetto creato dal `CreateFontIndirect`
 
 [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]
 
-##  <a name="createpointfont"></a>  Cfont
+##  <a name="createpointfont"></a>  CFont::CreatePointFont
 
 Questa funzione fornisce un modo semplice per creare un tipo di carattere di un tipo di carattere specificato e la dimensione.
 
@@ -362,4 +362,3 @@ Per altre informazioni sull'uso di oggetti grafici, vedere [gli oggetti di grafi
 [Esempio MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

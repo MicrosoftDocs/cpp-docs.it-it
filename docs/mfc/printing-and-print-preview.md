@@ -8,12 +8,12 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-ms.openlocfilehash: 73aae3391f07ba5ba2fe54e2c45179fe4b347a0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ca6663aefce219fad4d2e3be74215d2a78206a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629294"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263663"
 ---
 # <a name="printing-and-print-preview"></a>Stampa e anteprima di stampa
 

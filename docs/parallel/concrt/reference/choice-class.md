@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267017"
 ---
 # <a name="choice-class"></a>Classe choice
 
@@ -66,7 +66,7 @@ Oggetto `tuple`-sul tipo che rappresenta il payload delle origini di input di ba
 |----------|-----------------|
 |[accept](#accept)|Accetta un messaggio in cui è stato offerto da questo `choice` blocco, trasferendo la proprietà al chiamante.|
 |[acquire_ref](#acquire_ref)|Acquisisce un conteggio dei riferimenti su questo `choice` blocco della messaggistica, per impedire l'eliminazione.|
-|[Utilizzare](#consume)|Utilizza un messaggio offerto in precedenza da questo `choice` blocco della messaggistica e riservato correttamente dalla destinazione, trasferimento di proprietà al chiamante.|
+|[consume](#consume)|Utilizza un messaggio offerto in precedenza da questo `choice` blocco della messaggistica e riservato correttamente dalla destinazione, trasferimento di proprietà al chiamante.|
 |[has_value](#has_value)|Controlla se questo `choice` blocco della messaggistica è ancora stato inizializzato con un valore.|
 |[index](#index)|Restituisce un indice nel `tuple` che rappresenta l'elemento selezionato per il `choice` blocco della messaggistica.|
 |[link_target](#link_target)|Collega un blocco di destinazione a questo `choice` blocco della messaggistica.|
@@ -75,7 +75,7 @@ Oggetto `tuple`-sul tipo che rappresenta il payload delle origini di input di ba
 |[reserve](#reserve)|Consente di riservare un messaggio offerto in precedenza da questo `choice` blocco della messaggistica.|
 |[unlink_target](#unlink_target)|Scollega un blocco di destinazione dal `choice` blocco della messaggistica.|
 |[unlink_targets](#unlink_targets)|Consente di scollegare tutte le destinazioni da questo `choice` blocco della messaggistica. (Esegue l'override [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|
-|[valore](#value)|Ottiene il messaggio il cui indice è stata selezionata per il `choice` blocco della messaggistica.|
+|[value](#value)|Ottiene il messaggio il cui indice è stata selezionata per il `choice` blocco della messaggistica.|
 
 ## <a name="remarks"></a>Note
 
@@ -107,10 +107,10 @@ virtual message<size_t>* accept(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `accept` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -127,7 +127,7 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Note
@@ -162,7 +162,7 @@ Oggetto `tuple` delle origini per choice.
 *_PScheduler*<br/>
 Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `choice` .
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `choice` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 *_Choice*<br/>
@@ -194,10 +194,10 @@ virtual message<size_t>* consume(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` riservato `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `consume` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -246,7 +246,7 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore a un `ITarget` blocco da collegare a questa `choice` blocco della messaggistica.
 
 ##  <a name="release"></a> Versione
@@ -261,10 +261,10 @@ virtual void release(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto rilasciato.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `release` (metodo).
 
 ##  <a name="release_ref"></a> release_ref
@@ -277,7 +277,7 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Note
@@ -296,10 +296,10 @@ virtual bool reserve(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto riservato.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `reserve` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -320,7 +320,7 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore a un `ITarget` scollegare da questo blocco `choice` blocco della messaggistica.
 
 ##  <a name="unlink_targets"></a> unlink_targets

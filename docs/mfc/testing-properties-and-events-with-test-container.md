@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-ms.openlocfilehash: cf36514c6ce2cd25a49901165fcf919cffd5da7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b1d023488e8d547217dafffd224ab9fc05bd876
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633363"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267901"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Test di proprietà ed eventi con Test Container
 
@@ -23,7 +23,7 @@ L'applicazione contenitore di Test, fornito in Visual C++, è un contenitore di 
 
 ### <a name="to-access-the-activex-control-test-container"></a>Per accedere al contenitore di Test di controllo ActiveX
 
-1. Compilare il [esempio TSTCON: controllo ActiveX Test Container](../visual-cpp-samples.md).
+1. Compilare il [esempio TSTCON: Controllo ActiveX Test Container](../visual-cpp-samples.md).
 
 ### <a name="to-test-your-activex-control"></a>Per testare il controllo ActiveX
 
@@ -58,4 +58,3 @@ A questo punto è possibile testare le proprietà del controllo o eventi.
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Procedura: Eseguire il debug di un controllo ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
-

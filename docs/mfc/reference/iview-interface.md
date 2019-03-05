@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 7684ef034acd247355b3f572c86fcb80cb126b0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267823"
 ---
 # <a name="iview-interface"></a>Interfaccia IView
 
@@ -60,7 +60,7 @@ void OnActivateView(bool activate);
 
 ## <a name="parameters"></a>Parametri
 
-*attivare*<br/>
+*activate*<br/>
 Indica se la visualizzazione viene attivata o disattivata.
 
 ## <a name="oninitialupdate"></a> IView::OnInitialUpdate

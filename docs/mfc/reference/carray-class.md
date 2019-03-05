@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: e97a50b2687029ddff3d946f634e145f6709aa48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266133"
 ---
 # <a name="carray-class"></a>CArray (classe)
 
@@ -82,7 +82,7 @@ Parametro di modello che specifica il tipo di argomento che consente di accedere
 |----------|-----------------|
 |[CArray::Add](#add)|Aggiunge un elemento alla fine della matrice; se necessario, aumenta le dimensioni della matrice.|
 |[CArray:: Append](#append)|Aggiunge un'altra matrice nella matrice; si espande la matrice, se necessario|
-|[CArray:: Copy](#copy)|Copia nella matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|
+|[CArray::Copy](#copy)|Copia nella matrice un'altra matrice; se necessario, aumenta le dimensioni della matrice.|
 |[CArray::ElementAt](#elementat)|Restituisce un riferimento temporaneo al puntatore dell'elemento nella matrice.|
 |[CArray::FreeExtra](#freeextra)|Libera tutta la memoria non utilizzata oltre limite il superiore corrente.|
 |[CArray::GetAt](#getat)|Restituisce il valore in corrispondenza di un indice specificato.|
@@ -96,7 +96,7 @@ Parametro di modello che specifica il tipo di argomento che consente di accedere
 |[CArray::RemoveAt](#removeat)|Rimuove un elemento in corrispondenza di un indice specificato.|
 |[CArray::SetAt](#setat)|Imposta il valore per un indice specificato; l'aumento di dimensioni della matrice non è consentito.|
 |[CArray::SetAtGrow](#setatgrow)|Imposta il valore per un indice specificato; se necessario, aumenta le dimensioni della matrice.|
-|[CArray](#setsize)|Imposta il numero di elementi che la matrice deve contenere.|
+|[CArray::SetSize](#setsize)|Imposta il numero di elementi che la matrice deve contenere.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -205,7 +205,7 @@ La matrice si espande un elemento alla volta.
 
 [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]
 
-##  <a name="copy"></a>  CArray:: Copy
+##  <a name="copy"></a>  CArray::Copy
 
 Usare questa funzione membro per copiare gli elementi di una matrice a un altro.
 
@@ -598,7 +598,7 @@ La matrice si espande automaticamente se necessario (vale a dire il limite super
 
 [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]
 
-##  <a name="setsize"></a>  CArray
+##  <a name="setsize"></a>  CArray::SetSize
 
 Consente di stabilire le dimensioni di una matrice vuota o esistente. Consente di allocare memoria se necessario.
 

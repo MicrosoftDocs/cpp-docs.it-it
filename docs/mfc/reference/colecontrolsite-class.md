@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264131"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 
@@ -397,7 +397,7 @@ virtual HRESULT DoVerb(
 *nVerb*<br/>
 Specifica il verbo da eseguire. Può includere uno dei seguenti:
 
-|Value|Significato|Simbolo|
+|Valore|Significato|Simbolo|
 |-----------|-------------|------------|
 |0|verbo primario|OLEIVERB_PRIMARY|
 |-1|Verbo secondario|(Nessuno)|
@@ -1023,7 +1023,7 @@ void SetDefaultButton(BOOL bDefault);
 
 ### <a name="parameters"></a>Parametri
 
-*bLivello predefinito*<br/>
+*bDefault*<br/>
 Diverso da zero se il controllo deve diventare il pulsante predefinito; in caso contrario, zero.
 
 ### <a name="remarks"></a>Note
@@ -1151,7 +1151,7 @@ La nuova posizione della parte superiore della finestra.
 *cx*<br/>
 La nuova larghezza della finestra
 
-*CY*<br/>
+*cy*<br/>
 La nuova altezza della finestra.
 
 *nFlags*<br/>
@@ -1188,7 +1188,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 
 ### <a name="parameters"></a>Parametri
 
-*CmdShow*<br/>
+*nCmdShow*<br/>
 Specifica come deve essere visualizzato il sito del controllo. Deve essere uno dei valori seguenti:
 
 - SW_HIDE nasconde la finestra e passa l'attivazione a un'altra finestra.

@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594961"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263611"
 ---
 # <a name="cdhtmldialog-class"></a>Classe CDHtmlDialog
 
@@ -367,10 +367,10 @@ void DDX_DHtml_AxControl(
 *pDX*<br/>
 Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.
 
-*IDdm*<br/>
+*szId*<br/>
 Il valore del parametro ID del tag object nell'origine HTML per il controllo ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà con cui si vuole eseguire lo scambio di dati.
 
 *szPropName*<br/>
@@ -399,10 +399,10 @@ void DDX_DHtml_CheckBox(
 *pDX*<br/>
 Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.
 
-*IDdm*<br/>
+*szId*<br/>
 Il valore specificato per il parametro ID del controllo HTML.
 
-*valore*<br/>
+*value*<br/>
 Il valore da scambiare.
 
 ### <a name="example"></a>Esempio
@@ -462,13 +462,13 @@ void DDX_DHtml_ElementText(
 *pDX*<br/>
 Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.
 
-*IDdm*<br/>
+*szId*<br/>
 Il valore specificato per il parametro ID del controllo HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch dell'elemento HTML con cui si vuole eseguire lo scambio di dati.
 
-*valore*<br/>
+*value*<br/>
 Il valore da scambiare.
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
@@ -487,10 +487,10 @@ void DDX_DHtml_Radio(
 *pDX*<br/>
 Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.
 
-*IDdm*<br/>
+*szId*<br/>
 Il valore specificato per il parametro ID del controllo HTML.
 
-*valore*<br/>
+*value*<br/>
 Il valore da scambiare.
 
 ##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
@@ -509,10 +509,10 @@ void DDX_DHtml_SelectIndex(
 *pDX*<br/>
 Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.
 
-*IDdm*<br/>
+*szId*<br/>
 Il valore specificato per il parametro id del controllo HTML.
 
-*valore*<br/>
+*value*<br/>
 Il valore da scambiare.
 
 ##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
@@ -531,10 +531,10 @@ void DDX_DHtml_SelectString(
 *pDX*<br/>
 Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.
 
-*IDdm*<br/>
+*szId*<br/>
 Il valore specificato per il parametro ID del controllo HTML.
 
-*valore*<br/>
+*value*<br/>
 Il valore da scambiare.
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
@@ -553,10 +553,10 @@ void DDX_DHtml_SelectValue(
 *pDX*<br/>
 Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.
 
-*IDdm*<br/>
+*szId*<br/>
 Il valore specificato per il parametro ID del controllo HTML.
 
-*valore*<br/>
+*value*<br/>
 Il valore da scambiare.
 
 ### <a name="example"></a>Esempio
@@ -630,7 +630,7 @@ HRESULT GetControlDispatch(
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID HTML di un controllo ActiveX.
 
 *ppdisp*<br/>
@@ -660,7 +660,7 @@ VARIANT GetControlProperty(
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID HTML di un controllo ActiveX.
 
 *szPropName*<br/>
@@ -669,7 +669,7 @@ Il nome di una proprietà nelle impostazioni locali predefinito dell'utente corr
 *pdispControl*<br/>
 Il `IDispatch` puntatore di un controllo ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 L'ID di un elemento HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 L'ID HTML di un controllo ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà da impostare.
 
 *pVar*<br/>
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 L'ID di un elemento HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà da impostare.
 
 *pVar*<br/>
@@ -1527,4 +1527,3 @@ Questa funzione membro è l'implementazione del CDHtmlDialog del [IDocHostUIHand
 [DHtmlExplore esempio MFC](../../visual-cpp-samples.md)<br/>
 [Macro di supporto DDX_DHtml](#ddx_dhtml_helper_macros)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

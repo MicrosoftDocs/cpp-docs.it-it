@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: aa280215aaac55e3aaa9542ca1ab2bd9d21655e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3abf0736884840be7bdcfcd55cb18a0bc8e69195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642039"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270826"
 ---
 # <a name="cd2dellipse-class"></a>Classe CD2DEllipse
 
@@ -59,10 +59,10 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 rettangolo di origine
 
-*ellisse*<br/>
+*ellipse*<br/>
 ellisse di origine
 
 *ptCenter*<br/>

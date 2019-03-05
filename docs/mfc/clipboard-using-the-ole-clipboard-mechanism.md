@@ -1,5 +1,5 @@
 ---
-title: 'Appunti: utilizzo del meccanismo degli Appunti OLE'
+title: 'Appunti: Utilizzo del meccanismo degli Appunti OLE'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 3dadd2ae6774c684fe751e02fb3a80570accd30a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8ef93b306c0968adf2c23c841c792d2f7af5de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661448"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262252"
 ---
-# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Appunti: utilizzo del meccanismo degli Appunti OLE
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Appunti: Utilizzo del meccanismo degli Appunti OLE
 
 Per trasferire dati dagli Appunti, la tecnologia OLE fa uso di formati standard e di alcuni formati OLE specifici.
 
@@ -46,4 +46,3 @@ Ad esempio, per attivare il comando Taglia, è possibile scrivere un gestore sim
 ## <a name="see-also"></a>Vedere anche
 
 [Appunti](../mfc/clipboard.md)
-

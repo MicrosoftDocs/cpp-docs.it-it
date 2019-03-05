@@ -8,12 +8,12 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
-ms.openlocfilehash: 1dd73364b0b67e9ca3e7e47b172cc54db88aaba4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97db98322cd7c0d14e46f54a055bbc646c90d785
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603632"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268993"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Gestione della notifica TTN_NEEDTEXT per le descrizioni comandi
 
@@ -35,7 +35,7 @@ in cui i parametri in corsivo sono:
 *ID*<br/>
 Identificatore del controllo che riceve la notifica. Non usato. L'id del controllo deriva dal **NMHDR** struttura.
 
-*pNMHDR viene convertito nel*<br/>
+*pNMHDR*<br/>
 Un puntatore per il [struttura NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) struttura. Questa struttura viene inoltre illustrata dettagliatamente nella [struttura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).
 
 *pResult*<br/>
@@ -52,4 +52,3 @@ Chiamare `EnableToolTips` (questo frammento ricavato `OnInitDialog`):
 ## <a name="see-also"></a>Vedere anche
 
 [Descrizioni comandi in Windows non derivate da CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
-

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: c6e09ff862f0725cc508e3e390dbfa3cc12f7daa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545964"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270748"
 ---
 # <a name="orderedmessageprocessor-class"></a>Classe ordered_message_processor
 
@@ -57,7 +57,7 @@ Il tipo di payload dei messaggi gestiti da parte del processore.
 |Nome|Descrizione|
 |----------|-----------------|
 |[async_send](#async_send)|Mette in coda i messaggi e avvia un'attività di elaborazione, se non è già stato fatto in modo asincrono. (Esegue l'override [message_processor:: async_send](message-processor-class.md#async_send).)|
-|[inizializzare](#initialize)|Inizializza il `ordered_message_processor` oggetto con il gruppo di funzione, utilità di pianificazione e la pianificazione di callback appropriati.|
+|[initialize](#initialize)|Inizializza il `ordered_message_processor` oggetto con il gruppo di funzione, utilità di pianificazione e la pianificazione di callback appropriati.|
 |[initialize_batched_processing](#initialize_batched_processing)|Inizializza l'elaborazione batch dei messaggi|
 |[sync_send](#sync_send)|In modo sincrono mette in coda i messaggi e avvia un'attività di elaborazione, se non è già stato fatto. (Esegue l'override [message_processor:: sync_send](message-processor-class.md#sync_send).)|
 |[wait](#wait)|Un'attesa di rotazione specifico del processore utilizzata nei distruttori di blocchi di messaggi per verificare che tutte le attività di elaborazione asincrona sia completata prima del blocco di eliminazione definitiva. (Esegue l'override [message_processor:: Wait](message-processor-class.md#wait).)|
@@ -90,7 +90,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
 
 ### <a name="parameters"></a>Parametri
 
-*Msg*<br/>
+*_Msg*<br/>
 Un puntatore a un messaggio.
 
 ##  <a name="initialize"></a> inizializzare
@@ -109,10 +109,10 @@ void initialize(
 *_PScheduler*<br/>
 Un puntatore all'utilità di pianificazione da utilizzare per la pianificazione delle attività leggera.
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Un puntatore per il gruppo di pianificazione da utilizzare per la pianificazione delle attività leggera.
 
-*Handler*<br/>
+*_Handler*<br/>
 Il funtore gestore richiamato durante il callback.
 
 ##  <a name="initialize_batched_processing"></a> initialize_batched_processing
@@ -175,7 +175,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 
 ### <a name="parameters"></a>Parametri
 
-*Msg*<br/>
+*_Msg*<br/>
 Un puntatore a un messaggio.
 
 ##  <a name="wait"></a> Attendere

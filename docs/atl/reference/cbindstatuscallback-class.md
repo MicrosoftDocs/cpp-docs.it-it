@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583313"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259204"
 ---
 # <a name="cbindstatuscallback-class"></a>Classe CBindStatusCallback
 
@@ -67,7 +67,7 @@ Specifica i flag di binding che sono restituiti da [GetBindInfo](#getbindinfo). 
 |Nome|Descrizione|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Costruttore.|
-|[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|Distruttore.|
+|[CBindStatusCallback::~CBindStatusCallback](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -82,7 +82,7 @@ Specifica i flag di binding che sono restituiti da [GetBindInfo](#getbindinfo). 
 |[CBindStatusCallback::OnProgress](#onprogress)|Chiamato per indicare lo stato di avanzamento di un processo di download di dati. L'implementazione di ATL restituisce S_OK.|
 |[CBindStatusCallback::OnStartBinding](#onstartbinding)|Chiamato quando viene avviata l'associazione.|
 |[CBindStatusCallback::OnStopBinding](#onstopbinding)|Chiamato quando il trasferimento dei dati asincrono è stato arrestato.|
-|[CBindStatusCallback:: StartAsyncDownload](#startasyncdownload)|Inizializza i byte disponibili e letti i byte su zero, crea un oggetto di flusso di tipo push da un URL e le chiamate `OnDataAvailable` ogni volta che i dati sono disponibili.|
+|[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)|Inizializza i byte disponibili e letti i byte su zero, crea un oggetto di flusso di tipo push da un URL e le chiamate `OnDataAvailable` ogni volta che i dati sono disponibili.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
@@ -135,7 +135,7 @@ Crea un oggetto per ricevere le notifiche relative al trasferimento di dati asin
 
 Il costruttore inizializza inoltre [m_pT](#m_pt) e [m_pFunc](#m_pfunc) su NULL.
 
-##  <a name="dtor"></a>  CBindStatusCallback:: ~ CBindStatusCallback
+##  <a name="dtor"></a>  CBindStatusCallback::~CBindStatusCallback
 
 Distruttore.
 
@@ -357,12 +357,12 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametri
 
 *grfBSCF*<br/>
-[in] Valore dell'enumerazione BSCF. Uno o più delle seguenti operazioni: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION o BSCF_LASTDATANOTIFICATION.
+[in] Valore dell'enumerazione BSCF. Uno o più delle operazioni seguenti: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION, or BSCF_LASTDATANOTIFICATION.
 
-*dwSize diverso da*<br/>
+*dwSize*<br/>
 [in] Il tempo cumulativo (in byte) disponibile a partire dall'inizio dell'associazione dati. Può essere zero, che indica che la quantità di dati non è rilevante o che è diventato disponibile alcuna quantità specifica.
 
-*pFormatEtc*<br/>
+*pformatetc*<br/>
 [in] Puntatore per il [FORMATETC](/windows/desktop/com/the-formatetc-structure) struttura che contiene il formato dei dati disponibili. Se è presente alcun formato, può essere CF_NULL.
 
 *pstgmed*<br/>
@@ -406,7 +406,7 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 *riid*<br/>
 Identificatore di interfaccia dell'interfaccia richiesta. Non usato.
 
-*pUnk*<br/>
+*punk*<br/>
 Indirizzo dell'interfaccia IUnknown. Non usato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -454,7 +454,7 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 ### <a name="parameters"></a>Parametri
 
 *dwReserved*<br/>
-Riservato per utilizzi futuri.
+Riservato per usi futuri.
 
 *pBinding*<br/>
 [in] Operazione di binding di indirizzo dell'interfaccia IBinding dell'oggetto corrente. Non può essere NULL. Il client deve chiamare AddRef su questo puntatore per mantenere un riferimento all'oggetto di associazione.
@@ -479,7 +479,7 @@ Indirizzo di un valore stringa. Non usato.
 
 Chiamato dal moniker asincrono fornito dal sistema per indicare la fine dell'operazione di associazione.
 
-##  <a name="startasyncdownload"></a>  CBindStatusCallback:: StartAsyncDownload
+##  <a name="startasyncdownload"></a>  CBindStatusCallback::StartAsyncDownload
 
 Avvia il download dei dati in modo asincrono dall'URL specificato.
 

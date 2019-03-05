@@ -8,12 +8,12 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-ms.openlocfilehash: 2fb557d55576678d8c1199bec20e1fa4c849e1b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf9faecbb7e0d74c2199a1a829aa68241e1c019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612251"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264092"
 ---
 # <a name="initializing-documents-and-views"></a>Inizializzazione di documenti e visualizzazioni
 
@@ -24,4 +24,3 @@ Le visualizzazioni vengono create dopo che sono stati creati i documenti. Il mom
 ## <a name="see-also"></a>Vedere anche
 
 [Inizializzazione e pulizia di documenti e visualizzazioni](../mfc/initializing-and-cleaning-up-documents-and-views.md)
-

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179032"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260010"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (classe)
 
@@ -103,12 +103,12 @@ class CAsyncSocket : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAsyncSocket:: Accept](#accept)|Accetta una connessione sul socket.|
+|[CAsyncSocket::Accept](#accept)|Accetta una connessione sul socket.|
 |[CAsyncSocket::AsyncSelect](#asyncselect)|Notifica degli eventi di richieste per il socket.|
 |[CAsyncSocket::Attach](#attach)|Associa un handle del socket a un `CAsyncSocket` oggetto.|
 |[CAsyncSocket::Bind](#bind)|Associa il socket di un indirizzo locale.|
 |[CAsyncSocket::Close](#close)|Chiude il socket.|
-|[CAsyncSocket:: Connect](#connect)|Stabilisce una connessione a un socket di peer.|
+|[CAsyncSocket::Connect](#connect)|Stabilisce una connessione a un socket di peer.|
 |[CAsyncSocket::Create](#create)|Crea un socket.|
 |[CAsyncSocket::Detach](#detach)|Scollega un handle del socket da un `CAsyncSocket` oggetto.|
 |[CAsyncSocket::FromHandle](#fromhandle)|Restituisce un puntatore a un `CAsyncSocket` oggetto, specificato un handle di socket.|
@@ -124,7 +124,7 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket::ReceiveFrom](#receivefrom)|Riceve un datagramma e memorizza l'indirizzo di origine.|
 |[CAsyncSocket::ReceiveFromEx](#receivefromex)|Riceve un datagramma e memorizza l'indirizzo di origine (gestisce gli indirizzi IPv6).|
 |[CAsyncSocket::Send](#send)|Invia i dati a un socket connesso.|
-|[CAsyncSocket:: SendTo](#sendto)|Invia dati a una destinazione specifica.|
+|[CAsyncSocket::SendTo](#sendto)|Invia dati a una destinazione specifica.|
 |[CAsyncSocket::SendToEx](#sendtoex)|Invia dati a una destinazione specifica (gestisce gli indirizzi IPv6).|
 |[CAsyncSocket::SetSockOpt](#setsockopt)|Imposta un'opzione di socket.|
 |[CAsyncSocket::ShutDown](#shutdown)|Consente di disattivare `Send` e/o `Receive` chiama sul socket.|
@@ -1755,11 +1755,11 @@ BOOL ShutDown(int nHow = sends);
 *nHow*<br/>
 Un flag che descrive i tipi di operazione non potrà essere, usando i valori enumerati seguenti:
 
-- **riceve = 0**
+- **receives = 0**
 
-- **Invia = 1**
+- **sends = 1**
 
-- **sia = 2**
+- **both = 2**
 
 ### <a name="return-value"></a>Valore restituito
 

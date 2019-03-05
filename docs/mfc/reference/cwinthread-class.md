@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178421"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270130"
 ---
 # <a name="cwinthread-class"></a>CWinThread (classe)
 
@@ -79,7 +79,7 @@ class CWinThread : public CCmdTarget
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CWinThread:: CreateThread](#createthread)|Avvia l'esecuzione di un `CWinThread` oggetto.|
+|[CWinThread::CreateThread](#createthread)|Avvia l'esecuzione di un `CWinThread` oggetto.|
 |[CWinThread::ExitInstance](#exitinstance)|Eseguire l'override per eseguire la pulizia quando termina il thread.|
 |[CWinThread::GetMainWnd](#getmainwnd)|Recupera un puntatore alla finestra principale per il thread.|
 |[CWinThread::GetThreadPriority](#getthreadpriority)|Ottiene la priorità del thread corrente.|
@@ -91,10 +91,10 @@ class CWinThread : public CCmdTarget
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Intercetta determinati messaggi prima che raggiungano l'applicazione.|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Intercetta tutte le eccezioni non gestite generate da gestori di comandi e messaggi del thread.|
 |[CWinThread::PumpMessage](#pumpmessage)|contiene il ciclo di messaggi del thread.|
-|[CWinThread:: ResumeThread](#resumethread)|Conteggio di sospensione decrementa una del thread.|
-|[CWinThread:: Run](#run)|Funzione di controllo per i thread con un message pump. Eseguire l'override per personalizzare il ciclo di messaggi predefinito.|
+|[CWinThread::ResumeThread](#resumethread)|Conteggio di sospensione decrementa una del thread.|
+|[CWinThread::Run](#run)|Funzione di controllo per i thread con un message pump. Eseguire l'override per personalizzare il ciclo di messaggi predefinito.|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Imposta la priorità del thread corrente.|
-|[CWinThread:: SuspendThread](#suspendthread)|Incrementi di un del thread conteggio di sospensione.|
+|[CWinThread::SuspendThread](#suspendthread)|Incrementi di un del thread conteggio di sospensione.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -140,7 +140,7 @@ Per ulteriori informazioni sul `CWinThread`, vedere gli articoli [Multithreading
 
 **Intestazione:** afxwin.h
 
-##  <a name="createthread"></a>  CWinThread:: CreateThread
+##  <a name="createthread"></a>  CWinThread::CreateThread
 
 Crea un thread da eseguire nello spazio degli indirizzi del processo chiamante.
 
@@ -547,7 +547,7 @@ virtual BOOL PumpMessage();
 
 La chiamata `PumpMessage` direttamente e si esegue l'override del comportamento predefinito è consigliato solo per utenti esperti.
 
-##  <a name="resumethread"></a>  CWinThread:: ResumeThread
+##  <a name="resumethread"></a>  CWinThread::ResumeThread
 
 Chiamato per riprendere l'esecuzione di un thread che è stato sospeso per il [SuspendThread](#suspendthread) funzione membro o un thread creato con il flag CREATE_SUSPENDED.
 
@@ -563,7 +563,7 @@ Il thread del precedente sospendere conteggio se ha esito positivo. `0xFFFFFFFF`
 
 Il conteggio di sospensione del thread corrente viene ridotto di uno. Se il conteggio di sospensione viene ridotto a zero, il thread riprende l'esecuzione; in caso contrario, il thread rimane sospeso.
 
-##  <a name="run"></a>  CWinThread:: Run
+##  <a name="run"></a>  CWinThread::Run
 
 Fornisce un ciclo di messaggi predefinito per i thread dell'interfaccia utente.
 
@@ -620,7 +620,7 @@ Diverso da zero se è stata completata; (funzione) in caso contrario 0.
 
 Può essere chiamato solo dopo aver [CreateThread](#createthread) riesce viene restituito.
 
-##  <a name="suspendthread"></a>  CWinThread:: SuspendThread
+##  <a name="suspendthread"></a>  CWinThread::SuspendThread
 
 Incrementa l'oggetto corrente thread sospendere conteggio.
 

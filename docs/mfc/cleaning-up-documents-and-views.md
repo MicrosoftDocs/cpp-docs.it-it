@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [MFC], cleaning up
 - documents [MFC], closing
 ms.assetid: 0c454db2-3644-434d-9e53-8108a7aedfe1
-ms.openlocfilehash: 1357a02379a848af23a6f78dee29e5b6adc1efcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940c768823d26950d9710fb1d1a52e6a1955fead
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258814"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Pulizia di documenti e visualizzazioni
 
@@ -25,4 +25,3 @@ Quando viene chiuso un documento, il framework chiama innanzitutto relativi [Del
 ## <a name="see-also"></a>Vedere anche
 
 [Inizializzazione e pulizia di documenti e visualizzazioni](../mfc/initializing-and-cleaning-up-documents-and-views.md)
-

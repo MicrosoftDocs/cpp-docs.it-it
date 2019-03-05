@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657487"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268470"
 ---
 # <a name="arrayview-class"></a>Classe array_view
 
@@ -151,9 +151,9 @@ Qualsiasi azione notifica il `array_view` dell'oggetto che la memoria nativa sot
 
 **Intestazione:** amp.h
 
-**Namespace:** Concorrenza
+**Spazio dei nomi:** Concorrenza
 
-##  <a name="dtor"></a> ~ array_view
+##  <a name="dtor"></a> ~array_view
 
 Elimina definitivamente il `array_view` oggetto.
 
@@ -348,7 +348,7 @@ L'extent in ogni dimensione di questo `array_view`.
 *_Other*<br/>
 Un oggetto di tipo `array_view<T,N>` da cui inizializzare la nuova `array_view`.
 
-*Dimen_sioni*<br/>
+*_Size*<br/>
 Le dimensioni di una matrice di tipo C da cui vengono forniti i dati.
 
 *_Src*<br/>
@@ -368,7 +368,7 @@ void copy_to(
 
 ### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
+*_Dest*<br/>
 Oggetto da copiare.
 
 ##  <a name="data"></a> Dati
@@ -426,7 +426,7 @@ value_type& get_ref(
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Indice.
 
 ### <a name="return-value"></a>Valore restituito
@@ -443,7 +443,7 @@ accelerator_view get_source_accelerator_view() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-##  <a name="operator_call"></a> operator)
+##  <a name="operator_call"></a> operator()
 
 Restituisce il valore dell'elemento specificato dal parametro o parametri.
 
@@ -469,7 +469,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Il percorso dell'elemento.
 
 *_I0*<br/>
@@ -488,7 +488,7 @@ Il percorso dell'elemento.
 
 Il valore dell'elemento specificato dal parametro o parametri.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Restituisce l'elemento specificato dai parametri.
 
@@ -502,7 +502,7 @@ value_type& operator[] (
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Indice.
 
 *_I*<br/>
@@ -638,10 +638,10 @@ Il componente successivo-a-più significativo dell'extent di questa sezione.
 *_E2*<br/>
 Componente meno significativo dell'extent di questa sezione.
 
-*Ext*<br/>
+*_Ext*<br/>
 Il [extent](extent-class.md) oggetto che specifica l'extent della sezione. L'origine è 0.
 
-*IDX*<br/>
+*_Idx*<br/>
 Il [indice](index-class.md) oggetto che specifica la posizione dell'origine. La sottosezione rappresenta il resto dell'extent.
 
 *_I0*<br/>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - constructors [MFC], declaring
 - instance constructors, code comments
 ms.assetid: f400774e-ba85-49ed-85b7-70ef2f7dcb2b
-ms.openlocfilehash: ee36ad991f2a19211b494010d6ff0a5338b80557
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0d02af016a0c7bfb0869b7cdd30fe0db2975102
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480704"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265808"
 ---
 # <a name="-constructors-comment"></a>// Commento sui costruttori
 
@@ -31,4 +31,3 @@ Ad esempio, class `CStdioFile` dispone di tre costruttori, uno dei quali viene v
 [Commento sugli attributi](../mfc/decrement-attributes-comment.md)<br/>
 [Commento sulle operazioni](../mfc/decrement-operations-comment.md)<br/>
 [Commento sui sottoponibili a override](../mfc/decrement-overridables-comment.md)
-

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: f421848a87ea3cc38309e85eb39c9453530ce4fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659095"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267485"
 ---
 # <a name="crbmultimap-class"></a>Classe CRBMultiMap
 
@@ -55,7 +55,7 @@ Il codice usato per copiare o spostare gli elementi di valore.
 |Nome|Descrizione|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Costruttore.|
-|[CRBMultiMap:: ~ CRBMultiMap](#dtor)|Distruttore.|
+|[CRBMultiMap::~CRBMultiMap](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -114,7 +114,7 @@ Vedere la documentazione per la classe di base [CRBTree](../../atl/reference/crb
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap
+##  <a name="dtor"></a>  CRBMultiMap::~CRBMultiMap
 
 Distruttore.
 
@@ -170,7 +170,7 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il valore di posizione, ottenuto con una chiamata a [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) oppure [CRBMultiMap::GetNextWithKey](#getnextwithkey), o una chiamata precedente a `GetNextValueWithKey`.
 
 *key*<br/>
@@ -205,7 +205,7 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il valore di posizione, ottenuto con una chiamata a [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) oppure [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), o una chiamata precedente a `GetNextWithKey`.
 
 *key*<br/>
@@ -234,7 +234,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 *key*<br/>
 Il valore della chiave da aggiungere per il `CRBMultiMap` oggetto.
 
-*valore*<br/>
+*value*<br/>
 Il valore da aggiungere per il `CRBMultiMap` oggetto, associato *chiave*.
 
 ### <a name="return-value"></a>Valore restituito

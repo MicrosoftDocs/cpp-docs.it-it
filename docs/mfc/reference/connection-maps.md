@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271151"
 ---
 # <a name="connection-maps"></a>Mappe di connessione
 
@@ -26,10 +26,10 @@ In genere, un controllo supporterà solo due punti di connessione: uno per gli e
 |||
 |-|-|
 |[BEGIN_CONNECTION_PART](#begin_connection_part)|Dichiara una classe incorporata che implementa un punto di connessione aggiuntive (deve essere usato nella dichiarazione di classe).|
-|[END_CONNECTION_PART VIENE](#end_connection_part)|Termina la dichiarazione di un punto di connessione (deve essere usato nella dichiarazione di classe).|
+|[END_CONNECTION_PART](#end_connection_part)|Termina la dichiarazione di un punto di connessione (deve essere usato nella dichiarazione di classe).|
 |[CONNECTION_IID](#connection_iid)|Specifica l'ID di interfaccia del controllo punto di connessione.|
 |[DECLARE_CONNECTION_MAP](#declare_connection_map)|Dichiara che una mappa di connessione verrà utilizzata in una classe (deve essere usato nella dichiarazione di classe).|
-|[MACRO BEGIN_CONNECTION_MAP](#begin_connection_map)|Inizia la definizione di una mappa delle connessioni (deve essere usato nell'implementazione della classe).|
+|[BEGIN_CONNECTION_MAP](#begin_connection_map)|Inizia la definizione di una mappa delle connessioni (deve essere usato nell'implementazione della classe).|
 |[END_CONNECTION_MAP](#end_connection_map)|Termina la definizione di una mappa delle connessioni (deve essere usato nell'implementazione della classe).|
 |[CONNECTION_PART](#connection_part)|Specifica un punto di connessione nella mappa delle connessioni del controllo.|
 
@@ -66,7 +66,7 @@ Nel file di dichiarazione (con estensione h) che definisce le funzioni membro pe
 
   **Intestazione** afxdisp. h
 
-##  <a name="end_connection_part"></a>  END_CONNECTION_PART VIENE
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART
 
 Termina la dichiarazione del punto di connessione.
 
@@ -93,7 +93,7 @@ CONNECTION_IID(iid)
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 L'ID di interfaccia dell'interfaccia chiamato dal punto di connessione.
 
 ### <a name="remarks"></a>Note
@@ -124,7 +124,7 @@ Se il controllo supporta punti aggiuntivi, usare il declare_connection_map (macr
 
   **Intestazione** afxdisp. h
 
-##  <a name="begin_connection_map"></a>  MACRO BEGIN_CONNECTION_MAP
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP
 
 Ogni classe derivata da `COleControl` nel programma può fornire una mappa di connessioni per specificare i punti di connessione che il controllo supporterà.
 
@@ -173,7 +173,7 @@ CONNECTION_PART(theClass, iid, localClass)
 *theClass*<br/>
 Specifica il nome della classe del controllo la cui connessione di questo aspetto.
 
-*IID*<br/>
+*iid*<br/>
 L'ID di interfaccia dell'interfaccia chiamato dal punto di connessione.
 
 *localClass*<br/>
@@ -212,7 +212,7 @@ Un puntatore all'oggetto che chiama l'interfaccia.
 *pUnkSink*<br/>
 Un puntatore all'oggetto che implementa l'interfaccia.
 
-*IID*<br/>
+*iid*<br/>
 L'ID di interfaccia della connessione.
 
 *bRefCount*<br/>
@@ -254,7 +254,7 @@ Un puntatore all'oggetto che chiama l'interfaccia.
 *pUnkSink*<br/>
 Un puntatore all'oggetto che implementa l'interfaccia.
 
-*IID*<br/>
+*iid*<br/>
 L'ID di interfaccia dell'interfaccia di punto di connessione.
 
 *bRefCount*<br/>

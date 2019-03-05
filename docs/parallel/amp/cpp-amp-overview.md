@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269643"
 ---
 # <a name="c-amp-overview"></a>Cenni preliminari su C++ AMP
 
@@ -58,7 +58,7 @@ Come indicato di seguito sono riportate le parti importanti del codice:
 
 - Iterazione: Il primo `for` ciclo fornisce un meccanismo per scorrere gli elementi nelle matrici. Il codice che si vuole eseguire per calcolare le somme è contenuto nel primo `for` blocco.
 
-- Indice: La `idx` variabile accede ai singoli elementi delle matrici.
+- Indice: Il `idx` variabile accede ai singoli elementi delle matrici.
 
 Uso di C++ AMP, è possibile scrivere il codice seguente invece.
 
@@ -102,7 +102,7 @@ Gli stessi elementi base sono presenti, ma vengono utilizzati costrutti C++ AMP:
 
 - Iterazione: Il [funzione (C++ AMP) parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) fornisce un meccanismo per scorrere gli elementi di dati, o *dominio di calcolo*. In questo esempio, il dominio di calcolo specificato da `sum.extent`. Il codice che si vuole eseguire è contenuto in un'espressione lambda, o *funzione del kernel*. Il `restrict(amp)` indica che viene usato solo il subset del linguaggio C++ che C++ AMP può accelerare.
 
-- Indice: La [classe index](../../parallel/amp/reference/index-class.md) variabile `idx`, viene dichiarato con un rango pari a uno in modo che corrisponda il rango del `array_view` oggetto. Tramite l'indice, è possibile accedere ai singoli elementi del `array_view` oggetti.
+- Indice: Il [classe index](../../parallel/amp/reference/index-class.md) variabile `idx`, viene dichiarata con un rango pari a uno in modo che corrisponda il rango del `array_view` oggetto. Tramite l'indice, è possibile accedere ai singoli elementi del `array_view` oggetti.
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>Data shaping e indicizzazione dei dati: indice ed extent
 
@@ -459,11 +459,11 @@ AMP C++ include una libreria grafica progettata per la programmazione grafica ac
 
 - [Classe texture](../../parallel/amp/reference/texture-class.md): È possibile usare la classe texture per creare trame dalla memoria o da un file. Le trame sono simili alle matrici perché contengono dati e sono simili ai contenitori della libreria Standard C++ rispetto alla costruzione di copia e assegnazione. Per altre informazioni, vedere [Contenitori della libreria standard C++](../../standard-library/stl-containers.md). I parametri del modello per il `texture` classe sono il tipo di elemento e il numero di dimensioni. La classificazione può essere 1, 2 o 3. Il tipo di elemento può essere uno dei tipi di vettori short che sono descritte più avanti in questo articolo.
 
-- [Classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): fornisce l'accesso in sola lettura a qualsiasi trama.
+- [Classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): Fornisce l'accesso in sola lettura a qualsiasi trama.
 
-- Libreria short Vector: Definisce un set di tipi vettore short di lunghezza 2, 3 e 4 basati su **int**, `uint`, **float**, **double**, [norm ](../../parallel/amp/reference/norm-class.md), oppure [unorm](../../parallel/amp/reference/unorm-class.md).
+- Libreria short Vector: Definisce un set di tipi vettore short di lunghezza 2, 3 e 4 basati su **int**, `uint`, **float**, **double**, [norm](../../parallel/amp/reference/norm-class.md), o [unorm](../../parallel/amp/reference/unorm-class.md).
 
-## <a name="universal-windows-platform-uwp-apps"></a>App di Universal Windows Platform (UWP)
+## <a name="universal-windows-platform-uwp-apps"></a>App UWP (Universal Windows Platform)
 
 Come altre librerie di C++, è possibile utilizzare AMP C++ nelle App UWP. Questi articoli descrivono come includere codice C++ AMP nelle App che viene creato utilizzando C++, c#, Visual Basic o JavaScript:
 

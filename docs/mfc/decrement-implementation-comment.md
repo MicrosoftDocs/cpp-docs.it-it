@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC source files, Implementation comment
 - comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
-ms.openlocfilehash: ab69fa25cc8dece635097f17bae97f831f7ec87f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 377997b66c5b9c005d1e1bee24890b756621b672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552893"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261050"
 ---
 # <a name="-implementation-comment"></a>// Commento all'implementazione
 
@@ -33,4 +33,3 @@ Si noterà il `CStdioFile` listato sotto [un esempio dei commenti](../mfc/an-exa
 [Commento sugli attributi](../mfc/decrement-attributes-comment.md)<br/>
 [Commento sulle operazioni](../mfc/decrement-operations-comment.md)<br/>
 [Commento sui sottoponibili a override](../mfc/decrement-overridables-comment.md)
-

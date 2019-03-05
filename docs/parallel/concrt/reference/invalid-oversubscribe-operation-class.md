@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 9e25095f70266e772d69f9b644f7def968157912
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 200743d41c1c45f2a957dba0716dd7aa07e3de76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572146"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266679"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>Classe invalid_oversubscribe_operation
 
@@ -57,7 +57,7 @@ invalid_oversubscribe_operation() throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Messaggio*<br/>
+*_Message*<br/>
 Messaggio descrittivo dell'errore.
 
 ## <a name="see-also"></a>Vedere anche
