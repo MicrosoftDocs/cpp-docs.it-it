@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL, registry
 - registry support classes
 ms.assetid: 4203c346-77a9-42bf-8683-a3c3351cc490
-ms.openlocfilehash: eda06f301a071d291f3139c29899ac98cc0c5595
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5131e35b986cc59b07f0b830ec2f5ac22780a516
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526603"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283124"
 ---
 # <a name="registry-support-classes"></a>Classi di supporto del Registro di sistema
 
@@ -30,4 +30,3 @@ La classe seguente fornisce il supporto del Registro di sistema:
 
 [Panoramica della classe](../atl/atl-class-overview.md)<br/>
 [Macro del Registro di sistema](../atl/reference/registry-macros.md)
-

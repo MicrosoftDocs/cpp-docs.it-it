@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175834"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288780"
 ---
 # <a name="ribbon-designer-mfc"></a>Finestra di progettazione della barra multifunzione (MFC)
 
@@ -56,11 +56,11 @@ Per usare la risorsa barra multifunzione nell'applicazione MFC, caricare la riso
 
 È possibile aggiungere una risorsa barra multifunzione al progetto MFC in due modi diversi:
 
-- Creare un'applicazione MFC e configurare la Creazione guidata progetto MFC in modo da creare la barra multifunzione. Per altre informazioni, vedere [procedura dettagliata: creazione di una barra multifunzione dell'applicazione usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+- Creare un'applicazione MFC e configurare la Creazione guidata progetto MFC in modo da creare la barra multifunzione. Per altre informazioni, vedere [Procedura dettagliata: Creazione di un'applicazione barra multifunzione usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
-- In un progetto MFC esistente creare una risorsa barra multifunzione e caricarla. Per altre informazioni, vedere [procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+- In un progetto MFC esistente creare una risorsa barra multifunzione e caricarla. Per altre informazioni, vedere [Procedura dettagliata: L'aggiornamento dell'applicazione MFC Scribble (parte 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
-Se il progetto contiene già una barra multifunzione codificata manualmente, MFC include funzioni che permettono di convertire la barra multifunzione esistente in una risorsa barra multifunzione. Per altre informazioni, vedere [procedura: convertire una barra multifunzione MFC esistente in una risorsa barra multifunzione](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
+Se il progetto contiene già una barra multifunzione codificata manualmente, MFC include funzioni che permettono di convertire la barra multifunzione esistente in una risorsa barra multifunzione. Per altre informazioni, vedere [Procedura: Convertire una barra multifunzione MFC esistente in una risorsa barra multifunzione](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
 
 > [!NOTE]
 >  Le barre multifunzione non possono essere create in applicazioni basate su finestra di dialogo. Per altre informazioni, vedere [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md).
@@ -71,17 +71,17 @@ Per aprire una barra multifunzione nella finestra di progettazione della barra m
 
 La figura seguente mostra i diversi componenti presenti nella finestra di progettazione della barra multifunzione.
 
-![Finestra di progettazione della barra multifunzione MFC](../mfc/media/ribbon_designer.png "progettazione della barra multifunzione MFC")
+![MFC Ribbon Designer](../mfc/media/ribbon_designer.png "MFC Ribbon Designer")
 
-- **Casella degli strumenti:** contiene controlli che possono essere trascinati nell'area di progettazione.
+- **Casella degli strumenti:** Contiene i controlli che possono essere trascinati nell'area di progettazione.
 
-- **Nell'area di progettazione:** contiene la rappresentazione visiva della risorsa barra multifunzione.
+- **Nell'area di progettazione:** Contiene la rappresentazione visiva della risorsa barra multifunzione.
 
 - **Finestra delle proprietà:** Elenca gli attributi dell'elemento selezionato nell'area di progettazione.
 
-- **Finestra Visualizzazione risorse:** vengono visualizzate le risorse che includono risorse della barra multifunzione, nel progetto.
+- **Finestra Visualizzazione risorse:** Consente di visualizzare le risorse che includono risorse della barra multifunzione, nel progetto.
 
-- **Barra degli strumenti Editor Ribbon:** contiene i comandi che consentono di visualizzare l'anteprima della barra multifunzione e modificarne il tema visivo.
+- **Barra degli strumenti Editor Ribbon:** Contiene i comandi che consentono di visualizzare l'anteprima della barra multifunzione e modificarne il tema visivo.
 
 Gli argomenti seguenti descrivono come usare le funzionalità della finestra di progettazione della barra multifunzione:
 
@@ -89,28 +89,27 @@ Gli argomenti seguenti descrivono come usare le funzionalità della finestra di 
 
 - [Procedura: Personalizzare la barra di accesso rapido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [Procedura: Aggiungere controlli e gestori eventi della barra multifunzione](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [Procedura: Aggiungere controlli Ribbon e gestori di eventi](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
 - [Procedura: Caricare una risorsa Ribbon da un'applicazione MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Definizioni degli elementi della barra multifunzione
 
-![Barra multifunzione MFC](../mfc/media/ribbon.png "della barra multifunzione MFC")
+![MFC Ribbon](../mfc/media/ribbon.png "MFC Ribbon")
 
-- **Pulsante dell'applicazione:** pulsante visualizzato nell'angolo superiore sinistro di una barra multifunzione. Il pulsante dell'applicazione sostituisce il menu File ed è visibile anche quando la barra multifunzione è ridotta a icona. Quando si fa clic su questo pulsante, viene visualizzato un menu che contiene un elenco di comandi.
+- **Pulsante dell'applicazione:** Pulsante visualizzato nell'angolo superiore sinistro di una barra multifunzione. Il pulsante dell'applicazione sostituisce il menu File ed è visibile anche quando la barra multifunzione è ridotta a icona. Quando si fa clic su questo pulsante, viene visualizzato un menu che contiene un elenco di comandi.
 
-- **Barra di accesso rapido:** comandi utilizzati più di una piccola barra degli strumenti personalizzabile che viene visualizzato di frequente.
+- **Barra di accesso rapido:** Comandi utilizzati più di una piccola barra degli strumenti personalizzabile che viene visualizzato di frequente.
 
-- **Categoria**: raggruppamento logico che rappresenta il contenuto di una scheda della barra multifunzione.
+- **Categoria**: Il raggruppamento logico che rappresenta il contenuto di una scheda della barra multifunzione.
 
-- **Pulsante predefinito della categoria:** pulsante visualizzato sulla barra multifunzione quando si è ridotta a icona la barra multifunzione. Quando si fa clic su questo pulsante, la categoria viene visualizzata di nuovo come menu.
+- **Pulsante predefinito della categoria:** Il pulsante visualizzato sulla barra multifunzione quando si è ridotta a icona la barra multifunzione. Quando si fa clic su questo pulsante, la categoria viene visualizzata di nuovo come menu.
 
-- **Pannello:** un'area della barra multifunzione che visualizza un gruppo di controlli correlati. Ogni categoria della barra multifunzione contiene uno o più pannelli della barra multifunzione.
+- **Pannello:** Un'area della barra multifunzione che visualizza un gruppo di controlli correlati. Ogni categoria della barra multifunzione contiene uno o più pannelli della barra multifunzione.
 
-- **Elementi della barra multifunzione:** controlli nei pannelli, ad esempio, i pulsanti e caselle combinate. Per i vari controlli che possono essere ospitati in una barra multifunzione, vedere [esempio RibbonGadgets: applicazione gadget della barra multifunzione](../visual-cpp-samples.md).
+- **Elementi della barra multifunzione:** Controlli nei pannelli, ad esempio, i pulsanti e caselle combinate. Per i vari controlli che possono essere ospitati in una barra multifunzione, vedere [esempio RibbonGadgets: Sulla barra multifunzione dell'applicazione gadget](../visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)<br/>
 [Uso di file di risorse](../windows/working-with-resource-files.md)
-

@@ -38,18 +38,18 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: 8592a5485afedab075a21215e1ffa140a8c66e28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b40e4d48e8204824375630f7517ff3f5aa5108d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619453"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291418"
 ---
 # <a name="cmfcautohidebar-class"></a>Classe CMFCAutoHideBar
 
 La classe `CMFCAutoHideBar` è una classe della barra degli strumenti speciale che implementa la funzionalità Nascondi automaticamente.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -211,7 +211,7 @@ virtual BOOL Create(
 
 *dwStyle*<br/>
 
-*Rect*<br/>
+*rect*<br/>
 
 *pParentWnd*<br/>
 
@@ -342,7 +342,7 @@ BOOL ShowAutoHideWindow(
 *pAutoHideWnd*<br/>
 [in] Finestra da visualizzare.
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE per visualizzare la finestra.
 
 *bDelay*<br/>

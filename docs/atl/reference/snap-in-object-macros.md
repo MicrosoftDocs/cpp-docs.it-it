@@ -11,12 +11,12 @@ f1_keywords:
 - atlsnap/ATL::SNAPINMENUID
 - atlsnap/ATL::SNAPINTOOLBARID_ENTRY
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-ms.openlocfilehash: e3eec62e2bea92f1f308b149046b83be1b9085b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b75dd04bed4895d722939d1bf9c0a6dfff2126e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656937"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292599"
 ---
 # <a name="snap-in-object-macros"></a>Macro di oggetti snap-In
 
@@ -68,7 +68,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 
 ### <a name="parameters"></a>Parametri
 
-*classe*<br/>
+*_class*<br/>
 [in] Specifica la classe di oggetti Snap-In.
 
 ### <a name="example"></a>Esempio
@@ -101,7 +101,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 
 ### <a name="parameters"></a>Parametri
 
-*classe*<br/>
+*_class*<br/>
 [in] Specifica la classe di oggetti Snap-In.
 
 ### <a name="example"></a>Esempio
@@ -118,7 +118,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 
 ### <a name="parameters"></a>Parametri
 
-*classe di dati*<br/>
+*dataClass*<br/>
 [in] La classe di dati dell'estensione lo snap-in.
 
 ### <a name="remarks"></a>Note
@@ -139,7 +139,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 
 ### <a name="parameters"></a>Parametri
 
-*classe di dati*<br/>
+*dataClass*<br/>
 [in] La classe di dati dell'estensione lo snap-in.
 
 ### <a name="remarks"></a>Note

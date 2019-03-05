@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-ms.openlocfilehash: c820307ecb0e7fbfe5cce7cd579ff46eb1f3a0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45799c6be20c318d7a411e9e5a79c0df860f8b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588188"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287191"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Uso dei parametri sostituibili (programma di registrazione&#39;s preprocessore)
 
@@ -50,4 +50,3 @@ Durante l'analisi dello script, si espande le Registrar `'%MODULE%, 1'` a `c:\my
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione degli script del Registro di sistema](../atl/creating-registrar-scripts.md)
-

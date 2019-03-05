@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-ms.openlocfilehash: ba1ff18d9b9a4d98b60cf7c30e21c56976325403
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565190"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302338"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personalizzazione dell'aspetto di un controllo Toolbar
 
@@ -56,4 +56,3 @@ Per un elenco completo di stili della barra degli strumenti e gli stili estesi, 
 
 [Uso di CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

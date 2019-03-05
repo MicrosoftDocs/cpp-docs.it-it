@@ -1,5 +1,5 @@
 ---
-title: 'Gestori messaggi WM_: L - M'
+title: 'Gestori messaggi WM _: L - M'
 ms.date: 11/04/2016
 f1_keywords:
 - ON_WM_MENUSELECT
@@ -33,14 +33,14 @@ helpviewer_keywords:
 - ON_WM_LBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 96ecaaf1-6d13-4e12-a454-535635967489
-ms.openlocfilehash: 395bd7f627fe85b8bb763bdb1e75ae36c91b3061
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ebf5ced1f8e36dc059922b67552b19ca4672443
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550462"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290523"
 ---
-# <a name="wm-message-handlers-l---m"></a>Gestori messaggi WM_: L - M
+# <a name="wm-message-handlers-l---m"></a>Gestori messaggi WM _: L - M
 
 Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a destra:
 
@@ -52,14 +52,14 @@ Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a
 |ON_WM_MBUTTONDBLCLK()|void afx_msg [OnMButtonDblClk](../../mfc/reference/cwnd-class.md#onmbuttondblclk)(UINT, CPoint);|
 |ON_WM_MBUTTONDOWN()|void afx_msg [OnMButtonDown](../../mfc/reference/cwnd-class.md#onmbuttondown)(UINT, CPoint);|
 |ON_WM_MBUTTONUP()|void afx_msg [OnMButtonUp](../../mfc/reference/cwnd-class.md#onmbuttonup)(UINT, CPoint);|
-|ON_WM_MDIACTIVATE()|void afx_msg [OnMDIActivate](../../mfc/reference/cwnd-class.md#onmdiactivate)(BOOL, CWnd\*, CWnd\*);|
+|ON_WM_MDIACTIVATE()|afx_msg void [OnMDIActivate](../../mfc/reference/cwnd-class.md#onmdiactivate)(BOOL, CWnd\*, CWnd\*);|
 |ON_WM_MEASUREITEM()|void afx_msg [OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)(LPMEASUREITEMSTRUCT);|
 |ON_WM_MENUCHAR()|afx_msg PROLUNGATA [OnMenuChar](../../mfc/reference/cwnd-class.md#onmenuchar)(UINT, UINT, CMenu\*);|
 |ON_WM_MENUDRAG()|afx_msg UINT [OnMenuDrag](../../mfc/reference/cwnd-class.md#onmenudrag)(UINT, CMenu\*);|
 |ON_WM_MENUGETOBJECT()|afx_msg UINT [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO\*);|
 |ON_WM_MENURBUTTONUP()|void afx_msg [OnMenuRButtonUp](../../mfc/reference/cwnd-class.md#onmenurbuttonup)(UINT, CMenu\*);|
 |ON_WM_MENUSELECT()|void afx_msg [OnMenuSelect](../../mfc/reference/cwnd-class.md#onmenuselect)(UINT, UINT, HMENU);|
-|ON_WM_MOUSEACTIVATE()|int afx_msg [OnMouseActivate](../../mfc/reference/cwnd-class.md#onmouseactivate)(CWnd\*, UINT, UINT);|
+|ON_WM_MOUSEACTIVATE()|afx_msg int [OnMouseActivate](../../mfc/reference/cwnd-class.md#onmouseactivate)( CWnd\*, UINT, UINT );|
 |ON_WM_MOUSEHOVER()|void afx_msg [OnMouseHover](../../mfc/reference/cwnd-class.md#onmousehover)(UINT, CPoint);|
 |ON_WM_MOUSEHWHEEL()|void afx_msg [OnMouseHWheel](../../mfc/reference/cwnd-class.md#onmousehwheel)(UINT, short, CPoint);|
 |ON_WM_MOUSELEAVE()|void afx_msg [OnMouseLeave](../../mfc/reference/cwnd-class.md#onmouseleave)();|
@@ -72,4 +72,3 @@ Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a
 
 [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)<br/>
 [Gestori per WM_ Messages](../../mfc/reference/handlers-for-wm-messages.md)
-

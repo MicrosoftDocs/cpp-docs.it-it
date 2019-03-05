@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301454"
 ---
 # <a name="ctoolbar-class"></a>Classe CToolBar
 
@@ -74,18 +74,18 @@ class CToolBar : public CControlBar
 |Nome|Descrizione|
 |----------|-----------------|
 |[CToolBar::CommandToIndex](#commandtoindex)|Restituisce l'indice di un pulsante con l'ID del comando specificato.|
-|[CToolBar:: Create](#create)|Crea la barra degli strumenti di Windows e lo collega al `CToolBar` oggetto.|
-|[CToolBar:: CreateEx](#createex)|Crea una `CToolBar` oggetto con gli stili aggiuntivi per l'oggetto incorporato `CToolBarCtrl` oggetto.|
+|[CToolBar::Create](#create)|Crea la barra degli strumenti di Windows e lo collega al `CToolBar` oggetto.|
+|[CToolBar::CreateEx](#createex)|Crea una `CToolBar` oggetto con gli stili aggiuntivi per l'oggetto incorporato `CToolBarCtrl` oggetto.|
 |[CToolBar::GetButtonInfo](#getbuttoninfo)|Recupera l'ID, stile e il numero di immagini di un pulsante.|
-|[CToolBar:: GetButtonStyle](#getbuttonstyle)|Recupera lo stile per un pulsante.|
+|[CToolBar::GetButtonStyle](#getbuttonstyle)|Recupera lo stile per un pulsante.|
 |[CToolBar::GetButtonText](#getbuttontext)|Recupera il testo che verrà visualizzato su un pulsante.|
 |[CToolBar::GetItemID](#getitemid)|Restituisce l'ID di comando di un pulsante o un separatore in corrispondenza dell'indice specificato.|
 |[CToolBar::GetItemRect](#getitemrect)|Recupera il rettangolo di visualizzazione per l'elemento in corrispondenza dell'indice specificato.|
-|[CToolBar:: GetToolBarCtrl](#gettoolbarctrl)|Consente l'accesso diretto al controllo sottostante comune.|
+|[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|Consente l'accesso diretto al controllo sottostante comune.|
 |[CToolBar::LoadBitmap](#loadbitmap)|Carica la bitmap contenente immagini bitmap dei pulsanti.|
 |[CToolBar::LoadToolBar](#loadtoolbar)|Carica una risorsa barra degli strumenti creata con l'editor di risorse.|
 |[CToolBar::SetBitmap](#setbitmap)|Imposta un'immagine bitmap.|
-|[CToolBar::](#setbuttoninfo)|Imposta l'ID, stile e il numero di immagini di un pulsante.|
+|[CToolBar::SetButtonInfo](#setbuttoninfo)|Imposta l'ID, stile e il numero di immagini di un pulsante.|
 |[CToolBar::SetButtons](#setbuttons)|Set di button stili e un indice delle immagini di pulsante della bitmap.|
 |[CToolBar::SetButtonStyle](#setbuttonstyle)|Imposta lo stile per un pulsante.|
 |[CToolBar::SetButtonText](#setbuttontext)|Imposta il testo che verrà visualizzato su un pulsante.|
@@ -518,7 +518,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Ad esempio, chiamare `SetBitmap` per modificare l'immagine bitmap dopo che l'utente esegue un'azione in un documento che modifica l'azione di un pulsante.
 
-##  <a name="setbuttoninfo"></a>  CToolBar::
+##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo
 
 Chiamare questa funzione membro per impostare l'ID di comando del pulsante, stile e il numero di immagine.
 
@@ -718,7 +718,7 @@ Chiamare questa funzione membro solo per le barre degli strumenti che non seguon
 ## <a name="see-also"></a>Vedere anche
 
 [Esempio MFC viene](../../visual-cpp-samples.md)<br/>
-[DLGCBR32 esempio MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample DLGCBR32](../../visual-cpp-samples.md)<br/>
 [Esempio MFC DOCKTOOL](../../visual-cpp-samples.md)<br/>
 [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>

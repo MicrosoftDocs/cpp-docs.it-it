@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application wizards [MFC], Internet applications
 - MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
-ms.openlocfilehash: 09d337f2b2a137c997665b6fad4f2fef7235f723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63636e8c5738eb3823de0befa6237f7ae5b3491d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428535"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288168"
 ---
 # <a name="writing-mfc-applications"></a>Scrittura di applicazioni MFC
 
@@ -46,4 +46,3 @@ Gli articoli seguenti vengono inoltre fornite istruzioni utili per iniziare l'at
 
 [Attività di programmazione Internet MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Nozioni di base sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)
-

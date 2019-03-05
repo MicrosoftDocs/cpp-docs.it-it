@@ -6,12 +6,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: b485d5efbfbcedbb1e11a3e212465340f0413ee4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491559"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300804"
 ---
 # <a name="unorm-class"></a>Classe unorm
 
@@ -39,7 +39,7 @@ class unorm;
 |unorm::operator float|Operatore di conversione. Convertire il numero di unorm in Mobile valore del punto.|
 |unorm::operator*=||
 |unorm::operator/=||
-|unorm::operator + +||
+|unorm::operator++||
 |unorm::operator+=||
 |unorm::operator=||
 |unorm::operator-=||
@@ -52,7 +52,7 @@ class unorm;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> unorm
 
@@ -90,7 +90,7 @@ inline explicit unorm(
 
 ### <a name="parameters"></a>Parametri
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore utilizzato per inizializzare.
 
 *_Other*<br/>

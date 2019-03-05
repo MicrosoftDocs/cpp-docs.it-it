@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 59c4e5f4e55947a4eab7a5258d8fe2b943bab3ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501569"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294408"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Classe CD2DBitmapBrush
 
@@ -66,7 +66,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Di overload. Costruisce un oggetto CD2DBitmapBrush dal file.|
-|[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di pennello D2D bitmap.|
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di pennello D2D bitmap.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -77,7 +77,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |[CD2DBitmapBrush::Destroy](#destroy)|Elimina un oggetto CD2DBitmapBrush. (Esegue l'override [CD2DBrush:: Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
 |[CD2DBitmapBrush::Detach](#detach)|Scollega interfaccia di risorse dall'oggetto|
 |[CD2DBitmapBrush::Get](#get)|Restituisce l'interfaccia ID2D1BitmapBrush|
-|[CD2DBitmapBrush::getBitmap](#getbitmap)|Ottiene l'origine della bitmap che usa questo pennello per disegnare|
+|[CD2DBitmapBrush::GetBitmap](#getbitmap)|Ottiene l'origine della bitmap che usa questo pennello per disegnare|
 |[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Ottiene il metodo mediante il quale il pennello Affianca orizzontalmente tali aree che si estendono oltre la bitmap|
 |[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|Ottiene il metodo mediante il quale il pennello affianca verticalmente le aree che si estendono oltre le bitmap|
 |[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|Ottiene il metodo di interpolazione usato quando la bitmap di pennello viene ridimensionata o ruotata|
@@ -96,7 +96,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|Restituisce l'interfaccia ID2D1BitmapBrush|
+|[CD2DBitmapBrush::operator ID2D1BitmapBrush*](#operator_id2d1bitmapbrush_star)|Restituisce l'interfaccia ID2D1BitmapBrush|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -120,7 +120,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="dtor"></a>  CD2DBitmapBrush:: ~ CD2DBitmapBrush
+##  <a name="dtor"></a>  CD2DBitmapBrush::~CD2DBitmapBrush
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di pennello D2D bitmap.
 
@@ -181,7 +181,7 @@ Puntatore alla modalità di estensione e la modalità di interpolazione di un pe
 *pBrushProperties*<br/>
 Un puntatore all'opacità e alla trasformazione di un pennello.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 *uiResID*<br/>
@@ -258,7 +258,7 @@ ID2D1BitmapBrush* Get();
 
 Puntatore a un'interfaccia ID2D1BitmapBrush o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="getbitmap"></a>  CD2DBitmapBrush::getBitmap
+##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap
 
 Ottiene l'origine della bitmap che usa questo pennello per disegnare
 
@@ -330,7 +330,7 @@ Proprietà del pennello di bitmap.
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;
 ```
 
-##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush *
+##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush*
 
 Restituisce l'interfaccia ID2D1BitmapBrush
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - control bars [MFC], classes
 ms.assetid: 11009103-cad8-4309-85ce-3d2e858e1818
-ms.openlocfilehash: 3584b24f9cc83c79ce382f02eaee4670490e608a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3426d84eab888a6fe78b663945776fff2fe708dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653882"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302247"
 ---
 # <a name="control-bar-classes"></a>Classi di barre di controllo
 
@@ -60,4 +60,3 @@ Gestisce l'archiviazione permanente dei dati di stato per le barre di controllo 
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

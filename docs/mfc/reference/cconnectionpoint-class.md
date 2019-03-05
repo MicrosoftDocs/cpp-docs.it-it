@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: efa8a7bf9e14bd93682fcc2d5802a84f1bdb1e96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75ce23cf55f26505c2584c3a021b654602a6a2b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629931"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288948"
 ---
 # <a name="cconnectionpoint-class"></a>Classe CConnectionPoint
 
@@ -53,11 +53,11 @@ class CConnectionPoint : public CCmdTarget
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CConnectionPoint:: GetConnections](#getconnections)|Recupera tutti i punti di connessione in una mappa delle connessioni.|
+|[CConnectionPoint::GetConnections](#getconnections)|Recupera tutti i punti di connessione in una mappa delle connessioni.|
 |[CConnectionPoint::GetContainer](#getcontainer)|Recupera il contenitore del controllo cui appartiene la mappa delle connessioni.|
-|[CConnectionPoint:: GetIID](#getiid)|Recupera l'ID di interfaccia di un punto di connessione.|
+|[CConnectionPoint::GetIID](#getiid)|Recupera l'ID di interfaccia di un punto di connessione.|
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Recupera il numero massimo di punti di connessione supportati da un controllo.|
-|[CConnectionPoint:: GetNextConnection](#getnextconnection)|Recupera un puntatore all'elemento connessione al *pos*.|
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|Recupera un puntatore all'elemento connessione al *pos*.|
 |[CConnectionPoint::GetStartPosition](#getstartposition)|Inizia un'iterazione di mappa, restituendo un valore di posizione che può essere passato a un `GetNextConnection` chiamare.|
 |[CConnectionPoint::OnAdvise](#onadvise)|Chiamato dal framework quando la definizione o le connessioni di rilievo.|
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Recupera un puntatore all'interfaccia sink richiesto.|
@@ -110,7 +110,7 @@ Costruisce un oggetto `CConnectionPoint`.
 CConnectionPoint();
 ```
 
-##  <a name="getconnections"></a>  CConnectionPoint:: GetConnections
+##  <a name="getconnections"></a>  CConnectionPoint::GetConnections
 
 Chiamare questa funzione per recuperare tutte le connessioni attive per un punto di connessione.
 
@@ -138,7 +138,7 @@ Se ha esito positivo, un puntatore al contenitore di; in caso contrario NULL.
 
 Questa funzione viene in genere implementata da BEGIN_CONNECTION_PART (macro).
 
-##  <a name="getiid"></a>  CConnectionPoint:: GetIID
+##  <a name="getiid"></a>  CConnectionPoint::GetIID
 
 Chiamata eseguita dal framework per recuperare l'ID di interfaccia di un punto di connessione.
 
@@ -172,7 +172,7 @@ L'implementazione predefinita restituisce -1, che indica nessun limite.
 
 Eseguire l'override di questa funzione se si desidera limitare il numero di sink che possono connettersi al controllo.
 
-##  <a name="getnextconnection"></a>  CConnectionPoint:: GetNextConnection
+##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection
 
 Recupera un puntatore all'elemento connessione al *pos*.
 
@@ -182,7 +182,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Specifica un riferimento a un valore di posizione restituito da una precedente `GetNextConnection` oppure [GetStartPosition](#getstartposition) chiamare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -262,4 +262,3 @@ Un valore HRESULT standard.
 
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

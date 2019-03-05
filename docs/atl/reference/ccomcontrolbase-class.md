@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 698912100244189bdec99fa3726a063eb2e907a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894432"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298217"
 ---
 # <a name="ccomcontrolbase-class"></a>Classe CComControlBase
 

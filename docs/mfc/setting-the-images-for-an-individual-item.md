@@ -5,12 +5,12 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-ms.openlocfilehash: 61e152534dbea09fbca0af819b0847e82a1c4146
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39aa4761dbc753c42f1aedbb18f1832eab471e50
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512073"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294707"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Impostazione delle immagini per un singolo elemento
 
@@ -46,4 +46,3 @@ Nell'esempio seguente viene illustrata questa procedura scambiando le immagini s
 
 [Uso di CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

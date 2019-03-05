@@ -1,5 +1,5 @@
 ---
-title: 'Eccezioni: utilizzo di macro MFC ed eccezioni C++'
+title: 'Eccezioni: Utilizzo delle macro MFC ed eccezioni C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception objects [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 021f80f71a3921ed10b07f481ff7b7ce934d9f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443381"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297710"
 ---
-# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Eccezioni: utilizzo di macro MFC ed eccezioni C++
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Eccezioni: Utilizzo delle macro MFC ed eccezioni C++
 
 Questo articolo illustra considerazioni per la scrittura di codice che usa le macro di eccezioni MFC e parole chiave di gestione delle eccezioni C++.
 
@@ -35,7 +35,7 @@ Questo articolo illustra gli argomenti seguenti:
 
 ##  <a name="_core_mixing_exception_keywords_and_macros"></a> La combinazione di macro e parole chiave delle eccezioni
 
-È possibile combinare macro eccezioni MFC e parole chiave delle eccezioni C++ nello stesso programma. Ma non è possibile combinare le macro MFC con parole chiave delle eccezioni C++ nello stesso blocco poiché le macro vengono eliminati gli oggetti eccezione automaticamente quando escono dall'ambito, mentre non le supporta codice usando le parole chiave di gestione delle eccezioni. Per altre informazioni, vedere l'articolo [eccezioni: eccezioni di intercettazione ed eliminazione](../mfc/exceptions-catching-and-deleting-exceptions.md).
+È possibile combinare macro eccezioni MFC e parole chiave delle eccezioni C++ nello stesso programma. Ma non è possibile combinare le macro MFC con parole chiave delle eccezioni C++ nello stesso blocco poiché le macro vengono eliminati gli oggetti eccezione automaticamente quando escono dall'ambito, mentre non le supporta codice usando le parole chiave di gestione delle eccezioni. Per altre informazioni, vedere l'articolo [alle eccezioni: Rilevamento ed eliminazione di eccezioni](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 La differenza principale tra le macro e le parole chiave è che le macro "automatico" eliminano un'eccezione rilevata quando l'eccezione esce dall'ambito. Il codice tramite le parole chiave non li restituiscono. le eccezioni rilevate in un blocco catch devono essere eliminate in modo esplicito. La combinazione di macro e parole chiave delle eccezioni C++ può causare perdite di memoria quando un oggetto eccezione non viene eliminato o danneggiare la memoria heap, quando un'eccezione viene eliminata due volte.
 
@@ -53,9 +53,8 @@ Non è possibile generare nuovamente l'eccezione corrente dall'interno una **pro
 
 [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-Per altre informazioni, vedere [eccezioni: esame del contenuto delle eccezioni](../mfc/exceptions-examining-exception-contents.md).
+Per altre informazioni, vedere [alle eccezioni: Esame del contenuto delle eccezioni](../mfc/exceptions-examining-exception-contents.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
-

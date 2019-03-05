@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-ms.openlocfilehash: 9288ed3104d2cdf4c6938b171166de7cffd32ccf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e415805301d7d12bd418a3b55509a7732851492
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531656"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298477"
 ---
 # <a name="simple-data-type-classes"></a>Classi del tipo di dati semplice
 
@@ -46,7 +46,7 @@ Contiene distanze, posizioni relative o valori accoppiati.
 Contiene le coordinate delle aree rettangolari.
 
 [CImageList](../mfc/reference/cimagelist-class.md)<br/>
-Fornisce la funzionalità dell'elenco immagini di Windows. Gli elenchi immagini vengono utilizzati con controlli elenco e controlli struttura ad albero. Possono inoltre essere utilizzati per memorizzare e archiviare un set di immagini bitmap della stessa dimensione.
+Fornisce la funzionalità dell'elenco immagini di Windows. Gli elenchi immagini vengono usati con controlli elenco e controlli albero. Possono inoltre essere utilizzati per memorizzare e archiviare un set di immagini bitmap della stessa dimensione.
 
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
 Wrapper per il tipo di automazione OLE **VARIANT**. I dati in **VARIANT**possono essere archiviati in numerosi formati.
@@ -60,4 +60,3 @@ Wrapper per il tipo di automazione OLE **valuta**, un tipo aritmetico a virgola 
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

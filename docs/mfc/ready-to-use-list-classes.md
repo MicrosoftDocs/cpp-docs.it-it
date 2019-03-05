@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
-ms.openlocfilehash: 6e30ff0fad945cbe44029558efc26cf60b88ac95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7796e1abb2d7d22f17ac704091e62cc65c428405
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523996"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286400"
 ---
 # <a name="ready-to-use-list-classes"></a>Classi List pronte all'uso
 
@@ -31,4 +31,3 @@ Gli archivi `CString` gli oggetti in un elenco collegato.
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

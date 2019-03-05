@@ -1,5 +1,5 @@
 ---
-title: 'TN017: eliminazione definitiva di oggetti finestra'
+title: 'TN017: Eliminazione definitiva di oggetti finestra'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 06553677e67a4314116077e7942381bd847c64d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502232"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294110"
 ---
-# <a name="tn017-destroying-window-objects"></a>TN017: eliminazione definitiva di oggetti finestra
+# <a name="tn017-destroying-window-objects"></a>TN017: Eliminazione definitiva di oggetti finestra
 
 In questa nota viene descritto come utilizzare il [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) (metodo). Usare questo metodo se si desidera eseguire operazioni di allocazione personalizzate di `CWnd`-oggetti derivati. Questa nota descrive anche il motivo per cui è consigliabile usare [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) per eliminare un oggetto di Windows C++ anziché le **eliminare** operatore.
 
@@ -97,4 +97,3 @@ Dopo avere chiamato `DestroyWindow` su un oggetto la pulitura automatica, l'ogge
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293784"
 ---
 # <a name="catlmap-class"></a>Classe CAtlMap
 
@@ -100,8 +100,8 @@ Il codice usato per copiare o spostare gli elementi di valore.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CAtlMap:: CAtlMap](#catlmap)|Costruttore.|
-|[CAtlMap:: ~ CAtlMap](#dtor)|Distruttore.|
+|[CAtlMap::CAtlMap](#catlmap)|Costruttore.|
+|[CAtlMap::~CAtlMap](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -115,10 +115,10 @@ Il codice usato per copiare o spostare gli elementi di valore.
 |[CAtlMap::GetHashTableSize](#gethashtablesize)|Chiamare questo metodo per determinare il numero di bin nella tabella di hash della mappa.|
 |[CAtlMap::GetKeyAt](#getkeyat)|Chiamare questo metodo per recuperare la chiave archiviata in corrispondenza della posizione specificata nel `CAtlMap` oggetto.|
 |[CAtlMap::GetNext](#getnext)|Chiamare questo metodo per ottenere un puntatore al successivo elemento archiviata nella coppia di `CAtlMap` oggetto.|
-|[CAtlMap:: GetNextAssoc](#getnextassoc)|Ottiene l'elemento successivo per eseguire l'iterazione.|
+|[CAtlMap::GetNextAssoc](#getnextassoc)|Ottiene l'elemento successivo per eseguire l'iterazione.|
 |[CAtlMap::GetNextKey](#getnextkey)|Chiamare questo metodo per recuperare la successiva chiave dal `CAtlMap` oggetto.|
 |[CAtlMap::GetNextValue](#getnextvalue)|Chiamare questo metodo per ottenere il successivo valore di `CAtlMap` oggetto.|
-|[CAtlMap:: GetStartPosition](#getstartposition)|Chiamare questo metodo per avviare un'iterazione della mappa.|
+|[CAtlMap::GetStartPosition](#getstartposition)|Chiamare questo metodo per avviare un'iterazione della mappa.|
 |[CAtlMap::GetValueAt](#getvalueat)|Chiamare questo metodo per recuperare il valore archiviato nella posizione specificata nel `CAtlMap` oggetto.|
 |[CAtlMap::InitHashTable](#inithashtable)|Chiamare questo metodo per inizializzare la tabella hash.|
 |[CAtlMap::IsEmpty](#isempty)|Chiamare questo metodo per verificare se un oggetto map vuoto.|
@@ -171,7 +171,7 @@ Nelle build di debug, questo metodo genererà un'ASSERZIONE se il `CAtlMap` ogge
 
 Vedere l'esempio relativo [CAtlMap:: CAtlMap](#catlmap).
 
-##  <a name="catlmap"></a>  CAtlMap:: CAtlMap
+##  <a name="catlmap"></a>  CAtlMap::CAtlMap
 
 Costruttore.
 
@@ -221,7 +221,7 @@ Prima di tutti i dati possono essere archiviati, è necessario inizializzare la 
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlMap:: ~ CAtlMap
+##  <a name="dtor"></a>  CAtlMap::~CAtlMap
 
 Distruttore.
 
@@ -288,13 +288,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il contatore di posizione, restituito da una chiamata precedente a [CAtlMap:: GetNextAssoc](#getnextassoc) oppure [CAtlMap:: GetStartPosition](#getstartposition).
 
 *key*<br/>
 Parametro di modello che specifica il tipo di chiave della mappa.
 
-*valore*<br/>
+*value*<br/>
 Parametro di modello che specifica il tipo del valore della mappa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -343,7 +343,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il contatore di posizione, restituito da una chiamata precedente a [CAtlMap:: GetNextAssoc](#getnextassoc) oppure [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valore restituito
@@ -365,14 +365,14 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il contatore di posizione, restituito da una chiamata precedente a [CAtlMap:: GetNextAssoc](#getnextassoc) oppure [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce un puntatore alla successiva coppia di elementi chiave/valore archiviati nella mappa. Il *pos* posizione contatore viene aggiornato dopo ogni chiamata. Se l'elemento recuperato è l'ultimo nella mappa *pos* è impostato su NULL.
 
-##  <a name="getnextassoc"></a>  CAtlMap:: GetNextAssoc
+##  <a name="getnextassoc"></a>  CAtlMap::GetNextAssoc
 
 Ottiene l'elemento successivo per eseguire l'iterazione.
 
@@ -385,13 +385,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il contatore di posizione, restituito da una chiamata precedente a [CAtlMap:: GetNextAssoc](#getnextassoc) oppure [CAtlMap:: GetStartPosition](#getstartposition).
 
 *key*<br/>
 Parametro di modello che specifica il tipo di chiave della mappa.
 
-*valore*<br/>
+*value*<br/>
 Parametro di modello che specifica il tipo del valore della mappa.
 
 ### <a name="remarks"></a>Note
@@ -408,7 +408,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il contatore di posizione, restituito da una chiamata precedente a [CAtlMap:: GetNextAssoc](#getnextassoc) oppure [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valore restituito
@@ -430,7 +430,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il contatore di posizione, restituito da una chiamata precedente a [CAtlMap:: GetNextAssoc](#getnextassoc) oppure [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valore restituito
@@ -445,7 +445,7 @@ Aggiornamento del contatore di posizione corrente, *pos*. Se non sono presenti p
 
 Vedere l'esempio relativo [CAtlMap:: CAtlMap](#catlmap).
 
-##  <a name="getstartposition"></a>  CAtlMap:: GetStartPosition
+##  <a name="getstartposition"></a>  CAtlMap::GetStartPosition
 
 Chiamare questo metodo per avviare un'iterazione della mappa.
 
@@ -479,7 +479,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il contatore di posizione, restituito da una chiamata precedente a [CAtlMap:: GetNextAssoc](#getnextassoc) oppure [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valore restituito
@@ -561,7 +561,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 Specifica la chiave che identifica l'elemento per essere cercato.
 
-*valore*<br/>
+*value*<br/>
 Variabile che riceve il valore cercato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -632,7 +632,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il contatore di posizione, restituito da una chiamata precedente a [CAtlMap:: GetNextAssoc](#getnextassoc) oppure [CAtlMap:: GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Note
@@ -675,7 +675,7 @@ POSITION SetAt(
 *key*<br/>
 Il valore della chiave da aggiungere per il `CAtlMap` oggetto.
 
-*valore*<br/>
+*value*<br/>
 Il valore da aggiungere al `CAtlMap` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -728,10 +728,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Il contatore di posizione, restituito da una chiamata precedente a [CAtlMap:: GetNextAssoc](#getnextassoc) oppure [CAtlMap:: GetStartPosition](#getstartposition).
 
-*valore*<br/>
+*value*<br/>
 Il valore da aggiungere al `CAtlMap` oggetto.
 
 ### <a name="remarks"></a>Note

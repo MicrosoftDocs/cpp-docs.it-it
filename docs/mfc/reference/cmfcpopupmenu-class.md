@@ -160,17 +160,17 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517676"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292276"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 
 Implementa la funzionalità del menu di scelta rapida di Windows e la estende aggiungendo funzionalità quali menu con barra a comparsa e descrizioni comandi.
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -327,7 +327,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE se il menu di scelta rapida può visualizzare le voci vuote; FALSE in caso contrario.
 
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in] Handle per una risorsa di menu.
 
-*Bloccato*<br/>
+*bLocked*<br/>
 [in] Un parametro booleano che indica se il menu di scelta è personalizzabile. FALSE indica che il menu a comparsa è personalizzabile.
 
 *bOwnMessage*<br/>
@@ -518,7 +518,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare il suono, FALSE in caso contrario.
 
 ### <a name="remarks"></a>Note
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>Parametri
 
-*Pulsante*<br/>
+*button*<br/>
 [in] Un riferimento alla voce di menu da aggiungere.
 
 *iInsertAt*<br/>
@@ -1265,7 +1265,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *il flag bAutoDestroy*<br/>
+[in] *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>Note
 

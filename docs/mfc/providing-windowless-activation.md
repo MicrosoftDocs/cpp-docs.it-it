@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-ms.openlocfilehash: 1e962584faa826ce87533806edc2bed1d1248286
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d60c309d5644c106e6c85a0c7b3988916be7193
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475634"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284710"
 ---
 # <a name="providing-windowless-activation"></a>Attivazione senza finestra
 
@@ -36,7 +36,7 @@ Se l'attivazione senza finestra è abilitata, il contenitore delegherà i messag
 
 `COleControl` fornisce funzioni membro che richiamano la cattura del mouse, lo stato attivo della tastiera e altri servizi della finestra dal contenitore in base alle esigenze, tra cui:
 
-- [GetFocu](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)
+- [GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)
 
 - [GetCapture](../mfc/reference/colecontrol-class.md#getcapture), [SetCapture](../mfc/reference/colecontrol-class.md#setcapture), [ReleaseCapture](../mfc/reference/colecontrol-class.md#releasecapture)
 
@@ -50,11 +50,10 @@ Se l'attivazione senza finestra è abilitata, il contenitore delegherà i messag
 
 Nei controlli privi di finestra è sempre opportuno utilizzare le funzioni membro `COleControl` anziché le funzioni membro `CWnd` corrispondenti o le funzioni API Win32 correlate.
 
-È possibile impostare un controllo senza finestra in modo che funga da destinazione di un'operazione di trascinamento e rilascio OLE. In genere, ciò richiede che la finestra del controllo sia stata registrata come obiettivo di rilascio. Poiché il controllo non ha una finestra propria, il contenitore utilizza la propria finestra come obiettivo di rilascio. Il controllo fornisce un'implementazione dell'interfaccia `IDropTarget` a cui il contenitore può delegare le chiamate al momento giusto. Per esporre questa interfaccia per il contenitore, eseguire l'override [COleControl:: GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Ad esempio:
+È possibile impostare un controllo senza finestra in modo che funga da destinazione di un'operazione di trascinamento della selezione OLE. In genere, ciò richiede che la finestra del controllo sia stata registrata come obiettivo di rilascio. Poiché il controllo non ha una finestra propria, il contenitore utilizza la propria finestra come destinazione di trascinamento. Il controllo fornisce un'implementazione dell'interfaccia `IDropTarget` a cui il contenitore può delegare le chiamate al momento giusto. Per esporre questa interfaccia per il contenitore, eseguire l'override [COleControl:: GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Ad esempio:
 
 [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md)
-
+[Controlli ActiveX MFC: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md)

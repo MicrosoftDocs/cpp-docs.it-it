@@ -44,18 +44,18 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 759f4cdb66c1e16f022731e9d3183ad1192e0975
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585133"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291639"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
 Il `CMFCDesktopAlertWnd` classe implementa la funzionalità di una finestra di dialogo non modale visualizzata sullo schermo per informare l'utente su un evento.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 ## <a name="syntax"></a>Sintassi
 
 ```
@@ -68,7 +68,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Cmfcdesktopalertwnd:: Create](#create)|Crea e inizializza la finestra di avviso.|
+|[CMFCDesktopAlertWnd::Create](#create)|Crea e inizializza la finestra di avviso.|
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Restituisce la velocità dell'animazione.|
 |[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Restituisce il tipo di animazione.|
 |[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Restituisce il valore di timeout di chiusura automatica.|
@@ -138,7 +138,7 @@ L'esempio seguente illustra come usare i vari metodi nella `CMFCDesktopAlertWnd`
 
 **Intestazione:** afxDesktopAlertWnd.h
 
-##  <a name="create"></a>  Cmfcdesktopalertwnd:: Create
+##  <a name="create"></a>  CMFCDesktopAlertWnd::Create
 
 Crea e inizializza la finestra di avviso.
 
@@ -440,7 +440,7 @@ void SetAutoCloseTime(int nTime);
 
 ### <a name="parameters"></a>Parametri
 
-*Nintervallo*<br/>
+*nTime*<br/>
 [in] Il tempo, espresso in millisecondi, che deve trascorrere prima che la finestra di avviso deve essere chiuso automaticamente.
 
 ### <a name="remarks"></a>Note

@@ -1,18 +1,18 @@
 ---
-title: 'Controlli ActiveX MFC: aggiunta di proprietà personalizzate'
+title: 'Controlli ActiveX MFC: Aggiunta di proprietà personalizzate'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496421"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284203"
 ---
-# <a name="mfc-activex-controls-adding-custom-properties"></a>Controlli ActiveX MFC: aggiunta di proprietà personalizzate
+# <a name="mfc-activex-controls-adding-custom-properties"></a>Controlli ActiveX MFC: Aggiunta di proprietà personalizzate
 
 Proprietà personalizzate sono diverse dalle proprietà predefinite in proprietà personalizzate non sono già implementate dal `COleControl` classe. Una proprietà personalizzata viene utilizzata per esporre un determinato stato o l'aspetto di un controllo ActiveX a un programmatore che utilizza il controllo.
 
@@ -22,7 +22,7 @@ Questo articolo viene descritto come aggiungere una proprietà personalizzata de
 
 - [Aggiunta guidata proprietà modifiche per le proprietà personalizzate](#_core_classwizard_changes_for_custom_properties)
 
-Proprietà personalizzate sono disponibili quattro tipi di implementazione: variabile membro, come variabile membro con la notifica, i metodi Get/Set e parametri.
+Proprietà personalizzate sono disponibili quattro tipi di implementazione: Variabile membro, la variabile membro con la notifica, i metodi Get/Set e con parametri.
 
 - Implementazione della variabile membro
 
@@ -38,7 +38,7 @@ Proprietà personalizzate sono disponibili quattro tipi di implementazione: vari
 
 - Implementazione con parametri
 
-   Implementazione con parametri è supportata per l'aggiunta guidata proprietà. Una proprietà con parametri (talvolta denominata matrice di proprietà) è utilizzabile per accedere a un set di valori tramite una singola proprietà del controllo. La macro di voce della mappa di invio per questa implementazione è DISP_PROPERTY_PARAM. Per altre informazioni sull'implementazione di questo tipo, vedere [implementazione di una proprietà con parametri](../mfc/mfc-activex-controls-advanced-topics.md) nell'articolo di controlli ActiveX: argomenti avanzati.
+   Implementazione con parametri è supportata per l'aggiunta guidata proprietà. Una proprietà con parametri (talvolta denominata matrice di proprietà) è utilizzabile per accedere a un set di valori tramite una singola proprietà del controllo. La macro di voce della mappa di invio per questa implementazione è DISP_PROPERTY_PARAM. Per altre informazioni sull'implementazione di questo tipo, vedere [implementazione di una proprietà con parametri](../mfc/mfc-activex-controls-advanced-topics.md) nell'articolo di controlli ActiveX: Argomenti avanzati.
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Tramite l'aggiunta guidata proprietà per aggiungere una proprietà personalizzata
 
@@ -95,6 +95,6 @@ Si noti che l'aggiunta guidata proprietà aggiunge automaticamente una chiamata 
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: proprietà](../mfc/mfc-activex-controls-properties.md)<br/>
-[Controlli ActiveX MFC: metodi](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controlli ActiveX MFC: Proprietà](../mfc/mfc-activex-controls-properties.md)<br/>
+[Controlli ActiveX MFC: Metodi](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - threading [C++], synchronization
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
-ms.openlocfilehash: 63555236ec41ce0a28d82aa676318b53a24169c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72cf5310704c1ae959cc012146a03dd32cff4068
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502843"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284372"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Multithreading: Quando usare le classi di sincronizzazione di MFC
 
@@ -52,7 +52,7 @@ Questa applicazione di esempio Usa tutti i tre tipi di classi di sincronizzazion
 
 Scelta della classe da usare l'accesso di sincronizzazione è ancora più semplice. Se l'applicazione viene eseguito l'accesso a una singola risorsa controllata, usare `CSingleLock`. Se è richiesto l'accesso a una delle numerose risorse controllate, usare `CMultiLock`. Nell'esempio 1, `CSingleLock` sarebbe stata utilizzata, perché in ogni caso è necessaria solo una risorsa in un determinato momento.
 
-Per informazioni sull'uso delle classi di sincronizzazione, vedere [Multithreading: come usare le classi di sincronizzazione](multithreading-how-to-use-the-synchronization-classes.md). Per informazioni sulla sincronizzazione, vedere [sincronizzazione](/windows/desktop/Sync/synchronization) nel SDK di Windows. Per informazioni sul supporto del multithreading in MFC, vedere [Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md).
+Per informazioni sull'uso delle classi di sincronizzazione, vedere [Multithreading: Come usare le classi di sincronizzazione](multithreading-how-to-use-the-synchronization-classes.md). Per informazioni sulla sincronizzazione, vedere [sincronizzazione](/windows/desktop/Sync/synchronization) nel SDK di Windows. Per informazioni sul supporto del multithreading in MFC, vedere [Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md).
 
 ## <a name="see-also"></a>Vedere anche
 

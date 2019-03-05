@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: e8036b0942600e5d47254583e2675c525010a5c1
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657565"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283176"
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 
@@ -161,16 +161,16 @@ void assign(_InputIterator _Begin,
 *_InputIterator*<br/>
 Tipo di iteratore specificato.
 
-*N*<br/>
+*_N*<br/>
 Il numero di elementi da copiare nel vettore simultaneo.
 
-*Elemento*<br/>
+*_Item*<br/>
 Riferimento a un valore utilizzato per riempire il vettore simultaneo.
 
-*Ini_zia*<br/>
+*_Begin*<br/>
 Un iteratore al primo elemento dell'intervallo di origine.
 
-*End*<br/>
+*_End*<br/>
 Un iteratore alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di origine.
 
 ### <a name="remarks"></a>Note
@@ -189,7 +189,7 @@ const_reference at(size_type _Index) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 L'indice dell'elemento da recuperare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -216,7 +216,7 @@ const_reference back() const;
 
 Riferimento o `const` fa riferimento all'ultimo elemento nel vettore simultaneo.
 
-##  <a name="begin"></a> iniziare
+##  <a name="begin"></a> begin
 
 Restituisce un iteratore di tipo `iterator` o `const_iterator` all'inizio del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.
 
@@ -327,19 +327,19 @@ Tipo di iteratore di input.
 *_Al*<br/>
 Classe Allocator da usare con questo oggetto.
 
-*Vector*<br/>
+*_Vector*<br/>
 Oggetto `concurrent_vector` di origine da cui copiare o spostare elementi.
 
-*N*<br/>
+*_N*<br/>
 Capacità iniziale dell'oggetto `concurrent_vector`.
 
-*Elemento*<br/>
+*_Item*<br/>
 Il valore degli elementi nell'oggetto costruito.
 
-*Ini_zia*<br/>
+*_Begin*<br/>
 Posizione del primo elemento nell'intervallo di elementi da copiare.
 
-*End*<br/>
+*_End*<br/>
 Posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
 ### <a name="remarks"></a>Note
@@ -390,7 +390,7 @@ const_reverse_iterator crend() const;
 
 Un iteratore di tipo `const_reverse_iterator` alla fine del vettore simultaneo.
 
-##  <a name="empty"></a> vuota
+##  <a name="empty"></a> empty
 
 Verifica se il vettore simultaneo è vuoto al momento questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.
 
@@ -416,7 +416,7 @@ const_iterator end() const;
 
 Un iteratore di tipo `iterator` o `const_iterator` alla fine del vettore simultaneo.
 
-##  <a name="front"></a> primo piano
+##  <a name="front"></a> front
 
 Restituisce un riferimento o un `const` riferimento al primo elemento nel vettore simultaneo. Se il vettore simultaneo è vuoto, il valore restituito è indefinito. Questo metodo è indipendente dalla concorrenza.
 
@@ -457,10 +457,10 @@ iterator grow_by(
 
 ### <a name="parameters"></a>Parametri
 
-*Delta*<br/>
+*_Delta*<br/>
 Il numero di elementi da aggiungere all'oggetto.
 
-*Elemento*<br/>
+*_Item*<br/>
 Valore di inizializzazione con i nuovi elementi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -481,7 +481,7 @@ iterator grow_to_at_least(size_type _N);
 
 ### <a name="parameters"></a>Parametri
 
-*N*<br/>
+*_N*<br/>
 La nuova dimensione minima per il `concurrent_vector` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -521,14 +521,14 @@ concurrent_vector& operator= (
 *M*<br/>
 Il tipo di allocatore del vettore di origine.
 
-*Vector*<br/>
+*_Vector*<br/>
 Oggetto `concurrent_vector` di origine.
 
 ### <a name="return-value"></a>Valore restituito
 
 Un riferimento a questo `concurrent_vector` oggetto.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Fornisce l'accesso all'elemento in corrispondenza dell'indice specificato in un vettore simultaneo. Questo metodo è indipendente dalla concorrenza per le operazioni di lettura, nonché durante l'aumento delle dimensioni del vettore, purché si ha la sicurezza che il valore `_Index` è inferiore alla dimensione del vettore simultaneo.
 
@@ -540,7 +540,7 @@ const_reference operator[](size_type _index) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 L'indice dell'elemento da recuperare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -565,7 +565,7 @@ iterator push_back(T&& _Item);
 
 ### <a name="parameters"></a>Parametri
 
-*Elemento*<br/>
+*_Item*<br/>
 Il valore da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -610,7 +610,7 @@ void reserve(size_type _N);
 
 ### <a name="parameters"></a>Parametri
 
-*N*<br/>
+*_N*<br/>
 Il numero di elementi per riservare spazio per.
 
 ### <a name="remarks"></a>Note
@@ -632,10 +632,10 @@ void resize(
 
 ### <a name="parameters"></a>Parametri
 
-*N*<br/>
+*_N*<br/>
 Nuova dimensione di concurrent_vector.
 
-*Val*<br/>
+*val*<br/>
 Valore di nuovi elementi aggiunti al vettore se la nuova dimensione è maggiore di quella originale. Se il valore viene omesso, i nuovi oggetti vengono assegnati il valore predefinito per il loro tipo.
 
 ### <a name="remarks"></a>Note
@@ -682,11 +682,10 @@ void swap(concurrent_vector& _Vector);
 
 ### <a name="parameters"></a>Parametri
 
-*Vector*<br/>
+*_Vector*<br/>
 Il `concurrent_vector` oggetto cui scambiare il contenuto con.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
 [Contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md)
-

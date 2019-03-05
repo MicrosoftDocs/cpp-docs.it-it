@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-ms.openlocfilehash: 8044af41a3176d58c09f2c91c52497fa7f59de05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658588"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289624"
 ---
 # <a name="cdoctemplate-class"></a>Classe CDocTemplate
 
@@ -87,13 +87,13 @@ class CDocTemplate : public CCmdTarget
 |[CDocTemplate::InitialUpdateFrame](#initialupdateframe)|Inizializza la finestra cornice e facoltativamente lo rende visibile.|
 |[CDocTemplate::LoadTemplate](#loadtemplate)|Carica le risorse per un determinato `CDocTemplate` o una classe derivata.|
 |[CDocTemplate::MatchDocType](#matchdoctype)|Determina il livello di confidenza della corrispondenza tra un tipo di documento e questo modello.|
-|[CDocTemplate:: OpenDocumentFile](#opendocumentfile)|Apre un file specificato da un nome di percorso.|
+|[CDocTemplate::OpenDocumentFile](#opendocumentfile)|Apre un file specificato da un nome di percorso.|
 |[CDocTemplate::RemoveDocument](#removedocument)|Rimuove un documento da un modello.|
 |[CDocTemplate::SaveAllModified](#saveallmodified)|Salva tutti i documenti associati a questo modello che sono stati modificati.|
-|[CDocTemplate:: SetContainerInfo](#setcontainerinfo)|Determina le risorse per contenitori OLE durante la modifica di un elemento OLE sul posto.|
+|[CDocTemplate::SetContainerInfo](#setcontainerinfo)|Determina le risorse per contenitori OLE durante la modifica di un elemento OLE sul posto.|
 |[CDocTemplate::SetDefaultTitle](#setdefaulttitle)|Il titolo predefinito viene visualizzato nella barra del titolo della finestra del documento.|
 |[CDocTemplate::SetPreviewInfo](#setpreviewinfo)|Gestore di anteprime di configurazioni di fuori del processo.|
-|[CDocTemplate:: SetServerInfo](#setserverinfo)|Determina le risorse e le classi quando il documento server incorporato o modifica sul posto.|
+|[CDocTemplate::SetServerInfo](#setserverinfo)|Determina le risorse e le classi quando il documento server incorporato o modifica sul posto.|
 
 ## <a name="remarks"></a>Note
 
@@ -353,7 +353,7 @@ Puntatore al documento successivo nell'elenco di documenti associati a questo mo
 
 ### <a name="parameters"></a>Parametri
 
-*RPO*<br/>
+*rPos*<br/>
 Un riferimento a un valore di posizione restituito da una chiamata precedente a [GetFirstDocPosition](#getfirstdocposition) o `GetNextDoc`.
 
 ### <a name="remarks"></a>Note

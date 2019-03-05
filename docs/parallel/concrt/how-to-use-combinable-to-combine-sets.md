@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Usare l'oggetto combinable per combinare set"
+title: 'Procedura: Usare la classe combinable per combinare set'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-ms.openlocfilehash: c4d245688dd000ea61b538c4f3957246b9852ec5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf8a5bee65ea0ba1718c1d4d436b6af3e0b95961
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296098"
 ---
-# <a name="how-to-use-combinable-to-combine-sets"></a>Procedura: Usare l'oggetto combinable per combinare set
+# <a name="how-to-use-combinable-to-combine-sets"></a>Procedura: Usare la classe combinable per combinare set
 
 Questo argomento viene illustrato come usare il [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) classe per calcolare il set di numeri primi.
 
@@ -43,4 +43,3 @@ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure
 [Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [Classe combinable](../../parallel/concrt/reference/combinable-class.md)<br/>
 [Metodo combinable:: combine_each](reference/combinable-class.md#combine_each)
-

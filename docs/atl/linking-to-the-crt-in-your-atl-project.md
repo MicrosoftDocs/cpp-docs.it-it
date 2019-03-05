@@ -12,12 +12,12 @@ helpviewer_keywords:
 - wWinMainCRTStartup method
 - ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-ms.openlocfilehash: fc8c3c591b04d62c6dd7cf72bedde7a668e9f146
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b117165c82e51a59fe691b90f8ef92d0ba802cbc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516454"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287947"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Collegamento a CRT nel progetto ATL
 
@@ -39,4 +39,3 @@ Usando l'opzione del linker/OPT:NOWIN98 può ridurre ulteriormente un controllo 
 
 [Programmazione con il codice runtime C e ATL](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [DLL e comportamento delle librerie di runtime Visual C++](../build/run-time-library-behavior.md)
-

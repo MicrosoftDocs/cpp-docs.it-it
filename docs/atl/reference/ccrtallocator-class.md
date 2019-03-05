@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: 5d9ab804478dbf72ec51265a851f62d025ebfba5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428067"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287362"
 ---
 # <a name="ccrtallocator-class"></a>Classe CCRTAllocator
 
@@ -33,9 +33,9 @@ class ATL::CCRTAllocator
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Ccrtallocator:: allocate](#allocate)|(Statico) Chiamare questo metodo per allocare memoria.|
-|[Ccrtallocator:: Free](#free)|(Statico) Chiamare questo metodo per liberare memoria.|
-|[Ccrtallocator:: ReAllocate](#reallocate)|(Statico) Chiamare questo metodo per riallocare la memoria.|
+|[CCRTAllocator::Allocate](#allocate)|(Statico) Chiamare questo metodo per allocare memoria.|
+|[CCRTAllocator::Free](#free)|(Statico) Chiamare questo metodo per liberare memoria.|
+|[CCRTAllocator::Reallocate](#reallocate)|(Statico) Chiamare questo metodo per riallocare la memoria.|
 
 ## <a name="remarks"></a>Note
 
@@ -83,7 +83,7 @@ Puntatore alla memoria allocata.
 
 Libera la memoria allocata. Visualizzare [gratuita](../../c-runtime-library/reference/free.md) per altri dettagli.
 
-##  <a name="reallocate"></a>  Ccrtallocator:: ReAllocate
+##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
 
 Chiamare questa funzione statica per riallocare la memoria.
 

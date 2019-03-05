@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300271"
 ---
 # <a name="cevent-class"></a>Classe CEvent
 
@@ -66,7 +66,7 @@ Un metodo alternativo per l'utilizzo `CEvent` oggetti consiste nell'aggiungere u
 
 Accedere a una risorsa controllata da un `CEvent` dell'oggetto in questo modo, prima di tutto creare una variabile di tipo [CSingleLock](../../mfc/reference/csinglelock-class.md) o un tipo [CMultiLock](../../mfc/reference/cmultilock-class.md) nel metodo di accesso della risorsa. Chiamare quindi il `Lock` metodo dell'oggetto di blocco (ad esempio [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). A questo punto, i thread verranno sia ottenere l'accesso alla risorsa, attendere che la risorsa essere rilasciato e ottenere l'accesso, attendere la risorsa deve essere rilasciato, timeout e non è possibile ottenere l'accesso alla risorsa. In ogni caso, la risorsa è stato eseguito l'accesso in modo thread-safe. Per rilasciare la risorsa, chiamare `SetEvent` per l'oggetto evento di segnale e quindi usare il `Unlock` metodo dell'oggetto di blocco (ad esempio [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), o lasciare che l'oggetto blocco uscire dall'ambito.
 
-Per altre informazioni su come usare `CEvent` oggetti, vedere [Multithreading: come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Per altre informazioni su come usare `CEvent` oggetti, vedere [Multithreading: Come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="example"></a>Esempio
 
@@ -195,4 +195,3 @@ Questa funzione membro viene chiamata dal thread che attualmente possiede un eve
 
 [Classe CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

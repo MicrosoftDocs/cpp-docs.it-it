@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526409"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290430"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 
@@ -72,7 +72,7 @@ class CSpinButtonCtrl : public CWnd
 |[CSpinButtonCtrl::SetBase](#setbase)|Imposta la base per un controllo pulsante di selezione.|
 |[CSpinButtonCtrl::SetBuddy](#setbuddy)|Imposta la finestra buddy per un controllo pulsante di selezione.|
 |[CSpinButtonCtrl::SetPos](#setpos)|Imposta la posizione corrente del controllo.|
-|[CSpinButtonCtrl:: SetRange](#setrange)|Imposta i limiti superiori e inferiori (intervallo) per un controllo pulsante di selezione.|
+|[CSpinButtonCtrl::SetRange](#setrange)|Imposta i limiti superiori e inferiori (intervallo) per un controllo pulsante di selezione.|
 
 ## <a name="remarks"></a>Note
 
@@ -119,7 +119,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili del controllo pulsante di selezione al controllo. Questi stili sono descritte nel [stili del controllo di scorrimento](/windows/desktop/Controls/up-down-control-styles) nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo pulsante di selezione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura
 
 *pParentWnd*<br/>
@@ -159,7 +159,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco degli stili est
 *dwStyle*<br/>
 Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili del controllo pulsante di selezione al controllo. Questi stili sono descritte nel [stili del controllo di scorrimento](/windows/desktop/Controls/up-down-control-styles) nel SDK di Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>Parametri
 
-*inferiore*<br/>
+*lower*<br/>
 Riferimento a un integer che riceve il limite inferiore per il controllo.
 
-*superiore*<br/>
+*upper*<br/>
 Riferimento a un integer che riceve il limite superiore per il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -371,7 +371,7 @@ La posizione precedente (16 bit di precisione per `SetPos`a 32 bit la precisione
 
 `SetPos32` Imposta la posizione di 32 bit.
 
-##  <a name="setrange"></a>  CSpinButtonCtrl:: SetRange
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange
 
 Imposta i limiti superiori e inferiori (intervallo) per un controllo pulsante di selezione.
 

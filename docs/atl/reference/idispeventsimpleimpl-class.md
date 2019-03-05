@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-ms.openlocfilehash: b78edf44a200f31a6455c0783e90fb65f5d9af38
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1578518b8918f59b1da54f474e82cf899f3c76f6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525327"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285542"
 ---
 # <a name="idispeventsimpleimpl-class"></a>Classe IDispEventSimpleImpl
 
@@ -54,8 +54,8 @@ Il puntatore per l'IID dell'interfaccia dispatch eventi implementata da questa c
 |Nome|Descrizione|
 |----------|-----------------|
 |[IDispEventSimpleImpl::Advise](#advise)|Stabilisce una connessione con l'origine evento predefinito.|
-|[IDispEventSimpleImpl:: DispEventAdvise](#dispeventadvise)|Stabilisce una connessione con l'origine evento.|
-|[IDispEventSimpleImpl:: DispEventUnadvise](#dispeventunadvise)|Interrompe la connessione con l'origine evento.|
+|[IDispEventSimpleImpl::DispEventAdvise](#dispeventadvise)|Stabilisce una connessione con l'origine evento.|
+|[IDispEventSimpleImpl::DispEventUnadvise](#dispeventunadvise)|Interrompe la connessione con l'origine evento.|
 |[IDispEventSimpleImpl::GetIDsOfNames](#getidsofnames)|Restituisce E_NOTIMPL.|
 |[IDispEventSimpleImpl::GetTypeInfo](#gettypeinfo)|Restituisce E_NOTIMPL.|
 |[IDispEventSimpleImpl::GetTypeInfoCount](#gettypeinfocount)|Restituisce E_NOTIMPL.|
@@ -125,7 +125,7 @@ Una volta stabilita la connessione, gli eventi attivati dal *pUnk* verranno indi
 
 `Advise` stabilisce una connessione con l'origine evento di impostazione predefinita, ottiene l'IID dell'origine evento predefinito dell'oggetto come determinato dalla [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).
 
-##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl:: DispEventAdvise
+##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl::DispEventAdvise
 
 Chiamare questo metodo per stabilire una connessione con l'origine evento rappresentato da *pUnk*.
 
@@ -154,7 +154,7 @@ Successivamente, gli eventi attivati dal *pUnk* verranno indirizzate ai gestori 
 
 `DispEventAdvise` stabilisce una connessione con l'origine evento specificata nella `pdiid`.
 
-##  <a name="dispeventunadvise"></a>  IDispEventSimpleImpl:: DispEventUnadvise
+##  <a name="dispeventunadvise"></a>  IDispEventSimpleImpl::DispEventUnadvise
 
 Interrompe la connessione con l'origine evento rappresentato da *pUnk*.
 

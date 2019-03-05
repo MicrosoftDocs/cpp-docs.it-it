@@ -1,19 +1,19 @@
 ---
-title: 'TN036: utilizzo di CFormView con AppWizard e ClassWizard'
+title: 'TN036: Utilizzo di CFormView con AppWizard e ClassWizard'
 ms.date: 11/04/2016
 f1_keywords:
 - CFormView
 helpviewer_keywords:
 - TN036
 ms.assetid: dd54053f-ae80-4d23-9180-c7d07ddf2290
-ms.openlocfilehash: 10ef4cef4a87ea36634086e802147a6053ff6c19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 698070340e2f44b908a564bdda2c69ecda227386
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501933"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299335"
 ---
-# <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: utilizzo di CFormView con AppWizard e ClassWizard
+# <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: Utilizzo di CFormView con AppWizard e ClassWizard
 
 In questa nota tecnica descriveva come modificare un'applicazione di creazione guidata applicazione generata e usato un `CFormView` anziché il valore predefinito `CView` come classe di visualizzazione principale. Questa è supportata direttamente con questa versione di Visual C++.
 
@@ -21,4 +21,3 @@ In questa nota tecnica descriveva come modificare un'applicazione di creazione g
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

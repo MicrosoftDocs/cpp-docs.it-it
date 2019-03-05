@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 68c851ae6a6b1b8578df90e2618f257122797aa5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894263"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294148"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: Registrazione delle classi di finestra
 
@@ -110,4 +110,3 @@ Se si desidera eseguire alcuna operazione resi più sofisticati rispetto a quant
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

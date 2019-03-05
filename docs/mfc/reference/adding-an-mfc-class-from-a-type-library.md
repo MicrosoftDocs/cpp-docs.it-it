@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: 5cd94ad6d400cf2db60131e822f430f87a129cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301585"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Aggiunta di una classe MFC da una libreria dei tipi
 
@@ -20,7 +20,7 @@ Usare questa procedura guidata per creare una classe MFC da un'interfaccia in un
 > [!NOTE]
 >  Non devi creare un progetto MFC con automazione abilitata per aggiungere una classe da una libreria dei tipi.
 
-Una libreria dei tipi contiene una descrizione binaria di interfacce esposte da un componente, che definisce i metodi e i relativi parametri e tipi restituiti. La libreria dei tipi deve essere registrata per visualizzarlo nel **librerie dei tipi disponibili** elenco nell'Aggiunta guidata classe da libreria dei tipi. Vedere "All'interno di Distributed COM: tipo di librerie e linguaggio integrazione" in MSDN library per ulteriori informazioni.
+Una libreria dei tipi contiene una descrizione binaria di interfacce esposte da un componente, che definisce i metodi e i relativi parametri e tipi restituiti. La libreria dei tipi deve essere registrata per visualizzarlo nel **librerie dei tipi disponibili** elenco nell'Aggiunta guidata classe da libreria dei tipi. Vedere "all'interno di Distributed COM: Tipo integrazione linguaggi e librerie"in MSDN library per ulteriori informazioni.
 
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Per aggiungere una classe MFC da una libreria dei tipi
 
@@ -37,5 +37,4 @@ La procedura guidata crea una classe MFC, derivata da [COleDispatchDriver](../..
 ## <a name="see-also"></a>Vedere anche
 
 [Automation Clients](../../mfc/automation-clients.md)<br/>
-[Client di automazione: uso delle librerie dei tipi](../../mfc/automation-clients-using-type-libraries.md)
-
+[Client di automazione: Uso delle librerie dei tipi](../../mfc/automation-clients-using-type-libraries.md)

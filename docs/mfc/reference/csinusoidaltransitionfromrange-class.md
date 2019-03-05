@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: 20e910dfa34e90af2c8a2765947ad85a2465c596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283813"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Classe CSinusoidalTransitionFromRange
 
@@ -111,7 +111,7 @@ CSinusoidalTransitionFromRange(
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 La durata della transizione.
 
 *dblMinimumValue*<br/>
@@ -120,10 +120,10 @@ Il valore della variabile di animazione a un punto minimo dell'onda sinusoidale.
 *dblMaximumValue*<br/>
 Il valore della variabile di animazione un picco di domanda dell'onda sinusoidale.
 
-*Periodo*<br/>
+*period*<br/>
 Il periodo di oscillazione dell'onda sinusoidale in pochi secondi.
 
-*inclinazione*<br/>
+*slope*<br/>
 L'inclinazione all'inizio della transizione.
 
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [C++], locales
 - per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
-ms.openlocfilehash: dc3f43f67bbc744d550e2770096f0b6ae985175a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12a3fa1922db7a1ec0a7bcd43ddf09000d97961
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561603"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293602"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading e impostazioni locali
 
@@ -443,6 +443,6 @@ unsigned __stdcall RunThreadB(void *params)
 [setlocale](../preprocessor/setlocale.md)<br/>
 [Internazionalizzazione](../c-runtime-library/internationalization.md)<br/>
 [Impostazioni locali](../c-runtime-library/locale.md)<br/>
-[\<clocale >](../standard-library/clocale.md)<br/>
+[\<clocale>](../standard-library/clocale.md)<br/>
 [\<locale>](../standard-library/locale.md)<br/>
 [Classe locale](../standard-library/locale-class.md)

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660382"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292915"
 ---
 # <a name="registry-macros"></a>Macro del Registro di sistema
 
@@ -25,19 +25,19 @@ Queste macro definiscono strutture di tipo utile della libreria e del Registro d
 
 |||
 |-|-|
-|[ATL_STATIC_REGISTRY](#_atl_static_registry)|Indica che si desidera che il codice di registrazione per l'oggetto sia nell'oggetto per evitare una dipendenza su ATL. DLL.|
+|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|Indica che si desidera che il codice di registrazione per l'oggetto sia nell'oggetto per evitare una dipendenza su ATL. DLL.|
 |[DECLARE_LIBID](#declare_libid)|Fornisce un modo per ATL ottenere il *libid* della libreria dei tipi.|
 |[DECLARE_NO_REGISTRY](#declare_no_registry)|Evita la registrazione ATL predefinito.|
 |[DECLARE_REGISTRY](#declare_registry)|Entra o rimuove una voce dell'oggetto principale nel Registro di sistema.|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Specifica le informazioni necessarie per registrare automaticamente il *appid*.|
-|[MACRO DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Trova la risorsa denominata ed esegue lo script del Registro di sistema all'interno di esso.|
+|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Trova la risorsa denominata ed esegue lo script del Registro di sistema all'interno di esso.|
 |[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Trova la risorsa identificata da un numero ID ed esegue lo script del Registro di sistema all'interno di esso.|
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlcom. h
 
-##  <a name="_atl_static_registry"></a>  ATL_STATIC_REGISTRY
+##  <a name="_atl_static_registry"></a>  _ATL_STATIC_REGISTRY
 
 Un simbolo che indica che il codice di registrazione per l'oggetto sia nell'oggetto per evitare una dipendenza su ATL. DLL.
 
@@ -61,7 +61,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parametri
 
-*LIBID*<br/>
+*libid*<br/>
 Il GUID della libreria dei tipi.
 
 ### <a name="remarks"></a>Note
@@ -104,11 +104,11 @@ DECLARE_REGISTRY(
 *vpid*<br/>
 [in] LPCTSTR che è un identificatore di programma indipendente dalla versione.
 
-*nID*<br/>
+*nid*<br/>
 [in] UINT e rappresenta l'indice della stringa di risorsa nel Registro di sistema da utilizzare come descrizione del programma.
 
 *flags*<br/>
-[in] Un valore DWORD contenente modello di threading del programma nel Registro di sistema. Deve essere uno dei seguenti valori: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH o AUTPRXFLAG.
+[in] Un valore DWORD contenente modello di threading del programma nel Registro di sistema. Deve essere uno dei valori seguenti: THREADFLAGS_APARTMENT THREADFLAGS_BOTH o AUTPRXFLAG.
 
 ### <a name="remarks"></a>Note
 
@@ -128,10 +128,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parametri
 
-*RESID*<br/>
+*resid*<br/>
 L'id risorsa del file con estensione RGS che contiene informazioni sul *appid*.
 
-*ID App*<br/>
+*appid*<br/>
 Un valore GUID.
 
 ### <a name="remarks"></a>Note
@@ -142,7 +142,7 @@ Usare DECLARE_REGISTRY_APPID_RESOURCEID in un `CAtlModuleT`-classe derivata.
 
 Le classi aggiunte ai progetti ATL con la creazione guidata aggiunta classe avrà un esempio dell'uso di questa macro.
 
-##  <a name="declare_registry_resource"></a>  MACRO DECLARE_REGISTRY_RESOURCE
+##  <a name="declare_registry_resource"></a>  DECLARE_REGISTRY_RESOURCE
 
 Ottiene la risorsa denominata contenente il file del Registro di sistema ed esegue lo script per immettere gli oggetti nel Registro di sistema o rimuoverli dal Registro di sistema.
 

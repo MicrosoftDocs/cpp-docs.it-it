@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: 2ea10af6ffa1c3e4731b889ddec2d6f0c86ec981
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458032"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300908"
 ---
 # <a name="unorm3-class"></a>Classe unorm_3
 
@@ -168,7 +168,7 @@ class unorm_3;
 |----------|-----------------|
 |unorm_3::b||
 |unorm_3::bg||
-|unorm_3::BGR||
+|unorm_3::bgr||
 |unorm_3::br||
 |unorm_3::brg||
 |unorm_3::g||
@@ -182,8 +182,8 @@ class unorm_3;
 |unorm_3::rg||
 |unorm_3::rgb||
 |unorm_3::x||
-|unorm_3::XY||
-|unorm_3::XYZ||
+|unorm_3::xy||
+|unorm_3::xyz||
 |unorm_3::xz||
 |unorm_3::xzy||
 |unorm_3::y||
@@ -205,7 +205,7 @@ class unorm_3;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> unorm_3
 
@@ -265,13 +265,13 @@ explicit inline unorm_3(
 *_V0*<br/>
 Il valore per inizializzare l'elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 Il valore per inizializzare l'elemento 1.
 
 *_V2*<br/>
 Il valore per inizializzare l'elemento 2.
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore di inizializzazione.
 
 *_Other*<br/>

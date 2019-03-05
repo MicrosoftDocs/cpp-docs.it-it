@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 3c701f933d622adc5f3d8b1eb2371406e5b45e6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893652"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283735"
 ---
 # <a name="chttpfile-class"></a>Classe CHttpFile
 

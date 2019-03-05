@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: f8a76e09adf606d9f366e8ed5657791fae497a2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619362"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302512"
 ---
 # <a name="unorm4-class"></a>Classe unorm_4
 
@@ -467,7 +467,7 @@ class unorm_4;
 |unorm_4::ab||
 |unorm_4::abg||
 |unorm_4::abgr||
-|unorm_4::ABR||
+|unorm_4::abr||
 |unorm_4::abrg||
 |unorm_4::ag||
 |unorm_4::agb||
@@ -475,10 +475,10 @@ class unorm_4;
 |unorm_4::agr||
 |unorm_4::agrb||
 |unorm_4::ar||
-|unorm_4::ARB||
+|unorm_4::arb||
 |unorm_4::arbg||
 |unorm_4::arg||
-|unorm_4::ARGB||
+|unorm_4::argb||
 |unorm_4::b||
 |unorm_4::ba||
 |unorm_4::bag||
@@ -488,7 +488,7 @@ class unorm_4;
 |unorm_4::bg||
 |unorm_4::bga||
 |unorm_4::bgar||
-|unorm_4::BGR||
+|unorm_4::bgr||
 |unorm_4::bgra||
 |unorm_4::br||
 |unorm_4::bra||
@@ -501,14 +501,14 @@ class unorm_4;
 |unorm_4::gabr||
 |unorm_4::gar||
 |unorm_4::garb||
-|unorm_4::GB||
+|unorm_4::gb||
 |unorm_4::gba||
 |unorm_4::gbar||
-|unorm_4::GBR||
+|unorm_4::gbr||
 |unorm_4::gbra||
-|unorm_4::GR||
+|unorm_4::gr||
 |unorm_4::gra||
-|unorm_4::Grab||
+|unorm_4::grab||
 |unorm_4::grb||
 |unorm_4::grba||
 |unorm_4::r||
@@ -533,7 +533,7 @@ class unorm_4;
 |unorm_4::wxyz||
 |unorm_4::wxz||
 |unorm_4::wxzy||
-|unorm_4::wY||
+|unorm_4::wy||
 |unorm_4::wyx||
 |unorm_4::wyxz||
 |unorm_4::wyz||
@@ -549,12 +549,12 @@ class unorm_4;
 |unorm_4::xwyz||
 |unorm_4::xwz||
 |unorm_4::xwzy||
-|unorm_4::XY||
+|unorm_4::xy||
 |unorm_4::xyw||
 |unorm_4::xywz||
-|unorm_4::XYZ||
+|unorm_4::xyz||
 |unorm_4::xyzw||
-|unorm_4::XZ||
+|unorm_4::xz||
 |unorm_4::xzw||
 |unorm_4::xzwy||
 |unorm_4::xzy||
@@ -565,12 +565,12 @@ class unorm_4;
 |unorm_4::ywxz||
 |unorm_4::ywz||
 |unorm_4::ywzx||
-|unorm_4::YX||
+|unorm_4::yx||
 |unorm_4::yxw||
 |unorm_4::yxwz||
 |unorm_4::yxz||
 |unorm_4::yxzw||
-|unorm_4::YZ||
+|unorm_4::yz||
 |unorm_4::yzw||
 |unorm_4::yzwx||
 |unorm_4::yzx||
@@ -600,7 +600,7 @@ class unorm_4;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> unorm_4
 
@@ -662,7 +662,7 @@ explicit inline unorm_4(
 *_V0*<br/>
 Il valore per inizializzare l'elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 Il valore per inizializzare l'elemento 1.
 
 *_V2*<br/>
@@ -671,7 +671,7 @@ Il valore per inizializzare l'elemento 2.
 *_V3*<br/>
 Il valore per inizializzare l'elemento 3.
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore di inizializzazione.
 
 *_Other*<br/>

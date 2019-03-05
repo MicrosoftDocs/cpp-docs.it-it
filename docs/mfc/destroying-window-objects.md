@@ -7,12 +7,12 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: 363ff2a4cee48b1660de87714d73c93e795017cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289845"
 ---
 # <a name="destroying-window-objects"></a>Eliminazione definitiva di oggetti finestra
 
@@ -33,4 +33,3 @@ Prestare attenzione con il proprio finestre figlio da eliminare definitivamente 
 ## <a name="see-also"></a>Vedere anche
 
 [Oggetti finestra](../mfc/window-objects.md)
-

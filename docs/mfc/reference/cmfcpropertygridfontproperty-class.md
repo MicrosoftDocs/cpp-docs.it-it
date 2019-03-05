@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: 40f49e7e22b3e1c81e69b9b1f6b02789165dc5eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ab4f43b2b12dff88148097e2961f235669aaa62
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631715"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295669"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Classe CMFCPropertyGridFontProperty
 
@@ -81,7 +81,7 @@ CMFCPropertyGridFontProperty(
 *strName*<br/>
 [in] Il nome della proprietà.
 
-*LF*<br/>
+*lf*<br/>
 [in] Struttura logica del tipo di carattere che specifica gli attributi del tipo di carattere.
 
 *dwFontDialogFlags*<br/>
@@ -93,7 +93,7 @@ CMFCPropertyGridFontProperty(
 *dwData*<br/>
 [in] Dati specifici dell'applicazione, ad esempio un numero intero o un puntatore a altri dati che sono associati alla proprietà. Il valore predefinito è 0.
 
-*Colore*<br/>
+*color*<br/>
 [in] Colore del tipo di carattere. Il valore predefinito è il colore predefinito.
 
 ### <a name="remarks"></a>Note

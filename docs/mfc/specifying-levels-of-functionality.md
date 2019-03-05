@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-ms.openlocfilehash: 2588a3b2a55ebfca4b57be875e26bb0348db83a0
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c3b4ecb38054748f36d75ca43e32d6447d3d2428
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326212"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299911"
 ---
 # <a name="specifying-levels-of-functionality"></a>Specifica dei livelli di funzionalità
 

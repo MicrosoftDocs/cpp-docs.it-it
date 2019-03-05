@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: ec71019e64046d693aaf96adb81762bfd536ac2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677227"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297398"
 ---
 # <a name="norm4-class"></a>Classe norm_4
 
@@ -467,7 +467,7 @@ class norm_4;
 |norm_4::ab||
 |norm_4::abg||
 |norm_4::abgr||
-|norm_4::ABR||
+|norm_4::abr||
 |norm_4::abrg||
 |norm_4::ag||
 |norm_4::agb||
@@ -475,7 +475,7 @@ class norm_4;
 |norm_4::agr||
 |norm_4::agrb||
 |norm_4::ar||
-|norm_4::ARB||
+|norm_4::arb||
 |norm_4::arbg||
 |norm_4::arg||
 |norm_4::argb||
@@ -488,7 +488,7 @@ class norm_4;
 |norm_4::bg||
 |norm_4::bga||
 |norm_4::bgar||
-|norm_4::BGR||
+|norm_4::bgr||
 |norm_4::bgra||
 |norm_4::br||
 |norm_4::bra||
@@ -506,9 +506,9 @@ class norm_4;
 |norm_4::gbar||
 |norm_4::gbr||
 |norm_4::gbra||
-|norm_4::GR||
+|norm_4::gr||
 |norm_4::gra||
-|norm_4::Grab||
+|norm_4::grab||
 |norm_4::grb||
 |norm_4::grba||
 |norm_4::r||
@@ -533,7 +533,7 @@ class norm_4;
 |norm_4::wxyz||
 |norm_4::wxz||
 |norm_4::wxzy||
-|norm_4::wY||
+|norm_4::wy||
 |norm_4::wyx||
 |norm_4::wyxz||
 |norm_4::wyz||
@@ -549,10 +549,10 @@ class norm_4;
 |norm_4::xwyz||
 |norm_4::xwz||
 |norm_4::xwzy||
-|norm_4::XY||
+|norm_4::xy||
 |norm_4::xyw||
 |norm_4::xywz||
-|norm_4::XYZ||
+|norm_4::xyz||
 |norm_4::xyzw||
 |norm_4::xz||
 |norm_4::xzw||
@@ -600,7 +600,7 @@ class norm_4;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> norm_4
 
@@ -669,7 +669,7 @@ explicit inline norm_4(
 *_V0*<br/>
 Il valore per inizializzare l'elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 Il valore per inizializzare l'elemento 1.
 
 *_V2*<br/>
@@ -678,7 +678,7 @@ Il valore per inizializzare l'elemento 2.
 *_V3*<br/>
 Il valore per inizializzare l'elemento 3.
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore di inizializzazione.
 
 *_Other*<br/>

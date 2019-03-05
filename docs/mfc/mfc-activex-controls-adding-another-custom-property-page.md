@@ -1,5 +1,5 @@
 ---
-title: "Controlli ActiveX MFC: aggiunta di un'altra pagina delle proprietà personalizzata"
+title: "Controlli ActiveX MFC: Aggiunta di un'altra pagina delle proprietà personalizzata"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property pages [MFC], MFC ActiveX controls
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289547"
 ---
-# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controlli ActiveX MFC: aggiunta di un'altra pagina delle proprietà personalizzata
+# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controlli ActiveX MFC: Aggiunta di un'altra pagina delle proprietà personalizzata
 
 In alcuni casi, un controllo ActiveX può avere più proprietà non può essere contenuta in un'unica pagina di proprietà. In questo caso, è possibile aggiungere le pagine delle proprietà del controllo ActiveX per visualizzare queste proprietà.
 
-Questo articolo illustra l'aggiunta di nuove pagine delle proprietà a un controllo ActiveX che dispone già di almeno una pagina delle proprietà. Per altre informazioni sull'aggiunta di proprietà predefinite pagine (tipo di carattere, immagine o colore), vedere l'articolo [controlli ActiveX MFC: uso delle pagine delle proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+Questo articolo illustra l'aggiunta di nuove pagine delle proprietà a un controllo ActiveX che dispone già di almeno una pagina delle proprietà. Per altre informazioni sull'aggiunta di proprietà predefinite pagine (tipo di carattere, immagine o colore), vedere l'articolo [controlli ActiveX MFC: Uso delle pagine proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md).
 
 Le procedure seguenti usano un framework di controllo di ActiveX di esempio creato dalla creazione guidata controllo ActiveX. Di conseguenza, i nomi delle classi e gli identificatori sono univoci per questo esempio.
 
 Per altre informazioni sull'utilizzo delle pagine delle proprietà in un controllo ActiveX, vedere gli articoli seguenti:
 
-- [Controlli ActiveX MFC: pagine delle proprietà](../mfc/mfc-activex-controls-property-pages.md)
+- [Controlli ActiveX MFC: Pagine delle proprietà](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Controlli ActiveX MFC: uso delle pagine delle proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Controlli ActiveX MFC: Uso delle pagine proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
     > [!NOTE]
     >  Si consiglia di utilizzare tale proprietà nuove pagine di rispettano la dimensione standard per pagine proprietà del controllo ActiveX. La proprietà di colori e immagini predefinita delle pagine unità di misura 250 x 62 finestra di dialogo (DLU). La pagina delle proprietà standard del tipo di carattere è 250 x 110 DLU. La pagina delle proprietà predefinite creata dalla creazione guidata controllo ActiveX utilizza lo standard DLU 250 x 62.
@@ -110,4 +110,3 @@ Dopo avere apportato le modifiche necessarie ricompilare il progetto e usare Tes
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
-

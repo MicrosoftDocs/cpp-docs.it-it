@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519665"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300720"
 ---
 # <a name="cgopherconnection-class"></a>Classe CGopherConnection
 
@@ -46,9 +46,9 @@ class CGopherConnection : public CInternetConnection
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CGopherConnection:: CreateLocator](#createlocator)|Crea una [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) oggetto da trovare file in un server gopher.|
+|[CGopherConnection::CreateLocator](#createlocator)|Crea una [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) oggetto da trovare file in un server gopher.|
 |[CGopherConnection::GetAttribute](#getattribute)|Recupera informazioni sugli attributi sull'oggetto gopher.|
-|[CGopherConnection:: OpenFile](#openfile)|Apre un file gopher.|
+|[CGopherConnection::OpenFile](#openfile)|Apre un file gopher.|
 
 ## <a name="remarks"></a>Note
 
@@ -116,7 +116,7 @@ Un puntatore a una stringa con terminazione null che specifica la password da ut
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL o ""|NULL o ""|"anonymous"|Nome messaggio di posta elettronica dell'utente|
 |Stringa non NULL|NULL o ""|*pstrUserName*|" "|
-|Stringa Non NULL a NULL|ERRORE|ERRORE||
+|Stringa Non NULL a NULL|ERROR|ERROR||
 |Stringa non NULL|Stringa non NULL|*pstrUserName*|*pstrPassword*|
 
 *nPort*<br/>
@@ -233,7 +233,7 @@ Un puntatore per il [CGopherFile](../../mfc/reference/cgopherfile-class.md) ogge
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CGopherConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CGopherConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,18 +1,18 @@
 ---
-title: 'Procedura dettagliata: inserimento di controlli nelle barre degli strumenti'
+title: 'Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-ms.openlocfilehash: 3e0cc066e39cc71833e2061a1964619d04a80be3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580297"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291388"
 ---
-# <a name="walkthrough-putting-controls-on-toolbars"></a>Procedura dettagliata: inserimento di controlli nelle barre degli strumenti
+# <a name="walkthrough-putting-controls-on-toolbars"></a>Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti
 
 Questo articolo descrive come aggiungere un pulsante della barra degli strumenti contenente un controllo di Windows da una barra degli strumenti. In MFC un pulsante della barra degli strumenti deve essere un [classe CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-derivato (classe), ad esempio [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [classe CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Classe CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), o [classe CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
@@ -39,7 +39,7 @@ Il **comandi** scheda della finestra di **Personalizza** nella finestra di dialo
 
 Quando si abilita la personalizzazione, si crea il **Personalizza** finestra di dialogo nel gestore della personalizzazione `OnViewCustomize` utilizzando le [classe CMFCToolBarsCustomizeDialog](../mfc/reference/cmfctoolbarscustomizedialog-class.md) classe. Prima di visualizzare il **Personalizza** finestra di dialogo chiamando [CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create), chiamare [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) sostituire il pulsante standard con il nuovo controllo.
 
-## <a name="example-creating-a-find-combo-box"></a>Esempio: creazione di una casella combinata Find
+## <a name="example-creating-a-find-combo-box"></a>Esempio: Creazione di una casella combinata Find
 
 In questa sezione viene descritto come creare un **trovare** controllo casella combinata che viene visualizzata una barra degli strumenti e contiene le stringhe di ricerca recenti utilizzate. L'utente può immettere una stringa nel controllo e premere il tasto INVIO per cercare un documento, oppure premere il tasto ESC per riportare lo stato attivo sulla cornice principale. Questo esempio si presuppone che il documento viene visualizzato una [classe CEditView](../mfc/reference/ceditview-class.md)-visualizzazione derivata.
 
@@ -84,7 +84,7 @@ Creare innanzitutto le **trovare** controllo casella combinata:
 
 Per aggiungere il pulsante della casella combinata alla barra degli strumenti, attenersi alla seguente procedura:
 
-1. Implementare il gestore di messaggi `AFX_WM_RESETTOOLBAR` `OnToolbarReset` nella finestra cornice principale.
+1. Implementare il gestore di messaggi `AFX_WM_RESETTOOLBAR``OnToolbarReset` nella finestra cornice principale.
 
     > [!NOTE]
     > Il framework invia il messaggio alla finestra cornice principale quando una barra degli strumenti viene inizializzata durante l'avvio dell'applicazione, oppure quando una barra degli strumenti viene reimpostata durante la personalizzazione. In entrambi i casi, è necessario sostituire il pulsante della barra degli strumenti standard con l'oggetto personalizzato **trovare** pulsante casella combinata.

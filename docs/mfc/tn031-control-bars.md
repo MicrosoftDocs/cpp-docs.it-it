@@ -1,5 +1,5 @@
 ---
-title: 'TN031: barre di controllo'
+title: 'TN031: Barre di controllo'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.bars
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286465"
 ---
-# <a name="tn031-control-bars"></a>TN031: barre di controllo
+# <a name="tn031-control-bars"></a>TN031: Barre di controllo
 
 > [!NOTE]
 >  La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
@@ -167,9 +167,9 @@ Il gestore ON_UPDATE_COMMAND_UI può chiamare:
 
 - `Enable`: Per abilitare o disabilitare il pulsante. Questo metodo è applicabile sia ai pulsanti della casella di controllo sia ai pulsanti di comando.
 
-- `SetCheck`: per impostare lo stato di selezione di un pulsante. Se la chiamata viene eseguita per un pulsante della barra degli strumenti, questo verrà convertito in un pulsante della casella di controllo. `SetCheck` accetta un parametro che può essere 0 (non selezionato), 1 (selezionato) o 2 (indeterminato)
+- `SetCheck`: Per impostare lo stato di un pulsante di selezione. Se la chiamata viene eseguita per un pulsante della barra degli strumenti, questo verrà convertito in un pulsante della casella di controllo. `SetCheck` accetta un parametro che può essere 0 (non selezionato), 1 (selezionato) o 2 (indeterminato)
 
-- `SetRadio`: sintassi abbreviata per `SetCheck`.
+- `SetRadio`: Sintassi abbreviata per `SetCheck`.
 
 I pulsanti della casella di controllo sono pulsanti "AUTO" ovvero, quando premuti, cambiano immediatamente stato. Lo stato selezionato è lo stato attivo o premuto. Non è possibile impostare lo stato "indeterminato" tramite un'interfaccia utente incorporata. Tale modifica deve essere eseguita tramite codice.
 
@@ -179,13 +179,13 @@ I pulsanti della barra degli strumenti inviano WM_COMMAND (messaggi), come pulsa
 
 Esistono quattro stili dei pulsanti della barra degli strumenti (TBBS_ valori) usati per gli stati di visualizzazione:
 
-- TBBS_CHECKED:   la casella di controllo è attualmente selezionata.
+- TBBS_CHECKED:   Casella di controllo è attualmente selezionata (in basso).
 
-- TBBS_INDETERMINATE::   la casella di controllo è attualmente indeterminata.
+- TBBS_INDETERMINATE:   Casella di controllo è attualmente indeterminata.
 
-- TBBS_DISABLED:   il pulsante è attualmente disabilitato.
+- TBBS_DISABLED:   Pulsante è attualmente disabilitato.
 
-- TBBS_PRESSED:   il pulsante è attualmente premuto.
+- TBBS_PRESSED:   Pulsante è attualmente premuto.
 
 I sei stili ufficiali dei pulsanti indicati nella Windows Interface Application Design Guide (Guida alla progettazione di applicazioni con interfaccia di Windows) sono rappresentati dai valori TBBS seguenti:
 
@@ -197,7 +197,7 @@ I sei stili ufficiali dei pulsanti indicati nella Windows Interface Application 
 
 - Selezionato = TBBS_CHECKED
 
-- Disabilitato = TBBS_CHECKED &#124; TBBS_DISABLED
+- Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED
 
 - Indeterminato = TBBS_INDETERMINATE
 
@@ -227,4 +227,3 @@ La personalizzazione può essere eseguita tramite le API di gestione delle fines
 
 [Note tecniche per numero](../mfc/technical-notes-by-number.md)<br/>
 [Note tecniche per categoria](../mfc/technical-notes-by-category.md)
-

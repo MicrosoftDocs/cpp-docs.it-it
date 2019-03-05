@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178922"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293862"
 ---
 # <a name="cmenu-class"></a>CMenu (classe)
 
@@ -119,12 +119,12 @@ class CMenu : public CObject
 |[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|Inserisce un pulsante di opzione accanto a una voce di menu e rimuove il pulsante di opzione da tutte le altre voci di menu del gruppo.|
 |[CMenu::CreateMenu](#createmenu)|Consente di creare un menu vuoto e lo collega a un `CMenu` oggetto.|
 |[CMenu::CreatePopupMenu](#createpopupmenu)|Consente di creare un menu a comparsa vuoto e lo collega a un `CMenu` oggetto.|
-|[CMenu](#deletemenu)|Elimina un elemento specificato dal menu di scelta. Se la voce di menu è associato un menu a comparsa, Elimina l'handle per il menu di scelta rapida e libera la memoria usata da esso.|
+|[CMenu::DeleteMenu](#deletemenu)|Elimina un elemento specificato dal menu di scelta. Se la voce di menu è associato un menu a comparsa, Elimina l'handle per il menu di scelta rapida e libera la memoria usata da esso.|
 |[CMenu::DeleteTempMap](#deletetempmap)|Elimina qualsiasi temporary `CMenu` degli oggetti creati dal `FromHandle` funzione membro.|
 |[CMenu::DestroyMenu](#destroymenu)|Elimina definitivamente il menu collegato a un `CMenu` dell'oggetto e libera tutta la memoria occupata il menu di scelta.|
 |[CMenu::Detach](#detach)|Scollega un handle del menu di Windows da un `CMenu` specificato e restituisce l'handle.|
 |[CMenu::DrawItem](#drawitem)|Chiamato dal framework quando un aspetto visivo di un menu creato dal proprietario cambia.|
-|[EnableMenuItem](#enablemenuitem)|Abilita, disabilita o attenua (tonalità di grigio) una voce di menu.|
+|[CMenu::EnableMenuItem](#enablemenuitem)|Abilita, disabilita o attenua (tonalità di grigio) una voce di menu.|
 |[CMenu::FromHandle](#fromhandle)|Restituisce un puntatore a un `CMenu` oggetto dato un handle di menu di Windows.|
 |[CMenu::GetDefaultItem](#getdefaultitem)|Determina la voce di menu predefinito sul menu specificato.|
 |[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|Recupera l'ID del contesto della Guida associato al menu.|
@@ -183,7 +183,7 @@ Creare un `CMenu` oggetto nello stack frame come locale, quindi chiamare `CMenu`
 
 **Intestazione:** afxwin.h
 
-##  <a name="appendmenu"></a>  CMenu:: AppendMenu
+##  <a name="appendmenu"></a>  CMenu::AppendMenu
 
 Aggiunge un nuovo elemento alla fine di un menu.
 
@@ -309,7 +309,7 @@ UINT CheckMenuItem(
 *nIDCheckItem*<br/>
 Specifica la voce di menu da controllare, come determinato dalla *nControllare*.
 
-*nControllare*<br/>
+*nCheck*<br/>
 Specifica come verificare la voce di menu e come determinare la posizione dell'elemento nel menu di scelta. Il *nControllare* parametro può essere una combinazione di MF_CHECKED o MF_UNCHECKED con flag MF_BYPOSITION o MF_BYCOMMAND. Questi flag possono essere combinati utilizzando l'operatore OR bit per bit. Hanno i significati seguenti:
 
 - MF_BYCOMMAND specifica che il parametro fornisce l'ID di comando della voce di menu esistenti. Questa è l'impostazione predefinita.
@@ -447,7 +447,7 @@ Prima di uscire, un'applicazione deve liberare le risorse di sistema associate a
 
   Vedere l'esempio relativo [CMenu::CreateMenu](#createmenu).
 
-##  <a name="deletemenu"></a>  CMenu
+##  <a name="deletemenu"></a>  CMenu::DeleteMenu
 
 Elimina un elemento dal menu di scelta.
 
@@ -459,7 +459,7 @@ BOOL DeleteMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Ncorrisponde*<br/>
+*nPosition*<br/>
 Specifica la voce di menu che deve essere eliminato, come determinato dalla *nFlags*.
 
 *nFlags*<br/>
@@ -565,7 +565,7 @@ Il codice seguente è da MFC [CTRLTEST](../../visual-cpp-samples.md) esempio:
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
-##  <a name="enablemenuitem"></a>  EnableMenuItem
+##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem
 
 Abilita, disabilita o attenua una voce di menu.
 
@@ -909,7 +909,7 @@ Un puntatore a un `CMenu` il cui `m_hMenu` membro contiene un handle per il menu
 
   Vedere l'esempio relativo [CMenu::TrackPopupMenu](#trackpopupmenu).
 
-##  <a name="insertmenu"></a>  CMenu:: InsertMenu
+##  <a name="insertmenu"></a>  CMenu::InsertMenu
 
 Inserisce una nuova voce di menu in corrispondenza della posizione specificata da *Ncorrisponde* e sposta gli altri elementi di menu a discesa.
 
@@ -929,7 +929,7 @@ BOOL InsertMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Ncorrisponde*<br/>
+*nPosition*<br/>
 Specifica la voce di menu prima che la nuova voce di menu deve essere inserito. Il *nFlags* parametro può essere usato per interpretare *Ncorrisponde* nei modi seguenti:
 
 |nFlags|Interpretazione di Ncorrisponde|
@@ -1118,7 +1118,7 @@ BOOL ModifyMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Ncorrisponde*<br/>
+*nPosition*<br/>
 Specifica la voce di menu da modificare. Il *nFlags* parametro può essere usato per interpretare *Ncorrisponde* nei modi seguenti:
 
 |nFlags|Interpretazione di Ncorrisponde|
@@ -1186,14 +1186,14 @@ BOOL operator!=(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Menu di scelta*<br/>
+*menu*<br/>
 Oggetto `CMenu` oggetto per il confronto.
 
 ### <a name="remarks"></a>Note
 
 Verifica se un oggetto menu sul lato sinistro non è uguale a un oggetto menu sul lato destro.
 
-##  <a name="operator_eq_eq"></a>  CMenu::operator = =
+##  <a name="operator_eq_eq"></a>  CMenu::operator ==
 
 Determina se due menu sono uguali.
 
@@ -1203,7 +1203,7 @@ BOOL operator==(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Menu di scelta*<br/>
+*menu*<br/>
 Oggetto `CMenu` oggetto per il confronto.
 
 ### <a name="remarks"></a>Note
@@ -1222,7 +1222,7 @@ BOOL RemoveMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Ncorrisponde*<br/>
+*nPosition*<br/>
 Specifica la voce di menu da rimuovere. Il *nFlags* parametro può essere usato per interpretare *Ncorrisponde* nei modi seguenti:
 
 |nFlags|Interpretazione di Ncorrisponde|
@@ -1337,7 +1337,7 @@ BOOL SetMenuItemBitmaps(
 
 ### <a name="parameters"></a>Parametri
 
-*Ncorrisponde*<br/>
+*nPosition*<br/>
 Specifica la voce di menu da modificare. Il *nFlags* parametro può essere usato per interpretare *Ncorrisponde* nei modi seguenti:
 
 |nFlags|Interpretazione di Ncorrisponde|

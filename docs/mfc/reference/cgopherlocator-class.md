@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-ms.openlocfilehash: 336997fd4094f4e5e1eb73f467734e40440b63a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79adbf126438c7d9f2884987c53b573991f92cf1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291380"
 ---
 # <a name="cgopherlocator-class"></a>Classe CGopherLocator
 
@@ -121,7 +121,7 @@ I tipi possibili sono i seguenti:
 |GOPHER_TYPE_TELNET|Un Server Telnet.|
 |GOPHER_TYPE_BINARY|Un file binario.|
 |GOPHER_TYPE_REDUNDANT|Un server duplicato. Le informazioni contenute all'interno sono un duplicato del server primario. Il server primario è l'ultima voce di directory che non è un tipo GOPHER_TYPE_REDUNDANT.|
-|GOPHER_TYPE_TN3270|Un server di TN3270.|
+|GOPHER_TYPE_TN3270|A TN3270 server.|
 |GOPHER_TYPE_GIF|Un file di grafica GIF.|
 |GOPHER_TYPE_IMAGE|Un file di immagine.|
 |GOPHER_TYPE_BITMAP|Un file bitmap.|

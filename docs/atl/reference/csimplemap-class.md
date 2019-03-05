@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: 1c1aa34d54f5754feee238fdf12fd6e55b8c32c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: afd9f017bb0fb9a95a0ed4fd135dcbd5ea4ddba2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666255"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284099"
 ---
 # <a name="csimplemap-class"></a>Classe CSimpleMap
 
@@ -66,7 +66,7 @@ Un oggetto dei tratti, che definisce il test di uguaglianza per gli elementi di 
 |Nome|Descrizione|
 |----------|-----------------|
 |[CSimpleMap::CSimpleMap](#csimplemap)|Costruttore.|
-|[CSimpleMap:: ~ CSimpleMap](#dtor)|Distruttore.|
+|[CSimpleMap::~CSimpleMap](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -117,7 +117,7 @@ BOOL Add(const TKey& key, const TVal& val);
 *key*<br/>
 Chiave.
 
-*Val*<br/>
+*val*<br/>
 Il valore associato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -156,7 +156,7 @@ CSimpleMap();
 
 Inizializza i membri dati.
 
-##  <a name="dtor"></a>  CSimpleMap:: ~ CSimpleMap
+##  <a name="dtor"></a>  CSimpleMap::~CSimpleMap
 
 Distruttore.
 
@@ -195,7 +195,7 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Il valore da cercare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -329,7 +329,7 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Valore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -349,7 +349,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 *key*<br/>
 Chiave.
 
-*Val*<br/>
+*val*<br/>
 Il nuovo valore da assegnare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -375,7 +375,7 @@ L'indice, che fa riferimento la chiave e il valore di associazione per modificar
 *key*<br/>
 La nuova chiave.
 
-*Val*<br/>
+*val*<br/>
 Nuovo valore.
 
 ### <a name="return-value"></a>Valore restituito

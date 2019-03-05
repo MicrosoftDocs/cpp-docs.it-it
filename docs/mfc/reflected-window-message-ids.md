@@ -46,16 +46,16 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 238fafee5201ec01e24be21512c73d1b33b706f1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693555"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302091"
 ---
 # <a name="reflected-window-message-ids"></a>ID messaggi finestra riflessi
 
-Un modo rapido per creare un controllo ActiveX o un altro controllo specializzato consiste nel creare una sottoclasse di una finestra. Per altre informazioni, vedere [controlli ActiveX MFC: creazione di un controllo Windows una sottoclasse](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Un modo rapido per creare un controllo ActiveX o un altro controllo specializzato consiste nel creare una sottoclasse di una finestra. Per altre informazioni, vedere [controlli ActiveX MFC: Crea una sottoclasse di un controllo Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 Per impedire che la ricezione dei messaggi finestra inviati da un controllo Windows sottoclassato, il contenitore del controllo [COleControl](../mfc/reference/colecontrol-class.md) crea una finestra "riflettore" per intercettare determinati messaggi finestra e inviarli al controllo. Il controllo, nella relativa routine della finestra, può quindi elaborare questi messaggi riflessi intraprendendo azioni appropriate per un controllo ActiveX.
 
@@ -86,6 +86,5 @@ Nella tabella seguente vengono mostrati i messaggi che vengono intercettati e i 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli ActiveX MFC: creazione di una sottoclasse per un controllo Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[TN062: reflection messaggi per controlli Windows](../mfc/tn062-message-reflection-for-windows-controls.md)
-
+[Controlli ActiveX MFC: Crea una sottoclasse di un controllo di Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[TN062: Reflection messaggi per controlli Windows](../mfc/tn062-message-reflection-for-windows-controls.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 27f3e8a17a9538a72a6592177a88a9b415b1a27c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893613"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297809"
 ---
 # <a name="csnapinitemimpl-class"></a>Classe CSnapInItemImpl
 

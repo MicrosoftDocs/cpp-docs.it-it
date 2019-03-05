@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 11bfa8304b51ed25b934a97109db7da7bb39f49a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590138"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293940"
 ---
 # <a name="chtmleditctrlbase-class"></a>Classe CHtmlEditCtrlBase
 
@@ -398,7 +398,7 @@ L'URL dell'immagine.
 Tipo di tag: 0 indica che l'immagine è per solo il tag di apertura. 1 indica che l'immagine si riferisce solo il tag di chiusura. 2 indica che l'immagine è per i tag di apertura e chiusura. Singolo tag, ad esempio br e commento deve essere aggiunto con il tipo di tag impostato su 0.
 
 *nAlignment*<br/>
-Allineamento (solo elementi rettangolari): questo parametro indica che l'immagine è per un elemento con un attributo di allineamento. Left = 0, centro = 1, a destra = 2 e undefined = 3. A sinistra, destra o attributi center devono essere impostata esplicitamente sull'elemento.
+Allineamento (solo elementi rettangolari): Questo parametro indica che l'immagine è per un elemento con un attributo di allineamento. Left = 0, centro = 1, a destra = 2 e undefined = 3. A sinistra, destra o attributi center devono essere impostata esplicitamente sull'elemento.
 
 *nPosInfo*<br/>
 Informazioni sul posizionamento. Determina quali sovrapponendole fogli di stile valore posizionamento (CSS) il glifo viene applicata, dove statico posizionamento = 0, il posizionamento assoluto = 1, il posizionamento relativo = 2 e tutti i = 3. Questo campo consente di specificare un glifo per il tag quando non è posizionato e un'altra icona per visualizzare un punto di ancoraggio, quando si posiziona il tag.
@@ -448,7 +448,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID del controllo pulsante.
 
 ### <a name="return-value"></a>Valore restituito
@@ -469,7 +469,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID del controllo casella di controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -554,7 +554,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID del controllo selezione elenco a discesa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -841,7 +841,7 @@ HRESULT GetFontFace(CString& strFace) const;
 
 ### <a name="parameters"></a>Parametri
 
-*cioè strFace*<br/>
+*strFace*<br/>
 Il nome del tipo di carattere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1128,7 +1128,7 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szID*<br/>
 L'ID per la linea orizzontale.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1191,7 +1191,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il frame inline.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1249,7 +1249,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per la casella.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1270,7 +1270,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il controllo button.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1291,7 +1291,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il controllo nascosto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1312,7 +1312,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il controllo immagine.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1333,7 +1333,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il controllo password.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1354,7 +1354,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il controllo di reimpostazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1375,7 +1375,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il controllo Invia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1396,7 +1396,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il controllo di caricamento file.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1523,7 +1523,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il controllo casella di riepilogo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1544,7 +1544,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il rettangolo di selezione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1577,7 +1577,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per un elenco ordinato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1614,7 +1614,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID per il paragrafo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1716,7 +1716,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID del pulsante di opzione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2461,7 +2461,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID del controllo input di testo su più righe.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2482,7 +2482,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID del controllo di testo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2551,7 +2551,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 ### <a name="parameters"></a>Parametri
 
-*IDdm*<br/>
+*szId*<br/>
 L'ID dell'elenco non ordinato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2566,4 +2566,3 @@ Questo metodo invia il [ID del comando IDM UNORDERLIST](https://msdn.microsoft.c
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Esempio HTMLEdit](../../visual-cpp-samples.md)
-

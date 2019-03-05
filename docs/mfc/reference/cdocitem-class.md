@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-ms.openlocfilehash: cf854bbc99ebeee55ae130b747c77fd7fe52f8d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c1c1da14d732b6aff6ae07f86ae7b9c1b690b84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437102"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291314"
 ---
 # <a name="cdocitem-class"></a>Classe CDocItem
 
@@ -40,7 +40,7 @@ class CDocItem : public CCmdTarget
 
 `CDocItem` gli oggetti vengono usati per rappresentare gli elementi OLE nei documenti di client e server.
 
-Per altre informazioni, vedere l'articolo [contenitori: implementazione di un contenitore](../../mfc/containers-implementing-a-container.md).
+Per altre informazioni, vedere l'articolo [contenitori: Implementazione di un contenitore](../../mfc/containers-implementing-a-container.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

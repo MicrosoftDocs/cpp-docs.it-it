@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301688"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Utilizzo delle finestre delle proprietà nell'applicazione
 
@@ -63,4 +63,3 @@ Per un esempio di come usare le finestre delle proprietà, vedere l'esempio MFC 
 ## <a name="see-also"></a>Vedere anche
 
 [Finestre delle proprietà](../mfc/property-sheets-mfc.md)
-

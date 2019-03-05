@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-ms.openlocfilehash: 4fa9d6a57cb2ee70e9da7853954241955d724a5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2020f6cb2f0feec28996f69791899c648600b600
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301051"
 ---
 # <a name="cmfccaptionbutton-class"></a>Classe CMFCCaptionButton
 
@@ -140,7 +140,7 @@ Il comando rappresentato dal pulsante.
 
 La tabella seguente elenca i possibili valori restituiti.
 
-|Valore|Comando|
+|Value|Comando|
 |-----------|-------------|
 |AFX_HTCLOSE|Pulsante Chiudi.|
 |HTMINBUTTON|Pulsante Riduci a icona.|
@@ -267,7 +267,7 @@ virtual void OnDraw(
 *bMaximized*<br/>
 [in] Indica se disegnare un'immagine del pulsante ingrandita.
 
-*bDisattivato*<br/>
+*bDisabled*<br/>
 [in] Indica se disegnare un'immagine del pulsante abilitata.
 
 ### <a name="remarks"></a>Note

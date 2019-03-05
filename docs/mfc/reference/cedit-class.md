@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289962"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -348,7 +348,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Specifica lo stile del controllo di modifica. Applicare qualsiasi combinazione di [stili di modifica](styles-used-by-mfc.md#edit-styles) al controllo.
 
-*Rect*<br/>
+*rect*<br/>
 Specifica le dimensioni e la posizione del controllo di modifica. Può essere un' `CRect` oggetto o `RECT` struttura.
 
 *pParentWnd*<br/>
@@ -605,7 +605,7 @@ int GetLine(
 *nIndex*<br/>
 Specifica il numero di riga da recuperare da un'istruzione di controllo di modifica. Numeri di riga sono in base zero. un valore pari a 0 specifica la prima riga. Questo parametro viene ignorato da un controllo di modifica a riga singola.
 
-*lpszbuffer viene*<br/>
+*lpszBuffer*<br/>
 Punta al buffer che riceve una copia della riga. La prima parola del buffer deve specificare il numero massimo di caratteri che può essere copiato nel buffer.
 
 *nMaxLength*<br/>
@@ -854,7 +854,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nRiga*<br/>
+*nLine*<br/>
 Contiene il valore di indice per la riga desiderata nel testo del controllo di modifica, o contiene -1. Se *nRiga* è -1, specifica la riga corrente, vale a dire, la riga che contiene il punto di inserimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -883,7 +883,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nRiga*<br/>
+*nLine*<br/>
 Indice a base zero di un carattere nella riga la cui lunghezza è da recuperare. Il valore predefinito è -1.
 
 ### <a name="return-value"></a>Valore restituito
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Indice a base zero del carattere specificato.
 
 ### <a name="return-value"></a>Valore restituito

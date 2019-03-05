@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image list control
 - CImageList class [MFC], using
 ms.assetid: 3d2a909e-d641-46b7-aada-81cab1a29b41
-ms.openlocfilehash: 92d639468e7465415b3553558090ca2d6811de9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3e4cec75ce23beb2a617d672170f86c608ca0a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294590"
 ---
 # <a name="using-cimagelist"></a>Utilizzo di CImageList
 
@@ -39,4 +39,3 @@ Tutte le immagini in un elenco di immagini sono contenute in una bitmap singola,
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli](../mfc/controls-mfc.md)
-

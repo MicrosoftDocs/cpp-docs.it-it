@@ -1,5 +1,5 @@
 ---
-title: 'Eccezioni: modifiche alle macro eccezioni nella versione 3.0'
+title: 'Eccezioni: Modifiche alle macro eccezioni nella versione 3.0'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607987"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291223"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Eccezioni: modifiche alle macro eccezioni nella versione 3.0
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Eccezioni: Modifiche alle macro eccezioni nella versione 3.0
 
 Si tratta di un argomento avanzato.
 
@@ -58,9 +58,8 @@ Ad esempio, questo codice è valido nelle versioni precedenti, ma avranno risult
 
 Usando **THROW** in catch block, il puntatore `e` da eliminare, in modo che il sito di rilevamento esterno verrà visualizzato un puntatore non valido. Uso **THROW_LAST** da generare nuovamente `e`.
 
-Per altre informazioni, vedere [eccezioni: eccezioni di intercettazione ed eliminazione](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Per altre informazioni, vedere [alle eccezioni: Rilevamento ed eliminazione di eccezioni](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
-

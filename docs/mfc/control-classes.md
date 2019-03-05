@@ -14,12 +14,12 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-ms.openlocfilehash: 880ef783316f710943fde323bc89a49d19b0a1fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79a71a4660cd49f85726d730c9fad0b2f10f83bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509006"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300427"
 ---
 # <a name="control-classes"></a>Classi dei controlli
 
@@ -128,7 +128,7 @@ Fornisce la funzionalità del controllo ActiveX WebBrowser in una finestra MFC.
 ## <a name="related-classes"></a>Classi correlate
 
 [CImageList](../mfc/reference/cimagelist-class.md)<br/>
-Fornisce la funzionalità dell'elenco immagini di Windows. Gli elenchi immagini vengono utilizzati con controlli elenco e controlli struttura ad albero. Possono inoltre essere utilizzati per memorizzare e archiviare un set di immagini bitmap della stessa dimensione.
+Fornisce la funzionalità dell'elenco immagini di Windows. Gli elenchi immagini vengono usati con controlli elenco e controlli albero. Possono inoltre essere utilizzati per memorizzare e archiviare un set di immagini bitmap della stessa dimensione.
 
 [CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
 Classe di base per tutte le visualizzazioni associate ai controlli di Windows. Le visualizzazioni basate su controlli sono descritti di seguito.
@@ -148,4 +148,3 @@ Una vista che contiene un controllo struttura ad albero di Windows.
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

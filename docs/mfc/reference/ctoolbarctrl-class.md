@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178980"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302499"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 
@@ -219,7 +219,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::ChangeBitmap](#changebitmap)|Modifica la bitmap per un pulsante nel controllo della barra degli strumenti corrente.|
 |[CToolBarCtrl::CheckButton](#checkbutton)|Verifica o cancella un determinato pulsante in un controllo barra degli strumenti.|
 |[CToolBarCtrl::CommandToIndex](#commandtoindex)|Recupera l'indice in base zero del pulsante associato all'identificatore di comando specificato.|
-|[CToolBarCtrl:: Create](#create)|Crea un controllo barra degli strumenti e lo collega a un `CToolBarCtrl` oggetto.|
+|[CToolBarCtrl::Create](#create)|Crea un controllo barra degli strumenti e lo collega a un `CToolBarCtrl` oggetto.|
 |[CToolBarCtrl::CreateEx](#createex)|Crea un controllo toolbar con gli stili estesi di Windows specificati e lo collega a un `CToolBarCtrl` oggetto.|
 |[CToolBarCtrl::Customize](#customize)|Consente di visualizzare la finestra di dialogo Personalizza barra degli strumenti.|
 |[CToolBarCtrl::DeleteButton](#deletebutton)|Elimina un pulsante nel controllo della barra degli strumenti.|
@@ -609,7 +609,7 @@ Indice a base zero del pulsante associato all'ID di comando.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="create"></a>  CToolBarCtrl:: Create
+##  <a name="create"></a>  CToolBarCtrl::Create
 
 Crea un controllo barra degli strumenti e lo collega a un `CToolBarCtrl` oggetto.
 
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Parametri
 
-*stringa noppure*<br/>
+*nString*<br/>
 Indice della stringa.
 
 *lpstrString*<br/>
@@ -2117,7 +2117,7 @@ BOOL SetIndent(int iIndent);
 
 ### <a name="parameters"></a>Parametri
 
-*Membro*<br/>
+*iIndent*<br/>
 Il valore che specifica il rientro, in pixel.
 
 ### <a name="return-value"></a>Valore restituito

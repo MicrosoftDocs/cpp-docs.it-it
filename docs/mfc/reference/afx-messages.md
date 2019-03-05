@@ -64,18 +64,18 @@ f1_keywords:
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-ms.openlocfilehash: 45c6a9174cbd39c4c0c24ffbdfdefb9d184a3cc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5caf40fc757e2c5c90c06e1698ce4c15d1ed6240
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594688"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284736"
 ---
 # <a name="afx-messages"></a>AFX (messaggi)
 
 Questi messaggi vengono usati in MFC.
 
-## <a name="messages"></a>Messages
+## <a name="messages"></a>Messaggi
 
 La tabella seguente elenca i messaggi che vengono usati nella libreria MFC:
 
@@ -127,7 +127,7 @@ La tabella seguente illustra i valori per la parola meno significativa del *lPar
 
 |||
 |-|-|
-|Valore|Significato|
+|Value|Significato|
 |SB_ENDSCROLL|L'utente termina lo scorrimento.|
 |SB_LEFT|L'utente scorre verso l'alto a sinistra.|
 |SB_RIGHT|L'utente scorre verso il basso a destra.|
@@ -145,7 +145,7 @@ Nella tabella seguente sono elencati i valori di flag per il *lParam* parametro 
 
 |||
 |-|-|
-|Flag|Valore|
+|Flag|Value|
 |AFX_TOOLTIP_TYPE_DEFAULT|0x0001|
 |AFX_TOOLTIP_TYPE_TOOLBAR|0x0002|
 |AFX_TOOLTIP_TYPE_TAB|0x0004|

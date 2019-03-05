@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589449"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298932"
 ---
 # <a name="ccommodule-class"></a>CComModule (classi)
 
@@ -61,13 +61,13 @@ class CComModule : public _ATL_MODULE
 |[CComModule::GetModuleInstance](#getmoduleinstance)|Restituisce `m_hInst`.|
 |[CComModule::GetResourceInstance](#getresourceinstance)|Restituisce `m_hInstResource`.|
 |[CComModule::GetTypeLibInstance](#gettypelibinstance)|Restituisce `m_hInstTypeLib`.|
-|[CComModule](#init)|Inizializza i membri dati.|
+|[CComModule::Init](#init)|Inizializza i membri dati.|
 |[CComModule::RegisterClassHelper](#registerclasshelper)|Entra in registrazione di un oggetto classe standard nel Registro di sistema.|
 |[CComModule::RegisterClassObjects](#registerclassobjects)|Registra l'oggetto di classe. Per solo file eseguibili.|
 |[CComModule::RegisterServer](#registerserver)|Aggiorna registro di sistema per ogni oggetto nella mappa oggetto.|
 |[CComModule::RegisterTypeLib](#registertypelib)|Registra una libreria dei tipi.|
 |[CComModule::RevokeClassObjects](#revokeclassobjects)|Revoca l'oggetto della classe. Per solo file eseguibili.|
-|[CComModule:: term](#term)|Rilascia i membri dati.|
+|[CComModule::Term](#term)|Rilascia i membri dati.|
 |[CComModule::UnregisterClassHelper](#unregisterclasshelper)|Rimuove la registrazione di un oggetto classe standard dal Registro di sistema.|
 |[CComModule::UnregisterServer](#unregisterserver)|Annulla la registrazione di ogni oggetto nella mappa oggetto.|
 |[CComModule::UpdateRegistryClass](#updateregistryclass)|Registra o Annulla la registrazione di registrazione di un oggetto classe standard.|
@@ -576,7 +576,7 @@ Stringa contenente la descrizione dell'oggetto.
 *dwFlags*<br/>
 Specifica il modello di threading di immettere nel Registro di sistema. I valori possibili sono THREADFLAGS_APARTMENT, THREADFLAGS_BOTH o AUTPRXFLAG.
 
-*bRegistrazione immediata*<br/>
+*bRegister*<br/>
 Indica se l'oggetto deve essere registrato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -617,7 +617,7 @@ virtual HRESULT UpdateRegistryFromResourceD(
 *nResID*<br/>
 [in] Un ID risorsa.
 
-*bRegistrazione immediata*<br/>
+*bRegister*<br/>
 [in] Indica se l'oggetto deve essere registrato.
 
 *pMapEntries*<br/>
@@ -667,7 +667,7 @@ virtual HRESULT UpdateRegistryFromResourceS(
 *nResID*<br/>
 [in] Un ID risorsa.
 
-*bRegistrazione immediata*<br/>
+*bRegister*<br/>
 [in] Indica se lo script di risorsa deve essere registrato.
 
 *pMapEntries*<br/>

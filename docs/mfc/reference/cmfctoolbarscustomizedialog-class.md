@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628995"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295032"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Classe CMFCToolBarsCustomizeDialog
 
 Una finestra di dialogo schede non modale ( [CPropertySheet (classe)](../../mfc/reference/cpropertysheet-class.md)) che consente all'utente di personalizzare le barre degli strumenti, menu, tasti di scelta rapida, gli strumenti definiti dall'utente e dello stile di visualizzazione in un'applicazione. In genere, l'utente accede a questa finestra di dialogo scegliendo **Personalizza** dal menu **Strumenti** .
 
-Il **Personalizza** finestra di dialogo dispone di sei schede: **comandi**, **barre degli strumenti**, **strumenti**, **tastiera**,  **Menu di scelta**, e **opzioni**.
+Il **Personalizza** nella finestra di dialogo dispone di sei schede: **I comandi**, **barre degli strumenti**, **Tools**, **tastiera**, **dal Menu**, e **opzioni**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,7 +61,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|Carica un menu di scelta dalle risorse e le chiamate [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) per aggiungere tale menu per l'elenco dei comandi nella **comandi** pagina.|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)|Carica una barra degli strumenti dalle risorse. Quindi, per ogni comando nelle chiamate menu la [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodo per inserire un pulsante nell'elenco di comandi nel **comandi** pagina nella categoria specificata.|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::Create](#create)|Consente di visualizzare il **personalizzazione** nella finestra di dialogo.|
-|`CMFCToolBarsCustomizeDialog::EnableTools`|Riservato per utilizzi futuri.|
+|`CMFCToolBarsCustomizeDialog::EnableTools`|Riservato per usi futuri.|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|Abilita o disabilita la creazione di nuove barre degli strumenti tramite il **Personalizza** nella finestra di dialogo.|
 |[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|Popola l'oggetto specificato `CListBox` oggetto con i comandi di **tutti i comandi** categoria.|
 |[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|Popola l'oggetto specificato `CComboBox` oggetto con il nome di ogni categoria di comandi nel **Personalizza** nella finestra di dialogo.|
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Specifica l'ID della categoria in cui inserire il pulsante.
 
-*Pulsante*<br/>
+*button*<br/>
 [in] Specifica il pulsante da inserire.
 
 *iInsertBefore*<br/>
@@ -357,7 +357,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare barre degli strumenti definite dall'utente; FALSE per disabilitare le barre degli strumenti.
 
 ### <a name="remarks"></a>Note
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Puntatore alla finestra padre.
 
-*mappa di bit*<br/>
+*bitmap*<br/>
 [in] Un riferimento a un oggetto bitmap da modificare.
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Specifica il comando del pulsante da sostituire.
 
-*Pulsante*<br/>
+*button*<br/>
 [in] Oggetto **const** riferimento all'oggetto pulsante della barra degli strumenti che sostituisce il precedente pulsante.
 
 ### <a name="remarks"></a>Note

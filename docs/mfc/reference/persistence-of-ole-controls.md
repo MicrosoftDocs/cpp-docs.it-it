@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: e510cdb2ae64b5b3ed5f8b69bc8ad9c22800a167
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8bcba63c8e09873fe7f30e4fd07d652850be1f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299647"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistenza di controlli OLE
 
@@ -111,7 +111,7 @@ Il nome della proprietà scambiati.
 *bValue*<br/>
 Riferimento alla variabile in cui la proprietà viene archiviata (in genere una variabile membro della classe).
 
-*bLivello predefinito*<br/>
+*bDefault*<br/>
 Valore predefinito per la proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -294,7 +294,7 @@ Puntatore per il [CPropExchange](../../mfc/reference/cpropexchange-class.md) ogg
 *pszPropName*<br/>
 Il nome della proprietà scambiati.
 
-*tipo di carattere*<br/>
+*font*<br/>
 Un riferimento a un `CFontHolder` oggetto che contiene la proprietà del tipo di carattere.
 
 *pFontDesc*<br/>
@@ -374,7 +374,7 @@ Il nome della proprietà scambiati.
 *pUnk*<br/>
 Riferimento a una variabile che contiene l'interfaccia dell'oggetto che rappresenta il valore della proprietà.
 
-*IID*<br/>
+*iid*<br/>
 L'ID di interfaccia che indica quale interfaccia dell'oggetto proprietà viene utilizzata dal controllo.
 
 *pUnkDefault*<br/>
@@ -452,7 +452,7 @@ Puntatore per il [CPropExchange](../../mfc/reference/cpropexchange-class.md) ogg
 *pszPropName*<br/>
 Il nome della proprietà scambiati.
 
-*PICT*<br/>
+*pict*<br/>
 Fare riferimento a un [CPictureHolder](../../mfc/reference/cpictureholder-class.md) oggetto in cui la proprietà viene archiviata (in genere una variabile membro della classe).
 
 *pictDefault*<br/>
@@ -637,7 +637,7 @@ BOOL PX_VBXFontConvert(
 *pPX*<br/>
 Puntatore per il [CPropExchange](../../mfc/reference/cpropexchange-class.md) oggetto (in genere passato come parametro al `DoPropExchange`).
 
-*tipo di carattere*<br/>
+*font*<br/>
 La proprietà del tipo di carattere del controllo OLE che conterrà le proprietà correlate al carattere VBX convertite.
 
 ### <a name="return-value"></a>Valore restituito

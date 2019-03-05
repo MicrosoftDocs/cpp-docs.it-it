@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 6132ec6623a009c09a37b7d704ce683a58956a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518716"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283852"
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 
@@ -142,7 +142,7 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 Puntatore alla funzione da eseguire per utilizzare il corpo dell'attività leggera.
 
-*Data*<br/>
+*_Data*<br/>
 Un puntatore void per i dati che verranno passati come parametro al corpo dell'attività.
 
 ### <a name="remarks"></a>Note
@@ -155,4 +155,3 @@ La chiamata di `ScheduleTask` metodo posiziona in modo implicito un conteggio de
 [Classe CurrentScheduler](currentscheduler-class.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>
 [Utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

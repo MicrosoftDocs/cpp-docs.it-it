@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: creazione di una raccolta indipendente dai tipi'
+title: 'Procedura: Creazione di una raccolta indipendente dai tipi'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type-safe collections [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 12ecec7562a9241fab30b859727a22e467e6eeb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295188"
 ---
-# <a name="how-to-make-a-type-safe-collection"></a>Procedura: creazione di una raccolta indipendente dai tipi
+# <a name="how-to-make-a-type-safe-collection"></a>Procedura: Creazione di una raccolta indipendente dai tipi
 
 Questo articolo illustra come rendere le raccolte indipendente dai tipi per i tipi di dati. Gli argomenti trattati includono:
 
@@ -100,4 +100,3 @@ Esistono due modi per creare raccolte indipendente dai tipi con le raccolte non 
 ## <a name="see-also"></a>Vedere anche
 
 [Raccolte](../mfc/collections.md)
-

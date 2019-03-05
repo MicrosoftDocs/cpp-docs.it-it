@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302286"
 ---
 # <a name="cinterpolatorbase-class"></a>Classe CInterpolatorBase
 
@@ -145,7 +145,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 Output. La durata della transizione, in secondi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>Parametri
 
-*valore*<br/>
+*value*<br/>
 Output. Il valore finale di una variabile al termine della transizione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *offset*<br/>
 L'offset dall'inizio della transizione. L'offset è sempre maggiore o uguale a zero e minore rispetto alla durata della transizione. Questo metodo non viene chiamato se la durata della transizione è uguale a zero.
 
-*valore*<br/>
+*value*<br/>
 Output. Il valore interpolato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -206,7 +206,7 @@ IFACEMETHOD(InterpolateVelocity)(
 *offset*<br/>
 L'offset dall'inizio della transizione. L'offset è sempre maggiore di o uguale a zero e minore o uguale alla durata della transizione. Questo metodo non viene chiamato se la durata della transizione è uguale a zero.
 
-*Velocità*<br/>
+*velocity*<br/>
 Output. La velocità della variabile in corrispondenza dell'offset.
 
 ### <a name="return-value"></a>Valore restituito
@@ -236,7 +236,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parametri
 
-*Durata*<br/>
+*duration*<br/>
 La durata della transizione.
 
 ### <a name="return-value"></a>Valore restituito

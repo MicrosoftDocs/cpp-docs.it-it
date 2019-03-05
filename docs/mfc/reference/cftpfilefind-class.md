@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 72d1eb147f8d7387a04f25cc008cc4d4638ba691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548226"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284827"
 ---
 # <a name="cftpfilefind-class"></a>Classe CFtpFileFind
 
@@ -43,8 +43,8 @@ class CFtpFileFind : public CFileFind
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CFtpFileFind:: FindFile](#findfile)|Trova un file in un server FTP.|
-|[CFtpFileFind:: FindNextFile](#findnextfile)|Continua la ricerca di file da una chiamata precedente a [FindFile](#findfile).|
+|[CFtpFileFind::FindFile](#findfile)|Trova un file in un server FTP.|
+|[CFtpFileFind::FindNextFile](#findnextfile)|Continua la ricerca di file da una chiamata precedente a [FindFile](#findfile).|
 |[CFtpFileFind::GetFileURL](#getfileurl)|Ottiene l'URL, incluso il percorso, del file trovato.|
 
 ## <a name="remarks"></a>Note
@@ -93,13 +93,13 @@ L'identificatore di contesto per il `CFtpFileFind` oggetto. Visualizzare **osser
 
 ### <a name="remarks"></a>Note
 
-Il valore predefinito per *dwContext* inviato da MFC per il `CFtpFileFind` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CFtpFileFind` oggetto. È possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
+Il valore predefinito per *dwContext* inviato da MFC per il `CFtpFileFind` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CFtpFileFind` oggetto. È possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'oggetto con cui viene identificato. Vedere l'articolo [Internet primi passaggi: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.
 
 ### <a name="example"></a>Esempio
 
   Vedere l'esempio preliminari sulla classe più indietro in questo argomento.
 
-##  <a name="findfile"></a>  CFtpFileFind:: FindFile
+##  <a name="findfile"></a>  CFtpFileFind::FindFile
 
 Chiamare questa funzione membro per trovare un file con FTP.
 
@@ -139,7 +139,7 @@ Dopo avere chiamato `FindFile` per recuperare il primo file FTP, è possibile ch
 
   Vedere l'esempio precedente in questo argomento.
 
-##  <a name="findnextfile"></a>  CFtpFileFind:: FindNextFile
+##  <a name="findnextfile"></a>  CFtpFileFind::FindNextFile
 
 Chiamare questa funzione membro per continuare la ricerca di file iniziata con una chiamata ai [FindFile](#findfile) funzione membro.
 

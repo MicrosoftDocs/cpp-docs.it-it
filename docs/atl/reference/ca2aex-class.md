@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: 77bb49ab87c20b6df317282d8f5e6e228deb3a11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 712e663ab58e2c9de4e2f25090b84b35d0bced71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293823"
 ---
 # <a name="ca2aex-class"></a>Classe CA2AEX
 
@@ -43,7 +43,7 @@ Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza pre
 |Nome|Descrizione|
 |----------|-----------------|
 |[CA2AEX::CA2AEX](#ca2aex)|Costruttore.|
-|[CA2AEX:: ~ CA2AEX](#dtor)|Distruttore.|
+|[CA2AEX::~CA2AEX](#dtor)|Distruttore.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -109,7 +109,7 @@ Non utilizzato in questa classe.
 
 Crea il buffer della traduzione.
 
-##  <a name="dtor"></a>  CA2AEX:: ~ CA2AEX
+##  <a name="dtor"></a>  CA2AEX::~CA2AEX
 
 Distruttore.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: 370f0bb2fc76e1377dce6ae4616861085ad44562
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1a9a2d0628b3683f047ce9858d809040438db03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429042"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302000"
 ---
 # <a name="ccomcompositecontrol-class"></a>Classe CComCompositeControl
 
@@ -49,13 +49,13 @@ La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|Costruttore.|
-|[CComCompositeControl:: ~ CComCompositeControl](#dtor)|Distruttore.|
+|[CComCompositeControl::~CComCompositeControl](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComCompositeControl](#advisesinkmap)|Chiamare questo metodo per inviare o annullare tutti i controlli ospitati dal controllo composito.|
+|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Chiamare questo metodo per inviare o annullare tutti i controlli ospitati dal controllo composito.|
 |[CComCompositeControl::CalcExtent](#calcextent)|Chiamare questo metodo per calcolare le dimensioni in unità HIMETRIC della risorsa finestra di dialogo usata per ospitare il controllo composito.|
 |[CComCompositeControl::Create](#create)|Questo metodo viene chiamato per creare la finestra di controllo per il controllo composito.|
 |[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Chiamare questo metodo per creare la finestra di controllo e dà alcun Consiglio qualsiasi controllo ospitato.|
@@ -102,7 +102,7 @@ Un controllo implementato da un `CComCompositeControl`-classe derivata ha compil
 
 **Intestazione:** atlctl. h
 
-##  <a name="advisesinkmap"></a>  CComCompositeControl
+##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap
 
 Chiamare questo metodo per inviare o annullare tutti i controlli ospitati dal controllo composito.
 
@@ -193,7 +193,7 @@ CComCompositeControl();
 
 Inizializza la [CComCompositeControl::m_hbrBackground](#m_hbrbackground) e [CComCompositeControl::m_hWndFocus](#m_hwndfocus) membri dati su NULL.
 
-##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl
+##  <a name="dtor"></a>  CComCompositeControl::~CComCompositeControl
 
 Distruttore.
 

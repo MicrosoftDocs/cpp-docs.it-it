@@ -1,18 +1,18 @@
 ---
-title: "Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'utilizzo del runtime di concorrenza"
+title: "Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'uso del Runtime di concorrenza"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-ms.openlocfilehash: f3a53113952a12b6b25839deb20548c56a9b7e1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 618e93c18173bfe3e5f5b5f3058a8bb3d61e98ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300674"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'utilizzo del runtime di concorrenza
+# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'uso del Runtime di concorrenza
 
 Alcuni cicli paralleli non richiedono che tutte le iterazioni da eseguire. Ad esempio, un algoritmo che cerca un valore possibile terminare dopo il valore viene trovato. OpenMP non fornisce un meccanismo per interrompere un ciclo parallelo. Tuttavia, è possibile utilizzare un valore booleano o flag, per consentire un'iterazione del ciclo per indicare che la soluzione è stata trovata. Il Runtime di concorrenza fornisce funzionalità che consente a un'attività da annullare altre attività che non è ancora stata avviata.
 
@@ -45,11 +45,10 @@ Per altre informazioni sulle `parallel_for_each` e altri algoritmi paralleli, ve
 
 Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `concrt-omp-parallel-any-of.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
 
-**CL.exe /EHsc /openmp concrt-omp-parallelo-any-of. cpp**
+**cl.exe /EHsc /openmp concrt-omp-parallel-any-of.cpp**
 
 ## <a name="see-also"></a>Vedere anche
 
 [Migrazione da OpenMP al runtime di concorrenza](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)<br/>
 [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)
-

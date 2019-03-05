@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600512"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302104"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -103,10 +103,10 @@ class CSplitterWnd : public CWnd
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Esegue il comando riquadro successivo o riquadro precedente.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Verifica se il comando riquadro successivo o riquadro precedente. è attualmente possibile.|
-|[CSplitterWnd:: Create](#create)|Chiamata per creare una finestra con separatore dinamico e associarlo al `CSplitterWnd` oggetto.|
+|[CSplitterWnd::Create](#create)|Chiamata per creare una finestra con separatore dinamico e associarlo al `CSplitterWnd` oggetto.|
 |[CSplitterWnd::CreateScrollBarCtrl](#createscrollbarctrl)|Crea un controllo barra di scorrimento condiviso.|
-|[CSplitterWnd:: CreateStatic](#createstatic)|Chiamata per creare una finestra con separatore statico e associarlo al `CSplitterWnd` oggetto.|
-|[CSplitterWnd:: CreateView](#createview)|Chiamare per creare un riquadro in una finestra con separatore.|
+|[CSplitterWnd::CreateStatic](#createstatic)|Chiamata per creare una finestra con separatore statico e associarlo al `CSplitterWnd` oggetto.|
+|[CSplitterWnd::CreateView](#createview)|Chiamare per creare un riquadro in una finestra con separatore.|
 |[CSplitterWnd::DeleteColumn](#deletecolumn)|Elimina una colonna dalla finestra con separatore.|
 |[CSplitterWnd::DeleteRow](#deleterow)|Elimina una riga dalla finestra con separatore.|
 |[CSplitterWnd::DeleteView](#deleteview)|Elimina una visualizzazione dalla finestra con separatore.|
@@ -231,7 +231,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Questa funzione membro è un comando di alto livello che viene usato per il [CView](../../mfc/reference/cview-class.md) classe delegare il `CSplitterWnd` implementazione.
 
-##  <a name="create"></a>  CSplitterWnd:: Create
+##  <a name="create"></a>  CSplitterWnd::Create
 
 Per creare una finestra con separatore dinamico, chiamare il `Create` funzione membro.
 
@@ -319,7 +319,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Eseguire l'override `CreateScrollBarCtrl` per includere controlli aggiuntivi accanto a una barra di scorrimento. Il comportamento predefinito consiste nel creare controlli barra di scorrimento Windows normale.
 
-##  <a name="createstatic"></a>  CSplitterWnd:: CreateStatic
+##  <a name="createstatic"></a>  CSplitterWnd::CreateStatic
 
 Per creare una finestra con separatore statico, chiamare il `CreateStatic` funzione membro.
 
@@ -373,7 +373,7 @@ Per aggiungere barre di scorrimento in una finestra con separatore statico, aggi
 
 Vedere "Divisione Windows" nell'articolo [tipi di documenti multipli, visualizzazioni e Frame di Windows](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Nota tecnica](../../mfc/tn029-splitter-windows.md)e il `CSplitterWnd` Cenni preliminari sulla classe per ulteriori informazioni sulle finestre con separatore statico.
 
-##  <a name="createview"></a>  CSplitterWnd:: CreateView
+##  <a name="createview"></a>  CSplitterWnd::CreateView
 
 Consente di creare i riquadri per una finestra con separatore statico.
 
@@ -388,7 +388,7 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica la riga della finestra con separatore in cui inserire la nuova vista.
 
 *col*<br/>
@@ -475,7 +475,7 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica la riga di finestra con separatore in corrispondenza del quale eliminare la visualizzazione.
 
 *col*<br/>
@@ -649,7 +649,7 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica una riga.
 
 *col*<br/>
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica una riga.
 
 *cyCur*<br/>
@@ -727,7 +727,7 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica la riga di finestra con separatore.
 
 *col*<br/>
@@ -807,7 +807,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 Puntatore al contesto di dispositivo in cui disegnare. Se *pDC* è NULL, quindi [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) viene chiamato dal framework e nessuna suddivisione finestra viene disegnata.
 
-*NLE*<br/>
+*nType*<br/>
 Valore di `enum ESplitType`, che può essere uno dei seguenti:
 
     - `splitBox` La casella di trascinamento barra di divisione.
@@ -818,7 +818,7 @@ Valore di `enum ESplitType`, che può essere uno dei seguenti:
 
     - `splitBorder` Bordi della finestra divisa.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che specifica le dimensioni delle finestre di divisione.
 
 ### <a name="remarks"></a>Note
@@ -837,7 +837,7 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 Fare riferimento a un `CRect` oggetto che specifica il rettangolo di rilevamento.
 
 ### <a name="remarks"></a>Note
@@ -877,7 +877,7 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Se *pWnd* è NULL, specifica la riga nel riquadro che sarà attivo.
 
 *col*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica una riga della finestra con separatore.
 
 *cyIdeal*<br/>

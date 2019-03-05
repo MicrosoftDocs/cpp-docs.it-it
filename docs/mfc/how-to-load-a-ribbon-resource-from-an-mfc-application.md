@@ -1,17 +1,17 @@
 ---
-title: "Procedura: caricare una risorsa Ribbon da un'applicazione MFC"
+title: "Procedura: Caricare una risorsa Ribbon da un'applicazione MFC"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource [MFC], loading
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
-ms.openlocfilehash: 14ba37952d6f8849c51b36901a6bc17404f938e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7691d4168101209b0e2d2500012a2b4a8e47788
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289555"
 ---
-# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Procedura: caricare una risorsa Ribbon da un'applicazione MFC
+# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Procedura: Caricare una risorsa Ribbon da un'applicazione MFC
 
 Per utilizzare la risorsa Ribbon nell'applicazione, modificare l'applicazione per caricare la risorsa Ribbon.
 
@@ -40,4 +40,3 @@ Per utilizzare la risorsa Ribbon nell'applicazione, modificare l'applicazione pe
 ## <a name="see-also"></a>Vedere anche
 
 [Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)
-

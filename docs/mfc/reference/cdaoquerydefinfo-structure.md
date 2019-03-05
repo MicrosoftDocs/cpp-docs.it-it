@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-ms.openlocfilehash: f3c8b464a84bd33d15a19f24010b942bdea59620
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d88d919bb87f614d140d710aee9df3fdf4fd10bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602995"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283930"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>Struttura CDaoQueryDefInfo
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 8c91de87bb5d579916743051d06c15f6df6921bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9b949e7782c4b9ca302e9e623ce5f09061c39ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495927"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301883"
 ---
 # <a name="synchronization-data-structures"></a>Strutture di dati di sincronizzazione
 
@@ -115,4 +115,3 @@ Confronta il comportamento delle strutture di dati di sincronizzazione a quelle 
 
 [Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)<br/>
 Descrive il runtime di concorrenza che semplifica la programmazione parallela e contiene i collegamenti ad argomenti correlati.
-

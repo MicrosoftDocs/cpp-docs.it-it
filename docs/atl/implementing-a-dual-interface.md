@@ -5,12 +5,12 @@ helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: 3b5363bb74a0db5b3cc5dad9bb0c0c6cb05edf15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecd6a0cc90ca4175c4ae898f2e9aa8bf00508a3e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441223"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287336"
 ---
 # <a name="implementing-a-dual-interface"></a>Implementazione delle interfacce duali
 
@@ -49,4 +49,3 @@ Se si dispone di un'interfaccia esistente, è possibile usare la [implementazion
 ## <a name="see-also"></a>Vedere anche
 
 [Interfacce duali e ATL](../atl/dual-interfaces-and-atl.md)
-

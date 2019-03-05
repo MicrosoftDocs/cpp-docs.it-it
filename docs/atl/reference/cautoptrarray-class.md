@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: c7a2a7e9592b120204582334f69e27e72cd7364f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677942"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298906"
 ---
 # <a name="cautoptrarray-class"></a>Classe CAutoPtrArray
 

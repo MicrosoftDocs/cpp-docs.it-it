@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL projects, COM+ 1.0 support
 ms.assetid: 51fb08ac-d632-4657-a4e0-d3f989f0b6f8
-ms.openlocfilehash: 4bc7683d6121dec748e30c1ea717042b9cf1ecbc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39a3597b8df833d89942e31b361f791b14ceb8c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292604"
 ---
 # <a name="com-10-support-in-atl-projects"></a>Supporto COM+ 1.0 nei progetti ATL
 
@@ -21,7 +21,7 @@ COM+ 1.0 è progettato per lo sviluppo di applicazioni distribuite in base al co
 
 Se si seleziona il **supporto COM+ 1.0** casella di controllo, la procedura guidata consente di modificare lo script di compilazione in fase di collegamento. In particolare, i COM+ 1.0 progetto collegamenti per le librerie seguenti:
 
-- Comsvcs.lib
+- comsvcs.lib
 
 - Mtxguid.lib
 
@@ -32,4 +32,3 @@ Se si seleziona il **supporto COM+ 1.0** casella di controllo, è possibile sele
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
-

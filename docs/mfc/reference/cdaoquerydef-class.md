@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 07c508dcf4bd57855d09be5a305847d0b2981305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664529"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283644"
 ---
 # <a name="cdaoquerydef-class"></a>Classe CDaoQueryDef
 
@@ -95,11 +95,11 @@ class CDaoQueryDef : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDaoQueryDef:: Append](#append)|Aggiunge tale oggetto alla raccolta QueryDefs del database come una query salvata.|
+|[CDaoQueryDef::Append](#append)|Aggiunge tale oggetto alla raccolta QueryDefs del database come una query salvata.|
 |[CDaoQueryDef::CanUpdate](#canupdate)|Restituisce diversi da zero se la query è possibile aggiornare il database.|
 |[CDaoQueryDef::Close](#close)|Chiude l'oggetto querydef. Dopo aver terminato l'eliminazione dell'oggetto di C++.|
 |[CDaoQueryDef::Create](#create)|Crea il sottostante oggetto querydef DAO. Usare tale oggetto come una query temporanea o una chiamata `Append` salvarlo nel database.|
-|[CDaoQueryDef:: Execute](#execute)|Esegue la query definita dall'oggetto querydef.|
+|[CDaoQueryDef::Execute](#execute)|Esegue la query definita dall'oggetto querydef.|
 |[CDaoQueryDef::GetConnect](#getconnect)|Restituisce la stringa di connessione associata a tale oggetto. La stringa di connessione identifica l'origine dati. (Per SQL pass-through esegue una query solo; in caso contrario una stringa vuota.)|
 |[CDaoQueryDef::GetDateCreated](#getdatecreated)|Restituisce la data di che creazione della query salvata.|
 |[CDaoQueryDef::GetDateLastUpdated](#getdatelastupdated)|Restituisce la data che dell'ultimo aggiornamento della query salvata.|
@@ -109,7 +109,7 @@ class CDaoQueryDef : public CObject
 |[CDaoQueryDef::GetODBCTimeout](#getodbctimeout)|Restituisce il valore di timeout utilizzato da ODBC (per una query ODBC) quando viene eseguita tale oggetto. Questo determina per quanto tempo la possibilità di completamento dell'azione della query.|
 |[CDaoQueryDef::GetParameterCount](#getparametercount)|Restituisce il numero di parametri definiti per la query.|
 |[CDaoQueryDef::GetParameterInfo](#getparameterinfo)|Restituisce informazioni su un parametro specificato per la query.|
-|[CDaoQueryDef:: GetParamValue](#getparamvalue)|Restituisce il valore di un parametro specificato per la query.|
+|[CDaoQueryDef::GetParamValue](#getparamvalue)|Restituisce il valore di un parametro specificato per la query.|
 |[CDaoQueryDef::GetRecordsAffected](#getrecordsaffected)|Restituisce il numero di record interessati da una query.|
 |[CDaoQueryDef::GetReturnsRecords](#getreturnsrecords)|Restituisce diversi da zero se la query definita dall'oggetto querydef restituisce i record.|
 |[CDaoQueryDef::GetSQL](#getsql)|Restituisce la stringa SQL che specifica la query definita dall'oggetto.|
@@ -119,7 +119,7 @@ class CDaoQueryDef : public CObject
 |[CDaoQueryDef::SetConnect](#setconnect)|Imposta la stringa di connessione per una query pass-through SQL in un'origine dati ODBC.|
 |[CDaoQueryDef::SetName](#setname)|Imposta il nome della query salvata, sostituendo il nome utilizzato quando tale oggetto è stato creato.|
 |[CDaoQueryDef::SetODBCTimeout](#setodbctimeout)|Imposta il valore di timeout utilizzato da ODBC (per una query ODBC) quando viene eseguita tale oggetto.|
-|[CDaoQueryDef:: SetParamValue](#setparamvalue)|Imposta il valore di un parametro specificato per la query.|
+|[CDaoQueryDef::SetParamValue](#setparamvalue)|Imposta il valore di un parametro specificato per la query.|
 |[CDaoQueryDef::SetReturnsRecords](#setreturnsrecords)|Specifica se l'oggetto querydef restituisce i record. Impostazione di questo attributo su TRUE è valida solo per le query pass-through di SQL.|
 |[CDaoQueryDef::SetSQL](#setsql)|Imposta la stringa SQL che specifica la query definita dall'oggetto.|
 
@@ -191,7 +191,7 @@ Per informazioni correlate, vedere gli argomenti "QueryDef Object", "Raccolta Qu
 
 **Intestazione:** afxdao. h
 
-##  <a name="append"></a>  CDaoQueryDef:: Append
+##  <a name="append"></a>  CDaoQueryDef::Append
 
 Chiamare questa funzione membro dopo aver chiamato [Create](#create) per creare un nuovo oggetto querydef.
 
@@ -290,7 +290,7 @@ Se si passa un nome nella *lpszName*, è quindi possibile chiamare [Append](#app
 
 Se non si specifica un'istruzione SQL nel *lpszSQL*, non è possibile eseguire la query con `Execute` ma è possibile usarlo per creare un set di record. In tal caso, MFC utilizza l'istruzione SQL predefinita del recordset.
 
-##  <a name="execute"></a>  CDaoQueryDef:: Execute
+##  <a name="execute"></a>  CDaoQueryDef::Execute
 
 Chiamare questa funzione membro per eseguire la query definita dall'oggetto querydef.
 
@@ -427,7 +427,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Indice a base zero del campo desiderato nella raccolta di campi dell'oggetto querydef, per la ricerca in base all'indice.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Un riferimento a un `CDaoFieldInfo` oggetto che restituisce le informazioni richieste.
 
 *dwInfoOptions*<br/>
@@ -435,9 +435,9 @@ Opzioni che specificano le informazioni sul campo da recuperare. Le opzioni disp
 
 - Dimensioni del nome, tipo, AFX_DAO_PRIMARY_INFO (impostazione predefinita), gli attributi
 
-- Informazioni AFX_DAO_SECONDARY_INFO primaria oltre: posizione ordinale, richiesto, consentire di lunghezza Zero, campo di origine, nome esterna, tabella di origine, ordine di ordinamento
+- Più informazioni AFX_DAO_SECONDARY_INFO primario: Posizione ordinale, richiesta, consentire Zero lunghezza, campo di origine, nome esterna, tabella di origine, ordinamento
 
-- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: valore predefinito, il testo di convalida, regola di convalida
+- AFX_DAO_ALL_INFO primario e più informazioni sul database secondari: Regola di convalida di valore, testo, la convalida predefinita
 
 *lpszName*<br/>
 Stringa contenente il nome del campo desiderato, per la ricerca in base al nome. È possibile usare una [CString](../../atl-mfc-shared/reference/cstringt-class.md).
@@ -520,7 +520,7 @@ void GetParameterInfo(
 *nIndex*<br/>
 Indice a base zero del parametro desiderato nella raccolta di parametri dell'oggetto querydef, per la ricerca in base all'indice.
 
-*paraminfo controllo*<br/>
+*paraminfo*<br/>
 Un riferimento a un [CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md) oggetto che restituisce le informazioni richieste.
 
 *dwInfoOptions*<br/>
@@ -537,7 +537,7 @@ Per una descrizione delle informazioni restituite *paraminfo controllo*, vedere 
 
 Per informazioni correlate, vedere l'argomento "parametri di dichiarazione (SQL)" nella Guida di DAO.
 
-##  <a name="getparamvalue"></a>  CDaoQueryDef:: GetParamValue
+##  <a name="getparamvalue"></a>  CDaoQueryDef::GetParamValue
 
 Chiamare questa funzione membro per recuperare il valore del parametro specificato archiviato nella raccolta di parametri dell'oggetto corrente.
 
@@ -770,7 +770,7 @@ Questa funzione consente di ignorare il numero predefinito di secondi prima le o
 
 Il valore predefinito di timeout delle query è 60 secondi.
 
-##  <a name="setparamvalue"></a>  CDaoQueryDef:: SetParamValue
+##  <a name="setparamvalue"></a>  CDaoQueryDef::SetParamValue
 
 Chiamare questa funzione membro per impostare il valore di un parametro nell'oggetto in fase di esecuzione.
 

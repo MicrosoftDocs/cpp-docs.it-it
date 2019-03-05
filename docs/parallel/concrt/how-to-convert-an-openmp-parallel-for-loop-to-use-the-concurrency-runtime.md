@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Convertire un ciclo OpenMP parallel for per l'utilizzo del runtime di concorrenza"
+title: 'Procedura: Convertire un ciclo OpenMP parallel for usare il Runtime di concorrenza'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, parallel for loops
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-ms.openlocfilehash: 9ab80df8bfe4c06ee36e0a60db4800be68576909
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488559"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296137"
 ---
-# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP parallel for per l'utilizzo del runtime di concorrenza
+# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP parallel for usare il Runtime di concorrenza
 
 In questo esempio viene illustrato come convertire un ciclo di base che usa il OpenMP [parallele](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) e [per](../../parallel/openmp/reference/for-openmp.md) direttive per usare il Runtime di concorrenza [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.
 
@@ -49,11 +49,10 @@ In questo esempio viene modificato l'esempio precedente per agire su un [std:: A
 
 Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `concrt-omp-count-primes.cpp` e quindi eseguire il comando seguente in una finestra del Prompt dei comandi di Visual Studio.
 
-**CL.exe /EHsc /openmp concrt-omp-count-primes. cpp**
+**cl.exe /EHsc /openmp concrt-omp-count-primes.cpp**
 
 ## <a name="see-also"></a>Vedere anche
 
 [Migrazione da OpenMP al runtime di concorrenza](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)
-

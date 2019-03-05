@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 9a43536e3f9f90b70d5d68eb5ce5d277f9b42e00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613798"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283540"
 ---
 # <a name="canimationvalue-class"></a>Classe CAnimationValue
 
@@ -66,7 +66,7 @@ class CAnimationValue : public CAnimationBaseObject;
 |----------|-----------------|
 |[CAnimationValue::operator DOUBLE](#operator_double)|Fornisce la conversione tra CAnimationValue e DOUBLE.|
 |[INT32 CAnimationValue::operator](#operator_int32)|Fornisce la conversione tra CAnimationValue e INT32.|
-|[CAnimationValue::operator =](#operator_eq)|Di overload. Assegna un valore INT32 CAnimationValue.|
+|[CAnimationValue::operator=](#operator_eq)|Di overload. Assegna un valore INT32 CAnimationValue.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -168,7 +168,7 @@ BOOL GetValue(INT32& nValue);
 *dblValue*<br/>
 Output. Quando la funzione restituisce contiene un valore corrente della variabile di animazione.
 
-*nValore*<br/>
+*nValue*<br/>
 Output. Quando la funzione restituisce contiene un valore corrente della variabile di animazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -235,7 +235,7 @@ Valore corrente dell'animazione valore come numero intero.
 
 Fornisce la conversione tra CAnimationValue e INT32. Questo metodo chiama GetValue internamente e non controlla gli errori. Se GetValue ha esito negativo, il valore restituito conterrà un valore precedentemente impostato nel costruttore o con SetDefaultValue.
 
-##  <a name="operator_eq"></a>  CAnimationValue::operator =
+##  <a name="operator_eq"></a>  CAnimationValue::operator=
 
 Assegna un valore DOUBLE a CAnimationValue.
 

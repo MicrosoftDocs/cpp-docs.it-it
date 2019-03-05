@@ -7,12 +7,12 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 1ba7251afca80c561bd8861968c35e3242c1507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588851"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294135"
 ---
 # <a name="taskgroup-class"></a>Classe task_group
 
@@ -128,13 +128,13 @@ void run(
 *_Function*<br/>
 Il tipo dell'oggetto funzione che verrà richiamato per eseguire il corpo dell'handle di attività.
 
-*Func*<br/>
+*_Func*<br/>
 Una funzione che verrà chiamata per richiamare il corpo dell'attività. Potrebbe trattarsi di un'espressione lambda o un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.
 
-*Selezione*<br/>
+*_Placement*<br/>
 Riferimento alla posizione in cui deve essere eseguita l'attività rappresentata dal parametro `_Func`.
 
-*Task_handle*<br/>
+*_Task_handle*<br/>
 Handle per il lavoro pianificato. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino a quando non le `wait` oppure `run_and_wait` metodo è stato chiamato su questo `task_group` oggetto.
 
 ### <a name="remarks"></a>Note
@@ -170,10 +170,10 @@ task_group_status run_and_wait(
 *_Function*<br/>
 Tipo dell'oggetto funzione che sarà richiamato per eseguire il corpo dell'attività.
 
-*Task_handle*<br/>
+*_Task_handle*<br/>
 Handle per l'attività che verrà eseguita inline sul contesto di chiamata. Si noti che il chiamante ha la responsabilità per la durata di questo oggetto. Il runtime continua a prevedere di esistere fino al `run_and_wait` metodo completa l'esecuzione.
 
-*Func*<br/>
+*_Func*<br/>
 Una funzione che verrà chiamata per richiamare il corpo del lavoro. Potrebbe trattarsi di un'espressione lambda o un altro oggetto che supporta una versione dell'operatore di chiamata di funzione con la firma `void operator()()`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -211,7 +211,7 @@ Token di annullamento da associare a questo gruppo di attività. Il gruppo di at
 
 Tramite il costruttore che accetta un token di annullamento viene creato un oggetto `task_group` che verrà annullato quando l'origine associata al token viene annullata. Fornire un token di annullamento esplicito permette di isolare questo gruppo di attività dalla partecipazione a un annullamento implicito di un gruppo padre con un token diverso o senza token.
 
-##  <a name="dtor"></a> ~ task_group
+##  <a name="dtor"></a> ~task_group
 
 Elimina un oggetto `task_group`. È prevista la chiamata al `wait` o `run_and_wait` metodo sull'oggetto prima dell'esecuzione del distruttore, a meno che il distruttore è in esecuzione come risultato della rimozione a causa di un'eccezione dello stack.
 

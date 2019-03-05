@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: beb374efe26c25fed490b7407e087e2cc46043c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659836"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298152"
 ---
 # <a name="timer-class"></a>Classe timer
 
@@ -47,14 +47,14 @@ Il tipo di payload dei messaggi di output di questo blocco.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Timer](#ctor)|Di overload. Costruisce un `timer` blocco della messaggistica che verrà generato un determinato messaggio dopo un intervallo specificato.|
+|[timer](#ctor)|Di overload. Costruisce un `timer` blocco della messaggistica che verrà generato un determinato messaggio dopo un intervallo specificato.|
 |[~ timer distruttore](#dtor)|Elimina definitivamente un `timer` blocco della messaggistica.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Sospendi](#pause)|Arresta il `timer` blocco della messaggistica. Se si tratta di una ripetizione `timer` blocco della messaggistica, può essere riavviato con una successiva `start()` chiamare. Per non ripetuto timer, questo ha lo stesso effetto un `stop` chiamare.|
+|[pause](#pause)|Arresta il `timer` blocco della messaggistica. Se si tratta di una ripetizione `timer` blocco della messaggistica, può essere riavviato con una successiva `start()` chiamare. Per non ripetuto timer, questo ha lo stesso effetto un `stop` chiamare.|
 |[start](#start)|Avvia il `timer` blocco della messaggistica. Il numero specificato di millisecondi dopo la chiamata, il valore specificato verrà propagato a valle come un `message`.|
 |[stop](#stop)|Arresta il `timer` blocco della messaggistica.|
 
@@ -98,7 +98,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -115,7 +115,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` consumata dell'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -136,7 +136,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore alla destinazione appena collegato.
 
 ##  <a name="pause"></a> Sospendi
@@ -165,7 +165,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto rilasciato.
 
 ##  <a name="reserve_message"></a> reserve_message
@@ -178,7 +178,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -197,7 +197,7 @@ Riprende la propagazione dopo il rilascio di una prenotazione.
 virtual void resume_propagation();
 ```
 
-##  <a name="start"></a> Inizio
+##  <a name="start"></a> start
 
 Avvia il `timer` blocco della messaggistica. Il numero specificato di millisecondi dopo la chiamata, il valore specificato verrà propagato a valle come un `message`.
 
@@ -205,7 +205,7 @@ Avvia il `timer` blocco della messaggistica. Il numero specificato di millisecon
 void start();
 ```
 
-##  <a name="stop"></a> Arresta
+##  <a name="stop"></a> stop
 
 Arresta il `timer` blocco della messaggistica.
 
@@ -241,16 +241,16 @@ timer(
 
 ### <a name="parameters"></a>Parametri
 
-*MS*<br/>
+*_Ms*<br/>
 Il numero di millisecondi che deve trascorrere dopo la chiamata a start per il messaggio specificato da propagare a valle.
 
-*valore*<br/>
+*value*<br/>
 Il valore che verrà propagato a valle quando il timer scade.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 La destinazione a cui il timer verrà propagato il relativo messaggio.
 
-*Repeating*<br/>
+*_Repeating*<br/>
 Se true, indica che il timer verrà generato periodicamente ogni `_Ms` millisecondi.
 
 *_Scheduler*<br/>
@@ -263,7 +263,7 @@ Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di prop
 
 Se non si specificano i parametri `_Scheduler` o `_ScheduleGroup` , il runtime usa l'utilità di pianificazione predefinita.
 
-##  <a name="dtor"></a> ~ timer
+##  <a name="dtor"></a> ~timer
 
 Elimina definitivamente un `timer` blocco della messaggistica.
 

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301852"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -61,7 +61,7 @@ Il codice usato per copiare o spostare gli elementi.
 |[Append](#append)|Chiamare questo metodo per aggiungere il contenuto di una matrice alla fine di un altro.|
 |[AssertValid](#assertvalid)|Chiamare questo metodo per verificare che l'oggetto matrice sia valido.|
 |[CAtlArray](#catlarray)|Costruttore.|
-|[~ CAtlArray](#dtor)|Distruttore.|
+|[~CAtlArray](#dtor)|Distruttore.|
 |[Copia](#copy)|Chiamare questo metodo per copiare gli elementi di una matrice a un altro.|
 |[FreeExtra](#freeextra)|Chiamare questo metodo per rimuovere eventuali elementi vuoti dalla matrice.|
 |[GetAt](#getat)|Chiamare questo metodo per recuperare un singolo elemento dall'oggetto matrice.|
@@ -80,7 +80,7 @@ Il codice usato per copiare o spostare gli elementi.
 
 |||
 |-|-|
-|[operatore&#91;&#93;](#operator_at)|Chiamare questo operatore per restituire un riferimento a un elemento nella matrice.|
+|[operator &#91;&#93;](#operator_at)|Chiamare questo operatore per restituire un riferimento a un elemento nella matrice.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
@@ -114,7 +114,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parametri
 
-*Elemento*<br/>
+*element*<br/>
 L'elemento da aggiungere alla matrice.
 
 ### <a name="return-value"></a>Valore restituito
@@ -190,7 +190,7 @@ Inizializza l'oggetto matrice.
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-##  <a name="dtor"></a>  CAtlArray:: ~ CAtlArray
+##  <a name="dtor"></a>  CAtlArray::~CAtlArray
 
 Distruttore.
 
@@ -357,7 +357,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 *iElement*<br/>
 Indice in cui uno o più elementi devono essere inseriti.
 
-*Elemento*<br/>
+*element*<br/>
 Il valore di uno o più elementi da inserire.
 
 *nCount*<br/>
@@ -393,7 +393,7 @@ La matrice è detto vuoto se non contiene alcun elemento. Pertanto, anche se la 
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-##  <a name="operator_at"></a>  [] CAtlArray::operator
+##  <a name="operator_at"></a>  CAtlArray::operator []
 
 Chiamare questo operatore per restituire un riferimento a un elemento nella matrice.
 
@@ -482,7 +482,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 L'indice che punta all'elemento della matrice da impostare.
 
-*Elemento*<br/>
+*element*<br/>
 Il nuovo valore dell'elemento specificato.
 
 ### <a name="remarks"></a>Note
@@ -536,7 +536,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 L'indice che punta all'elemento della matrice da impostare.
 
-*Elemento*<br/>
+*element*<br/>
 Il nuovo valore dell'elemento specificato.
 
 ### <a name="remarks"></a>Note

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-ms.openlocfilehash: 53a4ee37c28cd7d45552cfe4dd7d25ce9fa37a70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8e233769d859aac102d0554a6987e9b7201473
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439585"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301441"
 ---
 # <a name="invalidschedulerpolicyvalue-class"></a>Classe invalid_scheduler_policy_value
 
@@ -55,7 +55,7 @@ invalid_scheduler_policy_value() throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Messaggio*<br/>
+*_Message*<br/>
 Messaggio descrittivo dell'errore.
 
 ## <a name="see-also"></a>Vedere anche

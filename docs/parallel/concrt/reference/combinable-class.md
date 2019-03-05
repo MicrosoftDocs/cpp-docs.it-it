@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630750"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299973"
 ---
 # <a name="combinable-class"></a>Classe combinable
 
@@ -99,10 +99,10 @@ combinable(const combinable& _Copy);
 *_Function*<br/>
 Il tipo dell'oggetto funtore inizializzazione.
 
-*FnInitialize*<br/>
+*_FnInitialize*<br/>
 Una funzione che verrà chiamata per inizializzare ogni nuovo valore di thread privato del tipo `T`. Deve supportare un operatore di chiamata di funzione con la firma `T ()`.
 
-*Copia*<br/>
+*_Copy*<br/>
 Un oggetto esistente `combinable` da copiare in questo oggetto.
 
 ### <a name="remarks"></a>Note
@@ -121,7 +121,7 @@ Elimina un oggetto `combinable`.
 ~combinable();
 ```
 
-##  <a name="combine"></a> combinare
+##  <a name="combine"></a> combine
 
 Calcola un valore finale del set di calcoli secondari locali del thread chiamando il funtore combinato.
 
@@ -171,7 +171,7 @@ T& local(bool& _Exists);
 
 ### <a name="parameters"></a>Parametri
 
-*Exists*<br/>
+*_Exists*<br/>
 Un riferimento a un valore booleano. Il valore booleano per fare riferimento in questo argomento verrà impostato su **true** se il calcolo secondario già esistente su questo thread e impostato su **false** se questo è il primo calcolo secondario su questo thread.
 
 ### <a name="return-value"></a>Valore restituito
@@ -188,7 +188,7 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>Parametri
 
-*Copia*<br/>
+*_Copy*<br/>
 Un oggetto esistente `combinable` da copiare in questo oggetto.
 
 ### <a name="return-value"></a>Valore restituito

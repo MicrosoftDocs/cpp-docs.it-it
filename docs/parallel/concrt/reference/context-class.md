@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: c6b219eabd008114f40401c64465e44607c2ee9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555077"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293953"
 ---
 # <a name="context-class"></a>Classe Context
 
@@ -59,7 +59,7 @@ class Context;
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Determina se il contesto è bloccato in modo sincrono. Viene considerato come un contesto bloccato in modo sincrono se eseguito in modo esplicito un'azione che ha portato a blocco.|
 |[Abilitare l'oversubscription](#oversubscribe)|Inserisce un altro processore virtuale in un'utilità di pianificazione per la durata di un blocco di codice quando viene richiamato in un contesto di esecuzione in uno dei processori virtuali in tale utilità di pianificazione.|
 |[ScheduleGroupId](#schedulegroupid)|Restituisce un identificatore per il gruppo di pianificazione che sta lavorando per il contesto corrente.|
-|[Sblocco](#unblock)|Sblocca il contesto e lo rende eseguibile.|
+|[Unblock](#unblock)|Sblocca il contesto e lo rende eseguibile.|
 |[VirtualProcessorId](#virtualprocessorid)|Restituisce un identificatore per il processore virtuale è in esecuzione nel contesto corrente.|
 |[Yield](#yield)|Restituisce l'esecuzione in modo da poter eseguire un altro contesto. Se non è disponibile un altro contesto a cui cedere l'esecuzione, l'utilità di pianificazione può cedere l'esecuzione a un altro thread del sistema operativo.|
 
@@ -230,7 +230,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 
 ### <a name="parameters"></a>Parametri
 
-*BeginOversubscription*<br/>
+*_BeginOversubscription*<br/>
 Se **true**, un valore che indica che un processore virtuale aggiuntivi deve essere aggiunte per la durata dell'oversubscription. Se **false**, indica che deve terminare l'oversubscription e il processore virtuale aggiunto in precedenza deve essere rimossa.
 
 ##  <a name="schedulegroupid"></a> ScheduleGroupId
@@ -308,4 +308,3 @@ Questa funzione è stata introdotta in Visual Studio 2015 ed è identica per le 
 [Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
 [Classe Scheduler](scheduler-class.md)<br/>
 [Utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

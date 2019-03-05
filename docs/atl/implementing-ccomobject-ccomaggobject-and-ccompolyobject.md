@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CComAggObject class
 - CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-ms.openlocfilehash: 6e9e1a22ebe23f9fec6e553713a5701315cdac96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9aa3cc489260aecfa529dff5f7ed7eb19cf3151
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508979"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295214"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementazione di CComObject, Ccomaggobjec e CComPolyObject
 
@@ -39,4 +39,3 @@ Il vantaggio dell'utilizzo `CComPolyObject` non si rischia che dispone di entram
 
 [Nozioni fondamentali sugli oggetti COM ATL](../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Macro di aggregazione e class factory](../atl/reference/aggregation-and-class-factory-macros.md)
-

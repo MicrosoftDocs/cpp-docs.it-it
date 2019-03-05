@@ -1,5 +1,5 @@
 ---
-title: 'Eccezioni: rilascio di oggetti nelle eccezioni'
+title: 'Eccezioni: Rilascio di oggetti nelle eccezioni'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298132"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>Eccezioni: rilascio di oggetti nelle eccezioni
+# <a name="exceptions-freeing-objects-in-exceptions"></a>Eccezioni: Rilascio di oggetti nelle eccezioni
 
 Questo articolo illustra la necessità e il metodo di rilascio di oggetti quando si verifica un'eccezione. Gli argomenti trattati includono:
 
@@ -62,9 +62,8 @@ Il meccanismo delle eccezioni automaticamente dealloca oggetti frame. viene inol
 
 Se si chiamano funzioni che possono generare eccezioni, è possibile usare **try/catch** blocchi per assicurarsi di intercettare le eccezioni e avere la possibilità di eliminare tutti gli oggetti creati. In particolare, tenere presente che molte funzioni MFC possono generare eccezioni.
 
-Per altre informazioni, vedere [eccezioni: eccezioni di intercettazione ed eliminazione](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Per altre informazioni, vedere [alle eccezioni: Rilevamento ed eliminazione di eccezioni](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)
-

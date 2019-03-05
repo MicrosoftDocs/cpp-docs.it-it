@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-ms.openlocfilehash: 850ce46f524d9069609c1e5809c091c18bd58ee4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d36c924d30bd728fcd54b6cdf6805ade25e20b5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296605"
 ---
 # <a name="cbasekeyframe-class"></a>Classe CBaseKeyFrame
 
@@ -51,7 +51,7 @@ class CBaseKeyFrame : public CObject;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBaseKeyFrame:: AddToStoryboard](#addtostoryboard)|Aggiunge un fotogramma chiave nello storyboard.|
+|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Aggiunge un fotogramma chiave nello storyboard.|
 |[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Restituisce il valore del fotogramma chiave sottostante.|
 |[CBaseKeyFrame::IsAdded](#isadded)|Indica se un fotogramma chiave è stato aggiunto allo storyboard.|
 |[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Specifica se il fotogramma chiave deve essere aggiunto allo storyboard in corrispondenza dell'offset o dopo la transizione.|
@@ -78,7 +78,7 @@ Incapsula la variabile UI_ANIMATION_KEYFRAME. Funge da classe base per qualsiasi
 
 **Intestazione:** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CBaseKeyFrame:: AddToStoryboard
+##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard
 
 Aggiunge un fotogramma chiave nello storyboard.
 
@@ -93,7 +93,7 @@ virtual BOOL AddToStoryboard(
 *pStoryboard*<br/>
 Puntatore a uno storyboard.
 
-*bDeepAdd è impostato su*<br/>
+*bDeepAdd*<br/>
 Se questo parametro è TRUE e il fotogramma chiave da aggiungere dipende da un altro fotogramma chiave o una transizione, questo metodo prova ad aggiungere questo fotogramma chiave o una transizione allo storyboard prima di tutto.
 
 ### <a name="return-value"></a>Valore restituito

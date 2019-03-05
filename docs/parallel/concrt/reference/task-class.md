@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c2ac1df322a2778356ce8acca90392fc9f6a17f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482078"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289299"
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (runtime di concorrenza)
 
@@ -142,7 +142,7 @@ True se l'attività è stata completata, false in caso contrario.
 
 La funzione restituisce true se l'attività è stata completata o annullata (con o senza eccezione dell'utente).
 
-##  <a name="operator_neq"></a> operatore! =
+##  <a name="operator_neq"></a> operator!=
 
 Determina se due oggetti `task` rappresentano attività interne diverse.
 
@@ -307,14 +307,14 @@ __declspec(
 *_Function*<br/>
 Tipo dell'oggetto funzione che sarà richiamato da questa attività.
 
-*Func*<br/>
+*_Func*<br/>
 Funzione di continuazione da eseguire quando questa attività viene completata. Questa funzione di continuazione deve accettare come input una variabile oppure `result_type` o `task<result_type>`, dove `result_type` è il tipo di risultato prodotto da questa attività.
 
 *_TaskOptions*<br/>
 Le opzioni di attività includono il token di annullamento, l'utilità di pianificazione e il contesto di continuazione. Per impostazione predefinita, le precedenti 3 opzioni vengono ereditate dall'attività precedente
 
 *_CancellationToken*<br/>
-Token di annullamento da associare all'attività di continuazione. Un'attività di continuazione creata senza un token di annullamento erediterà il token della relativa attività antecedente.
+Token di annullamento da associare all'attività di continuazione. Un'attività di continuazione creata senza un token di annullamento erediterà il token della relativa attività precedente.
 
 *_ContinuationContext*<br/>
 Variabile che specifica la posizione in cui deve essere eseguita la continuazione. Questa variabile è utile solo quando utilizzato in un'app UWP. Per altre informazioni, vedere [task_continuation_context](task-continuation-context-class.md)

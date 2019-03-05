@@ -94,17 +94,17 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: c30ced2f19602dca17badeec6e1b27ad1e90bf5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285347"
 ---
 # <a name="coleipframewndex-class"></a>Classe COleIPFrameWndEx
 
 La classe `COleIPFrameWndEx` implementa un contenitore OLE che supporta MFC. È necessario derivare la classe della finestra cornice sul posto per l'applicazione dalla classe `COleIPFrameWndEx` , anziché dalla classe [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md).
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -314,7 +314,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bAttivare il*<br/>
+[in] *bEnable*<br/>
 [in] *uiCustomizeCmd*<br/>
 [in] *strCustomizeLabel*<br/>
 [in] *uiViewToolbarsMenuEntryID*<br/>
@@ -506,7 +506,7 @@ BOOL InsertPane(
 
 [in] *pControlBar*<br/>
 [in] *pTarget*<br/>
-[in] *bDopo*<br/>
+[in] *bAfter*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -539,7 +539,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *punto*<br/>
+[in] *point*<br/>
 [in] *dwBarAlignment*<br/>
 [in] *bOuterEdge*<br/>
 
@@ -768,7 +768,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bMostra*<br/>
+[in] *bShow*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -839,7 +839,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *punto*<br/>
+[in] *point*<br/>
 [in] *nSensitivity*<br/>
 [in] *bExactBar*<br/>
 [in] *pRTCBarType*<br/>
@@ -926,7 +926,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*Menu di scelta*<br/>
+*menu*<br/>
 [in] Un riferimento a un [CMenu](../../mfc/reference/cmenu-class.md) oggetto da modificare.
 
 *uiViewUserToolbarCmdFirst*<br/>
@@ -950,7 +950,7 @@ void ShowPane(
 ### <a name="parameters"></a>Parametri
 
 [in] *pBar*<br/>
-[in] *bMostra*<br/>
+[in] *bShow*<br/>
 [in] *bDelay*<br/>
 [in] *bActivate*<br/>
 

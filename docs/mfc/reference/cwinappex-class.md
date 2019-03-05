@@ -118,18 +118,18 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544417"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288831"
 ---
 # <a name="cwinappex-class"></a>Classe CWinAppEx
 
 `CWinAppEx` Gestisce lo stato dell'applicazione, Salva lo stato nel Registro di sistema, carica lo stato dal Registro di sistema, inizializza i gestori applicazione e vengono forniti collegamenti a tali gestori.
 
-   Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+   Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 ## <a name="syntax"></a>Sintassi
 
 ```
@@ -176,7 +176,7 @@ class CWinAppEx : public CWinApp
 |[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)|Inizializza il `CKeyboardManager` oggetto.|
 |[CWinAppEx::InitMouseManager](#initmousemanager)|Inizializza il `CMouseManager` oggetto.|
 |[CWinAppEx::InitShellManager](#initshellmanager)|Inizializza il `CShellManager` classe|
-|[CWinAppEx](#inittooltipmanager)|Inizializza il `CTooltipManager` classe.|
+|[CWinAppEx::InitTooltipManager](#inittooltipmanager)|Inizializza il `CTooltipManager` classe.|
 |[CWinAppEx::IsResourceSmartUpdate](#isresourcesmartupdate)||
 |[CWinAppEx::IsStateExists](#isstateexists)|Indica se la chiave specificata è nel Registro di sistema.|
 |[CWinAppEx::LoadState](#loadstate)|Carica lo stato dell'applicazione dal Registro di sistema.|
@@ -222,7 +222,7 @@ Dipende dalla maggior parte delle funzionalità offerte dal framework MFC il `CW
 
 - Derivare la classe principale dell'applicazione da `CWinAppEx`.
 
-In seguito si incorpora `CWinAppEx` nell'applicazione, è possibile inizializzare uno dei responsabili dell'applicazione. Prima di usare una gestione dell'applicazione, è necessario inizializzarla chiamando il metodo di inizializzazione appropriato. Per ottenere un puntatore a un responsabile specifico, chiamare il metodo get associato. Il `CWinAppEx` classe gestisce i gestori di applicazione seguenti: [classe CMouseManager](../../mfc/reference/cmousemanager-class.md), [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [ Classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), e [classe CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
+In seguito si incorpora `CWinAppEx` nell'applicazione, è possibile inizializzare uno dei responsabili dell'applicazione. Prima di usare una gestione dell'applicazione, è necessario inizializzarla chiamando il metodo di inizializzazione appropriato. Per ottenere un puntatore a un responsabile specifico, chiamare il metodo get associato. Il `CWinAppEx` classe gestisce i gestori di applicazione seguenti: [Classe CMouseManager](../../mfc/reference/cmousemanager-class.md), [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), e [ Classe CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -288,7 +288,7 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Specifica se l'applicazione carica le dimensioni iniziali e la posizione della finestra cornice principale dal Registro di sistema.
 
 ### <a name="remarks"></a>Note
@@ -405,7 +405,7 @@ BOOL GetBinary(
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se ha esito positivo. FALSE in caso contrario.
+TRUE in caso di esito positivo, FALSE in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -868,7 +868,7 @@ Se si chiama [CWinAppEx::GetShellManager](#getshellmanager), l'implementazione p
 
 Se l'applicazione contiene già un gestore della shell e si chiama `InitShellManager`, l'applicazione genera un [ASSERT](diagnostic-services.md#assert) errore. Pertanto, non chiamare `InitShellManager` se si crea un `CShellManager` direttamente l'oggetto. Se non si usa una classe personalizzata `CShellManager`, usare `GetShellManager` per creare un `CShellManager` oggetto.
 
-##  <a name="inittooltipmanager"></a>  CWinAppEx
+##  <a name="inittooltipmanager"></a>  CWinAppEx::InitTooltipManager
 
 Inizializza la [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) oggetto.
 
@@ -923,7 +923,7 @@ virtual void LoadCustomState();
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override di questo metodo se si desidera eseguire qualsiasi elaborazione dopo l'applicazione carica lo stato dal Registro di sistema. Per impostazione predefinita, questo metodo non esegue alcuna operazione.
+Eseguire l'override di questo metodo se si desidera eseguire qualsiasi elaborazione dopo l'applicazione carica lo stato dal Registro di sistema. Per impostazione predefinita, questo metodo non effettua alcuna operazione.
 
 Per caricare le informazioni sullo stato personalizzate dal Registro di sistema, le informazioni devono prima essere salvate usando [CWinAppEx::SaveCustomState](#savecustomstate).
 
@@ -962,7 +962,7 @@ virtual BOOL LoadState(
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo. in caso contrario 0.
+Valore diverso da zero in caso di esito positivo, 0 in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -996,7 +996,7 @@ virtual BOOL LoadWindowPlacement(
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo. in caso contrario 0.
+Valore diverso da zero in caso di esito positivo, 0 in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -1031,7 +1031,7 @@ virtual void OnAppContextHelp(
 *pWndControl*<br/>
 [in] Puntatore a un oggetto finestra per cui l'utente richiamata Guida sensibile al contesto.
 
-*[] dwHelpIDArray*<br/>
+*dwHelpIDArray[]*<br/>
 [in] Un valore riservato.
 
 ### <a name="remarks"></a>Note
@@ -1150,7 +1150,7 @@ virtual void SaveCustomState();
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override di questo metodo se si desidera eseguire qualsiasi elaborazione dopo l'applicazione deve salvare lo stato nel Registro di sistema. Per impostazione predefinita, questo metodo non esegue alcuna operazione.
+Eseguire l'override di questo metodo se si desidera eseguire qualsiasi elaborazione dopo l'applicazione deve salvare lo stato nel Registro di sistema. Per impostazione predefinita, questo metodo non effettua alcuna operazione.
 
 ##  <a name="savestate"></a>  CWinAppEx::SaveState
 
@@ -1187,7 +1187,7 @@ BOOL SaveState(
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se ha esito positivo. FALSE in caso contrario.
+TRUE in caso di esito positivo, FALSE in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -1232,7 +1232,7 @@ virtual BOOL ShowPopupMenu(
 *uiMenuResId*<br/>
 [in] Un ID di risorsa di menu.
 
-*punto*<br/>
+*point*<br/>
 [in] Oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) che specifica la posizione del menu di scelta in coordinate dello schermo.
 
 *pWnd*<br/>
@@ -1272,7 +1272,7 @@ virtual BOOL StoreWindowPlacement(
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo. in caso contrario 0.
+Valore diverso da zero in caso di esito positivo, 0 in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -1327,7 +1327,7 @@ BOOL WriteInt(
 *lpszEntry*<br/>
 [in] Stringa che contiene il nome di una chiave del Registro di sistema.
 
-*nValore*<br/>
+*nValue*<br/>
 [in] I dati da archiviare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1421,7 +1421,7 @@ BOOL WriteSectionInt(
 *lpszEntry*<br/>
 [in] Stringa che contiene il valore da impostare.
 
-*nValore*<br/>
+*nValue*<br/>
 [in] I dati da scrivere nel Registro di sistema.
 
 ### <a name="return-value"></a>Valore restituito

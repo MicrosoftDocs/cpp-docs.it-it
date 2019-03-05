@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694855"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283657"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -69,7 +69,7 @@ class CRegKey
 |Nome|Descrizione|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Costruttore.|
-|[CRegKey:: ~ CRegKey](#dtor)|Distruttore.|
+|[CRegKey::~CRegKey](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -359,10 +359,10 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Parametri
 
-*sistema internazionale di misura*<br/>
+*si*<br/>
 Il [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) valore che indica le informazioni di sicurezza richiesto.
 
-*file PSD*<br/>
+*psd*<br/>
 Un puntatore a un buffer che riceve una copia del descrittore di sicurezza richiesto.
 
 *pnBytes*<br/>
@@ -884,7 +884,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*sistema internazionale di misura*<br/>
+*si*<br/>
 Specifica i componenti del descrittore di sicurezza da impostare. Il valore può essere una combinazione dei valori seguenti:
 
 |Valore|Significato|
@@ -894,7 +894,7 @@ Specifica i componenti del descrittore di sicurezza da impostare. Il valore può
 |OWNER_SECURITY_INFORMATION|Imposta il SID del proprietario della chiave. La chiave deve avere accesso WRITE_OWNER o il processo di chiamata deve essere il proprietario dell'oggetto o disporre del privilegio SE_TAKE_OWNERSHIP_NAME abilitato.|
 |SACL_SECURITY_INFORMATION|Imposta l'elenco di controllo di accesso della chiave del sistema (SACL). La chiave deve avere accesso ACCESS_SYSTEM_SECURITY. La modalità appropriata per ottenere l'accesso è per abilitare il SE_SECURITY_NAME [privilegio](/windows/desktop/secauthz/privileges) nel token di accesso corrente del chiamante, aprire l'handle per l'accesso ACCESS_SYSTEM_SECURITY e quindi disabilitare il privilegio.|
 
-*file PSD*<br/>
+*psd*<br/>
 Puntatore a un [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) struttura che specifica gli attributi di sicurezza da impostare per la chiave specificata.
 
 ### <a name="return-value"></a>Valore restituito

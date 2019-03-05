@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: fa2114df914af07dd9baa140cc96cc94eaea6a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41d1d1b8c28335ae6207e41d696359295a83e646
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521771"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291236"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Classe CD2DSolidColorBrush
 
@@ -50,7 +50,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Di overload. Costruisce un oggetto CD2DSolidColorBrush.|
-|[CD2DSolidColorBrush:: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto solid brush D2D.|
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto solid brush D2D.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -61,8 +61,8 @@ class CD2DSolidColorBrush : public CD2DBrush;
 |[CD2DSolidColorBrush::Destroy](#destroy)|Elimina un oggetto CD2DSolidColorBrush. (Esegue l'override [CD2DBrush:: Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
 |[CD2DSolidColorBrush::Detach](#detach)|Scollega interfaccia di risorse dall'oggetto|
 |[CD2DSolidColorBrush::Get](#get)|Restituisce l'interfaccia ID2D1SolidColorBrush|
-|[CD2DSolidColorBrush::getColor](#getcolor)|Recupera il colore del pennello colore a tinta unita|
-|[CD2DSolidColorBrush::setColor](#setcolor)|Specifica il colore di questo pennello colore a tinta unita|
+|[CD2DSolidColorBrush::GetColor](#getcolor)|Recupera il colore del pennello colore a tinta unita|
+|[CD2DSolidColorBrush::SetColor](#setcolor)|Specifica il colore di questo pennello colore a tinta unita|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -91,7 +91,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush:: ~ CD2DSolidColorBrush
+##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::~CD2DSolidColorBrush
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto solid brush D2D.
 
@@ -136,13 +136,13 @@ CD2DSolidColorBrush(
 *pParentTarget*<br/>
 Puntatore alla destinazione di rendering.
 
-*Colore*<br/>
+*color*<br/>
 I valori rossi, verdi, blu e alfa del colore del pennello.
 
 *pBrushProperties*<br/>
 Un puntatore all'opacità e alla trasformazione di un pennello.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 *nAlpha*<br/>
@@ -197,7 +197,7 @@ ID2D1SolidColorBrush* Get();
 
 Puntatore a un'interfaccia ID2D1SolidColorBrush o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="getcolor"></a>  CD2DSolidColorBrush::getColor
+##  <a name="getcolor"></a>  CD2DSolidColorBrush::GetColor
 
 Recupera il colore del pennello colore a tinta unita
 
@@ -237,7 +237,7 @@ operator ID2D1SolidColorBrush*();
 
 Puntatore a un'interfaccia ID2D1SolidColorBrush o NULL se l'oggetto non è ancora inizializzato.
 
-##  <a name="setcolor"></a>  CD2DSolidColorBrush::setColor
+##  <a name="setcolor"></a>  CD2DSolidColorBrush::SetColor
 
 Specifica il colore di questo pennello colore a tinta unita
 
@@ -247,7 +247,7 @@ void SetColor(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Parametri
 
-*Colore*<br/>
+*color*<br/>
 Il colore di questo pennello colore a tinta unita
 
 ## <a name="see-also"></a>Vedere anche

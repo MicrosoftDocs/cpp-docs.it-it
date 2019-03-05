@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d618b5f202c6aaf454a60f4f37211d9000600562
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473684"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293524"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Procedura: Usare parallel_invoke per eseguire operazioni in parallelo
 
@@ -68,7 +68,7 @@ Poiché il `parallel_invoke` algoritmo chiama ogni funzione di lavoro in paralle
 
 Poiché in questo esempio esegue le tre attività in parallelo, non è opportuno presupporre la scalabilità nei computer con processori più di tre delle prestazioni. Per migliorare ulteriormente le prestazioni, è possibile suddividere le attività con esecuzione più lunga in attività più piccole ed eseguire tali attività in parallelo.
 
-È possibile usare la `parallel_invoke` algoritmo anziché il [Concurrency:: task_group](reference/task-group-class.md) e [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classi se non è necessario il supporto per l'annullamento. Per un esempio che confronta l'utilizzo dei `parallel_invoke` algoritmo rispetto a gruppi di attività, vedere [procedura: usare parallel_invoke per scrivere una Routine di ordinamento parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
+È possibile usare la `parallel_invoke` algoritmo anziché il [Concurrency:: task_group](reference/task-group-class.md) e [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classi se non è necessario il supporto per l'annullamento. Per un esempio che confronta l'utilizzo dei `parallel_invoke` algoritmo rispetto a gruppi di attività, vedere [come: Usare parallel_invoke per scrivere una Routine di ordinamento parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
 
 ## <a name="compiling-the-code"></a>Compilazione del codice
 
@@ -80,4 +80,3 @@ Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual S
 
 [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_invoke (funzione)](reference/concurrency-namespace-functions.md#parallel_invoke)
-

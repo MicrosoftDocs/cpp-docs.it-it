@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456000"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299309"
 ---
 # <a name="overwritebuffer-class"></a>Classe overwrite_buffer
 
@@ -57,7 +57,7 @@ Il tipo di payload dei messaggi archiviati e propagati dal buffer.
 |Nome|Descrizione|
 |----------|-----------------|
 |[has_value](#has_value)|Controlla se questo `overwrite_buffer` blocco della messaggistica dispone già di un valore.|
-|[valore](#value)|Ottiene un riferimento al payload del messaggio viene archiviato corrente il `overwrite_buffer` blocco della messaggistica.|
+|[value](#value)|Ottiene un riferimento al payload del messaggio viene archiviato corrente il `overwrite_buffer` blocco della messaggistica.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
@@ -108,7 +108,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -129,7 +129,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` consumata dell'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -162,7 +162,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore alla destinazione appena collegato.
 
 ##  <a name="dtor"></a> ~overwrite_buffer
@@ -200,13 +200,13 @@ overwrite_buffer(
 
 ### <a name="parameters"></a>Parametri
 
-*Filtro*<br/>
+*_Filter*<br/>
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
 Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `overwrite_buffer` .
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `overwrite_buffer` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
@@ -227,10 +227,10 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -247,7 +247,7 @@ virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Un puntatore a un `message` oggetto che questo `overwrite_buffer` ha assunto la proprietà.
 
 ### <a name="remarks"></a>Note
@@ -266,10 +266,10 @@ virtual message_status send_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -298,7 +298,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto rilasciato.
 
 ##  <a name="reserve_message"></a> reserve_message
@@ -311,7 +311,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito

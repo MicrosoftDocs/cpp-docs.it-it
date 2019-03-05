@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: bbfe75ad996841cd4ea78adab56c7cf91ac55f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 790cf064fcffe1f0cd3c191c28ed0a0614062406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565555"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283449"
 ---
 # <a name="worker-archetype"></a>Archetipo worker
 
@@ -67,7 +67,7 @@ void Execute(
 
 #### <a name="parameters"></a>Parametri
 
-*Richiesta*<br/>
+*request*<br/>
 L'elemento di lavoro da elaborare. L'elemento di lavoro è dello stesso tipo `RequestType`.
 
 *pvWorkerParam*<br/>
@@ -85,7 +85,7 @@ BOOL Initialize(void* pvParam) throw();
 
 #### <a name="parameters"></a>Parametri
 
-*parametro pvParam*<br/>
+*pvParam*<br/>
 Un parametro personalizzato riconosciuto dalla classe ruolo di lavoro. Anche passato a `WorkerArchetype::Terminate` e `WorkerArchetype::Execute`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -114,11 +114,10 @@ void Terminate(void* pvParam) throw();
 
 #### <a name="parameters"></a>Parametri
 
-*parametro pvParam*<br/>
+*pvParam*<br/>
 Un parametro personalizzato riconosciuto dalla classe ruolo di lavoro. Anche passato a `WorkerArchetype::Initialize` e `WorkerArchetype::Execute`.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Concetti](../../atl/active-template-library-atl-concepts.md)<br/>
 [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)
-

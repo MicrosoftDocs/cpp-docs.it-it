@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collection classes [MFC], arrays
 - classes [MFC], array
 ms.assetid: fdeabf95-2fe7-43a8-8f88-d954133caf52
-ms.openlocfilehash: 6c2b43dc2eee3c2df27c5879d74c8ca11e68b820
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 309567f897bf5ca941852b433cdee0e8e0d44b3c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677747"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284671"
 ---
 # <a name="ready-to-use-array-classes"></a>Classi Array pronte all'uso
 
@@ -34,7 +34,7 @@ Archivia i puntatori a **void** (puntatori generici) in una matrice.
 [CUIntArray](../mfc/reference/cuintarray-class.md)<br/>
 Archivia elementi di tipo **UINT** in una matrice.
 
-[Classe CWordArray](../mfc/reference/cwordarray-class.md)<br/>
+[CWordArray](../mfc/reference/cwordarray-class.md)<br/>
 Archivia elementi di tipo **WORD** in una matrice.
 
 [CStringArray](../mfc/reference/cstringarray-class.md)<br/>
@@ -43,4 +43,3 @@ Gli archivi `CString` oggetti in una matrice.
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../mfc/class-library-overview.md)
-

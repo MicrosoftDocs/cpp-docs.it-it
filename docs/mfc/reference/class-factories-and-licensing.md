@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514400"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289576"
 ---
 # <a name="class-factories-and-licensing"></a>Class factory e licenze
 
 Per creare un'istanza del controllo OLE, un'applicazione contenitore chiama una funzione membro di produzione di classi del controllo. Poiché il controllo è un oggetto OLE effettivo, la class factory è responsabile per la creazione di istanze del controllo. Ogni classe di controllo OLE deve avere una class factory.
 
-Un'altra caratteristica importante di controlli OLE è la capacità di applicare una licenza. La creazione guidata controllo consente di incorporare licenze durante la creazione del progetto di controllo. Per altre informazioni sulle licenze di controllo, vedere l'articolo [controlli ActiveX: gestione delle licenze di un controllo ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Un'altra caratteristica importante di controlli OLE è la capacità di applicare una licenza. La creazione guidata controllo consente di incorporare licenze durante la creazione del progetto di controllo. Per altre informazioni sulle licenze di controllo, vedere l'articolo [controlli ActiveX: Licenze di un controllo ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
 La tabella seguente elenca diverse macro e funzioni utilizzate per dichiarare e implementare la produzione di classi del controllo e alla licenza del controllo.
 
@@ -41,7 +41,7 @@ DECLARE_OLECREATE_EX(class_name)
 
 ### <a name="parameters"></a>Parametri
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Il nome della classe del controllo.
 
 ### <a name="remarks"></a>Note
@@ -79,13 +79,13 @@ IMPLEMENT_OLECREATE_EX(
 
 ### <a name="parameters"></a>Parametri
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Il nome della classe di pagina del controllo proprietà.
 
 *external_name*<br/>
 Il nome dell'oggetto esposto alle applicazioni.
 
-*l, s1, S2, b1, b2, b3, b4, b5, b6, b7, b8*<br/>
+*l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8*<br/>
 Componenti di CLSID della classe. Per altre informazioni su questi parametri, vedere le note [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate).
 
 ### <a name="remarks"></a>Note
@@ -106,7 +106,7 @@ BEGIN_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>Parametri
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Specifica il nome della classe del controllo cui si tratta di produzione di classi.
 
 ### <a name="remarks"></a>Note
@@ -127,7 +127,7 @@ END_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>Parametri
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Il nome della classe del controllo cui si tratta di produzione di classi.
 
 ### <a name="requirements"></a>Requisiti

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: dc7c2615ff4de7370bee74c64c8bcddbd1f1fcd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302468"
 ---
 # <a name="cmonikerfile-class"></a>Classe CMonikerFile
 

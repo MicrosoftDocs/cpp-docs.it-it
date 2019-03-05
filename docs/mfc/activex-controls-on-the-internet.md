@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283007"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controlli ActiveX in Internet
 
@@ -49,7 +49,7 @@ Progettazione di un controllo che funzionerà correttamente in un ambiente Inter
 
 Per migliorare le prestazioni dei controlli, seguire questi suggerimenti sulle considerazioni di efficienza:
 
-- Implementare le tecniche descritte in questo articolo [controlli ActiveX: ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
+- Implementare le tecniche descritte nell'articolo [controlli ActiveX: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
 
 - Prendere in considerazione la modalità con cui viene creata un'istanza di un controllo.
 
@@ -89,7 +89,7 @@ Quando si crea un nuovo controllo tramite la creazione guidata applicazione, è 
 
 1. Nel **le impostazioni di controllo** pagina, selezionare **carica le proprietà in modo asincrono**. Se si seleziona questa opzione imposta la proprietà stato pronto e l'evento di stato pronto modificato automaticamente.
 
-   È anche possibile selezionare altre ottimizzazioni, ad esempio **attivazione senza finestra**, che è descritti [controlli ActiveX: ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
+   È anche possibile selezionare altre ottimizzazioni, ad esempio **attivazione senza finestra**, descritta in [controlli ActiveX: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
 
 1. Scegli **fine** per creare il progetto.
 
@@ -183,7 +183,7 @@ Ecco un esempio di un tag object e gli attributi per l'inserimento di un control
 
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>L'aggiornamento di un controllo OLE esistente per utilizzare nuove funzionalità di controllo ActiveX
 
-Se il controllo OLE è stato creato con una versione di Visual C++ precedenti alla 4.2, ci sono passaggi che consentono di migliorare le prestazioni e la relativa funzionalità. Per una descrizione dettagliata di queste modifiche, vedere [controlli ActiveX: ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
+Se il controllo OLE è stato creato con una versione di Visual C++ precedenti alla 4.2, ci sono passaggi che consentono di migliorare le prestazioni e la relativa funzionalità. Per una descrizione dettagliata di queste modifiche, vedere [controlli ActiveX: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md).
 
 Se si aggiunge il supporto asincrono della proprietà a un controllo esistente, è necessario aggiungere la proprietà stato pronto e `ReadyStateChange` evento manualmente. Nel costruttore per il controllo, aggiungere:
 
@@ -195,4 +195,3 @@ Si aggiornerà lo stato di pronto quando viene scaricato il codice chiamando [CO
 
 [Attività di programmazione Internet MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Nozioni di base sulla programmazione Internet MFC](../mfc/mfc-internet-programming-basics.md)
-

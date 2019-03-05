@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: 092ffff91113b42cd106fe7079b06b9482400c63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d796ac39ba29e6d286926f4975f8f6d2054e7ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557157"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297892"
 ---
 # <a name="cd2dtextformat-class"></a>Classe CD2DTextFormat
 
@@ -48,7 +48,7 @@ class CD2DTextFormat : public CD2DResource;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Costruisce un oggetto CD2DTextFormat.|
-|[CD2DTextFormat:: ~ CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto formato di testo D2D.|
+|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto formato di testo D2D.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -66,7 +66,7 @@ class CD2DTextFormat : public CD2DResource;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DTextFormat::operator IDWriteTextFormat *](#operator_idwritetextformat_star)|Restituisce l'interfaccia IDWriteTextFormat|
+|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|Restituisce l'interfaccia IDWriteTextFormat|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -86,7 +86,7 @@ class CD2DTextFormat : public CD2DResource;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat:: ~ CD2DTextFormat
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto formato di testo D2D.
 
@@ -137,7 +137,7 @@ Un oggetto CString che contiene il nome delle impostazioni locali.
 *pFontCollection*<br/>
 Un puntatore a un oggetto di raccolta del tipo di carattere. Quando è NULL, indica la raccolta del tipo di carattere di sistema.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 ##  <a name="create"></a>  CD2DTextFormat::Create
@@ -216,7 +216,7 @@ Un puntatore a un oggetto IDWriteTextFormat.
 IDWriteTextFormat* m_pTextFormat;
 ```
 
-##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat *
+##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat*
 
 Restituisce l'interfaccia IDWriteTextFormat
 

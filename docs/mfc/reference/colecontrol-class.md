@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179019"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283423"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -434,7 +434,7 @@ class COleControl : public CWnd
 |[COleControl::InvalidateRgn](#invalidatergn)|Invalida l'area client della finestra contenitore all'interno dell'area specificata. Consente di ridisegnare controlli privi di finestra nell'area.|
 |[COleControl::IsConvertingVBX](#isconvertingvbx)|Consente il caricamento specializzato di un controllo OLE.|
 |[COleControl::IsModified](#ismodified)|Determina se lo stato del controllo è stato modificato.|
-|[COleControl:: IsOptimizedDraw](#isoptimizeddraw)|Indica se il contenitore supporta il disegno ottimizzato per l'operazione di disegno corrente.|
+|[COleControl::IsOptimizedDraw](#isoptimizeddraw)|Indica se il contenitore supporta il disegno ottimizzato per l'operazione di disegno corrente.|
 |[COleControl::IsSubclassedControl](#issubclassedcontrol)|Chiamato per determinare se il controllo è una sottoclasse un Windows il controllo.|
 |[COleControl::Load](#load)|Reimposta tutti i dati asincroni precedenti e avvia un nuovo caricamento della proprietà asincrona del controllo.|
 |[COleControl::LockInPlaceActive](#lockinplaceactive)|Determina se il controllo può essere disattivato dal contenitore.|
@@ -738,7 +738,7 @@ Di seguito è riportato un elenco di valori validi restituiti:
 |------------------|-------------|
 |0|Allineamento generale (numeri in testo di destra, a sinistra).|
 |1|Allinea a sinistra|
-|2|Al centro|
+|2|Center|
 |3|Allinea a destra|
 
 ### <a name="remarks"></a>Note
@@ -787,7 +787,7 @@ void BoundPropertyChanged(DISPID dispid);
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà associata del controllo.
 
 ### <a name="remarks"></a>Note
@@ -804,7 +804,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà associata del controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -830,7 +830,7 @@ virtual void ClientToParent(
 *lprcBounds*<br/>
 Puntatore ai limiti del controllo OLE all'interno del contenitore. Area non client, ma l'area del controllo intera, compresi i bordi e le barre di scorrimento.
 
-*PowerPoint*<br/>
+*pPoint*<br/>
 Puntatore al punto di area client OLE da convertire nelle coordinate dell'elemento padre (contenitore).
 
 ### <a name="remarks"></a>Note
@@ -901,7 +901,7 @@ virtual void DisplayError(
 
 ### <a name="parameters"></a>Parametri
 
-*SCODE*<br/>
+*scode*<br/>
 Il valore di codice di stato da segnalare. Per un elenco completo dei possibili codici, vedere l'articolo [controlli ActiveX: Argomenti avanzati](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
@@ -994,7 +994,7 @@ void DrawContent(
 *pDC*<br/>
 Puntatore al contesto di dispositivo.
 
-*RC*<br/>
+*rc*<br/>
 Area rettangolare da disegnare in.
 
 ### <a name="remarks"></a>Note
@@ -1016,7 +1016,7 @@ void DrawMetafile(
 *pDC*<br/>
 Puntatore al contesto di dispositivo metafile.
 
-*RC*<br/>
+*rc*<br/>
 Area rettangolare da disegnare in.
 
 ##  <a name="enablesimpleframe"></a>  COleControl::EnableSimpleFrame
@@ -1142,7 +1142,7 @@ void FireError(
 
 ### <a name="parameters"></a>Parametri
 
-*SCODE*<br/>
+*scode*<br/>
 Il valore di codice di stato da segnalare. Per un elenco completo dei possibili codici, vedere l'articolo [controlli ActiveX: Argomenti avanzati](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
@@ -1174,7 +1174,7 @@ void AFX_CDECL FireEvent(
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch dell'evento da generare.
 
 *pbParams*<br/>
@@ -1192,7 +1192,7 @@ Il *pbParams* argomento è un elenco delimitato da spazio **VTS _**. Uno o più 
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -1301,7 +1301,7 @@ void FireMouseDown(
 
 ### <a name="parameters"></a>Parametri
 
-*Npulsante*<br/>
+*nButton*<br/>
 Il valore numerico del pulsante del mouse premuto. Può contenere uno dei valori seguenti:
 
 - LEFT_BUTTON il pulsante sinistro del mouse è stato premuto.
@@ -1345,7 +1345,7 @@ void FireMouseMove(
 
 ### <a name="parameters"></a>Parametri
 
-*Npulsante*<br/>
+*nButton*<br/>
 Il valore numerico dei pulsanti del mouse premuto. Contiene una combinazione dei valori seguenti:
 
 - LEFT_BUTTON durante l'azione è stato premuto il pulsante sinistro del mouse verso il basso.
@@ -1389,7 +1389,7 @@ void FireMouseUp(
 
 ### <a name="parameters"></a>Parametri
 
-*Npulsante*<br/>
+*nButton*<br/>
 Il valore numerico del pulsante del mouse rilasciato. Può avere uno dei valori seguenti:
 
 - LEFT_BUTTON è stato rilasciato il pulsante sinistro del mouse.
@@ -2224,7 +2224,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>Parametri
 
-*Blocco*<br/>
+*bLock*<br/>
 TRUE se lo stato attivo sul posto del controllo deve essere bloccato. FALSE se deve essere sbloccato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2614,7 +2614,7 @@ virtual BOOL OnGetDisplayString(
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
 *strValue*<br/>
@@ -2714,7 +2714,7 @@ virtual BOOL OnGetPredefinedStrings(
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
 *pStringArray*<br/>
@@ -2744,7 +2744,7 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
 *dwCookie*<br/>
@@ -2936,7 +2936,7 @@ virtual void OnKeyDownEvent(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Il valore di codice tasto virtuale del tasto premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h
 
 *nShiftState*<br/>
@@ -2962,7 +2962,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Contiene il valore di codice tasto virtuale del tasto premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h
 
 ### <a name="remarks"></a>Note
@@ -2983,7 +2983,7 @@ virtual void OnKeyUpEvent(
 
 ### <a name="parameters"></a>Parametri
 
-*NChar*<br/>
+*nChar*<br/>
 Il valore di codice tasto virtuale del tasto premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h
 
 *nShiftState*<br/>
@@ -3012,7 +3012,7 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="parameters"></a>Parametri
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
 *lpclsid*<br/>
@@ -3447,7 +3447,7 @@ virtual UINT ParentToClient(
 *lprcBounds*<br/>
 Puntatore ai limiti del controllo OLE all'interno del contenitore. Area non client, ma l'area del controllo intera, compresi i bordi e le barre di scorrimento.
 
-*PowerPoint*<br/>
+*pPoint*<br/>
 Puntatore all'elemento padre (contenitore) punto di essere convertito in coordinate dell'area client del controllo.
 
 *bHitTest*<br/>
@@ -3876,7 +3876,7 @@ BOOL SetControlSize(int cx, int cy);
 *cx*<br/>
 Specifica la nuova larghezza del controllo in pixel.
 
-*CY*<br/>
+*cy*<br/>
 Specifica la nuova altezza del controllo in pixel.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3981,7 +3981,7 @@ void SetInitialSize(
 *cx*<br/>
 Larghezza iniziale del controllo OLE in pixel.
 
-*CY*<br/>
+*cy*<br/>
 Altezza iniziale del controllo OLE in pixel.
 
 ### <a name="remarks"></a>Note
@@ -4085,7 +4085,7 @@ void ThrowError(
 
 ### <a name="parameters"></a>Parametri
 
-*SC*<br/>
+*sc*<br/>
 Il valore di codice di stato da segnalare. Per un elenco completo dei possibili codici, vedere l'articolo [controlli ActiveX: Argomenti avanzati](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *nDescriptionID*<br/>
@@ -4209,7 +4209,7 @@ Chiamare questa funzione per l'invio di messaggi specifici tramite la mappa dei 
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC esempio CIRC3](../../visual-cpp-samples.md)<br/>
+[MFC Sample CIRC3](../../visual-cpp-samples.md)<br/>
 [Esempio MFC TESTHELP](../../visual-cpp-samples.md)<br/>
 [Classe COlePropertyPage](../../mfc/reference/colepropertypage-class.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

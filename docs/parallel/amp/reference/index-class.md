@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284645"
 ---
 # <a name="index-class"></a>Classe index
 
@@ -71,7 +71,7 @@ Il `index` struttura rappresenta un vettore di coordinate *N* integer che specif
 
 **Intestazione:** amp.h
 
-**Spazio dei nomi:** Concurrency
+**Spazio dei nomi:** Concorrenza
 
 ## <a name="index_ctor"></a> Costruttore di indice
 
@@ -106,7 +106,7 @@ explicit index(
 
 ### <a name="parameters"></a>Parametri
 
-*Array*<br/>
+*_Array*<br/>
 Una matrice unidimensionale con i valori di pertinenza.
 
 *_I*<br/>
@@ -124,7 +124,7 @@ Lunghezza della dimensione meno significativa.
 *_Other*<br/>
 Oggetto indice su cui si basa il nuovo oggetto index.
 
-## <a name="operator--"></a>  operator-
+## <a name="operator--"></a>  operator--
 
 Decrementa ogni elemento dell'oggetto index.
 ```
@@ -139,7 +139,7 @@ index operator--(
 
 Per l'operatore di prefisso, l'oggetto indice (* questo). Per l'operatore di suffisso, un nuovo oggetto index.
 
-## <a name="operator_mod_eq"></a>  operator(MOD) =
+## <a name="operator_mod_eq"></a>  operator(mod)=
 
 Calcola il modulo (resto) di ogni elemento nell'oggetto indice quando tale elemento viene diviso per il numero specificato.
 
@@ -202,7 +202,7 @@ int& operator[] (
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*_Index*<br/>
 Numero intero compreso tra 0 e il numero di dimensioni meno 1.
 
 ### <a name="return-value"></a>Valore restituito
@@ -220,7 +220,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  operator + +
+## <a name="operator_add_add"></a>  operator++
 
 Incrementa ogni elemento dell'oggetto index.
 ```

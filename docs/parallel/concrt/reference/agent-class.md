@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560251"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289143"
 ---
 # <a name="agent-class"></a>Classe agent
 
@@ -59,7 +59,7 @@ class agent;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Operazione eseguita](#done)|Sposta un agente nel `agent_done` stato, che indica che l'agente è stata completata.|
+|[done](#done)|Sposta un agente nel `agent_done` stato, che indica che l'agente è stata completata.|
 |[run](#run)|Rappresenta l'attività principale di un agente. `run` deve essere sottoposto a override in una classe derivata e specifica che l'agente deve essere eseguita dopo che è stata avviata.|
 
 ## <a name="remarks"></a>Note
@@ -152,7 +152,7 @@ virtual void run() = 0;
 
 Lo stato dell'agente è stato modificato per `agent_started` pulsante destro del mouse prima che venga richiamato questo metodo. Il metodo deve richiamare `done` nell'agente con uno stato appropriato prima della restituzione e non può generare qualsiasi eccezione.
 
-##  <a name="start"></a> Inizio
+##  <a name="start"></a> start
 
 Sposta un agente dal `agent_created` torni allo stato di `agent_runnable` stato e si pianifica l'esecuzione.
 
@@ -203,7 +203,7 @@ static agent_status __cdecl wait(
 *_PAgent*<br/>
 Un puntatore all'agente di attesa.
 
-*Timeout*<br/>
+*_Timeout*<br/>
 Il tempo massimo di attesa, espresso in millisecondi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -233,13 +233,13 @@ static void __cdecl wait_for_all(
 *count*<br/>
 Il numero dei puntatori agente presenti nella matrice `_PAgents`.
 
-*PAgents*<br/>
+*_PAgents*<br/>
 Una matrice di puntatori agli agenti. Attendere.
 
 *_PStatus*<br/>
 Un puntatore a una matrice di stati dell'agente. Ogni valore di stato rappresenterà lo stato dell'agente corrispondente quando restituito dal metodo.
 
-*Timeout*<br/>
+*_Timeout*<br/>
 Il tempo massimo di attesa, espresso in millisecondi.
 
 ### <a name="remarks"></a>Note
@@ -266,16 +266,16 @@ static void __cdecl wait_for_one(
 *count*<br/>
 Il numero dei puntatori agente presenti nella matrice `_PAgents`.
 
-*PAgents*<br/>
+*_PAgents*<br/>
 Una matrice di puntatori agli agenti. Attendere.
 
 *_Status*<br/>
 Un riferimento a una variabile in cui verrà collocato lo stato dell'agente.
 
-*Index*<br/>
+*_Index*<br/>
 Un riferimento a una variabile in cui verrà inserito l'indice dell'agente.
 
-*Timeout*<br/>
+*_Timeout*<br/>
 Il tempo massimo di attesa, espresso in millisecondi.
 
 ### <a name="remarks"></a>Note
