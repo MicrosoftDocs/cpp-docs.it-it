@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292190"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe CMFCRibbonEdit
 
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] L'etichetta per il `CMFCRibbonEdit` controllo.
 
-*Immagine*<br/>
+*nImage*<br/>
 [in] Indice dell'immagine di piccole dimensioni da utilizzare per il `CMFCRibbonEdit` controllo. La raccolta di immagini di piccole dimensioni viene mantenuta in base alla categoria della barra multifunzione padre.
 
 ### <a name="remarks"></a>Note
@@ -532,7 +532,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Distanza, espressa in pixel, dal lato sinistro della casella di riepilogo per il testo visualizzato.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Il rettangolo di visualizzazione per il `CMFCRibbonEdit` controllo.
 
 *bIsSelected*<br/>
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare il controllo. FALSE per disabilitare il controllo.
 
 ### <a name="remarks"></a>Note
@@ -604,7 +604,7 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="remarks"></a>Note
@@ -619,7 +619,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="remarks"></a>Note
@@ -649,7 +649,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE per mostrare il controllo. FALSE per nascondere il controllo.
 
 ### <a name="remarks"></a>Note
