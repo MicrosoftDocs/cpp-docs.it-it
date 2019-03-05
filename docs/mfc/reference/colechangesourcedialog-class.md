@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], IsValidSource
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
-ms.openlocfilehash: 4f0dfb1579539ef744f9e16a24acc6c34463a435
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d118b132fc110402967e9c7f2b1d74a2164d7c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304613"
 ---
 # <a name="colechangesourcedialog-class"></a>Classe COleChangeSourceDialog
 

@@ -1,5 +1,5 @@
 ---
-title: 'Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX'
+title: 'Contenitori di controlli ActiveX: Gestione degli eventi da un controllo ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 5deff0a50de813cc5faa43a86e591d3003a3c03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293563"
 ---
-# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX
+# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenitori di controlli ActiveX: Gestione degli eventi da un controllo ActiveX
 
 Questo articolo illustra l'uso della finestra delle proprietà per installare i gestori eventi per i controlli ActiveX in un contenitore di controlli ActiveX. I gestori eventi vengono utilizzati per ricevere le notifiche (dal controllo) di determinati eventi ed eseguire un'azione in risposta. Questa notifica viene chiamata l'evento "generazione".
 
@@ -70,4 +70,3 @@ Per altre informazioni sulle macro di sink di evento, vedere [mappe Sink di even
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
-

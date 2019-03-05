@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-ms.openlocfilehash: 325851b75cef340fe5dcc762df54c40ded1ed704
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 617b7b4592c96625b44fbe5c2b93da971a423128
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534082"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293173"
 ---
 # <a name="cmessagemap-class"></a>Classe CMessageMap
 

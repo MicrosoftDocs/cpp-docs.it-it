@@ -1,5 +1,5 @@
 ---
-title: 'Menu e risorse: unione di menu'
+title: 'Menu e risorse: Unione di menu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars [MFC], OLE document applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438441"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300349"
 ---
-# <a name="menus-and-resources-menu-merging"></a>Menu e risorse: unione di menu
+# <a name="menus-and-resources-menu-merging"></a>Menu e risorse: Unione di menu
 
 Questo articolo illustra in dettaglio i passaggi necessari per le applicazioni documento OLE gestire la modifica visiva e posto attivazione in modo corretto. Attivazione sul posto costituisce una sfida per contenitori e server applicazioni (componente). L'utente rimane nella stessa finestra del frame, nell'ambito del documento contenitore, ma è effettivamente in esecuzione un'altra applicazione (server). Ciò richiede il coordinamento tra le risorse delle applicazioni contenitore e il server.
 
@@ -105,7 +105,7 @@ Quando un elemento incorporato è attivato sul posto, il framework di carica il 
 
 Applicazioni server devono creare una nuova barra degli strumenti e la relativa bitmap di archiviare in un file separato. Le applicazioni generate dalla creazione guidata applicazione archiviano questa bitmap in un file denominato ITOOLBAR. BMP. Quando l'elemento del server è attivato sul posto e deve contenere gli stessi elementi come la barra degli strumenti normali, ma rimuovere le icone che rappresentano elementi nel menu File e finestra, la nuova barra degli strumenti sostituisce barra degli strumenti dell'applicazione contenitore.
 
-Questa barra degli strumenti viene caricato nel `COleIPFrameWnd`-derivato (classe), creato dalla procedura guidata dell'applicazione. La barra di stato viene gestita dall'applicazione contenitore. Per altre informazioni sull'implementazione di finestre cornice sul posto, vedere [server: implementazione di un Server](../mfc/servers-implementing-a-server.md).
+Questa barra degli strumenti viene caricato nel `COleIPFrameWnd`-derivato (classe), creato dalla procedura guidata dell'applicazione. La barra di stato viene gestita dall'applicazione contenitore. Per altre informazioni sull'implementazione di finestre cornice sul posto, vedere [server: Implementazione di un Server](../mfc/servers-implementing-a-server.md).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -113,4 +113,3 @@ Questa barra degli strumenti viene caricato nel `COleIPFrameWnd`-derivato (class
 [Attivazione](../mfc/activation-cpp.md)<br/>
 [Server](../mfc/servers.md)<br/>
 [Contenitori](../mfc/containers.md)
-

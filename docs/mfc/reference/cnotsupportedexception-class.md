@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
-ms.openlocfilehash: 0eb3bf0de51345ed4316d2a1c5c29b8ecb3e8bba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3af508cd39e277ca4ae0a9aad5e639f66edc53b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456563"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294811"
 ---
 # <a name="cnotsupportedexception-class"></a>Classe CNotSupportedException
 
@@ -69,4 +69,3 @@ Non utilizzare questo costruttore direttamente, ma piuttosto chiamare la funzion
 
 [Classe CException](cexception-class.md)<br/>
 [Grafico della gerarchia](../hierarchy-chart.md)
-

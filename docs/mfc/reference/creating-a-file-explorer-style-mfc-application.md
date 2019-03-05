@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-ms.openlocfilehash: 3ddeb2e875ccdb45dd0bc2b29a2da3c1498138ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16969b7ef9c0447dfce971af8d329c5b93367041
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564762"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304886"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Creazione di un'applicazione MFC di tipo Esplora file
 
@@ -54,4 +54,3 @@ Per altre informazioni, vedere:
 [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)<br/>
 [Creazione di un'applicazione MFC di tipo browser Web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)<br/>
 [Creazione di un'applicazione MFC basata su form](../../mfc/reference/creating-a-forms-based-mfc-application.md)
-

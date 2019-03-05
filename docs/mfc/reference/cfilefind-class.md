@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 9eb192e546bcfbba385beea4f1716ce03bbc8ade
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: da08b04b314df4916a290d4929a4cbaac87434d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289923"
 ---
 # <a name="cfilefind-class"></a>Classe CFileFind
 

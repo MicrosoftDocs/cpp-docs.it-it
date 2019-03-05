@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 8e97b17a3620d75660a5ac2109bc440f8ad27b16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453457"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295136"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc (classe)
 
@@ -45,7 +45,7 @@ class CRichEditDoc : public COleServerDoc
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[M_brtf](#m_brtf)|Indica se i/o flusso devono includere la formattazione.|
+|[CRichEditDoc::m_bRTF](#m_brtf)|Indica se i/o flusso devono includere la formattazione.|
 
 ## <a name="remarks"></a>Note
 
@@ -136,7 +136,7 @@ Puntatore al `CRichEditView` oggetto associato al documento.
 
 Il testo e le informazioni di formattazione sono contenuti all'interno di `CRichEditView` oggetto. Il `CRichEditDoc` oggetto mantiene gli elementi OLE per la serializzazione. Deve essere presente un solo `CRichEditView` per ogni `CRichEditDoc`.
 
-##  <a name="m_brtf"></a>  M_brtf
+##  <a name="m_brtf"></a>  CRichEditDoc::m_bRTF
 
 Se TRUE, indica che [CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin) e [CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout) devono archiviare le caratteristiche di formattazione di carattere e paragrafo.
 

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644392"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291626"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -79,8 +79,8 @@ class CControlBar : public CWnd
 |[CControlBar::DoPaint](#dopaint)|Esegue il rendering dei bordi e verticale di ridimensionamento della barra di controllo.|
 |[CControlBar::DrawBorders](#drawborders)|Esegue il rendering dei bordi della barra di controllo.|
 |[CControlBar::DrawGripper](#drawgripper)|Esegue il rendering di verticale di ridimensionamento della barra di controllo.|
-|[CControlBar:: EnableDocking](#enabledocking)|Consente a una barra di controllo sia ancorato o mobile.|
-|[CControlBar::](#getbarstyle)|Recupera le impostazioni di stile barre di controllo.|
+|[CControlBar::EnableDocking](#enabledocking)|Consente a una barra di controllo sia ancorato o mobile.|
+|[CControlBar::GetBarStyle](#getbarstyle)|Recupera le impostazioni di stile barre di controllo.|
 |[CControlBar::GetBorders](#getborders)|Recupera i valori del bordo della barra di controllo.|
 |[CControlBar::GetCount](#getcount)|Restituisce il numero di elementi non HWND nella barra di controllo.|
 |[CControlBar::GetDockingFrame](#getdockingframe)|Restituisce un puntatore al frame a cui è ancorata una barra di controllo.|
@@ -206,7 +206,7 @@ virtual void CalcInsideRect(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 Contiene le dimensioni correnti della barra di controllo. tra cui i bordi.
 
 *bHorz*<br/>
@@ -260,7 +260,7 @@ virtual void DrawBorders(
 *pDC*<br/>
 Punta al contesto di dispositivo da utilizzare per il rendering dei bordi della barra di controllo.
 
-*Rect*<br/>
+*rect*<br/>
 Oggetto `CRect` oggetto contenente le dimensioni della barra di controllo.
 
 ### <a name="remarks"></a>Note
@@ -282,14 +282,14 @@ virtual void DrawGripper(
 *pDC*<br/>
 Punta al contesto di dispositivo da usare per la barra gripper a barre di controllo di rendering.
 
-*Rect*<br/>
+*rect*<br/>
 Oggetto `CRect` oggetto contenente le dimensioni del gripper barra di controllo.
 
 ### <a name="remarks"></a>Note
 
 Eseguire l'override di questa funzione per personalizzare l'aspetto del gripper barra di controllo.
 
-##  <a name="enabledocking"></a>  CControlBar:: EnableDocking
+##  <a name="enabledocking"></a>  CControlBar::EnableDocking
 
 Chiamare questa funzione per abilitare una barra di controllo ancorato.
 

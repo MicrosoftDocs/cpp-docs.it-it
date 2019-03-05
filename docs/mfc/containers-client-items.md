@@ -1,18 +1,18 @@
 ---
-title: 'Contenitori: elementi client'
+title: 'Contenitori: Elementi client'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client items
 - client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
-ms.openlocfilehash: e0d56d4a8f25828de954a78e9bafd8df150c7ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c7f4a63cb9a31b52be2d3574ddad29313df6a4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437011"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298282"
 ---
-# <a name="containers-client-items"></a>Contenitori: elementi client
+# <a name="containers-client-items"></a>Contenitori: Elementi client
 
 In questo articolo viene illustrato il significato degli elementi client e da quali classi l'applicazione dovrebbe derivare i relativi elementi client.
 
@@ -27,8 +27,8 @@ Ogni applicazione contenitore deve derivare almeno una classe da `COleClientItem
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori](../mfc/containers.md)<br/>
-[Contenitori: file composti](../mfc/containers-compound-files.md)<br/>
-[Contenitori: problemi dell'interfaccia utente](../mfc/containers-user-interface-issues.md)<br/>
-[Contenitori: funzionalità avanzate](../mfc/containers-advanced-features.md)<br/>
+[Contenitori: File compositi](../mfc/containers-compound-files.md)<br/>
+[Contenitori: Problemi dell'interfaccia utente](../mfc/containers-user-interface-issues.md)<br/>
+[Contenitori: Funzionalità avanzate](../mfc/containers-advanced-features.md)<br/>
 [Classe COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
 [Classe COleServerItem](../mfc/reference/coleserveritem-class.md)

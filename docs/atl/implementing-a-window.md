@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CWindowImpl class, using
 - windows [C++], implementing in ATL
 ms.assetid: eb1ce8d6-72f9-4894-aae7-e60a61665628
-ms.openlocfilehash: f8c072b32e64f87042890c1bcf950ab3ac40e4a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0572e3b65b2d249c569a119a7f260395d91373cd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645835"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285815"
 ---
 # <a name="implementing-a-window"></a>Implementazione di una finestra
 
@@ -28,4 +28,3 @@ Classe [CWindowImpl](../atl/reference/cwindowimpl-class.md) consente di implemen
 ## <a name="see-also"></a>Vedere anche
 
 [Classi di finestre](../atl/atl-window-classes.md)
-

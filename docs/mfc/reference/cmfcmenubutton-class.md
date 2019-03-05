@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: 4e29fd64540b52a8e6b70ee4d520b14a5a7d712b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178317"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298204"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (classe)
 

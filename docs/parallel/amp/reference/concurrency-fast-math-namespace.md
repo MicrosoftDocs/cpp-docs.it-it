@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 5ca81d056ddf431b502f868f8a76959381b26260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e774c2d8e4431960e796ee1e6cc87b924d04174b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455978"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287960"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Spazio dei nomi Concurrency::fast_math
 
@@ -97,7 +97,7 @@ namespace fast_math;
 
 **Intestazione:** amp_math. h
 
-**Namespace:** Concurrency:: fast_math
+**Spazio dei nomi:** Concurrency:: fast_math
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: a4846fb8ea34a3d6a83ae892eabee74f4a48cd6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284866"
 ---
 # <a name="cd2dresource-class"></a>Classe CD2DResource
 
@@ -52,16 +52,16 @@ class CD2DResource : public CObject;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DResource:: Create](#create)|Crea un CD2DResource.|
+|[CD2DResource::Create](#create)|Crea un CD2DResource.|
 |[CD2DResource:: Destroy](#destroy)|Elimina un oggetto CD2DResource.|
-|[CD2DResource:: IsValid](#isvalid)|Verifica la validità della risorsa|
+|[CD2DResource::IsValid](#isvalid)|Verifica la validità della risorsa|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DResource::IsAutoDestroy](#isautodestroy)|Controllo automatico l'eliminazione flag.|
-|[CD2DResource:: ReCreate](#recreate)|Ricrea un CD2DResource.|
+|[CD2DResource::ReCreate](#recreate)|Ricrea un CD2DResource.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -103,7 +103,7 @@ CD2DResource(
 *pParentTarget*<br/>
 Puntatore alla destinazione di rendering.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
 ##  <a name="create"></a>  CD2DResource:: Create

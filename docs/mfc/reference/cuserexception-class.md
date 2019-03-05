@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operations [MFC]
 - throwing exceptions [MFC], stopping user operations
 ms.assetid: 2156ba6d-2cce-415a-9000-6f02c26fcd7d
-ms.openlocfilehash: 80f64ac3f573bddc376e54f13f6c37f8c7ebc8d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72d8537616792859a2b00a1a5cd880ce5eb452bf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584470"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304587"
 ---
 # <a name="cuserexception-class"></a>Classe CUserException
 

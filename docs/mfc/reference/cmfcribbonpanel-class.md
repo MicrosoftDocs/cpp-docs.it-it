@@ -114,18 +114,18 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: a679ca48b054a545752483ff5349442e7c4a0ddd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505391"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305055"
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 
 Implementa un riquadro contenente un set di elementi della barra multifunzione. Quando il pannello viene disegnato, visualizza tutti gli elementi possibili in base alle proprie dimensioni.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -145,7 +145,7 @@ class CMFCRibbonPanel : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Cmfcribbonpanel:: Add](#add)|Aggiunge un elemento della barra multifunzione al pannello.|
+|[CMFCRibbonPanel::Add](#add)|Aggiunge un elemento della barra multifunzione al pannello.|
 |[CMFCRibbonPanel::AddSeparator](#addseparator)|Aggiunge un separatore al pannello della barra multifunzione.|
 |[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Aggiunge una barra degli strumenti al pannello della barra multifunzione.|
 |[CMFCRibbonPanel::FindByData](#findbydata)||
@@ -221,7 +221,7 @@ L'esempio seguente illustra come configurare un `CMFCRibbonPanel` oggetti utiliz
 
 **Intestazione:** afxRibbonPanel.h
 
-##  <a name="add"></a>  Cmfcribbonpanel:: Add
+##  <a name="add"></a>  CMFCRibbonPanel::Add
 
 Aggiunge l'elemento della barra multifunzione specificato nella matrice di elementi della barra multifunzione contenuta nel pannello della barra multifunzione.
 
@@ -569,7 +569,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [out] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -642,7 +642,7 @@ CPoint point);
 *bHighlight*<br/>
 [in] TRUE per evidenziare il pannello della barra multifunzione. FALSE per unhighlight pannello della barra multifunzione.
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="remarks"></a>Note
@@ -659,7 +659,7 @@ BOOL bCheckPanelCaption = FALSE);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
 *bCheckPanelCaption*<br/>
@@ -683,7 +683,7 @@ virtual int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Le coordinate x e y del puntatore rispetto all'angolo superiore sinistro della finestra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -876,7 +876,7 @@ BOOL bDelete = TRUE);
 *nIndex*<br/>
 [in] Specifica l'indice in base zero dell'elemento che viene rimosso dal pannello della barra multifunzione.
 
-*bElimina*<br/>
+*bDelete*<br/>
 [in] True per eliminare l'elemento viene rimosso in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito

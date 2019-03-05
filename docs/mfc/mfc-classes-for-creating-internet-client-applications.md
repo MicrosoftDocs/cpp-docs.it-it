@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-ms.openlocfilehash: 7e05bfdc8af680ae8fc7412d20b57151b8581af8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9201859c6a5d9fe2b31c3fc4348a42ff9566fc8c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554349"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326283"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Classi MFC per la creazione di applicazioni client Internet
 
@@ -39,13 +39,13 @@ MFC fornisce le classi seguenti e funzioni globali per la scrittura di applicazi
 
 - [CFileFind](../mfc/reference/cfilefind-class.md)
 
-   - [Classe CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
+   - [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
 
    - [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)
 
 - [CGopherLocator](../mfc/reference/cgopherlocator-class.md)
 
-- [Classe CInternetException](../mfc/reference/cinternetexception-class.md)
+- [CInternetException](../mfc/reference/cinternetexception-class.md)
 
 ## <a name="global-functions"></a>Funzioni globali
 

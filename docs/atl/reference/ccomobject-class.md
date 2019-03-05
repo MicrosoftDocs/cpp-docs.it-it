@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 57c054915ce98dd8cff6bb772cdd40f4b0f2b768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660473"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299556"
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 
@@ -32,7 +32,7 @@ class CComObject : public Base
 
 #### <a name="parameters"></a>Parametri
 
-*base*<br/>
+*Base*<br/>
 La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da tutte le altre interfacce si desidera supportare nell'oggetto.
 
 ## <a name="members"></a>Membri
@@ -42,7 +42,7 @@ La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComObject::CComObject](#ccomobject)|Costruttore.|
-|[CComObject:: ~ CComObject](#dtor)|Distruttore.|
+|[CComObject::~CComObject](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -122,7 +122,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Parametri
 
-*profilo di porta*<br/>
+*pp*<br/>
 [out] Un puntatore a un **CComObject <** `Base` **>** puntatore. Se `CreateInstance` ha esito negativo *pp* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -153,13 +153,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametri
 
-*IID*<br/>
+*iid*<br/>
 [in] L'identificatore dell'interfaccia richiesto.
 
 *ppvObject*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal *iid*. Se l'oggetto non supporta questa interfaccia, *ppvObject* è impostato su NULL.
 
-*profilo di porta*<br/>
+*pp*<br/>
 [out] Un puntatore al puntatore a interfaccia identificato dal tipo `Q`. Se l'oggetto non supporta questa interfaccia, *pp* è impostato su NULL.
 
 ### <a name="return-value"></a>Valore restituito

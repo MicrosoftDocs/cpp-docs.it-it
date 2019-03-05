@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 485550fbd4d3fc483303cd6ba73d74e29cc7a006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555879"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286023"
 ---
 # <a name="ctypedptrlist-class"></a>Classe CTypedPtrList
 
@@ -179,7 +179,7 @@ TYPE GetAt(POSITION position) const;
 *TIPO*<br/>
 Parametro di modello che specifica il tipo di elementi archiviati nell'elenco.
 
-*posizione*<br/>
+*position*<br/>
 Un valore di posizione restituito da una precedente `GetHeadPosition` o `Find` chiamata di funzione membro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -234,7 +234,7 @@ TYPE GetNext(POSITION& rPosition) const;
 *TIPO*<br/>
 Parametro di modello che specifica il tipo di elementi contenuti in questo elenco.
 
-*rPosition.*<br/>
+*rPosition*<br/>
 Un riferimento a un valore di posizione restituito da una precedente `GetNext`, `GetHeadPosition`, o un'altra chiamata di funzione membro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -267,7 +267,7 @@ TYPE GetPrev(POSITION& rPosition) const;
 *TIPO*<br/>
 Parametro di modello che specifica il tipo di elementi contenuti in questo elenco.
 
-*rPosition.*<br/>
+*rPosition*<br/>
 Un riferimento a un valore di posizione restituito da una precedente `GetPrev` o un'altra chiamata di funzione membro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -360,7 +360,7 @@ void SetAt(POSITION pos, TYPE newElement);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 La posizione dell'elemento da impostare.
 
 *TIPO*<br/>

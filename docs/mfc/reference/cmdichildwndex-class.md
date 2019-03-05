@@ -112,18 +112,18 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541544"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293422"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (classe)
 
 Il `CMDIChildWndEx` classe fornisce la funzionalità di un Windows finestra figlio MDI (interfaccia) a documenti multipli. Estende la funzionalità del [classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Il framework richiede questa classe quando un'applicazione MDI utilizza determinate classi MFC.
 
-Per altre informazioni, vedere il codice sorgente disponibile nel **VC\\atlmfc\\src\\mfc** cartella di installazione di Visual Studio.
+Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -201,7 +201,7 @@ Per sfruttare i vantaggi delle funzionalità di ancoraggio estese nelle applicaz
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente deriva una classe da `CMDIChildWndEx`. Questo frammento di codice provenienza dal [VisualStudioDemo esempio: applicazione MFC di Visual Studio](../../visual-cpp-samples.md).
+Nell'esempio seguente deriva una classe da `CMDIChildWndEx`. Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ Quando il framework è stato di ripristino in un secondo momento, il nome del do
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato l'uso del metodo `GetDocumentName`. Questo frammento di codice provenienza dal [VisualStudioDemo esempio: applicazione MFC di Visual Studio](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato l'uso del metodo `GetDocumentName`. Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -547,7 +547,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Puntatore al riquadro adiacente.
 
-*bDopo*<br/>
+*bAfter*<br/>
 [in] Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -567,7 +567,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Il punto specificato.
 
 *dwBarAlignment*<br/>
@@ -602,7 +602,7 @@ Questa funzione viene utilizzata per impedire il salvataggio dei documenti di so
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato l'override di `IsReadOnly` (metodo). Questo frammento di codice provenienza dal [VisualStudioDemo esempio: applicazione MFC di Visual Studio](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato l'override di `IsReadOnly` (metodo). Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -686,7 +686,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica il punto, nelle coordinate dello schermo, da controllare.
 
 *nSensitivity*<br/>
@@ -780,7 +780,7 @@ void ShowPane(
 
 [in] *pBar*<br/>
 
-[in] *bMostra*<br/>
+[in] *bShow*<br/>
 
 [in] *bDelay*<br/>
 
@@ -828,7 +828,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 Specifica il nuovo rettangolo di ritaglio. Se il rettangolo è vuoto o null, viene rimosso il ritaglio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1152,7 +1152,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se abilitare (TRUE) o la selezione automatica di una parte dell'area client della finestra per visualizzare disable (FALSE).
 
 ### <a name="remarks"></a>Note

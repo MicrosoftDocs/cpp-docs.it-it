@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: licenze di un controllo ActiveX'
+title: 'Controlli ActiveX MFC: Licenze di un controllo ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: eda2ea08c6bd3526befb71c704aa20eba6935b04
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304626"
 ---
-# <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controlli ActiveX MFC: licenze di un controllo ActiveX
+# <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controlli ActiveX MFC: Licenze di un controllo ActiveX
 
 Gestione delle licenze, una funzionalità facoltativa di controlli ActiveX, consente di controllare chi è in grado di utilizzare o distribuire il controllo. (Per analisi aggiuntiva dei problemi relativi alle licenze, vedere i problemi di gestione delle licenze in [aggiornamento di un controllo ActiveX esistente](../mfc/upgrading-an-existing-activex-control.md).)
 
 > [!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
 
-Questo articolo tratta gli argomenti seguenti:
+Nell'articolo vengono trattati gli argomenti seguenti:
 
 - [Panoramica delle licenza del controllo ActiveX](#_core_overview_of_activex_control_licensing)
 
@@ -126,4 +126,3 @@ Per analisi aggiuntiva dei problemi relativi alle licenze, vedere i problemi di 
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Creazione guidata controllo ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md)
-

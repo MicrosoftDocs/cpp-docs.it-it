@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0e74a02a114392a3fc686142f84a9a807d1537
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288051"
 ---
 # <a name="atl-class-overview"></a>Panoramica sulle classi ATL
 
@@ -21,7 +21,7 @@ Le classi nella libreria ATL (Active Template) possono essere suddivisi in categ
 |||
 |-|-|
 |[Class factory](../atl/class-factories-classes.md)|[Gestione della memoria](../atl/memory-management-classes.md)|
-|[Informazioni sulle classi](../atl/class-information-classes.md)|[Snap-In MMC](../atl/mmc-snap-in-classes.md)|
+|[Informazioni sulle classi](../atl/class-information-classes.md)|[MMC Snap-In](../atl/mmc-snap-in-classes.md)|
 |[Raccolta](../atl/collection-classes.md)|[Protezione degli oggetti](../atl/object-safety-classes.md)|
 |[Moduli COM](../atl/com-modules-classes.md)|[Persistenza](../atl/persistence-classes.md)|
 |[Controlli compositi](../atl/composite-controls-classes.md)|[Le proprietà e pagine delle proprietà](../atl/properties-and-property-pages-classes.md)|
@@ -48,4 +48,3 @@ Per le classi aggiuntive che possono essere usate nei progetti ATL, vedere [le c
 [Variabili globali](../atl/reference/atl-global-variables.md)<br/>
 [Macro](../atl/reference/atl-macros.md)<br/>
 [Typedef](../atl/reference/atl-typedefs.md)
-

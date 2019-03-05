@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], closing
 - dialog boxes [MFC], closing
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
-ms.openlocfilehash: fe57c5603f1b0e9ea0b6fb9e6ea8d80bec961f6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e4159eccde1fab89d4a5ffadee4e6d11fc20f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448113"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302579"
 ---
 # <a name="closing-the-dialog-box"></a>Chiusura della finestra di dialogo
 
@@ -21,4 +21,3 @@ Per disporre di chiusura ed eliminazione di una finestra di dialogo non modale, 
 ## <a name="see-also"></a>Vedere anche
 
 [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)
-

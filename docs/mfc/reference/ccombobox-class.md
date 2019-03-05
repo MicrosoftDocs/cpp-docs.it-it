@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178779"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304470"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 |[CComboBox::DeleteString](#deletestring)|Elimina una stringa dalla casella di riepilogo di una casella combinata.|
 |[CComboBox::Dir](#dir)|Aggiunge un elenco di nomi di file nella casella di riepilogo di una casella combinata.|
 |[CComboBox::DrawItem](#drawitem)|Chiamato dal framework quando un aspetto visivo delle modifiche casella combinata disegnato dal proprietario.|
-|[CComboBox:: FindString](#findstring)|Trova la prima stringa che contiene il prefisso specificato nella casella di riepilogo di una casella combinata.|
+|[CComboBox::FindString](#findstring)|Trova la prima stringa che contiene il prefisso specificato nella casella di riepilogo di una casella combinata.|
 |[CComboBox::FindStringExact](#findstringexact)|Trova la prima stringa di casella di riepilogo, in una casella combinata, che corrisponde alla stringa specificata.|
 |[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Recupera le informazioni sul `CComboBox` oggetto.|
 |[CComboBox::GetCount](#getcount)|Recupera il numero di elementi nella casella di riepilogo di una casella combinata.|
@@ -198,7 +198,7 @@ La tabella seguente confronta la casella combinata tre [stili](../../mfc/referen
 
 |Stile|Quando casella di riepilogo è visibile|Controllo statico o di modifica|
 |-----------|-------------------------------|-----------------------------|
-|Semplice|Sempre|Edit|
+|Semplice|Always|Edit|
 |Drop-down|Quando viene rilasciata verso il basso|Edit|
 |Elenco a discesa|Quando viene rilasciata verso il basso|Static|
 
@@ -214,7 +214,7 @@ in cui `id` specifica l'ID di finestra figlio del controllo casella combinata ch
 
 Prototipo di funzione dell'elemento padre è il seguente:
 
-**afx_msg** `void` `memberFxn` **();**
+**afx_msg** `void` `memberFxn` **( );**
 
 Non è possibile prevedere l'ordine in cui verranno inviate determinate notifiche. In particolare, una notifica CBN_SELCHANGE proveniente può verificarsi prima o dopo una notifica CBN_CLOSEUP.
 
@@ -262,7 +262,7 @@ Se si incorpora un `CComboBox` oggetto all'interno di un'altra finestra dell'ogg
 
 **Intestazione:** afxwin.h
 
-##  <a name="addstring"></a>  CComboBox:: AddString
+##  <a name="addstring"></a>  CComboBox::AddString
 
 Aggiunge una stringa nella casella di riepilogo di una casella combinata.
 
@@ -497,7 +497,7 @@ int Dir(
 
 ### <a name="parameters"></a>Parametri
 
-*Attr*<br/>
+*attr*<br/>
 Può essere qualsiasi combinazione dei **enum** i valori descritti nella [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) o qualsiasi combinazione dei valori seguenti:
 
 - File DDL_READWRITE possono essere letti da o scritti.
@@ -554,7 +554,7 @@ Per impostazione predefinita, questa funzione membro non esegue alcuna operazion
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-##  <a name="findstring"></a>  CComboBox:: FindString
+##  <a name="findstring"></a>  CComboBox::FindString
 
 Trova, ma non selezionata, la prima stringa che contiene il prefisso specificato nella casella di riepilogo di una casella combinata.
 
@@ -674,7 +674,7 @@ BOOL GetCueBanner(
 
 Nel primo overload, una [CString](../../atl-mfc-shared/using-cstring.md) oggetto che contiene il testo dell'intestazione della segnalazione, se esistente; in caso contrario, un `CString` oggetto che ha lunghezza zero.
 
-oppure
+-oppure-
 
 Nel secondo overload, TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametri
 
-*nSelezionare*<br/>
+*nSelect*<br/>
 Specifica l'indice in base zero della stringa da selezionare. Se-1, viene rimosso qualsiasi selezione corrente nella casella di riepilogo e il controllo di modifica viene cancellato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bIl*<br/>
+*bExtended*<br/>
 Specifica se la casella combinata deve utilizzare l'interfaccia utente estesa o l'interfaccia utente predefinita. Il valore TRUE consente di selezionare l'interfaccia utente estesa. il valore FALSE consente di selezionare l'interfaccia utente standard.
 
 ### <a name="return-value"></a>Valore restituito

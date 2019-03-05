@@ -1,5 +1,5 @@
 ---
-title: 'Client di automazione: utilizzo delle librerie dei tipi'
+title: 'Client di automazione: Uso delle librerie dei tipi'
 ms.date: 11/04/2016
 f1_keywords:
 - MkTypLib
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: bd11bd8f2666bb2c211f7abe93d473f466963bd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282942"
 ---
-# <a name="automation-clients-using-type-libraries"></a>Client di automazione: utilizzo delle librerie dei tipi
+# <a name="automation-clients-using-type-libraries"></a>Client di automazione: Uso delle librerie dei tipi
 
 I client di automazione devono avere informazioni sui metodi e proprietà degli oggetti server se i client sono modificare oggetti dei server. Le proprietà hanno tipi di dati. metodi spesso valori restituiscono e accettano parametri. Il client richiede informazioni sui tipi di dati di tutti questi elementi per associare in modo statico al tipo di oggetto server.
 
@@ -61,4 +61,3 @@ Se si sceglie di includere l'automazione durante la creazione del progetto, Visu
 ## <a name="see-also"></a>Vedere anche
 
 [Automation Clients](../mfc/automation-clients.md)
-

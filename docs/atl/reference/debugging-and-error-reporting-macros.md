@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522300"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287323"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macro di debug e segnalazione errori
 
@@ -24,15 +24,15 @@ Queste macro forniscono utili funzionalità di debug e trace.
 
 |||
 |-|-|
-|[ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Scrive, nella finestra di output, le perdite di tutte le interfacce che vengono rilevate quando `_Module.Term` viene chiamato.|
-|[AD](#_atl_debug_qi)|Scrive tutte le chiamate a `QueryInterface` nella finestra di output.|
+|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Scrive, nella finestra di output, le perdite di tutte le interfacce che vengono rilevate quando `_Module.Term` viene chiamato.|
+|[_ATL_DEBUG_QI](#_atl_debug_qi)|Scrive tutte le chiamate a `QueryInterface` nella finestra di output.|
 |[ATLASSERT](#atlassert)|Esegue la stessa funzionalità come la [ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) macro trovato nella libreria di runtime C.|
 |[ATLENSURE](#atlensure)|Esegue la convalida dei parametri. Chiamare `AtlThrow` se necessario|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|Invia un messaggio al dispositivo di dump che la funzione specificata non è implementata.|
 |[ATLTRACE](#alttrace)|Segnala gli avvisi generati per un dispositivo di output, ad esempio la finestra del debugger, in base al flag indicato e dei livelli. Opzione inclusa per compatibilità con le versioni precedenti.|
 |[ATLTRACE2](#atltrace2)|Segnala gli avvisi generati per un dispositivo di output, ad esempio la finestra del debugger, in base al flag indicato e dei livelli.|
 
-##  <a name="_atl_debug_interfaces"></a>  ATL_DEBUG_INTERFACES
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
 
 Definire questa macro prima di includere qualsiasi file di intestazione ATL per tracciare tutte `AddRef` e `Release` chiama nelle interfacce dei componenti per la finestra di output.
 
@@ -63,7 +63,7 @@ Le informazioni fornite di seguito esegue il mapping direttamente alle informazi
 > [!NOTE]
 > ATL_DEBUG_INTERFACES utilizzabile nelle build di vendita al dettaglio.
 
-##  <a name="_atl_debug_qi"></a>  AD
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI
 
 Scrive tutte le chiamate a `QueryInterface` nella finestra di output.
 
@@ -112,7 +112,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 *booleanExpression*<br/>
 Specifica un'espressione booleana da sottoporre a test.
 
-*risorse umane*<br/>
+*hr*<br/>
 Specifica un codice di errore da restituire.
 
 ### <a name="remarks"></a>Note
@@ -145,7 +145,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>Parametri
 
-*Nome funzione*<br/>
+*funcname*<br/>
 [in] Stringa contenente il nome della funzione che non è implementata.
 
 ### <a name="remarks"></a>Note
@@ -181,7 +181,7 @@ ATLTRACE(
 *category*<br/>
 [in] Tipo di evento o un metodo in cui al report. Vedere la sezione Osservazioni per un elenco di categorie.
 
-*Livello*<br/>
+*level*<br/>
 [in] Il livello di traccia al report. Vedere la sezione Osservazioni per informazioni dettagliate.
 
 *lpszFormat*<br/>
@@ -212,7 +212,7 @@ ATLTRACE2(
 *category*<br/>
 [in] Tipo di evento o un metodo in cui al report. Vedere la sezione Osservazioni per un elenco di categorie.
 
-*Livello*<br/>
+*level*<br/>
 [in] Il livello di traccia al report. Vedere la sezione Osservazioni per informazioni dettagliate.
 
 *lpszFormat*<br/>

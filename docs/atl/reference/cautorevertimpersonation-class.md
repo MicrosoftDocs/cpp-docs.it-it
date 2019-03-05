@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 799ec11fd8542a8b30ef3aa95f1a20700c5c9796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299101"
 ---
 # <a name="cautorevertimpersonation-class"></a>Classe CAutoRevertImpersonation
 
@@ -35,7 +35,7 @@ class CAutoRevertImpersonation
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Costruisce un `CAutoRevertImpersonation` oggetto|
-|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Elimina l'oggetto e inverte la rappresentazione di token di accesso.|
+|[CAutoRevertImpersonation::~CAutoRevertImpersonation](#dtor)|Elimina l'oggetto e inverte la rappresentazione di token di accesso.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -67,7 +67,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*TOKEN DI ACCESSO PERSONALE*<br/>
+*pAT*<br/>
 L'indirizzo del [CAccessToken](../../atl/reference/caccesstoken-class.md) oggetto annullate automaticamente
 
 ### <a name="remarks"></a>Note
@@ -84,14 +84,14 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*TOKEN DI ACCESSO PERSONALE*<br/>
+*pAT*<br/>
 L'indirizzo del [CAccessToken](../../atl/reference/caccesstoken-class.md) oggetto annullate automaticamente.
 
 ### <a name="remarks"></a>Note
 
 La rappresentazione effettiva del token di accesso deve essere eseguita separatamente dal e preferibilmente prima della creazione di un `CAutoRevertImpersonation` oggetto. Questa rappresentazione verrà annullata automaticamente quando il `CAutoRevertImpersonation` oggetto esce dall'ambito.
 
-##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation
+##  <a name="dtor"></a>  CAutoRevertImpersonation::~CAutoRevertImpersonation
 
 Elimina l'oggetto e inverte la rappresentazione di token di accesso.
 

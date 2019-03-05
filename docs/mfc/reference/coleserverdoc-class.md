@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604945"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285282"
 ---
 # <a name="coleserverdoc-class"></a>Classe COleServerDoc
 
@@ -148,7 +148,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 |[COleServerDoc::OnClose](#onclose)|Chiamato dal framework quando un contenitore richiede la chiusura del documento.|
 |[COleServerDoc::OnExecOleCmd](#onexecolecmd)|Esegue un comando specificato o Visualizza la Guida per il comando.|
 |[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|Chiamato dal framework quando finestra cornice del contenitore è attivata o disattivata.|
-|[COleServerDoc:: OnGetEmbeddedItem](#ongetembeddeditem)|Chiamata eseguita per ottenere un `COleServerItem` che rappresenta l'intero documento, usata per ottenere un elemento incorporato. Implementazione necessaria.|
+|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|Chiamata eseguita per ottenere un `COleServerItem` che rappresenta l'intero documento, usata per ottenere un elemento incorporato. Implementazione necessaria.|
 |[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|Chiamato dal framework per annullare le modifiche apportate durante la modifica sul posto.|
 |[COleServerDoc::OnSetHostNames](#onsethostnames)|Chiamato dal framework quando un contenitore imposta il titolo della finestra per un oggetto incorporato.|
 |[COleServerDoc::OnSetItemRects](#onsetitemrects)|Chiamato dal framework per posizionare la finestra cornice di modifica sul posto all'interno di finestra dell'applicazione contenitore.|
@@ -168,7 +168,7 @@ Per supportare gli elementi collegati, `COleServerDoc` fornisce il [OnGetLinkedI
 
 È necessaria una `COleServerDoc`-classe derivata per ogni tipo di server di documenti supportate dall'applicazione. Ad esempio, se l'applicazione server supporta i grafici e fogli di lavoro, è necessario due `COleServerDoc`-le classi derivate.
 
-Per altre informazioni sui server, vedere l'articolo [server: implementazione di un Server](../../mfc/servers-implementing-a-server.md).
+Per altre informazioni sui server, vedere l'articolo [server: Implementazione di un Server](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -642,7 +642,7 @@ Puntatore a un VARIANTARG per ricevere l'output, i valori restituiti dal comando
 
 Restituisce S_OK se l'esito positivo. in caso contrario, uno dei codici di errore seguente:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |E_UNEXPECTED|Si è verificato un errore imprevisto|
 |E_FAIL|Si è verificato un errore|
@@ -811,7 +811,7 @@ virtual void OnShowControlBars(
 *pFrameWnd*<br/>
 Puntatore alla finestra cornice con le barre di controllo devono essere nascoste o visualizzate.
 
-*bMostra*<br/>
+*bShow*<br/>
 Determina se le barre di controllo visualizzate o nascoste.
 
 ### <a name="remarks"></a>Note
@@ -828,7 +828,7 @@ virtual void OnShowDocument(BOOL bShow);
 
 ### <a name="parameters"></a>Parametri
 
-*bMostra*<br/>
+*bShow*<br/>
 Specifica se l'interfaccia utente per il documento deve essere visualizzato o nascosto.
 
 ### <a name="remarks"></a>Note

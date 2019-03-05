@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-ms.openlocfilehash: e42e601fbf803f8ccfe359a10664149ac8f11086
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f4dc4f0d7b2cfb78b07b23802054f119da9cbbc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693245"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290677"
 ---
 # <a name="tree-control-image-lists"></a>Elenchi di immagini del controllo Tree
 
@@ -31,4 +31,3 @@ Il [funzione membro GetImageList](../mfc/reference/ctreectrl-class.md#getimageli
 
 [Uso di CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

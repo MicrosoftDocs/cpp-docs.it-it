@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-ms.openlocfilehash: 60d6bdaf863e60fa9923f7d7447309338c5dbed2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: febcc0a9c7af75801962ea6be687ce87cc5501d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295974"
 ---
 # <a name="schedule-groups"></a>Gruppi di pianificazione
 
@@ -20,7 +20,7 @@ Questo documento descrive il ruolo dei gruppi di pianificazione nel Runtime di c
 
 Ogni `Scheduler` oggetto dispone di un gruppo di pianificazione predefinita per ogni nodo di pianificazione. Oggetto *pianificazione nodo* viene eseguito il mapping alla topologia del sistema sottostanti. Il runtime crea un nodo di pianificazione per ogni pacchetto del processore o nodo di Strumentazione gestione Windows (NUMA, Non-Uniform Memory Architecture), a seconda del valore maggiore. Se non si associa in modo esplicito un'attività a un gruppo di pianificazione, l'utilità di pianificazione sceglie quale gruppo a cui aggiungere l'attività.
 
-Il `SchedulingProtocol` criteri dell'utilità di pianificazione influisce l'ordine in cui l'utilità di pianificazione esegue le attività in ogni gruppo di pianificazione. Quando `SchedulingProtocol` è impostata su `EnhanceScheduleGroupLocality` (ovvero l'impostazione predefinita), l'utilità di pianificazione sceglie l'attività successiva nel gruppo di pianificazione che è in corso quando l'attività corrente viene completato o in modo cooperativo. L'utilità di pianificazione Cerca il gruppo di pianificazione corrente per il lavoro prima di spostarli nel successivo gruppo di disponibilità. Al contrario, quando `SchedulingProtocol` è impostata su `EnhanceForwardProgress`, l'utilità di pianificazione viene spostato nel gruppo di pianificazione successivo dopo ogni attività viene completata o la restituzione. Per un esempio che consente di confrontare questi criteri, vedere [procedura: usare i gruppi di pianificazione per influiscono sull'ordine di esecuzione](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Il `SchedulingProtocol` criteri dell'utilità di pianificazione influisce l'ordine in cui l'utilità di pianificazione esegue le attività in ogni gruppo di pianificazione. Quando `SchedulingProtocol` è impostata su `EnhanceScheduleGroupLocality` (ovvero l'impostazione predefinita), l'utilità di pianificazione sceglie l'attività successiva nel gruppo di pianificazione che è in corso quando l'attività corrente viene completato o in modo cooperativo. L'utilità di pianificazione Cerca il gruppo di pianificazione corrente per il lavoro prima di spostarli nel successivo gruppo di disponibilità. Al contrario, quando `SchedulingProtocol` è impostata su `EnhanceForwardProgress`, l'utilità di pianificazione viene spostato nel gruppo di pianificazione successivo dopo ogni attività viene completata o la restituzione. Per un esempio che consente di confrontare questi criteri, vedere [come: Usare i gruppi di pianificazione per influenzare l'ordine di esecuzione](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 Il runtime usa la [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) classe per rappresentare i gruppi di pianificazione. Per creare un `ScheduleGroup` dell'oggetto, chiamare il [concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup) oppure [concurrency::Scheduler::CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup) (metodo). Il runtime usa un meccanismo di conteggio dei riferimenti per controllare la durata del `ScheduleGroup` oggetti, come avviene con `Scheduler` oggetti. Quando si crea un `ScheduleGroup` dell'oggetto, il runtime imposta il riferimento al contatore a uno. Il [concurrency::ScheduleGroup::Reference](reference/schedulegroup-class.md#reference) metodo incrementa il contatore di riferimenti di uno. Il [ScheduleGroup](reference/schedulegroup-class.md#release) metodo decrementa il contatore di riferimenti da uno.
 
@@ -30,11 +30,10 @@ Molti tipi in Runtime di concorrenza consentono di associare un oggetto insieme 
 
 ## <a name="example"></a>Esempio
 
-Per un esempio che usa i gruppi per controllare l'ordine dell'esecuzione dell'attività di pianificazione, vedere [procedura: usare i gruppi di pianificazione per influiscono sull'ordine di esecuzione](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Per un esempio che usa i gruppi per controllare l'ordine dell'esecuzione dell'attività di pianificazione, vedere [come: Usare i gruppi di pianificazione per influenzare l'ordine di esecuzione](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Istanze dell'utilità di pianificazione](../../parallel/concrt/scheduler-instances.md)<br/>
 [Procedura: Usare i gruppi di pianificazione per influenzare l'ordine di esecuzione](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
-

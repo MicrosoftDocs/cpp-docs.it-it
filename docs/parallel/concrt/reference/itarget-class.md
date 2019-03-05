@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: fed6f6c9b93869602eb43dabfef4743fbce3a3d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430004"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295324"
 ---
 # <a name="itarget-class"></a>Classe ITarget
 
@@ -99,14 +99,14 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*PSource*<br/>
+*_PSource*<br/>
 Il `ISource` bloccare da collegare a questa `ITarget` blocco.
 
 ### <a name="remarks"></a>Note
 
 Questa funzione non deve essere chiamata direttamente su un `ITarget` blocco. I blocchi devono essere connesse tra loro tramite il `link_target` metodo sul `ISource` blocchi, che verranno richiamato il `link_source` metodo nella destinazione corrispondente.
 
-##  <a name="propagate"></a> propagazione
+##  <a name="propagate"></a> propagate
 
 Quando sottoposto a override in una classe derivata, passa in modo asincrono un messaggio da un blocco di origine per questo blocco di destinazione.
 
@@ -118,10 +118,10 @@ virtual message_status propagate(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -144,10 +144,10 @@ virtual message_status send(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -184,7 +184,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 
 ### <a name="parameters"></a>Parametri
 
-*PSource*<br/>
+*_PSource*<br/>
 Il `ISource` bloccare da scollegare dal `ITarget` blocco.
 
 ### <a name="remarks"></a>Note

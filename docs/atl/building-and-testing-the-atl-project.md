@@ -5,12 +5,12 @@ helpviewer_keywords:
 - composite controls, building and testing the project
 - composite controls, containers for
 ms.assetid: 5c1541f8-f6cb-4c22-bd22-c66bcfbaa077
-ms.openlocfilehash: 0a6363ca3c3cee7e23729121124457311e056a2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28d976aba48521df1429b27bb20b8277b72166ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483968"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295435"
 ---
 # <a name="building-and-testing-the-atl-project"></a>Compilazione e test del progetto ATL
 
@@ -21,4 +21,3 @@ Come indicato nella [inserimento di un controllo composito](../atl/inserting-a-c
 ## <a name="see-also"></a>Vedere anche
 
 [Nozioni fondamentali sul controllo composito](../atl/atl-composite-control-fundamentals.md)
-

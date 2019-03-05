@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: dc7b00d70a4f816845f5741bf605f1c1bb631ee2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296722"
 ---
 # <a name="uint2-class"></a>Classe uint_2
 
@@ -85,9 +85,9 @@ class uint_2;
 |uint_2::operator&=||
 |uint_2::operator*=||
 |uint_2::operator/=||
-|uint_2::operator ^ =||
+|uint_2::operator^=||
 |uint_2::operator&#124;=||
-|uint_2::operator ~||
+|uint_2::operator~||
 |uint_2::operator++||
 |uint_2::operator+=||
 |uint_2::operator<\<=||
@@ -122,7 +122,7 @@ class uint_2;
 
 **Intestazione:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Spazio dei nomi:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> uint_2
 
@@ -171,10 +171,10 @@ explicit inline uint_2(
 *_V0*<br/>
 Il valore per inizializzare l'elemento 0.
 
-*V1*<br/>
+*_V1*<br/>
 Il valore per inizializzare l'elemento 1.
 
-*ISOLA*<br/>
+*_V*<br/>
 Il valore di inizializzazione.
 
 *_Other*<br/>

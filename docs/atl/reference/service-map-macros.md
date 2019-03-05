@@ -7,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-ms.openlocfilehash: 14e543946be50c39020d46ab00e702a4f2b7a815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618179"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290534"
 ---
 # <a name="service-map-macros"></a>Macro della mappa servizio
 
@@ -93,7 +93,7 @@ SERVICE_ENTRY_CHAIN( punk )
 
 ### <a name="parameters"></a>Parametri
 
-*pUnk*<br/>
+*punk*<br/>
 Un puntatore per il **IUnknown** interfaccia alla quale a catena.
 
 ### <a name="example"></a>Esempio

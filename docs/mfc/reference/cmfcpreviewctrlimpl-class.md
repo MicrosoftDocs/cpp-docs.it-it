@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636735"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295747"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Distrugge un oggetto di controllo di anteprima.|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Distrugge un oggetto di controllo di anteprima.|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Costruisce un oggetto di controllo di anteprima.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -136,7 +136,7 @@ virtual BOOL Create(
 *hWndParent*<br/>
 Handle alla finestra host fornita dalla Shell per l'anteprima avanzata.
 
-*Repubblica popolare cinese*<br/>
+*prc*<br/>
 Specifica le dimensioni iniziali e la posizione della finestra.
 
 *pContext*<br/>
@@ -319,7 +319,7 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>Parametri
 
-*Repubblica popolare cinese*<br/>
+*prc*<br/>
 Specifica la nuova dimensione e posizione del controllo di anteprima.
 
 *bRedraw*<br/>
@@ -338,4 +338,3 @@ Distrugge un oggetto di controllo di anteprima.
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

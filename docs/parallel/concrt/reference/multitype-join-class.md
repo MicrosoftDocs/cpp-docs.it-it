@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547399"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289026"
 ---
 # <a name="multitypejoin-class"></a>Classe multitype_join
 
@@ -67,7 +67,7 @@ Il tipo della `join` blocco è `greedy` o `non_greedy`
 |----------|-----------------|
 |[accept](#accept)|Accetta un messaggio in cui è stato offerto da questo `multitype_join` blocco, trasferendo la proprietà al chiamante.|
 |[acquire_ref](#acquire_ref)|Acquisisce un conteggio dei riferimenti su questo `multitype_join` blocco della messaggistica, per impedire l'eliminazione.|
-|[Utilizzare](#consume)|Utilizza un messaggio offerto in precedenza dal `multitype_join` blocco della messaggistica e riservato correttamente dalla destinazione, trasferimento di proprietà al chiamante.|
+|[consume](#consume)|Utilizza un messaggio offerto in precedenza dal `multitype_join` blocco della messaggistica e riservato correttamente dalla destinazione, trasferimento di proprietà al chiamante.|
 |[link_target](#link_target)|Collega un blocco di destinazione a questo `multitype_join` blocco della messaggistica.|
 |[release](#release)|Rilascia una prenotazione corretta del messaggio precedente.|
 |[release_ref](#release_ref)|Rilascia un conteggio dei riferimenti su questo `multiple_join` blocco della messaggistica.|
@@ -103,10 +103,10 @@ virtual message<_Destination_type>* accept(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `accept` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -123,7 +123,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Note
@@ -142,10 +142,10 @@ virtual message<_Destination_type>* consume(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` riservato `message` oggetto.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `consume` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -166,7 +166,7 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore a un `ITarget` blocco da collegare a questa `multitype_join` blocco della messaggistica.
 
 ##  <a name="ctor"></a> multitype_join
@@ -197,10 +197,10 @@ Oggetto `tuple` delle origini per questo blocco della messaggistica `multitype_j
 *_PScheduler*<br/>
 Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` .
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `multitype_join` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
-*Unisci*<br/>
+*_Join*<br/>
 Blocco della messaggistica `multitype_join` da cui copiare. Si noti che l'oggetto originale è orfano, si tratta quindi di un costruttore di spostamento.
 
 ### <a name="remarks"></a>Note
@@ -229,10 +229,10 @@ virtual void release(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto rilasciato.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `release` (metodo).
 
 ##  <a name="release_ref"></a> release_ref
@@ -245,7 +245,7 @@ virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore al blocco di destinazione che chiama questo metodo.
 
 ### <a name="remarks"></a>Note
@@ -264,10 +264,10 @@ virtual bool reserve(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto riservato.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore al blocco di destinazione che chiama il `reserve` (metodo).
 
 ### <a name="return-value"></a>Valore restituito
@@ -288,7 +288,7 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Un puntatore a un `ITarget` scollegare da questo blocco `multitype_join` blocco della messaggistica.
 
 ##  <a name="unlink_targets"></a> unlink_targets

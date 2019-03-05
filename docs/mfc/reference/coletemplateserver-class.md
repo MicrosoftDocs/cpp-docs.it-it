@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302884"
 ---
 # <a name="coletemplateserver-class"></a>Classe COleTemplateServer
 
@@ -45,7 +45,7 @@ class COleTemplateServer : public COleObjectFactory
 |----------|-----------------|
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|Si connette a un modello di documento sottostante `COleObjectFactory` oggetto.|
 |[COleTemplateServer::Unregister](#unregister)|Annulla la registrazione di modello di documento associato.|
-|[COleTemplateServer:: UpdateRegistry](#updateregistry)|Registra il tipo di documento con il Registro di sistema OLE.|
+|[COleTemplateServer::UpdateRegistry](#updateregistry)|Registra il tipo di documento con il Registro di sistema OLE.|
 
 ## <a name="remarks"></a>Note
 
@@ -53,7 +53,7 @@ Questa classe è derivata dalla classe [COleObjectFactory](../../mfc/reference/c
 
 `COleTemplateServer` esegue l'override di `OnCreateInstance` funzione membro definita da `COleObjectFactory`. Questa funzione membro viene chiamata dal framework per creare un oggetto C++ del tipo appropriato.
 
-Per altre informazioni sui server, vedere l'articolo [server: implementazione di un Server](../../mfc/servers-implementing-a-server.md).
+Per altre informazioni sui server, vedere l'articolo [server: Implementazione di un Server](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -123,7 +123,7 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 EnterRemarks
 
-##  <a name="updateregistry"></a>  COleTemplateServer:: UpdateRegistry
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry
 
 Carica le informazioni sul tipo di file dalla stringa di modello di documento e lo inserisce nel Registro di sistema OLE.
 
@@ -156,7 +156,7 @@ Un elenco di voci che viene scritto nel Registro di sistema solo se non esiste a
 *rglpszOverwrite*<br/>
 Un elenco di voci che viene scritto nel Registro di sistema indipendentemente dall'esistono di tutte le voci precedenti.
 
-*bRegistrazione immediata*<br/>
+*bRegister*<br/>
 Determina se la classe deve essere registrato. Se *bRegistrazione immediata* è TRUE, la classe è registrata con il Registro di sistema. In caso contrario, Annulla la registrazione della classe.
 
 ### <a name="remarks"></a>Note

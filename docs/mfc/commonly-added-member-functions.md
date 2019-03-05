@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], control-notification messages
 - dialog classes [MFC], commonly added member functions
 ms.assetid: f6bd50e8-872a-4039-9996-a85bfccea18d
-ms.openlocfilehash: fbc4f7a39559a1a260624ea1ccba1ee0ea416016
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51b7b3f093d451f1fbd1f0aaa8b3db836a8d6ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287999"
 ---
 # <a name="commonly-added-member-functions"></a>Funzioni membro comunemente aggiunte
 

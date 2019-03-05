@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693523"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293264"
 ---
 # <a name="cminiframewnd-class"></a>Classe CMiniFrameWnd
 
@@ -129,7 +129,7 @@ Specifica gli attributi di stile di finestra. Questi possono includere gli stili
 
 Visualizzare [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) per una descrizione dei valori dello stile di finestra possibili. La combinazione di tipica utilizzata per le finestre con mini-cornice è WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.
 
-*Rect*<br/>
+*rect*<br/>
 Oggetto `RECT` struttura che specifica le dimensioni desiderate della finestra.
 
 *pParentWnd*<br/>
@@ -175,7 +175,7 @@ Punta a una stringa di caratteri con terminazione null che contiene il nome dell
 *dwStyle*<br/>
 Specifica gli attributi di stile di finestra. Visualizzare [stili Window](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) per una descrizione dei possibili valori.
 
-*Rect*<br/>
+*rect*<br/>
 Le dimensioni e la posizione della finestra, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529171"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285906"
 ---
 # <a name="contexts"></a>Contesti
 
@@ -26,7 +26,7 @@ Passaggio 0 (zero) per il `milliseconds` parametro fa in modo che il runtime di 
 
 ### <a name="example"></a>Esempio
 
-Per un esempio che usa il `wait` funzione per restituire il contesto corrente e consente pertanto di altri contesti di esecuzione, vedere [procedura: usare i gruppi di pianificazione per influiscono sull'ordine di esecuzione](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Per un esempio che usa il `wait` funzione per restituire il contesto corrente e consente pertanto di altri contesti di esecuzione, vedere [come: Usare i gruppi di pianificazione per influenzare l'ordine di esecuzione](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="the-context-class"></a>La classe del contesto
 
@@ -46,7 +46,7 @@ Il [Concurrency](reference/context-class.md#yield) metodo restituisce l'esecuzio
 
 #### <a name="example"></a>Esempio
 
-Per un esempio che usa il `Context::Block`, `Context::Unblock`, e `Context::Yield` metodi da implementare una classe semaforo di cooperazione, vedere [procedura: usare la classe Context per implementare un semaforo di cooperazione](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Per un esempio che usa il `Context::Block`, `Context::Unblock`, e `Context::Yield` metodi da implementare una classe semaforo di cooperazione, vedere [come: Usare la classe Context per implementare una classe semaforo di cooperazione](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 ##### <a name="oversubscription"></a>Oversubscription
 
@@ -66,7 +66,7 @@ Per abilitare l'oversubscription nel contesto corrente, chiamare il [concurrency
 
 ###### <a name="example"></a>Esempio
 
-Per un esempio che usa l'oversubscription per compensare la latenza causata dalla lettura di dati da una connessione di rete, vedere [procedura: usare l'Oversubscription alla latenza di Offset](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Per un esempio che usa l'oversubscription per compensare la latenza causata dalla lettura di dati da una connessione di rete, vedere [come: Usare l'Oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -74,4 +74,3 @@ Per un esempio che usa l'oversubscription per compensare la latenza causata dall
 [Procedura: Usare i gruppi di pianificazione per influenzare l'ordine di esecuzione](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [Procedura: Usare la classe Context per implementare una classe semaforo di cooperazione](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [Procedura: Usare l'oversubscription per compensare la latenza](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-

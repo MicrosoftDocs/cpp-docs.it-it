@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CListCtrl class [MFC], image lists
 - list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
-ms.openlocfilehash: cae387dc028df46a7891e68d49f5f0c5a89126c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1679b5c59c6dd55ca47c70ea7c880493304ebf4e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571041"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304314"
 ---
 # <a name="list-items-and-image-lists"></a>Elementi elenco ed elenchi di immagini
 
@@ -35,4 +35,3 @@ Tuttavia, se non si intende visualizzare le icone nella visualizzazione elenco o
 
 [Uso di CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Controlli](../mfc/controls-mfc.md)
-

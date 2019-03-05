@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-ms.openlocfilehash: c6ab66fc606b58e87ac65373bf9f6a0662a720ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efc82edf00a9bb2f2facbd883ef88f1d093e0133
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640271"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290196"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Creazione guidata componente ASP ATL
 
@@ -41,4 +41,3 @@ Utilizzare questa pagina della finestra attiva Server pagina Creazione guidata c
 
 [Creazione guidata componente ASP ATL](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
 [Componente pagine ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

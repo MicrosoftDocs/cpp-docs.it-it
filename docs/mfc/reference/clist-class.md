@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 10991745fb5ccdac145f4b1d589e7d59c6ed6f4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513958"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297385"
 ---
 # <a name="clist-class"></a>Classe CList
 
@@ -88,7 +88,7 @@ class CList : public CObject
 |[CList::GetCount](#getcount)|Restituisce il numero di elementi in questo elenco.|
 |[CList::GetHead](#gethead)|Restituisce l'elemento head dell'elenco (non può essere vuoto).|
 |[CList::GetHeadPosition](#getheadposition)|Restituisce la posizione dell'elemento head dell'elenco.|
-|[CList](#getnext)|Ottiene l'elemento successivo per eseguire l'iterazione.|
+|[CList::GetNext](#getnext)|Ottiene l'elemento successivo per eseguire l'iterazione.|
 |[CList::GetPrev](#getprev)|Ottiene l'elemento precedente per eseguire l'iterazione.|
 |[CList::GetSize](#getsize)|Restituisce il numero di elementi in questo elenco.|
 |[CList::GetTail](#gettail)|Restituisce l'elemento della parte finale dell'elenco (non può essere vuoto).|
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TIPO*<br/>
 Parametro di modello che specifica il tipo di oggetto nell'elenco.
 
-*posizione*<br/>
+*position*<br/>
 La posizione nell'elenco dell'elemento da ottenere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -373,7 +373,7 @@ Un valore di posizione che può essere utilizzato per iterazione o il recupero d
 
 [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]
 
-##  <a name="getnext"></a>  CList
+##  <a name="getnext"></a>  CList::GetNext
 
 Ottiene l'elemento di elenco identificato da *rPosition*, quindi imposta *rPosition* sul valore di posizione della voce successiva nell'elenco.
 
@@ -387,7 +387,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 *TIPO*<br/>
 Parametro di modello che specifica il tipo degli elementi nell'elenco.
 
-*rPosition.*<br/>
+*rPosition*<br/>
 Un riferimento a un valore di posizione restituito da una precedente `GetNext`, [GetHeadPosition](#getheadposition), o un'altra chiamata di funzione membro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -422,7 +422,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 *TIPO*<br/>
 Parametro di modello che specifica il tipo degli elementi nell'elenco.
 
-*rPosition.*<br/>
+*rPosition*<br/>
 Un riferimento a un valore di posizione restituito da una precedente `GetPrev` o un'altra chiamata di funzione membro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametri
 
-*posizione*<br/>
+*position*<br/>
 Un valore di posizione restituito da una precedente `GetNext`, `GetPrev`, o `Find` chiamata di funzione membro.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametri
 
-*posizione*<br/>
+*position*<br/>
 Un valore di posizione restituito da una precedente `GetNext`, `GetPrev`, o `Find` chiamata di funzione membro.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parametri
 
-*posizione*<br/>
+*position*<br/>
 La posizione dell'elemento da rimuovere dall'elenco.
 
 ### <a name="remarks"></a>Note
@@ -676,7 +676,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 La posizione dell'elemento da impostare.
 
 *ARG_TYPE*<br/>

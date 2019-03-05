@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database applications [MFC], creating
 - MFC, database applications
 ms.assetid: 9371da59-8536-43cd-8314-706ad320e2ec
-ms.openlocfilehash: 0f512408b54d6aa9cc5c2b44dbd359e31e8bc57f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efd6b12b186ce0ef1c0caf57f313f6aa50425fec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624901"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283670"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Sequenza delle operazioni per la creazione di applicazioni database
 
@@ -31,7 +31,7 @@ Nella tabella seguente viene illustrato il ruolo e il ruolo del framework nella 
 |Creare classi di visualizzazione e recordset record aggiuntive in base alle esigenze.|Utilizzare Visualizzazione classi per creare le classi e la finestra di dialogo editor per le visualizzazioni di progettazione.|Visualizzazione classi creati file aggiuntivi per le nuove classi.|
 |Creare oggetti di recordset in base alle esigenze nel codice. Per modificare i record, usare ogni oggetto recordset...|I recordset sono basati sulle classi derivate da [CRecordset](../mfc/reference/crecordset-class.md) con le procedure guidate.|ODBC Usa il trasferimento di campi di record (RFX) per scambio di dati tra il database e i membri dati di campo del recordset. Se si usa una visualizzazione di record, DDX (DDX) consente di scambiare dati tra i controlli nella visualizzazione dei record e set di record.|
 |.. o creare esplicita [CDatabase](../mfc/reference/cdatabase-class.md) nel codice per ogni database che si desidera aprire.|Gli oggetti recordset di base sugli oggetti di database.|L'oggetto di database fornisce un'interfaccia per l'origine dati.|
-|Associazione dinamica di colonne di dati per il recordset.|In ODBC, aggiungere codice alla classe recordset derivata per gestire l'associazione. Vedere l'articolo [Recordset: associazione dinamica di colonne di dati (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+|Associazione dinamica di colonne di dati per il recordset.|In ODBC, aggiungere codice alla classe recordset derivata per gestire l'associazione. Vedere l'articolo [Recordset: Associazione dinamica di colonne di dati (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
 
 ## <a name="see-also"></a>Vedere anche
 

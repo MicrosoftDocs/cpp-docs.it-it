@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 361b0316e27ee06c64b3ed5e11c6aab10210596f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f1bd4f88b8d3a37f051a208a887c5264f61955a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476258"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293498"
 ---
 # <a name="atl-operators"></a>Operatori ATL
 
@@ -20,9 +20,9 @@ In questa sezione contiene gli argomenti di riferimento per gli operatori global
 |[operatore = =](#operator_eq_eq)|Confronta due `CSid` oggetti o `SID` strutture per verificarne l'uguaglianza.|
 |[operatore! =](#operator_neq)|Confronta due `CSid` oggetti o `SID` strutture per verificarne la disuguaglianza.|
 |[operatore <](#operator_lt)|Verifica se il `CSid` oggetto oppure `SID` struttura a sinistra dell'operatore è minore di `CSid` oggetto o `SID` struttura sul lato destro (per la compatibilità della libreria Standard C++).|
-|[operatore >](#operator_gt)|Verifica se il `CSid` oggetto o `SID` struttura a sinistra dell'operatore è maggiore di `CSid` oggetto o `SID` struttura sul lato destro (per la compatibilità della libreria Standard C++).|
+|[operator >](#operator_gt)|Verifica se il `CSid` oggetto o `SID` struttura a sinistra dell'operatore è maggiore di `CSid` oggetto o `SID` struttura sul lato destro (per la compatibilità della libreria Standard C++).|
 |[operatore < =](#operator_lt__eq)|Verifica se il `CSid` oggetto oppure `SID` struttura a sinistra dell'operatore è minore o uguale al `CSid` oggetto o `SID` struttura sul lato destro (per la compatibilità della libreria Standard C++).|
-|[operatore > =](#operator_gt__eq)|Verifica se il `CSid` oggetto oppure `SID` struttura a sinistra dell'operatore è maggiore o uguale al `CSid` oggetto o `SID` struttura sul lato destro (per la compatibilità della libreria Standard C++).|
+|[operator >=](#operator_gt__eq)|Verifica se il `CSid` oggetto oppure `SID` struttura a sinistra dell'operatore è maggiore o uguale al `CSid` oggetto o `SID` struttura sul lato destro (per la compatibilità della libreria Standard C++).|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -38,7 +38,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il primo `CSid` oggetto o `SID` struttura da confrontare.
 
 *rhs*<br/>
@@ -58,7 +58,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il primo `CSid` oggetto o `SID` struttura da confrontare.
 
 *rhs*<br/>
@@ -78,7 +78,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il primo `CSid` oggetto o `SID` struttura da confrontare.
 
 *rhs*<br/>
@@ -102,7 +102,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il primo `CSid` oggetto o `SID` struttura da confrontare.
 
 *rhs*<br/>
@@ -126,7 +126,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il primo `CSid` oggetto o `SID` struttura da confrontare.
 
 *rhs*<br/>
@@ -150,7 +150,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*sul lato sinistro*<br/>
+*lhs*<br/>
 Il primo `CSid` oggetto o `SID` struttura da confrontare.
 
 *rhs*<br/>
@@ -163,4 +163,3 @@ Restituisce TRUE se l'indirizzo del *lhs* è maggiore o uguale all'indirizzo del
 ### <a name="remarks"></a>Note
 
 Questo operatore agisce sull'indirizzo della `CSid` oggetto o `SID` struttura ed è implementato per garantire la compatibilità con le classi di raccolta della libreria Standard C++.
-

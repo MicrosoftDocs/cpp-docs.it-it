@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550436"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326777"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -174,8 +174,8 @@ class CPane : public CBasePane
 |[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Converte un riquadro ancorato in un documento a schede.|
 |[CPane::CopyState](#copystate)|Copia lo stato di un riquadro. (Esegue l'override [CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
 |[Cpane:: Create](#create)|Crea una barra di controllo e lo collega al `CPane` oggetto.|
-|[Cpane:: Createdefaultminiframe](#createdefaultminiframe)|Crea una finestra con mini-cornice per un riquadro mobile.|
-|[Cpane:: CreateEx](#createex)|Crea una barra di controllo e lo collega al `CPane` oggetto.|
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Crea una finestra con mini-cornice per un riquadro mobile.|
+|[CPane::CreateEx](#createex)|Crea una barra di controllo e lo collega al `CPane` oggetto.|
 |`CPane::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
 |[CPane::DockByMouse](#dockbymouse)|Ancora un riquadro usando il mouse ancoraggio (metodo).|
 |[CPane::DockPane](#dockpane)|Ancora il riquadro mobile a un riquadro di base.|
@@ -208,12 +208,12 @@ class CPane : public CBasePane
 |[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Chiamato dal framework quando sta per modificare l'elemento padre del riquadro.|
 |[CPane::OnPressCloseButton](#onpressclosebutton)|Chiamato dal framework quando l'utente sceglie il pulsante Chiudi sulla barra del titolo del riquadro.|
 |`CPane::OnProcessDblClk`|Utilizzato internamente.|
-|[Cpane:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|Chiamata eseguita dal framework quando un menu di riquadri speciale sta per essere visualizzato.|
-|[Cpane:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|Chiamata eseguita dal framework quando un menu di riquadri speciale sta per essere visualizzato.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Chiamata eseguita dal framework quando un menu di riquadri speciale sta per essere visualizzato.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Chiamata eseguita dal framework quando un menu di riquadri speciale sta per essere visualizzato.|
 |`CPane::PrepareToDock`|Utilizzato internamente.|
-|[Cpane:: RecalcLayout](#recalclayout)|Ricalcola le informazioni sul layout per il riquadro. (Esegue l'override [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
+|[CPane::RecalcLayout](#recalclayout)|Ricalcola le informazioni sul layout per il riquadro. (Esegue l'override [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
 |[CPane::SaveState](#savestate)|Salva lo stato del riquadro nel Registro di sistema. (Esegue l'override [CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
-|[Cpane:: Setactiveingroup](#setactiveingroup)|Contrassegna un riquadro come attiva.|
+|[CPane::SetActiveInGroup](#setactiveingroup)|Contrassegna un riquadro come attiva.|
 |[CPane::SetBorders](#setborders)|Imposta i valori del bordo del riquadro.|
 |[CPane::SetClientHotSpot](#setclienthotspot)|Imposta area sensibile del riquadro.|
 |[CPane::SetDockState](#setdockstate)|Ripristina informazioni sullo stato per il riquadro di ancoraggio.|
@@ -240,7 +240,7 @@ class CPane : public CBasePane
 |nome|Descrizione|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Consente una gestione coerente delle dimensioni minime per i riquadri.|
-|[Cpane:: M_recentdockinfo](#m_recentdockinfo)|Contiene informazioni di ancoraggio recenti.|
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|Contiene informazioni di ancoraggio recenti.|
 
 ## <a name="remarks"></a>Note
 
@@ -348,7 +348,7 @@ void CalcInsideRect(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [out] Contiene le dimensioni e offset dell'area client del riquadro.
 
 *bHorz*<br/>
@@ -487,7 +487,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Specifica gli attributi di stile di finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Specifica le dimensioni iniziali e la posizione del *pParentWnd* finestra, nelle coordinate del client.
 
 *pParentWnd*<br/>
@@ -512,7 +512,7 @@ Questo metodo crea un riquadro di Windows e lo collega al `CPane` oggetto.
 
 Se non esplicitamente inizializzato [cpane:: M_recentdockinfo](#m_recentdockinfo) prima di chiamare `Create`, il parametro *rect* verrà utilizzato come il rettangolo quando mobile o ancoraggio del riquadro.
 
-##  <a name="createdefaultminiframe"></a>  Cpane:: Createdefaultminiframe
+##  <a name="createdefaultminiframe"></a>  CPane::CreateDefaultMiniframe
 
 Crea una finestra con mini-cornice per un riquadro mobile.
 
@@ -562,7 +562,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Specifica gli attributi di stile di finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Specifica le dimensioni iniziali e la posizione del *pParentWnd* finestra, nelle coordinate del client.
 
 *pParentWnd*<br/>
@@ -741,7 +741,7 @@ virtual BOOL FloatPane(
 *dockMethod*<br/>
 [in] Specifica il metodo ancoraggio da usare quando il riquadro è resa mobile. Per un elenco di valori possibili, vedere [CPane::DockPane](#dockpane).
 
-*bMostra*<br/>
+*bShow*<br/>
 [in] TRUE per visualizzare il riquadro quando resa; in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS IsChangeState(
 
 Uno dei valori AFX_CS_STATUS seguenti:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |CS_NOTHING|Il riquadro non è in prossimità di un sito di ancoraggio. Il framework non ancorare il riquadro.|
 |CS_DOCK_IMMEDIATELY|Il riquadro è su un sito di ancoraggio e lo stile DT_IMMEDIATE è abilitato. Il framework ancora il riquadro immediatamente.|
@@ -976,7 +976,7 @@ bool IsLeftOf(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [in] Oggetto `CRect` oggetto utilizzato per il confronto.
 
 *bWindowRect*<br/>
@@ -1070,7 +1070,7 @@ Se uno o più riquadri ancorati all'interno dell'applicazione sostituiscono `Get
 
 Se questo valore è impostato su TRUE, la cui dimensione deve essere ridotta di sotto le dimensioni minime tutti i riquadri vengono troncati, non viene allungato. Poiché il framework utilizza aree della finestra per scopi di ridimensionamento di riquadro, non modificare le dimensioni dell'area della finestra per i riquadri ancorabili se questo valore è impostato su TRUE.
 
-##  <a name="m_recentdockinfo"></a>  Cpane:: M_recentdockinfo
+##  <a name="m_recentdockinfo"></a>  CPane::m_recentDockInfo
 
 Contiene informazioni di ancoraggio recenti.
 
@@ -1106,7 +1106,7 @@ BOOL MoveByAlignment(
 
 *dwAlignment* può essere uno dei valori seguenti:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|Abilita il riquadro per essere ancorato alla parte superiore dell'area client di una finestra cornice.|
 |CBRS_ALIGN_BOTTOM|Abilita il riquadro per essere ancorato alla parte inferiore dell'area client di una finestra cornice.|
@@ -1299,7 +1299,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica il percorso dal menu.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1308,9 +1308,9 @@ TRUE se è possibile visualizzare il menu di scelta; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Il menu contiene più elementi che consentono di specificare il comportamento del riquadro, vale a dire: **mobile**, **ancoraggio**, **Nascondi automaticamente**, e **nascondere**. È possibile abilitare questo menu per tutti i riquadri chiamando [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Il menu contiene più elementi che consentono di specificare il comportamento del riquadro, vale a dire: **Floating**, **ancoraggio**, **Nascondi automaticamente**, e **nascondere**. È possibile abilitare questo menu per tutti i riquadri chiamando [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
-##  <a name="recalclayout"></a>  Cpane:: RecalcLayout
+##  <a name="recalclayout"></a>  CPane::RecalcLayout
 
 Ricalcola le informazioni sul layout per il riquadro.
 
@@ -1356,7 +1356,7 @@ Il framework chiama questo metodo quando salva lo stato del riquadro nel Registr
 
 Quando si esegue l'override di questo metodo, anche chiamare il metodo di base e restituisce FALSE se il metodo di base restituisce FALSE.
 
-##  <a name="setactiveingroup"></a>  Cpane:: Setactiveingroup
+##  <a name="setactiveingroup"></a>  CPane::SetActiveInGroup
 
 Contrassegna un riquadro come attiva.
 
@@ -1494,7 +1494,7 @@ void SetVirtualRect(
 
 ### <a name="parameters"></a>Parametri
 
-*Rect*<br/>
+*rect*<br/>
 [in] Oggetto `CRect` oggetto che specifica il rettangolo virtuale da impostare.
 
 *bMapToParent*<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-ms.openlocfilehash: 2bca338aa2a1b18e8c9ab41a887678767cf6c8c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6da2ef1595e525bcfd407d67c806aa80cf90f1c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636859"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286764"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Come WinInet agevola la creazione di applicazioni client Internet
 
@@ -49,4 +49,3 @@ Molte operazioni che possono essere eseguite dal computer in uso come un client 
 
 [Estensioni Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Come MFC agevola la creazione di applicazioni Client Internet](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
-

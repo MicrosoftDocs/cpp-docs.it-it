@@ -16,12 +16,12 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: 0fbee2e836c2e898488da348e4dec9ea00ac4370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494278"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290800"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>Multithreading: Suggerimenti sulla programmazione MFC
 
@@ -43,7 +43,7 @@ La libreria di classi Usa internamente le sezioni critiche per proteggere le str
 
 ##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> Accesso agli oggetti MFC da thread Non MFC
 
-Se si dispone di un'applicazione multithreading che crea un thread in modo diverso dall'utilizzo di un [CWinThread](../mfc/reference/cwinthread-class.md) dell'oggetto, è possibile accedere ad altri oggetti MFC da tale thread. In altre parole, se si desidera accedere a qualsiasi oggetto MFC da un thread secondario, è necessario creare thread con uno dei metodi descritti in [Multithreading: creazione di thread dell'interfaccia utente](multithreading-creating-user-interface-threads.md) o [Multithreading: Creazione di thread di lavoro](multithreading-creating-worker-threads.md). Questi metodi sono gli unici che consentono la libreria di classi inizializzare le variabili interne necessarie per gestire le applicazioni a thread multipli.
+Se si dispone di un'applicazione multithreading che crea un thread in modo diverso dall'utilizzo di un [CWinThread](../mfc/reference/cwinthread-class.md) dell'oggetto, è possibile accedere ad altri oggetti MFC da tale thread. In altre parole, se si desidera accedere a qualsiasi oggetto MFC da un thread secondario, è necessario creare thread con uno dei metodi descritti in [Multithreading: Creazione di thread dell'interfaccia utente](multithreading-creating-user-interface-threads.md) o [Multithreading: Creazione di thread di lavoro](multithreading-creating-worker-threads.md). Questi metodi sono gli unici che consentono la libreria di classi inizializzare le variabili interne necessarie per gestire le applicazioni a thread multipli.
 
 ##  <a name="_core_windows_handle_maps"></a> Mappe di Handle di Windows
 
@@ -57,7 +57,7 @@ Per altre informazioni sulle mappe di handle, vedere [tecnica nota 3](../mfc/tn0
 
 ##  <a name="_core_communicating_between_threads"></a> Comunicazione tra thread
 
-MFC fornisce una serie di classi che consentono ai thread sincronizzare l'accesso agli oggetti per gestire la sicurezza dei thread. Uso di queste classi è descritto nella [Multithreading: come usare le classi di sincronizzazione](multithreading-how-to-use-the-synchronization-classes.md) e [Multithreading: quando usare le classi di sincronizzazione](multithreading-when-to-use-the-synchronization-classes.md). Per altre informazioni su questi oggetti, vedere [sincronizzazione](/windows/desktop/Sync/synchronization) nel SDK di Windows.
+MFC fornisce una serie di classi che consentono ai thread sincronizzare l'accesso agli oggetti per gestire la sicurezza dei thread. Uso di queste classi è descritto [Multithreading: Come usare le classi di sincronizzazione](multithreading-how-to-use-the-synchronization-classes.md) e [Multithreading: Quando usare le classi di sincronizzazione](multithreading-when-to-use-the-synchronization-classes.md). Per altre informazioni su questi oggetti, vedere [sincronizzazione](/windows/desktop/Sync/synchronization) nel SDK di Windows.
 
 ## <a name="see-also"></a>Vedere anche
 

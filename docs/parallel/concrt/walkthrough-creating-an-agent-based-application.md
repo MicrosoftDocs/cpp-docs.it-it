@@ -1,18 +1,18 @@
 ---
-title: "Procedura dettagliata: Creazione di un'applicazione basata sugli agenti"
+title: "Procedura dettagliata: Creazione di un'applicazione basata su agente"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509344"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290092"
 ---
-# <a name="walkthrough-creating-an-agent-based-application"></a>Procedura dettagliata: Creazione di un'applicazione basata sugli agenti
+# <a name="walkthrough-creating-an-agent-based-application"></a>Procedura dettagliata: Creazione di un'applicazione basata su agente
 
 In questo argomento viene descritto come creare un'applicazione basata su agente base. In questa procedura dettagliata, è possibile creare un agente che legge dati da un file di testo in modo asincrono. L'applicazione usa l'algoritmo di checksum Adler-32 per il calcolo del checksum del contenuto del file.
 
@@ -180,7 +180,7 @@ Chiamare sempre il [Concurrency:: agent::](reference/agent-class.md#done) metodo
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per un altro esempio di un'applicazione basata su agenti, vedere [procedura dettagliata: uso della classe join per impedire un Deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Per un altro esempio di un'applicazione basata su agenti, vedere [procedura dettagliata: Uso della classe join per impedire un Deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -188,5 +188,4 @@ Per un altro esempio di un'applicazione basata su agenti, vedere [procedura dett
 [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Funzioni di passaggio dei messaggi](../../parallel/concrt/message-passing-functions.md)<br/>
 [Strutture di dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md)<br/>
-[Procedura dettagliata: uso della classe join per impedire un deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-
+[Procedura dettagliata: Uso di join per evitare il deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)

@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295994"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (classe)
 
@@ -389,7 +389,7 @@ Punta a una stringa di caratteri con terminazione null che rappresenta il nome d
 *dwStyle*<br/>
 Specifica gli attributi di stile di finestra. Per impostazione predefinita, gli stili WS_VISIBLE e WS_CHILD Windows sono impostati.
 
-*Rect*<br/>
+*rect*<br/>
 Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le dimensioni e posizione della finestra. Il *rectDefault* valore consente a Windows specificare le dimensioni e la posizione della nuova finestra.
 
 *pParentWnd*<br/>
@@ -1145,7 +1145,7 @@ virtual void OnBeforeNavigate2(
 Puntatore a una stringa contenente l'URL a cui passare.
 
 *nFlags*<br/>
-Riservato per utilizzi futuri.
+Riservato per usi futuri.
 
 *lpszTargetFrameName*<br/>
 Stringa che contiene il nome del frame in cui si desidera visualizzare la risorsa oppure NULL se nessun riquadro denominato è la destinazione per la risorsa.
@@ -1171,10 +1171,10 @@ virtual void OnCommandStateChange(
 
 ### <a name="parameters"></a>Parametri
 
-*Ncomando*<br/>
+*nCommand*<br/>
 Identificatore del comando è stato modificato il cui stato abilitato.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Stato abilitato. Questo parametro è diverso da zero se il comando è abilitato, oppure zero se è disabilitato.
 
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete
@@ -1402,7 +1402,7 @@ virtual HRESULT OnGetOptionKeyPath(
 Indirizzo di un `LPOLESTR` che riceve la stringa della sottochiave del Registro di sistema in cui l'host archivia le opzioni predefinite. Questa sottochiave è sotto la chiave HKEY_CURRENT_USER. Allocare la memoria utilizzando [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc). L'applicazione chiamante è responsabile della liberazione questa memoria usando [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree). Questo parametro deve essere sempre inizializzato su NULL, anche se il metodo ha esito negativo.
 
 *dwReserved*<br/>
-Riservato per utilizzi futuri. Non è attualmente utilizzato.
+Riservato per usi futuri. Non è attualmente utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1637,7 +1637,7 @@ virtual HRESULT OnShowUI(
 ### <a name="parameters"></a>Parametri
 
 *dwID*<br/>
-Riservato per utilizzi futuri.
+Riservato per usi futuri.
 
 *pActiveObject*<br/>
 [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) interfaccia dell'oggetto attualmente attivo.
@@ -1772,7 +1772,7 @@ virtual HRESULT OnTranslateUrl(
 ### <a name="parameters"></a>Parametri
 
 *dwTranslate*<br/>
-Riservato per utilizzi futuri.
+Riservato per usi futuri.
 
 *pchURLIn*<br/>
 Indirizzo di una stringa fornita da Internet Explorer o MSHTML che rappresenta l'URL da tradurre.
@@ -1867,7 +1867,7 @@ Nuovo valore della proprietà.
 *lpszValue*<br/>
 Un puntatore a una stringa contenente il nuovo valore della proprietà.
 
-*nValore*<br/>
+*nValue*<br/>
 Nuovo valore della proprietà.
 
 ### <a name="remarks"></a>Note
@@ -2237,4 +2237,3 @@ Si applica a WebBrowser e Internet Explorer.
 [Classe CFormView](../../mfc/reference/cformview-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 3e75f1d880ce767b6fdbb61b4877f0748ba779f4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8e33636253b269692f87f99980b9da0cd60867ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518931"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285581"
 ---
 # <a name="event-sink-maps"></a>Mappe sink di evento
 
@@ -103,7 +103,7 @@ La classe a cui appartiene questa mappa di sink di evento.
 *ID*<br/>
 ID di controllo del controllo OLE.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch dell'evento generato dal controllo.
 
 *pfnHandler*<br/>
@@ -145,7 +145,7 @@ ID di controllo del primo controllo OLE nell'intervallo.
 *idLast*<br/>
 ID di controllo dell'ultimo controllo OLE nell'intervallo.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch dell'evento generato dal controllo.
 
 *pfnHandler*<br/>
@@ -191,7 +191,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 *theClass*<br/>
 La classe a cui appartiene questa mappa di sink di evento.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch dell'evento generato dal controllo.
 
 *pfnHandler*<br/>
@@ -232,7 +232,7 @@ La classe a cui appartiene questa mappa di sink di evento.
 *ID*<br/>
 ID di controllo del controllo OLE.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà coinvolti nella notifica.
 
 *pfnRequest*<br/>
@@ -271,7 +271,7 @@ ID di controllo del primo controllo OLE nell'intervallo.
 *idLast*<br/>
 ID di controllo dell'ultimo controllo OLE nell'intervallo.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà coinvolti nella notifica.
 
 *pfnRequest*<br/>
@@ -298,7 +298,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 *theClass*<br/>
 La classe a cui appartiene questa mappa di sink di evento.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch della proprietà coinvolti nella notifica.
 
 *pfnRequest*<br/>

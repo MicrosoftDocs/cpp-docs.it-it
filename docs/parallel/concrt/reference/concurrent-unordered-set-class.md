@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-ms.openlocfilehash: c7a00cbb68d24cb515384645e943414b29549536
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43bce15f001e0daee817d9dae345b5d0858f2baa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652686"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286205"
 ---
 # <a name="concurrentunorderedset-class"></a>Classe concurrent_unordered_set
 
@@ -117,7 +117,7 @@ Per informazioni dettagliate sul `concurrent_unordered_set` classe, vedere [cont
 
 **Spazio dei nomi:** Concurrency
 
-##  <a name="begin"></a> iniziare
+##  <a name="begin"></a> begin
 
 Restituisce un iteratore che punta al primo elemento nel contenitore simultaneo. Questo metodo è concorrenza-safe.
 
@@ -232,7 +232,7 @@ Tramite il quarto e il quinto costruttore viene specificata una copia del set no
 
 Tramite l'ultimo costruttore viene specificato uno spostamento del set non ordinato simultaneo `_Uset`.
 
-##  <a name="count"></a> conteggio
+##  <a name="count"></a> count
 
 Conta il numero di elementi corrispondenti a una chiave specificata. Questa funzione è concorrenza-safe.
 
@@ -249,7 +249,7 @@ Chiave da ricercare.
 
 Il numero di volte in cui numero di volte in cui che la chiave viene visualizzata nel contenitore.
 
-##  <a name="empty"></a> vuota
+##  <a name="empty"></a> empty
 
 Verifica se sono presenti o meno degli elementi. Questo metodo è concorrenza-safe.
 
@@ -306,7 +306,7 @@ Oggetto [coppia](../../../standard-library/pair-structure.md) dove il primo elem
 
 È possibile per gli inserimenti simultanei causare altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.
 
-##  <a name="find"></a> trovare
+##  <a name="find"></a> find
 
 Trova un elemento che corrisponde a una chiave specificata. Questa funzione è concorrenza-safe.
 
@@ -387,10 +387,10 @@ Tipo di iteratore utilizzato per l'inserimento.
 *V*<br/>
 Il tipo del valore inserito nel set.
 
-*valore*<br/>
+*value*<br/>
 Valore da inserire.
 
-*WHERE*<br/>
+*_Where*<br/>
 Posizione iniziale in corrispondenza della quale cercare un punto di inserimento.
 
 *first*<br/>
@@ -494,7 +494,7 @@ Un riferimento a questo `concurrent_unordered_set` oggetto.
 
 Dopo l'eliminazione di tutti gli elementi esistenti in un set non ordinato simultaneo, tramite `operator=` il contenuto di `_Uset` viene copiato o spostato nel set non ordinato simultaneo.
 
-##  <a name="rehash"></a> rehash)
+##  <a name="rehash"></a> rehash
 
 Ricompila la tabella hash.
 
@@ -554,7 +554,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 L'indice di bucket.
 
 ### <a name="return-value"></a>Valore restituito
@@ -600,7 +600,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 Il bucket per la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
@@ -617,7 +617,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 L'indice di bucket.
 
 ### <a name="return-value"></a>Valore restituito
@@ -634,7 +634,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 L'indice di bucket.
 
 ### <a name="return-value"></a>Valore restituito
@@ -653,7 +653,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Bucket*<br/>
+*_Bucket*<br/>
 L'indice di bucket.
 
 ### <a name="return-value"></a>Valore restituito
@@ -678,7 +678,7 @@ iterator unsafe_erase(
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE*<br/>
+*_Where*<br/>
 La posizione dell'iteratore da cancellare.
 
 *KVal*<br/>
@@ -714,4 +714,3 @@ Il numero massimo di bucket in questo contenitore.
 
 [Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
 [Contenitori e oggetti paralleli](../../../parallel/concrt/parallel-containers-and-objects.md)
-

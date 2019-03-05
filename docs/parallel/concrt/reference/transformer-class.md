@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: cc35a4e2de2b29bb6d437dfcbf48ef361fefdfa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618283"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299179"
 ---
 # <a name="transformer-class"></a>Classe transformer
 
@@ -39,10 +39,10 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 #### <a name="parameters"></a>Parametri
 
-*Input*<br/>
+*_Input*<br/>
 Il tipo di payload dei messaggi accettate dal buffer.
 
-*Output*<br/>
+*_Output*<br/>
 Il tipo di payload dei messaggi archiviati e propagata dal buffer.
 
 ## <a name="members"></a>Membri
@@ -101,7 +101,7 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -118,7 +118,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` consumata dell'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -149,10 +149,10 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -177,7 +177,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto rilasciato.
 
 ##  <a name="reserve_message"></a> reserve_message
@@ -190,7 +190,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -221,10 +221,10 @@ virtual message_status send_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -282,19 +282,19 @@ transformer(
 
 ### <a name="parameters"></a>Parametri
 
-*Func*<br/>
+*_Func*<br/>
 Una funzione che verrà richiamata per ogni messaggio accettato.
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore a un blocco di destinazione a cui collegare il trasformatore.
 
-*Filtro*<br/>
+*_Filter*<br/>
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
 Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `transformer` .
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `transformer` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note

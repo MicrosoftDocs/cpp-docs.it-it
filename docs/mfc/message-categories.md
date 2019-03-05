@@ -10,12 +10,12 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-ms.openlocfilehash: e8b7385a233c2074fe9bfc491d89de7629c730c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07d9e706e8ed01a81ee580e7c4e11fa1f1a7a8df
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619856"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326244"
 ---
 # <a name="message-categories"></a>Categorie di messaggi
 
@@ -46,4 +46,3 @@ I messaggi nella categoria 3: i comandi, può essere gestita da un'ampia gamma d
 ## <a name="see-also"></a>Vedere anche
 
 [Messaggi e comandi nel framework](../mfc/messages-and-commands-in-the-framework.md)
-

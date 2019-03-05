@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: bc26dd495fb9bd91aaf5eac192011faad80bc668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290976"
 ---
 # <a name="cd2dgradientbrush-class"></a>Classe CD2DGradientBrush
 
@@ -42,13 +42,13 @@ class CD2DGradientBrush : public CD2DBrush;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Costruisce un oggetto CD2DGradientBrush.|
-|[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di pennello sfumatura D2D.|
+|[CD2DGradientBrush::~CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di pennello sfumatura D2D.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DGradientBrush:: Destroy](#destroy)|Elimina un oggetto CD2DGradientBrush. (Esegue l'override [CD2DBrush:: Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
+|[CD2DGradientBrush::Destroy](#destroy)|Elimina un oggetto CD2DGradientBrush. (Esegue l'override [CD2DBrush:: Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
@@ -73,7 +73,7 @@ class CD2DGradientBrush : public CD2DBrush;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush:: ~ CD2DGradientBrush
+##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush::~CD2DGradientBrush
 
 Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di pennello sfumatura D2D.
 
@@ -116,10 +116,10 @@ Il comportamento della sfumatura compreso nell'intervallo [0,1] normalizzato.
 *pBrushProperties*<br/>
 Un puntatore all'opacità e alla trasformazione di un pennello.
 
-*flag bAutoDestroy*<br/>
+*bAutoDestroy*<br/>
 Indica che l'oggetto viene distrutto dal proprietario (pParentTarget).
 
-##  <a name="destroy"></a>  CD2DGradientBrush:: Destroy
+##  <a name="destroy"></a>  CD2DGradientBrush::Destroy
 
 Elimina un oggetto CD2DGradientBrush.
 

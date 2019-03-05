@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, MFC
 - examples [MFC], code comments
 ms.assetid: eb8ddea2-74de-4d5c-93d6-596f7c5e58a7
-ms.openlocfilehash: d7ee208ef143ef0022b0ea0aac286847403ddeeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bcfa2f3e90981ba0bba6946cc6d5a7278288596
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529759"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301571"
 ---
 # <a name="an-example-of-the-comments"></a>Esempio dei commenti
 
@@ -30,4 +30,3 @@ Questi commenti contrassegnano in modo coerente le sezioni della dichiarazione d
 [Commento sugli attributi](../mfc/decrement-attributes-comment.md)<br/>
 [Commento sulle operazioni](../mfc/decrement-operations-comment.md)<br/>
 [Commento sui sottoponibili a override](../mfc/decrement-overridables-comment.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
-ms.openlocfilehash: e8ba740d31681de214d2a497bc2694a94d09d84d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c60148c099b34993bef0c9808e6561e37c26cc7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542623"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301675"
 ---
 # <a name="property-sheets-as-wizards"></a>Finestre delle proprietà come procedure guidate
 
@@ -26,4 +26,3 @@ Per visualizzare tutti i pulsanti predefiniti, è necessario mostrare il pulsant
 ## <a name="see-also"></a>Vedere anche
 
 [Finestre delle proprietà](../mfc/property-sheets-mfc.md)
-

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df96d44cefeb15d89653538c3006d109a97a21a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531248"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298256"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funzioni DDX (Dialog Data Exchange) per controlli OLE
 
@@ -66,10 +66,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -100,10 +100,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -134,10 +134,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -168,10 +168,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -208,10 +208,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -248,10 +248,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -288,10 +288,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -328,10 +328,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -362,10 +362,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -396,10 +396,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -430,10 +430,10 @@ Un puntatore a un **CDataExchange** oggetto. Il framework fornisce questo oggett
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
@@ -464,10 +464,10 @@ Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto pe
 *nIDC*<br/>
 L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
-*DISPID*<br/>
+*dispid*<br/>
 L'ID di invio di una proprietà del controllo.
 
-*valore*<br/>
+*value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note

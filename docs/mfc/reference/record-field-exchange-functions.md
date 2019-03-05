@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 2970a722f79e9707f8721c1c8595bfd1d133f898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 865c67b88c37e32ef33fa410ef178b81b7a6ecac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525944"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297073"
 ---
 # <a name="record-field-exchange-functions"></a>Funzioni di trasferimento di campi di record
 
@@ -62,9 +62,9 @@ Se non è stato implementato il recupero di massa di righe nelle classi basate s
 
 Le funzioni di trasferimento di campi di record trasferiscono dati ogni volta che il framework chiama `DoFieldExchange` o `DoBulkFieldExchange`. Ogni funzione trasferisce un tipo di dati specifico.
 
-Per altre informazioni sull'uso di queste funzioni, vedere gli articoli [Record Field Exchange: How RFX Works (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md)(Trasferimento di campi di record: funzionamento di RFX (ODBC)). Per ulteriori informazioni sul recupero di righe di massa, vedere l'articolo [Recordset: recupero di massa di record (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Per altre informazioni sull'uso di queste funzioni, vedere gli articoli [Record Field Exchange: Funzionamento di RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Per altre informazioni sul recupero di righe bulk, vedere l'articolo [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Per le colonne di dati associate in modo dinamico, è anche possibile chiamare le funzioni RFX e DFX manualmente, come descritto negli articoli [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)(Recordset: associazione dinamica di colonne di dati (ODBC)). Inoltre, è possibile scrivere routine RFX o DFX personalizzate, come spiegato nella Nota tecnica [43](../../mfc/tn043-rfx-routines.md) (per ODBC) e [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (per DAO).
+Per le colonne di dati associate in modo dinamico, è possibile anche chiamare le funzioni RFX e DFX manualmente, come descritto negli articoli [Recordset: Associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Inoltre, è possibile scrivere routine RFX o DFX personalizzate, come spiegato nella Nota tecnica [43](../../mfc/tn043-rfx-routines.md) (per ODBC) e [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (per DAO).
 
 Per un esempio di RFX e RFX di massa funzioni come appaiono nel `DoFieldExchange` e `DoBulkFieldExchange` le funzioni, vedere [RFX_Text](#rfx_text) e rfx_text_bulk & [RFX_Text_Bulk]). Le funzioni DFX sono molto simili alle funzioni RFX.
 
@@ -131,13 +131,13 @@ void RFX_Binary(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo [CByteArray](cbytearray-class.md), da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *nMaxLength*<br/>
@@ -170,13 +170,13 @@ void RFX_Bool(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo BOOL, viene acquisito dal membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 ### <a name="example"></a>Esempio
@@ -202,13 +202,13 @@ void RFX_Byte(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo BYTE, viene acquisito dal membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 ### <a name="example"></a>Esempio
@@ -244,13 +244,13 @@ void RFX_Date(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Il valore archiviato nel membro dati indicato; il valore da trasferire. Le diverse versioni della funzione di eseguire diversi tipi di dati per il valore:
 
 La prima versione della funzione accetta un riferimento a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) oggetto. Per un trasferimento dal recordset all'origine dati, questo valore viene preso dal membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
@@ -284,13 +284,13 @@ void RFX_Double(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo **doppie**, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 ### <a name="example"></a>Esempio
@@ -316,13 +316,13 @@ void RFX_Int(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo **int**, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 ### <a name="example"></a>Esempio
@@ -349,13 +349,13 @@ value );
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo **lungo**, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 ### <a name="example"></a>Esempio
@@ -381,13 +381,13 @@ void RFX_LongBinary(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo `CLongBinary`, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 ### <a name="example"></a>Esempio
@@ -413,13 +413,13 @@ void RFX_Single(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo **float**, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 ### <a name="example"></a>Esempio
@@ -448,13 +448,13 @@ void RFX_Text(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe `CFieldExchange`. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe `CFieldExchange`. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo `CString`, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *nMaxLength*<br/>
@@ -513,8 +513,8 @@ void RFX_Binary_Bulk(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
@@ -537,7 +537,7 @@ Se si inizializza *prgByteVals* e *prgLengths* su NULL, quindi le matrici faccia
 > [!NOTE]
 >  Exchange di massa di campi di record trasferisce solo i dati dall'origine dati per l'oggetto recordset. Per rendere aggiornabili del recordset, è necessario usare la funzione API ODBC `SQLSetPos`.
 
-Per altre informazioni, vedere gli articoli [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Per altre informazioni, vedere gli articoli [Recordset: Il recupero di massa (ODBC) di record](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Esempio
 
@@ -563,8 +563,8 @@ void RFX_Bool_Bulk(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
@@ -584,7 +584,7 @@ Se si inizializza *prgBoolVals* e *prgLengths* su NULL, quindi le matrici faccia
 > [!NOTE]
 >  Exchange di massa di campi di record trasferisce solo i dati dall'origine dati per l'oggetto recordset. Per rendere aggiornabili del recordset, è necessario usare la funzione API ODBC `SQLSetPos`.
 
-Per altre informazioni, vedere gli articoli [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Per altre informazioni, vedere gli articoli [Recordset: Il recupero di massa (ODBC) di record](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Esempio
 
@@ -610,8 +610,8 @@ void RFX_Byte_Bulk(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
@@ -631,7 +631,7 @@ Se si inizializza *prgByteVals* e *prgLengths* su NULL, quindi le matrici faccia
 > [!NOTE]
 >  Exchange di massa di campi di record trasferisce solo i dati dall'origine dati per l'oggetto recordset. Per rendere aggiornabili del recordset, è necessario usare la funzione API ODBC `SQLSetPos`.
 
-Per altre informazioni, vedere gli articoli [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Per altre informazioni, vedere gli articoli [Recordset: Il recupero di massa (ODBC) di record](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Esempio
 
@@ -657,8 +657,8 @@ void RFX_Date_Bulk(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
@@ -678,7 +678,7 @@ Se si inizializza *prgTSVals* e *prgLengths* su NULL, quindi le matrici facciano
 > [!NOTE]
 >  Exchange di massa di campi di record trasferisce solo i dati dall'origine dati per l'oggetto recordset. Per rendere aggiornabili del recordset, è necessario usare la funzione API ODBC `SQLSetPos`.
 
-Per altre informazioni, vedere gli articoli [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Per altre informazioni, vedere gli articoli [Recordset: Il recupero di massa (ODBC) di record](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Esempio
 
@@ -704,8 +704,8 @@ void RFX_Double_Bulk(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
@@ -725,7 +725,7 @@ Se si inizializza *prgDblVals* e *prgLengths* su NULL, quindi le matrici faccian
 > [!NOTE]
 >  Exchange di massa di campi di record trasferisce solo i dati dall'origine dati per l'oggetto recordset. Per rendere aggiornabili del recordset, è necessario usare la funzione API ODBC `SQLSetPos`.
 
-Per altre informazioni, vedere gli articoli [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Per altre informazioni, vedere gli articoli [Recordset: Il recupero di massa (ODBC) di record](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Esempio
 
@@ -750,13 +750,13 @@ void RFX_Int(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un oggetto della classe [CFieldExchange](cfieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni sulle operazioni di un `CFieldExchange` l'oggetto può specificare, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo **int**, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 ### <a name="example"></a>Esempio
@@ -783,8 +783,8 @@ void RFX_Long_Bulk(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
@@ -804,7 +804,7 @@ Se si inizializza *prgLongVals* e *prgLengths* su NULL, quindi le matrici faccia
 > [!NOTE]
 >  Exchange di massa di campi di record trasferisce solo i dati dall'origine dati per l'oggetto recordset. Per rendere aggiornabili del recordset, è necessario usare la funzione API ODBC `SQLSetPos`.
 
-Per altre informazioni, vedere gli articoli [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Per altre informazioni, vedere gli articoli [Recordset: Il recupero di massa (ODBC) di record](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Esempio
 
@@ -830,8 +830,8 @@ void RFX_Single_Bulk(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
@@ -851,7 +851,7 @@ Se si inizializza *prgFltVals* e *prgLengths* su NULL, quindi le matrici faccian
 > [!NOTE]
 >  Exchange di massa di campi di record trasferisce solo i dati dall'origine dati per l'oggetto recordset. Per rendere aggiornabili del recordset, è necessario usare la funzione API ODBC `SQLSetPos`.
 
-Per altre informazioni, vedere gli articoli [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Per altre informazioni, vedere gli articoli [Recordset: Il recupero di massa (ODBC) di record](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Esempio
 
@@ -878,8 +878,8 @@ void RFX_Text_Bulk(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
-Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*pFX*<br/>
+Un puntatore a un [CFieldExchange](cfieldexchange-class.md) oggetto. Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione. Per altre informazioni, vedere l'articolo [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 *szName*<br/>
 Nome di una colonna di dati.
@@ -902,7 +902,7 @@ Se si inizializza *prgStrVals* e *prgLengths* su NULL, quindi le matrici faccian
 > [!NOTE]
 >  Exchange di massa di campi di record trasferisce solo i dati dall'origine dati per l'oggetto recordset. Per rendere aggiornabili del recordset, è necessario usare la funzione API ODBC `SQLSetPos`.
 
-Per altre informazioni, vedere gli articoli [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [trasferimento di campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Per altre informazioni, vedere gli articoli [Recordset: Il recupero di massa (ODBC) di record](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) e [campi di Record (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
 ### <a name="example"></a>Esempio
 
@@ -944,13 +944,13 @@ void AFXAPI DFX_Binary(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo [CByteArray](cbytearray-class.md), da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *nPreAllocSize*<br/>
@@ -990,13 +990,13 @@ void AFXAPI DFX_Bool(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo BOOL, viene acquisito dal membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *dwBindOptions*<br/>
@@ -1033,13 +1033,13 @@ void AFXAPI DFX_Byte(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo BYTE, viene acquisito dal membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *dwBindOptions*<br/>
@@ -1076,13 +1076,13 @@ void AFXAPI DFX_Currency(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, questo valore viene preso dal membro dati specificato, typu [COleCurrency](colecurrency-class.md). Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *dwBindOptions*<br/>
@@ -1119,13 +1119,13 @@ void AFXAPI DFX_DateTime(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. La funzione accetta un riferimento a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) oggetto. Per un trasferimento dal recordset all'origine dati, questo valore viene preso dal membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *dwBindOptions*<br/>
@@ -1165,13 +1165,13 @@ void AFXAPI DFX_Double(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo **doppie**, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *dwBindOptions*<br/>
@@ -1208,13 +1208,13 @@ void AFXAPI DFX_Long(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo **lungo**, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *dwBindOptions*<br/>
@@ -1252,13 +1252,13 @@ void AFXAPI DFX_LongBinary(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo [CLongBinary](clongbinary-class.md), da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *dwPreAllocSize*<br/>
@@ -1298,13 +1298,13 @@ void AFXAPI DFX_Short(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo **breve**, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *dwBindOptions*<br/>
@@ -1344,13 +1344,13 @@ void AFXAPI DFX_Single(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo **float**, da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *dwBindOptions*<br/>
@@ -1388,13 +1388,13 @@ void AFXAPI DFX_Text(
 
 ### <a name="parameters"></a>Parametri
 
-*file pFX*<br/>
+*pFX*<br/>
 Un puntatore a un oggetto della classe [CDaoFieldExchange](cdaofieldexchange-class.md). Questo oggetto contiene le informazioni per definire il contesto per ogni chiamata della funzione.
 
 *szName*<br/>
 Nome di una colonna di dati.
 
-*valore*<br/>
+*value*<br/>
 Valore memorizzato nel membro dati indicato, il valore da trasferire. Per un trasferimento dal recordset all'origine dati, il valore, di tipo [CString](../../atl-mfc-shared/reference/cstringt-class.md), da cui proviene il membro dati specificato. Per un trasferimento dall'origine dati al recordset, il valore viene memorizzato nel membro dati specificato.
 
 *nPreAllocSize*<br/>
@@ -1440,4 +1440,3 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
 [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
 [CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)
-

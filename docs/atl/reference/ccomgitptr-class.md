@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557170"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296033"
 ---
 # <a name="ccomgitptr-class"></a>Classe CComGITPtr
 
@@ -44,7 +44,7 @@ Il tipo del puntatore a interfaccia da memorizzare in GIT.
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|Costruttore.|
-|[CComGITPtr:: ~ CComGITPtr](#dtor)|Distruttore.|
+|[CComGITPtr::~CComGITPtr](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -123,13 +123,13 @@ CComGITPtr(CComGITPtr&& rv);
 *p*<br/>
 [in] Un puntatore a interfaccia da archiviare nella tabella di interfaccia globale (GIT).
 
-*GIT*<br/>
+*git*<br/>
 [in] Un riferimento a un oggetto esistente `CComGITPtr` oggetto.
 
 *dwCookie*<br/>
 [in] Un cookie utilizzato per identificare il puntatore di interfaccia.
 
-*RV*<br/>
+*rv*<br/>
 [in] L'origine `CComGITPtr` per spostare i dati dall'oggetto.
 
 ### <a name="remarks"></a>Note
@@ -160,7 +160,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*profilo di porta*<br/>
+*pp*<br/>
 Il puntatore che deve ricevere l'interfaccia.
 
 ### <a name="return-value"></a>Valore restituito
@@ -231,13 +231,13 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 *p*<br/>
 [in] Un puntatore a un'interfaccia.
 
-*GIT*<br/>
-[in] Un riferimento a un `CComGITPtr` oggetto.
+*git*<br/>
+[in] Riferimento a un oggetto `CComGITPtr`.
 
 *dwCookie*<br/>
 [in] Un cookie utilizzato per identificare il puntatore di interfaccia.
 
-*RV*<br/>
+*rv*<br/>
 [in] Il `CComGITPtr` spostare dati da.
 
 ### <a name="return-value"></a>Valore restituito

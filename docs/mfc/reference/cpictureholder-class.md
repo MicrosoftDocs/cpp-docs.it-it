@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284216"
 ---
 # <a name="cpictureholder-class"></a>Classe CPictureHolder
 
@@ -64,7 +64,7 @@ class CPictureHolder
 |[CPictureHolder::GetDisplayString](#getdisplaystring)|Recupera la stringa visualizzata nel Visualizzatore di proprietà di un controllo contenitore.|
 |[CPictureHolder::GetPictureDispatch](#getpicturedispatch)|Restituisce il `CPictureHolder` dell'oggetto `IDispatch` interfaccia.|
 |[CPictureHolder::GetType](#gettype)|Indica se il `CPictureHolder` oggetto è una bitmap, metafile o icona.|
-|[CPictureHolder:: Render](#render)|Esegue il rendering dell'immagine.|
+|[CPictureHolder::Render](#render)|Esegue il rendering dell'immagine.|
 |[CPictureHolder::SetPictureDispatch](#setpicturedispatch)|Imposta il `CPictureHolder` dell'oggetto `IDispatch` interfaccia.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
@@ -79,7 +79,7 @@ class CPictureHolder
 
 Con la proprietà immagine predefinita, lo sviluppatore può specificare una bitmap, icona o metafile per la visualizzazione.
 
-Per informazioni sulla creazione di proprietà immagine personalizzate, vedere l'articolo [controlli ActiveX MFC: utilizzo di immagini in un controllo ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
+Per informazioni sulla creazione di proprietà immagine personalizzate, vedere l'articolo [controlli ActiveX MFC: Utilizzo di immagini in un controllo ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -267,7 +267,7 @@ short GetType();
 
 Un valore che indica il tipo di immagine. I valori possibili e i relativi significati sono i seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |PICTYPE_UNINITIALIZED|`CPictureHolder` oggetto è unititialized.|
 |PICTYPE_NONE|`CPictureHolder` l'oggetto è vuoto.|
@@ -283,7 +283,7 @@ Un puntatore per il `CPictureHolder` dell'oggetto `IPicture` interfaccia.
 LPPICTURE m_pPict;
 ```
 
-##  <a name="render"></a>  CPictureHolder:: Render
+##  <a name="render"></a>  CPictureHolder::Render
 
 Esegue il rendering dell'immagine nel rettangolo di cui fa riferimento *rcRender*.
 

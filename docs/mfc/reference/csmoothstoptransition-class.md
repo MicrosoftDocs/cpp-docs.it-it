@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSmoothStopTransition [MFC], m_dblFinalValue
 - CSmoothStopTransition [MFC], m_maximumDuration
 ms.assetid: e1a4b476-6f96-43dd-90db-870a64406b85
-ms.openlocfilehash: 41ff87f82b695ba07723c1dac8cd2d5148f6f162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89496c1b867d6fbb498f56271de7b45afef7edc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578425"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290404"
 ---
 # <a name="csmoothstoptransition-class"></a>Classe CSmoothStopTransition
 

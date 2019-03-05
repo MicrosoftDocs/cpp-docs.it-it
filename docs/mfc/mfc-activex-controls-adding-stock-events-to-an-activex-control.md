@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ActiveX MFC: aggiunta di eventi predefiniti a un controllo ActiveX'
+title: 'Controlli ActiveX MFC: Aggiunta di eventi predefiniti a un controllo ActiveX'
 ms.date: 11/04/2016
 f1_keywords:
 - EVENT__STOCK_ERROR
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: d224bfada94878fcec69b0675bd0faa03575ed27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291119"
 ---
-# <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controlli ActiveX MFC: aggiunta di eventi predefiniti a un controllo ActiveX
+# <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controlli ActiveX MFC: Aggiunta di eventi predefiniti a un controllo ActiveX
 
 Eventi predefiniti differiscono dagli eventi personalizzati che vengono generati automaticamente dalla classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contiene le funzioni membro predefiniti che generano eventi risultanti da azioni comuni. Alcune azioni comuni implementate da `COleControl` includono single - e doppio clic semplici del controllo, eventi della tastiera e le modifiche nello stato dei pulsanti del mouse. Mappa eventi le voci per gli eventi sono sempre preceduti dal prefisso EVENT_STOCK stock.
 
@@ -61,16 +61,16 @@ Il `COleControl` classe fornisce eventi predefiniti dieci, elencati nella tabell
 
 |event|Funzione di generazione|Commenti|
 |-----------|---------------------|--------------|
-|Clic|**void FireClick)**|Generato quando il controllo acquisisce il mouse, qualsiasi **BUTTONUP** viene ricevuto il messaggio (sinistro, centrale o destro) e viene rilasciato il pulsante sul controllo. Il magazzino MouseDown e gli eventi MouseUp precedano questo evento.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_CLICK)**|
-|DblClick|**void FireDblClick)**|Simile a Click generato ma quando un **BUTTONDBLCLK** messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_DBLCLICK)**|
-|Error|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)**|Generato quando si verifica un errore all'interno del controllo ActiveX all'esterno dell'ambito di un accesso a proprietà o chiamata di metodo.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_ERROREVENT)**|
-|KeyDown|**void FireKeyDown (brevi** `nChar` **breve**`nShiftState`**)**|Generato quando un `WM_SYSKEYDOWN` o `WM_KEYDOWN` messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_KEYDOWN)**|
-|KeyPress|**void FireKeyPress (brevi** <strong>\*</strong> `pnChar` **)**|Generato quando un `WM_CHAR` messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_KEYPRESS)**|
-|KeyUp|**void FireKeyUp (brevi** `nChar` **breve**`nShiftState`**)**|Generato quando un `WM_SYSKEYUP` o `WM_KEYUP` messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_KEYUP)**|
-|MouseDown|**void FireMouseDown (brevi** `nButton` **breve** `nShiftState` **, float***x* **, float** *y***)**|Generato se qualsiasi **BUTTONDOWN** viene ricevuta (sinistro, centrale o a destra). Immediatamente prima che venga generato questo evento viene acquisito il mouse.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEDOWN)**|
-|MouseMove|**void FireMouseMove (brevi** `nButton` **breve** `nShiftState` **, float***x* **, float** *y***)**|Generato quando viene ricevuto un messaggio WM_MOUSEMOVE.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEMOVE)**|
-|MouseUp|**void FireMouseUp (brevi** `nButton` **breve** `nShiftState` **, float***x* **, float** *y***)**|Generato se qualsiasi **BUTTONUP** viene ricevuta (sinistro, centrale o a destra). L'acquisizione del mouse viene rilasciato prima che venga generato questo evento.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEUP)**|
-|ReadyStateChange|**void (FireReadyStateChange)**|Generato quando un controllo passa allo stato pronto successivo a causa della quantità di dati ricevuti.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_READYSTATECHANGE)**|
+|Fare clic su|**void FireClick( )**|Generato quando il controllo acquisisce il mouse, qualsiasi **BUTTONUP** viene ricevuto il messaggio (sinistro, centrale o destro) e viene rilasciato il pulsante sul controllo. Il magazzino MouseDown e gli eventi MouseUp precedano questo evento.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_CLICK( )**|
+|DblClick|**void FireDblClick( )**|Simile a Click generato ma quando un **BUTTONDBLCLK** messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_DBLCLICK( )**|
+|Error|**void FireError( SCODE**  *scode* **, LPCSTR**  `lpszDescription` **, UINT**  `nHelpID`  **= 0 )**|Generato quando si verifica un errore all'interno del controllo ActiveX all'esterno dell'ambito di un accesso a proprietà o chiamata di metodo.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_ERROREVENT( )**|
+|KeyDown|**void FireKeyDown (brevi** `nChar` **breve**`nShiftState`**)**|Generato quando un `WM_SYSKEYDOWN` o `WM_KEYDOWN` messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_KEYDOWN( )**|
+|KeyPress|**void FireKeyPress (brevi** <strong>\*</strong> `pnChar` **)**|Generato quando un `WM_CHAR` messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_KEYPRESS( )**|
+|KeyUp|**void FireKeyUp (brevi** `nChar` **breve**`nShiftState`**)**|Generato quando un `WM_SYSKEYUP` o `WM_KEYUP` messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_KEYUP( )**|
+|MouseDown|**void FireMouseDown (brevi** `nButton` **breve** `nShiftState` **, float***x* **, float** *y***)**|Generato se qualsiasi **BUTTONDOWN** viene ricevuta (sinistro, centrale o a destra). Immediatamente prima che venga generato questo evento viene acquisito il mouse.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEDOWN( )**|
+|MouseMove|**void FireMouseMove( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|Generato quando viene ricevuto un messaggio WM_MOUSEMOVE.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEMOVE( )**|
+|MouseUp|**void FireMouseUp( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|Generato se qualsiasi **BUTTONUP** viene ricevuta (sinistro, centrale o a destra). L'acquisizione del mouse viene rilasciato prima che venga generato questo evento.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEUP( )**|
+|ReadyStateChange|**void FireReadyStateChange( )**|Generato quando un controllo passa allo stato pronto successivo a causa della quantità di dati ricevuti.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_READYSTATECHANGE)**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Aggiunta di un evento usando l'aggiunta guidata evento
 
@@ -107,5 +107,5 @@ Questa riga consente di associare l'evento KeyPress con relativi ID di invio sta
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: metodi](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controlli ActiveX MFC: Metodi](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

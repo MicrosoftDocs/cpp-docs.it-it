@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176380"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295006"
 ---
 # <a name="multipage-documents"></a>Documenti con più pagine
 
@@ -40,7 +40,7 @@ Questo articolo descrive il protocollo di stampa Windows e illustra come stampar
 
 - [Override di funzioni di classe visualizzazione](#_core_overriding_view_class_functions)
 
-- [Paginazione](#_core_pagination)
+- [Pagination](#_core_pagination)
 
 - [Pagine di stampa e le pagine di documento](#_core_printer_pages_vs.._document_pages)
 
@@ -99,7 +99,7 @@ Il [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) funzione membro vi
 
 Il [OnPrint](../mfc/reference/cview-class.md#onprint) funzione membro esegue la stampa della pagina. L'articolo [predefinite stampa procedura](../mfc/how-default-printing-is-done.md) Mostra come il framework chiama [OnDraw](../mfc/reference/cview-class.md#ondraw) con un contesto di dispositivo stampante per eseguire la stampa. Più precisamente, il framework chiama `OnPrint` con un `CPrintInfo` struttura e un contesto di periferica e `OnPrint` passa il contesto di dispositivo a `OnDraw`. Eseguire l'override `OnPrint` per eseguire il rendering che deve essere eseguito solo durante la stampa e non per la visualizzazione su schermo. Ad esempio, per stampare le intestazioni o nei piè di pagina (vedere l'articolo [informazioni sulle intestazioni e piè di pagina](../mfc/headers-and-footers.md) per altre informazioni). Quindi chiamare `OnDraw` dall'override del `OnPrint` per eseguire il rendering comune a sia la visualizzazione su schermo e la stampa.
 
-Il fatto che `OnDraw` esegue il rendering di entrambi schermata di visualizzazione e stampa significa che l'applicazione è di tipo WYSIWYG: "cosa you see is what you get." Tuttavia, si supponga che si non scrivendo un'applicazione WYSIWYG. Ad esempio, si consideri un testo dell'editor che usa un tipo di carattere grassetto per la stampa, ma consente di visualizzare i codici di controllo per indicare il testo in grassetto nella schermata. In questo caso, si utilizza `OnDraw` esclusivamente per la visualizzazione su schermo. Quando esegue l'override `OnPrint`, sostituire la chiamata a `OnDraw` con una chiamata a una funzione di disegno separata. Tale funzione consente di disegnare il documento venga visualizzato come su carta, usando gli attributi che non vengono visualizzati sullo schermo.
+Il fatto che `OnDraw` esegue il rendering di entrambi schermata di visualizzazione e stampa significa che l'applicazione è di tipo WYSIWYG: "What you see is what you get." Tuttavia, si supponga che si non scrivendo un'applicazione WYSIWYG. Ad esempio, si consideri un testo dell'editor che usa un tipo di carattere grassetto per la stampa, ma consente di visualizzare i codici di controllo per indicare il testo in grassetto nella schermata. In questo caso, si utilizza `OnDraw` esclusivamente per la visualizzazione su schermo. Quando esegue l'override `OnPrint`, sostituire la chiamata a `OnDraw` con una chiamata a una funzione di disegno separata. Tale funzione consente di disegnare il documento venga visualizzato come su carta, usando gli attributi che non vengono visualizzati sullo schermo.
 
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> Visual Studio le pagine della stampante. Pagine del documento
 

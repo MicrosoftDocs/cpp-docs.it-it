@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: creare una mappa messaggi per una classe modello'
+title: 'Procedura: Creare una mappa messaggi per una classe modello'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - template classes [MFC], creating message maps
 - message maps [MFC], template classes
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
-ms.openlocfilehash: 437fdf59ae9c9d3428654fc412fd78bf1348a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 676e698a899327eee8305731b5d609b5b95ece76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586238"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296774"
 ---
-# <a name="how-to-create-a-message-map-for-a-template-class"></a>Procedura: creare una mappa messaggi per una classe modello
+# <a name="how-to-create-a-message-map-for-a-template-class"></a>Procedura: Creare una mappa messaggi per una classe modello
 
 Mapping di messaggi in MFC offre un modo efficiente per indirizzare i messaggi di Windows per un'istanza di oggetto C++ appropriata. Le classi dell'applicazione, documento e visualizzazione di classi, classi di controlli e così via sono esempi di destinazioni di mappe messaggi MFC.
 
@@ -64,4 +64,3 @@ Per completare il test, il `StringizeElement` funzione debba essere specializzat
 
 [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map)<br/>
 [Gestione e mapping dei messaggi](../mfc/message-handling-and-mapping.md)
-

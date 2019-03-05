@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: ef88486d14ade1d5871d614069dc1c202d6ad159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d28739ced9aedd29106937cb717c87a241993036
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654220"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291028"
 ---
 # <a name="cdaofieldexchange-class"></a>Classe CDaoFieldExchange
 
@@ -38,13 +38,13 @@ class CDaoFieldExchange
 |Nome|Descrizione|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Restituisce diversi da zero se l'operazione corrente è appropriato per il tipo di campo da aggiornare.|
-|[CDaoFieldExchange:: SetFieldType](#setfieldtype)|Specifica il tipo di membro dati del recordset, ovvero una colonna o parametro, rappresentato da tutte le chiamate successive alle funzioni DFX fino alla successiva chiamata a `SetFieldType`.|
+|[CDaoFieldExchange::SetFieldType](#setfieldtype)|Specifica il tipo di membro dati del recordset, ovvero una colonna o parametro, rappresentato da tutte le chiamate successive alle funzioni DFX fino alla successiva chiamata a `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CDaoFieldExchange:: M_noperation](#m_noperation)|DFX operazione in corso dalla chiamata corrente al recordset `DoFieldExchange` funzione membro.|
+|[CDaoFieldExchange::m_nOperation](#m_noperation)|DFX operazione in corso dalla chiamata corrente al recordset `DoFieldExchange` funzione membro.|
 |[CDaoFieldExchange::m_prs](#m_prs)|Puntatore al set di record in cui DFX vengono eseguite le operazioni.|
 
 ## <a name="remarks"></a>Note
@@ -93,7 +93,7 @@ Alcune delle operazioni eseguite dal meccanismo di DFX si applicano solo a uno d
 
 Per altre informazioni su come scrivere routine DFX personalizzate, vedere [53 Nota tecnica](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).
 
-##  <a name="m_noperation"></a>  CDaoFieldExchange:: M_noperation
+##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation
 
 Identifica l'operazione da eseguire sul [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) oggetto associato all'oggetto campo exchange.
 
@@ -130,7 +130,7 @@ Contiene un puntatore per il [CDaoRecordset](../../mfc/reference/cdaorecordset-c
 
 ### <a name="remarks"></a>Note
 
-##  <a name="setfieldtype"></a>  CDaoFieldExchange:: SetFieldType
+##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType
 
 Chiamare `SetFieldType` nella `CDaoRecordset` della classe `DoFieldExchange` eseguire l'override.
 

@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177030"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304554"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 
@@ -152,7 +152,7 @@ class CReBarCtrl : public CWnd
 |[CReBarCtrl::GetToolTips](#gettooltips)|Recupera l'handle a qualsiasi controllo di descrizione comando associato al controllo rebar.|
 |[CReBarCtrl::HitTest](#hittest)|Determina quale parte di un controllo rebar band si trova un punto specificato sullo schermo, se un controllo rebar band esiste a quel punto.|
 |[CReBarCtrl::IDToIndex](#idtoindex)|Converte un identificatore fuori banda (ID) in un indice fuori banda in un controllo rebar.|
-|[CReBarCtrl:: InsertBand](#insertband)|Inserisce una nuova serie in un controllo rebar.|
+|[CReBarCtrl::InsertBand](#insertband)|Inserisce una nuova serie in un controllo rebar.|
 |[CReBarCtrl::MaximizeBand](#maximizeband)|Ridimensiona una fuori banda in un controllo rebar alle dimensioni massime.|
 |[CReBarCtrl::MinimizeBand](#minimizeband)|Ridimensiona una fuori banda in un controllo rebar alla dimensione più piccola.|
 |[CReBarCtrl::MoveBand](#moveband)|Sposta una banda da un indice a un altro.|
@@ -388,7 +388,7 @@ void GetBandBorders(
 *uBand*<br/>
 Indice in base zero della banda di cui verranno recuperati i bordi.
 
-*Repubblica popolare cinese*<br/>
+*prc*<br/>
 Un puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceverà i bordi fuori banda. Se il controllo rebar è lo stile RBS_BANDBORDERS, ogni membro della struttura verrà visualizzato il numero di pixel, sul lato corrispondente della banda, che costituiscono il bordo. Se il controllo rebar non ha lo stile RBS_BANDBORDERS, solo il membro a sinistra della struttura riceve informazioni valide. Per una descrizione di stili del controllo rebar, vedere [stili del controllo Rebar](/windows/desktop/Controls/rebar-control-styles) nel SDK di Windows.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
@@ -583,7 +583,7 @@ BOOL GetRect(
 *uBand*<br/>
 Indice in base zero della banda controllo rebar.
 
-*Repubblica popolare cinese*<br/>
+*prc*<br/>
 Un puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceverà i limiti del controllo rebar band.
 
 ### <a name="return-value"></a>Valore restituito
@@ -693,7 +693,7 @@ L'identificatore della banda specificata, definito dall'applicazione passato il 
 
 L'indice fuori banda in base zero in caso di esito positivo oppure -1 in caso contrario. Se gli indici duplicati fuori banda esistono, viene restituito il primo elemento.
 
-##  <a name="insertband"></a>  CReBarCtrl:: InsertBand
+##  <a name="insertband"></a>  CReBarCtrl::InsertBand
 
 Implementa il comportamento del messaggio Win32 [RB_INSERTBAND](/windows/desktop/Controls/rb-insertband), come descritto nel SDK di Windows.
 
@@ -776,7 +776,7 @@ BOOL MoveBand(
 *uFrom*<br/>
 Indice in base zero della banda da spostare.
 
-*utomatica*<br/>
+*uTo*<br/>
 Indice in base zero della posizione del nuovo fuori banda. Questo valore di parametro non deve essere maggiore del numero di bande meno uno. Per ottenere il numero di sezioni specifiche, chiamare [GetBandCount](#getbandcount).
 
 ### <a name="return-value"></a>Valore restituito
@@ -958,7 +958,7 @@ DWORD SetExtendedStyle(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*dwMask*|[in] Una combinazione bit per bit (OR) di flag che specificano quali flag nel *dwStyleEx* parametro applicabile. Usare uno o più dei valori seguenti:<br /><br /> RBS_EX_SPLITTER: Per impostazione predefinita, visualizzare la barra di divisione nella parte inferiore in modalità orizzontale e a destra in modalità verticale.<br /><br /> RBS_EX_TRANSPARENT: Inoltrare il [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) messaggio alla finestra padre.|
+|*dwMask*|[in] Una combinazione bit per bit (OR) di flag che specificano quali flag nel *dwStyleEx* parametro applicabile. Usare uno o più dei valori seguenti:<br /><br /> RBS_EX_SPLITTER: Visualizzazione predefinita della barra di divisione nella parte inferiore in modalità orizzontale e a destra in modalità verticale.<br /><br /> RBS_EX_TRANSPARENT: Inoltrare il [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) messaggio alla finestra padre.|
 |*dwStyleEx*|[in] Una combinazione bit per bit (OR) di flag che specifica lo stile da applicare. Per impostare uno stile, specificare il flag stesso che viene utilizzato per la *dwMask* parametro. Per reimpostare uno stile, specificare zero binario.|
 
 ### <a name="return-value"></a>Valore restituito
@@ -1137,4 +1137,3 @@ Si noti che questa funzione membro Usa un' `CRect` oggetto come parametro, anzic
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-

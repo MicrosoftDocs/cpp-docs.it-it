@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326790"
 ---
 # <a name="currentscheduler-class"></a>Classe CurrentScheduler
 
@@ -75,7 +75,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>Parametri
 
-*C_riteri per il*<br/>
+*_Policy*<br/>
 I criteri dell'utilità di pianificazione che descrive il comportamento dell'utilità di pianificazione appena creata.
 
 ### <a name="remarks"></a>Note
@@ -100,7 +100,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 
 ### <a name="parameters"></a>Parametri
 
-*Selezione*<br/>
+*_Placement*<br/>
 Un riferimento a una posizione in cui le attività all'interno del gruppo di pianificazione verranno data priorità in esecuzione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -115,7 +115,7 @@ Tale metodo determinerà la creazione dell'utilità di pianificazione predefinit
 
 Si noti che se è stato creato in modo esplicito questa utilità di pianificazione, è necessario rilasciare tutti i riferimenti per pianificare i gruppi all'interno di esso, prima di rilasciare il riferimento nell'utilità di pianificazione, scollegando il contesto corrente da quest'ultimo.
 
-##  <a name="detach"></a> Scollegamento
+##  <a name="detach"></a> Detach
 
 Consente di scollegare l'utilità di pianificazione corrente dal contesto del chiama e consente di ripristinare l'utilità di pianificazione precedentemente associata come utilità di pianificazione corrente, se presente. Quando termina, questo metodo al contesto di chiamata viene quindi gestito dall'utilità di pianificazione che in precedenza era associato al contesto tramite il `CurrentScheduler::Create` o `Scheduler::Attach` (metodo).
 
@@ -131,7 +131,7 @@ Se non è presente alcuna utilità di pianificazione associata al contesto di ch
 
 Chiamare questo metodo da un contesto che è interno e gestito da un'utilità di pianificazione o un contesto che è stato collegato con un metodo diverso il [Scheduler:: Attach](scheduler-class.md#attach) oppure [CurrentScheduler:: Create](#create) metodi, verrà generato un [improper_scheduler_detach](improper-scheduler-detach-class.md) eccezione generata.
 
-##  <a name="get"></a> Ottieni
+##  <a name="get"></a> Get
 
 Restituisce un puntatore all'utilità di pianificazione associata al contesto di chiamata, noto anche come utilità di pianificazione corrente.
 
@@ -207,7 +207,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 
 ### <a name="parameters"></a>Parametri
 
-*Selezione*<br/>
+*_Placement*<br/>
 Riferimento alla posizione riguardo alla quale eseguire una query sull'utilità di pianificazione corrente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -230,7 +230,7 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 
 ### <a name="parameters"></a>Parametri
 
-*ShutdownEvent*<br/>
+*_ShutdownEvent*<br/>
 Handle per un oggetto di eventi di Windows che viene segnalato dal runtime quando l'utilità di pianificazione associata al contesto corrente è arrestato e distrugge.
 
 ### <a name="remarks"></a>Note
@@ -257,10 +257,10 @@ static void __cdecl ScheduleTask(
 *_Proc*<br/>
 Puntatore alla funzione da eseguire per utilizzare il corpo dell'attività leggera.
 
-*Data*<br/>
+*_Data*<br/>
 Un puntatore void per i dati che verranno passati come parametro al corpo dell'attività.
 
-*Selezione*<br/>
+*_Placement*<br/>
 Riferimento a una posizione in cui per l'attività leggera verrà data priorità all'esecuzione.
 
 ### <a name="remarks"></a>Note
@@ -273,4 +273,3 @@ Tale metodo determinerà la creazione dell'utilità di pianificazione predefinit
 [Classe Scheduler](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

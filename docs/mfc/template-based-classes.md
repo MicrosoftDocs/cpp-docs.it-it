@@ -22,12 +22,12 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-ms.openlocfilehash: 8bd64e1c5efd1f80f43cb3460719326f30d5416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557859"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284658"
 ---
 # <a name="template-based-classes"></a>Classi basate su modello
 
@@ -53,7 +53,7 @@ Per usare i modelli di raccolta semplice, è necessario conoscere il tipo di dat
 
 ###  <a name="_core_simple_array_and_list_usage"></a> Utilizzo di elenco e matrice semplice
 
-Le classi di elenco e matrice semplice [CArray](../mfc/reference/carray-class.md) e [CList](../mfc/reference/clist-class.md), accettano due parametri: *tipo* e `ARG_TYPE`. Queste classi possono archiviare qualsiasi tipo di dati, quali specifica le *tipo* parametro:
+Le classi di elenco e matrice semplice [CArray](../mfc/reference/carray-class.md) e [CList](../mfc/reference/clist-class.md), accettano due parametri: *TIPO di* e `ARG_TYPE`. Queste classi possono archiviare qualsiasi tipo di dati, quali specifica le *tipo* parametro:
 
 - Tipi di dati C++ fondamentali, ad esempio **int**, **char**, e **float**
 
@@ -71,7 +71,7 @@ Nel primo esempio dichiara un insieme di matrici `myArray`, che contiene **int**
 
 ###  <a name="_core_simple_map_usage"></a> Utilizzo di mapping semplice
 
-La classe map semplice, [CMap](../mfc/reference/cmap-class.md), accetta quattro parametri: *chiave*, *ARG_KEY*, *valore*, e *ARG_VALUE*. Ad esempio le classi matrice ed elenco, le classi di mappe possono archiviare qualsiasi tipo di dati. A differenza di matrici ed elenchi, indicizzano e ordinare i dati archiviati, mappe associano chiavi e valori: accedere a un valore archiviato in una mappa, specificando la relativa chiave del valore. Il *chiave* parametro specifica il tipo di dati delle chiavi utilizzate per accedere ai dati memorizzati nella mappa. Se il tipo della *chiave* è una struttura o una classe, il *ARG_KEY* parametro in genere è un riferimento al tipo specificato *chiave*. Il *valore* parametro specifica il tipo degli elementi memorizzati nella mappa. Se il tipo della *ARG_VALUE* è una struttura o una classe, il *ARG_VALUE* parametro in genere è un riferimento al tipo specificato *valore*. Ad esempio:
+La classe map semplice, [CMap](../mfc/reference/cmap-class.md), accetta quattro parametri: *TASTO*, *ARG_KEY*, *valore*, e *ARG_VALUE*. Ad esempio le classi matrice ed elenco, le classi di mappe possono archiviare qualsiasi tipo di dati. A differenza di matrici ed elenchi, indicizzano e ordinare i dati archiviati, mappe associano chiavi e valori: Accedere a un valore archiviato in una mappa, specificando la relativa chiave del valore. Il *chiave* parametro specifica il tipo di dati delle chiavi utilizzate per accedere ai dati memorizzati nella mappa. Se il tipo della *chiave* è una struttura o una classe, il *ARG_KEY* parametro in genere è un riferimento al tipo specificato *chiave*. Il *valore* parametro specifica il tipo degli elementi memorizzati nella mappa. Se il tipo della *ARG_VALUE* è una struttura o una classe, il *ARG_VALUE* parametro in genere è un riferimento al tipo specificato *valore*. Ad esempio:
 
 [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]
 
@@ -115,4 +115,3 @@ Per altre informazioni, vedere [come effettuare una raccolta indipendente dai ti
 ## <a name="see-also"></a>Vedere anche
 
 [Raccolte](../mfc/collections.md)
-

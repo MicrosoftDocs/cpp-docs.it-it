@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694751"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288144"
 ---
 # <a name="unboundedbuffer-class"></a>Classe unbounded_buffer
 
@@ -41,7 +41,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 #### <a name="parameters"></a>Parametri
 
-*Tipo*<br/>
+*_Type*<br/>
 Il tipo di payload dei messaggi archiviati e propagati dal buffer.
 
 ## <a name="members"></a>Membri
@@ -58,7 +58,7 @@ Il tipo di payload dei messaggi archiviati e propagati dal buffer.
 |Nome|Descrizione|
 |----------|-----------------|
 |[dequeue](#dequeue)|Rimuove un elemento dal `unbounded_buffer` blocco della messaggistica.|
-|[Accodamento](#enqueue)|Aggiunge un elemento per il `unbounded_buffer` blocco della messaggistica.|
+|[enqueue](#enqueue)|Aggiunge un elemento per il `unbounded_buffer` blocco della messaggistica.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
@@ -108,7 +108,7 @@ virtual message<_Type> * accept_message(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` proposto `message` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -127,7 +127,7 @@ virtual message<_Type> * consume_message(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` consumata dell'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -150,7 +150,7 @@ _Type dequeue();
 
 Il payload del messaggio rimosso dal `unbounded_buffer`.
 
-##  <a name="enqueue"></a> Accodamento
+##  <a name="enqueue"></a> enqueue
 
 Aggiunge un elemento per il `unbounded_buffer` blocco della messaggistica.
 
@@ -162,7 +162,7 @@ bool enqueue(
 
 ### <a name="parameters"></a>Parametri
 
-*Elemento*<br/>
+*_Item*<br/>
 Elemento da aggiungere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -181,7 +181,7 @@ virtual void link_target_notification(
 
 ### <a name="parameters"></a>Parametri
 
-*PTarget*<br/>
+*_PTarget*<br/>
 Puntatore alla destinazione appena collegato.
 
 ##  <a name="propagate_message"></a> propagate_message
@@ -197,10 +197,10 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -231,7 +231,7 @@ virtual void process_input_messages(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore al messaggio che deve essere elaborato.
 
 ##  <a name="release_message"></a> release_message
@@ -246,7 +246,7 @@ virtual void release_message(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto rilasciato.
 
 ##  <a name="reserve_message"></a> reserve_message
@@ -261,7 +261,7 @@ virtual bool reserve_message(
 
 ### <a name="parameters"></a>Parametri
 
-*MsgId*<br/>
+*_MsgId*<br/>
 Il `runtime_object_identity` del `message` oggetto riservato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -293,10 +293,10 @@ virtual message_status send_message(
 
 ### <a name="parameters"></a>Parametri
 
-*PMessage*<br/>
+*_PMessage*<br/>
 Puntatore all'oggetto `message`.
 
-*PSource*<br/>
+*_PSource*<br/>
 Un puntatore al blocco di origine offrendo il messaggio.
 
 ### <a name="return-value"></a>Valore restituito
@@ -347,13 +347,13 @@ unbounded_buffer(
 
 ### <a name="parameters"></a>Parametri
 
-*Filtro*<br/>
+*_Filter*<br/>
 Una funzione di filtro che determina se i messaggi offerti devono essere accettati.
 
 *_PScheduler*<br/>
 Oggetto `Scheduler` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `unbounded_buffer` .
 
-*PScheduleGroup*<br/>
+*_PScheduleGroup*<br/>
 Oggetto `ScheduleGroup` all'interno del quale è pianificata l'attività di propagazione per il blocco della messaggistica `unbounded_buffer` . L'oggetto `Scheduler` usato è previsto dal gruppo di pianificazione.
 
 ### <a name="remarks"></a>Note
@@ -375,4 +375,3 @@ Elimina definitivamente il `unbounded_buffer` blocco della messaggistica.
 [Spazio dei nomi concurrency](concurrency-namespace.md)<br/>
 [Classe overwrite_buffer](overwrite-buffer-class.md)<br/>
 [Classe single_assignment](single-assignment-class.md)
-

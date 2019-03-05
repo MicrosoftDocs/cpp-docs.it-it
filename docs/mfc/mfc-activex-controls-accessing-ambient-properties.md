@@ -1,18 +1,18 @@
 ---
-title: 'Controlli ActiveX MFC: accesso a proprietà di ambiente'
+title: "Controlli ActiveX MFC: L'accesso a proprietà di ambiente"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], accessing ambient properties
 - properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
-ms.openlocfilehash: f6daff09969e82daa4e8f76c8b1eb4972ddd6eeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 585ec8720a654bbcb728330d70ddb914f2543e41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585627"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305224"
 ---
-# <a name="mfc-activex-controls-accessing-ambient-properties"></a>Controlli ActiveX MFC: accesso a proprietà di ambiente
+# <a name="mfc-activex-controls-accessing-ambient-properties"></a>Controlli ActiveX MFC: L'accesso a proprietà di ambiente
 
 Questo articolo illustra come un controllo ActiveX può accedere a proprietà di ambiente del proprio contenitore di controlli.
 
@@ -58,4 +58,3 @@ Se cambia il valore della proprietà di ambiente (tramite un'azione del contenit
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
-

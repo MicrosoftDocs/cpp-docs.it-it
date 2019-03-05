@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-ms.openlocfilehash: d1e0a8ca85055c289d1ef8e1c36fcd35eab61c91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526503"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290801"
 ---
 # <a name="servers"></a>Server
 
@@ -31,8 +31,8 @@ La tabella seguente riepiloga le caratteristiche dei diversi tipi di server:
 
 |Tipo di server|Supporta più istanze|Elementi per ogni documento|Documenti per ogni istanza|
 |--------------------|---------------------------------|------------------------|----------------------------|
-|Server ridotto|Yes|1|1|
-|Completo del server SDI|Yes|1 (se il collegamento è supportato, 1 o più)|1|
+|Miniserver|Sì|1|1|
+|Completo del server SDI|Sì|1 (se il collegamento è supportato, 1 o più)|1|
 |Server completo MDI|No (non necessaria)|1 (se il collegamento è supportato, 1 o più)|0 o maggiore di|
 
 Un'applicazione server deve supportare più contenitori contemporaneamente, nel caso in cui verrà usato più di un contenitore per modificare un elemento incorporato o collegato. Se il server è un'applicazione SDI (o un server ridotto con un'interfaccia della finestra di dialogo), più istanze del server devono essere in grado di eseguire contemporaneamente. In questo modo un'istanza separata dell'applicazione per gestire ogni richiesta di contenitore.
@@ -43,22 +43,21 @@ L'applicazione server deve indicare DLL del sistema OL cosa fare se un'istanza d
 
 Per altre informazioni sui server, vedere:
 
-- [Server: implementazione di un server](../mfc/servers-implementing-a-server.md)
+- [Server: Implementazione di un Server](../mfc/servers-implementing-a-server.md)
 
-- [Server: implementazione di documenti server](../mfc/servers-implementing-server-documents.md)
+- [Server: Implementazione di documenti Server](../mfc/servers-implementing-server-documents.md)
 
-- [Server: implementazione di finestre cornice sul posto](../mfc/servers-implementing-in-place-frame-windows.md)
+- [Server: Implementazione di Windows sul posto Frame](../mfc/servers-implementing-in-place-frame-windows.md)
 
-- [Server: elementi server](../mfc/servers-server-items.md)
+- [Server: Elementi del server](../mfc/servers-server-items.md)
 
-- [Server: problemi dell'interfaccia utente](../mfc/servers-user-interface-issues.md)
+- [Server: Problemi dell'interfaccia utente](../mfc/servers-user-interface-issues.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Contenitori](../mfc/containers.md)<br/>
-[Contenitori: funzionalità avanzate](../mfc/containers-advanced-features.md)<br/>
+[Contenitori: Funzionalità avanzate](../mfc/containers-advanced-features.md)<br/>
 [Menu e risorse (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registrazione](../mfc/registration.md)<br/>
 [Server di automazione](../mfc/automation-servers.md)
-

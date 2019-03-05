@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-ms.openlocfilehash: 97443d4846141f4402e18bb19893fcac9b4f46da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b2ff4f312132b690223f124fd8790d0e2c172b7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524053"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289676"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Supporto documenti compositi, Creazione guidata applicazione MFC
 
@@ -21,14 +21,14 @@ Per impostazione predefinita, l'applicazione non contiene nessun supporto docume
 
   Determina se l'applicazione fornisce il supporto dei contenitori, il supporto del server o entrambi. Per ulteriori informazioni su quest'area, vedere:
 
-  - [Contenitori: implementazione di un contenitore](../../mfc/containers-implementing-a-container.md)
+  - [Contenitori: Implementazione di un contenitore](../../mfc/containers-implementing-a-container.md)
 
-  - [Server: implementazione di un server](../../mfc/servers-implementing-a-server.md)
+  - [Server: Implementazione di un Server](../../mfc/servers-implementing-a-server.md)
 
   |Opzione|Descrizione|
   |------------|-----------------|
   |**None**|Non indica nessun supporto per Object Linking and Embedding (OLE). Per impostazione predefinita, la creazione guidata applicazione crea un'applicazione senza il supporto di ActiveX.|
-  |**Contenitore**|Contiene gli oggetti collegati e incorporati.|
+  |**Container**|Contiene gli oggetti collegati e incorporati.|
   |**Server ridotto**|Indica l'applicazione può creare e gestire gli oggetti documento compositi. Si noti che non è possibile eseguire i server ridotti autonomi e supportano solo gli elementi incorporati.|
   |**Server completo**|Indica l'applicazione può creare e gestire gli oggetti documento compositi. Server completo sono in grado di eseguire applicazioni autonome e supportano entrambi collegati e incorporati gli elementi.|
   |**Contenitore/server completo**|Indica che l'applicazione può essere sia un contenitore e un server. Un contenitore è un'applicazione che è possibile incorporare elementi incorporati o collegati in dei propri documenti. Un server è un'applicazione che è possibile creare elementi di automazione per l'utilizzo da applicazioni contenitore.|
@@ -46,4 +46,3 @@ Per impostazione predefinita, l'applicazione non contiene nessun supporto docume
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)
-
