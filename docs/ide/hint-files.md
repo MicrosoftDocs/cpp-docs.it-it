@@ -1,6 +1,6 @@
 ---
 title: File dei suggerimenti
-ms.date: 11/04/2016
+ms.date: 02/26/2019
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -11,53 +11,104 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: ca250849a0bcd150a6359abdad996b72c4372713
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320692"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006753"
 ---
 # <a name="hint-files"></a>File dei suggerimenti
 
-Un *file dei suggerimenti* consente all'ambiente di sviluppo integrato (IDE) di Visual Studio di interpretare gli identificatori di Visual C++, ad esempio i nomi di funzioni e le macro. Quando si apre un progetto di Visual C++ il *sistema di analisi* dell'IDE analizza il codice in ogni file di origine del progetto e raccoglie informazioni su ogni identificatore. Quindi l'IDE usa tali informazioni per supportare funzionalità come il browser **Visualizzazione classi** e la **barra di spostamento**.
+Un *file dei suggerimenti* contiene macro a causa delle quali intere aree di codice verrebbero ignorate dal parser del database di esplorazione di C++. Quando si apre un progetto di Visual C++, il parser analizza il codice in ogni file di origine del progetto e crea un database con le informazioni su ogni identificatore. L'IDE usa le informazioni per supportare le funzionalità di esplorazione del codice, ad esempio il browser **Visualizzazione classi** e la **barra di spostamento**.
 
-Il sistema di analisi, introdotto in Visual C++ 2010, comprende la sintassi C/C++ ma può interpretare erroneamente un'istruzione che contiene una macro. L'istruzione può essere erroneamente interpretata se a causa della macro il codice sorgente è scritto in modo sintatticamente non corretto. L'istruzione può diventare sintatticamente corretta quando il codice sorgente viene compilato e il preprocessore sostituisce l'[identificatore della macro](../preprocessor/hash-define-directive-c-cpp.md) con una propria definizione. Il sistema di analisi funziona senza dover compilare il progetto poiché usa i file dei suggerimenti per interpretare le macro. Di conseguenza, è immediatamente disponibile una funzionalità di visualizzazione, ad esempio **Visualizzazione classi**.
+Il parser del database di esplorazione di C++ è un parser 'fuzzy' in grado di analizzare grandi quantità di codice in un breve periodo di tempo. Il parser risulta veloce anche perché ignora il contenuto dei blocchi. Ad esempio, il parser registra solo la posizione e i parametri di una funzione e ne ignora il contenuto. Alcune macro possono causare problemi per l'euristica usata per determinare l'inizio e la fine di un blocco. Questi problemi causano una registrazione non corretta delle aree di codice.
 
-Un file dei suggerimenti contiene *suggerimenti* che possono essere personalizzati dall'utente e hanno la stessa sintassi delle definizioni di macro di C/C++. Visual C++ include un file dei suggerimenti predefinito che è sufficiente per la maggior parte dei progetti, ma è possibile creare propri file dei suggerimenti per migliorare il modo in cui Visual Studio gestisce gli identificatori.
+Le aree ignorate possono manifestarsi in modi diversi:
+
+- Tipi e funzioni mancanti in **Visualizzazione classi**, **Vai a** e nella **barra di spostamento**
+
+- Ambiti non corretti nella **barra di spostamento**
+
+- Suggerimenti in **Crea dichiarazione/definizione** per funzioni già definite
+
+Un file dei suggerimenti contiene suggerimenti che possono essere personalizzati dall'utente e hanno la stessa sintassi delle definizioni di macro C/C++. Visual C++ include un file dei suggerimenti predefinito adatto per la maggior parte dei progetti. È possibile tuttavia creare un proprio file dei suggerimenti per migliorare il parser per il progetto specifico.
 
 > [!IMPORTANT]
-> Se si modifica o si aggiunge un file dei suggerimenti, è necessario eliminare il file SDF e/o il file VC.db nella soluzione affinché le modifiche abbiano effetto.
+> Se si modifica o aggiunge un file dei suggerimenti, è necessario eseguire altri passaggi per rendere effettive le modifiche:
+> - Nelle versioni precedenti a Visual Studio 2017 versione 15.6: Eliminare il file con estensione sdf e/o il file VC.db nella soluzione per tutte le modifiche.
+> - In Visual Studio 2017 dalla versione 15.6 alla versione 15.9: Chiudere e riaprire la soluzione dopo aver aggiunto nuovi file dei suggerimenti.
 
 ## <a name="scenario"></a>Scenario
 
-Si supponga che il codice seguente si trovi in un file di origine che si esamina con il browser **Visualizzazione classi**. La macro `STDMETHOD` dichiara un metodo denominato `myMethod` che accetta un parametro e restituisce un puntatore a un **HRESULT**.
-
 ```cpp
-// Source code file.
-STDMETHOD(myMethod)(int parameter1);
+#define NOEXCEPT noexcept
+void Function() NOEXCEPT
+{
+}
 ```
 
-Le seguenti definizioni di macro sono in un file di intestazione separato.
+Senza un file dei suggerimenti, `Function` non viene visualizzato in **Visualizzazione classi**, **Vai a** o nella **barra di spostamento**. Dopo aver aggiunto un file dei suggerimenti con questa definizione di macro, il parser interpreta e sostituisce la macro `NOEXCEPT` in modo da analizzare correttamente la funzione:
 
-```cpp
-// Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
-#define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*
+```cpp.hint
+#define NOEXCEPT
 ```
 
-Il sistema di analisi non è in grado di interpretare il codice sorgente perché risulta dichiarata una funzione denominata `STDMETHOD` e tale dichiarazione è sintatticamente errata perché contiene due elenchi di parametri. Il sistema di analisi non apre il file di intestazione per individuare le definizioni per le macro `STDMETHOD`, `STDMETHODCALLTYPE` e `HRESULT`. Poiché il sistema di analisi non è in grado di interpretare la macro `STDMETHOD`, ignora l'intera istruzione e quindi continua l'analisi.
+## <a name="disruptive-macros"></a>Macro dannose
 
-Il sistema di analisi non usa i file di intestazione perché il progetto può dipendere da uno o più file di intestazione importanti. Se un file di intestazione cambia, il sistema di analisi potrebbe dover riesaminare tutti i file di intestazione del progetto, rallentando così le prestazioni dell'IDE. Il sistema di analisi usa invece suggerimenti che specificano come gestire le macro `STDMETHOD`, `STDMETHODCALLTYPE` e `HRESULT`.
+Esistono due categorie di macro che causano l'interruzione del parser:
 
-Come si capisce che è necessario un suggerimento? E se è necessario creare un suggerimento, di quale tipo deve essere? Un segno che è necessario un suggerimento è il fatto che la visualizzazione di un identificatore in **Visualizzazione classi** non è coerente con la visualizzazione nell'**editor**. Ad esempio, **Visualizzazione classi** potrebbe non visualizzare un membro di classe che esiste sicuramente oppure il nome del membro non è corretto. Per altre informazioni sui tipi di suggerimenti che possono risolvere i problemi comuni, vedere la sezione Quali macro richiedono un suggerimento? più avanti in questo argomento.
+- Macro che incapsulano le parole chiave di una funzione
+
+   ```cpp
+   #define NOEXCEPT noexcept
+   #define STDMETHODCALLTYPE __stdcall
+   ```
+
+   Per questi tipi di macro è necessario solo il nome della macro nel file dei suggerimenti:
+
+   ```cpp.hint
+   #define NOEXCEPT
+   #define STDMETHODCALLTYPE
+   ```
+
+- Macro con parentesi di apertura o chiusura mancanti
+
+   ```cpp
+   #define BEGIN {
+   ```
+
+   Per questi tipi di macro è necessario includere nel file dei suggerimenti il nome della macro e il relativo contenuto:
+
+   ```cpp.hint
+   #define BEGIN {
+   ```
+
+## <a name="editor-support"></a>Supporto dell'editor
+
+A partire da Visual Studio 2017 versione 15.8 sono disponibili numerose funzionalità per identificare le macro dannose:
+
+- Evidenziazione delle macro che si trovano all'interno di aree ignorate dal parser.
+
+- Azione rapida per la creazione di un file dei suggerimenti che includa la macro evidenziata oppure, se il file dei suggerimenti è già presente, per l'aggiunta della macro al file.
+
+![Macro evidenziata.](../ide/media/hint-squiggle-and-actions.png "Suggerimento e azioni rapide")
+
+Dopo l'esecuzione di una delle azioni rapide, il parser analizza di nuovo i file interessati dal file dei suggerimenti.
+
+Per impostazione predefinita, la macro dannosa è evidenziata come un suggerimento. L'evidenziazione può essere modificata in un elemento maggiormente visibile, ad esempio una sottolineatura a zigzag rossa o verde. Usare l'opzione **Macro nelle aree di esplorazione ignorate** nella sezione **Controllo ortografia codice** in **Strumenti** > **Opzioni** > **Editor di testo** > **C/C++** > **Visualizza**.
+
+![Opzione Macro nelle aree di esplorazione ignorate.](../ide/media/skipped-regions-squiggle-option.png "Opzione di controllo delle aree ignorate.")
+
+## <a name="display-browsing-database-errors"></a>Visualizzare gli errori del database di esplorazione
+
+Il comando di menu **Progetto** > **Visualizza errori del database di esplorazione** visualizza tutte le aree non analizzate nell'**Elenco errori**. Il comando è progettato per semplificare la creazione del file dei suggerimenti iniziale. Tuttavia, poiché il parser non indica se la causa dell'errore è stato una macro dannosa, sarà necessario valutare ogni errore. Eseguire il comando **Visualizza errori del database di esplorazione** e passare a ogni errore per caricare il file interessato nell'editor. Dopo aver caricato il file, le macro presenti all'interno dell'area vengono evidenziate. È possibile richiamare le azioni rapide per aggiungerle a un file dei suggerimenti. Dopo l'aggiornamento del file dei suggerimenti, l'elenco errori viene aggiornato automaticamente. In alternativa, se si modifica manualmente il file dei suggerimenti è possibile usare il comando **Ripeti analisi soluzione** per attivare un aggiornamento.
 
 ## <a name="architecture"></a>Architettura
 
-I file dei suggerimenti riguardano le directory fisiche, non le directory logiche rappresentate in **Esplora soluzioni**. Non è necessario aggiungere un file dei suggerimenti per il progetto perché il file abbia effetto. Il sistema di analisi usa i file dei suggerimenti solo quando analizza i file di origine.
+I file dei suggerimenti riguardano le directory fisiche, non le directory logiche visualizzate in **Esplora soluzioni**. Non è necessario aggiungere un file dei suggerimenti al progetto perché il file abbia effetto. Il sistema di analisi usa i file dei suggerimenti solo quando analizza i file di origine.
 
-Ogni file dei suggerimenti è denominato **cpp.hint**. Di conseguenza, molte directory può contenere un file dei suggerimenti ma solo un file dei suggerimenti può verificarsi in una directory specifica.
+Ogni file dei suggerimenti è denominato **cpp.hint**. Numerose directory possono contenere un file dei suggerimenti, ma una determinata directory può contenere un solo file dei suggerimenti.
 
 Il progetto può essere influenzato da zero o più file dei suggerimenti. Se non sono presenti file dei suggerimenti, il sistema di analisi usa tecniche di ripristino dagli errori per ignorare il codice sorgente indecifrabile. In caso contrario, il sistema di analisi usa la strategia seguente per individuare e raggruppare i suggerimenti.
 
@@ -69,15 +120,15 @@ Il sistema di analisi cerca i file dei suggerimenti nelle directory nell'ordine 
 
 - Il percorso dalla directory radice di un file di origine alla directory che contiene il file di origine stesso. In un progetto tipico di Visual C++ la directory radice contiene i file della soluzione o del progetto.
 
-   L'eccezione a questa regola si verifica se un *file di interruzione* si trova nel percorso del file di origine. Un file di interruzione offre un maggiore controllo sull'ordine di ricerca ed è qualsiasi file denominato **cpp.stop**. Anziché iniziare dalla directory radice, il sistema di analisi esegue la ricerca dalla directory che contiene il file di interruzione alla directory che contiene il file di origine. In un progetto tipico non è necessario usare un file di interruzione.
+   L'eccezione a questa regola si verifica se un *file di interruzione* si trova nel percorso del file di origine. Un file di interruzione è un file denominato **cpp.stop**. Un file di interruzione offre un maggiore controllo sull'ordine di ricerca. Anziché iniziare dalla directory radice, il sistema di analisi esegue la ricerca dalla directory che contiene il file di interruzione alla directory che contiene il file di origine. In un progetto tipico non è necessario usare un file di interruzione.
 
 ### <a name="hint-gathering"></a>Raccolta dei suggerimenti
 
 Un file dei suggerimenti contiene zero o più *suggerimenti*. Un suggerimento viene definito o eliminato esattamente come una macro di C/C++. Ovvero, dire la direttiva `#define` del preprocessore crea o ridefinisce un suggerimento e la direttiva `#undef` elimina un suggerimento.
 
-Il sistema di analisi apre ogni file dei suggerimenti nell'ordine di ricerca descritto in precedenza, accumula i suggerimenti di ogni file in un set di *suggerimenti effettivi* e quindi usa i suggerimenti effettivi per interpretare gli identificatori nel codice.
+Il sistema di analisi apre ogni file dei suggerimenti nell'ordine di ricerca descritto in precedenza. Il sistema accumula i suggerimenti di ogni file in un set di *suggerimenti effettivi* e quindi usa i suggerimenti effettivi per interpretare gli identificatori nel codice.
 
-Il sistema di analisi usa le regole seguenti per accumulare i suggerimenti.
+Per accumulare i suggerimenti, il sistema di analisi usa le regole seguenti:
 
 - Se il nuovo suggerimento specifica un nome non ancora definito, il nuovo suggerimento aggiunge il nome ai suggerimenti effettivi.
 
@@ -85,17 +136,17 @@ Il sistema di analisi usa le regole seguenti per accumulare i suggerimenti.
 
 - Se il nuovo suggerimento è una direttiva `#undef` che specifica un suggerimento effettivo esistente, il nuovo suggerimento elimina il suggerimento esistente.
 
-La prima regola indica che i suggerimenti effettivi vengono ereditati dai file dei suggerimenti aperti in precedenza. Le ultime due regole indicano che i suggerimenti che si verificano successivamente nell'ordine di ricerca possono sostituire i suggerimenti verificatisi in precedenza. Ad esempio, è possibile sostituire tutti i suggerimenti precedenti se si crea un file dei suggerimenti nella directory che contiene un file di origine.
+La prima regola indica che i suggerimenti effettivi vengono ereditati dai file dei suggerimenti aperti in precedenza. Le ultime due regole indicano che i suggerimenti successivi nell'ordine di ricerca possono sostituire i suggerimenti precedenti. Ad esempio, è possibile sostituire tutti i suggerimenti precedenti se si crea un file dei suggerimenti nella directory che contiene un file di origine.
 
-Per una descrizione di come vengono raccolti i suggerimenti, vedere la sezione `Example` più avanti in questo argomento.
+Per una descrizione di come vengono raccolti i suggerimenti, vedere la sezione [Esempio](#example).
 
 ### <a name="syntax"></a>Sintassi
 
 I suggerimenti vengono creati ed eliminati con la stessa sintassi delle direttive del preprocessore che creano ed eliminano le macro. Di fatto, il sistema di analisi usa il preprocessore C/C++ per valutare i suggerimenti. Per altre informazioni sulle direttive per il preprocessore, vedere [Direttiva #define (C/C++)](../preprocessor/hash-define-directive-c-cpp.md) e [Direttiva #undef (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md).
 
-Gli unici elementi di sintassi inusuali sono le stringhe di sostituzione `@<`, `@=` e `@>`. Si tratta di stringhe di sostituzione specifiche del file dei suggerimenti che si usano solo le macro di *mapping*. Una mappa è un set di macro che correlano dati, funzioni o eventi ad altri dati, funzioni o gestori di eventi. Ad esempio, `MFC` usa le mappe per creare [mappe di messaggi](../mfc/reference/message-maps-mfc.md) e `ATL` usa le mappe per creare [mappe di oggetti](../atl/reference/object-map-macros.md). Le stringhe di sostituzione specifiche del file dei suggerimenti indicano gli elementi iniziali, intermedi e finali di una mappa. Solo il nome di una macro di mapping è significativo. Quindi, ogni stringa di sostituzione nasconde intenzionalmente l'implementazione della macro.
+Gli unici elementi di sintassi inusuali sono le stringhe di sostituzione `@<`, `@=` e `@>`. Queste stringhe di sostituzione specifiche del file dei suggerimenti vengono usate solo nelle macro di *mapping*. Una mappa è un set di macro che correlano dati, funzioni o eventi ad altri dati, funzioni o gestori di eventi. Ad esempio, `MFC` usa le mappe per creare [mappe di messaggi](../mfc/reference/message-maps-mfc.md) e `ATL` usa le mappe per creare [mappe di oggetti](../atl/reference/object-map-macros.md). Le stringhe di sostituzione specifiche del file dei suggerimenti indicano gli elementi iniziali, intermedi e finali di una mappa. Solo il nome di una macro di mapping è significativo. Quindi, ogni stringa di sostituzione nasconde intenzionalmente l'implementazione della macro.
 
-Nei suggerimenti viene usata la sintassi seguente.
+I suggerimenti usano questa sintassi:
 
 |Sintassi|Significato|
 |------------|-------------|
@@ -104,143 +155,14 @@ Nei suggerimenti viene usata la sintassi seguente.
 |`@=`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica un elemento intermedio della mappa. Una mappa può contenere più elementi.|
 |`@>`|Un elemento *replacement-string* specifico del file dei suggerimenti che indica la fine di un set di elementi della mappa.|
 |`#undef` *hint-name*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è specificato dall'identificatore *hint-name*.|
-|`//` *comment*|Una singola riga di commento.|
+|`//` *comment*|Commento a riga singola.|
 |`/*` *commento* `*/`|Un commento su più righe.|
-
-## <a name="what-macros-require-a-hint"></a>Quali macro richiedono un suggerimento?
-
-Alcuni tipi di macro possono interferire con il sistema di analisi. Questa sezione descrive i tipi di macro che possono causare un problema e il tipo di suggerimento che si può creare per risolvere tale problema.
-
-### <a name="disruptive-macros"></a>Macro dannose
-
-Alcune macro inducono il sistema di analisi a interpretare erroneamente il codice sorgente, ma possono essere ignorate senza compromettere l'esperienza di esplorazione. Ad esempio, le macro del linguaggio di annotazione del codice sorgente ([SAL](../c-runtime-library/sal-annotations.md)) si risolvono in attributi C++ che consentono di trovare i bug di programmazione. Se si vogliono ignorare le annotazioni SAL quando si sfoglia il codice, è consigliabile creare un file dei suggerimenti che nasconde l'annotazione.
-
-Nel codice sorgente riportato di seguito il tipo di parametro per la funzione `FormatWindowClassName()` è `PXSTR` e il nome del parametro è `szBuffer`. Tuttavia, il sistema di analisi interpreta per errore le annotazioni SAL `_Pre_notnull_` e `_Post_z_` come tipo di parametro o nome del parametro.
-
-**Codice sorgente:**
-
-```cpp
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
-```
-
-**Strategia:** definizione Null
-
-La strategia in questa situazione consiste nel trattare le annotazioni SAL come se non esistessero. A tale scopo, specificare un suggerimento la cui stringa di sostituzione è Null. Di conseguenza, il sistema di analisi ignora le annotazioni e il browser **Visualizzazione classi** non le visualizza (Visual C++ include un file dei suggerimenti predefinito che consente di nascondere l'annotazione SAL).
-
-**File dei suggerimenti:**
-
-```cpp.hint
-#define _Pre_notnull_
-```
-
-### <a name="concealed-cc-language-elements"></a>Elementi nascosti del linguaggio C/C++
-
-Una causa tipica dell'interpretazione errata del codice sorgente da parte del sistema di analisi è una macro che nasconde un token [punctuator](../cpp/punctuators-cpp.md) o [keyword](../cpp/keywords-cpp.md) di C/C++. Vale a dire, una macro potrebbe contenere metà di una coppia di segni di punteggiatura, ad esempio `<>`, `[]`, `{}` e `()`.
-
-Nel seguente codice sorgente la macro `START_NAMESPACE` nasconde una parentesi graffa sinistra non abbinata (`{`).
-
-**Codice sorgente:**
-
-```cpp
-#define START_NAMESPACE namespace MyProject {
-```
-
-**Strategia:** copia diretta
-
-Se la semantica di una macro è fondamentale per l'esperienza di esplorazione, creare un suggerimento identico alla macro. Il sistema di analisi risolve la macro in una definizione nel file dei suggerimenti.
-
-Si noti che, se la macro nel file di origine contiene altre macro, tali macro vengono interpretate solo se sono già nel set di suggerimenti effettivi.
-
-**File dei suggerimenti:**
-
-```cpp.hint
-#define START_NAMESPACE namespace MyProject {
-```
-
-### <a name="maps"></a>Mappe
-
-Una mappa è costituita da macro che definiscono un elemento iniziale, un elemento finale ed elementi zero o più elementi intermedi. Il sistema di analisi interpreta erroneamente le mappe perché ogni macro di mapping nasconde gli elementi del linguaggio C/C++ e la sintassi di un'istruzione C/C++ completa viene distribuita tra molte macro distinte.
-
-Il seguente codice sorgente definisce le macro `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY` e `END_CATEGORY_MAP`.
-
-**Codice sorgente:**
-
-```cpp
-#define BEGIN_CATEGORY_MAP(x)\
-static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
-static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
-#define IMPLEMENTED_CATEGORY( catid ) { _ATL_CATMAP_ENTRY_IMPLEMENTED, &catid },
-#define END_CATEGORY_MAP()\
-   { _ATL_CATMAP_ENTRY_END, NULL } };\
-   return( pMap ); }
-```
-
-**Strategia:** identificare gli elementi della mappa
-
-Specificare i suggerimenti per gli elementi iniziali, intermedi (se presenti) e finali di una mappa. Usare le stringhe di sostituzione speciali della mappa, `@<`, `@=` e `@>`. Per altre informazioni, vedere la sezione `Syntax` in questo argomento.
-
-**File dei suggerimenti:**
-
-```cpp.hint
-// Start of the map.
-#define BEGIN_CATEGORY_MAP(x) @<
-// Intermediate map element.
-#define IMPLEMENTED_CATEGORY( catid ) @=
-// Intermediate map element.
-#define REQUIRED_CATEGORY( catid ) @=
-// End of the map.
-#define END_CATEGORY_MAP() @>
-```
-
-### <a name="composite-macros"></a>Macro composite
-
-Le macro composite contengono uno o più dei tipi di macro che confondono il sistema di analisi.
-
-Il seguente codice sorgente contiene la macro `START_NAMESPACE`, che specifica l'inizio di un ambito di spazio dei nomi e la macro `BEGIN_CATEGORY_MAP`, che specifica l'inizio di una mappa.
-
-**Codice sorgente:**
-
-```cpp
-#define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```
-
-**Strategia:** copia diretta
-
-Creare i suggerimenti per le macro `START_NAMESPACE` e `BEGIN_CATEGORY_MAP`, quindi creare un suggerimento per la macro `NSandMAP` che sia identico a quello illustrato in precedenza per il codice sorgente. In alternativa, se una macro composita è costituita da macro distruttive e spazi vuoti, è possibile definire un suggerimento la cui stringa di sostituzione è una definizione Null.
-
-In questo esempio si supponga che per `START_NAMESPACE` esista già un suggerimento come descritto nella sezione `Concealed C/C++ Language Elements` di questo argomento. Presupporre inoltre che in `BEGIN_CATEGORY_MAP` esista un suggerimento come descritto precedentemente in `Maps`.
-
-**File dei suggerimenti:**
-
-```cpp.hint
-#define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```
-
-### <a name="inconvenient-macros"></a>Macro poco pratiche
-
-Alcune macro possono essere interpretate dal sistema di analisi, ma il codice sorgente è difficile da leggere perché la macro è lunga o complessa. Per ragioni di leggibilità, è possibile specificare un suggerimento che semplifica la visualizzazione della macro.
-
-**Codice sorgente:**
-
-```cpp
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
-```
-
-**Strategia:** semplificazione
-
-Creare un suggerimento che visualizza una definizione di macro più semplice.
-
-**File dei suggerimenti:**
-
-```cpp.hint
-#define STDMETHOD(methodName) void* methodName
-```
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come si accumulano i suggerimenti contenuti nei file dei suggerimenti. I file di interruzione non vengono usati in questo esempio.
+Questo esempio illustra come si accumulano i suggerimenti contenuti nei file dei suggerimenti. I file di interruzione non vengono usati in questo esempio.
 
-La figura seguente illustra alcune delle directory fisiche di un progetto di Visual C++. I file dei suggerimenti sono nelle directory `vcpackages`, `Debug`, `A1` e `A2`.
+La figura illustra alcune delle directory fisiche di un progetto Visual C++. I file dei suggerimenti si trovano nelle directory `vcpackages`, `Debug`, `A1` e `A2`.
 
 ### <a name="hint-file-directories"></a>Directory dei file dei suggerimenti
 
@@ -248,7 +170,7 @@ La figura seguente illustra alcune delle directory fisiche di un progetto di Vis
 
 ### <a name="directories-and-hint-file-contents"></a>Directory e contenuto dei file dei suggerimenti
 
-Nell'elenco seguente sono indicate le directory di questo progetto che contengono file dei suggerimenti e il contenuto di tali file. Sono indicati solo alcuni dei molti suggerimenti presenti nel file dei suggerimenti della directory `vcpackages`.
+L'elenco seguente mostra le directory del progetto che contengono file dei suggerimenti e il contenuto dei file. Sono elencati solo alcuni dei numerosi suggerimenti presenti nel file dei suggerimenti della directory `vcpackages`:
 
 - vcpackages
 
@@ -290,7 +212,7 @@ Nell'elenco seguente sono indicate le directory di questo progetto che contengon
 
 ### <a name="effective-hints"></a>Suggerimenti effettivi
 
-Nella tabella seguente sono elencati i suggerimenti effettivi per i file di origine di questo progetto.
+La tabella seguente elenca i suggerimenti effettivi per i file di origine del progetto:
 
 - File di origine: A1_A2_B.cpp
 
@@ -310,7 +232,7 @@ Nella tabella seguente sono elencati i suggerimenti effettivi per i file di orig
     #define END_NAMESPACE }
     ```
 
-Le note seguenti si applicano all'elenco precedente.
+Le note seguenti si applicano all'elenco precedente:
 
 - I suggerimenti effettivi sono presenti nelle directory `vcpackages`, `Debug`, `A1` e `A2`.
 
@@ -325,7 +247,3 @@ Le note seguenti si applicano all'elenco precedente.
 [Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
 [Direttiva #define (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
 [Direttiva #undef (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
-[Annotazioni SAL](../c-runtime-library/sal-annotations.md)<br>
-[Mappe messaggi](../mfc/reference/message-maps-mfc.md)<br>
-[Macro della mappa messaggi](../atl/reference/message-map-macros-atl.md)<br>
-[Macro della mappa oggetti](../atl/reference/object-map-macros.md)
