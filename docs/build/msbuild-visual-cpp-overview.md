@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072bc15cc931c2fd50cf8a2a1ff0c9145da8b7be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484799"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414694"
 ---
 # <a name="msbuild-visual-c-overview"></a>Cenni preliminari su MSBuild (Visual C++)
 
@@ -27,13 +27,13 @@ Leggere i documenti seguenti relativi a MSBuild.
 
 - [Riferimento della riga di comando](/visualstudio/msbuild/msbuild-command-line-reference) descrive gli argomenti della riga di comando e opzioni che è possibile usare MSBuild.exe.
 
-- [Riferimento di attività](/visualstudio/msbuild/msbuild-task-reference) MSBuild vengono descritte le attività. Si noti in particolare di queste attività, che sono specifiche di Visual C++: [attività di BscMake](/visualstudio/msbuild/bscmake-task), [attività CL](/visualstudio/msbuild/cl-task), [attività CPPClean](/visualstudio/msbuild/cppclean-task), [attività LIB](/visualstudio/msbuild/lib-task), [Collegare attività](/visualstudio/msbuild/link-task), [attività MIDL](/visualstudio/msbuild/midl-task), [attività MT](/visualstudio/msbuild/mt-task), [attività RC](/visualstudio/msbuild/rc-task), [attività SetEnv](/visualstudio/msbuild/setenv-task), [ Attività VCMessage](/visualstudio/msbuild/vcmessage-task), [attività XDCMake](/visualstudio/msbuild/xdcmake-task), [attività XSD](/visualstudio/msbuild/xsd-task).
+- [Riferimento di attività](/visualstudio/msbuild/msbuild-task-reference) MSBuild vengono descritte le attività. In particolare, tenere presenti queste attività, che sono specifiche di Visual C++: [Attività BscMake](/visualstudio/msbuild/bscmake-task), [attività CL](/visualstudio/msbuild/cl-task), [attività CPPClean](/visualstudio/msbuild/cppclean-task), [attività LIB](/visualstudio/msbuild/lib-task), [collegare attività](/visualstudio/msbuild/link-task), [attività MIDL](/visualstudio/msbuild/midl-task), [Attività MT](/visualstudio/msbuild/mt-task), [attività RC](/visualstudio/msbuild/rc-task), [attività SetEnv](/visualstudio/msbuild/setenv-task), [attività VCMessage](/visualstudio/msbuild/vcmessage-task), [attività XDCMake](/visualstudio/msbuild/xdcmake-task), [Attività XSD](/visualstudio/msbuild/xsd-task).
 
 ## <a name="msbuild-on-the-command-line"></a>MSBuild dalla riga di comando
 
 Nell'istruzione seguente la [riferimenti alla riga di comando di MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) viene illustrato che lo strumento msbuild.exe accetta un implicita o esplicita *project_file* argomento (un file con estensione vcxproj per i progetti Visual C++) e zero o più della riga di comando *opzioni* argomenti.
 
-> **MSBuild.exe** [ *project_file* ] [ *opzioni* ]
+> **msbuild.exe** [ *project_file* ] [ *options* ]
 
 Usare la **/target** (o **/t**) e **/property** (o **/p**) le opzioni della riga di comando per eseguire l'override di proprietà specifiche e le destinazioni che vengono specificato nel file di progetto.
 
@@ -77,7 +77,7 @@ Directory dei file di supporto contengono file con queste estensioni:
 |---------------|-----------------|
 |con estensione targets|Contiene `Target` elementi XML che specificano le attività eseguite dalla destinazione. Può inoltre contenere `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`e definiti dall'utente `Item` gli elementi che consentono di assegnare ai parametri dell'attività file e le opzioni della riga di comando.<br /><br /> Per altre informazioni, vedere [elemento Target (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|
 |con estensione props|Contiene `Property Group` definiti dall'utente `Property` elementi XML che specificano le impostazioni di file e sui parametri utilizzati durante una compilazione.<br /><br /> Può inoltre contenere `ItemDefinitionGroup` definiti dall'utente `Item` elementi XML che specificano le impostazioni aggiuntive. Gli elementi definiti in un gruppo di definizioni di elemento sono simili a proprietà, ma non è possibile accedere dalla riga di comando. File di progetto Visual C++ utilizzano spesso gli elementi anziché le proprietà per rappresentare le impostazioni.<br /><br /> Per altre informazioni, vedere [elemento ItemGroup (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [elemento ItemDefinitionGroup (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), e [elemento Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|
-|. Xml|Contiene elementi XML che dichiarano e inizializzano elementi dell'interfaccia utente IDE quali le finestre delle proprietà e pagine delle proprietà e controlli casella di testo casella ed elenco.<br /><br /> I file con estensione XML supportano direttamente l'IDE, ma non MSBuild. Tuttavia, i valori delle proprietà IDE vengono assegnati alla proprietà e gli elementi di compilazione.<br /><br /> La maggior parte dei file. XML si trovano in una sottodirectory specifiche delle impostazioni locali. Ad esempio, i file per la regione inglese-Stati Uniti sono in $(VCTargetsPath) \1033\\.|
+|.xml|Contiene elementi XML che dichiarano e inizializzano elementi dell'interfaccia utente IDE quali le finestre delle proprietà e pagine delle proprietà e controlli casella di testo casella ed elenco.<br /><br /> I file con estensione XML supportano direttamente l'IDE, ma non MSBuild. Tuttavia, i valori delle proprietà IDE vengono assegnati alla proprietà e gli elementi di compilazione.<br /><br /> La maggior parte dei file. XML si trovano in una sottodirectory specifiche delle impostazioni locali. Ad esempio, i file per la regione inglese-Stati Uniti sono in $(VCTargetsPath) \1033\\.|
 
 ## <a name="user-targets-and-properties"></a>Proprietà e destinazioni utente
 
@@ -124,7 +124,7 @@ Nella tabella seguente sono elencate diverse destinazioni utili orientate all'ut
 |Rebuild|Pulisce e quindi compila il progetto.|
 |ResourceCompile|Esegue lo strumento compilatore di risorse di Microsoft Windows, rc.exe.|
 |XdcMake|Esegue lo strumento documentazione XML, xdcmake.exe.|
-|XSD|Esegue lo strumento XML Schema Definition, xsd.exe. *Vedere la nota seguente.*|
+|Xsd|Esegue lo strumento XML Schema Definition, xsd.exe. *Vedere la nota seguente.*|
 
 > [!NOTE]
 > In Visual Studio 2017, supporto per i progetti C++ **xsd** file è stato deprecato. È comunque possibile usare **Microsoft.VisualC.CppCodeProvider** aggiungendo **CppCodeProvider.dll** manualmente alla Global Assembly Cache.

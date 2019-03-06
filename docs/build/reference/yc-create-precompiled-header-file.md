@@ -1,5 +1,5 @@
 ---
-title: /Yc (Crea il file di intestazione precompilata)
+title: /Yc (Crea il file di intestazione precompilato)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UsePrecompiledHeader
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: bda384152962bc59ab37b1aae138091aa6f4514c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b8bfb30a49efa35a3af3d3b76e75f8dede9fd7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536840"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418971"
 ---
-# <a name="yc-create-precompiled-header-file"></a>/Yc (Crea il file di intestazione precompilata)
+# <a name="yc-create-precompiled-header-file"></a>/Yc (Crea il file di intestazione precompilato)
 
 Indica al compilatore di creare un file di intestazione precompilata (PCH) che rappresenta lo stato della compilazione in un determinato punto.
 
 ## <a name="syntax"></a>Sintassi
 
 > __/Yc__<br/>
-> __/Yc__*nomefile*
+> __/Yc__*filename*
 
 ## <a name="arguments"></a>Argomenti
 

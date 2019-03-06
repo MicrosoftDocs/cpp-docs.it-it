@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627540"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422975"
 ---
 # <a name="x64-exception-handling"></a>x64 la gestione delle eccezioni
 
@@ -68,7 +68,7 @@ La struttura UNWIND_INFO deve essere allineata DWORD in memoria. Ecco cosa signi
 
    Numero di versione dei dati di rimozione, attualmente 1.
 
-- **flag**
+- **Flag**
 
    Attualmente sono definiti tre flag:
 
@@ -182,21 +182,21 @@ Il codice di operazione di rimozione è uno dei valori seguenti:
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|RSP precedente|
-  |RSP + 16|CONTENUTO|
-  |RSP + 8|CS|
+  |RSP+32|SS|
+  |RSP+24|RSP precedente|
+  |RSP+16|CONTENUTO|
+  |RSP+8|CS|
   |RSP|RIP|
 
   Se le informazioni sull'operazione equivale a 1, quindi uno dei frame è stato eseguito il push:
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|RSP precedente|
-  |RSP + 24|CONTENUTO|
-  |RSP + 16|CS|
-  |RSP + 8|RIP|
+  |RSP+40|SS|
+  |RSP+32|RSP precedente|
+  |RSP+24|CONTENUTO|
+  |RSP+16|CS|
+  |RSP+8|RIP|
   |RSP|Codice di errore|
 
   Questo codice di rimozione viene sempre visualizzata in un prologo fittizio, che non viene mai eseguito, ma invece precede il punto di ingresso reale di una routine di interrupt ed esiste solo per fornire un'area per simulare il push di una cornice della macchina. `UWOP_PUSH_MACHFRAME` Registra la simulazione, che indica che la macchina è concettualmente eseguita questa operazione:
@@ -329,13 +329,13 @@ Per poter scrivere routine assembly appropriato, è disponibile un set di pseudo
 
 |Operazione pseudo|Descrizione|
 |-|-|
-|FRAME PROC \[:*il parametro ehandler*]|Cause MASM per generare una funzione in pdata la voce di tabella e le informazioni contenute in. XData di rimozione per strutturata di una funzione il comportamento di rimozione delle eccezioni.  Se *il parametro ehandler* è presente, questa procedura viene inserita nella finestra di. xdata come gestore specifico del linguaggio.<br /><br /> Quando viene usato l'attributo FRAME, deve essere seguita da una. Direttiva ENDPROLOG.  Se la funzione è una funzione foglia (come definito in [tipi di funzione](../build/stack-usage.md#function-types)) non è necessario, perché sono il resto di queste pseudo-operazioni l'attributo FRAME.|
+|PROC FRAME \[:*ehandler*]|Cause MASM per generare una funzione in pdata la voce di tabella e le informazioni contenute in. XData di rimozione per strutturata di una funzione il comportamento di rimozione delle eccezioni.  Se *il parametro ehandler* è presente, questa procedura viene inserita nella finestra di. xdata come gestore specifico del linguaggio.<br /><br /> Quando viene usato l'attributo FRAME, deve essere seguita da una. Direttiva ENDPROLOG.  Se la funzione è una funzione foglia (come definito in [tipi di funzione](../build/stack-usage.md#function-types)) non è necessario, perché sono il resto di queste pseudo-operazioni l'attributo FRAME.|
 |. PUSHREG *registrare*|Genera una voce di codice UWOP_PUSH_NONVOL rimozione per il numero di registro specificato con l'offset corrente nel prologo.<br /><br /> Questo deve essere usato solo con registri integer non volatili.  Per i push di registri volatili, usare un. 8 ALLOCSTACK, invece|
-|. SETFRAME *registrare*, *offset*|Compila nel frame registra campo e l'offset nelle informazioni di rimozione tramite il registro specificato e l'offset. L'offset deve essere un multiplo di 16 e minore o uguale a 240. Questa direttiva genera anche una rimozione codice UWOP_SET_FPREG per il registro specificato con l'offset corrente di prologo.|
-|. ALLOCSTACK *dimensioni*|Genera una voce UWOP_ALLOC_SMALL o UWOP_ALLOC_LARGE con le dimensioni specificate per l'offset corrente nel prologo.<br /><br /> Il *dimensioni* operando deve essere un multiplo di 8.|
+|.SETFRAME *register*, *offset*|Compila nel frame registra campo e l'offset nelle informazioni di rimozione tramite il registro specificato e l'offset. L'offset deve essere un multiplo di 16 e minore o uguale a 240. Questa direttiva genera anche una rimozione codice UWOP_SET_FPREG per il registro specificato con l'offset corrente di prologo.|
+|.ALLOCSTACK *size*|Genera una voce UWOP_ALLOC_SMALL o UWOP_ALLOC_LARGE con le dimensioni specificate per l'offset corrente nel prologo.<br /><br /> Il *dimensioni* operando deve essere un multiplo di 8.|
 |. SAVEREG *registrare*, *offset*|Genera un UWOP_SAVE_NONVOL o una voce di codice di rimozione UWOP_SAVE_NONVOL_FAR per il registro specificato e l'offset con l'offset corrente di prologo. MASM sceglie la codifica più efficiente.<br /><br /> *offset* deve essere positivo e un multiplo di 8. *offset* è relativo alla base del frame della stored procedure, disponibile a livello generale in RSP, o, se si usa un puntatore ai frame, i puntatori ai frame non in scala.|
 |. SAVEXMM128 *registrare*, *offset*|Genera un UWOP_SAVE_XMM128 o una voce di codice di rimozione UWOP_SAVE_XMM128_FAR per il registro XMM specificato e l'offset con l'offset corrente di prologo. MASM sceglie la codifica più efficiente.<br /><br /> *offset* deve essere positivo e un multiplo di 16.  *offset* è relativo alla base del frame della stored procedure, disponibile a livello generale in RSP, o, se si usa un puntatore ai frame, i puntatori ai frame non in scala.|
-|. PUSHFRAME \[ *codice*]|Genera una voce di codice di rimozione UWOP_PUSH_MACHFRAME. Se l'opzione facoltativa *codice* è specificato, la voce di codice di rimozione ha un modificatore di 1. In caso contrario, il modificatore è 0.|
+|.PUSHFRAME \[*code*]|Genera una voce di codice di rimozione UWOP_PUSH_MACHFRAME. Se l'opzione facoltativa *codice* è specificato, la voce di codice di rimozione ha un modificatore di 1. In caso contrario, il modificatore è 0.|
 |.ENDPROLOG|Segnala la fine delle dichiarazioni di prologo.  Deve essere presente nei primi 255 byte della funzione.|
 
 Ecco un prologo della funzione di esempio con un utilizzo corretto della maggior parte dei codici operativi:
@@ -504,4 +504,4 @@ typedef struct _RUNTIME_FUNCTION {
 
 ## <a name="see-also"></a>Vedere anche
 
-[x64 convenzioni del software](../build/x64-software-conventions.md)
+[Convenzioni del software x64](../build/x64-software-conventions.md)

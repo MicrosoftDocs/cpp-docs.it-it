@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 24912c13d3528377ab849a4205ef072eb26490d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648773"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418808"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Collegare un eseguibile a una DLL
 

@@ -2,12 +2,12 @@
 title: x64 dello stack dell'utilizzo
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: 3318a3512f83e242496454ffa2dc4aa8d26e1fc3
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627319"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425601"
 ---
 # <a name="x64-stack-usage"></a>x64 dello stack dell'utilizzo
 
@@ -59,6 +59,6 @@ Lo stack viene allocato deve includere uno spazio dopo di esso per i parametri d
 
 ## <a name="see-also"></a>Vedere anche
 
-[x64 convenzioni del software](../build/x64-software-conventions.md)<br/>
+[Convenzioni del software x64](../build/x64-software-conventions.md)<br/>
 [align](../cpp/align-cpp.md)<br/>
 [__declspec](../cpp/declspec.md)

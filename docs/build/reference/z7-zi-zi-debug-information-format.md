@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 43ffbe76092b9675be1610e58c65c0034955634f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479043"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421437"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Formato informazioni di debug)
 
@@ -83,7 +83,7 @@ Il **/ZI** opzione impone entrambi le [/Gy (Attiva collegamento a livello di fun
 
 1. Aprire il **le proprietà di configurazione** > **C/C++** > **generale** pagina delle proprietà.
 
-1. Modificare il **formato informazioni di Debug** proprietà. Scegli **OK** per salvare le modifiche.
+1. Modificare il **formato informazioni di Debug** proprietà. Scegliere **OK** per salvare le modifiche.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
@@ -93,4 +93,3 @@ Il **/ZI** opzione impone entrambi le [/Gy (Attiva collegamento a livello di fun
 
 [Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: a43cce2633fc2f54374bee6b5ef7196dbb87ad55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 057fabe9612f84af07649d7a4f7bbf6d83e01f6c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663775"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426212"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (Analisi codice)
 

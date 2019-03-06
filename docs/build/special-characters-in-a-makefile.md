@@ -7,12 +7,12 @@ helpviewer_keywords:
 - special characters, in NMAKE macros
 - macros, special characters
 ms.assetid: 92c34ab5-ca6b-4fc0-bcf4-3172eaeda9f0
-ms.openlocfilehash: 18fa83fcfd0c70ac4e8b9bf5be08ac1922998ecb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2703adbbdba392b1a317e2656c6f3dba30a36b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443730"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420756"
 ---
 # <a name="special-characters-in-a-makefile"></a>Caratteri speciali in un makefile
 

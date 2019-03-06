@@ -15,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: 2d9b23871cedd93c4145c79d2c22240b9ae2e775
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28954ff1c77b7dcc530392fce095ed9df5c29cbf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429240"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414564"
 ---
 # <a name="mfc-extension-dlls"></a>DLL di estensione MFC
 

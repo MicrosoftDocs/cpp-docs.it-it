@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 9d7d2623608d7dab27de78567582c7043468e98f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444018"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426446"
 ---
 # <a name="reflection-ccli"></a>Reflection (C++/CLI)
 
@@ -31,12 +31,12 @@ La reflection consente ai tipi di dati noti essere controllata in fase di esecuz
 
 Si noti che il nome dell'assembly specificato è il nome sicuro (vedere [creazione e assembly con nome sicuro](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), che include la versione dell'assembly, le impostazioni cultura e le informazioni sulla firma. Si noti inoltre che il nome dello spazio dei nomi in cui è definito il tipo di dati può essere recuperato, insieme al nome della classe di base.
 
-Il modo più comune per accedere alle funzionalità di reflection è tramite il <xref:System.Object.GetType%2A> (metodo). Questo metodo è fornito da [System:: Object](https://msdn.microsoft.com/library/system.object.aspx), da cui derivano tutte le classi di garbage collection.
+Il modo più comune per accedere alle funzionalità di reflection è tramite il <xref:System.Object.GetType%2A> (metodo). Questo metodo è fornito da <xref:System.Object?displayProperty=nameWithType>, da cui derivano tutte le classi di garbage collection.
 
 > [!NOTE]
 > La reflection su un .exe compilate con il compilatore Visual C++ è consentita solo se il .exe viene compilata con il **/clr: pure** oppure **/CLR: safe** opzioni del compilatore. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non è disponibile in Visual Studio 2017. Visualizzare [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) per altre informazioni.
 
-Per altre informazioni, vedere [Namespace System. Reflection](https://msdn.microsoft.com/library/system.reflection.aspx)
+Per altre informazioni, vedere <xref:System.Reflection>.
 
 ## <a name="example-gettype"></a>Esempio: GetType
 
@@ -114,7 +114,7 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2
 ```
 
-## <a name="example-gettype-members-and-properties"></a>Esempio: GetType membri e le proprietà
+## <a name="example-gettype-members-and-properties"></a>Esempio: Proprietà e membri GetType
 
 Il `GetType` oggetto supporta un numero di membri e le proprietà che possono essere utilizzate per esaminare un tipo. Questo codice recupera e visualizza alcune di queste informazioni:
 
@@ -177,9 +177,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Esempio: ispezione degli assembly
 
-Se il codice riportato sopra viene compilato in una DLL denominata vcpp_reflection_6. dll, è quindi possibile usare la reflection per esaminare il contenuto di questo assembly. Tale scopo, utilizzare la funzione API di reflection statica [assembly:: Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) per caricare l'assembly. Questa funzione restituisce l'indirizzo di un **Assembly** oggetto che è quindi possibile eseguire query relative a moduli e tipi all'interno.
+Se il codice riportato sopra viene compilato in una DLL denominata vcpp_reflection_6. dll, è quindi possibile usare la reflection per esaminare il contenuto di questo assembly. Ciò comporta l'uso di reflection statica xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType funzione API per caricare l'assembly. Questa funzione restituisce l'indirizzo di un **Assembly** oggetto che è quindi possibile eseguire query relative a moduli e tipi all'interno.
 
-Una volta che il sistema di reflection è stato caricato l'assembly, una matrice di **tipo** oggetti viene recuperato con il [assembly:: GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) (funzione). Ogni elemento della matrice contiene informazioni su un tipo diverso, anche se in questo caso, viene definita una sola classe. Usando un ciclo, ciascuna **tipo** in questa matrice viene eseguita una query sui membri del tipo tramite il **:: GetMembers** (funzione). Questa funzione restituisce una matrice di **MethodInfo** oggetti, ogni oggetto che contiene informazioni sulla funzione membro, membro dati o proprietà del tipo.
+Una volta che il sistema di reflection è stato caricato l'assembly, una matrice di **tipo** oggetti viene recuperata con il <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> (funzione). Ogni elemento della matrice contiene informazioni su un tipo diverso, anche se in questo caso, viene definita una sola classe. Usando un ciclo, ciascuna **tipo** in questa matrice viene eseguita una query sui membri del tipo tramite il **:: GetMembers** (funzione). Questa funzione restituisce una matrice di **MethodInfo** oggetti, ogni oggetto che contiene informazioni sulla funzione membro, membro dati o proprietà del tipo.
 
 Si noti che l'elenco dei metodi include in modo esplicito le funzioni definite **TestClass** e le funzioni ereditate in modo implicito dalle **System:: Object** classe. Come parte dell'adozione in .NET anziché nella sintassi di Visual C++, le proprietà vengono visualizzate come membri dati sottostanti a cui che si accede tramite le funzioni get/set. Le funzioni get/set vengono visualizzati in questo elenco come i metodi regolari. Reflection è supportata tramite common language runtime, non dal compilatore Visual C++.
 
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-## <a name="implement"></a> Procedura: implementare un'architettura plug-in tramite Reflection
+## <a name="implement"></a> Procedura: Implementare un'architettura plug-in tramite Reflection
 
 Gli esempi di codice seguenti illustrano l'uso della reflection per implementare una semplice architettura "plug-in". Il primo listato è l'applicazione e il secondo è il plug-in. L'applicazione è un form che vengono inserite automaticamente usando tutte le classi presenti nella DLL del plug-in fornito come argomento della riga di comando basata su form.
 
@@ -340,7 +340,7 @@ protected:
 };
 ```
 
-## <a name="enumerate"></a> Procedura: enumerare tipi di dati negli assembly tramite Reflection
+## <a name="enumerate"></a> Procedura: Enumerazione dei tipi di dati negli assembly tramite Reflection
 
 Il codice seguente illustra l'enumerazione dei tipi e membri usando pubblici <xref:System.Reflection>.
 

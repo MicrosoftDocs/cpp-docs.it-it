@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /LARGEADDRESSAWARE editbin option
 - LARGEADDRESSAWARE editbin option
 ms.assetid: 5db58df3-4457-4808-adf7-2bee6ea97486
-ms.openlocfilehash: c30e7b9340fd45f31dc2a6508a0bcc04ffe8c910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f13898b7a24bada151b655150b193b7d3e3c5dff
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604997"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417588"
 ---
 # <a name="largeaddressaware"></a>/LARGEADDRESSAWARE
 

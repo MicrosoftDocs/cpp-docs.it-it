@@ -6,12 +6,12 @@ helpviewer_keywords:
 - imports (delay-loaded)
 - delay-loaded imports
 ms.assetid: f766acf4-9df8-4b85-8cf6-0be3ffc4c124
-ms.openlocfilehash: 782da0d29024a8308de0bb4d00656b850629c8ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 208be91d9ee873bd181bdb6c7880a6f9032e0d90
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444161"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423950"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Dump delle importazioni a caricamento ritardato
 

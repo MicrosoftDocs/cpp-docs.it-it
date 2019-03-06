@@ -37,12 +37,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: 2bcbf55c4bc6d546c8a2b4eca3ea2dbeafc613fa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1fa04d94e4e6785e5a9d0941ce44a4404b1e28da
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556348"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423391"
 ---
 # <a name="cenumeratoraccessor-class"></a>Classe CEnumeratorAccessor
 
@@ -74,7 +74,7 @@ class CEnumeratorAccessor
 
 Questo set di righe è costituito da origini dati e gli enumeratori visibili dell'enumeratore corrente.
 
-## <a name="bisparent"></a> Cenumeratoraccessor:: M_bisparent
+## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
 
 Una variabile che indica se l'enumeratore è un enumeratore di padre, se la riga è un enumeratore.
 
@@ -86,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
 ## <a name="ntype"></a> Cenumeratoraccessor:: M_ntype
 
@@ -100,9 +100,9 @@ USHORT m_nType;
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
-## <a name="szdescription"></a> Cenumeratoraccessor:: M_szdescription
+## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
 
 Descrizione dell'origine dati o enumeratore.
 
@@ -114,9 +114,9 @@ WCHAR m_szDescription[129];
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
-## <a name="szname"></a> Cenumeratoraccessor:: M_szname
+## <a name="szname"></a> CEnumeratorAccessor::m_szName
 
 Il nome dell'origine dati o enumeratore.
 
@@ -128,9 +128,9 @@ WCHAR m_szName[129];
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
-## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
+## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
 
 Stringa da passare al [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) per ottenere un moniker per l'origine dati o di un enumeratore.
 
@@ -142,7 +142,7 @@ WCHAR m_szParseName[129];
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
+Visualizzare [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) nel *riferimento per programmatori OLE DB* per altre informazioni.
 
 ## <a name="see-also"></a>Vedere anche
 

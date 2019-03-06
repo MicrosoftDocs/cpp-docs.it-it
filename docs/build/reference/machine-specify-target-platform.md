@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /MACHINE linker option
 - MACHINE linker option
 ms.assetid: 8d41bf4b-7e53-4ab9-9085-d852b08d31c2
-ms.openlocfilehash: 872370269e9ab8acaaa8cafe7fb47b1121bcbb97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 713cff8a787b6eb97ad5d9bea32b6fd77fa64f17
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546438"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426576"
 ---
 # <a name="machine-specify-target-platform"></a>/MACHINE (Specifica la piattaforma di destinazione)
 

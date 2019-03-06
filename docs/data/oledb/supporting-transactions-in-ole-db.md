@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: 647112f480f6470f7d893ecd1d5177618dc23708
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 2e3605b636bbcb16a1c6f543bc9090d2b212a60b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556270"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418574"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Supporto delle transazioni in OLE DB
 
@@ -22,11 +22,11 @@ Oggetto [transazione](../../data/transactions-mfc-data-access.md) è un modo per
 
 OLE DB supporta le transazioni con tre metodi seguenti:
 
-- [ITransactionLocal:: StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))
 
-- [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
 
-- [ITransaction:: Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85))
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
 
 ## <a name="relationship-of-sessions-and-transactions"></a>Relazione tra le sessioni e transazioni
 
@@ -48,7 +48,7 @@ La chiamata `ITransaction::Commit` o `ITransaction::Abort` termina la transazion
 
 ## <a name="nested-transactions"></a>Transazioni nidificate
 
-Oggetto [transazione nidificata](https://docs.microsoft.com/previous-versions/windows/desktop/ms716985(v=vs.85)) si verifica quando si avvia una nuova transazione locale quando esiste già una transazione attiva nella sessione. La nuova transazione viene avviata come una transazione nidificata di sotto della transazione corrente. Se il provider non supporta le transazioni nidificate, la chiamata `StartTransaction` quando è già presente una transazione attiva nella sessione restituisce XACT_E_XTIONEXISTS.
+Oggetto [transazione nidificata](/previous-versions/windows/desktop/ms716985(v=vs.85)) si verifica quando si avvia una nuova transazione locale quando esiste già una transazione attiva nella sessione. La nuova transazione viene avviata come una transazione nidificata di sotto della transazione corrente. Se il provider non supporta le transazioni nidificate, la chiamata `StartTransaction` quando è già presente una transazione attiva nella sessione restituisce XACT_E_XTIONEXISTS.
 
 ## <a name="distributed-transactions"></a>Transazioni distribuite
 

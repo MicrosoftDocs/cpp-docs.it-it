@@ -6,12 +6,12 @@ helpviewer_keywords:
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: 77e02b424b10b5e9606cc49152c2e21d7eeed9cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 346beace1979871cfd9bf4ee0d487e7f85a26eaa
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667454"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426095"
 ---
 # <a name="release-builds"></a>Build di rilascio
 

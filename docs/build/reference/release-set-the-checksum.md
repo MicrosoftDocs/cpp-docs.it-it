@@ -10,12 +10,12 @@ helpviewer_keywords:
 - checksum setting
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-ms.openlocfilehash: 6a45e6caa94054d4d485476786ecc5149545ed8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9192768f711da721cfef65314573d78caa8c2442
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478808"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426641"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE (Imposta checksum)
 

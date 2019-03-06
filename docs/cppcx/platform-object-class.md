@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850091"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422783"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 
@@ -116,7 +116,7 @@ Oggetto [platform:: Type](../cppcx/platform-type-class.md) oggetto che descrive 
 
 Il metodo statico [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) può essere utilizzato per ottenere un [enumerazione platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) valore che rappresenta il tipo corrente. Questa funzionalità è particolarmente utile per i tipi predefiniti. Il codice del tipo per qualsiasi classe di riferimento oltre [platform:: String](../cppcx/platform-string-class.md) è Object (1).
 
-Il [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) classe viene usata nelle API Windows come modo indipendente dal linguaggio passando informazioni sul tipo tra componenti di Windows e delle app. L'elemento T[classe platform:: Type](../cppcx/platform-type-class.md) dispone di operatori per la conversione tra `Type` e `TypeName`.
+Il [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) classe viene usata nelle API Windows come modo indipendente dal linguaggio passando informazioni sul tipo tra componenti di Windows e delle app. L'elemento T[classe platform:: Type](../cppcx/platform-type-class.md) dispone di operatori per la conversione tra `Type` e `TypeName`.
 
 Usare la [typeid](../windows/typeid-cpp-component-extensions.md) operatore per restituire un `Platform::Type` oggetto per un nome di classe, ad esempio quando si sposti tra pagine XAML:
 

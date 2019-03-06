@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 067b8b11b716935c684a127632a8fadaf3d9a447
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646069"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422117"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Genera funzioni intrinseche)
 
@@ -37,7 +37,7 @@ Visualizzare [intrinseco](../../preprocessor/intrinsic.md) per altre informazion
 
 **/Oi** è solo una richiesta al compilatore di sostituire alcune chiamate di funzione con le funzioni intrinseche; il compilatore può chiamare la funzione (e non sostituire la chiamata di funzione con una funzione intrinseca) se si ottengono prestazioni migliori.
 
-**x86 specifico**
+**x86 Specific**
 
 Le funzioni a virgola mobile intrinseche non esegue alcun controllo speciali su valori di input e quindi funzionano in intervalli di input limitati e hanno condizioni limite le routine di libreria con lo stesso nome e la gestione delle eccezioni diverse. Usando i formati intrinseci reali implica la perdita di gestione delle eccezioni IEEE e dei `_matherr` e `errno` funzionalità; quest'ultimo comporta la perdita della conformità ANSI. Tuttavia, intrinseci possono velocizzare notevolmente la virgola mobile cospicuo della virgola programmi e per molti programmi, i problemi di conformità sono di scarso valore pratico.
 

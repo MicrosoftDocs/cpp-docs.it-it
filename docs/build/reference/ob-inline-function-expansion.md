@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: a53069c44e72d0d873ccb0b600c48480527d111f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6406b604ab74d29d8bc6c9bc0920fd0cf0bd055b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582664"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426147"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Espansione funzioni inline)
 
@@ -37,7 +37,7 @@ Controlla l'espansione inline delle funzioni.
 
 ## <a name="syntax"></a>Sintassi
 
-> /OB {0 | 1 | 2}
+> /Ob{0|1|2}
 
 ## <a name="arguments"></a>Argomenti
 

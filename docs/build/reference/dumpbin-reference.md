@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: d13ec31de79e15cf4fefce7bb954f488ff8fccb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b590d852e8139aa7a12d7a7913915cd7a3bdccc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451207"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416358"
 ---
 # <a name="dumpbin-reference"></a>Riferimenti a DUMPBIN
 

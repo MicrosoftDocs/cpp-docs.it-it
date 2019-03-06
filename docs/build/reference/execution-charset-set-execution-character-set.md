@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 13ff185cf7026f1b42f732aae26c11e98d13e9a2
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 14d6cf5e6f1982cb3079093294770f4d78faa478
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849609"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422455"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/Execution-CharSet (set esecuzione Set di caratteri)
 

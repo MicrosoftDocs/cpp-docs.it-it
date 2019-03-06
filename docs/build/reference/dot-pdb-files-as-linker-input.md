@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .pdb files, as linker input
 - PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-ms.openlocfilehash: 23974a9e20f8259c3a38af15664d328ded7ff7d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a29f01e5e5b30be4f7a983652d476a4512d2bec0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628894"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426424"
 ---
 # <a name="pdb-files-as-linker-input"></a>File PDB come input del linker
 

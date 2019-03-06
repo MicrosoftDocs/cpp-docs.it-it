@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - commands, makefiles
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
-ms.openlocfilehash: 8b640e8a7a1773e69792453de6cb70bcb09c988f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fbaddef535ee1066c0723b5709ce2d55e67682e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668234"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419661"
 ---
 # <a name="commands-in-a-makefile"></a>Comandi di un makefile
 

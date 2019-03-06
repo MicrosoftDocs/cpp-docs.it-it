@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - VERSION .def file statement
 ms.assetid: 3533b97c-5183-45f9-9ca8-4e63462b5d26
-ms.openlocfilehash: 98758da627390ba4c7e852905457527a343baccc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d275e1e191e0550143dd5e7a828b734bba0fc96
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667376"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414057"
 ---
 # <a name="version-cc"></a>VERSION (C/C++)
 

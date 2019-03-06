@@ -2,12 +2,12 @@
 title: Delegati (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 8153ac6ffc48b43fc218ee786cdb3f64504d825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23c5d1ae35a56a827bc2436dbdd81b53dd1224
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635240"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415279"
 ---
 # <a name="delegates-ccx"></a>Delegati (C++/CX)
 
@@ -23,7 +23,7 @@ I delegati sono utilizzati in genere insieme agli eventi. Un evento dispone di u
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Quando dichiari delegati che saranno esposti ai client attraverso l'interfaccia binaria dell'applicazione di Windows Runtime, Usa [Windows::Foundation::TypedEventHandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). I binari proxy e stub usati come prefisso per questo delegato ne permettono l'uso da parte di client Javascript.
+Quando dichiari delegati che saranno esposti ai client attraverso l'interfaccia binaria dell'applicazione di Windows Runtime, Usa [Windows::Foundation::TypedEventHandler\<TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). I binari proxy e stub usati come prefisso per questo delegato ne permettono l'uso da parte di client Javascript.
 
 ## <a name="consuming-delegates"></a>Utilizzo dei delegati
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-ms.openlocfilehash: 43bac2c1bd5cc3588c52e6ff7af234df56a0b25d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dae3238f24fc1ac4898aee0b23c3f1899f2e25fc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642481"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420076"
 ---
 # <a name="cl-command-files"></a>File di comando di CL
 

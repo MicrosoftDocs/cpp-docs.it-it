@@ -26,16 +26,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ca22f16cf22cabc4c508df053d49d862fef70bce
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556205"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414616"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
 
-Fornisce un'implementazione per il [IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) interfaccia.
+Fornisce un'implementazione per il [IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) interfaccia.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -72,7 +72,7 @@ Una classe di proprietà definibili dall'utente che viene impostato su *T*.
 
 Un'interfaccia obbligatoria nel set di righe. Questa classe implementa le proprietà del set di righe usando il [mapping dell'insieme di proprietà](../../data/oledb/begin-propset-map.md) definito nella classe del comando. Anche se la classe di set di righe viene visualizzata usare proprietà della classe di comando imposta il set di righe viene fornito con la propria copia delle proprietà in fase di esecuzione, quando viene creato da un oggetto comando o sessione.
 
-## <a name="getproperties"></a> Irowsetinfoimpl:: GetProperties
+## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
 
 Restituisce le impostazioni correnti per le proprietà di `DBPROPSET_ROWSET` gruppo.
 
@@ -87,9 +87,9 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowsetInfo:: GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
-## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
+## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
 Restituisce un puntatore di interfaccia al set di righe a cui viene applicato un segnalibro.
 
@@ -103,9 +103,9 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85)) nel *riferimento per programmatori OLE DB*. Il *iOrdinal* parametro deve essere una colonna del segnalibro.
+Visualizzare [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) nel *riferimento per programmatori OLE DB*. Il *iOrdinal* parametro deve essere una colonna del segnalibro.
 
-## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
+## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
 Restituisce un puntatore a interfaccia sull'oggetto (comando o sessione) che ha creato questo set di righe.
 
@@ -118,7 +118,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="remarks"></a>Note
 

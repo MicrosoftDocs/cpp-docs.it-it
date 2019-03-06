@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: dd37dae4927531b86cfdac274493b945b066760a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389942"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413095"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Abilita ulteriori controlli di sicurezza)
 
@@ -37,9 +37,9 @@ Aggiunge i controlli consigliati di Security Development Lifecycle (SDL). Questi
 |[C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|/we4533|Il codice che inizializza una variabile non verrà eseguito.|
 |[C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|/we4700|Utilizzo di una variabile locale non inizializzata.|
 |[C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|/we4703|Utilizzo di una variabile locale puntatore potenzialmente non inizializzata.|
-|[ERRORE C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|/we4789|Sovraccarico del buffer quando vengono utilizzate le funzioni specifiche di runtime del linguaggio C (CRT).|
+|[C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|/we4789|Sovraccarico del buffer quando vengono utilizzate le funzioni specifiche di runtime del linguaggio C (CRT).|
 |[C4995](../../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)|/we4995|Utilizzo di una funzione contrassegnata con il pragma [deprecato](../../preprocessor/deprecated-c-cpp.md).|
-|[AVVISO C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Utilizzo di una funzione contrassegnata come [deprecato](../../cpp/deprecated-cpp.md).|
+|[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Utilizzo di una funzione contrassegnata come [deprecato](../../cpp/deprecated-cpp.md).|
 
 ## <a name="runtime-checks"></a>Controlli runtime
 

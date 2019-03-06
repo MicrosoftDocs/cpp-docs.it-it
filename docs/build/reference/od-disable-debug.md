@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Od compiler option [C++]
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
-ms.openlocfilehash: b7cbf8de06e698e67e370eb399da5bb00b262895
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386113c7926085aa7e82e23768556372014a8cc8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595796"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426251"
 ---
 # <a name="od-disable-debug"></a>/Od (Disabilita (Debug))
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /SYMBOLS dumpbin option
 - -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-ms.openlocfilehash: d71f0e0ce02bca1e50d177ffbfd7ffe61e9e8998
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4aa6702cfa13523d64553041af4a18270d9babb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667600"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421477"
 ---
 # <a name="symbols"></a>/SYMBOLS
 

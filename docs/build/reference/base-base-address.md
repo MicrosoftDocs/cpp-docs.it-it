@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 49467b9c59d8f8861011f0f36009f4e3951871f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329852"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416748"
 ---
 # <a name="base-base-address"></a>/BASE (indirizzo di base)
 
@@ -33,7 +33,7 @@ Specifica l'indirizzo di base per un programma.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/ BASE:**{*indirizzi*[**,**<em>dimensioni</em>] | **\@** <em>nomefile</em>**,**<em>chiave</em>}
+> **/BASE:**{*address*[**,**<em>size</em>] | **\@**<em>filename</em>**,**<em>key</em>}
 
 ## <a name="remarks"></a>Note
 
@@ -46,7 +46,7 @@ Il linker genera un errore se *indirizzo* non è un multiplo di 64 K. È facolta
 
 Nella riga di comando, un altro modo per specificare l'indirizzo di base consiste nell'usare un file di risposta di indirizzo di base. Un file di risposta di indirizzo di base è un file di testo che contiene indirizzi di base e dimensioni facoltative di tutte le DLL che verrà usato il programma e una chiave di testo univoco per ogni indirizzo di base. Per specificare un indirizzo di base usando un file di risposta, utilizzare un simbolo di chiocciola (**\@**) seguito dal nome del file di risposta, *nomefile*, seguito da una virgola, quindi il *chiave*valore per l'indirizzo di base da utilizzare nel file. Il linker cerca *filename* del percorso specificato, o se viene specificato alcun percorso, nelle directory specificate nella variabile di ambiente LIB. In ogni riga *filename* rappresenta una DLL e presenta la sintassi seguente:
 
-> *tasto* *indirizzi* [*dimensioni*] **;** *commento*
+> *key* *address* [*size*] **;** *comment*
 
 Il *chiave* è una stringa di caratteri alfanumerici e non viene fatta distinzione tra maiuscole e minuscole. In genere è il nome di una DLL, ma non è necessario. Il *key* è seguita da una base *indirizzo* in notazione del linguaggio C, esadecimale o decimale e un valore massimo *dimensioni*. Tutti i tre argomenti sono separati da spazi o tabulazioni. Il linker genera un avviso se l'oggetto specificato *dimensioni* è minore di spazio degli indirizzi virtuali richiesto dal programma. Oggetto *commento* specificato da un punto e virgola (**;**) e possono essere nello stesso o in una riga separata. Il linker Ignora tutto il testo da punto e virgola alla fine della riga. Questo esempio Mostra parte di tale file:
 

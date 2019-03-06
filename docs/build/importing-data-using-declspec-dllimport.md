@@ -9,12 +9,12 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
-ms.openlocfilehash: bc1b21bad1f7d4515774dbe76c2567280cdbf1f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f4b9dcf7358e8301562fb5e856b9a3fd1cb42cd
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620571"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419610"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Importazione di dati tramite __declspec(dllimport)
 

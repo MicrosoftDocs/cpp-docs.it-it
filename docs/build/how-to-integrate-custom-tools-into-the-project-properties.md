@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: integrare strumenti personalizzati nelle proprietà del progetto'
+title: 'Procedura: Integrare strumenti personalizzati nelle proprietà del progetto'
 ms.date: 04/27/2016
 f1_keywords:
 - msbuild.cpp.howto.integratecustomtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 7041e6583ba1e2c7f035edcc72617ccdb8d5aa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3464bfb04211969a6d4209ca45a277100a99883d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633012"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416397"
 ---
-# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Procedura: integrare strumenti personalizzati nelle proprietà del progetto
+# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Procedura: Integrare strumenti personalizzati nelle proprietà del progetto
 
 È possibile aggiungere le opzioni degli strumenti personalizzata di Visual Studio **pagine delle proprietà** finestra mediante la creazione di un file XML schema sottostante.
 

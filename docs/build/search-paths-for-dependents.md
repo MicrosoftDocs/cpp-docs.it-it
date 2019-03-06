@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NMAKE program, dependents
 - dependents, NMAKE
 ms.assetid: bf998e47-da74-48b5-891d-d3d8ce57264b
-ms.openlocfilehash: 8856d845d51072d205c84278978c7fbb447aed9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f2251a5fff9d708a783797d04606572e5ebce62
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448802"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426459"
 ---
 # <a name="search-paths-for-dependents"></a>Percorsi di ricerca dei dipendenti
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae9d18bb0fe2172886ef24250d53cf76851bbba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625091"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420427"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (incorporazione delle informazioni sul controllo dell'account utente nel manifesto)
 
@@ -33,10 +33,10 @@ Specifica se le informazioni di Controllo dell'account utente sono incorporate n
 
 ### <a name="parameters"></a>Parametri
 
-*Frammento*<br/>
+*fragment*<br/>
 Stringa che contiene il `level` e `uiAccess` valori. Per altre informazioni, vedere la sezione Osservazioni più avanti in questo argomento.
 
-*livello*<br/>
+*_level*<br/>
 Uno dei *asInvoker*, *highestAvailable*, o *requireAdministrator*. Il valore predefinito è asInvoker. Per altre informazioni, vedere la sezione Osservazioni più avanti in questo argomento.
 
 *_uiAccess*<br/>
@@ -50,9 +50,9 @@ Come indicato di seguito sono riportate le opzioni disponibili per /MANIFESTUAC:
 
 - `asInvoker`: L'applicazione verrà eseguita con le stesse autorizzazioni del processo che l'ha avviata. L'applicazione può essere elevata a un livello superiore l'autorizzazione selezionando **Esegui come amministratore**.
 
-- highestAvailable: l'applicazione verrà eseguita con il massimo livello di autorizzazione che possibile. Se l'utente che avvia l'applicazione è un membro del gruppo Administrators, questa opzione è identico requireAdministrator. Se il massimo livello di autorizzazione disponibili è superiore rispetto al livello del processo di apertura, il sistema richiederà le credenziali.
+- highestAvailable: L'applicazione verrà eseguita con il massimo livello di autorizzazione che possibile. Se l'utente che avvia l'applicazione è un membro del gruppo Administrators, questa opzione è identico requireAdministrator. Se il massimo livello di autorizzazione disponibili è superiore rispetto al livello del processo di apertura, il sistema richiederà le credenziali.
 
-- requireAdministrator: l'applicazione verrà eseguita con autorizzazioni di amministratore. L'utente che avvia l'applicazione deve essere un membro del gruppo Administrators. Se il processo di apertura non è in esecuzione con autorizzazioni amministrative, il sistema richiederà le credenziali.
+- requireAdministrator: L'applicazione verrà eseguita con autorizzazioni di amministratore. L'utente che avvia l'applicazione deve essere un membro del gruppo Administrators. Se il processo di apertura non è in esecuzione con autorizzazioni amministrative, il sistema richiederà le credenziali.
 
 È possibile specificare i valori di livello e accesso all'interfaccia utente in un unico passaggio usando l'opzione /MANIFESTUAC: Fragment. Il frammento deve essere nel formato seguente:
 

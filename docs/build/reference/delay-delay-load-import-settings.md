@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /DELAY linker option
 - -DELAY linker option
 ms.assetid: 9334b332-cc58-4dae-b10f-a4c75972d50c
-ms.openlocfilehash: edf15d17f0ae6f3bd04b6ed97095594eaebbf675
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56f019e99eb9a54b83f6b070d769efa2b94f5621
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565984"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426377"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (Impostazioni dell'importazione a caricamento ritardato)
 

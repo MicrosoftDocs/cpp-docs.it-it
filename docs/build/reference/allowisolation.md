@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-ms.openlocfilehash: ab07e3ac3f8c154ffa62a25ab8bad967b255e2e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9d1f067259b092a261702b51f2355d4f908469
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604972"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417437"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 

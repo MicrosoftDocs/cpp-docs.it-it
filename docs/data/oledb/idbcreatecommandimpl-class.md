@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4b8c713bcf00cd68f9621b8c112d4d6fd27aec01
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fda12332ef14cb95e9f11f8df0b94ccfffa0303d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556401"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425185"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
-Fornisce un'implementazione del [IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85)) interfaccia.
+Fornisce un'implementazione del [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) interfaccia.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,7 +55,7 @@ Classe del comando.
 
 Interfaccia opzionale sull'oggetto sessione per ottenere un nuovo comando.
 
-## <a name="createcommand"></a> Idbcreatecommandimpl:: CreateCommand
+## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
 
 Crea un nuovo comando e restituisce l'interfaccia richiesta.
 
@@ -69,7 +69,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709772(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IDBCreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 Alcuni parametri corrispondono ai *riferimento per programmatori OLE DB* i parametri dei nomi diversi, descritte nelle `IDBCreateCommand::CreateCommand`:
 

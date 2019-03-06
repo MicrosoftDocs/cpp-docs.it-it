@@ -7,12 +7,12 @@ helpviewer_keywords:
 - program execution [C++]
 - NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
-ms.openlocfilehash: 1607624af56379e1c86088e0ff4553421dbd5488
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a8adb9255f8e56926a3d7b14af85735f1b1ce1e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539425"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414827"
 ---
 # <a name="nmake-reference"></a>Riferimenti a NMAKE
 

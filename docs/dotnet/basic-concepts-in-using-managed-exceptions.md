@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588240"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423846"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Concetti di base per l'utilizzo delle eccezioni gestite
 
@@ -29,7 +29,7 @@ In questo argomento vengono illustrati nelle applicazioni gestite di gestione de
 
 ## <a name="remarks"></a>Note
 
-Se esegue la compilazione con il **/clr** opzione, è possibile gestire le eccezioni di Common Language Runtime, nonché standard [gestione delle eccezioni C++](../cpp/cpp-exception-handling.md) e [gestione delle eccezioni strutturata](../cpp/structured-exception-handling-c-cpp.md) (SEH). Qualsiasi eccezione generata da un tipo gestito è un'eccezione di CLR. Il [System:: Exception](https://msdn.microsoft.com/library/system.exception.aspx) classe fornisce numerosi metodi utili per l'elaborazione di eccezioni di Common Language Runtime ed è consigliata come classe base per classi di eccezioni definite dall'utente.
+Se esegue la compilazione con il **/clr** opzione, è possibile gestire le eccezioni di Common Language Runtime, nonché standard <xref:System.Exception> classe fornisce numerosi metodi utili per l'elaborazione di eccezioni di Common Language Runtime ed è consigliata come classe base per eccezione definita dall'utente classi.
 
 Rilevamento di tipi di eccezione derivati da un'interfaccia non è supportato in **/clr**. Inoltre, common language runtime non consente di intercettare le eccezioni di overflow dello stack. un'eccezione di overflow dello stack interromperà il processo.
 
@@ -140,7 +140,7 @@ Come indicato di seguito è riportato l'ordine degli eventi per un'eccezione gen
 
 ### <a name="catching-unmanaged-types"></a>Rilevamento di tipi non gestiti
 
-Quando viene generato un tipo di oggetto non gestito, ne viene eseguito il wrapping con un'eccezione di tipo [InteropServices:: SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx). Quando si cercano appropriato **catch** clausola, sono disponibili due possibilità.
+Quando viene generato un tipo di oggetto non gestito, ne viene eseguito il wrapping con un'eccezione di tipo <xref:System.Runtime.InteropServices.SEHException>. Quando si cercano appropriato **catch** clausola, sono disponibili due possibilità.
 
 - Se viene rilevato un tipo C++ nativo, l'eccezione viene scorporato e confrontato con il tipo rilevato. Questo confronto consente a un tipo C++ native essere individuata in modo normale.
 

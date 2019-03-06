@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: c75770f834abcf17862e173e692129a43a5155c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8563382f9a95d9b7da49efdf1f12d517eae3da3d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588695"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416631"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (Parallelizzazione automatica)
 
@@ -47,5 +47,5 @@ Per informazioni su come abilitare i messaggi di output per la parallelizzazione
 [/Qvec/report (livello di segnalazione parallelizzazione automatica)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[#pragma loop)](../../preprocessor/loop.md)<br/>
+[#pragma loop()](../../preprocessor/loop.md)<br/>
 [Programmazione parallela in codice nativo](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

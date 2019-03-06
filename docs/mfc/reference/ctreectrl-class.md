@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271398"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418932"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo di visualizzazione albero. Applicare stili di finestra, descritto nella [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualsiasi combinazione delle [stili di visualizzazione del controllo albero](/windows/desktop/Controls/tree-view-control-window-styles) come descritto nel SDK di Windows.
 
 *rect*<br/>
-Specifica le dimensioni e la posizione del controllo di visualizzazione albero. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
+Specifica le dimensioni e la posizione del controllo di visualizzazione albero. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
 
 *pParentWnd*<br/>
 Specifica finestra padre del controllo di visualizzazione albero, in genere un `CDialog`. Non deve essere NULL.
@@ -361,7 +361,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Specifica lo stile del controllo di visualizzazione albero. Applicare stili di finestra, descritto nella [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)e qualsiasi combinazione delle [stili di visualizzazione del controllo albero](/windows/desktop/Controls/tree-view-control-window-styles) come descritto nel SDK di Windows.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[in] Handle per un elemento di controllo di visualizzazione ad albero.|
 |*nPart*|[in] Identificatore per la parte. Deve essere impostata su TVGIPR_BUTTON.|
-|*lpRect*|[out] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura. Se questo metodo ha esito positivo, la struttura riceve le coordinate del rettangolo della parte specificata da *hItem* e *nPart*.|
+|*lpRect*|[out] Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura. Se questo metodo ha esito positivo, la struttura riceve le coordinate del rettangolo della parte specificata da *hItem* e *nPart*.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 L'handle di un elemento di controllo di visualizzazione albero.
 
 *lpRect*<br/>
-Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve il rettangolo di delimitazione. Le coordinate sono rispetto all'angolo superiore sinistro del controllo di visualizzazione albero.
+Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceve il rettangolo di delimitazione. Le coordinate sono rispetto all'angolo superiore sinistro del controllo di visualizzazione albero.
 
 *bTextOnly*<br/>
 Se questo parametro è diverso da zero, il rettangolo di delimitazione include solo il testo dell'elemento. In caso contrario, contiene l'intera riga che occupa l'elemento nel controllo di visualizzazione albero.

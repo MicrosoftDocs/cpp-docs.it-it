@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b9d6c9aab2b12859462abfa2a842754128e72306
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556153"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416657"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
 
-Fornisce un'implementazione del [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85)) interfaccia.
+Fornisce un'implementazione del [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) interfaccia.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -75,13 +75,13 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [ICommandProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="remarks"></a>Note
 
 Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a> Icommandpropertiesimpl:: SetProperties
+## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
 
 Imposta le proprietà per l'oggetto comando.
 
@@ -94,7 +94,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [ICommandProperties:: SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ## <a name="see-also"></a>Vedere anche
 

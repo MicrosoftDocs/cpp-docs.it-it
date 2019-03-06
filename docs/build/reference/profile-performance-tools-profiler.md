@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: 26f4ba4efc20f5fee70b2937cdb943689c948888
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0fda47497ffc247dd9678ece7aac76291aed1ff
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519916"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419153"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler strumenti di prestazioni)
 
@@ -28,13 +28,13 @@ Produce un file di output che può essere usato con il profiler di Strumenti per
 
 / PROFILE implica le seguenti opzioni del linker:
 
-- [/OPT: REF](../../build/reference/opt-optimizations.md)
+- [/OPT:REF](../../build/reference/opt-optimizations.md)
 
-- /OPT: NOICF
+- /OPT:NOICF
 
-- [/INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)
+- [/INCREMENTAL:NO](../../build/reference/incremental-link-incrementally.md)
 
-- [/FIXED: NO](../../build/reference/fixed-fixed-base-address.md)
+- [/FIXED:NO](../../build/reference/fixed-fixed-base-address.md)
 
 O il profilo indica al linker generare una sezione di rilocazione nell'immagine del programma.  Una sezione di rilocazione consente al profiler di trasformare l'immagine del programma per ottenere i dati del profilo.
 

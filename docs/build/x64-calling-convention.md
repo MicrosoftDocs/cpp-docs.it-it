@@ -3,12 +3,12 @@ title: convenzione di chiamata x64
 description: Dettagli della convenzione di chiamata x64 predefinita ABI.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: f2a63df878d4eac727f9c697cc326bb1f2981d95
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53636214"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415785"
 ---
 # <a name="x64-calling-convention"></a>convenzione di chiamata x64
 
@@ -184,10 +184,10 @@ La parte non volatile è impostata su valori standard seguenti all'inizio dell'e
 
 | Registrare\[bits] | Impostazione |
 |-|-|
-| REGISTRO MXCSR\[6] | Denormals sono gli zeri - 0 |
-| REGISTRO MXCSR\[7:12] | Maschera di eccezione tutti 1 (tutte le eccezioni vengono mascherati) |
-| REGISTRO MXCSR\[13:14] | Controllo arrotondamento - 0 (con arrotondamento al più vicino) |
-| REGISTRO MXCSR\[15] | Scaricare su zero underflow mascherata - 0 (off) |
+| MXCSR\[6] | Denormals sono gli zeri - 0 |
+| MXCSR\[7:12] | Maschera di eccezione tutti 1 (tutte le eccezioni vengono mascherati) |
+| MXCSR\[13:14] | Controllo arrotondamento - 0 (con arrotondamento al più vicino) |
+| MXCSR\[15] | Scaricare su zero underflow mascherata - 0 (off) |
 
 Un oggetto chiamato che consente di modificare i campi non volatili all'interno di registro MXCSR necessario ripristinarli prima di restituire al chiamante. Inoltre, un chiamante che ha modificato uno qualsiasi di questi campi deve ripristinare i relativi valori standard prima di richiamare una chiamata a meno che non dal contratto il chiamato si aspetta che i valori modificati.
 
@@ -207,4 +207,4 @@ Una chiamata a `setjmp` mantiene il puntatore dello stack corrente, registri non
 
 ## <a name="see-also"></a>Vedere anche
 
-[x64 convenzioni del software](../build/x64-software-conventions.md)
+[Convenzioni del software x64](../build/x64-software-conventions.md)
