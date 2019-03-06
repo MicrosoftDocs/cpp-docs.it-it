@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556777"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423053"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
 
@@ -104,7 +104,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 `Failure` in errore e S_OK se l'operazione riesce.
 
-## <a name="isvalidvalue"></a> CUtlProps:: IsValidValue
+## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
 
 Usato per convalidare un valore prima di impostare una proprietà.
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 L'indice nella matrice di set di proprietà; zero se è presente una sola proprietà set.
 
 *pDBProp*<br/>
-L'ID di proprietà e un nuovo valore in una [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) struttura.
+L'ID di proprietà e un nuovo valore in una [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struttura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -131,7 +131,7 @@ Un valore HRESULT standard. Il valore predefinito è S_OK.
 
 Se si dispone di qualsiasi routine di convalida da eseguire su un valore che sta tentando di usare per impostare una proprietà, si deve eseguire l'override di questa funzione. È ad esempio, è stato possibile convalidare DBPROP_AUTH_PASSWORD rispetto a una tabella di password per determinare un valore valido.
 
-## <a name="oninterfacerequested"></a> CUtlProps:: Oninterfacerequested
+## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
 
 Gestisce le richieste per un'interfaccia facoltativa quando un consumer chiama un metodo in uno degli oggetti interfacce di creazione.
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 L'indice nella matrice di set di proprietà; zero se è presente una sola proprietà set.
 
 *pDBProp*<br/>
-L'ID di proprietà e un nuovo valore in una [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) struttura.
+L'ID di proprietà e un nuovo valore in una [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) struttura.
 
 ### <a name="return-value"></a>Valore restituito
 

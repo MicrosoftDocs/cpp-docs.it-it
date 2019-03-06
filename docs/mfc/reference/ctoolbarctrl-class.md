@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302499"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424483"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo della barra degli strumenti. Le barre degli strumenti deve sempre avere lo stile WS_CHILD. Inoltre, è possibile specificare qualsiasi combinazione di stili della barra degli strumenti e gli stili di finestra come descritto in **osservazioni**.
 
 *rect*<br/>
-Facoltativamente Specifica dimensioni e la posizione del controllo della barra degli strumenti. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
+Facoltativamente Specifica dimensioni e la posizione del controllo della barra degli strumenti. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
 
 *pParentWnd*<br/>
 Finestra padre del controllo della barra degli strumenti. Non deve essere NULL.
@@ -681,7 +681,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Specifica lo stile del controllo della barra degli strumenti. Le barre degli strumenti deve sempre avere lo stile WS_CHILD. Inoltre, è possibile specificare qualsiasi combinazione di stili della barra degli strumenti e gli stili di finestra come descritto nel **osservazioni** sezione [crea](#create).
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Indice in base zero del pulsante per il quale recuperare le informazioni.
 
 *lpRect*<br/>
-Indirizzo di un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura o un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che riceve le coordinate del rettangolo di delimitazione.
+Indirizzo di un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura o un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che riceve le coordinate del rettangolo di delimitazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 L'identificatore del pulsante.
 
 *lpRect*<br/>
-Un puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura per ricevere le informazioni di rettangolo di delimitazione.
+Un puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura per ricevere le informazioni di rettangolo di delimitazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Parametri
 
 *ppt*<br/>
-Un puntatore a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che contiene la coordinata x dell'hit test nel `x` membro e la coordinata y dell'hit test nel `y` membro. Le coordinate sono relative all'area client della barra degli strumenti.
+Un puntatore a un [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che contiene la coordinata x dell'hit test nel `x` membro e la coordinata y dell'hit test nel `y` membro. Le coordinate sono relative all'area client della barra degli strumenti.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Parametri
 
 *ppt*<br/>
-Un puntatore a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordina la struttura contenente l'hit test, relativo all'area client della barra degli strumenti.
+Un puntatore a un [punto](/previous-versions/dd162805\(v=vs.85\)) coordina la struttura contenente l'hit test, relativo all'area client della barra degli strumenti.
 
 *ptbim*<br/>
 Un puntatore a un [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) struttura che riceve le informazioni di contrassegno di inserimento.
@@ -2295,7 +2295,7 @@ Numero di righe richiesto.
 Indica se usare più righe o meno righe se la barra degli strumenti non può essere ridimensionato per il numero di righe richiesto.
 
 *lpRect*<br/>
-Punta al [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceverà il nuovo rettangolo di delimitazione della barra degli strumenti.
+Punta al [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceverà il nuovo rettangolo di delimitazione della barra degli strumenti.
 
 ### <a name="remarks"></a>Note
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance, compiler
 - cl.exe compiler, throughput
 ms.assetid: ba5f884e-9037-4a92-b10e-fc2a3836c5bf
-ms.openlocfilehash: b9e8b20e7191dad970dc154a545445b3f54b78da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ac09739e89cc3443fb81532b578b711cc9b6da
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496564"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424340"
 ---
 # <a name="improving-compiler-throughput"></a>Incremento dell'efficienza delle operazioni del compilatore
 

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: b143b2ead1165382d0959f4e4c90f1d2e7ea936a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 852538396627a3005fe20a2e66bbb6995842e4a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487165"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422273"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>New (nuovo slot in vtable) (C + c++ /CLI e c++ /CX)
 
@@ -32,9 +32,9 @@ In un `/clr` compilazione **nuovi** indica che un membro virtuale verrà assegna
 
 **nuovo** fa sì che il modificatore newslot da aggiungere per il linguaggio intermedio per la funzione.  Per ulteriori informazioni su newslot, vedere:
 
-- [Metodo MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)
+- <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
-- [Enumerazione MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)
+- <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>
 
 ### <a name="requirements"></a>Requisiti
 

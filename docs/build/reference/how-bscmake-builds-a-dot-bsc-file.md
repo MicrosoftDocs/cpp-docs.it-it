@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-ms.openlocfilehash: 053bc7565accce5db8998ae8efec256ef37d37b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e691e6ee2dcda0fb04735705078f1ed2ff139301
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442588"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425588"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Modalità di compilazione di un file bsc in BSCMAKE
 

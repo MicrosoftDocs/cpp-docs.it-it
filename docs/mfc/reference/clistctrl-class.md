@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304522"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425094"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -619,7 +619,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo elenco. Applicare qualsiasi combinazione di stili del controllo elenco per il controllo. Visualizzare [stili di finestra di visualizzazione elenco](/windows/desktop/Controls/list-view-window-styles) nel SDK di Windows per un elenco completo di questi stili. Set di specifiche di un controllo utilizzando stili estesi [SetExtendedStyle](#setextendedstyle).
 
 *rect*<br/>
-Specifica le dimensioni e la posizione del controllo elenco. Può essere un' `CRect` oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
+Specifica le dimensioni e la posizione del controllo elenco. Può essere un' `CRect` oggetto o una [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
 
 *pParentWnd*<br/>
 Specifica finestra padre del controllo elenco, in genere un `CDialog`. Non deve essere NULL.
@@ -667,7 +667,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Specifica lo stile del controllo elenco. Applicare qualsiasi combinazione di stili del controllo elenco per il controllo. Per un elenco completo di questi stili, vedere [stili di finestra di visualizzazione elenco](/windows/desktop/Controls/list-view-window-styles) nel SDK di Windows.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 Indice dell'elemento cui elenco di immagini di trascinamento da creare.
 
 *lpPoint*<br/>
-Indirizzo di un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che riceve la posizione iniziale dell'angolo superiore sinistro dell'immagine, le coordinate nella visualizzazione.
+Indirizzo di un [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che riceve la posizione iniziale dell'angolo superiore sinistro dell'immagine, le coordinate nella visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*iGroupId*|[in] Specifica un gruppo.|
-|*lpRect*|[in, out] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura. Se questo metodo ha esito positivo, la struttura riceve le coordinate del rettangolo del gruppo specificato da *iGroupId*.|
+|*lpRect*|[in, out] Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura. Se questo metodo ha esito positivo, la struttura riceve le coordinate del rettangolo del gruppo specificato da *iGroupId*.|
 |*iCoords*|[in] Specifica le coordinate del rettangolo da recuperare. Usare uno dei valori seguenti:<br /><br /> -LVGGR_GROUP - coordinate (impostazione predefinita) l'intero gruppo espanso.<br />-LVGGR_HEADER - coordinate del solo l'intestazione (gruppo compresso).<br />-LVGGR_SUBSETLINK - coordinate del solo il collegamento di subset (sottoinsieme di markup).|
 
 ### <a name="return-value"></a>Valore restituito
@@ -1451,7 +1451,7 @@ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Il chiamante è responsabile dell'allocazione di [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura a cui punta il *pRect* parametro.
+Il chiamante è responsabile dell'allocazione di [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura a cui punta il *pRect* parametro.
 
 Questo metodo invia il [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect) messaggio, che è descritti nel SDK di Windows.
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in] Puntatore a un [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struttura per l'elemento padre dell'elemento secondario.<br /><br /> Il chiamante è responsabile dell'allocazione e impostando i membri della [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struttura. Questo parametro non può essere NULL.|
 |*iColumn*|[in] Indice in base zero di una colonna nel controllo.|
 |*rectType*|[in] Parte dell'elemento secondario visualizzazione elenco per il quale viene recuperato il rettangolo di delimitazione. Specificare uno dei seguenti valori:<br /><br /> LVIR_BOUNDS - restituisce il rettangolo di delimitazione dell'elemento secondario intera, compresi l'icona e l'etichetta.<br /><br /> LVIR_ICON - restituisce il rettangolo di delimitazione dell'icona o dell'icona piccola dell'elemento secondario.<br /><br /> LVIR_LABEL - restituisce il rettangolo di delimitazione del testo dell'elemento secondario.|
-|*pRect*|[out] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve informazioni sul rettangolo di delimitazione dell'elemento secondario.<br /><br /> Il chiamante è responsabile dell'allocazione di [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura. Questo parametro non può essere NULL.|
+|*pRect*|[out] Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceve informazioni sul rettangolo di delimitazione dell'elemento secondario.<br /><br /> Il chiamante è responsabile dell'allocazione di [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura. Questo parametro non può essere NULL.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 L'indice dell'elemento la cui posizione è da recuperare.
 
 *lpPoint*<br/>
-Indirizzo di un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordinate nella visualizzazione struttura che riceve la posizione dell'angolo superiore sinistro dell'elemento.
+Indirizzo di un [punto](/previous-versions/dd162805\(v=vs.85\)) coordinate nella visualizzazione struttura che riceve la posizione dell'angolo superiore sinistro dell'elemento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 L'indice dell'elemento la cui posizione è da recuperare.
 
 *lpRect*<br/>
-Indirizzo di un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve il rettangolo di delimitazione.
+Indirizzo di un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceve il rettangolo di delimitazione.
 
 *nCode*<br/>
 Parte dell'elemento della visualizzazione elenco per il quale recuperare il rettangolo di delimitazione. Può essere uno dei valori seguenti:
@@ -2220,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Parametri
 
 *lpPoint*<br/>
-Indirizzo di un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che riceve l'origine della vista.
+Indirizzo di un [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che riceve l'origine della vista.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2531,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Indirizzo di un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
+Indirizzo di un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2834,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Parametri
 
 *pPoint*<br/>
-Un puntatore a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordina la struttura contenente l'hit test, relativo all'area client del controllo elenco.
+Un puntatore a un [punto](/previous-versions/dd162805\(v=vs.85\)) coordina la struttura contenente l'hit test, relativo all'area client del controllo elenco.
 
 *lvim*<br/>
 Un puntatore a un [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) struttura che specifica il punto di inserimento più vicino alle coordinate definite dal parametro punto.
@@ -3854,7 +3854,7 @@ BOOL SetItemPosition(
 Indice dell'elemento la cui posizione è da impostare.
 
 *pt*<br/>
-Oggetto [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordinate specificando la nuova posizione, nella visualizzazione struttura, dell'angolo superiore sinistro dell'elemento.
+Oggetto [punto](/previous-versions/dd162805\(v=vs.85\)) coordinate specificando la nuova posizione, nella visualizzazione struttura, dell'angolo superiore sinistro dell'elemento.
 
 ### <a name="return-value"></a>Valore restituito
 

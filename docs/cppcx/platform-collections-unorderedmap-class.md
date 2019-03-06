@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648331"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423612"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -62,20 +62,20 @@ Per altre informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Unorderedmap:: Unorderedmap](#ctor)|Inizializza una nuova istanza della classe Map.|
+|[UnorderedMap::UnorderedMap](#ctor)|Inizializza una nuova istanza della classe Map.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Unorderedmap:: Clear](#clear)|Rimuove tutte le coppie chiave-valore dall'oggetto Map corrente.|
-|[Unorderedmap:: First](#first)|Restituisce un iteratore che specifica il primo elemento nella mappa.|
-|[Unorderedmap:: GetView](#getview)|Restituisce una visualizzazione in sola lettura dell'elemento Map corrente, ovvero una classe Platform::Collections::UnorderedMapView.|
-|[Unorderedmap:: Haskey](#haskey)|Determina se l'oggetto Map corrente contiene la chiave specificata.|
-|[Unorderedmap:: Insert](#insert)|Aggiunge la coppia chiave-valore all'oggetto Map corrente.|
-|[Unorderedmap:: lookup](#lookup)|Recupera l'elemento in corrispondenza della chiave specificata nell'oggetto Map corrente.|
-|[Unorderedmap:: Remove](#remove)|Elimina la coppia chiave-valore specificata dall'oggetto Map corrente.|
-|[Unorderedmap:: Size](#size)|Restituisce il numero di elementi nell'oggetto Map corrente.|
+|[UnorderedMap::Clear](#clear)|Rimuove tutte le coppie chiave-valore dall'oggetto Map corrente.|
+|[UnorderedMap::First](#first)|Restituisce un iteratore che specifica il primo elemento nella mappa.|
+|[UnorderedMap::GetView](#getview)|Restituisce una visualizzazione in sola lettura dell'elemento Map corrente, ovvero una classe Platform::Collections::UnorderedMapView.|
+|[UnorderedMap::HasKey](#haskey)|Determina se l'oggetto Map corrente contiene la chiave specificata.|
+|[UnorderedMap::Insert](#insert)|Aggiunge la coppia chiave-valore all'oggetto Map corrente.|
+|[UnorderedMap::Lookup](#lookup)|Recupera l'elemento in corrispondenza della chiave specificata nell'oggetto Map corrente.|
+|[UnorderedMap::Remove](#remove)|Elimina la coppia chiave-valore specificata dall'oggetto Map corrente.|
+|[UnorderedMap::Size](#size)|Restituisce il numero di elementi nell'oggetto Map corrente.|
 
 ### <a name="events"></a>Eventi
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Metodo unorderedmap:: First
 
-Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento della mappa non ordinata.
+Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elemento della mappa non ordinata.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -177,7 +177,7 @@ virtual bool Insert(
 *key*<br/>
 Chiave della coppia chiave-valore. Il tipo della *key* è typename *K*.
 
-*valore*<br/>
+*value*<br/>
 Valore della coppia chiave-valore. Il tipo della *valore* è typename *V*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito
 
-Oggetto [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) che contiene informazioni sull'oggetto che ha generato l'evento e il tipo di modifica che si sono verificati. Vedere anche [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) e [CollectionChange Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Oggetto [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) che contiene informazioni sull'oggetto che ha generato l'evento e il tipo di modifica che si sono verificati. Vedere anche [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) e [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Equivalente .NET Framework
 
@@ -241,7 +241,7 @@ Chiave della coppia chiave-valore. Il tipo della *key* è typename *K*.
 
 ## <a name="size"></a>  Metodo unorderedmap:: Size
 
-Restituisce il numero di [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementi in UnorderedMap.
+Restituisce il numero di [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementi in UnorderedMap.
 
 ### <a name="syntax"></a>Sintassi
 

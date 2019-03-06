@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -VERSION editbin option
 - VERSION editbin option
 ms.assetid: 1fa08266-3088-4261-8d84-d4408e1cef46
-ms.openlocfilehash: a893eb13c3df11299101fcd4b17ec6c310e7e3d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9236790c588cc16137214b268caeeb22fa04d084
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444174"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419309"
 ---
 # <a name="version"></a>/VERSION
 

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261349"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415617"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo intestazione. Per una descrizione di stili del controllo intestazione, vedere [stili del controllo intestazione](/windows/desktop/Controls/header-control-styles) nel SDK di Windows.
 
 *rect*<br/>
-Specifica le dimensioni e la posizione del controllo intestazione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
+Specifica le dimensioni e la posizione del controllo intestazione. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
 
 *pParentWnd*<br/>
 Specifica finestra padre del controllo intestazione, in genere un `CDialog`. Non deve essere NULL.
@@ -301,7 +301,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Stile del controllo intestazione. Per una descrizione di stili del controllo intestazione, vedere [stili del controllo intestazione](/windows/desktop/Controls/header-control-styles) nel SDK di Windows. Visualizzare [Create](#create) per un elenco di stili aggiuntivi.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*iItem*|[in] Indice in base zero di un elemento di intestazione il cui tipo è ' ultimo. Per altre informazioni, vedere la `fmt` membro della [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struttura.|
-|*lpRect*|[out] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura per ricevere le informazioni di rettangolo di delimitazione.|
+|*lpRect*|[out] Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura per ricevere le informazioni di rettangolo di delimitazione.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 Indice a base zero dell'elemento del controllo intestazione.
 
 *lpRect*<br/>
-Un puntatore all'indirizzo di un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve le informazioni di rettangolo di delimitazione.
+Un puntatore all'indirizzo di un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceve le informazioni di rettangolo di delimitazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*lpRect*|[out] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve le informazioni di rettangolo di delimitazione.|
+|*lpRect*|[out] Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceve le informazioni di rettangolo di delimitazione.|
 
 ### <a name="return-value"></a>Valore restituito
 

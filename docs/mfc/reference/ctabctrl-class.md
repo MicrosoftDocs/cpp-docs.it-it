@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259542"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425016"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Indica che l'operazione da eseguire. Se questo parametro è TRUE, *lpRect* specifica un rettangolo di visualizzazione e riceve il rettangolo della finestra corrispondente. Se questo parametro è FALSE, *lpRect* specifica un rettangolo della finestra e riceve il rettangolo di visualizzazione corrispondente.
 
 *lpRect*<br/>
-Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica il rettangolo specificato e riceve il rettangolo calcolato.
+Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che specifica il rettangolo specificato e riceve il rettangolo calcolato.
 
 ### <a name="example"></a>Esempio
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo scheda. Applicare qualsiasi combinazione di [scheda stili del controllo](/windows/desktop/Controls/tab-control-styles), come descritto nel SDK di Windows. Visualizzare **osservazioni** per un elenco degli stili finestra è anche possibile applicare al controllo.
 
 *rect*<br/>
-Specifica le dimensioni e la posizione del controllo scheda. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
+Specifica le dimensioni e la posizione del controllo scheda. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
 
 *pParentWnd*<br/>
 Specifica la scheda finestra del controllo padre, in genere un `CDialog`. Non deve essere NULL.
@@ -250,7 +250,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Specifica lo stile del controllo scheda. Applicare qualsiasi combinazione di [scheda stili del controllo](/windows/desktop/Controls/tab-control-styles), come descritto nel SDK di Windows. Visualizzare **osservazioni** nelle [crea](#create) per un elenco degli stili finestra è anche possibile applicare al controllo.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Indice in base zero dell'elemento scheda.
 
 *lpRect*<br/>
-Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve il rettangolo di delimitazione della scheda. Queste coordinate utilizzano modalità di mapping corrente del riquadro di visualizzazione.
+Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceve il rettangolo di delimitazione della scheda. Queste coordinate utilizzano modalità di mapping corrente del riquadro di visualizzazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -517,7 +517,7 @@ Maschera che specifica quali lo stato dell'elemento flag da restituire. Per un e
 
 Un riferimento a un valore DWORD che riceve le informazioni di stato. Il valore può essere uno dei seguenti:
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|L'elemento di scheda di controllo è selezionata.|
 |TCIS_HIGHLIGHTED|Viene evidenziato l'elemento del controllo scheda e la scheda e testo vengono disegnati utilizzando il colore di evidenziazione corrente. Quando si usa il colore di evidenziazione, questo sarà un'interpolazione true, non un colore retinato.|

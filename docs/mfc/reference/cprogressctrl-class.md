@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260270"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418763"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 
@@ -149,7 +149,7 @@ Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combin
 - Graduale consente di visualizzare PBS_SMOOTH, smooth compilando il controllo barra di stato di avanzamento. Senza questo flag, riempirà con i blocchi.
 
 *rect*<br/>
-Specifica le dimensioni e la posizione del controllo indicatore di stato. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura. Poiché il controllo deve essere una finestra figlio, delle coordinate specificate sono relativo all'area client del *pParentWnd*.
+Specifica le dimensioni e la posizione del controllo indicatore di stato. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura. Poiché il controllo deve essere una finestra figlio, delle coordinate specificate sono relativo all'area client del *pParentWnd*.
 
 *pParentWnd*<br/>
 Specifica lo stato di avanzamento della barra di finestra padre del controllo, in genere un `CDialog`. Non deve essere NULL.
@@ -191,7 +191,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Specifica lo stile del controllo indicatore di stato. Applicare qualsiasi combinazione degli stili finestra descritto nella [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.

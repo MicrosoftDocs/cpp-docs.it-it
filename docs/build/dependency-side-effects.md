@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependencies, side effects
 - NMAKE program, dependents
 ms.assetid: d4e8db25-fdc0-4d73-81ec-1538f2e1b3e8
-ms.openlocfilehash: 4ce32a55e89d78d45bc74ce3f7dd45ff2f99af31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1479fac4defa45545ffd06ab30fd53ae0c2506af
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530052"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422637"
 ---
 # <a name="dependency-side-effects"></a>Effetti collaterali delle dipendenze
 

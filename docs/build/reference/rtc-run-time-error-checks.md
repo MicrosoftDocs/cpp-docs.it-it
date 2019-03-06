@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655001"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424613"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Controlli di runtime)
 
@@ -95,7 +95,7 @@ Se una variabile è stata inizializzata, non essere segnalato in fase di esecuzi
 
 ## <a name="remarks"></a>Note
 
-Controlli degli errori di runtime sono un modo per trovare i problemi nel codice in esecuzione. per altre informazioni, vedere [procedura: usare nativo Run-Time Checks](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Controlli degli errori di runtime sono un modo per trovare i problemi nel codice in esecuzione. per altre informazioni, vedere [come: Usare i controlli runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Se si compila il programma dalla riga di comando usando uno dei **/RTC** le opzioni del compilatore, qualsiasi pragma [ottimizzare](../../preprocessor/optimize.md) istruzioni nel codice avrà esito negativo. Infatti, il controllo degli errori di run-time non è valido in una build di rilascio (ottimizzato).
 
@@ -111,7 +111,7 @@ La direttiva del preprocessore MSVC_RUNTIME_CHECKS verrà definita quando si usa
 
 1. Scegliere il **generazione di codice** pagina delle proprietà.
 
-1. Modificare una o entrambe le proprietà seguenti: **controlli Runtime di base** oppure **controllo tipo più piccolo**.
+1. Modificare una o entrambe le proprietà seguenti: **Controlli di Runtime di base** oppure **controllo del tipo più piccolo**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
@@ -121,4 +121,4 @@ La direttiva del preprocessore MSVC_RUNTIME_CHECKS verrà definita quando si usa
 
 [Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[Procedura: Usare controlli runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[Procedura: Usare i controlli di runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks)

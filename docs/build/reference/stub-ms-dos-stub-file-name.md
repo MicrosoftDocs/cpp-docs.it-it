@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows API [C++], attaching MS-DOS stub program
 - -STUB linker option
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
-ms.openlocfilehash: 289812ce8c6167a82204946c0a362ccad6896a39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d349151654d9699bcf00aa3848798acb5104ba53
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642637"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421545"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (nome file stub MS-DOS)
 

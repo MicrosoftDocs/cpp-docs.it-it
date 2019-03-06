@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251a1f9f6773363955ac374aa8714bc616137a31
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295994"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425003"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (classe)
 
@@ -390,7 +390,7 @@ Punta a una stringa di caratteri con terminazione null che rappresenta il nome d
 Specifica gli attributi di stile di finestra. Per impostazione predefinita, gli stili WS_VISIBLE e WS_CHILD Windows sono impostati.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le dimensioni e posizione della finestra. Il *rectDefault* valore consente a Windows specificare le dimensioni e la posizione della nuova finestra.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che specifica le dimensioni e posizione della finestra. Il *rectDefault* valore consente a Windows specificare le dimensioni e la posizione della nuova finestra.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.
@@ -1045,7 +1045,7 @@ void Navigate(
 Stringa allocata dal chiamante che contiene l'URL a cui passare, o il percorso completo del file da visualizzare.
 
 *dwFlags*<br/>
-I flag di una variabile che specifica se aggiungere la risorsa all'elenco di cronologia, se si desidera leggere o scrivere dalla cache e se visualizzare le risorse in una nuova finestra. La variabile può essere una combinazione dei valori definiti per il [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) enumerazione.
+I flag di una variabile che specifica se aggiungere la risorsa all'elenco di cronologia, se si desidera leggere o scrivere dalla cache e se visualizzare le risorse in una nuova finestra. La variabile può essere una combinazione dei valori definiti per il [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) enumerazione.
 
 *lpszTargetFrameName*<br/>
 Un puntatore a una stringa che contiene il nome del frame di visualizzazione della risorsa.
@@ -1095,7 +1095,7 @@ void Navigate2(
 Un puntatore a un [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) struttura.
 
 *dwFlags*<br/>
-I flag di una variabile che specifica se aggiungere la risorsa all'elenco di cronologia, se si desidera leggere o scrivere dalla cache e se visualizzare le risorse in una nuova finestra. La variabile può essere una combinazione dei valori definiti per il [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) enumerazione.
+I flag di una variabile che specifica se aggiungere la risorsa all'elenco di cronologia, se si desidera leggere o scrivere dalla cache e se visualizzare le risorse in una nuova finestra. La variabile può essere una combinazione dei valori definiti per il [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) enumerazione.
 
 *lpszTargetFrameName*<br/>
 Un puntatore a una stringa che contiene il nome del frame di visualizzazione della risorsa.
@@ -1215,7 +1215,7 @@ S_OK se l'operazione riesce, o un codice di errore definiti dall'OLE in caso con
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnDocWindowActivate` per ricevere il `OnDocWindowActivate` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnDocWindowActivate` per ricevere il `OnDocWindowActivate` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin
 
@@ -1256,7 +1256,7 @@ S_OK se l'operazione riesce, o un codice di errore definiti dall'OLE in caso con
 
 ### <a name="remarks"></a>Note
 
-Abilita o disabilita le finestre di dialogo non modali quando il contenitore crea o elimina una finestra di dialogo modale. Eseguire l'override `OnEnableModeless` per ricevere il `EnableModeless` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) nel SDK di Windows per altre informazioni.
+Abilita o disabilita le finestre di dialogo non modali quando il contenitore crea o elimina una finestra di dialogo modale. Eseguire l'override `OnEnableModeless` per ricevere il `EnableModeless` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject
 
@@ -1282,7 +1282,7 @@ S_OK se l'oggetto dati viene sostituito, S_FALSE se non viene sostituita l'ogget
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnFilterDataObject` per ricevere il `FilterDataObject` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnFilterDataObject` per ricevere il `FilterDataObject` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
 
@@ -1303,7 +1303,7 @@ S_OK se l'operazione riesce, o un codice di errore definiti dall'OLE in caso con
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnFrameWindowActivate` per ricevere il `OnFrameWindowActivate` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnFrameWindowActivate` per ricevere il `OnFrameWindowActivate` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
@@ -1338,11 +1338,11 @@ Indirizzo della `IDropTarget` che riceve il `IDropTarget` puntatore a interfacci
 
 ### <a name="return-value"></a>Valore restituito
 
-Visualizzare [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) nel SDK di Windows per un elenco dei codici restituiti.
+Visualizzare [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) nel SDK di Windows per un elenco dei codici restituiti.
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnGetDropTarget` per ricevere il `GetDropTarget` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnGetDropTarget` per ricevere il `GetDropTarget` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal
 
@@ -1363,7 +1363,7 @@ S_OK se l'operazione riesce, o un codice di errore definiti dall'OLE in caso con
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnGetExternal` per ricevere il `GetExternal` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnGetExternal` per ricevere il `GetExternal` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo
 
@@ -1376,7 +1376,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Parametri
 
 *pInfo*<br/>
-Indirizzo di un [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) struttura che riceve le funzionalità dell'interfaccia utente dell'host.
+Indirizzo di un [DOCHOSTUIINFO](/previous-versions/aa770044\(v=vs.85\)) struttura che riceve le funzionalità dell'interfaccia utente dell'host.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1384,7 +1384,7 @@ S_OK se l'operazione riesce, o un codice di errore definiti dall'OLE in caso con
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnGetHostInfo` per ricevere il `GetHostInfo` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnGetHostInfo` per ricevere il `GetHostInfo` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath
 
@@ -1410,7 +1410,7 @@ S_OK se l'operazione riesce, o in caso contrario S_FALSE. Se S_FALSE, Internet E
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnGetOptionKeyPath` per ricevere il `GetOptionKeyPath` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnGetOptionKeyPath` per ricevere il `GetOptionKeyPath` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="onhideui"></a>  CHtmlView::OnHideUI
 
@@ -1426,7 +1426,7 @@ S_OK se l'operazione riesce, o un codice di errore definiti dall'OLE in caso con
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnHideUI` per ricevere il `HideUI` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnHideUI` per ricevere il `HideUI` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
@@ -1585,7 +1585,7 @@ S_OK se l'operazione riesce, o un codice di errore definiti dall'OLE in caso con
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnResizeBorder` per ricevere il `ResizeBorder` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnResizeBorder` per ricevere il `ResizeBorder` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu
 
@@ -1615,11 +1615,11 @@ Interfaccia IDispatch dell'oggetto in corrispondenza delle coordinate dello sche
 
 ### <a name="return-value"></a>Valore restituito
 
-Visualizzare [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) nel SDK di Windows per un elenco di valori.
+Visualizzare [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) nel SDK di Windows per un elenco di valori.
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnShowContextMenu` per ricevere il `ShowContextMenu` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnShowContextMenu` per ricevere il `ShowContextMenu` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="onshowui"></a>  CHtmlView::OnShowUI
 
@@ -1653,11 +1653,11 @@ Riservato per usi futuri.
 
 ### <a name="return-value"></a>Valore restituito
 
-Visualizzare [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) nel SDK di Windows per un elenco di valori.
+Visualizzare [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) nel SDK di Windows per un elenco di valori.
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnShowUI` per ricevere il `ShowUI` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnShowUI` per ricevere il `ShowUI` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
@@ -1756,7 +1756,7 @@ S_OK se l'operazione riesce, o in caso contrario S_FALSE.
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnTranslateAccelerator` per ricevere il `TranslateAccelerator` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnTranslateAccelerator` per ricevere il `TranslateAccelerator` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl
 
@@ -1786,7 +1786,7 @@ Indirizzo di un puntatore di stringa che riceve l'indirizzo dell'URL convertito.
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override `OnTranslateUrl` per ricevere il `TranslateUrl` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) nel SDK di Windows per altre informazioni.
+Eseguire l'override `OnTranslateUrl` per ricevere il `TranslateUrl` notifica dal controllo del Browser Web Microsoft. Visualizzare [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) nel SDK di Windows per altre informazioni.
 
 ##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI
 
@@ -2236,4 +2236,4 @@ Si applica a WebBrowser e Internet Explorer.
 [Esempio MFCIE di MFC](../../visual-cpp-samples.md)<br/>
 [Classe CFormView](../../mfc/reference/cformview-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
+[IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)

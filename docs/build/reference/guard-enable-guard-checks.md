@@ -2,12 +2,12 @@
 title: /GUARD (abilita i controlli di protezione)
 ms.date: 11/04/2016
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
-ms.openlocfilehash: 730e26477f4684ca6339a25a945ae04ff5a823c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d68b1d9df25874759ada7105ed6cad41168723bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565906"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418490"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (abilita i controlli di protezione)
 

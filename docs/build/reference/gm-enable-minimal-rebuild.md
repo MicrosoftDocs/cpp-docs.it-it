@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-ms.openlocfilehash: 7552da4764f009c0848f1d8f420f112be2d1120a
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: e83c7ed142b85e0d8369545ae8085bfce85bd162
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598808"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426732"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (Attiva ricompilazione minima)
 

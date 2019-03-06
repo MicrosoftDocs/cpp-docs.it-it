@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, creating
 - .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
-ms.openlocfilehash: c7d3b571a429d780c0c5eea0ad498499c615245f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a57e4eb23d40355094f4c8274a42ccb7e1b0e20
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589543"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420635"
 ---
 # <a name="pdb-use-program-database"></a>/PDB (Usa database di programma)
 

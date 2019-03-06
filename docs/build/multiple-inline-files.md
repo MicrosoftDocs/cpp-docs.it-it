@@ -6,12 +6,12 @@ helpviewer_keywords:
 - multiple inline files
 - NMAKE program, inline files
 ms.assetid: 6d381dcf-0ed8-45d1-8df3-b4598d860b99
-ms.openlocfilehash: ec531e5716098725782010927201ef57e2a8aa24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b41d448c89ac30d891c41d1ad1e314cbf9724a8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558158"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425614"
 ---
 # <a name="multiple-inline-files"></a>File inline multipli
 

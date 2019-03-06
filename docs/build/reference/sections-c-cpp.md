@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-ms.openlocfilehash: 7b6708e760a85a137a01718d07a5f167de849220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70c8d6e7188844a8721b37d5e80fb88a4e21ef9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485865"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412796"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 

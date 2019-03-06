@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8b15318ab7ae4233d6cf02a505ffe901bbe1d689
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d79f4b20499d964d407af61fa498b4579b6794d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516073"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424080"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (abilita la protezione del flusso di controllo)
 
@@ -26,7 +26,7 @@ Abilita la generazione dei controlli di sicurezza di Guard flusso di controllo n
 
 L'opzione **/guard:cf** fa in modo che il compilatore analizzi il flusso di controllo per verificare la presenza di destinazioni di chiamata indiretta in fase di compilazione e che quindi inserisca il codice per verificare le destinazioni in fase di esecuzione. Per impostazione predefinita, **/guard:cf** è disattivato e deve essere abilitato in modo esplicito. Per disabilitare in modo esplicito questa opzione, usare **/guard:cf-**.
 
-**Visual Studio 2017 e versioni successiva**: questa opzione aggiunge le protezioni per **switch** istruzioni che generano tabelle di collegamento.
+**Visual Studio 2017 e versioni successiva**: Questa opzione aggiunge le protezioni per **commutatore** istruzioni che generano tabelle di collegamento.
 
 Quando si specifica l'opzione **/guard:cf** (Guard flusso di controllo), il compilatore e il linker inseriscono controlli di sicurezza aggiuntivi in fase di esecuzione per rilevare i tentativi di violazione del codice. Durante la compilazione e il collegamento tutte le chiamate indirette presenti nel codice vengono analizzate allo scopo di individuare tutte le posizioni raggiungibili dal codice quando viene eseguito correttamente. Queste informazioni vengono archiviate in strutture aggiuntive nelle intestazioni dei file binari. Il compilatore inserisce anche un controllo prima di ogni chiamata indiretta presente nel codice al fine di garantire che la destinazione corrisponde a una delle posizioni verificate. Se il controllo eseguito su un sistema operativo compatibile con Guard flusso di controllo non riesce in fase di esecuzione, il programma viene chiuso dal sistema operativo.
 

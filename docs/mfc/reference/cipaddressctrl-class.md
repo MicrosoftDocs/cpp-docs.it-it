@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266294"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426394"
 ---
 # <a name="cipaddressctrl-class"></a>Classe CIPAddressCtrl
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 Stile del controllo indirizzo IP. Applicare una combinazione degli stili di finestra. È necessario includere lo stile WS_CHILD perché il controllo deve essere una finestra figlio. Visualizzare [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows per un elenco degli stili di windows.
 
 *rect*<br/>
-Un riferimento a dimensioni e la posizione del controllo indirizzo IP. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
+Un riferimento a dimensioni e la posizione del controllo indirizzo IP. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo indirizzo IP. Non deve essere NULL.
@@ -166,7 +166,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Stile del controllo indirizzo IP. Applicare una combinazione degli stili di finestra. È necessario includere lo stile WS_CHILD perché il controllo deve essere una finestra figlio. Visualizzare [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nel SDK di Windows per un elenco degli stili di windows.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.

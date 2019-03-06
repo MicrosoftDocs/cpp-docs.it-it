@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -LOADCONFIG dumpbin option
 - /LOADCONFIG dumpbin option
 ms.assetid: 24667afe-9bee-4f6e-ae72-f534c0050428
-ms.openlocfilehash: 602336f96df4802e8a5928e5d506d26db103cfe6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c34132f1f9cb5de9f28e83c401fe53145068975d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556520"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426336"
 ---
 # <a name="loadconfig"></a>/LOADCONFIG
 

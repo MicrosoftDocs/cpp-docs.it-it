@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -FIXED linker option
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
-ms.openlocfilehash: 12ba2d977ecca4805aa01ade1a6ea8239e07716e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccb89b7dfed78ddebf73aaf6e2a1a8529b065042
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423040"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Indirizzo di base fisso)
 

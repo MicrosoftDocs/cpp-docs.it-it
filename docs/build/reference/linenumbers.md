@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -LINENUMBERS dumpbin option
 - /LINENUMBERS dumpbin option
 ms.assetid: 1681d582-2c2f-484e-9920-109959549055
-ms.openlocfilehash: af6e3c7c3693bd95924a86640399b15eb3378ed7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aec21026ded821f9a87e7c0c2aeefd13a927a401
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663749"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417307"
 ---
 # <a name="linenumbers"></a>/LINENUMBERS
 

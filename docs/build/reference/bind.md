@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /BIND editbin option
 - import address table
 ms.assetid: 3772b330-1868-4c90-857d-c31faa867982
-ms.openlocfilehash: 671a26268ab07db4a38ae241ae1e0867dd0eb43c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb364f951e97da6a3c4950290669d835e4c24be4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470850"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418919"
 ---
 # <a name="bind"></a>/BIND
 

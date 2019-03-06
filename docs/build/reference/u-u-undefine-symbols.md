@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 1ccda218a2bccc261653016ad6a47d419ddacfd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624445"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413043"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Annulla la definizione dei simboli)
 
@@ -33,7 +33,7 @@ Il **/U** opzione del compilatore non definisce il simbolo del preprocessore spe
 
 ## <a name="arguments"></a>Argomenti
 
-*Simbolo*<br/>
+*symbol*<br/>
 Il simbolo del preprocessore per rimuovere la definizione.
 
 ## <a name="remarks"></a>Note
@@ -46,12 +46,12 @@ Per impostazione predefinita, il compilatore definisce i simboli seguenti specif
 
 |Simbolo|Funzione|
 |------------|--------------|
-|CHAR_UNSIGNED|Tipo char predefinito è senza segno. Definita se la [/J](../../build/reference/j-default-char-type-is-unsigned.md) opzione specificata.|
-|CPPRTTI|Definita per il codice compilato con il [/GR](../../build/reference/gr-enable-run-time-type-information.md) opzione.|
+|_CHAR_UNSIGNED|Tipo char predefinito è senza segno. Definita se la [/J](../../build/reference/j-default-char-type-is-unsigned.md) opzione specificata.|
+|_CPPRTTI|Definita per il codice compilato con il [/GR](../../build/reference/gr-enable-run-time-type-information.md) opzione.|
 |_CPPUNWIND|Definita per il codice compilato con il [/EHsc](../../build/reference/eh-exception-handling-model.md) opzione.|
-|DLL|Definita se la [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) opzione specificata.|
+|_DLL|Definita se la [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) opzione specificata.|
 |_M_IX86|Per impostazione predefinita, definito a 600 x86 a destinazioni.|
-|MSC_VER|Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md).|
+|_MSC_VER|Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md).|
 |_WIN32|Definita per le applicazioni WIN32. Sempre definita.|
 |_MT|Definita se la [/MD o /MT](../../build/reference/md-mt-ld-use-run-time-library.md) opzione specificata.|
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 3d38b2a70fc3510b2c26942dc3e5e6fdd76a28e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f59cc83c06bbaaccba911c44835247253cb264b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550527"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416891"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 

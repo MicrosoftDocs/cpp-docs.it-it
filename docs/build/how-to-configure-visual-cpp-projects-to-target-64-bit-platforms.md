@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: configurare progetti di Visual C++ a 64 Bit, come destinazione x64 piattaforme'
+title: 'Procedura: Configurare i progetti di Visual C++ a 64 Bit, come destinazione x64 piattaforme'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523937"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421373"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Procedura: configurare progetti di Visual C++ a 64 Bit, come destinazione x64 piattaforme
+# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Procedura: Configurare i progetti di Visual C++ a 64 Bit, come destinazione x64 piattaforme
 
 È possibile utilizzare le configurazioni di progetto nell'IDE di Visual Studio per configurare le applicazioni C++ di destinazione a 64 bit x64 piattaforme. È anche possibile eseguire la migrazione di impostazioni di progetto Win32 in una configurazione di progetto a 64 bit.
 
@@ -47,9 +47,9 @@ ms.locfileid: "51523937"
 
   - **Registra output** viene disattivata. Per altre informazioni, vedere [Linker Property Pages](../ide/linker-property-pages.md).
 
-  - **Ambiente di destinazione** viene impostata su **/env x64**. Per altre informazioni, vedere [MIDL Property Pages: General](../ide/midl-property-pages-general.md).
+  - **Ambiente di destinazione** viene impostata su **/env x64**. Per altre informazioni, vedere [pagine delle proprietà MIDL: Generale](../ide/midl-property-pages-general.md).
 
-  - **Convalida parametri** viene deselezionata e viene ripristinato il valore predefinito. Per altre informazioni, vedere [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).
+  - **Convalida parametri** viene deselezionata e viene ripristinato il valore predefinito. Per altre informazioni, vedere [pagine delle proprietà MIDL: Advanced](../ide/midl-property-pages-advanced.md).
 
   - Se l'opzione **Formato informazioni di debug** è stata impostata su **/ZI** nella configurazione del progetto Win32, viene impostata su **/Zi** nella configurazione del progetto a 64 bit. Per altre informazioni, vedere [/Z7, /Zd, /Zi, /ZI (Formato informazioni di debug)](../build/reference/z7-zi-zi-debug-information-format.md).
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 4b71fc43c3766f9a039d841b8872dee99210fe8c
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 01b9012a2b32c22b86968b1ea0895bdc9ceabb13
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556751"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417723"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
 
@@ -109,7 +109,7 @@ bool AddProperty(DWORD dwPropertyID,
 *bValue*<br/>
 [in] Oggetto `BYTE` o un valore booleano utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
 
-*nValore*<br/>
+*nValue*<br/>
 [in] Valore intero utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
 
 *fltValue*<br/>
@@ -127,7 +127,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> CDBPropSet:: CDBPropSet
 
-Costruttore. Inizializza la `rgProperties`, `cProperties`, e `guidPropertySet` campi del [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struttura.
+Costruttore. Inizializza la `rgProperties`, `cProperties`, e `guidPropertySet` campi del [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struttura.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -160,7 +160,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parametri
 
 *guid*<br/>
-[in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struttura.
+[in] GUID utilizzato per impostare il `guidPropertySet` campo il [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struttura.
 
 ### <a name="remarks"></a>Note
 
@@ -181,5 +181,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-[Struttura DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))
-[struttura DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))
+[Struttura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
+[struttura DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

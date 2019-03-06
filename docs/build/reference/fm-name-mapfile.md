@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-ms.openlocfilehash: 49a3d20aee54b06bae2670be139d748fd2aaca6d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f6290d3dfa4aaadfc9247fd8453d378851328a1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469852"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418732"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Specifica file map)
 

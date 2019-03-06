@@ -8,12 +8,12 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-ms.openlocfilehash: 71162d896ee76d99f5d47dfa670b62d456243837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa759482d6949b27f5076643d83e92cddc1d8fac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445682"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416566"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Utilizzo di librerie di importazione e file di esportazione
 

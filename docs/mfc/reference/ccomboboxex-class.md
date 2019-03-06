@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44943803fdb422ccbf77302e7c81f23c34cc7433
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265938"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420761"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (classe)
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Specifica la combinazione degli stili casella combinata applicato alla casella combinata. Visualizzare **osservazioni** sotto per altre informazioni sugli stili.
 
 *rect*<br/>
-Un riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, ovvero la posizione e dimensioni della casella combinata.
+Un riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura, ovvero la posizione e dimensioni della casella combinata.
 
 *pParentWnd*<br/>
 Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre della casella combinata (in genere un `CDialog`). Non deve essere NULL.
@@ -210,7 +210,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Stile del controllo casella combinata. Visualizzare [Create](#create) per un elenco degli stili.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.

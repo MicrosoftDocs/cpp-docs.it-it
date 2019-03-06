@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINKERMEMBER dumpbin option
 - -LINKERMEMBER dumpbin option
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
-ms.openlocfilehash: e55f613566b5c3bd7709fe7f30cd0ae985cd369f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8669198ee62032e15e40c821ed2e4caccdebe519
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494440"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417489"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
 

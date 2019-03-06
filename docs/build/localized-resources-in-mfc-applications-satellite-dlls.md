@@ -12,12 +12,12 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: e9f9b751da6339cbe8f352bdb7eee4b7af2c359b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d479599acceac29f0f2ee54857c663c81a919acf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658003"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420401"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Risorse localizzate in applicazioni MFC: DLL satellite
 
@@ -29,7 +29,7 @@ MFC tenta di caricare la DLL risorse per ognuna delle lingue seguenti nell'ordin
 
 1. Dell'interfaccia utente lingua predefinita dell'utente corrente, come restituito dall'API Win32 GetUserDefaultUILanguage().
 
-1. Lingua di interfaccia utente predefinita dell'utente corrente, senza alcuna sottolingua (vale a dire, ENC [inglese (Canada)] diventa ita [US Inglese]).
+1. Lingua di interfaccia utente predefinita dell'utente corrente, senza alcuna sottolingua (vale a dire, ENC [inglese (Canada)] diventa ita [US English]).
 
 1. La lingua predefinita del sistema dell'interfaccia utente, come restituito dall'API di GetSystemDefaultUILanguage (). In altre piattaforme, questa è la lingua del sistema operativo stesso.
 
@@ -54,4 +54,4 @@ Se nessuna di queste DLL vengono trovata, MFC Usa le risorse in LangExample.exe.
 ## <a name="see-also"></a>Vedere anche
 
 [DLL in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[TN057: localizzazione di componenti MFC](../mfc/tn057-localization-of-mfc-components.md)
+[TN057: Localizzazione di componenti MFC](../mfc/tn057-localization-of-mfc-components.md)

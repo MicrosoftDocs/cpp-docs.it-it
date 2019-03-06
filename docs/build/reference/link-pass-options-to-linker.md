@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: dfa39988782a0c5bd121b6e18402d3f6b67a13e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5e57a19f337653cdab6f66404b9458e1e7fed0d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574928"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412835"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (passaggio delle opzioni al linker)
 
@@ -30,7 +30,7 @@ Passa una o più opzioni del linker al linker.
 
 ## <a name="arguments"></a>Argomenti
 
-*linkeroption*<br/>
+*linkeroptions*<br/>
 L'opzione del linker o le opzioni da passare al linker.
 
 ## <a name="remarks"></a>Note

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: e5e7a60bf4607be55525b587df4942875126b50e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31570b1e6680b5af5f0a774c290eba20f3b5fdb0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556676"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413186"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilazione di una libreria di importazione e di un file di esportazione
 
@@ -50,17 +50,17 @@ Questi sono gli stessi metodi che consente di specificare le esportazioni durant
 
 Le opzioni seguenti si applicano alla creazione di una libreria di importazione ed esportazione file:
 
-> **/ Ingresso uscita:** *importare*
+> **/OUT:** *import*
 
 Esegue l'override del nome di file di output predefinito per il *importare* libreria da creare. Quando l'opzione /OUT non viene specificato, il nome predefinito è il nome di base del primo file oggetto o della libreria nel comando LIB e l'estensione. lib. Il file di esportazione viene assegnato lo stesso nome di base come la libreria di importazione e l'estensione. exp.
 
-> **/Export:** *entryname* \[ **=** *internalname*]\[,**\@** <em>ordinale</em>\[, **NONAME**]]\[, **dati**]
+> **/EXPORT:** *entryname*\[**=** *internalname*]\[,**\@**<em>ordinal</em>\[, **NONAME**]]\[, **DATA**]
 
 Esporta una funzione dal programma per consentire ad altri programmi chiamare la funzione. È anche possibile esportare dati (tramite il **dati** parola chiave). Le esportazioni sono in genere definite in una DLL.
 
 Il *entryname* è il nome dell'elemento dati o funzione deve essere utilizzato dal programma chiamante. Facoltativamente, è possibile specificare il *internalname* come la funzione nota nel programma di definizione; per impostazione predefinita *internalname* equivale a *entryname*. Il *ordinale* specifica un indice nella tabella di esportazione nell'intervallo da 1 a 65.535; se non si specifica *ordinale*, ne viene assegnato uno. Il **NONAME** parola chiave consente di esportare la funzione solo come un numero ordinale, senza un' *entryname*. Il **dati** parola chiave viene usata per esportare gli oggetti di soli dati.
 
-> **/ INCLUDONO:** *simbolo*
+> **/INCLUDE:** *symbol*
 
 Aggiunge l'oggetto specificato *simbolo* alla tabella dei simboli. Questa opzione è utile per imporre l'uso di un oggetto libreria che altrimenti non sarebbero incluso.
 
