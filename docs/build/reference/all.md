@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALL dumpbin option
 - ALL dumpbin option
 ms.assetid: aa7eb74a-33ba-4d77-8620-3d7ea8b19952
-ms.openlocfilehash: 7a68f5b53745bba63539fbd7d5ccc8d36c2e01d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4289f256886abad87266e1ad82a6b6f4c6efb0a0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656894"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412757"
 ---
 # <a name="all"></a>/ALL
 

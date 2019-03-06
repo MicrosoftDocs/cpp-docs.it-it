@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303670"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413927"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Specifica la combinazione degli stili di Windows applicata al controllo calendario mensile. Visualizzare [mese degli stili del controllo calendario](/windows/desktop/Controls/month-calendar-control-styles) nel SDK di Windows per altre informazioni sugli stili.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura. Contiene la posizione e le dimensioni del controllo calendario mensile.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura. Contiene la posizione e le dimensioni del controllo calendario mensile.
 
 *pt*<br/>
-Un riferimento a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che identifica la posizione del controllo calendario mensile.
+Un riferimento a un [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che identifica la posizione del controllo calendario mensile.
 
 *pParentWnd*<br/>
 Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo calendario mensile. Non deve essere NULL.
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 La visualizzazione corrente è indicato da uno dei valori seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |MCMV_MONTH|Visualizzazione mensile|
 |MCMV_YEAR|Visualizzazione annuale|
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parametri
 
 *pRect*<br/>
-Un puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceverà le informazioni rettangolo di delimitazione. Questo parametro deve essere un indirizzo valido e non può essere NULL.
+Un puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceverà le informazioni rettangolo di delimitazione. Questo parametro deve essere un indirizzo valido e non può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -634,7 +634,7 @@ Un puntatore a un `COleDateTime` oggetti, una `CTime` oggetto, o [SYSTEMTIME](/w
 
 Un valore DWORD che può essere zero (limiti non sono impostati) o una combinazione dei valori seguenti che specificano le informazioni sul limite.
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |GDTR_MAX|È impostato un limite massimo per il controllo; *pMaxRange* sia valido e contiene le informazioni sulla data applicabile.|
 |GDTR_MIN|Per il controllo; è impostato un limite minimo *pMinRange* sia valido e contiene le informazioni sulla data applicabile.|
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*lpRect*|[in] Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che definisce un rettangolo che contiene il numero desiderato di calendari.|
+|*lpRect*|[in] Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che definisce un rettangolo che contiene il numero desiderato di calendari.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che definisce un rettangolo la cui dimensione è minore o uguale al rettangolo definito dalle *lpRect* parametro.
+Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che definisce un rettangolo la cui dimensione è minore o uguale al rettangolo definito dalle *lpRect* parametro.
 
 ### <a name="remarks"></a>Note
 

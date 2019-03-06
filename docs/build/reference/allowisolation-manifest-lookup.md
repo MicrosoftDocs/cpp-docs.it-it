@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: 7b2cb4160a0d25aa65d2c5eb345ba1bc08b1c6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2309a237ccd7ccb18a11b180c4f91bbf9055d70b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428093"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418334"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Ricerca di manifesti)
 

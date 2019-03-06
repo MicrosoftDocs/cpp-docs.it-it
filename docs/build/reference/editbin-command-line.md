@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, command line
 ms.assetid: 28ff7f92-6c4e-4e7f-86d8-80d5b2f91662
-ms.openlocfilehash: c19b2f2018caf380c7ac3a09c65955c924fed3e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0397372d630dcb23059ce9c20416f72d81cf1645
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665829"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426667"
 ---
 # <a name="editbin-command-line"></a>Riga di comando EDITBIN
 

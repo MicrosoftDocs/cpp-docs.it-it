@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-ms.openlocfilehash: 7c1d78758e43bf8e0c2c281c495c81e9f62b36e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2970f4e6d94cfa2e6315eeff85eb71a30dc032a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473905"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422429"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Collegamento a risorse .NET Framework)
 
@@ -35,7 +35,7 @@ Le risorse collegate sono pubbliche nell'assembly quando viene creato con il lin
 
 /ASSEMBLYLINKRESOURCE richiede che la compilazione includa [/clr](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) oppure [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) non è consentita con /ASSEMBLYLINKRESOURCE.
 
-Se *nomefile* è un file di risorse .NET Framework creato ad esempio, dal [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di **System. Resources** dello spazio dei nomi. Per altre informazioni, vedere [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi nel **System** classe per accedere alla risorsa in fase di esecuzione.
+Se *nomefile* è un file di risorse .NET Framework creato ad esempio, dal [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri di **System. Resources** dello spazio dei nomi. Per altre informazioni, vedere [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager). Per tutte le altre risorse, usare il **GetManifestResource** \* metodi nel **System** classe per accedere alla risorsa in fase di esecuzione.
 
 *nome del file* può avere qualsiasi formato di file. Ad esempio, è possibile apportare una DLL nativa parte dell'assembly, per cui può essere installato nella Global Assembly Cache e accedervi dal codice gestito nell'assembly.
 

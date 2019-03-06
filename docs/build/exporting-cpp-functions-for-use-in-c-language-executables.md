@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-ms.openlocfilehash: eaa742fc2738ef4aeeb54bb8fd2b0da923ac57de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86d771f8dcb9ee1ef137b7766f249a1dda7257db
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667428"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426485"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C
 

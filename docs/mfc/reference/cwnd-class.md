@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276546"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426264"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1822,7 +1822,7 @@ Specifica le coordinate client del punto da sottoporre a test.
 *nflags*<br/>
 Specifica le finestre figlio da ignorare. Questo parametro può essere una combinazione dei valori seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |CWP_ALL|Non ignorare tutte le finestre figlio|
 |CWP_SKIPINVISIBLE|Ignorare le finestre figlio invisibili|
@@ -1970,7 +1970,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 Identifica l'oggetto a cui accede il proxy Active Accessibility. Può essere uno dei valori seguenti
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |OBJID_CLIENT|Si riferisce all'area client della finestra.|
 
@@ -2685,10 +2685,10 @@ BOOL DrawAnimatedRects(
 Specifica il tipo di animazione. Se si specifica IDANI_CAPTION, la didascalia della finestra viene animato dalla posizione specificata da *lprcFrom* nella posizione specificata da *lprcTo*. L'effetto è simile alla riduzione o ingrandimento di una finestra.
 
 *lprcFrom*<br/>
-Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica la posizione e le dimensioni dell'icona o finestra ridotta a icona.
+Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che specifica la posizione e le dimensioni dell'icona o finestra ridotta a icona.
 
 *lprcTo*<br/>
-Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica la posizione e dimensione della finestra ripristinata
+Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che specifica la posizione e dimensione della finestra ripristinata
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -6542,7 +6542,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Value|Descrizione|
+|Valore|Descrizione|
 |-----------|-----------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|
@@ -9648,7 +9648,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|

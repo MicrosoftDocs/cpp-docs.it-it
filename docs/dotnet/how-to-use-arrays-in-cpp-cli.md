@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: utilizzare matrici in C++/CLI'
+title: 'Procedura: Usare matrici in C + + / CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: e38e15cffbf623f629f57243923ddae273801bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0a13441bc3532884dbbd32f28d57c15e352c3ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596248"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414603"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>Procedura: utilizzare matrici in C++/CLI
+# <a name="how-to-use-arrays-in-ccli"></a>Procedura: Usare matrici in C + + / CLI
 
 Questo articolo descrive come usare matrici in C + + / CLI.
 
@@ -503,7 +503,7 @@ int main() {
 
 A differenza delle matrici C++ standard, le matrici gestite derivano in modo implicito da una classe di base della matrice da cui ereditano il comportamento comune. Un esempio è il `Sort` metodo, che può essere usato per ordinare gli elementi in tutte le matrici.
 
-Per le matrici che contengono tipi intrinseci di base, è possibile chiamare il `Sort` (metodo). È possibile eseguire l'override di criteri di ordinamento e tale operazione è necessaria quando si desidera eseguire l'ordinamento per le matrici di tipi complessi. In questo caso, il tipo di elemento di matrice deve implementare il [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) (metodo).
+Per le matrici che contengono tipi intrinseci di base, è possibile chiamare il `Sort` (metodo). È possibile eseguire l'override di criteri di ordinamento e tale operazione è necessaria quando si desidera eseguire l'ordinamento per le matrici di tipi complessi. In questo caso, il tipo di elemento di matrice deve implementare il <xref:System.IComparable.CompareTo%2A> (metodo).
 
 ```cpp
 // array_sort.cpp
@@ -520,7 +520,7 @@ int main() {
 
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Ordinamento di matrici mediante criteri personalizzati
 
-Per ordinare le matrici che contengono tipi intrinseci di base, è sufficiente chiamare il `Array::Sort` (metodo). Tuttavia, per le matrici di ordinamento che contengono i tipi complessi o eseguire l'override di criteri di ordinamento predefiniti, eseguire l'override di [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) (metodo).
+Per ordinare le matrici che contengono tipi intrinseci di base, è sufficiente chiamare il `Array::Sort` (metodo). Tuttavia, per le matrici di ordinamento che contengono i tipi complessi o eseguire l'override di criteri di ordinamento predefiniti, eseguire l'override di <xref:System.IComparable.CompareTo%2A> (metodo).
 
 Nell'esempio seguente, una struttura denominata `Element` deriva dal <xref:System.IComparable>e offre un <xref:System.IComparable.CompareTo%2A> metodo che usa la media dei due numeri interi come criterio di ordinamento.
 

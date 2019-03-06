@@ -6,12 +6,12 @@ helpviewer_keywords:
 - macros, NMAKE
 - NMAKE program, defining macros
 ms.assetid: 0fc59ec5-5f58-4644-b7da-7b021f7001af
-ms.openlocfilehash: 130863f8c5640a0c4915734732d93fc00d3d6479
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5e853627f5d337e3f0587cb41fdc77e7eeb4f5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656248"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417918"
 ---
 # <a name="where-to-define-macros"></a>Definizione delle macro
 

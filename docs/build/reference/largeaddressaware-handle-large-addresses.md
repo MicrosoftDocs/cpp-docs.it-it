@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -LARGEADDRESSAWARE linker option
 - /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
-ms.openlocfilehash: 6a83ac89c6ddf14885107193b32d9b7fe7853659
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ea26a87ce85f71188ca77345e4af055d3ffbf0e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543053"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413745"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (Gestione di indirizzi di grandi dimensioni)
 

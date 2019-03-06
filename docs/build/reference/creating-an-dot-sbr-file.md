@@ -9,12 +9,12 @@ helpviewer_keywords:
 - local symbols in browse information
 - symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-ms.openlocfilehash: 63f007e567f3c1db556ba6a7f0c1a354c449f31b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54cf19a7024f6f0a1db33e1f1ccde15cde95301b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501006"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418529"
 ---
 # <a name="creating-an-sbr-file"></a>Creazione di un file SBR
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 300908ce-ae00-4b45-964b-e4e69ff6777b
-ms.openlocfilehash: e5dd07f52f853b17bf663e2fbad7dbe66a3a1db7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d87e3214d4829f81258acd00abebced34d7d969d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633534"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423690"
 ---
 # <a name="order-of-cl-options"></a>Ordine delle opzioni CL
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 55be8f381b39ee566b389350ff70a9b0a3fe7694
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702068"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420271"
 ---
 # <a name="x64-software-conventions"></a>x64 convenzioni del software
 
@@ -185,7 +185,7 @@ Se si richiede un allineamento più rigido, utilizzare `__declspec(align(N))` le
 
 ## <a name="register-usage"></a>Utilizzo dei registri
 
-X64 architettura fornisce 16 registri per utilizzo generico (in seguito indicati come registri integer), nonché 16 registri XMM/YMM registra disponibili per l'uso con virgola mobile. I registri volatili sono registri temporanei che il chiamante suppone vengano eliminati definitivamente con una chiamata. I registri non volatili devono conservare i relativi valori durante le chiamate di funzione e, se usati, devono essere salvati dal chiamante.
+X64 architettura fornisce 16 registri per utilizzo generico (in seguito indicati come registri integer), nonché 16 registri XMM/YMM registra disponibili per l'uso con virgola mobile. I registri volatili sono registri temporanei che il chiamante suppone vengano eliminati con una chiamata. I registri non volatili devono conservare i relativi valori durante le chiamate di funzione e, se usati, devono essere salvati dal chiamante.
 
 ### <a name="register-volatility-and-preservation"></a>Registrare la volatilità e conservazione
 

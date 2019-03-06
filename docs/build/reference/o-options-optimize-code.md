@@ -9,12 +9,12 @@ helpviewer_keywords:
 - performance, cle.exe compiler
 - cl.exe compiler, performance
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
-ms.openlocfilehash: f4e2bf8b848654f7b87c59e7a54994448ee62d51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d884da19936949f2feeb96cb1fb88057d5dcd948
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481328"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419699"
 ---
 # <a name="o-options-optimize-code"></a>Opzioni /O (Ottimizza codice)
 

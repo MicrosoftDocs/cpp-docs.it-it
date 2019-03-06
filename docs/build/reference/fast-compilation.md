@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - fast compiling
 ms.assetid: 5fead136-ba69-40c8-8e25-236f89d5990a
-ms.openlocfilehash: ab3171d7bb6d85cbe010e0efce39eda14b166527
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e613e12eb9089348ea3f82bc5fac43d569a89f35
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667652"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426160"
 ---
 # <a name="fast-compilation"></a>Compilazione veloce
 

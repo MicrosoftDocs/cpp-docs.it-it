@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 7ae600b50f791555dddb31fc4b46dcaf85ebd727
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 500e1eca9385697829edca46e5e703a5238684a7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650737"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422371"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Imposta la dimensione dell'heap)
 

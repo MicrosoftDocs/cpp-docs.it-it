@@ -13,12 +13,12 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-ms.openlocfilehash: 30d15105b9fe502e89f77b19e530d6cc762975a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bb355635181c3db53e1171aaf18cd665e6504ae
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505495"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426355"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Metodo di rappresentazione)
 

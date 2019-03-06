@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-ms.openlocfilehash: 1fd06b17ca0cfb1583b3014fb2c8f02b5e5a5437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 368bd469a303222ef4d5177677de4940e402b6de
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629918"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413108"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Attiva collegamento a livello di funzione)
 

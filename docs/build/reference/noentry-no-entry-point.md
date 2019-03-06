@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /NOENTRY linker option [C++]
 - DLLs [C++], creating
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
-ms.openlocfilehash: fef4340fa4bb130ac54f4d5e66d4cd4d2f2a3049
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28a9e09c4a78623c2cda2f8802ba4e1c1435d093
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607363"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423743"
 ---
 # <a name="noentry-no-entry-point"></a>/NOENTRY (nessun punto di ingresso)
 

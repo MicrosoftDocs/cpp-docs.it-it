@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551333"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414629"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Differenze nel comportamento di gestione delle eccezioni in /CLR
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> Rigenerazione con associazione
 
-**/CLR** non supporta la rigenerazione delle eccezioni all'esterno di un gestore catch (nota come rigenerazione). Le eccezioni di questo tipo vengono trattate come una rigenerazione C++ standard. Se viene riscontrata una rigenerazione con associazione rimossa in presenza di un'eccezione gestita attiva, l'eccezione viene sottoposta a wrapping come un'eccezione C++, quindi viene rigenerata. Le eccezioni di questo tipo possono essere rilevate solo come un'eccezione di tipo [System:: SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx).
+**/CLR** non supporta la rigenerazione delle eccezioni all'esterno di un gestore catch (nota come rigenerazione). Le eccezioni di questo tipo vengono trattate come una rigenerazione C++ standard. Se viene riscontrata una rigenerazione con associazione rimossa in presenza di un'eccezione gestita attiva, l'eccezione viene sottoposta a wrapping come un'eccezione C++, quindi viene rigenerata. Le eccezioni di questo tipo possono essere rilevate solo come un'eccezione di tipo <xref:System.Runtime.InteropServices.SEHException>.
 
 Nell'esempio seguente viene illustrata un'eccezione gestita rigenerata come un'eccezione C++:
 

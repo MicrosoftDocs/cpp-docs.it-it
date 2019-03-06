@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 4d6490691583162fc95042601bd85566f693d049
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17acde51d3fa9a7fabf14de748fd60b126b8b8f3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629138"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418841"
 ---
 # <a name="dll-frequently-asked-questions"></a>Domande frequenti relative alle DLL
 

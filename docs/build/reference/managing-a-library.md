@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477064"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419611"
 ---
 # <a name="managing-a-library"></a>Gestione di una libreria
 
@@ -66,16 +66,16 @@ Le opzioni seguenti si applicano alla creazione e modifica di una libreria:
 **/LIBPATH:** *dir*<br/>
 Esegue l'override del percorso delle librerie dell'ambiente. Per informazioni dettagliate, vedere la descrizione del collegamento [/LIBPATH](../../build/reference/libpath-additional-libpath.md) opzione.
 
-**/ LIST**<br/>
+**/LIST**<br/>
 Visualizza le informazioni sulla libreria di output nell'output standard. L'output può essere reindirizzato a un file. È possibile utilizzare /LIST per determinare il contenuto di una libreria esistente senza modificarla.
 
-**/ NOME:** *nomefile*<br/>
+**/NAME:** *filename*<br/>
 Quando si compila una libreria di importazione, specifica il nome della DLL per il quale viene compilata la libreria di importazione.
 
 **/NODEFAULTLIB**<br/>
 Rimuove uno o più librerie predefinite dall'elenco delle librerie di che viene eseguita la ricerca durante la risoluzione di riferimenti esterni. Visualizzare [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) per altre informazioni.
 
-**/ Ingresso uscita:** *nomefile*<br/>
+**/OUT:** *filename*<br/>
 Sostituisce il nome di file di output predefinito. Per impostazione predefinita, la libreria di output viene creata nella directory corrente, con il nome base del primo file di libreria o un oggetto nella riga di comando e l'estensione. lib.
 
 **/ Rimuovi:** *oggetto*<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - O1 compiler option [C++]
 - /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-ms.openlocfilehash: 565cfd509e48b012581ecd6243507c60810338b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8074d4308974673c18dffb45ae580d43f3a377b3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596898"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415545"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Riduci dimensione, Ottimizza velocità)
 
@@ -29,7 +29,7 @@ Seleziona un set predefinito di opzioni che influiscono sulle dimensioni e la ve
 
 ## <a name="syntax"></a>Sintassi
 
-> / / O2 O1
+> /O1 /O2
 
 ## <a name="remarks"></a>Note
 

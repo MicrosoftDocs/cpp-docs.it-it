@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 776123baa0d53ac2a1777849b60d35cf0d93a172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557089"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426225"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
@@ -139,7 +139,7 @@ Una classe di funzione di accesso.
 |[CBulkRowset](#cbulkrowset)|Costruttore.|
 |[MoveFirst](#movefirst)|Recupera la prima riga di dati, eseguire il nuovo recupero bulk se necessario.|
 |[MoveLast](#movelast)|Passa all'ultima riga.|
-|[Metodo MoveNext](#movenext)|Recupera la riga successiva di dati.|
+|[MoveNext](#movenext)|Recupera la riga successiva di dati.|
 |[MovePrev](#moveprev)|Passa alla riga precedente.|
 |[MoveToBookmark](#movetobookmark)|Recupera la riga contrassegnata da un segnalibro o la riga in corrispondenza di un offset specificato da questo segnalibro.|
 |[MoveToRatio](#movetoratio)|Recupera le righe a partire da una posizione frazionaria nel set di righe.|
@@ -152,9 +152,9 @@ Nell'esempio seguente viene illustrato l'utilizzo del `CBulkRowset` classe.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a> CBulkRowset:: Addrefrows
+## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Le chiamate [IRowset:: Addrefrows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) incrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.
+Le chiamate [IRowset:: Addrefrows](/previous-versions/windows/desktop/ms719619(v=vs.85)) incrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -166,7 +166,7 @@ HRESULT AddRefRows() throw();
 
 Un valore HRESULT standard.
 
-## <a name="cbulkrowset"></a> CBulkRowset:: CBulkRowset
+## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
 
 Crea un nuovo `CBulkRowset` dell'oggetto e imposta il numero di riga predefinito su 10.
 
@@ -176,7 +176,7 @@ Crea un nuovo `CBulkRowset` dell'oggetto e imposta il numero di riga predefinito
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a> CBulkRowset:: MoveFirst
+## <a name="movefirst"></a> CBulkRowset::MoveFirst
 
 Recupera la prima riga di dati.
 
@@ -190,7 +190,7 @@ HRESULT MoveFirst() throw();
 
 Un valore HRESULT standard.
 
-## <a name="movelast"></a> CBulkRowset:: MoveLast
+## <a name="movelast"></a> CBulkRowset::MoveLast
 
 Passa all'ultima riga.
 
@@ -204,7 +204,7 @@ HRESULT MoveLast() throw();
 
 Un valore HRESULT standard.
 
-## <a name="movenext"></a> CBulkRowset:: MoveNext
+## <a name="movenext"></a> CBulkRowset::MoveNext
 
 Recupera la riga successiva di dati.
 
@@ -218,7 +218,7 @@ HRESULT MoveNext() throw();
 
 Un valore HRESULT standard. Quando è stata raggiunta la fine del set di righe, restituisce DB_S_ENDOFROWSET.
 
-## <a name="moveprev"></a> CBulkRowset:: MovePrev
+## <a name="moveprev"></a> CBulkRowset::MovePrev
 
 Passa alla riga precedente.
 
@@ -232,7 +232,7 @@ HRESULT MovePrev() throw();
 
 Un valore HRESULT standard.
 
-## <a name="movetobookmark"></a> CBulkRowset:: MoveToBookmark
+## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
 
 Recupera la riga contrassegnata da un segnalibro o la riga in corrispondenza di un offset specificato (*lSkip*) dal segnalibro.
 
@@ -245,7 +245,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parametri
 
-*Segnalibro*<br/>
+*bookmark*<br/>
 [in] Un segnalibro contrassegna la posizione da cui si desidera recuperare i dati.
 
 *lSkip*<br/>
@@ -253,9 +253,9 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>Valore restituito
 
-Visualizzare [IRowset:: GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
-## <a name="movetoratio"></a> CBulkRowset:: Movetoratio
+## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
 Recupera le righe a partire da una posizione frazionaria nel set di righe.
 
@@ -284,11 +284,11 @@ Un valore HRESULT standard.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-In cui `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+In cui `RowsetSize` è la dimensione del set di righe, misurata in righe. L'accuratezza di questa formula dipende dal provider specifico. Per informazioni dettagliate, vedere [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
-## <a name="releaserows"></a> CBulkRowset:: ReleaseRows
+## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Le chiamate [:: ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) per decrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.
+Le chiamate [:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) per decrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -300,7 +300,7 @@ HRESULT ReleaseRows() throw();
 
 Un valore HRESULT standard.
 
-## <a name="setrows"></a> CBulkRowset:: setRows
+## <a name="setrows"></a> CBulkRowset::SetRows
 
 Imposta il numero di handle di riga recuperati da ogni chiamata.
 

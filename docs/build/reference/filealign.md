@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -FILEALIGN linker option
 - FILEALIGN linker option
 ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
-ms.openlocfilehash: d218ce4793e68fe3b700a0776fa5db665568f736
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2f46796a939d068c893e397499a42fe0bf6f41a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494581"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417970"
 ---
 # <a name="filealign-align-sections-in-files"></a>/FILEALIGN (Allinea le sezioni nei file)
 

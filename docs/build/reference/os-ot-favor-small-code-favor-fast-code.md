@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: aa404641a42b0209e8436ca206e59a3b5f425133
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2abf23c15e6550a6d115f2e2b41a9c59de5fa3a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565958"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424639"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocità codice)
 
@@ -46,7 +46,7 @@ Se si usa **/Os** oppure **/Ot**, quindi è necessario specificare anche [/Og](.
 > [!NOTE]
 >  Informazioni raccolte dalle esecuzioni dei test di profilatura sostituiranno le ottimizzazioni che verrebbero altrimenti effetto se si specifica **/Ob**, **/Os**, o **/Ot**. Per altre informazioni, [le ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md).
 
-**x86 specifico**
+**x86 Specific**
 
 Esempio di codice seguente illustra la differenza tra Ottimizza per dimensione codice (**/Os**) le opzioni e Ottimizza per velocità codice (**/Ot**) opzione:
 

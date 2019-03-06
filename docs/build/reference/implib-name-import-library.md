@@ -10,16 +10,16 @@ helpviewer_keywords:
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-ms.openlocfilehash: 268a091d3e0bc825acae96dafc5d92ffa11c7bc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d3793b11e7bd0430c94d89f9d40ec3627c4eb20
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589579"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413355"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (Assegna un nome alla libreria di importazione)
 
-> /IMPLIB:*nomefile*
+> /IMPLIB:*filename*
 
 ## <a name="parameters"></a>Parametri
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - macros, NMAKE
 - substitution macros in NMAKE
 ms.assetid: 47465cfe-fd92-49db-aebe-7c2d7ecceb73
-ms.openlocfilehash: 8daaa55418839fa969cf3a31efa092fcf21487e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d82aed5a34b7cafad0e40146470972dc6ff02424
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616086"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414681"
 ---
 # <a name="macro-substitution"></a>Sostituzione di macro
 

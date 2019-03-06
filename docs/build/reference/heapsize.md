@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - HEAPSIZE .def file statement
 ms.assetid: 3c4d3117-491d-41e6-a693-648b3a35eeb9
-ms.openlocfilehash: 7761390f4175121ca12eed06c503d23c0eab91b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 834a7c2125acd53475ce526470c9b903c8558f43
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617152"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421532"
 ---
 # <a name="heapsize"></a>HEAPSIZE
 

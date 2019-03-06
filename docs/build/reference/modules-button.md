@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Modules button
 ms.assetid: 51552765-865a-4acc-aeae-f78afb73289a
-ms.openlocfilehash: 7e013e6ee42086f1b52d49c34e01bf18f27e0da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccce2db123422b18e3ff4a645a97a7b9aad0ebc9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663840"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419296"
 ---
 # <a name="modules-button"></a>Moduli (pulsante)
 

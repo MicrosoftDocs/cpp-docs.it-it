@@ -4,16 +4,16 @@ ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: 6d8558cce3fc4818d3e6fc8d64a4c682f5ce5b26
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 19fc7b16695ebeff35462aaa2c451ff6459bb7b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556166"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425224"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lettura di stringhe in un provider OLE DB
 
-Il `CCustomRowset::Execute` funzione apre un file e legge le stringhe. Il consumer passa il nome del file al provider chiamando [ICommandText:: SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)). Il provider riceve il nome del file e lo archivia nella variabile membro `m_strCommandText`. `Execute` legge il nome del file da `m_strCommandText`. Se il nome del file non è valido o non è disponibile, il file `Execute` restituisce un errore. In caso contrario, viene aperto il file e le chiamate `fgets` per recuperare le stringhe. Per ciascun insieme di stringhe, operazioni di lettura, `Execute` crea un'istanza del record utente (modificato `CCustomWindowsFile` dalla [l'archiviazione di stringhe nel Provider OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) e lo inserisce in una matrice.
+Il `CCustomRowset::Execute` funzione apre un file e legge le stringhe. Il consumer passa il nome del file al provider chiamando [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). Il provider riceve il nome del file e lo archivia nella variabile membro `m_strCommandText`. `Execute` legge il nome del file da `m_strCommandText`. Se il nome del file non è valido o non è disponibile, il file `Execute` restituisce un errore. In caso contrario, viene aperto il file e le chiamate `fgets` per recuperare le stringhe. Per ciascun insieme di stringhe, operazioni di lettura, `Execute` crea un'istanza del record utente (modificato `CCustomWindowsFile` dalla [l'archiviazione di stringhe nel Provider OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) e lo inserisce in una matrice.
 
 Se il file non può essere aperto, `Execute` dovrà restituire DB_E_NOTABLE. Se viene restituito E_FAIL, il provider non funzionerà con molti utenti e non passa OLE DB [test di conformità](../../data/oledb/testing-your-provider.md).
 

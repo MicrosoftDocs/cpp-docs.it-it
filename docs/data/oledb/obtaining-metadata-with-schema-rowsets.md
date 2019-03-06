@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: a9717649c1bd4f956da8bc926e8f492f4eccff74
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 64502c19b55d42ab0ed7f6c2b8b1cf503e7795c8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556842"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422672"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Recupero di metadati con i rowset dello schema
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 Il [CRestrictions](../../data/oledb/crestrictions-class.md) classe fornisca il supporto per restrizione. Dopo aver creato un'istanza del set di righe dello schema, chiamare [CRestrictions:: Open](../../data/oledb/crestrictions-open.md). Questo metodo restituisce un set di risultati basato sulle restrizioni specificate.
 
-Per specificare le restrizioni, vedere [appendice b: Schema Rowsets](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85)) e cercare il set di righe che sta usando. Ad esempio, `CColumns` corrisponde alla [set di righe COLUMNS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); questo argomento elenca le colonne di restrizione nel set di righe COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Nello specificare le restrizioni, è necessario seguire questo ordine.
+Per specificare le restrizioni, fare riferimento a [appendice b: I set di righe dello schema](/previous-versions/windows/desktop/ms712921(v=vs.85)) e cercare il set di righe che sta usando. Ad esempio, `CColumns` corrisponde alla [set di righe COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); questo argomento elenca le colonne di restrizione nel set di righe COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Nello specificare le restrizioni, è necessario seguire questo ordine.
 
 Quindi, ad esempio, se si desidera limitare in base al nome di tabella, TABLE_NAME è la terza colonna di restrizione e quindi chiamare `Open`, specificando il nome della tabella desiderato come terzo parametro di restrizione, come illustrato nell'esempio seguente.
 
@@ -82,7 +82,7 @@ Quindi, ad esempio, se si desidera limitare in base al nome di tabella, TABLE_NA
 
 Per il riferimento del set di righe dello schema, le classi typedef fornite nei modelli OLE DB (vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).
 
-Per altre informazioni sui set di righe dello schema OLE DB, incluse le colonne di restrizione, vedere [appendice b: Schema Rowsets](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85)) nel **riferimento per programmatori OLE DB**.
+Per altre informazioni sui set di righe dello schema OLE DB, incluse le colonne di restrizione, vedere [appendice b: Schema Rowsets](/previous-versions/windows/desktop/ms712921(v=vs.85)) nella **riferimento per programmatori OLE DB**.
 
 Per esempi più complessi di come usare classi rowset dello schema, vedere la [CatDB](https://github.com/Microsoft/VCSamples) e [DBViewer](https://github.com/Microsoft/VCSamples) esempi.
 

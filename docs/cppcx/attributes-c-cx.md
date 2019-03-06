@@ -2,16 +2,16 @@
 title: Attributi (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-ms.openlocfilehash: 13a2639a877d1ba926d74511addcf72763967d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 815c942194e13fe27e0bb0abe813c61d2ad22fd6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462244"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425720"
 ---
 # <a name="attributes-ccx"></a>Attributi (C++/CX)
 
-Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre ai metodi e tipi Windows Runtime per specificare determinati comportamenti nella creazione dei metadati. Diversi attributi predefiniti, ad esempio, [Windows::Foundation::Metadata::WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx), vengono comunemente usati in C + + c++ /CLI codice /CX. Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:
+Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre ai metodi e tipi Windows Runtime per specificare determinati comportamenti nella creazione dei metadati. Diversi attributi predefiniti, ad esempio, [Windows::Foundation::Metadata::WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute), vengono comunemente usati in C + + c++ /CLI codice /CX. Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:
 
 [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]
 

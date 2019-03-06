@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - program execution [C++]
 ms.assetid: 5ecf123a-20e5-40cd-b8d8-dd5a9fdd4b24
-ms.openlocfilehash: a78c9ddc498383d460e617bc26f4e70eb7275eec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d95079349981b073533bb00abcd053454542a044
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577424"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413303"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>Esecuzione di un programma durante la pre-elaborazione
 

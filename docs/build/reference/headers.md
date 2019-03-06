@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -HEADERS dumpbin option
 - /HEADERS dumpbin option
 ms.assetid: 24d9a770-d44e-48b6-b744-143e4fff7748
-ms.openlocfilehash: 627dbd5f8467bd76871c82f41b28f0f597c0068a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 934bda775cdae506e1a0b9a2fb40d3a22ef01934
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645003"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423625"
 ---
 # <a name="headers"></a>/HEADERS
 

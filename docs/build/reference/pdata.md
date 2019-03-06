@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /PDATA dumpbin option
 - -PDATA dumpbin option
 ms.assetid: 5d41d629-6576-4733-b103-0d61e6b77b50
-ms.openlocfilehash: ce9fae2065101be6e418a10365c4ba4cd158ec94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbf806a75fa92da81121872ae68e585ed05b2a32
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594285"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417450"
 ---
 # <a name="pdata"></a>/PDATA
 

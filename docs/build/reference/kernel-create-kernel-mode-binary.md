@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509657"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414755"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (crea file binario in modalità Kernel)
 
@@ -79,8 +79,8 @@ Compilazione con **/kernel** passa inoltre **/kernel** al linker. Ecco come ciò
 
    ||**/kernel** obj|**/kernel-** obj, MASM obj o cvtresed|Garantirebbe **/kernel** e **/kernel-** obj|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**collegamento /kernel**|Yes|Yes|Sì con avviso LNK4257|
-   |**Collegamento**|Yes|Yes|Yes|
+   |**link /kernel**|Sì|Sì|Sì con avviso LNK4257|
+   |**link**|Sì|Yes|Sì|
 
    **Oggetto a collegamento LNK4257 non compilato con /KERNEL; immagine non venga eseguita**
 

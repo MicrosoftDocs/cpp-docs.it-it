@@ -13,12 +13,12 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: c709e991574cef481aa8357a789701bba9831d92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 931253b0a50e8b8f96a385400b2afbb1894c9d47
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528089"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417697"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Il tipo char predefinito è unsigned)
 
