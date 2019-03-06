@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DIRECTIVES dumpbin option
 - -DIRECTIVES dumpbin option
 ms.assetid: cb85d679-6d20-4244-ba0b-6f495228e970
-ms.openlocfilehash: cb87e04e1732f1603ed4dc606ffb33cabc587a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b508d4a622f4d8745cd8980a6f4895ce3dd40103
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610665"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423651"
 ---
 # <a name="directives"></a>/DIRECTIVES
 

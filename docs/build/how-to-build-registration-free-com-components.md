@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: compilare componenti COM senza registrazione'
+title: 'Procedura: Compilare componenti COM senza registrazione'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-ms.openlocfilehash: 4f4ebf121b761c37969fa3f9788bda52d913f340
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 503c3e4399359d793ce660f36844d2edc6602146
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463531"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416770"
 ---
-# <a name="how-to-build-registration-free-com-components"></a>Procedura: compilare componenti COM senza registrazione
+# <a name="how-to-build-registration-free-com-components"></a>Procedura: Compilare componenti COM senza registrazione
 
 I componenti COM senza registrazione sono i componenti COM che dispongono di manifesti incorporati nelle DLL.
 
@@ -31,4 +31,4 @@ I componenti COM senza registrazione sono i componenti COM che dispongono di man
 
 [Applicazioni isolate](/windows/desktop/SbsCs/isolated-applications)<br/>
 [Informazioni sugli assembly Side-by-Side](/windows/desktop/SbsCs/about-side-by-side-assemblies-)<br/>
-[Procedura: Compilare applicazioni isolate per l'utilizzo di componenti COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[Procedura: Compilare applicazioni isolate per l'uso di componenti COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)

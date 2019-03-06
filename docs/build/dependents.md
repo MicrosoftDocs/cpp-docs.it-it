@@ -6,12 +6,12 @@ helpviewer_keywords:
 - NMAKE program, dependents
 - dependents, NMAKE
 ms.assetid: 0a7b4499-ac6e-4c99-a304-027dd3818ab2
-ms.openlocfilehash: d3a009af72168403a8066866484f79d94395772e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d2397783797e55e5a301ae3a16d7dcf65109b93
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561291"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420531"
 ---
 # <a name="dependents"></a>Dipendenti
 

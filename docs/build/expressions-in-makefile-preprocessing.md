@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C++], makefile preprocessing
 - makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-ms.openlocfilehash: 8d7b8cd489eabf239cbc993181142ca84431cd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e55be14b6623232966b1539615c4f7f40139e38f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594870"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421849"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Espressioni nella pre-elaborazione di makefile
 

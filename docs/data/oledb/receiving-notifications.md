@@ -10,16 +10,16 @@ helpviewer_keywords:
 - rowsets, event notifications
 - OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-ms.openlocfilehash: 491da4d1735a32eba4e6e5bd8bee6604da4aeb73
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 67f7eb5f77dc68b57f04ab4d016680255cb1ae86
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556335"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416020"
 ---
 # <a name="receiving-notifications"></a>Ricezione di notifiche
 
-OLE DB fornisce interfacce per la ricezione di notifiche quando si verificano eventi. Questi elementi sono descritti [OLE DB oggetto Notifications](https://docs.microsoft.com/previous-versions/windows/desktop/ms725406(v=vs.85)) nel **riferimento per programmatori OLE DB**. Il programma di installazione di questi eventi Usa il meccanismo di punto di connessione COM standard. Ad esempio, un oggetto ATL che desidera recuperare gli eventi tramite `IRowsetNotify` implementa la `IRowsetNotify` interfaccia aggiungendo `IRowsetNotify` per l'elenco derivato dalla classe ed esponendolo attraverso una macro COM_INTERFACE_ENTRY.
+OLE DB fornisce interfacce per la ricezione di notifiche quando si verificano eventi. Questi elementi sono descritti [OLE DB oggetto Notifications](/previous-versions/windows/desktop/ms725406(v=vs.85)) nel **riferimento per programmatori OLE DB**. Il programma di installazione di questi eventi Usa il meccanismo di punto di connessione COM standard. Ad esempio, un oggetto ATL che desidera recuperare gli eventi tramite `IRowsetNotify` implementa la `IRowsetNotify` interfaccia aggiungendo `IRowsetNotify` per l'elenco derivato dalla classe ed esponendolo attraverso una macro COM_INTERFACE_ENTRY.
 
 `IRowsetNotify` dispone di tre metodi, che possono essere chiamati in momenti diversi. Se si desidera rispondere solo a uno di questi metodi, è possibile usare la [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) (classe), che restituisce E_NOTIMPL per i metodi non si è interessati.
 

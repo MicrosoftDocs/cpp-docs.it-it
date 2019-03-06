@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ERRORREPORT dumpbin option
 - /ERRORREPORT dumpbin option
 ms.assetid: 51178c43-4f95-4fda-8f97-50a257d1c948
-ms.openlocfilehash: 9f210685b7fc9d082d83ac9e2c9ed73c1c373023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85d1b03e65a0a8b367f1dee8376b3284f8179e64
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550449"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422715"
 ---
 # <a name="errorreport-dumpbinexe"></a>/ERRORREPORT (dumpbin.exe)
 

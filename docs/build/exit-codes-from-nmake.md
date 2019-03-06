@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NMAKE program, exit codes
 - exit codes
 ms.assetid: 75f6913c-1da5-4572-a2d3-8a4e058bed15
-ms.openlocfilehash: 08aceadf107112b446844b09fad24a11fbe7a731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07a104d90d91a027864022d4c82412318eb5fe3d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499593"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413238"
 ---
 # <a name="exit-codes-from-nmake"></a>Codici di uscita di NMAKE
 

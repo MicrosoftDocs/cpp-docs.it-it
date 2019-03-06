@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: b1f612040eea0078b0f27cf72327db94fe9e2939
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50f3e7a79b80514b6c28bd9aee86c720d6e20cf6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665434"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413914"
 ---
 # <a name="zc-conformance"></a>/Zc (Conformità)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50665434"
 
 ## <a name="syntax"></a>Sintassi
 
-> **/ Zc:**_opzione_{,_opzione_}
+> **/Zc:**_option_{,_option_}
 
 ## <a name="remarks"></a>Note
 
@@ -34,7 +34,7 @@ Questi sono i `/Zc` opzioni del compilatore:
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Abilita C + + 17 eccessiva dinamica allocazione allineata (attivato per impostazione predefinita in C + + 17).|
 |[auto\[-\]](zc-auto-deduce-variable-type.md)|Applicare il nuovo significato di C++ Standard per `auto` (su per impostazione predefinita).|
-|[cplusplus\[-\]](zc-cplusplus.md)|Abilitare la **cplusplus** macro per segnalare lo standard supportato (disattivato per impostazione predefinita).|
+|[__cplusplus\[-\]](zc-cplusplus.md)|Abilitare la **cplusplus** macro per segnalare lo standard supportato (disattivato per impostazione predefinita).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Abilitare il collegamento esterno per `constexpr` variabili (disattivato per impostazione predefinita).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Imporre Standard di C++ `for` regole di ambito (in per impostazione predefinita).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Abilita implicita `noexcept` su funzioni obbligatorie (su per impostazione predefinita).|
@@ -44,7 +44,7 @@ Questi sono i `/Zc` opzioni del compilatore:
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Applicare le regole di conversione esplicita di tipi C++ Standard (disattivato per impostazione predefinita).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Abilita C + + 14 deallocazione dimensionata globali funzioni (su per impostazione predefinita).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Valore letterale stringa a Disable `char*` o `wchar_t*` conversione (disattivato per impostazione predefinita).|
-|[ternario\[-\]](zc-ternary.md)|Applicare le regole dell'operatore condizionale nei tipi di operando (disattivato per impostazione predefinita).|
+|[ternary\[-\]](zc-ternary.md)|Applicare le regole dell'operatore condizionale nei tipi di operando (disattivato per impostazione predefinita).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Abilitare l'inizializzazione statica locale thread-safe (su per impostazione predefinita).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Si supponga `operator new` genera un'eccezione in caso di errore (disattivato per impostazione predefinita).|
 |[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Abilita i trigrammi (obsoleti, disattivata per impostazione predefinita).|

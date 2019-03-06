@@ -2,16 +2,16 @@
 title: Operatore Windows::UI::Xaml::Interop::TypeName
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: c77655ed7692c4cdccc311bc27c492126d62e54e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7480df474086d78e28d235cc89b05094c648d28b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659213"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415175"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Operatore Windows::UI::Xaml::Interop::TypeName
 
-Consente la conversione da `Platform::Type` a [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).
+Consente la conversione da `Platform::Type` a [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -21,11 +21,11 @@ Operator TypeName(Platform::Type^ type);
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) se è specificato `Platform::Type^`.
+Restituisce [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) se è specificato `Platform::Type^`.
 
 ### <a name="remarks"></a>Note
 
-`TypeName` è uno struct di Windows Runtime indipendente dal linguaggio per la rappresentazione delle informazioni sul tipo. [Platform::Type](../cppcx/platform-type-class.md) è specifico del linguaggio C++ e non può essere passato attraverso l'interfaccia applicativa binaria (ABI). Ecco un esempio di utilizzo di `TypeName`nella funzione [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) :
+`TypeName` è uno struct di Windows Runtime indipendente dal linguaggio per la rappresentazione delle informazioni sul tipo. [Platform::Type](../cppcx/platform-type-class.md) è specifico del linguaggio C++ e non può essere passato attraverso l'interfaccia applicativa binaria (ABI). Ecco un esempio di utilizzo di `TypeName`nella funzione [Navigate](/uwp/api/windows.ui.xaml.controls.frame.navigate) :
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

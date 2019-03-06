@@ -5,16 +5,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: 9a31d4197e71fb6cf20a0ecfce778552357d7e06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2854c9ca993e9f1f27cab60cdd09e28ce2985f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612914"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412649"
 ---
 # <a name="creating-a-resource-only-dll"></a>Creazione di una DLL di sole risorse
 
-Una DLL di sole risorse è una DLL che contiene unicamente delle risorse, ad esempio icone, bitmap, stringhe e finestre di dialogo. Uso di una DLL di sole risorse è un buon metodo per condividere lo stesso set di risorse tra più programmi. È anche un buon metodo per fornire a un'applicazione con le risorse localizzate per più lingue (vedere [risorse localizzate in applicazioni MFC: DLL Satellite](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).
+Una DLL di sole risorse è una DLL che contiene unicamente delle risorse, ad esempio icone, bitmap, stringhe e finestre di dialogo. Uso di una DLL di sole risorse è un buon metodo per condividere lo stesso set di risorse tra più programmi. È anche un buon metodo per fornire a un'applicazione con le risorse localizzate per più lingue (vedere [risorse localizzate in applicazioni MFC: DLL satellite nelle varie](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).
 
 Per creare una DLL di sole risorse, si crea un nuovo progetto di DLL Win32 (non MFC) e aggiungere le risorse al progetto.
 

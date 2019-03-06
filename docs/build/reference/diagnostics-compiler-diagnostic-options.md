@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: d9b485f749f4d4d9fce4e07d9bcd6d6de564fb58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8e9f2b6bc36d8a1dfdada00bca1c7a4dcf65256
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531796"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423261"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (opzioni di diagnostica del compilatore)
 

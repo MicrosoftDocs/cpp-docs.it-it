@@ -1,5 +1,5 @@
 ---
-title: /Zc:externConstexpr (Abilita le variabili constexpr)
+title: /Zc:externConstexpr (Enable extern constexpr variables)
 ms.date: 02/28/2018
 f1_keywords:
 - /Zc:externConstexpr
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: a9efa2fa191cbdda99e057ac9329d79bc598743c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b0af9fa0cc61b82853e64808897b30aaf2fa887d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510695"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415162"
 ---
-# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr (Abilita le variabili constexpr)
+# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr (Enable extern constexpr variables)
 
 Il **/Zc:externConstexpr** l'opzione del compilatore indica al compilatore è conforme allo standard C++ e consentire un collegamento esterno per `constexpr` variabili. Per impostazione predefinita, Visual Studio offre sempre una `constexpr` collegamento interno della variabile, anche se si specifica il `extern` (parola chiave).
 

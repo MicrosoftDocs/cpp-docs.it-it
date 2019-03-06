@@ -2,12 +2,12 @@
 title: Struttura e definizioni di costanti
 ms.date: 11/04/2016
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-ms.openlocfilehash: c4cc5f08c8cbd0e7baea0f612063a6ebdbb56c1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47ecc8b91492139f3b8295ecabe4662bda5f8e1c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474304"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417047"
 ---
 # <a name="structure-and-constant-definitions"></a>Struttura e definizioni di costanti
 

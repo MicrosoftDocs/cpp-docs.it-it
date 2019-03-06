@@ -11,12 +11,12 @@ helpviewer_keywords:
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-ms.openlocfilehash: a9e752f68ed53c7a94fec1914bc42c39a17648b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2d87039e2195c96e4209c7b5098473a6f52c486
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471526"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424444"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Specifica le directory di metadati)
 
@@ -28,7 +28,7 @@ Specifica una directory in cui il compilatore effettuerà la ricerca per risolve
 
 ## <a name="arguments"></a>Argomenti
 
-*Directory*<br/>
+*directory*<br/>
 Directory o percorso in cui il compilatore effettua la ricerca.
 
 ## <a name="remarks"></a>Note

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - NXCOMPAT editbin option
 - /NXCOMPAT editbin option
 ms.assetid: 30e6b9bb-1189-4e27-b7c3-587e239437b7
-ms.openlocfilehash: 8d9f6771edc86f664087f9dde08ced40014cfb79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50ba953d48b58908e5d556f54589c2efba0559e3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527439"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422182"
 ---
 # <a name="nxcompat"></a>/NXCOMPAT
 

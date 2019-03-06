@@ -13,12 +13,12 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 23942803ae0a25aaddd7f5844b303528c2c7ccb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615a53a7ad29527187072c3131f551a76bd18969
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663762"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421370"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Ignora percorso di inclusione standard)
 

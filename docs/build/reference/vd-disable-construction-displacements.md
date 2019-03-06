@@ -16,12 +16,12 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-ms.openlocfilehash: 229306fe93dedcf5c87d53e2227c8f17baef07c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3e09bf923f9f77dfb594c598f8a14c766d052f8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652959"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426421"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Disabilita spostamenti costruttori)
 

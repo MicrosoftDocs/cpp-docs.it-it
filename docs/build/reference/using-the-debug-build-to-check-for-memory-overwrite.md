@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-ms.openlocfilehash: 4983d64f7d783c5f23643a046780fb5fa4ba4565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75f4d5aeddc617173aa33d96f8ff934fb8c1b320
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623730"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413836"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria
 

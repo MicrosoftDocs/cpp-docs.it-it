@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 7504c12584d931b0f39062f393765ad8124fc0dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c85379cf1a514cafcd2f840673fc9c7b2d415ba4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561553"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425666"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Elimina stringhe duplicate)
 

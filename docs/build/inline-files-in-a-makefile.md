@@ -8,12 +8,12 @@ helpviewer_keywords:
 - makefiles, inline files
 - files [C++], inline
 ms.assetid: ff48a64f-773d-410c-9726-f867ad4c8030
-ms.openlocfilehash: 8cdfaad7df6d1b3d0e4752cf354dda4f8d9b08de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26a93d219c0ae0d2205532a9fa0dfcb4e394337f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519756"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415500"
 ---
 # <a name="inline-files-in-a-makefile"></a>File inline in un makefile
 

@@ -2,12 +2,12 @@
 title: Scelta del formato dei file di input con estensione netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: 92f7aafa102a8591192f4394aee62afe86bb3549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444317"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420050"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Scelta del formato dei file di input con estensione netmodule
 

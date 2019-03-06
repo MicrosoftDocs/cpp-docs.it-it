@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -Y- compiler option [C++]
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-ms.openlocfilehash: 8de7de7a4164916b9662e3a78fe00dd0a40cecc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a823457b0d372527488e646f0d2fa83bd7a4740
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542899"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421519"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignora le opzioni dell'intestazione precompilata)
 

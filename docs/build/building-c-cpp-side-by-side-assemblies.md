@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: b904dd3e9c10470151bdb8e01435aaf6359179b8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 6875c4178a405f887166b0606af329614d27907f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693646"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413875"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilazione di assembly side-by-side C/C++
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300960"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420843"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -210,7 +210,7 @@ Puntatore alla finestra che contiene lo strumento.
 ID della risorsa stringa che contiene il testo per lo strumento.
 
 *lpRectTool*<br/>
-Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) rettangolo delimitatore della struttura che contiene le coordinate dello strumento. Le coordinate sono rispetto all'angolo superiore sinistro dell'area client della finestra identificata da *pWnd*.
+Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) rettangolo delimitatore della struttura che contiene le coordinate dello strumento. Le coordinate sono rispetto all'angolo superiore sinistro dell'area client della finestra identificata da *pWnd*.
 
 *nIDTool*<br/>
 ID dello strumento.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parametri
 
 *lprc*<br/>
-Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene un rettangolo della finestra suggerimento dello strumento o un rettangolo di visualizzazione di testo.
+Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che contiene un rettangolo della finestra suggerimento dello strumento o un rettangolo di visualizzazione di testo.
 
 *bLarger*<br/>
 Se TRUE, *lprc* viene usato per specificare un rettangolo di visualizzazione del testo, e riceve il rettangolo della finestra corrispondente. Se FALSE, *lprc* viene usato per specificare un rettangolo della finestra, e riceve il rettangolo di visualizzazione di testo corrispondenti.
@@ -453,7 +453,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Parametri
 
 *lprc*<br/>
-Indirizzo di un `RECT` struttura che riceverà le informazioni del margine. I membri del [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura non definisce un rettangolo di delimitazione. Ai fini di questo messaggio, i membri della struttura vengono interpretati come indicato di seguito:
+Indirizzo di un `RECT` struttura che riceverà le informazioni del margine. I membri del [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura non definisce un rettangolo di delimitazione. Ai fini di questo messaggio, i membri della struttura vengono interpretati come indicato di seguito:
 
 |Member|Rappresentazione|
 |------------|--------------------|
@@ -867,7 +867,7 @@ Puntatore alla finestra che contiene lo strumento.
 ID dello strumento.
 
 *lpRect*<br/>
-Puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica il nuovo rettangolo di delimitazione.
+Puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che specifica il nuovo rettangolo di delimitazione.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 

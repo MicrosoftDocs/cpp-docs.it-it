@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-ms.openlocfilehash: c05e82409d6b6e48390d54160e8ff23ada788d41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4888b8f9b6dba4b826f2ee7dda7529a4bdf1586
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646199"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414499"
 ---
 # <a name="name-cc"></a>NAME (C/C++)
 

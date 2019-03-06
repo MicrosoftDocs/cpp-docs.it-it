@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: 9b9557a76d133d81a07320f1a64482d17c955ef2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85a8f1d41c6c54f94b500807a1e4ca504206f56a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301593"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425653"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interfaccia IAxWinAmbientDispatch
 
@@ -94,7 +94,7 @@ interface IAxWinAmbientDispatch : IDispatch
 
 Questa interfaccia viene esposta dal controllo ActiveX dell'ATL hosting di oggetti. Chiamare i metodi su questa interfaccia per impostare le proprietà di ambiente disponibili per il controllo ospitato o per specificare altri aspetti del comportamento del contenitore. Per integrare le proprietà fornite da `IAxWinAmbientDispatch`, usare [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) tenterà di caricare le informazioni sul tipo sulle `IAxWinAmbientDispatch` e `IAxWinAmbientDispatchEx` dalla libreria dei tipi che contiene il codice.
+<xref:System.Windows.Forms.AxHost> verrà effettuato un tentativo di caricare le informazioni sul tipo sul `IAxWinAmbientDispatch` e `IAxWinAmbientDispatchEx` dalla libreria dei tipi che contiene il codice.
 
 Se ci si collega, Atl90 **AXHost** caricherà le informazioni sul tipo da libreria dei tipi nella DLL.
 

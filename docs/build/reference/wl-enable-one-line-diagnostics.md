@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-ms.openlocfilehash: 2d2f3c1c7bac19fc0e401067f43e78e3770c6304
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 820143e1ff6feb718660fe8b297f2b96e26d2eb9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428158"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413810"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (Attiva le informazioni di diagnostica su una sola riga)
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-ms.openlocfilehash: f6c5fcbae52ed695f2d0c389607ac4231f069788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a78f99f61bbeff9c5d617fce374925d0541aafd
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534355"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423157"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t elabora gli attributi in MIDL)
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-ms.openlocfilehash: dd698aafca3c9bc489405e0ab9cb4dcec98a26ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8240ee91d0318b969ba36cedac9dbc3f645d2ed8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510084"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416763"
 ---
 # <a name="cc-build-tools"></a>Strumenti per la compilazione in C/C++
 

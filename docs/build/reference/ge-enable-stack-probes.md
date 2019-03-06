@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stack checking calls
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
-ms.openlocfilehash: 485a6a479f4d0d6c9e5eb745eda894a01f356e8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34799529517e0263f71ce4f6f29537bf4b59056f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448932"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415422"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Attiva ricerche dello stack)
 

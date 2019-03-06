@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -KEYFILE linker option
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
-ms.openlocfilehash: 6896993f7be8e088242e8a2e3279aa1f6c9a721d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 279f83dd66777c0f1bb0aca836808da196886281
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524956"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414733"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (Specifica una chiave o una coppia di chiavi per firmare un assembly)
 

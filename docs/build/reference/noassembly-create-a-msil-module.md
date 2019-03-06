@@ -11,12 +11,12 @@ helpviewer_keywords:
 - NOASSEMBLY linker option
 - assemblies [C++], not creating an assembly
 ms.assetid: 3cea4e70-f451-4395-a626-1930b1b127fe
-ms.openlocfilehash: c1508de88b9678898990f0e5b946ad4ced8d6d24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67f031f90b263e8edec42efc6a3995cca419fe99
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582039"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413680"
 ---
 # <a name="noassembly-create-a-msil-module"></a>/NOASSEMBLY (Crea un modulo MSIL)
 

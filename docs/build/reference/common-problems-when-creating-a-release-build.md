@@ -18,12 +18,12 @@ helpviewer_keywords:
 - troubleshooting release builds
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-ms.openlocfilehash: a19eabc7b3e334f4a2a6d967d2bfc81b080c0054
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb5098ab4c92a408ae5895b5c59c7ecd36585bdb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546557"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415656"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problemi comuni durante la creazione di una build di rilascio
 

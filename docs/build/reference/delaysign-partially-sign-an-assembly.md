@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DELAYSIGN linker option
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
-ms.openlocfilehash: 233a41a3e55ff2726712541b0af9db1f5e55eb56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 753c4d2a2a81803c3b52759b560248d0f4dbe2eb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435620"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425679"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (Firma parzialmente un assembly)
 

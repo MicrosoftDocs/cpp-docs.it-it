@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557076"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418607"
 ---
 # <a name="cdatasource-class"></a>Classe CDataSource
 
@@ -152,7 +152,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IDBProperties:: GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) nel *riferimento per programmatori OLE DB* in Windows SDK.
+Visualizzare [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) nel *riferimento per programmatori OLE DB* in Windows SDK.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -179,7 +179,7 @@ HRESULT GetProperty(const GUID& guid,
 *guid*<br/>
 [in] Un GUID che identifica il set di proprietà per cui restituire la proprietà.
 
-*PropID*<br/>
+*propid*<br/>
 [in] ID di proprietà per la proprietà da restituire.
 
 *pVariant*<br/>
@@ -244,10 +244,10 @@ HRESULT Open(LPCSTR szProgID,
 [in] Il `CLSID` del provider di dati.
 
 *pPropSet*<br/>
-[in] Un puntatore a una matrice di [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture contenenti le proprietà e valori da impostare. Visualizzare [set di proprietà e i gruppi di proprietà](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) nel *riferimento per programmatori OLE DB* in Windows SDK.
+[in] Un puntatore a una matrice di [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture contenenti le proprietà e valori da impostare. Visualizzare [set di proprietà e i gruppi di proprietà](/previous-versions/windows/desktop/ms713696(v=vs.85)) nel *riferimento per programmatori OLE DB* in Windows SDK.
 
 *nPropertySets*<br/>
-[in] Il numero di [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture passato il *pPropSet* argomento.
+[in] Il numero di [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture passato il *pPropSet* argomento.
 
 *pName*<br/>
 [in] Nome del database a cui connettersi.
@@ -259,7 +259,7 @@ HRESULT Open(LPCSTR szProgID,
 [in] Password dell'utente.
 
 *nInitMode*<br/>
-[in] Modalità di inizializzazione del database. Visualizzare [le proprietà di inizializzazione](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))nel *riferimento per programmatori OLE DB* nel SDK di Windows per un elenco delle modalità di inizializzazione valido. Se *nInitMode* è l'inizializzazione zero, nessuna modalità è inclusa nel set di proprietà usato per aprire la connessione.
+[in] Modalità di inizializzazione del database. Visualizzare [le proprietà di inizializzazione](/previous-versions/windows/desktop/ms723127(v=vs.85))nel *riferimento per programmatori OLE DB* nel SDK di Windows per un elenco delle modalità di inizializzazione valido. Se *nInitMode* è l'inizializzazione zero, nessuna modalità è inclusa nel set di proprietà usato per aprire la connessione.
 
 *szProgID*<br/>
 [in] Identificatore di un programma.
@@ -304,7 +304,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] Nome di un file, in genere un file di connessione all'origine dati (UDL).
 
-Per altre informazioni sui file di collegamento dati (file con estensione udl), vedere [Introduzione all'API di collegamento dati](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85)) nel SDK di Windows.
+Per altre informazioni sui file di collegamento dati (file con estensione udl), vedere [Introduzione all'API di collegamento dati](/previous-versions/windows/desktop/ms718102(v=vs.85)) nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -399,10 +399,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [in] ID programma di un provider di dati.
 
 *pPropset*<br/>
-[in] Un puntatore a una matrice di [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture contenenti le proprietà e valori da impostare. Visualizzare [set di proprietà e i gruppi di proprietà](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) nel *riferimento per programmatori OLE DB* in Windows SDK. Se l'oggetto origine dati viene inizializzato, le proprietà devono appartenere al gruppo di proprietà Data Source. Se viene specificata più volte la stessa proprietà in *pPropset*, quindi viene usato il valore è specifico del provider. Se *ulPropSets* è uguale a zero, questo parametro viene ignorato.
+[in] Un puntatore a una matrice di [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture contenenti le proprietà e valori da impostare. Visualizzare [set di proprietà e i gruppi di proprietà](/previous-versions/windows/desktop/ms713696(v=vs.85)) nel *riferimento per programmatori OLE DB* in Windows SDK. Se l'oggetto origine dati viene inizializzato, le proprietà devono appartenere al gruppo di proprietà Data Source. Se viene specificata più volte la stessa proprietà in *pPropset*, quindi viene usato il valore è specifico del provider. Se *ulPropSets* è uguale a zero, questo parametro viene ignorato.
 
 *ulPropSets*<br/>
-[in] Il numero di [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture passato il *pPropSet* argomento. Se è zero, il provider ignora *pPropset*.
+[in] Il numero di [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) strutture passato il *pPropSet* argomento. Se è zero, il provider ignora *pPropset*.
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /RELEASE editbin option
 - checksum setting
 ms.assetid: 183422eb-6b3c-474e-9589-04a0e69dec5d
-ms.openlocfilehash: 1fe3688de14b61ed840c29a868897a6f97ddc485
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 433643da090f17e2034bc34b850c28f6abfd3f0f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677253"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412809"
 ---
 # <a name="release"></a>/RELEASE
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: b65fe37306e8b2469a32007bdd2c2564e334bc97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b91ca1ba6cc97157be0ab16fc18e065dc501d5fd
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481250"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422468"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Specifica il file di inclusione da utilizzare)
 

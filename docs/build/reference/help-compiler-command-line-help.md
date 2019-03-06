@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -? compiler option [C++]
 - cl.exe compiler, command-line syntax
 ms.assetid: 192533e7-86f2-48e0-a08f-b5e4e3a4e784
-ms.openlocfilehash: f12b7d35bb5621837c6eda3857f4e51eb2685ba3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 871bbd8fe69b390acb7c3ee29a7ae2d73200f648
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435464"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424184"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (Guida della riga di comando del compilatore)
 

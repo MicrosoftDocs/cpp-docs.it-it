@@ -5,12 +5,12 @@ helpviewer_keywords:
 - compiler options, setting
 - cl.exe compiler, setting options
 ms.assetid: 4b079f5b-0017-4124-aad6-0d2b58e427e0
-ms.openlocfilehash: 62a6c7913a088f9b986a09b205e4fb9bb350581a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc1d4a4a6c782a8ec07cfebfc1905f3c3f8872cf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602189"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416293"
 ---
 # <a name="setting-compiler-options"></a>Impostazione delle opzioni del compilatore
 

@@ -2,12 +2,12 @@
 title: Makefile di esempio
 ms.date: 11/04/2016
 ms.assetid: 8343ce71-5556-4ae0-8d1e-7efd82673070
-ms.openlocfilehash: 248924ff83befdefe1045da197be5328095c0caf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d665185ed872cb0dc68707895a8d2a251d084ad7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534884"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415929"
 ---
 # <a name="sample-makefile"></a>Makefile di esempio
 

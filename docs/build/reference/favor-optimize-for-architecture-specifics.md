@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-ms.openlocfilehash: 63affcced5dfc5bb56b0226021e1c32d93ec5d4f
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1f76164468375e84380c6f02050c6c7a35b32412
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626747"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418984"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (ottimizzato per le specifiche di architettura)
 
@@ -27,7 +27,7 @@ ms.locfileid: "53626747"
 **/favor:blend**<br/>
 (x86 e x64) genera il codice che viene ottimizzato per le specifiche di micro-architetture nelle architetture AMD ed Intel. Sebbene **/favor:blend** non offra le migliori prestazioni possibili su un processore specifico, è progettato per offrire le migliori prestazioni in un'ampia gamma di processori x86 e x64. Per impostazione predefinita **/favor:blend** è attiva.
 
-**/favor:Atom**<br/>
+**/favor:ATOM**<br/>
 (x86 e x64) genera codice ottimizzato per le specifiche del processore Intel Atom e della tecnologia del processore Intel Centrino Atom. Codice generato mediante **/favor:ATOM** può anche produrre le istruzioni di Intel SSSE3, SSE3, SSE2 e SSE per processori Intel.
 
 **/favor:AMD64**<br/>

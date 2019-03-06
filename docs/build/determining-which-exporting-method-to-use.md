@@ -7,12 +7,12 @@ helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
-ms.openlocfilehash: 75cd03e2ebb8dab4069024469b2b8b5c45665704
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38006acfae90c3b216677684e9776f3ed5d7c1b1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615133"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422756"
 ---
 # <a name="determining-which-exporting-method-to-use"></a>Scelta del metodo di esportazione da utilizzare
 

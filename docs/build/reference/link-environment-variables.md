@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIB environment variable
 - environment variables [C++], LINK
 ms.assetid: 9a3d3291-0cc4-4a7d-9d50-80e351b90708
-ms.openlocfilehash: 3a398787530794f5a08d6cd122e55c305e265062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03f84ea1071a672aef4443e5acf44daae91bb3b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434411"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422134"
 ---
 # <a name="link-environment-variables"></a>Variabili di ambiente LINK
 

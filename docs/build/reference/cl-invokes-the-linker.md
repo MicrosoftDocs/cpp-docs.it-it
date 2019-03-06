@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: e071209bd09fea17082379bf3f2486866b52c548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447203"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412731"
 ---
 # <a name="cl-invokes-the-linker"></a>CL richiama il linker
 
@@ -32,7 +32,7 @@ Per ulteriori informazioni sul collegamento, vedere [opzioni del Linker](../../b
 
 ## <a name="example"></a>Esempio
 
-Si supponga che si compila il file di origine C tre: Main. c e MOD1 MOD2. Ogni file include una chiamata a una funzione definita in un altro file:
+Si supponga che si compila il file di origine C tre: Main. c, MOD1 e MOD2. Ogni file include una chiamata a una funzione definita in un altro file:
 
 - Main. c chiama la funzione `func1` MOD1 e la funzione `func2` in MOD2.
 

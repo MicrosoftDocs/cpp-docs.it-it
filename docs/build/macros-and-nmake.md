@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NMAKE macros
 - macros, NMAKE
 ms.assetid: d424fd47-63eb-4982-9410-6f412730c265
-ms.openlocfilehash: ebed171ab334d0990b1de40f038592e618c917a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af2addaa68468bb506b6d6448d3d7582e42efd14
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415448"
 ---
 # <a name="macros-and-nmake"></a>Macro e NMAKE
 

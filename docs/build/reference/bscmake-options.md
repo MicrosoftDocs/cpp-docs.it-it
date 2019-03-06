@@ -29,12 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464909"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415409"
 ---
 # <a name="bscmake-options"></a>Opzioni di BSCMAKE
 
@@ -42,13 +42,13 @@ In questa sezione vengono descritte le opzioni disponibili per il controllo di B
 
 Solo **/NOLOGO** e **/o** sono disponibili all'interno dell'ambiente di sviluppo di Visual Studio.  Visualizzare [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md) per informazioni su accesso pagine delle proprietà di un progetto.
 
-**/EI (** *filename*... **)**<br/>
+**/Ei (** *filename*...**)**<br/>
 Esclude il contenuto del file di inclusione specificati dal file di informazioni di visualizzazione. Per specificare più file, separare i nomi con uno spazio e racchiudere l'elenco tra parentesi. Le parentesi non sono necessarie se si specifica solo uno *filename*. Uso **/Ei** con il **/Es** opzione per escludere i file non esclusi da **/Es**.
 
-**/EL**<br/>
+**/El**<br/>
 Esclude i simboli locali. L'impostazione predefinita consiste nell'includere simboli locali. Per altre informazioni sui simboli locali, vedere [creazione di un File SBR](../../build/reference/creating-an-dot-sbr-file.md).
 
-**/ Em**<br/>
+**/Em**<br/>
 Esclude i simboli nel corpo della macro. Uso **/em** da includere solo i nomi delle macro nel file di informazioni di visualizzazione. Il valore predefinito è di includere entrambe le macro e il risultato delle espansioni della macro.
 
 **/ER (** *simbolo*... **)**<br/>
@@ -57,7 +57,7 @@ Esclude i simboli specificati dal file di informazioni di visualizzazione. Per s
 **/Es**<br/>
 Esclude il file di informazioni di ogni file di inclusione specificato con un percorso assoluto o trovata in un percorso assoluto specificato nella variabile di ambiente INCLUDE. (In genere, questi sono il sistema di file di inclusione, contenenti numerose informazioni che potrebbe non essere necessaria nel file di informazioni di esplorazione.) Questa opzione non esclude i file specificati senza un percorso o i percorsi relativi o i file trovati in un percorso relativo in file di inclusione. È possibile usare la **/Ei** opzione insieme a **/Es** per escludere i file **/Es** non esclude. Se si desidera escludere solo alcuni dei file che **/Es** esclude, usare **/Ei** anziché **/Es** ed elencare i file da escludere.
 
-**/errorreport:**[**none** &#124; **prompt dei comandi** &#124; **coda** &#124; **inviare**]<br/>
+**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Consente di inviare a Microsoft informazioni sugli errori interni in bscmake.exe.
 
 Per ulteriori informazioni sul **/errorreport**, vedere [/errorReport (segnala interni del compilatore gli errori)](../../build/reference/errorreport-report-internal-compiler-errors.md).
@@ -74,10 +74,10 @@ Forza una compilazione non incrementale. Uso **/n** per forzare una build comple
 **/NOLOGO**<br/>
 Elimina il messaggio di copyright BSCMAKE.
 
-**/o** *nomefile*<br/>
+**/o** *filename*<br/>
 Specifica un nome per il file di informazioni. Per impostazione predefinita, il file di informazioni di BSCMAKE fornisce il nome base del primo file sbr e un'estensione bsc.
 
-**/S (** *filename*... **)**<br/>
+**/S (** *filename*...**)**<br/>
 Indica a BSCMAKE per elaborare la prima volta che si è verificato il file di inclusione specificati e per evitare che in caso contrario. Usare questa opzione per risparmiare tempo di elaborazione quando un file (ad esempio un'intestazione, o. h, file per un file. c o file di origine con estensione cpp) è incluso in vari file di origine, ma resta invariato a seguito di pre-elaborazione direttive ogni volta. È anche possibile usare questa opzione se un file viene modificato in modo che non è importanti per il file di informazioni che si sta creando. Per specificare più file, separare i nomi con uno spazio e racchiudere l'elenco tra parentesi. Le parentesi non sono necessarie se si specifica solo uno *filename*. Se si desidera escludere il file ogni volta che viene incluso, usare il **/Ei** oppure **/Es** opzione.
 
 **/v**<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: e01ee0b7af68127f3a78b4cfda1d110f6187fa74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528112"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422208"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Elimina _ftol)
 

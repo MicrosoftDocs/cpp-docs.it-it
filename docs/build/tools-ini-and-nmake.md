@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NMAKE program, reading files
 - Tools.ini and NMake
 ms.assetid: ebd5eab6-ddf4-430e-bf4a-1db5bb84e344
-ms.openlocfilehash: 1a8673741cb49c504855fb1af00dbdc06379210d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c50fef5d2fd36b8fb9327cad25bc5b2ab4ba61e2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654415"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419884"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini e NMAKE
 

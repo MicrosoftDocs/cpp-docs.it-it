@@ -14,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 30fd602bb1c094694a9ebb6095349e971842d5f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6681ff09b846011af1b500f88a535c208d0bc1c1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557547"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417591"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Controllo sicurezza buffer)
 

@@ -7,7 +7,6 @@ f1_keywords:
 - C2125
 - C2126
 - C2127
-- C2131
 - C2136
 - C2176
 - C2187
@@ -24,12 +23,12 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 98e804b7c53eddf239e752f120854439cc3a0b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546558"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423534"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Errore del compilatores C2100 through C2199
 
@@ -72,7 +71,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2128](compiler-error-c2128.md)|«*funzione*': alloc_text/same_seg applicabili solo alle funzioni con collegamento C|
 |[Errore del compilatore C2129](compiler-error-c2129.md)|funzione statica '*identificatore*' dichiarata ma non definita|
 |[Errore del compilatore C2130](compiler-error-c2130.md)|#line prevista una stringa contenente il nome file. trovato '*token*'|
-|C2131 errore del compilatore|espressione non dà come risultato una costante|
+|[C2131 errore del compilatore](compiler-error-c2131.md)|espressione non dà come risultato una costante|
 |[Errore del compilatore C2132](compiler-error-c2132.md)|Errore di sintassi: identificatore imprevisto|
 |[Errore del compilatore C2133](compiler-error-c2133.md)|«*identificatore*': dimensione sconosciuta|
 |[Errore del compilatore C2134](compiler-error-c2134.md)|«*funzione*': chiamata non produce un'espressione costante|

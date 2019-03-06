@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Qfast_transcendentals
 - Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
-ms.openlocfilehash: 512e658cf546e77bff6d58465932d2f830541521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d96b2c93e9fc8be73ef43f63fc0a6328661df442
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666128"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414200"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (forzare funzioni trascendenti veloci)
 

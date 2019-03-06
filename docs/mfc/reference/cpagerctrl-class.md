@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 648bc17f0f130b831aa619b90ed13ba6be35b4d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270722"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417590"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*dwStyle*|[in] Una combinazione bit per bit (OR) di [stili window](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [stili del controllo pager](/windows/desktop/Controls/pager-control-styles) da applicare al controllo.|
-|*rect*|[in] Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|
+|*rect*|[in] Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|
 |*pParentWnd*|[in] Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo. Questo parametro non può essere NULL.|
 |*nID*|[in] L'ID del controllo.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Combinazione bit per bit degli stili estesi da applicare al controllo. Per altre informazioni, vedere la *dwExStyle* parametro delle [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) (funzione).|
 |*dwStyle*|[in] Una combinazione bit per bit (OR) di [stili window](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [stili del controllo pager](/windows/desktop/Controls/pager-control-styles) da applicare al controllo.|
-|*rect*|[in] Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|
+|*rect*|[in] Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|
 |*pParentWnd*|[in] Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo. Questo parametro non può essere NULL.|
 |*nID*|[in] L'ID del controllo.|
 

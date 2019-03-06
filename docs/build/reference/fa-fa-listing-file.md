@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507302"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420908"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (File di listato)
 
@@ -61,16 +61,16 @@ Uno *origine*ASM file viene creato per ogni file di codice sorgente nella compil
 *filename*<br/>
 Un file di listato denominato *filename*asm viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice di origine singolo.
 
-*nome file. estensione*<br/>
+*filename.extension*<br/>
 Un file di listato denominato *nome file. estensione* viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice di origine singolo.
 
-*Directory*__\\__<br/>
+*directory*__\\__<br/>
 Uno *source_file*viene creato e inserito nell'oggetto specificato nel file ASM *directory* per ogni file di codice sorgente nella compilazione. Si noti la barra rovesciata finale obbligatoria. Sono consentiti solo i percorsi sul disco corrente.
 
 *directory*__\\__*nomefile*<br/>
 Un file di listato denominato *nomefile*asm viene inserito nell'oggetto specificato *directory*. Ciò è valido solo durante la compilazione di un file di codice di origine singolo.
 
-*directory*__\\__*filename. Extension*<br/>
+*directory*__\\__*filename.extension*<br/>
 Un file di listato denominato *filename. Extension* viene inserito nell'oggetto specificato *directory*. Ciò è valido solo durante la compilazione di un file di codice di origine singolo.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio

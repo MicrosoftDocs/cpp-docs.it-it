@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rules, inference
 - NMAKE program, inference rules
 ms.assetid: caff320f-fb07-4eea-80c3-a6a2133a8492
-ms.openlocfilehash: cb67fc8fe8e65814c9b169f7936c7d225d26e1e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0883621845c36e3aa8c7f68f0f8eef6b814106a1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471045"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416137"
 ---
 # <a name="inference-rules"></a>Regole di inferenza
 

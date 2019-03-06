@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting Visual C++, release builds
 - troubleshooting release builds
 ms.assetid: a0c0818e-4c47-4fe0-a611-50d61a41bd88
-ms.openlocfilehash: 1029c844662f741cbef90371e8017308948fe513
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3266707f54deb1d0a088e0e9ddd152e922bf67cf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633473"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418542"
 ---
 # <a name="fixing-release-build-problems"></a>Correzione dei problemi della build di rilascio
 

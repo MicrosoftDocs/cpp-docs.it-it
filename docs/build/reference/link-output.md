@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DLLs [C++], as linker output
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-ms.openlocfilehash: 819ac130d2f8ae45ff48a2f2c1941f717d5afd99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c147a900d81465565ccbe73baf11570beb353554
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464143"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416124"
 ---
 # <a name="link-output"></a>Output di LINK
 

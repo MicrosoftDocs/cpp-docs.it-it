@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
-ms.openlocfilehash: a5a1e8f8e1d022fab9dc1bf4f67713302c11f758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6268eb6d0ea39e72a1d8fd40ab563347c05f0c6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446722"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416839"
 ---
 # <a name="bscmake-command-line"></a>Riga di comando di BSCMAKE
 

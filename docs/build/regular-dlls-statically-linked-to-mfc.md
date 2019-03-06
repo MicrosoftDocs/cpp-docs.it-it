@@ -9,12 +9,12 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-ms.openlocfilehash: fee2d3b84949241cda421d6ea587e1ab9c6e58e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 074cd6c9fca08261cf2333a968dce3cc83c0c860
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565542"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415984"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>DLL MFC regolari collegate in modo statico a MFC
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - libraries, structure
 ms.assetid: a5fda8e8-4a1b-4499-9095-0df935262ce4
-ms.openlocfilehash: 7fdca9b94aa3b19cc8badf231a8b966d0519069c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71ee440be4537378eaa1ea2b12434292f4e9bd61
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497423"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412514"
 ---
 # <a name="structure-of-a-library"></a>Struttura di una libreria
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: ce52eb43fa8f371b68d836f01163003f056f34c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d14b86a92f3acb76dc54d1bade2d2cd0baa055
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530234"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419947"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary e AfxFreeLibrary
 

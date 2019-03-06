@@ -3,12 +3,12 @@ title: Opzioni del compilatore elencate in ordine alfabetico
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646732"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415877"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -79,7 +79,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crea un'immagine su cui è applicabile una hot patch|
 |[/I](i-additional-include-directories.md)|Ricerca i file di inclusione in una directory.|
 |[/J](j-default-char-type-is-unsigned.md)|Modifica il tipo `char` predefinito.|
-|[/ JMC](jmc.md)|Supporta il debug nativo C++ Just My Code.|
+|[/JMC](jmc.md)|Supporta il debug nativo C++ Just My Code.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Il compilatore e il linker creeranno un file binario che può essere eseguito nel kernel di Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Crea una libreria a collegamento dinamico.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Crea una libreria a collegamento dinamico di debug.|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - undefined macros and NMAKE
 - NMAKE program, null macros
 ms.assetid: 1db4611a-1755-4328-b00f-d35365af8b6c
-ms.openlocfilehash: f6f294234f7244b65137742e1fe8abaa37a676a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2dce2132cc1e7065cb0b93f1debd403f7a8342
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498917"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417229"
 ---
 # <a name="null-and-undefined-macros"></a>Macro null e non definite
 

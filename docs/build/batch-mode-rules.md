@@ -6,12 +6,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: 46387fc13c28d95d7b19fb18774daa6fc3064970
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 106db69327bbad112be7efea6970845956e52431
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429770"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416670"
 ---
 # <a name="batch-mode-rules"></a>Regole in modalità batch
 

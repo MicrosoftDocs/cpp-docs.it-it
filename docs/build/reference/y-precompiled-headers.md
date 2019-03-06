@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /Y compiler options [C++]
 ms.assetid: 1df5726a-8ebe-42c3-b618-d2f5e1ce8673
-ms.openlocfilehash: d35c4bdc7f53ea763bd74e8db973159333c8be4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33ba021d401c3cb314b785202e4076c976b9783f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597252"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421460"
 ---
 # <a name="y-precompiled-headers"></a>/Y (Intestazioni precompilate)
 

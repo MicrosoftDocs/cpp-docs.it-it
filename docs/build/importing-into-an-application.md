@@ -6,12 +6,12 @@ helpviewer_keywords:
 - importing DLLs [C++], applications
 - applications [C++], importing into
 ms.assetid: 9d646466-e12e-4710-8ad9-c819c0375fcc
-ms.openlocfilehash: 96016a12b5164bcaca3f2c562671f5bf09a187f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41bd42ed51f1465db7487a120357fd27389f5b78
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442705"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415549"
 ---
 # <a name="importing-into-an-application"></a>Importazione in un'applicazione
 

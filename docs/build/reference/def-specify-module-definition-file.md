@@ -11,12 +11,12 @@ helpviewer_keywords:
 - module definition files
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
-ms.openlocfilehash: 607af17a60612f69bb24708179bb453409098bde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b6490186e2faf289844f7fb6b84f5a1c27b10a5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654753"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423504"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Specifica il file di definizione moduli)
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 6e6f758e7a683a28189123b03252223476ac732a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b001bff2f5327599fc5ad2ecae141976403ec58
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442666"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424067"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Causa della possibile perdita di precisione dei numeri a virgola mobile
 

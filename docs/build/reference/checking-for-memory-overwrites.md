@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: da7c5d77-a267-415f-a8ab-ee5ce5bfc286
-ms.openlocfilehash: ff900c7366a28d19d3b90cbd4a6d9ee732e4ce02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37bd68519aea1194b601e89fefd0f14d428630a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621559"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422195"
 ---
 # <a name="checking-for-memory-overwrites"></a>Controllo delle sovrascritture di memoria
 

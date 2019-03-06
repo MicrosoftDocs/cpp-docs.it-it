@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cl.exe compiler, output files
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
-ms.openlocfilehash: f83adcb87994d13edd1c1579183377a365e2051e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07afcd102b2b1839b3925ad1e6905507ea316361
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638360"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423326"
 ---
 # <a name="specifying-the-pathname"></a>Specifica del nome del percorso
 
@@ -21,7 +21,7 @@ Se *pathname* include un nome file senza estensione, il compilatore assegna l'ou
 
 In alternativa, il *pathname* argomento può essere un nome di dispositivo (AUX, CON, PRN o null) anziché un nome di file. Non utilizzare uno spazio tra l'opzione e il nome del dispositivo o un carattere due punti come parte del nome del dispositivo.
 
-|Nome del dispositivo|Descrizione|
+|Nome del dispositivo|Rappresenta|
 |-----------------|----------------|
 |AUX|Dispositivo ausiliario|
 |CON|Console|

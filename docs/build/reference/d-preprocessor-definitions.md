@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620506"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424678"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definizioni preprocessore)
 
@@ -46,7 +46,7 @@ Questo comando definisce il simbolo DEBUG in TEST.c:
 
 Questo comando rimuove tutte le occorrenze della parola chiave `__far` in TEST.c:
 
-**CL /D__far = TEST. C**
+**CL /D__far=  TEST.C**
 
 Il **CL** variabile di ambiente non può essere impostata su una stringa che contiene il segno di uguale. Per usare **/D** combinazione con la **CL** ambiente variabile, è necessario specificare il simbolo cancelletto anziché il segno di uguale:
 
@@ -54,7 +54,7 @@ Il **CL** variabile di ambiente non può essere impostata su una stringa che con
 SET CL=/DTEST#0
 ```
 
-Quando si definisce un simbolo di pre-elaborazione al prompt dei comandi, considerare le regole di analisi del compilatore e quelle della shell. Ad esempio, per definire un simbolo di pre-elaborazione segno di percentuale (%) nel programma, specificare due caratteri segno di percentuale (%%) al prompt dei comandi. Se se ne specifica uno solo, viene generato un errore di analisi.
+Quando si definisce un simbolo di pre-elaborazione al prompt dei comandi, considerare le regole di analisi del compilatore e quelle della shell. Ad esempio, per definire un simbolo di pre-elaborazione segno di percentuale (%) nel programma, specificare il segno di percentuale di due caratteri (%) al prompt dei comandi: Se si specifica solo uno, viene generato un errore di analisi.
 
 ```
 CL /DTEST=%% TEST.C
@@ -68,7 +68,7 @@ CL /DTEST=%% TEST.C
 
 1. Nel riquadro di destra, nella colonna a destra della **definizioni preprocessore** proprietà, aprire il menu di scelta rapida e scegliere **modificare**.
 
-1. Nel **definizioni preprocessore** nella finestra di dialogo Aggiungi (uno per riga), modificare o eliminare una o più definizioni. Scegli **OK** per salvare le modifiche.
+1. Nel **definizioni preprocessore** nella finestra di dialogo Aggiungi (uno per riga), modificare o eliminare una o più definizioni. Scegliere **OK** per salvare le modifiche.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 

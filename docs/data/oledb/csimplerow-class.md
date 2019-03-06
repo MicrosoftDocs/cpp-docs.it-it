@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556634"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414024"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 
@@ -78,7 +78,7 @@ class CSimpleRow
 
 Un handle di riga è logicamente un tag univoco per una riga di risultati. `IRowsetImpl` Crea un nuovo `CSimpleRow` per tutte le righe richiesti nel [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` possono anche essere sostituite con la propria implementazione dell'handle di riga, perché è un argomento di modello predefinito per `IRowsetImpl`. L'unico requisito per la sostituzione di questa classe consiste nel disporre la classe sostitutiva di fornire un costruttore che accetta un solo parametro di tipo **lungo**.
 
-## <a name="addrefrow"></a> Csimplerow:: Addrefrow
+## <a name="addrefrow"></a> CSimpleRow::AddRefRow
 
 Aggiunge un conteggio dei riferimenti a un handle di riga esistente in modo thread-safe.
 
@@ -88,7 +88,7 @@ Aggiunge un conteggio dei riferimenti a un handle di riga esistente in modo thre
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> Csimplerow:: compare
+## <a name="compare"></a> CSimpleRow::Compare
 
 Confronta due righe per determinare se fanno riferimento alla stessa istanza di riga.
 
@@ -105,7 +105,7 @@ Puntatore a un oggetto `CSimpleRow` .
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore HRESULT, in genere S_OK, che indica le due righe rappresentano la stessa istanza di riga o S_FALSE, che indica le due righe sono diverse. Visualizzare [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) nel *riferimento per programmatori OLE DB* per altri possibili valori restituiti.
+Valore HRESULT, in genere S_OK, che indica le due righe rappresentano la stessa istanza di riga o S_FALSE, che indica le due righe sono diverse. Visualizzare [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) nel *riferimento per programmatori OLE DB* per altri possibili valori restituiti.
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 
@@ -136,7 +136,7 @@ Rilascia le righe in modo thread-safe.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> Csimplerow:: M_dwref
+## <a name="dwref"></a> CSimpleRow::m_dwRef
 
 Conteggio dei riferimenti a un handle di riga esistente.
 
@@ -146,7 +146,7 @@ Conteggio dei riferimenti a un handle di riga esistente.
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> Csimplerow:: M_irowset
+## <a name="irowset"></a> CSimpleRow::m_iRowset
 
 Indice al set di righe che rappresenta il cursore.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -MERGE linker option
 - MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
-ms.openlocfilehash: e0329c6a29a8667a09a56d894386f5c173a77916
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9e029bf38beab83e7823a65376a70278c82d34c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532184"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414720"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (Combina sezioni)
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - inline files [C++], specifying NMAKE
 - files [C++], inline
 ms.assetid: 393eccfb-3fc9-4bac-a30c-8ac8d221cca3
-ms.openlocfilehash: 8f8868ce3755bd47f779576a7e44125f53314606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e1eff292afeab1ec9f42708d94bf78afca4776e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648696"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413212"
 ---
 # <a name="specifying-an-inline-file"></a>Specifica di un file inline
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285308"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420921"
 ---
 # <a name="chtmleditctrl-class"></a>Classe CHtmlEditCtrl
 
@@ -45,7 +45,7 @@ class CHtmlEditCtrl: public CWnd,
 |Nome|Descrizione|
 |----------|-----------------|
 |[CHtmlEditCtrl::Create](#create)|Crea un controllo WebBrowser ActiveX e lo collega al `CHtmlEditCtrl` oggetto. Questa funzione inserisce automaticamente il controllo WebBrowser ActiveX in modalità di modifica.|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera le [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia nel documento attualmente caricato nel controllo WebBrowser indipendente.|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera le [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfaccia nel documento attualmente caricato nel controllo WebBrowser indipendente.|
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Recupera l'URL a un documento predefinito da caricare nel controllo WebBrowser indipendente.|
 
 ## <a name="remarks"></a>Note
@@ -116,7 +116,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
 
-Recupera le [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia nel documento attualmente caricato nel controllo WebBrowser indipendente
+Recupera le [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfaccia nel documento attualmente caricato nel controllo WebBrowser indipendente
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;

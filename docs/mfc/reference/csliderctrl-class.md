@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283605"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422000"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Specifica lo stile del controllo dispositivo di scorrimento. Applicare qualsiasi combinazione di [stili del controllo slider](/windows/desktop/Controls/trackbar-control-styles), come descritto nel SDK di Windows, al controllo.
 
 *rect*<br/>
-Specifica le dimensioni e la posizione del controllo dispositivo di scorrimento. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura.
+Specifica le dimensioni e la posizione del controllo dispositivo di scorrimento. Può essere un' [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto o una [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura.
 
 *pParentWnd*<br/>
 Specifica finestra padre del controllo dispositivo di scorrimento, in genere un `CDialog`. Non deve essere NULL.
@@ -251,7 +251,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Specifica lo stile del controllo dispositivo di scorrimento. Applicare qualsiasi combinazione di [stili del controllo slider](/windows/desktop/Controls/trackbar-control-styles), come descritto nel SDK di Windows, al controllo.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.

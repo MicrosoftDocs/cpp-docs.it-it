@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Active technology [C++]
 - MFC DLLs [C++], Active Technology
 ms.assetid: 3ed27f8d-164a-4562-ad61-9f2333404cc7
-ms.openlocfilehash: 270c64df9af792a73acf1ad408aca02e7fadc30f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e18efe66350349c8cbef7f47b7d1fb226674f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535811"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420167"
 ---
 # <a name="active-technology-and-dlls"></a>Tecnologia Active e DLL
 

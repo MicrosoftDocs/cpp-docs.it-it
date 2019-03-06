@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304554"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417658"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Specifica la combinazione degli stili del controllo rebar applicato al controllo. Visualizzare [stili del controllo Rebar](/windows/desktop/Controls/rebar-control-styles) nel SDK di Windows per un elenco degli stili supportati.
 
 *rect*<br/>
-Un riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, ovvero la posizione e le dimensioni del controllo rebar.
+Un riferimento a un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto oppure [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura, ovvero la posizione e le dimensioni del controllo rebar.
 
 *pParentWnd*<br/>
 Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo rebar. Non deve essere NULL.
@@ -303,7 +303,7 @@ Specifica lo stile esteso del controllo da creare. Per un elenco di stili estesi
 Specifica la combinazione degli stili del controllo rebar applicato al controllo. Per un elenco degli stili supportati, vedere [stili del controllo Rebar](/windows/desktop/Controls/rebar-control-styles) nel SDK di Windows.
 
 *rect*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che descrive le dimensioni e posizione della finestra da creare, nelle coordinate del client *pParentWnd*.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre del controllo.
@@ -389,7 +389,7 @@ void GetBandBorders(
 Indice in base zero della banda di cui verranno recuperati i bordi.
 
 *prc*<br/>
-Un puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceverà i bordi fuori banda. Se il controllo rebar è lo stile RBS_BANDBORDERS, ogni membro della struttura verrà visualizzato il numero di pixel, sul lato corrispondente della banda, che costituiscono il bordo. Se il controllo rebar non ha lo stile RBS_BANDBORDERS, solo il membro a sinistra della struttura riceve informazioni valide. Per una descrizione di stili del controllo rebar, vedere [stili del controllo Rebar](/windows/desktop/Controls/rebar-control-styles) nel SDK di Windows.
+Un puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceverà i bordi fuori banda. Se il controllo rebar è lo stile RBS_BANDBORDERS, ogni membro della struttura verrà visualizzato il numero di pixel, sul lato corrispondente della banda, che costituiscono il bordo. Se il controllo rebar non ha lo stile RBS_BANDBORDERS, solo il membro a sinistra della struttura riceve informazioni valide. Per una descrizione di stili del controllo rebar, vedere [stili del controllo Rebar](/windows/desktop/Controls/rebar-control-styles) nel SDK di Windows.
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Indice in base zero della banda controllo rebar.
 
 *prc*<br/>
-Un puntatore a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceverà i limiti del controllo rebar band.
+Un puntatore a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che riceverà i limiti del controllo rebar band.
 
 ### <a name="return-value"></a>Valore restituito
 

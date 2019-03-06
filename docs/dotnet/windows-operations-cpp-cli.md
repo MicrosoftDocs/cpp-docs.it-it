@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1075c70b10ca8c59272e9a9de8a9a3fd7aa248e6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508394"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415084"
 ---
 # <a name="windows-operations-ccli"></a>Operazioni Windows (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 Il <xref:Microsoft.Win32.Registry> classe è semplicemente un contenitore per le istanze statiche di <xref:Microsoft.Win32.RegistryKey>. Ogni istanza rappresenta un nodo del Registro di sistema radice. Le istanze sono <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, e <xref:Microsoft.Win32.Registry.Users>.
 
-Oltre a essere statico, gli oggetti all'interno di <xref:Microsoft.Win32.Registry> classe sono di sola lettura. Inoltre, le istanze del <xref:Microsoft.Win32.RegistryKey> gli oggetti di classe che vengono creati per accedere al contenuto del Registro di sistema sono di sola lettura anche. Per un esempio di come eseguire l'override di questo comportamento, vedere [procedura: scrivere dati nel Registro di sistema di Windows (C + + / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+Oltre a essere statico, gli oggetti all'interno di <xref:Microsoft.Win32.Registry> classe sono di sola lettura. Inoltre, le istanze del <xref:Microsoft.Win32.RegistryKey> gli oggetti di classe che vengono creati per accedere al contenuto del Registro di sistema sono di sola lettura anche. Per un esempio di come eseguire l'override di questo comportamento, vedere [come: Scrivere dati nel Registro di sistema di Windows (C + + CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 Esistono altri due oggetti nella <xref:Microsoft.Win32.Registry> classe: <xref:Microsoft.Win32.Registry.DynData> e <xref:Microsoft.Win32.Registry.PerformanceData>. Sono entrambi istanze del <xref:Microsoft.Win32.RegistryKey> classe. Il <xref:Microsoft.Win32.Registry.DynData> oggetto contiene le informazioni del Registro di sistema dinamico, che sono supportate solo in Windows 98 e Windows Me. Il <xref:Microsoft.Win32.Registry.PerformanceData> oggetto può essere utilizzato per accedere alle informazioni sui contatori delle prestazioni per le applicazioni che usano il sistema di monitoraggio delle prestazioni di Windows. Il <xref:Microsoft.Win32.Registry.PerformanceData> nodo rappresenta le informazioni che non vengono effettivamente memorizzate nel Registro di sistema e pertanto non possono essere visualizzate mediante Regedit.exe.
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>Note
 
-È possibile usare .NET Framework per accedere al registro con il <xref:Microsoft.Win32.Registry> e [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) classi, che sono entrambi definiscono nel <xref:Microsoft.Win32> dello spazio dei nomi. Il **Registro di sistema** classe è un contenitore per le istanze statiche del <xref:Microsoft.Win32.RegistryKey> classe. Ogni istanza rappresenta un nodo del Registro di sistema radice. Le istanze sono <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, e <xref:Microsoft.Win32.Registry.Users>.
+È possibile usare .NET Framework per accedere al registro con il <xref:Microsoft.Win32.Registry> e <xref:Microsoft.Win32.RegistryKey> classi, che sono entrambi definiscono nel <xref:Microsoft.Win32> dello spazio dei nomi. Il **Registro di sistema** classe è un contenitore per le istanze statiche del <xref:Microsoft.Win32.RegistryKey> classe. Ogni istanza rappresenta un nodo del Registro di sistema radice. Le istanze sono <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, e <xref:Microsoft.Win32.Registry.Users>.
 
 ## <a name="related-sections"></a>Sezioni correlate
 

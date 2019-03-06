@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: 0b3c0f239b3c80d0b4d3c8425b03a3612a0e6db2
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e1117cfb8e68cbdc5432355315213faad903ea35
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556231"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424652"
 ---
 # <a name="iconverttypeimpl-class"></a>Classe IConvertTypeImpl
 
-Fornisce un'implementazione del [IConvertType](https://docs.microsoft.com/previous-versions/windows/desktop/ms715926(v=vs.85)) interfaccia.
+Fornisce un'implementazione del [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) interfaccia.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -54,7 +54,7 @@ La classe, derivata da `IConvertTypeImpl`.
 
 Questa interfaccia è obbligatoria in caso di comandi, i set di righe e i set di righe di indice. `IConvertTypeImpl` implementa l'interfaccia mediante la delega all'oggetto di conversione fornita da OLE DB.
 
-## <a name="canconvert"></a> Iconverttypeimpl:: CanConvert
+## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
 
 Fornisce informazioni sulla disponibilità di conversioni di tipi in un comando o in un set di righe.
 
@@ -68,7 +68,7 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 #### <a name="parameters"></a>Parametri
 
-Visualizzare [IConvertType::CanConvert](https://docs.microsoft.com/previous-versions/windows/desktop/ms711224(v=vs.85)) nel *riferimento per programmatori OLE DB*.
+Visualizzare [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 ### <a name="remarks"></a>Note
 

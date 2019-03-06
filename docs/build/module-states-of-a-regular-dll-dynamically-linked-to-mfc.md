@@ -8,12 +8,12 @@ helpviewer_keywords:
 - module states [C++], regular MFC DLLs dynamically linked to
 - DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-ms.openlocfilehash: bd485e484287a17b1f016acc7012178a2c74343d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a47b2a11db9dfc08b84cc9cba07a62a91ac1a805
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462881"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420180"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stato dei moduli di una DLL MFC regolari collegate in modo dinamico a MFC
 

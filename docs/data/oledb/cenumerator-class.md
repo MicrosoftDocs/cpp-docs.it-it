@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: bb44af102f08e05edddc2fb692d1e30dd7e31717
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3333c624affd2afb61b8828250bf1c2c168c9207
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556676"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422091"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
-Usa un oggetto enumeratore OLE DB, che espone il [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interfaccia da restituire un set di righe che descrivono tutte le origini dati e gli enumeratori.
+Usa un oggetto enumeratore OLE DB, che espone il [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) interfaccia da restituire un set di righe che descrivono tutte le origini dati e gli enumeratori.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -79,7 +79,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>Note
 
-Questo nome viene eseguito il mapping per il `SOURCES_NAME` membro del [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interfaccia.
+Questo nome viene eseguito il mapping per il `SOURCES_NAME` membro del [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) interfaccia.
 
 ## <a name="getmoniker"></a> CEnumerator:: GetMoniker
 
@@ -108,7 +108,7 @@ Un valore HRESULT standard.
 
 ## <a name="open"></a> CEnumerator:: Open
 
-Associa il moniker per l'enumeratore, se uno è specificato, quindi recupera il set di righe per l'enumeratore chiamando [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)).
+Associa il moniker per l'enumeratore, se uno è specificato, quindi recupera il set di righe per l'enumeratore chiamando [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
 ### <a name="syntax"></a>Sintassi
 

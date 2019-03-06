@@ -12,12 +12,12 @@ helpviewer_keywords:
 - output files, preprocessor
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
-ms.openlocfilehash: 9b3d84d94ed75acd68011b895afbc4f190019673
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e1280b404668cebb64afa5a810d769a97bdbf85
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622238"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418061"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Pre-elabora in un file)
 

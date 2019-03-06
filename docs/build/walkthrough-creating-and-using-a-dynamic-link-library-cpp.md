@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330541"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416449"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: Creare e usare il proprio libreria a collegamento dinamico (C++)
 
@@ -41,7 +41,7 @@ Questa procedura dettagliata Usa Visual Studio 2017, ma il codice e la maggior p
 
 - Un computer che esegue Microsoft Windows 7 o versioni successive. Si consiglia di Windows 10 per la migliore esperienza di sviluppo.
 
-- Una copia di Visual Studio 2017. Per informazioni su come scaricare e installare Visual Studio, vedere [installare Visual Studio 2017](/visualstudio/install/install-visual-studio). Quando si esegue il programma di installazione, assicurarsi che il **sviluppo di applicazioni Desktop con C++** viene controllato il carico di lavoro. Non occorre preoccuparsi se non è stato installato il carico di lavoro durante l'installazione di Visual Studio. È possibile eseguire nuovamente il programma di installazione e installarlo ora.
+- A copy of Visual Studio 2017. Per informazioni su come scaricare e installare Visual Studio, vedere [installare Visual Studio 2017](/visualstudio/install/install-visual-studio). Quando si esegue il programma di installazione, assicurarsi che il **sviluppo di applicazioni Desktop con C++** viene controllato il carico di lavoro. Non occorre preoccuparsi se non è stato installato il carico di lavoro durante l'installazione di Visual Studio. È possibile eseguire nuovamente il programma di installazione e installarlo ora.
 
    ![Sviluppo di applicazioni desktop con C++](media/desktop-development-with-cpp.png "sviluppo Desktop con C++")
 
@@ -402,5 +402,5 @@ Quando si distribuisce l'app, è necessario distribuire anche le DLL Usa. Il mod
 
 [DLL in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
 [Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Procedura dettagliata: distribuzione di un programma (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+[Procedura dettagliata: Distribuzione di un programma (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 [Chiamata di funzioni DLL da applicazioni Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)

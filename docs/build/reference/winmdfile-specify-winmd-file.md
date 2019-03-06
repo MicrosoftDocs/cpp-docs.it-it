@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadataFile
 ms.assetid: 062b41b3-14d6-432c-a361-fdb66e918931
-ms.openlocfilehash: 74958e51925b9ed6d1382efe76fe587eed73f4e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5532046f4284100c60bb82c12b4d47c721fc275e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656054"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413082"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (specificare il file winmd)
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: 256d62ef480e8d67f3861b3b8233c45fc6a95a4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dee8f4ee08f9922c4bfc79c5103618681058e56e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547185"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415370"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Impostare il percorso e le variabili di ambiente per compilazioni da riga di comando
 

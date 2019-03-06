@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298919"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416007"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -295,7 +295,7 @@ Indice a base zero dell'immagine da utilizzare come origine dell'operazione di c
 *uFlags*<br/>
 Il valore di flag di bit che specifica il tipo di operazione di copia da apportare. Questo parametro può essere uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |ILCF_MOVE|L'immagine di origine viene copiata all'indice dell'immagine di destinazione. Questa operazione comporta più istanze di una determinata immagine. ILCF_MOVE è quello predefinito.|
 |ILCF_SWAP|Le immagini di origine e destinazione scambiano le posizioni all'interno dell'elenco immagini.|
@@ -691,13 +691,13 @@ Puntatore al contesto di dispositivo di destinazione. È necessario eliminare qu
 Indice a base zero dell'immagine da disegnare.
 
 *pt*<br/>
-Oggetto [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che contiene le coordinate x e y in cui verrà disegnata l'immagine.
+Oggetto [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che contiene le coordinate x e y in cui verrà disegnata l'immagine.
 
 *sz*<br/>
 Oggetto [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) struttura che indica la dimensione dell'immagine da disegnare.
 
 *ptOrigin*<br/>
-Oggetto [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che contiene le coordinate x e y che specifica l'angolo superiore sinistro dell'operazione di disegno per quanto riguarda l'immagine stessa. Non vengono disegnati i pixel dell'immagine a sinistra della coordinata x e versioni successive la coordinata y.
+Oggetto [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che contiene le coordinate x e y che specifica l'angolo superiore sinistro dell'operazione di disegno per quanto riguarda l'immagine stessa. Non vengono disegnati i pixel dell'immagine a sinistra della coordinata x e versioni successive la coordinata y.
 
 *fStyle*<br/>
 Flag che specifica lo stile di disegno e, facoltativamente, l'immagine sovrapposta. Vedere la sezione Osservazioni per informazioni sull'immagine di sovrapposizione. L'implementazione predefinita MFC, ILD_NORMAL, disegna l'immagine utilizzando il colore di sfondo per l'elenco di immagini. Se il colore di sfondo è il valore CLR_NONE, verrà disegnata l'immagine in modo trasparente con una maschera.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parametri
 
 *lpPoint*<br/>
-Indirizzo di un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che riceve l'oggetto corrente trascinare posizione.
+Indirizzo di un [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che riceve l'oggetto corrente trascinare posizione.
 
 *lpPointHotSpot*<br/>
 Indirizzo di un `POINT` struttura che riceve l'offset dell'immagine di trascinamento rispetto alla posizione di trascinamento.

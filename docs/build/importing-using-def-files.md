@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: d393ce8b27a0f04527b912db5936534ebd9b2d5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434373"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424778"
 ---
 # <a name="importing-using-def-files"></a>Importazione tramite i file DEF
 
@@ -42,7 +42,7 @@ __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-\-o -
+\-oppure-
 
 ```
 ULONG *ulDataInDll;      /*prototype*/

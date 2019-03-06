@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535773"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412458"
 ---
 # <a name="cl-environment-variables"></a>Variabili di ambiente CL
 
@@ -28,7 +28,7 @@ Lo strumento CL usa le seguenti variabili di ambiente:
 
 È possibile impostare il CL oppure \_CL\_ variabile di ambiente utilizzando la sintassi seguente:
 
-> IMPOSTARE CL = [[*opzione*]... [*file*]...] [/link *collegamento di-opt* ...] IMPOSTARE \_CL\_= [[*opzione*]... [*file*]...] [/link *collegamento di-opt* ...]
+> SET CL=[ [*option*] ... [*file*] ...] [/link *link-opt* ...] SET \_CL\_=[ [*option*] ... [*file*] ...] [/link *link-opt* ...]
 
 Per informazioni dettagliate sugli argomenti di CL e \_CL\_ variabili di ambiente, vedere [sintassi della riga di comando del compilatore](../../build/reference/compiler-command-line-syntax.md).
 
@@ -42,15 +42,15 @@ Per informazioni correlate, vedere [impostare le variabili di ambiente](../../bu
 
 Di seguito è riportato un esempio di impostazione della variabile di ambiente CL:
 
-> IMPOSTARE CL = / Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ
+> SET CL=/Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ
 
 Quando è impostata questa variabile di ambiente, se si immette `CL INPUT.C` nella riga di comando, questo è il comando effettivo:
 
-> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. INPUT OBJ. C
+> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C
 
 Nell'esempio seguente un normale comando CL compila i file di origine FILE1.c e FILE2.c e quindi collega i file oggetto FILE1.obj, FILE2.obj e FILE3.obj:
 
-> SET CL = FILE1. FILE2 C. SET DI C \_CL\_= FILE3. OBJ CL
+> SET CL=FILE1.C FILE2.C SET \_CL\_=FILE3.OBJ CL
 
 Ha lo stesso effetto della riga di comando seguente:
 

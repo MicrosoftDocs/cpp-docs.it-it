@@ -2,12 +2,12 @@
 title: Collegamento
 ms.date: 11/04/2016
 ms.assetid: bb736587-d13b-4f3c-8982-3cc2c015c59c
-ms.openlocfilehash: 8ac368b03c9c6d84a70ec39846d997624070f7fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4a02fbc27c766dfaf6e3923a96923274fb3cee5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455653"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412597"
 ---
 # <a name="linking"></a>Collegamento
 

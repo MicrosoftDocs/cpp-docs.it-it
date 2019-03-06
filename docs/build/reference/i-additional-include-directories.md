@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412848"
 ---
 # <a name="i-additional-include-directories"></a>/I (directory di inclusione aggiuntive)
 
@@ -27,11 +27,11 @@ Aggiunge una directory all'elenco delle directory cercati i file di inclusione.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/I**[]*directory*
+> **/I**[ ]*directory*
 
 ### <a name="arguments"></a>Argomenti
 
-*Directory*<br/>
+*directory*<br/>
 La directory da aggiungere all'elenco delle directory cercati i file di inclusione.
 
 ## <a name="remarks"></a>Note
@@ -62,7 +62,7 @@ Il compilatore cerca le directory nell'ordine seguente:
 
 ## <a name="example"></a>Esempio
 
-Il comando seguente cerca i file di inclusione richiesti da Main. c nel seguente ordine: in primo luogo, se specificato con le virgolette doppie, vengono cercati i file locali. Successivamente, ricerca continua nella directory \INCLUDE, quindi nella directory \MY\INCLUDE e infine nelle directory assegnato alla variabile di ambiente INCLUDE.
+Il comando seguente è simile per i file di inclusione richiesti da Main. c nell'ordine seguente: In primo luogo, se specificato con le virgolette doppie, vengono cercati i file locali. Successivamente, ricerca continua nella directory \INCLUDE, quindi nella directory \MY\INCLUDE e infine nelle directory assegnato alla variabile di ambiente INCLUDE.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

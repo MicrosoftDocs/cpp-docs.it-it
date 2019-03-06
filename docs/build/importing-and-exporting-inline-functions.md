@@ -12,12 +12,12 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: 407ca39aa53cf622b531fa0ca7818682c82c561f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb117ce6c6088b9fdca57f7d4fd7d0193e1813c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439104"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425549"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importazione ed esportazione di funzioni inline
 

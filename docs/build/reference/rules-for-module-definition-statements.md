@@ -7,12 +7,12 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: 6921043bd4618692be788ec5a61978f1178c64ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d6528b81777711e52153e19a656619a2895b0d6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442770"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424756"
 ---
 # <a name="rules-for-module-definition-statements"></a>Regole relative alle istruzioni di definizione dei moduli
 

@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605855"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419670"
 ---
 # <a name="cimage-class"></a>CImage (classe)
 
@@ -110,7 +110,7 @@ class CImage
 |[CImage::IsDIBSection](#isdibsection)|Determina se la bitmap associata è una sezione DIB.|
 |[CImage::IsIndexed](#isindexed)|Indica che la bitmap viene eseguito il mapping a una tavolozza indicizzata.|
 |[CImage::IsNull](#isnull)|Indica se una bitmap di origine è attualmente caricata.|
-|[CImage:: IsTransparencySupported](#istransparencysupported)|Indica se l'applicazione supporta le bitmap trasparenti.|
+|[CImage::IsTransparencySupported](#istransparencysupported)|Indica se l'applicazione supporta le bitmap trasparenti.|
 |[CImage::Load](#load)|Carica un'immagine dal file specificato.|
 |[CImage::LoadFromResource](#loadfromresource)|Carica un'immagine dalla risorsa specificata.|
 |[CImage::MaskBlt](#maskblt)|Combina i dati relativi al colore per la bitmap di origine e di destinazione utilizzando il filtro specificato e l'operazione raster.|
@@ -258,7 +258,7 @@ Un valore di trasparenza alfa da usare per la bitmap di origine intera. Il valor
 La funzione di fusione alfa per origine e destinazione bitmap, un valore alfa globale da applicare per l'intera origine bitmap e informazioni sul formato di bitmap di origine. Le funzioni di blend di origine e destinazione sono attualmente limitate ai AC_SRC_OVER.
 
 *pointDest*<br/>
-Un riferimento a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che identifica l'angolo superiore sinistro del rettangolo di destinazione, in unità logiche.
+Un riferimento a un [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che identifica l'angolo superiore sinistro del rettangolo di destinazione, in unità logiche.
 
 *nDestWidth*<br/>
 La larghezza, in unità logiche, del rettangolo di destinazione.
@@ -279,7 +279,7 @@ La larghezza, in unità logiche, del rettangolo di origine.
 Altezza, in unità logiche, del rettangolo di origine.
 
 *rectDest*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura, che identifica la destinazione.
 
 *rectSrc*<br/>
 Un riferimento a un `RECT` struttura, che identifica l'origine.
@@ -368,7 +368,7 @@ La logica coordinata y dell'angolo superiore sinistro del rettangolo di destinaz
 L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello attualmente selezionato) per formare la destinazione. Visualizzare [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) nel SDK di Windows per un elenco di altri codici di operazione raster e le relative descrizioni.
 
 *pointDest*<br/>
-Oggetto [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che indica l'angolo superiore sinistro del rettangolo di destinazione.
+Oggetto [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che indica l'angolo superiore sinistro del rettangolo di destinazione.
 
 *nDestWidth*<br/>
 La larghezza, in unità logiche, del rettangolo di destinazione.
@@ -383,7 +383,7 @@ La logica coordinata x dell'angolo superiore sinistro del rettangolo di origine.
 La logica coordinata y dell'angolo superiore sinistro del rettangolo di origine.
 
 *rectDest*<br/>
-Oggetto [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che indica il rettangolo di destinazione.
+Oggetto [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che indica il rettangolo di destinazione.
 
 *pointSrc*<br/>
 Oggetto `POINT` struttura che indica l'angolo superiore sinistro del rettangolo di origine.
@@ -595,13 +595,13 @@ La larghezza, in unità logiche, del rettangolo di origine.
 Altezza, in unità logiche, del rettangolo di origine.
 
 *rectDest*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura, che identifica la destinazione.
 
 *rectSrc*<br/>
 Un riferimento a un `RECT` struttura, che identifica l'origine.
 
 *pointDest*<br/>
-Un riferimento a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che identifica l'angolo superiore sinistro del rettangolo di destinazione, in unità logiche.
+Un riferimento a un [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che identifica l'angolo superiore sinistro del rettangolo di destinazione, in unità logiche.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -763,7 +763,7 @@ Un valore HRESULT standard.
 
 Il parametro *strExporter* ha il formato:
 
-file description0&#124;\*.ext0&#124;filedescription1&#124;\*Est1&#124;.. file descrizione *n*&#124;\*ext *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 dove '&#124;' è il carattere separatore specificato da `chSeparator`. Ad esempio:
 
@@ -854,7 +854,7 @@ Il separatore utilizzato tra i formati di immagine. Visualizzare **osservazioni*
 
 Il parametro *strImporter* ha il formato:
 
-file description0&#124;\*.ext0&#124;filedescription1&#124;\*Est1&#124;.. file descrizione *n*&#124;\*ext *n*&#124;&#124;
+file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
 dove '&#124;' è il separatore specificato da *chSeparator*. Ad esempio:
 
@@ -1029,7 +1029,7 @@ bool IsNull() const throw();
 
 Questo metodo restituisce TRUE se una mappa di bit non è attualmente caricato; in caso contrario, FALSE.
 
-##  <a name="istransparencysupported"></a>  CImage:: IsTransparencySupported
+##  <a name="istransparencysupported"></a>  CImage::IsTransparencySupported
 
 Indica se l'applicazione supporta le bitmap trasparenti.
 
@@ -1259,10 +1259,10 @@ La coordinata x dell'angolo superiore sinistro della bitmap monocromatica.
 La coordinata y dell'angolo superiore sinistro della bitmap monocromatica.
 
 *rectSrc*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le coordinate del rettangolo di origine.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che specifica le coordinate del rettangolo di origine.
 
 *pointMask*<br/>
-Oggetto [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che indica l'angolo superiore sinistro dell'immagine bitmap della maschera.
+Oggetto [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che indica l'angolo superiore sinistro dell'immagine bitmap della maschera.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1384,7 +1384,7 @@ Posizione orizzontale del pixel da impostare.
 *y*<br/>
 Posizione verticale del pixel da impostare.
 
-*Colore*<br/>
+*color*<br/>
 Il colore a cui è impostato il pixel.
 
 ### <a name="remarks"></a>Note
@@ -1519,7 +1519,7 @@ Altezza, in unità logiche, del rettangolo di destinazione.
 L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello attualmente selezionato) per formare la destinazione. Visualizzare [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) nel SDK di Windows per un elenco di altri codici di operazione raster e le relative descrizioni.
 
 *rectDest*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura, che identifica la destinazione.
 
 *xSrc*<br/>
 La coordinata x, in unità logiche, dell'angolo superiore sinistro del rettangolo di origine.
@@ -1602,7 +1602,7 @@ Altezza, in unità logiche, del rettangolo di destinazione.
 Il colore nella bitmap di origine da trattare come trasparente. Per impostazione predefinita, CLR_INVALID, che indica che il colore attualmente impostato come colore trasparente dell'immagine deve essere utilizzato.
 
 *rectDest*<br/>
-Un riferimento a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.
+Un riferimento a un [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura, che identifica la destinazione.
 
 *xSrc*<br/>
 La coordinata x, in unità logiche, dell'angolo superiore sinistro del rettangolo di origine.

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 5c7f71e51e0741c534761b22a66ac77a6df8f870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a953a63409c0b6c281533466797e1fc0c30c7a66
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661084"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415825"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (utilizzo della libreria di runtime)
 

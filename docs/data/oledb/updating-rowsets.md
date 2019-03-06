@@ -7,18 +7,18 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: d00b9036b216e3425615478d6bf92d239a3637d1
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fb915a2f61c2adfedc41630e637f6b5beee30768
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556699"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424362"
 ---
 # <a name="updating-rowsets"></a>aggiornamento rowset
 
 Per aggiornare o scrivere dati, l'archivio dati è un'operazione di base dei database. In OLE DB il meccanismo di aggiornamento è semplice: l'applicazione consumer imposta i valori dei membri dati associati, scrive tali valori nel set di righe e, infine, richiede al provider di aggiornare l'archivio dati.
 
-I consumer possono completare i seguenti tipi di aggiornamenti sui dati di set di righe: impostazione dei valori di colonna all'interno di una riga, inserimento di una riga e l'eliminazione di una riga. Per completare queste operazioni, la classe di modelli OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa il [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) interfaccia ed esegue l'override di metodi di interfaccia seguenti:
+I consumer possono completare i seguenti tipi di aggiornamenti sui dati di set di righe: impostazione dei valori di colonna all'interno di una riga, inserimento di una riga e l'eliminazione di una riga. Per completare queste operazioni, la classe di modelli OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa il [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) interfaccia ed esegue l'override di metodi di interfaccia seguenti:
 
 - [SetData](../../data/oledb/crowset-setdata.md) i valori della colonna di modifiche in una riga di un set di righe; equivale al comando SQL UPDATE.
 
@@ -207,4 +207,4 @@ Infine, uno dei motivi principali per il rinvio delle modifiche consiste nella p
 
 [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [Classe CRowset](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>
+[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

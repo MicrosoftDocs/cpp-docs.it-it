@@ -11,12 +11,12 @@ helpviewer_keywords:
 - LINK tool [C++], command-line syntax
 - command files [C++], LINK
 ms.assetid: 7154511c-32b9-4e5b-a515-3922fa9de48e
-ms.openlocfilehash: 3a116736a6ed00ea4d378e68c6f515aa96ea2f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4161506d12ecf9d9d37808de343fdf63b45e5615
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676447"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426719"
 ---
 # <a name="link-command-files"></a>File di comando di LINK
 

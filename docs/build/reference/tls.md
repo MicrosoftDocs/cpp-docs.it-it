@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /TLS dumpbin option
 - -TLS dumpbin option
 ms.assetid: 2b3f48f9-cac4-4351-b15c-2833b43bc709
-ms.openlocfilehash: c125a6439e6cda2159a8bde2317528e667eaf310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1760e94046a950f67d3c3fd7ef13aa40ca7de47a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532635"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417788"
 ---
 # <a name="tls"></a>/TLS
 

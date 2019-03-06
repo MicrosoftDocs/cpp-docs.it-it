@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 1b3982e29d1bbf919e326e39f62ddb361d4c12ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 382810fd418dbc49b20885f487ca9a35b0889a5f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543273"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415331"
 ---
 # <a name="lib-reference"></a>Riferimenti a LIB
 
