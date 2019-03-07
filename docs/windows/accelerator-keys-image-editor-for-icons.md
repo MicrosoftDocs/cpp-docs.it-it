@@ -8,19 +8,19 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336538"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563121"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Tasti di scelta rapida (Editor di immagini di C++ per le icone)
 
-Di seguito sono i tasti di scelta rapida per i comandi dell'editor di immagini che sono associati alle chiavi per impostazione predefinita. Per modificare i tasti di scelta rapida, fare clic su **opzioni** nel **Tools** dal menu e quindi scegliere **tastiera** sotto il **ambiente** cartella. Per altre informazioni, vedere [Identificazione e personalizzazione dei tasti di scelta rapida](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Di seguito sono i tasti di scelta rapida per i comandi dell'editor di immagini che sono associati alle chiavi per impostazione predefinita. Per modificare i tasti di scelta rapida, passare al menu di scelta **degli strumenti** > **opzioni** e scegliere **tastiera** sotto la **ambiente** cartella. Per altre informazioni, vedere [Identificazione e personalizzazione dei tasti di scelta rapida](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
-> Le opzioni disponibili nelle finestre di dialogo e i nomi e i percorsi dei comandi di menu visualizzati potrebbero non corrispondere a quelli descritti nella Guida a seconda dell'edizione o delle impostazioni attive. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Le opzioni disponibili nelle finestre di dialogo e i nomi e i percorsi dei comandi di menu visualizzati potrebbero non corrispondere a quelli descritti nella Guida a seconda dell'edizione o delle impostazioni attive. Per modificare le impostazioni, passare al menu di scelta **degli strumenti** > **Importa / Esporta impostazioni**. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 |Comando|Tasti|Descrizione|
 |-------------|----------|-----------------|
@@ -68,4 +68,8 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor di immagini per le icone](../windows/image-editor-for-icons.md)
+[Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
+[Procedura: Creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Procedura: Modificare un'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Procedura: Usare uno strumento di disegno](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Procedura: Usare i colori](../windows/working-with-color-image-editor-for-icons.md)<br/>

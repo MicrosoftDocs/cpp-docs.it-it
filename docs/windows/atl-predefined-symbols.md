@@ -5,18 +5,18 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 16991746c5c858310466f7eebd91a8478d2dcc5c
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 2abbfb83f6d9b09a1c5dcc2afe1c48a6d2dff79a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954848"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562874"
 ---
 # <a name="atl-predefined-symbols"></a>Simboli predefiniti di ATL
 
 Questi simboli sono definiti nei file di intestazione ATL, ma supportano le azioni e funzioni di applicazione di Windows standard. Questi simboli sono usati principalmente con le finestre di dialogo.
 
-Quando si lavora con finestre di dialogo e controlli nel [editor finestre](../windows/dialog-editor.md), questi simboli verranno visualizzati nei **proprietà** finestra associato ai controlli comuni. Ad esempio, se dispone di una finestra di dialogo un **annullare** button, che comando sarà associato il simbolo IDCANCEL nel [finestra proprietà](/visualstudio/ide/reference/properties-window).
+Quando si lavora con finestre di dialogo e controlli nel [finestra di dialogo Editor](../windows/dialog-editor.md), questi simboli verranno visualizzati nel [finestra proprietà](/visualstudio/ide/reference/properties-window) associati ai controlli comuni. Ad esempio, se dispone di una finestra di dialogo un **annullare** button, che comando sarà associato il simbolo IDCANCEL nel **proprietà** finestra.
 
 |||
 |-|-|

@@ -16,25 +16,23 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: bde951a2915bf980e09d94c16edc1a9b462c662e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336553"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563329"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Procedura: Usare uno strumento di disegno
 
-Il **immagine** mano di disegno e la cancellazione di tutti funzionano nello stesso modo gli strumenti dell'editor: si seleziona lo strumento e, se necessario, [selezionare i colori di primo piano e sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e le opzioni di dimensioni e la forma. Quindi spostare il puntatore all'immagine e fare clic o trascinare per disegnare e cancellare.
+Il **Editor di immagini** dispone di disegno a mano libera e cancellazione degli strumenti che operano nello stesso modo. Si seleziona lo strumento e, se necessario, [selezione dei colori di primo piano e sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e le opzioni di dimensioni e la forma. Quindi spostare il puntatore all'immagine e fare clic o trascinare per disegnare e cancellare.
 
 ## <a name="drawing-tools"></a>Gli strumenti di disegno
 
-Quando si seleziona il **gomma** dello strumento, **pennello** strumento, o **aerografo** strumento, il selettore di opzioni consente di visualizzare le opzioni per tale strumento.
+È possibile selezionare gli strumenti di disegno dal **Editor di immagini** sulla barra degli strumenti o il **immagine** menu. Quando si seleziona il **gomma** dello strumento, **pennello** strumento, o **aerografo** strumento, il selettore di opzioni consente di visualizzare le opzioni per tale strumento.
 
 > [!TIP]
-> Invece di usare la **gomma** strumento, può risultare più comodo disegnare il colore di sfondo con uno degli strumenti di disegno.
-
-È possibile selezionare gli strumenti di disegno dal **Editor di immagini** sulla barra degli strumenti o il **immagine** menu.
+>  Descrizioni comandi vengono visualizzati quando si passa il cursore sopra i pulsanti sul [sulla barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md). Questi suggerimenti per identificare i pulsanti specifici indicati di seguito.
 
 ### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Selezionare e usare uno strumento di disegno nella barra degli strumenti Editor di immagini
 
@@ -42,14 +40,14 @@ Quando si seleziona il **gomma** dello strumento, **pennello** strumento, o **ae
 
    - Il **gomma** strumento Disegna l'immagine con il colore di sfondo corrente quando si preme il pulsante sinistro del mouse.
 
+      > [!TIP]
+      > Invece di usare la **gomma** strumento, può risultare più comodo disegnare il colore di sfondo con uno degli strumenti di disegno.
+
    - Il **a forma di matita** lo strumento consente di disegnare mano libera in una larghezza costante di un pixel.
 
-   - Il **determinate opzione selettore di forma e dimensioni dello strumento pennello**.
+   - Il **pennello** strumento presenta diverse forme e dimensioni.
 
    - Il **aerografo** strumento distribuisce in modo casuale i pixel dal colore intorno al centro del pennello.
-
-        > [!TIP]
-        >  Descrizioni comandi vengono visualizzati quando si passa il cursore sopra i pulsanti sul [sulla barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md). Questi suggerimenti per identificare i pulsanti specifici indicati di seguito.
 
 1. Se necessario, selezionare i colori e un pennello:
 
@@ -63,19 +61,19 @@ Quando si seleziona il **gomma** dello strumento, **pennello** strumento, o **ae
 
 ### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Selezionare e usare uno strumento di disegno di menu immagine
 
-1. Selezionare il **immagine** menu e selezionare il **Tools** comando.
+1. Passare al menu di scelta **immagine** > **strumenti**.
 
 1. Nel sottomenu scegliere lo strumento da usare.
 
 ## <a name="lines-or-closed-figures"></a>Linee o figure chiuse
 
-L'editor di immagini di strumenti per tracciare linee e utilizzano figure chiuse tutte nello stesso modo: si posiziona il punto di inserimento in un punto e trascinare in un altro. Per le righe, questi aspetti sono gli endpoint. Per figure chiuse, questi aspetti sono gli angoli opposti del rettangolo di delimitazione nella figura.
+Il **Editor di immagini** gli strumenti per tracciare linee e figure chiuse funzionano nello stesso modo: si posiziona il punto di inserimento in un punto e trascinare in un altro. Per le righe, questi aspetti sono gli endpoint. Per figure chiuse, questi aspetti sono gli angoli opposti del rettangolo di delimitazione nella figura.
 
 Le righe vengono disegnate in un'ampiezza determinata dalla selezione corrente di pennello e figure profilate vengono disegnate in un'ampiezza determinata dalla selezione corrente di larghezza. Le righe e tutte le cifre, il frame sia compilato, vengono disegnate nel colore primo piano corrente se si preme il pulsante sinistro del mouse o il colore di sfondo corrente se si preme il pulsante destro del mouse.
 
 ### <a name="to-draw-a-line"></a>Per disegnare una linea
 
-1. Nel [sulla barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md) (o dal **immagine** dal menu **strumenti** comando), scegliere il **riga** dello strumento.
+1. Usare la [sulla barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md) o passare al menu **immagine**> **strumenti** e scegliere il **riga** dello strumento.
 
 1. Se necessario, selezionare i colori e un pennello:
 
@@ -89,7 +87,7 @@ Le righe vengono disegnate in un'ampiezza determinata dalla selezione corrente d
 
 ### <a name="to-draw-a-closed-figure"></a>Per disegnare una figura chiusa
 
-1. Nel **Editor di immagini** sulla barra degli strumenti (o dal **immagine** dal menu **strumenti** comando), selezionare un **disegno di Figure chiuse** dello strumento.
+1. Usare la **Editor di immagini** sulla barra degli strumenti oppure passare al menu **immagine** > **strumenti** e selezionare un **disegno di Figure chiuse** dello strumento.
 
    Il **Figure chiuse disegno** strumenti creano figure come indicato sui rispettivi pulsanti.
 
@@ -101,13 +99,13 @@ Le righe vengono disegnate in un'ampiezza determinata dalla selezione corrente d
 
 ## <a name="custom-brushes"></a>Pennelli personalizzati
 
-Un pennello personalizzato è una porzione rettangolare di un'immagine che vengono prelevati e utilizzati come uno dei **immagine** pennelli pronte all'uso dell'editor. È possibile eseguire su una selezione di tutte le operazioni, è possibile eseguire su anche un pennello personalizzato.
+Un pennello personalizzato è una porzione rettangolare di un'immagine che vengono prelevati e utilizzati come uno dei **Editor di immagini**di pennelli pronte all'uso. È possibile eseguire su una selezione di tutte le operazioni, è possibile eseguire su anche un pennello personalizzato.
 
 ### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Per creare un pennello personalizzato da una parte di un'immagine
 
-1. [Selezionare la parte dell'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) che si desidera utilizzare per un pennello.
+1. Selezionare la parte dell'immagine che si desidera utilizzare per un pennello.
 
-1. Tenere premuto il **MAIUSC** chiave verso il basso, scegliere la selezione e trascinarla sull'immagine. O dal **immagine** menu, scegliere **Usa selezione come pennello**.
+1. Tenere premuto il **Shift** chiave verso il basso, scegliere la selezione e trascinarla sull'immagine o passare al menu **immagine** > **Usa selezione come pennello**.
 
    La selezione diventa un pennello personalizzato che distribuisce i colori nella selezione tra l'immagine. Le copie della selezione vengono lasciate lungo il percorso di trascinamento. Più lenta il trascinamento, vengono eseguite le altre copie.
 
@@ -120,9 +118,9 @@ I pixel in un pennello personalizzato che corrispondono al colore di sfondo corr
 
 ### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Per disegnare forme pennello personalizzato nel colore di sfondo
 
-1. [Selezionare uno sfondo opaco o trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+1. Selezionare uno sfondo opaco o trasparente.
 
-1. [Impostare il colore di sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) il colore in cui si desidera disegnare.
+1. Impostare il colore di sfondo sul colore in cui si desidera disegnare.
 
 1. Posizionare il pennello personalizzato in cui si desidera disegnare.
 
@@ -142,7 +140,8 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
-[Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
-[Uso dei colori](../windows/working-with-color-image-editor-for-icons.md)
+[Procedura: Creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Procedura: Modificare un'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Procedura: Usare i colori](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

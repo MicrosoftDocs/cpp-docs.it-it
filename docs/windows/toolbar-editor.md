@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 5aadb00e6e010467ee9c70dc357916d3c4f81853
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211082"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563251"
 ---
 # <a name="toolbar-editor-c"></a>Toolbar Editor (C++)
 
@@ -103,7 +103,7 @@ Il **sulla barra degli strumenti Editor** consente di:
 
 ### <a name="to-create-new-toolbars"></a>Per creare nuove barre degli strumenti
 
-1. Nelle **Resource** consente di visualizzare, fare doppio clic sul file RC e scegliere **Aggiungi risorsa**. Se si dispone di una barra degli strumenti esistente nel file RC, è possibile fare doppio clic il **sulla barra degli strumenti** cartella e selezionare **Inserisci sulla barra degli strumenti**.
+1. In **visualizzazione di risorse**, fare doppio clic sui *RC* del file e scegliere **Aggiungi risorsa**. Se si dispone di una barra degli strumenti esistente nel *RC* file, è possibile fare doppio clic il **sulla barra degli strumenti** cartella e selezionare **Inserisci sulla barra degli strumenti**.
 
 1. Nel **Aggiungi risorsa** finestra di dialogo **sulla barra degli strumenti** nel **tipo di risorsa** elenco e quindi scegliere **New**.
 
@@ -111,7 +111,7 @@ Il **sulla barra degli strumenti Editor** consente di:
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Per convertire le bitmap in risorse della barra degli strumenti
 
-1. Aprire una risorsa bitmap esistente nel [Editor di immagini](../windows/image-editor-for-icons.md). Se la bitmap non è già inclusa nel file RC, fare clic sul file RC e scegliere **importazione**, quindi passare alla mappa di bit si desidera aggiungere al file RC e selezionare **Open**.
+1. Aprire una risorsa bitmap esistente nel [Editor di immagini](../windows/image-editor-for-icons.md). Se la bitmap non è già nel *RC* file, fare doppio clic sul *RC* file e scegliere **Import**, quindi passare alla bitmap da aggiungere ai *RC*  file e selezionare **Open**.
 
 1. Passare al menu di scelta **immagine** > **Editor barra degli strumenti**.
 
@@ -126,44 +126,42 @@ Il **sulla barra degli strumenti Editor** consente di:
 
 ### <a name="to-manage-toolbar-buttons"></a>Per gestire i pulsanti della barra degli strumenti
 
-Per creare un nuovo pulsante della barra degli strumenti:
+#### <a name="to-create-a-new-toolbar-button"></a>Per creare un nuovo pulsante della barra degli strumenti
 
-1. Nel [visualizzazione di risorse](../windows/resource-view-window.md) espandere la cartella delle risorse (ad esempio *Progetto1.rc*).
+1. In [visualizzazione di risorse](../windows/resource-view-window.md) espandere la cartella delle risorse (ad esempio *Progetto1.rc*).
 
 1. Espandere la **sulla barra degli strumenti** cartella e selezionare una barra degli strumenti per modificare, quindi eseguire una delle operazioni seguenti:
 
    - Assegnare un ID per il pulsante vuota all'estremità destra della barra degli strumenti. È possibile farlo modificando il **ID** proprietà di [finestra proprietà](/visualstudio/ide/reference/properties-window). Ad esempio, è possibile concedere lo stesso ID di un'opzione di menu di un pulsante della barra degli strumenti. In questo caso, utilizzare la casella di riepilogo a discesa per selezionare i **ID** dell'opzione di menu.
 
-   - Selezionare il pulsante vuota all'estremità destra della barra degli strumenti (nelle **sulla barra degli strumenti visualizzazione** riquadro) e iniziare a disegnare. Viene assegnato un ID di comando del pulsante predefinito (ID_BUTTON\<n >).
+   - Selezionare il pulsante vuota all'estremità destra della barra degli strumenti nel **sulla barra degli strumenti visualizzazione** riquadro e iniziare a disegnare. Viene assegnato un ID di comando del pulsante predefinito (ID_BUTTON\<n >).
 
-È anche possibile copiare e incollare un'immagine a una barra degli strumenti come un nuovo pulsante.
-
-Per aggiungere un'immagine da una barra degli strumenti come un pulsante:
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Per aggiungere un'immagine da una barra degli strumenti come un pulsante
 
 1. Nelle [visualizzazione risorse](../windows/resource-view-window.md), aprire la barra degli strumenti facendovi doppio clic.
 
 1. Successivamente, aprire l'immagine da aggiungere alla barra degli strumenti.
 
    > [!NOTE]
-   > Se si apre l'immagine in Visual Studio, si aprirà nel **immagine** editor. È anche possibile aprire l'immagine in altri programmi di grafica.
+   > Se si apre l'immagine in Visual Studio, si aprirà nel **Editor di immagini**. È anche possibile aprire l'immagine in altri programmi di grafica.
 
-1. Dal **Edit** menu, scegliere **copia**.
+1. Passare al menu di scelta **Edit** > **copia**.
 
 1. Passare alla barra degli strumenti selezionando la scheda nella parte superiore della finestra di origine.
 
-1. Dal **Edit** menu, scegliere **Incolla**.
+1. Passare al menu di scelta **Edit** > **Incolla**.
 
    L'immagine verrà visualizzato sulla barra degli strumenti come un nuovo pulsante.
 
-Per spostare un pulsante della barra degli strumenti:
+#### <a name="to-move-a-toolbar-button"></a>Per spostare un pulsante della barra degli strumenti
 
 Nel **sulla barra degli strumenti visualizzazione** riquadro, trascinare il pulsante che si desidera spostare nella nuova posizione sulla barra degli strumenti.
 
-Per copiare i pulsanti da una barra degli strumenti, tenere premuto il **Ctrl** chiave e il **Visualizza sulla barra degli strumenti** riquadro trascinare il pulsante a una nuova posizione sulla barra degli strumenti o in una posizione sulla barra degli strumenti un altro.
+- Per copiare i pulsanti da una barra degli strumenti, tenere premuto il **Ctrl** chiave e il **Visualizza sulla barra degli strumenti** riquadro trascinare il pulsante a una nuova posizione sulla barra degli strumenti o in una posizione sulla barra degli strumenti un altro.
 
-Per eliminare un pulsante della barra degli strumenti, selezionare il pulsante della barra degli strumenti e trascinarla sulla barra degli strumenti.
+- Per eliminare un pulsante della barra degli strumenti, selezionare il pulsante della barra degli strumenti e trascinarla sulla barra degli strumenti.
 
-Per inserire o rimuovere lo spazio tra i pulsanti di una barra degli strumenti, ovvero trascinarli da o verso di loro sulla barra degli strumenti.
+- Per inserire o rimuovere lo spazio tra i pulsanti di una barra degli strumenti, ovvero trascinarli da o verso di loro sulla barra degli strumenti.
 
 |Operazione|Passaggio|
 |------|------|
@@ -175,19 +173,19 @@ Per inserire o rimuovere lo spazio tra i pulsanti di una barra degli strumenti, 
 > [!NOTE]
 > Se non è disponibile spazio sul lato di pulsante che si sta trascinando lontani e si trascina il pulsante metà oltre il pulsante adiacente, il **sulla barra degli strumenti Editor** separandoli con uno spazio sul lato opposto del pulsante su cui si sta trascinando.
 
-Per modificare le proprietà di un pulsante della barra degli strumenti:
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Per modificare le proprietà di un pulsante della barra degli strumenti
 
 1. In un progetto C++, selezionare il pulsante della barra degli strumenti.
 
 1. Digitare il nuovo ID nel **ID** proprietà nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), o utilizzare l'elenco di riepilogo a discesa per selezionare un nuovo **ID**.
 
-Per creare una descrizione comando per un pulsante della barra degli strumenti:
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Per creare una descrizione comando per un pulsante della barra degli strumenti
 
 1. Selezionare il pulsante della barra degli strumenti.
 
 1. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), nel **Chiedi conferma** campo, aggiungere una descrizione del pulsante della barra di stato e dopo che il messaggio, aggiungere `\n` e il nome della descrizione comandi.
 
-Ad esempio, vedere la descrizione comando per il **Print** sul pulsante **WordPad**:
+Ad esempio, per visualizzare la descrizione comando per il **Print** sul pulsante **WordPad**:
 
 1. Aprire **WordPad**.
 

@@ -23,16 +23,16 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 5768347c32b1856da16310f29e7a4257e18b6a93
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676461"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562835"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Procedura: Includere le risorse in fase di compilazione (C++)
 
-Per impostazione predefinita tutte le risorse che si trovano nel file di script (RC) di una risorsa, tuttavia esistono molti motivi per inserire le risorse in un file diverso dal file RC principale:
+Per impostazione predefinita che tutte le risorse si trovano in un file di risorse (RC), tuttavia esistono molti motivi per inserire le risorse in un file diverso dal file RC principale:
 
 - Per aggiungere commenti alle istruzioni di risorse che non vengono eliminate quando si salva il file RC.
 
@@ -48,32 +48,32 @@ Se si dispone di sezioni nel file RC esistenti che soddisfano una di queste cond
 
 È possibile aggiungere di risorse da altri file al progetto in fase di compilazione elencandoli nella **direttive in fase di compilazione** nella casella il **Inclusioni risorsa** nella finestra di dialogo. Usare la **Inclusioni risorsa** finestra di dialogo per modificare normale disposizione di lavoro tutte le risorse vengono archiviate nel file RC del progetto e tutte le dell'ambiente del progetto [simboli](../windows/symbols-resource-identifiers.md) in `Resource.h`.
 
-Per iniziare, aprire il **Inclusioni risorsa** finestra di dialogo facendo clic su un file RC [visualizzazione risorse](../windows/resource-view-window.md), selezionare **Inclusioni risorsa** e prendere nota delle proprietà seguenti:
+Per iniziare, aprire il **Inclusioni risorsa** finestra di dialogo facendo clic su un file RC [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources), selezionare **Inclusioni risorsa** e prendere nota delle proprietà seguenti:
 
 | Proprietà | Descrizione |
 |---|---|
 | **File di intestazione simboli** | Consente di modificare il nome del file di intestazione in cui sono archiviate le definizioni dei simboli per i file di risorse.<br/><br/>Per altre informazioni, vedere [modifica i nomi dei file di intestazione simboli](../windows/changing-the-names-of-symbol-header-files.md). |
-| **Direttive per simboli di sola lettura** | Consente di includere file di intestazione contenenti simboli che non devono essere modificati. Ad esempio, i file di simboli devono essere condivisi con altri progetti. Può anche includere file h di MFC.<br/><br/>Per altre informazioni, vedere [simboli inclusi condivisi (di sola lettura) o calcolati](../windows/including-shared-read-only-or-calculated-symbols.md). |
-| **Direttive in fase di compilazione** | Consente di includere i file di risorse che vengono creati e modificati separatamente dalle risorse nel file di risorse principale, contengono direttive in fase di compilazione (ad esempio, le direttive che includono in modo condizionale risorse) o contenere le risorse in un formato personalizzato. È anche possibile usare la **casella direttive in fase di compilazione** per includere i file di risorse MFC standard. |
+| **Direttive per simboli di sola lettura** | Consente di includere file di intestazione contenenti simboli che non devono essere modificati.<br/><br/>Ad esempio, i file di simboli devono essere condivisi con altri progetti. Può anche includere file h di MFC. Per altre informazioni, vedere [simboli inclusi condivisi (di sola lettura) o calcolati](../windows/including-shared-read-only-or-calculated-symbols.md). |
+| **Direttive in fase di compilazione** | Consente di includere i file di risorse che vengono creati e modificati separatamente dalle risorse nel file di risorse principale, contengono direttive in fase di compilazione (ad esempio, le direttive che includono in modo condizionale risorse) o contenere le risorse in un formato personalizzato.<br/><br/>È anche possibile usare la **casella direttive in fase di compilazione** per includere i file di risorse MFC standard. |
 
 > [!NOTE]
 > Visualizzazione delle voci in queste caselle di testo nel file RC contrassegnato da `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, e `TEXTINCLUDE 3` rispettivamente. Per altre informazioni, vedere [TN035: Uso di più file di risorse e i file di intestazione Visual c++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
-Una volta che vengono apportate modifiche al file di risorse usando il **Inclusioni risorsa** finestra di dialogo, è necessario chiudere e riaprire il file con estensione RC rendere effettive le modifiche.
+Una volta che vengono apportate modifiche al file di risorse usando il **Inclusioni risorsa** finestra di dialogo, è necessario chiudere e riaprire il *RC* file rendere effettive le modifiche.
 
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>Per includere risorse nel progetto in fase di compilazione
 
-1. Inserire le risorse in un file script di risorsa con un nome file univoco. Non usare *projectname*. rc, poiché si tratta del nome del file utilizzato per il file di script di risorsa principale.
+1. Inserire le risorse in un file script di risorsa con un nome file univoco. Non usare *projectname.rc*, poiché si tratta del nome del file utilizzato per il file di script di risorsa principale.
 
-1. Fare clic sul file RC in [visualizzazione di risorse](../windows/resource-view-window.md) e scegliere **Inclusioni risorsa** dal menu di scelta rapida.
+1. Fare doppio clic sui *RC* del file in [Resource View](/windows/how-to-create-a-resource-script-file#create-resources) e selezionare **Inclusioni risorsa**.
 
 1. Nel **direttive in fase di compilazione** , aggiungere il [#include](../preprocessor/hash-include-directive-c-cpp.md) direttiva del compilatore di includere il nuovo file di risorse nel file di risorse principale nell'ambiente di sviluppo.
 
-   Le risorse nei file incluse in questo modo vengono apportate solo parte del file eseguibile in fase di compilazione e non sono disponibili per la modifica quando si lavora sul file RC principale del progetto. È necessario aprire separatamente i file RC inclusi e qualsiasi file incluso senza l'estensione RC non sono modificabile dall'editor di risorse.
+Le risorse nei file incluse in questo modo vengono apportate solo parte del file eseguibile in fase di compilazione e non sono disponibili per la modifica quando si lavora sul file RC principale del progetto. È necessario aprire separatamente i file RC inclusi e qualsiasi file incluso senza l'estensione RC non sono modificabile dall'editor di risorse.
 
-### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>Per specificare directory di inclusione per una risorsa specifica (file con estensione RC)
+### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>Per specificare directory di inclusione per un file di risorse (RC)
 
-1. Fare clic sul file RC in **Esplora soluzioni** e selezionare **proprietà**.
+1. Fare doppio clic il *RC* del file in **Esplora soluzioni** e selezionare **proprietà**.
 
 1. Selezionare il **le risorse** nodo nel riquadro sinistro e specificare qualsiasi altro nella directory di inclusione il **directory di inclusione aggiuntive** proprietà.
 
@@ -84,7 +84,7 @@ Una volta che vengono apportate modifiche al file di risorse usando il **Inclusi
    > [!TIP]
    > Per usare [le espressioni regolari](/visualstudio/ide/using-regular-expressions-in-visual-studio) nella ricerca, selezionare [Cerca nei file](/visualstudio/ide/reference/find-command) nel **modifica** menu anziché **Trova simbolo**. Selezionare il **usare: Le espressioni regolari** casella di controllo nel [finestra di dialogo Find](/visualstudio/ide/finding-and-replacing-text) e nel **Find What** finestra è possibile scegliere un'espressione regolare ricerca nell'elenco a discesa. Quando si seleziona un'espressione da questo elenco, viene sostituita come testo di ricerca nella **Find What** casella.
 
-1. Nel **Find What** casella, selezionare una stringa di ricerca precedente dall'elenco a discesa o digitare il tasto di scelta rapida si desidera trovare (ad esempio, `ID_ACCEL1`).
+1. Nel **Find What** , selezionare una stringa di ricerca precedente dall'elenco a discesa o digitare il tasto di voler calcolare, ad esempio, `ID_ACCEL1`.
 
 1. Selezionare una qualsiasi delle **trovare** opzioni e scegliere **Trova successivo**.
 

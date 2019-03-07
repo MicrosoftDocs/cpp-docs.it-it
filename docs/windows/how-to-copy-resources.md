@@ -30,20 +30,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: ce1cf1f6d0010475192ecf7ef3ce2416fac51dfd
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676409"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563043"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedura: Gestire le risorse (C++)
-
-È possibile gestire le risorse per il progetto da:
-
-- Copia e la modifica delle risorse.
-
-- Importazione ed esportazione di risorse.
 
 ## <a name="copy-and-edit-resources"></a>Copia e modifica risorse
 
@@ -54,7 +48,7 @@ ms.locfileid: "56676409"
 > [!NOTE]
 > Visual C++ include file di risorse di esempio che è possibile usare nell'applicazione. Per altre informazioni, vedere [CLIPART: Risorse comuni](https://github.com/Microsoft/VCSamples).
 
-È possibile utilizzare il metodo di trascinamento e rilascio tra i file con estensione RC sono aperti all'esterno del progetto.
+È non è possibile trascinare, copiare, tagliare, oppure Incolla tra i file di risorse nel progetto (**visualizzazione risorse**) e aprire i file RC autonomo in finestre dei documenti. È possibile farlo nelle versioni precedenti del prodotto. Usare solo il metodo di trascinamento e rilascio tra i file con estensione RC sono aperti all'esterno del progetto.
 
 ### <a name="to-copy-resources"></a>Per copiare risorse
 
@@ -78,9 +72,6 @@ ms.locfileid: "56676409"
       1. Fare clic sul file di risorse in cui si vuole incollare la risorsa (ad esempio, *Origine2.rc*) e scegliere **incollare**.
 
 > [!NOTE]
-> È non è possibile trascinare, copiare, tagliare, oppure Incolla tra i file di risorse nel progetto (**visualizzazione risorse**) e i file RC autonomo (quelli aperti in finestre di documento). È possibile farlo nelle versioni precedenti del prodotto.
-
-> [!NOTE]
 > Per evitare conflitti con i valori nel file esistente o i nomi dei simboli, Visual C++ potrebbe modificare il valore di simbolo della risorsa trasferita o il nome e valore quando copiate nel nuovo file.
 
 Durante la copia in una risorsa, è possibile modificarne la proprietà relativa alla lingua o alla condizione oppure entrambe.
@@ -95,13 +86,13 @@ La lingua e la condizione di una risorsa vengono visualizzate tra parentesi dopo
 IDD_AboutBox (Finnish - XX33)
 ```
 
-Per copiare una risorsa esistente e modificarne la lingua e la condizione
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Per copiare una risorsa esistente e modificarne la lingua e la condizione
 
-1. Nel file RC o nella [visualizzazione di risorse](../windows/resource-view-window.md) finestra, fare doppio clic la risorsa che si desidera copiare e scegliere **Inserisci copia**. Quindi impostare quanto segue:
+Nel *RC* file o nel [visualizzazione risorse](../windows/resource-view-window.md) finestra, la risorsa a cui si desidera copiare e scegliere destro **Inserisci copia**. Quindi impostare quanto segue:
 
-   - Per il **linguaggio** elenco a discesa, selezionare la lingua.
+- Per il **linguaggio** elenco a discesa, selezionare la lingua.
 
-   - Nel **condizione** , digitare la condizione.
+- Nel **condizione** , digitare la condizione.
 
 ### <a name="to-edit-resources"></a>Per modificare le risorse
 

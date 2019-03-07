@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 71a76da9f4eadfdca0d69873b821f4ea8eb8fc05
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676422"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562965"
 ---
 # <a name="working-with-resource-files"></a>Utilizzo di file di risorse
 
 > [!WARNING]
 > Questa sezione si applica ad applicazioni desktop di Windows scritte in C++.
 >
-> Per informazioni sulle risorse nelle App Universal Windows Platform scritte in C++, vedere [definizione delle risorse dell'App](/windows/uwp/app-resources/), o sull'aggiunta di risorse per C + + + / progetti di interfaccia della riga di comando (gestito), vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) in il *Guida per gli sviluppatori di .NET Framework*.
+> Per informazioni sulle risorse nelle App Universal Windows Platform scritte in C++, vedere [definizione delle risorse dell'App](/windows/uwp/app-resources/), o sull'aggiunta di risorse per C + + + / progetti di interfaccia della riga di comando (gestito), vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) in Guida per gli sviluppatori di .NET Framework.
 
 Le risorse possono essere costituite di un'ampia gamma di elementi, ad esempio:
 
@@ -28,6 +28,9 @@ Le risorse possono essere costituite di un'ampia gamma di elementi, ad esempio:
 - Finestra di dialogo e menu risorse incluse.
 
 È possibile aggiungere nuove risorse al progetto e modificare usando l'editor appropriato per la risorsa. La maggior parte delle procedure guidate per Visual C++ genererà automaticamente un file con estensione rc per il progetto.
+
+> [!NOTE]
+> Il **editor di risorse** e **visualizzazione risorse** non sono disponibili nelle edizioni Express.
 
 Per aggiungere manualmente i file di risorse a progetti gestiti, vedere [creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Questo articolo include indicazioni per accedere alle risorse, visualizzare le risorse statiche e assegnare stringhe di risorse alle proprietà.
 

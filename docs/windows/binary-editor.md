@@ -21,23 +21,23 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 420c5ecf44f8e8b264d9eafd93de58c0db3bedf4
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210718"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562861"
 ---
 # <a name="binary-editor-c"></a>Editor binario (C++)
 
 > [!CAUTION]
 > Modifica di risorse, ad esempio le finestre di dialogo, immagini o i menu nella **Editor binario** è pericoloso. Una modifica non corretta potrebbe danneggiare la risorsa, rendendola illeggibile nell'editor originale.
 
-Il **Editor binario** consente di modificare qualsiasi risorsa a livello binario in formato esadecimale o ASCII. È anche possibile usare il [comando Trova](/visualstudio/ide/reference/find-command) per cercare le stringhe ASCII o i byte esadecimali. Usare la **Editor binario** solo quando è necessario visualizzare o apportare secondaria viene modificato per le risorse personalizzate o tipi di risorse non è supportati dall'ambiente di Visual Studio.
+Il **Editor binario** consente di modificare qualsiasi risorsa a livello binario in formato esadecimale o ASCII. È anche possibile usare il [comando Trova](/visualstudio/ide/reference/find-command) per cercare le stringhe ASCII o i byte esadecimali. Usare la **Editor binario** solo quando è necessario visualizzare o apportare secondaria viene modificato per le risorse personalizzate o tipi di risorse non è supportati dall'ambiente di Visual Studio. Il **Editor binario** non è disponibile nelle edizioni Express.
 
-Per aprire la **Editor binario** per i nuovi file, passare al menu **File** > **nuovo** > **File**, selezionare il tipo di file che si desidera modificare, quindi selezionare la freccia accanto al **aperto** e scegliere **aperta con** > **Editor binario**.
+- Per aprire la **Editor binario** per i nuovi file, passare al menu **File** > **nuovo** > **File**, selezionare il tipo di file che si desidera modificare, quindi selezionare la freccia accanto al **aperto** e scegliere **aperta con** > **Editor binario**.
 
-Per aprire la **Editor binario** in un file esistente, passare al menu **File** > **aprire** > **File**, selezionare il file che si desidera modificare, quindi selezionare la freccia accanto al **aperto** e scegliere **aperta con** > **Editor binario**.
+- Per aprire la **Editor binario** in un file esistente, passare al menu **File** > **aprire** > **File**, selezionare il file che si desidera modificare, quindi selezionare la freccia accanto al **aperto** e scegliere **aperta con** > **Editor binario**.
 
    ![Binary Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    Dati binari per una finestra di dialogo visualizzata nel **Editor binario**
@@ -45,9 +45,7 @@ Per aprire la **Editor binario** in un file esistente, passare al menu **File** 
 Solo determinati valori ASCII sono rappresentati nel **Editor binario** (da 0x20 a 0x7E). I caratteri estesi vengono visualizzati come punti nella sezione valore ASCII pannello destro del **Editor binario**. I caratteri stampabili sono valori ASCII da 32 a 126.
 
 > [!TIP]
-> Quando si usa la **Editor binario**, in molti casi è possibile fare doppio clic per visualizzare un menu di scelta rapida dei comandi specifici della risorsa. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il cursore. Ad esempio, se si fa clic mentre si punta al **Editor binario** con i valori esadecimali selezionati, nel menu di scelta rapida vengono visualizzati i **Taglia**, **copia**, e **Incolla**  comandi.
-
-Il **Editor binario** non è disponibile nelle edizioni Express.
+> Quando si usa la **Editor binario**, in molti casi è possibile fare doppio clic per visualizzare un menu di scelta rapida dei comandi specifici della risorsa. I comandi disponibili dipendono dalla destinazione a cui fa riferimento il cursore. Ad esempio, se facendo clic mentre si punta al **Editor binario** con i valori esadecimali selezionati, nel menu di scelta rapida vengono visualizzati i **Taglia**, **copia**e **Incollare** comandi.
 
 ## <a name="how-to"></a>Procedure
 
@@ -55,12 +53,12 @@ Il **Editor binario** consente di:
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Per aprire una risorsa desktop di Windows per la modifica binaria
 
-1. In [Visualizzazione risorse](../windows/resource-view-window.md)selezionare il file di risorse che si vuole modificare.
+1. In [Visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources)selezionare il file di risorse che si vuole modificare.
 
 1. La risorsa destro e selezionare **Apri dati binari**.
 
 > [!NOTE]
-> Se si usa la [visualizzazione di risorse](../windows/resource-view-window.md) finestra per aprire una risorsa in un formato che Visual Studio non riconosce, ad esempio RCDATA o una risorsa personalizzata, la risorsa viene aperto automaticamente nel **Editor binario**.
+> Se si usa la **visualizzazione di risorse** finestra per aprire una risorsa in un formato che Visual Studio non riconosce, ad esempio RCDATA o una risorsa personalizzata, la risorsa viene aperto automaticamente nel **Editor binario**.
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Per aprire una risorsa gestita per la modifica binaria
 
@@ -75,8 +73,7 @@ Il **Editor binario** consente di:
 
 ### <a name="to-edit-a-resource"></a>Per modificare una risorsa
 
-> [!NOTE]
-> Se si desidera utilizzare il **Editor binario** su una risorsa già modificata in un'altra finestra dell'editor, chiudere l'altra finestra dell'editor prima di tutto.
+Se si desidera utilizzare il **Editor binario** su una risorsa già modificata in un'altra finestra dell'editor, chiudere l'altra finestra dell'editor prima di tutto.
 
 1. Selezionare il byte di cui che si desidera modificare.
 
@@ -93,7 +90,7 @@ Il **Editor binario** consente di:
 
 È possibile cercare le stringhe ASCII o byte esadecimali. Ad esempio, per trovare *Hello*, è possibile cercare la stringa *Hello* o il relativo valore esadecimale, *48 65 6C 6C 6F*.
 
-1. Dal **Edit** menu, scegliere [trovare](/visualstudio/ide/reference/find-command).
+1. Passare al menu di scelta **Edit** > [trovare](/visualstudio/ide/reference/find-command).
 
 1. Nel **Find What** casella, selezionare una stringa di ricerca precedente dall'elenco a discesa scegliere o immettere i dati da trovare.
 

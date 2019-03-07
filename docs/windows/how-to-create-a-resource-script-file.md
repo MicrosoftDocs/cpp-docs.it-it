@@ -36,32 +36,32 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: 768675a878891ebb75c7f42c12eae8dfcfa3510b
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: a18c24685ff0d5f65970a094730d1587abffb601
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676487"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563030"
 ---
 # <a name="how-to-create-resources-c"></a>Procedura: Creare le risorse (C++)
 
 È possibile creare le risorse per il progetto da:
 
-- Usando un file di script di risorsa. Questo passaggio è necessario prima di aggiungere le risorse.
+- Usando un file di script di risorsa.
 
-- Aggiunta di risorse al progetto. Questo passaggio illustra come usare il **visualizzazione risorse**.
+   > [!NOTE]
+   > Questo passaggio è necessario prima di aggiungere le risorse.
+
+- Aggiunta di risorse al progetto e usando il **visualizzazione risorse**.
 
 - Usando un modello di risorse per creare le risorse personalizzate.
-
-> [!NOTE]
-> Il **Editor di risorse** e **visualizzazione risorse** non sono disponibili nelle edizioni Express.
 
 ## <a name="use-resource-script-files"></a>Usare i file di Script di risorsa
 
 Prima di creare e aggiungere nuove risorse al progetto, è necessario creare innanzitutto un file di script (RC) delle risorse.
 
 > [!NOTE]
-> È possibile aggiungere solo uno script di risorsa a un progetto esistente caricato nell'IDE di Visual Studio. È possibile creare uno script di risorsa autonoma all'esterno del progetto, anche se è possibile creare modelli di risorse (file con estensione rct) in qualsiasi momento.
+> È possibile aggiungere solo un file di script di risorsa a un progetto esistente caricato nell'IDE di Visual Studio. È possibile creare uno script di risorsa autonoma all'esterno del progetto, anche se i file di risorse modello (con estensione rct) è possibile creare in qualsiasi momento.
 
 ### <a name="to-create-a-resource-script-file"></a>Per creare un file di script di risorsa
 
@@ -81,23 +81,19 @@ Prima di creare e aggiungere nuove risorse al progetto, è necessario creare inn
 È possibile visualizzare le risorse in un file di script di risorse senza un progetto aperto. Aprire il file di script in una finestra del documento anziché il **visualizzazione risorse**.
 
 > [!NOTE]
-> Alcuni comandi sono disponibili solo se il file è aperto in modo autonomo, vale a dire all'esterno di un progetto o senza prima caricare il progetto. Ad esempio, per usare la **Salva con nome** comando per salvare un file con un nome di formato o un file diverso, il file deve essere aperto in modo autonomo.
+> Alcuni comandi sono disponibili solo se il file è aperto in modo autonomo, vale a dire all'esterno di un progetto senza prima caricare il progetto. Ad esempio, per usare la **Salva con nome** comando e salvare un file con un nome di file o un formato diverso, il file deve essere aperto in modo autonomo.
 
-- Per aprire un file di script di risorsa all'esterno di un progetto, nel menu, passare a **File** > **aprire**, quindi scegliere **File**. Quindi passare al file script di risorsa, evidenziare il file e scegliere **aperto**.
-
-  - Per aprire un file di script di risorsa in formato testo, usare la freccia giù sul lato destro del **apre** pulsante nel passaggio precedente e scegliere **Apri con**. Quindi selezionare **Editor di codice sorgente (testo)** e dal **Apri come** elenco a discesa, seleziona **testo**, e la risorsa viene aperta nel **codice sorgente**dell'editor.
+- Per aprire un file di script di risorsa all'esterno di un progetto, nel menu, passare a **File** > **aprire**, quindi scegliere **File**. Passare al file script di risorsa, evidenziare il file e scegliere **aperto**.
 
     > [!NOTE]
     > È possibile che quando si desidera visualizzare il contenuto del file di script di risorsa del progetto senza usare l'editor di risorse per aprire una risorsa. È ad esempio possibile che si desideri cercare una stringa in tutte le finestre di dialogo del file di risorse senza che sia necessario aprire separatamente ogni finestra. È possibile aprire il file di risorse con facilità in formato testo per visualizzare tutte le risorse in che esso contenute e completare le operazioni globali supportate dall'editor di testo.
+    >
+    > Per aprire un file di script di risorsa in formato testo, usare la freccia giù sul lato destro del **apre** pulsante nel passaggio precedente e scegliere **Apri con**. Selezionare **Editor di codice sorgente (testo)** e dal **Apri come** elenco a discesa, seleziona **testo** e la risorsa viene aperta nel **codice sorgente** Editore.
 
-- Per aprire la risorsa più script seguire i passaggi precedenti per ogni file che si desidera aprire, ad esempio, *Origine1.rc* e *Origine2.rc*. Quindi, quando entrambi i file RC sono aperti nelle finestre di documenti separati, usare il **finestra** dal menu o fare doppio clic su uno dei file con estensione RC e scegliere **nuovo gruppo di schede orizzontali** o **nuovo carattere di tabulazione verticale Gruppo**. Le finestre sono affiancate ora in modo da visualizzarle contemporaneamente.
+- Per aprire la risorsa più gli script seguono lo stesso passaggio precedente per ogni file che si desidera aprire, ad esempio, *Origine1.rc* e *Origine2.rc*. Quindi, quando entrambi i file RC sono aperti nelle finestre di documenti separati, usare il **finestra** dal menu o fare doppio clic su uno dei file e scegliere **nuovo gruppo di schede orizzontali** o **nuovo gruppo di schede verticali** . Le finestre sono affiancate ora in modo da visualizzarle contemporaneamente.
 
 > [!TIP]
-> È anche possibile aprire i file di script di risorsa facendo clic con il file RC **Esplora soluzioni**, scegliendo **Apri con...**  e selezionando **Editor di codice sorgente (testo)**.
-
-### <a name="to-edit-a-resource-script-file"></a>Per modificare un file di script di risorsa
-
-- Per convertire un file di risorse esistente in un modello, con il file di script di risorsa aperto, nel menu, passare a **File** > **salvare \< *filename*> come**. Quindi specificare un percorso e scegliere **OK**.
+> È possibile aprire i file di script di risorsa facendo clic con il file RC **Esplora soluzioni**, selezionando **aprire con** e scegliendo **Editor di codice sorgente (testo)**.
 
 Quando si compila un'applicazione di classe MFC (Microsoft Foundation) per Windows utilizzando il [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la procedura guidata genera un set base di file incluso un file di risorse (RC)) che contiene la funzionalità di base di MFC. Tuttavia, queste funzioni MFC specifiche non sono disponibili quando si modifica un file con estensione RC per le applicazioni di Windows non basata su MFC. Sono inclusi creazioni guidate codice, le stringhe di richiesta di menu, contenuti di elenco per controlli casella combinata e hosting di controlli ActiveX.
 
@@ -115,23 +111,23 @@ Usare la **visualizzazione risorse** finestra per visualizzare i file di risorse
 > [!TIP]
 > Per aprire la **visualizzazione di risorse** finestra, passare al menu **vista** > **visualizzazione risorse** oppure premere **Ctrl** +  **Shift**+**elettronica**.
 
-È possibile usare i pulsante destro del mouse sul **visualizzazione risorse** finestra per sferrare un menu di scelta rapida dei comandi o fare doppio clic sulla barra del titolo per ancorare e disancorare la finestra. Fare clic sulla barra del titolo per altri comandi che consentono di controllare il comportamento della finestra. Per altre informazioni, vedere [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+È anche possibile usare i pulsante destro del mouse sul **visualizzazione risorse** finestra per sferrare un menu di scelta rapida dei comandi o fare doppio clic sulla barra del titolo per ancorare e disancorare la finestra. Fare clic sulla barra del titolo per i comandi che consentono di controllare il comportamento della finestra. Per altre informazioni, vedere [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
 Il **visualizzazione di risorse** windows include il **Aggiungi risorsa** finestra di dialogo con le proprietà seguenti per aggiungere risorse a un progetto di applicazione desktop Windows C++:
 
 | Proprietà | Descrizione |
 |---|---|
-| **Tipo di risorsa** | Specificare il tipo di risorsa che si desidera creare.<br/><br/>È possibile espandere le categorie di risorsa finestra di cursore e finestra di dialogo per visualizzare risorse aggiuntive, che si trovano in Visual Studio ...\Microsoft \<versione\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct.. Se è necessario aggiungere i file con estensione rct, inserirli qui o specificare un altro [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md).<br/><br/>Risorse visualizzate al livello superiore nel controllo albero sono le risorse predefinite fornite da Visual Studio. Le risorse in file con estensione rct vengono visualizzati nel secondo livello nella categoria appropriata. Non vi è alcun limite predefinito al numero di file con estensione rct che è possibile aggiungere.<br/><br/> |
-| **Nuovo** | Crea una risorsa in base al tipo selezionato nel **tipo di risorsa** casella e aprire la risorsa nell'editor appropriato.<br/><br/>Ad esempio, se si crea una risorsa finestra di dialogo, apre la risorsa nel [editor finestre](../windows/dialog-editor.md). |
+| **Tipo di risorsa** | Specificare il tipo di risorsa che si desidera creare.<br/><br/>È possibile espandere le categorie di risorsa finestra di cursore e finestra di dialogo per visualizzare risorse aggiuntive, che si trovano in *... \Microsoft visual Studio \<versione\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct.*. Se è necessario aggiungere i file con estensione rct, inserirli qui o specificare un altro [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Risorse visualizzate al livello superiore nel controllo albero sono le risorse predefinite fornite da Visual Studio. Le risorse in file con estensione rct vengono visualizzati nel secondo livello nella categoria appropriata. Non vi è alcun limite predefinito al numero di file con estensione rct che è possibile aggiungere.<br/><br/> |
+| **Nuovo** | Crea una risorsa in base al tipo selezionato nel **tipo di risorsa** casella e aprire la risorsa nell'editor appropriato.<br/><br/>Ad esempio, se si crea una risorsa finestra di dialogo, apre la risorsa nel [finestra di dialogo Editor](../windows/dialog-editor.md). |
 | **Import** | Aprire il **importare** finestra di dialogo per passare alla risorsa di cui si desidera importare nel progetto corrente.<br/><br/>È possibile importare una bitmap, icone, cursori, HTML, audio (. WAV), o file di risorse personalizzato. |
-| **Personalizzato** | Aprire il **nuova risorsa personalizzata** finestra di dialogo per creare una risorsa personalizzata.<br/><br/>Include anche un **tipo di risorsa** proprietà che fornisce una casella di testo immettere il nome del tipo di risorsa personalizzata. Quando si esce dalla, Visual C++ scritto automaticamente in maiuscolo il nome.<br/><br/>Risorse personalizzate vengono modificate solo nell'editor binario. |
+| **Personalizzato** | Aprire il **nuova risorsa personalizzata** finestra di dialogo per creare una risorsa personalizzata.<br/><br/>Include anche un **tipo di risorsa** proprietà che fornisce una casella di testo immettere il nome del tipo di risorsa personalizzata. Quando si esce dalla, Visual C++ scritto automaticamente in maiuscolo il nome. Risorse personalizzate vengono modificate solo nella [Editor binario](../windows/binary-editor.md). |
 
 Quando si crea una nuova risorsa, Visual C++ assegna un nome univoco, ad esempio, `IDD_Dialog1`. È possibile personalizzare questo ID risorsa modificando le proprietà della risorsa nell'editor di risorse associato o nel [finestra proprietà](/visualstudio/ide/reference/properties-window).
 
 > [!NOTE]
 > Non specificare un nome di risorsa o un ID che è riservato da Visual Studio. Nomi riservati sono `DESIGNINFO`, `HWB`, e `TEXTINCLUDE`, e l'ID riservato è `255`.
 
-Per creare una risorsa, usare uno dei seguenti:
+### <a name="to-create-a-resource"></a>Per creare una risorsa
 
 - Nelle **visualizzazione di risorse**, selezionare il file RC, quindi usare **modificare** > **Aggiungi risorsa** e scegliere il tipo di risorsa da aggiungere al progetto.
 
@@ -157,31 +153,35 @@ Dopo aver personalizzato un modello di risorsa, salvare le modifiche nella carte
 > L'editor di risorse fornisce automaticamente un ID della risorsa univoco. È possibile rivedere le [le proprietà delle risorse](../windows/changing-the-properties-of-a-resource.md) in base alle esigenze.
 
 > [!NOTE]
-> Posizionare i file di modello specifici del linguaggio nelle sottodirectory della directory del modello principale. I file di modello solo in inglese, ad esempio, andare... \\< directory dei modelli di resource\>\1033. Visual Studio cerca i nuovi file RCT in \Programmi\Microsoft Visual Studio \<versione\>\VC\VCResourceTemplates, \Programmi\Microsoft Visual Studio \<versione > \VC\VCResourceTemplates\\< LCID\> (ad esempio un LCID 1033 per inglese), o in qualsiasi punto nel [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Se si preferisce archiviare i file con estensione rct in un'altra posizione, è necessario aggiungere il percorso al percorso di inclusione.
+> Posizionare i file di modello specifici del linguaggio nelle sottodirectory della directory del modello principale. Ad esempio, i file di modello solo per la lingua inglese vengono inviati *... \\< directory dei modelli di resource\>\1033*.
+>
+> Visual Studio cerca i nuovi file RCT in *\Programmi\Microsoft Visual Studio \<versione\>\VC\VCResourceTemplates*, *\Programmi\Microsoft Visual Studio \< versione > \VC\VCResourceTemplates\\< LCID\>*  (ad esempio un LCID 1033 per inglese), o in qualsiasi punto nel [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Se si preferisce archiviare i file con estensione rct in un'altra posizione, è necessario aggiungere il percorso al percorso di inclusione.
 
 ### <a name="to-create-and-use-a-resource-template"></a>Creare e usare un modello di risorse
 
-1. Nelle **Esplora soluzioni**, fare doppio clic su progetto.
-
-1. Nel menu di scelta rapida, selezionare **Add** > **Aggiungi nuovo elemento**.
+1. Nelle **Esplora soluzioni**, fare clic sul progetto e selezionare **Add** > **Aggiungi nuovo elemento**.
 
 1. Nel **modelli:** riquadro, selezionare **File di modello di risorse (RCT)**.
 
-1. Specificare un nome e percorso per il nuovo file RCT e scegliere **aperto**.
+1. Specificare un nome e percorso per il nuovo *RCT* del file e scegliere **Open**.
 
-   Il nuovo file RCT verrà aggiunto al progetto e viene visualizzato nella **Esplora soluzioni** sotto il **risorse** cartella.
+   Il nuovo *RCT* file viene aggiunto al progetto e viene visualizzato nella **Esplora soluzioni** sotto il **risorse** cartella.
 
-1. Fare doppio clic sul file RCT per aprirlo in una finestra del documento. Per aggiungere le risorse, il pulsante destro nella finestra del documento e scegliere **Aggiungi risorsa**.
+1. Fare doppio clic il *RCT* file per aprirlo in una finestra del documento. Per aggiungere le risorse, il pulsante destro nella finestra del documento e scegliere **Aggiungi risorsa**.
 
-   È possibile personalizzare le risorse aggiunte e salvare il file con estensione rct.
+   È possibile personalizzare le risorse aggiunte e salvare il *RCT* file.
 
-1. Nel **visualizzazione di risorse** riquadro, fare clic sul file RC e scegliere **Aggiungi risorsa**.
+1. Nel **visualizzazione di risorse** riquadro, fare doppio clic sul *RC* file e scegliere **Aggiungi risorsa**.
 
 1. Selezionare il segno più (**+**) accanto a una risorsa per espandere il nodo di risorsa e visualizzare i modelli disponibili per tale risorsa.
 
 1. Fare doppio clic sul modello che si desidera usare.
 
    È possibile modificare le risorse aggiunte in base alle esigenze nel relativo editor di risorse.
+
+### <a name="to-convert-an-existing-resource-file-to-a-template"></a>Per convertire un file di risorse esistente in un modello
+
+Con il file script di risorsa aperto, nel menu, andare al **File** > **salvare \< *filename*> come**. Specificare un percorso e scegliere **OK**.
 
 ## <a name="requirements"></a>Requisiti
 

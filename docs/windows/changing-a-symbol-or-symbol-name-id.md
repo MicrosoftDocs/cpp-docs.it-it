@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: d3c8a747c1e66490c333ff050c7bfa6e6f723a87
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954900"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562796"
 ---
 # <a name="how-to-manage-symbols"></a>Procedura: Gestione dei simboli
 
@@ -57,7 +57,7 @@ In genere tutti i simboli le definizioni vengono salvate in `Resource.h`. Tuttav
 
 I nomi dei simboli sono soggetti alle restrizioni riportate di seguito.
 
-- Tutti i [simboli](../windows/symbols-resource-identifiers.md) deve essere univoco all'interno dell'ambito dell'applicazione. In questo modo si evitano conflitti tra le definizioni dei simboli nei file di intestazione.
+- Tutti i [simboli](../windows/symbols-resource-identifiers.md) deve essere univoco all'interno dell'ambito dell'applicazione per evitare che le definizioni dei simboli in conflitto nei file di intestazione.
 
 - I caratteri validi per il nome di un simbolo includono i caratteri maiuscoli e minuscoli dalla A alla Z, i numeri da 0 a 9 e i caratteri di sottolineatura ( _ ).
 
@@ -65,12 +65,14 @@ I nomi dei simboli sono soggetti alle restrizioni riportate di seguito.
 
 - I nomi dei simboli non può contenere spazi.
 
-- I nomi dei simboli non sono tra maiuscole e minuscole, ma viene mantenuto il caso della prima definizione del simbolo. Il file di intestazione che definisce i simboli viene usato sia dal compilatore e dall'editor di risorse sia da uno o più programmi C++ per fare riferimento alle risorse definite in un file di risorse. Se due nomi di simbolo differiscono solo nell'utilizzo di lettere maiuscole e minuscole, nel programma C++ verranno visualizzati due simboli separati, mentre nel compilatore e nell'editor di risorse verranno visualizzati entrambi i nomi come se facessero riferimento a un unico simbolo.
+- I nomi dei simboli non sono tra maiuscole e minuscole, ma viene mantenuto il caso della prima definizione del simbolo.
+
+   Il file di intestazione che definisce i simboli viene usato sia dal compilatore e dall'editor di risorse sia da uno o più programmi C++ per fare riferimento alle risorse definite in un file di risorse. Se due nomi di simbolo differiscono solo nell'utilizzo di lettere maiuscole e minuscole, nel programma C++ verranno visualizzati due simboli separati, mentre nel compilatore e nell'editor di risorse verranno visualizzati entrambi i nomi come se facessero riferimento a un unico simbolo.
 
 > [!NOTE]
 > Se non si segue lo schema di nome di simbolo standard (attiene di sotto e il nome del simbolo non dovesse essere lo stesso come una parola chiave nota al compilatore di script di risorsa, il tentativo di compilare file script di risorsa comporterà la generazione di errori apparentemente casuale che è difficile da diagnosticare. Per evitare questo problema, è necessario attenersi allo schema di denominazione standard.
 
-I nomi dei simboli dispongono di prefissi descrittivi che indicano il tipo di risorsa o di oggetto che rappresentano. Tali prefissi descrittivi iniziano con l'ID di combinazione testo. La libreria Microsoft Foundation Class (MFC) usa le convenzioni di denominazione simbolo illustrate nella tabella seguente:
+I nomi dei simboli dispongono di prefissi descrittivi che indicano il tipo di risorsa o di oggetto che rappresentano. Tali prefissi descrittivi iniziano con l'ID di combinazione testo. La libreria di classi MFC (Microsoft Foundation) usa il simbolo illustrate nella tabella seguente le convenzioni di denominazione:
 
 |Category|Prefisso|Usa|
 |--------------|------------|---------|
@@ -83,7 +85,7 @@ I nomi dei simboli dispongono di prefissi descrittivi che indicano il tipo di ri
 
 ### <a name="to-change-a-symbol-name-id"></a>Per modificare il nome di un simbolo (ID)
 
-1. Nelle [visualizzazione risorse](../windows/resource-view-window.md), selezionare la risorsa.
+1. Nelle [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources), selezionare la risorsa.
 
 1. Nel **delle proprietà** finestra, digitare un nuovo nome di simbolo o selezionare dall'elenco dei simboli esistenti nella **ID** casella.
 
@@ -103,11 +105,11 @@ Valore di un simbolo può essere qualsiasi numero intero espresso in modo normal
 -3456
 ```
 
-I valori dei simboli per le risorse (tasti di scelta rapida, bitmap, cursori, finestre di dialogo, icone, menu, tabelle di stringhe e informazioni sulla versione) devono essere numeri decimali compresi tra 0 e 32.767, ma non possono essere valori esadecimali. I valori dei simboli per gli elementi delle risorse, quali i controlli delle finestre di dialogo o le singole stringhe nella tabella di stringhe, possono essere compresi tra 0 e 65.534 oppure tra -32.768 e 32.767.
+Valori dei simboli per le risorse, ad esempio i tasti di scelta rapida, bitmap, cursori, finestre di dialogo, icone, menu, le tabelle di stringhe e versione devono essere numeri decimali compresi tra 0 e 32.767, informazioni, ma non può essere esadecimale. I valori dei simboli per gli elementi delle risorse, quali i controlli delle finestre di dialogo o le singole stringhe nella tabella di stringhe, possono essere compresi tra 0 e 65.534 oppure tra -32.768 e 32.767. Per altre informazioni sugli intervalli di numeri, vedere [TN023: Risorse MFC standard](../mfc/tn023-standard-mfc-resources.md).
 
-Simboli risorsa sono numeri a 16 bit. È possibile immetterli come con o senza segno, tuttavia, sono abituati internamente come unsigned integer. Per i numeri negativi viene pertanto eseguito il cast ai corrispondenti valori positivi.
+Simboli risorsa sono numeri a 16 bit. È possibile immetterli come con o senza segno, tuttavia, sono abituati internamente come unsigned integer, in modo che i numeri negativi sarà possibile eseguire il cast ai corrispondenti valori positivi.
 
-Di seguito sono riportate alcune restrizioni relative ai valori dei simboli:
+Alcune limitazioni ai valori dei simboli sono:
 
 - L'ambiente di sviluppo Visual Studio e MFC usano alcuni intervalli di numeri per scopi specifici. Tutti i numeri con il bit più significativo impostato (da -32.768 a -1 oppure da 32.768 a 65.534, a seconda del segno) sono riservati da MFC.
 
@@ -125,11 +127,9 @@ Di seguito sono riportate alcune restrizioni relative ai valori dei simboli:
 
 - L'applicazione potrebbe disporre di un file esistente contenente simboli definiti con espressioni.
 
-Per altre informazioni sugli intervalli di numeri, vedere [TN023: Risorse MFC standard](../mfc/tn023-standard-mfc-resources.md).
-
 ### <a name="to-change-a-symbol-value"></a>Per modificare un valore di simbolo
 
-1. Nelle [visualizzazione risorse](../windows/resource-view-window.md), selezionare la risorsa.
+1. Nelle [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources), selezionare la risorsa.
 
 1. Nel **delle proprietà** finestra digitare il nome del simbolo seguito da un segno di uguale e un numero intero nel **ID** casella, ad esempio:
 
@@ -149,12 +149,12 @@ Durante la [nella finestra di dialogo Simboli risorsa](../windows/resource-symbo
 
 1. Modifica nome del simbolo o il valore nelle caselle disponibili nel **Cambia simbolo** nella finestra di dialogo.
 
-   > [!NOTE]
-   > Per modificare un simbolo che viene assegnato a una risorsa o oggetto, è necessario usare l'editor di risorse o **proprietà** finestra.
+> [!NOTE]
+> Per modificare un simbolo che viene assegnato a una risorsa o oggetto, è necessario usare l'editor di risorse o **proprietà** finestra.
 
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>Per eliminare un simbolo non assegnato (non usato)
 
-Nel [finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md), selezionare il simbolo che si desidera eliminare e scegliere **eliminare**.
+Nel **simboli risorsa** finestra di dialogo, selezionare il simbolo che si desidera eliminare e scegliere **eliminare**.
 
 > [!NOTE]
 > Prima di eliminare un simbolo non usato in un file di risorse, verificare che non viene utilizzato in un punto del programma o dal file di risorse inclusi in fase di compilazione.
@@ -185,7 +185,7 @@ L'ambiente interpreterà correttamente questi simboli calcolati purché:
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Per includere simboli condivisi (di sola lettura) nel file di risorse
 
-1. Nelle [visualizzazione di risorse](../windows/resource-view-window.md), fare doppio clic sul file RC e scegliere [Inclusioni risorsa](../windows/resource-includes-dialog-box.md) dal menu di scelta rapida.
+1. In [visualizzazione di risorse](/windows/how-to-create-a-resource-script-file#create-resources), fare doppio clic sui *RC* del file e selezionare [Inclusioni risorsa](../windows/resource-includes-dialog-box.md).
 
 1. Nel **direttive per simboli di sola lettura** casella, utilizzare il `#include` direttiva del compilatore per specificare il file in cui si desidera i simboli di sola lettura da conservare.
 
@@ -204,7 +204,7 @@ L'ambiente interpreterà correttamente questi simboli calcolati purché:
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Per modificare il nome del file di intestazione simboli di risorsa
 
-1. Nelle [visualizzazione di risorse](../windows/resource-view-window.md), fare doppio clic sul file RC e scegliere [Inclusioni risorsa](../windows/resource-includes-dialog-box.md) dal menu di scelta rapida.
+1. In [visualizzazione di risorse](/windows/how-to-create-a-resource-script-file#create-resources), fare doppio clic sui *RC* del file e scegliere [Inclusioni risorsa](../windows/resource-includes-dialog-box.md).
 
 1. Nel **file di intestazione simboli** , digitare il nuovo nome per il file di inclusione.
 

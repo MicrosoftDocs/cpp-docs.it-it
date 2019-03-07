@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 7d3581a9f6f2a2080f72634a01d3417ffecf82a4
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954913"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562757"
 ---
 # <a name="predefined-symbol-ids"></a>ID di simbolo già definiti
 
@@ -18,7 +18,7 @@ Quando si inizia un nuovo progetto, a seconda del tipo di progetto, alcuni ID si
 
 Questi ID simbolo diventano importanti quando si usano le risorse. Sono disponibili quando si modificano le tabelle di tasti di scelta rapida e alcuni di essi sono già associati a tasti virtuali. Sono inoltre disponibili all'utente tramite il [finestra proprietà](/visualstudio/ide/reference/properties-window). È possibile assegnare uno qualsiasi degli ID simbolo predefiniti a nuove risorse, oppure è possibile assegnare tasti di scelta rapida a essi e la funzionalità associata con il simbolo che ID associata automaticamente alla combinazione di tasti.
 
-Queste librerie dispongono di simboli già definiti che verranno visualizzati come parte del progetto:
+Le librerie hanno simboli già definiti che verranno visualizzati come parte del progetto:
 
 - [Simboli predefiniti di ATL](../windows/atl-predefined-symbols.md)
 

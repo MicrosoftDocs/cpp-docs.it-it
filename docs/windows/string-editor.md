@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: d040c09b36c2b46036744c8a263802da48cd8e60
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210796"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563303"
 ---
 # <a name="string-editor-c"></a>Editor stringhe (C++)
 
@@ -56,7 +56,7 @@ Il **Editor stringhe** consente di:
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Per trovare una risorsa stringa nella tabella di stringhe
 
-1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
+1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Passare al menu di scelta **Edit** > **Trova e sostituisci** e scegliere **trovare**.
 
@@ -77,9 +77,9 @@ Rapidamente è possibile inserire o eliminare le voci nella tabella stringa tram
 
 Il **Editor stringhe** garantisce che non si usa un ID che è già in uso. Se si seleziona un ID già in uso, il **Editor stringhe** verranno ricevere una notifica e quindi assegnare un ID univoco di tipo generico, ad esempio `IDS_STRING58113`.
 
-Per aggiungere una voce della tabella stringa:
+#### <a name="to-add-a-string-table-entry"></a>Per aggiungere una voce di tabella di stringhe
 
-1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
+1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Fare doppio clic all'interno della tabella di stringhe e scegliere **NewString**.
 
@@ -92,7 +92,7 @@ Per aggiungere una voce della tabella stringa:
    > [!NOTE]
    > Stringhe null non sono consentite nelle tabelle di stringhe di Windows. Se si crea una voce nella tabella di stringhe che è una stringa null, si riceverà un messaggio che chiede poter **immettere una stringa per questa voce di tabella**.
 
-Per eliminare una voce della tabella stringa:
+#### <a name="to-delete-a-string-table-entry"></a>Per eliminare una voce della tabella di stringhe
 
 Selezionare la voce che si desidera eliminare ed eseguire una delle operazioni seguenti:
 
@@ -110,7 +110,7 @@ Selezionare la voce che si desidera eliminare ed eseguire una delle operazioni s
 
 1. Posizionare il cursore nel database di destinazione **Editor stringhe** finestra.
 
-1. Nel file RC a cui si desidera spostare la stringa, pulsante destro del mouse e scegliere **Incolla**.
+1. Nel *RC* file a cui si desidera spostare la stringa, pulsante destro del mouse e scegliere **Incolla**.
 
 > [!NOTE]
 > Se il **ID** o **valore** conflitti stringa spostato con un oggetto esistente **ID** oppure **valore** nel file di destinazione, entrambi tale **ID** o il **valore** delle modifiche stringa spostata.
@@ -122,9 +122,9 @@ Selezionare la voce che si desidera eliminare ed eseguire una delle operazioni s
 > [!NOTE]
 >  È anche possibile modificare le proprietà della stringa nel [finestra proprietà](/visualstudio/ide/reference/properties-window).
 
-Modificare il relativo identificatore o una stringa:
+#### <a name="to-change-a-string-or-its-identifier"></a>Modificare il relativo identificatore o una stringa
 
-1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
+1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Selezionare la stringa di cui si desidera modificare e fare doppio clic il **ID**, **valore**, o **didascalia** colonna, quindi è possibile:
 
@@ -134,9 +134,9 @@ Modificare il relativo identificatore o una stringa:
 
    - Digitare le modifiche apportate nel **didascalia** colonna.
 
-Per modificare la proprietà caption di più risorse di tipo stringa:
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Per modificare la proprietà caption di più risorse di tipo stringa
 
-1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
+1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Selezionare le stringhe che si desidera modificare, tenere premuti i **Ctrl** della chiave per la selezione di ognuno di essi.
 
@@ -146,7 +146,7 @@ Per modificare la proprietà caption di più risorse di tipo stringa:
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Aggiungere caratteri speciali o di formattazione a una risorsa stringa
 
-1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](../windows/resource-view-window.md).
+1. Aprire la tabella di stringhe facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Selezionare la stringa da modificare.
 
