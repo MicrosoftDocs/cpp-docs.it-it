@@ -28,7 +28,7 @@
 ##### [Procedura: Creare una finestra di dialogo](creating-a-new-dialog-box.md)
 ##### [Controlli delle finestre di dialogo](controls-in-dialog-boxes.md)
 ###### [Procedura: Aggiungere, modificare o eliminare controlli](adding-editing-or-deleting-controls.md)
-###### [Procedura: Disporre i controlli](arrangement-of-controls-on-dialog-boxes.md)
+###### [Procedura: Controlli di layout](arrangement-of-controls-on-dialog-boxes.md)
 ###### [Procedura: Definire l'accesso e i valori per i controlli](defining-mnemonics-access-keys.md)
 #### [Editor di immagini per le icone](image-editor-for-icons.md)
 ##### [Procedura: Creare un'icona o un'altra immagine](creating-an-icon-or-other-image-image-editor-for-icons.md)
