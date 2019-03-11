@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Effettuare il marshalling di matrici utilizzando PInvoke'
+title: 'Procedura: Marshalling di matrici utilizzando PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-ms.openlocfilehash: bd349fb1eca63fc336a30f4f23ae337d1191bb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628514"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752311"
 ---
-# <a name="how-to-marshal-arrays-using-pinvoke"></a>Procedura: Effettuare il marshalling di matrici utilizzando PInvoke
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Procedura: Marshalling di matrici utilizzando PInvoke
 
 In questo argomento viene illustrato funzioni native che accettano stringhe in formato C possono essere chiamate con il tipo di stringa CLR <xref:System.String> usando il supporto di .NET Framework Platform Invoke. I programmatori di Visual C++ sono invitati a usare invece la funzionalità di interoperabilità C++ (se possibile) perché P/Invoke fornisce poco in fase di compilazione segnalazione errori, non è indipendente dai tipi e può essere difficile da implementare. Se l'API non gestita viene assemblato come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione (in caso contrario, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
 

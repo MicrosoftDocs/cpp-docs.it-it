@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2b063abd4186523d27cab7a766f57aadfeaf765d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423846"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746045"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Concetti di base per l'utilizzo delle eccezioni gestite
 

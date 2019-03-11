@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471201"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749275"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 
@@ -47,7 +47,7 @@ La classe `Agile<T>` è una classe C++ standard nativa e richiede `agile.h`. Rap
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Agile:: Agile](#ctor)|Inizializza una nuova istanza della classe Agile.|
+|[Agile::Agile](#ctor)|Inizializza una nuova istanza della classe Agile.|
 |[Distruttore Agile::~Agile](#dtor)|Eliminata l'istanza corrente della classe Agile.|
 
 ### <a name="public-methods"></a>Metodi pubblici
@@ -78,7 +78,7 @@ La classe `Agile<T>` è una classe C++ standard nativa e richiede `agile.h`. Rap
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 **Intestazione:** agile.h
 
@@ -234,7 +234,7 @@ Tipo specificato dal typename del modello.
 *object*<br/>
 Oggetto o handle a un oggetto che viene copiato o spostato nell'oggetto Agile corrente.
 
-*LP*<br/>
+*lp*<br/>
 Puntatore a interfaccia IUnknown di un oggetto.
 
 ### <a name="return-value"></a>Valore restituito

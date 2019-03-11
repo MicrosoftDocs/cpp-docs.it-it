@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676500"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746969"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opzioni del compilatore elencate per categoria
 
@@ -118,9 +118,9 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà singola.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà virtuale.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Genera l'errore compatibile C 7.0 le informazioni di debug.|
-|[/Za](za-ze-disable-language-extensions.md)|Disabilita le estensioni del linguaggio.|
+|[/Za](za-ze-disable-language-extensions.md)|Disabilita le estensioni del linguaggio C89.|
 |[/Zc](zc-conformance.md)|Specifica il comportamento standard in [/Ze](za-ze-disable-language-extensions.md).|
-|[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Attiva le estensioni del linguaggio.|
+|[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Abilita le estensioni del linguaggio C89.|
 |[/Zf](zf.md)|Consente di migliorare tempo nelle compilazioni parallele per la generazione di PDB.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Include informazioni di debug in un database di programma compatibile con Modifica e continuazione. (solo x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera informazioni di debug complete.|

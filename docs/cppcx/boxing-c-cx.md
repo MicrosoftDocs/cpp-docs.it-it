@@ -2,12 +2,12 @@
 title: Boxing (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 4a8812cb56cbbd684be953876d480e6e0c90841a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420011"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750754"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 

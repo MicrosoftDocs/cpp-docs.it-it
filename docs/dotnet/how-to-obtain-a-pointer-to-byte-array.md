@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: ottenere un puntatore a una matrice di byte'
+title: 'Procedura: Ottenere un puntatore alla matrice di Byte'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - pointers, to Byte array
 - Byte arrays
 ms.assetid: aea18073-3341-47f4-9f0e-04e03327037e
-ms.openlocfilehash: ad17dd0049f83fd753af0f9d7a565f28c6681a59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28feb039cf7b91bbf12d94b1abebe0e5b9501d7f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638896"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738871"
 ---
-# <a name="how-to-obtain-a-pointer-to-byte-array"></a>Procedura: ottenere un puntatore a una matrice di byte
+# <a name="how-to-obtain-a-pointer-to-byte-array"></a>Procedura: Ottenere un puntatore alla matrice di Byte
 
 È possibile ottenere un puntatore al blocco di matrice in un <xref:System.Byte> matrice accetta l'indirizzo del primo elemento e assegnarlo a un puntatore.
 

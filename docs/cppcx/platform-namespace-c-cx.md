@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform Namespace (C++/CX)
 ms.assetid: b160e822-d424-43d2-ba60-57b0e81f259c
-ms.openlocfilehash: e5d2caa4e784d7d8f7589bca0ef5210c03cb0d77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ffbfdde1a9c610f6bcb2356a26acb2b85ed9624a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523873"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740372"
 ---
 # <a name="platform-namespace-ccx"></a>Platform (spazio dei nomi) (C++/CX)
 

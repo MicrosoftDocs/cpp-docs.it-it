@@ -28,12 +28,12 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 838bab49-0dbc-4089-a604-ef146269ef5a
-ms.openlocfilehash: ace05ffc0c9b0357e40f7a2520921c672014b9ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24a278e4d5b208c5d8e3b95b9f5a0bd0306dbab3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604334"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741903"
 ---
 # <a name="regular-expressions-ccli"></a>Espressioni regolari (C++/CLI)
 

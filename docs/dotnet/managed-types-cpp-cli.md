@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595961"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746917"
 ---
 # <a name="managed-types-ccli"></a>Tipi gestiti (C++/CLI)
 
@@ -58,7 +58,7 @@ La tabella seguente illustra le parole chiave per i tipi incorporati di Visual C
 |**unsigned __int64**|**System.UInt64**|
 |**brevi** e **short con segno**|**System.Int16**|
 |**unsigned short**|**System.UInt16**|
-|**void**|**System. void**|
+|**void**|**System.Void**|
 
 ## <a name="version_issues"></a> Problemi di versione per tipi di valore annidati in tipi nativi
 
@@ -125,7 +125,7 @@ S.i = 11
 
 Tuttavia, se si aggiunge un altro membro `struct S` in nested_value_types, (ad esempio, `double d;`) e ricompilare il componente senza ricompilare il client, il risultato è un'eccezione non gestita (di tipo <xref:System.IO.FileLoadException?displayProperty=fullName>).
 
-## <a name="test_equality"></a> Procedura: verificare l'uguaglianza
+## <a name="test_equality"></a> Procedura: Per verificare l'uguaglianza
 
 Nell'esempio seguente, un test di uguaglianza che usa le estensioni gestite per C++ si basa su ciò che l'handle fanno riferimento.
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> Procedura: diagnosticare e risolvere i problemi di compatibilità di Assembly
+## <a name="diagnose_fix"></a> Procedura: Diagnosticare e risolvere i problemi di compatibilità di Assembly
 
 Questo argomento viene illustrato cosa può accadere quando la versione di un assembly cui viene fatto riferimento in fase di compilazione non corrisponde alla versione dell'assembly cui viene fatto riferimento in fase di esecuzione e su come evitare il problema.
 

@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: dichiarare gli identificatori di Override (C + + / CLI)'
+title: 'Procedura: Dichiarare gli identificatori di Override (C + + CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: a0c2d65aa44141b1dbe30fb39d66beabde93fa99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c9238eab1627b0494c4073c88032c488fdfb828
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555545"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752385"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Procedura: Dichiarare gli identificatori di override nelle compilazioni native (C++/CLI)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Procedura: Dichiarare gli identificatori di Override nelle compilazioni Native (C + + CLI)
 
 [sealed](../windows/sealed-cpp-component-extensions.md), [astratto](../windows/abstract-cpp-component-extensions.md), e [override](../windows/override-cpp-component-extensions.md) sono disponibili nelle compilazioni che non utilizzano **/ZW** oppure [/clr](../build/reference/clr-common-language-runtime-compilation.md).
 

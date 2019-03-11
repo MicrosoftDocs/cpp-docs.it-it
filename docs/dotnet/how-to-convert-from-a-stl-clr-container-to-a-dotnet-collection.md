@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: conversione da contenitore STL/CLR a raccolta di .NET'
+title: 'Procedura: Conversione da un contenitore STL/CLR a raccolta di .NET'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: 3444339f43f8000d8a9c9b8a6577adb286245dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf67e362751dd164916cc94cd644d55110d88a5f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621624"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751583"
 ---
-# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Procedura: conversione da contenitore STL/CLR a raccolta di .NET
+# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Procedura: Conversione da un contenitore STL/CLR a raccolta di .NET
 
 In questo argomento viene illustrato come convertire le raccolte .NET equivalente contenitori STL/CLR. Ad esempio, viene illustrato come convertire un STL/CLR [vettore](../dotnet/vector-stl-clr.md) per .NET <xref:System.Collections.Generic.ICollection%601> e su come convertire un STL/CLR [mappa](../dotnet/map-stl-clr.md) per .NET <xref:System.Collections.Generic.IDictionary%602>, ma la procedura è simile per tutte le raccolte e contenitori.
 

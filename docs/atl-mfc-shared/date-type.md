@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548187"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750390"
 ---
 # <a name="date-type"></a>Tipo DATE
 
@@ -24,7 +24,7 @@ Il tipo data viene implementato usando un numero a virgola mobile a 8 byte. Gior
 
 |Data e ora|Rappresentazione|
 |-------------------|--------------------|
-|30 dicembre 1899, mezzanotte|0,00|
+|30 dicembre 1899, mezzanotte|0.00|
 |Mezzanotte del 1 gennaio 1900|2.00|
 |La mezzanotte del 4 gennaio 1900|5.00|
 |4 gennaio 1900 e 6 del mattino.|5.25|
@@ -50,7 +50,7 @@ Sottolineare i seguenti punti quando si lavora con questi formati di data e ora 
 |30 dicembre 1899, 18.00.|-0.75|
 |30 dicembre 1899, mezzogiorno|-0.50|
 |30 dicembre 1899, 6 del mattino.|-0.25|
-|30 dicembre 1899, mezzanotte|0,00|
+|30 dicembre 1899, mezzanotte|0.00|
 |30 dicembre 1899, 6 del mattino.|0.25|
 |30 dicembre 1899, mezzogiorno|0.50|
 |30 dicembre 1899, 18.00.|0.75|
@@ -62,10 +62,9 @@ Sottolineare i seguenti punti quando si lavora con questi formati di data e ora 
 > [!CAUTION]
 >  Si noti che poiché 6:00 viene sempre rappresentata da un valore frazionario 0,25 indipendentemente dal fatto che l'intero che rappresenta il giorno è un valore positivo (dopo il 30 dicembre 1899) o negativo (prima dal 30 dicembre 1899), un semplice confronto punto a virgola mobile viene erroneamente ordinare qualsiasi data che rappresenta le 6.00 nel giorno precedente a 12/30/1899 come *in un secondo momento* rispetto a una data che rappresentano 7:00 nello stesso giorno.
 
-Altre informazioni sui problemi relativi alla data e `COleDateTime` i tipi sono disponibili in [classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [data e ora: supporto di automazione](../atl-mfc-shared/date-and-time-automation-support.md).
+Altre informazioni sui problemi relativi alla data e `COleDateTime` i tipi sono disponibili nella sezione [classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [data e ora: Il supporto per automazione](../atl-mfc-shared/date-and-time-automation-support.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Data e ora](../atl-mfc-shared/date-and-time.md)<br/>
 [Classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)
-

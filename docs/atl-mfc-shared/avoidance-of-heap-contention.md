@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-ms.openlocfilehash: c28e5ba01cc2bb1e3cae19087a67cf97e6ac415f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45510607a63759aad9444959716bef164eda1492
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536786"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743275"
 ---
 # <a name="avoidance-of-heap-contention"></a>Prevenzione dei conflitti dell'Heap
 
@@ -34,4 +34,3 @@ Per una procedura thread più complicata, potrebbe risultare utile archiviare un
 ## <a name="see-also"></a>Vedere anche
 
 [Gestione della memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

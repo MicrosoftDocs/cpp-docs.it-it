@@ -2,12 +2,12 @@
 title: Enumerazioni (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: 54d542b9fea127101cc74d4f064a7598889c3bd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583158"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752142"
 ---
 # <a name="enums-ccx"></a>Enumerazioni (C++/CX)
 

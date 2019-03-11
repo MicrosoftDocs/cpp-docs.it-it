@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-ms.openlocfilehash: 0108068f15132fea38189e17371490a7c0dd5d8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b292bb12888ce0c08f96d3c46e27297f61bc428d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465234"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750494"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Supporto per MBCS in Visual C++
 

@@ -1,6 +1,6 @@
 ---
 title: /Zm (Specifica il limite di allocazione della memoria per l'intestazione precompilata)
-ms.date: 11/04/2016
+ms.date: 03/08/2019
 f1_keywords:
 - /zm
 helpviewer_keywords:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-ms.openlocfilehash: d0f79ed1b38401abbc65898193f2305bd432bb28
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3c1362479b2068ee8fb527a4ecaac6e203e83cb0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419920"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751986"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Specifica il limite di allocazione della memoria per l'intestazione precompilata)
 
@@ -40,9 +40,11 @@ Il *factor* argomento è una percentuale della dimensione predefinita di un buff
 
 ## <a name="remarks"></a>Note
 
-Nelle versioni precedenti di Visual C++ il compilatore utilizza diversi heap discreti, ciascuno dei quali è caratterizzato da un limite finito. Attualmente il compilatore aumenta in modo dinamico le dimensioni degli heap fino a un limite totale e richiede un buffer di dimensioni fisse solo per costruire intestazioni precompilate. Di conseguenza, il **/Zm** opzione del compilatore è solo raramente necessario.
+Nelle versioni precedenti di Visual Studio 2015, il compilatore C++ utilizza diversi heap discreti e ognuna ha un limite finito. Attualmente, il compilatore in modo dinamico aumenta gli heap fino a un limite di dimensione totale dell'heap e consente l'intestazione precompilata dovranno includere più intervalli di indirizzi. Di conseguenza, il **/Zm** opzione del compilatore è solo raramente necessario.
 
-Se il compilatore esaurisce lo spazio dell'heap e genera il [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) messaggio di errore quando si usa il **/Zm** opzione del compilatore, è possibile potrebbe essere stata riservata una quantità eccessiva di memoria. Provare a rimuovere il **/Zm** opzione. Se il compilatore genera il [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) messaggio di errore, un oggetto associato [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) messaggio consente di specificare la *fattore* argomento da utilizzare quando si ricompila tramite i **/Zm** opzione del compilatore.
+Se il compilatore esaurisce lo spazio dell'heap e genera il [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) messaggio di errore quando si usa il **/Zm** opzione del compilatore, è possibile potrebbe essere stata riservata una quantità eccessiva di memoria. Provare a rimuovere il **/Zm** opzione.
+
+Se il compilatore genera il [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) messaggio di errore, un oggetto associato [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) messaggio consente di specificare la *fattore* argomento da utilizzare quando si ricompila tramite i **/Zm** opzione del compilatore. Questo messaggio è significativo solo quando si usa un'intestazione precompilata `#pragma hdrstop`. In altri casi, è un errore spurio causato da problemi di un utilizzo elevato della memoria virtuale di Windows e le raccomandazioni per usare la **/Zm** opzione deve essere ignorato. In alternativa, provare a ridurre il numero di processi paralleli quando si usa la **/maxcpucount** opzione a MSBUILD. File EXE in combinazione con il **/MP** opzione a CL. FILE EXE. Per altre informazioni, vedere [problemi di intestazione precompilata (PCH) e consigli](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/).
 
 La tabella seguente illustra come la *factor* argomento influisce sul limite di allocazione della memoria se si presuppone che la dimensione del buffer di intestazioni precompilate predefinito è pari a 75 MB.
 
@@ -56,15 +58,15 @@ La tabella seguente illustra come la *factor* argomento influisce sul limite di 
 
 ## <a name="other-ways-to-set-the-memory-allocation-limit"></a>Altri modi per impostare il limite di allocazione della memoria
 
-#### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore /Zm nell'ambiente di sviluppo di Visual Studio
+### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore /Zm nell'ambiente di sviluppo di Visual Studio
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
 
-1. Nel riquadro di spostamento, selezionare **le proprietà di configurazione**, **C/C++**, **riga di comando**.
+1. Nel riquadro di spostamento, selezionare **le proprietà di configurazione** > **C/C++** > **della riga di comando**.
 
 1. Immettere il **/Zm** opzione del compilatore nella **opzioni aggiuntive** casella.
 
-#### <a name="to-set-the-zm-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore /Zm a livello di codice
+### <a name="to-set-the-zm-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore /Zm a livello di codice
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 

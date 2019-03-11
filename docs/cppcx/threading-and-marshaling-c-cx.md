@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426758"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751700"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading e marshalling (C++/CX)
 

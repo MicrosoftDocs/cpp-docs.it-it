@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 1787e18cb36c77429cd4957bab167c77d5e25d8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496083"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744361"
 ---
 # <a name="stlclr-containers"></a>Contenitori STL/CLR
 

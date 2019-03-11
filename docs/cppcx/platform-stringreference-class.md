@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498384"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750923"
 ---
 # <a name="platformstringreference-class"></a>Classe Platform::StringReference
 
@@ -34,16 +34,16 @@ class StringReference
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Stringreference:: Stringreference](#ctor)|Due costruttori per creare istanze di `StringReference`.|
+|[StringReference::StringReference](#ctor)|Due costruttori per creare istanze di `StringReference`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Stringreference:: data](#data)|Restituisce i dati in formato stringa come matrice di valori char16.|
-|[Stringreference:: Length](#length)|Restituisce il numero di caratteri della stringa.|
-|[Stringreference:: Gethstring](#gethstring)|Restituisce i dati in formato stringa come HSTRING.|
-|[Stringreference:: GetString](#getstring)|Restituisce i dati in formato stringa come `Platform::String^`.|
+|[StringReference::Data](#data)|Restituisce i dati in formato stringa come matrice di valori char16.|
+|[StringReference::Length](#length)|Restituisce il numero di caratteri della stringa.|
+|[StringReference::GetHSTRING](#gethstring)|Restituisce i dati in formato stringa come HSTRING.|
+|[StringReference::GetString](#getstring)|Restituisce i dati in formato stringa come `Platform::String^`.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -58,7 +58,7 @@ class StringReference
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 **Intestazione:** vccorlib.h
 
@@ -181,7 +181,8 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 ### <a name="parameters"></a>Parametri
 
 *__fstrArg*<br/>
-`StringReference` i cui dati vengono utilizzati per inizializzare la nuova istanza.
+
+  `StringReference` i cui dati vengono utilizzati per inizializzare la nuova istanza.
 
 *__strArg*<br/>
 Puntatore a una matrice di valori char16 utilizzata per inizializzare la nuova istanza.

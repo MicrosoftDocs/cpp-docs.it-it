@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: mantenere riferimenti al tipo di valore nel tipo nativo'
+title: 'Procedura: Mantenere riferimenti al tipo di valore nel tipo nativo'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - value type reference in native type
 - reference to value type in native type
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
-ms.openlocfilehash: 1219dbac5ba78229554aeb29cf9422e835ea8343
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b1dfdc5a519bf51f16b7afbc25d49dc38b8f076
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470447"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749009"
 ---
-# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Procedura: mantenere riferimenti al tipo di valore nel tipo nativo
+# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Procedura: Mantenere riferimenti al tipo di valore nel tipo nativo
 
 Usare `gcroot` sul tipo boxed che include un riferimento a un tipo valore in un tipo nativo.
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: cd1865320d56d71481cdaf7055f796bfab26eeab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e38865f1d43edac4fc895052f1ea1b5a54a34ab
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496379"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749256"
 ---
 # <a name="platformcollectionsmapview-class"></a>Classe Platform::Collections::MapView
 
@@ -60,11 +60,11 @@ MapView è un'implementazione concreta di C++ del [Windows::Foundation::Collecti
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Mapview:: First](#first)|Restituisce un iteratore che viene inizializzato al primo elemento nella visualizzazione della mappa.|
+|[MapView::First](#first)|Restituisce un iteratore che viene inizializzato al primo elemento nella visualizzazione della mappa.|
 |[MapView::HasKey](#haskey)|Determina se l'oggetto MapView corrente contiene la chiave specificata.|
 |[MapView::Lookup](#lookup)|Recupera l'elemento in corrispondenza della chiave specificata nell'oggetto MapView corrente.|
-|[Mapview:: Size](#size)|Restituisce il numero di elementi nell'oggetto MapView corrente.|
-|[Mapview:: Split](#split)|Divide un oggetto MapView originale in due oggetti MapView.|
+|[MapView::Size](#size)|Restituisce il numero di elementi nell'oggetto MapView corrente.|
+|[MapView::Split](#split)|Divide un oggetto MapView originale in due oggetti MapView.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 

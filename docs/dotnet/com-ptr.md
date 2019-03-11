@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - com::ptr
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
-ms.openlocfilehash: 9bcfe00bd41d57542116f786f28df19d12c68b65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74e168fe916b930e499a82ca3fcf5c7d0d669719
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664581"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748801"
 ---
 # <a name="comptr"></a>com::ptr
 

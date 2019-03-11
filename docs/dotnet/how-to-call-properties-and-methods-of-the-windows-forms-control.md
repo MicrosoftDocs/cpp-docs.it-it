@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: chiamare proprietà e metodi del controllo Windows Form'
+title: 'Procedura: Controllano la chiamata di proprietà e metodi di moduli di Windows'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - calling properties
 - Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-ms.openlocfilehash: 809fa428172dffb5f53e7339e04882b451c8562f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b565839b3f3c24670819fdcf2dde558e3461ac
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561486"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743774"
 ---
-# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Procedura: chiamare proprietà e metodi del controllo Windows Form
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Procedura: Controllano la chiamata di proprietà e metodi di moduli di Windows
 
 In quanto [GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) restituisce un puntatore a <xref:System.Windows.Forms.Control?displayProperty=fullName>e non un puntatore al `WindowsControlLibrary1::UserControl1`, è consigliabile aggiungere un membro del tipo di controllo utente e inizializzarla in [IView::OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). A questo punto è possibile chiamare metodi e proprietà usando `m_ViewControl`.
 
-In questo argomento si presuppone che è stata completata [procedura: creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [procedura: creare il controllo utente e l'Host nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+In questo argomento si presuppone che è stata completata [come: Creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [come: Creare il controllo utente e inserirlo nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Per creare l'applicazione host MFC
 
-1. Aprire l'applicazione MFC creata in [procedura: creare il controllo utente e l'Host nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+1. Aprire l'applicazione MFC creata in [come: Creare il controllo utente e inserirlo nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 1. Aggiungere la riga seguente alla sezione delle sostituzioni pubblica il `CMFC02View` in MFC02View.h dichiarazione di classe.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: e9d3c7612232cff60be831310dec04b8ba63a227
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626695"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743140"
 ---
 # <a name="general-mbcs-programming-advice"></a>Suggerimenti generali sulla programmazione MBCS
 

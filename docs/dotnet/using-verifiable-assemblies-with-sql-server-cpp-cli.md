@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389929"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747696"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizzo di assembly verificabili con SQL Server (C++/CLI)
 
@@ -19,9 +19,9 @@ Quando un client esegue una stored procedure estesa, le ricerche di SQL Server p
 
 SQL Server fornisce le estensioni di Transact-SQL (T-SQL) per consentire l'installazione di assembly verificabili in SQL Server. Il set di autorizzazioni di SQL Server consente di specificare il contesto di sicurezza, con i livelli di sicurezza seguenti:
 
-- Modalità non limitata: eseguire il codice a proprio rischio; codice non deve essere indipendente dai tipi verificabile.
+- Modalità di senza restrizioni: Eseguire il codice a proprio rischio; codice non deve essere indipendente dai tipi verificabile.
 
-- Modalità provvisoria: eseguire effettivamente il codice indipendente dai tipi. compilato con /CLR: safe.
+- Modalità sicura: Eseguire effettivamente il codice indipendente dai tipi. compilato con /CLR: safe.
 
 > [!IMPORTANT]
 > Deprecato di Visual Studio 2015 e Visual Studio 2017 non supporta il **/clr: pure** e **/CLR: safe** la creazione di progetti verificabile. Se è necessario codice verificabile, è consigliabile che si tradurre il codice in c#.

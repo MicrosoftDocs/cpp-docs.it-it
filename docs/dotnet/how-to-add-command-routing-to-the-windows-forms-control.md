@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: aggiungere il routing dei comandi al controllo Windows Form'
+title: 'Procedura: Comando Aggiungi controllo Routing per i Windows Form'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-ms.openlocfilehash: b3f93574e007fdb1b7d4009d85c573223091adf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447112"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750298"
 ---
-# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Procedura: aggiungere il routing dei comandi al controllo Windows Form
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Procedura: Comando Aggiungi controllo Routing per i Windows Form
 
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) instrada i comandi e messaggi di comando di aggiornamento dell'interfaccia utente per il controllo utente in modo che possa gestire i comandi MFC (ad esempio, voci di menu della cornice e i pulsanti della barra degli strumenti).
 
@@ -21,11 +21,11 @@ Il controllo utente utilizza [ICommandTarget:: Initialize](../mfc/reference/icom
 
 `CWinFormsView` gestisce diverse delle notifiche di visualizzazione MFC comuni inoltrandole al controllo utente gestito. Tali notifiche includono i [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) e [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) metodi.
 
-In questo argomento si presuppone che è stata completata [procedura: creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [procedura: creare il controllo utente e l'Host nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+In questo argomento si presuppone che è stata completata [come: Creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) e [come: Creare il controllo utente e inserirlo nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Per creare l'applicazione host MFC
 
-1. Aprire una libreria di controlli Windows Form creato nella [procedura: creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+1. Aprire una libreria di controlli Windows Form creata in [come: Creare il controllo utente e inserirlo in una finestra di dialogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 1. Aggiungere un riferimento a mfcmifc80.dll, operazione che è possibile effettuare facendo clic sul nodo del progetto in **Esplora soluzioni**, selezionando **Add**, **riferimento**e quindi passando a Microsoft Visual Studio 10.0\VC\atlmfc\lib.
 
@@ -70,7 +70,7 @@ In questo argomento si presuppone che è stata completata [procedura: creare il 
     }
     ```
 
-1. Aprire l'applicazione MFC creata in [procedura: creare il controllo utente e l'Host nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+1. Aprire l'applicazione MFC creata in [come: Creare il controllo utente e inserirlo nella visualizzazione MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 1. Aggiungere un'opzione di menu che verrà richiamato `singleMenuHandler`.
 
