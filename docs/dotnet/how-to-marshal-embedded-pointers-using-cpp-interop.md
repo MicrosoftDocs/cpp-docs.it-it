@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: d48297118fde98889acc0fd5f4abd29ee177cd8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493732"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738478"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Procedura: Effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C++
 

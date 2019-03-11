@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::Console Class
 ms.assetid: e8d01367-d8c8-4211-9b9e-3f93c8115dae
-ms.openlocfilehash: e7d2624a5d27e56259d0e752c4cd82a2b62d4660
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42d5d79fd93d5cf148432371641496bfa5be55c2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502986"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747634"
 ---
 # <a name="platformdetailsconsole-class"></a>Platform::Details::Console (classe)
 

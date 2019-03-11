@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 6816a7ffbc09d0e01659dd56282e238fdbfc4a27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462305"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742476"
 ---
 # <a name="security-best-practices-for-c"></a>Procedure di sicurezza consigliate per C++
 

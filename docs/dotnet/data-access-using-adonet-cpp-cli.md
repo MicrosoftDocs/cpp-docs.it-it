@@ -22,12 +22,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 896cad4d3a679cd1832b073f4b1f355a70a608d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638477"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749347"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Accesso ai dati tramite ADO.NET (C++/CLI)
 
@@ -43,7 +43,7 @@ Viene illustrato come aggiungere una stringa nativa (`char *`) a un database e c
 
 In questo esempio, la classe DatabaseClass viene creata per interagire con ADO.NET <xref:System.Data.DataTable> oggetto. Si noti che questa classe è un codice C++ nativo `class` (rispetto a un `ref class` o `value class`). Ciò è necessario perché si desidera utilizzare questa classe dal codice nativo e non è possibile utilizzare i tipi gestiti nel codice nativo. Questa classe verrà compilata per il CLR, come indicato dal `#pragma managed` direttiva che precede la dichiarazione di classe. Per altre informazioni su questa direttiva, vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
-Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
+Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [come: Dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Il resto del codice in questo esempio è codice C++ nativo, come indicato dal `#pragma unmanaged` precedente direttiva `main`. In questo esempio stiamo creando una nuova istanza della DatabaseClass e chiamarne i metodi per creare una tabella e inserire alcune righe nella tabella. Si noti che le stringhe C++ native vengono passate come valori per la colonna di database StringCol del database. All'interno di DatabaseClass, queste stringhe vengono effettuato il marshalling a stringhe gestite tramite la funzionalità di marshalling trovata nel <xref:System.Runtime.InteropServices?displayProperty=fullName> dello spazio dei nomi. In particolare, il metodo <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> viene usato per effettuare il marshalling una `char *` a un <xref:System.String>e il metodo <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> viene utilizzato per effettuare il marshalling una <xref:System.String> per un `char *`.
 
@@ -169,7 +169,7 @@ Di seguito viene illustrato come aggiungere una stringa di COM (`BSTR`) a un dat
 
 In questo esempio, la classe DatabaseClass viene creata per interagire con ADO.NET <xref:System.Data.DataTable> oggetto. Si noti che questa classe è un codice C++ nativo `class` (rispetto a un `ref class` o `value class`). Ciò è necessario perché si desidera utilizzare questa classe dal codice nativo e non è possibile utilizzare i tipi gestiti nel codice nativo. Questa classe verrà compilata per il CLR, come indicato dal `#pragma managed` direttiva che precede la dichiarazione di classe. Per altre informazioni su questa direttiva, vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
-Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
+Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [come: Dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Il resto del codice in questo esempio è codice C++ nativo, come indicato dal `#pragma unmanaged` precedente direttiva `main`. In questo esempio stiamo creando una nuova istanza della DatabaseClass e chiamarne i metodi per creare una tabella e inserire alcune righe nella tabella. Si noti che le stringhe COM vengono passate come valori per la colonna di database StringCol del database. All'interno di DatabaseClass, queste stringhe vengono effettuato il marshalling a stringhe gestite tramite la funzionalità di marshalling trovata nel <xref:System.Runtime.InteropServices?displayProperty=fullName> dello spazio dei nomi. In particolare, il metodo <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> viene usato per effettuare il marshalling una `BSTR` a un <xref:System.String>e il metodo <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> viene utilizzato per effettuare il marshalling una <xref:System.String> per un `BSTR`.
 
@@ -303,7 +303,7 @@ Viene illustrato come aggiungere una stringa Unicode nativa (`wchar_t *`) a un d
 
 In questo esempio, la classe DatabaseClass viene creata per interagire con ADO.NET <xref:System.Data.DataTable> oggetto. Si noti che questa classe è un codice C++ nativo `class` (rispetto a un `ref class` o `value class`). Ciò è necessario perché si desidera utilizzare questa classe dal codice nativo e non è possibile utilizzare i tipi gestiti nel codice nativo. Questa classe verrà compilata per il CLR, come indicato dal `#pragma managed` direttiva che precede la dichiarazione di classe. Per altre informazioni su questa direttiva, vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
-Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
+Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [come: Dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Il resto del codice in questo esempio è codice C++ nativo, come indicato dal `#pragma unmanaged` precedente direttiva `main`. In questo esempio stiamo creando una nuova istanza della DatabaseClass e chiamarne i metodi per creare una tabella e inserire alcune righe nella tabella. Si noti che le stringhe Unicode C++ vengono passate come valori per la colonna di database StringCol del database. All'interno di DatabaseClass, queste stringhe vengono effettuato il marshalling a stringhe gestite tramite la funzionalità di marshalling trovata nel <xref:System.Runtime.InteropServices?displayProperty=fullName> dello spazio dei nomi. In particolare, il metodo <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> viene usato per effettuare il marshalling una `wchar_t *` a un <xref:System.String>e il metodo <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> viene utilizzato per effettuare il marshalling una <xref:System.String> per un `wchar_t *`.
 
@@ -429,7 +429,7 @@ Di seguito viene illustrato come aggiungere un nativo `VARIANT` a un database e 
 
 In questo esempio, la classe DatabaseClass viene creata per interagire con ADO.NET <xref:System.Data.DataTable> oggetto. Si noti che questa classe è un codice C++ nativo `class` (rispetto a un `ref class` o `value class`). Ciò è necessario perché si desidera utilizzare questa classe dal codice nativo e non è possibile utilizzare i tipi gestiti nel codice nativo. Questa classe verrà compilata per il CLR, come indicato dal `#pragma managed` direttiva che precede la dichiarazione di classe. Per altre informazioni su questa direttiva, vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
-Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
+Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [come: Dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Il resto del codice in questo esempio è codice C++ nativo, come indicato dal `#pragma unmanaged` precedente direttiva `main`. In questo esempio stiamo creando una nuova istanza della DatabaseClass e chiamarne i metodi per creare una tabella e inserire alcune righe nella tabella. Nativi `VARIANT` tipi vengono passati come valori per la colonna di database ObjectCol del database. All'interno di DatabaseClass, questi `VARIANT` vengono effettuato il marshalling di tipi per gli oggetti gestiti usando la funzionalità di marshalling trovata nel <xref:System.Runtime.InteropServices?displayProperty=fullName> dello spazio dei nomi. In particolare, il metodo <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> viene usato per effettuare il marshalling una `VARIANT` a un <xref:System.Object>e il metodo <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> viene utilizzato per effettuare il marshalling un <xref:System.Object> a un `VARIANT`.
 
@@ -570,7 +570,7 @@ Di seguito viene illustrato come aggiungere un nativo `SAFEARRAY` a un database 
 
 In questo esempio, la classe DatabaseClass viene creata per interagire con ADO.NET <xref:System.Data.DataTable> oggetto. Si noti che questa classe è un codice C++ nativo `class` (rispetto a un `ref class` o `value class`). Ciò è necessario perché si desidera utilizzare questa classe dal codice nativo e non è possibile utilizzare i tipi gestiti nel codice nativo. Questa classe verrà compilata per il CLR, come indicato dal `#pragma managed` direttiva che precede la dichiarazione di classe. Per altre informazioni su questa direttiva, vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md).
 
-Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [procedura: dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
+Si noti il membro privato della classe DatabaseClass: `gcroot<DataTable ^> table`. Poiché i tipi nativi non possono contenere tipi gestiti, il `gcroot` parola chiave è necessaria. Per ulteriori informazioni sul `gcroot`, vedere [come: Dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Il resto del codice in questo esempio è codice C++ nativo, come indicato dal `#pragma unmanaged` precedente direttiva `main`. In questo esempio stiamo creando una nuova istanza della DatabaseClass e chiamarne i metodi per creare una tabella e inserire alcune righe nella tabella. Nativi `SAFEARRAY` tipi vengono passati come valori per la colonna di database ArrayIntsCol del database. All'interno di DatabaseClass, questi `SAFEARRAY` vengono effettuato il marshalling di tipi per gli oggetti gestiti usando la funzionalità di marshalling trovata nel <xref:System.Runtime.InteropServices?displayProperty=fullName> dello spazio dei nomi. In particolare, il metodo <xref:System.Runtime.InteropServices.Marshal.Copy%2A> viene usato per effettuare il marshalling una `SAFEARRAY` in una matrice di valori integer e il metodo gestita <xref:System.Runtime.InteropServices.Marshal.Copy%2A> viene usato per effettuare il marshalling di una matrice gestita di numeri interi da un `SAFEARRAY`.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: 4c297f033b78e1b7f9283f5becb9db974bb2b9ff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522857"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742973"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference (classe)
 
@@ -30,7 +30,7 @@ class ArrayReference
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Arrayreference:: Arrayreference](#ctor)|Inizializza una nuova istanza della classe `ArrayReference`.|
+|[ArrayReference::ArrayReference](#ctor)|Inizializza una nuova istanza della classe `ArrayReference`.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -51,7 +51,7 @@ Utilizzando `ArrayReference` per compilare una matrice di tipo C, puoi evitare l
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 **Intestazione:** vccorlib.h
 

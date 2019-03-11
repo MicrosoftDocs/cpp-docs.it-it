@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525496"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750871"
 ---
 # <a name="cstringt-class"></a>Classe CstringT
 
@@ -114,19 +114,19 @@ Il tipo di carattere della classe string. Può essere uno dei seguenti:
 *StringTraits*<br/>
 Determina se la classe string è necessario il supporto della libreria Run-Time C (CRT) e in cui si trovano le risorse stringa. Può essere uno dei seguenti:
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    La classe richiede supporto CRT e cerca le stringhe di risorsa nel modulo specificato da `m_hInstResource` (un membro della classe di modulo dell'applicazione).
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    La classe non richiede il supporto di CRT e cerca le stringhe di risorsa nel modulo specificato da `m_hInstResource` (un membro della classe di modulo dell'applicazione).
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    La classe richiede supporto CRT e cerca le stringhe di risorsa usando l'algoritmo di ricerca MFC standard.
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    La classe non richiede il supporto di CRT e cerca le stringhe di risorsa usando l'algoritmo di ricerca MFC standard.
 
@@ -137,7 +137,7 @@ Determina se la classe string è necessario il supporto della libreria Run-Time 
 |Nome|Descrizione|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Costruisce un `CStringT` oggetto in vari modi.|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|Elimina un oggetto `CStringT`.|
+|[CStringT::~CStringT](#_dtorcstringt)|Elimina un oggetto `CStringT`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -185,7 +185,7 @@ Determina se la classe string è necessario il supporto della libreria Run-Time 
 |[operator =](#operator_eq)|Assegna un nuovo valore per un `CStringT` oggetto.|
 |[CStringT::operator +](#operator_add)|Concatena due stringhe o un carattere e stringa.|
 |[+ = CStringT::operator](#operator_add_eq)|Concatena una nuova stringa alla fine di una stringa esistente.|
-|[CStringT::operator = =](#operator_eq_eq)|Determina se due stringhe sono uguali.|
+|[CStringT::operator ==](#operator_eq_eq)|Determina se due stringhe sono uguali.|
 |[CStringT::operator! =](#operator_neq)|Determina se due stringhe in modo logico non sono uguali.|
 |[CStringT::operator &lt;](#operator_lt)|Determina se la stringa a sinistra dell'operatore è minore di stringa a destra.|
 |[CStringT::operator &gt;](#operator_gt)|Determina se la stringa a sinistra dell'operatore è maggiore per la stringa a destra.|
@@ -274,7 +274,7 @@ In quanto `CStringT` utilizza un argomento di modello per definire il tipo di ca
 |Intestazione|Per usare|
 |------------|-------------|
 |cstringt.h|Oggetti stringa solo MFC|
-|atlstr. h|Oggetti stringa non MFC|
+|atlstr.h|Oggetti stringa non MFC|
 
 ##  <a name="allocsysstring"></a>  CStringT::AllocSysString
 
@@ -335,7 +335,7 @@ Una stringa di controllo del formato.
 *nFormatID*<br/>
 L'identificatore di risorsa stringa che contiene la stringa di controllo del formato.
 
-*argomento*<br/>
+*argument*<br/>
 Argomenti facoltativi.
 
 ### <a name="remarks"></a>Note
@@ -525,7 +525,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Parametri
 
-*PCH*<br/>
+*pch*<br/>
 Un puntatore a una matrice di caratteri di lunghezza *nLength*e non con terminazione null.
 
 *nLength*<br/>
@@ -568,9 +568,9 @@ Un handle per un `CStringT` oggetto.
 
 Poiché i costruttori copiano i dati di input in nuova risorsa di archiviazione allocato, è necessario essere consapevoli che la memoria possono generare eccezioni. Si noti che alcuni di questi costruttori fungono da funzioni di conversione. In questo modo è possibile sostituire, ad esempio, LPTSTR in cui un `CStringT` oggetto previsto.
 
-- `CStringT`( `LPCSTR` `lpsz` ): Crea un Unicode `CStringT` da una stringa ANSI. È inoltre possibile utilizzare questo costruttore per caricare una risorsa di stringa, come illustrato nell'esempio seguente.
+- `CStringT`( `LPCSTR` `lpsz` ): Costruisce un Unicode `CStringT` da una stringa ANSI. È inoltre possibile utilizzare questo costruttore per caricare una risorsa di stringa, come illustrato nell'esempio seguente.
 
-- `CStringT(` `LPCWSTR` `lpsz` ): Crea un `CStringT` da una stringa Unicode.
+- `CStringT(` `LPCWSTR` `lpsz` ): Costruisce un `CStringT` da una stringa Unicode.
 
 - `CStringT`( `const unsigned char*` `psz` ): Consente di costruire una `CStringT` da un puntatore a **unsigned char**.
 
@@ -588,7 +588,7 @@ L'operatore di overload `CSimpleStringT<>&()` costruisce una `CStringT` dell'ogg
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>  CStringT:: ~ CStringT
+##  <a name="_dtorcstringt"></a>  CStringT::~CStringT
 
 Elimina definitivamente il `CStringT` oggetto.
 
@@ -709,7 +709,7 @@ L'identificatore di risorsa stringa che contiene la stringa di controllo del for
 *pszFormat*<br/>
 Una stringa di controllo del formato.
 
-*argomento*<br/>
+*argument*<br/>
 Argomenti facoltativi.
 
 ### <a name="remarks"></a>Note
@@ -743,7 +743,7 @@ L'identificatore di risorsa stringa che contiene il testo del messaggio non form
 *pszFormat*<br/>
 Punta alla stringa di controllo del formato. Verrà eseguita una scansione per gli inserimenti e un formato. La stringa di formato è simile alla funzione runtime *printf*-applicare uno stile a stringhe di formato, ad eccezione del fatto che consente i parametri da inserire in ordine arbitrario.
 
-*argomento*<br/>
+*argument*<br/>
 Argomenti facoltativi.
 
 ### <a name="remarks"></a>Note
@@ -1040,10 +1040,10 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parametri
 
-*CH1*<br/>
+*ch1*<br/>
 Un carattere da concatenare con una stringa ANSI o Unicode.
 
-*Ch2*<br/>
+*ch2*<br/>
 Un carattere da concatenare con una stringa ANSI o Unicode.
 
 *str1*<br/>
@@ -1141,10 +1141,10 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*CH1*<br/>
+*ch1*<br/>
 Un carattere ANSI o Unicode per il confronto.
 
-*Ch2*<br/>
+*ch2*<br/>
 Un carattere ANSI o Unicode per il confronto.
 
 *str1*<br/>
@@ -1183,10 +1183,10 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*CH1*<br/>
+*ch1*<br/>
 Un carattere da concatenare con una stringa ANSI o Unicode.
 
-*Ch2*<br/>
+*ch2*<br/>
 Un carattere da concatenare con una stringa ANSI o Unicode.
 
 *str1*<br/>
@@ -1733,4 +1733,3 @@ Il `CStringT& TrimRight()` versione non richiede parametri. Riduce tutti gli spa
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [Classe CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

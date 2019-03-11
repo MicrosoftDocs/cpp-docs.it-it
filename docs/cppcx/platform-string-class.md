@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607038"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746188"
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 
@@ -74,8 +74,8 @@ La classe String eredita i metodi Equals(), Finalize(), GetHashCode(), GetType()
 |[String::End](#end)|Restituisce un puntatore successivo alla fine della stringa corrente.|
 |[String:: Equals](#equals)|Indica se l'oggetto specificato è uguale all'oggetto corrente.|
 |[String::GetHashCode](#gethashcode)|Restituisce il codice hash per l'istanza.|
-|[String:: IsEmpty](#isempty)|Indica se l'oggetto String corrente è vuoto.|
-|[String:: isfastpass](#isfastpass)|Indica se l'oggetto String corrente è coinvolto in una *passaggio rapido* operazione. In questo tipo di operazione il conteggio dei riferimenti viene sospeso.|
+|[String::IsEmpty](#isempty)|Indica se l'oggetto String corrente è vuoto.|
+|[String::IsFastPass](#isfastpass)|Indica se l'oggetto String corrente è coinvolto in una *passaggio rapido* operazione. In questo tipo di operazione il conteggio dei riferimenti viene sospeso.|
 |[String:: Length](#length)|Recupera la lunghezza dell'oggetto String corrente.|
 |[String::ToString](#tostring)|Restituisce un oggetto String il cui valore è uguale a quello dell'oggetto String corrente.|
 
@@ -98,7 +98,7 @@ La classe String presenta gli operatori seguenti.
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 **Intestazione** vccorlib.h (inclusa per impostazione predefinita)
 
@@ -138,7 +138,7 @@ Secondo oggetto String.
 
 Intero che indica la relazione lessicale tra i due termini di confronto. Nella tabella seguente sono elencati i valori restituiti possibili.
 
-|Valore|Condizione|
+|Value|Condizione|
 |-----------|---------------|
 |-1|`str1` è minore di `str2`.|
 |0|`str1` è uguale `str2`.|
@@ -212,7 +212,7 @@ Puntatore successivo alla fine della stringa corrente.
 
 ### <a name="remarks"></a>Note
 
-End () restituisce Begin () + Length.
+End() returns Begin() + Length.
 
 ## <a name="equals"></a>  Metodo String:: Equals
 
@@ -387,7 +387,7 @@ Secondo oggetto `String`.
 
 Questo operatore equivale a chiamare in modo esplicito [String:: CompareOrdinal](#compareordinal) e ottenere un risultato maggiore di zero.
 
-## <a name="operator-greater-than-or-equals"></a> String:: operator&gt;=
+## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
 
 Indica se il valore di uno `String` oggetto è maggiore o uguale al valore di un secondo `String` oggetto.
 

@@ -2,12 +2,12 @@
 title: Operatore Windows::UI::Xaml::Interop::TypeName
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: 7480df474086d78e28d235cc89b05094c648d28b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5acf17b7c87a71259dba6579d8ee69e0eea86fa5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415175"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738431"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Operatore Windows::UI::Xaml::Interop::TypeName
 

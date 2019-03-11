@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Effettuare il marshalling di strutture tramite PInvoke'
+title: 'Procedura: Marshalling di strutture tramite PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429110"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747995"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>Procedura: Effettuare il marshalling di strutture tramite PInvoke
+# <a name="how-to-marshal-structures-using-pinvoke"></a>Procedura: Marshalling di strutture tramite PInvoke
 
 Questo documento illustra la modalità native funzioni che accettano le strutture di tipo C possono essere chiamate da funzioni gestite dal tramite P/Invoke. Sebbene sia consigliabile usare le funzionalità di interoperabilità C++ invece di P/Invoke perché P/Invoke fornisce la segnalazione, little errori in fase di compilazione non è indipendente dai tipi e può essere noioso da implementare, se l'API non gestita viene assemblato come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione. In caso contrario, vedere i documenti seguenti:
 

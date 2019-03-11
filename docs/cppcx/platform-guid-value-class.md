@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: bf7d73e1e50bb77a84267f3a5388c07a49c54c79
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809698"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743811"
 ---
 # <a name="platformguid-value-class"></a>Classe di valori Platform::Guid
 

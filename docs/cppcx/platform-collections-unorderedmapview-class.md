@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: a60d962d79684cb16d8d5a5139b9b65df8148052
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414408"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743442"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 

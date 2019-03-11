@@ -5,12 +5,12 @@ helpviewer_keywords:
 - characters [C++], assignments
 - MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-ms.openlocfilehash: 9099382a212f9f7bd6c071f4e4d9a0c2bc8887de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88c42435d336ba78e87c9acfe3ada5fddbd18fb8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435373"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750702"
 ---
 # <a name="character-assignment"></a>Assegnazione di caratteri
 

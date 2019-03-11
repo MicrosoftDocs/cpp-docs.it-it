@@ -2,12 +2,12 @@
 title: Modificatori specifici Microsoft
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: be126e90ca6f77ef43b49ccd5b83c0f307f7f307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 119e4d06d0235bbf637eefe8754668d3e90b0c52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646030"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749724"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificatori specifici Microsoft
 
@@ -27,7 +27,7 @@ Molte delle parole chiave specifiche di Microsoft possono essere utilizzate per 
 
 |Parola chiave|Significato|Utilizzata per formare tipi derivati?|
 |-------------|-------------|---------------------------------|
-|[__based](based-grammar.md)|Il nome che segue dichiara un offset a 32 bit rispetto alla base a 32 bit contenuta nella dichiarazione.|Yes|
+|[__based](based-grammar.md)|Il nome che segue dichiara un offset a 32 bit rispetto alla base a 32 bit contenuta nella dichiarazione.|Sì|
 |[__cdecl](cdecl.md)|Il nome che segue utilizza le convenzioni di denominazione e di chiamata del linguaggio C.|Yes|
 |[__declspec](declspec.md)|Il nome che segue specifica un attributo della classe di archiviazione specifico di Microsoft.|No|
 |[__fastcall](fastcall.md)|Il nome che segue dichiara una funzione che utilizza i registri, se disponibili, anziché lo stack per il passaggio di un argomento.|Yes|
@@ -35,7 +35,7 @@ Molte delle parole chiave specifiche di Microsoft possono essere utilizzate per 
 |[__stdcall](stdcall.md)|Il nome che segue specifica una funzione che osserva la convenzione di chiamata standard.|Yes|
 |[__w64](w64.md)|Contrassegna un tipo di dati come maggiore in un compilatore a 64 bit.|No|
 |[__unaligned](unaligned.md)|Specifica che un puntatore a un tipo o ad altri dati non è allineato.|No|
-|[__vectorcall](vectorcall.md)|Il nome che segue dichiara una funzione che utilizza i registri, inclusi i registri SSE, se disponibili, anziché lo stack per il passaggio di un argomento.|Yes|
+|[__vectorcall](vectorcall.md)|Il nome che segue dichiara una funzione che utilizza i registri, inclusi i registri SSE, se disponibili, anziché lo stack per il passaggio di un argomento.|Sì|
 
 ## <a name="see-also"></a>Vedere anche
 

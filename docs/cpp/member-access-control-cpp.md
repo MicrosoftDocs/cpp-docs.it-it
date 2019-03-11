@@ -6,12 +6,12 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 367ee5183498453b9ce647c8e91ad1194f90fbd2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176225"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740280"
 ---
 # <a name="member-access-control-c"></a>Controllo di accesso dei membri [C++]
 
@@ -189,7 +189,7 @@ int Derived2::ShowCount()
 
 Nel codice precedente, il controllo di accesso impedisce la conversione da un puntatore a `Derived2` in un puntatore a `Base`. Il **ciò** puntatore si trova in modo implicito del tipo `Derived2 *`. Per selezionare i `CountOf` funzione **ciò** deve essere convertito nel tipo `Base *`. Tale conversione non è consentita perché `Base` è una classe base indiretta privata di `Derived2`. La conversione in un tipo di classe base privata è accettabile solo per i puntatori alle classi derivate immediate. Di conseguenza, i puntatori di tipo `Derived1 *` possono essere convertiti nel tipo `Base *`.
 
-Si noti che la chiamata alla funzione `CountOf` in modo esplicito, senza usare un puntatore, un riferimento o un oggetto per selezionarla, non implica alcuna conversione. La chiamata è pertanto consentita.
+Si noti che la chiamata alla funzione `CountOf` in modo esplicito, senza utilizzare un puntatore, un riferimento o un oggetto per selezionarla, non implica alcuna conversione. La chiamata è pertanto consentita.
 
 I membri e gli elementi friend di una classe derivata, `T`, possono convertire un puntatore a `T` in un puntatore a una classe base diretta privata `T`.
 

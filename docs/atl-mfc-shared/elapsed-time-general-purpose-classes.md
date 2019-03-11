@@ -11,12 +11,12 @@ helpviewer_keywords:
 - intervals, date and time
 - calculations, date and time
 ms.assetid: e5c5d3d2-ce1d-409e-875c-98848434e716
-ms.openlocfilehash: ebaf77b34411cd55cb3a028bcce9109613b63ed9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5990f6f5db0270c8d24ff35b5c9bbea5b24e6ed7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676742"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742045"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>Tempo trascorso: Classi generiche
 
@@ -25,4 +25,3 @@ La procedura seguente illustra come calcolare la differenza tra due `CTime` gli 
    [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]
 
 Dopo aver calcolato `elapsedTime`, è possibile usare le funzioni membro di `CTimeSpan` per estrarre i componenti del valore del tempo trascorso.
-

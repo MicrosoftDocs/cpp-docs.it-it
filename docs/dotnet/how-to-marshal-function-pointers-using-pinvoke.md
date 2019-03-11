@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Effettuare il marshalling di puntatori a funzione utilizzando PInvoke'
+title: 'Procedura: Effettuare il marshalling dei puntatori a funzione utilizzando PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 2f12c86b7e32955622a4a2c598d01057e303a329
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435607"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742876"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Procedura: Effettuare il marshalling di puntatori a funzione utilizzando PInvoke
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Procedura: Effettuare il marshalling dei puntatori a funzione utilizzando PInvoke
 
 In questo argomento si illustra i delegati come gestiti può essere usato al posto di puntatori a funzione quando interagisce con funzioni non gestite tramite le funzionalità di .NET Framework P/Invoke. Tuttavia, i programmatori Visual C++ sono invitati a usare invece la funzionalità di interoperabilità C++ (se possibile) perché P/Invoke fornisce poco in fase di compilazione segnalazione errori, non è indipendente dai tipi e può essere difficile da implementare. Se l'API non gestita viene assemblato come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione. In caso contrario, vedere gli argomenti seguenti:
 

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Effettuare il marshalling di matrici utilizzando l'interoperabilità C++"
+title: 'Procedura: Interoperabilità di marshalling di matrici usando C++'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 10cf89d0f14a072318e6b1ef743f386e6ba914cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441665"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740004"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>Procedura: Effettuare il marshalling di matrici utilizzando l'interoperabilità C++
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Procedura: Interoperabilità di marshalling di matrici usando C++
 
 In questo argomento viene illustrato un facet di interoperabilità di Visual C++. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

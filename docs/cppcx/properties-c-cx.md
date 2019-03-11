@@ -2,12 +2,12 @@
 title: Proprietà (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: a4aadb853ac26d353cbee5f7c0c81436a4c1dfc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609401"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742806"
 ---
 # <a name="properties-ccx"></a>Proprietà (C++/CX)
 

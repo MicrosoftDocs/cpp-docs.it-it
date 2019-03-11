@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607860"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740933"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantica dello stack C++ per i tipi di riferimento
 
@@ -27,7 +27,7 @@ Il compilatore non genererà un costruttore di copia per un tipo di riferimento.
 
 Il compilatore non genererà un operatore di assegnazione predefinito per un tipo di riferimento. Un operatore di assegnazione consente di creare un oggetto mediante la semantica dello stack e di inizializzarlo con un oggetto esistente creato mediante la semantica dello stack. Un operatore di assegnazione per un tipo di riferimento ha una firma nella forma seguente: `void operator=( R% ){}`.
 
-Se il distruttore del tipo rilascia delle risorse critiche e si utilizza la semantica dello stack per i tipi riferimento, non è necessario chiamare in modo esplicito il distruttore (o chiamare `delete`). Per altre informazioni sui distruttori nei tipi di riferimento, vedere [distruttori e finalizzatori in Procedura: definire e usare classi e struct (C + + / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Se il distruttore del tipo rilascia delle risorse critiche e si utilizza la semantica dello stack per i tipi riferimento, non è necessario chiamare in modo esplicito il distruttore (o chiamare `delete`). Per altre informazioni sui distruttori nei tipi di riferimento, vedere [distruttori e finalizzatori in Procedura: Definire e usare classi e struct (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Un operatore di assegnazione generato dal compilatore seguirà le normali regole di C++ standard con le seguenti aggiunte:
 

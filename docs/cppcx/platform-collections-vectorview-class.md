@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658185"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745295"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Classe Platform::Collections::VectorView
 
@@ -48,17 +48,17 @@ Il `VectorView` classe implementa le [ivectorview\<T >](/uwp/api/Windows.Foundat
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Vectorview:: Vectorview](#ctor)|Inizializza una nuova istanza della classe VectorView.|
+|[VectorView::VectorView](#ctor)|Inizializza una nuova istanza della classe VectorView.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Vectorview:: First](#first)|Restituisce un iteratore che specifica il primo elemento in VectorView.|
-|[Vectorview:: GetAt](#getat)|Recupera l'elemento dell'oggetto VectorView corrente indicato dall'indice specificato.|
-|[Vectorview:: Getmany](#getmany)|Recupera una sequenza di elementi dall'oggetto VectorView corrente, a partire dall'indice specificato.|
-|[Vectorview:: IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto VectorView corrente e, se lo trova, restituisce l'indice dell'elemento.|
-|[Vectorview:: Size](#size)|Restituisce il numero di elementi nell'oggetto VectorView corrente.|
+|[VectorView::First](#first)|Restituisce un iteratore che specifica il primo elemento in VectorView.|
+|[VectorView::GetAt](#getat)|Recupera l'elemento dell'oggetto VectorView corrente indicato dall'indice specificato.|
+|[VectorView::GetMany](#getmany)|Recupera una sequenza di elementi dall'oggetto VectorView corrente, a partire dall'indice specificato.|
+|[VectorView::IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto VectorView corrente e, se lo trova, restituisce l'indice dell'elemento.|
+|[VectorView::Size](#size)|Restituisce il numero di elementi nell'oggetto VectorView corrente.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -154,7 +154,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>Parametri
 
-*valore*<br/>
+*value*<br/>
 Elemento da cercare.
 
 *index*<br/>
@@ -253,7 +253,7 @@ Numero di elementi in una raccolta di oggetti utilizzati per inizializzare l'ogg
 *size*<br/>
 Numero di elementi nell'oggetto VectorView.
 
-*valore*<br/>
+*value*<br/>
 Valore utilizzato per inizializzare ciascun elemento nell'oggetto VectorView corrente.
 
 *v*<br/>

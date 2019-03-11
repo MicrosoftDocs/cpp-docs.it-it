@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: a49b886bcf9c25642b1f7b8e843be11baf2d2d00
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 6644e4e10916068a91e48611338d79bbb9d0d75b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894107"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740522"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -1014,7 +1014,7 @@ Se il valore di data specificato dai parametri non è valido, lo stato di questo
 
 Di seguito sono riportati alcuni esempi di valori di data:
 
-|*nYear*|*nMonth*|*nDay*|Valore|
+|*nYear*|*nMonth*|*nDay*|Value|
 |-------------|--------------|------------|-----------|
 |2000|2|29|29 febbraio 2000|
 |1776|7|4|4 luglio 1776|
@@ -1191,7 +1191,7 @@ Se il tempo specificato dai parametri di valore non valido, lo stato di questo o
 
 Di seguito sono riportati alcuni esempi di valori di ora:
 
-|*nHour*|*nMin*|*nSec*|Valore|
+|*nHour*|*nMin*|*nSec*|Value|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1231,4 +1231,3 @@ Vedere l'esempio relativo [SetDate](#setdate).
 [Classe CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

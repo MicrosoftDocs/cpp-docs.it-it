@@ -2,12 +2,12 @@
 title: Raccolte (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: 155f14a2948215afb918e15c345cfa83f630db9e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 850ac0f4801a13a5407f8fe008740bbfa21cc02c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423521"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745427"
 ---
 # <a name="collections-ccx"></a>Raccolte (C++/CX)
 

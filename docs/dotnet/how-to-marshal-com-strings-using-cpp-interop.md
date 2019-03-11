@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Effettuare il marshalling di stringhe COM utilizzando l'interoperabilità C++"
+title: "Procedura: Effettuare il marshalling di stringhe COM tramite l'interoperabilità C++"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559120"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751517"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>Procedura: Effettuare il marshalling di stringhe COM utilizzando l'interoperabilità C++
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Procedura: Effettuare il marshalling di stringhe COM tramite l'interoperabilità C++
 
 In questo argomento viene illustrato come può essere un oggetto BSTR (il formato di base su stringhe preferito nella programmazione COM) passato da un oggetto gestito a una funzione non gestita e viceversa. Per informazioni sull'interoperabilità con altri tipi di stringhe, vedere gli argomenti seguenti:
 

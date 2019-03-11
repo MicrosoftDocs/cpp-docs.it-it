@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: esporre un contenitore STL/CLR da un assembly'
+title: 'Procedura: Esporre un contenitore STL/CLR da un Assembly'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-ms.openlocfilehash: ba881210f7ee48acd0e92dce3432cae92f3072ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590086"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748437"
 ---
-# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Procedura: esporre un contenitore STL/CLR da un assembly
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Procedura: Esporre un contenitore STL/CLR da un Assembly
 
 Contenitori STL/CLR, ad esempio `list` e `map` vengono implementati come classi di riferimento del modello. Poiché i modelli C++ vengono creata un'istanza in fase di compilazione, due classi di modello che hanno esattamente la stessa firma ma si trovano in assembly diversi sono effettivamente diversi tipi. Ciò significa che le classi di modello possono essere usate tra limiti di assembly.
 

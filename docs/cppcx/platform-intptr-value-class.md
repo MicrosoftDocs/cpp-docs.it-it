@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: eda65255aa76d6a801bdc0f80c437a9dc975d8f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449140"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747112"
 ---
 # <a name="platformintptr-value-class"></a>Classe di valori Platform::IntPtr
 
@@ -42,7 +42,7 @@ IntPtr dispone inoltre dei membri seguenti:
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 **Metadati:** platform.winmd
 
@@ -58,7 +58,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 
 ### <a name="parameters"></a>Parametri
 
-*valore*<br/>
+*value*<br/>
 Handle o puntatore a 64 bit o puntatore a un valore a 64 bit o a un valore a 32 bit che può essere convertito in un valore a 64 bit.
 
 ## <a name="op-explicit"> </a> Operatore IntPtr::op_explicit
@@ -73,10 +73,10 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
 
 ### <a name="parameters"></a>Parametri
 
-*Value1*<br/>
+*value1*<br/>
 Puntatore a un handle o a un elemento IntPtr.
 
-*Value2*<br/>
+*value2*<br/>
 Integer a 32 bit che può essere convertito in un elemento IntPtr.
 
 *value3*<br/>

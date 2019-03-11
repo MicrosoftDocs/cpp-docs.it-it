@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, date and time
 - dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
-ms.openlocfilehash: dcb5ef9f21987e11608cfa29e77b24e96153e6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32222b4a2a529716db2c414e0281e1b1ba16a0dd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459449"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739174"
 ---
 # <a name="date-and-time"></a>Data e ora
 
@@ -26,14 +26,13 @@ MFC supporta diversi modi di utilizzo di date e ore. Sono inclusi:
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
 
-- [Data e ora: supporto per SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
+- [Data e ora: Supporto per SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
 
-- [Data e ora: supporto per l'automazione](../atl-mfc-shared/date-and-time-automation-support.md)
+- [Data e ora: Supporto di automazione](../atl-mfc-shared/date-and-time-automation-support.md)
 
-- [Data e ora: supporto per database](../atl-mfc-shared/date-and-time-database-support.md)
+- [Data e ora: Supporto database](../atl-mfc-shared/date-and-time-database-support.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 [Concetti](../mfc/mfc-concepts.md)<br/>
 [Argomenti MFC generali](../mfc/general-mfc-topics.md)
-

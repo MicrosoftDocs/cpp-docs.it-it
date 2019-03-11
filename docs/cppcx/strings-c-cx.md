@@ -2,12 +2,12 @@
 title: Stringhe (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-ms.openlocfilehash: 350c6133b9f910a067f760681832b81bac24f4e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f7cbdd02cb1d38231c476ba939009a95533a046
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556455"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744322"
 ---
 # <a name="strings-ccx"></a>Stringhe (C++/CX)
 
@@ -73,4 +73,3 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
     }
 }
 ```
-

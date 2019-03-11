@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-ms.openlocfilehash: 4865492e3b5d8e4acc35e58081a226c9e66ed99f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4abbac977a256ff27f99caaf77393450d3ccf858
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588149"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752415"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Classe Platform::AccessDeniedException
 
@@ -35,7 +35,7 @@ Quando incontri questa eccezione, assicurati di aver richiesto la funzionalità 
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 **Metadati:** platform.winmd
 

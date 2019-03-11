@@ -9,12 +9,12 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-ms.openlocfilehash: 74810328d654787be46794a31d857eb3fd0731ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 794a71ae9a146b691ba6a4377a7fdf2c3ddd3501
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478143"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741393"
 ---
 # <a name="serialization-ccli"></a>Serializzazione (C++/CLI)
 

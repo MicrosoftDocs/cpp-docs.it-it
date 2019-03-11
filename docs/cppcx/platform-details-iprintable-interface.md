@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::IPrintable Interface
 ms.assetid: b863a872-2563-4d90-88e0-c5a0bdde83f4
-ms.openlocfilehash: 7d42f6a0cda7c381e53c9284c5e0ea50346576f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6de13e05ffe6144fd6db0ba5e79f92c0a708dbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561499"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743210"
 ---
 # <a name="platformdetailsiprintable-interface"></a>Platform::Details::IPrintable (interfaccia)
 

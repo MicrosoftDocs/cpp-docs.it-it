@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 1ebb427277c985fdab711d5bd84dcea54898a83b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63b474d0209a5cc385de9dc11b56d5de8382a9cf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515609"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751531"
 ---
 # <a name="badalloc-class"></a>Classe bad_alloc
 

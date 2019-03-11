@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - initonly attribute [C++]
 ms.assetid: f745d7fa-dc08-46f1-9b97-0977be58a008
-ms.openlocfilehash: 85a127398997872a20a2360f1a852ebaaf17e33b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91b1447231cbc189a701517e48890fea34c2858a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651282"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742905"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 

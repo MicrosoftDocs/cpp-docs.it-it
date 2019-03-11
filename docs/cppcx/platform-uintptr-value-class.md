@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::UIntPtr Struct
 ms.assetid: dc4f5176-4c4d-4209-b68e-eb30f2c2465b
-ms.openlocfilehash: 480503ec3f846cd908c1d046dc589cc89142ed0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a49438f610af47831aa856e7bd4c33b90feef65
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603450"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746344"
 ---
 # <a name="platformuintptr-value-class"></a>Classe di valori Platform::UIntPtr
 
@@ -30,7 +30,7 @@ public value struct UintPtr
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 **Metadati:** platform.winmd
 

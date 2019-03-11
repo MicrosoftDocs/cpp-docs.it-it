@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-ms.openlocfilehash: fe17d111ffe39c1fb7a824ffc0e5c9d39621e311
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0da4d82bc0d2a06fa73519aedf2e22ae89f3900
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540114"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745256"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable (interfaccia)
 

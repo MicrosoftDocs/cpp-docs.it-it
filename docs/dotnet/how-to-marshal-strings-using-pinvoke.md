@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Effettuare il marshalling di stringhe utilizzando PInvoke'
+title: 'Procedura: Il marshalling di stringhe tramite PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598120"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739242"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Procedura: Effettuare il marshalling di stringhe utilizzando PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Procedura: Il marshalling di stringhe tramite PInvoke
 
 In questo argomento viene illustrato funzioni native che accettano stringhe in formato C possono essere chiamate usando la stringa di CLR digitare System:: String usando il supporto di .NET Framework Platform Invoke. I programmatori di Visual C++ sono invitati a usare invece la funzionalità di interoperabilità C++ (se possibile) perché P/Invoke fornisce poco in fase di compilazione segnalazione errori, non è indipendente dai tipi e può essere difficile da implementare. Se l'API non gestita viene assemblato come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione disponibile, ma in caso contrario, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

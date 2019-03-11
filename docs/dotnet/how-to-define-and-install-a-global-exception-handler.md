@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: definire e installare un gestore eccezioni globale'
+title: 'Procedura: Definire e installare un gestore eccezioni globale'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 9c6f355bc43fc53d2b8d27a1ee69c059d0f50692
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b46de22ad962f6ef7653db0c38447d14ca0b54
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534537"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739264"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>Procedura: definire e installare un gestore eccezioni globale
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Procedura: Definire e installare un gestore eccezioni globale
 
 L'esempio di codice seguente illustra le eccezioni non gestite come possono essere acquisite. Il form di esempio contiene un pulsante che, quando premuti, esegue un riferimento null, causando un'eccezione generata. Questa funzionalità rappresenta un errore di codice tipico. L'eccezione viene intercettata dal gestore di eccezioni a livello di applicazione installato per la funzione principale.
 

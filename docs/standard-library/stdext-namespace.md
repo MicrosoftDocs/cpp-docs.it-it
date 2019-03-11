@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _DEFINE_DEPRECATED_HASH_CLASSES symbol
 - stdext namespace
 ms.assetid: 3e94fc89-0584-424f-bc09-081b73379545
-ms.openlocfilehash: aeba486393e6b45481108f967f3de8eb73a0adea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d40f3f7a99db72784cc9a32a9c37064228597d34
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468484"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750533"
 ---
 # <a name="stdext-namespace"></a>stdext (spazio dei nomi)
 
@@ -31,4 +31,3 @@ Durante la compilazione con **/Za**, il compilatore genera un errore.
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)
-

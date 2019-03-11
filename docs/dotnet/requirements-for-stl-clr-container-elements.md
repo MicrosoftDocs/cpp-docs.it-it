@@ -8,12 +8,12 @@ helpviewer_keywords:
 - containers, STL/CLR
 - containers, C++ Standard Library
 ms.assetid: 59ab240c-15bf-4701-a9f9-e7c56e5ab53f
-ms.openlocfilehash: 0744d38a08dbd972b786e1cc74c112322ecf181f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113624b15a0c2c6062feb7113c4771fda6d6cf39
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428574"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739400"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>Requisiti degli elementi del contenitore STL/CLR
 

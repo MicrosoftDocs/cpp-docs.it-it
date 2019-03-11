@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-ms.openlocfilehash: 4431f21fe71bd7b6376f2f530b844077bc1fda6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d91974cb1c98561ba61927b84d06ad45cffc1291
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469615"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745143"
 ---
 # <a name="platformenum-class"></a>Classe Platform::Enum
 
@@ -38,7 +38,7 @@ Usare la parola chiave [classe enum pubblica](../windows/enum-class-cpp-componen
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 **Metadati:** platform.winmd
 

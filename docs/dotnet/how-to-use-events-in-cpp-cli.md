@@ -1,17 +1,17 @@
 ---
-title: 'Procedura: utilizzare eventi in C++/CLI'
+title: 'Procedura: Usare gli eventi in C + + / CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: eb18922b998db6b959921c8d786e0d558a9c5ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63bac664afad2852a7b5e70c1c23335c75d0ad3b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513906"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748762"
 ---
-# <a name="how-to-use-events-in-ccli"></a>Procedura: utilizzare eventi in C++/CLI
+# <a name="how-to-use-events-in-ccli"></a>Procedura: Usare gli eventi in C + + / CLI
 
 Questo articolo illustra come usare un'interfaccia che dichiara un evento e una funzione da richiamare tale evento e il classe e il gestore eventi che implementano l'interfaccia.
 

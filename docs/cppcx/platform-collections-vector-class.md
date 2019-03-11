@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499869"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747125"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -71,7 +71,7 @@ Se si prova a usare una **vettore** immettere un valore restituito pubblico o un
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Vector:: Vector](#ctor)|Inizializza una nuova istanza della classe Vector.|
+|[Vector::Vector](#ctor)|Inizializza una nuova istanza della classe Vector.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -79,17 +79,17 @@ Se si prova a usare una **vettore** immettere un valore restituito pubblico o un
 |----------|-----------------|
 |[Vector:: Append](#append)|Inserisce l'elemento specificato dopo l'ultimo elemento nel vettore corrente.|
 |[Vector:: Clear](#clear)|Elimina tutti gli elementi nell'oggetto Vector corrente.|
-|[Vector:: First](#first)|Restituisce un iteratore che specifica il primo elemento nell'oggetto Vector.|
-|[Vector:: GetAt](#getat)|Recupera l'elemento dell'oggetto Vector corrente identificato dall'indice specificato.|
-|[Vector:: getmany](#getmany)|Recupera una sequenza di elementi dall'oggetto Vector corrente, a partire dall'indice specificato.|
-|[Vector:: GetView](#getview)|Restituisce una visualizzazione di sola lettura di un oggetto Vector, ovvero [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
-|[Vector:: IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto Vector corrente e, se lo trova, restituisce l'indice dell'elemento.|
-|[Vector:: InsertAt](#insertat)|Inserisce l'elemento specificato nell'oggetto Vector corrente dopo l'elemento identificato dall'indice specificato.|
-|[Vector:: ReplaceAll](#replaceall)|Elimina gli elementi nell'oggetto Vector corrente, quindi li inserisce dalla matrice specificata.|
-|[Vector:: RemoveAt](#removeat)|Elimina l'elemento identificato dall'indice specificato dall'oggetto Vector corrente.|
-|[Vector:: removeatend](#removeatend)|Elimina l'elemento alla fine dell'oggetto Vector corrente.|
-|[Vector:: SetAt](#setat)|Assegna il valore specificato all'elemento nell'oggetto Vector corrente che è identificato dall'indice specificato.|
-|[Vector:: Size](#size)|Restituisce il numero di elementi nell'oggetto Vector corrente.|
+|[Vector::First](#first)|Restituisce un iteratore che specifica il primo elemento nell'oggetto Vector.|
+|[Vector::GetAt](#getat)|Recupera l'elemento dell'oggetto Vector corrente identificato dall'indice specificato.|
+|[Vector::GetMany](#getmany)|Recupera una sequenza di elementi dall'oggetto Vector corrente, a partire dall'indice specificato.|
+|[Vector::GetView](#getview)|Restituisce una visualizzazione di sola lettura di un oggetto Vector, ovvero [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
+|[Vector::IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto Vector corrente e, se lo trova, restituisce l'indice dell'elemento.|
+|[Vector::InsertAt](#insertat)|Inserisce l'elemento specificato nell'oggetto Vector corrente dopo l'elemento identificato dall'indice specificato.|
+|[Vector::ReplaceAll](#replaceall)|Elimina gli elementi nell'oggetto Vector corrente, quindi li inserisce dalla matrice specificata.|
+|[Vector::RemoveAt](#removeat)|Elimina l'elemento identificato dall'indice specificato dall'oggetto Vector corrente.|
+|[Vector::RemoveAtEnd](#removeatend)|Elimina l'elemento alla fine dell'oggetto Vector corrente.|
+|[Vector::SetAt](#setat)|Assegna il valore specificato all'elemento nell'oggetto Vector corrente che è identificato dall'indice specificato.|
+|[Vector::Size](#size)|Restituisce il numero di elementi nell'oggetto Vector corrente.|
 
 ### <a name="events"></a>Eventi
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parametri
 
-*valore*<br/>
+*value*<br/>
 Elemento da cercare.
 
 *index*<br/>
@@ -375,7 +375,7 @@ Numero di elementi in una raccolta di oggetti utilizzati per inizializzare l'ogg
 *size*<br/>
 Numero di elementi nell'oggetto Vector.
 
-*valore*<br/>
+*value*<br/>
 Valore utilizzato per inizializzare ciascun elemento nell'oggetto Vector corrente.
 
 *v*<br/>

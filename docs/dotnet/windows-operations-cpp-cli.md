@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: 1075c70b10ca8c59272e9a9de8a9a3fd7aa248e6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415084"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750897"
 ---
 # <a name="windows-operations-ccli"></a>Operazioni Windows (C++/CLI)
 

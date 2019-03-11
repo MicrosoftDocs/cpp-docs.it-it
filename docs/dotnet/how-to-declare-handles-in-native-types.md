@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: dichiarare handle in tipi nativi'
+title: 'Procedura: Dichiarare handle in tipi nativi'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 4b5cd212589be04f5f9f3a5dd6d4496a8f5add2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464924"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745997"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>Procedura: dichiarare handle in tipi nativi
+# <a name="how-to-declare-handles-in-native-types"></a>Procedura: Dichiarare handle in tipi nativi
 
 È possibile dichiarare un tipo di handle in un tipo nativo. Vcclr fornisce il modello di wrapper indipendente dai tipi `gcroot` per fare riferimento a un oggetto CLR dall'heap C++. Questo modello consente di incorporare un handle virtuale in un tipo nativo e considerarla come se fosse il tipo sottostante. Nella maggior parte dei casi, è possibile usare il `gcroot` object come tipo incorporato senza cast. Tuttavia, con [per ognuna, in](../dotnet/for-each-in.md), è necessario usare `static_cast` per recuperare il riferimento gestito sottostante.
 

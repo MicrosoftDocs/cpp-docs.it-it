@@ -21,12 +21,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-ms.openlocfilehash: 1f0764dd7231492a2addef6359318aa436869a31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4d300bccb6387c510dc16d55eda17de20b4b134
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626681"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742580"
 ---
 # <a name="strings-atlmfc"></a>Stringhe (ATL/MFC)
 
@@ -51,4 +51,3 @@ Fornisce argomenti concettuali e basato su attività che consentono di programma
 ## <a name="see-also"></a>Vedere anche
 
 [Classi condivise ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
-

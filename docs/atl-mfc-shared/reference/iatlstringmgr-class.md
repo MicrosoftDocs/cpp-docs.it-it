@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: de0bd720d1806c7950fa9aecc2db6e72aeb1fb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 978d33c719b9cb8c2708dc97fa78874534dfd748
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493935"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749958"
 ---
 # <a name="iatlstringmgr-class"></a>Classe IAtlStringMgr
 
@@ -53,7 +53,7 @@ Questa interfaccia gestisce la memoria utilizzata dalle classi di stringa indipe
 
 **Intestazione:** atlsimpstr.h
 
-##  <a name="allocate"></a>  IAtlStringMgr:: allocate
+##  <a name="allocate"></a>  IAtlStringMgr::Allocate
 
 Consente di allocare una nuova struttura di dati stringa.
 
@@ -146,7 +146,7 @@ Chiamare questa funzione per restituire la rappresentazione di una stringa vuota
 > [!NOTE]
 > Per esempi di utilizzo, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="reallocate"></a>  IAtlStringMgr:: ReAllocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 Rialloca una struttura di dati stringa.
 

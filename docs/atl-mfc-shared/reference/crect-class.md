@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178753"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739432"
 ---
 # <a name="crect-class"></a>Classe CRect
 
@@ -76,7 +76,7 @@ class CRect : public tagRECT
 |[CRect::MoveToX](#movetox)|Sposta `CRect` per la coordinata x specificata.|
 |[CRect::MoveToXY](#movetoxy)|Sposta `CRect` alle coordinate x e y specificate.|
 |[CRect::MoveToY](#movetoy)|Sposta `CRect` per la coordinata y specificata.|
-|[CRect:: NormalizeRect](#normalizerect)|Consente di standardizzare l'altezza e larghezza di `CRect`.|
+|[CRect::NormalizeRect](#normalizerect)|Consente di standardizzare l'altezza e larghezza di `CRect`.|
 |[CRect::OffsetRect](#offsetrect)|Sposta `CRect` dall'offset specificati.|
 |[CRect::PtInRect](#ptinrect)|Determina se il punto specificato si trova all'interno di `CRect`.|
 |[CRect::SetRect](#setrect)|Imposta le dimensioni di `CRect`.|
@@ -733,7 +733,7 @@ Coordinata y assoluta per l'angolo superiore sinistro del rettangolo.
    ASSERT(rect == CRect(0, 10, 100, 110));
 ```
 
-##  <a name="normalizerect"></a>  CRect:: NormalizeRect
+##  <a name="normalizerect"></a>  CRect::NormalizeRect
 
 Normalizza `CRect` in modo che sia l'altezza e larghezza sono positivi.
 
@@ -1504,4 +1504,3 @@ La larghezza può essere negativa.
 [Classe CPoint](cpoint-class.md)<br/>
 [Classe CSize](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-

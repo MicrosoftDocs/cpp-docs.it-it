@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: rilevare eccezioni nel codice nativo generate da MSIL'
+title: 'Procedura: Intercettare le eccezioni nel codice nativo generate da MSIL'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 73c9a9af66a6e292c76b96ec47a5853684e602f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acb3ba1ab6d10decba10b899861007abfff03359
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635612"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748723"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Procedura: rilevare eccezioni nel codice nativo generate da MSIL
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Procedura: Intercettare le eccezioni nel codice nativo generate da MSIL
 
 Nel codice nativo, è possibile intercettare eccezioni C++ native da codice MSIL.  È possibile intercettare le eccezioni di Common Language Runtime con `__try` e `__except`.
 

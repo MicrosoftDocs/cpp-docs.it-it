@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: definire un costruttore statico di interfaccia (C++/CLI)'
+title: 'Procedura: Definire un costruttore statico di interfaccia (C + + CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 0617454e0957dccc7e28a5172a40273b5d93bede
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc1ef81bdefa5ed5d6418325bb250b7954d87268
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566387"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748610"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Procedura: definire un costruttore statico di interfaccia (C++/CLI)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Procedura: Definire un costruttore statico di interfaccia (C + + CLI)
 
 Un'interfaccia può avere un costruttore statico, che può essere utilizzato per inizializzare i membri dati statici.  Un costruttore statico verrà chiamato al massimo una volta e verrà chiamato prima del primo accesso a un membro di interfaccia statico.
 

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464961"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743422"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 
@@ -37,7 +37,7 @@ La classe `Exception` dispone dei seguenti generi di membri.
 
 |Membro|Descrizione|
 |------------|-----------------|
-|[Exception:: Exception](#ctor)|Inizializza una nuova istanza della classe `Exception`.|
+|[Exception::Exception](#ctor)|Inizializza una nuova istanza della classe `Exception`.|
 
 ### <a name="methods"></a>Metodi
 
@@ -45,7 +45,7 @@ La classe `Exception` eredita i metodi `Equals()`, `Finalize()`,`GetHashCode()`,
 
 |Member|Descrizione|
 |------------|-----------------|
-|[Exception:: CreateException](#createexception)|Crea un'eccezione che rappresenta il valore HRESULT specificato.|
+|[Exception::CreateException](#createexception)|Crea un'eccezione che rappresenta il valore HRESULT specificato.|
 
 ### <a name="properties"></a>Proprietà
 
@@ -62,7 +62,7 @@ La classe Exception presenta inoltre le proprietà seguenti.
 
 **Server minimo supportato:** Windows Server 2012
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 **Metadati:** platform.winmd
 
@@ -79,7 +79,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Parametri
 
-*risorse umane*<br/>
+*hr*<br/>
 Valore HRESULT che in genere si ottiene da una chiamata a un metodo COM. Se il valore è 0, che è uguale a S_OK, questo metodo genera un'eccezione [platform:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) perché i metodi COM con esito positivo non devono generare eccezioni.
 
 *message*<br/>

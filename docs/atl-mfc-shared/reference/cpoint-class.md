@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178069"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740397"
 ---
 # <a name="cpoint-class"></a>Classe CPoint
 
@@ -147,10 +147,10 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Sfalsamento x*<br/>
+*xOffset*<br/>
 Specifica la quantità di offset il `x` membro del `CPoint`.
 
-*OffsetY*<br/>
+*yOffset*<br/>
 Specifica la quantità di offset il `y` membro del `CPoint`.
 
 *point*<br/>
@@ -347,4 +347,3 @@ Usare l'operatore unario da negare un punto. Ad esempio, utilizzando l'operatore
 [Struttura POINT](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [Classe CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Classe CSize](../../atl-mfc-shared/reference/csize-class.md)
-

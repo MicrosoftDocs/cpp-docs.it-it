@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dates [C++], MFC
 - formatting [C++], time
 ms.assetid: 201528e4-2ffa-48fc-af8f-203aa86d942a
-ms.openlocfilehash: e4aac4078ce6d75fb1613c158cdf790f2a596a01
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: be8462858585a5530f360dae97e155b4967239b0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893496"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750350"
 ---
 # <a name="date-and-time-systemtime-support"></a>Data e ora: Supporto per SYSTEMTIME
 

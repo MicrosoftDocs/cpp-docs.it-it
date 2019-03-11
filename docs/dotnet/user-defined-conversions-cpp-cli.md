@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: 047b2cc0ebc65d29f5f25d1bdf50b68da58c75d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd3b27e0667b5ab9707db4b2cce2d7eef4611219
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553728"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743180"
 ---
 # <a name="user-defined-conversions-ccli"></a>Conversioni definite dall'utente (C++/CLI)
 

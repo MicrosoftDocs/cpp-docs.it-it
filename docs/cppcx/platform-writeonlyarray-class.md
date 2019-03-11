@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330616"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744388"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 
@@ -39,12 +39,12 @@ Questi metodi presentano accessibilità interna, ovvero sono accessibili solo al
 
 |nome|Descrizione|
 |----------|-----------------|
-|[Writeonlyarray](#begin)|Iteratore che punta al primo elemento della matrice|
-|[Writeonlyarray:: data](#data)|Puntatore al buffer di dati.|
-|[Writeonlyarray](#end)|Iteratore che punta all'elemento dopo l'ultimo elemento nella matrice.|
-|[Writeonlyarray:: Fastpass](#fastpass)|Indica se la matrice può utilizzare il meccanismo FastPass, ovvero un'ottimizzazione eseguita in modo trasparente dal sistema. Non usarla nel codice|
-|[Writeonlyarray:: Length](#length)|Restituisce il numero di elementi nella matrice.|
-|[Writeonlyarray](#set)|Imposta l'elemento specificato sul valore specificato.|
+|[WriteOnlyArray::begin](#begin)|Iteratore che punta al primo elemento della matrice|
+|[WriteOnlyArray::Data](#data)|Puntatore al buffer di dati.|
+|[WriteOnlyArray::end](#end)|Iteratore che punta all'elemento dopo l'ultimo elemento nella matrice.|
+|[WriteOnlyArray::FastPass](#fastpass)|Indica se la matrice può utilizzare il meccanismo FastPass, ovvero un'ottimizzazione eseguita in modo trasparente dal sistema. Non usarla nel codice|
+|[WriteOnlyArray::Length](#length)|Restituisce il numero di elementi nella matrice.|
+|[WriteOnlyArray::set](#set)|Imposta l'elemento specificato sul valore specificato.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -54,9 +54,9 @@ Questi metodi presentano accessibilità interna, ovvero sono accessibili solo al
 
 Opzione del compilatore: **/ZW**
 
-**Metadati:** Platform.winmd
+**Metadata:** Platform.winmd
 
-**Spazio dei nomi:** Platform
+**Spazio dei nomi:** Piattaforma
 
 ## <a name="begin"></a>  WriteOnlyArray::begin (metodo)
 

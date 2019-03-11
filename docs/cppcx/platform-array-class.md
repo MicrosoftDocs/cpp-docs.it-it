@@ -1,5 +1,5 @@
 ---
-title: Platform::Array (classe)
+title: Classe Platform::Array
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 6be34e801f7314efe76a4bea61caf13693eee31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 597f8e32e2da95370169cdbfe2ccd209296322cc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661097"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751661"
 ---
-# <a name="platformarray-class"></a>Platform::Array (classe)
+# <a name="platformarray-class"></a>Classe Platform::Array
 
 Rappresenta una matrice unidimensionale modificabile che può essere ricevuta e passata tramite l'interfaccia ABI (Application Binary Interface).
 

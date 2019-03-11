@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: d54e054310b6077adb88c55b8923b6c13ce1c5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467328"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751817"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 

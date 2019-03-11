@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 93cb3ae0b2f358f64f0d6de26899d1b08f275b7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579283"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748229"
 ---
 # <a name="csimplestringt-class"></a>Classe CSimpleStringT
 
@@ -79,7 +79,7 @@ Il tipo di carattere della classe string. Può essere uno dei seguenti:
 |Nome|Descrizione|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Costruisce `CSimpleStringT` oggetti in vari modi.|
-|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Distruttore.|
+|[CSimpleStringT::~CSimpleStringT](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -116,7 +116,7 @@ Il tipo di carattere della classe string. Può essere uno dei seguenti:
 |----------|-----------------|
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|Accede direttamente a caratteri archiviati in un `CSimpleStringT` oggetto come una stringa in formato C.|
 |[CSimpleStringT::operator\[\]](#operator_at)|Restituisce il carattere in una determinata posizione, ovvero la sostituzione di operatore per `GetAt`.|
-|[+ = CSimpleStringT::operator](#operator_add_eq)|Concatena una nuova stringa alla fine di una stringa esistente.|
+|[CSimpleStringT::operator +=](#operator_add_eq)|Concatena una nuova stringa alla fine di una stringa esistente.|
 |[CSimpleStringT::operator =](#operator_eq)|Assegna un nuovo valore per un `CSimpleStringT` oggetto.|
 
 ### <a name="remarks"></a>Note
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere [stringhe: pulizia delle eccezioni di CString](../cstring-exception-cleanup.md).
+Per altre informazioni, vedere [stringhe: Pulizia delle eccezioni di CString](../cstring-exception-cleanup.md).
 
 ### <a name="example"></a>Esempio
 
@@ -740,7 +740,7 @@ L'overload di pedice (**[]**) operatore restituisce un singolo carattere specifi
 > [!NOTE]
 >  È possibile usare il pedice (**[]**) operatore per ottenere il valore di un carattere in un `CSimpleStringT`, ma è possibile usarlo per modificare il valore di un carattere in un `CSimpleStringT`.
 
-##  <a name="operator_add_eq"></a>  + = CSimpleStringT::operator
+##  <a name="operator_add_eq"></a>  CSimpleStringT::operator +=
 
 Aggiunge una nuova stringa o un carattere alla fine di una stringa esistente.
 
@@ -1175,7 +1175,7 @@ Chiamare questo metodo per reimpostare il conteggio dei riferimenti della string
 
 Il `CSimpleStringT` distruttore chiama automaticamente `UnlockBuffer` per garantire che il buffer non è bloccato quando viene chiamato il distruttore. Per un esempio di questo metodo, vedere [LockBuffer](#lockbuffer).
 
-##  <a name="dtor"></a>  CSimpleStringT:: ~ CSimpleStringT
+##  <a name="dtor"></a>  CSimpleStringT::~CSimpleStringT
 
 Elimina un oggetto `CSimpleStringT`.
 

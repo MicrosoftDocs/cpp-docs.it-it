@@ -2,12 +2,12 @@
 title: Delegati (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: cb23c5d1ae35a56a827bc2436dbdd81b53dd1224
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415279"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745595"
 ---
 # <a name="delegates-ccx"></a>Delegati (C++/CX)
 

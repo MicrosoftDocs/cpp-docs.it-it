@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MBCS [C++], character comparison
 - characters [C++], comparing
 ms.assetid: 18846e44-3e6e-40c4-9b42-3153fb15db20
-ms.openlocfilehash: 206910d4b76f93a92ee5230a227d6f0346a85e61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 075a22634f254c2ea634a1171ee157971fe5918e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615410"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749334"
 ---
 # <a name="character-comparison"></a>Confronto tra caratteri
 

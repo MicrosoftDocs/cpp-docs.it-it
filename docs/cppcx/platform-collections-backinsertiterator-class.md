@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 33397ed7061f14d9aeb9c8b5c3d561865ad91cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638087"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739534"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Classe Platform::Collections::BackInsertIterator
 
@@ -41,7 +41,7 @@ La classe BackInsertIterator implementa le regole richieste da [back_insert_iter
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Backinsertiterator:: Backinsertiterator](#ctor)|Inizializza una nuova istanza della classe BackInsertIterator.|
+|[BackInsertIterator::BackInsertIterator](#ctor)|Inizializza una nuova istanza della classe BackInsertIterator.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 

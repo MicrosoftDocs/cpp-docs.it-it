@@ -2,12 +2,12 @@
 title: Spazi dei nomi e visibilità del tipo (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693894"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739303"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Spazi dei nomi e visibilità del tipo (C++/CX)
 
@@ -33,7 +33,7 @@ Utilizza i modificatori di accesso riportati di seguito per controllare sia la v
 |Modificatore|Significato|Emesso nei metadati?|
 |private|L'accessibilità predefinita. Lo stesso significato di C++ standard.|No|
 |protected|Lo stesso significato di C++ standard, sia nell'app o nel componente che nei metadati.|Sì|
-|public|Lo stesso significato di C++ standard.|Yes|
+|public|Lo stesso significato di C++ standard.|Sì|
 |`public protected` -oppure- `protected public`|Accessibilità protetta nei metadati, pubblica nell'app o nel componente.|Yes|
 |`protected private` o `private protected`|Non visibile nei metadati; accessibilità protetta nell'app o nel componente.||
 |`internal` o `private public`|Il membro è pubblico nell'app o nel componente, ma non è visibile nei metadati.|No|

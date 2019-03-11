@@ -2,12 +2,12 @@
 title: Interfacce (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: 33fe0df457a4f1bab3a7cffab585501364d5750c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626629"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740749"
 ---
 # <a name="interfaces-ccx"></a>Interfacce (C++/CX)
 

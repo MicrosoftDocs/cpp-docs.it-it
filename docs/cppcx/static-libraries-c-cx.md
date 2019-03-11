@@ -2,12 +2,12 @@
 title: Librerie statiche (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 4c423f9e59b7597782acfa4c98db3c9bff747098
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 242ba10b29a8efe0c3e9580f1d0d0c3be529a7d2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437961"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738942"
 ---
 # <a name="static-libraries-ccx"></a>Librerie statiche (C++/CX)
 

@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: creare il controllo utente e inserirlo in una finestra di dialogo'
+title: 'Procedura: Creare il controllo utente e inserirlo in una finestra di dialogo'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-ms.openlocfilehash: ccb7219b9c7b3a64da61a77097b147424a92a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf7e2f4961a16e6538c7bbcc690ef44ba87fcaf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649995"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751492"
 ---
-# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Procedura: creare il controllo utente e inserirlo in una finestra di dialogo
+# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Procedura: Creare il controllo utente e inserirlo in una finestra di dialogo
 
 Le procedure descritte in questo articolo presuppongono che si sta creando una finestra di dialogo basate su ([classe CDialog](../mfc/reference/cdialog-class.md)) progetto di Microsoft Foundation Classes (MFC), ma è possibile aggiungere anche il supporto per un controllo Windows Form a una finestra di dialogo MFC esistente.
 

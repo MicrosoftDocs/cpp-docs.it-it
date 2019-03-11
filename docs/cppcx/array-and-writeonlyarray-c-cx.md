@@ -2,12 +2,12 @@
 title: Array e WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: 44dc57d834272a1d78b0825ac5208d3b251aef6b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420700"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739410"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array e WriteOnlyArray (C++/CX)
 

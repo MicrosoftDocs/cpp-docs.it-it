@@ -7,12 +7,12 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 83a652192d2d9055fddffdec96eb91a2ebdd68a7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d943bb612d9027368bab4832f369db1d5f6165cc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304223"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743895"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Procedura: Eseguire la conversione tra vari tipi di stringhe
 

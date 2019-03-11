@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: accedere ai caratteri in System::String'
+title: 'Procedura: Caratteri di accesso in un System:: String'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6ecd3ed09e31e99898143e30ffe70c1c14aea9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68444b337710515ccf8ecb98157d144493978ecd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667046"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738458"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: accedere ai caratteri in System::String
+# <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: Caratteri di accesso in un System:: String
 
 È possibile accedere ai caratteri di una <xref:System.String> oggetto per chiamate a prestazioni elevate a non gestito le funzioni che accettano `wchar_t*` stringhe. Il metodo restituisce un puntatore interno per il primo carattere del <xref:System.String> oggetto. Puntatore ' this ' possono essere manipolati direttamente o aggiunti e passato a una funzione è previsto un normale `wchar_t` stringa.
 

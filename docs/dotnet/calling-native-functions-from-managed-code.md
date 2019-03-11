@@ -9,12 +9,12 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 97b0221a4ec73be41bb5ba052607dfb5ced233c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462038"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743256"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chiamata a funzioni native da codice gestito
 
@@ -172,7 +172,7 @@ Con `PInvoke`, non è necessario eseguire il marshalling tra tipi gestiti e prim
 
 Tuttavia, è necessario effettuare il marshalling di tipi che non hanno lo stesso formato. Inclusi i tipi char, string e struct. Nella tabella seguente mostra le associazioni utilizzate dal gestore di marshalling per i vari tipi:
 
-|Wtypes. h|Visual C++|Visual C++ con /clr|Common Language Runtime|
+|wtypes.h|Visual C++|Visual C++ con /clr|Common Language Runtime|
 |--------------|------------------|-----------------------------|-----------------------------|
 |HANDLE|void \*|void \*|IntPtr, UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|

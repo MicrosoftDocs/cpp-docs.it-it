@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 22f2dba49e894e93cb6791d76a65730f3269199e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627457"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748008"
 ---
 # <a name="international-enabling"></a>Abilitazione di risorse internazionali
 

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: 0015e0a7a81abbd3472a8c845a9b8c0d8caf4618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610537"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750715"
 ---
 # <a name="locales-and-code-pages"></a>Impostazioni locali e tabelle codici
 
-Un ID impostazioni locali riflette le convenzioni locali e la lingua per una determinata area geografica. Una lingua può essere parlata in più di un paese, ad esempio il portoghese è parlato sia in Brasile che in Portogallo. Per contro, è possibile che in un paese siano parlate più lingue ufficiali. Ad esempio, in Canada ha due lingue: inglese e francese. Pertanto, in Canada dispone di due diverse impostazioni locali: inglese (Canada) e francese (Canada). Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari.
+Un ID impostazioni locali riflette le convenzioni locali e la lingua per una determinata area geografica. Una lingua può essere parlata in più di un paese, ad esempio il portoghese è parlato sia in Brasile che in Portogallo. Per contro, è possibile che in un paese siano parlate più lingue ufficiali. Ad esempio, in Canada ha due lingue: Inglese e francese. Pertanto, in Canada dispone di due diverse impostazioni locali: Inglese (Canada) e francese (Canada). Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari.
 
 La lingua determina le convenzioni di formattazione del testo e dei dati, mentre il paese determina le convenzioni locali. Ogni linguaggio ha un mapping univoco, rappresentato da tabelle codici, che include caratteri diversi da quelli dell'alfabeto (ad esempio i segni di punteggiatura e numeri). Una tabella codici è un set di caratteri ed è correlata al linguaggio. Di conseguenza, una [delle impostazioni locali](../c-runtime-library/locale.md) è una combinazione univoca di lingua, paese/area geografica e tabella codici. L'impostazione della pagina delle impostazioni locali e il codice può essere modificato in fase di esecuzione chiamando il [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) (funzione).
 

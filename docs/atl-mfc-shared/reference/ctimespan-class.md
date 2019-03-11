@@ -23,12 +23,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 6ab22b9a093a1aa9c8ae0249c036ea2bf89065f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641872"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752324"
 ---
 # <a name="ctimespan-class"></a>Classe CTimeSpan
 
@@ -67,8 +67,8 @@ class CTimeSpan
 
 |||
 |-|-|
-|[operatore + -](#operator_add_-)|Aggiunge e sottrae `CTimeSpan` oggetti.|
-|[+ = operator =](#operator_add_eq_-_eq)|Aggiunge e consente di sottrarre un `CTimeSpan` oggetti da e verso questo `CTimeSpan`.|
+|[operator + -](#operator_add_-)|Aggiunge e sottrae `CTimeSpan` oggetti.|
+|[operator += -=](#operator_add_eq_-_eq)|Aggiunge e consente di sottrarre un `CTimeSpan` oggetti da e verso questo `CTimeSpan`.|
 |[operatore = = < e così via.](#ctimespan_comparison_operators)|Confronta due valori di tempo relativo.|
 
 ## <a name="remarks"></a>Note
@@ -104,7 +104,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*<br/>
+*span*<br/>
 Oggetto da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -345,7 +345,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*<br/>
+*span*<br/>
 Il valore da aggiungere al `CTimeSpan` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -371,7 +371,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*intervallo*<br/>
+*span*<br/>
 Il valore da aggiungere al `CTimeSpan` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -416,4 +416,3 @@ Aggiornato `CArchive` oggetto.
 [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

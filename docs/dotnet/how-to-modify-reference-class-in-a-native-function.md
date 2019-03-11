@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: modificare una classe di riferimenti in una funzione nativa'
+title: 'Procedura: Modificare una classe di riferimento in una funzione nativa'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: 20ebf23cf97eb6232698e8c5f59f2f0531beb55b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528063"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738134"
 ---
-# <a name="how-to-modify-reference-class-in-a-native-function"></a>Procedura: modificare una classe di riferimenti in una funzione nativa
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>Procedura: Modificare una classe di riferimento in una funzione nativa
 
 È possibile passare una classe di riferimento con una matrice CLR a una funzione nativa e modificare la classe, utilizzando servizi PInvoke.
 

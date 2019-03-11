@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532749"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746310"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -37,10 +37,10 @@ Tipo di `identifier`.
 *identifier*<br/>
 Variabile di iterazione che rappresenta l'elemento della raccolta.  Quando `identifier` è un [operatore di riferimento di rilevamento](../windows/tracking-reference-operator-cpp-component-extensions.md), è possibile modificare l'elemento.
 
-*Espressione*<br/>
+*expression*<br/>
 Raccolta o espressione di matrice. L'elemento della raccolta deve poter essere convertito dal compilatore nel tipo `identifier`.
 
-*Istruzioni*<br/>
+*statements*<br/>
 Una o più istruzioni da eseguire.
 
 ### <a name="remarks"></a>Note
@@ -55,7 +55,7 @@ Per ulteriori informazioni:
 
 - [Scorrere la raccolta di librerie standard C++ tramite for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
 
-- [Procedura: Scorrere le matrici con for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
+- [Procedura: Eseguire l'iterazione su matrici con for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
 
 - [Procedura: Scorrere una raccolta generica con for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
 
@@ -111,7 +111,7 @@ Testing
 
 La sintassi CLR è lo stesso come il **tutti i runtime** informazioni sulla sintassi, tranne che come indicato di seguito.
 
-*Espressione*<br/>
+*expression*<br/>
 Raccolta o espressione di matrice gestita. L'elemento della raccolta deve essere in modo che il compilatore può convertirlo dal <xref:System.Object> per il *identificatore* tipo.
 
 *espressione* restituisce un tipo che implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, o un tipo che definisce una `GetEnumerator` metodo che restituisce un tipo che implementa <xref:System.Collections.IEnumerator> o dichiara tutti i metodi definiti nel `IEnumerator`.

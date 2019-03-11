@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MBCS [C++], byte indices
 - byte indices [C++]
 ms.assetid: f6e7774a-86c6-41c2-89e3-74fd46432e47
-ms.openlocfilehash: 4e19868e5297e1c1615efabde2aee418bc53c51e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5305a977c23d7a978a89c84809cc6fab8c5731eb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448815"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751596"
 ---
 # <a name="byte-indices"></a>Indici di byte
 

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Effettuare il marshalling di puntatori incorporati utilizzando PInvoke'
+title: 'Procedura: Effettuare il marshalling di puntatori incorporati tramite PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-ms.openlocfilehash: 4f2d37ceb18035747773d307885c8af17d696adc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 943a1a2784a37353157cd38da7ebdc9827006fe5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452078"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738751"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Procedura: Effettuare il marshalling di puntatori incorporati utilizzando PInvoke
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Procedura: Effettuare il marshalling di puntatori incorporati tramite PInvoke
 
-Funzioni che sono implementate nella DLL non gestite possono essere chiamate da codice gestito tramite la funzionalità Platform Invoke (P/Invoke). Se il codice sorgente per la DLL non è disponibile, P/Invoke è l'unica opzione per l'interoperabilità. Tuttavia, a differenza di altri linguaggi .NET, Visual C++ offre un'alternativa al P/Invoke. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [procedura: effettuare il marshalling incorporate puntatori usando funzionalità di interoperabilità C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+Funzioni che sono implementate nella DLL non gestite possono essere chiamate da codice gestito tramite la funzionalità Platform Invoke (P/Invoke). Se il codice sorgente per la DLL non è disponibile, P/Invoke è l'unica opzione per l'interoperabilità. Tuttavia, a differenza di altri linguaggi .NET, Visual C++ offre un'alternativa al P/Invoke. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [come: Effettuare il marshalling dei puntatori incorporati utilizzando l'interoperabilità C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ## <a name="example"></a>Esempio
 

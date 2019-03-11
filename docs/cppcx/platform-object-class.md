@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8e2304ca2c4a6e974262fdb1b449a64b5871a474
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422783"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749880"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 
