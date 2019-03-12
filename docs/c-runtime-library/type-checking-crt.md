@@ -8,12 +8,12 @@ helpviewer_keywords:
 - variable argument functions
 - type checking
 ms.assetid: 1ba7590b-d1c0-4636-b6a0-e231395abdad
-ms.openlocfilehash: fd892426bb7301acad7ce2a93430e52f25e7c9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb5aecc2b47aa8e88666f42d8022395bf99fd85e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626098"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747683"
 ---
 # <a name="type-checking-crt"></a>Controllo dei tipi (CRT)
 

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
-ms.openlocfilehash: 70e69952e350f96179298e2d64ec6ddf7b9167bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6c077ac010c0b5d94ba21ba823441ea6ac932b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625420"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739370"
 ---
 # <a name="dllonexit"></a>__dllonexit
 
@@ -53,7 +53,7 @@ Puntatore a una variabile che indica la fine di un elenco di funzioni da eseguir
 
 Se ha esito positivo, un puntatore che indica la funzione dell'utente. In caso contrario, un puntatore **NULL**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione `__dllonexit` è analoga alla funzione [OnExit](../c-runtime-library/reference/onexit-onexit-m.md) ad eccezione delle variabili globali usate da tale funzione che non sono visibili per questa routine. Al posto di variabili globali, questa funzione usa i parametri `pbegin` e `pend`.
 

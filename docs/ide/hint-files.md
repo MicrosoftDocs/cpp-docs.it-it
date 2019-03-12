@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca250849a0bcd150a6359abdad996b72c4372713
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: c08b45bddaed23bf5d1bf82fd6d27d1078fc84a6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006753"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740981"
 ---
 # <a name="hint-files"></a>File dei suggerimenti
 

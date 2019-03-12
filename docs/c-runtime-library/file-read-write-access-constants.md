@@ -10,12 +10,12 @@ helpviewer_keywords:
 - constants [C++], file attributes
 - file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
-ms.openlocfilehash: 7bf16271c0d58e3d87e4c24795ec0bd1ee1ccb89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dfbc925c5252724cbb1caad58470849915242a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666177"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746071"
 ---
 # <a name="file-readwrite-access-constants"></a>Costanti di accesso in lettura/scrittura file
 
@@ -25,13 +25,13 @@ ms.locfileid: "50666177"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Queste costanti specificano il tipo di accesso ("a", "r" o "w") richiesto per il file. Con il tipo di accesso è possibile specificare sia la [modalità di conversione](../c-runtime-library/file-translation-constants.md) ("b" o "t") che la [modalità di commit su disco](../c-runtime-library/commit-to-disk-constants.md) ("c" o "n").
 
 I tipi di accesso sono descritti nella tabella seguente:
 
-|Tipo di accesso|Descrizione|
+|Tipo di accesso|Description|
 |----------|----------------|
 |**"r"**|Viene aperto per la lettura. Se il file non esiste o non può essere trovato, la chiamata per aprire il file ha esito negativo.|
 |**"w"**|Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente.|

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - heap allocation, control flags
 - debug heap, control flags
 ms.assetid: 8dbd24a5-0633-42d1-9771-776db338465f
-ms.openlocfilehash: 45349099ed5c607468430d2f0a901c6374d88fc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ac5f239ea4d242618fb23ba617a3a6539492053
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475738"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750114"
 ---
 # <a name="control-flags"></a>Flag di controllo
 
 La versione di debug della libreria di runtime C Microsoft utilizza i seguenti flag per controllare l'allocazione dell'heap ed il processo di creazione rapporti. Per altre informazioni, vedere [Tecniche di debug CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-|Flag|Descrizione|
+|Flag|Description|
 |----------|-----------------|
 |[_CRTDBG_MAP_ALLOC](../c-runtime-library/crtdbg-map-alloc.md)|Esegue il mapping delle funzioni degli heap di base alle rispettive controparti di versione di debug|
 |[_DEBUG](../c-runtime-library/debug.md)|Consente l'utilizzo delle versioni di debug delle funzioni di runtime|

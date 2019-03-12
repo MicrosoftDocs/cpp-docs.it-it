@@ -10,12 +10,12 @@ f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: f12e409355fcd10ece474103109286925b1f3a8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a29fd94cca7fdbf6bbb24699b7f510bf1465f15
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569819"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749191"
 ---
 # <a name="setapptype"></a>_set_app_type
 
@@ -41,13 +41,13 @@ void __cdecl _set_app_type(
 *appType*<br/>
 Un valore che indica il tipo di applicazione. I valori possibili sono:
 
-|Valore|Descrizione|
+|Value|Description|
 |----------------|-----------------|
 |_crt_unknown_app|Tipo di applicazione sconosciuto.|
 |_crt_console_app|Applicazione console (riga di comando).|
 |_crt_gui_app|Applicazione GUI (Windows).|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 In genere, non è necessario chiamare questa funzione. Fa parte del codice di avvio del runtime C eseguito prima della chiamata di `main` nell'app.
 
@@ -56,4 +56,3 @@ In genere, non è necessario chiamare questa funzione. Fa parte del codice di av
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |_set_app_type|process.h|
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-ms.openlocfilehash: 85c7ef351e6e91bfd51a7f1e87ecec4186986505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adbb06b5100850aac0cfd191a530d5c98b380738
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450271"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740442"
 ---
 # <a name="xdcmake-reference"></a>Riferimento a XDCMake
 
@@ -40,14 +40,14 @@ Nome di file dei file .xdc usati come input per xdcmake.exe. Specificare uno o p
 *options*<br/>
 Zero o più delle opzioni seguenti:
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |/?, /help|Visualizza la guida di xdcmake.exe.|
 |/assembly:*filename*|Consente di specificare il valore di \<assembly > tag nel file .xml.  Per impostazione predefinita, il valore di \<assembly> tag corrisponde al nome del file .xml.|
 |/nologo|Non visualizza le informazioni sul copyright.|
 |/out:*filename*|Consente di specificare il nome del file .xml.  Per impostazione predefinita, il nome del file .xml è il nome del file del primo file .xdc elaborato da xdcmake.exe.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Visual Studio richiama automaticamente xdcmake.exe quando si compila un progetto. xdcmake.exe può essere richiamato anche dalla riga di comando.
 

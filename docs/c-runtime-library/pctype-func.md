@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-ms.openlocfilehash: fc0f4b0be80534744beda1fe7595293ceb002924
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a152f3612373189c964aaca005fe3b989eec8694
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444226"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742010"
 ---
 # <a name="pctypefunc"></a>__pctype_func
 
@@ -39,7 +39,7 @@ const unsigned short *__pctype_func(
 
 Un puntatore a una matrice di informazioni sulla classificazione dei caratteri.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le informazioni nella tabella di classificazione dei caratteri sono solo per uso interno e sono utilizzate da diverse funzioni che classificano i caratteri di tipo `char`. Per alte informazioni, vedere la sezione `Remarks` in [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
 

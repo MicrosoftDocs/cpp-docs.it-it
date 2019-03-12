@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: 67b993325c7f9c649d1509ce2c1ecf09a2404bc8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b763361d2cdd732025e492a25ac63fc01f06c2b8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328929"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739738"
 ---
 # <a name="time-management"></a>Gestione dell'ora
 

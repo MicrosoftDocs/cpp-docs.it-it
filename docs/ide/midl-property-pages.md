@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MIDL, property pages
 - property pages, MIDL
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
-ms.openlocfilehash: e15706825144e84cb86625fce306af9dfc42c3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc0b0d2b103d1f56d2e2bd3a34e31215b0a1c051
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599689"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744834"
 ---
 # <a name="midl-property-pages"></a>Pagine delle proprietà MIDL
 

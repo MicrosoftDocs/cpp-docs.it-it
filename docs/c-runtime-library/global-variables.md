@@ -8,18 +8,18 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-ms.openlocfilehash: b66d77285cb601b30a89a313fa21b815f42775b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfa78bd2c7aae7cc6059443066cbef58512755ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522538"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744363"
 ---
 # <a name="global-variables"></a>Variabili globali
 
 La libreria di runtime Microsoft C fornisce le macro o le variabili globali seguenti. Molte di queste variabili globali o macro sono deprecate a favore di versioni funzionali più sicure ed è consigliabile usare queste ultime invece delle variabili globali.
 
-|Variabile|Descrizione|
+|Variabile|Description|
 |--------------|-----------------|
 |[__argc, \__argv, \__wargv](../c-runtime-library/argc-argv-wargv.md)|Contiene gli argomenti della riga di comando.|
 |[_daylight, _dstbias, _timezone e _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|Deprecato. Usare invece `_get_daylight`, `_get_dstbias`, `_get_timezone` e `_get_tzname`.<br /><br /> Rettifica l'ora locale. È usata in alcune funzioni di data e ora.|

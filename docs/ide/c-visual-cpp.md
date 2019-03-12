@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <c> C++ XML tag
 - c C++ XML tag
 ms.assetid: 3b23fc0f-e10d-4dd0-b197-48a46cbddd9f
-ms.openlocfilehash: 1efb411537e07ae9a5c2e4a70b5fa3ac319d79c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5eb88be4cb5be8c4e970c285bad712093fdbb51
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431096"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742600"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
 
@@ -29,7 +29,7 @@ Il tag \<c> indica che il testo all'interno di una descrizione deve essere contr
 *testo*<br/>
 Testo che si vuole indicare come codice.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 

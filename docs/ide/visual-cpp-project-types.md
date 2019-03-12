@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 456fdb5ec2025b3085332eced3a0c7f33e117918
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a81d73100ef52b61f834f7bffe4467bd296c079
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658016"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744549"
 ---
 # <a name="visual-c-project-types"></a>Tipi di progetto Visual C++
 
@@ -32,7 +32,7 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 ### <a name="windows-desktop"></a>Desktop di Windows
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |[Applicazione console di Windows](../windows/creating-a-console-application.md)|Progetto per la creazione di un'applicazione console di Windows.|
 |[Applicazione desktop di Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Progetto per la creazione di un'applicazione desktop di Windows (Win32).|
@@ -42,7 +42,7 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 ### <a name="general"></a>Generale
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |Progetto vuoto|Progetto vuoto per la creazione di un'applicazione, libreria o DLL. È necessario aggiungere le risorse o il codice necessari.|
 |[Progetto makefile](../ide/creating-a-makefile-project.md)|Progetto per l'uso di un sistema di compilazione esterno.|
@@ -50,13 +50,13 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 ### <a name="atl"></a>ATL
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |[Progetto ATL](../atl/reference/creating-an-atl-project.md)|Progetto che usa Active Template Library.|
 
 ### <a name="test"></a>Test
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |[Progetto per unit test nativi](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Progetto contenente unit test C++ nativi.|
 
@@ -64,7 +64,7 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 
 Se si aggiunge il componente per il supporto di MFC e ATL all'installazione di Visual Studio, i modelli di progetto seguenti vengono aggiunti a Visual Studio.
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |[Applicazione MFC](../mfc/reference/creating-an-mfc-application.md)|Progetto per la creazione di un'applicazione che usa la libreria MFC (Microsoft Foundation Class).|
 |[Controllo ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md)|Progetto per la creazione di un controllo ActiveX che usa la libreria MFC.|
@@ -76,7 +76,7 @@ Se si aggiunge il componente C++ per gli strumenti della piattaforma UWP all'ins
 
 Per una panoramica delle app universali di Windows in C++, vedere [App universali di Windows (C++)](../windows/universal-windows-apps-cpp.md).
 
-|Modello di progetto|Descrizione|
+|Modello di progetto|Description|
 |----------------------|-----------------------------|
 |Applicazione vuota|Progetto per un'app della piattaforma UWP (Universal Windows Platform) a una pagina che non include layout o controlli predefiniti.|
 |App DirectX 11|Progetto per un'app della piattaforma UWP (Universal Windows Platform) che usa DirectX 11.|

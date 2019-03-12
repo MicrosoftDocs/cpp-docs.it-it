@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 8372bf6284f7974e68ed8beb62888d56b2b49254
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d804b93e491799e65de6338611612eed21e163
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433618"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745967"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versioni con sicurezza avanzata delle funzioni CRT
 

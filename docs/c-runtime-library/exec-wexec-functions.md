@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 4974571764c22b26e84e93c68d679afc8a1cea73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573368"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746201"
 ---
 # <a name="exec-wexec-functions"></a>Funzioni _exec, _wexec
 
@@ -73,14 +73,14 @@ Ogni funzione in questa famiglia carica ed esegue un nuovo processo:
 
 La lettera alla fine del nome della funzione identifica la modifica.
 
-|Suffisso _exec della funzione|Descrizione|
+|Suffisso _exec della funzione|Description|
 |----------------------------|-----------------|
 |`e`|`envp`, matrice di puntatori alle impostazioni di ambiente, viene passato al nuovo processo.|
 |`l`|Gli argomenti della riga di comando vengono passati singolarmente alla funzione `_exec`. Si usa in genere quando il numero di parametri per il nuovo processo è noto a priori.|
 |`p`|Per trovare il file da eseguire viene usata la variabile di ambiente `PATH`.|
 |`v`|`argv`, matrice di puntatori agli argomenti della riga di comando, viene passato a `_exec`. Si usa in genere quando il numero di parametri per il nuovo processo è variabile.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Ogni funzione `_exec` carica ed esegue un nuovo processo. Tutte le funzioni `_exec` usano la stessa funzione di sistema operativo ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). La funzione `_exec` gestisce automaticamente gli argomenti della stringa con caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. Le funzioni `_wexec` sono versioni a caratteri wide delle funzioni `_exec`. Le funzioni `_wexec` si comportano in modo identico alle corrispondenti della famiglia `_exec`, ma non gestiscono le stringhe di caratteri multibyte.
 

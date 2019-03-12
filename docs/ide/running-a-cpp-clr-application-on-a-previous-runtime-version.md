@@ -11,12 +11,12 @@ helpviewer_keywords:
 - common language runtime [C++], version specified
 - deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-ms.openlocfilehash: effcda9de1cb1005855f5752060dc61e28dcebf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af20e7bdb34675b26acc7369c4d37100b796562d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581519"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748242"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Esecuzione di un'applicazione /clr C++ su una versione runtime precedente
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fmode function
 - _fmode function
 ms.assetid: ac6df9eb-e5cc-4c54-aff3-373c21983118
-ms.openlocfilehash: c462b8f848a34993e01232039d608b627c05961f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41d665eab50203fc3bb176f8bb1bbc30737e844
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430537"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741945"
 ---
 # <a name="fmode"></a>_fmode
 
@@ -26,7 +26,7 @@ La variabile `_fmode` imposta la modalità di conversione di file predefinita pe
 extern int _fmode;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'impostazione predefinita di `_fmode` è `_O_TEXT` per la conversione in modalità testo. `_O_BINARY` è l'impostazione per la modalità binaria.
 

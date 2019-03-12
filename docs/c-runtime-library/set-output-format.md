@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: 3c4e4de7dc7161c033f07cfb02ef90ad5db559c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 173c1bbae3009ffb4ee10b7b32ec7751f47c56c8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492157"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749230"
 ---
 # <a name="setoutputformat"></a>_set_output_format
 
@@ -53,7 +53,7 @@ unsigned int _set_output_format(
 
 Formato di output precedente.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 `_set_output_format` viene usato per configurare l'output delle funzioni di I/O formattate, come [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Attualmente, l'unica convenzione di formattazione che può essere modificata da questa funzione è il numero di cifre visualizzate negli esponenti dell'output di numeri a virgola mobile.
 

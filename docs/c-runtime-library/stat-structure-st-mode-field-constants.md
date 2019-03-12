@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-ms.openlocfilehash: 081d96fcf9b0d0d8d5183e3ed6d0fc69c5a29206
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: ff2b6ac806b774ae3fe80f9b3cf4b3d2e82a2a9c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220231"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744698"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>Costanti campo _stat Structure st_mode
 
@@ -50,7 +50,7 @@ ms.locfileid: "54220231"
 #include <sys/stat.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Queste costanti vengono usate per indicare il tipo di file nel campo **st_mode** di [_stat structure](../c-runtime-library/standard-types.md).
 

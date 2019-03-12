@@ -8,12 +8,12 @@ helpviewer_keywords:
 - string manipulation
 - manipulating strings
 ms.assetid: 6545861a-59e7-408d-9d29-2ec9134fc91a
-ms.openlocfilehash: 4e172cba7128655b43fba10163284a10a1a9f710
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 7ea66c38f73e32a99981f331249362e8e0a789c1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329579"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742840"
 ---
 # <a name="string-manipulation-crt"></a>Modifica di stringhe (CRT)
 

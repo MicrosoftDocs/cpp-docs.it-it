@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: e0e6b2f846de77d27b1826e1f24cd364c0d76a64
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: b3f667c24a4b02a23d045a5061b41ac4acc4095b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703077"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746838"
 ---
 # <a name="cifmod"></a>_CIfmod
 
@@ -37,7 +37,7 @@ Calcola il resto a virgola mobile dei primi due valori dello stack.
 void __cdecl _CIfmod();
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questa versione della funzione `fmod` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.
 

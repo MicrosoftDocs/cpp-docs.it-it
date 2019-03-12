@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Web references, properties
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
-ms.openlocfilehash: 36c6ab609aaee5e77dd7ed2aa4b53b5690c5c90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d11849f5a7b835f58cc805471be90b3afa4dd85
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447970"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741360"
 ---
 # <a name="web-references-property-page"></a>Pagina delle proprietà Riferimenti Web
 

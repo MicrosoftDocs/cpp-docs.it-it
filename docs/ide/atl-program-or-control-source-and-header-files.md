@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-ms.openlocfilehash: dc2fc7a81d2d32e6bc89e1c10b8fe090650db2ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a99c3c23a79c37e90d9a041f051cfeaaff13ae2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630581"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745024"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>File di intestazione e di origine di un controllo o programma ATL
 
@@ -17,7 +17,7 @@ I file seguenti vengono creati quando si crea un progetto ATL in Visual Studio, 
 
 Tutti questi file si trovano nella directory *Projname* e anche nella cartella File di intestazione (file con estensione h) oppure nella cartella File di origine (file con estensione cpp) in Esplora soluzioni.
 
-|Nome file|Descrizione|
+|Nome file|Description|
 |---------------|-----------------|
 |*Projname*.h|File di inclusione principale contenente le definizioni di interfaccia di C++ e le dichiarazioni di GUID degli elementi definiti in ATLSample.idl. Viene rigenerato da MIDL durante la compilazione.|
 |*Projname*.cpp|File di origine principale del programma. Contiene l'implementazione delle esportazioni di DLL per un server in-process e l'implementazione di `WinMain` per un server locale. Per un servizio, implementa anche tutte le funzioni di gestione del servizio.|

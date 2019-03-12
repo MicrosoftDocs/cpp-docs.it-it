@@ -13,12 +13,12 @@ helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-ms.openlocfilehash: 2801f1b4c61247ebb9a1402b6244f0c63c2b7dd2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6ee84a68b2f40e535ed1dc76e4617a21bb29a6e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498033"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751466"
 ---
 # <a name="printfp-positional-parameters"></a>Parametri posizionali printf_p
 

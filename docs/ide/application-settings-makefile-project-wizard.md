@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile Project Wizard, application settings
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
-ms.openlocfilehash: a57b3343064494c16b140e4bd4a9127350e022ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b34ca8b36390f6a18935a2da5c2a7924a737f711
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540036"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752402"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto makefile
 

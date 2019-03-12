@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: b54a406fe0c0734a9df82f1fd4e92110198cbe98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f30ae7e36c0540c98eecf2c9f73fbd23df230663
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529760"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748190"
 ---
 # <a name="ltexceptiongt-visual-c"></a>&lt;exception&gt; (Visual C++)
 
@@ -37,7 +37,7 @@ Per informazioni su come creare un riferimento cref a un tipo generico, vedere [
 *description*<br/>
 Descrizione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: cb7d99077a082323a6662d29c0386cd1d416297c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665335"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740311"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
@@ -74,11 +74,11 @@ I tipi Integer come `short`, `int`, `long`, `long long` e le loro varianti `unsi
 |**p**|Tipo di puntatore|Visualizza l'argomento come indirizzo nelle cifre esadecimali.|
 |**s**|Stringa|Una volta usato con funzioni `printf`, specifica una stringa di caratteri a byte singolo o multibyte; una volta usato con le funzioni `wprintf`, specifica una stringa di carattere wide. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
 |**S**|Stringa|Una volta usato con funzioni `printf`, specifica una stringa di caratteri wide; una volta usato con le funzioni `wprintf`, specifica una stringa di caratteri a un byte singolo o multibyte. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
-|**Z**|Struttura `ANSI_STRING` o `UNICODE_STRING`|Quando l'indirizzo di una struttura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) o [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) viene passato come argomento, visualizza la stringa contenuta nel buffer a cui fa riferimento il campo `Buffer` della struttura. Usare il prefisso modificatore *dimensione* **w** per specificare un argomento `UNICODE_STRING`, per esempio `%wZ`. Il campo `Length` della struttura deve essere impostato sulla lunghezza, espressa in byte, della stringa. Il campo `MaximumLength` della struttura deve essere impostato sulla lunghezza, espressa in byte, del buffer.<br /><br /> In genere il carattere tipo **Z** viene usato solo nelle funzioni che usano una specifica di formato, come ad esempio `dbgPrint` e `kdPrint`.|
+|**Z**|Struttura `ANSI_STRING` o `UNICODE_STRING`|Quando l'indirizzo di una struttura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) o [UNICODE_STRING](/windows-hardware/drivers/ddi/content/wudfwdm/ns-wudfwdm-_unicode_string) viene passato come argomento, visualizza la stringa contenuta nel buffer a cui fa riferimento il campo `Buffer` della struttura. Usare il prefisso modificatore *dimensione* **w** per specificare un argomento `UNICODE_STRING`, per esempio `%wZ`. Il campo `Length` della struttura deve essere impostato sulla lunghezza, espressa in byte, della stringa. Il campo `MaximumLength` della struttura deve essere impostato sulla lunghezza, espressa in byte, del buffer.<br /><br /> In genere il carattere tipo **Z** viene usato solo nelle funzioni che usano una specifica di formato, come ad esempio `dbgPrint` e `kdPrint`.|
 
 A partire da Visual Studio 2015, se l'argomento che corrisponde a un identificatore di conversione a virgola mobile (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) è infinito, non definito o NaN, l'output formattato è conforme allo standard C99. Questa tabella elenca l'output formattato:
 
-|Valore|Output|
+|Value|Output|
 |-----------|------------|
 |infinity|`inf`|
 |NaN non interattivo|`nan`|
@@ -89,7 +89,7 @@ Qualsiasi valore tra questi può essere preceduto da un segno. Se un carattere i
 
 Prima di Visual Studio 2015, la libreria CRT usava un formato diverso, non standard per l'output di valori infinite, indefinite e NaN:
 
-|Valore|Output|
+|Value|Output|
 |-----------|------------|
 |+ infinito|`1.#INF` *random-digits*|
 |- infinito|`-1.#INF` *random-digits*|

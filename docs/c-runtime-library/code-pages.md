@@ -12,12 +12,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 707aec51b0a244fe305205b9b098f3f67a90de1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521061"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738574"
 ---
 # <a name="code-pages"></a>Tabelle codici
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 78ba4afd8a7fad87f09c2a403d25d3c6d52cc0c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30a1b57a12d5a238c80f9bb8f0a069385911a8e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573472"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746904"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Tipi di file creati per i progetti di Visual C++
 

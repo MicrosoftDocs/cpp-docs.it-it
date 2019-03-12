@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1cf5660d1ad2f0fdde02837eeffb642c4a74e5ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694088"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744494"
 ---
 # <a name="porting-from-unix-to-win32"></a>Porting da UNIX a Win32
 

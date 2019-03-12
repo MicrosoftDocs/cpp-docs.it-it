@@ -20,12 +20,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 8a6a1a69147c135ce539393e535f0e1f2d03ccfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580758"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742539"
 ---
 # <a name="to-functions"></a>Funzioni to
 
@@ -40,7 +40,7 @@ Ognuna delle funzioni **to** e le relative macro associate, se presenti, convert
 
 Le conversioni delle funzioni **to** e delle macro sono le seguenti.
 
-|Routine|Macro|Descrizione|
+|Routine|Macro|Description|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|Converte `c` in un carattere ASCII|
 |`tolower`|`tolower`|Converte `c` in minuscolo se appropriato|

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION constant
 - EH constants
 ms.assetid: e1870f41-be9e-46a3-a2ea-830dfbaa18fb
-ms.openlocfilehash: b2d366930539ffc6ceafe3c8114c85b2994e096c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35676d43e5be0a688956dc6fcf1ad7d364e93cb1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543104"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739486"
 ---
 # <a name="exception-handling-constants"></a>Costanti di gestione delle eccezioni
 

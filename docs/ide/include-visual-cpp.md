@@ -8,12 +8,12 @@ helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: 0d03ee6e327eb95e63cec16f3886d616c909c3df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0484d4158cf222ba4aae2aadf5e5352c8fc794f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451974"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740804"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -39,7 +39,7 @@ Identificatore del nome contenuto nel tag che precede i commenti. `name` ha semp
 *ID*<br/>
 ID del tag che precede i commenti.  Racchiudere il nome tra virgolette singole o doppie.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il tag \<include> usa la sintassi XML XPath. Per informazioni sulla personalizzazione dell'uso di \<include>, vedere la documentazione relativa a XPath.
 

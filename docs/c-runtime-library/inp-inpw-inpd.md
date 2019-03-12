@@ -29,12 +29,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 56587455b1b5246be361afc131786d85dbc9a1a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469858"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748346"
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 
@@ -69,7 +69,7 @@ Numero porta di I/O.
 
 Le funzioni restituiscono il byte, la parola o la parola doppia letti da `port`. Non vi è restituzione di errori.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le funzioni `_inp`, `_inpw`e `_inpd` leggono un byte, una parola e una doppia parola, rispettivamente, dalla porta di input specificata. Il valore di input può essere qualsiasi Unsigned Short Integer nell'intervallo compreso tra 0 e 65.535.
 

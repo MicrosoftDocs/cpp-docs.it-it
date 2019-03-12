@@ -16,12 +16,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 65dc5bbfbaeab59e91cdca23c4f0f01b5ef7ebbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 961ad52070928ba755625747546c8dc7b1c215ba
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620171"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750820"
 ---
 # <a name="is-isw-routines"></a>is, isw Routines
 
@@ -36,7 +36,7 @@ ms.locfileid: "50620171"
 |[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Queste routine verificano che i caratteri soddisfino le condizioni specificate.
 

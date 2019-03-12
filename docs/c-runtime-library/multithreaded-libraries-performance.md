@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: f73aa99d1800fc81408b739e556bc7845b348a80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587564"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748363"
 ---
 # <a name="multithreaded-libraries-performance"></a>Prestazioni librerie multithread
 

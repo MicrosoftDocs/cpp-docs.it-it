@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-ms.openlocfilehash: 9f45d888e10ad1f86d0ba395155c7fd5c6c1bf0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d73155e36909efb1a7261f9fe45c2431525437a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633454"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742914"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Tipi di dati SBCS e MBCS
 

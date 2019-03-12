@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-ms.openlocfilehash: dc98e9794200e2a317c7db2b0b513a254efff275
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3ccc4b602610813ed4e80c1d24ca5d96275a8dd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480379"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741928"
 ---
 # <a name="help-files-html-help"></a>File della Guida (HTML)
 
 I file seguenti vengono creati quando si aggiunge il tipo di Guida HTML del supporto della Guida per l'applicazione selezionando la casella di controllo **Guida sensibile al contesto** e quindi **Formato HTML** nella pagina [Funzionalità avanzate](../mfc/reference/advanced-features-mfc-application-wizard.md) della Creazione guidata applicazione MFC.
 
-|Nome file|Directory|Esplora soluzioni|Descrizione|
+|Nome file|Directory|Esplora soluzioni|Description|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Projname*.hhp|*Projname*\hlp|file della Guida HTML|File di progetto della Guida. Contiene i dati necessari per compilare i file della Guida in un file con estensione hxs o chm.|
 |*Projname*.hhk|*Projname*\hlp|file della Guida HTML|Contiene un indice degli argomenti della Guida.|

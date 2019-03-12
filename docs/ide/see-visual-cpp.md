@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-ms.openlocfilehash: f5fa63f2dbd97f0a2da98a5a31a1192e40599738
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8e797dff1495e9b4573ab4e0820d60b8027a293
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461360"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747592"
 ---
 # <a name="ltseegt-visual-c"></a>&lt;see&gt; (Visual C++)
 
@@ -32,7 +32,7 @@ Riferimento a un membro o a un campo disponibile per essere chiamato dall'ambien
 
 Il compilatore verifica l'esistenza dell'elemento di codice specificato e risolve `member` nel nome dell'elemento nel file XML di output.  Il compilatore genera un avviso se non trova `member`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 

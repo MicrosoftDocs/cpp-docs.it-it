@@ -12,12 +12,12 @@ helpviewer_keywords:
 - FREEENTRY constant
 - USEDENTRY constant
 ms.assetid: 26f658e6-6846-4a4e-9984-262cfe392770
-ms.openlocfilehash: 3bf05807930373a905a5bf71cf4ebc1f119056a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8aa11173dcc76089a916d19fd319e0d317724ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513984"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751935"
 ---
 # <a name="freeentry-usedentry"></a>_FREEENTRY, _USEDENTRY
 
@@ -27,7 +27,7 @@ ms.locfileid: "50513984"
 #include <malloc.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Queste costanti rappresentano i valori assegnati dalle routine `_heapwalk` all'elemento **_useflag** della struttura **_HEAPINFO**. Indicano lo stato della voce dell'heap.
 

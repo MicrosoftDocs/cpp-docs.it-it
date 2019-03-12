@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WEOF function
 - end of file
 ms.assetid: a7150563-cdae-4cdf-9798-ad509990e505
-ms.openlocfilehash: c4c35518130fc233afd055133704bcb0abaccca8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: f00c4003afebad580bd2ea5d6853edc3ca6e8c73
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220725"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740042"
 ---
 # <a name="eof-weof"></a>EOF, WEOF
 
@@ -23,7 +23,7 @@ ms.locfileid: "54220725"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 EOF viene restituito da una routine di I/O quando viene rilevata la fine del file (o in alcuni casi, un errore).
 

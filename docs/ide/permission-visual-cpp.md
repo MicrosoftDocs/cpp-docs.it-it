@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 5cbcfd6bee97c3ca937ddfac363cd70276ee4d1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecf027600b23a640d1dc0cd68b75ffa5eb1b3659
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529116"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744619"
 ---
 # <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
 
@@ -37,7 +37,7 @@ Per informazioni su come creare un riferimento cref a un tipo generico, vedere [
 *description*<br/>
 Descrizione dell'accesso al membro.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 

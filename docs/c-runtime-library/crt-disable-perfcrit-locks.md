@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CRT_DISABLE_PERFCRIT_LOCKS constant
 - _CRT_DISABLE_PERFCRIT_LOCKS constant
 ms.assetid: 36cc2d86-cdb1-4b2b-a03c-c0d3818e7c6f
-ms.openlocfilehash: 475cc57b5b47f5abf8c268db3acf9e727ce6a743
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6f4d8dee5577e88aa59af9bff017aab0c7eef89
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593462"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740257"
 ---
 # <a name="crtdisableperfcritlocks"></a>_CRT_DISABLE_PERFCRIT_LOCKS
 
@@ -25,7 +25,7 @@ Disabilita il blocco con particolari requisiti di prestazioni nelle operazioni d
 #define _CRT_DISABLE_PERFCRIT_LOCKS
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La definizione di questo simbolo può migliorare le prestazioni dei programmi con vincoli di I/O a thread singolo forzando tutte le operazioni di I/O ad assumere un modello di I/O a thread singolo. Per altre informazioni, vedere [Prestazioni librerie multithread](../c-runtime-library/multithreaded-libraries-performance.md).
 

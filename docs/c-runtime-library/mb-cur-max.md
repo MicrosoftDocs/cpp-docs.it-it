@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MB_CUR_MAX constant
 ms.assetid: fab22609-c14d-4c19-991c-bd09ff30e604
-ms.openlocfilehash: 640821f920021435f8e79d9316d5eb0836c5f145
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 8f89d06f11d5da14389c849814e06b56586b3c69
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220127"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746448"
 ---
 # <a name="mbcurmax"></a>MB_CUR_MAX
 
@@ -23,7 +23,7 @@ Macro indicante il numero massimo di byte in un carattere multibyte per le impos
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Contesto: funzioni di conversione dei caratteri wide e multibyte ANSI
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory allocation, in debug builds
 - CRTDBG_MAP_ALLOC macro
 ms.assetid: 435242b8-caea-4063-b765-4a608200312b
-ms.openlocfilehash: a6b6ca5d3e6fdc1bac43d082b0d7df5a87830050
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8bcb0f5ea26218b74034eb0a41199a1104ba944d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453439"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739774"
 ---
 # <a name="crtdbgmapalloc"></a>_CRTDBG_MAP_ALLOC
 

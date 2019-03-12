@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _HEAP_MAXREQ constants
 - heap constants
 ms.assetid: c2dbc2ea-35ad-45d8-b459-d76ba0089ff7
-ms.openlocfilehash: f779631c41642b2615731371407974e04bc233b2
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 1a1651ab7526db51ee199758c3134022ef1f8fb5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220699"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746747"
 ---
 # <a name="heapmaxreq"></a>_HEAP_MAXREQ
 
@@ -24,7 +24,7 @@ ms.locfileid: "54220699"
 #include <malloc.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La dimensione massima di una richiesta dell'utente per la memoria che può essere concessa.
 

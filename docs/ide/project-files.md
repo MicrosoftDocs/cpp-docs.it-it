@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: cb1369515db91187d182cd6c6ea49b938ebdee77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ad6a2835eb0b885d0761d027fcd6bf3d8c799ba
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459163"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746301"
 ---
 # <a name="project-files"></a>File di progetto
 

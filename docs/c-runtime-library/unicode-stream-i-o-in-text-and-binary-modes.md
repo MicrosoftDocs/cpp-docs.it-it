@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: e54f29292ae9e202cf27c354374132dda267aff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c16d2f74856bb42dfd6ffc4e1af7306f6edd97fb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469776"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746003"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>I/O flusso Unicode in modalità testo e binaria
 

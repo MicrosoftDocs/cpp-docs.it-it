@@ -2,12 +2,12 @@
 title: App UWP, Windows Runtime e run-time di C
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763891"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738673"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>App UWP, Windows Runtime e run-time di C
 

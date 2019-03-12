@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-ms.openlocfilehash: 5bcebc4f9321ebf3f85bdd757118f779a759fc62
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: dc27b3af0d430aedb8159b4591004f46d197ccd5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220517"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751544"
 ---
 # <a name="sharing-constants"></a>Condivisione costanti
 
@@ -37,7 +37,7 @@ Costanti per le modalità di condivisione file.
 #include <share.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'argomento *shflag* determina la modalità di condivisione, che consiste in una o più costanti manifesto. Queste possono essere combinate con gli argomenti *oflag*. Vedere [Costanti di file](../c-runtime-library/file-constants.md).
 

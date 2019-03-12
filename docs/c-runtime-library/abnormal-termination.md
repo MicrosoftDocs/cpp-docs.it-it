@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: 231a5a521d9e234d3e31e6ccdbe98b207a89b3eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213938fa830f0a924fa954d4a36a39b544473dd4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433540"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741282"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
 
@@ -39,7 +39,7 @@ int   _abnormal_termination(
 
 **true** se il sistema sta eseguendo la *rimozione* dello stack; in caso contrario, **false**.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di una funzione interna utilizzata per gestire eccezioni di rimozione e non deve essere chiamata dal codice utente.
 

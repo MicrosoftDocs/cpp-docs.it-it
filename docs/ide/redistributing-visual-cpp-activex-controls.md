@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-ms.openlocfilehash: 6c1f75665d43d927e21a1fd7d365e1bde46c57a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb4ef7b58f5ef596ac6484761ab891ceb8bb85ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551398"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744647"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Ridistribuzione di controlli ActiveX di Visual C++
 

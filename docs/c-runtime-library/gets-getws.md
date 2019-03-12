@@ -28,12 +28,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 523a295e088fe692eb9abd8dcca6b3919d432c4e
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: bd5f4e885c0291be963320610942415fc7b61172
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702739"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738537"
 ---
 # <a name="gets-getws"></a>gets, _getws
 
@@ -73,7 +73,7 @@ Percorso di archiviazione per la stringa di input.
 
 Restituisce il relativo argomento se l'operazione ha esito positivo. Un puntatore **NULL** indica una condizione di errore o di fine file. Usare [ferror](../c-runtime-library/reference/ferror.md) o [feof](../c-runtime-library/reference/feof.md) per determinare quella che si è verificata. Se `buffer` è **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **NULL** e impostano errno su `EINVAL`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione `gets` legge una riga dal flusso di input standard `stdin` e la archivia in `buffer`. La riga è costituita da tutti i caratteri, incluso il primo carattere di nuova riga ('\n'). `gets` sostituisce quindi il carattere di nuova riga con un carattere Null ('\0') prima di restituire la riga. Al contrario, la funzione `fgets` mantiene il carattere di nuova riga. `_getws` è una versione a caratteri wide di `gets`il cui argomento e il cui valore restituito sono stringhe a caratteri wide.
 

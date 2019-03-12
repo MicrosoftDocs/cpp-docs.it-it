@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: 08751e5fcdf246dd5ad285fc0cda5114d99cce15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 015647cd381ba4dc0c099b322e3c5870246c9fc2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646667"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751335"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 
@@ -42,7 +42,7 @@ Termine da definire, che verrà definito in `description`.
 *description*<br/>
 Elemento di un elenco puntato o numerato oppure la definizione di un `term`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Ogni elemento dell'elenco viene specificato tramite un blocco \<item>. Quando si crea un elenco di definizioni, è necessario specificare sia `term` che `description`. Per le tabelle e gli elenchi puntati o numerati, tuttavia, è sufficiente fornire una voce per `description`.
 

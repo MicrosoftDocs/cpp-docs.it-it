@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c837739d4954c65d45a590bd5c7f904e2375102e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329410"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742102"
 ---
 # <a name="process-and-environment-control"></a>Controllo processo e ambiente
 
@@ -77,14 +77,14 @@ Le differenze tra le funzioni della famiglia **_exec**, come tra quelle della fa
 
 |Funzioni|Uso della variabile PATH per individuare il file|Convenzione per il passaggio degli argomenti|Impostazioni dell'ambiente|
 |---------------|--------------------------------------|----------------------------------|--------------------------|
-|**_execl**, **_spawnl**|No|Elenco|Ereditate dal processo chiamante|
+|**_execl**, **_spawnl**|No|List|Ereditate dal processo chiamante|
 |**_execle**, **_spawnle**|No|List|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
-|**_execlp**, **_spawnlp**|Yes|List|Ereditate dal processo chiamante|
-|**_execvpe**, **_spawnvpe**|Yes|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
-|**_execlpe**, **_spawnlpe**|Yes|List|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
+|**_execlp**, **_spawnlp**|Sì|List|Ereditate dal processo chiamante|
+|**_execvpe**, **_spawnvpe**|Sì|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
+|**_execlpe**, **_spawnlpe**|Sì|List|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
 |**_execv**, **_spawnv**|No|Matrice|Ereditate dal processo chiamante|
 |**_execve**, **_spawnve**|No|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|
-|**_execvp**, **_spawnvp**|Yes|Matrice|Ereditate dal processo chiamante|
+|**_execvp**, **_spawnvp**|Sì|Matrice|Ereditate dal processo chiamante|
 
 ## <a name="see-also"></a>Vedere anche
 

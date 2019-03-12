@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 1c9b0872f2a472b7fbb5bd83c9b0a0d9f21a6ab6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0090d5d1504f4320c122ae1e811e0af88cccdd2e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536722"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741636"
 ---
 # <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
@@ -60,7 +60,7 @@ int _execute_onexit_table(
 
 Se l'esito è positivo, il valore restituito è 0. In caso contrario viene restituito un valore negativo.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Queste funzioni sono dettagli di implementazione dell'infrastruttura usati per supportare il runtime di C e devono essere chiamate direttamente dal codice. Il runtime di C usa una *tabella di funzioni onexit* per rappresentare la sequenza di funzioni registrate dalle chiamate a `atexit`, `at_quick_exit`, e `_onexit`. La struttura dei dati della tabella di funzioni onexit è un dettaglio di implementazione opaco del runtime di C; l'ordine e il significato dei relativi membri dati possono essere modificati. Non devono essere verificati da codice esterno.
 

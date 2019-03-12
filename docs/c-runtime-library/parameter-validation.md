@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: b0ccc589809fc5204659ad5af28ece0096855d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c7b2ae50fdcbf59cd23cc309a4ddc4c0803e24e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677591"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748424"
 ---
 # <a name="parameter-validation"></a>Convalida dei parametri
 

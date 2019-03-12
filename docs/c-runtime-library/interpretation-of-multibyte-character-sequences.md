@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MBCS [C++], locale code page
 ms.assetid: da9150de-70ea-4d2f-90e6-ddb9202dd80b
-ms.openlocfilehash: 79d053029edcb357f791dade1ec20f562dce3c16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68a0fdf0bdb573b40d347e05a7449affda55d8e5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614992"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738836"
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>Interpretazione di sequenze di caratteri multibyte
 

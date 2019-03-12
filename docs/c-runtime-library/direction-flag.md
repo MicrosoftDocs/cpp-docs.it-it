@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
-ms.openlocfilehash: e5177f206e46227fa693ef8d4bd1848b06374af7
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: ead32fa7f09e9dd98130855ecd87ba3b3d454ef5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849906"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740150"
 ---
 # <a name="direction-flag"></a>Flag di direzione
 

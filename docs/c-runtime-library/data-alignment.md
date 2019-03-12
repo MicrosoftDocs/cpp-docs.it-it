@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - data alignment [C++]
 ms.assetid: 35ac3d2d-a4b3-421b-954f-b7372b1f18e1
-ms.openlocfilehash: 7d835545bdc1f94de56846f35d510927c06c2560
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92b8df81751e01e655e348d5f090705e5194312b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520285"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738818"
 ---
 # <a name="data-alignment"></a>Allineamento dati
 

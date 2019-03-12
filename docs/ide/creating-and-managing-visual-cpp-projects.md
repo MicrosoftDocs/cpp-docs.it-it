@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 2c3722fe9da764a578c255e50120fa2770555665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e511ef597e64a3782ce7a3ce650db065e9299cdd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553179"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744330"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Creazione e gestione di progetti Visual C++ basati su MSBuild
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: d3e53c665378efdd63a373027f4edd6b7fb90ad3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544573"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743890"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funzioni da stringa a valore numerico
 
@@ -35,11 +35,11 @@ ms.locfileid: "50544573"
 
 - [_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l](../c-runtime-library/reference/strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Ogni funzione della famiglia **strtod** converte una stringa con terminazione Null in un valore numerico. Nella tabella seguente sono elencate le funzioni disponibili.
 
-|Funzione|Descrizione|
+|Funzione|Description|
 |--------------|-----------------|
 |`strtod`|Converte una stringa in un valore a virgola mobile a precisione doppia|
 |`strtol`|Converte una stringa in un long integer|

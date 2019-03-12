@@ -2,12 +2,12 @@
 title: Aggiornare il codice a Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ba987c6c88a3b559b8fe6224fd27dfbfe8c9d821
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331750"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741341"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Aggiornare il codice a Universal CRT
 

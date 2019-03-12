@@ -25,12 +25,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: f0bf85dc8f27fca1720cde7f5a8b2029a791849c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220439"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739971"
 ---
 # <a name="file-constants"></a>Costanti file
 
@@ -40,7 +40,7 @@ ms.locfileid: "54220439"
 #include <fcntl.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'espressione integer formata da una o più di queste costanti determina il tipo di operazioni di lettura o scrittura consentite. È formato dalla combinazione di uno o più costanti con una costante in modalità di conversione.
 

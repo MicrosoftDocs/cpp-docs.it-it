@@ -5,12 +5,12 @@ helpviewer_keywords:
 - unsupported CRT functions, Windows Runtime
 - Windows Runtime, unsupported CRT functions
 ms.assetid: bb8386d6-0ef8-460c-88d8-addff009b6f1
-ms.openlocfilehash: 5989b584083e8a5474b333f3a4a497fbe583589b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f5b900d968bd80f9095c564f0222364769d63c9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601331"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745550"
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Funzioni CRT non supportate da Windows Runtime
 

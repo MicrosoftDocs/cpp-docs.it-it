@@ -7,12 +7,12 @@ helpviewer_keywords:
 - byte streams
 - wide streams
 ms.assetid: 61ef0587-4cbc-4eb8-aae5-4c298dbbc6f9
-ms.openlocfilehash: bb14cbd5caed413425810bfe017e068f4b4b4257
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67de6b609b3e0546d539ef9c37f12db1067546ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590428"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739358"
 ---
 # <a name="byte-and-wide-streams"></a>Flussi di byte e "wide"
 

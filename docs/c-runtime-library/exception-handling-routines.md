@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception handling, routines
 ms.assetid: f60548c6-850a-4e1e-a79b-a2a6a541ab62
-ms.openlocfilehash: 09d58e49d3c9dc9b4b8ef40f725e927603e3e47c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8def356793906074e6fc4b8d7a139ce1915a5f9b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507458"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749139"
 ---
 # <a name="exception-handling-routines"></a>Routine di gestione delle eccezioni
 

@@ -47,12 +47,12 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: b25a3a7d0c44667bcceb2d04cf6024aa6173daed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a50e37b41c6e90428bed5ae113d2d9f064e042d0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617139"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741750"
 ---
 # <a name="sal-annotations"></a>Annotazioni SAL
 

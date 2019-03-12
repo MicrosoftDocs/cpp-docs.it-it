@@ -27,12 +27,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 1ebb0979e432d7f68d94a01932674fdc30f85972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4d7be7631f22eecbea7c6727295c17d86dba06
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434268"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750337"
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 
@@ -72,7 +72,7 @@ Percorso di archiviazione per i dati.
 
 `_cgets` e `_cgetws` restituiscono un puntatore all'inizio della stringa, in corrispondenza di `buffer[2]`. Se `buffer` è **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **NULL** e impostano `errno` su `EINVAL`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Queste funzioni leggono una stringa di caratteri dalla console e archiviano la stringa e la relativa lunghezza nella posizione indicata da `buffer`. Il parametro `buffer` deve essere un puntatore a una matrice di caratteri. Il primo elemento della matrice, `buffer[0]`, deve contenere la lunghezza massima in caratteri della stringa da leggere. La matrice deve contenere un numero tale di elementi per contenere la stringa, un carattere Null di terminazione ('\0') e due byte aggiuntivi. La funzione legge i caratteri finché non viene letta una combinazione di ritorno a capo con avanzamento riga (CR-LF) oppure il numero specificato di caratteri. La stringa viene archiviata a partire da `buffer[2]`. Se la funzione legge una combinazione CR-LF, archivia il carattere Null ('\0'). La funzione archivia quindi la lunghezza effettiva della stringa nel secondo elemento della matrice, `buffer[1]`.
 

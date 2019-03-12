@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Resources property pages
 ms.assetid: dade2f6b-c51f-4c33-9023-41956ae4b5f6
-ms.openlocfilehash: be041ab7cad8b6a84cf016b339cfb99437999dcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d11760d5ec8b899a494ab22b4af229e996dccce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479534"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748528"
 ---
 # <a name="resources-property-pages"></a>risorse (pagine delle proprietà)
 

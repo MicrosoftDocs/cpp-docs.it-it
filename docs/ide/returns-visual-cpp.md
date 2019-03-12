@@ -8,12 +8,12 @@ helpviewer_keywords:
 - returns C++ XML tag
 - <returns> C++ XML tag
 ms.assetid: 5e3b0ed9-838d-4953-a93e-76d2d0a19fb9
-ms.openlocfilehash: 2ed21b1a7b0bca12185e054b3b5452e0bf04d4d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7861d57d474db3c45b2c773a057a545c15602822
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494510"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740852"
 ---
 # <a name="ltreturnsgt-visual-c"></a>&lt;returns&gt; (Visual C++)
 
@@ -30,7 +30,7 @@ Il tag \<returns> deve essere usato nel commento per una dichiarazione di metodo
 *description*<br/>
 Descrizione del valore restituito.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 

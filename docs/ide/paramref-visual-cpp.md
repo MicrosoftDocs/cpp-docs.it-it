@@ -8,12 +8,12 @@ helpviewer_keywords:
 - paramref C++ XML tag
 - <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-ms.openlocfilehash: 32ed64bc4d76e75dc7de47f8f3bd3c7ab5823cdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c1b8a79761e10209e26e1dee8a8751746c2f38c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586305"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744660"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
 
@@ -30,7 +30,7 @@ Il tag \<paramref > offre un modo per indicare che una parola è un parametro. I
 *name*<br/>
 Nome del parametro a cui fare riferimento.  Racchiudere il nome tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `name`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O [CRT], routines
 - output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
-ms.openlocfilehash: 26d527f7afad544b051a2ad765af09c430782083
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2669ed3437fe0eea7dd648367feabe66ae6ed6d4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590385"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738525"
 ---
 # <a name="input-and-output"></a>Input e output
 

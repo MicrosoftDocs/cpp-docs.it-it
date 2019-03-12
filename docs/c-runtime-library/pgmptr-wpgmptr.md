@@ -12,12 +12,12 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: c59134afc3b4d0f6360984c67dede28c27010bae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6991dfe90e58352b26d7c914e1601a68674b8a5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597532"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749867"
 ---
 # <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
 
@@ -30,7 +30,7 @@ extern char *_pgmptr;
 extern wchar_t *_wpgmptr;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Quando un programma viene eseguito dall'interprete dei comandi (Cmd.exe), `_pgmptr` viene automaticamente inizializzato al percorso completo del file eseguibile. Ad esempio, se Hello.exe è in C:\BIN e C:\BIN nel percorso, `_pgmptr` è impostato su C:\BIN\Hello.exe quando si esegue:
 

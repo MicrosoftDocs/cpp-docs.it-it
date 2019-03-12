@@ -7,12 +7,12 @@ helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: db3b05edf1496d92eaed5c7f07b9961cdde351c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06f7ced45f8def05219d8869708f555a78f73cd3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539412"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744529"
 ---
 # <a name="required-and-optional-header-files"></a>File di intestazione obbligatori e facoltativi
 

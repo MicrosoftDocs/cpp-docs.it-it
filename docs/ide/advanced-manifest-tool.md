@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.ValidateSignature
 - VC.Project.VCManifestTool.KeyContainer
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
-ms.openlocfilehash: 10da66c690106255d34c82b066f3450c5cc8a37a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 183b4613362acde9f48c98ee00a76b1fb8a2c4d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530559"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742270"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Avanzate, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt;
 

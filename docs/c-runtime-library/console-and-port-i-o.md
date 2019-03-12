@@ -11,12 +11,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 728ff6fa36d21e869c65db705b25bbe7c9d711ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f97a70f2ce12f6363d234e9bbc9384d7ee9fe1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446761"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752376"
 ---
 # <a name="console-and-port-io"></a>I/O console e porta
 

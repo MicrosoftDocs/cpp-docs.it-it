@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f725fa16e8d669975dbc02c6eefd727085bbeb7c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175561"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743359"
 ---
 # <a name="stream-states"></a>Stati di flusso
 

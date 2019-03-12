@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 615c113082e2ef0dbfc40bafbfa040c06e628da5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 980d94b29d31d8eea910fbdb171a0ae8df1dccca
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656950"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750036"
 ---
 # <a name="crt-initialization"></a>Inizializzazione CRT
 

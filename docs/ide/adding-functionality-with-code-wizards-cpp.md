@@ -10,12 +10,12 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: d96b02317f88abd426ceaca4a239e59b2c88b585
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 028434d7404cc02121e9fd961d6566c28f458a0c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629866"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739807"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Aggiunta di funzionalità con creazioni guidate codice (C++)
 
@@ -63,7 +63,7 @@ Dopo aver creato un progetto, è possibile effettuare modifiche o aggiunte alla 
 
    Per altre informazioni, vedere [Implementazione di un'interfaccia](../ide/implementing-an-interface-visual-cpp.md) e [Aggiunta di oggetti e controlli a un progetto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).
 
-   |Accesso alla creazione guidata codice da|Descrizione|
+   |Accesso alla creazione guidata codice da|Description|
    |-----------------------------|-----------------|
    |Aggiungi nuovo elemento|Le creazioni guidate codice Aggiungi nuovo elemento consentono di aggiungere i file di origine al progetto. Se necessario, vengono create directory aggiuntive per inserire i file nella posizione in cui il motore di compilazione del progetto prevede di trovarli. Le creazioni guidate codice disponibili dall'icona Aggiungi elemento includono:<br /><br />- Aggiungere file di origine C++ (con estensione cpp, h, idl, rc, srf, def, rgs).<br />- Aggiungere file di sviluppo Web (con estensione html, asp, css, xml).<br />- Aggiungere file di utilità e risorse (con estensione bmp, cur, ico, rct, sql, txt).<br /><br />Le creazioni guidate codice in genere non richiedono l'inserimento di informazioni ma l'aggiunta di un file alla struttura di sviluppo. È possibile rinominare il file nella finestra delle proprietà.|
    |Esplora soluzioni|Le creazioni guidate codice disponibili in Esplora soluzioni variano a seconda della posizione in cui si trova il cursore quando si fa clic su un elemento. Se l'opzione **Aggiungi** non viene visualizzata quando si fa clic con il pulsante destro del mouse su un elemento, spostare il cursore al livello superiore nella struttura di sviluppo e riprovare. Le creazioni guidate codice inseriscono sempre il codice aggiuntivo nella posizione appropriata all'interno della struttura di sviluppo, indipendentemente dalla posizione in cui si trova il cursore. Le creazioni guidate codice disponibili in Esplora soluzioni consentono di:<br /><br />- Aggiungere una classe (aprire la finestra di dialogo **Aggiungi classe** contenente le creazioni guidate codice).<br />- Aggiungere una risorsa (nuova, importata o personalizzata).<br />- Aggiungere un riferimento Web.|

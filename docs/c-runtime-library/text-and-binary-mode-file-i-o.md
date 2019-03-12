@@ -15,12 +15,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 54b095913ea4ec25fe5bd077d38a6bba303a7b72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546289"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738578"
 ---
 # <a name="text-and-binary-mode-file-io"></a>I/O file modalità testo e binaria
 

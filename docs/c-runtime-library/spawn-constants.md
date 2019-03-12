@@ -20,12 +20,12 @@ helpviewer_keywords:
 - P_WAIT constant
 - _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
-ms.openlocfilehash: 1bfb13309ae4bd667a5e128300740f4c903f08be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 988cc5e1b982f0c5577db77ae94f1df46c95ec0e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580948"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742751"
 ---
 # <a name="spawn-constants"></a>Costanti spawn
 
@@ -35,7 +35,7 @@ ms.locfileid: "50580948"
 #include <process.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 L'argomento `mode` determina le azioni intraprese dal processo chiamante prima e durante un'operazione di generazione. I valori possibili per `mode` sono i seguenti:
 

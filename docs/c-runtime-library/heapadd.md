@@ -21,12 +21,12 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: ea124e5f4e8a412e7347211b4968b24429270736
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfd2a5a112a7a5b578f7b6dfcdcc3998596bc86
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496577"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738501"
 ---
 # <a name="heapadd"></a>_heapadd
 
@@ -58,7 +58,7 @@ Se l'operazione ha esito positivo, `_heapadd` restituisce 0; in caso contrario, 
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 A partire da Visual C++ versione 4.0, la struttura sottostante dell'heap è stata spostata nelle librerie di runtime C per supportare le nuove funzionalità di debug. Pertanto, `_heapadd` non è più supportato su qualsiasi piattaforma basata sull'API Win32.
 

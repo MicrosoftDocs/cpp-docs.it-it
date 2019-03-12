@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.AdditionalOptionsPage
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
-ms.openlocfilehash: 74775e34e3f0591457c2ecff6168767d065b916e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68189d6d4de75e71b5dfe430b870dd37742e934c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666557"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752337"
 ---
 # <a name="hlsl-property-pages"></a>Pagine delle proprietà HLSL
 
@@ -23,7 +23,7 @@ ms.locfileid: "50666557"
 
    Contiene le proprietà per specificare opzioni aggiuntive per il compilatore HLSL.
 
-- [Pagine delle proprietà HLSL: file di output](../ide/hlsl-property-pages-output-files.md)
+- [Pagine delle proprietà HLSL: File di output](../ide/hlsl-property-pages-output-files.md)
 
    Contiene le proprietà per specificare l'output dei file generato dal compilatore HLSL.
 

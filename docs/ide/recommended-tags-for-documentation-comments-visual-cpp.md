@@ -2,12 +2,12 @@
 title: Tag consigliati per i commenti relativi alla documentazione (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 251baedbf37901a58b34b66b7a10bbdcf5d66557
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 154cb36ca121fee8731ac4e71506f562abb79988
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564190"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744805"
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>Tag consigliati per i commenti relativi alla documentazione (Visual C++)
 

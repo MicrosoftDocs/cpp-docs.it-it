@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 097019b2299ad4d2563b5e0df1b943d190b16197
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442640"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746253"
 ---
 # <a name="stream-io"></a>I/O di flusso
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - _nolock functions
 - nolock functions
 ms.assetid: 7d651d87-38d2-4303-9897-fdb5f7a3e899
-ms.openlocfilehash: 149c93c2488ae2b113af397c9e216aa1aeb4c6ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bd0592fb8dc43307a902714723d1b1e43207d1c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551242"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746409"
 ---
 # <a name="nolock-functions"></a>Funzioni _nolock
 

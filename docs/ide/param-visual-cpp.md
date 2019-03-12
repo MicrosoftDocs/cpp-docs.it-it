@@ -8,12 +8,12 @@ helpviewer_keywords:
 - param C++ XML tag
 - <param> C++ XML tag
 ms.assetid: 66c1a1c3-4f98-4bcf-8c7d-9a40308982fb
-ms.openlocfilehash: ec570a1c8b66e12474a2d960ed1b4f4b5e21b219
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33288b170dc89ad9fd7bbf33fece11c396f45295
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651334"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743232"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 
@@ -33,7 +33,7 @@ Nome di un parametro di metodo.  Racchiudere il nome tra virgolette singole o do
 *description*<br/>
 Descrizione del parametro.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il testo del tag \<param> verrà visualizzato in IntelliSense, nel [Visualizzatore oggetti](/visualstudio/ide/viewing-the-structure-of-code) e nel report Web sui commenti del codice.
 

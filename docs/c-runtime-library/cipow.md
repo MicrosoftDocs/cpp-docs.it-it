@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIpow intrinsic
 - _CIpow intrinsic
 ms.assetid: 477aaf0c-ac58-4252-89dd-9f3e35d47536
-ms.openlocfilehash: 2fa3fd415ac76f42e4c01153783d0d1e3adb586a
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 0131a813f43f2d18b5d66313cd368a911fd1fbbe
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703246"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742002"
 ---
 # <a name="cipow"></a>_CIpow
 
@@ -37,7 +37,7 @@ Calcola *x* elevato alla potenza *y* in base ai primi valori dello stack.
 void __cdecl _CIpow();
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questa versione della funzione `pow` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.
 

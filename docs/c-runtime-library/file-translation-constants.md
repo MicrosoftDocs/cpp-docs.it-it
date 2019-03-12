@@ -11,12 +11,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: d98a74c820023ac8684f54413c0e81c58eba7b0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef9b986753de05c45b3071e55f9b163fa5a6a7da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443290"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743329"
 ---
 # <a name="file-translation-constants"></a>Costanti di conversione di file
 
@@ -26,7 +26,7 @@ ms.locfileid: "50443290"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Queste costanti specificano la modalità di conversione (**"b"** o **"t"**). La modalità è inclusa nella stringa che specifica il tipo di accesso (**"r"**, **"w"**, **"a"**, **"r+"**, **"w+"**, **"a+"**).
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: de0c4783b30764350eea35007583c1481ab01024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575318"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743301"
 ---
 # <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
 
@@ -36,7 +36,7 @@ extern char ** __argv;
 extern wchar_t ** __wargv;
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 In un programma che usa la funzione `main`, `__argc` e `__argv` vengono inizializzati all'avvio del programma con la riga di comando usata per l'avvio del programma. La riga di comando viene analizzata in singoli argomenti e i caratteri jolly vengono espansi. Il conteggio degli argomenti è assegnato a `__argc`, le stringhe di argomento sono allocate sull'heap e un puntatore alla matrice di argomenti è assegnato a `__argv`. In un programma compilato per l'uso di caratteri wide e di una funzione `wmain`, gli argomenti sono analizzati, i caratteri jolly sono espansi come stringhe di caratteri wide e un puntatore alla matrice di stringhe di argomento è assegnato a `__wargv`.
 

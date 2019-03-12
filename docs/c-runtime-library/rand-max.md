@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RAND_MAX constant
 ms.assetid: a2039697-8908-4911-bd2d-a2bdd19912a0
-ms.openlocfilehash: 9eb4c35bf596a7487df2a6a831db996cf28f8d70
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: d9174198b9fff8411f20bbe309ef5900c3dcaaee
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220166"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749321"
 ---
 # <a name="randmax"></a>RAND_MAX
 
@@ -21,7 +21,7 @@ ms.locfileid: "54220166"
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La costante `RAND_MAX` è il valore massimo che può essere restituito dalla funzione `rand`. `RAND_MAX` viene definito come valore 0x7fff.
 

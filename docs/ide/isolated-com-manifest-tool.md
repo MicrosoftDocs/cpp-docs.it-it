@@ -7,12 +7,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.TypeLibraryFile
 - VC.Project.VCManifestTool.ReplacementsFile
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-ms.openlocfilehash: 9eea3b2765bad6bd08cc9ee91a801e2b891511e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6188eeb53b4ffcd3eee754e88a8891310fb2d51
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546520"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738850"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM isolato, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt;
 
@@ -22,7 +22,7 @@ Per accedere a questa pagina delle proprietà, aprire le pagine delle proprietà
 
 ## <a name="task-list"></a>Elenco attività
 
-- [Procedura: Compilare applicazioni isolate per l'utilizzo di componenti COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+- [Procedura: Compilare applicazioni isolate per l'uso di componenti COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
 
 ## <a name="uielement-list"></a>Elenco UIElement
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - generic-text mappings
 - mappings, generic-text
 ms.assetid: 1ed02e02-3649-42dd-a697-e1b4af25bb02
-ms.openlocfilehash: 892f36c104a6754b4168860f3d72153ed03d8f1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4bf4fdc44cc8807bebacdad3700d2040c628b0d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658913"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742678"
 ---
 # <a name="generic-text-mappings"></a>Mapping testo generico
 

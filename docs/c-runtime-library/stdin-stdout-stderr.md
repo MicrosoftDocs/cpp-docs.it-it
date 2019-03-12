@@ -13,12 +13,12 @@ helpviewer_keywords:
 - standard input stream
 - stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
-ms.openlocfilehash: f9ed1f842bd174c2b926572856152cd69ade5a56
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5de1ff01282f30ad133f909cb87f5d7c8d521ae5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328019"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741953"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
 
@@ -31,7 +31,7 @@ FILE *stderr;
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questi sono flussi standard per input, output e output di errore.
 

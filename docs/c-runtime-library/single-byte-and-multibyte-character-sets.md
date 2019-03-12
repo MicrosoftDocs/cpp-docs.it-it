@@ -9,12 +9,12 @@ helpviewer_keywords:
 - character sets [C++], multibyte
 - character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
-ms.openlocfilehash: 1870fed732e5b940edb7690f9c3b58bb39c24572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e2d3f26891257101b4a9511f4e0b10f03113309
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645380"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745336"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>Set di caratteri a byte singolo e multibyte
 

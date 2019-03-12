@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows [C++], system calls
 - system calls
 ms.assetid: 0255f2ec-a5a0-487e-8b09-9dad001d81ed
-ms.openlocfilehash: b4b56fb0d61675aada1e8c8ba37d3382853da32c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d86a35718ab6c1aab941149c9707004b1532d24
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511839"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749204"
 ---
 # <a name="system-calls"></a>Chiamate di sistema
 

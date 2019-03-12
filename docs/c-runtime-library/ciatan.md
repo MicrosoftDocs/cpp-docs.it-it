@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIatan intrinsic
 - _CIatan intrinsic
 ms.assetid: 3baa0429-fe46-4bab-8b00-868e2186dc8c
-ms.openlocfilehash: 4ab94997f249b541c0e5fb16156f88033c43d09d
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 81448d976a38d45de821fc66ea87dcf431ebd228
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703012"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749980"
 ---
 # <a name="ciatan"></a>_CIatan
 
@@ -37,7 +37,7 @@ Calcola l'arcotangente del primo valore dello stack.
 void __cdecl _CIatan();
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Questa versione della funzione `atan` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.
 

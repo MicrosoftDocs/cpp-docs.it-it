@@ -2,12 +2,12 @@
 title: 'Visual C++: novità dalla versione 2003 alla 2015'
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894354"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749152"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -1743,7 +1743,7 @@ Oltre alla finestra **Attività in parallelo** e alla finestra **Stack in parall
 
 **Evidenziazione dei riferimenti.** Selezionando un simbolo ora vengono evidenziate tutte le istanze del simbolo nel file corrente. Premere **CTRL**+**MAIUSC**+**Freccia SU** o **CTRL**+**MAIUSC**+**Freccia GIÙ** per spostarsi tra i riferimenti evidenziati. È possibile disattivare questa funzionalità nella finestra di dialogo **Opzioni** in **Editor di testo** > **C/C++** > **Avanzate**.
 
-### <a name="application-lifecycle-management-tools"></a>Strumenti di Application Lifecycle Management
+### <a name="application-lifecycle-management-tools"></a>Strumenti di gestione del ciclo di vita delle applicazioni
 
 #### <a name="static-code-analysis"></a>Analisi codice statico
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - standard types
 - types [CRT]
 ms.assetid: 8f8bad6f-2b78-4068-a0dc-77d58d978920
-ms.openlocfilehash: 035012f7c887bf4db264fbaaf703ce86c68b6ecb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d235640613b7232e190ccb0e1dfe98b657e0c65
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623665"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750075"
 ---
 # <a name="global-variables-and-standard-types"></a>Variabili globali e tipi standard
 

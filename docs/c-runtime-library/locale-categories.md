@@ -21,12 +21,12 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 434500dab0c68aa9475f54e930b91da0b1cd2fc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220192"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749802"
 ---
 # <a name="locale-categories"></a>Categorie di impostazioni locali
 
@@ -36,7 +36,7 @@ ms.locfileid: "54220192"
 #include <locale.h>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le categorie di impostazioni locali sono costanti manifesto usate dalle routine di localizzazione per specificare quale porzione delle impostazioni locali di un programma verrà usata. Le impostazioni locali fanno riferimento alla località o al paese per il quale è possibile personalizzare aspetti specifici del programma. Le aree dipendenti dalle impostazioni locali includono, ad esempio, la formattazione delle date o il formato di visualizzazione dei valori monetari.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 32ac86804ac4701dfeca20fb03071198f0291f81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0066fe2b17425695cefc648acc7479172067e885
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460489"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57737981"
 ---
 # <a name="internationalization"></a>Internazionalizzazione
 

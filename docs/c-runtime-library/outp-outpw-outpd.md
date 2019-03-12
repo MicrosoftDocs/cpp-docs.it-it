@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: cb3e0c9fefd62b1af3c7dd6dda01278206d1bf49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a507f4115a48372706590eb61f9e3e77a0e3548
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595520"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752064"
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 
@@ -79,7 +79,7 @@ Valori di output.
 
 Le funzioni restituiscono l'output dei dati. Non vi è restituzione di errori.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Le funzioni `_outp`, `_outpw`e `_outpd` scrivono un byte, una parola e una parola doppia, rispettivamente, nella porta di output specificata. L'argomento *port* può essere qualsiasi Unsigned Integer nell'intervallo compreso tra 0 e 65.535. *Databyte* può essere qualsiasi Integer nell'intervallo compreso tra 0 e 255 e *dataword* può essere qualsiasi valore nell'intervallo compreso, rispettivamente, tra un Integer, un Unsigned Short Integer e un Unsigned Long Integer.
 
