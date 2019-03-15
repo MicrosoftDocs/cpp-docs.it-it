@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750405"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821389"
 ---
 # <a name="include-directive-cc"></a>Direttiva #include (C/C++)
 
@@ -49,7 +49,7 @@ Includere i file possono essere "annidati", vale a dire, un' **#include** dirett
 
 Quando i file di inclusione sono annidati e la compilazione viene eseguita sulla riga di comando, la ricerca inizia nelle directory del file padre, quindi procede nelle directory padre del padre. Questo significa che la ricerca inizia in base alla directory che contiene l'origine attualmente in fase di elaborazione. Se il file non viene trovato, la ricerca si sposta nelle directory specificate per il [/I (directory di inclusione aggiuntive)](../build/reference/i-additional-include-directories.md) opzione del compilatore. In conclusione, la ricerca viene eseguita nelle directory specificate nella variabile di ambiente INCLUDE.
 
-Dall'ambiente di sviluppo Visual Studio, la variabile di ambiente INCLUDE viene ignorata. Per informazioni su come impostare le directory in cui vengono cercate i file di inclusione, questo vale anche per la variabile di ambiente LIB, vedere [VC + + Directories Property Page](../ide/vcpp-directories-property-page.md).
+Dall'ambiente di sviluppo Visual Studio, la variabile di ambiente INCLUDE viene ignorata. Per informazioni su come impostare le directory in cui vengono cercate i file di inclusione, questo vale anche per la variabile di ambiente LIB, vedere [VC + + Directories Property Page](../build/reference/vcpp-directories-property-page.md).
 
 Nell'esempio seguente viene illustrata l'inclusione di file tramite parentesi angolari:
 
