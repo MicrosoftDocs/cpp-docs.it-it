@@ -1,19 +1,19 @@
 ---
-title: 'Procedura dettagliata: verifica di un progetto (C++)'
+title: 'Procedura dettagliata: Test di un progetto (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437310"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744600"
 ---
-# <a name="walkthrough-testing-a-project-c"></a>Procedura dettagliata: verifica di un progetto (C++)
+# <a name="walkthrough-testing-a-project-c"></a>Procedura dettagliata: Test di un progetto (C++)
 
 Quando si esegue un programma in modalità di debug, è possibile usare i punti di interruzione per sospendere l'esecuzione del programma ed esaminare lo stato di variabili e oggetti.
 
@@ -51,14 +51,14 @@ In questa procedura dettagliata si verifica il valore di una variabile mentre il
 
 1. Aprire il menu di scelta rapida per l'istruzione `return 0;` e scegliere **Esegui fino al cursore**. La freccia gialla a sinistra del codice indica l'istruzione successiva da eseguire.
 
-1. Il numero `Cardgame::totalParticipants` dovrebbe decrescere quando viene completata un'istanza di `Cardgame`. A questo punto, `Cardgame::totalParticipants` dovrebbe essere 0 perché tutte le istanze di `Cardgame` sono state eliminate, ma la finestra **Espressione di controllo 1** indica che `Cardgame::totalparticipants` è uguale a **18**. La differenza indica che è presente un bug nel codice. Per rilevare e correggere il bug, completare la procedura dettagliata successiva, [Procedura dettagliata: debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
+1. Il numero `Cardgame::totalParticipants` dovrebbe decrescere quando viene completata un'istanza di `Cardgame`. A questo punto, `Cardgame::totalParticipants` dovrebbe essere 0 perché tutte le istanze di `Cardgame` sono state eliminate, ma la finestra **Espressione di controllo 1** indica che `Cardgame::totalparticipants` è uguale a **18**. La differenza indica che è presente un bug nel codice. Per rilevare e correggere il bug, completare la procedura dettagliata successiva, [Procedura dettagliata: Debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
 
 1. Per arrestare il programma, sulla barra dei menu scegliere **Debug** > **Arresta debug** oppure scegliere **MAIUSC**+**F5**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-**Precedente:** [Procedura dettagliata: compilazione di un progetto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**Successivo:** [Procedura dettagliata: debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Precedente:** [Procedura dettagliata: Compilazione di un progetto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Successivo:** [Procedura dettagliata: Debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Vedere anche
 

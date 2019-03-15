@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: dd187be93b5df0160686fe765f65c25e14800b75
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326732"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748684"
 ---
 # <a name="ismbc-routines"></a>Routines _ismbc
 
@@ -33,7 +33,7 @@ Ogni test della routine **_ismbc** verifica un carattere multibyte `c` per una d
 |[_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|[_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|
 |[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Il risultato del test di ogni routine **_ismbc** dipende dalla tabella codici multibyte attiva. Le tabelle codici multibyte contengono caratteri alfabetici a un byte. Per impostazione predefinita, la tabella codici multibyte viene impostata sulla tabella codici ANSI predefinita del sistema, ottenuta dal sistema operativo all'avvio del programma. È possibile eseguire una query o modificare la tabella codici multibyte in uso, rispettivamente con [_getmbcp](../c-runtime-library/reference/getmbcp.md) o [_setmbcp](../c-runtime-library/reference/setmbcp.md).
 
@@ -41,18 +41,18 @@ Il valore di output è interessato dall'impostazione della categoria `LC_CTYPE` 
 
 |Routine|Condizione di test|Esempio della tabella codici 932|
 |-------------|--------------------|---------------------------|
-|[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Carattere alfanumerico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una lettera in inglese ASCII: vedere gli esempi per `_ismbcdigit` e `_ismbcalpha`.|
-|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Carattere alfabetico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a un byte di un carattere ASCII inglese (vedere gli esempi per `_ismbcupper` e `_ismbclower`), oppure è una lettera dell'alfabeto Katakana (0xA6<=`c`<=0xDF).|
+|[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Carattere alfanumerico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una lettera ASCII dell'alfabeto inglese: vedere esempi per `_ismbcdigit` e `_ismbcalpha`.|
+|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Carattere alfabetico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una lettera ASCII dell'alfabeto inglese: vedere esempi per `_ismbcupper` e `_ismbclower` oppure un simbolo dell'alfabeto katakana: 0xA6<=`c`<=0xDF.|
 |[_ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Carattere numerico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una cifra ASCII: 0x30<=`c`<=0x39.|
 |[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Carattere grafico|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di qualsiasi carattere stampabile ASCII o katakana, ad eccezione dello spazio ( ). Vedere gli esempi per `_ismbcdigit`, `_ismbcalpha` e `_ismbcpunct`.|
 |[_ismbclegal, _ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Carattere multibyte valido|Restituisce un valore diverso da zero se e solo se il primo byte di `c` è compreso negli intervalli 0x81 - 0x9F o 0xE0 - 0xFC, mentre il secondo byte è compreso negli intervalli 0x40 - 0x7E o 0x80 - FC.|
-|[_ismbclower, _ismbclower_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Carattere alfabetico minuscolo|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una lettera in inglese minuscola ASCII: 0x61<=`c`<=0x7A.|
-|[_ismbcprint, _ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Carattere stampabile|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a un byte di un qualsiasi carattere stampabile ASCII o dell'alfabeto Katakana, incluso lo spazio vuoto ( ): vedere gli esempi per `_ismbcspace`, `_ismbcdigit`, `_ismbcalpha` e `_ismbcpunct`.|
+|[_ismbclower, _ismbclower_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Carattere alfabetico minuscolo|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una lettera minuscola ASCII dell'alfabeto inglese: 0x61<=`c`<=0x7A.|
+|[_ismbcprint, _ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Carattere stampabile|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di qualsiasi carattere stampabile ASCII o katakana, incluso lo spazio ( ): vedere esempi per `_ismbcspace`, `_ismbcdigit`, `_ismbcalpha` e `_ismbcpunct`.|
 |[_ismbcpunct, _ismbcpunct_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Punctuation|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di qualsiasi carattere di punteggiatura ASCII o katakana.|
 |[_ismbcblank, _ismbcblank_l,](../c-runtime-library/reference/ismbcgraph-functions.md)|Spazio o tabulazione orizzontale|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a un byte di uno spazio o un carattere di tabulazione orizzontale: `c`= 0x20 o `c`= 0x09.|
 |[_ismbcspace, _ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Whitespace|Restituisce un valore diverso da zero se e solo se `c` è uno spazio vuoto: `c`=0x20 o 0x09<=`c`<=0x0D.|
 |[_ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Simbolo multibyte|Restituisce un valore diverso se e solo se 0x8141<=`c`<=0x81AC.|
-|[_ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Carattere alfabetico maiuscolo|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una lettera in inglese maiuscola ASCII: 0x41<=`c`<=0x5A.|
+|[_ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|Carattere alfabetico maiuscolo|Restituisce un valore diverso da zero se e solo se `c` è una rappresentazione a byte singolo di una lettera maiuscola ASCII dell'alfabeto inglese: 0x41<=`c`<=0x5A.|
 
 **Specifiche per la tabella codici 932**
 
@@ -60,8 +60,8 @@ Le routine seguenti sono specifiche per la tabella codici 932.
 
 |Routine|Condizione di test (solo per la tabella codici 932)|
 |-------------|-------------------------------------------|
-|[_ismbchira, _ismbchira_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|Hiragana DBCS: 0x829F<=`c`<=0x82F1.|
-|[_ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|Katakana DBCS: 0x8340<=`c`<=0x8396.|
+|[_ismbchira, _ismbchira_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|Hiragana a byte doppio: 0x829F<=`c`<=0x82F1.|
+|[_ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|Katakana a byte doppio: 0x8340<=`c`<=0x8396.|
 |[_ismbcl0, _ismbcl0_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS non Kanji: 0x8140<=`c`<=0x889E.|
 |[_ismbcl1, _ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS livello 1: 0x889F<=`c`<=0x9872.|
 |[_ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS livello 2: 0x989F<=`c`<=0xEA9E.|

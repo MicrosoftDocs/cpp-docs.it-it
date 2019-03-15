@@ -3,16 +3,16 @@ title: Distribuire, eseguire ed eseguire il debug del progetto Linux C++ in Visu
 description: Descrive come compilare, eseguire ed eseguire il debug del codice nella destinazione remota all'interno di un progetto Linux C++ in Visual Studio.
 ms.date: 09/12/2018
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 413f0b089b3b1398093073bcd6f49358143121c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328396"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562887"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Distribuire, eseguire e sottoporre a debug il progetto Linux
 
-Dopo avere creato un progetto Linux C++ in Visual Studio ed essersi connessi al progetto usando [Gestione connessione per Linux](../linux/connect-to-your-remote-linux-computer.md), è possibile eseguire il progetto ed eseguirne il debug. Si compila, si esegue e si sottopone a debug il codice nella destinazione remota.
+Dopo avere creato un progetto Linux C++ in Visual Studio ed essersi connessi al progetto usando [Gestione connessione per Linux](connect-to-your-remote-linux-computer.md), è possibile eseguire il progetto ed eseguirne il debug. Si compila, si esegue e si sottopone a debug il codice nella destinazione remota.
 
 Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
@@ -24,16 +24,16 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
 1. Selezionare la modalità di debug nella pagina delle proprietà **Debug**.
 
-   Per il debug delle applicazioni in esecuzione su Linux viene usato GDB.  Lo strumento può essere eseguito in due modalità diverse, selezionabili dall'opzione **Modalità di debug** nella pagina delle proprietà del **debug** del progetto:
+   Per il debug delle applicazioni in esecuzione su Linux viene usato GDB. È possibile eseguire GDB in due modalità diverse, selezionabili dall'opzione **Modalità di debug** nella pagina delle proprietà di **debug** del progetto:
 
    ![Opzioni GDB](media/settings_debugger.png)
 
-   - In modalità **gdbserver** GDB viene eseguito in locale e si connette a gdbserver in esecuzione sul sistema remoto.  Si noti che questa è l'unica modalità supportata dalla finestra della console di Linux.
+   - In modalità **gdbserver**, GDB viene eseguito in locale e si connette a gdbserver nel sistema remoto.  Si noti che questa è l'unica modalità supportata dalla finestra della console di Linux.
 
-   - In modalità **gdb** il debugger di Visual Studio indirizza GDB al sistema remoto, che è più compatibile se la versione locale di GDB non è compatibile con la versione installata nel computer di destinazione. |
+   - In modalità **gdb**, GDB viene guidato nel sistema remoto dal debugger di Visual Studio. Questa opzione è preferibile se la versione locale di GDB non è compatibile con quella installata nel computer di destinazione. |
 
    > [!NOTE]
-   > Se non è possibile raggiungere i punti di interruzione in modalità di debug gdbserver, provare la modalità gdb. gdb deve prima essere [installato](../linux/download-install-and-setup-the-linux-development-workload.md) nella destinazione remota.
+   > Se non è possibile raggiungere i punti di interruzione in modalità di debug gdbserver, provare la modalità gdb. gdb deve prima essere [installato](download-install-and-setup-the-linux-development-workload.md) nella destinazione remota.
 
 1. Selezionare la destinazione remota usando la barra degli strumenti standard **Debug** in Visual Studio.
 
@@ -41,7 +41,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
    ![Destinazione remota](media/remote_target.png)
 
-   Se non ci si è ancora connessi alla destinazione remota, verrà visualizzata un'istruzione che indica di usare [Gestione connessione per Linux](../linux/connect-to-your-remote-linux-computer.md) per connettersi alla destinazione remota.
+   Se non ci si è ancora connessi alla destinazione remota, verrà visualizzata un'istruzione che indica di usare [Gestione connessione per Linux](connect-to-your-remote-linux-computer.md) per connettersi alla destinazione remota.
 
    ![Architettura remota](media/architecture.png)
 
@@ -57,7 +57,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
    ![Raggiungere un punto di interruzione](media/hit_breakpoint.png)
 
-   È ora possibile interagire con l'applicazione nello stato corrente, visualizzare le variabili ed eseguire un'istruzione alla volta il codice premendo i tasti funzione, ad esempio **F10** o **F11**.
+   È ora possibile interagire con l'applicazione nello stato corrente, visualizzare le variabili ed eseguire il codice un'istruzione alla volta premendo i tasti di comando, ad esempio **F10** o **F11**.
 
 1. Per usare la console Linux per interagire con l'app, selezionare **Debug > Console Linux**.
 
@@ -69,7 +69,7 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
 ## <a name="configure-other-debugging-options"></a>Configurare le altre opzioni di debug
 
-- Gli argomenti della riga di comando possono essere passati all'eseguibile usando l'elemento **Argomenti del programma** nella pagina delle proprietà del **debug**.
+- Gli argomenti della riga di comando possono essere passati all'eseguibile usando l'elemento **Argomenti del programma** nella pagina delle proprietà di **debug** del progetto.
 
    ![Argomenti del programma](media/settings_programarguments.png)
 
@@ -79,10 +79,10 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per eseguire il debug di dispositivi ARM in Linux, vedere questo post di blog relativo al [debug di un dispositivo ARM incorporato in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Per eseguire il debug dei dispositivi ARM in Linux, vedere il post di blog sul [debug di un dispositivo ARM incorporato in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
-- Per eseguire il debug tramite il comando **Connetti a processo**, vedere questo post di blog: [Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/) (Miglioramenti del carico di lavoro di Linux C++ al sistema del progetto, alla finestra di Console Linux, a rsync e Connetti a processo).
+- Per eseguire il debug con il comando **Connetti a processo**, vedere il post di blog sui [miglioramenti del carico di lavoro Linux C++ per il sistema del progetto, la finestra della console di Linux, rsync e Connetti a processo](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Proprietà di debug C++ (Linux C++)](../linux/prop-pages/debugging-linux.md)
+[Proprietà di debug C++ (Linux C++)](prop-pages/debugging-linux.md)

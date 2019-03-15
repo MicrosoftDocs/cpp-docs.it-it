@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525522"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740383"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
 
@@ -1047,7 +1047,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Chiamate ambigue a funzioni in overload**
 
-   Il codice seguente produce ora l'errore C266: 'N::bind': chiamata ambigua a funzione in overload
+   Il codice seguente genera ora l'errore C266: 'N::bind': chiamata ambigua a funzione in overload
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1190,7 +1190,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Le eccezioni MFC non possono essere intercettate per valore perché non sono copiabili**
 
-   Il codice seguente in un'applicazione MFC genera ora l'errore C2316: 'D': non può essere intercettato come distruttore e/o i costruttori di copia sono inaccessibili oppure sono stati eliminati
+   Il codice seguente in un'applicazione MFC genera ora l'errore C2316: 'D': non può essere intercettato perché il distruttore e/o il costruttore di copia è inaccessibile o eliminato
 
     ```cpp
     struct B {
@@ -1358,7 +1358,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Accesso ai costruttori all'interno di istruzioni decltype**
 
-   Il codice seguente genera ora l'errore C2248: 'S::S': cannot access private member declared in class 'S' (S::S': impossibile accedere al membro privato dichiarato nella classe 'S'):
+   Il codice seguente genera ora l'errore C2248: 'S::S': impossibile accedere al membro privato dichiarato nella classe 'S':
 
     ```cpp
     class S {
@@ -1480,7 +1480,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Impossibile chiamare un costruttore base protetto nel corpo di un costruttore derivato.**
 
-   Il codice seguente genera ora l'errore C2248: 'S1::S1': cannot access protected member declared in class 'S1' ('S1::S1': impossibile accedere al membro protetto dichiarato nella classe 'S1')
+   Il codice seguente genera ora l'errore C2248: 'S1::S1': impossibile accedere al membro protetto dichiarato nella classe 'S1'
 
     ```cpp
     struct S1 {
@@ -2899,7 +2899,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     };
     ```
 
-   Prima di Visual Studio 2013, questo codice genera questo messaggio con avviso C4370: 'S2': il layout della classe è stato modificato rispetto alla precedente versione del compilatore per migliorare la compressione.
+   Prima di Visual Studio 2013, questo codice genera questo messaggio con avviso C4370: 'S2': il layout della classe è stato modificato rispetto alla versione precedente del compilatore per migliorare la compressione.
 
    Il compilatore x86 ha lo stesso problema di layout inferiore al livello ottimale in tutte le versioni del compilatore. Ad esempio, se questo codice viene compilato per x86:
 
@@ -2963,7 +2963,7 @@ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _IT
 
 ### <a name="mfc-and-atl"></a>MFC e ATL
 
-- **Solo Visual Studio 2013**: la libreria MFC per MBCS non è inclusa in Visual Studio perché il formato Unicode è estremamente diffuso e l'utilizzo di MBCS si è ridotto significativamente. Questa modifica mantiene inoltre MFC più allineato a Windows SDK stesso, poiché molti dei nuovi controlli e messaggi sono solo Unicode. Se tuttavia è necessario continuare a usare la libreria MFC per MBCS, è possibile scaricarla dall'Area download di MSDN in [Libreria MFC multibyte per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Il pacchetto ridistribuibile di Visual C++ include ancora questa libreria.  Nota: la DLL MBCS è inclusa nei componenti di configurazione di C++ in Visual Studio 2015 e versioni successive.
+- **Solo Visual Studio 2013**: la libreria MFC per MBCS non è inclusa in Visual Studio perché il formato Unicode è estremamente diffuso e l'utilizzo di MBCS si è ridotto significativamente. Questa modifica mantiene inoltre MFC più allineato a Windows SDK stesso, poiché molti dei nuovi controlli e messaggi sono solo Unicode. Se tuttavia è necessario continuare a usare la libreria MFC per MBCS, è possibile scaricarla dall'Area download di MSDN in [Libreria MFC multibyte per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Il pacchetto ridistribuibile di Visual C++ include ancora questa libreria.  (Nota: la DLL MBCS è inclusa nei componenti di configurazione di C++ in Visual Studio 2015 e versioni successive.)
 
 - L'accessibilità per la barra multifunzione MFC è stata modificata.  Anziché un'architettura a un livello ora viene usata un'architettura gerarchica. È ancora possibile utilizzare il comportamento precedente chiamando `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
@@ -3413,7 +3413,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Classe `CFileDialog`: i modelli personalizzati per la classe `CFileDialog` non possono essere trasferiti automaticamente in Windows Vista. Si possono ancora usare, ma non hanno le funzionalità aggiuntive o l'aspetto delle finestre di dialogo di Windows Vista.
 
-- Classe `CWnd` e classe `CFrameWnd`: il metodo `CWnd::GetMenuBarInfo` è stato rimosso.
+- Classe `CWnd` e classe `CFrameWnd`: Il metodo `CWnd::GetMenuBarInfo` è stato rimosso.
 
    Il metodo `CFrameWnd::GetMenuBarInfo` è ora un metodo non virtuale. Per altre informazioni, vedere la **funzione GetMenuBarInfo**  in Windows SDK.
 

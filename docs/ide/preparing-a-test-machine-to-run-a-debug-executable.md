@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ae5e0007105cfda233f808bf52d2d81068524be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509105"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744866"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparazione di un computer per il test per l'esecuzione di un file eseguibile di debug
 
@@ -20,12 +20,12 @@ Per preparare un computer per il test della versione di debug di un'applicazione
 
 È possibile distribuire le versioni di debug delle DDL della libreria di Visual C++ con la versione di debug di un'applicazione in tre modi diversi.
 
-- Utilizzare la distribuzione centrale per installare una versione di debug di una determinata DLL di Visual C++ nella directory %windir%\system32\ utilizzando un progetto di installazione che include modelli merge per la versione corretta della libreria e l'architettura dell'applicazione. I modelli unione sono disponibili nella directory Programmi o Programmi (x86) in \File comuni\Modelli unione\\. Nel nome della versione di debug di un modello merge è presente il termine "Debug", ad esempio Microsoft_VC110_DebugCRT_x86.msm. Un esempio di questa distribuzione è disponibile in [Procedura dettagliata: Distribuzione di un'applicazione Visual C++ tramite un progetto di installazione](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+- Utilizzare la distribuzione centrale per installare una versione di debug di una determinata DLL di Visual C++ nella directory %windir%\system32\ utilizzando un progetto di installazione che include modelli merge per la versione corretta della libreria e l'architettura dell'applicazione. I modelli unione sono disponibili nella directory Programmi o Programmi (x86) in \File comuni\Modelli unione\\. Nel nome della versione di debug di un modello unione è presente il termine "Debug", ad esempio Microsoft_VC110_DebugCRT_x86.msm. Un esempio di questa distribuzione è disponibile in [Procedura dettagliata: Distribuzione di un'applicazione Visual C++ tramite un progetto di installazione](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 - Usare la distribuzione locale per installare una versione di debug di una determinata DLL di Visual C++ nella directory di installazione dell'applicazione usando i file inclusi nella directory Programmi o Programmi (x86) in \Microsoft Visual Studio \<versione>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Per eseguire il debug remoto dell'applicazione compilata con Visual C++ 2005 o Visual C++ 2008 in un altro computer, è necessario distribuire le versioni di debug delle DLL della libreria di Visual C++ come assembly affiancati condivisi. È possibile utilizzare un progetto di installazione o Windows Installer per installare i modelli merge corrispondenti.
+    >  Per eseguire il debug remoto dell'applicazione compilata con Visual C++ 2005 o Visual C++ 2008 in un altro computer, è necessario distribuire le versioni di debug delle DLL della libreria di Visual C++ come assembly affiancati condivisi. È possibile utilizzare un progetto di installazione o Windows Installer per installare i modelli unione corrispondenti.
 
 - Usare l'opzione **Distribuisci** nella finestra di dialogo **Gestione configurazione** in Visual Studio per copiare l'output del progetto e altri file nel computer remoto.
 

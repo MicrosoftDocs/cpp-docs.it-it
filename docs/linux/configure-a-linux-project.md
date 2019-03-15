@@ -1,17 +1,17 @@
 ---
 title: Configurare un progetto C++ Linux in Visual Studio
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622495"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745191"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
-Questo argomento illustra come configurare un progetto Linux C++ in Visual Studio. Per informazioni sui progetti Linux CMake in Visual Studio, vedere [Configurare un progetto CMake per Linux](cmake-linux-project.md).
+Questo argomento illustra come configurare un progetto Linux C++ basato su un modello di progetto Linux in Visual Studio. Per informazioni sui progetti Linux CMake in Visual Studio, vedere [Configurare un progetto CMake per Linux](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Impostazioni generali
 
@@ -90,7 +90,7 @@ Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiat
 ## <a name="see-also"></a>Vedere anche
 
 [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)<br/>
-[Proprietà generali di C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[Directory di VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Proprietà di un progetto Copia origini (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Proprietà di un evento di compilazione (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Proprietà generali di C++ (Linux C++)](prop-pages/general-linux.md)<br/>
+[Directory di VC++ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Proprietà di un progetto Copia origini (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Proprietà di un evento di compilazione (Linux C++)](prop-pages/build-events-linux.md)

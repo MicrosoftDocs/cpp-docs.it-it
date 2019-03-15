@@ -1,15 +1,15 @@
 ---
-title: "Procedura: utilizzare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)"
+title: "Procedura: Usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)"
 ms.date: 08/21/2018
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 55fb1f3fa89f192c83effb755966158394d2fbcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a4633b74591e16f22def44ff5875557f2909043
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528713"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745520"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedura: utilizzare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedura: Usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)
 
 Il modo più semplice per eseguire il programma desktop nell'ambiente UWP consiste probabilmente nell'usare le tecnologie Desktop Bridge, tra cui Desktop App Converter, che consente di comprimere l'applicazione esistente come app UWP senza dover modificare il codice. Per altre informazioni, vedere [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
@@ -153,7 +153,7 @@ La procedura seguente si applica al caso in cui si dispone di una DLL nativa che
 
 5. Assicurarsi che il nome del file di intestazione precompilato sia corretto. Nella sezione **Intestazioni precompilate** modificare il **File di intestazione precompilato** da pch.h a stdafx.h. In caso contrario, visualizzato il seguente errore.
 
-   > istruzione '#include' specificata con l'opzione della riga di comando /Yc%s non trovata nel file di origine
+   > Errore C2857: istruzione '#include' specificata con l'opzione della riga di comando /Yc%s non trovata nel file di origine
 
    Il problema è che i progetti Windows universali utilizzano una convenzione di denominazione diversa per il file di intestazione precompilata.
 
@@ -231,4 +231,4 @@ Se si desidera utilizzare le API native in una libreria statica da un'app UWP e 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Porting to the Universal Windows Platform](../porting/porting-to-the-universal-windows-platform-cpp.md) (Conversione in Universal Windows Platform)
+[Trasferimento alla piattaforma UWP (Universal Windows Platform)](../porting/porting-to-the-universal-windows-platform-cpp.md)

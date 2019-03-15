@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: a4bb059b13f2001c6691e8d051106aa5e11eccbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429148"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740827"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usare multitargeting nativo in Visual Studio per compilare progetti precedenti
 
@@ -52,7 +52,7 @@ Successivamente, è necessario aggiornare la soluzione e i progetti di Visual St
 
 Al termine dell'aggiornamento, se il report del log contiene errori o avvisi per uno dei progetti, esaminarli attentamente. La conversione da **VCBuild** a **MSBuild** può causare problemi. Assicurarsi di comprendere e implementare le azioni indicate nel report. Per altre informazioni sul report di log dell'aggiornamento e i problemi che possono verificarsi durante la conversione da **VCBuild** a **MSBuild**, vedere il post di blog [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) (Multi-Targeting nativo di C++).
 
-Al termine dell'aggiornamento del progetto, dopo avere risolto eventuali problemi nel file di log, la soluzione fa riferimento al set di strumenti più recente. Come passaggio finale, modificare le proprietà per ogni progetto della soluzione in modo che venga usato il set di strumenti di Visual Studio 2008. Con la soluzione caricata nella versione corrente di Visual Studio, per ogni progetto nella soluzione, aprire la finestra di dialogo **Pagine delle proprietà** del progetto, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e quindi selezionare **Proprietà**. Nella finestra di dialogo **Pagine delle proprietà** modificare il valore dell'elenco a discesa **Configurazione** impostandolo su **Tutte le configurazioni**. In **Proprietà di configurazione** selezionare **Generale** e quindi impostare **Set strumenti della piattaforma** su **Visual Studio 2008 (v90)**.
+Al termine dell'aggiornamento del progetto, dopo avere risolto eventuali problemi nel file di log, la soluzione fa riferimento al set di strumenti più recente. Come passaggio finale, modificare le proprietà per ogni progetto della soluzione in modo che venga usato il set di strumenti di Visual Studio 2008. Con la soluzione caricata nella versione corrente di Visual Studio, per ogni progetto nella soluzione aprire la finestra di dialogo **Pagine delle proprietà** del progetto: fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e quindi selezionare **Proprietà**. Nella finestra di dialogo **Pagine delle proprietà** modificare il valore dell'elenco a discesa **Configurazione** impostandolo su **Tutte le configurazioni**. In **Proprietà di configurazione** selezionare **Generale** e quindi impostare **Set strumenti della piattaforma** su **Visual Studio 2008 (v90)**.
 
 Dopo questa modifica il compilatore e le librerie di Visual Studio 2008 vengono usati per generare file binari del progetto quando si compila la soluzione nella versione corrente di Visual Studio.
 

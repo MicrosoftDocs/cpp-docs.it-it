@@ -17,12 +17,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: f5f0629b97c3f3731e3916af36c9c8e40176462a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aebdf2e5aaf6d59e5ee39af05540604206ec6c23
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621650"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740546"
 ---
 # <a name="filename-search-functions"></a>Funzioni di ricerca dei nomi file
 
@@ -34,7 +34,7 @@ Queste funzioni eseguono e terminano le ricerche per i nomi di file specificati:
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La funzione `_findfirst` fornisce informazioni sulla prima istanza di un nome file che corrisponde al file specificato nell'argomento `filespec` . In `filespec` è possibile usare qualsiasi combinazione di caratteri jolly supportata dal sistema operativo host.
 

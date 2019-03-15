@@ -2,12 +2,12 @@
 title: 'Guida al porting: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177004"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751374"
 ---
 # <a name="porting-guide-spy"></a>Guida al porting: Spy++
 
@@ -292,7 +292,7 @@ Dopo la modifica è visibile il codice riportato di seguito:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Dal momento che esistono circa dieci occorrenze di questa funzione in diverse classi derivate da CWnd, è opportuno usare **Vai a definizione** (tastiera: **F12**) e **Vai a dichiarazione** (tastiera: **Ctrl**+**CtrlF12**) quando il cursore si trova nella funzione nell'editor per trovare le occorrenze e passare ad esse dalla finestra degli strumenti **Trova simbolo**. **Vai a definizione** è in genere l'opzione più utile. **Vai a dichiarazione** trova le dichiarazioni diverse dalla dichiarazione di classe di definizione, ad esempio le dichiarazioni di classe friend o i riferimenti in avanti.
+Dal momento che sono presenti circa dieci occorrenze di questa funzione, tutte in classi diverse derivate da CWnd, è utile usare **Vai a definizione** (tastiera: **F12**) e **Vai a dichiarazione** (tastiera: **CTRL**+**F12**) quando il cursore è sulla funzione nell'editor per individuarle e spostarsi su di esse dalla finestra dello strumento **Trova simbolo**. **Vai a definizione** è in genere l'opzione più utile. **Vai a dichiarazione** trova le dichiarazioni diverse dalla dichiarazione di classe di definizione, ad esempio le dichiarazioni di classe friend o i riferimenti in avanti.
 
 ##  <a name="mfc_changes"></a> Passaggio 9. Modifiche MFC
 
@@ -542,7 +542,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-La macro \_T fa sì che il valore letterale stringa venga compilato come stringa **char** o stringa **wchar_t**, a seconda dell'intestazione di MBCS o UNICODE. Per sostituire tutte le stringhe con \_T in Visual Studio, aprire prima **Sostituzione veloce** (tastiera: **Ctrl**+**F**) oppure **Sostituisci nei file** (tastiera: **Ctrl**+**Maiusc**+**H**), quindi scegliere la casella di controllo **Utilizza espressioni regolari**. Immettere `((\".*?\")|('.+?'))` come testo di ricerca e `_T($1)` come testo di sostituzione. Se la macro \_T è già presente in alcune stringhe, questa procedura l'aggiungerà di nuovo e potrebbe anche trovare alcuni casi in cui \_T non è disponibile, ad esempio quando si usa `#include`; di conseguenza, è preferibile usare **Sostituisci successivo** anziché **Sostituisci tutto**.
+La macro \_T fa sì che il valore letterale stringa venga compilato come stringa **char** o stringa **wchar_t**, a seconda dell'intestazione di MBCS o UNICODE. Per sostituire tutte le stringhe con \_T in Visual Studio, aprire prima di tutto la casella **Sostituzione veloce** (tastiera: **CTRL**+**F**) o **Sostituisci nei file** (tastiera: **CTRL**+**MAIUSC**+**H**)e quindi selezionare la casella di controllo **Usa espressioni regolari**. Immettere `((\".*?\")|('.+?'))` come testo di ricerca e `_T($1)` come testo di sostituzione. Se la macro \_T è già presente in alcune stringhe, questa procedura l'aggiungerà di nuovo e potrebbe anche trovare alcuni casi in cui \_T non è disponibile, ad esempio quando si usa `#include`; di conseguenza, è preferibile usare **Sostituisci successivo** anziché **Sostituisci tutto**.
 
 Questa funzione particolare, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), viene effettivamente definita nelle intestazioni di Windows e la relativa documentazione consiglia di non usarla, a causa del possibile sovraccarico del buffer. Non è specificata una dimensione per il buffer `szTmp`, quindi non esiste alcun modo per la funzione di verificare che il buffer possa contenere tutti i dati da scrivere. Vedere la sezione successiva sul porting alle funzioni CRT sicure, in cui è possibile risolvere altri problemi simili. Alla fine è stata sostituita da [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 

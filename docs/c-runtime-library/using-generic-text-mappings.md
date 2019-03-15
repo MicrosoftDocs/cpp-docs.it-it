@@ -27,18 +27,18 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: b39e8563797ca0b57b54d2c85f851c8c45b29905
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471448"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747930"
 ---
 # <a name="using-generic-text-mappings"></a>Utilizzo di mapping testo generico
 
 **Sezione specifica Microsoft**
 
-Per semplificare lo sviluppo di codice per vari mercati internazionali, la libreria di runtime di Microsoft fornisce mapping di testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti. I mapping sono definiti in TCHAR.H. È possibile utilizzare questi mapping di nomi per scrivere codice generico che può essere compilato per uno qualsiasi dei tre tipi di set di caratteri: ASCII (SBCS), MBCS o Unicode, in base a una costante di manifesto definita utilizzando un'istruzione `#define`. I mapping di testo generico sono estensioni Microsoft non compatibili con ANSI.
+Per semplificare lo sviluppo di codice per vari mercati internazionali, la libreria di runtime di Microsoft fornisce mapping di testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti. I mapping sono definiti in TCHAR.H. È possibile usare questi mapping di nomi per scrivere codice generico che può essere compilato per uno qualsiasi dei tre tipi di set di caratteri, ovvero ASCII (SBCS), MBCS o Unicode, in base a una costante di manifesto definita usando un'istruzione `#define`. I mapping di testo generico sono estensioni Microsoft non compatibili con ANSI.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Direttive del preprocessore per i mapping di testo generico
 

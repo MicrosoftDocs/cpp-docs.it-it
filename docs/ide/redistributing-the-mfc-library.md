@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: 891a11e02b60bf5337b02956e9562b2f4b45a6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e7352306627722ff2921c2a46cb49b6318f10b6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659940"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746956"
 ---
 # <a name="redistributing-the-mfc-library"></a>Ridistribuzione della libreria MFC
 
@@ -25,7 +25,7 @@ Se l'app viene compilata tramite una versione precedente della libreria MFC, è 
 
 Se si collega l'applicazione a MFC in modo statico (vale a dire, se si specifica **Usa MFC in una libreria statica** nella scheda **Generale** della finestra di dialogo **Pagine delle proprietà**), non è necessario ridistribuire una DLL MFC. Tuttavia, anche se il collegamento statico può funzionare per il testing e la distribuzione interna delle applicazioni, è consigliabile non usarlo per la ridistribuzione di MFC. Per altre informazioni sulle strategie consigliate per la distribuzione di librerie Visual C++, vedere [Scelta di un metodo di distribuzione](../ide/choosing-a-deployment-method.md).
 
-Se l'applicazione usa le classi MFC che implementano il controllo WebBrowser (ad esempio la [classe CHtmlView](../mfc/reference/chtmlview-class.md) o la [classe CHtmlEditView](../mfc/reference/chtmleditview-class.md)), è consigliabile installare anche la versione più recente di Microsoft Internet Explorer, in modo che il computer di destinazione abbia i file di controllo comuni più recenti. La versione minima di Internet Explorer richiesta è la versione 4.0. Informazioni su come installare i componenti di Internet Explorer sono disponibili nell'articolo 185375 relativo alla creazione di un singolo file EXE per l'installazione di Internet Explorer, nel sito Web del supporto tecnico Microsoft.
+Se l'applicazione usa le classi MFC che implementano il controllo WebBrowser (ad esempio la [classe CHtmlView](../mfc/reference/chtmlview-class.md) o la [classe CHtmlEditView](../mfc/reference/chtmleditview-class.md)), è consigliabile installare anche la versione più recente di Microsoft Internet Explorer, in modo che il computer di destinazione abbia i file di controllo comuni più recenti. La versione minima di Internet Explorer richiesta è la versione 4.0. Informazioni su come installare i componenti di Internet Explorer sono disponibili nell'articolo 185375 relativo alla creazione di un singolo file EXE per l'installazione di Internet Explorer nel sito Web del supporto tecnico Microsoft.
 
 Se l'applicazione usa le classi di database MFC (ad esempio, la [classe CRecordset](../mfc/reference/crecordset-class.md) e la [classe CRecordView](../mfc/reference/crecordview-class.md)), è necessario ridistribuire ODBC e i driver ODBC usati dall'applicazione.
 

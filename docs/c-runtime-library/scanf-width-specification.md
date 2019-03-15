@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445162"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743267"
 ---
 # <a name="scanf-width-specification"></a>Specifica della larghezza per scanf
 
@@ -79,7 +79,7 @@ Se si utilizza una funzione non protetta nella famiglia `scanf`, omettere il par
 
 ## <a name="reading-undelimited-strings"></a>Lettura di stringhe non delimitate
 
-Per leggere le stringhe non delimitate da spazi vuoti, un set di caratteri tra parentesi quadre (**[ ]**) può essere sostituito per il carattere di tipo **s** (stringa). Il set di caratteri tra parentesi quadre è considerato una stringa di controllo. Il campo di input corrispondente viene letto fino al primo carattere che non viene visualizzato nella stringa di controllo. Se il primo carattere nel set è un accento circonflesso (**^**), l'effetto è invertito: il campo di input viene letto fino al primo carattere visualizzato nella parte rimanente del set di caratteri.
+Per leggere le stringhe non delimitate da spazi vuoti, un set di caratteri tra parentesi quadre (**[ ]**) può essere sostituito per il carattere di tipo **s** (stringa). Il set di caratteri tra parentesi quadre è considerato una stringa di controllo. Il campo di input corrispondente viene letto fino al primo carattere che non viene visualizzato nella stringa di controllo. Se il primo carattere nel set è un accento circonflesso (**^**), l'effetto è invertito: il campo di input viene letto fino al primo carattere che viene visualizzato nel resto del set di caratteri.
 
 Si noti che **%[a-z]** e **%[z-a]** vengono interpretati come equivalenti a **%[abcde...z]**. Si tratta di un comune estensione di funzione `scanf`, ma si noti che lo standard ANSI non lo richiede.
 

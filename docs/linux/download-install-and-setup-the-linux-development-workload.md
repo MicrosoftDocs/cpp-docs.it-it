@@ -1,18 +1,22 @@
 ---
 title: Installare il carico di lavoro Linux C++ in Visual Studio
 description: Descrive come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 74155724abb3a0e02cc27dd8a8d144f142ee4b6f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763887"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747722"
 ---
-# <a name="download-install-and-setup-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
+# <a name="download-install-and-set-up-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
-È possibile usare l'IDE di Visual Studio in Windows per creare, modificare ed eseguire il debug di progetti C++ eseguiti in un computer fisico Linux, in una macchina virtuale o nel [sottosistema Windows per Linux](/windows/wsl/about). Per uno qualsiasi di questi scenari, installare prima il carico di lavoro **Linux development with C++** (Sviluppo di applicazioni Linux con C++).
+È possibile usare l'IDE di Visual Studio 2017 in Windows per creare, modificare ed eseguire il debug di progetti C++ eseguiti in un computer fisico o una macchina virtuale Linux oppure nel [sottosistema Windows per Linux](/windows/wsl/about). 
+
+È possibile lavorare su una codebase esistente che usa CMake o qualsiasi altro sistema di compilazione senza la necessità di convertirla in un progetto Visual Studio. Se il codebase è multipiattaforma, è possibile scegliere sia Windows che Linux da Visual Studio. È ad esempio possibile modificare il codice, eseguirne il debug e profilarlo in Windows usando Visual Studio e quindi ridestinare rapidamente il progetto a Linux per altri test. I file di intestazione Linux vengono copiati automaticamente nel computer locale dove vengono usati da Visual Studio per offrire il supporto completo IntelliSense (completamento istruzioni, Vai a definizione e così via).
+ 
+Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni Linux con C++**. 
 
 ## <a name="visual-studio-setup"></a>Configurazione di Visual Studio
 
@@ -22,6 +26,8 @@ ms.locfileid: "55763887"
    ![Carico di lavoro Visual C++ per lo sviluppo di applicazioni Linux](media/linuxworkload.png)
 
 1. Se si usa CMake oppure si intende usare come destinazione piattaforme IoT o incorporate, passare al riquadro **Dettagli di installazione** sulla destra, sotto **Linux development with C++** (Sviluppo di applicazioni Linux con C++) espandere **Componenti facoltativi** e scegliere i componenti necessari.
+
+    **Visual Studio 2017 versione 15.4 e successive**<br/>: Quando si installa il carico di lavoro Linux C++ per Visual Studio, il supporto CMake per Linux è selezionato per impostazione predefinita.
 
 1. Fare clic su **Modifica** per continuare con l'installazione.
 
@@ -63,3 +69,6 @@ Il computer di destinazione che esegue Fedora usa il programma di installazione 
 
    Il servizio viene avviato ed eseguito in background, pronto per accettare le connessioni.
 
+## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>Verificare che il computer Linux remoto includa CMake 3.8
+
+È possibile che nella distribuzione Linux sia disponibile una versione precedente di CMake. Il supporto CMake in Visual Studio richiede il supporto della modalità server introdotta in CMake 3.8. Per una variante di CMake offerta da Microsoft, scaricare nel computer Linux i file binari precompilati più recenti all'indirizzo [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).

@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597548"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747008"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduzione a Visual C++ per utenti UNIX
 
@@ -19,7 +19,7 @@ Questo argomento contiene informazioni per gli utenti UNIX che non hanno familia
 
 È possibile usare il compilatore C++ dalla riga di comando in modo analogo a come si usa un ambiente della riga di comando UNIX. Per compilare dal prompt dei comandi, si usano infatti il compilatore C e C++ (CL.EXE), il linker (LINK.EXE) e altri strumenti da riga di comando, incluso NMAKE.EXE, la versione Microsoft dell'utilità make di UNIX.
 
-In UNIX i comandi vengono installati in una cartella comune, ad esempio /usr/bin. In Visual Studio gli strumenti da riga di comando vengono installati nella directory di installazione di Visual Studio, nella sottodirectory VC\bin e nelle relative sottodirectory. Diversamente da UNIX, questi strumenti non sono disponibili in una normale finestra del prompt dei comandi. Per usare gli strumenti da riga di comando, usare un collegamento al prompt dei comandi per gli sviluppatori o eseguire un file di comando per gli sviluppatori, ad esempio vcvarsall.bat. In tal modo vengono configurati il percorso e le altre variabili di ambiente necessari per compilare programmi C++ dalla riga di comando. Per altre informazioni, vedere [Compilare codice C/C++ nella riga di comando](../build/building-on-the-command-line.md) e [Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+In UNIX i comandi vengono installati in una cartella comune, ad esempio /usr/bin. In Visual Studio gli strumenti da riga di comando vengono installati nella directory di installazione di Visual Studio, nella sottodirectory VC\bin e nelle relative sottodirectory. Diversamente da UNIX, questi strumenti non sono disponibili in una normale finestra del prompt dei comandi. Per usare gli strumenti da riga di comando, usare un collegamento al prompt dei comandi per gli sviluppatori o eseguire un file di comando per gli sviluppatori, ad esempio vcvarsall.bat. In tal modo vengono configurati il percorso e le altre variabili di ambiente necessari per compilare programmi C++ dalla riga di comando. Per altre informazioni, vedere [Compilare codice C/C++ nella riga di comando](../build/building-on-the-command-line.md) e [ Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
 
 Per aprire un collegamento al prompt dei comandi per gli sviluppatori, immettere *prompt dei comandi per gli sviluppatori* nel controllo ricerca desktop e scegliere il risultato **Prompt dei comandi per gli sviluppatori** per la versione in uso di Visual Studio. Per scegliere un prompt dei comandi per gli sviluppatori preconfigurato per un determinato host e una determinata architettura di destinazione, aprire il menu **Start** (icona di Windows nell'angolo del desktop) e quindi scorrere fino alla cartella della versione in uso di Visual Studio, ad esempio **Visual Studio 2017**. Aprire la cartella e scegliere il collegamento al prompt dei comandi per l'host preferito e l'architettura di destinazione.
 

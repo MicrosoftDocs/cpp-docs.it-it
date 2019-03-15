@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463752"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751895"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Strumenti e funzionalità di Visual C++ nelle versioni di Visual Studio
 
@@ -106,7 +106,7 @@ Le tabelle seguenti illustrano le funzionalità di Visual C++ disponibili in Vis
 |Debug gestito||x|x|x|
 |Utilizzo GPU|x||x|x|
 |Utilizzo memoria|x||x|x|
-|Debug remoto|x|x|x|x|
+|Remote Debugging|x|x|x|x|
 |Debug SQL|||x|x|
 |Analisi codice statico|Limitato|Limitato|x|x|
 
@@ -163,8 +163,8 @@ Le tabelle seguenti illustrano le funzionalità di Visual C++ disponibili in Vis
 ||||||
 |-|-|-|-|-|
 |Strumento|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
-|Unit test (framework nativo)|x|x|x|x|
-|Unit test (framework gestito)||x|x|x|
+|Testing unità (framework nativo)|x|x|x|x|
+|Testing unità (framework gestito)||x|x|x|
 |Code coverage||||x|
 |Test manuali||||x|
 |Testing esplorativo||||x|

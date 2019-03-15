@@ -11,16 +11,16 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 8ed340bed62d3b2cfcf32e0b98f032c9146b6bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed510e0d289349b1d7a0129a1c586b0bf1715b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629268"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751479"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Informazioni sulle dipendenze di un'applicazione Visual C++
 
-Per trovare la libreria Visual C++ dalla quale dipende un'applicazione, è possibile visualizzare le proprietà del progetto. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà** per aprire la finestra di dialogo **Pagine delle proprietà**. È anche possibile utilizzare lo strumento Dependency Walker (depends.exe) che offre un quadro più completo delle dipendenze.
+Per trovare la libreria Visual C++ dalla quale dipende un'applicazione, è possibile visualizzare le proprietà del progetto. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà** per aprire la finestra di dialogo **Pagine delle proprietà**. È anche possibile usare lo strumento Dependency Walker (depends.exe) che offre un quadro più completo delle dipendenze.
 
 Nella finestra di dialogo **Pagine delle proprietà** è possibile esaminare varie pagine in **Proprietà di configurazione** per comprendere le dipendenze. Se ad esempio il progetto usa le librerie MFC e si sceglie **Uso di MFC**, **Usa MFC in una DLL condivisa** nella pagina **Proprietà di configurazione**, **Generale**, in fase di esecuzione l'applicazione dipenderà dalle DLL MFC come mfc\<versione>.dll. Se l'applicazione non usa MFC, potrebbe dipendere dalla libreria CRT se si imposta **Libreria di runtime** su **DLL di debug multithread (/MDd)** o **DLL multithread (/MD)** nella pagina **Proprietà di configurazione**, **C/C++**, **Generazione codice**.
 

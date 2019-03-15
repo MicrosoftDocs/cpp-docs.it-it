@@ -2,12 +2,12 @@
 title: 'Porting e aggiornamento: esempi e case study'
 ms.date: 11/04/2016
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-ms.openlocfilehash: 1f49b72b8d390d5631687f67640f4ddd38bec3b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50e22c9eac39927c4456eeff1ed05c46a239bd30
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568212"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747190"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Porting e aggiornamento: esempi e case study
 
@@ -21,7 +21,7 @@ Questa sezione spiega in che modo è stato possibile eseguire la migrazione di a
 
 - [COM Spy](../porting/porting-guide-mfc-scribble.md) è un'applicazione che visualizza informazioni sui componenti COM+ in un computer.
 
-- [Spy++](../porting/porting-guide-spy-increment.md) è un'applicazione che analizza gli elementi dell'interfaccia utente nelle applicazioni in esecuzione e restituisce informazioni su tali elementi.
+- [Spy + +](../porting/porting-guide-spy-increment.md) è un'applicazione che analizza e fornisce informazioni sugli elementi dell'interfaccia utente nelle applicazioni in esecuzione.
 
 ## <a name="see-also"></a>Vedere anche
 

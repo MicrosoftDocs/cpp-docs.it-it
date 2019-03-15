@@ -1,19 +1,19 @@
 ---
-title: 'Procedura dettagliata: debug di un progetto (C++)'
+title: 'Procedura dettagliata: Debug di un progetto (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581948"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741358"
 ---
-# <a name="walkthrough-debugging-a-project-c"></a>Procedura dettagliata: debug di un progetto (C++)
+# <a name="walkthrough-debugging-a-project-c"></a>Procedura dettagliata: Debug di un progetto (C++)
 
 In questa procedura dettagliata si modifica il programma per risolvere il problema rilevato durante il test del progetto.
 
@@ -53,8 +53,8 @@ In questa procedura dettagliata si modifica il programma per risolvere il proble
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-**Precedente:** [Procedura dettagliata: verifica di un progetto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Successivo:** [Procedura dettagliata: distribuzione di un programma (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**Precedente:** [Procedura dettagliata: Test di un progetto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Successivo:** [Procedura dettagliata: Distribuzione di un programma (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 
 ## <a name="see-also"></a>Vedere anche
 
